@@ -1,0 +1,913 @@
+Replace `index.html`
+
+Delete everything and paste:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marshall Comics DB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo-area">
+      <img src="logo.png" alt="BlackReadBrown" id="site-logo" onerror="this.style.display='none'">
+      <div>
+        <h1>Marshall Comics</h1>
+        <div class="subtitle">Private Collection Database</div>
+      </div>
+    </div>
+    <div id="header-stats" class="header-stats"></div>
+  </header>
+
+  <nav class="tab-nav">
+    <button class="tab-btn active" data-tab="original">📦 Original Collection</button>
+    <button class="tab-btn" data-tab="boxes">🗃️ All Boxes</button>
+    <button class="tab-btn" data-tab="keys">🔑 Box Keys</button>
+    <button class="tab-btn" data-tab="calendar">📅 Calendar</button>
+    <button class="tab-btn" data-tab="shows">🎙️ Show Planner</button>
+    <button class="tab-btn" data-tab="cgc">🏆 CGC Strategy</button>
+    <button class="tab-btn" data-tab="signings">✍️ Signings</button>
+  </nav>
+
+  <!-- ORIGINAL COLLECTION -->
+  <div id="tab-original" class="tab-content active">
+    <div class="filters">
+      <input type="text" id="o-search" placeholder="Search title, writer, character, signer...">
+      <select id="o-publisher"><option value="">All Publishers</option><option>Marvel</option><option>DC</option><option>Image</option><option>IDW</option><option>Indie</option></select>
+      <select id="o-era"><option value="">All Eras</option><option>Golden</option><option>Silver</option><option>Bronze</option><option>Copper</option><option>Modern</option></select>
+      <select id="o-platform"><option value="">All Platforms</option><option value="WHATNOT">Whatnot</option><option value="EBAY">eBay</option><option value="HERITAGE">Heritage</option><option value="WHATNOT+HERITAGE">Whatnot+Heritage</option></select>
+      <select id="o-signed"><option value="">All / Signed</option><option value="YES">Signed Only</option><option value="NO">Unsigned Only</option></select>
+      <select id="o-key"><option value="">All / Keys</option><option value="YES">Keys Only</option></select>
+      <select id="o-cgc"><option value="">CGC / All</option><option value="YES">CGC Worthy</option></select>
+      <button class="clear-btn" onclick="clearFilters('o')">✕ Clear</button>
+    </div>
+    <div class="results-bar"><span id="o-count"></span><span class="hint">Click any card to expand details</span></div>
+    <div id="o-grid" class="card-grid"></div>
+  </div>
+
+  <!-- ALL BOXES -->
+  <div id="tab-boxes" class="tab-content">
+    <div class="filters">
+      <input type="text" id="b-search" placeholder="Search title, writer, arc, publisher...">
+      <select id="b-box"><option value="">All Boxes</option><option value="1">Box 1 — DC New 52</option><option value="2">Box 2 — Marvel Ultimate</option><option value="3">Box 3 — Modern DC</option><option value="4">Box 4 — Dawn of DC</option><option value="5">Box 5 — Wildstorm/Indie</option><option value="6">Box 6 — DC 2021–23</option><option value="7">Box 7 — Avengers</option><option value="8">Box 8</option><option value="9">Box 9</option></select>
+      <select id="b-publisher"><option value="">All Publishers</option><option>Marvel</option><option>DC</option><option>DC/Wildstorm</option><option>Image</option><option>IDW</option><option>Dark Horse</option></select>
+      <select id="b-key"><option value="">All / Keys</option><option value="YES">Keys Only</option></select>
+      <select id="b-platform"><option value="">All Platforms</option><option value="WHATNOT">Whatnot</option><option value="EBAY">eBay</option></select>
+      <button class="clear-btn" onclick="clearFilters('b')">✕ Clear</button>
+    </div>
+    <div class="results-bar"><span id="b-count"></span><span class="hint">1,467 books across 9 boxes</span></div>
+    <div id="b-grid" class="card-grid"></div>
+  </div>
+
+  <!-- BOX KEYS -->
+  <div id="tab-keys" class="tab-content">
+    <div class="filters">
+      <input type="text" id="k-search" placeholder="Search title, key reason, publisher...">
+      <select id="k-box"><option value="">All Boxes</option><option value="1">Box 1</option><option value="2">Box 2</option><option value="3">Box 3</option><option value="4">Box 4</option><option value="5">Box 5</option><option value="6">Box 6</option><option value="7">Box 7</option><option value="8">Box 8</option><option value="9">Box 9</option></select>
+      <select id="k-action"><option value="">All Actions</option><option value="CGC">CGC Immediately</option><option value="Whatnot">Whatnot Ready</option></select>
+      <select id="k-terrificon"><option value="">All / Terrificon</option><option value="YES">Terrificon Books</option></select>
+      <button class="clear-btn" onclick="clearFilters('k')">✕ Clear</button>
+    </div>
+    <div class="results-bar"><span id="k-count"></span><span class="hint">141 keys extracted from all boxes</span></div>
+    <div id="k-grid" class="card-grid"></div>
+  </div>
+
+  <!-- CALENDAR -->
+  <div id="tab-calendar" class="tab-content">
+    <div class="filters">
+      <input type="text" id="cal-search" placeholder="Search theme, books, notes...">
+      <select id="cal-type"><option value="">All Events</option><option value="WHATNOT">Whatnot Shows</option><option value="CGC">CGC Submissions</option><option value="CON">Conventions</option></select>
+      <button class="clear-btn" onclick="document.getElementById('cal-search').value='';document.getElementById('cal-type').value='';renderCalendar(DATA1.calendar)">✕ Clear</button>
+    </div>
+    <div class="results-bar"><span id="cal-count"></span></div>
+    <div id="cal-list" class="list-view"></div>
+  </div>
+
+  <!-- SHOW PLANNER -->
+  <div id="tab-shows" class="tab-content">
+    <div class="section-intro">
+      <h2>Whatnot Show Planner — Box Collection</h2>
+      <p>19 themed show concepts from your all-boxes inventory. Includes $1 Keys Night full runsheet.</p>
+    </div>
+    <div id="shows-grid" class="shows-grid"></div>
+    <div class="section-intro" style="margin-top:24px">
+      <h2>$1 Keys Night — Full Runsheet</h2>
+      <p>23 books sequenced across 4 acts for maximum bidding engagement</p>
+    </div>
+    <div id="show2-list" class="list-view"></div>
+  </div>
+
+  <!-- CGC STRATEGY -->
+  <div id="tab-cgc" class="tab-content">
+    <div class="section-intro">
+      <h2>CGC Submission Priority — Best ROI</h2>
+      <p>Press everything before submitting (except Stan Lee BP #513 — authenticate first)</p>
+    </div>
+    <div id="cgc-list" class="list-view"></div>
+  </div>
+
+  <!-- PRIVATE SIGNINGS -->
+  <div id="tab-signings" class="tab-content">
+    <div class="section-intro">
+      <h2>CGC Private Signings — 2026</h2>
+      <p>Follow @CGCSignatureSeries on IG/TikTok · Check cgccomics.com weekly for new announcements</p>
+    </div>
+    <div id="signings-list" class="list-view"></div>
+  </div>
+
+  <script src="data1.js"></script>
+  <script src="data2.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+```
+
+---
+
+## STEP 5 — Replace `style.css`
+
+Delete everything and paste:
+
+```css
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --black: #080808;
+  --dark: #101010;
+  --card: #141414;
+  --border: #222;
+  --border-hover: #3a1a1a;
+  --red: #c8102e;
+  --red-dark: #7a1218;
+  --brown: #c8966a;
+  --brown-light: #e2b98a;
+  --gold: #c49a3c;
+  --muted: #555;
+  --green-bg: #0f2e0f;
+  --green-text: #7ec87e;
+  --purple-bg: #1e1232;
+  --purple-text: #b899f5;
+  --blue-bg: #0d1e2e;
+  --blue-text: #60aadd;
+}
+
+body {
+  background: var(--black);
+  color: var(--brown);
+  font-family: 'Crimson Pro', Georgia, serif;
+  min-height: 100vh;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* ── HEADER ── */
+header {
+  background: var(--dark);
+  border-bottom: 3px solid var(--red-dark);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+
+.logo-area { display: flex; align-items: center; gap: 14px; }
+#site-logo { height: 42px; width: auto; }
+
+h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  color: var(--red);
+  font-size: 1.7rem;
+  letter-spacing: 4px;
+  line-height: 1;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 0.68rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.header-stats { display: flex; gap: 18px; }
+.stat { display: flex; flex-direction: column; align-items: center; gap: 1px; }
+.stat-val {
+  font-family: 'Bebas Neue', sans-serif;
+  color: var(--brown-light);
+  font-size: 1.15rem;
+  letter-spacing: 1px;
+}
+.stat-lbl { color: var(--muted); font-size: 0.62rem; letter-spacing: 1px; text-transform: uppercase; }
+
+/* ── TABS ── */
+.tab-nav {
+  background: #0b0b0b;
+  display: flex;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+  gap: 0;
+  position: sticky;
+  top: 67px;
+  z-index: 190;
+}
+.tab-nav::-webkit-scrollbar { height: 2px; }
+.tab-nav::-webkit-scrollbar-thumb { background: var(--red-dark); }
+
+.tab-btn {
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  color: var(--muted);
+  padding: 11px 18px;
+  cursor: pointer;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+  transition: color 0.15s, border-color 0.15s;
+}
+.tab-btn:hover { color: var(--brown); }
+.tab-btn.active { color: var(--red); border-bottom-color: var(--red); }
+
+/* ── TAB PANELS ── */
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+/* ── FILTERS ── */
+.filters {
+  background: var(--dark);
+  padding: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 109px;
+  z-index: 100;
+}
+
+.filters input,
+.filters select {
+  background: #1a1a1a;
+  border: 1px solid #2e2e2e;
+  color: var(--brown);
+  padding: 6px 12px;
+  border-radius: 3px;
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.88rem;
+}
+
+#o-search, #b-search, #k-search, #cal-search { flex: 1; min-width: 200px; }
+
+.filters input:focus, .filters select:focus {
+  outline: none;
+  border-color: var(--red-dark);
+}
+
+.clear-btn {
+  background: var(--red-dark);
+  color: #eee;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  transition: background 0.15s;
+}
+.clear-btn:hover { background: var(--red); }
+
+/* ── RESULTS BAR ── */
+.results-bar {
+  padding: 7px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--muted);
+  font-size: 0.72rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border);
+}
+.hint { color: #333; }
+
+/* ── CARD GRID ── */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 10px;
+  padding: 14px 20px;
+}
+
+.comic-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 13px;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+.comic-card:hover { border-color: var(--red-dark); }
+.comic-card.open { border-color: var(--red); }
+
+.card-title {
+  font-family: 'Crimson Pro', serif;
+  font-weight: 600;
+  color: var(--brown-light);
+  font-size: 1rem;
+  margin-bottom: 2px;
+  line-height: 1.3;
+}
+.card-sub { color: var(--muted); font-size: 0.74rem; margin-bottom: 9px; letter-spacing: 0.5px; }
+
+.badges { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 8px; }
+.badge {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.7rem;
+  padding: 1px 7px;
+  border-radius: 2px;
+  letter-spacing: 1px;
+}
+.bk  { background: var(--red-dark); color: #eee; }
+.bs  { background: var(--green-bg); color: var(--green-text); }
+.be  { background: #1a1a3a; color: #8899dd; }
+.bwn { background: #0f2a0f; color: #7ec87e; }
+.beb { background: #2e2200; color: #c8a030; }
+.bhe { background: var(--purple-bg); color: var(--purple-text); }
+.bc  { background: var(--blue-bg); color: var(--blue-text); }
+.bt  { background: #1e1232; color: var(--purple-text); }
+.bcg { background: #1a1a0a; color: var(--gold); }
+.bb  { background: #1a1a2a; color: #7799aa; }
+
+.card-value { font-size: 0.78rem; color: var(--brown); margin-bottom: 7px; }
+.card-value .v { color: var(--red); font-weight: 600; }
+
+.card-pitch { color: #777; font-size: 0.78rem; font-style: italic; line-height: 1.4; }
+
+.card-expand {
+  display: none;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+.card-expand.open { display: block; }
+
+.dr { display: flex; gap: 8px; margin-bottom: 4px; font-size: 0.77rem; }
+.dl { color: var(--muted); min-width: 78px; flex-shrink: 0; }
+.dv { color: var(--brown); }
+
+/* ── LIST VIEW (calendar, cgc, signings, show2) ── */
+.list-view { padding: 12px 20px; display: flex; flex-direction: column; gap: 8px; }
+
+.lcard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--border);
+  border-radius: 4px;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+.lcard:hover { border-color: var(--border-hover); }
+.lcard.lc-whatnot { border-left-color: #3a6e3a; }
+.lcard.lc-cgc { border-left-color: var(--blue-text); }
+.lcard.lc-con { border-left-color: var(--purple-text); }
+.lcard.lc-special { border-left-color: var(--gold); }
+.lcard.lc-open { border-left-color: var(--green-text); }
+.lcard.lc-closed { border-left-color: #333; opacity: 0.65; }
+.lcard.lc-watch { border-left-color: var(--gold); }
+
+.lcard-head { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.lcard-date { font-family: 'Bebas Neue', sans-serif; color: var(--red); font-size: 0.9rem; min-width: 100px; }
+.lcard-title { color: var(--brown-light); font-weight: 600; font-size: 0.95rem; flex: 1; }
+.lcard-right { margin-left: auto; color: var(--gold); font-family: 'Bebas Neue', sans-serif; font-size: 0.9rem; letter-spacing: 1px; }
+.lcard-tag {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.68rem;
+  padding: 1px 7px;
+  border-radius: 2px;
+  background: #1e1e1e;
+  color: var(--muted);
+  letter-spacing: 1px;
+}
+.status-open  { background: var(--green-bg); color: var(--green-text); }
+.status-closed { background: #1e1e1e; color: #555; }
+.status-watch { background: #2e2200; color: var(--gold); }
+
+.lcard-expand {
+  display: none;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+  font-size: 0.8rem;
+  color: #888;
+  line-height: 1.55;
+}
+.lcard-expand.open { display: block; }
+
+/* ── SHOWS GRID ── */
+.section-intro { padding: 16px 20px 8px; border-bottom: 1px solid var(--border); }
+.section-intro h2 { font-family: 'Bebas Neue', sans-serif; color: var(--red); font-size: 1.2rem; letter-spacing: 2px; margin-bottom: 3px; }
+.section-intro p { color: var(--muted); font-size: 0.8rem; }
+
+.shows-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+  padding: 14px 20px;
+}
+
+.show-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 14px;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+.show-card:hover { border-color: var(--red-dark); }
+.show-card.open { border-color: var(--red); }
+.show-theme { font-family: 'Bebas Neue', sans-serif; color: var(--brown-light); font-size: 1rem; letter-spacing: 1px; margin-bottom: 4px; }
+.show-anchor { color: var(--muted); font-size: 0.8rem; font-style: italic; margin-bottom: 8px; }
+.show-meta { display: flex; gap: 10px; align-items: center; }
+.show-rev { color: var(--gold); font-size: 0.82rem; font-weight: 600; }
+.show-status-badge {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.68rem;
+  padding: 1px 7px;
+  border-radius: 2px;
+  letter-spacing: 1px;
+}
+.ss-ready { background: var(--green-bg); color: var(--green-text); }
+.ss-cgc   { background: #2e0d0d; color: #dd6666; }
+.ss-after { background: var(--purple-bg); color: var(--purple-text); }
+
+.show-expand {
+  display: none;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+  font-size: 0.8rem;
+  color: #888;
+  line-height: 1.5;
+}
+.show-expand.open { display: block; }
+
+/* ── NO RESULTS ── */
+.no-res {
+  grid-column: 1/-1;
+  text-align: center;
+  color: #333;
+  padding: 60px 20px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+  header { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .header-stats { flex-wrap: wrap; gap: 12px; }
+  .card-grid, .shows-grid { grid-template-columns: 1fr; }
+  .filters { top: 0; position: relative; }
+  .tab-nav { top: 67px; }
+}
+```
+
+---
+
+## STEP 6 — Replace `script.js`
+
+Delete everything and paste:
+
+```javascript
+// =============================================
+// MARSHALL COMICS DB — script.js
+// All tabs wired to DATA1 and DATA2
+// =============================================
+
+// ── HEADER STATS ──
+(function() {
+  const o = DATA1.orig_inventory;
+  const b = DATA2.boxes_inventory;
+  const signed = o.filter(c => (c.Signed||'').toUpperCase()==='YES').length;
+  const keys = o.filter(c => (c.Key||'').toUpperCase()==='YES').length;
+  const boxKeys = DATA2.boxes_keys.length;
+  document.getElementById('header-stats').innerHTML = `
+    <div class="stat"><span class="stat-val">${o.length}</span><span class="stat-lbl">Orig</span></div>
+    <div class="stat"><span class="stat-val">${b.length}</span><span class="stat-lbl">Boxes</span></div>
+    <div class="stat"><span class="stat-val">${signed}</span><span class="stat-lbl">Signed</span></div>
+    <div class="stat"><span class="stat-val">${keys + boxKeys}</span><span class="stat-lbl">Keys</span></div>
+    <div class="stat"><span class="stat-val">31</span><span class="stat-lbl">Shows</span></div>
+  `;
+})();
+
+// ── TABS ──
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+  });
+});
+
+// ── SHARED: toggle expand ──
+function toggle(el, cls) {
+  el.classList.toggle(cls);
+  const exp = el.querySelector('.card-expand, .lcard-expand, .show-expand');
+  if (exp) exp.classList.toggle('open');
+}
+
+// ── SHARED: platform badge ──
+function platBadge(p) {
+  const map = { 'WHATNOT':'bwn', 'EBAY':'beb', 'HERITAGE':'bhe', 'WHATNOT+HERITAGE':'bhe' };
+  const cls = map[(p||'').toUpperCase()] || '';
+  return cls ? `<span class="badge ${cls}">${p}</span>` : '';
+}
+
+// ── SHARED: no results ──
+function noRes(grid) { grid.innerHTML = '<div class="no-res">NO BOOKS MATCH</div>'; }
+
+// ──────────────────────────────────────────────
+// ORIGINAL COLLECTION
+// ──────────────────────────────────────────────
+function renderOrig(data) {
+  const g = document.getElementById('o-grid');
+  document.getElementById('o-count').textContent = `${data.length} book${data.length!==1?'s':''}`;
+  if (!data.length) { noRes(g); return; }
+  g.innerHTML = data.map(c => {
+    const isKey = (c.Key||'').toUpperCase()==='YES';
+    const isSigned = (c.Signed||'').toUpperCase()==='YES';
+    const isCGC = (c.CGC_Worth||'').toUpperCase()==='YES';
+    const tf = (c.Terrificon||'').trim();
+    return `<div class="comic-card" onclick="toggle(this,'open')">
+      <div class="card-title">${c.Title||'Untitled'}</div>
+      <div class="card-sub">${c.Publisher||''} #${c.Issue||''} · ${c.Year||''} · ${c.Era||''}</div>
+      <div class="badges">
+        ${isKey?'<span class="badge bk">KEY</span>':''}
+        ${isSigned?`<span class="badge bs">✍ ${(c.Signed_By||'').substring(0,20)}</span>`:''}
+        ${c.Era?`<span class="badge be">${c.Era}</span>`:''}
+        ${platBadge(c.Platform)}
+        ${isCGC?'<span class="badge bc">CGC ✓</span>':''}
+        ${tf?'<span class="badge bt">Terrificon</span>':''}
+      </div>
+      ${c.Value_NM?`<div class="card-value">NM: <span class="v">${c.Value_NM}</span>${c.Value_VF?' · VF: '+c.Value_VF:''}</div>`:''}
+      ${c.Whatnot_Pitch?`<div class="card-pitch">${c.Whatnot_Pitch.substring(0,170)}${c.Whatnot_Pitch.length>170?'…':''}</div>`:''}
+      <div class="card-expand">
+        ${c.Writer?`<div class="dr"><span class="dl">Writer</span><span class="dv">${c.Writer}</span></div>`:''}
+        ${c.Artist?`<div class="dr"><span class="dl">Artist</span><span class="dv">${c.Artist}</span></div>`:''}
+        ${c.Arc?`<div class="dr"><span class="dl">Arc</span><span class="dv">${c.Arc}</span></div>`:''}
+        ${c.Key_Why?`<div class="dr"><span class="dl">Key Why</span><span class="dv">${c.Key_Why}</span></div>`:''}
+        ${c.First_App?`<div class="dr"><span class="dl">1st App</span><span class="dv">${c.First_App}</span></div>`:''}
+        ${c.Condition?`<div class="dr"><span class="dl">Condition</span><span class="dv">${c.Condition}</span></div>`:''}
+        ${c.Personalization?`<div class="dr"><span class="dl">Personalized</span><span class="dv">${c.Personalization}</span></div>`:''}
+        ${tf?`<div class="dr"><span class="dl">Terrificon</span><span class="dv">${tf}</span></div>`:''}
+        ${c.Sales_Data?`<div class="dr"><span class="dl">Sales</span><span class="dv">${c.Sales_Data.substring(0,120)}</span></div>`:''}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function filterOrig() {
+  const q = document.getElementById('o-search').value.toLowerCase();
+  const pub = document.getElementById('o-publisher').value.toLowerCase();
+  const era = document.getElementById('o-era').value.toLowerCase();
+  const plat = document.getElementById('o-platform').value.toUpperCase();
+  const sig = document.getElementById('o-signed').value.toUpperCase();
+  const key = document.getElementById('o-key').value.toUpperCase();
+  const cgc = document.getElementById('o-cgc').value.toUpperCase();
+  renderOrig(DATA1.orig_inventory.filter(c => {
+    if (q && ![c.Title,c.Writer,c.Artist,c.Key_Why,c.First_App,c.Signed_By,c.Arc,c.Publisher].join(' ').toLowerCase().includes(q)) return false;
+    if (pub && !(c.Publisher||'').toLowerCase().includes(pub)) return false;
+    if (era && (c.Era||'').toLowerCase() !== era) return false;
+    if (plat && (c.Platform||'').toUpperCase() !== plat) return false;
+    if (sig && (c.Signed||'').toUpperCase() !== sig) return false;
+    if (key && (c.Key||'').toUpperCase() !== key) return false;
+    if (cgc && (c.CGC_Worth||'').toUpperCase() !== cgc) return false;
+    return true;
+  }));
+}
+
+function clearFilters(prefix) {
+  document.querySelectorAll(`[id^="${prefix}-"]`).forEach(el => {
+    if (el.tagName==='INPUT') el.value='';
+    else if (el.tagName==='SELECT') el.value='';
+  });
+  if (prefix==='o') renderOrig(DATA1.orig_inventory);
+  if (prefix==='b') renderBoxes(DATA2.boxes_inventory);
+  if (prefix==='k') renderKeys(DATA2.boxes_keys);
+}
+
+['o-search','o-publisher','o-era','o-platform','o-signed','o-key','o-cgc']
+  .forEach(id => document.getElementById(id).addEventListener('input', filterOrig));
+
+// ──────────────────────────────────────────────
+// ALL BOXES
+// ──────────────────────────────────────────────
+function renderBoxes(data) {
+  const g = document.getElementById('b-grid');
+  document.getElementById('b-count').textContent = `${data.length} book${data.length!==1?'s':''}`;
+  if (!data.length) { noRes(g); return; }
+  g.innerHTML = data.map(c => {
+    const isKey = (c.Key||'').toUpperCase()==='YES';
+    const tf = (c.Terrificon||'').trim();
+    const bid = c.Start_Bid && c.Start_Bid!=='nan' ? `<span class="badge bcg">Start $${c.Start_Bid}</span>` : '';
+    return `<div class="comic-card" onclick="toggle(this,'open')">
+      <div class="card-title">${c.Title||'Untitled'}</div>
+      <div class="card-sub">Box ${c.Box||'?'} · ${c.Publisher||''} #${c.Issue||''} · ${c.Year||''}</div>
+      <div class="badges">
+        ${isKey?'<span class="badge bk">KEY</span>':''}
+        ${c.Era?`<span class="badge be">${c.Era}</span>`:''}
+        ${platBadge(c.Platform)}
+        ${bid}
+        ${tf?'<span class="badge bt">Terrificon</span>':''}
+      </div>
+      ${c.Value_NM&&c.Value_NM!=='nan'?`<div class="card-value">NM: <span class="v">$${c.Value_NM}</span></div>`:''}
+      ${c.Whatnot_Pitch&&c.Whatnot_Pitch!=='nan'?`<div class="card-pitch">${c.Whatnot_Pitch.substring(0,160)}${c.Whatnot_Pitch.length>160?'…':''}</div>`:''}
+      <div class="card-expand">
+        ${c.Writer&&c.Writer!=='nan'?`<div class="dr"><span class="dl">Writer</span><span class="dv">${c.Writer}</span></div>`:''}
+        ${c.Artist&&c.Artist!=='nan'?`<div class="dr"><span class="dl">Artist</span><span class="dv">${c.Artist}</span></div>`:''}
+        ${c.Arc&&c.Arc!=='nan'?`<div class="dr"><span class="dl">Arc</span><span class="dv">${c.Arc}</span></div>`:''}
+        ${c.Key_Why&&c.Key_Why!=='nan'?`<div class="dr"><span class="dl">Key Why</span><span class="dv">${c.Key_Why}</span></div>`:''}
+        ${c.First_App&&c.First_App!=='nan'?`<div class="dr"><span class="dl">1st App</span><span class="dv">${c.First_App}</span></div>`:''}
+        ${c.Condition&&c.Condition!=='nan'?`<div class="dr"><span class="dl">Condition</span><span class="dv">${c.Condition}</span></div>`:''}
+        ${c.Storage&&c.Storage!=='nan'?`<div class="dr"><span class="dl">Storage</span><span class="dv">${c.Storage}</span></div>`:''}
+        ${tf?`<div class="dr"><span class="dl">Terrificon</span><span class="dv">${tf}</span></div>`:''}
+        ${c.Sales_Data&&c.Sales_Data!=='nan'?`<div class="dr"><span class="dl">Sales</span><span class="dv">${c.Sales_Data.substring(0,100)}</span></div>`:''}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function filterBoxes() {
+  const q = document.getElementById('b-search').value.toLowerCase();
+  const box = document.getElementById('b-box').value;
+  const pub = document.getElementById('b-publisher').value.toLowerCase();
+  const key = document.getElementById('b-key').value.toUpperCase();
+  const plat = document.getElementById('b-platform').value.toUpperCase();
+  renderBoxes(DATA2.boxes_inventory.filter(c => {
+    if (q && ![c.Title,c.Writer,c.Artist,c.Arc,c.Publisher,c.Key_Why].join(' ').toLowerCase().includes(q)) return false;
+    if (box && String(c.Box).trim() !== box) return false;
+    if (pub && !(c.Publisher||'').toLowerCase().includes(pub)) return false;
+    if (key && (c.Key||'').toUpperCase() !== key) return false;
+    if (plat && (c.Platform||'').toUpperCase() !== plat) return false;
+    return true;
+  }));
+}
+
+['b-search','b-box','b-publisher','b-key','b-platform']
+  .forEach(id => document.getElementById(id).addEventListener('input', filterBoxes));
+
+// ──────────────────────────────────────────────
+// BOX KEYS
+// ──────────────────────────────────────────────
+function renderKeys(data) {
+  const g = document.getElementById('k-grid');
+  document.getElementById('k-count').textContent = `${data.length} key${data.length!==1?'s':''}`;
+  if (!data.length) { noRes(g); return; }
+  g.innerHTML = data.map(c => {
+    const isCGC = (c.Action_Flag||'').includes('CGC');
+    const isWhatnot = (c.Action_Flag||'').includes('Whatnot');
+    const tf = (c.Terrificon||'').toUpperCase()==='YES';
+    return `<div class="comic-card" onclick="toggle(this,'open')">
+      <div class="card-title">${c.Title||'Untitled'}</div>
+      <div class="card-sub">Box ${c.Box||'?'} · ${c.Publisher||''} #${c.Issue||''}</div>
+      <div class="badges">
+        <span class="badge bk">KEY</span>
+        ${isCGC?'<span class="badge bc">CGC NOW</span>':''}
+        ${isWhatnot?'<span class="badge bwn">Whatnot Ready</span>':''}
+        ${platBadge(c.Platform)}
+        ${tf?'<span class="badge bt">Terrificon</span>':''}
+      </div>
+      ${c.Value_NM&&c.Value_NM!=='nan'?`<div class="card-value">NM: <span class="v">$${c.Value_NM}</span>${c.Start_Bid&&c.Start_Bid!=='nan'?' · Start: $'+c.Start_Bid:''}</div>`:''}
+      ${c.Key_Why&&c.Key_Why!=='nan'?`<div class="card-pitch">${c.Key_Why.substring(0,180)}${c.Key_Why.length>180?'…':''}</div>`:''}
+      <div class="card-expand">
+        ${c.Storage&&c.Storage!=='nan'?`<div class="dr"><span class="dl">Storage</span><span class="dv">${c.Storage}</span></div>`:''}
+        ${c.Action_Flag&&c.Action_Flag!=='nan'?`<div class="dr"><span class="dl">Action</span><span class="dv">${c.Action_Flag}</span></div>`:''}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function filterKeys() {
+  const q = document.getElementById('k-search').value.toLowerCase();
+  const box = document.getElementById('k-box').value;
+  const action = document.getElementById('k-action').value;
+  const tf = document.getElementById('k-terrificon').value.toUpperCase();
+  renderKeys(DATA2.boxes_keys.filter(c => {
+    if (q && ![c.Title,c.Publisher,c.Key_Why,c.Issue].join(' ').toLowerCase().includes(q)) return false;
+    if (box && String(c.Box).trim() !== box) return false;
+    if (action && !(c.Action_Flag||'').includes(action)) return false;
+    if (tf && (c.Terrificon||'').toUpperCase() !== tf) return false;
+    return true;
+  }));
+}
+
+['k-search','k-box','k-action','k-terrificon']
+  .forEach(id => document.getElementById(id).addEventListener('input', filterKeys));
+
+// ──────────────────────────────────────────────
+// CALENDAR
+// ──────────────────────────────────────────────
+function calClass(type) {
+  const t = (type||'').toUpperCase();
+  if (t.includes('WHATNOT')) return 'lc-whatnot';
+  if (t.includes('CGC')) return 'lc-cgc';
+  if (t.includes('JUNETEENTH')||t.includes('SPECIAL')) return 'lc-special';
+  if (t.includes('TERRIFICON')||t.includes('NYCC')) return 'lc-con';
+  return '';
+}
+
+function renderCalendar(data) {
+  const el = document.getElementById('cal-list');
+  document.getElementById('cal-count').textContent = `${data.length} event${data.length!==1?'s':''}`;
+  el.innerHTML = data.map(e => `
+    <div class="lcard ${calClass(e.Event_Type)}" onclick="toggle(this,'open')">
+      <div class="lcard-head">
+        <span class="lcard-date">${e.Date}</span>
+        <span class="lcard-tag">${e.Event_Type}</span>
+        <span class="lcard-title">${e.Theme}</span>
+        <span class="lcard-right">${e.Revenue_Notes.match(/\$[\d,–]+/g)?.[0]||''}</span>
+      </div>
+      <div class="lcard-expand">
+        ${e.Featured_Books?`<div class="dr"><span class="dl">Books</span><span class="dv">${e.Featured_Books.substring(0,300)}</span></div>`:''}
+        ${e.Prep?`<div class="dr" style="margin-top:6px"><span class="dl">Prep</span><span class="dv">${e.Prep.substring(0,300)}</span></div>`:''}
+        ${e.Revenue_Notes?`<div class="dr" style="margin-top:6px"><span class="dl">Notes</span><span class="dv">${e.Revenue_Notes.substring(0,200)}</span></div>`:''}
+      </div>
+    </div>`).join('');
+}
+
+function filterCalendar() {
+  const q = document.getElementById('cal-search').value.toLowerCase();
+  const type = document.getElementById('cal-type').value.toUpperCase();
+  renderCalendar(DATA1.calendar.filter(e => {
+    if (q && ![e.Theme,e.Featured_Books,e.Revenue_Notes,e.Prep].join(' ').toLowerCase().includes(q)) return false;
+    if (type && !(e.Event_Type||'').toUpperCase().includes(type)) return false;
+    return true;
+  }));
+}
+['cal-search','cal-type'].forEach(id => document.getElementById(id).addEventListener('input', filterCalendar));
+
+// ──────────────────────────────────────────────
+// SHOW PLANNER
+// ──────────────────────────────────────────────
+function statusClass(s) {
+  if ((s||'').includes('Ready')) return 'ss-ready';
+  if ((s||'').includes('CGC')) return 'ss-cgc';
+  if ((s||'').includes('Terrificon')) return 'ss-after';
+  return '';
+}
+
+function renderShows() {
+  const g = document.getElementById('shows-grid');
+  g.innerHTML = DATA2.show_planner.map(s => `
+    <div class="show-card" onclick="toggle(this,'open')">
+      <div class="show-theme">${s.Theme}</div>
+      <div class="show-anchor">${s.Anchor_Book}</div>
+      <div class="show-meta">
+        <span class="show-rev">${s.Est_Revenue}</span>
+        <span class="show-status-badge ${statusClass(s.Status)}">${s.Status}</span>
+        ${s.Box?`<span class="badge bb">Box ${s.Box}</span>`:''}
+      </div>
+      <div class="show-expand">${s.Notes||''}</div>
+    </div>`).join('');
+
+  // Show 2 runsheet
+  const el = document.getElementById('show2-list');
+  el.innerHTML = DATA2.show2.map(r => `
+    <div class="lcard" onclick="toggle(this,'open')">
+      <div class="lcard-head">
+        <span class="lcard-date">#${r.Order}</span>
+        <span class="lcard-title">${r.Book} ${r.Issue}</span>
+        <span class="lcard-right">${r.Start?'Start $'+r.Start:''}</span>
+        ${r.Value_NM&&r.Value_NM!=='nan'?`<span class="lcard-tag">NM $${r.Value_NM}</span>`:''}
+      </div>
+      <div class="lcard-expand">
+        ${r.Whatnot_Pitch?`<div style="margin-bottom:6px;font-style:italic">${r.Whatnot_Pitch}</div>`:''}
+        ${r.Audience_Hook?`<div class="dr"><span class="dl">Hook</span><span class="dv">${r.Audience_Hook}</span></div>`:''}
+        ${r.Publisher?`<div class="dr"><span class="dl">Publisher</span><span class="dv">${r.Publisher} · Box ${r.Box||'?'}</span></div>`:''}
+      </div>
+    </div>`).join('');
+}
+
+// ──────────────────────────────────────────────
+// CGC STRATEGY
+// ──────────────────────────────────────────────
+function renderCGC() {
+  const el = document.getElementById('cgc-list');
+  el.innerHTML = DATA1.cgc_strategy.map(c => `
+    <div class="lcard lc-cgc" onclick="toggle(this,'open')">
+      <div class="lcard-head">
+        <span class="lcard-date">${c.Priority||''}</span>
+        <span class="lcard-title">${c.Book}</span>
+        <span class="lcard-right">${c.ROI||''}</span>
+        <span class="lcard-tag">${c.Cost||''}</span>
+      </div>
+      <div class="lcard-expand">
+        ${c.Service?`<div class="dr"><span class="dl">Service</span><span class="dv">${c.Service}</span></div>`:''}
+        ${c.Expected_Grade?`<div class="dr"><span class="dl">Grade</span><span class="dv">${c.Expected_Grade}</span></div>`:''}
+        ${c.Raw_Value?`<div class="dr"><span class="dl">Raw Now</span><span class="dv">${c.Raw_Value}</span></div>`:''}
+        ${c.CGC_Value?`<div class="dr"><span class="dl">After CGC</span><span class="dv" style="color:var(--gold)">${c.CGC_Value}</span></div>`:''}
+        ${c.Notes?`<div style="margin-top:8px;color:#888;font-style:italic">${c.Notes.substring(0,300)}</div>`:''}
+      </div>
+    </div>`).join('');
+}
+
+// ──────────────────────────────────────────────
+// PRIVATE SIGNINGS
+// ──────────────────────────────────────────────
+function sigClass(status) {
+  if ((status||'').includes('OPEN')) return 'lc-open';
+  if ((status||'').includes('CLOSED')) return 'lc-closed';
+  return 'lc-watch';
+}
+function sigBadge(status) {
+  if ((status||'').includes('OPEN')) return 'status-open';
+  if ((status||'').includes('CLOSED')) return 'status-closed';
+  return 'status-watch';
+}
+
+function renderSignings() {
+  const el = document.getElementById('signings-list');
+  el.innerHTML = DATA1.private_signings.map(s => `
+    <div class="lcard ${sigClass(s.status)}" onclick="toggle(this,'open')">
+      <div class="lcard-head">
+        <span class="lcard-title">${s.creator}</span>
+        <span class="lcard-tag ${sigBadge(s.status)}">${s.status||'WATCH'}</span>
+        <span class="lcard-right">${s.fee||''}</span>
+        <span class="lcard-date" style="min-width:auto;font-size:0.78rem;color:var(--muted)">${s.deadline}</span>
+      </div>
+      <div class="lcard-expand">
+        ${s.your_books?`<div class="dr"><span class="dl">Your Books</span><span class="dv" style="color:var(--brown-light)">${s.your_books.substring(0,200)}</span></div>`:''}
+        ${s.action?`<div class="dr" style="margin-top:6px"><span class="dl">Action</span><span class="dv" style="color:var(--red)">${s.action.substring(0,200)}</span></div>`:''}
+        ${s.strategy?`<div style="margin-top:8px;color:#888;font-style:italic">${s.strategy.substring(0,250)}</div>`:''}
+      </div>
+    </div>`).join('');
+}
+
+// ── INIT ──
+renderOrig(DATA1.orig_inventory);
+renderBoxes(DATA2.boxes_inventory);
+renderKeys(DATA2.boxes_keys);
+renderCalendar(DATA1.calendar);
+renderShows();
+renderCGC();
+renderSignings();
+```
+
+---
+
+## STEP 7 — Run It
+
+Click the green **Run** button. Your site opens in the preview pane.
+
+**Test these queries immediately:**
+
+| What you want | Where | How |
+|---|---|---|
+| All your signed books | Original Collection | Signed → Signed Only |
+| Wolverine #8 | Original Collection | Search: "wolverine" |
+| Box 2 keys only | All Boxes | Box → Box 2 + Key → Keys Only |
+| Marvel Zombies books | All Boxes | Search: "zombies" |
+| CGC Immediately list | Box Keys | Action → CGC Immediately |
+| Terrificon books (boxes) | Box Keys | Terrificon filter → YES |
+| July show schedule | Calendar | Search: "jul" |
+| Miles Morales show plan | Show Planner | Expand "Miles Morales Spotlight" |
+| Roy Thomas signing | Private Signings | Open — shows deadline + your books |
+| $1 Keys Night order | Show Planner | Scroll to runsheet section |
+
+---
+
+## File Structure in Replit
+
+```
+marshall-comics-db/
+├── index.html       ← 7-tab layout
+├── style.css        ← Black/red/brown brand
+├── script.js        ← All filter + render logic
+├── data1.js         ← 308 orig + calendar + CGC plans + con lists + signings (423KB)
+├── data2.js         ← 1,467 box books + 141 keys + show planner + $1 night (781KB)
+└── logo.png         ← Your blackreadbrown logo (optional)
+```
+
+---
+
+## What to Ask Claude Next
+
+- **"Generate data1.js"** → 308-book collection + all planning data, ready to paste
+- **"Generate data2.js"** → 1,467 box books + keys + show tools, ready to paste
+- **Add sort by value** → one line of JS, ask anytime
+- **Add a Terrificon countdown timer** → visual urgency for Aug 7
+- **Export filtered results as CSV** → download any filtered view

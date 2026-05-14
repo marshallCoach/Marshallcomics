@@ -2,123 +2,94 @@ import { useState, useMemo } from "react";
 import { DATA2 } from "@/data/data2";
 
 const keys = DATA2.boxes_keys;
-const BOXES = [...new Set(keys.map((k) => String(k.Box)))].sort((a, b) => Number(a) - Number(b));
-const PLATFORMS = [...new Set(keys.map((k) => k.Platform).filter(Boolean))].sort();
-const FLAGS = [...new Set(keys.map((k) => k.Action_Flag).filter(Boolean))].sort();
+const BOXES = [...new Set(keys.map(k => String(k.Box)))].sort((a, b) => Number(a) - Number(b));
 
 export default function BoxKeys() {
-  const [q, setQ] = useState("");
-  const [box, setBox] = useState("");
-  const [platform, setPlatform] = useState("");
-  const [flag, setFlag] = useState("");
-  const [terrificon, setTerrificon] = useState("");
+  const [q, setQ]         = useState("");
+  const [box, setBox]     = useState("");
+  const [action, setAction] = useState("");
+  const [tf, setTf]       = useState("");
+  const [open, setOpen]   = useState<Set<number>>(new Set());
 
   const results = useMemo(() => {
     const ql = q.toLowerCase();
-    return keys.filter((k) => {
-      if (ql && !`${k.Title} ${k.Issue} ${k.Publisher} ${k.Key_Why}`.toLowerCase().includes(ql)) return false;
+    return keys.filter(k => {
+      if (ql && ![k.Title, k.Publisher, k.Key_Why, k.Issue].join(" ").toLowerCase().includes(ql)) return false;
       if (box && String(k.Box) !== box) return false;
-      if (platform && k.Platform !== platform) return false;
-      if (flag && k.Action_Flag !== flag) return false;
-      if (terrificon === "YES" && !k.Terrificon) return false;
+      if (action && !(k.Action_Flag || "").includes(action)) return false;
+      if (tf && (k.Terrificon || "").toUpperCase() !== tf) return false;
       return true;
     });
-  }, [q, box, platform, flag, terrificon]);
+  }, [q, box, action, tf]);
 
-  const clear = () => { setQ(""); setBox(""); setPlatform(""); setFlag(""); setTerrificon(""); };
-
-  const inputStyle: React.CSSProperties = {
-    background: "#1a1a1a", border: "1px solid #333", color: "#d4a574",
-    padding: "7px 12px", borderRadius: 4, fontSize: "0.82rem", minWidth: 140,
-    fontFamily: "Georgia, serif",
-  };
-
-  const flagColor = (f: string) => {
-    if (f?.includes("CGC IMMEDIATELY")) return { bg: "#3a0000", color: "#ff6666", border: "1px solid #8b1a1a" };
-    if (f?.includes("Whatnot ready")) return { bg: "#0a2a0a", color: "#90ee90", border: "1px solid #2a5a2a" };
-    if (f?.includes("Hold")) return { bg: "#2a2a00", color: "#ffd700", border: "1px solid #5a5a00" };
-    return { bg: "#1a1a3e", color: "#99aaff", border: "1px solid #2a2a5e" };
+  const clear = () => { setQ(""); setBox(""); setAction(""); setTf(""); setOpen(new Set()); };
+  const toggle = (i: number) => {
+    setOpen(prev => { const n = new Set(prev); n.has(i) ? n.delete(i) : n.add(i); return n; });
   };
 
   return (
     <div>
-      <div style={{ background: "#161616", padding: "14px 20px", display: "flex", flexWrap: "wrap", gap: 10, borderBottom: "1px solid #222", position: "sticky", top: 0, zIndex: 10 }}>
-        <input style={{ ...inputStyle, minWidth: 200, flex: 1 }} placeholder="Search title, issue, key reason..." value={q} onChange={(e) => setQ(e.target.value)} />
-        <select style={inputStyle} value={box} onChange={(e) => setBox(e.target.value)}>
+      <div className="filters">
+        <input placeholder="Search title, key reason, publisher..." value={q} onChange={e => setQ(e.target.value)} />
+        <select value={box} onChange={e => setBox(e.target.value)}>
           <option value="">All Boxes</option>
-          {BOXES.map((b) => <option key={b} value={b}>Box {b}</option>)}
+          {BOXES.map(b => <option key={b} value={b}>Box {b}</option>)}
         </select>
-        <select style={inputStyle} value={platform} onChange={(e) => setPlatform(e.target.value)}>
-          <option value="">All Platforms</option>
-          {PLATFORMS.map((p) => <option key={p}>{p}</option>)}
-        </select>
-        <select style={inputStyle} value={flag} onChange={(e) => setFlag(e.target.value)}>
+        <select value={action} onChange={e => setAction(e.target.value)}>
           <option value="">All Actions</option>
-          {FLAGS.map((f) => <option key={f}>{f}</option>)}
+          <option value="CGC">CGC Immediately</option>
+          <option value="Whatnot">Whatnot Ready</option>
         </select>
-        <select style={inputStyle} value={terrificon} onChange={(e) => setTerrificon(e.target.value)}>
+        <select value={tf} onChange={e => setTf(e.target.value)}>
           <option value="">All / Terrificon</option>
-          <option value="YES">Terrificon Only</option>
+          <option value="YES">Terrificon Books</option>
         </select>
-        <button onClick={clear} style={{ background: "#8b1a1a", color: "#fff", border: "none", padding: "7px 16px", borderRadius: 4, cursor: "pointer", fontSize: "0.82rem", letterSpacing: 1, fontFamily: "Georgia, serif" }}>
-          Clear
-        </button>
+        <button className="clear-btn" onClick={clear}>✕ Clear</button>
       </div>
 
-      <div style={{ padding: "8px 20px", color: "#555", fontSize: "0.75rem", letterSpacing: 1, textTransform: "uppercase" }}>
-        {results.length} of {keys.length} key issues
+      <div className="results-bar">
+        <span>{results.length} of {keys.length} keys</span>
+        <span className="results-hint">141 keys extracted from all boxes</span>
       </div>
 
-      {/* Table view for keys */}
-      <div style={{ padding: "0 20px 20px", overflowX: "auto" }}>
-        <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.82rem" }}>
-          <thead>
-            <tr style={{ borderBottom: "2px solid #8b1a1a" }}>
-              {["Box", "Title", "Issue", "Publisher", "Key Significance", "NM Value", "Start Bid", "Platform", "Action", "Terrificon"].map((h) => (
-                <th key={h} style={{ color: "#888", textTransform: "uppercase", fontSize: "0.65rem", letterSpacing: 1, padding: "8px 12px", textAlign: "left", whiteSpace: "nowrap" }}>{h}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {results.length === 0 && (
-              <tr><td colSpan={10} style={{ textAlign: "center", color: "#444", padding: 40 }}>No keys match your filters.</td></tr>
-            )}
-            {results.map((k, i) => {
-              const fc = flagColor(k.Action_Flag || "");
-              return (
-                <tr key={i} style={{ borderBottom: "1px solid #1e1e1e" }}
-                  onMouseEnter={(e) => (e.currentTarget.style.background = "#1a1010")}
-                  onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}>
-                  <td style={{ padding: "10px 12px", color: "#8899dd" }}>Box {k.Box}</td>
-                  <td style={{ padding: "10px 12px", color: "#e8c99a", fontWeight: "bold" }}>{k.Title}</td>
-                  <td style={{ padding: "10px 12px", color: "#888" }}>#{k.Issue}</td>
-                  <td style={{ padding: "10px 12px", color: "#888" }}>{k.Publisher}</td>
-                  <td style={{ padding: "10px 12px", color: "#c8102e", fontStyle: "italic", maxWidth: 280 }}>{k.Key_Why}</td>
-                  <td style={{ padding: "10px 12px", color: "#c8102e", fontWeight: "bold", whiteSpace: "nowrap" }}>${k.Value_NM}</td>
-                  <td style={{ padding: "10px 12px", color: "#d4a574", whiteSpace: "nowrap" }}>${k.Start_Bid}</td>
-                  <td style={{ padding: "10px 12px" }}>
-                    {k.Platform && (
-                      <span style={{ fontSize: "0.65rem", padding: "2px 8px", borderRadius: 12,
-                        background: k.Platform.includes("WHATNOT") ? "#1a3a1a" : k.Platform === "EBAY" ? "#3a2a00" : "#2a1a3a",
-                        color: k.Platform.includes("WHATNOT") ? "#90ee90" : k.Platform === "EBAY" ? "#ffd700" : "#cc99ff"
-                      }}>{k.Platform}</span>
-                    )}
-                  </td>
-                  <td style={{ padding: "10px 12px" }}>
-                    {k.Action_Flag && (
-                      <span style={{ fontSize: "0.65rem", padding: "3px 10px", borderRadius: 12, ...fc, whiteSpace: "nowrap" }}>
-                        {k.Action_Flag}
-                      </span>
-                    )}
-                  </td>
-                  <td style={{ padding: "10px 12px", textAlign: "center" }}>
-                    {k.Terrificon && <span style={{ color: "#c8a0ff" }}>★</span>}
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+      <div className="card-grid">
+        {results.length === 0 && <div className="no-res">No keys match your filters</div>}
+        {results.map((k, i) => {
+          const isCGC     = (k.Action_Flag || "").includes("CGC");
+          const isWhatnot = (k.Action_Flag || "").includes("Whatnot");
+          const isTf      = (k.Terrificon || "").toUpperCase() === "YES";
+          const isOpen    = open.has(i);
+          const nmVal     = k.Value_NM && k.Value_NM !== "nan" ? k.Value_NM : "";
+          const keyWhy    = k.Key_Why && k.Key_Why !== "nan" ? k.Key_Why : "";
+          return (
+            <div key={i} className={`comic-card${isOpen ? " open" : ""}`} onClick={() => toggle(i)}>
+              <div className="card-title">{k.Title || "Untitled"}</div>
+              <div className="card-sub">Box {k.Box} · {k.Publisher} #{k.Issue}</div>
+              <div className="badges">
+                <span className="badge bk">KEY</span>
+                {isCGC     && <span className="badge bc">CGC NOW</span>}
+                {isWhatnot && <span className="badge bwn">Whatnot Ready</span>}
+                {k.Platform && <span className={`badge ${k.Platform === "EBAY" ? "beb" : "bwn"}`}>{k.Platform}</span>}
+                {isTf      && <span className="badge bt">Terrificon</span>}
+              </div>
+              {nmVal && (
+                <div className="card-value">
+                  NM: <span className="v">${nmVal}</span>
+                  {k.Start_Bid && k.Start_Bid !== "nan" && <span className="vf"> · Start: ${k.Start_Bid}</span>}
+                </div>
+              )}
+              {keyWhy && (
+                <div className="card-pitch">{keyWhy.substring(0, 180)}{keyWhy.length > 180 ? "…" : ""}</div>
+              )}
+              {isOpen && (
+                <div className="card-expand">
+                  {k.Storage    && k.Storage !== "nan"    && <div className="dr"><span className="dl">Storage</span><span className="dv">{k.Storage}</span></div>}
+                  {k.Action_Flag && k.Action_Flag !== "nan" && <div className="dr"><span className="dl">Action</span><span className="dv">{k.Action_Flag}</span></div>}
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   );

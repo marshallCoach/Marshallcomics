@@ -2,100 +2,69 @@ import { useState, useMemo } from "react";
 import { DATA1 } from "@/data/data1";
 
 const events = DATA1.calendar;
-const EVENT_TYPES = [...new Set(events.map((e) => e.Event_Type).filter(Boolean))];
+
+function calClass(type: string) {
+  const t = (type || "").toUpperCase();
+  if (t.includes("WHATNOT")) return "lc-whatnot";
+  if (t.includes("CGC"))     return "lc-cgc";
+  if (t.includes("JUNETEENTH") || t.includes("SPECIAL")) return "lc-special";
+  if (t.includes("TERRIFICON") || t.includes("NYCC")) return "lc-con";
+  return "";
+}
 
 export default function Calendar() {
-  const [filter, setFilter] = useState("");
+  const [q, setQ]       = useState("");
+  const [type, setType] = useState("");
+  const [open, setOpen] = useState<Set<number>>(new Set());
 
   const results = useMemo(() => {
-    if (!filter) return events;
-    return events.filter((e) => e.Event_Type === filter);
-  }, [filter]);
+    const ql = q.toLowerCase();
+    return events.filter(e => {
+      if (ql && ![e.Theme, e.Featured_Books, e.Revenue_Notes, e.Prep].join(" ").toLowerCase().includes(ql)) return false;
+      if (type && !(e.Event_Type || "").toUpperCase().includes(type)) return false;
+      return true;
+    });
+  }, [q, type]);
 
-  const inputStyle: React.CSSProperties = {
-    background: "#1a1a1a", border: "1px solid #333", color: "#d4a574",
-    padding: "7px 12px", borderRadius: 4, fontSize: "0.82rem",
-    fontFamily: "Georgia, serif",
-  };
-
-  const getCardStyle = (eventType: string) => {
-    if (eventType?.includes("WHATNOT"))
-      return { border: "1px solid #2a5a2a", background: "#0d1a0d" };
-    if (eventType?.includes("CGC"))
-      return { border: "1px solid #5a4a00", background: "#1a1500" };
-    if (eventType?.includes("DEADLINE") || eventType?.includes("SIGNING"))
-      return { border: "1px solid #5a1a1a", background: "#1a0a0a" };
-    return { border: "1px solid #222", background: "#141414" };
-  };
-
-  const getDateBadge = (eventType: string) => {
-    if (eventType?.includes("WHATNOT")) return { bg: "#1a3a1a", color: "#90ee90" };
-    if (eventType?.includes("CGC")) return { bg: "#2a2200", color: "#ffd700" };
-    return { bg: "#3a1a1a", color: "#ff8888" };
+  const clear = () => { setQ(""); setType(""); setOpen(new Set()); };
+  const toggle = (i: number) => {
+    setOpen(prev => { const n = new Set(prev); n.has(i) ? n.delete(i) : n.add(i); return n; });
   };
 
   return (
     <div>
-      <div style={{ background: "#161616", padding: "14px 20px", display: "flex", flexWrap: "wrap", gap: 10, borderBottom: "1px solid #222", position: "sticky", top: 0, zIndex: 10 }}>
-        <select style={inputStyle} value={filter} onChange={(e) => setFilter(e.target.value)}>
+      <div className="filters">
+        <input placeholder="Search theme, books, notes..." value={q} onChange={e => setQ(e.target.value)} />
+        <select value={type} onChange={e => setType(e.target.value)}>
           <option value="">All Events</option>
-          {EVENT_TYPES.map((t) => <option key={t} value={t}>{t}</option>)}
+          <option value="WHATNOT">Whatnot Shows</option>
+          <option value="CGC">CGC Submissions</option>
+          <option value="CON">Conventions</option>
         </select>
-        {filter && (
-          <button onClick={() => setFilter("")} style={{ background: "#8b1a1a", color: "#fff", border: "none", padding: "7px 16px", borderRadius: 4, cursor: "pointer", fontSize: "0.82rem", fontFamily: "Georgia, serif" }}>
-            Clear
-          </button>
-        )}
-        <div style={{ marginLeft: "auto", display: "flex", gap: 16, alignItems: "center" }}>
-          <span style={{ fontSize: "0.75rem", color: "#555" }}>{results.length} events</span>
-          <span style={{ fontSize: "0.75rem" }}><span style={{ color: "#90ee90" }}>■</span> <span style={{ color: "#666" }}>Whatnot Show</span></span>
-          <span style={{ fontSize: "0.75rem" }}><span style={{ color: "#ffd700" }}>■</span> <span style={{ color: "#666" }}>CGC Deadline</span></span>
-          <span style={{ fontSize: "0.75rem" }}><span style={{ color: "#ff8888" }}>■</span> <span style={{ color: "#666" }}>Other</span></span>
-        </div>
+        <button className="clear-btn" onClick={clear}>✕ Clear</button>
       </div>
 
-      <div style={{ padding: "20px", display: "flex", flexDirection: "column", gap: 16, maxWidth: 900, margin: "0 auto" }}>
+      <div className="results-bar">
+        <span>{results.length} events</span>
+      </div>
+
+      <div className="list-view">
         {results.map((ev, i) => {
-          const cs = getCardStyle(ev.Event_Type || "");
-          const db = getDateBadge(ev.Event_Type || "");
+          const isOpen = open.has(i);
+          const revenue = (ev.Revenue_Notes || "").match(/\$[\d,–\-]+/g)?.[0] || "";
           return (
-            <div key={i} style={{ ...cs, borderRadius: 8, padding: 20 }}>
-              <div style={{ display: "flex", gap: 16, alignItems: "flex-start", flexWrap: "wrap", marginBottom: 12 }}>
-                <div style={{ background: db.bg, color: db.color, padding: "6px 14px", borderRadius: 6, fontSize: "0.82rem", fontWeight: "bold", whiteSpace: "nowrap", minWidth: 160, textAlign: "center" }}>
-                  <div>{ev.Date}</div>
-                  <div style={{ fontSize: "0.65rem", opacity: 0.8 }}>{ev.Day}</div>
-                </div>
-                <div style={{ flex: 1 }}>
-                  <div style={{ color: "#e8c99a", fontWeight: "bold", fontSize: "0.95rem", marginBottom: 4 }}>
-                    {ev.Event_Type}
-                  </div>
-                  <div style={{ color: "#c8102e", fontSize: "0.85rem", fontStyle: "italic" }}>
-                    {ev.Theme}
-                  </div>
-                </div>
+            <div key={i} className={`lcard ${calClass(ev.Event_Type || "")}${isOpen ? " open" : ""}`} onClick={() => toggle(i)}>
+              <div className="lcard-head">
+                <span className="lcard-date">{ev.Date}</span>
+                <span className="lcard-tag">{ev.Event_Type}</span>
+                <span className="lcard-title">{ev.Theme}</span>
+                {revenue && <span className="lcard-right">{revenue}</span>}
               </div>
-
-              {ev.Featured_Books && (
-                <div style={{ marginBottom: 12 }}>
-                  <div style={{ color: "#666", fontSize: "0.65rem", letterSpacing: 1, textTransform: "uppercase", marginBottom: 6 }}>Featured Books</div>
-                  <div style={{ color: "#d4a574", fontSize: "0.8rem", lineHeight: 1.7, whiteSpace: "pre-line" }}>
-                    {ev.Featured_Books}
-                  </div>
-                </div>
-              )}
-
-              {ev.Prep && (
-                <div style={{ marginBottom: 10 }}>
-                  <div style={{ color: "#666", fontSize: "0.65rem", letterSpacing: 1, textTransform: "uppercase", marginBottom: 6 }}>Prep Checklist</div>
-                  <div style={{ color: "#888", fontSize: "0.78rem", lineHeight: 1.7, whiteSpace: "pre-line" }}>
-                    {ev.Prep}
-                  </div>
-                </div>
-              )}
-
-              {ev.Revenue_Notes && (
-                <div style={{ background: "rgba(200,16,46,0.08)", border: "1px solid rgba(200,16,46,0.2)", borderRadius: 4, padding: "8px 12px", fontSize: "0.78rem", color: "#d4a574" }}>
-                  {ev.Revenue_Notes}
+              {isOpen && (
+                <div className="lcard-expand">
+                  {ev.Featured_Books && <div className="dr"><span className="dl">Books</span><span className="dv">{ev.Featured_Books.substring(0, 300)}</span></div>}
+                  {ev.Prep          && <div className="dr" style={{ marginTop: 6 }}><span className="dl">Prep</span><span className="dv">{ev.Prep.substring(0, 300)}</span></div>}
+                  {ev.Revenue_Notes && <div className="dr" style={{ marginTop: 6 }}><span className="dl">Notes</span><span className="dv">{ev.Revenue_Notes.substring(0, 200)}</span></div>}
                 </div>
               )}
             </div>
