@@ -25,7 +25,8 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col" style={{ background: "#0a0a0a", color: "#d4a574", fontFamily: "Georgia, serif" }}>
       {/* Header */}
-      <header style={{ background: "#111", borderBottom: "3px solid #8b1a1a", padding: "12px 24px", display: "flex", alignItems: "center", gap: 16 }}>
+      <header style={{ background: "#111", borderBottom: "3px solid #8b1a1a", padding: "8px 24px", display: "flex", alignItems: "center", gap: 14 }}>
+        <img src="/logo.png" alt="BlackReadBrown" style={{ height: 52, width: 52, borderRadius: 8, objectFit: "cover", flexShrink: 0 }} />
         <div>
           <h1 style={{ color: "#c8102e", fontSize: "1.3rem", letterSpacing: 3, textTransform: "uppercase", margin: 0 }}>
             Marshall Comics
