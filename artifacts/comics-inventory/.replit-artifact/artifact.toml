@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Marshall Comics Inventory"
+version = "1.0.0"
+id = "artifacts/comics-inventory"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20779
+
+[services.development]
+run = "pnpm --filter @workspace/comics-inventory run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/comics-inventory", "run", "build" ]
+publicDir = "artifacts/comics-inventory/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20779"
+BASE_PATH = "/"
