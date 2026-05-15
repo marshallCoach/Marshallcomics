@@ -10,8 +10,8 @@ import CGCStrategy from "@/pages/CGCStrategy";
 import PrivateSignings from "@/pages/PrivateSignings";
 
 const TABS = [
-  { id: "collection", label: "📦 Sales Inventory" },
   { id: "boxes",      label: "🗃️ All Boxes" },
+  { id: "collection", label: "📦 Sales Inventory" },
   { id: "boxkeys",    label: "🔑 Box Keys" },
   { id: "calendar",   label: "📅 Calendar" },
   { id: "showplanner",label: "🎙️ Show Planner" },
@@ -28,7 +28,7 @@ const origKeys  = orig.filter(c => (c.Key || "").toUpperCase() === "YES").length
 const boxKeys   = DATA2.boxes_keys.length;
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<TabId>("collection");
+  const [activeTab, setActiveTab] = useState<TabId>("boxes");
 
   return (
     <div style={{ minHeight: "100vh" }}>
