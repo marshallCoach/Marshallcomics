@@ -1,10 +1,13 @@
 import { useState, useMemo } from "react";
 import { DATA2 } from "@/data/data2";
+import { SortableTable, ColDef } from "@/components/SortableTable";
 
 const comics = DATA2.boxes_inventory;
 const BOXES      = [...new Set(comics.map(c => String(c.Box)))].sort((a, b) => Number(a) - Number(b));
 const PUBLISHERS = [...new Set(comics.map(c => c.Publisher).filter(Boolean))].sort();
 const PLATFORMS  = [...new Set(comics.map(c => c.Platform).filter(Boolean))].sort();
+
+type Comic = (typeof comics)[number];
 
 const BOX_LABELS: Record<string, string> = {
   "1": "Box 1 — DC New 52", "2": "Box 2 — Marvel Ultimate",
@@ -19,6 +22,75 @@ function platClass(p: string) {
   if (u === "EBAY")    return "beb";
   return "bb";
 }
+
+function parseVal(v: string | undefined | null) {
+  if (!v || v === "nan") return 0;
+  return parseFloat(String(v).replace(/[^0-9.]/g, "") || "0");
+}
+
+const LIST_COLS: ColDef<Comic>[] = [
+  {
+    key: "box", label: "Box", defaultWidth: 65,
+    sort: (a, b) => Number(a.Box) - Number(b.Box),
+    cell: r => <span className="lt-sub">{r.Box}</span>,
+  },
+  {
+    key: "title", label: "Title", defaultWidth: 200,
+    sort: (a, b) => (a.Title || "").localeCompare(b.Title || ""),
+    cell: r => <span className="lt-title">{r.Title || "Untitled"}</span>,
+  },
+  {
+    key: "issue", label: "#", defaultWidth: 55,
+    sort: (a, b) => parseVal(a.Issue) - parseVal(b.Issue),
+    cell: r => <span className="lt-sub">#{r.Issue}</span>,
+  },
+  {
+    key: "publisher", label: "Publisher", defaultWidth: 100,
+    sort: (a, b) => (a.Publisher || "").localeCompare(b.Publisher || ""),
+    cell: r => <span className="lt-sub">{r.Publisher}</span>,
+  },
+  {
+    key: "year", label: "Year", defaultWidth: 70,
+    sort: (a, b) => parseVal(a.Year) - parseVal(b.Year),
+    cell: r => <span className="lt-sub">{r.Year}</span>,
+  },
+  {
+    key: "era", label: "Era", defaultWidth: 80,
+    sort: (a, b) => (a.Era || "").localeCompare(b.Era || ""),
+    cell: r => r.Era ? <span className="badge be" style={{ fontSize: "0.62rem" }}>{r.Era}</span> : null,
+  },
+  {
+    key: "nm", label: "NM Value", defaultWidth: 90,
+    sort: (a, b) => parseVal(a.Value_NM) - parseVal(b.Value_NM),
+    cell: r => {
+      const v = r.Value_NM && r.Value_NM !== "nan" ? r.Value_NM : null;
+      return <span className="lt-val">{v ? `$${v}` : "—"}</span>;
+    },
+  },
+  {
+    key: "bid", label: "Start Bid", defaultWidth: 85,
+    sort: (a, b) => parseVal(a.Start_Bid) - parseVal(b.Start_Bid),
+    cell: r => {
+      const v = r.Start_Bid && r.Start_Bid !== "nan" ? r.Start_Bid : null;
+      return <span className="lt-sub">{v ? `$${v}` : "—"}</span>;
+    },
+  },
+  {
+    key: "platform", label: "Platform", defaultWidth: 100,
+    sort: (a, b) => (a.Platform || "").localeCompare(b.Platform || ""),
+    cell: r => r.Platform ? <span className={`badge ${platClass(r.Platform)}`} style={{ fontSize: "0.62rem" }}>{r.Platform}</span> : null,
+  },
+  {
+    key: "key", label: "Key", defaultWidth: 70,
+    sort: (a, b) => ((b.Key || "") > (a.Key || "") ? 1 : -1),
+    cell: r => (
+      <div style={{ display: "flex", gap: 3 }}>
+        {(r.Key || "").toUpperCase() === "YES" && <span className="badge bk" style={{ fontSize: "0.62rem" }}>KEY</span>}
+        {!!(r.Terrificon || "").trim()         && <span className="badge bt" style={{ fontSize: "0.62rem" }}>TF</span>}
+      </div>
+    ),
+  },
+];
 
 export default function AllBoxes() {
   const [q, setQ]               = useState("");
@@ -81,7 +153,7 @@ export default function AllBoxes() {
         <div className="results-bar">
           <span>{results.length} of {comics.length} books</span>
           <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-            <span className="results-hint">1,467 books across 9 boxes</span>
+            <span className="results-hint">Click column headers to sort · Drag edges to resize</span>
             <div className="view-toggle">
               <button className={`view-toggle-btn${view === "list" ? " active" : ""}`} onClick={() => setView("list")}>≡ List</button>
               <button className={`view-toggle-btn${view === "card" ? " active" : ""}`} onClick={() => setView("card")}>⊞ Cards</button>
@@ -141,56 +213,21 @@ export default function AllBoxes() {
 
       {hasSearched && results.length > 0 && view === "list" && (
         <div className="list-table">
-          <table>
-            <thead>
-              <tr>
-                <th>Box</th><th>Title</th><th>#</th><th>Publisher</th><th>Year</th><th>Era</th><th>NM Value</th><th>Start Bid</th><th>Platform</th><th>Key</th>
-              </tr>
-            </thead>
-            <tbody>
-              {results.map((c, i) => {
-                const isKey  = (c.Key || "").toUpperCase() === "YES";
-                const isTf   = !!(c.Terrificon || "").trim();
-                const nmVal  = c.Value_NM && c.Value_NM !== "nan" ? c.Value_NM : "—";
-                const bid    = c.Start_Bid && c.Start_Bid !== "nan" ? `$${c.Start_Bid}` : "—";
-                const isOpen = open.has(i);
-                return (
-                  <>
-                    <tr key={`r-${i}`} className={isOpen ? "open-row" : ""} onClick={() => toggle(i)}>
-                      <td className="lt-sub">Box {c.Box}</td>
-                      <td className="lt-title">{c.Title || "Untitled"}</td>
-                      <td className="lt-sub">#{c.Issue}</td>
-                      <td className="lt-sub">{c.Publisher}</td>
-                      <td className="lt-sub">{c.Year}</td>
-                      <td>{c.Era && <span className="badge be" style={{ fontSize: "0.62rem" }}>{c.Era}</span>}</td>
-                      <td className="lt-val">${nmVal}</td>
-                      <td className="lt-sub">{bid}</td>
-                      <td>{c.Platform && <span className={`badge ${platClass(c.Platform)}`} style={{ fontSize: "0.62rem" }}>{c.Platform}</span>}</td>
-                      <td>
-                        <div style={{ display: "flex", gap: 3 }}>
-                          {isKey && <span className="badge bk" style={{ fontSize: "0.62rem" }}>KEY</span>}
-                          {isTf  && <span className="badge bt" style={{ fontSize: "0.62rem" }}>TF</span>}
-                        </div>
-                      </td>
-                    </tr>
-                    {isOpen && (
-                      <tr key={`e-${i}`} className="list-expand-row">
-                        <td colSpan={10}>
-                          <div style={{ display: "flex", gap: 32, flexWrap: "wrap" }}>
-                            {c.Writer   && c.Writer !== "nan"   && <div className="dr"><span className="dl">Writer</span><span className="dv">{c.Writer}</span></div>}
-                            {c.Artist   && c.Artist !== "nan"   && <div className="dr"><span className="dl">Artist</span><span className="dv">{c.Artist}</span></div>}
-                            {c.Key_Why  && c.Key_Why !== "nan"  && <div className="dr"><span className="dl">Key</span><span className="dv">{c.Key_Why}</span></div>}
-                            {c.Condition && c.Condition !== "nan" && <div className="dr"><span className="dl">Condition</span><span className="dv">{c.Condition}</span></div>}
-                          </div>
-                          {c.Whatnot_Pitch && c.Whatnot_Pitch !== "nan" && <div style={{ marginTop: 6, fontStyle: "italic", color: "var(--muted2)", fontSize: "0.8rem" }}>{c.Whatnot_Pitch.substring(0, 180)}</div>}
-                        </td>
-                      </tr>
-                    )}
-                  </>
-                );
-              })}
-            </tbody>
-          </table>
+          <SortableTable
+            cols={LIST_COLS}
+            rows={results}
+            expandCell={c => (
+              <div>
+                <div style={{ display: "flex", gap: 32, flexWrap: "wrap" }}>
+                  {c.Writer   && c.Writer !== "nan"   && <div className="dr"><span className="dl">Writer</span><span className="dv">{c.Writer}</span></div>}
+                  {c.Artist   && c.Artist !== "nan"   && <div className="dr"><span className="dl">Artist</span><span className="dv">{c.Artist}</span></div>}
+                  {c.Key_Why  && c.Key_Why !== "nan"  && <div className="dr"><span className="dl">Key</span><span className="dv">{c.Key_Why}</span></div>}
+                  {c.Condition && c.Condition !== "nan" && <div className="dr"><span className="dl">Condition</span><span className="dv">{c.Condition}</span></div>}
+                </div>
+                {c.Whatnot_Pitch && c.Whatnot_Pitch !== "nan" && <div style={{ marginTop: 6, fontStyle: "italic", color: "var(--muted2)", fontSize: "0.8rem" }}>{c.Whatnot_Pitch.substring(0, 200)}</div>}
+              </div>
+            )}
+          />
         </div>
       )}
     </div>

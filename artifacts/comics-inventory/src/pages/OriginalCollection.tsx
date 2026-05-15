@@ -1,10 +1,13 @@
 import { useState, useMemo } from "react";
 import { DATA1 } from "@/data/data1";
+import { SortableTable, ColDef } from "@/components/SortableTable";
 
 const comics = DATA1.orig_inventory;
 const PUBLISHERS = [...new Set(comics.map(c => c.Publisher).filter(Boolean))].sort();
 const ERAS       = [...new Set(comics.map(c => c.Era).filter(Boolean))].sort();
 const PLATFORMS  = [...new Set(comics.map(c => c.Platform).filter(Boolean))].sort();
+
+type Comic = (typeof comics)[number];
 
 function platClass(p: string) {
   const u = (p || "").toUpperCase();
@@ -13,6 +16,65 @@ function platClass(p: string) {
   if (u.includes("HERITAGE")) return "bhe";
   return "bb";
 }
+
+function parseVal(v: string | undefined | null) {
+  if (!v) return 0;
+  return parseFloat(String(v).replace(/[^0-9.]/g, "") || "0");
+}
+
+const LIST_COLS: ColDef<Comic>[] = [
+  {
+    key: "title", label: "Title", defaultWidth: 220,
+    sort: (a, b) => (a.Title || "").localeCompare(b.Title || ""),
+    cell: r => <span className="lt-title">{r.Title || "Untitled"}</span>,
+  },
+  {
+    key: "issue", label: "#", defaultWidth: 60,
+    sort: (a, b) => parseVal(a.Issue) - parseVal(b.Issue),
+    cell: r => <span className="lt-sub">{r.Issue}</span>,
+  },
+  {
+    key: "publisher", label: "Publisher", defaultWidth: 100,
+    sort: (a, b) => (a.Publisher || "").localeCompare(b.Publisher || ""),
+    cell: r => <span className="lt-sub">{r.Publisher}</span>,
+  },
+  {
+    key: "year", label: "Year", defaultWidth: 70,
+    sort: (a, b) => parseVal(a.Year) - parseVal(b.Year),
+    cell: r => <span className="lt-sub">{r.Year}</span>,
+  },
+  {
+    key: "era", label: "Era", defaultWidth: 80,
+    sort: (a, b) => (a.Era || "").localeCompare(b.Era || ""),
+    cell: r => r.Era ? <span className="badge be" style={{ fontSize: "0.62rem" }}>{r.Era}</span> : null,
+  },
+  {
+    key: "nm", label: "NM Value", defaultWidth: 90,
+    sort: (a, b) => parseVal(a.Value_NM) - parseVal(b.Value_NM),
+    cell: r => <span className="lt-val">{r.Value_NM || "—"}</span>,
+  },
+  {
+    key: "vf", label: "VF Value", defaultWidth: 80,
+    sort: (a, b) => parseVal(a.Value_VF) - parseVal(b.Value_VF),
+    cell: r => <span className="lt-vf">{r.Value_VF || "—"}</span>,
+  },
+  {
+    key: "platform", label: "Platform", defaultWidth: 110,
+    sort: (a, b) => (a.Platform || "").localeCompare(b.Platform || ""),
+    cell: r => r.Platform ? <span className={`badge ${platClass(r.Platform)}`} style={{ fontSize: "0.62rem" }}>{r.Platform}</span> : null,
+  },
+  {
+    key: "flags", label: "Flags", defaultWidth: 90,
+    cell: r => (
+      <div style={{ display: "flex", gap: 3, flexWrap: "wrap" }}>
+        {(r.Key || "").toUpperCase() === "YES"    && <span className="badge bk" style={{ fontSize: "0.62rem" }}>KEY</span>}
+        {(r.Signed || "").toUpperCase() === "YES" && <span className="badge bs" style={{ fontSize: "0.62rem" }}>✍</span>}
+        {(r.CGC_Worth || "").toUpperCase() === "YES" && <span className="badge bc" style={{ fontSize: "0.62rem" }}>CGC</span>}
+        {!!(r.Terrificon || "").trim()            && <span className="badge bt" style={{ fontSize: "0.62rem" }}>TF</span>}
+      </div>
+    ),
+  },
+];
 
 export default function OriginalCollection() {
   const [q, setQ]               = useState("");
@@ -25,8 +87,6 @@ export default function OriginalCollection() {
   const [view, setView]         = useState<"card" | "list">("card");
   const [hasSearched, setHasSearched] = useState(false);
   const [open, setOpen]         = useState<Set<number>>(new Set());
-
-  const hasFilters = q || pub || era || platform || signed || keyOnly || cgcOnly;
 
   const results = useMemo(() => {
     if (!hasSearched) return [];
@@ -55,7 +115,6 @@ export default function OriginalCollection() {
 
   return (
     <div>
-      {/* Filters */}
       <div className="filters">
         <input
           placeholder="Search title, writer, character, signer..."
@@ -92,12 +151,11 @@ export default function OriginalCollection() {
         {hasSearched && <button className="clear-results-btn" onClick={clearResults}>✕ Clear Results</button>}
       </div>
 
-      {/* Results bar */}
       {hasSearched && (
         <div className="results-bar">
           <span>{results.length} of {comics.length} books</span>
           <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-            <span className="results-hint">Click a row to expand</span>
+            <span className="results-hint">Click column headers to sort · Drag edges to resize</span>
             <div className="view-toggle">
               <button className={`view-toggle-btn${view === "list" ? " active" : ""}`} onClick={() => setView("list")}>≡ List</button>
               <button className={`view-toggle-btn${view === "card" ? " active" : ""}`} onClick={() => setView("card")}>⊞ Cards</button>
@@ -106,7 +164,6 @@ export default function OriginalCollection() {
         </div>
       )}
 
-      {/* Blank state */}
       {!hasSearched && (
         <div className="blank-state">
           <div className="blank-state-icon">📦</div>
@@ -115,10 +172,7 @@ export default function OriginalCollection() {
         </div>
       )}
 
-      {/* No results */}
-      {hasSearched && results.length === 0 && (
-        <div className="no-res">No books match your filters</div>
-      )}
+      {hasSearched && results.length === 0 && <div className="no-res">No books match your filters</div>}
 
       {/* CARD VIEW */}
       {hasSearched && results.length > 0 && view === "card" && (
@@ -172,68 +226,24 @@ export default function OriginalCollection() {
       {/* LIST VIEW */}
       {hasSearched && results.length > 0 && view === "list" && (
         <div className="list-table">
-          <table>
-            <thead>
-              <tr>
-                <th>Title</th>
-                <th>#</th>
-                <th>Publisher</th>
-                <th>Year</th>
-                <th>Era</th>
-                <th>NM Value</th>
-                <th>VF Value</th>
-                <th>Platform</th>
-                <th>Flags</th>
-              </tr>
-            </thead>
-            <tbody>
-              {results.map((c, i) => {
-                const isKey    = (c.Key || "").toUpperCase() === "YES";
-                const isSigned = (c.Signed || "").toUpperCase() === "YES";
-                const isCGC    = (c.CGC_Worth || "").toUpperCase() === "YES";
-                const isTf     = !!(c.Terrificon || "").trim();
-                const isOpen   = open.has(i);
-                return (
-                  <>
-                    <tr key={`r-${i}`} className={isOpen ? "open-row" : ""} onClick={() => toggle(i)}>
-                      <td className="lt-title">{c.Title || "Untitled"}</td>
-                      <td className="lt-sub">{c.Issue}</td>
-                      <td className="lt-sub">{c.Publisher}</td>
-                      <td className="lt-sub">{c.Year}</td>
-                      <td><span className="badge be" style={{ fontSize: "0.62rem" }}>{c.Era}</span></td>
-                      <td className="lt-val">{c.Value_NM || "—"}</td>
-                      <td className="lt-vf">{c.Value_VF || "—"}</td>
-                      <td>{c.Platform && <span className={`badge ${platClass(c.Platform)}`} style={{ fontSize: "0.62rem" }}>{c.Platform}</span>}</td>
-                      <td>
-                        <div style={{ display: "flex", gap: 3, flexWrap: "wrap" }}>
-                          {isKey    && <span className="badge bk" style={{ fontSize: "0.62rem" }}>KEY</span>}
-                          {isSigned && <span className="badge bs" style={{ fontSize: "0.62rem" }}>✍</span>}
-                          {isCGC    && <span className="badge bc" style={{ fontSize: "0.62rem" }}>CGC</span>}
-                          {isTf     && <span className="badge bt" style={{ fontSize: "0.62rem" }}>TF</span>}
-                        </div>
-                      </td>
-                    </tr>
-                    {isOpen && (
-                      <tr key={`e-${i}`} className="list-expand-row">
-                        <td colSpan={9}>
-                          <div style={{ display: "flex", gap: 32, flexWrap: "wrap" }}>
-                            {c.Writer      && <div className="dr"><span className="dl">Writer</span><span className="dv">{c.Writer}</span></div>}
-                            {c.Artist      && <div className="dr"><span className="dl">Artist</span><span className="dv">{c.Artist}</span></div>}
-                            {c.Key_Why     && <div className="dr"><span className="dl">Key</span><span className="dv">{c.Key_Why}</span></div>}
-                            {c.First_App   && <div className="dr"><span className="dl">1st App</span><span className="dv">{c.First_App}</span></div>}
-                            {c.Signed_By   && <div className="dr"><span className="dl">Signed By</span><span className="dv">{c.Signed_By}</span></div>}
-                            {c.Condition   && <div className="dr"><span className="dl">Condition</span><span className="dv">{c.Condition}</span></div>}
-                            {c.Sales_Data  && <div className="dr"><span className="dl">Sales</span><span className="dv">{(c.Sales_Data || "").substring(0, 120)}</span></div>}
-                          </div>
-                          {c.Whatnot_Pitch && <div style={{ marginTop: 6, fontStyle: "italic", color: "var(--muted2)", fontSize: "0.8rem" }}>{c.Whatnot_Pitch.substring(0, 200)}</div>}
-                        </td>
-                      </tr>
-                    )}
-                  </>
-                );
-              })}
-            </tbody>
-          </table>
+          <SortableTable
+            cols={LIST_COLS}
+            rows={results}
+            expandCell={c => (
+              <div>
+                <div style={{ display: "flex", gap: 32, flexWrap: "wrap" }}>
+                  {c.Writer      && <div className="dr"><span className="dl">Writer</span><span className="dv">{c.Writer}</span></div>}
+                  {c.Artist      && <div className="dr"><span className="dl">Artist</span><span className="dv">{c.Artist}</span></div>}
+                  {c.Key_Why     && <div className="dr"><span className="dl">Key</span><span className="dv">{c.Key_Why}</span></div>}
+                  {c.First_App   && <div className="dr"><span className="dl">1st App</span><span className="dv">{c.First_App}</span></div>}
+                  {c.Signed_By   && <div className="dr"><span className="dl">Signed By</span><span className="dv">{c.Signed_By}</span></div>}
+                  {c.Condition   && <div className="dr"><span className="dl">Condition</span><span className="dv">{c.Condition}</span></div>}
+                  {c.Sales_Data  && <div className="dr"><span className="dl">Sales</span><span className="dv">{(c.Sales_Data || "").substring(0, 140)}</span></div>}
+                </div>
+                {c.Whatnot_Pitch && <div style={{ marginTop: 6, fontStyle: "italic", color: "var(--muted2)", fontSize: "0.8rem" }}>{c.Whatnot_Pitch.substring(0, 220)}</div>}
+              </div>
+            )}
+          />
         </div>
       )}
     </div>

@@ -1,8 +1,81 @@
 import { useState, useMemo } from "react";
 import { DATA2 } from "@/data/data2";
+import { SortableTable, ColDef } from "@/components/SortableTable";
 
 const keys = DATA2.boxes_keys;
 const BOXES = [...new Set(keys.map(k => String(k.Box)))].sort((a, b) => Number(a) - Number(b));
+
+type Key = (typeof keys)[number];
+
+function parseVal(v: string | undefined | null) {
+  if (!v || v === "nan") return 0;
+  return parseFloat(String(v).replace(/[^0-9.]/g, "") || "0");
+}
+
+function ActionBadge({ flag }: { flag: string }) {
+  if (!flag) return null;
+  if (flag.includes("CGC"))     return <span className="badge bc"  style={{ fontSize: "0.62rem" }}>CGC NOW</span>;
+  if (flag.includes("Whatnot")) return <span className="badge bwn" style={{ fontSize: "0.62rem" }}>Whatnot</span>;
+  return <span className="badge bb" style={{ fontSize: "0.62rem" }}>{flag}</span>;
+}
+
+const LIST_COLS: ColDef<Key>[] = [
+  {
+    key: "box", label: "Box", defaultWidth: 60,
+    sort: (a, b) => Number(a.Box) - Number(b.Box),
+    cell: r => <span className="lt-sub">{r.Box}</span>,
+  },
+  {
+    key: "title", label: "Title", defaultWidth: 220,
+    sort: (a, b) => (a.Title || "").localeCompare(b.Title || ""),
+    cell: r => <span className="lt-title">{r.Title || "Untitled"}</span>,
+  },
+  {
+    key: "issue", label: "#", defaultWidth: 55,
+    sort: (a, b) => parseVal(a.Issue) - parseVal(b.Issue),
+    cell: r => <span className="lt-sub">#{r.Issue}</span>,
+  },
+  {
+    key: "publisher", label: "Publisher", defaultWidth: 105,
+    sort: (a, b) => (a.Publisher || "").localeCompare(b.Publisher || ""),
+    cell: r => <span className="lt-sub">{r.Publisher}</span>,
+  },
+  {
+    key: "nm", label: "NM Value", defaultWidth: 90,
+    sort: (a, b) => parseVal(a.Value_NM) - parseVal(b.Value_NM),
+    cell: r => {
+      const v = r.Value_NM && r.Value_NM !== "nan" ? r.Value_NM : null;
+      return <span className="lt-val">{v ? `$${v}` : "—"}</span>;
+    },
+  },
+  {
+    key: "bid", label: "Start Bid", defaultWidth: 85,
+    sort: (a, b) => parseVal(a.Start_Bid) - parseVal(b.Start_Bid),
+    cell: r => {
+      const v = r.Start_Bid && r.Start_Bid !== "nan" ? r.Start_Bid : null;
+      return <span className="lt-sub">{v ? `$${v}` : "—"}</span>;
+    },
+  },
+  {
+    key: "platform", label: "Platform", defaultWidth: 100,
+    sort: (a, b) => (a.Platform || "").localeCompare(b.Platform || ""),
+    cell: r => r.Platform ? (
+      <span className={`badge ${r.Platform === "EBAY" ? "beb" : "bwn"}`} style={{ fontSize: "0.62rem" }}>{r.Platform}</span>
+    ) : null,
+  },
+  {
+    key: "action", label: "Action", defaultWidth: 110,
+    sort: (a, b) => (a.Action_Flag || "").localeCompare(b.Action_Flag || ""),
+    cell: r => <ActionBadge flag={r.Action_Flag || ""} />,
+  },
+  {
+    key: "tf", label: "Terrificon", defaultWidth: 90,
+    sort: (a, b) => ((b.Terrificon || "") > (a.Terrificon || "") ? 1 : -1),
+    cell: r => (r.Terrificon || "").toUpperCase() === "YES"
+      ? <span className="badge bt" style={{ fontSize: "0.62rem" }}>★ TF</span>
+      : null,
+  },
+];
 
 export default function BoxKeys() {
   const [q, setQ]         = useState("");
@@ -31,13 +104,6 @@ export default function BoxKeys() {
     setOpen(prev => { const n = new Set(prev); n.has(i) ? n.delete(i) : n.add(i); return n; });
   };
 
-  function actionBadge(flag: string) {
-    if (!flag) return null;
-    if (flag.includes("CGC")) return <span className="badge bc" style={{ fontSize: "0.62rem" }}>CGC NOW</span>;
-    if (flag.includes("Whatnot")) return <span className="badge bwn" style={{ fontSize: "0.62rem" }}>Whatnot</span>;
-    return <span className="badge bb" style={{ fontSize: "0.62rem" }}>{flag}</span>;
-  }
-
   return (
     <div>
       <div className="filters">
@@ -63,7 +129,7 @@ export default function BoxKeys() {
         <div className="results-bar">
           <span>{results.length} of {keys.length} key issues</span>
           <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-            <span className="results-hint">141 keys extracted from all boxes</span>
+            <span className="results-hint">Click column headers to sort · Drag edges to resize</span>
             <div className="view-toggle">
               <button className={`view-toggle-btn${view === "list" ? " active" : ""}`} onClick={() => setView("list")}>≡ List</button>
               <button className={`view-toggle-btn${view === "card" ? " active" : ""}`} onClick={() => setView("card")}>⊞ Cards</button>
@@ -118,44 +184,16 @@ export default function BoxKeys() {
 
       {hasSearched && results.length > 0 && view === "list" && (
         <div className="list-table">
-          <table>
-            <thead>
-              <tr>
-                <th>Box</th><th>Title</th><th>#</th><th>Publisher</th><th>NM Value</th><th>Start Bid</th><th>Platform</th><th>Action</th><th>Terrificon</th>
-              </tr>
-            </thead>
-            <tbody>
-              {results.map((k, i) => {
-                const isTf   = (k.Terrificon || "").toUpperCase() === "YES";
-                const nmVal  = k.Value_NM && k.Value_NM !== "nan" ? `$${k.Value_NM}` : "—";
-                const bid    = k.Start_Bid && k.Start_Bid !== "nan" ? `$${k.Start_Bid}` : "—";
-                const isOpen = open.has(i);
-                return (
-                  <>
-                    <tr key={`r-${i}`} className={isOpen ? "open-row" : ""} onClick={() => toggle(i)}>
-                      <td className="lt-sub">Box {k.Box}</td>
-                      <td className="lt-title">{k.Title || "Untitled"}</td>
-                      <td className="lt-sub">#{k.Issue}</td>
-                      <td className="lt-sub">{k.Publisher}</td>
-                      <td className="lt-val">{nmVal}</td>
-                      <td className="lt-sub">{bid}</td>
-                      <td>{k.Platform && <span className={`badge ${k.Platform === "EBAY" ? "beb" : "bwn"}`} style={{ fontSize: "0.62rem" }}>{k.Platform}</span>}</td>
-                      <td>{actionBadge(k.Action_Flag || "")}</td>
-                      <td>{isTf && <span className="badge bt" style={{ fontSize: "0.62rem" }}>★</span>}</td>
-                    </tr>
-                    {isOpen && (
-                      <tr key={`e-${i}`} className="list-expand-row">
-                        <td colSpan={9}>
-                          {k.Key_Why && <div className="dr"><span className="dl">Key Why</span><span className="dv">{k.Key_Why}</span></div>}
-                          {k.Storage && k.Storage !== "nan" && <div className="dr"><span className="dl">Storage</span><span className="dv">{k.Storage}</span></div>}
-                        </td>
-                      </tr>
-                    )}
-                  </>
-                );
-              })}
-            </tbody>
-          </table>
+          <SortableTable
+            cols={LIST_COLS}
+            rows={results}
+            expandCell={k => (
+              <div>
+                {k.Key_Why && <div className="dr"><span className="dl">Key Why</span><span className="dv">{k.Key_Why}</span></div>}
+                {k.Storage && k.Storage !== "nan" && <div className="dr"><span className="dl">Storage</span><span className="dv">{k.Storage}</span></div>}
+              </div>
+            )}
+          />
         </div>
       )}
     </div>
