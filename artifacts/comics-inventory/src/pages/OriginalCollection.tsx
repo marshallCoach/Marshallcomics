@@ -110,7 +110,7 @@ export default function OriginalCollection() {
       {!hasSearched && (
         <div className="blank-state">
           <div className="blank-state-icon">📦</div>
-          <div className="blank-state-title">Original Collection — 308 Books</div>
+          <div className="blank-state-title">Sales Inventory — 308 Books</div>
           <div className="blank-state-sub">Use the filters above and press Search, or just press Search to see all books.</div>
         </div>
       )}

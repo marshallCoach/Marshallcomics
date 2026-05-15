@@ -10,7 +10,7 @@ import CGCStrategy from "@/pages/CGCStrategy";
 import PrivateSignings from "@/pages/PrivateSignings";
 
 const TABS = [
-  { id: "collection", label: "📦 Original Collection" },
+  { id: "collection", label: "📦 Sales Inventory" },
   { id: "boxes",      label: "🗃️ All Boxes" },
   { id: "boxkeys",    label: "🔑 Box Keys" },
   { id: "calendar",   label: "📅 Calendar" },
