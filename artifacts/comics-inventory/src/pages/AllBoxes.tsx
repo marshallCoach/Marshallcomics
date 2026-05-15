@@ -1,6 +1,9 @@
 import { useState, useMemo } from "react";
 import { DATA2 } from "@/data/data2";
 import { SortableTable, ColDef } from "@/components/SortableTable";
+import { Paginator } from "@/components/Paginator";
+
+const CARD_PAGE_SIZE = 48;
 
 const comics = DATA2.boxes_inventory;
 const BOXES      = [...new Set(comics.map(c => String(c.Box)))].sort((a, b) => Number(a) - Number(b));
@@ -101,6 +104,7 @@ export default function AllBoxes() {
   const [view, setView]         = useState<"card" | "list">("card");
   const [hasSearched, setHasSearched] = useState(false);
   const [open, setOpen]         = useState<Set<number>>(new Set());
+  const [cardPage, setCardPage] = useState(1);
 
   const results = useMemo(() => {
     if (!hasSearched) return [];
@@ -115,7 +119,7 @@ export default function AllBoxes() {
     });
   }, [q, box, pub, keyOnly, platform, hasSearched]);
 
-  const runSearch = () => { setHasSearched(true); setOpen(new Set()); };
+  const runSearch = () => { setHasSearched(true); setOpen(new Set()); setCardPage(1); };
   const clearResults = () => {
     setHasSearched(false); setOpen(new Set());
     setQ(""); setBox(""); setPub(""); setKeyOnly(""); setPlatform("");
@@ -124,6 +128,9 @@ export default function AllBoxes() {
   const toggle = (i: number) => {
     setOpen(prev => { const n = new Set(prev); n.has(i) ? n.delete(i) : n.add(i); return n; });
   };
+
+  const cardPageCount = Math.ceil(results.length / CARD_PAGE_SIZE);
+  const cardSlice     = results.slice((cardPage - 1) * CARD_PAGE_SIZE, cardPage * CARD_PAGE_SIZE);
 
   return (
     <div>
@@ -173,8 +180,9 @@ export default function AllBoxes() {
       {hasSearched && results.length === 0 && <div className="no-res">No books match your filters</div>}
 
       {hasSearched && results.length > 0 && view === "card" && (
+        <div>
         <div className="card-grid">
-          {results.map((c, i) => {
+          {cardSlice.map((c, i) => {
             const isKey  = (c.Key || "").toUpperCase() === "YES";
             const isTf   = !!(c.Terrificon || "").trim();
             const bid    = c.Start_Bid && c.Start_Bid !== "nan" ? c.Start_Bid : "";
@@ -208,6 +216,8 @@ export default function AllBoxes() {
               </div>
             );
           })}
+        </div>
+        <Paginator page={cardPage} pageCount={cardPageCount} total={results.length} pageSize={CARD_PAGE_SIZE} onChange={p => { setCardPage(p); setOpen(new Set()); }} />
         </div>
       )}
 

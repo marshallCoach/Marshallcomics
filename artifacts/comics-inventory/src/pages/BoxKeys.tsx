@@ -1,6 +1,9 @@
 import { useState, useMemo } from "react";
 import { DATA2 } from "@/data/data2";
 import { SortableTable, ColDef } from "@/components/SortableTable";
+import { Paginator } from "@/components/Paginator";
+
+const CARD_PAGE_SIZE = 48;
 
 const keys = DATA2.boxes_keys;
 const BOXES = [...new Set(keys.map(k => String(k.Box)))].sort((a, b) => Number(a) - Number(b));
@@ -85,6 +88,7 @@ export default function BoxKeys() {
   const [view, setView]   = useState<"card" | "list">("list");
   const [hasSearched, setHasSearched] = useState(false);
   const [open, setOpen]   = useState<Set<number>>(new Set());
+  const [cardPage, setCardPage] = useState(1);
 
   const results = useMemo(() => {
     if (!hasSearched) return [];
@@ -98,11 +102,14 @@ export default function BoxKeys() {
     });
   }, [q, box, action, tf, hasSearched]);
 
-  const runSearch = () => { setHasSearched(true); setOpen(new Set()); };
+  const runSearch = () => { setHasSearched(true); setOpen(new Set()); setCardPage(1); };
   const clearResults = () => { setHasSearched(false); setOpen(new Set()); setQ(""); setBox(""); setAction(""); setTf(""); };
   const toggle = (i: number) => {
     setOpen(prev => { const n = new Set(prev); n.has(i) ? n.delete(i) : n.add(i); return n; });
   };
+
+  const cardPageCount = Math.ceil(results.length / CARD_PAGE_SIZE);
+  const cardSlice     = results.slice((cardPage - 1) * CARD_PAGE_SIZE, cardPage * CARD_PAGE_SIZE);
 
   return (
     <div>
@@ -149,8 +156,9 @@ export default function BoxKeys() {
       {hasSearched && results.length === 0 && <div className="no-res">No keys match your filters</div>}
 
       {hasSearched && results.length > 0 && view === "card" && (
+        <div>
         <div className="card-grid">
-          {results.map((k, i) => {
+          {cardSlice.map((k, i) => {
             const isCGC     = (k.Action_Flag || "").includes("CGC");
             const isWhatnot = (k.Action_Flag || "").includes("Whatnot");
             const isTf      = (k.Terrificon || "").toUpperCase() === "YES";
@@ -179,6 +187,8 @@ export default function BoxKeys() {
               </div>
             );
           })}
+        </div>
+        <Paginator page={cardPage} pageCount={cardPageCount} total={results.length} pageSize={CARD_PAGE_SIZE} onChange={p => { setCardPage(p); setOpen(new Set()); }} />
         </div>
       )}
 

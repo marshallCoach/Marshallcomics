@@ -1,6 +1,9 @@
 import { useState, useMemo } from "react";
 import { DATA1 } from "@/data/data1";
 import { SortableTable, ColDef } from "@/components/SortableTable";
+import { Paginator } from "@/components/Paginator";
+
+const CARD_PAGE_SIZE = 48;
 
 const comics = DATA1.orig_inventory;
 const PUBLISHERS = [...new Set(comics.map(c => c.Publisher).filter(Boolean))].sort();
@@ -87,6 +90,7 @@ export default function OriginalCollection() {
   const [view, setView]         = useState<"card" | "list">("card");
   const [hasSearched, setHasSearched] = useState(false);
   const [open, setOpen]         = useState<Set<number>>(new Set());
+  const [cardPage, setCardPage] = useState(1);
 
   const results = useMemo(() => {
     if (!hasSearched) return [];
@@ -103,7 +107,7 @@ export default function OriginalCollection() {
     });
   }, [q, pub, era, platform, signed, keyOnly, cgcOnly, hasSearched]);
 
-  const runSearch = () => { setHasSearched(true); setOpen(new Set()); };
+  const runSearch = () => { setHasSearched(true); setOpen(new Set()); setCardPage(1); };
   const clearResults = () => {
     setHasSearched(false); setOpen(new Set());
     setQ(""); setPub(""); setEra(""); setPlatform(""); setSigned(""); setKeyOnly(""); setCgcOnly("");
@@ -112,6 +116,9 @@ export default function OriginalCollection() {
   const toggle = (i: number) => {
     setOpen(prev => { const n = new Set(prev); n.has(i) ? n.delete(i) : n.add(i); return n; });
   };
+
+  const cardPageCount = Math.ceil(results.length / CARD_PAGE_SIZE);
+  const cardSlice     = results.slice((cardPage - 1) * CARD_PAGE_SIZE, cardPage * CARD_PAGE_SIZE);
 
   return (
     <div>
@@ -176,8 +183,9 @@ export default function OriginalCollection() {
 
       {/* CARD VIEW */}
       {hasSearched && results.length > 0 && view === "card" && (
+        <div>
         <div className="card-grid">
-          {results.map((c, i) => {
+          {cardSlice.map((c, i) => {
             const isKey    = (c.Key || "").toUpperCase() === "YES";
             const isSigned = (c.Signed || "").toUpperCase() === "YES";
             const isCGC    = (c.CGC_Worth || "").toUpperCase() === "YES";
@@ -220,6 +228,8 @@ export default function OriginalCollection() {
               </div>
             );
           })}
+        </div>
+        <Paginator page={cardPage} pageCount={cardPageCount} total={results.length} pageSize={CARD_PAGE_SIZE} onChange={p => { setCardPage(p); setOpen(new Set()); }} />
         </div>
       )}
 
