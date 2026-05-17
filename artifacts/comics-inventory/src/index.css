@@ -85,6 +85,37 @@ body {
 }
 .stat-lbl { color: var(--muted); font-size: 0.6rem; letter-spacing: 1px; text-transform: uppercase; }
 
+/* ── MAIN NAV ── */
+.main-nav {
+  background: #1a1a1a;
+  display: flex;
+  padding: 0 20px;
+  position: sticky;
+  top: 65px;
+  z-index: 195;
+  gap: 2px;
+}
+
+.main-nav-btn {
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  color: rgba(255,255,255,0.55);
+  padding: 12px 22px;
+  cursor: pointer;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+.main-nav-btn:hover { color: rgba(255,255,255,0.85); }
+.main-nav-btn.active {
+  color: #ffffff;
+  border-bottom-color: var(--red);
+  background: rgba(200,16,46,0.12);
+}
+
 /* ── TAB NAV ── */
 .tab-nav {
   background: var(--surface);
@@ -93,7 +124,7 @@ body {
   border-bottom: 1px solid var(--border);
   overflow-x: auto;
   position: sticky;
-  top: 65px;
+  top: 109px;
   z-index: 190;
   box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
@@ -105,10 +136,10 @@ body {
   border: none;
   border-bottom: 3px solid transparent;
   color: var(--muted2);
-  padding: 11px 16px;
+  padding: 10px 16px;
   cursor: pointer;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   letter-spacing: 1.5px;
   white-space: nowrap;
   transition: color 0.15s, border-color 0.15s;

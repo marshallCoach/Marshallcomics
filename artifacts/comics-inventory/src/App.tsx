@@ -10,31 +10,56 @@ import CGCStrategy from "@/pages/CGCStrategy";
 import PrivateSignings from "@/pages/PrivateSignings";
 import Summary from "@/pages/Summary";
 
-const TABS = [
-  { id: "summary",    label: "📊 Summary" },
-  { id: "boxes",      label: "🗃️ All Boxes" },
-  { id: "collection", label: "📦 Sales Inventory" },
-  { id: "boxkeys",    label: "🔑 Box Keys" },
-  { id: "calendar",   label: "📅 Calendar" },
-  { id: "showplanner",label: "🎙️ Show Planner" },
-  { id: "cgc",        label: "🏆 CGC Strategy" },
-  { id: "signings",   label: "✍️ Signings" },
+const NAV = [
+  {
+    id: "inventory",
+    label: "Inventory",
+    tabs: [
+      { id: "summary",    label: "📊 Summary" },
+      { id: "boxes",      label: "🗃️ All Boxes" },
+      { id: "collection", label: "📦 Sales Inventory" },
+      { id: "boxkeys",    label: "🔑 Box Keys" },
+    ],
+  },
+  {
+    id: "business",
+    label: "Business Docs",
+    tabs: [
+      { id: "calendar",    label: "📅 Calendar" },
+      { id: "showplanner", label: "🎙️ Show Planner" },
+      { id: "cgc",         label: "🏆 CGC Strategy" },
+      { id: "signings",    label: "✍️ Signings" },
+    ],
+  },
 ] as const;
 
-type TabId = (typeof TABS)[number]["id"];
+type SectionId = (typeof NAV)[number]["id"];
+type TabId =
+  | "summary" | "boxes" | "collection" | "boxkeys"
+  | "calendar" | "showplanner" | "cgc" | "signings";
 
-const orig   = DATA1.orig_inventory;
-const boxes  = DATA2.boxes_inventory;
-const signed = orig.filter(c => (c.Signed || "").toUpperCase() === "YES").length;
-const origKeys  = orig.filter(c => (c.Key || "").toUpperCase() === "YES").length;
-const boxKeys   = DATA2.boxes_keys.length;
+const orig    = DATA1.orig_inventory;
+const boxes   = DATA2.boxes_inventory;
+const signed  = [...orig, ...boxes].filter(c => (c.Signed || "").toUpperCase() === "YES").length;
+const origKeys = orig.filter(c => (c.Key || "").toUpperCase() === "YES").length;
+const boxKeys  = DATA2.boxes_keys.length;
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<TabId>("summary");
+  const [activeSection, setActiveSection] = useState<SectionId>("inventory");
+  const [activeTab, setActiveTab]         = useState<TabId>("summary");
+
+  const currentSection = NAV.find(n => n.id === activeSection)!;
+
+  function handleSection(sid: SectionId) {
+    setActiveSection(sid);
+    const sec = NAV.find(n => n.id === sid)!;
+    setActiveTab(sec.tabs[0].id as TabId);
+  }
 
   return (
     <div style={{ minHeight: "100vh" }}>
-      {/* Header */}
+
+      {/* ── HEADER ── */}
       <header className="app-header">
         <div className="logo-area">
           <img src="/logo.png" alt="BlackReadBrown" className="site-logo" />
@@ -60,30 +85,39 @@ export default function App() {
             <span className="stat-val">{origKeys + boxKeys}</span>
             <span className="stat-lbl">Keys</span>
           </div>
-          <div className="stat">
-            <span className="stat-val">31</span>
-            <span className="stat-lbl">Shows</span>
-          </div>
         </div>
       </header>
 
-      {/* Tab Bar */}
+      {/* ── MAIN NAV ── */}
+      <div className="main-nav">
+        {NAV.map(section => (
+          <button
+            key={section.id}
+            className={`main-nav-btn${activeSection === section.id ? " active" : ""}`}
+            onClick={() => handleSection(section.id as SectionId)}
+          >
+            {section.label}
+          </button>
+        ))}
+      </div>
+
+      {/* ── SUB NAV ── */}
       <nav className="tab-nav">
-        {TABS.map(tab => (
+        {currentSection.tabs.map(tab => (
           <button
             key={tab.id}
             className={`tab-btn${activeTab === tab.id ? " active" : ""}`}
-            onClick={() => setActiveTab(tab.id)}
+            onClick={() => setActiveTab(tab.id as TabId)}
           >
             {tab.label}
           </button>
         ))}
       </nav>
 
-      {/* Pages */}
+      {/* ── PAGES ── */}
       {activeTab === "summary"     && <Summary />}
-      {activeTab === "collection"  && <OriginalCollection />}
       {activeTab === "boxes"       && <AllBoxes />}
+      {activeTab === "collection"  && <OriginalCollection />}
       {activeTab === "boxkeys"     && <BoxKeys />}
       {activeTab === "calendar"    && <Calendar />}
       {activeTab === "showplanner" && <ShowPlanner />}
