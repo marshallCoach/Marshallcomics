@@ -9,6 +9,7 @@ import ShowPlanner from "@/pages/ShowPlanner";
 import CGCStrategy from "@/pages/CGCStrategy";
 import PrivateSignings from "@/pages/PrivateSignings";
 import Summary from "@/pages/Summary";
+import PasswordGate from "@/components/PasswordGate";
 
 const NAV = [
   {
@@ -57,6 +58,7 @@ export default function App() {
   }
 
   return (
+    <PasswordGate>
     <div style={{ minHeight: "100vh" }}>
 
       {/* ── HEADER ── */}
@@ -124,5 +126,6 @@ export default function App() {
       {activeTab === "cgc"         && <CGCStrategy />}
       {activeTab === "signings"    && <PrivateSignings />}
     </div>
+    </PasswordGate>
   );
 }
