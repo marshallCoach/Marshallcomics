@@ -13,10 +13,19 @@ const PLATFORMS  = [...new Set(comics.map(c => c.Platform).filter(Boolean))].sor
 type Comic = (typeof comics)[number];
 
 const BOX_LABELS: Record<string, string> = {
-  "1": "Box 1 — DC New 52", "2": "Box 2 — Marvel Ultimate",
-  "3": "Box 3 — Modern DC", "4": "Box 4 — Dawn of DC",
-  "5": "Box 5 — Wildstorm/Indie", "6": "Box 6 — DC 2021–23",
-  "7": "Box 7 — Avengers", "8": "Box 8", "9": "Box 9",
+  "1":  "Box 1 — DC New 52",
+  "2":  "Box 2 — Marvel Ultimate",
+  "3":  "Box 3 — Modern DC / Keys",
+  "4":  "Box 4 — Dawn of DC",
+  "5":  "Box 5 — Wildstorm / Indie",
+  "6":  "Box 6 — DC 2021–23",
+  "7":  "Box 7 — Avengers",
+  "8":  "Box 8",
+  "9":  "Box 9",
+  "10": "Box 10",
+  "11": "Box 11",
+  "12": "Box 12",
+  "13": "Box 13",
 };
 
 function platClass(p: string) {

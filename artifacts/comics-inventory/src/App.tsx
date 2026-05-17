@@ -8,8 +8,10 @@ import Calendar from "@/pages/Calendar";
 import ShowPlanner from "@/pages/ShowPlanner";
 import CGCStrategy from "@/pages/CGCStrategy";
 import PrivateSignings from "@/pages/PrivateSignings";
+import Summary from "@/pages/Summary";
 
 const TABS = [
+  { id: "summary",    label: "📊 Summary" },
   { id: "boxes",      label: "🗃️ All Boxes" },
   { id: "collection", label: "📦 Sales Inventory" },
   { id: "boxkeys",    label: "🔑 Box Keys" },
@@ -28,7 +30,7 @@ const origKeys  = orig.filter(c => (c.Key || "").toUpperCase() === "YES").length
 const boxKeys   = DATA2.boxes_keys.length;
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<TabId>("boxes");
+  const [activeTab, setActiveTab] = useState<TabId>("summary");
 
   return (
     <div style={{ minHeight: "100vh" }}>
@@ -79,6 +81,7 @@ export default function App() {
       </nav>
 
       {/* Pages */}
+      {activeTab === "summary"     && <Summary />}
       {activeTab === "collection"  && <OriginalCollection />}
       {activeTab === "boxes"       && <AllBoxes />}
       {activeTab === "boxkeys"     && <BoxKeys />}
