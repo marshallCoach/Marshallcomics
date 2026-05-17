@@ -35,7 +35,7 @@ export default function ShowPlanner() {
           return (
             <div key={i} className={`show-card${isOpen ? " open" : ""}`} onClick={() => toggleShow(i)}>
               <div className="show-theme">{s.Theme}</div>
-              <div className="show-anchor">{s.Anchor_Book}</div>
+              <div className="show-anchor">{s.Anchor}</div>
               <div className="show-meta">
                 <span className="show-rev">{s.Est_Revenue}</span>
                 <span className={`show-status-badge ${statusClass(s.Status)}`}>{s.Status}</span>
@@ -68,8 +68,8 @@ export default function ShowPlanner() {
               </div>
               {isOpen && (
                 <div className="lcard-expand">
-                  {r.Whatnot_Pitch  && <div style={{ marginBottom: 6, fontStyle: "italic" }}>{r.Whatnot_Pitch}</div>}
-                  {r.Audience_Hook  && <div className="dr"><span className="dl">Hook</span><span className="dv">{r.Audience_Hook}</span></div>}
+                  {r.Pitch && <div style={{ marginBottom: 6, fontStyle: "italic" }}>{r.Pitch}</div>}
+                  {r.Hook  && <div className="dr"><span className="dl">Hook</span><span className="dv">{r.Hook}</span></div>}
                   {r.Publisher      && <div className="dr"><span className="dl">Publisher</span><span className="dv">{r.Publisher} · Box {r.Box || "?"}</span></div>}
                 </div>
               )}
