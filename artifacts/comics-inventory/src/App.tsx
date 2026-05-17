@@ -9,6 +9,7 @@ import ShowPlanner from "@/pages/ShowPlanner";
 import CGCStrategy from "@/pages/CGCStrategy";
 import PrivateSignings from "@/pages/PrivateSignings";
 import Summary from "@/pages/Summary";
+import Everything from "@/pages/Everything";
 import PasswordGate from "@/components/PasswordGate";
 
 const NAV = [
@@ -17,6 +18,7 @@ const NAV = [
     label: "Inventory",
     tabs: [
       { id: "summary",    label: "📊 Summary" },
+      { id: "everything", label: "🔍 Everything" },
       { id: "boxes",      label: "🗃️ All Boxes" },
       { id: "collection", label: "📦 Sales Inventory" },
       { id: "boxkeys",    label: "🔑 Box Keys" },
@@ -36,7 +38,7 @@ const NAV = [
 
 type SectionId = (typeof NAV)[number]["id"];
 type TabId =
-  | "summary" | "boxes" | "collection" | "boxkeys"
+  | "summary" | "everything" | "boxes" | "collection" | "boxkeys"
   | "calendar" | "showplanner" | "cgc" | "signings";
 
 const orig    = DATA1.orig_inventory;
@@ -118,6 +120,7 @@ export default function App() {
 
       {/* ── PAGES ── */}
       {activeTab === "summary"     && <Summary />}
+      {activeTab === "everything"  && <Everything />}
       {activeTab === "boxes"       && <AllBoxes />}
       {activeTab === "collection"  && <OriginalCollection />}
       {activeTab === "boxkeys"     && <BoxKeys />}
