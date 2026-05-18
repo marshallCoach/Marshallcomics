@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { DATA1 } from "@/data/data1";
-import { DATA2 } from "@/data/data2";
+import { DATA3 } from "@/data/data3";
 import OriginalCollection from "@/pages/OriginalCollection";
 import AllBoxes from "@/pages/AllBoxes";
 import BoxKeys from "@/pages/BoxKeys";
@@ -41,11 +40,11 @@ type TabId =
   | "summary" | "everything" | "boxes" | "collection" | "boxkeys"
   | "calendar" | "showplanner" | "cgc" | "signings";
 
-const orig    = DATA1.orig_inventory;
-const boxes   = DATA2.boxes_inventory;
-const signed  = [...orig, ...boxes].filter(c => (c.Signed || "").toUpperCase() === "YES").length;
-const origKeys = orig.filter(c => (c.Key || "").toUpperCase() === "YES").length;
-const boxKeys  = DATA2.boxes_keys.length;
+const comics  = DATA3.comics;
+const total   = comics.length;
+const signed  = comics.filter(c => (c.Signed || "").toUpperCase() === "YES").length;
+const keys    = comics.filter(c => (c.Key || "").toUpperCase() === "YES").length;
+const boxes   = DATA3.box_summary.length;
 
 export default function App() {
   const [activeSection, setActiveSection] = useState<SectionId>("inventory");
@@ -63,7 +62,7 @@ export default function App() {
     <PasswordGate>
     <div style={{ minHeight: "100vh" }}>
 
-      {/* ── HEADER ── */}
+      {/* HEADER */}
       <header className="app-header">
         <div className="logo-area">
           <img src="/logo.png" alt="BlackReadBrown" className="site-logo" />
@@ -74,25 +73,25 @@ export default function App() {
         </div>
         <div className="header-stats">
           <div className="stat">
-            <span className="stat-val">{orig.length}</span>
-            <span className="stat-lbl">Orig</span>
+            <span className="stat-val">{total.toLocaleString()}</span>
+            <span className="stat-lbl">Comics</span>
           </div>
           <div className="stat">
-            <span className="stat-val">{boxes.length}</span>
+            <span className="stat-val">{boxes}</span>
             <span className="stat-lbl">Boxes</span>
+          </div>
+          <div className="stat">
+            <span className="stat-val">{keys}</span>
+            <span className="stat-lbl">Keys</span>
           </div>
           <div className="stat">
             <span className="stat-val">{signed}</span>
             <span className="stat-lbl">Signed</span>
           </div>
-          <div className="stat">
-            <span className="stat-val">{origKeys + boxKeys}</span>
-            <span className="stat-lbl">Keys</span>
-          </div>
         </div>
       </header>
 
-      {/* ── MAIN NAV ── */}
+      {/* MAIN NAV */}
       <div className="main-nav">
         {NAV.map(section => (
           <button
@@ -105,7 +104,7 @@ export default function App() {
         ))}
       </div>
 
-      {/* ── SUB NAV ── */}
+      {/* SUB NAV */}
       <nav className="tab-nav">
         {currentSection.tabs.map(tab => (
           <button
@@ -118,7 +117,7 @@ export default function App() {
         ))}
       </nav>
 
-      {/* ── PAGES ── */}
+      {/* PAGES */}
       {activeTab === "summary"     && <Summary />}
       {activeTab === "everything"  && <Everything />}
       {activeTab === "boxes"       && <AllBoxes />}

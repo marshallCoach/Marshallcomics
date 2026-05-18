@@ -1,74 +1,18 @@
 import { useState, useMemo, useCallback } from "react";
-import { DATA1 } from "@/data/data1";
-import { DATA2 } from "@/data/data2";
+import { DATA3 } from "@/data/data3";
 import { SortableTable, ColDef } from "@/components/SortableTable";
 import { Paginator } from "@/components/Paginator";
 
 const CARD_PAGE = 48;
 
-// ── Unified record ────────────────────────────────────────────────────────────
-interface UnifiedComic {
-  _id:      string;
-  _source:  "box" | "orig";
-  Box:      string;   // box number or "Sales"
-  Title:    string;
-  Issue:    string;
-  Publisher:string;
-  Year:     string;
-  Era:      string;
-  Universe: string;
-  Arc:      string;
-  Key:      string;
-  Key_Why:  string;
-  First_App:string;
-  Writer:   string;
-  Artist:   string;
-  Cover_Artist: string;
-  Signed:   string;
-  Signed_By:string;
-  Condition:string;
-  Value_NM: string;
-  Value_VF: string;
-  Platform: string;
-  Notes:    string;
-  Start_Bid:string;
-}
+const ALL = DATA3.comics;
 
-const orig  = DATA1.orig_inventory;
-const boxes = DATA2.boxes_inventory;
+type Comic = (typeof ALL)[number];
 
-const ALL: UnifiedComic[] = [
-  ...boxes.map((c, i): UnifiedComic => ({
-    _id: `box-${i}`, _source: "box",
-    Box: c.Box, Title: c.Title, Issue: c.Issue, Publisher: c.Publisher,
-    Year: c.Year, Era: c.Era, Universe: c.Universe, Arc: c.Arc,
-    Key: c.Key, Key_Why: c.Key_Why, First_App: c.First_App,
-    Writer: c.Writer, Artist: c.Artist, Cover_Artist: c.Cover_Artist,
-    Signed: c.Signed, Signed_By: c.Signed_By, Condition: c.Condition,
-    Value_NM: c.Value_NM, Value_VF: c.Value_VF, Platform: c.Platform,
-    Notes: c.Notes, Start_Bid: c.Start_Bid,
-  })),
-  ...orig.map((c, i): UnifiedComic => ({
-    _id: `orig-${i}`, _source: "orig",
-    Box: "Sales", Title: c.Title ?? "", Issue: c.Issue ?? "",
-    Publisher: c.Publisher ?? "", Year: c.Year ?? "", Era: c.Era ?? "",
-    Universe: (c as any).Universe ?? "", Arc: (c as any).Arc ?? "",
-    Key: c.Key ?? "", Key_Why: (c as any).Key_Why ?? "",
-    First_App: (c as any).First_App ?? "",
-    Writer: (c as any).Writer ?? "", Artist: (c as any).Artist ?? "",
-    Cover_Artist: (c as any).Cover_Artist ?? "",
-    Signed: c.Signed ?? "", Signed_By: c.Signed_By ?? "",
-    Condition: (c as any).Condition ?? "", Value_NM: c.Value_NM ?? "",
-    Value_VF: c.Value_VF ?? "", Platform: c.Platform ?? "",
-    Notes: (c as any).Notes ?? "", Start_Bid: (c as any).Start_Bid ?? "",
-  })),
-];
-
-// Unique filter options
-const PUBLISHERS = ["", ...new Set(ALL.map(c => c.Publisher).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
-const ERAS       = ["", ...new Set(ALL.map(c => c.Era).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
-const PLATFORMS  = ["", ...new Set(ALL.map(c => c.Platform).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
-const SOURCES    = ["", "Boxes", "Sales Inventory"];
+const PUBLISHERS = [...new Set(ALL.map(c => c.Publisher).filter(Boolean))].sort();
+const ERAS       = [...new Set(ALL.map(c => c.Era).filter(Boolean))].sort();
+const PLATFORMS  = [...new Set(ALL.map(c => c.Platform).filter(Boolean))].sort();
+const BOXES      = [...new Set(ALL.map(c => c.Box).filter(Boolean))].sort((a,b)=>Number(a)-Number(b));
 
 function parseVal(v: string | undefined | null) {
   return parseFloat(String(v || "").replace(/[^0-9.]/g, "") || "0");
@@ -82,12 +26,7 @@ function platClass(p: string) {
   return "bb";
 }
 
-function SourceBadge({ src, box }: { src: "box"|"orig"; box: string }) {
-  if (src === "orig") return (
-    <span style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px",
-      background:"#1d6fa415", border:"1.5px solid #1d6fa4", color:"#1d6fa4",
-      borderRadius:3, padding:"1px 7px", whiteSpace:"nowrap" }}>Sales</span>
-  );
+function BoxBadge({ box }: { box: string }) {
   return (
     <span style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px",
       background:"#7a5c3a18", border:"1.5px solid #7a5c3a", color:"#7a5c3a",
@@ -95,12 +34,11 @@ function SourceBadge({ src, box }: { src: "box"|"orig"; box: string }) {
   );
 }
 
-// ── List columns ──────────────────────────────────────────────────────────────
-const COLS: ColDef<UnifiedComic>[] = [
+const COLS: ColDef<Comic>[] = [
   {
-    key:"source", label:"Source", defaultWidth:80,
-    sort:(a,b)=>a.Box.localeCompare(b.Box),
-    cell:r=><SourceBadge src={r._source} box={r.Box} />,
+    key:"box", label:"Box", defaultWidth:70,
+    sort:(a,b)=>Number(a.Box)-Number(b.Box),
+    cell:r=><BoxBadge box={r.Box} />,
   },
   {
     key:"title", label:"Title", defaultWidth:220,
@@ -151,20 +89,19 @@ const COLS: ColDef<UnifiedComic>[] = [
     cell:r=><span className="lt-sub">{r.Year}</span>,
   },
   {
-    key:"signed", label:"Signed", defaultWidth:80,
+    key:"signed", label:"Signed", defaultWidth:90,
     sort:(a,b)=>a.Signed.localeCompare(b.Signed),
     cell:r=>r.Signed.toUpperCase()==="YES"
       ?<span className="lt-sub" style={{color:"var(--gold)"}}>✍ {r.Signed_By||"Yes"}</span>:null,
   },
 ];
 
-// ── Component ─────────────────────────────────────────────────────────────────
 export default function Everything() {
   const [query,      setQuery]     = useState("");
   const [publisher,  setPub]       = useState("");
   const [era,        setEra]       = useState("");
   const [platform,   setPlat]      = useState("");
-  const [sourceF,    setSourceF]   = useState("");
+  const [boxFilter,  setBoxFilter] = useState("");
   const [keysOnly,   setKeysOnly]  = useState(false);
   const [signedOnly, setSignedOnly]= useState(false);
   const [view,       setView]      = useState<"list"|"card">("list");
@@ -173,60 +110,36 @@ export default function Everything() {
 
   const results = useMemo(() => {
     if (!searched) return [];
-
     const q = query.trim().toLowerCase();
-
     return ALL.filter(c => {
-      if (keysOnly  && c.Key.toUpperCase()    !== "YES") return false;
+      if (keysOnly   && c.Key.toUpperCase()    !== "YES") return false;
       if (signedOnly && c.Signed.toUpperCase() !== "YES") return false;
       if (publisher  && c.Publisher !== publisher)         return false;
       if (era        && c.Era !== era)                     return false;
       if (platform   && c.Platform !== platform)           return false;
-      if (sourceF === "Boxes"           && c._source !== "box")  return false;
-      if (sourceF === "Sales Inventory" && c._source !== "orig") return false;
-
+      if (boxFilter  && c.Box !== boxFilter)               return false;
       if (!q) return true;
-
-      return (
-        c.Title.toLowerCase().includes(q)       ||
-        c.Issue.toLowerCase().includes(q)        ||
-        c.Publisher.toLowerCase().includes(q)    ||
-        c.Writer.toLowerCase().includes(q)       ||
-        c.Artist.toLowerCase().includes(q)       ||
-        c.Cover_Artist.toLowerCase().includes(q) ||
-        c.Signed_By.toLowerCase().includes(q)    ||
-        c.Key_Why.toLowerCase().includes(q)      ||
-        c.First_App.toLowerCase().includes(q)    ||
-        c.Arc.toLowerCase().includes(q)          ||
-        c.Notes.toLowerCase().includes(q)        ||
-        c.Era.toLowerCase().includes(q)          ||
-        c.Universe.toLowerCase().includes(q)     ||
-        `box ${c.Box}`.toLowerCase().includes(q)
-      );
+      return [
+        c.Title, c.Issue, c.Publisher, c.Writer, c.Artist,
+        c.Cover_Artist, c.Signed_By, c.Key_Why, c.First_App,
+        c.Arc, c.Notes, c.Era, c.Universe, `box ${c.Box}`,
+        c.Whatnot_Pitch,
+      ].join(" ").toLowerCase().includes(q);
     });
-  }, [searched, query, publisher, era, platform, sourceF, keysOnly, signedOnly]);
+  }, [searched, query, publisher, era, platform, boxFilter, keysOnly, signedOnly]);
 
   const cardSlice = useMemo(() => {
     const start = (cardPage - 1) * CARD_PAGE;
     return results.slice(start, start + CARD_PAGE);
   }, [results, cardPage]);
 
-  const handleSearch = useCallback(() => {
-    setSearched(true);
-    setCardPage(1);
-  }, []);
-
-  const handleClear = useCallback(() => {
-    setQuery(""); setPub(""); setEra(""); setPlat(""); setSourceF("");
+  const handleSearch = useCallback(() => { setSearched(true); setCardPage(1); }, []);
+  const handleClear  = useCallback(() => {
+    setQuery(""); setPub(""); setEra(""); setPlat(""); setBoxFilter("");
     setKeysOnly(false); setSignedOnly(false);
     setSearched(false); setCardPage(1);
   }, []);
 
-  function onKeyDown(e: React.KeyboardEvent) {
-    if (e.key === "Enter") handleSearch();
-  }
-
-  // Creator quick-filter chips derived from current results
   const topWriters = useMemo(() => {
     if (!searched || results.length === 0) return [];
     const counts: Record<string,number> = {};
@@ -241,31 +154,30 @@ export default function Everything() {
     return Object.entries(counts).sort((a,b)=>b[1]-a[1]).slice(0,8).map(([a])=>a);
   }, [results, searched]);
 
-  const isCreatorSearch = query && (
-    results.some(c => c.Writer.toLowerCase().includes(query.toLowerCase()) ||
-                       c.Artist.toLowerCase().includes(query.toLowerCase()) ||
-                       c.Cover_Artist.toLowerCase().includes(query.toLowerCase()))
+  const isCreatorSearch = query && results.some(c =>
+    c.Writer.toLowerCase().includes(query.toLowerCase()) ||
+    c.Artist.toLowerCase().includes(query.toLowerCase()) ||
+    c.Cover_Artist.toLowerCase().includes(query.toLowerCase())
   );
 
   return (
-    <div style={{ maxWidth: 1400, margin: "0 auto", padding: "20px 16px 60px" }}>
+    <div style={{ maxWidth:1400, margin:"0 auto", padding:"20px 16px 60px" }}>
 
-      {/* ── Search bar ── */}
-      <div className="filters" style={{ borderRadius: 8, marginBottom: 16, padding: "16px 20px" }}>
+      {/* Search bar */}
+      <div className="filters" style={{ borderRadius:8, marginBottom:16, padding:"16px 20px" }}>
         <div style={{ display:"flex", gap:10, flexWrap:"wrap", alignItems:"flex-end" }}>
 
-          {/* Main search */}
           <div style={{ flex:"1 1 260px", display:"flex", flexDirection:"column", gap:4 }}>
             <label style={{ fontSize:"0.65rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px", color:"var(--muted2)" }}>
-              Search — title, issue, publisher, writer, artist, cover artist, signer, notes
+              Search — title, writer, artist, signer, key reason, 1st appearance, arc
             </label>
             <div style={{ position:"relative" }}>
               <input
                 className="search-input"
                 value={query}
                 onChange={e=>setQuery(e.target.value)}
-                onKeyDown={onKeyDown}
-                placeholder="e.g. Tom King, Batman, Jiménez, Miles Morales…"
+                onKeyDown={e=>e.key==="Enter"&&handleSearch()}
+                placeholder="e.g. Tom King, Batman, Jim Lee, Miles Morales, Carnage…"
                 style={{ width:"100%", paddingRight:32 }}
               />
               {query && (
@@ -277,25 +189,23 @@ export default function Everything() {
             </div>
           </div>
 
-          {/* Dropdowns */}
           <div style={{ display:"flex", gap:8, flexWrap:"wrap", alignItems:"flex-end" }}>
             {[
-              { label:"Source",    val:sourceF,   set:setSourceF,  opts:SOURCES },
-              { label:"Publisher", val:publisher,  set:setPub,      opts:PUBLISHERS },
-              { label:"Platform",  val:platform,   set:setPlat,     opts:PLATFORMS },
-              { label:"Era",       val:era,        set:setEra,      opts:ERAS },
+              { label:"Box",       val:boxFilter, set:setBoxFilter, opts:BOXES     },
+              { label:"Publisher", val:publisher,  set:setPub,       opts:PUBLISHERS },
+              { label:"Platform",  val:platform,   set:setPlat,      opts:PLATFORMS  },
+              { label:"Era",       val:era,        set:setEra,       opts:ERAS       },
             ].map(f=>(
               <div key={f.label} style={{ display:"flex", flexDirection:"column", gap:4 }}>
                 <label style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px", color:"var(--muted2)" }}>{f.label}</label>
-                <select className="filter-select" value={f.val} onChange={e=>f.set(e.target.value)} style={{ minWidth:110 }}>
+                <select className="filter-select" value={f.val} onChange={e=>f.set(e.target.value)} style={{ minWidth:100 }}>
                   <option value="">All</option>
-                  {f.opts.filter(Boolean).map(o=><option key={o} value={o}>{o}</option>)}
+                  {f.opts.map(o=><option key={o} value={o}>{f.label==="Box"?`Box ${o}`:o}</option>)}
                 </select>
               </div>
             ))}
           </div>
 
-          {/* Toggles */}
           <div style={{ display:"flex", flexDirection:"column", gap:4 }}>
             <label style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px", color:"var(--muted2)" }}>Filter</label>
             <div style={{ display:"flex", gap:8 }}>
@@ -310,7 +220,6 @@ export default function Everything() {
             </div>
           </div>
 
-          {/* Buttons */}
           <div style={{ display:"flex", flexDirection:"column", gap:4 }}>
             <label style={{ fontSize:"0.62rem", color:"transparent" }}>.</label>
             <div style={{ display:"flex", gap:8 }}>
@@ -321,41 +230,35 @@ export default function Everything() {
         </div>
       </div>
 
-      {/* ── Creator quick-search chips (shown after a result set) ── */}
-      {searched && (topWriters.length > 0 || topArtists.length > 0) && isCreatorSearch && (
-        <div style={{ marginBottom: 14, display:"flex", gap:6, flexWrap:"wrap", alignItems:"center" }}>
-          <span style={{ fontSize:"0.65rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", color:"var(--muted2)" }}>Top Writers:</span>
-          {topWriters.map(w=>(
-            <button key={w} onClick={()=>{ setQuery(w); setSearched(true); setCardPage(1); }}
-              style={{ background:"var(--surface)", border:"1px solid var(--border)", borderRadius:20,
-                padding:"2px 10px", fontSize:"0.72rem", cursor:"pointer", color:"var(--text2)",
-                fontFamily:"'Crimson Pro',Georgia,serif", transition:"border-color 0.15s" }}
-              onMouseOver={e=>(e.currentTarget.style.borderColor="#c8102e")}
-              onMouseOut={e=>(e.currentTarget.style.borderColor="var(--border)")}
-            >{w}</button>
-          ))}
+      {/* Creator chips after search */}
+      {searched && isCreatorSearch && (topWriters.length > 0 || topArtists.length > 0) && (
+        <div style={{ marginBottom:14, display:"flex", gap:6, flexWrap:"wrap", alignItems:"center" }}>
+          {topWriters.length > 0 && <>
+            <span style={{ fontSize:"0.65rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", color:"var(--muted2)" }}>Writers:</span>
+            {topWriters.map(w=>(
+              <button key={w} onClick={()=>{ setQuery(w); setSearched(true); setCardPage(1); }}
+                style={{ background:"var(--surface)", border:"1px solid var(--border)", borderRadius:20,
+                  padding:"2px 10px", fontSize:"0.72rem", cursor:"pointer", color:"var(--text2)" }}>{w}</button>
+            ))}
+          </>}
           {topArtists.length > 0 && <>
-            <span style={{ fontSize:"0.65rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", color:"var(--muted2)", marginLeft:8 }}>Top Artists:</span>
+            <span style={{ fontSize:"0.65rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", color:"var(--muted2)", marginLeft:8 }}>Artists:</span>
             {topArtists.map(a=>(
               <button key={a} onClick={()=>{ setQuery(a); setSearched(true); setCardPage(1); }}
                 style={{ background:"var(--surface)", border:"1px solid var(--border)", borderRadius:20,
-                  padding:"2px 10px", fontSize:"0.72rem", cursor:"pointer", color:"var(--text2)",
-                  fontFamily:"'Crimson Pro',Georgia,serif", transition:"border-color 0.15s" }}
-                onMouseOver={e=>(e.currentTarget.style.borderColor="#7a5c3a")}
-                onMouseOut={e=>(e.currentTarget.style.borderColor="var(--border)")}
-              >{a}</button>
+                  padding:"2px 10px", fontSize:"0.72rem", cursor:"pointer", color:"var(--text2)" }}>{a}</button>
             ))}
           </>}
         </div>
       )}
 
-      {/* ── Results header ── */}
+      {/* Results header */}
       {searched && (
         <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:12, flexWrap:"wrap", gap:8 }}>
           <div style={{ fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px", fontSize:"0.85rem", color:"var(--muted2)" }}>
             {results.length === 0
               ? "No results"
-              : <><span style={{ color:"var(--red)", fontSize:"1.1rem" }}>{results.length.toLocaleString()}</span> {results.length===1?"book":"books"} across both collections</>}
+              : <><span style={{ color:"var(--red)", fontSize:"1.1rem" }}>{results.length.toLocaleString()}</span> {results.length===1?"book":"books"} — 1,793 total comics, 16 boxes</>}
           </div>
           <div style={{ display:"flex", gap:6 }}>
             {(["list","card"] as const).map(v=>(
@@ -364,7 +267,7 @@ export default function Everything() {
                   fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"1.5px",
                   padding:"5px 14px", border:`1.5px solid ${view===v?"var(--red)":"var(--border)"}`,
                   background:view===v?"var(--red)":"var(--surface)", color:view===v?"#fff":"var(--muted2)",
-                  borderRadius:4, cursor:"pointer", transition:"all 0.15s",
+                  borderRadius:4, cursor:"pointer",
                 }}>
                 {v==="list"?"≡ List":"⊞ Cards"}
               </button>
@@ -373,22 +276,21 @@ export default function Everything() {
         </div>
       )}
 
-      {/* ── Blank state ── */}
+      {/* Blank state */}
       {!searched && (
         <div style={{ textAlign:"center", padding:"60px 20px", color:"var(--muted2)" }}>
           <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.5rem", letterSpacing:"3px", marginBottom:10, color:"var(--text2)" }}>
             Search Everything
           </div>
           <div style={{ fontSize:"0.9rem", lineHeight:1.7 }}>
-            2,462 comics — both the boxed collection and sales inventory — in one search.<br />
-            Search by title, issue, publisher, writer, artist, cover artist, signer, key notes, or anything else.
+            1,793 comics across 16 boxes — all in one search.<br />
+            Search by title, writer, artist, cover artist, signer, key reason, first appearance, arc, or box.
           </div>
           <div style={{ display:"flex", gap:8, justifyContent:"center", flexWrap:"wrap", marginTop:20 }}>
-            {["Tom King","Frank Miller","Jim Lee","Donny Cates","Neal Adams","Grant Morrison"].map(name=>(
+            {["Tom King","Frank Miller","Jim Lee","Mark Bagley","Christopher Priest","Walt Simonson"].map(name=>(
               <button key={name} onClick={()=>{ setQuery(name); setSearched(true); }}
                 style={{ background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:20,
-                  padding:"5px 14px", fontSize:"0.8rem", cursor:"pointer", color:"var(--text2)",
-                  fontFamily:"'Crimson Pro',Georgia,serif" }}>
+                  padding:"5px 14px", fontSize:"0.8rem", cursor:"pointer", color:"var(--text2)" }}>
                 {name}
               </button>
             ))}
@@ -396,21 +298,34 @@ export default function Everything() {
         </div>
       )}
 
-      {/* ── Results ── */}
+      {/* Results — list */}
       {searched && results.length > 0 && view === "list" && (
-        <SortableTable rows={results} cols={COLS} rowKey={(r,i)=>r._id ?? i} pageSize={50} />
+        <SortableTable rows={results} cols={COLS} rowKey={(_r,i)=>String(i)} pageSize={50} expandCell={c => (
+          <div>
+            <div style={{ display:"flex", gap:24, flexWrap:"wrap" }}>
+              {c.Arc       && <div className="dr"><span className="dl">Arc</span><span className="dv">{c.Arc}</span></div>}
+              {c.Key_Why   && <div className="dr"><span className="dl">Key</span><span className="dv" style={{color:"var(--gold)"}}>{c.Key_Why}</span></div>}
+              {c.First_App && <div className="dr"><span className="dl">1st App</span><span className="dv">{c.First_App}</span></div>}
+              {(c.Signed||"").toUpperCase()==="YES" && c.Signed_By && <div className="dr"><span className="dl">Signed By</span><span className="dv">{c.Signed_By}</span></div>}
+              {c.Terrificon && <div className="dr"><span className="dl">Terrificon</span><span className="dv" style={{color:"#f59e0b"}}>{c.Terrificon}</span></div>}
+              {c.Condition && <div className="dr"><span className="dl">Condition</span><span className="dv">{c.Condition}</span></div>}
+            </div>
+            {c.Whatnot_Pitch && (
+              <div style={{ marginTop:6, fontStyle:"italic", color:"var(--muted2)", fontSize:"0.8rem" }}>{c.Whatnot_Pitch.substring(0,200)}</div>
+            )}
+          </div>
+        )} />
       )}
 
+      {/* Results — cards */}
       {searched && results.length > 0 && view === "card" && (
         <>
-          <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(210px,1fr))", gap:10 }}>
-            {cardSlice.map(c=><EverythingCard key={c._id} comic={c} />)}
+          <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(210px,1fr))", gap:10 }}>
+            {cardSlice.map((c,i)=><EverythingCard key={i} comic={c} />)}
           </div>
           <Paginator
-            total={results.length}
-            page={cardPage}
-            pageSize={CARD_PAGE}
-            pageCount={Math.ceil(results.length / CARD_PAGE)}
+            total={results.length} page={cardPage} pageSize={CARD_PAGE}
+            pageCount={Math.ceil(results.length/CARD_PAGE)}
             onChange={p=>{ setCardPage(p); window.scrollTo({top:0,behavior:"smooth"}); }}
           />
         </>
@@ -425,31 +340,25 @@ export default function Everything() {
   );
 }
 
-// ── Card component ────────────────────────────────────────────────────────────
-function EverythingCard({ comic: c }: { comic: UnifiedComic }) {
+function EverythingCard({ comic: c }: { comic: Comic }) {
   const isKey    = c.Key.toUpperCase() === "YES";
   const isSigned = c.Signed.toUpperCase() === "YES";
 
   return (
-    <div className="comic-card" style={{ borderTop: isKey ? "3px solid var(--gold)" : undefined }}>
-      {/* Source tag */}
+    <div className="comic-card" style={{ borderTop:isKey?"3px solid var(--gold)":undefined }}>
       <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", marginBottom:6 }}>
-        <SourceBadge src={c._source} box={c.Box} />
+        <BoxBadge box={c.Box} />
         <div style={{ display:"flex", gap:4, flexWrap:"wrap", justifyContent:"flex-end" }}>
-          {isKey    && <span className="badge bkey"   style={{fontSize:"0.58rem"}}>KEY</span>}
-          {isSigned && <span className="badge bgold"  style={{fontSize:"0.58rem"}}>SIGNED</span>}
+          {isKey    && <span className="badge bkey"  style={{fontSize:"0.58rem"}}>KEY</span>}
+          {isSigned && <span className="badge bgold" style={{fontSize:"0.58rem"}}>SIGNED</span>}
           {c.Platform && <span className={`badge ${platClass(c.Platform)}`} style={{fontSize:"0.58rem"}}>{c.Platform}</span>}
         </div>
       </div>
 
-      {/* Title / issue */}
       <div className="card-title">{c.Title}</div>
-      <div className="card-issue">#{c.Issue}{c.Year ? ` · ${c.Year}` : ""}</div>
+      <div className="card-issue">#{c.Issue}{c.Year?` · ${c.Year}`:""}</div>
+      {c.Publisher && <div className="card-pub">{c.Publisher}{c.Era?` · ${c.Era}`:""}</div>}
 
-      {/* Publisher / era */}
-      {c.Publisher && <div className="card-pub">{c.Publisher}{c.Era ? ` · ${c.Era}` : ""}</div>}
-
-      {/* Creator line */}
       {(c.Writer || c.Artist) && (
         <div style={{ fontSize:"0.72rem", color:"var(--muted2)", marginTop:5, lineHeight:1.4 }}>
           {c.Writer && <div><span style={{color:"var(--muted)"}}>W:</span> {c.Writer}</div>}
@@ -458,19 +367,16 @@ function EverythingCard({ comic: c }: { comic: UnifiedComic }) {
         </div>
       )}
 
-      {/* Key why */}
       {isKey && c.Key_Why && (
         <div style={{ fontSize:"0.7rem", color:"var(--gold)", marginTop:5, lineHeight:1.4, fontStyle:"italic" }}>
-          {c.Key_Why}
+          {c.Key_Why.substring(0,120)}
         </div>
       )}
 
-      {/* Signed by */}
       {isSigned && c.Signed_By && (
         <div style={{ fontSize:"0.7rem", color:"var(--brown)", marginTop:4 }}>✍ {c.Signed_By}</div>
       )}
 
-      {/* Value */}
       {(c.Value_NM || c.Value_VF) && (
         <div style={{ display:"flex", gap:12, marginTop:6, fontSize:"0.72rem", color:"var(--green-text)" }}>
           {c.Value_NM && <span>NM <strong>{c.Value_NM}</strong></span>}

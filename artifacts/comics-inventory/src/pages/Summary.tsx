@@ -1,336 +1,277 @@
-import { DATA2 } from "@/data/data2";
-import { DATA1 } from "@/data/data1";
+import { DATA3 } from "@/data/data3";
 
-const boxes = DATA2.boxes_inventory;
-const keys  = DATA2.boxes_keys;
-const orig  = DATA1.orig_inventory;
+const comics   = DATA3.comics;
+const boxData  = DATA3.box_summary;
 
-const totalBoxes   = boxes.length;
-const totalOrig    = orig.length;
-const totalAll     = totalBoxes + totalOrig;
-const keyCount     = keys.length + orig.filter(c => (c.Key || "").toUpperCase() === "YES").length;
-const signedCount  = [...boxes, ...orig].filter(c => (c.Signed || "").toUpperCase() === "YES").length;
-const whatnotCount = boxes.filter(c => (c.Platform || "").toUpperCase() === "WHATNOT").length;
-const ebayCount    = boxes.filter(c => (c.Platform || "").toUpperCase() === "EBAY").length;
+const totalComics  = comics.length;
+const totalBoxes   = boxData.length;
+const keyCount     = comics.filter(c => (c.Key || "").toUpperCase() === "YES").length;
+const signedCount  = comics.filter(c => (c.Signed || "").toUpperCase() === "YES").length;
+const whatnotCount = comics.filter(c => (c.Platform || "").toUpperCase() === "WHATNOT").length;
+const ebayCount    = comics.filter(c => (c.Platform || "").toUpperCase() === "EBAY").length;
+const tfCount      = comics.filter(c => !!(c.Terrificon || "").trim()).length;
 
-// Box counts
-const boxCounts: Record<string, number> = {};
-boxes.forEach(c => { boxCounts[c.Box] = (boxCounts[c.Box] || 0) + 1; });
-
-// RAG data
-const RAG_ROWS = [
-  { label: "Title / Issue / Publisher / Year",  status: "green", note: "100% across all 13 boxes" },
-  { label: "Key Issue flag (YES/NO)",            status: "green", note: "100% — all books classified" },
-  { label: "Condition",                          status: "green", note: "100% — required field complete" },
-  { label: "NM & VF Values",                    status: "green", note: "100% — pricing complete post-audit" },
-  { label: "Platform (Whatnot / eBay)",          status: "green", note: "100% — all books assigned" },
-  { label: "Era / Universe / Collection Type",   status: "green", note: "100% — classification complete" },
-  { label: "Writer / Artist",                    status: "amber", note: "Gaps in Box 3 (Robin arc) and Box 8 (Star Trek) — ~15 rows each" },
-  { label: "Arc / Story",                        status: "amber", note: "78–100% by box — Box 2 lowest at ~78%" },
-  { label: "Whatnot Story Pitch",                status: "amber", note: "Box 1, 4 partial; Box 5, 6, 7, 8, 9 empty" },
-  { label: "Key Issue — Why",                    status: "amber", note: "1 blank in Box 3 (flagged for fix)" },
-  { label: "Starting Bid",                       status: "amber", note: "Box 3 all blank — needs population" },
-  { label: "1st Appearances",                    status: "red",   note: "~2% fill — optional field, sparse by design" },
-  { label: "Story Arc / Event",                  status: "red",   note: "~16% fill — auto-population in progress" },
-  { label: "Volume",                             status: "red",   note: "~18% fill — optional, populated where relevant" },
-  { label: "Content / Solicitation Notes",       status: "red",   note: "0% — optional, deprioritised" },
-  { label: "Legacy Issue #",                     status: "red",   note: "0% — optional, only for dual-numbered series" },
-];
-
-// Next steps — today is May 15 2026, deadline urgency calculated
 const NEXT_STEPS = [
   {
     urgency: "critical",
-    deadline: "Jun 5",
-    daysAway: 21,
-    title: "Jorge Jiménez signing — ship books NOW",
-    detail: "Batman #125. Deadline Jun 5. Ship this week or miss the window.",
+    deadline: "ASAP",
+    title: "Authenticate Stan Lee BP #513 BEFORE any streaming or sale",
+    detail: "Your most valuable single book ($800–$1,500+ authenticated). Do NOT press. Submit via PSA/DNA at NYCC or CGC × JSA. Never stream ungraded.",
+    category: "CGC",
+  },
+  {
+    urgency: "critical",
+    deadline: "Jun 5 ⚠️",
+    title: "Jorge Jiménez CGC SS — Batman #125 — DEADLINE IMMINENT",
+    detail: "Batman #125 (Failsafe arc — Jiménez drew it). Press and submit immediately. This deadline is days away.",
     category: "Signing",
   },
   {
-    urgency: "high",
-    deadline: "ASAP",
-    daysAway: 0,
-    title: "Submit CGC books — UFF #21-23 (Marvel Zombies trilogy)",
-    detail: "Box 2. $300–500 slabbed each. Highest ceiling in the collection. Submit before any Whatnot show.",
-    category: "CGC",
+    urgency: "critical",
+    deadline: "This week",
+    title: "Bag Box 15 — DC New 52 (ALL UNBAGGED)",
+    detail: "Batman Annual #1 (Mr. Freeze key), Batman Europa #1 (Jim Lee), Superman Unchained #1 (Snyder/Lee) are all unbagged. CGC will not accept unbagged books.",
+    category: "Bagging",
   },
   {
     urgency: "high",
-    deadline: "ASAP",
-    daysAway: 0,
-    title: "Submit CGC — UC Spider-Man #1 (Miles Morales origin)",
-    detail: "Box 2. $150–300 CGC 9.8. Spider-Verse tie-in demand is sustained. Submit now.",
-    category: "CGC",
-  },
-  {
-    urgency: "high",
-    deadline: "ASAP",
-    daysAway: 0,
-    title: "Submit CGC — Young Avengers #1 & Demon Days: X-Men #1",
-    detail: "Box 7. $80–200 each. MCU-bound characters. Batch with Miles submission to save shipping.",
-    category: "CGC",
-  },
-  {
-    urgency: "high",
-    deadline: "ASAP",
-    daysAway: 0,
-    title: "Fix Box 3 Writer / Artist blanks",
-    detail: "Robin: The Joker's Wild arc — ~6 Writer and ~8 Artist cells missing. QC flagged.",
-    category: "Data",
-  },
-  {
-    urgency: "high",
-    deadline: "ASAP",
-    daysAway: 0,
-    title: "Fix Box 8 Writer / Artist blanks",
-    detail: "Star Trek / licensed books — 15–17 blank credits. Lookup and populate.",
-    category: "Data",
-  },
-  {
-    urgency: "medium",
     deadline: "Jun 26",
-    daysAway: 42,
-    title: "Geoff Johns + Jason Fabok signing — prepare books",
-    detail: "JL #21 + JSA. Deadline Jun 26. Pull books, sleeve, and arrange.",
+    title: "Geoff Johns + Jason Fabok CGC SS — JL #21 + JSA",
+    detail: "Johns sig adds to existing unwitnessed VA sigs = yellow/green combo label. Pull books, sleeve, ship. Deadline Jun 26.",
     category: "Signing",
   },
   {
-    urgency: "medium",
+    urgency: "high",
     deadline: "Jul 10",
-    daysAway: 56,
-    title: "Roy Thomas signing — 5 books = $450 → $820–1,630",
-    detail: "High-value opportunity. Identify the 5 books and ship before Jul 10.",
+    title: "Roy Thomas — 5 books = $450 fees → $820–$1,630 return",
+    detail: "Avengers #60, #87, King-Size #2, Marvel Premiere #1, Saga Human Torch #3. Thomas co-created Wolverine, Vision, Carol Danvers, Adam Warlock. High ROI signing.",
     category: "Signing",
   },
   {
-    urgency: "medium",
-    deadline: "Aug 7",
-    daysAway: 84,
-    title: "Terrificon prep — pull and sleeve creator books",
-    detail: "Tom King Trinity, Jurgens Return of Superman 30th, Silvestri X-Men vs Avengers, Claremont Wolverine. Aug 7–9.",
+    urgency: "high",
+    deadline: "Jul 10",
+    title: "Mike Mayhew CGC SS — ASM #50 Alex Ross Timeless Virgin",
+    detail: "Already signed — submit via CGC × JSA green Qualified path. $100–200 authenticated. Same deadline as Roy Thomas.",
+    category: "Signing",
+  },
+  {
+    urgency: "high",
+    deadline: "Before Aug 7",
+    title: "Press CGC batch — submit all simultaneously to save shipping",
+    detail: "Batman #656+#657, Wolverine #8 (UNSIGNED), ASM #361, Vision #1, Secret Wars #1, NW #1, Mockingbird #8, WildCATs #2/#11, Savage Dragon #1, Transformers #1. Cost $15–25/book.",
+    category: "CGC",
+  },
+  {
+    urgency: "high",
+    deadline: "Before Aug 7",
+    title: "Bag Box 25 (DC Rebirth, 10% bagged) — keys first",
+    detail: "DC Universe Rebirth Special #1, Batman #21+#22 (The Button), Batman #50, Hawkman #1, Justice League #1 Snyder. All unbagged keys.",
+    category: "Bagging",
+  },
+  {
+    urgency: "high",
+    deadline: "Before Aug 7",
+    title: "Bag Box 26 (X-Men, 20% bagged) — keys first",
+    detail: "Deadpool #1 (Way/Medina 2008), Old Man Logan #71–72, Extreme X-Men #1, New Mutants #1 (2009). Keys bag first.",
+    category: "Bagging",
+  },
+  {
+    urgency: "high",
+    deadline: "Aug 8 SHARP",
+    title: "Terrificon — Jim Lee is SATURDAY AUG 8 ONLY — arrive 10am",
+    detail: "Hotel: Hyatt code G-TRFC. Bring UNSIGNED books for yellow SS label. Wolverine #8 unsigned = priority #1 ($500+ SS 9.8). Verify Agent of Slabs presence. DO NOT bring already-signed books for yellow SS.",
     category: "Show",
   },
   {
-    urgency: "low",
+    urgency: "medium",
+    deadline: "Oct 8–11",
+    title: "NYCC — Stan Lee BP #513 authentication + Heritage networking",
+    detail: "Bring BP #513 for PSA/DNA authentication. Bring Thor #169 CGC 8.0 (slabbed) for Heritage dealer evaluation. Buy budget $100–300 for undervalued keys.",
+    category: "Show",
+  },
+  {
+    urgency: "medium",
     deadline: "Ongoing",
-    daysAway: 999,
-    title: "Populate Starting Bid for Box 3",
-    detail: "All 58 books in Box 3 have no starting bid set. Required field for Whatnot shows.",
-    category: "Data",
+    title: "Bag Box 23 (Cap America, 10%) + Box 24 (DC Mixed, 10%)",
+    detail: "Box 23: Cap #1 Brubaker, Cap #25 (Death of Cap), Cap #600. Box 24: Batman/Superman World's Finest #1, Far Sector #1, Infinite Frontier #0. Keys first.",
+    category: "Bagging",
   },
   {
     urgency: "low",
     deadline: "Ongoing",
-    daysAway: 999,
-    title: "Verify: Alan Scott GL #1 (Box 4)",
-    detail: "Listed as watch — confirm issue and condition. May be a CGC candidate.",
-    category: "Research",
-  },
-  {
-    urgency: "low",
-    deadline: "Ongoing",
-    daysAway: 999,
-    title: "Naomi #1 (Titans TV) — CGC candidate check",
-    detail: "Box 6. $60–120 CGC 9.8 if in good condition. Verify grade before submitting.",
-    category: "CGC",
+    title: "eBay Now — reader/poor condition issues, no pressing required",
+    detail: "Flash Vol 2 #112–125 (low grade), ASM #583 (water damage), Aquaman #58–74, Extreme X-Men #6–25, New Mutants DeFilippis #1–13. Start at $1–3 each or bundle lots.",
+    category: "Sales",
   },
 ];
 
-// Show only the 14-day window steps prominently
-const UPCOMING_14 = NEXT_STEPS.filter(s => s.daysAway <= 14);
-const UPCOMING_REST = NEXT_STEPS.filter(s => s.daysAway > 14);
-
 function catColor(cat: string) {
-  if (cat === "CGC")      return "#8b2be2";
-  if (cat === "Signing")  return "#c8102e";
-  if (cat === "Data")     return "#d97706";
-  if (cat === "Show")     return "#1d6fa4";
+  if (cat === "CGC")     return "#8b2be2";
+  if (cat === "Signing") return "#c8102e";
+  if (cat === "Bagging") return "#d97706";
+  if (cat === "Show")    return "#1d6fa4";
+  if (cat === "Sales")   return "#16a34a";
   return "#555";
-}
-
-function RagDot({ status }: { status: string }) {
-  const color = status === "green" ? "#16a34a" : status === "amber" ? "#d97706" : "#dc2626";
-  const label = status === "green" ? "GREEN" : status === "amber" ? "AMBER" : "RED";
-  return (
-    <span style={{
-      display: "inline-flex", alignItems: "center", gap: 5,
-      background: color + "18", border: `1.5px solid ${color}`,
-      borderRadius: 20, padding: "2px 10px",
-      fontSize: "0.65rem", fontFamily: "'Bebas Neue', sans-serif",
-      letterSpacing: "1px", color,
-    }}>
-      <span style={{ width: 8, height: 8, borderRadius: "50%", background: color, display: "inline-block" }} />
-      {label}
-    </span>
-  );
 }
 
 function UrgencyBadge({ u }: { u: string }) {
   const map: Record<string, { label: string; color: string }> = {
-    critical: { label: "CRITICAL", color: "#dc2626" },
-    high:     { label: "HIGH",     color: "#d97706" },
-    medium:   { label: "MEDIUM",   color: "#1d6fa4" },
-    low:      { label: "WATCH",    color: "#6b7280" },
+    critical: { label:"CRITICAL", color:"#dc2626" },
+    high:     { label:"HIGH",     color:"#d97706" },
+    medium:   { label:"MEDIUM",   color:"#1d6fa4" },
+    low:      { label:"WATCH",    color:"#6b7280" },
   };
   const m = map[u] || map.low;
   return (
     <span style={{
-      background: m.color + "15", border: `1.5px solid ${m.color}`,
-      borderRadius: 3, padding: "1px 8px",
-      fontSize: "0.62rem", fontFamily: "'Bebas Neue', sans-serif",
-      letterSpacing: "1px", color: m.color,
+      background: m.color+"15", border:`1.5px solid ${m.color}`,
+      borderRadius:3, padding:"1px 8px",
+      fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif",
+      letterSpacing:"1px", color:m.color,
     }}>{m.label}</span>
   );
 }
 
+function StepCard({ step }: { step: typeof NEXT_STEPS[number] }) {
+  const cc = catColor(step.category);
+  return (
+    <div style={{
+      display:"flex", gap:14, alignItems:"flex-start",
+      border:"1.5px solid var(--border)", borderRadius:6,
+      padding:"12px 16px", background:"var(--surface)",
+      borderLeft:`3px solid ${step.urgency==="critical"?"#dc2626":step.urgency==="high"?"#d97706":"var(--border)"}`,
+    }}>
+      <div style={{ flex:"0 0 auto", display:"flex", flexDirection:"column", alignItems:"center", gap:5, minWidth:72 }}>
+        <UrgencyBadge u={step.urgency} />
+        <span style={{
+          fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px",
+          background:cc+"18", border:`1px solid ${cc}`, color:cc,
+          borderRadius:3, padding:"1px 7px",
+        }}>{step.category}</span>
+        <span style={{ fontSize:"0.63rem", color:step.urgency==="critical"?"#dc2626":"var(--muted2)", fontWeight:step.urgency==="critical"?700:400 }}>
+          {step.deadline}
+        </span>
+      </div>
+      <div style={{ flex:1 }}>
+        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", letterSpacing:"1px", color:"var(--text)", marginBottom:3 }}>{step.title}</div>
+        <div style={{ fontSize:"0.78rem", color:"var(--muted2)", lineHeight:1.5 }}>{step.detail}</div>
+      </div>
+    </div>
+  );
+}
+
 export default function Summary() {
-  const overallScore = 82.3;
+  const critical = NEXT_STEPS.filter(s => s.urgency === "critical");
+  const high     = NEXT_STEPS.filter(s => s.urgency === "high");
+  const rest     = NEXT_STEPS.filter(s => s.urgency !== "critical" && s.urgency !== "high");
 
   return (
-    <div style={{ maxWidth: 1100, margin: "0 auto", padding: "24px 20px 60px" }}>
+    <div style={{ maxWidth:1100, margin:"0 auto", padding:"24px 20px 60px" }}>
 
-      {/* Collection Overview */}
-      <section style={{ marginBottom: 32 }}>
-        <h2 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "1.3rem", letterSpacing: "2px", color: "var(--red)", marginBottom: 16 }}>
+      {/* Overview stats */}
+      <section style={{ marginBottom:32 }}>
+        <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.3rem", letterSpacing:"2px", color:"var(--red)", marginBottom:16 }}>
           Collection Overview
         </h2>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 12 }}>
+        <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(140px,1fr))", gap:12 }}>
           {[
-            { val: totalBoxes.toLocaleString(), lbl: "Boxed Books", sub: "13 boxes" },
-            { val: totalOrig.toLocaleString(), lbl: "Sales Inventory", sub: "pre-box collection" },
-            { val: totalAll.toLocaleString(), lbl: "Total Comics", sub: "combined" },
-            { val: keyCount.toString(), lbl: "Key Issues", sub: "across all sets" },
-            { val: signedCount.toString(), lbl: "Signed Books", sub: "verified signatures" },
-            { val: whatnotCount.toLocaleString(), lbl: "Whatnot", sub: "platform assigned" },
-            { val: ebayCount.toLocaleString(), lbl: "eBay", sub: "platform assigned" },
-            { val: "$24k–$40k+", lbl: "Est. Collection Value", sub: "combined raw" },
+            { val:totalComics.toLocaleString(), lbl:"Total Comics",    sub:"master inventory" },
+            { val:totalBoxes.toString(),        lbl:"Total Boxes",     sub:"physically organized" },
+            { val:keyCount.toLocaleString(),    lbl:"Key Issues",      sub:"confirmed across all boxes" },
+            { val:signedCount.toString(),       lbl:"Signed Books",    sub:"by verified creators" },
+            { val:tfCount.toString(),           lbl:"Terrificon Books",sub:"creator appearances" },
+            { val:whatnotCount.toLocaleString(),lbl:"Whatnot",         sub:"platform assigned" },
+            { val:ebayCount.toLocaleString(),   lbl:"eBay",            sub:"platform assigned" },
+            { val:"$25k–$55k",                 lbl:"Est. Raw Value",  sub:"$60k–$120k+ post-CGC" },
           ].map(s => (
-            <div key={s.lbl} style={{ background: "var(--surface)", border: "1.5px solid var(--border)", borderRadius: 6, padding: "14px 16px" }}>
-              <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "1.6rem", color: "var(--red)", letterSpacing: "1px" }}>{s.val}</div>
-              <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.7rem", letterSpacing: "1.5px", color: "var(--text)" }}>{s.lbl}</div>
-              <div style={{ fontSize: "0.7rem", color: "var(--muted2)", marginTop: 2 }}>{s.sub}</div>
+            <div key={s.lbl} style={{ background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:6, padding:"14px 16px" }}>
+              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.6rem", color:"var(--red)", letterSpacing:"1px" }}>{s.val}</div>
+              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.7rem", letterSpacing:"1.5px", color:"var(--text)" }}>{s.lbl}</div>
+              <div style={{ fontSize:"0.7rem", color:"var(--muted2)", marginTop:2 }}>{s.sub}</div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Box Breakdown */}
-      <section style={{ marginBottom: 32 }}>
-        <h2 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "1.3rem", letterSpacing: "2px", color: "var(--red)", marginBottom: 16 }}>
+      {/* Collection highlights */}
+      <section style={{ marginBottom:32 }}>
+        <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.3rem", letterSpacing:"2px", color:"var(--red)", marginBottom:12 }}>
+          Flagship Assets
+        </h2>
+        <div style={{ display:"flex", flexWrap:"wrap", gap:10 }}>
+          {[
+            { book:"Stan Lee signed BP #513",         note:"Authenticate first (PSA/DNA) — $800–$1,500+ auth",           color:"#dc2626" },
+            { book:"Truth: RWB #1 (Baker remarked)",  note:"Verify remark → Green Qual. → Heritage — $500–$2,000",        color:"#d97706" },
+            { book:"Ultimate Fallout #4 Foil",        note:"1st Miles Morales — $800–$1,500 CGC 9.8",                     color:"#8b2be2" },
+            { book:"Thor #169 CGC 8.0",               note:"Already slabbed. Galactus origin. Kirby/Lee. Show 15.",        color:"#1d6fa4" },
+            { book:"Batman #656 (1st Damian Wayne)",  note:"Press + Blue Universal → $350–$500 CGC 9.8 — Best ROI",       color:"#16a34a" },
+            { book:"Wolverine #8 (UNSIGNED)",         note:"Keep unsigned → Yellow SS at Terrificon → $500+ SS 9.8",      color:"#d97706" },
+            { book:"Vision #1 (Tom King signed)",     note:"Press + Green Qual. → $150–$300. Film timing.",               color:"#8b2be2" },
+            { book:"ASM #361 (1st Carnage, dbl-sgnd)",note:"Bagley+Sharen. Press + Green Qual. → $200–$300 auth.",        color:"#dc2626" },
+            { book:"Black Lightning #1 (Isabella)",   note:"Press + Green Qual. → $300–$500. Whatnot/Heritage.",          color:"#16a34a" },
+            { book:"Captain Carter #1 (Atwell, personalized)", note:"'To Robert' — emotional anchor for Show 1.",         color:"#1d6fa4" },
+          ].map(a => (
+            <div key={a.book} style={{ flex:"1 1 280px", background:"var(--surface)", border:`1.5px solid ${a.color}40`, borderLeft:`3px solid ${a.color}`, borderRadius:6, padding:"10px 14px" }}>
+              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem", letterSpacing:"1px", color:a.color, marginBottom:3 }}>{a.book}</div>
+              <div style={{ fontSize:"0.76rem", color:"var(--muted2)", lineHeight:1.4 }}>{a.note}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Box breakdown */}
+      <section style={{ marginBottom:32 }}>
+        <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.3rem", letterSpacing:"2px", color:"var(--red)", marginBottom:12 }}>
           Books per Box
         </h2>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-          {Object.entries(boxCounts).sort((a,b) => Number(a[0]) - Number(b[0])).map(([box, cnt]) => (
-            <div key={box} style={{ background: "var(--surface)", border: "1.5px solid var(--border)", borderRadius: 5, padding: "8px 14px", textAlign: "center", minWidth: 72 }}>
-              <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "1.2rem", color: "var(--red)" }}>{cnt}</div>
-              <div style={{ fontSize: "0.68rem", color: "var(--muted2)", fontFamily: "'Bebas Neue', sans-serif", letterSpacing: "1px" }}>Box {box}</div>
+        <div style={{ display:"flex", flexWrap:"wrap", gap:8 }}>
+          {boxData.map(b => (
+            <div key={b.Num} style={{ background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:5, padding:"8px 14px", textAlign:"center", minWidth:72 }}>
+              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.2rem", color:"var(--red)" }}>{b.Count}</div>
+              <div style={{ fontSize:"0.65rem", color:"var(--muted2)", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>Box {b.Num}</div>
+              {Number(b.Keys)   > 0 && <div style={{ fontSize:"0.58rem", color:"#d97706" }}>{b.Keys} keys</div>}
+              {Number(b.Signed) > 0 && <div style={{ fontSize:"0.58rem", color:"#16a34a" }}>{b.Signed} sgnd</div>}
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* Data Confidence */}
-      <section style={{ marginBottom: 32 }}>
-        <div style={{ display: "flex", alignItems: "baseline", gap: 16, marginBottom: 16 }}>
-          <h2 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "1.3rem", letterSpacing: "2px", color: "var(--red)", margin: 0 }}>
-            Data Confidence
-          </h2>
-          <span style={{
-            fontFamily: "'Bebas Neue', sans-serif", fontSize: "1rem", letterSpacing: "1.5px",
-            background: "#16a34a18", border: "1.5px solid #16a34a", color: "#16a34a",
-            borderRadius: 4, padding: "2px 12px",
-          }}>
-            Overall: {overallScore}%
-          </span>
-        </div>
-        <div style={{ border: "1.5px solid var(--border)", borderRadius: 6, overflow: "hidden" }}>
-          <table style={{ width: "100%", borderCollapse: "collapse" }}>
-            <thead>
-              <tr style={{ background: "var(--surface2)", borderBottom: "2px solid var(--red)" }}>
-                <th style={{ padding: "8px 14px", textAlign: "left", fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.68rem", letterSpacing: "1.5px", color: "var(--muted2)" }}>Field / Group</th>
-                <th style={{ padding: "8px 14px", textAlign: "left", fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.68rem", letterSpacing: "1.5px", color: "var(--muted2)", width: 110 }}>Status</th>
-                <th style={{ padding: "8px 14px", textAlign: "left", fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.68rem", letterSpacing: "1.5px", color: "var(--muted2)" }}>Notes</th>
-              </tr>
-            </thead>
-            <tbody>
-              {RAG_ROWS.map((row, i) => (
-                <tr key={row.label} style={{ borderBottom: "1px solid var(--border)", background: i % 2 === 0 ? "var(--surface)" : "transparent" }}>
-                  <td style={{ padding: "9px 14px", fontSize: "0.82rem", color: "var(--text)", fontWeight: 500 }}>{row.label}</td>
-                  <td style={{ padding: "9px 14px" }}><RagDot status={row.status} /></td>
-                  <td style={{ padding: "9px 14px", fontSize: "0.78rem", color: "var(--muted2)" }}>{row.note}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <div style={{ marginTop: 10, fontSize: "0.72rem", color: "var(--muted2)", display: "flex", gap: 20, flexWrap: "wrap" }}>
-          <span><span style={{ color: "#16a34a", fontWeight: 700 }}>● GREEN</span> — 100% complete</span>
-          <span><span style={{ color: "#d97706", fontWeight: 700 }}>● AMBER</span> — minor gaps or partial fill</span>
-          <span><span style={{ color: "#dc2626", fontWeight: 700 }}>● RED</span> — optional field, sparse by design</span>
         </div>
       </section>
 
       {/* Next Steps */}
       <section>
-        <h2 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "1.3rem", letterSpacing: "2px", color: "var(--red)", marginBottom: 6 }}>
-          Next Steps
+        <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.3rem", letterSpacing:"2px", color:"var(--red)", marginBottom:6 }}>
+          Action Plan
         </h2>
-        <p style={{ fontSize: "0.78rem", color: "var(--muted2)", marginBottom: 16 }}>
-          As of May 15, 2026 — critical and high-priority items first.
+        <p style={{ fontSize:"0.78rem", color:"var(--muted2)", marginBottom:16 }}>
+          As of May 18, 2026 — Business Plan v4. Critical items first.
         </p>
 
-        {UPCOMING_14.length > 0 && (
-          <div style={{ marginBottom: 16 }}>
-            <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.72rem", letterSpacing: "2px", color: "var(--muted2)", marginBottom: 8 }}>
-              ⚡ WITHIN 14 DAYS
-            </div>
-            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-              {UPCOMING_14.map((s, i) => <StepCard key={i} step={s} />)}
+        {critical.length > 0 && (
+          <div style={{ marginBottom:16 }}>
+            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"2px", color:"#dc2626", marginBottom:8 }}>🔴 CRITICAL — ACT NOW</div>
+            <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
+              {critical.map((s,i) => <StepCard key={i} step={s} />)}
             </div>
           </div>
         )}
 
-        <div>
-          <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.72rem", letterSpacing: "2px", color: "var(--muted2)", marginBottom: 8, marginTop: UPCOMING_14.length > 0 ? 20 : 0 }}>
-            UPCOMING & ONGOING
+        {high.length > 0 && (
+          <div style={{ marginBottom:16 }}>
+            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"2px", color:"#d97706", marginBottom:8, marginTop:20 }}>🟠 HIGH PRIORITY</div>
+            <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
+              {high.map((s,i) => <StepCard key={i} step={s} />)}
+            </div>
           </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-            {UPCOMING_REST.map((s, i) => <StepCard key={i} step={s} />)}
+        )}
+
+        {rest.length > 0 && (
+          <div>
+            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"2px", color:"var(--muted2)", marginBottom:8, marginTop:20 }}>UPCOMING & ONGOING</div>
+            <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
+              {rest.map((s,i) => <StepCard key={i} step={s} />)}
+            </div>
           </div>
-        </div>
+        )}
       </section>
-    </div>
-  );
-}
-
-function StepCard({ step }: { step: typeof NEXT_STEPS[number] }) {
-  const cat = step.category;
-  const cc  = catColor(cat);
-  return (
-    <div style={{
-      display: "flex", gap: 14, alignItems: "flex-start",
-      border: "1.5px solid var(--border)", borderRadius: 6,
-      padding: "12px 16px", background: "var(--surface)",
-    }}>
-      <div style={{ flex: "0 0 auto", display: "flex", flexDirection: "column", alignItems: "center", gap: 5, minWidth: 70 }}>
-        <UrgencyBadge u={step.urgency} />
-        <span style={{
-          fontSize: "0.65rem", fontFamily: "'Bebas Neue', sans-serif", letterSpacing: "1px",
-          background: cc + "18", border: `1px solid ${cc}`, color: cc,
-          borderRadius: 3, padding: "1px 7px",
-        }}>{cat}</span>
-        {step.deadline !== "ASAP" && step.deadline !== "Ongoing" && (
-          <span style={{ fontSize: "0.65rem", color: "var(--muted2)" }}>Due {step.deadline}</span>
-        )}
-        {step.deadline === "ASAP" && (
-          <span style={{ fontSize: "0.65rem", color: "#dc2626", fontWeight: 700 }}>ASAP</span>
-        )}
-      </div>
-      <div style={{ flex: 1 }}>
-        <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.9rem", letterSpacing: "1px", color: "var(--text)", marginBottom: 3 }}>{step.title}</div>
-        <div style={{ fontSize: "0.78rem", color: "var(--muted2)", lineHeight: 1.5 }}>{step.detail}</div>
-      </div>
     </div>
   );
 }
