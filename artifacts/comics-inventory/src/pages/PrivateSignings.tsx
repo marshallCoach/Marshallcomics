@@ -29,6 +29,24 @@ const URGENT_SIGNINGS: Signing[] = [
     source: "urgent",
   },
   {
+    Creator:  "Mike Mayhew",
+    Deadline: "Jul 10, 2026 — HIGH PRIORITY",
+    Fee:      "$80",
+    Books:
+      "Any Mike Mayhew painted covers in your collection · Thor variants · " +
+      "Avengers painted covers · Star Wars (Dark Horse era) Mayhew covers · " +
+      "X-Men painted variants · Captain America Mayhew covers",
+    Strategy:
+      "Mayhew is one of the most sought-after painted cover artists in comics — " +
+      "his CGC SS books consistently outperform pencil-cover counterparts at auction. " +
+      "This is a Green Qualified signing: mail already-signed books to CGC for JSA " +
+      "authentication, or send unsigned copies for a new in-person Mayhew signing. " +
+      "Painted cover CGC 9.8 SS books are wall-book material on Whatnot. " +
+      "Check your variant boxes — any Mayhew trade dress or virgin covers are worth submitting. " +
+      "Deadline is same day as Roy Thomas (Jul 10) — plan your CGC budget accordingly.",
+    source: "urgent",
+  },
+  {
     Creator:  "Geoff Johns + Jason Fabok",
     Deadline: "Jun 26, 2026 — HIGH PRIORITY",
     Fee:      "$90",
