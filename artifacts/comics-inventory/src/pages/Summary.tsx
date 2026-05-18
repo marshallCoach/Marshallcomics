@@ -225,7 +225,7 @@ export default function Summary() {
           Books per Box
         </h2>
         <div style={{ display:"flex", flexWrap:"wrap", gap:8 }}>
-          {boxData.map(b => (
+          {[...boxData].sort((a,b) => Number(a.Num) - Number(b.Num)).map(b => (
             <div key={b.Num} style={{ background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:5, padding:"8px 14px", textAlign:"center", minWidth:72 }}>
               <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.2rem", color:"var(--red)" }}>{b.Comics}</div>
               <div style={{ fontSize:"0.65rem", color:"var(--muted2)", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>Box {b.Num}</div>
