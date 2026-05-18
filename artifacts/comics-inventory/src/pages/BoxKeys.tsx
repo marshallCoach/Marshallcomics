@@ -185,6 +185,7 @@ export default function BoxKeys() {
           <SortableTable
             cols={LIST_COLS}
             rows={results}
+            defaultSortKey="box"
             expandCell={k => (
               <div>
                 <div style={{ display:"flex", gap:24, flexWrap:"wrap" }}>

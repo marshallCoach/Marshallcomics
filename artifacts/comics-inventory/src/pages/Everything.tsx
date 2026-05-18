@@ -300,7 +300,7 @@ export default function Everything() {
 
       {/* Results — list */}
       {searched && results.length > 0 && view === "list" && (
-        <SortableTable rows={results} cols={COLS} rowKey={(_r,i)=>String(i)} pageSize={50} expandCell={c => (
+        <SortableTable rows={results} cols={COLS} rowKey={(_r,i)=>String(i)} pageSize={50} defaultSortKey="box" expandCell={c => (
           <div>
             <div style={{ display:"flex", gap:24, flexWrap:"wrap" }}>
               {c.Arc       && <div className="dr"><span className="dl">Arc</span><span className="dv">{c.Arc}</span></div>}

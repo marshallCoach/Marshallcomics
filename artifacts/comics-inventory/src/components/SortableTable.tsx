@@ -15,13 +15,15 @@ interface Props<T> {
   pageSize?: number;
   expandCell?: (row: T) => React.ReactNode;
   rowKey?: (row: T, i: number) => string | number;
+  defaultSortKey?: string;
+  defaultSortDir?: "asc" | "desc";
 }
 
 const DEFAULT_PAGE_SIZE = 50;
 
-export function SortableTable<T>({ cols, rows, pageSize = DEFAULT_PAGE_SIZE, expandCell, rowKey }: Props<T>) {
-  const [sortKey, setSortKey] = useState<string | null>(null);
-  const [sortDir, setSortDir] = useState<"asc" | "desc">("asc");
+export function SortableTable<T>({ cols, rows, pageSize = DEFAULT_PAGE_SIZE, expandCell, rowKey, defaultSortKey, defaultSortDir = "asc" }: Props<T>) {
+  const [sortKey, setSortKey] = useState<string | null>(defaultSortKey ?? null);
+  const [sortDir, setSortDir] = useState<"asc" | "desc">(defaultSortDir);
   const [openRows, setOpenRows] = useState<Set<number>>(new Set());
   const [widths, setWidths]     = useState<number[]>(() => cols.map(c => c.defaultWidth ?? 140));
   const [page, setPage]         = useState(1);
