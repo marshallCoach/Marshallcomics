@@ -6,7 +6,7 @@ import { Paginator } from "@/components/Paginator";
 const CARD_PAGE_SIZE = 48;
 
 const comics   = DATA3.comics;
-const boxSummary = DATA3.box_summary;
+const boxSummary = DATA3.boxes;
 
 const BOX_LABELS: Record<string, string> = Object.fromEntries(
   boxSummary.map(b => [b.Num, b.Label])
@@ -199,9 +199,9 @@ export default function AllBoxes() {
           <div className="blank-state-title">All Boxes — 1,793 Comics · 16 Boxes</div>
           <div className="blank-state-sub">Filter by box, publisher, era, or keyword and press Search.</div>
           <div style={{ display:"flex", gap:8, flexWrap:"wrap", justifyContent:"center", marginTop:16 }}>
-            {DATA3.box_summary.map(b => (
+            {DATA3.boxes.map(b => (
               <button key={b.Num} className="chip" onClick={()=>{ setBox(b.Num); setHasSearched(true); setCardPage(1); }}>
-                Box {b.Num} <span style={{opacity:0.6, fontSize:"0.75em"}}>({b.Count})</span>
+                Box {b.Num} <span style={{opacity:0.6, fontSize:"0.75em"}}>({b.Comics})</span>
               </button>
             ))}
           </div>

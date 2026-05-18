@@ -1,7 +1,7 @@
 import { DATA3 } from "@/data/data3";
 
 const comics   = DATA3.comics;
-const boxData  = DATA3.box_summary;
+const boxData  = DATA3.boxes;
 
 const totalComics  = comics.length;
 const totalBoxes   = boxData.length;
@@ -227,7 +227,7 @@ export default function Summary() {
         <div style={{ display:"flex", flexWrap:"wrap", gap:8 }}>
           {boxData.map(b => (
             <div key={b.Num} style={{ background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:5, padding:"8px 14px", textAlign:"center", minWidth:72 }}>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.2rem", color:"var(--red)" }}>{b.Count}</div>
+              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.2rem", color:"var(--red)" }}>{b.Comics}</div>
               <div style={{ fontSize:"0.65rem", color:"var(--muted2)", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>Box {b.Num}</div>
               {Number(b.Keys)   > 0 && <div style={{ fontSize:"0.58rem", color:"#d97706" }}>{b.Keys} keys</div>}
               {Number(b.Signed) > 0 && <div style={{ fontSize:"0.58rem", color:"#16a34a" }}>{b.Signed} sgnd</div>}

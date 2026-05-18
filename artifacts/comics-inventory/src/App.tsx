@@ -44,7 +44,7 @@ const comics  = DATA3.comics;
 const total   = comics.length;
 const signed  = comics.filter(c => (c.Signed || "").toUpperCase() === "YES").length;
 const keys    = comics.filter(c => (c.Key || "").toUpperCase() === "YES").length;
-const boxes   = DATA3.box_summary.length;
+const boxes   = DATA3.boxes.length;
 
 export default function App() {
   const [activeSection, setActiveSection] = useState<SectionId>("inventory");
