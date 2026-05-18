@@ -1,81 +1,64 @@
 import { useState } from "react";
-import { DATA2 } from "@/data/data2";
+import { DATA3 } from "@/data/data3";
 
-const shows    = DATA2.show_planner;
-const runsheet = DATA2.show2;
-
-function statusClass(s: string) {
-  if ((s || "").includes("Ready"))      return "ss-ready";
-  if ((s || "").includes("CGC"))        return "ss-cgc";
-  if ((s || "").includes("Terrificon")) return "ss-after";
-  return "";
-}
+const shows = DATA3.show_themes;
 
 export default function ShowPlanner() {
-  const [openShows, setOpenShows] = useState<Set<number>>(new Set());
-  const [openRun,   setOpenRun]   = useState<Set<number>>(new Set());
-
-  const toggleShow = (i: number) => {
-    setOpenShows(prev => { const n = new Set(prev); n.has(i) ? n.delete(i) : n.add(i); return n; });
-  };
-  const toggleRun = (i: number) => {
-    setOpenRun(prev => { const n = new Set(prev); n.has(i) ? n.delete(i) : n.add(i); return n; });
-  };
+  const [open, setOpen] = useState<Set<number>>(new Set());
+  const toggle = (i: number) => setOpen(prev => {
+    const n = new Set(prev); n.has(i)?n.delete(i):n.add(i); return n;
+  });
 
   return (
     <div>
       <div className="section-intro">
-        <h2>Whatnot Show Planner — Box Collection</h2>
-        <p>19 themed show concepts from your all-boxes inventory. Includes $1 Keys Night full runsheet.</p>
+        <h2>Whatnot Show Planner — 2026</h2>
+        <p>12 themed show concepts based on your collection. Every show has a recommended anchor book, mix strategy, and Whatnot story pitch. Revenue target: $9,000–$18,000 for the year.</p>
       </div>
 
-      <div className="shows-grid">
-        {shows.map((s, i) => {
-          const isOpen = openShows.has(i);
-          return (
-            <div key={i} className={`show-card${isOpen ? " open" : ""}`} onClick={() => toggleShow(i)}>
-              <div className="show-theme">{s.Theme}</div>
-              <div className="show-anchor">{s.Anchor}</div>
-              <div className="show-meta">
-                <span className="show-rev">{s.Est_Revenue}</span>
-                <span className={`show-status-badge ${statusClass(s.Status)}`}>{s.Status}</span>
-                {s.Box && <span className="badge bb">Box {s.Box}</span>}
-              </div>
-              {isOpen && s.Notes && (
-                <div className="show-expand">{s.Notes}</div>
-              )}
-            </div>
-          );
-        })}
-      </div>
-
-      <div className="section-intro" style={{ marginTop: 8 }}>
-        <h2>$1 Keys Night — Full Runsheet</h2>
-        <p>23 books sequenced across 4 acts for maximum bidding engagement</p>
+      <div style={{ background:"var(--surface2)", borderBottom:"1px solid var(--border)", padding:"10px 20px", fontSize:"0.8rem", color:"var(--muted2)" }}>
+        📅 Wednesday shows · Juneteenth Special Jun 19 AM · Terrificon Aug 7–9 · NYCC Oct 8–11 · 31 scheduled events · 12 themed concepts
       </div>
 
       <div className="list-view">
-        {runsheet.map((r, i) => {
-          const isOpen = openRun.has(i);
-          const nmVal  = r.Value_NM && r.Value_NM !== "nan" ? r.Value_NM : "";
+        {shows.map((s, i) => {
+          const isOpen = open.has(i);
           return (
-            <div key={i} className={`lcard${isOpen ? " open" : ""}`} onClick={() => toggleRun(i)}>
+            <div key={i} className={`lcard lc-whatnot${isOpen?" open":""}`} onClick={()=>toggle(i)}>
               <div className="lcard-head">
-                <span className="lcard-date">#{r.Order}</span>
-                <span className="lcard-title">{r.Book} {r.Issue}</span>
-                {r.Start && <span className="lcard-right">Start ${r.Start}</span>}
-                {nmVal   && <span className="lcard-tag">NM ${nmVal}</span>}
+                <span className="lcard-date">Show {s.Num}</span>
+                <span className="lcard-title">{s.Title}</span>
               </div>
               {isOpen && (
                 <div className="lcard-expand">
-                  {r.Pitch && <div style={{ marginBottom: 6, fontStyle: "italic" }}>{r.Pitch}</div>}
-                  {r.Hook  && <div className="dr"><span className="dl">Hook</span><span className="dv">{r.Hook}</span></div>}
-                  {r.Publisher      && <div className="dr"><span className="dl">Publisher</span><span className="dv">{r.Publisher} · Box {r.Box || "?"}</span></div>}
+                  <div style={{ fontSize:"0.82rem", color:"var(--text2)", lineHeight:1.7, whiteSpace:"pre-wrap" }}>
+                    {s.Description}
+                  </div>
                 </div>
               )}
             </div>
           );
         })}
+      </div>
+
+      {/* Revenue guide */}
+      <div style={{ margin:"24px 20px 40px", padding:"16px 20px", background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:8 }}>
+        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem", letterSpacing:"1.5px", color:"var(--red)", marginBottom:8 }}>
+          WHATNOT SHOW STRATEGY PRINCIPLES
+        </div>
+        <div style={{ display:"flex", flexWrap:"wrap", gap:14, fontSize:"0.78rem", color:"var(--muted2)", lineHeight:1.6 }}>
+          {[
+            { h:"Anchor + Fillers", t:"Every show: 1–2 anchor books (tell a story) + 10–20 fillers to keep momentum. Never start with your best book." },
+            { h:"Signed Books", t:"Lead with the STORY of the signing, not just the book. 'Hayley Atwell signed this to Robert' = emotional connection = higher bids." },
+            { h:"Price Architecture", t:"Start at $1 for fillers, build to anchor. End-of-show reveals drive the highest bids. Keep audience for 90–120 min." },
+            { h:"Whatnot-specific wins", t:"MCU fans cross over to comics. Themed shows outperform mixed shows. Repeat buyers build loyalty over a season of shows." },
+          ].map(p => (
+            <div key={p.h} style={{ flex:"1 1 220px" }}>
+              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"1px", color:"var(--text)", marginBottom:3 }}>{p.h}</div>
+              <div>{p.t}</div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
