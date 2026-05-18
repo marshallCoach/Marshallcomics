@@ -1919,7 +1919,7 @@ const box_summary: BoxSummary[] = [
   { Num:"1",Label:"Box 1 — DC Mix Session 1",DateAdded:"Original",Count:"15",Publisher:"Mixed",YearRange:"1979–2024",Keys:"4",Signed:"0" },
   { Num:"2",Label:"Box 2 — Marvel Session 1",DateAdded:"Original",Count:"75",Publisher:"Mixed",YearRange:"1947–2024",Keys:"45",Signed:"48" },
   { Num:"3",Label:"Box 3 — Marvel Session 2",DateAdded:"Original",Count:"54",Publisher:"Mixed",YearRange:"1966–2024",Keys:"30",Signed:"0" },
-  { Num:"4",Label:"Box 4 — All Signed Books",DateAdded:"Original",Count:"60",Publisher:"Mixed",YearRange:"1971–2026",Keys:"25",Signed:"0" },
+  { Num:"4",Label:"Box 4 — Bronze & Modern Mixed (Cap/Falcon, Luke Cage, Cloak & Dagger)",DateAdded:"Original",Count:"60",Publisher:"Mixed",YearRange:"1971–2026",Keys:"25",Signed:"0" },
   { Num:"7",Label:"Box 7 — Bronze Cap Run + Foil Variants",DateAdded:"May 17, 2026",Count:"1",Publisher:"DC",YearRange:"2012–2012",Keys:"0",Signed:"0" },
   { Num:"8",Label:"Box 8 — Variant Cover Art Boxes",DateAdded:"Original",Count:"75",Publisher:"Mixed",YearRange:"1968–2025",Keys:"26",Signed:"2" },
   { Num:"11",Label:"Box 11",DateAdded:"Original",Count:"29",Publisher:"Mixed",YearRange:"1969–2026",Keys:"10",Signed:"0" },
