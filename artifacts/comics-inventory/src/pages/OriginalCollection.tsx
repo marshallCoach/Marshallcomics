@@ -232,6 +232,7 @@ export default function OriginalCollection() {
           <SortableTable
             cols={LIST_COLS}
             rows={results}
+            defaultSortKey="box"
             expandCell={c => (
               <div>
                 <div style={{ display:"flex", gap:24, flexWrap:"wrap" }}>
