@@ -3,7 +3,7 @@ import { DATA3 } from "@/data/data3";
 import { SortableTable, ColDef } from "@/components/SortableTable";
 import { Paginator } from "@/components/Paginator";
 
-const CARD_PAGE_SIZE = 48;
+const CARD_PAGE_SIZE = 100;
 
 const keys  = DATA3.comics.filter(c => (c.Key || "").toUpperCase() === "YES");
 const BOXES = [...new Set(keys.map(k => k.Box).filter(Boolean))].sort((a, b) => Number(a) - Number(b));
