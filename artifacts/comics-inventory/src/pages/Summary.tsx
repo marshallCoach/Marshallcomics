@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { DATA3 } from "@/data/data3";
 
 const comics   = DATA3.comics;
@@ -105,6 +106,26 @@ const NEXT_STEPS = [
   },
 ];
 
+type Status = "not_started" | "started" | "stalled" | "delayed" | "done";
+
+const STATUS_OPTIONS: { value: Status; label: string; color: string }[] = [
+  { value: "not_started", label: "Not Started", color: "#6b7280" },
+  { value: "started",     label: "Started",     color: "#1d6fa4" },
+  { value: "stalled",     label: "Stalled",     color: "#d97706" },
+  { value: "delayed",     label: "Delayed",     color: "#c2410c" },
+  { value: "done",        label: "Done ✓",      color: "#16a34a" },
+];
+
+const LS_KEY = "brbActionStatus";
+
+function loadStatuses(): Record<string, Status> {
+  try { return JSON.parse(localStorage.getItem(LS_KEY) || "{}"); }
+  catch { return {}; }
+}
+function saveStatuses(s: Record<string, Status>) {
+  localStorage.setItem(LS_KEY, JSON.stringify(s));
+}
+
 function catColor(cat: string) {
   if (cat === "CGC")     return "#8b2be2";
   if (cat === "Signing") return "#c8102e";
@@ -132,15 +153,27 @@ function UrgencyBadge({ u }: { u: string }) {
   );
 }
 
-function StepCard({ step }: { step: typeof NEXT_STEPS[number] }) {
+function StepCard({
+  step, status, onStatusChange,
+}: {
+  step: typeof NEXT_STEPS[number];
+  status: Status;
+  onStatusChange: (s: Status) => void;
+}) {
   const cc = catColor(step.category);
+  const isDone = status === "done";
+  const statusObj = STATUS_OPTIONS.find(s => s.value === status) || STATUS_OPTIONS[0];
+
   return (
     <div style={{
       display:"flex", gap:14, alignItems:"flex-start",
       border:"1.5px solid var(--border)", borderRadius:6,
       padding:"12px 16px", background:"var(--surface)",
       borderLeft:`3px solid ${step.urgency==="critical"?"#dc2626":step.urgency==="high"?"#d97706":"var(--border)"}`,
+      opacity: isDone ? 0.45 : 1,
+      transition:"opacity 0.2s",
     }}>
+      {/* Left meta */}
       <div style={{ flex:"0 0 auto", display:"flex", flexDirection:"column", alignItems:"center", gap:5, minWidth:72 }}>
         <UrgencyBadge u={step.urgency} />
         <span style={{
@@ -152,18 +185,107 @@ function StepCard({ step }: { step: typeof NEXT_STEPS[number] }) {
           {step.deadline}
         </span>
       </div>
+
+      {/* Content */}
       <div style={{ flex:1 }}>
-        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", letterSpacing:"1px", color:"var(--text)", marginBottom:3 }}>{step.title}</div>
+        <div style={{
+          fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", letterSpacing:"1px",
+          color:"var(--text)", marginBottom:3,
+          textDecoration: isDone ? "line-through" : "none",
+        }}>{step.title}</div>
         <div style={{ fontSize:"0.78rem", color:"var(--muted2)", lineHeight:1.5 }}>{step.detail}</div>
+      </div>
+
+      {/* Status controls */}
+      <div style={{ flex:"0 0 auto", display:"flex", flexDirection:"column", alignItems:"flex-end", gap:8 }}>
+        {/* Done checkbox */}
+        <label style={{ display:"flex", alignItems:"center", gap:6, cursor:"pointer", userSelect:"none" }}>
+          <div
+            onClick={() => onStatusChange(isDone ? "not_started" : "done")}
+            style={{
+              width:18, height:18, borderRadius:4,
+              border:`2px solid ${isDone ? "#16a34a" : "var(--border)"}`,
+              background: isDone ? "#16a34a" : "transparent",
+              display:"flex", alignItems:"center", justifyContent:"center",
+              cursor:"pointer", transition:"all 0.15s", flexShrink:0,
+            }}
+          >
+            {isDone && <span style={{ color:"#fff", fontSize:"0.7rem", lineHeight:1 }}>✓</span>}
+          </div>
+          <span style={{ fontSize:"0.65rem", color:"var(--muted2)", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>DONE</span>
+        </label>
+
+        {/* Status dropdown */}
+        <select
+          value={status}
+          onChange={e => onStatusChange(e.target.value as Status)}
+          onClick={e => e.stopPropagation()}
+          style={{
+            background:"var(--surface2)", border:`1px solid ${statusObj.color}`,
+            color:statusObj.color, borderRadius:4,
+            fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif",
+            letterSpacing:"1px", padding:"3px 6px", cursor:"pointer",
+            outline:"none", appearance:"none", textAlign:"center",
+          }}
+        >
+          {STATUS_OPTIONS.map(o => (
+            <option key={o.value} value={o.value}>{o.label}</option>
+          ))}
+        </select>
       </div>
     </div>
   );
 }
 
+function StatCard({ val, lbl, sub, quip }: { val:string; lbl:string; sub:string; quip:string }) {
+  const [hovered, setHovered] = useState(false);
+  return (
+    <div
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{
+        background:"var(--surface)", border:"1.5px solid var(--border)",
+        borderRadius:6, padding:"14px 16px",
+        transform: hovered ? "scale(1.03)" : "scale(1)",
+        transition:"transform 0.15s ease, border-color 0.15s ease",
+        borderColor: hovered ? "var(--red)" : "var(--border)",
+        cursor:"default", position:"relative", overflow:"hidden",
+      }}
+    >
+      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.6rem", color:"var(--red)", letterSpacing:"1px" }}>{val}</div>
+      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.7rem", letterSpacing:"1.5px", color:"var(--text)" }}>{lbl}</div>
+      <div style={{
+        fontSize:"0.7rem", color:"var(--muted2)", marginTop:2,
+        transition:"opacity 0.2s",
+        opacity: hovered ? 0 : 1,
+        position: hovered ? "absolute" : "static",
+      }}>{sub}</div>
+      <div style={{
+        fontSize:"0.68rem", color:"var(--muted2)", marginTop:2,
+        fontStyle:"italic", lineHeight:1.4,
+        opacity: hovered ? 1 : 0,
+        transition:"opacity 0.2s",
+        position: hovered ? "static" : "absolute",
+      }}>{quip}</div>
+    </div>
+  );
+}
+
 export default function Summary() {
+  const [statuses, setStatuses] = useState<Record<string, Status>>(loadStatuses);
+
+  useEffect(() => { saveStatuses(statuses); }, [statuses]);
+
+  const setStatus = (title: string, s: Status) =>
+    setStatuses(prev => ({ ...prev, [title]: s }));
+
+  const getStatus = (title: string): Status => statuses[title] || "not_started";
+
   const critical = NEXT_STEPS.filter(s => s.urgency === "critical");
   const high     = NEXT_STEPS.filter(s => s.urgency === "high");
   const rest     = NEXT_STEPS.filter(s => s.urgency !== "critical" && s.urgency !== "high");
+
+  const doneCount = NEXT_STEPS.filter(s => getStatus(s.title) === "done").length;
 
   return (
     <div style={{ maxWidth:1100, margin:"0 auto", padding:"24px 20px 60px" }}>
@@ -174,22 +296,14 @@ export default function Summary() {
           Collection Overview
         </h2>
         <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(140px,1fr))", gap:12 }}>
-          {[
-            { val:totalComics.toLocaleString(), lbl:"Total Comics",    sub:"master inventory" },
-            { val:totalBoxes.toString(),        lbl:"Total Boxes",     sub:"physically organized" },
-            { val:keyCount.toLocaleString(),    lbl:"Key Issues",      sub:"confirmed across all boxes" },
-            { val:signedCount.toString(),       lbl:"Signed Books",    sub:"by verified creators" },
-            { val:tfCount.toString(),           lbl:"Terrificon Books",sub:"creator appearances" },
-            { val:whatnotCount.toLocaleString(),lbl:"Whatnot",         sub:"platform assigned" },
-            { val:ebayCount.toLocaleString(),   lbl:"eBay",            sub:"platform assigned" },
-            { val:"$25k–$55k",                 lbl:"Est. Raw Value",  sub:"$60k–$120k+ post-CGC" },
-          ].map(s => (
-            <div key={s.lbl} style={{ background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:6, padding:"14px 16px" }}>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.6rem", color:"var(--red)", letterSpacing:"1px" }}>{s.val}</div>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.7rem", letterSpacing:"1.5px", color:"var(--text)" }}>{s.lbl}</div>
-              <div style={{ fontSize:"0.7rem", color:"var(--muted2)", marginTop:2 }}>{s.sub}</div>
-            </div>
-          ))}
+          <StatCard val={totalComics.toLocaleString()} lbl="Total Comics"     sub="master inventory"              quip="You did not acquire these slowly." />
+          <StatCard val={totalBoxes.toString()}        lbl="Total Boxes"      sub="physically organized"          quip="Organized chaos is still organized." />
+          <StatCard val={keyCount.toLocaleString()}    lbl="Key Issues"       sub="confirmed across all boxes"    quip="The ones that actually matter." />
+          <StatCard val={signedCount.toString()}       lbl="Signed Books"     sub="by verified creators"          quip="They wrote their name. You wrote a check. Fair trade." />
+          <StatCard val={tfCount.toString()}           lbl="Terrificon Books" sub="creator appearances"           quip="Pack the mylar. Leave early." />
+          <StatCard val={whatnotCount.toLocaleString()} lbl="Whatnot"         sub="platform assigned"             quip="Live audience. No reserve." />
+          <StatCard val={ebayCount.toLocaleString()}   lbl="eBay"             sub="platform assigned"             quip="Set it. Let it breathe." />
+          <StatCard val="$25k–$55k"                   lbl="Est. Raw Value"   sub="$60k–$120k+ post-CGC"         quip="Before anyone pressed anything." />
         </div>
       </section>
 
@@ -238,9 +352,16 @@ export default function Summary() {
 
       {/* Next Steps */}
       <section>
-        <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.3rem", letterSpacing:"2px", color:"var(--red)", marginBottom:6 }}>
-          Action Plan
-        </h2>
+        <div style={{ display:"flex", alignItems:"baseline", gap:16, marginBottom:6 }}>
+          <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.3rem", letterSpacing:"2px", color:"var(--red)", margin:0 }}>
+            Action Plan
+          </h2>
+          {doneCount > 0 && (
+            <span style={{ fontSize:"0.72rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px", color:"#16a34a" }}>
+              {doneCount} / {NEXT_STEPS.length} DONE
+            </span>
+          )}
+        </div>
         <p style={{ fontSize:"0.78rem", color:"var(--muted2)", marginBottom:16 }}>
           As of May 18, 2026 — Business Plan v4. Critical items first.
         </p>
@@ -249,7 +370,9 @@ export default function Summary() {
           <div style={{ marginBottom:16 }}>
             <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"2px", color:"#dc2626", marginBottom:8 }}>🔴 CRITICAL — ACT NOW</div>
             <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
-              {critical.map((s,i) => <StepCard key={i} step={s} />)}
+              {critical.map((s,i) => (
+                <StepCard key={i} step={s} status={getStatus(s.title)} onStatusChange={st => setStatus(s.title, st)} />
+              ))}
             </div>
           </div>
         )}
@@ -258,7 +381,9 @@ export default function Summary() {
           <div style={{ marginBottom:16 }}>
             <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"2px", color:"#d97706", marginBottom:8, marginTop:20 }}>🟠 HIGH PRIORITY</div>
             <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
-              {high.map((s,i) => <StepCard key={i} step={s} />)}
+              {high.map((s,i) => (
+                <StepCard key={i} step={s} status={getStatus(s.title)} onStatusChange={st => setStatus(s.title, st)} />
+              ))}
             </div>
           </div>
         )}
@@ -267,7 +392,9 @@ export default function Summary() {
           <div>
             <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"2px", color:"var(--muted2)", marginBottom:8, marginTop:20 }}>UPCOMING & ONGOING</div>
             <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
-              {rest.map((s,i) => <StepCard key={i} step={s} />)}
+              {rest.map((s,i) => (
+                <StepCard key={i} step={s} status={getStatus(s.title)} onStatusChange={st => setStatus(s.title, st)} />
+              ))}
             </div>
           </div>
         )}
