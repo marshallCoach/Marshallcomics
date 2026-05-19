@@ -233,7 +233,7 @@ export default function OriginalCollection() {
                   {c.Condition && c.Condition !== "nan" && <div className="dr"><span className="dl">Condition</span><span className="dv">{c.Condition}</span></div>}
                 </div>
                 {c.Whatnot_Pitch && c.Whatnot_Pitch !== "nan" && (
-                  <div style={{ marginTop:6, fontStyle:"italic", color:"var(--muted2)", fontSize:"0.8rem" }}>
+                  <div style={{ marginTop:6, color:"var(--muted2)", fontSize:"0.88rem" }}>
                     {c.Whatnot_Pitch.substring(0,200)}
                   </div>
                 )}

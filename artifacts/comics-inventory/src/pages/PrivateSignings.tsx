@@ -110,7 +110,7 @@ export default function PrivateSignings() {
                   {s.Strategy && (
                     <div className="dr" style={{ marginTop:8 }}>
                       <span className="dl">Strategy</span>
-                      <span className="dv" style={{ fontStyle:"italic" }}>{s.Strategy}</span>
+                      <span className="dv">{s.Strategy}</span>
                     </div>
                   )}
                   {s.ExpectedValue && (

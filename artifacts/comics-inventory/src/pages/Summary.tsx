@@ -261,8 +261,8 @@ function StatCard({ val, lbl, sub, quip }: { val:string; lbl:string; sub:string;
         position: hovered ? "absolute" : "static",
       }}>{sub}</div>
       <div style={{
-        fontSize:"0.68rem", color:"var(--muted2)", marginTop:2,
-        fontStyle:"italic", lineHeight:1.4,
+        fontSize:"0.78rem", color:"var(--muted2)", marginTop:2,
+        lineHeight:1.4,
         opacity: hovered ? 1 : 0,
         transition:"opacity 0.2s",
         position: hovered ? "static" : "absolute",

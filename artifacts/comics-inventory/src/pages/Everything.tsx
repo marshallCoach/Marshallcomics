@@ -311,7 +311,7 @@ export default function Everything() {
               {c.Condition && <div className="dr"><span className="dl">Condition</span><span className="dv">{c.Condition}</span></div>}
             </div>
             {c.Whatnot_Pitch && (
-              <div style={{ marginTop:6, fontStyle:"italic", color:"var(--muted2)", fontSize:"0.8rem" }}>{c.Whatnot_Pitch.substring(0,200)}</div>
+              <div style={{ marginTop:6, color:"var(--muted2)", fontSize:"0.88rem" }}>{c.Whatnot_Pitch.substring(0,200)}</div>
             )}
           </div>
         )} />
@@ -368,7 +368,7 @@ function EverythingCard({ comic: c }: { comic: Comic }) {
       )}
 
       {isKey && c.Key_Why && (
-        <div style={{ fontSize:"0.7rem", color:"var(--gold)", marginTop:5, lineHeight:1.4, fontStyle:"italic" }}>
+        <div style={{ fontSize:"0.82rem", color:"var(--gold)", marginTop:5, lineHeight:1.4 }}>
           {c.Key_Why.substring(0,120)}
         </div>
       )}

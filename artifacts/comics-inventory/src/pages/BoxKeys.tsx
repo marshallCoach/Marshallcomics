@@ -197,7 +197,7 @@ export default function BoxKeys() {
                   {k.Value_VF  && k.Value_VF !== "nan"  && <div className="dr"><span className="dl">VF Value</span><span className="dv">{k.Value_VF}</span></div>}
                   {k.Sales_Data && k.Sales_Data !== "nan" && <div className="dr"><span className="dl">Sales</span><span className="dv">{k.Sales_Data.substring(0,120)}</span></div>}
                 </div>
-                {k.Key_Why && <div style={{ marginTop:6, fontStyle:"italic", fontSize:"0.78rem", color:"var(--gold)" }}>{k.Key_Why}</div>}
+                {k.Key_Why && <div style={{ marginTop:6, fontSize:"0.85rem", color:"var(--gold)" }}>{k.Key_Why}</div>}
               </div>
             )}
           />
@@ -228,7 +228,7 @@ export default function BoxKeys() {
                     {k.Platform && <span className={`badge ${platClass(k.Platform)}`}>{k.Platform}</span>}
                   </div>
                   {nmVal && <div className="card-value">NM: <span className="v">{nmVal}</span></div>}
-                  {k.Key_Why && <div style={{ fontSize:"0.72rem", color:"var(--gold)", marginTop:4, fontStyle:"italic", lineHeight:1.4 }}>{k.Key_Why.substring(0,120)}</div>}
+                  {k.Key_Why && <div style={{ fontSize:"0.82rem", color:"var(--gold)", marginTop:4, lineHeight:1.4 }}>{k.Key_Why.substring(0,120)}</div>}
                   {isOpen && (
                     <div className="card-expand">
                       {k.Writer    && <div className="dr"><span className="dl">W</span><span className="dv">{k.Writer}</span></div>}
