@@ -4,29 +4,30 @@ import { DATA3 } from "@/data/data3";
 const strategy = DATA3.cgc_strategy;
 
 // ── Section 1: Terrificon Signing Priority List (from PDF, Aug 7–9 2026) ──
+// alreadySigned = book is already signed and needs witnessing / re-signing at con
 const TERRIFICON_SIGNINGS = [
-  { priority: "#1",   book: "Wolverine #8 (1982 — UNSIGNED)",                   box: "8",  creator: "Chris Claremont",                   goal: "Yellow SS $500+",                      note: "MUST STAY UNSIGNED",                   critical: true,  jimlee: false },
-  { priority: "#2",   book: "WildC.A.T.s #2 (Jim Lee signed)",                  box: "2",  creator: "Jim Lee (SAT ONLY)",                 goal: "Re-sign → Yellow/Green combo",         note: "Signed — re-sign for witness",         critical: false, jimlee: true  },
-  { priority: "#2",   book: "WildC.A.T.s #11 (Jim Lee signed)",                 box: "2",  creator: "Jim Lee (SAT ONLY)",                 goal: "Re-sign → Yellow/Green combo",         note: "Signed — re-sign for witness",         critical: false, jimlee: true  },
-  { priority: "HIGH", book: "Superman Unchained #1 (UNSIGNED)",                  box: "15", creator: "Jim Lee (SAT ONLY)",                 goal: "Yellow SS $150-250",                   note: "Unbagged — bag before con",            critical: false, jimlee: true  },
-  { priority: "HIGH", book: "Batman Europa #1 (UNSIGNED)",                       box: "15", creator: "Jim Lee (SAT ONLY)",                 goal: "Yellow SS $150-200",                   note: "Unbagged — bag before con",            critical: false, jimlee: true  },
-  { priority: "HIGH", book: "The Mighty Thor #339 (dual signed W+L Simonson)",   box: "2",  creator: "Walt + Louise Simonson",             goal: "Re-sign → combo label",                note: "Already dual-signed",                  critical: false, jimlee: false },
-  { priority: "HIGH", book: "Superman: Man of Steel #18 (triple signed)",        box: "2",  creator: "Dan Jurgens + Louise Simonson",      goal: "Witness the existing sigs",            note: "Already triple-signed",                critical: false, jimlee: false },
-  { priority: "HIGH", book: "The Flash #164 (UNSIGNED)",                         box: "12", creator: "Mark Waid",                          goal: "Yellow SS — Waid's Flash launch",      note: "Check condition before pressing",      critical: false, jimlee: false },
-  { priority: "HIGH", book: "The Flash #112 (UNSIGNED)",                         box: "12", creator: "Mark Waid or Greg LaRocque",         goal: "Yellow SS — Waid-era Flash key",       note: "Low grade only — assess",              critical: false, jimlee: false },
-  { priority: "HIGH", book: "Hawkman (2018) #1 (UNSIGNED)",                      box: "25", creator: "Robert Venditti",                    goal: "Yellow SS — creator on own book",      note: "Press before con",                     critical: false, jimlee: false },
-  { priority: "HIGH", book: "Death of Hawkman #1 (UNSIGNED)",                    box: "25", creator: "Robert Venditti",                    goal: "Yellow SS — Venditti",                 note: "Press before con",                     critical: false, jimlee: false },
-  { priority: "HIGH", book: "Nightwing (Rebirth) #1 (UNSIGNED)",                 box: "25", creator: "Tim Seely",                          goal: "Yellow SS — Rebirth Nightwing creator",note: "Press before con",                     critical: false, jimlee: false },
-  { priority: "HIGH", book: "Justice League International #1 (UNSIGNED)",         box: "27", creator: "Dan Jurgens",                        goal: "Yellow SS — JLI launch",               note: "Check in Box 27",                      critical: false, jimlee: false },
-  { priority: "MED",  book: "Titans (2023) #1 (UNSIGNED)",                       box: "30", creator: "Nicola Scott",                       goal: "Yellow SS — Titans artist",            note: "Check condition",                      critical: false, jimlee: false },
-  { priority: "MED",  book: "New Mutants #96 (triple signed)",                   box: "2",  creator: "Bob McLeod (already signed)",        goal: "Already signed — reference only",      note: "Signed Liefeld/Larsen/McLeod",         critical: false, jimlee: false },
-  { priority: "MED",  book: "Batman: Long Halloween Special #1 (free)",           box: "22", creator: "Jeph Loeb",                          goal: "Yellow SS — Loeb tribute",             note: "Tim Sale's last Batman work",          critical: false, jimlee: false },
-  { priority: "MED",  book: "The Mighty Thor #390 (UNSIGNED)",                   box: "2",  creator: "Ron Frenz",                          goal: "Yellow SS — Cap lifts Mjolnir",        note: "Frenz confirmed — key issue",          critical: false, jimlee: false },
-  { priority: "MED",  book: "The Mighty Thor #412 (UNSIGNED)",                   box: "2",  creator: "Ron Frenz",                          goal: "Yellow SS — 1st New Warriors",         note: "Frenz confirmed — KEY issue",          critical: false, jimlee: false },
-  { priority: "MED",  book: "Superman/Spider-Man #1 (UNSIGNED — Simonson cover)",box: "3",  creator: "Walt Simonson (cover)",              goal: "Yellow SS on cover artist",            note: "Simonson drew the cover",              critical: false, jimlee: false },
-  { priority: "MED",  book: "Black Panther #1 (Stelfreeze — UNSIGNED)",          box: "2",  creator: "Brian Stelfreeze",                   goal: "Yellow SS — Coates/Stelfreeze BP",     note: "Check if you have this unsigned",      critical: false, jimlee: false },
-  { priority: "INFO", book: "Storm #1 (SIGNED — SY)",                            box: "2",  creator: "Nicola Scott (she drew Storm)",      goal: "Witness if possible",                  note: "Already signed by SY",                 critical: false, jimlee: false },
-  { priority: "INFO", book: "FF Connecting Set #1-5 (Skottie Young — UNSIGNED)", box: "8",  creator: "Skottie Young",                      goal: "5x Yellow SS as a set",                note: "All 5 at once for max value",          critical: false, jimlee: false },
+  { priority: "#1",   book: "Wolverine #8 (1982)",                               box: "8",  creator: "Chris Claremont",                   goal: "Yellow SS $500+",                      note: "MUST STAY UNSIGNED — do not sign before con", critical: true,  jimlee: false, alreadySigned: false },
+  { priority: "#2",   book: "WildC.A.T.s #2",                                    box: "2",  creator: "Jim Lee (SAT ONLY)",                 goal: "Re-sign → Yellow/Green combo label",   note: "Already Jim Lee signed — get witnessed re-sign for combo label", critical: false, jimlee: true,  alreadySigned: true  },
+  { priority: "#2",   book: "WildC.A.T.s #11",                                   box: "2",  creator: "Jim Lee (SAT ONLY)",                 goal: "Re-sign → Yellow/Green combo label",   note: "Already Jim Lee signed — get witnessed re-sign for combo label", critical: false, jimlee: true,  alreadySigned: true  },
+  { priority: "HIGH", book: "Superman Unchained #1",                              box: "15", creator: "Jim Lee (SAT ONLY)",                 goal: "Yellow SS $150–250",                   note: "Unbagged — bag before con",            critical: false, jimlee: true,  alreadySigned: false },
+  { priority: "HIGH", book: "Batman Europa #1",                                   box: "15", creator: "Jim Lee (SAT ONLY)",                 goal: "Yellow SS $150–200",                   note: "Unbagged — bag before con",            critical: false, jimlee: true,  alreadySigned: false },
+  { priority: "HIGH", book: "The Mighty Thor #339",                               box: "2",  creator: "Walt + Louise Simonson",             goal: "Witness existing sigs → combo label",  note: "Already dual-signed W+L Simonson",     critical: false, jimlee: false, alreadySigned: true  },
+  { priority: "HIGH", book: "Superman: Man of Steel #18",                         box: "2",  creator: "Dan Jurgens + Louise Simonson",      goal: "Witness the existing sigs",            note: "Already triple-signed",                critical: false, jimlee: false, alreadySigned: true  },
+  { priority: "HIGH", book: "The Flash #164",                                     box: "12", creator: "Mark Waid",                          goal: "Yellow SS — Waid's Flash launch",      note: "Check condition before pressing",      critical: false, jimlee: false, alreadySigned: false },
+  { priority: "HIGH", book: "The Flash #112",                                     box: "12", creator: "Mark Waid or Greg LaRocque",         goal: "Yellow SS — Waid-era Flash key",       note: "Low grade only — assess first",        critical: false, jimlee: false, alreadySigned: false },
+  { priority: "HIGH", book: "Hawkman (2018) #1",                                  box: "25", creator: "Robert Venditti",                    goal: "Yellow SS — creator on own book",      note: "Press before con",                     critical: false, jimlee: false, alreadySigned: false },
+  { priority: "HIGH", book: "Death of Hawkman #1",                                box: "25", creator: "Robert Venditti",                    goal: "Yellow SS — Venditti",                 note: "Press before con",                     critical: false, jimlee: false, alreadySigned: false },
+  { priority: "HIGH", book: "Nightwing (Rebirth) #1",                             box: "25", creator: "Tim Seely",                          goal: "Yellow SS — Rebirth Nightwing creator",note: "Press before con",                     critical: false, jimlee: false, alreadySigned: false },
+  { priority: "HIGH", book: "Justice League International #1",                    box: "27", creator: "Dan Jurgens",                        goal: "Yellow SS — JLI launch",               note: "Check in Box 27",                      critical: false, jimlee: false, alreadySigned: false },
+  { priority: "MED",  book: "Titans (2023) #1",                                   box: "30", creator: "Nicola Scott",                       goal: "Yellow SS — Titans artist",            note: "Check condition",                      critical: false, jimlee: false, alreadySigned: false },
+  { priority: "MED",  book: "New Mutants #96",                                    box: "2",  creator: "Bob McLeod",                         goal: "Witness existing sigs → combo label",  note: "Already signed Liefeld/Larsen/McLeod", critical: false, jimlee: false, alreadySigned: true  },
+  { priority: "MED",  book: "Batman: Long Halloween Special #1",                  box: "22", creator: "Jeph Loeb",                          goal: "Yellow SS — Loeb tribute",             note: "Tim Sale's last Batman work",          critical: false, jimlee: false, alreadySigned: false },
+  { priority: "MED",  book: "The Mighty Thor #390",                               box: "2",  creator: "Ron Frenz",                          goal: "Yellow SS — Cap lifts Mjolnir",        note: "Frenz confirmed — key issue",          critical: false, jimlee: false, alreadySigned: false },
+  { priority: "MED",  book: "The Mighty Thor #412",                               box: "2",  creator: "Ron Frenz",                          goal: "Yellow SS — 1st New Warriors",         note: "Frenz confirmed — KEY issue",          critical: false, jimlee: false, alreadySigned: false },
+  { priority: "MED",  book: "Superman/Spider-Man #1",                             box: "3",  creator: "Walt Simonson (cover artist)",       goal: "Yellow SS on cover artist",            note: "Simonson drew the cover",              critical: false, jimlee: false, alreadySigned: false },
+  { priority: "MED",  book: "Black Panther #1 (Stelfreeze)",                      box: "2",  creator: "Brian Stelfreeze",                   goal: "Yellow SS — Coates/Stelfreeze BP",     note: "Verify you have the unsigned copy",    critical: false, jimlee: false, alreadySigned: false },
+  { priority: "INFO", book: "Storm #1",                                            box: "2",  creator: "Nicola Scott (she drew Storm)",      goal: "Witness if possible",                  note: "Already signed by SY",                 critical: false, jimlee: false, alreadySigned: true  },
+  { priority: "INFO", book: "FF Connecting Set #1–5",                             box: "8",  creator: "Skottie Young",                      goal: "5× Yellow SS as a set",                note: "All 5 at once for max value",          critical: false, jimlee: false, alreadySigned: false },
 ];
 
 // ── Section 2: Books to Press Before Terrificon ──
@@ -76,8 +77,10 @@ export default function CGCStrategy() {
   const toggle = (setter: React.Dispatch<React.SetStateAction<Set<number>>>, i: number) =>
     setter(prev => { const n = new Set(prev); n.has(i)?n.delete(i):n.add(i); return n; });
 
-  const jimLeeBooks = TERRIFICON_SIGNINGS.filter(s => s.jimlee);
-  const topBooks    = TERRIFICON_SIGNINGS.filter(s => s.priority === "#1" || s.priority === "#2");
+  const jimLeeBooks  = TERRIFICON_SIGNINGS.filter(s => s.jimlee);
+  const topBooks     = TERRIFICON_SIGNINGS.filter(s => s.priority === "#1" || s.priority === "#2");
+  const unsignedList = TERRIFICON_SIGNINGS.filter(s => !s.alreadySigned);
+  const signedList   = TERRIFICON_SIGNINGS.filter(s => s.alreadySigned);
 
   return (
     <div>
@@ -114,11 +117,11 @@ export default function CGCStrategy() {
         <>
           <div style={{ background:"var(--surface2)", borderBottom:"1px solid var(--border)", padding:"10px 20px", display:"flex", gap:24, flexWrap:"wrap" }}>
             {[
-              { val: TERRIFICON_SIGNINGS.length, lbl: "Books to Bring" },
+              { val: TERRIFICON_SIGNINGS.length, lbl: "Total Books" },
+              { val: unsignedList.length,        lbl: "Need Signing" },
+              { val: signedList.length,          lbl: "Already Signed" },
+              { val: jimLeeBooks.length,         lbl: "Jim Lee (Sat Only)" },
               { val: topBooks.length,            lbl: "#1 / #2 Priority" },
-              { val: jimLeeBooks.length,          lbl: "Jim Lee (Sat Only)" },
-              { val: TERRIFICON_SIGNINGS.filter(s=>s.priority==="HIGH").length, lbl: "High Priority" },
-              { val: TERRIFICON_SIGNINGS.filter(s=>s.priority==="MED").length,  lbl: "Med Priority" },
             ].map(s=>(
               <div key={s.lbl} style={{ textAlign:"center" }}>
                 <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.1rem", color:"var(--red)", letterSpacing:"1px" }}>{s.val}</div>
@@ -127,55 +130,73 @@ export default function CGCStrategy() {
             ))}
           </div>
 
-          <div className="list-view">
-            {TERRIFICON_SIGNINGS.map((s, i) => {
-              const isOpen = openTf.has(i);
-              const pc     = priorityColor(s.priority);
-              const pb     = priorityBg(s.priority);
-              return (
-                <div
-                  key={i}
-                  className={`lcard${isOpen?" open":""}`}
-                  style={{ borderLeft:`3px solid ${pc}`, background: isOpen ? pb : undefined }}
-                  onClick={()=>toggle(setOpenTf, i)}
-                >
-                  <div className="lcard-head">
-                    <span style={{
-                      fontSize:"0.6rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px",
-                      background:`${pc}18`, border:`1px solid ${pc}`, color:pc,
-                      borderRadius:3, padding:"1px 7px", whiteSpace:"nowrap", flexShrink:0,
-                    }}>{s.priority}</span>
-                    <span className="lcard-title" style={{ fontWeight: s.priority==="HIGH" || s.priority==="#1" || s.priority==="#2" ? 600 : undefined }}>
-                      {s.book}
-                    </span>
-                    <span style={{ fontSize:"0.7rem", color:"var(--muted)", flexShrink:0 }}>Box {s.box}</span>
-                    {s.jimlee && (
-                      <span style={{ fontSize:"0.6rem", background:"#d97706", color:"#fff", borderRadius:3, padding:"1px 6px", flexShrink:0, fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>
-                        SAT ONLY
-                      </span>
-                    )}
-                    {s.critical && (
-                      <span style={{ fontSize:"0.6rem", background:"#dc2626", color:"#fff", borderRadius:3, padding:"1px 6px", flexShrink:0, fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>
-                        🚫 MUST STAY UNSIGNED
-                      </span>
-                    )}
-                  </div>
-                  {!isOpen && (
-                    <div style={{ fontSize:"0.78rem", color:"var(--muted2)", marginTop:3, paddingLeft:4 }}>
-                      {s.creator}
+          {/* ── Group renderer ── */}
+          {([
+            { label: "🟡 UNSIGNED — Bring to Get Signed", sublabel: "These books must arrive at Terrificon UNSIGNED to receive a Yellow SS label", items: unsignedList, accent: "#d97706" },
+            { label: "✍️ ALREADY SIGNED — Witness / Re-Sign", sublabel: "These are already signed — bring for CGC witnessing or a re-sign to upgrade to combo label", items: signedList, accent: "#2563eb" },
+          ] as const).map(group => (
+            <div key={group.label}>
+              <div style={{ padding:"10px 18px 6px", background: group.accent+"0d", borderBottom:`1px solid ${group.accent}30`, borderTop:"1px solid var(--border)" }}>
+                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem", letterSpacing:"2px", color: group.accent }}>{group.label}</div>
+                <div style={{ fontSize:"0.75rem", color:"var(--muted2)", marginTop:2 }}>{group.sublabel}</div>
+              </div>
+              <div className="list-view" style={{ marginBottom:0 }}>
+                {group.items.map((s) => {
+                  const globalIdx = TERRIFICON_SIGNINGS.indexOf(s);
+                  const isOpen    = openTf.has(globalIdx);
+                  const pc        = priorityColor(s.priority);
+                  const pb        = priorityBg(s.priority);
+                  return (
+                    <div
+                      key={globalIdx}
+                      className={`lcard${isOpen?" open":""}`}
+                      style={{ borderLeft:`3px solid ${pc}`, background: isOpen ? pb : undefined }}
+                      onClick={()=>toggle(setOpenTf, globalIdx)}
+                    >
+                      <div className="lcard-head">
+                        <span style={{
+                          fontSize:"0.6rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px",
+                          background:`${pc}18`, border:`1px solid ${pc}`, color:pc,
+                          borderRadius:3, padding:"1px 7px", whiteSpace:"nowrap", flexShrink:0,
+                        }}>{s.priority}</span>
+                        <span className="lcard-title" style={{ fontWeight: s.priority==="HIGH" || s.priority==="#1" || s.priority==="#2" ? 600 : undefined }}>
+                          {s.book}
+                        </span>
+                        <span style={{ fontSize:"0.7rem", color:"var(--muted)", flexShrink:0 }}>Box {s.box}</span>
+                        {s.jimlee && (
+                          <span style={{ fontSize:"0.6rem", background:"#d97706", color:"#fff", borderRadius:3, padding:"1px 6px", flexShrink:0, fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>
+                            SAT ONLY
+                          </span>
+                        )}
+                        {s.critical && (
+                          <span style={{ fontSize:"0.6rem", background:"#dc2626", color:"#fff", borderRadius:3, padding:"1px 6px", flexShrink:0, fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>
+                            🚫 MUST STAY UNSIGNED
+                          </span>
+                        )}
+                        {s.alreadySigned && (
+                          <span style={{ fontSize:"0.6rem", background:"#2563eb", color:"#fff", borderRadius:3, padding:"1px 6px", flexShrink:0, fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>
+                            ALREADY SIGNED
+                          </span>
+                        )}
+                      </div>
+                      {!isOpen && (
+                        <div style={{ fontSize:"0.78rem", color:"var(--muted2)", marginTop:3, paddingLeft:4 }}>
+                          {s.creator}
+                        </div>
+                      )}
+                      {isOpen && (
+                        <div className="lcard-expand">
+                          <div className="dr"><span className="dl">Creator</span><span className="dv">{s.creator}</span></div>
+                          <div className="dr" style={{marginTop:6}}><span className="dl">Goal</span><span className="dv" style={{color:"var(--gold)", fontWeight:600}}>{s.goal}</span></div>
+                          <div className="dr" style={{marginTop:6}}><span className="dl">Notes</span><span className="dv">{s.note}</span></div>
+                        </div>
+                      )}
                     </div>
-                  )}
-                  {isOpen && (
-                    <div className="lcard-expand">
-                      <div className="dr"><span className="dl">Creator</span><span className="dv">{s.creator}</span></div>
-                      <div className="dr" style={{marginTop:6}}><span className="dl">Goal</span><span className="dv" style={{color:"var(--gold)", fontWeight:600}}>{s.goal}</span></div>
-                      <div className="dr" style={{marginTop:6}}><span className="dl">Condition</span><span className="dv">{s.note}</span></div>
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
         </>
       )}
 
