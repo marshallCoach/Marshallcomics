@@ -89,7 +89,6 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
           <StatCard val={tfCount.toString()}           lbl="Terrificon Books" sub="creator appearances"        quip="Pack the mylar. Leave early." />
           <StatCard val={whatnotCount.toLocaleString()} lbl="Whatnot"         sub="platform assigned"          quip="Live audience. No reserve." />
           <StatCard val={ebayCount.toLocaleString()}   lbl="eBay"             sub="platform assigned"          quip="Set it. Let it breathe." />
-          <StatCard val="$25k–$55k"                   lbl="Est. Raw Value"   sub="$60k–$120k+ post-CGC"      quip="Before anyone pressed anything." />
         </div>
       </section>
 

@@ -9,10 +9,11 @@ import PrivateSignings from "@/pages/PrivateSignings";
 import Summary from "@/pages/Summary";
 import Everything from "@/pages/Everything";
 import ActionPlan from "@/pages/ActionPlan";
+import CollectionStats from "@/pages/CollectionStats";
 import PasswordGate from "@/components/PasswordGate";
 
 type TabId =
-  | "summary" | "everything" | "collection" | "boxkeys"
+  | "summary" | "everything" | "collection" | "boxkeys" | "stats"
   | "calendar" | "showplanner" | "cgc" | "signings" | "actionplan";
 
 type NavParams = { box?: string; signed?: string };
@@ -26,6 +27,7 @@ const NAV = [
       { id: "everything", label: "🔍 Everything" },
       { id: "collection", label: "📦 Sales Inventory" },
       { id: "boxkeys",    label: "🔑 Box Keys" },
+      { id: "stats",      label: "📈 Collection Stats" },
     ],
   },
   {
@@ -145,6 +147,7 @@ export default function App() {
       {activeTab === "cgc"         && <CGCStrategy />}
       {activeTab === "signings"    && <PrivateSignings />}
       {activeTab === "actionplan"  && <ActionPlan />}
+      {activeTab === "stats"       && <CollectionStats />}
     </div>
     </PasswordGate>
   );
