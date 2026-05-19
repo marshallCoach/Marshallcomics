@@ -1,403 +1,220 @@
 import { useState, useEffect } from "react";
 import { DATA3 } from "@/data/data3";
+import { NEXT_STEPS, Status, StepCard, loadStatuses, saveStatuses } from "./ActionPlan";
 
-const comics   = DATA3.comics;
-const boxData  = DATA3.boxes;
+const comics  = DATA3.comics;
+const boxData = DATA3.boxes;
 
 const totalComics  = comics.length;
 const totalBoxes   = boxData.length;
-const keyCount     = comics.filter(c => (c.Key || "").toUpperCase() === "YES").length;
+const keyCount     = comics.filter(c => (c.Key    || "").toUpperCase() === "YES").length;
 const signedCount  = comics.filter(c => (c.Signed || "").toUpperCase() === "YES").length;
 const whatnotCount = comics.filter(c => (c.Platform || "").toUpperCase() === "WHATNOT").length;
 const ebayCount    = comics.filter(c => (c.Platform || "").toUpperCase() === "EBAY").length;
 const tfCount      = comics.filter(c => !!(c.Terrificon || "").trim()).length;
 
-const NEXT_STEPS = [
-  {
-    urgency: "critical",
-    deadline: "ASAP",
-    title: "Authenticate Stan Lee BP #513 BEFORE any streaming or sale",
-    detail: "Your most valuable single book ($800–$1,500+ authenticated). Do NOT press. Submit via PSA/DNA at NYCC or CGC × JSA. Never stream ungraded.",
-    category: "CGC",
-  },
-  {
-    urgency: "critical",
-    deadline: "Jun 5 ⚠️",
-    title: "Jorge Jiménez CGC SS — Batman #125 — DEADLINE IMMINENT",
-    detail: "Batman #125 (Failsafe arc — Jiménez drew it). Press and submit immediately. This deadline is days away.",
-    category: "Signing",
-  },
-  {
-    urgency: "critical",
-    deadline: "This week",
-    title: "Bag Box 15 — DC New 52 (ALL UNBAGGED)",
-    detail: "Batman Annual #1 (Mr. Freeze key), Batman Europa #1 (Jim Lee), Superman Unchained #1 (Snyder/Lee) are all unbagged. CGC will not accept unbagged books.",
-    category: "Bagging",
-  },
-  {
-    urgency: "high",
-    deadline: "Jun 26",
-    title: "Geoff Johns + Jason Fabok CGC SS — JL #21 + JSA",
-    detail: "Johns sig adds to existing unwitnessed VA sigs = yellow/green combo label. Pull books, sleeve, ship. Deadline Jun 26.",
-    category: "Signing",
-  },
-  {
-    urgency: "high",
-    deadline: "Jul 10",
-    title: "Roy Thomas — 5 books = $450 fees → $820–$1,630 return",
-    detail: "Avengers #60, #87, King-Size #2, Marvel Premiere #1, Saga Human Torch #3. Thomas co-created Wolverine, Vision, Carol Danvers, Adam Warlock. High ROI signing.",
-    category: "Signing",
-  },
-  {
-    urgency: "high",
-    deadline: "Jul 10",
-    title: "Mike Mayhew CGC SS — ASM #50 Alex Ross Timeless Virgin",
-    detail: "Already signed — submit via CGC × JSA green Qualified path. $100–200 authenticated. Same deadline as Roy Thomas.",
-    category: "Signing",
-  },
-  {
-    urgency: "high",
-    deadline: "Before Aug 7",
-    title: "Press CGC batch — submit all simultaneously to save shipping",
-    detail: "Batman #656+#657, Wolverine #8 (UNSIGNED), ASM #361, Vision #1, Secret Wars #1, NW #1, Mockingbird #8, WildCATs #2/#11, Savage Dragon #1, Transformers #1. Cost $15–25/book.",
-    category: "CGC",
-  },
-  {
-    urgency: "high",
-    deadline: "Before Aug 7",
-    title: "Bag Box 25 (DC Rebirth, 10% bagged) — keys first",
-    detail: "DC Universe Rebirth Special #1, Batman #21+#22 (The Button), Batman #50, Hawkman #1, Justice League #1 Snyder. All unbagged keys.",
-    category: "Bagging",
-  },
-  {
-    urgency: "high",
-    deadline: "Before Aug 7",
-    title: "Bag Box 26 (X-Men, 20% bagged) — keys first",
-    detail: "Deadpool #1 (Way/Medina 2008), Old Man Logan #71–72, Extreme X-Men #1, New Mutants #1 (2009). Keys bag first.",
-    category: "Bagging",
-  },
-  {
-    urgency: "high",
-    deadline: "Aug 8 SHARP",
-    title: "Terrificon — Jim Lee is SATURDAY AUG 8 ONLY — arrive 10am",
-    detail: "Hotel: Hyatt code G-TRFC. Bring UNSIGNED books for yellow SS label. Wolverine #8 unsigned = priority #1 ($500+ SS 9.8). Verify Agent of Slabs presence. DO NOT bring already-signed books for yellow SS.",
-    category: "Show",
-  },
-  {
-    urgency: "medium",
-    deadline: "Oct 8–11",
-    title: "NYCC — Stan Lee BP #513 authentication + Heritage networking",
-    detail: "Bring BP #513 for PSA/DNA authentication. Bring Thor #169 CGC 8.0 (slabbed) for Heritage dealer evaluation. Buy budget $100–300 for undervalued keys.",
-    category: "Show",
-  },
-  {
-    urgency: "medium",
-    deadline: "Ongoing",
-    title: "Bag Box 23 (Cap America, 10%) + Box 24 (DC Mixed, 10%)",
-    detail: "Box 23: Cap #1 Brubaker, Cap #25 (Death of Cap), Cap #600. Box 24: Batman/Superman World's Finest #1, Far Sector #1, Infinite Frontier #0. Keys first.",
-    category: "Bagging",
-  },
-  {
-    urgency: "low",
-    deadline: "Ongoing",
-    title: "eBay Now — reader/poor condition issues, no pressing required",
-    detail: "Flash Vol 2 #112–125 (low grade), ASM #583 (water damage), Aquaman #58–74, Extreme X-Men #6–25, New Mutants DeFilippis #1–13. Start at $1–3 each or bundle lots.",
-    category: "Sales",
-  },
+// ── Flagship assets ──────────────────────────────────────────────────────────
+const FLAGSHIP = [
+  // Row 1 — peak value assets
+  { book:"Stan Lee signed BP #513",                   note:"Authenticate first (PSA/DNA) — $800–$1,500+ auth",         color:"#dc2626", box:"2",  publisher:"Marvel", year:"1966", valueNM:"$800–$1,500 authenticated", condition:"Raw — DO NOT press",            cgcPath:"PSA/DNA at NYCC → CGC × JSA Green Qualified",   action:"NYCC Oct 8–11. Never press. Submit via PSA/DNA first.",           terrificon:false },
+  { book:"Truth: RWB #1 (Baker remarked)",            note:"Verify remark → Green Qual. → Heritage — $500–$2,000",    color:"#d97706", box:"2",  publisher:"Marvel", year:"2003", valueNM:"$500–$2,000 with remark",   condition:"Has Baker remark",              cgcPath:"CGC × JSA → Green Qualified → Heritage",        action:"Verify remark authenticity before submitting.",                   terrificon:false },
+  { book:"Ultimate Fallout #4 Foil (1st Miles)",      note:"1st Miles Morales — $800–$1,500 CGC 9.8",                 color:"#8b2be2", box:"2",  publisher:"Marvel", year:"2011", valueNM:"$800–$1,500 CGC 9.8",       condition:"Check for pressing",            cgcPath:"Press → CGC Universal Blue 9.8",                action:"Press then submit for Blue Universal label.",                     terrificon:false },
+  { book:"Thor #169 CGC 8.0 (Galactus Origin)",       note:"Already slabbed. Galactus origin. Kirby/Lee. Show 15.",   color:"#1d6fa4", box:"15", publisher:"Marvel", year:"1969", valueNM:"CGC 8.0 — already slabbed", condition:"Slabbed CGC 8.0",               cgcPath:"Already graded — ready for Heritage or auction", action:"Feature in Show 15 — Whatnot anchor book.",                      terrificon:false },
+  // Row 2 — Terrificon priority first, then others
+  { book:"Wolverine #8 (UNSIGNED — 1982)",            note:"Keep unsigned → Yellow SS at Terrificon → $500+ SS 9.8",  color:"#d97706", box:"8",  publisher:"Marvel", year:"1982", valueNM:"$500+ Yellow SS CGC 9.8",   condition:"MUST STAY UNSIGNED",            cgcPath:"Yellow SS at Terrificon → Chris Claremont SS",  action:"Priority #1 at Terrificon. Press before Aug 7. DO NOT sign until con.", terrificon:true  },
+  { book:"Batman #656 (1st Damian Wayne)",            note:"Press + Blue Universal → $350–$500 CGC 9.8 — Best ROI",   color:"#16a34a", box:"4",  publisher:"DC",     year:"2006", valueNM:"$350–$500 CGC 9.8",         condition:"In press list — send ASAP",     cgcPath:"Press → CGC Universal Blue 9.8",                action:"Press and submit before Terrificon. Best ROI in collection.",     terrificon:true  },
+  { book:"Vision #1 (Tom King signed)",               note:"Press + Green Qual. → $150–$300. Film timing.",           color:"#8b2be2", box:"2",  publisher:"Marvel", year:"2015", valueNM:"$150–$300 Green Qualified",  condition:"Signed — press first",          cgcPath:"Press → CGC × JSA → Green Qualified",           action:"In press batch — submit with the Terrificon batch before Aug 7.", terrificon:false },
+  { book:"ASM #361 (1st Carnage — Bagley/Sharen sgd)",note:"Bagley+Sharen. Press + Green Qual. → $200–$300 auth.",   color:"#dc2626", box:"2",  publisher:"Marvel", year:"1992", valueNM:"$200–$300 Green Qualified",  condition:"Dual signed — press first",     cgcPath:"Press → CGC × JSA → Green Qualified",           action:"In press batch — submit with the Terrificon batch before Aug 7.", terrificon:false },
+  { book:"Black Lightning #1 (Isabella)",             note:"Press + Green Qual. → $300–$500. Whatnot/Heritage.",      color:"#16a34a", box:"2",  publisher:"DC",     year:"1977", valueNM:"$300–$500 Green Qualified",  condition:"Check for pressing",            cgcPath:"CGC × JSA → Green Qualified",                   action:"Monitor CGC private signing window — high Heritage value.",       terrificon:false },
+  { book:"Captain Carter #1 (Atwell — To Robert)",   note:"Emotional anchor for Show 1 — personalized signing.",     color:"#1d6fa4", box:"2",  publisher:"Marvel", year:"2022", valueNM:"$80–$150 personalized",      condition:"Signed personalized",           cgcPath:"Whatnot anchor — personal story sells",          action:"Lead Show 1 with the story of the Hayley Atwell signing.",        terrificon:false },
 ];
 
-type Status = "not_started" | "started" | "stalled" | "delayed" | "done";
-
-const STATUS_OPTIONS: { value: Status; label: string; color: string }[] = [
-  { value: "not_started", label: "Not Started", color: "#6b7280" },
-  { value: "started",     label: "Started",     color: "#1d6fa4" },
-  { value: "stalled",     label: "Stalled",     color: "#d97706" },
-  { value: "delayed",     label: "Delayed",     color: "#c2410c" },
-  { value: "done",        label: "Done ✓",      color: "#16a34a" },
-];
-
-const LS_KEY = "brbActionStatus";
-
-function loadStatuses(): Record<string, Status> {
-  try { return JSON.parse(localStorage.getItem(LS_KEY) || "{}"); }
-  catch { return {}; }
-}
-function saveStatuses(s: Record<string, Status>) {
-  localStorage.setItem(LS_KEY, JSON.stringify(s));
-}
-
-function catColor(cat: string) {
-  if (cat === "CGC")     return "#8b2be2";
-  if (cat === "Signing") return "#c8102e";
-  if (cat === "Bagging") return "#d97706";
-  if (cat === "Show")    return "#1d6fa4";
-  if (cat === "Sales")   return "#16a34a";
-  return "#555";
-}
-
-function UrgencyBadge({ u }: { u: string }) {
-  const map: Record<string, { label: string; color: string }> = {
-    critical: { label:"CRITICAL", color:"#dc2626" },
-    high:     { label:"HIGH",     color:"#d97706" },
-    medium:   { label:"MEDIUM",   color:"#1d6fa4" },
-    low:      { label:"WATCH",    color:"#6b7280" },
-  };
-  const m = map[u] || map.low;
-  return (
-    <span style={{
-      background: m.color+"15", border:`1.5px solid ${m.color}`,
-      borderRadius:3, padding:"1px 8px",
-      fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif",
-      letterSpacing:"1px", color:m.color,
-    }}>{m.label}</span>
-  );
-}
-
-function StepCard({
-  step, status, onStatusChange,
-}: {
-  step: typeof NEXT_STEPS[number];
-  status: Status;
-  onStatusChange: (s: Status) => void;
+function StatCard({ val, lbl, sub, quip, onClick }: {
+  val: string; lbl: string; sub: string; quip: string; onClick?: () => void;
 }) {
-  const cc = catColor(step.category);
-  const isDone = status === "done";
-  const statusObj = STATUS_OPTIONS.find(s => s.value === status) || STATUS_OPTIONS[0];
-
-  return (
-    <div style={{
-      display:"flex", gap:14, alignItems:"flex-start",
-      border:"1.5px solid var(--border)", borderRadius:6,
-      padding:"12px 16px", background:"var(--surface)",
-      borderLeft:`3px solid ${step.urgency==="critical"?"#dc2626":step.urgency==="high"?"#d97706":"var(--border)"}`,
-      opacity: isDone ? 0.45 : 1,
-      transition:"opacity 0.2s",
-    }}>
-      {/* Left meta */}
-      <div style={{ flex:"0 0 auto", display:"flex", flexDirection:"column", alignItems:"center", gap:5, minWidth:72 }}>
-        <UrgencyBadge u={step.urgency} />
-        <span style={{
-          fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px",
-          background:cc+"18", border:`1px solid ${cc}`, color:cc,
-          borderRadius:3, padding:"1px 7px",
-        }}>{step.category}</span>
-        <span style={{ fontSize:"0.63rem", color:step.urgency==="critical"?"#dc2626":"var(--muted2)", fontWeight:step.urgency==="critical"?700:400 }}>
-          {step.deadline}
-        </span>
-      </div>
-
-      {/* Content */}
-      <div style={{ flex:1 }}>
-        <div style={{
-          fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", letterSpacing:"1px",
-          color:"var(--text)", marginBottom:3,
-          textDecoration: isDone ? "line-through" : "none",
-        }}>{step.title}</div>
-        <div style={{ fontSize:"0.78rem", color:"var(--muted2)", lineHeight:1.5 }}>{step.detail}</div>
-      </div>
-
-      {/* Status controls */}
-      <div style={{ flex:"0 0 auto", display:"flex", flexDirection:"column", alignItems:"flex-end", gap:8 }}>
-        {/* Done checkbox */}
-        <label style={{ display:"flex", alignItems:"center", gap:6, cursor:"pointer", userSelect:"none" }}>
-          <div
-            onClick={() => onStatusChange(isDone ? "not_started" : "done")}
-            style={{
-              width:18, height:18, borderRadius:4,
-              border:`2px solid ${isDone ? "#16a34a" : "var(--border)"}`,
-              background: isDone ? "#16a34a" : "transparent",
-              display:"flex", alignItems:"center", justifyContent:"center",
-              cursor:"pointer", transition:"all 0.15s", flexShrink:0,
-            }}
-          >
-            {isDone && <span style={{ color:"#fff", fontSize:"0.7rem", lineHeight:1 }}>✓</span>}
-          </div>
-          <span style={{ fontSize:"0.65rem", color:"var(--muted2)", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>DONE</span>
-        </label>
-
-        {/* Status dropdown */}
-        <select
-          value={status}
-          onChange={e => onStatusChange(e.target.value as Status)}
-          onClick={e => e.stopPropagation()}
-          style={{
-            background:"var(--surface2)", border:`1px solid ${statusObj.color}`,
-            color:statusObj.color, borderRadius:4,
-            fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif",
-            letterSpacing:"1px", padding:"3px 6px", cursor:"pointer",
-            outline:"none", appearance:"none", textAlign:"center",
-          }}
-        >
-          {STATUS_OPTIONS.map(o => (
-            <option key={o.value} value={o.value}>{o.label}</option>
-          ))}
-        </select>
-      </div>
-    </div>
-  );
-}
-
-function StatCard({ val, lbl, sub, quip }: { val:string; lbl:string; sub:string; quip:string }) {
   const [hovered, setHovered] = useState(false);
   return (
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      onClick={onClick}
       style={{
         background:"var(--surface)", border:"1.5px solid var(--border)",
         borderRadius:6, padding:"14px 16px",
         transform: hovered ? "scale(1.03)" : "scale(1)",
         transition:"transform 0.15s ease, border-color 0.15s ease",
         borderColor: hovered ? "var(--red)" : "var(--border)",
-        cursor:"default", position:"relative", overflow:"hidden",
+        cursor: onClick ? "pointer" : "default",
+        position:"relative", overflow:"hidden",
       }}
     >
-      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.6rem", color:"var(--red)", letterSpacing:"1px" }}>{val}</div>
-      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.7rem", letterSpacing:"1.5px", color:"var(--text)" }}>{lbl}</div>
-      <div style={{
-        fontSize:"0.7rem", color:"var(--muted2)", marginTop:2,
-        transition:"opacity 0.2s",
-        opacity: hovered ? 0 : 1,
-        position: hovered ? "absolute" : "static",
-      }}>{sub}</div>
-      <div style={{
-        fontSize:"0.78rem", color:"var(--muted2)", marginTop:2,
-        lineHeight:1.4,
-        opacity: hovered ? 1 : 0,
-        transition:"opacity 0.2s",
-        position: hovered ? "static" : "absolute",
-      }}>{quip}</div>
+      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.7rem", color:"var(--red)", letterSpacing:"1px" }}>{val}</div>
+      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.78rem", letterSpacing:"1.5px", color:"var(--text)" }}>{lbl}</div>
+      <div style={{ fontSize:"0.78rem", color:"var(--muted2)", marginTop:2, transition:"opacity 0.2s", opacity:hovered?0:1, position:hovered?"absolute":"static" }}>{sub}</div>
+      <div style={{ fontSize:"0.82rem", color:"var(--muted2)", marginTop:2, lineHeight:1.4, opacity:hovered?1:0, transition:"opacity 0.2s", position:hovered?"static":"absolute" }}>
+        {onClick ? <span style={{ color:"var(--red)" }}>→ {quip}</span> : quip}
+      </div>
     </div>
   );
 }
 
-export default function Summary() {
+type NavFn = (tab: string, params?: Record<string, string>) => void;
+
+export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
   const [statuses, setStatuses] = useState<Record<string, Status>>(loadStatuses);
+  const [openFlag, setOpenFlag] = useState<number | null>(null);
 
   useEffect(() => { saveStatuses(statuses); }, [statuses]);
 
+  const getStatus = (title: string): Status => statuses[title] || "not_started";
   const setStatus = (title: string, s: Status) =>
     setStatuses(prev => ({ ...prev, [title]: s }));
 
-  const getStatus = (title: string): Status => statuses[title] || "not_started";
-
-  const critical = NEXT_STEPS.filter(s => s.urgency === "critical");
-  const high     = NEXT_STEPS.filter(s => s.urgency === "high");
-  const rest     = NEXT_STEPS.filter(s => s.urgency !== "critical" && s.urgency !== "high");
-
-  const doneCount = NEXT_STEPS.filter(s => getStatus(s.title) === "done").length;
+  const doneCount   = NEXT_STEPS.filter(s => getStatus(s.title) === "done").length;
+  const nextActions = NEXT_STEPS.filter(s => getStatus(s.title) !== "done").slice(0, 3);
 
   return (
     <div style={{ maxWidth:1100, margin:"0 auto", padding:"24px 20px 60px" }}>
 
-      {/* Overview stats */}
+      {/* ── Overview stats ── */}
       <section style={{ marginBottom:32 }}>
-        <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.3rem", letterSpacing:"2px", color:"var(--red)", marginBottom:16 }}>
+        <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.4rem", letterSpacing:"2px", color:"var(--red)", marginBottom:16 }}>
           Collection Overview
         </h2>
-        <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(140px,1fr))", gap:12 }}>
-          <StatCard val={totalComics.toLocaleString()} lbl="Total Comics"     sub="master inventory"              quip="You did not acquire these slowly." />
-          <StatCard val={totalBoxes.toString()}        lbl="Total Boxes"      sub="physically organized"          quip="Organized chaos is still organized." />
-          <StatCard val={keyCount.toLocaleString()}    lbl="Key Issues"       sub="confirmed across all boxes"    quip="The ones that actually matter." />
-          <StatCard val={signedCount.toString()}       lbl="Signed Books"     sub="by verified creators"          quip="They wrote their name. You wrote a check. Fair trade." />
-          <StatCard val={tfCount.toString()}           lbl="Terrificon Books" sub="creator appearances"           quip="Pack the mylar. Leave early." />
-          <StatCard val={whatnotCount.toLocaleString()} lbl="Whatnot"         sub="platform assigned"             quip="Live audience. No reserve." />
-          <StatCard val={ebayCount.toLocaleString()}   lbl="eBay"             sub="platform assigned"             quip="Set it. Let it breathe." />
-          <StatCard val="$25k–$55k"                   lbl="Est. Raw Value"   sub="$60k–$120k+ post-CGC"         quip="Before anyone pressed anything." />
+        <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(145px,1fr))", gap:12 }}>
+          <StatCard val={totalComics.toLocaleString()} lbl="Total Comics"     sub="master inventory"           quip="View Everything"     onClick={() => onNavigate("everything")} />
+          <StatCard val={totalBoxes.toString()}        lbl="Total Boxes"      sub="physically organized"       quip="Organized chaos is still organized." />
+          <StatCard val={keyCount.toLocaleString()}    lbl="Key Issues"       sub="confirmed across all boxes" quip="View Box Keys"       onClick={() => onNavigate("boxkeys")} />
+          <StatCard val={signedCount.toString()}       lbl="Signed Books"     sub="by verified creators"       quip="View Signed"         onClick={() => onNavigate("collection", { signed:"YES" })} />
+          <StatCard val={tfCount.toString()}           lbl="Terrificon Books" sub="creator appearances"        quip="Pack the mylar. Leave early." />
+          <StatCard val={whatnotCount.toLocaleString()} lbl="Whatnot"         sub="platform assigned"          quip="Live audience. No reserve." />
+          <StatCard val={ebayCount.toLocaleString()}   lbl="eBay"             sub="platform assigned"          quip="Set it. Let it breathe." />
+          <StatCard val="$25k–$55k"                   lbl="Est. Raw Value"   sub="$60k–$120k+ post-CGC"      quip="Before anyone pressed anything." />
         </div>
       </section>
 
-      {/* Collection highlights */}
+      {/* ── Flagship Assets ── */}
       <section style={{ marginBottom:32 }}>
-        <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.3rem", letterSpacing:"2px", color:"var(--red)", marginBottom:12 }}>
+        <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.4rem", letterSpacing:"2px", color:"var(--red)", marginBottom:12 }}>
           Flagship Assets
         </h2>
+        <p style={{ fontSize:"0.88rem", color:"var(--muted2)", marginBottom:14 }}>Click any card to expand details.</p>
         <div style={{ display:"flex", flexWrap:"wrap", gap:10 }}>
-          {[
-            { book:"Stan Lee signed BP #513",         note:"Authenticate first (PSA/DNA) — $800–$1,500+ auth",           color:"#dc2626" },
-            { book:"Truth: RWB #1 (Baker remarked)",  note:"Verify remark → Green Qual. → Heritage — $500–$2,000",        color:"#d97706" },
-            { book:"Ultimate Fallout #4 Foil",        note:"1st Miles Morales — $800–$1,500 CGC 9.8",                     color:"#8b2be2" },
-            { book:"Thor #169 CGC 8.0",               note:"Already slabbed. Galactus origin. Kirby/Lee. Show 15.",        color:"#1d6fa4" },
-            { book:"Batman #656 (1st Damian Wayne)",  note:"Press + Blue Universal → $350–$500 CGC 9.8 — Best ROI",       color:"#16a34a" },
-            { book:"Wolverine #8 (UNSIGNED)",         note:"Keep unsigned → Yellow SS at Terrificon → $500+ SS 9.8",      color:"#d97706" },
-            { book:"Vision #1 (Tom King signed)",     note:"Press + Green Qual. → $150–$300. Film timing.",               color:"#8b2be2" },
-            { book:"ASM #361 (1st Carnage, dbl-sgnd)",note:"Bagley+Sharen. Press + Green Qual. → $200–$300 auth.",        color:"#dc2626" },
-            { book:"Black Lightning #1 (Isabella)",   note:"Press + Green Qual. → $300–$500. Whatnot/Heritage.",          color:"#16a34a" },
-            { book:"Captain Carter #1 (Atwell, personalized)", note:"'To Robert' — emotional anchor for Show 1.",         color:"#1d6fa4" },
-          ].map(a => (
-            <div key={a.book} style={{ flex:"1 1 280px", background:"var(--surface)", border:`1.5px solid ${a.color}40`, borderLeft:`3px solid ${a.color}`, borderRadius:6, padding:"10px 14px" }}>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem", letterSpacing:"1px", color:a.color, marginBottom:3 }}>{a.book}</div>
-              <div style={{ fontSize:"0.76rem", color:"var(--muted2)", lineHeight:1.4 }}>{a.note}</div>
-            </div>
-          ))}
+          {FLAGSHIP.map((a, i) => {
+            const isOpen = openFlag === i;
+            return (
+              <div
+                key={a.book}
+                onClick={() => setOpenFlag(isOpen ? null : i)}
+                style={{
+                  flex: isOpen ? "1 1 100%" : "1 1 280px",
+                  background:"var(--surface)",
+                  border:`1.5px solid ${isOpen ? a.color : a.color+"40"}`,
+                  borderLeft:`4px solid ${a.color}`,
+                  borderRadius:6, padding:"12px 16px",
+                  cursor:"pointer",
+                  transition:"flex 0.25s ease, border-color 0.15s, box-shadow 0.15s",
+                  boxShadow: isOpen ? `0 4px 16px ${a.color}22` : "none",
+                }}
+              >
+                <div style={{ display:"flex", alignItems:"center", gap:10, flexWrap:"wrap" }}>
+                  {a.terrificon && (
+                    <span style={{ fontSize:"0.65rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", background:"#d97706", color:"#fff", borderRadius:3, padding:"1px 7px", flexShrink:0 }}>
+                      TERRIFICON
+                    </span>
+                  )}
+                  <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.95rem", letterSpacing:"1px", color:a.color }}>{a.book}</div>
+                  <div style={{ marginLeft:"auto", fontSize:"0.75rem", color:"var(--muted)", flexShrink:0 }}>Box {a.box} {isOpen ? "▲" : "▼"}</div>
+                </div>
+                <div style={{ fontSize:"0.85rem", color:"var(--muted2)", lineHeight:1.5, marginTop:4 }}>{a.note}</div>
+
+                {isOpen && (
+                  <div style={{ marginTop:14, paddingTop:14, borderTop:`1px solid ${a.color}30`, display:"flex", flexWrap:"wrap", gap:"10px 32px" }}>
+                    {[
+                      { l:"Box",       v:`Box ${a.box}` },
+                      { l:"Publisher", v:a.publisher },
+                      { l:"Year",      v:a.year },
+                      { l:"Condition", v:a.condition },
+                      { l:"Value",     v:a.valueNM },
+                      { l:"CGC Path",  v:a.cgcPath },
+                    ].map(r => (
+                      <div key={r.l} className="dr" style={{ marginBottom:0 }}>
+                        <span className="dl">{r.l}</span>
+                        <span className="dv">{r.v}</span>
+                      </div>
+                    ))}
+                    <div style={{ flex:"1 1 100%", marginTop:6, padding:"8px 12px", background:`${a.color}0d`, borderRadius:4, fontSize:"0.88rem", color:a.color, fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>
+                      → {a.action}
+                    </div>
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
       </section>
 
-      {/* Box breakdown */}
+      {/* ── Books per Box ── */}
       <section style={{ marginBottom:32 }}>
-        <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.3rem", letterSpacing:"2px", color:"var(--red)", marginBottom:12 }}>
+        <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.4rem", letterSpacing:"2px", color:"var(--red)", marginBottom:12 }}>
           Books per Box
         </h2>
         <div style={{ display:"flex", flexWrap:"wrap", gap:8 }}>
           {[...boxData].sort((a,b) => Number(a.Num) - Number(b.Num)).map(b => (
-            <div key={b.Num} style={{ background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:5, padding:"8px 14px", textAlign:"center", minWidth:72 }}>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.2rem", color:"var(--red)" }}>{b.Comics}</div>
-              <div style={{ fontSize:"0.65rem", color:"var(--muted2)", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>Box {b.Num}</div>
-              {Number(b.Keys)   > 0 && <div style={{ fontSize:"0.58rem", color:"#d97706" }}>{b.Keys} keys</div>}
-              {Number(b.Signed) > 0 && <div style={{ fontSize:"0.58rem", color:"#16a34a" }}>{b.Signed} sgnd</div>}
+            <div
+              key={b.Num}
+              onClick={() => onNavigate("everything", { box: b.Num })}
+              title={`Open Everything filtered to Box ${b.Num}`}
+              style={{
+                background:"var(--surface)", border:"1.5px solid var(--border)",
+                borderRadius:5, padding:"8px 14px", textAlign:"center", minWidth:74,
+                cursor:"pointer", transition:"border-color 0.15s, box-shadow 0.15s",
+              }}
+              onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.borderColor = "var(--red)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 2px 8px rgba(200,16,46,0.12)"; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.borderColor = "var(--border)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "none"; }}
+            >
+              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.3rem", color:"var(--red)" }}>{b.Comics}</div>
+              <div style={{ fontSize:"0.72rem", color:"var(--muted2)", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>Box {b.Num}</div>
+              {Number(b.Keys)   > 0 && <div style={{ fontSize:"0.68rem", color:"#d97706" }}>{b.Keys} keys</div>}
+              {Number(b.Signed) > 0 && <div style={{ fontSize:"0.68rem", color:"#16a34a" }}>{b.Signed} sgnd</div>}
             </div>
           ))}
         </div>
       </section>
 
-      {/* Next Steps */}
+      {/* ── Next 3 Actions preview ── */}
       <section>
-        <div style={{ display:"flex", alignItems:"baseline", gap:16, marginBottom:6 }}>
-          <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.3rem", letterSpacing:"2px", color:"var(--red)", margin:0 }}>
-            Action Plan
-          </h2>
-          {doneCount > 0 && (
-            <span style={{ fontSize:"0.72rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px", color:"#16a34a" }}>
-              {doneCount} / {NEXT_STEPS.length} DONE
-            </span>
-          )}
+        <div style={{ display:"flex", alignItems:"baseline", justifyContent:"space-between", marginBottom:12, flexWrap:"wrap", gap:10 }}>
+          <div style={{ display:"flex", alignItems:"baseline", gap:14 }}>
+            <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.4rem", letterSpacing:"2px", color:"var(--red)", margin:0 }}>
+              Next Actions
+            </h2>
+            {doneCount > 0 && (
+              <span style={{ fontSize:"0.8rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px", color:"#16a34a" }}>
+                {doneCount} / {NEXT_STEPS.length} DONE
+              </span>
+            )}
+          </div>
+          <button
+            onClick={() => onNavigate("actionplan")}
+            style={{
+              background:"var(--red)", color:"#fff", border:"none",
+              padding:"7px 18px", borderRadius:4, cursor:"pointer",
+              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem",
+              letterSpacing:"1.5px", transition:"background 0.15s",
+            }}
+            onMouseEnter={e => ((e.currentTarget as HTMLButtonElement).style.background = "var(--red-dark)")}
+            onMouseLeave={e => ((e.currentTarget as HTMLButtonElement).style.background = "var(--red)")}
+          >
+            View All {NEXT_STEPS.length - doneCount} Actions →
+          </button>
         </div>
-        <p style={{ fontSize:"0.78rem", color:"var(--muted2)", marginBottom:16 }}>
-          As of May 18, 2026 — Business Plan v4. Critical items first.
-        </p>
 
-        {critical.length > 0 && (
-          <div style={{ marginBottom:16 }}>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"2px", color:"#dc2626", marginBottom:8 }}>🔴 CRITICAL — ACT NOW</div>
-            <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
-              {critical.map((s,i) => (
-                <StepCard key={i} step={s} status={getStatus(s.title)} onStatusChange={st => setStatus(s.title, st)} />
-              ))}
-            </div>
-          </div>
-        )}
-
-        {high.length > 0 && (
-          <div style={{ marginBottom:16 }}>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"2px", color:"#d97706", marginBottom:8, marginTop:20 }}>🟠 HIGH PRIORITY</div>
-            <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
-              {high.map((s,i) => (
-                <StepCard key={i} step={s} status={getStatus(s.title)} onStatusChange={st => setStatus(s.title, st)} />
-              ))}
-            </div>
-          </div>
-        )}
-
-        {rest.length > 0 && (
-          <div>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"2px", color:"var(--muted2)", marginBottom:8, marginTop:20 }}>UPCOMING & ONGOING</div>
-            <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
-              {rest.map((s,i) => (
-                <StepCard key={i} step={s} status={getStatus(s.title)} onStatusChange={st => setStatus(s.title, st)} />
-              ))}
-            </div>
-          </div>
-        )}
+        <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
+          {nextActions.map((s, i) => (
+            <StepCard key={i} step={s} status={getStatus(s.title)} onStatusChange={st => setStatus(s.title, st)} />
+          ))}
+        </div>
       </section>
     </div>
   );

@@ -96,16 +96,16 @@ const COLS: ColDef<Comic>[] = [
   },
 ];
 
-export default function Everything() {
+export default function Everything({ initBox }: { initBox?: string }) {
   const [query,      setQuery]     = useState("");
   const [publisher,  setPub]       = useState("");
   const [era,        setEra]       = useState("");
   const [platform,   setPlat]      = useState("");
-  const [boxFilter,  setBoxFilter] = useState("");
+  const [boxFilter,  setBoxFilter] = useState(initBox || "");
   const [keysOnly,   setKeysOnly]  = useState(false);
   const [signedOnly, setSignedOnly]= useState(false);
   const [view,       setView]      = useState<"list"|"card">("list");
-  const [searched,   setSearched]  = useState(false);
+  const [searched,   setSearched]  = useState(!!initBox);
   const [cardPage,   setCardPage]  = useState(1);
 
   const results = useMemo(() => {

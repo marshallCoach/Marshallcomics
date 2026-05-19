@@ -88,12 +88,12 @@ const LIST_COLS: ColDef<Comic>[] = [
   },
 ];
 
-export default function OriginalCollection() {
+export default function OriginalCollection({ initSigned }: { initSigned?: string }) {
   const [q,        setQ]        = useState("");
   const [pub,      setPub]      = useState("");
   const [era,      setEra]      = useState("");
   const [platform, setPlatform] = useState("");
-  const [signed,   setSigned]   = useState("");
+  const [signed,   setSigned]   = useState(initSigned || "");
   const [keyOnly,  setKeyOnly]  = useState("");
   const [cgcOnly,  setCgcOnly]  = useState("");
   const [view,     setView]     = useState<"card" | "list">("card");
