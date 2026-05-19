@@ -258,7 +258,7 @@ export default function Everything() {
           <div style={{ fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px", fontSize:"0.85rem", color:"var(--muted2)" }}>
             {results.length === 0
               ? "No results"
-              : <><span style={{ color:"var(--red)", fontSize:"1.1rem" }}>{results.length.toLocaleString()}</span> {results.length===1?"book":"books"} — 1,793 total comics, 16 boxes</>}
+              : <><span style={{ color:"var(--red)", fontSize:"1.1rem" }}>{results.length.toLocaleString()}</span> {results.length===1?"book":"books"} — {ALL.length.toLocaleString()} total comics, {DATA3.boxes.length} boxes</>}
           </div>
           <div style={{ display:"flex", gap:6 }}>
             {(["list","card"] as const).map(v=>(
@@ -283,7 +283,7 @@ export default function Everything() {
             Search Everything
           </div>
           <div style={{ fontSize:"0.9rem", lineHeight:1.7 }}>
-            1,793 comics across 16 boxes — all in one search.<br />
+            {ALL.length.toLocaleString()} comics across {DATA3.boxes.length} boxes — all in one search.<br />
             Search by title, writer, artist, cover artist, signer, key reason, first appearance, arc, or box.
           </div>
           <div style={{ display:"flex", gap:8, justifyContent:"center", flexWrap:"wrap", marginTop:20 }}>
