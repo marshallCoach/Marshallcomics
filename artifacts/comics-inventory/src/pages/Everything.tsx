@@ -3,7 +3,7 @@ import { DATA3 } from "@/data/data3";
 import { SortableTable, ColDef } from "@/components/SortableTable";
 import { Paginator } from "@/components/Paginator";
 
-const CARD_PAGE = 48;
+const CARD_PAGE = 100;
 
 const ALL = DATA3.comics;
 
@@ -300,7 +300,7 @@ export default function Everything({ initBox }: { initBox?: string }) {
 
       {/* Results — list */}
       {searched && results.length > 0 && view === "list" && (
-        <SortableTable rows={results} cols={COLS} rowKey={(_r,i)=>String(i)} pageSize={50} defaultSortKey="box" expandCell={c => (
+        <SortableTable rows={results} cols={COLS} rowKey={(_r,i)=>String(i)} pageSize={100} defaultSortKey="box" expandCell={c => (
           <div>
             <div style={{ display:"flex", gap:24, flexWrap:"wrap" }}>
               {c.Arc       && <div className="dr"><span className="dl">Arc</span><span className="dv">{c.Arc}</span></div>}

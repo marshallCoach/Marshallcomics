@@ -3,7 +3,7 @@ import { DATA3 } from "@/data/data3";
 import { SortableTable, ColDef } from "@/components/SortableTable";
 import { Paginator } from "@/components/Paginator";
 
-const CARD_PAGE_SIZE = 48;
+const CARD_PAGE_SIZE = 100;
 
 const allComics  = DATA3.comics;
 const comics     = allComics.filter(c =>
