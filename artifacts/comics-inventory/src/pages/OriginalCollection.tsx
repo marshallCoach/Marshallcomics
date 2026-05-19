@@ -5,7 +5,11 @@ import { Paginator } from "@/components/Paginator";
 
 const CARD_PAGE_SIZE = 48;
 
-const comics = DATA3.comics;
+const allComics  = DATA3.comics;
+const comics     = allComics.filter(c =>
+  (c.Key    || "").toUpperCase() === "YES" ||
+  (c.Signed || "").toUpperCase() === "YES"
+);
 const PUBLISHERS = [...new Set(comics.map(c => c.Publisher).filter(Boolean))].sort();
 const ERAS       = [...new Set(comics.map(c => c.Era).filter(Boolean))].sort();
 const PLATFORMS  = [...new Set(comics.map(c => c.Platform).filter(Boolean))].sort();
@@ -93,12 +97,10 @@ export default function OriginalCollection() {
   const [keyOnly,  setKeyOnly]  = useState("");
   const [cgcOnly,  setCgcOnly]  = useState("");
   const [view,     setView]     = useState<"card" | "list">("card");
-  const [hasSearched, setHasSearched] = useState(false);
   const [open,     setOpen]     = useState<Set<number>>(new Set());
   const [cardPage, setCardPage] = useState(1);
 
   const results = useMemo(() => {
-    if (!hasSearched) return [];
     const ql = q.toLowerCase();
     return comics.filter(c => {
       if (ql && ![c.Title, c.Writer, c.Artist, c.Key_Why, c.First_App, c.Signed_By, c.Arc, c.Publisher, c.Whatnot_Category].join(" ").toLowerCase().includes(ql)) return false;
@@ -110,11 +112,10 @@ export default function OriginalCollection() {
       if (cgcOnly  && (c.CGC_Worth || "").toUpperCase() !== cgcOnly) return false;
       return true;
     });
-  }, [q, pub, era, platform, signed, keyOnly, cgcOnly, hasSearched]);
+  }, [q, pub, era, platform, signed, keyOnly, cgcOnly]);
 
-  const runSearch  = () => { setHasSearched(true); setOpen(new Set()); setCardPage(1); };
-  const clearResults = () => {
-    setHasSearched(false); setOpen(new Set());
+  const clearFilters = () => {
+    setOpen(new Set()); setCardPage(1);
     setQ(""); setPub(""); setEra(""); setPlatform(""); setSigned(""); setKeyOnly(""); setCgcOnly("");
   };
 
@@ -131,7 +132,7 @@ export default function OriginalCollection() {
           placeholder="Search title, writer, character, signer…"
           value={q}
           onChange={e => setQ(e.target.value)}
-          onKeyDown={e => e.key === "Enter" && runSearch()}
+          onKeyDown={e => e.key === "Enter" && setCardPage(1)}
         />
         <select value={pub} onChange={e => setPub(e.target.value)}>
           <option value="">All Publishers</option>
@@ -157,34 +158,23 @@ export default function OriginalCollection() {
           <option value="">All / CGC</option>
           <option value="YES">CGC Candidates</option>
         </select>
-        <button className="clear-btn" onClick={runSearch}>Search</button>
-        {hasSearched && <button className="clear-results-btn" onClick={clearResults}>✕ Clear Results</button>}
+        <button className="clear-results-btn" onClick={clearFilters}>✕ Clear</button>
       </div>
 
-      {hasSearched && (
-        <div className="results-bar">
-          <span>{results.length} of {comics.length} books</span>
-          <div style={{ display:"flex", alignItems:"center", gap:10 }}>
-            <span className="results-hint">Click column headers to sort · Drag edges to resize</span>
-            <div className="view-toggle">
-              <button className={`view-toggle-btn${view==="list"?" active":""}`} onClick={()=>setView("list")}>≡ List</button>
-              <button className={`view-toggle-btn${view==="card"?" active":""}`} onClick={()=>setView("card")}>⊞ Cards</button>
-            </div>
+      <div className="results-bar">
+        <span>{results.length} of {comics.length} key &amp; signed books</span>
+        <div style={{ display:"flex", alignItems:"center", gap:10 }}>
+          <span className="results-hint">Click column headers to sort · Drag edges to resize</span>
+          <div className="view-toggle">
+            <button className={`view-toggle-btn${view==="list"?" active":""}`} onClick={()=>setView("list")}>≡ List</button>
+            <button className={`view-toggle-btn${view==="card"?" active":""}`} onClick={()=>setView("card")}>⊞ Cards</button>
           </div>
         </div>
-      )}
+      </div>
 
-      {!hasSearched && (
-        <div className="blank-state">
-          <div className="blank-state-icon">📦</div>
-          <div className="blank-state-title">Sales Inventory — {comics.length.toLocaleString()} Books</div>
-          <div className="blank-state-sub">Search by title, writer, artist, platform, or character. Filter keys, signed books, or CGC candidates.</div>
-        </div>
-      )}
+      {results.length === 0 && <div className="no-res">No books match your filters</div>}
 
-      {hasSearched && results.length === 0 && <div className="no-res">No books match your filters</div>}
-
-      {hasSearched && results.length > 0 && view === "card" && (
+      {results.length > 0 && view === "card" && (
         <div>
           <div className="card-grid">
             {cardSlice.map((c, i) => {
@@ -227,7 +217,7 @@ export default function OriginalCollection() {
         </div>
       )}
 
-      {hasSearched && results.length > 0 && view === "list" && (
+      {results.length > 0 && view === "list" && (
         <div className="list-table">
           <SortableTable
             cols={LIST_COLS}
