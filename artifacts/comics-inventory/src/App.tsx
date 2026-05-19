@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { DATA3 } from "@/data/data3";
 import OriginalCollection from "@/pages/OriginalCollection";
-import AllBoxes from "@/pages/AllBoxes";
 import BoxKeys from "@/pages/BoxKeys";
 import Calendar from "@/pages/Calendar";
 import ShowPlanner from "@/pages/ShowPlanner";
@@ -18,7 +17,6 @@ const NAV = [
     tabs: [
       { id: "summary",    label: "📊 Summary" },
       { id: "everything", label: "🔍 Everything" },
-      { id: "boxes",      label: "🗃️ All Boxes" },
       { id: "collection", label: "📦 Sales Inventory" },
       { id: "boxkeys",    label: "🔑 Box Keys" },
     ],
@@ -156,7 +154,6 @@ export default function App() {
       {/* PAGES */}
       {activeTab === "summary"     && <Summary />}
       {activeTab === "everything"  && <Everything />}
-      {activeTab === "boxes"       && <AllBoxes />}
       {activeTab === "collection"  && <OriginalCollection />}
       {activeTab === "boxkeys"     && <BoxKeys />}
       {activeTab === "calendar"    && <Calendar />}
