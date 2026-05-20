@@ -82,20 +82,20 @@ const titleMap = countBy(comics, c => c.Title);
 const signerMap = countBy(signed, c => c.Signed_By);
 
 // Character families
-const FAMILIES: { name: string; keywords: string[]; color: string }[] = [
-  { name:"Batman Family",       keywords:["Batman","Nightwing","Robin","Batgirl","Red Hood","Batwoman","Catwoman","Joker","Harley Quinn","Gotham","Batwing","Azrael","Oracle","Commissioner"], color:"#1d6fa4" },
-  { name:"Superman Family",     keywords:["Superman","Supergirl","Superboy","Action Comics","Man of Steel","Lois Lane","Metropolis","Mon-El","Krypton"], color:"#dc2626" },
-  { name:"Spider-Man Family",   keywords:["Spider-Man","Spider Man","Amazing Spider","Spectacular Spider","Web of Spider","Venom","Carnage","Miles Morales","Spider-Gwen","Silk","Spider-Woman","Scarlet Spider"], color:"#9333ea" },
-  { name:"X-Men / Mutants",     keywords:["X-Men","Uncanny X","New Mutants","X-Force","X-Factor","Excalibur","Wolverine","Cyclops","Storm","Cable","Deadpool","Gambit","Psylocke","Jubilee","Generation X","Exiles","Weapon X","X-23","Marauders"], color:"#f59e0b" },
-  { name:"Avengers Family",     keywords:["Avengers","Captain America","Iron Man","Thor","Hulk","Black Widow","Hawkeye","Ant-Man","Vision","Scarlet Witch","Mockingbird","War Machine","Rescue","Mighty Avengers","New Avengers","Secret Avengers","West Coast"], color:"#16a34a" },
-  { name:"Black Panther / BP",  keywords:["Black Panther","Wakanda","Shuri","Jungle Action"], color:"#854d0e" },
-  { name:"Green Lantern Corps", keywords:["Green Lantern","GL Corps","Lantern"], color:"#22c55e" },
-  { name:"Flash Family",        keywords:["The Flash","Kid Flash","Impulse","Jay Garrick","Barry Allen","Wally West"], color:"#ef4444" },
-  { name:"Justice League",      keywords:["Justice League","JLA","JLI","Justice Society","JSA","Stormwatch"], color:"#3b82f6" },
-  { name:"Teen Titans / Titans",keywords:["Teen Titans","Titans","Nightwing","Young Justice"], color:"#8b5cf6" },
-  { name:"Fantastic Four",      keywords:["Fantastic Four","FF #","Mister Fantastic","Thing","Human Torch","Invisible Woman","Silver Surfer"], color:"#f97316" },
-  { name:"Daredevil",           keywords:["Daredevil","Matt Murdock","Kingpin","Elektra"], color:"#b91c1c" },
-  { name:"Wonder Woman",        keywords:["Wonder Woman","Diana","Amazons","Paradise Island","Themyscira"], color:"#db2777" },
+const FAMILIES: { name: string; keywords: string[]; color: string; emoji: string }[] = [
+  { name:"Batman Family",       keywords:["Batman","Nightwing","Robin","Batgirl","Red Hood","Batwoman","Catwoman","Joker","Harley Quinn","Gotham","Batwing","Azrael","Oracle","Commissioner"], color:"#1d6fa4", emoji:"🦇" },
+  { name:"Superman Family",     keywords:["Superman","Supergirl","Superboy","Action Comics","Man of Steel","Lois Lane","Metropolis","Mon-El","Krypton"], color:"#dc2626", emoji:"🦸" },
+  { name:"Spider-Man Family",   keywords:["Spider-Man","Spider Man","Amazing Spider","Spectacular Spider","Web of Spider","Venom","Carnage","Miles Morales","Spider-Gwen","Silk","Spider-Woman","Scarlet Spider"], color:"#9333ea", emoji:"🕷️" },
+  { name:"X-Men / Mutants",     keywords:["X-Men","Uncanny X","New Mutants","X-Force","X-Factor","Excalibur","Wolverine","Cyclops","Storm","Cable","Deadpool","Gambit","Psylocke","Jubilee","Generation X","Exiles","Weapon X","X-23","Marauders"], color:"#f59e0b", emoji:"⚡" },
+  { name:"Avengers Family",     keywords:["Avengers","Captain America","Iron Man","Thor","Hulk","Black Widow","Hawkeye","Ant-Man","Vision","Scarlet Witch","Mockingbird","War Machine","Rescue","Mighty Avengers","New Avengers","Secret Avengers","West Coast"], color:"#16a34a", emoji:"🛡️" },
+  { name:"Black Panther / BP",  keywords:["Black Panther","Wakanda","Shuri","Jungle Action"], color:"#854d0e", emoji:"🐾" },
+  { name:"Green Lantern Corps", keywords:["Green Lantern","GL Corps","Lantern"], color:"#22c55e", emoji:"💚" },
+  { name:"Flash Family",        keywords:["The Flash","Kid Flash","Impulse","Jay Garrick","Barry Allen","Wally West"], color:"#ef4444", emoji:"💨" },
+  { name:"Justice League",      keywords:["Justice League","JLA","JLI","Justice Society","JSA","Stormwatch"], color:"#3b82f6", emoji:"⚖️" },
+  { name:"Teen Titans / Titans",keywords:["Teen Titans","Titans","Nightwing","Young Justice"], color:"#8b5cf6", emoji:"🌟" },
+  { name:"Fantastic Four",      keywords:["Fantastic Four","FF #","Mister Fantastic","Thing","Human Torch","Invisible Woman","Silver Surfer"], color:"#f97316", emoji:"4️⃣" },
+  { name:"Daredevil",           keywords:["Daredevil","Matt Murdock","Kingpin","Elektra"], color:"#b91c1c", emoji:"⚖️" },
+  { name:"Wonder Woman",        keywords:["Wonder Woman","Diana","Amazons","Paradise Island","Themyscira"], color:"#db2777", emoji:"👑" },
 ];
 
 function classifyFamily(c: { Title: string; Writer: string; Arc: string }) {
@@ -426,9 +426,11 @@ export default function CollectionStats() {
             </div>
             <div style={{ background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:6, padding:"16px" }}>
               <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem", letterSpacing:"2px", color:"var(--red)", marginBottom:12 }}>FAMILY COUNT</div>
-              {familyData.slice(0, 14).map(({ name, count, color }, i) => (
-                <LeaderRow key={name} rank={i+1} name={name} count={count} total={familyData[0].count} color={color} />
-              ))}
+              {familyData.slice(0, 14).map(({ name, count, color }, i) => {
+                const fam = FAMILIES.find(f => f.name === name);
+                const label = fam ? `${fam.emoji} ${name}` : name;
+                return <LeaderRow key={name} rank={i+1} name={label} count={count} total={familyData[0].count} color={color} />;
+              })}
             </div>
           </div>
 
