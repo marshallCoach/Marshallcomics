@@ -29,7 +29,7 @@ const signed   = comics.filter(c => (c.Signed || "").toUpperCase() === "YES");
 const annuals  = comics.filter(c => c.Title.toLowerCase().includes("annual"));
 const specials = comics.filter(c =>
   c.Title.toLowerCase().includes("special") ||
-  (c.Whatnot_Category || "").toLowerCase().includes("one-shot") ||
+  (c.Category || "").toLowerCase().includes("one-shot") ||
   c.Title.toLowerCase().includes("one-shot")
 );
 
