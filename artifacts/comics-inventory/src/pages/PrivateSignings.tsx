@@ -1,7 +1,20 @@
 import { useState } from "react";
-import { DATA3 } from "@/data/data3";
 
-const signings = DATA3.cgc_signings;
+interface Signing { Status: string; Creator: string; Deadline: string; Fee: string; Books: string; Strategy: string; ExpectedValue: string; }
+
+const signings: Signing[] = [
+  { Status:"🚨 URGENT",    Creator:"Jorge Jiménez",               Deadline:"Jun 5, 2026 ⚠️",  Fee:"$80–100",      Books:"Batman #125 (Failsafe Part 1 — Jiménez drew it). Press FIRST, then submit.",  Strategy:"Press immediately. Submit CGC Express. Green Qualified label (already signed — mailed to CGC × JSA).",  ExpectedValue:"$120–$200 Green Qualified" },
+  { Status:"⭐⭐ OPEN NOW", Creator:"Geoff Johns + Jason Fabok",    Deadline:"Jun 26, 2026",    Fee:"$150–200",     Books:"Justice League #21 (Johns + Fabok). JSA books with existing unwitnessed Johns sigs.",  Strategy:"Johns sig adds to existing unwitnessed VA sigs = yellow/green combo label. Pull books, sleeve, submit.",  ExpectedValue:"$150–$300 Green or combo label" },
+  { Status:"⭐⭐ OPEN NOW", Creator:"Roy Thomas",                   Deadline:"Jul 10, 2026",    Fee:"$90/book",     Books:"Avengers #60, #87, King-Size #2, Marvel Premiere #1, Saga Human Torch #3. Submit all 5.",  Strategy:"Thomas co-created Wolverine, Vision, Carol Danvers, Adam Warlock. High ROI. Submit same batch as Mayhew.",  ExpectedValue:"$820–$1,630 across all 5 books" },
+  { Status:"⭐ OPEN",       Creator:"Mike Mayhew",                 Deadline:"Jul 10, 2026",    Fee:"$80",          Books:"ASM #50 Alex Ross Timeless Virgin cover — already signed. Submit for Green Qualified.",  Strategy:"Submit via CGC × JSA Green Qualified path. Same deadline as Roy Thomas — combine shipping.",  ExpectedValue:"$100–$200 Green Qualified" },
+  { Status:"⭐ OPEN",       Creator:"Chris Claremont (Terrificon)", Deadline:"Aug 7–9, 2026",   Fee:"Con fee",      Books:"Wolverine #8 (1982 — MUST STAY UNSIGNED). Submit for Yellow SS on-site at Terrificon.",  Strategy:"Bring UNSIGNED to Terrificon for Yellow SS label. Priority #1. Press before con. $500+ as Yellow SS CGC 9.8.",  ExpectedValue:"$500+ Yellow SS CGC 9.8" },
+  { Status:"⭐ OPEN",       Creator:"Jim Lee (Terrificon — SAT ONLY)", Deadline:"Aug 8, 2026", Fee:"Con fee",      Books:"WildCATs #2, WildCATs #11 (re-sign for combo label). Superman Unchained #1, Batman Europa #1.",  Strategy:"Jim Lee is SATURDAY ONLY. Arrive 10am. Already-signed WildCATs get witnessed re-sign for combo label.",  ExpectedValue:"$200–$500 across all Jim Lee books" },
+  { Status:"🟡 WATCH",      Creator:"Stan Lee (PSA/DNA — NYCC)",    Deadline:"Oct 8–11, 2026",  Fee:"PSA table fee", Books:"Black Panther #513 (Stan Lee signed — NEVER PRESS). Bring in hard case for PSA/DNA authentication.",  Strategy:"Authenticate via PSA/DNA at NYCC first. NEVER press or submit to CGC before authentication. Book PSA/DNA appointment.",  ExpectedValue:"$800–$1,500 authenticated" },
+  { Status:"🟡 WATCH",      Creator:"Skottie Young",                Deadline:"TBD — monitor",   Fee:"TBD",          Books:"Storm #1 (already signed by SY). FF connecting set #1–5 (for Yellow SS as a set at con).",  Strategy:"Already has SY sig on Storm #1. Monitor for CGC SS private signing. FF set could be $300+ as witnessed SS set.",  ExpectedValue:"$150–$400 depending on path" },
+  { Status:"🔴 CLOSED",     Creator:"Tom King",                    Deadline:"Closed",          Fee:"N/A",          Books:"Vision #1, Batman #1 (Snyder/Capullo), Heroes in Crisis #1 — all already signed.",  Strategy:"Already signed. Submit via CGC × JSA Green Qualified path in the next press batch. Don't miss Terrificon batch.",  ExpectedValue:"$150–$350 Green Qualified each" },
+  { Status:"🔴 CLOSED",     Creator:"Hayley Atwell",               Deadline:"Closed",          Fee:"N/A",          Books:"Captain Carter #1 (personalized 'To Robert' by Atwell at private signing).",  Strategy:"Personalized = lower CGC value but huge emotional/story value for Whatnot. Lead Show 1 with the story.",  ExpectedValue:"$80–$150 personalized (story value = priceless)" },
+  { Status:"🔴 CLOSED",     Creator:"Mark Bagley + Saviuk",        Deadline:"Closed",          Fee:"N/A",          Books:"ASM #361 (1st Carnage — dual signed Bagley + Sharen). New Warriors #1. Mockingbird #8.",  Strategy:"Submit all three in the same press batch. Green Qualified. ASM #361 is the anchor.",  ExpectedValue:"$200–$500 across all Bagley books" },
+];
 
 function statusColor(status: string) {
   if (status.startsWith("🚨")) return "#dc2626";

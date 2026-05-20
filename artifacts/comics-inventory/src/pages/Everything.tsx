@@ -1,12 +1,10 @@
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo, useCallback, useEffect } from "react";
 import { DATA3 } from "@/data/data3";
 import { SortableTable, ColDef } from "@/components/SortableTable";
 import { Paginator } from "@/components/Paginator";
 
-const CARD_PAGE = 100;
-
+const CARD_PAGE = 80;
 const ALL = DATA3.comics;
-
 type Comic = (typeof ALL)[number];
 
 const PUBLISHERS = [...new Set(ALL.map(c => c.Publisher).filter(Boolean))].sort();
@@ -14,13 +12,55 @@ const ERAS       = [...new Set(ALL.map(c => c.Era).filter(Boolean))].sort();
 const PLATFORMS  = [...new Set(ALL.map(c => c.Platform).filter(Boolean))].sort();
 const BOXES      = [...new Set(ALL.map(c => c.Box).filter(Boolean))].sort((a,b)=>Number(a)-Number(b));
 
+const CHAR_FAMILIES = [
+  { name:"Batman Family",   kw:["Batman","Nightwing","Robin","Batgirl","Red Hood","Batwoman","Catwoman","Joker","Harley Quinn","Gotham","Batwing"], emoji:"🦇" },
+  { name:"Superman Family", kw:["Superman","Supergirl","Superboy","Action Comics","Lois Lane","Man of Steel"], emoji:"🦸" },
+  { name:"Spider-Man",      kw:["Spider-Man","Spider Man","Amazing Spider","Spectacular Spider","Venom","Carnage","Miles Morales","Spider-Gwen","Silk"], emoji:"🕷️" },
+  { name:"X-Men/Mutants",   kw:["X-Men","Uncanny X","New Mutants","X-Force","X-Factor","Excalibur","Wolverine","Deadpool","Cable","Gambit","Krakoa","HoX","PoX"], emoji:"⚡" },
+  { name:"Avengers",        kw:["Avengers","Captain America","Iron Man","Thor","Hulk","Black Widow","Hawkeye","Ant-Man","Vision","Scarlet Witch","West Coast"], emoji:"🛡️" },
+  { name:"Black Panther",   kw:["Black Panther","Wakanda","Jungle Action","Shuri"], emoji:"🐾" },
+  { name:"Justice League",  kw:["Justice League","JLA","Justice Society","JSA"], emoji:"⚖️" },
+  { name:"Green Lantern",   kw:["Green Lantern","GL Corps"], emoji:"💚" },
+  { name:"Flash Family",    kw:["The Flash","Kid Flash","Impulse"], emoji:"💨" },
+  { name:"Titans",          kw:["Teen Titans","Titans","Young Justice"], emoji:"🌟" },
+  { name:"Captain America", kw:["Captain America","Sam Wilson: Cap","Steve Rogers"], emoji:"🗡️" },
+  { name:"Fantastic Four",  kw:["Fantastic Four","Silver Surfer"], emoji:"4️⃣" },
+];
+
+function getFamily(c: Comic): string {
+  const hay = `${c.Title} ${c.Arc} ${c.First_App}`.toLowerCase();
+  for (const f of CHAR_FAMILIES) {
+    if (f.kw.some(k => hay.includes(k.toLowerCase()))) return f.name;
+  }
+  return "";
+}
+
+function normPub(p: string) {
+  const u = (p || "").toUpperCase();
+  if (u === "DC" || u === "DC COMICS") return "DC";
+  if (u === "MARVEL") return "Marvel";
+  return p || "Other";
+}
+
+function pubColor(p: string) {
+  const n = normPub(p);
+  if (n === "DC")    return "#1d6fa4";
+  if (n === "Marvel") return "#c8102e";
+  const u = (p || "").toUpperCase();
+  if (u === "IMAGE") return "#f97316";
+  if (u === "IDW")   return "#22c55e";
+  if (u.includes("DARK HORSE")) return "#7c3aed";
+  if (u === "VALIANT") return "#8b2be2";
+  return "#6b7280";
+}
+
 function parseVal(v: string | undefined | null) {
   return parseFloat(String(v || "").replace(/[^0-9.]/g, "") || "0");
 }
 
 function platClass(p: string) {
   const u = (p || "").toUpperCase();
-  if (u === "WHATNOT") return "bwn";
+  if (u.includes("WHATNOT")) return "bwn";
   if (u === "EBAY")    return "beb";
   if (u.includes("HERITAGE")) return "bhe";
   return "bb";
@@ -28,105 +68,112 @@ function platClass(p: string) {
 
 function BoxBadge({ box }: { box: string }) {
   return (
-    <span style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px",
+    <span style={{ fontSize:"0.6rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px",
       background:"#7a5c3a18", border:"1.5px solid #7a5c3a", color:"#7a5c3a",
       borderRadius:3, padding:"1px 7px", whiteSpace:"nowrap" }}>Box {box}</span>
   );
 }
 
+function CoverThumb({ c }: { c: Comic }) {
+  const color = pubColor(c.Publisher);
+  const pub = normPub(c.Publisher);
+  const abbr = pub === "DC" ? "DC" : pub === "Marvel" ? "M" : pub === "Image" ? "IM" : (pub[0] || "?").toUpperCase();
+  const searchUrl = `https://comicvine.gamespot.com/search/?q=${encodeURIComponent(c.Title + " " + c.Issue)}`;
+  const isKey = c.Key?.toUpperCase() === "YES";
+  return (
+    <a
+      href={searchUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      title={`View cover for ${c.Title} ${c.Issue} on Comic Vine`}
+      style={{
+        display:"block", width:56, flexShrink:0, aspectRatio:"2/3",
+        background:`linear-gradient(160deg, ${color}25, ${color}55)`,
+        border:`1.5px solid ${color}50`,
+        borderTop: isKey ? `3px solid #d4a800` : `1.5px solid ${color}50`,
+        borderRadius:4, overflow:"hidden", position:"relative", textDecoration:"none",
+        transition:"opacity 0.15s",
+      }}
+    >
+      <div style={{ position:"absolute", inset:0, display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", padding:4, gap:2 }}>
+        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.2rem", color, lineHeight:1, opacity:0.55 }}>{abbr}</div>
+        <div style={{ fontSize:"0.47rem", color:"var(--text)", textAlign:"center", lineHeight:1.25, fontWeight:600, wordBreak:"break-word", maxWidth:"100%" }}>
+          {c.Title.slice(0, 22)}
+        </div>
+        {(c.Year||"").trim() && <div style={{ fontSize:"0.44rem", color:"var(--muted2)" }}>{c.Year}</div>}
+      </div>
+      {isKey && (
+        <div style={{ position:"absolute", bottom:0, left:0, right:0, background:"#d4a800", color:"#fff", fontSize:"0.45rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", textAlign:"center", padding:"1px 0" }}>KEY</div>
+      )}
+    </a>
+  );
+}
+
 const COLS: ColDef<Comic>[] = [
-  {
-    key:"box", label:"Box", defaultWidth:70,
-    sort:(a,b)=>Number(a.Box)-Number(b.Box),
-    cell:r=><BoxBadge box={r.Box} />,
-  },
-  {
-    key:"title", label:"Title", defaultWidth:220,
-    sort:(a,b)=>a.Title.localeCompare(b.Title),
-    cell:r=><span className="lt-title">{r.Title||"Untitled"}</span>,
-  },
-  {
-    key:"issue", label:"#", defaultWidth:55,
-    sort:(a,b)=>parseVal(a.Issue)-parseVal(b.Issue),
-    cell:r=><span className="lt-sub">{r.Issue}</span>,
-  },
-  {
-    key:"publisher", label:"Publisher", defaultWidth:100,
-    sort:(a,b)=>a.Publisher.localeCompare(b.Publisher),
-    cell:r=><span className="lt-sub">{r.Publisher}</span>,
-  },
-  {
-    key:"writer", label:"Writer", defaultWidth:130,
-    sort:(a,b)=>a.Writer.localeCompare(b.Writer),
-    cell:r=><span className="lt-sub">{r.Writer||"—"}</span>,
-  },
-  {
-    key:"artist", label:"Artist", defaultWidth:130,
-    sort:(a,b)=>a.Artist.localeCompare(b.Artist),
-    cell:r=><span className="lt-sub">{r.Artist||"—"}</span>,
-  },
-  {
-    key:"key", label:"Key", defaultWidth:55,
-    sort:(a,b)=>a.Key.localeCompare(b.Key),
-    cell:r=>r.Key.toUpperCase()==="YES"
-      ?<span className="badge bkey" style={{fontSize:"0.6rem"}}>KEY</span>:null,
-  },
-  {
-    key:"nm", label:"NM Value", defaultWidth:90,
-    sort:(a,b)=>parseVal(a.Value_NM)-parseVal(b.Value_NM),
-    cell:r=><span className="lt-val">{r.Value_NM||"—"}</span>,
-  },
-  {
-    key:"platform", label:"Platform", defaultWidth:90,
-    sort:(a,b)=>a.Platform.localeCompare(b.Platform),
-    cell:r=>r.Platform
-      ?<span className={`badge ${platClass(r.Platform)}`} style={{fontSize:"0.6rem"}}>{r.Platform}</span>
-      :null,
-  },
-  {
-    key:"year", label:"Year", defaultWidth:65,
-    sort:(a,b)=>parseVal(a.Year)-parseVal(b.Year),
-    cell:r=><span className="lt-sub">{r.Year}</span>,
-  },
-  {
-    key:"signed", label:"Signed", defaultWidth:90,
-    sort:(a,b)=>a.Signed.localeCompare(b.Signed),
-    cell:r=>r.Signed.toUpperCase()==="YES"
-      ?<span className="lt-sub" style={{color:"var(--gold)"}}>✍ {r.Signed_By||"Yes"}</span>:null,
-  },
+  { key:"box",       label:"Box",       defaultWidth:70,  sort:(a,b)=>Number(a.Box)-Number(b.Box), cell:r=><BoxBadge box={r.Box} /> },
+  { key:"title",     label:"Title",     defaultWidth:220, sort:(a,b)=>a.Title.localeCompare(b.Title), cell:r=><span className="lt-title">{r.Title||"Untitled"}</span> },
+  { key:"issue",     label:"#",         defaultWidth:55,  sort:(a,b)=>parseVal(a.Issue)-parseVal(b.Issue), cell:r=><span className="lt-sub">{r.Issue}</span> },
+  { key:"publisher", label:"Publisher", defaultWidth:100, sort:(a,b)=>a.Publisher.localeCompare(b.Publisher), cell:r=><span className="lt-sub">{r.Publisher}</span> },
+  { key:"writer",    label:"Writer",    defaultWidth:130, sort:(a,b)=>a.Writer.localeCompare(b.Writer), cell:r=><span className="lt-sub">{r.Writer||"—"}</span> },
+  { key:"artist",    label:"Artist",    defaultWidth:130, sort:(a,b)=>a.Artist.localeCompare(b.Artist), cell:r=><span className="lt-sub">{r.Artist||"—"}</span> },
+  { key:"key",       label:"Key",       defaultWidth:55,  sort:(a,b)=>a.Key.localeCompare(b.Key), cell:r=>r.Key?.toUpperCase()==="YES"?<span className="badge bkey" style={{fontSize:"0.6rem"}}>KEY</span>:null },
+  { key:"nm",        label:"NM Value",  defaultWidth:90,  sort:(a,b)=>parseVal(a.Value_NM)-parseVal(b.Value_NM), cell:r=><span className="lt-val">{r.Value_NM||"—"}</span> },
+  { key:"platform",  label:"Platform",  defaultWidth:90,  sort:(a,b)=>a.Platform.localeCompare(b.Platform), cell:r=>r.Platform?<span className={`badge ${platClass(r.Platform)}`} style={{fontSize:"0.6rem"}}>{r.Platform}</span>:null },
+  { key:"year",      label:"Year",      defaultWidth:65,  sort:(a,b)=>parseVal(a.Year)-parseVal(b.Year), cell:r=><span className="lt-sub">{r.Year}</span> },
+  { key:"signed",    label:"Signed",    defaultWidth:90,  sort:(a,b)=>a.Signed.localeCompare(b.Signed), cell:r=>r.Signed?.toUpperCase()==="YES"?<span className="lt-sub" style={{color:"var(--gold)"}}>✍ {r.Signed_By||"Yes"}</span>:null },
 ];
 
-export default function Everything({ initBox }: { initBox?: string }) {
-  const [query,      setQuery]     = useState("");
-  const [publisher,  setPub]       = useState("");
-  const [era,        setEra]       = useState("");
-  const [platform,   setPlat]      = useState("");
-  const [boxFilter,  setBoxFilter] = useState(initBox || "");
-  const [keysOnly,   setKeysOnly]  = useState(false);
-  const [signedOnly, setSignedOnly]= useState(false);
-  const [view,       setView]      = useState<"list"|"card">("list");
-  const [searched,   setSearched]  = useState(!!initBox);
-  const [cardPage,   setCardPage]  = useState(1);
+export default function Everything({
+  initBox, initQuery, initPublisher, initKeysOnly, initSignedOnly,
+}: {
+  initBox?: string; initQuery?: string; initPublisher?: string;
+  initKeysOnly?: boolean; initSignedOnly?: boolean;
+}) {
+  const [query,       setQuery]      = useState(initQuery    || "");
+  const [publisher,   setPub]        = useState(initPublisher || "");
+  const [era,         setEra]        = useState("");
+  const [platform,    setPlat]       = useState("");
+  const [boxFilter,   setBoxFilter]  = useState(initBox      || "");
+  const [keysOnly,    setKeysOnly]   = useState(!!initKeysOnly);
+  const [signedOnly,  setSignedOnly] = useState(!!initSignedOnly);
+  const [familyFilter,setFamily]     = useState("");
+  const [view,        setView]       = useState<"list"|"card">("list");
+  const [searched,    setSearched]   = useState(!!(initBox || initQuery || initPublisher || initKeysOnly || initSignedOnly));
+  const [cardPage,    setCardPage]   = useState(1);
+  const [showFamilies,setShowFams]   = useState(false);
+
+  // When parent re-navigates with new params, re-init
+  useEffect(() => {
+    if (initQuery !== undefined)    setQuery(initQuery || "");
+    if (initPublisher !== undefined) setPub(initPublisher || "");
+    if (initBox !== undefined)      setBoxFilter(initBox || "");
+    setKeysOnly(!!initKeysOnly);
+    setSignedOnly(!!initSignedOnly);
+    if (initBox || initQuery || initPublisher || initKeysOnly || initSignedOnly) {
+      setSearched(true); setCardPage(1);
+    }
+  }, [initBox, initQuery, initPublisher, initKeysOnly, initSignedOnly]);
 
   const results = useMemo(() => {
     if (!searched) return [];
     const q = query.trim().toLowerCase();
     return ALL.filter(c => {
-      if (keysOnly   && c.Key.toUpperCase()    !== "YES") return false;
-      if (signedOnly && c.Signed.toUpperCase() !== "YES") return false;
-      if (publisher  && c.Publisher !== publisher)         return false;
-      if (era        && c.Era !== era)                     return false;
-      if (platform   && c.Platform !== platform)           return false;
-      if (boxFilter  && c.Box !== boxFilter)               return false;
+      if (keysOnly   && (c.Key    || "").toUpperCase() !== "YES") return false;
+      if (signedOnly && (c.Signed || "").toUpperCase() !== "YES") return false;
+      if (publisher  && c.Publisher !== publisher)  return false;
+      if (era        && c.Era !== era)              return false;
+      if (platform   && c.Platform !== platform)    return false;
+      if (boxFilter  && c.Box !== boxFilter)        return false;
+      if (familyFilter && getFamily(c) !== familyFilter) return false;
       if (!q) return true;
       return [
         c.Title, c.Issue, c.Publisher, c.Writer, c.Artist,
         c.Cover_Artist, c.Signed_By, c.Key_Why, c.First_App,
         c.Arc, c.Notes, c.Era, c.Universe, `box ${c.Box}`,
-        c.Whatnot_Pitch,
+        c.Whatnot_Pitch, c.Imprint, c.Terrificon,
       ].join(" ").toLowerCase().includes(q);
     });
-  }, [searched, query, publisher, era, platform, boxFilter, keysOnly, signedOnly]);
+  }, [searched, query, publisher, era, platform, boxFilter, keysOnly, signedOnly, familyFilter]);
 
   const cardSlice = useMemo(() => {
     const start = (cardPage - 1) * CARD_PAGE;
@@ -136,7 +183,7 @@ export default function Everything({ initBox }: { initBox?: string }) {
   const handleSearch = useCallback(() => { setSearched(true); setCardPage(1); }, []);
   const handleClear  = useCallback(() => {
     setQuery(""); setPub(""); setEra(""); setPlat(""); setBoxFilter("");
-    setKeysOnly(false); setSignedOnly(false);
+    setKeysOnly(false); setSignedOnly(false); setFamily("");
     setSearched(false); setCardPage(1);
   }, []);
 
@@ -154,51 +201,45 @@ export default function Everything({ initBox }: { initBox?: string }) {
     return Object.entries(counts).sort((a,b)=>b[1]-a[1]).slice(0,8).map(([a])=>a);
   }, [results, searched]);
 
-  const isCreatorSearch = query && results.some(c =>
-    c.Writer.toLowerCase().includes(query.toLowerCase()) ||
-    c.Artist.toLowerCase().includes(query.toLowerCase()) ||
-    c.Cover_Artist.toLowerCase().includes(query.toLowerCase())
+  const isCreatorSearch = searched && query && results.some(c =>
+    c.Writer?.toLowerCase().includes(query.toLowerCase()) ||
+    c.Artist?.toLowerCase().includes(query.toLowerCase())
   );
 
   return (
-    <div style={{ maxWidth:1400, margin:"0 auto", padding:"20px 16px 60px" }}>
+    <div style={{ maxWidth:1400, margin:"0 auto", padding:"16px 14px 60px" }}>
 
-      {/* Search bar */}
-      <div className="filters" style={{ borderRadius:8, marginBottom:16, padding:"16px 20px" }}>
+      {/* ─── Search bar ─── */}
+      <div className="filters" style={{ borderRadius:8, marginBottom:14, padding:"14px 18px" }}>
         <div style={{ display:"flex", gap:10, flexWrap:"wrap", alignItems:"flex-end" }}>
 
-          <div style={{ flex:"1 1 260px", display:"flex", flexDirection:"column", gap:4 }}>
-            <label style={{ fontSize:"0.65rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px", color:"var(--muted2)" }}>
-              Search — title, writer, artist, signer, key reason, 1st appearance, arc
-            </label>
+          <div style={{ flex:"1 1 240px", display:"flex", flexDirection:"column", gap:4 }}>
+            <label className="filter-label">Search — title, writer, artist, signer, key reason, 1st appearance, arc, notes</label>
             <div style={{ position:"relative" }}>
               <input
                 className="search-input"
                 value={query}
                 onChange={e=>setQuery(e.target.value)}
                 onKeyDown={e=>e.key==="Enter"&&handleSearch()}
-                placeholder="e.g. Tom King, Batman, Jim Lee, Miles Morales, Carnage…"
+                placeholder="e.g. Tom King, Damian Wayne, Jim Lee, Wolverine, Carnage, Krakoa…"
                 style={{ width:"100%", paddingRight:32 }}
               />
               {query && (
-                <button onClick={()=>setQuery("")} style={{
-                  position:"absolute", right:8, top:"50%", transform:"translateY(-50%)",
-                  background:"none", border:"none", cursor:"pointer", color:"var(--muted)", fontSize:"1rem", lineHeight:1,
-                }}>×</button>
+                <button onClick={()=>setQuery("")} style={{ position:"absolute", right:8, top:"50%", transform:"translateY(-50%)", background:"none", border:"none", cursor:"pointer", color:"var(--muted)", fontSize:"1rem" }}>×</button>
               )}
             </div>
           </div>
 
           <div style={{ display:"flex", gap:8, flexWrap:"wrap", alignItems:"flex-end" }}>
             {[
-              { label:"Box",       val:boxFilter, set:setBoxFilter, opts:BOXES     },
+              { label:"Box",       val:boxFilter, set:setBoxFilter, opts:BOXES      },
               { label:"Publisher", val:publisher,  set:setPub,       opts:PUBLISHERS },
               { label:"Platform",  val:platform,   set:setPlat,      opts:PLATFORMS  },
               { label:"Era",       val:era,        set:setEra,       opts:ERAS       },
             ].map(f=>(
               <div key={f.label} style={{ display:"flex", flexDirection:"column", gap:4 }}>
-                <label style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px", color:"var(--muted2)" }}>{f.label}</label>
-                <select className="filter-select" value={f.val} onChange={e=>f.set(e.target.value)} style={{ minWidth:100 }}>
+                <label className="filter-label">{f.label}</label>
+                <select className="filter-select" value={f.val} onChange={e=>f.set(e.target.value)} style={{ minWidth:90 }}>
                   <option value="">All</option>
                   {f.opts.map(o=><option key={o} value={o}>{f.label==="Box"?`Box ${o}`:o}</option>)}
                 </select>
@@ -207,46 +248,76 @@ export default function Everything({ initBox }: { initBox?: string }) {
           </div>
 
           <div style={{ display:"flex", flexDirection:"column", gap:4 }}>
-            <label style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px", color:"var(--muted2)" }}>Filter</label>
+            <label className="filter-label">Filter</label>
             <div style={{ display:"flex", gap:8 }}>
               <label className="toggle-pill">
-                <input type="checkbox" checked={keysOnly} onChange={e=>setKeysOnly(e.target.checked)} />
-                Keys Only
+                <input type="checkbox" checked={keysOnly} onChange={e=>setKeysOnly(e.target.checked)} />⭐ Keys
               </label>
               <label className="toggle-pill">
-                <input type="checkbox" checked={signedOnly} onChange={e=>setSignedOnly(e.target.checked)} />
-                Signed Only
+                <input type="checkbox" checked={signedOnly} onChange={e=>setSignedOnly(e.target.checked)} />✍ Signed
               </label>
             </div>
           </div>
 
           <div style={{ display:"flex", flexDirection:"column", gap:4 }}>
-            <label style={{ fontSize:"0.62rem", color:"transparent" }}>.</label>
+            <label className="filter-label" style={{ color:"transparent" }}>.</label>
             <div style={{ display:"flex", gap:8 }}>
               <button className="btn-search" onClick={handleSearch}>Search</button>
               {searched && <button className="btn-clear" onClick={handleClear}>Clear</button>}
             </div>
           </div>
         </div>
+
+        {/* Character family pills */}
+        <div style={{ marginTop:12, display:"flex", gap:6, flexWrap:"wrap", alignItems:"center" }}>
+          <button
+            onClick={() => setShowFams(!showFamilies)}
+            style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.7rem", letterSpacing:"1.5px", color:"var(--muted2)", background:"none", border:"1px solid var(--border)", borderRadius:4, padding:"3px 10px", cursor:"pointer" }}
+          >
+            {showFamilies ? "▲" : "▼"} Character Family
+          </button>
+          {showFamilies && (
+            <>
+              {familyFilter && (
+                <button onClick={() => setFamily("")} style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1px", color:"var(--red)", background:"rgba(200,16,46,0.08)", border:"1px solid var(--red)", borderRadius:12, padding:"3px 10px", cursor:"pointer" }}>
+                  ✕ {familyFilter}
+                </button>
+              )}
+              {CHAR_FAMILIES.map(f => (
+                <button
+                  key={f.name}
+                  onClick={() => { setFamily(f.name === familyFilter ? "" : f.name); setSearched(true); setCardPage(1); }}
+                  style={{
+                    fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1px",
+                    color: familyFilter === f.name ? "#fff" : "var(--muted2)",
+                    background: familyFilter === f.name ? "var(--red)" : "var(--surface)",
+                    border: `1px solid ${familyFilter === f.name ? "var(--red)" : "var(--border)"}`,
+                    borderRadius:12, padding:"3px 10px", cursor:"pointer", whiteSpace:"nowrap",
+                  }}
+                >
+                  {f.emoji} {f.name}
+                </button>
+              ))}
+            </>
+          )}
+        </div>
       </div>
 
       {/* Creator chips after search */}
       {searched && isCreatorSearch && (topWriters.length > 0 || topArtists.length > 0) && (
-        <div style={{ marginBottom:14, display:"flex", gap:6, flexWrap:"wrap", alignItems:"center" }}>
+        <div style={{ marginBottom:12, display:"flex", gap:6, flexWrap:"wrap", alignItems:"center" }}>
           {topWriters.length > 0 && <>
-            <span style={{ fontSize:"0.65rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", color:"var(--muted2)" }}>Writers:</span>
+            <span style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", color:"var(--muted2)" }}>Writers:</span>
             {topWriters.map(w=>(
-              <button key={w} onClick={()=>{ setQuery(w); setSearched(true); setCardPage(1); }}
-                style={{ background:"var(--surface)", border:"1px solid var(--border)", borderRadius:20,
-                  padding:"2px 10px", fontSize:"0.72rem", cursor:"pointer", color:"var(--text2)" }}>{w}</button>
+              <button key={w} onClick={()=>{ setQuery(w); handleSearch(); }}
+                style={{ background:"var(--surface)", border:"1px solid var(--border)", borderRadius:20, padding:"2px 10px", fontSize:"0.72rem", cursor:"pointer", color:"var(--text2)" }}>{w}</button>
             ))}
           </>}
           {topArtists.length > 0 && <>
-            <span style={{ fontSize:"0.65rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", color:"var(--muted2)", marginLeft:8 }}>Artists:</span>
+            <span style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", color:"var(--muted2)", marginLeft:8 }}>Artists:</span>
             {topArtists.map(a=>(
-              <button key={a} onClick={()=>{ setQuery(a); setSearched(true); setCardPage(1); }}
-                style={{ background:"var(--surface)", border:"1px solid var(--border)", borderRadius:20,
-                  padding:"2px 10px", fontSize:"0.72rem", cursor:"pointer", color:"var(--text2)" }}>{a}</button>
+              <button key={a} onClick={()=>{ setQuery(a); handleSearch(); }}
+                style={{ background:"var(--surface)", border:"1px solid var(--border)", borderRadius:20, padding:"2px 10px", fontSize:"0.72rem", cursor:"pointer", color:"var(--text2)" }}>{a}</button>
             ))}
           </>}
         </div>
@@ -255,16 +326,17 @@ export default function Everything({ initBox }: { initBox?: string }) {
       {/* Results header */}
       {searched && (
         <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:12, flexWrap:"wrap", gap:8 }}>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px", fontSize:"0.85rem", color:"var(--muted2)" }}>
+          <div style={{ fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px", fontSize:"0.82rem", color:"var(--muted2)" }}>
             {results.length === 0
-              ? "No results"
-              : <><span style={{ color:"var(--red)", fontSize:"1.1rem" }}>{results.length.toLocaleString()}</span> {results.length===1?"book":"books"} — {ALL.length.toLocaleString()} total comics, {DATA3.boxes.length} boxes</>}
+              ? "No results — try a different search"
+              : <><span style={{ color:"var(--red)", fontSize:"1.05rem" }}>{results.length.toLocaleString()}</span> {results.length===1?"book":"books"} {familyFilter && `· ${familyFilter}`} — {ALL.length.toLocaleString()} total, {DATA3.boxes.length} boxes</>
+            }
           </div>
           <div style={{ display:"flex", gap:6 }}>
             {(["list","card"] as const).map(v=>(
               <button key={v} onClick={()=>setView(v)}
                 style={{
-                  fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"1.5px",
+                  fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"1.5px",
                   padding:"5px 14px", border:`1.5px solid ${view===v?"var(--red)":"var(--border)"}`,
                   background:view===v?"var(--red)":"var(--surface)", color:view===v?"#fff":"var(--muted2)",
                   borderRadius:4, cursor:"pointer",
@@ -278,22 +350,46 @@ export default function Everything({ initBox }: { initBox?: string }) {
 
       {/* Blank state */}
       {!searched && (
-        <div style={{ textAlign:"center", padding:"60px 20px", color:"var(--muted2)" }}>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.5rem", letterSpacing:"3px", marginBottom:10, color:"var(--text2)" }}>
-            Search Everything
-          </div>
-          <div style={{ fontSize:"0.9rem", lineHeight:1.7 }}>
+        <div style={{ textAlign:"center", padding:"48px 20px", color:"var(--muted2)" }}>
+          <div style={{ fontSize:"2.5rem", marginBottom:12, opacity:0.3 }}>🔍</div>
+          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.4rem", letterSpacing:"3px", marginBottom:8, color:"var(--text2)" }}>Search Everything</div>
+          <div style={{ fontSize:"0.88rem", lineHeight:1.7, maxWidth:480, margin:"0 auto" }}>
             {ALL.length.toLocaleString()} comics across {DATA3.boxes.length} boxes — all in one search.<br />
-            Search by title, writer, artist, cover artist, signer, key reason, first appearance, arc, or box.
+            Search by title, writer, artist, signer, character, arc, or box number.
           </div>
           <div style={{ display:"flex", gap:8, justifyContent:"center", flexWrap:"wrap", marginTop:20 }}>
-            {["Tom King","Frank Miller","Jim Lee","Mark Bagley","Christopher Priest","Walt Simonson"].map(name=>(
+            {["Tom King","Christopher Priest","Jim Lee","Frank Miller","Black Panther","X-Men","Krakoa","Wolverine"].map(name=>(
               <button key={name} onClick={()=>{ setQuery(name); setSearched(true); }}
-                style={{ background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:20,
-                  padding:"5px 14px", fontSize:"0.8rem", cursor:"pointer", color:"var(--text2)" }}>
+                style={{ background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:20, padding:"6px 16px", fontSize:"0.8rem", cursor:"pointer", color:"var(--text2)", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>
                 {name}
               </button>
             ))}
+          </div>
+          <div style={{ display:"flex", gap:8, justifyContent:"center", flexWrap:"wrap", marginTop:10 }}>
+            <button onClick={()=>{ setKeysOnly(true); setSearched(true); }}
+              style={{ background:"#fff8e0", border:"1.5px solid #d4a800", borderRadius:20, padding:"6px 16px", fontSize:"0.8rem", cursor:"pointer", color:"#8a6000", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>
+              ⭐ All Key Issues
+            </button>
+            <button onClick={()=>{ setSignedOnly(true); setSearched(true); }}
+              style={{ background:"var(--surface)", border:"1.5px solid var(--brown)", borderRadius:20, padding:"6px 16px", fontSize:"0.8rem", cursor:"pointer", color:"var(--brown)", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>
+              ✍ All Signed Books
+            </button>
+          </div>
+          <div style={{ marginTop:20 }}>
+            <button onClick={() => setShowFams(!showFamilies)}
+              style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"2px", color:"var(--muted2)", background:"none", border:"1px solid var(--border)", borderRadius:4, padding:"6px 16px", cursor:"pointer" }}>
+              {showFamilies?"▲":"▼"} Browse by Character Family
+            </button>
+            {showFamilies && (
+              <div style={{ display:"flex", gap:8, justifyContent:"center", flexWrap:"wrap", marginTop:12 }}>
+                {CHAR_FAMILIES.map(f => (
+                  <button key={f.name} onClick={() => { setFamily(f.name); setSearched(true); setCardPage(1); }}
+                    style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"1px", color:"var(--text2)", background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:16, padding:"5px 14px", cursor:"pointer" }}>
+                    {f.emoji} {f.name}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       )}
@@ -302,17 +398,24 @@ export default function Everything({ initBox }: { initBox?: string }) {
       {searched && results.length > 0 && view === "list" && (
         <SortableTable rows={results} cols={COLS} rowKey={(_r,i)=>String(i)} pageSize={100} defaultSortKey="box" expandCell={c => (
           <div>
-            <div style={{ display:"flex", gap:24, flexWrap:"wrap" }}>
+            <div style={{ display:"flex", gap:20, flexWrap:"wrap" }}>
               {c.Arc       && <div className="dr"><span className="dl">Arc</span><span className="dv">{c.Arc}</span></div>}
               {c.Key_Why   && <div className="dr"><span className="dl">Key</span><span className="dv" style={{color:"var(--gold)"}}>{c.Key_Why}</span></div>}
               {c.First_App && <div className="dr"><span className="dl">1st App</span><span className="dv">{c.First_App}</span></div>}
               {(c.Signed||"").toUpperCase()==="YES" && c.Signed_By && <div className="dr"><span className="dl">Signed By</span><span className="dv">{c.Signed_By}</span></div>}
               {c.Terrificon && <div className="dr"><span className="dl">Terrificon</span><span className="dv" style={{color:"#f59e0b"}}>{c.Terrificon}</span></div>}
               {c.Condition && <div className="dr"><span className="dl">Condition</span><span className="dv">{c.Condition}</span></div>}
+              {c.Imprint   && <div className="dr"><span className="dl">Imprint</span><span className="dv">{c.Imprint}</span></div>}
             </div>
             {c.Whatnot_Pitch && (
-              <div style={{ marginTop:6, color:"var(--muted2)", fontSize:"0.88rem" }}>{c.Whatnot_Pitch.substring(0,200)}</div>
+              <div style={{ marginTop:6, color:"var(--muted2)", fontSize:"0.85rem", lineHeight:1.5 }}>{c.Whatnot_Pitch.substring(0,220)}</div>
             )}
+            <div style={{ marginTop:8 }}>
+              <a href={`https://comicvine.gamespot.com/search/?q=${encodeURIComponent(c.Title + " " + c.Issue)}`} target="_blank" rel="noopener noreferrer"
+                style={{ fontSize:"0.72rem", color:"var(--muted2)", textDecoration:"underline" }}>
+                🔎 View cover on Comic Vine
+              </a>
+            </div>
           </div>
         )} />
       )}
@@ -320,7 +423,7 @@ export default function Everything({ initBox }: { initBox?: string }) {
       {/* Results — cards */}
       {searched && results.length > 0 && view === "card" && (
         <>
-          <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(210px,1fr))", gap:10 }}>
+          <div className="ev-card-grid">
             {cardSlice.map((c,i)=><EverythingCard key={i} comic={c} />)}
           </div>
           <Paginator
@@ -333,7 +436,8 @@ export default function Everything({ initBox }: { initBox?: string }) {
 
       {searched && results.length === 0 && (
         <div style={{ textAlign:"center", padding:"48px 20px", color:"var(--muted2)", fontSize:"0.9rem" }}>
-          No comics found matching those criteria.
+          <div style={{ fontSize:"1.5rem", marginBottom:8, opacity:0.4 }}>🔍</div>
+          No comics found matching those criteria. Try a broader search.
         </div>
       )}
     </div>
@@ -341,46 +445,49 @@ export default function Everything({ initBox }: { initBox?: string }) {
 }
 
 function EverythingCard({ comic: c }: { comic: Comic }) {
-  const isKey    = c.Key.toUpperCase() === "YES";
-  const isSigned = c.Signed.toUpperCase() === "YES";
+  const isKey    = (c.Key    || "").toUpperCase() === "YES";
+  const isSigned = (c.Signed || "").toUpperCase() === "YES";
 
   return (
-    <div className="comic-card" style={{ borderTop:isKey?"3px solid var(--gold)":undefined }}>
-      <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", marginBottom:6 }}>
-        <BoxBadge box={c.Box} />
-        <div style={{ display:"flex", gap:4, flexWrap:"wrap", justifyContent:"flex-end" }}>
-          {isKey    && <span className="badge bkey"  style={{fontSize:"0.58rem"}}>KEY</span>}
-          {isSigned && <span className="badge bgold" style={{fontSize:"0.58rem"}}>SIGNED</span>}
-          {c.Platform && <span className={`badge ${platClass(c.Platform)}`} style={{fontSize:"0.58rem"}}>{c.Platform}</span>}
+    <div className="ev-card" style={{ borderTop: isKey ? "3px solid #d4a800" : undefined }}>
+      <div style={{ display:"flex", gap:10, marginBottom:8 }}>
+        <CoverThumb c={c} />
+        <div style={{ flex:1, minWidth:0 }}>
+          <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", marginBottom:4, gap:4 }}>
+            <BoxBadge box={c.Box} />
+            <div style={{ display:"flex", gap:3, flexWrap:"wrap", justifyContent:"flex-end" }}>
+              {isKey    && <span className="badge bkey"  style={{fontSize:"0.57rem"}}>KEY</span>}
+              {isSigned && <span className="badge bgold" style={{fontSize:"0.57rem"}}>SIGNED</span>}
+              {c.Platform && <span className={`badge ${platClass(c.Platform)}`} style={{fontSize:"0.57rem"}}>{c.Platform}</span>}
+            </div>
+          </div>
+          <div className="card-title">{c.Title}</div>
+          <div className="card-issue">{c.Issue}{c.Year?` · ${c.Year}`:""}</div>
+          {c.Publisher && <div className="card-pub">{c.Publisher}{c.Era?` · ${c.Era}`:""}</div>}
         </div>
       </div>
 
-      <div className="card-title">{c.Title}</div>
-      <div className="card-issue">#{c.Issue}{c.Year?` · ${c.Year}`:""}</div>
-      {c.Publisher && <div className="card-pub">{c.Publisher}{c.Era?` · ${c.Era}`:""}</div>}
-
       {(c.Writer || c.Artist) && (
-        <div style={{ fontSize:"0.72rem", color:"var(--muted2)", marginTop:5, lineHeight:1.4 }}>
+        <div style={{ fontSize:"0.72rem", color:"var(--muted2)", lineHeight:1.4, marginBottom:4 }}>
           {c.Writer && <div><span style={{color:"var(--muted)"}}>W:</span> {c.Writer}</div>}
           {c.Artist && c.Artist !== c.Writer && <div><span style={{color:"var(--muted)"}}>A:</span> {c.Artist}</div>}
-          {c.Cover_Artist && c.Cover_Artist !== c.Artist && <div><span style={{color:"var(--muted)"}}>CA:</span> {c.Cover_Artist}</div>}
         </div>
       )}
 
       {isKey && c.Key_Why && (
-        <div style={{ fontSize:"0.82rem", color:"var(--gold)", marginTop:5, lineHeight:1.4 }}>
-          {c.Key_Why.substring(0,120)}
+        <div style={{ fontSize:"0.78rem", color:"#8a6000", marginTop:4, lineHeight:1.4, background:"#fff8e0", borderRadius:3, padding:"3px 8px" }}>
+          {c.Key_Why.substring(0, 110)}
         </div>
       )}
 
       {isSigned && c.Signed_By && (
-        <div style={{ fontSize:"0.7rem", color:"var(--brown)", marginTop:4 }}>✍ {c.Signed_By}</div>
+        <div style={{ fontSize:"0.7rem", color:"var(--brown)", marginTop:4 }}>✍ {c.Signed_By}{c.Personalization ? ` — "${c.Personalization}"` : ""}</div>
       )}
 
       {(c.Value_NM || c.Value_VF) && (
-        <div style={{ display:"flex", gap:12, marginTop:6, fontSize:"0.72rem", color:"var(--green-text)" }}>
-          {c.Value_NM && <span>NM <strong>{c.Value_NM}</strong></span>}
-          {c.Value_VF && <span>VF <strong>{c.Value_VF}</strong></span>}
+        <div style={{ display:"flex", gap:10, marginTop:6, fontSize:"0.72rem" }}>
+          {c.Value_NM && <span style={{color:"var(--green-text)"}}>NM <strong>{c.Value_NM}</strong></span>}
+          {c.Value_VF && <span style={{color:"var(--muted)"}}>VF {c.Value_VF}</span>}
         </div>
       )}
     </div>

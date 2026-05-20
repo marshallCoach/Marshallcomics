@@ -1,7 +1,23 @@
 import { useState } from "react";
-import { DATA3 } from "@/data/data3";
 
-const strategy = DATA3.cgc_strategy;
+interface CgcEntry { Priority: string; Book: string; ROI: string; Cost: string; Service: string; Grade: string; RawValue: string; CGCValue: string; }
+
+const strategy: CgcEntry[] = [
+  { Priority:"#1 — CRITICAL", Book:"Stan Lee Black Panther #513",               ROI:"$800–$1,500",     Cost:"PSA fee",    Service:"PSA/DNA at NYCC → CGC × JSA Green Qualified",   Grade:"Raw → Qualified", RawValue:"$400 raw",    CGCValue:"$800–$1,500 authenticated" },
+  { Priority:"#2 — CRITICAL", Book:"Ultimate Fallout #4 Foil (1st Miles)",       ROI:"$800–$1,500",     Cost:"$73 CGC",    Service:"Press → CGC Universal Blue",                     Grade:"9.8 target",      RawValue:"$200 raw",    CGCValue:"$800–$1,500 CGC 9.8" },
+  { Priority:"#3 — HIGH",     Book:"Batman #656 (1st Damian Wayne)",             ROI:"$350–$500",       Cost:"$73 CGC",    Service:"Press → CGC Universal Blue",                     Grade:"9.8 target",      RawValue:"$80 raw",     CGCValue:"$350–$500 CGC 9.8" },
+  { Priority:"#4 — HIGH",     Book:"Wolverine #8 (1982 — UNSIGNED)",             ROI:"$500+",           Cost:"$70 CGC",    Service:"Press → Terrificon Yellow SS",                   Grade:"9.8 SS target",   RawValue:"$200 raw",    CGCValue:"$500+ Yellow SS 9.8" },
+  { Priority:"#5 — HIGH",     Book:"Vision #1 (Tom King signed)",                ROI:"$150–$300",       Cost:"$53 CGC",    Service:"Press → CGC × JSA Green Qualified",              Grade:"9.6–9.8 target",  RawValue:"$60 raw",     CGCValue:"$150–$300 Green Qualified" },
+  { Priority:"#6 — HIGH",     Book:"Batman #657 (1st Damian as Robin)",          ROI:"$200–$350",       Cost:"$73 CGC",    Service:"Press → CGC Universal Blue",                     Grade:"9.8 target",      RawValue:"$50 raw",     CGCValue:"$200–$350 CGC 9.8" },
+  { Priority:"#7 — HIGH",     Book:"ASM #361 (1st Carnage — Bagley/Sharen sgd)",  ROI:"$200–$300",       Cost:"$53 CGC",    Service:"Press → CGC × JSA Green Qualified",              Grade:"9.4–9.8 target",  RawValue:"$60 raw",     CGCValue:"$200–$300 Green Qualified" },
+  { Priority:"#8 — HIGH",     Book:"Truth: Red, White & Black #1 (Baker rmk)",   ROI:"$500–$2,000",     Cost:"$53 CGC",    Service:"Verify remark → CGC × JSA Green Qualified",      Grade:"9.4+ target",     RawValue:"$100 raw",    CGCValue:"$500–$2,000 with Baker remark" },
+  { Priority:"#9 — HIGH",     Book:"Secret Wars #1 (Hickman signed)",            ROI:"$120–$250",       Cost:"$53 CGC",    Service:"Press → CGC × JSA Green Qualified",              Grade:"9.6–9.8 target",  RawValue:"$30 raw",     CGCValue:"$120–$250 Green Qualified" },
+  { Priority:"#10 — MED",     Book:"New Warriors #1 (Bagley signed)",            ROI:"$120–$200",       Cost:"$53 CGC",    Service:"Press → CGC × JSA Green Qualified",              Grade:"9.6 target",      RawValue:"$30 raw",     CGCValue:"$120–$200 Green Qualified" },
+  { Priority:"#11 — MED",     Book:"Mockingbird #8 (Kelly Thompson signed)",     ROI:"$80–$150",        Cost:"$53 CGC",    Service:"Press → CGC × JSA Green Qualified",              Grade:"9.4–9.8 target",  RawValue:"$20 raw",     CGCValue:"$80–$150 Green Qualified" },
+  { Priority:"#12 — MED",     Book:"Black Lightning #1 1977 (Isabella)",         ROI:"$300–$500",       Cost:"$73 CGC",    Service:"Press → CGC Universal Blue or ISA path",         Grade:"6.0–8.0 est",     RawValue:"$80 raw",     CGCValue:"$300–$500 graded" },
+  { Priority:"#13 — MED",     Book:"WildC.A.T.s #2 (Jim Lee signed — Terrificon)",ROI:"$150–$300",      Cost:"Con fee",    Service:"Terrificon → Yellow/Green combo label",           Grade:"SS combo",        RawValue:"$40 raw",     CGCValue:"$150–$300 combo label" },
+  { Priority:"#14 — LOW",     Book:"ASM #50 Alex Ross Timeless (Mayhew sgd)",    ROI:"$100–$200",       Cost:"$53 CGC",    Service:"CGC × JSA Green Qualified — Jul 10 deadline",    Grade:"9.6–9.8 target",  RawValue:"$25 raw",     CGCValue:"$100–$200 Green Qualified" },
+];
 
 // ── Section 1: Terrificon Signing Priority List (from PDF, Aug 7–9 2026) ──
 // alreadySigned = book is already signed and needs witnessing / re-signing at con
