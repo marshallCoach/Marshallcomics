@@ -10,11 +10,14 @@ import Summary from "@/pages/Summary";
 import Everything from "@/pages/Everything";
 import ActionPlan from "@/pages/ActionPlan";
 import CollectionStats from "@/pages/CollectionStats";
+import BoxTimeline from "@/pages/BoxTimeline";
+import BoxVisual from "@/pages/BoxVisual";
+import Runs from "@/pages/Runs";
 import PasswordGate from "@/components/PasswordGate";
 
 type TabId =
-  | "summary" | "everything" | "collection" | "boxkeys" | "stats"
-  | "calendar" | "showplanner" | "cgc" | "signings" | "actionplan";
+  | "summary" | "everything" | "collection" | "boxkeys" | "stats" | "runs"
+  | "calendar" | "showplanner" | "cgc" | "signings" | "actionplan" | "timeline" | "boxvisual";
 
 export type NavParams = {
   box?: string;
@@ -29,22 +32,25 @@ const NAV = [
     id: "inventory",
     label: "Inventory",
     tabs: [
-      { id: "summary",    label: "🏠 Home" },
-      { id: "everything", label: "🔍 Every Book" },
-      { id: "collection", label: "📦 Sales Inventory" },
-      { id: "boxkeys",    label: "🔑 Box Keys" },
-      { id: "stats",      label: "📈 Stats" },
+      { id: "summary",    label: "Home" },
+      { id: "everything", label: "Every Book" },
+      { id: "runs",       label: "Runs" },
+      { id: "collection", label: "Sales" },
+      { id: "boxkeys",    label: "Box Keys" },
+      { id: "stats",      label: "Stats" },
     ],
   },
   {
     id: "business",
     label: "Business",
     tabs: [
-      { id: "calendar",    label: "📅 Calendar" },
-      { id: "showplanner", label: "🎙️ Shows" },
-      { id: "cgc",         label: "🏆 CGC Strategy" },
-      { id: "signings",    label: "✍️ Signings" },
-      { id: "actionplan",  label: "📋 Action Plan" },
+      { id: "calendar",    label: "Calendar" },
+      { id: "showplanner", label: "Shows" },
+      { id: "timeline",    label: "Timeline" },
+      { id: "boxvisual",   label: "Box View" },
+      { id: "cgc",         label: "CGC" },
+      { id: "signings",    label: "Signings" },
+      { id: "actionplan",  label: "Action Plan" },
     ],
   },
 ] as const;
@@ -151,10 +157,13 @@ export default function App() {
             initSignedOnly={navParams.signed === "YES"}
           />
         )}
+        {activeTab === "runs"        && <Runs />}
         {activeTab === "collection"  && <OriginalCollection initSigned={navParams.signed} />}
         {activeTab === "boxkeys"     && <BoxKeys />}
         {activeTab === "calendar"    && <Calendar />}
         {activeTab === "showplanner" && <ShowPlanner />}
+        {activeTab === "timeline"    && <BoxTimeline />}
+        {activeTab === "boxvisual"   && <BoxVisual />}
         {activeTab === "cgc"         && <CGCStrategy />}
         {activeTab === "signings"    && <PrivateSignings />}
         {activeTab === "actionplan"  && <ActionPlan />}

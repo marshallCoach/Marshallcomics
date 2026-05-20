@@ -103,7 +103,7 @@ export default function OriginalCollection({ initSigned }: { initSigned?: string
   const results = useMemo(() => {
     const ql = q.toLowerCase();
     return comics.filter(c => {
-      if (ql && ![c.Title, c.Writer, c.Artist, c.Key_Why, c.First_App, c.Signed_By, c.Arc, c.Publisher, c.Whatnot_Category].join(" ").toLowerCase().includes(ql)) return false;
+      if (ql && ![c.Title, c.Writer, c.Artist, c.Key_Reason, c.First_App, c.Signed_By, c.Arc, c.Publisher, c.Category].join(" ").toLowerCase().includes(ql)) return false;
       if (pub      && c.Publisher !== pub) return false;
       if (era      && c.Era !== era) return false;
       if (platform && c.Platform !== platform) return false;
@@ -182,7 +182,7 @@ export default function OriginalCollection({ initSigned }: { initSigned?: string
               const isSigned = (c.Signed || "").toUpperCase() === "YES";
               const isTf     = !!(c.Terrificon || "").trim();
               const nmVal    = c.Value_NM && c.Value_NM !== "nan" ? c.Value_NM : "";
-              const pitch    = c.Whatnot_Pitch && c.Whatnot_Pitch !== "nan" ? c.Whatnot_Pitch : "";
+              const pitch    = c.Story_Pitch && c.Story_Pitch !== "nan" ? c.Story_Pitch : "";
               const isOpen   = open.has(i);
               return (
                 <div key={i} className={`comic-card${isOpen?" open":""}`} onClick={()=>toggle(i)}>
@@ -202,7 +202,7 @@ export default function OriginalCollection({ initSigned }: { initSigned?: string
                       {c.Writer   && c.Writer !== "nan"   && <div className="dr"><span className="dl">W</span><span className="dv">{c.Writer}</span></div>}
                       {c.Artist   && c.Artist !== "nan"   && <div className="dr"><span className="dl">A</span><span className="dv">{c.Artist}</span></div>}
                       {isSigned && c.Signed_By            && <div className="dr"><span className="dl">Signed By</span><span className="dv">{c.Signed_By}</span></div>}
-                      {c.Key_Why  && c.Key_Why !== "nan"  && <div className="dr"><span className="dl">Key Why</span><span className="dv">{c.Key_Why}</span></div>}
+                      {c.Key_Reason  && c.Key_Reason !== "nan"  && <div className="dr"><span className="dl">Key Why</span><span className="dv">{c.Key_Reason}</span></div>}
                       {c.First_App && c.First_App !== "nan" && <div className="dr"><span className="dl">1st App</span><span className="dv">{c.First_App}</span></div>}
                       {c.Condition && c.Condition !== "nan" && <div className="dr"><span className="dl">Condition</span><span className="dv">{c.Condition}</span></div>}
                       {isTf && <div className="dr"><span className="dl">Terrificon</span><span className="dv" style={{color:"#f59e0b"}}>{c.Terrificon}</span></div>}
@@ -228,13 +228,13 @@ export default function OriginalCollection({ initSigned }: { initSigned?: string
                 <div style={{ display:"flex", gap:24, flexWrap:"wrap" }}>
                   {c.Writer   && c.Writer !== "nan"   && <div className="dr"><span className="dl">Writer</span><span className="dv">{c.Writer}</span></div>}
                   {c.Artist   && c.Artist !== "nan"   && <div className="dr"><span className="dl">Artist</span><span className="dv">{c.Artist}</span></div>}
-                  {c.Key_Why  && c.Key_Why !== "nan"  && <div className="dr"><span className="dl">Key</span><span className="dv">{c.Key_Why}</span></div>}
+                  {c.Key_Reason  && c.Key_Reason !== "nan"  && <div className="dr"><span className="dl">Key</span><span className="dv">{c.Key_Reason}</span></div>}
                   {(c.Signed||"").toUpperCase()==="YES" && c.Signed_By && <div className="dr"><span className="dl">Signed By</span><span className="dv">{c.Signed_By}</span></div>}
                   {c.Condition && c.Condition !== "nan" && <div className="dr"><span className="dl">Condition</span><span className="dv">{c.Condition}</span></div>}
                 </div>
-                {c.Whatnot_Pitch && c.Whatnot_Pitch !== "nan" && (
+                {c.Story_Pitch && c.Story_Pitch !== "nan" && (
                   <div style={{ marginTop:6, color:"var(--muted2)", fontSize:"0.88rem" }}>
-                    {c.Whatnot_Pitch.substring(0,200)}
+                    {c.Story_Pitch.substring(0,200)}
                   </div>
                 )}
               </div>

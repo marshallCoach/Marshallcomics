@@ -1,8 +1,20 @@
 import { useState, useMemo } from "react";
 
-interface CalEvent { Type: string; Date: string; Theme: string; Books: string; Revenue: string; Prep: string; }
+interface CalEvent { Type: string; Date: string; Theme: string; Books: string; Revenue: string; Prep: string; sortDate: number; }
 
-const events: CalEvent[] = [
+function parseSortDate(dateStr: string): number {
+  const s = dateStr || "";
+  const MONTHS: Record<string,number> = { jan:1,feb:2,mar:3,apr:4,may:5,jun:6,jul:7,aug:8,sep:9,oct:10,nov:11,dec:12 };
+  const m = s.match(/([a-z]{3})\w*[\s.]+(\d{1,2})[,\s]+(\d{4})/i);
+  if (m) return parseInt(m[3])*10000 + (MONTHS[m[1].toLowerCase().slice(0,3)]||0)*100 + parseInt(m[2]);
+  const m2 = s.match(/([a-z]{3})\w*\s+(\d{4})/i);
+  if (m2) return parseInt(m2[2])*10000 + (MONTHS[m2[1].toLowerCase().slice(0,3)]||0)*100;
+  const m3 = s.match(/by\s+([a-z]{3})/i);
+  if (m3) return 20260000 + (MONTHS[(m3[1]||"").toLowerCase().slice(0,3)]||0)*100;
+  return 0;
+}
+
+const rawEvents = [
   { Type:"🟣 TERRIFICON",  Date:"Aug 7–9, 2026",  Theme:"Terrificon 2026 — Jim Lee SATURDAY ONLY",  Books:"Wolverine #8 (unsigned), WildCATs #2+#11 (re-sign), Superman Unchained #1, Batman Europa #1, Flash #164, Nightwing Rebirth #1, Hawkman #1",  Revenue:"$1,500–$3,500 in potential CGC value uplift",   Prep:"Press all books before Aug 7. Hotel: Hyatt code G-TRFC. Arrive 10am Saturday for Jim Lee. Bring Agent of Slabs contact." },
   { Type:"🟣 NYCC",        Date:"Oct 8–11, 2026", Theme:"NYCC 2026 — Stan Lee BP #513 + Heritage eval",  Books:"Black Panther #513 (Stan Lee — PSA/DNA auth), Thor #169 CGC 8.0 (Heritage eval), buy budget $100–300",  Revenue:"$800–$1,500 BP#513 authenticated + Heritage networking",  Prep:"Book PSA/DNA table appointment. Bring BP#513 in hard case. Bring Thor #169 slab for Heritage evaluation." },
   { Type:"🟡 WHATNOT",     Date:"Jun 18, 2026",   Theme:"Show 1 — Black Heroes Month: Priest-Era Black Panther",  Books:"BP vol3 #1–10 (Priest), Captain Carter #1 (Hayley Atwell signed — personalized), Truth: RWB #1, Black Lightning #1",  Revenue:"$300–$600",   Prep:"Pull BP Priest run. Tell Captain Carter story (Hayley Atwell signed to Robert). Lead with emotional anchor." },
@@ -20,6 +32,8 @@ const events: CalEvent[] = [
   { Type:"🟢 CGC",         Date:"Jul 10, 2026",   Theme:"Mike Mayhew CGC SS — ASM #50 Alex Ross Timeless Virgin",  Books:"ASM #50 Alex Ross Timeless Virgin cover — already signed",  Revenue:"$100–$200 Green Qualified",  Prep:"Already signed — submit via CGC × JSA green Qualified path. Same deadline as Roy Thomas." },
 ];
 
+const events: CalEvent[] = rawEvents.map(e => ({ ...e, sortDate: parseSortDate(e.Date) }));
+
 function calClass(type: string) {
   const t = (type || "").toUpperCase();
   if (t.includes("WHATNOT")) return "lc-whatnot";
@@ -30,23 +44,37 @@ function calClass(type: string) {
 }
 
 function typeLabel(type: string) {
-  const t = (type || "").replace(/🟡|🟢|🟣|🔴|⭐/g, "").trim();
-  return t;
+  return (type || "").replace(/🟡|🟢|🟣|🔴|⭐/g, "").trim();
+}
+
+function typeIcon(type: string) {
+  const t = (type || "").toUpperCase();
+  if (t.includes("WHATNOT"))   return { icon:"📺", label:"WHATNOT", bg:"#e8f5e8", color:"#1a6a1a" };
+  if (t.includes("CGC"))       return { icon:"🏆", label:"CGC",     bg:"#e8f0ff", color:"#1a4a99" };
+  if (t.includes("TERRIFICON"))return { icon:"🎪", label:"CON",     bg:"#f0ebff", color:"#5522aa" };
+  if (t.includes("NYCC"))      return { icon:"🗽", label:"NYCC",    bg:"#f0ebff", color:"#5522aa" };
+  return { icon:"📅", label:"EVENT", bg:"var(--surface2)", color:"var(--muted2)" };
 }
 
 export default function Calendar() {
-  const [q,    setQ]    = useState("");
-  const [type, setType] = useState("");
-  const [open, setOpen] = useState<Set<number>>(new Set());
+  const [q,       setQ]       = useState("");
+  const [type,    setType]    = useState("");
+  const [sortDir, setSortDir] = useState<"asc" | "desc">("asc");
+  const [view,    setView]    = useState<"list" | "card">("list");
+  const [open,    setOpen]    = useState<Set<number>>(new Set());
 
   const filtered = useMemo(() => {
     const ql = q.toLowerCase();
-    return events.filter(e => {
+    let list = events.filter(e => {
       if (type && !(e.Type || "").toUpperCase().includes(type)) return false;
       if (!ql) return true;
       return [e.Theme, e.Books, e.Revenue, e.Prep, e.Date].join(" ").toLowerCase().includes(ql);
     });
-  }, [q, type]);
+    list = [...list].sort((a, b) =>
+      sortDir === "asc" ? a.sortDate - b.sortDate : b.sortDate - a.sortDate
+    );
+    return list;
+  }, [q, type, sortDir]);
 
   const toggle = (i: number) => setOpen(prev => {
     const n = new Set(prev); n.has(i) ? n.delete(i) : n.add(i); return n;
@@ -54,18 +82,19 @@ export default function Calendar() {
 
   const whatnotCount = events.filter(e => e.Type.toUpperCase().includes("WHATNOT")).length;
   const cgcCount     = events.filter(e => e.Type.toUpperCase().includes("CGC")).length;
-  const conCount     = events.filter(e => e.Type.toUpperCase().includes("CON") || e.Type.toUpperCase().includes("TERRIFICON") || e.Type.toUpperCase().includes("NYCC")).length;
+  const conCount     = events.filter(e => e.Type.toUpperCase().includes("TERRIFICON") || e.Type.toUpperCase().includes("NYCC")).length;
 
   return (
     <div>
       {/* Stats bar */}
-      <div style={{ background:"var(--surface)", borderBottom:"1px solid var(--border)", padding:"10px 24px", display:"flex", gap:24, flexWrap:"wrap" }}>
+      <div style={{ background:"var(--surface)", borderBottom:"1px solid var(--border)", padding:"10px 20px",
+        display:"flex", gap:20, flexWrap:"wrap", alignItems:"center" }}>
         {[
-          { val: events.length,  lbl: "Total Events" },
-          { val: whatnotCount,   lbl: "Whatnot Shows" },
-          { val: cgcCount,       lbl: "CGC Actions" },
-          { val: conCount,       lbl: "Conventions" },
-          { val: "$9k–$18k",     lbl: "Revenue Target" },
+          { val: events.length,  lbl: "Events" },
+          { val: whatnotCount,   lbl: "Whatnot" },
+          { val: cgcCount,       lbl: "CGC" },
+          { val: conCount,       lbl: "Cons" },
+          { val: "$9k–$18k",     lbl: "Revenue" },
         ].map(s => (
           <div key={s.lbl} style={{ textAlign:"center" }}>
             <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.1rem", color:"var(--red)", letterSpacing:"1px" }}>{s.val}</div>
@@ -74,45 +103,148 @@ export default function Calendar() {
         ))}
       </div>
 
-      <div className="filters">
-        <input placeholder="Search theme, books, notes…" value={q} onChange={e=>setQ(e.target.value)} />
-        <select value={type} onChange={e=>setType(e.target.value)}>
-          <option value="">All Events</option>
-          <option value="WHATNOT">Whatnot Shows</option>
-          <option value="CGC">CGC Actions</option>
+      {/* Controls */}
+      <div style={{ background:"var(--surface)", borderBottom:"1px solid var(--border)",
+        padding:"10px 18px", display:"flex", gap:8, flexWrap:"wrap", alignItems:"center" }}>
+        <input
+          placeholder="Search events…"
+          value={q} onChange={e => setQ(e.target.value)}
+          style={{ background:"var(--bg)", border:"1.5px solid var(--border)", color:"var(--text)",
+            padding:"7px 12px", borderRadius:5, fontFamily:"'Crimson Pro',serif", fontSize:"0.88rem",
+            flex:"1 1 160px", minWidth:120 }}
+        />
+        <select value={type} onChange={e => setType(e.target.value)}
+          style={{ background:"var(--bg)", border:"1.5px solid var(--border)", color:"var(--text)",
+            padding:"7px 10px", borderRadius:5, fontFamily:"'Crimson Pro',serif", fontSize:"0.88rem" }}>
+          <option value="">All Types</option>
+          <option value="WHATNOT">Whatnot</option>
+          <option value="CGC">CGC</option>
           <option value="TERRIFICON">Terrificon</option>
           <option value="NYCC">NYCC</option>
         </select>
-        <button className="clear-btn" onClick={()=>{setQ("");setType("");setOpen(new Set());}}>✕ Clear</button>
+
+        {/* Sort direction */}
+        <button
+          onClick={() => setSortDir(d => d === "asc" ? "desc" : "asc")}
+          title={sortDir === "asc" ? "Oldest first — click for newest first" : "Newest first — click for oldest first"}
+          style={{ background:"var(--surface2)", border:"1.5px solid var(--border)", borderRadius:5,
+            padding:"7px 14px", cursor:"pointer", fontFamily:"'Bebas Neue',sans-serif",
+            fontSize:"0.72rem", letterSpacing:"1.5px", color:"var(--text2)",
+            display:"flex", alignItems:"center", gap:5, whiteSpace:"nowrap",
+            transition:"border-color 0.15s" }}>
+          {sortDir === "asc" ? "↑ DATE ASC" : "↓ DATE DESC"}
+        </button>
+
+        {/* View toggle */}
+        <div style={{ display:"flex", border:"1.5px solid var(--border)", borderRadius:5, overflow:"hidden", flexShrink:0 }}>
+          {(["list","card"] as const).map(v => (
+            <button key={v} onClick={() => setView(v)} style={{
+              background: view===v ? "var(--red)" : "var(--surface2)",
+              color: view===v ? "#fff" : "var(--muted2)",
+              border:"none", padding:"7px 14px", cursor:"pointer",
+              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"1.5px",
+              transition:"all 0.15s",
+            }}>
+              {v === "list" ? "☰ LIST" : "⊞ CARDS"}
+            </button>
+          ))}
+        </div>
+
+        {(q || type) && (
+          <button onClick={() => { setQ(""); setType(""); setOpen(new Set()); }}
+            style={{ background:"transparent", color:"var(--muted2)", border:"1.5px solid var(--border)",
+              padding:"7px 14px", borderRadius:5, cursor:"pointer", fontFamily:"'Bebas Neue',sans-serif",
+              fontSize:"0.72rem", letterSpacing:"1.5px" }}>
+            ✕ CLEAR
+          </button>
+        )}
       </div>
 
-      <div className="results-bar">
-        <span>{filtered.length} events</span>
+      {/* Results count */}
+      <div style={{ padding:"6px 20px", fontSize:"0.72rem", color:"var(--muted)",
+        fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px",
+        borderBottom:"1px solid var(--border)", background:"var(--surface2)" }}>
+        {filtered.length} of {events.length} events · sorted {sortDir === "asc" ? "earliest first" : "latest first"}
       </div>
 
-      <div className="list-view">
-        {filtered.map((ev, i) => {
-          const isOpen = open.has(i);
-          const revenue = (ev.Revenue || "").match(/\$[\d,k–\-]+/g)?.[0] || "";
-          return (
-            <div key={i} className={`lcard ${calClass(ev.Type)}${isOpen ? " open" : ""}`} onClick={()=>toggle(i)}>
-              <div className="lcard-head">
-                <span className="lcard-date">{ev.Date}</span>
-                <span className="lcard-tag">{typeLabel(ev.Type)}</span>
-                <span className="lcard-title">{ev.Theme.substring(0, 80)}</span>
-                {revenue && <span className="lcard-right">{revenue}</span>}
-              </div>
-              {isOpen && (
-                <div className="lcard-expand">
-                  {ev.Books  && <div className="dr"><span className="dl">Books</span><span className="dv">{ev.Books.substring(0,400)}</span></div>}
-                  {ev.Prep   && <div className="dr" style={{marginTop:6}}><span className="dl">Prep</span><span className="dv">{ev.Prep.substring(0,300)}</span></div>}
-                  {ev.Revenue && <div className="dr" style={{marginTop:6}}><span className="dl">Revenue</span><span className="dv" style={{color:"var(--gold)"}}>{ev.Revenue.substring(0,200)}</span></div>}
+      {/* LIST VIEW */}
+      {view === "list" && (
+        <div className="list-view">
+          {filtered.map((ev, i) => {
+            const isOpen = open.has(i);
+            const revenue = (ev.Revenue || "").match(/\$[\d,k–\-]+/g)?.[0] || "";
+            const ti = typeIcon(ev.Type);
+            return (
+              <div key={i} className={`lcard ${calClass(ev.Type)}${isOpen ? " open" : ""}`} onClick={() => toggle(i)}>
+                <div className="lcard-head">
+                  <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.88rem",
+                    color:"var(--red)", minWidth:90, letterSpacing:"0.5px" }}>{ev.Date}</span>
+                  <span style={{ background:ti.bg, color:ti.color, border:`1px solid ${ti.color}22`,
+                    borderRadius:3, padding:"1px 7px", fontSize:"0.62rem",
+                    fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px",
+                    whiteSpace:"nowrap", flexShrink:0 }}>
+                    {ti.icon} {ti.label}
+                  </span>
+                  <span className="lcard-title">{ev.Theme.substring(0, 90)}</span>
+                  {revenue && <span className="lcard-right">{revenue}</span>}
+                  <span style={{ color:"var(--muted)", fontSize:"0.7rem", flexShrink:0 }}>{isOpen?"▲":"▼"}</span>
                 </div>
-              )}
-            </div>
-          );
-        })}
-      </div>
+                {isOpen && (
+                  <div className="lcard-expand">
+                    {ev.Books   && <div className="dr"><span className="dl">Books</span><span className="dv">{ev.Books}</span></div>}
+                    {ev.Prep    && <div className="dr" style={{marginTop:6}}><span className="dl">Prep</span><span className="dv">{ev.Prep}</span></div>}
+                    {ev.Revenue && <div className="dr" style={{marginTop:6}}><span className="dl">Revenue</span><span className="dv" style={{color:"var(--gold)"}}>{ev.Revenue}</span></div>}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      )}
+
+      {/* CARD VIEW */}
+      {view === "card" && (
+        <div style={{ padding:"12px 18px", display:"grid",
+          gridTemplateColumns:"repeat(auto-fill, minmax(300px, 1fr))", gap:10 }}>
+          {filtered.map((ev, i) => {
+            const isOpen = open.has(i);
+            const ti = typeIcon(ev.Type);
+            return (
+              <div key={i} onClick={() => toggle(i)} style={{
+                background:"var(--surface)", border:"1.5px solid var(--border)",
+                borderLeft:`4px solid ${ti.color}`, borderRadius:6, padding:"14px",
+                cursor:"pointer", transition:"box-shadow 0.15s",
+                boxShadow: isOpen ? "0 2px 10px rgba(0,0,0,0.10)" : "0 1px 3px rgba(0,0,0,0.04)",
+              }}>
+                <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:8 }}>
+                  <span style={{ background:ti.bg, color:ti.color, border:`1px solid ${ti.color}22`,
+                    borderRadius:3, padding:"1px 8px", fontSize:"0.62rem",
+                    fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>
+                    {ti.icon} {ti.label}
+                  </span>
+                  <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem",
+                    color:"var(--red)", marginLeft:"auto", letterSpacing:"0.5px" }}>{ev.Date}</span>
+                </div>
+                <div style={{ fontSize:"0.9rem", fontWeight:600, color:"var(--brown-light)", lineHeight:1.35, marginBottom:6 }}>
+                  {ev.Theme}
+                </div>
+                {ev.Revenue && (
+                  <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.78rem",
+                    color:"var(--gold)", letterSpacing:"0.5px" }}>
+                    {ev.Revenue.match(/\$[\d,k–\-]+(?:–\$[\d,k]+)?/)?.[0] || ""}
+                  </div>
+                )}
+                {isOpen && (
+                  <div style={{ marginTop:10, paddingTop:10, borderTop:"1px solid var(--border)", fontSize:"0.82rem", color:"var(--muted2)" }}>
+                    {ev.Books && <div style={{ marginBottom:6 }}><strong style={{ color:"var(--muted)" }}>Books: </strong>{ev.Books}</div>}
+                    {ev.Prep  && <div style={{ marginBottom:6 }}><strong style={{ color:"var(--muted)" }}>Prep: </strong>{ev.Prep}</div>}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }

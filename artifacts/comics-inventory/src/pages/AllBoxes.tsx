@@ -118,7 +118,7 @@ export default function AllBoxes() {
     if (!hasSearched) return [];
     const ql = q.toLowerCase();
     return comics.filter(c => {
-      if (ql && ![c.Title, c.Issue, c.Writer, c.Artist, c.Arc, c.Publisher, c.Key_Why, c.First_App, c.Whatnot_Pitch, c.Signed_By].join(" ").toLowerCase().includes(ql)) return false;
+      if (ql && ![c.Title, c.Issue, c.Writer, c.Artist, c.Arc, c.Publisher, c.Key_Reason, c.First_App, c.Story_Pitch, c.Signed_By].join(" ").toLowerCase().includes(ql)) return false;
       if (box        && c.Box !== box) return false;
       if (pub        && !(c.Publisher || "").toLowerCase().includes(pub.toLowerCase())) return false;
       if (era        && (c.Era || "") !== era) return false;
@@ -220,7 +220,7 @@ export default function AllBoxes() {
               const bid    = c.Start_Bid && c.Start_Bid !== "nan" ? c.Start_Bid : "";
               const isOpen = open.has(i);
               const nmVal  = c.Value_NM && c.Value_NM !== "nan" ? c.Value_NM : "";
-              const pitch  = c.Whatnot_Pitch && c.Whatnot_Pitch !== "nan" ? c.Whatnot_Pitch : "";
+              const pitch  = c.Story_Pitch && c.Story_Pitch !== "nan" ? c.Story_Pitch : "";
               return (
                 <div key={i} className={`comic-card${isOpen?" open":""}`} onClick={()=>toggle(i)}>
                   <div className="card-title">{c.Title || "Untitled"}</div>
@@ -242,7 +242,7 @@ export default function AllBoxes() {
                       {c.Cover_Artist && c.Cover_Artist !== "nan" && <div className="dr"><span className="dl">CA</span><span className="dv">{c.Cover_Artist}</span></div>}
                       {isSigned && c.Signed_By && <div className="dr"><span className="dl">Signed By</span><span className="dv">{c.Signed_By}</span></div>}
                       {c.Arc         && c.Arc !== "nan"        && <div className="dr"><span className="dl">Arc</span><span className="dv">{c.Arc}</span></div>}
-                      {c.Key_Why     && c.Key_Why !== "nan"    && <div className="dr"><span className="dl">Key Why</span><span className="dv">{c.Key_Why}</span></div>}
+                      {c.Key_Reason     && c.Key_Reason !== "nan"    && <div className="dr"><span className="dl">Key Why</span><span className="dv">{c.Key_Reason}</span></div>}
                       {c.First_App   && c.First_App !== "nan"  && <div className="dr"><span className="dl">1st App</span><span className="dv">{c.First_App}</span></div>}
                       {c.Condition   && c.Condition !== "nan"  && <div className="dr"><span className="dl">Condition</span><span className="dv">{c.Condition}</span></div>}
                       {c.Terrificon  && <div className="dr"><span className="dl">Terrificon</span><span className="dv" style={{color:"#f59e0b"}}>{c.Terrificon}</span></div>}
@@ -268,14 +268,14 @@ export default function AllBoxes() {
                 <div style={{ display:"flex", gap:24, flexWrap:"wrap" }}>
                   {c.Writer   && c.Writer !== "nan"  && <div className="dr"><span className="dl">Writer</span><span className="dv">{c.Writer}</span></div>}
                   {c.Artist   && c.Artist !== "nan"  && <div className="dr"><span className="dl">Artist</span><span className="dv">{c.Artist}</span></div>}
-                  {c.Key_Why  && c.Key_Why !== "nan" && <div className="dr"><span className="dl">Key</span><span className="dv">{c.Key_Why}</span></div>}
+                  {c.Key_Reason  && c.Key_Reason !== "nan" && <div className="dr"><span className="dl">Key</span><span className="dv">{c.Key_Reason}</span></div>}
                   {(c.Signed||"").toUpperCase()==="YES" && c.Signed_By && <div className="dr"><span className="dl">Signed By</span><span className="dv">{c.Signed_By}</span></div>}
                   {c.Condition && c.Condition !== "nan" && <div className="dr"><span className="dl">Condition</span><span className="dv">{c.Condition}</span></div>}
                   {c.Terrificon && <div className="dr"><span className="dl">Terrificon</span><span className="dv" style={{color:"#f59e0b"}}>{c.Terrificon}</span></div>}
                 </div>
-                {c.Whatnot_Pitch && c.Whatnot_Pitch !== "nan" && (
+                {c.Story_Pitch && c.Story_Pitch !== "nan" && (
                   <div style={{ marginTop:6, fontStyle:"italic", color:"var(--muted2)", fontSize:"0.8rem" }}>
-                    {c.Whatnot_Pitch.substring(0,200)}
+                    {c.Story_Pitch.substring(0,200)}
                   </div>
                 )}
               </div>

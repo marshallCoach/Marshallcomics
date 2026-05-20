@@ -168,9 +168,9 @@ export default function Everything({
       if (!q) return true;
       return [
         c.Title, c.Issue, c.Publisher, c.Writer, c.Artist,
-        c.Cover_Artist, c.Signed_By, c.Key_Why, c.First_App,
-        c.Arc, c.Notes, c.Era, c.Universe, `box ${c.Box}`,
-        c.Whatnot_Pitch, c.Imprint, c.Terrificon,
+        c.Cover_Artist, c.Signed_By, c.Key_Reason, c.First_App,
+        c.Arc, c.Seller_Notes, c.Era, c.Universe, `box ${c.Box}`,
+        c.Story_Pitch, c.Imprint, c.Terrificon,
       ].join(" ").toLowerCase().includes(q);
     });
   }, [searched, query, publisher, era, platform, boxFilter, keysOnly, signedOnly, familyFilter]);
@@ -400,15 +400,15 @@ export default function Everything({
           <div>
             <div style={{ display:"flex", gap:20, flexWrap:"wrap" }}>
               {c.Arc       && <div className="dr"><span className="dl">Arc</span><span className="dv">{c.Arc}</span></div>}
-              {c.Key_Why   && <div className="dr"><span className="dl">Key</span><span className="dv" style={{color:"var(--gold)"}}>{c.Key_Why}</span></div>}
+              {c.Key_Reason   && <div className="dr"><span className="dl">Key</span><span className="dv" style={{color:"var(--gold)"}}>{c.Key_Reason}</span></div>}
               {c.First_App && <div className="dr"><span className="dl">1st App</span><span className="dv">{c.First_App}</span></div>}
               {(c.Signed||"").toUpperCase()==="YES" && c.Signed_By && <div className="dr"><span className="dl">Signed By</span><span className="dv">{c.Signed_By}</span></div>}
               {c.Terrificon && <div className="dr"><span className="dl">Terrificon</span><span className="dv" style={{color:"#f59e0b"}}>{c.Terrificon}</span></div>}
               {c.Condition && <div className="dr"><span className="dl">Condition</span><span className="dv">{c.Condition}</span></div>}
               {c.Imprint   && <div className="dr"><span className="dl">Imprint</span><span className="dv">{c.Imprint}</span></div>}
             </div>
-            {c.Whatnot_Pitch && (
-              <div style={{ marginTop:6, color:"var(--muted2)", fontSize:"0.85rem", lineHeight:1.5 }}>{c.Whatnot_Pitch.substring(0,220)}</div>
+            {c.Story_Pitch && (
+              <div style={{ marginTop:6, color:"var(--muted2)", fontSize:"0.85rem", lineHeight:1.5 }}>{c.Story_Pitch.substring(0,220)}</div>
             )}
             <div style={{ marginTop:8 }}>
               <a href={`https://comicvine.gamespot.com/search/?q=${encodeURIComponent(c.Title + " " + c.Issue)}`} target="_blank" rel="noopener noreferrer"
@@ -474,14 +474,14 @@ function EverythingCard({ comic: c }: { comic: Comic }) {
         </div>
       )}
 
-      {isKey && c.Key_Why && (
+      {isKey && c.Key_Reason && (
         <div style={{ fontSize:"0.78rem", color:"#8a6000", marginTop:4, lineHeight:1.4, background:"#fff8e0", borderRadius:3, padding:"3px 8px" }}>
-          {c.Key_Why.substring(0, 110)}
+          {c.Key_Reason.substring(0, 110)}
         </div>
       )}
 
       {isSigned && c.Signed_By && (
-        <div style={{ fontSize:"0.7rem", color:"var(--brown)", marginTop:4 }}>✍ {c.Signed_By}{c.Personalization ? ` — "${c.Personalization}"` : ""}</div>
+        <div style={{ fontSize:"0.7rem", color:"var(--brown)", marginTop:4 }}>✍ {c.Signed_By}{c.Personal ? ` — "${c.Personal}"` : ""}</div>
       )}
 
       {(c.Value_NM || c.Value_VF) && (
