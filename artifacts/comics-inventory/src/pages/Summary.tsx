@@ -295,7 +295,31 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
 
       {/* ── Books per Box ── */}
       <section style={{ marginBottom:32 }}>
-        <h2 className="section-h2">📦 BOOKS PER BOX</h2>
+        <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:6 }}>
+          <h2 className="section-h2" style={{ margin:0 }}>📦 BOOKS PER BOX</h2>
+          <div className="info-tip-wrap">
+            <span className="info-tip-icon">ⓘ</span>
+            <div className="info-tip-popup">
+              <div className="info-tip-title">READING THE BOX TILES</div>
+              <div className="info-tip-row"><span className="info-tip-label">Large number</span> Comics in that box</div>
+              <div className="info-tip-row"><span className="info-tip-label">★k</span> Key issues — first apps, origins, landmark events</div>
+              <div className="info-tip-row"><span className="info-tip-label">✍s</span> Creator-signed books verified at conventions</div>
+              <div className="info-tip-row"><span className="info-tip-label">Pink border</span> Box has fewer than 100 books (not yet full)</div>
+              <div className="info-tip-divider" />
+              <div className="info-tip-title">DATA PRICING (Value fields)</div>
+              <div className="info-tip-row"><span className="info-tip-label">NM value</span> Near-Mint (9.4+) raw market price</div>
+              <div className="info-tip-row"><span className="info-tip-label">VF value</span> Very Fine (8.0) raw market price</div>
+              <div className="info-tip-title" style={{ marginTop:8 }}>CGC SUBMISSION TIERS</div>
+              <div className="info-tip-row"><span className="info-tip-label">Press</span> $20/book flat (all except Stan Lee)</div>
+              <div className="info-tip-row"><span className="info-tip-label">Modern</span> $53/book (post-2000)</div>
+              <div className="info-tip-row"><span className="info-tip-label">Vintage</span> $70/book (1975–2000)</div>
+              <div className="info-tip-row"><span className="info-tip-label">PSA/DNA</span> $75 (Stan Lee only — no press)</div>
+              <div className="info-tip-row"><span className="info-tip-label">Yellow SS</span> CGC witnessed signing — max label value</div>
+              <div className="info-tip-row"><span className="info-tip-label">Green Qual.</span> Authenticated unwitnessed signature</div>
+              <div className="info-tip-row"><span className="info-tip-label">Blue Univ.</span> Grade only — no signature</div>
+            </div>
+          </div>
+        </div>
         <div className="boxes-grid">
           {[...boxData].sort((a,b)=>Number(a.Num)-Number(b.Num)).map(b => {
             const boxNum = String(parseInt(b.Num.replace(/\D/g,""), 10));

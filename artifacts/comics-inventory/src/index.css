@@ -588,6 +588,42 @@ body {
 .box-tile-keys  { font-size: 0.6rem; color: #8a6000; font-family: 'Bebas Neue', sans-serif; }
 .box-tile-sgn   { font-size: 0.6rem; color: var(--green-text); font-family: 'Bebas Neue', sans-serif; }
 
+/* Info tooltip */
+.info-tip-wrap {
+  position: relative; display: inline-flex; align-items: center;
+}
+.info-tip-icon {
+  font-size: 0.85rem; color: var(--muted); cursor: default;
+  user-select: none; line-height: 1; transition: color 0.15s;
+}
+.info-tip-icon:hover { color: var(--red); }
+.info-tip-popup {
+  display: none;
+  position: absolute; left: 0; top: calc(100% + 6px);
+  z-index: 200; background: #fff; border: 1.5px solid var(--border);
+  border-radius: 8px; padding: 14px 16px; width: 310px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.13);
+  font-family: 'Crimson Pro', serif; font-size: 0.82rem; color: var(--text);
+  line-height: 1.55;
+}
+.info-tip-wrap:hover .info-tip-popup { display: block; }
+.info-tip-title {
+  font-family: 'Bebas Neue', sans-serif; font-size: 0.72rem; letter-spacing: 2px;
+  color: var(--red); margin-bottom: 6px;
+}
+.info-tip-row {
+  display: flex; gap: 8px; align-items: baseline; margin-bottom: 3px;
+  font-size: 0.8rem;
+}
+.info-tip-label {
+  font-family: 'Bebas Neue', sans-serif; font-size: 0.72rem;
+  letter-spacing: 1px; color: var(--muted2); white-space: nowrap;
+  min-width: 80px; flex-shrink: 0;
+}
+.info-tip-divider {
+  border: none; border-top: 1px solid var(--border); margin: 10px 0;
+}
+
 /* Next Actions header */
 .actions-header {
   display: flex; align-items: center; justify-content: space-between;
