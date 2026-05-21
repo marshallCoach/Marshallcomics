@@ -138,7 +138,7 @@ export default function Everything({
   const [signedOnly,  setSignedOnly] = useState(!!initSignedOnly);
   const [familyFilter,setFamily]     = useState("");
   const [view,        setView]       = useState<"list"|"card">("list");
-  const [searched,    setSearched]   = useState(!!(initBox || initQuery || initPublisher || initKeysOnly || initSignedOnly));
+  const [searched,    setSearched]   = useState(true);
   const [cardPage,    setCardPage]   = useState(1);
   const [showFamilies,setShowFams]   = useState(false);
 
@@ -149,9 +149,7 @@ export default function Everything({
     if (initBox !== undefined)      setBoxFilter(initBox || "");
     setKeysOnly(!!initKeysOnly);
     setSignedOnly(!!initSignedOnly);
-    if (initBox || initQuery || initPublisher || initKeysOnly || initSignedOnly) {
-      setSearched(true); setCardPage(1);
-    }
+    setSearched(true); setCardPage(1);
   }, [initBox, initQuery, initPublisher, initKeysOnly, initSignedOnly]);
 
   const results = useMemo(() => {
@@ -184,22 +182,22 @@ export default function Everything({
   const handleClear  = useCallback(() => {
     setQuery(""); setPub(""); setEra(""); setPlat(""); setBoxFilter("");
     setKeysOnly(false); setSignedOnly(false); setFamily("");
-    setSearched(false); setCardPage(1);
+    setCardPage(1);
   }, []);
 
   const topWriters = useMemo(() => {
-    if (!searched || results.length === 0) return [];
+    if (results.length === 0) return [];
     const counts: Record<string,number> = {};
     results.forEach(c => { if (c.Writer) counts[c.Writer] = (counts[c.Writer]||0)+1; });
     return Object.entries(counts).sort((a,b)=>b[1]-a[1]).slice(0,8).map(([w])=>w);
-  }, [results, searched]);
+  }, [results]);
 
   const topArtists = useMemo(() => {
-    if (!searched || results.length === 0) return [];
+    if (results.length === 0) return [];
     const counts: Record<string,number> = {};
     results.forEach(c => { if (c.Artist) counts[c.Artist] = (counts[c.Artist]||0)+1; });
     return Object.entries(counts).sort((a,b)=>b[1]-a[1]).slice(0,8).map(([a])=>a);
-  }, [results, searched]);
+  }, [results]);
 
   const isCreatorSearch = searched && query && results.some(c =>
     c.Writer?.toLowerCase().includes(query.toLowerCase()) ||
@@ -348,51 +346,6 @@ export default function Everything({
         </div>
       )}
 
-      {/* Blank state */}
-      {!searched && (
-        <div style={{ textAlign:"center", padding:"48px 20px", color:"var(--muted2)" }}>
-          <div style={{ fontSize:"2.5rem", marginBottom:12, opacity:0.3 }}>🔍</div>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.4rem", letterSpacing:"3px", marginBottom:8, color:"var(--text2)" }}>Search Everything</div>
-          <div style={{ fontSize:"0.88rem", lineHeight:1.7, maxWidth:480, margin:"0 auto" }}>
-            {ALL.length.toLocaleString()} comics across {DATA3.boxes.length} boxes — all in one search.<br />
-            Search by title, writer, artist, signer, character, arc, or box number.
-          </div>
-          <div style={{ display:"flex", gap:8, justifyContent:"center", flexWrap:"wrap", marginTop:20 }}>
-            {["Tom King","Christopher Priest","Jim Lee","Frank Miller","Black Panther","X-Men","Krakoa","Wolverine"].map(name=>(
-              <button key={name} onClick={()=>{ setQuery(name); setSearched(true); }}
-                style={{ background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:20, padding:"6px 16px", fontSize:"0.8rem", cursor:"pointer", color:"var(--text2)", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>
-                {name}
-              </button>
-            ))}
-          </div>
-          <div style={{ display:"flex", gap:8, justifyContent:"center", flexWrap:"wrap", marginTop:10 }}>
-            <button onClick={()=>{ setKeysOnly(true); setSearched(true); }}
-              style={{ background:"#fff8e0", border:"1.5px solid #d4a800", borderRadius:20, padding:"6px 16px", fontSize:"0.8rem", cursor:"pointer", color:"#8a6000", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>
-              ⭐ All Key Issues
-            </button>
-            <button onClick={()=>{ setSignedOnly(true); setSearched(true); }}
-              style={{ background:"var(--surface)", border:"1.5px solid var(--brown)", borderRadius:20, padding:"6px 16px", fontSize:"0.8rem", cursor:"pointer", color:"var(--brown)", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>
-              ✍ All Signed Books
-            </button>
-          </div>
-          <div style={{ marginTop:20 }}>
-            <button onClick={() => setShowFams(!showFamilies)}
-              style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"2px", color:"var(--muted2)", background:"none", border:"1px solid var(--border)", borderRadius:4, padding:"6px 16px", cursor:"pointer" }}>
-              {showFamilies?"▲":"▼"} Browse by Character Family
-            </button>
-            {showFamilies && (
-              <div style={{ display:"flex", gap:8, justifyContent:"center", flexWrap:"wrap", marginTop:12 }}>
-                {CHAR_FAMILIES.map(f => (
-                  <button key={f.name} onClick={() => { setFamily(f.name); setSearched(true); setCardPage(1); }}
-                    style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"1px", color:"var(--text2)", background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:16, padding:"5px 14px", cursor:"pointer" }}>
-                    {f.emoji} {f.name}
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
-        </div>
-      )}
 
       {/* Results — list */}
       {searched && results.length > 0 && view === "list" && (

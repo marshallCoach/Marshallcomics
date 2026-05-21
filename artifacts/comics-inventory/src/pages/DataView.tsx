@@ -54,7 +54,7 @@ function barColor(pct: number): string {
   return "#c8102e";
 }
 
-type SortMode = "pct" | "alpha";
+type SortMode = "pct" | "alpha" | "pct-asc" | "alpha-desc";
 
 export default function DataView() {
   const [sortMode, setSortMode] = useState<SortMode>("pct");
@@ -87,7 +87,9 @@ export default function DataView() {
       const q = search.toLowerCase();
       list = list.filter(s => s.label.toLowerCase().includes(q) || s.field.toLowerCase().includes(q));
     }
-    if (sortMode === "pct") return [...list].sort((a, b) => b.pct - a.pct || a.label.localeCompare(b.label));
+    if (sortMode === "pct")      return [...list].sort((a, b) => b.pct - a.pct || a.label.localeCompare(b.label));
+    if (sortMode === "pct-asc")  return [...list].sort((a, b) => a.pct - b.pct || a.label.localeCompare(b.label));
+    if (sortMode === "alpha-desc") return [...list].sort((a, b) => b.label.localeCompare(a.label));
     return [...list].sort((a, b) => a.label.localeCompare(b.label));
   }, [stats, sortMode, search]);
 
@@ -153,8 +155,13 @@ export default function DataView() {
             fontFamily: "'Crimson Pro',Georgia,serif", background: "var(--surface)",
             color: "var(--text2)", outline: "none" }}
         />
-        <div style={{ display: "flex", gap: 6 }}>
-          {(["pct", "alpha"] as const).map(m => (
+        <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+          {([
+            ["pct",       "Most → Least"],
+            ["pct-asc",   "Least → Most"],
+            ["alpha",     "A → Z"],
+            ["alpha-desc","Z → A"],
+          ] as const).map(([m, lbl]) => (
             <button key={m} onClick={() => setSortMode(m)} style={{
               background: sortMode === m ? "var(--red)" : "var(--surface)",
               color: sortMode === m ? "#fff" : "var(--muted2)",
@@ -163,7 +170,7 @@ export default function DataView() {
               fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.75rem", letterSpacing: "1px",
               transition: "all 0.15s",
             }}>
-              {m === "pct" ? "Most → Least" : "A → Z"}
+              {lbl}
             </button>
           ))}
         </div>
