@@ -112,17 +112,6 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
   return (
     <div style={{ maxWidth:1100, margin:"0 auto", padding:"20px 16px 80px" }}>
 
-      {/* ── Welcome banner ── */}
-      <section className="welcome-banner">
-        <div className="welcome-text">
-          <div className="welcome-title">Welcome back, Roberto.</div>
-          <div className="welcome-sub">
-            {totalComics.toLocaleString()} comics across {totalBoxes} boxes &mdash; {keyCount.toLocaleString()} keys, {signedCount} signed. You've built something remarkable.
-          </div>
-        </div>
-        <div className="welcome-date">Updated May 20, 2026</div>
-      </section>
-
       {/* ── Quick Search ── */}
       <section className="qs-section">
         <div className="qs-header">
@@ -308,19 +297,24 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
       <section style={{ marginBottom:32 }}>
         <h2 className="section-h2">📦 BOOKS PER BOX</h2>
         <div className="boxes-grid">
-          {[...boxData].sort((a,b)=>Number(a.Num)-Number(b.Num)).map(b => (
+          {[...boxData].sort((a,b)=>Number(a.Num)-Number(b.Num)).map(b => {
+            const boxNum = String(parseInt(b.Num.replace(/\D/g,""), 10));
+            const lowBook = b.Comics < 100;
+            return (
             <div
               key={b.Num}
-              onClick={() => onNavigate("everything", { box: b.Num })}
+              onClick={() => onNavigate("everything", { box: boxNum })}
               className="box-tile"
               title={b.Description}
+              style={lowBook ? { borderColor:"#d6456a", background:"#fdf0f4" } : {}}
             >
               <div className="box-tile-count">{b.Comics}</div>
               <div className="box-tile-num">Box {b.Num}</div>
               {Number(b.Keys)   > 0 && <div className="box-tile-keys">{b.Keys}k</div>}
               {Number(b.Signed) > 0 && <div className="box-tile-sgn">{b.Signed}s</div>}
             </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 

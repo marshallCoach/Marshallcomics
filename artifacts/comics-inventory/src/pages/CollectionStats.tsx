@@ -78,8 +78,11 @@ const coverMap       = countBy(comics.filter(c=>c.Cover_Artist), c => c.Cover_Ar
 // Titles
 const titleMap = countBy(comics, c => c.Title);
 
-// Signers
-const signerMap = countBy(signed, c => c.Signed_By);
+// Signers — filter out entries that are prices ($8, $10 etc), not names
+const signerMapRaw = countBy(signed, c => c.Signed_By);
+const signerMap = Object.fromEntries(
+  Object.entries(signerMapRaw).filter(([k]) => k && !k.match(/^\$/) && k.trim().length > 2)
+);
 
 // Character families
 const FAMILIES: { name: string; keywords: string[]; color: string; emoji: string }[] = [
@@ -158,7 +161,7 @@ function SectionHead({ title, sub }: { title: string; sub?: string }) {
 
 function StatTile({ val, lbl, sub, color="#c8102e" }: { val: string | number; lbl: string; sub?: string; color?: string }) {
   return (
-    <div style={{ background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:6, padding:"14px 16px", textAlign:"center" }}>
+    <div className="cstats-tile" style={{ background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:6, padding:"14px 16px", textAlign:"center", transition:"border-color 0.15s, box-shadow 0.15s, transform 0.15s" }}>
       <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.9rem", color, letterSpacing:"1px", lineHeight:1 }}>{val}</div>
       <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"1.5px", color:"var(--text)", marginTop:4 }}>{lbl}</div>
       {sub && <div style={{ fontSize:"0.75rem", color:"var(--muted2)", marginTop:3, lineHeight:1.4 }}>{sub}</div>}
@@ -400,7 +403,7 @@ export default function CollectionStats() {
           </div>
 
           {/* Signers hall of fame */}
-          <SectionHead title="Signers Hall of Fame" sub={`${signed.length} signed books across ${topSigners.length}+ creators`} />
+          <SectionHead title="Signers Hall of Fame" sub={`${signed.length} signed books · ${topSigners.length} verified creators`} />
           <div style={{ background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:6, padding:"16px" }}>
             {topSigners.map(([name, count], i) => (
               <LeaderRow key={name} rank={i+1} name={name} count={count} total={maxSigner} color="#d97706" />

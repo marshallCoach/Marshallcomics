@@ -213,15 +213,15 @@ export default function BoxVisual() {
 
                 {/* Box graphic — horizontal scroll */}
                 <div style={{
-                  background: "#111",
-                  border: "3px solid #3a3a3a",
-                  borderTop: "8px solid #555",
-                  borderBottom: "10px solid #222",
+                  background: "#f0ede8",
+                  border: "3px solid #ccc9c2",
+                  borderTop: "8px solid #b0aca4",
+                  borderBottom: "10px solid #d4d0c8",
                   borderRadius: "4px 4px 2px 2px",
                   padding: "20px 16px 14px",
                   overflowX: "auto",
                   position: "relative",
-                  boxShadow: "0 6px 24px rgba(0,0,0,0.5)",
+                  boxShadow: "0 4px 16px rgba(0,0,0,0.12)",
                 }}>
                   <div style={{ position: "absolute", top: -18, left: "50%", transform: "translateX(-50%)",
                     fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.65rem",
