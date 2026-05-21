@@ -20,35 +20,36 @@ Private React + Vite comic book inventory app for Roberto Marshall (BlackReadBro
 ## Where things live
 
 - `artifacts/comics-inventory/src/` — main app
-- `artifacts/comics-inventory/src/data/data3.ts` — AUTO-GENERATED from xlsx (4,861 comics, 37 boxes)
+- `artifacts/comics-inventory/src/data/data3.ts` — AUTO-GENERATED from xlsx (5,411 comics, 41 boxes)
 - `artifacts/comics-inventory/src/pages/` — all page components
 - `artifacts/comics-inventory/src/index.css` — all styles (light/editorial theme)
 - `artifacts/comics-inventory/src/App.tsx` — nav + routing
 
 ## Collection Stats (May 20, 2026)
 
-- 4,861 comics total
-- 37 boxes catalogued (target: 65)
-- 657 key issues
-- 129 signed books
+- 5,411 comics total
+- 41 boxes catalogued (target: 65)
+- 776 key issues
+- 130 signed books
 
 ## Product
 
-Two-section nav: **Inventory** (Home, Every Book, Runs, Sales, Box Keys, Stats) and **Business** (Calendar, Shows, Timeline, Box View, CGC, Signings, Action Plan).
+Two-section nav: **Inventory** (Home, Every Book, Runs, Sales, Box Keys, Stats, Data View) and **Business** (Calendar, Shows, Timeline, Box View, CGC, Signings, Action Plan).
 
 **Inventory pages:**
-- **Home** — Quick Search widget, box progress (37/65), priority timeline, flagship assets, boxes grid, next actions
-- **Every Book** — 4,861 comics searchable with character family pills, cover thumbnails, list/card view
+- **Home** — Quick Search widget, box progress (41/65), priority timeline, flagship assets, boxes grid, next actions
+- **Every Book** — 5,411 comics searchable with character family pills, cover thumbnails, list/card view
 - **Runs** — Titles with 75%+ run completion, missing issues clickable to Comic Vine search
 - **Sales** — Sales inventory view
 - **Box Keys** — Key issues organized by box
 - **Stats** — Charts and analytics (Recharts)
+- **Data View** — Column population statistics across all 31 fields, most-to-least populated with bar visualization
 
 **Business pages:**
 - **Calendar** — Events with date sort toggle (ascending/descending), list/card view
 - **Shows** — Whatnot show planner (12 themes)
 - **Timeline** — Visual chronological timeline of box catalogue sessions
-- **Box View** — Graphical box selector → visual box with per-comic lines + run drill-down
+- **Box View** — Box grid → vertical spine visualization (grouped/colored by title, sorted/unsorted toggle, click title for detail panel)
 - **CGC** — CGC strategy and signing priority
 - **Signings** — Private signings tracker
 - **Action Plan** — Prioritized action items with status tracking
@@ -69,7 +70,7 @@ BoxSummary fields: `Num`, `Label`, `DateAdded`, `Comics`, `Publisher`, `YearRang
 
 ## Data regeneration
 
-Run `node gen_data.mjs` from project root to regenerate `data3.ts` from the latest xlsx in `attached_assets/`. Update the filename in `gen_data.mjs` first.
+Run `node gen_data.mjs` from project root to regenerate `data3.ts` from the latest xlsx in `attached_assets/`. Update the filename in `gen_data.mjs` first. Box Summary parsing starts at row index 2 (BOX 01).
 
 ## User preferences
 
@@ -87,6 +88,8 @@ Run `node gen_data.mjs` from project root to regenerate `data3.ts` from the late
 - Sticky nav positions: `main-nav` at `top: 56px`, `tab-nav` at `top: 94px` (mobile: 90px / 130px)
 - Field names in data3.ts changed vs old versions: `Key_Reason` (not `Key_Why`), `Story_Pitch` (not `Whatnot_Pitch`), `Category` (not `Whatnot_Category`), `Personal` (not `Personalization`), `Seller_Notes` (not `Notes`)
 - BoxKeys.tsx uses `k.` prefix for comic variables (not `c.`), so sed replacements need to account for both
+- Key/Signed values in xlsx (12+) are "YES"/"NO" — app code normalizes with `.toUpperCase() === "YES"`
+- gen_data.mjs box loop must start at row index 2 (not 3) to include BOX 01
 
 ## Pointers
 

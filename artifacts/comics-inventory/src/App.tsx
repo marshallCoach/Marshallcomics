@@ -13,10 +13,11 @@ import CollectionStats from "@/pages/CollectionStats";
 import BoxTimeline from "@/pages/BoxTimeline";
 import BoxVisual from "@/pages/BoxVisual";
 import Runs from "@/pages/Runs";
+import DataView from "@/pages/DataView";
 import PasswordGate from "@/components/PasswordGate";
 
 type TabId =
-  | "summary" | "everything" | "collection" | "boxkeys" | "stats" | "runs"
+  | "summary" | "everything" | "collection" | "boxkeys" | "stats" | "runs" | "dataview"
   | "calendar" | "showplanner" | "cgc" | "signings" | "actionplan" | "timeline" | "boxvisual";
 
 export type NavParams = {
@@ -38,6 +39,7 @@ const NAV = [
       { id: "collection", label: "Sales" },
       { id: "boxkeys",    label: "Box Keys" },
       { id: "stats",      label: "Stats" },
+      { id: "dataview",   label: "Data View" },
     ],
   },
   {
@@ -168,6 +170,7 @@ export default function App() {
         {activeTab === "signings"    && <PrivateSignings />}
         {activeTab === "actionplan"  && <ActionPlan />}
         {activeTab === "stats"       && <CollectionStats />}
+        {activeTab === "dataview"    && <DataView />}
       </div>
     </div>
     </PasswordGate>
