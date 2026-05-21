@@ -127,38 +127,56 @@ export default function OriginalCollection({ initSigned }: { initSigned?: string
 
   return (
     <div>
-      <div className="filters">
-        <input
-          placeholder="Search title, writer, character, signer…"
-          value={q}
-          onChange={e => setQ(e.target.value)}
-          onKeyDown={e => e.key === "Enter" && setCardPage(1)}
-        />
-        <select value={pub} onChange={e => setPub(e.target.value)}>
-          <option value="">All Publishers</option>
-          {PUBLISHERS.map(p => <option key={p}>{p}</option>)}
-        </select>
-        <select value={era} onChange={e => setEra(e.target.value)}>
-          <option value="">All Eras</option>
-          {ERAS.map(e => <option key={e}>{e}</option>)}
-        </select>
-        <select value={platform} onChange={e => setPlatform(e.target.value)}>
-          <option value="">All Platforms</option>
-          {PLATFORMS.map(p => <option key={p}>{p}</option>)}
-        </select>
-        <select value={signed} onChange={e => setSigned(e.target.value)}>
-          <option value="">All / Signed</option>
-          <option value="YES">Signed Only</option>
-        </select>
-        <select value={keyOnly} onChange={e => setKeyOnly(e.target.value)}>
-          <option value="">All / Keys</option>
-          <option value="YES">Keys Only</option>
-        </select>
-        <select value={cgcOnly} onChange={e => setCgcOnly(e.target.value)}>
-          <option value="">All / CGC</option>
-          <option value="YES">CGC Candidates</option>
-        </select>
-        <button className="clear-results-btn" onClick={clearFilters}>✕ Clear</button>
+      <div className="qs-section" style={{ margin:"14px 16px 0", borderRadius:7 }}>
+        <div className="qs-header">
+          <span className="qs-title">SEARCH SALES INVENTORY</span>
+          <span className="qs-sub">{comics.length} key &amp; signed books — active sales shelf</span>
+        </div>
+        <div className="qs-row">
+          <input
+            className="qs-input"
+            placeholder="Search title, writer, character, signer, arc…"
+            value={q}
+            onChange={e => setQ(e.target.value)}
+            onKeyDown={e => e.key === "Enter" && setCardPage(1)}
+          />
+          <select className="qs-field-select" value={pub} onChange={e => { setPub(e.target.value); setCardPage(1); }}>
+            <option value="">All Publishers</option>
+            {PUBLISHERS.map(p => <option key={p}>{p}</option>)}
+          </select>
+          <select className="qs-field-select" value={era} onChange={e => { setEra(e.target.value); setCardPage(1); }}>
+            <option value="">All Eras</option>
+            {ERAS.map(e => <option key={e}>{e}</option>)}
+          </select>
+          <select className="qs-field-select" value={platform} onChange={e => { setPlatform(e.target.value); setCardPage(1); }}>
+            <option value="">All Platforms</option>
+            {PLATFORMS.map(p => <option key={p}>{p}</option>)}
+          </select>
+          <button className="qs-btn" onClick={() => setCardPage(1)}>Search →</button>
+        </div>
+        <div className="qs-pills">
+          <button
+            className={`qs-pill${signed==="YES"?" qs-pill-sgn":""}`}
+            onClick={() => { setSigned(signed==="YES"?"":"YES"); setCardPage(1); }}>
+            ✍️ Signed Only
+          </button>
+          <button
+            className={`qs-pill${keyOnly==="YES"?" qs-pill-key":""}`}
+            onClick={() => { setKeyOnly(keyOnly==="YES"?"":"YES"); setCardPage(1); }}>
+            ★ Keys Only
+          </button>
+          <button
+            className={`qs-pill${cgcOnly==="YES"?" qs-pill-key":""}`}
+            onClick={() => { setCgcOnly(cgcOnly==="YES"?"":"YES"); setCardPage(1); }}>
+            📋 CGC Candidates
+          </button>
+          <button
+            className="qs-pill"
+            style={{ marginLeft:"auto", opacity: (!q&&!pub&&!era&&!platform&&!signed&&!keyOnly&&!cgcOnly)?0.35:1 }}
+            onClick={clearFilters}>
+            ✕ Clear
+          </button>
+        </div>
       </div>
 
       <div className="results-bar">
