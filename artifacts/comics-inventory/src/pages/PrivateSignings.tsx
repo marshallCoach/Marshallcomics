@@ -161,21 +161,21 @@ export default function PrivateSignings() {
         </div>
         <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(280px, 1fr))", gap:"6px 20px", fontSize:"0.78rem", color:"#6a4800", lineHeight:1.6 }}>
           {[
-            { t:"Batman #656",                     b:"Box 4",  v:"$350–500 CGC 9.8",  c:"$73" },
-            { t:"Batman #657",                     b:"Box 4",  v:"$200–350 CGC 9.8",  c:"$73" },
-            { t:"Wolverine #8 (1982 — UNSIGNED)",  b:"Box 8",  v:"$500+ Yellow SS",   c:"$70" },
-            { t:"Hawkman (2018) #1",               b:"Box 25", v:"$80–150 Yellow SS", c:"$53" },
-            { t:"Death of Hawkman #1",             b:"Box 25", v:"$60–120 Yellow SS", c:"$53" },
-            { t:"Nightwing (Rebirth) #1",          b:"Box 25", v:"$60–100 Yellow SS", c:"$53" },
-            { t:"Superman Unchained #1",           b:"Box 15", v:"$150–250 Yellow SS",c:"$53" },
-            { t:"Batman Europa #1",                b:"Box 15", v:"$100–200 Yellow SS", c:"$53" },
-            { t:"The Flash #164",                  b:"Box 12", v:"$50–100 Yellow SS", c:"$53" },
-            { t:"Justice League Int'l #1",         b:"Box 27", v:"$60–120 Yellow SS", c:"$53" },
-            { t:"Vision #1 (Tom King signed)",     b:"Box 2",  v:"$150–300 Green",    c:"$53" },
-            { t:"Secret Wars #1 (Hickman signed)", b:"Box 2",  v:"$120–250 Green",    c:"$53" },
-            { t:"ASM #361 (Bagley/Sharen signed)", b:"Box 2",  v:"$200–300 Green",    c:"$53" },
-            { t:"New Warriors #1 (Bagley signed)", b:"Box 2",  v:"$120–200 Green",    c:"$53" },
-            { t:"Mockingbird #8 (Jones signed)",   b:"Box 2",  v:"$80–150 Green",     c:"$53" },
+            { t:"Batman #656",                     b:"Box 4",  v:"$350–500 CGC 9.8",  c:"$20" },
+            { t:"Batman #657",                     b:"Box 4",  v:"$200–350 CGC 9.8",  c:"$20" },
+            { t:"Wolverine #8 (1982 — UNSIGNED)",  b:"Box 8",  v:"$500+ Yellow SS",   c:"$20" },
+            { t:"Hawkman (2018) #1",               b:"Box 25", v:"$80–150 Yellow SS", c:"$20" },
+            { t:"Death of Hawkman #1",             b:"Box 25", v:"$60–120 Yellow SS", c:"$20" },
+            { t:"Nightwing (Rebirth) #1",          b:"Box 25", v:"$60–100 Yellow SS", c:"$20" },
+            { t:"Superman Unchained #1",           b:"Box 15", v:"$150–250 Yellow SS",c:"$20" },
+            { t:"Batman Europa #1",                b:"Box 15", v:"$100–200 Yellow SS", c:"$20" },
+            { t:"The Flash #164",                  b:"Box 12", v:"$50–100 Yellow SS", c:"$20" },
+            { t:"Justice League Int'l #1",         b:"Box 27", v:"$60–120 Yellow SS", c:"$20" },
+            { t:"Vision #1 (Tom King signed)",     b:"Box 2",  v:"$150–300 Green",    c:"$20" },
+            { t:"Secret Wars #1 (Hickman signed)", b:"Box 2",  v:"$120–250 Green",    c:"$20" },
+            { t:"ASM #361 (Bagley/Sharen signed)", b:"Box 2",  v:"$200–300 Green",    c:"$20" },
+            { t:"New Warriors #1 (Bagley signed)", b:"Box 2",  v:"$120–200 Green",    c:"$20" },
+            { t:"Mockingbird #8 (Jones signed)",   b:"Box 2",  v:"$80–150 Green",     c:"$20" },
           ].map(p => (
             <div key={p.t} style={{ display:"flex", justifyContent:"space-between", gap:8, borderBottom:"1px dotted #e8c84080", paddingBottom:2 }}>
               <span><strong>{p.t}</strong> <span style={{color:"#a07000", fontSize:"0.72rem"}}>· {p.b}</span></span>
@@ -184,7 +184,7 @@ export default function PrivateSignings() {
           ))}
         </div>
         <div style={{ marginTop:10, fontSize:"0.75rem", color:"#8a6000", lineHeight:1.6, borderTop:"1px solid #e8c840aa", paddingTop:8 }}>
-          15 books · Total pressing cost: <strong>$819</strong> · Turnaround: 4–8 weeks · Submit all at once to save shipping ·{" "}
+          15 books · Total pressing cost: <strong>$300</strong> ($20/book) · Turnaround: 4–8 weeks · Submit all at once to save shipping ·{" "}
           <strong>DO NOT PRESS: Stan Lee BP #513</strong> (authenticate via PSA/DNA at NYCC first)
         </div>
       </div>
