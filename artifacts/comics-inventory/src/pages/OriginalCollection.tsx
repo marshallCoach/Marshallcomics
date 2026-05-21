@@ -179,14 +179,27 @@ export default function OriginalCollection({ initSigned }: { initSigned?: string
         </div>
       </div>
 
-      <div className="results-bar">
-        <span>{results.length} of {comics.length} key &amp; signed books</span>
-        <div style={{ display:"flex", alignItems:"center", gap:10 }}>
-          <span className="results-hint">Click column headers to sort · Drag edges to resize</span>
-          <div className="view-toggle">
-            <button className={`view-toggle-btn${view==="list"?" active":""}`} onClick={()=>setView("list")}>≡ List</button>
-            <button className={`view-toggle-btn${view==="card"?" active":""}`} onClick={()=>setView("card")}>⊞ Cards</button>
-          </div>
+      <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center",
+        margin:"10px 16px 0", flexWrap:"wrap", gap:8 }}>
+        <div style={{ fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px", fontSize:"0.82rem", color:"var(--muted2)" }}>
+          {results.length === 0
+            ? "No results — try a different search"
+            : <><span style={{ color:"var(--red)", fontSize:"1.05rem" }}>{results.length.toLocaleString()}</span> of {comics.length.toLocaleString()} key &amp; signed books</>
+          }
+        </div>
+        <div style={{ display:"flex", gap:6, alignItems:"center" }}>
+          <span style={{ fontSize:"0.72rem", color:"var(--muted2)" }}>Click headers to sort · Drag to resize</span>
+          {(["list","card"] as const).map(v => (
+            <button key={v} onClick={() => setView(v as "list"|"card")}
+              style={{
+                fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"1.5px",
+                padding:"5px 14px", border:`1.5px solid ${view===v?"var(--red)":"var(--border)"}`,
+                background:view===v?"var(--red)":"var(--surface)", color:view===v?"#fff":"var(--muted2)",
+                borderRadius:4, cursor:"pointer", transition:"all 0.15s",
+              }}>
+              {v==="list"?"≡ List":"⊞ Cards"}
+            </button>
+          ))}
         </div>
       </div>
 
