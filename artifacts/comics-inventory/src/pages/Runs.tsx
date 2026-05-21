@@ -52,6 +52,7 @@ export default function Runs() {
   const [threshold,     setThreshold]     = useState(75);
   const [sortBy,        setSortBy]        = useState<"pct"|"count"|"missing"|"title">("pct");
   const [pubFilter,     setPubFilter]     = useState("");
+  const [view,          setView]          = useState<"grouped"|"card">("grouped");
   const [selectedRun,   setSelectedRun]   = useState<RunEntry | null>(null);
   const [openPublishers,setOpenPublishers]= useState<Set<string>>(new Set(["Marvel","DC","Other"]));
   const [openBuckets,   setOpenBuckets]   = useState<Set<string>>(new Set(["Marvel::100% — COMPLETE","DC::100% — COMPLETE"]));
@@ -221,12 +222,103 @@ export default function Runs() {
               borderRadius:5, padding:"4px 10px", cursor:"pointer" }}>
             Collapse All
           </button>
-          <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem",
-            letterSpacing:"2px", color:"var(--muted)" }}>
-            {filtered.length} RUNS
-          </span>
         </div>
       </div>
+
+      {/* Results row — matches Every Book style */}
+      <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center",
+        marginBottom:14, flexWrap:"wrap", gap:8 }}>
+        <div style={{ fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px", fontSize:"0.82rem", color:"var(--muted2)" }}>
+          {filtered.length === 0
+            ? "No runs found — try lowering the threshold"
+            : <><span style={{ color:"var(--red)", fontSize:"1.05rem" }}>{filtered.length.toLocaleString()}</span> {filtered.length===1?"run":"runs"} — {allRuns.length.toLocaleString()} total groups</>
+          }
+        </div>
+        <div style={{ display:"flex", gap:6 }}>
+          {(["grouped","card"] as const).map(v => (
+            <button key={v} onClick={() => setView(v)}
+              style={{
+                fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"1.5px",
+                padding:"5px 14px", border:`1.5px solid ${view===v?"var(--red)":"var(--border)"}`,
+                background:view===v?"var(--red)":"var(--surface)", color:view===v?"#fff":"var(--muted2)",
+                borderRadius:4, cursor:"pointer", transition:"all 0.15s",
+              }}>
+              {v==="grouped"?"≡ List":"⊞ Cards"}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Card view — flat grid */}
+      {view === "card" && filtered.length > 0 && (
+        <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(240px,1fr))", gap:10, marginBottom:40 }}>
+          {filtered.map((run, i) => {
+            const pg = PUB_GROUPS.find(p => p.key === pubGroup(run.publisher)) ?? PUB_GROUPS[2];
+            const pct = Math.min(run.pct, 100);
+            const isSelected = selectedRun?.title === run.title;
+            return (
+              <div key={i}
+                onClick={() => setSelectedRun(isSelected ? null : run)}
+                style={{
+                  background:"var(--surface)", border:`1.5px solid ${isSelected ? pg.color : "var(--border)"}`,
+                  borderTop:`3px solid ${pg.color}`, borderRadius:7, padding:"12px 14px",
+                  cursor:"pointer", transition:"box-shadow 0.15s, transform 0.15s",
+                  boxShadow: isSelected ? `0 4px 16px ${pg.color}22` : "0 1px 3px rgba(0,0,0,0.06)",
+                }}>
+                <div style={{ fontSize:"0.85rem", fontWeight:600, color:"var(--brown-light)",
+                  lineHeight:1.25, marginBottom:4 }}>{run.title}</div>
+                <div style={{ display:"flex", gap:6, marginBottom:8, flexWrap:"wrap" }}>
+                  <span style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif",
+                    letterSpacing:"1px", background:pg.accent, color:pg.color,
+                    border:`1px solid ${pg.border}`, borderRadius:3, padding:"1px 7px" }}>
+                    {pg.label}
+                  </span>
+                  {run.keys > 0 && (
+                    <span style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif",
+                      letterSpacing:"1px", background:"#fff8e0", color:"#8a6000",
+                      border:"1px solid #fde68a", borderRadius:3, padding:"1px 7px" }}>
+                      {run.keys} KEY{run.keys>1?"S":""}
+                    </span>
+                  )}
+                </div>
+                {/* Progress bar */}
+                <div style={{ height:5, background:"var(--border)", borderRadius:3, marginBottom:6 }}>
+                  <div style={{ width:`${pct}%`, height:"100%", background:pg.color, borderRadius:3, transition:"width 0.4s" }} />
+                </div>
+                <div style={{ display:"flex", justifyContent:"space-between", alignItems:"baseline" }}>
+                  <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.1rem",
+                    color:pg.color, letterSpacing:"1px", lineHeight:1 }}>
+                    {run.pct >= 100 ? "COMPLETE" : `${run.pct.toFixed(0)}%`}
+                  </span>
+                  <span style={{ fontSize:"0.7rem", color:"var(--muted)" }}>
+                    {run.haveCount}/{run.rangeSize}
+                    {run.missing.length > 0 && <span style={{ color:"var(--red)", marginLeft:4 }}>{run.missing.length} missing</span>}
+                  </span>
+                </div>
+                {isSelected && run.missing.length > 0 && (
+                  <div style={{ marginTop:10, borderTop:"1px solid var(--border)", paddingTop:8 }}>
+                    <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+                      letterSpacing:"2px", color:"var(--red)", marginBottom:6 }}>MISSING</div>
+                    <div style={{ display:"flex", flexWrap:"wrap", gap:4 }}>
+                      {run.missing.map(n => (
+                        <a key={n}
+                          href={`https://comicvine.gamespot.com/search/?q=${encodeURIComponent(run.title + " " + n)}&resources=issue`}
+                          target="_blank" rel="noopener noreferrer"
+                          onClick={e => e.stopPropagation()}
+                          style={{ background:"#fff0f0", color:"var(--red)", border:"1.5px solid #f5c8c8",
+                            borderRadius:4, padding:"2px 8px", fontSize:"0.72rem",
+                            fontFamily:"'Bebas Neue',sans-serif", textDecoration:"none" }}>
+                          #{n}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      )}
 
       {/* Publisher groups */}
       <div style={{ display:"flex", flexDirection:"column", gap:14 }}>
