@@ -201,11 +201,26 @@ export default function BoxKeys() {
         </div>
       </div>
 
-      <div className="results-bar">
-        <span>{results.length} of {keys.length} key issues</span>
+      <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center",
+        margin:"10px 16px 0", flexWrap:"wrap", gap:8 }}>
+        <div style={{ fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px", fontSize:"0.82rem", color:"var(--muted2)" }}>
+          {results.length === 0
+            ? "No results — try a different search"
+            : <><span style={{ color:"var(--red)", fontSize:"1.05rem" }}>{results.length.toLocaleString()}</span> of {keys.length.toLocaleString()} key issues</>
+          }
+        </div>
         <div style={{ display:"flex", gap:6 }}>
-          <button className={`view-toggle-btn${view==="list"?" active":""}`} onClick={()=>setView("list")}>≡ List</button>
-          <button className={`view-toggle-btn${view==="card"?" active":""}`} onClick={()=>setView("card")}>⊞ Cards</button>
+          {(["list","card"] as const).map(v => (
+            <button key={v} onClick={() => setView(v)}
+              style={{
+                fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"1.5px",
+                padding:"5px 14px", border:`1.5px solid ${view===v?"var(--red)":"var(--border)"}`,
+                background:view===v?"var(--red)":"var(--surface)", color:view===v?"#fff":"var(--muted2)",
+                borderRadius:4, cursor:"pointer", transition:"all 0.15s",
+              }}>
+              {v==="list"?"≡ List":"⊞ Cards"}
+            </button>
+          ))}
         </div>
       </div>
 
