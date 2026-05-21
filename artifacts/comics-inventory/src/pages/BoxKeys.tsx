@@ -148,28 +148,57 @@ export default function BoxKeys() {
         ))}
       </div>
 
-      <div className="filters">
-        <input
-          placeholder="Search title, key reason, 1st appearance, writer…"
-          value={q}
-          onChange={e=>setQ(e.target.value)}
-        />
-        <select value={box} onChange={e=>setBox(e.target.value)}>
-          <option value="">All Boxes</option>
-          {BOXES.map(b=><option key={b} value={b}>Box {b}</option>)}
-        </select>
-        <select value={pub} onChange={e=>setPub(e.target.value)}>
-          <option value="">All Publishers</option>
-          {PUBS.map(p=><option key={p}>{p}</option>)}
-        </select>
-        <select value={era} onChange={e=>setEra(e.target.value)}>
-          <option value="">All Eras</option>
-          {ERAS.map(e=><option key={e}>{e}</option>)}
-        </select>
-        <button className={`filter-pill${cgcOnly?" active":""}`} onClick={()=>setCgcOnly(v=>!v)}>📋 CGC</button>
-        <button className={`filter-pill${tfOnly?" active":""}`}  onClick={()=>setTfOnly(v=>!v)}>🎪 Terrificon</button>
-        <button className={`filter-pill${signedOnly?" active":""}`} onClick={()=>setSignedOnly(v=>!v)}>✍️ Signed</button>
-        <button className="clear-btn" onClick={()=>{setQ("");setBox("");setPub("");setEra("");setCgcOnly(false);setTfOnly(false);setSignedOnly(false);}}>✕ Clear</button>
+      <div className="qs-section" style={{ margin:"14px 16px 0", borderRadius:7 }}>
+        <div className="qs-header">
+          <span className="qs-title">SEARCH KEY ISSUES</span>
+          <span className="qs-sub">{keys.length} keys across {BOXES.length} boxes</span>
+        </div>
+        <div className="qs-row">
+          <input
+            className="qs-input"
+            placeholder="Search title, key reason, 1st appearance, writer…"
+            value={q}
+            onChange={e=>setQ(e.target.value)}
+            onKeyDown={e=>e.key==="Enter"&&setCardPage(1)}
+          />
+          <select className="qs-field-select" value={box} onChange={e=>{setBox(e.target.value);setCardPage(1);}}>
+            <option value="">All Boxes</option>
+            {BOXES.map(b=><option key={b} value={b}>Box {b}</option>)}
+          </select>
+          <select className="qs-field-select" value={pub} onChange={e=>{setPub(e.target.value);setCardPage(1);}}>
+            <option value="">All Publishers</option>
+            {PUBS.map(p=><option key={p}>{p}</option>)}
+          </select>
+          <select className="qs-field-select" value={era} onChange={e=>{setEra(e.target.value);setCardPage(1);}}>
+            <option value="">All Eras</option>
+            {ERAS.map(e=><option key={e}>{e}</option>)}
+          </select>
+          <button className="qs-btn" onClick={()=>setCardPage(1)}>Search →</button>
+        </div>
+        <div className="qs-pills">
+          <button
+            className={`qs-pill${cgcOnly?" qs-pill-key":""}`}
+            onClick={()=>{setCgcOnly(v=>!v);setCardPage(1);}}>
+            📋 CGC Candidates
+          </button>
+          <button
+            className={`qs-pill${tfOnly?" qs-pill-key":""}`}
+            style={tfOnly?{background:"#d4a800",color:"#000",borderColor:"#d4a800"}:{}}
+            onClick={()=>{setTfOnly(v=>!v);setCardPage(1);}}>
+            🎪 Terrificon
+          </button>
+          <button
+            className={`qs-pill${signedOnly?" qs-pill-sgn":""}`}
+            onClick={()=>{setSignedOnly(v=>!v);setCardPage(1);}}>
+            ✍️ Signed Keys
+          </button>
+          <button
+            className="qs-pill"
+            style={{ marginLeft:"auto", opacity: (!q&&!box&&!pub&&!era&&!cgcOnly&&!tfOnly&&!signedOnly)?0.35:1 }}
+            onClick={()=>{setQ("");setBox("");setPub("");setEra("");setCgcOnly(false);setTfOnly(false);setSignedOnly(false);setCardPage(1);}}>
+            ✕ Clear
+          </button>
+        </div>
       </div>
 
       <div className="results-bar">
