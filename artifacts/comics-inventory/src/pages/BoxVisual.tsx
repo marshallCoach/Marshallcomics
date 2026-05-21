@@ -93,31 +93,35 @@ export default function BoxVisual() {
         SELECT A BOX TO VISUALIZE ITS CONTENTS
       </div>
 
-      {/* Box grid selector */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(88px, 1fr))", gap: 6, marginBottom: 24 }}>
+      {/* Box grid selector — matches Home page box-tile style */}
+      <div className="boxes-grid" style={{ marginBottom: 24 }}>
         {boxes.map(b => {
           const isSelected = selectedBox === b.Num;
+          const lowBook    = Number(b.Comics) < 100;
           return (
-            <button key={b.Num} onClick={() => selectBox(b.Num)} style={{
-              background: isSelected ? "var(--red)" : "var(--surface)",
-              border: isSelected ? "2px solid var(--red-dark)" : "1.5px solid var(--border)",
-              borderRadius: 6, padding: "8px 6px", cursor: "pointer",
-              textAlign: "center", transition: "all 0.15s",
-              boxShadow: isSelected ? "0 2px 8px rgba(200,16,46,0.3)" : "0 1px 3px rgba(0,0,0,0.04)",
-            }}>
-              <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1rem",
-                color: isSelected ? "#fff" : "var(--red)", letterSpacing: "1px", lineHeight: 1 }}>
-                {b.Num.replace("BOX ", "#")}
-              </div>
-              <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.6rem",
-                color: isSelected ? "rgba(255,255,255,0.8)" : "var(--muted)", letterSpacing: "1px", marginTop: 2 }}>
-                {b.Comics} books
-              </div>
-              {b.Keys > 0 && (
-                <div style={{ width: "100%", height: 2, marginTop: 4, borderRadius: 1,
-                  background: isSelected ? "rgba(255,255,255,0.6)" : "#d4a800" }} />
-              )}
-            </button>
+            <div
+              key={b.Num}
+              onClick={() => selectBox(b.Num)}
+              className="box-tile"
+              title={b.Description || b.Label}
+              style={{
+                ...(isSelected ? {
+                  borderColor: "var(--red)",
+                  background: "#fef2f2",
+                  boxShadow: "0 4px 14px rgba(200,16,46,0.22)",
+                  transform: "translateY(-2px)",
+                } : {}),
+                ...(lowBook && !isSelected ? {
+                  borderColor: "#d6456a",
+                  background: "#fdf0f4",
+                } : {}),
+              }}
+            >
+              <div className="box-tile-count">{b.Comics}</div>
+              <div className="box-tile-num">{b.Num.replace("BOX ", "Box ")}</div>
+              {Number(b.Keys)   > 0 && <div className="box-tile-keys">{b.Keys}k</div>}
+              {Number(b.Signed) > 0 && <div className="box-tile-sgn">{b.Signed}s</div>}
+            </div>
           );
         })}
       </div>

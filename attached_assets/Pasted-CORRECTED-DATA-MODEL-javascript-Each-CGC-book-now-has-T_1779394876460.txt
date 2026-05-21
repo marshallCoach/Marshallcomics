@@ -1,0 +1,417 @@
+CORRECTED DATA MODEL
+javascript// Each CGC book now has THREE cost fields:
+// pressedCost: always $20/book (fixed flat rate, paid to presser)
+// cgcCost: varies by tier (paid to CGC)
+// totalCost: pressedCost + cgcCost
+
+// CGC TIER PRICING (2025):
+// Modern (post-2000): $53
+// Vintage (1975-2000): $70  
+// Economy: $38
+// PSA/DNA auth: $75 (for Stan Lee — no pressing)
+
+const CGC_BOOKS = [
+  {
+    priority: 1, tier: "critical",
+    book: "Wolverine #8 (1982) — UNSIGNED",
+    box: 5,
+    labelType: "Yellow SS (Terrificon — Claremont)",
+    pressedCost: 20,
+    cgcCost: 70,  // Vintage tier
+    totalCost: 90,
+    rawNM: 60,
+    projectedLow: 500,
+    projectedHigh: 700,
+    roiMultiple: "5.6x–7.8x",
+    status: "Not Started",
+    note: "DO NOT SUBMIT pre-con. Press only. Claremont signs at Terrificon Aug 8 in front of CGC witness.",
+    terrificon: true,
+    doNotPress: false
+  },
+  {
+    priority: 2, tier: "critical",
+    book: "Batman #656 (1st full Damian Wayne)",
+    box: 4,
+    labelType: "Blue Universal",
+    pressedCost: 20,
+    cgcCost: 53,  // Modern tier
+    totalCost: 73,
+    rawNM: 120,
+    projectedLow: 350,
+    projectedHigh: 500,
+    roiMultiple: "4.8x–6.8x",
+    status: "Not Started",
+    note: "Best single-book ROI in collection. Press + submit immediately."
+  },
+  {
+    priority: 3, tier: "critical",
+    book: "Batman #657 (1st Damian as Robin)",
+    box: 4,
+    labelType: "Blue Universal",
+    pressedCost: 20,
+    cgcCost: 53,
+    totalCost: 73,
+    rawNM: 80,
+    projectedLow: 200,
+    projectedHigh: 350,
+    roiMultiple: "2.7x–4.8x",
+    status: "Not Started",
+    note: "Always submit with #656."
+  },
+  {
+    priority: 4, tier: "critical",
+    book: "Stan Lee BP #513 (SIGNED)",
+    box: 2,
+    labelType: "Green Qualified (PSA/DNA auth first)",
+    pressedCost: 0,   // DO NOT PRESS — signature risk
+    cgcCost: 75,      // PSA/DNA authentication
+    totalCost: 75,
+    rawNM: 300,
+    projectedLow: 800,
+    projectedHigh: 1500,
+    roiMultiple: "10.7x–20x",
+    status: "Not Started",
+    note: "DO NOT PRESS — pressing damages signature ink. PSA/DNA at NYCC Oct, then CGC x JSA.",
+    doNotPress: true,
+    alert: "DO NOT PRESS"
+  },
+  {
+    priority: 5, tier: "high",
+    book: "Vision #1 (Tom King signed)",
+    box: 2,
+    labelType: "Green Qualified (CGC x JSA)",
+    pressedCost: 20,
+    cgcCost: 53,
+    totalCost: 73,
+    rawNM: 150,
+    projectedLow: 150,
+    projectedHigh: 300,
+    roiMultiple: "2.1x–4.1x",
+    status: "Not Started",
+    note: "Press then CGC x JSA mail-in. Tom King signature authenticated."
+  },
+  {
+    priority: 6, tier: "high",
+    book: "Secret Wars #1 (Hickman signed)",
+    box: 2,
+    labelType: "Green Qualified (CGC x JSA)",
+    pressedCost: 20,
+    cgcCost: 53,
+    totalCost: 73,
+    rawNM: 90,
+    projectedLow: 120,
+    projectedHigh: 250,
+    roiMultiple: "1.6x–3.4x",
+    status: "Not Started",
+    note: "Press then CGC x JSA mail-in."
+  },
+  {
+    priority: 7, tier: "high",
+    book: "ASM #361 (Bagley/Sharen — 1st Carnage)",
+    box: 2,
+    labelType: "Green Qualified (CGC x JSA)",
+    pressedCost: 20,
+    cgcCost: 53,
+    totalCost: 73,
+    rawNM: 100,
+    projectedLow: 200,
+    projectedHigh: 300,
+    roiMultiple: "2.7x–4.1x",
+    status: "Not Started",
+    note: "1st Carnage with double creator signature. Significant provenance."
+  },
+  {
+    priority: 8, tier: "high",
+    book: "Black Lightning #1 (Tony Isabella signed)",
+    box: 2,
+    labelType: "Green Qualified (CGC x JSA)",
+    pressedCost: 20,
+    cgcCost: 70,  // Vintage tier (1977)
+    totalCost: 90,
+    rawNM: 175,
+    projectedLow: 200,
+    projectedHigh: 500,
+    roiMultiple: "2.2x–5.6x",
+    status: "Not Started",
+    note: "Creator on first appearance. Vintage tier pricing."
+  },
+  {
+    priority: 9, tier: "high",
+    book: "New Warriors #1 (Bagley signed)",
+    box: 2,
+    labelType: "Green Qualified (CGC x JSA)",
+    pressedCost: 20,
+    cgcCost: 53,
+    totalCost: 73,
+    rawNM: 80,
+    projectedLow: 120,
+    projectedHigh: 200,
+    roiMultiple: "1.6x–2.7x",
+    status: "Not Started",
+    note: "Bagley's breakthrough book."
+  },
+  {
+    priority: 10, tier: "high",
+    book: "WildCATs #2 (Jim Lee signed)",
+    box: 2,
+    labelType: "Yellow/Green Combo (Terrificon re-sign)",
+    pressedCost: 20,
+    cgcCost: 53,
+    totalCost: 73,
+    rawNM: 115,
+    projectedLow: 150,
+    projectedHigh: 250,
+    roiMultiple: "2.1x–3.4x",
+    status: "Not Started",
+    note: "Re-sign at Terrificon in front of witness = Yellow/Green combo label.",
+    terrificon: true
+  },
+  {
+    priority: 11, tier: "high",
+    book: "Mockingbird #8 (Joëlle Jones signed)",
+    box: 2,
+    labelType: "Green Qualified (CGC x JSA)",
+    pressedCost: 20,
+    cgcCost: 53,
+    totalCost: 73,
+    rawNM: 70,
+    projectedLow: 80,
+    projectedHigh: 150,
+    roiMultiple: "1.1x–2.1x",
+    status: "Not Started",
+    note: "Feminist agenda cover. Jones signature authenticated."
+  },
+  {
+    priority: 12, tier: "high",
+    book: "Flash #164 (UNSIGNED — Waid + LaRocque)",
+    box: 7,
+    labelType: "Yellow SS (Terrificon dual signing)",
+    pressedCost: 20,
+    cgcCost: 53,
+    totalCost: 73,
+    rawNM: 12,
+    projectedLow: 80,
+    projectedHigh: 200,
+    roiMultiple: "1.1x–2.7x",
+    status: "Not Started",
+    note: "Mark Waid (writer) AND Greg LaRocque (artist) BOTH confirmed at Terrificon. Dual Yellow SS on the first issue of the Waid Flash run.",
+    terrificon: true
+  },
+  {
+    priority: 13, tier: "high",
+    book: "Hawkman #1 (UNSIGNED — Venditti)",
+    box: 15,
+    labelType: "Yellow SS (Terrificon)",
+    pressedCost: 20,
+    cgcCost: 53,
+    totalCost: 73,
+    rawNM: 10,
+    projectedLow: 80,
+    projectedHigh: 150,
+    roiMultiple: "1.1x–2.1x",
+    status: "Not Started",
+    note: "Robert Venditti confirmed. Creator on his own book.",
+    terrificon: true
+  },
+  {
+    priority: 14, tier: "high",
+    book: "Superman Unchained #1 (UNSIGNED) 🚨 UNBAGGED",
+    box: 8,
+    labelType: "Yellow SS (Jim Lee SAT)",
+    pressedCost: 20,
+    cgcCost: 53,
+    totalCost: 73,
+    rawNM: 20,
+    projectedLow: 150,
+    projectedHigh: 250,
+    roiMultiple: "2.1x–3.4x",
+    status: "Not Started",
+    note: "BAG FIRST — currently unbagged in Box 08. Jim Lee Saturday only. 10am sharp.",
+    terrificon: true,
+    alert: "BAG FIRST"
+  },
+  {
+    priority: 15, tier: "high",
+    book: "Batman Europa #1 (UNSIGNED) 🚨 UNBAGGED",
+    box: 8,
+    labelType: "Yellow SS (Jim Lee SAT)",
+    pressedCost: 20,
+    cgcCost: 53,
+    totalCost: 73,
+    rawNM: 25,
+    projectedLow: 100,
+    projectedHigh: 200,
+    roiMultiple: "1.4x–2.7x",
+    status: "Not Started",
+    note: "BAG FIRST — currently unbagged. Jim Lee Saturday only.",
+    terrificon: true,
+    alert: "BAG FIRST"
+  },
+  {
+    priority: 16, tier: "high",
+    book: "Thor #390 (UNSIGNED — Cap lifts Mjolnir KEY)",
+    box: 5,
+    labelType: "Yellow SS (Terrificon — Ron Frenz)",
+    pressedCost: 20,
+    cgcCost: 70,  // Vintage tier (1988)
+    totalCost: 90,
+    rawNM: 20,
+    projectedLow: 100,
+    projectedHigh: 200,
+    roiMultiple: "1.1x–2.2x",
+    status: "Not Started",
+    note: "Ron Frenz confirmed at Terrificon. KEY issue. Vintage tier.",
+    terrificon: true
+  },
+  {
+    priority: 17, tier: "high",
+    book: "Thor #412 (UNSIGNED — 1st New Warriors KEY)",
+    box: 5,
+    labelType: "Yellow SS (Terrificon — Ron Frenz)",
+    pressedCost: 20,
+    cgcCost: 70,  // Vintage tier (1989)
+    totalCost: 90,
+    rawNM: 30,
+    projectedLow: 80,
+    projectedHigh: 150,
+    roiMultiple: "0.9x–1.7x",
+    status: "Not Started",
+    note: "Ron Frenz confirmed. 1st New Warriors. Vintage tier.",
+    terrificon: true
+  },
+  {
+    priority: 18, tier: "high",
+    book: "X-Men Legends #4 (BOTH Simonsons — UNSIGNED)",
+    box: 41,
+    labelType: "Yellow SS (Terrificon dual — W+L Simonson)",
+    pressedCost: 20,
+    cgcCost: 53,
+    totalCost: 73,
+    rawNM: 8,
+    projectedLow: 80,
+    projectedHigh: 150,
+    roiMultiple: "1.1x–2.1x",
+    status: "Not Started",
+    note: "Louise Simonson (writer) AND Walter Simonson (artist) BOTH confirmed. Dual Yellow SS.",
+    terrificon: true
+  },
+  {
+    priority: 19, tier: "medium",
+    book: "House of X #1 (Hickman/Larraz)",
+    box: 35,
+    labelType: "Blue Universal",
+    pressedCost: 20,
+    cgcCost: 53,
+    totalCost: 73,
+    rawNM: 40,
+    projectedLow: 80,
+    projectedHigh: 150,
+    roiMultiple: "1.1x–2.1x",
+    status: "Not Started",
+    note: "Assess condition first. Modern tier."
+  },
+  {
+    priority: 20, tier: "medium",
+    book: "Immortal Iron Fist #1 (Brubaker/Aja)",
+    box: 42,
+    labelType: "Blue Universal",
+    pressedCost: 20,
+    cgcCost: 53,
+    totalCost: 73,
+    rawNM: 18,
+    projectedLow: 80,
+    projectedHigh: 150,
+    roiMultiple: "1.1x–2.1x",
+    status: "Not Started",
+    note: "Landmark Iron Fist relaunch."
+  },
+  {
+    priority: 21, tier: "medium",
+    book: "Paper Girls #1 (Cliff Chiang SIGNED — personalized to Robert)",
+    box: 38,
+    labelType: "Green Qualified (CGC x JSA)",
+    pressedCost: 20,
+    cgcCost: 53,
+    totalCost: 73,
+    rawNM: 30,
+    projectedLow: 100,
+    projectedHigh: 200,
+    roiMultiple: "1.4x–2.7x",
+    status: "Not Started",
+    note: "Personalized to Robert by Cliff Chiang. BKV/Chiang Image breakout."
+  },
+  {
+    priority: 22, tier: "medium",
+    book: "Sandman: Overture #1 (Gaiman/JH Williams III)",
+    box: 38,
+    labelType: "Blue Universal",
+    pressedCost: 20,
+    cgcCost: 53,
+    totalCost: 73,
+    rawNM: 40,
+    projectedLow: 80,
+    projectedHigh: 150,
+    roiMultiple: "1.1x–2.1x",
+    status: "Not Started",
+    note: "Gaiman returns to Sandman. JH Williams III art."
+  },
+  {
+    priority: 23, tier: "medium",
+    book: "ASM #27 (Dan Slott SIGNED)",
+    box: 42,
+    labelType: "Green Qualified (CGC x JSA)",
+    pressedCost: 20,
+    cgcCost: 53,
+    totalCost: 73,
+    rawNM: 10,
+    projectedLow: 40,
+    projectedHigh: 80,
+    roiMultiple: "0.5x–1.1x",
+    status: "Not Started",
+    note: "Newly found signed book. Dan Slott signature. CGC x JSA."
+  }
+];
+
+// SUMMARY CALCULATIONS (use these for the footer/stats):
+const PRESS_COST_PER_BOOK = 20; // flat rate, always
+const pressableBooks = CGC_BOOKS.filter(b => b.pressedCost > 0);
+const totalPressInvestment = pressableBooks.length * PRESS_COST_PER_BOOK; // $440
+const totalCGCInvestment = CGC_BOOKS.reduce((sum, b) => sum + b.cgcCost, 0); // $1274
+const totalAllIn = CGC_BOOKS.reduce((sum, b) => sum + b.totalCost, 0); // $1674
+const projectedReturnLow = CGC_BOOKS.reduce((sum, b) => sum + b.projectedLow, 0);
+const projectedReturnHigh = CGC_BOOKS.reduce((sum, b) => sum + b.projectedHigh, 0);
+const netGainLow = projectedReturnLow - totalAllIn;
+const netGainHigh = projectedReturnHigh - totalAllIn;
+
+// Display in your CGC tab footer:
+// Pressing: $440 (22 books × $20/book flat rate)
+// CGC Submission: $1,274 (varies by tier: Modern $53 | Vintage $70 | PSA $75)  
+// Total Investment: $1,674
+// Projected Return: $3,100–$6,900
+// Net Projected Gain: $1,426–$5,226
+
+CGC TIER REFERENCE TABLE (pin this in the UI)
+TierBooksWhenCostPressAll except Stan LeeBefore any CGC submission$20/book (flat)ModernPost-2000Standard modern submission$53/bookVintage1975–2000Thor, Flash, Black Lightning$70/bookEconomyAnySlower turnaround option$38/bookPSA/DNAStan Lee onlyAuthentication, no pressing$75/book
+
+UI CHANGES NEEDED IN REPLIT
+
+CGC tab stats bar — replace single "Cost" column with two columns:
+
+"Press" (always $20 or $0 for Stan Lee)
+"CGC Submit" (tier-dependent: $53/$70/$38/$75)
+"Total" = sum of both
+
+
+Footer summary should show THREE lines:
+
+   Pressing:        $440   (22 books × $20)
+   CGC Submission:  $1,274 (varies by tier)
+   ─────────────────────────
+   Total All-In:    $1,674
+
+Stan Lee special indicator — when doNotPress: true, show a red "DO NOT PRESS" badge on that row and $0 in the Press column
+Terrificon filter — add a toggle "Terrificon Only" that filters to terrificon: true rows. These are the books that need to be physically brought to Mohegan Sun Aug 7-9.
+Status dropdown per book: Not Started → Pressed → At CGC → Returned → Sold
+
+
+Data correct as of May 20, 2026 | 23 books in CGC pipeline | $1,674 total investment | $3,100–$6,900 projected return
