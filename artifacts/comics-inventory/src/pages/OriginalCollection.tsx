@@ -214,38 +214,74 @@ export default function OriginalCollection({ initSigned }: { initSigned?: string
 
       {results.length > 0 && view === "card" && (
         <div>
-          <div className="card-grid">
+          <div style={{ display:"flex", flexWrap:"wrap", gap:10, padding:"12px 16px" }}>
             {cardSlice.map((c, i) => {
-              const isKey    = (c.Key || "").toUpperCase() === "YES";
+              const isKey    = (c.Key    || "").toUpperCase() === "YES";
               const isSigned = (c.Signed || "").toUpperCase() === "YES";
               const isTf     = !!(c.Terrificon || "").trim();
               const nmVal    = c.Value_NM && c.Value_NM !== "nan" ? c.Value_NM : "";
               const pitch    = c.Story_Pitch && c.Story_Pitch !== "nan" ? c.Story_Pitch : "";
               const isOpen   = open.has(i);
+              const accentHex = isKey ? "#c8102e" : isSigned ? "#7a5c3a" : "#e2dfd8";
               return (
-                <div key={i} className={`comic-card${isOpen?" open":""}`} onClick={()=>toggle(i)}>
-                  <button className="title-link" onClick={e=>{e.stopPropagation();setQ(c.Title||"");setCardPage(1);}}>
-                  {c.Title || "Untitled"}
-                </button>
-                  <div className="card-sub">Box {c.Box} · {c.Publisher} #{c.Issue} · {c.Year}</div>
-                  <div className="badges">
-                    {isKey    && <span className="badge bk">KEY</span>}
-                    {isSigned && <span className="badge bs">SIGNED</span>}
-                    {c.Era    && <span className="badge be">{c.Era}</span>}
-                    {c.Platform && <span className={`badge ${platClass(c.Platform)}`}>{c.Platform}</span>}
-                    {isTf     && <span className="badge bt">Terrificon</span>}
+                <div key={i}
+                  onClick={() => toggle(i)}
+                  className="flagship-card"
+                  style={{
+                    flex: isOpen ? "1 1 100%" : "1 1 280px",
+                    borderLeftColor: accentHex,
+                    borderColor: isOpen ? accentHex : accentHex+"66",
+                    boxShadow: isOpen ? `0 4px 16px ${accentHex}20` : "none",
+                  }}>
+                  {/* Header */}
+                  <div style={{ display:"flex", alignItems:"flex-start", gap:8, flexWrap:"wrap" }}>
+                    <div style={{ flex:1, minWidth:0 }}>
+                      {isTf && <span className="tf-badge" style={{ marginBottom:4, display:"inline-block" }}>TERRIFICON</span>}
+                      <button
+                        className="title-link"
+                        onClick={e => { e.stopPropagation(); setQ(c.Title||""); setCardPage(1); }}
+                        style={{ display:"block", textAlign:"left", fontFamily:"'Bebas Neue',sans-serif",
+                          fontSize:"0.92rem", letterSpacing:"1px", lineHeight:1.2 }}
+                      >{c.Title || "Untitled"}</button>
+                    </div>
+                    <div style={{ fontSize:"0.7rem", color:"var(--muted)", flexShrink:0, marginTop:2 }}>
+                      #{c.Issue} {isOpen?"▲":"▼"}
+                    </div>
                   </div>
-                  {nmVal && <div className="card-value">NM: <span className="v">{nmVal}</span></div>}
-                  {pitch && <div className="card-pitch">{pitch.substring(0,160)}{pitch.length>160?"…":""}</div>}
+                  {/* Subtitle */}
+                  <div style={{ fontSize:"0.8rem", color:"var(--muted2)", marginTop:4 }}>
+                    {[c.Publisher, c.Year, c.Era].filter(Boolean).join(" · ")}
+                    {c.Platform ? ` · ${c.Platform}` : ""}
+                  </div>
+                  {/* Badges */}
+                  <div style={{ display:"flex", gap:5, marginTop:7, flexWrap:"wrap" }}>
+                    {isKey    && <span className="badge bk" style={{fontSize:"0.6rem"}}>KEY</span>}
+                    {isSigned && <span className="badge bs" style={{fontSize:"0.6rem"}}>SIGNED</span>}
+                  </div>
+                  {/* NM value */}
+                  {nmVal && (
+                    <div style={{ fontSize:"0.8rem", color:"var(--brown)", marginTop:6 }}>
+                      NM: <span style={{ color:"var(--red)", fontWeight:700 }}>{nmVal}</span>
+                    </div>
+                  )}
+                  {/* Pitch (collapsed) */}
+                  {pitch && !isOpen && (
+                    <div style={{ fontSize:"0.82rem", color:"var(--muted2)", lineHeight:1.5, marginTop:5 }}>
+                      {pitch.substring(0,120)}{pitch.length>120?"…":""}
+                    </div>
+                  )}
+                  {/* Expanded */}
                   {isOpen && (
-                    <div className="card-expand">
-                      {c.Writer   && c.Writer !== "nan"   && <div className="dr"><span className="dl">W</span><span className="dv">{c.Writer}</span></div>}
-                      {c.Artist   && c.Artist !== "nan"   && <div className="dr"><span className="dl">A</span><span className="dv">{c.Artist}</span></div>}
-                      {isSigned && c.Signed_By            && <div className="dr"><span className="dl">Signed By</span><span className="dv">{c.Signed_By}</span></div>}
-                      {c.Key_Reason  && c.Key_Reason !== "nan"  && <div className="dr"><span className="dl">Key Why</span><span className="dv">{c.Key_Reason}</span></div>}
-                      {c.First_App && c.First_App !== "nan" && <div className="dr"><span className="dl">1st App</span><span className="dv">{c.First_App}</span></div>}
-                      {c.Condition && c.Condition !== "nan" && <div className="dr"><span className="dl">Condition</span><span className="dv">{c.Condition}</span></div>}
-                      {isTf && <div className="dr"><span className="dl">Terrificon</span><span className="dv" style={{color:"#f59e0b"}}>{c.Terrificon}</span></div>}
+                    <div style={{ marginTop:14, paddingTop:14, borderTop:`1px solid ${accentHex}30`,
+                      display:"flex", flexWrap:"wrap", gap:"10px 28px" }}>
+                      {c.Writer    && c.Writer    !== "nan" && <div className="dr"><span className="dl">Writer</span><span className="dv">{c.Writer}</span></div>}
+                      {c.Artist    && c.Artist    !== "nan" && <div className="dr"><span className="dl">Artist</span><span className="dv">{c.Artist}</span></div>}
+                      {isSigned && c.Signed_By              && <div className="dr"><span className="dl">Signed By</span><span className="dv">{c.Signed_By}</span></div>}
+                      {c.Key_Reason && c.Key_Reason !== "nan" && <div className="dr"><span className="dl">Key</span><span className="dv">{c.Key_Reason}</span></div>}
+                      {c.First_App  && c.First_App  !== "nan" && <div className="dr"><span className="dl">1st App</span><span className="dv">{c.First_App}</span></div>}
+                      {c.Condition  && c.Condition  !== "nan" && <div className="dr"><span className="dl">Condition</span><span className="dv">{c.Condition}</span></div>}
+                      {isTf && c.Terrificon && <div className="dr"><span className="dl">Terrificon</span><span className="dv" style={{color:"#f59e0b"}}>{c.Terrificon}</span></div>}
+                      {pitch && <div style={{ flex:"1 1 100%", marginTop:6, fontSize:"0.85rem", color:"var(--muted2)", lineHeight:1.5 }}>{pitch}</div>}
                     </div>
                   )}
                 </div>

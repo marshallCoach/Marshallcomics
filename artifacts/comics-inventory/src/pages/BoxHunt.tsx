@@ -111,7 +111,7 @@ function CoverThumb({ c }: { c: Comic }) {
   );
 }
 
-function HuntCard({ comic: c }: { comic: Comic }) {
+function HuntCard({ comic: c, onTitleClick }: { comic: Comic; onTitleClick?: (t: string) => void }) {
   const isKey    = (c.Key    || "").toUpperCase() === "YES";
   const isSigned = (c.Signed || "").toUpperCase() === "YES";
   return (
@@ -127,7 +127,13 @@ function HuntCard({ comic: c }: { comic: Comic }) {
               {c.Platform && <span className={`badge ${platClass(c.Platform)}`} style={{fontSize:"0.57rem"}}>{c.Platform}</span>}
             </div>
           </div>
-          <div style={{ fontWeight:600, fontSize:"0.88rem", color:"var(--brown-light)", lineHeight:1.3 }}>{c.Title}</div>
+          <button
+            onClick={e => { e.stopPropagation(); onTitleClick?.(c.Title); }}
+            style={{ background:"none", border:"none", padding:0, cursor:"pointer",
+              fontWeight:600, fontSize:"0.88rem", color:"var(--brown-light)", lineHeight:1.3,
+              textAlign:"left", display:"block", width:"100%" }}
+            title="Filter to this title"
+          >{c.Title}</button>
           <div style={{ fontSize:"0.78rem", color:"var(--muted2)", marginTop:2 }}>
             {c.Issue}{extractVol(c.Title) ? ` · ${extractVol(c.Title)}` : ""}{c.Year ? ` · ${c.Year}` : ""}
           </div>
@@ -170,6 +176,8 @@ export default function BoxHunt() {
   const [view,        setView]        = useState<"list"|"card">("list");
   const [cardPage,    setCardPage]    = useState(1);
 
+  const [exactTitle,  setExactTitle]   = useState("");
+
   // Box visualization state
   const [selectedBox, setSelectedBox] = useState<string | null>(null);
 
@@ -180,6 +188,7 @@ export default function BoxHunt() {
   const results = useMemo(() => {
     if (!searched) return [];
     return ALL.filter(c => {
+      if (exactTitle && c.Title !== exactTitle) return false;
       if (searchField === "keysonly")   return (c.Key    || "").toUpperCase() === "YES";
       if (searchField === "signedonly") return (c.Signed || "").toUpperCase() === "YES";
       if (searchField === "publisher")  return searchPub ? c.Publisher === searchPub : true;
@@ -197,7 +206,7 @@ export default function BoxHunt() {
               c.Arc, c.Seller_Notes, c.Era, `box ${c.Box}`, c.Terrificon,
              ].join(" ").toLowerCase().includes(q);
     });
-  }, [searched, searchField, searchVal, searchBox, searchPub]);
+  }, [searched, searchField, searchVal, searchBox, searchPub, exactTitle]);
 
   // Box hit map
   const matchesByBox = useMemo(() => {
@@ -240,7 +249,8 @@ export default function BoxHunt() {
   // List cols
   const cols = useMemo<ColDef<Comic>[]>(() => [
     { key:"box",    label:"Box",       defaultWidth:70,  sort:(a,b)=>Number(a.Box)-Number(b.Box),          cell:r=><BoxBadge box={r.Box} /> },
-    { key:"title",  label:"Title",     defaultWidth:220, sort:(a,b)=>a.Title.localeCompare(b.Title),       cell:r=><span style={{fontWeight:600,color:"var(--brown-light)"}}>{r.Title}</span> },
+    { key:"title",  label:"Title",     defaultWidth:220, sort:(a,b)=>a.Title.localeCompare(b.Title),
+      cell:r=><button className="title-link" onClick={e=>{e.stopPropagation();setExactTitle(r.Title);}}>{r.Title}</button> },
     { key:"issue",  label:"#",         defaultWidth:55,  sort:(a,b)=>parseVal(a.Issue)-parseVal(b.Issue),  cell:r=><span className="lt-sub">{r.Issue}</span> },
     { key:"vol",    label:"Vol",       defaultWidth:58,  sort:(a,b)=>extractVol(a.Title).localeCompare(extractVol(b.Title)), cell:r=><span className="lt-sub">{extractVol(r.Title)||"—"}</span> },
     { key:"pub",    label:"Publisher", defaultWidth:100, sort:(a,b)=>a.Publisher.localeCompare(b.Publisher), cell:r=><span className="lt-sub">{r.Publisher}</span> },
@@ -256,6 +266,7 @@ export default function BoxHunt() {
     setSearched(true);
     setCardPage(1);
     setSelectedBox(null);
+    setExactTitle("");
   }
 
   function doQuickPill(term: string) {
@@ -276,6 +287,7 @@ export default function BoxHunt() {
     setSearched(false);
     setCardPage(1);
     setSelectedBox(null);
+    setExactTitle("");
   }
 
   return (
@@ -350,6 +362,23 @@ export default function BoxHunt() {
           <button className="qs-pill qs-pill-sgn" onClick={() => { setSearchField("signedonly"); setSearchVal(""); doSearch(); }}>✍ All Signed</button>
         </div>
       </section>
+
+      {/* ── Exact title filter badge ── */}
+      {exactTitle && (
+        <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:10 }}>
+          <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"1px",
+            background:"#fff0f0", color:"var(--red)", border:"1.5px solid #f5c8c8",
+            borderRadius:4, padding:"3px 10px" }}>
+            TITLE: {exactTitle}
+          </span>
+          <button onClick={() => setExactTitle("")} style={{
+            background:"none", border:"1.5px solid var(--border)", borderRadius:4,
+            padding:"2px 8px", cursor:"pointer", color:"var(--muted)",
+            fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1px" }}>
+            ✕ CLEAR
+          </button>
+        </div>
+      )}
 
       {/* ── Results count + view toggle ── */}
       {searched && (
@@ -599,7 +628,7 @@ export default function BoxHunt() {
       {searched && results.length > 0 && view === "card" && !selectedBox && (
         <>
           <div className="ev-card-grid">
-            {cardSlice.map((c, i) => <HuntCard key={i} comic={c} />)}
+            {cardSlice.map((c, i) => <HuntCard key={i} comic={c} onTitleClick={setExactTitle} />)}
           </div>
           <Paginator
             total={results.length} page={cardPage} pageSize={CARD_PAGE}

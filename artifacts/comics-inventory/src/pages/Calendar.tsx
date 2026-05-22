@@ -35,6 +35,32 @@ const rawEvents = [
 const events: CalEvent[] = rawEvents.map(e => ({ ...e, sortDate: parseSortDate(e.Date) }));
 export const CALENDAR_EVENTS = events;
 
+// ── Calendar grid helpers ─────────────────────────────────────────────────────
+const MONTH_NAMES = ["","January","February","March","April","May","June","July","August","September","October","November","December"];
+
+function parseEventDates(ev: CalEvent): Array<{year:number; month:number; day:number}> {
+  const s = ev.Date || "";
+  const MONTHS: Record<string,number> = {jan:1,feb:2,mar:3,apr:4,may:5,jun:6,jul:7,aug:8,sep:9,oct:10,nov:11,dec:12};
+  // Range: "Aug 7–9, 2026" or "Oct 8–11, 2026"
+  const rm = s.match(/([a-z]{3})\w*[\s.]+(\d{1,2})[–\-](\d{1,2})[,\s]+(\d{4})/i);
+  if (rm) {
+    const mon = MONTHS[rm[1].toLowerCase().slice(0,3)] || 0;
+    const yr  = parseInt(rm[4]);
+    const out: Array<{year:number;month:number;day:number}> = [];
+    for (let d = parseInt(rm[2]); d <= parseInt(rm[3]); d++) out.push({year:yr,month:mon,day:d});
+    return out;
+  }
+  // Single: "Jun 18, 2026" or "Jun 5, 2026 ⚠️"
+  const sm = s.match(/([a-z]{3})\w*[\s.]+(\d{1,2})[,\s]+(\d{4})/i);
+  if (sm) return [{year:parseInt(sm[3]),month:MONTHS[sm[1].toLowerCase().slice(0,3)]||0,day:parseInt(sm[2])}];
+  // "By Jul 1, 2026"
+  const bm = s.match(/by\s+([a-z]{3})\w*[\s.]+(\d{1,2})[,\s]+(\d{4})/i);
+  if (bm) return [{year:parseInt(bm[3]),month:MONTHS[bm[1].toLowerCase().slice(0,3)]||0,day:parseInt(bm[2])}];
+  return [];
+}
+
+const CAL_MONTHS = [6,7,8,9,10,11,12].map(m => ({year:2026,month:m,name:MONTH_NAMES[m].toUpperCase()}));
+
 function calClass(type: string) {
   const t = (type || "").toUpperCase();
   if (t.includes("WHATNOT")) return "lc-whatnot";
@@ -61,7 +87,7 @@ export default function Calendar() {
   const [q,       setQ]       = useState("");
   const [type,    setType]    = useState("");
   const [sortDir, setSortDir] = useState<"asc" | "desc">("asc");
-  const [view,    setView]    = useState<"list" | "card">("list");
+  const [view,    setView]    = useState<"list" | "card" | "cal">("list");
   const [open,    setOpen]    = useState<Set<number>>(new Set());
 
   const filtered = useMemo(() => {
@@ -80,6 +106,18 @@ export default function Calendar() {
   const toggle = (i: number) => setOpen(prev => {
     const n = new Set(prev); n.has(i) ? n.delete(i) : n.add(i); return n;
   });
+
+  const dayEventMap = useMemo(() => {
+    const m: Record<string, CalEvent[]> = {};
+    for (const ev of events) {
+      for (const {year,month,day} of parseEventDates(ev)) {
+        const k = `${year}-${month}-${day}`;
+        if (!m[k]) m[k] = [];
+        m[k].push(ev);
+      }
+    }
+    return m;
+  }, []);
 
   const whatnotCount = events.filter(e => e.Type.toUpperCase().includes("WHATNOT")).length;
   const cgcCount     = events.filter(e => e.Type.toUpperCase().includes("CGC")).length;
@@ -138,7 +176,7 @@ export default function Calendar() {
 
         {/* View toggle */}
         <div style={{ display:"flex", border:"1.5px solid var(--border)", borderRadius:5, overflow:"hidden", flexShrink:0 }}>
-          {(["list","card"] as const).map(v => (
+          {(["list","card","cal"] as const).map(v => (
             <button key={v} onClick={() => setView(v)} style={{
               background: view===v ? "var(--red)" : "var(--surface2)",
               color: view===v ? "#fff" : "var(--muted2)",
@@ -146,7 +184,7 @@ export default function Calendar() {
               fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"1.5px",
               transition:"all 0.15s",
             }}>
-              {v === "list" ? "☰ LIST" : "⊞ CARDS"}
+              {v === "list" ? "☰ LIST" : v === "card" ? "⊞ CARDS" : "📅 CAL"}
             </button>
           ))}
         </div>
@@ -200,6 +238,118 @@ export default function Calendar() {
               </div>
             );
           })}
+        </div>
+      )}
+
+      {/* CALENDAR GRID VIEW */}
+      {view === "cal" && (
+        <div style={{ padding:"16px 18px 40px" }}>
+          {/* Legend */}
+          <div style={{ display:"flex", gap:14, flexWrap:"wrap", marginBottom:18, alignItems:"center" }}>
+            <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1.5px", color:"var(--muted)" }}>LEGEND:</span>
+            {[
+              { label:"Whatnot Show", bg:"#e8f5e8", color:"#1a6a1a" },
+              { label:"CGC",          bg:"#e8f0ff", color:"#1a4a99" },
+              { label:"Convention",   bg:"#f0ebff", color:"#5522aa" },
+            ].map(t => (
+              <div key={t.label} style={{ display:"flex", alignItems:"center", gap:5 }}>
+                <div style={{ width:14, height:14, borderRadius:3, background:t.bg, border:`1.5px solid ${t.color}55` }} />
+                <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px", color:"var(--muted2)" }}>{t.label}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Month grids */}
+          <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(240px,1fr))", gap:16 }}>
+            {CAL_MONTHS.map(({ year, month, name }) => {
+              const firstDay     = new Date(year, month-1, 1).getDay();
+              const daysInMonth  = new Date(year, month, 0).getDate();
+              const cells: (number|null)[] = [];
+              for (let i=0; i<firstDay; i++) cells.push(null);
+              for (let d=1; d<=daysInMonth; d++) cells.push(d);
+              while (cells.length % 7 !== 0) cells.push(null);
+
+              const monthEvDays = Object.entries(dayEventMap)
+                .filter(([k]) => { const [y,m2] = k.split("-").map(Number); return y===year && m2===month; })
+                .sort(([a],[b]) => parseInt(a.split("-")[2]) - parseInt(b.split("-")[2]));
+
+              const hasAny = monthEvDays.length > 0;
+
+              return (
+                <div key={`${year}-${month}`} style={{
+                  background:"var(--surface)", border:`1.5px solid ${hasAny?"rgba(200,16,46,0.25)":"var(--border)"}`,
+                  borderRadius:8, padding:"12px 14px",
+                }}>
+                  <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.88rem",
+                    letterSpacing:"3px", color: hasAny ? "var(--red)" : "var(--muted2)",
+                    marginBottom:10, lineHeight:1 }}>
+                    {name} {year}
+                  </div>
+
+                  {/* Day headers */}
+                  <div style={{ display:"grid", gridTemplateColumns:"repeat(7,1fr)", gap:1, marginBottom:3 }}>
+                    {["S","M","T","W","T","F","S"].map((d,i) => (
+                      <div key={i} style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.54rem",
+                        letterSpacing:"0.5px", color:"var(--muted)", textAlign:"center" }}>{d}</div>
+                    ))}
+                  </div>
+
+                  {/* Day cells */}
+                  <div style={{ display:"grid", gridTemplateColumns:"repeat(7,1fr)", gap:2 }}>
+                    {cells.map((d, idx) => {
+                      if (!d) return <div key={idx} style={{ paddingTop:6 }} />;
+                      const k = `${year}-${month}-${d}`;
+                      const dayEvs = dayEventMap[k] || [];
+                      const has = dayEvs.length > 0;
+                      const ti = has ? typeIcon(dayEvs[0].Type) : null;
+                      return (
+                        <div key={idx}
+                          title={has ? dayEvs.map(e => e.Theme.substring(0,55)).join("; ") : undefined}
+                          style={{
+                            textAlign:"center", fontFamily:"'Bebas Neue',sans-serif",
+                            fontSize:"0.7rem", letterSpacing:"0.5px", lineHeight:1,
+                            padding:"4px 1px", borderRadius:4,
+                            background: has ? ti!.bg : "transparent",
+                            color: has ? ti!.color : "var(--text)",
+                            border: has ? `1px solid ${ti!.color}44` : "1px solid transparent",
+                            fontWeight: has ? 700 : 400,
+                            cursor: has ? "help" : "default",
+                          }}>
+                          {d}
+                          {dayEvs.length > 1 && (
+                            <div style={{ fontSize:"0.44rem", lineHeight:1, marginTop:1, color:ti!.color }}>×{dayEvs.length}</div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+
+                  {/* Event list for this month */}
+                  {hasAny && (
+                    <div style={{ marginTop:10, borderTop:"1px solid var(--border)", paddingTop:8, display:"flex", flexDirection:"column", gap:4 }}>
+                      {monthEvDays.flatMap(([k, evs]) =>
+                        evs.map(ev => ({ ev, day: parseInt(k.split("-")[2]) }))
+                      ).map(({ ev, day }, i) => {
+                        const ti2 = typeIcon(ev.Type);
+                        return (
+                          <div key={i} style={{ display:"flex", gap:6, alignItems:"flex-start" }}>
+                            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.66rem",
+                              color:ti2.color, minWidth:18, flexShrink:0, marginTop:1 }}>{day}</div>
+                            <div style={{ flex:1, minWidth:0 }}>
+                              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem",
+                                letterSpacing:"0.5px", color:ti2.color, lineHeight:1.3 }}>
+                                {ti2.icon} {ev.Theme.substring(0,48)}{ev.Theme.length>48?"…":""}
+                              </div>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </div>
       )}
 

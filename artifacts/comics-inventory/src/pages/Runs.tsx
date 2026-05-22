@@ -249,9 +249,9 @@ export default function Runs() {
         </div>
       </div>
 
-      {/* Card view — flat grid */}
+      {/* Card view — flagship style */}
       {view === "card" && filtered.length > 0 && (
-        <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(240px,1fr))", gap:10, marginBottom:40 }}>
+        <div style={{ display:"flex", flexWrap:"wrap", gap:10, marginBottom:40 }}>
           {filtered.map((run, i) => {
             const pg = PUB_GROUPS.find(p => p.key === pubGroup(run.publisher)) ?? PUB_GROUPS[2];
             const pct = Math.min(run.pct, 100);
@@ -259,22 +259,28 @@ export default function Runs() {
             return (
               <div key={i}
                 onClick={() => setSelectedRun(isSelected ? null : run)}
+                className="flagship-card"
                 style={{
-                  background:"var(--surface)", border:`1.5px solid ${isSelected ? pg.color : "var(--border)"}`,
-                  borderTop:`3px solid ${pg.color}`, borderRadius:7, padding:"12px 14px",
-                  cursor:"pointer", transition:"box-shadow 0.15s, transform 0.15s",
-                  boxShadow: isSelected ? `0 4px 16px ${pg.color}22` : "0 1px 3px rgba(0,0,0,0.06)",
+                  flex: isSelected ? "1 1 100%" : "1 1 280px",
+                  borderLeftColor: pg.color,
+                  borderColor: isSelected ? pg.color : pg.color+"33",
+                  boxShadow: isSelected ? `0 4px 16px ${pg.color}20` : "none",
                 }}>
-                <div style={{ fontSize:"0.85rem", fontWeight:600, color:"var(--brown-light)",
-                  lineHeight:1.25, marginBottom:4 }}>{run.title}</div>
-                <div style={{ display:"flex", gap:6, marginBottom:8, flexWrap:"wrap" }}>
-                  <span style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif",
+                {/* Title row */}
+                <div style={{ display:"flex", alignItems:"flex-start", gap:8 }}>
+                  <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.92rem",
+                    letterSpacing:"1px", color:pg.color, flex:1, lineHeight:1.2 }}>{run.title}</div>
+                  <div style={{ fontSize:"0.7rem", color:"var(--muted)", flexShrink:0, marginTop:1 }}>{isSelected?"▲":"▼"}</div>
+                </div>
+                {/* Badges */}
+                <div style={{ display:"flex", gap:5, marginTop:6, flexWrap:"wrap" }}>
+                  <span style={{ fontSize:"0.6rem", fontFamily:"'Bebas Neue',sans-serif",
                     letterSpacing:"1px", background:pg.accent, color:pg.color,
                     border:`1px solid ${pg.border}`, borderRadius:3, padding:"1px 7px" }}>
                     {pg.label}
                   </span>
                   {run.keys > 0 && (
-                    <span style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif",
+                    <span style={{ fontSize:"0.6rem", fontFamily:"'Bebas Neue',sans-serif",
                       letterSpacing:"1px", background:"#fff8e0", color:"#8a6000",
                       border:"1px solid #fde68a", borderRadius:3, padding:"1px 7px" }}>
                       {run.keys} KEY{run.keys>1?"S":""}
