@@ -179,7 +179,8 @@ export default function BoxHunt() {
   const [exactTitle,  setExactTitle]   = useState("");
 
   // Box visualization state
-  const [selectedBox, setSelectedBox] = useState<string | null>(null);
+  const [selectedBox,  setSelectedBox]  = useState<string | null>(null);
+  const [hoveredSpine, setHoveredSpine] = useState<{title:string;issue:string;hit:boolean;isKey:boolean;isSigned:boolean;x:number;y:number}|null>(null);
 
   const noTextFields = ["keysonly", "signedonly", "publisher", "box"];
   const showTextInput = !noTextFields.includes(searchField);
@@ -515,7 +516,8 @@ export default function BoxHunt() {
                   const isSigned = (c.Signed || "").toUpperCase() === "YES";
                   return (
                     <div key={i}
-                      title={`${c.Title} #${c.Issue}${hit?" ← MATCH":""}${isKey?" ★KEY":""}${isSigned?" ✍":""}`}
+                      onMouseEnter={e => { const r = e.currentTarget.getBoundingClientRect(); setHoveredSpine({title:c.Title,issue:c.Issue,hit,isKey,isSigned,x:r.left+r.width/2,y:r.top}); }}
+                      onMouseLeave={() => setHoveredSpine(null)}
                       style={{
                         width:  hit ? 7 : 5,
                         height: isKey ? 200 : 160,
@@ -524,6 +526,7 @@ export default function BoxHunt() {
                         borderTop: isKey ? `3px solid ${hit ? "#ff9f9f" : "#d4a800"}` : undefined,
                         boxShadow: isSigned ? "inset 2px 0 0 #22c55e" : undefined,
                         borderRadius:"1px 1px 0 0", flexShrink:0,
+                        cursor:"crosshair",
                       }}
                     />
                   );
@@ -543,7 +546,7 @@ export default function BoxHunt() {
                   verticalAlign:"middle", marginRight:4, borderRadius:"1px 1px 0 0", opacity:0.35 }}/>
                 REST OF BOX
               </span>
-              <span style={{ color:"var(--muted2)" }}>hover any spine to identify</span>
+              <span style={{ color:"var(--muted2)" }}>hover any spine for details</span>
             </div>
           </div>
 
@@ -665,6 +668,30 @@ export default function BoxHunt() {
         <div style={{ textAlign:"center", padding:"48px 20px", color:"var(--muted2)", fontSize:"0.9rem" }}>
           <div style={{ fontSize:"1.5rem", marginBottom:8, opacity:0.4 }}>🔍</div>
           No comics found — try a different search or field.
+        </div>
+      )}
+
+      {hoveredSpine && (
+        <div style={{
+          position:"fixed", left:hoveredSpine.x, top:hoveredSpine.y - 6,
+          transform:"translateX(-50%) translateY(-100%)",
+          background:"rgba(18,18,35,0.97)", color:"#fff",
+          borderRadius:5, padding:"5px 10px", fontSize:"0.7rem",
+          zIndex:900, pointerEvents:"none",
+          boxShadow:"0 2px 10px rgba(0,0,0,0.4)",
+          fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"0.5px",
+          lineHeight:1.4, border:"1px solid rgba(255,255,255,0.1)",
+          whiteSpace:"nowrap",
+        }}>
+          <div style={{color: hoveredSpine.hit ? "#ff9f9f" : "#e8e4de"}}>
+            {hoveredSpine.hit && <span style={{marginRight:6}}>← MATCH</span>}
+            {hoveredSpine.title}
+          </div>
+          <div style={{color:"#aaa", fontSize:"0.65rem"}}>
+            #{hoveredSpine.issue}
+            {hoveredSpine.isKey    && <span style={{color:"#fbbf24",marginLeft:4}}>★ KEY</span>}
+            {hoveredSpine.isSigned && <span style={{color:"#22c55e",marginLeft:4}}>✍ SIGNED</span>}
+          </div>
         </div>
       )}
     </div>

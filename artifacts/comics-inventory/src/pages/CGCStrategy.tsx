@@ -105,7 +105,7 @@ function tierColor(t: string) {
   return "#2563eb";
 }
 
-type SortField = "priority" | "roi" | "total" | "raw";
+type SortField = "priority" | "roi" | "total" | "raw" | "box" | "press" | "cgc" | "proj";
 type View = "terrificon" | "roi" | "press" | "nycc";
 
 // Live countdown
@@ -151,6 +151,10 @@ export default function CGCStrategy() {
       if (sortField === "roi")      return sortDesc ? (parseFloat(a.roiMultiple)-parseFloat(b.roiMultiple)) : (parseFloat(b.roiMultiple)-parseFloat(a.roiMultiple));
       if (sortField === "total")    return sortDesc ? a.totalCost - b.totalCost : b.totalCost - a.totalCost;
       if (sortField === "raw")      return sortDesc ? a.rawNM - b.rawNM : b.rawNM - a.rawNM;
+      if (sortField === "box")      return sortDesc ? b.box - a.box : a.box - b.box;
+      if (sortField === "press")    return sortDesc ? b.pressedCost - a.pressedCost : a.pressedCost - b.pressedCost;
+      if (sortField === "cgc")      return sortDesc ? b.cgcCost - a.cgcCost : a.cgcCost - b.cgcCost;
+      if (sortField === "proj")     { const am=(a.projectedLow+a.projectedHigh)/2,bm=(b.projectedLow+b.projectedHigh)/2; return sortDesc?bm-am:am-bm; }
       return 0;
     });
     return books;
@@ -281,9 +285,29 @@ export default function CGCStrategy() {
             <table style={{ width:"100%", borderCollapse:"collapse", fontSize:"0.78rem" }}>
               <thead>
                 <tr style={{ background:"var(--surface2)", borderBottom:"2px solid var(--border)" }}>
-                  {["#","Book","Box","Label Type","🗜️ Press","📋 CGC","💰 Total","Raw NM","Projected","ROI","Notes"].map(h => (
-                    <th key={h} style={{ padding:"8px 10px", textAlign:"left", fontFamily:"'Bebas Neue',sans-serif",
-                      fontSize:"0.65rem", letterSpacing:"1.5px", color:"var(--muted)", whiteSpace:"nowrap" }}>{h}</th>
+                  {([
+                    { h:"#",          f:"priority" as SortField },
+                    { h:"Book",       f:null },
+                    { h:"Box",        f:"box"   as SortField },
+                    { h:"Label Type", f:null },
+                    { h:"🗜️ Press",   f:"press" as SortField },
+                    { h:"📋 CGC",     f:"cgc"   as SortField },
+                    { h:"💰 Total",   f:"total" as SortField },
+                    { h:"Raw NM",     f:"raw"   as SortField },
+                    { h:"Projected",  f:"proj"  as SortField },
+                    { h:"ROI",        f:"roi"   as SortField },
+                    { h:"Notes",      f:null },
+                  ] as {h:string;f:SortField|null}[]).map(({ h, f }) => (
+                    <th key={h}
+                      onClick={f ? () => { sortField===f ? setSortDesc(d=>!d) : (setSortField(f!), setSortDesc(false)); } : undefined}
+                      style={{ padding:"8px 10px", textAlign:"left", fontFamily:"'Bebas Neue',sans-serif",
+                        fontSize:"0.65rem", letterSpacing:"1.5px", whiteSpace:"nowrap",
+                        color: f && sortField===f ? "var(--red)" : "var(--muted)",
+                        cursor: f ? "pointer" : "default", userSelect:"none",
+                        transition:"color 0.12s",
+                      }}>
+                      {h}{f && sortField===f ? (sortDesc ? " ↑" : " ↓") : (f ? " ·" : "")}
+                    </th>
                   ))}
                 </tr>
               </thead>

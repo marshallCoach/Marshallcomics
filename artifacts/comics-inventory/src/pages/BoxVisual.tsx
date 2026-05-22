@@ -56,8 +56,9 @@ export default function BoxVisual() {
   const [selectedTitle, setSelectedTitle] = useState<string | null>(null);
   const [sorted,        setSorted]        = useState(false);
   const [view,          setView]          = useState<"visual" | "runs">("visual");
-  const [hoveredBox, setHoveredBox] = useState<string | null>(null);
-  const [panelPos,   setPanelPos]   = useState({ x: 0, y: 0 });
+  const [hoveredBox,   setHoveredBox]   = useState<string | null>(null);
+  const [panelPos,     setPanelPos]     = useState({ x: 0, y: 0 });
+  const [hoveredSpine, setHoveredSpine] = useState<{title:string;issue:string;isKey:boolean;isSigned:boolean;x:number;y:number}|null>(null);
 
   const boxComics = useMemo(() =>
     selectedBox ? getBoxComics(selectedBox) : [],
@@ -322,7 +323,9 @@ export default function BoxVisual() {
                                 const isKey    = (c.Key    || "").toUpperCase() === "YES";
                                 const isSigned = (c.Signed || "").toUpperCase() === "YES";
                                 return (
-                                  <div key={ci} title={`${c.Title} #${c.Issue}${isKey ? " ★KEY" : ""}${isSigned ? " ✍" : ""}`}
+                                  <div key={ci}
+                                    onMouseEnter={e => { const r = e.currentTarget.getBoundingClientRect(); setHoveredSpine({title:c.Title,issue:c.Issue,isKey,isSigned,x:r.left+r.width/2,y:r.top}); }}
+                                    onMouseLeave={() => setHoveredSpine(null)}
                                     style={{
                                       width: 5,
                                       height: isKey ? 200 : 160,
@@ -331,6 +334,7 @@ export default function BoxVisual() {
                                       boxShadow: isSigned ? "inset 2px 0 0 #22c55e" : undefined,
                                       borderRadius: "1px 1px 0 0",
                                       flexShrink: 0,
+                                      cursor: "crosshair",
                                     }}
                                   />
                                 );
@@ -357,7 +361,8 @@ export default function BoxVisual() {
                         const hasSel   = !!selectedTitle;
                         return (
                           <div key={i}
-                            title={`${c.Title} #${c.Issue}${isKey ? " ★KEY" : ""}${isSigned ? " ✍" : ""}`}
+                            onMouseEnter={e => { const r = e.currentTarget.getBoundingClientRect(); setHoveredSpine({title:c.Title,issue:c.Issue,isKey,isSigned,x:r.left+r.width/2,y:r.top}); }}
+                            onMouseLeave={() => setHoveredSpine(null)}
                             onClick={() => setSelectedTitle(isSel ? null : c.Title)}
                             style={{
                               width: 5,
@@ -532,6 +537,27 @@ export default function BoxVisual() {
               </div>
             </div>
           )}
+        </div>
+      )}
+
+      {hoveredSpine && (
+        <div style={{
+          position:"fixed", left:hoveredSpine.x, top:hoveredSpine.y - 6,
+          transform:"translateX(-50%) translateY(-100%)",
+          background:"rgba(18,18,35,0.97)", color:"#fff",
+          borderRadius:5, padding:"5px 10px", fontSize:"0.7rem",
+          zIndex:900, pointerEvents:"none",
+          boxShadow:"0 2px 10px rgba(0,0,0,0.4)",
+          fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"0.5px",
+          lineHeight:1.4, border:"1px solid rgba(255,255,255,0.1)",
+          whiteSpace:"nowrap",
+        }}>
+          <div style={{color:"#e8e4de"}}>{hoveredSpine.title}</div>
+          <div style={{color:"#aaa", fontSize:"0.65rem"}}>
+            #{hoveredSpine.issue}
+            {hoveredSpine.isKey    && <span style={{color:"#fbbf24",marginLeft:4}}>★ KEY</span>}
+            {hoveredSpine.isSigned && <span style={{color:"#22c55e",marginLeft:4}}>✍ SIGNED</span>}
+          </div>
         </div>
       )}
     </div>
