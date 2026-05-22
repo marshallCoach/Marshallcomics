@@ -33,6 +33,7 @@ const rawEvents = [
 ];
 
 const events: CalEvent[] = rawEvents.map(e => ({ ...e, sortDate: parseSortDate(e.Date) }));
+export const CALENDAR_EVENTS = events;
 
 function calClass(type: string) {
   const t = (type || "").toUpperCase();

@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
+import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
 import { DATA3 } from "@/data/data3";
 import { NEXT_STEPS, Status, StepCard, loadStatuses, saveStatuses } from "./ActionPlan";
+import { CALENDAR_EVENTS } from "./Calendar";
 import type { NavParams } from "../App";
 
 const comics  = DATA3.comics;
@@ -13,6 +15,42 @@ const signedCount  = comics.filter(c => (c.Signed || "").toUpperCase() === "YES"
 const whatnotCount = comics.filter(c => (c.Platform || "").toUpperCase().includes("WHATNOT")).length;
 const ebayCount    = comics.filter(c => (c.Platform || "").toUpperCase() === "EBAY").length;
 const tfCount      = comics.filter(c => !!(c.Terrificon || "").trim()).length;
+
+function normPubGroup(p: string): string {
+  const u = (p || "").toUpperCase();
+  if (u === "MARVEL") return "Marvel";
+  if (u === "DC" || u === "DC COMICS") return "DC";
+  if (u === "IMAGE") return "Image";
+  if (u.includes("BOOM")) return "BOOM! Studios";
+  if (u === "IDW") return "IDW";
+  if (u.includes("DARK HORSE")) return "Dark Horse";
+  if (u === "VALIANT") return "Valiant";
+  return "Independent";
+}
+const PUB_PIE_COLORS: Record<string, string> = {
+  Marvel: "#c8102e", DC: "#1d6fa4", Image: "#f97316",
+  "BOOM! Studios": "#16a34a", IDW: "#22c55e",
+  "Dark Horse": "#7c3aed", Valiant: "#8b2be2", Independent: "#6b7280",
+};
+const PUB_COUNTS = (() => {
+  const c: Record<string, number> = {};
+  for (const cm of comics) { const k = normPubGroup(cm.Publisher); c[k] = (c[k]||0)+1; }
+  return Object.entries(c).map(([name, value]) => ({ name, value })).sort((a,b)=>b.value-a.value);
+})();
+
+function calEvInfo(type: string) {
+  const t = (type || "").toUpperCase();
+  if (t.includes("WHATNOT"))    return { icon:"📺", color:"#1a6a1a", bg:"#e8f5e8", isShow:true  };
+  if (t.includes("CGC"))        return { icon:"🏆", color:"#1a4a99", bg:"#e8f0ff", isShow:false };
+  if (t.includes("TERRIFICON")) return { icon:"🎪", color:"#5522aa", bg:"#f0ebff", isShow:false };
+  if (t.includes("NYCC"))       return { icon:"🗽", color:"#5522aa", bg:"#f0ebff", isShow:false };
+  return { icon:"📅", color:"var(--muted2)" as string, bg:"var(--surface2)" as string, isShow:false };
+}
+const TODAY_SORT = 20260521;
+const upcomingCal = [...CALENDAR_EVENTS]
+  .filter(e => e.sortDate >= TODAY_SORT)
+  .sort((a, b) => a.sortDate - b.sortDate)
+  .slice(0, 6);
 
 const TARGET_BOXES = 65;
 const BOX_PCT = Math.round((totalBoxes / TARGET_BOXES) * 100);
@@ -241,6 +279,35 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
         </div>
       </section>
 
+      {/* ── Publisher Split ── */}
+      <section style={{ marginBottom:32 }}>
+        <h2 className="section-h2">📊 PUBLISHER SPLIT</h2>
+        <div style={{ display:"flex", gap:24, alignItems:"center", flexWrap:"wrap" }}>
+          <div style={{ flex:"0 0 180px", minWidth:160 }}>
+            <ResponsiveContainer width="100%" height={180}>
+              <PieChart>
+                <Pie data={PUB_COUNTS} cx="50%" cy="50%" innerRadius={46} outerRadius={74} dataKey="value" paddingAngle={2}>
+                  {PUB_COUNTS.map(entry => (
+                    <Cell key={entry.name} fill={PUB_PIE_COLORS[entry.name] || "#6b7280"} />
+                  ))}
+                </Pie>
+                <Tooltip formatter={(v: number) => [v.toLocaleString(), "Comics"]} />
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
+          <div style={{ flex:1, minWidth:160, display:"flex", flexDirection:"column", gap:6 }}>
+            {PUB_COUNTS.map(p => (
+              <div key={p.name} style={{ display:"flex", alignItems:"center", gap:8 }}>
+                <div style={{ width:11, height:11, borderRadius:2, background:PUB_PIE_COLORS[p.name]||"#6b7280", flexShrink:0 }} />
+                <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.78rem", letterSpacing:"1px", color:"var(--muted2)", minWidth:110 }}>{p.name}</span>
+                <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", color:"var(--red)", letterSpacing:"1px" }}>{p.value.toLocaleString()}</span>
+                <span style={{ fontSize:"0.67rem", color:"var(--muted)" }}>({Math.round((p.value/totalComics)*100)}%)</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── Flagship Assets ── */}
       <section style={{ marginBottom:32 }}>
         <h2 className="section-h2">🏆 FLAGSHIP ASSETS</h2>
@@ -292,6 +359,55 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
           })}
         </div>
       </section>
+
+      {/* ── Upcoming Schedule ── */}
+      {upcomingCal.length > 0 && (
+        <section style={{ marginBottom:32 }}>
+          <h2 className="section-h2">📅 UPCOMING SCHEDULE</h2>
+          <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
+            {upcomingCal.map((e, i) => {
+              const info = calEvInfo(e.Type);
+              return (
+                <div
+                  key={i}
+                  onClick={info.isShow ? () => onNavigate("showplanner") : undefined}
+                  style={{
+                    display:"flex", alignItems:"flex-start", gap:12,
+                    background:info.bg, border:`1.5px solid ${info.color}28`,
+                    borderRadius:6, padding:"10px 14px",
+                    cursor:info.isShow ? "pointer" : "default",
+                    transition:"opacity 0.15s",
+                  }}
+                >
+                  <div style={{
+                    fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1px",
+                    color:info.color, minWidth:26, textAlign:"center", lineHeight:1.4, paddingTop:1, flexShrink:0,
+                  }}>
+                    <div style={{ fontSize:"1rem", lineHeight:1.1 }}>{info.icon}</div>
+                    <div>{e.Date.split(",")[0].replace(/–.*$/,"").trim()}</div>
+                  </div>
+                  <div style={{ flex:1 }}>
+                    <div style={{
+                      fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem", letterSpacing:"1px",
+                      color:info.color, lineHeight:1.2, marginBottom:2,
+                    }}>
+                      {e.Theme.length > 72 ? e.Theme.substring(0,72)+"…" : e.Theme}
+                    </div>
+                    <div style={{ fontSize:"0.72rem", color:"var(--muted2)" }}>
+                      {e.Date}
+                      {info.isShow && (
+                        <span style={{ marginLeft:8, fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", color:"#1a6a1a" }}>
+                          → VIEW SHOW PLAN
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      )}
 
       {/* ── Books per Box ── */}
       <section style={{ marginBottom:32 }}>

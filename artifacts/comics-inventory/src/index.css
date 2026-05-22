@@ -636,3 +636,32 @@ body {
   transition: background 0.15s; white-space: nowrap;
 }
 .btn-view-all:hover { background: var(--red-dark); }
+
+/* ── Terrificon countdown badge ─────────────────────────────────────── */
+.terrificon-cdown {
+  display: inline-flex; flex-direction: column; align-items: center;
+  background: linear-gradient(135deg, #d97706, #b45309);
+  color: #fff; border-radius: 6px; padding: 5px 12px;
+  cursor: pointer; border: none; text-align: center;
+  transition: opacity 0.15s; flex-shrink: 0;
+}
+.terrificon-cdown:hover { opacity: 0.85; }
+.tf-cd-label {
+  font-family: 'Bebas Neue', sans-serif; font-size: 0.62rem;
+  letter-spacing: 2px; line-height: 1; opacity: 0.88;
+}
+.tf-cd-time {
+  font-family: 'Bebas Neue', sans-serif; font-size: 0.88rem;
+  letter-spacing: 1px; line-height: 1.3; white-space: nowrap;
+}
+
+/* ── Clickable title-filter links ────────────────────────────────────── */
+.title-link {
+  background: none; border: none; padding: 0; cursor: pointer;
+  font-family: inherit; font-size: inherit; font-weight: 600;
+  color: var(--brown-light); text-align: left;
+  text-decoration: underline; text-decoration-color: transparent;
+  text-underline-offset: 2px;
+  transition: color 0.15s, text-decoration-color 0.15s;
+}
+.title-link:hover { color: var(--red); text-decoration-color: var(--red); }

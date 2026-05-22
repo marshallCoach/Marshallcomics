@@ -111,7 +111,11 @@ function CoverThumb({ c }: { c: Comic }) {
 
 const COLS: ColDef<Comic>[] = [
   { key:"box",       label:"Box",       defaultWidth:70,  sort:(a,b)=>Number(a.Box)-Number(b.Box), cell:r=><BoxBadge box={r.Box} /> },
-  { key:"title",     label:"Title",     defaultWidth:220, sort:(a,b)=>a.Title.localeCompare(b.Title), cell:r=><span className="lt-title">{r.Title||"Untitled"}</span> },
+  { key:"title",     label:"Title",     defaultWidth:220, sort:(a,b)=>a.Title.localeCompare(b.Title), cell:r=>(
+    <button className="title-link" onClick={e=>{e.stopPropagation();_evTitleClick?.(r.Title||"");}}>
+      {r.Title||"Untitled"}
+    </button>
+  )},
   { key:"issue",     label:"#",         defaultWidth:55,  sort:(a,b)=>parseVal(a.Issue)-parseVal(b.Issue), cell:r=><span className="lt-sub">{r.Issue}</span> },
   { key:"publisher", label:"Publisher", defaultWidth:100, sort:(a,b)=>a.Publisher.localeCompare(b.Publisher), cell:r=><span className="lt-sub">{r.Publisher}</span> },
   { key:"writer",    label:"Writer",    defaultWidth:130, sort:(a,b)=>a.Writer.localeCompare(b.Writer), cell:r=><span className="lt-sub">{r.Writer||"—"}</span> },
@@ -122,6 +126,9 @@ const COLS: ColDef<Comic>[] = [
   { key:"year",      label:"Year",      defaultWidth:65,  sort:(a,b)=>parseVal(a.Year)-parseVal(b.Year), cell:r=><span className="lt-sub">{r.Year}</span> },
   { key:"signed",    label:"Signed",    defaultWidth:90,  sort:(a,b)=>a.Signed.localeCompare(b.Signed), cell:r=>r.Signed?.toUpperCase()==="YES"?<span className="lt-sub" style={{color:"var(--gold)"}}>✍ {r.Signed_By||"Yes"}</span>:null },
 ];
+
+// Callback ref so module-level COLS can reach component state
+let _evTitleClick: ((title: string) => void) | undefined;
 
 export default function Everything({
   initBox, initQuery, initPublisher, initKeysOnly, initSignedOnly,
@@ -141,6 +148,8 @@ export default function Everything({
   const [searched,    setSearched]   = useState(true);
   const [cardPage,    setCardPage]   = useState(1);
   const [showFamilies,setShowFams]   = useState(false);
+  // Wire the module-level title-click callback to this instance's state
+  _evTitleClick = (t: string) => { setQuery(t); setSearched(true); setCardPage(1); };
 
   // When parent re-navigates with new params, re-init
   useEffect(() => {
@@ -377,7 +386,10 @@ export default function Everything({
       {searched && results.length > 0 && view === "card" && (
         <>
           <div className="ev-card-grid">
-            {cardSlice.map((c,i)=><EverythingCard key={i} comic={c} />)}
+            {cardSlice.map((c,i)=>(
+              <EverythingCard key={i} comic={c}
+                onTitleClick={t=>{setQuery(t);setSearched(true);setCardPage(1);}} />
+            ))}
           </div>
           <Paginator
             total={results.length} page={cardPage} pageSize={CARD_PAGE}
@@ -397,7 +409,7 @@ export default function Everything({
   );
 }
 
-function EverythingCard({ comic: c }: { comic: Comic }) {
+function EverythingCard({ comic: c, onTitleClick }: { comic: Comic; onTitleClick?: (title: string) => void }) {
   const isKey    = (c.Key    || "").toUpperCase() === "YES";
   const isSigned = (c.Signed || "").toUpperCase() === "YES";
 
@@ -414,7 +426,10 @@ function EverythingCard({ comic: c }: { comic: Comic }) {
               {c.Platform && <span className={`badge ${platClass(c.Platform)}`} style={{fontSize:"0.57rem"}}>{c.Platform}</span>}
             </div>
           </div>
-          <div className="card-title">{c.Title}</div>
+          {onTitleClick
+            ? <button className="title-link" style={{fontSize:"inherit",fontWeight:600,lineHeight:1.3}} onClick={e=>{e.stopPropagation();onTitleClick(c.Title);}}>{c.Title}</button>
+            : <div className="card-title">{c.Title}</div>
+          }
           <div className="card-issue">{c.Issue}{c.Year?` · ${c.Year}`:""}</div>
           {c.Publisher && <div className="card-pub">{c.Publisher}{c.Era?` · ${c.Era}`:""}</div>}
         </div>
