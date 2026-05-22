@@ -98,6 +98,27 @@ const CHECKLIST: ChecklistItem[] = [
   { sort:81, series:"Captain America: Symbol of Truth", issue:"#1",           year:"2022", significance:"Sam Wilson Cap returns; modern KEY 🦅",                         credits:"R.B. Silva / Tochi Onyebuchi",           value:"$15–40"     },
 ];
 
+// ─── Full Cap Vol.1 run (#100–#255, filling every gap) ───────────────────────
+function capVol1Year(n: number): string {
+  if (n <= 109) return "1968"; if (n <= 119) return "1969"; if (n <= 129) return "1970";
+  if (n <= 149) return "1971"; if (n <= 169) return "1973"; if (n <= 184) return "1974";
+  if (n <= 199) return "1975"; if (n <= 212) return "1977"; if (n <= 229) return "1978";
+  if (n <= 249) return "1980"; return "1981";
+}
+const FULL_CHECKLIST: ChecklistItem[] = [
+  ...CHECKLIST.filter(c => c.series !== "Captain America (Vol.1)"),
+  ...Array.from({length:156}, (_,i) => {
+    const n = 100 + i;
+    const existing = CHECKLIST.find(c => c.series === "Captain America (Vol.1)" && c.issue === `#${n}`);
+    if (existing) return existing;
+    return {
+      sort: 3000 + n, series: "Captain America (Vol.1)" as string,
+      issue: `#${n}`, year: capVol1Year(n),
+      significance: "Regular issue", credits: "—", value: "$5–15",
+    } as ChecklistItem;
+  }),
+];
+
 const SERIES_ORDER = [
   "Tales of Suspense",
   "Captain America (Vol.1)",
@@ -178,7 +199,7 @@ export default function CapFalconChecklist() {
   const [expanded,     setExpanded]     = useState<Set<number>>(new Set());
 
   const enriched = useMemo(() =>
-    CHECKLIST.map(item => ({ ...item, owned: checkOwned(item) }))
+    FULL_CHECKLIST.map(item => ({ ...item, owned: checkOwned(item) }))
   , []);
 
   const ownedCount    = enriched.filter(e => e.owned).length;
@@ -236,8 +257,8 @@ export default function CapFalconChecklist() {
         </div>
         <div style={{ fontSize:"0.95rem", color:"var(--muted2)", fontFamily:"'Crimson Pro',serif",
           lineHeight:1.6, maxWidth:620 }}>
-          81 essential issues spanning 1964–2022 — from the first Falcon to Sam Wilson's latest chapter.
-          Owned issues are auto-detected from the collection.
+          Full Cap Vol.1 run (#100–#255) plus key issues from 6 other series — 1964 to 2022.
+          Owned issues are highlighted in the collection. Every gap is shown.
         </div>
       </div>
 
@@ -438,6 +459,7 @@ export default function CapFalconChecklist() {
                 const key        = isKey(item.significance);
                 const rowBg = major ? "#fffdf0"
                             : key   ? "#fafaf8"
+                            : owned ? "#fdf2f8"
                             : "var(--surface)";
                 const borderL = major ? "#d4a800"
                               : key   ? "#ccc"
@@ -463,8 +485,8 @@ export default function CapFalconChecklist() {
                       <div style={{
                         width:22, height:22, borderRadius:"50%", flexShrink:0,
                         display:"flex", alignItems:"center", justifyContent:"center",
-                        background: owned ? "#dcfce7" : "var(--surface2)",
-                        border: `2px solid ${owned ? "#22c55e" : "var(--border)"}`,
+                        background: owned ? "#fce4ec" : "var(--surface2)",
+                        border: `2px solid ${owned ? "#e91e63" : "var(--border)"}`,
                         fontSize:"0.7rem",
                         transition:"all 0.15s",
                       }}>
@@ -508,7 +530,7 @@ export default function CapFalconChecklist() {
                           <span className="badge bkey" style={{ fontSize:"0.58rem" }}>KEY</span>
                         )}
                         {owned ? (
-                          <span style={{ background:"#dcfce7", color:"#166534", border:"1px solid #bbf7d0",
+                          <span style={{ background:"#fce4ec", color:"#880e4f", border:"1px solid #f48fb1",
                             borderRadius:4, padding:"2px 7px", fontFamily:"'Bebas Neue',sans-serif",
                             fontSize:"0.58rem", letterSpacing:"1px" }}>OWNED</span>
                         ) : (
@@ -543,7 +565,7 @@ export default function CapFalconChecklist() {
                           <div>
                             <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem",
                               letterSpacing:"2px", color:"var(--muted)", marginBottom:3 }}>STATUS</div>
-                            <div style={{ fontSize:"0.85rem", color: owned ? "#16a34a" : "var(--muted2)",
+                            <div style={{ fontSize:"0.85rem", color: owned ? "#880e4f" : "var(--muted2)",
                               fontWeight:600 }}>{owned ? "✓ In Collection" : "Not yet owned"}</div>
                           </div>
                         </div>
