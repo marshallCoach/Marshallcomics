@@ -56,6 +56,8 @@ export default function BoxVisual() {
   const [selectedTitle, setSelectedTitle] = useState<string | null>(null);
   const [sorted,        setSorted]        = useState(false);
   const [view,          setView]          = useState<"visual" | "runs">("visual");
+  const [hoveredBox, setHoveredBox] = useState<string | null>(null);
+  const [panelPos,   setPanelPos]   = useState({ x: 0, y: 0 });
 
   const boxComics = useMemo(() =>
     selectedBox ? getBoxComics(selectedBox) : [],
@@ -83,6 +85,7 @@ export default function BoxVisual() {
 
   const selectedBoxData    = boxes.find(b => b.Num === selectedBox);
   const selectedTitleGroup = titleGroups.find(g => g.title === selectedTitle);
+  const hoveredBoxData     = boxes.find(b => b.Num === hoveredBox);
 
   return (
     <div style={{ maxWidth: 1200, margin: "0 auto", padding: "18px 18px 60px" }}>
@@ -102,8 +105,13 @@ export default function BoxVisual() {
             <div
               key={b.Num}
               onClick={() => selectBox(b.Num)}
+              onMouseEnter={e => {
+                const r = (e.currentTarget as HTMLElement).getBoundingClientRect();
+                setPanelPos({ x: r.right + 10, y: r.top });
+                setHoveredBox(b.Num);
+              }}
+              onMouseLeave={() => setHoveredBox(null)}
               className="box-tile"
-              title={b.Description || b.Label}
               style={{
                 ...(isSelected ? {
                   borderColor: "var(--red)",
@@ -125,6 +133,50 @@ export default function BoxVisual() {
           );
         })}
       </div>
+
+      {/* Hover floating panel */}
+      {hoveredBox && hoveredBoxData && (
+        <div style={{
+          position:"fixed",
+          left: Math.min(panelPos.x, (typeof window !== "undefined" ? window.innerWidth : 1200) - 290),
+          top:  Math.max(60, Math.min(panelPos.y, (typeof window !== "undefined" ? window.innerHeight : 800) - 330)),
+          zIndex:500, background:"#fff",
+          border:"1.5px solid var(--border)", borderRadius:8,
+          padding:"14px 16px", width:268,
+          boxShadow:"0 8px 32px rgba(0,0,0,0.14)",
+          pointerEvents:"none",
+        }}>
+          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.15rem", color:"var(--red)", letterSpacing:"2px", lineHeight:1 }}>{hoveredBoxData.Num}</div>
+          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", color:"var(--muted2)", letterSpacing:"1px", marginBottom:10 }}>
+            {hoveredBoxData.Label.replace(/^Box \d+ — /i,"")}
+          </div>
+          <div style={{ display:"flex", gap:20, marginBottom:10 }}>
+            {([
+              { val:hoveredBoxData.Comics, lbl:"BOOKS"  },
+              { val:hoveredBoxData.Keys,   lbl:"KEYS"   },
+              { val:hoveredBoxData.Signed, lbl:"SIGNED" },
+            ]).map(s => (
+              <div key={s.lbl} style={{ textAlign:"center" }}>
+                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.3rem", color:"var(--red)", lineHeight:1 }}>{s.val}</div>
+                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.55rem", letterSpacing:"2px", color:"var(--muted)", marginTop:1 }}>{s.lbl}</div>
+              </div>
+            ))}
+          </div>
+          {hoveredBoxData.Description && (
+            <div style={{ fontSize:"0.78rem", color:"var(--muted2)", lineHeight:1.5, borderTop:"1px solid var(--border)", paddingTop:8 }}>
+              {hoveredBoxData.Description}
+            </div>
+          )}
+          {hoveredBoxData.YearRange && (
+            <div style={{ fontSize:"0.65rem", color:"var(--muted)", marginTop:6 }}>
+              {hoveredBoxData.Publisher} · {hoveredBoxData.YearRange}
+            </div>
+          )}
+          <div style={{ fontSize:"0.6rem", color:"var(--muted)", marginTop:8, fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px", opacity:0.65 }}>
+            CLICK TO EXPLORE →
+          </div>
+        </div>
+      )}
 
       {/* Empty state */}
       {!selectedBox && (

@@ -1,0 +1,86 @@
+MARSHALL COMICS — REPLIT UPDATE PROMPT
+7 Changes to Apply — Paste This Directly
+
+Here are the changes made to the underlying data. Apply each one to the app.
+
+CHANGE 1: Boxes 1 and 2 share one physical box
+What changed: Roberto confirmed that what the data calls "Box 01" and "Box 02" are not two separate physical longboxes — they live in the same one. Box 01 is a small section (15 comics, DC/IDW overflow) at one end of the box. Box 02 (75 comics, all signed books + Marvel) is the primary contents.
+What to update in the UI:
+
+In the box grid, show Box 01 and Box 02 with a visual "shared box" indicator — a bracket or connecting line, or a subtle matching border colour
+Add a badge or icon: "📦 Shares physical box with Box 02" on Box 01's card
+Add "📦 Shares physical box with Box 01" on Box 02's card
+On the detail panel for either box, show: "These two boxes share one physical longbox. Box 01 items are in the smaller front section."
+
+
+CHANGE 2: Box 08 eliminated
+What changed: Box 08 previously contained only one comic — Smallville: Season Eleven #12. That single book has been moved to Box 37 (Misc Overflow). Box 08 is now empty and retired.
+What to update in the UI:
+
+Remove Box 08 from the box grid entirely, OR show it as "RETIRED — 0 comics" in grey
+If you have a total box count stat anywhere showing "41 boxes", it should now show 40 active boxes (or "41 boxes, 1 retired")
+Box 37 now has one more comic — refresh its count
+
+
+CHANGE 3: Marvel All-On-One (NOT Marvel Two-in-One)
+What changed: A book previously labelled "Marvel Two-in-One #1" has been corrected. It is actually Marvel All-On-One #1 (2025, $7.99) — a completely different series. The correct Marvel URL is: https://www.marvel.com/comics/issue/125658/marvel_all-on-one_2025_1
+This matters because: Roberto does NOT own Marvel Two-in-One #1 (the classic Thing/Human Torch team-up book). He owns the 2025 "All-On-One" one-shot. These have very different values and collector significance.
+What to update in the UI:
+
+Any search or display showing "Marvel Two-in-One #1" should now show "Marvel All-On-One #1 (2025)"
+If there is a key issues list, remove any "Marvel Two-in-One" entry and replace with "Marvel All-On-One #1 (2025, $7.99)"
+The note field for this book now contains the correct URL
+
+
+CHANGE 4: Storm "From the Ashes" is Vol 5, not Vol 4
+What changed: The Storm series from the "From the Ashes" publishing initiative (2024, by Ayodele Kamara) is correctly Vol 5 of Storm, not Vol 4. Two rows were corrected in the data.
+What to update in the UI:
+
+Any display showing "Storm (Vol 4 — Ayodele Kamara FtA)" should read "Storm (Vol 5 — Ayodele Kamara FtA)"
+The 2023 Storm series by Vita Ayala remains Vol 3
+
+
+CHANGE 5: "Master Calendar" renamed to "Primary Calendar"
+What changed: The spreadsheet sheet previously called "Master Calendar" is now called "Primary Calendar". This applies throughout — it is the Whatnot show schedule, CGC submission calendar, and convention dates all in one place.
+What to update in the UI:
+
+Any tab, sidebar label, or reference to "Master Calendar" → "Primary Calendar"
+The CALENDAR sub-tab under the BUSINESS section should be labelled "Primary Calendar"
+Any data fetching from the Master Calendar sheet should now reference Primary Calendar
+
+
+CHANGE 6: Legacy numbers corrected — Uncanny X-Force (Remender Vol 1)
+What changed: The Uncanny X-Force (Vol 1) by Rick Remender legacy numbers were previously calculated with issue #1 = Legacy #170. This was wrong. The confirmed correct chain (from CBR's compiled Marvel legacy numbering list) is:
+
+X-Force Vol 1 #1-129 = Legacy #1-129
+X-Force Vol 2 #1-6 = Legacy #130-135
+X-Force Vol 3 #1-28 = Legacy #136-163
+Uncanny X-Force Vol 1 #1 = Legacy #164 ← corrected from #170
+UXF Vol 1 runs to #35 = Legacy #198
+
+All 17 Uncanny X-Force (Remender) entries in the spreadsheet have been corrected accordingly.
+What to update in the UI:
+
+Any display of Uncanny X-Force legacy numbers should reflect the corrected range #164-#198
+X-Force (Percy/Krakoa Vol 6) starting at Legacy #241 is unaffected and remains correct
+
+
+CHANGE 7: Deadpool Vol 1 legacy numbers added
+What changed: The Deadpool Vol 1 (Kelly/McGuinness, 1997) issues now have confirmed legacy numbers applied. The correct chain:
+
+Deadpool: The Circle Chase #1-4 = Legacy #1-4
+Deadpool: Sins of the Past #1-4 = Legacy #5-8
+Deadpool Vol 1 #1 = Legacy #9
+Deadpool Vol 1 #69 = Legacy #77
+
+49 issues in the collection now carry correct legacy tags.
+What to update in the UI:
+
+Deadpool Vol 1 issues in any legacy number display should now show their confirmed legacy numbers (#9-#77)
+This means the Deadpool Vol 1 run in the collection (issues #30-69 + Simone #65-69) maps to Legacy #38-#77
+
+
+SUMMARY TABLE
+#ChangeTypeImpact1Boxes 01+02 share one physical boxUI labelBox grid display2Box 08 eliminated (Smallville → Box 37)Data + UIBox count, grid3Marvel All-On-One (not Two-in-One)Data correctionKeys list, search4Storm Vol 5 (not Vol 4)Data correctionTitle display5Primary Calendar (not Master Calendar)RenameTab labels, data fetch6UXF Remender legacy #164 (not #170)Data correctionLegacy number display7Deadpool Vol 1 legacy #9-#77 addedNew dataLegacy number display
+
+Data updated May 21, 2026 | marshallcoach.com

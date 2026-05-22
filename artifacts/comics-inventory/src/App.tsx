@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { DATA3 } from "@/data/data3";
 import OriginalCollection from "@/pages/OriginalCollection";
 import BoxKeys from "@/pages/BoxKeys";
@@ -65,10 +65,30 @@ const signed = comics.filter(c => (c.Signed || "").toUpperCase() === "YES").leng
 const keys   = comics.filter(c => (c.Key    || "").toUpperCase() === "YES").length;
 const boxes  = DATA3.boxes.length;
 
+const TERRIFICON_DATE = new Date(2026, 7, 7, 9, 0, 0);
+
+function useCountdown(target: Date) {
+  const [diff, setDiff] = useState(() => target.getTime() - Date.now());
+  useEffect(() => {
+    const t = setInterval(() => setDiff(target.getTime() - Date.now()), 1000);
+    return () => clearInterval(t);
+  }, [target]);
+  if (diff <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0, past: true };
+  const secs = Math.floor(diff / 1000);
+  return {
+    days:    Math.floor(secs / 86400),
+    hours:   Math.floor((secs % 86400) / 3600),
+    minutes: Math.floor((secs % 3600) / 60),
+    seconds: secs % 60,
+    past:    false,
+  };
+}
+
 export default function App() {
   const [activeSection, setActiveSection] = useState<SectionId>("inventory");
   const [activeTab,     setActiveTab]     = useState<TabId>("summary");
   const [navParams,     setNavParams]     = useState<NavParams>({});
+  const cd = useCountdown(TERRIFICON_DATE);
 
   const currentSection = NAV.find(n => n.id === activeSection)!;
 
@@ -100,6 +120,14 @@ export default function App() {
             <div className="app-title">Marshall Comics</div>
             <div className="app-subtitle">BlackReadBrown Inventory Hub</div>
           </div>
+          {!cd.past && (
+            <button className="terrificon-cdown" onClick={() => navigateTo("cgc")}>
+              <span className="tf-cd-label">TERRIFICON AUG 7–9</span>
+              <span className="tf-cd-time">
+                {cd.days}d {cd.hours}h {String(cd.minutes).padStart(2,"0")}m {String(cd.seconds).padStart(2,"0")}s
+              </span>
+            </button>
+          )}
         </div>
 
         <div className="header-center">

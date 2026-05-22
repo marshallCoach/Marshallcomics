@@ -38,7 +38,11 @@ const LIST_COLS: ColDef<Comic>[] = [
   {
     key: "title", label: "Title", defaultWidth: 220,
     sort: (a, b) => (a.Title || "").localeCompare(b.Title || ""),
-    cell: r => <span className="lt-title">{r.Title || "Untitled"}</span>,
+    cell: r => (
+      <button className="title-link" onClick={e=>{e.stopPropagation();_salTitleClick?.(r.Title||"");}}>
+        {r.Title || "Untitled"}
+      </button>
+    ),
   },
   {
     key: "issue", label: "#", defaultWidth: 60,
@@ -88,6 +92,8 @@ const LIST_COLS: ColDef<Comic>[] = [
   },
 ];
 
+let _salTitleClick: ((title: string) => void) | undefined;
+
 export default function OriginalCollection({ initSigned }: { initSigned?: string }) {
   const [q,        setQ]        = useState("");
   const [pub,      setPub]      = useState("");
@@ -99,6 +105,7 @@ export default function OriginalCollection({ initSigned }: { initSigned?: string
   const [view,     setView]     = useState<"card" | "list">("card");
   const [open,     setOpen]     = useState<Set<number>>(new Set());
   const [cardPage, setCardPage] = useState(1);
+  _salTitleClick = (t: string) => { setQ(t); setCardPage(1); };
 
   const results = useMemo(() => {
     const ql = q.toLowerCase();
@@ -217,7 +224,9 @@ export default function OriginalCollection({ initSigned }: { initSigned?: string
               const isOpen   = open.has(i);
               return (
                 <div key={i} className={`comic-card${isOpen?" open":""}`} onClick={()=>toggle(i)}>
-                  <div className="card-title">{c.Title || "Untitled"}</div>
+                  <button className="title-link" onClick={e=>{e.stopPropagation();setQ(c.Title||"");setCardPage(1);}}>
+                  {c.Title || "Untitled"}
+                </button>
                   <div className="card-sub">Box {c.Box} · {c.Publisher} #{c.Issue} · {c.Year}</div>
                   <div className="badges">
                     {isKey    && <span className="badge bk">KEY</span>}
