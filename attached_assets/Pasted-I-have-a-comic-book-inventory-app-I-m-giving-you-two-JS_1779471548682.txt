@@ -1,0 +1,87 @@
+I have a comic book inventory app. I'm giving you two JSON files:
+
+1. marshall_comics_compact.json — loads fast, has all box metadata and summaries
+2. marshall_comics_data.json — full data, load on demand per box
+
+Build a "Box Hunt" page with these features:
+
+DATA STRUCTURE:
+- 42 boxes numbered 01-43 (non-sequential — some gaps)
+- Each box has: label, description, location (upstairs/downstairs), color, warning, stats (comics/keys/signed/titles/yearRange), topKeys array, signedBooks array, runs array, and a comics array (full detail)
+- Each comic has: title, issue, publisher, year, isKey, keyWhy, isSigned, signedBy, cgcPriority, rawNM, notes, whatnotStory, platform, crossover, startBid, isDuplicate
+
+CORE FEATURES NEEDED:
+
+1. BOX GRID (already built — enhance it):
+   - Color-code boxes by their .color field
+   - Red pulsing border on boxes with .warning containing "🚨"
+   - Gold border on boxes with .warning containing "⭐"
+   - Show comics/keys/signed counts as chips on each box card
+   - Click box → loads full data from marshall_comics_data.json for that box number
+
+2. VISUAL SPINE VIEW (already built — enhance it):
+   - Each comic = one vertical spine, colored by title (consistent hash color per title)
+   - Height proportional to estimated raw value (.rawNM field)
+   - Gold top cap on key issues (.isKey = true)
+   - Green left edge on signed books (.isSigned = true)
+   - Red left edge on CGC priority (.cgcPriority = true)
+   - Click any spine → opens detail panel
+   - "BY RUN" toggle groups spines by title with run labels
+
+3. TITLE DETAIL PANEL (already built — enhance it):
+   - Show all issues in this box for the selected title
+   - Issue chips: gold outline = key, green left stripe = signed, red badge = CGC priority
+   - Key notes (keyWhy field) shown inline
+   - "Add to Hunt List" button that adds this book to a persistent hunt list
+
+4. 🆕 BOX HUNT MODE:
+   - Toggle "Hunt Mode" on any box
+   - Shows a sequential checklist of ALL keys in that box
+   - Each key shows: BEFORE (book just before it), the KEY itself, AFTER (book just after it)
+   - Purpose: Roberto can physically flip through the box and locate each key using the before/after as anchors
+   - Checkbox to mark each key as "verified located" — persists in localStorage
+   - "Hunt Complete" celebration when all keys checked
+
+5. 🆕 GLOBAL HUNT LIST:
+   - Persistent sidebar/drawer: "Keys I'm Hunting"
+   - Add any key from any box to this list
+   - List shows: box number, title, issue, why it's a key, raw NM value
+   - Sort by: box number (physical hunt order), raw value (hunt most valuable first), CGC priority
+   - "Clear Found" button removes checked items
+   - Export as PDF for printing
+
+6. 🆕 RUN COMPLETION TRACKER:
+   - For each title in a box, show: issues present vs gaps
+   - e.g. "Flash Vol 2: #112-233 ✓ COMPLETE" or "Exiles: #1-55 ⚠️ MISSING #23"
+   - Click gaps → adds missing issue to a "Want List" with estimated eBay price
+
+7. 🆕 WHATNOT SHOW BUILDER:
+   - Drag comics from any box into a "Show Lineup" area
+   - Auto-generates the Whatnot story pitch from the .whatnotStory field
+   - Shows total estimated revenue range from startBid values
+   - Reorder by drag-and-drop
+   - "Copy Show Script" button
+
+8. 🆕 TERRIFICON PACKING LIST:
+   - Filter any box by .terrificon field
+   - One-click generate "Terrificon Pack List" with checkboxes
+   - Show: book, creator to target, expected Yellow SS value, pressing status
+   - Print-optimised layout
+
+DESIGN LANGUAGE (match existing app):
+- Dark background (#0a0a0a or similar)
+- Gold accent (#C8960C) for keys/highlights  
+- Red (#C00000) for urgent/CGC priority
+- Green (#1A5C2A) for signed/complete
+- Monospace font for issue numbers
+- Comic book spine aesthetic — vertical labels, colored bars
+- Smooth slide-in panels, not modal dialogs
+- Mobile-friendly (Roberto catalogues on phone)
+
+DATA LOADING:
+- On page load: fetch marshall_comics_compact.json → render box grid
+- On box click: fetch marshall_comics_data.json → filter to selected box → render spines
+- Cache fetched box data in memory — don't re-fetch on re-select
+- Show skeleton loader while fetching
+
+The hunt sheet from the PDF labels document has 826 keys with before/after context. The JSON has the same data structured for dynamic use. The goal is to make physical hunting through 5,804 comics across 42 boxes fast and satisfying.
