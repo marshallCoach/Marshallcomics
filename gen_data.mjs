@@ -3,7 +3,7 @@ import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 const XLSX = require('xlsx');
 
-const wb = XLSX.readFile('attached_assets/comics_inventory_1779453013446.xlsx');
+const wb = XLSX.readFile('attached_assets/comics_inventory_(3)_1779471694783.xlsx');
 
 // ── COMICS ───────────────────────────────────────────────────────────────────
 const comicsSheet = wb.Sheets['Comics Inventory'];
@@ -93,7 +93,7 @@ for (let r = 2; r < bsRows.length; r++) {
 }
 
 const ts = `// AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_1779453013446.xlsx  |  Generated: ${new Date().toISOString().slice(0,10)}
+// Source: comics_inventory_(3)_1779471694783.xlsx  |  Generated: ${new Date().toISOString().slice(0,10)}
 
 export interface Comic {
   Title: string; Issue: string; Publisher: string; Year: string; Arc: string;

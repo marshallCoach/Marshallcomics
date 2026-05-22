@@ -58,6 +58,11 @@ function parseVal(v: string | undefined | null) {
   return parseFloat(String(v || "").replace(/[^0-9.]/g, "") || "0");
 }
 
+function extractVol(title: string): string {
+  const m = title.match(/\(Vol\.?\s*(\d+)[^)]*\)/i);
+  return m ? `Vol ${m[1]}` : "";
+}
+
 function platClass(p: string) {
   const u = (p || "").toUpperCase();
   if (u.includes("WHATNOT")) return "bwn";
@@ -127,16 +132,18 @@ export default function Everything({
   const [searched,    setSearched]   = useState(true);
   const [cardPage,    setCardPage]   = useState(1);
   const [showFamilies,setShowFams]   = useState(false);
+  const [exactTitle,  setExactTitle] = useState("");
 
   const cols = useMemo<ColDef<Comic>[]>(() => [
-    { key:"box",       label:"Box",       defaultWidth:70,  sort:(a,b)=>Number(a.Box)-Number(b.Box), cell:r=><BoxBadge box={r.Box} /> },
     { key:"title",     label:"Title",     defaultWidth:220, sort:(a,b)=>a.Title.localeCompare(b.Title), cell:r=>(
-      <button className="title-link" onClick={e=>{e.stopPropagation();setQuery(r.Title||"");setSearched(true);setCardPage(1);}}>
+      <button className="title-link" onClick={e=>{e.stopPropagation();setExactTitle(r.Title||"");setQuery("");setSearched(true);setCardPage(1);}}>
         {r.Title||"Untitled"}
       </button>
     )},
     { key:"issue",     label:"#",         defaultWidth:55,  sort:(a,b)=>parseVal(a.Issue)-parseVal(b.Issue), cell:r=><span className="lt-sub">{r.Issue}</span> },
+    { key:"volume",    label:"Vol",       defaultWidth:58,  sort:(a,b)=>extractVol(a.Title).localeCompare(extractVol(b.Title)), cell:r=><span className="lt-sub">{extractVol(r.Title)||"—"}</span> },
     { key:"publisher", label:"Publisher", defaultWidth:100, sort:(a,b)=>a.Publisher.localeCompare(b.Publisher), cell:r=><span className="lt-sub">{r.Publisher}</span> },
+    { key:"box",       label:"Box",       defaultWidth:70,  sort:(a,b)=>Number(a.Box)-Number(b.Box), cell:r=><BoxBadge box={r.Box} /> },
     { key:"writer",    label:"Writer",    defaultWidth:130, sort:(a,b)=>a.Writer.localeCompare(b.Writer), cell:r=><span className="lt-sub">{r.Writer||"—"}</span> },
     { key:"artist",    label:"Artist",    defaultWidth:130, sort:(a,b)=>a.Artist.localeCompare(b.Artist), cell:r=><span className="lt-sub">{r.Artist||"—"}</span> },
     { key:"key",       label:"Key",       defaultWidth:55,  sort:(a,b)=>a.Key.localeCompare(b.Key), cell:r=>r.Key?.toUpperCase()==="YES"?<span className="badge bkey" style={{fontSize:"0.6rem"}}>KEY</span>:null },
@@ -168,6 +175,7 @@ export default function Everything({
       if (platform   && c.Platform !== platform)    return false;
       if (boxFilter  && c.Box !== boxFilter)        return false;
       if (familyFilter && getFamily(c) !== familyFilter) return false;
+      if (exactTitle && c.Title !== exactTitle)     return false;
       if (!q) return true;
       return [
         c.Title, c.Issue, c.Publisher, c.Writer, c.Artist,
@@ -176,7 +184,7 @@ export default function Everything({
         c.Story_Pitch, c.Imprint, c.Terrificon,
       ].join(" ").toLowerCase().includes(q);
     });
-  }, [searched, query, publisher, era, platform, boxFilter, keysOnly, signedOnly, familyFilter]);
+  }, [searched, query, publisher, era, platform, boxFilter, keysOnly, signedOnly, familyFilter, exactTitle]);
 
   const cardSlice = useMemo(() => {
     const start = (cardPage - 1) * CARD_PAGE;
@@ -186,7 +194,7 @@ export default function Everything({
   const handleSearch = useCallback(() => { setSearched(true); setCardPage(1); }, []);
   const handleClear  = useCallback(() => {
     setQuery(""); setPub(""); setEra(""); setPlat(""); setBoxFilter("");
-    setKeysOnly(false); setSignedOnly(false); setFamily("");
+    setKeysOnly(false); setSignedOnly(false); setFamily(""); setExactTitle("");
     setCardPage(1);
   }, []);
 
@@ -326,13 +334,30 @@ export default function Everything({
         </div>
       )}
 
+      {/* Exact title mode badge */}
+      {exactTitle && (
+        <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:10,
+          background:"#fef2f2", border:"1.5px solid var(--red)", borderRadius:6, padding:"8px 14px" }}>
+          <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"2px", color:"var(--red)" }}>
+            TITLE FILTER — EXACT MATCH
+          </span>
+          <span style={{ fontWeight:700, color:"var(--brown-light)", fontSize:"0.9rem" }}>{exactTitle}</span>
+          <button onClick={() => { setExactTitle(""); setSearched(true); }}
+            style={{ marginLeft:"auto", background:"none", border:"1px solid var(--red)", borderRadius:4,
+              padding:"2px 10px", cursor:"pointer", fontFamily:"'Bebas Neue',sans-serif",
+              fontSize:"0.65rem", letterSpacing:"1.5px", color:"var(--red)" }}>
+            CLEAR ✕
+          </button>
+        </div>
+      )}
+
       {/* Results header */}
       {searched && (
         <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:12, flexWrap:"wrap", gap:8 }}>
           <div style={{ fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px", fontSize:"0.82rem", color:"var(--muted2)" }}>
             {results.length === 0
               ? "No results — try a different search"
-              : <><span style={{ color:"var(--red)", fontSize:"1.05rem" }}>{results.length.toLocaleString()}</span> {results.length===1?"book":"books"} {familyFilter && `· ${familyFilter}`} — {ALL.length.toLocaleString()} total, {DATA3.boxes.length} boxes</>
+              : <><span style={{ color:"var(--red)", fontSize:"1.05rem" }}>{results.length.toLocaleString()}</span> {results.length===1?"book":"books"} {familyFilter && `· ${familyFilter}`} {exactTitle && `· "${exactTitle}" only`} — {ALL.length.toLocaleString()} total, {DATA3.boxes.length} boxes</>
             }
           </div>
           <div style={{ display:"flex", gap:6 }}>
@@ -384,7 +409,7 @@ export default function Everything({
           <div className="ev-card-grid">
             {cardSlice.map((c,i)=>(
               <EverythingCard key={i} comic={c}
-                onTitleClick={t=>{setQuery(t);setSearched(true);setCardPage(1);}} />
+                onTitleClick={t=>{setExactTitle(t);setQuery("");setSearched(true);setCardPage(1);}} />
             ))}
           </div>
           <Paginator
@@ -423,7 +448,7 @@ function EverythingCard({ comic: c, onTitleClick }: { comic: Comic; onTitleClick
             </div>
           </div>
           {onTitleClick
-            ? <button className="title-link" style={{fontSize:"inherit",fontWeight:600,lineHeight:1.3}} onClick={e=>{e.stopPropagation();onTitleClick(c.Title);}}>{c.Title}</button>
+            ? <button className="title-link" style={{fontSize:"inherit",fontWeight:600,lineHeight:1.3}} onClick={e=>{e.stopPropagation();onTitleClick(c.Title);}} title="Click to show only this title">{c.Title}</button>
             : <div className="card-title">{c.Title}</div>
           }
           <div className="card-issue">{c.Issue}{c.Year?` · ${c.Year}`:""}</div>
