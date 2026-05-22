@@ -14,11 +14,14 @@ import BoxTimeline from "@/pages/BoxTimeline";
 import BoxVisual from "@/pages/BoxVisual";
 import Runs from "@/pages/Runs";
 import DataView from "@/pages/DataView";
+import BoxHunt from "@/pages/BoxHunt";
+import CapFalconChecklist from "@/pages/CapFalconChecklist";
 import PasswordGate from "@/components/PasswordGate";
 
 type TabId =
   | "summary" | "everything" | "collection" | "boxkeys" | "stats" | "runs" | "dataview"
-  | "calendar" | "showplanner" | "cgc" | "signings" | "actionplan" | "timeline" | "boxvisual";
+  | "calendar" | "showplanner" | "cgc" | "signings" | "actionplan" | "timeline" | "boxvisual"
+  | "hunting" | "capfalcon";
 
 export type NavParams = {
   box?: string;
@@ -47,6 +50,8 @@ const NAV = [
     id: "business",
     label: "Business",
     tabs: [
+      { id: "hunting",     label: "Box Hunt" },
+      { id: "capfalcon",   label: "Cap & Falcon" },
       { id: "calendar",    label: "Calendar" },
       { id: "showplanner", label: "Shows" },
       { id: "timeline",    label: "Timeline" },
@@ -194,6 +199,8 @@ export default function App() {
         {activeTab === "showplanner" && <ShowPlanner />}
         {activeTab === "timeline"    && <BoxTimeline />}
         {activeTab === "boxvisual"   && <BoxVisual />}
+        {activeTab === "hunting"     && <BoxHunt />}
+        {activeTab === "capfalcon"   && <CapFalconChecklist />}
         {activeTab === "cgc"         && <CGCStrategy />}
         {activeTab === "signings"    && <PrivateSignings />}
         {activeTab === "actionplan"  && <ActionPlan />}
