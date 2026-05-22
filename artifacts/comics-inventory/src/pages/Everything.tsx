@@ -109,27 +109,6 @@ function CoverThumb({ c }: { c: Comic }) {
   );
 }
 
-const COLS: ColDef<Comic>[] = [
-  { key:"box",       label:"Box",       defaultWidth:70,  sort:(a,b)=>Number(a.Box)-Number(b.Box), cell:r=><BoxBadge box={r.Box} /> },
-  { key:"title",     label:"Title",     defaultWidth:220, sort:(a,b)=>a.Title.localeCompare(b.Title), cell:r=>(
-    <button className="title-link" onClick={e=>{e.stopPropagation();_evTitleClick?.(r.Title||"");}}>
-      {r.Title||"Untitled"}
-    </button>
-  )},
-  { key:"issue",     label:"#",         defaultWidth:55,  sort:(a,b)=>parseVal(a.Issue)-parseVal(b.Issue), cell:r=><span className="lt-sub">{r.Issue}</span> },
-  { key:"publisher", label:"Publisher", defaultWidth:100, sort:(a,b)=>a.Publisher.localeCompare(b.Publisher), cell:r=><span className="lt-sub">{r.Publisher}</span> },
-  { key:"writer",    label:"Writer",    defaultWidth:130, sort:(a,b)=>a.Writer.localeCompare(b.Writer), cell:r=><span className="lt-sub">{r.Writer||"—"}</span> },
-  { key:"artist",    label:"Artist",    defaultWidth:130, sort:(a,b)=>a.Artist.localeCompare(b.Artist), cell:r=><span className="lt-sub">{r.Artist||"—"}</span> },
-  { key:"key",       label:"Key",       defaultWidth:55,  sort:(a,b)=>a.Key.localeCompare(b.Key), cell:r=>r.Key?.toUpperCase()==="YES"?<span className="badge bkey" style={{fontSize:"0.6rem"}}>KEY</span>:null },
-  { key:"nm",        label:"NM Value",  defaultWidth:90,  sort:(a,b)=>parseVal(a.Value_NM)-parseVal(b.Value_NM), cell:r=><span className="lt-val">{r.Value_NM||"—"}</span> },
-  { key:"platform",  label:"Platform",  defaultWidth:90,  sort:(a,b)=>a.Platform.localeCompare(b.Platform), cell:r=>r.Platform?<span className={`badge ${platClass(r.Platform)}`} style={{fontSize:"0.6rem"}}>{r.Platform}</span>:null },
-  { key:"year",      label:"Year",      defaultWidth:65,  sort:(a,b)=>parseVal(a.Year)-parseVal(b.Year), cell:r=><span className="lt-sub">{r.Year}</span> },
-  { key:"signed",    label:"Signed",    defaultWidth:90,  sort:(a,b)=>a.Signed.localeCompare(b.Signed), cell:r=>r.Signed?.toUpperCase()==="YES"?<span className="lt-sub" style={{color:"var(--gold)"}}>✍ {r.Signed_By||"Yes"}</span>:null },
-];
-
-// Callback ref so module-level COLS can reach component state
-let _evTitleClick: ((title: string) => void) | undefined;
-
 export default function Everything({
   initBox, initQuery, initPublisher, initKeysOnly, initSignedOnly,
 }: {
@@ -148,8 +127,25 @@ export default function Everything({
   const [searched,    setSearched]   = useState(true);
   const [cardPage,    setCardPage]   = useState(1);
   const [showFamilies,setShowFams]   = useState(false);
-  // Wire the module-level title-click callback to this instance's state
-  _evTitleClick = (t: string) => { setQuery(t); setSearched(true); setCardPage(1); };
+
+  const cols = useMemo<ColDef<Comic>[]>(() => [
+    { key:"box",       label:"Box",       defaultWidth:70,  sort:(a,b)=>Number(a.Box)-Number(b.Box), cell:r=><BoxBadge box={r.Box} /> },
+    { key:"title",     label:"Title",     defaultWidth:220, sort:(a,b)=>a.Title.localeCompare(b.Title), cell:r=>(
+      <button className="title-link" onClick={e=>{e.stopPropagation();setQuery(r.Title||"");setSearched(true);setCardPage(1);}}>
+        {r.Title||"Untitled"}
+      </button>
+    )},
+    { key:"issue",     label:"#",         defaultWidth:55,  sort:(a,b)=>parseVal(a.Issue)-parseVal(b.Issue), cell:r=><span className="lt-sub">{r.Issue}</span> },
+    { key:"publisher", label:"Publisher", defaultWidth:100, sort:(a,b)=>a.Publisher.localeCompare(b.Publisher), cell:r=><span className="lt-sub">{r.Publisher}</span> },
+    { key:"writer",    label:"Writer",    defaultWidth:130, sort:(a,b)=>a.Writer.localeCompare(b.Writer), cell:r=><span className="lt-sub">{r.Writer||"—"}</span> },
+    { key:"artist",    label:"Artist",    defaultWidth:130, sort:(a,b)=>a.Artist.localeCompare(b.Artist), cell:r=><span className="lt-sub">{r.Artist||"—"}</span> },
+    { key:"key",       label:"Key",       defaultWidth:55,  sort:(a,b)=>a.Key.localeCompare(b.Key), cell:r=>r.Key?.toUpperCase()==="YES"?<span className="badge bkey" style={{fontSize:"0.6rem"}}>KEY</span>:null },
+    { key:"nm",        label:"NM Value",  defaultWidth:90,  sort:(a,b)=>parseVal(a.Value_NM)-parseVal(b.Value_NM), cell:r=><span className="lt-val">{r.Value_NM||"—"}</span> },
+    { key:"platform",  label:"Platform",  defaultWidth:90,  sort:(a,b)=>a.Platform.localeCompare(b.Platform), cell:r=>r.Platform?<span className={`badge ${platClass(r.Platform)}`} style={{fontSize:"0.6rem"}}>{r.Platform}</span>:null },
+    { key:"year",      label:"Year",      defaultWidth:65,  sort:(a,b)=>parseVal(a.Year)-parseVal(b.Year), cell:r=><span className="lt-sub">{r.Year}</span> },
+    { key:"signed",    label:"Signed",    defaultWidth:90,  sort:(a,b)=>a.Signed.localeCompare(b.Signed), cell:r=>r.Signed?.toUpperCase()==="YES"?<span className="lt-sub" style={{color:"var(--gold)"}}>✍ {r.Signed_By||"Yes"}</span>:null },
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  ], []);
 
   // When parent re-navigates with new params, re-init
   useEffect(() => {
@@ -358,7 +354,7 @@ export default function Everything({
 
       {/* Results — list */}
       {searched && results.length > 0 && view === "list" && (
-        <SortableTable rows={results} cols={COLS} rowKey={(_r,i)=>String(i)} pageSize={100} defaultSortKey="box" expandCell={c => (
+        <SortableTable rows={results} cols={cols} rowKey={(_r,i)=>String(i)} pageSize={100} defaultSortKey="box" expandCell={c => (
           <div>
             <div style={{ display:"flex", gap:20, flexWrap:"wrap" }}>
               {c.Arc       && <div className="dr"><span className="dl">Arc</span><span className="dv">{c.Arc}</span></div>}

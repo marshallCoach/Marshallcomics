@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback, useEffect } from "react";
+import { useState, useRef, useCallback, useEffect, Fragment } from "react";
 import { Paginator } from "./Paginator";
 
 export interface ColDef<T> {
@@ -142,9 +142,8 @@ export function SortableTable<T>({ cols, rows, pageSize = DEFAULT_PAGE_SIZE, exp
               const key    = rowKey ? rowKey(row, i) : i;
               const isOpen = openRows.has(i);
               return (
-                <>
+                <Fragment key={key}>
                   <tr
-                    key={`r-${key}`}
                     onClick={() => toggleRow(i)}
                     style={{ borderBottom: "1px solid var(--border)", cursor: expandCell ? "pointer" : "default", background: isOpen ? "#fff8f8" : undefined, transition: "background 0.1s" }}
                     onMouseEnter={e => { if (!isOpen) (e.currentTarget as HTMLTableRowElement).style.background = "var(--surface2)"; }}
@@ -160,13 +159,13 @@ export function SortableTable<T>({ cols, rows, pageSize = DEFAULT_PAGE_SIZE, exp
                     ))}
                   </tr>
                   {isOpen && expandCell && (
-                    <tr key={`e-${key}`} style={{ borderBottom: "2px solid #f0dada", background: "#fff8f8" }}>
+                    <tr style={{ borderBottom: "2px solid #f0dada", background: "#fff8f8" }}>
                       <td colSpan={cols.length} style={{ padding: "10px 14px 14px 28px" }}>
                         {expandCell(row)}
                       </td>
                     </tr>
                   )}
-                </>
+                </Fragment>
               );
             })}
           </tbody>
