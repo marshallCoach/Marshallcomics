@@ -39,7 +39,8 @@ function isClosed(status: string) {
 }
 
 export default function PrivateSignings() {
-  const [open, setOpen] = useState<Set<number>>(new Set([0, 1]));
+  const [open,     setOpen]     = useState<Set<number>>(new Set([0, 1]));
+  const [viewMode, setViewMode] = useState<"list"|"card">("list");
   const toggle = (i: number) => setOpen(prev => {
     const n = new Set(prev); n.has(i) ? n.delete(i) : n.add(i); return n;
   });
@@ -74,6 +75,96 @@ export default function PrivateSignings() {
         </div>
       )}
 
+      {/* View toggle */}
+      <div style={{ display:"flex", gap:6, padding:"10px 20px 2px", alignItems:"center" }}>
+        {(["list","card"] as const).map(v => (
+          <button key={v} onClick={() => setViewMode(v)} style={{
+            background: viewMode===v ? "var(--red)" : "var(--surface)",
+            color: viewMode===v ? "#fff" : "var(--muted2)",
+            border: `1.5px solid ${viewMode===v ? "var(--red)" : "var(--border)"}`,
+            borderRadius:5, padding:"5px 16px", cursor:"pointer",
+            fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"1.5px",
+            transition:"all 0.15s",
+          }}>
+            {v === "list" ? "LIST" : "CARDS"}
+          </button>
+        ))}
+      </div>
+
+      {/* ── CARD VIEW ── */}
+      {viewMode === "card" && (
+        <div style={{ display:"flex", flexWrap:"wrap", gap:10, padding:"12px 20px" }}>
+          {signings.map((s, i) => {
+            const isOpen  = open.has(i);
+            const color   = statusColor(s.Status);
+            const badge   = statusBadge(s.Status);
+            const closed_ = isClosed(s.Status);
+            return (
+              <div key={i}
+                onClick={() => toggle(i)}
+                className="flagship-card"
+                style={{
+                  flex: isOpen ? "1 1 100%" : "1 1 280px",
+                  borderLeftColor: color,
+                  opacity: closed_ ? 0.55 : 1,
+                  cursor:"pointer",
+                }}>
+                <div style={{ display:"flex", alignItems:"center", gap:8 }}>
+                  <span style={{
+                    fontSize:"0.58rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px",
+                    background:`${color}18`, border:`1px solid ${color}`, color,
+                    borderRadius:3, padding:"1px 6px", whiteSpace:"nowrap", flexShrink:0,
+                  }}>{badge}</span>
+                  <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.88rem",
+                    letterSpacing:"1px", color:"var(--brown-light)", flex:1, lineHeight:1.2 }}>
+                    {s.Creator}
+                  </div>
+                  <span style={{ fontSize:"0.65rem", color, flexShrink:0 }}>{isOpen?"▲":"▼"}</span>
+                </div>
+                <div style={{ display:"flex", gap:10, marginTop:6, flexWrap:"wrap", alignItems:"center" }}>
+                  <span style={{ fontSize:"0.68rem", color, fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"0.5px" }}>
+                    {s.Deadline.replace(' ⚠️','')}
+                  </span>
+                  {s.Fee && !closed_ && (
+                    <span style={{ fontSize:"0.68rem", color:"var(--muted)", background:"var(--surface2)",
+                      borderRadius:3, padding:"1px 7px", border:"1px solid var(--border)" }}>{s.Fee}</span>
+                  )}
+                </div>
+                {!isOpen && s.Books && (
+                  <div style={{ fontSize:"0.75rem", color:"var(--muted2)", marginTop:6, lineHeight:1.4 }}>
+                    {s.Books.substring(0,100)}{s.Books.length>100?"…":""}
+                  </div>
+                )}
+                {isOpen && (
+                  <div style={{ marginTop:12, paddingTop:10, borderTop:`1px solid ${color}25` }}>
+                    {s.Books && (
+                      <div className="dr">
+                        <span className="dl">Books to Send</span>
+                        <span className="dv">{s.Books}</span>
+                      </div>
+                    )}
+                    {s.Strategy && (
+                      <div className="dr" style={{ marginTop:8 }}>
+                        <span className="dl">Strategy</span>
+                        <span className="dv">{s.Strategy}</span>
+                      </div>
+                    )}
+                    {s.ExpectedValue && (
+                      <div className="dr" style={{ marginTop:6 }}>
+                        <span className="dl">Est. Value</span>
+                        <span className="dv" style={{ color:"var(--green-text)", fontWeight:600 }}>{s.ExpectedValue}</span>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      )}
+
+      {/* ── LIST VIEW ── */}
+      {viewMode === "list" && (
       <div className="list-view">
         {signings.map((s, i) => {
           const isOpen   = open.has(i);
@@ -138,6 +229,7 @@ export default function PrivateSignings() {
           );
         })}
       </div>
+      )}
 
       {/* Stats footer */}
       <div style={{ margin:"24px 20px 12px", display:"flex", gap:20, flexWrap:"wrap", fontSize:"0.75rem", color:"var(--muted2)" }}>

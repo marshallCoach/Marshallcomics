@@ -53,7 +53,7 @@ const NAV = [
       { id: "hunting",     label: "Box Hunt" },
       { id: "capfalcon",   label: "Cap & Falcon" },
       { id: "calendar",    label: "Calendar" },
-      { id: "showplanner", label: "Shows" },
+      { id: "showplanner", label: "Whatnot Shows" },
       { id: "timeline",    label: "Timeline" },
       { id: "cgc",         label: "CGC" },
       { id: "signings",    label: "Signings" },

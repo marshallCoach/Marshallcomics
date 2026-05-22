@@ -162,6 +162,7 @@ function seriesMatchKey(title: string, year: string): string | null {
   const y = parseInt(year || "0");
   if (t.includes("tales of suspense")) return "Tales of Suspense";
   if (t === "captain america" && y >= 1968 && y <= 1996) return "Captain America (Vol.1)";
+  if (t.includes("captain america & the falcon"))        return "Captain America (Vol.1)";
   if (t === "captain america" && y >= 2004 && y <= 2012) return "Captain America (Vol.5)";
   if ((t === "falcon" || t === "the falcon") && y >= 1983 && y <= 1984) return "The Falcon (Solo)";
   if (t === "all-new captain america") return "All-New Captain America";
