@@ -3,7 +3,7 @@ import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 const XLSX = require('xlsx');
 
-const wb = XLSX.readFile('attached_assets/comics_inventory_(3)_1779471694783.xlsx');
+const wb = XLSX.readFile('attached_assets/comics_inventory_(4)_1779562452705.xlsx');
 
 // ── COMICS ───────────────────────────────────────────────────────────────────
 const comicsSheet = wb.Sheets['Comics Inventory'];
