@@ -157,8 +157,8 @@ function HuntCard({ comic: c, onTitleClick }: { comic: Comic; onTitleClick?: (t:
       )}
       {(c.Value_NM || c.Value_VF) && (
         <div style={{ display:"flex", gap:10, marginTop:6, fontSize:"0.72rem" }}>
-          {c.Value_NM && <span style={{color:"var(--green-text)"}}>NM <strong>{c.Value_NM}</strong></span>}
-          {c.Value_VF && <span style={{color:"var(--muted)"}}>VF {c.Value_VF}</span>}
+          {c.Value_NM && <span style={{color:"var(--green-text)"}}>NM <strong>${c.Value_NM}</strong></span>}
+          {c.Value_VF && <span style={{color:"var(--muted)"}}>VF ${c.Value_VF}</span>}
         </div>
       )}
     </div>
@@ -257,7 +257,7 @@ export default function BoxHunt() {
     { key:"pub",    label:"Publisher", defaultWidth:100, sort:(a,b)=>a.Publisher.localeCompare(b.Publisher), cell:r=><span className="lt-sub">{r.Publisher}</span> },
     { key:"writer", label:"Writer",    defaultWidth:130, sort:(a,b)=>a.Writer.localeCompare(b.Writer),     cell:r=><span className="lt-sub">{r.Writer||"—"}</span> },
     { key:"key",    label:"Key",       defaultWidth:55,  sort:(a,b)=>a.Key.localeCompare(b.Key),           cell:r=>r.Key?.toUpperCase()==="YES"?<span className="badge bkey" style={{fontSize:"0.6rem"}}>KEY</span>:null },
-    { key:"nm",     label:"NM Value",  defaultWidth:90,  sort:(a,b)=>parseVal(a.Value_NM)-parseVal(b.Value_NM), cell:r=><span className="lt-val">{r.Value_NM||"—"}</span> },
+    { key:"nm",     label:"NM Value",  defaultWidth:90,  sort:(a,b)=>parseVal(a.Value_NM)-parseVal(b.Value_NM), cell:r=><span className="lt-val">{r.Value_NM ? `$${r.Value_NM}` : "—"}</span> },
     { key:"year",   label:"Year",      defaultWidth:65,  sort:(a,b)=>parseVal(a.Year)-parseVal(b.Year),   cell:r=><span className="lt-sub">{r.Year}</span> },
     { key:"signed", label:"Signed",    defaultWidth:90,  sort:(a,b)=>a.Signed.localeCompare(b.Signed),    cell:r=>r.Signed?.toUpperCase()==="YES"?<span className="lt-sub" style={{color:"var(--gold)"}}>✍ {r.Signed_By||"Yes"}</span>:null },
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -591,7 +591,7 @@ export default function BoxHunt() {
                     <BoxBadge box={c.Box} />
                     {isKey    && <span className="badge bkey"  style={{fontSize:"0.58rem"}}>KEY</span>}
                     {isSigned && <span className="badge bgold" style={{fontSize:"0.58rem"}}>SGD</span>}
-                    {c.Value_NM && <span style={{ fontSize:"0.78rem", color:"var(--green-text)", fontWeight:600 }}>{c.Value_NM}</span>}
+                    {c.Value_NM && <span style={{ fontSize:"0.78rem", color:"var(--green-text)", fontWeight:600 }}>${c.Value_NM}</span>}
                   </div>
                 </div>
               );

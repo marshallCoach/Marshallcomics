@@ -239,6 +239,29 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
   return (
     <div style={{ maxWidth:1100, margin:"0 auto", padding:"20px 16px 80px" }}>
 
+      {/* ── Box Progress — animated fill ── */}
+      <section className="progress-section">
+        <div className="progress-header">
+          <div>
+            <span className="progress-title">BOX COLLECTION PROGRESS</span>
+            <span className="progress-fraction">{totalBoxes} of {TARGET_BOXES} boxes catalogued</span>
+          </div>
+          <div className="progress-pct">{BOX_PCT}%</div>
+        </div>
+        <div className="progress-track">
+          <div className="progress-fill" style={{
+            width: `${progWidth}%`,
+            backgroundImage: `linear-gradient(90deg, #c8102e 0%, #e85d04 25%, #f4a107 55%, #84cc16 80%, #22c55e 100%)`,
+            backgroundSize: `${progWidth > 0 ? (100 / progWidth) * 100 : 100}% 100%`,
+            backgroundRepeat: "no-repeat",
+          }} />
+          {[...Array(TARGET_BOXES)].map((_,i) => (
+            <div key={i} className={`progress-tick ${i < totalBoxes ? "filled" : ""}`} style={{ left:`${((i+1)/TARGET_BOXES)*100}%` }} />
+          ))}
+        </div>
+        <div className="progress-sub">{TARGET_BOXES - totalBoxes} more boxes to go — you're more than halfway there, Roberto.</div>
+      </section>
+
       {/* ── Quick Search ── */}
       <section className="qs-section">
         <div className="qs-header">
@@ -296,29 +319,6 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
           <button className="qs-pill qs-pill-key" onClick={() => onNavigate("everything", { keysOnly: "true" })}>⭐ All Keys</button>
           <button className="qs-pill qs-pill-sgn" onClick={() => onNavigate("everything", { signed: "YES" })}>✍ All Signed</button>
         </div>
-      </section>
-
-      {/* ── Box Progress — animated fill ── */}
-      <section className="progress-section">
-        <div className="progress-header">
-          <div>
-            <span className="progress-title">BOX COLLECTION PROGRESS</span>
-            <span className="progress-fraction">{totalBoxes} of {TARGET_BOXES} boxes catalogued</span>
-          </div>
-          <div className="progress-pct">{BOX_PCT}%</div>
-        </div>
-        <div className="progress-track">
-          <div className="progress-fill" style={{
-            width: `${progWidth}%`,
-            backgroundImage: `linear-gradient(90deg, #c8102e 0%, #e85d04 25%, #f4a107 55%, #84cc16 80%, #22c55e 100%)`,
-            backgroundSize: `${progWidth > 0 ? (100 / progWidth) * 100 : 100}% 100%`,
-            backgroundRepeat: "no-repeat",
-          }} />
-          {[...Array(TARGET_BOXES)].map((_,i) => (
-            <div key={i} className={`progress-tick ${i < totalBoxes ? "filled" : ""}`} style={{ left:`${((i+1)/TARGET_BOXES)*100}%` }} />
-          ))}
-        </div>
-        <div className="progress-sub">{TARGET_BOXES - totalBoxes} more boxes to go — you're more than halfway there, Roberto.</div>
       </section>
 
       {/* ── COMING UP — staggered entrance + nav links ── */}
