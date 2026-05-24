@@ -66,11 +66,13 @@ Two-section nav: **Inventory** (Home, Every Book, Runs, Sales, Box Keys, Stats, 
 
 Key fields: `Title`, `Issue`, `Publisher`, `Year`, `Arc`, `Key`, `Key_Reason`, `First_App`, `Writer`, `Artist`, `Signed`, `Signed_By`, `Personal`, `Condition`, `CGC_Worth`, `Value_NM`, `Value_VF`, `Category`, `Era`, `Universe`, `Seller_Notes`, `Story_Pitch`, `Content`, `Platform`, `Sales_Data`, `Terrificon`, `Cover_Artist`, `Date_Added`, `Imprint`, `Box`, `Start_Bid`
 
-BoxSummary fields: `Num`, `Label`, `DateAdded`, `Comics`, `Publisher`, `YearRange`, `Keys`, `Signed`, `Dups`, `FirstBook`, `FirstIss`, `LastBook`, `LastIss`, `Description`
+BoxSummary fields: `Num`, `Comics`, `Keys`, `Signed`, `YearRange`, `Label`, `FirstBook`, `LastBook`, `Location`, `Notes`, `DateAdded`
 
 ## Data regeneration
 
-Run `node gen_data.mjs` from project root to regenerate `data3.ts` from the latest xlsx in `attached_assets/`. Update the filename in `gen_data.mjs` first. Box Summary parsing starts at row index 2 (BOX 01).
+Run `node gen_data.mjs` from project root to regenerate `data3.ts`. The script **auto-detects** the newest `comics_inventory*.xlsx` in `attached_assets/` — no filename update needed. Just drop the new xlsx in `attached_assets/` and run the command.
+
+Box Summary parsing starts at row index 2 (BOX 01). `DateAdded` on each box is derived from the earliest `Date_Added` value among its comics.
 
 ## User preferences
 

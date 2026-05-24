@@ -32,7 +32,7 @@ export default function BoxTimeline() {
         });
         return {
           ...b,
-          sortKey: 0,
+          sortKey: parseDate(b.DateAdded),
           comicCount: comicsInBox.length || b.Comics,
           keys: b.Keys,
           signed: b.Signed,
@@ -46,7 +46,7 @@ export default function BoxTimeline() {
   const groups = useMemo(() => {
     const g: Record<string, typeof entries> = {};
     for (const e of entries) {
-      const label = e.sortKey === 0 ? "Original Session" : (e.Notes || "Unknown");
+      const label = e.sortKey === 0 ? "Original Session" : (e.DateAdded || "Unknown");
       if (!g[label]) g[label] = [];
       g[label].push(e);
     }
