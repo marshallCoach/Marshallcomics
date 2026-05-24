@@ -71,6 +71,14 @@ const INVENTORY_PAGES: PageEntry[] = [
     features: ["31 field coverage audit", "Bar visualization per field", "Most-to-least populated sort", "Data quality overview"],
     accent: "#5b4fc8",
   },
+  {
+    id: "capfalcon",
+    label: "Cap & Falcon",
+    icon: "🛡",
+    desc: "Dedicated checklist for the Captain America & Falcon collection — tracking run completion for this key title.",
+    features: ["Issue-by-issue checklist", "Owned / missing status", "Run completion tracking"],
+    accent: "#c8102e",
+  },
 ];
 
 const BUSINESS_PAGES: PageEntry[] = [
@@ -80,14 +88,6 @@ const BUSINESS_PAGES: PageEntry[] = [
     icon: "🎯",
     desc: "Search and filter across all boxes to find specific books. Built for hunting through the physical collection fast.",
     features: ["Multi-box search", "Publisher & key filters", "NM value display", "Box badge on every result"],
-  },
-  {
-    id: "capfalcon",
-    label: "Cap & Falcon",
-    icon: "🛡",
-    desc: "Dedicated checklist for the Captain America & Falcon collection — tracking run completion for this key title.",
-    features: ["Issue-by-issue checklist", "Owned / missing status", "Run completion tracking"],
-    accent: "#c8102e",
   },
   {
     id: "calendar",
