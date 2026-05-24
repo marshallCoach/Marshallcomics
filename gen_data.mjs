@@ -3,7 +3,16 @@ import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 const XLSX = require('xlsx');
 
-const wb = XLSX.readFile('attached_assets/comics_inventory_pm_1779644314535.xlsx');
+// Auto-detect the newest comics_inventory*.xlsx in attached_assets/
+import { readdirSync, statSync } from 'fs';
+const xlsxFiles = readdirSync('attached_assets')
+  .filter(f => f.startsWith('comics_inventory') && f.endsWith('.xlsx'))
+  .map(f => ({ f, mtime: statSync(`attached_assets/${f}`).mtimeMs }))
+  .sort((a, b) => b.mtime - a.mtime);
+if (!xlsxFiles.length) { console.error('No comics_inventory*.xlsx found in attached_assets/'); process.exit(1); }
+const XLSX_FILE = `attached_assets/${xlsxFiles[0].f}`;
+console.log(`Using: ${XLSX_FILE}`);
+const wb = XLSX.readFile(XLSX_FILE);
 
 // ── COMICS ───────────────────────────────────────────────────────────────────
 const comicsSheet = wb.Sheets['Comics Inventory'];
@@ -54,6 +63,19 @@ const C = {
 
 function s(row, idx) { return String(row[idx] ?? '').trim().replace(/\\/g, '\\\\').replace(/`/g, '\\`').replace(/\$\{/g, '\\${'); }
 
+// Derive earliest Date_Added per box from comics data
+const boxDateMap = {};
+for (let r = 1; r < allRows.length; r++) {
+  const row = allRows[r];
+  const box  = String(row[C.box]  ?? '').trim();
+  const date = String(row[C.date] ?? '').trim();
+  if (!box || !date) continue;
+  // Strip parenthetical import notes e.g. "(ALL_BOXES import)"
+  const clean = date.replace(/\s*\(.*?\)\s*/g, '').trim();
+  if (!clean) continue;
+  if (!boxDateMap[box] || clean < boxDateMap[box]) boxDateMap[box] = clean;
+}
+
 const comics = [];
 for (let r = 1; r < allRows.length; r++) {
   const row = allRows[r];
@@ -89,11 +111,14 @@ for (let r = 2; r < bsRows.length; r++) {
   const row = bsRows[r];
   const num = String(row[0] ?? '').trim();
   if (!num.startsWith('BOX')) continue;
+  // Normalise box number for lookup: "BOX 01" → "1"
+  const boxNum = num.replace(/^BOX\s*/i, '').replace(/^0+/, '') || '0';
+  const dateAdded = boxDateMap[boxNum] || '';
   boxes.push(`  {
     Num: \`${num}\`, Comics: ${Number(row[1])||0}, Keys: ${Number(row[2])||0},
     Signed: ${Number(row[3])||0}, YearRange: \`${s(row,4)}\`,
     Label: \`${s(row,5)}\`, FirstBook: \`${s(row,6)}\`, LastBook: \`${s(row,7)}\`,
-    Location: \`${s(row,8)}\`, Notes: \`${s(row,9)}\`,
+    Location: \`${s(row,8)}\`, Notes: \`${s(row,9)}\`, DateAdded: \`${dateAdded}\`,
   }`);
 }
 
@@ -113,7 +138,8 @@ export interface Comic {
 
 export interface BoxSummary {
   Num: string; Comics: number; Keys: number; Signed: number; YearRange: string;
-  Label: string; FirstBook: string; LastBook: string; Location: string; Notes: string;
+  Label: string; FirstBook: string; LastBook: string; Location: string;
+  Notes: string; DateAdded: string;
 }
 
 export const DATA3: { comics: Comic[]; boxes: BoxSummary[] } = {

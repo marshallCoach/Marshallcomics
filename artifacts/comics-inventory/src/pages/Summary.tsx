@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
 import { DATA3 } from "@/data/data3";
 import { NEXT_STEPS, Status, StepCard, loadStatuses, saveStatuses } from "./ActionPlan";
 import { CALENDAR_EVENTS } from "./Calendar";
 import type { NavParams } from "../App";
 
+// ── Static data ──────────────────────────────────────────────────────────────
 const comics  = DATA3.comics;
 const boxData = DATA3.boxes;
 
@@ -38,27 +39,45 @@ const PUB_COUNTS = (() => {
   return Object.entries(c).map(([name, value]) => ({ name, value })).sort((a,b)=>b.value-a.value);
 })();
 
+// ── Calendar utils ────────────────────────────────────────────────────────────
 function calEvInfo(type: string) {
   const t = (type || "").toUpperCase();
-  if (t.includes("WHATNOT"))    return { icon:"📺", color:"#1a6a1a", bg:"#e8f5e8", isShow:true  };
-  if (t.includes("CGC"))        return { icon:"🏆", color:"#1a4a99", bg:"#e8f0ff", isShow:false };
-  if (t.includes("TERRIFICON")) return { icon:"🎪", color:"#5522aa", bg:"#f0ebff", isShow:false };
-  if (t.includes("NYCC"))       return { icon:"🗽", color:"#5522aa", bg:"#f0ebff", isShow:false };
-  return { icon:"📅", color:"var(--muted2)" as string, bg:"var(--surface2)" as string, isShow:false };
+  if (t.includes("WHATNOT"))    return { icon:"📺", color:"#1a6a1a", bg:"#e8f5e8", page:"showplanner" };
+  if (t.includes("CGC"))        return { icon:"🏆", color:"#1a4a99", bg:"#e8f0ff", page:"calendar"    };
+  if (t.includes("TERRIFICON")) return { icon:"🎪", color:"#5522aa", bg:"#f0ebff", page:"calendar"    };
+  if (t.includes("NYCC"))       return { icon:"🗽", color:"#5522aa", bg:"#f0ebff", page:"calendar"    };
+  return { icon:"📅", color:"var(--muted2)" as string, bg:"var(--surface2)" as string, page:"calendar" };
 }
-const TODAY_SORT = 20260521;
+
+// ── Dynamic today ─────────────────────────────────────────────────────────────
+const TODAY      = new Date();
+const TODAY_SORT = TODAY.getFullYear()*10000 + (TODAY.getMonth()+1)*100 + TODAY.getDate();
+const TODAY_0    = new Date(TODAY.getFullYear(), TODAY.getMonth(), TODAY.getDate());
+
+function daysUntil(y: number, m: number, d: number) {
+  return Math.ceil((new Date(y, m-1, d).getTime() - TODAY_0.getTime()) / 86400000);
+}
+function daysFromSortDate(sortDate: number) {
+  const y = Math.floor(sortDate/10000);
+  const m = Math.floor((sortDate%10000)/100) - 1;
+  const d = sortDate%100;
+  return Math.ceil((new Date(y, m, d).getTime() - TODAY_0.getTime()) / 86400000);
+}
+function schedColor(days: number): string {
+  if (days <= 14) return "#c8102e";
+  if (days <= 30) return "#ea580c";
+  if (days <= 60) return "#d97706";
+  return "#16a34a";
+}
+
 const upcomingCal = [...CALENDAR_EVENTS]
   .filter(e => e.sortDate >= TODAY_SORT)
   .sort((a, b) => a.sortDate - b.sortDate)
   .slice(0, 6);
 
+// ── Timeline ─────────────────────────────────────────────────────────────────
 const TARGET_BOXES = 65;
 const BOX_PCT = Math.round((totalBoxes / TARGET_BOXES) * 100);
-
-const TODAY = new Date(2026, 4, 20);
-function daysUntil(y: number, m: number, d: number) {
-  return Math.ceil((new Date(y, m - 1, d).getTime() - TODAY.getTime()) / 86400000);
-}
 
 const TIMELINE = [
   { label:"Jorge Jiménez CGC SS — Batman #125",       date:"Jun 5",       days:daysUntil(2026,6,5),   urgency:"critical", cat:"Signing"  },
@@ -69,9 +88,50 @@ const TIMELINE = [
   { label:"NYCC — Stan Lee auth + Heritage eval",     date:"Oct 8–11",    days:daysUntil(2026,10,8),  urgency:"medium",   cat:"Show"     },
 ];
 
+function urgColor(u: string): string {
+  if (u === "critical") return "#c8102e";
+  if (u === "event")    return "#8b2be2";
+  if (u === "high")     return "#d97706";
+  return "#1d6fa4";
+}
+function catColor(cat: string): string {
+  if (cat === "CGC")     return "#8b2be2";
+  if (cat === "Signing") return "#d97706";
+  if (cat === "Show")    return "#1d6fa4";
+  return "#16a34a";
+}
+function catNavPage(cat: string): string {
+  if (cat === "CGC")     return "cgc";
+  if (cat === "Signing") return "signings";
+  if (cat === "Show")    return "calendar";
+  if (cat === "Sales")   return "everything";
+  return "actionplan";
+}
+function catNavLabel(cat: string): string {
+  if (cat === "CGC")     return "CGC Strategy";
+  if (cat === "Signing") return "Signings";
+  if (cat === "Show")    return "Calendar";
+  if (cat === "Sales")   return "Every Book";
+  return "Action Plan";
+}
+
+// ── Flagship ─────────────────────────────────────────────────────────────────
+const FLAGSHIP = [
+  { book:"Stan Lee signed BP #513",                    note:"Authenticate first (PSA/DNA) — $800–$1,500+ auth",         color:"#dc2626", box:"2",  publisher:"Marvel", year:"1966", valueNM:"$800–$1,500 authenticated", condition:"Raw — DO NOT press",            cgcPath:"PSA/DNA at NYCC → CGC × JSA Green Qualified",   action:"NYCC Oct 8–11. Never press. Submit via PSA/DNA first.", terrificon:false },
+  { book:"Truth: RWB #1 (Baker remarked)",             note:"Verify remark → Green Qual. → Heritage — $500–$2,000",     color:"#d97706", box:"2",  publisher:"Marvel", year:"2003", valueNM:"$500–$2,000 with remark",   condition:"Has Baker remark",              cgcPath:"CGC × JSA → Green Qualified → Heritage",        action:"Verify remark authenticity before submitting.", terrificon:false },
+  { book:"Ultimate Fallout #4 Foil (1st Miles)",       note:"1st Miles Morales — $800–$1,500 CGC 9.8",                  color:"#8b2be2", box:"2",  publisher:"Marvel", year:"2011", valueNM:"$800–$1,500 CGC 9.8",       condition:"Check for pressing",            cgcPath:"Press → CGC Universal Blue 9.8",                action:"Press then submit for Blue Universal label.", terrificon:false },
+  { book:"Thor #169 CGC 8.0 (Galactus Origin)",        note:"Already slabbed. Galactus origin. Kirby/Lee. Show 15.",    color:"#1d6fa4", box:"15", publisher:"Marvel", year:"1969", valueNM:"CGC 8.0 — already slabbed", condition:"Slabbed CGC 8.0",               cgcPath:"Already graded — ready for Heritage or auction", action:"Feature in Show 15 — Whatnot anchor book.", terrificon:false },
+  { book:"Wolverine #8 (UNSIGNED — 1982)",             note:"Keep unsigned → Yellow SS at Terrificon → $500+ SS 9.8",   color:"#d97706", box:"8",  publisher:"Marvel", year:"1982", valueNM:"$500+ Yellow SS CGC 9.8",   condition:"MUST STAY UNSIGNED",            cgcPath:"Yellow SS at Terrificon → Chris Claremont SS",  action:"Priority #1 at Terrificon. Press before Aug 7. DO NOT sign until con.", terrificon:true },
+  { book:"Batman #656 (1st Damian Wayne)",             note:"Press + Blue Universal → $350–$500 CGC 9.8 — Best ROI",    color:"#16a34a", box:"4",  publisher:"DC",     year:"2006", valueNM:"$350–$500 CGC 9.8",         condition:"In press list — send ASAP",     cgcPath:"Press → CGC Universal Blue 9.8",                action:"Press and submit before Terrificon. Best ROI in collection.", terrificon:true },
+  { book:"Vision #1 (Tom King signed)",                note:"Press + Green Qual. → $150–$300. Film timing.",            color:"#8b2be2", box:"2",  publisher:"Marvel", year:"2015", valueNM:"$150–$300 Green Qualified",  condition:"Signed — press first",          cgcPath:"Press → CGC × JSA → Green Qualified",           action:"In press batch — submit with the Terrificon batch before Aug 7.", terrificon:false },
+  { book:"ASM #361 (1st Carnage — Bagley/Sharen sgd)", note:"Bagley+Sharen. Press + Green Qual. → $200–$300 auth.",    color:"#dc2626", box:"2",  publisher:"Marvel", year:"1992", valueNM:"$200–$300 Green Qualified",  condition:"Dual signed — press first",     cgcPath:"Press → CGC × JSA → Green Qualified",           action:"In press batch — submit with the Terrificon batch before Aug 7.", terrificon:false },
+  { book:"Black Lightning #1 (Isabella)",              note:"Press + Green Qual. → $300–$500. Whatnot/Heritage.",       color:"#16a34a", box:"2",  publisher:"DC",     year:"1977", valueNM:"$300–$500 Green Qualified",  condition:"Check for pressing",            cgcPath:"CGC × JSA → Green Qualified",                   action:"Monitor CGC private signing window — high Heritage value.", terrificon:false },
+  { book:"Captain Carter #1 (Atwell — To Robert)",    note:"Emotional anchor for Show 1 — personalized signing.",      color:"#1d6fa4", box:"2",  publisher:"Marvel", year:"2022", valueNM:"$80–$150 personalized",      condition:"Signed personalized",           cgcPath:"Whatnot anchor — personal story sells",          action:"Lead Show 1 with the story of the Hayley Atwell signing.", terrificon:false },
+];
+
+// ── Search helpers ─────────────────────────────────────────────────────────────
 const PUBLISHERS_QS = ["DC","Marvel","Image","IDW","Dark Horse","Valiant","Independent"];
 const BOXES_QS      = [...new Set(comics.map(c => c.Box).filter(Boolean))].sort((a,b)=>Number(a)-Number(b));
-
 const SEARCH_FIELDS = [
   { value:"everything", label:"Anything" },
   { value:"title",      label:"Title" },
@@ -86,43 +146,72 @@ const SEARCH_FIELDS = [
   { value:"signedonly", label:"✍ Signed Only" },
 ];
 
-function urgColor(u: string) {
-  if (u === "critical") return "#c8102e";
-  if (u === "event")    return "#8b2be2";
-  if (u === "high")     return "#d97706";
-  return "#1d6fa4";
-}
-function catColor(cat: string) {
-  if (cat === "CGC")     return "#8b2be2";
-  if (cat === "Signing") return "#d97706";
-  if (cat === "Show")    return "#1d6fa4";
-  return "#16a34a";
+// ── Hooks ─────────────────────────────────────────────────────────────────────
+function useCountUp(target: number, duration = 900, trigger = true): number {
+  const [val, setVal] = useState(0);
+  useEffect(() => {
+    if (!trigger) { setVal(target); return; }
+    const startTime = performance.now();
+    let raf: number;
+    const tick = (now: number) => {
+      const t = Math.min((now - startTime) / duration, 1);
+      const ease = 1 - Math.pow(1 - t, 3);
+      setVal(Math.round(ease * target));
+      if (t < 1) raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [target, trigger, duration]);
+  return val;
 }
 
-const FLAGSHIP = [
-  { book:"Stan Lee signed BP #513",                    note:"Authenticate first (PSA/DNA) — $800–$1,500+ auth",         color:"#dc2626", box:"2",  publisher:"Marvel", year:"1966", valueNM:"$800–$1,500 authenticated", condition:"Raw — DO NOT press",            cgcPath:"PSA/DNA at NYCC → CGC × JSA Green Qualified",   action:"NYCC Oct 8–11. Never press. Submit via PSA/DNA first.", terrificon:false },
-  { book:"Truth: RWB #1 (Baker remarked)",             note:"Verify remark → Green Qual. → Heritage — $500–$2,000",     color:"#d97706", box:"2",  publisher:"Marvel", year:"2003", valueNM:"$500–$2,000 with remark",   condition:"Has Baker remark",              cgcPath:"CGC × JSA → Green Qualified → Heritage",        action:"Verify remark authenticity before submitting.", terrificon:false },
-  { book:"Ultimate Fallout #4 Foil (1st Miles)",       note:"1st Miles Morales — $800–$1,500 CGC 9.8",                  color:"#8b2be2", box:"2",  publisher:"Marvel", year:"2011", valueNM:"$800–$1,500 CGC 9.8",       condition:"Check for pressing",            cgcPath:"Press → CGC Universal Blue 9.8",                action:"Press then submit for Blue Universal label.", terrificon:false },
-  { book:"Thor #169 CGC 8.0 (Galactus Origin)",        note:"Already slabbed. Galactus origin. Kirby/Lee. Show 15.",    color:"#1d6fa4", box:"15", publisher:"Marvel", year:"1969", valueNM:"CGC 8.0 — already slabbed", condition:"Slabbed CGC 8.0",               cgcPath:"Already graded — ready for Heritage or auction", action:"Feature in Show 15 — Whatnot anchor book.", terrificon:false },
-  { book:"Wolverine #8 (UNSIGNED — 1982)",             note:"Keep unsigned → Yellow SS at Terrificon → $500+ SS 9.8",   color:"#d97706", box:"8",  publisher:"Marvel", year:"1982", valueNM:"$500+ Yellow SS CGC 9.8",   condition:"MUST STAY UNSIGNED",            cgcPath:"Yellow SS at Terrificon → Chris Claremont SS",  action:"Priority #1 at Terrificon. Press before Aug 7. DO NOT sign until con.", terrificon:true },
-  { book:"Batman #656 (1st Damian Wayne)",             note:"Press + Blue Universal → $350–$500 CGC 9.8 — Best ROI",    color:"#16a34a", box:"4",  publisher:"DC",     year:"2006", valueNM:"$350–$500 CGC 9.8",         condition:"In press list — send ASAP",     cgcPath:"Press → CGC Universal Blue 9.8",                action:"Press and submit before Terrificon. Best ROI in collection.", terrificon:true },
-  { book:"Vision #1 (Tom King signed)",                note:"Press + Green Qual. → $150–$300. Film timing.",            color:"#8b2be2", box:"2",  publisher:"Marvel", year:"2015", valueNM:"$150–$300 Green Qualified",  condition:"Signed — press first",          cgcPath:"Press → CGC × JSA → Green Qualified",           action:"In press batch — submit with the Terrificon batch before Aug 7.", terrificon:false },
-  { book:"ASM #361 (1st Carnage — Bagley/Sharen sgd)", note:"Bagley+Sharen. Press + Green Qual. → $200–$300 auth.",    color:"#dc2626", box:"2",  publisher:"Marvel", year:"1992", valueNM:"$200–$300 Green Qualified",  condition:"Dual signed — press first",     cgcPath:"Press → CGC × JSA → Green Qualified",           action:"In press batch — submit with the Terrificon batch before Aug 7.", terrificon:false },
-  { book:"Black Lightning #1 (Isabella)",              note:"Press + Green Qual. → $300–$500. Whatnot/Heritage.",       color:"#16a34a", box:"2",  publisher:"DC",     year:"1977", valueNM:"$300–$500 Green Qualified",  condition:"Check for pressing",            cgcPath:"CGC × JSA → Green Qualified",                   action:"Monitor CGC private signing window — high Heritage value.", terrificon:false },
-  { book:"Captain Carter #1 (Atwell — To Robert)",    note:"Emotional anchor for Show 1 — personalized signing.",      color:"#1d6fa4", box:"2",  publisher:"Marvel", year:"2022", valueNM:"$80–$150 personalized",      condition:"Signed personalized",           cgcPath:"Whatnot anchor — personal story sells",          action:"Lead Show 1 with the story of the Hayley Atwell signing.", terrificon:false },
-];
+function useInView(threshold = 0.1): [React.RefObject<HTMLDivElement | null>, boolean] {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    if (!ref.current) return;
+    const obs = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) { setVisible(true); obs.disconnect(); }
+    }, { threshold });
+    obs.observe(ref.current);
+    return () => obs.disconnect();
+  }, []);
+  return [ref, visible];
+}
 
+// ── Component ─────────────────────────────────────────────────────────────────
 type NavFn = (tab: string, params?: NavParams) => void;
 
 export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
-  const [statuses,     setStatuses]    = useState<Record<string, Status>>(loadStatuses);
-  const [openFlag,     setOpenFlag]    = useState<number | null>(null);
-  const [searchField,  setSearchField] = useState("everything");
-  const [searchVal,    setSearchVal]   = useState("");
-  const [searchBox,    setSearchBox]   = useState("");
-  const [searchPub,    setSearchPub]   = useState("");
+  const [statuses,    setStatuses]   = useState<Record<string, Status>>(loadStatuses);
+  const [openFlag,    setOpenFlag]   = useState<number | null>(null);
+  const [searchField, setSearchField]= useState("everything");
+  const [searchVal,   setSearchVal]  = useState("");
+  const [searchBox,   setSearchBox]  = useState("");
+  const [searchPub,   setSearchPub]  = useState("");
+
+  // Animation states
+  const [mounted,   setMounted]   = useState(false);
+  const [progWidth, setProgWidth] = useState(0);
+  const [schedRef,  schedVisible] = useInView(0.08);
+  const [pubRef,    pubVisible]   = useInView(0.08);
 
   useEffect(() => { saveStatuses(statuses); }, [statuses]);
+
+  useEffect(() => {
+    setMounted(true);
+    const t = setTimeout(() => setProgWidth(BOX_PCT), 250);
+    return () => clearTimeout(t);
+  }, []);
+
+  // Animated counters
+  const cTotal   = useCountUp(totalComics,  1100, mounted);
+  const cKeys    = useCountUp(keyCount,     900,  mounted);
+  const cSigned  = useCountUp(signedCount,  750,  mounted);
+  const cBoxes   = useCountUp(totalBoxes,   600,  mounted);
+  const cWhatnot = useCountUp(whatnotCount, 950,  mounted);
+  const cEbay    = useCountUp(ebayCount,    750,  mounted);
+  const cTF      = useCountUp(tfCount,      700,  mounted);
 
   const getStatus = (title: string): Status => statuses[title] || "not_started";
   const setStatus = (title: string, s: Status) => setStatuses(prev => ({ ...prev, [title]: s }));
@@ -183,27 +272,20 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
               autoFocus
             />
           )}
-
           {searchField === "publisher" && (
             <select className="qs-field-select" value={searchPub} onChange={e => setSearchPub(e.target.value)}>
               <option value="">Choose publisher…</option>
               {PUBLISHERS_QS.map(p => <option key={p} value={p}>{p}</option>)}
             </select>
           )}
-
           {searchField === "box" && (
             <select className="qs-field-select" value={searchBox} onChange={e => setSearchBox(e.target.value)}>
               <option value="">Choose box…</option>
               {BOXES_QS.map(b => <option key={b} value={b}>Box {b}</option>)}
             </select>
           )}
-
-          <button className="qs-btn" onClick={doSearch}>
-            Search →
-          </button>
+          <button className="qs-btn" onClick={doSearch}>Search →</button>
         </div>
-
-        {/* Quick pills */}
         <div className="qs-pills">
           <span className="qs-pill-label">Quick:</span>
           {["Tom King","Jim Lee","Christopher Priest","Grant Morrison","Krakoa","X-Men","Black Panther","Batman"].map(term => (
@@ -216,7 +298,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
         </div>
       </section>
 
-      {/* ── Box Progress ── */}
+      {/* ── Box Progress — animated fill ── */}
       <section className="progress-section">
         <div className="progress-header">
           <div>
@@ -226,7 +308,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
           <div className="progress-pct">{BOX_PCT}%</div>
         </div>
         <div className="progress-track">
-          <div className="progress-fill" style={{ width:`${BOX_PCT}%` }} />
+          <div className="progress-fill" style={{ width: `${progWidth}%` }} />
           {[...Array(TARGET_BOXES)].map((_,i) => (
             <div key={i} className={`progress-tick ${i < totalBoxes ? "filled" : ""}`} style={{ left:`${((i+1)/TARGET_BOXES)*100}%` }} />
           ))}
@@ -234,42 +316,48 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
         <div className="progress-sub">{TARGET_BOXES - totalBoxes} more boxes to go — you're more than halfway there, Roberto.</div>
       </section>
 
-      {/* ── Upcoming ── */}
+      {/* ── COMING UP — staggered entrance + nav links ── */}
       <section style={{ marginBottom:32 }}>
         <h2 className="section-h2">⚡ COMING UP</h2>
         <div className="timeline-grid">
           {TIMELINE.filter(t => t.days >= 0).map((t, i) => (
-            <div key={i} className="timeline-card" style={{ borderLeftColor: urgColor(t.urgency) }}>
-              <div className="timeline-days" style={{ color: urgColor(t.urgency) }}>
-                {t.days === 0 ? "TODAY" : `${t.days}d`}
-              </div>
-              <div className="timeline-body">
-                <div className="timeline-label">{t.label}</div>
-                <div className="timeline-date">
-                  {t.date}
-                  <span className="timeline-cat" style={{ background: catColor(t.cat)+"22", color: catColor(t.cat) }}>{t.cat}</span>
+            <div
+              key={i}
+              className="timeline-card timeline-card-anim"
+              style={{ borderLeftColor: urgColor(t.urgency), animationDelay: `${i * 0.09}s` }}
+            >
+              <div style={{ flex: 1 }}>
+                <div className="timeline-days" style={{ color: urgColor(t.urgency) }}>
+                  {t.days === 0 ? "TODAY" : `${t.days}d`}
+                </div>
+                <div className="timeline-body">
+                  <div className="timeline-label">{t.label}</div>
+                  <div className="timeline-date">
+                    {t.date}
+                    <span className="timeline-cat" style={{ background: catColor(t.cat)+"22", color: catColor(t.cat) }}>{t.cat}</span>
+                  </div>
                 </div>
               </div>
+              <button className="tl-nav-link" onClick={(e) => { e.stopPropagation(); onNavigate(catNavPage(t.cat)); }}>
+                → {catNavLabel(t.cat)}
+              </button>
             </div>
           ))}
         </div>
       </section>
 
-      {/* ── Collection overview stats ── */}
-      <section style={{ marginBottom:32 }}>
-        <h2 className="section-h2">📊 COLLECTION</h2>
+      {/* ── COLLECTION STATS — animated counters ── */}
+      <section style={{ marginBottom:14 }}>
+        <h2 className="section-h2">📚 COLLECTION</h2>
         <div className="stat-grid">
-          {[
-            { val:totalComics.toLocaleString(), lbl:"Total Comics",     sub:"master inventory",        click:()=>onNavigate("everything",{}),              color:"#c8102e" },
-            { val:keyCount.toLocaleString(),    lbl:"Key Issues",        sub:"confirmed across all",    click:()=>onNavigate("boxkeys"),                     color:"#d97706" },
-            { val:signedCount.toString(),       lbl:"Signed Books",      sub:"by verified creators",    click:()=>onNavigate("everything",{signed:"YES"}),   color:"#8b2be2" },
-            { val:totalBoxes.toString(),        lbl:"Boxes",             sub:"physically catalogued",   click:()=>onNavigate("everything",{}),              color:"#1d6fa4" },
-            { val:tfCount.toString(),           lbl:"Terrificon Books",  sub:"creator appearances",     click:undefined,                                     color:"#d97706" },
-            { val:whatnotCount.toLocaleString(),lbl:"Whatnot",           sub:"assigned to platform",    click:undefined,                                     color:"#16a34a" },
-            { val:ebayCount.toLocaleString(),   lbl:"eBay",              sub:"assigned to platform",    click:undefined,                                     color:"#6b7280" },
-            { val:`${Math.round((keyCount/totalComics)*100)}%`, lbl:"Key Rate", sub:"of total collection", click:undefined, color:"#d97706" },
-          ].map((s, i) => (
-            <div key={i} className={`stat-tile${s.click?" clickable":""}`} onClick={s.click} style={{ borderTopColor: s.color }}>
+          {([
+            { val: cTotal.toLocaleString(),   lbl:"Total Comics",  sub:"master inventory",      click:()=>onNavigate("everything",{}),             color:"#c8102e" },
+            { val: cKeys.toLocaleString(),    lbl:"Key Issues",    sub:"confirmed across all",  click:()=>onNavigate("boxkeys"),                   color:"#d97706" },
+            { val: cSigned.toString(),        lbl:"Signed Books",  sub:"by verified creators",  click:()=>onNavigate("everything",{signed:"YES"}), color:"#8b2be2" },
+            { val: cBoxes.toString(),         lbl:"Boxes",         sub:"physically catalogued", click:()=>onNavigate("everything",{}),             color:"#1d6fa4" },
+            { val:`${Math.round((keyCount/totalComics)*100)}%`, lbl:"Key Rate", sub:"of total collection", click: undefined, color:"#d97706" },
+          ] as const).map((s, i) => (
+            <div key={i} className={`stat-tile${s.click ? " clickable" : ""}`} onClick={s.click} style={{ borderTopColor: s.color }}>
               <div className="stat-tile-val" style={{ color: s.color }}>{s.val}</div>
               <div className="stat-tile-lbl">{s.lbl}</div>
               <div className="stat-tile-sub">{s.sub}</div>
@@ -279,36 +367,72 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
         </div>
       </section>
 
-      {/* ── Publisher Split ── */}
+      {/* ── PLATFORM STATS — second row ── */}
       <section style={{ marginBottom:32 }}>
-        <h2 className="section-h2">📊 PUBLISHER SPLIT</h2>
-        <div style={{ display:"flex", gap:24, alignItems:"center", flexWrap:"wrap" }}>
-          <div style={{ flex:"0 0 180px", minWidth:160 }}>
-            <ResponsiveContainer width="100%" height={180}>
-              <PieChart>
-                <Pie data={PUB_COUNTS} cx="50%" cy="50%" innerRadius={46} outerRadius={74} dataKey="value" paddingAngle={2}>
-                  {PUB_COUNTS.map(entry => (
-                    <Cell key={entry.name} fill={PUB_PIE_COLORS[entry.name] || "#6b7280"} />
-                  ))}
-                </Pie>
-                <Tooltip formatter={(v: number) => [v.toLocaleString(), "Comics"]} />
-              </PieChart>
-            </ResponsiveContainer>
-          </div>
-          <div style={{ flex:1, minWidth:160, display:"flex", flexDirection:"column", gap:6 }}>
-            {PUB_COUNTS.map(p => (
-              <div key={p.name} style={{ display:"flex", alignItems:"center", gap:8 }}>
-                <div style={{ width:11, height:11, borderRadius:2, background:PUB_PIE_COLORS[p.name]||"#6b7280", flexShrink:0 }} />
-                <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.78rem", letterSpacing:"1px", color:"var(--muted2)", minWidth:110 }}>{p.name}</span>
-                <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", color:"var(--red)", letterSpacing:"1px" }}>{p.value.toLocaleString()}</span>
-                <span style={{ fontSize:"0.67rem", color:"var(--muted)" }}>({Math.round((p.value/totalComics)*100)}%)</span>
-              </div>
-            ))}
-          </div>
+        <div className="stat-section-label">PLATFORM ASSIGNMENTS</div>
+        <div className="stat-grid">
+          {([
+            { val: cWhatnot.toLocaleString(), lbl:"Whatnot",         sub:"assigned to platform",  color:"#16a34a" },
+            { val: cEbay.toLocaleString(),    lbl:"eBay",             sub:"assigned to platform",  color:"#6b7280" },
+            { val: cTF.toString(),            lbl:"Terrificon Books", sub:"creator appearances",   color:"#d97706" },
+          ] as const).map((s, i) => (
+            <div key={i} className="stat-tile" style={{ borderTopColor: s.color }}>
+              <div className="stat-tile-val" style={{ color: s.color }}>{s.val}</div>
+              <div className="stat-tile-lbl">{s.lbl}</div>
+              <div className="stat-tile-sub">{s.sub}</div>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* ── Flagship Assets ── */}
+      {/* ── PUBLISHER SPLIT — lazy load + animated bars ── */}
+      <div ref={pubRef}>
+        <section style={{ marginBottom:32 }}>
+          <h2 className="section-h2">📊 PUBLISHER SPLIT</h2>
+          <div style={{ display:"flex", gap:24, alignItems:"flex-start", flexWrap:"wrap" }}>
+            <div style={{ flex:"0 0 170px", minWidth:150 }}>
+              <ResponsiveContainer width="100%" height={170}>
+                <PieChart>
+                  <Pie data={PUB_COUNTS} cx="50%" cy="50%" innerRadius={42} outerRadius={70} dataKey="value" paddingAngle={2}>
+                    {PUB_COUNTS.map(entry => (
+                      <Cell key={entry.name} fill={PUB_PIE_COLORS[entry.name] || "#6b7280"} />
+                    ))}
+                  </Pie>
+                  <Tooltip formatter={(v: number) => [v.toLocaleString(), "Comics"]} />
+                </PieChart>
+              </ResponsiveContainer>
+            </div>
+            <div style={{ flex:1, minWidth:180, display:"flex", flexDirection:"column", gap:10 }}>
+              {PUB_COUNTS.map((p, pi) => {
+                const pct = Math.round((p.value / totalComics) * 100);
+                const color = PUB_PIE_COLORS[p.name] || "#6b7280";
+                return (
+                  <div key={p.name}>
+                    <div style={{ display:"flex", alignItems:"center", gap:8 }}>
+                      <div style={{ width:10, height:10, borderRadius:2, background:color, flexShrink:0 }} />
+                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.78rem", letterSpacing:"1px", color:"var(--muted2)", minWidth:110 }}>{p.name}</span>
+                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", color:"var(--red)", letterSpacing:"1px" }}>{p.value.toLocaleString()}</span>
+                      <span style={{ fontSize:"0.67rem", color:"var(--muted)" }}>({pct}%)</span>
+                    </div>
+                    <div className="pub-bar-track">
+                      <div
+                        className="pub-bar-fill"
+                        style={{
+                          width: pubVisible ? `${pct}%` : "0%",
+                          background: color,
+                          transitionDelay: `${pi * 0.11}s`,
+                        }}
+                      />
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* ── FLAGSHIP ASSETS ── */}
       <section style={{ marginBottom:32 }}>
         <h2 className="section-h2">🏆 FLAGSHIP ASSETS</h2>
         <p style={{ fontSize:"0.82rem", color:"var(--muted2)", marginBottom:12 }}>Your highest-value books — click any card for full action details.</p>
@@ -333,7 +457,6 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
                   <div style={{ fontSize:"0.7rem", color:"var(--muted)", flexShrink:0 }}>Box {a.box} {isOpen?"▲":"▼"}</div>
                 </div>
                 <div style={{ fontSize:"0.82rem", color:"var(--muted2)", lineHeight:1.5, marginTop:4 }}>{a.note}</div>
-
                 {isOpen && (
                   <div style={{ marginTop:14, paddingTop:14, borderTop:`1px solid ${a.color}30`, display:"flex", flexWrap:"wrap", gap:"10px 28px" }}>
                     {[
@@ -360,56 +483,59 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
         </div>
       </section>
 
-      {/* ── Upcoming Schedule ── */}
+      {/* ── UPCOMING SCHEDULE — lazy load, color-coded red→green ── */}
       {upcomingCal.length > 0 && (
-        <section style={{ marginBottom:32 }}>
-          <h2 className="section-h2">📅 UPCOMING SCHEDULE</h2>
-          <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
-            {upcomingCal.map((e, i) => {
-              const info = calEvInfo(e.Type);
-              return (
-                <div
-                  key={i}
-                  onClick={info.isShow ? () => onNavigate("showplanner") : undefined}
-                  style={{
-                    display:"flex", alignItems:"flex-start", gap:12,
-                    background:info.bg, border:`1.5px solid ${info.color}28`,
-                    borderRadius:6, padding:"10px 14px",
-                    cursor:info.isShow ? "pointer" : "default",
-                    transition:"opacity 0.15s",
-                  }}
-                >
-                  <div style={{
-                    fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1px",
-                    color:info.color, minWidth:26, textAlign:"center", lineHeight:1.4, paddingTop:1, flexShrink:0,
-                  }}>
-                    <div style={{ fontSize:"1rem", lineHeight:1.1 }}>{info.icon}</div>
-                    <div>{e.Date.split(",")[0].replace(/–.*$/,"").trim()}</div>
-                  </div>
-                  <div style={{ flex:1 }}>
-                    <div style={{
-                      fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem", letterSpacing:"1px",
-                      color:info.color, lineHeight:1.2, marginBottom:2,
-                    }}>
-                      {e.Theme.length > 72 ? e.Theme.substring(0,72)+"…" : e.Theme}
+        <div ref={schedRef}>
+          <section style={{ marginBottom:32 }}>
+            <h2 className="section-h2">📅 UPCOMING SCHEDULE</h2>
+            <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
+              {upcomingCal.map((e, i) => {
+                const info = calEvInfo(e.Type);
+                const days = daysFromSortDate(e.sortDate);
+                const urg  = schedColor(days);
+                return (
+                  <div
+                    key={i}
+                    className={`sched-card${schedVisible ? " visible" : ""}`}
+                    style={{
+                      ["--idx" as string]: i,
+                      animationDelay: schedVisible ? `${i * 0.1}s` : "0s",
+                      background: info.bg,
+                      borderLeftColor: urg,
+                      borderLeft: `3px solid ${urg}`,
+                    } as React.CSSProperties}
+                    onClick={() => onNavigate(info.page)}
+                  >
+                    <div style={{ display:"flex", flexDirection:"column", alignItems:"center", minWidth:38, flexShrink:0 }}>
+                      <div style={{ fontSize:"1.1rem", lineHeight:1 }}>{info.icon}</div>
+                      <div className="sched-days" style={{ color: urg }}>
+                        {days === 0 ? "NOW" : days === 1 ? "TMRW" : `${days}`}
+                      </div>
+                      <div className="sched-days-label" style={{ color: urg }}>
+                        {days > 1 ? "DAYS" : ""}
+                      </div>
                     </div>
-                    <div style={{ fontSize:"0.72rem", color:"var(--muted2)" }}>
-                      {e.Date}
-                      {info.isShow && (
-                        <span style={{ marginLeft:8, fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", color:"#1a6a1a" }}>
-                          → VIEW SHOW PLAN
+                    <div style={{ flex:1, minWidth:0 }}>
+                      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem", letterSpacing:"1px", color:info.color, lineHeight:1.2, marginBottom:2 }}>
+                        {e.Theme.length > 72 ? e.Theme.substring(0,72)+"…" : e.Theme}
+                      </div>
+                      <div style={{ fontSize:"0.72rem", color:"var(--muted2)" }}>
+                        {e.Date}
+                        <span style={{ marginLeft:8, fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", color: urg }}>
+                          → {info.page === "showplanner" ? "VIEW SHOW PLAN" : "VIEW CALENDAR"}
                         </span>
-                      )}
+                      </div>
                     </div>
+                    <div className="sched-urgdot" style={{ background: urg }} />
                   </div>
-                </div>
-              );
-            })}
-          </div>
-        </section>
+                );
+              })}
+            </div>
+          </section>
+        </div>
       )}
 
-      {/* ── Books per Box ── */}
+      {/* ── BOOKS PER BOX ── */}
       <section style={{ marginBottom:32 }}>
         <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:6 }}>
           <h2 className="section-h2" style={{ margin:0 }}>📦 BOOKS PER BOX</h2>
@@ -437,28 +563,28 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
           </div>
         </div>
         <div className="boxes-grid">
-          {[...boxData].sort((a,b)=>Number(a.Num)-Number(b.Num)).map(b => {
+          {[...boxData].sort((a,b)=>Number(a.Num.replace(/\D/g,""))-Number(b.Num.replace(/\D/g,""))).map(b => {
             const boxNum = String(parseInt(b.Num.replace(/\D/g,""), 10));
             const lowBook = b.Comics < 100;
             return (
-            <div
-              key={b.Num}
-              onClick={() => onNavigate("everything", { box: boxNum })}
-              className="box-tile"
-              title={b.Notes}
-              style={lowBook ? { borderColor:"#d6456a", background:"#fdf0f4" } : {}}
-            >
-              <div className="box-tile-count">{b.Comics}</div>
-              <div className="box-tile-num">Box {b.Num}</div>
-              {Number(b.Keys)   > 0 && <div className="box-tile-keys">{b.Keys}k</div>}
-              {Number(b.Signed) > 0 && <div className="box-tile-sgn">{b.Signed}s</div>}
-            </div>
+              <div
+                key={b.Num}
+                onClick={() => onNavigate("everything", { box: boxNum })}
+                className="box-tile"
+                title={b.Notes || b.Label}
+                style={lowBook ? { borderColor:"#d6456a", background:"#fdf0f4" } : {}}
+              >
+                <div className="box-tile-count">{b.Comics}</div>
+                <div className="box-tile-num">Box {b.Num.replace("BOX ","")}</div>
+                {Number(b.Keys)   > 0 && <div className="box-tile-keys">{b.Keys}k</div>}
+                {Number(b.Signed) > 0 && <div className="box-tile-sgn">{b.Signed}s</div>}
+              </div>
             );
           })}
         </div>
       </section>
 
-      {/* ── Next Actions ── */}
+      {/* ── NEXT ACTIONS — with nav links ── */}
       <section>
         <div className="actions-header">
           <div style={{ display:"flex", alignItems:"baseline", gap:14 }}>
@@ -475,10 +601,19 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
         </div>
         <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
           {nextActions.map((s, i) => (
-            <StepCard key={i} step={s} status={getStatus(s.title)} onStatusChange={st => setStatus(s.title, st)} />
+            <div key={i} style={{ position:"relative" }}>
+              <StepCard step={s} status={getStatus(s.title)} onStatusChange={st => setStatus(s.title, st)} />
+              <button
+                className="action-nav-btn"
+                onClick={() => onNavigate(catNavPage(s.category))}
+              >
+                → {catNavLabel(s.category)}
+              </button>
+            </div>
           ))}
         </div>
       </section>
+
     </div>
   );
 }
