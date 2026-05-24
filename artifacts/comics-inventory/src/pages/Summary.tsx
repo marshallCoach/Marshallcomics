@@ -445,7 +445,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
               key={b.Num}
               onClick={() => onNavigate("everything", { box: boxNum })}
               className="box-tile"
-              title={b.Description}
+              title={b.Notes}
               style={lowBook ? { borderColor:"#d6456a", background:"#fdf0f4" } : {}}
             >
               <div className="box-tile-count">{b.Comics}</div>

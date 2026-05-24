@@ -468,7 +468,7 @@ export default function BoxHunt() {
                 {selectedBoxData.Label.replace(/^Box \d+ — /i,"")}
               </div>
               <div style={{ fontSize:"0.78rem", color:"var(--muted)", marginTop:4 }}>
-                {selectedBoxData.Publisher} · {selectedBoxData.YearRange}
+                {selectedBoxData.YearRange}
               </div>
             </div>
             <div style={{ display:"flex", gap:20, alignItems:"center" }}>

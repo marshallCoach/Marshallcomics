@@ -3,7 +3,7 @@ import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 const XLSX = require('xlsx');
 
-const wb = XLSX.readFile('attached_assets/comics_inventory_(4)_1779562452705.xlsx');
+const wb = XLSX.readFile('attached_assets/comics_inventory_pm_1779644314535.xlsx');
 
 // ── COMICS ───────────────────────────────────────────────────────────────────
 const comicsSheet = wb.Sheets['Comics Inventory'];
@@ -47,7 +47,9 @@ const C = {
   date:     col('Date Added'),
   imprint:  col('Imprint'),
   box:      col('Box #'),
+  crossover:col('Crossover / Event'),
   bid:      col('Whatnot Starting Bid'),
+  volume:   col('Volume'),
 };
 
 function s(row, idx) { return String(row[idx] ?? '').trim().replace(/\\/g, '\\\\').replace(/`/g, '\\`').replace(/\$\{/g, '\\${'); }
@@ -70,11 +72,16 @@ for (let r = 1; r < allRows.length; r++) {
     Content: \`${s(row,C.content)}\`, Platform: \`${s(row,C.platform)}\`,
     Sales_Data: \`${s(row,C.sales)}\`, Terrificon: \`${s(row,C.terrif)}\`,
     Cover_Artist: \`${s(row,C.coverA)}\`, Date_Added: \`${s(row,C.date)}\`,
-    Imprint: \`${s(row,C.imprint)}\`, Box: \`${s(row,C.box)}\`, Start_Bid: \`${s(row,C.bid)}\`,
+    Imprint: \`${s(row,C.imprint)}\`, Box: \`${s(row,C.box)}\`,
+    Crossover: \`${s(row,C.crossover)}\`, Start_Bid: \`${s(row,C.bid)}\`,
+    Volume: \`${s(row,C.volume)}\`,
   }`);
 }
 
 // ── BOX SUMMARY ──────────────────────────────────────────────────────────────
+// New structure (row 1 = headers, row 2+ = data):
+// col0=Box(Num)  col1=Comics  col2=Keys  col3=Sgnd  col4=Years
+// col5=Label/Contents  col6=FirstBook  col7=LastBook  col8=Location  col9=Notes
 const bsSheet = wb.Sheets['Box Summary'];
 const bsRows  = XLSX.utils.sheet_to_json(bsSheet, { header: 1, defval: '' });
 const boxes = [];
@@ -83,17 +90,15 @@ for (let r = 2; r < bsRows.length; r++) {
   const num = String(row[0] ?? '').trim();
   if (!num.startsWith('BOX')) continue;
   boxes.push(`  {
-    Num: \`${num}\`, Label: \`${s(row,1)}\`, DateAdded: \`${s(row,2)}\`,
-    Comics: ${Number(row[3])||0}, Publisher: \`${s(row,4)}\`, YearRange: \`${s(row,5)}\`,
-    Keys: ${Number(row[6])||0}, Signed: ${Number(row[7])||0}, Dups: ${Number(row[8])||0},
-    FirstBook: \`${s(row,9)}\`, FirstIss: \`${s(row,10)}\`,
-    LastBook: \`${s(row,11)}\`, LastIss: \`${s(row,12)}\`,
-    Description: \`${s(row,13)}\`,
+    Num: \`${num}\`, Comics: ${Number(row[1])||0}, Keys: ${Number(row[2])||0},
+    Signed: ${Number(row[3])||0}, YearRange: \`${s(row,4)}\`,
+    Label: \`${s(row,5)}\`, FirstBook: \`${s(row,6)}\`, LastBook: \`${s(row,7)}\`,
+    Location: \`${s(row,8)}\`, Notes: \`${s(row,9)}\`,
   }`);
 }
 
 const ts = `// AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_(3)_1779471694783.xlsx  |  Generated: ${new Date().toISOString().slice(0,10)}
+// Source: comics_inventory_pm_1779644314535.xlsx  |  Generated: ${new Date().toISOString().slice(0,10)}
 
 export interface Comic {
   Title: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -102,14 +107,13 @@ export interface Comic {
   CGC_Worth: string; Value_NM: string; Value_VF: string; Category: string;
   Era: string; Universe: string; Seller_Notes: string; Story_Pitch: string;
   Content: string; Platform: string; Sales_Data: string; Terrificon: string;
-  Cover_Artist: string; Date_Added: string; Imprint: string; Box: string; Start_Bid: string;
+  Cover_Artist: string; Date_Added: string; Imprint: string; Box: string;
+  Crossover: string; Start_Bid: string; Volume: string;
 }
 
 export interface BoxSummary {
-  Num: string; Label: string; DateAdded: string; Comics: number; Publisher: string;
-  YearRange: string; Keys: number; Signed: number; Dups: number;
-  FirstBook: string; FirstIss: string; LastBook: string; LastIss: string;
-  Description: string;
+  Num: string; Comics: number; Keys: number; Signed: number; YearRange: string;
+  Label: string; FirstBook: string; LastBook: string; Location: string; Notes: string;
 }
 
 export const DATA3: { comics: Comic[]; boxes: BoxSummary[] } = {
