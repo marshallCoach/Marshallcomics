@@ -67,12 +67,12 @@ const LIST_COLS: ColDef<Comic>[] = [
   {
     key: "nm", label: "NM Value", defaultWidth: 90,
     sort: (a, b) => parseVal(a.Value_NM) - parseVal(b.Value_NM),
-    cell: r => <span className="lt-val">{r.Value_NM || "—"}</span>,
+    cell: r => <span className="lt-val">{r.Value_NM ? `$${r.Value_NM}` : "—"}</span>,
   },
   {
     key: "vf", label: "VF Value", defaultWidth: 80,
     sort: (a, b) => parseVal(a.Value_VF) - parseVal(b.Value_VF),
-    cell: r => <span className="lt-vf">{r.Value_VF || "—"}</span>,
+    cell: r => <span className="lt-vf">{r.Value_VF ? `$${r.Value_VF}` : "—"}</span>,
   },
   {
     key: "platform", label: "Platform", defaultWidth: 110,

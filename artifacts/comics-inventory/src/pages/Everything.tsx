@@ -147,7 +147,7 @@ export default function Everything({
     { key:"writer",    label:"Writer",    defaultWidth:130, sort:(a,b)=>a.Writer.localeCompare(b.Writer), cell:r=><span className="lt-sub">{r.Writer||"—"}</span> },
     { key:"artist",    label:"Artist",    defaultWidth:130, sort:(a,b)=>a.Artist.localeCompare(b.Artist), cell:r=><span className="lt-sub">{r.Artist||"—"}</span> },
     { key:"key",       label:"Key",       defaultWidth:55,  sort:(a,b)=>a.Key.localeCompare(b.Key), cell:r=>r.Key?.toUpperCase()==="YES"?<span className="badge bkey" style={{fontSize:"0.6rem"}}>KEY</span>:null },
-    { key:"nm",        label:"NM Value",  defaultWidth:90,  sort:(a,b)=>parseVal(a.Value_NM)-parseVal(b.Value_NM), cell:r=><span className="lt-val">{r.Value_NM||"—"}</span> },
+    { key:"nm",        label:"NM Value",  defaultWidth:90,  sort:(a,b)=>parseVal(a.Value_NM)-parseVal(b.Value_NM), cell:r=><span className="lt-val">{r.Value_NM ? `$${r.Value_NM}` : "—"}</span> },
     { key:"platform",  label:"Platform",  defaultWidth:90,  sort:(a,b)=>a.Platform.localeCompare(b.Platform), cell:r=>r.Platform?<span className={`badge ${platClass(r.Platform)}`} style={{fontSize:"0.6rem"}}>{r.Platform}</span>:null },
     { key:"year",      label:"Year",      defaultWidth:65,  sort:(a,b)=>parseVal(a.Year)-parseVal(b.Year), cell:r=><span className="lt-sub">{r.Year}</span> },
     { key:"signed",    label:"Signed",    defaultWidth:90,  sort:(a,b)=>a.Signed.localeCompare(b.Signed), cell:r=>r.Signed?.toUpperCase()==="YES"?<span className="lt-sub" style={{color:"var(--gold)"}}>✍ {r.Signed_By||"Yes"}</span>:null },
@@ -475,8 +475,8 @@ function EverythingCard({ comic: c, onTitleClick }: { comic: Comic; onTitleClick
 
       {(c.Value_NM || c.Value_VF) && (
         <div style={{ display:"flex", gap:10, marginTop:6, fontSize:"0.72rem" }}>
-          {c.Value_NM && <span style={{color:"var(--green-text)"}}>NM <strong>{c.Value_NM}</strong></span>}
-          {c.Value_VF && <span style={{color:"var(--muted)"}}>VF {c.Value_VF}</span>}
+          {c.Value_NM && <span style={{color:"var(--green-text)"}}>NM <strong>${c.Value_NM}</strong></span>}
+          {c.Value_VF && <span style={{color:"var(--muted)"}}>VF ${c.Value_VF}</span>}
         </div>
       )}
     </div>

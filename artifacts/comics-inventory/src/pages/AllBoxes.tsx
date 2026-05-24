@@ -72,7 +72,7 @@ const LIST_COLS: ColDef<Comic>[] = [
     sort: (a, b) => parseVal(a.Value_NM) - parseVal(b.Value_NM),
     cell: r => {
       const v = r.Value_NM && r.Value_NM !== "nan" ? r.Value_NM : null;
-      return <span className="lt-val">{v ? `${v}` : "—"}</span>;
+      return <span className="lt-val">{v ? `$${v}` : "—"}</span>;
     },
   },
   {
@@ -233,7 +233,7 @@ export default function AllBoxes() {
                     {bid      && <span className="badge bcg">Start ${bid}</span>}
                     {isTf     && <span className="badge bt">Terrificon</span>}
                   </div>
-                  {nmVal && <div className="card-value">NM: <span className="v">{nmVal}</span></div>}
+                  {nmVal && <div className="card-value">NM: <span className="v">${nmVal}</span></div>}
                   {pitch && <div className="card-pitch">{pitch.substring(0,160)}{pitch.length>160?"…":""}</div>}
                   {isOpen && (
                     <div className="card-expand">

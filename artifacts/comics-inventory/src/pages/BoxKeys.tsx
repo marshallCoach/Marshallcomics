@@ -66,7 +66,7 @@ const LIST_COLS: ColDef<Key>[] = [
     sort: (a, b) => parseVal(a.Value_NM) - parseVal(b.Value_NM),
     cell: r => {
       const v = r.Value_NM && r.Value_NM !== "nan" ? r.Value_NM : null;
-      return <span className="lt-val">{v || "—"}</span>;
+      return <span className="lt-val">{v ? `$${v}` : "—"}</span>;
     },
   },
   {
@@ -238,7 +238,7 @@ export default function BoxKeys() {
                   {k.First_App && k.First_App !== "nan" && <div className="dr"><span className="dl">1st App</span><span className="dv">{k.First_App}</span></div>}
                   {(k.Signed||"").toUpperCase()==="YES" && k.Signed_By && <div className="dr"><span className="dl">Signed By</span><span className="dv">{k.Signed_By}</span></div>}
                   {k.Terrificon && <div className="dr"><span className="dl">Terrificon</span><span className="dv" style={{color:"#f59e0b"}}>{k.Terrificon}</span></div>}
-                  {k.Value_VF  && k.Value_VF !== "nan"  && <div className="dr"><span className="dl">VF Value</span><span className="dv">{k.Value_VF}</span></div>}
+                  {k.Value_VF  && k.Value_VF !== "nan"  && <div className="dr"><span className="dl">VF Value</span><span className="dv">${k.Value_VF}</span></div>}
                   {k.Sales_Data && k.Sales_Data !== "nan" && <div className="dr"><span className="dl">Sales</span><span className="dv">{k.Sales_Data.substring(0,120)}</span></div>}
                 </div>
                 {k.Key_Reason && <div style={{ marginTop:6, fontSize:"0.85rem", color:"var(--gold)" }}>{k.Key_Reason}</div>}
@@ -271,7 +271,7 @@ export default function BoxKeys() {
                     {isTf     && <span className="badge bt">Terrificon</span>}
                     {k.Platform && <span className={`badge ${platClass(k.Platform)}`}>{k.Platform}</span>}
                   </div>
-                  {nmVal && <div className="card-value">NM: <span className="v">{nmVal}</span></div>}
+                  {nmVal && <div className="card-value">NM: <span className="v">${nmVal}</span></div>}
                   {k.Key_Reason && <div style={{ fontSize:"0.82rem", color:"var(--gold)", marginTop:4, lineHeight:1.4 }}>{k.Key_Reason.substring(0,120)}</div>}
                   {isOpen && (
                     <div className="card-expand">
