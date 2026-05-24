@@ -45,6 +45,7 @@ const NAV = [
       { id: "boxvisual",   label: "Box View" },
       { id: "stats",      label: "Stats" },
       { id: "dataview",   label: "Data View" },
+      { id: "capfalcon",  label: "Cap & Falcon" },
       { id: "sitemap",    label: "Site Map" },
     ],
   },
@@ -53,7 +54,6 @@ const NAV = [
     label: "Business",
     tabs: [
       { id: "hunting",     label: "Box Hunt" },
-      { id: "capfalcon",   label: "Cap & Falcon" },
       { id: "calendar",    label: "Calendar" },
       { id: "showplanner", label: "Whatnot Shows" },
       { id: "timeline",    label: "Timeline" },
