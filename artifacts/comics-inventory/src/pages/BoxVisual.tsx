@@ -1,5 +1,6 @@
 import { useState, useMemo } from "react";
 import { DATA3 } from "@/data/data3";
+import { pubColors } from "@/utils/coverThumbnails";
 
 const comics = DATA3.comics;
 const boxes  = DATA3.boxes;
@@ -351,10 +352,12 @@ export default function BoxVisual() {
                       })}
                     </div>
                   ) : (
-                    /* ── UNSORTED: box order, colored by title ── */
+                    /* ── UNSORTED: box order, publisher-coloured gradient ── */
                     <div style={{ display: "flex", gap: "1px", alignItems: "flex-end", minWidth: "max-content" }}>
                       {displayComics.map((c, i) => {
-                        const color    = titleColorMap[c.Title] || "#888";
+                        const pc       = pubColors(c.Publisher);
+                        const hash     = [...(c.Title||"")].reduce((a,ch)=>a+ch.charCodeAt(0),0);
+                        const hue      = hash % 360;
                         const isKey    = (c.Key    || "").toUpperCase() === "YES";
                         const isSigned = (c.Signed || "").toUpperCase() === "YES";
                         const isSel    = selectedTitle === c.Title;
@@ -367,9 +370,9 @@ export default function BoxVisual() {
                             style={{
                               width: 5,
                               height: isKey ? 200 : 160,
-                              background: color,
+                              background: `linear-gradient(to right, ${pc.bg}, hsl(${hue},40%,20%))`,
                               opacity: hasSel && !isSel ? 0.15 : 1,
-                              borderTop: isKey ? "3px solid #fbbf24" : undefined,
+                              borderTop: isKey ? `3px solid ${pc.accent}` : undefined,
                               boxShadow: isSigned ? "inset 2px 0 0 #22c55e" : undefined,
                               borderRadius: "1px 1px 0 0",
                               cursor: "pointer",

@@ -1,5 +1,6 @@
 import { useState, useMemo, useEffect } from "react";
 import { DATA3 } from "@/data/data3";
+import { getCoverSvgUrl, type ComicLike } from "@/utils/coverThumbnails";
 
 const comics = DATA3.comics;
 
@@ -520,6 +521,8 @@ function PullRow({ entry, onStatus, onRemove }: {
   onStatus: (id: string, s: PullStatus) => void;
   onRemove: (id: string) => void;
 }) {
+  const comicLike: ComicLike = { Title: entry.title, Issue: entry.issue, Publisher: entry.publisher, Key: entry.isKey ? "YES" : "NO", Signed: entry.isSigned ? "YES" : "NO" };
+  const svgUrl = getCoverSvgUrl(comicLike, { width: 36, height: 54 });
   return (
     <div style={{
       background: "#fff", border: "1.5px solid var(--border)",
@@ -527,7 +530,9 @@ function PullRow({ entry, onStatus, onRemove }: {
       borderRadius: 6, padding: "8px 12px",
       display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap",
     }}>
-      <div style={{ flex: 1, minWidth: 180 }}>
+      <img src={svgUrl} alt={`${entry.title} #${entry.issue}`} width={36} height={54}
+        style={{ borderRadius: 3, flexShrink: 0, display: "block" }} />
+      <div style={{ flex: 1, minWidth: 160 }}>
         <div style={{
           fontSize: "0.88rem", fontWeight: 600, color: "var(--brown-light)", lineHeight: 1.3,
           display: "flex", gap: 5, alignItems: "center", flexWrap: "wrap",
@@ -567,40 +572,51 @@ function PullCard({ entry, onStatus, onRemove }: {
   onRemove: (id: string) => void;
 }) {
   const m = STATUS_META[entry.status];
+  const comicLike: ComicLike = { Title: entry.title, Issue: entry.issue, Publisher: entry.publisher, Key: entry.isKey ? "YES" : "NO", Signed: entry.isSigned ? "YES" : "NO" };
+  const svgUrl = getCoverSvgUrl(comicLike, { width: 80, height: 120 });
   return (
     <div style={{
       background: "#fff", border: "1.5px solid var(--border)",
       borderTop: `3px solid ${m.color}`,
-      borderRadius: 8, padding: "12px 14px",
-      display: "flex", flexDirection: "column", gap: 8,
+      borderRadius: 8, overflow: "hidden",
+      display: "flex", flexDirection: "column",
     }}>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
-        <div style={{ flex: 1 }}>
-          <div style={{ fontSize: "0.88rem", fontWeight: 600, color: "var(--brown-light)", lineHeight: 1.3 }}>
-            {entry.title}
-          </div>
-          <div style={{ fontSize: "0.72rem", color: "var(--muted2)", marginTop: 2 }}>
-            #{entry.issue} · Box {entry.box}
+      {/* Cover + remove row */}
+      <div style={{ display: "flex", gap: 10, padding: "10px 12px 6px" }}>
+        <img src={svgUrl} alt={`${entry.title} #${entry.issue}`} width={52} height={78}
+          style={{ borderRadius: 4, flexShrink: 0, display: "block" }} />
+        <div style={{ flex: 1, minWidth: 0 }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 3 }}>
+            <div style={{ flex: 1 }}>
+              <div style={{ fontSize: "0.82rem", fontWeight: 700, color: "var(--brown-light)", lineHeight: 1.25 }}>
+                {entry.title}
+              </div>
+              <div style={{ fontSize: "0.7rem", color: "var(--muted2)", marginTop: 2 }}>
+                #{entry.issue} · Box {entry.box}
+              </div>
+            </div>
+            <button onClick={() => onRemove(entry.id)} style={{
+              background: "none", border: "none", cursor: "pointer",
+              color: "var(--muted)", fontSize: "0.85rem", lineHeight: 1, padding: 0, opacity: 0.5, marginLeft: 6,
+            }}>✕</button>
+            <div style={{ display: "flex", gap: 4, flexWrap: "wrap", marginTop: 4 }}>
+              {entry.isKey    && <span className="badge bkey" style={{ fontSize:"0.55rem" }}>KEY</span>}
+              {entry.isSigned && <span className="badge bs"   style={{ fontSize:"0.55rem" }}>SGD</span>}
+              {entry.nmVal && (
+                <span style={{ fontSize:"0.7rem", color:"var(--green-text)", fontWeight:600 }}>${entry.nmVal}</span>
+              )}
+            </div>
           </div>
         </div>
-        <button onClick={() => onRemove(entry.id)} style={{
-          background: "none", border: "none", cursor: "pointer",
-          color: "var(--muted)", fontSize: "0.85rem", lineHeight: 1, padding: 0, opacity: 0.5,
-        }}>✕</button>
-      </div>
-      <div style={{ display: "flex", gap: 4, flexWrap: "wrap" }}>
-        {entry.isKey    && <span className="badge bkey" style={{ fontSize:"0.55rem" }}>KEY</span>}
-        {entry.isSigned && <span className="badge bs"   style={{ fontSize:"0.55rem" }}>SGD</span>}
-        {entry.nmVal && (
-          <span style={{ fontSize:"0.7rem", color:"var(--green-text)", fontWeight:600 }}>${entry.nmVal}</span>
-        )}
       </div>
       {entry.keyReason && (
-        <div style={{ fontSize: "0.7rem", color: "var(--gold)", lineHeight: 1.4 }}>
-          {entry.keyReason.substring(0, 80)}{entry.keyReason.length > 80 ? "…" : ""}
+        <div style={{ fontSize: "0.7rem", color: "var(--gold)", lineHeight: 1.4, padding: "0 12px 6px" }}>
+          {entry.keyReason.substring(0, 90)}{entry.keyReason.length > 90 ? "…" : ""}
         </div>
       )}
-      <StatusPill status={entry.status} onChange={s => onStatus(entry.id, s)} />
+      <div style={{ padding: "0 12px 10px" }}>
+        <StatusPill status={entry.status} onChange={s => onStatus(entry.id, s)} />
+      </div>
     </div>
   );
 }

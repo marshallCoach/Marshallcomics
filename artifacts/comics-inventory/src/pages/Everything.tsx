@@ -1,5 +1,6 @@
 import { useState, useMemo, useCallback, useEffect } from "react";
 import { DATA3 } from "@/data/data3";
+import { getCoverSvgUrl, type ComicLike } from "@/utils/coverThumbnails";
 import { SortableTable, ColDef } from "@/components/SortableTable";
 import { Paginator } from "@/components/Paginator";
 
@@ -80,36 +81,17 @@ function BoxBadge({ box }: { box: string }) {
 }
 
 function CoverThumb({ c }: { c: Comic }) {
-  const color = pubColor(c.Publisher);
-  const pub = normPub(c.Publisher);
-  const abbr = pub === "DC" ? "DC" : pub === "Marvel" ? "M" : pub === "Image" ? "IM" : (pub[0] || "?").toUpperCase();
   const searchUrl = `https://comicvine.gamespot.com/search/?q=${encodeURIComponent(c.Title + " " + c.Issue)}`;
-  const isKey = c.Key?.toUpperCase() === "YES";
+  const svgUrl = getCoverSvgUrl(c as ComicLike, { width: 56, height: 84 });
   return (
     <a
       href={searchUrl}
       target="_blank"
       rel="noopener noreferrer"
-      title={`View cover for ${c.Title} ${c.Issue} on Comic Vine`}
-      style={{
-        display:"block", width:56, flexShrink:0, aspectRatio:"2/3",
-        background:`linear-gradient(160deg, ${color}25, ${color}55)`,
-        border:`1.5px solid ${color}50`,
-        borderTop: isKey ? `3px solid #d4a800` : `1.5px solid ${color}50`,
-        borderRadius:4, overflow:"hidden", position:"relative", textDecoration:"none",
-        transition:"opacity 0.15s",
-      }}
+      title={`View cover for ${c.Title} #${c.Issue} on Comic Vine`}
+      style={{ display:"block", width:56, height:84, flexShrink:0, borderRadius:4, overflow:"hidden", textDecoration:"none", transition:"opacity 0.15s" }}
     >
-      <div style={{ position:"absolute", inset:0, display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", padding:4, gap:2 }}>
-        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.2rem", color, lineHeight:1, opacity:0.55 }}>{abbr}</div>
-        <div style={{ fontSize:"0.47rem", color:"var(--text)", textAlign:"center", lineHeight:1.25, fontWeight:600, wordBreak:"break-word", maxWidth:"100%" }}>
-          {c.Title.slice(0, 22)}
-        </div>
-        {(c.Year||"").trim() && <div style={{ fontSize:"0.44rem", color:"var(--muted2)" }}>{c.Year}</div>}
-      </div>
-      {isKey && (
-        <div style={{ position:"absolute", bottom:0, left:0, right:0, background:"#d4a800", color:"#fff", fontSize:"0.45rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", textAlign:"center", padding:"1px 0" }}>KEY</div>
-      )}
+      <img src={svgUrl} alt={`${c.Title} #${c.Issue}`} width={56} height={84} style={{ display:"block", width:"100%", height:"100%", borderRadius:4 }} />
     </a>
   );
 }
