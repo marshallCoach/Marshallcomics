@@ -17,12 +17,13 @@ import DataView from "@/pages/DataView";
 import BoxHunt from "@/pages/BoxHunt";
 import CapFalconChecklist from "@/pages/CapFalconChecklist";
 import SiteMap from "@/pages/SiteMap";
+import PullList from "@/pages/PullList";
 import PasswordGate from "@/components/PasswordGate";
 
 type TabId =
   | "summary" | "everything" | "collection" | "boxkeys" | "stats" | "runs" | "dataview"
   | "calendar" | "showplanner" | "cgc" | "signings" | "actionplan" | "timeline" | "boxvisual"
-  | "hunting" | "capfalcon" | "sitemap";
+  | "hunting" | "capfalcon" | "sitemap" | "pulllist";
 
 export type NavParams = {
   box?: string;
@@ -53,6 +54,7 @@ const NAV = [
     id: "business",
     label: "Business",
     tabs: [
+      { id: "pulllist",    label: "Pull List" },
       { id: "hunting",     label: "Box Hunt" },
       { id: "calendar",    label: "Calendar" },
       { id: "showplanner", label: "Whatnot Shows" },
@@ -209,6 +211,7 @@ export default function App() {
         {activeTab === "stats"       && <CollectionStats />}
         {activeTab === "dataview"    && <DataView />}
         {activeTab === "sitemap"     && <SiteMap onNavigate={navigateTo} />}
+        {activeTab === "pulllist"    && <PullList />}
       </div>
     </div>
     </PasswordGate>
