@@ -163,14 +163,14 @@ export default function BoxVisual() {
               </div>
             ))}
           </div>
-          {hoveredBoxData.Description && (
+          {hoveredBoxData.Notes && (
             <div style={{ fontSize:"0.78rem", color:"var(--muted2)", lineHeight:1.5, borderTop:"1px solid var(--border)", paddingTop:8 }}>
-              {hoveredBoxData.Description}
+              {hoveredBoxData.Notes}
             </div>
           )}
           {hoveredBoxData.YearRange && (
             <div style={{ fontSize:"0.65rem", color:"var(--muted)", marginTop:6 }}>
-              {hoveredBoxData.Publisher} · {hoveredBoxData.YearRange}
+              {hoveredBoxData.YearRange}
             </div>
           )}
           <div style={{ fontSize:"0.6rem", color:"var(--muted)", marginTop:8, fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px", opacity:0.65 }}>
@@ -203,8 +203,7 @@ export default function BoxVisual() {
                 {selectedBoxData.Label.replace(/^Box \d+ — /i, "")}
               </div>
               <div style={{ fontSize: "0.78rem", color: "var(--muted)", marginTop: 4 }}>
-                {selectedBoxData.Publisher} · {selectedBoxData.YearRange}
-                {selectedBoxData.DateAdded ? ` · Added: ${selectedBoxData.DateAdded}` : ""}
+                {selectedBoxData.YearRange}
               </div>
             </div>
             <div style={{ display: "flex", gap: 16, flexShrink: 0 }}>

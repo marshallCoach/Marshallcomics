@@ -32,7 +32,7 @@ export default function BoxTimeline() {
         });
         return {
           ...b,
-          sortKey: parseDate(b.DateAdded),
+          sortKey: 0,
           comicCount: comicsInBox.length || b.Comics,
           keys: b.Keys,
           signed: b.Signed,
@@ -46,7 +46,7 @@ export default function BoxTimeline() {
   const groups = useMemo(() => {
     const g: Record<string, typeof entries> = {};
     for (const e of entries) {
-      const label = e.sortKey === 0 ? "Original Session" : (e.DateAdded || "Unknown");
+      const label = e.sortKey === 0 ? "Original Session" : (e.Notes || "Unknown");
       if (!g[label]) g[label] = [];
       g[label].push(e);
     }
@@ -191,9 +191,8 @@ export default function BoxTimeline() {
 
                         {/* Meta row */}
                         <div style={{ display: "flex", gap: 12, marginTop: 6, fontSize: "0.75rem", color: "var(--muted)", flexWrap: "wrap" }}>
-                          {box.Publisher && <span>{box.Publisher}</span>}
                           {box.YearRange && <span>{box.YearRange}</span>}
-                          {box.Description && <span style={{ color: "var(--muted2)", fontStyle: "italic" }}>{box.Description.slice(0,80)}{box.Description.length>80?"…":""}</span>}
+                          {box.Notes && <span style={{ color: "var(--muted2)", fontStyle: "italic" }}>{box.Notes.slice(0,80)}{box.Notes.length>80?"…":""}</span>}
                         </div>
                       </div>
                     );
