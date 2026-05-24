@@ -308,7 +308,12 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
           <div className="progress-pct">{BOX_PCT}%</div>
         </div>
         <div className="progress-track">
-          <div className="progress-fill" style={{ width: `${progWidth}%` }} />
+          <div className="progress-fill" style={{
+            width: `${progWidth}%`,
+            backgroundImage: `linear-gradient(90deg, #c8102e 0%, #e85d04 25%, #f4a107 55%, #84cc16 80%, #22c55e 100%)`,
+            backgroundSize: `${progWidth > 0 ? (100 / progWidth) * 100 : 100}% 100%`,
+            backgroundRepeat: "no-repeat",
+          }} />
           {[...Array(TARGET_BOXES)].map((_,i) => (
             <div key={i} className={`progress-tick ${i < totalBoxes ? "filled" : ""}`} style={{ left:`${((i+1)/TARGET_BOXES)*100}%` }} />
           ))}

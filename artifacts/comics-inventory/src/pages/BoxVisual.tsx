@@ -99,7 +99,7 @@ export default function BoxVisual() {
 
       {/* Box grid selector — matches Home page box-tile style */}
       <div className="boxes-grid" style={{ marginBottom: 24 }}>
-        {boxes.map(b => {
+        {boxes.map((b, idx) => {
           const isSelected = selectedBox === b.Num;
           const lowBook    = Number(b.Comics) < 100;
           return (
@@ -114,6 +114,7 @@ export default function BoxVisual() {
               onMouseLeave={() => setHoveredBox(null)}
               className="box-tile"
               style={{
+                animationDelay: `${idx * 0.022}s`,
                 ...(isSelected ? {
                   borderColor: "var(--red)",
                   background: "#fef2f2",
@@ -541,21 +542,45 @@ export default function BoxVisual() {
 
       {hoveredSpine && (
         <div style={{
-          position:"fixed", left:hoveredSpine.x, top:hoveredSpine.y - 6,
+          position:"fixed", left:hoveredSpine.x, top:hoveredSpine.y - 10,
           transform:"translateX(-50%) translateY(-100%)",
-          background:"rgba(18,18,35,0.97)", color:"#fff",
-          borderRadius:5, padding:"5px 10px", fontSize:"0.7rem",
+          background:"#fff",
+          borderRadius:8,
+          padding:"10px 14px",
           zIndex:900, pointerEvents:"none",
-          boxShadow:"0 2px 10px rgba(0,0,0,0.4)",
-          fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"0.5px",
-          lineHeight:1.4, border:"1px solid rgba(255,255,255,0.1)",
+          boxShadow:"0 6px 28px rgba(0,0,0,0.14), 0 1px 4px rgba(0,0,0,0.08)",
+          border:"1.5px solid var(--border)",
+          borderTop:"3px solid var(--red)",
           whiteSpace:"nowrap",
+          minWidth:160,
         }}>
-          <div style={{color:"#e8e4de"}}>{hoveredSpine.title}</div>
-          <div style={{color:"#aaa", fontSize:"0.65rem"}}>
-            #{hoveredSpine.issue}
-            {hoveredSpine.isKey    && <span style={{color:"#fbbf24",marginLeft:4}}>★ KEY</span>}
-            {hoveredSpine.isSigned && <span style={{color:"#22c55e",marginLeft:4}}>✍ SIGNED</span>}
+          <div style={{
+            fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.78rem",
+            letterSpacing:"1.5px", color:"var(--red)", marginBottom:3,
+          }}>
+            {hoveredSpine.title}
+          </div>
+          <div style={{
+            fontFamily:"'Crimson Pro',serif", fontSize:"0.85rem",
+            color:"var(--text2)", display:"flex", alignItems:"center", gap:6,
+          }}>
+            <span style={{color:"var(--muted)"}}>#{hoveredSpine.issue}</span>
+            {hoveredSpine.isKey && (
+              <span style={{
+                background:"#fff8e0", color:"#8a6000",
+                border:"1px solid #d4a800", borderRadius:3,
+                padding:"1px 6px", fontSize:"0.62rem",
+                fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px",
+              }}>★ KEY</span>
+            )}
+            {hoveredSpine.isSigned && (
+              <span style={{
+                background:"#f0faf0", color:"#1a7a1a",
+                border:"1px solid #c8e6c8", borderRadius:3,
+                padding:"1px 6px", fontSize:"0.62rem",
+                fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px",
+              }}>✍ SGD</span>
+            )}
           </div>
         </div>
       )}
