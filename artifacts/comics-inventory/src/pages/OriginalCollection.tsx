@@ -55,6 +55,16 @@ const LIST_COLS: ColDef<Comic>[] = [
     cell: r => <span className="lt-sub">{r.Publisher}</span>,
   },
   {
+    key: "writer", label: "Writer", defaultWidth: 130,
+    sort: (a, b) => (a.Writer || "").localeCompare(b.Writer || ""),
+    cell: r => <span className="lt-sub">{r.Writer && r.Writer !== "nan" ? r.Writer : "—"}</span>,
+  },
+  {
+    key: "artist", label: "Artist", defaultWidth: 130,
+    sort: (a, b) => (a.Artist || "").localeCompare(b.Artist || ""),
+    cell: r => <span className="lt-sub">{r.Artist && r.Artist !== "nan" ? r.Artist : "—"}</span>,
+  },
+  {
     key: "year", label: "Year", defaultWidth: 70,
     sort: (a, b) => parseVal(a.Year) - parseVal(b.Year),
     cell: r => <span className="lt-sub">{r.Year}</span>,

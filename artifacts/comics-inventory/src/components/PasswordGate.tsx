@@ -58,10 +58,33 @@ export default function PasswordGate({ children }: Props) {
         fontSize: "0.65rem",
         letterSpacing: "3px",
         color: "rgba(255,255,255,0.35)",
-        marginBottom: 40,
+        marginBottom: 28,
         textTransform: "uppercase",
       }}>
         Private Collection Database
+      </div>
+
+      {/* Collection progress bar */}
+      <div style={{ width: "100%", maxWidth: 340, marginBottom: 28 }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 6 }}>
+          <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.58rem", letterSpacing: "2.5px", color: "rgba(255,255,255,0.25)", textTransform: "uppercase" }}>
+            Collection Progress
+          </span>
+          <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.65rem", letterSpacing: "1px", color: "#c8102e" }}>
+            51 / 65 Boxes
+          </span>
+        </div>
+        <div style={{ height: 5, background: "rgba(255,255,255,0.08)", borderRadius: 3, overflow: "hidden" }}>
+          <div style={{ width: "78%", height: "100%", background: "linear-gradient(90deg,#c8102e,#f4a107)", borderRadius: 3 }} />
+        </div>
+        <div style={{ display: "flex", justifyContent: "space-between", marginTop: 6 }}>
+          <span style={{ fontSize: "0.56rem", color: "rgba(255,255,255,0.18)", fontFamily: "'Bebas Neue', sans-serif", letterSpacing: "1px" }}>
+            7,232 Comics · 1,013 Keys · 53 Signed
+          </span>
+          <span style={{ fontSize: "0.6rem", color: "rgba(255,255,255,0.25)", fontFamily: "'Bebas Neue', sans-serif", letterSpacing: "1px" }}>
+            78%
+          </span>
+        </div>
       </div>
 
       <div style={{
