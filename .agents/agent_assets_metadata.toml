@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "rJSKUxwcV5d3W5Z9FWFyn"
+uri = "file://locbg_export.csv"
+type = "table"
+title = "LOCBG Import — 9,532 Comics"
