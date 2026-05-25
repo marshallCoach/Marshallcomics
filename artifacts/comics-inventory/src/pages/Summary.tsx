@@ -39,11 +39,13 @@ function buildTopCreators(field: "Writer" | "Artist"): [string, number][] {
 }
 const TOP_WRITERS_BNR = buildTopCreators("Writer");
 const TOP_ARTISTS_BNR = buildTopCreators("Artist");
-const TOTAL_NM_VALUE  = Math.round(
-  comics.reduce((sum, c) => {
-    const v = parseFloat((c.Value_NM || "").replace(/[^0-9.]/g, "") || "0");
-    return sum + (isNaN(v) ? 0 : v);
-  }, 0)
+function parseNMVal(raw: string): number {
+  // Take the first number found — gives lower bound for ranges like "$15–25"
+  const m = (raw || "").match(/\$?(\d+(?:\.\d+)?)/);
+  return m ? parseFloat(m[1]) : 0;
+}
+const TOTAL_NM_VALUE = Math.round(
+  comics.reduce((sum, c) => sum + parseNMVal(c.Value_NM || ""), 0)
 );
 
 function normPubGroup(p: string): string {
@@ -265,14 +267,26 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
     }
   }
 
+  const [bannerClosed, setBannerClosed] = useState(() => localStorage.getItem("mc_update_banner_closed") === "1");
+  function closeBanner() { localStorage.setItem("mc_update_banner_closed", "1"); setBannerClosed(true); }
+
   return (
     <div style={{ maxWidth:1100, margin:"0 auto", padding:"20px 16px 80px" }}>
 
       {/* ── LATEST UPDATE BANNER ── */}
+      {!bannerClosed && (
       <section style={{ marginBottom:28, background:"var(--surface)", border:"1.5px solid var(--red)", borderRadius:8, padding:"18px 20px", position:"relative", overflow:"hidden" }}>
         <div style={{ position:"absolute", top:0, left:0, right:0, height:3, background:"var(--red)", borderRadius:"8px 8px 0 0" }} />
+        {/* Close button */}
+        <button
+          onClick={closeBanner}
+          title="Dismiss"
+          style={{ position:"absolute", top:10, right:12, background:"none", border:"none", cursor:"pointer", color:"var(--muted)", fontSize:"1rem", lineHeight:1, padding:4, borderRadius:4 }}
+          onMouseOver={e => (e.currentTarget.style.color = "var(--red)")}
+          onMouseOut={e => (e.currentTarget.style.color = "var(--muted)")}
+        >×</button>
         {/* Header row */}
-        <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:14, flexWrap:"wrap" }}>
+        <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:14, flexWrap:"wrap", paddingRight:24 }}>
           <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", letterSpacing:"3px", color:"var(--red)" }}>LATEST UPDATE</span>
           <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1.5px", color:"var(--muted)", background:"var(--surface2)", padding:"2px 8px", borderRadius:3, border:"1px solid var(--border)" }}>{LAST_UPDATE_DATE}</span>
           <div style={{ display:"flex", gap:5, flexWrap:"wrap" }}>
@@ -324,6 +338,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
           </div>
         </div>
       </section>
+      )}
 
       {/* ── Box Progress — animated fill ── */}
       <section className="progress-section">
