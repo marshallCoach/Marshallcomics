@@ -124,6 +124,34 @@ const titleEntries = Object.entries(titleMap).sort((a,b)=>b[1]-a[1]);
 // Platform
 const platformMap = countBy(comics, c => c.Platform || "Unassigned");
 
+// ── mini series & crossovers ──────────────────────────────────────────────────
+const miniSeriesComics = comics.filter(c =>
+  (c.Key_Reason || "").toLowerCase().includes("limited series") ||
+  (c.Key_Reason || "").toLowerCase().includes("mini series") ||
+  (c.Category   || "").toLowerCase().includes("limited")
+);
+const miniSeriesTitleCount = new Set(miniSeriesComics.map(c => c.Title)).size;
+const crossoverComics = comics.filter(c => {
+  const x = (c.Crossover || "").trim();
+  return x !== "" && x.toLowerCase() !== "nan";
+});
+const crossoverEventCount = new Set(crossoverComics.map(c => c.Crossover)).size;
+
+// ── publisher shelf colours ───────────────────────────────────────────────────
+const PUB_SHELF_COLORS: Record<string, string> = {
+  DC: "#1d6fa4", Marvel: "#c8102e", Image: "#f97316",
+  IDW: "#22c55e", "Dark Horse": "#7c3aed", Valiant: "#8b2be2",
+  Independent: "#6b7280", Other: "#94a3b8",
+};
+const ERA_VIZ_COLORS: Record<string, string> = {
+  Golden: "#d4a800", Silver: "#94a3b8", Bronze: "#b87333",
+  Copper: "#c8a165", Modern: "#c8102e", Unknown: "#6b7280",
+};
+const ERA_RANGE: Record<string, string> = {
+  Golden: "1938–1956", Silver: "1956–1970", Bronze: "1970–1985",
+  Copper: "1985–1991", Modern: "1991–now",  Unknown: "Year unknown",
+};
+
 // ── chart colours ────────────────────────────────────────────────────────────
 const PIE_COLORS = ["#c8102e","#d4a800","#1d6fa4","#16a34a","#8b2be2","#d97706","#6b7280","#0ea5e9","#f43f5e","#10b981"];
 
@@ -255,6 +283,8 @@ export default function CollectionStats() {
             <StatTile val={uniquePublishers}               lbl="Publishers"          sub="different imprints"    color="#d97706" />
             <StatTile val={deepRunTitles.length}           lbl="Deep Runs"           sub="10+ issues same title" color="#c8102e" />
             <StatTile val={annuals.length}                 lbl="Annuals"             sub="annual editions"       color="#6b7280" />
+            <StatTile val={miniSeriesTitleCount}           lbl="Mini Series"         sub="limited-run titles"    color="#d97706" />
+            <StatTile val={crossoverEventCount}            lbl="Crossovers"          sub={`${crossoverComics.length} issues across events`} color="#8b5cf6" />
           </div>
 
           {/* DC vs Marvel vs Everyone Else */}
@@ -276,30 +306,87 @@ export default function CollectionStats() {
             ))}
           </div>
 
-          {/* Publisher pie */}
-          <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:20 }}>
-            <div style={{ background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:6, padding:"16px" }}>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem", letterSpacing:"2px", color:"var(--red)", marginBottom:12 }}>BY PUBLISHER</div>
-              <ResponsiveContainer width="100%" height={200}>
-                <PieChart>
-                  <Pie data={pubPieData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={80} label={({ name, percent }) => `${name} ${(percent*100).toFixed(0)}%`} labelLine={false} fontSize={10}>
-                    {pubPieData.map((_,i) => <Cell key={i} fill={PIE_COLORS[i % PIE_COLORS.length]} />)}
-                  </Pie>
-                  <Tooltip content={<CUSTOM_TOOLTIP />} />
-                </PieChart>
-              </ResponsiveContainer>
+          {/* ── Publisher Shelf ── */}
+          <div style={{ background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:6, padding:"16px" }}>
+            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem", letterSpacing:"2px", color:"var(--red)", marginBottom:3 }}>BY PUBLISHER</div>
+            <div style={{ fontSize:"0.72rem", color:"var(--muted2)", marginBottom:12 }}>Hover any segment — proportional to your actual shelf</div>
+            {/* Spine bar */}
+            <div style={{ display:"flex", height:48, borderRadius:4, overflow:"hidden", marginBottom:16, gap:1 }}>
+              {pubPieData.map((p, i) => {
+                const pct = (p.value / comics.length) * 100;
+                const color = PUB_SHELF_COLORS[p.name] ?? PIE_COLORS[i % PIE_COLORS.length];
+                return (
+                  <div key={p.name}
+                    title={`${p.name}: ${p.value.toLocaleString()} books (${pct.toFixed(1)}%)`}
+                    style={{ width:`${pct}%`, background:color, display:"flex", alignItems:"center", justifyContent:"center", overflow:"hidden", cursor:"default", transition:"filter 0.15s" }}
+                    onMouseEnter={e => (e.currentTarget.style.filter = "brightness(1.3)")}
+                    onMouseLeave={e => (e.currentTarget.style.filter = "")}
+                  >
+                    {pct > 5 && (
+                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.56rem", color:"rgba(255,255,255,0.92)", letterSpacing:"1px", whiteSpace:"nowrap" }}>
+                        {p.name}
+                      </span>
+                    )}
+                  </div>
+                );
+              })}
             </div>
+            {/* Row list */}
+            <div style={{ display:"flex", flexDirection:"column", gap:5 }}>
+              {pubPieData.map((p, i) => {
+                const pct = (p.value / comics.length) * 100;
+                const color = PUB_SHELF_COLORS[p.name] ?? PIE_COLORS[i % PIE_COLORS.length];
+                return (
+                  <div key={p.name} style={{ display:"flex", alignItems:"center", gap:8 }}>
+                    <div style={{ width:10, height:10, borderRadius:2, background:color, flexShrink:0 }} />
+                    <span style={{ flex:"0 0 120px", fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"1px", color:"var(--text2)" }}>{p.name}</span>
+                    <div style={{ flex:1, height:5, background:"var(--border)", borderRadius:3, overflow:"hidden" }}>
+                      <div style={{ width:`${pct}%`, height:"100%", background:color, borderRadius:3 }} />
+                    </div>
+                    <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem", color, minWidth:44, textAlign:"right" }}>{p.value.toLocaleString()}</span>
+                    <span style={{ fontSize:"0.66rem", color:"var(--muted)", minWidth:38, textAlign:"right" }}>{pct.toFixed(1)}%</span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
 
-            <div style={{ background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:6, padding:"16px" }}>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem", letterSpacing:"2px", color:"var(--red)", marginBottom:12 }}>BY ERA</div>
-              <ResponsiveContainer width="100%" height={200}>
-                <PieChart>
-                  <Pie data={eraPieData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={80} label={({ name, percent }) => `${name} ${(percent*100).toFixed(0)}%`} labelLine={false} fontSize={10}>
-                    {eraPieData.map((_,i) => <Cell key={i} fill={PIE_COLORS[i % PIE_COLORS.length]} />)}
-                  </Pie>
-                  <Tooltip content={<CUSTOM_TOOLTIP />} />
-                </PieChart>
-              </ResponsiveContainer>
+          {/* ── Era Cards ── */}
+          <div style={{ background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:6, padding:"16px" }}>
+            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem", letterSpacing:"2px", color:"var(--red)", marginBottom:3 }}>BY ERA</div>
+            <div style={{ fontSize:"0.72rem", color:"var(--muted2)", marginBottom:12 }}>Your collection spans {byEra.filter(e => e.count > 0).length} distinct eras</div>
+            {/* Era timeline strip */}
+            <div style={{ display:"flex", height:10, borderRadius:4, overflow:"hidden", marginBottom:16, gap:1 }}>
+              {byEra.map(e => {
+                const pct = (e.count / comics.length) * 100;
+                const color = ERA_VIZ_COLORS[e.name] ?? "#6b7280";
+                return (
+                  <div key={e.name}
+                    title={`${e.name}: ${e.count.toLocaleString()} books (${pct.toFixed(1)}%)`}
+                    style={{ width:`${pct}%`, background:color, transition:"filter 0.15s" }}
+                    onMouseEnter={e2 => (e2.currentTarget.style.filter = "brightness(1.4)")}
+                    onMouseLeave={e2 => (e2.currentTarget.style.filter = "")}
+                  />
+                );
+              })}
+            </div>
+            {/* Era cards */}
+            <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(130px,1fr))", gap:8 }}>
+              {byEra.map(e => {
+                const pct = (e.count / comics.length) * 100;
+                const color = ERA_VIZ_COLORS[e.name] ?? "#6b7280";
+                return (
+                  <div key={e.name} style={{ background:"var(--surface2)", border:`1.5px solid ${color}28`, borderRadius:5, padding:"10px 12px", borderTop:`3px solid ${color}` }}>
+                    <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.25rem", color, letterSpacing:"1px", lineHeight:1 }}>{e.count.toLocaleString()}</div>
+                    <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.7rem", letterSpacing:"1.5px", color:"var(--text)", marginTop:3 }}>{e.name}</div>
+                    <div style={{ fontSize:"0.62rem", color:"var(--muted2)", marginTop:2 }}>{ERA_RANGE[e.name] ?? ""}</div>
+                    <div style={{ marginTop:6, height:3, background:"var(--border)", borderRadius:2, overflow:"hidden" }}>
+                      <div style={{ width:`${pct}%`, height:"100%", background:color, borderRadius:2 }} />
+                    </div>
+                    <div style={{ fontSize:"0.6rem", color:"var(--muted)", marginTop:3, textAlign:"right" }}>{pct.toFixed(1)}%</div>
+                  </div>
+                );
+              })}
             </div>
           </div>
 

@@ -47,7 +47,6 @@ const NAV = [
       { id: "stats",      label: "Stats" },
       { id: "dataview",   label: "Data View" },
       { id: "capfalcon",  label: "Cap & Falcon" },
-      { id: "sitemap",    label: "Site Map" },
     ],
   },
   {
@@ -171,6 +170,11 @@ export default function App() {
             onClick={() => handleSection(section.id as SectionId)}
           >{section.label}</button>
         ))}
+        <button
+          className={`main-nav-btn sitemap-btn${activeTab === "sitemap" ? " active" : ""}`}
+          onClick={() => setActiveTab("sitemap")}
+          title="Site Map"
+        >⊞ Site Map</button>
       </div>
 
       {/* SUB NAV */}

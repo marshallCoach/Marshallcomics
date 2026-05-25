@@ -98,7 +98,7 @@ function pubBadgeStyle(pub: string) {
 // ── Component ────────────────────────────────────────────────────────────────
 export default function PullList() {
   const [data,       setData]       = useState<SeriesData>(load);
-  const [view,       setView]       = useState<"card"|"list">("card");
+  const [view,       setView]       = useState<"card"|"list">("list");
   const [query,      setQuery]      = useState("");
   const [filterPub,  setFilterPub]  = useState<string>("All");
   const [filterType, setFilterType] = useState<"all"|"ongoing"|"mini">("all");
