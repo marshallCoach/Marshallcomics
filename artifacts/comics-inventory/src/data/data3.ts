@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_1779685905639.xlsx  |  Generated: 2026-05-25
+// Source: comics_inventory_1-30_1779687282772.xlsx  |  Generated: 2026-05-25
 
 export interface Comic {
   Title: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -162463,62 +162463,62 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Num: `BOX 53`, Comics: 215, Keys: 8,
     Signed: 0, YearRange: `1999-2006`,
-    Label: ``, FirstBook: `Birds of Prey #1`, LastBook: `Planet DC: Batgirl #1`,
-    Location: ``, Notes: ``, DateAdded: `May 24, 2026`,
+    Label: `DC: Birds of Prey + Robin + Batgirl (Dixon/Simone 1999–2006)`, FirstBook: `Birds of Prey #1`, LastBook: `Planet DC: Batgirl #1`,
+    Location: `Basement`, Notes: `BoP #1 KEY. Batgirl #1 (Cass Cain) KEY. ~5% bagged.`, DateAdded: `May 24, 2026`,
   },
   {
     Num: `BOX 54`, Comics: 227, Keys: 12,
     Signed: 0, YearRange: `1998-2009`,
-    Label: ``, FirstBook: `Batman and Robin #1`, LastBook: `Suicide Squad: From the Ashes #8 of 8`,
-    Location: ``, Notes: ``, DateAdded: `May 24, 2026`,
+    Label: `DC: 2005–2009 — Final Crisis COMPLETE + Batman & Robin #1`, FirstBook: `Batman and Robin #1`, LastBook: `Suicide Squad: From the Ashe #8 of 8`,
+    Location: `Basement`, Notes: `Final Crisis #1-7 COMPLETE. Batman & Robin #1 Morrison/Quitely KEY. Villains United COMPLETE. ~5% bagged.`, DateAdded: `May 24, 2026`,
   },
   {
     Num: `BOX 55`, Comics: 143, Keys: 5,
     Signed: 0, YearRange: `1981-2012`,
-    Label: ``, FirstBook: `Legion of Superheroes #112`, LastBook: `Outsiders #49`,
-    Location: ``, Notes: ``, DateAdded: `May 24, 2026`,
+    Label: `DC: Legion of Superheroes + Nightwing + Outsiders + Aquaman`, FirstBook: `Legion of Superheroes #112`, LastBook: `Outsiders #49`,
+    Location: `Basement`, Notes: `Legion Worlds COMPLETE. The Legion #1 DnA KEY. LSH Vol 6 Levitz KEY. ~5% bagged.`, DateAdded: `May 24, 2026`,
   },
   {
     Num: `BOX 56`, Comics: 154, Keys: 4,
     Signed: 0, YearRange: `1998-2008`,
-    Label: ``, FirstBook: `Impulse #52`, LastBook: `Teen Titans #29`,
-    Location: ``, Notes: ``, DateAdded: `May 24, 2026`,
+    Label: `DC: Impulse + Young Justice + The Titans + Teen Titans (Johns era)`, FirstBook: `Impulse #52`, LastBook: `Teen Titans #29`,
+    Location: `Basement`, Notes: `Teen Titans #1 Johns KEY. YJ Sins of the Father #1 KEY. 0% bagged.`, DateAdded: `May 24, 2026`,
   },
   {
     Num: `BOX 57`, Comics: 150, Keys: 24,
     Signed: 0, YearRange: `1994-2024`,
-    Label: ``, FirstBook: `Star Trek #1`, LastBook: `Star Trek: Klingons #1 (one-shot — FCBD 2023)`,
-    Location: ``, Notes: ``, DateAdded: `May 24, 2026`,
+    Label: `Star Trek IDW — Mirror War COMPLETE + TNG Minis + The Orville`, FirstBook: `Star Trek #1`, LastBook: `Star Trek: Klingons #1 (one-`,
+    Location: `Basement`, Notes: `Mirror War #0-8 COMPLETE. TNG Terra Incognito COMPLETE. TNG Mirror Broken COMPLETE. Mixed bagging.`, DateAdded: `May 24, 2026`,
   },
   {
     Num: `BOX 58`, Comics: 222, Keys: 17,
     Signed: 0, YearRange: `1998-2009`,
-    Label: ``, FirstBook: `Adam Strange #1 of 8`, LastBook: `DC: 5 of a Kind — Wonder Woman/Grace #1`,
-    Location: ``, Notes: ``, DateAdded: `May 24, 2026`,
+    Label: `DC: 2001–2009 Mixed — JLA Meltzer/McDuffie + Buffy + Suicide Squad`, FirstBook: `Adam Strange #1 of 8`, LastBook: `DC: 5 of a Kind — Wonder Wom #1`,
+    Location: `Basement`, Notes: `JLA #0-34 COMPLETE run. Final Crisis COMPLETE (2nd set). Batman & Robin #1 KEY. Buffy S8 #1 needs cleaning. 0% bagged.`, DateAdded: `May 24, 2026`,
   },
   {
     Num: `BOX 59`, Comics: 620, Keys: 81,
     Signed: 0, YearRange: `2010-2022`,
-    Label: ``, FirstBook: `DC Universe: Rebirth #1`, LastBook: `Justice League Incarnate #5 of 5`,
-    Location: ``, Notes: ``, DateAdded: `May 24, 2026`,
+    Label: `DC: New 52 + Convergence COMPLETE + Wonder Woman Azzarello`, FirstBook: `DC Universe: Rebirth #1`, LastBook: `Justice League Incarnate #5 of 5`,
+    Location: `Basement`, Notes: `DC Universe Rebirth #1 KEY. Multiversity COMPLETE + ALL tie-ins. Forever Evil COMPLETE. Convergence #0-8 + ALL 20 two-part tie-ins. WW New 52 near-complete. 0% bagged.`, DateAdded: `May 24, 2026`,
   },
   {
     Num: `BOX 60`, Comics: 191, Keys: 26,
     Signed: 0, YearRange: `2006-2024`,
-    Label: ``, FirstBook: `Inhumanity #1`, LastBook: `The Life of Captain Marvel #5`,
-    Location: ``, Notes: ``, DateAdded: `May 24, 2026`,
+    Label: `Marvel: Inhumans + Eternals Gaiman/Gillen + Captain Marvel all volumes`, FirstBook: `Inhumanity #1`, LastBook: `The Life of Captain Marvel #5`,
+    Location: `Basement`, Notes: `Eternals Gaiman #1-7 COMPLETE KEY. Eternals Gillen #1-12 COMPLETE KEY. CM Thompson near-complete #1-50. Karnak Ellis KEY. 10% bagged.`, DateAdded: `May 24, 2026`,
   },
   {
     Num: `BOX 61`, Comics: 255, Keys: 24,
     Signed: 0, YearRange: `1987-2023`,
-    Label: ``, FirstBook: `Fantastic Four #499`, LastBook: `Fantastic Four #4 [Legacy #649]`,
-    Location: ``, Notes: ``, DateAdded: `May 24, 2026`,
+    Label: `Marvel: Fantastic Four — Waid/Hickman/Fraction/Slott/North deep run`, FirstBook: `Fantastic Four #499`, LastBook: `Fantastic Four #4 [Lega`,
+    Location: `Basement`, Notes: `FF #500 KEY. FF Legacy #700 KEY. Slott #1 KEY. North #1 KEY. Hickman run. Invisible Woman #1. 10% bagged.`, DateAdded: `May 24, 2026`,
   },
   {
     Num: `BOX 62`, Comics: 123, Keys: 20,
     Signed: 0, YearRange: `1992-2023`,
-    Label: ``, FirstBook: `Annihilation: Nova #1 of 4`, LastBook: `Thanos #1`,
-    Location: ``, Notes: ``, DateAdded: `May 24, 2026`,
+    Label: `Marvel: Annihilation + Nova + Silver Surfer + Guardians + Drax COMPLETE`, FirstBook: `Annihilation: Nova #1 of 4`, LastBook: `Thanos #1`,
+    Location: `Basement`, Notes: `Ann Nova COMPLETE. Ann SS COMPLETE. Drax CM Punk #1-11 COMPLETE. Old Man Quill COMPLETE. SS Ghost Light COMPLETE. 5% bagged.`, DateAdded: `May 24, 2026`,
   }
   ],
 };
