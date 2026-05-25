@@ -107,12 +107,14 @@ for (let r = 1; r < allRows.length; r++) {
 const bsSheet = wb.Sheets['Box Summary'];
 const bsRows  = XLSX.utils.sheet_to_json(bsSheet, { header: 1, defval: '' });
 const boxes = [];
+const coveredBoxNums = new Set();
 for (let r = 2; r < bsRows.length; r++) {
   const row = bsRows[r];
   const num = String(row[0] ?? '').trim();
   if (!num.startsWith('BOX')) continue;
   // Normalise box number for lookup: "BOX 01" → "1"
   const boxNum = num.replace(/^BOX\s*/i, '').replace(/^0+/, '') || '0';
+  coveredBoxNums.add(boxNum);
   const dateAdded = boxDateMap[boxNum] || '';
   boxes.push(`  {
     Num: \`${num}\`, Comics: ${Number(row[1])||0}, Keys: ${Number(row[2])||0},
@@ -122,8 +124,47 @@ for (let r = 2; r < bsRows.length; r++) {
   }`);
 }
 
+// Derive summaries from comics data for any boxes not in the Box Summary sheet
+// (e.g. newly catalogued boxes not yet added to the summary tab)
+const boxComicsMap = {};
+for (let r = 1; r < allRows.length; r++) {
+  const row = allRows[r];
+  const title = String(row[C.title] ?? '').trim();
+  if (!title) continue;
+  const boxRaw = String(row[C.box] ?? '').trim();
+  if (!boxRaw) continue;
+  const boxNum = boxRaw.replace(/^0+/, '') || boxRaw;
+  if (coveredBoxNums.has(boxNum)) continue;
+  if (!boxComicsMap[boxNum]) boxComicsMap[boxNum] = [];
+  boxComicsMap[boxNum].push(row);
+}
+// Sort derived boxes numerically and append them
+const derivedBoxNums = Object.keys(boxComicsMap).sort((a, b) => Number(a) - Number(b));
+for (const boxNum of derivedBoxNums) {
+  const rows = boxComicsMap[boxNum];
+  const padded = boxNum.padStart(2, '0');
+  const num = `BOX ${padded}`;
+  const keyCount  = rows.filter(r => String(r[C.key] ?? '').toUpperCase() === 'YES').length;
+  const signCount = rows.filter(r => String(r[C.signed] ?? '').toUpperCase() === 'YES').length;
+  const years = rows.map(r => Number(s(r, C.year))).filter(y => y > 1900);
+  const yearRange = years.length ? `${Math.min(...years)}-${Math.max(...years)}` : '';
+  const firstRow = rows[0];
+  const lastRow  = rows[rows.length - 1];
+  const firstBook = `${s(firstRow, C.title)} ${s(firstRow, C.issue)}`.trim();
+  const lastBook  = `${s(lastRow,  C.title)} ${s(lastRow,  C.issue)}`.trim();
+  const dateAdded = boxDateMap[boxNum] || '';
+  boxes.push(`  {
+    Num: \`${num}\`, Comics: ${rows.length}, Keys: ${keyCount},
+    Signed: ${signCount}, YearRange: \`${yearRange}\`,
+    Label: \`\`, FirstBook: \`${firstBook.replace(/`/g,'\\`')}\`, LastBook: \`${lastBook.replace(/`/g,'\\`')}\`,
+    Location: \`\`, Notes: \`\`, DateAdded: \`${dateAdded}\`,
+  }`);
+  console.log(`  Derived BOX ${padded}: ${rows.length} comics, ${keyCount} keys`);
+}
+
+const srcName = xlsxFiles[0].f;
 const ts = `// AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_pm_1779644314535.xlsx  |  Generated: ${new Date().toISOString().slice(0,10)}
+// Source: ${srcName}  |  Generated: ${new Date().toISOString().slice(0,10)}
 
 export interface Comic {
   Title: string; Issue: string; Publisher: string; Year: string; Arc: string;
