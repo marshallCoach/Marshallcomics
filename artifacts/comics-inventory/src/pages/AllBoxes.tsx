@@ -76,6 +76,14 @@ const LIST_COLS: ColDef<Comic>[] = [
     },
   },
   {
+    key: "vf", label: "VF Value", defaultWidth: 90,
+    sort: (a, b) => parseVal(a.Value_VF) - parseVal(b.Value_VF),
+    cell: r => {
+      const v = r.Value_VF && r.Value_VF !== "nan" ? r.Value_VF.match(/(\d+(?:\.\d+)?)/)?.[1] : "";
+      return <span className="lt-vf">{v ? `$${v}` : "—"}</span>;
+    },
+  },
+  {
     key: "bid", label: "Start Bid", defaultWidth: 80,
     sort: (a, b) => parseVal(a.Start_Bid) - parseVal(b.Start_Bid),
     cell: r => {
@@ -220,6 +228,7 @@ export default function AllBoxes() {
               const bid    = c.Start_Bid && c.Start_Bid !== "nan" ? c.Start_Bid : "";
               const isOpen = open.has(i);
               const nmVal  = c.Value_NM && c.Value_NM !== "nan" ? c.Value_NM : "";
+              const vfLow  = c.Value_VF && c.Value_VF !== "nan" ? (c.Value_VF.match(/(\d+(?:\.\d+)?)/) || [])[1] || "" : "";
               const pitch  = c.Story_Pitch && c.Story_Pitch !== "nan" ? c.Story_Pitch : "";
               return (
                 <div key={i} className={`comic-card${isOpen?" open":""}`} onClick={()=>toggle(i)}>
@@ -233,7 +242,11 @@ export default function AllBoxes() {
                     {bid      && <span className="badge bcg">Start ${bid}</span>}
                     {isTf     && <span className="badge bt">Terrificon</span>}
                   </div>
-                  {nmVal && <div className="card-value">NM: <span className="v">${nmVal}</span></div>}
+                  {(nmVal || vfLow) && <div className="card-value">
+                    {nmVal && <span>NM: <span className="v">${nmVal}</span></span>}
+                    {nmVal && vfLow && <span style={{color:"var(--border)"}}> · </span>}
+                    {vfLow && <span style={{color:"var(--muted2)"}}>VF: <strong>${vfLow}</strong></span>}
+                  </div>}
                   {pitch && <div className="card-pitch">{pitch.substring(0,160)}{pitch.length>160?"…":""}</div>}
                   {isOpen && (
                     <div className="card-expand">

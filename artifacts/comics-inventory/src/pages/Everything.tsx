@@ -129,7 +129,8 @@ export default function Everything({
     { key:"writer",    label:"Writer",    defaultWidth:130, sort:(a,b)=>a.Writer.localeCompare(b.Writer), cell:r=><span className="lt-sub">{r.Writer||"—"}</span> },
     { key:"artist",    label:"Artist",    defaultWidth:130, sort:(a,b)=>a.Artist.localeCompare(b.Artist), cell:r=><span className="lt-sub">{r.Artist||"—"}</span> },
     { key:"key",       label:"Key",       defaultWidth:55,  sort:(a,b)=>a.Key.localeCompare(b.Key), cell:r=>r.Key?.toUpperCase()==="YES"?<span className="badge bkey" style={{fontSize:"0.6rem"}}>KEY</span>:null },
-    { key:"nm",        label:"NM Value",  defaultWidth:90,  sort:(a,b)=>parseVal(a.Value_NM)-parseVal(b.Value_NM), cell:r=><span className="lt-val">{r.Value_NM ? `$${r.Value_NM}` : "—"}</span> },
+    { key:"nm",        label:"NM Value",  defaultWidth:90,  sort:(a,b)=>parseVal(a.Value_NM)-parseVal(b.Value_NM), cell:r=><span className="lt-val">{r.Value_NM && r.Value_NM!=="nan" ? `$${r.Value_NM}` : "—"}</span> },
+    { key:"vf",        label:"VF Value",  defaultWidth:90,  sort:(a,b)=>parseVal(a.Value_VF)-parseVal(b.Value_VF), cell:r=>{ const v=r.Value_VF&&r.Value_VF!=="nan"?r.Value_VF.match(/(\d+(?:\.\d+)?)/)?.[1]:""; return <span className="lt-vf">{v?`$${v}`:"—"}</span>; }},
     { key:"platform",  label:"Platform",  defaultWidth:90,  sort:(a,b)=>a.Platform.localeCompare(b.Platform), cell:r=>r.Platform?<span className={`badge ${platClass(r.Platform)}`} style={{fontSize:"0.6rem"}}>{r.Platform}</span>:null },
     { key:"year",      label:"Year",      defaultWidth:65,  sort:(a,b)=>parseVal(a.Year)-parseVal(b.Year), cell:r=><span className="lt-sub">{r.Year}</span> },
     { key:"signed",    label:"Signed",    defaultWidth:90,  sort:(a,b)=>a.Signed.localeCompare(b.Signed), cell:r=>r.Signed?.toUpperCase()==="YES"?<span className="lt-sub" style={{color:"var(--gold)"}}>✍ {r.Signed_By||"Yes"}</span>:null },
@@ -457,8 +458,8 @@ function EverythingCard({ comic: c, onTitleClick }: { comic: Comic; onTitleClick
 
       {(c.Value_NM || c.Value_VF) && (
         <div style={{ display:"flex", gap:10, marginTop:6, fontSize:"0.72rem" }}>
-          {c.Value_NM && <span style={{color:"var(--green-text)"}}>NM <strong>${c.Value_NM}</strong></span>}
-          {c.Value_VF && <span style={{color:"var(--muted)"}}>VF ${c.Value_VF}</span>}
+          {c.Value_NM && c.Value_NM!=="nan" && <span style={{color:"var(--green-text)"}}>NM <strong>${c.Value_NM}</strong></span>}
+          {(()=>{ const v=c.Value_VF&&c.Value_VF!=="nan"?c.Value_VF.match(/(\d+(?:\.\d+)?)/)?.[1]:""; return v?<span style={{color:"var(--muted)"}}>VF <strong>${v}</strong></span>:null; })()}
         </div>
       )}
     </div>
