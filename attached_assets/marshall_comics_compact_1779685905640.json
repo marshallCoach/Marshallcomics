@@ -1,0 +1,3667 @@
+{
+  "meta": {
+    "totalComics": 9532,
+    "totalBoxes": 61,
+    "totalKeys": 1234,
+    "totalSigned": 53,
+    "lastUpdated": "2026-05-22"
+  },
+  "boxes": {
+    "1": {
+      "boxNumber": 1,
+      "label": "Box 01",
+      "warning": "",
+      "stats": {
+        "comics": 15,
+        "keys": 4,
+        "signed": 0
+      },
+      "firstComic": "Barack Obama: Presidential Material #1",
+      "lastComic": "DC/Marvel: All Access #2",
+      "topKeys": [
+        {
+          "title": "Batman",
+          "issue": "#656",
+          "why": "1st full appearance of Damian Wayne — one of the most i",
+          "rawNM": "120"
+        },
+        {
+          "title": "Batman",
+          "issue": "#657",
+          "why": "1st Damian Wayne as Robin in costume — KEY follow-up to",
+          "rawNM": "80"
+        },
+        {
+          "title": "Batman",
+          "issue": "#436",
+          "why": "Part of Marv Wolfman's Batman: Year Three arc — NOT Yea",
+          "rawNM": "30 (TPB)"
+        },
+        {
+          "title": "Doom Patrol and Suicide Squad Special",
+          "issue": "#1",
+          "why": "Rare intercompany DC crossover one-shot; low print run;",
+          "rawNM": "30"
+        }
+      ]
+    },
+    "2": {
+      "boxNumber": 2,
+      "label": "Box 02",
+      "warning": "",
+      "stats": {
+        "comics": 77,
+        "keys": 48,
+        "signed": 49
+      },
+      "firstComic": "The Mighty Thor #390",
+      "lastComic": "WildC.A.T.s #? (SIGNED — creator TBC)",
+      "topKeys": [
+        {
+          "title": "The Mighty Thor",
+          "issue": "#390",
+          "why": "Captain America briefly lifts Mjolnir — major character",
+          "rawNM": "80"
+        },
+        {
+          "title": "Cable",
+          "issue": "#1",
+          "why": "1st solo ongoing Cable series — important 90s key",
+          "rawNM": "20"
+        },
+        {
+          "title": "Alpha Flight",
+          "issue": "#1",
+          "why": "1st solo Alpha Flight ongoing series; 1st solo Vindicat",
+          "rawNM": "15–25"
+        },
+        {
+          "title": "The Mighty Thor",
+          "issue": "#412",
+          "why": "1st full New Warriors appearance (Night Thrasher, Namor",
+          "rawNM": "60"
+        },
+        {
+          "title": "A-Force",
+          "issue": "#1",
+          "why": "1st ongoing A-Force series (all-female Avengers); MCU/m",
+          "rawNM": "20"
+        },
+        {
+          "title": "Miles Morales: Spider-Man",
+          "issue": "#1",
+          "why": "1st solo Miles Morales ongoing (post-Secret Wars in 616",
+          "rawNM": "30"
+        },
+        {
+          "title": "Uncanny X-Men",
+          "issue": "#275",
+          "why": "Jim Lee's X-Men in space epic; iconic Jim Lee cover; Sh",
+          "rawNM": "30"
+        },
+        {
+          "title": "Falcon",
+          "issue": "#1",
+          "why": "1st solo Falcon limited series — historically important",
+          "rawNM": "50"
+        }
+      ]
+    },
+    "3": {
+      "boxNumber": 3,
+      "label": "Box 03",
+      "warning": "",
+      "stats": {
+        "comics": 54,
+        "keys": 30,
+        "signed": 0
+      },
+      "firstComic": "Marvel Two-in-One #1 — ⚠️ NOT IN COLLECTION #1",
+      "lastComic": "Black Panther #52",
+      "topKeys": [
+        {
+          "title": "Marvel Two-in-One #1 — ⚠️ NOT IN COLLECTION",
+          "issue": "#1",
+          "why": "1st issue of Marvel Two-in-One ongoing — The Thing's si",
+          "rawNM": "60"
+        },
+        {
+          "title": "Marvel Team-Up",
+          "issue": "#100",
+          "why": "Landmark #100 anniversary issue; Spider-Man & Fantastic",
+          "rawNM": "30"
+        },
+        {
+          "title": "X-Men United",
+          "issue": "#1",
+          "why": "Connecting variant covers (2 copies); part of Fall of X",
+          "rawNM": "15"
+        },
+        {
+          "title": "Giant-Size X-Men: Apocalypse",
+          "issue": "#1",
+          "why": "Giant-Size one-shot; variant edition",
+          "rawNM": "20"
+        },
+        {
+          "title": "Black Widow",
+          "issue": "#1",
+          "why": "1st issue of Kelly Thompson's acclaimed Black Widow run",
+          "rawNM": "15"
+        },
+        {
+          "title": "X-Men '97",
+          "issue": "#1",
+          "why": "Tie-in to acclaimed X-Men '97 animated series; 1st issu",
+          "rawNM": "20"
+        },
+        {
+          "title": "Superman/Spider-Man",
+          "issue": "#1",
+          "why": "Intercompany crossover revival; Dan Mora cover variant;",
+          "rawNM": "20"
+        },
+        {
+          "title": "Superman/Spider-Man",
+          "issue": "#1",
+          "why": "Spider-Punk variant cover of intercompany crossover",
+          "rawNM": "15"
+        }
+      ]
+    },
+    "4": {
+      "boxNumber": 4,
+      "label": "Box 04",
+      "warning": "",
+      "stats": {
+        "comics": 60,
+        "keys": 25,
+        "signed": 0
+      },
+      "firstComic": "X-Men #282",
+      "lastComic": "World's Finest: Batman/Superman Foil Cover (2026 run)",
+      "topKeys": [
+        {
+          "title": "X-Men",
+          "issue": "#282",
+          "why": "1st appearance of Bishop — one of the most important X-",
+          "rawNM": "10–15"
+        },
+        {
+          "title": "Cloak and Dagger",
+          "issue": "#5",
+          "why": "Part of the original Cloak & Dagger limited series — ea",
+          "rawNM": "15"
+        },
+        {
+          "title": "Cloak and Dagger",
+          "issue": "#1",
+          "why": "1st issue of original Cloak & Dagger limited series — t",
+          "rawNM": "20"
+        },
+        {
+          "title": "Luke Cage, Power Man",
+          "issue": "#17",
+          "why": "Early Bronze Age Luke Cage solo — Power Man era; low pr",
+          "rawNM": "20"
+        },
+        {
+          "title": "Captain America & The Falcon",
+          "issue": "#137",
+          "why": "Early Bronze Age Cap & Falcon; Sal Buscema art; scarce ",
+          "rawNM": "30"
+        },
+        {
+          "title": "Captain America & The Falcon",
+          "issue": "#138",
+          "why": "Early Bronze Age Cap & Falcon",
+          "rawNM": "25"
+        },
+        {
+          "title": "Captain America & The Falcon",
+          "issue": "#155",
+          "why": "Bronze Age Cap & Falcon; part of Steve Englehart's accl",
+          "rawNM": "20"
+        },
+        {
+          "title": "Captain America & The Falcon",
+          "issue": "#156",
+          "why": "Englehart's Cap run; 1950s Cap vs. real Cap — key story",
+          "rawNM": "20"
+        }
+      ]
+    },
+    "5": {
+      "boxNumber": 5,
+      "label": "Box 05",
+      "warning": "",
+      "stats": {
+        "comics": 75,
+        "keys": 26,
+        "signed": 2
+      },
+      "firstComic": "Daredevil #1",
+      "lastComic": "Absolute Batman #8",
+      "topKeys": [
+        {
+          "title": "Daredevil",
+          "issue": "#1",
+          "why": "Modern DD #1 foil — Saladin Ahmed relaunch; foil varian",
+          "rawNM": "20"
+        },
+        {
+          "title": "Tales of Suspense",
+          "issue": "#98",
+          "why": "2nd copy — early Iron Man & Cap split book; pre-Captain",
+          "rawNM": "40"
+        },
+        {
+          "title": "Secret Wars",
+          "issue": "#8",
+          "why": "Spider-Man acquires alien black costume — one of the mo",
+          "rawNM": "80"
+        },
+        {
+          "title": "Wolverine",
+          "issue": "#8",
+          "why": "Part of Wolverine's first ever solo limited series (198",
+          "rawNM": "80"
+        },
+        {
+          "title": "Infernal Hulk",
+          "issue": "#1",
+          "why": "Signed by Phillip Kennedy Johnson; new Hulk concept",
+          "rawNM": "30"
+        },
+        {
+          "title": "The Mortal Thor",
+          "issue": "#4",
+          "why": "New 2025 Thor title; InHyuk Lee Streetverse variant — #",
+          "rawNM": "20"
+        },
+        {
+          "title": "Green Lantern",
+          "issue": "#33",
+          "why": "David Aja cover with silver foil treatment — dual colle",
+          "rawNM": "25"
+        },
+        {
+          "title": "Black Panther",
+          "issue": "#1",
+          "why": "Alex Ross published pencil sketch variant cover — one o",
+          "rawNM": "80"
+        }
+      ]
+    },
+    "6": {
+      "boxNumber": 6,
+      "label": "Box 06",
+      "warning": "",
+      "stats": {
+        "comics": 29,
+        "keys": 10,
+        "signed": 0
+      },
+      "firstComic": "Absolute Batman #9",
+      "lastComic": "The Mighty Thor #169",
+      "topKeys": [
+        {
+          "title": "Absolute Batman",
+          "issue": "#12",
+          "why": "Black & White special edition of Absolute Batman #12; p",
+          "rawNM": "25"
+        },
+        {
+          "title": "Absolute Batman Annual",
+          "issue": "#1",
+          "why": "First Absolute Batman Annual — key format issue; 1st pr",
+          "rawNM": "20"
+        },
+        {
+          "title": "Absolute Superman",
+          "issue": "#1",
+          "why": "Launch of Absolute Superman — Jason Aaron's bold reimag",
+          "rawNM": "40"
+        },
+        {
+          "title": "Absolute Wonder Woman",
+          "issue": "#1",
+          "why": "Kelly Thompson's Absolute Wonder Woman launch — critica",
+          "rawNM": "40"
+        },
+        {
+          "title": "Absolute Green Lantern",
+          "issue": "#1",
+          "why": "Absolute Green Lantern launch; 1st print; new GL in Abs",
+          "rawNM": "30"
+        },
+        {
+          "title": "Martian Manhunter",
+          "issue": "#1",
+          "why": "New Martian Manhunter series #1; unread 1st print",
+          "rawNM": "15"
+        },
+        {
+          "title": "Batman",
+          "issue": "#125",
+          "why": "Batman #125 — Tim Drake Robin backup story series begin",
+          "rawNM": "15"
+        },
+        {
+          "title": "Batman/Wonder Woman: Truth",
+          "issue": "#1",
+          "why": "Foil cover; Batman/Wonder Woman prestige one-shot",
+          "rawNM": "20"
+        }
+      ]
+    },
+    "7": {
+      "boxNumber": 7,
+      "label": "Box 07",
+      "warning": "",
+      "stats": {
+        "comics": 204,
+        "keys": 10,
+        "signed": 0
+      },
+      "firstComic": "The Flash #112",
+      "lastComic": "Justice League of America: 80-Page Giant #1",
+      "topKeys": [
+        {
+          "title": "The Flash",
+          "issue": "#164",
+          "why": "1st issue of Geoff Johns' legendary Flash run — massive",
+          "rawNM": "5–12 raw"
+        },
+        {
+          "title": "The Flash",
+          "issue": "#182",
+          "why": "1st Zoom (Hunter Zolomon) as Reverse-Flash — major vill",
+          "rawNM": "5–12 raw"
+        },
+        {
+          "title": "The Flash",
+          "issue": "#197",
+          "why": "Zoom origin issue — 'Blitz' arc peak; one of Johns' fin",
+          "rawNM": "5–12 raw"
+        },
+        {
+          "title": "The Flash",
+          "issue": "#200",
+          "why": "Flash #200 — landmark anniversary issue; Wally's identi",
+          "rawNM": "5–12 raw"
+        },
+        {
+          "title": "The Flash",
+          "issue": "#225",
+          "why": "Final issue of Geoff Johns' Flash run — concludes Rogue",
+          "rawNM": "8–20 raw (Johns run)"
+        },
+        {
+          "title": "JLA",
+          "issue": "#50",
+          "why": "JLA #50 anniversary issue — Kelly era milestone",
+          "rawNM": "5–12"
+        },
+        {
+          "title": "JLA",
+          "issue": "#75",
+          "why": "Final Joe Kelly JLA issue — Obsidian Age conclusion",
+          "rawNM": "5–12"
+        },
+        {
+          "title": "JLA",
+          "issue": "#100",
+          "why": "JLA #100 anniversary — major landmark DC issue",
+          "rawNM": "8–20"
+        }
+      ]
+    },
+    "9": {
+      "boxNumber": 9,
+      "label": "Box 09",
+      "warning": "",
+      "stats": {
+        "comics": 86,
+        "keys": 12,
+        "signed": 0
+      },
+      "firstComic": "Multiversity: Teen Justice #2",
+      "lastComic": "100-Page Giant: Aquaman #1",
+      "topKeys": [
+        {
+          "title": "Future State: The Next Batman",
+          "issue": "#2",
+          "why": "John Ridley's Future State flagship — Tim Fox as Batman",
+          "rawNM": "8–20"
+        },
+        {
+          "title": "Future State: The Next Batman",
+          "issue": "#3",
+          "why": "John Ridley's Future State flagship — Tim Fox as Batman",
+          "rawNM": "8–20"
+        },
+        {
+          "title": "Future State: The Next Batman",
+          "issue": "#4",
+          "why": "John Ridley's Future State flagship — Tim Fox as Batman",
+          "rawNM": "8–20"
+        },
+        {
+          "title": "Future State: Aquaman",
+          "issue": "#1",
+          "why": "1st Andy Curry (Aquawoman) as future Aquaman — son of A",
+          "rawNM": "8–20"
+        },
+        {
+          "title": "Future State: Aquaman",
+          "issue": "#2",
+          "why": "1st Andy Curry (Aquawoman) as future Aquaman — son of A",
+          "rawNM": "8–20"
+        },
+        {
+          "title": "Underworld Unleashed",
+          "issue": "#1",
+          "why": "1st issue of major 1995 DC crossover event — Neron empo",
+          "rawNM": "8–15"
+        },
+        {
+          "title": "Batman Urban Legends",
+          "issue": "#1",
+          "why": "1st issue of BUL — Batman anthology title with multiple",
+          "rawNM": "10–20"
+        },
+        {
+          "title": "Truth and Justice",
+          "issue": "#1",
+          "why": "Alex Ross painted — COMPLETE 9-issue",
+          "rawNM": "22"
+        }
+      ]
+    },
+    "10": {
+      "boxNumber": 10,
+      "label": "Box 10",
+      "warning": "",
+      "stats": {
+        "comics": 139,
+        "keys": 15,
+        "signed": 0
+      },
+      "firstComic": "Batman (The New 52) #8",
+      "lastComic": "Smallville: Season Eleven #11",
+      "topKeys": [
+        {
+          "title": "Batman (The New 52)",
+          "issue": "#13",
+          "why": "Death of the Family begins — Joker returns with most ho",
+          "rawNM": "15–30"
+        },
+        {
+          "title": "Batman (The New 52)",
+          "issue": "#21",
+          "why": "Batman: Year Zero begins — Snyder's New 52 Batman origi",
+          "rawNM": "15–30"
+        },
+        {
+          "title": "Batman Annual (The New 52)",
+          "issue": "#1",
+          "why": "1st appearance of Mr. Freeze in New 52 continuity — com",
+          "rawNM": "15"
+        },
+        {
+          "title": "Batman and Robin (The New 52)",
+          "issue": "#5",
+          "why": "Batman and Robin New 52 #5. ",
+          "rawNM": "5–10"
+        },
+        {
+          "title": "Batman and Robin (The New 52)",
+          "issue": "#13",
+          "why": "Batman and Robin New 52 #13. ",
+          "rawNM": "5–10"
+        },
+        {
+          "title": "Batman and Robin (The New 52)",
+          "issue": "#15",
+          "why": "Batman and Robin New 52 #15. ",
+          "rawNM": "5–10"
+        },
+        {
+          "title": "Batman and Robin (The New 52)",
+          "issue": "#18",
+          "why": "Batman and Robin New 52 #18. ",
+          "rawNM": "5–10"
+        },
+        {
+          "title": "Batman and Robin (The New 52)",
+          "issue": "#4.9",
+          "why": "Futures End lenticular 3D cover — DC line-wide Septembe",
+          "rawNM": "8"
+        }
+      ]
+    },
+    "11": {
+      "boxNumber": 11,
+      "label": "Box 11",
+      "warning": "",
+      "stats": {
+        "comics": 95,
+        "keys": 14,
+        "signed": 0
+      },
+      "firstComic": "Wonder Woman Evolution #2",
+      "lastComic": "Batgirl (2021) #7",
+      "topKeys": [
+        {
+          "title": "Wonder Woman 80th Anniversary",
+          "issue": "#1",
+          "why": "Wonder Woman 80th Anniversary #1 — landmark anthology w",
+          "rawNM": "5"
+        },
+        {
+          "title": "Event Leviathan",
+          "issue": "#1",
+          "why": "Event Leviathan #1 — Bendis/Maleev; spy org mystery; wh",
+          "rawNM": "5"
+        },
+        {
+          "title": "Justice League (Snyder)",
+          "issue": "#12",
+          "why": "JL #12 Snyder/Jimenez — Totality quest; Justice/Doom; l",
+          "rawNM": "5"
+        },
+        {
+          "title": "Young Justice (2019)",
+          "issue": "#1",
+          "why": "Young Justice #1 (2019) — Bendis/Gleason; Tim Drake rea",
+          "rawNM": "5"
+        },
+        {
+          "title": "Batman and the Outsiders (Hill)",
+          "issue": "#1",
+          "why": "Batman and the Outsiders #1 Hill — Batman/Black Lightni",
+          "rawNM": "5"
+        },
+        {
+          "title": "Naomi (2019)",
+          "issue": "#1",
+          "why": "Naomi #1 — Bendis/Campbell; 1st Naomi McDuffie; mystery",
+          "rawNM": "5"
+        },
+        {
+          "title": "Detective Comics",
+          "issue": "#1000",
+          "why": "Detective Comics #1000 — landmark 80-year anniversary i",
+          "rawNM": "5"
+        },
+        {
+          "title": "Dark Days: The Forge",
+          "issue": "#1",
+          "why": "Dark Days: The Forge #1 — Snyder/Kubert; Dark Nights Me",
+          "rawNM": "5"
+        }
+      ]
+    },
+    "12": {
+      "boxNumber": 12,
+      "label": "Box 12",
+      "warning": "",
+      "stats": {
+        "comics": 171,
+        "keys": 21,
+        "signed": 0
+      },
+      "firstComic": "Tales of the Titans: Donna Troy #3 of 4",
+      "lastComic": "Wonder Woman #800",
+      "topKeys": [
+        {
+          "title": "Aquaman: All In",
+          "issue": "#1",
+          "why": "Aquaman: All In #1 — foil Walker cover; new All In Aqua",
+          "rawNM": "5"
+        },
+        {
+          "title": "The Outsiders (2024)",
+          "issue": "#1",
+          "why": "Outsiders #1 (2024) — Lanzing/Kelly relaunch",
+          "rawNM": "5"
+        },
+        {
+          "title": "Batman: The Long Halloween Special",
+          "issue": "#1",
+          "why": "Batman: Long Halloween Special — Jeph Loeb/Tim Sale; Ti",
+          "rawNM": "5"
+        },
+        {
+          "title": "Dawn of DC Primer",
+          "issue": "#1",
+          "why": "Dawn of DC Primer #1 — wraparound cover; launches entir",
+          "rawNM": "5"
+        },
+        {
+          "title": "Absolute Power: Crown Jewels",
+          "issue": "#1",
+          "why": "Absolute Power Crown Jewels #1 — Mark Waid; zero issue ",
+          "rawNM": "5"
+        },
+        {
+          "title": "Absolute Power",
+          "issue": "#1",
+          "why": "Absolute Power #1 — Mark Waid/Dan Mora; DC-wide 2024 cr",
+          "rawNM": "5"
+        },
+        {
+          "title": "Absolute Power: Task Force VII",
+          "issue": "#1",
+          "why": "Task Force VII #1",
+          "rawNM": "5"
+        },
+        {
+          "title": "Batman (2016)",
+          "issue": "#130",
+          "why": "Batman #130 — Zdarsky's Failsafe arc begins; landmark Z",
+          "rawNM": "5"
+        }
+      ]
+    },
+    "13": {
+      "boxNumber": 13,
+      "label": "Box 13",
+      "warning": "",
+      "stats": {
+        "comics": 223,
+        "keys": 24,
+        "signed": 0
+      },
+      "firstComic": "Captain America #1",
+      "lastComic": "Captain America (2022) #0",
+      "topKeys": [
+        {
+          "title": "Captain America",
+          "issue": "#1",
+          "why": "Captain America Vol 5 #1 — Ed Brubaker/Steve Epting; Ou",
+          "rawNM": "5"
+        },
+        {
+          "title": "Captain America",
+          "issue": "#25",
+          "why": "Captain America #25 — Brubaker; Steve Rogers assassinat",
+          "rawNM": "5"
+        },
+        {
+          "title": "Captain America",
+          "issue": "#600",
+          "why": "Captain America #600 — Brubaker; anniversary; Steve Rog",
+          "rawNM": "5"
+        },
+        {
+          "title": "Captain America: Reborn",
+          "issue": "#1",
+          "why": "Cap Reborn #1 — Brubaker/Bryan Hitch; Steve Rogers retu",
+          "rawNM": "5"
+        },
+        {
+          "title": "Captain America: Winter Soldier: Winter Kills",
+          "issue": "#1",
+          "why": "Cap: Winter Kills #1 — Brubaker; Winter Soldier holiday",
+          "rawNM": "5"
+        },
+        {
+          "title": "Captain America/Black Panther: Flags of Our Fathers",
+          "issue": "#1",
+          "why": "Cap/BP Flags of Our Fathers #1 — Reginald Hudlin; COMPL",
+          "rawNM": "5"
+        },
+        {
+          "title": "Captain America (Kirkman)",
+          "issue": "#1",
+          "why": "Captain America (Kirkman) #1 — John Ney Reiber/John Cas",
+          "rawNM": "5"
+        },
+        {
+          "title": "Captain America (Remender)",
+          "issue": "#1",
+          "why": "Cap #1 Remender/Romita Jr. — Marvel NOW; Dimension Z ar",
+          "rawNM": "5"
+        }
+      ]
+    },
+    "14": {
+      "boxNumber": 14,
+      "label": "Box 14",
+      "warning": "",
+      "stats": {
+        "comics": 174,
+        "keys": 18,
+        "signed": 0
+      },
+      "firstComic": "Batman/Superman: World's Finest #1",
+      "lastComic": "Truth and Justice #3",
+      "topKeys": [
+        {
+          "title": "Batman/Superman: World's Finest",
+          "issue": "#1",
+          "why": "Batman/Superman: World's Finest #1 — Mark Waid/Dan Mora",
+          "rawNM": "5"
+        },
+        {
+          "title": "Justice League vs. Legion of Super-Heroes",
+          "issue": "#1",
+          "why": "JL vs LSH #1 — Bendis; DC event",
+          "rawNM": "5"
+        },
+        {
+          "title": "Challenge of the Super Sons",
+          "issue": "#1",
+          "why": "Challenge of Super Sons #1 — Tomasi/Barberi; Jon Kent a",
+          "rawNM": "5"
+        },
+        {
+          "title": "Checkmate (2021)",
+          "issue": "#1",
+          "why": "Checkmate #1 Bendis/Maleev; spy thriller sequel to Even",
+          "rawNM": "5"
+        },
+        {
+          "title": "Green Lantern (2021)",
+          "issue": "#2",
+          "why": "GL #2 Thorne/Raney — Jo Mullein featured; cool cover",
+          "rawNM": "5"
+        },
+        {
+          "title": "The Next Batman: Second Son",
+          "issue": "#1",
+          "why": "Next Batman: Second Son #1 — John Ridley; Tim Fox Batma",
+          "rawNM": "5"
+        },
+        {
+          "title": "Action Comics",
+          "issue": "#1023",
+          "why": "Action #1023— House of Kent crossover start",
+          "rawNM": "5"
+        },
+        {
+          "title": "Wonder Woman Evolution",
+          "issue": "#1",
+          "why": "Wonder Woman Evolution #1 — Stephanie Phillips; 8-issue",
+          "rawNM": "5"
+        }
+      ]
+    },
+    "15": {
+      "boxNumber": 15,
+      "label": "Box 15",
+      "warning": "",
+      "stats": {
+        "comics": 180,
+        "keys": 38,
+        "signed": 0
+      },
+      "firstComic": "DC Universe Rebirth Special #1",
+      "lastComic": "Justice League (Snyder) #4",
+      "topKeys": [
+        {
+          "title": "DC Universe Rebirth Special",
+          "issue": "#1",
+          "why": "DC Universe Rebirth Special #1 — Geoff Johns; Wally Wes",
+          "rawNM": "15"
+        },
+        {
+          "title": "Death of Hawkman",
+          "issue": "#1",
+          "why": "Death of Hawkman #1 — Robert Venditti; 🎉 COMPLETE 6-iss",
+          "rawNM": "8"
+        },
+        {
+          "title": "Justice League (Hitch Rebirth)",
+          "issue": "#1",
+          "why": "Justice League #1 Hitch Rebirth — DC Universe Rebirth c",
+          "rawNM": "8"
+        },
+        {
+          "title": "Justice League (Hitch Rebirth)",
+          "issue": "#1",
+          "why": "Justice League #1 Hitch Rebirth — Justice League Rebirt",
+          "rawNM": "8"
+        },
+        {
+          "title": "Justice League (Hitch Rebirth)",
+          "issue": "#1",
+          "why": "Justice League #1 Hitch Rebirth — DC Universe Rebirth c",
+          "rawNM": "8"
+        },
+        {
+          "title": "Justice League (Hitch Rebirth)",
+          "issue": "#1",
+          "why": "Justice League #1 Hitch Rebirth — Justice League Rebirt",
+          "rawNM": "8"
+        },
+        {
+          "title": "Nightwing (Rebirth)",
+          "issue": "#1",
+          "why": "Nightwing Rebirth #1 — Tim Seely/Yanick Paquette; Dick ",
+          "rawNM": "10"
+        },
+        {
+          "title": "Nightwing (Rebirth)",
+          "issue": "#1",
+          "why": "Nightwing Rebirth #1 — Tim Seely/Yanick Paquette; Dick ",
+          "rawNM": "10"
+        }
+      ]
+    },
+    "16": {
+      "boxNumber": 16,
+      "label": "Box 16",
+      "warning": "",
+      "stats": {
+        "comics": 212,
+        "keys": 24,
+        "signed": 0
+      },
+      "firstComic": "Uncanny X-Men #402",
+      "lastComic": "Cable #83",
+      "topKeys": [
+        {
+          "title": "X-Men",
+          "issue": "#444",
+          "why": "X-Men #444 — Claremont return to X-Men",
+          "rawNM": "8"
+        },
+        {
+          "title": "Extreme X-Men",
+          "issue": "#1",
+          "why": "Extreme X-Men #1 — Claremont/Larroca; X-Men splinter te",
+          "rawNM": "10"
+        },
+        {
+          "title": "New Mutants (2009)",
+          "issue": "#1",
+          "why": "New Mutants #1 (2009) — Zeb Wells; original New Mutants",
+          "rawNM": "10"
+        },
+        {
+          "title": "New Mutants (DeFilippis)",
+          "issue": "#1",
+          "why": "New Mutants #1 (DeFilippis) — DeFilippis/Weir; $2.50 er",
+          "rawNM": "8"
+        },
+        {
+          "title": "New X-Men: Academy X",
+          "issue": "#1",
+          "why": "New X-Men: Academy X #1 — DeFilippis; Xavier Institute ",
+          "rawNM": "8"
+        },
+        {
+          "title": "Astonishing X-Men: Exogenesis",
+          "issue": "#1 of 5",
+          "why": "AXM Exogenesis #1 — Warren Ellis; 🎉 COMPLETE 5-issue Wa",
+          "rawNM": "8"
+        },
+        {
+          "title": "Dark Avengers/Uncanny X-Men: Utopia",
+          "issue": "#1",
+          "why": "DA/UXM Utopia #1 — Matt Fraction; Norman Osborn vs X-Me",
+          "rawNM": "10"
+        },
+        {
+          "title": "Dark Avengers/Uncanny X-Men: Exodus (conclusion)",
+          "issue": "#1",
+          "why": "DA/UXM Exodus #1 — Utopia crossover conclusion",
+          "rawNM": "8"
+        }
+      ]
+    },
+    "17": {
+      "boxNumber": 17,
+      "label": "Box 17",
+      "warning": "",
+      "stats": {
+        "comics": 146,
+        "keys": 43,
+        "signed": 0
+      },
+      "firstComic": "Aquaman #1",
+      "lastComic": "52 #8",
+      "topKeys": [
+        {
+          "title": "Aquaman",
+          "issue": "#1",
+          "why": "New 52 #1 — Geoff Johns/Ivan Reis relaunch; sets up Kin",
+          "rawNM": "25"
+        },
+        {
+          "title": "Batgirl",
+          "issue": "#1",
+          "why": "New 52 #1 — Gail Simone; Barbara Gordon walks again; co",
+          "rawNM": "20"
+        },
+        {
+          "title": "Batwing",
+          "issue": "#1",
+          "why": "New 52 #1 — first solo Black African superhero DC serie",
+          "rawNM": "15"
+        },
+        {
+          "title": "The Flash",
+          "issue": "#1",
+          "why": "New 52 #1 — Manapul writes and draws; Francis Manapul's",
+          "rawNM": "20"
+        },
+        {
+          "title": "Nightwing",
+          "issue": "#1",
+          "why": "New 52 #1 — Dick Grayson solo; Kyle Higgins run",
+          "rawNM": "15"
+        },
+        {
+          "title": "Teen Titans",
+          "issue": "#1",
+          "why": "New 52 #1 — Tim Drake as Red Robin leads new team",
+          "rawNM": "15"
+        },
+        {
+          "title": "DC Universe Presents",
+          "issue": "#1",
+          "why": "New 52 #1 — Deadman spotlight; Paul Jenkins",
+          "rawNM": "10"
+        },
+        {
+          "title": "Supergirl",
+          "issue": "#1",
+          "why": "New 52 #1 — Kara Zor-El relaunch",
+          "rawNM": "15"
+        }
+      ]
+    },
+    "18": {
+      "boxNumber": 18,
+      "label": "Box 18",
+      "warning": "",
+      "stats": {
+        "comics": 165,
+        "keys": 23,
+        "signed": 0
+      },
+      "firstComic": "Ultimate Fantastic Four #1",
+      "lastComic": "Ultimate Wolverine vs. Hulk #1",
+      "topKeys": [
+        {
+          "title": "Ultimate Fantastic Four",
+          "issue": "#1",
+          "why": "First issue of Ultimate FF — Ellis/Hitch relaunch; intr",
+          "rawNM": "30"
+        },
+        {
+          "title": "Ultimate Fantastic Four",
+          "issue": "#6",
+          "why": "Final issue of 'The Fantastic' arc (Ellis/Kubert run co",
+          "rawNM": "15"
+        },
+        {
+          "title": "Ultimate Fantastic Four",
+          "issue": "#21",
+          "why": "'Crossover' arc — Ultimate Reed Richards meets 616 Marv",
+          "rawNM": "80"
+        },
+        {
+          "title": "Ultimate Fantastic Four",
+          "issue": "#22",
+          "why": "Marvel Zombies appearance continues — Zombie Reed Richa",
+          "rawNM": "40"
+        },
+        {
+          "title": "Ultimate Fantastic Four",
+          "issue": "#23",
+          "why": "Marvel Zombies arc conclusion — pairs with #21-22 as th",
+          "rawNM": "30"
+        },
+        {
+          "title": "Ultimate Fantastic Four Annual",
+          "issue": "#1",
+          "why": "UFF Annual #1 — features Ultimate Inhumans; 1st Ultimat",
+          "rawNM": "20"
+        },
+        {
+          "title": "Ultimate X-Men",
+          "issue": "#1",
+          "why": "First issue of Ultimate X-Men — Mark Millar/Adam Kubert",
+          "rawNM": "40"
+        },
+        {
+          "title": "Ultimate X-Men",
+          "issue": "#1",
+          "why": "Free Comic Book Day edition — 'The Tomorrow People' — e",
+          "rawNM": "50"
+        }
+      ]
+    },
+    "19": {
+      "boxNumber": 19,
+      "label": "Box 19",
+      "warning": "",
+      "stats": {
+        "comics": 53,
+        "keys": 11,
+        "signed": 0
+      },
+      "firstComic": "Kiss #1",
+      "lastComic": "All-Star Superman #1",
+      "topKeys": [
+        {
+          "title": "Return of Superman 30th Anniversary Special",
+          "issue": "#1",
+          "why": "30-year milestone book — Death and Return of Superman a",
+          "rawNM": "15"
+        },
+        {
+          "title": "Superman: Son of Kal-El",
+          "issue": "#2",
+          "why": "Early issue of landmark Jon Kent Superman series; note ",
+          "rawNM": "10"
+        },
+        {
+          "title": "Trial of the Amazons",
+          "issue": "#1",
+          "why": "Major WW crossover event — reshapes Amazonian mythology",
+          "rawNM": "12"
+        },
+        {
+          "title": "Trial of the Amazons",
+          "issue": "#2",
+          "why": "Crossover event conclusion",
+          "rawNM": "12"
+        },
+        {
+          "title": "Hawkgirl",
+          "issue": "#1",
+          "why": "First issue Hawkgirl solo series — Kendra Saunders spot",
+          "rawNM": "15"
+        },
+        {
+          "title": "Batman: Death in the Family — Robin Lives!",
+          "issue": "#1",
+          "why": "Alternate ending to 'Death in the Family' — what if Jas",
+          "rawNM": "20"
+        },
+        {
+          "title": "Batman: Death in the Family — Robin Lives!",
+          "issue": "#2",
+          "why": "Part of landmark alternate-ending mini",
+          "rawNM": "15"
+        },
+        {
+          "title": "Batman: Death in the Family — Robin Lives!",
+          "issue": "#3",
+          "why": "Batman: Death in the Family — Robin Lives! #3 — key iss",
+          "rawNM": "15"
+        }
+      ]
+    },
+    "20": {
+      "boxNumber": 20,
+      "label": "Box 20",
+      "warning": "",
+      "stats": {
+        "comics": 112,
+        "keys": 18,
+        "signed": 0
+      },
+      "firstComic": "Dawn of DC: Cyborg #1",
+      "lastComic": "Justice League: The Atom Project #2",
+      "topKeys": [
+        {
+          "title": "Dawn of DC: Cyborg",
+          "issue": "#1",
+          "why": "First issue of Cyborg solo series — Hampton; Cyborg get",
+          "rawNM": "15"
+        },
+        {
+          "title": "Titans",
+          "issue": "#1",
+          "why": "First issue of Tom Taylor Titans relaunch — Dawn of DC;",
+          "rawNM": "20"
+        },
+        {
+          "title": "Action Comics",
+          "issue": "#1051",
+          "why": "Landmark issue number — Dawn of DC milestone; part of A",
+          "rawNM": "12"
+        },
+        {
+          "title": "DC: Earth Prime",
+          "issue": "#The Flash #5 (Grant Gustin cover)",
+          "why": "Grant Gustin (TV Flash actor) cover variant — limited T",
+          "rawNM": "15"
+        },
+        {
+          "title": "Batman/Superman: World's Finest",
+          "issue": "#3",
+          "why": "Early issue of critically acclaimed Waid/Mora run",
+          "rawNM": "12"
+        },
+        {
+          "title": "Unstoppable Doom Patrol",
+          "issue": "#1",
+          "why": "First issue of Doom Patrol relaunch — Dennis Culver",
+          "rawNM": "15"
+        },
+        {
+          "title": "Lazarus Planet: Revenge of the Gods",
+          "issue": "#1",
+          "why": "First issue — DC Universe Lazarus Planet event; Revenge",
+          "rawNM": "12"
+        },
+        {
+          "title": "Shazam!",
+          "issue": "#1",
+          "why": "First issue of Waid/Mora Shazam — one of the best-revie",
+          "rawNM": "20"
+        }
+      ]
+    },
+    "21": {
+      "boxNumber": 21,
+      "label": "Box 21",
+      "warning": "",
+      "stats": {
+        "comics": 135,
+        "keys": 11,
+        "signed": 0
+      },
+      "firstComic": "Batman/Deathblow: After the Fire #1",
+      "lastComic": "Savage Dragon #95",
+      "topKeys": [
+        {
+          "title": "Batman/Deathblow: After the Fire",
+          "issue": "#1",
+          "why": "Azzarello prestige format — Batman meets Wildstorm's De",
+          "rawNM": "20"
+        },
+        {
+          "title": "Vimanarama!",
+          "issue": "#2",
+          "why": "Grant Morrison Vertigo series — Ali and the Ultrahadeen",
+          "rawNM": "12"
+        },
+        {
+          "title": "Ex Machina",
+          "issue": "#1",
+          "why": "First issue of BKV's Ex Machina — Mayor of NYC with sup",
+          "rawNM": "30"
+        },
+        {
+          "title": "Torchwood",
+          "issue": "#1",
+          "why": "Torchwood #1 — John Barrowman writes — Tommy Lee Edward",
+          "rawNM": "15"
+        },
+        {
+          "title": "WildC.A.T.s",
+          "issue": "#1",
+          "why": "WildCATs vol 2 #1 — Grant Morrison relaunch of Wildstor",
+          "rawNM": "25"
+        },
+        {
+          "title": "Wildcats: Version 3.0",
+          "issue": "#1",
+          "why": "First issue of Casey's landmark Wildcats 3.0 — post-sup",
+          "rawNM": "15"
+        },
+        {
+          "title": "Gen 13",
+          "issue": "#16",
+          "why": "Gen 13 #16 — Brandon Choi / J. Scott Campbell era — Cam",
+          "rawNM": "15"
+        },
+        {
+          "title": "New Warriors: Giant-Size Spectacular",
+          "issue": "#1",
+          "why": "Rare Giant-Size spectacular — New Warriors — Fabian Nic",
+          "rawNM": "15"
+        }
+      ]
+    },
+    "22": {
+      "boxNumber": 22,
+      "label": "Box 22",
+      "warning": "",
+      "stats": {
+        "comics": 140,
+        "keys": 14,
+        "signed": 0
+      },
+      "firstComic": "Batman/Superman: World's Finest #4",
+      "lastComic": "Multiversity: Teen Justice #1",
+      "topKeys": [
+        {
+          "title": "Nubia & the Amazons",
+          "issue": "#1",
+          "why": "First issue — Nubia solo series — first Black Amazon Qu",
+          "rawNM": "15"
+        },
+        {
+          "title": "Black Adam",
+          "issue": "#1",
+          "why": "Black Adam #1 — Christopher Priest — landmark Black Ada",
+          "rawNM": "15"
+        },
+        {
+          "title": "Superman: Son of Kal-El",
+          "issue": "#5",
+          "why": "⭐ KEY ISSUE — Jon Kent comes out as bisexual — Tom Tayl",
+          "rawNM": "35"
+        },
+        {
+          "title": "Nightwing",
+          "issue": "#100",
+          "why": "Milestone #100 — Tom Taylor / Bruno Redondo — landmark ",
+          "rawNM": "20"
+        },
+        {
+          "title": "Milestone Returns: Infinite Edition",
+          "issue": "#0",
+          "why": "Milestone Returns #0 — Reginald Hudlin — Milestone Init",
+          "rawNM": "12"
+        },
+        {
+          "title": "I Am Batman",
+          "issue": "#0",
+          "why": "First issue — Jace Fox as Batman — John Ridley — landma",
+          "rawNM": "20"
+        },
+        {
+          "title": "Aquaman: The Becoming",
+          "issue": "#1",
+          "why": "First issue — Jackson Hyde as Aquaman solo — Brandon Th",
+          "rawNM": "15"
+        },
+        {
+          "title": "Dark Crisis on Infinite Earths",
+          "issue": "#1",
+          "why": "First issue of Dark Crisis — Joshua Williamson — DC mul",
+          "rawNM": "15"
+        }
+      ]
+    },
+    "23": {
+      "boxNumber": 23,
+      "label": "Box 23",
+      "warning": "",
+      "stats": {
+        "comics": 248,
+        "keys": 13,
+        "signed": 0
+      },
+      "firstComic": "Savage Avengers #1",
+      "lastComic": "Young Avengers #1",
+      "topKeys": [
+        {
+          "title": "Savage Avengers",
+          "issue": "#1",
+          "why": "Savage Avengers #1 — Gerry Duggan — Conan in the Marvel",
+          "rawNM": "15"
+        },
+        {
+          "title": "Chadwick Boseman: Rest in Power",
+          "issue": "#1",
+          "why": "Chadwick Boseman tribute issue — Black Panther memorial",
+          "rawNM": "20"
+        },
+        {
+          "title": "New Avengers",
+          "issue": "#1",
+          "why": "New Avengers #1 — Bendis/Finch — relaunches Avengers po",
+          "rawNM": "20"
+        },
+        {
+          "title": "New Avengers",
+          "issue": "#6",
+          "why": "New Avengers #6 — Bendis/Finch — early key issue of lan",
+          "rawNM": "12"
+        },
+        {
+          "title": "New Avengers/Illuminati",
+          "issue": "#1",
+          "why": "New Avengers: Illuminati Civil War Special — Bendis — $",
+          "rawNM": "20"
+        },
+        {
+          "title": "New Avengers: Illuminati",
+          "issue": "#1",
+          "why": "First issue of Illuminati mini-series — Bendis/Reed — s",
+          "rawNM": "15"
+        },
+        {
+          "title": "Mighty Avengers",
+          "issue": "#1",
+          "why": "Mighty Avengers #1 — Bendis/Cho — $2.99 direct edition ",
+          "rawNM": "15"
+        },
+        {
+          "title": "Young Avengers",
+          "issue": "#1",
+          "why": "First issue of Young Avengers — Allan Heinberg / Jim Ch",
+          "rawNM": "40"
+        }
+      ]
+    },
+    "24": {
+      "boxNumber": 24,
+      "label": "Box 24",
+      "warning": "",
+      "stats": {
+        "comics": 118,
+        "keys": 17,
+        "signed": 0
+      },
+      "firstComic": "Gatchaman #3",
+      "lastComic": "Strange Fruit #4",
+      "topKeys": [
+        {
+          "title": "The Power Fantasy",
+          "issue": "#1",
+          "why": "First issue — Kieron Gillen / Caspar Wijngaard — Image ",
+          "rawNM": "10"
+        },
+        {
+          "title": "Transformers",
+          "issue": "#17",
+          "why": "Daniel Warren Johnson Skybound — hot spec",
+          "rawNM": "30"
+        },
+        {
+          "title": "Radiant Black",
+          "issue": "#1",
+          "why": "First issue — Kyle Higgins — Image cosmic superhero — c",
+          "rawNM": "20"
+        },
+        {
+          "title": "American Gods",
+          "issue": "#1",
+          "why": "First issue — Neil Gaiman / P. Craig Russell — Dark Hor",
+          "rawNM": "10"
+        },
+        {
+          "title": "Super Crooks",
+          "issue": "#1",
+          "why": "First issue — Millar/Yu — Millerworld — Netflix adaptat",
+          "rawNM": "10"
+        },
+        {
+          "title": "Excellence",
+          "issue": "#1",
+          "why": "First issue — Brandon Thomas / Khary Randolph — Black w",
+          "rawNM": "10"
+        },
+        {
+          "title": "Die",
+          "issue": "#1",
+          "why": "First issue — Kieron Gillen / Stephanie Hans — acclaime",
+          "rawNM": "15"
+        },
+        {
+          "title": "Die",
+          "issue": "#2",
+          "why": "Gillen/Hans — tabletop RPG horror — Image",
+          "rawNM": "8"
+        }
+      ]
+    },
+    "25": {
+      "boxNumber": 25,
+      "label": "Box 25",
+      "warning": "",
+      "stats": {
+        "comics": 272,
+        "keys": 14,
+        "signed": 0
+      },
+      "firstComic": "Astonishing X-Men #1",
+      "lastComic": "Wolverine #72",
+      "topKeys": [
+        {
+          "title": "Astonishing X-Men",
+          "issue": "#1",
+          "why": "Whedon/Cassaday relaunch — one of the greatest X-Men ru",
+          "rawNM": "20"
+        },
+        {
+          "title": "Astonishing X-Men",
+          "issue": "#7",
+          "why": "Whedon/Cassaday — 'Gifted' arc continues — early key is",
+          "rawNM": "8"
+        },
+        {
+          "title": "Giant-Size Astonishing X-Men",
+          "issue": "#1",
+          "why": "Whedon/Cassaday finale — Kitty Pryde fate — conclusion ",
+          "rawNM": "15"
+        },
+        {
+          "title": "Uncanny X-Force",
+          "issue": "#1",
+          "why": "Rick Remender relaunch — critically acclaimed — Wolveri",
+          "rawNM": "15"
+        },
+        {
+          "title": "Uncanny X-Men",
+          "issue": "#1",
+          "why": "Kieron Gillen brand new ongoing relaunch — $3.99 — Carl",
+          "rawNM": "12"
+        },
+        {
+          "title": "Wolverine",
+          "issue": "#67",
+          "why": "Old Man Logan Part 1 — Millar/McNiven — one of the grea",
+          "rawNM": "30"
+        },
+        {
+          "title": "X-Men: Schism",
+          "issue": "#1",
+          "why": "Jason Aaron — X-Men split — Cyclops vs Wolverine — lead",
+          "rawNM": "12"
+        },
+        {
+          "title": "X-Men: Regenesis",
+          "issue": "#1",
+          "why": "NYCC variant — Kieron Gillen — rare convention exclusiv",
+          "rawNM": "20"
+        }
+      ]
+    },
+    "26": {
+      "boxNumber": 26,
+      "label": "Box 26",
+      "warning": "",
+      "stats": {
+        "comics": 165,
+        "keys": 13,
+        "signed": 0
+      },
+      "firstComic": "Karnak #2",
+      "lastComic": "Avengers Annual #1",
+      "topKeys": [
+        {
+          "title": "Avengers",
+          "issue": "#1",
+          "why": "Jonathan Hickman Marvel NOW Avengers launch — massive e",
+          "rawNM": "12"
+        },
+        {
+          "title": "Avengers",
+          "issue": "#500",
+          "why": "Avengers #500 — Bendis Disassembled begins — Vision att",
+          "rawNM": "15"
+        },
+        {
+          "title": "Avengers: Finale",
+          "issue": "#1",
+          "why": "Avengers: Finale one-shot — Bendis/Bagley — closes Disa",
+          "rawNM": "20"
+        },
+        {
+          "title": "New Avengers",
+          "issue": "#1",
+          "why": "Hickman New Avengers #1 — Illuminati reassembled — incu",
+          "rawNM": "15"
+        },
+        {
+          "title": "New Avengers",
+          "issue": "#1",
+          "why": "Al Ewing ANAD New Avengers #1 — Sunspot's AIM team — wi",
+          "rawNM": "10"
+        },
+        {
+          "title": "Uncanny Avengers",
+          "issue": "#1",
+          "why": "Rick Remender / John Cassaday — Unity Squad launches — ",
+          "rawNM": "12"
+        },
+        {
+          "title": "Uncanny Avengers",
+          "issue": "#1",
+          "why": "Gerry Duggan ANAD Uncanny Avengers relaunch — Ryan Steg",
+          "rawNM": "10"
+        },
+        {
+          "title": "Secret Avengers",
+          "issue": "#1",
+          "why": "Nick Spencer / Luke Ross Secret Avengers relaunch — SHI",
+          "rawNM": "10"
+        }
+      ]
+    },
+    "27": {
+      "boxNumber": 27,
+      "label": "Box 27",
+      "warning": "",
+      "stats": {
+        "comics": 183,
+        "keys": 22,
+        "signed": 0
+      },
+      "firstComic": "Alpha Flight #0.1",
+      "lastComic": "Winter Guard #4",
+      "topKeys": [
+        {
+          "title": "What If? Infinity — Thanos",
+          "issue": "#1",
+          "why": "Joshua Williamson — absolutely fantastic cover per owne",
+          "rawNM": "10"
+        },
+        {
+          "title": "War of the Realms",
+          "issue": "#1",
+          "why": "Jason Aaron / Russell Dauterman — event launch — Maleki",
+          "rawNM": "12"
+        },
+        {
+          "title": "War of the Realms: New Agents of Atlas",
+          "issue": "#1",
+          "why": "Greg Pak — Pan-Asian superhero team — Atlas team first ",
+          "rawNM": "12"
+        },
+        {
+          "title": "Incoming!",
+          "issue": "#1",
+          "why": "$9.99 massive one-shot — sets up entire 2020 Marvel lin",
+          "rawNM": "12"
+        },
+        {
+          "title": "Dark Ages",
+          "issue": "#1",
+          "why": "Tom Taylor / Iban Coello — no electricity Marvel world ",
+          "rawNM": "10"
+        },
+        {
+          "title": "Heroes Return",
+          "issue": "#1",
+          "why": "1998 — Avengers / FF return from pocket universe — Kurt",
+          "rawNM": "12"
+        },
+        {
+          "title": "Civil War",
+          "issue": "#2",
+          "why": "Millar/McNiven Civil War continues — Spider-Man unmasks",
+          "rawNM": "12"
+        },
+        {
+          "title": "Royals",
+          "issue": "#1",
+          "why": "Al Ewing — Inhumans in space — Jonboy Meyers art — Ewin",
+          "rawNM": "10"
+        }
+      ]
+    },
+    "28": {
+      "boxNumber": 28,
+      "label": "Box 28",
+      "warning": "",
+      "stats": {
+        "comics": 110,
+        "keys": 11,
+        "signed": 0
+      },
+      "firstComic": "Siege: Captain America #1",
+      "lastComic": "Sam Wilson: Captain America #12",
+      "topKeys": [
+        {
+          "title": "Siege: Captain America",
+          "issue": "#1",
+          "why": "Siege tie-in one-shot — BAGGED — Christos Gage",
+          "rawNM": "8"
+        },
+        {
+          "title": "Captain America: Who Will Wield the Shield?",
+          "issue": "#1",
+          "why": "Brubaker — Steve Rogers returns — pivotal transition is",
+          "rawNM": "10"
+        },
+        {
+          "title": "Captain America",
+          "issue": "#1",
+          "why": "Ed Brubaker / Steve McNiven Marvel NOW relaunch — first",
+          "rawNM": "15"
+        },
+        {
+          "title": "Captain America and the Falcon",
+          "issue": "#1",
+          "why": "Christopher Priest — first issue of acclaimed Cap/Falco",
+          "rawNM": "12"
+        },
+        {
+          "title": "Captain America",
+          "issue": "#616",
+          "why": "70th anniversary milestone issue — landmark — multiple ",
+          "rawNM": "12"
+        },
+        {
+          "title": "Winter Soldier",
+          "issue": "#1",
+          "why": "Kyle Higgins — $3.99 — Winter Soldier solo — modern rel",
+          "rawNM": "10"
+        },
+        {
+          "title": "Tales of Suspense",
+          "issue": "#100",
+          "why": "Matthew Rosenberg — Hawkeye vs Winter Soldier — critica",
+          "rawNM": "10"
+        },
+        {
+          "title": "Captain America",
+          "issue": "#750",
+          "why": "Landmark 750th issue — $7.99 — multiple acclaimed creat",
+          "rawNM": "15"
+        }
+      ]
+    },
+    "29": {
+      "boxNumber": 29,
+      "label": "Box 29",
+      "warning": "",
+      "stats": {
+        "comics": 141,
+        "keys": 15,
+        "signed": 0
+      },
+      "firstComic": "Justice League #15",
+      "lastComic": "Deadshot #1",
+      "topKeys": [
+        {
+          "title": "Justice League",
+          "issue": "#50",
+          "why": "Anniversary milestone — $5.99 — Death of the Justice Le",
+          "rawNM": "10"
+        },
+        {
+          "title": "Justice League",
+          "issue": "#75",
+          "why": "Death of the Justice League — Joshua Williamson — major",
+          "rawNM": "15"
+        },
+        {
+          "title": "Lois Lane",
+          "issue": "#1",
+          "why": "Greg Rucka — Lois Lane 12-issue maxi-series launch — cr",
+          "rawNM": "10"
+        },
+        {
+          "title": "The Flash",
+          "issue": "#750",
+          "why": "Flash #750 milestone — $7.99 — multiple acclaimed creat",
+          "rawNM": "15"
+        },
+        {
+          "title": "Young Justice",
+          "issue": "#10",
+          "why": "Alex Ross painted — COMPLETE 9-issue",
+          "rawNM": "22"
+        },
+        {
+          "title": "Young Justice",
+          "issue": "#11",
+          "why": "Alex Ross painted — COMPLETE 9-issue",
+          "rawNM": "22"
+        },
+        {
+          "title": "Young Justice",
+          "issue": "#12",
+          "why": "Alex Ross painted — COMPLETE 9-issue",
+          "rawNM": "22"
+        },
+        {
+          "title": "Young Justice",
+          "issue": "#13",
+          "why": "Alex Ross painted — COMPLETE 9-issue",
+          "rawNM": "22"
+        }
+      ]
+    },
+    "30": {
+      "boxNumber": 30,
+      "label": "Box 30",
+      "warning": "",
+      "stats": {
+        "comics": 111,
+        "keys": 10,
+        "signed": 0
+      },
+      "firstComic": "Storm #8",
+      "lastComic": "Magic (Magik) #7",
+      "topKeys": [
+        {
+          "title": "New Avengers (Humphries)",
+          "issue": "#1",
+          "why": "New Avengers #1 — Humphries; A.I.M. Avengers 2015 prest",
+          "rawNM": "8"
+        },
+        {
+          "title": "Captain America: The World to Come",
+          "issue": "#2",
+          "why": "Cap World to Come #2 — Kaseda/Priest",
+          "rawNM": "8"
+        },
+        {
+          "title": "Miles Morales: Spider-Man Annual",
+          "issue": "#1",
+          "why": "Miles Morales Annual #1 — Storm and Bloodline guest; Zi",
+          "rawNM": "8"
+        },
+        {
+          "title": "Death of the Silver Surfer",
+          "issue": "#2",
+          "why": "Death of Silver Surfer #2 — Greg Pak",
+          "rawNM": "8"
+        },
+        {
+          "title": "Bishop: War College",
+          "issue": "#1",
+          "why": "Bishop War College #1 — Holtham/Hill; Bishop solo; 🎉 CO",
+          "rawNM": "10"
+        },
+        {
+          "title": "Storm: Life Dream",
+          "issue": "#1",
+          "why": "Storm: Life Dream #1 — prestige $4.99 Storm one-shot",
+          "rawNM": "8"
+        },
+        {
+          "title": "Storm: Earth's Mightiest Mutant",
+          "issue": "#1",
+          "why": "Storm: Earth's Mightiest Mutant #1 — Storm ongoing laun",
+          "rawNM": "10"
+        },
+        {
+          "title": "X-Men: Magneto Hunt — Omega",
+          "issue": "#1",
+          "why": "X-Men: Magneto Hunt Omega #1 — Ayodele",
+          "rawNM": "6"
+        }
+      ]
+    },
+    "31": {
+      "boxNumber": 31,
+      "label": "Box 31",
+      "warning": "",
+      "stats": {
+        "comics": 86,
+        "keys": 19,
+        "signed": 0
+      },
+      "firstComic": "New Warriors: The Initiative #3",
+      "lastComic": "Cloak and Dagger: Age of Revelation #3",
+      "topKeys": [
+        {
+          "title": "Eternals (Gaiman)",
+          "issue": "#2 of 7",
+          "why": "Eternals #2 — Gaiman/Romita Jr; near-complete missing #",
+          "rawNM": "12"
+        },
+        {
+          "title": "Imperial War: Black Panther",
+          "issue": "#1",
+          "why": "Imperial War: Black Panther #1 — Hickman collaboration!",
+          "rawNM": "10"
+        },
+        {
+          "title": "Imperial War: Planet She-Hulk",
+          "issue": "#1",
+          "why": "Imperial War: Planet She-Hulk #1 — Phillips/Hickman",
+          "rawNM": "8"
+        },
+        {
+          "title": "Planet She-Hulk",
+          "issue": "#1",
+          "why": "Planet She-Hulk #1 — Stephanie Phillips",
+          "rawNM": "8"
+        },
+        {
+          "title": "Alien vs. Captain America",
+          "issue": "#1",
+          "why": "Alien vs Cap #1 — wild crossover",
+          "rawNM": "8"
+        },
+        {
+          "title": "Thunderbolts (Parker)",
+          "issue": "#174",
+          "why": "Thunderbolts #174 — Jeff Parker; classic T-Bolts run la",
+          "rawNM": "8"
+        },
+        {
+          "title": "Immortal Iron Fist",
+          "issue": "#1",
+          "why": "Immortal Iron Fist #1 — Ed Brubaker/Matt Fraction; land",
+          "rawNM": "15"
+        },
+        {
+          "title": "X-Force (Divided We Stand)",
+          "issue": "#1",
+          "why": "X-Force #1 — Craig Kyle/Christopher Yost; the black ops",
+          "rawNM": "8"
+        }
+      ]
+    },
+    "32": {
+      "boxNumber": 32,
+      "label": "Box 32",
+      "warning": "",
+      "stats": {
+        "comics": 142,
+        "keys": 16,
+        "signed": 0
+      },
+      "firstComic": "Aquaman (All In) #4",
+      "lastComic": "Zatanna (Campbell) #6",
+      "topKeys": [
+        {
+          "title": "Batman (All In)",
+          "issue": "#1",
+          "why": "Batman All In #1 — Matt Fraction/Jorge Jimenez; DC All ",
+          "rawNM": "15"
+        },
+        {
+          "title": "Batman and Robin: Year One",
+          "issue": "#1",
+          "why": "Batman and Robin: Year One #1 — recent prestige mini; 🎉",
+          "rawNM": "8"
+        },
+        {
+          "title": "DCKO",
+          "issue": "#1",
+          "why": "DCKO #1 — new DC event series launch",
+          "rawNM": "10"
+        },
+        {
+          "title": "DCKO: Red Hood vs. The Joker",
+          "issue": "#1",
+          "why": "DCKO: Red Hood vs Joker #1",
+          "rawNM": "8"
+        },
+        {
+          "title": "Green Lantern Corps (All In)",
+          "issue": "#1",
+          "why": "GL Corps All In #1 — Jeremy Adams/Xermánico/Hampton",
+          "rawNM": "8"
+        },
+        {
+          "title": "Green Lantern: Fractured Spectrum",
+          "issue": "#1",
+          "why": "GL Fractured Spectrum #1",
+          "rawNM": "8"
+        },
+        {
+          "title": "Justice League: The Omega Act Special",
+          "issue": "#1",
+          "why": "JL Omega Act Special #1",
+          "rawNM": "8"
+        },
+        {
+          "title": "Justice League Red",
+          "issue": "#1",
+          "why": "JL Red #1 — new JL launch",
+          "rawNM": "8"
+        }
+      ]
+    },
+    "33": {
+      "boxNumber": 33,
+      "label": "Box 33",
+      "warning": "",
+      "stats": {
+        "comics": 78,
+        "keys": 9,
+        "signed": 0
+      },
+      "firstComic": "Age of Revelation #1",
+      "lastComic": "Doctor Strange #18",
+      "topKeys": [
+        {
+          "title": "Age of Revelation",
+          "issue": "#1",
+          "why": "Age of Revelation: World #1",
+          "rawNM": "6"
+        },
+        {
+          "title": "Inglorious X-Force",
+          "issue": "#1",
+          "why": "Inglorious X-Force #1 — Tim Seely launch",
+          "rawNM": "8"
+        },
+        {
+          "title": "Vengeance of the Moon Knight",
+          "issue": "#1",
+          "why": "Vengeance of MK #1 — Jed McKay/Cappuccino; new Moon Kni",
+          "rawNM": "10"
+        },
+        {
+          "title": "Moon Knight and the Infinity Watch",
+          "issue": "#1",
+          "why": "Moon Knight and the Infinity Watch #1 — wild crossover",
+          "rawNM": "6"
+        },
+        {
+          "title": "The Immortal Thor",
+          "issue": "#1",
+          "why": "Immortal Thor #1 — Al Ewing; 🎉 COMPLETE 25-issue run! O",
+          "rawNM": "15"
+        },
+        {
+          "title": "Immortal Thor Annual",
+          "issue": "#1",
+          "why": "Immortal Thor Annual #1 — Al Ewing; completes the Immor",
+          "rawNM": "8"
+        },
+        {
+          "title": "Doctor Strange Annual",
+          "issue": "#1",
+          "why": "Doctor Strange Annual #1 — recent; Howard/Pichert",
+          "rawNM": "6"
+        },
+        {
+          "title": "Doctor Strange",
+          "issue": "#1",
+          "why": "Doctor Strange #1 — Mark Waid ",
+          "rawNM": "8"
+        }
+      ]
+    },
+    "34": {
+      "boxNumber": 34,
+      "label": "Box 34",
+      "warning": "",
+      "stats": {
+        "comics": 246,
+        "keys": 30,
+        "signed": 0
+      },
+      "firstComic": "Black Panther #8",
+      "lastComic": "Captain Marvel #1",
+      "topKeys": [
+        {
+          "title": "Black Panther",
+          "issue": "#25",
+          "why": "BP #25 Priest — Maximum Security tie-in",
+          "rawNM": "10"
+        },
+        {
+          "title": "Black Panther",
+          "issue": "#50",
+          "why": "BP #50 Priest — Black & White Prologue landmark",
+          "rawNM": "10"
+        },
+        {
+          "title": "Black Panther",
+          "issue": "#60",
+          "why": "BP #60 Priest — Priest BP #60",
+          "rawNM": "10"
+        },
+        {
+          "title": "Black Panther",
+          "issue": "#15",
+          "why": "BP #15 Priest — Killmonger spotlight issue",
+          "rawNM": "8"
+        },
+        {
+          "title": "Black Panther",
+          "issue": "#1",
+          "why": "Black Panther #1 Hudlin/JRJR — landmark Hudlin relaunch",
+          "rawNM": "15"
+        },
+        {
+          "title": "Black Panther",
+          "issue": "#5",
+          "why": "BP #5 Hudlin — Dark Rain arc",
+          "rawNM": "8"
+        },
+        {
+          "title": "Black Panther (Dark Rain)",
+          "issue": "#1",
+          "why": "BP Dark Rain #1 — Hudlin; Shuri cover variant",
+          "rawNM": "8"
+        },
+        {
+          "title": "Black Panther: The Man Without Fear",
+          "issue": "#513",
+          "why": "BP #513 — Man Without Fear UNSIGNED copy. NOTE: Box 2 h",
+          "rawNM": "8"
+        }
+      ]
+    },
+    "35": {
+      "boxNumber": 35,
+      "label": "Box 35",
+      "warning": "",
+      "stats": {
+        "comics": 205,
+        "keys": 28,
+        "signed": 0
+      },
+      "firstComic": "New Mutants #1",
+      "lastComic": "Alpha Flight (Krakoa — Brisson) #5",
+      "topKeys": [
+        {
+          "title": "House of X",
+          "issue": "#1 of 6",
+          "why": "House of X #1 — Hickman/Larraz — THE Krakoa Era launch ",
+          "rawNM": "30"
+        },
+        {
+          "title": "House of X",
+          "issue": "#2 of 6",
+          "why": "House of X #2 — Moira MacTaggert revelation — one of th",
+          "rawNM": "20"
+        },
+        {
+          "title": "Powers of X",
+          "issue": "#1 of 6",
+          "why": "Powers of X #1 — Hickman/Silva — runs PARALLEL to House",
+          "rawNM": "20"
+        },
+        {
+          "title": "X-Men (Krakoa)",
+          "issue": "#1",
+          "why": "X-Men #1 Hickman/Yu — Krakoa era X-Men ongoing launch —",
+          "rawNM": "15"
+        },
+        {
+          "title": "X-Men (Hellfire Gala)",
+          "issue": "#1",
+          "why": "X-Men: Hellfire Gala #1 — annual Krakoa Gala issue — ke",
+          "rawNM": "10"
+        },
+        {
+          "title": "Free Comic Book Day: X-Men",
+          "issue": "#1",
+          "why": "FCBD X-Men #1 Hickman — free issue bridge into Krakoa e",
+          "rawNM": "8"
+        },
+        {
+          "title": "X-Men Origins: X-Men Blue",
+          "issue": "#1",
+          "why": "X-Men Origins: X-Men Blue #1 — origin special",
+          "rawNM": "6"
+        },
+        {
+          "title": "X-Force (Krakoa — Percy)",
+          "issue": "#1",
+          "why": "X-Force #1 Percy/Cassara — Krakoa's black ops team — Xa",
+          "rawNM": "10"
+        }
+      ]
+    },
+    "36": {
+      "boxNumber": 36,
+      "label": "Box 36",
+      "warning": "",
+      "stats": {
+        "comics": 203,
+        "keys": 18,
+        "signed": 0
+      },
+      "firstComic": "Miles Morales: The Ultimate Spider-Man #1",
+      "lastComic": "Peter Parker: The Spectacular Spider-Man #1 (Peter-Pocalypse — Zdarsky $4.99)",
+      "topKeys": [
+        {
+          "title": "Miles Morales: The Ultimate Spider-Man",
+          "issue": "#1",
+          "why": "MM: Ultimate Spider-Man #1 — Bendis/Marquez/Ponsor; Mil",
+          "rawNM": "12"
+        },
+        {
+          "title": "Spider-Man",
+          "issue": "#1",
+          "why": "Spider-Man Vol 1 #1 Bendis/Pichelli — Miles Morales mov",
+          "rawNM": "5"
+        },
+        {
+          "title": "Spider-Man",
+          "issue": "#1",
+          "why": "Spider-Man Vol II #1 Bendis/Pichelli — Bendis's farewel",
+          "rawNM": "8"
+        },
+        {
+          "title": "Miles Morales: Spider-Man",
+          "issue": "#1",
+          "why": "Miles Morales: Spider-Man #1 Ahmed — Miles gets his own",
+          "rawNM": "12"
+        },
+        {
+          "title": "Scarlet Spider",
+          "issue": "#1",
+          "why": "Scarlet Spider Vol 2 #1 — Yost/Stegman; Kaine Parker as",
+          "rawNM": "10"
+        },
+        {
+          "title": "Peter Parker: The Spectacular Spider-Man",
+          "issue": "#1 ($4.99)",
+          "why": "PP: Spectacular Spider-Man #1 Zdarsky — prestige $4.99 ",
+          "rawNM": "10"
+        },
+        {
+          "title": "Marvel Knights Spider-Man",
+          "issue": "#1",
+          "why": "MK Spider-Man #1 Millar/Dodson — 'Down Among the Dead M",
+          "rawNM": "10"
+        },
+        {
+          "title": "Friendly Neighborhood Spider-Man",
+          "issue": "#1",
+          "why": "FNSM #1 — The Other crossover begins; Peter David; firs",
+          "rawNM": "5"
+        }
+      ]
+    },
+    "37": {
+      "boxNumber": 37,
+      "label": "Box 37",
+      "warning": "",
+      "stats": {
+        "comics": 10,
+        "keys": 3,
+        "signed": 0
+      },
+      "firstComic": "Smallville: Season Eleven #12",
+      "lastComic": "Dark Angels #5",
+      "topKeys": [
+        {
+          "title": "Strange Academy",
+          "issue": "#12",
+          "why": "Strange Academy #12 Young",
+          "rawNM": "8"
+        },
+        {
+          "title": "Strange Academy: Presents the Death of Doctor Strange",
+          "issue": "#1",
+          "why": "Strange Academy #1 Young — Strange Academy launches",
+          "rawNM": "8"
+        },
+        {
+          "title": "Strange Academy: Presents the Death of Doctor Strange",
+          "issue": "#1",
+          "why": "Strange Academy: Death of Doctor Strange #1 — Skottie Y",
+          "rawNM": "8"
+        }
+      ]
+    },
+    "38": {
+      "boxNumber": 38,
+      "label": "Box 38",
+      "warning": "",
+      "stats": {
+        "comics": 126,
+        "keys": 36,
+        "signed": 1
+      },
+      "firstComic": "Scarlet #1",
+      "lastComic": "The Sandman: Overture #1",
+      "topKeys": [
+        {
+          "title": "Scarlet",
+          "issue": "#1",
+          "why": "Scarlet Vol 2 #1 Kelly Thompson — NOT Scarlet Spider — ",
+          "rawNM": "10"
+        },
+        {
+          "title": "Star Trek",
+          "issue": "#500",
+          "why": "Star Trek #500 IDW — landmark anniversary issue",
+          "rawNM": "10"
+        },
+        {
+          "title": "Gatchaman",
+          "issue": "#1",
+          "why": "Gatchaman #1 IDW relaunch",
+          "rawNM": "8"
+        },
+        {
+          "title": "Blood Squad Seven",
+          "issue": "#1",
+          "why": "Blood Squad Seven #1 Image 2024 — new team book",
+          "rawNM": "8"
+        },
+        {
+          "title": "WildC.A.T.s",
+          "issue": "#1",
+          "why": "WildC.A.T.s #1 Jim Lee original 1992 — NOTE: low grade,",
+          "rawNM": "15"
+        },
+        {
+          "title": "Transformers",
+          "issue": "#1",
+          "why": "Transformers #1 Daniel Warren Johnson — Skybound relaun",
+          "rawNM": "30"
+        },
+        {
+          "title": "Firefly: Brand New Verse",
+          "issue": "#1",
+          "why": "Firefly: Brand New Verse #1",
+          "rawNM": "8"
+        },
+        {
+          "title": "Firefly: Blue Sun Rising",
+          "issue": "#1",
+          "why": "Firefly: Blue Sun Rising #1",
+          "rawNM": "8"
+        }
+      ]
+    },
+    "39": {
+      "boxNumber": 39,
+      "label": "Box 39",
+      "warning": "",
+      "stats": {
+        "comics": 80,
+        "keys": 3,
+        "signed": 0
+      },
+      "firstComic": "Exiles #1.",
+      "lastComic": "Giant-Size X-Men #1",
+      "topKeys": [
+        {
+          "title": "Exiles",
+          "issue": "#1.",
+          "why": "Exiles #1 2001 — Blink leads alternate timeline X-Men —",
+          "rawNM": "12"
+        },
+        {
+          "title": "X-Men: Fall of X",
+          "issue": "#25",
+          "why": "X-Men Fall of X #25 variant — end of the Krakoa era — l",
+          "rawNM": "12"
+        },
+        {
+          "title": "Giant-Size X-Men",
+          "issue": "#1",
+          "why": "Giant-Size X-Men 50th Anniversary #1 — Krakoa era — Ann",
+          "rawNM": "12"
+        }
+      ]
+    },
+    "40": {
+      "boxNumber": 40,
+      "label": "Box 40",
+      "warning": "",
+      "stats": {
+        "comics": 130,
+        "keys": 17,
+        "signed": 0
+      },
+      "firstComic": "DC Special: The Return of Donna Troy #1",
+      "lastComic": "Superman/Batman Annual #1",
+      "topKeys": [
+        {
+          "title": "DC Special: The Return of Donna Troy",
+          "issue": "#1",
+          "why": "Return of Donna Troy #1 — Infinite Crisis prelim",
+          "rawNM": "8"
+        },
+        {
+          "title": "Green Arrow",
+          "issue": "#50",
+          "why": "Green Arrow #50 Winick — UK price sticker copy — price ",
+          "rawNM": "12"
+        },
+        {
+          "title": "Brightest Day",
+          "issue": "#10",
+          "why": "Brightest Day #10 — Aqualad intro issue — key",
+          "rawNM": "10"
+        },
+        {
+          "title": "Identity Crisis",
+          "issue": "#1",
+          "why": "Identity Crisis #1 Meltzer/Morales — 🎉 COMPLETE 7-issue",
+          "rawNM": "20"
+        },
+        {
+          "title": "Countdown to Infinite Crisis",
+          "issue": "#1",
+          "why": "Countdown to Infinite Crisis #1 — Johns/Winick — Blue B",
+          "rawNM": "22"
+        },
+        {
+          "title": "Infinite Crisis",
+          "issue": "#1",
+          "why": "Infinite Crisis #1 Geoff Johns/Phil Jimenez — 🎉 COMPLET",
+          "rawNM": "22"
+        },
+        {
+          "title": "Rann-Thanagar War",
+          "issue": "#1 of 6",
+          "why": "Rann-Thanagar War #1 Dave Gibbons — 🎉 COMPLETE 6-issue ",
+          "rawNM": "10"
+        },
+        {
+          "title": "Doom Patrol",
+          "issue": "#1",
+          "why": "Doom Patrol Vol 4 #1 John Byrne — Aug 2004 — UK sticker",
+          "rawNM": "8"
+        }
+      ]
+    },
+    "41": {
+      "boxNumber": 41,
+      "label": "Box 41",
+      "warning": "",
+      "stats": {
+        "comics": 214,
+        "keys": 47,
+        "signed": 0
+      },
+      "firstComic": "Old Man Logan #31",
+      "lastComic": "Resurrection of Magneto #1",
+      "topKeys": [
+        {
+          "title": "Generations: The Best (Wolverines)",
+          "issue": "#1",
+          "why": "Generations: Wolverines #1 Tom Taylor/Rosanas — Logan m",
+          "rawNM": "8"
+        },
+        {
+          "title": "Generations: The Americas (Caps)",
+          "issue": "#1",
+          "why": "Generations: Americas #1 Nick Spencer — Steve Rogers me",
+          "rawNM": "8"
+        },
+        {
+          "title": "Phoenix Resurrection: The Return of Jean Grey",
+          "issue": "#1",
+          "why": "Phoenix Resurrection #1 Matthew Rosenberg — Jean Grey r",
+          "rawNM": "10"
+        },
+        {
+          "title": "Multiple Man",
+          "issue": "#1",
+          "why": "Multiple Man #1 Matthew Rosenberg — Jamie Madrox solo —",
+          "rawNM": "8"
+        },
+        {
+          "title": "X-Men Red",
+          "issue": "#1",
+          "why": "X-Men Red Vol 1 #1 Tom Taylor/Mahmud Asrar — Jean Grey ",
+          "rawNM": "10"
+        },
+        {
+          "title": "X-Terminators (Williams)",
+          "issue": "#1",
+          "why": "X-Terminators #1 Leah Williams/Carlos Gómez — Dazzler/J",
+          "rawNM": "10"
+        },
+        {
+          "title": "Dazzler (From the Ashes)",
+          "issue": "#1",
+          "why": "Dazzler FtA #1 — From the Ashes era relaunch",
+          "rawNM": "8"
+        },
+        {
+          "title": "X-Force (From the Ashes — Thorne)",
+          "issue": "#1",
+          "why": "X-Force FtA #1 Skottie Young variant cover — SY covers ",
+          "rawNM": "7"
+        }
+      ]
+    },
+    "42": {
+      "boxNumber": 42,
+      "label": "Box 42",
+      "warning": "",
+      "stats": {
+        "comics": 294,
+        "keys": 28,
+        "signed": 1
+      },
+      "firstComic": "Astonishing X-Men #1",
+      "lastComic": "Exiles #23",
+      "topKeys": [
+        {
+          "title": "Astonishing X-Men",
+          "issue": "#1",
+          "why": "Astonishing X-Men #1 Joss Whedon/John Cassaday — the de",
+          "rawNM": "15"
+        },
+        {
+          "title": "Giant-Size Astonishing X-Men",
+          "issue": "#1",
+          "why": "Giant-Size AXM #1 Whedon/Cassaday — conclusion of the W",
+          "rawNM": "15"
+        },
+        {
+          "title": "X-Men",
+          "issue": "#175",
+          "why": "X-Men #175 with UK price sticker — price variant",
+          "rawNM": "10"
+        },
+        {
+          "title": "Uncanny X-Men",
+          "issue": "#504",
+          "why": "UXM #504 Matt Fraction begins — Fraction's full run ope",
+          "rawNM": "8"
+        },
+        {
+          "title": "Uncanny X-Men: Regenesis",
+          "issue": "#1",
+          "why": "Uncanny X-Men Regenesis #1 — Kieron Gillen takes over t",
+          "rawNM": "10"
+        },
+        {
+          "title": "Uncanny X-Men",
+          "issue": "#282",
+          "why": "Uncanny X-Men #282 — 1st Bishop — NOTE: condition is Go",
+          "rawNM": "10"
+        },
+        {
+          "title": "Uncanny X-Men",
+          "issue": "#136",
+          "why": "Uncanny X-Men #136 — Dark Phoenix Saga — Bronze Age cla",
+          "rawNM": "30"
+        },
+        {
+          "title": "Cable",
+          "issue": "#1",
+          "why": "Cable Vol 2 #1 Swierczynski/Olivetti — Cable protects b",
+          "rawNM": "10"
+        }
+      ]
+    },
+    "43": {
+      "boxNumber": 43,
+      "label": "Box 43",
+      "warning": "",
+      "stats": {
+        "comics": 99,
+        "keys": 20,
+        "signed": 0
+      },
+      "firstComic": "Wonder Woman: Evolution #1",
+      "lastComic": "Marvel All-On-One #1",
+      "topKeys": [
+        {
+          "title": "Wonder Woman: Evolution",
+          "issue": "#1",
+          "why": "WW Evolution #1 Stephanie Phillips",
+          "rawNM": "8"
+        },
+        {
+          "title": "Wonder Woman",
+          "issue": "#1",
+          "why": "Wonder Woman #1 Tom King 2023 — new WW launch",
+          "rawNM": "10"
+        },
+        {
+          "title": "Mr. Terrific (New 52)",
+          "issue": "#1",
+          "why": "Mr. Terrific New 52 #1 — Eric Wallace — first modern Mr",
+          "rawNM": "8"
+        },
+        {
+          "title": "New Warriors",
+          "issue": "#1",
+          "why": "New Warriors Vol 2 #1 Giant-Size 1999 — this is DIFFERE",
+          "rawNM": "8"
+        },
+        {
+          "title": "Justice Society of America",
+          "issue": "#1",
+          "why": "JSA Vol 3 #1 Geoff Johns/Alex Ross cover — landmark JSA",
+          "rawNM": "10"
+        },
+        {
+          "title": "DC All In Special",
+          "issue": "#1",
+          "why": "DC All In Special 2025 free comic book day",
+          "rawNM": "6"
+        },
+        {
+          "title": "Anansi",
+          "issue": "#1",
+          "why": "Anansi #1",
+          "rawNM": "8"
+        },
+        {
+          "title": "Cyclops",
+          "issue": "#1",
+          "why": "Cyclops #1 2014 — Scott Summers solo",
+          "rawNM": "8"
+        }
+      ]
+    },
+    "44": {
+      "boxNumber": 44,
+      "label": "Box 44",
+      "warning": "",
+      "stats": {
+        "comics": 205,
+        "keys": 18,
+        "signed": 0
+      },
+      "firstComic": "Cable #155",
+      "lastComic": "Amazing X-Men #19",
+      "topKeys": [
+        {
+          "title": "X-Men Blue (Bunn)",
+          "issue": "#1",
+          "why": "X-Men Blue #1 Cullen Bunn/Jorge Molina — time-displaced",
+          "rawNM": "10"
+        },
+        {
+          "title": "Domino Annual",
+          "issue": "#1 (Lucky Lady)",
+          "why": "Domino Annual #1 Gail Simone — Lucky Lady",
+          "rawNM": "8"
+        },
+        {
+          "title": "Uncanny X-Men",
+          "issue": "#1",
+          "why": "Uncanny X-Men Vol 3 #1 Bendis/Bachalo — Cyclops leads m",
+          "rawNM": "12"
+        },
+        {
+          "title": "Uncanny X-Men",
+          "issue": "#1 [Legacy #620]",
+          "why": "Uncanny X-Men #1 Brisson/Rosenberg — X-Men Disassembled",
+          "rawNM": "10"
+        },
+        {
+          "title": "X-Force",
+          "issue": "#1 (2018)",
+          "why": "X-Force Vol 5 #1 Ed Brisson 2018 — Cable-led X-Force — ",
+          "rawNM": "10"
+        },
+        {
+          "title": "X-Men",
+          "issue": "#1",
+          "why": "X-Men Vol 4 #1 Nadler/Thompson",
+          "rawNM": "8"
+        },
+        {
+          "title": "Extermination",
+          "issue": "#1",
+          "why": "Extermination #1 Ed Brisson — 🎉 COMPLETE 5-issue — kill",
+          "rawNM": "10"
+        },
+        {
+          "title": "All-New X-Men",
+          "issue": "#1",
+          "why": "ANXM Vol 2 #1 Hopeless — young X-Men solo",
+          "rawNM": "8"
+        }
+      ]
+    },
+    "45": {
+      "boxNumber": 45,
+      "label": "Box 45",
+      "warning": "",
+      "stats": {
+        "comics": 236,
+        "keys": 31,
+        "signed": 0
+      },
+      "firstComic": "Old Man Logan #11",
+      "lastComic": "Weapon Plus #1 (Sexton)",
+      "topKeys": [
+        {
+          "title": "X-Men and Moon Girl",
+          "issue": "#1",
+          "why": "X-Men and Moon Girl #1 — crossover special",
+          "rawNM": "8"
+        },
+        {
+          "title": "House of M",
+          "issue": "#1 of 8 (Bendis/Coipel)",
+          "why": "House of M #1 Bendis/Coipel — MAJOR KEY — Scarlet Witch",
+          "rawNM": "30"
+        },
+        {
+          "title": "Hunt for Wolverine: The Adamantium Agenda",
+          "issue": "#1",
+          "why": "Adamantium Agenda #1 Taylor — 4-part Hunt for Wolverine",
+          "rawNM": "8"
+        },
+        {
+          "title": "Domino: Hot Shots",
+          "issue": "#1",
+          "why": "Domino: Hot Shots #1 Gail Simone — 🎉 COMPLETE 5-issue —",
+          "rawNM": "10"
+        },
+        {
+          "title": "What If? X-Men",
+          "issue": "#1 (Hill)",
+          "why": "What If? X-Men Won #1 — Hill",
+          "rawNM": "8"
+        },
+        {
+          "title": "New Mutants: Dead Souls",
+          "issue": "#1",
+          "why": "New Mutants: Dead Souls #1 Matthew Rosenberg — Magik le",
+          "rawNM": "10"
+        },
+        {
+          "title": "Age of X-Man: Alpha",
+          "issue": "#1 (Nadler/Thompson)",
+          "why": "Age of X-Man: Alpha #1 — the entire AoX event begins — ",
+          "rawNM": "10"
+        },
+        {
+          "title": "Dead Man Logan (Brisson/Henderson)",
+          "issue": "#1",
+          "why": "Dead Man Logan #1 Ed Brisson/Mike Henderson — 🎉 COMPLET",
+          "rawNM": "10"
+        }
+      ]
+    },
+    "46": {
+      "boxNumber": 46,
+      "label": "⭐ Ultimate Marvel",
+      "warning": "🎉 Ultimate WolvvsHulk COMPLETE (Lindelof!). Nightmare+Extinction COMPLETE. Cataclysm COMPLETE. Ultimate Invasion COMPLETE (Hickman/Hitch).",
+      "stats": {
+        "comics": 155,
+        "keys": 14,
+        "signed": 0
+      },
+      "firstComic": "Ultimate X-Men #13",
+      "lastComic": "Ultimate X-Men #14",
+      "topKeys": [
+        {
+          "title": "Ultimate Avengers",
+          "issue": "#1",
+          "why": "Ultimate Avengers #1 Millar/Pacheco — sequel to Ultimat",
+          "rawNM": "10"
+        },
+        {
+          "title": "Ultimate Nightmare",
+          "issue": "#1",
+          "why": "Ultimate Nightmare #1 Warren Ellis — 🎉 COMPLETE 5-issue",
+          "rawNM": "10"
+        },
+        {
+          "title": "Ultimate Extinction",
+          "issue": "#1",
+          "why": "Ultimate Extinction #1 Ellis — 🎉 COMPLETE 5-issue — Ult",
+          "rawNM": "10"
+        },
+        {
+          "title": "Ultimate Wolverine vs. Hulk",
+          "issue": "#1",
+          "why": "UWvH #1 Damon Lindelof/Leinil Yu — 🎉 COMPLETE 6-issue —",
+          "rawNM": "20"
+        },
+        {
+          "title": "Ultimate Iron Man",
+          "issue": "#1 (foil cover — Orson Scott Card)",
+          "why": "Ultimate Iron Man #1 Orson Scott Card/Andy Hitch — foil",
+          "rawNM": "15"
+        },
+        {
+          "title": "Ultimatum: Ultimate Spider-Man Requiem",
+          "issue": "#1",
+          "why": "Ultimate Spider-Man Requiem — Bendis wraps Ultimatum fo",
+          "rawNM": "8"
+        },
+        {
+          "title": "Ultimate Comics: All-New Spider-Man",
+          "issue": "#1",
+          "why": "Ultimate Comics: All-New Spider-Man #1 Bendis/Marquez —",
+          "rawNM": "20"
+        },
+        {
+          "title": "Cataclysm: The Ultimates' Last Stand",
+          "issue": "#1",
+          "why": "Cataclysm #1 Bendis/Bagley — 🎉 COMPLETE — Ultimate Gala",
+          "rawNM": "10"
+        }
+      ]
+    },
+    "47": {
+      "boxNumber": 47,
+      "label": "⭐ Marvel Events",
+      "warning": "🎉 Empyre COMPLETE. Original Sin COMPLETE. Siege COMPLETE. Civil War II COMPLETE. AXIS COMPLETE. AvX near-complete. A+X near-complete.",
+      "stats": {
+        "comics": 187,
+        "keys": 21,
+        "signed": 0
+      },
+      "firstComic": "New Warriors #2",
+      "lastComic": "The Avengers (Bendis) #30 (AvX tie-in)",
+      "topKeys": [
+        {
+          "title": "Empyre",
+          "issue": "#1",
+          "why": "Empyre #1 Al Ewing/Dan Slott/Valerio Schiti — 🎉 COMPLET",
+          "rawNM": "12"
+        },
+        {
+          "title": "Empyre: X-Men",
+          "issue": "#1",
+          "why": "Empyre: X-Men #1",
+          "rawNM": "8"
+        },
+        {
+          "title": "Empyre: Avengers",
+          "issue": "#1",
+          "why": "Empyre: Avengers #1",
+          "rawNM": "8"
+        },
+        {
+          "title": "Empyre: Captain America",
+          "issue": "#1",
+          "why": "Empyre: Captain America #1",
+          "rawNM": "8"
+        },
+        {
+          "title": "Empyre: Savage Avengers",
+          "issue": "#1",
+          "why": "Empyre: Savage Avengers #1",
+          "rawNM": "8"
+        },
+        {
+          "title": "Lords of Empyre",
+          "issue": "Swordsman #1",
+          "why": "Lords of Empyre Swordsman #1",
+          "rawNM": "8"
+        },
+        {
+          "title": "Lords of Empyre",
+          "issue": "Celestial Messiah #1",
+          "why": "Lords of Empyre Celestial Messiah #1",
+          "rawNM": "8"
+        },
+        {
+          "title": "Siege",
+          "issue": "#1 of 4",
+          "why": "Siege #1 Bendis/Coipel — 🎉 COMPLETE 4-issue — Dark Reig",
+          "rawNM": "15"
+        }
+      ]
+    },
+    "48": {
+      "boxNumber": 48,
+      "label": "⭐ Avengers",
+      "warning": "🎉 Avengers Twilight COMPLETE (Zdarsky). Avengers No Road Home COMPLETE. Avengers #10 Legacy #700. McKay Avengers launch. Infinity Countdown near-complete.",
+      "stats": {
+        "comics": 137,
+        "keys": 26,
+        "signed": 0
+      },
+      "firstComic": "Avengers/Invaders #10",
+      "lastComic": "Shang-Chi #2",
+      "topKeys": [
+        {
+          "title": "The Avengers",
+          "issue": "#10 [Legacy #700] [Legacy #700]",
+          "why": "Avengers #10 Legacy #700 — LANDMARK 700th Avengers issu",
+          "rawNM": "20"
+        },
+        {
+          "title": "Avengers Forever",
+          "issue": "#1",
+          "why": "Avengers Forever #1 Jason Aaron — multiversal Avengers ",
+          "rawNM": "12"
+        },
+        {
+          "title": "Avengers Assemble: Alpha",
+          "issue": "#1",
+          "why": "Avengers Assemble Alpha #1 — event opener",
+          "rawNM": "8"
+        },
+        {
+          "title": "Avengers Assemble: Omega",
+          "issue": "#1",
+          "why": "Avengers Assemble Omega #1 — conclusion",
+          "rawNM": "8"
+        },
+        {
+          "title": "Avengers Beyond",
+          "issue": "#1",
+          "why": "Avengers Beyond #1 — Derek Landy",
+          "rawNM": "8"
+        },
+        {
+          "title": "Generations: The Spiders",
+          "issue": "#1",
+          "why": "Generations: The Spiders #1 — 2017 Generations legacy e",
+          "rawNM": "8"
+        },
+        {
+          "title": "Generations: Thunder",
+          "issue": "#1",
+          "why": "Generations: Thunder #1 — 2017 Generations legacy event",
+          "rawNM": "8"
+        },
+        {
+          "title": "Generations: The Iron",
+          "issue": "#1",
+          "why": "Generations: The Iron #1 — 2017 Generations legacy even",
+          "rawNM": "8"
+        }
+      ]
+    },
+    "49": {
+      "boxNumber": 49,
+      "label": "⭐ Hulk",
+      "warning": "🎉 Savage Hulk Alan Davis COMPLETE. MK Hulk COMPLETE. Maestro COMPLETE. Red Hulk Loeb/McGuinness launch (#1 key). Indestructible Hulk near-complete. She-Hulk Rowell near-complete. PKJ Hulk latest run.",
+      "stats": {
+        "comics": 172,
+        "keys": 18,
+        "signed": 0
+      },
+      "firstComic": "Hulk #1",
+      "lastComic": "She-Hulks #6",
+      "topKeys": [
+        {
+          "title": "Hulk",
+          "issue": "#1",
+          "why": "Hulk Vol 2 #1 Jeff Loeb/Ed McGuinness — Red Hulk myster",
+          "rawNM": "20"
+        },
+        {
+          "title": "King-Size Hulk",
+          "issue": "#1 (Jeff Loeb/Art Adams)",
+          "why": "King-Size Hulk #1 Loeb/Art Adams — oversized Red Hulk e",
+          "rawNM": "10"
+        },
+        {
+          "title": "Hulk",
+          "issue": "#600 (bad condition — legacy landmark)",
+          "why": "Hulk #600 landmark anniversary issue — bad condition bu",
+          "rawNM": "10"
+        },
+        {
+          "title": "Incredible Hulk",
+          "issue": "#1",
+          "why": "Incredible Hulk Vol 3 #1 Jason Aaron/Marc Silvestri — B",
+          "rawNM": "12"
+        },
+        {
+          "title": "The Totally Awesome Hulk (Pak)",
+          "issue": "#1",
+          "why": "Totally Awesome Hulk #1 Greg Pak/Frank Cho — Amadeus Ch",
+          "rawNM": "10"
+        },
+        {
+          "title": "Red Hulk",
+          "issue": "#1",
+          "why": "Red Hulk #1 Percy/Shaw 2024 — new Red Hulk relaunch",
+          "rawNM": "10"
+        },
+        {
+          "title": "She-Hulk",
+          "issue": "#1",
+          "why": "She-Hulk #1 Rainbow Rowell — charming She-Hulk return —",
+          "rawNM": "10"
+        },
+        {
+          "title": "She-Hulk Annual",
+          "issue": "#1 (Ultron cover)",
+          "why": "She-Hulk Annual #1 Rowell — cool Ultron cover",
+          "rawNM": "8"
+        }
+      ]
+    },
+    "50": {
+      "boxNumber": 50,
+      "label": "Box 50",
+      "warning": "",
+      "stats": {
+        "comics": 88,
+        "keys": 14,
+        "signed": 0
+      },
+      "firstComic": "Moon Knight #1",
+      "lastComic": "Moon Knight: Second Printing #2",
+      "topKeys": [
+        {
+          "title": "Moon Knight",
+          "issue": "#1",
+          "why": "Moon Knight Vol 3 #1 Charlie Huston/David Finch — bruta",
+          "rawNM": "15"
+        },
+        {
+          "title": "Moon Knight",
+          "issue": "#1",
+          "why": "Moon Knight Vol 5 #1 Brian Michael Bendis/Alex Maleev —",
+          "rawNM": "15"
+        },
+        {
+          "title": "Moon Knight",
+          "issue": "#1",
+          "why": "Moon Knight Vol 6 #1 Warren Ellis/Declan Shalvey — each",
+          "rawNM": "25"
+        },
+        {
+          "title": "Moon Knight",
+          "issue": "#2",
+          "why": "Vol 6 Ellis/Shalvey — standalone story — issue #2",
+          "rawNM": "12"
+        },
+        {
+          "title": "Moon Knight",
+          "issue": "#3",
+          "why": "Vol 6 Ellis/Shalvey — standalone story — issue #3",
+          "rawNM": "12"
+        },
+        {
+          "title": "Moon Knight",
+          "issue": "#4",
+          "why": "Vol 6 Ellis/Shalvey — standalone story — issue #4",
+          "rawNM": "12"
+        },
+        {
+          "title": "Moon Knight",
+          "issue": "#5",
+          "why": "Vol 6 Ellis/Shalvey — standalone story — issue #5",
+          "rawNM": "12"
+        },
+        {
+          "title": "Moon Knight",
+          "issue": "#6",
+          "why": "Vol 6 Ellis/Shalvey — standalone story — issue #6",
+          "rawNM": "12"
+        }
+      ]
+    },
+    "51": {
+      "boxNumber": 51,
+      "label": "Box 51",
+      "warning": "",
+      "stats": {
+        "comics": 91,
+        "keys": 19,
+        "signed": 0
+      },
+      "firstComic": "Doctor Strange #1",
+      "lastComic": "Strange Academy: Blood Hunt #2 (red band)",
+      "topKeys": [
+        {
+          "title": "Doctor Strange",
+          "issue": "#1",
+          "why": "Doctor Strange Vol 4 #1 Jason Aaron/Chris Bachalo — mag",
+          "rawNM": "10"
+        },
+        {
+          "title": "Doctor Strange",
+          "issue": "#10 [Legacy #400]",
+          "why": "Doctor Strange Legacy #400 — landmark 400th issue — Jas",
+          "rawNM": "12"
+        },
+        {
+          "title": "Doctor Strange: The Last Days of Magic",
+          "issue": "#1",
+          "why": "Last Days of Magic #1 — Aaron/Duggan one-shot — Empirik",
+          "rawNM": "8"
+        },
+        {
+          "title": "Doctor Strange",
+          "issue": "#1 [Legacy #381]",
+          "why": "Doctor Strange Legacy #381 #1 Mark Waid/Jesus Saiz — fr",
+          "rawNM": "8"
+        },
+        {
+          "title": "Doctor Strange: Sorcerer Supreme",
+          "issue": "#1",
+          "why": "Doctor Strange: Sorcerer Supreme #1 Jason Aaron — $4.99",
+          "rawNM": "8"
+        },
+        {
+          "title": "Doctor Strange",
+          "issue": "#1 [Legacy #427]",
+          "why": "Doctor Strange Vol 5 #1 Jed McKay/Pasqual Ferry — Legac",
+          "rawNM": "10"
+        },
+        {
+          "title": "Doctor Strange",
+          "issue": "#1",
+          "why": "Doctor Strange Surgeon Supreme #1 Mark Waid — Strange a",
+          "rawNM": "8"
+        },
+        {
+          "title": "Doctor Strange",
+          "issue": "#1",
+          "why": "Doctor Strange #1 Emma Rios and Javier Munero — unique ",
+          "rawNM": "8"
+        }
+      ]
+    },
+    "52": {
+      "boxNumber": 52,
+      "label": "Box 52",
+      "warning": "",
+      "stats": {
+        "comics": 155,
+        "keys": 24,
+        "signed": 0
+      },
+      "firstComic": "Punisher War Journal #6",
+      "lastComic": "Alpha Flight: True North #1",
+      "topKeys": [
+        {
+          "title": "S.H.I.E.L.D.",
+          "issue": "#1",
+          "why": "SHIELD #1 Jonathan Hickman/Dustin Weaver — Nick Fury/Da",
+          "rawNM": "15"
+        },
+        {
+          "title": "New Warriors",
+          "issue": "#1",
+          "why": "New Warriors Initiative Vol 3 #1 — Grevioux/Medina — Ni",
+          "rawNM": "8"
+        },
+        {
+          "title": "The Sentry",
+          "issue": "#1 of 8",
+          "why": "The Sentry #1 Paul Jenkins/JRJR — forgotten hero who st",
+          "rawNM": "12"
+        },
+        {
+          "title": "The Ultimates",
+          "issue": "#1",
+          "why": "The Ultimates #1 Al Ewing/Kenneth Rocafort — COMPLETELY",
+          "rawNM": "10"
+        },
+        {
+          "title": "Ultimates 2",
+          "issue": "#1",
+          "why": "Ultimates 2 #1 Al Ewing — Eternity in chains — cosmic s",
+          "rawNM": "8"
+        },
+        {
+          "title": "Operation: S.I.N.",
+          "issue": "#1",
+          "why": "Operation SIN #1 — Peggy Carter + Howard Stark in 1950s",
+          "rawNM": "8"
+        },
+        {
+          "title": "Fearless Defenders",
+          "issue": "#1",
+          "why": "Fearless Defenders #1 Cullen Bunn/Will Sliney — Valkyri",
+          "rawNM": "8"
+        },
+        {
+          "title": "Astonishing Ant-Man",
+          "issue": "#1",
+          "why": "Astonishing Ant-Man #1 Nick Spencer — Scott Lang sequel",
+          "rawNM": "8"
+        }
+      ]
+    },
+    "53": {
+      "boxNumber": 53,
+      "label": "Box 53",
+      "warning": "",
+      "stats": {
+        "comics": 215,
+        "keys": 8,
+        "signed": 0
+      },
+      "firstComic": "Birds of Prey #1",
+      "lastComic": "Planet DC: Batgirl #1",
+      "topKeys": [
+        {
+          "title": "Birds of Prey",
+          "issue": "#1",
+          "why": "Birds of Prey #1 Chuck Dixon — FIRST ongoing BoP series",
+          "rawNM": "15"
+        },
+        {
+          "title": "Birds of Prey",
+          "issue": "#25",
+          "why": "BoP #25 milestone issue",
+          "rawNM": "8"
+        },
+        {
+          "title": "Birds of Prey",
+          "issue": "#50",
+          "why": "BoP #50 milestone issue",
+          "rawNM": "8"
+        },
+        {
+          "title": "Birds of Prey",
+          "issue": "#75",
+          "why": "BoP #75 milestone issue",
+          "rawNM": "8"
+        },
+        {
+          "title": "Robin",
+          "issue": "#7",
+          "why": "Robin #7 Tim Drake — key early issue",
+          "rawNM": "10"
+        },
+        {
+          "title": "Robin",
+          "issue": "#100",
+          "why": "Robin #100 Tim Drake — landmark #100",
+          "rawNM": "10"
+        },
+        {
+          "title": "Batgirl",
+          "issue": "#1",
+          "why": "Batgirl Vol 1 #1 Scott Peterson/Kelly Puckett — FIRST C",
+          "rawNM": "20"
+        },
+        {
+          "title": "Batgirl",
+          "issue": "#50",
+          "why": "Batgirl #50 milestone",
+          "rawNM": "8"
+        }
+      ]
+    },
+    "54": {
+      "boxNumber": 54,
+      "label": "Box 54",
+      "warning": "",
+      "stats": {
+        "comics": 227,
+        "keys": 12,
+        "signed": 0
+      },
+      "firstComic": "Batman and Robin #1",
+      "lastComic": "Suicide Squad: From the Ashes #8 of 8",
+      "topKeys": [
+        {
+          "title": "Batman and Robin",
+          "issue": "#1",
+          "why": "Batman and Robin #1 Grant Morrison/Frank Quitely — Batm",
+          "rawNM": "20"
+        },
+        {
+          "title": "Justice League of America",
+          "issue": "#1",
+          "why": "JLA #1 Brad Meltzer 2006 — iconic lineup reveal — Turne",
+          "rawNM": "10"
+        },
+        {
+          "title": "DC Universe",
+          "issue": "#0",
+          "why": "DC Universe #0 Grant Morrison/Geoff Johns — Final Crisi",
+          "rawNM": "8"
+        },
+        {
+          "title": "Final Crisis",
+          "issue": "#1 of 7",
+          "why": "Final Crisis #1 Grant Morrison — 🎉 COMPLETE 7-issue — D",
+          "rawNM": "12"
+        },
+        {
+          "title": "Villains United",
+          "issue": "#1 of 6",
+          "why": "Villains United #1 Gail Simone — 🎉 COMPLETE 6-issue — l",
+          "rawNM": "10"
+        },
+        {
+          "title": "Secret Six",
+          "issue": "#1",
+          "why": "Secret Six #1 Gail Simone 2008 — outlaw supervillains —",
+          "rawNM": "12"
+        },
+        {
+          "title": "The Trials of Shazam",
+          "issue": "#1",
+          "why": "Trials of Shazam #1 Judd Winick — new Shazam era",
+          "rawNM": "8"
+        },
+        {
+          "title": "Adam Strange",
+          "issue": "#1 of 8",
+          "why": "Adam Strange #1 Andy Diggle/Pascal Ferry — 🎉 COMPLETE 8",
+          "rawNM": "10"
+        }
+      ]
+    },
+    "55": {
+      "boxNumber": 55,
+      "label": "Box 55",
+      "warning": "",
+      "stats": {
+        "comics": 143,
+        "keys": 5,
+        "signed": 0
+      },
+      "firstComic": "Legion of Superheroes #112",
+      "lastComic": "Outsiders #49",
+      "topKeys": [
+        {
+          "title": "The Legion",
+          "issue": "#1",
+          "why": "The Legion #1 Dan Abnett/Andy Lanning — December 2001 —",
+          "rawNM": "10"
+        },
+        {
+          "title": "Legion Lost",
+          "issue": "#1",
+          "why": "Legion Lost #1 Dan Abnett — LSH lost in 20th century",
+          "rawNM": "8"
+        },
+        {
+          "title": "Legion Worlds",
+          "issue": "#1 of 6",
+          "why": "Legion Worlds #1 — 🎉 COMPLETE 6-issue crossover",
+          "rawNM": "8"
+        },
+        {
+          "title": "Legion of Superheroes",
+          "issue": "#1",
+          "why": "LSH #1 Paul Levitz January 2010 — Levitz returns to wri",
+          "rawNM": "10"
+        },
+        {
+          "title": "Legion: Secret Origin",
+          "issue": "#2 of 6",
+          "why": "Legion Secret Origin #2 Levitz — near-complete mini",
+          "rawNM": "6"
+        }
+      ]
+    },
+    "56": {
+      "boxNumber": 56,
+      "label": "Box 56",
+      "warning": "",
+      "stats": {
+        "comics": 154,
+        "keys": 4,
+        "signed": 0
+      },
+      "firstComic": "Impulse #52",
+      "lastComic": "Teen Titans #29",
+      "topKeys": [
+        {
+          "title": "Young Justice: Sins of Youth",
+          "issue": "#1 (one-shot)",
+          "why": "Young Justice: Sins of Youth #1 — heroes turned to chil",
+          "rawNM": "10"
+        },
+        {
+          "title": "Young Justice: Sins of the Father",
+          "issue": "#1",
+          "why": "Young Justice: Sins of the Father #1 — Peter David — es",
+          "rawNM": "12"
+        },
+        {
+          "title": "Teen Titans",
+          "issue": "#1",
+          "why": "Teen Titans Vol 3 #1 Geoff Johns/Mike McKone — Robin/Su",
+          "rawNM": "15"
+        },
+        {
+          "title": "Teen Titans: Year One",
+          "issue": "#1 of 6",
+          "why": "Teen Titans Year One #1 — 🎉 COMPLETE 6-issue",
+          "rawNM": "8"
+        }
+      ]
+    },
+    "57": {
+      "boxNumber": 57,
+      "label": "Box 57",
+      "warning": "",
+      "stats": {
+        "comics": 150,
+        "keys": 24,
+        "signed": 0
+      },
+      "firstComic": "Star Trek #1",
+      "lastComic": "Star Trek: Klingons #1 (one-shot — FCBD 2023)",
+      "topKeys": [
+        {
+          "title": "Star Trek",
+          "issue": "#1",
+          "why": "Star Trek #1 Mike Johnson/Joe Molnar — Kelvin timeline ",
+          "rawNM": "8"
+        },
+        {
+          "title": "Star Trek",
+          "issue": "#1",
+          "why": "Star Trek #1 Collin Kelly/Jackson Lanzing — new ongoing",
+          "rawNM": "8"
+        },
+        {
+          "title": "Star Trek: Defiant",
+          "issue": "#1",
+          "why": "Star Trek: Defiant #1 — Worf leads rogue Defiant crew —",
+          "rawNM": "8"
+        },
+        {
+          "title": "Star Trek: The Mirror War",
+          "issue": "#0",
+          "why": "ST Mirror War #0 — 🎉 COMPLETE 9-issue — Mirror Universe",
+          "rawNM": "8"
+        },
+        {
+          "title": "Star Trek: The Next Generation — Terra Incognito",
+          "issue": "#1",
+          "why": "🎉 COMPLETE 6-issue TNG mirror arc",
+          "rawNM": "8"
+        },
+        {
+          "title": "Star Trek: The Next Generation — Mirror Broken",
+          "issue": "#1",
+          "why": "🎉 COMPLETE 5-issue — Data as captain in mirror universe",
+          "rawNM": "10"
+        },
+        {
+          "title": "Star Trek: The Next Generation — Through the Mirror",
+          "issue": "#1",
+          "why": "🎉 COMPLETE 5-issue",
+          "rawNM": "8"
+        },
+        {
+          "title": "Star Trek: Day of Blood",
+          "issue": "#1",
+          "why": "Star Trek: Day of Blood #1 — major crossover between Tr",
+          "rawNM": "8"
+        }
+      ]
+    },
+    "58": {
+      "boxNumber": 58,
+      "label": "Box 58",
+      "warning": "",
+      "stats": {
+        "comics": 222,
+        "keys": 17,
+        "signed": 0
+      },
+      "firstComic": "Adam Strange #1 of 8",
+      "lastComic": "DC: 5 of a Kind — Wonder Woman/Grace #1",
+      "topKeys": [
+        {
+          "title": "Adam Strange",
+          "issue": "#1 of 8",
+          "why": "Adam Strange #1 Andy Diggle/Pascal Ferry — COMPLETE 8-i",
+          "rawNM": "10"
+        },
+        {
+          "title": "Justice League of America",
+          "issue": "#0",
+          "why": "JLA #0 Brad Meltzer — preview issue before the relaunch",
+          "rawNM": "8"
+        },
+        {
+          "title": "Justice League of America",
+          "issue": "#1",
+          "why": "JLA #1 Brad Meltzer/David Finch — iconic lineup reveal ",
+          "rawNM": "10"
+        },
+        {
+          "title": "DC Universe",
+          "issue": "#0",
+          "why": "DC Universe #0 Morrison/Johns — Final Crisis prelude — ",
+          "rawNM": "8"
+        },
+        {
+          "title": "Final Crisis",
+          "issue": "#1 of 7",
+          "why": "Final Crisis #1 Grant Morrison — COMPLETE 7-issue — Dar",
+          "rawNM": "12"
+        },
+        {
+          "title": "Batman and Robin",
+          "issue": "#1",
+          "why": "Batman and Robin #1 Grant Morrison/Frank Quitely — Dick",
+          "rawNM": "20"
+        },
+        {
+          "title": "Black Lightning: Year One",
+          "issue": "#1 of 6",
+          "why": "Black Lightning Year One #1 Jen Van Meter — COMPLETE 6-",
+          "rawNM": "10"
+        },
+        {
+          "title": "Secret Six",
+          "issue": "#1",
+          "why": "Secret Six #1 Gail Simone — outlaw supervillains — dark",
+          "rawNM": "12"
+        }
+      ]
+    },
+    "59": {
+      "boxNumber": 59,
+      "label": "Box 59",
+      "warning": "",
+      "stats": {
+        "comics": 620,
+        "keys": 81,
+        "signed": 0
+      },
+      "firstComic": "DC Universe: Rebirth #1",
+      "lastComic": "Justice League Incarnate #5 of 5",
+      "topKeys": [
+        {
+          "title": "DC Universe: Rebirth",
+          "issue": "#1",
+          "why": "DC Universe: Rebirth #1 Geoff Johns — 80-page Rebirth i",
+          "rawNM": "15"
+        },
+        {
+          "title": "Titans: Rebirth",
+          "issue": "#1",
+          "why": "Titans: Rebirth #1 Rebirth one-shot",
+          "rawNM": "8"
+        },
+        {
+          "title": "Green Arrow: Rebirth",
+          "issue": "#1",
+          "why": "Green Arrow: Rebirth #1 Rebirth one-shot",
+          "rawNM": "8"
+        },
+        {
+          "title": "Green Lanterns: Rebirth",
+          "issue": "#1",
+          "why": "Green Lanterns: Rebirth #1 Rebirth one-shot",
+          "rawNM": "8"
+        },
+        {
+          "title": "Batman: Rebirth",
+          "issue": "#1",
+          "why": "Batman: Rebirth #1 Rebirth one-shot",
+          "rawNM": "8"
+        },
+        {
+          "title": "Supergirl: Rebirth",
+          "issue": "#1",
+          "why": "Supergirl: Rebirth #1 Rebirth one-shot",
+          "rawNM": "8"
+        },
+        {
+          "title": "Red Hood and the Outlaws: Rebirth",
+          "issue": "#1",
+          "why": "Red Hood and the Outlaws: Rebirth #1 Rebirth one-shot",
+          "rawNM": "8"
+        },
+        {
+          "title": "Blue Beetle: Rebirth",
+          "issue": "#1",
+          "why": "Blue Beetle: Rebirth #1 Rebirth one-shot",
+          "rawNM": "8"
+        }
+      ]
+    },
+    "60": {
+      "boxNumber": 60,
+      "label": "Box 60",
+      "warning": "",
+      "stats": {
+        "comics": 191,
+        "keys": 26,
+        "signed": 0
+      },
+      "firstComic": "Inhumanity #1",
+      "lastComic": "The Life of Captain Marvel #5",
+      "topKeys": [
+        {
+          "title": "Inhumanity",
+          "issue": "#1",
+          "why": "Inhumanity #1 Matt Fraction/Olivier Coipel — Terrigen M",
+          "rawNM": "12"
+        },
+        {
+          "title": "Secret Invasion: Inhumans",
+          "issue": "#1 of 4",
+          "why": "SI Inhumans #1 — Inhumans vs Skrulls — Medusa leads aft",
+          "rawNM": "8"
+        },
+        {
+          "title": "Silent War",
+          "issue": "#1 of 6",
+          "why": "Silent War #1 David Hine — Inhumans declare war on huma",
+          "rawNM": "8"
+        },
+        {
+          "title": "Inhuman",
+          "issue": "#1",
+          "why": "Inhuman #1 Charles Soule/Joe Madureira — Terrigen after",
+          "rawNM": "10"
+        },
+        {
+          "title": "Inhumans vs. X-Men",
+          "issue": "#1 of 6",
+          "why": "Inhumans vs X-Men #1 Soule/Lemire/Cheung — Terrigen Mis",
+          "rawNM": "12"
+        },
+        {
+          "title": "Uncanny Inhumans",
+          "issue": "#0",
+          "why": "Uncanny Inhumans #0 Charles Soule/Steve McNiven — new I",
+          "rawNM": "8"
+        },
+        {
+          "title": "All-New Inhumans",
+          "issue": "#1",
+          "why": "All-New Inhumans #1 Al Ewing/James Asmus — Crystal lead",
+          "rawNM": "8"
+        },
+        {
+          "title": "Uncanny Inhumans",
+          "issue": "#1 (Marvel NOW!)",
+          "why": "Uncanny Inhumans #1 Marvel NOW! Charles Soule/Steve McN",
+          "rawNM": "10"
+        }
+      ]
+    },
+    "61": {
+      "boxNumber": 61,
+      "label": "Box 61",
+      "warning": "",
+      "stats": {
+        "comics": 255,
+        "keys": 24,
+        "signed": 0
+      },
+      "firstComic": "Fantastic Four #499",
+      "lastComic": "Fantastic Four #4 [Legacy #649]",
+      "topKeys": [
+        {
+          "title": "Fantastic Four",
+          "issue": "#500",
+          "why": "Fantastic Four #500 Mark Waid/Mike Wieringo — landmark ",
+          "rawNM": "15"
+        },
+        {
+          "title": "FF",
+          "issue": "#1",
+          "why": "FF #1 Jonathan Hickman/Steve Epting — Future Foundation",
+          "rawNM": "10"
+        },
+        {
+          "title": "Fantastic Four",
+          "issue": "#1",
+          "why": "Fantastic Four #1 Matt Fraction/Mark Bagley — Fantastic",
+          "rawNM": "8"
+        },
+        {
+          "title": "FF",
+          "issue": "#1",
+          "why": "FF #1 Matt Fraction/Mike Allred — Future Foundation wit",
+          "rawNM": "10"
+        },
+        {
+          "title": "Marvel Knights: 4",
+          "issue": "#2",
+          "why": "Marvel Knights 4 #2 Roberto Aguirre-Sacasa/Steve McNive",
+          "rawNM": "6"
+        },
+        {
+          "title": "Fantastic Four",
+          "issue": "#1",
+          "why": "Fantastic Four #1 Ryan North/Iban Coello — latest FF la",
+          "rawNM": "12"
+        },
+        {
+          "title": "Fantastic Four",
+          "issue": "#7 [Legacy #700]",
+          "why": "FF #7 Legacy #700 — LANDMARK 700th Fantastic Four issue",
+          "rawNM": "20"
+        },
+        {
+          "title": "Reckoning War: Trail of the Watcher",
+          "issue": "#1",
+          "why": "Reckoning War: Trail of the Watcher #1 — Uatu origin — ",
+          "rawNM": "8"
+        }
+      ]
+    },
+    "62": {
+      "boxNumber": 62,
+      "label": "Box 62",
+      "warning": "",
+      "stats": {
+        "comics": 123,
+        "keys": 20,
+        "signed": 0
+      },
+      "firstComic": "Annihilation: Nova #1 of 4",
+      "lastComic": "Thanos #1",
+      "topKeys": [
+        {
+          "title": "Annihilation: Nova",
+          "issue": "#1 of 4",
+          "why": "Annihilation: Nova #1 Abnett/Lanning — COMPLETE 4-issue",
+          "rawNM": "8"
+        },
+        {
+          "title": "Annihilation: Silver Surfer",
+          "issue": "#1 of 4",
+          "why": "Annihilation: Silver Surfer #1 Keith Giffen — COMPLETE ",
+          "rawNM": "8"
+        },
+        {
+          "title": "Silver Surfer: Surfer No More",
+          "issue": "#1 of 4",
+          "why": "Silver Surfer: Surfer No More #1 — Marvel limited 2011",
+          "rawNM": "8"
+        },
+        {
+          "title": "Silver Surfer",
+          "issue": "#3 of 5",
+          "why": "Silver Surfer #3 Pak/Garney",
+          "rawNM": "6"
+        },
+        {
+          "title": "Silver Surfer: Rebirth",
+          "issue": "#1",
+          "why": "Silver Surfer: Rebirth #1 — Silver Surfer returns to hi",
+          "rawNM": "8"
+        },
+        {
+          "title": "Silver Surfer: Rebirth — Legacies",
+          "issue": "#1",
+          "why": "Silver Surfer: Rebirth Legacies #1 Ron Marz/Ron Lim — o",
+          "rawNM": "10"
+        },
+        {
+          "title": "Silver Surfer: All-New Beginnings",
+          "issue": "#1 of 5",
+          "why": "Silver Surfer All-New Beginnings #1 Greg Pak/Nen Siquei",
+          "rawNM": "8"
+        },
+        {
+          "title": "Silver Surfer: Ghost Light",
+          "issue": "#1",
+          "why": "Silver Surfer Ghost Light #1 John Jennings/Valentine De",
+          "rawNM": "10"
+        }
+      ]
+    }
+  }
+}
