@@ -313,6 +313,7 @@ body {
 .lt-title { font-weight: 600; color: var(--brown-light); }
 .lt-sub   { color: var(--muted); font-size: 0.74rem; }
 .lt-val   { color: var(--red); font-weight: 700; white-space: nowrap; }
+.lt-vf    { color: var(--muted2); font-weight: 600; white-space: nowrap; }
 .list-expand-row td { background: #fff8f8; border-bottom: 2px solid #f0dada; padding: 10px 16px 14px 40px; }
 
 /* ── LCARD (calendar, CGC, signings) ── */

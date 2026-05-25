@@ -257,7 +257,8 @@ export default function BoxHunt() {
     { key:"pub",    label:"Publisher", defaultWidth:100, sort:(a,b)=>a.Publisher.localeCompare(b.Publisher), cell:r=><span className="lt-sub">{r.Publisher}</span> },
     { key:"writer", label:"Writer",    defaultWidth:130, sort:(a,b)=>a.Writer.localeCompare(b.Writer),     cell:r=><span className="lt-sub">{r.Writer||"—"}</span> },
     { key:"key",    label:"Key",       defaultWidth:55,  sort:(a,b)=>a.Key.localeCompare(b.Key),           cell:r=>r.Key?.toUpperCase()==="YES"?<span className="badge bkey" style={{fontSize:"0.6rem"}}>KEY</span>:null },
-    { key:"nm",     label:"NM Value",  defaultWidth:90,  sort:(a,b)=>parseVal(a.Value_NM)-parseVal(b.Value_NM), cell:r=><span className="lt-val">{r.Value_NM ? `$${r.Value_NM}` : "—"}</span> },
+    { key:"nm",     label:"NM Value",  defaultWidth:90,  sort:(a,b)=>parseVal(a.Value_NM)-parseVal(b.Value_NM), cell:r=><span className="lt-val">{r.Value_NM && r.Value_NM!=="nan" ? `$${r.Value_NM}` : "—"}</span> },
+    { key:"vf",     label:"VF Value",  defaultWidth:90,  sort:(a,b)=>parseVal(a.Value_VF)-parseVal(b.Value_VF), cell:r=>{ const v=r.Value_VF&&r.Value_VF!=="nan"?r.Value_VF.match(/(\d+(?:\.\d+)?)/)?.[1]:""; return <span className="lt-vf">{v?`$${v}`:"—"}</span>; }},
     { key:"year",   label:"Year",      defaultWidth:65,  sort:(a,b)=>parseVal(a.Year)-parseVal(b.Year),   cell:r=><span className="lt-sub">{r.Year}</span> },
     { key:"signed", label:"Signed",    defaultWidth:90,  sort:(a,b)=>a.Signed.localeCompare(b.Signed),    cell:r=>r.Signed?.toUpperCase()==="YES"?<span className="lt-sub" style={{color:"var(--gold)"}}>✍ {r.Signed_By||"Yes"}</span>:null },
   // eslint-disable-next-line react-hooks/exhaustive-deps
