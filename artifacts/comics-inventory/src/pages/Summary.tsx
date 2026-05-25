@@ -47,6 +47,26 @@ function parseNMVal(raw: string): number {
 const TOTAL_NM_VALUE = Math.round(
   comics.reduce((sum, c) => sum + parseNMVal(c.Value_NM || ""), 0)
 );
+const TOTAL_VF_VALUE = Math.round(
+  comics.reduce((sum, c) => {
+    const m = (c.Value_VF || "").match(/\$?(\d+(?:\.\d+)?)/);
+    return sum + (m ? parseFloat(m[1]) : 0);
+  }, 0)
+);
+// "Previous" top creators = collection before boxes 53–61 were added
+function buildTopCreatorsPrev(field: "Writer" | "Artist"): [string, number][] {
+  const m: Record<string, number> = {};
+  for (const c of comics) {
+    if (Number(c.Box) >= 53) continue;
+    const v = (c[field] as string | undefined) || "";
+    if (v && v !== "nan" && v !== "Various" && v !== "Unknown" && v.trim()) {
+      m[v] = (m[v] || 0) + 1;
+    }
+  }
+  return Object.entries(m).sort((a, b) => b[1] - a[1]).slice(0, 5);
+}
+const TOP_WRITERS_PREV = buildTopCreatorsPrev("Writer");
+const TOP_ARTISTS_PREV = buildTopCreatorsPrev("Artist");
 
 function normPubGroup(p: string): string {
   const u = (p || "").toUpperCase();
@@ -195,6 +215,37 @@ function useCountUp(target: number, duration = 900, trigger = true): number {
   }, [target, trigger, duration]);
   return val;
 }
+// Gas-station style: fast linear sprint → smooth settle
+function useGasUp(target: number, trigger = true): number {
+  const [val, setVal] = useState(0);
+  useEffect(() => {
+    if (!trigger || target === 0) { setVal(target); return; }
+    let live = true;
+    let step = 0;
+    const FAST_N = 48;
+    const fast = setInterval(() => {
+      if (!live) return;
+      step++;
+      setVal(Math.round((step / FAST_N) * target * 0.88));
+      if (step >= FAST_N) {
+        clearInterval(fast);
+        const base = Math.round(0.88 * target);
+        let s2 = 0;
+        const SETTLE_N = 26;
+        const settle = setInterval(() => {
+          if (!live) { clearInterval(settle); return; }
+          s2++;
+          const p = s2 / SETTLE_N;
+          const ease = 1 - Math.pow(1 - p, 3);
+          setVal(Math.round(base + ease * (target - base)));
+          if (s2 >= SETTLE_N) { clearInterval(settle); setVal(target); }
+        }, 30);
+      }
+    }, 16);
+    return () => { live = false; };
+  }, [target, trigger]);
+  return val;
+}
 
 function useInView(threshold = 0.1): [React.RefObject<HTMLDivElement | null>, boolean] {
   const ref = useRef<HTMLDivElement>(null);
@@ -234,6 +285,10 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
     const t = setTimeout(() => setProgWidth(BOX_PCT), 250);
     return () => clearTimeout(t);
   }, []);
+
+  // Gas-station value counters
+  const cNmValue = useGasUp(TOTAL_NM_VALUE, mounted);
+  const cVfValue = useGasUp(TOTAL_VF_VALUE, mounted);
 
   // Animated counters
   const cTotal   = useCountUp(totalComics,  1100, mounted);
@@ -298,44 +353,11 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
           </div>
         </div>
 
-        {/* Content grid */}
-        <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr 1fr", gap:16, alignItems:"start" }}>
-          {/* Top Writers */}
-          <div>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"2.5px", color:"var(--muted)", marginBottom:7 }}>TOP WRITERS</div>
-            {TOP_WRITERS_BNR.map(([name, count], i) => (
-              <div key={name} style={{ display:"flex", alignItems:"center", gap:6, marginBottom:4 }}>
-                <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", color:"var(--muted)", minWidth:18, textAlign:"right" }}>#{i+1}</span>
-                <span style={{ flex:1, fontSize:"0.78rem", color:"var(--text2)", overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>{name}</span>
-                <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.78rem", color:"var(--red)", minWidth:26, textAlign:"right" }}>{count}</span>
-              </div>
-            ))}
-          </div>
-
-          {/* Top Artists */}
-          <div>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"2.5px", color:"var(--muted)", marginBottom:7 }}>TOP ARTISTS</div>
-            {TOP_ARTISTS_BNR.map(([name, count], i) => (
-              <div key={name} style={{ display:"flex", alignItems:"center", gap:6, marginBottom:4 }}>
-                <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", color:"var(--muted)", minWidth:18, textAlign:"right" }}>#{i+1}</span>
-                <span style={{ flex:1, fontSize:"0.78rem", color:"var(--text2)", overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>{name}</span>
-                <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.78rem", color:"#1d6fa4", minWidth:26, textAlign:"right" }}>{count}</span>
-              </div>
-            ))}
-          </div>
-
-          {/* Value + interface updates */}
-          <div>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"2.5px", color:"var(--muted)", marginBottom:7 }}>COLLECTION VALUE EST.</div>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.6rem", color:"#16a34a", letterSpacing:"1px", lineHeight:1, marginBottom:14 }}>
-              ${TOTAL_NM_VALUE.toLocaleString()}
-              <span style={{ fontSize:"0.62rem", color:"var(--muted)", letterSpacing:"1px", marginLeft:4 }}>NM raw</span>
-            </div>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"2.5px", color:"var(--muted)", marginBottom:7 }}>INTERFACE UPDATES</div>
-            {INTERFACE_UPDATES.map(u => (
-              <div key={u} style={{ fontSize:"0.72rem", color:"var(--muted2)", marginBottom:3, lineHeight:1.4 }}>→ {u}</div>
-            ))}
-          </div>
+        {/* Interface updates only — writers/artists/value have their own dedicated cards below */}
+        <div style={{ display:"flex", flexWrap:"wrap", gap:"3px 22px" }}>
+          {INTERFACE_UPDATES.map(u => (
+            <div key={u} style={{ fontSize:"0.72rem", color:"var(--muted2)", lineHeight:1.7 }}>→ {u}</div>
+          ))}
         </div>
       </section>
       )}
@@ -488,6 +510,117 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
               <div className="stat-tile-sub">{s.sub}</div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* ── COLLECTION VALUE — gas station display ── */}
+      <section style={{ marginBottom:24 }}>
+        <div style={{ background:"#0f1a12", border:"1px solid #1e3a22", borderRadius:10, padding:"22px 24px", overflow:"hidden", position:"relative" }}>
+          {/* Scanline texture */}
+          <div style={{ position:"absolute", inset:0, backgroundImage:"repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,255,80,0.015) 3px,rgba(0,255,80,0.015) 4px)", pointerEvents:"none" }} />
+          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"4px", color:"rgba(100,220,120,0.5)", marginBottom:18 }}>
+            COLLECTION VALUE EST. — MAY 25, 2026
+          </div>
+          <div style={{ display:"flex", gap:0, flexWrap:"wrap" }}>
+            {/* NM Value */}
+            <div style={{ flex:"1 1 200px", paddingRight:32, borderRight:"1px solid #1e3a22" }}>
+              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem", letterSpacing:"3px", color:"rgba(100,220,120,0.45)", marginBottom:6 }}>
+                NM RAW TOTAL
+              </div>
+              <div style={{ display:"flex", alignItems:"baseline", gap:4 }}>
+                <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", color:"rgba(100,220,120,0.6)", letterSpacing:"1px", alignSelf:"flex-start", marginTop:6 }}>$</span>
+                <span className="gas-num" style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"3.2rem", color:"#4ade80", letterSpacing:"3px", lineHeight:1, fontVariantNumeric:"tabular-nums" }}>
+                  {cNmValue.toLocaleString()}
+                </span>
+              </div>
+              <div style={{ fontSize:"0.62rem", color:"rgba(100,220,120,0.35)", marginTop:6, letterSpacing:"1px" }}>
+                Near Mint (9.4+) raw — {totalComics.toLocaleString()} books
+              </div>
+            </div>
+            {/* VF Value */}
+            <div style={{ flex:"1 1 200px", paddingLeft:32 }}>
+              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem", letterSpacing:"3px", color:"rgba(100,220,120,0.45)", marginBottom:6 }}>
+                VF COLLECTION VALUE EST.
+              </div>
+              <div style={{ display:"flex", alignItems:"baseline", gap:4 }}>
+                <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", color:"rgba(100,220,120,0.4)", letterSpacing:"1px", alignSelf:"flex-start", marginTop:6 }}>$</span>
+                <span className="gas-num" style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"3.2rem", color:"#86efac", letterSpacing:"3px", lineHeight:1, fontVariantNumeric:"tabular-nums" }}>
+                  {cVfValue.toLocaleString()}
+                </span>
+              </div>
+              <div style={{ fontSize:"0.62rem", color:"rgba(100,220,120,0.35)", marginTop:6, letterSpacing:"1px" }}>
+                Very Fine (8.0) lower bounds — realistic sell-raw estimate
+              </div>
+            </div>
+          </div>
+          {/* Bottom note */}
+          <div style={{ marginTop:16, paddingTop:14, borderTop:"1px solid #1e3a22", fontSize:"0.62rem", color:"rgba(100,220,120,0.25)", letterSpacing:"1px" }}>
+            Values derived from Value_NM and Value_VF fields across all {totalComics.toLocaleString()} catalogued books. VF uses lower bound of any range (e.g. "$5–12" counts as $5).
+          </div>
+        </div>
+      </section>
+
+      {/* ── TOP CREATORS — with delta arrows ── */}
+      <section style={{ marginBottom:32 }}>
+        <h2 className="section-h2">✍ TOP CREATORS</h2>
+        <p style={{ fontSize:"0.78rem", color:"var(--muted2)", marginBottom:12, fontFamily:"'Crimson Pro',serif" }}>
+          Ranked by book count. Arrows show rank change vs. collection before boxes 53–61 were added.
+        </p>
+        <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:12 }}>
+          {(["Writer","Artist"] as const).map(field => {
+            const current = field === "Writer" ? TOP_WRITERS_BNR : TOP_ARTISTS_BNR;
+            const prev    = field === "Writer" ? TOP_WRITERS_PREV : TOP_ARTISTS_PREV;
+            return (
+              <div key={field} style={{ background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:8, padding:"14px 16px" }}>
+                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"3px",
+                  color: field === "Writer" ? "var(--red)" : "#1d6fa4", marginBottom:12 }}>
+                  TOP {field.toUpperCase()}S
+                </div>
+                {current.map(([name, count], i) => {
+                  const prevIdx  = prev.findIndex(([n]) => n === name);
+                  const prevRank = prevIdx === -1 ? 99 : prevIdx + 1;
+                  const prevCount = prevIdx === -1 ? 0 : prev[prevIdx][1];
+                  const delta    = count - prevCount;
+                  const isNew    = prevIdx === -1;
+                  const dir: "up"|"same"|"down" = isNew ? "up" : prevRank > i + 1 ? "up" : prevRank < i + 1 ? "down" : "same";
+                  const arrowChar = dir === "up" ? "↑" : dir === "down" ? "↓" : "→";
+                  const arrowColor = dir === "up" ? "#16a34a" : dir === "down" ? "#dc2626" : "var(--muted)";
+                  const tip = isNew
+                    ? `New to top 5 — +${delta} books added`
+                    : dir === "same"
+                    ? `Held #${i+1} — +${delta} books added`
+                    : dir === "up"
+                    ? `Was #${prevRank} → now #${i+1} — +${delta} books added`
+                    : `Was #${prevRank} → now #${i+1} — +${delta} books added`;
+                  return (
+                    <div key={name} className="creator-row"
+                      style={{ display:"flex", alignItems:"center", gap:8, marginBottom:8, position:"relative" }}>
+                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", color:"var(--muted)",
+                        minWidth:20, textAlign:"right" }}>#{i+1}</span>
+                      <div style={{ width:3, height:20, borderRadius:2, flexShrink:0,
+                        background: field === "Writer" ? "var(--red)" : "#1d6fa4", opacity: 1 - i * 0.15 }} />
+                      <span style={{ flex:1, fontSize:"0.82rem", color:"var(--text2)",
+                        overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap",
+                        fontFamily:"'Crimson Pro',serif" }}>{name}</span>
+                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem",
+                        color: field === "Writer" ? "var(--red)" : "#1d6fa4", minWidth:30, textAlign:"right" }}>{count}</span>
+                      {/* Delta arrow with tooltip */}
+                      <div className="delta-wrap" style={{ position:"relative", flexShrink:0 }}>
+                        <span className="delta-arrow" style={{ fontFamily:"'Bebas Neue',sans-serif",
+                          fontSize:"0.8rem", color:arrowColor, cursor:"default",
+                          display:"inline-flex", alignItems:"center", justifyContent:"center",
+                          width:20, height:20, borderRadius:3,
+                          background: dir === "up" ? "#16a34a18" : dir === "down" ? "#dc262618" : "#6b728018" }}>
+                          {arrowChar}
+                        </span>
+                        <div className="delta-tip">{tip}</div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            );
+          })}
         </div>
       </section>
 

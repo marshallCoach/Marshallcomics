@@ -314,6 +314,41 @@ body {
 .lt-sub   { color: var(--muted); font-size: 0.74rem; }
 .lt-val   { color: var(--red); font-weight: 700; white-space: nowrap; }
 .lt-vf    { color: var(--muted2); font-weight: 600; white-space: nowrap; }
+
+/* ── Gas number display ── */
+.gas-num  { font-variant-numeric: tabular-nums; transition: color 0.15s; }
+
+/* ── Creator delta arrow + tooltip ── */
+.creator-row          { transition: background 0.12s; border-radius: 4px; padding: 2px 4px; }
+.creator-row:hover    { background: var(--surface2); }
+.delta-wrap           { position: relative; }
+.delta-tip            {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 5px);
+  background: #1a0a0a;
+  color: #fff;
+  font-size: 0.65rem;
+  white-space: nowrap;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid rgba(255,255,255,0.12);
+  z-index: 50;
+  pointer-events: none;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+.delta-tip::before    {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  right: 8px;
+  border: 5px solid transparent;
+  border-bottom-color: rgba(255,255,255,0.12);
+}
+.delta-wrap:hover .delta-tip { display: block; }
 .list-expand-row td { background: #fff8f8; border-bottom: 2px solid #f0dada; padding: 10px 16px 14px 40px; }
 
 /* ── LCARD (calendar, CGC, signings) ── */
