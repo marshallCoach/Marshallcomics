@@ -55,7 +55,11 @@ export default function Runs() {
   const [view,          setView]          = useState<"grouped"|"card">("grouped");
   const [selectedRun,   setSelectedRun]   = useState<RunEntry | null>(null);
   const [openPublishers,setOpenPublishers]= useState<Set<string>>(new Set(["Marvel","DC","Other"]));
-  const [openBuckets,   setOpenBuckets]   = useState<Set<string>>(new Set(["Marvel::100% — COMPLETE","DC::100% — COMPLETE"]));
+  const [openBuckets,   setOpenBuckets]   = useState<Set<string>>(() => {
+    const all: string[] = [];
+    ["Marvel","DC","Other"].forEach(p => PCT_BUCKETS.forEach(b => all.push(`${p}::${b.label}`)));
+    return new Set(all);
+  });
   const [drillKey,      setDrillKey]      = useState<"filtered"|"complete"|"near"|"all"|null>(null);
   const [drillView,     setDrillView]     = useState<"list"|"card">("list");
 
@@ -421,10 +425,10 @@ export default function Runs() {
                       <div style={{ flex:1, minWidth:0 }}>
                         <div style={{ fontSize:"0.88rem", fontWeight:600, color:"var(--brown-light)",
                           overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>{run.title}</div>
-                        <div style={{ fontSize:"0.7rem", color:"var(--muted)", marginTop:1 }}>
-                          {pg.label} · #{run.rangeMin}–#{run.rangeMax}
-                          {run.keys   > 0 && ` · ${run.keys} key${run.keys>1?"s":""}`}
-                          {run.signed > 0 && ` · ${run.signed} signed`}
+                        <div style={{ fontSize:"0.83rem", color:"var(--text2)", marginTop:2, lineHeight:1.4 }}>
+                          <span style={{ color:"var(--muted2)" }}>#{run.rangeMin}–#{run.rangeMax}</span>
+                          {run.keys   > 0 && <span style={{ color:"#d97706", marginLeft:6, fontWeight:600 }}>· {run.keys} key{run.keys>1?"s":""}</span>}
+                          {run.signed > 0 && <span style={{ color:"#8b2be2", marginLeft:6, fontWeight:600 }}>· {run.signed} signed</span>}
                         </div>
                       </div>
                       <div style={{ flex:"0 0 140px", height:5, background:"var(--border)", borderRadius:3, overflow:"hidden" }}>

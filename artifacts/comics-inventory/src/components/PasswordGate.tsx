@@ -4,7 +4,7 @@ import { DATA3 } from "@/data/data3";
 const KEY = "mc_auth";
 const PWD = "BlackReadBrown!";
 
-const TARGET_BOXES  = 76;
+const TARGET_BOXES  = 80;
 const _comics       = DATA3.comics;
 const _boxes        = DATA3.boxes.length;
 const _keys         = _comics.filter(c => (c.Key    || "").toUpperCase() === "YES").length;

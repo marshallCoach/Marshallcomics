@@ -27,10 +27,10 @@ Private React + Vite comic book inventory app for Roberto Marshall (BlackReadBro
 
 ## Collection Stats (May 26, 2026)
 
-- 10,482 comics total
-- 67 boxes catalogued (target: 65 — exceeded!)
-- 1,335 key issues
-- 54 signed books
+- 11,776 comics total
+- 75 boxes catalogued (target: 80)
+- 1,462 key issues
+- 55 signed books
 
 ## Product
 

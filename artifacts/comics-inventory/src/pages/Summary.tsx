@@ -127,7 +127,7 @@ const upcomingCal = [...CALENDAR_EVENTS]
   .slice(0, 6);
 
 // ── Timeline ─────────────────────────────────────────────────────────────────
-const TARGET_BOXES = 76;
+const TARGET_BOXES = 80;
 const BOX_PCT      = Math.round((totalBoxes / TARGET_BOXES) * 100);
 const BOX_REMAINING = TARGET_BOXES - totalBoxes;
 

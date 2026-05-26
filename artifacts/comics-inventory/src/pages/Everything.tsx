@@ -160,6 +160,15 @@ export default function Everything({
       if (familyFilter && getFamily(c) !== familyFilter) return false;
       if (exactTitle && c.Title !== exactTitle)     return false;
       if (!q) return true;
+      // Parse "Title #N" pattern (e.g. "Batman #656", "Wolverine #1")
+      const issuePat = q.match(/^(.*?)\s*#(\d+(?:\.\d+)?)\s*$/);
+      if (issuePat) {
+        const tp = issuePat[1].trim();
+        const ip = issuePat[2];
+        const tOk = !tp || c.Title.toLowerCase().includes(tp);
+        const iOk = c.Issue.replace(/^#/, "") === ip || c.Issue === ip || String(parseFloat(c.Issue)) === ip;
+        return tOk && iOk;
+      }
       return [
         c.Title, c.Issue, c.Publisher, c.Writer, c.Artist,
         c.Cover_Artist, c.Signed_By, c.Key_Reason, c.First_App,
