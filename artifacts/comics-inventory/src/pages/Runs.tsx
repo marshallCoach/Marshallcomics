@@ -56,6 +56,8 @@ export default function Runs() {
   const [selectedRun,   setSelectedRun]   = useState<RunEntry | null>(null);
   const [openPublishers,setOpenPublishers]= useState<Set<string>>(new Set(["Marvel","DC","Other"]));
   const [openBuckets,   setOpenBuckets]   = useState<Set<string>>(new Set(["Marvel::100% — COMPLETE","DC::100% — COMPLETE"]));
+  const [drillKey,      setDrillKey]      = useState<"filtered"|"complete"|"near"|"all"|null>(null);
+  const [drillView,     setDrillView]     = useState<"list"|"card">("list");
 
   const togglePublisher = (key: string) =>
     setOpenPublishers(prev => {
@@ -138,6 +140,14 @@ export default function Runs() {
   const perfect     = filtered.filter(r => r.missing.length === 0).length;
   const nearPerfect = filtered.filter(r => r.pct >= 95 && r.missing.length > 0).length;
 
+  const drillRuns = useMemo(() => {
+    if (drillKey === "filtered") return filtered;
+    if (drillKey === "complete") return filtered.filter(r => r.missing.length === 0);
+    if (drillKey === "near")     return filtered.filter(r => r.pct >= 95 && r.missing.length > 0);
+    if (drillKey === "all")      return [...allRuns].sort((a, b) => b.pct - a.pct);
+    return [];
+  }, [drillKey, filtered, allRuns]);
+
   return (
     <div style={{ maxWidth: 1000, margin: "0 auto", padding: "18px 18px 60px" }}>
 
@@ -150,22 +160,38 @@ export default function Runs() {
         </p>
       </div>
 
-      {/* Stats */}
+      {/* Stats — clickable drill-down tiles */}
       <div style={{ display:"flex", gap:12, flexWrap:"wrap", marginBottom:20 }}>
-        {[
-          { val: filtered.length,   lbl: `Runs ≥ ${threshold}%` },
-          { val: perfect,           lbl: "Complete Runs" },
-          { val: nearPerfect,       lbl: "≥ 95% Complete" },
-          { val: allRuns.length,    lbl: "Total Title Groups" },
-        ].map(s => (
-          <div key={s.lbl} style={{ background:"var(--surface)", border:"1.5px solid var(--border)",
-            borderRadius:6, padding:"10px 16px", textAlign:"center", flex:"1 1 110px" }}>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.5rem", color:"var(--red)",
-              letterSpacing:"1px", lineHeight:1 }}>{s.val}</div>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1.5px",
-              color:"var(--muted)", marginTop:3 }}>{s.lbl}</div>
-          </div>
-        ))}
+        {([
+          { dk: "filtered" as const, val: filtered.length, lbl: `Runs ≥ ${threshold}%` },
+          { dk: "complete" as const, val: perfect,          lbl: "Complete Runs" },
+          { dk: "near"     as const, val: nearPerfect,      lbl: "≥ 95% Complete" },
+          { dk: "all"      as const, val: allRuns.length,   lbl: "Total Title Groups" },
+        ]).map(s => {
+          const isActive = drillKey === s.dk;
+          return (
+            <div key={s.lbl}
+              onClick={() => { setDrillKey(isActive ? null : s.dk); setSelectedRun(null); }}
+              style={{
+                background: isActive ? "var(--red)" : "var(--surface)",
+                border: isActive ? "1.5px solid var(--red)" : "1.5px solid var(--border)",
+                borderRadius:6, padding:"10px 16px", textAlign:"center", flex:"1 1 110px",
+                cursor:"pointer", transition:"all 0.18s",
+                boxShadow: isActive ? "0 4px 14px rgba(200,16,46,0.22)" : "none",
+                transform: isActive ? "translateY(-2px)" : "none",
+              }}>
+              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.5rem",
+                color: isActive ? "#fff" : "var(--red)",
+                letterSpacing:"1px", lineHeight:1 }}>{s.val}</div>
+              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1.5px",
+                color: isActive ? "rgba(255,255,255,0.8)" : "var(--muted)", marginTop:3 }}>{s.lbl}</div>
+              {isActive && (
+                <div style={{ fontSize:"0.55rem", color:"rgba(255,255,255,0.65)", marginTop:4,
+                  fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>CLICK TO CLOSE ▲</div>
+              )}
+            </div>
+          );
+        })}
       </div>
 
       {/* Controls */}
@@ -225,7 +251,7 @@ export default function Runs() {
         </div>
       </div>
 
-      {/* Results row — matches Every Book style */}
+      {/* Results bar */}
       <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center",
         marginBottom:14, flexWrap:"wrap", gap:8 }}>
         <div style={{ fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px", fontSize:"0.82rem", color:"var(--muted2)" }}>
@@ -234,23 +260,260 @@ export default function Runs() {
             : <><span style={{ color:"var(--red)", fontSize:"1.05rem" }}>{filtered.length.toLocaleString()}</span> {filtered.length===1?"run":"runs"} — {allRuns.length.toLocaleString()} total groups</>
           }
         </div>
-        <div style={{ display:"flex", gap:6 }}>
-          {(["grouped","card"] as const).map(v => (
-            <button key={v} onClick={() => setView(v)}
-              style={{
-                fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"1.5px",
-                padding:"5px 14px", border:`1.5px solid ${view===v?"var(--red)":"var(--border)"}`,
-                background:view===v?"var(--red)":"var(--surface)", color:view===v?"#fff":"var(--muted2)",
-                borderRadius:4, cursor:"pointer", transition:"all 0.15s",
-              }}>
-              {v==="grouped"?"≡ List":"⊞ Cards"}
-            </button>
-          ))}
-        </div>
+        {!drillKey && (
+          <div style={{ display:"flex", gap:6 }}>
+            {(["grouped","card"] as const).map(v => (
+              <button key={v} onClick={() => setView(v)}
+                style={{
+                  fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"1.5px",
+                  padding:"5px 14px", border:`1.5px solid ${view===v?"var(--red)":"var(--border)"}`,
+                  background:view===v?"var(--red)":"var(--surface)", color:view===v?"#fff":"var(--muted2)",
+                  borderRadius:4, cursor:"pointer", transition:"all 0.15s",
+                }}>
+                {v==="grouped"?"≡ Grouped":"⊞ Cards"}
+              </button>
+            ))}
+          </div>
+        )}
       </div>
 
-      {/* Card view — flagship style */}
-      {view === "card" && filtered.length > 0 && (
+      {/* ── Drill-down results ─────────────────────────────────────────────── */}
+      {drillKey && (
+        <div style={{ marginBottom:28 }}>
+          {/* Drill header */}
+          <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:12, flexWrap:"wrap" }}>
+            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem",
+              letterSpacing:"2px", color:"var(--red)" }}>
+              {{ filtered:`Runs ≥ ${threshold}%`, complete:"Complete Runs", near:"≥ 95% Complete", all:"All Title Groups" }[drillKey]}
+            </div>
+            <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", color:"var(--muted)",
+              background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:10, padding:"2px 10px" }}>
+              {drillRuns.length} runs
+            </span>
+            <div style={{ marginLeft:"auto", display:"flex", gap:5 }}>
+              {(["list","card"] as const).map(v => (
+                <button key={v} onClick={() => setDrillView(v)} style={{
+                  fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1.5px",
+                  padding:"4px 12px", border:`1.5px solid ${drillView===v?"var(--red)":"var(--border)"}`,
+                  background:drillView===v?"var(--red)":"var(--surface)",
+                  color:drillView===v?"#fff":"var(--muted2)",
+                  borderRadius:4, cursor:"pointer", transition:"all 0.15s",
+                }}>{v==="list"?"≡ List":"⊞ Cards"}</button>
+              ))}
+            </div>
+          </div>
+
+          {/* ── Card view ── */}
+          {drillView === "card" && (
+            <div style={{ display:"flex", flexWrap:"wrap", gap:10 }}>
+              {drillRuns.map((run, i) => {
+                const pg = PUB_GROUPS.find(p => p.key === pubGroup(run.publisher)) ?? PUB_GROUPS[2];
+                const pctFill = Math.min(run.pct, 100);
+                const isSelected = selectedRun?.title === run.title;
+                return (
+                  <div key={i}
+                    onClick={() => setSelectedRun(isSelected ? null : run)}
+                    className="flagship-card"
+                    style={{
+                      flex: isSelected ? "1 1 100%" : "1 1 260px",
+                      borderLeftColor: pg.color,
+                      borderColor: isSelected ? pg.color : pg.color+"33",
+                      boxShadow: isSelected ? `0 4px 16px ${pg.color}20` : "none",
+                    }}>
+                    <div style={{ display:"flex", alignItems:"flex-start", gap:8 }}>
+                      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem",
+                        letterSpacing:"1px", color:pg.color, flex:1, lineHeight:1.2 }}>{run.title}</div>
+                      <div style={{ fontSize:"0.68rem", color:"var(--muted)", flexShrink:0 }}>{isSelected?"▲":"▼"}</div>
+                    </div>
+                    <div style={{ display:"flex", gap:5, marginTop:5, flexWrap:"wrap" }}>
+                      <span style={{ fontSize:"0.58rem", fontFamily:"'Bebas Neue',sans-serif",
+                        letterSpacing:"1px", background:pg.accent, color:pg.color,
+                        border:`1px solid ${pg.border}`, borderRadius:3, padding:"1px 6px" }}>{pg.label}</span>
+                      {run.keys > 0 && (
+                        <span style={{ fontSize:"0.58rem", fontFamily:"'Bebas Neue',sans-serif",
+                          letterSpacing:"1px", background:"#fff8e0", color:"#8a6000",
+                          border:"1px solid #fde68a", borderRadius:3, padding:"1px 6px" }}>
+                          {run.keys} KEY{run.keys>1?"S":""}
+                        </span>
+                      )}
+                    </div>
+                    <div style={{ height:5, background:"var(--border)", borderRadius:3, margin:"8px 0 4px" }}>
+                      <div style={{ width:`${pctFill}%`, height:"100%", background:pg.color, borderRadius:3, transition:"width 0.4s" }} />
+                    </div>
+                    <div style={{ display:"flex", justifyContent:"space-between", alignItems:"baseline" }}>
+                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem",
+                        color:pg.color, letterSpacing:"1px", lineHeight:1 }}>
+                        {run.pct >= 100 ? "COMPLETE" : `${run.pct.toFixed(0)}%`}
+                      </span>
+                      <span style={{ fontSize:"0.68rem", color:"var(--muted)" }}>
+                        {run.haveCount}/{run.rangeSize}
+                        {run.missing.length > 0 && <span style={{ color:"var(--red)", marginLeft:4 }}>{run.missing.length} missing</span>}
+                      </span>
+                    </div>
+                    {isSelected && (
+                      <div style={{ marginTop:10, borderTop:"1px solid var(--border)", paddingTop:8 }}>
+                        {run.missing.length > 0 && (
+                          <>
+                            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem",
+                              letterSpacing:"2px", color:"var(--red)", marginBottom:6 }}>MISSING ({run.missing.length})</div>
+                            <div style={{ display:"flex", flexWrap:"wrap", gap:4, marginBottom:10 }}>
+                              {run.missing.map(n => (
+                                <a key={n}
+                                  href={`https://comicvine.gamespot.com/search/?q=${encodeURIComponent(run.title + " " + n)}&resources=issue`}
+                                  target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()}
+                                  style={{ background:"#fff0f0", color:"var(--red)", border:"1.5px solid #f5c8c8",
+                                    borderRadius:4, padding:"2px 8px", fontSize:"0.72rem",
+                                    fontFamily:"'Bebas Neue',sans-serif", textDecoration:"none" }}>
+                                  #{n}
+                                </a>
+                              ))}
+                            </div>
+                          </>
+                        )}
+                        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem",
+                          letterSpacing:"2px", color:"var(--muted2)", marginBottom:6 }}>YOU OWN ({run.haveCount})</div>
+                        <div style={{ display:"flex", flexWrap:"wrap", gap:3 }}>
+                          {run.issues.map((c, ci) => {
+                            const isKey    = (c.Key||"").toUpperCase()==="YES";
+                            const isSigned = (c.Signed||"").toUpperCase()==="YES";
+                            return (
+                              <div key={ci} title={isKey ? c.Key_Reason : c.Arc} style={{
+                                background: isKey ? "#fff8e0" : "var(--surface2)",
+                                border: isKey ? "1.5px solid #d4a800" : "1.5px solid var(--border)",
+                                borderRadius:4, padding:"2px 7px", fontSize:"0.72rem",
+                                fontFamily:"'Bebas Neue',sans-serif",
+                                color: isKey ? "#8a6000" : "var(--text2)",
+                              }}>
+                                #{c.Issue}
+                                {isKey    && <span style={{ color:"#c8102e", marginLeft:2 }}>★</span>}
+                                {isSigned && <span style={{ color:"#22c55e", marginLeft:2 }}>✍</span>}
+                              </div>
+                            );
+                          })}
+                        </div>
+                        <div style={{ marginTop:8, fontSize:"0.68rem", color:"var(--muted)" }}>
+                          Boxes: {Array.from(new Set(run.issues.map(c => `Box ${c.Box}`))).join(", ")}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          )}
+
+          {/* ── List view ── */}
+          {drillView === "list" && (
+            <div style={{ border:"1.5px solid var(--border)", borderRadius:8, overflow:"hidden" }}>
+              {drillRuns.map((run, i) => {
+                const pg = PUB_GROUPS.find(p => p.key === pubGroup(run.publisher)) ?? PUB_GROUPS[2];
+                const pctFill = Math.min(run.pct, 100);
+                const isSelected = selectedRun?.title === run.title;
+                return (
+                  <div key={i} style={{
+                    borderBottom: i < drillRuns.length-1 ? "1px solid var(--border)" : "none",
+                    background: isSelected ? "var(--surface2)" : i % 2 === 0 ? "var(--surface)" : "var(--bg)",
+                    transition:"background 0.12s",
+                  }}>
+                    <div onClick={() => setSelectedRun(isSelected ? null : run)}
+                      style={{ display:"flex", alignItems:"center", gap:12, padding:"10px 16px", cursor:"pointer", flexWrap:"wrap" }}>
+                      <div style={{ width:6, height:6, borderRadius:"50%", background:pg.color, flexShrink:0 }} />
+                      <div style={{ flex:1, minWidth:0 }}>
+                        <div style={{ fontSize:"0.88rem", fontWeight:600, color:"var(--brown-light)",
+                          overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>{run.title}</div>
+                        <div style={{ fontSize:"0.7rem", color:"var(--muted)", marginTop:1 }}>
+                          {pg.label} · #{run.rangeMin}–#{run.rangeMax}
+                          {run.keys   > 0 && ` · ${run.keys} key${run.keys>1?"s":""}`}
+                          {run.signed > 0 && ` · ${run.signed} signed`}
+                        </div>
+                      </div>
+                      <div style={{ flex:"0 0 140px", height:5, background:"var(--border)", borderRadius:3, overflow:"hidden" }}>
+                        <div style={{ width:`${pctFill}%`, height:"100%", background:pg.color, borderRadius:3, transition:"width 0.4s" }} />
+                      </div>
+                      <div style={{ textAlign:"right", flexShrink:0, minWidth:80 }}>
+                        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.95rem",
+                          color:pg.color, letterSpacing:"1px", lineHeight:1 }}>
+                          {run.pct >= 100 ? "COMPLETE" : `${run.pct.toFixed(0)}%`}
+                        </div>
+                        <div style={{ fontSize:"0.62rem", color:"var(--muted)", marginTop:1 }}>
+                          {run.haveCount}/{run.rangeSize}
+                          {run.missing.length > 0 && ` · ${run.missing.length} missing`}
+                        </div>
+                      </div>
+                      <span style={{ color:"var(--muted)", fontSize:"0.7rem", flexShrink:0 }}>{isSelected?"▲":"▼"}</span>
+                    </div>
+                    {isSelected && (
+                      <div style={{ padding:"12px 16px 14px 34px", borderTop:"1px solid var(--border)", background:"var(--surface)" }}>
+                        {run.missing.length > 0 && (
+                          <div style={{ marginBottom:12 }}>
+                            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+                              letterSpacing:"2px", color:"var(--red)", marginBottom:6 }}>
+                              MISSING ISSUES ({run.missing.length})
+                            </div>
+                            <div style={{ display:"flex", flexWrap:"wrap", gap:5 }}>
+                              {run.missing.map(n => (
+                                <a key={n}
+                                  href={`https://comicvine.gamespot.com/search/?q=${encodeURIComponent(run.title + " " + n)}&resources=issue`}
+                                  target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()}
+                                  style={{ background:"#fff0f0", color:"var(--red)", border:"1.5px solid #f5c8c8",
+                                    borderRadius:4, padding:"3px 10px", fontSize:"0.74rem",
+                                    fontFamily:"'Bebas Neue',sans-serif", textDecoration:"none" }}>
+                                  #{n}
+                                </a>
+                              ))}
+                            </div>
+                            <div style={{ fontSize:"0.68rem", color:"var(--muted)", marginTop:5, fontStyle:"italic" }}>
+                              Click any missing issue to search Comic Vine
+                            </div>
+                          </div>
+                        )}
+                        <div>
+                          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+                            letterSpacing:"2px", color:"var(--muted2)", marginBottom:6 }}>
+                            ISSUES YOU OWN ({run.haveCount})
+                          </div>
+                          <div style={{ display:"flex", flexWrap:"wrap", gap:4 }}>
+                            {run.issues.map((c, ci) => {
+                              const isKey    = (c.Key||"").toUpperCase()==="YES";
+                              const isSigned = (c.Signed||"").toUpperCase()==="YES";
+                              return (
+                                <div key={ci} title={isKey ? c.Key_Reason : c.Arc} style={{
+                                  background: isKey ? "#fff8e0" : "var(--surface2)",
+                                  border: isKey ? "1.5px solid #d4a800" : "1.5px solid var(--border)",
+                                  borderRadius:4, padding:"3px 8px", fontSize:"0.74rem",
+                                  fontFamily:"'Bebas Neue',sans-serif",
+                                  color: isKey ? "#8a6000" : "var(--text2)",
+                                }}>
+                                  #{c.Issue}
+                                  {isKey    && <span style={{ color:"#c8102e", marginLeft:2 }}>★</span>}
+                                  {isSigned && <span style={{ color:"#22c55e", marginLeft:2 }}>✍</span>}
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                        <div style={{ marginTop:8, fontSize:"0.7rem", color:"var(--muted)" }}>
+                          Boxes: {Array.from(new Set(run.issues.map(c => `Box ${c.Box}`))).join(", ")}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          )}
+
+          {/* Divider before publisher groups */}
+          <div style={{ marginTop:28, borderTop:"2px solid var(--border)", paddingTop:6, display:"flex", alignItems:"center", gap:8 }}>
+            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"2px", color:"var(--muted)", flex:1 }}>
+              ALL PUBLISHER GROUPS BELOW
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Flat card view (no drill selected) */}
+      {!drillKey && view === "card" && filtered.length > 0 && (
         <div style={{ display:"flex", flexWrap:"wrap", gap:10, marginBottom:40 }}>
           {filtered.map((run, i) => {
             const pg = PUB_GROUPS.find(p => p.key === pubGroup(run.publisher)) ?? PUB_GROUPS[2];
@@ -266,19 +529,15 @@ export default function Runs() {
                   borderColor: isSelected ? pg.color : pg.color+"33",
                   boxShadow: isSelected ? `0 4px 16px ${pg.color}20` : "none",
                 }}>
-                {/* Title row */}
                 <div style={{ display:"flex", alignItems:"flex-start", gap:8 }}>
                   <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.92rem",
                     letterSpacing:"1px", color:pg.color, flex:1, lineHeight:1.2 }}>{run.title}</div>
                   <div style={{ fontSize:"0.7rem", color:"var(--muted)", flexShrink:0, marginTop:1 }}>{isSelected?"▲":"▼"}</div>
                 </div>
-                {/* Badges */}
                 <div style={{ display:"flex", gap:5, marginTop:6, flexWrap:"wrap" }}>
                   <span style={{ fontSize:"0.6rem", fontFamily:"'Bebas Neue',sans-serif",
                     letterSpacing:"1px", background:pg.accent, color:pg.color,
-                    border:`1px solid ${pg.border}`, borderRadius:3, padding:"1px 7px" }}>
-                    {pg.label}
-                  </span>
+                    border:`1px solid ${pg.border}`, borderRadius:3, padding:"1px 7px" }}>{pg.label}</span>
                   {run.keys > 0 && (
                     <span style={{ fontSize:"0.6rem", fontFamily:"'Bebas Neue',sans-serif",
                       letterSpacing:"1px", background:"#fff8e0", color:"#8a6000",
@@ -287,7 +546,6 @@ export default function Runs() {
                     </span>
                   )}
                 </div>
-                {/* Progress bar */}
                 <div style={{ height:5, background:"var(--border)", borderRadius:3, marginBottom:6 }}>
                   <div style={{ width:`${pct}%`, height:"100%", background:pg.color, borderRadius:3, transition:"width 0.4s" }} />
                 </div>
