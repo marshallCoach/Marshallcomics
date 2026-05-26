@@ -18,14 +18,14 @@ const ebayCount    = comics.filter(c => (c.Platform || "").toUpperCase() === "EB
 const tfCount      = comics.filter(c => !!(c.Terrificon || "").trim()).length;
 
 // ── Update banner data ────────────────────────────────────────────────────────
-const LAST_UPDATE_DATE = "May 25, 2026";
-const UPDATE_DELTAS    = ["+10 Boxes (52→62)", "+2,300 Comics", "+221 Keys"];
+const LAST_UPDATE_DATE = "May 26, 2026";
+const UPDATE_DELTAS    = ["+13 Boxes (61→74)", "+2,244 Comics", "+228 Keys"];
 const INTERFACE_UPDATES = [
-  "Full data refresh — 9,532 comics, 61 boxes, 1,234 keys",
-  "Price fields now clean numbers — frontend formats currency",
-  "New boxes 53–62 auto-derived from comics data",
-  "Cover thumbnails on every book (spine + card)",
-  "Interactive publisher & era charts",
+  "Full data refresh — 11,776 comics, 74 boxes, 1,462 keys, 54 signed",
+  "New logical box numbering — Inventory → Marvel → DC → Other → Mixed → TPB",
+  "Organization Path page — 7-step process, box labeling tracker, run consolidation",
+  "Action Plan updated to v5 with new box references and Terrificon prep",
+  "Comic History year-by-year navigation with 0-book month alerts",
 ];
 function buildTopCreators(field: "Writer" | "Artist"): [string, number][] {
   const m: Record<string, number> = {};
