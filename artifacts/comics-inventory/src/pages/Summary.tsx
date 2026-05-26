@@ -803,7 +803,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
           </div>
         </div>
         <div className="boxes-grid">
-          {[...boxData].sort((a,b)=>Number(a.Num.replace(/\D/g,""))-Number(b.Num.replace(/\D/g,""))).map(b => {
+          {[...boxData].filter(b => Number(b.Num.replace(/\D/g,"")) > 0).sort((a,b)=>Number(a.Num.replace(/\D/g,""))-Number(b.Num.replace(/\D/g,""))).map(b => {
             const boxNum = String(parseInt(b.Num.replace(/\D/g,""), 10));
             const lowBook = b.Comics < 100;
             return (

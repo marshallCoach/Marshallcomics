@@ -306,48 +306,81 @@ export default function CollectionStats() {
             ))}
           </div>
 
-          {/* ── Publisher Shelf ── */}
-          <div style={{ background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:6, padding:"16px" }}>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem", letterSpacing:"2px", color:"var(--red)", marginBottom:3 }}>BY PUBLISHER</div>
-            <div style={{ fontSize:"0.72rem", color:"var(--muted2)", marginBottom:12 }}>Hover any segment — proportional to your actual shelf</div>
-            {/* Spine bar */}
-            <div style={{ display:"flex", height:48, borderRadius:4, overflow:"hidden", marginBottom:16, gap:1 }}>
-              {pubPieData.map((p, i) => {
-                const pct = (p.value / comics.length) * 100;
-                const color = PUB_SHELF_COLORS[p.name] ?? PIE_COLORS[i % PIE_COLORS.length];
-                return (
-                  <div key={p.name}
-                    title={`${p.name}: ${p.value.toLocaleString()} books (${pct.toFixed(1)}%)`}
-                    style={{ width:`${pct}%`, background:color, display:"flex", alignItems:"center", justifyContent:"center", overflow:"hidden", cursor:"default", transition:"filter 0.15s" }}
-                    onMouseEnter={e => (e.currentTarget.style.filter = "brightness(1.3)")}
-                    onMouseLeave={e => (e.currentTarget.style.filter = "")}
-                  >
-                    {pct > 5 && (
-                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.56rem", color:"rgba(255,255,255,0.92)", letterSpacing:"1px", whiteSpace:"nowrap" }}>
-                        {p.name}
-                      </span>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-            {/* Row list */}
-            <div style={{ display:"flex", flexDirection:"column", gap:5 }}>
-              {pubPieData.map((p, i) => {
-                const pct = (p.value / comics.length) * 100;
-                const color = PUB_SHELF_COLORS[p.name] ?? PIE_COLORS[i % PIE_COLORS.length];
-                return (
-                  <div key={p.name} style={{ display:"flex", alignItems:"center", gap:8 }}>
-                    <div style={{ width:10, height:10, borderRadius:2, background:color, flexShrink:0 }} />
-                    <span style={{ flex:"0 0 120px", fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"1px", color:"var(--text2)" }}>{p.name}</span>
-                    <div style={{ flex:1, height:5, background:"var(--border)", borderRadius:3, overflow:"hidden" }}>
-                      <div style={{ width:`${pct}%`, height:"100%", background:color, borderRadius:3 }} />
+          {/* ── Publisher Split — two independent scales ── */}
+          <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(280px,1fr))", gap:12 }}>
+
+            {/* ── Panel 1: Marvel + DC on their own big scale ── */}
+            <div style={{ background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:6, padding:"16px" }}>
+              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem", letterSpacing:"2px", color:"var(--red)", marginBottom:2 }}>THE BIG TWO</div>
+              <div style={{ fontSize:"0.7rem", color:"var(--muted2)", marginBottom:14 }}>Marvel & DC — sized against each other</div>
+              {(() => {
+                const big = [
+                  { name:"Marvel", value: byPubRaw["Marvel"]||0, color:"#c8102e" },
+                  { name:"DC",     value: byPubRaw["DC"]||0,     color:"#1d6fa4" },
+                ];
+                const maxBig = Math.max(...big.map(p => p.value)) || 1;
+                return big.map(p => {
+                  const barPct  = (p.value / maxBig) * 100;
+                  const collPct = ((p.value / comics.length) * 100).toFixed(1);
+                  return (
+                    <div key={p.name} style={{ marginBottom:14 }}>
+                      <div style={{ display:"flex", justifyContent:"space-between", alignItems:"baseline", marginBottom:5 }}>
+                        <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem", letterSpacing:"2px", color:"var(--text)" }}>{p.name}</span>
+                        <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.1rem", color:p.color, letterSpacing:"1px" }}>{p.value.toLocaleString()}</span>
+                      </div>
+                      <div style={{ height:22, background:"var(--border)", borderRadius:4, overflow:"hidden" }}>
+                        <div style={{ width:`${barPct}%`, height:"100%", background:p.color, borderRadius:4,
+                          display:"flex", alignItems:"center", paddingLeft:8, transition:"width 0.5s ease" }}>
+                          <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", color:"rgba(255,255,255,0.88)", letterSpacing:"1px", whiteSpace:"nowrap" }}>
+                            {collPct}% of collection
+                          </span>
+                        </div>
+                      </div>
                     </div>
-                    <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem", color, minWidth:44, textAlign:"right" }}>{p.value.toLocaleString()}</span>
-                    <span style={{ fontSize:"0.66rem", color:"var(--muted)", minWidth:38, textAlign:"right" }}>{pct.toFixed(1)}%</span>
-                  </div>
-                );
-              })}
+                  );
+                });
+              })()}
+              {/* Proportional shelf strip */}
+              <div style={{ display:"flex", height:8, borderRadius:3, overflow:"hidden", marginTop:8, gap:1 }}>
+                {[
+                  { name:"Marvel", value: byPubRaw["Marvel"]||0, color:"#c8102e" },
+                  { name:"DC",     value: byPubRaw["DC"]||0,     color:"#1d6fa4" },
+                ].map(p => (
+                  <div key={p.name}
+                    title={`${p.name}: ${p.value.toLocaleString()}`}
+                    style={{ flex: p.value, background: p.color }}
+                  />
+                ))}
+              </div>
+              <div style={{ fontSize:"0.6rem", color:"var(--muted)", marginTop:4, textAlign:"right" }}>
+                proportional to each other
+              </div>
+            </div>
+
+            {/* ── Panel 2: Every other publisher — their own scale ── */}
+            <div style={{ background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:6, padding:"16px" }}>
+              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem", letterSpacing:"2px", color:"var(--red)", marginBottom:2 }}>INDEPENDENT PUBLISHERS</div>
+              <div style={{ fontSize:"0.7rem", color:"var(--muted2)", marginBottom:14 }}>Each bar = share within this group — own scale so you can actually see them</div>
+              {(() => {
+                const others = byPub.filter(([name]) => name !== "Marvel" && name !== "DC");
+                const maxOther = others[0]?.[1] || 1;
+                return others.map(([name, value]) => {
+                  const barPct  = (value / maxOther) * 100;
+                  const collPct = ((value / comics.length) * 100).toFixed(1);
+                  const color   = PUB_SHELF_COLORS[name] ?? "#6b7280";
+                  return (
+                    <div key={name} style={{ display:"flex", alignItems:"center", gap:8, marginBottom:7 }}>
+                      <div style={{ width:9, height:9, borderRadius:2, background:color, flexShrink:0 }} />
+                      <span style={{ flex:"0 0 100px", fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.7rem", letterSpacing:"1px", color:"var(--text2)", overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>{name}</span>
+                      <div style={{ flex:1, height:14, background:"var(--border)", borderRadius:3, overflow:"hidden" }}>
+                        <div style={{ width:`${barPct}%`, height:"100%", background:color, borderRadius:3, transition:"width 0.5s ease" }} />
+                      </div>
+                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.8rem", color, minWidth:38, textAlign:"right" }}>{value.toLocaleString()}</span>
+                      <span style={{ fontSize:"0.6rem", color:"var(--muted)", minWidth:32, textAlign:"right" }}>{collPct}%</span>
+                    </div>
+                  );
+                });
+              })()}
             </div>
           </div>
 
