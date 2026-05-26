@@ -21,12 +21,14 @@ import PullList from "@/pages/PullList";
 import SellerDashboard from "@/pages/SellerDashboard";
 import Duplicates from "@/pages/Duplicates";
 import ComicHistory from "@/pages/ComicHistory";
+import OrganizationPath from "@/pages/OrganizationPath";
 import PasswordGate from "@/components/PasswordGate";
 
 type TabId =
   | "summary" | "everything" | "collection" | "boxkeys" | "stats" | "runs" | "dataview"
   | "calendar" | "showplanner" | "cgc" | "signings" | "actionplan" | "timeline" | "boxvisual"
-  | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "duplicates" | "history";
+  | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "duplicates" | "history"
+  | "orgpath";
 
 export type NavParams = {
   box?: string;
@@ -57,6 +59,7 @@ const NAV = [
     id: "organisation",
     label: "Organisation",
     tabs: [
+      { id: "orgpath",     label: "Org Path" },
       { id: "boxvisual",   label: "Box View" },
       { id: "hunting",     label: "Box Hunt" },
       { id: "timeline",    label: "Timeline" },
@@ -219,6 +222,7 @@ export default function App() {
         {activeTab === "showplanner" && <ShowPlanner />}
         {activeTab === "timeline"    && <BoxTimeline />}
         {activeTab === "boxvisual"   && <BoxVisual />}
+        {activeTab === "orgpath"     && <OrganizationPath />}
         {activeTab === "hunting"     && <BoxHunt />}
         {activeTab === "sellerdash"  && <SellerDashboard />}
         {activeTab === "capfalcon"   && <CapFalconChecklist />}
