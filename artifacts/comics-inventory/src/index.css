@@ -318,17 +318,29 @@ body {
 /* ── Gas number display ── */
 .gas-num  { font-variant-numeric: tabular-nums; transition: color 0.15s; }
 
-/* ── Comic History spinner flip ── */
-@keyframes history-spin {
-  0%   { transform: rotateY(0deg) scale(1);    opacity: 1; }
-  35%  { transform: rotateY(90deg) scale(0.9); opacity: 0; }
-  65%  { transform: rotateY(-90deg) scale(0.9);opacity: 0; }
-  100% { transform: rotateY(0deg) scale(1);    opacity: 1; }
+/* ── Comic History ── */
+@keyframes hc-btn-spin {
+  0%   { transform: rotate(0deg)   scale(1.05); }
+  40%  { transform: rotate(220deg) scale(0.92); }
+  70%  { transform: rotate(340deg) scale(1.08); }
+  100% { transform: rotate(360deg) scale(1);    }
 }
-.history-card-spin {
-  animation: history-spin 0.36s cubic-bezier(0.4, 0, 0.2, 1);
-  transform-origin: center;
+@keyframes hc-comic-in {
+  0%   { opacity: 0; transform: translateY(14px) scale(0.93); }
+  60%  { opacity: 1; transform: translateY(-3px) scale(1.02); }
+  100% { opacity: 1; transform: none; }
 }
+.hc-spin-btn {
+  will-change: transform;
+}
+.hc-spinning {
+  animation: hc-btn-spin 0.42s cubic-bezier(0.34, 1.4, 0.64, 1) forwards;
+}
+.hc-comic-in {
+  animation: hc-comic-in 0.38s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+/* keep old class for any legacy references */
+.history-card-spin { animation: hc-comic-in 0.36s cubic-bezier(0.4, 0, 0.2, 1); }
 
 /* ── Creator delta arrow + tooltip ── */
 .creator-row          { transition: background 0.12s; border-radius: 4px; padding: 2px 4px; }
