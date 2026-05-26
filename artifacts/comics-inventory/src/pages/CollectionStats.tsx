@@ -187,12 +187,23 @@ function SectionHead({ title, sub }: { title: string; sub?: string }) {
   );
 }
 
-function StatTile({ val, lbl, sub, color="#c8102e" }: { val: string | number; lbl: string; sub?: string; color?: string }) {
+function StatTile({ val, lbl, sub, color="#c8102e", onClick, cta }: { val: string | number; lbl: string; sub?: string; color?: string; onClick?: () => void; cta?: string }) {
+  const [hov, setHov] = useState(false);
   return (
-    <div className="cstats-tile" style={{ background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:6, padding:"14px 16px", textAlign:"center", transition:"border-color 0.15s, box-shadow 0.15s, transform 0.15s" }}>
+    <div className="cstats-tile"
+      onClick={onClick}
+      onMouseEnter={() => setHov(true)}
+      onMouseLeave={() => setHov(false)}
+      style={{ background:"var(--surface)", border:`1.5px solid ${hov && onClick ? color : "var(--border)"}`, borderRadius:6, padding:"14px 16px", textAlign:"center",
+        transition:"border-color 0.15s, box-shadow 0.15s, transform 0.15s",
+        cursor: onClick ? "pointer" : "default",
+        transform: hov && onClick ? "translateY(-2px)" : "none",
+        boxShadow: hov && onClick ? `0 6px 18px ${color}22` : "none",
+      }}>
       <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.9rem", color, letterSpacing:"1px", lineHeight:1 }}>{val}</div>
       <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"1.5px", color:"var(--text)", marginTop:4 }}>{lbl}</div>
       {sub && <div style={{ fontSize:"0.75rem", color:"var(--muted2)", marginTop:3, lineHeight:1.4 }}>{sub}</div>}
+      {cta && onClick && <div style={{ fontSize:"0.6rem", color, marginTop:6, fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", opacity:0.8 }}>{cta}</div>}
     </div>
   );
 }
@@ -210,7 +221,7 @@ const CUSTOM_TOOLTIP = ({ active, payload }: { active?: boolean; payload?: {name
 // ── main page ─────────────────────────────────────────────────────────────────
 type SubView = "overview" | "writers" | "characters" | "titles";
 
-export default function CollectionStats() {
+export default function CollectionStats({ onNavigate }: { onNavigate?: (tab: string, params?: Record<string, string>) => void } = {}) {
   const [subView, setSubView] = useState<SubView>("overview");
 
   const topWriters      = useMemo(() => topN(writerMap,     15), []);
@@ -274,10 +285,17 @@ export default function CollectionStats() {
       {subView === "overview" && (
         <>
           <SectionHead title="Collection at a Glance" />
+          {/* Top 3 — hero row, clickable */}
+          <div style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:12, marginBottom:12 }}>
+            <StatTile val={comics.length.toLocaleString()} lbl="Total Comics"  sub="across all boxes"
+              color="#c8102e" cta="BROWSE ALL →" onClick={onNavigate ? () => onNavigate("everything") : undefined} />
+            <StatTile val={keys.length.toLocaleString()}   lbl="Key Issues"    sub={`${((keys.length/comics.length)*100).toFixed(1)}% of collection`}
+              color="#d97706" cta="VIEW KEYS →" onClick={onNavigate ? () => onNavigate("everything", { keysOnly:"true" }) : undefined} />
+            <StatTile val={signed.length}                  lbl="Signed Books"  sub={`${uniqueSigners()} different signers`}
+              color="#8b2be2" cta="VIEW SIGNED →" onClick={onNavigate ? () => onNavigate("everything", { signed:"YES" }) : undefined} />
+          </div>
+          {/* Rest */}
           <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(130px,1fr))", gap:10 }}>
-            <StatTile val={comics.length.toLocaleString()} lbl="Total Comics"        sub="across all boxes"     color="#c8102e" />
-            <StatTile val={keys.length.toLocaleString()}   lbl="Key Issues"          sub={`${((keys.length/comics.length)*100).toFixed(1)}% of collection`} color="#d97706" />
-            <StatTile val={signed.length}                  lbl="Signed Books"        sub={`${uniqueSigners()} different signers`} color="#8b2be2" />
             <StatTile val={uniqueWriters}                  lbl="Writers"             sub="unique credited writers" color="#1d6fa4" />
             <StatTile val={uniqueArtists}                  lbl="Artists"             sub="unique credited artists" color="#16a34a" />
             <StatTile val={uniquePublishers}               lbl="Publishers"          sub="different imprints"    color="#d97706" />

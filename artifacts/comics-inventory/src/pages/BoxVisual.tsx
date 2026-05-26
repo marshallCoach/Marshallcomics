@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { DATA3 } from "@/data/data3";
 import { pubColors } from "@/utils/coverThumbnails";
 
@@ -52,6 +52,23 @@ function buildGroups(comicsList: typeof comics): TitleGroup[] {
   });
 }
 
+function CountUp({ end, duration = 1000 }: { end: number; duration?: number }) {
+  const [val, setVal] = useState(0);
+  useEffect(() => {
+    if (end <= 0) return;
+    const steps   = Math.min(end, 60);
+    const stepMs  = duration / steps;
+    let current   = 0;
+    const timer   = setInterval(() => {
+      current = Math.min(end, current + Math.ceil(end / steps));
+      setVal(current);
+      if (current >= end) clearInterval(timer);
+    }, stepMs);
+    return () => clearInterval(timer);
+  }, [end, duration]);
+  return <>{val || end}</>;
+}
+
 export default function BoxVisual() {
   const [selectedBox,   setSelectedBox]   = useState<string | null>(null);
   const [selectedTitle, setSelectedTitle] = useState<string | null>(null);
@@ -59,7 +76,7 @@ export default function BoxVisual() {
   const [view,          setView]          = useState<"visual" | "runs">("visual");
   const [hoveredBox,   setHoveredBox]   = useState<string | null>(null);
   const [panelPos,     setPanelPos]     = useState({ x: 0, y: 0 });
-  const [hoveredSpine, setHoveredSpine] = useState<{title:string;issue:string;isKey:boolean;isSigned:boolean;x:number;y:number}|null>(null);
+  const [hoveredSpine, setHoveredSpine] = useState<{title:string;issue:string;year?:string;publisher?:string;writer?:string;isKey:boolean;isSigned:boolean;x:number;y:number}|null>(null);
 
   const boxComics = useMemo(() =>
     selectedBox ? getBoxComics(selectedBox) : [],
@@ -128,7 +145,9 @@ export default function BoxVisual() {
                 } : {}),
               }}
             >
-              <div className="box-tile-count">{b.Comics}</div>
+              <div className="box-tile-count">
+                {b.Num === "BOX 64" ? <CountUp end={Number(b.Comics)} /> : b.Comics}
+              </div>
               <div className="box-tile-num">{b.Num.replace("BOX ", "Box ")}</div>
               {Number(b.Keys)   > 0 && <div className="box-tile-keys">{b.Keys}k</div>}
               {Number(b.Signed) > 0 && <div className="box-tile-sgn">{b.Signed}s</div>}
@@ -226,7 +245,7 @@ export default function BoxVisual() {
           </div>
 
           {/* View toggle */}
-          <div style={{ display: "flex", gap: 6, marginBottom: 12, flexWrap: "wrap" }}>
+          <div style={{ display: "flex", gap: 6, marginBottom: 8, flexWrap: "wrap" }}>
             {(["visual", "runs"] as const).map(v => (
               <button key={v} onClick={() => { setView(v); setSelectedTitle(null); }} style={{
                 background: view === v ? "var(--red)" : "var(--surface)",
@@ -255,6 +274,32 @@ export default function BoxVisual() {
             )}
           </div>
 
+          {/* Title index — ABOVE the visual, sorted view only */}
+          {view === "visual" && sorted && titleGroups.length > 0 && (
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 10, padding: "8px 10px", background: "var(--surface2)", borderRadius: 6, border: "1px solid var(--border)" }}>
+              <div style={{ width:"100%", fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem", letterSpacing:"2px", color:"var(--muted)", marginBottom:3 }}>
+                CLICK A TITLE TO HIGHLIGHT — {titleGroups.length} TITLES
+              </div>
+              {titleGroups.map((g, i) => (
+                <button key={i}
+                  onClick={() => setSelectedTitle(selectedTitle === g.title ? null : g.title)}
+                  style={{
+                    background: selectedTitle === g.title ? g.color : "var(--surface)",
+                    border: `1.5px solid ${g.color}`,
+                    borderRadius: 4, padding: "3px 10px", cursor: "pointer",
+                    fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.65rem",
+                    letterSpacing: "0.5px",
+                    color: selectedTitle === g.title ? "#fff" : g.color,
+                    transition: "all 0.12s",
+                    maxWidth: 180, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap",
+                  }}>
+                  {g.title}
+                  <span style={{ opacity: 0.7, marginLeft: 5 }}>{g.issues.length}</span>
+                </button>
+              ))}
+            </div>
+          )}
+
           {/* ── VISUAL VIEW ─────────────────────────────────────────────────── */}
           {view === "visual" && (
             <div style={{ display: "grid",
@@ -270,7 +315,7 @@ export default function BoxVisual() {
                 </div>
 
                 {/* Box graphic — horizontal scroll */}
-                <div style={{
+                <div key={selectedBox} style={{
                   background: "#f0ede8",
                   border: "3px solid #ccc9c2",
                   borderTop: "8px solid #b0aca4",
@@ -325,7 +370,7 @@ export default function BoxVisual() {
                                 const isSigned = (c.Signed || "").toUpperCase() === "YES";
                                 return (
                                   <div key={ci}
-                                    onMouseEnter={e => { const r = e.currentTarget.getBoundingClientRect(); setHoveredSpine({title:c.Title,issue:c.Issue,isKey,isSigned,x:r.left+r.width/2,y:r.top}); }}
+                                    onMouseEnter={e => { const r = e.currentTarget.getBoundingClientRect(); setHoveredSpine({title:c.Title,issue:c.Issue,year:c.Year,publisher:c.Publisher,writer:c.Writer,isKey,isSigned,x:r.left+r.width/2,y:r.top}); }}
                                     onMouseLeave={() => setHoveredSpine(null)}
                                     style={{
                                       width: 5,
@@ -336,6 +381,10 @@ export default function BoxVisual() {
                                       borderRadius: "1px 1px 0 0",
                                       flexShrink: 0,
                                       cursor: "crosshair",
+                                      animationName: "spineIn",
+                                      animationDuration: "0.28s",
+                                      animationFillMode: "both",
+                                      animationDelay: `${ci * 0.007}s`,
                                     }}
                                   />
                                 );
@@ -364,7 +413,7 @@ export default function BoxVisual() {
                         const hasSel   = !!selectedTitle;
                         return (
                           <div key={i}
-                            onMouseEnter={e => { const r = e.currentTarget.getBoundingClientRect(); setHoveredSpine({title:c.Title,issue:c.Issue,isKey,isSigned,x:r.left+r.width/2,y:r.top}); }}
+                            onMouseEnter={e => { const r = e.currentTarget.getBoundingClientRect(); setHoveredSpine({title:c.Title,issue:c.Issue,year:c.Year,publisher:c.Publisher,writer:c.Writer,isKey,isSigned,x:r.left+r.width/2,y:r.top}); }}
                             onMouseLeave={() => setHoveredSpine(null)}
                             onClick={() => setSelectedTitle(isSel ? null : c.Title)}
                             style={{
@@ -378,6 +427,10 @@ export default function BoxVisual() {
                               cursor: "pointer",
                               flexShrink: 0,
                               transition: "opacity 0.12s",
+                              animationName: "spineIn",
+                              animationDuration: "0.28s",
+                              animationFillMode: "both",
+                              animationDelay: `${i * 0.007}s`,
                             }}
                           />
                         );
@@ -405,28 +458,6 @@ export default function BoxVisual() {
                   </span>
                 </div>
 
-                {/* Title index (sorted view only) */}
-                {sorted && (
-                  <div style={{ marginTop: 16, display: "flex", flexWrap: "wrap", gap: 6 }}>
-                    {titleGroups.map((g, i) => (
-                      <button key={i}
-                        onClick={() => setSelectedTitle(selectedTitle === g.title ? null : g.title)}
-                        style={{
-                          background: selectedTitle === g.title ? g.color : "var(--surface)",
-                          border: `1.5px solid ${g.color}`,
-                          borderRadius: 4, padding: "3px 10px", cursor: "pointer",
-                          fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.65rem",
-                          letterSpacing: "0.5px",
-                          color: selectedTitle === g.title ? "#fff" : g.color,
-                          transition: "all 0.12s",
-                          maxWidth: 180, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap",
-                        }}>
-                        {g.title}
-                        <span style={{ opacity: 0.7, marginLeft: 5 }}>{g.issues.length}</span>
-                      </button>
-                    ))}
-                  </div>
-                )}
               </div>
 
               {/* ── Title detail panel ── */}
@@ -565,9 +596,10 @@ export default function BoxVisual() {
           </div>
           <div style={{
             fontFamily:"'Crimson Pro',serif", fontSize:"0.85rem",
-            color:"var(--text2)", display:"flex", alignItems:"center", gap:6,
+            color:"var(--text2)", display:"flex", alignItems:"center", gap:6, flexWrap:"wrap",
           }}>
             <span style={{color:"var(--muted)"}}>#{hoveredSpine.issue}</span>
+            {hoveredSpine.year && <span style={{color:"var(--muted2)", fontSize:"0.78rem"}}>{hoveredSpine.year}</span>}
             {hoveredSpine.isKey && (
               <span style={{
                 background:"#fff8e0", color:"#8a6000",
@@ -585,6 +617,12 @@ export default function BoxVisual() {
               }}>✍ SGD</span>
             )}
           </div>
+          {hoveredSpine.publisher && (
+            <div style={{ fontSize:"0.68rem", color:"var(--muted)", marginTop:4, fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>
+              {hoveredSpine.publisher}
+              {hoveredSpine.writer && <span style={{ marginLeft:6, color:"var(--muted2)" }}>{hoveredSpine.writer}</span>}
+            </div>
+          )}
         </div>
       )}
     </div>

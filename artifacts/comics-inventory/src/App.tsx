@@ -225,7 +225,7 @@ export default function App() {
         {activeTab === "cgc"         && <CGCStrategy />}
         {activeTab === "signings"    && <PrivateSignings />}
         {activeTab === "actionplan"  && <ActionPlan />}
-        {activeTab === "stats"       && <CollectionStats />}
+        {activeTab === "stats"       && <CollectionStats onNavigate={navigateTo} />}
         {activeTab === "dataview"    && <DataView />}
         {activeTab === "sitemap"     && <SiteMap onNavigate={navigateTo} />}
         {activeTab === "pulllist"    && <PullList />}

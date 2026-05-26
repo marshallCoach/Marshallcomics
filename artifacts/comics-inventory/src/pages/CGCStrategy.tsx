@@ -229,8 +229,8 @@ export default function CGCStrategy() {
               { val:`$${totalPressInvest.toLocaleString()}`, lbl:"Pressing", sub:`${pressableBooks.length} books × $20` },
               { val:`$${totalCGCInvest.toLocaleString()}`,   lbl:"CGC Submit", sub:"varies by tier" },
               { val:`$${totalAllIn.toLocaleString()}`,        lbl:"Total All-In", sub:"press + CGC", accent:true },
-              { val:`$${projReturnLow.toLocaleString()}–$${projReturnHigh.toLocaleString()}`, lbl:"Projected Return", sub:"across 23 books" },
-              { val:`+$${netGainLow.toLocaleString()}–$${netGainHigh.toLocaleString()}`,      lbl:"Net Projected Gain", sub:"after all costs" },
+              { val:`$${projReturnLow.toLocaleString()}`, lbl:"Projected Return", sub:`high: $${projReturnHigh.toLocaleString()}` },
+              { val:`+$${netGainLow.toLocaleString()}`, lbl:"Net Projected Gain", sub:`high: +$${netGainHigh.toLocaleString()}` },
             ].map(s => (
               <div key={s.lbl} style={{ textAlign:"center", flex:"0 0 auto" }}>
                 <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.1rem",
@@ -369,7 +369,9 @@ export default function CGCStrategy() {
                       </td>
                       <td style={{ padding:"8px 10px", textAlign:"center", color:"var(--muted2)" }}>${b.rawNM}</td>
                       <td style={{ padding:"8px 10px", color:"var(--gold)", fontWeight:600, whiteSpace:"nowrap" }}>
-                        ${b.projectedLow}–${b.projectedHigh}
+                        ${b.projectedLow}
+                        <span style={{ marginLeft:5, fontSize:"0.62rem", cursor:"help", color:"var(--muted2)", verticalAlign:"middle" }}
+                          title={`Projected range: $${b.projectedLow}–$${b.projectedHigh}`}>ⓘ</span>
                       </td>
                       <td style={{ padding:"8px 10px", textAlign:"center", color:"#16a34a", fontWeight:700, whiteSpace:"nowrap", fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem" }}>
                         {b.roiMultiple}
@@ -399,8 +401,9 @@ export default function CGCStrategy() {
                     ${displayBooks.reduce((s,b)=>s+b.rawNM,0)}
                   </td>
                   <td style={{ padding:"10px 10px", color:"var(--gold)", fontWeight:700 }}>
-                    ${displayBooks.reduce((s,b)=>s+b.projectedLow,0).toLocaleString()}–
-                    ${displayBooks.reduce((s,b)=>s+b.projectedHigh,0).toLocaleString()}
+                    ${displayBooks.reduce((s,b)=>s+b.projectedLow,0).toLocaleString()}
+                    <span style={{ marginLeft:5, fontSize:"0.62rem", cursor:"help", color:"var(--muted2)", verticalAlign:"middle" }}
+                      title={`Range: $${displayBooks.reduce((s,b)=>s+b.projectedLow,0).toLocaleString()}–$${displayBooks.reduce((s,b)=>s+b.projectedHigh,0).toLocaleString()}`}>ⓘ</span>
                   </td>
                   <td colSpan={2} />
                 </tr>

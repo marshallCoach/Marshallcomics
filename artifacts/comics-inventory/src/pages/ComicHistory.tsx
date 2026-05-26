@@ -399,7 +399,9 @@ export default function ComicHistory() {
     }, 540);
   }, []);
 
-  const years = useMemo(() => [...YEARS_PRESENT].reverse(), []);
+  const [selectedYear, setSelectedYear] = useState(() =>
+    YEARS_PRESENT[YEARS_PRESENT.length - 1] ?? END_YEAR
+  );
 
   // Per-year filtered comic count
   const yearStats = useMemo(() => {
@@ -414,6 +416,17 @@ export default function ComicHistory() {
   const totalFiltered = useMemo(() =>
     [...yearStats.values()].reduce((a, b) => a + b, 0),
   [yearStats]);
+
+  const yearIdx  = YEARS_PRESENT.indexOf(selectedYear);
+  const prevYear = yearIdx > 0 ? YEARS_PRESENT[yearIdx - 1] : null;
+  const nextYear = yearIdx < YEARS_PRESENT.length - 1 ? YEARS_PRESENT[yearIdx + 1] : null;
+
+  const zeroMonths = useMemo(() => {
+    const yearComics = BY_YEAR.get(selectedYear) || [];
+    return MONTH_LABELS
+      .map((lbl, mi) => ({ lbl, mi }))
+      .filter(({ mi }) => isMonthVisible(selectedYear, mi) && monthPool(yearComics, mi).filter(filterComic).length === 0);
+  }, [selectedYear, filterComic]);
 
   return (
     <div style={{ maxWidth: 1200, margin: "0 auto", padding: "20px 16px 80px" }}>
@@ -431,7 +444,7 @@ export default function ComicHistory() {
           fontFamily: "'Crimson Pro',serif",
         }}>
           July 1974 to today — one book from Roberto's collection for every month in history.
-          Hit the big round button to spin to another.
+          Use the year arrows to navigate forward and backward. Hit the round button to spin to another book.
         </p>
       </div>
 
@@ -495,51 +508,119 @@ export default function ComicHistory() {
           fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.65rem", letterSpacing: "1.5px",
           color: "var(--muted)",
         }}>
-          {totalFiltered.toLocaleString()} BOOKS IN VIEW
+          {(yearStats.get(selectedYear) ?? 0)} IN {selectedYear} · {totalFiltered.toLocaleString()} TOTAL
         </div>
       </div>
 
-      {/* ── YEARS ── */}
-      {years.map(year => {
-        const yearComics = BY_YEAR.get(year)!;
-        const filtered   = yearStats.get(year) ?? 0;
-        if (filtered === 0) return null;
+      {/* ── YEAR NAVIGATION ── */}
+      <div style={{ display:"flex", alignItems:"center", gap:14, marginBottom:20 }}>
+        <button
+          onClick={() => prevYear && setSelectedYear(prevYear)}
+          disabled={!prevYear}
+          style={{
+            fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"2px",
+            padding:"8px 18px", borderRadius:6, cursor: prevYear ? "pointer" : "default",
+            background: prevYear ? "var(--surface)" : "transparent",
+            color: prevYear ? "var(--red)" : "var(--muted)",
+            border: prevYear ? "1.5px solid var(--red)" : "1.5px solid var(--border)",
+            transition:"all 0.14s", opacity: prevYear ? 1 : 0.35, minWidth:90,
+          }}
+        >
+          ← {prevYear ?? "—"}
+        </button>
+
+        <div style={{ flex:1, textAlign:"center" }}>
+          <div style={{
+            fontFamily:"'Bebas Neue',sans-serif", fontSize:"3.2rem",
+            letterSpacing:"6px", color:"var(--red)", lineHeight:1,
+          }}>
+            {selectedYear}
+          </div>
+          <div style={{
+            fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem",
+            letterSpacing:"2px", color:"var(--muted)", marginTop:4,
+          }}>
+            {yearIdx + 1} OF {YEARS_PRESENT.length} YEARS IN COLLECTION
+          </div>
+        </div>
+
+        <button
+          onClick={() => nextYear && setSelectedYear(nextYear)}
+          disabled={!nextYear}
+          style={{
+            fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"2px",
+            padding:"8px 18px", borderRadius:6, cursor: nextYear ? "pointer" : "default",
+            background: nextYear ? "var(--surface)" : "transparent",
+            color: nextYear ? "var(--red)" : "var(--muted)",
+            border: nextYear ? "1.5px solid var(--red)" : "1.5px solid var(--border)",
+            transition:"all 0.14s", opacity: nextYear ? 1 : 0.35, minWidth:90,
+          }}
+        >
+          {nextYear ?? "—"} →
+        </button>
+      </div>
+
+      {/* ── 0-BOOK MONTH ALERT ── */}
+      {zeroMonths.length > 0 && (
+        <div style={{
+          background:"#fff8f0", border:"1.5px solid #f97316", borderRadius:8,
+          padding:"10px 16px", marginBottom:16,
+          display:"flex", flexWrap:"wrap", alignItems:"center", gap:8,
+        }}>
+          <span style={{
+            fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem",
+            letterSpacing:"1.5px", color:"#c2410c", flexShrink:0,
+          }}>
+            ⚠ MONTHS WITH 0 BOOKS:
+          </span>
+          {zeroMonths.map(({ lbl }) => (
+            <span key={lbl} style={{
+              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1px",
+              background:"#fff", border:"1px solid #f97316",
+              borderRadius:3, padding:"2px 8px", color:"#c2410c",
+            }}>{lbl}</span>
+          ))}
+        </div>
+      )}
+
+      {/* ── CURRENT YEAR GRID ── */}
+      {(() => {
+        const yearComics = BY_YEAR.get(selectedYear) || [];
+        const filtered   = yearStats.get(selectedYear) ?? 0;
+
+        if (!BY_YEAR.has(selectedYear)) {
+          return (
+            <div style={{ textAlign:"center", padding:"60px 20px", color:"var(--muted)",
+              fontFamily:"'Crimson Pro',serif", fontSize:"1.1rem", fontStyle:"italic" }}>
+              No comics from {selectedYear} in this collection.
+            </div>
+          );
+        }
+
+        if (filtered === 0) {
+          return (
+            <div style={{ textAlign:"center", padding:"40px 20px", color:"var(--muted)",
+              fontFamily:"'Crimson Pro',serif", fontSize:"1rem", fontStyle:"italic" }}>
+              No comics from {selectedYear} match the current filter.
+            </div>
+          );
+        }
 
         return (
-          <div key={year} style={{ marginBottom: 36 }}>
-            {/* Year heading */}
-            <div style={{
-              display: "flex", alignItems: "baseline", gap: 14,
-              borderBottom: "3px solid var(--red)", paddingBottom: 8, marginBottom: 14,
-            }}>
-              <span style={{
-                fontFamily: "'Bebas Neue',sans-serif", fontSize: "2.6rem",
-                letterSpacing: "5px", color: "var(--red)", lineHeight: 1,
-              }}>
-                {year}
-              </span>
-              <span style={{
-                fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem",
-                letterSpacing: "2px", color: "var(--muted)",
-              }}>
-                {filtered} BOOKS
-              </span>
-            </div>
-
-            {/* 12-month grid */}
+          <div style={{ marginBottom: 36 }}>
             <div style={{
               display: "grid",
               gridTemplateColumns: "repeat(auto-fill, minmax(185px, 1fr))",
               gap: 12,
             }}>
               {MONTH_LABELS.map((_, mi) => {
-                if (!isMonthVisible(year, mi)) return null;
+                if (!isMonthVisible(selectedYear, mi)) return null;
                 const rawPool = monthPool(yearComics, mi);
                 const pool    = rawPool.filter(filterComic);
                 return (
                   <MonthCard
                     key={mi}
-                    year={year} mi={mi}
+                    year={selectedYear} mi={mi}
                     pool={pool}
                     spinIdx={spinIdx}
                     spinning={spinning}
@@ -551,19 +632,43 @@ export default function ComicHistory() {
             </div>
           </div>
         );
-      })}
+      })()}
 
-      {/* Jump to top */}
-      <div style={{ textAlign: "center", marginTop: 32 }}>
+      {/* Bottom navigation — go to prev/next year */}
+      <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginTop:32, flexWrap:"wrap", gap:10 }}>
+        <button
+          onClick={() => { if (prevYear) { setSelectedYear(prevYear); window.scrollTo({ top: 0, behavior: "smooth" }); }}}
+          disabled={!prevYear}
+          style={{
+            fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.78rem", letterSpacing:"2px",
+            color: prevYear ? "var(--red)" : "var(--muted)", background:"none",
+            border: prevYear ? "1.5px solid var(--red)" : "1.5px solid var(--border)",
+            borderRadius:6, padding:"9px 22px", cursor: prevYear ? "pointer" : "default", opacity: prevYear ? 1 : 0.35,
+          }}
+        >
+          ← {prevYear ?? "—"}
+        </button>
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           style={{
-            fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.8rem", letterSpacing: "2px",
-            color: "var(--red)", background: "none",
-            border: "1.5px solid var(--red)", borderRadius: 6, padding: "9px 28px", cursor: "pointer",
+            fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.78rem", letterSpacing:"2px",
+            color:"var(--muted)", background:"none", border:"1.5px solid var(--border)",
+            borderRadius:6, padding:"9px 22px", cursor:"pointer",
           }}
         >
-          ↑ BACK TO TOP
+          ↑ TOP
+        </button>
+        <button
+          onClick={() => { if (nextYear) { setSelectedYear(nextYear); window.scrollTo({ top: 0, behavior: "smooth" }); }}}
+          disabled={!nextYear}
+          style={{
+            fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.78rem", letterSpacing:"2px",
+            color: nextYear ? "var(--red)" : "var(--muted)", background:"none",
+            border: nextYear ? "1.5px solid var(--red)" : "1.5px solid var(--border)",
+            borderRadius:6, padding:"9px 22px", cursor: nextYear ? "pointer" : "default", opacity: nextYear ? 1 : 0.35,
+          }}
+        >
+          {nextYear ?? "—"} →
         </button>
       </div>
     </div>

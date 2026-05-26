@@ -19,7 +19,7 @@ function parseDate(s: string): number {
   return yr * 10000 + mon * 100 + day;
 }
 
-const TARGET_BOXES = 65;
+const TARGET_BOXES = 80;
 
 export default function BoxTimeline() {
   const entries = useMemo(() => {
