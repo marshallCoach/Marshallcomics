@@ -1,7 +1,16 @@
 import { useState, useEffect } from "react";
+import { DATA3 } from "@/data/data3";
 
 const KEY = "mc_auth";
 const PWD = "BlackReadBrown!";
+
+const TARGET_BOXES  = 76;
+const _comics       = DATA3.comics;
+const _boxes        = DATA3.boxes.length;
+const _keys         = _comics.filter(c => (c.Key    || "").toUpperCase() === "YES").length;
+const _signed       = _comics.filter(c => (c.Signed || "").toUpperCase() === "YES").length;
+const _boxPct       = Math.round((_boxes / TARGET_BOXES) * 100);
+const _remaining    = TARGET_BOXES - _boxes;
 
 interface Props {
   children: React.ReactNode;
@@ -64,25 +73,30 @@ export default function PasswordGate({ children }: Props) {
         Private Collection Database
       </div>
 
-      {/* Collection progress bar */}
+      {/* Collection progress bar — fully dynamic from data3.ts */}
       <div style={{ width: "100%", maxWidth: 340, marginBottom: 28 }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 6 }}>
           <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.58rem", letterSpacing: "2.5px", color: "rgba(255,255,255,0.25)", textTransform: "uppercase" }}>
-            Collection Progress
+            Box Collection Progress
           </span>
           <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.65rem", letterSpacing: "1px", color: "#c8102e" }}>
-            61 / 65 Boxes
+            {_boxes} / {TARGET_BOXES} Boxes
           </span>
         </div>
-        <div style={{ height: 5, background: "rgba(255,255,255,0.08)", borderRadius: 3, overflow: "hidden" }}>
-          <div style={{ width: "94%", height: "100%", background: "linear-gradient(90deg,#c8102e,#f4a107)", borderRadius: 3 }} />
+        <div style={{ height: 6, background: "rgba(255,255,255,0.08)", borderRadius: 3, overflow: "hidden" }}>
+          <div style={{
+            width: `${_boxPct}%`, height: "100%",
+            background: "linear-gradient(90deg,#c8102e,#f4a107)",
+            borderRadius: 3,
+            transition: "width 0.6s ease",
+          }} />
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", marginTop: 6 }}>
           <span style={{ fontSize: "0.56rem", color: "rgba(255,255,255,0.18)", fontFamily: "'Bebas Neue', sans-serif", letterSpacing: "1px" }}>
-            9,532 Comics · 1,234 Keys · 53 Signed
+            {_comics.length.toLocaleString()} Comics · {_keys.toLocaleString()} Keys · {_signed} Signed
           </span>
           <span style={{ fontSize: "0.6rem", color: "rgba(255,255,255,0.25)", fontFamily: "'Bebas Neue', sans-serif", letterSpacing: "1px" }}>
-            94%
+            {_remaining > 0 ? `${_remaining} to go · ` : "✓ "}{_boxPct}%
           </span>
         </div>
       </div>

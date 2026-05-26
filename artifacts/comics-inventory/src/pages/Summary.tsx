@@ -127,8 +127,9 @@ const upcomingCal = [...CALENDAR_EVENTS]
   .slice(0, 6);
 
 // ── Timeline ─────────────────────────────────────────────────────────────────
-const TARGET_BOXES = 65;
-const BOX_PCT = Math.round((totalBoxes / TARGET_BOXES) * 100);
+const TARGET_BOXES = 76;
+const BOX_PCT      = Math.round((totalBoxes / TARGET_BOXES) * 100);
+const BOX_REMAINING = TARGET_BOXES - totalBoxes;
 
 const TIMELINE = [
   { label:"Jorge Jiménez CGC SS — Batman #125",       date:"Jun 5",       days:daysUntil(2026,6,5),   urgency:"critical", cat:"Signing"  },
