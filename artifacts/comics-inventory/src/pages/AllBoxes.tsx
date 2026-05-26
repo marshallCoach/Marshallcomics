@@ -12,7 +12,7 @@ const BOX_LABELS: Record<string, string> = Object.fromEntries(
   boxSummary.map(b => [b.Num, b.Label])
 );
 
-const BOXES      = [...new Set(comics.map(c => c.Box).filter(Boolean))].sort((a,b) => Number(a)-Number(b));
+const BOXES      = [...new Set(comics.map(c => c.Box).filter(Boolean))].filter(b => Number(b) > 0).sort((a,b) => Number(a)-Number(b));
 const PUBLISHERS = [...new Set(comics.map(c => c.Publisher).filter(Boolean))].sort();
 const PLATFORMS  = [...new Set(comics.map(c => c.Platform).filter(Boolean))].sort();
 const ERAS       = [...new Set(comics.map(c => c.Era).filter(Boolean))].sort();

@@ -100,7 +100,7 @@ export default function BoxVisual() {
 
       {/* Box grid selector — matches Home page box-tile style */}
       <div className="boxes-grid" style={{ marginBottom: 24 }}>
-        {boxes.map((b, idx) => {
+        {[...boxes].filter(b => Number(b.Num.replace(/\D/g,"")) > 0).sort((a,b) => Number(a.Num.replace(/\D/g,"")) - Number(b.Num.replace(/\D/g,""))).map((b, idx) => {
           const isSelected = selectedBox === b.Num;
           const lowBook    = Number(b.Comics) < 100;
           return (
