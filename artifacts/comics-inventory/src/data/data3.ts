@@ -438,7 +438,7 @@ DeFalco wrote the 1st New Warriors appearance.`,
     Volume: `1`,
   },
   {
-    Title: `[REMOVED] The Saga of the Original Human Torch`, Issue: `#3`, Publisher: ``,
+    Title: `The Saga of the Original Human Torch`, Issue: `#3`, Publisher: ``,
     Year: ``, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: ``, Artist: ``,
