@@ -20,12 +20,13 @@ import SiteMap from "@/pages/SiteMap";
 import PullList from "@/pages/PullList";
 import SellerDashboard from "@/pages/SellerDashboard";
 import Duplicates from "@/pages/Duplicates";
+import ComicHistory from "@/pages/ComicHistory";
 import PasswordGate from "@/components/PasswordGate";
 
 type TabId =
   | "summary" | "everything" | "collection" | "boxkeys" | "stats" | "runs" | "dataview"
   | "calendar" | "showplanner" | "cgc" | "signings" | "actionplan" | "timeline" | "boxvisual"
-  | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "duplicates";
+  | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "duplicates" | "history";
 
 export type NavParams = {
   box?: string;
@@ -46,6 +47,7 @@ const NAV = [
       { id: "collection",  label: "Sales" },
       { id: "boxkeys",     label: "Box Keys" },
       { id: "duplicates",  label: "Duplicates" },
+      { id: "history",     label: "History" },
       { id: "stats",       label: "Stats" },
       { id: "dataview",    label: "Data View" },
       { id: "capfalcon",   label: "Cap & Falcon" },
@@ -228,6 +230,7 @@ export default function App() {
         {activeTab === "sitemap"     && <SiteMap onNavigate={navigateTo} />}
         {activeTab === "pulllist"    && <PullList />}
         {activeTab === "duplicates"  && <Duplicates />}
+        {activeTab === "history"     && <ComicHistory />}
       </div>
     </div>
     </PasswordGate>
