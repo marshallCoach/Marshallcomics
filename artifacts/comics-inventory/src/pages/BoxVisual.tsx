@@ -115,46 +115,105 @@ export default function BoxVisual() {
         SELECT A BOX TO VISUALIZE ITS CONTENTS
       </div>
 
-      {/* Box grid selector — matches Home page box-tile style */}
-      <div className="boxes-grid" style={{ marginBottom: 24 }}>
-        {[...boxes].filter(b => Number(b.Num.replace(/\D/g,"")) > 0).sort((a,b) => Number(a.Num.replace(/\D/g,"")) - Number(b.Num.replace(/\D/g,""))).map((b, idx) => {
-          const isSelected = selectedBox === b.Num;
-          const lowBook    = Number(b.Comics) < 100;
-          return (
-            <div
-              key={b.Num}
-              onClick={() => selectBox(b.Num)}
-              onMouseEnter={e => {
-                const r = (e.currentTarget as HTMLElement).getBoundingClientRect();
-                setPanelPos({ x: r.right + 10, y: r.top });
-                setHoveredBox(b.Num);
-              }}
-              onMouseLeave={() => setHoveredBox(null)}
-              className="box-tile"
-              style={{
-                animationDelay: `${idx * 0.022}s`,
-                ...(isSelected ? {
-                  borderColor: "var(--red)",
-                  background: "#fef2f2",
-                  boxShadow: "0 4px 14px rgba(200,16,46,0.22)",
-                  transform: "translateY(-2px)",
-                } : {}),
-                ...(lowBook && !isSelected ? {
-                  borderColor: "#d6456a",
-                  background: "#fdf0f4",
-                } : {}),
-              }}
-            >
-              <div className="box-tile-count">
-                {b.Num === "BOX 64" ? <CountUp end={Number(b.Comics)} /> : b.Comics}
-              </div>
-              <div className="box-tile-num">{b.Num.replace("BOX ", "Box ")}</div>
-              {Number(b.Keys)   > 0 && <div className="box-tile-keys">{b.Keys}k</div>}
-              {Number(b.Signed) > 0 && <div className="box-tile-sgn">{b.Signed}s</div>}
-            </div>
-          );
-        })}
-      </div>
+      {/* Box grid — sectioned by publisher */}
+      {(() => {
+        const sorted_ = [...boxes]
+          .filter(b => Number(b.Num.replace(/\D/g,"")) > 0)
+          .sort((a,b) => Number(a.Num.replace(/\D/g,"")) - Number(b.Num.replace(/\D/g,"")));
+
+        function getGroup(num: string): string {
+          const n = Number(num.replace(/\D/g,""));
+          if (n === 1)           return "inventory";
+          if (n >= 2  && n <= 41) return "marvel";
+          if (n >= 42 && n <= 63) return "dc";
+          if (n >= 64 && n <= 67) return "other";
+          if (n >= 68 && n <= 71) return "mixed";
+          return "tpb";
+        }
+
+        const SECTIONS: { key: string; label: string; subtitle: string; color: string; bg: string }[] = [
+          { key:"inventory", label:"INVENTORY",        subtitle:"Key & signed books — CGC candidates",       color:"#c8102e",  bg:"#fff5f5"  },
+          { key:"marvel",    label:"MARVEL",           subtitle:"Boxes 2–41 · 40 boxes",                     color:"#c8102e",  bg:"#fff8f8"  },
+          { key:"dc",        label:"DC",               subtitle:"Boxes 42–63 · 22 boxes",                    color:"#1d6fa4",  bg:"#f4f8fd"  },
+          { key:"other",     label:"INDEPENDENT",      subtitle:"Boxes 64–67 · Image, IDW, Vertigo & more",  color:"#16a34a",  bg:"#f3faf4"  },
+          { key:"mixed",     label:"MIXED",            subtitle:"Boxes 68–71 · Multi-publisher",             color:"#7c3aed",  bg:"#f7f4fe"  },
+          { key:"tpb",       label:"VARIANTS & TPB",   subtitle:"Boxes 72–74 · Foils, connecting sets, TPBs",color:"#d97706",  bg:"#fffbf0"  },
+        ];
+
+        let globalIdx = 0;
+        return (
+          <div style={{ marginBottom: 24, display:"flex", flexDirection:"column", gap:18 }}>
+            {SECTIONS.map(sec => {
+              const secBoxes = sorted_.filter(b => getGroup(b.Num) === sec.key);
+              if (secBoxes.length === 0) return null;
+              const secComics = secBoxes.reduce((s,b) => s + Number(b.Comics), 0);
+              const secKeys   = secBoxes.reduce((s,b) => s + Number(b.Keys),   0);
+              return (
+                <div key={sec.key}>
+                  {/* Section header */}
+                  <div style={{
+                    display:"flex", alignItems:"baseline", gap:10, marginBottom:8,
+                    borderBottom:`2px solid ${sec.color}22`, paddingBottom:6,
+                  }}>
+                    <span style={{
+                      fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem",
+                      letterSpacing:"3px", color:sec.color,
+                    }}>{sec.label}</span>
+                    <span style={{ fontSize:"0.68rem", color:"var(--muted2)", fontFamily:"'Crimson Pro',serif" }}>
+                      {sec.subtitle}
+                    </span>
+                    <span style={{
+                      marginLeft:"auto", fontFamily:"'Bebas Neue',sans-serif",
+                      fontSize:"0.65rem", letterSpacing:"1.5px", color:"var(--muted)",
+                    }}>
+                      {secComics.toLocaleString()} books · {secKeys} keys
+                    </span>
+                  </div>
+                  {/* Boxes */}
+                  <div className="boxes-grid">
+                    {secBoxes.map(b => {
+                      const idx        = globalIdx++;
+                      const isSelected = selectedBox === b.Num;
+                      const lowBook    = Number(b.Comics) < 100;
+                      return (
+                        <div
+                          key={b.Num}
+                          onClick={() => selectBox(b.Num)}
+                          onMouseEnter={e => {
+                            const r = (e.currentTarget as HTMLElement).getBoundingClientRect();
+                            setPanelPos({ x: r.right + 10, y: r.top });
+                            setHoveredBox(b.Num);
+                          }}
+                          onMouseLeave={() => setHoveredBox(null)}
+                          className="box-tile"
+                          style={{
+                            animationDelay: `${idx * 0.018}s`,
+                            ...(isSelected ? {
+                              borderColor: sec.color,
+                              background: sec.bg,
+                              boxShadow: `0 4px 14px ${sec.color}38`,
+                              transform: "translateY(-2px)",
+                            } : {}),
+                            ...(lowBook && !isSelected ? {
+                              borderColor: "#d6456a",
+                              background: "#fdf0f4",
+                            } : {}),
+                          }}
+                        >
+                          <div className="box-tile-count">{b.Comics}</div>
+                          <div className="box-tile-num">{b.Num.replace("BOX ", "Box ")}</div>
+                          {Number(b.Keys)   > 0 && <div className="box-tile-keys">{b.Keys}k</div>}
+                          {Number(b.Signed) > 0 && <div className="box-tile-sgn">{b.Signed}s</div>}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        );
+      })()}
 
       {/* Hover floating panel */}
       {hoveredBox && hoveredBoxData && (
