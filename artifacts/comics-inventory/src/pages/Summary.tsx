@@ -53,11 +53,11 @@ const TOTAL_VF_VALUE = Math.round(
     return sum + (m ? parseFloat(m[1]) : 0);
   }, 0)
 );
-// "Previous" top creators = collection before boxes 53–61 were added
+// "Previous" top creators = collection before the May 2026 renumbering (boxes 1–61)
 function buildTopCreatorsPrev(field: "Writer" | "Artist"): [string, number][] {
   const m: Record<string, number> = {};
   for (const c of comics) {
-    if (Number(c.Box) >= 53) continue;
+    if (Number(c.Box) > 61) continue;
     const v = (c[field] as string | undefined) || "";
     if (v && v !== "nan" && v !== "Various" && v !== "Unknown" && v.trim()) {
       m[v] = (m[v] || 0) + 1;
@@ -169,16 +169,16 @@ function catNavLabel(cat: string): string {
 
 // ── Flagship ─────────────────────────────────────────────────────────────────
 const FLAGSHIP = [
-  { book:"Stan Lee signed BP #513",                    note:"Authenticate first (PSA/DNA) — $800–$1,500+ auth",         color:"#dc2626", box:"2",  publisher:"Marvel", year:"1966", valueNM:"$800–$1,500 authenticated", condition:"Raw — DO NOT press",            cgcPath:"PSA/DNA at NYCC → CGC × JSA Green Qualified",   action:"NYCC Oct 8–11. Never press. Submit via PSA/DNA first.", terrificon:false },
-  { book:"Truth: RWB #1 (Baker remarked)",             note:"Verify remark → Green Qual. → Heritage — $500–$2,000",     color:"#d97706", box:"2",  publisher:"Marvel", year:"2003", valueNM:"$500–$2,000 with remark",   condition:"Has Baker remark",              cgcPath:"CGC × JSA → Green Qualified → Heritage",        action:"Verify remark authenticity before submitting.", terrificon:false },
-  { book:"Ultimate Fallout #4 Foil (1st Miles)",       note:"1st Miles Morales — $800–$1,500 CGC 9.8",                  color:"#8b2be2", box:"2",  publisher:"Marvel", year:"2011", valueNM:"$800–$1,500 CGC 9.8",       condition:"Check for pressing",            cgcPath:"Press → CGC Universal Blue 9.8",                action:"Press then submit for Blue Universal label.", terrificon:false },
-  { book:"Thor #169 CGC 8.0 (Galactus Origin)",        note:"Already slabbed. Galactus origin. Kirby/Lee. Show 15.",    color:"#1d6fa4", box:"15", publisher:"Marvel", year:"1969", valueNM:"CGC 8.0 — already slabbed", condition:"Slabbed CGC 8.0",               cgcPath:"Already graded — ready for Heritage or auction", action:"Feature in Show 15 — Whatnot anchor book.", terrificon:false },
-  { book:"Wolverine #8 (UNSIGNED — 1982)",             note:"Keep unsigned → Yellow SS at Terrificon → $500+ SS 9.8",   color:"#d97706", box:"8",  publisher:"Marvel", year:"1982", valueNM:"$500+ Yellow SS CGC 9.8",   condition:"MUST STAY UNSIGNED",            cgcPath:"Yellow SS at Terrificon → Chris Claremont SS",  action:"Priority #1 at Terrificon. Press before Aug 7. DO NOT sign until con.", terrificon:true },
-  { book:"Batman #656 (1st Damian Wayne)",             note:"Press + Blue Universal → $350–$500 CGC 9.8 — Best ROI",    color:"#16a34a", box:"4",  publisher:"DC",     year:"2006", valueNM:"$350–$500 CGC 9.8",         condition:"In press list — send ASAP",     cgcPath:"Press → CGC Universal Blue 9.8",                action:"Press and submit before Terrificon. Best ROI in collection.", terrificon:true },
-  { book:"Vision #1 (Tom King signed)",                note:"Press + Green Qual. → $150–$300. Film timing.",            color:"#8b2be2", box:"2",  publisher:"Marvel", year:"2015", valueNM:"$150–$300 Green Qualified",  condition:"Signed — press first",          cgcPath:"Press → CGC × JSA → Green Qualified",           action:"In press batch — submit with the Terrificon batch before Aug 7.", terrificon:false },
-  { book:"ASM #361 (1st Carnage — Bagley/Sharen sgd)", note:"Bagley+Sharen. Press + Green Qual. → $200–$300 auth.",    color:"#dc2626", box:"2",  publisher:"Marvel", year:"1992", valueNM:"$200–$300 Green Qualified",  condition:"Dual signed — press first",     cgcPath:"Press → CGC × JSA → Green Qualified",           action:"In press batch — submit with the Terrificon batch before Aug 7.", terrificon:false },
-  { book:"Black Lightning #1 (Isabella)",              note:"Press + Green Qual. → $300–$500. Whatnot/Heritage.",       color:"#16a34a", box:"2",  publisher:"DC",     year:"1977", valueNM:"$300–$500 Green Qualified",  condition:"Check for pressing",            cgcPath:"CGC × JSA → Green Qualified",                   action:"Monitor CGC private signing window — high Heritage value.", terrificon:false },
-  { book:"Captain Carter #1 (Atwell — To Robert)",    note:"Emotional anchor for Show 1 — personalized signing.",      color:"#1d6fa4", box:"2",  publisher:"Marvel", year:"2022", valueNM:"$80–$150 personalized",      condition:"Signed personalized",           cgcPath:"Whatnot anchor — personal story sells",          action:"Lead Show 1 with the story of the Hayley Atwell signing.", terrificon:false },
+  { book:"Stan Lee signed BP #513",                    note:"Authenticate first (PSA/DNA) — $800–$1,500+ auth",         color:"#dc2626", box:"1",  publisher:"Marvel", year:"1966", valueNM:"$800–$1,500 authenticated", condition:"Raw — DO NOT press",            cgcPath:"PSA/DNA at NYCC → CGC × JSA Green Qualified",   action:"NYCC Oct 8–11. Never press. Submit via PSA/DNA first.", terrificon:false },
+  { book:"Truth: RWB #1 (Baker remarked)",             note:"Verify remark → Green Qual. → Heritage — $500–$2,000",     color:"#d97706", box:"1",  publisher:"Marvel", year:"2003", valueNM:"$500–$2,000 with remark",   condition:"Has Baker remark",              cgcPath:"CGC × JSA → Green Qualified → Heritage",        action:"Verify remark authenticity before submitting.", terrificon:false },
+  { book:"Ultimate Fallout #4 Foil (1st Miles)",       note:"1st Miles Morales — $800–$1,500 CGC 9.8",                  color:"#8b2be2", box:"38", publisher:"Marvel", year:"2011", valueNM:"$800–$1,500 CGC 9.8",       condition:"Check for pressing",            cgcPath:"Press → CGC Universal Blue 9.8",                action:"Press then submit for Blue Universal label.", terrificon:false },
+  { book:"Thor #169 CGC 8.0 (Galactus Origin)",        note:"Already slabbed. Galactus origin. Kirby/Lee. Show 15.",    color:"#1d6fa4", box:"63", publisher:"Marvel", year:"1969", valueNM:"CGC 8.0 — already slabbed", condition:"Slabbed CGC 8.0",               cgcPath:"Already graded — ready for Heritage or auction", action:"Feature in Show 15 — Whatnot anchor book.", terrificon:false },
+  { book:"Wolverine #8 (UNSIGNED — 1982)",             note:"Keep unsigned → Yellow SS at Terrificon → $500+ SS 9.8",   color:"#d97706", box:"72", publisher:"Marvel", year:"1982", valueNM:"$500+ Yellow SS CGC 9.8",   condition:"MUST STAY UNSIGNED",            cgcPath:"Yellow SS at Terrificon → Chris Claremont SS",  action:"Priority #1 at Terrificon. Press before Aug 7. DO NOT sign until con.", terrificon:true },
+  { book:"Batman #656 (1st Damian Wayne)",             note:"Press + Blue Universal → $350–$500 CGC 9.8 — Best ROI",    color:"#16a34a", box:"1",  publisher:"DC",     year:"2006", valueNM:"$350–$500 CGC 9.8",         condition:"In press list — send ASAP",     cgcPath:"Press → CGC Universal Blue 9.8",                action:"Press and submit before Terrificon. Best ROI in collection.", terrificon:true },
+  { book:"Vision #1 (Tom King signed)",                note:"Press + Green Qual. → $150–$300. Film timing.",            color:"#8b2be2", box:"1",  publisher:"Marvel", year:"2015", valueNM:"$150–$300 Green Qualified",  condition:"Signed — press first",          cgcPath:"Press → CGC × JSA → Green Qualified",           action:"In press batch — submit with the Terrificon batch before Aug 7.", terrificon:false },
+  { book:"ASM #361 (1st Carnage — Bagley/Sharen sgd)", note:"Bagley+Sharen. Press + Green Qual. → $200–$300 auth.",    color:"#dc2626", box:"1",  publisher:"Marvel", year:"1992", valueNM:"$200–$300 Green Qualified",  condition:"Dual signed — press first",     cgcPath:"Press → CGC × JSA → Green Qualified",           action:"In press batch — submit with the Terrificon batch before Aug 7.", terrificon:false },
+  { book:"Black Lightning #1 (Isabella)",              note:"Press + Green Qual. → $300–$500. Whatnot/Heritage.",       color:"#16a34a", box:"1",  publisher:"DC",     year:"1977", valueNM:"$300–$500 Green Qualified",  condition:"Check for pressing",            cgcPath:"CGC × JSA → Green Qualified",                   action:"Monitor CGC private signing window — high Heritage value.", terrificon:false },
+  { book:"Captain Carter #1 (Atwell — To Robert)",    note:"Emotional anchor for Show 1 — personalized signing.",      color:"#1d6fa4", box:"1",  publisher:"Marvel", year:"2022", valueNM:"$80–$150 personalized",      condition:"Signed personalized",           cgcPath:"Whatnot anchor — personal story sells",          action:"Lead Show 1 with the story of the Hayley Atwell signing.", terrificon:false },
 ];
 
 // ── Search helpers ─────────────────────────────────────────────────────────────
@@ -520,7 +520,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
           {/* Scanline texture */}
           <div style={{ position:"absolute", inset:0, backgroundImage:"repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,255,80,0.015) 3px,rgba(0,255,80,0.015) 4px)", pointerEvents:"none" }} />
           <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"4px", color:"rgba(100,220,120,0.5)", marginBottom:18 }}>
-            COLLECTION VALUE EST. — MAY 25, 2026
+            COLLECTION VALUE EST. — MAY 26, 2026
           </div>
           <div style={{ display:"flex", gap:0, flexWrap:"wrap" }}>
             {/* NM Value */}
@@ -565,7 +565,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
       <section style={{ marginBottom:32 }}>
         <h2 className="section-h2">✍ TOP CREATORS</h2>
         <p style={{ fontSize:"0.78rem", color:"var(--muted2)", marginBottom:12, fontFamily:"'Crimson Pro',serif" }}>
-          Ranked by book count. Arrows show rank change vs. collection before boxes 53–61 were added.
+          Ranked by book count across all {totalComics.toLocaleString()} comics. Arrows show rank change vs. previous snapshot (boxes 1–61).
         </p>
         <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:12 }}>
           {(["Writer","Artist"] as const).map(field => {
