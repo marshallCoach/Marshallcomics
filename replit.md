@@ -20,17 +20,17 @@ Private React + Vite comic book inventory app for Roberto Marshall (BlackReadBro
 ## Where things live
 
 - `artifacts/comics-inventory/src/` — main app
-- `artifacts/comics-inventory/src/data/data3.ts` — AUTO-GENERATED from xlsx (7,232 comics, 51 boxes)
+- `artifacts/comics-inventory/src/data/data3.ts` — AUTO-GENERATED from xlsx (10,482 comics, 67 boxes)
 - `artifacts/comics-inventory/src/pages/` — all page components
 - `artifacts/comics-inventory/src/index.css` — all styles (light/editorial theme)
 - `artifacts/comics-inventory/src/App.tsx` — nav + routing
 
-## Collection Stats (May 24, 2026)
+## Collection Stats (May 26, 2026)
 
-- 7,232 comics total
-- 51 boxes catalogued (target: 65)
-- 1,013 key issues
-- 53 signed books
+- 10,482 comics total
+- 67 boxes catalogued (target: 65 — exceeded!)
+- 1,335 key issues
+- 54 signed books
 
 ## Product
 
