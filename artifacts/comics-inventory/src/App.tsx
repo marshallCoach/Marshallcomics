@@ -19,12 +19,13 @@ import CapFalconChecklist from "@/pages/CapFalconChecklist";
 import SiteMap from "@/pages/SiteMap";
 import PullList from "@/pages/PullList";
 import SellerDashboard from "@/pages/SellerDashboard";
+import Duplicates from "@/pages/Duplicates";
 import PasswordGate from "@/components/PasswordGate";
 
 type TabId =
   | "summary" | "everything" | "collection" | "boxkeys" | "stats" | "runs" | "dataview"
   | "calendar" | "showplanner" | "cgc" | "signings" | "actionplan" | "timeline" | "boxvisual"
-  | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash";
+  | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "duplicates";
 
 export type NavParams = {
   box?: string;
@@ -39,15 +40,24 @@ const NAV = [
     id: "inventory",
     label: "Inventory",
     tabs: [
-      { id: "summary",    label: "Home" },
-      { id: "everything", label: "Every Book" },
-      { id: "runs",       label: "Runs" },
-      { id: "collection", label: "Sales" },
-      { id: "boxkeys",    label: "Box Keys" },
+      { id: "summary",     label: "Home" },
+      { id: "everything",  label: "Every Book" },
+      { id: "runs",        label: "Runs" },
+      { id: "collection",  label: "Sales" },
+      { id: "boxkeys",     label: "Box Keys" },
+      { id: "duplicates",  label: "Duplicates" },
+      { id: "stats",       label: "Stats" },
+      { id: "dataview",    label: "Data View" },
+      { id: "capfalcon",   label: "Cap & Falcon" },
+    ],
+  },
+  {
+    id: "organisation",
+    label: "Organisation",
+    tabs: [
       { id: "boxvisual",   label: "Box View" },
-      { id: "stats",      label: "Stats" },
-      { id: "dataview",   label: "Data View" },
-      { id: "capfalcon",  label: "Cap & Falcon" },
+      { id: "hunting",     label: "Box Hunt" },
+      { id: "timeline",    label: "Timeline" },
     ],
   },
   {
@@ -55,11 +65,9 @@ const NAV = [
     label: "Business",
     tabs: [
       { id: "pulllist",    label: "Pull List" },
-      { id: "hunting",     label: "Box Hunt" },
       { id: "sellerdash",  label: "Seller Dashboard" },
       { id: "calendar",    label: "Calendar" },
       { id: "showplanner", label: "Whatnot Shows" },
-      { id: "timeline",    label: "Timeline" },
       { id: "cgc",         label: "CGC" },
       { id: "signings",    label: "Signings" },
       { id: "actionplan",  label: "Action Plan" },
@@ -219,6 +227,7 @@ export default function App() {
         {activeTab === "dataview"    && <DataView />}
         {activeTab === "sitemap"     && <SiteMap onNavigate={navigateTo} />}
         {activeTab === "pulllist"    && <PullList />}
+        {activeTab === "duplicates"  && <Duplicates />}
       </div>
     </div>
     </PasswordGate>
