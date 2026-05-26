@@ -62,6 +62,7 @@ const C = {
 };
 
 function s(row, idx) { return String(row[idx] ?? '').trim().replace(/\\/g, '\\\\').replace(/`/g, '\\`').replace(/\$\{/g, '\\${'); }
+function st(row, idx) { return s(row, idx).replace(/^\[REMOVED\]\s*/i, ''); }
 
 // Derive earliest Date_Added per box from comics data
 const boxDateMap = {};
@@ -82,7 +83,7 @@ for (let r = 1; r < allRows.length; r++) {
   const title = String(row[C.title] ?? '').trim();
   if (!title) continue;
   comics.push(`  {
-    Title: \`${s(row,C.title)}\`, Issue: \`${s(row,C.issue)}\`, Publisher: \`${s(row,C.pub)}\`,
+    Title: \`${st(row,C.title)}\`, Issue: \`${s(row,C.issue)}\`, Publisher: \`${s(row,C.pub)}\`,
     Year: \`${s(row,C.year)}\`, Arc: \`${s(row,C.arc)}\`, Key: \`${s(row,C.key)}\`,
     Key_Reason: \`${s(row,C.keyWhy)}\`, First_App: \`${s(row,C.first)}\`,
     Writer: \`${s(row,C.writer)}\`, Artist: \`${s(row,C.artist)}\`,
