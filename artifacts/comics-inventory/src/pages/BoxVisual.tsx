@@ -69,8 +69,8 @@ function CountUp({ end, duration = 1000 }: { end: number; duration?: number }) {
   return <>{val || end}</>;
 }
 
-export default function BoxVisual() {
-  const [selectedBox,   setSelectedBox]   = useState<string | null>(null);
+export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
+  const [selectedBox,   setSelectedBox]   = useState<string | null>(initBox || null);
   const [selectedTitle, setSelectedTitle] = useState<string | null>(null);
   const [sorted,        setSorted]        = useState(false);
   const [view,          setView]          = useState<"visual" | "runs">("visual");

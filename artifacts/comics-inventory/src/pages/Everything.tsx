@@ -97,10 +97,11 @@ function CoverThumb({ c }: { c: Comic }) {
 }
 
 export default function Everything({
-  initBox, initQuery, initPublisher, initKeysOnly, initSignedOnly,
+  initBox, initQuery, initPublisher, initKeysOnly, initSignedOnly, onNavigate,
 }: {
   initBox?: string; initQuery?: string; initPublisher?: string;
   initKeysOnly?: boolean; initSignedOnly?: boolean;
+  onNavigate?: (tab: string, params?: Record<string, string>) => void;
 }) {
   const [query,       setQuery]      = useState(initQuery    || "");
   const [publisher,   setPub]        = useState(initPublisher || "");
@@ -125,7 +126,11 @@ export default function Everything({
     { key:"issue",     label:"#",         defaultWidth:55,  sort:(a,b)=>parseVal(a.Issue)-parseVal(b.Issue), cell:r=><span className="lt-sub">{r.Issue}</span> },
     { key:"volume",    label:"Vol",       defaultWidth:58,  sort:(a,b)=>Number(a.Volume||0)-Number(b.Volume||0), cell:r=><span className="lt-sub">{r.Volume||"—"}</span> },
     { key:"publisher", label:"Publisher", defaultWidth:100, sort:(a,b)=>a.Publisher.localeCompare(b.Publisher), cell:r=><span className="lt-sub">{r.Publisher}</span> },
-    { key:"box",       label:"Box",       defaultWidth:70,  sort:(a,b)=>Number(a.Box)-Number(b.Box), cell:r=><BoxBadge box={r.Box} /> },
+    { key:"box",       label:"Box",       defaultWidth:70,  sort:(a,b)=>Number(a.Box)-Number(b.Box), cell:r=>(
+      onNavigate
+        ? <button onClick={e=>{e.stopPropagation();onNavigate("boxvisual",{box:r.Box});}} style={{all:"unset",cursor:"pointer"}}><BoxBadge box={r.Box} /></button>
+        : <BoxBadge box={r.Box} />
+    )},
     { key:"writer",    label:"Writer",    defaultWidth:130, sort:(a,b)=>a.Writer.localeCompare(b.Writer), cell:r=><span className="lt-sub">{r.Writer||"—"}</span> },
     { key:"artist",    label:"Artist",    defaultWidth:130, sort:(a,b)=>a.Artist.localeCompare(b.Artist), cell:r=><span className="lt-sub">{r.Artist||"—"}</span> },
     { key:"key",       label:"Key",       defaultWidth:55,  sort:(a,b)=>a.Key.localeCompare(b.Key), cell:r=>r.Key?.toUpperCase()==="YES"?<span className="badge bkey" style={{fontSize:"0.6rem"}}>KEY</span>:null },
