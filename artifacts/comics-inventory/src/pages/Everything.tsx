@@ -119,12 +119,13 @@ export default function Everything({
   const [exactTitle,  setExactTitle] = useState("");
 
   const cols = useMemo<ColDef<Comic>[]>(() => [
+    { key:"entry",     label:"Legacy #",  defaultWidth:72,  sort:(a,b)=>Number(a.Entry||0)-Number(b.Entry||0), cell:r=><span className="lt-sub" style={{color:"var(--muted)",fontVariantNumeric:"tabular-nums"}}>#{r.Entry}</span> },
     { key:"title",     label:"Title",     defaultWidth:220, sort:(a,b)=>a.Title.localeCompare(b.Title), cell:r=>(
       <button className="title-link" onClick={e=>{e.stopPropagation();setExactTitle(r.Title||"");setQuery("");setSearched(true);setCardPage(1);}}>
         {r.Title||"Untitled"}
       </button>
     )},
-    { key:"issue",     label:"#",         defaultWidth:55,  sort:(a,b)=>parseVal(a.Issue)-parseVal(b.Issue), cell:r=><span className="lt-sub">{r.Issue}</span> },
+    { key:"issue",     label:"Issue #",   defaultWidth:65,  sort:(a,b)=>parseVal(a.Issue)-parseVal(b.Issue), cell:r=><span className="lt-sub">{r.Issue}</span> },
     { key:"volume",    label:"Vol",       defaultWidth:58,  sort:(a,b)=>Number(a.Volume||0)-Number(b.Volume||0), cell:r=><span className="lt-sub">{r.Volume||"—"}</span> },
     { key:"publisher", label:"Publisher", defaultWidth:100, sort:(a,b)=>a.Publisher.localeCompare(b.Publisher), cell:r=><span className="lt-sub">{r.Publisher}</span> },
     { key:"box",       label:"Box",       defaultWidth:70,  sort:(a,b)=>Number(a.Box)-Number(b.Box), cell:r=>(
@@ -451,7 +452,10 @@ function EverythingCard({ comic: c, onTitleClick }: { comic: Comic; onTitleClick
             ? <button className="title-link" style={{fontSize:"inherit",fontWeight:600,lineHeight:1.3}} onClick={e=>{e.stopPropagation();onTitleClick(c.Title);}} title="Click to show only this title">{c.Title}</button>
             : <div className="card-title">{c.Title}</div>
           }
-          <div className="card-issue">{c.Issue}{c.Year?` · ${c.Year}`:""}</div>
+          <div className="card-issue">
+            {c.Issue}{c.Volume && c.Volume !== "1" ? ` · Vol ${c.Volume}` : ""}{c.Year ? ` · ${c.Year}` : ""}
+            {c.Entry && <span style={{marginLeft:8,fontSize:"0.78rem",color:"var(--muted)",fontVariantNumeric:"tabular-nums"}}>#{c.Entry}</span>}
+          </div>
           {c.Publisher && <div className="card-pub">{c.Publisher}{c.Era?` · ${c.Era}`:""}</div>}
         </div>
       </div>

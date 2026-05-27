@@ -282,9 +282,9 @@ body {
 }
 .comic-card:hover { border-color: var(--red); box-shadow: 0 4px 12px rgba(200,16,46,0.12); transform: translateY(-2px); }
 
-.card-title { font-family: 'Crimson Pro', serif; font-weight: 700; color: var(--brown-light); font-size: 0.95rem; margin-bottom: 1px; line-height: 1.3; }
-.card-issue { color: var(--muted2); font-size: 0.82rem; margin-bottom: 2px; }
-.card-pub   { color: var(--muted);  font-size: 0.78rem; margin-bottom: 3px; }
+.card-title { font-family: 'Crimson Pro', serif; font-weight: 700; color: var(--brown-light); font-size: 1.05rem; margin-bottom: 1px; line-height: 1.3; }
+.card-issue { color: var(--muted2); font-size: 0.9rem; margin-bottom: 2px; }
+.card-pub   { color: var(--muted);  font-size: 0.85rem; margin-bottom: 3px; }
 .card-sub   { color: var(--muted);  font-size: 0.8rem; margin-bottom: 8px; }
 .card-pitch { color: var(--muted2); font-size: 0.82rem; line-height: 1.5; }
 .card-value { font-size: 0.75rem; color: var(--brown); margin-bottom: 5px; }
@@ -299,19 +299,19 @@ body {
 
 /* ── LIST TABLE ── */
 .list-table { width: 100%; padding: 0 4px 20px; overflow-x: auto; }
-.list-table table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+.list-table table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
 .list-table thead tr { border-bottom: 2px solid var(--red); }
 .list-table thead th {
   text-align: left; padding: 8px 12px; color: var(--muted2);
-  font-family: 'Bebas Neue', sans-serif; font-size: 0.68rem; letter-spacing: 1.5px;
+  font-family: 'Bebas Neue', sans-serif; font-size: 0.72rem; letter-spacing: 1.5px;
   text-transform: uppercase; white-space: nowrap;
 }
 .list-table tbody tr { border-bottom: 1px solid var(--border); cursor: pointer; transition: background 0.1s; }
 .list-table tbody tr:hover { background: var(--surface2); }
 .list-table tbody tr.open-row { background: #fff8f8; }
-.list-table tbody td { padding: 7px 12px; vertical-align: top; }
+.list-table tbody td { padding: 8px 12px; vertical-align: top; }
 .lt-title { font-weight: 600; color: var(--brown-light); }
-.lt-sub   { color: var(--muted); font-size: 0.74rem; }
+.lt-sub   { color: var(--muted); font-size: 0.82rem; }
 .lt-val   { color: var(--red); font-weight: 700; white-space: nowrap; }
 .lt-vf    { color: var(--muted2); font-weight: 600; white-space: nowrap; }
 

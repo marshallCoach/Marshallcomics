@@ -59,6 +59,7 @@ const C = {
   crossover:col('Crossover / Event'),
   bid:      col('Whatnot Starting Bid'),
   volume:   col('Volume'),
+  entry:    col('#'),
 };
 
 function s(row, idx) { return String(row[idx] ?? '').trim().replace(/\\/g, '\\\\').replace(/`/g, '\\`').replace(/\$\{/g, '\\${'); }
@@ -97,7 +98,7 @@ for (let r = 1; r < allRows.length; r++) {
     Cover_Artist: \`${s(row,C.coverA)}\`, Date_Added: \`${s(row,C.date)}\`,
     Imprint: \`${s(row,C.imprint)}\`, Box: \`${s(row,C.box)}\`,
     Crossover: \`${s(row,C.crossover)}\`, Start_Bid: \`${s(row,C.bid)}\`,
-    Volume: \`${s(row,C.volume)}\`,
+    Volume: \`${s(row,C.volume)}\`, Entry: \`${s(row,C.entry)}\`,
   }`);
 }
 
@@ -175,7 +176,7 @@ export interface Comic {
   Era: string; Universe: string; Seller_Notes: string; Story_Pitch: string;
   Content: string; Platform: string; Sales_Data: string; Terrificon: string;
   Cover_Artist: string; Date_Added: string; Imprint: string; Box: string;
-  Crossover: string; Start_Bid: string; Volume: string;
+  Crossover: string; Start_Bid: string; Volume: string; Entry: string;
 }
 
 export interface BoxSummary {
