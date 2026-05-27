@@ -3,7 +3,7 @@ import { DATA3 } from "@/data/data3";
 
 const KEY           = "mc_auth";
 const PWD           = "BlackReadBrown!";
-const PASSKEY_KEY   = "brbPasskeyId";
+const PASSKEY_KEY   = "brbPasskeyId";   // stored as JSON: { credId: string; rpId: string }
 const PROGRESS_KEY  = "mc_progress_dismissed";
 
 const TARGET_BOXES = 80;
@@ -25,6 +25,32 @@ function b64decode(s: string): Uint8Array {
   const arr = new Uint8Array(buf);
   for (let i = 0; i < bin.length; i++) arr[i] = bin.charCodeAt(i);
   return arr;
+}
+
+interface StoredPasskey { credId: string; rpId: string; }
+
+function loadPasskey(): StoredPasskey | null {
+  try {
+    const raw = localStorage.getItem(PASSKEY_KEY);
+    if (!raw) return null;
+    // Support legacy format (plain string) from old builds
+    if (!raw.startsWith("{")) return null;
+    const parsed = JSON.parse(raw) as StoredPasskey;
+    // If registered on a different domain, treat as invalid for this origin
+    if (parsed.rpId !== window.location.hostname) return null;
+    return parsed;
+  } catch { return null; }
+}
+
+function savePasskey(credId: string) {
+  localStorage.setItem(PASSKEY_KEY, JSON.stringify({ credId, rpId: window.location.hostname }));
+}
+
+async function checkBiometricAvailable(): Promise<boolean> {
+  if (!window.PublicKeyCredential) return false;
+  try {
+    return await PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable();
+  } catch { return false; }
 }
 
 async function registerPasskey(): Promise<string | null> {
@@ -65,10 +91,6 @@ async function authenticatePasskey(storedId: string): Promise<boolean> {
   }
 }
 
-function supportsPasskeys(): boolean {
-  return !!(window.PublicKeyCredential && window.crypto?.getRandomValues);
-}
-
 // ── Component ───────────────────────────────────────────────────────────────
 
 interface Props { children: React.ReactNode; }
@@ -81,13 +103,19 @@ export default function PasswordGate({ children }: Props) {
   const [shake,         setShake]         = useState(false);
   const [show,          setShow]          = useState(false);
   const [stage,         setStage]         = useState<Stage>("lock");
-  const [biometricErr,  setBiometricErr]  = useState("");
-  const [passkeyId,     setPasskeyId]     = useState<string | null>(() => localStorage.getItem(PASSKEY_KEY));
-  const [progressHidden,setProgressHidden]= useState(() => sessionStorage.getItem(PROGRESS_KEY) === "1");
+  const [biometricErr,    setBiometricErr]    = useState("");
+  const [passkey,         setPasskey]         = useState<StoredPasskey | null>(() => loadPasskey());
+  const [biometricAvail,  setBiometricAvail]  = useState(false);
+  const [progressHidden,  setProgressHidden]  = useState(() => sessionStorage.getItem(PROGRESS_KEY) === "1");
 
   useEffect(() => {
     if (unlocked) sessionStorage.setItem(KEY, "1");
   }, [unlocked]);
+
+  // Async biometric detection — runs once on mount
+  useEffect(() => {
+    checkBiometricAvailable().then(setBiometricAvail);
+  }, []);
 
   if (unlocked) return <>{children}</>;
 
@@ -101,7 +129,7 @@ export default function PasswordGate({ children }: Props) {
 
   function attempt() {
     if (input === PWD) {
-      if (supportsPasskeys() && !passkeyId) {
+      if (biometricAvail && !passkey) {
         setStage("offer-faceid");
       } else {
         setUnlocked(true);
@@ -114,10 +142,10 @@ export default function PasswordGate({ children }: Props) {
   async function setupFaceId() {
     setStage("registering");
     setBiometricErr("");
-    const id = await registerPasskey();
-    if (id) {
-      localStorage.setItem(PASSKEY_KEY, id);
-      setPasskeyId(id);
+    const credId = await registerPasskey();
+    if (credId) {
+      savePasskey(credId);
+      setPasskey({ credId, rpId: window.location.hostname });
     } else {
       setBiometricErr("Face ID setup was cancelled or isn't available on this device.");
     }
@@ -125,10 +153,10 @@ export default function PasswordGate({ children }: Props) {
   }
 
   async function useFaceId() {
-    if (!passkeyId) return;
+    if (!passkey) return;
     setStage("authing");
     setBiometricErr("");
-    const ok = await authenticatePasskey(passkeyId);
+    const ok = await authenticatePasskey(passkey.credId);
     if (ok) {
       setUnlocked(true);
     } else {
@@ -139,7 +167,7 @@ export default function PasswordGate({ children }: Props) {
 
   function removeFaceId() {
     localStorage.removeItem(PASSKEY_KEY);
-    setPasskeyId(null);
+    setPasskey(null);
     setStage("lock");
     setBiometricErr("");
   }
@@ -229,7 +257,7 @@ export default function PasswordGate({ children }: Props) {
       )}
 
       {/* Face ID button — prominent if registered */}
-      {passkeyId && (
+      {passkey && (
         <div style={{ width:"100%", maxWidth:340, marginBottom:16, display:"flex", flexDirection:"column", gap:8 }}>
           <button
             onClick={useFaceId}
@@ -266,7 +294,7 @@ export default function PasswordGate({ children }: Props) {
               value={input}
               onChange={e => setInput(e.target.value)}
               placeholder="••••••••••••••"
-              autoFocus={!passkeyId}
+              autoFocus={!passkey}
               style={{ width:"100%", padding:"12px 40px 12px 14px", background:"#111", border:"1.5px solid #333", borderRadius:6, color:"#fff", fontFamily:"'Crimson Pro',Georgia,serif", fontSize:"1rem", outline:"none", letterSpacing:"2px", transition:"border-color 0.15s" }}
               onFocus={e => (e.target.style.borderColor = "#c8102e")}
               onBlur={e => (e.target.style.borderColor = "#333")}
@@ -286,7 +314,7 @@ export default function PasswordGate({ children }: Props) {
       </div>
 
       {/* Remove Face ID link (shown when registered) */}
-      {passkeyId && (
+      {passkey && (
         <button onClick={removeFaceId}
           style={{ marginTop:14, background:"none", border:"none", cursor:"pointer", fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.55rem", letterSpacing:"2px", color:"rgba(255,255,255,0.15)", textDecoration:"underline" }}>
           REMOVE FACE ID FROM THIS DEVICE
