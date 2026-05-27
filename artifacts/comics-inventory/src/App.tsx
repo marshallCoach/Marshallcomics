@@ -217,6 +217,7 @@ export default function App() {
             initPublisher={navParams.publisher}
             initKeysOnly={navParams.keysOnly === "true"}
             initSignedOnly={navParams.signed === "YES"}
+            onNavigate={navigateTo}
           />
         )}
         {activeTab === "runs"        && <Runs />}
@@ -226,7 +227,7 @@ export default function App() {
         {activeTab === "calendar"    && <Calendar />}
         {activeTab === "showplanner" && <ShowPlanner />}
         {activeTab === "timeline"    && <BoxTimeline />}
-        {activeTab === "boxvisual"   && <BoxVisual />}
+        {activeTab === "boxvisual"   && <BoxVisual initBox={navParams.box} />}
         {activeTab === "orgpath"     && <OrganizationPath />}
         {activeTab === "boxlabels"   && <BoxLabels />}
         {activeTab === "hunting"     && <BoxHunt />}
