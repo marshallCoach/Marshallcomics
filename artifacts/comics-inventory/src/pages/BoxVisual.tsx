@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import { DATA3 } from "@/data/data3";
 import { pubColors } from "@/utils/coverThumbnails";
 
@@ -77,6 +77,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
   const [hoveredBox,   setHoveredBox]   = useState<string | null>(null);
   const [panelPos,     setPanelPos]     = useState({ x: 0, y: 0 });
   const [hoveredSpine, setHoveredSpine] = useState<{title:string;issue:string;year?:string;publisher?:string;writer?:string;isKey:boolean;isSigned:boolean;x:number;y:number}|null>(null);
+  const detailRef = useRef<HTMLDivElement>(null);
 
   const boxComics = useMemo(() =>
     selectedBox ? getBoxComics(selectedBox) : [],
@@ -101,6 +102,13 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
     setView("visual");
     setSorted(false);
   }
+
+  useEffect(() => {
+    if (!selectedBox) return;
+    const el = detailRef.current;
+    if (!el) return;
+    setTimeout(() => el.scrollIntoView({ behavior: "smooth", block: "start" }), 80);
+  }, [selectedBox]);
 
   const selectedBoxData    = boxes.find(b => b.Num === selectedBox);
   const selectedTitleGroup = titleGroups.find(g => g.title === selectedTitle);
@@ -269,7 +277,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
 
       {/* Box detail */}
       {selectedBox && selectedBoxData && (
-        <div>
+        <div ref={detailRef}>
           {/* Box header */}
           <div style={{ background: "var(--surface)", border: "1.5px solid var(--border)",
             borderRadius: 8, padding: "14px 18px", marginBottom: 14,
