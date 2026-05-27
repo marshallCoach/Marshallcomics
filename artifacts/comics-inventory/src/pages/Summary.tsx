@@ -313,7 +313,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
     if (searchField === "publisher" && searchPub) {
       onNavigate("everything", { publisher: searchPub });
     } else if (searchField === "box" && searchBox) {
-      onNavigate("everything", { box: searchBox });
+      onNavigate("boxvisual", { box: searchBox });
     } else if (searchField === "keysonly") {
       onNavigate("everything", { keysOnly: "true" });
     } else if (searchField === "signedonly") {
@@ -809,7 +809,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
             return (
               <div
                 key={b.Num}
-                onClick={() => onNavigate("everything", { box: boxNum })}
+                onClick={() => onNavigate("boxvisual", { box: boxNum })}
                 className="box-tile"
                 title={b.Notes || b.Label}
                 style={lowBook ? { borderColor:"#d6456a", background:"#fdf0f4" } : {}}
