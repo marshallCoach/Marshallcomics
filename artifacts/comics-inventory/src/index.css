@@ -11,8 +11,8 @@
   --brown: #7a5c3a;
   --brown-light: #4a3018;
   --gold: #b07d20;
-  --muted: #999;
-  --muted2: #666;
+  --muted: #6b6b6b;
+  --muted2: #444;
   --text: #1a1a1a;
   --text2: #333;
   --green-bg: #e8f5e8;
@@ -30,11 +30,11 @@ body {
   color: var(--text);
   font-family: 'Crimson Pro', Georgia, serif;
   min-height: 100vh;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.55;
 }
 
-@media (max-width: 640px) { body { font-size: 15px; } }
+@media (max-width: 640px) { body { font-size: 16px; } }
 
 ::-webkit-scrollbar { width: 5px; height: 5px; }
 ::-webkit-scrollbar-track { background: var(--bg); }

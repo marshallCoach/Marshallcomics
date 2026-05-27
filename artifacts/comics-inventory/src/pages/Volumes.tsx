@@ -1,8 +1,11 @@
 import { useState, useMemo } from "react";
 import { DATA3 } from "@/data/data3";
+import type { NavParams } from "../App";
 
 const comics = DATA3.comics;
 type Comic = (typeof comics)[number];
+
+type NavFn = (page: string, params?: NavParams) => void;
 
 function parseIssueNum(s: string): number | null {
   const raw = String(s || "").trim().replace(/^#/, "");
@@ -22,12 +25,14 @@ function pubGroup(publisher: string): "Marvel" | "DC" | "Other" {
 interface Volume {
   volNum: number;
   issues: Comic[];
-  startYear: string;
-  endYear: string;
+  startYear: number;
+  endYear: number;
   writer: string;
   artist: string;
   keyCount: number;
   signedCount: number;
+  overlapsNext: boolean;
+  overlapsPrev: boolean;
 }
 
 interface TitleEntry {
@@ -38,6 +43,7 @@ interface TitleEntry {
   totalIssues: number;
   totalKeys: number;
   totalSigned: number;
+  hasOverlap: boolean;
 }
 
 function splitVolumes(issues: Comic[]): Volume[] {
@@ -64,10 +70,10 @@ function splitVolumes(issues: Comic[]): Volume[] {
   }
   if (cur.length > 0) groups.push(cur);
 
-  return groups.map((g, i) => {
+  const raw = groups.map((g, i) => {
     const years = g.map(c => Number(c.Year || 0)).filter(y => y > 1900);
-    const startYear = years.length ? String(Math.min(...years)) : "?";
-    const endYear   = years.length ? String(Math.max(...years)) : "?";
+    const startYear = years.length ? Math.min(...years) : 0;
+    const endYear   = years.length ? Math.max(...years) : 0;
     const first = g[0];
     return {
       volNum: i + 1,
@@ -78,8 +84,21 @@ function splitVolumes(issues: Comic[]): Volume[] {
       artist: (first?.Artist && first.Artist !== "nan") ? first.Artist : "—",
       keyCount:    g.filter(c => (c.Key    || "").toUpperCase() === "YES").length,
       signedCount: g.filter(c => (c.Signed || "").toUpperCase() === "YES").length,
+      overlapsNext: false,
+      overlapsPrev: false,
     };
   });
+
+  // Flag overlapping adjacent volumes
+  for (let i = 0; i < raw.length - 1; i++) {
+    const a = raw[i], b = raw[i + 1];
+    if (a.startYear > 0 && b.startYear > 0) {
+      const overlaps = a.endYear >= b.startYear;
+      if (overlaps) { a.overlapsNext = true; b.overlapsPrev = true; }
+    }
+  }
+
+  return raw;
 }
 
 const PUB_GROUPS: { key: "Marvel" | "DC" | "Other"; label: string; color: string; bg: string; border: string }[] = [
@@ -88,7 +107,7 @@ const PUB_GROUPS: { key: "Marvel" | "DC" | "Other"; label: string; color: string
   { key: "Other",  label: "Independent", color: "#16a34a", bg: "#f3faf4", border: "#bbf7d0" },
 ];
 
-export default function Volumes() {
+export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
   const [search,      setSearch]      = useState("");
   const [pubFilter,   setPubFilter]   = useState<"" | "Marvel" | "DC" | "Other">("");
   const [sortBy,      setSortBy]      = useState<"title" | "vols" | "issues">("title");
@@ -108,6 +127,7 @@ export default function Volumes() {
       const pub    = issues[0]?.Publisher || "";
       const pg     = pubGroup(pub);
       const vols   = splitVolumes(issues);
+      const hasOverlap = vols.some(v => v.overlapsNext || v.overlapsPrev);
       return {
         title,
         publisher: pub,
@@ -116,6 +136,7 @@ export default function Volumes() {
         totalIssues:  issues.length,
         totalKeys:    issues.filter(c => (c.Key    || "").toUpperCase() === "YES").length,
         totalSigned:  issues.filter(c => (c.Signed || "").toUpperCase() === "YES").length,
+        hasOverlap,
       };
     });
   }, []);
@@ -134,8 +155,9 @@ export default function Volumes() {
     return list;
   }, [allTitles, pubFilter, search, sortBy, multiOnly]);
 
-  const totalVols = filtered.reduce((s, t) => s + t.volumes.length, 0);
-  const multiVol  = filtered.filter(t => t.volumes.length > 1).length;
+  const totalVols  = filtered.reduce((s, t) => s + t.volumes.length, 0);
+  const multiCount = allTitles.filter(t => t.volumes.length > 1).length;
+  const overlapCount = allTitles.filter(t => t.hasOverlap).length;
 
   function togglePub(key: string) {
     setOpenPubs(prev => { const n = new Set(prev); n.has(key) ? n.delete(key) : n.add(key); return n; });
@@ -146,6 +168,11 @@ export default function Volumes() {
   function expandAll()  { setOpenPubs(new Set(["Marvel","DC","Other"])); setOpenTitles(new Set(filtered.map(t => t.title))); }
   function collapseAll(){ setOpenPubs(new Set()); setOpenTitles(new Set()); }
 
+  function goToBook(title: string, e: React.MouseEvent) {
+    e.stopPropagation();
+    onNavigate("everything", { query: title });
+  }
+
   return (
     <div style={{ maxWidth: 1000, margin: "0 auto", padding: "18px 18px 60px" }}>
 
@@ -154,36 +181,39 @@ export default function Volumes() {
         <h1 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.6rem", color:"var(--red)",
           letterSpacing:"3px", lineHeight:1, margin:0 }}>Volumes</h1>
         <p style={{ color:"var(--muted2)", fontSize:"0.88rem", marginTop:6 }}>
-          Every title in the collection, broken into distinct volumes — grouped by publisher.
+          Every title in the collection, broken into distinct volumes — grouped by publisher. Click any volume to browse its issues.
         </p>
       </div>
 
       {/* Stats */}
       <div style={{ display:"flex", gap:12, flexWrap:"wrap", marginBottom:20 }}>
         {([
-          { val: filtered.length,                                                  lbl: "Titles",        clickable: false },
-          { val: totalVols,                                                        lbl: "Volumes",       clickable: false },
-          { val: allTitles.filter(t => t.volumes.length > 1).length,              lbl: "Multi-Volume",  clickable: true  },
-          { val: filtered.reduce((s,t) => s + t.totalIssues, 0).toLocaleString(), lbl: "Issues",        clickable: false },
+          { val: filtered.length,                                                  lbl: "Titles",       click: false },
+          { val: totalVols,                                                        lbl: "Volumes",      click: false },
+          { val: multiCount,                                                       lbl: "Multi-Volume", click: true  },
+          { val: overlapCount,                                                     lbl: "⚠ Overlapping",click: false, warn: true },
+          { val: filtered.reduce((s,t) => s + t.totalIssues, 0).toLocaleString(), lbl: "Issues",       click: false },
         ] as const).map(s => {
-          const isActive = s.clickable && multiOnly;
+          const isActive = "click" in s && s.click && multiOnly;
           return (
             <div key={s.lbl}
-              onClick={s.clickable ? () => setMultiOnly(v => !v) : undefined}
+              onClick={"click" in s && s.click ? () => setMultiOnly(v => !v) : undefined}
               style={{
-                background: isActive ? "var(--red)" : "var(--surface)",
-                border: isActive ? "1.5px solid var(--red)" : "1.5px solid var(--border)",
+                background: isActive ? "var(--red)" : "warn" in s && s.warn ? "#fff8e0" : "var(--surface)",
+                border: isActive ? "1.5px solid var(--red)" : "warn" in s && s.warn ? "1.5px solid #d4a800" : "1.5px solid var(--border)",
                 borderRadius:6, padding:"10px 16px", textAlign:"center", flex:"1 1 100px",
-                cursor: s.clickable ? "pointer" : "default",
+                cursor: "click" in s && s.click ? "pointer" : "default",
                 boxShadow: isActive ? "0 4px 14px rgba(200,16,46,0.22)" : "none",
                 transform: isActive ? "translateY(-2px)" : "none",
                 transition:"all 0.18s",
               }}>
               <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.5rem",
-                color: isActive ? "#fff" : "var(--red)", letterSpacing:"1px", lineHeight:1 }}>{s.val}</div>
+                color: isActive ? "#fff" : "warn" in s && s.warn ? "#8a6000" : "var(--red)",
+                letterSpacing:"1px", lineHeight:1 }}>{s.val}</div>
               <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1.5px",
-                color: isActive ? "rgba(255,255,255,0.8)" : "var(--muted)", marginTop:3 }}>{s.lbl}</div>
-              {s.clickable && !isActive && (
+                color: isActive ? "rgba(255,255,255,0.8)" : "warn" in s && s.warn ? "#8a6000" : "var(--muted)",
+                marginTop:3 }}>{s.lbl}</div>
+              {"click" in s && s.click && !isActive && (
                 <div style={{ fontSize:"0.52rem", color:"var(--muted)", marginTop:3,
                   fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>CLICK TO FILTER</div>
               )}
@@ -301,12 +331,11 @@ export default function Volumes() {
                     return (
                       <div key={tKey} style={{
                         border:`1.5px solid ${tOpen ? pg.border : multiV ? pg.border : "var(--border)"}`,
-                        borderLeft: multiV ? `4px solid ${pg.color}` : tOpen ? `3px solid ${pg.color}` : "1.5px solid var(--border)",
+                        borderLeft: t.hasOverlap ? "4px solid #d97706" : multiV ? `4px solid ${pg.color}` : tOpen ? `3px solid ${pg.color}` : "1.5px solid var(--border)",
                         borderRadius:6,
-                        background: tOpen ? pg.bg : multiV ? `${pg.bg}cc` : "#fff",
+                        background: tOpen ? pg.bg : t.hasOverlap ? "#fffbf0" : multiV ? `${pg.bg}cc` : "#fff",
                         overflow:"hidden",
                         transition:"border-color 0.15s",
-                        boxShadow: multiV && !tOpen ? `inset 0 0 0 0 transparent` : "none",
                       }}>
                         {/* Title row */}
                         <button onClick={() => toggleTitle(tKey)} style={{
@@ -326,7 +355,14 @@ export default function Volumes() {
                             </span>
                           </div>
 
-                          <div style={{ display:"flex", gap:10, alignItems:"center", flexShrink:0 }}>
+                          <div style={{ display:"flex", gap:8, alignItems:"center", flexShrink:0 }}>
+                            {t.hasOverlap && (
+                              <span style={{
+                                fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem", letterSpacing:"1px",
+                                background:"#fff8e0", color:"#8a6000", border:"1px solid #d4a800",
+                                borderRadius:3, padding:"2px 7px",
+                              }}>⚠ OVERLAP</span>
+                            )}
                             {multiV && (
                               <span style={{
                                 fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1.5px",
@@ -361,67 +397,99 @@ export default function Volumes() {
                         {/* Volume rows */}
                         {tOpen && (
                           <div style={{ borderTop:"1px solid var(--border)" }}>
-                            {t.volumes.map((v, vi) => (
-                              <div key={vi} style={{
-                                display:"flex", alignItems:"flex-start", gap:12, flexWrap:"wrap",
-                                padding:"10px 14px 10px 20px",
-                                borderBottom: vi < t.volumes.length - 1 ? "1px solid var(--border)" : "none",
-                                background: vi % 2 === 0 ? "var(--surface2)" : "#fff",
+                            {t.volumes.map((v, vi) => {
+                              const isOverlap = v.overlapsNext || v.overlapsPrev;
+                              const yearStr = v.startYear > 0
+                                ? (v.startYear === v.endYear ? String(v.startYear) : `${v.startYear}–${v.endYear}`)
+                                : "?";
+                              return (
+                                <div key={vi} style={{
+                                  display:"flex", alignItems:"flex-start", gap:12, flexWrap:"wrap",
+                                  padding:"10px 14px 10px 20px",
+                                  borderBottom: vi < t.volumes.length - 1 ? "1px solid var(--border)" : "none",
+                                  background: isOverlap ? "#fffbf0" : vi % 2 === 0 ? "var(--surface2)" : "#fff",
+                                  borderLeft: isOverlap ? "3px solid #d97706" : "none",
+                                  cursor:"pointer",
+                                  transition:"background 0.12s",
+                                }}
+                                  onClick={e => goToBook(t.title, e)}
+                                  title={`Browse all ${t.title} issues in Every Book`}
+                                  onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = isOverlap ? "#fef3c7" : "#f0f4ff"; }}
+                                  onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = isOverlap ? "#fffbf0" : vi % 2 === 0 ? "var(--surface2)" : "#fff"; }}
+                                >
+                                  {/* Volume label */}
+                                  <div style={{ flexShrink:0, minWidth:66 }}>
+                                    <div style={{
+                                      fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.78rem",
+                                      letterSpacing:"2px",
+                                      color: isOverlap ? "#d97706" : t.volumes.length > 1 ? pg.color : "var(--muted2)",
+                                      lineHeight:1,
+                                    }}>
+                                      {t.volumes.length > 1 ? `Vol. ${v.volNum}` : "Series"}
+                                      {isOverlap && <span style={{ marginLeft:4, fontSize:"0.65rem" }}>⚠</span>}
+                                    </div>
+                                    <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem",
+                                      letterSpacing:"1px", color: isOverlap ? "#b45309" : "var(--muted)", marginTop:2 }}>
+                                      {yearStr}
+                                    </div>
+                                  </div>
+
+                                  {/* Writer / Artist */}
+                                  <div style={{ flex:1, minWidth:180, display:"flex", gap:20, flexWrap:"wrap" }}>
+                                    <div>
+                                      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.55rem",
+                                        letterSpacing:"2px", color:"var(--muted)", marginBottom:1 }}>WRITER</div>
+                                      <div style={{ fontFamily:"'Crimson Pro',serif", fontSize:"0.85rem",
+                                        color:"var(--text2)", lineHeight:1.3 }}>{v.writer}</div>
+                                    </div>
+                                    <div>
+                                      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.55rem",
+                                        letterSpacing:"2px", color:"var(--muted)", marginBottom:1 }}>ARTIST</div>
+                                      <div style={{ fontFamily:"'Crimson Pro',serif", fontSize:"0.85rem",
+                                        color:"var(--text2)", lineHeight:1.3 }}>{v.artist}</div>
+                                    </div>
+                                  </div>
+
+                                  {/* Issue count + badges + link hint */}
+                                  <div style={{ display:"flex", gap:8, alignItems:"center", flexShrink:0 }}>
+                                    <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem",
+                                      letterSpacing:"1.5px", color:"var(--muted)", minWidth:52, textAlign:"right" }}>
+                                      {v.issues.length} issues
+                                    </span>
+                                    {v.keyCount > 0 && (
+                                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem",
+                                        letterSpacing:"1px", color:"#8a6000", background:"#fff8e0",
+                                        border:"1px solid #d4a800", borderRadius:3, padding:"1px 6px" }}>
+                                        ★ {v.keyCount} key{v.keyCount > 1 ? "s" : ""}
+                                      </span>
+                                    )}
+                                    {v.signedCount > 0 && (
+                                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem",
+                                        letterSpacing:"1px", color:"#1a7a1a", background:"#f0faf0",
+                                        border:"1px solid #c8e6c8", borderRadius:3, padding:"1px 6px" }}>
+                                        ✍ {v.signedCount} sgd
+                                      </span>
+                                    )}
+                                    <span style={{
+                                      fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem",
+                                      letterSpacing:"1px", color: pg.color, opacity:0.7,
+                                    }}>→ VIEW</span>
+                                  </div>
+                                </div>
+                              );
+                            })}
+
+                            {/* Overlap explanation */}
+                            {t.hasOverlap && (
+                              <div style={{
+                                padding:"8px 14px 8px 20px", background:"#fef9ec",
+                                borderTop:"1px solid #fde68a",
+                                fontSize:"0.75rem", color:"#92400e",
+                                fontFamily:"'Crimson Pro',serif", lineHeight:1.5,
                               }}>
-                                {/* Volume label */}
-                                <div style={{ flexShrink:0, minWidth:60 }}>
-                                  <div style={{
-                                    fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.78rem",
-                                    letterSpacing:"2px", color: t.volumes.length > 1 ? pg.color : "var(--muted2)",
-                                    lineHeight:1,
-                                  }}>
-                                    {t.volumes.length > 1 ? `Vol. ${v.volNum}` : "Series"}
-                                  </div>
-                                  <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem",
-                                    letterSpacing:"1px", color:"var(--muted)", marginTop:2 }}>
-                                    {v.startYear === v.endYear ? v.startYear : `${v.startYear}–${v.endYear}`}
-                                  </div>
-                                </div>
-
-                                {/* Writer / Artist */}
-                                <div style={{ flex:1, minWidth:180, display:"flex", gap:20, flexWrap:"wrap" }}>
-                                  <div>
-                                    <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.55rem",
-                                      letterSpacing:"2px", color:"var(--muted)", marginBottom:1 }}>WRITER</div>
-                                    <div style={{ fontFamily:"'Crimson Pro',serif", fontSize:"0.82rem",
-                                      color:"var(--text2)", lineHeight:1.3 }}>{v.writer}</div>
-                                  </div>
-                                  <div>
-                                    <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.55rem",
-                                      letterSpacing:"2px", color:"var(--muted)", marginBottom:1 }}>ARTIST</div>
-                                    <div style={{ fontFamily:"'Crimson Pro',serif", fontSize:"0.82rem",
-                                      color:"var(--text2)", lineHeight:1.3 }}>{v.artist}</div>
-                                  </div>
-                                </div>
-
-                                {/* Issue count + badges */}
-                                <div style={{ display:"flex", gap:8, alignItems:"center", flexShrink:0 }}>
-                                  <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem",
-                                    letterSpacing:"1.5px", color:"var(--muted)", minWidth:52, textAlign:"right" }}>
-                                    {v.issues.length} issues
-                                  </span>
-                                  {v.keyCount > 0 && (
-                                    <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem",
-                                      letterSpacing:"1px", color:"#8a6000", background:"#fff8e0",
-                                      border:"1px solid #d4a800", borderRadius:3, padding:"1px 6px" }}>
-                                      ★ {v.keyCount} key{v.keyCount > 1 ? "s" : ""}
-                                    </span>
-                                  )}
-                                  {v.signedCount > 0 && (
-                                    <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem",
-                                      letterSpacing:"1px", color:"#1a7a1a", background:"#f0faf0",
-                                      border:"1px solid #c8e6c8", borderRadius:3, padding:"1px 6px" }}>
-                                      ✍ {v.signedCount} sgd
-                                    </span>
-                                  )}
-                                </div>
+                                <strong>⚠ Overlapping years detected.</strong> These volumes share publication years — this may mean issues from different series are filed under the same title in the data, or the volume split didn't fire correctly on a numbering restart. Browse the issues to check.
                               </div>
-                            ))}
+                            )}
                           </div>
                         )}
                       </div>

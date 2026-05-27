@@ -218,7 +218,7 @@ export default function App() {
           />
         )}
         {activeTab === "runs"        && <Runs />}
-        {activeTab === "volumes"     && <Volumes />}
+        {activeTab === "volumes"     && <Volumes onNavigate={navigateTo} />}
         {activeTab === "collection"  && <OriginalCollection initSigned={navParams.signed} />}
         {activeTab === "boxkeys"     && <BoxKeys />}
         {activeTab === "calendar"    && <Calendar />}
