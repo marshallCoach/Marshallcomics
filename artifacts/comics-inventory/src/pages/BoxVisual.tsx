@@ -74,6 +74,15 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
   const [selectedTitle, setSelectedTitle] = useState<string | null>(null);
   const [sorted,        setSorted]        = useState(false);
   const [view,          setView]          = useState<"visual" | "runs" | "comics">("visual");
+
+  // Sync when initBox prop changes (handles navigation while component is already mounted)
+  useEffect(() => {
+    if (initBox && initBox !== selectedBox) {
+      setSelectedBox(initBox);
+      setSelectedTitle(null);
+      setView("visual");
+    }
+  }, [initBox]); // eslint-disable-line react-hooks/exhaustive-deps
   const [hoveredBox,   setHoveredBox]   = useState<string | null>(null);
   const [panelPos,     setPanelPos]     = useState({ x: 0, y: 0 });
   const [hoveredSpine, setHoveredSpine] = useState<{title:string;issue:string;year?:string;publisher?:string;writer?:string;isKey:boolean;isSigned:boolean;x:number;y:number}|null>(null);
