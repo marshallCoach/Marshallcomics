@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef } from "react";
 import { DATA3 } from "@/data/data3";
 import { SortableTable, ColDef } from "@/components/SortableTable";
 import { Paginator } from "@/components/Paginator";
@@ -105,6 +105,7 @@ const LIST_COLS: ColDef<Comic>[] = [
 let _salTitleClick: ((title: string) => void) | undefined;
 
 export default function OriginalCollection({ initSigned }: { initSigned?: string }) {
+  const searchInputRef = useRef<HTMLInputElement>(null);
   const [q,        setQ]        = useState("");
   const [pub,      setPub]      = useState("");
   const [era,      setEra]      = useState("");
@@ -134,6 +135,7 @@ export default function OriginalCollection({ initSigned }: { initSigned?: string
   const clearFilters = () => {
     setOpen(new Set()); setCardPage(1);
     setQ(""); setPub(""); setEra(""); setPlatform(""); setSigned(""); setKeyOnly(""); setCgcOnly("");
+    setTimeout(() => searchInputRef.current?.focus(), 0);
   };
 
   const toggle = (i: number) =>
@@ -151,6 +153,7 @@ export default function OriginalCollection({ initSigned }: { initSigned?: string
         </div>
         <div className="qs-row">
           <input
+            ref={searchInputRef}
             className="qs-input"
             placeholder="Search title, writer, character, signer, arc…"
             value={q}

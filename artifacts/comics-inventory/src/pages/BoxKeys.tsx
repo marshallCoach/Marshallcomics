@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef } from "react";
 import { DATA3 } from "@/data/data3";
 import { SortableTable, ColDef } from "@/components/SortableTable";
 import { Paginator } from "@/components/Paginator";
@@ -99,6 +99,7 @@ const LIST_COLS: ColDef<Key>[] = [
 ];
 
 export default function BoxKeys() {
+  const searchInputRef = useRef<HTMLInputElement>(null);
   const [q,         setQ]         = useState("");
   const [box,       setBox]       = useState("");
   const [pub,       setPub]       = useState("");
@@ -155,6 +156,7 @@ export default function BoxKeys() {
         </div>
         <div className="qs-row">
           <input
+            ref={searchInputRef}
             className="qs-input"
             placeholder="Search title, key reason, 1st appearance, writer…"
             value={q}
@@ -195,7 +197,7 @@ export default function BoxKeys() {
           <button
             className="qs-pill"
             style={{ marginLeft:"auto", opacity: (!q&&!box&&!pub&&!era&&!cgcOnly&&!tfOnly&&!signedOnly)?0.35:1 }}
-            onClick={()=>{setQ("");setBox("");setPub("");setEra("");setCgcOnly(false);setTfOnly(false);setSignedOnly(false);setCardPage(1);}}>
+            onClick={()=>{setQ("");setBox("");setPub("");setEra("");setCgcOnly(false);setTfOnly(false);setSignedOnly(false);setCardPage(1);setTimeout(()=>searchInputRef.current?.focus(),0);}}>
             ✕ Clear
           </button>
         </div>
