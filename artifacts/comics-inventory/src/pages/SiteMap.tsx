@@ -23,7 +23,7 @@ const INVENTORY_PAGES: PageEntry[] = [
     id: "everything",
     label: "Every Book",
     icon: "📚",
-    desc: "All 9,532 comics in one searchable, filterable view. List table or card grid, sorted any way you want.",
+    desc: "All 11,776 comics in one searchable, filterable view. List table or card grid, sorted any way you want.",
     features: ["Live search across all fields", "Publisher / box / writer filters", "Key issues & signed filters", "NM value column", "Card view with detail expand", "Character family pills"],
   },
   {
@@ -54,7 +54,7 @@ const INVENTORY_PAGES: PageEntry[] = [
     label: "Box View",
     icon: "▬",
     desc: "See inside any box as a visual spine display — each book is a colored stripe, keys are taller, signed books have a green edge.",
-    features: ["Select any of 61 boxes", "Color-coded by title", "Key / signed visual markers", "Sorted or box-order toggle", "Title detail panel", "By Run accordion view"],
+    features: ["Select any of 74 boxes", "Sectioned by publisher", "Color-coded by title", "Key / signed visual markers", "Sorted or box-order toggle", "Title detail panel", "By Run accordion view"],
   },
   {
     id: "stats",
@@ -124,7 +124,7 @@ const BUSINESS_PAGES: PageEntry[] = [
     label: "Signings",
     icon: "✍",
     desc: "Private signings tracker — which books are signed, by whom, at what event, and any personalization notes.",
-    features: ["53 signed books tracked", "Signer & event detail", "Personalization notes", "Filterable list"],
+    features: ["54 signed books tracked", "Signer & event detail", "Personalization notes", "Filterable list"],
     accent: "#7a5c3a",
   },
   {
@@ -171,7 +171,7 @@ export default function SiteMap({ onNavigate }: { onNavigate: NavFn }) {
       }}>
         <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.7rem",
           letterSpacing: "2px", color: "var(--red)", marginRight: 10 }}>DATA</span>
-        9,532 comics · 61 boxes · 1,234 key issues · 53 signed books · 31 tracked fields per comic
+        11,776 comics · 74 boxes · 1,462 key issues · 54 signed books · 31 tracked fields per comic
         <span style={{ margin: "0 10px", color: "var(--border)" }}>·</span>
         Auto-generated from xlsx · No database · Static TypeScript
       </div>
