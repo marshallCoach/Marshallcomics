@@ -142,7 +142,9 @@ export default function App() {
       {/* HEADER */}
       <header className="app-header">
         <div className="logo-area">
-          <img src="/logo.png" alt="BlackReadBrown" className="site-logo" />
+          <button onClick={() => navigateTo("everything")} style={{ background:"none", border:"none", padding:0, cursor:"pointer", display:"flex" }}>
+            <img src="/logo.png" alt="BlackReadBrown" className="site-logo" />
+          </button>
           <div>
             <div className="app-title">Marshall Comics</div>
             <div className="app-subtitle">BlackReadBrown Inventory Hub</div>
