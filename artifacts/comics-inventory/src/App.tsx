@@ -13,6 +13,7 @@ import CollectionStats from "@/pages/CollectionStats";
 import BoxTimeline from "@/pages/BoxTimeline";
 import BoxVisual from "@/pages/BoxVisual";
 import Runs from "@/pages/Runs";
+import Volumes from "@/pages/Volumes";
 import DataView from "@/pages/DataView";
 import BoxHunt from "@/pages/BoxHunt";
 import CapFalconChecklist from "@/pages/CapFalconChecklist";
@@ -28,7 +29,7 @@ type TabId =
   | "summary" | "everything" | "collection" | "boxkeys" | "stats" | "runs" | "dataview"
   | "calendar" | "showplanner" | "cgc" | "signings" | "actionplan" | "timeline" | "boxvisual"
   | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "duplicates" | "history"
-  | "orgpath";
+  | "orgpath" | "volumes";
 
 export type NavParams = {
   box?: string;
@@ -46,9 +47,8 @@ const NAV = [
       { id: "summary",     label: "Home" },
       { id: "everything",  label: "Every Book" },
       { id: "runs",        label: "Runs" },
+      { id: "volumes",     label: "Volumes" },
       { id: "collection",  label: "Sales" },
-      { id: "boxkeys",     label: "Box Keys" },
-      { id: "duplicates",  label: "Duplicates" },
       { id: "history",     label: "History" },
       { id: "stats",       label: "Stats" },
       { id: "dataview",    label: "Data View" },
@@ -61,6 +61,8 @@ const NAV = [
     tabs: [
       { id: "orgpath",     label: "Org Path" },
       { id: "boxvisual",   label: "Box View" },
+      { id: "boxkeys",     label: "Box Keys" },
+      { id: "duplicates",  label: "Duplicates" },
       { id: "hunting",     label: "Box Hunt" },
       { id: "timeline",    label: "Timeline" },
     ],
@@ -216,6 +218,7 @@ export default function App() {
           />
         )}
         {activeTab === "runs"        && <Runs />}
+        {activeTab === "volumes"     && <Volumes />}
         {activeTab === "collection"  && <OriginalCollection initSigned={navParams.signed} />}
         {activeTab === "boxkeys"     && <BoxKeys />}
         {activeTab === "calendar"    && <Calendar />}
