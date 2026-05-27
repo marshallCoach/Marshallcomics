@@ -73,7 +73,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
   const [selectedBox,   setSelectedBox]   = useState<string | null>(initBox || null);
   const [selectedTitle, setSelectedTitle] = useState<string | null>(null);
   const [sorted,        setSorted]        = useState(false);
-  const [view,          setView]          = useState<"visual" | "runs">("visual");
+  const [view,          setView]          = useState<"visual" | "runs" | "comics">("visual");
   const [hoveredBox,   setHoveredBox]   = useState<string | null>(null);
   const [panelPos,     setPanelPos]     = useState({ x: 0, y: 0 });
   const [hoveredSpine, setHoveredSpine] = useState<{title:string;issue:string;year?:string;publisher?:string;writer?:string;isKey:boolean;isSigned:boolean;x:number;y:number}|null>(null);
@@ -313,7 +313,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
 
           {/* View toggle */}
           <div style={{ display: "flex", gap: 6, marginBottom: 8, flexWrap: "wrap" }}>
-            {(["visual", "runs"] as const).map(v => (
+            {(["visual", "runs", "comics"] as const).map(v => (
               <button key={v} onClick={() => { setView(v); setSelectedTitle(null); }} style={{
                 background: view === v ? "var(--red)" : "var(--surface)",
                 color: view === v ? "#fff" : "var(--muted2)",
@@ -322,7 +322,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                 fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.78rem", letterSpacing: "1.5px",
                 transition: "all 0.15s",
               }}>
-                {v === "visual" ? "Visual Box" : "By Run"}
+                {v === "visual" ? "Visual Box" : v === "runs" ? "By Run" : `Comics (${boxComics.length})`}
               </button>
             ))}
 
@@ -635,6 +635,105 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                 {titleGroups.map((group, gi) => (
                   <RunBlock key={gi} group={group} />
                 ))}
+              </div>
+            </div>
+          )}
+
+          {/* ── COMICS LIST VIEW ─────────────────────────────────────────────── */}
+          {view === "comics" && (
+            <div>
+              <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.7rem",
+                letterSpacing: "2px", color: "var(--muted)", marginBottom: 12 }}>
+                {boxComics.length} COMICS — BOX ORDER
+              </div>
+              <div style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 320px), 1fr))",
+                gap: 10,
+              }}>
+                {boxComics.map((c, i) => {
+                  const isKey    = (c.Key    || "").toUpperCase() === "YES";
+                  const isSigned = (c.Signed || "").toUpperCase() === "YES";
+                  const nmVal    = c.Value_NM && c.Value_NM !== "nan" ? `$${c.Value_NM}` : null;
+                  const vfVal    = (() => { const v = c.Value_VF && c.Value_VF !== "nan" ? c.Value_VF.match(/(\d+(?:\.\d+)?)/)?.[1] : ""; return v ? `$${v}` : null; })();
+                  const colorBar = titleColorMap[c.Title] || "var(--border)";
+                  return (
+                    <div key={i} style={{
+                      background: isKey ? "#fffdf4" : "var(--surface)",
+                      border: `1.5px solid ${isKey ? "#d4a80055" : "var(--border)"}`,
+                      borderLeft: `4px solid ${colorBar}`,
+                      borderRadius: 7,
+                      padding: "12px 14px",
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: 5,
+                    }}>
+                      {/* Top row: entry # + badges */}
+                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                        <span style={{
+                          fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem",
+                          letterSpacing: "1px", color: "var(--muted)",
+                        }}>#{c.Entry}</span>
+                        <div style={{ display: "flex", gap: 4 }}>
+                          {isKey    && <span className="badge bkey"  style={{ fontSize: "0.58rem" }}>KEY</span>}
+                          {isSigned && <span className="badge bgold" style={{ fontSize: "0.58rem" }}>SIGNED</span>}
+                          {c.Platform && <span className="badge bb"  style={{ fontSize: "0.58rem" }}>{c.Platform}</span>}
+                        </div>
+                      </div>
+
+                      {/* Title */}
+                      <div style={{
+                        fontFamily: "'Crimson Pro',serif", fontWeight: 700,
+                        fontSize: "1rem", color: "var(--brown-light)", lineHeight: 1.25,
+                      }}>{c.Title}</div>
+
+                      {/* Issue + Vol + Year */}
+                      <div style={{ fontSize: "0.88rem", color: "var(--muted2)" }}>
+                        {c.Issue}
+                        {c.Volume && c.Volume !== "1" ? ` · Vol ${c.Volume}` : ""}
+                        {c.Year ? ` · ${c.Year}` : ""}
+                      </div>
+
+                      {/* Publisher */}
+                      {c.Publisher && (
+                        <div style={{ fontSize: "0.78rem", color: "var(--muted)" }}>{c.Publisher}</div>
+                      )}
+
+                      {/* Writer / Artist */}
+                      {(c.Writer || c.Artist) && (
+                        <div style={{ fontSize: "0.78rem", color: "var(--muted2)", lineHeight: 1.4 }}>
+                          {c.Writer && <span><span style={{ color: "var(--muted)" }}>W:</span> {c.Writer}</span>}
+                          {c.Writer && c.Artist && c.Artist !== c.Writer && <span style={{ color: "var(--muted)", margin: "0 4px" }}>·</span>}
+                          {c.Artist && c.Artist !== c.Writer && <span><span style={{ color: "var(--muted)" }}>A:</span> {c.Artist}</span>}
+                        </div>
+                      )}
+
+                      {/* Key reason */}
+                      {isKey && c.Key_Reason && (
+                        <div style={{
+                          fontSize: "0.8rem", color: "#7a5500",
+                          background: "#fff8e0", borderRadius: 4,
+                          padding: "5px 8px", lineHeight: 1.4, marginTop: 2,
+                        }}>{c.Key_Reason.slice(0, 130)}</div>
+                      )}
+
+                      {/* Signed by */}
+                      {isSigned && c.Signed_By && (
+                        <div style={{ fontSize: "0.78rem", color: "#16a34a" }}>
+                          ✍ {c.Signed_By}{c.Personal ? ` — "${c.Personal}"` : ""}
+                        </div>
+                      )}
+
+                      {/* Values */}
+                      {(nmVal || vfVal) && (
+                        <div style={{ display: "flex", gap: 10, fontSize: "0.8rem", marginTop: 2 }}>
+                          {nmVal && <span style={{ color: "var(--green-text)" }}>NM <strong>{nmVal}</strong></span>}
+                          {vfVal && <span style={{ color: "var(--muted2)" }}>VF <strong>{vfVal}</strong></span>}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
             </div>
           )}
