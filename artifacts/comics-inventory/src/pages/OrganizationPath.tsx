@@ -1,19 +1,168 @@
 import { useState, useEffect } from "react";
 
-const LS_LABELED = "brbBoxLabeled";
-const LS_RUNS    = "brbRunsDone";
-const LS_STEPS   = "brbStepsDone";
+const LS_LABELED  = "brbBoxLabeled";
+const LS_RUNS     = "brbRunsDone";
+const LS_STEPS    = "brbStepsDone";
+const LS_TASKS    = "brbOrgTasks";
+const LS_BAGGED   = "brbBoxBagged";
 
 function loadLS<T>(key: string, def: T): T {
   try { return JSON.parse(localStorage.getItem(key) || "null") ?? def; }
   catch { return def; }
 }
 
+// ─── SUPPLIES ────────────────────────────────────────────────────────────────
+interface SupplyItem {
+  item: string; qty: string; notes: string; retail: string; shop: string;
+}
+const SUPPLIES: SupplyItem[] = [
+  { item:"BCW Current Bags (1,000ct bulk)",          qty:"9 cases",  notes:"~8,250 needed + 750 buffer for current pull & future buys", retail:"~$270", shop:"~$162" },
+  { item:"BCW Current Backing Boards (1,000ct bulk)", qty:"9 cases",  notes:"Matches bag count exactly — buy together",                   retail:"~$315", shop:"~$189" },
+  { item:"BCW Short Boxes",                          qty:"18 boxes", notes:"Overspill from 38 over-capacity boxes. Buy 3×5-pack + 1×3-pack.", retail:"~$110", shop:"~$70"  },
+  { item:"BCW Silver Age bags (100ct)",              qty:"1 pack",   notes:"For ~10 Silver Age keys (Tales of Suspense, World's Finest #26/#47)", retail:"~$10",  shop:"~$6"   },
+];
+
+// ─── BOX SPLITTING ───────────────────────────────────────────────────────────
+interface SplitBox {
+  box: number; comics: number; over: number; newBoxes: string; keys: number; contents: string;
+}
+const SPLITS: SplitBox[] = [
+  { box:42, comics:620, over:470, newBoxes:"+4", keys:81,  contents:"DC New 52 + Convergence — MOST OVER CAPACITY" },
+  { box:2,  comics:294, over:144, newBoxes:"+1", keys:28,  contents:"X-Men Semi-Recent: AXM Whedon + X-Men runs" },
+  { box:3,  comics:272, over:122, newBoxes:"+1", keys:14,  contents:"Marvel X-Men Full Runs: AXM/UXM/Cable/X-Force" },
+  { box:43, comics:262, over:112, newBoxes:"+1", keys:23,  contents:"DC Rebirth — Batman Hush COMPLETE + Tom King Batman + Flash" },
+  { box:4,  comics:255, over:105, newBoxes:"+1", keys:24,  contents:"Marvel: Fantastic Four — Waid/Hickman/Fraction/Slott/North" },
+  { box:5,  comics:251, over:101, newBoxes:"+1", keys:26,  contents:"Marvel: Thor/Loki mega-box — God of Thunder COMPLETE" },
+  { box:6,  comics:248, over:98,  newBoxes:"+1", keys:13,  contents:"Marvel: Savage Avengers COMPLETE + Avengers Forever" },
+  { box:44, comics:248, over:98,  newBoxes:"+1", keys:17,  contents:"DC New 52 — Batgirl Simone + Batwoman JH Williams + Nightwing" },
+  { box:7,  comics:246, over:96,  newBoxes:"+1", keys:30,  contents:"BLACK PANTHER ARCHIVE: Priest/Hudlin/Coates/Ridley/Ewing" },
+  { box:8,  comics:238, over:88,  newBoxes:"+1", keys:22,  contents:"Elektra + Black Widow + Hawkeye + Winter Soldier — SIGNED BOOKS" },
+  { box:9,  comics:236, over:86,  newBoxes:"+1", keys:31,  contents:"X-Men Continuing: OML/Dead Man Logan COMPLETE/Domino/HoXPoX" },
+  { box:68, comics:227, over:77,  newBoxes:"+1", keys:12,  contents:"DC 2005-2009 — Final Crisis COMPLETE + Batman & Robin" },
+  { box:10, comics:223, over:73,  newBoxes:"+1", keys:24,  contents:"Captain America COMPLETE: Brubaker/Kirkman/Remender/Spencer" },
+  { box:69, comics:222, over:72,  newBoxes:"+1", keys:17,  contents:"DC 2001-2009 Mixed — JLA Meltzer/McDuffie + Buffy" },
+  { box:45, comics:215, over:65,  newBoxes:"+1", keys:8,   contents:"DC: Birds of Prey + Robin + Batgirl (Dixon/Simone 1999-2010)" },
+  { box:11, comics:214, over:64,  newBoxes:"+1", keys:47,  contents:"X-Men Mixed: OML/Generations/Phoenix Resurrection/FoHoX/FtA" },
+  { box:46, comics:213, over:63,  newBoxes:"+1", keys:14,  contents:"DC: Earth 2 + World's Finest + Justice League New 52" },
+  { box:12, comics:212, over:62,  newBoxes:"+1", keys:24,  contents:"X-Men + Marvel Modern: Deadpool/Old Man Logan" },
+  { box:13, comics:211, over:61,  newBoxes:"+1", keys:23,  contents:"Iron Man mega-box — Extremis Ellis + Fraction + Bendis + Moon Knight" },
+  { box:14, comics:205, over:55,  newBoxes:"+1", keys:28,  contents:"Krakoa X-Men: HoX+PoX COMPLETE/X-Force/X-Men Red/AXE" },
+  { box:15, comics:205, over:55,  newBoxes:"+1", keys:18,  contents:"X-Men Semi-Recent: Cable/Blue/Gold/Extermination/All-New X-Men" },
+  { box:47, comics:204, over:54,  newBoxes:"+1", keys:10,  contents:"Flash Vol 2 #112-233 + JLA/JLoA Waid/Morrison/Johns" },
+  { box:16, comics:203, over:53,  newBoxes:"+1", keys:18,  contents:"Spider-Man Archive: Miles/Scarlet Spider/Moon Knight SM" },
+  { box:64, comics:194, over:44,  newBoxes:"+1", keys:14,  contents:"TV/Media Tie-In — Doctor Who + Serenity/Firefly + Star Trek" },
+  { box:17, comics:192, over:42,  newBoxes:"+1", keys:22,  contents:"Guardians of the Galaxy — All Volumes Bendis/Cates/Ewing/Lanzing" },
+  { box:18, comics:191, over:41,  newBoxes:"+1", keys:26,  contents:"Inhumans + Eternals Gaiman/Gillen + Captain Marvel" },
+  { box:19, comics:187, over:37,  newBoxes:"+1", keys:21,  contents:"Marvel Events: Empyre/CW2/Original Sin/Siege/AXIS ALL COMPLETE" },
+  { box:20, comics:183, over:33,  newBoxes:"+1", keys:22,  contents:"Marvel Misc: Alpha Flight/New Warriors/What If" },
+  { box:48, comics:180, over:30,  newBoxes:"+1", keys:38,  contents:"DC Rebirth: Rebirth #1 + JL vs SS COMPLETE + Batman" },
+  { box:21, comics:180, over:30,  newBoxes:"+1", keys:25,  contents:"Immortal Iron Fist + Jessica Jones + Shang-Chi" },
+  { box:49, comics:174, over:24,  newBoxes:"+1", keys:18,  contents:"Hawkman + Far Sector + Infinite Frontier COMPLETE" },
+  { box:22, comics:172, over:22,  newBoxes:"+1", keys:18,  contents:"Hulk: Red Hulk/Loeb/Aaron/Cates/PKJ/Indestructible" },
+  { box:50, comics:171, over:21,  newBoxes:"+1", keys:21,  contents:"Dawn of DC + Birds of Prey COMPLETE #1-26" },
+  { box:23, comics:165, over:15,  newBoxes:"+1", keys:23,  contents:"Ultimate Marvel: UFF/UXM/Ultimates COMPLETE" },
+  { box:24, comics:165, over:15,  newBoxes:"+1", keys:13,  contents:"Marvel Avengers Full Runs: New/Uncanny Avengers" },
+  { box:25, comics:155, over:5,   newBoxes:"+1", keys:14,  contents:"Ultimate Marvel: UXM/Ultimates/UWvH COMPLETE/Cataclysm" },
+  { box:26, comics:155, over:5,   newBoxes:"+1", keys:24,  contents:"Shield/Ultimates Ewing/Fearless Defenders/Astonishing" },
+  { box:51, comics:154, over:4,   newBoxes:"+1", keys:4,   contents:"DC: Impulse + Young Justice + Teen Titans — just over capacity" },
+];
+
+// ─── BAGGING PRIORITY ORDER ───────────────────────────────────────────────────
+type BagPriority = "P0" | "P1" | "P2" | "P3" | "P4";
+interface BagEntry {
+  order: number; box: number; comics: number; keys: number; sgn: number;
+  extra: string; priority: BagPriority; contents: string;
+}
+const BAG_ORDER: BagEntry[] = [
+  { order:1,  box:1,  comics:93,  keys:54, sgn:51, extra:"OK",    priority:"P0", contents:"⭐ SALES INVENTORY — All signed books + premium keys — BAG FIRST. CGC/Heritage candidates — every spine tick costs money." },
+  { order:2,  box:2,  comics:294, keys:28, sgn:1,  extra:"+1 box",priority:"P1", contents:"X-Men Semi-Recent: AXM Whedon + X-Men runs — SIGNED BOOKS — bag individually, spine side in first, no rough handling." },
+  { order:3,  box:8,  comics:238, keys:22, sgn:1,  extra:"+1 box",priority:"P1", contents:"Elektra + Black Widow + Hawkeye + Winter Soldier — SIGNED BOOKS — bag individually, spine side in first, no rough handling." },
+  { order:4,  box:66, comics:126, keys:36, sgn:1,  extra:"OK",    priority:"P1", contents:"Indie: Firefly/Die/Monstress/Paper Girls — SIGNED/keys — bag individually, spine side in first, no rough handling." },
+  { order:5,  box:72, comics:75,  keys:26, sgn:2,  extra:"OK",    priority:"P1", contents:"Variants + Absolute 1st Prints — Wolverine #8 UNSIGNED — bag individually, spine side in first, no rough handling." },
+  { order:6,  box:42, comics:620, keys:81, sgn:0,  extra:"+4 box",priority:"P2", contents:"DC New 52 + Convergence — MOST OVER CAPACITY — Split into 5 boxes during bagging." },
+  { order:7,  box:3,  comics:272, keys:14, sgn:0,  extra:"+1 box",priority:"P2", contents:"Marvel X-Men Full Runs: AXM/UXM/Cable/X-Force — Split into 2 boxes during bagging." },
+  { order:8,  box:43, comics:262, keys:23, sgn:0,  extra:"+1 box",priority:"P2", contents:"DC Rebirth — Batman Hush COMPLETE + Tom King Batman + Flash — Split into 2 boxes during bagging." },
+  { order:9,  box:4,  comics:255, keys:24, sgn:0,  extra:"+1 box",priority:"P2", contents:"Marvel: Fantastic Four — Waid/Hickman/Fraction/Slott/North — Split into 2 boxes during bagging." },
+  { order:10, box:5,  comics:251, keys:26, sgn:0,  extra:"+1 box",priority:"P2", contents:"Marvel: Thor/Loki mega-box — God of Thunder COMPLETE — Split into 2 boxes during bagging." },
+  { order:11, box:6,  comics:248, keys:13, sgn:0,  extra:"+1 box",priority:"P2", contents:"Marvel: Savage Avengers COMPLETE + Avengers Forever — Split into 2 boxes during bagging." },
+  { order:12, box:44, comics:248, keys:17, sgn:0,  extra:"+1 box",priority:"P2", contents:"DC New 52 — Batgirl Simone + Batwoman JH Williams + Nightwing — Split into 2 boxes during bagging." },
+  { order:13, box:7,  comics:246, keys:30, sgn:0,  extra:"+1 box",priority:"P2", contents:"BLACK PANTHER ARCHIVE: Priest/Hudlin/Coates/Ridley/Ewing — Split into 2 boxes during bagging." },
+  { order:14, box:9,  comics:236, keys:31, sgn:0,  extra:"+1 box",priority:"P2", contents:"X-Men Continuing: OML/Dead Man Logan COMPLETE/Domino/HoXPoX — Split into 2 boxes during bagging." },
+  { order:15, box:68, comics:227, keys:12, sgn:0,  extra:"+1 box",priority:"P2", contents:"DC 2005-2009 — Final Crisis COMPLETE + Batman & Robin — Split into 2 boxes during bagging." },
+  { order:16, box:10, comics:223, keys:24, sgn:0,  extra:"+1 box",priority:"P2", contents:"Captain America COMPLETE: Brubaker/Kirkman/Remender/Spencer — Split into 2 boxes during bagging." },
+  { order:17, box:69, comics:222, keys:17, sgn:0,  extra:"+1 box",priority:"P2", contents:"DC 2001-2009 Mixed — JLA Meltzer/McDuffie + Buffy — Split into 2 boxes during bagging." },
+  { order:18, box:45, comics:215, keys:8,  sgn:0,  extra:"+1 box",priority:"P2", contents:"DC: Birds of Prey + Robin + Batgirl (Dixon/Simone 1999-2010) — Split into 2 boxes during bagging." },
+  { order:19, box:11, comics:214, keys:47, sgn:0,  extra:"+1 box",priority:"P2", contents:"X-Men Mixed: OML/Generations/Phoenix Resurrection/FoHoX/FtA — Split into 2 boxes during bagging." },
+  { order:20, box:46, comics:213, keys:14, sgn:0,  extra:"+1 box",priority:"P2", contents:"DC: Earth 2 + World's Finest + Justice League New 52 — Split into 2 boxes during bagging." },
+  { order:21, box:12, comics:212, keys:24, sgn:0,  extra:"+1 box",priority:"P2", contents:"X-Men + Marvel Modern: Deadpool/Old Man Logan — Split into 2 boxes during bagging." },
+  { order:22, box:13, comics:211, keys:23, sgn:0,  extra:"+1 box",priority:"P2", contents:"Iron Man mega-box — Extremis Ellis + Fraction + Bendis + Moon Knight — Split into 2 boxes during bagging." },
+  { order:23, box:14, comics:205, keys:28, sgn:0,  extra:"+1 box",priority:"P2", contents:"Krakoa X-Men: HoX+PoX COMPLETE/X-Force/X-Men Red/AXE — Split into 2 boxes during bagging." },
+  { order:24, box:15, comics:205, keys:18, sgn:0,  extra:"+1 box",priority:"P2", contents:"X-Men Semi-Recent: Cable/Blue/Gold/Extermination/All-New X-Men — Split into 2 boxes during bagging." },
+  { order:25, box:47, comics:204, keys:10, sgn:0,  extra:"+1 box",priority:"P2", contents:"Flash Vol 2 #112-233 + JLA/JLoA Waid/Morrison/Johns — Split into 2 boxes during bagging." },
+  { order:26, box:16, comics:203, keys:18, sgn:0,  extra:"+1 box",priority:"P2", contents:"Spider-Man Archive: Miles/Scarlet Spider/Moon Knight SM — Split into 2 boxes during bagging." },
+  { order:27, box:64, comics:194, keys:14, sgn:0,  extra:"+1 box",priority:"P2", contents:"TV/Media Tie-In — Doctor Who + Serenity/Firefly + Star Trek — Split into 2 boxes during bagging." },
+  { order:28, box:17, comics:192, keys:22, sgn:0,  extra:"+1 box",priority:"P2", contents:"Guardians of the Galaxy — All Volumes Bendis/Cates/Ewing/Lanzing — Split into 2 boxes during bagging." },
+  { order:29, box:18, comics:191, keys:26, sgn:0,  extra:"+1 box",priority:"P2", contents:"Inhumans + Eternals Gaiman/Gillen + Captain Marvel — Split into 2 boxes during bagging." },
+  { order:30, box:19, comics:187, keys:21, sgn:0,  extra:"+1 box",priority:"P2", contents:"Marvel Events: Empyre/CW2/Original Sin/Siege/AXIS ALL COMPLETE — Split into 2 boxes during bagging." },
+  { order:31, box:20, comics:183, keys:22, sgn:0,  extra:"+1 box",priority:"P2", contents:"Marvel Misc: Alpha Flight/New Warriors/What If — Split into 2 boxes during bagging." },
+  { order:32, box:48, comics:180, keys:38, sgn:0,  extra:"+1 box",priority:"P2", contents:"DC Rebirth: Rebirth #1 + JL vs SS COMPLETE + Batman — Split into 2 boxes during bagging." },
+  { order:33, box:21, comics:180, keys:25, sgn:0,  extra:"+1 box",priority:"P2", contents:"Immortal Iron Fist + Jessica Jones + Shang-Chi — Split into 2 boxes during bagging." },
+  { order:34, box:49, comics:174, keys:18, sgn:0,  extra:"+1 box",priority:"P2", contents:"Hawkman + Far Sector + Infinite Frontier COMPLETE — Split into 2 boxes during bagging." },
+  { order:35, box:22, comics:172, keys:18, sgn:0,  extra:"+1 box",priority:"P2", contents:"Hulk: Red Hulk/Loeb/Aaron/Cates/PKJ/Indestructible — Split into 2 boxes during bagging." },
+  { order:36, box:50, comics:171, keys:21, sgn:0,  extra:"+1 box",priority:"P2", contents:"Dawn of DC + Birds of Prey COMPLETE #1-26 — Split into 2 boxes during bagging." },
+  { order:37, box:23, comics:165, keys:23, sgn:0,  extra:"+1 box",priority:"P2", contents:"Ultimate Marvel: UFF/UXM/Ultimates COMPLETE — Split into 2 boxes during bagging." },
+  { order:38, box:24, comics:165, keys:13, sgn:0,  extra:"+1 box",priority:"P2", contents:"Marvel Avengers Full Runs: New/Uncanny Avengers — Split into 2 boxes during bagging." },
+  { order:39, box:25, comics:155, keys:14, sgn:0,  extra:"+1 box",priority:"P2", contents:"Ultimate Marvel: UXM/Ultimates/UWvH COMPLETE/Cataclysm — Split into 2 boxes during bagging." },
+  { order:40, box:26, comics:155, keys:24, sgn:0,  extra:"+1 box",priority:"P2", contents:"Shield/Ultimates Ewing/Fearless Defenders/Astonishing — Split into 2 boxes during bagging." },
+  { order:41, box:65, comics:150, keys:24, sgn:0,  extra:"OK",    priority:"P2", contents:"Star Trek IDW — Mirror War COMPLETE + TNG Minis — Single box — bag and done." },
+  { order:42, box:52, comics:146, keys:43, sgn:0,  extra:"OK",    priority:"P2", contents:"DC New 52 Full Runs: Aquaman/Batgirl/Flash/NW — Single box — bag and done." },
+  { order:43, box:54, comics:142, keys:16, sgn:0,  extra:"OK",    priority:"P2", contents:"DC All In: Batman All In + Batman & Robin Year One — Single box — bag and done." },
+  { order:44, box:55, comics:141, keys:15, sgn:0,  extra:"OK",    priority:"P2", contents:"DC Mixed: JL/JLD/GL/Wonder Woman/Lois Lane — Single box — bag and done." },
+  { order:45, box:56, comics:140, keys:14, sgn:0,  extra:"OK",    priority:"P2", contents:"DC Modern: World's Finest/Batman/Naomi — Single box — bag and done." },
+  { order:46, box:57, comics:139, keys:15, sgn:0,  extra:"OK",    priority:"P2", contents:"DC Modern: Titans/Tim Drake Robin/Batman/Catwoman — Single box — bag and done." },
+  { order:47, box:27, comics:137, keys:26, sgn:0,  extra:"OK",    priority:"P2", contents:"Avengers: Aaron Legacy/McKay/Twilight COMPLETE — Single box — bag and done." },
+  { order:48, box:70, comics:135, keys:11, sgn:0,  extra:"OK",    priority:"P2", contents:"Wildstorm/Vertigo/Indie: Ex Machina/WildCATs — Single box — bag and done." },
+  { order:49, box:58, comics:130, keys:17, sgn:0,  extra:"OK",    priority:"P2", contents:"DC 2005: Identity Crisis + Infinite Crisis + Justice League Meltzer — Single box — bag and done." },
+  { order:50, box:28, comics:123, keys:20, sgn:0,  extra:"OK",    priority:"P2", contents:"Annihilation + Nova + Silver Surfer + Guardians Abnett — Single box — bag and done." },
+  { order:51, box:67, comics:118, keys:17, sgn:0,  extra:"OK",    priority:"P2", contents:"Independent/Dark Horse: Gatchaman/Rocketeer — Single box — bag and done." },
+  { order:52, box:59, comics:112, keys:18, sgn:0,  extra:"OK",    priority:"P2", contents:"DC Dawn of DC: Cyborg/Jenny Sparks/Titans — Single box — bag and done." },
+  { order:53, box:29, comics:111, keys:10, sgn:0,  extra:"OK",    priority:"P2", contents:"Recent Marvel Modern: Storm/Miles/Bishop WC/Magic — Single box — bag and done." },
+  { order:54, box:30, comics:110, keys:11, sgn:0,  extra:"OK",    priority:"P2", contents:"Cap America Extended: Siege/Super-Soldier — Single box — bag and done." },
+  { order:55, box:71, comics:99,  keys:20, sgn:0,  extra:"OK",    priority:"P2", contents:"Misc Overflow: Wonder Woman/FF/Various — Single box — bag and done." },
+  { order:56, box:60, comics:95,  keys:14, sgn:0,  extra:"OK",    priority:"P2", contents:"Snyder JL + Dark Knights Metal + Young Justice COMPLETE — Single box — bag and done." },
+  { order:57, box:31, comics:94,  keys:12, sgn:0,  extra:"OK",    priority:"P2", contents:"Doctor Strange (Aaron/Waid/MacKay) + Strange Academy — Single box — bag and done." },
+  { order:58, box:32, comics:91,  keys:19, sgn:0,  extra:"OK",    priority:"P2", contents:"Doctor Strange extended + Strange Academy — Single box — bag and done." },
+  { order:59, box:33, comics:88,  keys:14, sgn:0,  extra:"OK",    priority:"P2", contents:"Moon Knight: ALL VOLUMES — Ellis/Shalvey LANDMARK — Single box — bag and done." },
+  { order:60, box:61, comics:86,  keys:12, sgn:0,  extra:"OK",    priority:"P2", contents:"Future State COMPLETE + Milestone Returns — Single box — bag and done." },
+  { order:61, box:34, comics:86,  keys:19, sgn:0,  extra:"OK",    priority:"P2", contents:"Mixed Marvel: FF Hickman/Eternals Gaiman/Godzilla — Single box — bag and done." },
+  { order:62, box:36, comics:78,  keys:9,  sgn:0,  extra:"OK",    priority:"P2", contents:"Moon Knight + Immortal Thor COMPLETE #1-25 — Single box — bag and done." },
+  { order:63, box:37, comics:71,  keys:11, sgn:0,  extra:"OK",    priority:"P2", contents:"Thunderbolts + Champions — Single box — bag and done." },
+  { order:64, box:38, comics:60,  keys:25, sgn:0,  extra:"OK",    priority:"P2", contents:"Bronze Keys: Cap Falcon/Cloak Dagger/Ultimate Fallout — Single box — bag and done." },
+  { order:65, box:73, comics:54,  keys:30, sgn:0,  extra:"OK",    priority:"P2", contents:"Marvel S2: A-Force/Miles/Mockingbird/Star Wars — Single box — bag and done." },
+  { order:66, box:62, comics:53,  keys:11, sgn:0,  extra:"OK",    priority:"P2", contents:"Mixed Publishers: Kiss/DC misc/All-Star Superman — Single box — bag and done." },
+  { order:67, box:39, comics:33,  keys:6,  sgn:0,  extra:"OK",    priority:"P2", contents:"Thor (JMS/Fraction/Aaron) — tiny box — Single box — bag and done." },
+  { order:68, box:63, comics:29,  keys:10, sgn:0,  extra:"OK",    priority:"P2", contents:"Foil + Silver Age — Thor #169 CGC 8.0 slabbed — Single box — bag and done." },
+  { order:69, box:74, comics:28,  keys:10, sgn:0,  extra:"OK",    priority:"P2", contents:"Trade Paperbacks / Graphic Novels — shelved separately — Single box — bag and done." },
+  { order:70, box:51, comics:154, keys:4,  sgn:0,  extra:"+1 box",priority:"P3", contents:"DC: Impulse + Young Justice + Teen Titans — just over capacity — Split into 2 boxes during bagging." },
+  { order:71, box:53, comics:143, keys:5,  sgn:0,  extra:"OK",    priority:"P4", contents:"DC: Legion of Superheroes + Nightwing + Outsiders — Single box — bag and done." },
+  { order:72, box:35, comics:80,  keys:3,  sgn:0,  extra:"OK",    priority:"P4", contents:"Exiles #1-55 + Generation X #55-75 — Single box — bag and done." },
+  { order:73, box:40, comics:28,  keys:2,  sgn:0,  extra:"OK",    priority:"P4", contents:"Ultimate X-Men #21-49 + Ultimate X + Ultimate Secret — Single box — bag and done." },
+  { order:74, box:41, comics:10,  keys:3,  sgn:0,  extra:"OK",    priority:"P4", contents:"Misc Overflow: Iron Man/Strange Academy/Dark Angels — Single box — bag and done." },
+];
+
+const PRIORITY_META: Record<BagPriority, { label: string; color: string; bg: string; desc: string }> = {
+  P0: { label:"P0 — INVENTORY",     color:"#c8102e", bg:"#fff5f5", desc:"Bag FIRST. Every book is CGC-bound or Heritage-bound." },
+  P1: { label:"P1 — SIGNED BOOKS",  color:"#d97706", bg:"#fffbf0", desc:"Signed books in other boxes. Damage here destroys financial value." },
+  P2: { label:"P2 — KEY-HEAVY",     color:"#1d6fa4", bg:"#f0f6ff", desc:"High key count. Bag in descending order of key count / box size." },
+  P3: { label:"P3 — OVERSPILL",     color:"#7c3aed", bg:"#f5f0ff", desc:"Just over 150. Bag + split into spare box." },
+  P4: { label:"P4 — STANDARD",      color:"#16a34a", bg:"#f0faf2", desc:"Under-capacity. Bag at your own pace." },
+};
+
+// ─── BOX ORDER ───────────────────────────────────────────────────────────────
 interface BoxEntry {
   newNum: number; oldNum: number; name: string; desc: string;
   comics: number; group: "inventory" | "marvel" | "dc" | "other" | "mixed" | "tpb";
 }
-
 const BOXES: BoxEntry[] = [
   { newNum:1,  oldNum:1,  group:"inventory", name:"SALES INVENTORY",                   desc:"92 books. 53 keys. 50 signed. All CGC candidates. Stan Lee, Bagley, King, Hickman, Atwell, Isabella. PRIORITY BOX.",                   comics:92  },
   { newNum:2,  oldNum:42, group:"marvel",    name:"X-Men Semi-Recent",                  desc:"AXM Whedon, X-Men runs, Old Man Logan",                                                                                                   comics:294 },
@@ -91,15 +240,11 @@ const BOXES: BoxEntry[] = [
   { newNum:74, oldNum:74, group:"tpb",       name:"Trade Paperbacks / Graphic Novels",  desc:"Crisis on IE, JLA Earth 2, JLA/Avengers, Spider-Man Life Story, DC One Million, X-Men Asgardian Wars, The Escapist. 28 items.",          comics:28  },
 ];
 
+// ─── CONSOLIDATION RUNS ──────────────────────────────────────────────────────
 interface ConsolidationRun {
-  priority: 1 | 2 | 3;
-  title: string;
-  currentBoxes: number[];
-  targetBox: number;
-  action: string;
-  impact: string;
+  priority: 1 | 2 | 3; title: string; currentBoxes: number[];
+  targetBox: number; action: string; impact: string;
 }
-
 const RUNS: ConsolidationRun[] = [
   { priority:1, title:"The Flash Vol 2 (#112–233 + Rebirth)",        currentBoxes:[47,25,26,48,46],  targetBox:47, action:"Flash Vol 2 lives primarily in Box 47. Pull Flash issues from overflow boxes (25, 26, 48, 46) and consolidate into Box 47. Cross-reference issue numbers before moving.", impact:"Single near-complete Flash run spanning Waid through Geoff Johns. Major Whatnot package." },
   { priority:1, title:"Birds of Prey Vol 1 (Dixon/Simone #1–127)",   currentBoxes:[45,26,58,46,47,68,69,71], targetBox:45, action:"BoP core lives in Box 45. Pull BoP issues from all other boxes and move to Box 45. Cross-check issue numbers.", impact:"Gail Simone's Birds of Prey complete in one box — major Whatnot package." },
@@ -116,49 +261,94 @@ const RUNS: ConsolidationRun[] = [
   { priority:3, title:"Sam Wilson: Captain America",                  currentBoxes:[8,10,19,30],      targetBox:10, action:"Sam Wilson Cap primarily in Box 10. Pull SWCap issues from other boxes into Box 10.", impact:"Captain America box contains all Cap incarnations." },
 ];
 
-interface OrgStep {
-  key: string;
-  num: number;
-  title: string;
-  time: string;
-  tools: string;
-  tasks: string[];
-}
-
+// ─── STEPS (v2) ──────────────────────────────────────────────────────────────
+interface OrgStep { key: string; num: number; title: string; time: string; tools: string; tasks: string[]; }
 const STEPS: OrgStep[] = [
-  { key:"s1", num:1, title:"Label All Boxes With New Numbers",    time:"~1 hour",
-    tools:"Label maker or marker, box list from this document",
-    tasks:["Print pages 1-2 of this document — the New Box Order table","Starting with Box 1 (INVENTORY), apply new number labels to the outside of each box","Cross-reference: each box shows its OLD number so you know which physical box gets which new label","Do NOT move any comics at this stage — just relabel the boxes","When done, update the Box Summary tab in the spreadsheet to remove the 'was Box X' notation"] },
-  { key:"s2", num:2, title:"Handle All CGC Submissions First",     time:"~2 hours across several days",
-    tools:"CGC submission portal, mylar bags, backing boards, shipping supplies",
-    tasks:["Stan Lee BP #513 — ALREADY SHIPPED to CGC. Monitor tracking","ASM #361 Bagley/Sharen — ALREADY SHIPPED to CGC. Monitor tracking","Roy Thomas ×5 books — ALREADY SUBMITTED. Confirm CGC received package","GREEN QUALIFIED BATCH: Press Vision #1, Black Lightning #1, New Warriors #1, WildCATs #3, Savage Dragon #1, Thor #339, MOS #18/19, Mockingbird #8, NM #96, Transformers #1, Cap Carter, Agent Carter, Hawkeye Freefall #1 — submit all to CGC × JSA","BATMAN PAIR: Send Batman #656 and #657 to presser now. Then submit CGC Modern","Do not move anything out of Box 1 (INVENTORY) until CGC submissions are complete"] },
-  { key:"s3", num:3, title:"Consolidate Priority 1 Runs",          time:"~half day",
-    tools:"Long box or short box, issue checklist from Section 2",
-    tasks:["The Flash Vol 2: Pull Flash issues from Boxes 25, 26, 48, 46 overflow into Box 47","Birds of Prey Vol 1: Pull BoP issues from Boxes 26, 58, 46, 47, 68, 69, 71 into Box 45. Simone's run — #1-127","Batman Tom King (unsigned): Move unsigned King Batman from Boxes 58/68/69 to Box 43","Detective Comics Tynion Rebirth: Consolidate all #934+ issues into Box 43","After each series: quick count to confirm expected issue numbers are present"] },
-  { key:"s4", num:4, title:"Consolidate Priority 2 Runs",          time:"~half day",
-    tools:"Same as Step 3",
-    tasks:["Miles Morales Spider-Man (unsigned): Pull from Boxes 29, 34 into Box 16. Leave signed Miles in Box 1","Exiles: Pull from Boxes 2, 3 into Box 35","Black Panther (unsigned): Pull from Box 73 into Box 7. Leave signed Priest BP in Box 1","Transformers issues (individual): Consolidate to Box 66 or 67 (Other publishers)","After this step: X-Men boxes (2, 3, 9, 11, 12, 14, 15) should contain ONLY X-Men content"] },
-  { key:"s5", num:5, title:"Box 1 Final Audit",                    time:"~1 hour",
-    tools:"Box 1 contents list from spreadsheet",
-    tasks:["Box 1 (INVENTORY) should contain ONLY: signed books, high-value unsigned keys slated for CGC, and Bronze/Silver Age keys","Any non-key, non-signed, non-CGC book in Box 1 should be moved to its appropriate publisher box","After this audit, Box 1 is the crown jewels — everything that touches CGC or Heritage","Create a physical checklist of Box 1 contents. Keep it inside the box lid"] },
-  { key:"s6", num:6, title:"Update Spreadsheet After Physical Moves", time:"~2–3 hours",
-    tools:"Laptop, inventory spreadsheet",
-    tasks:["After each physical consolidation (Steps 3-5), update the Box column in the spreadsheet for each moved book","Search by title in the spreadsheet to find all issues of a series, then batch-update the box number","Rebuild the JSON exports after all moves are complete (run the build script)","Update the Box Summary tab to reflect the new box contents"] },
-  { key:"s7", num:7, title:"Terrificon Prep (Before Aug 7)",        time:"~2–3 hours",
-    tools:"CGC submission forms, mylar bags, boards",
-    tasks:["Wolverine #8 (Box 72) — confirm still UNSIGNED. This is your Claremont Yellow SS target","Moon Knight Vol 6 #1-6 — pull all 6 from Box 33 for Terrificon","Superman Unchained #1 + Batman Europa #1 — BAG THESE NOW. Currently unbagged","Strange Academy: buy issue #14 (~$5) before the show to complete the set for Skottie Young","Pack CGC submission forms. Drop books at CGC booth on arrival Aug 7","Hotel booked: Hyatt code G-TRFC. Jim Lee: Saturday Aug 8, 10am sharp"] },
+  { key:"s1", num:1, title:"Order Supplies First", time:"~30 min",
+    tools:"Phone / laptop to place order, or drive to comic shop",
+    tasks:[
+      "Go to the comic shop TODAY. Ask about trade pricing on BCW bags, boards, and short boxes.",
+      "Order: 9 cases BCW current bags (1,000ct) + 9 cases BCW current boards (1,000ct) + 18 short boxes.",
+      "Also order 1 pack of 100 BCW Silver Age bags for the handful of pre-1970 books.",
+      "If shop can't order at trade: use Amazon, buy the 1,000-count bulk packs. Avoid 100-count packs — triple the cost.",
+      "DO NOT start bagging until supplies arrive. Partially bagged boxes are a mess.",
+    ],
+  },
+  { key:"s2", num:2, title:"Bag Box 1 — INVENTORY (Priority 0)", time:"~45 min",
+    tools:"BCW current bags, backing boards, Box 1 contents list",
+    tasks:[
+      "Open Box 1. This contains all 56 signed books + premium keys.",
+      "Bag every single book. Board inside, comic on top, bag sealed.",
+      "Handle signed books with care — spine side in first, no bending.",
+      "The Stan Lee, ASM #361, and Batman #125 are already at CGC — do not bag those.",
+      "Confirm contents match spreadsheet Box 1 list. Any discrepancy — note it.",
+      "Box 1 is already at correct capacity (93 comics < 150). No splitting needed.",
+    ],
+  },
+  { key:"s3", num:3, title:"Bag Priority 1 Boxes — Signed Books in Other Boxes", time:"~2–3 hours",
+    tools:"BCW current bags, backing boards, careful hands",
+    tasks:[
+      "Box 2 (294 comics, 1 signed): bag all, split into 2 boxes. Label Box 2A and Box 2B.",
+      "Box 8 (238 comics, 1 signed): bag all, split into 2 boxes. Contains Batman Europa + Superman Unchained — THESE MUST BE BAGGED BEFORE TERRIFICON.",
+      "Box 66 (126 comics, 1 signed): bag all — already under 150, no split needed.",
+      "Box 72 (75 comics, 2 signed — Wolverine #8 UNSIGNED + Absolute variants): bag all. WOLVERINE #8 STAYS UNSIGNED — bag it separately with a note.",
+    ],
+  },
+  { key:"s4", num:4, title:"Bag Priority 2 — Key-Heavy Boxes (Largest First)", time:"Full day × 2",
+    tools:"BCW bags and boards (bulk), sharpie, new box labels",
+    tasks:[
+      "Box 42 (620 comics, 81 keys) — SPLIT INTO 5 BOXES. This is your biggest single job. Label 42A through 42E.",
+      "Then work down the P2 list in order: Box 3 (272) → Box 43 (262) → Box 4 (255) → Box 5 (251) → Box 6 (248) → Box 44 (248)...",
+      "For every box over 150: bag the first 150, move remainder into a new labelled box.",
+      "New box label format: 'Box 3B — X-Men Full Runs (overspill)'.",
+      "After each box: update the spreadsheet box number for moved comics. You can batch-update by title/series.",
+      "Take breaks. This is a marathon. Aim for 5-6 boxes per session maximum.",
+    ],
+  },
+  { key:"s5", num:5, title:"Label All Boxes After Bagging", time:"~1 hour",
+    tools:"Label maker or marker, box list printout",
+    tasks:[
+      "Once a box is bagged and at correct capacity, apply the new label.",
+      "Label format: 'Box [N] — [Publisher] — [Key series]' on the SPINE of the box.",
+      "For overspill boxes: 'Box [N]B — [Same label as parent] — OVERSPILL'.",
+      "Print box labels from the Box Labels PDF (updated per session).",
+      "Add a card divider inside every box at the 75-comic midpoint — makes finding issues faster.",
+    ],
+  },
+  { key:"s6", num:6, title:"Terrificon Prep — Before August 6", time:"~2 hours",
+    tools:"CGC submission forms, mylar bags, boards, Hotel code G-TRFC",
+    tasks:[
+      "Box 8 MUST be bagged before Terrificon — Batman Europa + Superman Unchained are in there.",
+      "Wolverine #8 (Box 72) — confirm unsigned, bag it separately in a CGC submission bag (mylar), label clearly.",
+      "Moon Knight Vol 6 #1-6 — pull from Box 33, bag in individual mylar bags for Terrificon.",
+      "Pre-fill CGC submission forms at cgccomics.com before leaving.",
+      "Pack: CGC forms + mylar-bagged books + backing boards + Hotel code G-TRFC confirmed.",
+      "Jim Lee: Saturday August 8, arrive 10am sharp. His line fills in minutes.",
+    ],
+  },
+  { key:"s7", num:7, title:"Bag Remaining Boxes (P3 + P4) — No Rush", time:"Ongoing",
+    tools:"BCW bags, boards",
+    tasks:[
+      "Box 51 (154 comics) — just 4 over capacity. Bag and move 4 to a new small overflow box.",
+      "Box 53, 35, 40, 41 — all under 150. Bag at your own pace. These are the easy ones.",
+      "As you bag P4 boxes, update the spreadsheet. Run gen_data.mjs after each session to rebuild labels.",
+      "Once all bagging is complete: run the full rebuild to update all documents.",
+    ],
+  },
 ];
 
+// ─── GROUP META ───────────────────────────────────────────────────────────────
 const GROUP_META: Record<string, { label: string; color: string; accent: string }> = {
-  inventory: { label:"📦 Inventory",          color:"#c8102e", accent:"#fff0f0" },
-  marvel:    { label:"🔴 Marvel (Boxes 2–41)", color:"#c8102e", accent:"#fff8f8" },
-  dc:        { label:"🔵 DC (Boxes 42–63)",    color:"#1d6fa4", accent:"#f0f6ff" },
-  other:     { label:"🟢 Other (Boxes 64–67)", color:"#16a34a", accent:"#f0faf2" },
-  mixed:     { label:"🟡 Mixed (Boxes 68–73)", color:"#d97706", accent:"#fffbf0" },
-  tpb:       { label:"📚 TPB (Box 74)",        color:"#6b7280", accent:"#f8f8f8" },
+  inventory: { label:"Inventory",          color:"#c8102e", accent:"#fff0f0" },
+  marvel:    { label:"Marvel (Boxes 2–41)", color:"#c8102e", accent:"#fff8f8" },
+  dc:        { label:"DC (Boxes 42–63)",    color:"#1d6fa4", accent:"#f0f6ff" },
+  other:     { label:"Other (Boxes 64–67)", color:"#16a34a", accent:"#f0faf2" },
+  mixed:     { label:"Mixed (Boxes 68–73)", color:"#d97706", accent:"#fffbf0" },
+  tpb:       { label:"TPB (Box 74)",        color:"#6b7280", accent:"#f8f8f8" },
 };
 const GROUP_ORDER = ["inventory","marvel","dc","other","mixed","tpb"];
 
+// ─── SUB-COMPONENTS ───────────────────────────────────────────────────────────
 function BoxCard({ b, labeled, onToggle }: { b: BoxEntry; labeled: boolean; onToggle: () => void }) {
   const gm = GROUP_META[b.group];
   const changed = b.newNum !== b.oldNum;
@@ -171,46 +361,30 @@ function BoxCard({ b, labeled, onToggle }: { b: BoxEntry; labeled: boolean; onTo
     }}>
       {labeled && <div style={{ position:"absolute", top:6, right:8, color:"#16a34a", fontSize:"0.85rem", fontWeight:700 }}>✓</div>}
       <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:5 }}>
-        <span style={{
-          fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.55rem", letterSpacing:"1px",
-          color: gm.color, lineHeight:1,
-        }}>
+        <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.55rem", letterSpacing:"1px", color:gm.color, lineHeight:1 }}>
           {String(b.newNum).padStart(2,"0")}
         </span>
-        {changed && (
+        {changed ? (
           <div style={{ display:"flex", alignItems:"center", gap:4 }}>
             <span style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", color:"var(--muted)", background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:3, padding:"1px 6px" }}>
               was {b.oldNum}
             </span>
             <span style={{ color:"var(--muted)", fontSize:"0.8rem" }}>→</span>
           </div>
-        )}
-        {!changed && (
-          <span style={{ fontSize:"0.6rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", color:"var(--muted)", background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:3, padding:"1px 6px" }}>
-            UNCHANGED
-          </span>
+        ) : (
+          <span style={{ fontSize:"0.6rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", color:"var(--muted)", background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:3, padding:"1px 6px" }}>UNCHANGED</span>
         )}
       </div>
-      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem", letterSpacing:"0.8px", color:"var(--text)", marginBottom:3, lineHeight:1.2 }}>
-        {b.name}
-      </div>
+      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem", letterSpacing:"0.8px", color:"var(--text)", marginBottom:3, lineHeight:1.2 }}>{b.name}</div>
       <div style={{ fontSize:"0.72rem", color:"var(--muted2)", lineHeight:1.4, marginBottom:8 }}>{b.desc}</div>
       <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between" }}>
-        <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.7rem", letterSpacing:"1px", color:gm.color }}>
-          {b.comics} COMICS
-        </span>
-        <button
-          onClick={onToggle}
-          style={{
-            fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1px",
-            padding:"3px 10px", borderRadius:4, cursor:"pointer", transition:"all 0.12s",
-            background: labeled ? "#16a34a" : "transparent",
-            color: labeled ? "#fff" : "#16a34a",
-            border: `1.5px solid #16a34a`,
-          }}
-        >
-          {labeled ? "LABELED ✓" : "MARK LABELED"}
-        </button>
+        <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.7rem", letterSpacing:"1px", color:gm.color }}>{b.comics} COMICS</span>
+        <button onClick={onToggle} style={{
+          fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1px",
+          padding:"3px 10px", borderRadius:4, cursor:"pointer", transition:"all 0.12s",
+          background: labeled ? "#16a34a" : "transparent",
+          color: labeled ? "#fff" : "#16a34a", border:`1.5px solid #16a34a`,
+        }}>{labeled ? "LABELED ✓" : "MARK LABELED"}</button>
       </div>
     </div>
   );
@@ -224,19 +398,14 @@ function RunCard({ run, done, onToggle }: { run: ConsolidationRun; done: boolean
       border:`1.5px solid ${done ? "#16a34a" : pColor+"40"}`,
       background: done ? "#f0faf4" : "var(--surface)",
       borderLeft:`3px solid ${done ? "#16a34a" : pColor}`,
-      borderRadius:6, padding:"12px 16px",
-      opacity: done ? 0.6 : 1, transition:"all 0.15s",
+      borderRadius:6, padding:"12px 16px", opacity: done ? 0.6 : 1, transition:"all 0.15s",
     }}>
       <div style={{ display:"flex", alignItems:"flex-start", gap:12 }}>
-        <button
-          onClick={onToggle}
-          style={{
-            width:20, height:20, flexShrink:0, borderRadius:4, cursor:"pointer", transition:"all 0.15s",
-            border:`2px solid ${done ? "#16a34a" : "var(--border)"}`,
-            background: done ? "#16a34a" : "transparent",
-            display:"flex", alignItems:"center", justifyContent:"center", marginTop:1,
-          }}
-        >{done && <span style={{ color:"#fff", fontSize:"0.7rem" }}>✓</span>}</button>
+        <button onClick={onToggle} style={{
+          width:20, height:20, flexShrink:0, borderRadius:4, cursor:"pointer", transition:"all 0.15s",
+          border:`2px solid ${done ? "#16a34a" : "var(--border)"}`, background: done ? "#16a34a" : "transparent",
+          display:"flex", alignItems:"center", justifyContent:"center", marginTop:1,
+        }}>{done && <span style={{ color:"#fff", fontSize:"0.7rem" }}>✓</span>}</button>
         <div style={{ flex:1 }}>
           <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:4 }}>
             <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px",
@@ -259,13 +428,12 @@ function RunCard({ run, done, onToggle }: { run: ConsolidationRun; done: boolean
               </span>
             ))}
           </div>
-          {!open && (
+          {!open ? (
             <button onClick={() => setOpen(true)} style={{ background:"none", border:"none", cursor:"pointer",
               fontSize:"0.72rem", color:"var(--muted)", fontFamily:"'Crimson Pro',serif", fontStyle:"italic" }}>
               Show action + impact ▾
             </button>
-          )}
-          {open && (
+          ) : (
             <div>
               <div style={{ fontSize:"0.8rem", color:"var(--text)", lineHeight:1.55, marginBottom:4 }}><strong>Action:</strong> {run.action}</div>
               <div style={{ fontSize:"0.8rem", color:"var(--muted2)", lineHeight:1.55, fontStyle:"italic" }}><strong>Impact:</strong> {run.impact}</div>
@@ -282,9 +450,7 @@ function RunCard({ run, done, onToggle }: { run: ConsolidationRun; done: boolean
 }
 
 function StepCard({ step, stepDone, tasksDone, onStepToggle, onTaskToggle }: {
-  step: OrgStep; stepDone: boolean;
-  tasksDone: boolean[]; onStepToggle: () => void;
-  onTaskToggle: (i: number) => void;
+  step: OrgStep; stepDone: boolean; tasksDone: boolean[]; onStepToggle: () => void; onTaskToggle: (i: number) => void;
 }) {
   const [open, setOpen] = useState(false);
   const completed = tasksDone.filter(Boolean).length;
@@ -293,8 +459,7 @@ function StepCard({ step, stepDone, tasksDone, onStepToggle, onTaskToggle }: {
       border:`1.5px solid ${stepDone ? "#16a34a" : "var(--border)"}`,
       background: stepDone ? "#f0faf4" : "var(--surface)",
       borderLeft:`4px solid ${stepDone ? "#16a34a" : "var(--red)"}`,
-      borderRadius:6, padding:"14px 18px",
-      opacity: stepDone ? 0.65 : 1, transition:"all 0.15s",
+      borderRadius:6, padding:"14px 18px", opacity: stepDone ? 0.65 : 1, transition:"all 0.15s",
     }}>
       <div style={{ display:"flex", alignItems:"flex-start", gap:12 }}>
         <div style={{
@@ -311,9 +476,7 @@ function StepCard({ step, stepDone, tasksDone, onStepToggle, onTaskToggle }: {
             </span>
             <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1.5px",
               color:"var(--muted)", background:"var(--surface2)", border:"1px solid var(--border)",
-              borderRadius:3, padding:"1px 8px" }}>
-              {step.time}
-            </span>
+              borderRadius:3, padding:"1px 8px" }}>{step.time}</span>
           </div>
           <div style={{ fontSize:"0.78rem", color:"var(--muted2)", marginBottom:6 }}>
             <strong>Tools:</strong> {step.tools}
@@ -334,28 +497,22 @@ function StepCard({ step, stepDone, tasksDone, onStepToggle, onTaskToggle }: {
             <div style={{ display:"flex", flexDirection:"column", gap:6 }}>
               {step.tasks.map((t, i) => (
                 <label key={i} style={{ display:"flex", alignItems:"flex-start", gap:8, cursor:"pointer" }}>
-                  <div
-                    onClick={() => onTaskToggle(i)}
-                    style={{
-                      width:16, height:16, borderRadius:3, flexShrink:0, marginTop:1, cursor:"pointer", transition:"all 0.12s",
-                      border:`2px solid ${tasksDone[i] ? "#16a34a" : "var(--border)"}`,
-                      background: tasksDone[i] ? "#16a34a" : "transparent",
-                      display:"flex", alignItems:"center", justifyContent:"center",
-                    }}
-                  >{tasksDone[i] && <span style={{ color:"#fff", fontSize:"0.6rem" }}>✓</span>}</div>
+                  <div onClick={() => onTaskToggle(i)} style={{
+                    width:16, height:16, borderRadius:3, flexShrink:0, marginTop:1, cursor:"pointer", transition:"all 0.12s",
+                    border:`2px solid ${tasksDone[i] ? "#16a34a" : "var(--border)"}`,
+                    background: tasksDone[i] ? "#16a34a" : "transparent",
+                    display:"flex", alignItems:"center", justifyContent:"center",
+                  }}>{tasksDone[i] && <span style={{ color:"#fff", fontSize:"0.6rem" }}>✓</span>}</div>
                   <span style={{ fontSize:"0.82rem", color: tasksDone[i] ? "var(--muted)" : "var(--text2)",
                     textDecoration: tasksDone[i] ? "line-through" : "none", lineHeight:1.5 }}>{t}</span>
                 </label>
               ))}
-              <button
-                onClick={onStepToggle}
-                style={{
-                  fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1.5px",
-                  alignSelf:"flex-start", padding:"5px 16px", borderRadius:4, cursor:"pointer", marginTop:6,
-                  background: stepDone ? "#16a34a" : "transparent",
-                  color: stepDone ? "#fff" : "#16a34a", border:"1.5px solid #16a34a",
-                }}
-              >{stepDone ? "STEP DONE ✓" : "MARK STEP DONE"}</button>
+              <button onClick={onStepToggle} style={{
+                fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1.5px",
+                alignSelf:"flex-start", padding:"5px 16px", borderRadius:4, cursor:"pointer", marginTop:6,
+                background: stepDone ? "#16a34a" : "transparent",
+                color: stepDone ? "#fff" : "#16a34a", border:"1.5px solid #16a34a",
+              }}>{stepDone ? "STEP DONE ✓" : "MARK STEP DONE"}</button>
             </div>
           )}
         </div>
@@ -364,46 +521,78 @@ function StepCard({ step, stepDone, tasksDone, onStepToggle, onTaskToggle }: {
   );
 }
 
+// ─── MAIN ─────────────────────────────────────────────────────────────────────
 export default function OrganizationPath() {
-  const [tab, setTab]         = useState<"boxes"|"runs"|"steps">("steps");
-  const [labeled, setLabeled] = useState<Record<number, boolean>>(() => loadLS(LS_LABELED, {}));
-  const [runsDone, setRunsDone] = useState<Record<string, boolean>>(() => loadLS(LS_RUNS, {}));
+  const [tab, setTab]           = useState<"steps"|"supplies"|"bagorder"|"boxes"|"runs">("steps");
+  const [labeled,   setLabeled]   = useState<Record<number, boolean>>(() => loadLS(LS_LABELED, {}));
+  const [bagged,    setBagged]    = useState<Record<number, boolean>>(() => loadLS(LS_BAGGED,  {}));
+  const [runsDone,  setRunsDone]  = useState<Record<string, boolean>>(() => loadLS(LS_RUNS, {}));
   const [stepsDone, setStepsDone] = useState<Record<string, boolean>>(() => loadLS(LS_STEPS, {}));
   const [tasksDone, setTasksDone] = useState<Record<string, boolean[]>>(() =>
-    loadLS("brbOrgTasks", Object.fromEntries(STEPS.map(s => [s.key, s.tasks.map(() => false)])))
+    loadLS(LS_TASKS, Object.fromEntries(STEPS.map(s => [s.key, s.tasks.map(() => false)])))
   );
+  const [splitFilter, setSplitFilter] = useState(false);
+  const [bagPrioFilter, setBagPrioFilter] = useState<BagPriority | "">("");
 
   useEffect(() => { localStorage.setItem(LS_LABELED, JSON.stringify(labeled)); }, [labeled]);
-  useEffect(() => { localStorage.setItem(LS_RUNS, JSON.stringify(runsDone)); }, [runsDone]);
-  useEffect(() => { localStorage.setItem(LS_STEPS, JSON.stringify(stepsDone)); }, [stepsDone]);
-  useEffect(() => { localStorage.setItem("brbOrgTasks", JSON.stringify(tasksDone)); }, [tasksDone]);
+  useEffect(() => { localStorage.setItem(LS_BAGGED,  JSON.stringify(bagged)); }, [bagged]);
+  useEffect(() => { localStorage.setItem(LS_RUNS,    JSON.stringify(runsDone)); }, [runsDone]);
+  useEffect(() => { localStorage.setItem(LS_STEPS,   JSON.stringify(stepsDone)); }, [stepsDone]);
+  useEffect(() => { localStorage.setItem(LS_TASKS,   JSON.stringify(tasksDone)); }, [tasksDone]);
 
-  const labeledCount = Object.values(labeled).filter(Boolean).length;
-  const runsDoneCount = Object.values(runsDone).filter(Boolean).length;
+  const labeledCount   = Object.values(labeled).filter(Boolean).length;
+  const baggedCount    = Object.values(bagged).filter(Boolean).length;
+  const runsDoneCount  = Object.values(runsDone).filter(Boolean).length;
   const stepsDoneCount = STEPS.filter(s => stepsDone[s.key]).length;
 
+  const displayedBagOrder = bagPrioFilter ? BAG_ORDER.filter(b => b.priority === bagPrioFilter) : BAG_ORDER;
+
   return (
-    <div style={{ maxWidth:1100, margin:"0 auto", padding:"24px 20px 80px" }}>
+    <div style={{ maxWidth:1100, margin:"0 auto", padding:"20px 16px 80px" }}>
+
+      {/* Roy Thomas urgent notice */}
+      <div style={{
+        background:"#fff8e0", border:"1.5px solid #d4a800", borderLeft:"4px solid #d4a800",
+        borderRadius:6, padding:"12px 16px", marginBottom:18,
+        display:"flex", gap:14, alignItems:"flex-start", flexWrap:"wrap",
+      }}>
+        <div style={{ flex:1, minWidth:200 }}>
+          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.8rem", letterSpacing:"2px", color:"#8a6000", marginBottom:4 }}>
+            ⚠ URGENT — ROY THOMAS SS DEADLINE: JULY 10, 2026
+          </div>
+          <div style={{ fontSize:"0.82rem", color:"#7a5500", lineHeight:1.55, fontFamily:"'Crimson Pro',serif" }}>
+            <strong>Saga of the Human Torch #3</strong> — book in hand, NOT YET SUBMITTED.
+            Press immediately (CGC in-house pressing — add to next CGC submission as an add-on).
+            Then ship to Roy Thomas CGC SS before July 10. Expected return: $50–80 post-signing.
+            <br />
+            <em>Shipping reminder: write RT on all four sides of the box. Ship tracked and insured. Include CGC form.</em>
+          </div>
+        </div>
+      </div>
+
       {/* Header */}
-      <div style={{ marginBottom:16 }}>
+      <div style={{ marginBottom:14 }}>
         <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.5rem", letterSpacing:"2px", color:"var(--red)", margin:0, marginBottom:4 }}>
-          Organization Path
+          Organization Path — v2
         </h2>
         <p style={{ fontSize:"0.88rem", color:"var(--muted2)", margin:0, fontFamily:"'Crimson Pro',serif" }}>
-          May 2026 — 11,776 comics · 74 boxes · Logical order: Inventory → Marvel → DC → Other → Mixed → TPB
+          May 2026 — 11,776 comics · 74 boxes · 1,463 keys · 56 signed · 18 new short boxes needed · 70% unbagged
         </p>
       </div>
 
-      {/* Progress bar */}
-      <div style={{ display:"flex", gap:16, marginBottom:20, flexWrap:"wrap" }}>
+      {/* Progress tiles */}
+      <div style={{ display:"flex", gap:12, marginBottom:20, flexWrap:"wrap" }}>
         {[
-          { label:"BOXES LABELED", val:labeledCount, total:74,                color:"#16a34a" },
-          { label:"RUNS CONSOLIDATED", val:runsDoneCount, total:RUNS.length,  color:"#1d6fa4" },
-          { label:"STEPS COMPLETE",   val:stepsDoneCount, total:STEPS.length, color:"var(--red)" },
+          { label:"STEPS COMPLETE",      val:stepsDoneCount, total:STEPS.length,  color:"var(--red)" },
+          { label:"BOXES BAGGED",        val:baggedCount,    total:74,            color:"#1d6fa4"    },
+          { label:"BOXES LABELED",       val:labeledCount,   total:74,            color:"#16a34a"    },
+          { label:"RUNS CONSOLIDATED",   val:runsDoneCount,  total:RUNS.length,   color:"#d97706"    },
         ].map(({ label, val, total, color }) => (
-          <div key={label} style={{ flex:"1 1 160px", background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:8, padding:"10px 14px" }}>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"2px", color:"var(--muted)", marginBottom:4 }}>{label}</div>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.4rem", letterSpacing:"1px", color, lineHeight:1 }}>{val}<span style={{ fontSize:"0.8rem", color:"var(--muted)", marginLeft:4 }}>/ {total}</span></div>
+          <div key={label} style={{ flex:"1 1 140px", background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:8, padding:"10px 14px" }}>
+            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem", letterSpacing:"2px", color:"var(--muted)", marginBottom:4 }}>{label}</div>
+            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.4rem", letterSpacing:"1px", color, lineHeight:1 }}>
+              {val}<span style={{ fontSize:"0.8rem", color:"var(--muted)", marginLeft:4 }}>/ {total}</span>
+            </div>
             <div style={{ height:3, background:"var(--surface2)", borderRadius:2, marginTop:6, overflow:"hidden" }}>
               <div style={{ height:"100%", background:color, width:`${(val/total)*100}%`, transition:"width 0.3s" }} />
             </div>
@@ -412,33 +601,34 @@ export default function OrganizationPath() {
       </div>
 
       {/* Tab nav */}
-      <div style={{ display:"flex", gap:6, marginBottom:20, borderBottom:"2px solid var(--border)", paddingBottom:0 }}>
-        {([["steps","Step-by-Step Process"],["boxes","Box Order (74 Boxes)"],["runs","Consolidate Runs"]] as const).map(([id, label]) => (
+      <div style={{ display:"flex", gap:2, marginBottom:20, borderBottom:"2px solid var(--border)", overflowX:"auto", scrollbarWidth:"none" }}>
+        {([
+          ["steps",    "Steps"],
+          ["supplies", "Supplies"],
+          ["bagorder", "Bag Order"],
+          ["boxes",    "Box Map"],
+          ["runs",     "Consolidate"],
+        ] as const).map(([id, label]) => (
           <button key={id} onClick={() => setTab(id)} style={{
             fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.78rem", letterSpacing:"1.5px",
-            padding:"8px 18px", cursor:"pointer", background:"none",
+            padding:"8px 16px", cursor:"pointer", background:"none", whiteSpace:"nowrap",
             color: tab===id ? "var(--red)" : "var(--muted2)",
             border:"none", borderBottom: tab===id ? "3px solid var(--red)" : "3px solid transparent",
-            marginBottom:"-2px", transition:"all 0.12s",
+            marginBottom:"-2px", transition:"all 0.12s", flexShrink:0,
           }}>{label}</button>
         ))}
       </div>
 
-      {/* ── STEPS TAB ── */}
+      {/* ── STEPS ── */}
       {tab === "steps" && (
         <div style={{ display:"flex", flexDirection:"column", gap:12 }}>
           {STEPS.map(step => {
             const tasks = tasksDone[step.key] || step.tasks.map(() => false);
             return (
-              <StepCard
-                key={step.key}
-                step={step}
-                stepDone={!!stepsDone[step.key]}
-                tasksDone={tasks}
+              <StepCard key={step.key} step={step} stepDone={!!stepsDone[step.key]} tasksDone={tasks}
                 onStepToggle={() => setStepsDone(p => ({ ...p, [step.key]: !p[step.key] }))}
                 onTaskToggle={i => {
-                  const next = [...tasks];
-                  next[i] = !next[i];
+                  const next = [...tasks]; next[i] = !next[i];
                   setTasksDone(p => ({ ...p, [step.key]: next }));
                 }}
               />
@@ -447,7 +637,212 @@ export default function OrganizationPath() {
         </div>
       )}
 
-      {/* ── BOXES TAB ── */}
+      {/* ── SUPPLIES ── */}
+      {tab === "supplies" && (
+        <div>
+          <div style={{ background:"#fff8e0", border:"1.5px solid #d4a800", borderRadius:6, padding:"12px 16px", marginBottom:20 }}>
+            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"2px", color:"#8a6000", marginBottom:6 }}>
+              11,776 comics · 74 short boxes at 150 capacity = 79 boxes needed · 18 new short boxes required for overspill · 70% unbagged ≈ 8,250 comics needing bags and boards
+            </div>
+            <div style={{ fontSize:"0.82rem", color:"#7a5500", fontFamily:"'Crimson Pro',serif", lineHeight:1.6 }}>
+              <strong>ORDER VIA YOUR COMIC SHOP</strong> — trade pricing saves ~$280 vs retail.
+              Order bags + boards together. Buy short boxes in packs (5-pack is cheapest per unit).
+              <strong> DO NOT order boxes until after you have bagged one box</strong> and confirmed your actual comics-per-box number — it varies by board thickness.
+            </div>
+          </div>
+
+          {/* Supplies table */}
+          <div style={{ border:"1.5px solid var(--border)", borderRadius:8, overflow:"hidden" }}>
+            <div style={{ display:"grid", gridTemplateColumns:"2fr 80px 2fr 90px 90px",
+              background:"#1a1a1a", padding:"8px 14px", gap:12 }}>
+              {["ITEM","QTY","NOTES","RETAIL","VIA SHOP"].map(h => (
+                <span key={h} style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"2px", color:"rgba(255,255,255,0.7)" }}>{h}</span>
+              ))}
+            </div>
+            {SUPPLIES.map((s, i) => (
+              <div key={i} style={{
+                display:"grid", gridTemplateColumns:"2fr 80px 2fr 90px 90px",
+                gap:12, padding:"12px 14px", alignItems:"start",
+                background: i % 2 === 0 ? "var(--surface)" : "var(--surface2)",
+                borderTop:"1px solid var(--border)",
+              }}>
+                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.88rem", letterSpacing:"0.5px", color:"var(--text)", lineHeight:1.3 }}>{s.item}</div>
+                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.1rem", letterSpacing:"1px", color:"var(--red)" }}>{s.qty}</div>
+                <div style={{ fontSize:"0.8rem", color:"var(--muted2)", lineHeight:1.5, fontFamily:"'Crimson Pro',serif" }}>{s.notes}</div>
+                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.88rem", color:"var(--muted2)" }}>{s.retail}</div>
+                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.88rem", color:"#16a34a" }}>{s.shop}</div>
+              </div>
+            ))}
+            {/* Totals row */}
+            <div style={{
+              display:"grid", gridTemplateColumns:"2fr 80px 2fr 90px 90px",
+              gap:12, padding:"12px 14px", alignItems:"start",
+              background:"var(--surface)", borderTop:"2px solid var(--border)",
+            }}>
+              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.88rem", letterSpacing:"1px", color:"var(--text)", gridColumn:"1/3" }}>TOTAL</div>
+              <div />
+              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem", color:"var(--muted2)" }}>~$705</div>
+              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem", color:"#16a34a", fontWeight:700 }}>~$427</div>
+            </div>
+          </div>
+
+          {/* Box splitting summary */}
+          <div style={{ marginTop:28 }}>
+            <div style={{ display:"flex", alignItems:"center", gap:12, marginBottom:14, borderBottom:"2px solid var(--border)", paddingBottom:8 }}>
+              <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem", letterSpacing:"2px", color:"var(--red)" }}>BOX SPLITTING — WHERE THE 18 NEW BOXES GO</span>
+              <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px", color:"var(--muted)" }}>
+                38 BOXES OVER 150 CAPACITY
+              </span>
+              <button onClick={() => setSplitFilter(v => !v)} style={{
+                marginLeft:"auto", fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1px",
+                padding:"4px 12px", borderRadius:4, cursor:"pointer",
+                background: splitFilter ? "var(--red)" : "transparent",
+                color: splitFilter ? "#fff" : "var(--red)", border:"1.5px solid var(--red)",
+              }}>
+                {splitFilter ? "SHOW ALL ▲" : "BIGGEST FIRST ▼"}
+              </button>
+            </div>
+            <div style={{ overflowX:"auto" }}>
+              <table style={{ width:"100%", borderCollapse:"collapse", fontSize:"0.82rem" }}>
+                <thead>
+                  <tr style={{ background:"var(--surface2)" }}>
+                    {["Box","Comics","Over 150","New Boxes","Keys","Contents"].map(h => (
+                      <th key={h} style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1.5px",
+                        color:"var(--muted)", padding:"7px 10px", textAlign:"left", whiteSpace:"nowrap", borderBottom:"2px solid var(--border)" }}>{h}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {(splitFilter ? [...SPLITS].sort((a,b) => b.over - a.over) : SPLITS).map((s, i) => (
+                    <tr key={s.box} style={{ background: i % 2 === 0 ? "var(--surface)" : "var(--surface2)" }}>
+                      <td style={{ padding:"7px 10px", fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem", letterSpacing:"1px", color:"var(--red)" }}>{s.box}</td>
+                      <td style={{ padding:"7px 10px", fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", color:"var(--text)" }}>{s.comics}</td>
+                      <td style={{ padding:"7px 10px", fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", color:"#dc2626" }}>+{s.over}</td>
+                      <td style={{ padding:"7px 10px" }}>
+                        <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.78rem", letterSpacing:"1px",
+                          background:"#fff5f5", color:"#dc2626", border:"1px solid #fca5a5", borderRadius:3, padding:"2px 8px" }}>{s.newBoxes}</span>
+                      </td>
+                      <td style={{ padding:"7px 10px" }}>
+                        {s.keys > 0 && <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"1px",
+                          background:"#fff8e0", color:"#8a6000", border:"1px solid #d4a800", borderRadius:3, padding:"1px 7px" }}>★ {s.keys}</span>}
+                      </td>
+                      <td style={{ padding:"7px 10px", fontSize:"0.78rem", color:"var(--muted2)", lineHeight:1.4 }}>{s.contents}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ── BAG ORDER ── */}
+      {tab === "bagorder" && (
+        <div>
+          {/* Priority key */}
+          <div style={{ display:"flex", gap:8, flexWrap:"wrap", marginBottom:16 }}>
+            {(Object.entries(PRIORITY_META) as [BagPriority, typeof PRIORITY_META[BagPriority]][]).map(([p, m]) => (
+              <button key={p} onClick={() => setBagPrioFilter(bagPrioFilter === p ? "" : p)} style={{
+                display:"flex", flexDirection:"column", gap:2,
+                padding:"8px 12px", borderRadius:6, cursor:"pointer", transition:"all 0.15s", textAlign:"left",
+                background: bagPrioFilter === p ? m.color : m.bg,
+                border:`1.5px solid ${m.color}`,
+              }}>
+                <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1.5px",
+                  color: bagPrioFilter === p ? "#fff" : m.color }}>{m.label}</span>
+                <span style={{ fontSize:"0.68rem", color: bagPrioFilter === p ? "rgba(255,255,255,0.8)" : "var(--muted2)",
+                  fontFamily:"'Crimson Pro',serif", lineHeight:1.3 }}>{m.desc}</span>
+              </button>
+            ))}
+          </div>
+
+          <div style={{ fontSize:"0.8rem", color:"var(--muted2)", marginBottom:14, fontFamily:"'Crimson Pro',serif" }}>
+            {baggedCount} of 74 boxes bagged. Tap a row to mark it done.
+            {baggedCount > 0 && (
+              <button onClick={() => setBagged({})} style={{ marginLeft:12, fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1px",
+                background:"none", border:"1px solid var(--border)", color:"var(--muted)", borderRadius:3, padding:"2px 10px", cursor:"pointer" }}>
+                RESET
+              </button>
+            )}
+          </div>
+
+          <div style={{ display:"flex", flexDirection:"column", gap:6 }}>
+            {displayedBagOrder.map(b => {
+              const done = !!bagged[b.box];
+              const pm = PRIORITY_META[b.priority];
+              const needsSplit = b.extra !== "OK";
+              return (
+                <div key={b.order} onClick={() => setBagged(p => ({ ...p, [b.box]: !p[b.box] }))}
+                  style={{
+                    display:"flex", alignItems:"flex-start", gap:12,
+                    padding:"10px 14px",
+                    background: done ? "#f0faf4" : b.priority === "P0" ? "#fff5f5" : b.priority === "P1" ? "#fffbf0" : "var(--surface)",
+                    border: `1.5px solid ${done ? "#16a34a" : pm.color+"40"}`,
+                    borderLeft: `4px solid ${done ? "#16a34a" : pm.color}`,
+                    borderRadius:6, cursor:"pointer", transition:"all 0.15s",
+                    opacity: done ? 0.6 : 1,
+                  }}>
+                  {/* Order + checkbox */}
+                  <div style={{ flexShrink:0, display:"flex", flexDirection:"column", alignItems:"center", gap:4, minWidth:30 }}>
+                    <div style={{
+                      width:22, height:22, borderRadius:4,
+                      border:`2px solid ${done ? "#16a34a" : pm.color}`,
+                      background: done ? "#16a34a" : "transparent",
+                      display:"flex", alignItems:"center", justifyContent:"center",
+                    }}>
+                      {done && <span style={{ color:"#fff", fontSize:"0.72rem" }}>✓</span>}
+                    </div>
+                    <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem", letterSpacing:"1px", color:"var(--muted)" }}>#{b.order}</span>
+                  </div>
+
+                  {/* Box number */}
+                  <div style={{ flexShrink:0, minWidth:54 }}>
+                    <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.5rem", letterSpacing:"1px", color: done ? "var(--muted)" : pm.color, lineHeight:1 }}>
+                      {String(b.box).padStart(2,"0")}
+                    </div>
+                    <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem", letterSpacing:"1.5px", color:"var(--muted)", marginTop:1 }}>{b.priority}</div>
+                  </div>
+
+                  {/* Contents */}
+                  <div style={{ flex:1, minWidth:0 }}>
+                    <div style={{ fontSize:"0.82rem", color: done ? "var(--muted)" : "var(--text)", lineHeight:1.45,
+                      fontFamily:"'Crimson Pro',serif", textDecoration: done ? "line-through" : "none" }}>
+                      {b.contents}
+                    </div>
+                  </div>
+
+                  {/* Right badges */}
+                  <div style={{ display:"flex", flexDirection:"column", gap:4, alignItems:"flex-end", flexShrink:0 }}>
+                    <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1px", color:"var(--muted)" }}>
+                      {b.comics}
+                    </span>
+                    {b.keys > 0 && (
+                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem", letterSpacing:"1px",
+                        background:"#fff8e0", color:"#8a6000", border:"1px solid #d4a800", borderRadius:3, padding:"1px 5px" }}>
+                        ★{b.keys}
+                      </span>
+                    )}
+                    {b.sgn > 0 && (
+                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem", letterSpacing:"1px",
+                        background:"#f0faf0", color:"#16a34a", border:"1px solid #c8e6c8", borderRadius:3, padding:"1px 5px" }}>
+                        ✍{b.sgn}
+                      </span>
+                    )}
+                    {needsSplit && (
+                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem", letterSpacing:"1px",
+                        background:"#fff0f0", color:"#dc2626", border:"1px solid #fca5a5", borderRadius:3, padding:"1px 5px" }}>
+                        {b.extra}
+                      </span>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {/* ── BOX MAP ── */}
       {tab === "boxes" && (
         <div>
           <div style={{ display:"flex", alignItems:"center", gap:12, marginBottom:14, flexWrap:"wrap" }}>
@@ -485,7 +880,7 @@ export default function OrganizationPath() {
         </div>
       )}
 
-      {/* ── RUNS TAB ── */}
+      {/* ── RUNS ── */}
       {tab === "runs" && (
         <div>
           <p style={{ fontSize:"0.88rem", color:"var(--muted2)", marginBottom:16, fontFamily:"'Crimson Pro',serif" }}>
