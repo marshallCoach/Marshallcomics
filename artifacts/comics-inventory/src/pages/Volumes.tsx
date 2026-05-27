@@ -92,6 +92,7 @@ export default function Volumes() {
   const [search,      setSearch]      = useState("");
   const [pubFilter,   setPubFilter]   = useState<"" | "Marvel" | "DC" | "Other">("");
   const [sortBy,      setSortBy]      = useState<"title" | "vols" | "issues">("title");
+  const [multiOnly,   setMultiOnly]   = useState(false);
   const [openPubs,    setOpenPubs]    = useState<Set<string>>(new Set(["Marvel","DC","Other"]));
   const [openTitles,  setOpenTitles]  = useState<Set<string>>(new Set());
 
@@ -126,11 +127,12 @@ export default function Volumes() {
       const q = search.toLowerCase();
       list = list.filter(t => t.title.toLowerCase().includes(q) || t.publisher.toLowerCase().includes(q));
     }
+    if (multiOnly) list = list.filter(t => t.volumes.length > 1);
     if (sortBy === "title")  list = [...list].sort((a, b) => a.title.localeCompare(b.title));
     if (sortBy === "vols")   list = [...list].sort((a, b) => b.volumes.length - a.volumes.length);
     if (sortBy === "issues") list = [...list].sort((a, b) => b.totalIssues - a.totalIssues);
     return list;
-  }, [allTitles, pubFilter, search, sortBy]);
+  }, [allTitles, pubFilter, search, sortBy, multiOnly]);
 
   const totalVols = filtered.reduce((s, t) => s + t.volumes.length, 0);
   const multiVol  = filtered.filter(t => t.volumes.length > 1).length;
@@ -158,22 +160,40 @@ export default function Volumes() {
 
       {/* Stats */}
       <div style={{ display:"flex", gap:12, flexWrap:"wrap", marginBottom:20 }}>
-        {[
-          { val: filtered.length,             lbl: "Titles" },
-          { val: totalVols,                   lbl: "Volumes" },
-          { val: multiVol,                    lbl: "Multi-Volume" },
-          { val: filtered.reduce((s,t) => s + t.totalIssues, 0).toLocaleString(), lbl: "Issues" },
-        ].map(s => (
-          <div key={s.lbl} style={{
-            background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:6,
-            padding:"10px 16px", textAlign:"center", flex:"1 1 100px",
-          }}>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.5rem",
-              color:"var(--red)", letterSpacing:"1px", lineHeight:1 }}>{s.val}</div>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1.5px",
-              color:"var(--muted)", marginTop:3 }}>{s.lbl}</div>
-          </div>
-        ))}
+        {([
+          { val: filtered.length,                                                  lbl: "Titles",        clickable: false },
+          { val: totalVols,                                                        lbl: "Volumes",       clickable: false },
+          { val: allTitles.filter(t => t.volumes.length > 1).length,              lbl: "Multi-Volume",  clickable: true  },
+          { val: filtered.reduce((s,t) => s + t.totalIssues, 0).toLocaleString(), lbl: "Issues",        clickable: false },
+        ] as const).map(s => {
+          const isActive = s.clickable && multiOnly;
+          return (
+            <div key={s.lbl}
+              onClick={s.clickable ? () => setMultiOnly(v => !v) : undefined}
+              style={{
+                background: isActive ? "var(--red)" : "var(--surface)",
+                border: isActive ? "1.5px solid var(--red)" : "1.5px solid var(--border)",
+                borderRadius:6, padding:"10px 16px", textAlign:"center", flex:"1 1 100px",
+                cursor: s.clickable ? "pointer" : "default",
+                boxShadow: isActive ? "0 4px 14px rgba(200,16,46,0.22)" : "none",
+                transform: isActive ? "translateY(-2px)" : "none",
+                transition:"all 0.18s",
+              }}>
+              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.5rem",
+                color: isActive ? "#fff" : "var(--red)", letterSpacing:"1px", lineHeight:1 }}>{s.val}</div>
+              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1.5px",
+                color: isActive ? "rgba(255,255,255,0.8)" : "var(--muted)", marginTop:3 }}>{s.lbl}</div>
+              {s.clickable && !isActive && (
+                <div style={{ fontSize:"0.52rem", color:"var(--muted)", marginTop:3,
+                  fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>CLICK TO FILTER</div>
+              )}
+              {isActive && (
+                <div style={{ fontSize:"0.52rem", color:"rgba(255,255,255,0.65)", marginTop:3,
+                  fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>CLICK TO CLEAR ▲</div>
+              )}
+            </div>
+          );
+        })}
       </div>
 
       {/* Controls */}
@@ -209,6 +229,17 @@ export default function Volumes() {
             }}>{l}</button>
           ))}
         </div>
+
+        <button onClick={() => setMultiOnly(v => !v)} style={{
+          background: multiOnly ? "#1a1a2e" : "var(--surface2)",
+          color: multiOnly ? "#a78bfa" : "var(--muted2)",
+          border: multiOnly ? "1.5px solid #a78bfa" : "1.5px solid var(--border)",
+          borderRadius:5, padding:"5px 14px", cursor:"pointer",
+          fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1.5px",
+          transition:"all 0.15s", whiteSpace:"nowrap",
+        }}>
+          {multiOnly ? "▦ MULTI-VOL ONLY ✓" : "▦ MULTI-VOL ONLY"}
+        </button>
 
         <div style={{ marginLeft:"auto", display:"flex", gap:6, alignItems:"center" }}>
           <button onClick={expandAll}
@@ -269,12 +300,13 @@ export default function Volumes() {
 
                     return (
                       <div key={tKey} style={{
-                        border:`1.5px solid ${tOpen ? pg.border : "var(--border)"}`,
-                        borderLeft: tOpen ? `3px solid ${pg.color}` : "1.5px solid var(--border)",
+                        border:`1.5px solid ${tOpen ? pg.border : multiV ? pg.border : "var(--border)"}`,
+                        borderLeft: multiV ? `4px solid ${pg.color}` : tOpen ? `3px solid ${pg.color}` : "1.5px solid var(--border)",
                         borderRadius:6,
-                        background: tOpen ? pg.bg : "#fff",
+                        background: tOpen ? pg.bg : multiV ? `${pg.bg}cc` : "#fff",
                         overflow:"hidden",
                         transition:"border-color 0.15s",
+                        boxShadow: multiV && !tOpen ? `inset 0 0 0 0 transparent` : "none",
                       }}>
                         {/* Title row */}
                         <button onClick={() => toggleTitle(tKey)} style={{
