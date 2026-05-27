@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef } from "react";
 import { DATA3 } from "@/data/data3";
 import { SortableTable, ColDef } from "@/components/SortableTable";
 import { Paginator } from "@/components/Paginator";
@@ -110,6 +110,7 @@ const LIST_COLS: ColDef<Comic>[] = [
 ];
 
 export default function AllBoxes() {
+  const searchInputRef = useRef<HTMLInputElement>(null);
   const [q,          setQ]          = useState("");
   const [box,        setBox]        = useState("");
   const [pub,        setPub]        = useState("");
@@ -141,6 +142,7 @@ export default function AllBoxes() {
   const clearAll   = () => {
     setHasSearched(false); setOpen(new Set());
     setQ(""); setBox(""); setPub(""); setEra(""); setPlatform(""); setKeyOnly(false); setSignedOnly(false);
+    setTimeout(() => searchInputRef.current?.focus(), 0);
   };
 
   const toggle = (i: number) =>
@@ -153,6 +155,7 @@ export default function AllBoxes() {
     <div>
       <div className="filters">
         <input
+          ref={searchInputRef}
           placeholder="Search title, writer, artist, key reason, arc…"
           value={q}
           onChange={e => setQ(e.target.value)}

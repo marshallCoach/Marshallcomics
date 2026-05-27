@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect, Fragment } from "react";
+import { useState, useMemo, useEffect, useRef, Fragment } from "react";
 import { DATA3 } from "@/data/data3";
 import { SortableTable, ColDef } from "@/components/SortableTable";
 import { Paginator } from "@/components/Paginator";
@@ -174,6 +174,7 @@ function HuntCard({ comic: c, onTitleClick }: { comic: Comic; onTitleClick?: (t:
 // ── Main Component ────────────────────────────────────────────────────────────
 export default function BoxHunt() {
   // Quick Search state
+  const searchInputRef = useRef<HTMLInputElement>(null);
   const [searchField, setSearchField] = useState("everything");
   const [searchVal,   setSearchVal]   = useState("");
   const [searchBox,   setSearchBox]   = useState("");
@@ -310,6 +311,7 @@ export default function BoxHunt() {
     setCardPage(1);
     setSelectedBox(null);
     setExactTitle("");
+    setTimeout(() => searchInputRef.current?.focus(), 0);
   }
 
   return (
@@ -339,6 +341,7 @@ export default function BoxHunt() {
 
           {showTextInput && (
             <input
+              ref={searchInputRef}
               className="qs-input"
               autoFocus
               placeholder={

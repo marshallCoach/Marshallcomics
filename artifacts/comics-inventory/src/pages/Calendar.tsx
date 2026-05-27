@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef } from "react";
 
 interface CalEvent { Type: string; Date: string; Theme: string; Books: string; Revenue: string; Prep: string; sortDate: number; }
 
@@ -84,6 +84,7 @@ function typeIcon(type: string) {
 }
 
 export default function Calendar() {
+  const searchInputRef = useRef<HTMLInputElement>(null);
   const [q,       setQ]       = useState("");
   const [type,    setType]    = useState("");
   const [sortDir, setSortDir] = useState<"asc" | "desc">("asc");
@@ -146,6 +147,7 @@ export default function Calendar() {
       <div style={{ background:"var(--surface)", borderBottom:"1px solid var(--border)",
         padding:"10px 18px", display:"flex", gap:8, flexWrap:"wrap", alignItems:"center" }}>
         <input
+          ref={searchInputRef}
           placeholder="Search events…"
           value={q} onChange={e => setQ(e.target.value)}
           style={{ background:"var(--bg)", border:"1.5px solid var(--border)", color:"var(--text)",
@@ -190,7 +192,7 @@ export default function Calendar() {
         </div>
 
         {(q || type) && (
-          <button onClick={() => { setQ(""); setType(""); setOpen(new Set()); }}
+          <button onClick={() => { setQ(""); setType(""); setOpen(new Set()); setTimeout(() => searchInputRef.current?.focus(), 0); }}
             style={{ background:"transparent", color:"var(--muted2)", border:"1.5px solid var(--border)",
               padding:"7px 14px", borderRadius:5, cursor:"pointer", fontFamily:"'Bebas Neue',sans-serif",
               fontSize:"0.72rem", letterSpacing:"1.5px" }}>

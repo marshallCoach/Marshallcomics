@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback, useEffect } from "react";
+import { useState, useMemo, useCallback, useEffect, useRef } from "react";
 import { DATA3 } from "@/data/data3";
 import { getCoverSvgUrl, type ComicLike } from "@/utils/coverThumbnails";
 import { SortableTable, ColDef } from "@/components/SortableTable";
@@ -103,6 +103,7 @@ export default function Everything({
   initKeysOnly?: boolean; initSignedOnly?: boolean;
   onNavigate?: (tab: string, params?: Record<string, string>) => void;
 }) {
+  const searchInputRef = useRef<HTMLInputElement>(null);
   const [query,       setQuery]      = useState(initQuery    || "");
   const [publisher,   setPub]        = useState(initPublisher || "");
   const [era,         setEra]        = useState("");
@@ -193,6 +194,7 @@ export default function Everything({
     setQuery(""); setPub(""); setEra(""); setPlat(""); setBoxFilter("");
     setKeysOnly(false); setSignedOnly(false); setFamily(""); setExactTitle("");
     setCardPage(1);
+    setTimeout(() => searchInputRef.current?.focus(), 0);
   }, []);
 
   const topWriters = useMemo(() => {
@@ -225,6 +227,7 @@ export default function Everything({
             <label className="filter-label">Search — title, writer, artist, signer, key reason, 1st appearance, arc, notes</label>
             <div style={{ position:"relative" }}>
               <input
+                ref={searchInputRef}
                 className="search-input"
                 value={query}
                 onChange={e=>setQuery(e.target.value)}
@@ -233,7 +236,7 @@ export default function Everything({
                 style={{ width:"100%", paddingRight:32 }}
               />
               {query && (
-                <button onClick={()=>setQuery("")} style={{ position:"absolute", right:8, top:"50%", transform:"translateY(-50%)", background:"none", border:"none", cursor:"pointer", color:"var(--muted)", fontSize:"1rem" }}>×</button>
+                <button onClick={()=>{setQuery("");searchInputRef.current?.focus();}} style={{ position:"absolute", right:8, top:"50%", transform:"translateY(-50%)", background:"none", border:"none", cursor:"pointer", color:"var(--muted)", fontSize:"1rem" }}>×</button>
               )}
             </div>
           </div>
