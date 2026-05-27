@@ -119,7 +119,6 @@ export default function Everything({
   const [exactTitle,  setExactTitle] = useState("");
 
   const cols = useMemo<ColDef<Comic>[]>(() => [
-    { key:"entry",     label:"Legacy #",  defaultWidth:72,  sort:(a,b)=>Number(a.Entry||0)-Number(b.Entry||0), cell:r=><span className="lt-sub" style={{color:"var(--muted)",fontVariantNumeric:"tabular-nums"}}>#{r.Entry}</span> },
     { key:"title",     label:"Title",     defaultWidth:220, sort:(a,b)=>a.Title.localeCompare(b.Title), cell:r=>(
       <button className="title-link" onClick={e=>{e.stopPropagation();setExactTitle(r.Title||"");setQuery("");setSearched(true);setCardPage(1);}}>
         {r.Title||"Untitled"}
@@ -454,7 +453,6 @@ function EverythingCard({ comic: c, onTitleClick }: { comic: Comic; onTitleClick
           }
           <div className="card-issue">
             {c.Issue}{c.Volume && c.Volume !== "1" ? ` · Vol ${c.Volume}` : ""}{c.Year ? ` · ${c.Year}` : ""}
-            {c.Entry && <span style={{marginLeft:8,fontSize:"0.78rem",color:"var(--muted)",fontVariantNumeric:"tabular-nums"}}>#{c.Entry}</span>}
           </div>
           {c.Publisher && <div className="card-pub">{c.Publisher}{c.Era?` · ${c.Era}`:""}</div>}
         </div>
