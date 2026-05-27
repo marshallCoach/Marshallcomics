@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import { DATA3 } from "@/data/data3";
 
-const KEY         = "mc_auth";
-const PWD         = "BlackReadBrown!";
-const PASSKEY_KEY = "brbPasskeyId";
+const KEY           = "mc_auth";
+const PWD           = "BlackReadBrown!";
+const PASSKEY_KEY   = "brbPasskeyId";
+const PROGRESS_KEY  = "mc_progress_dismissed";
 
 const TARGET_BOXES = 80;
 const _comics      = DATA3.comics;
@@ -75,13 +76,14 @@ interface Props { children: React.ReactNode; }
 type Stage = "lock" | "offer-faceid" | "registering" | "authing";
 
 export default function PasswordGate({ children }: Props) {
-  const [unlocked,    setUnlocked]    = useState(() => sessionStorage.getItem(KEY) === "1");
-  const [input,       setInput]       = useState("");
-  const [shake,       setShake]       = useState(false);
-  const [show,        setShow]        = useState(false);
-  const [stage,       setStage]       = useState<Stage>("lock");
-  const [biometricErr,setBiometricErr]= useState("");
-  const [passkeyId,   setPasskeyId]   = useState<string | null>(() => localStorage.getItem(PASSKEY_KEY));
+  const [unlocked,      setUnlocked]      = useState(() => sessionStorage.getItem(KEY) === "1");
+  const [input,         setInput]         = useState("");
+  const [shake,         setShake]         = useState(false);
+  const [show,          setShow]          = useState(false);
+  const [stage,         setStage]         = useState<Stage>("lock");
+  const [biometricErr,  setBiometricErr]  = useState("");
+  const [passkeyId,     setPasskeyId]     = useState<string | null>(() => localStorage.getItem(PASSKEY_KEY));
+  const [progressHidden,setProgressHidden]= useState(() => sessionStorage.getItem(PROGRESS_KEY) === "1");
 
   useEffect(() => {
     if (unlocked) sessionStorage.setItem(KEY, "1");
@@ -199,23 +201,32 @@ export default function PasswordGate({ children }: Props) {
       </div>
 
       {/* Collection progress bar */}
-      <div style={{ width:"100%", maxWidth:340, marginBottom:28 }}>
-        <div style={{ display:"flex", justifyContent:"space-between", alignItems:"baseline", marginBottom:6 }}>
-          <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem", letterSpacing:"2.5px", color:"rgba(255,255,255,0.25)", textTransform:"uppercase" }}>Box Collection Progress</span>
-          <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1px", color:"#c8102e" }}>{_boxes} / {TARGET_BOXES} Boxes</span>
+      {!progressHidden && (
+        <div style={{ width:"100%", maxWidth:340, marginBottom:28, position:"relative" }}>
+          <div style={{ display:"flex", justifyContent:"space-between", alignItems:"baseline", marginBottom:6 }}>
+            <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem", letterSpacing:"2.5px", color:"rgba(255,255,255,0.25)", textTransform:"uppercase" }}>Box Collection Progress</span>
+            <div style={{ display:"flex", alignItems:"center", gap:8 }}>
+              <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1px", color:"#c8102e" }}>{_boxes} / {TARGET_BOXES} Boxes</span>
+              <button
+                onClick={() => { sessionStorage.setItem(PROGRESS_KEY, "1"); setProgressHidden(true); }}
+                style={{ background:"none", border:"none", cursor:"pointer", color:"rgba(255,255,255,0.2)", fontSize:"0.75rem", padding:"0 2px", lineHeight:1, fontFamily:"sans-serif" }}
+                title="Dismiss"
+              >✕</button>
+            </div>
+          </div>
+          <div style={{ height:6, background:"rgba(255,255,255,0.08)", borderRadius:3, overflow:"hidden" }}>
+            <div style={{ width:`${_boxPct}%`, height:"100%", background:"linear-gradient(90deg,#c8102e,#f4a107)", borderRadius:3, transition:"width 0.6s ease" }} />
+          </div>
+          <div style={{ display:"flex", justifyContent:"space-between", marginTop:6 }}>
+            <span style={{ fontSize:"0.56rem", color:"rgba(255,255,255,0.18)", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>
+              {_comics.length.toLocaleString()} Comics · {_keys.toLocaleString()} Keys · {_signed} Signed
+            </span>
+            <span style={{ fontSize:"0.6rem", color:"rgba(255,255,255,0.25)", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>
+              {_remaining > 0 ? `${_remaining} to go · ` : "✓ "}{_boxPct}%
+            </span>
+          </div>
         </div>
-        <div style={{ height:6, background:"rgba(255,255,255,0.08)", borderRadius:3, overflow:"hidden" }}>
-          <div style={{ width:`${_boxPct}%`, height:"100%", background:"linear-gradient(90deg,#c8102e,#f4a107)", borderRadius:3, transition:"width 0.6s ease" }} />
-        </div>
-        <div style={{ display:"flex", justifyContent:"space-between", marginTop:6 }}>
-          <span style={{ fontSize:"0.56rem", color:"rgba(255,255,255,0.18)", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>
-            {_comics.length.toLocaleString()} Comics · {_keys.toLocaleString()} Keys · {_signed} Signed
-          </span>
-          <span style={{ fontSize:"0.6rem", color:"rgba(255,255,255,0.25)", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>
-            {_remaining > 0 ? `${_remaining} to go · ` : "✓ "}{_boxPct}%
-          </span>
-        </div>
-      </div>
+      )}
 
       {/* Face ID button — prominent if registered */}
       {passkeyId && (
