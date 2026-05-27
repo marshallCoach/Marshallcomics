@@ -1,7 +1,13 @@
-import { useState, useMemo, Fragment } from "react";
+import { useState, useMemo, useEffect, Fragment } from "react";
 import { DATA3 } from "@/data/data3";
 import { SortableTable, ColDef } from "@/components/SortableTable";
 import { Paginator } from "@/components/Paginator";
+
+const LS_HUNT_FOUND = "brbHuntFound";
+function loadHuntLS(): Set<string> {
+  try { return new Set(JSON.parse(localStorage.getItem(LS_HUNT_FOUND) || "[]")); }
+  catch { return new Set(); }
+}
 
 const ALL   = DATA3.comics;
 const BOXES = DATA3.boxes;
@@ -173,8 +179,9 @@ export default function BoxHunt() {
   const [searchBox,   setSearchBox]   = useState("");
   const [searchPub,   setSearchPub]   = useState("");
   const [searched,    setSearched]    = useState(false);
-  const [view,        setView]        = useState<"list"|"card">("list");
+  const [view,        setView]        = useState<"list"|"card"|"hunt">("list");
   const [cardPage,    setCardPage]    = useState(1);
+  const [huntFound,   setHuntFound]   = useState<Set<string>>(() => loadHuntLS());
 
   const [exactTitle,  setExactTitle]   = useState("");
 
@@ -263,6 +270,19 @@ export default function BoxHunt() {
     { key:"signed", label:"Signed",    defaultWidth:90,  sort:(a,b)=>a.Signed.localeCompare(b.Signed),    cell:r=>r.Signed?.toUpperCase()==="YES"?<span className="lt-sub" style={{color:"var(--gold)"}}>✍ {r.Signed_By||"Yes"}</span>:null },
   // eslint-disable-next-line react-hooks/exhaustive-deps
   ], []);
+
+  // Persist hunt found set
+  useEffect(() => {
+    localStorage.setItem(LS_HUNT_FOUND, JSON.stringify([...huntFound]));
+  }, [huntFound]);
+
+  function toggleHuntFound(key: string) {
+    setHuntFound(prev => {
+      const next = new Set(prev);
+      if (next.has(key)) next.delete(key); else next.add(key);
+      return next;
+    });
+  }
 
   function doSearch() {
     setSearched(true);
@@ -394,17 +414,15 @@ export default function BoxHunt() {
             }
           </div>
           {results.length > 0 && (
-            <div style={{ display:"flex", gap:6 }}>
-              {(["list","card"] as const).map(v => (
+            <div style={{ display:"flex", gap:6, flexWrap:"wrap" }}>
+              {([["list","≡ List"],["card","⊞ Cards"],["hunt","✓ Hunt Mode"]] as const).map(([v, label]) => (
                 <button key={v} onClick={() => setView(v)} style={{
                   fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"1.5px",
                   padding:"5px 14px", border:`1.5px solid ${view===v?"var(--red)":"var(--border)"}`,
                   background:view===v?"var(--red)":"var(--surface)",
                   color:view===v?"#fff":"var(--muted2)",
                   borderRadius:4, cursor:"pointer",
-                }}>
-                  {v==="list"?"≡ List":"⊞ Cards"}
-                </button>
+                }}>{label}</button>
               ))}
             </div>
           )}
@@ -598,6 +616,112 @@ export default function BoxHunt() {
               );
             })}
           </div>
+        </div>
+      )}
+
+      {/* ── Hunt Mode ── */}
+      {searched && results.length > 0 && view === "hunt" && (
+        <div style={{ marginBottom:20 }}>
+          {/* Progress bar */}
+          <div style={{ display:"flex", alignItems:"center", gap:14, marginBottom:16, background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:8, padding:"12px 16px" }}>
+            <div style={{ flex:1 }}>
+              <div style={{ display:"flex", justifyContent:"space-between", marginBottom:5 }}>
+                <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"2px", color:"var(--muted)" }}>HUNT PROGRESS</span>
+                <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1px", color:"#16a34a" }}>
+                  {results.filter(c => huntFound.has(`${c.Title}|||${c.Issue}|||${c.Box}`)).length} / {results.length} TRACKED
+                </span>
+              </div>
+              <div style={{ height:6, background:"var(--surface2)", borderRadius:3, overflow:"hidden" }}>
+                <div style={{ height:"100%", background:"#16a34a", borderRadius:3, transition:"width 0.3s",
+                  width:`${(results.filter(c => huntFound.has(`${c.Title}|||${c.Issue}|||${c.Box}`)).length / results.length) * 100}%` }} />
+              </div>
+            </div>
+            {huntFound.size > 0 && (
+              <button onClick={() => setHuntFound(new Set())} style={{
+                fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1px",
+                background:"none", border:"1px solid var(--border)", color:"var(--muted)",
+                borderRadius:3, padding:"3px 10px", cursor:"pointer", flexShrink:0,
+              }}>RESET</button>
+            )}
+          </div>
+
+          {/* Rows — grouped by box */}
+          {Object.entries(matchesByBox)
+            .sort(([a],[b]) => Number(a) - Number(b))
+            .map(([boxNum, boxMatches]) => {
+              const sorted = [...boxMatches].sort((a,b) => parseVal(a.Issue) - parseVal(b.Issue));
+              const doneInBox = sorted.filter(c => huntFound.has(`${c.Title}|||${c.Issue}|||${c.Box}`)).length;
+              return (
+                <div key={boxNum} style={{ marginBottom:18 }}>
+                  {/* Box header */}
+                  <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:8, borderBottom:"2px solid var(--border)", paddingBottom:6 }}>
+                    <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.1rem", letterSpacing:"2px", color:"var(--red)" }}>BOX {boxNum}</span>
+                    <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1.5px", color:"var(--muted)" }}>
+                      {doneInBox}/{sorted.length} FOUND
+                    </span>
+                    <div style={{ flex:1, height:3, background:"var(--surface2)", borderRadius:2, overflow:"hidden" }}>
+                      <div style={{ height:"100%", background:"#16a34a", width:`${(doneInBox/sorted.length)*100}%`, transition:"width 0.3s" }} />
+                    </div>
+                  </div>
+                  <div style={{ display:"flex", flexDirection:"column", gap:5 }}>
+                    {sorted.map((c, i) => {
+                      const isKey    = (c.Key    || "").toUpperCase() === "YES";
+                      const isSigned = (c.Signed || "").toUpperCase() === "YES";
+                      const huntKey  = `${c.Title}|||${c.Issue}|||${c.Box}`;
+                      const found    = huntFound.has(huntKey);
+                      const pubCol   = pubColor(c.Publisher);
+                      return (
+                        <div key={i} onClick={() => toggleHuntFound(huntKey)}
+                          style={{
+                            display:"flex", alignItems:"center", gap:12, padding:"10px 14px",
+                            background: found ? "#f0faf4" : isKey ? "#fffdf0" : "var(--surface)",
+                            border:`1.5px solid ${found ? "#16a34a" : isKey ? "#d4a800" : pubCol+"40"}`,
+                            borderLeft:`4px solid ${found ? "#16a34a" : isKey ? "#d4a800" : pubCol}`,
+                            borderRadius:6, cursor:"pointer", transition:"all 0.15s",
+                            opacity: found ? 0.65 : 1,
+                          }}>
+                          {/* Checkbox */}
+                          <div style={{
+                            width:20, height:20, borderRadius:4, flexShrink:0,
+                            border:`2px solid ${found ? "#16a34a" : "var(--border)"}`,
+                            background: found ? "#16a34a" : "transparent",
+                            display:"flex", alignItems:"center", justifyContent:"center",
+                          }}>
+                            {found && <span style={{ color:"#fff", fontSize:"0.72rem" }}>✓</span>}
+                          </div>
+                          {/* Title + details */}
+                          <div style={{ flex:1, minWidth:0 }}>
+                            <div style={{
+                              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.95rem", letterSpacing:"0.5px",
+                              color: found ? "var(--muted)" : "var(--text)",
+                              textDecoration: found ? "line-through" : "none", lineHeight:1.2,
+                            }}>
+                              {c.Title}
+                              <span style={{ fontWeight:400, fontSize:"0.85rem", color:"var(--red)", marginLeft:6 }}>{c.Issue}</span>
+                            </div>
+                            <div style={{ fontSize:"0.72rem", color:"var(--muted2)", marginTop:2 }}>
+                              {[c.Year, c.Publisher, c.Writer].filter(Boolean).join(" · ")}
+                            </div>
+                            {isKey && c.Key_Reason && (
+                              <div style={{ fontSize:"0.75rem", color:"#8a6000", marginTop:3, fontFamily:"'Crimson Pro',serif" }}>
+                                ★ {c.Key_Reason.slice(0,100)}
+                              </div>
+                            )}
+                          </div>
+                          {/* Badges */}
+                          <div style={{ display:"flex", flexDirection:"column", gap:3, alignItems:"flex-end", flexShrink:0 }}>
+                            {isKey    && <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem", letterSpacing:"1px", background:"#fff8e0", color:"#8a6000", border:"1px solid #d4a800", borderRadius:3, padding:"1px 5px" }}>★ KEY</span>}
+                            {isSigned && <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem", letterSpacing:"1px", background:"#f0faf0", color:"#16a34a", border:"1px solid #c8e6c8", borderRadius:3, padding:"1px 5px" }}>✍ SGD</span>}
+                            {c.Value_NM && c.Value_NM !== "nan" && <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.7rem", color:"var(--red)" }}>${c.Value_NM}</span>}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            })
+          }
         </div>
       )}
 

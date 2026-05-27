@@ -1,6 +1,12 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { DATA3 } from "@/data/data3";
 import type { Comic } from "@/data/data3";
+
+const LS_DUP_RESOLVED = "brbDupResolved";
+function loadResolvedLS(): Set<string> {
+  try { return new Set(JSON.parse(localStorage.getItem(LS_DUP_RESOLVED) || "[]")); }
+  catch { return new Set(); }
+}
 
 const comics = DATA3.comics;
 
@@ -69,6 +75,20 @@ export default function Duplicates() {
   const [sort,     setSort]     = useState<"count" | "alpha">("count");
   const [openKey,  setOpenKey]  = useState<string | null>(null);
   const [showAll,  setShowAll]  = useState(false);
+  const [view,     setView]     = useState<"standard" | "resolve">("standard");
+  const [resolved, setResolved] = useState<Set<string>>(() => loadResolvedLS());
+
+  useEffect(() => {
+    localStorage.setItem(LS_DUP_RESOLVED, JSON.stringify([...resolved]));
+  }, [resolved]);
+
+  function toggleResolved(key: string) {
+    setResolved(prev => {
+      const next = new Set(prev);
+      if (next.has(key)) next.delete(key); else next.add(key);
+      return next;
+    });
+  }
 
   const filtered = useMemo(() => {
     let g = RAW_GROUPS;
@@ -126,6 +146,19 @@ export default function Duplicates() {
         ))}
       </div>
 
+      {/* ── VIEW TOGGLE ── */}
+      <div style={{ display:"flex", gap:6, marginBottom:14 }}>
+        {([["standard","≡ Standard"],["resolve","✓ Resolve Mode"]] as const).map(([v, label]) => (
+          <button key={v} onClick={() => setView(v)} style={{
+            fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"1.5px",
+            padding:"6px 16px", border:`1.5px solid ${view===v?"var(--red)":"var(--border)"}`,
+            background:view===v?"var(--red)":"var(--surface)",
+            color:view===v?"#fff":"var(--muted2)",
+            borderRadius:4, cursor:"pointer",
+          }}>{label}</button>
+        ))}
+      </div>
+
       {/* ── CONTROLS ── */}
       <div style={{ display: "flex", gap: 10, marginBottom: 18, flexWrap: "wrap", alignItems: "center" }}>
         <input
@@ -151,7 +184,128 @@ export default function Duplicates() {
         </div>
       </div>
 
-      {/* ── GROUP LIST ── */}
+      {/* ── RESOLVE MODE ── */}
+      {view === "resolve" && (
+        <div style={{ marginBottom:20 }}>
+          {/* Progress */}
+          <div style={{ display:"flex", alignItems:"center", gap:14, marginBottom:16, background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:8, padding:"12px 16px" }}>
+            <div style={{ flex:1 }}>
+              <div style={{ display:"flex", justifyContent:"space-between", marginBottom:5 }}>
+                <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"2px", color:"var(--muted)" }}>RESOLVE PROGRESS</span>
+                <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1px", color:"#16a34a" }}>
+                  {filtered.filter(g => resolved.has(g.key)).length} / {filtered.length} REVIEWED
+                </span>
+              </div>
+              <div style={{ height:6, background:"var(--surface2)", borderRadius:3, overflow:"hidden" }}>
+                <div style={{ height:"100%", background:"#16a34a", borderRadius:3, transition:"width 0.3s",
+                  width:`${filtered.length ? (filtered.filter(g => resolved.has(g.key)).length / filtered.length) * 100 : 0}%` }} />
+              </div>
+            </div>
+            {resolved.size > 0 && (
+              <button onClick={() => setResolved(new Set())} style={{
+                fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1px",
+                background:"none", border:"1px solid var(--border)", color:"var(--muted)",
+                borderRadius:3, padding:"3px 10px", cursor:"pointer", flexShrink:0,
+              }}>RESET</button>
+            )}
+          </div>
+
+          {/* Flag group sections */}
+          {([
+            ["same-box",      "#dc2626", "SAME BOX",    "Two+ copies recorded in the same box — likely a data entry error. Verify physically before actioning."],
+            ["same-pub-year", "#d97706", "LIKELY DUP",  "Same publisher + year. Check if different printings or truly duplicate entries."],
+            ["variant",       "#16a34a", "VARIANTS",    "Different publisher, year or era — probably intentional reprints, imports. Review only if needed."],
+          ] as const).map(([flagType, color, label, desc]) => {
+            const groupsInFlag = filtered.filter(g => g.flag === flagType);
+            if (groupsInFlag.length === 0) return null;
+            const doneCount = groupsInFlag.filter(g => resolved.has(g.key)).length;
+            return (
+              <div key={flagType} style={{ marginBottom:24 }}>
+                <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:10, borderBottom:`2px solid ${color}30`, paddingBottom:8 }}>
+                  <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem", letterSpacing:"2px", color }}>{label}</span>
+                  <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1px", color:"var(--muted)" }}>
+                    {doneCount}/{groupsInFlag.length} REVIEWED
+                  </span>
+                  <div style={{ flex:1, height:3, background:"var(--surface2)", borderRadius:2, overflow:"hidden" }}>
+                    <div style={{ height:"100%", background:color, width:`${(doneCount/groupsInFlag.length)*100}%`, transition:"width 0.3s" }} />
+                  </div>
+                  <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px", color:"var(--muted2)", background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:3, padding:"1px 8px" }}>
+                    {desc.slice(0,60)}…
+                  </span>
+                </div>
+                <div style={{ display:"flex", flexDirection:"column", gap:5 }}>
+                  {groupsInFlag.map(gr => {
+                    const done = resolved.has(gr.key);
+                    const boxes = [...new Set(gr.copies.map(c => c.Box))].filter(Boolean);
+                    const hasKey    = gr.copies.some(c => (c.Key    || "").toUpperCase() === "YES");
+                    const hasSigned = gr.copies.some(c => (c.Signed || "").toUpperCase() === "YES");
+                    const pubs  = [...new Set(gr.copies.map(c => c.Publisher))].filter(Boolean);
+                    const years = [...new Set(gr.copies.map(c => c.Year))].filter(Boolean).sort();
+                    return (
+                      <div key={gr.key} onClick={() => toggleResolved(gr.key)}
+                        style={{
+                          display:"flex", alignItems:"center", gap:12, padding:"10px 14px",
+                          background: done ? "#f0faf4" : "var(--surface)",
+                          border:`1.5px solid ${done ? "#16a34a" : color+"40"}`,
+                          borderLeft:`4px solid ${done ? "#16a34a" : color}`,
+                          borderRadius:6, cursor:"pointer", transition:"all 0.15s",
+                          opacity: done ? 0.6 : 1,
+                        }}>
+                        {/* Checkbox */}
+                        <div style={{
+                          width:22, height:22, borderRadius:4, flexShrink:0,
+                          border:`2px solid ${done ? "#16a34a" : color}`,
+                          background: done ? "#16a34a" : "transparent",
+                          display:"flex", alignItems:"center", justifyContent:"center",
+                        }}>
+                          {done && <span style={{ color:"#fff", fontSize:"0.72rem" }}>✓</span>}
+                        </div>
+                        {/* Copy count */}
+                        <div style={{ flexShrink:0, textAlign:"center", minWidth:36 }}>
+                          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.4rem", color: done ? "var(--muted)" : countColor(gr.copies.length), lineHeight:1 }}>
+                            {gr.copies.length}
+                          </div>
+                          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.48rem", letterSpacing:"1.5px", color:"var(--muted)" }}>COPIES</div>
+                        </div>
+                        {/* Title + meta */}
+                        <div style={{ flex:1, minWidth:0 }}>
+                          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.95rem", letterSpacing:"0.5px",
+                            color: done ? "var(--muted)" : "var(--text)",
+                            textDecoration: done ? "line-through" : "none", lineHeight:1.2 }}>
+                            {gr.title}
+                            <span style={{ color:"var(--red)", marginLeft:6, fontSize:"0.85rem" }}>{gr.issue}</span>
+                          </div>
+                          <div style={{ fontSize:"0.7rem", color:"var(--muted2)", marginTop:2 }}>
+                            {pubs.join(" · ")}{years.length ? ` — ${years.join(", ")}` : ""}
+                          </div>
+                        </div>
+                        {/* Boxes + badges */}
+                        <div style={{ display:"flex", flexDirection:"column", gap:4, alignItems:"flex-end", flexShrink:0 }}>
+                          <div style={{ display:"flex", gap:3, flexWrap:"wrap", justifyContent:"flex-end" }}>
+                            {boxes.slice(0,5).map(b => (
+                              <span key={b} style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.55rem", letterSpacing:"1px",
+                                color:"var(--muted2)", background:"var(--surface2)", border:"1px solid var(--border)",
+                                padding:"1px 5px", borderRadius:3 }}>B{b}</span>
+                            ))}
+                            {boxes.length > 5 && <span style={{ fontSize:"0.55rem", color:"var(--muted)" }}>+{boxes.length-5}</span>}
+                          </div>
+                          <div style={{ display:"flex", gap:3 }}>
+                            {hasKey    && <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.55rem", letterSpacing:"1px", background:"#fff8e0", color:"#8a6000", border:"1px solid #d4a800", borderRadius:3, padding:"1px 5px" }}>★ KEY</span>}
+                            {hasSigned && <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.55rem", letterSpacing:"1px", background:"#f0faf0", color:"#16a34a", border:"1px solid #c8e6c8", borderRadius:3, padding:"1px 5px" }}>✍ SGD</span>}
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
+
+      {/* ── GROUP LIST (standard view) ── */}
+      {view === "standard" && (<>
       <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
         {visible.map(gr => {
           const isOpen = openKey === gr.key;
@@ -276,6 +430,7 @@ export default function Duplicates() {
           <div style={{ fontSize: "0.8rem" }}>Try adjusting your search or filter.</div>
         </div>
       )}
+      </>)}
     </div>
   );
 }
