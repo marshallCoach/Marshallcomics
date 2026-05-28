@@ -650,10 +650,10 @@ body {
 }
 .box-tile:hover { border-color: var(--red); box-shadow: 0 4px 14px rgba(200,16,46,0.15); transform: translateY(-2px); }
 .cstats-tile:hover { border-color: var(--red) !important; box-shadow: 0 4px 12px rgba(200,16,46,0.10); transform: translateY(-2px); }
-.box-tile-count { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; color: var(--red); line-height: 1; }
+.box-tile-count { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; color: var(--red); line-height: 1; }
 .box-tile-num   { font-size: 1.1rem; color: var(--muted2); font-family: 'Bebas Neue', sans-serif; letter-spacing: 1px; margin-top: 1px; }
-.box-tile-keys  { font-size: 1.1rem; color: #8a6000; font-family: 'Bebas Neue', sans-serif; }
-.box-tile-sgn   { font-size: 1.1rem; color: var(--green-text); font-family: 'Bebas Neue', sans-serif; }
+.box-tile-keys  { font-size: 1.3rem; color: #8a6000; font-family: 'Bebas Neue', sans-serif; }
+.box-tile-sgn   { font-size: 1.3rem; color: var(--green-text); font-family: 'Bebas Neue', sans-serif; }
 
 /* Info tooltip */
 .info-tip-wrap {
