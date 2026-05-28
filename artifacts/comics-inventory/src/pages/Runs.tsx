@@ -13,7 +13,9 @@ function parseIssueNum(s: string): number | null {
 }
 
 interface RunEntry {
+  key: string;       // unique: "Title|||Volume"
   title: string;
+  volume: string;    // "1", "2", "3"...
   publisher: string;
   haveCount: number;
   rangeMin: number;
@@ -78,16 +80,19 @@ export default function Runs() {
     });
 
   const allRuns = useMemo<RunEntry[]>(() => {
-    const byTitle: Record<string, typeof comics> = {};
+    const byKey: Record<string, typeof comics> = {};
     for (const c of comics) {
-      const key = c.Title.trim();
-      if (!byTitle[key]) byTitle[key] = [];
-      byTitle[key].push(c);
+      const k = `${c.Title.trim()}|||${c.Volume || "1"}`;
+      if (!byKey[k]) byKey[k] = [];
+      byKey[k].push(c);
     }
 
     const result: RunEntry[] = [];
 
-    for (const [title, issues] of Object.entries(byTitle)) {
+    for (const [entryKey, issues] of Object.entries(byKey)) {
+      const sepIdx = entryKey.lastIndexOf("|||");
+      const title  = entryKey.slice(0, sepIdx);
+      const volume = entryKey.slice(sepIdx + 3) || "1";
       const numbered = issues
         .map(c => ({ comic: c, num: parseIssueNum(c.Issue) }))
         .filter(x => x.num !== null) as { comic: typeof comics[number]; num: number }[];
@@ -114,7 +119,7 @@ export default function Runs() {
       const keys   = issues.filter(c => (c.Key||"").toUpperCase()==="YES").length;
       const sgn    = issues.filter(c => (c.Signed||"").toUpperCase()==="YES").length;
 
-      result.push({ title, publisher: pub, haveCount: haveSet.size, rangeMin: minIss, rangeMax: maxIss, rangeSize: range, pct, missing, issues: sorted, keys, signed: sgn });
+      result.push({ key: entryKey, title, volume, publisher: pub, haveCount: haveSet.size, rangeMin: minIss, rangeMax: maxIss, rangeSize: range, pct, missing, issues: sorted, keys, signed: sgn });
     }
 
     return result;
@@ -313,7 +318,7 @@ export default function Runs() {
               {drillRuns.map((run, i) => {
                 const pg = PUB_GROUPS.find(p => p.key === pubGroup(run.publisher)) ?? PUB_GROUPS[2];
                 const pctFill = Math.min(run.pct, 100);
-                const isSelected = selectedRun?.title === run.title;
+                const isSelected = selectedRun?.key === run.key;
                 return (
                   <div key={i}
                     onClick={() => setSelectedRun(isSelected ? null : run)}
@@ -326,7 +331,10 @@ export default function Runs() {
                     }}>
                     <div style={{ display:"flex", alignItems:"flex-start", gap:8 }}>
                       <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem",
-                        letterSpacing:"1px", color:pg.color, flex:1, lineHeight:1.2 }}>{run.title}</div>
+                        letterSpacing:"1px", color:pg.color, flex:1, lineHeight:1.2 }}>
+                        {run.title}
+                        {run.volume !== "1" && <span style={{ fontSize:"0.6rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", background:"rgba(0,0,0,0.08)", borderRadius:3, padding:"1px 5px", marginLeft:5 }}>Vol {run.volume}</span>}
+                      </div>
                       <div style={{ fontSize:"0.68rem", color:"var(--muted)", flexShrink:0 }}>{isSelected?"▲":"▼"}</div>
                     </div>
                     <div style={{ display:"flex", gap:5, marginTop:5, flexWrap:"wrap" }}>
@@ -412,7 +420,7 @@ export default function Runs() {
               {drillRuns.map((run, i) => {
                 const pg = PUB_GROUPS.find(p => p.key === pubGroup(run.publisher)) ?? PUB_GROUPS[2];
                 const pctFill = Math.min(run.pct, 100);
-                const isSelected = selectedRun?.title === run.title;
+                const isSelected = selectedRun?.key === run.key;
                 return (
                   <div key={i} style={{
                     borderBottom: i < drillRuns.length-1 ? "1px solid var(--border)" : "none",
@@ -424,7 +432,10 @@ export default function Runs() {
                       <div style={{ width:6, height:6, borderRadius:"50%", background:pg.color, flexShrink:0 }} />
                       <div style={{ flex:1, minWidth:0 }}>
                         <div style={{ fontSize:"0.88rem", fontWeight:600, color:"var(--brown-light)",
-                          overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>{run.title}</div>
+                          overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>
+                          {run.title}
+                          {run.volume !== "1" && <span style={{ fontSize:"0.6rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", background:"rgba(0,0,0,0.08)", borderRadius:3, padding:"1px 5px", marginLeft:5 }}>Vol {run.volume}</span>}
+                        </div>
                         <div style={{ fontSize:"0.83rem", color:"var(--text2)", marginTop:2, lineHeight:1.4 }}>
                           <span style={{ color:"var(--muted2)" }}>#{run.rangeMin}–#{run.rangeMax}</span>
                           {run.keys   > 0 && <span style={{ color:"#d97706", marginLeft:6, fontWeight:600 }}>· {run.keys} key{run.keys>1?"s":""}</span>}
@@ -522,7 +533,7 @@ export default function Runs() {
           {filtered.map((run, i) => {
             const pg = PUB_GROUPS.find(p => p.key === pubGroup(run.publisher)) ?? PUB_GROUPS[2];
             const pct = Math.min(run.pct, 100);
-            const isSelected = selectedRun?.title === run.title;
+            const isSelected = selectedRun?.key === run.key;
             return (
               <div key={i}
                 onClick={() => setSelectedRun(isSelected ? null : run)}
@@ -535,7 +546,10 @@ export default function Runs() {
                 }}>
                 <div style={{ display:"flex", alignItems:"flex-start", gap:8 }}>
                   <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.92rem",
-                    letterSpacing:"1px", color:pg.color, flex:1, lineHeight:1.2 }}>{run.title}</div>
+                    letterSpacing:"1px", color:pg.color, flex:1, lineHeight:1.2 }}>
+                    {run.title}
+                    {run.volume !== "1" && <span style={{ fontSize:"0.6rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", background:"rgba(0,0,0,0.08)", borderRadius:3, padding:"1px 5px", marginLeft:5 }}>Vol {run.volume}</span>}
+                  </div>
                   <div style={{ fontSize:"0.7rem", color:"var(--muted)", flexShrink:0, marginTop:1 }}>{isSelected?"▲":"▼"}</div>
                 </div>
                 <div style={{ display:"flex", gap:5, marginTop:6, flexWrap:"wrap" }}>
@@ -684,7 +698,7 @@ export default function Runs() {
                         {isBucketOpen && (
                           <div style={{ background: bucket.bg }}>
                             {bucket.runs.map((run, i) => {
-                              const isSelected = selectedRun?.title === run.title;
+                              const isSelected = selectedRun?.key === run.key;
                               const pctFill    = Math.min(run.pct, 100);
 
                               return (
@@ -703,6 +717,7 @@ export default function Runs() {
                                       <div style={{ fontSize:"0.88rem", fontWeight:600, color:"var(--brown-light)",
                                         overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>
                                         {run.title}
+                                        {run.volume !== "1" && <span style={{ fontSize:"0.6rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", background:"rgba(0,0,0,0.08)", borderRadius:3, padding:"1px 5px", marginLeft:5 }}>Vol {run.volume}</span>}
                                       </div>
                                       <div style={{ fontSize:"0.72rem", color:"var(--muted)", marginTop:1 }}>
                                         #{run.rangeMin}–#{run.rangeMax}

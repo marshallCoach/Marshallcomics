@@ -6,6 +6,12 @@ import { Paginator } from "@/components/Paginator";
 
 const CARD_PAGE = 80;
 const ALL = DATA3.comics;
+
+function parseIssueParts(issue: string): { main: string; legacy: string | null } {
+  const m = String(issue || "").match(/^(.*?)\s*\[Legacy\s*#?(\d+)\]\s*$/i);
+  if (m) return { main: m[1].trim() || issue, legacy: `Legacy #${m[2]}` };
+  return { main: issue, legacy: null };
+}
 type Comic = (typeof ALL)[number];
 
 const PUBLISHERS = [...new Set(ALL.map(c => c.Publisher).filter(Boolean))].sort();
@@ -124,7 +130,7 @@ export default function Everything({
         {r.Title||"Untitled"}
       </button>
     )},
-    { key:"issue",     label:"Issue #",   defaultWidth:65,  sort:(a,b)=>parseVal(a.Issue)-parseVal(b.Issue), cell:r=><span className="lt-sub">{r.Issue}</span> },
+    { key:"issue",     label:"Issue #",   defaultWidth:65,  sort:(a,b)=>parseVal(a.Issue)-parseVal(b.Issue), cell:r=>{ const ip=parseIssueParts(r.Issue); return <span className="lt-sub" title={ip.legacy?`${ip.main} (${ip.legacy})`:undefined}>{ip.main}{ip.legacy&&<sup style={{fontSize:"0.6em",opacity:0.6,marginLeft:1}}>L</sup>}</span>; } },
     { key:"volume",    label:"Vol",       defaultWidth:58,  sort:(a,b)=>Number(a.Volume||0)-Number(b.Volume||0), cell:r=><span className="lt-sub">{r.Volume||"—"}</span> },
     { key:"publisher", label:"Publisher", defaultWidth:100, sort:(a,b)=>a.Publisher.localeCompare(b.Publisher), cell:r=><span className="lt-sub">{r.Publisher}</span> },
     { key:"box",       label:"Box",       defaultWidth:70,  sort:(a,b)=>Number(a.Box)-Number(b.Box), cell:r=>(
@@ -452,7 +458,8 @@ function EverythingCard({ comic: c, onTitleClick }: { comic: Comic; onTitleClick
             : <div className="card-title">{c.Title}</div>
           }
           <div className="card-issue">
-            {c.Issue}{c.Volume && c.Volume !== "1" ? ` · Vol ${c.Volume}` : ""}{c.Year ? ` · ${c.Year}` : ""}
+            {(()=>{const ip=parseIssueParts(c.Issue);return<>{ip.main}{ip.legacy&&<span style={{fontSize:"0.6rem",fontFamily:"'Bebas Neue',sans-serif",letterSpacing:"1px",background:"#e8f0fe",color:"#1d4ed8",borderRadius:3,padding:"1px 5px",marginLeft:4}}>{ip.legacy}</span>}</>; })()}
+            {c.Volume && c.Volume !== "1" ? ` · Vol ${c.Volume}` : ""}{c.Year ? ` · ${c.Year}` : ""}
           </div>
           {c.Publisher && <div className="card-pub">{c.Publisher}{c.Era?` · ${c.Era}`:""}</div>}
         </div>
