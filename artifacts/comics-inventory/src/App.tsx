@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { DATA3 } from "@/data/data3";
+import GlobalSearch from "@/components/GlobalSearch";
 import OriginalCollection from "@/pages/OriginalCollection";
 import BoxKeys from "@/pages/BoxKeys";
 import Calendar from "@/pages/Calendar";
@@ -115,9 +116,21 @@ export default function App() {
   const [activeSection, setActiveSection] = useState<SectionId>("inventory");
   const [activeTab,     setActiveTab]     = useState<TabId>("summary");
   const [navParams,     setNavParams]     = useState<NavParams>({});
+  const [showSearch,    setShowSearch]    = useState(false);
   const cd = useCountdown(TERRIFICON_DATE);
 
   const currentSection = NAV.find(n => n.id === activeSection)!;
+
+  const openSearch  = useCallback(() => setShowSearch(true),  []);
+  const closeSearch = useCallback(() => setShowSearch(false), []);
+
+  useEffect(() => {
+    function onKey(e: KeyboardEvent) {
+      if ((e.metaKey || e.ctrlKey) && e.key === "k") { e.preventDefault(); openSearch(); }
+    }
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [openSearch]);
 
   function navigateTo(tab: string, params?: NavParams) {
     const t = tab as TabId;
@@ -138,6 +151,7 @@ export default function App() {
   return (
     <PasswordGate>
     <div style={{ minHeight:"100vh" }}>
+      {showSearch && <GlobalSearch onNavigate={navigateTo} onClose={closeSearch} />}
 
       {/* HEADER */}
       <header className="app-header">
@@ -166,6 +180,17 @@ export default function App() {
             <div className="stat"><span className="stat-val">{keys.toLocaleString()}</span><span className="stat-lbl">Keys</span></div>
             <div className="stat"><span className="stat-val">{signed}</span><span className="stat-lbl">Signed</span></div>
           </div>
+          <button
+            onClick={openSearch}
+            title="Search (⌘K)"
+            style={{ marginTop:6, display:"flex", alignItems:"center", gap:7, background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:6, padding:"5px 11px", cursor:"pointer", color:"var(--muted2)", fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1.5px", transition:"border-color 0.15s" }}
+            onMouseOver={e => (e.currentTarget.style.borderColor = "var(--red)")}
+            onMouseOut={e => (e.currentTarget.style.borderColor = "var(--border)")}
+          >
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            Search
+            <kbd style={{ fontSize:"0.55rem", background:"var(--surface)", border:"1px solid var(--border)", borderRadius:3, padding:"1px 4px", color:"var(--muted)", fontFamily:"sans-serif" }}>⌘K</kbd>
+          </button>
         </div>
 
         <div className="header-social">
