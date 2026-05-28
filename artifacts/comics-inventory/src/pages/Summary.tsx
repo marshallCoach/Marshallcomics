@@ -27,6 +27,32 @@ const INTERFACE_UPDATES = [
   "Runs page updated — grouped by title + volume, completion % shown, legacy issue format supported",
   "Touch ID / Face ID / Windows Hello login — set up on first password entry",
 ];
+// ── Duplicate stats (same logic as Duplicates page) ──────────────────────────
+const DUP_STATS = (() => {
+  const map = new Map<string, string[]>();
+  for (const c of comics) {
+    const k = [
+      c.Title.trim(),
+      (c.Issue || "").trim().toLowerCase(),
+      (c.Publisher || "").trim().toUpperCase(),
+      (c.Year || "").trim(),
+      String(c.Volume || "").trim(),
+    ].join("|||");
+    if (!map.has(k)) map.set(k, []);
+    map.get(k)!.push(c.Box || "");
+  }
+  let groups = 0, sameBox = 0, boughtTwice = 0, totalCopies = 0;
+  for (const boxes of map.values()) {
+    if (boxes.length < 2) continue;
+    groups++;
+    totalCopies += boxes.length;
+    const uniq = new Set(boxes);
+    if (uniq.size < boxes.length) sameBox++;
+    else boughtTwice++;
+  }
+  return { groups, sameBox, boughtTwice, totalCopies };
+})();
+
 function buildTopCreators(field: "Writer" | "Artist"): [string, number][] {
   const m: Record<string, number> = {};
   for (const c of comics) {
@@ -520,6 +546,20 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
               {s.click && <div className="stat-tile-cta">View →</div>}
             </div>
           ))}
+
+          {/* Duplicates card */}
+          <div className="stat-tile clickable" onClick={() => onNavigate("duplicates")} style={{ borderTopColor: "#dc2626", gridColumn: "span 1" }}>
+            <div className="stat-tile-val" style={{ color: "#dc2626" }}>{DUP_STATS.groups}</div>
+            <div className="stat-tile-lbl">Duplicate Groups</div>
+            <div className="stat-tile-sub" style={{ display:"flex", flexDirection:"column", gap:2 }}>
+              <span>{DUP_STATS.totalCopies} total copies</span>
+              {DUP_STATS.sameBox > 0 && (
+                <span style={{ color:"#dc2626", fontWeight:600 }}>⚠ {DUP_STATS.sameBox} same-box error{DUP_STATS.sameBox !== 1 ? "s" : ""}</span>
+              )}
+              <span style={{ color:"#d97706" }}>{DUP_STATS.boughtTwice} bought twice</span>
+            </div>
+            <div className="stat-tile-cta">Review →</div>
+          </div>
         </div>
       </section>
 
