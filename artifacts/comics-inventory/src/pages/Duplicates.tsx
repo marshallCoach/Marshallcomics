@@ -3,14 +3,18 @@ import { DATA3 } from "@/data/data3";
 import type { Comic } from "@/data/data3";
 
 // ── LocalStorage ──────────────────────────────────────────────────────────────
-const LS_DECISIONS      = "brbGroupDecisions";
+const LS_HIDDEN        = "brbHiddenGroups";
 const LS_COPY_DECISIONS = "brbCopyDecisions";
 
-type Action     = "not-dup" | "planned" | "data-error";
 type CopyAction = "planned" | "check";
 
-interface Decision { action: Action; note: string; }
-
+function loadSet(key: string): Set<string> {
+  try { return new Set(JSON.parse(localStorage.getItem(key) || "[]")); }
+  catch { return new Set(); }
+}
+function saveSet(key: string, s: Set<string>) {
+  localStorage.setItem(key, JSON.stringify([...s]));
+}
 function loadMap<T>(key: string): Map<string, T> {
   try { return new Map(Object.entries(JSON.parse(localStorage.getItem(key) || "{}"))); }
   catch { return new Map(); }
@@ -76,12 +80,6 @@ function fmtVal(v: string) {
   return m ? `$${m[1]}` : "—";
 }
 
-const ACTION_META: Record<Action, { label: string; color: string; bg: string; border: string; desc: string }> = {
-  "not-dup":    { label: "NOT DUP",      color: "#16a34a", bg: "#f0faf4", border: "#c6e8d0", desc: "Different books — intentional, keep as-is" },
-  "planned":    { label: "PLANNED",      color: "#d97706", bg: "#fefce8", border: "#fcd34d", desc: "Intentional duplicate — held for selling/trading" },
-  "data-error": { label: "FIX IN SHEET", color: "#dc2626", bg: "#fff8f8", border: "#fecaca", desc: "Data entry error — remove duplicate row in xlsx" },
-};
-
 const COPY_META: Record<CopyAction, { label: string; color: string; bg: string; border: string }> = {
   "planned": { label: "PLANNED", color: "#d97706", bg: "#fefce8", border: "#fcd34d" },
   "check":   { label: "CHECK",   color: "#9333ea", bg: "#faf5ff", border: "#e9d5ff" },
@@ -89,37 +87,25 @@ const COPY_META: Record<CopyAction, { label: string; color: string; bg: string; 
 
 // ── Component ─────────────────────────────────────────────────────────────────
 export default function Duplicates() {
-  const [decisions,     setDecisions]     = useState<Map<string, Decision>>(    () => loadMap<Decision>(LS_DECISIONS));
-  const [copyDecisions, setCopyDecisions] = useState<Map<string, CopyAction>>(  () => loadMap<CopyAction>(LS_COPY_DECISIONS));
-  const [editingNote,   setEditingNote]   = useState<string | null>(null);
-  const [noteDraft,     setNoteDraft]     = useState("");
+  const [hidden,        setHidden]        = useState<Set<string>>(         () => loadSet(LS_HIDDEN));
+  const [copyDecisions, setCopyDecisions] = useState<Map<string, CopyAction>>(() => loadMap<CopyAction>(LS_COPY_DECISIONS));
 
-  const [query,     setQuery]     = useState("");
-  const [filter,    setFilter]    = useState<"all" | "same-box" | "bought-twice" | "unreviewed">("unreviewed");
-  const [sort,      setSort]      = useState<"count" | "alpha">("count");
-  const [openKey,   setOpenKey]   = useState<string | null>(null);
-  const [showAll,   setShowAll]   = useState(false);
-  const [showOutput,setShowOutput]= useState(false);
-  const [copied,    setCopied]    = useState(false);
+  const [query,      setQuery]      = useState("");
+  const [filter,     setFilter]     = useState<"active" | "all" | "same-box" | "bought-twice" | "hidden">("active");
+  const [sort,       setSort]       = useState<"count" | "alpha">("count");
+  const [openKey,    setOpenKey]    = useState<string | null>(null);
+  const [showAll,    setShowAll]    = useState(false);
+  const [showOutput, setShowOutput] = useState(false);
+  const [copied,     setCopied]     = useState(false);
   const outputRef = useRef<HTMLTextAreaElement>(null);
 
-  // Group-level decision
-  const setDecision = useCallback((grKey: string, action: Action) => {
-    setDecisions(prev => {
-      const next = new Map(prev);
-      const existing = next.get(grKey);
-      if (existing?.action === action) next.delete(grKey);
-      else next.set(grKey, { action, note: existing?.note || "" });
-      saveMap(LS_DECISIONS, next);
-      return next;
-    });
-  }, []);
-
-  const updateNote = useCallback((grKey: string, note: string) => {
-    setDecisions(prev => {
-      const next = new Map(prev);
-      const existing = next.get(grKey);
-      if (existing) { next.set(grKey, { ...existing, note }); saveMap(LS_DECISIONS, next); }
+  // Toggle hide on a group
+  const toggleHide = useCallback((grKey: string) => {
+    setHidden(prev => {
+      const next = new Set(prev);
+      if (next.has(grKey)) next.delete(grKey);
+      else next.add(grKey);
+      saveSet(LS_HIDDEN, next);
       return next;
     });
   }, []);
@@ -136,78 +122,51 @@ export default function Duplicates() {
   }, []);
 
   const clearAll = useCallback(() => {
-    const empty = new Map();
-    setDecisions(empty);
-    setCopyDecisions(empty);
-    saveMap(LS_DECISIONS, empty);
-    saveMap(LS_COPY_DECISIONS, empty);
+    const emptySet = new Set<string>();
+    const emptyMap = new Map<string, CopyAction>();
+    setHidden(emptySet);
+    setCopyDecisions(emptyMap);
+    saveSet(LS_HIDDEN, emptySet);
+    saveMap(LS_COPY_DECISIONS, emptyMap);
   }, []);
-
-  // A group is "reviewed" if it has a group decision OR any per-copy decisions
-  const reviewed = useMemo(() => {
-    const keys = new Set(decisions.keys());
-    for (const ck of copyDecisions.keys()) {
-      const grKey = ck.split("|||").slice(0, -1).join("|||");
-      keys.add(grKey);
-    }
-    return keys;
-  }, [decisions, copyDecisions]);
 
   const filtered = useMemo(() => {
     let g = RAW_GROUPS;
-    if (filter === "same-box")        g = g.filter(gr => gr.flag === "same-box");
-    else if (filter === "bought-twice") g = g.filter(gr => gr.flag === "bought-twice");
-    else if (filter === "unreviewed")   g = g.filter(gr => !reviewed.has(gr.key));
+    if (filter === "active")       g = g.filter(gr => !hidden.has(gr.key));
+    else if (filter === "hidden")  g = g.filter(gr => hidden.has(gr.key));
+    else if (filter === "same-box")     g = g.filter(gr => !hidden.has(gr.key) && gr.flag === "same-box");
+    else if (filter === "bought-twice") g = g.filter(gr => !hidden.has(gr.key) && gr.flag === "bought-twice");
     if (query.trim()) {
       const q = query.trim().toLowerCase();
       g = g.filter(gr => gr.title.toLowerCase().includes(q) || gr.issue.toLowerCase().includes(q));
     }
     if (sort === "alpha") g = [...g].sort((a, b) => a.title.localeCompare(b.title));
     return g;
-  }, [query, filter, sort, reviewed]);
+  }, [query, filter, sort, hidden]);
 
   const visible = showAll ? filtered : filtered.slice(0, 80);
 
+  // Groups with any per-copy decision
+  const classifiedGroups = useMemo(() => {
+    const keys = new Set<string>();
+    for (const copyKey of copyDecisions.keys()) {
+      const grKey = copyKey.split("|||").slice(0, -1).join("|||");
+      keys.add(grKey);
+    }
+    return keys;
+  }, [copyDecisions]);
+
   // Output text
   const outputText = useMemo(() => {
+    if (copyDecisions.size === 0) return "";
     const today = new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
-    const lines: string[] = [`DUPLICATE REVIEW — BlackReadBrown Comics`, `Date: ${today}`, `Reviewed: ${reviewed.size} of ${RAW_GROUPS.length} groups`, ``];
+    const lines: string[] = [`DUPLICATE REVIEW — BlackReadBrown Comics`, `Date: ${today}`, `Hidden (not real dups): ${hidden.size} groups`, `Classified copies: ${copyDecisions.size}`, ``];
 
-    // Group-level decisions
-    const byAction: Record<Action, DupGroup[]> = { "not-dup": [], "planned": [], "data-error": [] };
-    for (const [key, dec] of decisions) {
-      const gr = RAW_GROUPS.find(g => g.key === key);
-      if (gr) byAction[dec.action].push(gr);
-    }
-    const sections: [Action, string, string][] = [
-      ["not-dup",    "NOT DUPLICATES",    "Different books sharing branding/numbering — leave as-is"],
-      ["planned",    "PLANNED DUPLICATES","Intentional copies kept for selling or trading"],
-      ["data-error", "FIX IN SHEET",      "Data entry errors — duplicate rows to remove from xlsx"],
-    ];
-    for (const [action, heading, subhead] of sections) {
-      const groups = byAction[action];
-      if (!groups.length) continue;
-      lines.push(`── ${heading} (${groups.length} groups) ──`);
-      lines.push(subhead, ``);
-      groups.forEach((gr, i) => {
-        const dec = decisions.get(gr.key)!;
-        const boxes = [...new Set(gr.copies.map(c => c.Box))].filter(Boolean).map(b => `Box ${b}`).join(", ");
-        const writers = [...new Set(gr.copies.map(c => c.Writer).filter(Boolean))];
-        lines.push(`${i+1}. ${gr.title} ${gr.issue}${gr.volume ? ` Vol ${gr.volume}` : ""}`);
-        lines.push(`   ${gr.publisher}${gr.year ? ` (${gr.year})` : ""} · ${gr.copies.length} copies · ${boxes}`);
-        if (writers.length) lines.push(`   W: ${writers.join(", ")}`);
-        if (dec.note) lines.push(`   Note: ${dec.note}`);
-        lines.push(``);
-      });
-    }
-
-    // Per-copy decisions (groups with no group-level decision)
     const perCopyGroups = new Map<string, { planned: {ci: number; c: Comic}[]; check: {ci: number; c: Comic}[] }>();
     for (const [copyKey, action] of copyDecisions) {
       const parts = copyKey.split("|||");
       const ci = parseInt(parts[parts.length - 1]);
       const grKey = parts.slice(0, -1).join("|||");
-      if (decisions.has(grKey)) continue; // already covered by group decision
       const gr = RAW_GROUPS.find(g => g.key === grKey);
       if (!gr) continue;
       if (!perCopyGroups.has(grKey)) perCopyGroups.set(grKey, { planned: [], check: [] });
@@ -216,8 +175,7 @@ export default function Duplicates() {
     }
 
     if (perCopyGroups.size > 0) {
-      lines.push(`── PER-COPY DECISIONS (${perCopyGroups.size} groups) ──`);
-      lines.push(`Mixed groups — individual copies classified:`, ``);
+      lines.push(`── COPY DECISIONS (${perCopyGroups.size} groups) ──`, ``);
       let idx = 1;
       for (const [grKey, { planned, check }] of perCopyGroups) {
         const gr = RAW_GROUPS.find(g => g.key === grKey)!;
@@ -232,13 +190,12 @@ export default function Duplicates() {
       }
     }
 
-    if (lines.length <= 4) return "";
-    const unrev = RAW_GROUPS.length - reviewed.size;
-    if (unrev > 0) lines.push(`${unrev} groups still unreviewed.`);
+    const remaining = RAW_GROUPS.length - hidden.size;
+    lines.push(`${remaining} groups still active (${hidden.size} dismissed).`);
     return lines.join("\n");
-  }, [decisions, copyDecisions, reviewed]);
+  }, [copyDecisions, hidden]);
 
-  const totalDecisions = decisions.size + copyDecisions.size;
+  const active = RAW_GROUPS.length - hidden.size;
 
   return (
     <div style={{ maxWidth: 1100, margin: "0 auto", padding: "20px 16px 80px" }}>
@@ -249,17 +206,19 @@ export default function Duplicates() {
           DUPLICATE DETECTOR
         </h1>
         <p style={{ fontSize: "0.82rem", color: "var(--muted2)", marginTop: 6, fontFamily: "'Crimson Pro',serif" }}>
-          Same title + issue + publisher + year + volume appearing more than once. Use group buttons for simple cases — expand and use per-copy buttons for mixed groups.
+          Same title + issue + publisher + year + volume appearing more than once.
+          Hit <strong>HIDE</strong> on any group that isn't a real accidental duplicate — it drops off the list.
+          Expand any group to classify individual copies as Planned or Check.
         </p>
       </div>
 
       {/* ── STAT TILES ── */}
       <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 10, marginBottom: 24 }}>
         {[
-          { val: RAW_GROUPS.length.toLocaleString(),         lbl: "Duplicate Groups",   sub: "same title+issue+pub+year+vol", color: "#dc2626" },
-          { val: TOTAL_DUP_BOOKS.toLocaleString(),           lbl: "Total Copies",        sub: "books across all groups",       color: "#d97706" },
-          { val: SAME_BOX_COUNT.toLocaleString(),            lbl: "Same-Box",            sub: "likely data entry errors",      color: "#dc2626" },
-          { val: `${reviewed.size}/${RAW_GROUPS.length}`,   lbl: "Reviewed",            sub: `${RAW_GROUPS.length - reviewed.size} groups left`, color: "#16a34a" },
+          { val: RAW_GROUPS.length.toLocaleString(), lbl: "Total Groups",    sub: "same title+issue+pub+year+vol", color: "#dc2626" },
+          { val: active.toLocaleString(),            lbl: "Active",          sub: "real dups still to review",    color: "#d97706" },
+          { val: hidden.size.toLocaleString(),       lbl: "Dismissed",       sub: "hidden — not real duplicates", color: "#6b7280" },
+          { val: classifiedGroups.size.toLocaleString(), lbl: "Classified",  sub: "groups with copy decisions",   color: "#16a34a" },
         ].map((s, i) => (
           <div key={i} style={{ background: "var(--surface)", border: "1.5px solid var(--border)", borderTop: `3px solid ${s.color}`, borderRadius: 8, padding: "12px 14px" }}>
             <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.8rem", color: s.color, letterSpacing: "2px", lineHeight: 1 }}>{s.val}</div>
@@ -269,45 +228,38 @@ export default function Duplicates() {
         ))}
       </div>
 
-      {/* ── LEGEND ── */}
-      <div style={{ display: "flex", gap: 10, marginBottom: 6, flexWrap: "wrap" }}>
-        <div style={{ fontSize: "0.68rem", color: "var(--muted)", fontFamily: "'Bebas Neue',sans-serif", letterSpacing: "1px", alignSelf: "center" }}>GROUP:</div>
-        {(Object.entries(ACTION_META) as [Action, typeof ACTION_META[Action]][]).map(([action, meta]) => {
-          const count = [...decisions.values()].filter(d => d.action === action).length;
-          return (
-            <div key={action} style={{ display: "flex", alignItems: "center", gap: 5, fontSize: "0.7rem", color: "var(--muted2)" }}>
-              <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem", letterSpacing: "1.5px", color: meta.color, background: meta.bg, border: `1px solid ${meta.border}`, padding: "2px 6px", borderRadius: 3 }}>{meta.label}</span>
-              {count > 0 && <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem", color: meta.color }}>({count})</span>}
-            </div>
-          );
-        })}
-        <div style={{ width: 1, background: "var(--border)", margin: "0 4px" }} />
-        <div style={{ fontSize: "0.68rem", color: "var(--muted)", fontFamily: "'Bebas Neue',sans-serif", letterSpacing: "1px", alignSelf: "center" }}>COPY:</div>
+      {/* ── COPY DECISION LEGEND ── */}
+      <div style={{ display: "flex", gap: 10, marginBottom: 14, flexWrap: "wrap", alignItems: "center" }}>
+        <div style={{ fontSize: "0.68rem", color: "var(--muted)", fontFamily: "'Bebas Neue',sans-serif", letterSpacing: "1px" }}>PER-COPY:</div>
         {(Object.entries(COPY_META) as [CopyAction, typeof COPY_META[CopyAction]][]).map(([action, meta]) => {
           const count = [...copyDecisions.values()].filter(v => v === action).length;
           return (
             <div key={action} style={{ display: "flex", alignItems: "center", gap: 5, fontSize: "0.7rem", color: "var(--muted2)" }}>
               <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem", letterSpacing: "1.5px", color: meta.color, background: meta.bg, border: `1px solid ${meta.border}`, padding: "2px 6px", borderRadius: 3 }}>{meta.label}</span>
-              {count > 0 && <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem", color: meta.color }}>({count})</span>}
+              {count > 0 && <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem", color: meta.color }}>({count} copies)</span>}
             </div>
           );
         })}
+        <div style={{ marginLeft: "auto", fontSize: "0.68rem", color: "var(--muted)", fontFamily: "'Crimson Pro',serif", fontStyle: "italic" }}>
+          Expand any group to tag individual copies
+        </div>
       </div>
 
       {/* ── CONTROLS ── */}
-      <div style={{ display: "flex", gap: 10, marginBottom: 18, flexWrap: "wrap", alignItems: "center", marginTop: 14 }}>
+      <div style={{ display: "flex", gap: 10, marginBottom: 18, flexWrap: "wrap", alignItems: "center" }}>
         <input
           placeholder="Search title or issue…"
           value={query}
           onChange={e => setQuery(e.target.value)}
           style={{ flex: "1 1 220px", padding: "8px 12px", border: "1.5px solid var(--border)", borderRadius: 6, fontSize: "0.85rem", fontFamily: "'Crimson Pro',serif", background: "var(--surface)", color: "var(--text2)" }}
         />
-        <select value={filter} onChange={e => setFilter(e.target.value as typeof filter)}
+        <select value={filter} onChange={e => { setFilter(e.target.value as typeof filter); setShowAll(false); }}
           style={{ padding: "8px 10px", border: "1.5px solid var(--border)", borderRadius: 6, fontSize: "0.82rem", background: "var(--surface)", color: "var(--text2)", fontFamily: "'Bebas Neue',sans-serif", letterSpacing: "1px" }}>
-          <option value="unreviewed">Unreviewed Only</option>
+          <option value="active">Active Only</option>
           <option value="all">All Groups</option>
           <option value="same-box">Same Box</option>
           <option value="bought-twice">Bought Twice</option>
+          <option value="hidden">Dismissed ({hidden.size})</option>
         </select>
         <select value={sort} onChange={e => setSort(e.target.value as typeof sort)}
           style={{ padding: "8px 10px", border: "1.5px solid var(--border)", borderRadius: 6, fontSize: "0.82rem", background: "var(--surface)", color: "var(--text2)", fontFamily: "'Bebas Neue',sans-serif", letterSpacing: "1px" }}>
@@ -322,14 +274,12 @@ export default function Duplicates() {
       {/* ── GROUP LIST ── */}
       <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
         {visible.map(gr => {
-          const isOpen  = openKey === gr.key;
-          const dec     = decisions.get(gr.key);
-          const meta    = dec ? ACTION_META[dec.action] : null;
-          const cc      = countColor(gr.copies.length);
+          const isOpen    = openKey === gr.key;
+          const isHidden  = hidden.has(gr.key);
+          const cc        = countColor(gr.copies.length);
           const flagColor = gr.flag === "same-box" ? "#dc2626" : "#d97706";
-          const boxes   = [...new Set(gr.copies.map(c => c.Box))].filter(Boolean);
+          const boxes     = [...new Set(gr.copies.map(c => c.Box))].filter(Boolean);
 
-          // Per-copy summary for group header
           const grCopyCounts = { planned: 0, check: 0 };
           gr.copies.forEach((_, ci) => {
             const v = copyDecisions.get(ck(gr.key, ci));
@@ -337,16 +287,14 @@ export default function Duplicates() {
           });
           const hasCopyDecisions = grCopyCounts.planned > 0 || grCopyCounts.check > 0;
 
-          const isEditingNote = editingNote === gr.key;
-
           return (
             <div key={gr.key} style={{
-              background: meta ? meta.bg : "var(--surface)",
-              border: `1.5px solid ${meta ? meta.border : hasCopyDecisions ? "#e9d5ff" : "var(--border)"}`,
-              borderLeft: `4px solid ${meta ? meta.color : hasCopyDecisions ? "#9333ea" : flagColor}`,
+              background: isHidden ? "var(--surface2)" : hasCopyDecisions ? "#fefce8" : "var(--surface)",
+              border: `1.5px solid ${isHidden ? "var(--border)" : hasCopyDecisions ? "#fcd34d" : "var(--border)"}`,
+              borderLeft: `4px solid ${isHidden ? "#9ca3af" : hasCopyDecisions ? "#d97706" : flagColor}`,
               borderRadius: 8,
               overflow: "hidden",
-              opacity: dec ? 0.88 : 1,
+              opacity: isHidden ? 0.55 : 1,
             }}>
 
               {/* ── GROUP HEADER ── */}
@@ -354,22 +302,22 @@ export default function Duplicates() {
 
                 {/* Copy count */}
                 <div style={{ flexShrink: 0, textAlign: "center", minWidth: 32 }}>
-                  <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.3rem", color: dec ? meta!.color : hasCopyDecisions ? "#9333ea" : cc, lineHeight: 1 }}>{gr.copies.length}</div>
+                  <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.3rem", color: isHidden ? "#9ca3af" : hasCopyDecisions ? "#d97706" : cc, lineHeight: 1 }}>{gr.copies.length}</div>
                   <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.42rem", letterSpacing: "1.5px", color: "var(--muted)" }}>COPIES</div>
                 </div>
 
                 {/* Title */}
                 <div
-                  onClick={() => setOpenKey(isOpen ? null : gr.key)}
-                  style={{ flex: 1, minWidth: 0, cursor: "pointer", userSelect: "text" }}
+                  onClick={() => !isHidden && setOpenKey(isOpen ? null : gr.key)}
+                  style={{ flex: 1, minWidth: 0, cursor: isHidden ? "default" : "pointer", userSelect: "text" }}
                 >
                   <div>
                     <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.95rem", letterSpacing: "1px",
-                      color: dec ? "var(--muted2)" : "var(--text)",
-                      textDecoration: dec ? "line-through" : "none" }}>
+                      color: isHidden ? "var(--muted)" : "var(--text)",
+                      textDecoration: isHidden ? "line-through" : "none" }}>
                       {gr.title}
                     </span>
-                    <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.85rem", color: "var(--red)", marginLeft: 6 }}>
+                    <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.85rem", color: isHidden ? "var(--muted)" : "var(--red)", marginLeft: 6 }}>
                       {gr.issue}
                     </span>
                     {gr.volume && (
@@ -383,7 +331,6 @@ export default function Duplicates() {
                   <div style={{ fontSize: "0.67rem", color: "var(--muted)", marginTop: 2, display: "flex", gap: "4px 10px", flexWrap: "wrap" }}>
                     <span>{gr.publisher}{gr.year ? ` · ${gr.year}` : ""}</span>
                     <span>{boxes.slice(0,5).map(b => `Box ${b}`).join(", ")}{boxes.length > 5 ? ` +${boxes.length-5}` : ""}</span>
-                    {/* Per-copy summary chips */}
                     {grCopyCounts.planned > 0 && (
                       <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.56rem", letterSpacing: "1px", color: COPY_META.planned.color, background: COPY_META.planned.bg, border: `1px solid ${COPY_META.planned.border}`, padding: "1px 5px", borderRadius: 3 }}>
                         {grCopyCounts.planned} PLANNED
@@ -399,72 +346,41 @@ export default function Duplicates() {
 
                 {/* Flag badge */}
                 <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.55rem", letterSpacing: "1.5px",
-                  color: flagColor, background: flagColor + "14", border: `1px solid ${flagColor}40`,
+                  color: isHidden ? "#9ca3af" : flagColor,
+                  background: (isHidden ? "#9ca3af" : flagColor) + "14",
+                  border: `1px solid ${(isHidden ? "#9ca3af" : flagColor)}40`,
                   padding: "2px 7px", borderRadius: 3, flexShrink: 0 }}>
                   {gr.flag === "same-box" ? "SAME BOX" : "BOUGHT TWICE"}
                 </span>
 
-                {/* Group decision buttons */}
-                <div style={{ display: "flex", gap: 4, flexShrink: 0 }}>
-                  {(Object.entries(ACTION_META) as [Action, typeof ACTION_META[Action]][]).map(([action, m]) => {
-                    const active = dec?.action === action;
-                    return (
-                      <button key={action}
-                        onClick={e => { e.stopPropagation(); setDecision(gr.key, action); }}
-                        title={m.desc}
-                        style={{
-                          fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.56rem", letterSpacing: "1px",
-                          padding: "4px 8px",
-                          border: `1.5px solid ${active ? m.color : "var(--border)"}`,
-                          background: active ? m.color : "var(--surface2)",
-                          color: active ? "#fff" : "var(--muted)",
-                          borderRadius: 4, cursor: "pointer", transition: "all 0.12s", whiteSpace: "nowrap",
-                        }}>{m.label}</button>
-                    );
-                  })}
+                {/* HIDE / SHOW button */}
+                <button
+                  onClick={e => { e.stopPropagation(); toggleHide(gr.key); setOpenKey(null); }}
+                  title={isHidden ? "Restore to active list" : "Dismiss — not a real duplicate"}
+                  style={{
+                    fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.56rem", letterSpacing: "1px",
+                    padding: "4px 10px",
+                    border: `1.5px solid ${isHidden ? "#16a34a" : "#9ca3af"}`,
+                    background: isHidden ? "#f0faf4" : "var(--surface2)",
+                    color: isHidden ? "#16a34a" : "#9ca3af",
+                    borderRadius: 4, cursor: "pointer", transition: "all 0.12s", whiteSpace: "nowrap", flexShrink: 0,
+                  }}
+                >
+                  {isHidden ? "RESTORE" : "HIDE"}
+                </button>
+
+                {/* Expand toggle — only when not hidden */}
+                {!isHidden && (
                   <button
                     onClick={() => setOpenKey(isOpen ? null : gr.key)}
                     style={{ background: "none", border: "1px solid var(--border)", borderRadius: 4, width: 24, height: 24, cursor: "pointer", color: "var(--muted)", fontSize: "0.7rem", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                     {isOpen ? "▲" : "▼"}
                   </button>
-                </div>
+                )}
               </div>
 
-              {/* ── GROUP NOTE (when classified at group level) ── */}
-              {dec && (
-                <div style={{ padding: "0 12px 10px", display: "flex", alignItems: "center", gap: 8 }}>
-                  <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.56rem", letterSpacing: "1.5px",
-                    color: meta!.color, background: meta!.bg, border: `1px solid ${meta!.border}`,
-                    padding: "2px 7px", borderRadius: 3, flexShrink: 0 }}>
-                    {meta!.label}
-                  </span>
-                  {isEditingNote ? (
-                    <input
-                      autoFocus
-                      value={noteDraft}
-                      onChange={e => setNoteDraft(e.target.value)}
-                      onBlur={() => { updateNote(gr.key, noteDraft); setEditingNote(null); }}
-                      onKeyDown={e => {
-                        if (e.key === "Enter") { updateNote(gr.key, noteDraft); setEditingNote(null); }
-                        if (e.key === "Escape") setEditingNote(null);
-                      }}
-                      placeholder="add a note…"
-                      style={{ flex: 1, padding: "3px 8px", border: `1px solid ${meta!.color}`, borderRadius: 4, fontSize: "0.75rem", fontFamily: "'Crimson Pro',serif", background: "#fff", color: "var(--text2)", outline: "none" }}
-                    />
-                  ) : (
-                    <span
-                      onClick={() => { setEditingNote(gr.key); setNoteDraft(dec.note || ""); }}
-                      style={{ flex: 1, fontSize: "0.75rem", fontFamily: "'Crimson Pro',serif", color: dec.note ? "var(--text2)" : "var(--muted)", fontStyle: dec.note ? "normal" : "italic", cursor: "text", padding: "2px 4px" }}
-                      title="Click to add a note"
-                    >
-                      {dec.note || "click to add a note…"}
-                    </span>
-                  )}
-                </div>
-              )}
-
               {/* ── EXPANDED COPIES ── */}
-              {isOpen && (
+              {isOpen && !isHidden && (
                 <div style={{ borderTop: "1px solid var(--border)" }}>
                   <div style={{ overflowX: "auto" }}>
                     <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.8rem" }}>
@@ -508,7 +424,7 @@ export default function Duplicates() {
                               <td style={{ padding: "7px 8px", textAlign: "center" }}>
                                 <button
                                   onClick={() => setCopyDecision(copyKey, "planned")}
-                                  title="Mark this copy as Planned"
+                                  title="Mark this copy as Planned (intentional extra)"
                                   style={{
                                     fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.52rem", letterSpacing: "1px",
                                     padding: "3px 7px",
@@ -543,9 +459,16 @@ export default function Duplicates() {
                       </tbody>
                     </table>
                   </div>
-                  <div style={{ padding: "9px 14px", background: (gr.flag === "same-box" ? "#dc2626" : "#d97706") + "08", borderTop: "1px solid var(--border)", fontSize: "0.72rem", color: "var(--muted2)", fontFamily: "'Crimson Pro',serif" }}>
-                    {gr.flag === "same-box"    && "⚠ Two or more copies share a box — likely a data entry error unless you own multiple copies."}
-                    {gr.flag === "bought-twice" && "↗ Same book in different boxes — likely purchased more than once."}
+                  <div style={{ padding: "9px 14px", background: (gr.flag === "same-box" ? "#dc2626" : "#d97706") + "08", borderTop: "1px solid var(--border)", fontSize: "0.72rem", color: "var(--muted2)", fontFamily: "'Crimson Pro',serif", display: "flex", alignItems: "center", gap: 12 }}>
+                    <span>
+                      {gr.flag === "same-box"    && "⚠ Two or more copies share a box — likely a data entry error unless you own multiple copies."}
+                      {gr.flag === "bought-twice" && "↗ Same book in different boxes — likely purchased more than once."}
+                    </span>
+                    <button
+                      onClick={() => { toggleHide(gr.key); setOpenKey(null); }}
+                      style={{ marginLeft: "auto", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.56rem", letterSpacing: "1px", padding: "3px 10px", border: "1px solid #9ca3af", background: "none", color: "#9ca3af", borderRadius: 3, cursor: "pointer", whiteSpace: "nowrap", flexShrink: 0 }}>
+                      HIDE THIS GROUP
+                    </button>
                   </div>
                 </div>
               )}
@@ -567,40 +490,40 @@ export default function Duplicates() {
       {filtered.length === 0 && (
         <div style={{ textAlign: "center", padding: "60px 20px", color: "var(--muted)" }}>
           <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem", letterSpacing: "3px", marginBottom: 8 }}>
-            {filter === "unreviewed" && reviewed.size > 0 ? "ALL GROUPS REVIEWED" : "NO MATCHES"}
+            {filter === "active" && hidden.size > 0 ? "ALL GROUPS DISMISSED" : "NO MATCHES"}
           </div>
           <div style={{ fontSize: "0.8rem" }}>
-            {filter === "unreviewed" && reviewed.size > 0 ? "Switch to 'All Groups' to see your decisions." : "Try adjusting your search or filter."}
+            {filter === "active" && hidden.size > 0
+              ? `You've dismissed all ${hidden.size} groups. Switch to "All Groups" or "Dismissed" to review them.`
+              : "Try adjusting your search or filter."}
           </div>
         </div>
       )}
 
       {/* ── OUTPUT PANEL ── */}
-      {totalDecisions > 0 && (
+      {(copyDecisions.size > 0 || hidden.size > 0) && (
         <div style={{ marginTop: 32, borderTop: "2px solid var(--border)", paddingTop: 20 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 14, flexWrap: "wrap" }}>
             <h2 style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.2rem", letterSpacing: "3px", color: "var(--red)", margin: 0 }}>
-              DUPLICATE REVIEW OUTPUT
+              REVIEW OUTPUT
             </h2>
-            {(Object.entries(ACTION_META) as [Action, typeof ACTION_META[Action]][]).map(([action, meta]) => {
-              const count = [...decisions.values()].filter(d => d.action === action).length;
-              if (!count) return null;
-              return (
-                <span key={action} style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.65rem", letterSpacing: "1.5px", background: meta.bg, color: meta.color, border: `1px solid ${meta.border}`, borderRadius: 3, padding: "2px 8px" }}>
-                  {count} {meta.label}
-                </span>
-              );
-            })}
+            {hidden.size > 0 && (
+              <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.65rem", letterSpacing: "1.5px", background: "#f3f4f6", color: "#6b7280", border: "1px solid #d1d5db", borderRadius: 3, padding: "2px 8px" }}>
+                {hidden.size} DISMISSED
+              </span>
+            )}
             {copyDecisions.size > 0 && (
-              <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.65rem", letterSpacing: "1.5px", background: "#faf5ff", color: "#9333ea", border: "1px solid #e9d5ff", borderRadius: 3, padding: "2px 8px" }}>
-                {copyDecisions.size} PER-COPY
+              <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.65rem", letterSpacing: "1.5px", background: "#fefce8", color: "#d97706", border: "1px solid #fcd34d", borderRadius: 3, padding: "2px 8px" }}>
+                {copyDecisions.size} COPY DECISIONS
               </span>
             )}
             <div style={{ marginLeft: "auto", display: "flex", gap: 8 }}>
-              <button onClick={() => setShowOutput(v => !v)}
-                style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.72rem", letterSpacing: "1.5px", padding: "7px 18px", border: "1.5px solid var(--red)", background: showOutput ? "var(--red)" : "none", color: showOutput ? "#fff" : "var(--red)", borderRadius: 4, cursor: "pointer" }}>
-                {showOutput ? "HIDE OUTPUT" : "GENERATE OUTPUT"}
-              </button>
+              {copyDecisions.size > 0 && (
+                <button onClick={() => setShowOutput(v => !v)}
+                  style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.72rem", letterSpacing: "1.5px", padding: "7px 18px", border: "1.5px solid var(--red)", background: showOutput ? "var(--red)" : "none", color: showOutput ? "#fff" : "var(--red)", borderRadius: 4, cursor: "pointer" }}>
+                  {showOutput ? "HIDE OUTPUT" : "GENERATE OUTPUT"}
+                </button>
+              )}
               <button onClick={clearAll}
                 style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.65rem", letterSpacing: "1px", padding: "7px 14px", border: "1px solid var(--border)", background: "none", color: "var(--muted)", borderRadius: 4, cursor: "pointer" }}>
                 CLEAR ALL
@@ -608,65 +531,13 @@ export default function Duplicates() {
             </div>
           </div>
 
-          {/* Summary cards */}
-          {!showOutput && (
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 6, marginBottom: 8 }}>
-              {(["not-dup","planned","data-error"] as Action[]).map(action => {
-                const meta   = ACTION_META[action];
-                const groups = RAW_GROUPS.filter(g => decisions.get(g.key)?.action === action);
-                if (!groups.length) return null;
-                return (
-                  <div key={action} style={{ background: meta.bg, border: `1px solid ${meta.border}`, borderRadius: 6, padding: "10px 12px" }}>
-                    <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.65rem", letterSpacing: "2px", color: meta.color, marginBottom: 6 }}>
-                      {meta.label} · {groups.length} groups
-                    </div>
-                    {groups.map(gr => (
-                      <div key={gr.key} style={{ fontSize: "0.72rem", color: "var(--text2)", marginBottom: 3, display: "flex", gap: 6, alignItems: "baseline", flexWrap: "wrap" }}>
-                        <span style={{ fontFamily: "'Bebas Neue',sans-serif", color: "var(--text)" }}>{gr.title} {gr.issue}</span>
-                        <span style={{ color: "var(--muted)", fontSize: "0.66rem" }}>×{gr.copies.length}</span>
-                        {decisions.get(gr.key)?.note && <span style={{ fontFamily: "'Crimson Pro',serif", fontStyle: "italic", color: "var(--muted)", fontSize: "0.7rem" }}>— {decisions.get(gr.key)!.note}</span>}
-                      </div>
-                    ))}
-                  </div>
-                );
-              })}
-              {/* Per-copy summary */}
-              {copyDecisions.size > 0 && (() => {
-                const perCopyGroups = new Map<string, { planned: number; check: number }>();
-                for (const [copyKey, action] of copyDecisions) {
-                  const grKey = copyKey.split("|||").slice(0,-1).join("|||");
-                  if (!perCopyGroups.has(grKey)) perCopyGroups.set(grKey, { planned: 0, check: 0 });
-                  perCopyGroups.get(grKey)![action]++;
-                }
-                return (
-                  <div style={{ background: "#faf5ff", border: "1px solid #e9d5ff", borderRadius: 6, padding: "10px 12px" }}>
-                    <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.65rem", letterSpacing: "2px", color: "#9333ea", marginBottom: 6 }}>
-                      PER-COPY · {perCopyGroups.size} groups
-                    </div>
-                    {[...perCopyGroups.entries()].map(([grKey, counts]) => {
-                      const gr = RAW_GROUPS.find(g => g.key === grKey);
-                      if (!gr) return null;
-                      return (
-                        <div key={grKey} style={{ fontSize: "0.72rem", color: "var(--text2)", marginBottom: 3, display: "flex", gap: 6, alignItems: "baseline", flexWrap: "wrap" }}>
-                          <span style={{ fontFamily: "'Bebas Neue',sans-serif", color: "var(--text)" }}>{gr.title} {gr.issue}</span>
-                          {counts.planned > 0 && <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem", color: COPY_META.planned.color }}>{counts.planned} planned</span>}
-                          {counts.check > 0   && <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem", color: COPY_META.check.color }}>{counts.check} check</span>}
-                        </div>
-                      );
-                    })}
-                  </div>
-                );
-              })()}
-            </div>
-          )}
-
-          {showOutput && (
+          {showOutput && copyDecisions.size > 0 && (
             <div style={{ position: "relative" }}>
               <textarea
                 ref={outputRef}
                 readOnly
                 value={outputText}
-                style={{ width: "100%", minHeight: 360, padding: "14px 16px", fontFamily: "monospace", fontSize: "0.8rem", lineHeight: 1.6, background: "#0f1a12", color: "#4ade80", border: "1.5px solid #1e3a22", borderRadius: 8, resize: "vertical", boxSizing: "border-box" }}
+                style={{ width: "100%", minHeight: 300, padding: "14px 16px", fontFamily: "monospace", fontSize: "0.8rem", lineHeight: 1.6, background: "#0f1a12", color: "#4ade80", border: "1.5px solid #1e3a22", borderRadius: 8, resize: "vertical", boxSizing: "border-box" }}
                 onFocus={e => e.target.select()}
               />
               <button
