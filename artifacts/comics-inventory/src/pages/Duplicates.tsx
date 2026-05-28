@@ -11,52 +11,58 @@ function loadResolvedLS(): Set<string> {
 const comics = DATA3.comics;
 
 // ── Build duplicate groups ────────────────────────────────────────────────────
+// Grouped by: Title + Issue + Publisher + Year + Volume — true duplicates only
 interface DupGroup {
   key: string;
   title: string;
   issue: string;
+  volume: string;
+  publisher: string;
+  year: string;
   copies: Comic[];
-  flag: "same-box" | "same-pub-year" | "variant";
+  flag: "same-box" | "bought-twice";
 }
 
 const RAW_GROUPS = (() => {
   const map = new Map<string, Comic[]>();
   for (const c of comics) {
-    const k = `${c.Title.trim()}|||${c.Issue.trim()}`;
+    const normPub = (c.Publisher || "").trim().toUpperCase();
+    const normVol = String(c.Volume || "").trim();
+    const normYear = (c.Year || "").trim();
+    const k = [
+      c.Title.trim(),
+      (c.Issue || "").trim().toLowerCase(),
+      normPub,
+      normYear,
+      normVol,
+    ].join("|||");
     if (!map.has(k)) map.set(k, []);
     map.get(k)!.push(c);
   }
   const groups: DupGroup[] = [];
   for (const [key, copies] of map) {
     if (copies.length < 2) continue;
-    const [title, issue] = key.split("|||");
-    // Classify flag
+    const [title, issue,, year, volume] = key.split("|||");
+    const publisher = copies[0].Publisher || "";
     const boxes = new Set(copies.map(c => c.Box));
-    const pubs  = new Set(copies.map(c => (c.Publisher || "").toUpperCase()));
-    const years = new Set(copies.map(c => c.Year));
-    let flag: DupGroup["flag"];
-    if (boxes.size < copies.length) flag = "same-box";
-    else if (pubs.size === 1 && years.size === 1) flag = "same-pub-year";
-    else flag = "variant";
-    groups.push({ key, title, issue, copies, flag });
+    const flag: DupGroup["flag"] = boxes.size < copies.length ? "same-box" : "bought-twice";
+    groups.push({ key, title, issue: copies[0].Issue || issue, volume, publisher, year, copies, flag });
   }
   return groups.sort((a, b) => b.copies.length - a.copies.length || a.title.localeCompare(b.title));
 })();
 
-const TOTAL_DUP_BOOKS = RAW_GROUPS.reduce((s, g) => s + g.copies.length, 0);
-const SAME_BOX_COUNT  = RAW_GROUPS.filter(g => g.flag === "same-box").length;
-const VARIANT_COUNT   = RAW_GROUPS.filter(g => g.flag === "variant").length;
+const TOTAL_DUP_BOOKS  = RAW_GROUPS.reduce((s, g) => s + g.copies.length, 0);
+const SAME_BOX_COUNT   = RAW_GROUPS.filter(g => g.flag === "same-box").length;
+const BOUGHT_TWICE_COUNT = RAW_GROUPS.filter(g => g.flag === "bought-twice").length;
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 function flagLabel(f: DupGroup["flag"]) {
-  if (f === "same-box")     return "SAME BOX";
-  if (f === "same-pub-year") return "LIKELY DUP";
-  return "VARIANT";
+  if (f === "same-box")    return "SAME BOX";
+  return "BOUGHT TWICE";
 }
 function flagColor(f: DupGroup["flag"]) {
-  if (f === "same-box")     return "#dc2626";
-  if (f === "same-pub-year") return "#d97706";
-  return "#16a34a";
+  if (f === "same-box") return "#dc2626";
+  return "#d97706";
 }
 function countColor(n: number) {
   if (n >= 5) return "#dc2626";
@@ -71,7 +77,7 @@ function fmtVal(v: string) {
 // ── Component ─────────────────────────────────────────────────────────────────
 export default function Duplicates() {
   const [query,    setQuery]    = useState("");
-  const [filter,   setFilter]   = useState<"all" | "same-box" | "same-pub-year" | "variant">("all");
+  const [filter,   setFilter]   = useState<"all" | "same-box" | "bought-twice">("all");
   const [sort,     setSort]     = useState<"count" | "alpha">("count");
   const [openKey,  setOpenKey]  = useState<string | null>(null);
   const [showAll,  setShowAll]  = useState(false);
@@ -119,10 +125,10 @@ export default function Duplicates() {
       {/* ── STAT TILES ── */}
       <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 10, marginBottom: 24 }}>
         {[
-          { val: RAW_GROUPS.length.toLocaleString(), lbl: "Duplicate Groups",  sub: "unique title + issue combos", color: "#dc2626" },
-          { val: TOTAL_DUP_BOOKS.toLocaleString(),   lbl: "Total Copies",      sub: "books across all groups",    color: "#d97706" },
-          { val: SAME_BOX_COUNT.toLocaleString(),    lbl: "Same-Box Dupes",    sub: "possible data entry errors", color: "#dc2626" },
-          { val: VARIANT_COUNT.toLocaleString(),     lbl: "Likely Variants",   sub: "different pub / year / era", color: "#16a34a" },
+          { val: RAW_GROUPS.length.toLocaleString(),       lbl: "Duplicate Groups",  sub: "same title+issue+pub+year+vol", color: "#dc2626" },
+          { val: TOTAL_DUP_BOOKS.toLocaleString(),       lbl: "Total Copies",      sub: "books across all groups",       color: "#d97706" },
+          { val: SAME_BOX_COUNT.toLocaleString(),        lbl: "Same-Box Dupes",    sub: "data entry errors — same box",  color: "#dc2626" },
+          { val: BOUGHT_TWICE_COUNT.toLocaleString(),    lbl: "Bought Twice",      sub: "same book in different boxes",  color: "#d97706" },
         ].map((s, i) => (
           <div key={i} style={{ background: "var(--surface)", border: "1.5px solid var(--border)", borderTop: `3px solid ${s.color}`, borderRadius: 8, padding: "12px 14px" }}>
             <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.8rem", color: s.color, letterSpacing: "2px", lineHeight: 1 }}>{s.val}</div>
@@ -133,11 +139,10 @@ export default function Duplicates() {
       </div>
 
       {/* ── LEGEND ── */}
-      <div style={{ display: "flex", gap: 12, marginBottom: 18, flexWrap: "wrap" }}>
+      <div style={{ display: "flex", gap: 12, marginBottom: 6, flexWrap: "wrap" }}>
         {([
-          ["same-box",      "#dc2626", "SAME BOX",     "Two+ copies recorded in the same box — likely a data entry error"],
-          ["same-pub-year", "#d97706", "LIKELY DUP",   "Same publisher + year — possibly bought twice"],
-          ["variant",       "#16a34a", "VARIANT",      "Different publisher, year or era — probably intentional (reprints, imports, etc.)"],
+          ["same-box",     "#dc2626", "SAME BOX",      "Two+ copies of the exact same book recorded in the same box — likely a data entry error"],
+          ["bought-twice", "#d97706", "BOUGHT TWICE",  "Exact same book (same title + issue + publisher + year + volume) in different boxes — purchased twice"],
         ] as const).map(([, color, label, desc]) => (
           <div key={label} style={{ display: "flex", alignItems: "center", gap: 6, fontSize: "0.7rem", color: "var(--muted2)" }}>
             <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.6rem", letterSpacing: "1.5px", color, background: color + "18", border: `1px solid ${color}40`, padding: "2px 7px", borderRadius: 3 }}>{label}</span>
@@ -145,6 +150,9 @@ export default function Duplicates() {
           </div>
         ))}
       </div>
+      <p style={{ fontSize: "0.7rem", color: "var(--muted)", marginBottom: 18, fontFamily: "'Crimson Pro',serif" }}>
+        Groups are now exact-match only — same title, issue, publisher, year <em>and</em> volume. Different volumes or years of the same title are shown separately.
+      </p>
 
       {/* ── VIEW TOGGLE ── */}
       <div style={{ display:"flex", gap:6, marginBottom:14 }}>
@@ -170,9 +178,8 @@ export default function Duplicates() {
         <select value={filter} onChange={e => setFilter(e.target.value as typeof filter)}
           style={{ padding: "8px 10px", border: "1.5px solid var(--border)", borderRadius: 6, fontSize: "0.82rem", background: "var(--surface)", color: "var(--text2)", fontFamily: "'Bebas Neue',sans-serif", letterSpacing: "1px" }}>
           <option value="all">All Types</option>
-          <option value="same-box">Same Box</option>
-          <option value="same-pub-year">Likely Duplicate</option>
-          <option value="variant">Variant / Reprint</option>
+          <option value="same-box">Same Box (Data Error)</option>
+          <option value="bought-twice">Bought Twice</option>
         </select>
         <select value={sort} onChange={e => setSort(e.target.value as typeof sort)}
           style={{ padding: "8px 10px", border: "1.5px solid var(--border)", borderRadius: 6, fontSize: "0.82rem", background: "var(--surface)", color: "var(--text2)", fontFamily: "'Bebas Neue',sans-serif", letterSpacing: "1px" }}>
@@ -212,9 +219,8 @@ export default function Duplicates() {
 
           {/* Flag group sections */}
           {([
-            ["same-box",      "#dc2626", "SAME BOX",    "Two+ copies recorded in the same box — likely a data entry error. Verify physically before actioning."],
-            ["same-pub-year", "#d97706", "LIKELY DUP",  "Same publisher + year. Check if different printings or truly duplicate entries."],
-            ["variant",       "#16a34a", "VARIANTS",    "Different publisher, year or era — probably intentional reprints, imports. Review only if needed."],
+            ["same-box",     "#dc2626", "SAME BOX",      "Two+ copies of the exact same book in the same physical box — likely a data entry error. Verify before actioning."],
+            ["bought-twice", "#d97706", "BOUGHT TWICE",  "Exact same book (title + issue + pub + year + vol) in different boxes — possibly purchased twice. Decide: keep or sell."],
           ] as const).map(([flagType, color, label, desc]) => {
             const groupsInFlag = filtered.filter(g => g.flag === flagType);
             if (groupsInFlag.length === 0) return null;
@@ -334,11 +340,22 @@ export default function Duplicates() {
                   <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.85rem", color: "var(--red)", marginLeft: 6 }}>
                     {gr.issue}
                   </span>
-                  {/* Publishers / years summary */}
-                  <div style={{ fontSize: "0.67rem", color: "var(--muted)", marginTop: 2 }}>
-                    {[...new Set(gr.copies.map(c => c.Publisher))].filter(Boolean).join(" · ")}
-                    {" — "}
-                    {[...new Set(gr.copies.map(c => c.Year))].filter(Boolean).sort().join(", ")}
+                  {gr.volume && (
+                    <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.65rem", letterSpacing: "1px", color: "var(--muted2)", marginLeft: 8, background: "var(--surface2)", border: "1px solid var(--border)", padding: "1px 6px", borderRadius: 3 }}>
+                      VOL {gr.volume}
+                    </span>
+                  )}
+                  {/* Publisher / year / creators summary */}
+                  <div style={{ fontSize: "0.67rem", color: "var(--muted)", marginTop: 3, display: "flex", flexWrap: "wrap", gap: "4px 10px" }}>
+                    <span>{gr.publisher}{gr.year ? ` · ${gr.year}` : ""}</span>
+                    {(() => {
+                      const writers = [...new Set(gr.copies.map(c => c.Writer).filter(Boolean))];
+                      const artists = [...new Set(gr.copies.map(c => c.Artist).filter(Boolean))];
+                      return <>
+                        {writers.length > 0 && <span style={{ color: "var(--muted)" }}>W: {writers.slice(0,2).join(", ")}{writers.length > 2 ? "…" : ""}</span>}
+                        {artists.length > 0 && <span style={{ color: "var(--muted)" }}>A: {artists.slice(0,2).join(", ")}{artists.length > 2 ? "…" : ""}</span>}
+                      </>;
+                    })()}
                   </div>
                 </div>
 
@@ -365,7 +382,7 @@ export default function Duplicates() {
                   <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.78rem" }}>
                     <thead>
                       <tr style={{ background: "var(--surface2)" }}>
-                        {["#", "Box", "Publisher", "Year", "Condition", "Key", "Signed", "NM Value", "VF Value"].map(h => (
+                        {["#", "Box", "Vol", "Writer", "Artist", "Condition", "Key", "Signed", "NM Value", "VF Value"].map(h => (
                           <th key={h} style={{ padding: "7px 12px", textAlign: "left", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.6rem", letterSpacing: "2px", color: "var(--muted)", fontWeight: 600, whiteSpace: "nowrap", borderBottom: "1px solid var(--border)" }}>{h}</th>
                         ))}
                       </tr>
@@ -374,7 +391,6 @@ export default function Duplicates() {
                       {gr.copies.map((c, ci) => {
                         const isKey    = (c.Key    || "").toUpperCase() === "YES";
                         const isSigned = (c.Signed || "").toUpperCase() === "YES";
-                        // Highlight rows in same box as another copy
                         const boxDup = gr.copies.filter(x => x.Box === c.Box).length > 1;
                         return (
                           <tr key={ci} style={{ background: boxDup ? "#fff8f8" : ci % 2 === 0 ? "var(--surface)" : "var(--surface2)", borderBottom: "1px solid var(--border)" }}>
@@ -383,8 +399,9 @@ export default function Duplicates() {
                               Box {c.Box}
                               {boxDup && <span style={{ marginLeft: 4, fontSize: "0.5rem", color: "#dc2626", letterSpacing: "1px" }}>⚠</span>}
                             </td>
-                            <td style={{ padding: "7px 12px", color: "var(--text2)", whiteSpace: "nowrap" }}>{c.Publisher || "—"}</td>
-                            <td style={{ padding: "7px 12px", color: "var(--muted2)", fontFamily: "'Bebas Neue',sans-serif" }}>{c.Year || "—"}</td>
+                            <td style={{ padding: "7px 12px", color: "var(--muted2)", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.72rem" }}>{c.Volume ? `V${c.Volume}` : "—"}</td>
+                            <td style={{ padding: "7px 10px", color: "var(--text2)", maxWidth: 160, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }} title={c.Writer || ""}>{c.Writer || "—"}</td>
+                            <td style={{ padding: "7px 10px", color: "var(--text2)", maxWidth: 160, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }} title={c.Artist || ""}>{c.Artist || "—"}</td>
                             <td style={{ padding: "7px 12px", color: "var(--muted2)" }}>{c.Condition || "—"}</td>
                             <td style={{ padding: "7px 12px" }}>
                               {isKey && <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem", letterSpacing: "1px", color: "#d97706", background: "#d9770618", border: "1px solid #d9770640", padding: "2px 6px", borderRadius: 3 }}>KEY</span>}
@@ -401,9 +418,8 @@ export default function Duplicates() {
                   </table>
                   {/* Insight row */}
                   <div style={{ padding: "10px 14px", background: fc + "0a", borderTop: "1px solid " + fc + "20", fontSize: "0.72rem", color: "var(--muted2)", fontFamily: "'Crimson Pro',serif" }}>
-                    {gr.flag === "same-box" && "⚠ One or more copies share a box — verify these are physical duplicates before deciding to sell or flag."}
-                    {gr.flag === "same-pub-year" && "↗ Same publisher and year across all copies. Check if these are different printings, or truly duplicated data entries."}
-                    {gr.flag === "variant"   && "✓ Different publishers or years — these are likely intentional variants, reprints, or imports. No action needed."}
+                    {gr.flag === "same-box"    && "⚠ One or more copies share a box — verify these are physical duplicates before deciding to sell or flag."}
+                    {gr.flag === "bought-twice" && "↗ Exact same book (publisher, year, volume all match) found in different boxes — likely purchased twice. Check if intentional."}
                   </div>
                 </div>
               )}
