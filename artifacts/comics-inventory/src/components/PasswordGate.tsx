@@ -6,7 +6,7 @@ const PWD           = "BlackReadBrown!";
 const PASSKEY_KEY   = "brbPasskeyId";   // stored as JSON: { credId: string; rpId: string }
 const PROGRESS_KEY  = "mc_progress_dismissed";
 
-const TARGET_BOXES = 80;
+const TARGET_BOXES = 84;
 const _comics      = DATA3.comics;
 const _boxes       = DATA3.boxes.length;
 const _keys        = _comics.filter(c => (c.Key    || "").toUpperCase() === "YES").length;
@@ -91,6 +91,16 @@ async function authenticatePasskey(storedId: string): Promise<boolean> {
   }
 }
 
+// ── Platform detection ───────────────────────────────────────────────────────
+
+function getBiometricLabel(): { name: string; verb: string; icon: "face" | "fingerprint" | "shield" } {
+  const ua = navigator.userAgent;
+  if (/iPhone|iPad/.test(ua))   return { name: "Face ID",       verb: "face",        icon: "face"        };
+  if (/Mac/.test(ua))           return { name: "Touch ID",      verb: "fingerprint", icon: "fingerprint" };
+  if (/Windows/.test(ua))       return { name: "Windows Hello", verb: "biometric",   icon: "shield"      };
+  return                               { name: "Biometric",     verb: "biometric",   icon: "fingerprint" };
+}
+
 // ── Component ───────────────────────────────────────────────────────────────
 
 interface Props { children: React.ReactNode; }
@@ -98,6 +108,7 @@ interface Props { children: React.ReactNode; }
 type Stage = "lock" | "offer-faceid" | "registering" | "authing";
 
 export default function PasswordGate({ children }: Props) {
+  const bio = getBiometricLabel();
   const [unlocked,      setUnlocked]      = useState(() => sessionStorage.getItem(KEY) === "1");
   const [input,         setInput]         = useState("");
   const [shake,         setShake]         = useState(false);
@@ -139,7 +150,7 @@ export default function PasswordGate({ children }: Props) {
     }
   }
 
-  async function setupFaceId() {
+  async function setupBiometric() {
     setStage("registering");
     setBiometricErr("");
     const credId = await registerPasskey();
@@ -147,12 +158,12 @@ export default function PasswordGate({ children }: Props) {
       savePasskey(credId);
       setPasskey({ credId, rpId: window.location.hostname });
     } else {
-      setBiometricErr("Face ID setup was cancelled or isn't available on this device.");
+      setBiometricErr(`${bio.name} setup was cancelled or isn't available on this device.`);
     }
     setUnlocked(true);
   }
 
-  async function useFaceId() {
+  async function useBiometric() {
     if (!passkey) return;
     setStage("authing");
     setBiometricErr("");
@@ -160,12 +171,12 @@ export default function PasswordGate({ children }: Props) {
     if (ok) {
       setUnlocked(true);
     } else {
-      setBiometricErr("Face ID didn't match. Use your password instead.");
+      setBiometricErr(`${bio.name} didn't match. Use your password instead.`);
       setStage("lock");
     }
   }
 
-  function removeFaceId() {
+  function removeBiometric() {
     localStorage.removeItem(PASSKEY_KEY);
     setPasskey(null);
     setStage("lock");
@@ -179,29 +190,29 @@ export default function PasswordGate({ children }: Props) {
       <div style={{ minHeight:"100vh", background:"#111", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", gap:20 }}>
         <div style={{ width:56, height:56, borderRadius:"50%", border:"3px solid #c8102e", borderTopColor:"transparent", animation:"spin 0.8s linear infinite" }} />
         <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.8rem", letterSpacing:"3px", color:"rgba(255,255,255,0.5)" }}>
-          {stage === "registering" ? "SETTING UP FACE ID…" : "CHECKING FACE ID…"}
+          {stage === "registering" ? `SETTING UP ${bio.name.toUpperCase()}…` : `CHECKING ${bio.name.toUpperCase()}…`}
         </div>
         <style>{`@keyframes spin { to { transform:rotate(360deg); } }`}</style>
       </div>
     );
   }
 
-  // ── Offer Face ID setup (after successful password) ──
+  // ── Offer biometric setup (after successful password) ──
 
   if (stage === "offer-faceid") {
     return (
       <div style={{ minHeight:"100vh", background:"#111", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", padding:24 }}>
         <img src="/logo.png" alt="Marshall Comics" style={{ width:64, height:64, borderRadius:10, marginBottom:24, objectFit:"cover" }} />
-        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.6rem", letterSpacing:"5px", color:"#c8102e", marginBottom:8 }}>Use Face ID?</div>
+        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.6rem", letterSpacing:"5px", color:"#c8102e", marginBottom:8 }}>Use {bio.name}?</div>
         <div style={{ fontFamily:"'Crimson Pro',serif", fontSize:"1rem", color:"rgba(255,255,255,0.55)", textAlign:"center", maxWidth:300, lineHeight:1.6, marginBottom:32 }}>
-          Skip the password next time — just use your face to unlock on this device.
+          Skip the password next time — just use your {bio.verb} to unlock on this device.
         </div>
         <div style={{ display:"flex", flexDirection:"column", gap:12, width:"100%", maxWidth:300 }}>
           <button
-            onClick={setupFaceId}
+            onClick={setupBiometric}
             style={{ background:"#c8102e", color:"#fff", border:"none", borderRadius:8, padding:"14px", fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem", letterSpacing:"2.5px", cursor:"pointer", display:"flex", alignItems:"center", justifyContent:"center", gap:10 }}>
-            <FaceIdIcon size={22} color="#fff" />
-            SET UP FACE ID
+            <BiometricIcon type={bio.icon} size={22} color="#fff" />
+            SET UP {bio.name.toUpperCase()}
           </button>
           <button
             onClick={() => setUnlocked(true)}
@@ -256,19 +267,19 @@ export default function PasswordGate({ children }: Props) {
         </div>
       )}
 
-      {/* Face ID button — prominent if registered */}
+      {/* Biometric button — prominent if registered */}
       {passkey && (
         <div style={{ width:"100%", maxWidth:340, marginBottom:16, display:"flex", flexDirection:"column", gap:8 }}>
           <button
-            onClick={useFaceId}
+            onClick={useBiometric}
             style={{ background:"#1c1c1c", border:"1.5px solid #444", borderRadius:10, padding:"18px 24px", cursor:"pointer", display:"flex", alignItems:"center", justifyContent:"center", gap:12, transition:"border-color 0.15s, background 0.15s" }}
             onMouseOver={e => { e.currentTarget.style.background="#242424"; e.currentTarget.style.borderColor="#c8102e"; }}
             onMouseOut={e => { e.currentTarget.style.background="#1c1c1c"; e.currentTarget.style.borderColor="#444"; }}
           >
-            <FaceIdIcon size={32} color="#c8102e" />
+            <BiometricIcon type={bio.icon} size={32} color="#c8102e" />
             <div style={{ textAlign:"left" }}>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.95rem", letterSpacing:"2px", color:"#fff" }}>UNLOCK WITH FACE ID</div>
-              <div style={{ fontFamily:"'Crimson Pro',serif", fontSize:"0.78rem", color:"rgba(255,255,255,0.4)", marginTop:2 }}>Tap to authenticate</div>
+              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.95rem", letterSpacing:"2px", color:"#fff" }}>UNLOCK WITH {bio.name.toUpperCase()}</div>
+              <div style={{ fontFamily:"'Crimson Pro',serif", fontSize:"0.78rem", color:"rgba(255,255,255,0.4)", marginTop:2 }}>Touch to authenticate</div>
             </div>
           </button>
           {biometricErr && (
@@ -313,11 +324,11 @@ export default function PasswordGate({ children }: Props) {
         </form>
       </div>
 
-      {/* Remove Face ID link (shown when registered) */}
+      {/* Remove biometric link (shown when registered) */}
       {passkey && (
-        <button onClick={removeFaceId}
+        <button onClick={removeBiometric}
           style={{ marginTop:14, background:"none", border:"none", cursor:"pointer", fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.55rem", letterSpacing:"2px", color:"rgba(255,255,255,0.15)", textDecoration:"underline" }}>
-          REMOVE FACE ID FROM THIS DEVICE
+          REMOVE {bio.name.toUpperCase()} FROM THIS DEVICE
         </button>
       )}
 
@@ -364,21 +375,40 @@ export default function PasswordGate({ children }: Props) {
   );
 }
 
-// ── Face ID icon (SVG matching iOS system icon style) ────────────────────────
-function FaceIdIcon({ size = 24, color = "currentColor" }: { size?: number; color?: string }) {
+// ── Biometric icon — fingerprint, face, or shield based on platform ──────────
+function BiometricIcon({ type, size = 24, color = "currentColor" }: { type: "face" | "fingerprint" | "shield"; size?: number; color?: string }) {
+  if (type === "fingerprint") {
+    return (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 1C7.2 1 3.3 4.2 2.2 8.5" />
+        <path d="M21.8 8.5C20.7 4.2 16.8 1 12 1" />
+        <path d="M2 12c0-.4 0-.7.1-1" />
+        <path d="M21.9 11c.1.3.1.7.1 1" />
+        <path d="M7 12a5 5 0 0 1 10 0c0 3.5-1.6 6.6-4 8.5" />
+        <path d="M12 7a5 5 0 0 1 5 5c0 2-.5 3.8-1.4 5.3" />
+        <path d="M12 7a5 5 0 0 0-4.5 7.2" />
+        <path d="M12 12v4" />
+      </svg>
+    );
+  }
+  if (type === "shield") {
+    return (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.25C17.25 22.15 21 17.25 21 12V7L12 2z" />
+        <path d="M9 12l2 2 4-4" />
+      </svg>
+    );
+  }
+  // Face ID (iOS)
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-      {/* Corner brackets */}
       <path d="M2 7V4a2 2 0 0 1 2-2h3" />
       <path d="M17 2h3a2 2 0 0 1 2 2v3" />
       <path d="M22 17v3a2 2 0 0 1-2 2h-3" />
       <path d="M7 22H4a2 2 0 0 1-2-2v-3" />
-      {/* Eyes */}
       <path d="M9 10h.01" strokeWidth="2" />
       <path d="M15 10h.01" strokeWidth="2" />
-      {/* Nose */}
       <path d="M12 13v1" />
-      {/* Smile */}
       <path d="M9 16c.6.7 1.8 1 3 1s2.4-.3 3-1" />
     </svg>
   );
