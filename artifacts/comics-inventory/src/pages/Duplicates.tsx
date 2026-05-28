@@ -88,7 +88,9 @@ const COPY_META: Record<CopyAction, { label: string; color: string; bg: string; 
 };
 
 // ── Component ─────────────────────────────────────────────────────────────────
-export default function Duplicates() {
+interface Props { onNavigate?: (tab: string) => void; }
+
+export default function Duplicates({ onNavigate }: Props) {
   const [hidden,        setHidden]        = useState<Set<string>>(         () => loadSet(LS_HIDDEN));
   const [copyDecisions, setCopyDecisions] = useState<Map<string, CopyAction>>(() => loadMap<CopyAction>(LS_COPY_DECISIONS));
   const [notes,         setNotes]         = useState<Map<string, string>>(   () => loadMap<string>(LS_NOTES));
@@ -98,9 +100,12 @@ export default function Duplicates() {
   const [sort,       setSort]       = useState<"count" | "alpha">("count");
   const [openKeys,   setOpenKeys]   = useState<Set<string>>(() => new Set(RAW_GROUPS.map(g => g.key)));
   const [showAll,    setShowAll]    = useState(false);
-  const [showOutput, setShowOutput] = useState(false);
-  const [copied,     setCopied]     = useState(false);
+  const [showOutput,      setShowOutput]      = useState(false);
+  const [showClaude,      setShowClaude]      = useState(false);
+  const [copied,          setCopied]          = useState(false);
+  const [copiedClaude,    setCopiedClaude]    = useState(false);
   const outputRef = useRef<HTMLTextAreaElement>(null);
+  const claudeRef = useRef<HTMLTextAreaElement>(null);
 
   // Toggle hide on a group
   const toggleHide = useCallback((grKey: string) => {
@@ -147,17 +152,17 @@ export default function Duplicates() {
     saveMap(LS_NOTES, emptyNotes);
   }, []);
 
-  // Auto-hide a group when it has a note AND every copy is classified
+  // Auto-hide: note + all classified, OR all copies PLANNED
   useEffect(() => {
     setHidden(prev => {
       const next = new Set(prev);
       let changed = false;
       for (const gr of RAW_GROUPS) {
         if (next.has(gr.key)) continue;
-        const hasNote = !!(notes.get(gr.key) || "").trim();
-        if (!hasNote) continue;
+        const allPlanned    = gr.copies.every((_, ci) => copyDecisions.get(ck(gr.key, ci)) === "planned");
+        const hasNote       = !!(notes.get(gr.key) || "").trim();
         const allClassified = gr.copies.every((_, ci) => copyDecisions.has(ck(gr.key, ci)));
-        if (allClassified) { next.add(gr.key); changed = true; }
+        if (allPlanned || (hasNote && allClassified)) { next.add(gr.key); changed = true; }
       }
       if (!changed) return prev;
       saveSet(LS_HIDDEN, next);
@@ -244,21 +249,88 @@ export default function Duplicates() {
     return lines.join("\n");
   }, [copyDecisions, hidden, notes]);
 
+  // Claude script — all notes in a structured prompt
+  const claudeScript = useMemo(() => {
+    if (notes.size === 0) return "";
+    const today = new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
+    const lines: string[] = [
+      `DUPLICATE REVIEW NOTES — BlackReadBrown Comics`,
+      `Date: ${today}`,
+      ``,
+      `Roberto's collection has ${RAW_GROUPS.length} detected duplicate groups. Below are notes from the manual review session.`,
+      `Active: ${RAW_GROUPS.length - hidden.size} | Dismissed: ${hidden.size}`,
+      ``,
+    ];
+
+    // Groups with notes, sorted: check copies first, then planned, then notes-only
+    const withNotes = [...notes.entries()].map(([grKey, note]) => {
+      const gr = RAW_GROUPS.find(g => g.key === grKey);
+      if (!gr) return null;
+      const checkCopies  = gr.copies.filter((_, ci) => copyDecisions.get(ck(gr.key, ci)) === "check");
+      const plannedCopies = gr.copies.filter((_, ci) => copyDecisions.get(ck(gr.key, ci)) === "planned");
+      return { gr, note, checkCopies, plannedCopies };
+    }).filter(Boolean) as { gr: DupGroup; note: string; checkCopies: Comic[]; plannedCopies: Comic[] }[];
+
+    const checkGroups   = withNotes.filter(x => x.checkCopies.length > 0);
+    const plannedGroups = withNotes.filter(x => x.checkCopies.length === 0 && x.plannedCopies.length > 0);
+    const noteOnlyGrps  = withNotes.filter(x => x.checkCopies.length === 0 && x.plannedCopies.length === 0);
+
+    if (checkGroups.length > 0) {
+      lines.push(`── NEEDS VERIFICATION (${checkGroups.length} groups) ──`);
+      lines.push(`These copies are marked CHECK — Roberto needs to physically verify them.`, ``);
+      checkGroups.forEach(({ gr, note, checkCopies }, i) => {
+        lines.push(`${i+1}. ${gr.title} ${gr.issue}${gr.volume ? ` Vol ${gr.volume}` : ""} · ${gr.publisher}${gr.year ? ` (${gr.year})` : ""}`);
+        lines.push(`   Check copies: ${checkCopies.map(c => `Box ${c.Box}`).join(", ")}`);
+        lines.push(`   Note: ${note}`, ``);
+      });
+    }
+
+    if (plannedGroups.length > 0) {
+      lines.push(`── PLANNED DUPLICATES (${plannedGroups.length} groups) ──`);
+      lines.push(`Intentional extras kept for selling or trading.`, ``);
+      plannedGroups.forEach(({ gr, note, plannedCopies }, i) => {
+        lines.push(`${i+1}. ${gr.title} ${gr.issue}${gr.volume ? ` Vol ${gr.volume}` : ""} · ${gr.publisher}${gr.year ? ` (${gr.year})` : ""}`);
+        lines.push(`   Planned copies: ${plannedCopies.map(c => `Box ${c.Box}`).join(", ")}`);
+        lines.push(`   Note: ${note}`, ``);
+      });
+    }
+
+    if (noteOnlyGrps.length > 0) {
+      lines.push(`── NOTES (${noteOnlyGrps.length} groups) ──`, ``);
+      noteOnlyGrps.forEach(({ gr, note }, i) => {
+        lines.push(`${i+1}. ${gr.title} ${gr.issue}${gr.volume ? ` Vol ${gr.volume}` : ""} · ${gr.publisher}${gr.year ? ` (${gr.year})` : ""}`);
+        lines.push(`   Note: ${note}`, ``);
+      });
+    }
+
+    return lines.join("\n");
+  }, [notes, copyDecisions, hidden]);
+
   const active = RAW_GROUPS.length - hidden.size;
 
   return (
     <div style={{ maxWidth: 1100, margin: "0 auto", padding: "20px 16px 80px" }}>
 
       {/* ── HEADER ── */}
-      <div style={{ marginBottom: 24 }}>
-        <h1 style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "2rem", letterSpacing: "3px", color: "var(--red)", margin: 0, lineHeight: 1 }}>
-          DUPLICATE DETECTOR
-        </h1>
-        <p style={{ fontSize: "0.82rem", color: "var(--muted2)", marginTop: 6, fontFamily: "'Crimson Pro',serif" }}>
-          Same title + issue + publisher + year + volume appearing more than once.
-          Hit <strong>HIDE</strong> on any group that isn't a real accidental duplicate — it drops off the list.
-          Expand any group to classify individual copies as Planned or Check.
-        </p>
+      <div style={{ marginBottom: 24, display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 16, flexWrap: "wrap" }}>
+        <div>
+          <h1 style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "2rem", letterSpacing: "3px", color: "var(--red)", margin: 0, lineHeight: 1 }}>
+            DUPLICATE DETECTOR
+          </h1>
+          <p style={{ fontSize: "0.82rem", color: "var(--muted2)", marginTop: 6, fontFamily: "'Crimson Pro',serif", maxWidth: 600 }}>
+            Same title + issue + publisher + year + volume + arc appearing more than once.
+            Hit <strong>HIDE</strong> on any group that isn't a real accidental duplicate.
+            Expand to classify individual copies as Planned or Check.
+          </p>
+        </div>
+        {onNavigate && (
+          <button
+            onClick={() => onNavigate("dupchecklist")}
+            style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.72rem", letterSpacing: "2px", padding: "9px 18px", border: "2px solid #9333ea", background: "#faf5ff", color: "#9333ea", borderRadius: 6, cursor: "pointer", whiteSpace: "nowrap", flexShrink: 0, alignSelf: "flex-start" }}
+          >
+            CHECK LIST →
+          </button>
+        )}
       </div>
 
       {/* ── STAT TILES ── */}
@@ -601,12 +673,12 @@ export default function Duplicates() {
           </div>
 
           {showOutput && copyDecisions.size > 0 && (
-            <div style={{ position: "relative" }}>
+            <div style={{ position: "relative", marginBottom: 16 }}>
               <textarea
                 ref={outputRef}
                 readOnly
                 value={outputText}
-                style={{ width: "100%", minHeight: 300, padding: "14px 16px", fontFamily: "monospace", fontSize: "0.8rem", lineHeight: 1.6, background: "#0f1a12", color: "#4ade80", border: "1.5px solid #1e3a22", borderRadius: 8, resize: "vertical", boxSizing: "border-box" }}
+                style={{ width: "100%", minHeight: 260, padding: "14px 16px", fontFamily: "monospace", fontSize: "0.8rem", lineHeight: 1.6, background: "#0f1a12", color: "#4ade80", border: "1.5px solid #1e3a22", borderRadius: 8, resize: "vertical", boxSizing: "border-box" }}
                 onFocus={e => e.target.select()}
               />
               <button
@@ -614,6 +686,41 @@ export default function Duplicates() {
                 style={{ position: "absolute", top: 10, right: 10, fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.65rem", letterSpacing: "1.5px", padding: "5px 14px", border: `1.5px solid ${copied ? "#16a34a" : "#2d6a3f"}`, background: copied ? "#16a34a" : "#1e3a22", color: copied ? "#fff" : "#4ade80", borderRadius: 4, cursor: "pointer" }}>
                 {copied ? "COPIED ✓" : "COPY"}
               </button>
+            </div>
+          )}
+
+          {/* ── NOTES FOR CLAUDE ── */}
+          {claudeScript && (
+            <div style={{ marginTop: 16, borderTop: "1px dashed var(--border)", paddingTop: 16 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 10, flexWrap: "wrap" }}>
+                <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.75rem", letterSpacing: "2px", color: "#6d28d9" }}>
+                  NOTES FOR CLAUDE
+                </div>
+                <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem", letterSpacing: "1px", background: "#ede9fe", color: "#7c3aed", border: "1px solid #ddd6fe", borderRadius: 3, padding: "2px 7px" }}>
+                  {notes.size} GROUPS WITH NOTES
+                </span>
+                <button
+                  onClick={() => setShowClaude(v => !v)}
+                  style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.65rem", letterSpacing: "1.5px", padding: "5px 14px", border: "1.5px solid #7c3aed", background: showClaude ? "#7c3aed" : "none", color: showClaude ? "#fff" : "#7c3aed", borderRadius: 4, cursor: "pointer" }}>
+                  {showClaude ? "HIDE" : "SHOW SCRIPT"}
+                </button>
+              </div>
+              {showClaude && (
+                <div style={{ position: "relative" }}>
+                  <textarea
+                    ref={claudeRef}
+                    readOnly
+                    value={claudeScript}
+                    style={{ width: "100%", minHeight: 260, padding: "14px 16px", fontFamily: "monospace", fontSize: "0.8rem", lineHeight: 1.6, background: "#1a0f2e", color: "#c4b5fd", border: "1.5px solid #4c1d95", borderRadius: 8, resize: "vertical", boxSizing: "border-box" }}
+                    onFocus={e => e.target.select()}
+                  />
+                  <button
+                    onClick={() => { navigator.clipboard.writeText(claudeScript).then(() => { setCopiedClaude(true); setTimeout(() => setCopiedClaude(false), 2000); }); }}
+                    style={{ position: "absolute", top: 10, right: 10, fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.65rem", letterSpacing: "1.5px", padding: "5px 14px", border: `1.5px solid ${copiedClaude ? "#6d28d9" : "#4c1d95"}`, background: copiedClaude ? "#6d28d9" : "#2e1065", color: copiedClaude ? "#fff" : "#c4b5fd", borderRadius: 4, cursor: "pointer" }}>
+                    {copiedClaude ? "COPIED ✓" : "COPY"}
+                  </button>
+                </div>
+              )}
             </div>
           )}
         </div>
