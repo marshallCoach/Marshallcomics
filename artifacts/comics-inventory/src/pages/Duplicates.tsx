@@ -3,8 +3,9 @@ import { DATA3 } from "@/data/data3";
 import type { Comic } from "@/data/data3";
 
 // ── LocalStorage ──────────────────────────────────────────────────────────────
-const LS_HIDDEN        = "brbHiddenGroups";
+const LS_HIDDEN         = "brbHiddenGroups";
 const LS_COPY_DECISIONS = "brbCopyDecisions";
+const LS_NOTES          = "brbDupNotes";
 
 type CopyAction = "planned" | "check";
 
@@ -90,6 +91,7 @@ const COPY_META: Record<CopyAction, { label: string; color: string; bg: string; 
 export default function Duplicates() {
   const [hidden,        setHidden]        = useState<Set<string>>(         () => loadSet(LS_HIDDEN));
   const [copyDecisions, setCopyDecisions] = useState<Map<string, CopyAction>>(() => loadMap<CopyAction>(LS_COPY_DECISIONS));
+  const [notes,         setNotes]         = useState<Map<string, string>>(   () => loadMap<string>(LS_NOTES));
 
   const [query,      setQuery]      = useState("");
   const [filter,     setFilter]     = useState<"active" | "all" | "same-box" | "bought-twice" | "hidden">("active");
@@ -111,6 +113,17 @@ export default function Duplicates() {
     });
   }, []);
 
+  // Per-group note
+  const updateNote = useCallback((grKey: string, note: string) => {
+    setNotes(prev => {
+      const next = new Map(prev);
+      if (note.trim()) next.set(grKey, note);
+      else next.delete(grKey);
+      saveMap(LS_NOTES, next);
+      return next;
+    });
+  }, []);
+
   // Per-copy decision
   const setCopyDecision = useCallback((key: string, action: CopyAction) => {
     setCopyDecisions(prev => {
@@ -125,10 +138,13 @@ export default function Duplicates() {
   const clearAll = useCallback(() => {
     const emptySet = new Set<string>();
     const emptyMap = new Map<string, CopyAction>();
+    const emptyNotes = new Map<string, string>();
     setHidden(emptySet);
     setCopyDecisions(emptyMap);
+    setNotes(emptyNotes);
     saveSet(LS_HIDDEN, emptySet);
     saveMap(LS_COPY_DECISIONS, emptyMap);
+    saveMap(LS_NOTES, emptyNotes);
   }, []);
 
   const filtered = useMemo(() => {
@@ -159,7 +175,7 @@ export default function Duplicates() {
 
   // Output text
   const outputText = useMemo(() => {
-    if (copyDecisions.size === 0) return "";
+    if (copyDecisions.size === 0 && notes.size === 0) return "";
     const today = new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
     const lines: string[] = [`DUPLICATE REVIEW — BlackReadBrown Comics`, `Date: ${today}`, `Hidden (not real dups): ${hidden.size} groups`, `Classified copies: ${copyDecisions.size}`, ``];
 
@@ -187,14 +203,28 @@ export default function Duplicates() {
         if (check.length) {
           lines.push(`   CHECK (${check.length}): ${check.map(p => `Copy ${p.ci+1} Box ${p.c.Box}`).join(", ")}`);
         }
+        const n = notes.get(grKey);
+        if (n) lines.push(`   Note: ${n}`);
         lines.push(``);
       }
+    }
+
+    // Groups with notes but no copy decisions
+    const noteOnlyGroups = [...notes.entries()].filter(([grKey]) => !perCopyGroups.has(grKey));
+    if (noteOnlyGroups.length > 0) {
+      lines.push(`── NOTES ONLY (${noteOnlyGroups.length} groups) ──`, ``);
+      noteOnlyGroups.forEach(([grKey, note], i) => {
+        const gr = RAW_GROUPS.find(g => g.key === grKey);
+        if (!gr) return;
+        lines.push(`${i+1}. ${gr.title} ${gr.issue}${gr.volume ? ` Vol ${gr.volume}` : ""} · ${gr.publisher}${gr.year ? ` (${gr.year})` : ""}`);
+        lines.push(`   Note: ${note}`, ``);
+      });
     }
 
     const remaining = RAW_GROUPS.length - hidden.size;
     lines.push(`${remaining} groups still active (${hidden.size} dismissed).`);
     return lines.join("\n");
-  }, [copyDecisions, hidden]);
+  }, [copyDecisions, hidden, notes]);
 
   const active = RAW_GROUPS.length - hidden.size;
 
@@ -287,6 +317,7 @@ export default function Duplicates() {
             if (v) grCopyCounts[v]++;
           });
           const hasCopyDecisions = grCopyCounts.planned > 0 || grCopyCounts.check > 0;
+          const groupNote = notes.get(gr.key) || "";
 
           return (
             <div key={gr.key} style={{
@@ -340,6 +371,11 @@ export default function Duplicates() {
                     {grCopyCounts.check > 0 && (
                       <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.56rem", letterSpacing: "1px", color: COPY_META.check.color, background: COPY_META.check.bg, border: `1px solid ${COPY_META.check.border}`, padding: "1px 5px", borderRadius: 3 }}>
                         {grCopyCounts.check} CHECK
+                      </span>
+                    )}
+                    {groupNote && (
+                      <span style={{ fontSize: "0.67rem", fontFamily: "'Crimson Pro',serif", fontStyle: "italic", color: "var(--muted2)" }} title={groupNote}>
+                        ✏ {groupNote.length > 50 ? groupNote.slice(0, 50) + "…" : groupNote}
                       </span>
                     )}
                   </div>
@@ -461,7 +497,20 @@ export default function Duplicates() {
                       </tbody>
                     </table>
                   </div>
-                  <div style={{ padding: "9px 14px", background: (gr.flag === "same-box" ? "#dc2626" : "#d97706") + "08", borderTop: "1px solid var(--border)", fontSize: "0.72rem", color: "var(--muted2)", fontFamily: "'Crimson Pro',serif", display: "flex", alignItems: "center", gap: 12 }}>
+                  {/* ── NOTE TAKER ── */}
+                  <div style={{ padding: "10px 14px", borderTop: "1px solid var(--border)", background: "#fafaf8" }}>
+                    <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.56rem", letterSpacing: "1.5px", color: "var(--muted)", marginBottom: 5 }}>NOTE</div>
+                    <textarea
+                      value={groupNote}
+                      onChange={e => updateNote(gr.key, e.target.value)}
+                      placeholder="Add a note about this group — why it's a dup, what to do with it, context…"
+                      rows={2}
+                      style={{ width: "100%", padding: "7px 10px", border: "1.5px solid var(--border)", borderRadius: 5, fontSize: "0.82rem", fontFamily: "'Crimson Pro',serif", color: "var(--text2)", background: "#fff", resize: "vertical", boxSizing: "border-box", outline: "none" }}
+                      onFocus={e => { e.currentTarget.style.borderColor = "var(--red)"; }}
+                      onBlur={e => { e.currentTarget.style.borderColor = "var(--border)"; }}
+                    />
+                  </div>
+                  <div style={{ padding: "7px 14px 9px", background: (gr.flag === "same-box" ? "#dc2626" : "#d97706") + "08", borderTop: "1px solid var(--border)", fontSize: "0.72rem", color: "var(--muted2)", fontFamily: "'Crimson Pro',serif", display: "flex", alignItems: "center", gap: 12 }}>
                     <span>
                       {gr.flag === "same-box"    && "⚠ Two or more copies share a box — likely a data entry error unless you own multiple copies."}
                       {gr.flag === "bought-twice" && "↗ Same book in different boxes — likely purchased more than once."}
