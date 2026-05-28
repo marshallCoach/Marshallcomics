@@ -287,8 +287,9 @@ function useInView(threshold = 0.1): [React.RefObject<HTMLDivElement | null>, bo
 type NavFn = (tab: string, params?: NavParams) => void;
 
 export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
-  const [statuses,    setStatuses]   = useState<Record<string, Status>>(loadStatuses);
-  const [openFlag,    setOpenFlag]   = useState<number | null>(null);
+  const [statuses,      setStatuses]    = useState<Record<string, Status>>(loadStatuses);
+  const [openFlag,      setOpenFlag]    = useState<number | null>(null);
+  const [showProgress,  setShowProgress]= useState(true);
   const [searchField, setSearchField]= useState("everything");
   const [searchVal,   setSearchVal]  = useState("");
   const [searchBox,   setSearchBox]  = useState("");
@@ -385,7 +386,12 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
       )}
 
       {/* ── Box Progress — animated fill ── */}
-      <section className="progress-section">
+      {showProgress && <section className="progress-section" style={{ position:"relative" }}>
+        <button
+          onClick={() => setShowProgress(false)}
+          style={{ position:"absolute", top:10, right:12, background:"none", border:"none", cursor:"pointer", color:"var(--muted)", fontSize:"1.1rem", lineHeight:1, padding:"2px 5px", borderRadius:4 }}
+          title="Dismiss"
+        >×</button>
         <div className="progress-header">
           <div>
             <span className="progress-title">BOX COLLECTION PROGRESS</span>
@@ -405,7 +411,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
           ))}
         </div>
         <div className="progress-sub">All {totalBoxes} boxes catalogued — complete ✓ · {COMPLETE_RUNS} runs finished cover-to-cover</div>
-      </section>
+      </section>}
 
       {/* ── Quick Search ── */}
       <section className="qs-section">
