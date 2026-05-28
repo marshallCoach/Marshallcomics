@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+import { useEffect, useState, useCallback } from "react";
+import { UPDATE_FIELDS, getComicFlag, setComicFlag, clearComicFlag } from "@/lib/comicFlags";
 
 export type DrawerComic = {
   Title: string;
@@ -32,16 +33,62 @@ export type DrawerComic = {
   Imprint?: string;
 };
 
-export default function ComicDrawer({ comic, onClose }: {
+export default function ComicDrawer({ comic, comicKey, onClose, onFlagChange }: {
   comic: DrawerComic | null;
+  comicKey?: string;
   onClose: () => void;
+  onFlagChange?: () => void;
 }) {
+  const [flagged,       setFlagged]       = useState(false);
+  const [selectedFields, setSelectedFields] = useState<string[]>([]);
+  const [showFields,    setShowFields]    = useState(false);
+
+  // Load flag state when comic changes
+  useEffect(() => {
+    if (!comicKey) { setFlagged(false); setSelectedFields([]); setShowFields(false); return; }
+    const existing = getComicFlag(comicKey);
+    if (existing !== null) {
+      setFlagged(true);
+      setSelectedFields(existing);
+      setShowFields(existing.length > 0);
+    } else {
+      setFlagged(false);
+      setSelectedFields([]);
+      setShowFields(false);
+    }
+  }, [comicKey]);
+
   useEffect(() => {
     if (!comic) return;
     const handler = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
   }, [comic, onClose]);
+
+  const toggleFlag = useCallback(() => {
+    if (!comicKey) return;
+    if (flagged) {
+      clearComicFlag(comicKey);
+      setFlagged(false);
+      setSelectedFields([]);
+      setShowFields(false);
+    } else {
+      setComicFlag(comicKey, []);
+      setFlagged(true);
+      setShowFields(true);
+    }
+    onFlagChange?.();
+  }, [comicKey, flagged, onFlagChange]);
+
+  const toggleField = useCallback((field: string) => {
+    if (!comicKey) return;
+    setSelectedFields(prev => {
+      const next = prev.includes(field) ? prev.filter(f => f !== field) : [...prev, field];
+      setComicFlag(comicKey, next);
+      onFlagChange?.();
+      return next;
+    });
+  }, [comicKey, onFlagChange]);
 
   if (!comic) return null;
 
@@ -83,11 +130,19 @@ export default function ComicDrawer({ comic, onClose }: {
         display:"flex", flexDirection:"column",
         animation:"drawerSlideIn 0.22s ease-out",
       }}>
+
         {/* Header strip */}
-        <div style={{ background:accentColor, padding:"14px 18px 12px", flexShrink:0 }}>
+        <div style={{ background: flagged ? "#92400e" : accentColor, padding:"14px 18px 12px", flexShrink:0, transition:"background 0.2s" }}>
           <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start" }}>
             <div style={{ flex:1, paddingRight:12 }}>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.3rem", letterSpacing:"2px", color:"#fff", lineHeight:1.1 }}>{comic.Title}</div>
+              <div style={{ display:"flex", alignItems:"center", gap:8 }}>
+                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.3rem", letterSpacing:"2px", color:"#fff", lineHeight:1.1 }}>{comic.Title}</div>
+                {flagged && (
+                  <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem", letterSpacing:"1.5px", background:"rgba(255,255,255,0.25)", color:"#fff", border:"1px solid rgba(255,255,255,0.4)", borderRadius:3, padding:"2px 7px", flexShrink:0 }}>
+                    UPDATE NEEDED{selectedFields.length > 0 ? ` · ${selectedFields.length}` : ""}
+                  </span>
+                )}
+              </div>
               <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem", letterSpacing:"1px", color:"rgba(255,255,255,0.8)", marginTop:4 }}>
                 {comic.Issue}
                 {comic.Volume && comic.Volume !== "1" && <span style={{ marginLeft:6, fontSize:"0.7rem", background:"rgba(255,255,255,0.2)", borderRadius:3, padding:"1px 6px" }}>Vol {comic.Volume}</span>}
@@ -161,6 +216,88 @@ export default function ComicDrawer({ comic, onClose }: {
               <div style={{ fontSize:"0.82rem", color:"var(--muted2)", lineHeight:1.5 }}>{comic.Seller_Notes}</div>
             </div>
           )}
+
+          {/* ── NEEDS UPDATE SECTION ── */}
+          {comicKey && (
+            <div style={{ marginTop:16, borderTop:"1.5px solid var(--border)", paddingTop:14 }}>
+              <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", marginBottom: flagged && showFields ? 12 : 0 }}>
+                <div>
+                  <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"2px", color: flagged ? "#d97706" : "var(--muted)", marginBottom:2 }}>
+                    DATA FLAG
+                  </div>
+                  <div style={{ fontSize:"0.75rem", color:"var(--muted2)", fontFamily:"'Crimson Pro',serif" }}>
+                    {flagged
+                      ? selectedFields.length > 0
+                        ? `${selectedFields.length} field${selectedFields.length === 1 ? "" : "s"} need updating`
+                        : "Flagged — select fields below"
+                      : "Mark this book's data as needing an update"}
+                  </div>
+                </div>
+                <button
+                  onClick={toggleFlag}
+                  style={{
+                    fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1.5px",
+                    padding:"7px 14px",
+                    border:`1.5px solid ${flagged ? "#d97706" : "var(--border)"}`,
+                    background: flagged ? "#d97706" : "var(--surface2)",
+                    color: flagged ? "#fff" : "var(--muted)",
+                    borderRadius:5, cursor:"pointer", transition:"all 0.15s", flexShrink:0,
+                  }}
+                >
+                  {flagged ? "✓ FLAGGED" : "+ NEEDS UPDATE"}
+                </button>
+              </div>
+
+              {/* Field selector — only when flagged */}
+              {flagged && (
+                <>
+                  <button
+                    onClick={() => setShowFields(v => !v)}
+                    style={{ background:"none", border:"none", cursor:"pointer", display:"flex", alignItems:"center", gap:5, padding:"4px 0", marginBottom:8 }}
+                  >
+                    <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1.5px", color:"var(--muted)" }}>
+                      {showFields ? "▲ HIDE FIELDS" : "▼ SELECT FIELDS NEEDING UPDATE"}
+                    </span>
+                    {selectedFields.length > 0 && (
+                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem", letterSpacing:"1px", color:"#d97706", background:"#fefce8", border:"1px solid #fcd34d", borderRadius:3, padding:"1px 6px" }}>
+                        {selectedFields.length} selected
+                      </span>
+                    )}
+                  </button>
+
+                  {showFields && (
+                    <div style={{ display:"flex", flexWrap:"wrap", gap:6 }}>
+                      {UPDATE_FIELDS.map(field => {
+                        const active = selectedFields.includes(field);
+                        return (
+                          <button
+                            key={field}
+                            onClick={() => toggleField(field)}
+                            style={{
+                              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1px",
+                              padding:"5px 10px",
+                              border:`1.5px solid ${active ? "#d97706" : "var(--border)"}`,
+                              background: active ? "#d97706" : "var(--surface2)",
+                              color: active ? "#fff" : "var(--muted2)",
+                              borderRadius:4, cursor:"pointer", transition:"all 0.1s",
+                            }}
+                          >{field}</button>
+                        );
+                      })}
+                    </div>
+                  )}
+
+                  {selectedFields.length > 0 && (
+                    <div style={{ marginTop:10, display:"flex", flexWrap:"wrap", gap:4 }}>
+                      {selectedFields.map(f => (
+                        <span key={f} style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1px", color:"#92400e", background:"#fef3c7", border:"1px solid #fcd34d", borderRadius:3, padding:"2px 8px" }}>{f}</span>
+                      ))}
+                    </div>
+                  )}
+                </>
+              )}
+            </div>
+          )}
         </div>
 
         {/* Footer CTA */}
@@ -175,7 +312,7 @@ export default function ComicDrawer({ comic, onClose }: {
           </a>
           <button
             onClick={onClose}
-            style={{ flex:1, padding:"9px 0", background:accentColor, border:"none", borderRadius:6, fontSize:"0.7rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", color:"#fff", cursor:"pointer" }}
+            style={{ flex:1, padding:"9px 0", background: flagged ? "#d97706" : accentColor, border:"none", borderRadius:6, fontSize:"0.7rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", color:"#fff", cursor:"pointer" }}
           >
             Close
           </button>
