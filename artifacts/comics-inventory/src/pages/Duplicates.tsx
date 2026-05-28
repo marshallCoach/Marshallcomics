@@ -1,12 +1,17 @@
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import { DATA3 } from "@/data/data3";
 import type { Comic } from "@/data/data3";
 
 const LS_DUP_RESOLVED = "brbDupResolved";
-function loadResolvedLS(): Set<string> {
-  try { return new Set(JSON.parse(localStorage.getItem(LS_DUP_RESOLVED) || "[]")); }
+const LS_NOT_DUP      = "brbNotDup";
+const LS_PLANNED      = "brbPlannedDup";
+function loadSetLS(key: string): Set<string> {
+  try { return new Set(JSON.parse(localStorage.getItem(key) || "[]")); }
   catch { return new Set(); }
 }
+const loadResolvedLS = () => loadSetLS(LS_DUP_RESOLVED);
+const loadNotDupLS   = () => loadSetLS(LS_NOT_DUP);
+const loadPlannedLS  = () => loadSetLS(LS_PLANNED);
 
 const comics = DATA3.comics;
 
@@ -82,19 +87,63 @@ export default function Duplicates() {
   const [openKey,  setOpenKey]  = useState<string | null>(null);
   const [showAll,  setShowAll]  = useState(false);
   const [view,     setView]     = useState<"standard" | "resolve">("standard");
-  const [resolved, setResolved] = useState<Set<string>>(() => loadResolvedLS());
+  const [resolved,   setResolved]   = useState<Set<string>>(() => loadResolvedLS());
+  const [notDup,     setNotDup]     = useState<Set<string>>(() => loadNotDupLS());
+  const [planned,    setPlanned]    = useState<Set<string>>(() => loadPlannedLS());
+  const [showOutput, setShowOutput] = useState(false);
+  const [copied,     setCopied]     = useState(false);
+  const outputRef = useRef<HTMLTextAreaElement>(null);
 
-  useEffect(() => {
-    localStorage.setItem(LS_DUP_RESOLVED, JSON.stringify([...resolved]));
-  }, [resolved]);
+  useEffect(() => { localStorage.setItem(LS_DUP_RESOLVED, JSON.stringify([...resolved])); }, [resolved]);
+  useEffect(() => { localStorage.setItem(LS_NOT_DUP,      JSON.stringify([...notDup]));   }, [notDup]);
+  useEffect(() => { localStorage.setItem(LS_PLANNED,      JSON.stringify([...planned]));  }, [planned]);
 
-  function toggleResolved(key: string) {
-    setResolved(prev => {
-      const next = new Set(prev);
-      if (next.has(key)) next.delete(key); else next.add(key);
-      return next;
-    });
+  function toggle(set: React.Dispatch<React.SetStateAction<Set<string>>>, key: string) {
+    set(prev => { const n = new Set(prev); n.has(key) ? n.delete(key) : n.add(key); return n; });
   }
+  function toggleResolved(key: string) { toggle(setResolved, key); }
+
+  // Per-copy key: groupKey + copy index
+  const ck = (grKey: string, ci: number) => `${grKey}|||${ci}`;
+
+  interface MarkedCopy { gr: DupGroup; ci: number; c: Comic; }
+  const notDupCopies = useMemo<MarkedCopy[]>(() =>
+    RAW_GROUPS.flatMap(gr => gr.copies.map((c, ci) => ({ gr, ci, c })).filter(m => notDup.has(ck(m.gr.key, m.ci)))),
+    [notDup]
+  );
+  const plannedCopies = useMemo<MarkedCopy[]>(() =>
+    RAW_GROUPS.flatMap(gr => gr.copies.map((c, ci) => ({ gr, ci, c })).filter(m => planned.has(ck(m.gr.key, m.ci)))),
+    [planned]
+  );
+
+  const totalMarked = notDupCopies.length + plannedCopies.length;
+
+  const outputText = useMemo(() => {
+    if (totalMarked === 0) return "";
+    const today = new Date().toLocaleDateString("en-US", { month:"long", day:"numeric", year:"numeric" });
+    const lines: string[] = [`DUPLICATE REVIEW — BlackReadBrown Comics`, `Reviewed: ${today}`, ``];
+    const fmtCopy = (m: MarkedCopy, i: number) => {
+      const { gr, ci, c } = m;
+      const base = `${i+1}. ${gr.title} ${gr.issue}${gr.volume ? ` Vol ${gr.volume}` : ""} · ${gr.publisher}${gr.year ? ` ${gr.year}` : ""} — Box ${c.Box}`;
+      const meta = [
+        `   Copy ${ci+1} of ${gr.copies.length}`,
+        c.Writer ? `W: ${c.Writer}` : "",
+        c.Artist ? `A: ${c.Artist}` : "",
+        c.Condition ? `Cond: ${c.Condition}` : "",
+      ].filter(Boolean).join(" · ");
+      return [base, meta, ``];
+    };
+    if (notDupCopies.length > 0) {
+      lines.push(`── NOT DUPLICATE (${notDupCopies.length}) ── confirmed intentional, leave as-is:`, ``);
+      notDupCopies.forEach((m, i) => lines.push(...fmtCopy(m, i)));
+    }
+    if (plannedCopies.length > 0) {
+      lines.push(`── PLANNED TO ADDRESS (${plannedCopies.length}) ── will sell / remove / resolve:`, ``);
+      plannedCopies.forEach((m, i) => lines.push(...fmtCopy(m, i)));
+    }
+    lines.push(`---`, `Total marked: ${totalMarked} copies`);
+    return lines.join("\n");
+  }, [notDupCopies, plannedCopies, totalMarked]);
 
   const filtered = useMemo(() => {
     let g = RAW_GROUPS;
@@ -324,7 +373,7 @@ export default function Duplicates() {
               {/* Row header */}
               <div
                 onClick={() => setOpenKey(isOpen ? null : gr.key)}
-                style={{ display: "flex", alignItems: "center", gap: 12, padding: "11px 14px", cursor: "pointer", userSelect: "none" }}
+                style={{ display: "flex", alignItems: "center", gap: 12, padding: "11px 14px", cursor: "pointer" }}
               >
                 {/* Copy count badge */}
                 <div style={{ flexShrink: 0, fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.3rem", color: cc, lineHeight: 1, minWidth: 28, textAlign: "center" }}>
@@ -332,8 +381,8 @@ export default function Duplicates() {
                   <div style={{ fontSize: "0.42rem", letterSpacing: "1.5px", color: "var(--muted)" }}>COPIES</div>
                 </div>
 
-                {/* Title */}
-                <div style={{ flex: 1, minWidth: 0 }}>
+                {/* Title — userSelect:text so titles can be copied */}
+                <div style={{ flex: 1, minWidth: 0, userSelect: "text" }}>
                   <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.95rem", letterSpacing: "1px", color: "var(--text)" }}>
                     {gr.title}
                   </span>
@@ -382,8 +431,8 @@ export default function Duplicates() {
                   <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.78rem" }}>
                     <thead>
                       <tr style={{ background: "var(--surface2)" }}>
-                        {["#", "Box", "Vol", "Writer", "Artist", "Condition", "Key", "Signed", "NM Value", "VF Value"].map(h => (
-                          <th key={h} style={{ padding: "7px 12px", textAlign: "left", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.6rem", letterSpacing: "2px", color: "var(--muted)", fontWeight: 600, whiteSpace: "nowrap", borderBottom: "1px solid var(--border)" }}>{h}</th>
+                        {["Not Dup", "Planned", "#", "Box", "Vol", "Writer", "Artist", "Condition", "Key", "Signed", "NM Value", "VF Value"].map(h => (
+                          <th key={h} style={{ padding: "7px 10px", textAlign: "left", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.6rem", letterSpacing: "2px", color: "var(--muted)", fontWeight: 600, whiteSpace: "nowrap", borderBottom: "1px solid var(--border)" }}>{h}</th>
                         ))}
                       </tr>
                     </thead>
@@ -393,7 +442,33 @@ export default function Duplicates() {
                         const isSigned = (c.Signed || "").toUpperCase() === "YES";
                         const boxDup = gr.copies.filter(x => x.Box === c.Box).length > 1;
                         return (
-                          <tr key={ci} style={{ background: boxDup ? "#fff8f8" : ci % 2 === 0 ? "var(--surface)" : "var(--surface2)", borderBottom: "1px solid var(--border)" }}>
+                          <tr key={ci} style={{ background: notDup.has(ck(gr.key,ci)) ? "#f0faf4" : planned.has(ck(gr.key,ci)) ? "#fefce8" : boxDup ? "#fff8f8" : ci % 2 === 0 ? "var(--surface)" : "var(--surface2)", borderBottom: "1px solid var(--border)" }}>
+                            {/* Not Dup checkbox */}
+                            <td style={{ padding: "6px 10px", textAlign: "center" }}>
+                              <button
+                                onClick={() => toggle(setNotDup, ck(gr.key, ci))}
+                                title="Mark this copy as Not a Duplicate"
+                                style={{
+                                  width: 20, height: 20, borderRadius: 3, border: `2px solid ${notDup.has(ck(gr.key,ci)) ? "#16a34a" : "var(--border)"}`,
+                                  background: notDup.has(ck(gr.key,ci)) ? "#16a34a" : "var(--surface2)",
+                                  cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", padding: 0, flexShrink: 0,
+                                }}>
+                                {notDup.has(ck(gr.key,ci)) && <span style={{ color:"#fff", fontSize:"0.6rem", lineHeight:1 }}>✓</span>}
+                              </button>
+                            </td>
+                            {/* Planned checkbox */}
+                            <td style={{ padding: "6px 10px", textAlign: "center" }}>
+                              <button
+                                onClick={() => toggle(setPlanned, ck(gr.key, ci))}
+                                title="Mark this copy as Planned to address"
+                                style={{
+                                  width: 20, height: 20, borderRadius: 3, border: `2px solid ${planned.has(ck(gr.key,ci)) ? "#d97706" : "var(--border)"}`,
+                                  background: planned.has(ck(gr.key,ci)) ? "#d97706" : "var(--surface2)",
+                                  cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", padding: 0, flexShrink: 0,
+                                }}>
+                                {planned.has(ck(gr.key,ci)) && <span style={{ color:"#fff", fontSize:"0.6rem", lineHeight:1 }}>✓</span>}
+                              </button>
+                            </td>
                             <td style={{ padding: "7px 12px", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.65rem", color: "var(--muted)" }}>#{ci + 1}</td>
                             <td style={{ padding: "7px 12px", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.78rem", color: "var(--red)" }}>
                               Box {c.Box}
@@ -447,6 +522,104 @@ export default function Duplicates() {
         </div>
       )}
       </>)}
+
+      {/* ── OUTPUT PANEL ── */}
+      {totalMarked > 0 && (
+        <div style={{ marginTop: 32, borderTop: "2px solid #16a34a40", paddingTop: 20 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 14, flexWrap: "wrap" }}>
+            <h2 style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.2rem", letterSpacing: "3px", color: "#16a34a", margin: 0 }}>
+              DUPLICATE REVIEW OUTPUT
+            </h2>
+            {notDupCopies.length > 0 && (
+              <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.65rem", letterSpacing: "1.5px", background: "#16a34a18", color: "#16a34a", border: "1px solid #16a34a40", borderRadius: 3, padding: "2px 8px" }}>
+                {notDupCopies.length} NOT DUP
+              </span>
+            )}
+            {plannedCopies.length > 0 && (
+              <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.65rem", letterSpacing: "1.5px", background: "#d9770618", color: "#d97706", border: "1px solid #d9770640", borderRadius: 3, padding: "2px 8px" }}>
+                {plannedCopies.length} PLANNED
+              </span>
+            )}
+            <div style={{ marginLeft: "auto", display: "flex", gap: 8 }}>
+              <button
+                onClick={() => setShowOutput(v => !v)}
+                style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.72rem", letterSpacing: "1.5px", padding: "7px 18px", border: "1.5px solid #16a34a", background: showOutput ? "#16a34a" : "none", color: showOutput ? "#fff" : "#16a34a", borderRadius: 4, cursor: "pointer" }}
+              >
+                {showOutput ? "HIDE OUTPUT" : "GENERATE OUTPUT"}
+              </button>
+              <button
+                onClick={() => { setNotDup(new Set()); setPlanned(new Set()); }}
+                style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.65rem", letterSpacing: "1px", padding: "7px 14px", border: "1px solid var(--border)", background: "none", color: "var(--muted)", borderRadius: 4, cursor: "pointer" }}
+              >
+                CLEAR ALL
+              </button>
+            </div>
+          </div>
+
+          {/* Marked copies summary list */}
+          <div style={{ display: "flex", flexDirection: "column", gap: 4, marginBottom: showOutput ? 16 : 0 }}>
+            {[
+              ...notDupCopies.map(m => ({ ...m, type: "not-dup" as const })),
+              ...plannedCopies.map(m => ({ ...m, type: "planned" as const })),
+            ].map((m, i) => (
+              <div key={`${m.type}-${m.gr.key}-${m.ci}`} style={{ display: "flex", alignItems: "center", gap: 10, padding: "7px 12px", background: m.type === "not-dup" ? "#f0faf4" : "#fefce8", border: `1px solid ${m.type === "not-dup" ? "#c6e8d0" : "#fcd34d"}`, borderRadius: 5, fontSize: "0.78rem" }}>
+                <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", color: "var(--muted)", minWidth: 20 }}>{i + 1}.</span>
+                <span style={{ fontFamily: "'Bebas Neue',sans-serif", color: "var(--text)", fontSize: "0.85rem" }}>{m.gr.title}</span>
+                <span style={{ color: "var(--red)", fontFamily: "'Bebas Neue',sans-serif" }}>{m.gr.issue}</span>
+                <span style={{ color: "var(--muted2)", fontSize: "0.72rem" }}>Box {m.c.Box} · Copy {m.ci+1}</span>
+                <span style={{ marginLeft: "auto", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.55rem", letterSpacing: "1px",
+                  color: m.type === "not-dup" ? "#16a34a" : "#d97706",
+                  background: m.type === "not-dup" ? "#16a34a18" : "#d9770618",
+                  border: `1px solid ${m.type === "not-dup" ? "#16a34a40" : "#d9770640"}`,
+                  borderRadius: 3, padding: "1px 6px" }}>
+                  {m.type === "not-dup" ? "NOT DUP" : "PLANNED"}
+                </span>
+                <button
+                  onClick={() => m.type === "not-dup" ? toggle(setNotDup, ck(m.gr.key, m.ci)) : toggle(setPlanned, ck(m.gr.key, m.ci))}
+                  style={{ background: "none", border: "none", color: "var(--muted)", cursor: "pointer", fontSize: "0.9rem", padding: "0 4px", lineHeight: 1 }}
+                  title="Remove"
+                >×</button>
+              </div>
+            ))}
+          </div>
+
+          {showOutput && (
+            <div style={{ position: "relative" }}>
+              <textarea
+                ref={outputRef}
+                readOnly
+                value={outputText}
+                style={{
+                  width: "100%", minHeight: 320, padding: "14px 16px",
+                  fontFamily: "monospace", fontSize: "0.8rem", lineHeight: 1.6,
+                  background: "#0f1a12", color: "#4ade80",
+                  border: "1.5px solid #1e3a22", borderRadius: 8,
+                  resize: "vertical", boxSizing: "border-box",
+                }}
+                onFocus={e => e.target.select()}
+              />
+              <button
+                onClick={() => {
+                  navigator.clipboard.writeText(outputText).then(() => {
+                    setCopied(true);
+                    setTimeout(() => setCopied(false), 2000);
+                  });
+                }}
+                style={{
+                  position: "absolute", top: 10, right: 10,
+                  fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.65rem", letterSpacing: "1.5px",
+                  padding: "5px 14px", border: `1.5px solid ${copied ? "#16a34a" : "#2d6a3f"}`,
+                  background: copied ? "#16a34a" : "#1e3a22", color: copied ? "#fff" : "#4ade80",
+                  borderRadius: 4, cursor: "pointer", transition: "all 0.2s",
+                }}
+              >
+                {copied ? "COPIED ✓" : "COPY"}
+              </button>
+            </div>
+          )}
+        </div>
+      )}
+
     </div>
   );
 }
