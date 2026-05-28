@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_(8)_1779991451708.xlsx  |  Generated: 2026-05-28
+// Source: comics_inventory_(9)_1780005571939.xlsx  |  Generated: 2026-05-28
 
 export interface Comic {
   Title: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -438,19 +438,19 @@ DeFalco wrote the 1st New Warriors appearance.`,
     Volume: `1`, Entry: `24`,
   },
   {
-    Title: `The Saga of the Original Human Torch`, Issue: `#3`, Publisher: ``,
-    Year: ``, Arc: ``, Key: ``,
-    Key_Reason: ``, First_App: ``,
+    Title: `Saga of the Original Human Torch`, Issue: `#3`, Publisher: ``,
+    Year: ``, Arc: ``, Key: `YES`,
+    Key_Reason: `Saga of the Original Human Torch #3 (1990) — Roy Thomas — CGC private signing deadline July 10 2026 — PRESS FIRST THEN SHIP`, First_App: ``,
     Writer: ``, Artist: ``,
     Signed: ``, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: ``, Value_NM: ``, Value_VF: ``,
     Category: ``, Era: ``, Universe: ``,
-    Seller_Notes: ``, Story_Pitch: ``,
+    Seller_Notes: `RESTORED — Roy Thomas CGC private signing — deadline July 10 2026. Press immediately, ship before deadline.`, Story_Pitch: ``,
     Content: ``, Platform: ``,
     Sales_Data: ``, Terrificon: ``,
     Cover_Artist: ``, Date_Added: ``,
-    Imprint: ``, Box: ``,
+    Imprint: ``, Box: `1`,
     Crossover: ``, Start_Bid: ``,
     Volume: `1`, Entry: ``,
   },
@@ -10275,7 +10275,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `598`,
   },
   {
-    Title: `Batman (The New 52)`, Issue: `#8`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#8`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `Batman New 52 — Night of the Owls`, Key: `NO`,
     Key_Reason: `Batman New 52 #8 — Night of the Owls`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Greg Capullo`,
@@ -10292,7 +10292,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `599`,
   },
   {
-    Title: `Batman (The New 52)`, Issue: `#9`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#9`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `Batman New 52 — Night of the Owls`, Key: `NO`,
     Key_Reason: `Batman New 52 #9 — Night of the Owls`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Greg Capullo`,
@@ -10309,7 +10309,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `600`,
   },
   {
-    Title: `Batman (The New 52)`, Issue: `#13`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#13`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `Batman New 52 — Death of the Family`, Key: `YES`,
     Key_Reason: `Death of the Family begins — Joker returns with most horrifying plan ever`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Greg Capullo`,
@@ -10326,7 +10326,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `601`,
   },
   {
-    Title: `Batman (The New 52)`, Issue: `#17`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#17`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `Batman New 52 — Death of the Family aftermath`, Key: `NO`,
     Key_Reason: `Batman New 52 #17 — Death of the Family aftermath`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Greg Capullo`,
@@ -10343,7 +10343,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `602`,
   },
   {
-    Title: `Batman (The New 52)`, Issue: `#21`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#21`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `Batman New 52 — Year Zero`, Key: `YES`,
     Key_Reason: `Batman: Year Zero begins — Snyder's New 52 Batman origin`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Greg Capullo`,
@@ -10360,7 +10360,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `603`,
   },
   {
-    Title: `Batman (The New 52)`, Issue: `#22`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#22`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `Batman New 52 — Year Zero`, Key: `NO`,
     Key_Reason: `Batman New 52 #22 — Year Zero`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Greg Capullo`,
@@ -10377,7 +10377,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `604`,
   },
   {
-    Title: `Batman (The New 52)`, Issue: `#23`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#23`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `Batman New 52 — Year Zero`, Key: `NO`,
     Key_Reason: `Batman New 52 #23 — Year Zero`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Greg Capullo`,
@@ -10394,7 +10394,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `605`,
   },
   {
-    Title: `Batman (The New 52)`, Issue: `#24`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#24`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `Batman New 52 — Year Zero`, Key: `NO`,
     Key_Reason: `Batman New 52 #24 — Year Zero`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Greg Capullo`,
@@ -10411,7 +10411,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `606`,
   },
   {
-    Title: `Batman (The New 52)`, Issue: `#25`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#25`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `Batman New 52 — Year Zero`, Key: `NO`,
     Key_Reason: `Batman New 52 #25 — Year Zero`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Greg Capullo`,
@@ -10428,7 +10428,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `607`,
   },
   {
-    Title: `Batman (The New 52)`, Issue: `#26`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#26`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `Batman New 52 — Year Zero`, Key: `NO`,
     Key_Reason: `Batman New 52 #26 — Year Zero`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Greg Capullo`,
@@ -10445,7 +10445,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `608`,
   },
   {
-    Title: `Batman (The New 52)`, Issue: `#27`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#27`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `Batman New 52 — Year Zero`, Key: `NO`,
     Key_Reason: `Batman New 52 #27 — Year Zero`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Greg Capullo`,
@@ -10462,7 +10462,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `609`,
   },
   {
-    Title: `Batman (The New 52)`, Issue: `#29`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#29`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `Batman New 52 — Endgame`, Key: `NO`,
     Key_Reason: `Batman New 52 #29 — Endgame`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Greg Capullo`,
@@ -10479,7 +10479,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `610`,
   },
   {
-    Title: `Batman (The New 52)`, Issue: `#30`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#30`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `Batman New 52 — Endgame`, Key: `NO`,
     Key_Reason: `Batman New 52 #30 — Endgame`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Greg Capullo`,
@@ -10496,7 +10496,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `611`,
   },
   {
-    Title: `Batman (The New 52)`, Issue: `#31`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#31`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `Batman New 52 — Endgame`, Key: `NO`,
     Key_Reason: `Batman New 52 #31 — Endgame`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Greg Capullo`,
@@ -10513,7 +10513,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `612`,
   },
   {
-    Title: `Batman (The New 52)`, Issue: `#32`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#32`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `Batman New 52 — Endgame`, Key: `NO`,
     Key_Reason: `Batman New 52 #32 — Endgame`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Greg Capullo`,
@@ -10530,7 +10530,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `613`,
   },
   {
-    Title: `Batman (The New 52)`, Issue: `#33`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#33`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `Batman New 52 — Endgame`, Key: `NO`,
     Key_Reason: `Batman New 52 #33 — Endgame`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Greg Capullo`,
@@ -10547,7 +10547,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `614`,
   },
   {
-    Title: `Batman Annual (The New 52)`, Issue: `#1`, Publisher: `DC`,
+    Title: `Batman Annual`, Issue: `#1`, Publisher: `DC`,
     Year: `2012`, Arc: `Night of the Owls`, Key: `YES`,
     Key_Reason: `1st appearance of Mr. Freeze in New 52 continuity — completely reimagined by Snyder/Tynion`, First_App: `Mr. Freeze (New 52 — reimagined origin)`,
     Writer: `Scott Snyder / James Tynion IV`, Artist: `Jason Fabok`,
@@ -10564,7 +10564,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `615`,
   },
   {
-    Title: `Batman and Robin (The New 52)`, Issue: `#5`, Publisher: `DC`,
+    Title: `Batman and Robin`, Issue: `#5`, Publisher: `DC`,
     Year: `2012–2015`, Arc: `Batman and Robin New 52`, Key: `YES`,
     Key_Reason: `Batman and Robin New 52 #5 — Death of the Family tie-in — Damian Wayne character development`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
@@ -10581,7 +10581,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `616`,
   },
   {
-    Title: `Batman and Robin (The New 52)`, Issue: `#6`, Publisher: `DC`,
+    Title: `Batman and Robin`, Issue: `#6`, Publisher: `DC`,
     Year: `2012–2015`, Arc: `Batman and Robin New 52`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #6.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
@@ -10598,7 +10598,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `617`,
   },
   {
-    Title: `Batman and Robin (The New 52)`, Issue: `#7`, Publisher: `DC`,
+    Title: `Batman and Robin`, Issue: `#7`, Publisher: `DC`,
     Year: `2012–2015`, Arc: `Batman and Robin New 52`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #7.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
@@ -10615,7 +10615,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `618`,
   },
   {
-    Title: `Batman and Robin (The New 52)`, Issue: `#8`, Publisher: `DC`,
+    Title: `Batman and Robin`, Issue: `#8`, Publisher: `DC`,
     Year: `2012–2015`, Arc: `Batman and Robin New 52`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #8.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
@@ -10632,7 +10632,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `619`,
   },
   {
-    Title: `Batman and Robin (The New 52)`, Issue: `#9`, Publisher: `DC`,
+    Title: `Batman and Robin`, Issue: `#9`, Publisher: `DC`,
     Year: `2012–2015`, Arc: `Batman and Robin New 52`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #9.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
@@ -10649,7 +10649,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `620`,
   },
   {
-    Title: `Batman and Robin (The New 52)`, Issue: `#10`, Publisher: `DC`,
+    Title: `Batman and Robin`, Issue: `#10`, Publisher: `DC`,
     Year: `2012–2015`, Arc: `Batman and Robin New 52`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #10.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
@@ -10666,7 +10666,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `621`,
   },
   {
-    Title: `Batman and Robin (The New 52)`, Issue: `#11`, Publisher: `DC`,
+    Title: `Batman and Robin`, Issue: `#11`, Publisher: `DC`,
     Year: `2012–2015`, Arc: `Batman and Robin New 52`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #11.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
@@ -10683,7 +10683,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `622`,
   },
   {
-    Title: `Batman and Robin (The New 52)`, Issue: `#12`, Publisher: `DC`,
+    Title: `Batman and Robin`, Issue: `#12`, Publisher: `DC`,
     Year: `2012–2015`, Arc: `Batman and Robin New 52`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #12.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
@@ -10700,7 +10700,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `623`,
   },
   {
-    Title: `Batman and Robin (The New 52)`, Issue: `#13`, Publisher: `DC`,
+    Title: `Batman and Robin`, Issue: `#13`, Publisher: `DC`,
     Year: `2012–2015`, Arc: `Death of the Family`, Key: `YES`,
     Key_Reason: `Batman and Robin New 52 #13 — Death of the Family chapter — Joker targets Robin directly`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
@@ -10717,7 +10717,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `624`,
   },
   {
-    Title: `Batman and Robin (The New 52)`, Issue: `#14`, Publisher: `DC`,
+    Title: `Batman and Robin`, Issue: `#14`, Publisher: `DC`,
     Year: `2012–2015`, Arc: `Death of the Family`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #14.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
@@ -10734,7 +10734,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `625`,
   },
   {
-    Title: `Batman and Robin (The New 52)`, Issue: `#15`, Publisher: `DC`,
+    Title: `Batman and Robin`, Issue: `#15`, Publisher: `DC`,
     Year: `2012–2015`, Arc: `Death of the Family`, Key: `YES`,
     Key_Reason: `Batman and Robin New 52 #15 — Death of the Family finale tie-in — key arc conclusion issue`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
@@ -10751,7 +10751,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `626`,
   },
   {
-    Title: `Batman and Robin (The New 52)`, Issue: `#16`, Publisher: `DC`,
+    Title: `Batman and Robin`, Issue: `#16`, Publisher: `DC`,
     Year: `2012–2015`, Arc: `Death of the Family`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #16.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
@@ -10768,7 +10768,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `627`,
   },
   {
-    Title: `Batman and Robin (The New 52)`, Issue: `#17`, Publisher: `DC`,
+    Title: `Batman and Robin`, Issue: `#17`, Publisher: `DC`,
     Year: `2012–2015`, Arc: `Batman and Robin New 52`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #17.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
@@ -10785,7 +10785,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `628`,
   },
   {
-    Title: `Batman and Robin (The New 52)`, Issue: `#18`, Publisher: `DC`,
+    Title: `Batman and Robin`, Issue: `#18`, Publisher: `DC`,
     Year: `2012–2015`, Arc: `Batman and Robin New 52`, Key: `YES`,
     Key_Reason: `Batman and Robin New 52 #18 — Requiem: Damian Wayne is dead — wordless silent issue — one of the most affecting single issues of the New 52 era`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
@@ -10802,7 +10802,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `629`,
   },
   {
-    Title: `Batman and Robin (The New 52)`, Issue: `#19`, Publisher: `DC`,
+    Title: `Batman and Robin`, Issue: `#19`, Publisher: `DC`,
     Year: `2012–2015`, Arc: `Batman and Robin New 52`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #19. Batman and Red Robin guest-star issue.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
@@ -10819,7 +10819,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `630`,
   },
   {
-    Title: `Batman and Robin (The New 52)`, Issue: `#20`, Publisher: `DC`,
+    Title: `Batman and Robin`, Issue: `#20`, Publisher: `DC`,
     Year: `2012–2015`, Arc: `Batman and Robin New 52`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #20. Batman and Red Hood guest-star issue.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
@@ -10836,7 +10836,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `631`,
   },
   {
-    Title: `Batman and Robin (The New 52)`, Issue: `#21`, Publisher: `DC`,
+    Title: `Batman and Robin`, Issue: `#21`, Publisher: `DC`,
     Year: `2012–2015`, Arc: `Batman and Robin New 52`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #21. Batman and Batgirl guest-star issue.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
@@ -10853,7 +10853,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `632`,
   },
   {
-    Title: `Batman and Robin (The New 52)`, Issue: `#22`, Publisher: `DC`,
+    Title: `Batman and Robin`, Issue: `#22`, Publisher: `DC`,
     Year: `2012–2015`, Arc: `Batman and Robin New 52`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #22. Batman and Catwoman guest-star issue.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
@@ -10870,7 +10870,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `633`,
   },
   {
-    Title: `Batman and Robin (The New 52)`, Issue: `#23`, Publisher: `DC`,
+    Title: `Batman and Robin`, Issue: `#23`, Publisher: `DC`,
     Year: `2012–2015`, Arc: `Batman and Robin New 52`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #23. Batman and Nightwing guest-star issue.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
@@ -10887,7 +10887,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `634`,
   },
   {
-    Title: `Batman and Robin (The New 52)`, Issue: `#29`, Publisher: `DC`,
+    Title: `Batman and Robin`, Issue: `#29`, Publisher: `DC`,
     Year: `2012–2015`, Arc: `Batman and Robin New 52`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #29. Batman and Aquaman guest-star issue.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
@@ -10904,7 +10904,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `635`,
   },
   {
-    Title: `Batman and Robin (The New 52)`, Issue: `#30`, Publisher: `DC`,
+    Title: `Batman and Robin`, Issue: `#30`, Publisher: `DC`,
     Year: `2012–2015`, Arc: `Batman and Robin New 52`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #30. Batman and Wonder Woman guest-star issue.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
@@ -10921,7 +10921,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `636`,
   },
   {
-    Title: `Batman and Robin (The New 52)`, Issue: `#33`, Publisher: `DC`,
+    Title: `Batman and Robin`, Issue: `#33`, Publisher: `DC`,
     Year: `2012–2015`, Arc: `Robin Rises`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #33.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
@@ -10938,7 +10938,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `637`,
   },
   {
-    Title: `Batman and Robin (The New 52)`, Issue: `#34`, Publisher: `DC`,
+    Title: `Batman and Robin`, Issue: `#34`, Publisher: `DC`,
     Year: `2012–2015`, Arc: `Robin Rises`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #34.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
@@ -10955,7 +10955,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `638`,
   },
   {
-    Title: `Batman and Robin (The New 52)`, Issue: `#35`, Publisher: `DC`,
+    Title: `Batman and Robin`, Issue: `#35`, Publisher: `DC`,
     Year: `2012–2015`, Arc: `Robin Rises`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #35.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
@@ -10972,7 +10972,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `639`,
   },
   {
-    Title: `Batman and Robin (The New 52)`, Issue: `#36`, Publisher: `DC`,
+    Title: `Batman and Robin`, Issue: `#36`, Publisher: `DC`,
     Year: `2012–2015`, Arc: `Robin Rises`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #36.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
@@ -10989,7 +10989,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `640`,
   },
   {
-    Title: `Batman and Robin (The New 52)`, Issue: `#37`, Publisher: `DC`,
+    Title: `Batman and Robin`, Issue: `#37`, Publisher: `DC`,
     Year: `2012–2015`, Arc: `Robin Rises`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #37.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
@@ -11006,7 +11006,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `641`,
   },
   {
-    Title: `Batman and Robin (The New 52)`, Issue: `#38`, Publisher: `DC`,
+    Title: `Batman and Robin`, Issue: `#38`, Publisher: `DC`,
     Year: `2012–2015`, Arc: `Robin Rises`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #38.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
@@ -11023,7 +11023,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `642`,
   },
   {
-    Title: `Batman and Robin (The New 52)`, Issue: `#39`, Publisher: `DC`,
+    Title: `Batman and Robin`, Issue: `#39`, Publisher: `DC`,
     Year: `2012–2015`, Arc: `Robin Rises`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #39.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
@@ -11040,7 +11040,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `643`,
   },
   {
-    Title: `Batman and Robin (The New 52)`, Issue: `#40`, Publisher: `DC`,
+    Title: `Batman and Robin`, Issue: `#40`, Publisher: `DC`,
     Year: `2012–2015`, Arc: `Robin Rises`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #40.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
@@ -11057,7 +11057,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `644`,
   },
   {
-    Title: `Batman and Robin (The New 52)`, Issue: `#4.9`, Publisher: `DC`,
+    Title: `Batman and Robin`, Issue: `#4.9`, Publisher: `DC`,
     Year: `2013–2015`, Arc: `Futures End tie-in`, Key: `YES`,
     Key_Reason: `Futures End lenticular 3D cover — DC line-wide September 2014 Futures End event`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
@@ -11074,7 +11074,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `645`,
   },
   {
-    Title: `Batman and Robin (The New 52)`, Issue: `#Annual #1`, Publisher: `DC`,
+    Title: `Batman and Robin`, Issue: `#Annual #1`, Publisher: `DC`,
     Year: `2013–2015`, Arc: `Batman and Robin Annual #1`, Key: `NO`,
     Key_Reason: `Batman and Robin Annual #1`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
@@ -11091,7 +11091,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `646`,
   },
   {
-    Title: `Batman and Robin (The New 52)`, Issue: `#Annual #2`, Publisher: `DC`,
+    Title: `Batman and Robin`, Issue: `#Annual #2`, Publisher: `DC`,
     Year: `2013–2015`, Arc: `Batman and Robin Annual #2`, Key: `NO`,
     Key_Reason: `Batman and Robin Annual #2`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
@@ -11108,7 +11108,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `647`,
   },
   {
-    Title: `Batman and Robin (The New 52)`, Issue: `#Annual #3`, Publisher: `DC`,
+    Title: `Batman and Robin`, Issue: `#Annual #3`, Publisher: `DC`,
     Year: `2013–2015`, Arc: `Batman and Robin Annual #3`, Key: `NO`,
     Key_Reason: `Batman and Robin Annual #3`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
@@ -11142,7 +11142,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `649`,
   },
   {
-    Title: `Batman/Superman (The New 52)`, Issue: `#2`, Publisher: `DC`,
+    Title: `Batman/Superman`, Issue: `#2`, Publisher: `DC`,
     Year: `2013–2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
     Key_Reason: `Greg Pak's Batman/Superman New 52 run #2`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Jae Lee / Ardian Syaf`,
@@ -11159,7 +11159,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `650`,
   },
   {
-    Title: `Batman/Superman (The New 52)`, Issue: `#3`, Publisher: `DC`,
+    Title: `Batman/Superman`, Issue: `#3`, Publisher: `DC`,
     Year: `2013–2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
     Key_Reason: `Greg Pak's Batman/Superman New 52 run #3`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Jae Lee / Ardian Syaf`,
@@ -11176,7 +11176,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `651`,
   },
   {
-    Title: `Batman/Superman (The New 52)`, Issue: `#4`, Publisher: `DC`,
+    Title: `Batman/Superman`, Issue: `#4`, Publisher: `DC`,
     Year: `2013–2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
     Key_Reason: `Greg Pak's Batman/Superman New 52 run #4`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Jae Lee / Ardian Syaf`,
@@ -11193,7 +11193,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `652`,
   },
   {
-    Title: `Batman/Superman (The New 52)`, Issue: `#5`, Publisher: `DC`,
+    Title: `Batman/Superman`, Issue: `#5`, Publisher: `DC`,
     Year: `2013–2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
     Key_Reason: `Greg Pak's Batman/Superman New 52 run #5`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Jae Lee / Ardian Syaf`,
@@ -11210,7 +11210,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `653`,
   },
   {
-    Title: `Batman/Superman (The New 52)`, Issue: `#6`, Publisher: `DC`,
+    Title: `Batman/Superman`, Issue: `#6`, Publisher: `DC`,
     Year: `2013–2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
     Key_Reason: `Greg Pak's Batman/Superman New 52 run #6`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Jae Lee / Ardian Syaf`,
@@ -11227,7 +11227,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `654`,
   },
   {
-    Title: `Batman/Superman (The New 52)`, Issue: `#7`, Publisher: `DC`,
+    Title: `Batman/Superman`, Issue: `#7`, Publisher: `DC`,
     Year: `2013–2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
     Key_Reason: `Greg Pak's Batman/Superman New 52 run #7`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Jae Lee / Ardian Syaf`,
@@ -11244,7 +11244,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `655`,
   },
   {
-    Title: `Batman/Superman (The New 52)`, Issue: `#8`, Publisher: `DC`,
+    Title: `Batman/Superman`, Issue: `#8`, Publisher: `DC`,
     Year: `2013–2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
     Key_Reason: `Greg Pak's Batman/Superman New 52 run #8`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Jae Lee / Ardian Syaf`,
@@ -11261,7 +11261,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `656`,
   },
   {
-    Title: `Batman/Superman (The New 52)`, Issue: `#9`, Publisher: `DC`,
+    Title: `Batman/Superman`, Issue: `#9`, Publisher: `DC`,
     Year: `2013–2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
     Key_Reason: `Greg Pak's Batman/Superman New 52 run #9`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Jae Lee / Ardian Syaf`,
@@ -11278,7 +11278,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `657`,
   },
   {
-    Title: `Batman/Superman (The New 52)`, Issue: `#10`, Publisher: `DC`,
+    Title: `Batman/Superman`, Issue: `#10`, Publisher: `DC`,
     Year: `2013–2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
     Key_Reason: `Greg Pak's Batman/Superman New 52 run #10`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Jae Lee / Ardian Syaf`,
@@ -11295,7 +11295,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `658`,
   },
   {
-    Title: `Batman/Superman (The New 52)`, Issue: `#12`, Publisher: `DC`,
+    Title: `Batman/Superman`, Issue: `#12`, Publisher: `DC`,
     Year: `2013–2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
     Key_Reason: `Greg Pak's Batman/Superman New 52 run #12`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Jae Lee / Ardian Syaf`,
@@ -11312,7 +11312,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `659`,
   },
   {
-    Title: `Batman/Superman (The New 52)`, Issue: `#13`, Publisher: `DC`,
+    Title: `Batman/Superman`, Issue: `#13`, Publisher: `DC`,
     Year: `2013–2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
     Key_Reason: `Greg Pak's Batman/Superman New 52 run #13`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Jae Lee / Ardian Syaf`,
@@ -11329,7 +11329,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `660`,
   },
   {
-    Title: `Batman/Superman (The New 52)`, Issue: `#15`, Publisher: `DC`,
+    Title: `Batman/Superman`, Issue: `#15`, Publisher: `DC`,
     Year: `2013–2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
     Key_Reason: `Greg Pak's Batman/Superman New 52 run #15`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Jae Lee / Ardian Syaf`,
@@ -11346,7 +11346,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `661`,
   },
   {
-    Title: `Batman/Superman (The New 52)`, Issue: `#16`, Publisher: `DC`,
+    Title: `Batman/Superman`, Issue: `#16`, Publisher: `DC`,
     Year: `2013–2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
     Key_Reason: `Greg Pak's Batman/Superman New 52 run #16`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Jae Lee / Ardian Syaf`,
@@ -11363,7 +11363,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `662`,
   },
   {
-    Title: `Batman/Superman (The New 52)`, Issue: `#17`, Publisher: `DC`,
+    Title: `Batman/Superman`, Issue: `#17`, Publisher: `DC`,
     Year: `2013–2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
     Key_Reason: `Greg Pak's Batman/Superman New 52 run #17`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Jae Lee / Ardian Syaf`,
@@ -11380,7 +11380,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `663`,
   },
   {
-    Title: `Batman/Superman (The New 52)`, Issue: `#20`, Publisher: `DC`,
+    Title: `Batman/Superman`, Issue: `#20`, Publisher: `DC`,
     Year: `2013–2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
     Key_Reason: `Greg Pak's Batman/Superman New 52 run #20`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Jae Lee / Ardian Syaf`,
@@ -11397,7 +11397,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `664`,
   },
   {
-    Title: `Batman/Superman (The New 52)`, Issue: `#23`, Publisher: `DC`,
+    Title: `Batman/Superman`, Issue: `#23`, Publisher: `DC`,
     Year: `2013–2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
     Key_Reason: `Greg Pak's Batman/Superman New 52 run #23`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Jae Lee / Ardian Syaf`,
@@ -11414,7 +11414,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `665`,
   },
   {
-    Title: `Batman/Superman (The New 52)`, Issue: `#24`, Publisher: `DC`,
+    Title: `Batman/Superman`, Issue: `#24`, Publisher: `DC`,
     Year: `2013–2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
     Key_Reason: `Greg Pak's Batman/Superman New 52 run #24`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Jae Lee / Ardian Syaf`,
@@ -11431,7 +11431,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `666`,
   },
   {
-    Title: `Batman/Superman (The New 52)`, Issue: `#26`, Publisher: `DC`,
+    Title: `Batman/Superman`, Issue: `#26`, Publisher: `DC`,
     Year: `2013–2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
     Key_Reason: `Greg Pak's Batman/Superman New 52 run #26`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Jae Lee / Ardian Syaf`,
@@ -11448,7 +11448,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `667`,
   },
   {
-    Title: `Batman/Superman Annual (The New 52)`, Issue: `#1`, Publisher: `DC`,
+    Title: `Batman/Superman Annual`, Issue: `#1`, Publisher: `DC`,
     Year: `2014`, Arc: `Batman/Superman New 52`, Key: `NO`,
     Key_Reason: `Annual tie-in to Pak's B/S run`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Various`,
@@ -12060,7 +12060,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `703`,
   },
   {
-    Title: `Superboy (The New 52)`, Issue: `#4`, Publisher: `DC`,
+    Title: `Superboy`, Issue: `#4`, Publisher: `DC`,
     Year: `2012`, Arc: `Superboy New 52`, Key: `NO`,
     Key_Reason: `Superboy New 52 #4 by Scott Lobdell`, First_App: ``,
     Writer: `Scott Lobdell`, Artist: `RB Silva`,
@@ -12077,7 +12077,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `704`,
   },
   {
-    Title: `Superboy (The New 52)`, Issue: `#5`, Publisher: `DC`,
+    Title: `Superboy`, Issue: `#5`, Publisher: `DC`,
     Year: `2012`, Arc: `Superboy New 52`, Key: `NO`,
     Key_Reason: `Superboy New 52 #5 by Scott Lobdell`, First_App: ``,
     Writer: `Scott Lobdell`, Artist: `RB Silva`,
@@ -12094,7 +12094,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `705`,
   },
   {
-    Title: `Superboy (The New 52)`, Issue: `#6`, Publisher: `DC`,
+    Title: `Superboy`, Issue: `#6`, Publisher: `DC`,
     Year: `2012`, Arc: `Superboy New 52`, Key: `NO`,
     Key_Reason: `Superboy New 52 #6 by Scott Lobdell`, First_App: ``,
     Writer: `Scott Lobdell`, Artist: `RB Silva`,
@@ -12111,7 +12111,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `706`,
   },
   {
-    Title: `Superboy (The New 52)`, Issue: `#7`, Publisher: `DC`,
+    Title: `Superboy`, Issue: `#7`, Publisher: `DC`,
     Year: `2012`, Arc: `Superboy New 52`, Key: `NO`,
     Key_Reason: `Superboy New 52 #7 by Scott Lobdell`, First_App: ``,
     Writer: `Scott Lobdell`, Artist: `RB Silva`,
@@ -12128,7 +12128,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `707`,
   },
   {
-    Title: `Supergirl (The New 52)`, Issue: `#5`, Publisher: `DC`,
+    Title: `Supergirl`, Issue: `#5`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `Supergirl New 52`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #5.`, First_App: ``,
     Writer: `Michael Green / Mike Johnson`, Artist: `Mahmud Asrar`,
@@ -12145,7 +12145,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `708`,
   },
   {
-    Title: `Supergirl (The New 52)`, Issue: `#6`, Publisher: `DC`,
+    Title: `Supergirl`, Issue: `#6`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `Supergirl New 52`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #6.`, First_App: ``,
     Writer: `Michael Green / Mike Johnson`, Artist: `Mahmud Asrar`,
@@ -12162,7 +12162,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `709`,
   },
   {
-    Title: `Supergirl (The New 52)`, Issue: `#7`, Publisher: `DC`,
+    Title: `Supergirl`, Issue: `#7`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `Supergirl New 52`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #7.`, First_App: ``,
     Writer: `Michael Green / Mike Johnson`, Artist: `Mahmud Asrar`,
@@ -12179,7 +12179,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `710`,
   },
   {
-    Title: `Supergirl (The New 52)`, Issue: `#8`, Publisher: `DC`,
+    Title: `Supergirl`, Issue: `#8`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `Supergirl New 52`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #8.`, First_App: ``,
     Writer: `Michael Green / Mike Johnson`, Artist: `Mahmud Asrar`,
@@ -12196,7 +12196,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `711`,
   },
   {
-    Title: `Supergirl (The New 52)`, Issue: `#9`, Publisher: `DC`,
+    Title: `Supergirl`, Issue: `#9`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `Supergirl New 52`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #9.`, First_App: ``,
     Writer: `Michael Green / Mike Johnson`, Artist: `Mahmud Asrar`,
@@ -12213,7 +12213,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `712`,
   },
   {
-    Title: `Supergirl (The New 52)`, Issue: `#10`, Publisher: `DC`,
+    Title: `Supergirl`, Issue: `#10`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `Supergirl New 52`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #10.`, First_App: ``,
     Writer: `Michael Green / Mike Johnson`, Artist: `Mahmud Asrar`,
@@ -12230,7 +12230,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `713`,
   },
   {
-    Title: `Supergirl (The New 52)`, Issue: `#11`, Publisher: `DC`,
+    Title: `Supergirl`, Issue: `#11`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `Supergirl New 52`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #11.`, First_App: ``,
     Writer: `Michael Green / Mike Johnson`, Artist: `Mahmud Asrar`,
@@ -12247,7 +12247,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `714`,
   },
   {
-    Title: `Supergirl (The New 52)`, Issue: `#12`, Publisher: `DC`,
+    Title: `Supergirl`, Issue: `#12`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `Supergirl New 52`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #12.`, First_App: ``,
     Writer: `Michael Green / Mike Johnson`, Artist: `Mahmud Asrar`,
@@ -12264,7 +12264,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `715`,
   },
   {
-    Title: `Supergirl (The New 52)`, Issue: `#13`, Publisher: `DC`,
+    Title: `Supergirl`, Issue: `#13`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `H'El on Earth`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #13.`, First_App: ``,
     Writer: `Michael Green / Mike Johnson`, Artist: `Mahmud Asrar`,
@@ -12281,7 +12281,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `716`,
   },
   {
-    Title: `Supergirl (The New 52)`, Issue: `#14`, Publisher: `DC`,
+    Title: `Supergirl`, Issue: `#14`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `H'El on Earth`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #14. Superman/Krypton crossover issue.`, First_App: ``,
     Writer: `Tony Bedard`, Artist: `Mahmud Asrar`,
@@ -12298,7 +12298,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `717`,
   },
   {
-    Title: `Supergirl (The New 52)`, Issue: `#15`, Publisher: `DC`,
+    Title: `Supergirl`, Issue: `#15`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `H'El on Earth`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #15.`, First_App: ``,
     Writer: `Tony Bedard`, Artist: `Mahmud Asrar`,
@@ -12315,7 +12315,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `718`,
   },
   {
-    Title: `Supergirl (The New 52)`, Issue: `#16`, Publisher: `DC`,
+    Title: `Supergirl`, Issue: `#16`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `H'El on Earth`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #16.`, First_App: ``,
     Writer: `Tony Bedard`, Artist: `Mahmud Asrar`,
@@ -12332,7 +12332,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `719`,
   },
   {
-    Title: `Supergirl (The New 52)`, Issue: `#17`, Publisher: `DC`,
+    Title: `Supergirl`, Issue: `#17`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `H'El on Earth`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #17.`, First_App: ``,
     Writer: `Tony Bedard`, Artist: `Mahmud Asrar`,
@@ -12349,7 +12349,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `720`,
   },
   {
-    Title: `Supergirl (The New 52)`, Issue: `#18`, Publisher: `DC`,
+    Title: `Supergirl`, Issue: `#18`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `Supergirl New 52`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #18.`, First_App: ``,
     Writer: `Tony Bedard`, Artist: `Mahmud Asrar`,
@@ -12366,7 +12366,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `721`,
   },
   {
-    Title: `Supergirl (The New 52)`, Issue: `#19`, Publisher: `DC`,
+    Title: `Supergirl`, Issue: `#19`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `Supergirl New 52`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #19.`, First_App: ``,
     Writer: `Tony Bedard`, Artist: `Mahmud Asrar`,
@@ -12383,7 +12383,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `722`,
   },
   {
-    Title: `Supergirl (The New 52)`, Issue: `#20`, Publisher: `DC`,
+    Title: `Supergirl`, Issue: `#20`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `Supergirl New 52`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #20.`, First_App: ``,
     Writer: `Various`, Artist: `Mahmud Asrar`,
@@ -12400,7 +12400,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `723`,
   },
   {
-    Title: `Supergirl (The New 52)`, Issue: `#21`, Publisher: `DC`,
+    Title: `Supergirl`, Issue: `#21`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `Supergirl New 52`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #21.`, First_App: ``,
     Writer: `Various`, Artist: `Mahmud Asrar`,
@@ -12417,7 +12417,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `724`,
   },
   {
-    Title: `Supergirl (The New 52)`, Issue: `#22`, Publisher: `DC`,
+    Title: `Supergirl`, Issue: `#22`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `Supergirl New 52`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #22.`, First_App: ``,
     Writer: `Various`, Artist: `Mahmud Asrar`,
@@ -12434,7 +12434,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `725`,
   },
   {
-    Title: `Supergirl (The New 52)`, Issue: `#24`, Publisher: `DC`,
+    Title: `Supergirl`, Issue: `#24`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `Supergirl New 52`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #24.`, First_App: ``,
     Writer: `Various`, Artist: `Mahmud Asrar`,
@@ -12740,7 +12740,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `743`,
   },
   {
-    Title: `Wonder Woman (G. Willow Wilson)`, Issue: `#60`, Publisher: `DC`,
+    Title: `Wonder Woman`, Issue: `#60`, Publisher: `DC`,
     Year: `2019`, Arc: `G. Willow Wilson Wonder Woman run`, Key: `NO`,
     Key_Reason: `WW #60 — G. Willow Wilson; landmark feminist WW run`, First_App: ``,
     Writer: `G. Willow Wilson`, Artist: `Xermanico / Emanuela Lupacchino`,
@@ -12757,7 +12757,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `744`,
   },
   {
-    Title: `Wonder Woman (G. Willow Wilson)`, Issue: `#61`, Publisher: `DC`,
+    Title: `Wonder Woman`, Issue: `#61`, Publisher: `DC`,
     Year: `2019`, Arc: `G. Willow Wilson Wonder Woman run`, Key: `NO`,
     Key_Reason: `WW #61 — G. Willow Wilson; landmark feminist WW run`, First_App: ``,
     Writer: `G. Willow Wilson`, Artist: `Xermanico / Emanuela Lupacchino`,
@@ -12774,7 +12774,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `745`,
   },
   {
-    Title: `Wonder Woman (G. Willow Wilson)`, Issue: `#62`, Publisher: `DC`,
+    Title: `Wonder Woman`, Issue: `#62`, Publisher: `DC`,
     Year: `2019`, Arc: `G. Willow Wilson Wonder Woman run`, Key: `NO`,
     Key_Reason: `WW #62 — G. Willow Wilson; landmark feminist WW run`, First_App: ``,
     Writer: `G. Willow Wilson`, Artist: `Xermanico / Emanuela Lupacchino`,
@@ -12791,7 +12791,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `746`,
   },
   {
-    Title: `Wonder Woman (G. Willow Wilson)`, Issue: `#63`, Publisher: `DC`,
+    Title: `Wonder Woman`, Issue: `#63`, Publisher: `DC`,
     Year: `2019`, Arc: `G. Willow Wilson Wonder Woman run`, Key: `NO`,
     Key_Reason: `WW #63 — G. Willow Wilson; landmark feminist WW run`, First_App: ``,
     Writer: `G. Willow Wilson`, Artist: `Xermanico / Emanuela Lupacchino`,
@@ -12808,7 +12808,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `747`,
   },
   {
-    Title: `Wonder Woman (G. Willow Wilson)`, Issue: `#64`, Publisher: `DC`,
+    Title: `Wonder Woman`, Issue: `#64`, Publisher: `DC`,
     Year: `2019`, Arc: `G. Willow Wilson Wonder Woman run`, Key: `NO`,
     Key_Reason: `WW #64 — G. Willow Wilson; landmark feminist WW run`, First_App: ``,
     Writer: `G. Willow Wilson`, Artist: `Xermanico / Emanuela Lupacchino`,
@@ -12825,7 +12825,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `748`,
   },
   {
-    Title: `Wonder Woman (G. Willow Wilson)`, Issue: `#65`, Publisher: `DC`,
+    Title: `Wonder Woman`, Issue: `#65`, Publisher: `DC`,
     Year: `2019`, Arc: `G. Willow Wilson Wonder Woman run`, Key: `NO`,
     Key_Reason: `WW #65 — G. Willow Wilson; landmark feminist WW run`, First_App: ``,
     Writer: `G. Willow Wilson`, Artist: `Xermanico / Emanuela Lupacchino`,
@@ -12842,7 +12842,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `749`,
   },
   {
-    Title: `Wonder Woman (G. Willow Wilson)`, Issue: `#66`, Publisher: `DC`,
+    Title: `Wonder Woman`, Issue: `#66`, Publisher: `DC`,
     Year: `2019`, Arc: `G. Willow Wilson Wonder Woman run`, Key: `NO`,
     Key_Reason: `WW #66 — G. Willow Wilson; landmark feminist WW run`, First_App: ``,
     Writer: `G. Willow Wilson`, Artist: `Xermanico / Emanuela Lupacchino`,
@@ -12859,7 +12859,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `750`,
   },
   {
-    Title: `Wonder Woman (G. Willow Wilson)`, Issue: `#67`, Publisher: `DC`,
+    Title: `Wonder Woman`, Issue: `#67`, Publisher: `DC`,
     Year: `2019`, Arc: `G. Willow Wilson Wonder Woman run`, Key: `NO`,
     Key_Reason: `WW #67 — G. Willow Wilson; landmark feminist WW run`, First_App: ``,
     Writer: `G. Willow Wilson`, Artist: `Xermanico / Emanuela Lupacchino`,
@@ -12876,7 +12876,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `751`,
   },
   {
-    Title: `Wonder Woman (G. Willow Wilson)`, Issue: `#68`, Publisher: `DC`,
+    Title: `Wonder Woman`, Issue: `#68`, Publisher: `DC`,
     Year: `2019`, Arc: `G. Willow Wilson Wonder Woman run`, Key: `NO`,
     Key_Reason: `WW #68 — G. Willow Wilson; landmark feminist WW run`, First_App: ``,
     Writer: `G. Willow Wilson`, Artist: `Xermanico / Emanuela Lupacchino`,
@@ -12893,7 +12893,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `752`,
   },
   {
-    Title: `Wonder Woman (G. Willow Wilson)`, Issue: `#69`, Publisher: `DC`,
+    Title: `Wonder Woman`, Issue: `#69`, Publisher: `DC`,
     Year: `2019`, Arc: `G. Willow Wilson Wonder Woman run`, Key: `NO`,
     Key_Reason: `WW #69 — G. Willow Wilson; landmark feminist WW run`, First_App: ``,
     Writer: `G. Willow Wilson`, Artist: `Xermanico / Emanuela Lupacchino`,
@@ -12910,7 +12910,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `753`,
   },
   {
-    Title: `Wonder Woman (G. Willow Wilson)`, Issue: `#70`, Publisher: `DC`,
+    Title: `Wonder Woman`, Issue: `#70`, Publisher: `DC`,
     Year: `2019`, Arc: `G. Willow Wilson Wonder Woman run`, Key: `NO`,
     Key_Reason: `WW #70 — G. Willow Wilson; landmark feminist WW run`, First_App: ``,
     Writer: `G. Willow Wilson`, Artist: `Xermanico / Emanuela Lupacchino`,
@@ -12927,7 +12927,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `754`,
   },
   {
-    Title: `Wonder Woman (G. Willow Wilson)`, Issue: `#71`, Publisher: `DC`,
+    Title: `Wonder Woman`, Issue: `#71`, Publisher: `DC`,
     Year: `2019`, Arc: `G. Willow Wilson Wonder Woman run`, Key: `NO`,
     Key_Reason: `WW #71 — G. Willow Wilson; landmark feminist WW run`, First_App: ``,
     Writer: `G. Willow Wilson`, Artist: `Xermanico / Emanuela Lupacchino`,
@@ -12944,7 +12944,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `755`,
   },
   {
-    Title: `Wonder Woman (G. Willow Wilson)`, Issue: `#72`, Publisher: `DC`,
+    Title: `Wonder Woman`, Issue: `#72`, Publisher: `DC`,
     Year: `2019`, Arc: `G. Willow Wilson Wonder Woman run`, Key: `NO`,
     Key_Reason: `WW #72 — G. Willow Wilson; landmark feminist WW run`, First_App: ``,
     Writer: `G. Willow Wilson`, Artist: `Xermanico / Emanuela Lupacchino`,
@@ -12961,7 +12961,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `756`,
   },
   {
-    Title: `Justice League Dark (2018)`, Issue: `#7`, Publisher: `DC`,
+    Title: `Justice League Dark`, Issue: `#7`, Publisher: `DC`,
     Year: `2019`, Arc: `JL Dark — James Tynion IV`, Key: `NO`,
     Key_Reason: `JLD #7 Tynion`, First_App: ``,
     Writer: `James Tynion IV`, Artist: `Alvaro Martinez`,
@@ -12978,7 +12978,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `757`,
   },
   {
-    Title: `Justice League Dark (2018)`, Issue: `#8`, Publisher: `DC`,
+    Title: `Justice League Dark`, Issue: `#8`, Publisher: `DC`,
     Year: `2019`, Arc: `JL Dark — James Tynion IV`, Key: `NO`,
     Key_Reason: `JLD #8 Tynion`, First_App: ``,
     Writer: `James Tynion IV`, Artist: `Alvaro Martinez`,
@@ -12995,7 +12995,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `758`,
   },
   {
-    Title: `Justice League Dark (2018)`, Issue: `#9`, Publisher: `DC`,
+    Title: `Justice League Dark`, Issue: `#9`, Publisher: `DC`,
     Year: `2019`, Arc: `JL Dark — James Tynion IV`, Key: `NO`,
     Key_Reason: `JLD #9 Tynion`, First_App: ``,
     Writer: `James Tynion IV`, Artist: `Alvaro Martinez`,
@@ -13012,7 +13012,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `759`,
   },
   {
-    Title: `Justice League Dark (2018)`, Issue: `#10`, Publisher: `DC`,
+    Title: `Justice League Dark`, Issue: `#10`, Publisher: `DC`,
     Year: `2019`, Arc: `JL Dark — James Tynion IV`, Key: `NO`,
     Key_Reason: `JLD #10 Tynion`, First_App: ``,
     Writer: `James Tynion IV`, Artist: `Alvaro Martinez`,
@@ -13029,7 +13029,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `760`,
   },
   {
-    Title: `Justice League Dark (2018)`, Issue: `#11`, Publisher: `DC`,
+    Title: `Justice League Dark`, Issue: `#11`, Publisher: `DC`,
     Year: `2019`, Arc: `JL Dark — James Tynion IV`, Key: `NO`,
     Key_Reason: `JLD #11 Tynion`, First_App: ``,
     Writer: `James Tynion IV`, Artist: `Alvaro Martinez`,
@@ -13046,7 +13046,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `761`,
   },
   {
-    Title: `Justice League Dark (2018)`, Issue: `#12`, Publisher: `DC`,
+    Title: `Justice League Dark`, Issue: `#12`, Publisher: `DC`,
     Year: `2019`, Arc: `JL Dark — James Tynion IV`, Key: `NO`,
     Key_Reason: `JLD #12 Tynion`, First_App: ``,
     Writer: `James Tynion IV`, Artist: `Alvaro Martinez`,
@@ -13063,7 +13063,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `762`,
   },
   {
-    Title: `Justice League (Snyder)`, Issue: `#12`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#12`, Publisher: `DC`,
     Year: `2018-2019`, Arc: `Scott Snyder Justice League`, Key: `YES`,
     Key_Reason: `JL #12 Snyder/Jimenez — Totality quest; Justice/Doom; landmark Snyder JL run`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez / Various`,
@@ -13080,7 +13080,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `763`,
   },
   {
-    Title: `Justice League (Snyder)`, Issue: `#14`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#14`, Publisher: `DC`,
     Year: `2018-2019`, Arc: `Scott Snyder Justice League`, Key: `NO`,
     Key_Reason: `JL #14 Snyder/Jimenez — Snyder JL #14`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez / Various`,
@@ -13097,7 +13097,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `764`,
   },
   {
-    Title: `Justice League (Snyder)`, Issue: `#15`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#15`, Publisher: `DC`,
     Year: `2018-2019`, Arc: `Scott Snyder Justice League`, Key: `NO`,
     Key_Reason: `JL #15 Snyder/Jimenez — Snyder JL #15`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez / Various`,
@@ -13114,7 +13114,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `765`,
   },
   {
-    Title: `Justice League (Snyder)`, Issue: `#16`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#16`, Publisher: `DC`,
     Year: `2018-2019`, Arc: `Scott Snyder Justice League`, Key: `NO`,
     Key_Reason: `JL #16 Snyder/Jimenez — Snyder JL #16`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez / Various`,
@@ -13131,7 +13131,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `766`,
   },
   {
-    Title: `Justice League (Snyder)`, Issue: `#17`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#17`, Publisher: `DC`,
     Year: `2018-2019`, Arc: `Scott Snyder Justice League`, Key: `NO`,
     Key_Reason: `JL #17 Snyder/Jimenez — Snyder JL #17`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez / Various`,
@@ -13148,7 +13148,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `767`,
   },
   {
-    Title: `Justice League (Snyder)`, Issue: `#18`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#18`, Publisher: `DC`,
     Year: `2018-2019`, Arc: `Scott Snyder Justice League`, Key: `NO`,
     Key_Reason: `JL #18 Snyder/Jimenez — Snyder JL #18`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez / Various`,
@@ -13165,7 +13165,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `768`,
   },
   {
-    Title: `Justice League (Snyder)`, Issue: `#19`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#19`, Publisher: `DC`,
     Year: `2018-2019`, Arc: `Scott Snyder Justice League`, Key: `NO`,
     Key_Reason: `JL #19 Snyder/Jimenez — Snyder JL #19`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez / Various`,
@@ -13182,7 +13182,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `769`,
   },
   {
-    Title: `Justice League (Snyder)`, Issue: `#20`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#20`, Publisher: `DC`,
     Year: `2018-2019`, Arc: `Scott Snyder Justice League`, Key: `NO`,
     Key_Reason: `JL #20 Snyder/Jimenez — Snyder JL #20`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez / Various`,
@@ -13199,7 +13199,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `770`,
   },
   {
-    Title: `Justice League (Snyder)`, Issue: `#21`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#21`, Publisher: `DC`,
     Year: `2018-2019`, Arc: `Scott Snyder Justice League`, Key: `NO`,
     Key_Reason: `JL #21 Snyder/Jimenez — Snyder JL #21`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez / Various`,
@@ -13216,7 +13216,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `771`,
   },
   {
-    Title: `Justice League (Snyder)`, Issue: `#22`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#22`, Publisher: `DC`,
     Year: `2018-2019`, Arc: `Scott Snyder Justice League`, Key: `NO`,
     Key_Reason: `JL #22 Snyder/Jimenez — Snyder JL #22`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez / Various`,
@@ -13233,7 +13233,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `772`,
   },
   {
-    Title: `Justice League (Snyder)`, Issue: `#23`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#23`, Publisher: `DC`,
     Year: `2018-2019`, Arc: `Scott Snyder Justice League`, Key: `NO`,
     Key_Reason: `JL #23 Snyder/Jimenez — Snyder JL #23`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez / Various`,
@@ -13250,7 +13250,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `773`,
   },
   {
-    Title: `Justice League (Snyder)`, Issue: `#24`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#24`, Publisher: `DC`,
     Year: `2018-2019`, Arc: `Scott Snyder Justice League`, Key: `NO`,
     Key_Reason: `JL #24 Snyder/Jimenez — Snyder JL #24`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez / Various`,
@@ -13267,7 +13267,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `774`,
   },
   {
-    Title: `Justice League (Snyder)`, Issue: `#25`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#25`, Publisher: `DC`,
     Year: `2018-2019`, Arc: `Scott Snyder Justice League`, Key: `NO`,
     Key_Reason: `JL #25 Snyder/Jimenez — Snyder JL #25`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez / Various`,
@@ -13284,7 +13284,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `775`,
   },
   {
-    Title: `Justice League (Snyder)`, Issue: `#32`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#32`, Publisher: `DC`,
     Year: `2018-2019`, Arc: `Scott Snyder Justice League`, Key: `NO`,
     Key_Reason: `JL #32 Snyder/Jimenez — Snyder JL #32`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez / Various`,
@@ -13403,7 +13403,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `782`,
   },
   {
-    Title: `Young Justice (2019)`, Issue: `#1`, Publisher: `DC`,
+    Title: `Young Justice`, Issue: `#1`, Publisher: `DC`,
     Year: `2019`, Arc: `Young Justice — Brian Michael Bendis`, Key: `YES`,
     Key_Reason: `Young Justice #1 (2019) — Bendis/Gleason; Tim Drake reassembles YJ; Wonder Comics imprint`, First_App: `Tim Drake-Wayne as Robin; YJ reformed`,
     Writer: `Brian Michael Bendis`, Artist: `Patrick Gleason`,
@@ -13420,7 +13420,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `783`,
   },
   {
-    Title: `Young Justice (2019)`, Issue: `#2`, Publisher: `DC`,
+    Title: `Young Justice`, Issue: `#2`, Publisher: `DC`,
     Year: `2019`, Arc: `Young Justice — Brian Michael Bendis`, Key: `NO`,
     Key_Reason: `YJ #2`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Patrick Gleason`,
@@ -13437,7 +13437,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `784`,
   },
   {
-    Title: `Young Justice (2019)`, Issue: `#3`, Publisher: `DC`,
+    Title: `Young Justice`, Issue: `#3`, Publisher: `DC`,
     Year: `2019`, Arc: `Young Justice — Brian Michael Bendis`, Key: `NO`,
     Key_Reason: `YJ #3`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Patrick Gleason`,
@@ -13454,7 +13454,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `785`,
   },
   {
-    Title: `Young Justice (2019)`, Issue: `#4`, Publisher: `DC`,
+    Title: `Young Justice`, Issue: `#4`, Publisher: `DC`,
     Year: `2019`, Arc: `Young Justice — Brian Michael Bendis`, Key: `NO`,
     Key_Reason: `YJ #4`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Patrick Gleason`,
@@ -13471,7 +13471,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `786`,
   },
   {
-    Title: `Young Justice (2019)`, Issue: `#5`, Publisher: `DC`,
+    Title: `Young Justice`, Issue: `#5`, Publisher: `DC`,
     Year: `2019`, Arc: `Young Justice — Brian Michael Bendis`, Key: `NO`,
     Key_Reason: `YJ #5`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Patrick Gleason`,
@@ -13488,7 +13488,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `787`,
   },
   {
-    Title: `Young Justice (2019)`, Issue: `#6`, Publisher: `DC`,
+    Title: `Young Justice`, Issue: `#6`, Publisher: `DC`,
     Year: `2019`, Arc: `Young Justice — Brian Michael Bendis`, Key: `NO`,
     Key_Reason: `YJ #6`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Patrick Gleason`,
@@ -13505,7 +13505,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `788`,
   },
   {
-    Title: `Young Justice (2019)`, Issue: `#7`, Publisher: `DC`,
+    Title: `Young Justice`, Issue: `#7`, Publisher: `DC`,
     Year: `2019`, Arc: `Young Justice — Brian Michael Bendis`, Key: `NO`,
     Key_Reason: `YJ #7`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Patrick Gleason`,
@@ -13522,7 +13522,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `789`,
   },
   {
-    Title: `Batman and the Outsiders (Hill)`, Issue: `#1`, Publisher: `DC`,
+    Title: `Batman and the Outsiders`, Issue: `#1`, Publisher: `DC`,
     Year: `2019`, Arc: `BatO Hill — Year of Villain`, Key: `YES`,
     Key_Reason: `Batman and the Outsiders #1 Hill — Batman/Black Lightning team relaunch`, First_App: ``,
     Writer: `Bryan Hill`, Artist: `Dexter Soy`,
@@ -13539,7 +13539,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `790`,
   },
   {
-    Title: `Batman and the Outsiders (Hill)`, Issue: `#2`, Publisher: `DC`,
+    Title: `Batman and the Outsiders`, Issue: `#2`, Publisher: `DC`,
     Year: `2019`, Arc: `BatO Hill`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Bryan Hill`, Artist: `Dexter Soy`,
@@ -13556,7 +13556,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `791`,
   },
   {
-    Title: `Batman and the Outsiders (Hill)`, Issue: `#2`, Publisher: `DC`,
+    Title: `Batman and the Outsiders`, Issue: `#2`, Publisher: `DC`,
     Year: `2019`, Arc: `BatO Hill`, Key: `NO`,
     Key_Reason: `DUPLICATE`, First_App: ``,
     Writer: `Bryan Hill`, Artist: `Dexter Soy`,
@@ -13573,7 +13573,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `792`,
   },
   {
-    Title: `Batman and the Outsiders (Hill)`, Issue: `#3`, Publisher: `DC`,
+    Title: `Batman and the Outsiders`, Issue: `#3`, Publisher: `DC`,
     Year: `2019`, Arc: `BatO Hill`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Bryan Hill`, Artist: `Dexter Soy`,
@@ -13590,7 +13590,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `793`,
   },
   {
-    Title: `Shazam! (2019)`, Issue: `#2`, Publisher: `DC`,
+    Title: `Shazam!`, Issue: `#2`, Publisher: `DC`,
     Year: `2019`, Arc: `Shazam — Geoff Johns`, Key: `NO`,
     Key_Reason: `Shazam #2 Johns/Eaglesham —`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Dale Eaglesham`,
@@ -13607,7 +13607,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `794`,
   },
   {
-    Title: `Shazam! (2019)`, Issue: `#4`, Publisher: `DC`,
+    Title: `Shazam!`, Issue: `#4`, Publisher: `DC`,
     Year: `2019`, Arc: `Shazam — Geoff Johns`, Key: `NO`,
     Key_Reason: `Shazam #4 Johns/Eaglesham —`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Dale Eaglesham`,
@@ -13624,7 +13624,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `795`,
   },
   {
-    Title: `Shazam! (2019)`, Issue: `#5`, Publisher: `DC`,
+    Title: `Shazam!`, Issue: `#5`, Publisher: `DC`,
     Year: `2019`, Arc: `Shazam — Geoff Johns`, Key: `NO`,
     Key_Reason: `Shazam #5 Johns/Eaglesham —`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Dale Eaglesham`,
@@ -13641,7 +13641,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `796`,
   },
   {
-    Title: `Naomi (2019)`, Issue: `#1`, Publisher: `DC`,
+    Title: `Naomi`, Issue: `#1`, Publisher: `DC`,
     Year: `2019`, Arc: `Naomi — COMPLETE 6-issue mini — Bendis/Campbell`, Key: `YES`,
     Key_Reason: `Naomi #1 — Bendis/Campbell; 1st Naomi McDuffie; mystery DC hero;  COMPLETE 6-issue run!`, First_App: `1st Naomi McDuffie`,
     Writer: `Brian Michael Bendis`, Artist: `Jamal Campbell`,
@@ -13658,7 +13658,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `797`,
   },
   {
-    Title: `Naomi (2019)`, Issue: `#2`, Publisher: `DC`,
+    Title: `Naomi`, Issue: `#2`, Publisher: `DC`,
     Year: `2019`, Arc: `Naomi — COMPLETE 6-issue mini — Bendis/Campbell`, Key: `NO`,
     Key_Reason: `Naomi #2 — complete run`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Jamal Campbell`,
@@ -13675,7 +13675,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `798`,
   },
   {
-    Title: `Naomi (2019)`, Issue: `#3`, Publisher: `DC`,
+    Title: `Naomi`, Issue: `#3`, Publisher: `DC`,
     Year: `2019`, Arc: `Naomi — COMPLETE 6-issue mini — Bendis/Campbell`, Key: `NO`,
     Key_Reason: `Naomi #3 — complete run`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Jamal Campbell`,
@@ -13692,7 +13692,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `799`,
   },
   {
-    Title: `Naomi (2019)`, Issue: `#4`, Publisher: `DC`,
+    Title: `Naomi`, Issue: `#4`, Publisher: `DC`,
     Year: `2019`, Arc: `Naomi — COMPLETE 6-issue mini — Bendis/Campbell`, Key: `NO`,
     Key_Reason: `Naomi #4 — complete run`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Jamal Campbell`,
@@ -13709,7 +13709,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `800`,
   },
   {
-    Title: `Naomi (2019)`, Issue: `#5`, Publisher: `DC`,
+    Title: `Naomi`, Issue: `#5`, Publisher: `DC`,
     Year: `2019`, Arc: `Naomi — COMPLETE 6-issue mini — Bendis/Campbell`, Key: `NO`,
     Key_Reason: `Naomi #5 — complete run`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Jamal Campbell`,
@@ -13726,7 +13726,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `801`,
   },
   {
-    Title: `Naomi (2019)`, Issue: `#6`, Publisher: `DC`,
+    Title: `Naomi`, Issue: `#6`, Publisher: `DC`,
     Year: `2019`, Arc: `Naomi — COMPLETE 6-issue mini — Bendis/Campbell`, Key: `NO`,
     Key_Reason: `Naomi #6 — complete run`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Jamal Campbell`,
@@ -13964,7 +13964,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `815`,
   },
   {
-    Title: `Hawkman (2018)`, Issue: `#8`, Publisher: `DC`,
+    Title: `Hawkman`, Issue: `#8`, Publisher: `DC`,
     Year: `2019`, Arc: `Hawkman — Robert Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #8 Venditti — Carter Hall across lifetimes`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch`,
@@ -13981,7 +13981,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `816`,
   },
   {
-    Title: `Hawkman (2018)`, Issue: `#9`, Publisher: `DC`,
+    Title: `Hawkman`, Issue: `#9`, Publisher: `DC`,
     Year: `2019`, Arc: `Hawkman — Robert Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #9 Venditti — Carter Hall across lifetimes`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch`,
@@ -13998,7 +13998,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `817`,
   },
   {
-    Title: `Hawkman (2018)`, Issue: `#10`, Publisher: `DC`,
+    Title: `Hawkman`, Issue: `#10`, Publisher: `DC`,
     Year: `2019`, Arc: `Hawkman — Robert Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #10 Venditti — Carter Hall across lifetimes`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch`,
@@ -14015,7 +14015,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `818`,
   },
   {
-    Title: `Hawkman (2018)`, Issue: `#11`, Publisher: `DC`,
+    Title: `Hawkman`, Issue: `#11`, Publisher: `DC`,
     Year: `2019`, Arc: `Hawkman — Robert Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #11 Venditti — Carter Hall across lifetimes`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch`,
@@ -14032,7 +14032,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `819`,
   },
   {
-    Title: `Hawkman (2018)`, Issue: `#12`, Publisher: `DC`,
+    Title: `Hawkman`, Issue: `#12`, Publisher: `DC`,
     Year: `2019`, Arc: `Hawkman — Robert Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #12 Venditti — Carter Hall across lifetimes`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch`,
@@ -14049,7 +14049,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `820`,
   },
   {
-    Title: `Hawkman (2018)`, Issue: `#13`, Publisher: `DC`,
+    Title: `Hawkman`, Issue: `#13`, Publisher: `DC`,
     Year: `2019`, Arc: `Hawkman — Robert Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #13 Venditti — Carter Hall across lifetimes`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch`,
@@ -14134,7 +14134,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `825`,
   },
   {
-    Title: `Shazam! (2023)`, Issue: `#8`, Publisher: `DC`,
+    Title: `Shazam!`, Issue: `#8`, Publisher: `DC`,
     Year: `2023`, Arc: `Shazam 2023 — Mark Waid`, Key: `NO`,
     Key_Reason: `Shazam #8`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Dan Mora`,
@@ -14151,7 +14151,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `826`,
   },
   {
-    Title: `Shazam! (2023)`, Issue: `#11`, Publisher: `DC`,
+    Title: `Shazam!`, Issue: `#11`, Publisher: `DC`,
     Year: `2023`, Arc: `Shazam 2023 — Mark Waid`, Key: `NO`,
     Key_Reason: `Shazam #11`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Dan Mora`,
@@ -14168,7 +14168,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `827`,
   },
   {
-    Title: `Shazam! (2023)`, Issue: `#12`, Publisher: `DC`,
+    Title: `Shazam!`, Issue: `#12`, Publisher: `DC`,
     Year: `2023`, Arc: `Shazam 2023 — Mark Waid`, Key: `NO`,
     Key_Reason: `Shazam #12`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Dan Mora`,
@@ -14253,7 +14253,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `832`,
   },
   {
-    Title: `Batgirl (2021)`, Issue: `#7`, Publisher: `DC`,
+    Title: `Batgirl`, Issue: `#7`, Publisher: `DC`,
     Year: `2022`, Arc: `Batgirl Stephanie Phillips`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Stephanie Phillips`, Artist: ``,
@@ -14338,7 +14338,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `837`,
   },
   {
-    Title: `Aquaman (2016)`, Issue: `#51`, Publisher: `DC`,
+    Title: `Aquaman`, Issue: `#51`, Publisher: `DC`,
     Year: `2019`, Arc: `Aquaman — Kelly/DeConnick`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Kelly Sue DeConnick`, Artist: ``,
@@ -14372,7 +14372,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `839`,
   },
   {
-    Title: `Titans (2023)`, Issue: `#19`, Publisher: `DC`,
+    Title: `Titans`, Issue: `#19`, Publisher: `DC`,
     Year: `2024`, Arc: `Titans 2023 Taylor`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Tom Taylor`, Artist: `Nicola Scott`,
@@ -14729,7 +14729,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `860`,
   },
   {
-    Title: `The Outsiders (2024)`, Issue: `#1`, Publisher: `DC`,
+    Title: `The Outsiders`, Issue: `#1`, Publisher: `DC`,
     Year: `2024`, Arc: `Outsiders 2024 Lanzing/Kelly`, Key: `YES`,
     Key_Reason: `Outsiders #1 (2024) — Lanzing/Kelly relaunch`, First_App: ``,
     Writer: `Jackson Lanzing / Collin Kelly`, Artist: ``,
@@ -14746,7 +14746,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `861`,
   },
   {
-    Title: `The Outsiders (2024)`, Issue: `#2`, Publisher: `DC`,
+    Title: `The Outsiders`, Issue: `#2`, Publisher: `DC`,
     Year: `2024`, Arc: `Outsiders 2024`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jackson Lanzing / Collin Kelly`, Artist: ``,
@@ -14763,7 +14763,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `862`,
   },
   {
-    Title: `The Outsiders (2024)`, Issue: `#2`, Publisher: `DC`,
+    Title: `The Outsiders`, Issue: `#2`, Publisher: `DC`,
     Year: `2024`, Arc: `Outsiders 2024`, Key: `NO`,
     Key_Reason: `DUPLICATE`, First_App: ``,
     Writer: `Jackson Lanzing / Collin Kelly`, Artist: ``,
@@ -14780,7 +14780,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `863`,
   },
   {
-    Title: `The Outsiders (2024)`, Issue: `#4`, Publisher: `DC`,
+    Title: `The Outsiders`, Issue: `#4`, Publisher: `DC`,
     Year: `2024`, Arc: `Outsiders 2024`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jackson Lanzing / Collin Kelly`, Artist: ``,
@@ -14797,7 +14797,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `864`,
   },
   {
-    Title: `Batgirl (2021)`, Issue: `#3`, Publisher: `DC`,
+    Title: `Batgirl`, Issue: `#3`, Publisher: `DC`,
     Year: `2021`, Arc: `Batgirl Stephanie Phillips`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Stephanie Phillips`, Artist: ``,
@@ -14933,7 +14933,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `872`,
   },
   {
-    Title: `Supergirl Special (2023)`, Issue: `#1`, Publisher: `DC`,
+    Title: `Supergirl Special`, Issue: `#1`, Publisher: `DC`,
     Year: `2023`, Arc: `Supergirl Special $5.99`, Key: `NO`,
     Key_Reason: `Tamaki/Parrish $5.99`, First_App: ``,
     Writer: `Mariko Tamaki`, Artist: `Skylar Patridge`,
@@ -15290,7 +15290,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `893`,
   },
   {
-    Title: `Batman (2016)`, Issue: `#130`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#130`, Publisher: `DC`,
     Year: `2022-2023`, Arc: `Batman — Chip Kidd/Zdarsky`, Key: `YES`,
     Key_Reason: `Batman #130 — Zdarsky's Failsafe arc begins; landmark Zdarsky run opens`, First_App: ``,
     Writer: `Chip Kidd / Zdarsky`, Artist: `Jorge Jimenez`,
@@ -15307,7 +15307,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `894`,
   },
   {
-    Title: `Batman (2016)`, Issue: `#131`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#131`, Publisher: `DC`,
     Year: `2022-2023`, Arc: `Batman — Chip Kidd/Zdarsky`, Key: `NO`,
     Key_Reason: `Batman #131 Zdarsky`, First_App: ``,
     Writer: `Chip Kidd / Zdarsky`, Artist: `Jorge Jimenez`,
@@ -15324,7 +15324,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `895`,
   },
   {
-    Title: `Batman (2016)`, Issue: `#132`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#132`, Publisher: `DC`,
     Year: `2022-2023`, Arc: `Batman — Chip Kidd/Zdarsky`, Key: `NO`,
     Key_Reason: `Batman #132 Zdarsky`, First_App: ``,
     Writer: `Chip Kidd / Zdarsky`, Artist: `Jorge Jimenez`,
@@ -15341,7 +15341,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `896`,
   },
   {
-    Title: `Batman (2016)`, Issue: `#133`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#133`, Publisher: `DC`,
     Year: `2022-2023`, Arc: `Batman — Chip Kidd/Zdarsky`, Key: `NO`,
     Key_Reason: `Batman #133 Zdarsky`, First_App: ``,
     Writer: `Chip Kidd / Zdarsky`, Artist: `Jorge Jimenez`,
@@ -15358,7 +15358,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `897`,
   },
   {
-    Title: `Batman (2016)`, Issue: `#134`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#134`, Publisher: `DC`,
     Year: `2022-2023`, Arc: `Batman — Chip Kidd/Zdarsky`, Key: `NO`,
     Key_Reason: `Batman #134 Zdarsky`, First_App: ``,
     Writer: `Chip Kidd / Zdarsky`, Artist: `Jorge Jimenez`,
@@ -15375,7 +15375,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `898`,
   },
   {
-    Title: `Batman (2016)`, Issue: `#135`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#135`, Publisher: `DC`,
     Year: `2022-2023`, Arc: `Batman — Chip Kidd/Zdarsky`, Key: `NO`,
     Key_Reason: `Batman #135 Zdarsky`, First_App: ``,
     Writer: `Chip Kidd / Zdarsky`, Artist: `Jorge Jimenez`,
@@ -15392,7 +15392,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `899`,
   },
   {
-    Title: `Batman (2016)`, Issue: `#136`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#136`, Publisher: `DC`,
     Year: `2022-2023`, Arc: `Batman — Chip Kidd/Zdarsky`, Key: `NO`,
     Key_Reason: `Batman #136 Zdarsky`, First_App: ``,
     Writer: `Chip Kidd / Zdarsky`, Artist: `Jorge Jimenez`,
@@ -15545,7 +15545,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `908`,
   },
   {
-    Title: `Justice League Unlimited (2024)`, Issue: `#1`, Publisher: `DC`,
+    Title: `Justice League Unlimited`, Issue: `#1`, Publisher: `DC`,
     Year: `2024`, Arc: `JLU 2024 relaunch`, Key: `YES`,
     Key_Reason: `Justice League Unlimited #1 (2024) — new JLU series launch`, First_App: ``,
     Writer: ``, Artist: ``,
@@ -15562,7 +15562,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `909`,
   },
   {
-    Title: `Birds of Prey (2023)`, Issue: `#4`, Publisher: `DC`,
+    Title: `Birds of Prey`, Issue: `#4`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Birds of Prey — Kelly Thompson —  NOW COMPLETE #1-12 across boxes!`, Key: `NO`,
     Key_Reason: `Birds of Prey #4 Thompson —  COMPLETE #1-12 now confirmed across Box 16 + Box 22!`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: `Leonardo Romero`,
@@ -15579,7 +15579,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `910`,
   },
   {
-    Title: `Birds of Prey (2023)`, Issue: `#5`, Publisher: `DC`,
+    Title: `Birds of Prey`, Issue: `#5`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Birds of Prey — Kelly Thompson —  NOW COMPLETE #1-12 across boxes!`, Key: `NO`,
     Key_Reason: `Birds of Prey #5 Thompson —  COMPLETE #1-12 now confirmed across Box 16 + Box 22!`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: `Leonardo Romero`,
@@ -15596,7 +15596,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `911`,
   },
   {
-    Title: `Birds of Prey (2023)`, Issue: `#6`, Publisher: `DC`,
+    Title: `Birds of Prey`, Issue: `#6`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Birds of Prey — Kelly Thompson —  NOW COMPLETE #1-12 across boxes!`, Key: `NO`,
     Key_Reason: `Birds of Prey #6 Thompson —  COMPLETE #1-12 now confirmed across Box 16 + Box 22!`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: `Leonardo Romero`,
@@ -15613,7 +15613,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `912`,
   },
   {
-    Title: `Birds of Prey (2023)`, Issue: `#7`, Publisher: `DC`,
+    Title: `Birds of Prey`, Issue: `#7`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Birds of Prey — Kelly Thompson —  NOW COMPLETE #1-12 across boxes!`, Key: `NO`,
     Key_Reason: `Birds of Prey #7 Thompson —  COMPLETE #1-12 now confirmed across Box 16 + Box 22!`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: `Leonardo Romero`,
@@ -15630,7 +15630,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `913`,
   },
   {
-    Title: `Birds of Prey (2023)`, Issue: `#8`, Publisher: `DC`,
+    Title: `Birds of Prey`, Issue: `#8`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Birds of Prey — Kelly Thompson —  NOW COMPLETE #1-12 across boxes!`, Key: `NO`,
     Key_Reason: `Birds of Prey #8 Thompson —  COMPLETE #1-12 now confirmed across Box 16 + Box 22!`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: `Leonardo Romero`,
@@ -15647,7 +15647,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `914`,
   },
   {
-    Title: `Birds of Prey (2023)`, Issue: `#9`, Publisher: `DC`,
+    Title: `Birds of Prey`, Issue: `#9`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Birds of Prey — Kelly Thompson —  NOW COMPLETE #1-12 across boxes!`, Key: `NO`,
     Key_Reason: `Birds of Prey #9 Thompson —  COMPLETE #1-12 now confirmed across Box 16 + Box 22!`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: `Leonardo Romero`,
@@ -15664,7 +15664,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `915`,
   },
   {
-    Title: `Birds of Prey (2023)`, Issue: `#10`, Publisher: `DC`,
+    Title: `Birds of Prey`, Issue: `#10`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Birds of Prey — Kelly Thompson —  NOW COMPLETE #1-12 across boxes!`, Key: `NO`,
     Key_Reason: `Birds of Prey #10 Thompson —  COMPLETE #1-12 now confirmed across Box 16 + Box 22!`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: `Leonardo Romero`,
@@ -15681,7 +15681,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `916`,
   },
   {
-    Title: `Birds of Prey (2023)`, Issue: `#11`, Publisher: `DC`,
+    Title: `Birds of Prey`, Issue: `#11`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Birds of Prey — Kelly Thompson —  NOW COMPLETE #1-12 across boxes!`, Key: `NO`,
     Key_Reason: `Birds of Prey #11 Thompson —  COMPLETE #1-12 now confirmed across Box 16 + Box 22!`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: `Leonardo Romero`,
@@ -15698,7 +15698,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `917`,
   },
   {
-    Title: `Birds of Prey (2023)`, Issue: `#12`, Publisher: `DC`,
+    Title: `Birds of Prey`, Issue: `#12`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Birds of Prey — Kelly Thompson —  NOW COMPLETE #1-12 across boxes!`, Key: `NO`,
     Key_Reason: `Birds of Prey #12 Thompson —  COMPLETE #1-12 now confirmed across Box 16 + Box 22!`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: `Leonardo Romero`,
@@ -15715,7 +15715,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `918`,
   },
   {
-    Title: `Black Adam (2022)`, Issue: `#6`, Publisher: `DC`,
+    Title: `Black Adam`, Issue: `#6`, Publisher: `DC`,
     Year: `2022-2023`, Arc: `Black Adam Priest`, Key: `NO`,
     Key_Reason: `Black Adam #6 Priest`, First_App: ``,
     Writer: `Priest`, Artist: `Rafa Sandoval`,
@@ -15732,7 +15732,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `919`,
   },
   {
-    Title: `Black Adam (2022)`, Issue: `#7`, Publisher: `DC`,
+    Title: `Black Adam`, Issue: `#7`, Publisher: `DC`,
     Year: `2022-2023`, Arc: `Black Adam Priest`, Key: `NO`,
     Key_Reason: `Black Adam #7 Priest`, First_App: ``,
     Writer: `Priest`, Artist: `Rafa Sandoval`,
@@ -15749,7 +15749,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `920`,
   },
   {
-    Title: `Black Adam (2022)`, Issue: `#8`, Publisher: `DC`,
+    Title: `Black Adam`, Issue: `#8`, Publisher: `DC`,
     Year: `2022-2023`, Arc: `Black Adam Priest`, Key: `NO`,
     Key_Reason: `Black Adam #8 Priest`, First_App: ``,
     Writer: `Priest`, Artist: `Rafa Sandoval`,
@@ -15766,7 +15766,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `921`,
   },
   {
-    Title: `Black Adam (2022)`, Issue: `#9`, Publisher: `DC`,
+    Title: `Black Adam`, Issue: `#9`, Publisher: `DC`,
     Year: `2022-2023`, Arc: `Black Adam Priest`, Key: `NO`,
     Key_Reason: `Black Adam #9 Priest`, First_App: ``,
     Writer: `Priest`, Artist: `Rafa Sandoval`,
@@ -15783,7 +15783,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `922`,
   },
   {
-    Title: `Power Girl (2023)`, Issue: `#2`, Publisher: `DC`,
+    Title: `Power Girl`, Issue: `#2`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Power Girl Leah Williams`, Key: `YES`,
     Key_Reason: `Power Girl #2 Williams — extends Box 16 run`, First_App: ``,
     Writer: `Leah Williams`, Artist: ``,
@@ -15800,7 +15800,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `923`,
   },
   {
-    Title: `Power Girl (2023)`, Issue: `#3`, Publisher: `DC`,
+    Title: `Power Girl`, Issue: `#3`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Power Girl Leah Williams`, Key: `NO`,
     Key_Reason: `Power Girl #3 Williams — extends Box 16 run`, First_App: ``,
     Writer: `Leah Williams`, Artist: ``,
@@ -15817,7 +15817,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `924`,
   },
   {
-    Title: `Power Girl (2023)`, Issue: `#4`, Publisher: `DC`,
+    Title: `Power Girl`, Issue: `#4`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Power Girl Leah Williams`, Key: `NO`,
     Key_Reason: `Power Girl #4 Williams — extends Box 16 run`, First_App: ``,
     Writer: `Leah Williams`, Artist: ``,
@@ -15834,7 +15834,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `925`,
   },
   {
-    Title: `Power Girl (2023)`, Issue: `#10`, Publisher: `DC`,
+    Title: `Power Girl`, Issue: `#10`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Power Girl Leah Williams`, Key: `NO`,
     Key_Reason: `Power Girl #10 Williams — extends Box 16 run`, First_App: ``,
     Writer: `Leah Williams`, Artist: ``,
@@ -15902,7 +15902,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `929`,
   },
   {
-    Title: `The Flash (2023)`, Issue: `#788`, Publisher: `DC`,
+    Title: `The Flash`, Issue: `#788`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Dawn of DC Flash`, Key: `NO`,
     Key_Reason: `Flash #788 Jeremy Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: ``,
@@ -15919,7 +15919,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `930`,
   },
   {
-    Title: `The Flash (2023)`, Issue: `#789`, Publisher: `DC`,
+    Title: `The Flash`, Issue: `#789`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Dawn of DC Flash`, Key: `NO`,
     Key_Reason: `Flash #789 Jeremy Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: ``,
@@ -15936,7 +15936,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `931`,
   },
   {
-    Title: `The Flash (2023)`, Issue: `#790`, Publisher: `DC`,
+    Title: `The Flash`, Issue: `#790`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Dawn of DC Flash`, Key: `NO`,
     Key_Reason: `Flash #790 Jeremy Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: ``,
@@ -15953,7 +15953,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `932`,
   },
   {
-    Title: `The Flash (2023)`, Issue: `#791`, Publisher: `DC`,
+    Title: `The Flash`, Issue: `#791`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Dawn of DC Flash`, Key: `NO`,
     Key_Reason: `Flash #791 Jeremy Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: ``,
@@ -15970,7 +15970,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `933`,
   },
   {
-    Title: `The Flash (2023)`, Issue: `#792`, Publisher: `DC`,
+    Title: `The Flash`, Issue: `#792`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Dawn of DC Flash`, Key: `NO`,
     Key_Reason: `Flash #792 Jeremy Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: ``,
@@ -15987,7 +15987,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `934`,
   },
   {
-    Title: `The Flash (2023)`, Issue: `#793`, Publisher: `DC`,
+    Title: `The Flash`, Issue: `#793`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Dawn of DC Flash`, Key: `NO`,
     Key_Reason: `Flash #793 Jeremy Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: ``,
@@ -16004,7 +16004,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `935`,
   },
   {
-    Title: `The Flash (2023)`, Issue: `#794`, Publisher: `DC`,
+    Title: `The Flash`, Issue: `#794`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Dawn of DC Flash`, Key: `NO`,
     Key_Reason: `Flash #794 Jeremy Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: ``,
@@ -16021,7 +16021,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `936`,
   },
   {
-    Title: `The Flash (2023)`, Issue: `#795`, Publisher: `DC`,
+    Title: `The Flash`, Issue: `#795`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Dawn of DC Flash`, Key: `NO`,
     Key_Reason: `Flash #795 Jeremy Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: ``,
@@ -16038,7 +16038,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `937`,
   },
   {
-    Title: `The Flash (2023)`, Issue: `#796`, Publisher: `DC`,
+    Title: `The Flash`, Issue: `#796`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Dawn of DC Flash`, Key: `NO`,
     Key_Reason: `Flash #796 Jeremy Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: ``,
@@ -16055,7 +16055,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `938`,
   },
   {
-    Title: `The Flash (2023)`, Issue: `#797`, Publisher: `DC`,
+    Title: `The Flash`, Issue: `#797`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Dawn of DC Flash`, Key: `NO`,
     Key_Reason: `Flash #797 Jeremy Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: ``,
@@ -16072,7 +16072,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `939`,
   },
   {
-    Title: `The Flash (2023)`, Issue: `#798`, Publisher: `DC`,
+    Title: `The Flash`, Issue: `#798`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Dawn of DC Flash`, Key: `NO`,
     Key_Reason: `Flash #798 Jeremy Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: ``,
@@ -16089,7 +16089,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `940`,
   },
   {
-    Title: `The Flash (2023)`, Issue: `#799`, Publisher: `DC`,
+    Title: `The Flash`, Issue: `#799`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Dawn of DC Flash`, Key: `NO`,
     Key_Reason: `Flash #799 Jeremy Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: ``,
@@ -16140,7 +16140,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `943`,
   },
   {
-    Title: `The Flash (Dawn of DC)`, Issue: `#3`, Publisher: `DC`,
+    Title: `The Flash`, Issue: `#3`, Publisher: `DC`,
     Year: `2023`, Arc: `Dawn of DC Flash`, Key: `NO`,
     Key_Reason: `Flash #3`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: ``,
@@ -16157,7 +16157,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `944`,
   },
   {
-    Title: `The Flash (Dawn of DC)`, Issue: `#4`, Publisher: `DC`,
+    Title: `The Flash`, Issue: `#4`, Publisher: `DC`,
     Year: `2023`, Arc: `Dawn of DC Flash`, Key: `NO`,
     Key_Reason: `Flash #4`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: ``,
@@ -16174,7 +16174,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `945`,
   },
   {
-    Title: `The Flash (Dawn of DC)`, Issue: `#5`, Publisher: `DC`,
+    Title: `The Flash`, Issue: `#5`, Publisher: `DC`,
     Year: `2023`, Arc: `Dawn of DC Flash`, Key: `NO`,
     Key_Reason: `Flash #5`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: ``,
@@ -16191,7 +16191,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `946`,
   },
   {
-    Title: `Green Lantern (2023)`, Issue: `#2`, Publisher: `DC`,
+    Title: `Green Lantern`, Issue: `#2`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Green Lantern — Jeremy Adams`, Key: `YES`,
     Key_Reason: `GL #2 — Jeremy Adams continues his acclaimed GL run`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Xermanico / Various`,
@@ -16208,7 +16208,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `947`,
   },
   {
-    Title: `Green Lantern (2023)`, Issue: `#3`, Publisher: `DC`,
+    Title: `Green Lantern`, Issue: `#3`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Green Lantern — Jeremy Adams`, Key: `NO`,
     Key_Reason: `GL #3 Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Xermanico / Various`,
@@ -16225,7 +16225,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `948`,
   },
   {
-    Title: `Green Lantern (2023)`, Issue: `#4`, Publisher: `DC`,
+    Title: `Green Lantern`, Issue: `#4`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Green Lantern — Jeremy Adams`, Key: `NO`,
     Key_Reason: `GL #4 Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Xermanico / Various`,
@@ -16242,7 +16242,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `949`,
   },
   {
-    Title: `Green Lantern (2023)`, Issue: `#5`, Publisher: `DC`,
+    Title: `Green Lantern`, Issue: `#5`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Green Lantern — Jeremy Adams`, Key: `NO`,
     Key_Reason: `GL #5 Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Xermanico / Various`,
@@ -16259,7 +16259,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `950`,
   },
   {
-    Title: `Green Lantern (2023)`, Issue: `#6`, Publisher: `DC`,
+    Title: `Green Lantern`, Issue: `#6`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Green Lantern — Jeremy Adams`, Key: `NO`,
     Key_Reason: `GL #6 Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Xermanico / Various`,
@@ -16276,7 +16276,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `951`,
   },
   {
-    Title: `Green Lantern (2023)`, Issue: `#7`, Publisher: `DC`,
+    Title: `Green Lantern`, Issue: `#7`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Green Lantern — Jeremy Adams`, Key: `NO`,
     Key_Reason: `GL #7 Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Xermanico / Various`,
@@ -16293,7 +16293,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `952`,
   },
   {
-    Title: `Green Lantern (2023)`, Issue: `#8`, Publisher: `DC`,
+    Title: `Green Lantern`, Issue: `#8`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Green Lantern — Jeremy Adams`, Key: `NO`,
     Key_Reason: `GL #8 Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Xermanico / Various`,
@@ -16310,7 +16310,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `953`,
   },
   {
-    Title: `Green Lantern (2023)`, Issue: `#9`, Publisher: `DC`,
+    Title: `Green Lantern`, Issue: `#9`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Green Lantern — Jeremy Adams`, Key: `NO`,
     Key_Reason: `GL #9 Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Xermanico / Various`,
@@ -16327,7 +16327,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `954`,
   },
   {
-    Title: `Green Lantern (2023)`, Issue: `#10`, Publisher: `DC`,
+    Title: `Green Lantern`, Issue: `#10`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Green Lantern — Jeremy Adams`, Key: `NO`,
     Key_Reason: `GL #10 Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Xermanico / Various`,
@@ -16344,7 +16344,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `955`,
   },
   {
-    Title: `Green Lantern (2023)`, Issue: `#11`, Publisher: `DC`,
+    Title: `Green Lantern`, Issue: `#11`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Green Lantern — Jeremy Adams`, Key: `NO`,
     Key_Reason: `GL #11 Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Xermanico / Various`,
@@ -16361,7 +16361,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `956`,
   },
   {
-    Title: `Green Lantern (2023)`, Issue: `#12`, Publisher: `DC`,
+    Title: `Green Lantern`, Issue: `#12`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Green Lantern — Jeremy Adams`, Key: `NO`,
     Key_Reason: `GL #12 Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Xermanico / Various`,
@@ -16378,7 +16378,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `957`,
   },
   {
-    Title: `Green Lantern (2023)`, Issue: `#13`, Publisher: `DC`,
+    Title: `Green Lantern`, Issue: `#13`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Green Lantern — Jeremy Adams`, Key: `NO`,
     Key_Reason: `GL #13 Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Xermanico / Various`,
@@ -16395,7 +16395,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `958`,
   },
   {
-    Title: `Green Lantern (2023)`, Issue: `#14`, Publisher: `DC`,
+    Title: `Green Lantern`, Issue: `#14`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Green Lantern — Jeremy Adams`, Key: `NO`,
     Key_Reason: `GL #14 Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Xermanico / Various`,
@@ -16412,7 +16412,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `959`,
   },
   {
-    Title: `Green Lantern (2023)`, Issue: `#15`, Publisher: `DC`,
+    Title: `Green Lantern`, Issue: `#15`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Green Lantern — Jeremy Adams`, Key: `NO`,
     Key_Reason: `GL #15 Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Xermanico / Various`,
@@ -16650,7 +16650,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `973`,
   },
   {
-    Title: `Justice Society of America (2022)`, Issue: `#10`, Publisher: `DC`,
+    Title: `Justice Society of America`, Issue: `#10`, Publisher: `DC`,
     Year: `2023`, Arc: `JSA Johns/Janin`, Key: `NO`,
     Key_Reason: `JSA #10 Johns — extends Box 16 run`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Mikel Janin`,
@@ -16667,7 +16667,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `974`,
   },
   {
-    Title: `Justice Society of America (2022)`, Issue: `#12`, Publisher: `DC`,
+    Title: `Justice Society of America`, Issue: `#12`, Publisher: `DC`,
     Year: `2023`, Arc: `JSA Johns/Janin`, Key: `NO`,
     Key_Reason: `JSA #12 Johns — extends Box 16 run`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Mikel Janin`,
@@ -16684,7 +16684,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `975`,
   },
   {
-    Title: `JSA (2024)`, Issue: `#1`, Publisher: `DC`,
+    Title: `JSA`, Issue: `#1`, Publisher: `DC`,
     Year: `2024`, Arc: `JSA 2024 — Jeff Lemire relaunch`, Key: `YES`,
     Key_Reason: `JSA #1 (2024 Lemire) — new relaunch`, First_App: ``,
     Writer: `Jeff Lemire`, Artist: ``,
@@ -16701,7 +16701,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `976`,
   },
   {
-    Title: `JSA (2024)`, Issue: `#2`, Publisher: `DC`,
+    Title: `JSA`, Issue: `#2`, Publisher: `DC`,
     Year: `2024`, Arc: `JSA 2024 — Jeff Lemire relaunch`, Key: `NO`,
     Key_Reason: `JSA #2 Lemire`, First_App: ``,
     Writer: `Jeff Lemire`, Artist: ``,
@@ -16735,7 +16735,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `978`,
   },
   {
-    Title: `Nightwing (2016)`, Issue: `#114`, Publisher: `DC`,
+    Title: `Nightwing`, Issue: `#114`, Publisher: `DC`,
     Year: `2023`, Arc: `Nightwing Taylor/Redondo — extends Box 16`, Key: `NO`,
     Key_Reason: `Nightwing #114 Taylor run`, First_App: ``,
     Writer: `Tom Taylor`, Artist: `Bruno Redondo`,
@@ -16752,7 +16752,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `979`,
   },
   {
-    Title: `Nightwing (2016)`, Issue: `#115`, Publisher: `DC`,
+    Title: `Nightwing`, Issue: `#115`, Publisher: `DC`,
     Year: `2023`, Arc: `Nightwing Taylor/Redondo — extends Box 16`, Key: `NO`,
     Key_Reason: `Nightwing #115 Taylor run`, First_App: ``,
     Writer: `Tom Taylor`, Artist: `Bruno Redondo`,
@@ -16769,7 +16769,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `980`,
   },
   {
-    Title: `Nightwing (2016)`, Issue: `#116`, Publisher: `DC`,
+    Title: `Nightwing`, Issue: `#116`, Publisher: `DC`,
     Year: `2023`, Arc: `Nightwing Taylor/Redondo — extends Box 16`, Key: `NO`,
     Key_Reason: `Nightwing #116 Taylor run`, First_App: ``,
     Writer: `Tom Taylor`, Artist: `Bruno Redondo`,
@@ -16786,7 +16786,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `981`,
   },
   {
-    Title: `Nightwing (2016)`, Issue: `#117`, Publisher: `DC`,
+    Title: `Nightwing`, Issue: `#117`, Publisher: `DC`,
     Year: `2023`, Arc: `Nightwing Taylor/Redondo — extends Box 16`, Key: `NO`,
     Key_Reason: `Nightwing #117 Taylor run`, First_App: ``,
     Writer: `Tom Taylor`, Artist: `Bruno Redondo`,
@@ -16803,7 +16803,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `982`,
   },
   {
-    Title: `Nightwing (2016)`, Issue: `#118`, Publisher: `DC`,
+    Title: `Nightwing`, Issue: `#118`, Publisher: `DC`,
     Year: `2023`, Arc: `Nightwing Taylor/Redondo — extends Box 16`, Key: `NO`,
     Key_Reason: `Nightwing #118 Taylor run`, First_App: ``,
     Writer: `Tom Taylor`, Artist: `Bruno Redondo`,
@@ -16820,7 +16820,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `983`,
   },
   {
-    Title: `Nightwing (2016)`, Issue: `#119`, Publisher: `DC`,
+    Title: `Nightwing`, Issue: `#119`, Publisher: `DC`,
     Year: `2023`, Arc: `Nightwing Taylor/Redondo — extends Box 16`, Key: `NO`,
     Key_Reason: `Nightwing #119 Taylor run`, First_App: ``,
     Writer: `Tom Taylor`, Artist: `Bruno Redondo`,
@@ -16837,7 +16837,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `984`,
   },
   {
-    Title: `Nightwing (2016)`, Issue: `#5`, Publisher: `DC`,
+    Title: `Nightwing`, Issue: `#5`, Publisher: `DC`,
     Year: `2023`, Arc: `Nightwing arc part 5`, Key: `NO`,
     Key_Reason: `Part 5 of Nightwing arc`, First_App: ``,
     Writer: `Tom Taylor`, Artist: `Bruno Redondo`,
@@ -16854,7 +16854,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `985`,
   },
   {
-    Title: `Shazam! (2023)`, Issue: `#5`, Publisher: `DC`,
+    Title: `Shazam!`, Issue: `#5`, Publisher: `DC`,
     Year: `2023`, Arc: `Shazam Waid/Mora`, Key: `NO`,
     Key_Reason: `Shazam #5`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Dan Mora`,
@@ -16871,7 +16871,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `986`,
   },
   {
-    Title: `Shazam! (2023)`, Issue: `#6`, Publisher: `DC`,
+    Title: `Shazam!`, Issue: `#6`, Publisher: `DC`,
     Year: `2023`, Arc: `Shazam Waid/Mora`, Key: `NO`,
     Key_Reason: `Shazam #6`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Dan Mora`,
@@ -16990,7 +16990,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `993`,
   },
   {
-    Title: `Titans (2023)`, Issue: `#12`, Publisher: `DC`,
+    Title: `Titans`, Issue: `#12`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Titans Taylor/Scott`, Key: `NO`,
     Key_Reason: `Titans #12 Taylor — extends Box 16 run`, First_App: ``,
     Writer: `Tom Taylor`, Artist: `Nicola Scott`,
@@ -17007,7 +17007,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `994`,
   },
   {
-    Title: `Titans (2023)`, Issue: `#13`, Publisher: `DC`,
+    Title: `Titans`, Issue: `#13`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Titans Taylor/Scott`, Key: `NO`,
     Key_Reason: `Titans #13 Taylor — extends Box 16 run`, First_App: ``,
     Writer: `Tom Taylor`, Artist: `Nicola Scott`,
@@ -17024,7 +17024,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `995`,
   },
   {
-    Title: `Titans (2023)`, Issue: `#14`, Publisher: `DC`,
+    Title: `Titans`, Issue: `#14`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Titans Taylor/Scott`, Key: `NO`,
     Key_Reason: `Titans #14 Taylor — extends Box 16 run`, First_App: ``,
     Writer: `Tom Taylor`, Artist: `Nicola Scott`,
@@ -17041,7 +17041,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `996`,
   },
   {
-    Title: `Titans (2023)`, Issue: `#15`, Publisher: `DC`,
+    Title: `Titans`, Issue: `#15`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Titans Taylor/Scott`, Key: `NO`,
     Key_Reason: `Titans #15 Taylor — extends Box 16 run`, First_App: ``,
     Writer: `Tom Taylor`, Artist: `Nicola Scott`,
@@ -17058,7 +17058,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `997`,
   },
   {
-    Title: `Titans (2023)`, Issue: `#16`, Publisher: `DC`,
+    Title: `Titans`, Issue: `#16`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Titans Taylor/Scott`, Key: `NO`,
     Key_Reason: `Titans #16 Taylor — extends Box 16 run`, First_App: ``,
     Writer: `Tom Taylor`, Artist: `Nicola Scott`,
@@ -17075,7 +17075,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `998`,
   },
   {
-    Title: `Titans (2023)`, Issue: `#17`, Publisher: `DC`,
+    Title: `Titans`, Issue: `#17`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Titans Taylor/Scott`, Key: `NO`,
     Key_Reason: `Titans #17 Taylor — extends Box 16 run`, First_App: ``,
     Writer: `Tom Taylor`, Artist: `Nicola Scott`,
@@ -17092,7 +17092,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `999`,
   },
   {
-    Title: `Titans (2023)`, Issue: `#18`, Publisher: `DC`,
+    Title: `Titans`, Issue: `#18`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Titans Taylor/Scott`, Key: `NO`,
     Key_Reason: `Titans #18 Taylor — extends Box 16 run`, First_App: ``,
     Writer: `Tom Taylor`, Artist: `Nicola Scott`,
@@ -18316,7 +18316,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `1071`,
   },
   {
-    Title: `Captain America (Kirkman)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `YES`,
     Key_Reason: `Captain America (Kirkman) #1 — John Ney Reiber/John Cassaday; post-9/11 Cap relaunch`, First_App: ``,
     Writer: `John Ney Reiber / Robert Kirkman`, Artist: `John Cassaday / Various`,
@@ -18333,7 +18333,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1072`,
   },
   {
-    Title: `Captain America (Kirkman)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #2`, First_App: ``,
     Writer: `John Ney Reiber / Robert Kirkman`, Artist: `John Cassaday / Various`,
@@ -18350,7 +18350,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1073`,
   },
   {
-    Title: `Captain America (Kirkman)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #3`, First_App: ``,
     Writer: `John Ney Reiber / Robert Kirkman`, Artist: `John Cassaday / Various`,
@@ -18367,7 +18367,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1074`,
   },
   {
-    Title: `Captain America (Kirkman)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #4`, First_App: ``,
     Writer: `John Ney Reiber / Robert Kirkman`, Artist: `John Cassaday / Various`,
@@ -18384,7 +18384,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1075`,
   },
   {
-    Title: `Captain America (Kirkman)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #5`, First_App: ``,
     Writer: `John Ney Reiber / Robert Kirkman`, Artist: `John Cassaday / Various`,
@@ -18401,7 +18401,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1076`,
   },
   {
-    Title: `Captain America (Kirkman)`, Issue: `#6`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #6`, First_App: ``,
     Writer: `John Ney Reiber / Robert Kirkman`, Artist: `John Cassaday / Various`,
@@ -18418,7 +18418,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1077`,
   },
   {
-    Title: `Captain America (Kirkman)`, Issue: `#7`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#7`, Publisher: `Marvel`,
     Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #7`, First_App: ``,
     Writer: `John Ney Reiber / Robert Kirkman`, Artist: `John Cassaday / Various`,
@@ -18435,7 +18435,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1078`,
   },
   {
-    Title: `Captain America (Kirkman)`, Issue: `#8`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#8`, Publisher: `Marvel`,
     Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #8`, First_App: ``,
     Writer: `John Ney Reiber / Robert Kirkman`, Artist: `John Cassaday / Various`,
@@ -18452,7 +18452,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1079`,
   },
   {
-    Title: `Captain America (Kirkman)`, Issue: `#9`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#9`, Publisher: `Marvel`,
     Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #9`, First_App: ``,
     Writer: `John Ney Reiber / Robert Kirkman`, Artist: `John Cassaday / Various`,
@@ -18469,7 +18469,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1080`,
   },
   {
-    Title: `Captain America (Kirkman)`, Issue: `#10`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#10`, Publisher: `Marvel`,
     Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #10`, First_App: ``,
     Writer: `John Ney Reiber / Robert Kirkman`, Artist: `John Cassaday / Various`,
@@ -18486,7 +18486,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1081`,
   },
   {
-    Title: `Captain America (Kirkman)`, Issue: `#11`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#11`, Publisher: `Marvel`,
     Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #11`, First_App: ``,
     Writer: `John Ney Reiber / Robert Kirkman`, Artist: `John Cassaday / Various`,
@@ -18503,7 +18503,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1082`,
   },
   {
-    Title: `Captain America (Kirkman)`, Issue: `#12`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#12`, Publisher: `Marvel`,
     Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #12`, First_App: ``,
     Writer: `John Ney Reiber / Robert Kirkman`, Artist: `John Cassaday / Various`,
@@ -18520,7 +18520,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1083`,
   },
   {
-    Title: `Captain America (Kirkman)`, Issue: `#13`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#13`, Publisher: `Marvel`,
     Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #13`, First_App: ``,
     Writer: `John Ney Reiber / Robert Kirkman`, Artist: `John Cassaday / Various`,
@@ -18537,7 +18537,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1084`,
   },
   {
-    Title: `Captain America (Kirkman)`, Issue: `#14`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#14`, Publisher: `Marvel`,
     Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #14`, First_App: ``,
     Writer: `John Ney Reiber / Robert Kirkman`, Artist: `John Cassaday / Various`,
@@ -18554,7 +18554,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1085`,
   },
   {
-    Title: `Captain America (Kirkman)`, Issue: `#15`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#15`, Publisher: `Marvel`,
     Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #15`, First_App: ``,
     Writer: `John Ney Reiber / Robert Kirkman`, Artist: `John Cassaday / Various`,
@@ -18571,7 +18571,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1086`,
   },
   {
-    Title: `Captain America (Kirkman)`, Issue: `#16`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#16`, Publisher: `Marvel`,
     Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #16`, First_App: ``,
     Writer: `John Ney Reiber / Robert Kirkman`, Artist: `John Cassaday / Various`,
@@ -18588,7 +18588,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1087`,
   },
   {
-    Title: `Captain America (Kirkman)`, Issue: `#17`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#17`, Publisher: `Marvel`,
     Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #17`, First_App: ``,
     Writer: `John Ney Reiber / Robert Kirkman`, Artist: `John Cassaday / Various`,
@@ -18605,7 +18605,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1088`,
   },
   {
-    Title: `Captain America (Kirkman)`, Issue: `#18`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#18`, Publisher: `Marvel`,
     Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #18`, First_App: ``,
     Writer: `John Ney Reiber / Robert Kirkman`, Artist: `John Cassaday / Various`,
@@ -18622,7 +18622,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1089`,
   },
   {
-    Title: `Captain America (Kirkman)`, Issue: `#19`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#19`, Publisher: `Marvel`,
     Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #19`, First_App: ``,
     Writer: `John Ney Reiber / Robert Kirkman`, Artist: `John Cassaday / Various`,
@@ -18639,7 +18639,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1090`,
   },
   {
-    Title: `Captain America (Kirkman)`, Issue: `#20`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#20`, Publisher: `Marvel`,
     Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #20`, First_App: ``,
     Writer: `John Ney Reiber / Robert Kirkman`, Artist: `John Cassaday / Various`,
@@ -18656,7 +18656,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1091`,
   },
   {
-    Title: `Captain America (Kirkman)`, Issue: `#21`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#21`, Publisher: `Marvel`,
     Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #21`, First_App: ``,
     Writer: `John Ney Reiber / Robert Kirkman`, Artist: `John Cassaday / Various`,
@@ -18673,7 +18673,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1092`,
   },
   {
-    Title: `Captain America (Kirkman)`, Issue: `#22`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#22`, Publisher: `Marvel`,
     Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #22`, First_App: ``,
     Writer: `John Ney Reiber / Robert Kirkman`, Artist: `John Cassaday / Various`,
@@ -18690,7 +18690,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1093`,
   },
   {
-    Title: `Captain America (Kirkman)`, Issue: `#23`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#23`, Publisher: `Marvel`,
     Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #23`, First_App: ``,
     Writer: `John Ney Reiber / Robert Kirkman`, Artist: `John Cassaday / Various`,
@@ -18707,7 +18707,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1094`,
   },
   {
-    Title: `Captain America (Kirkman)`, Issue: `#24`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#24`, Publisher: `Marvel`,
     Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #24`, First_App: ``,
     Writer: `John Ney Reiber / Robert Kirkman`, Artist: `John Cassaday / Various`,
@@ -18724,7 +18724,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1095`,
   },
   {
-    Title: `Captain America (Kirkman)`, Issue: `#25`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#25`, Publisher: `Marvel`,
     Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #25`, First_App: ``,
     Writer: `John Ney Reiber / Robert Kirkman`, Artist: `John Cassaday / Various`,
@@ -18741,7 +18741,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1096`,
   },
   {
-    Title: `Captain America (Kirkman)`, Issue: `#26`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#26`, Publisher: `Marvel`,
     Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #26`, First_App: ``,
     Writer: `John Ney Reiber / Robert Kirkman`, Artist: `John Cassaday / Various`,
@@ -18758,7 +18758,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1097`,
   },
   {
-    Title: `Captain America (Kirkman)`, Issue: `#27`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#27`, Publisher: `Marvel`,
     Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #27`, First_App: ``,
     Writer: `John Ney Reiber / Robert Kirkman`, Artist: `John Cassaday / Various`,
@@ -18775,7 +18775,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1098`,
   },
   {
-    Title: `Captain America (Kirkman)`, Issue: `#28`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#28`, Publisher: `Marvel`,
     Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #28`, First_App: ``,
     Writer: `John Ney Reiber / Robert Kirkman`, Artist: `John Cassaday / Various`,
@@ -18792,7 +18792,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1099`,
   },
   {
-    Title: `Captain America (Kirkman)`, Issue: `#29`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#29`, Publisher: `Marvel`,
     Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #29`, First_App: ``,
     Writer: `John Ney Reiber / Robert Kirkman`, Artist: `John Cassaday / Various`,
@@ -18809,7 +18809,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1100`,
   },
   {
-    Title: `Captain America (Kirkman)`, Issue: `#30`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#30`, Publisher: `Marvel`,
     Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #30`, First_App: ``,
     Writer: `John Ney Reiber / Robert Kirkman`, Artist: `John Cassaday / Various`,
@@ -18826,7 +18826,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1101`,
   },
   {
-    Title: `Captain America (Kirkman)`, Issue: `#31`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#31`, Publisher: `Marvel`,
     Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #31`, First_App: ``,
     Writer: `John Ney Reiber / Robert Kirkman`, Artist: `John Cassaday / Various`,
@@ -18843,7 +18843,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1102`,
   },
   {
-    Title: `Captain America (Kirkman)`, Issue: `#32`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#32`, Publisher: `Marvel`,
     Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #32`, First_App: ``,
     Writer: `John Ney Reiber / Robert Kirkman`, Artist: `John Cassaday / Various`,
@@ -18860,7 +18860,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1103`,
   },
   {
-    Title: `Captain America (Remender)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2012-2015`, Arc: `Captain America — Rick Remender`, Key: `YES`,
     Key_Reason: `Cap #1 Remender/Romita Jr. — Marvel NOW; Dimension Z arc begins`, First_App: ``,
     Writer: `Rick Remender`, Artist: `John Romita Jr. / Carlos Pacheco`,
@@ -18877,7 +18877,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `1104`,
   },
   {
-    Title: `Captain America (Remender)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2012-2015`, Arc: `Captain America — Rick Remender`, Key: `NO`,
     Key_Reason: `Remender Cap #2`, First_App: ``,
     Writer: `Rick Remender`, Artist: `John Romita Jr. / Carlos Pacheco`,
@@ -18894,7 +18894,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `1105`,
   },
   {
-    Title: `Captain America (Remender)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2012-2015`, Arc: `Captain America — Rick Remender`, Key: `NO`,
     Key_Reason: `Remender Cap #3`, First_App: ``,
     Writer: `Rick Remender`, Artist: `John Romita Jr. / Carlos Pacheco`,
@@ -18911,7 +18911,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `1106`,
   },
   {
-    Title: `Captain America (Remender)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2012-2015`, Arc: `Captain America — Rick Remender`, Key: `NO`,
     Key_Reason: `Remender Cap #4`, First_App: ``,
     Writer: `Rick Remender`, Artist: `John Romita Jr. / Carlos Pacheco`,
@@ -18928,7 +18928,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `1107`,
   },
   {
-    Title: `Captain America (Remender)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2012-2015`, Arc: `Captain America — Rick Remender`, Key: `NO`,
     Key_Reason: `Remender Cap #5`, First_App: ``,
     Writer: `Rick Remender`, Artist: `John Romita Jr. / Carlos Pacheco`,
@@ -18945,7 +18945,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `1108`,
   },
   {
-    Title: `Captain America (Remender)`, Issue: `#6`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2012-2015`, Arc: `Captain America — Rick Remender`, Key: `NO`,
     Key_Reason: `Remender Cap #6`, First_App: ``,
     Writer: `Rick Remender`, Artist: `John Romita Jr. / Carlos Pacheco`,
@@ -18962,7 +18962,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `1109`,
   },
   {
-    Title: `Captain America (Remender)`, Issue: `#7`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#7`, Publisher: `Marvel`,
     Year: `2012-2015`, Arc: `Captain America — Rick Remender`, Key: `NO`,
     Key_Reason: `Remender Cap #7`, First_App: ``,
     Writer: `Rick Remender`, Artist: `John Romita Jr. / Carlos Pacheco`,
@@ -18979,7 +18979,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `1110`,
   },
   {
-    Title: `Captain America (Remender)`, Issue: `#8`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#8`, Publisher: `Marvel`,
     Year: `2012-2015`, Arc: `Captain America — Rick Remender`, Key: `NO`,
     Key_Reason: `Remender Cap #8`, First_App: ``,
     Writer: `Rick Remender`, Artist: `John Romita Jr. / Carlos Pacheco`,
@@ -18996,7 +18996,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `1111`,
   },
   {
-    Title: `Captain America (Remender)`, Issue: `#9`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#9`, Publisher: `Marvel`,
     Year: `2012-2015`, Arc: `Captain America — Rick Remender`, Key: `NO`,
     Key_Reason: `Remender Cap #9`, First_App: ``,
     Writer: `Rick Remender`, Artist: `John Romita Jr. / Carlos Pacheco`,
@@ -19013,7 +19013,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `1112`,
   },
   {
-    Title: `Captain America (Remender)`, Issue: `#10`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#10`, Publisher: `Marvel`,
     Year: `2012-2015`, Arc: `Captain America — Rick Remender`, Key: `NO`,
     Key_Reason: `Remender Cap #10`, First_App: ``,
     Writer: `Rick Remender`, Artist: `John Romita Jr. / Carlos Pacheco`,
@@ -19030,7 +19030,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `1113`,
   },
   {
-    Title: `Captain America (Remender)`, Issue: `#11`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#11`, Publisher: `Marvel`,
     Year: `2012-2015`, Arc: `Captain America — Rick Remender`, Key: `NO`,
     Key_Reason: `Remender Cap #11`, First_App: ``,
     Writer: `Rick Remender`, Artist: `John Romita Jr. / Carlos Pacheco`,
@@ -19047,7 +19047,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `1114`,
   },
   {
-    Title: `Captain America (Remender)`, Issue: `#12`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#12`, Publisher: `Marvel`,
     Year: `2012-2015`, Arc: `Captain America — Rick Remender`, Key: `NO`,
     Key_Reason: `Remender Cap #12`, First_App: ``,
     Writer: `Rick Remender`, Artist: `John Romita Jr. / Carlos Pacheco`,
@@ -19064,7 +19064,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `1115`,
   },
   {
-    Title: `Captain America (Remender)`, Issue: `#13`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#13`, Publisher: `Marvel`,
     Year: `2012-2015`, Arc: `Captain America — Rick Remender`, Key: `NO`,
     Key_Reason: `Remender Cap #13`, First_App: ``,
     Writer: `Rick Remender`, Artist: `John Romita Jr. / Carlos Pacheco`,
@@ -19081,7 +19081,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `1116`,
   },
   {
-    Title: `Captain America (Remender)`, Issue: `#14`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#14`, Publisher: `Marvel`,
     Year: `2012-2015`, Arc: `Captain America — Rick Remender`, Key: `NO`,
     Key_Reason: `Remender Cap #14`, First_App: ``,
     Writer: `Rick Remender`, Artist: `John Romita Jr. / Carlos Pacheco`,
@@ -19098,7 +19098,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `1117`,
   },
   {
-    Title: `Captain America (Remender)`, Issue: `#15`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#15`, Publisher: `Marvel`,
     Year: `2012-2015`, Arc: `Captain America — Rick Remender`, Key: `NO`,
     Key_Reason: `Remender Cap #15`, First_App: ``,
     Writer: `Rick Remender`, Artist: `John Romita Jr. / Carlos Pacheco`,
@@ -19115,7 +19115,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `1118`,
   },
   {
-    Title: `Captain America (Remender)`, Issue: `#16`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#16`, Publisher: `Marvel`,
     Year: `2012-2015`, Arc: `Captain America — Rick Remender`, Key: `NO`,
     Key_Reason: `Remender Cap #16`, First_App: ``,
     Writer: `Rick Remender`, Artist: `John Romita Jr. / Carlos Pacheco`,
@@ -19132,7 +19132,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `1119`,
   },
   {
-    Title: `Captain America (Remender)`, Issue: `#17`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#17`, Publisher: `Marvel`,
     Year: `2012-2015`, Arc: `Captain America — Rick Remender`, Key: `NO`,
     Key_Reason: `Remender Cap #17`, First_App: ``,
     Writer: `Rick Remender`, Artist: `John Romita Jr. / Carlos Pacheco`,
@@ -19149,7 +19149,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `1120`,
   },
   {
-    Title: `Captain America (Remender)`, Issue: `#18`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#18`, Publisher: `Marvel`,
     Year: `2012-2015`, Arc: `Captain America — Rick Remender`, Key: `NO`,
     Key_Reason: `Remender Cap #18`, First_App: ``,
     Writer: `Rick Remender`, Artist: `John Romita Jr. / Carlos Pacheco`,
@@ -19166,7 +19166,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `1121`,
   },
   {
-    Title: `Captain America (Remender)`, Issue: `#19`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#19`, Publisher: `Marvel`,
     Year: `2012-2015`, Arc: `Captain America — Rick Remender`, Key: `NO`,
     Key_Reason: `Remender Cap #19`, First_App: ``,
     Writer: `Rick Remender`, Artist: `John Romita Jr. / Carlos Pacheco`,
@@ -19183,7 +19183,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `1122`,
   },
   {
-    Title: `Captain America (Remender)`, Issue: `#22`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#22`, Publisher: `Marvel`,
     Year: `2012-2015`, Arc: `Captain America — Rick Remender`, Key: `NO`,
     Key_Reason: `Remender Cap #22`, First_App: ``,
     Writer: `Rick Remender`, Artist: `John Romita Jr. / Carlos Pacheco`,
@@ -19200,7 +19200,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `1123`,
   },
   {
-    Title: `Captain America (Remender)`, Issue: `#23`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#23`, Publisher: `Marvel`,
     Year: `2012-2015`, Arc: `Captain America — Rick Remender`, Key: `NO`,
     Key_Reason: `Remender Cap #23`, First_App: ``,
     Writer: `Rick Remender`, Artist: `John Romita Jr. / Carlos Pacheco`,
@@ -19217,7 +19217,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `1124`,
   },
   {
-    Title: `Captain America (Remender)`, Issue: `#24`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#24`, Publisher: `Marvel`,
     Year: `2012-2015`, Arc: `Captain America — Rick Remender`, Key: `NO`,
     Key_Reason: `Remender Cap #24`, First_App: ``,
     Writer: `Rick Remender`, Artist: `John Romita Jr. / Carlos Pacheco`,
@@ -19234,7 +19234,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `1125`,
   },
   {
-    Title: `Captain America (Remender)`, Issue: `#25`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#25`, Publisher: `Marvel`,
     Year: `2012-2015`, Arc: `Captain America — Rick Remender`, Key: `NO`,
     Key_Reason: `Remender Cap #25`, First_App: ``,
     Writer: `Rick Remender`, Artist: `John Romita Jr. / Carlos Pacheco`,
@@ -19693,7 +19693,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1152`,
   },
   {
-    Title: `Captain America (Coates)`, Issue: `#20`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#20`, Publisher: `Marvel`,
     Year: `2019-2020`, Arc: `Captain America — Ta-Nehisi Coates`, Key: `NO`,
     Key_Reason: `Coates Cap #20`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Adam Kubert / Various`,
@@ -19710,7 +19710,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `9`, Entry: `1153`,
   },
   {
-    Title: `Captain America (Coates)`, Issue: `#21`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#21`, Publisher: `Marvel`,
     Year: `2019-2020`, Arc: `Captain America — Ta-Nehisi Coates`, Key: `NO`,
     Key_Reason: `Coates Cap #21`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Adam Kubert / Various`,
@@ -19727,7 +19727,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `9`, Entry: `1154`,
   },
   {
-    Title: `Captain America (Coates)`, Issue: `#22`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#22`, Publisher: `Marvel`,
     Year: `2019-2020`, Arc: `Captain America — Ta-Nehisi Coates`, Key: `NO`,
     Key_Reason: `Coates Cap #22`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Adam Kubert / Various`,
@@ -19744,7 +19744,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `9`, Entry: `1155`,
   },
   {
-    Title: `Captain America (Coates)`, Issue: `#23`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#23`, Publisher: `Marvel`,
     Year: `2019-2020`, Arc: `Captain America — Ta-Nehisi Coates`, Key: `NO`,
     Key_Reason: `Coates Cap #23`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Adam Kubert / Various`,
@@ -19761,7 +19761,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `9`, Entry: `1156`,
   },
   {
-    Title: `Captain America (Coates)`, Issue: `#24`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#24`, Publisher: `Marvel`,
     Year: `2019-2020`, Arc: `Captain America — Ta-Nehisi Coates`, Key: `NO`,
     Key_Reason: `Coates Cap #24`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Adam Kubert / Various`,
@@ -19778,7 +19778,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `9`, Entry: `1157`,
   },
   {
-    Title: `Captain America (Coates)`, Issue: `#25`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#25`, Publisher: `Marvel`,
     Year: `2019-2020`, Arc: `Captain America — Ta-Nehisi Coates`, Key: `NO`,
     Key_Reason: `Coates Cap #25`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Adam Kubert / Various`,
@@ -19795,7 +19795,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `9`, Entry: `1158`,
   },
   {
-    Title: `Captain America (Coates)`, Issue: `#27`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#27`, Publisher: `Marvel`,
     Year: `2019-2020`, Arc: `Captain America — Ta-Nehisi Coates`, Key: `NO`,
     Key_Reason: `Coates Cap #27`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Adam Kubert / Various`,
@@ -19812,7 +19812,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `9`, Entry: `1159`,
   },
   {
-    Title: `Captain America (Coates)`, Issue: `#28`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#28`, Publisher: `Marvel`,
     Year: `2019-2020`, Arc: `Captain America — Ta-Nehisi Coates`, Key: `NO`,
     Key_Reason: `Coates Cap #28`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Adam Kubert / Various`,
@@ -19829,7 +19829,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `9`, Entry: `1160`,
   },
   {
-    Title: `Captain America (Coates)`, Issue: `#29`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#29`, Publisher: `Marvel`,
     Year: `2019-2020`, Arc: `Captain America — Ta-Nehisi Coates`, Key: `NO`,
     Key_Reason: `Coates Cap #29`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Adam Kubert / Various`,
@@ -19846,7 +19846,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `9`, Entry: `1161`,
   },
   {
-    Title: `Captain America (Coates)`, Issue: `#30`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#30`, Publisher: `Marvel`,
     Year: `2019-2020`, Arc: `Captain America — Ta-Nehisi Coates`, Key: `NO`,
     Key_Reason: `Coates Cap #30`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Adam Kubert / Various`,
@@ -19863,7 +19863,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `9`, Entry: `1162`,
   },
   {
-    Title: `Captain America (Legacy)`, Issue: `#698`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#698`, Publisher: `Marvel`,
     Year: `2018`, Arc: `Captain America Legacy — Mark Waid`, Key: `NO`,
     Key_Reason: `Cap #698 Legacy Waid`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Chris Samnee`,
@@ -19880,7 +19880,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `9`, Entry: `1163`,
   },
   {
-    Title: `Captain America (Legacy)`, Issue: `#699`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#699`, Publisher: `Marvel`,
     Year: `2018`, Arc: `Captain America Legacy — Mark Waid`, Key: `NO`,
     Key_Reason: `Cap #699 Legacy Waid`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Chris Samnee`,
@@ -19897,7 +19897,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `9`, Entry: `1164`,
   },
   {
-    Title: `Captain America (Legacy)`, Issue: `#700`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#700`, Publisher: `Marvel`,
     Year: `2018`, Arc: `Captain America Legacy — Mark Waid`, Key: `YES`,
     Key_Reason: `Cap #700 — Mark Waid/Chris Samnee; Steve Rogers returns; landmark issue`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Chris Samnee`,
@@ -19914,7 +19914,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `9`, Entry: `1165`,
   },
   {
-    Title: `Captain America (Legacy)`, Issue: `#701`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#701`, Publisher: `Marvel`,
     Year: `2018`, Arc: `Captain America Legacy — Mark Waid`, Key: `NO`,
     Key_Reason: `Cap #701 Legacy Waid`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Chris Samnee`,
@@ -19931,7 +19931,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `9`, Entry: `1166`,
   },
   {
-    Title: `Captain America (Legacy)`, Issue: `#702`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#702`, Publisher: `Marvel`,
     Year: `2018`, Arc: `Captain America Legacy — Mark Waid`, Key: `NO`,
     Key_Reason: `Cap #702 Legacy Waid`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Chris Samnee`,
@@ -19948,7 +19948,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `9`, Entry: `1167`,
   },
   {
-    Title: `Captain America (Legacy)`, Issue: `#703`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#703`, Publisher: `Marvel`,
     Year: `2018`, Arc: `Captain America Legacy — Mark Waid`, Key: `NO`,
     Key_Reason: `Cap #703 Legacy Waid`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Chris Samnee`,
@@ -19965,7 +19965,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `9`, Entry: `1168`,
   },
   {
-    Title: `Captain America (Legacy)`, Issue: `#704`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#704`, Publisher: `Marvel`,
     Year: `2018`, Arc: `Captain America Legacy — Mark Waid`, Key: `NO`,
     Key_Reason: `Cap #704 Legacy Waid`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Chris Samnee`,
@@ -20135,10 +20135,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `9`, Entry: `1178`,
   },
   {
-    Title: `Captain America (Pak — Sam Wilson)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Captain America Pak — Sam Wilson`, Key: `YES`,
     Key_Reason: `Cap #1 Pak — Sam Wilson as Cap; Legacy #767`, First_App: ``,
-    Writer: `Greg Pak`, Artist: ``,
+    Writer: `Greg Pak / Pak — Sam Wilson`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: `$5`, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -20424,7 +20424,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1195`,
   },
   {
-    Title: `Invaders (2019)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Invaders`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Invaders — Chip Kidd/Zdarsky`, Key: `YES`,
     Key_Reason: `Invaders #1 (2019) — Chip Kidd/Zdarsky; Cap/Namor/Winter Soldier; near-complete`, First_App: ``,
     Writer: `Chip Kidd / Zdarsky`, Artist: `Carlos Magno`,
@@ -20441,7 +20441,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1196`,
   },
   {
-    Title: `Invaders (2019)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `Invaders`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Invaders — Chip Kidd/Zdarsky`, Key: `NO`,
     Key_Reason: `Invaders #2`, First_App: ``,
     Writer: `Chip Kidd / Zdarsky`, Artist: `Carlos Magno`,
@@ -20458,7 +20458,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1197`,
   },
   {
-    Title: `Invaders (2019)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `Invaders`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Invaders — Chip Kidd/Zdarsky`, Key: `NO`,
     Key_Reason: `Invaders #3`, First_App: ``,
     Writer: `Chip Kidd / Zdarsky`, Artist: `Carlos Magno`,
@@ -20475,7 +20475,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1198`,
   },
   {
-    Title: `Invaders (2019)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `Invaders`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Invaders — Chip Kidd/Zdarsky`, Key: `NO`,
     Key_Reason: `Invaders #4`, First_App: ``,
     Writer: `Chip Kidd / Zdarsky`, Artist: `Carlos Magno`,
@@ -20492,7 +20492,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1199`,
   },
   {
-    Title: `Invaders (2019)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `Invaders`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Invaders — Chip Kidd/Zdarsky`, Key: `NO`,
     Key_Reason: `Invaders #5`, First_App: ``,
     Writer: `Chip Kidd / Zdarsky`, Artist: `Carlos Magno`,
@@ -20509,7 +20509,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1200`,
   },
   {
-    Title: `Invaders (2019)`, Issue: `#6`, Publisher: `Marvel`,
+    Title: `Invaders`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Invaders — Chip Kidd/Zdarsky`, Key: `NO`,
     Key_Reason: `Invaders #6`, First_App: ``,
     Writer: `Chip Kidd / Zdarsky`, Artist: `Carlos Magno`,
@@ -20526,7 +20526,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1201`,
   },
   {
-    Title: `Invaders (2019)`, Issue: `#7`, Publisher: `Marvel`,
+    Title: `Invaders`, Issue: `#7`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Invaders — Chip Kidd/Zdarsky`, Key: `NO`,
     Key_Reason: `Invaders #7`, First_App: ``,
     Writer: `Chip Kidd / Zdarsky`, Artist: `Carlos Magno`,
@@ -20543,7 +20543,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1202`,
   },
   {
-    Title: `Invaders (2019)`, Issue: `#8`, Publisher: `Marvel`,
+    Title: `Invaders`, Issue: `#8`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Invaders — Chip Kidd/Zdarsky`, Key: `NO`,
     Key_Reason: `Invaders #8`, First_App: ``,
     Writer: `Chip Kidd / Zdarsky`, Artist: `Carlos Magno`,
@@ -20560,7 +20560,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1203`,
   },
   {
-    Title: `Invaders (2019)`, Issue: `#9`, Publisher: `Marvel`,
+    Title: `Invaders`, Issue: `#9`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Invaders — Chip Kidd/Zdarsky`, Key: `NO`,
     Key_Reason: `Invaders #9`, First_App: ``,
     Writer: `Chip Kidd / Zdarsky`, Artist: `Carlos Magno`,
@@ -20577,7 +20577,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1204`,
   },
   {
-    Title: `Invaders (2019)`, Issue: `#10`, Publisher: `Marvel`,
+    Title: `Invaders`, Issue: `#10`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Invaders — Chip Kidd/Zdarsky`, Key: `NO`,
     Key_Reason: `Invaders #10`, First_App: ``,
     Writer: `Chip Kidd / Zdarsky`, Artist: `Carlos Magno`,
@@ -20594,7 +20594,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1205`,
   },
   {
-    Title: `Invaders (2019)`, Issue: `#11`, Publisher: `Marvel`,
+    Title: `Invaders`, Issue: `#11`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Invaders — Chip Kidd/Zdarsky`, Key: `NO`,
     Key_Reason: `Invaders #11`, First_App: ``,
     Writer: `Chip Kidd / Zdarsky`, Artist: `Carlos Magno`,
@@ -20611,7 +20611,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1206`,
   },
   {
-    Title: `Invaders (2019)`, Issue: `#12`, Publisher: `Marvel`,
+    Title: `Invaders`, Issue: `#12`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Invaders — Chip Kidd/Zdarsky`, Key: `NO`,
     Key_Reason: `Invaders #12`, First_App: ``,
     Writer: `Chip Kidd / Zdarsky`, Artist: `Carlos Magno`,
@@ -20951,7 +20951,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `1226`,
   },
   {
-    Title: `Captain America (2022)`, Issue: `#0`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#0`, Publisher: `Marvel`,
     Year: `2022`, Arc: `Cap Zero issue`, Key: `YES`,
     Key_Reason: `Captain America #0 — Kelly/Lanzing; zero issue prelude to Empire crossover`, First_App: ``,
     Writer: `Collin Kelly / Jackson Lanzing`, Artist: ``,
@@ -21036,7 +21036,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1231`,
   },
   {
-    Title: `Justice League (Bendis)`, Issue: `#74`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#74`, Publisher: `DC`,
     Year: `2022`, Arc: `Justice League — Bendis`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: ``,
@@ -21172,7 +21172,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1239`,
   },
   {
-    Title: `Checkmate (2021)`, Issue: `#1`, Publisher: `DC`,
+    Title: `Checkmate`, Issue: `#1`, Publisher: `DC`,
     Year: `2021`, Arc: `Checkmate Bendis/Maleev — COMPLETE`, Key: `YES`,
     Key_Reason: `Checkmate #1 Bendis/Maleev; spy thriller sequel to Event Leviathan;  COMPLETE 6-issue run!`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Alex Maleev`,
@@ -21189,7 +21189,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1240`,
   },
   {
-    Title: `Checkmate (2021)`, Issue: `#2`, Publisher: `DC`,
+    Title: `Checkmate`, Issue: `#2`, Publisher: `DC`,
     Year: `2021`, Arc: `Checkmate Bendis/Maleev — COMPLETE`, Key: `NO`,
     Key_Reason: `Checkmate #2`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Alex Maleev`,
@@ -21206,7 +21206,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1241`,
   },
   {
-    Title: `Checkmate (2021)`, Issue: `#3`, Publisher: `DC`,
+    Title: `Checkmate`, Issue: `#3`, Publisher: `DC`,
     Year: `2021`, Arc: `Checkmate Bendis/Maleev — COMPLETE`, Key: `NO`,
     Key_Reason: `Checkmate #3`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Alex Maleev`,
@@ -21223,7 +21223,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1242`,
   },
   {
-    Title: `Checkmate (2021)`, Issue: `#4`, Publisher: `DC`,
+    Title: `Checkmate`, Issue: `#4`, Publisher: `DC`,
     Year: `2021`, Arc: `Checkmate Bendis/Maleev — COMPLETE`, Key: `NO`,
     Key_Reason: `Checkmate #4`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Alex Maleev`,
@@ -21240,7 +21240,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1243`,
   },
   {
-    Title: `Checkmate (2021)`, Issue: `#5`, Publisher: `DC`,
+    Title: `Checkmate`, Issue: `#5`, Publisher: `DC`,
     Year: `2021`, Arc: `Checkmate Bendis/Maleev — COMPLETE`, Key: `NO`,
     Key_Reason: `Checkmate #5`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Alex Maleev`,
@@ -21257,7 +21257,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1244`,
   },
   {
-    Title: `Checkmate (2021)`, Issue: `#6`, Publisher: `DC`,
+    Title: `Checkmate`, Issue: `#6`, Publisher: `DC`,
     Year: `2021`, Arc: `Checkmate Bendis/Maleev — COMPLETE`, Key: `NO`,
     Key_Reason: `Checkmate #6`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Alex Maleev`,
@@ -21274,7 +21274,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1245`,
   },
   {
-    Title: `Green Lantern (2021)`, Issue: `#2`, Publisher: `DC`,
+    Title: `Green Lantern`, Issue: `#2`, Publisher: `DC`,
     Year: `2021-2022`, Arc: `Green Lantern — Geoffrey Thorne/Tom Raney`, Key: `YES`,
     Key_Reason: `GL #2 Thorne/Raney — Jo Mullein featured; cool cover`, First_App: ``,
     Writer: `Geoffrey Thorne`, Artist: `Tom Raney / Xermanico`,
@@ -21291,7 +21291,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `1246`,
   },
   {
-    Title: `Green Lantern (2021)`, Issue: `#3`, Publisher: `DC`,
+    Title: `Green Lantern`, Issue: `#3`, Publisher: `DC`,
     Year: `2021-2022`, Arc: `Green Lantern — Geoffrey Thorne/Tom Raney`, Key: `NO`,
     Key_Reason: `GL #3 Thorne/Raney; cool Joe Mullen cover noted on some`, First_App: ``,
     Writer: `Geoffrey Thorne`, Artist: `Tom Raney / Xermanico`,
@@ -21308,7 +21308,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `1247`,
   },
   {
-    Title: `Green Lantern (2021)`, Issue: `#4`, Publisher: `DC`,
+    Title: `Green Lantern`, Issue: `#4`, Publisher: `DC`,
     Year: `2021-2022`, Arc: `Green Lantern — Geoffrey Thorne/Tom Raney`, Key: `NO`,
     Key_Reason: `GL #4 Thorne/Raney; cool Joe Mullen cover noted on some`, First_App: ``,
     Writer: `Geoffrey Thorne`, Artist: `Tom Raney / Xermanico`,
@@ -21325,7 +21325,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `1248`,
   },
   {
-    Title: `Green Lantern (2021)`, Issue: `#5`, Publisher: `DC`,
+    Title: `Green Lantern`, Issue: `#5`, Publisher: `DC`,
     Year: `2021-2022`, Arc: `Green Lantern — Geoffrey Thorne/Tom Raney`, Key: `NO`,
     Key_Reason: `GL #5 Thorne/Raney; cool Joe Mullen cover noted on some`, First_App: ``,
     Writer: `Geoffrey Thorne`, Artist: `Tom Raney / Xermanico`,
@@ -21342,7 +21342,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `1249`,
   },
   {
-    Title: `Green Lantern (2021)`, Issue: `#6`, Publisher: `DC`,
+    Title: `Green Lantern`, Issue: `#6`, Publisher: `DC`,
     Year: `2021-2022`, Arc: `Green Lantern — Geoffrey Thorne/Tom Raney`, Key: `NO`,
     Key_Reason: `GL #6 Thorne/Raney; cool Joe Mullen cover noted on some`, First_App: ``,
     Writer: `Geoffrey Thorne`, Artist: `Tom Raney / Xermanico`,
@@ -21359,7 +21359,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `1250`,
   },
   {
-    Title: `Green Lantern (2021)`, Issue: `#7`, Publisher: `DC`,
+    Title: `Green Lantern`, Issue: `#7`, Publisher: `DC`,
     Year: `2021-2022`, Arc: `Green Lantern — Geoffrey Thorne/Tom Raney`, Key: `NO`,
     Key_Reason: `GL #7 Thorne/Raney; cool Joe Mullen cover noted on some`, First_App: ``,
     Writer: `Geoffrey Thorne`, Artist: `Tom Raney / Xermanico`,
@@ -21376,7 +21376,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `1251`,
   },
   {
-    Title: `Green Lantern (2021)`, Issue: `#8`, Publisher: `DC`,
+    Title: `Green Lantern`, Issue: `#8`, Publisher: `DC`,
     Year: `2021-2022`, Arc: `Green Lantern — Geoffrey Thorne/Tom Raney`, Key: `NO`,
     Key_Reason: `GL #8 Thorne/Raney; cool Joe Mullen cover noted on some`, First_App: ``,
     Writer: `Geoffrey Thorne`, Artist: `Tom Raney / Xermanico`,
@@ -21393,7 +21393,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `1252`,
   },
   {
-    Title: `Green Lantern (2021)`, Issue: `#9`, Publisher: `DC`,
+    Title: `Green Lantern`, Issue: `#9`, Publisher: `DC`,
     Year: `2021-2022`, Arc: `Green Lantern — Geoffrey Thorne/Tom Raney`, Key: `NO`,
     Key_Reason: `GL #9 Thorne/Raney; cool Joe Mullen cover noted on some`, First_App: ``,
     Writer: `Geoffrey Thorne`, Artist: `Tom Raney / Xermanico`,
@@ -21410,7 +21410,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `1253`,
   },
   {
-    Title: `Batman/Superman (2019)`, Issue: `#7`, Publisher: `DC`,
+    Title: `Batman/Superman`, Issue: `#7`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Batman/Superman — Joshua Williamson`, Key: `NO`,
     Key_Reason: `B/S #7 Williamson`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Nick Derington / Various`,
@@ -21427,7 +21427,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1254`,
   },
   {
-    Title: `Batman/Superman (2019)`, Issue: `#8`, Publisher: `DC`,
+    Title: `Batman/Superman`, Issue: `#8`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Batman/Superman — Joshua Williamson`, Key: `NO`,
     Key_Reason: `B/S #8 Williamson`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Nick Derington / Various`,
@@ -21444,7 +21444,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1255`,
   },
   {
-    Title: `Batman/Superman (2019)`, Issue: `#9`, Publisher: `DC`,
+    Title: `Batman/Superman`, Issue: `#9`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Batman/Superman — Joshua Williamson`, Key: `NO`,
     Key_Reason: `B/S #9 Williamson`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Nick Derington / Various`,
@@ -21461,7 +21461,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1256`,
   },
   {
-    Title: `Batman/Superman (2019)`, Issue: `#10`, Publisher: `DC`,
+    Title: `Batman/Superman`, Issue: `#10`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Batman/Superman — Joshua Williamson`, Key: `NO`,
     Key_Reason: `B/S #10 Williamson`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Nick Derington / Various`,
@@ -21478,7 +21478,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1257`,
   },
   {
-    Title: `Batman/Superman (2019)`, Issue: `#11`, Publisher: `DC`,
+    Title: `Batman/Superman`, Issue: `#11`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Batman/Superman — Joshua Williamson`, Key: `NO`,
     Key_Reason: `B/S #11 Williamson`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Nick Derington / Various`,
@@ -21495,7 +21495,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1258`,
   },
   {
-    Title: `Batman/Superman (2019)`, Issue: `#12`, Publisher: `DC`,
+    Title: `Batman/Superman`, Issue: `#12`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Batman/Superman — Joshua Williamson`, Key: `NO`,
     Key_Reason: `B/S #12 Williamson`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Nick Derington / Various`,
@@ -21512,7 +21512,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1259`,
   },
   {
-    Title: `Batman/Superman (2019)`, Issue: `#13`, Publisher: `DC`,
+    Title: `Batman/Superman`, Issue: `#13`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Batman/Superman — Joshua Williamson`, Key: `NO`,
     Key_Reason: `B/S #13 Williamson`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Nick Derington / Various`,
@@ -21529,7 +21529,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1260`,
   },
   {
-    Title: `Batman/Superman (2019)`, Issue: `#14`, Publisher: `DC`,
+    Title: `Batman/Superman`, Issue: `#14`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Batman/Superman — Joshua Williamson`, Key: `NO`,
     Key_Reason: `B/S #14 Williamson`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Nick Derington / Various`,
@@ -21546,7 +21546,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1261`,
   },
   {
-    Title: `Batman/Superman (2019)`, Issue: `#15`, Publisher: `DC`,
+    Title: `Batman/Superman`, Issue: `#15`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Batman/Superman — Joshua Williamson`, Key: `NO`,
     Key_Reason: `B/S #15 Williamson`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Nick Derington / Various`,
@@ -21563,7 +21563,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1262`,
   },
   {
-    Title: `Batman/Superman (2019)`, Issue: `#16`, Publisher: `DC`,
+    Title: `Batman/Superman`, Issue: `#16`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Batman/Superman — Joshua Williamson`, Key: `NO`,
     Key_Reason: `B/S #16 Williamson`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Nick Derington / Various`,
@@ -21580,7 +21580,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1263`,
   },
   {
-    Title: `Batman/Superman (2019)`, Issue: `#17`, Publisher: `DC`,
+    Title: `Batman/Superman`, Issue: `#17`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Batman/Superman — Joshua Williamson`, Key: `NO`,
     Key_Reason: `B/S #17 Williamson`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Nick Derington / Various`,
@@ -21665,7 +21665,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1268`,
   },
   {
-    Title: `Justice League (Bendis era)`, Issue: `#51`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#51`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Justice League — Bendis/Tynion Dark Metal era`, Key: `NO`,
     Key_Reason: `JL #51 — Dark Knights Death Metal / Endless Winter crossovers`, First_App: ``,
     Writer: `Brian Michael Bendis / Various`, Artist: `Various`,
@@ -21682,7 +21682,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1269`,
   },
   {
-    Title: `Justice League (Bendis era)`, Issue: `#52`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#52`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Justice League — Bendis/Tynion Dark Metal era`, Key: `NO`,
     Key_Reason: `JL #52 — Dark Knights Death Metal / Endless Winter crossovers`, First_App: ``,
     Writer: `Brian Michael Bendis / Various`, Artist: `Various`,
@@ -21699,7 +21699,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1270`,
   },
   {
-    Title: `Justice League (Bendis era)`, Issue: `#53`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#53`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Justice League — Bendis/Tynion Dark Metal era`, Key: `NO`,
     Key_Reason: `JL #53 — Dark Knights Death Metal / Endless Winter crossovers`, First_App: ``,
     Writer: `Brian Michael Bendis / Various`, Artist: `Various`,
@@ -21716,7 +21716,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1271`,
   },
   {
-    Title: `Justice League (Bendis era)`, Issue: `#54`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#54`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Justice League — Bendis/Tynion Dark Metal era`, Key: `NO`,
     Key_Reason: `JL #54 — Dark Knights Death Metal / Endless Winter crossovers`, First_App: ``,
     Writer: `Brian Michael Bendis / Various`, Artist: `Various`,
@@ -21733,7 +21733,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1272`,
   },
   {
-    Title: `Justice League (Bendis era)`, Issue: `#55`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#55`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Justice League — Bendis/Tynion Dark Metal era`, Key: `NO`,
     Key_Reason: `JL #55 — Dark Knights Death Metal / Endless Winter crossovers`, First_App: ``,
     Writer: `Brian Michael Bendis / Various`, Artist: `Various`,
@@ -21750,7 +21750,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1273`,
   },
   {
-    Title: `Justice League (Bendis era)`, Issue: `#56`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#56`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Justice League — Bendis/Tynion Dark Metal era`, Key: `NO`,
     Key_Reason: `JL #56 — Dark Knights Death Metal / Endless Winter crossovers`, First_App: ``,
     Writer: `Brian Michael Bendis / Various`, Artist: `Various`,
@@ -21767,7 +21767,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1274`,
   },
   {
-    Title: `Justice League (Bendis era)`, Issue: `#57`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#57`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Justice League — Bendis/Tynion Dark Metal era`, Key: `NO`,
     Key_Reason: `JL #57 — Dark Knights Death Metal / Endless Winter crossovers`, First_App: ``,
     Writer: `Brian Michael Bendis / Various`, Artist: `Various`,
@@ -21784,7 +21784,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1275`,
   },
   {
-    Title: `Justice League (Bendis era)`, Issue: `#58`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#58`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Justice League — Bendis/Tynion Dark Metal era`, Key: `NO`,
     Key_Reason: `JL #58 — Dark Knights Death Metal / Endless Winter crossovers`, First_App: ``,
     Writer: `Brian Michael Bendis / Various`, Artist: `Various`,
@@ -21801,7 +21801,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1276`,
   },
   {
-    Title: `Justice League (Bendis era)`, Issue: `#59`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#59`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Justice League — Bendis/Tynion Dark Metal era`, Key: `NO`,
     Key_Reason: `JL #59 — Dark Knights Death Metal / Endless Winter crossovers`, First_App: ``,
     Writer: `Brian Michael Bendis / Various`, Artist: `Various`,
@@ -21818,7 +21818,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1277`,
   },
   {
-    Title: `Justice League (Bendis era)`, Issue: `#60`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#60`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Justice League — Bendis/Tynion Dark Metal era`, Key: `NO`,
     Key_Reason: `JL #60 — Dark Knights Death Metal / Endless Winter crossovers`, First_App: ``,
     Writer: `Brian Michael Bendis / Various`, Artist: `Various`,
@@ -21835,7 +21835,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1278`,
   },
   {
-    Title: `Justice League (Bendis era)`, Issue: `#61`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#61`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Justice League — Bendis/Tynion Dark Metal era`, Key: `NO`,
     Key_Reason: `JL #61 — Dark Knights Death Metal / Endless Winter crossovers`, First_App: ``,
     Writer: `Brian Michael Bendis / Various`, Artist: `Various`,
@@ -21852,7 +21852,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1279`,
   },
   {
-    Title: `Justice League (Bendis era)`, Issue: `#62`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#62`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Justice League — Bendis/Tynion Dark Metal era`, Key: `NO`,
     Key_Reason: `JL #62 — Dark Knights Death Metal / Endless Winter crossovers`, First_App: ``,
     Writer: `Brian Michael Bendis / Various`, Artist: `Various`,
@@ -21869,7 +21869,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1280`,
   },
   {
-    Title: `Justice League (Bendis era)`, Issue: `#67`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#67`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Justice League — Bendis/Tynion Dark Metal era`, Key: `NO`,
     Key_Reason: `JL #67 — Dark Knights Death Metal / Endless Winter crossovers`, First_App: ``,
     Writer: `Brian Michael Bendis / Various`, Artist: `Various`,
@@ -21886,7 +21886,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1281`,
   },
   {
-    Title: `Justice League (Bendis era)`, Issue: `#68`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#68`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Justice League — Bendis/Tynion Dark Metal era`, Key: `NO`,
     Key_Reason: `JL #68 — Dark Knights Death Metal / Endless Winter crossovers`, First_App: ``,
     Writer: `Brian Michael Bendis / Various`, Artist: `Various`,
@@ -21903,7 +21903,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1282`,
   },
   {
-    Title: `Justice League (Bendis era)`, Issue: `#69`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#69`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Justice League — Bendis/Tynion Dark Metal era`, Key: `NO`,
     Key_Reason: `JL #69 — Dark Knights Death Metal / Endless Winter crossovers`, First_App: ``,
     Writer: `Brian Michael Bendis / Various`, Artist: `Various`,
@@ -22056,7 +22056,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1291`,
   },
   {
-    Title: `Green Lantern (2021)`, Issue: `#3`, Publisher: `DC`,
+    Title: `Green Lantern`, Issue: `#3`, Publisher: `DC`,
     Year: `2021`, Arc: `GL Thorne/Raney`, Key: `NO`,
     Key_Reason: `GL #3 Thorne — $4.99`, First_App: ``,
     Writer: `Geoffrey Thorne`, Artist: `Tom Raney`,
@@ -22073,7 +22073,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `1292`,
   },
   {
-    Title: `Green Lantern (2021)`, Issue: `#4`, Publisher: `DC`,
+    Title: `Green Lantern`, Issue: `#4`, Publisher: `DC`,
     Year: `2021`, Arc: `GL Thorne/Raney`, Key: `NO`,
     Key_Reason: `GL #4 Thorne — $4.99`, First_App: ``,
     Writer: `Geoffrey Thorne`, Artist: `Tom Raney`,
@@ -22090,7 +22090,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `1293`,
   },
   {
-    Title: `Green Lantern (2021)`, Issue: `#5`, Publisher: `DC`,
+    Title: `Green Lantern`, Issue: `#5`, Publisher: `DC`,
     Year: `2021`, Arc: `GL Thorne/Raney`, Key: `NO`,
     Key_Reason: `GL #5 Thorne — $4.99`, First_App: ``,
     Writer: `Geoffrey Thorne`, Artist: `Tom Raney`,
@@ -22107,7 +22107,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `1294`,
   },
   {
-    Title: `Green Lantern (2021)`, Issue: `#6`, Publisher: `DC`,
+    Title: `Green Lantern`, Issue: `#6`, Publisher: `DC`,
     Year: `2021`, Arc: `GL Thorne/Raney`, Key: `NO`,
     Key_Reason: `GL #6 Thorne — $4.99`, First_App: ``,
     Writer: `Geoffrey Thorne`, Artist: `Tom Raney`,
@@ -22362,7 +22362,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1309`,
   },
   {
-    Title: `Justice League Dark (2018)`, Issue: `#17`, Publisher: `DC`,
+    Title: `Justice League Dark`, Issue: `#17`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Justice League Dark`, Key: `NO`,
     Key_Reason: `JLD #17`, First_App: ``,
     Writer: `James Tynion IV / Ram V`, Artist: ``,
@@ -22379,7 +22379,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1310`,
   },
   {
-    Title: `Justice League Dark (2018)`, Issue: `#18`, Publisher: `DC`,
+    Title: `Justice League Dark`, Issue: `#18`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Justice League Dark`, Key: `NO`,
     Key_Reason: `JLD #18`, First_App: ``,
     Writer: `James Tynion IV / Ram V`, Artist: ``,
@@ -22396,7 +22396,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1311`,
   },
   {
-    Title: `Justice League Dark (2018)`, Issue: `#19`, Publisher: `DC`,
+    Title: `Justice League Dark`, Issue: `#19`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Justice League Dark`, Key: `NO`,
     Key_Reason: `JLD #19`, First_App: ``,
     Writer: `James Tynion IV / Ram V`, Artist: ``,
@@ -22413,7 +22413,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1312`,
   },
   {
-    Title: `Justice League Dark (2018)`, Issue: `#20`, Publisher: `DC`,
+    Title: `Justice League Dark`, Issue: `#20`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Justice League Dark`, Key: `NO`,
     Key_Reason: `JLD #20`, First_App: ``,
     Writer: `James Tynion IV / Ram V`, Artist: ``,
@@ -22430,7 +22430,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1313`,
   },
   {
-    Title: `Justice League Dark (2018)`, Issue: `#21`, Publisher: `DC`,
+    Title: `Justice League Dark`, Issue: `#21`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Justice League Dark`, Key: `NO`,
     Key_Reason: `JLD #21`, First_App: ``,
     Writer: `James Tynion IV / Ram V`, Artist: ``,
@@ -22447,7 +22447,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1314`,
   },
   {
-    Title: `Justice League Dark (2018)`, Issue: `#22`, Publisher: `DC`,
+    Title: `Justice League Dark`, Issue: `#22`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Justice League Dark`, Key: `NO`,
     Key_Reason: `JLD #22`, First_App: ``,
     Writer: `James Tynion IV / Ram V`, Artist: ``,
@@ -22464,7 +22464,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1315`,
   },
   {
-    Title: `Justice League Dark (2018)`, Issue: `#23`, Publisher: `DC`,
+    Title: `Justice League Dark`, Issue: `#23`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Justice League Dark`, Key: `NO`,
     Key_Reason: `JLD #23`, First_App: ``,
     Writer: `James Tynion IV / Ram V`, Artist: ``,
@@ -22481,7 +22481,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1316`,
   },
   {
-    Title: `Justice League Dark (2018)`, Issue: `#24`, Publisher: `DC`,
+    Title: `Justice League Dark`, Issue: `#24`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Justice League Dark`, Key: `NO`,
     Key_Reason: `JLD #24`, First_App: ``,
     Writer: `James Tynion IV / Ram V`, Artist: ``,
@@ -22498,7 +22498,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1317`,
   },
   {
-    Title: `Justice League Dark (2018)`, Issue: `#25`, Publisher: `DC`,
+    Title: `Justice League Dark`, Issue: `#25`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Justice League Dark`, Key: `NO`,
     Key_Reason: `JLD #25`, First_App: ``,
     Writer: `James Tynion IV / Ram V`, Artist: ``,
@@ -22515,7 +22515,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1318`,
   },
   {
-    Title: `Justice League Dark (2018)`, Issue: `#26`, Publisher: `DC`,
+    Title: `Justice League Dark`, Issue: `#26`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Justice League Dark`, Key: `NO`,
     Key_Reason: `JLD #26`, First_App: ``,
     Writer: `James Tynion IV / Ram V`, Artist: ``,
@@ -22532,7 +22532,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1319`,
   },
   {
-    Title: `Justice League Dark (2018)`, Issue: `#27`, Publisher: `DC`,
+    Title: `Justice League Dark`, Issue: `#27`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Justice League Dark`, Key: `NO`,
     Key_Reason: `JLD #27`, First_App: ``,
     Writer: `James Tynion IV / Ram V`, Artist: ``,
@@ -22549,7 +22549,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1320`,
   },
   {
-    Title: `Justice League Dark (2018)`, Issue: `#29`, Publisher: `DC`,
+    Title: `Justice League Dark`, Issue: `#29`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Justice League Dark`, Key: `NO`,
     Key_Reason: `JLD #29`, First_App: ``,
     Writer: `James Tynion IV / Ram V`, Artist: ``,
@@ -22617,7 +22617,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1324`,
   },
   {
-    Title: `Shazam! (2019)`, Issue: `#6`, Publisher: `DC`,
+    Title: `Shazam!`, Issue: `#6`, Publisher: `DC`,
     Year: `2019-2021`, Arc: `Shazam Johns/Eaglesham`, Key: `NO`,
     Key_Reason: `Shazam #6 Johns`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Dale Eaglesham`,
@@ -22634,7 +22634,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1325`,
   },
   {
-    Title: `Shazam! (2019)`, Issue: `#7`, Publisher: `DC`,
+    Title: `Shazam!`, Issue: `#7`, Publisher: `DC`,
     Year: `2019-2021`, Arc: `Shazam Johns/Eaglesham`, Key: `NO`,
     Key_Reason: `Shazam #7 Johns`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Dale Eaglesham`,
@@ -22651,7 +22651,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1326`,
   },
   {
-    Title: `Shazam! (2019)`, Issue: `#8`, Publisher: `DC`,
+    Title: `Shazam!`, Issue: `#8`, Publisher: `DC`,
     Year: `2019-2021`, Arc: `Shazam Johns/Eaglesham`, Key: `NO`,
     Key_Reason: `Shazam #8 Johns`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Dale Eaglesham`,
@@ -22668,7 +22668,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1327`,
   },
   {
-    Title: `Shazam! (2019)`, Issue: `#9`, Publisher: `DC`,
+    Title: `Shazam!`, Issue: `#9`, Publisher: `DC`,
     Year: `2019-2021`, Arc: `Shazam Johns/Eaglesham`, Key: `NO`,
     Key_Reason: `Shazam #9 Johns`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Dale Eaglesham`,
@@ -22685,7 +22685,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1328`,
   },
   {
-    Title: `Shazam! (2019)`, Issue: `#10`, Publisher: `DC`,
+    Title: `Shazam!`, Issue: `#10`, Publisher: `DC`,
     Year: `2019-2021`, Arc: `Shazam Johns/Eaglesham`, Key: `NO`,
     Key_Reason: `Shazam #10 Johns`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Dale Eaglesham`,
@@ -22702,7 +22702,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1329`,
   },
   {
-    Title: `Shazam! (2019)`, Issue: `#11`, Publisher: `DC`,
+    Title: `Shazam!`, Issue: `#11`, Publisher: `DC`,
     Year: `2019-2021`, Arc: `Shazam Johns/Eaglesham`, Key: `NO`,
     Key_Reason: `Shazam #11 Johns`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Dale Eaglesham`,
@@ -22719,7 +22719,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1330`,
   },
   {
-    Title: `Shazam! (2019)`, Issue: `#12`, Publisher: `DC`,
+    Title: `Shazam!`, Issue: `#12`, Publisher: `DC`,
     Year: `2019-2021`, Arc: `Shazam Johns/Eaglesham`, Key: `NO`,
     Key_Reason: `Shazam #12 Johns`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Dale Eaglesham`,
@@ -22736,7 +22736,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1331`,
   },
   {
-    Title: `Shazam! (2019)`, Issue: `#13`, Publisher: `DC`,
+    Title: `Shazam!`, Issue: `#13`, Publisher: `DC`,
     Year: `2019-2021`, Arc: `Shazam Johns/Eaglesham`, Key: `NO`,
     Key_Reason: `Shazam #13 Johns`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Dale Eaglesham`,
@@ -22753,7 +22753,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1332`,
   },
   {
-    Title: `Shazam! (2019)`, Issue: `#14`, Publisher: `DC`,
+    Title: `Shazam!`, Issue: `#14`, Publisher: `DC`,
     Year: `2019-2021`, Arc: `Shazam Johns/Eaglesham`, Key: `NO`,
     Key_Reason: `Shazam #14 Johns`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Dale Eaglesham`,
@@ -22770,7 +22770,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1333`,
   },
   {
-    Title: `Shazam! (2019)`, Issue: `#15`, Publisher: `DC`,
+    Title: `Shazam!`, Issue: `#15`, Publisher: `DC`,
     Year: `2019-2021`, Arc: `Shazam Johns/Eaglesham`, Key: `NO`,
     Key_Reason: `Shazam #15 Johns`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Dale Eaglesham`,
@@ -22787,7 +22787,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1334`,
   },
   {
-    Title: `Legion of Super-Heroes (2019)`, Issue: `#5`, Publisher: `DC`,
+    Title: `Legion of Super-Heroes`, Issue: `#5`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Legion — Bendis/Sook`, Key: `YES`,
     Key_Reason: `Legion #5 Bendis/Sook`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Ryan Sook`,
@@ -22804,7 +22804,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1335`,
   },
   {
-    Title: `Legion of Super-Heroes (2019)`, Issue: `#6`, Publisher: `DC`,
+    Title: `Legion of Super-Heroes`, Issue: `#6`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Legion — Bendis/Sook`, Key: `NO`,
     Key_Reason: `Legion #6 Bendis/Sook`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Ryan Sook`,
@@ -22821,7 +22821,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1336`,
   },
   {
-    Title: `Legion of Super-Heroes (2019)`, Issue: `#7`, Publisher: `DC`,
+    Title: `Legion of Super-Heroes`, Issue: `#7`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Legion — Bendis/Sook`, Key: `NO`,
     Key_Reason: `Legion #7 Bendis/Sook`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Ryan Sook`,
@@ -22838,7 +22838,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1337`,
   },
   {
-    Title: `Legion of Super-Heroes (2019)`, Issue: `#8`, Publisher: `DC`,
+    Title: `Legion of Super-Heroes`, Issue: `#8`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Legion — Bendis/Sook`, Key: `NO`,
     Key_Reason: `Legion #8 Bendis/Sook`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Ryan Sook`,
@@ -22855,7 +22855,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1338`,
   },
   {
-    Title: `Legion of Super-Heroes (2019)`, Issue: `#9`, Publisher: `DC`,
+    Title: `Legion of Super-Heroes`, Issue: `#9`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Legion — Bendis/Sook`, Key: `NO`,
     Key_Reason: `Legion #9 Bendis/Sook`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Ryan Sook`,
@@ -22872,7 +22872,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1339`,
   },
   {
-    Title: `Legion of Super-Heroes (2019)`, Issue: `#10`, Publisher: `DC`,
+    Title: `Legion of Super-Heroes`, Issue: `#10`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Legion — Bendis/Sook`, Key: `NO`,
     Key_Reason: `Legion #10 Bendis/Sook`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Ryan Sook`,
@@ -22889,7 +22889,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1340`,
   },
   {
-    Title: `Legion of Super-Heroes (2019)`, Issue: `#12`, Publisher: `DC`,
+    Title: `Legion of Super-Heroes`, Issue: `#12`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Legion — Bendis/Sook`, Key: `NO`,
     Key_Reason: `Legion #12 Bendis/Sook`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Ryan Sook`,
@@ -23008,7 +23008,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1347`,
   },
   {
-    Title: `Hawkman (2018)`, Issue: `#14`, Publisher: `DC`,
+    Title: `Hawkman`, Issue: `#14`, Publisher: `DC`,
     Year: `2019-2021`, Arc: `Hawkman — Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #14 Venditti — extends Box 21 run`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch / Various`,
@@ -23025,7 +23025,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1348`,
   },
   {
-    Title: `Hawkman (2018)`, Issue: `#15`, Publisher: `DC`,
+    Title: `Hawkman`, Issue: `#15`, Publisher: `DC`,
     Year: `2019-2021`, Arc: `Hawkman — Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #15 Venditti — extends Box 21 run`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch / Various`,
@@ -23042,7 +23042,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1349`,
   },
   {
-    Title: `Hawkman (2018)`, Issue: `#16`, Publisher: `DC`,
+    Title: `Hawkman`, Issue: `#16`, Publisher: `DC`,
     Year: `2019-2021`, Arc: `Hawkman — Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #16 Venditti — extends Box 21 run cool cover`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch / Various`,
@@ -23059,7 +23059,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1350`,
   },
   {
-    Title: `Hawkman (2018)`, Issue: `#17`, Publisher: `DC`,
+    Title: `Hawkman`, Issue: `#17`, Publisher: `DC`,
     Year: `2019-2021`, Arc: `Hawkman — Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #17 Venditti — extends Box 21 run`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch / Various`,
@@ -23076,7 +23076,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1351`,
   },
   {
-    Title: `Hawkman (2018)`, Issue: `#18`, Publisher: `DC`,
+    Title: `Hawkman`, Issue: `#18`, Publisher: `DC`,
     Year: `2019-2021`, Arc: `Hawkman — Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #18 Venditti — extends Box 21 run`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch / Various`,
@@ -23093,7 +23093,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1352`,
   },
   {
-    Title: `Hawkman (2018)`, Issue: `#19`, Publisher: `DC`,
+    Title: `Hawkman`, Issue: `#19`, Publisher: `DC`,
     Year: `2019-2021`, Arc: `Hawkman — Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #19 Venditti — extends Box 21 run`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch / Various`,
@@ -23110,7 +23110,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1353`,
   },
   {
-    Title: `Hawkman (2018)`, Issue: `#20`, Publisher: `DC`,
+    Title: `Hawkman`, Issue: `#20`, Publisher: `DC`,
     Year: `2019-2021`, Arc: `Hawkman — Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #20 Venditti — extends Box 21 run`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch / Various`,
@@ -23127,7 +23127,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1354`,
   },
   {
-    Title: `Hawkman (2018)`, Issue: `#21`, Publisher: `DC`,
+    Title: `Hawkman`, Issue: `#21`, Publisher: `DC`,
     Year: `2019-2021`, Arc: `Hawkman — Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #21 Venditti — extends Box 21 run`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch / Various`,
@@ -23144,7 +23144,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1355`,
   },
   {
-    Title: `Hawkman (2018)`, Issue: `#22`, Publisher: `DC`,
+    Title: `Hawkman`, Issue: `#22`, Publisher: `DC`,
     Year: `2019-2021`, Arc: `Hawkman — Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #22 Venditti — extends Box 21 run`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch / Various`,
@@ -23161,7 +23161,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1356`,
   },
   {
-    Title: `Hawkman (2018)`, Issue: `#23`, Publisher: `DC`,
+    Title: `Hawkman`, Issue: `#23`, Publisher: `DC`,
     Year: `2019-2021`, Arc: `Hawkman — Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #23 Venditti — extends Box 21 run`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch / Various`,
@@ -23178,7 +23178,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1357`,
   },
   {
-    Title: `Hawkman (2018)`, Issue: `#24`, Publisher: `DC`,
+    Title: `Hawkman`, Issue: `#24`, Publisher: `DC`,
     Year: `2019-2021`, Arc: `Hawkman — Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #24 Venditti — extends Box 21 run`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch / Various`,
@@ -23195,7 +23195,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1358`,
   },
   {
-    Title: `Hawkman (2018)`, Issue: `#25`, Publisher: `DC`,
+    Title: `Hawkman`, Issue: `#25`, Publisher: `DC`,
     Year: `2019-2021`, Arc: `Hawkman — Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #25 Venditti — extends Box 21 run`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch / Various`,
@@ -23212,7 +23212,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1359`,
   },
   {
-    Title: `Hawkman (2018)`, Issue: `#26`, Publisher: `DC`,
+    Title: `Hawkman`, Issue: `#26`, Publisher: `DC`,
     Year: `2019-2021`, Arc: `Hawkman — Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #26 Venditti — extends Box 21 run`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch / Various`,
@@ -23229,7 +23229,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1360`,
   },
   {
-    Title: `Hawkman (2018)`, Issue: `#27`, Publisher: `DC`,
+    Title: `Hawkman`, Issue: `#27`, Publisher: `DC`,
     Year: `2019-2021`, Arc: `Hawkman — Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #27 Venditti — extends Box 21 run`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch / Various`,
@@ -23246,7 +23246,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1361`,
   },
   {
-    Title: `Hawkman (2018)`, Issue: `#28`, Publisher: `DC`,
+    Title: `Hawkman`, Issue: `#28`, Publisher: `DC`,
     Year: `2019-2021`, Arc: `Hawkman — Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #28 Venditti — extends Box 21 run`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch / Various`,
@@ -23263,7 +23263,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1362`,
   },
   {
-    Title: `Hawkman (2018)`, Issue: `#29`, Publisher: `DC`,
+    Title: `Hawkman`, Issue: `#29`, Publisher: `DC`,
     Year: `2019-2021`, Arc: `Hawkman — Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #29 Venditti — extends Box 21 run`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch / Various`,
@@ -23280,7 +23280,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1363`,
   },
   {
-    Title: `Aquaman (2016)`, Issue: `#50`, Publisher: `DC`,
+    Title: `Aquaman`, Issue: `#50`, Publisher: `DC`,
     Year: `2019-2020`, Arc: `Aquaman — Kelly/DeConnick`, Key: `NO`,
     Key_Reason: `Aquaman #50`, First_App: ``,
     Writer: `Kelly Sue DeConnick`, Artist: ``,
@@ -23297,7 +23297,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1364`,
   },
   {
-    Title: `Aquaman (2016)`, Issue: `#51`, Publisher: `DC`,
+    Title: `Aquaman`, Issue: `#51`, Publisher: `DC`,
     Year: `2019-2020`, Arc: `Aquaman — Kelly/DeConnick`, Key: `NO`,
     Key_Reason: `Aquaman #51`, First_App: ``,
     Writer: `Kelly Sue DeConnick`, Artist: ``,
@@ -23314,7 +23314,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1365`,
   },
   {
-    Title: `Aquaman (2016)`, Issue: `#52`, Publisher: `DC`,
+    Title: `Aquaman`, Issue: `#52`, Publisher: `DC`,
     Year: `2019-2020`, Arc: `Aquaman — Kelly/DeConnick`, Key: `NO`,
     Key_Reason: `Aquaman #52`, First_App: ``,
     Writer: `Kelly Sue DeConnick`, Artist: ``,
@@ -23331,7 +23331,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1366`,
   },
   {
-    Title: `Aquaman (2016)`, Issue: `#53`, Publisher: `DC`,
+    Title: `Aquaman`, Issue: `#53`, Publisher: `DC`,
     Year: `2019-2020`, Arc: `Aquaman — Kelly/DeConnick`, Key: `NO`,
     Key_Reason: `Aquaman #53`, First_App: ``,
     Writer: `Kelly Sue DeConnick`, Artist: ``,
@@ -23348,7 +23348,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1367`,
   },
   {
-    Title: `Aquaman (2016)`, Issue: `#54`, Publisher: `DC`,
+    Title: `Aquaman`, Issue: `#54`, Publisher: `DC`,
     Year: `2019-2020`, Arc: `Aquaman — Kelly/DeConnick`, Key: `NO`,
     Key_Reason: `Aquaman #54`, First_App: ``,
     Writer: `Kelly Sue DeConnick`, Artist: ``,
@@ -23365,7 +23365,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1368`,
   },
   {
-    Title: `Aquaman (2016)`, Issue: `#55`, Publisher: `DC`,
+    Title: `Aquaman`, Issue: `#55`, Publisher: `DC`,
     Year: `2019-2020`, Arc: `Aquaman — Kelly/DeConnick`, Key: `NO`,
     Key_Reason: `Aquaman #55cool cover`, First_App: ``,
     Writer: `Kelly Sue DeConnick`, Artist: ``,
@@ -23382,7 +23382,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1369`,
   },
   {
-    Title: `Aquaman (2016)`, Issue: `#66`, Publisher: `DC`,
+    Title: `Aquaman`, Issue: `#66`, Publisher: `DC`,
     Year: `2019-2020`, Arc: `Aquaman — Kelly/DeConnick`, Key: `NO`,
     Key_Reason: `Aquaman #66`, First_App: ``,
     Writer: `Kelly Sue DeConnick`, Artist: ``,
@@ -23399,7 +23399,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1370`,
   },
   {
-    Title: `Lois Lane (2019)`, Issue: `#4`, Publisher: `DC`,
+    Title: `Lois Lane`, Issue: `#4`, Publisher: `DC`,
     Year: `2020`, Arc: `Lois Lane — Rucka/Perkins`, Key: `NO`,
     Key_Reason: `Lois Lane #4 — deceased variant cover`, First_App: ``,
     Writer: `Greg Rucka`, Artist: `Mike Perkins`,
@@ -23603,7 +23603,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1382`,
   },
   {
-    Title: `Nightwing (2016)`, Issue: `#5`, Publisher: `DC`,
+    Title: `Nightwing`, Issue: `#5`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Nightwing — Jurgens era`, Key: `NO`,
     Key_Reason: `Nightwing #5`, First_App: ``,
     Writer: `Dan Jurgens / Various`, Artist: ``,
@@ -23620,7 +23620,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1383`,
   },
   {
-    Title: `Nightwing (2016)`, Issue: `#75`, Publisher: `DC`,
+    Title: `Nightwing`, Issue: `#75`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Nightwing — Jurgens era`, Key: `NO`,
     Key_Reason: `Nightwing #75`, First_App: ``,
     Writer: `Dan Jurgens / Various`, Artist: ``,
@@ -23637,7 +23637,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1384`,
   },
   {
-    Title: `Nightwing (2016)`, Issue: `#76`, Publisher: `DC`,
+    Title: `Nightwing`, Issue: `#76`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Nightwing — Jurgens era`, Key: `NO`,
     Key_Reason: `Nightwing #76`, First_App: ``,
     Writer: `Dan Jurgens / Various`, Artist: ``,
@@ -23654,7 +23654,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1385`,
   },
   {
-    Title: `Nightwing (2016)`, Issue: `#77`, Publisher: `DC`,
+    Title: `Nightwing`, Issue: `#77`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Nightwing — Jurgens era`, Key: `NO`,
     Key_Reason: `Nightwing #77`, First_App: ``,
     Writer: `Dan Jurgens / Various`, Artist: ``,
@@ -23671,7 +23671,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1386`,
   },
   {
-    Title: `Young Justice (2019)`, Issue: `#20`, Publisher: `DC`,
+    Title: `Young Justice`, Issue: `#20`, Publisher: `DC`,
     Year: `2021`, Arc: `Young Justice Bendis finale`, Key: `NO`,
     Key_Reason: `YJ #20 — Wonder Comics finale`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `John Timms`,
@@ -23688,7 +23688,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1387`,
   },
   {
-    Title: `Young Justice (2019)`, Issue: `#19`, Publisher: `DC`,
+    Title: `Young Justice`, Issue: `#19`, Publisher: `DC`,
     Year: `2021`, Arc: `Young Justice Bendis`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: ``,
@@ -23705,7 +23705,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1388`,
   },
   {
-    Title: `Batman/Superman (2019)`, Issue: `#7`, Publisher: `DC`,
+    Title: `Batman/Superman`, Issue: `#7`, Publisher: `DC`,
     Year: `2020`, Arc: `B/S Williamson`, Key: `NO`,
     Key_Reason: `B/S #7`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: ``,
@@ -23722,7 +23722,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1389`,
   },
   {
-    Title: `Batman/Superman (2019)`, Issue: `#8`, Publisher: `DC`,
+    Title: `Batman/Superman`, Issue: `#8`, Publisher: `DC`,
     Year: `2020`, Arc: `B/S Williamson`, Key: `NO`,
     Key_Reason: `B/S #8`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: ``,
@@ -23739,7 +23739,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1390`,
   },
   {
-    Title: `Aquaman (2016)`, Issue: `#54`, Publisher: `DC`,
+    Title: `Aquaman`, Issue: `#54`, Publisher: `DC`,
     Year: `2019`, Arc: `Year of Villain`, Key: `NO`,
     Key_Reason: `Black Manta focus issue`, First_App: ``,
     Writer: `Kelly Sue DeConnick`, Artist: ``,
@@ -24045,7 +24045,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1408`,
   },
   {
-    Title: `Justice League (Hitch Rebirth)`, Issue: `#1`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#1`, Publisher: `DC`,
     Year: `2016`, Arc: `Justice League — Bryan Hitch Rebirth`, Key: `YES`,
     Key_Reason: `Justice League #1 Hitch Rebirth — DC Universe Rebirth cover variant; both are different books`, First_App: ``,
     Writer: `Bryan Hitch`, Artist: `Bryan Hitch`,
@@ -24062,7 +24062,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1409`,
   },
   {
-    Title: `Justice League (Hitch Rebirth)`, Issue: `#1`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#1`, Publisher: `DC`,
     Year: `2016`, Arc: `Justice League — Bryan Hitch Rebirth`, Key: `YES`,
     Key_Reason: `Justice League #1 Hitch Rebirth — Justice League Rebirth cover variant; both are different books`, First_App: ``,
     Writer: `Bryan Hitch`, Artist: `Bryan Hitch`,
@@ -24079,7 +24079,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1410`,
   },
   {
-    Title: `Justice League (Hitch Rebirth)`, Issue: `#1`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#1`, Publisher: `DC`,
     Year: `2016`, Arc: `Justice League — Bryan Hitch Rebirth`, Key: `YES`,
     Key_Reason: `Justice League #1 Hitch Rebirth — DC Universe Rebirth cover variant; both are different books`, First_App: ``,
     Writer: `Bryan Hitch`, Artist: `Bryan Hitch`,
@@ -24096,7 +24096,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1411`,
   },
   {
-    Title: `Justice League (Hitch Rebirth)`, Issue: `#1`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#1`, Publisher: `DC`,
     Year: `2016`, Arc: `Justice League — Bryan Hitch Rebirth`, Key: `YES`,
     Key_Reason: `Justice League #1 Hitch Rebirth — Justice League Rebirth cover variant; both are different books`, First_App: ``,
     Writer: `Bryan Hitch`, Artist: `Bryan Hitch`,
@@ -24113,7 +24113,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1412`,
   },
   {
-    Title: `Justice League (Hitch Rebirth)`, Issue: `#2`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#2`, Publisher: `DC`,
     Year: `2016`, Arc: `Justice League — Bryan Hitch Rebirth`, Key: `NO`,
     Key_Reason: `JL Hitch #2`, First_App: ``,
     Writer: `Bryan Hitch`, Artist: `Bryan Hitch`,
@@ -24130,7 +24130,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1413`,
   },
   {
-    Title: `Justice League (Hitch Rebirth)`, Issue: `#3`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#3`, Publisher: `DC`,
     Year: `2016`, Arc: `Justice League — Bryan Hitch Rebirth`, Key: `NO`,
     Key_Reason: `JL Hitch #3`, First_App: ``,
     Writer: `Bryan Hitch`, Artist: `Bryan Hitch`,
@@ -24147,7 +24147,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1414`,
   },
   {
-    Title: `Justice League (Hitch Rebirth)`, Issue: `#4`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#4`, Publisher: `DC`,
     Year: `2016`, Arc: `Justice League — Bryan Hitch Rebirth`, Key: `NO`,
     Key_Reason: `JL Hitch #4`, First_App: ``,
     Writer: `Bryan Hitch`, Artist: `Bryan Hitch`,
@@ -24164,7 +24164,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1415`,
   },
   {
-    Title: `Justice League (Hitch Rebirth)`, Issue: `#5`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#5`, Publisher: `DC`,
     Year: `2016`, Arc: `Justice League — Bryan Hitch Rebirth`, Key: `NO`,
     Key_Reason: `JL Hitch #5`, First_App: ``,
     Writer: `Bryan Hitch`, Artist: `Bryan Hitch`,
@@ -24181,7 +24181,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1416`,
   },
   {
-    Title: `Justice League (Hitch Rebirth)`, Issue: `#6`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#6`, Publisher: `DC`,
     Year: `2016`, Arc: `Justice League — Bryan Hitch Rebirth`, Key: `NO`,
     Key_Reason: `JL Hitch #6`, First_App: ``,
     Writer: `Bryan Hitch`, Artist: `Bryan Hitch`,
@@ -24198,7 +24198,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1417`,
   },
   {
-    Title: `Justice League (Hitch Rebirth)`, Issue: `#7`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#7`, Publisher: `DC`,
     Year: `2016`, Arc: `Justice League — Bryan Hitch Rebirth`, Key: `NO`,
     Key_Reason: `JL Hitch #7`, First_App: ``,
     Writer: `Bryan Hitch`, Artist: `Bryan Hitch`,
@@ -24215,7 +24215,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1418`,
   },
   {
-    Title: `Justice League (Hitch Rebirth)`, Issue: `#8`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#8`, Publisher: `DC`,
     Year: `2016`, Arc: `Justice League — Bryan Hitch Rebirth`, Key: `NO`,
     Key_Reason: `JL Hitch #8`, First_App: ``,
     Writer: `Bryan Hitch`, Artist: `Bryan Hitch`,
@@ -24232,7 +24232,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1419`,
   },
   {
-    Title: `Justice League (Hitch Rebirth)`, Issue: `#9`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#9`, Publisher: `DC`,
     Year: `2016`, Arc: `Justice League — Bryan Hitch Rebirth`, Key: `NO`,
     Key_Reason: `JL Hitch #9`, First_App: ``,
     Writer: `Bryan Hitch`, Artist: `Bryan Hitch`,
@@ -24249,7 +24249,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1420`,
   },
   {
-    Title: `Justice League (Hitch Rebirth)`, Issue: `#10`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#10`, Publisher: `DC`,
     Year: `2016`, Arc: `Justice League — Bryan Hitch Rebirth`, Key: `NO`,
     Key_Reason: `JL Hitch #10`, First_App: ``,
     Writer: `Bryan Hitch`, Artist: `Bryan Hitch`,
@@ -24266,7 +24266,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1421`,
   },
   {
-    Title: `Justice League (Hitch Rebirth)`, Issue: `#11`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#11`, Publisher: `DC`,
     Year: `2016`, Arc: `Justice League — Bryan Hitch Rebirth`, Key: `NO`,
     Key_Reason: `JL Hitch #11`, First_App: ``,
     Writer: `Bryan Hitch`, Artist: `Bryan Hitch`,
@@ -24283,7 +24283,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1422`,
   },
   {
-    Title: `Justice League (Hitch Rebirth)`, Issue: `#13`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#13`, Publisher: `DC`,
     Year: `2016`, Arc: `Justice League — Bryan Hitch Rebirth`, Key: `NO`,
     Key_Reason: `JL Hitch #13`, First_App: ``,
     Writer: `Bryan Hitch`, Artist: `Bryan Hitch`,
@@ -24300,7 +24300,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1423`,
   },
   {
-    Title: `Nightwing (Rebirth)`, Issue: `#1`, Publisher: `DC`,
+    Title: `Nightwing`, Issue: `#1`, Publisher: `DC`,
     Year: `2016`, Arc: `Nightwing Rebirth — Seely/Paquette`, Key: `YES`,
     Key_Reason: `Nightwing Rebirth #1 — Tim Seely/Yanick Paquette; Dick Grayson returns as Nightwing`, First_App: `Dick Grayson as Nightwing (Rebirth)`,
     Writer: `Tim Seely`, Artist: `Yanick Paquette`,
@@ -24317,7 +24317,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1424`,
   },
   {
-    Title: `Nightwing (Rebirth)`, Issue: `#1`, Publisher: `DC`,
+    Title: `Nightwing`, Issue: `#1`, Publisher: `DC`,
     Year: `2016`, Arc: `Nightwing Rebirth — Seely/Paquette`, Key: `YES`,
     Key_Reason: `Nightwing Rebirth #1 — Tim Seely/Yanick Paquette; Dick Grayson returns as Nightwing`, First_App: `Dick Grayson as Nightwing (Rebirth)`,
     Writer: `Tim Seely`, Artist: `Yanick Paquette`,
@@ -24334,7 +24334,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1425`,
   },
   {
-    Title: `Nightwing (2016)`, Issue: `#2`, Publisher: `DC`,
+    Title: `Nightwing`, Issue: `#2`, Publisher: `DC`,
     Year: `2016`, Arc: `Nightwing — Tim Seely/Javier Fernandez`, Key: `NO`,
     Key_Reason: `Nightwing #2 Seely/Fernandez Rebirth run`, First_App: ``,
     Writer: `Tim Seely`, Artist: `Javier Fernandez`,
@@ -24351,7 +24351,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1426`,
   },
   {
-    Title: `Nightwing (2016)`, Issue: `#3`, Publisher: `DC`,
+    Title: `Nightwing`, Issue: `#3`, Publisher: `DC`,
     Year: `2016`, Arc: `Nightwing — Tim Seely/Javier Fernandez`, Key: `NO`,
     Key_Reason: `Nightwing #3 Seely/Fernandez Rebirth run`, First_App: ``,
     Writer: `Tim Seely`, Artist: `Javier Fernandez`,
@@ -24368,7 +24368,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1427`,
   },
   {
-    Title: `Nightwing (2016)`, Issue: `#5`, Publisher: `DC`,
+    Title: `Nightwing`, Issue: `#5`, Publisher: `DC`,
     Year: `2016`, Arc: `Nightwing — Tim Seely/Javier Fernandez`, Key: `NO`,
     Key_Reason: `Nightwing #5 Seely/Fernandez Rebirth run`, First_App: ``,
     Writer: `Tim Seely`, Artist: `Javier Fernandez`,
@@ -24385,7 +24385,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1428`,
   },
   {
-    Title: `Nightwing (2016)`, Issue: `#6`, Publisher: `DC`,
+    Title: `Nightwing`, Issue: `#6`, Publisher: `DC`,
     Year: `2016`, Arc: `Nightwing — Tim Seely/Javier Fernandez`, Key: `NO`,
     Key_Reason: `Nightwing #6 Seely/Fernandez Rebirth run`, First_App: ``,
     Writer: `Tim Seely`, Artist: `Javier Fernandez`,
@@ -24402,7 +24402,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1429`,
   },
   {
-    Title: `Nightwing (2016)`, Issue: `#7`, Publisher: `DC`,
+    Title: `Nightwing`, Issue: `#7`, Publisher: `DC`,
     Year: `2016`, Arc: `Nightwing — Tim Seely/Javier Fernandez`, Key: `NO`,
     Key_Reason: `Nightwing #7 Seely/Fernandez Rebirth run`, First_App: ``,
     Writer: `Tim Seely`, Artist: `Javier Fernandez`,
@@ -24419,7 +24419,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1430`,
   },
   {
-    Title: `Nightwing (2016)`, Issue: `#8`, Publisher: `DC`,
+    Title: `Nightwing`, Issue: `#8`, Publisher: `DC`,
     Year: `2016`, Arc: `Nightwing — Tim Seely/Javier Fernandez`, Key: `NO`,
     Key_Reason: `Nightwing #8 Seely/Fernandez Rebirth run`, First_App: ``,
     Writer: `Tim Seely`, Artist: `Javier Fernandez`,
@@ -24436,7 +24436,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1431`,
   },
   {
-    Title: `Suicide Squad (Rebirth)`, Issue: `#1`, Publisher: `DC`,
+    Title: `Suicide Squad`, Issue: `#1`, Publisher: `DC`,
     Year: `2016`, Arc: `Suicide Squad Rebirth`, Key: `YES`,
     Key_Reason: `Suicide Squad Rebirth #1 — Rob Williams; two different cover variants`, First_App: `New Suicide Squad Rebirth roster`,
     Writer: `Rob Williams`, Artist: `Jim Lee / Philip Tan`,
@@ -24453,7 +24453,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1432`,
   },
   {
-    Title: `Suicide Squad (Rebirth)`, Issue: `#1`, Publisher: `DC`,
+    Title: `Suicide Squad`, Issue: `#1`, Publisher: `DC`,
     Year: `2016`, Arc: `Suicide Squad Rebirth`, Key: `YES`,
     Key_Reason: `Suicide Squad Rebirth #1 — Rob Williams; two different cover variants`, First_App: `New Suicide Squad Rebirth roster`,
     Writer: `Rob Williams`, Artist: `Jim Lee / Philip Tan`,
@@ -24487,7 +24487,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1434`,
   },
   {
-    Title: `Suicide Squad (2016)`, Issue: `#2`, Publisher: `DC`,
+    Title: `Suicide Squad`, Issue: `#2`, Publisher: `DC`,
     Year: `2016`, Arc: `Suicide Squad Rebirth`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Rob Williams`, Artist: `Jim Lee / Various`,
@@ -24504,7 +24504,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1435`,
   },
   {
-    Title: `Suicide Squad (2016)`, Issue: `#3`, Publisher: `DC`,
+    Title: `Suicide Squad`, Issue: `#3`, Publisher: `DC`,
     Year: `2016`, Arc: `Suicide Squad Rebirth`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Rob Williams`, Artist: `Jim Lee / Various`,
@@ -24521,7 +24521,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1436`,
   },
   {
-    Title: `Suicide Squad (2016)`, Issue: `#4`, Publisher: `DC`,
+    Title: `Suicide Squad`, Issue: `#4`, Publisher: `DC`,
     Year: `2016`, Arc: `Suicide Squad Rebirth`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Rob Williams`, Artist: `Jim Lee / Various`,
@@ -24538,7 +24538,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1437`,
   },
   {
-    Title: `Suicide Squad (2016)`, Issue: `#5`, Publisher: `DC`,
+    Title: `Suicide Squad`, Issue: `#5`, Publisher: `DC`,
     Year: `2016`, Arc: `Suicide Squad Rebirth`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Rob Williams`, Artist: `Jim Lee / Various`,
@@ -24555,7 +24555,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1438`,
   },
   {
-    Title: `Suicide Squad (2016)`, Issue: `#12`, Publisher: `DC`,
+    Title: `Suicide Squad`, Issue: `#12`, Publisher: `DC`,
     Year: `2016`, Arc: `Suicide Squad Rebirth`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Rob Williams`, Artist: `Jim Lee / Various`,
@@ -24572,7 +24572,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1439`,
   },
   {
-    Title: `Suicide Squad (2016)`, Issue: `#13`, Publisher: `DC`,
+    Title: `Suicide Squad`, Issue: `#13`, Publisher: `DC`,
     Year: `2016`, Arc: `Suicide Squad Rebirth`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Rob Williams`, Artist: `Jim Lee / Various`,
@@ -24589,7 +24589,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1440`,
   },
   {
-    Title: `Teen Titans (Rebirth)`, Issue: `#1`, Publisher: `DC`,
+    Title: `Teen Titans`, Issue: `#1`, Publisher: `DC`,
     Year: `2016`, Arc: `Teen Titans Rebirth`, Key: `YES`,
     Key_Reason: `Teen Titans Rebirth #1 — Benjamin Percy; two cover variants; Damian Wayne leads TT`, First_App: `Damian Wayne leads Teen Titans (Rebirth)`,
     Writer: `Benjamin Percy`, Artist: `Jonboy Meyers`,
@@ -24606,7 +24606,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1441`,
   },
   {
-    Title: `Teen Titans (Rebirth)`, Issue: `#1`, Publisher: `DC`,
+    Title: `Teen Titans`, Issue: `#1`, Publisher: `DC`,
     Year: `2016`, Arc: `Teen Titans Rebirth`, Key: `YES`,
     Key_Reason: `Teen Titans Rebirth #1 — Benjamin Percy; two cover variants; Damian Wayne leads TT`, First_App: `Damian Wayne leads Teen Titans (Rebirth)`,
     Writer: `Benjamin Percy`, Artist: `Jonboy Meyers`,
@@ -24623,7 +24623,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1442`,
   },
   {
-    Title: `Teen Titans (2016)`, Issue: `#2`, Publisher: `DC`,
+    Title: `Teen Titans`, Issue: `#2`, Publisher: `DC`,
     Year: `2016`, Arc: `Teen Titans Rebirth`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Jonboy Meyers`,
@@ -24640,7 +24640,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1443`,
   },
   {
-    Title: `Teen Titans (2016)`, Issue: `#3`, Publisher: `DC`,
+    Title: `Teen Titans`, Issue: `#3`, Publisher: `DC`,
     Year: `2016`, Arc: `Teen Titans Rebirth`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Jonboy Meyers`,
@@ -24657,7 +24657,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1444`,
   },
   {
-    Title: `Teen Titans (2016)`, Issue: `#4`, Publisher: `DC`,
+    Title: `Teen Titans`, Issue: `#4`, Publisher: `DC`,
     Year: `2016`, Arc: `Teen Titans Rebirth`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Jonboy Meyers`,
@@ -24674,7 +24674,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1445`,
   },
   {
-    Title: `Teen Titans (2016)`, Issue: `#5`, Publisher: `DC`,
+    Title: `Teen Titans`, Issue: `#5`, Publisher: `DC`,
     Year: `2016`, Arc: `Teen Titans Rebirth`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Jonboy Meyers`,
@@ -24691,7 +24691,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1446`,
   },
   {
-    Title: `Teen Titans (2016)`, Issue: `#6`, Publisher: `DC`,
+    Title: `Teen Titans`, Issue: `#6`, Publisher: `DC`,
     Year: `2016`, Arc: `Teen Titans Rebirth`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Jonboy Meyers`,
@@ -24708,7 +24708,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1447`,
   },
   {
-    Title: `Teen Titans (2016)`, Issue: `#7`, Publisher: `DC`,
+    Title: `Teen Titans`, Issue: `#7`, Publisher: `DC`,
     Year: `2016`, Arc: `Teen Titans Rebirth`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Jonboy Meyers`,
@@ -24725,7 +24725,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1448`,
   },
   {
-    Title: `Titans (2016)`, Issue: `#2`, Publisher: `DC`,
+    Title: `Titans`, Issue: `#2`, Publisher: `DC`,
     Year: `2016-2019`, Arc: `Titans Rebirth — Abnett`, Key: `NO`,
     Key_Reason: `Titans #2 Abnett/Booth`, First_App: ``,
     Writer: `Dan Abnett`, Artist: `Brett Booth`,
@@ -24742,7 +24742,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1449`,
   },
   {
-    Title: `Titans (2016)`, Issue: `#3`, Publisher: `DC`,
+    Title: `Titans`, Issue: `#3`, Publisher: `DC`,
     Year: `2016-2019`, Arc: `Titans Rebirth — Abnett`, Key: `NO`,
     Key_Reason: `Titans #3 Abnett/Booth`, First_App: ``,
     Writer: `Dan Abnett`, Artist: `Brett Booth`,
@@ -24759,7 +24759,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1450`,
   },
   {
-    Title: `Titans (2016)`, Issue: `#4`, Publisher: `DC`,
+    Title: `Titans`, Issue: `#4`, Publisher: `DC`,
     Year: `2016-2019`, Arc: `Titans Rebirth — Abnett`, Key: `NO`,
     Key_Reason: `Titans #4 Abnett/Booth`, First_App: ``,
     Writer: `Dan Abnett`, Artist: `Brett Booth`,
@@ -24776,7 +24776,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1451`,
   },
   {
-    Title: `Titans (2016)`, Issue: `#5`, Publisher: `DC`,
+    Title: `Titans`, Issue: `#5`, Publisher: `DC`,
     Year: `2016-2019`, Arc: `Titans Rebirth — Abnett`, Key: `NO`,
     Key_Reason: `Titans #5 Abnett/Booth`, First_App: ``,
     Writer: `Dan Abnett`, Artist: `Brett Booth`,
@@ -24793,7 +24793,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1452`,
   },
   {
-    Title: `Titans (2016)`, Issue: `#6`, Publisher: `DC`,
+    Title: `Titans`, Issue: `#6`, Publisher: `DC`,
     Year: `2016-2019`, Arc: `Titans Rebirth — Abnett`, Key: `NO`,
     Key_Reason: `Titans #6 Abnett/Booth`, First_App: ``,
     Writer: `Dan Abnett`, Artist: `Brett Booth`,
@@ -24810,7 +24810,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1453`,
   },
   {
-    Title: `Titans (2016)`, Issue: `#7`, Publisher: `DC`,
+    Title: `Titans`, Issue: `#7`, Publisher: `DC`,
     Year: `2016-2019`, Arc: `Titans Rebirth — Abnett`, Key: `NO`,
     Key_Reason: `Titans #7 Abnett/Booth`, First_App: ``,
     Writer: `Dan Abnett`, Artist: `Brett Booth`,
@@ -24827,7 +24827,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1454`,
   },
   {
-    Title: `Titans (2016)`, Issue: `#8`, Publisher: `DC`,
+    Title: `Titans`, Issue: `#8`, Publisher: `DC`,
     Year: `2016-2019`, Arc: `Titans Rebirth — Abnett`, Key: `NO`,
     Key_Reason: `Titans #8 Abnett/Booth`, First_App: ``,
     Writer: `Dan Abnett`, Artist: `Brett Booth`,
@@ -24844,7 +24844,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1455`,
   },
   {
-    Title: `Titans (2016)`, Issue: `#9`, Publisher: `DC`,
+    Title: `Titans`, Issue: `#9`, Publisher: `DC`,
     Year: `2016-2019`, Arc: `Titans Rebirth — Abnett`, Key: `NO`,
     Key_Reason: `Titans #9 Abnett/Booth`, First_App: ``,
     Writer: `Dan Abnett`, Artist: `Brett Booth`,
@@ -24861,7 +24861,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1456`,
   },
   {
-    Title: `Titans (2016)`, Issue: `#10`, Publisher: `DC`,
+    Title: `Titans`, Issue: `#10`, Publisher: `DC`,
     Year: `2016-2019`, Arc: `Titans Rebirth — Abnett`, Key: `NO`,
     Key_Reason: `Titans #10 Abnett/Booth`, First_App: ``,
     Writer: `Dan Abnett`, Artist: `Brett Booth`,
@@ -24878,7 +24878,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1457`,
   },
   {
-    Title: `Titans (2016)`, Issue: `#24`, Publisher: `DC`,
+    Title: `Titans`, Issue: `#24`, Publisher: `DC`,
     Year: `2016-2019`, Arc: `Titans Rebirth — Abnett`, Key: `NO`,
     Key_Reason: `Titans #24 Abnett/Booth`, First_App: ``,
     Writer: `Dan Abnett`, Artist: `Brett Booth`,
@@ -24895,7 +24895,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1458`,
   },
   {
-    Title: `Titans (2016)`, Issue: `#25`, Publisher: `DC`,
+    Title: `Titans`, Issue: `#25`, Publisher: `DC`,
     Year: `2016-2019`, Arc: `Titans Rebirth — Abnett`, Key: `NO`,
     Key_Reason: `Titans #25 Abnett/Booth`, First_App: ``,
     Writer: `Dan Abnett`, Artist: `Brett Booth`,
@@ -24912,7 +24912,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1459`,
   },
   {
-    Title: `Titans (2016)`, Issue: `#26`, Publisher: `DC`,
+    Title: `Titans`, Issue: `#26`, Publisher: `DC`,
     Year: `2016-2019`, Arc: `Titans Rebirth — Abnett`, Key: `NO`,
     Key_Reason: `Titans #26 Abnett/Booth`, First_App: ``,
     Writer: `Dan Abnett`, Artist: `Brett Booth`,
@@ -24929,7 +24929,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1460`,
   },
   {
-    Title: `Titans (2016)`, Issue: `#27`, Publisher: `DC`,
+    Title: `Titans`, Issue: `#27`, Publisher: `DC`,
     Year: `2016-2019`, Arc: `Titans Rebirth — Abnett`, Key: `NO`,
     Key_Reason: `Titans #27 Abnett/Booth`, First_App: ``,
     Writer: `Dan Abnett`, Artist: `Brett Booth`,
@@ -24946,7 +24946,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1461`,
   },
   {
-    Title: `Titans (2016)`, Issue: `#28`, Publisher: `DC`,
+    Title: `Titans`, Issue: `#28`, Publisher: `DC`,
     Year: `2016-2019`, Arc: `Titans Rebirth — Abnett`, Key: `NO`,
     Key_Reason: `Titans #28 Abnett/Booth`, First_App: ``,
     Writer: `Dan Abnett`, Artist: `Brett Booth`,
@@ -24963,7 +24963,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1462`,
   },
   {
-    Title: `Trinity (Rebirth)`, Issue: `#1`, Publisher: `DC`,
+    Title: `Trinity`, Issue: `#1`, Publisher: `DC`,
     Year: `2016`, Arc: `Trinity Rebirth`, Key: `YES`,
     Key_Reason: `Trinity #1 Rebirth — Batman/Superman/Wonder Woman`, First_App: ``,
     Writer: `Francis Manapul`, Artist: `Francis Manapul`,
@@ -24980,7 +24980,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1463`,
   },
   {
-    Title: `Trinity (Rebirth)`, Issue: `#2`, Publisher: `DC`,
+    Title: `Trinity`, Issue: `#2`, Publisher: `DC`,
     Year: `2016`, Arc: `Trinity Rebirth`, Key: `NO`,
     Key_Reason: `Trinity #2`, First_App: ``,
     Writer: `Francis Manapul`, Artist: `Francis Manapul`,
@@ -24997,7 +24997,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1464`,
   },
   {
-    Title: `Trinity (Rebirth)`, Issue: `#2`, Publisher: `DC`,
+    Title: `Trinity`, Issue: `#2`, Publisher: `DC`,
     Year: `2016`, Arc: `Trinity Rebirth`, Key: `NO`,
     Key_Reason: `Trinity #2`, First_App: ``,
     Writer: `Francis Manapul`, Artist: `Francis Manapul`,
@@ -25252,7 +25252,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1479`,
   },
   {
-    Title: `Batman (Tom King)`, Issue: `#21`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#21`, Publisher: `DC`,
     Year: `2017-2018`, Arc: `Batman — Tom King`, Key: `YES`,
     Key_Reason: `Batman #21 — The Button Part 1; special cover; Flash crossover; Wally West revelation`, First_App: ``,
     Writer: `Tom King`, Artist: `David Finch / Mikel Janin / Various`,
@@ -25269,7 +25269,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1480`,
   },
   {
-    Title: `Batman (Tom King)`, Issue: `#22`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#22`, Publisher: `DC`,
     Year: `2017-2018`, Arc: `Batman — Tom King`, Key: `YES`,
     Key_Reason: `Batman #22 — The Button Part 2; hologram cover`, First_App: ``,
     Writer: `Tom King`, Artist: `David Finch / Mikel Janin / Various`,
@@ -25286,7 +25286,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1481`,
   },
   {
-    Title: `Batman (Tom King)`, Issue: `#30`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#30`, Publisher: `DC`,
     Year: `2017-2018`, Arc: `Batman — Tom King`, Key: `NO`,
     Key_Reason: `Batman #30 King`, First_App: ``,
     Writer: `Tom King`, Artist: `David Finch / Mikel Janin / Various`,
@@ -25303,7 +25303,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1482`,
   },
   {
-    Title: `Batman (Tom King)`, Issue: `#31`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#31`, Publisher: `DC`,
     Year: `2017-2018`, Arc: `Batman — Tom King`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Tom King`, Artist: `David Finch / Mikel Janin / Various`,
@@ -25320,7 +25320,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1483`,
   },
   {
-    Title: `Batman (Tom King)`, Issue: `#32`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#32`, Publisher: `DC`,
     Year: `2017-2018`, Arc: `Batman — Tom King`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Tom King`, Artist: `David Finch / Mikel Janin / Various`,
@@ -25337,7 +25337,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1484`,
   },
   {
-    Title: `Batman (Tom King)`, Issue: `#33`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#33`, Publisher: `DC`,
     Year: `2017-2018`, Arc: `Batman — Tom King`, Key: `NO`,
     Key_Reason: `Batman #33 King — War of Jokes and Riddles`, First_App: ``,
     Writer: `Tom King`, Artist: `David Finch / Mikel Janin / Various`,
@@ -25354,7 +25354,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1485`,
   },
   {
-    Title: `Batman (Tom King)`, Issue: `#34`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#34`, Publisher: `DC`,
     Year: `2017-2018`, Arc: `Batman — Tom King`, Key: `NO`,
     Key_Reason: `Batman #34 Priest — vs Deathstroke`, First_App: ``,
     Writer: `Tom King`, Artist: `David Finch / Mikel Janin / Various`,
@@ -25371,7 +25371,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1486`,
   },
   {
-    Title: `Batman (Tom King)`, Issue: `#35`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#35`, Publisher: `DC`,
     Year: `2017-2018`, Arc: `Batman — Tom King`, Key: `NO`,
     Key_Reason: `Batman #35 Priest`, First_App: ``,
     Writer: `Tom King`, Artist: `David Finch / Mikel Janin / Various`,
@@ -25388,7 +25388,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1487`,
   },
   {
-    Title: `Batman (Tom King)`, Issue: `#50`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#50`, Publisher: `DC`,
     Year: `2017-2018`, Arc: `Batman — Tom King`, Key: `YES`,
     Key_Reason: `Batman #50 King — Bruce proposes to Selina; landmark; 'I do/I don't'`, First_App: ``,
     Writer: `Tom King`, Artist: `David Finch / Mikel Janin / Various`,
@@ -25405,7 +25405,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1488`,
   },
   {
-    Title: `Batman (Tom King)`, Issue: `#51`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#51`, Publisher: `DC`,
     Year: `2017-2018`, Arc: `Batman — Tom King`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Tom King`, Artist: `David Finch / Mikel Janin / Various`,
@@ -25422,7 +25422,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1489`,
   },
   {
-    Title: `Batman (Tom King)`, Issue: `#52`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#52`, Publisher: `DC`,
     Year: `2017-2018`, Arc: `Batman — Tom King`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Tom King`, Artist: `David Finch / Mikel Janin / Various`,
@@ -25439,7 +25439,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1490`,
   },
   {
-    Title: `Batman (Tom King)`, Issue: `#53`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#53`, Publisher: `DC`,
     Year: `2017-2018`, Arc: `Batman — Tom King`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Tom King`, Artist: `David Finch / Mikel Janin / Various`,
@@ -25456,7 +25456,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1491`,
   },
   {
-    Title: `Batman (Tom King)`, Issue: `#54`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#54`, Publisher: `DC`,
     Year: `2017-2018`, Arc: `Batman — Tom King`, Key: `NO`,
     Key_Reason: `Batman #54 King/Wagner`, First_App: ``,
     Writer: `Tom King`, Artist: `David Finch / Mikel Janin / Various`,
@@ -25473,7 +25473,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1492`,
   },
   {
-    Title: `Batman (Tom King)`, Issue: `#55`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#55`, Publisher: `DC`,
     Year: `2017-2018`, Arc: `Batman — Tom King`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Tom King`, Artist: `David Finch / Mikel Janin / Various`,
@@ -25524,7 +25524,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1495`,
   },
   {
-    Title: `Detective Comics (2016)`, Issue: `#983`, Publisher: `DC`,
+    Title: `Detective Comics`, Issue: `#983`, Publisher: `DC`,
     Year: `2018`, Arc: `Detective Comics — Brian Michael Bendis / Various`, Key: `NO`,
     Key_Reason: `Det #983`, First_App: ``,
     Writer: `James Robinson / Various`, Artist: `Various`,
@@ -25541,7 +25541,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1496`,
   },
   {
-    Title: `Detective Comics (2016)`, Issue: `#984`, Publisher: `DC`,
+    Title: `Detective Comics`, Issue: `#984`, Publisher: `DC`,
     Year: `2018`, Arc: `Detective Comics — Brian Michael Bendis / Various`, Key: `NO`,
     Key_Reason: `Det #984`, First_App: ``,
     Writer: `James Robinson / Various`, Artist: `Various`,
@@ -25558,7 +25558,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1497`,
   },
   {
-    Title: `Detective Comics (2016)`, Issue: `#985`, Publisher: `DC`,
+    Title: `Detective Comics`, Issue: `#985`, Publisher: `DC`,
     Year: `2018`, Arc: `Detective Comics — Brian Michael Bendis / Various`, Key: `NO`,
     Key_Reason: `Det #985`, First_App: ``,
     Writer: `James Robinson / Various`, Artist: `Various`,
@@ -25575,7 +25575,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1498`,
   },
   {
-    Title: `Detective Comics (2016)`, Issue: `#986`, Publisher: `DC`,
+    Title: `Detective Comics`, Issue: `#986`, Publisher: `DC`,
     Year: `2018`, Arc: `Detective Comics — Brian Michael Bendis / Various`, Key: `NO`,
     Key_Reason: `Det #986`, First_App: ``,
     Writer: `James Robinson / Various`, Artist: `Various`,
@@ -25592,7 +25592,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1499`,
   },
   {
-    Title: `Detective Comics (2016)`, Issue: `#987`, Publisher: `DC`,
+    Title: `Detective Comics`, Issue: `#987`, Publisher: `DC`,
     Year: `2018`, Arc: `Detective Comics — Brian Michael Bendis / Various`, Key: `NO`,
     Key_Reason: `Det #987`, First_App: ``,
     Writer: `James Robinson / Various`, Artist: `Various`,
@@ -25609,7 +25609,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1500`,
   },
   {
-    Title: `The Flash (Rebirth)`, Issue: `#21`, Publisher: `DC`,
+    Title: `The Flash`, Issue: `#21`, Publisher: `DC`,
     Year: `2017-2018`, Arc: `Flash — Joshua Williamson Rebirth`, Key: `YES`,
     Key_Reason: `Flash #21 — The Button crossover; Wally West revelation`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Howard Porter / Various`,
@@ -25626,7 +25626,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `1501`,
   },
   {
-    Title: `The Flash (Rebirth)`, Issue: `#46`, Publisher: `DC`,
+    Title: `The Flash`, Issue: `#46`, Publisher: `DC`,
     Year: `2017-2018`, Arc: `Flash — Joshua Williamson Rebirth`, Key: `NO`,
     Key_Reason: `Flash #46 Williamson`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Howard Porter / Various`,
@@ -25643,7 +25643,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `1502`,
   },
   {
-    Title: `The Flash (Rebirth)`, Issue: `#47`, Publisher: `DC`,
+    Title: `The Flash`, Issue: `#47`, Publisher: `DC`,
     Year: `2017-2018`, Arc: `Flash — Joshua Williamson Rebirth`, Key: `NO`,
     Key_Reason: `Flash #47 Williamson`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Howard Porter / Various`,
@@ -25660,7 +25660,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `1503`,
   },
   {
-    Title: `The Flash (Rebirth)`, Issue: `#48`, Publisher: `DC`,
+    Title: `The Flash`, Issue: `#48`, Publisher: `DC`,
     Year: `2017-2018`, Arc: `Flash — Joshua Williamson Rebirth`, Key: `NO`,
     Key_Reason: `Flash #48 Williamson`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Howard Porter / Various`,
@@ -25677,7 +25677,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `1504`,
   },
   {
-    Title: `The Flash (Rebirth)`, Issue: `#49`, Publisher: `DC`,
+    Title: `The Flash`, Issue: `#49`, Publisher: `DC`,
     Year: `2017-2018`, Arc: `Flash — Joshua Williamson Rebirth`, Key: `NO`,
     Key_Reason: `Flash #49 Williamson`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Howard Porter / Various`,
@@ -25694,7 +25694,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `1505`,
   },
   {
-    Title: `The Flash (Rebirth)`, Issue: `#50`, Publisher: `DC`,
+    Title: `The Flash`, Issue: `#50`, Publisher: `DC`,
     Year: `2017-2018`, Arc: `Flash — Joshua Williamson Rebirth`, Key: `YES`,
     Key_Reason: `Flash #50 — Flash War finale; Wally vs Barry`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Howard Porter / Various`,
@@ -25711,7 +25711,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `1506`,
   },
   {
-    Title: `The Flash (Rebirth)`, Issue: `#51`, Publisher: `DC`,
+    Title: `The Flash`, Issue: `#51`, Publisher: `DC`,
     Year: `2017-2018`, Arc: `Flash — Joshua Williamson Rebirth`, Key: `NO`,
     Key_Reason: `Flash #51 Williamson`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Howard Porter / Various`,
@@ -25728,7 +25728,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `1507`,
   },
   {
-    Title: `The Flash (Rebirth)`, Issue: `#52`, Publisher: `DC`,
+    Title: `The Flash`, Issue: `#52`, Publisher: `DC`,
     Year: `2017-2018`, Arc: `Flash — Joshua Williamson Rebirth`, Key: `NO`,
     Key_Reason: `Flash #52 Williamson`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Howard Porter / Various`,
@@ -25745,7 +25745,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `1508`,
   },
   {
-    Title: `The Flash (Rebirth)`, Issue: `#53`, Publisher: `DC`,
+    Title: `The Flash`, Issue: `#53`, Publisher: `DC`,
     Year: `2017-2018`, Arc: `Flash — Joshua Williamson Rebirth`, Key: `NO`,
     Key_Reason: `Flash #53 Williamson`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Howard Porter / Various`,
@@ -25762,7 +25762,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `1509`,
   },
   {
-    Title: `The Flash (Rebirth)`, Issue: `#54`, Publisher: `DC`,
+    Title: `The Flash`, Issue: `#54`, Publisher: `DC`,
     Year: `2017-2018`, Arc: `Flash — Joshua Williamson Rebirth`, Key: `NO`,
     Key_Reason: `Flash #54 Williamson`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Howard Porter / Various`,
@@ -25779,7 +25779,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `1510`,
   },
   {
-    Title: `The Flash (Rebirth)`, Issue: `#55`, Publisher: `DC`,
+    Title: `The Flash`, Issue: `#55`, Publisher: `DC`,
     Year: `2017-2018`, Arc: `Flash — Joshua Williamson Rebirth`, Key: `NO`,
     Key_Reason: `Flash #55 Williamson`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Howard Porter / Various`,
@@ -25796,7 +25796,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `1511`,
   },
   {
-    Title: `The Flash (Rebirth)`, Issue: `#56`, Publisher: `DC`,
+    Title: `The Flash`, Issue: `#56`, Publisher: `DC`,
     Year: `2017-2018`, Arc: `Flash — Joshua Williamson Rebirth`, Key: `NO`,
     Key_Reason: `Flash #56 Williamson`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Howard Porter / Various`,
@@ -25813,7 +25813,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `1512`,
   },
   {
-    Title: `The Flash (Rebirth)`, Issue: `#57`, Publisher: `DC`,
+    Title: `The Flash`, Issue: `#57`, Publisher: `DC`,
     Year: `2017-2018`, Arc: `Flash — Joshua Williamson Rebirth`, Key: `NO`,
     Key_Reason: `Flash #57 Williamson`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Howard Porter / Various`,
@@ -25830,7 +25830,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `1513`,
   },
   {
-    Title: `Hawkman (2018)`, Issue: `#1`, Publisher: `DC`,
+    Title: `Hawkman`, Issue: `#1`, Publisher: `DC`,
     Year: `2018`, Arc: `Hawkman — Robert Venditti`, Key: `YES`,
     Key_Reason: `Hawkman #1 — Robert Venditti; Carter Hall across all his past lives`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch`,
@@ -25847,7 +25847,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1514`,
   },
   {
-    Title: `Hawkman (2018)`, Issue: `#2`, Publisher: `DC`,
+    Title: `Hawkman`, Issue: `#2`, Publisher: `DC`,
     Year: `2018`, Arc: `Hawkman — Robert Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #2`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch`,
@@ -25864,7 +25864,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1515`,
   },
   {
-    Title: `Hawkman (2018)`, Issue: `#3`, Publisher: `DC`,
+    Title: `Hawkman`, Issue: `#3`, Publisher: `DC`,
     Year: `2018`, Arc: `Hawkman — Robert Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #3`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch`,
@@ -25881,7 +25881,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1516`,
   },
   {
-    Title: `Hawkman (2018)`, Issue: `#4`, Publisher: `DC`,
+    Title: `Hawkman`, Issue: `#4`, Publisher: `DC`,
     Year: `2018`, Arc: `Hawkman — Robert Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #4`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch`,
@@ -25898,7 +25898,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1517`,
   },
   {
-    Title: `Hawkman (2018)`, Issue: `#5`, Publisher: `DC`,
+    Title: `Hawkman`, Issue: `#5`, Publisher: `DC`,
     Year: `2018`, Arc: `Hawkman — Robert Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #5`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch`,
@@ -25915,7 +25915,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1518`,
   },
   {
-    Title: `Hawkman (2018)`, Issue: `#6`, Publisher: `DC`,
+    Title: `Hawkman`, Issue: `#6`, Publisher: `DC`,
     Year: `2018`, Arc: `Hawkman — Robert Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #6`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch`,
@@ -25932,7 +25932,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1519`,
   },
   {
-    Title: `Hawkman (2018)`, Issue: `#7`, Publisher: `DC`,
+    Title: `Hawkman`, Issue: `#7`, Publisher: `DC`,
     Year: `2018`, Arc: `Hawkman — Robert Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #7`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch`,
@@ -25949,7 +25949,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1520`,
   },
   {
-    Title: `Justice League (Snyder)`, Issue: `#3`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#3`, Publisher: `DC`,
     Year: `2018-2019`, Arc: `Justice League — Scott Snyder`, Key: `YES`,
     Key_Reason: `Justice League #3 Snyder/Jimenez — Totality arc; cross-box run continues in Box 21`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez / Various`,
@@ -25966,7 +25966,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1521`,
   },
   {
-    Title: `Justice League (Snyder)`, Issue: `#4`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#4`, Publisher: `DC`,
     Year: `2018-2019`, Arc: `Justice League — Scott Snyder`, Key: `NO`,
     Key_Reason: `JL #4 Snyder`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez / Various`,
@@ -25983,7 +25983,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1522`,
   },
   {
-    Title: `Justice League (Snyder)`, Issue: `#5`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#5`, Publisher: `DC`,
     Year: `2018-2019`, Arc: `Justice League — Scott Snyder`, Key: `NO`,
     Key_Reason: `JL #5 Snyder`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez / Various`,
@@ -26000,7 +26000,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1523`,
   },
   {
-    Title: `Justice League (Snyder)`, Issue: `#6`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#6`, Publisher: `DC`,
     Year: `2018-2019`, Arc: `Justice League — Scott Snyder`, Key: `NO`,
     Key_Reason: `JL #6 Snyder`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez / Various`,
@@ -26017,7 +26017,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1524`,
   },
   {
-    Title: `Justice League (Snyder)`, Issue: `#7`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#7`, Publisher: `DC`,
     Year: `2018-2019`, Arc: `Justice League — Scott Snyder`, Key: `NO`,
     Key_Reason: `JL #7 Snyder`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez / Various`,
@@ -26034,7 +26034,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1525`,
   },
   {
-    Title: `Justice League (Snyder)`, Issue: `#8`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#8`, Publisher: `DC`,
     Year: `2018-2019`, Arc: `Justice League — Scott Snyder`, Key: `NO`,
     Key_Reason: `JL #8 Snyder`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez / Various`,
@@ -26051,7 +26051,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1526`,
   },
   {
-    Title: `Justice League (Snyder)`, Issue: `#9`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#9`, Publisher: `DC`,
     Year: `2018-2019`, Arc: `Justice League — Scott Snyder`, Key: `NO`,
     Key_Reason: `JL #9 Snyder`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez / Various`,
@@ -26068,7 +26068,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1527`,
   },
   {
-    Title: `Justice League (Snyder)`, Issue: `#10`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#10`, Publisher: `DC`,
     Year: `2018-2019`, Arc: `Justice League — Scott Snyder`, Key: `NO`,
     Key_Reason: `JL #10 Snyder`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez / Various`,
@@ -26085,7 +26085,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1528`,
   },
   {
-    Title: `Justice League (Snyder)`, Issue: `#11`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#11`, Publisher: `DC`,
     Year: `2018-2019`, Arc: `Justice League — Scott Snyder`, Key: `NO`,
     Key_Reason: `JL #11 Snyder`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez / Various`,
@@ -26102,7 +26102,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1529`,
   },
   {
-    Title: `Justice League (Snyder)`, Issue: `#12`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#12`, Publisher: `DC`,
     Year: `2018-2019`, Arc: `Justice League — Scott Snyder`, Key: `NO`,
     Key_Reason: `JL #12 Snyder`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez / Various`,
@@ -26119,7 +26119,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1530`,
   },
   {
-    Title: `Justice League (Snyder)`, Issue: `#13`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#13`, Publisher: `DC`,
     Year: `2018-2019`, Arc: `Justice League — Scott Snyder`, Key: `NO`,
     Key_Reason: `JL #13 Snyder`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez / Various`,
@@ -26136,7 +26136,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1531`,
   },
   {
-    Title: `Justice League (Snyder)`, Issue: `#14`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#14`, Publisher: `DC`,
     Year: `2018-2019`, Arc: `Justice League — Scott Snyder`, Key: `NO`,
     Key_Reason: `JL #14 Snyder`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez / Various`,
@@ -26153,7 +26153,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1532`,
   },
   {
-    Title: `Justice League (Snyder)`, Issue: `#15`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#15`, Publisher: `DC`,
     Year: `2018-2019`, Arc: `Justice League — Scott Snyder`, Key: `NO`,
     Key_Reason: `JL #15 Snyder`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez / Various`,
@@ -26170,7 +26170,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1533`,
   },
   {
-    Title: `Justice League (Snyder)`, Issue: `#16`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#16`, Publisher: `DC`,
     Year: `2018-2019`, Arc: `Justice League — Scott Snyder`, Key: `NO`,
     Key_Reason: `JL #16 Snyder`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez / Various`,
@@ -26187,7 +26187,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1534`,
   },
   {
-    Title: `Justice League (Snyder)`, Issue: `#17`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#17`, Publisher: `DC`,
     Year: `2018-2019`, Arc: `Justice League — Scott Snyder`, Key: `NO`,
     Key_Reason: `JL #17 Snyder`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez / Various`,
@@ -26204,7 +26204,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1535`,
   },
   {
-    Title: `Justice League (Snyder)`, Issue: `#18`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#18`, Publisher: `DC`,
     Year: `2018-2019`, Arc: `Justice League — Scott Snyder`, Key: `NO`,
     Key_Reason: `JL #18 Snyder`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez / Various`,
@@ -26221,7 +26221,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1536`,
   },
   {
-    Title: `Justice League (Snyder)`, Issue: `#19`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#19`, Publisher: `DC`,
     Year: `2018-2019`, Arc: `Justice League — Scott Snyder`, Key: `NO`,
     Key_Reason: `JL #19 Snyder`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez / Various`,
@@ -26238,7 +26238,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1537`,
   },
   {
-    Title: `Justice League (Snyder)`, Issue: `#20`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#20`, Publisher: `DC`,
     Year: `2018-2019`, Arc: `Justice League — Scott Snyder`, Key: `NO`,
     Key_Reason: `JL #20 Snyder`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez / Various`,
@@ -26272,7 +26272,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1539`,
   },
   {
-    Title: `Justice League Dark (2018)`, Issue: `#1`, Publisher: `DC`,
+    Title: `Justice League Dark`, Issue: `#1`, Publisher: `DC`,
     Year: `2018`, Arc: `JL Dark — Tynion IV`, Key: `YES`,
     Key_Reason: `JLD #1 — James Tynion IV/Alvaro Martinez; JL Dark relaunch; Wonder Woman leads`, First_App: ``,
     Writer: `James Tynion IV`, Artist: `Alvaro Martinez`,
@@ -26289,7 +26289,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1540`,
   },
   {
-    Title: `Justice League Dark (2018)`, Issue: `#2`, Publisher: `DC`,
+    Title: `Justice League Dark`, Issue: `#2`, Publisher: `DC`,
     Year: `2018`, Arc: `JL Dark Tynion`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `James Tynion IV`, Artist: `Alvaro Martinez`,
@@ -26306,7 +26306,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1541`,
   },
   {
-    Title: `Justice League Dark (2018)`, Issue: `#3`, Publisher: `DC`,
+    Title: `Justice League Dark`, Issue: `#3`, Publisher: `DC`,
     Year: `2018`, Arc: `JL Dark Tynion`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `James Tynion IV`, Artist: `Alvaro Martinez`,
@@ -26323,7 +26323,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1542`,
   },
   {
-    Title: `Justice League Dark (2018)`, Issue: `#5`, Publisher: `DC`,
+    Title: `Justice League Dark`, Issue: `#5`, Publisher: `DC`,
     Year: `2018`, Arc: `JL Dark Tynion`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `James Tynion IV`, Artist: `Alvaro Martinez`,
@@ -26340,7 +26340,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1543`,
   },
   {
-    Title: `Justice League Dark (2018)`, Issue: `#6`, Publisher: `DC`,
+    Title: `Justice League Dark`, Issue: `#6`, Publisher: `DC`,
     Year: `2018`, Arc: `JL Dark Tynion`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `James Tynion IV`, Artist: `Alvaro Martinez`,
@@ -26357,7 +26357,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1544`,
   },
   {
-    Title: `Wonder Woman (2016)`, Issue: `#50`, Publisher: `DC`,
+    Title: `Wonder Woman`, Issue: `#50`, Publisher: `DC`,
     Year: `2018`, Arc: `Wonder Woman — James Robinson/Orlando`, Key: `NO`,
     Key_Reason: `WW #50`, First_App: ``,
     Writer: `James Robinson / Steve Orlando`, Artist: `Various`,
@@ -26374,7 +26374,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1545`,
   },
   {
-    Title: `Wonder Woman (2016)`, Issue: `#52`, Publisher: `DC`,
+    Title: `Wonder Woman`, Issue: `#52`, Publisher: `DC`,
     Year: `2018`, Arc: `Wonder Woman — James Robinson/Orlando`, Key: `NO`,
     Key_Reason: `WW #52`, First_App: ``,
     Writer: `James Robinson / Steve Orlando`, Artist: `Various`,
@@ -26391,7 +26391,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1546`,
   },
   {
-    Title: `Wonder Woman (2016)`, Issue: `#53`, Publisher: `DC`,
+    Title: `Wonder Woman`, Issue: `#53`, Publisher: `DC`,
     Year: `2018`, Arc: `Wonder Woman — James Robinson/Orlando`, Key: `NO`,
     Key_Reason: `WW #53`, First_App: ``,
     Writer: `James Robinson / Steve Orlando`, Artist: `Various`,
@@ -26408,7 +26408,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1547`,
   },
   {
-    Title: `Wonder Woman (2016)`, Issue: `#54`, Publisher: `DC`,
+    Title: `Wonder Woman`, Issue: `#54`, Publisher: `DC`,
     Year: `2018`, Arc: `Wonder Woman — James Robinson/Orlando`, Key: `NO`,
     Key_Reason: `WW #54`, First_App: ``,
     Writer: `James Robinson / Steve Orlando`, Artist: `Various`,
@@ -26425,7 +26425,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1548`,
   },
   {
-    Title: `Wonder Woman (2016)`, Issue: `#55`, Publisher: `DC`,
+    Title: `Wonder Woman`, Issue: `#55`, Publisher: `DC`,
     Year: `2018`, Arc: `Wonder Woman — James Robinson/Orlando`, Key: `NO`,
     Key_Reason: `WW #55`, First_App: ``,
     Writer: `James Robinson / Steve Orlando`, Artist: `Various`,
@@ -26442,7 +26442,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1549`,
   },
   {
-    Title: `Wonder Woman (2016)`, Issue: `#56`, Publisher: `DC`,
+    Title: `Wonder Woman`, Issue: `#56`, Publisher: `DC`,
     Year: `2018`, Arc: `Wonder Woman — James Robinson/Orlando`, Key: `NO`,
     Key_Reason: `WW #56`, First_App: ``,
     Writer: `James Robinson / Steve Orlando`, Artist: `Various`,
@@ -26459,7 +26459,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1550`,
   },
   {
-    Title: `Wonder Woman (2016)`, Issue: `#57`, Publisher: `DC`,
+    Title: `Wonder Woman`, Issue: `#57`, Publisher: `DC`,
     Year: `2018`, Arc: `Wonder Woman — James Robinson/Orlando`, Key: `NO`,
     Key_Reason: `WW #57`, First_App: ``,
     Writer: `James Robinson / Steve Orlando`, Artist: `Various`,
@@ -26493,7 +26493,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1552`,
   },
   {
-    Title: `Catwoman (2018)`, Issue: `#1`, Publisher: `DC`,
+    Title: `Catwoman`, Issue: `#1`, Publisher: `DC`,
     Year: `2018`, Arc: `Catwoman — Joëlle Jones`, Key: `YES`,
     Key_Reason: `Catwoman #1 (2018) — Joëlle Jones writing AND drawing; photo-style cover`, First_App: ``,
     Writer: `Joëlle Jones`, Artist: `Joëlle Jones`,
@@ -26510,7 +26510,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1553`,
   },
   {
-    Title: `Catwoman (2018)`, Issue: `#2`, Publisher: `DC`,
+    Title: `Catwoman`, Issue: `#2`, Publisher: `DC`,
     Year: `2018`, Arc: `Catwoman — Joëlle Jones`, Key: `NO`,
     Key_Reason: `Catwoman #2 Jones`, First_App: ``,
     Writer: `Joëlle Jones`, Artist: `Joëlle Jones`,
@@ -26527,7 +26527,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1554`,
   },
   {
-    Title: `Catwoman (2018)`, Issue: `#3`, Publisher: `DC`,
+    Title: `Catwoman`, Issue: `#3`, Publisher: `DC`,
     Year: `2018`, Arc: `Catwoman — Joëlle Jones`, Key: `NO`,
     Key_Reason: `Catwoman #3 Jones`, First_App: ``,
     Writer: `Joëlle Jones`, Artist: `Joëlle Jones`,
@@ -26629,7 +26629,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1560`,
   },
   {
-    Title: `Aquaman (2016)`, Issue: `#41`, Publisher: `DC`,
+    Title: `Aquaman`, Issue: `#41`, Publisher: `DC`,
     Year: `2018`, Arc: `Drowned Earth crossover`, Key: `NO`,
     Key_Reason: `Aquaman #41 Drowned Earth`, First_App: ``,
     Writer: `Kelly Sue DeConnick`, Artist: `Various`,
@@ -26646,7 +26646,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1561`,
   },
   {
-    Title: `Aquaman (2016)`, Issue: `#42`, Publisher: `DC`,
+    Title: `Aquaman`, Issue: `#42`, Publisher: `DC`,
     Year: `2018`, Arc: `Drowned Earth crossover`, Key: `NO`,
     Key_Reason: `Aquaman #42 Drowned Earth`, First_App: ``,
     Writer: `Kelly Sue DeConnick`, Artist: `Various`,
@@ -26714,7 +26714,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1565`,
   },
   {
-    Title: `Shazam! (2019)`, Issue: `#1`, Publisher: `DC`,
+    Title: `Shazam!`, Issue: `#1`, Publisher: `DC`,
     Year: `2019`, Arc: `Shazam — Johns/Eaglesham`, Key: `YES`,
     Key_Reason: `Shazam #1 (2019) — Geoff Johns/Dale Eaglesham; $4.99 relaunch`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Dale Eaglesham`,
@@ -26833,7 +26833,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1572`,
   },
   {
-    Title: `The Flash (Rebirth)`, Issue: `#53`, Publisher: `DC`,
+    Title: `The Flash`, Issue: `#53`, Publisher: `DC`,
     Year: `2019`, Arc: `Flash Rebirth`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Rafa Sandoval`,
@@ -26850,7 +26850,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `1573`,
   },
   {
-    Title: `Deathstroke (Priest)`, Issue: `#35`, Publisher: `DC`,
+    Title: `Deathstroke`, Issue: `#35`, Publisher: `DC`,
     Year: `2018`, Arc: `Deathstroke vs Batman`, Key: `NO`,
     Key_Reason: `Deathstroke #35 Priest — vs Batman`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Fernando Pasarin`,
@@ -26952,7 +26952,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `1579`,
   },
   {
-    Title: `Justice League (Snyder)`, Issue: `#3`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#3`, Publisher: `DC`,
     Year: `2018`, Arc: `JL Snyder`, Key: `NO`,
     Key_Reason: `JL #3 Snyder`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jim Cheung`,
@@ -26969,7 +26969,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1580`,
   },
   {
-    Title: `Justice League (Snyder)`, Issue: `#4`, Publisher: `DC`,
+    Title: `Justice League`, Issue: `#4`, Publisher: `DC`,
     Year: `2018`, Arc: `JL Snyder`, Key: `NO`,
     Key_Reason: `JL #4 Snyder`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jim Cheung`,
@@ -27581,7 +27581,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `1616`,
   },
   {
-    Title: `New Mutants (2009)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2009`, Arc: `New Mutants Wells/Nieves`, Key: `YES`,
     Key_Reason: `New Mutants #1 (2009) — Zeb Wells; original New Mutants reunited`, First_App: ``,
     Writer: `Zeb Wells`, Artist: `Diogenes Neves`,
@@ -27598,7 +27598,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1617`,
   },
   {
-    Title: `New Mutants (2009)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2009`, Arc: `New Mutants Wells/Nieves`, Key: `NO`,
     Key_Reason: `New Mutants #2`, First_App: ``,
     Writer: `Zeb Wells`, Artist: `Diogenes Neves`,
@@ -27615,7 +27615,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1618`,
   },
   {
-    Title: `New Mutants (DeFilippis)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2003-2004`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `YES`,
     Key_Reason: `New Mutants #1 (DeFilippis) — DeFilippis/Weir; $2.50 era; Xavier Institute students pre-Academy X`, First_App: ``,
     Writer: `Nunzio DeFilippis / Christina Weir`, Artist: `Keron Grant`,
@@ -27632,7 +27632,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `1619`,
   },
   {
-    Title: `New Mutants (DeFilippis)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2003-2004`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
     Key_Reason: `New Mutants #2 DePhilippis`, First_App: ``,
     Writer: `Nunzio DeFilippis / Christina Weir`, Artist: `Keron Grant`,
@@ -27649,7 +27649,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `1620`,
   },
   {
-    Title: `New Mutants (DeFilippis)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2003-2004`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
     Key_Reason: `New Mutants #3 DePhilippis`, First_App: ``,
     Writer: `Nunzio DeFilippis / Christina Weir`, Artist: `Keron Grant`,
@@ -27666,7 +27666,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `1621`,
   },
   {
-    Title: `New Mutants (DeFilippis)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2003-2004`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
     Key_Reason: `New Mutants #4 DePhilippis`, First_App: ``,
     Writer: `Nunzio DeFilippis / Christina Weir`, Artist: `Keron Grant`,
@@ -27683,7 +27683,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `1622`,
   },
   {
-    Title: `New Mutants (DeFilippis)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2003-2004`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
     Key_Reason: `New Mutants #5 DePhilippis`, First_App: ``,
     Writer: `Nunzio DeFilippis / Christina Weir`, Artist: `Keron Grant`,
@@ -27700,7 +27700,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `1623`,
   },
   {
-    Title: `New Mutants (DeFilippis)`, Issue: `#6`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2003-2004`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
     Key_Reason: `New Mutants #6 DePhilippis`, First_App: ``,
     Writer: `Nunzio DeFilippis / Christina Weir`, Artist: `Keron Grant`,
@@ -27717,7 +27717,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `1624`,
   },
   {
-    Title: `New Mutants (DeFilippis)`, Issue: `#7`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#7`, Publisher: `Marvel`,
     Year: `2003-2004`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
     Key_Reason: `New Mutants #7 DePhilippis`, First_App: ``,
     Writer: `Nunzio DeFilippis / Christina Weir`, Artist: `Keron Grant`,
@@ -27734,7 +27734,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `1625`,
   },
   {
-    Title: `New Mutants (DeFilippis)`, Issue: `#8`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#8`, Publisher: `Marvel`,
     Year: `2003-2004`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
     Key_Reason: `New Mutants #8 DePhilippis`, First_App: ``,
     Writer: `Nunzio DeFilippis / Christina Weir`, Artist: `Keron Grant`,
@@ -27751,7 +27751,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `1626`,
   },
   {
-    Title: `New Mutants (DeFilippis)`, Issue: `#9`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#9`, Publisher: `Marvel`,
     Year: `2003-2004`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
     Key_Reason: `New Mutants #9 DePhilippis`, First_App: ``,
     Writer: `Nunzio DeFilippis / Christina Weir`, Artist: `Keron Grant`,
@@ -27768,7 +27768,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `1627`,
   },
   {
-    Title: `New Mutants (DeFilippis)`, Issue: `#10`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#10`, Publisher: `Marvel`,
     Year: `2003-2004`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
     Key_Reason: `New Mutants #10 DePhilippis`, First_App: ``,
     Writer: `Nunzio DeFilippis / Christina Weir`, Artist: `Keron Grant`,
@@ -27785,7 +27785,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `1628`,
   },
   {
-    Title: `New Mutants (DeFilippis)`, Issue: `#11`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#11`, Publisher: `Marvel`,
     Year: `2003-2004`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
     Key_Reason: `New Mutants #11 DePhilippis`, First_App: ``,
     Writer: `Nunzio DeFilippis / Christina Weir`, Artist: `Keron Grant`,
@@ -27802,7 +27802,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `1629`,
   },
   {
-    Title: `New Mutants (DeFilippis)`, Issue: `#12`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#12`, Publisher: `Marvel`,
     Year: `2003-2004`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
     Key_Reason: `New Mutants #12 DePhilippis`, First_App: ``,
     Writer: `Nunzio DeFilippis / Christina Weir`, Artist: `Keron Grant`,
@@ -27819,7 +27819,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `1630`,
   },
   {
-    Title: `New Mutants (DeFilippis)`, Issue: `#13`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#13`, Publisher: `Marvel`,
     Year: `2003-2004`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
     Key_Reason: `New Mutants #13 DePhilippis`, First_App: ``,
     Writer: `Nunzio DeFilippis / Christina Weir`, Artist: `Keron Grant`,
@@ -27938,7 +27938,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1637`,
   },
   {
-    Title: `Astonishing X-Men (Ellis)`, Issue: `#29`, Publisher: `Marvel`,
+    Title: `Astonishing X-Men`, Issue: `#29`, Publisher: `Marvel`,
     Year: `2010`, Arc: `Astonishing X-Men — Warren Ellis`, Key: `NO`,
     Key_Reason: `Astonishing X-Men #29 Ellis`, First_App: ``,
     Writer: `Warren Ellis`, Artist: `Phil Jimenez`,
@@ -27955,7 +27955,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1638`,
   },
   {
-    Title: `Astonishing X-Men (Ellis)`, Issue: `#30`, Publisher: `Marvel`,
+    Title: `Astonishing X-Men`, Issue: `#30`, Publisher: `Marvel`,
     Year: `2010`, Arc: `Astonishing X-Men — Warren Ellis`, Key: `NO`,
     Key_Reason: `Astonishing X-Men #30 Ellis`, First_App: ``,
     Writer: `Warren Ellis`, Artist: `Phil Jimenez`,
@@ -27972,7 +27972,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1639`,
   },
   {
-    Title: `Astonishing X-Men (Ellis)`, Issue: `#31`, Publisher: `Marvel`,
+    Title: `Astonishing X-Men`, Issue: `#31`, Publisher: `Marvel`,
     Year: `2010`, Arc: `Astonishing X-Men — Warren Ellis`, Key: `NO`,
     Key_Reason: `Astonishing X-Men #31 Ellis`, First_App: ``,
     Writer: `Warren Ellis`, Artist: `Phil Jimenez`,
@@ -28091,7 +28091,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1646`,
   },
   {
-    Title: `Dark Avengers/Uncanny X-Men: Exodus (conclusion)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Dark Avengers/Uncanny X-Men: Exodus`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2009`, Arc: `X-Men Utopia conclusion`, Key: `YES`,
     Key_Reason: `DA/UXM Exodus #1 — Utopia crossover conclusion`, First_App: ``,
     Writer: `Matt Fraction`, Artist: `Various`,
@@ -28397,10 +28397,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `1664`,
   },
   {
-    Title: `X-Force (Kyle/Yost)`, Issue: `#94`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#94`, Publisher: `Marvel`,
     Year: `2009-2011`, Arc: `X-Force — Craig Kyle/Christopher Yost`, Key: `NO`,
     Key_Reason: `X-Force #94 Kyle/Yost`, First_App: ``,
-    Writer: `Craig Kyle / Christopher Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
+    Writer: `Craig Kyle / Christopher Yost / Kyle/Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -28414,10 +28414,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1665`,
   },
   {
-    Title: `X-Force (Kyle/Yost)`, Issue: `#95`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#95`, Publisher: `Marvel`,
     Year: `2009-2011`, Arc: `X-Force — Craig Kyle/Christopher Yost`, Key: `NO`,
     Key_Reason: `X-Force #95 Kyle/Yost`, First_App: ``,
-    Writer: `Craig Kyle / Christopher Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
+    Writer: `Craig Kyle / Christopher Yost / Kyle/Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -28431,10 +28431,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1666`,
   },
   {
-    Title: `X-Force (Kyle/Yost)`, Issue: `#96`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#96`, Publisher: `Marvel`,
     Year: `2009-2011`, Arc: `X-Force — Craig Kyle/Christopher Yost`, Key: `NO`,
     Key_Reason: `X-Force #96 Kyle/Yost`, First_App: ``,
-    Writer: `Craig Kyle / Christopher Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
+    Writer: `Craig Kyle / Christopher Yost / Kyle/Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -28448,10 +28448,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1667`,
   },
   {
-    Title: `X-Force (Kyle/Yost)`, Issue: `#97`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#97`, Publisher: `Marvel`,
     Year: `2009-2011`, Arc: `X-Force — Craig Kyle/Christopher Yost`, Key: `NO`,
     Key_Reason: `X-Force #97 Kyle/Yost`, First_App: ``,
-    Writer: `Craig Kyle / Christopher Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
+    Writer: `Craig Kyle / Christopher Yost / Kyle/Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -28465,10 +28465,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1668`,
   },
   {
-    Title: `X-Force (Kyle/Yost)`, Issue: `#98`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#98`, Publisher: `Marvel`,
     Year: `2009-2011`, Arc: `X-Force — Craig Kyle/Christopher Yost`, Key: `NO`,
     Key_Reason: `X-Force #98 Kyle/Yost`, First_App: ``,
-    Writer: `Craig Kyle / Christopher Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
+    Writer: `Craig Kyle / Christopher Yost / Kyle/Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -28482,10 +28482,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1669`,
   },
   {
-    Title: `X-Force (Kyle/Yost)`, Issue: `#99`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#99`, Publisher: `Marvel`,
     Year: `2009-2011`, Arc: `X-Force — Craig Kyle/Christopher Yost`, Key: `NO`,
     Key_Reason: `X-Force #99 Kyle/Yost`, First_App: ``,
-    Writer: `Craig Kyle / Christopher Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
+    Writer: `Craig Kyle / Christopher Yost / Kyle/Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -28499,10 +28499,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1670`,
   },
   {
-    Title: `X-Force (Kyle/Yost)`, Issue: `#101`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#101`, Publisher: `Marvel`,
     Year: `2009-2011`, Arc: `X-Force — Craig Kyle/Christopher Yost`, Key: `NO`,
     Key_Reason: `X-Force #101 Kyle/Yost`, First_App: ``,
-    Writer: `Craig Kyle / Christopher Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
+    Writer: `Craig Kyle / Christopher Yost / Kyle/Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -28516,10 +28516,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1671`,
   },
   {
-    Title: `X-Force (Kyle/Yost)`, Issue: `#102`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#102`, Publisher: `Marvel`,
     Year: `2009-2011`, Arc: `X-Force — Craig Kyle/Christopher Yost`, Key: `NO`,
     Key_Reason: `X-Force #102 Kyle/Yost`, First_App: ``,
-    Writer: `Craig Kyle / Christopher Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
+    Writer: `Craig Kyle / Christopher Yost / Kyle/Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -28533,10 +28533,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1672`,
   },
   {
-    Title: `X-Force (Kyle/Yost)`, Issue: `#103`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#103`, Publisher: `Marvel`,
     Year: `2009-2011`, Arc: `X-Force — Craig Kyle/Christopher Yost`, Key: `NO`,
     Key_Reason: `X-Force #103 Kyle/Yost`, First_App: ``,
-    Writer: `Craig Kyle / Christopher Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
+    Writer: `Craig Kyle / Christopher Yost / Kyle/Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -28550,10 +28550,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1673`,
   },
   {
-    Title: `X-Force (Kyle/Yost)`, Issue: `#104`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#104`, Publisher: `Marvel`,
     Year: `2009-2011`, Arc: `X-Force — Craig Kyle/Christopher Yost`, Key: `NO`,
     Key_Reason: `X-Force #104 Kyle/Yost`, First_App: ``,
-    Writer: `Craig Kyle / Christopher Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
+    Writer: `Craig Kyle / Christopher Yost / Kyle/Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -28567,10 +28567,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1674`,
   },
   {
-    Title: `X-Force (Kyle/Yost)`, Issue: `#105`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#105`, Publisher: `Marvel`,
     Year: `2009-2011`, Arc: `X-Force — Craig Kyle/Christopher Yost`, Key: `NO`,
     Key_Reason: `X-Force #105 Kyle/Yost`, First_App: ``,
-    Writer: `Craig Kyle / Christopher Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
+    Writer: `Craig Kyle / Christopher Yost / Kyle/Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -28584,10 +28584,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1675`,
   },
   {
-    Title: `X-Force (Kyle/Yost)`, Issue: `#106`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#106`, Publisher: `Marvel`,
     Year: `2009-2011`, Arc: `X-Force — Craig Kyle/Christopher Yost`, Key: `NO`,
     Key_Reason: `X-Force #106 Kyle/Yost`, First_App: ``,
-    Writer: `Craig Kyle / Christopher Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
+    Writer: `Craig Kyle / Christopher Yost / Kyle/Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -28601,10 +28601,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1676`,
   },
   {
-    Title: `X-Force (Kyle/Yost)`, Issue: `#107`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#107`, Publisher: `Marvel`,
     Year: `2009-2011`, Arc: `X-Force — Craig Kyle/Christopher Yost`, Key: `NO`,
     Key_Reason: `X-Force #107 Kyle/Yost`, First_App: ``,
-    Writer: `Craig Kyle / Christopher Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
+    Writer: `Craig Kyle / Christopher Yost / Kyle/Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -28618,10 +28618,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1677`,
   },
   {
-    Title: `X-Force (Kyle/Yost)`, Issue: `#108`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#108`, Publisher: `Marvel`,
     Year: `2009-2011`, Arc: `X-Force — Craig Kyle/Christopher Yost`, Key: `NO`,
     Key_Reason: `X-Force #108 Kyle/Yost`, First_App: ``,
-    Writer: `Craig Kyle / Christopher Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
+    Writer: `Craig Kyle / Christopher Yost / Kyle/Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -28635,10 +28635,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1678`,
   },
   {
-    Title: `X-Force (Kyle/Yost)`, Issue: `#109`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#109`, Publisher: `Marvel`,
     Year: `2009-2011`, Arc: `X-Force — Craig Kyle/Christopher Yost`, Key: `NO`,
     Key_Reason: `X-Force #109 Kyle/Yost`, First_App: ``,
-    Writer: `Craig Kyle / Christopher Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
+    Writer: `Craig Kyle / Christopher Yost / Kyle/Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -28652,10 +28652,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1679`,
   },
   {
-    Title: `X-Force (Kyle/Yost)`, Issue: `#110`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#110`, Publisher: `Marvel`,
     Year: `2009-2011`, Arc: `X-Force — Craig Kyle/Christopher Yost`, Key: `NO`,
     Key_Reason: `X-Force #110 Kyle/Yost`, First_App: ``,
-    Writer: `Craig Kyle / Christopher Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
+    Writer: `Craig Kyle / Christopher Yost / Kyle/Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -28669,10 +28669,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1680`,
   },
   {
-    Title: `X-Force (Kyle/Yost)`, Issue: `#111`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#111`, Publisher: `Marvel`,
     Year: `2009-2011`, Arc: `X-Force — Craig Kyle/Christopher Yost`, Key: `NO`,
     Key_Reason: `X-Force #111 Kyle/Yost`, First_App: ``,
-    Writer: `Craig Kyle / Christopher Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
+    Writer: `Craig Kyle / Christopher Yost / Kyle/Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -28686,10 +28686,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1681`,
   },
   {
-    Title: `X-Force (Kyle/Yost)`, Issue: `#112`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#112`, Publisher: `Marvel`,
     Year: `2009-2011`, Arc: `X-Force — Craig Kyle/Christopher Yost`, Key: `NO`,
     Key_Reason: `X-Force #112 Kyle/Yost`, First_App: ``,
-    Writer: `Craig Kyle / Christopher Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
+    Writer: `Craig Kyle / Christopher Yost / Kyle/Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -28703,10 +28703,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1682`,
   },
   {
-    Title: `X-Force (Kyle/Yost)`, Issue: `#113`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#113`, Publisher: `Marvel`,
     Year: `2009-2011`, Arc: `X-Force — Craig Kyle/Christopher Yost`, Key: `NO`,
     Key_Reason: `X-Force #113 Kyle/Yost`, First_App: ``,
-    Writer: `Craig Kyle / Christopher Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
+    Writer: `Craig Kyle / Christopher Yost / Kyle/Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -28720,10 +28720,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1683`,
   },
   {
-    Title: `X-Force (Kyle/Yost)`, Issue: `#114`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#114`, Publisher: `Marvel`,
     Year: `2009-2011`, Arc: `X-Force — Craig Kyle/Christopher Yost`, Key: `NO`,
     Key_Reason: `X-Force #114 Kyle/Yost`, First_App: ``,
-    Writer: `Craig Kyle / Christopher Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
+    Writer: `Craig Kyle / Christopher Yost / Kyle/Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -28737,10 +28737,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1684`,
   },
   {
-    Title: `X-Force (Kyle/Yost)`, Issue: `#115`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#115`, Publisher: `Marvel`,
     Year: `2009-2011`, Arc: `X-Force — Craig Kyle/Christopher Yost`, Key: `NO`,
     Key_Reason: `X-Force #115 Kyle/Yost`, First_App: ``,
-    Writer: `Craig Kyle / Christopher Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
+    Writer: `Craig Kyle / Christopher Yost / Kyle/Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -28754,10 +28754,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1685`,
   },
   {
-    Title: `X-Force (Kyle/Yost)`, Issue: `#116`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#116`, Publisher: `Marvel`,
     Year: `2009-2011`, Arc: `X-Force — Craig Kyle/Christopher Yost`, Key: `NO`,
     Key_Reason: `X-Force #116 Kyle/Yost`, First_App: ``,
-    Writer: `Craig Kyle / Christopher Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
+    Writer: `Craig Kyle / Christopher Yost / Kyle/Yost`, Artist: `Mike Choi / Gabriele Dell'Otto`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -29060,7 +29060,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1703`,
   },
   {
-    Title: `New X-Men (Morrison)`, Issue: `#114`, Publisher: `Marvel`,
+    Title: `New X-Men`, Issue: `#114`, Publisher: `Marvel`,
     Year: `2001-2004`, Arc: `New X-Men — Grant Morrison`, Key: `NO`,
     Key_Reason: `New X-Men #114 Morrison`, First_App: ``,
     Writer: `Grant Morrison`, Artist: `Frank Quitely / Various`,
@@ -29077,7 +29077,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `1704`,
   },
   {
-    Title: `New X-Men (Morrison)`, Issue: `#145`, Publisher: `Marvel`,
+    Title: `New X-Men`, Issue: `#145`, Publisher: `Marvel`,
     Year: `2001-2004`, Arc: `New X-Men — Grant Morrison`, Key: `NO`,
     Key_Reason: `New X-Men #145 Morrison`, First_App: ``,
     Writer: `Grant Morrison`, Artist: `Frank Quitely / Various`,
@@ -29094,7 +29094,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `1705`,
   },
   {
-    Title: `New X-Men (Morrison)`, Issue: `#150`, Publisher: `Marvel`,
+    Title: `New X-Men`, Issue: `#150`, Publisher: `Marvel`,
     Year: `2001-2004`, Arc: `New X-Men — Grant Morrison`, Key: `YES`,
     Key_Reason: `New X-Men #150 — Morrison; Planet X conclusion; Magneto reveal; landmark`, First_App: ``,
     Writer: `Grant Morrison`, Artist: `Frank Quitely / Various`,
@@ -29111,7 +29111,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `1706`,
   },
   {
-    Title: `New X-Men (Morrison)`, Issue: `#151`, Publisher: `Marvel`,
+    Title: `New X-Men`, Issue: `#151`, Publisher: `Marvel`,
     Year: `2001-2004`, Arc: `New X-Men — Grant Morrison`, Key: `NO`,
     Key_Reason: `New X-Men #151 Morrison`, First_App: ``,
     Writer: `Grant Morrison`, Artist: `Frank Quitely / Various`,
@@ -29128,7 +29128,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `1707`,
   },
   {
-    Title: `New X-Men (Morrison)`, Issue: `#152`, Publisher: `Marvel`,
+    Title: `New X-Men`, Issue: `#152`, Publisher: `Marvel`,
     Year: `2001-2004`, Arc: `New X-Men — Grant Morrison`, Key: `NO`,
     Key_Reason: `New X-Men #152 Morrison`, First_App: ``,
     Writer: `Grant Morrison`, Artist: `Frank Quitely / Various`,
@@ -29145,7 +29145,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `1708`,
   },
   {
-    Title: `New X-Men (Morrison)`, Issue: `#153`, Publisher: `Marvel`,
+    Title: `New X-Men`, Issue: `#153`, Publisher: `Marvel`,
     Year: `2001-2004`, Arc: `New X-Men — Grant Morrison`, Key: `NO`,
     Key_Reason: `New X-Men #153 Morrison`, First_App: ``,
     Writer: `Grant Morrison`, Artist: `Frank Quitely / Various`,
@@ -29162,7 +29162,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `1709`,
   },
   {
-    Title: `New X-Men (Morrison)`, Issue: `#154`, Publisher: `Marvel`,
+    Title: `New X-Men`, Issue: `#154`, Publisher: `Marvel`,
     Year: `2001-2004`, Arc: `New X-Men — Grant Morrison`, Key: `NO`,
     Key_Reason: `New X-Men #154 Morrison`, First_App: ``,
     Writer: `Grant Morrison`, Artist: `Frank Quitely / Various`,
@@ -29400,7 +29400,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1723`,
   },
   {
-    Title: `X-Men (2010)`, Issue: `#7`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#7`, Publisher: `Marvel`,
     Year: `2010-2012`, Arc: `X-Men — Victor Gischler`, Key: `NO`,
     Key_Reason: `X-Men #7 Gischler`, First_App: ``,
     Writer: `Victor Gischler`, Artist: `Various`,
@@ -29417,7 +29417,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1724`,
   },
   {
-    Title: `X-Men (2010)`, Issue: `#8`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#8`, Publisher: `Marvel`,
     Year: `2010-2012`, Arc: `X-Men — Victor Gischler`, Key: `NO`,
     Key_Reason: `X-Men #8 Gischler`, First_App: ``,
     Writer: `Victor Gischler`, Artist: `Various`,
@@ -29434,7 +29434,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1725`,
   },
   {
-    Title: `X-Men (2010)`, Issue: `#22`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#22`, Publisher: `Marvel`,
     Year: `2010-2012`, Arc: `X-Men — Victor Gischler`, Key: `NO`,
     Key_Reason: `X-Men #22 Gischler`, First_App: ``,
     Writer: `Victor Gischler`, Artist: `Various`,
@@ -29451,7 +29451,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1726`,
   },
   {
-    Title: `Uncanny X-Force (Remender)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `Uncanny X-Force`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2011`, Arc: `Uncanny X-Force — Rick Remender`, Key: `NO`,
     Key_Reason: `UXF #5 Remender`, First_App: ``,
     Writer: `Rick Remender`, Artist: `Jerome Opeña`,
@@ -29468,7 +29468,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `1727`,
   },
   {
-    Title: `Uncanny X-Force (Remender)`, Issue: `#13`, Publisher: `Marvel`,
+    Title: `Uncanny X-Force`, Issue: `#13`, Publisher: `Marvel`,
     Year: `2011`, Arc: `Uncanny X-Force — Rick Remender`, Key: `NO`,
     Key_Reason: `UXF #13 Remender Dark Angel Saga`, First_App: ``,
     Writer: `Rick Remender`, Artist: `Jerome Opeña`,
@@ -29740,7 +29740,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `1743`,
   },
   {
-    Title: `New Mutants (2009)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2009-2012`, Arc: `New Mutants Wells/DnA`, Key: `NO`,
     Key_Reason: `New Mutants #3`, First_App: ``,
     Writer: `Zeb Wells / Dan Abnett / Andy Lanning`, Artist: `Various`,
@@ -29757,7 +29757,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1744`,
   },
   {
-    Title: `New Mutants (2009)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2009-2012`, Arc: `New Mutants Wells/DnA`, Key: `NO`,
     Key_Reason: `New Mutants #4`, First_App: ``,
     Writer: `Zeb Wells / Dan Abnett / Andy Lanning`, Artist: `Various`,
@@ -29774,7 +29774,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1745`,
   },
   {
-    Title: `New Mutants (2009)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2009-2012`, Arc: `New Mutants Wells/DnA`, Key: `NO`,
     Key_Reason: `New Mutants #5`, First_App: ``,
     Writer: `Zeb Wells / Dan Abnett / Andy Lanning`, Artist: `Various`,
@@ -29791,7 +29791,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1746`,
   },
   {
-    Title: `New Mutants (2009)`, Issue: `#15`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#15`, Publisher: `Marvel`,
     Year: `2009-2012`, Arc: `New Mutants Wells/DnA`, Key: `NO`,
     Key_Reason: `New Mutants #15`, First_App: ``,
     Writer: `Zeb Wells / Dan Abnett / Andy Lanning`, Artist: `Various`,
@@ -29808,7 +29808,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1747`,
   },
   {
-    Title: `New Mutants (2009)`, Issue: `#16`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#16`, Publisher: `Marvel`,
     Year: `2009-2012`, Arc: `New Mutants Wells/DnA`, Key: `NO`,
     Key_Reason: `New Mutants #16`, First_App: ``,
     Writer: `Zeb Wells / Dan Abnett / Andy Lanning`, Artist: `Various`,
@@ -29825,7 +29825,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1748`,
   },
   {
-    Title: `New Mutants (2009)`, Issue: `#17`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#17`, Publisher: `Marvel`,
     Year: `2009-2012`, Arc: `New Mutants Wells/DnA`, Key: `NO`,
     Key_Reason: `New Mutants #17`, First_App: ``,
     Writer: `Zeb Wells / Dan Abnett / Andy Lanning`, Artist: `Various`,
@@ -29842,7 +29842,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1749`,
   },
   {
-    Title: `New Mutants (2009)`, Issue: `#18`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#18`, Publisher: `Marvel`,
     Year: `2009-2012`, Arc: `New Mutants Wells/DnA`, Key: `NO`,
     Key_Reason: `New Mutants #18`, First_App: ``,
     Writer: `Zeb Wells / Dan Abnett / Andy Lanning`, Artist: `Various`,
@@ -29859,7 +29859,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1750`,
   },
   {
-    Title: `New Mutants (2009)`, Issue: `#19`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#19`, Publisher: `Marvel`,
     Year: `2009-2012`, Arc: `New Mutants Wells/DnA`, Key: `NO`,
     Key_Reason: `New Mutants #19`, First_App: ``,
     Writer: `Zeb Wells / Dan Abnett / Andy Lanning`, Artist: `Various`,
@@ -29876,7 +29876,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1751`,
   },
   {
-    Title: `New Mutants (2009)`, Issue: `#20`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#20`, Publisher: `Marvel`,
     Year: `2009-2012`, Arc: `New Mutants Wells/DnA`, Key: `NO`,
     Key_Reason: `New Mutants #20`, First_App: ``,
     Writer: `Zeb Wells / Dan Abnett / Andy Lanning`, Artist: `Various`,
@@ -29893,7 +29893,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1752`,
   },
   {
-    Title: `New Mutants (2009)`, Issue: `#26`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#26`, Publisher: `Marvel`,
     Year: `2009-2012`, Arc: `New Mutants Wells/DnA`, Key: `NO`,
     Key_Reason: `New Mutants #26`, First_App: ``,
     Writer: `Zeb Wells / Dan Abnett / Andy Lanning`, Artist: `Various`,
@@ -29995,7 +29995,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1758`,
   },
   {
-    Title: `X-Men: Age of Apocalypse (10th Anniversary)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `X-Men: Age of Apocalypse`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2005`, Arc: `AoA 10th Anniversary — COMPLETE`, Key: `YES`,
     Key_Reason: `AoA 10th Anniversary #1 — Yoshida/Bacalo;  COMPLETE 4-issue mini!`, First_App: ``,
     Writer: `Akira Yoshida`, Artist: `Chris Bachalo`,
@@ -30012,7 +30012,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1759`,
   },
   {
-    Title: `X-Men: Age of Apocalypse (10th Anniversary)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `X-Men: Age of Apocalypse`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2005`, Arc: `AoA 10th Anniversary — COMPLETE`, Key: `NO`,
     Key_Reason: `AoA 10th #2`, First_App: ``,
     Writer: `Akira Yoshida`, Artist: `Chris Bachalo`,
@@ -30029,7 +30029,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1760`,
   },
   {
-    Title: `X-Men: Age of Apocalypse (10th Anniversary)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `X-Men: Age of Apocalypse`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2005`, Arc: `AoA 10th Anniversary — COMPLETE`, Key: `NO`,
     Key_Reason: `AoA 10th #3`, First_App: ``,
     Writer: `Akira Yoshida`, Artist: `Chris Bachalo`,
@@ -30046,7 +30046,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `1761`,
   },
   {
-    Title: `X-Men: Age of Apocalypse (10th Anniversary)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `X-Men: Age of Apocalypse`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2005`, Arc: `AoA 10th Anniversary — COMPLETE`, Key: `NO`,
     Key_Reason: `AoA 10th #4`, First_App: ``,
     Writer: `Akira Yoshida`, Artist: `Chris Bachalo`,
@@ -30165,7 +30165,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1768`,
   },
   {
-    Title: `Deadpool (2008)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Deadpool`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2008`, Arc: `Deadpool — Daniel Way/Medina`, Key: `YES`,
     Key_Reason: `Deadpool #1 (2008) — Daniel Way/Medina; THE Deadpool relaunch that made him mainstream`, First_App: ``,
     Writer: `Daniel Way`, Artist: `Paco Medina`,
@@ -30182,7 +30182,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1769`,
   },
   {
-    Title: `Deadpool (2008)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `Deadpool`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2008`, Arc: `Deadpool — Daniel Way/Medina`, Key: `NO`,
     Key_Reason: `Deadpool #2 Way`, First_App: ``,
     Writer: `Daniel Way`, Artist: `Paco Medina`,
@@ -30199,7 +30199,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1770`,
   },
   {
-    Title: `Deadpool (2008)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `Deadpool`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2008`, Arc: `Deadpool — Daniel Way/Medina`, Key: `NO`,
     Key_Reason: `Deadpool #3 Way`, First_App: ``,
     Writer: `Daniel Way`, Artist: `Paco Medina`,
@@ -30216,7 +30216,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1771`,
   },
   {
-    Title: `Deadpool (2008)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `Deadpool`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2008`, Arc: `Deadpool — Daniel Way/Medina`, Key: `NO`,
     Key_Reason: `Deadpool #4 Way`, First_App: ``,
     Writer: `Daniel Way`, Artist: `Paco Medina`,
@@ -30233,7 +30233,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1772`,
   },
   {
-    Title: `Deadpool (2008)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `Deadpool`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2008`, Arc: `Deadpool — Daniel Way/Medina`, Key: `NO`,
     Key_Reason: `Deadpool #5 Way`, First_App: ``,
     Writer: `Daniel Way`, Artist: `Paco Medina`,
@@ -30250,7 +30250,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1773`,
   },
   {
-    Title: `Deadpool (2008)`, Issue: `#6`, Publisher: `Marvel`,
+    Title: `Deadpool`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2008`, Arc: `Deadpool — Daniel Way/Medina`, Key: `NO`,
     Key_Reason: `Deadpool #6 Way`, First_App: ``,
     Writer: `Daniel Way`, Artist: `Paco Medina`,
@@ -30267,7 +30267,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `1774`,
   },
   {
-    Title: `Deadpool (2008)`, Issue: `#7`, Publisher: `Marvel`,
+    Title: `Deadpool`, Issue: `#7`, Publisher: `Marvel`,
     Year: `2008`, Arc: `Deadpool — Daniel Way/Medina`, Key: `NO`,
     Key_Reason: `Deadpool #7 Way`, First_App: ``,
     Writer: `Daniel Way`, Artist: `Paco Medina`,
@@ -58725,7 +58725,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3448`,
   },
   {
-    Title: `UNVERIFIED — Marvel Gods (check cover)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `UNVERIFIED — Marvel Gods`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2021`, Arc: `⚠️ TITLE UNCONFIRMED — physically verify cover next session`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Unknown`, Artist: `Unknown`,
@@ -58742,7 +58742,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3449`,
   },
   {
-    Title: `UNVERIFIED — Marvel Gods (check cover)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `UNVERIFIED — Marvel Gods`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2021`, Arc: `⚠️ TITLE UNCONFIRMED — physically verify cover next session`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Unknown`, Artist: `Unknown`,
@@ -58759,7 +58759,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3450`,
   },
   {
-    Title: `UNVERIFIED — Marvel Gods (check cover)`, Issue: `#8`, Publisher: `Marvel`,
+    Title: `UNVERIFIED — Marvel Gods`, Issue: `#8`, Publisher: `Marvel`,
     Year: `2021`, Arc: `⚠️ TITLE UNCONFIRMED — physically verify cover next session`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Unknown`, Artist: `Unknown`,
@@ -64454,7 +64454,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3785`,
   },
   {
-    Title: `New Avengers (Humphries)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `New Avengers`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2015`, Arc: `New Avengers — Sam Humphries $4.99`, Key: `YES`,
     Key_Reason: `New Avengers #1 — Humphries; A.I.M. Avengers 2015 prestige $4.99`, First_App: ``,
     Writer: `Sam Humphries`, Artist: `Stefano Caselli`,
@@ -64471,7 +64471,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `3786`,
   },
   {
-    Title: `New Avengers (Humphries)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `New Avengers`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2015`, Arc: `New Avengers — Sam Humphries $4.99`, Key: `NO`,
     Key_Reason: `#2`, First_App: ``,
     Writer: `Sam Humphries`, Artist: `Stefano Caselli`,
@@ -64488,7 +64488,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `3787`,
   },
   {
-    Title: `New Avengers (Humphries)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `New Avengers`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2015`, Arc: `New Avengers — Sam Humphries $4.99`, Key: `NO`,
     Key_Reason: `#3`, First_App: ``,
     Writer: `Sam Humphries`, Artist: `Stefano Caselli`,
@@ -64505,7 +64505,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `3788`,
   },
   {
-    Title: `New Avengers (Humphries)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `New Avengers`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2015`, Arc: `New Avengers — Sam Humphries $4.99`, Key: `NO`,
     Key_Reason: `#4`, First_App: ``,
     Writer: `Sam Humphries`, Artist: `Stefano Caselli`,
@@ -64522,7 +64522,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `3789`,
   },
   {
-    Title: `New Avengers (Humphries)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `New Avengers`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2015`, Arc: `New Avengers — Sam Humphries $4.99`, Key: `NO`,
     Key_Reason: `#5`, First_App: ``,
     Writer: `Sam Humphries`, Artist: `Stefano Caselli`,
@@ -64539,7 +64539,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `3790`,
   },
   {
-    Title: `New Avengers (Humphries)`, Issue: `#6`, Publisher: `Marvel`,
+    Title: `New Avengers`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2015`, Arc: `New Avengers — Sam Humphries $4.99`, Key: `NO`,
     Key_Reason: `#6`, First_App: ``,
     Writer: `Sam Humphries`, Artist: `Stefano Caselli`,
@@ -64556,7 +64556,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `3791`,
   },
   {
-    Title: `New Avengers (Humphries)`, Issue: `#7`, Publisher: `Marvel`,
+    Title: `New Avengers`, Issue: `#7`, Publisher: `Marvel`,
     Year: `2015`, Arc: `New Avengers — Sam Humphries $4.99`, Key: `NO`,
     Key_Reason: `#7`, First_App: ``,
     Writer: `Sam Humphries`, Artist: `Stefano Caselli`,
@@ -64573,7 +64573,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `3792`,
   },
   {
-    Title: `New Avengers (Humphries)`, Issue: `#8`, Publisher: `Marvel`,
+    Title: `New Avengers`, Issue: `#8`, Publisher: `Marvel`,
     Year: `2015`, Arc: `New Avengers — Sam Humphries $4.99`, Key: `NO`,
     Key_Reason: `#8`, First_App: ``,
     Writer: `Sam Humphries`, Artist: `Stefano Caselli`,
@@ -64590,7 +64590,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `3793`,
   },
   {
-    Title: `New Avengers (Humphries)`, Issue: `#9`, Publisher: `Marvel`,
+    Title: `New Avengers`, Issue: `#9`, Publisher: `Marvel`,
     Year: `2015`, Arc: `New Avengers — Sam Humphries $4.99`, Key: `NO`,
     Key_Reason: `#9`, First_App: ``,
     Writer: `Sam Humphries`, Artist: `Stefano Caselli`,
@@ -64692,7 +64692,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3799`,
   },
   {
-    Title: `Captain America (Zdarsky)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Captain America — Zdarsky Our Secret Wars`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Chip Kidd / Zdarsky`, Artist: ``,
@@ -64709,7 +64709,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `9`, Entry: `3800`,
   },
   {
-    Title: `Captain America (Zdarsky)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Captain America — Zdarsky Our Secret Wars`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Chip Kidd / Zdarsky`, Artist: ``,
@@ -64726,7 +64726,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `9`, Entry: `3801`,
   },
   {
-    Title: `Captain America (Zdarsky)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Captain America — Zdarsky Our Secret Wars`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Chip Kidd / Zdarsky`, Artist: ``,
@@ -64743,7 +64743,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `9`, Entry: `3802`,
   },
   {
-    Title: `Captain America (Zdarsky)`, Issue: `#6`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Captain America — Zdarsky Our Secret Wars`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Chip Kidd / Zdarsky`, Artist: ``,
@@ -64760,7 +64760,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `9`, Entry: `3803`,
   },
   {
-    Title: `Captain America (Zdarsky)`, Issue: `#7`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#7`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Captain America — Zdarsky Our Secret Wars`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Chip Kidd / Zdarsky`, Artist: ``,
@@ -65338,7 +65338,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3837`,
   },
   {
-    Title: `Uncanny X-Men (2024)`, Issue: `#10`, Publisher: `Marvel`,
+    Title: `Uncanny X-Men`, Issue: `#10`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Uncanny X-Men — Gail Simone`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Gail Simone`, Artist: ``,
@@ -65355,7 +65355,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `3838`,
   },
   {
-    Title: `Uncanny X-Men (2024)`, Issue: `#11`, Publisher: `Marvel`,
+    Title: `Uncanny X-Men`, Issue: `#11`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Uncanny X-Men — Gail Simone`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Gail Simone`, Artist: ``,
@@ -65372,7 +65372,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `3839`,
   },
   {
-    Title: `Uncanny X-Men (2024)`, Issue: `#12`, Publisher: `Marvel`,
+    Title: `Uncanny X-Men`, Issue: `#12`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Uncanny X-Men — Gail Simone`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Gail Simone`, Artist: ``,
@@ -65389,7 +65389,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `3840`,
   },
   {
-    Title: `Uncanny X-Men (2024)`, Issue: `#13`, Publisher: `Marvel`,
+    Title: `Uncanny X-Men`, Issue: `#13`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Uncanny X-Men — Gail Simone`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Gail Simone`, Artist: ``,
@@ -65406,7 +65406,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `3841`,
   },
   {
-    Title: `Uncanny X-Men (2024)`, Issue: `#14`, Publisher: `Marvel`,
+    Title: `Uncanny X-Men`, Issue: `#14`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Uncanny X-Men — Gail Simone`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Gail Simone`, Artist: ``,
@@ -65423,7 +65423,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `3842`,
   },
   {
-    Title: `Uncanny X-Men (2024)`, Issue: `#15`, Publisher: `Marvel`,
+    Title: `Uncanny X-Men`, Issue: `#15`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Uncanny X-Men — Gail Simone`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Gail Simone`, Artist: ``,
@@ -65440,7 +65440,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `3843`,
   },
   {
-    Title: `Uncanny X-Men (2024)`, Issue: `#16`, Publisher: `Marvel`,
+    Title: `Uncanny X-Men`, Issue: `#16`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Uncanny X-Men — Gail Simone`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Gail Simone`, Artist: ``,
@@ -65457,7 +65457,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `3844`,
   },
   {
-    Title: `Uncanny X-Men (2024)`, Issue: `#18`, Publisher: `Marvel`,
+    Title: `Uncanny X-Men`, Issue: `#18`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Uncanny X-Men — Gail Simone`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Gail Simone`, Artist: ``,
@@ -65474,7 +65474,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `3845`,
   },
   {
-    Title: `Uncanny X-Men (2024)`, Issue: `#19`, Publisher: `Marvel`,
+    Title: `Uncanny X-Men`, Issue: `#19`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Uncanny X-Men — Gail Simone`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Gail Simone`, Artist: ``,
@@ -65899,10 +65899,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3870`,
   },
   {
-    Title: `X-Men (McKay 2024)`, Issue: `#10`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#10`, Publisher: `Marvel`,
     Year: `2024`, Arc: `X-Men — Jed McKay`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Jed McKay`, Artist: ``,
+    Writer: `Jed McKay / McKay 2024`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -65916,10 +65916,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `3871`,
   },
   {
-    Title: `X-Men (McKay 2024)`, Issue: `#11`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#11`, Publisher: `Marvel`,
     Year: `2024`, Arc: `X-Men — Jed McKay`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Jed McKay`, Artist: ``,
+    Writer: `Jed McKay / McKay 2024`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -65933,10 +65933,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `3872`,
   },
   {
-    Title: `X-Men (McKay 2024)`, Issue: `#12`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#12`, Publisher: `Marvel`,
     Year: `2024`, Arc: `X-Men — Jed McKay`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Jed McKay`, Artist: ``,
+    Writer: `Jed McKay / McKay 2024`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -65950,10 +65950,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `3873`,
   },
   {
-    Title: `X-Men (McKay 2024)`, Issue: `#13`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#13`, Publisher: `Marvel`,
     Year: `2024`, Arc: `X-Men — Jed McKay`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Jed McKay`, Artist: ``,
+    Writer: `Jed McKay / McKay 2024`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -65967,10 +65967,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `3874`,
   },
   {
-    Title: `X-Men (McKay 2024)`, Issue: `#14`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#14`, Publisher: `Marvel`,
     Year: `2024`, Arc: `X-Men — Jed McKay`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Jed McKay`, Artist: ``,
+    Writer: `Jed McKay / McKay 2024`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -65984,10 +65984,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `3875`,
   },
   {
-    Title: `X-Men (McKay 2024)`, Issue: `#15`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#15`, Publisher: `Marvel`,
     Year: `2024`, Arc: `X-Men — Jed McKay`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Jed McKay`, Artist: ``,
+    Writer: `Jed McKay / McKay 2024`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -66001,10 +66001,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `3876`,
   },
   {
-    Title: `X-Men (McKay 2024)`, Issue: `#16`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#16`, Publisher: `Marvel`,
     Year: `2024`, Arc: `X-Men — Jed McKay`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Jed McKay`, Artist: ``,
+    Writer: `Jed McKay / McKay 2024`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -66018,10 +66018,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `3877`,
   },
   {
-    Title: `X-Men (McKay 2024)`, Issue: `#17`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#17`, Publisher: `Marvel`,
     Year: `2024`, Arc: `X-Men — Jed McKay`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Jed McKay`, Artist: ``,
+    Writer: `Jed McKay / McKay 2024`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -66035,10 +66035,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `3878`,
   },
   {
-    Title: `X-Men (McKay 2024)`, Issue: `#19`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#19`, Publisher: `Marvel`,
     Year: `2024`, Arc: `X-Men — Jed McKay`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Jed McKay`, Artist: ``,
+    Writer: `Jed McKay / McKay 2024`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -66154,10 +66154,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3885`,
   },
   {
-    Title: `Magic (Magik)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Magic`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2023`, Arc: `Magic — Stephanie Phillips`, Key: `YES`,
     Key_Reason: `Magic #1 — Stephanie Phillips; Magik solo series; David Nakayama cover!`, First_App: `Magik solo series launch`,
-    Writer: `Stephanie Phillips`, Artist: `Carlos Villa`,
+    Writer: `Stephanie Phillips / Magik`, Artist: `Carlos Villa`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `YES`, Value_NM: `10`, Value_VF: `6`,
@@ -66171,10 +66171,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3886`,
   },
   {
-    Title: `Magic (Magik)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `Magic`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2023`, Arc: `Magic — Stephanie Phillips`, Key: `NO`,
     Key_Reason: `Magic #2`, First_App: ``,
-    Writer: `Stephanie Phillips`, Artist: `Carlos Villa`,
+    Writer: `Stephanie Phillips / Magik`, Artist: `Carlos Villa`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -66188,10 +66188,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3887`,
   },
   {
-    Title: `Magic (Magik)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `Magic`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2023`, Arc: `Magic — Stephanie Phillips`, Key: `NO`,
     Key_Reason: `Magic #3`, First_App: ``,
-    Writer: `Stephanie Phillips`, Artist: `Carlos Villa`,
+    Writer: `Stephanie Phillips / Magik`, Artist: `Carlos Villa`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -66205,10 +66205,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3888`,
   },
   {
-    Title: `Magic (Magik)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `Magic`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2023`, Arc: `Magic — Stephanie Phillips`, Key: `NO`,
     Key_Reason: `Magic #4`, First_App: ``,
-    Writer: `Stephanie Phillips`, Artist: `Carlos Villa`,
+    Writer: `Stephanie Phillips / Magik`, Artist: `Carlos Villa`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -66222,10 +66222,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3889`,
   },
   {
-    Title: `Magic (Magik)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `Magic`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2023`, Arc: `Magic — Stephanie Phillips`, Key: `NO`,
     Key_Reason: `Magic #5`, First_App: ``,
-    Writer: `Stephanie Phillips`, Artist: `Carlos Villa`,
+    Writer: `Stephanie Phillips / Magik`, Artist: `Carlos Villa`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -66239,10 +66239,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3890`,
   },
   {
-    Title: `Magic (Magik)`, Issue: `#6`, Publisher: `Marvel`,
+    Title: `Magic`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2023`, Arc: `Magic — Stephanie Phillips`, Key: `NO`,
     Key_Reason: `Magic #6`, First_App: ``,
-    Writer: `Stephanie Phillips`, Artist: `Carlos Villa`,
+    Writer: `Stephanie Phillips / Magik`, Artist: `Carlos Villa`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -66256,10 +66256,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3891`,
   },
   {
-    Title: `Magic (Magik)`, Issue: `#7`, Publisher: `Marvel`,
+    Title: `Magic`, Issue: `#7`, Publisher: `Marvel`,
     Year: `2023`, Arc: `Magic — Stephanie Phillips`, Key: `NO`,
     Key_Reason: `Magic #7`, First_App: ``,
-    Writer: `Stephanie Phillips`, Artist: `Carlos Villa`,
+    Writer: `Stephanie Phillips / Magik`, Artist: `Carlos Villa`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -66460,7 +66460,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3903`,
   },
   {
-    Title: `Eternals (Gaiman)`, Issue: `#2 of 7`, Publisher: `Marvel`,
+    Title: `Eternals`, Issue: `#2 of 7`, Publisher: `Marvel`,
     Year: `2006`, Arc: `Eternals — Neil Gaiman/JRJR near-complete (missing #1)`, Key: `YES`,
     Key_Reason: `Eternals #2 — Gaiman/Romita Jr; near-complete missing #1; JRJR painted art`, First_App: `New Eternals (Gaiman)`,
     Writer: `Neil Gaiman`, Artist: `John Romita Jr.`,
@@ -66477,7 +66477,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3904`,
   },
   {
-    Title: `Eternals (Gaiman)`, Issue: `#3 of 7`, Publisher: `Marvel`,
+    Title: `Eternals`, Issue: `#3 of 7`, Publisher: `Marvel`,
     Year: `2006`, Arc: `Eternals — Neil Gaiman/JRJR near-complete (missing #1)`, Key: `NO`,
     Key_Reason: `Eternals #3 — Gaiman/Romita Jr; near-complete missing #1; JRJR painted art`, First_App: ``,
     Writer: `Neil Gaiman`, Artist: `John Romita Jr.`,
@@ -66494,7 +66494,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3905`,
   },
   {
-    Title: `Eternals (Gaiman)`, Issue: `#4 of 7`, Publisher: `Marvel`,
+    Title: `Eternals`, Issue: `#4 of 7`, Publisher: `Marvel`,
     Year: `2006`, Arc: `Eternals — Neil Gaiman/JRJR near-complete (missing #1)`, Key: `NO`,
     Key_Reason: `Eternals #4 — Gaiman/Romita Jr; near-complete missing #1; JRJR painted art`, First_App: ``,
     Writer: `Neil Gaiman`, Artist: `John Romita Jr.`,
@@ -66511,7 +66511,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3906`,
   },
   {
-    Title: `Eternals (Gaiman)`, Issue: `#5 of 7`, Publisher: `Marvel`,
+    Title: `Eternals`, Issue: `#5 of 7`, Publisher: `Marvel`,
     Year: `2006`, Arc: `Eternals — Neil Gaiman/JRJR near-complete (missing #1)`, Key: `NO`,
     Key_Reason: `Eternals #5 — Gaiman/Romita Jr; near-complete missing #1; JRJR painted art`, First_App: ``,
     Writer: `Neil Gaiman`, Artist: `John Romita Jr.`,
@@ -66528,7 +66528,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3907`,
   },
   {
-    Title: `Eternals (Gaiman)`, Issue: `#6 of 7`, Publisher: `Marvel`,
+    Title: `Eternals`, Issue: `#6 of 7`, Publisher: `Marvel`,
     Year: `2006`, Arc: `Eternals — Neil Gaiman/JRJR near-complete (missing #1)`, Key: `NO`,
     Key_Reason: `Eternals #6 — Gaiman/Romita Jr; near-complete missing #1; JRJR painted art`, First_App: ``,
     Writer: `Neil Gaiman`, Artist: `John Romita Jr.`,
@@ -66953,10 +66953,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `3932`,
   },
   {
-    Title: `Thunderbolts (Kelly/Lanzing)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `Thunderbolts`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Thunderbolts — new 2024`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Joe Kelly / Jackson Lanzing`, Artist: ``,
+    Writer: `Joe Kelly / Jackson Lanzing / Kelly/Lanzing`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -66970,7 +66970,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3933`,
   },
   {
-    Title: `Thunderbolts (Soule)`, Issue: `#12`, Publisher: `Marvel`,
+    Title: `Thunderbolts`, Issue: `#12`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Thunderbolts — Charles Soule`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Charles Soule`, Artist: ``,
@@ -66987,7 +66987,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3934`,
   },
   {
-    Title: `Thunderbolts (Parker)`, Issue: `#174`, Publisher: `Marvel`,
+    Title: `Thunderbolts`, Issue: `#174`, Publisher: `Marvel`,
     Year: `2012`, Arc: `Thunderbolts — Jeff Parker classic`, Key: `YES`,
     Key_Reason: `Thunderbolts #174 — Jeff Parker; classic T-Bolts run late stage; Zemo/Luke Cage era`, First_App: ``,
     Writer: `Jeff Parker`, Artist: `Declan Shalvey`,
@@ -67021,10 +67021,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3936`,
   },
   {
-    Title: `X-Force (Divided We Stand)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2008`, Arc: `X-Force — Kyle/Yost/Choi`, Key: `YES`,
     Key_Reason: `X-Force #1 — Craig Kyle/Christopher Yost; the black ops X-Force team relaunch`, First_App: ``,
-    Writer: `Craig Kyle / Christopher Yost`, Artist: `Clayton Crain`,
+    Writer: `Craig Kyle / Christopher Yost / Divided We Stand`, Artist: `Clayton Crain`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `YES`, Value_NM: `8`, Value_VF: `5`,
@@ -67038,7 +67038,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `3937`,
   },
   {
-    Title: `Spider-Man (JJ Abrams)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Spider-Man`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Spider-Man — JJ Abrams`, Key: `YES`,
     Key_Reason: `Spider-Man #1 — JJ Abrams + Henry Abrams; unique creative team; Ben Parker as new Spider-Man`, First_App: `Ben Parker as Spider-Man`,
     Writer: `JJ Abrams / Henry Abrams`, Artist: `Sara Pichelli`,
@@ -67055,7 +67055,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3938`,
   },
   {
-    Title: `Spider-Man (JJ Abrams)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `Spider-Man`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Spider-Man — JJ Abrams`, Key: `NO`,
     Key_Reason: `#2`, First_App: ``,
     Writer: `JJ Abrams / Henry Abrams`, Artist: `Sara Pichelli`,
@@ -67072,7 +67072,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3939`,
   },
   {
-    Title: `Spider-Man (JJ Abrams)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `Spider-Man`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Spider-Man — JJ Abrams`, Key: `NO`,
     Key_Reason: `#3`, First_App: ``,
     Writer: `JJ Abrams / Henry Abrams`, Artist: `Sara Pichelli`,
@@ -67089,7 +67089,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3940`,
   },
   {
-    Title: `Hawkeye (Fraction)`, Issue: `#22`, Publisher: `Marvel`,
+    Title: `Hawkeye`, Issue: `#22`, Publisher: `Marvel`,
     Year: `2015`, Arc: `Hawkeye — Fraction/Aja/Shalvey`, Key: `NO`,
     Key_Reason: `Hawkeye #22 Fraction — late run`, First_App: ``,
     Writer: `Matt Fraction`, Artist: `David Aja / Declan Shalvey`,
@@ -67446,10 +67446,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3961`,
   },
   {
-    Title: `Marvel Zombies (Red Band)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `Marvel Zombies`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Marvel Zombies Red Band`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Red Band`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -67463,10 +67463,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3962`,
   },
   {
-    Title: `Marvel Zombies (Red Band)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `Marvel Zombies`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Marvel Zombies Red Band`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Red Band`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -67565,10 +67565,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3968`,
   },
   {
-    Title: `X-Force (Thorn/Toll)`, Issue: `#6`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2024`, Arc: `X-Force — Thorn/Toll — Legacy 296-300`, Key: `NO`,
     Key_Reason: `X-Force #6 Legacy #296`, First_App: ``,
-    Writer: `Geoffrey Thorne`, Artist: ``,
+    Writer: `Geoffrey Thorne / Thorn/Toll`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -67582,10 +67582,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `3969`,
   },
   {
-    Title: `X-Force (Thorn/Toll)`, Issue: `#7`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#7`, Publisher: `Marvel`,
     Year: `2024`, Arc: `X-Force — Thorn/Toll — Legacy 296-300`, Key: `NO`,
     Key_Reason: `X-Force #7 Legacy #297`, First_App: ``,
-    Writer: `Geoffrey Thorne`, Artist: ``,
+    Writer: `Geoffrey Thorne / Thorn/Toll`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -67599,10 +67599,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `3970`,
   },
   {
-    Title: `X-Force (Thorn/Toll)`, Issue: `#8`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#8`, Publisher: `Marvel`,
     Year: `2024`, Arc: `X-Force — Thorn/Toll — Legacy 296-300`, Key: `NO`,
     Key_Reason: `X-Force #8 Legacy #298`, First_App: ``,
-    Writer: `Geoffrey Thorne`, Artist: ``,
+    Writer: `Geoffrey Thorne / Thorn/Toll`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -67616,10 +67616,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `3971`,
   },
   {
-    Title: `X-Force (Thorn/Toll)`, Issue: `#9`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#9`, Publisher: `Marvel`,
     Year: `2024`, Arc: `X-Force — Thorn/Toll — Legacy 296-300`, Key: `NO`,
     Key_Reason: `X-Force #9 Legacy #299`, First_App: ``,
-    Writer: `Geoffrey Thorne`, Artist: ``,
+    Writer: `Geoffrey Thorne / Thorn/Toll`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -67633,10 +67633,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `3972`,
   },
   {
-    Title: `X-Force (Thorn/Toll)`, Issue: `#10`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#10`, Publisher: `Marvel`,
     Year: `2024`, Arc: `X-Force — Thorn/Toll — Legacy 296-300`, Key: `YES`,
     Key_Reason: `X-Force #10 Legacy #300 — LANDMARK 300th issue of X-Force!`, First_App: ``,
-    Writer: `Geoffrey Thorne`, Artist: ``,
+    Writer: `Geoffrey Thorne / Thorn/Toll`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `YES`, Value_NM: `10`, Value_VF: `6`,
@@ -67735,7 +67735,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3978`,
   },
   {
-    Title: `Aquaman (All In)`, Issue: `#4`, Publisher: `DC`,
+    Title: `Aquaman`, Issue: `#4`, Publisher: `DC`,
     Year: `2024`, Arc: `Aquaman All In — Adams/Timms`, Key: `NO`,
     Key_Reason: `Aquaman All In #4`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `John Timms`,
@@ -67752,7 +67752,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3979`,
   },
   {
-    Title: `Aquaman (All In)`, Issue: `#9`, Publisher: `DC`,
+    Title: `Aquaman`, Issue: `#9`, Publisher: `DC`,
     Year: `2024`, Arc: `Aquaman All In — Adams/Timms`, Key: `NO`,
     Key_Reason: `Aquaman All In #9`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `John Timms`,
@@ -67769,7 +67769,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3980`,
   },
   {
-    Title: `Aquaman (All In)`, Issue: `#12`, Publisher: `DC`,
+    Title: `Aquaman`, Issue: `#12`, Publisher: `DC`,
     Year: `2024`, Arc: `Aquaman All In — Adams/Timms`, Key: `NO`,
     Key_Reason: `Aquaman All In #12`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `John Timms`,
@@ -67786,7 +67786,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3981`,
   },
   {
-    Title: `Batgirl (All In)`, Issue: `#9`, Publisher: `DC`,
+    Title: `Batgirl`, Issue: `#9`, Publisher: `DC`,
     Year: `2024`, Arc: `Batgirl All In — Brombal/Miyazawa`, Key: `NO`,
     Key_Reason: `Batgirl All In #9`, First_App: ``,
     Writer: `Mikki Kendall / Mariko Tamaki`, Artist: `Nikola Čižmešija`,
@@ -67803,7 +67803,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3982`,
   },
   {
-    Title: `Batgirl (All In)`, Issue: `#10`, Publisher: `DC`,
+    Title: `Batgirl`, Issue: `#10`, Publisher: `DC`,
     Year: `2024`, Arc: `Batgirl All In — Brombal/Miyazawa`, Key: `NO`,
     Key_Reason: `Batgirl All In #10`, First_App: ``,
     Writer: `Mikki Kendall / Mariko Tamaki`, Artist: `Nikola Čižmešija`,
@@ -67820,7 +67820,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3983`,
   },
   {
-    Title: `Batgirl (All In)`, Issue: `#11`, Publisher: `DC`,
+    Title: `Batgirl`, Issue: `#11`, Publisher: `DC`,
     Year: `2024`, Arc: `Batgirl All In — Brombal/Miyazawa`, Key: `NO`,
     Key_Reason: `Batgirl All In #11`, First_App: ``,
     Writer: `Mikki Kendall / Mariko Tamaki`, Artist: `Nikola Čižmešija`,
@@ -67837,7 +67837,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3984`,
   },
   {
-    Title: `Batgirl (All In)`, Issue: `#12`, Publisher: `DC`,
+    Title: `Batgirl`, Issue: `#12`, Publisher: `DC`,
     Year: `2024`, Arc: `Batgirl All In — Brombal/Miyazawa`, Key: `NO`,
     Key_Reason: `Batgirl All In #12`, First_App: ``,
     Writer: `Mikki Kendall / Mariko Tamaki`, Artist: `Nikola Čižmešija`,
@@ -67854,7 +67854,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3985`,
   },
   {
-    Title: `Batgirl (All In)`, Issue: `#13`, Publisher: `DC`,
+    Title: `Batgirl`, Issue: `#13`, Publisher: `DC`,
     Year: `2024`, Arc: `Batgirl All In — Brombal/Miyazawa`, Key: `NO`,
     Key_Reason: `Batgirl All In #13`, First_App: ``,
     Writer: `Mikki Kendall / Mariko Tamaki`, Artist: `Nikola Čižmešija`,
@@ -67871,7 +67871,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3986`,
   },
   {
-    Title: `Batgirl (All In)`, Issue: `#14`, Publisher: `DC`,
+    Title: `Batgirl`, Issue: `#14`, Publisher: `DC`,
     Year: `2024`, Arc: `Batgirl All In — Brombal/Miyazawa`, Key: `NO`,
     Key_Reason: `Batgirl All In #14`, First_App: ``,
     Writer: `Mikki Kendall / Mariko Tamaki`, Artist: `Nikola Čižmešija`,
@@ -67888,7 +67888,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3987`,
   },
   {
-    Title: `Batgirl (All In)`, Issue: `#15`, Publisher: `DC`,
+    Title: `Batgirl`, Issue: `#15`, Publisher: `DC`,
     Year: `2024`, Arc: `Batgirl All In — Brombal/Miyazawa`, Key: `NO`,
     Key_Reason: `Batgirl All In #15`, First_App: ``,
     Writer: `Mikki Kendall / Mariko Tamaki`, Artist: `Nikola Čižmešija`,
@@ -67905,7 +67905,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3988`,
   },
   {
-    Title: `Batgirl (All In)`, Issue: `#16`, Publisher: `DC`,
+    Title: `Batgirl`, Issue: `#16`, Publisher: `DC`,
     Year: `2024`, Arc: `Batgirl All In — Brombal/Miyazawa`, Key: `NO`,
     Key_Reason: `Batgirl All In #16`, First_App: ``,
     Writer: `Mikki Kendall / Mariko Tamaki`, Artist: `Nikola Čižmešija`,
@@ -67922,7 +67922,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `3989`,
   },
   {
-    Title: `Batman (All In)`, Issue: `#1`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#1`, Publisher: `DC`,
     Year: `2024`, Arc: `Batman All In — Fraction/Jimenez`, Key: `YES`,
     Key_Reason: `Batman All In #1 — Matt Fraction/Jorge Jimenez; DC All In relaunch key!`, First_App: ``,
     Writer: `Matt Fraction`, Artist: `Jorge Jimenez`,
@@ -67939,7 +67939,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `3990`,
   },
   {
-    Title: `Batman (All In)`, Issue: `#6`, Publisher: `DC`,
+    Title: `Batman`, Issue: `#6`, Publisher: `DC`,
     Year: `2024`, Arc: `Batman All In — Fraction/Jimenez`, Key: `NO`,
     Key_Reason: `#6`, First_App: ``,
     Writer: `Matt Fraction`, Artist: `Jorge Jimenez`,
@@ -68211,7 +68211,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `4006`,
   },
   {
-    Title: `Birds of Prey (2023)`, Issue: `#16`, Publisher: `DC`,
+    Title: `Birds of Prey`, Issue: `#16`, Publisher: `DC`,
     Year: `2024`, Arc: `Birds of Prey Thompson  Now through #26!`, Key: `NO`,
     Key_Reason: `Birds of Prey #16 — Thompson.  Collection now extends through #26!`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: ``,
@@ -68228,7 +68228,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4007`,
   },
   {
-    Title: `Birds of Prey (2023)`, Issue: `#17`, Publisher: `DC`,
+    Title: `Birds of Prey`, Issue: `#17`, Publisher: `DC`,
     Year: `2024`, Arc: `Birds of Prey Thompson  Now through #26!`, Key: `NO`,
     Key_Reason: `Birds of Prey #17 — Thompson.  Collection now extends through #26!`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: ``,
@@ -68245,7 +68245,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4008`,
   },
   {
-    Title: `Birds of Prey (2023)`, Issue: `#18`, Publisher: `DC`,
+    Title: `Birds of Prey`, Issue: `#18`, Publisher: `DC`,
     Year: `2024`, Arc: `Birds of Prey Thompson  Now through #26!`, Key: `NO`,
     Key_Reason: `Birds of Prey #18 — Thompson.  Collection now extends through #26!`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: ``,
@@ -68262,7 +68262,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4009`,
   },
   {
-    Title: `Birds of Prey (2023)`, Issue: `#19`, Publisher: `DC`,
+    Title: `Birds of Prey`, Issue: `#19`, Publisher: `DC`,
     Year: `2024`, Arc: `Birds of Prey Thompson  Now through #26!`, Key: `NO`,
     Key_Reason: `Birds of Prey #19 — Thompson.  Collection now extends through #26!`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: ``,
@@ -68279,7 +68279,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4010`,
   },
   {
-    Title: `Birds of Prey (2023)`, Issue: `#20`, Publisher: `DC`,
+    Title: `Birds of Prey`, Issue: `#20`, Publisher: `DC`,
     Year: `2024`, Arc: `Birds of Prey Thompson  Now through #26!`, Key: `NO`,
     Key_Reason: `Birds of Prey #20 — Thompson.  Collection now extends through #26!`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: ``,
@@ -68296,7 +68296,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4011`,
   },
   {
-    Title: `Birds of Prey (2023)`, Issue: `#21`, Publisher: `DC`,
+    Title: `Birds of Prey`, Issue: `#21`, Publisher: `DC`,
     Year: `2024`, Arc: `Birds of Prey Thompson  Now through #26!`, Key: `NO`,
     Key_Reason: `Birds of Prey #21 — Thompson.  Collection now extends through #26!`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: ``,
@@ -68313,7 +68313,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4012`,
   },
   {
-    Title: `Birds of Prey (2023)`, Issue: `#23`, Publisher: `DC`,
+    Title: `Birds of Prey`, Issue: `#23`, Publisher: `DC`,
     Year: `2024`, Arc: `Birds of Prey Thompson  Now through #26!`, Key: `NO`,
     Key_Reason: `Birds of Prey #23 — Thompson.  Collection now extends through #26!`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: ``,
@@ -68330,7 +68330,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4013`,
   },
   {
-    Title: `Birds of Prey (2023)`, Issue: `#25`, Publisher: `DC`,
+    Title: `Birds of Prey`, Issue: `#25`, Publisher: `DC`,
     Year: `2024`, Arc: `Birds of Prey Thompson  Now through #26!`, Key: `NO`,
     Key_Reason: `Birds of Prey #25 — Thompson.  Collection now extends through #26!`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: ``,
@@ -68347,7 +68347,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4014`,
   },
   {
-    Title: `Birds of Prey (2023)`, Issue: `#26`, Publisher: `DC`,
+    Title: `Birds of Prey`, Issue: `#26`, Publisher: `DC`,
     Year: `2024`, Arc: `Birds of Prey Thompson  Now through #26!`, Key: `NO`,
     Key_Reason: `Birds of Prey #26 — Thompson.  Collection now extends through #26!`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: ``,
@@ -68449,7 +68449,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4020`,
   },
   {
-    Title: `The Flash (DCKO)`, Issue: `#27`, Publisher: `DC`,
+    Title: `The Flash`, Issue: `#27`, Publisher: `DC`,
     Year: `2024`, Arc: `Flash DCKO tie-in`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: ``, Artist: ``,
@@ -68466,7 +68466,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4021`,
   },
   {
-    Title: `The Flash (DCKO)`, Issue: `#28`, Publisher: `DC`,
+    Title: `The Flash`, Issue: `#28`, Publisher: `DC`,
     Year: `2024`, Arc: `Flash DCKO tie-in`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: ``, Artist: ``,
@@ -68483,7 +68483,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4022`,
   },
   {
-    Title: `The Flash (DCKO)`, Issue: `#31`, Publisher: `DC`,
+    Title: `The Flash`, Issue: `#31`, Publisher: `DC`,
     Year: `2024`, Arc: `Flash DCKO tie-in`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: ``, Artist: ``,
@@ -68517,7 +68517,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4024`,
   },
   {
-    Title: `Green Lantern Corps (All In)`, Issue: `#1`, Publisher: `DC`,
+    Title: `Green Lantern Corps`, Issue: `#1`, Publisher: `DC`,
     Year: `2024`, Arc: `GL Corps All In — Adams/Hampton`, Key: `YES`,
     Key_Reason: `GL Corps All In #1 — Jeremy Adams/Xermánico/Hampton`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Xermánico`,
@@ -68534,7 +68534,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4025`,
   },
   {
-    Title: `Green Lantern Corps (All In)`, Issue: `#2`, Publisher: `DC`,
+    Title: `Green Lantern Corps`, Issue: `#2`, Publisher: `DC`,
     Year: `2024`, Arc: `GL Corps All In — Adams/Hampton`, Key: `NO`,
     Key_Reason: `#2`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Xermánico`,
@@ -68551,7 +68551,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4026`,
   },
   {
-    Title: `Green Lantern Corps (All In)`, Issue: `#3`, Publisher: `DC`,
+    Title: `Green Lantern Corps`, Issue: `#3`, Publisher: `DC`,
     Year: `2024`, Arc: `GL Corps All In — Adams/Hampton`, Key: `NO`,
     Key_Reason: `#3`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Xermánico`,
@@ -68568,7 +68568,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4027`,
   },
   {
-    Title: `Green Lantern Corps (All In)`, Issue: `#3 (cool cover)`, Publisher: `DC`,
+    Title: `Green Lantern Corps`, Issue: `#3 (cool cover)`, Publisher: `DC`,
     Year: `2024`, Arc: `GL Corps All In — Adams/Hampton`, Key: `NO`,
     Key_Reason: `##3 (cool cover)`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Xermánico`,
@@ -68585,7 +68585,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4028`,
   },
   {
-    Title: `Green Lantern (All In)`, Issue: `#17`, Publisher: `DC`,
+    Title: `Green Lantern`, Issue: `#17`, Publisher: `DC`,
     Year: `2024`, Arc: `Green Lantern All In — Adams`, Key: `NO`,
     Key_Reason: `GL All In #17`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Xermánico`,
@@ -68602,7 +68602,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4029`,
   },
   {
-    Title: `Green Lantern (All In)`, Issue: `#18`, Publisher: `DC`,
+    Title: `Green Lantern`, Issue: `#18`, Publisher: `DC`,
     Year: `2024`, Arc: `Green Lantern All In — Adams`, Key: `NO`,
     Key_Reason: `GL All In #18`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Xermánico`,
@@ -68619,7 +68619,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4030`,
   },
   {
-    Title: `Green Lantern (All In)`, Issue: `#19`, Publisher: `DC`,
+    Title: `Green Lantern`, Issue: `#19`, Publisher: `DC`,
     Year: `2024`, Arc: `Green Lantern All In — Adams`, Key: `NO`,
     Key_Reason: `GL All In #19`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Xermánico`,
@@ -68636,7 +68636,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4031`,
   },
   {
-    Title: `Green Lantern (All In)`, Issue: `#21`, Publisher: `DC`,
+    Title: `Green Lantern`, Issue: `#21`, Publisher: `DC`,
     Year: `2024`, Arc: `Green Lantern All In — Adams`, Key: `NO`,
     Key_Reason: `GL All In #21`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Xermánico`,
@@ -68687,7 +68687,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4034`,
   },
   {
-    Title: `Justice League Unlimited (2024)`, Issue: `#7`, Publisher: `DC`,
+    Title: `Justice League Unlimited`, Issue: `#7`, Publisher: `DC`,
     Year: `2024`, Arc: `Justice League Unlimited 2024`, Key: `NO`,
     Key_Reason: `JLU #7`, First_App: ``,
     Writer: ``, Artist: ``,
@@ -68704,7 +68704,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4035`,
   },
   {
-    Title: `Justice League Unlimited (2024)`, Issue: `#10`, Publisher: `DC`,
+    Title: `Justice League Unlimited`, Issue: `#10`, Publisher: `DC`,
     Year: `2024`, Arc: `Justice League Unlimited 2024`, Key: `NO`,
     Key_Reason: `JLU #10`, First_App: ``,
     Writer: ``, Artist: ``,
@@ -68721,7 +68721,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4036`,
   },
   {
-    Title: `Justice League Unlimited (2024)`, Issue: `#12`, Publisher: `DC`,
+    Title: `Justice League Unlimited`, Issue: `#12`, Publisher: `DC`,
     Year: `2024`, Arc: `Justice League Unlimited 2024`, Key: `NO`,
     Key_Reason: `JLU #12`, First_App: ``,
     Writer: ``, Artist: ``,
@@ -68738,7 +68738,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4037`,
   },
   {
-    Title: `Justice League Unlimited (2024)`, Issue: `#13`, Publisher: `DC`,
+    Title: `Justice League Unlimited`, Issue: `#13`, Publisher: `DC`,
     Year: `2024`, Arc: `Justice League Unlimited 2024`, Key: `NO`,
     Key_Reason: `JLU #13`, First_App: ``,
     Writer: ``, Artist: ``,
@@ -68755,7 +68755,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4038`,
   },
   {
-    Title: `Justice League Unlimited (2024)`, Issue: `#14`, Publisher: `DC`,
+    Title: `Justice League Unlimited`, Issue: `#14`, Publisher: `DC`,
     Year: `2024`, Arc: `Justice League Unlimited 2024`, Key: `NO`,
     Key_Reason: `JLU #14`, First_App: ``,
     Writer: ``, Artist: ``,
@@ -68772,7 +68772,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4039`,
   },
   {
-    Title: `Justice League Unlimited (2024)`, Issue: `#15`, Publisher: `DC`,
+    Title: `Justice League Unlimited`, Issue: `#15`, Publisher: `DC`,
     Year: `2024`, Arc: `Justice League Unlimited 2024`, Key: `NO`,
     Key_Reason: `JLU #15`, First_App: ``,
     Writer: ``, Artist: ``,
@@ -68789,7 +68789,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4040`,
   },
   {
-    Title: `Justice League Unlimited (2024)`, Issue: `#16`, Publisher: `DC`,
+    Title: `Justice League Unlimited`, Issue: `#16`, Publisher: `DC`,
     Year: `2024`, Arc: `Justice League Unlimited 2024`, Key: `NO`,
     Key_Reason: `JLU #16`, First_App: ``,
     Writer: ``, Artist: ``,
@@ -68891,10 +68891,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4046`,
   },
   {
-    Title: `JSA (2024 Lemire)`, Issue: `#4`, Publisher: `DC`,
+    Title: `JSA`, Issue: `#4`, Publisher: `DC`,
     Year: `2024`, Arc: `JSA — Jeff Lemire 2024`, Key: `NO`,
     Key_Reason: `JSA #4 Lemire/Vazquez`, First_App: ``,
-    Writer: `Jeff Lemire`, Artist: `Jahnoy Lindsay`,
+    Writer: `Jeff Lemire / 2024 Lemire`, Artist: `Jahnoy Lindsay`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -68908,10 +68908,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4047`,
   },
   {
-    Title: `JSA (2024 Lemire)`, Issue: `#5`, Publisher: `DC`,
+    Title: `JSA`, Issue: `#5`, Publisher: `DC`,
     Year: `2024`, Arc: `JSA — Jeff Lemire 2024`, Key: `NO`,
     Key_Reason: `JSA #5 Lemire/Vazquez`, First_App: ``,
-    Writer: `Jeff Lemire`, Artist: `Jahnoy Lindsay`,
+    Writer: `Jeff Lemire / 2024 Lemire`, Artist: `Jahnoy Lindsay`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -68925,10 +68925,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4048`,
   },
   {
-    Title: `JSA (2024 Lemire)`, Issue: `#6`, Publisher: `DC`,
+    Title: `JSA`, Issue: `#6`, Publisher: `DC`,
     Year: `2024`, Arc: `JSA — Jeff Lemire 2024`, Key: `NO`,
     Key_Reason: `JSA #6 Lemire/Vazquez`, First_App: ``,
-    Writer: `Jeff Lemire`, Artist: `Jahnoy Lindsay`,
+    Writer: `Jeff Lemire / 2024 Lemire`, Artist: `Jahnoy Lindsay`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -68942,10 +68942,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4049`,
   },
   {
-    Title: `JSA (2024 Lemire)`, Issue: `#7`, Publisher: `DC`,
+    Title: `JSA`, Issue: `#7`, Publisher: `DC`,
     Year: `2024`, Arc: `JSA — Jeff Lemire 2024`, Key: `NO`,
     Key_Reason: `JSA #7 Lemire/Vazquez`, First_App: ``,
-    Writer: `Jeff Lemire`, Artist: `Jahnoy Lindsay`,
+    Writer: `Jeff Lemire / 2024 Lemire`, Artist: `Jahnoy Lindsay`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -68959,10 +68959,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4050`,
   },
   {
-    Title: `JSA (2024 Lemire)`, Issue: `#8`, Publisher: `DC`,
+    Title: `JSA`, Issue: `#8`, Publisher: `DC`,
     Year: `2024`, Arc: `JSA — Jeff Lemire 2024`, Key: `NO`,
     Key_Reason: `JSA #8 Lemire/Vazquez`, First_App: ``,
-    Writer: `Jeff Lemire`, Artist: `Jahnoy Lindsay`,
+    Writer: `Jeff Lemire / 2024 Lemire`, Artist: `Jahnoy Lindsay`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -68976,10 +68976,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4051`,
   },
   {
-    Title: `JSA (2024 Lemire)`, Issue: `#9`, Publisher: `DC`,
+    Title: `JSA`, Issue: `#9`, Publisher: `DC`,
     Year: `2024`, Arc: `JSA — Jeff Lemire 2024`, Key: `NO`,
     Key_Reason: `JSA #9 Lemire/Vazquez`, First_App: ``,
-    Writer: `Jeff Lemire`, Artist: `Jahnoy Lindsay`,
+    Writer: `Jeff Lemire / 2024 Lemire`, Artist: `Jahnoy Lindsay`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -68993,10 +68993,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4052`,
   },
   {
-    Title: `JSA (2024 Lemire)`, Issue: `#16`, Publisher: `DC`,
+    Title: `JSA`, Issue: `#16`, Publisher: `DC`,
     Year: `2024`, Arc: `JSA — Jeff Lemire 2024`, Key: `NO`,
     Key_Reason: `JSA #16 Lemire/Vazquez`, First_App: ``,
-    Writer: `Jeff Lemire`, Artist: `Jahnoy Lindsay`,
+    Writer: `Jeff Lemire / 2024 Lemire`, Artist: `Jahnoy Lindsay`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -69061,7 +69061,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4056`,
   },
   {
-    Title: `Metamorpho: The Elemental Man (All In)`, Issue: `#3`, Publisher: `DC`,
+    Title: `Metamorpho: The Elemental Man`, Issue: `#3`, Publisher: `DC`,
     Year: `2025`, Arc: `Metamorpho All In — Ewing/Lieber`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Al Ewing`, Artist: `Mike Allred`,
@@ -69078,7 +69078,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4057`,
   },
   {
-    Title: `Nightwing (All In)`, Issue: `#121`, Publisher: `DC`,
+    Title: `Nightwing`, Issue: `#121`, Publisher: `DC`,
     Year: `2025`, Arc: `Nightwing All In`, Key: `NO`,
     Key_Reason: `Nightwing All In #121`, First_App: ``,
     Writer: `Tom Taylor / Becky Cloonan`, Artist: ``,
@@ -69095,7 +69095,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `4058`,
   },
   {
-    Title: `Nightwing (All In)`, Issue: `#122`, Publisher: `DC`,
+    Title: `Nightwing`, Issue: `#122`, Publisher: `DC`,
     Year: `2025`, Arc: `Nightwing All In`, Key: `NO`,
     Key_Reason: `Nightwing All In #122`, First_App: ``,
     Writer: `Tom Taylor / Becky Cloonan`, Artist: ``,
@@ -69112,7 +69112,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `4059`,
   },
   {
-    Title: `Nightwing (All In)`, Issue: `#124`, Publisher: `DC`,
+    Title: `Nightwing`, Issue: `#124`, Publisher: `DC`,
     Year: `2025`, Arc: `Nightwing All In`, Key: `NO`,
     Key_Reason: `Nightwing All In #124`, First_App: ``,
     Writer: `Tom Taylor / Becky Cloonan`, Artist: ``,
@@ -69129,7 +69129,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `4060`,
   },
   {
-    Title: `Nightwing (All In)`, Issue: `#125`, Publisher: `DC`,
+    Title: `Nightwing`, Issue: `#125`, Publisher: `DC`,
     Year: `2025`, Arc: `Nightwing All In`, Key: `NO`,
     Key_Reason: `Nightwing All In #125`, First_App: ``,
     Writer: `Tom Taylor / Becky Cloonan`, Artist: ``,
@@ -69146,7 +69146,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `4061`,
   },
   {
-    Title: `Nightwing (All In)`, Issue: `#126`, Publisher: `DC`,
+    Title: `Nightwing`, Issue: `#126`, Publisher: `DC`,
     Year: `2025`, Arc: `Nightwing All In`, Key: `NO`,
     Key_Reason: `Nightwing All In #126`, First_App: ``,
     Writer: `Tom Taylor / Becky Cloonan`, Artist: ``,
@@ -69163,7 +69163,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `4062`,
   },
   {
-    Title: `Nightwing (All In)`, Issue: `#127`, Publisher: `DC`,
+    Title: `Nightwing`, Issue: `#127`, Publisher: `DC`,
     Year: `2025`, Arc: `Nightwing All In`, Key: `NO`,
     Key_Reason: `Nightwing All In #127`, First_App: ``,
     Writer: `Tom Taylor / Becky Cloonan`, Artist: ``,
@@ -69180,7 +69180,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `4063`,
   },
   {
-    Title: `The Outsiders (2024)`, Issue: `#9`, Publisher: `DC`,
+    Title: `The Outsiders`, Issue: `#9`, Publisher: `DC`,
     Year: `2025`, Arc: `Outsiders Lanzing/Kelly`, Key: `NO`,
     Key_Reason: `Outsiders #9`, First_App: ``,
     Writer: `Jackson Lanzing`, Artist: ``,
@@ -69197,7 +69197,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4064`,
   },
   {
-    Title: `The Outsiders (2024)`, Issue: `#10`, Publisher: `DC`,
+    Title: `The Outsiders`, Issue: `#10`, Publisher: `DC`,
     Year: `2025`, Arc: `Outsiders Lanzing/Kelly`, Key: `NO`,
     Key_Reason: `Outsiders #10`, First_App: ``,
     Writer: `Jackson Lanzing`, Artist: ``,
@@ -69214,7 +69214,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4065`,
   },
   {
-    Title: `The Outsiders (2024)`, Issue: `#11`, Publisher: `DC`,
+    Title: `The Outsiders`, Issue: `#11`, Publisher: `DC`,
     Year: `2025`, Arc: `Outsiders Lanzing/Kelly`, Key: `NO`,
     Key_Reason: `Outsiders #11`, First_App: ``,
     Writer: `Jackson Lanzing`, Artist: ``,
@@ -69248,10 +69248,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4067`,
   },
   {
-    Title: `Secret Six (Maines/Crews)`, Issue: `#5`, Publisher: `DC`,
+    Title: `Secret Six`, Issue: `#5`, Publisher: `DC`,
     Year: `2024`, Arc: `Secret Six 2024 — Maines/Crews`, Key: `NO`,
     Key_Reason: `Secret Six #5`, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Maines/Crews`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -69265,10 +69265,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4068`,
   },
   {
-    Title: `Secret Six (Maines/Crews)`, Issue: `#6`, Publisher: `DC`,
+    Title: `Secret Six`, Issue: `#6`, Publisher: `DC`,
     Year: `2024`, Arc: `Secret Six 2024 — Maines/Crews`, Key: `NO`,
     Key_Reason: `Secret Six #6`, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Maines/Crews`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -69282,10 +69282,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4069`,
   },
   {
-    Title: `Shazam! (Campbell/Lupacchino)`, Issue: `#14`, Publisher: `DC`,
+    Title: `Shazam!`, Issue: `#14`, Publisher: `DC`,
     Year: `2024`, Arc: `Shazam Campbell/Lupacchino`, Key: `NO`,
     Key_Reason: `Shazam #14`, First_App: ``,
-    Writer: `Josie Campbell`, Artist: `Emanuela Lupacchino`,
+    Writer: `Josie Campbell / Campbell/Lupacchino`, Artist: `Emanuela Lupacchino`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -69299,10 +69299,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4070`,
   },
   {
-    Title: `Shazam! (Campbell/Lupacchino)`, Issue: `#15`, Publisher: `DC`,
+    Title: `Shazam!`, Issue: `#15`, Publisher: `DC`,
     Year: `2024`, Arc: `Shazam Campbell/Lupacchino`, Key: `NO`,
     Key_Reason: `Shazam #15`, First_App: ``,
-    Writer: `Josie Campbell`, Artist: `Emanuela Lupacchino`,
+    Writer: `Josie Campbell / Campbell/Lupacchino`, Artist: `Emanuela Lupacchino`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -69316,10 +69316,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4071`,
   },
   {
-    Title: `Shazam! (Campbell/Lupacchino)`, Issue: `#16`, Publisher: `DC`,
+    Title: `Shazam!`, Issue: `#16`, Publisher: `DC`,
     Year: `2024`, Arc: `Shazam Campbell/Lupacchino`, Key: `NO`,
     Key_Reason: `Shazam #16`, First_App: ``,
-    Writer: `Josie Campbell`, Artist: `Emanuela Lupacchino`,
+    Writer: `Josie Campbell / Campbell/Lupacchino`, Artist: `Emanuela Lupacchino`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -69333,10 +69333,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4072`,
   },
   {
-    Title: `Shazam! (Campbell/Lupacchino)`, Issue: `#17`, Publisher: `DC`,
+    Title: `Shazam!`, Issue: `#17`, Publisher: `DC`,
     Year: `2024`, Arc: `Shazam Campbell/Lupacchino`, Key: `NO`,
     Key_Reason: `Shazam #17`, First_App: ``,
-    Writer: `Josie Campbell`, Artist: `Emanuela Lupacchino`,
+    Writer: `Josie Campbell / Campbell/Lupacchino`, Artist: `Emanuela Lupacchino`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -69350,10 +69350,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4073`,
   },
   {
-    Title: `Shazam! (Campbell/Lupacchino)`, Issue: `#18`, Publisher: `DC`,
+    Title: `Shazam!`, Issue: `#18`, Publisher: `DC`,
     Year: `2024`, Arc: `Shazam Campbell/Lupacchino`, Key: `NO`,
     Key_Reason: `Shazam #18`, First_App: ``,
-    Writer: `Josie Campbell`, Artist: `Emanuela Lupacchino`,
+    Writer: `Josie Campbell / Campbell/Lupacchino`, Artist: `Emanuela Lupacchino`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -69367,10 +69367,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4074`,
   },
   {
-    Title: `Shazam! (Campbell/Lupacchino)`, Issue: `#19`, Publisher: `DC`,
+    Title: `Shazam!`, Issue: `#19`, Publisher: `DC`,
     Year: `2024`, Arc: `Shazam Campbell/Lupacchino`, Key: `NO`,
     Key_Reason: `Shazam #19`, First_App: ``,
-    Writer: `Josie Campbell`, Artist: `Emanuela Lupacchino`,
+    Writer: `Josie Campbell / Campbell/Lupacchino`, Artist: `Emanuela Lupacchino`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -69384,10 +69384,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4075`,
   },
   {
-    Title: `Shazam! (Campbell/Lupacchino)`, Issue: `#20`, Publisher: `DC`,
+    Title: `Shazam!`, Issue: `#20`, Publisher: `DC`,
     Year: `2024`, Arc: `Shazam Campbell/Lupacchino`, Key: `NO`,
     Key_Reason: `Shazam #20`, First_App: ``,
-    Writer: `Josie Campbell`, Artist: `Emanuela Lupacchino`,
+    Writer: `Josie Campbell / Campbell/Lupacchino`, Artist: `Emanuela Lupacchino`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -69401,10 +69401,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4076`,
   },
   {
-    Title: `Shazam! (Campbell/Lupacchino)`, Issue: `#21`, Publisher: `DC`,
+    Title: `Shazam!`, Issue: `#21`, Publisher: `DC`,
     Year: `2024`, Arc: `Shazam Campbell/Lupacchino`, Key: `NO`,
     Key_Reason: `Shazam #21`, First_App: ``,
-    Writer: `Josie Campbell`, Artist: `Emanuela Lupacchino`,
+    Writer: `Josie Campbell / Campbell/Lupacchino`, Artist: `Emanuela Lupacchino`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -69588,10 +69588,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `4087`,
   },
   {
-    Title: `Superman (All In — Williamson/Barrows)`, Issue: `#28`, Publisher: `DC`,
+    Title: `Superman`, Issue: `#28`, Publisher: `DC`,
     Year: `2024`, Arc: `Superman All In`, Key: `NO`,
     Key_Reason: `Superman All In #28`, First_App: ``,
-    Writer: `Joshua Williamson`, Artist: `Gleb Melnikov`,
+    Writer: `Joshua Williamson / Williamson/Barrows`, Artist: `Gleb Melnikov`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -69605,10 +69605,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4088`,
   },
   {
-    Title: `Superman (All In — Williamson/Barrows)`, Issue: `#34`, Publisher: `DC`,
+    Title: `Superman`, Issue: `#34`, Publisher: `DC`,
     Year: `2024`, Arc: `Superman All In`, Key: `NO`,
     Key_Reason: `Superman All In #34`, First_App: ``,
-    Writer: `Joshua Williamson`, Artist: `Gleb Melnikov`,
+    Writer: `Joshua Williamson / Williamson/Barrows`, Artist: `Gleb Melnikov`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -69622,10 +69622,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4089`,
   },
   {
-    Title: `Superman (All In — Williamson/Barrows)`, Issue: `#35`, Publisher: `DC`,
+    Title: `Superman`, Issue: `#35`, Publisher: `DC`,
     Year: `2024`, Arc: `Superman All In`, Key: `NO`,
     Key_Reason: `Superman All In #35`, First_App: ``,
-    Writer: `Joshua Williamson`, Artist: `Gleb Melnikov`,
+    Writer: `Joshua Williamson / Williamson/Barrows`, Artist: `Gleb Melnikov`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -69639,7 +69639,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4090`,
   },
   {
-    Title: `Superman (Bendis)`, Issue: `#15`, Publisher: `DC`,
+    Title: `Superman`, Issue: `#15`, Publisher: `DC`,
     Year: `2020`, Arc: `Superman — Bendis era`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: ``,
@@ -69792,7 +69792,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4099`,
   },
   {
-    Title: `Titans (2023)`, Issue: `#24`, Publisher: `DC`,
+    Title: `Titans`, Issue: `#24`, Publisher: `DC`,
     Year: `2025`, Arc: `Titans Taylor`, Key: `NO`,
     Key_Reason: `Titans #24 Taylor. Extends run.`, First_App: ``,
     Writer: `Tom Taylor`, Artist: ``,
@@ -69809,7 +69809,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4100`,
   },
   {
-    Title: `Titans (2023)`, Issue: `#25`, Publisher: `DC`,
+    Title: `Titans`, Issue: `#25`, Publisher: `DC`,
     Year: `2025`, Arc: `Titans Taylor`, Key: `NO`,
     Key_Reason: `Titans #25 Taylor. Extends run.`, First_App: ``,
     Writer: `Tom Taylor`, Artist: ``,
@@ -69826,7 +69826,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4101`,
   },
   {
-    Title: `Titans (2023)`, Issue: `#26`, Publisher: `DC`,
+    Title: `Titans`, Issue: `#26`, Publisher: `DC`,
     Year: `2025`, Arc: `Titans Taylor`, Key: `NO`,
     Key_Reason: `Titans #26 Taylor. Extends run.`, First_App: ``,
     Writer: `Tom Taylor`, Artist: ``,
@@ -69843,7 +69843,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4102`,
   },
   {
-    Title: `Titans (2023)`, Issue: `#27`, Publisher: `DC`,
+    Title: `Titans`, Issue: `#27`, Publisher: `DC`,
     Year: `2025`, Arc: `Titans Taylor`, Key: `NO`,
     Key_Reason: `Titans #27 Taylor. Extends run.`, First_App: ``,
     Writer: `Tom Taylor`, Artist: ``,
@@ -69860,7 +69860,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4103`,
   },
   {
-    Title: `Titans (2023)`, Issue: `#28`, Publisher: `DC`,
+    Title: `Titans`, Issue: `#28`, Publisher: `DC`,
     Year: `2025`, Arc: `Titans Taylor`, Key: `NO`,
     Key_Reason: `Titans #28 Taylor. Extends run.`, First_App: ``,
     Writer: `Tom Taylor`, Artist: ``,
@@ -69877,7 +69877,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4104`,
   },
   {
-    Title: `Titans (2023)`, Issue: `#29`, Publisher: `DC`,
+    Title: `Titans`, Issue: `#29`, Publisher: `DC`,
     Year: `2025`, Arc: `Titans Taylor`, Key: `NO`,
     Key_Reason: `Titans #29 Taylor. Extends run.`, First_App: ``,
     Writer: `Tom Taylor`, Artist: ``,
@@ -69894,7 +69894,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4105`,
   },
   {
-    Title: `Titans (2023)`, Issue: `#30`, Publisher: `DC`,
+    Title: `Titans`, Issue: `#30`, Publisher: `DC`,
     Year: `2025`, Arc: `Titans Taylor`, Key: `NO`,
     Key_Reason: `Titans #30 Taylor. Extends run.`, First_App: ``,
     Writer: `Tom Taylor`, Artist: ``,
@@ -69911,7 +69911,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4106`,
   },
   {
-    Title: `Titans (2023)`, Issue: `#31`, Publisher: `DC`,
+    Title: `Titans`, Issue: `#31`, Publisher: `DC`,
     Year: `2025`, Arc: `Titans Taylor`, Key: `NO`,
     Key_Reason: `Titans #31 Taylor. Extends run.`, First_App: ``,
     Writer: `Tom Taylor`, Artist: ``,
@@ -69928,7 +69928,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4107`,
   },
   {
-    Title: `Titans (2023)`, Issue: `#32`, Publisher: `DC`,
+    Title: `Titans`, Issue: `#32`, Publisher: `DC`,
     Year: `2025`, Arc: `Titans Taylor`, Key: `NO`,
     Key_Reason: `Titans #32 Taylor. Extends run.`, First_App: ``,
     Writer: `Tom Taylor`, Artist: ``,
@@ -69945,7 +69945,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4108`,
   },
   {
-    Title: `The Flash (DCKO)`, Issue: `#29`, Publisher: `DC`,
+    Title: `The Flash`, Issue: `#29`, Publisher: `DC`,
     Year: `2024`, Arc: `Flash DCKO — Waid/Cantwell`, Key: `NO`,
     Key_Reason: `Flash #29 DCKO Waid/Cantwell`, First_App: ``,
     Writer: `Mark Waid / Chip Kidd`, Artist: ``,
@@ -69962,7 +69962,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4109`,
   },
   {
-    Title: `The Flash (DCKO)`, Issue: `#30`, Publisher: `DC`,
+    Title: `The Flash`, Issue: `#30`, Publisher: `DC`,
     Year: `2024`, Arc: `Flash DCKO — Waid/Cantwell`, Key: `NO`,
     Key_Reason: `Flash #30 DCKO Waid/Cantwell`, First_App: ``,
     Writer: `Mark Waid / Chip Kidd`, Artist: ``,
@@ -70081,10 +70081,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `4116`,
   },
   {
-    Title: `Zatanna (Campbell)`, Issue: `#3`, Publisher: `DC`,
+    Title: `Zatanna`, Issue: `#3`, Publisher: `DC`,
     Year: `2024`, Arc: `Zatanna — Mariko Tamaki/Jill Thompson`, Key: `NO`,
     Key_Reason: `Zatanna #3 Campbell`, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Campbell`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -70098,10 +70098,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4117`,
   },
   {
-    Title: `Zatanna (Campbell)`, Issue: `#4`, Publisher: `DC`,
+    Title: `Zatanna`, Issue: `#4`, Publisher: `DC`,
     Year: `2024`, Arc: `Zatanna — Mariko Tamaki/Jill Thompson`, Key: `NO`,
     Key_Reason: `Zatanna #4 Campbell`, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Campbell`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -70115,10 +70115,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4118`,
   },
   {
-    Title: `Zatanna (Campbell)`, Issue: `#5`, Publisher: `DC`,
+    Title: `Zatanna`, Issue: `#5`, Publisher: `DC`,
     Year: `2024`, Arc: `Zatanna — Mariko Tamaki/Jill Thompson`, Key: `NO`,
     Key_Reason: `Zatanna #5 Campbell`, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Campbell`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -70132,10 +70132,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4119`,
   },
   {
-    Title: `Zatanna (Campbell)`, Issue: `#6`, Publisher: `DC`,
+    Title: `Zatanna`, Issue: `#6`, Publisher: `DC`,
     Year: `2024`, Arc: `Zatanna — Mariko Tamaki/Jill Thompson`, Key: `NO`,
     Key_Reason: `Zatanna #6 Campbell`, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Campbell`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -71084,7 +71084,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4175`,
   },
   {
-    Title: `Captain America (Straczynski)`, Issue: `#9`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#9`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Captain America — Straczynski`, Key: `NO`,
     Key_Reason: `Cap #9 Straczynski Legacy #759`, First_App: ``,
     Writer: `J. Michael Straczynski`, Artist: ``,
@@ -71101,7 +71101,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `9`, Entry: `4176`,
   },
   {
-    Title: `Captain America (Straczynski)`, Issue: `#11`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#11`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Captain America — Straczynski`, Key: `NO`,
     Key_Reason: `Cap #11 Straczynski Legacy #761`, First_App: ``,
     Writer: `J. Michael Straczynski`, Artist: ``,
@@ -71118,7 +71118,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `9`, Entry: `4177`,
   },
   {
-    Title: `Captain America (Straczynski)`, Issue: `#12`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#12`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Captain America — Straczynski`, Key: `NO`,
     Key_Reason: `Cap #12 Straczynski Legacy #762`, First_App: ``,
     Writer: `J. Michael Straczynski`, Artist: ``,
@@ -71135,7 +71135,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `9`, Entry: `4178`,
   },
   {
-    Title: `Captain America (Straczynski)`, Issue: `#13`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#13`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Captain America — Straczynski`, Key: `NO`,
     Key_Reason: `Cap #13 Straczynski Legacy #763`, First_App: ``,
     Writer: `J. Michael Straczynski`, Artist: ``,
@@ -71152,7 +71152,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `9`, Entry: `4179`,
   },
   {
-    Title: `Captain America (Straczynski)`, Issue: `#14`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#14`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Captain America — Straczynski`, Key: `NO`,
     Key_Reason: `Cap #14 Straczynski Legacy #764`, First_App: ``,
     Writer: `J. Michael Straczynski`, Artist: ``,
@@ -71169,7 +71169,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `9`, Entry: `4180`,
   },
   {
-    Title: `Captain America (Straczynski)`, Issue: `#15`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#15`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Captain America — Straczynski`, Key: `NO`,
     Key_Reason: `Cap #15 Straczynski Legacy #765`, First_App: ``,
     Writer: `J. Michael Straczynski`, Artist: ``,
@@ -71186,7 +71186,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `9`, Entry: `4181`,
   },
   {
-    Title: `Captain America (Straczynski)`, Issue: `#16`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#16`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Captain America — Straczynski`, Key: `NO`,
     Key_Reason: `Cap #16 Straczynski Legacy #766`, First_App: ``,
     Writer: `J. Michael Straczynski`, Artist: ``,
@@ -72852,7 +72852,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `4279`,
   },
   {
-    Title: `Black Panther (Dark Rain)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2009`, Arc: `Black Panther Dark Rain — Hudlin/Lashley`, Key: `YES`,
     Key_Reason: `BP Dark Rain #1 — Hudlin; Shuri cover variant`, First_App: ``,
     Writer: `Reginald Hudlin`, Artist: `Ken Lashley`,
@@ -72869,7 +72869,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `4280`,
   },
   {
-    Title: `Black Panther (Dark Rain)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2009`, Arc: `Black Panther Dark Rain — Hudlin/Lashley`, Key: `NO`,
     Key_Reason: `Dark Rain #2`, First_App: ``,
     Writer: `Reginald Hudlin`, Artist: `Ken Lashley`,
@@ -72886,7 +72886,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `4281`,
   },
   {
-    Title: `Black Panther (Dark Rain)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2009`, Arc: `Black Panther Dark Rain — Hudlin/Lashley`, Key: `NO`,
     Key_Reason: `Dark Rain #3`, First_App: ``,
     Writer: `Reginald Hudlin`, Artist: `Ken Lashley`,
@@ -72903,7 +72903,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `4282`,
   },
   {
-    Title: `Black Panther (Dark Rain)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2009`, Arc: `Black Panther Dark Rain — Hudlin/Lashley`, Key: `NO`,
     Key_Reason: `Dark Rain #4`, First_App: ``,
     Writer: `Reginald Hudlin`, Artist: `Ken Lashley`,
@@ -72920,7 +72920,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `4283`,
   },
   {
-    Title: `Black Panther (Dark Rain)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2009`, Arc: `Black Panther Dark Rain — Hudlin/Lashley`, Key: `NO`,
     Key_Reason: `Dark Rain #5`, First_App: ``,
     Writer: `Reginald Hudlin`, Artist: `Ken Lashley`,
@@ -72937,7 +72937,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `4284`,
   },
   {
-    Title: `Black Panther (Dark Rain)`, Issue: `#6`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2009`, Arc: `Black Panther Dark Rain — Hudlin/Lashley`, Key: `NO`,
     Key_Reason: `Dark Rain #6`, First_App: ``,
     Writer: `Reginald Hudlin`, Artist: `Ken Lashley`,
@@ -73719,7 +73719,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4330`,
   },
   {
-    Title: `Black Panther (Intergalactic Empire of Wakanda)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2018-2021`, Arc: `Black Panther Intergalactic Empire of Wakanda — Coates`, Key: `YES`,
     Key_Reason: `Intergalactic BP #1 — IEoW arc launch`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña / Kev Walker / Brian Stelfreeze`,
@@ -73736,7 +73736,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4331`,
   },
   {
-    Title: `Black Panther (Intergalactic Empire of Wakanda)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2018-2021`, Arc: `Black Panther Intergalactic Empire of Wakanda — Coates`, Key: `NO`,
     Key_Reason: `Intergalactic BP #2 — IEoW #2`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña / Kev Walker / Brian Stelfreeze`,
@@ -73753,7 +73753,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4332`,
   },
   {
-    Title: `Black Panther (Intergalactic Empire of Wakanda)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2018-2021`, Arc: `Black Panther Intergalactic Empire of Wakanda — Coates`, Key: `NO`,
     Key_Reason: `Intergalactic BP #3 — IEoW #3`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña / Kev Walker / Brian Stelfreeze`,
@@ -73770,7 +73770,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4333`,
   },
   {
-    Title: `Black Panther (Intergalactic Empire of Wakanda)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2018-2021`, Arc: `Black Panther Intergalactic Empire of Wakanda — Coates`, Key: `NO`,
     Key_Reason: `Intergalactic BP #4 — IEoW #4`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña / Kev Walker / Brian Stelfreeze`,
@@ -73787,7 +73787,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4334`,
   },
   {
-    Title: `Black Panther (Intergalactic Empire of Wakanda)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2018-2021`, Arc: `Black Panther Intergalactic Empire of Wakanda — Coates`, Key: `NO`,
     Key_Reason: `Intergalactic BP #5 — IEoW #5`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña / Kev Walker / Brian Stelfreeze`,
@@ -73804,7 +73804,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4335`,
   },
   {
-    Title: `Black Panther (Intergalactic Empire of Wakanda)`, Issue: `#6`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2018-2021`, Arc: `Black Panther Intergalactic Empire of Wakanda — Coates`, Key: `NO`,
     Key_Reason: `Intergalactic BP #6 — IEoW #6`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña / Kev Walker / Brian Stelfreeze`,
@@ -73821,7 +73821,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4336`,
   },
   {
-    Title: `Black Panther (Intergalactic Empire of Wakanda)`, Issue: `#7`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `#7`, Publisher: `Marvel`,
     Year: `2018-2021`, Arc: `Black Panther Intergalactic Empire of Wakanda — Coates`, Key: `YES`,
     Key_Reason: `Intergalactic BP #7 — Key arc issue`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña / Kev Walker / Brian Stelfreeze`,
@@ -73838,7 +73838,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4337`,
   },
   {
-    Title: `Black Panther (Intergalactic Empire of Wakanda)`, Issue: `#8`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `#8`, Publisher: `Marvel`,
     Year: `2018-2021`, Arc: `Black Panther Intergalactic Empire of Wakanda — Coates`, Key: `NO`,
     Key_Reason: `Intergalactic BP #8 — IEoW #8`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña / Kev Walker / Brian Stelfreeze`,
@@ -73855,7 +73855,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4338`,
   },
   {
-    Title: `Black Panther (Intergalactic Empire of Wakanda)`, Issue: `#9`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `#9`, Publisher: `Marvel`,
     Year: `2018-2021`, Arc: `Black Panther Intergalactic Empire of Wakanda — Coates`, Key: `NO`,
     Key_Reason: `Intergalactic BP #9 — IEoW #9`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña / Kev Walker / Brian Stelfreeze`,
@@ -73872,7 +73872,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4339`,
   },
   {
-    Title: `Black Panther (Intergalactic Empire of Wakanda)`, Issue: `#10`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `#10`, Publisher: `Marvel`,
     Year: `2018-2021`, Arc: `Black Panther Intergalactic Empire of Wakanda — Coates`, Key: `NO`,
     Key_Reason: `Intergalactic BP #10 — IEoW #10`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña / Kev Walker / Brian Stelfreeze`,
@@ -73889,7 +73889,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4340`,
   },
   {
-    Title: `Black Panther (Intergalactic Empire of Wakanda)`, Issue: `#11`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `#11`, Publisher: `Marvel`,
     Year: `2018-2021`, Arc: `Black Panther Intergalactic Empire of Wakanda — Coates`, Key: `NO`,
     Key_Reason: `Intergalactic BP #11 — IEoW #11`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña / Kev Walker / Brian Stelfreeze`,
@@ -73906,7 +73906,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4341`,
   },
   {
-    Title: `Black Panther (Intergalactic Empire of Wakanda)`, Issue: `#12`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `#12`, Publisher: `Marvel`,
     Year: `2018-2021`, Arc: `Black Panther Intergalactic Empire of Wakanda — Coates`, Key: `NO`,
     Key_Reason: `Intergalactic BP #12 — IEoW #12`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña / Kev Walker / Brian Stelfreeze`,
@@ -73923,7 +73923,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4342`,
   },
   {
-    Title: `Black Panther (Intergalactic Empire of Wakanda)`, Issue: `#13`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `#13`, Publisher: `Marvel`,
     Year: `2018-2021`, Arc: `Black Panther Intergalactic Empire of Wakanda — Coates`, Key: `NO`,
     Key_Reason: `Intergalactic BP #13 — IEoW #13`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña / Kev Walker / Brian Stelfreeze`,
@@ -73940,7 +73940,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4343`,
   },
   {
-    Title: `Black Panther (Intergalactic Empire of Wakanda)`, Issue: `#14`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `#14`, Publisher: `Marvel`,
     Year: `2018-2021`, Arc: `Black Panther Intergalactic Empire of Wakanda — Coates`, Key: `NO`,
     Key_Reason: `Intergalactic BP #14 — IEoW #14`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña / Kev Walker / Brian Stelfreeze`,
@@ -73957,7 +73957,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4344`,
   },
   {
-    Title: `Black Panther (Intergalactic Empire of Wakanda)`, Issue: `#15`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `#15`, Publisher: `Marvel`,
     Year: `2018-2021`, Arc: `Black Panther Intergalactic Empire of Wakanda — Coates`, Key: `NO`,
     Key_Reason: `Intergalactic BP #15 — IEoW #15`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña / Kev Walker / Brian Stelfreeze`,
@@ -73974,7 +73974,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4345`,
   },
   {
-    Title: `Black Panther (Intergalactic Empire of Wakanda)`, Issue: `#16`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `#16`, Publisher: `Marvel`,
     Year: `2018-2021`, Arc: `Black Panther Intergalactic Empire of Wakanda — Coates`, Key: `NO`,
     Key_Reason: `Intergalactic BP #16 — IEoW #16`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña / Kev Walker / Brian Stelfreeze`,
@@ -73991,7 +73991,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4346`,
   },
   {
-    Title: `Black Panther (Intergalactic Empire of Wakanda)`, Issue: `#17`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `#17`, Publisher: `Marvel`,
     Year: `2018-2021`, Arc: `Black Panther Intergalactic Empire of Wakanda — Coates`, Key: `NO`,
     Key_Reason: `Intergalactic BP #17 — IEoW #17`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña / Kev Walker / Brian Stelfreeze`,
@@ -74008,7 +74008,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4347`,
   },
   {
-    Title: `Black Panther (Intergalactic Empire of Wakanda)`, Issue: `#18`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `#18`, Publisher: `Marvel`,
     Year: `2018-2021`, Arc: `Black Panther Intergalactic Empire of Wakanda — Coates`, Key: `NO`,
     Key_Reason: `Intergalactic BP #18 — IEoW #18`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña / Kev Walker / Brian Stelfreeze`,
@@ -74025,7 +74025,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4348`,
   },
   {
-    Title: `Black Panther (Intergalactic Empire of Wakanda)`, Issue: `#19`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `#19`, Publisher: `Marvel`,
     Year: `2018-2021`, Arc: `Black Panther Intergalactic Empire of Wakanda — Coates`, Key: `NO`,
     Key_Reason: `Intergalactic BP #19 — IEoW #19`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña / Kev Walker / Brian Stelfreeze`,
@@ -74042,7 +74042,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4349`,
   },
   {
-    Title: `Black Panther (Intergalactic Empire of Wakanda)`, Issue: `#20`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `#20`, Publisher: `Marvel`,
     Year: `2018-2021`, Arc: `Black Panther Intergalactic Empire of Wakanda — Coates`, Key: `NO`,
     Key_Reason: `Intergalactic BP #20 — IEoW #20`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña / Kev Walker / Brian Stelfreeze`,
@@ -74059,7 +74059,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4350`,
   },
   {
-    Title: `Black Panther (Intergalactic Empire of Wakanda)`, Issue: `#21`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `#21`, Publisher: `Marvel`,
     Year: `2018-2021`, Arc: `Black Panther Intergalactic Empire of Wakanda — Coates`, Key: `NO`,
     Key_Reason: `Intergalactic BP #21 — IEoW #21`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña / Kev Walker / Brian Stelfreeze`,
@@ -74076,7 +74076,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4351`,
   },
   {
-    Title: `Black Panther (Intergalactic Empire of Wakanda)`, Issue: `#22`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `#22`, Publisher: `Marvel`,
     Year: `2018-2021`, Arc: `Black Panther Intergalactic Empire of Wakanda — Coates`, Key: `NO`,
     Key_Reason: `Intergalactic BP #22 — IEoW #22`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña / Kev Walker / Brian Stelfreeze`,
@@ -74093,7 +74093,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4352`,
   },
   {
-    Title: `Black Panther (Intergalactic Empire of Wakanda)`, Issue: `#23`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `#23`, Publisher: `Marvel`,
     Year: `2018-2021`, Arc: `Black Panther Intergalactic Empire of Wakanda — Coates`, Key: `NO`,
     Key_Reason: `Intergalactic BP #23 — IEoW #23`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña / Kev Walker / Brian Stelfreeze`,
@@ -74110,7 +74110,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4353`,
   },
   {
-    Title: `Black Panther (Intergalactic Empire of Wakanda)`, Issue: `#24`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `#24`, Publisher: `Marvel`,
     Year: `2018-2021`, Arc: `Black Panther Intergalactic Empire of Wakanda — Coates`, Key: `NO`,
     Key_Reason: `Intergalactic BP #24 — IEoW #24`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña / Kev Walker / Brian Stelfreeze`,
@@ -74127,7 +74127,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4354`,
   },
   {
-    Title: `Black Panther (Intergalactic Empire of Wakanda)`, Issue: `#25`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `#25`, Publisher: `Marvel`,
     Year: `2018-2021`, Arc: `Black Panther Intergalactic Empire of Wakanda — Coates`, Key: `NO`,
     Key_Reason: `Intergalactic BP #25 — IEoW #25`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña / Kev Walker / Brian Stelfreeze`,
@@ -75878,7 +75878,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4457`,
   },
   {
-    Title: `X-Men (Krakoa)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `X-Men Krakoa — Hickman/Duggan`, Key: `YES`,
     Key_Reason: `X-Men #1 Hickman/Yu — Krakoa era X-Men ongoing launch — the flagship after HoX/PoX`, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: `Leinil Francis Yu / Pepe Larraz / Various`,
@@ -75895,7 +75895,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4458`,
   },
   {
-    Title: `X-Men (Krakoa)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `X-Men Krakoa — Hickman/Duggan`, Key: `NO`,
     Key_Reason: `X-Men #2 Jonathan Hickman`, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: `Leinil Francis Yu / Pepe Larraz / Various`,
@@ -75912,7 +75912,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4459`,
   },
   {
-    Title: `X-Men (Krakoa)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `X-Men Krakoa — Hickman/Duggan`, Key: `NO`,
     Key_Reason: `X-Men #3 Jonathan Hickman`, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: `Leinil Francis Yu / Pepe Larraz / Various`,
@@ -75929,7 +75929,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4460`,
   },
   {
-    Title: `X-Men (Krakoa)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `X-Men Krakoa — Hickman/Duggan`, Key: `NO`,
     Key_Reason: `X-Men #4 Jonathan Hickman`, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: `Leinil Francis Yu / Pepe Larraz / Various`,
@@ -75946,7 +75946,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4461`,
   },
   {
-    Title: `X-Men (Krakoa)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `X-Men Krakoa — Hickman/Duggan`, Key: `NO`,
     Key_Reason: `X-Men #5 Jonathan Hickman`, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: `Leinil Francis Yu / Pepe Larraz / Various`,
@@ -75963,7 +75963,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4462`,
   },
   {
-    Title: `X-Men (Krakoa)`, Issue: `#6`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `X-Men Krakoa — Hickman/Duggan`, Key: `NO`,
     Key_Reason: `X-Men #6 Jonathan Hickman`, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: `Leinil Francis Yu / Pepe Larraz / Various`,
@@ -75980,7 +75980,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4463`,
   },
   {
-    Title: `X-Men (Krakoa)`, Issue: `#7`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#7`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `X-Men Krakoa — Hickman/Duggan`, Key: `NO`,
     Key_Reason: `X-Men #7 Jonathan Hickman`, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: `Leinil Francis Yu / Pepe Larraz / Various`,
@@ -75997,7 +75997,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4464`,
   },
   {
-    Title: `X-Men (Krakoa)`, Issue: `#8`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#8`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `X-Men Krakoa — Hickman/Duggan`, Key: `NO`,
     Key_Reason: `X-Men #8 Jonathan Hickman`, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: `Leinil Francis Yu / Pepe Larraz / Various`,
@@ -76014,7 +76014,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4465`,
   },
   {
-    Title: `X-Men (Krakoa)`, Issue: `#9`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#9`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `X-Men Krakoa — Hickman/Duggan`, Key: `NO`,
     Key_Reason: `X-Men #9 Jonathan Hickman`, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: `Leinil Francis Yu / Pepe Larraz / Various`,
@@ -76031,7 +76031,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4466`,
   },
   {
-    Title: `X-Men (Krakoa)`, Issue: `#10`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#10`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `X-Men Krakoa — Hickman/Duggan`, Key: `NO`,
     Key_Reason: `X-Men #10 Jonathan Hickman`, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: `Leinil Francis Yu / Pepe Larraz / Various`,
@@ -76048,7 +76048,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4467`,
   },
   {
-    Title: `X-Men (Krakoa)`, Issue: `#12`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#12`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `X-Men Krakoa — Hickman/Duggan`, Key: `NO`,
     Key_Reason: `X-Men #12 Jonathan Hickman`, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: `Leinil Francis Yu / Pepe Larraz / Various`,
@@ -76065,7 +76065,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4468`,
   },
   {
-    Title: `X-Men (Krakoa)`, Issue: `#13`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#13`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `X-Men Krakoa — Hickman/Duggan`, Key: `NO`,
     Key_Reason: `X-Men #13 Gerry Duggan`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Leinil Francis Yu / Pepe Larraz / Various`,
@@ -76082,7 +76082,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4469`,
   },
   {
-    Title: `X-Men (Krakoa)`, Issue: `#14`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#14`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `X-Men Krakoa — Hickman/Duggan`, Key: `NO`,
     Key_Reason: `X-Men #14 Gerry Duggan`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Leinil Francis Yu / Pepe Larraz / Various`,
@@ -76099,7 +76099,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4470`,
   },
   {
-    Title: `X-Men (Krakoa)`, Issue: `#15`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#15`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `X-Men Krakoa — Hickman/Duggan`, Key: `NO`,
     Key_Reason: `X-Men #15 Gerry Duggan`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Leinil Francis Yu / Pepe Larraz / Various`,
@@ -76116,7 +76116,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4471`,
   },
   {
-    Title: `X-Men (Krakoa)`, Issue: `#16`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#16`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `X-Men Krakoa — Hickman/Duggan`, Key: `NO`,
     Key_Reason: `X-Men #16 Gerry Duggan`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Leinil Francis Yu / Pepe Larraz / Various`,
@@ -76133,7 +76133,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4472`,
   },
   {
-    Title: `X-Men (Krakoa)`, Issue: `#17`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#17`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `X-Men Krakoa — Hickman/Duggan`, Key: `NO`,
     Key_Reason: `X-Men #17 Gerry Duggan`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Leinil Francis Yu / Pepe Larraz / Various`,
@@ -76150,7 +76150,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4473`,
   },
   {
-    Title: `X-Men (Krakoa)`, Issue: `#18`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#18`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `X-Men Krakoa — Hickman/Duggan`, Key: `NO`,
     Key_Reason: `X-Men #18 Gerry Duggan`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Leinil Francis Yu / Pepe Larraz / Various`,
@@ -76167,7 +76167,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4474`,
   },
   {
-    Title: `X-Men (Krakoa)`, Issue: `#19`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#19`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `X-Men Krakoa — Hickman/Duggan`, Key: `NO`,
     Key_Reason: `X-Men #19 Gerry Duggan`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Leinil Francis Yu / Pepe Larraz / Various`,
@@ -76184,7 +76184,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4475`,
   },
   {
-    Title: `X-Men (Krakoa)`, Issue: `#20`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#20`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `X-Men Krakoa — Hickman/Duggan`, Key: `NO`,
     Key_Reason: `X-Men #20 Gerry Duggan`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Leinil Francis Yu / Pepe Larraz / Various`,
@@ -76201,7 +76201,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4476`,
   },
   {
-    Title: `X-Men (Krakoa)`, Issue: `#21`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#21`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `X-Men Krakoa — Hickman/Duggan`, Key: `NO`,
     Key_Reason: `X-Men #21 Gerry Duggan`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Leinil Francis Yu / Pepe Larraz / Various`,
@@ -76218,7 +76218,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4477`,
   },
   {
-    Title: `X-Men (Krakoa)`, Issue: `#22`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#22`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `X-Men Krakoa — Hickman/Duggan`, Key: `NO`,
     Key_Reason: `X-Men #22 Gerry Duggan`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Leinil Francis Yu / Pepe Larraz / Various`,
@@ -76235,7 +76235,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4478`,
   },
   {
-    Title: `X-Men (Krakoa)`, Issue: `#24`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#24`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `X-Men Krakoa — Hickman/Duggan`, Key: `NO`,
     Key_Reason: `X-Men #24 Gerry Duggan`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Leinil Francis Yu / Pepe Larraz / Various`,
@@ -76269,10 +76269,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4480`,
   },
   {
-    Title: `X-Men (Hellfire Gala)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2023`, Arc: `X-Men Hellfire Gala`, Key: `YES`,
     Key_Reason: `X-Men: Hellfire Gala #1 — annual Krakoa Gala issue — key Krakoa moment`, First_App: `Hellfire Gala`,
-    Writer: `Gerry Duggan`, Artist: `Adam Kubert`,
+    Writer: `Gerry Duggan / Hellfire Gala`, Artist: `Adam Kubert`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `10`, Value_VF: `6`,
@@ -76337,7 +76337,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4484`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `YES`,
     Key_Reason: `X-Force #1 Percy/Cassara — Krakoa's black ops team — Xavier shot on page 1 — bold opening`, First_App: `Xavier shot | Krakoa black ops established`,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara / Various`,
@@ -76354,7 +76354,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4485`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #2 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara / Various`,
@@ -76371,7 +76371,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4486`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #4 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara / Various`,
@@ -76388,7 +76388,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4487`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #5 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara / Various`,
@@ -76405,7 +76405,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4488`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#6`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #6 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara / Various`,
@@ -76422,7 +76422,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4489`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#7`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#7`, Publisher: `Marvel`,
     Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #7 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara / Various`,
@@ -76439,7 +76439,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4490`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#11`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#11`, Publisher: `Marvel`,
     Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #11 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara / Various`,
@@ -76456,7 +76456,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4491`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#12`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#12`, Publisher: `Marvel`,
     Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #12 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara / Various`,
@@ -76473,7 +76473,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4492`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#15`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#15`, Publisher: `Marvel`,
     Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #15 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara / Various`,
@@ -76490,7 +76490,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4493`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#16`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#16`, Publisher: `Marvel`,
     Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #16 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara / Various`,
@@ -76507,7 +76507,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4494`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#17`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#17`, Publisher: `Marvel`,
     Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #17 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara / Various`,
@@ -76524,7 +76524,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4495`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#18`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#18`, Publisher: `Marvel`,
     Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #18 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara / Various`,
@@ -76541,7 +76541,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4496`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#19`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#19`, Publisher: `Marvel`,
     Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #19 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara / Various`,
@@ -76558,7 +76558,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4497`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#20`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#20`, Publisher: `Marvel`,
     Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #20 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara / Various`,
@@ -76575,7 +76575,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4498`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#21`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#21`, Publisher: `Marvel`,
     Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #21 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara / Various`,
@@ -76592,7 +76592,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4499`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#22`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#22`, Publisher: `Marvel`,
     Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #22 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara / Various`,
@@ -76609,7 +76609,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4500`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#23`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#23`, Publisher: `Marvel`,
     Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #23 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara / Various`,
@@ -76626,7 +76626,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4501`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#25`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#25`, Publisher: `Marvel`,
     Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #25 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara / Various`,
@@ -76643,7 +76643,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4502`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#27`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#27`, Publisher: `Marvel`,
     Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #27 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara / Various`,
@@ -76660,7 +76660,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4503`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#28`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#28`, Publisher: `Marvel`,
     Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #28 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara / Various`,
@@ -76677,7 +76677,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4504`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#29`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#29`, Publisher: `Marvel`,
     Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #29 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara / Various`,
@@ -76694,7 +76694,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4505`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#30`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#30`, Publisher: `Marvel`,
     Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #30 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara / Various`,
@@ -76711,7 +76711,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4506`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#31`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#31`, Publisher: `Marvel`,
     Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #31 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara / Various`,
@@ -76728,7 +76728,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4507`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#32`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#32`, Publisher: `Marvel`,
     Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #32 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara / Various`,
@@ -76745,7 +76745,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4508`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#33`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#33`, Publisher: `Marvel`,
     Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #33 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara / Various`,
@@ -76762,7 +76762,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4509`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#34`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#34`, Publisher: `Marvel`,
     Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #34 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara / Various`,
@@ -76779,7 +76779,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4510`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#39`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#39`, Publisher: `Marvel`,
     Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #39 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara / Various`,
@@ -76796,7 +76796,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4511`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#40`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#40`, Publisher: `Marvel`,
     Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #40 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara / Various`,
@@ -76813,7 +76813,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4512`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#41`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#41`, Publisher: `Marvel`,
     Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #41 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara / Various`,
@@ -76830,7 +76830,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4513`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#42`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#42`, Publisher: `Marvel`,
     Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #42 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara / Various`,
@@ -76847,7 +76847,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4514`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#43`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#43`, Publisher: `Marvel`,
     Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #43 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara / Various`,
@@ -76864,7 +76864,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4515`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#44`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#44`, Publisher: `Marvel`,
     Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #44 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara / Various`,
@@ -76881,7 +76881,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4516`,
   },
   {
-    Title: `New Mutants (Krakoa)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `YES`,
     Key_Reason: `New Mutants #1 Hickman/Brisson — Krakoa-era New Mutants launch — the space adventure half of the X-Men line`, First_App: ``,
     Writer: `Jonathan Hickman / Ed Brisson`, Artist: `Rod Reis / Various`,
@@ -76898,7 +76898,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `4517`,
   },
   {
-    Title: `New Mutants (Krakoa)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #2`, First_App: ``,
     Writer: `Jonathan Hickman / Ed Brisson`, Artist: `Rod Reis / Various`,
@@ -76915,7 +76915,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `4518`,
   },
   {
-    Title: `New Mutants (Krakoa)`, Issue: `#6`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #6`, First_App: ``,
     Writer: `Jonathan Hickman / Ed Brisson`, Artist: `Rod Reis / Various`,
@@ -76932,7 +76932,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `4519`,
   },
   {
-    Title: `New Mutants (Krakoa)`, Issue: `#7`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#7`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #7`, First_App: ``,
     Writer: `Jonathan Hickman / Ed Brisson`, Artist: `Rod Reis / Various`,
@@ -76949,7 +76949,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `4520`,
   },
   {
-    Title: `New Mutants (Krakoa)`, Issue: `#8`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#8`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #8`, First_App: ``,
     Writer: `Jonathan Hickman / Ed Brisson`, Artist: `Rod Reis / Various`,
@@ -76966,7 +76966,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `4521`,
   },
   {
-    Title: `New Mutants (Krakoa)`, Issue: `#9`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#9`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #9`, First_App: ``,
     Writer: `Jonathan Hickman / Ed Brisson`, Artist: `Rod Reis / Various`,
@@ -76983,7 +76983,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `4522`,
   },
   {
-    Title: `New Mutants (Krakoa)`, Issue: `#10`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#10`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #10`, First_App: ``,
     Writer: `Jonathan Hickman / Ed Brisson`, Artist: `Rod Reis / Various`,
@@ -77000,7 +77000,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `4523`,
   },
   {
-    Title: `New Mutants (Krakoa)`, Issue: `#11`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#11`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #11`, First_App: ``,
     Writer: `Jonathan Hickman / Ed Brisson`, Artist: `Rod Reis / Various`,
@@ -77017,7 +77017,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `4524`,
   },
   {
-    Title: `New Mutants (Krakoa)`, Issue: `#12`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#12`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #12`, First_App: ``,
     Writer: `Jonathan Hickman / Ed Brisson`, Artist: `Rod Reis / Various`,
@@ -77034,7 +77034,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `4525`,
   },
   {
-    Title: `New Mutants (Krakoa)`, Issue: `#14`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#14`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #14`, First_App: ``,
     Writer: `Jonathan Hickman / Ed Brisson`, Artist: `Rod Reis / Various`,
@@ -77051,7 +77051,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `4526`,
   },
   {
-    Title: `New Mutants (Krakoa)`, Issue: `#15`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#15`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #15`, First_App: ``,
     Writer: `Jonathan Hickman / Ed Brisson`, Artist: `Rod Reis / Various`,
@@ -77068,7 +77068,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `4527`,
   },
   {
-    Title: `New Mutants (Krakoa)`, Issue: `#16`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#16`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #16`, First_App: ``,
     Writer: `Jonathan Hickman / Ed Brisson`, Artist: `Rod Reis / Various`,
@@ -77085,7 +77085,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `4528`,
   },
   {
-    Title: `New Mutants (Krakoa)`, Issue: `#17`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#17`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #17`, First_App: ``,
     Writer: `Jonathan Hickman / Ed Brisson`, Artist: `Rod Reis / Various`,
@@ -77102,7 +77102,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `4529`,
   },
   {
-    Title: `New Mutants (Krakoa)`, Issue: `#18`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#18`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #18`, First_App: ``,
     Writer: `Jonathan Hickman / Ed Brisson`, Artist: `Rod Reis / Various`,
@@ -77119,7 +77119,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `4530`,
   },
   {
-    Title: `New Mutants (Krakoa)`, Issue: `#19`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#19`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #19`, First_App: ``,
     Writer: `Jonathan Hickman / Ed Brisson`, Artist: `Rod Reis / Various`,
@@ -77136,7 +77136,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `4531`,
   },
   {
-    Title: `New Mutants (Krakoa)`, Issue: `#20`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#20`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #20`, First_App: ``,
     Writer: `Jonathan Hickman / Ed Brisson`, Artist: `Rod Reis / Various`,
@@ -77153,7 +77153,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `4532`,
   },
   {
-    Title: `New Mutants (Krakoa)`, Issue: `#21`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#21`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #21`, First_App: ``,
     Writer: `Jonathan Hickman / Ed Brisson`, Artist: `Rod Reis / Various`,
@@ -77170,7 +77170,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `4533`,
   },
   {
-    Title: `New Mutants (Krakoa)`, Issue: `#22`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#22`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #22`, First_App: ``,
     Writer: `Jonathan Hickman / Ed Brisson`, Artist: `Rod Reis / Various`,
@@ -77187,7 +77187,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `4534`,
   },
   {
-    Title: `New Mutants (Krakoa)`, Issue: `#23`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#23`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #23`, First_App: ``,
     Writer: `Jonathan Hickman / Ed Brisson`, Artist: `Rod Reis / Various`,
@@ -77204,7 +77204,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `4535`,
   },
   {
-    Title: `New Mutants (Krakoa)`, Issue: `#24`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#24`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #24`, First_App: ``,
     Writer: `Jonathan Hickman / Ed Brisson`, Artist: `Rod Reis / Various`,
@@ -77221,7 +77221,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `4536`,
   },
   {
-    Title: `New Mutants (Krakoa)`, Issue: `#25`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#25`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #25`, First_App: ``,
     Writer: `Jonathan Hickman / Ed Brisson`, Artist: `Rod Reis / Various`,
@@ -77238,7 +77238,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `4537`,
   },
   {
-    Title: `New Mutants (Krakoa)`, Issue: `#26`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#26`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #26`, First_App: ``,
     Writer: `Jonathan Hickman / Ed Brisson`, Artist: `Rod Reis / Various`,
@@ -77255,7 +77255,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `4538`,
   },
   {
-    Title: `New Mutants (Krakoa)`, Issue: `#27`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#27`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #27`, First_App: ``,
     Writer: `Jonathan Hickman / Ed Brisson`, Artist: `Rod Reis / Various`,
@@ -77272,7 +77272,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `4539`,
   },
   {
-    Title: `New Mutants (Krakoa)`, Issue: `#28`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#28`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #28`, First_App: ``,
     Writer: `Jonathan Hickman / Ed Brisson`, Artist: `Rod Reis / Various`,
@@ -77289,7 +77289,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `4540`,
   },
   {
-    Title: `New Mutants (Krakoa)`, Issue: `#29`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#29`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #29`, First_App: ``,
     Writer: `Jonathan Hickman / Ed Brisson`, Artist: `Rod Reis / Various`,
@@ -77306,7 +77306,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `4541`,
   },
   {
-    Title: `New Mutants (Krakoa)`, Issue: `#30`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#30`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #30`, First_App: ``,
     Writer: `Jonathan Hickman / Ed Brisson`, Artist: `Rod Reis / Various`,
@@ -77323,7 +77323,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `4542`,
   },
   {
-    Title: `New Mutants (Krakoa)`, Issue: `#31`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#31`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #31`, First_App: ``,
     Writer: `Jonathan Hickman / Ed Brisson`, Artist: `Rod Reis / Various`,
@@ -77340,7 +77340,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `4543`,
   },
   {
-    Title: `New Mutants (Krakoa)`, Issue: `#32`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#32`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #32`, First_App: ``,
     Writer: `Jonathan Hickman / Ed Brisson`, Artist: `Rod Reis / Various`,
@@ -77357,7 +77357,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `4544`,
   },
   {
-    Title: `New Mutants (Krakoa)`, Issue: `#33`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#33`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #33`, First_App: ``,
     Writer: `Jonathan Hickman / Ed Brisson`, Artist: `Rod Reis / Various`,
@@ -77374,7 +77374,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `4545`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#6`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `Marauders Krakoa — Duggan/Orlando`, Key: `NO`,
     Key_Reason: `Marauders #6 Gerry Duggan`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Various`,
@@ -77391,7 +77391,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4546`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#10`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#10`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `Marauders Krakoa — Duggan/Orlando`, Key: `NO`,
     Key_Reason: `Marauders #10 Gerry Duggan`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Various`,
@@ -77408,7 +77408,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4547`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#11`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#11`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `Marauders Krakoa — Duggan/Orlando`, Key: `NO`,
     Key_Reason: `Marauders #11 Gerry Duggan`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Various`,
@@ -77425,7 +77425,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4548`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#12`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#12`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `Marauders Krakoa — Duggan/Orlando`, Key: `NO`,
     Key_Reason: `Marauders #12 Gerry Duggan`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Various`,
@@ -77442,7 +77442,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4549`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#16`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#16`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `Marauders Krakoa — Duggan/Orlando`, Key: `NO`,
     Key_Reason: `Marauders #16 Gerry Duggan`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Various`,
@@ -77459,7 +77459,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4550`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#17`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#17`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `Marauders Krakoa — Duggan/Orlando`, Key: `NO`,
     Key_Reason: `Marauders #17 Gerry Duggan`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Various`,
@@ -77476,7 +77476,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4551`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#18`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#18`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `Marauders Krakoa — Duggan/Orlando`, Key: `NO`,
     Key_Reason: `Marauders #18 Gerry Duggan`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Various`,
@@ -77493,7 +77493,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4552`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#19`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#19`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `Marauders Krakoa — Duggan/Orlando`, Key: `NO`,
     Key_Reason: `Marauders #19 Gerry Duggan`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Various`,
@@ -77510,7 +77510,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4553`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#21`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#21`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `Marauders Krakoa — Duggan/Orlando`, Key: `NO`,
     Key_Reason: `Marauders #21 Gerry Duggan`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Various`,
@@ -77527,7 +77527,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4554`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#22`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#22`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `Marauders Krakoa — Duggan/Orlando`, Key: `NO`,
     Key_Reason: `Marauders #22 Gerry Duggan`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Various`,
@@ -77544,7 +77544,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4555`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#23`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#23`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `Marauders Krakoa — Duggan/Orlando`, Key: `NO`,
     Key_Reason: `Marauders #23 Gerry Duggan`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Various`,
@@ -77561,7 +77561,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4556`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#24`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#24`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `Marauders Krakoa — Duggan/Orlando`, Key: `NO`,
     Key_Reason: `Marauders #24 Gerry Duggan`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Various`,
@@ -77578,7 +77578,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4557`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#25`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#25`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `Marauders Krakoa — Duggan/Orlando`, Key: `NO`,
     Key_Reason: `Marauders #25 Gerry Duggan`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Various`,
@@ -77595,7 +77595,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4558`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#26`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#26`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `Marauders Krakoa — Duggan/Orlando`, Key: `NO`,
     Key_Reason: `Marauders #26 Steve Orlando`, First_App: ``,
     Writer: `Steve Orlando`, Artist: `Various`,
@@ -77612,7 +77612,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4559`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#27`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#27`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `Marauders Krakoa — Duggan/Orlando`, Key: `NO`,
     Key_Reason: `Marauders #27 Steve Orlando`, First_App: ``,
     Writer: `Steve Orlando`, Artist: `Various`,
@@ -77663,7 +77663,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4562`,
   },
   {
-    Title: `Excalibur (Krakoa — Howard)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Excalibur`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `YES`,
     Key_Reason: `Excalibur #1 Howard — Betsy Braddock as Captain Britain — Krakoa meets Otherworld — near-complete run`, First_App: `Betsy Braddock as Captain Britain (Krakoa era)`,
     Writer: `Tini Howard`, Artist: `Marcus To / Various`,
@@ -77680,7 +77680,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4563`,
   },
   {
-    Title: `Excalibur (Krakoa — Howard)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `Excalibur`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #2`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To / Various`,
@@ -77697,7 +77697,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4564`,
   },
   {
-    Title: `Excalibur (Krakoa — Howard)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `Excalibur`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #3`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To / Various`,
@@ -77714,7 +77714,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4565`,
   },
   {
-    Title: `Excalibur (Krakoa — Howard)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `Excalibur`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #4`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To / Various`,
@@ -77731,7 +77731,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4566`,
   },
   {
-    Title: `Excalibur (Krakoa — Howard)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `Excalibur`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #5`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To / Various`,
@@ -77748,7 +77748,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4567`,
   },
   {
-    Title: `Excalibur (Krakoa — Howard)`, Issue: `#6`, Publisher: `Marvel`,
+    Title: `Excalibur`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #6`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To / Various`,
@@ -77765,7 +77765,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4568`,
   },
   {
-    Title: `Excalibur (Krakoa — Howard)`, Issue: `#7`, Publisher: `Marvel`,
+    Title: `Excalibur`, Issue: `#7`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #7`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To / Various`,
@@ -77782,7 +77782,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4569`,
   },
   {
-    Title: `Excalibur (Krakoa — Howard)`, Issue: `#8`, Publisher: `Marvel`,
+    Title: `Excalibur`, Issue: `#8`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #8`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To / Various`,
@@ -77799,7 +77799,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4570`,
   },
   {
-    Title: `Excalibur (Krakoa — Howard)`, Issue: `#9`, Publisher: `Marvel`,
+    Title: `Excalibur`, Issue: `#9`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #9`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To / Various`,
@@ -77816,7 +77816,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4571`,
   },
   {
-    Title: `Excalibur (Krakoa — Howard)`, Issue: `#10`, Publisher: `Marvel`,
+    Title: `Excalibur`, Issue: `#10`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #10`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To / Various`,
@@ -77833,7 +77833,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4572`,
   },
   {
-    Title: `Excalibur (Krakoa — Howard)`, Issue: `#11`, Publisher: `Marvel`,
+    Title: `Excalibur`, Issue: `#11`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #11`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To / Various`,
@@ -77850,7 +77850,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4573`,
   },
   {
-    Title: `Excalibur (Krakoa — Howard)`, Issue: `#17`, Publisher: `Marvel`,
+    Title: `Excalibur`, Issue: `#17`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #17`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To / Various`,
@@ -77867,7 +77867,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4574`,
   },
   {
-    Title: `Excalibur (Krakoa — Howard)`, Issue: `#19`, Publisher: `Marvel`,
+    Title: `Excalibur`, Issue: `#19`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #19`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To / Various`,
@@ -77884,7 +77884,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4575`,
   },
   {
-    Title: `Excalibur (Krakoa — Howard)`, Issue: `#20`, Publisher: `Marvel`,
+    Title: `Excalibur`, Issue: `#20`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #20`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To / Various`,
@@ -77901,7 +77901,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4576`,
   },
   {
-    Title: `Excalibur (Krakoa — Howard)`, Issue: `#21`, Publisher: `Marvel`,
+    Title: `Excalibur`, Issue: `#21`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #21`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To / Various`,
@@ -77918,7 +77918,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4577`,
   },
   {
-    Title: `Excalibur (Krakoa — Howard)`, Issue: `#22`, Publisher: `Marvel`,
+    Title: `Excalibur`, Issue: `#22`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #22`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To / Various`,
@@ -77935,7 +77935,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4578`,
   },
   {
-    Title: `Excalibur (Krakoa — Howard)`, Issue: `#23`, Publisher: `Marvel`,
+    Title: `Excalibur`, Issue: `#23`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #23`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To / Various`,
@@ -77952,7 +77952,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4579`,
   },
   {
-    Title: `Excalibur (Krakoa — Howard)`, Issue: `#24`, Publisher: `Marvel`,
+    Title: `Excalibur`, Issue: `#24`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #24`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To / Various`,
@@ -77969,7 +77969,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4580`,
   },
   {
-    Title: `Excalibur (Krakoa — Howard)`, Issue: `#25`, Publisher: `Marvel`,
+    Title: `Excalibur`, Issue: `#25`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #25`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To / Various`,
@@ -77986,7 +77986,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4581`,
   },
   {
-    Title: `Excalibur (Krakoa — Howard)`, Issue: `#26`, Publisher: `Marvel`,
+    Title: `Excalibur`, Issue: `#26`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #26`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To / Various`,
@@ -78003,7 +78003,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4582`,
   },
   {
-    Title: `X-Factor (Krakoa — Williams)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `X-Factor`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2020-2021`, Arc: `X-Factor Krakoa — Leah Williams`, Key: `YES`,
     Key_Reason: `X-Factor #1 Leah Williams — X-Factor Investigations on Krakoa — who's not resurrecting? mystery book`, First_App: ``,
     Writer: `Leah Williams`, Artist: `David Baldeon`,
@@ -78020,7 +78020,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4583`,
   },
   {
-    Title: `X-Factor (Krakoa — Williams)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `X-Factor`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2020-2021`, Arc: `X-Factor Krakoa — Leah Williams`, Key: `NO`,
     Key_Reason: `X-Factor #2`, First_App: ``,
     Writer: `Leah Williams`, Artist: `David Baldeon`,
@@ -78037,7 +78037,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4584`,
   },
   {
-    Title: `X-Factor (Krakoa — Williams)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `X-Factor`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2020-2021`, Arc: `X-Factor Krakoa — Leah Williams`, Key: `NO`,
     Key_Reason: `X-Factor #3`, First_App: ``,
     Writer: `Leah Williams`, Artist: `David Baldeon`,
@@ -78054,7 +78054,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4585`,
   },
   {
-    Title: `X-Factor (Krakoa — Williams)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `X-Factor`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2020-2021`, Arc: `X-Factor Krakoa — Leah Williams`, Key: `NO`,
     Key_Reason: `X-Factor #5`, First_App: ``,
     Writer: `Leah Williams`, Artist: `David Baldeon`,
@@ -78071,7 +78071,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4586`,
   },
   {
-    Title: `X-Factor (Krakoa — Williams)`, Issue: `#6`, Publisher: `Marvel`,
+    Title: `X-Factor`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2020-2021`, Arc: `X-Factor Krakoa — Leah Williams`, Key: `NO`,
     Key_Reason: `X-Factor #6`, First_App: ``,
     Writer: `Leah Williams`, Artist: `David Baldeon`,
@@ -78088,7 +78088,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4587`,
   },
   {
-    Title: `X-Factor (Krakoa — Williams)`, Issue: `#7`, Publisher: `Marvel`,
+    Title: `X-Factor`, Issue: `#7`, Publisher: `Marvel`,
     Year: `2020-2021`, Arc: `X-Factor Krakoa — Leah Williams`, Key: `NO`,
     Key_Reason: `X-Factor #7`, First_App: ``,
     Writer: `Leah Williams`, Artist: `David Baldeon`,
@@ -78105,7 +78105,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4588`,
   },
   {
-    Title: `X-Factor (Krakoa — Williams)`, Issue: `#8`, Publisher: `Marvel`,
+    Title: `X-Factor`, Issue: `#8`, Publisher: `Marvel`,
     Year: `2020-2021`, Arc: `X-Factor Krakoa — Leah Williams`, Key: `NO`,
     Key_Reason: `X-Factor #8`, First_App: ``,
     Writer: `Leah Williams`, Artist: `David Baldeon`,
@@ -78122,7 +78122,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4589`,
   },
   {
-    Title: `X-Factor (Krakoa — Williams)`, Issue: `#10`, Publisher: `Marvel`,
+    Title: `X-Factor`, Issue: `#10`, Publisher: `Marvel`,
     Year: `2020-2021`, Arc: `X-Factor Krakoa — Leah Williams`, Key: `NO`,
     Key_Reason: `X-Factor #10`, First_App: ``,
     Writer: `Leah Williams`, Artist: `David Baldeon`,
@@ -78139,7 +78139,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4590`,
   },
   {
-    Title: `Hellions (Krakoa — Wells)`, Issue: `#7`, Publisher: `Marvel`,
+    Title: `Hellions`, Issue: `#7`, Publisher: `Marvel`,
     Year: `2020-2021`, Arc: `Hellions Krakoa — Zeb Wells`, Key: `NO`,
     Key_Reason: `Hellions #7 — Zeb Wells writing Sinister's team of bad mutants — this is the Zeb Wells who later got Amazing Spider-Man`, First_App: ``,
     Writer: `Zeb Wells`, Artist: `Stephen Segovia`,
@@ -78156,7 +78156,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4591`,
   },
   {
-    Title: `Hellions (Krakoa — Wells)`, Issue: `#9`, Publisher: `Marvel`,
+    Title: `Hellions`, Issue: `#9`, Publisher: `Marvel`,
     Year: `2020-2021`, Arc: `Hellions Krakoa — Zeb Wells`, Key: `NO`,
     Key_Reason: `Hellions #9 — Zeb Wells writing Sinister's team of bad mutants — this is the Zeb Wells who later got Amazing Spider-Man`, First_App: ``,
     Writer: `Zeb Wells`, Artist: `Stephen Segovia`,
@@ -78173,7 +78173,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4592`,
   },
   {
-    Title: `Hellions (Krakoa — Wells)`, Issue: `#12`, Publisher: `Marvel`,
+    Title: `Hellions`, Issue: `#12`, Publisher: `Marvel`,
     Year: `2020-2021`, Arc: `Hellions Krakoa — Zeb Wells`, Key: `NO`,
     Key_Reason: `Hellions #12 — Zeb Wells writing Sinister's team of bad mutants — this is the Zeb Wells who later got Amazing Spider-Man`, First_App: ``,
     Writer: `Zeb Wells`, Artist: `Stephen Segovia`,
@@ -78190,7 +78190,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4593`,
   },
   {
-    Title: `S.W.O.R.D. (Krakoa — Ewing)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `S.W.O.R.D.`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2020-2021`, Arc: `S.W.O.R.D. Krakoa — Al Ewing`, Key: `YES`,
     Key_Reason: `S.W.O.R.D. #1 Al Ewing/Valerio Schiti — space arm of Krakoa — Magneto in space — near-complete 7-issue run`, First_App: ``,
     Writer: `Al Ewing`, Artist: `Valerio Schiti`,
@@ -78207,7 +78207,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4594`,
   },
   {
-    Title: `S.W.O.R.D. (Krakoa — Ewing)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `S.W.O.R.D.`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2020-2021`, Arc: `S.W.O.R.D. Krakoa — Al Ewing`, Key: `NO`,
     Key_Reason: `SWORD #2`, First_App: ``,
     Writer: `Al Ewing`, Artist: `Valerio Schiti`,
@@ -78224,7 +78224,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4595`,
   },
   {
-    Title: `S.W.O.R.D. (Krakoa — Ewing)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `S.W.O.R.D.`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2020-2021`, Arc: `S.W.O.R.D. Krakoa — Al Ewing`, Key: `NO`,
     Key_Reason: `SWORD #3`, First_App: ``,
     Writer: `Al Ewing`, Artist: `Valerio Schiti`,
@@ -78241,7 +78241,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4596`,
   },
   {
-    Title: `S.W.O.R.D. (Krakoa — Ewing)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `S.W.O.R.D.`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2020-2021`, Arc: `S.W.O.R.D. Krakoa — Al Ewing`, Key: `NO`,
     Key_Reason: `SWORD #4`, First_App: ``,
     Writer: `Al Ewing`, Artist: `Valerio Schiti`,
@@ -78258,7 +78258,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4597`,
   },
   {
-    Title: `S.W.O.R.D. (Krakoa — Ewing)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `S.W.O.R.D.`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2020-2021`, Arc: `S.W.O.R.D. Krakoa — Al Ewing`, Key: `NO`,
     Key_Reason: `SWORD #5`, First_App: ``,
     Writer: `Al Ewing`, Artist: `Valerio Schiti`,
@@ -78275,7 +78275,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4598`,
   },
   {
-    Title: `S.W.O.R.D. (Krakoa — Ewing)`, Issue: `#6`, Publisher: `Marvel`,
+    Title: `S.W.O.R.D.`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2020-2021`, Arc: `S.W.O.R.D. Krakoa — Al Ewing`, Key: `NO`,
     Key_Reason: `SWORD #6`, First_App: ``,
     Writer: `Al Ewing`, Artist: `Valerio Schiti`,
@@ -78292,7 +78292,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4599`,
   },
   {
-    Title: `S.W.O.R.D. (Krakoa — Ewing)`, Issue: `#7`, Publisher: `Marvel`,
+    Title: `S.W.O.R.D.`, Issue: `#7`, Publisher: `Marvel`,
     Year: `2020-2021`, Arc: `S.W.O.R.D. Krakoa — Al Ewing`, Key: `NO`,
     Key_Reason: `SWORD #7`, First_App: ``,
     Writer: `Al Ewing`, Artist: `Valerio Schiti`,
@@ -78309,7 +78309,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4600`,
   },
   {
-    Title: `Cable (Krakoa — Duggan)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Cable`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2020`, Arc: `Cable Krakoa — Gerry Duggan/Phil Noto`, Key: `YES`,
     Key_Reason: `Cable #1 Duggan/Noto — young Cable solo — $4.99 prestige — Krakoa teen Cable adventures`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Phil Noto`,
@@ -78326,7 +78326,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `4601`,
   },
   {
-    Title: `Cable (Krakoa — Duggan)`, Issue: `#7`, Publisher: `Marvel`,
+    Title: `Cable`, Issue: `#7`, Publisher: `Marvel`,
     Year: `2020`, Arc: `Cable Krakoa — Gerry Duggan/Phil Noto`, Key: `NO`,
     Key_Reason: `Cable #7`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Phil Noto`,
@@ -78377,7 +78377,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4604`,
   },
   {
-    Title: `Wolverine (Krakoa — Percy)`, Issue: `#13`, Publisher: `Marvel`,
+    Title: `Wolverine`, Issue: `#13`, Publisher: `Marvel`,
     Year: `2021`, Arc: `Wolverine Krakoa — Benjamin Percy`, Key: `NO`,
     Key_Reason: `Wolverine #13 Legacy #355 Percy/Eaton`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Adam Kubert / Patrick Gleason`,
@@ -78394,7 +78394,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4605`,
   },
   {
-    Title: `Wolverine (Krakoa — Percy)`, Issue: `#14`, Publisher: `Marvel`,
+    Title: `Wolverine`, Issue: `#14`, Publisher: `Marvel`,
     Year: `2021`, Arc: `Wolverine Krakoa — Benjamin Percy`, Key: `NO`,
     Key_Reason: `Wolverine #14 Legacy #356 Percy/Eaton`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Adam Kubert / Patrick Gleason`,
@@ -78411,7 +78411,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4606`,
   },
   {
-    Title: `Extreme X-Men (2022)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `Extreme X-Men`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2022`, Arc: `Extreme X-Men Krakoa`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: ``, Artist: ``,
@@ -78496,7 +78496,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4611`,
   },
   {
-    Title: `Fallen Angels (Krakoa — Hill)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Fallen Angels`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Fallen Angels Krakoa — Bryan Hill`, Key: `YES`,
     Key_Reason: `Fallen Angels #1 Bryan Hill — Krakoa launch — Psylocke's team for the lost mutants`, First_App: ``,
     Writer: `Bryan Hill`, Artist: `Szymon Kudranski`,
@@ -78717,7 +78717,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4624`,
   },
   {
-    Title: `Uncanny Avengers (Krakoa — Duggan)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Uncanny Avengers`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2023`, Arc: `Uncanny Avengers Krakoa — Duggan — COMPLETE 5-issue`, Key: `YES`,
     Key_Reason: `Uncanny Avengers #1 Duggan — post-Krakoa era X-Men/Avengers crossover team —  COMPLETE 5-issue!`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Javier Garron`,
@@ -78734,7 +78734,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4625`,
   },
   {
-    Title: `Uncanny Avengers (Krakoa — Duggan)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `Uncanny Avengers`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2023`, Arc: `Uncanny Avengers Krakoa — Duggan — COMPLETE 5-issue`, Key: `NO`,
     Key_Reason: `#2`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Javier Garron`,
@@ -78751,7 +78751,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4626`,
   },
   {
-    Title: `Uncanny Avengers (Krakoa — Duggan)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `Uncanny Avengers`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2023`, Arc: `Uncanny Avengers Krakoa — Duggan — COMPLETE 5-issue`, Key: `NO`,
     Key_Reason: `#3`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Javier Garron`,
@@ -78768,7 +78768,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4627`,
   },
   {
-    Title: `Uncanny Avengers (Krakoa — Duggan)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `Uncanny Avengers`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2023`, Arc: `Uncanny Avengers Krakoa — Duggan — COMPLETE 5-issue`, Key: `NO`,
     Key_Reason: `#4`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Javier Garron`,
@@ -78785,7 +78785,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4628`,
   },
   {
-    Title: `Uncanny Avengers (Krakoa — Duggan)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `Uncanny Avengers`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2023`, Arc: `Uncanny Avengers Krakoa — Duggan — COMPLETE 5-issue`, Key: `NO`,
     Key_Reason: `#5`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Javier Garron`,
@@ -78989,7 +78989,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4640`,
   },
   {
-    Title: `X-Men Red (Krakoa — Ewing)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `X-Men Red`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2022`, Arc: `X-Men Red Krakoa — Al Ewing — Storm on Arakko`, Key: `YES`,
     Key_Reason: `X-Men Red #1 Ewing — Storm leads Arakko — the OTHER half of the Krakoa era — underrated masterpiece`, First_App: `Storm leads Arakko (Planet Arakko)`,
     Writer: `Al Ewing`, Artist: `Stefano Caselli`,
@@ -79006,7 +79006,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4641`,
   },
   {
-    Title: `X-Men Red (Krakoa — Ewing)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `X-Men Red`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2022`, Arc: `X-Men Red Krakoa — Al Ewing — Storm on Arakko`, Key: `NO`,
     Key_Reason: `X-Men Red #2 Ewing`, First_App: ``,
     Writer: `Al Ewing`, Artist: `Stefano Caselli`,
@@ -79023,7 +79023,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4642`,
   },
   {
-    Title: `X-Men Red (Krakoa — Ewing)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `X-Men Red`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2022`, Arc: `X-Men Red Krakoa — Al Ewing — Storm on Arakko`, Key: `NO`,
     Key_Reason: `X-Men Red #3 Ewing`, First_App: ``,
     Writer: `Al Ewing`, Artist: `Stefano Caselli`,
@@ -79040,7 +79040,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4643`,
   },
   {
-    Title: `X-Men Red (Krakoa — Ewing)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `X-Men Red`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2022`, Arc: `X-Men Red Krakoa — Al Ewing — Storm on Arakko`, Key: `NO`,
     Key_Reason: `X-Men Red #4 Ewing`, First_App: ``,
     Writer: `Al Ewing`, Artist: `Stefano Caselli`,
@@ -79057,7 +79057,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4644`,
   },
   {
-    Title: `X-Men Red (Krakoa — Ewing)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `X-Men Red`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2022`, Arc: `X-Men Red Krakoa — Al Ewing — Storm on Arakko`, Key: `NO`,
     Key_Reason: `X-Men Red #5 Ewing`, First_App: ``,
     Writer: `Al Ewing`, Artist: `Stefano Caselli`,
@@ -79074,7 +79074,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4645`,
   },
   {
-    Title: `X-Men Red (Krakoa — Ewing)`, Issue: `#6`, Publisher: `Marvel`,
+    Title: `X-Men Red`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2022`, Arc: `X-Men Red Krakoa — Al Ewing — Storm on Arakko`, Key: `NO`,
     Key_Reason: `X-Men Red #6 Ewing`, First_App: ``,
     Writer: `Al Ewing`, Artist: `Stefano Caselli`,
@@ -79091,7 +79091,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4646`,
   },
   {
-    Title: `X-Men Red (Krakoa — Ewing)`, Issue: `#7`, Publisher: `Marvel`,
+    Title: `X-Men Red`, Issue: `#7`, Publisher: `Marvel`,
     Year: `2022`, Arc: `X-Men Red Krakoa — Al Ewing — Storm on Arakko`, Key: `NO`,
     Key_Reason: `X-Men Red #7 Ewing`, First_App: ``,
     Writer: `Al Ewing`, Artist: `Stefano Caselli`,
@@ -79108,7 +79108,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `4647`,
   },
   {
-    Title: `Alpha Flight (Krakoa — Brisson)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `Alpha Flight`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2023`, Arc: `Alpha Flight Krakoa — Ed Brisson`, Key: `NO`,
     Key_Reason: `Alpha Flight Krakoa #4 Brisson`, First_App: ``,
     Writer: `Ed Brisson`, Artist: ``,
@@ -79125,7 +79125,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4648`,
   },
   {
-    Title: `Alpha Flight (Krakoa — Brisson)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `Alpha Flight`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2023`, Arc: `Alpha Flight Krakoa — Ed Brisson`, Key: `NO`,
     Key_Reason: `Alpha Flight Krakoa #5 Brisson`, First_App: ``,
     Writer: `Ed Brisson`, Artist: ``,
@@ -79737,7 +79737,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `4684`,
   },
   {
-    Title: `Spider-Man (Bendis Legacy)`, Issue: `#235`, Publisher: `Marvel`,
+    Title: `Spider-Man`, Issue: `#235`, Publisher: `Marvel`,
     Year: `2018`, Arc: `Spider-Man Bendis Legacy era`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Oscar Bazaldua`,
@@ -79754,7 +79754,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4685`,
   },
   {
-    Title: `Spider-Man (Bendis Legacy)`, Issue: `#234`, Publisher: `Marvel`,
+    Title: `Spider-Man`, Issue: `#234`, Publisher: `Marvel`,
     Year: `2018`, Arc: `Spider-Man Bendis Legacy era`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Oscar Bazaldua`,
@@ -79771,7 +79771,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4686`,
   },
   {
-    Title: `Spider-Man (Bendis Legacy)`, Issue: `#238`, Publisher: `Marvel`,
+    Title: `Spider-Man`, Issue: `#238`, Publisher: `Marvel`,
     Year: `2018`, Arc: `Spider-Man Bendis Legacy era`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Oscar Bazaldua`,
@@ -79788,7 +79788,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4687`,
   },
   {
-    Title: `Spider-Man (Bendis Legacy)`, Issue: `#239`, Publisher: `Marvel`,
+    Title: `Spider-Man`, Issue: `#239`, Publisher: `Marvel`,
     Year: `2018`, Arc: `Spider-Man Bendis Legacy era`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Oscar Bazaldua`,
@@ -79805,7 +79805,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4688`,
   },
   {
-    Title: `Spider-Man (Bendis Legacy)`, Issue: `#240`, Publisher: `Marvel`,
+    Title: `Spider-Man`, Issue: `#240`, Publisher: `Marvel`,
     Year: `2018`, Arc: `Spider-Man Bendis Legacy era`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Oscar Bazaldua`,
@@ -81913,10 +81913,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `4812`,
   },
   {
-    Title: `Spider-Woman (Spider-Verse tie-in)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Spider-Woman`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2014`, Arc: `Spider-Woman Spider-Verse tie-in`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Dennis Hopeless`, Artist: `Greg Land`,
+    Writer: `Dennis Hopeless / Spider-Verse tie-in`, Artist: `Greg Land`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -81930,10 +81930,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4813`,
   },
   {
-    Title: `Spider-Woman (Spider-Verse tie-in)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `Spider-Woman`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2014`, Arc: `Spider-Woman Spider-Verse tie-in`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Dennis Hopeless`, Artist: `Greg Land`,
+    Writer: `Dennis Hopeless / Spider-Verse tie-in`, Artist: `Greg Land`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -82185,7 +82185,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4828`,
   },
   {
-    Title: `Spider-Man (JJ Abrams)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `Spider-Man`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2020`, Arc: `Spider-Man JJ Abrams/Henry Abrams — extends Box 31 run`, Key: `NO`,
     Key_Reason: `JJ Abrams SM #4 — Ben Parker Spider-Man`, First_App: ``,
     Writer: `JJ Abrams / Henry Abrams`, Artist: `Sara Pichelli`,
@@ -82202,7 +82202,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4829`,
   },
   {
-    Title: `Spider-Man (JJ Abrams)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `Spider-Man`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2020`, Arc: `Spider-Man JJ Abrams/Henry Abrams — extends Box 31 run`, Key: `NO`,
     Key_Reason: `JJ Abrams SM #5 — Ben Parker Spider-Man`, First_App: ``,
     Writer: `JJ Abrams / Henry Abrams`, Artist: `Sara Pichelli`,
@@ -82253,10 +82253,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4832`,
   },
   {
-    Title: `Spider-Man: Double Trouble (Temaki)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Spider-Man: Double Trouble`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2022`, Arc: `Spider-Man Double Trouble — 4-issue mini`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Mariko Tamaki`, Artist: `Gurihiru`,
+    Writer: `Mariko Tamaki / Temaki`, Artist: `Gurihiru`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -82270,10 +82270,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4833`,
   },
   {
-    Title: `Spider-Man: Double Trouble (Temaki)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `Spider-Man: Double Trouble`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2022`, Arc: `Spider-Man Double Trouble — 4-issue mini`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Mariko Tamaki`, Artist: `Gurihiru`,
+    Writer: `Mariko Tamaki / Temaki`, Artist: `Gurihiru`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -82287,10 +82287,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4834`,
   },
   {
-    Title: `Spider-Man: Double Trouble (Temaki)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `Spider-Man: Double Trouble`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2022`, Arc: `Spider-Man Double Trouble — 4-issue mini`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Mariko Tamaki`, Artist: `Gurihiru`,
+    Writer: `Mariko Tamaki / Temaki`, Artist: `Gurihiru`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -82508,7 +82508,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4847`,
   },
   {
-    Title: `Spider-Man (Bendis Legacy farewell)`, Issue: `#238`, Publisher: `Marvel`,
+    Title: `Spider-Man`, Issue: `#238`, Publisher: `Marvel`,
     Year: `2018`, Arc: `Spider-Man Bendis farewell — legacy numbered era`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Oscar Bazaldua`,
@@ -82525,7 +82525,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4848`,
   },
   {
-    Title: `Spider-Man (Bendis Legacy farewell)`, Issue: `#239`, Publisher: `Marvel`,
+    Title: `Spider-Man`, Issue: `#239`, Publisher: `Marvel`,
     Year: `2018`, Arc: `Spider-Man Bendis farewell — legacy numbered era`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Oscar Bazaldua`,
@@ -82542,7 +82542,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `4849`,
   },
   {
-    Title: `Spider-Man (Bendis Legacy farewell)`, Issue: `#240`, Publisher: `Marvel`,
+    Title: `Spider-Man`, Issue: `#240`, Publisher: `Marvel`,
     Year: `2018`, Arc: `Spider-Man Bendis farewell — legacy numbered era`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Oscar Bazaldua`,
@@ -87268,7 +87268,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5127`,
   },
   {
-    Title: `Detective Comics (One Year Later)`, Issue: `#817`, Publisher: `DC`,
+    Title: `Detective Comics`, Issue: `#817`, Publisher: `DC`,
     Year: `2006`, Arc: `One Year Later crossover — interleaved with Batman #651-654`, Key: `NO`,
     Key_Reason: `Detective Comics #817 — One Year Later — reads in sequence with Batman #651-654`, First_App: ``,
     Writer: `James Robinson`, Artist: `Leonard Kirk`,
@@ -87285,7 +87285,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5128`,
   },
   {
-    Title: `Detective Comics (One Year Later)`, Issue: `#818`, Publisher: `DC`,
+    Title: `Detective Comics`, Issue: `#818`, Publisher: `DC`,
     Year: `2006`, Arc: `One Year Later crossover — interleaved with Batman #651-654`, Key: `NO`,
     Key_Reason: `Detective Comics #818 — One Year Later — reads in sequence with Batman #651-654`, First_App: ``,
     Writer: `James Robinson`, Artist: `Leonard Kirk`,
@@ -87302,7 +87302,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5129`,
   },
   {
-    Title: `Detective Comics (One Year Later)`, Issue: `#819`, Publisher: `DC`,
+    Title: `Detective Comics`, Issue: `#819`, Publisher: `DC`,
     Year: `2006`, Arc: `One Year Later crossover — interleaved with Batman #651-654`, Key: `NO`,
     Key_Reason: `Detective Comics #819 — One Year Later — reads in sequence with Batman #651-654`, First_App: ``,
     Writer: `James Robinson`, Artist: `Leonard Kirk`,
@@ -87319,7 +87319,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5130`,
   },
   {
-    Title: `Detective Comics (One Year Later)`, Issue: `#820`, Publisher: `DC`,
+    Title: `Detective Comics`, Issue: `#820`, Publisher: `DC`,
     Year: `2006`, Arc: `One Year Later crossover — interleaved with Batman #651-654`, Key: `NO`,
     Key_Reason: `Detective Comics #820 — One Year Later — reads in sequence with Batman #651-654`, First_App: ``,
     Writer: `James Robinson`, Artist: `Leonard Kirk`,
@@ -87336,10 +87336,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5131`,
   },
   {
-    Title: `Justice (Alex Ross)`, Issue: `#1`, Publisher: `DC`,
+    Title: `Justice`, Issue: `#1`, Publisher: `DC`,
     Year: `2005`, Arc: `Justice — Alex Ross/Jim Krueger — COMPLETE`, Key: `YES`,
     Key_Reason: `Justice #1 Alex Ross/Jim Krueger —  COMPLETE 9-issue — stunning painted art — the definitive Silver Age JLA retelling`, First_App: ``,
-    Writer: `Jim Krueger`, Artist: `Alex Ross`,
+    Writer: `Jim Krueger / Alex Ross`, Artist: `Alex Ross`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `20`, Value_VF: `12`,
@@ -87353,10 +87353,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5132`,
   },
   {
-    Title: `Justice (Alex Ross)`, Issue: `#2`, Publisher: `DC`,
+    Title: `Justice`, Issue: `#2`, Publisher: `DC`,
     Year: `2005`, Arc: `Justice — Alex Ross/Jim Krueger — COMPLETE`, Key: `NO`,
     Key_Reason: `Justice #2 Ross`, First_App: ``,
-    Writer: `Jim Krueger`, Artist: `Alex Ross`,
+    Writer: `Jim Krueger / Alex Ross`, Artist: `Alex Ross`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `8`, Value_VF: `5`,
@@ -87370,10 +87370,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5133`,
   },
   {
-    Title: `Justice (Alex Ross)`, Issue: `#3`, Publisher: `DC`,
+    Title: `Justice`, Issue: `#3`, Publisher: `DC`,
     Year: `2005`, Arc: `Justice — Alex Ross/Jim Krueger — COMPLETE`, Key: `NO`,
     Key_Reason: `Justice #3 Ross`, First_App: ``,
-    Writer: `Jim Krueger`, Artist: `Alex Ross`,
+    Writer: `Jim Krueger / Alex Ross`, Artist: `Alex Ross`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `8`, Value_VF: `5`,
@@ -87387,10 +87387,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5134`,
   },
   {
-    Title: `Justice (Alex Ross)`, Issue: `#4`, Publisher: `DC`,
+    Title: `Justice`, Issue: `#4`, Publisher: `DC`,
     Year: `2005`, Arc: `Justice — Alex Ross/Jim Krueger — COMPLETE`, Key: `NO`,
     Key_Reason: `Justice #4 Ross`, First_App: ``,
-    Writer: `Jim Krueger`, Artist: `Alex Ross`,
+    Writer: `Jim Krueger / Alex Ross`, Artist: `Alex Ross`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `8`, Value_VF: `5`,
@@ -87404,10 +87404,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5135`,
   },
   {
-    Title: `Justice (Alex Ross)`, Issue: `#5`, Publisher: `DC`,
+    Title: `Justice`, Issue: `#5`, Publisher: `DC`,
     Year: `2005`, Arc: `Justice — Alex Ross/Jim Krueger — COMPLETE`, Key: `NO`,
     Key_Reason: `Justice #5 Ross`, First_App: ``,
-    Writer: `Jim Krueger`, Artist: `Alex Ross`,
+    Writer: `Jim Krueger / Alex Ross`, Artist: `Alex Ross`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `8`, Value_VF: `5`,
@@ -87421,10 +87421,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5136`,
   },
   {
-    Title: `Justice (Alex Ross)`, Issue: `#6`, Publisher: `DC`,
+    Title: `Justice`, Issue: `#6`, Publisher: `DC`,
     Year: `2005`, Arc: `Justice — Alex Ross/Jim Krueger — COMPLETE`, Key: `NO`,
     Key_Reason: `Justice #6 Ross`, First_App: ``,
-    Writer: `Jim Krueger`, Artist: `Alex Ross`,
+    Writer: `Jim Krueger / Alex Ross`, Artist: `Alex Ross`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `8`, Value_VF: `5`,
@@ -87438,10 +87438,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5137`,
   },
   {
-    Title: `Justice (Alex Ross)`, Issue: `#7`, Publisher: `DC`,
+    Title: `Justice`, Issue: `#7`, Publisher: `DC`,
     Year: `2005`, Arc: `Justice — Alex Ross/Jim Krueger — COMPLETE`, Key: `NO`,
     Key_Reason: `Justice #7 Ross`, First_App: ``,
-    Writer: `Jim Krueger`, Artist: `Alex Ross`,
+    Writer: `Jim Krueger / Alex Ross`, Artist: `Alex Ross`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `8`, Value_VF: `5`,
@@ -87455,10 +87455,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5138`,
   },
   {
-    Title: `Justice (Alex Ross)`, Issue: `#8`, Publisher: `DC`,
+    Title: `Justice`, Issue: `#8`, Publisher: `DC`,
     Year: `2005`, Arc: `Justice — Alex Ross/Jim Krueger — COMPLETE`, Key: `NO`,
     Key_Reason: `Justice #8 Ross`, First_App: ``,
-    Writer: `Jim Krueger`, Artist: `Alex Ross`,
+    Writer: `Jim Krueger / Alex Ross`, Artist: `Alex Ross`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `8`, Value_VF: `5`,
@@ -87472,10 +87472,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5139`,
   },
   {
-    Title: `Justice (Alex Ross)`, Issue: `#9`, Publisher: `DC`,
+    Title: `Justice`, Issue: `#9`, Publisher: `DC`,
     Year: `2005`, Arc: `Justice — Alex Ross/Jim Krueger — COMPLETE`, Key: `NO`,
     Key_Reason: `Justice #9 Ross`, First_App: ``,
-    Writer: `Jim Krueger`, Artist: `Alex Ross`,
+    Writer: `Jim Krueger / Alex Ross`, Artist: `Alex Ross`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `8`, Value_VF: `5`,
@@ -88662,10 +88662,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `5209`,
   },
   {
-    Title: `Generations: The Best (Wolverines)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Generations: The Best`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2017`, Arc: `Generations 2017 event one-shots`, Key: `YES`,
     Key_Reason: `Generations: Wolverines #1 Tom Taylor/Rosanas — Logan meets young X-23`, First_App: ``,
-    Writer: `Tom Taylor`, Artist: `Ramon Rosanas`,
+    Writer: `Tom Taylor / Wolverines`, Artist: `Ramon Rosanas`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `8`, Value_VF: `5`,
@@ -88679,10 +88679,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5210`,
   },
   {
-    Title: `Generations: The Americas (Caps)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Generations: The Americas`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2017`, Arc: `Generations 2017`, Key: `YES`,
     Key_Reason: `Generations: Americas #1 Nick Spencer — Steve Rogers meets Sam Wilson`, First_App: ``,
-    Writer: `Nick Spencer`, Artist: `Paul Renaud`,
+    Writer: `Nick Spencer / Caps`, Artist: `Paul Renaud`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `8`, Value_VF: `5`,
@@ -88849,7 +88849,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5220`,
   },
   {
-    Title: `New Mutants (Krakoa)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2019`, Arc: `New Mutants Krakoa`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Ed Brisson`, Artist: `Flaviano`,
@@ -89019,7 +89019,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5230`,
   },
   {
-    Title: `X-Terminators (Williams)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `X-Terminators`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2022`, Arc: `X-Terminators 5-issue Leah Williams`, Key: `YES`,
     Key_Reason: `X-Terminators #1 Leah Williams/Carlos Gómez — Dazzler/Jubilee/Boom Boom adults-only girls trip — wildly fun`, First_App: ``,
     Writer: `Leah Williams`, Artist: `Carlos Gómez`,
@@ -89036,7 +89036,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5231`,
   },
   {
-    Title: `X-Terminators (Williams)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `X-Terminators`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2022`, Arc: `X-Terminators 5-issue Leah Williams`, Key: `NO`,
     Key_Reason: `#2`, First_App: ``,
     Writer: `Leah Williams`, Artist: `Carlos Gómez`,
@@ -89053,7 +89053,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5232`,
   },
   {
-    Title: `Dazzler (From the Ashes)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Dazzler`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Dazzler FtA`, Key: `YES`,
     Key_Reason: `Dazzler FtA #1 — From the Ashes era relaunch`, First_App: ``,
     Writer: ``, Artist: ``,
@@ -89070,7 +89070,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5233`,
   },
   {
-    Title: `Dazzler (From the Ashes)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `Dazzler`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Dazzler FtA`, Key: `NO`,
     Key_Reason: `#2`, First_App: ``,
     Writer: ``, Artist: ``,
@@ -89087,7 +89087,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5234`,
   },
   {
-    Title: `Dazzler (From the Ashes)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `Dazzler`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Dazzler FtA`, Key: `NO`,
     Key_Reason: `#3`, First_App: ``,
     Writer: ``, Artist: ``,
@@ -89104,7 +89104,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5235`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2022`, Arc: `X-Force Krakoa Percy — extends Box 35 run`, Key: `NO`,
     Key_Reason: `XForce #3 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Various`,
@@ -89121,7 +89121,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `5236`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#8`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#8`, Publisher: `Marvel`,
     Year: `2022`, Arc: `X-Force Krakoa Percy — extends Box 35 run`, Key: `NO`,
     Key_Reason: `XForce #8 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Various`,
@@ -89138,7 +89138,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `5237`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#9`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#9`, Publisher: `Marvel`,
     Year: `2022`, Arc: `X-Force Krakoa Percy — extends Box 35 run`, Key: `NO`,
     Key_Reason: `XForce #9 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Various`,
@@ -89155,7 +89155,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `5238`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#14`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#14`, Publisher: `Marvel`,
     Year: `2022`, Arc: `X-Force Krakoa Percy — extends Box 35 run`, Key: `NO`,
     Key_Reason: `XForce #14 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Various`,
@@ -89172,7 +89172,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `5239`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#45`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#45`, Publisher: `Marvel`,
     Year: `2022`, Arc: `X-Force Krakoa Percy — extends Box 35 run`, Key: `NO`,
     Key_Reason: `XForce #45 Percy — Fall of X`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Various`,
@@ -89189,7 +89189,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `5240`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#49`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#49`, Publisher: `Marvel`,
     Year: `2022`, Arc: `X-Force Krakoa Percy — extends Box 35 run`, Key: `NO`,
     Key_Reason: `XForce #49 Percy — Fall of X`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Various`,
@@ -89206,7 +89206,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `5241`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#50`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#50`, Publisher: `Marvel`,
     Year: `2022`, Arc: `X-Force Krakoa Percy — extends Box 35 run`, Key: `NO`,
     Key_Reason: `XForce #50 Percy — Fall of X`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Various`,
@@ -89223,7 +89223,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `5242`,
   },
   {
-    Title: `X-Force (From the Ashes — Thorne)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2024`, Arc: `X-Force FtA — SY variant`, Key: `YES`,
     Key_Reason: `X-Force FtA #1 Skottie Young variant cover — SY covers always carry premium`, First_App: ``,
     Writer: `Geoffrey Thorne`, Artist: ``,
@@ -89240,7 +89240,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `5243`,
   },
   {
-    Title: `X-Force (From the Ashes — Thorne)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2024`, Arc: `X-Force FtA Thorne`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Geoffrey Thorne`, Artist: `Marcus To`,
@@ -89257,7 +89257,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `5244`,
   },
   {
-    Title: `X-Force (From the Ashes — Thorne)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2024`, Arc: `X-Force FtA Thorne`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Geoffrey Thorne`, Artist: `Marcus To`,
@@ -89274,7 +89274,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `5245`,
   },
   {
-    Title: `X-Force (From the Ashes — Thorne)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2024`, Arc: `X-Force FtA Thorne`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Geoffrey Thorne`, Artist: `Marcus To`,
@@ -89359,7 +89359,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5250`,
   },
   {
-    Title: `X-Force (Krakoa)`, Issue: `#9`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#9`, Publisher: `Marvel`,
     Year: `2020`, Arc: `X of Swords crossover / Krakoa`, Key: `NO`,
     Key_Reason: `X-Force XoS part 8`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara`,
@@ -89376,7 +89376,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `5251`,
   },
   {
-    Title: `X-Force (Krakoa)`, Issue: `#14`, Publisher: `Marvel`,
+    Title: `X-Force`, Issue: `#14`, Publisher: `Marvel`,
     Year: `2020`, Arc: `X of Swords crossover / Krakoa`, Key: `NO`,
     Key_Reason: `X-Force XoS`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Various`,
@@ -89393,10 +89393,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `5252`,
   },
   {
-    Title: `Cable (Duggan/Noto)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `Cable`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2020`, Arc: `X of Swords crossover / Krakoa`, Key: `NO`,
     Key_Reason: `Cable XoS`, First_App: ``,
-    Writer: `Gerry Duggan`, Artist: `Phil Noto`,
+    Writer: `Gerry Duggan / Duggan/Noto`, Artist: `Phil Noto`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -89410,10 +89410,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `5253`,
   },
   {
-    Title: `Cable (Duggan/Noto)`, Issue: `#6`, Publisher: `Marvel`,
+    Title: `Cable`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2020`, Arc: `X of Swords crossover / Krakoa`, Key: `NO`,
     Key_Reason: `Cable XoS`, First_App: ``,
-    Writer: `Gerry Duggan`, Artist: `Phil Noto`,
+    Writer: `Gerry Duggan / Duggan/Noto`, Artist: `Phil Noto`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -89427,7 +89427,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `5254`,
   },
   {
-    Title: `Hellions (Wells)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `Hellions`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2020`, Arc: `X of Swords crossover / Krakoa`, Key: `NO`,
     Key_Reason: `Hellions XoS`, First_App: ``,
     Writer: `Zeb Wells`, Artist: `Stephen Segovia`,
@@ -89444,7 +89444,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5255`,
   },
   {
-    Title: `Hellions (Wells)`, Issue: `#6`, Publisher: `Marvel`,
+    Title: `Hellions`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2020`, Arc: `X of Swords crossover / Krakoa`, Key: `NO`,
     Key_Reason: `Hellions XoS`, First_App: ``,
     Writer: `Zeb Wells`, Artist: `Stephen Segovia`,
@@ -89461,7 +89461,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5256`,
   },
   {
-    Title: `Excalibur (Howard)`, Issue: `#12`, Publisher: `Marvel`,
+    Title: `Excalibur`, Issue: `#12`, Publisher: `Marvel`,
     Year: `2020`, Arc: `X of Swords crossover / Krakoa`, Key: `NO`,
     Key_Reason: `Excalibur XoS`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Various`,
@@ -89478,7 +89478,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5257`,
   },
   {
-    Title: `Excalibur (Howard)`, Issue: `#13`, Publisher: `Marvel`,
+    Title: `Excalibur`, Issue: `#13`, Publisher: `Marvel`,
     Year: `2020`, Arc: `X of Swords crossover / Krakoa`, Key: `NO`,
     Key_Reason: `Excalibur XoS`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Various`,
@@ -89495,7 +89495,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5258`,
   },
   {
-    Title: `New Mutants (Krakoa)`, Issue: `#13`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#13`, Publisher: `Marvel`,
     Year: `2020`, Arc: `X of Swords crossover / Krakoa`, Key: `NO`,
     Key_Reason: `NM XoS`, First_App: ``,
     Writer: `Vita Ayala`, Artist: `Various`,
@@ -89512,7 +89512,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `5259`,
   },
   {
-    Title: `X-Men (Krakoa)`, Issue: `#13`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#13`, Publisher: `Marvel`,
     Year: `2020`, Arc: `X of Swords crossover / Krakoa`, Key: `NO`,
     Key_Reason: `XM XoS`, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: `Various`,
@@ -89529,7 +89529,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5260`,
   },
   {
-    Title: `X-Men (Krakoa)`, Issue: `#14`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#14`, Publisher: `Marvel`,
     Year: `2020`, Arc: `X of Swords crossover / Krakoa`, Key: `NO`,
     Key_Reason: `XM XoS`, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: `Various`,
@@ -89546,7 +89546,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5261`,
   },
   {
-    Title: `X-Men (Krakoa)`, Issue: `#12`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#12`, Publisher: `Marvel`,
     Year: `2020`, Arc: `X of Swords crossover / Krakoa`, Key: `NO`,
     Key_Reason: `XM XoS`, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: `Various`,
@@ -89563,7 +89563,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5262`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#14`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#14`, Publisher: `Marvel`,
     Year: `2020`, Arc: `X of Swords crossover / Krakoa`, Key: `NO`,
     Key_Reason: `Mrd XoS`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Various`,
@@ -89580,7 +89580,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5263`,
   },
   {
-    Title: `X-Factor (Krakoa)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `X-Factor`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2020`, Arc: `X of Swords crossover / Krakoa`, Key: `NO`,
     Key_Reason: `XF XoS`, First_App: ``,
     Writer: `Leah Williams`, Artist: `Various`,
@@ -89597,7 +89597,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5264`,
   },
   {
-    Title: `Wolverine (Krakoa)`, Issue: `#6`, Publisher: `Marvel`,
+    Title: `Wolverine`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2020`, Arc: `X of Swords crossover / Krakoa`, Key: `NO`,
     Key_Reason: `Wolvie XoS`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Various`,
@@ -89614,7 +89614,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `5265`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2020`, Arc: `X of Swords crossover / Krakoa`, Key: `NO`,
     Key_Reason: `Marauders #2`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Various`,
@@ -89631,7 +89631,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5266`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#9`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#9`, Publisher: `Marvel`,
     Year: `2020`, Arc: `X of Swords crossover / Krakoa`, Key: `NO`,
     Key_Reason: `Marauders #9`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Various`,
@@ -89648,7 +89648,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5267`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Marauders Krakoa Duggan`, Key: `YES`,
     Key_Reason: `Marauders #1 Gerry Duggan/Matteo Lolli — Kate Pryde leads the Marauders — Krakoa launch`, First_App: `Kate Pryde as Marauders captain`,
     Writer: `Gerry Duggan`, Artist: `Matteo Lolli`,
@@ -89665,7 +89665,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5268`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Marauders Krakoa Duggan`, Key: `NO`,
     Key_Reason: `#3`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Matteo Lolli`,
@@ -89682,7 +89682,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5269`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Marauders Krakoa Duggan`, Key: `NO`,
     Key_Reason: `#4`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Matteo Lolli`,
@@ -89699,7 +89699,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5270`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Marauders Krakoa Duggan`, Key: `NO`,
     Key_Reason: `#5`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Matteo Lolli`,
@@ -89716,7 +89716,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5271`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#7`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#7`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Marauders Krakoa Duggan`, Key: `NO`,
     Key_Reason: `#7`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Matteo Lolli`,
@@ -89733,7 +89733,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5272`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#8`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#8`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Marauders Krakoa Duggan`, Key: `NO`,
     Key_Reason: `#8`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Matteo Lolli`,
@@ -89750,7 +89750,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5273`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#13`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#13`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Marauders Krakoa Duggan`, Key: `NO`,
     Key_Reason: `#13`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Matteo Lolli`,
@@ -89767,7 +89767,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5274`,
   },
   {
-    Title: `X-Men (Krakoa)`, Issue: `#7`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#7`, Publisher: `Marvel`,
     Year: `2020`, Arc: `X-Men Hickman`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: `Leinil Francis Yu`,
@@ -89869,10 +89869,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5280`,
   },
   {
-    Title: `Avengers (misplaced)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `Avengers`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2018`, Arc: `Misplaced Avengers`, Key: `NO`,
     Key_Reason: `Avengers #2 Jason Aaron — found in X-Men box — redistribute to Avengers box`, First_App: ``,
-    Writer: `Jason Aaron`, Artist: `Ed McGuinness`,
+    Writer: `Jason Aaron / misplaced`, Artist: `Ed McGuinness`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `MISPLACED — redistribute`,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -89903,7 +89903,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `5282`,
   },
   {
-    Title: `Excalibur (Howard)`, Issue: `#16`, Publisher: `Marvel`,
+    Title: `Excalibur`, Issue: `#16`, Publisher: `Marvel`,
     Year: `2021`, Arc: `Excalibur Krakoa Howard`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Tini Howard`, Artist: `Various`,
@@ -89920,7 +89920,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5283`,
   },
   {
-    Title: `New Mutants (Krakoa)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2020`, Arc: `NM Krakoa`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: `Various`,
@@ -89937,7 +89937,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `5284`,
   },
   {
-    Title: `New Mutants (Krakoa)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `New Mutants`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2020`, Arc: `NM Krakoa`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: `Various`,
@@ -89954,8 +89954,8 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `5285`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#46`, Publisher: `Marvel`,
-    Year: `2023`, Arc: `X-Force Fall of X`, Key: `NO`,
+    Title: `X-Force`, Issue: `#46`, Publisher: `Marvel`,
+    Year: `2023`, Arc: `Krakoa era — X-Force Fall of X`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -89971,7 +89971,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `5286`,
   },
   {
-    Title: `X-Men (Krakoa)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2021`, Arc: `X-Men Krakoa Duggan`, Key: `YES`,
     Key_Reason: `X-Men #1 Gerry Duggan — new Krakoa X-Men launch after Hickman`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Pepe Larraz`,
@@ -91161,7 +91161,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `5356`,
   },
   {
-    Title: `Psylocke (From the Ashes)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Psylocke`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Psylocke FtA`, Key: `YES`,
     Key_Reason: `Psylocke FtA #1 — From the Ashes Psylocke solo`, First_App: ``,
     Writer: `Vita Ayala`, Artist: `Vincenzo Carratù`,
@@ -91178,7 +91178,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5357`,
   },
   {
-    Title: `Exceptional X-Men (Ewing)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `Exceptional X-Men`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Exceptional X-Men Ewing`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Al Ewing`, Artist: `Various`,
@@ -91195,7 +91195,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `5358`,
   },
   {
-    Title: `Exceptional X-Men (Ewing)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Exceptional X-Men`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Exceptional X-Men Ewing`, Key: `YES`,
     Key_Reason: `Exceptional XM #1 Ewing`, First_App: ``,
     Writer: `Al Ewing`, Artist: `Various`,
@@ -91212,7 +91212,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `5359`,
   },
   {
-    Title: `Exceptional X-Men (Ewing)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `Exceptional X-Men`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Exceptional X-Men Ewing`, Key: `NO`,
     Key_Reason: `#2`, First_App: ``,
     Writer: `Al Ewing`, Artist: `Various`,
@@ -91399,7 +91399,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `5370`,
   },
   {
-    Title: `Alpha Flight (Krakoa — Brisson FoX)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Alpha Flight`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2023`, Arc: `Alpha Flight Fall of X`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Ed Brisson`, Artist: `Scott Godlewski`,
@@ -91416,7 +91416,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5371`,
   },
   {
-    Title: `Alpha Flight (Krakoa — Brisson FoX)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `Alpha Flight`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2023`, Arc: `Alpha Flight Fall of X`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Ed Brisson`, Artist: `Scott Godlewski`,
@@ -91433,7 +91433,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5372`,
   },
   {
-    Title: `Alpha Flight (Krakoa — Brisson FoX)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `Alpha Flight`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2023`, Arc: `Alpha Flight Fall of X`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Ed Brisson`, Artist: `Scott Godlewski`,
@@ -91518,10 +91518,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `5377`,
   },
   {
-    Title: `X-23 (variant — cool cover)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `X-23`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2023`, Arc: `X-23 variant`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `variant — cool cover`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `6`, Value_VF: `4`,
@@ -91552,7 +91552,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5379`,
   },
   {
-    Title: `X-Men (Fall of the House of X)`, Issue: `#31`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#31`, Publisher: `Marvel`,
     Year: `2024`, Arc: `X-Men Fall of the House of X — Duggan`, Key: `NO`,
     Key_Reason: `XM FoHoX #31`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Joshua Cassara`,
@@ -91569,7 +91569,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `5380`,
   },
   {
-    Title: `X-Men (Fall of the House of X)`, Issue: `#32`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#32`, Publisher: `Marvel`,
     Year: `2024`, Arc: `X-Men Fall of the House of X — Duggan`, Key: `NO`,
     Key_Reason: `XM FoHoX #32`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Joshua Cassara`,
@@ -91586,7 +91586,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `5381`,
   },
   {
-    Title: `X-Men (Fall of the House of X)`, Issue: `#33`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#33`, Publisher: `Marvel`,
     Year: `2024`, Arc: `X-Men Fall of the House of X — Duggan`, Key: `NO`,
     Key_Reason: `XM FoHoX #33`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Joshua Cassara`,
@@ -91603,7 +91603,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `5382`,
   },
   {
-    Title: `X-Men (Fall of the House of X)`, Issue: `#34`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#34`, Publisher: `Marvel`,
     Year: `2024`, Arc: `X-Men Fall of the House of X — Duggan`, Key: `NO`,
     Key_Reason: `XM FoHoX #34`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Joshua Cassara`,
@@ -91620,7 +91620,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `5383`,
   },
   {
-    Title: `X-Men (Fall of the House of X)`, Issue: `#35`, Publisher: `Marvel`,
+    Title: `X-Men`, Issue: `#35`, Publisher: `Marvel`,
     Year: `2024`, Arc: `X-Men Fall of the House of X — Duggan`, Key: `YES`,
     Key_Reason: `X-Men #35 Legacy #700 — END of the Krakoa era — landmark issue — the 700th X-Men issue`, First_App: `End of Krakoa era (Legacy #700)`,
     Writer: `Gerry Duggan`, Artist: `Joshua Cassara`,
@@ -91875,7 +91875,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5398`,
   },
   {
-    Title: `Cable (Fall of the House of X — Nicieza)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Cable`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Cable FoHoX Nicieza/Eaton`, Key: `YES`,
     Key_Reason: `Cable FoHoX #1 Fabian Nicieza — NICIEZA on Cable! — the original Cable writer returns for the Krakoa end`, First_App: `Fabian Nicieza returns to Cable`,
     Writer: `Fabian Nicieza`, Artist: `Tom Reilly`,
@@ -91892,7 +91892,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5399`,
   },
   {
-    Title: `Cable (Fall of the House of X — Nicieza)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `Cable`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Cable FoHoX Nicieza/Eaton`, Key: `NO`,
     Key_Reason: `#2`, First_App: ``,
     Writer: `Fabian Nicieza`, Artist: `Tom Reilly`,
@@ -91909,7 +91909,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5400`,
   },
   {
-    Title: `Cable (Fall of the House of X — Nicieza)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `Cable`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Cable FoHoX Nicieza/Eaton`, Key: `NO`,
     Key_Reason: `#3`, First_App: ``,
     Writer: `Fabian Nicieza`, Artist: `Tom Reilly`,
@@ -91926,7 +91926,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5401`,
   },
   {
-    Title: `Cable (Fall of the House of X — Nicieza)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `Cable`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Cable FoHoX Nicieza/Eaton`, Key: `NO`,
     Key_Reason: `#4`, First_App: ``,
     Writer: `Fabian Nicieza`, Artist: `Tom Reilly`,
@@ -91943,7 +91943,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5402`,
   },
   {
-    Title: `X-Men: Age of Apocalypse (2023)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `X-Men: Age of Apocalypse`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2023`, Arc: `X-Men Age of Apocalypse 2023`, Key: `YES`,
     Key_Reason: `XM Age of Apocalypse 2023 #1 — AoA returns`, First_App: ``,
     Writer: `Steve Foxe`, Artist: `Various`,
@@ -91960,7 +91960,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `5403`,
   },
   {
-    Title: `X-Men: Age of Apocalypse (2023)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `X-Men: Age of Apocalypse`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2023`, Arc: `X-Men Age of Apocalypse 2023`, Key: `NO`,
     Key_Reason: `#2`, First_App: ``,
     Writer: `Steve Foxe`, Artist: `Various`,
@@ -91977,7 +91977,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `5404`,
   },
   {
-    Title: `X-Men: Age of Apocalypse (2023)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `X-Men: Age of Apocalypse`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2023`, Arc: `X-Men Age of Apocalypse 2023`, Key: `NO`,
     Key_Reason: `#3`, First_App: ``,
     Writer: `Steve Foxe`, Artist: `Various`,
@@ -91994,7 +91994,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `5405`,
   },
   {
-    Title: `X-Men: Age of Apocalypse (2023)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `X-Men: Age of Apocalypse`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2023`, Arc: `X-Men Age of Apocalypse 2023`, Key: `NO`,
     Key_Reason: `#4`, First_App: ``,
     Writer: `Steve Foxe`, Artist: `Various`,
@@ -92011,7 +92011,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `5406`,
   },
   {
-    Title: `Dead X-Men (Fall of the House of X)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Dead X-Men`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Dead X-Men FoHoX`, Key: `YES`,
     Key_Reason: `Dead X-Men #1 — heroes who died fighting Orchis — Fall crossover`, First_App: ``,
     Writer: `Louise Simonson`, Artist: `Paco Medina`,
@@ -92028,7 +92028,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `5407`,
   },
   {
-    Title: `Dead X-Men (Fall of the House of X)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `Dead X-Men`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Dead X-Men FoHoX`, Key: `NO`,
     Key_Reason: `#2`, First_App: ``,
     Writer: `Louise Simonson`, Artist: `Paco Medina`,
@@ -92045,7 +92045,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `5408`,
   },
   {
-    Title: `Dead X-Men (Fall of the House of X)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `Dead X-Men`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Dead X-Men FoHoX`, Key: `NO`,
     Key_Reason: `#3`, First_App: ``,
     Writer: `Louise Simonson`, Artist: `Paco Medina`,
@@ -92062,7 +92062,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `5409`,
   },
   {
-    Title: `Dead X-Men (Fall of the House of X)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `Dead X-Men`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Dead X-Men FoHoX`, Key: `NO`,
     Key_Reason: `#4`, First_App: ``,
     Writer: `Louise Simonson`, Artist: `Paco Medina`,
@@ -96278,7 +96278,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5657`,
   },
   {
-    Title: `X-Men: The End (Book 1 — Dreamers & Demons)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `X-Men: The End`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2004`, Arc: `X-Men: The End Claremont/Chen`, Key: `YES`,
     Key_Reason: `X-Men: The End #1 Chris Claremont/Sean Chen — Claremont's definitive X-Men ending`, First_App: ``,
     Writer: `Chris Claremont`, Artist: `Sean Chen`,
@@ -96295,7 +96295,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `5658`,
   },
   {
-    Title: `X-Men: The End (Book 1 — Dreamers & Demons)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `X-Men: The End`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2004`, Arc: `X-Men: The End Claremont/Chen`, Key: `NO`,
     Key_Reason: `XM:TE #2`, First_App: ``,
     Writer: `Chris Claremont`, Artist: `Sean Chen`,
@@ -96312,7 +96312,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `5659`,
   },
   {
-    Title: `X-Men: The End (Book 1 — Dreamers & Demons)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `X-Men: The End`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2004`, Arc: `X-Men: The End Claremont/Chen`, Key: `NO`,
     Key_Reason: `XM:TE #3`, First_App: ``,
     Writer: `Chris Claremont`, Artist: `Sean Chen`,
@@ -96329,7 +96329,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `5660`,
   },
   {
-    Title: `X-Men: The End (Book 1 — Dreamers & Demons)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `X-Men: The End`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2004`, Arc: `X-Men: The End Claremont/Chen`, Key: `NO`,
     Key_Reason: `XM:TE #4`, First_App: ``,
     Writer: `Chris Claremont`, Artist: `Sean Chen`,
@@ -96346,7 +96346,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `5661`,
   },
   {
-    Title: `X-Men: The End (Book 1 — Dreamers & Demons)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `X-Men: The End`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2004`, Arc: `X-Men: The End Claremont/Chen`, Key: `NO`,
     Key_Reason: `XM:TE #2`, First_App: ``,
     Writer: `Chris Claremont`, Artist: `Sean Chen`,
@@ -96363,7 +96363,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `5662`,
   },
   {
-    Title: `X-Men: The End (Book 1 — Dreamers & Demons)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `X-Men: The End`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2004`, Arc: `X-Men: The End Claremont/Chen`, Key: `NO`,
     Key_Reason: `XM:TE #2`, First_App: ``,
     Writer: `Chris Claremont`, Artist: `Sean Chen`,
@@ -96941,7 +96941,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5696`,
   },
   {
-    Title: `Birds of Prey (2023)`, Issue: `#24`, Publisher: `DC`,
+    Title: `Birds of Prey`, Issue: `#24`, Publisher: `DC`,
     Year: `2025`, Arc: `Birds of Prey Thompson — extends Box 12`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Kelly Thompson`, Artist: `Various`,
@@ -96958,7 +96958,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5697`,
   },
   {
-    Title: `Psylocke (From the Ashes)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `Psylocke`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2025`, Arc: `Psylocke FtA extends Box 41`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Vita Ayala`, Artist: `Various`,
@@ -97162,10 +97162,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5709`,
   },
   {
-    Title: `Moon Knight (Marc Spector)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `Moon Knight`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2021`, Arc: `Moon Knight Marc Spector McKay`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Jed McKay`, Artist: `Federico Sabbatini`,
+    Writer: `Jed McKay / Marc Spector`, Artist: `Federico Sabbatini`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -97213,10 +97213,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `5712`,
   },
   {
-    Title: `Mr. Terrific (New 52)`, Issue: `#1`, Publisher: `DC`,
+    Title: `Mr. Terrific`, Issue: `#1`, Publisher: `DC`,
     Year: `2011`, Arc: `Mr. Terrific New 52`, Key: `YES`,
     Key_Reason: `Mr. Terrific New 52 #1 — Eric Wallace — first modern Mr. Terrific ongoing`, First_App: ``,
-    Writer: `Eric Wallace`, Artist: `Gianluca Gugliotta`,
+    Writer: `Eric Wallace / New 52`, Artist: `Gianluca Gugliotta`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `YES`, Value_NM: `8`, Value_VF: `5`,
@@ -97247,7 +97247,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5714`,
   },
   {
-    Title: `Secret Six (Simone)`, Issue: `#30`, Publisher: `DC`,
+    Title: `Secret Six`, Issue: `#30`, Publisher: `DC`,
     Year: `2011`, Arc: `Secret Six Simone`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Gail Simone`, Artist: `Jim Calafiore`,
@@ -97604,10 +97604,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5735`,
   },
   {
-    Title: `Secret Six (Simone)`, Issue: `#2`, Publisher: `DC`,
+    Title: `Secret Six`, Issue: `#2`, Publisher: `DC`,
     Year: `2009`, Arc: `Misc house find`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Simone`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `4`, Value_VF: `2`,
@@ -97723,7 +97723,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5742`,
   },
   {
-    Title: `Captain America (Straczynski)`, Issue: `#8`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#8`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Cap Straczynski FtA`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `J. Michael Straczynski`, Artist: ``,
@@ -97740,7 +97740,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `9`, Entry: `5743`,
   },
   {
-    Title: `Captain America (Straczynski)`, Issue: `#9`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#9`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Cap Straczynski FtA`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `J. Michael Straczynski`, Artist: ``,
@@ -97757,7 +97757,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `9`, Entry: `5744`,
   },
   {
-    Title: `Captain America (Straczynski)`, Issue: `#10`, Publisher: `Marvel`,
+    Title: `Captain America`, Issue: `#10`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Cap Straczynski FtA`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `J. Michael Straczynski`, Artist: ``,
@@ -97842,10 +97842,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5749`,
   },
   {
-    Title: `Imperial (Guardians)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `Imperial`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2025`, Arc: `Recent Marvel`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Guardians`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -97978,10 +97978,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `5757`,
   },
   {
-    Title: `G.I. Joe (Skybound)`, Issue: `#20`, Publisher: `Image/Skybound`,
+    Title: `G.I. Joe`, Issue: `#20`, Publisher: `Image/Skybound`,
     Year: `2023`, Arc: `GI Joe Skybound`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Various`, Artist: `Various`,
+    Writer: `Various / Skybound`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `4`, Value_VF: `2`,
@@ -97995,10 +97995,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5758`,
   },
   {
-    Title: `G.I. Joe (Skybound)`, Issue: `#21`, Publisher: `Image/Skybound`,
+    Title: `G.I. Joe`, Issue: `#21`, Publisher: `Image/Skybound`,
     Year: `2023`, Arc: `GI Joe Skybound`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Various`, Artist: `Various`,
+    Writer: `Various / Skybound`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `4`, Value_VF: `2`,
@@ -98386,7 +98386,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5781`,
   },
   {
-    Title: `Justice League Unlimited (2024)`, Issue: `#3`, Publisher: `DC`,
+    Title: `Justice League Unlimited`, Issue: `#3`, Publisher: `DC`,
     Year: `2024`, Arc: `JLU 2024`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: ``, Artist: ``,
@@ -98539,10 +98539,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5790`,
   },
   {
-    Title: `Green Lantern (Adams — All In)`, Issue: `#16`, Publisher: `DC`,
+    Title: `Green Lantern`, Issue: `#16`, Publisher: `DC`,
     Year: `2024`, Arc: `GL Adams All In`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Jeremy Adams`, Artist: `Xermánico`,
+    Writer: `Jeremy Adams / Adams — All In`, Artist: `Xermánico`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -98607,10 +98607,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5794`,
   },
   {
-    Title: `Zatanna (Campbell)`, Issue: `#2`, Publisher: `DC`,
+    Title: `Zatanna`, Issue: `#2`, Publisher: `DC`,
     Year: `2025`, Arc: `Zatanna Campbell extends Box 32`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: `Jamal Campbell`,
+    Writer: `Campbell`, Artist: `Jamal Campbell`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `6`, Value_VF: `4`,
@@ -98658,7 +98658,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5797`,
   },
   {
-    Title: `Birds of Prey (2023)`, Issue: `#13`, Publisher: `DC`,
+    Title: `Birds of Prey`, Issue: `#13`, Publisher: `DC`,
     Year: `2024`, Arc: `BoP Thompson extends run`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Kelly Thompson`, Artist: `Various`,
@@ -98675,7 +98675,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5798`,
   },
   {
-    Title: `Birds of Prey (2023)`, Issue: `#14`, Publisher: `DC`,
+    Title: `Birds of Prey`, Issue: `#14`, Publisher: `DC`,
     Year: `2024`, Arc: `BoP Thompson extends run`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Kelly Thompson`, Artist: `Various`,
@@ -98692,7 +98692,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5799`,
   },
   {
-    Title: `Titans (2023)`, Issue: `#12`, Publisher: `DC`,
+    Title: `Titans`, Issue: `#12`, Publisher: `DC`,
     Year: `2024`, Arc: `Titans Taylor extends Box 32`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Tom Taylor`, Artist: ``,
@@ -98930,7 +98930,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5813`,
   },
   {
-    Title: `X-Men Blue (Bunn)`, Issue: `#18`, Publisher: `Marvel`,
+    Title: `X-Men Blue`, Issue: `#18`, Publisher: `Marvel`,
     Year: `2018`, Arc: `X-Men Blue Bunn`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `R.B. Silva`,
@@ -98947,7 +98947,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5814`,
   },
   {
-    Title: `X-Men Blue (Bunn)`, Issue: `#20`, Publisher: `Marvel`,
+    Title: `X-Men Blue`, Issue: `#20`, Publisher: `Marvel`,
     Year: `2018`, Arc: `X-Men Blue Bunn`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `R.B. Silva`,
@@ -98964,7 +98964,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5815`,
   },
   {
-    Title: `X-Men Blue (Bunn)`, Issue: `#22`, Publisher: `Marvel`,
+    Title: `X-Men Blue`, Issue: `#22`, Publisher: `Marvel`,
     Year: `2018`, Arc: `X-Men Blue Bunn`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `R.B. Silva`,
@@ -98981,7 +98981,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5816`,
   },
   {
-    Title: `X-Men Blue (Bunn)`, Issue: `#23`, Publisher: `Marvel`,
+    Title: `X-Men Blue`, Issue: `#23`, Publisher: `Marvel`,
     Year: `2018`, Arc: `X-Men Blue Bunn`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `R.B. Silva`,
@@ -98998,7 +98998,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5817`,
   },
   {
-    Title: `X-Men Blue (Bunn)`, Issue: `#24`, Publisher: `Marvel`,
+    Title: `X-Men Blue`, Issue: `#24`, Publisher: `Marvel`,
     Year: `2018`, Arc: `X-Men Blue Bunn`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `R.B. Silva`,
@@ -99015,7 +99015,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5818`,
   },
   {
-    Title: `X-Men Blue (Bunn)`, Issue: `#25`, Publisher: `Marvel`,
+    Title: `X-Men Blue`, Issue: `#25`, Publisher: `Marvel`,
     Year: `2018`, Arc: `X-Men Blue Bunn`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `R.B. Silva`,
@@ -99032,7 +99032,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5819`,
   },
   {
-    Title: `X-Men Blue (Bunn)`, Issue: `#26`, Publisher: `Marvel`,
+    Title: `X-Men Blue`, Issue: `#26`, Publisher: `Marvel`,
     Year: `2018`, Arc: `X-Men Blue Bunn`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `R.B. Silva`,
@@ -99049,7 +99049,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5820`,
   },
   {
-    Title: `X-Men Blue (Bunn)`, Issue: `#27`, Publisher: `Marvel`,
+    Title: `X-Men Blue`, Issue: `#27`, Publisher: `Marvel`,
     Year: `2018`, Arc: `X-Men Blue Bunn`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `R.B. Silva`,
@@ -99066,7 +99066,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5821`,
   },
   {
-    Title: `X-Men Blue (Bunn)`, Issue: `#28`, Publisher: `Marvel`,
+    Title: `X-Men Blue`, Issue: `#28`, Publisher: `Marvel`,
     Year: `2018`, Arc: `X-Men Blue Bunn`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `R.B. Silva`,
@@ -99083,7 +99083,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5822`,
   },
   {
-    Title: `X-Men Blue (Bunn)`, Issue: `#31`, Publisher: `Marvel`,
+    Title: `X-Men Blue`, Issue: `#31`, Publisher: `Marvel`,
     Year: `2018`, Arc: `X-Men Blue Bunn`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `R.B. Silva`,
@@ -99100,7 +99100,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5823`,
   },
   {
-    Title: `X-Men Blue (Bunn)`, Issue: `#32`, Publisher: `Marvel`,
+    Title: `X-Men Blue`, Issue: `#32`, Publisher: `Marvel`,
     Year: `2018`, Arc: `X-Men Blue Bunn`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `R.B. Silva`,
@@ -99117,7 +99117,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5824`,
   },
   {
-    Title: `X-Men Blue (Bunn)`, Issue: `#36`, Publisher: `Marvel`,
+    Title: `X-Men Blue`, Issue: `#36`, Publisher: `Marvel`,
     Year: `2018`, Arc: `X-Men Blue Bunn`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `R.B. Silva`,
@@ -99151,7 +99151,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5826`,
   },
   {
-    Title: `X-Men Blue (Bunn)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `X-Men Blue`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2017`, Arc: `X-Men Blue — Bunn — time-displaced OG X-Men`, Key: `YES`,
     Key_Reason: `X-Men Blue #1 Cullen Bunn/Jorge Molina — time-displaced original X-Men navigate 616`, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `Jorge Molina`,
@@ -99168,7 +99168,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5827`,
   },
   {
-    Title: `X-Men Gold (Guggenheim)`, Issue: `#20`, Publisher: `Marvel`,
+    Title: `X-Men Gold`, Issue: `#20`, Publisher: `Marvel`,
     Year: `2018`, Arc: `X-Men Gold Guggenheim`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Marc Guggenheim`, Artist: `Geraldo Borges`,
@@ -99185,7 +99185,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5828`,
   },
   {
-    Title: `X-Men Gold (Guggenheim)`, Issue: `#22`, Publisher: `Marvel`,
+    Title: `X-Men Gold`, Issue: `#22`, Publisher: `Marvel`,
     Year: `2018`, Arc: `X-Men Gold Guggenheim`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Marc Guggenheim`, Artist: `Geraldo Borges`,
@@ -99202,7 +99202,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5829`,
   },
   {
-    Title: `X-Men Gold (Guggenheim)`, Issue: `#23`, Publisher: `Marvel`,
+    Title: `X-Men Gold`, Issue: `#23`, Publisher: `Marvel`,
     Year: `2018`, Arc: `X-Men Gold Guggenheim`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Marc Guggenheim`, Artist: `Geraldo Borges`,
@@ -99219,7 +99219,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5830`,
   },
   {
-    Title: `X-Men Gold (Guggenheim)`, Issue: `#24`, Publisher: `Marvel`,
+    Title: `X-Men Gold`, Issue: `#24`, Publisher: `Marvel`,
     Year: `2018`, Arc: `X-Men Gold Guggenheim`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Marc Guggenheim`, Artist: `Geraldo Borges`,
@@ -99236,7 +99236,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5831`,
   },
   {
-    Title: `X-Men Gold (Guggenheim)`, Issue: `#25`, Publisher: `Marvel`,
+    Title: `X-Men Gold`, Issue: `#25`, Publisher: `Marvel`,
     Year: `2018`, Arc: `X-Men Gold Guggenheim`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Marc Guggenheim`, Artist: `Geraldo Borges`,
@@ -99253,7 +99253,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5832`,
   },
   {
-    Title: `X-Men Gold (Guggenheim)`, Issue: `#30`, Publisher: `Marvel`,
+    Title: `X-Men Gold`, Issue: `#30`, Publisher: `Marvel`,
     Year: `2018`, Arc: `X-Men Gold Guggenheim`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Marc Guggenheim`, Artist: `Geraldo Borges`,
@@ -99270,7 +99270,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5833`,
   },
   {
-    Title: `X-Men Gold (Guggenheim)`, Issue: `#31`, Publisher: `Marvel`,
+    Title: `X-Men Gold`, Issue: `#31`, Publisher: `Marvel`,
     Year: `2018`, Arc: `X-Men Gold Guggenheim`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Marc Guggenheim`, Artist: `Geraldo Borges`,
@@ -99287,7 +99287,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5834`,
   },
   {
-    Title: `X-Men Gold (Guggenheim)`, Issue: `#32`, Publisher: `Marvel`,
+    Title: `X-Men Gold`, Issue: `#32`, Publisher: `Marvel`,
     Year: `2018`, Arc: `X-Men Gold Guggenheim`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Marc Guggenheim`, Artist: `Geraldo Borges`,
@@ -99304,7 +99304,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5835`,
   },
   {
-    Title: `X-Men Gold (Guggenheim)`, Issue: `#33`, Publisher: `Marvel`,
+    Title: `X-Men Gold`, Issue: `#33`, Publisher: `Marvel`,
     Year: `2018`, Arc: `X-Men Gold Guggenheim`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Marc Guggenheim`, Artist: `Geraldo Borges`,
@@ -99321,7 +99321,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5836`,
   },
   {
-    Title: `X-Men Gold (Guggenheim)`, Issue: `#34`, Publisher: `Marvel`,
+    Title: `X-Men Gold`, Issue: `#34`, Publisher: `Marvel`,
     Year: `2018`, Arc: `X-Men Gold Guggenheim`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Marc Guggenheim`, Artist: `Geraldo Borges`,
@@ -99338,7 +99338,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5837`,
   },
   {
-    Title: `X-Men Gold (Guggenheim)`, Issue: `#35`, Publisher: `Marvel`,
+    Title: `X-Men Gold`, Issue: `#35`, Publisher: `Marvel`,
     Year: `2018`, Arc: `X-Men Gold Guggenheim`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Marc Guggenheim`, Artist: `Geraldo Borges`,
@@ -99355,7 +99355,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5838`,
   },
   {
-    Title: `X-Men Gold (Guggenheim)`, Issue: `#36`, Publisher: `Marvel`,
+    Title: `X-Men Gold`, Issue: `#36`, Publisher: `Marvel`,
     Year: `2018`, Arc: `X-Men Gold Guggenheim`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Marc Guggenheim`, Artist: `Geraldo Borges`,
@@ -99831,10 +99831,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5866`,
   },
   {
-    Title: `Multiple Man (Rosenberg)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `Multiple Man`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2018`, Arc: `Multiple Man`, Key: `NO`,
     Key_Reason: `Matthew Rosenberg`, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Rosenberg`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -101276,7 +101276,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `5951`,
   },
   {
-    Title: `Wolverine and the X-Men (Aaron)`, Issue: `#8`, Publisher: `Marvel`,
+    Title: `Wolverine and the X-Men`, Issue: `#8`, Publisher: `Marvel`,
     Year: `2012`, Arc: `Wolverine and the X-Men Aaron`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jason Aaron`, Artist: `Nick Bradshaw`,
@@ -101293,7 +101293,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `5952`,
   },
   {
-    Title: `Wolverine and the X-Men (Aaron)`, Issue: `#9`, Publisher: `Marvel`,
+    Title: `Wolverine and the X-Men`, Issue: `#9`, Publisher: `Marvel`,
     Year: `2012`, Arc: `Wolverine and the X-Men Aaron`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jason Aaron`, Artist: `Nick Bradshaw`,
@@ -101310,7 +101310,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `5953`,
   },
   {
-    Title: `Wolverine and the X-Men (Aaron)`, Issue: `#10`, Publisher: `Marvel`,
+    Title: `Wolverine and the X-Men`, Issue: `#10`, Publisher: `Marvel`,
     Year: `2012`, Arc: `Wolverine and the X-Men Aaron`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jason Aaron`, Artist: `Nick Bradshaw`,
@@ -101327,7 +101327,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `5954`,
   },
   {
-    Title: `Wolverine and the X-Men (Aaron)`, Issue: `#19`, Publisher: `Marvel`,
+    Title: `Wolverine and the X-Men`, Issue: `#19`, Publisher: `Marvel`,
     Year: `2012`, Arc: `Wolverine and the X-Men Aaron`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jason Aaron`, Artist: `Nick Bradshaw`,
@@ -101344,7 +101344,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `5955`,
   },
   {
-    Title: `Wolverine and the X-Men (Aaron)`, Issue: `#20`, Publisher: `Marvel`,
+    Title: `Wolverine and the X-Men`, Issue: `#20`, Publisher: `Marvel`,
     Year: `2012`, Arc: `Wolverine and the X-Men Aaron`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jason Aaron`, Artist: `Nick Bradshaw`,
@@ -101361,7 +101361,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `5956`,
   },
   {
-    Title: `Wolverine and the X-Men (Aaron)`, Issue: `#25`, Publisher: `Marvel`,
+    Title: `Wolverine and the X-Men`, Issue: `#25`, Publisher: `Marvel`,
     Year: `2012`, Arc: `Wolverine and the X-Men Aaron`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jason Aaron`, Artist: `Nick Bradshaw`,
@@ -101378,7 +101378,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `5957`,
   },
   {
-    Title: `Wolverine and the X-Men (Aaron)`, Issue: `#26`, Publisher: `Marvel`,
+    Title: `Wolverine and the X-Men`, Issue: `#26`, Publisher: `Marvel`,
     Year: `2012`, Arc: `Wolverine and the X-Men Aaron`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jason Aaron`, Artist: `Nick Bradshaw`,
@@ -101395,7 +101395,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `5958`,
   },
   {
-    Title: `Wolverine and the X-Men (Aaron)`, Issue: `#32`, Publisher: `Marvel`,
+    Title: `Wolverine and the X-Men`, Issue: `#32`, Publisher: `Marvel`,
     Year: `2012`, Arc: `Wolverine and the X-Men Aaron`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jason Aaron`, Artist: `Nick Bradshaw`,
@@ -101412,7 +101412,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `5959`,
   },
   {
-    Title: `Wolverine and the X-Men (Aaron)`, Issue: `#33`, Publisher: `Marvel`,
+    Title: `Wolverine and the X-Men`, Issue: `#33`, Publisher: `Marvel`,
     Year: `2012`, Arc: `Wolverine and the X-Men Aaron`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jason Aaron`, Artist: `Nick Bradshaw`,
@@ -101429,7 +101429,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `5960`,
   },
   {
-    Title: `Wolverine and the X-Men (Aaron)`, Issue: `#34`, Publisher: `Marvel`,
+    Title: `Wolverine and the X-Men`, Issue: `#34`, Publisher: `Marvel`,
     Year: `2012`, Arc: `Wolverine and the X-Men Aaron`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jason Aaron`, Artist: `Nick Bradshaw`,
@@ -101446,7 +101446,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `5961`,
   },
   {
-    Title: `Wolverine and the X-Men (Aaron)`, Issue: `#35`, Publisher: `Marvel`,
+    Title: `Wolverine and the X-Men`, Issue: `#35`, Publisher: `Marvel`,
     Year: `2012`, Arc: `Wolverine and the X-Men Aaron`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jason Aaron`, Artist: `Nick Bradshaw`,
@@ -101463,7 +101463,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `5962`,
   },
   {
-    Title: `Wolverine and the X-Men (Aaron)`, Issue: `#36`, Publisher: `Marvel`,
+    Title: `Wolverine and the X-Men`, Issue: `#36`, Publisher: `Marvel`,
     Year: `2012`, Arc: `Wolverine and the X-Men Aaron`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jason Aaron`, Artist: `Nick Bradshaw`,
@@ -101480,7 +101480,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `5963`,
   },
   {
-    Title: `Wolverine and the X-Men (Aaron)`, Issue: `#37`, Publisher: `Marvel`,
+    Title: `Wolverine and the X-Men`, Issue: `#37`, Publisher: `Marvel`,
     Year: `2012`, Arc: `Wolverine and the X-Men Aaron`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jason Aaron`, Artist: `Nick Bradshaw`,
@@ -101514,7 +101514,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `5965`,
   },
   {
-    Title: `Wolverine and the X-Men (Aaron)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Wolverine and the X-Men`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2011`, Arc: `Wolverine opens Jean Grey School`, Key: `YES`,
     Key_Reason: `Wolverine & the X-Men #1 Jason Aaron — Wolverine opens Jean Grey School of Higher Learning — landmark`, First_App: ``,
     Writer: `Jason Aaron`, Artist: `Chris Bachalo`,
@@ -101531,7 +101531,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `5966`,
   },
   {
-    Title: `Cable and X-Force (Hopeless)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `Cable and X-Force`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Cable and X-Force Hopeless`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Dennis Hopeless`, Artist: `Salvador Larroca`,
@@ -101548,7 +101548,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `5967`,
   },
   {
-    Title: `Cable and X-Force (Hopeless)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `Cable and X-Force`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Cable and X-Force Hopeless`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Dennis Hopeless`, Artist: `Salvador Larroca`,
@@ -101565,7 +101565,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `5968`,
   },
   {
-    Title: `Cable and X-Force (Hopeless)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `Cable and X-Force`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Cable and X-Force Hopeless`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Dennis Hopeless`, Artist: `Salvador Larroca`,
@@ -101582,7 +101582,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `5969`,
   },
   {
-    Title: `Cable and X-Force (Hopeless)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `Cable and X-Force`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Cable and X-Force Hopeless`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Dennis Hopeless`, Artist: `Salvador Larroca`,
@@ -101599,7 +101599,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `5970`,
   },
   {
-    Title: `Cable and X-Force (Hopeless)`, Issue: `#6`, Publisher: `Marvel`,
+    Title: `Cable and X-Force`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Cable and X-Force Hopeless`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Dennis Hopeless`, Artist: `Salvador Larroca`,
@@ -101616,7 +101616,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `5971`,
   },
   {
-    Title: `Cable and X-Force (Hopeless)`, Issue: `#11`, Publisher: `Marvel`,
+    Title: `Cable and X-Force`, Issue: `#11`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Cable and X-Force Hopeless`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Dennis Hopeless`, Artist: `Salvador Larroca`,
@@ -101633,7 +101633,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `5972`,
   },
   {
-    Title: `Cable and X-Force (Hopeless)`, Issue: `#12`, Publisher: `Marvel`,
+    Title: `Cable and X-Force`, Issue: `#12`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Cable and X-Force Hopeless`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Dennis Hopeless`, Artist: `Salvador Larroca`,
@@ -101650,7 +101650,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `5973`,
   },
   {
-    Title: `Cable and X-Force (Hopeless)`, Issue: `#13`, Publisher: `Marvel`,
+    Title: `Cable and X-Force`, Issue: `#13`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Cable and X-Force Hopeless`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Dennis Hopeless`, Artist: `Salvador Larroca`,
@@ -101667,7 +101667,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `5974`,
   },
   {
-    Title: `Cable and X-Force (Hopeless)`, Issue: `#14`, Publisher: `Marvel`,
+    Title: `Cable and X-Force`, Issue: `#14`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Cable and X-Force Hopeless`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Dennis Hopeless`, Artist: `Salvador Larroca`,
@@ -101684,7 +101684,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `5975`,
   },
   {
-    Title: `Cable and X-Force (Hopeless)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Cable and X-Force`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2012`, Arc: `Cable and X-Force — Hopeless`, Key: `YES`,
     Key_Reason: `Cable & X-Force #1 Dennis Hopeless — Cable leads his own mutant criminal team`, First_App: ``,
     Writer: `Dennis Hopeless`, Artist: `Salvador Larroca`,
@@ -101701,7 +101701,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `5976`,
   },
   {
-    Title: `Extraordinary X-Men (Lemire)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Extraordinary X-Men`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2016`, Arc: `Extraordinary X-Men Lemire`, Key: `YES`,
     Key_Reason: `EXM #1 Jeff Lemire — Storm leads X-Men in X-Haven after Terrigenesis`, First_App: ``,
     Writer: `Jeff Lemire`, Artist: `Humberto Ramos`,
@@ -101718,7 +101718,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5977`,
   },
   {
-    Title: `Extraordinary X-Men (Lemire)`, Issue: `#6`, Publisher: `Marvel`,
+    Title: `Extraordinary X-Men`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2016`, Arc: `Extraordinary X-Men Lemire`, Key: `NO`,
     Key_Reason: `#6`, First_App: ``,
     Writer: `Jeff Lemire`, Artist: `Humberto Ramos`,
@@ -101735,7 +101735,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5978`,
   },
   {
-    Title: `Extraordinary X-Men (Lemire)`, Issue: `#7`, Publisher: `Marvel`,
+    Title: `Extraordinary X-Men`, Issue: `#7`, Publisher: `Marvel`,
     Year: `2016`, Arc: `Extraordinary X-Men Lemire`, Key: `NO`,
     Key_Reason: `#7`, First_App: ``,
     Writer: `Jeff Lemire`, Artist: `Humberto Ramos`,
@@ -101752,7 +101752,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5979`,
   },
   {
-    Title: `Extraordinary X-Men (Lemire)`, Issue: `#8`, Publisher: `Marvel`,
+    Title: `Extraordinary X-Men`, Issue: `#8`, Publisher: `Marvel`,
     Year: `2016`, Arc: `Extraordinary X-Men Lemire`, Key: `NO`,
     Key_Reason: `#8`, First_App: ``,
     Writer: `Jeff Lemire`, Artist: `Humberto Ramos`,
@@ -101769,7 +101769,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5980`,
   },
   {
-    Title: `Extraordinary X-Men (Lemire)`, Issue: `#9`, Publisher: `Marvel`,
+    Title: `Extraordinary X-Men`, Issue: `#9`, Publisher: `Marvel`,
     Year: `2016`, Arc: `Extraordinary X-Men Lemire`, Key: `NO`,
     Key_Reason: `#9`, First_App: ``,
     Writer: `Jeff Lemire`, Artist: `Humberto Ramos`,
@@ -101786,7 +101786,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5981`,
   },
   {
-    Title: `Extraordinary X-Men (Lemire)`, Issue: `#10`, Publisher: `Marvel`,
+    Title: `Extraordinary X-Men`, Issue: `#10`, Publisher: `Marvel`,
     Year: `2016`, Arc: `Extraordinary X-Men Lemire`, Key: `NO`,
     Key_Reason: `#10`, First_App: ``,
     Writer: `Jeff Lemire`, Artist: `Humberto Ramos`,
@@ -101803,7 +101803,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5982`,
   },
   {
-    Title: `Extraordinary X-Men (Lemire)`, Issue: `#11`, Publisher: `Marvel`,
+    Title: `Extraordinary X-Men`, Issue: `#11`, Publisher: `Marvel`,
     Year: `2016`, Arc: `Extraordinary X-Men Lemire`, Key: `NO`,
     Key_Reason: `#11`, First_App: ``,
     Writer: `Jeff Lemire`, Artist: `Humberto Ramos`,
@@ -101820,7 +101820,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `5983`,
   },
   {
-    Title: `Extraordinary X-Men (Lemire)`, Issue: `#12`, Publisher: `Marvel`,
+    Title: `Extraordinary X-Men`, Issue: `#12`, Publisher: `Marvel`,
     Year: `2016`, Arc: `Extraordinary X-Men Lemire`, Key: `NO`,
     Key_Reason: `#12`, First_App: ``,
     Writer: `Jeff Lemire`, Artist: `Humberto Ramos`,
@@ -102143,7 +102143,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `6002`,
   },
   {
-    Title: `X-Club (Spurrier)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `X-Club`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2012`, Arc: `X-Club Spurrier — COMPLETE?`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Simon Spurrier`, Artist: `Paul Davidson`,
@@ -102772,10 +102772,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6039`,
   },
   {
-    Title: `Multiple Man (Rosenberg)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `Multiple Man`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2018`, Arc: `Multiple Man`, Key: `NO`,
     Key_Reason: `Matthew Rosenberg`, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Rosenberg`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -103554,10 +103554,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6085`,
   },
   {
-    Title: `Uncanny X-Men (Legacy #635)`, Issue: `#16`, Publisher: `Marvel`,
+    Title: `Uncanny X-Men`, Issue: `#16`, Publisher: `Marvel`,
     Year: `2019`, Arc: `UXM Rosenberg`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Matthew Rosenberg`, Artist: ``,
+    Writer: `Matthew Rosenberg / Legacy #635`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -103588,10 +103588,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6087`,
   },
   {
-    Title: `Dead Man Logan (Brisson/Henderson)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Dead Man Logan`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Dead Man Logan — COMPLETE 12-issue — Old Man Logan finale`, Key: `YES`,
     Key_Reason: `Dead Man Logan #1 Ed Brisson/Mike Henderson —  COMPLETE 12-issue — the definitive final Old Man Logan story`, First_App: ``,
-    Writer: `Ed Brisson`, Artist: `Mike Henderson`,
+    Writer: `Ed Brisson / Brisson/Henderson`, Artist: `Mike Henderson`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `YES`, Value_NM: `10`, Value_VF: `3`,
@@ -103605,10 +103605,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6088`,
   },
   {
-    Title: `Dead Man Logan (Brisson/Henderson)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `Dead Man Logan`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Dead Man Logan — COMPLETE 12-issue — Old Man Logan finale`, Key: `NO`,
     Key_Reason: `Dead Man Logan #2`, First_App: ``,
-    Writer: `Ed Brisson`, Artist: `Mike Henderson`,
+    Writer: `Ed Brisson / Brisson/Henderson`, Artist: `Mike Henderson`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -103622,10 +103622,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6089`,
   },
   {
-    Title: `Dead Man Logan (Brisson/Henderson)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `Dead Man Logan`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Dead Man Logan — COMPLETE 12-issue — Old Man Logan finale`, Key: `NO`,
     Key_Reason: `Dead Man Logan #3`, First_App: ``,
-    Writer: `Ed Brisson`, Artist: `Mike Henderson`,
+    Writer: `Ed Brisson / Brisson/Henderson`, Artist: `Mike Henderson`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -103639,10 +103639,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6090`,
   },
   {
-    Title: `Dead Man Logan (Brisson/Henderson)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `Dead Man Logan`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Dead Man Logan — COMPLETE 12-issue — Old Man Logan finale`, Key: `NO`,
     Key_Reason: `Dead Man Logan #4`, First_App: ``,
-    Writer: `Ed Brisson`, Artist: `Mike Henderson`,
+    Writer: `Ed Brisson / Brisson/Henderson`, Artist: `Mike Henderson`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -103656,10 +103656,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6091`,
   },
   {
-    Title: `Dead Man Logan (Brisson/Henderson)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `Dead Man Logan`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Dead Man Logan — COMPLETE 12-issue — Old Man Logan finale`, Key: `NO`,
     Key_Reason: `Dead Man Logan #5`, First_App: ``,
-    Writer: `Ed Brisson`, Artist: `Mike Henderson`,
+    Writer: `Ed Brisson / Brisson/Henderson`, Artist: `Mike Henderson`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -103673,10 +103673,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6092`,
   },
   {
-    Title: `Dead Man Logan (Brisson/Henderson)`, Issue: `#6`, Publisher: `Marvel`,
+    Title: `Dead Man Logan`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Dead Man Logan — COMPLETE 12-issue — Old Man Logan finale`, Key: `NO`,
     Key_Reason: `Dead Man Logan #6`, First_App: ``,
-    Writer: `Ed Brisson`, Artist: `Mike Henderson`,
+    Writer: `Ed Brisson / Brisson/Henderson`, Artist: `Mike Henderson`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -103690,10 +103690,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6093`,
   },
   {
-    Title: `Dead Man Logan (Brisson/Henderson)`, Issue: `#7`, Publisher: `Marvel`,
+    Title: `Dead Man Logan`, Issue: `#7`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Dead Man Logan — COMPLETE 12-issue — Old Man Logan finale`, Key: `NO`,
     Key_Reason: `Dead Man Logan #7`, First_App: ``,
-    Writer: `Ed Brisson`, Artist: `Mike Henderson`,
+    Writer: `Ed Brisson / Brisson/Henderson`, Artist: `Mike Henderson`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -103707,10 +103707,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6094`,
   },
   {
-    Title: `Dead Man Logan (Brisson/Henderson)`, Issue: `#8`, Publisher: `Marvel`,
+    Title: `Dead Man Logan`, Issue: `#8`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Dead Man Logan — COMPLETE 12-issue — Old Man Logan finale`, Key: `NO`,
     Key_Reason: `Dead Man Logan #8`, First_App: ``,
-    Writer: `Ed Brisson`, Artist: `Mike Henderson`,
+    Writer: `Ed Brisson / Brisson/Henderson`, Artist: `Mike Henderson`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -103724,10 +103724,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6095`,
   },
   {
-    Title: `Dead Man Logan (Brisson/Henderson)`, Issue: `#9`, Publisher: `Marvel`,
+    Title: `Dead Man Logan`, Issue: `#9`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Dead Man Logan — COMPLETE 12-issue — Old Man Logan finale`, Key: `NO`,
     Key_Reason: `Dead Man Logan #9`, First_App: ``,
-    Writer: `Ed Brisson`, Artist: `Mike Henderson`,
+    Writer: `Ed Brisson / Brisson/Henderson`, Artist: `Mike Henderson`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -103741,10 +103741,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6096`,
   },
   {
-    Title: `Dead Man Logan (Brisson/Henderson)`, Issue: `#10`, Publisher: `Marvel`,
+    Title: `Dead Man Logan`, Issue: `#10`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Dead Man Logan — COMPLETE 12-issue — Old Man Logan finale`, Key: `NO`,
     Key_Reason: `Dead Man Logan #10`, First_App: ``,
-    Writer: `Ed Brisson`, Artist: `Mike Henderson`,
+    Writer: `Ed Brisson / Brisson/Henderson`, Artist: `Mike Henderson`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -103758,10 +103758,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6097`,
   },
   {
-    Title: `Dead Man Logan (Brisson/Henderson)`, Issue: `#11`, Publisher: `Marvel`,
+    Title: `Dead Man Logan`, Issue: `#11`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Dead Man Logan — COMPLETE 12-issue — Old Man Logan finale`, Key: `NO`,
     Key_Reason: `Dead Man Logan #11`, First_App: ``,
-    Writer: `Ed Brisson`, Artist: `Mike Henderson`,
+    Writer: `Ed Brisson / Brisson/Henderson`, Artist: `Mike Henderson`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -103775,10 +103775,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6098`,
   },
   {
-    Title: `Dead Man Logan (Brisson/Henderson)`, Issue: `#12`, Publisher: `Marvel`,
+    Title: `Dead Man Logan`, Issue: `#12`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Dead Man Logan — COMPLETE 12-issue — Old Man Logan finale`, Key: `NO`,
     Key_Reason: `Dead Man Logan #12`, First_App: ``,
-    Writer: `Ed Brisson`, Artist: `Mike Henderson`,
+    Writer: `Ed Brisson / Brisson/Henderson`, Artist: `Mike Henderson`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -104030,7 +104030,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `6113`,
   },
   {
-    Title: `X-Men Gold (Guggenheim)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `X-Men Gold`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2017`, Arc: `X-Men Gold Guggenheim early run`, Key: `YES`,
     Key_Reason: `X-Men Gold #1 Marc Guggenheim — flagship present-day X-Men`, First_App: ``,
     Writer: `Marc Guggenheim`, Artist: `Ardian Syaf`,
@@ -104047,7 +104047,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6114`,
   },
   {
-    Title: `X-Men Gold (Guggenheim)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `X-Men Gold`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2017`, Arc: `X-Men Gold Guggenheim early run`, Key: `NO`,
     Key_Reason: `#2`, First_App: ``,
     Writer: `Marc Guggenheim`, Artist: `Ardian Syaf`,
@@ -104064,7 +104064,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6115`,
   },
   {
-    Title: `X-Men Gold (Guggenheim)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `X-Men Gold`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2017`, Arc: `X-Men Gold Guggenheim early run`, Key: `NO`,
     Key_Reason: `#3`, First_App: ``,
     Writer: `Marc Guggenheim`, Artist: `Ardian Syaf`,
@@ -104081,7 +104081,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6116`,
   },
   {
-    Title: `X-Men Gold (Guggenheim)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `X-Men Gold`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2017`, Arc: `X-Men Gold Guggenheim early run`, Key: `NO`,
     Key_Reason: `#4`, First_App: ``,
     Writer: `Marc Guggenheim`, Artist: `Ardian Syaf`,
@@ -104098,7 +104098,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6117`,
   },
   {
-    Title: `X-Men Gold (Guggenheim)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `X-Men Gold`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2017`, Arc: `X-Men Gold Guggenheim early run`, Key: `NO`,
     Key_Reason: `#5`, First_App: ``,
     Writer: `Marc Guggenheim`, Artist: `Ardian Syaf`,
@@ -104115,7 +104115,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6118`,
   },
   {
-    Title: `X-Men Gold (Guggenheim)`, Issue: `#6`, Publisher: `Marvel`,
+    Title: `X-Men Gold`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2017`, Arc: `X-Men Gold Guggenheim early run`, Key: `NO`,
     Key_Reason: `#6`, First_App: ``,
     Writer: `Marc Guggenheim`, Artist: `Ardian Syaf`,
@@ -104132,7 +104132,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6119`,
   },
   {
-    Title: `X-Men Gold (Guggenheim)`, Issue: `#9`, Publisher: `Marvel`,
+    Title: `X-Men Gold`, Issue: `#9`, Publisher: `Marvel`,
     Year: `2017`, Arc: `X-Men Gold Guggenheim early run`, Key: `NO`,
     Key_Reason: `#9`, First_App: ``,
     Writer: `Marc Guggenheim`, Artist: `Ardian Syaf`,
@@ -104149,7 +104149,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6120`,
   },
   {
-    Title: `X-Men Gold (Guggenheim)`, Issue: `#10`, Publisher: `Marvel`,
+    Title: `X-Men Gold`, Issue: `#10`, Publisher: `Marvel`,
     Year: `2017`, Arc: `X-Men Gold Guggenheim early run`, Key: `NO`,
     Key_Reason: `#10`, First_App: ``,
     Writer: `Marc Guggenheim`, Artist: `Ardian Syaf`,
@@ -104166,7 +104166,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6121`,
   },
   {
-    Title: `X-Men Gold (Guggenheim)`, Issue: `#11`, Publisher: `Marvel`,
+    Title: `X-Men Gold`, Issue: `#11`, Publisher: `Marvel`,
     Year: `2017`, Arc: `X-Men Gold Guggenheim early run`, Key: `NO`,
     Key_Reason: `#11`, First_App: ``,
     Writer: `Marc Guggenheim`, Artist: `Ardian Syaf`,
@@ -104183,7 +104183,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6122`,
   },
   {
-    Title: `X-Men Gold (Guggenheim)`, Issue: `#12`, Publisher: `Marvel`,
+    Title: `X-Men Gold`, Issue: `#12`, Publisher: `Marvel`,
     Year: `2017`, Arc: `X-Men Gold Guggenheim early run`, Key: `NO`,
     Key_Reason: `#12`, First_App: ``,
     Writer: `Marc Guggenheim`, Artist: `Ardian Syaf`,
@@ -104200,7 +104200,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6123`,
   },
   {
-    Title: `X-Men Gold (Guggenheim)`, Issue: `#13`, Publisher: `Marvel`,
+    Title: `X-Men Gold`, Issue: `#13`, Publisher: `Marvel`,
     Year: `2017`, Arc: `X-Men Gold Guggenheim early run`, Key: `NO`,
     Key_Reason: `#13`, First_App: ``,
     Writer: `Marc Guggenheim`, Artist: `Ardian Syaf`,
@@ -104217,7 +104217,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6124`,
   },
   {
-    Title: `X-Men Gold (Guggenheim)`, Issue: `#14`, Publisher: `Marvel`,
+    Title: `X-Men Gold`, Issue: `#14`, Publisher: `Marvel`,
     Year: `2017`, Arc: `X-Men Gold Guggenheim early run`, Key: `NO`,
     Key_Reason: `#14`, First_App: ``,
     Writer: `Marc Guggenheim`, Artist: `Ardian Syaf`,
@@ -104234,7 +104234,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6125`,
   },
   {
-    Title: `X-Men Gold (Guggenheim)`, Issue: `#15`, Publisher: `Marvel`,
+    Title: `X-Men Gold`, Issue: `#15`, Publisher: `Marvel`,
     Year: `2017`, Arc: `X-Men Gold Guggenheim early run`, Key: `NO`,
     Key_Reason: `#15`, First_App: ``,
     Writer: `Marc Guggenheim`, Artist: `Ardian Syaf`,
@@ -104251,7 +104251,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6126`,
   },
   {
-    Title: `X-Men Gold (Guggenheim)`, Issue: `#19`, Publisher: `Marvel`,
+    Title: `X-Men Gold`, Issue: `#19`, Publisher: `Marvel`,
     Year: `2017`, Arc: `X-Men Gold Guggenheim early run`, Key: `NO`,
     Key_Reason: `#19`, First_App: ``,
     Writer: `Marc Guggenheim`, Artist: `Ardian Syaf`,
@@ -104285,7 +104285,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6128`,
   },
   {
-    Title: `X-Men Blue (Bunn)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `X-Men Blue`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2017`, Arc: `X-Men Blue Bunn early run`, Key: `YES`,
     Key_Reason: `X-Men Blue #1 Bunn — time-displaced OG X-Men`, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `Jorge Molina`,
@@ -104302,7 +104302,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6129`,
   },
   {
-    Title: `X-Men Blue (Bunn)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `X-Men Blue`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2017`, Arc: `X-Men Blue Bunn early run`, Key: `NO`,
     Key_Reason: `#2`, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `Jorge Molina`,
@@ -104319,7 +104319,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6130`,
   },
   {
-    Title: `X-Men Blue (Bunn)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `X-Men Blue`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2017`, Arc: `X-Men Blue Bunn early run`, Key: `NO`,
     Key_Reason: `#3`, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `Jorge Molina`,
@@ -104336,7 +104336,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6131`,
   },
   {
-    Title: `X-Men Blue (Bunn)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `X-Men Blue`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2017`, Arc: `X-Men Blue Bunn early run`, Key: `NO`,
     Key_Reason: `#4`, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `Jorge Molina`,
@@ -104353,7 +104353,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6132`,
   },
   {
-    Title: `X-Men Blue (Bunn)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `X-Men Blue`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2017`, Arc: `X-Men Blue Bunn early run`, Key: `NO`,
     Key_Reason: `#5`, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `Jorge Molina`,
@@ -104370,7 +104370,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6133`,
   },
   {
-    Title: `X-Men Blue (Bunn)`, Issue: `#6`, Publisher: `Marvel`,
+    Title: `X-Men Blue`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2017`, Arc: `X-Men Blue Bunn early run`, Key: `NO`,
     Key_Reason: `#6`, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `Jorge Molina`,
@@ -104387,7 +104387,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6134`,
   },
   {
-    Title: `X-Men Blue (Bunn)`, Issue: `#10`, Publisher: `Marvel`,
+    Title: `X-Men Blue`, Issue: `#10`, Publisher: `Marvel`,
     Year: `2017`, Arc: `X-Men Blue Bunn early run`, Key: `NO`,
     Key_Reason: `#10`, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `Jorge Molina`,
@@ -104404,7 +104404,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6135`,
   },
   {
-    Title: `X-Men Blue (Bunn)`, Issue: `#11`, Publisher: `Marvel`,
+    Title: `X-Men Blue`, Issue: `#11`, Publisher: `Marvel`,
     Year: `2017`, Arc: `X-Men Blue Bunn early run`, Key: `NO`,
     Key_Reason: `#11`, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `Jorge Molina`,
@@ -104421,7 +104421,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6136`,
   },
   {
-    Title: `X-Men Blue (Bunn)`, Issue: `#12`, Publisher: `Marvel`,
+    Title: `X-Men Blue`, Issue: `#12`, Publisher: `Marvel`,
     Year: `2017`, Arc: `X-Men Blue Bunn early run`, Key: `NO`,
     Key_Reason: `#12`, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `Jorge Molina`,
@@ -104438,7 +104438,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6137`,
   },
   {
-    Title: `X-Men Blue (Bunn)`, Issue: `#13`, Publisher: `Marvel`,
+    Title: `X-Men Blue`, Issue: `#13`, Publisher: `Marvel`,
     Year: `2017`, Arc: `X-Men Blue Bunn early run`, Key: `NO`,
     Key_Reason: `#13`, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `Jorge Molina`,
@@ -104455,7 +104455,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6138`,
   },
   {
-    Title: `X-Men Blue (Bunn)`, Issue: `#14`, Publisher: `Marvel`,
+    Title: `X-Men Blue`, Issue: `#14`, Publisher: `Marvel`,
     Year: `2017`, Arc: `X-Men Blue Bunn early run`, Key: `NO`,
     Key_Reason: `#14`, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `Jorge Molina`,
@@ -104472,7 +104472,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6139`,
   },
   {
-    Title: `X-Men Blue (Bunn)`, Issue: `#15`, Publisher: `Marvel`,
+    Title: `X-Men Blue`, Issue: `#15`, Publisher: `Marvel`,
     Year: `2017`, Arc: `X-Men Blue Bunn early run`, Key: `NO`,
     Key_Reason: `#15`, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `Jorge Molina`,
@@ -104489,7 +104489,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6140`,
   },
   {
-    Title: `X-Men Blue (Bunn)`, Issue: `#16`, Publisher: `Marvel`,
+    Title: `X-Men Blue`, Issue: `#16`, Publisher: `Marvel`,
     Year: `2017`, Arc: `X-Men Blue Bunn early run`, Key: `NO`,
     Key_Reason: `#16`, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `Jorge Molina`,
@@ -104506,7 +104506,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6141`,
   },
   {
-    Title: `X-Men Blue (Bunn)`, Issue: `#17`, Publisher: `Marvel`,
+    Title: `X-Men Blue`, Issue: `#17`, Publisher: `Marvel`,
     Year: `2017`, Arc: `X-Men Blue Bunn early run`, Key: `NO`,
     Key_Reason: `#17`, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `Jorge Molina`,
@@ -104523,7 +104523,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6142`,
   },
   {
-    Title: `X-Men Blue (Bunn)`, Issue: `#18`, Publisher: `Marvel`,
+    Title: `X-Men Blue`, Issue: `#18`, Publisher: `Marvel`,
     Year: `2017`, Arc: `X-Men Blue Bunn early run`, Key: `NO`,
     Key_Reason: `#18`, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `Jorge Molina`,
@@ -104540,7 +104540,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6143`,
   },
   {
-    Title: `X-Men Blue (Bunn)`, Issue: `#19`, Publisher: `Marvel`,
+    Title: `X-Men Blue`, Issue: `#19`, Publisher: `Marvel`,
     Year: `2017`, Arc: `X-Men Blue Bunn early run`, Key: `NO`,
     Key_Reason: `#19`, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `Jorge Molina`,
@@ -104557,7 +104557,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6144`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Marauders Krakoa extends`, Key: `NO`,
     Key_Reason: `Gerry Duggan`, First_App: ``,
     Writer: ``, Artist: ``,
@@ -104574,7 +104574,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6145`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Marauders Krakoa extends`, Key: `NO`,
     Key_Reason: `Gerry Duggan`, First_App: ``,
     Writer: ``, Artist: ``,
@@ -104591,7 +104591,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6146`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#7`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#7`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Marauders Krakoa extends`, Key: `NO`,
     Key_Reason: `Gerry Duggan`, First_App: ``,
     Writer: ``, Artist: ``,
@@ -104608,7 +104608,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6147`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#8`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#8`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Marauders Krakoa extends`, Key: `NO`,
     Key_Reason: `Gerry Duggan`, First_App: ``,
     Writer: ``, Artist: ``,
@@ -104625,7 +104625,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6148`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#9`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#9`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Marauders Krakoa extends`, Key: `NO`,
     Key_Reason: `Gerry Duggan`, First_App: ``,
     Writer: ``, Artist: ``,
@@ -104642,7 +104642,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6149`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#10`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#10`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Marauders Krakoa extends`, Key: `NO`,
     Key_Reason: `Gerry Duggan`, First_App: ``,
     Writer: ``, Artist: ``,
@@ -104659,7 +104659,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6150`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#11`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#11`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Marauders Krakoa extends`, Key: `NO`,
     Key_Reason: `Gerry Duggan`, First_App: ``,
     Writer: ``, Artist: ``,
@@ -104676,7 +104676,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6151`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#12`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#12`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Marauders Krakoa extends`, Key: `NO`,
     Key_Reason: `Gerry Duggan`, First_App: ``,
     Writer: ``, Artist: ``,
@@ -105815,8 +105815,8 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6218`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#46`, Publisher: `Marvel`,
-    Year: `2023`, Arc: `X-Force Fall of X extends`, Key: `NO`,
+    Title: `X-Force`, Issue: `#46`, Publisher: `Marvel`,
+    Year: `2023`, Arc: `Krakoa era — X-Force Fall of X extends`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Benjamin Percy`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
@@ -105832,8 +105832,8 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `6219`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#47`, Publisher: `Marvel`,
-    Year: `2023`, Arc: `X-Force Fall of X extends`, Key: `NO`,
+    Title: `X-Force`, Issue: `#47`, Publisher: `Marvel`,
+    Year: `2023`, Arc: `Krakoa era — X-Force Fall of X extends`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Benjamin Percy`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
@@ -105849,8 +105849,8 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `6220`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#48`, Publisher: `Marvel`,
-    Year: `2023`, Arc: `X-Force Fall of X extends`, Key: `NO`,
+    Title: `X-Force`, Issue: `#48`, Publisher: `Marvel`,
+    Year: `2023`, Arc: `Krakoa era — X-Force Fall of X extends`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Benjamin Percy`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
@@ -105866,8 +105866,8 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `6221`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#49`, Publisher: `Marvel`,
-    Year: `2023`, Arc: `X-Force Fall of X extends`, Key: `NO`,
+    Title: `X-Force`, Issue: `#49`, Publisher: `Marvel`,
+    Year: `2023`, Arc: `Krakoa era — X-Force Fall of X extends`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Benjamin Percy`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
@@ -105883,7 +105883,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `6222`,
   },
   {
-    Title: `Dead X-Men (Fall of the House of X)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Dead X-Men`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Dead X-Men`, Key: `YES`,
     Key_Reason: `Dead X-Men #1 — Duggan/Noto`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Phil Noto`,
@@ -105900,7 +105900,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `6223`,
   },
   {
-    Title: `Psylocke (From the Ashes)`, Issue: `#1 (Peach Momoko cover)`, Publisher: `Marvel`,
+    Title: `Psylocke`, Issue: `#1 (Peach Momoko cover)`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Psylocke FtA Momoko cover`, Key: `YES`,
     Key_Reason: `Psylocke FtA #1 Peach Momoko cover variant`, First_App: ``,
     Writer: ``, Artist: `Vita Ayala`,
@@ -105985,7 +105985,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `6228`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#7`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#7`, Publisher: `Marvel`,
     Year: `2020`, Arc: `Marauders extends`, Key: `NO`,
     Key_Reason: `Gerry Duggan`, First_App: ``,
     Writer: ``, Artist: ``,
@@ -106002,7 +106002,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6229`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#8`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#8`, Publisher: `Marvel`,
     Year: `2020`, Arc: `Marauders extends`, Key: `NO`,
     Key_Reason: `Gerry Duggan`, First_App: ``,
     Writer: ``, Artist: ``,
@@ -106019,7 +106019,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6230`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#9`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#9`, Publisher: `Marvel`,
     Year: `2020`, Arc: `Marauders extends`, Key: `NO`,
     Key_Reason: `Gerry Duggan`, First_App: ``,
     Writer: ``, Artist: ``,
@@ -106036,7 +106036,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6231`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#10`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#10`, Publisher: `Marvel`,
     Year: `2020`, Arc: `Marauders extends`, Key: `NO`,
     Key_Reason: `Gerry Duggan`, First_App: ``,
     Writer: ``, Artist: ``,
@@ -106053,7 +106053,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6232`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#11`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#11`, Publisher: `Marvel`,
     Year: `2020`, Arc: `Marauders extends`, Key: `NO`,
     Key_Reason: `Gerry Duggan`, First_App: ``,
     Writer: ``, Artist: ``,
@@ -106070,7 +106070,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6233`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#12`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#12`, Publisher: `Marvel`,
     Year: `2020`, Arc: `Marauders extends`, Key: `NO`,
     Key_Reason: `Gerry Duggan`, First_App: ``,
     Writer: ``, Artist: ``,
@@ -106087,10 +106087,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6234`,
   },
   {
-    Title: `X-Men: Magic (Blood Hunt)`, Issue: `#1 (one-shot)`, Publisher: `Marvel`,
+    Title: `X-Men: Magic`, Issue: `#1 (one-shot)`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Blood Hunt X-Men tie-in`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Blood Hunt`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -106104,7 +106104,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `6235`,
   },
   {
-    Title: `Marauders (Krakoa)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `Marauders`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Marauders extends`, Key: `NO`,
     Key_Reason: `Gerry Duggan`, First_App: ``,
     Writer: ``, Artist: ``,
@@ -106155,8 +106155,8 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6238`,
   },
   {
-    Title: `X-Force (Krakoa — Percy)`, Issue: `#13 (X of Swords)`, Publisher: `Marvel`,
-    Year: `2020`, Arc: `X-Force X of Swords tie-in`, Key: `NO`,
+    Title: `X-Force`, Issue: `#13 (X of Swords)`, Publisher: `Marvel`,
+    Year: `2020`, Arc: `Krakoa era — X-Force X of Swords tie-in`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Benjamin Percy`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
@@ -106410,7 +106410,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6253`,
   },
   {
-    Title: `Ultimate Avengers 2 (Millar)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Ultimate Avengers 2`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2010`, Arc: `Ultimate Avengers 2 Millar`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Mark Millar`, Artist: `Leinil Yu`,
@@ -106427,7 +106427,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `6254`,
   },
   {
-    Title: `Ultimate Avengers 2 (Millar)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `Ultimate Avengers 2`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2010`, Arc: `Ultimate Avengers 2 Millar`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Mark Millar`, Artist: `Leinil Yu`,
@@ -106444,7 +106444,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `6255`,
   },
   {
-    Title: `Ultimate Avengers 2 (Millar)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `Ultimate Avengers 2`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2010`, Arc: `Ultimate Avengers 2 Millar`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Mark Millar`, Artist: `Leinil Yu`,
@@ -106461,7 +106461,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `6256`,
   },
   {
-    Title: `Ultimate Avengers 2 (Millar)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `Ultimate Avengers 2`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2010`, Arc: `Ultimate Avengers 2 Millar`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Mark Millar`, Artist: `Leinil Yu`,
@@ -106478,7 +106478,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `6257`,
   },
   {
-    Title: `Ultimate Avengers 2 (Millar)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `Ultimate Avengers 2`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2010`, Arc: `Ultimate Avengers 2 Millar`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Mark Millar`, Artist: `Leinil Yu`,
@@ -106495,7 +106495,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `6258`,
   },
   {
-    Title: `Ultimate Avengers 2 (Millar)`, Issue: `#6`, Publisher: `Marvel`,
+    Title: `Ultimate Avengers 2`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2010`, Arc: `Ultimate Avengers 2 Millar`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Mark Millar`, Artist: `Leinil Yu`,
@@ -106512,10 +106512,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `6259`,
   },
   {
-    Title: `Ultimate Avengers 3 (Millar/Lanning)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Ultimate Avengers 3`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2010`, Arc: `UA3`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Mark Millar`, Artist: `Steven Segovia`,
+    Writer: `Mark Millar / Millar/Lanning`, Artist: `Steven Segovia`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -106529,10 +106529,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `6260`,
   },
   {
-    Title: `Ultimate Avengers 3 (Millar/Lanning)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `Ultimate Avengers 3`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2010`, Arc: `UA3`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Mark Millar`, Artist: `Steven Segovia`,
+    Writer: `Mark Millar / Millar/Lanning`, Artist: `Steven Segovia`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -106954,10 +106954,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6285`,
   },
   {
-    Title: `New Ultimates (Loeb/Cho)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `New Ultimates`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2010`, Arc: `New Ultimates Loeb/Cho`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Jeph Loeb`, Artist: `Frank Cho`,
+    Writer: `Jeph Loeb / Loeb/Cho`, Artist: `Frank Cho`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -106971,10 +106971,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6286`,
   },
   {
-    Title: `New Ultimates (Loeb/Cho)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `New Ultimates`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2010`, Arc: `New Ultimates Loeb/Cho`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Jeph Loeb`, Artist: `Frank Cho`,
+    Writer: `Jeph Loeb / Loeb/Cho`, Artist: `Frank Cho`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -107226,7 +107226,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6301`,
   },
   {
-    Title: `The Ultimates (Hickman)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `The Ultimates`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2011`, Arc: `Ultimates Hickman/Peterson`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: `Luke Ross`,
@@ -107243,7 +107243,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6302`,
   },
   {
-    Title: `The Ultimates (Hickman)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `The Ultimates`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2011`, Arc: `Ultimates Hickman/Peterson`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: `Luke Ross`,
@@ -108331,7 +108331,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6366`,
   },
   {
-    Title: `Ultimate Spider-Man (Death of Spider-Man)`, Issue: `#156`, Publisher: `Marvel`,
+    Title: `Ultimate Spider-Man`, Issue: `#156`, Publisher: `Marvel`,
     Year: `2011`, Arc: `Death of Spider-Man arc`, Key: `NO`,
     Key_Reason: `#156`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Mark Bagley`,
@@ -108348,7 +108348,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6367`,
   },
   {
-    Title: `Ultimate Spider-Man (Death of Spider-Man)`, Issue: `#157`, Publisher: `Marvel`,
+    Title: `Ultimate Spider-Man`, Issue: `#157`, Publisher: `Marvel`,
     Year: `2011`, Arc: `Death of Spider-Man arc`, Key: `NO`,
     Key_Reason: `#157`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Mark Bagley`,
@@ -108365,7 +108365,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6368`,
   },
   {
-    Title: `Ultimate Spider-Man (Death of Spider-Man)`, Issue: `#158`, Publisher: `Marvel`,
+    Title: `Ultimate Spider-Man`, Issue: `#158`, Publisher: `Marvel`,
     Year: `2011`, Arc: `Death of Spider-Man arc`, Key: `NO`,
     Key_Reason: `#158`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Mark Bagley`,
@@ -108382,7 +108382,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6369`,
   },
   {
-    Title: `Ultimate Spider-Man (Death of Spider-Man)`, Issue: `#159`, Publisher: `Marvel`,
+    Title: `Ultimate Spider-Man`, Issue: `#159`, Publisher: `Marvel`,
     Year: `2011`, Arc: `Death of Spider-Man arc`, Key: `NO`,
     Key_Reason: `#159`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Mark Bagley`,
@@ -108399,7 +108399,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6370`,
   },
   {
-    Title: `Ultimate Spider-Man (Death of Spider-Man)`, Issue: `#160`, Publisher: `Marvel`,
+    Title: `Ultimate Spider-Man`, Issue: `#160`, Publisher: `Marvel`,
     Year: `2011`, Arc: `Death of Spider-Man arc`, Key: `YES`,
     Key_Reason: `USM #160 — Peter Parker dies — the Death of Spider-Man — landmark issue — ushers in Miles Morales era`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Mark Bagley`,
@@ -108433,10 +108433,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6372`,
   },
   {
-    Title: `The Ultimates (various era)`, Issue: `#15`, Publisher: `Marvel`,
+    Title: `The Ultimates`, Issue: `#15`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Ultimates extending run`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `various`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -108450,10 +108450,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6373`,
   },
   {
-    Title: `The Ultimates (various era)`, Issue: `#17`, Publisher: `Marvel`,
+    Title: `The Ultimates`, Issue: `#17`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Ultimates extending run`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `various`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -108467,10 +108467,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6374`,
   },
   {
-    Title: `The Ultimates (various era)`, Issue: `#23 [Legacy]`, Publisher: `Marvel`,
+    Title: `The Ultimates`, Issue: `#23 [Legacy]`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Ultimates extending run`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `various`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -108484,10 +108484,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6375`,
   },
   {
-    Title: `The Ultimates (various era)`, Issue: `#24 [Legacy]`, Publisher: `Marvel`,
+    Title: `The Ultimates`, Issue: `#24 [Legacy]`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Ultimates extending run`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `various`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -108501,10 +108501,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6376`,
   },
   {
-    Title: `The Ultimates (various era)`, Issue: `#26 [Legacy]`, Publisher: `Marvel`,
+    Title: `The Ultimates`, Issue: `#26 [Legacy]`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Ultimates extending run`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `various`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -108518,10 +108518,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6377`,
   },
   {
-    Title: `The Ultimates (various era)`, Issue: `#27 [Legacy]`, Publisher: `Marvel`,
+    Title: `The Ultimates`, Issue: `#27 [Legacy]`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Ultimates extending run`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `various`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -108535,10 +108535,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6378`,
   },
   {
-    Title: `The Ultimates (various era)`, Issue: `#28 [Legacy]`, Publisher: `Marvel`,
+    Title: `The Ultimates`, Issue: `#28 [Legacy]`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Ultimates extending run`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `various`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -108552,10 +108552,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6379`,
   },
   {
-    Title: `The Ultimates (various era)`, Issue: `#29 [Legacy]`, Publisher: `Marvel`,
+    Title: `The Ultimates`, Issue: `#29 [Legacy]`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Ultimates extending run`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `various`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -108569,10 +108569,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6380`,
   },
   {
-    Title: `The Ultimates (various era)`, Issue: `#30 [Legacy]`, Publisher: `Marvel`,
+    Title: `The Ultimates`, Issue: `#30 [Legacy]`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Ultimates extending run`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `various`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -109470,10 +109470,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6433`,
   },
   {
-    Title: `Secret Avengers (Hickman/Bendis)`, Issue: `#1 of 8`, Publisher: `Marvel`,
+    Title: `Secret Avengers`, Issue: `#1 of 8`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Secret Avengers`, Key: `YES`,
     Key_Reason: `Secret Avengers #1 Nick Fury/SHIELD — Hickman/Bendis`, First_App: ``,
-    Writer: `Brian Michael Bendis / Jonathan Hickman`, Artist: ``,
+    Writer: `Brian Michael Bendis / Jonathan Hickman / Hickman/Bendis`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `YES`, Value_NM: `10`, Value_VF: `3`,
@@ -109487,10 +109487,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `6434`,
   },
   {
-    Title: `Secret Avengers (Hickman/Bendis)`, Issue: `#2 of 8`, Publisher: `Marvel`,
+    Title: `Secret Avengers`, Issue: `#2 of 8`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Secret Avengers`, Key: `NO`,
     Key_Reason: `#2`, First_App: ``,
-    Writer: `Brian Michael Bendis / Jonathan Hickman`, Artist: ``,
+    Writer: `Brian Michael Bendis / Jonathan Hickman / Hickman/Bendis`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -109504,10 +109504,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `6435`,
   },
   {
-    Title: `Secret Avengers (Hickman/Bendis)`, Issue: `#3 of 8`, Publisher: `Marvel`,
+    Title: `Secret Avengers`, Issue: `#3 of 8`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Secret Avengers`, Key: `NO`,
     Key_Reason: `#3`, First_App: ``,
-    Writer: `Brian Michael Bendis / Jonathan Hickman`, Artist: ``,
+    Writer: `Brian Michael Bendis / Jonathan Hickman / Hickman/Bendis`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -109521,10 +109521,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `6436`,
   },
   {
-    Title: `Secret Avengers (Hickman/Bendis)`, Issue: `#6 of 8`, Publisher: `Marvel`,
+    Title: `Secret Avengers`, Issue: `#6 of 8`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Secret Avengers`, Key: `NO`,
     Key_Reason: `#6`, First_App: ``,
-    Writer: `Brian Michael Bendis / Jonathan Hickman`, Artist: ``,
+    Writer: `Brian Michael Bendis / Jonathan Hickman / Hickman/Bendis`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -109538,7 +109538,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `6437`,
   },
   {
-    Title: `Secret Avengers (Remender)`, Issue: `#1 of 8`, Publisher: `Marvel`,
+    Title: `Secret Avengers`, Issue: `#1 of 8`, Publisher: `Marvel`,
     Year: `2010`, Arc: `Secret Avengers Remender`, Key: `YES`,
     Key_Reason: `SA #1 Remender — covert Avengers`, First_App: ``,
     Writer: `Rick Remender`, Artist: ``,
@@ -109555,7 +109555,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `6438`,
   },
   {
-    Title: `Secret Avengers (Remender)`, Issue: `#2 of 8`, Publisher: `Marvel`,
+    Title: `Secret Avengers`, Issue: `#2 of 8`, Publisher: `Marvel`,
     Year: `2010`, Arc: `Secret Avengers Remender`, Key: `NO`,
     Key_Reason: `#2`, First_App: ``,
     Writer: `Rick Remender`, Artist: ``,
@@ -109572,7 +109572,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `6439`,
   },
   {
-    Title: `Secret Avengers (Remender)`, Issue: `#3 of 8`, Publisher: `Marvel`,
+    Title: `Secret Avengers`, Issue: `#3 of 8`, Publisher: `Marvel`,
     Year: `2010`, Arc: `Secret Avengers Remender`, Key: `NO`,
     Key_Reason: `#3`, First_App: ``,
     Writer: `Rick Remender`, Artist: ``,
@@ -109589,7 +109589,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `6440`,
   },
   {
-    Title: `Secret Avengers (Remender)`, Issue: `#4 of 8`, Publisher: `Marvel`,
+    Title: `Secret Avengers`, Issue: `#4 of 8`, Publisher: `Marvel`,
     Year: `2010`, Arc: `Secret Avengers Remender`, Key: `NO`,
     Key_Reason: `#4`, First_App: ``,
     Writer: `Rick Remender`, Artist: ``,
@@ -109606,7 +109606,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `6441`,
   },
   {
-    Title: `Secret Avengers (Remender)`, Issue: `#5 of 8`, Publisher: `Marvel`,
+    Title: `Secret Avengers`, Issue: `#5 of 8`, Publisher: `Marvel`,
     Year: `2010`, Arc: `Secret Avengers Remender`, Key: `NO`,
     Key_Reason: `#5`, First_App: ``,
     Writer: `Rick Remender`, Artist: ``,
@@ -109623,7 +109623,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `6442`,
   },
   {
-    Title: `Secret Avengers (Remender)`, Issue: `#6 of 8`, Publisher: `Marvel`,
+    Title: `Secret Avengers`, Issue: `#6 of 8`, Publisher: `Marvel`,
     Year: `2010`, Arc: `Secret Avengers Remender`, Key: `NO`,
     Key_Reason: `#6`, First_App: ``,
     Writer: `Rick Remender`, Artist: ``,
@@ -109640,7 +109640,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `6443`,
   },
   {
-    Title: `Secret Avengers (Remender)`, Issue: `#7 of 8`, Publisher: `Marvel`,
+    Title: `Secret Avengers`, Issue: `#7 of 8`, Publisher: `Marvel`,
     Year: `2010`, Arc: `Secret Avengers Remender`, Key: `NO`,
     Key_Reason: `#7`, First_App: ``,
     Writer: `Rick Remender`, Artist: ``,
@@ -109657,7 +109657,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `6444`,
   },
   {
-    Title: `Secret Avengers (Remender)`, Issue: `#8 of 8`, Publisher: `Marvel`,
+    Title: `Secret Avengers`, Issue: `#8 of 8`, Publisher: `Marvel`,
     Year: `2010`, Arc: `Secret Avengers Remender`, Key: `NO`,
     Key_Reason: `#8`, First_App: ``,
     Writer: `Rick Remender`, Artist: ``,
@@ -109674,7 +109674,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `6445`,
   },
   {
-    Title: `Secret Avengers (Remender)`, Issue: `#27`, Publisher: `Marvel`,
+    Title: `Secret Avengers`, Issue: `#27`, Publisher: `Marvel`,
     Year: `2012`, Arc: `SA Remender extends`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Rick Remender`, Artist: ``,
@@ -109691,7 +109691,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `6446`,
   },
   {
-    Title: `Secret Avengers (Remender)`, Issue: `#28`, Publisher: `Marvel`,
+    Title: `Secret Avengers`, Issue: `#28`, Publisher: `Marvel`,
     Year: `2012`, Arc: `SA Remender extends`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Rick Remender`, Artist: ``,
@@ -110779,7 +110779,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6510`,
   },
   {
-    Title: `The Ultimates (Civil War II)`, Issue: `#9`, Publisher: `Marvel`,
+    Title: `The Ultimates`, Issue: `#9`, Publisher: `Marvel`,
     Year: `2016`, Arc: `Civil War II crossover`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Al Ewing`, Artist: ``,
@@ -110796,7 +110796,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `6511`,
   },
   {
-    Title: `The Ultimates (Civil War II)`, Issue: `#10`, Publisher: `Marvel`,
+    Title: `The Ultimates`, Issue: `#10`, Publisher: `Marvel`,
     Year: `2016`, Arc: `Civil War II crossover`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Al Ewing`, Artist: ``,
@@ -110813,7 +110813,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `6512`,
   },
   {
-    Title: `The Ultimates (Civil War II)`, Issue: `#11`, Publisher: `Marvel`,
+    Title: `The Ultimates`, Issue: `#11`, Publisher: `Marvel`,
     Year: `2016`, Arc: `Civil War II crossover`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Al Ewing`, Artist: ``,
@@ -110830,7 +110830,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `6513`,
   },
   {
-    Title: `The Ultimates (Civil War II)`, Issue: `#12`, Publisher: `Marvel`,
+    Title: `The Ultimates`, Issue: `#12`, Publisher: `Marvel`,
     Year: `2016`, Arc: `Civil War II crossover`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Al Ewing`, Artist: ``,
@@ -111816,7 +111816,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `6571`,
   },
   {
-    Title: `Wolverine and the X-Men (Aaron)`, Issue: `#11`, Publisher: `Marvel`,
+    Title: `Wolverine and the X-Men`, Issue: `#11`, Publisher: `Marvel`,
     Year: `2012`, Arc: `WatXM AvX era`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jason Aaron`, Artist: ``,
@@ -111833,7 +111833,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `6572`,
   },
   {
-    Title: `Wolverine and the X-Men (Aaron)`, Issue: `#12`, Publisher: `Marvel`,
+    Title: `Wolverine and the X-Men`, Issue: `#12`, Publisher: `Marvel`,
     Year: `2012`, Arc: `WatXM AvX era`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jason Aaron`, Artist: ``,
@@ -111850,7 +111850,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `6573`,
   },
   {
-    Title: `Wolverine and the X-Men (Aaron)`, Issue: `#13`, Publisher: `Marvel`,
+    Title: `Wolverine and the X-Men`, Issue: `#13`, Publisher: `Marvel`,
     Year: `2012`, Arc: `WatXM AvX era`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jason Aaron`, Artist: ``,
@@ -111867,7 +111867,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `6574`,
   },
   {
-    Title: `Wolverine and the X-Men (Aaron)`, Issue: `#14`, Publisher: `Marvel`,
+    Title: `Wolverine and the X-Men`, Issue: `#14`, Publisher: `Marvel`,
     Year: `2012`, Arc: `WatXM AvX era`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jason Aaron`, Artist: ``,
@@ -111884,7 +111884,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `6575`,
   },
   {
-    Title: `Wolverine and the X-Men (Aaron)`, Issue: `#15`, Publisher: `Marvel`,
+    Title: `Wolverine and the X-Men`, Issue: `#15`, Publisher: `Marvel`,
     Year: `2012`, Arc: `WatXM AvX era`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jason Aaron`, Artist: ``,
@@ -111901,7 +111901,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `6576`,
   },
   {
-    Title: `The New Avengers (Bendis)`, Issue: `#27`, Publisher: `Marvel`,
+    Title: `The New Avengers`, Issue: `#27`, Publisher: `Marvel`,
     Year: `2012`, Arc: `New Avengers AvX`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Mike Deodato`,
@@ -111918,7 +111918,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `6577`,
   },
   {
-    Title: `The New Avengers (Bendis)`, Issue: `#28`, Publisher: `Marvel`,
+    Title: `The New Avengers`, Issue: `#28`, Publisher: `Marvel`,
     Year: `2012`, Arc: `New Avengers AvX`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Mike Deodato`,
@@ -111935,7 +111935,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `6578`,
   },
   {
-    Title: `The New Avengers (Bendis)`, Issue: `#29`, Publisher: `Marvel`,
+    Title: `The New Avengers`, Issue: `#29`, Publisher: `Marvel`,
     Year: `2012`, Arc: `New Avengers AvX`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Mike Deodato`,
@@ -112071,7 +112071,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6586`,
   },
   {
-    Title: `The Avengers (Bendis)`, Issue: `#30 (AvX tie-in)`, Publisher: `Marvel`,
+    Title: `The Avengers`, Issue: `#30 (AvX tie-in)`, Publisher: `Marvel`,
     Year: `2012`, Arc: `Avengers Bendis`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: ``,
@@ -112105,7 +112105,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6588`,
   },
   {
-    Title: `The New Avengers (Bendis)`, Issue: `#31`, Publisher: `Marvel`,
+    Title: `The New Avengers`, Issue: `#31`, Publisher: `Marvel`,
     Year: `2012`, Arc: `New Avengers Bendis`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: ``,
@@ -112921,10 +112921,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6636`,
   },
   {
-    Title: `Star Trek: Generations (tie-in)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Star Trek: Generations`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2017`, Arc: `Generations`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `tie-in`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -112989,7 +112989,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6640`,
   },
   {
-    Title: `The Avengers (Legacy — Aaron)`, Issue: `#672`, Publisher: `Marvel`,
+    Title: `The Avengers`, Issue: `#672`, Publisher: `Marvel`,
     Year: `2017`, Arc: `Avengers Legacy`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Mark Waid / Jason Aaron`, Artist: ``,
@@ -113006,7 +113006,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `6641`,
   },
   {
-    Title: `The Avengers (Legacy — Aaron)`, Issue: `#673`, Publisher: `Marvel`,
+    Title: `The Avengers`, Issue: `#673`, Publisher: `Marvel`,
     Year: `2017`, Arc: `Avengers Legacy`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Mark Waid / Jason Aaron`, Artist: ``,
@@ -113023,7 +113023,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `6642`,
   },
   {
-    Title: `The Avengers (Legacy — Aaron)`, Issue: `#674`, Publisher: `Marvel`,
+    Title: `The Avengers`, Issue: `#674`, Publisher: `Marvel`,
     Year: `2017`, Arc: `Avengers Legacy`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Mark Waid / Jason Aaron`, Artist: ``,
@@ -113040,7 +113040,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `6643`,
   },
   {
-    Title: `The Avengers (Legacy — Aaron)`, Issue: `#374`, Publisher: `Marvel`,
+    Title: `The Avengers`, Issue: `#374`, Publisher: `Marvel`,
     Year: `2017`, Arc: `Avengers Legacy`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Mark Waid / Jason Aaron`, Artist: ``,
@@ -113193,7 +113193,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `6652`,
   },
   {
-    Title: `Avengers (Jason Aaron)`, Issue: `#59 [Legacy #759] [Legacy #759]`, Publisher: `Marvel`,
+    Title: `Avengers`, Issue: `#59 [Legacy #759] [Legacy #759]`, Publisher: `Marvel`,
     Year: `2023`, Arc: `Avengers Aaron`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jason Aaron`, Artist: ``,
@@ -113227,7 +113227,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `6654`,
   },
   {
-    Title: `Avengers (Jason Aaron)`, Issue: `#21 [Legacy #721] [Legacy #721]`, Publisher: `Marvel`,
+    Title: `Avengers`, Issue: `#21 [Legacy #721] [Legacy #721]`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Avengers Aaron`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jason Aaron`, Artist: ``,
@@ -113839,7 +113839,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `9`, Entry: `6690`,
   },
   {
-    Title: `Avengers Assemble (Orlando)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `Avengers Assemble`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2022`, Arc: `Avengers Assemble Orlando`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Steve Orlando`, Artist: ``,
@@ -114009,7 +114009,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `6700`,
   },
   {
-    Title: `Ant-Man and the Wasp (Waid)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Ant-Man and the Wasp`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2018`, Arc: `Ant-Man Wasp Waid/Garron`, Key: `YES`,
     Key_Reason: `Ant-Man and the Wasp #1 Mark Waid/Javier Garron —  COMPLETE 5-issue`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Javier Garron`,
@@ -114026,7 +114026,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6701`,
   },
   {
-    Title: `Ant-Man and the Wasp (Waid)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `Ant-Man and the Wasp`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2018`, Arc: `Ant-Man Wasp Waid/Garron`, Key: `NO`,
     Key_Reason: `#2`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Javier Garron`,
@@ -114043,7 +114043,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6702`,
   },
   {
-    Title: `Ant-Man and the Wasp (Waid)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `Ant-Man and the Wasp`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2018`, Arc: `Ant-Man Wasp Waid/Garron`, Key: `NO`,
     Key_Reason: `#3`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Javier Garron`,
@@ -114060,7 +114060,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6703`,
   },
   {
-    Title: `Ant-Man and the Wasp (Waid)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `Ant-Man and the Wasp`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2018`, Arc: `Ant-Man Wasp Waid/Garron`, Key: `NO`,
     Key_Reason: `#4`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Javier Garron`,
@@ -114077,7 +114077,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6704`,
   },
   {
-    Title: `Ant-Man and the Wasp (Waid)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `Ant-Man and the Wasp`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2018`, Arc: `Ant-Man Wasp Waid/Garron`, Key: `NO`,
     Key_Reason: `#5`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Javier Garron`,
@@ -114128,10 +114128,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `7`, Entry: `6707`,
   },
   {
-    Title: `Avengers: Giant-Man (War of Realms)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `Avengers: Giant-Man`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2019`, Arc: `WotR Giant-Man`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `War of Realms`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -115607,7 +115607,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `4`, Entry: `6794`,
   },
   {
-    Title: `The Totally Awesome Hulk (Pak)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `The Totally Awesome Hulk`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2016`, Arc: `Totally Awesome Hulk Amadeus Cho`, Key: `YES`,
     Key_Reason: `Totally Awesome Hulk #1 Greg Pak/Frank Cho — Amadeus Cho becomes the Hulk — representation key`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Frank Cho / Mahmud Asrar`,
@@ -115624,7 +115624,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6795`,
   },
   {
-    Title: `The Totally Awesome Hulk (Pak)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `The Totally Awesome Hulk`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2016`, Arc: `Totally Awesome Hulk Amadeus Cho`, Key: `NO`,
     Key_Reason: `TAH #2`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Frank Cho / Mahmud Asrar`,
@@ -115641,7 +115641,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6796`,
   },
   {
-    Title: `The Totally Awesome Hulk (Pak)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `The Totally Awesome Hulk`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2016`, Arc: `Totally Awesome Hulk Amadeus Cho`, Key: `NO`,
     Key_Reason: `TAH #3`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Frank Cho / Mahmud Asrar`,
@@ -115658,7 +115658,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6797`,
   },
   {
-    Title: `The Totally Awesome Hulk (Pak)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `The Totally Awesome Hulk`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2016`, Arc: `Totally Awesome Hulk Amadeus Cho`, Key: `NO`,
     Key_Reason: `TAH #4`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Frank Cho / Mahmud Asrar`,
@@ -115675,7 +115675,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6798`,
   },
   {
-    Title: `The Totally Awesome Hulk (Pak)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `The Totally Awesome Hulk`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2016`, Arc: `Totally Awesome Hulk Amadeus Cho`, Key: `NO`,
     Key_Reason: `TAH #5`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Frank Cho / Mahmud Asrar`,
@@ -115692,7 +115692,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6799`,
   },
   {
-    Title: `The Totally Awesome Hulk (Pak)`, Issue: `#6`, Publisher: `Marvel`,
+    Title: `The Totally Awesome Hulk`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2016`, Arc: `Totally Awesome Hulk Amadeus Cho`, Key: `NO`,
     Key_Reason: `TAH #6`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Frank Cho / Mahmud Asrar`,
@@ -115709,7 +115709,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6800`,
   },
   {
-    Title: `The Totally Awesome Hulk (Pak)`, Issue: `#7`, Publisher: `Marvel`,
+    Title: `The Totally Awesome Hulk`, Issue: `#7`, Publisher: `Marvel`,
     Year: `2016`, Arc: `Totally Awesome Hulk Amadeus Cho`, Key: `NO`,
     Key_Reason: `TAH #7`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Frank Cho / Mahmud Asrar`,
@@ -115726,7 +115726,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6801`,
   },
   {
-    Title: `The Totally Awesome Hulk (Pak)`, Issue: `#13`, Publisher: `Marvel`,
+    Title: `The Totally Awesome Hulk`, Issue: `#13`, Publisher: `Marvel`,
     Year: `2016`, Arc: `Totally Awesome Hulk Amadeus Cho`, Key: `NO`,
     Key_Reason: `TAH #13`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Frank Cho / Mahmud Asrar`,
@@ -115743,7 +115743,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6802`,
   },
   {
-    Title: `The Totally Awesome Hulk (Pak)`, Issue: `#23`, Publisher: `Marvel`,
+    Title: `The Totally Awesome Hulk`, Issue: `#23`, Publisher: `Marvel`,
     Year: `2016`, Arc: `Totally Awesome Hulk Amadeus Cho`, Key: `NO`,
     Key_Reason: `TAH #23`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Frank Cho / Mahmud Asrar`,
@@ -115760,7 +115760,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6803`,
   },
   {
-    Title: `The Incredible Hulk (Legacy — Jason Aaron)`, Issue: `#709`, Publisher: `Marvel`,
+    Title: `The Incredible Hulk`, Issue: `#709`, Publisher: `Marvel`,
     Year: `2018`, Arc: `IH Legacy Aaron — Return to Planet Hulk`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jason Aaron`, Artist: ``,
@@ -115777,7 +115777,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6804`,
   },
   {
-    Title: `The Incredible Hulk (Legacy — Jason Aaron)`, Issue: `#710`, Publisher: `Marvel`,
+    Title: `The Incredible Hulk`, Issue: `#710`, Publisher: `Marvel`,
     Year: `2018`, Arc: `IH Legacy Aaron — Return to Planet Hulk`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jason Aaron`, Artist: ``,
@@ -115794,7 +115794,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6805`,
   },
   {
-    Title: `The Incredible Hulk (Legacy — Jason Aaron)`, Issue: `#711`, Publisher: `Marvel`,
+    Title: `The Incredible Hulk`, Issue: `#711`, Publisher: `Marvel`,
     Year: `2018`, Arc: `IH Legacy Aaron — Return to Planet Hulk`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jason Aaron`, Artist: ``,
@@ -115811,7 +115811,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6806`,
   },
   {
-    Title: `The Incredible Hulk (Legacy — Jason Aaron)`, Issue: `#712`, Publisher: `Marvel`,
+    Title: `The Incredible Hulk`, Issue: `#712`, Publisher: `Marvel`,
     Year: `2018`, Arc: `IH Legacy Aaron — Return to Planet Hulk`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jason Aaron`, Artist: ``,
@@ -115828,7 +115828,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6807`,
   },
   {
-    Title: `The Incredible Hulk (Legacy — Jason Aaron)`, Issue: `#713`, Publisher: `Marvel`,
+    Title: `The Incredible Hulk`, Issue: `#713`, Publisher: `Marvel`,
     Year: `2018`, Arc: `IH Legacy Aaron — Return to Planet Hulk`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jason Aaron`, Artist: ``,
@@ -115845,7 +115845,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6808`,
   },
   {
-    Title: `The Incredible Hulk (Legacy — Jason Aaron)`, Issue: `#714`, Publisher: `Marvel`,
+    Title: `The Incredible Hulk`, Issue: `#714`, Publisher: `Marvel`,
     Year: `2018`, Arc: `IH Legacy Aaron — Return to Planet Hulk`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jason Aaron`, Artist: ``,
@@ -115862,7 +115862,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6809`,
   },
   {
-    Title: `The Incredible Hulk (Legacy — Jason Aaron)`, Issue: `#715`, Publisher: `Marvel`,
+    Title: `The Incredible Hulk`, Issue: `#715`, Publisher: `Marvel`,
     Year: `2018`, Arc: `IH Legacy Aaron — Return to Planet Hulk`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jason Aaron`, Artist: ``,
@@ -115879,7 +115879,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6810`,
   },
   {
-    Title: `The Incredible Hulk (Legacy — Jason Aaron)`, Issue: `#716`, Publisher: `Marvel`,
+    Title: `The Incredible Hulk`, Issue: `#716`, Publisher: `Marvel`,
     Year: `2018`, Arc: `IH Legacy Aaron — Return to Planet Hulk`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jason Aaron`, Artist: ``,
@@ -115896,7 +115896,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6811`,
   },
   {
-    Title: `The Incredible Hulk (Legacy — Jason Aaron)`, Issue: `#717`, Publisher: `Marvel`,
+    Title: `The Incredible Hulk`, Issue: `#717`, Publisher: `Marvel`,
     Year: `2018`, Arc: `IH Legacy Aaron — Return to Planet Hulk`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jason Aaron`, Artist: ``,
@@ -116474,7 +116474,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `6`, Entry: `6845`,
   },
   {
-    Title: `Savage Hulk (Alan Davis)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Savage Hulk`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2014`, Arc: `Savage Hulk Alan Davis — COMPLETE`, Key: `YES`,
     Key_Reason: `Savage Hulk #1 Alan Davis —  COMPLETE 6-issue — classic X-Men/Hulk callback — beautiful Davis art`, First_App: ``,
     Writer: `Alan Davis`, Artist: `Alan Davis`,
@@ -116491,7 +116491,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `6846`,
   },
   {
-    Title: `Savage Hulk (Alan Davis)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `Savage Hulk`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2014`, Arc: `Savage Hulk Alan Davis — COMPLETE`, Key: `NO`,
     Key_Reason: `#2`, First_App: ``,
     Writer: `Alan Davis`, Artist: `Alan Davis`,
@@ -116508,7 +116508,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `6847`,
   },
   {
-    Title: `Savage Hulk (Alan Davis)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `Savage Hulk`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2014`, Arc: `Savage Hulk Alan Davis — COMPLETE`, Key: `NO`,
     Key_Reason: `#3`, First_App: ``,
     Writer: `Alan Davis`, Artist: `Alan Davis`,
@@ -116525,7 +116525,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `6848`,
   },
   {
-    Title: `Savage Hulk (Alan Davis)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `Savage Hulk`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2014`, Arc: `Savage Hulk Alan Davis — COMPLETE`, Key: `NO`,
     Key_Reason: `#4`, First_App: ``,
     Writer: `Alan Davis`, Artist: `Alan Davis`,
@@ -116542,7 +116542,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `6849`,
   },
   {
-    Title: `Savage Hulk (Alan Davis)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `Savage Hulk`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2014`, Arc: `Savage Hulk Alan Davis — COMPLETE`, Key: `NO`,
     Key_Reason: `#5`, First_App: ``,
     Writer: `Alan Davis`, Artist: `Alan Davis`,
@@ -116559,7 +116559,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `6850`,
   },
   {
-    Title: `Savage Hulk (Alan Davis)`, Issue: `#6`, Publisher: `Marvel`,
+    Title: `Savage Hulk`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2014`, Arc: `Savage Hulk Alan Davis — COMPLETE`, Key: `NO`,
     Key_Reason: `#6`, First_App: ``,
     Writer: `Alan Davis`, Artist: `Alan Davis`,
@@ -116661,7 +116661,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `5`, Entry: `6856`,
   },
   {
-    Title: `Indestructible Hulk (Waid)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Indestructible Hulk`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Indestructible Hulk Waid/Yu — Hulk as SHIELD weapon`, Key: `YES`,
     Key_Reason: `Indestructible Hulk #1 Mark Waid/Leinil Yu — Hulk as SHIELD weapon — near-complete`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Leinil Francis Yu`,
@@ -116678,7 +116678,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6857`,
   },
   {
-    Title: `Indestructible Hulk (Waid)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `Indestructible Hulk`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Indestructible Hulk Waid/Yu — Hulk as SHIELD weapon`, Key: `NO`,
     Key_Reason: `#2`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Leinil Francis Yu`,
@@ -116695,7 +116695,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6858`,
   },
   {
-    Title: `Indestructible Hulk (Waid)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `Indestructible Hulk`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Indestructible Hulk Waid/Yu — Hulk as SHIELD weapon`, Key: `NO`,
     Key_Reason: `#3`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Leinil Francis Yu`,
@@ -116712,7 +116712,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6859`,
   },
   {
-    Title: `Indestructible Hulk (Waid)`, Issue: `#4`, Publisher: `Marvel`,
+    Title: `Indestructible Hulk`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Indestructible Hulk Waid/Yu — Hulk as SHIELD weapon`, Key: `NO`,
     Key_Reason: `#4`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Leinil Francis Yu`,
@@ -116729,7 +116729,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6860`,
   },
   {
-    Title: `Indestructible Hulk (Waid)`, Issue: `#5`, Publisher: `Marvel`,
+    Title: `Indestructible Hulk`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Indestructible Hulk Waid/Yu — Hulk as SHIELD weapon`, Key: `NO`,
     Key_Reason: `#5`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Leinil Francis Yu`,
@@ -116746,7 +116746,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6861`,
   },
   {
-    Title: `Indestructible Hulk (Waid)`, Issue: `#7`, Publisher: `Marvel`,
+    Title: `Indestructible Hulk`, Issue: `#7`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Indestructible Hulk Waid/Yu — Hulk as SHIELD weapon`, Key: `NO`,
     Key_Reason: `#7`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Leinil Francis Yu`,
@@ -116763,7 +116763,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6862`,
   },
   {
-    Title: `Indestructible Hulk (Waid)`, Issue: `#8`, Publisher: `Marvel`,
+    Title: `Indestructible Hulk`, Issue: `#8`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Indestructible Hulk Waid/Yu — Hulk as SHIELD weapon`, Key: `NO`,
     Key_Reason: `#8`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Leinil Francis Yu`,
@@ -116780,7 +116780,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6863`,
   },
   {
-    Title: `Indestructible Hulk (Waid)`, Issue: `#9`, Publisher: `Marvel`,
+    Title: `Indestructible Hulk`, Issue: `#9`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Indestructible Hulk Waid/Yu — Hulk as SHIELD weapon`, Key: `NO`,
     Key_Reason: `#9`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Leinil Francis Yu`,
@@ -116797,7 +116797,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6864`,
   },
   {
-    Title: `Indestructible Hulk (Waid)`, Issue: `#10`, Publisher: `Marvel`,
+    Title: `Indestructible Hulk`, Issue: `#10`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Indestructible Hulk Waid/Yu — Hulk as SHIELD weapon`, Key: `NO`,
     Key_Reason: `#10`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Leinil Francis Yu`,
@@ -116814,7 +116814,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6865`,
   },
   {
-    Title: `Indestructible Hulk (Waid)`, Issue: `#11`, Publisher: `Marvel`,
+    Title: `Indestructible Hulk`, Issue: `#11`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Indestructible Hulk Waid/Yu — Hulk as SHIELD weapon`, Key: `NO`,
     Key_Reason: `#11`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Leinil Francis Yu`,
@@ -116831,7 +116831,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6866`,
   },
   {
-    Title: `Indestructible Hulk (Waid)`, Issue: `#12`, Publisher: `Marvel`,
+    Title: `Indestructible Hulk`, Issue: `#12`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Indestructible Hulk Waid/Yu — Hulk as SHIELD weapon`, Key: `NO`,
     Key_Reason: `#12`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Leinil Francis Yu`,
@@ -116848,7 +116848,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6867`,
   },
   {
-    Title: `Indestructible Hulk (Waid)`, Issue: `#13`, Publisher: `Marvel`,
+    Title: `Indestructible Hulk`, Issue: `#13`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Indestructible Hulk Waid/Yu — Hulk as SHIELD weapon`, Key: `NO`,
     Key_Reason: `#13`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Leinil Francis Yu`,
@@ -116865,7 +116865,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6868`,
   },
   {
-    Title: `Indestructible Hulk (Waid)`, Issue: `#14`, Publisher: `Marvel`,
+    Title: `Indestructible Hulk`, Issue: `#14`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Indestructible Hulk Waid/Yu — Hulk as SHIELD weapon`, Key: `NO`,
     Key_Reason: `#14`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Leinil Francis Yu`,
@@ -116882,7 +116882,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6869`,
   },
   {
-    Title: `Indestructible Hulk (Waid)`, Issue: `#15`, Publisher: `Marvel`,
+    Title: `Indestructible Hulk`, Issue: `#15`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Indestructible Hulk Waid/Yu — Hulk as SHIELD weapon`, Key: `NO`,
     Key_Reason: `#15`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Leinil Francis Yu`,
@@ -116899,7 +116899,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6870`,
   },
   {
-    Title: `Indestructible Hulk (Waid)`, Issue: `#16`, Publisher: `Marvel`,
+    Title: `Indestructible Hulk`, Issue: `#16`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Indestructible Hulk Waid/Yu — Hulk as SHIELD weapon`, Key: `NO`,
     Key_Reason: `#16`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Leinil Francis Yu`,
@@ -116916,7 +116916,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `6871`,
   },
   {
-    Title: `Indestructible Hulk (Waid)`, Issue: `#17`, Publisher: `Marvel`,
+    Title: `Indestructible Hulk`, Issue: `#17`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Indestructible Hulk Waid/Yu — Hulk as SHIELD weapon`, Key: `NO`,
     Key_Reason: `#17`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Leinil Francis Yu`,
@@ -117341,10 +117341,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `3`, Entry: `6896`,
   },
   {
-    Title: `Wolverine (Limited Series)`, Issue: `#8 (cover purchase — display copy)`, Publisher: `Marvel`,
+    Title: `Wolverine`, Issue: `#8 (cover purchase — display copy)`, Publisher: `Marvel`,
     Year: `1982`, Arc: `Wolverine Limited Series — Frank Miller/Claremont`, Key: `YES`,
     Key_Reason: `Wolverine #8 1982 Frank Miller/Claremont — cover purchase — SEPARATE from Terrificon unsigned copy in Box 05`, First_App: ``,
-    Writer: `Chris Claremont`, Artist: `Frank Miller`,
+    Writer: `Chris Claremont / Limited Series`, Artist: `Frank Miller`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Cover purchase — display/collection copy. Terrificon unsigned copy is in Box 05.`,
     CGC_Worth: `YES`, Value_NM: `80`, Value_VF: `50`,
@@ -137639,10 +137639,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `8090`,
   },
   {
-    Title: `Star Trek: The Next Generation — Mirror Broken (Free Comic Book Day 2017)`, Issue: `#1`, Publisher: `IDW`,
+    Title: `Star Trek: The Next Generation — Mirror Broken`, Issue: `#1`, Publisher: `IDW`,
     Year: `2017`, Arc: `TNG FCBD 2017`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Free Comic Book Day 2017`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -138115,10 +138115,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `8118`,
   },
   {
-    Title: `Star Trek: Day of Blood — Prelude (FCBD 2023)`, Issue: `#1`, Publisher: `IDW`,
+    Title: `Star Trek: Day of Blood — Prelude`, Issue: `#1`, Publisher: `IDW`,
     Year: `2023`, Arc: `FCBD Trek Day of Blood`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `FCBD 2023`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `4`, Value_VF: `3`,
@@ -138132,10 +138132,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `8119`,
   },
   {
-    Title: `Star Trek: The Next Generation — Mirror Broken (FCBD 2017)`, Issue: `#0`, Publisher: `IDW`,
+    Title: `Star Trek: The Next Generation — Mirror Broken`, Issue: `#0`, Publisher: `IDW`,
     Year: `2017`, Arc: `FCBD TNG Mirror Broken`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `FCBD 2017`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `4`, Value_VF: `3`,
@@ -154520,10 +154520,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `9`, Entry: `9083`,
   },
   {
-    Title: `Captain Marvel (Earth's Mightiest Hero)`, Issue: `#2`, Publisher: `Marvel`,
+    Title: `Captain Marvel`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2012`, Arc: `CM DeConnick EMH reprint`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Kelly Sue DeConnick`, Artist: ``,
+    Writer: `Kelly Sue DeConnick / Earth's Mightiest Hero`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -159603,10 +159603,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `9382`,
   },
   {
-    Title: `Fantastic Four: 499 (blank cover #1 reprint)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Fantastic Four: 499`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2022`, Arc: `FF 499 blank cover reprint`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `blank cover #1 reprint`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `8`, Value_VF: `5`,
@@ -196952,7 +196952,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `11579`,
   },
   {
-    Title: `Invincible Iron Man (Dark Reign)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `Invincible Iron Man`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2009`, Arc: `IIM Fraction Dark Reign`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Matt Fraction`, Artist: `Salvador Larroca`,
@@ -196969,7 +196969,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `11580`,
   },
   {
-    Title: `Invincible Iron Man (Dark Reign)`, Issue: `#8`, Publisher: `Marvel`,
+    Title: `Invincible Iron Man`, Issue: `#8`, Publisher: `Marvel`,
     Year: `2009`, Arc: `IIM Fraction Dark Reign`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Matt Fraction`, Artist: `Salvador Larroca`,
@@ -196986,7 +196986,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `11581`,
   },
   {
-    Title: `Invincible Iron Man (Dark Reign)`, Issue: `#9`, Publisher: `Marvel`,
+    Title: `Invincible Iron Man`, Issue: `#9`, Publisher: `Marvel`,
     Year: `2009`, Arc: `IIM Fraction Dark Reign`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Matt Fraction`, Artist: `Salvador Larroca`,
@@ -197003,7 +197003,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `2`, Entry: `11582`,
   },
   {
-    Title: `Invincible Iron Man (Dark Reign)`, Issue: `#10`, Publisher: `Marvel`,
+    Title: `Invincible Iron Man`, Issue: `#10`, Publisher: `Marvel`,
     Year: `2009`, Arc: `IIM Fraction Dark Reign`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Matt Fraction`, Artist: `Salvador Larroca`,
@@ -202239,10 +202239,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `11890`,
   },
   {
-    Title: `New Warriors (Initiative)`, Issue: `#3`, Publisher: `Marvel`,
+    Title: `New Warriors`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2007`, Arc: `New Warriors Initiative era`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Kevin Grevioux`, Artist: `Paco Medina`,
+    Writer: `Kevin Grevioux / Initiative`, Artist: `Paco Medina`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -208988,10 +208988,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `12287`,
   },
   {
-    Title: `X-Men #27 (Krakoa variant — 60 Uncanny Years)`, Issue: `#27 (variant)`, Publisher: `Marvel`,
-    Year: `2022`, Arc: ``, Key: `YES`,
+    Title: `X-Men #27`, Issue: `#27 (variant)`, Publisher: `Marvel`,
+    Year: `2022`, Arc: `Krakoa era`, Key: `YES`,
     Key_Reason: `X-Men #27 60th Uncanny Anniversary variant — limited edition Krakoa era variant`, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Krakoa variant — 60 Uncanny Years`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `YES`, Value_NM: `10`, Value_VF: `6`,
@@ -209957,10 +209957,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `12344`,
   },
   {
-    Title: `Giant-Size X-Men (variant — $4.99)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Giant-Size X-Men`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2024`, Arc: ``, Key: `YES`,
     Key_Reason: `Giant-Size X-Men #1 variant edition — $4.99 — Kamala Khan cover`, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `variant — $4.99`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `YES`, Value_NM: `10`, Value_VF: `6`,
@@ -210093,10 +210093,10 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
     Volume: `1`, Entry: `12352`,
   },
   {
-    Title: `Giant-Size Dark Phoenix Saga (variant)`, Issue: `#1`, Publisher: `Marvel`,
+    Title: `Giant-Size Dark Phoenix Saga`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2024`, Arc: ``, Key: `YES`,
     Key_Reason: `Giant-Size Dark Phoenix Saga #1 variant — modern reprint with Kamala Khan framing — $4.99`, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `variant`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `YES`, Value_NM: `10`, Value_VF: `6`,
