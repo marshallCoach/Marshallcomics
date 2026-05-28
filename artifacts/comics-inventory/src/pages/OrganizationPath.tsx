@@ -27,7 +27,7 @@ interface SplitBox {
   box: number; comics: number; over: number; newBoxes: string; keys: number; contents: string;
 }
 const SPLITS: SplitBox[] = [
-  { box:42, comics:620, over:470, newBoxes:"+4", keys:81,  contents:"DC New 52 + Convergence — MOST OVER CAPACITY" },
+  { box:42, comics:620, over:470, newBoxes:"+3", keys:81,  contents:"DC New 52 + Convergence — SPLIT DONE → Boxes 82, 83, 84" },
   { box:2,  comics:294, over:144, newBoxes:"+1", keys:28,  contents:"X-Men Semi-Recent: AXM Whedon + X-Men runs" },
   { box:3,  comics:272, over:122, newBoxes:"+1", keys:14,  contents:"Marvel X-Men Full Runs: AXM/UXM/Cable/X-Force" },
   { box:43, comics:262, over:112, newBoxes:"+1", keys:23,  contents:"DC Rebirth — Batman Hush COMPLETE + Tom King Batman + Flash" },
@@ -79,7 +79,7 @@ const BAG_ORDER: BagEntry[] = [
   { order:3,  box:8,  comics:238, keys:22, sgn:1,  extra:"+1 box",priority:"P1", contents:"Elektra + Black Widow + Hawkeye + Winter Soldier — SIGNED BOOKS — bag individually, spine side in first, no rough handling." },
   { order:4,  box:66, comics:126, keys:36, sgn:1,  extra:"OK",    priority:"P1", contents:"Indie: Firefly/Die/Monstress/Paper Girls — SIGNED/keys — bag individually, spine side in first, no rough handling." },
   { order:5,  box:72, comics:75,  keys:26, sgn:2,  extra:"OK",    priority:"P1", contents:"Variants + Absolute 1st Prints — Wolverine #8 UNSIGNED — bag individually, spine side in first, no rough handling." },
-  { order:6,  box:42, comics:620, keys:81, sgn:0,  extra:"+4 box",priority:"P2", contents:"DC New 52 + Convergence — MOST OVER CAPACITY — Split into 5 boxes during bagging." },
+  { order:6,  box:42, comics:620, keys:81, sgn:0,  extra:"DONE",  priority:"P2", contents:"DC New 52 + Convergence — Split into Boxes 42, 82, 83, 84 — COMPLETE." },
   { order:7,  box:3,  comics:272, keys:14, sgn:0,  extra:"+1 box",priority:"P2", contents:"Marvel X-Men Full Runs: AXM/UXM/Cable/X-Force — Split into 2 boxes during bagging." },
   { order:8,  box:43, comics:262, keys:23, sgn:0,  extra:"+1 box",priority:"P2", contents:"DC Rebirth — Batman Hush COMPLETE + Tom King Batman + Flash — Split into 2 boxes during bagging." },
   { order:9,  box:4,  comics:255, keys:24, sgn:0,  extra:"+1 box",priority:"P2", contents:"Marvel: Fantastic Four — Waid/Hickman/Fraction/Slott/North — Split into 2 boxes during bagging." },
@@ -297,7 +297,7 @@ const STEPS: OrgStep[] = [
   { key:"s4", num:4, title:"Bag Priority 2 — Key-Heavy Boxes (Largest First)", time:"Full day × 2",
     tools:"BCW bags and boards (bulk), sharpie, new box labels",
     tasks:[
-      "Box 42 (620 comics, 81 keys) — SPLIT INTO 5 BOXES. This is your biggest single job. Label 42A through 42E.",
+      "Box 42 overflow — DONE. Boxes 82, 83, 84 created with DC New 52 / Rebirth / Bombshells overflow. All 4 boxes now labelled.",
       "Then work down the P2 list in order: Box 3 (272) → Box 43 (262) → Box 4 (255) → Box 5 (251) → Box 6 (248) → Box 44 (248)...",
       "For every box over 150: bag the first 150, move remainder into a new labelled box.",
       "New box label format: 'Box 3B — X-Men Full Runs (overspill)'.",
