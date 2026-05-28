@@ -96,7 +96,7 @@ export default function Duplicates() {
   const [query,      setQuery]      = useState("");
   const [filter,     setFilter]     = useState<"active" | "all" | "same-box" | "bought-twice" | "hidden">("active");
   const [sort,       setSort]       = useState<"count" | "alpha">("count");
-  const [openKey,    setOpenKey]    = useState<string | null>(null);
+  const [openKeys,   setOpenKeys]   = useState<Set<string>>(() => new Set(RAW_GROUPS.map(g => g.key)));
   const [showAll,    setShowAll]    = useState(false);
   const [showOutput, setShowOutput] = useState(false);
   const [copied,     setCopied]     = useState(false);
@@ -305,7 +305,7 @@ export default function Duplicates() {
       {/* ── GROUP LIST ── */}
       <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
         {visible.map(gr => {
-          const isOpen    = openKey === gr.key;
+          const isOpen    = openKeys.has(gr.key);
           const isHidden  = hidden.has(gr.key);
           const cc        = countColor(gr.copies.length);
           const flagColor = gr.flag === "same-box" ? "#dc2626" : "#d97706";
@@ -340,7 +340,7 @@ export default function Duplicates() {
 
                 {/* Title */}
                 <div
-                  onClick={() => !isHidden && setOpenKey(isOpen ? null : gr.key)}
+                  onClick={() => !isHidden && setOpenKeys(prev => { const next = new Set(prev); if (next.has(gr.key)) next.delete(gr.key); else next.add(gr.key); return next; })}
                   style={{ flex: 1, minWidth: 0, cursor: isHidden ? "default" : "pointer", userSelect: "text" }}
                 >
                   <div>
@@ -392,7 +392,7 @@ export default function Duplicates() {
 
                 {/* HIDE / SHOW button */}
                 <button
-                  onClick={e => { e.stopPropagation(); toggleHide(gr.key); setOpenKey(null); }}
+                  onClick={e => { e.stopPropagation(); toggleHide(gr.key); setOpenKeys(prev => { const next = new Set(prev); next.delete(gr.key); return next; }); }}
                   title={isHidden ? "Restore to active list" : "Dismiss — not a real duplicate"}
                   style={{
                     fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.56rem", letterSpacing: "1px",
@@ -409,7 +409,7 @@ export default function Duplicates() {
                 {/* Expand toggle — only when not hidden */}
                 {!isHidden && (
                   <button
-                    onClick={() => setOpenKey(isOpen ? null : gr.key)}
+                    onClick={() => setOpenKeys(prev => { const next = new Set(prev); if (next.has(gr.key)) next.delete(gr.key); else next.add(gr.key); return next; })}
                     style={{ background: "none", border: "1px solid var(--border)", borderRadius: 4, width: 24, height: 24, cursor: "pointer", color: "var(--muted)", fontSize: "0.7rem", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                     {isOpen ? "▲" : "▼"}
                   </button>
@@ -516,7 +516,7 @@ export default function Duplicates() {
                       {gr.flag === "bought-twice" && "↗ Same book in different boxes — likely purchased more than once."}
                     </span>
                     <button
-                      onClick={() => { toggleHide(gr.key); setOpenKey(null); }}
+                      onClick={() => { toggleHide(gr.key); setOpenKeys(prev => { const next = new Set(prev); next.delete(gr.key); return next; }); }}
                       style={{ marginLeft: "auto", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.56rem", letterSpacing: "1px", padding: "3px 10px", border: "1px solid #9ca3af", background: "none", color: "#9ca3af", borderRadius: 3, cursor: "pointer", whiteSpace: "nowrap", flexShrink: 0 }}>
                       HIDE THIS GROUP
                     </button>
