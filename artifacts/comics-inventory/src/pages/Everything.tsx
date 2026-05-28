@@ -119,6 +119,7 @@ export default function Everything({
   const [boxFilter,   setBoxFilter]  = useState(initBox      || "");
   const [keysOnly,    setKeysOnly]   = useState(!!initKeysOnly);
   const [signedOnly,  setSignedOnly] = useState(!!initSignedOnly);
+  const [parenOnly,   setParenOnly]  = useState(false);
   const [familyFilter,setFamily]     = useState("");
   const [view,        setView]       = useState<"list"|"card">("list");
   const [searched,    setSearched]   = useState(true);
@@ -188,6 +189,7 @@ export default function Everything({
     return ALL.filter(c => {
       if (keysOnly   && (c.Key    || "").toUpperCase() !== "YES") return false;
       if (signedOnly && (c.Signed || "").toUpperCase() !== "YES") return false;
+      if (parenOnly  && !c.Title.includes("(")) return false;
       if (publisher  && c.Publisher !== publisher)  return false;
       if (era        && c.Era !== era)              return false;
       if (platform   && c.Platform !== platform)    return false;
@@ -211,7 +213,7 @@ export default function Everything({
         c.Story_Pitch, c.Imprint, c.Terrificon,
       ].join(" ").toLowerCase().includes(q);
     });
-  }, [searched, query, publisher, era, platform, boxFilter, keysOnly, signedOnly, familyFilter, exactTitle]);
+  }, [searched, query, publisher, era, platform, boxFilter, keysOnly, signedOnly, parenOnly, familyFilter, exactTitle]);
 
   const cardSlice = useMemo(() => {
     const start = (cardPage - 1) * CARD_PAGE;
@@ -221,7 +223,7 @@ export default function Everything({
   const handleSearch = useCallback(() => { setSearched(true); setCardPage(1); }, []);
   const handleClear  = useCallback(() => {
     setQuery(""); setPub(""); setEra(""); setPlat(""); setBoxFilter("");
-    setKeysOnly(false); setSignedOnly(false); setFamily(""); setExactTitle("");
+    setKeysOnly(false); setSignedOnly(false); setParenOnly(false); setFamily(""); setExactTitle("");
     setCardPage(1);
     setTimeout(() => searchInputRef.current?.focus(), 0);
   }, []);
@@ -295,6 +297,9 @@ export default function Everything({
               </label>
               <label className="toggle-pill">
                 <input type="checkbox" checked={signedOnly} onChange={e=>setSignedOnly(e.target.checked)} />✍ Signed
+              </label>
+              <label className="toggle-pill">
+                <input type="checkbox" checked={parenOnly} onChange={e=>setParenOnly(e.target.checked)} />() Title Has ( )
               </label>
             </div>
           </div>

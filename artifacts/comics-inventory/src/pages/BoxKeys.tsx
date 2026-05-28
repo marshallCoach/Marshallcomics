@@ -109,6 +109,7 @@ export default function BoxKeys() {
   const [cgcOnly,   setCgcOnly]   = useState(false);
   const [tfOnly,    setTfOnly]    = useState(false);
   const [signedOnly,setSignedOnly]= useState(false);
+  const [parenOnly, setParenOnly] = useState(false);
   const [view,      setView]      = useState<"card"|"list">("list");
   const [cardPage,  setCardPage]  = useState(1);
   const [open,      setOpen]      = useState<Set<number>>(new Set());
@@ -138,9 +139,10 @@ export default function BoxKeys() {
       if (cgcOnly   && !(k.CGC_Worth || "").toUpperCase().includes("YES")) return false;
       if (tfOnly    && !(k.Terrificon || "").trim()) return false;
       if (signedOnly && (k.Signed || "").toUpperCase() !== "YES") return false;
+      if (parenOnly  && !k.Title.includes("(")) return false;
       return true;
     });
-  }, [q, box, pub, era, cgcOnly, tfOnly, signedOnly]);
+  }, [q, box, pub, era, cgcOnly, tfOnly, signedOnly, parenOnly]);
 
   const toggle = (i: number) =>
     setOpen(prev => { const n = new Set(prev); n.has(i)?n.delete(i):n.add(i); return n; });
@@ -212,9 +214,15 @@ export default function BoxKeys() {
             ✍️ Signed Keys
           </button>
           <button
+            className={`qs-pill${parenOnly?" qs-pill-key":""}`}
+            style={parenOnly?{background:"#6b21a8",color:"#fff",borderColor:"#6b21a8"}:{}}
+            onClick={()=>{setParenOnly(v=>!v);setCardPage(1);}}>
+            () Title Has ( )
+          </button>
+          <button
             className="qs-pill"
-            style={{ marginLeft:"auto", opacity: (!q&&!box&&!pub&&!era&&!cgcOnly&&!tfOnly&&!signedOnly)?0.35:1 }}
-            onClick={()=>{setQ("");setBox("");setPub("");setEra("");setCgcOnly(false);setTfOnly(false);setSignedOnly(false);setCardPage(1);setTimeout(()=>searchInputRef.current?.focus(),0);}}>
+            style={{ marginLeft:"auto", opacity: (!q&&!box&&!pub&&!era&&!cgcOnly&&!tfOnly&&!signedOnly&&!parenOnly)?0.35:1 }}
+            onClick={()=>{setQ("");setBox("");setPub("");setEra("");setCgcOnly(false);setTfOnly(false);setSignedOnly(false);setParenOnly(false);setCardPage(1);setTimeout(()=>searchInputRef.current?.focus(),0);}}>
             ✕ Clear
           </button>
         </div>
