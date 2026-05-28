@@ -2,6 +2,8 @@ import { useState, useMemo, useRef } from "react";
 import { DATA3 } from "@/data/data3";
 import { SortableTable, ColDef } from "@/components/SortableTable";
 import { Paginator } from "@/components/Paginator";
+import ComicDrawer, { type DrawerComic } from "@/components/ComicDrawer";
+import { comicFlagKey, loadAllFlags } from "@/lib/comicFlags";
 
 const CARD_PAGE_SIZE = 100;
 
@@ -110,6 +112,21 @@ export default function BoxKeys() {
   const [view,      setView]      = useState<"card"|"list">("list");
   const [cardPage,  setCardPage]  = useState(1);
   const [open,      setOpen]      = useState<Set<number>>(new Set());
+
+  const [drawerComic, setDrawerComic] = useState<DrawerComic | null>(null);
+  const [drawerKey,   setDrawerKey]   = useState<string | undefined>(undefined);
+  const [flagVersion, setFlagVersion] = useState(0);
+
+  const flaggedKeys = useMemo(() => {
+    const all = loadAllFlags();
+    return new Set(Object.keys(all));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [flagVersion]);
+
+  const openDrawer = (c: DrawerComic & { Box?: string }) => {
+    setDrawerComic(c);
+    setDrawerKey(comicFlagKey(c.Title, c.Issue || "", c.Box || ""));
+  };
 
   const results = useMemo(() => {
     const ql = q.toLowerCase();
@@ -244,6 +261,19 @@ export default function BoxKeys() {
                   {k.Sales_Data && k.Sales_Data !== "nan" && <div className="dr"><span className="dl">Sales</span><span className="dv">{k.Sales_Data.substring(0,120)}</span></div>}
                 </div>
                 {k.Key_Reason && <div style={{ marginTop:6, fontSize:"0.85rem", color:"var(--gold)" }}>{k.Key_Reason}</div>}
+                <div style={{ marginTop:10, display:"flex", gap:10, alignItems:"center", flexWrap:"wrap" }}>
+                  <button
+                    onClick={e => { e.stopPropagation(); openDrawer(k); }}
+                    style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1.5px", padding:"5px 12px", background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:4, cursor:"pointer", color:"var(--text)" }}
+                  >
+                    Full Details →
+                  </button>
+                  {flaggedKeys.has(comicFlagKey(k.Title, k.Issue || "", k.Box || "")) && (
+                    <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1px", color:"#92400e", background:"#fef3c7", border:"1px solid #fcd34d", borderRadius:3, padding:"2px 8px" }}>
+                      UPDATE NEEDED
+                    </span>
+                  )}
+                </div>
               </div>
             )}
           />
@@ -259,11 +289,16 @@ export default function BoxKeys() {
               const nmVal    = k.Value_NM && k.Value_NM !== "nan" ? k.Value_NM : "";
               const cgc      = (k.CGC_Worth||"").toUpperCase().includes("YES");
               const isOpen   = open.has(i);
+              const fk       = comicFlagKey(k.Title, k.Issue || "", k.Box || "");
+              const isFlagged = flaggedKeys.has(fk);
               return (
                 <div key={i} className={`comic-card${isOpen?" open":""}`}
-                  style={{ borderTop:"3px solid var(--gold)" }}
+                  style={{ borderTop: isFlagged ? "3px solid #d97706" : "3px solid var(--gold)" }}
                   onClick={()=>toggle(i)}>
-                  <div className="card-title">{k.Title || "Untitled"}</div>
+                  <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", gap:6 }}>
+                    <div className="card-title" style={{ flex:1 }}>{k.Title || "Untitled"}</div>
+                    {isFlagged && <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.55rem", letterSpacing:"1px", color:"#92400e", background:"#fef3c7", border:"1px solid #fcd34d", borderRadius:3, padding:"1px 5px", flexShrink:0 }}>UPDATE</span>}
+                  </div>
                   <div className="card-sub">Box {k.Box} · {k.Publisher} #{k.Issue} · {k.Year}</div>
                   <div className="badges">
                     <span className="badge bk">KEY</span>
@@ -283,6 +318,12 @@ export default function BoxKeys() {
                       {isSigned && k.Signed_By && <div className="dr"><span className="dl">Signed By</span><span className="dv">{k.Signed_By}</span></div>}
                       {isTf && <div className="dr"><span className="dl">Terrificon</span><span className="dv" style={{color:"#f59e0b"}}>{k.Terrificon}</span></div>}
                       {k.Sales_Data && <div className="dr"><span className="dl">Sales</span><span className="dv">{k.Sales_Data.substring(0,120)}</span></div>}
+                      <button
+                        onClick={e => { e.stopPropagation(); openDrawer(k); }}
+                        style={{ marginTop:8, fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1.5px", padding:"5px 12px", background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:4, cursor:"pointer", color:"var(--text)" }}
+                      >
+                        Full Details →
+                      </button>
                     </div>
                   )}
                 </div>
@@ -293,6 +334,13 @@ export default function BoxKeys() {
             onChange={p=>{ setCardPage(p); setOpen(new Set()); }} />
         </div>
       )}
+
+      <ComicDrawer
+        comic={drawerComic}
+        comicKey={drawerKey}
+        onClose={() => setDrawerComic(null)}
+        onFlagChange={() => setFlagVersion(v => v + 1)}
+      />
     </div>
   );
 }

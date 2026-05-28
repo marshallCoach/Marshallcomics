@@ -3,6 +3,8 @@ import { DATA3 } from "@/data/data3";
 import { getCoverSvgUrl, type ComicLike } from "@/utils/coverThumbnails";
 import { SortableTable, ColDef } from "@/components/SortableTable";
 import { Paginator } from "@/components/Paginator";
+import ComicDrawer, { type DrawerComic } from "@/components/ComicDrawer";
+import { comicFlagKey, loadAllFlags } from "@/lib/comicFlags";
 
 const CARD_PAGE = 80;
 const ALL = DATA3.comics;
@@ -124,12 +126,33 @@ export default function Everything({
   const [showFamilies,setShowFams]   = useState(false);
   const [exactTitle,  setExactTitle] = useState("");
 
+  const [drawerComic, setDrawerComic] = useState<DrawerComic | null>(null);
+  const [drawerKey,   setDrawerKey]   = useState<string | undefined>(undefined);
+  const [flagVersion, setFlagVersion] = useState(0);
+
+  const flaggedKeys = useMemo(() => {
+    const all = loadAllFlags();
+    return new Set(Object.keys(all));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [flagVersion]);
+
+  const openDrawer = useCallback((c: DrawerComic & { Box?: string }) => {
+    setDrawerComic(c);
+    setDrawerKey(comicFlagKey(c.Title, c.Issue || "", c.Box || ""));
+  }, []);
+
   const cols = useMemo<ColDef<Comic>[]>(() => [
-    { key:"title",     label:"Title",     defaultWidth:220, sort:(a,b)=>a.Title.localeCompare(b.Title), cell:r=>(
-      <button className="title-link" onClick={e=>{e.stopPropagation();setExactTitle(r.Title||"");setQuery("");setSearched(true);setCardPage(1);}}>
-        {r.Title||"Untitled"}
-      </button>
-    )},
+    { key:"title",     label:"Title",     defaultWidth:220, sort:(a,b)=>a.Title.localeCompare(b.Title), cell:r=>{
+      const fk = comicFlagKey(r.Title, r.Issue || "", r.Box || "");
+      return (
+        <span style={{ display:"flex", alignItems:"center", gap:5 }}>
+          <button className="title-link" onClick={e=>{e.stopPropagation();setExactTitle(r.Title||"");setQuery("");setSearched(true);setCardPage(1);}}>
+            {r.Title||"Untitled"}
+          </button>
+          {flaggedKeys.has(fk) && <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.55rem", letterSpacing:"1px", color:"#92400e", background:"#fef3c7", border:"1px solid #fcd34d", borderRadius:3, padding:"1px 5px", flexShrink:0 }}>UPDATE</span>}
+        </span>
+      );
+    }},
     { key:"issue",     label:"Issue #",   defaultWidth:65,  sort:(a,b)=>parseVal(a.Issue)-parseVal(b.Issue), cell:r=>{ const ip=parseIssueParts(r.Issue); return <span className="lt-sub" title={ip.legacy?`${ip.main} (${ip.legacy})`:undefined}>{ip.main}{ip.legacy&&<sup style={{fontSize:"0.6em",opacity:0.6,marginLeft:1}}>L</sup>}</span>; } },
     { key:"volume",    label:"Vol",       defaultWidth:58,  sort:(a,b)=>Number(a.Volume||0)-Number(b.Volume||0), cell:r=><span className="lt-sub">{r.Volume||"—"}</span> },
     { key:"publisher", label:"Publisher", defaultWidth:100, sort:(a,b)=>a.Publisher.localeCompare(b.Publisher), cell:r=><span className="lt-sub">{r.Publisher}</span> },
@@ -147,7 +170,7 @@ export default function Everything({
     { key:"year",      label:"Year",      defaultWidth:65,  sort:(a,b)=>parseVal(a.Year)-parseVal(b.Year), cell:r=><span className="lt-sub">{r.Year}</span> },
     { key:"signed",    label:"Signed",    defaultWidth:90,  sort:(a,b)=>a.Signed.localeCompare(b.Signed), cell:r=>r.Signed?.toUpperCase()==="YES"?<span className="lt-sub" style={{color:"var(--gold)"}}>✍ {r.Signed_By||"Yes"}</span>:null },
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  ], []);
+  ], [flaggedKeys]);
 
   // When parent re-navigates with new params, re-init
   useEffect(() => {
@@ -399,11 +422,22 @@ export default function Everything({
             {c.Story_Pitch && (
               <div style={{ marginTop:6, color:"var(--muted2)", fontSize:"0.85rem", lineHeight:1.5 }}>{c.Story_Pitch.substring(0,220)}</div>
             )}
-            <div style={{ marginTop:8 }}>
+            <div style={{ marginTop:10, display:"flex", gap:10, alignItems:"center", flexWrap:"wrap" }}>
               <a href={`https://comicvine.gamespot.com/search/?q=${encodeURIComponent(c.Title + " " + c.Issue)}`} target="_blank" rel="noopener noreferrer"
                 style={{ fontSize:"0.72rem", color:"var(--muted2)", textDecoration:"underline" }}>
                 🔎 View cover on Comic Vine
               </a>
+              <button
+                onClick={e => { e.stopPropagation(); openDrawer(c); }}
+                style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1.5px", padding:"5px 12px", background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:4, cursor:"pointer", color:"var(--text)" }}
+              >
+                Full Details →
+              </button>
+              {flaggedKeys.has(comicFlagKey(c.Title, c.Issue || "", c.Box || "")) && (
+                <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1px", color:"#92400e", background:"#fef3c7", border:"1px solid #fcd34d", borderRadius:3, padding:"2px 8px" }}>
+                  UPDATE NEEDED
+                </span>
+              )}
             </div>
           </div>
         )} />
@@ -415,7 +449,9 @@ export default function Everything({
           <div className="ev-card-grid">
             {cardSlice.map((c,i)=>(
               <EverythingCard key={i} comic={c}
-                onTitleClick={t=>{setExactTitle(t);setQuery("");setSearched(true);setCardPage(1);}} />
+                onTitleClick={t=>{setExactTitle(t);setQuery("");setSearched(true);setCardPage(1);}}
+                flagged={flaggedKeys.has(comicFlagKey(c.Title, c.Issue || "", c.Box || ""))}
+                onOpenDrawer={() => openDrawer(c)} />
             ))}
           </div>
           <Paginator
@@ -432,22 +468,35 @@ export default function Everything({
           No comics found matching those criteria. Try a broader search.
         </div>
       )}
+
+      <ComicDrawer
+        comic={drawerComic}
+        comicKey={drawerKey}
+        onClose={() => setDrawerComic(null)}
+        onFlagChange={() => setFlagVersion(v => v + 1)}
+      />
     </div>
   );
 }
 
-function EverythingCard({ comic: c, onTitleClick }: { comic: Comic; onTitleClick?: (title: string) => void }) {
+function EverythingCard({ comic: c, onTitleClick, flagged, onOpenDrawer }: {
+  comic: Comic;
+  onTitleClick?: (title: string) => void;
+  flagged?: boolean;
+  onOpenDrawer?: () => void;
+}) {
   const isKey    = (c.Key    || "").toUpperCase() === "YES";
   const isSigned = (c.Signed || "").toUpperCase() === "YES";
 
   return (
-    <div className="ev-card" style={{ borderTop: isKey ? "3px solid #d4a800" : undefined }}>
+    <div className="ev-card" style={{ borderTop: flagged ? "3px solid #d97706" : isKey ? "3px solid #d4a800" : undefined }}>
       <div style={{ display:"flex", gap:10, marginBottom:8 }}>
         <CoverThumb c={c} />
         <div style={{ flex:1, minWidth:0 }}>
           <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", marginBottom:4, gap:4 }}>
             <BoxBadge box={c.Box} />
             <div style={{ display:"flex", gap:3, flexWrap:"wrap", justifyContent:"flex-end" }}>
+              {flagged  && <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.55rem", letterSpacing:"1px", color:"#92400e", background:"#fef3c7", border:"1px solid #fcd34d", borderRadius:3, padding:"1px 5px" }}>UPDATE</span>}
               {isKey    && <span className="badge bkey"  style={{fontSize:"0.57rem"}}>KEY</span>}
               {isSigned && <span className="badge bgold" style={{fontSize:"0.57rem"}}>SIGNED</span>}
               {c.Platform && <span className={`badge ${platClass(c.Platform)}`} style={{fontSize:"0.57rem"}}>{c.Platform}</span>}
@@ -487,6 +536,22 @@ function EverythingCard({ comic: c, onTitleClick }: { comic: Comic; onTitleClick
           {c.Value_NM && c.Value_NM!=="nan" && <span style={{color:"var(--green-text)"}}>NM <strong>${c.Value_NM}</strong></span>}
           {(()=>{ const v=c.Value_VF&&c.Value_VF!=="nan"?c.Value_VF.match(/(\d+(?:\.\d+)?)/)?.[1]:""; return v?<span style={{color:"var(--muted)"}}>VF <strong>${v}</strong></span>:null; })()}
         </div>
+      )}
+
+      {onOpenDrawer && (
+        <button
+          onClick={e => { e.stopPropagation(); onOpenDrawer(); }}
+          style={{
+            marginTop:10, width:"100%", padding:"7px 0",
+            fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1.5px",
+            background: flagged ? "#fef3c7" : "var(--surface2)",
+            border: `1px solid ${flagged ? "#fcd34d" : "var(--border)"}`,
+            borderRadius:4, cursor:"pointer",
+            color: flagged ? "#92400e" : "var(--muted2)",
+          }}
+        >
+          {flagged ? "UPDATE NEEDED · Full Details →" : "Full Details →"}
+        </button>
       )}
     </div>
   );
