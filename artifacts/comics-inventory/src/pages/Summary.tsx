@@ -17,15 +17,15 @@ const whatnotCount = comics.filter(c => (c.Platform || "").toUpperCase().include
 const ebayCount    = comics.filter(c => (c.Platform || "").toUpperCase() === "EBAY").length;
 const tfCount      = comics.filter(c => !!(c.Terrificon || "").trim()).length;
 
-// ── Update banner data ────────────────────────────────────────────────────────
-const LAST_UPDATE_DATE = "May 26, 2026";
-const UPDATE_DELTAS    = ["+13 Boxes (61→74)", "+2,244 Comics", "+228 Keys"];
+// ── Update banner data — derives from live data where possible ────────────────
+const LAST_UPDATE_DATE = "May 28, 2026";
+const UPDATE_DELTAS    = ["+10 Boxes (74→84)", "+835 Comics", "+333 Keys"];
 const INTERFACE_UPDATES = [
-  "Full data refresh — 11,776 comics, 74 boxes, 1,462 keys, 54 signed",
-  "New logical box numbering — Inventory → Marvel → DC → Other → Mixed → TPB",
-  "Organization Path page — 7-step process, box labeling tracker, run consolidation",
-  "Action Plan updated to v5 with new box references and Terrificon prep",
-  "Comic History year-by-year navigation with 0-book month alerts",
+  `Data refresh — ${totalComics.toLocaleString()} comics · ${totalBoxes} boxes · ${keyCount.toLocaleString()} keys · ${signedCount} signed`,
+  "Global search added — press ⌘K / Ctrl+K from anywhere to search all comics, boxes, and pages",
+  "Comic detail drawer — click any book to see full details, values, signing info, and Comic Vine link",
+  "Runs page updated — grouped by title + volume, completion % shown, legacy issue format supported",
+  "Touch ID / Face ID / Windows Hello login — set up on first password entry",
 ];
 function buildTopCreators(field: "Writer" | "Artist"): [string, number][] {
   const m: Record<string, number> = {};
@@ -126,10 +126,31 @@ const upcomingCal = [...CALENDAR_EVENTS]
   .sort((a, b) => a.sortDate - b.sortDate)
   .slice(0, 6);
 
+// ── Completed runs ────────────────────────────────────────────────────────────
+function computeCompleteRuns(): number {
+  const byKey: Record<string, Set<number>> = {};
+  for (const c of comics) {
+    const key = `${c.Title}|||${c.Volume || "1"}`;
+    const n = parseFloat(String(c.Issue || "").replace(/^#/, "").trim());
+    if (!isNaN(n) && n > 0 && n <= 999) {
+      if (!byKey[key]) byKey[key] = new Set();
+      byKey[key].add(Math.round(n));
+    }
+  }
+  let complete = 0;
+  for (const nums of Object.values(byKey)) {
+    if (nums.size < 3) continue;
+    const arr = [...nums].sort((a,b) => a-b);
+    if (arr[arr.length-1] - arr[0] + 1 === nums.size) complete++;
+  }
+  return complete;
+}
+const COMPLETE_RUNS = computeCompleteRuns();
+
 // ── Timeline ─────────────────────────────────────────────────────────────────
-const TARGET_BOXES = 80;
-const BOX_PCT      = Math.round((totalBoxes / TARGET_BOXES) * 100);
-const BOX_REMAINING = TARGET_BOXES - totalBoxes;
+const TARGET_BOXES  = totalBoxes;
+const BOX_PCT       = 100;
+const BOX_REMAINING = 0;
 
 const TIMELINE = [
   { label:"Jorge Jiménez CGC SS — Batman #125",       date:"Jun 5",       days:daysUntil(2026,6,5),   urgency:"critical", cat:"Signing"  },
@@ -355,9 +376,9 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
         </div>
 
         {/* Interface updates only — writers/artists/value have their own dedicated cards below */}
-        <div style={{ display:"flex", flexWrap:"wrap", gap:"3px 22px" }}>
+        <div style={{ display:"flex", flexDirection:"column", gap:4 }}>
           {INTERFACE_UPDATES.map(u => (
-            <div key={u} style={{ fontSize:"0.72rem", color:"var(--muted2)", lineHeight:1.7 }}>→ {u}</div>
+            <div key={u} style={{ fontSize:"1.44rem", color:"var(--muted2)", lineHeight:1.5, fontFamily:"'Crimson Pro',serif" }}>→ {u}</div>
           ))}
         </div>
       </section>
@@ -383,7 +404,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
             <div key={i} className={`progress-tick ${i < totalBoxes ? "filled" : ""}`} style={{ left:`${((i+1)/TARGET_BOXES)*100}%` }} />
           ))}
         </div>
-        <div className="progress-sub">{TARGET_BOXES - totalBoxes} more boxes to go — you're more than halfway there, Roberto.</div>
+        <div className="progress-sub">All {totalBoxes} boxes catalogued — complete ✓ · {COMPLETE_RUNS} runs finished cover-to-cover</div>
       </section>
 
       {/* ── Quick Search ── */}
@@ -520,7 +541,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
           {/* Scanline texture */}
           <div style={{ position:"absolute", inset:0, backgroundImage:"repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,255,80,0.015) 3px,rgba(0,255,80,0.015) 4px)", pointerEvents:"none" }} />
           <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"4px", color:"rgba(100,220,120,0.5)", marginBottom:18 }}>
-            COLLECTION VALUE EST. — MAY 26, 2026
+            COLLECTION VALUE EST. — {LAST_UPDATE_DATE.toUpperCase()}
           </div>
           <div style={{ display:"flex", gap:0, flexWrap:"wrap" }}>
             {/* NM Value */}
