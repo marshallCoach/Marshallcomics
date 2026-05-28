@@ -1,4 +1,8 @@
 import { useState, useEffect } from "react";
+import { DATA3 } from "@/data/data3";
+const _d = DATA3.comics;
+const _b = DATA3.boxes;
+const _LIVE_STATS = `May 28, 2026 — Business Plan v6. ${_d.length.toLocaleString()} comics · ${_b.length} boxes · ${_d.filter(c=>(c.Key||"").toUpperCase()==="YES").length.toLocaleString()} keys · ${_d.filter(c=>(c.Signed||"").toUpperCase()==="YES").length} signed. Critical items first.`;
 
 export const NEXT_STEPS = [
   { urgency:"critical", deadline:"This week",    title:"Submit BP #513 to CGC × JSA — Stan Lee Dynamic Forces COA",               detail:"Stan Lee signed Black Panther #513 — Dynamic Forces COA accepted by CGC. Fill cgccomics.com form, include COA, ship insured. DO NOT press. DO NOT stream until graded. Best single ROI in the collection at $800–1,500 authenticated vs $400 raw.",  category:"CGC"     },
@@ -171,7 +175,7 @@ export default function ActionPlan() {
         )}
       </div>
       <p style={{ fontSize:"0.9rem", color:"var(--muted2)", marginBottom:20 }}>
-        May 26, 2026 — Business Plan v5. 11,776 comics · 74 boxes · 1,462 keys · 54 signed. Critical items first.
+        {_LIVE_STATS}
       </p>
 
       {critical.length > 0 && (
