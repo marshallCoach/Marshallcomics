@@ -48,6 +48,7 @@ const RAW_GROUPS = (() => {
       (c.Publisher || "").trim().toUpperCase(),
       (c.Year || "").trim(),
       String(c.Volume || "").trim(),
+      (c.Arc || "").trim().toLowerCase(),
     ].join("|||");
     if (!map.has(k)) map.set(k, []);
     map.get(k)!.push(c);
