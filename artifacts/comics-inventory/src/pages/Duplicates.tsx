@@ -386,7 +386,7 @@ export default function Duplicates() {
                     <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.8rem" }}>
                       <thead>
                         <tr style={{ background: "var(--surface2)", borderBottom: "1.5px solid var(--border)" }}>
-                          {["#","BOX","VOL","WRITER","ARTIST","CONDITION","KEY","SIGNED","NM","VF","PLANNED","CHECK"].map(h => (
+                          {["#","BOX","VOL","WRITER","ARTIST","ARC / STORY","CONDITION","KEY","SIGNED","NM","VF","PLANNED","CHECK"].map(h => (
                             <th key={h} style={{ padding: "6px 8px", textAlign: h === "PLANNED" || h === "CHECK" ? "center" : "left", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem", letterSpacing: "1.5px", color: h === "PLANNED" ? COPY_META.planned.color : h === "CHECK" ? COPY_META.check.color : "var(--muted)", fontWeight: 400 }}>{h}</th>
                           ))}
                         </tr>
@@ -410,6 +410,7 @@ export default function Duplicates() {
                               <td style={{ padding: "7px 8px", color: "var(--muted2)", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.72rem" }}>{c.Volume ? `V${c.Volume}` : "—"}</td>
                               <td style={{ padding: "7px 8px", color: "var(--text2)", maxWidth: 140, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }} title={c.Writer || ""}>{c.Writer || "—"}</td>
                               <td style={{ padding: "7px 8px", color: "var(--text2)", maxWidth: 140, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }} title={c.Artist || ""}>{c.Artist || "—"}</td>
+                              <td style={{ padding: "7px 8px", color: "#7c3aed", maxWidth: 160, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", fontFamily: "'Crimson Pro',serif", fontSize: "0.78rem", fontStyle: "italic" }} title={c.Arc || ""}>{c.Arc || "—"}</td>
                               <td style={{ padding: "7px 8px", color: "var(--muted2)", whiteSpace: "nowrap" }}>{c.Condition || "—"}</td>
                               <td style={{ padding: "7px 8px" }}>
                                 {isKey && <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.56rem", color: "#d97706", background: "#d9770618", border: "1px solid #d9770640", padding: "2px 5px", borderRadius: 3 }}>KEY</span>}
