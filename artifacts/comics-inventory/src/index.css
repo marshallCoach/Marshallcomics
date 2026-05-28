@@ -557,7 +557,7 @@ body {
   font-family: 'Bebas Neue', sans-serif; font-size: 1rem; letter-spacing: 2.5px; color: var(--red);
   display: block; margin-bottom: 3px;
 }
-.progress-fraction { font-size: 0.82rem; color: var(--muted2); }
+.progress-fraction { font-size: 1.1rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--muted2); }
 .progress-pct { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--red); letter-spacing: 1px; line-height: 1; }
 .progress-track {
   position: relative; height: 10px; background: var(--border);
@@ -572,7 +572,7 @@ body {
   background: var(--border); transform: translateX(-50%);
 }
 .progress-tick.filled { background: rgba(255,255,255,0.5); }
-.progress-sub { font-size: 0.78rem; color: var(--muted2); }
+.progress-sub { font-size: 1.1rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--muted2); }
 
 /* Timeline */
 .timeline-grid {
