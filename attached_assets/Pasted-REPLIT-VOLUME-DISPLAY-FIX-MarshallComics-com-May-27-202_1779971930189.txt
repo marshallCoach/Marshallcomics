@@ -1,0 +1,137 @@
+REPLIT VOLUME DISPLAY FIX
+=========================
+MarshallComics.com — May 27, 2026
+
+THE PROBLEM (visible in screenshots):
+--------------------------------------
+The "Every Book" view is showing "All-New Ultimates (Fiffe)" as a SEPARATE title 
+from "All-New Ultimates", because the app is appending volume or writer data into 
+the title field at the display layer.
+
+Michel Fiffe wrote All-New Ultimates Vol 1. He should NOT appear in the title string.
+The title is "All-New Ultimates" — Vol 1 — for all issues.
+
+THE FIX — 3 changes in Replit:
+-------------------------------
+
+1. TITLE DISPLAY — never append writer name to title
+   In your book list component, the title field should ONLY display comic.title
+   Do NOT concatenate comic.writer or any other field into the title display.
+   
+   WRONG:  title = comic.title + (comic.writer ? ` (${comic.writer})` : '')
+   RIGHT:  title = comic.title
+
+2. VOLUME DISPLAY — show volume as a separate badge, not merged into title
+   The "VOL" column in the screenshots is correct — it shows volume as a number.
+   Make sure your data fetch is NOT merging vol into the title string.
+   
+   In the JSON: each comic has:
+     { "title": "All-New Ultimates", "issue": "#5", "volume": 1, ... }
+   
+   Display them separately:
+     <Title>{comic.title}</Title>
+     <Issue>{comic.issue}</Issue>
+     <VolBadge>Vol {comic.volume}</VolBadge>
+
+3. GROUPING LOGIC — when grouping by series, group on (title + volume) NOT just title
+   This prevents Vol 1 and Vol 2 of the same title appearing as one run.
+   
+   Series key: `${comic.title} Vol ${comic.volume}`
+   Display name: comic.title (with a "Vol 2" badge when volume > 1)
+
+AGE OF REVELATION — TITLE STRUCTURE:
+--------------------------------------
+These are all SEPARATE titled series that happen to share the AoR crossover arc.
+Each should appear under its own title, grouped by the "Age of Revelation" crossover.
+
+Correct title entries in the JSON:
+  - "X-Men: Age of Revelation — Overture" #1
+  - "Longshot: Age of Revelation" #1
+  - "Cloak and Dagger: Age of Revelation" #2, #3
+  - "Expatriate X-Men: Age of Revelation" #2
+  - "Unbreakable X-Men: Age of Revelation" #1, #2, #3
+  - "X-Vengers: Age of Revelation" #1, #2
+  - "Amazing X-Men: Age of Revelation" #1
+  - "World of Revelation" #1
+
+In the Crossover/Arc field: all say "Age of Revelation"
+Use this arc field to group them in the CROSSOVER or EVENTS view,
+NOT by title (since each has a different title).
+
+JSON DATA FIELDS:
+-----------------
+The compact JSON (marshall_comics_compact.json) has:
+  comic.title      — clean title, no writer names, no (Vol X) suffix
+  comic.issue      — issue number
+  comic.volume     — integer (1, 2, 3...)  
+  comic.year       — 4-digit year string
+  comic.writer     — writer(s)
+  comic.artist     — artist(s)
+  comic.crossover  — crossover event name if applicable
+  comic.isKey      — boolean
+  comic.keyWhy     — string describing why it's a key
+  comic.isSigned   — boolean
+  comic.signedBy   — signer name(s)
+  comic.box        — box number (integer)
+  comic.era        — Golden/Silver/Bronze/Copper/Modern
+  comic.publisher  — Marvel/DC/Image/etc
+
+RUNS VIEW — correct grouping:
+------------------------------
+When building the "Runs" tab, group by:
+  Key: title + volume number
+  Sort: by issue number (numeric, not alphabetic)
+  Label: show "Vol 2" badge only when volume > 1
+
+This prevents "Moon Knight Vol 7 Bendis" and "Moon Knight Vol 9 MacKay" 
+from appearing as a single run, and prevents issues appearing out of order.
+
+FILES UPDATED:
+--------------
+  marshall_comics_compact.json — 95KB, 80 boxes, 12,368 comics, 1,554 keys
+  marshall_comics_data.json    — full data with all comic details
+  storage_layout.json          — storage unit assignments
+
+All files at: /mnt/user-data/outputs/
+
+
+
+ADDITIONAL REPLIT FIX — LEGACY NUMBER DISPLAY
+==============================================
+May 27, 2026
+
+THE PROBLEM:
+Cable #159 — Replit was showing the ROW NUMBER (5809) instead of the issue number.
+The data in the spreadsheet is: "#10 [Legacy 159]" in the issue field.
+Replit appears to be reading the array index / row position instead of the issue field value.
+
+CONFIRMED: The data is CORRECT. Cable Vol 4 (2017) #10 = Legacy issue 159.
+The issue field string is: "#10 [Legacy 159]"
+
+THE FIX:
+1. Make sure you're reading comic.issue from the JSON, not the array index
+2. The issue field may look like "#10 [Legacy 159]" — display the WHOLE string
+   OR parse it to show "#10" with a small "(Legacy 159)" badge
+   
+   Correct display: "#10" with optional legacy badge
+   WRONG: showing "5809" (the row number from the source spreadsheet)
+
+PARSING LEGACY NUMBERS:
+If you want to display legacy numbers as badges, parse the issue string:
+  const match = issue.match(/#(\d+)\s*\[Legacy\s*(\d+)\]/);
+  if (match) {
+    issueNum = '#' + match[1];
+    legacyNum = 'Legacy ' + match[2];
+  }
+
+ALSO CONFIRMED:
+- "Elektra: The Hand" — already correctly named in the database (rows 10107-10111)
+- "Scarlet" (Bendis/Maleev, Image) = 1 T — CORRECT
+- "Scarlett" (Kelly Thompson, Image 2024) = 2 T's — CORRECT, DIFFERENT SERIES
+  The Scarlet data issue was that rows 4863-4866 had wrong writer (Thompson instead of Bendis). Fixed.
+- A-Force #1 2016 writer = G. Willow Wilson only. Fixed.
+- Storm #8-11 legacy numbers now correctly stored as:
+  #8 [Legacy 19], #9 [Legacy 20], #10 [Legacy 21], #11 [Legacy 22]
+- Captain America #264 signer confirmed: MIKE ZECK (not Grek/Schreck)
+- Longshots (not Longshot) — corrected in all entries
+- Miles Morales in Box 1: 2023, Cody Ziglar — corrected

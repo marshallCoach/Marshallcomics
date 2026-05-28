@@ -5,6 +5,12 @@ import { pubColors } from "@/utils/coverThumbnails";
 const comics = DATA3.comics;
 const boxes  = DATA3.boxes;
 
+function parseIssueParts(issue: string): { main: string; legacy: string | null } {
+  const m = String(issue || "").match(/^(.*?)\s*\[Legacy\s*#?(\d+)\]\s*$/i);
+  if (m) return { main: m[1].trim() || issue, legacy: `Legacy #${m[2]}` };
+  return { main: issue, legacy: null };
+}
+
 function parseIssueNum(s: string): number {
   const n = parseFloat(String(s || "").replace(/[^0-9.]/g, ""));
   return isNaN(n) ? 9999 : n;
@@ -606,7 +612,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                           fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.75rem",
                           letterSpacing: "0.5px", color: isKey ? "#8a6000" : "var(--text2)",
                         }}>
-                          #{c.Issue}
+                          {(()=>{const ip=parseIssueParts(c.Issue);return<>#{ip.main}{ip.legacy&&<span style={{fontSize:"0.55em",opacity:0.65,marginLeft:2}}>({ip.legacy})</span>}</>;})()}
                           {isKey    && <span style={{ color: "#c8102e",  marginLeft: 3 }}>★</span>}
                           {isSigned && <span style={{ color: "#22c55e",  marginLeft: 2 }}>✍</span>}
                         </div>
@@ -623,7 +629,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                         <div key={i} style={{ fontSize: "0.75rem", color: "var(--text2)",
                           lineHeight: 1.4, marginBottom: 5, paddingLeft: 8,
                           borderLeft: "2px solid #d4a800" }}>
-                          <span style={{ color: "#8a6000", fontWeight: 600 }}>#{c.Issue}</span> — {c.Key_Reason.slice(0, 120)}
+                          <span style={{ color: "#8a6000", fontWeight: 600 }}>{(()=>{const ip=parseIssueParts(c.Issue);return<>#{ip.main}{ip.legacy&&<span style={{fontSize:"0.8em",fontWeight:400,opacity:0.7,marginLeft:3}}>({ip.legacy})</span>}</>;})()}</span> — {c.Key_Reason.slice(0, 120)}
                         </div>
                       ))}
                     </div>
@@ -698,7 +704,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
 
                       {/* Issue + Vol + Year */}
                       <div style={{ fontSize: "0.88rem", color: "var(--muted2)" }}>
-                        {c.Issue}
+                        {(()=>{const ip=parseIssueParts(c.Issue);return<>{ip.main}{ip.legacy&&<span style={{fontSize:"0.62rem",fontFamily:"'Bebas Neue',sans-serif",letterSpacing:"1px",background:"#e8f0fe",color:"#1d4ed8",borderRadius:3,padding:"1px 5px",marginLeft:4}}>{ip.legacy}</span>}</>;})()}
                         {c.Volume && c.Volume !== "1" ? ` · Vol ${c.Volume}` : ""}
                         {c.Year ? ` · ${c.Year}` : ""}
                       </div>
@@ -850,7 +856,7 @@ function RunBlock({ group }: { group: TitleGroup }) {
                   fontFamily: "'Bebas Neue',sans-serif", letterSpacing: "0.5px",
                   color: isKey ? "#8a6000" : "var(--text2)",
                 }}>
-                  #{c.Issue}
+                  {(()=>{const ip=parseIssueParts(c.Issue);return<>#{ip.main}{ip.legacy&&<span style={{fontSize:"0.55em",opacity:0.65,marginLeft:2}}>({ip.legacy})</span>}</>;})()}
                   {isKey    && <span style={{ color: "#c8102e", marginLeft: 3 }}>★</span>}
                   {isSigned && <span style={{ color: "#22c55e", marginLeft: 2 }}>✍</span>}
                 </div>
