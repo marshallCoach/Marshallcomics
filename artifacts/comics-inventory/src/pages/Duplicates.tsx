@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback, useRef } from "react";
+import { useState, useMemo, useCallback, useRef, useEffect } from "react";
 import { DATA3 } from "@/data/data3";
 import type { Comic } from "@/data/data3";
 
@@ -146,6 +146,24 @@ export default function Duplicates() {
     saveMap(LS_COPY_DECISIONS, emptyMap);
     saveMap(LS_NOTES, emptyNotes);
   }, []);
+
+  // Auto-hide a group when it has a note AND every copy is classified
+  useEffect(() => {
+    setHidden(prev => {
+      const next = new Set(prev);
+      let changed = false;
+      for (const gr of RAW_GROUPS) {
+        if (next.has(gr.key)) continue;
+        const hasNote = !!(notes.get(gr.key) || "").trim();
+        if (!hasNote) continue;
+        const allClassified = gr.copies.every((_, ci) => copyDecisions.has(ck(gr.key, ci)));
+        if (allClassified) { next.add(gr.key); changed = true; }
+      }
+      if (!changed) return prev;
+      saveSet(LS_HIDDEN, next);
+      return next;
+    });
+  }, [notes, copyDecisions]);
 
   const filtered = useMemo(() => {
     let g = RAW_GROUPS;
