@@ -134,7 +134,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
 
       {/* Intro label */}
       <div style={{ marginBottom: 14, fontFamily: "'Bebas Neue',sans-serif",
-        fontSize: "0.75rem", letterSpacing: "2px", color: "var(--muted)" }}>
+        fontSize: "1.1rem", letterSpacing: "2px", color: "var(--muted)" }}>
         SELECT A BOX TO VISUALIZE ITS CONTENTS
       </div>
 
@@ -179,15 +179,15 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                     borderBottom:`2px solid ${sec.color}22`, paddingBottom:6,
                   }}>
                     <span style={{
-                      fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem",
+                      fontFamily:"'Bebas Neue',sans-serif", fontSize: "1.1rem",
                       letterSpacing:"3px", color:sec.color,
                     }}>{sec.label}</span>
-                    <span style={{ fontSize:"0.68rem", color:"var(--muted2)", fontFamily:"'Crimson Pro',serif" }}>
+                    <span style={{ fontSize: "1.1rem", color:"var(--muted2)", fontFamily:"'Crimson Pro',serif" }}>
                       {sec.subtitle}
                     </span>
                     <span style={{
                       marginLeft:"auto", fontFamily:"'Bebas Neue',sans-serif",
-                      fontSize:"0.65rem", letterSpacing:"1.5px", color:"var(--muted)",
+                      fontSize: "1.1rem", letterSpacing:"1.5px", color:"var(--muted)",
                     }}>
                       {secComics.toLocaleString()} books · {secKeys} keys
                     </span>
@@ -225,8 +225,8 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                         >
                           <div className="box-tile-count">{b.Comics}</div>
                           <div className="box-tile-num">{b.Num.replace("BOX ", "Box ")}</div>
-                          {Number(b.Keys)   > 0 && <div className="box-tile-keys">{b.Keys}k</div>}
-                          {Number(b.Signed) > 0 && <div className="box-tile-sgn">{b.Signed}s</div>}
+                          {Number(b.Keys)   > 0 && <div className="box-tile-keys">{b.Keys} K</div>}
+                          {Number(b.Signed) > 0 && <div className="box-tile-sgn">{b.Signed} S</div>}
                         </div>
                       );
                     })}
@@ -251,7 +251,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
           pointerEvents:"none",
         }}>
           <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.15rem", color:"var(--red)", letterSpacing:"2px", lineHeight:1 }}>{hoveredBoxData.Num}</div>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", color:"var(--muted2)", letterSpacing:"1px", marginBottom:10 }}>
+          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize: "1.1rem", color:"var(--muted2)", letterSpacing:"1px", marginBottom:10 }}>
             {hoveredBoxData.Label.replace(/^Box \d+ — /i,"")}
           </div>
           <div style={{ display:"flex", gap:20, marginBottom:10 }}>
@@ -262,21 +262,21 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
             ]).map(s => (
               <div key={s.lbl} style={{ textAlign:"center" }}>
                 <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.3rem", color:"var(--red)", lineHeight:1 }}>{s.val}</div>
-                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.55rem", letterSpacing:"2px", color:"var(--muted)", marginTop:1 }}>{s.lbl}</div>
+                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize: "1.1rem", letterSpacing:"2px", color:"var(--muted)", marginTop:1 }}>{s.lbl}</div>
               </div>
             ))}
           </div>
           {hoveredBoxData.Notes && (
-            <div style={{ fontSize:"0.78rem", color:"var(--muted2)", lineHeight:1.5, borderTop:"1px solid var(--border)", paddingTop:8 }}>
+            <div style={{ fontSize: "1.1rem", color:"var(--muted2)", lineHeight:1.5, borderTop:"1px solid var(--border)", paddingTop:8 }}>
               {hoveredBoxData.Notes}
             </div>
           )}
           {hoveredBoxData.YearRange && (
-            <div style={{ fontSize:"0.65rem", color:"var(--muted)", marginTop:6 }}>
+            <div style={{ fontSize: "1.1rem", color:"var(--muted)", marginTop:6 }}>
               {hoveredBoxData.YearRange}
             </div>
           )}
-          <div style={{ fontSize:"0.6rem", color:"var(--muted)", marginTop:8, fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px", opacity:0.65 }}>
+          <div style={{ fontSize: "1.1rem", color:"var(--muted)", marginTop:8, fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px", opacity:0.65 }}>
             CLICK TO EXPLORE →
           </div>
         </div>
@@ -285,7 +285,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
       {/* Empty state */}
       {!selectedBox && (
         <div style={{ textAlign: "center", color: "var(--muted)", padding: "60px 20px",
-          fontFamily: "'Bebas Neue',sans-serif", fontSize: "1rem", letterSpacing: "2px" }}>
+          fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem", letterSpacing: "2px" }}>
           TAP ANY BOX ABOVE TO SEE ITS CONTENTS
         </div>
       )}
@@ -302,10 +302,10 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                 color: "var(--red)", letterSpacing: "2px", lineHeight: 1 }}>
                 {selectedBoxData.Num}
               </div>
-              <div style={{ fontSize: "0.92rem", fontWeight: 600, color: "var(--brown-light)", marginTop: 3 }}>
+              <div style={{ fontSize: "1.1rem", fontWeight: 600, color: "var(--brown-light)", marginTop: 3 }}>
                 {selectedBoxData.Label.replace(/^Box \d+ — /i, "")}
               </div>
-              <div style={{ fontSize: "0.78rem", color: "var(--muted)", marginTop: 4 }}>
+              <div style={{ fontSize: "1.1rem", color: "var(--muted)", marginTop: 4 }}>
                 {selectedBoxData.YearRange}
               </div>
             </div>
@@ -319,7 +319,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                 <div key={s.lbl} style={{ textAlign: "center" }}>
                   <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.3rem",
                     color: "var(--red)", letterSpacing: "1px", lineHeight: 1 }}>{s.val}</div>
-                  <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem",
+                  <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem",
                     letterSpacing: "1.5px", color: "var(--muted)", marginTop: 2 }}>{s.lbl}</div>
                 </div>
               ))}
@@ -334,7 +334,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                 color: view === v ? "#fff" : "var(--muted2)",
                 border: view === v ? "1.5px solid var(--red)" : "1.5px solid var(--border)",
                 borderRadius: 5, padding: "6px 18px", cursor: "pointer",
-                fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.78rem", letterSpacing: "1.5px",
+                fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem", letterSpacing: "1.5px",
                 transition: "all 0.15s",
               }}>
                 {v === "visual" ? "Visual Box" : v === "runs" ? "By Run" : `Comics (${boxComics.length})`}
@@ -347,7 +347,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                 color: sorted ? "#a78bfa" : "var(--muted2)",
                 border: sorted ? "1.5px solid #a78bfa" : "1.5px solid var(--border)",
                 borderRadius: 5, padding: "6px 18px", cursor: "pointer",
-                fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.78rem", letterSpacing: "1.5px",
+                fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem", letterSpacing: "1.5px",
                 transition: "all 0.15s",
                 marginLeft: "auto",
               }}>
@@ -359,7 +359,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
           {/* Title index — ABOVE the visual, sorted view only */}
           {view === "visual" && sorted && titleGroups.length > 0 && (
             <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 10, padding: "8px 10px", background: "var(--surface2)", borderRadius: 6, border: "1px solid var(--border)" }}>
-              <div style={{ width:"100%", fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem", letterSpacing:"2px", color:"var(--muted)", marginBottom:3 }}>
+              <div style={{ width:"100%", fontFamily:"'Bebas Neue',sans-serif", fontSize: "1.1rem", letterSpacing:"2px", color:"var(--muted)", marginBottom:3 }}>
                 CLICK A TITLE TO HIGHLIGHT — {titleGroups.length} TITLES
               </div>
               {titleGroups.map((g, i) => (
@@ -369,7 +369,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                     background: selectedTitle === g.title ? g.color : "var(--surface)",
                     border: `1.5px solid ${g.color}`,
                     borderRadius: 4, padding: "3px 10px", cursor: "pointer",
-                    fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.65rem",
+                    fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem",
                     letterSpacing: "0.5px",
                     color: selectedTitle === g.title ? "#fff" : g.color,
                     transition: "all 0.12s",
@@ -389,7 +389,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
               gap: 16, alignItems: "start" }}>
 
               <div>
-                <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.68rem",
+                <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem",
                   letterSpacing: "2px", color: "var(--muted)", marginBottom: 8 }}>
                   {sorted
                     ? `${titleGroups.length} TITLES · SORTED ALPHABETICALLY · CLICK A GROUP TO INSPECT`
@@ -409,7 +409,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                   boxShadow: "0 4px 16px rgba(0,0,0,0.12)",
                 }}>
                   <div style={{ position: "absolute", top: -18, left: "50%", transform: "translateX(-50%)",
-                    fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.65rem",
+                    fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem",
                     letterSpacing: "3px", color: "#666" }}>
                     {selectedBoxData.Num} · {boxComics.length} COMICS
                   </div>
@@ -432,7 +432,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                             <div style={{
                               writingMode: "vertical-rl",
                               transform: "rotate(180deg)",
-                              fontSize: "0.6rem",
+                              fontSize: "1.1rem",
                               fontFamily: "'Bebas Neue',sans-serif",
                               letterSpacing: "1px",
                               color: isActive ? group.color : "#888",
@@ -473,7 +473,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                               })}
                             </div>
                             {/* Count badge */}
-                            <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.55rem",
+                            <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem",
                               letterSpacing: "0.5px", color: isActive ? group.color : "#555",
                               marginTop: 2, transition: "color 0.15s" }}>
                               {group.issues.length}
@@ -523,7 +523,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
 
                 {/* Legend */}
                 <div style={{ display: "flex", gap: 14, flexWrap: "wrap", marginTop: 10,
-                  fontSize: "0.7rem", fontFamily: "'Bebas Neue',sans-serif",
+                  fontSize: "1.1rem", fontFamily: "'Bebas Neue',sans-serif",
                   letterSpacing: "1px", color: "var(--muted)" }}>
                   <span>
                     <span style={{ display:"inline-block", width:5, height:14, background:"#888",
@@ -547,14 +547,14 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                 <div style={{ background: "var(--surface)", border: "1.5px solid var(--border)",
                   borderRadius: 8, padding: "16px", position: "sticky", top: 170 }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 10 }}>
-                    <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.6rem",
+                    <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem",
                       letterSpacing: "2px", color: selectedTitleGroup.color }}>TITLE DETAIL</div>
                     <button onClick={() => setSelectedTitle(null)} style={{
                       background: "none", border: "none", cursor: "pointer",
-                      color: "var(--muted)", fontSize: "1rem", lineHeight: 1, padding: 0 }}>✕</button>
+                      color: "var(--muted)", fontSize: "1.1rem", lineHeight: 1, padding: 0 }}>✕</button>
                   </div>
 
-                  <div style={{ fontSize: "1rem", fontWeight: 700, color: "var(--brown-light)",
+                  <div style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--brown-light)",
                     lineHeight: 1.3, marginBottom: 8, borderLeft: `3px solid ${selectedTitleGroup.color}`,
                     paddingLeft: 10 }}>
                     {selectedTitleGroup.title}
@@ -569,7 +569,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                       <div key={s.lbl} style={{ textAlign: "center" }}>
                         <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.2rem",
                           color: "var(--red)", lineHeight: 1 }}>{s.val}</div>
-                        <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.55rem",
+                        <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem",
                           letterSpacing: "1.5px", color: "var(--muted)", marginTop: 2 }}>{s.lbl}</div>
                       </div>
                     ))}
@@ -586,8 +586,8 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                           { l: "Artist",    v: first.Artist },
                           { l: "Era",       v: first.Era },
                         ].filter(r => r.v).map(r => (
-                          <div key={r.l} style={{ display: "flex", gap: 8, marginBottom: 3, fontSize: "0.78rem" }}>
-                            <span style={{ color: "var(--muted)", minWidth: 60, flexShrink: 0, fontSize: "0.7rem" }}>{r.l}</span>
+                          <div key={r.l} style={{ display: "flex", gap: 8, marginBottom: 3, fontSize: "1.1rem" }}>
+                            <span style={{ color: "var(--muted)", minWidth: 60, flexShrink: 0, fontSize: "1.1rem" }}>{r.l}</span>
                             <span style={{ color: "var(--text2)", lineHeight: 1.4 }}>{r.v.slice(0, 80)}</span>
                           </div>
                         ))}
@@ -596,7 +596,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                   })()}
 
                   {/* Issue list */}
-                  <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.6rem",
+                  <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem",
                     letterSpacing: "1.5px", color: "var(--muted)", marginBottom: 6 }}>
                     ISSUES IN THIS BOX
                   </div>
@@ -609,7 +609,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                           background: isKey ? "#fff8e0" : "var(--surface2)",
                           border: `1.5px solid ${isKey ? "#d4a800" : "var(--border)"}`,
                           borderRadius: 4, padding: "3px 8px",
-                          fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.75rem",
+                          fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem",
                           letterSpacing: "0.5px", color: isKey ? "#8a6000" : "var(--text2)",
                         }}>
                           {(()=>{const ip=parseIssueParts(c.Issue);return<>{ip.main}{ip.legacy&&<span style={{fontSize:"0.55em",opacity:0.65,marginLeft:2}}>({ip.legacy})</span>}</>;})()}
@@ -623,10 +623,10 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                   {/* Key reasons */}
                   {selectedTitleGroup.issues.some(c => c.Key_Reason) && (
                     <div style={{ marginTop: 12 }}>
-                      <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.6rem",
+                      <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem",
                         letterSpacing: "1.5px", color: "var(--muted)", marginBottom: 6 }}>KEY NOTES</div>
                       {selectedTitleGroup.issues.filter(c => c.Key_Reason).map((c, i) => (
-                        <div key={i} style={{ fontSize: "0.75rem", color: "var(--text2)",
+                        <div key={i} style={{ fontSize: "1.1rem", color: "var(--text2)",
                           lineHeight: 1.4, marginBottom: 5, paddingLeft: 8,
                           borderLeft: "2px solid #d4a800" }}>
                           <span style={{ color: "#8a6000", fontWeight: 600 }}>{(()=>{const ip=parseIssueParts(c.Issue);return<>{ip.main}{ip.legacy&&<span style={{fontSize:"0.8em",fontWeight:400,opacity:0.7,marginLeft:3}}>({ip.legacy})</span>}</>;})()}</span> — {c.Key_Reason.slice(0, 120)}
@@ -642,7 +642,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
           {/* ── RUNS VIEW ───────────────────────────────────────────────────── */}
           {view === "runs" && (
             <div>
-              <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.7rem",
+              <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem",
                 letterSpacing: "2px", color: "var(--muted)", marginBottom: 12 }}>
                 {titleGroups.length} TITLE{titleGroups.length !== 1 ? "S" : ""} IN THIS BOX — ALPHABETICAL
               </div>
@@ -657,7 +657,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
           {/* ── COMICS LIST VIEW ─────────────────────────────────────────────── */}
           {view === "comics" && (
             <div>
-              <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.7rem",
+              <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem",
                 letterSpacing: "2px", color: "var(--muted)", marginBottom: 12 }}>
                 {boxComics.length} COMICS — BOX ORDER
               </div>
@@ -686,37 +686,37 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                       {/* Top row: entry # + badges */}
                       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                         <span style={{
-                          fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem",
+                          fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem",
                           letterSpacing: "1px", color: "var(--muted)",
                         }}>#{c.Entry}</span>
                         <div style={{ display: "flex", gap: 4 }}>
-                          {isKey    && <span className="badge bkey"  style={{ fontSize: "0.58rem" }}>KEY</span>}
-                          {isSigned && <span className="badge bgold" style={{ fontSize: "0.58rem" }}>SIGNED</span>}
-                          {c.Platform && <span className="badge bb"  style={{ fontSize: "0.58rem" }}>{c.Platform}</span>}
+                          {isKey    && <span className="badge bkey"  style={{ fontSize: "1.1rem" }}>KEY</span>}
+                          {isSigned && <span className="badge bgold" style={{ fontSize: "1.1rem" }}>SIGNED</span>}
+                          {c.Platform && <span className="badge bb"  style={{ fontSize: "1.1rem" }}>{c.Platform}</span>}
                         </div>
                       </div>
 
                       {/* Title */}
                       <div style={{
                         fontFamily: "'Crimson Pro',serif", fontWeight: 700,
-                        fontSize: "1rem", color: "var(--brown-light)", lineHeight: 1.25,
+                        fontSize: "1.1rem", color: "var(--brown-light)", lineHeight: 1.25,
                       }}>{c.Title}</div>
 
                       {/* Issue + Vol + Year */}
-                      <div style={{ fontSize: "0.88rem", color: "var(--muted2)" }}>
-                        {(()=>{const ip=parseIssueParts(c.Issue);return<>{ip.main}{ip.legacy&&<span style={{fontSize:"0.62rem",fontFamily:"'Bebas Neue',sans-serif",letterSpacing:"1px",background:"#e8f0fe",color:"#1d4ed8",borderRadius:3,padding:"1px 5px",marginLeft:4}}>{ip.legacy}</span>}</>;})()}
+                      <div style={{ fontSize: "1.1rem", color: "var(--muted2)" }}>
+                        {(()=>{const ip=parseIssueParts(c.Issue);return<>{ip.main}{ip.legacy&&<span style={{fontSize: "1.1rem",fontFamily:"'Bebas Neue',sans-serif",letterSpacing:"1px",background:"#e8f0fe",color:"#1d4ed8",borderRadius:3,padding:"1px 5px",marginLeft:4}}>{ip.legacy}</span>}</>;})()}
                         {c.Volume && c.Volume !== "1" ? ` · Vol ${c.Volume}` : ""}
                         {c.Year ? ` · ${c.Year}` : ""}
                       </div>
 
                       {/* Publisher */}
                       {c.Publisher && (
-                        <div style={{ fontSize: "0.78rem", color: "var(--muted)" }}>{c.Publisher}</div>
+                        <div style={{ fontSize: "1.1rem", color: "var(--muted)" }}>{c.Publisher}</div>
                       )}
 
                       {/* Writer / Artist */}
                       {(c.Writer || c.Artist) && (
-                        <div style={{ fontSize: "0.78rem", color: "var(--muted2)", lineHeight: 1.4 }}>
+                        <div style={{ fontSize: "1.1rem", color: "var(--muted2)", lineHeight: 1.4 }}>
                           {c.Writer && <span><span style={{ color: "var(--muted)" }}>W:</span> {c.Writer}</span>}
                           {c.Writer && c.Artist && c.Artist !== c.Writer && <span style={{ color: "var(--muted)", margin: "0 4px" }}>·</span>}
                           {c.Artist && c.Artist !== c.Writer && <span><span style={{ color: "var(--muted)" }}>A:</span> {c.Artist}</span>}
@@ -726,7 +726,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                       {/* Key reason */}
                       {isKey && c.Key_Reason && (
                         <div style={{
-                          fontSize: "0.8rem", color: "#7a5500",
+                          fontSize: "1.1rem", color: "#7a5500",
                           background: "#fff8e0", borderRadius: 4,
                           padding: "5px 8px", lineHeight: 1.4, marginTop: 2,
                         }}>{c.Key_Reason.slice(0, 130)}</div>
@@ -734,14 +734,14 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
 
                       {/* Signed by */}
                       {isSigned && c.Signed_By && (
-                        <div style={{ fontSize: "0.78rem", color: "#16a34a" }}>
+                        <div style={{ fontSize: "1.1rem", color: "#16a34a" }}>
                           ✍ {c.Signed_By}{c.Personal ? ` — "${c.Personal}"` : ""}
                         </div>
                       )}
 
                       {/* Values */}
                       {(nmVal || vfVal) && (
-                        <div style={{ display: "flex", gap: 10, fontSize: "0.8rem", marginTop: 2 }}>
+                        <div style={{ display: "flex", gap: 10, fontSize: "1.1rem", marginTop: 2 }}>
                           {nmVal && <span style={{ color: "var(--green-text)" }}>NM <strong>{nmVal}</strong></span>}
                           {vfVal && <span style={{ color: "var(--muted2)" }}>VF <strong>{vfVal}</strong></span>}
                         </div>
@@ -770,22 +770,22 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
           minWidth:160,
         }}>
           <div style={{
-            fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.78rem",
+            fontFamily:"'Bebas Neue',sans-serif", fontSize: "1.1rem",
             letterSpacing:"1.5px", color:"var(--red)", marginBottom:3,
           }}>
             {hoveredSpine.title}
           </div>
           <div style={{
-            fontFamily:"'Crimson Pro',serif", fontSize:"0.85rem",
+            fontFamily:"'Crimson Pro',serif", fontSize: "1.1rem",
             color:"var(--text2)", display:"flex", alignItems:"center", gap:6, flexWrap:"wrap",
           }}>
             <span style={{color:"var(--muted)"}}>#{hoveredSpine.issue}</span>
-            {hoveredSpine.year && <span style={{color:"var(--muted2)", fontSize:"0.78rem"}}>{hoveredSpine.year}</span>}
+            {hoveredSpine.year && <span style={{color:"var(--muted2)", fontSize: "1.1rem"}}>{hoveredSpine.year}</span>}
             {hoveredSpine.isKey && (
               <span style={{
                 background:"#fff8e0", color:"#8a6000",
                 border:"1px solid #d4a800", borderRadius:3,
-                padding:"1px 6px", fontSize:"0.62rem",
+                padding:"1px 6px", fontSize: "1.1rem",
                 fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px",
               }}>★ KEY</span>
             )}
@@ -793,13 +793,13 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
               <span style={{
                 background:"#f0faf0", color:"#1a7a1a",
                 border:"1px solid #c8e6c8", borderRadius:3,
-                padding:"1px 6px", fontSize:"0.62rem",
+                padding:"1px 6px", fontSize: "1.1rem",
                 fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px",
               }}>✍ SGD</span>
             )}
           </div>
           {hoveredSpine.publisher && (
-            <div style={{ fontSize:"0.68rem", color:"var(--muted)", marginTop:4, fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>
+            <div style={{ fontSize: "1.1rem", color:"var(--muted)", marginTop:4, fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>
               {hoveredSpine.publisher}
               {hoveredSpine.writer && <span style={{ marginLeft:6, color:"var(--muted2)" }}>{hoveredSpine.writer}</span>}
             </div>
@@ -820,26 +820,26 @@ function RunBlock({ group }: { group: TitleGroup }) {
         display: "flex", alignItems: "center", gap: 10, padding: "10px 14px",
         cursor: "pointer" }}>
         <div style={{ flex: 1 }}>
-          <span style={{ fontSize: "0.9rem", fontWeight: 600, color: "var(--brown-light)" }}>{group.title}</span>
-          <span style={{ fontSize: "0.78rem", color: "var(--muted)", marginLeft: 8 }}>
+          <span style={{ fontSize: "1.1rem", fontWeight: 600, color: "var(--brown-light)" }}>{group.title}</span>
+          <span style={{ fontSize: "1.1rem", color: "var(--muted)", marginLeft: 8 }}>
             {group.issues.length} issue{group.issues.length !== 1 ? "s" : ""}
           </span>
         </div>
         <div style={{ display: "flex", gap: 5 }}>
           {group.keyCount > 0 && (
             <span style={{ background: "#fff8e0", color: "#8a6000", border: "1px solid #d4a800",
-              borderRadius: 3, padding: "1px 6px", fontSize: "0.62rem",
+              borderRadius: 3, padding: "1px 6px", fontSize: "1.1rem",
               fontFamily: "'Bebas Neue',sans-serif", letterSpacing: "1px" }}>
               {group.keyCount} KEY
             </span>
           )}
           {group.signedCount > 0 && (
             <span style={{ background: "var(--green-bg)", color: "var(--green-text)", border: "1px solid #c8e6c8",
-              borderRadius: 3, padding: "1px 6px", fontSize: "0.62rem",
+              borderRadius: 3, padding: "1px 6px", fontSize: "1.1rem",
               fontFamily: "'Bebas Neue',sans-serif", letterSpacing: "1px" }}>SGD</span>
           )}
         </div>
-        <span style={{ color: "var(--muted)", fontSize: "0.75rem", flexShrink: 0 }}>{open ? "▲" : "▼"}</span>
+        <span style={{ color: "var(--muted)", fontSize: "1.1rem", flexShrink: 0 }}>{open ? "▲" : "▼"}</span>
       </div>
 
       {open && (
@@ -852,7 +852,7 @@ function RunBlock({ group }: { group: TitleGroup }) {
                 <div key={i} title={c.Key_Reason || c.Arc} style={{
                   background: isKey ? "#fff8e0" : "var(--surface2)",
                   border: isKey ? "1.5px solid #d4a800" : "1.5px solid var(--border)",
-                  borderRadius: 4, padding: "3px 8px", fontSize: "0.78rem",
+                  borderRadius: 4, padding: "3px 8px", fontSize: "1.1rem",
                   fontFamily: "'Bebas Neue',sans-serif", letterSpacing: "0.5px",
                   color: isKey ? "#8a6000" : "var(--text2)",
                 }}>
