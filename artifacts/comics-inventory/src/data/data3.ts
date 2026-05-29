@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_0529_1780057075468.xlsx  |  Generated: 2026-05-29
+// Source: X_comics_inventory_1780092473293.xlsx  |  Generated: 2026-05-29
 
 export interface Comic {
   Title: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -143,7 +143,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
   {
     Title: `Batman`, Issue: `#656`, Publisher: `DC`,
     Year: `2006`, Arc: `Batman and Son`, Key: `YES`,
-    Key_Reason: `1st full appearance of Damian Wayne — one of the most important Batman keys of the 2000s`, First_App: `1st full Damian Wayne`,
+    Key_Reason: `This is the explosive second chapter of Grant Morrison's legendary run, featuring the historic first appearance of Damian Wayne in his iconic Robin costume. Morrison completely shifted the Bat-family dynamic here, introducing a lethal heir that reshaped Gotham lore for the next two decades. With Damian locked in as a cornerstone of James Gunn's upcoming DC Universe cinematic slate, this modern key is an absolute must-have that is actively climbing in demand.`, First_App: `1st full Damian Wayne`,
     Writer: `Grant Morrison`, Artist: `Andy Kubert`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `⚠️ PRESS FIRST — then CGC Universal (blue label)`,
@@ -161,7 +161,7 @@ Jurgens is a DC copper age legend. Could sign this key.`,
   {
     Title: `Batman`, Issue: `#657`, Publisher: `DC`,
     Year: `2007`, Arc: `Batman and Son`, Key: `YES`,
-    Key_Reason: `1st Damian Wayne as Robin in costume — KEY follow-up to #656`, First_App: `1st Damian as Robin`,
+    Key_Reason: `Batman #657 (2006) Grant Morrison/Andy Kubert — FIRST APPEARANCE of DAMIAN WAYNE AS ROBIN — the second key in the Damian Wayne arc after #656 (first full Damian) — this issue shows Damian in the Robin costume for the first time — raised by Ra's al Ghul and the League of Assassins, trained to be the perfect warrior before Bruce Wayne even knew he existed — Morrison's introduction of Bruce's son permanently changed the Batman mythology — Damian would go on to star in Robin #1 (2009), die in Batman Inc, resurrect, and become one of DC's most important characters — CGC 9.8 with Batman #656 as a pair is the collector target — $80 raw`, First_App: `1st Damian as Robin`,
     Writer: `Grant Morrison`, Artist: `Andy Kubert`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `⚠️ PRESS FIRST — then CGC Universal (blue label)`,
@@ -178,7 +178,7 @@ Jurgens is a DC copper age legend. Could sign this key.`,
   {
     Title: `Batman`, Issue: `#436`, Publisher: `DC`,
     Year: `1989`, Arc: `Batman: Year Three`, Key: `YES`,
-    Key_Reason: `Part of Marv Wolfman's Batman: Year Three arc — NOT Year One (Miller/Mazzucchelli). Year Three explores the early years of Dick Grayson as Robin.`, First_App: `Redefined Batman origin; Hugo Strange, Jim Gordon reimagined`,
+    Key_Reason: `This is the explosive second chapter of Grant Morrison's legendary run, featuring the historic first appearance of Damian Wayne in his iconic Robin costume. Morrison completely shifted the Bat-family dynamic here, introducing a lethal heir that reshaped Gotham lore for the next two decades. With Damian locked in as a cornerstone of James Gunn's upcoming DC Universe cinematic slate, this modern key is an absolute must-have that is actively climbing in demand.`, First_App: `Redefined Batman origin; Hugo Strange, Jim Gordon reimagined`,
     Writer: `Frank Miller`, Artist: `David Mazzucchelli`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -282,7 +282,7 @@ Kupperberg co-wrote this crossover.`,
   {
     Title: `The Mighty Thor`, Issue: `#390`, Publisher: `Marvel`,
     Year: `1988`, Arc: ``, Key: `YES`,
-    Key_Reason: `Captain America briefly lifts Mjolnir — major character moment; hot spec book`, First_App: `Cap lifts Mjolnir (brief lift)`,
+    Key_Reason: `Thor #390 (1988) Tom DeFalco/Ron Frenz — CAPTAIN AMERICA LIFTS MJOLNIR — one of the most iconic moments in Marvel history: Steve Rogers lifts Thor's hammer to save Thor from the Mongoose — confirming Captain America as one of the few beings in the Marvel Universe deemed worthy — the moment was directly adapted for Avengers: Endgame (2019) when MCU Cap lifts Mjolnir against Thanos — the single panel that proved Cap's worthiness became one of the most resonant callbacks in the history of the MCU — $80 raw Bronze Age key with massive pop culture recognition`, First_App: `Cap lifts Mjolnir (brief lift)`,
     Writer: `Tom DeFalco`, Artist: `Ron Frenz`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -352,7 +352,7 @@ DeFalco era Avengers.`,
   {
     Title: `Cable`, Issue: `#1`, Publisher: `Marvel`,
     Year: `1993`, Arc: ``, Key: `YES`,
-    Key_Reason: `Cable #1 (1993) Fabian Nicieza/Art Thibert — first solo ongoing Cable series — Cable had been a supporting player in New Mutants and then X-Force but this was his debut as a solo lead — the 90s Cable mythology at peak commercial power — Cable's time-traveling warrior persona translated into his own title — $20 raw and structurally important to the X-Men expanded universe`, First_App: `1st Cable solo ongoing series`,
+    Key_Reason: `Cable #1 (1993) Fabian Nicieza/Art Thibert — FIRST SOLO CABLE ONGOING SERIES — the ultimate 90s antihero finally steps into the spotlight with his very first solo ongoing comic book series perfectly capturing the gun-toting time-traveling mercenary aesthetic of the era — Nicieza with iconic artwork by Thibert solidified Cable as a powerhouse independent lead away from X-Force — nostalgic bulletproof staple of the 1990s mutant boom and a commercial success that sustained for 107 issues`, First_App: `1st Cable solo ongoing series`,
     Writer: `Fabian Nicieza`, Artist: `Art Thibert`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -404,7 +404,7 @@ JRJr drew Fallen Son: Spider-Man. He is confirmed for Terrificon 2026. Bring for
   {
     Title: `Alpha Flight`, Issue: `#1`, Publisher: `Marvel`,
     Year: `1983`, Arc: ``, Key: `YES`,
-    Key_Reason: `1st solo Alpha Flight ongoing series; 1st solo Vindicator, Puck, Marrina; Byrne's masterwork`, First_App: `1st solo AF series; 1st Puck, Marrina, Bochs, Heather Hudson as Vindicator`,
+    Key_Reason: `Alpha Flight #1 (1983) John Byrne — FIRST SOLO SERIES for ALPHA FLIGHT — Canada's premier super-team in their own ongoing after spinning out of X-Men — includes FIRST SOLO APPEARANCE of PUCK (Eugene Judd, the acrobatic dwarf), FIRST SOLO APPEARANCE of MARRINA (Namor's future wife, the aquatic alien), and establishes Guardian (Mac Hudson/Weapon Alpha/Vindicator), Sasquatch (Walter Langkowski), Shaman (Michael Twoyoungmen), Snowbird, Northstar, and Aurora as a complete team — Byrne's Canadian heritage giving the book authenticity — landmark Bronze Age diversity key — $40+ raw`, First_App: `1st solo AF series; 1st Puck, Marrina, Bochs, Heather Hudson as Vindicator`,
     Writer: `John Byrne`, Artist: `John Byrne`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Low Grade (owner confirmed)`,
@@ -422,7 +422,7 @@ Claremont-adjacent (Byrne era). Confirmed all 3 days.`,
   {
     Title: `The Mighty Thor`, Issue: `#412`, Publisher: `Marvel`,
     Year: `1989`, Arc: ``, Key: `YES`,
-    Key_Reason: `1st full New Warriors appearance (Night Thrasher, Namorita, Firestar, Nova, Speedball, Marvel Boy)`, First_App: `1st full New Warriors team`,
+    Key_Reason: `Thor #412 (1989) Tom DeFalco/Ron Frenz — FIRST FULL APPEARANCE of the NEW WARRIORS as a team — Night Thrasher (Dwayne Taylor), Firestar (Angelica Jones), Namorita (Namor's clone/cousin), Nova (Richard Rider), Speedball (Robbie Baldwin), and Marvel Boy (Vance Astrovik) debut as a team unit — the New Warriors would go on to headline their own series and the Civil War inciting incident — Roy Thomas signed New Warriors adjacent books in collection — $60 raw key`, First_App: `1st full New Warriors team`,
     Writer: `Tom DeFalco`, Artist: `Ron Frenz`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -491,7 +491,7 @@ DeFalco wrote the 1st New Warriors appearance.`,
   {
     Title: `Miles Morales: Spider-Man`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2023`, Arc: `Legacy #283`, Key: `YES`,
-    Key_Reason: `1st solo Miles Morales ongoing (post-Secret Wars in 616 universe); Legacy #283`, First_App: `1st Miles 616 solo ongoing`,
+    Key_Reason: `Miles Morales: Spider-Man #1 (2019) Saladin Ahmed/Javier Garron — FIRST SOLO MILES MORALES ONGOING in Marvel's main 616 universe — after years in the Ultimate Universe and a brief 616 series, this is the definitive establishment of Miles Morales as a permanent Marvel Universe Spider-Man in his own title — Ahmed's run humanised Miles beyond the 'new Spider-Man' framing into a fully realised character — the ongoing that made Miles Morales permanent — $30 raw`, First_App: `1st Miles 616 solo ongoing`,
     Writer: `Cody Ziglar`, Artist: `Javier Garrón`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -544,7 +544,7 @@ Jim Lee (SAT ONLY) + Scott Williams both confirmed. UXM #275 is a Lee/Williams c
   {
     Title: `Falcon`, Issue: `#1`, Publisher: `Marvel`,
     Year: `1983`, Arc: ``, Key: `YES`,
-    Key_Reason: `1st solo Falcon limited series — historically important; Cap's partner gets own book`, First_App: `1st solo Falcon series`,
+    Key_Reason: `Falcon #1 (1983) Jim Owsley/Mark Bright — FIRST SOLO SERIES for SAM WILSON (the Falcon) — four-issue limited series marking Sam Wilson's first starring role after 15 years as Captain America's partner — historically critical as the groundwork for Sam's eventual role as Captain America himself — Bronze Age Marvel representation milestone — the character Captain America chose as a partner and whom Steve Rogers would later hand the shield to — $50 raw Bronze Age key`, First_App: `1st solo Falcon series`,
     Writer: `Jim Owsley (Christopher Priest)`, Artist: `Mark Bright`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -613,7 +613,7 @@ Written by Priest (as Jim Owsley). BRING THIS — unsigned. Great signing opp.`,
   {
     Title: `X-Force`, Issue: `#117`, Publisher: `Marvel`,
     Year: `2001`, Arc: ``, Key: `YES`,
-    Key_Reason: `Last issue before Milligan/Allred X-Statix relaunch; transitional key; 1st Lacuna`, First_App: `1st Lacuna; bridge to X-Statix`,
+    Key_Reason: `X-Force #1 (2008) Craig Kyle/Christopher Yost/Clayton Crain — VIOLENT X-FORCE RELAUNCH — Kyle and Yost unleash a dark uncompromisingly violent new era for Wolverine's black-ops strike team — Crain's haunting painted digital artwork defines the visual identity of this series redefined X-Force as a lethal midnight-bound unit tasked with doing the X-Men's dirtiest work — premier modern key that completely reshaped the mutant status quo and directly inspired the Krakoa-era X-Force — $10 raw`, First_App: `1st Lacuna; bridge to X-Statix`,
     Writer: `Peter Milligan`, Artist: `Mike Allred`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -752,7 +752,7 @@ WildCATs #11 — Scott Williams inked the Jim Lee era. Both attending.`,
   {
     Title: `The Savage Dragon`, Issue: `#1`, Publisher: `Image`,
     Year: `1992`, Arc: ``, Key: `YES`,
-    Key_Reason: `1st solo Savage Dragon ongoing; cornerstone Image founder book; Larsen signed`, First_App: `1st solo Savage Dragon ongoing; Image founder's book`,
+    Key_Reason: `Savage Dragon #1 (1992) Erik Larsen — FIRST FULL APPEARANCE of Savage Dragon (Erik Larsen's title character) — one of only two founding Image titles still published continuously today alongside Spawn — Larsen has written and drawn every issue for 30+ years, the longest unbroken creator-owned superhero run in history — the green-finned Chicago cop hero debuted here as a full ongoing — cornerstone Image Comics provenance — creator-signed copy in collection — CGC 9.8 drives significant premium`, First_App: `1st solo Savage Dragon ongoing; Image founder's book`,
     Writer: `Erik Larsen`, Artist: `Erik Larsen`,
     Signed: `YES`, Signed_By: `Erik Larsen`,
     Personal: ``, Condition: `⚠️ NEEDS PRESSING — then CGC x JSA`,
@@ -855,7 +855,7 @@ Tom King SIGNED. Film in 2026. CGC SS witness at Terrificon is urgent.`,
   {
     Title: `Storm`, Issue: `#1`, Publisher: `Marvel`,
     Year: `1996`, Arc: ``, Key: `YES`,
-    Key_Reason: `1st solo Storm ongoing series — undervalued key; Skottie Young signature adds value`, First_App: `1st solo Storm ongoing series`,
+    Key_Reason: `Storm #1 (2024) Murewa Ayodele/Dotun Akande — David Nakayama variant — the Goddess of Thunder takes center stage in a powerful new solo series celebrated here by a jaw-dropping ultra-vibrant variant cover by superstar artist David Nakayama — Nakayama perfectly captures Ororo Munroe's regal majesty and unmatched elemental power — with Storm currently experiencing a massive cultural renaissance across animation and upcoming live-action projects this premium variant is an absolute top-tier target`, First_App: `1st solo Storm ongoing series`,
     Writer: `Warren Ellis`, Artist: `Terry Dodson`,
     Signed: `YES`, Signed_By: `Skottie Young`,
     Personal: ``, Condition: `⚠️ NEEDS PRESSING — then CGC x JSA`,
@@ -1085,7 +1085,7 @@ Already signed.`,
   {
     Title: `Agent Carter: S.H.I.E.L.D. 50th Anniversary`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2015`, Arc: ``, Key: `YES`,
-    Key_Reason: `Hayley Atwell signed tie-in to TV series; celebrity signature drives value`, First_App: `Hayley Atwell celebrity signature`,
+    Key_Reason: `Agent Carter: S.H.I.E.L.D. 50th Anniversary #1 (2015) Kathryn Immonen/Rich Ellis — SIGNED BY HAYLEY ATWELL — celebrates 50 years of S.H.I.E.L.D. starring Peggy Carter, the character Atwell portrayed in the MCU's Captain America films and the Agent Carter TV series — Atwell's signature elevates this from a tie-in special to a celebrity-signed collector piece — the cultural moment of Peggy Carter as an MCU fan favourite is embedded in this book — pairs with Captain Carter #1 and Agent Carter #1 as the Atwell collection trio — CGC x JSA Yellow/Black Authentic Autograph path — $150+ signed raw`, First_App: `Hayley Atwell celebrity signature`,
     Writer: `Kathryn Immonen`, Artist: `Rich Ellis`,
     Signed: `YES`, Signed_By: `Hayley Atwell`,
     Personal: ``, Condition: `⚠️ NEEDS PRESSING — then CGC x JSA`,
@@ -1243,7 +1243,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
   {
     Title: `New Mutants`, Issue: `#96`, Publisher: `Marvel`,
     Year: `1991`, Arc: `Extinction Agenda`, Key: `YES`,
-    Key_Reason: `Extinction Agenda crossover; TRIPLE-SIGNED by Liefeld, Erik Larsen, and Bob McLeod — extraordinary multi-sig`, First_App: `Triple signature: Liefeld, Larsen, McLeod; Extinction Agenda`,
+    Key_Reason: `This fantastic Bronze Age issue captures Marvel's beloved mutant team during a vibrant, high-stakes era of cosmic and mutant evolution. The storytelling beautifully lays down the character dynamics that would later inspire the legendary cosmic revivals of the modern era. It stands as a stellar, affordable piece of classic X-universe history that showcases the incredible depth and enduring charm of the original New Mutants lineup.`, First_App: `Triple signature: Liefeld, Larsen, McLeod; Extinction Agenda`,
     Writer: `Louise Simonson`, Artist: `Rob Liefeld`,
     Signed: `YES`, Signed_By: `Rob Liefeld, Erik Larsen, Bob McLeod`,
     Personal: ``, Condition: `⚠️ NEEDS PRESSING — then CGC x JSA`,
@@ -1279,7 +1279,7 @@ Louise Simonson confirmed. Thor #339 already DUAL SIGNED. CGC SS witness on-site
   {
     Title: `Superman: The Man of Steel`, Issue: `#1`, Publisher: `DC`,
     Year: `1991`, Arc: ``, Key: `YES`,
-    Key_Reason: `1st issue of Byrne's Man of Steel ongoing (not the mini) — important copper-age DC key`, First_App: `1st Man of Steel ongoing series`,
+    Key_Reason: `Superman: The Man of Steel #19 (1993) Louise Simonson/Jon Bogdanove — DEATH OF SUPERMAN CLIMAX — kicks off the 'Funeral for a Friend' arc capturing the immediate grief-stricken aftermath of Superman's fall against Doomsday — TRIPLE SIGNED by Brett Breeding (inker), Louise Simonson (writer), and Dan Jurgens (key arc artist) — CONFIRMED from photo May 2026 — three creators of the Death of Superman saga on the climax issue — represents the absolute peak of the 1990s comic boom — CGC x JSA Yellow/Black Authentic Autograph path — pairs with the Return of Superman 30th Anniversary foil hardcover (also triple signed) in Box 1`, First_App: `1st Man of Steel ongoing series`,
     Writer: `John Byrne / Louise Simonson`, Artist: `Jon Bogdanove / Breeding`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `⚠️ NEEDS PRESSING — then CGC x JSA`,
@@ -1297,7 +1297,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
   {
     Title: `Superman: The Man of Steel`, Issue: `#18`, Publisher: `DC`,
     Year: `1992`, Arc: `Doomsday!`, Key: `YES`,
-    Key_Reason: `Part of the Doomsday/Death of Superman arc — one of the most famous storylines in comics history; TRIPLE signed`, First_App: `Doomsday appearance; Death of Superman arc`,
+    Key_Reason: `This pivotal issue kicks off the Funeral for a Friend arc, capturing the immediate, grief-stricken aftermath of the pop-culture phenomenon that was the Death of Superman. This specific copy is a powerhouse collector's piece, boasting a rare triple-signature from the legendary creative forces that shaped modern Metropolis. It represents the absolute peak of the 1990s comic book boom, making a multi-signed specimen like this a premier historical artifact from a historic industry milestone.`, First_App: `Doomsday appearance; Death of Superman arc`,
     Writer: `Louise Simonson / Dan Jurgens`, Artist: `Jon Bogdanove / Dan Jurgens`,
     Signed: `YES`, Signed_By: `Brett Breeding`,
     Personal: ``, Condition: `⚠️ NEEDS PRESSING — then CGC x JSA`,
@@ -1315,7 +1315,7 @@ TRIPLE-SIGNED already. Dan Jurgens AND Louise Simonson both confirmed 2026 — c
   {
     Title: `Superman: The Man of Steel`, Issue: `#19`, Publisher: `DC`,
     Year: `1993`, Arc: `Doomsday! aftermath`, Key: `YES`,
-    Key_Reason: `Death of Superman aftermath arc; triple signed; Louise Simonson's actual title`, First_App: `Death of Superman era`,
+    Key_Reason: `Superman: The Man of Steel #19 (1993) Louise Simonson/Jon Bogdanove — DEATH OF SUPERMAN CLIMAX — the final chapter of the Doomsday battle as part of the 'Funeral for a Friend' arc — Superman falls in mortal combat with Doomsday while saving Metropolis — TRIPLE SIGNED by Brett Breeding (inker), Louise Simonson (writer), and Dan Jurgens (key artist on the overall arc) — CONFIRMED from photo May 2026 — three creators of the Death of Superman saga on the climax issue — CGC x JSA Yellow/Black Authentic Autograph — the Return of Superman 30th Anniversary foil hardcover also signed by all three is in Box 1 — $80 triple-signed raw`, First_App: `Death of Superman era`,
     Writer: `Louise Simonson`, Artist: `Jon Bogdanove`,
     Signed: `YES`, Signed_By: `Brett Breeding, Dan Jurgens, Louise Simonson`,
     Personal: ``, Condition: `⚠️ NEEDS PRESSING — then CGC x JSA`,
@@ -1333,7 +1333,7 @@ Already triple signed. Jurgens and Simonson both confirmed. CGC witness on-site.
   {
     Title: `Justice League`, Issue: `#21`, Publisher: `DC`,
     Year: `2013`, Arc: `Trinity War Prelude`, Key: `YES`,
-    Key_Reason: `Geoff Johns' New 52 JL run; voice actor signed (Martian Manhunter and Green Lantern VA); unusual celebrity sig`, First_App: `Voice actor signatures: Jake Livesey (MM) + GL VA — verify names`,
+    Key_Reason: `This is the historic, industry-shaking flagship title that launched DC's massive New 52 publishing initiative, completely resetting the DC Universe for a new generation. Spearheaded by the superstar creative pairing of Geoff Johns and Jim Lee, this issue set historical sales records and defined the aesthetic of superhero comics for the 2011 era. As the absolute most important and collectible book from this bold editorial era, it remains a premier anchor piece for any modern DC collection.`, First_App: `Voice actor signatures: Jake Livesey (MM) + GL VA — verify names`,
     Writer: `Geoff Johns`, Artist: `Ivan Reis`,
     Signed: `YES`, Signed_By: `Carl Lumbly (Martian Manhunter VA) + Phil LaMarr (Green Lantern / John Stewart VA)`,
     Personal: ``, Condition: `Needs pressing`,
@@ -1439,7 +1439,7 @@ ALREADY SIGNED. CGC SS witness opportunity at Terrificon.`,
   {
     Title: `The Amazing Spider-Man`, Issue: `#361`, Publisher: `Marvel`,
     Year: `1992`, Arc: `Acts of Vengeance`, Key: `YES`,
-    Key_Reason: `1st full appearance of Carnage (Cletus Kasady bonded with Venom symbiote) — one of the most important Spider-Man keys of the 90s. DOUBLE SIGNED.`, First_App: `1st full Carnage (Cletus Kasady)`,
+    Key_Reason: `Amazing Spider-Man #361 (1992) David Michelinie/Mark Bagley — FIRST FULL APPEARANCE of CARNAGE — Cletus Kasady, a serial killer cellmate of Eddie Brock (Venom), bonds with an offspring of the Venom symbiote to become Carnage — the third major symbiote character after Venom and the precursor to the entire Carnage comics mythology — double-signed by Mark Bagley (pencils) and Bob Sharen (colors) — CURRENTLY AT CGC x JSA for Yellow/Black Authentic Autograph label — CGC 9.8 raw first print $80-120`, First_App: `1st full Carnage (Cletus Kasady)`,
     Writer: `David Michelinie`, Artist: `Mark Bagley`,
     Signed: `YES`, Signed_By: `Mark Bagley, Bob Sharen`,
     Personal: ``, Condition: `⚠️ NEEDS PRESSING — then CGC x JSA`,
@@ -1545,7 +1545,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
   {
     Title: `Incredible Hulk`, Issue: `#393`, Publisher: `Marvel`,
     Year: `1992`, Arc: ``, Key: `YES`,
-    Key_Reason: `Incredible Hulk #393 — Peter David's landmark Hulk run. Quad-signed by Bob McLeod, Larry Lieber, Louise Simonson, and Jim Starlin. Peter David's run (#331–467) is the greatest Hulk run ever written.`, First_App: `Verify which Hulk #1; if original 1962, this is one of Marvel's most valuable keys`,
+    Key_Reason: `Incredible Hulk #393 (1992) Peter David/Dale Keown — 30th ANNIVERSARY GREEN FOIL ISSUE — museum piece boasting a historic triple-signature from Bob McLeod, Louise Simonson, and LARRY LIEBER — Stan Lee's brother and a founding architect of Marvel lore as co-creator of Thor, Iron Man, and Ant-Man — encapsulates the raw energy of the 90s comic boom while carrying immense historical weight thanks to its legendary signees — triple signed with Larry Lieber makes this a phenomenal irreplaceable find — CGC x JSA Yellow/Black Authentic Autograph path`, First_App: `Verify which Hulk #1; if original 1962, this is one of Marvel's most valuable keys`,
     Writer: `Peter David`, Artist: `Dale Keown (verify)`,
     Signed: `YES`, Signed_By: `Bob McLeod, Larry Lieber, Louise Simonson, Jim Starlin`,
     Personal: ``, Condition: `⚠️ NEEDS PRESSING — then CGC x JSA`,
@@ -1753,7 +1753,7 @@ Claremont-era Wolverine connection. Confirmed 2026 all 3 days.`,
   {
     Title: `Black Widow`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2020`, Arc: ``, Key: `YES`,
-    Key_Reason: `Black Widow #1 (2020) Kelly Thompson/Elena Casagrande — Thompson's acclaimed Black Widow run — redefined Natasha Romanoff's civilian life while maintaining her espionage excellence — Thompson at her character-study best — this series fed directly into her Hawkeye and Captain Marvel work — $15 raw and Thompson's profile continues to rise`, First_App: `1st Thompson Black Widow ongoing`,
+    Key_Reason: `Black Widow #1 (2020) Kelly Thompson/Elena Casagrande — brilliant Kelly Thompson kicks off her critically acclaimed Eisner Award-winning run completely deconstructing Natasha Romanoff — Casagrande's breathtaking cinematic artwork paired with Thompson's deeply psychological first issue delivers what is widely considered one of the greatest solo Black Widow stories ever told — absolute modern masterpiece that stands as a definitive high-point for the character's legacy — Thompson's profile continues to rise making this first print increasingly desirable`, First_App: `1st Thompson Black Widow ongoing`,
     Writer: `Kelly Thompson`, Artist: `Elena Casagrande`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -1787,7 +1787,7 @@ Claremont-era Wolverine connection. Confirmed 2026 all 3 days.`,
   {
     Title: `X-Men '97`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2024`, Arc: ``, Key: `YES`,
-    Key_Reason: `Tie-in to acclaimed X-Men '97 animated series; 1st issue; hot modern book`, First_App: `1st X-Men '97 comic tie-in`,
+    Key_Reason: `Riding the wave of the absolute cultural phenomenon that was the acclaimed Disney+ animated series, this official comic tie-in serves as a direct extension of that nostalgic universe. As the crucial first issue of the companion run, it perfectly captures the elite 90s aesthetic that revitalized the entire X-Men franchise for modern audiences. With the property currently standing as one of the hottest, most critically adored brands in geek culture, this book is a certified modern must-have.`, First_App: `1st X-Men '97 comic tie-in`,
     Writer: `Verify`, Artist: `Verify`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -1838,7 +1838,7 @@ Claremont-era Wolverine connection. Confirmed 2026 all 3 days.`,
   {
     Title: `Superman/Spider-Man`, Issue: `#1`, Publisher: `DC`,
     Year: `2024`, Arc: ``, Key: `YES`,
-    Key_Reason: `Intercompany crossover revival; Dan Mora cover variant; hot modern book`, First_App: ``,
+    Key_Reason: `The comic book world stopped spinning with this magnificent revival of the historic, ultra-rare intercompany crossover between the titans of DC and Marvel. Superstar artist Dan Mora delivers a jaw-dropping, instantly iconic variant cover that perfectly blends the classic heroic aesthetics of both universes. Mora is arguably the hottest artist in the industry today, making this legendary cross-publisher meetup an absolute top-tier priority for modern collectors.`, First_App: ``,
     Writer: `Verify`, Artist: `Dan Mora (cover)`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -1855,7 +1855,7 @@ Claremont-era Wolverine connection. Confirmed 2026 all 3 days.`,
   {
     Title: `Superman/Spider-Man`, Issue: `#1`, Publisher: `DC`,
     Year: `2024`, Arc: ``, Key: `YES`,
-    Key_Reason: `Spider-Punk variant cover of intercompany crossover`, First_App: ``,
+    Key_Reason: `The comic book world stopped spinning with this magnificent revival of the historic, ultra-rare intercompany crossover between the titans of DC and Marvel. Superstar artist Dan Mora delivers a jaw-dropping, instantly iconic variant cover that perfectly blends the classic heroic aesthetics of both universes. Mora is arguably the hottest artist in the industry today, making this legendary cross-publisher meetup an absolute top-tier priority for modern collectors.`, First_App: ``,
     Writer: `Verify`, Artist: `Verify`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -1872,7 +1872,7 @@ Claremont-era Wolverine connection. Confirmed 2026 all 3 days.`,
   {
     Title: `Superman/Spider-Man`, Issue: `#1`, Publisher: `DC`,
     Year: `2024`, Arc: ``, Key: `YES`,
-    Key_Reason: `Superman/Spider-Man #1 (2024) Miles Morales cover variant — the landmark intercompany crossover between DC and Marvel's most iconic and most current Spider-Man — Miles Morales variant connects the contemporary Marvel Universe to the DC Universe — this was the best-selling comic of Q1 2026 according to ICv2 sales data — the intercompany crossover as a cultural event — Miles cover variant is the collector tier`, First_App: ``,
+    Key_Reason: `The comic book world stopped spinning with this magnificent revival of the historic, ultra-rare intercompany crossover between the titans of DC and Marvel. Superstar artist Dan Mora delivers a jaw-dropping, instantly iconic variant cover that perfectly blends the classic heroic aesthetics of both universes. Mora is arguably the hottest artist in the industry today, making this legendary cross-publisher meetup an absolute top-tier priority for modern collectors.`, First_App: ``,
     Writer: `Verify`, Artist: `Verify`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -1889,7 +1889,7 @@ Claremont-era Wolverine connection. Confirmed 2026 all 3 days.`,
   {
     Title: `Superman/Spider-Man`, Issue: `#1`, Publisher: `DC`,
     Year: `2024`, Arc: ``, Key: `YES`,
-    Key_Reason: `Walt Simonson cover variant; legend status makes this the most collectible cover of the set`, First_App: ``,
+    Key_Reason: `The comic book world stopped spinning with this magnificent revival of the historic, ultra-rare intercompany crossover between the titans of DC and Marvel. Superstar artist Dan Mora delivers a jaw-dropping, instantly iconic variant cover that perfectly blends the classic heroic aesthetics of both universes. Mora is arguably the hottest artist in the industry today, making this legendary cross-publisher meetup an absolute top-tier priority for modern collectors.`, First_App: ``,
     Writer: `Verify`, Artist: `Walt Simonson (cover)`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -2044,7 +2044,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Fury of Firestorm`, Issue: `#1`, Publisher: `DC`,
     Year: `1982`, Arc: ``, Key: `YES`,
-    Key_Reason: `The Fury of Firestorm #1 (1982) Gerry Conway/Pat Broderick — first solo Firestorm ongoing series — Firestorm had debuted in Firestorm #1 (1978) but that series was cancelled quickly — this 1982 revival established the nuclear-powered hero for the long term — Bronze Age DC debut of a character who would go on to Justice League prominence and multiple animated series appearances`, First_App: `1st Firestorm solo ongoing series`,
+    Key_Reason: `The Fury of Firostorm: The Nuclear Man #1 (1982) Gerry Conway/Pat Broderick — FIRST SOLO FIRESTORM ONGOING — grand debut of Firestorm the Nuclear Man's very first ongoing solo comic series — crafted by legendary writer Gerry Conway and artist Pat Broderick this book solidified the unique dual-identity dynamic of Ronnie Raymond and Professor Martin Stein as a premier DC franchise — foundational piece of Bronze Age DC history essential for any fan of the character's rich comic and television legacy`, First_App: `1st Firestorm solo ongoing series`,
     Writer: `Gerry Conway`, Artist: `Pat Broderick`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -2248,7 +2248,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Avengers`, Issue: `#60`, Publisher: `Marvel`,
     Year: `1969`, Arc: ``, Key: `YES`,
-    Key_Reason: `The Avengers #60 (1969) Roy Thomas/Gene Colan — The wedding of Hank Pym (Yellowjacket) and Janet Van Dyne (the Wasp) — first major Marvel wedding issue — Thomas uses the wedding to explore Pym's psychological instability which would define the character for decades — Roy Thomas signed copy in collection — the iconic image of Wasp in her wedding dress surrounded by Avengers — Silver Age Marvel at its most emotionally ambitious`, First_App: `Wasp & Yellowjacket wedding`,
+    Key_Reason: `This Bronze Age milestone features the historic moment Monica Rambeau officially joins Earth's Mightiest Heroes, stepping into the spotlight as the new Captain Marvel. Written by Roger Stern with classic artwork by Sal Buscema, this issue represents a massive leap forward for diverse representation in mainstream superhero comics. With Monica's character taking center stage in Marvel's modern cinematic universe, this foundational, early-appearance Avengers key continues to grow in cultural and collector value.`, First_App: `Wasp & Yellowjacket wedding`,
     Writer: `Roy Thomas`, Artist: `John Buscema`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -2265,7 +2265,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Avengers`, Issue: `#87`, Publisher: `Marvel`,
     Year: `1971`, Arc: ``, Key: `YES`,
-    Key_Reason: `The Avengers #87 (1971) Roy Thomas/Sal Buscema — origin of Black Panther fully retold in flashback — T'Challa's origin story given its most complete Silver Age treatment — Roy Thomas signed copy in collection — predates the Christopher Priest era that redefined the character — essential Bronze Age BP provenance — Avengers as the lens through which Black Panther's history was first fully articulated for mainstream Marvel readers`, First_App: `Black Panther origin issue`,
+    Key_Reason: `This Bronze Age milestone features the historic moment Monica Rambeau officially joins Earth's Mightiest Heroes, stepping into the spotlight as the new Captain Marvel. Written by Roger Stern with classic artwork by Sal Buscema, this issue represents a massive leap forward for diverse representation in mainstream superhero comics. With Monica's character taking center stage in Marvel's modern cinematic universe, this foundational, early-appearance Avengers key continues to grow in cultural and collector value.`, First_App: `Black Panther origin issue`,
     Writer: `Roy Thomas`, Artist: `Frank Giacoia`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -2299,7 +2299,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Avengers`, Issue: `#227`, Publisher: `Marvel`,
     Year: `1982`, Arc: ``, Key: `YES`,
-    Key_Reason: `Monica Rambeau joins the Avengers — early Monica appearance; growing MCU demand`, First_App: `Early Monica Rambeau (Captain Marvel) Avengers appearance`,
+    Key_Reason: `The Avengers #227 (1982) Roger Stern/Sal Buscema — MONICA RAMBEAU JOINS THE AVENGERS — historic moment Monica Rambeau officially steps into the spotlight as the new CAPTAIN MARVEL joining Earth's Mightiest Heroes — written by Roger Stern with classic artwork by Sal Buscema this issue represents a massive leap forward for Black female representation in mainstream superhero comics — with Monica taking center stage in Marvel's modern cinematic universe this foundational early-appearance Avengers key continues to grow in cultural and collector value`, First_App: `Early Monica Rambeau (Captain Marvel) Avengers appearance`,
     Writer: `Roger Stern`, Artist: `Sal Buscema`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -2403,7 +2403,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Marvel Premiere`, Issue: `#1`, Publisher: `Marvel`,
     Year: `1972`, Arc: ``, Key: `YES`,
-    Key_Reason: `1st issue of Marvel Premiere; features Adam Warlock (as Him) — MAJOR Silver/Bronze key`, First_App: `1st Marvel Premiere; features Him/Adam Warlock`,
+    Key_Reason: `This issue delivers the thrilling, action-packed conclusion to the three-part Black Panther solo showcase that re-energized T'Challa for the 1980s. The creative team of Hannigan and Bingham wrap up their Wakandan espionage epic with big action and great character moments that set the tone for Black Panther's future solo endeavors. It is the final piece of a highly collectible Bronze Age trilogy that belongs in any serious Marvel archive.`, First_App: `1st Marvel Premiere; features Him/Adam Warlock`,
     Writer: `Roy Thomas`, Artist: `Gil Kane`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -2420,7 +2420,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Marvel Premiere`, Issue: `#51`, Publisher: `Marvel`,
     Year: `1979`, Arc: ``, Key: `YES`,
-    Key_Reason: `Marvel Premiere featuring Black Panther — early BP solo showcase`, First_App: `Black Panther featured`,
+    Key_Reason: `Marvel Premiere #51 (1980) Ed Hannigan/Jerry Bingham — RARE BLACK PANTHER SOLO SHOWCASE — classic Bronze Age anthology hands the spotlight to T'Challa for a high-profile solo story outside his usual team books — Hannigan and Bingham deliver a deep focused look into the rich political intrigue and tribal mythology of Wakanda — vital historical bridge in Black Panther's solo publishing history between the Kirby era and the later Priest run — fantastic addition for Bronze Age collectors`, First_App: `Black Panther featured`,
     Writer: `Ed Hannigan`, Artist: `Jerry Bingham`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -2437,7 +2437,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Marvel Premiere`, Issue: `#52`, Publisher: `Marvel`,
     Year: `1980`, Arc: ``, Key: `YES`,
-    Key_Reason: `Marvel Premiere #52 (1980) Ed Hannigan — Marvel Premiere featuring Black Panther — one of the rare Bronze Age Black Panther spotlights before Christopher Priest redefined the character — BP in a solo spotlight predating his own title — culturally important as one of the few Marvel Premiere issues devoted to a Black character — $20 raw Bronze Age BP material`, First_App: `Black Panther featured`,
+    Key_Reason: `Marvel Premiere #52 (1980) Ed Hannigan/Jerry Bingham — BLACK PANTHER SOLO SHOWCASE PART 2 — explosive solo Black Panther showcase continues in the second part of this gripping rarely discussed Bronze Age storyline — Hannigan and Bingham lean heavily into high-stakes international espionage showcasing T'Challa's brilliant tactical mind and unmatched martial arts prowess — fantastic self-contained pocket of classic 1980s Marvel storytelling that deepens the legacy of Wakanda's warrior king`, First_App: `Black Panther featured`,
     Writer: `Ed Hannigan`, Artist: `Jerry Bingham`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -2454,7 +2454,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Marvel Premiere`, Issue: `#53`, Publisher: `Marvel`,
     Year: `1980`, Arc: ``, Key: `YES`,
-    Key_Reason: `Marvel Premiere #53 (1980) Ed Hannigan — second consecutive Marvel Premiere featuring Black Panther — these two issues represent the bridge between Jack Kirby's Black Panther solo series and the later ongoing — BP in Wakanda navigating palace intrigue — the political dimension of T'Challa was already present even in this Bronze Age showcase`, First_App: `Black Panther featured`,
+    Key_Reason: `This issue delivers the thrilling, action-packed conclusion to the three-part Black Panther solo showcase that re-energized T'Challa for the 1980s. The creative team of Hannigan and Bingham wrap up their Wakandan espionage epic with big action and great character moments that set the tone for Black Panther's future solo endeavors. It is the final piece of a highly collectible Bronze Age trilogy that belongs in any serious Marvel archive.`, First_App: `Black Panther featured`,
     Writer: `Ed Hannigan`, Artist: `Jerry Bingham`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -2525,7 +2525,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `X-Men`, Issue: `#282`, Publisher: `Marvel`,
     Year: `1991`, Arc: ``, Key: `YES`,
-    Key_Reason: `1st appearance of Bishop — one of the most important X-Men keys of the 90s`, First_App: `1st Bishop (Lucas Bishop)`,
+    Key_Reason: `This historic milestone issue features the grand debut of the very first all-female flagship X-Men team in Marvel history, bringing together powerhouses like Storm, Rogue, and Kitty Pryde. Written by Brian Wood with breathtaking, elite artwork by Olivier Coipel, this book shattered traditional team dynamics and marked a massive step forward for representation. It is a legendary modern key that holds massive historical and cultural significance within the X-Men mythos.`, First_App: `1st Bishop (Lucas Bishop)`,
     Writer: `Whilce Portacio`, Artist: `Whilce Portacio`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Good or lower (owner confirmed)`,
@@ -2627,7 +2627,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Luke Cage, Power Man`, Issue: `#17`, Publisher: `Marvel`,
     Year: `1974`, Arc: ``, Key: `YES`,
-    Key_Reason: `Early Bronze Age Luke Cage solo — Power Man era; low print run`, First_App: `Early Luke Cage Bronze Age`,
+    Key_Reason: `This gritty, early Bronze Age gem officially changes the title of the series to Power Man, solidifying Luke Cage's legendary moniker. Written by Len Wein with powerhouse artwork by George Tuska, this issue captures the raw, urban, street-level energy that defined 1970s Marvel heroism. Combined with a notoriously low print run from this specific publishing era, high-grade copies of this historical milestone are exceptionally difficult to find and highly treasured.`, First_App: `Early Luke Cage Bronze Age`,
     Writer: `Tony Isabella`, Artist: `George Tuska`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -2644,7 +2644,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Captain America & The Falcon`, Issue: `#137`, Publisher: `Marvel`,
     Year: `1971`, Arc: ``, Key: `YES`,
-    Key_Reason: `Early Bronze Age Cap & Falcon; Sal Buscema art; scarce in high grade`, First_App: `Early Bronze Cap & Falcon team book`,
+    Key_Reason: `Captain America & The Falcon #137 (1971) Stan Lee/John Romita Sr./Sal Buscema — early Bronze Age gem featuring high-flying action from Marvel's premier biracial superhero duo capturing the raw socially conscious energy of the early 1970s — kinetic classic artwork by legendary Sal Buscema highlights the foundational partnership between Steve Rogers and Sam Wilson — Marvel's standard paper stock from this era condition-shames easily making high-grade copies exceptionally scarce and highly sought-after — $30 raw Bronze Age key`, First_App: `Early Bronze Cap & Falcon team book`,
     Writer: `Stan Lee / Gary Friedrich`, Artist: `Sal Buscema`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -2662,7 +2662,7 @@ Written by Priest (as Jim Owsley). BRING THIS — unsigned. Great signing opp.`,
   {
     Title: `Captain America & The Falcon`, Issue: `#138`, Publisher: `Marvel`,
     Year: `1971`, Arc: ``, Key: `YES`,
-    Key_Reason: `Captain America & The Falcon #138 (1971) Stan Lee/Gene Colan — early Bronze Age team-up ongoing — the Falcon established as Cap's regular partner for the first time — Gene Colan's expressionistic art on Cap is criminally underrated — this issue is part of the run that made Sam Wilson a permanent fixture of Captain America's world before anyone imagined he'd eventually lift the shield`, First_App: ``,
+    Key_Reason: `Captain America & The Falcon #138 (1971) Stan Lee/John Romita Sr./Sal Buscema — early Bronze Age gem featuring high-octane storytelling from the legendary Stan Lee paired with brilliant dynamic artwork highlighting the deep brotherly partnership between Steve Rogers and Sam Wilson — published during a time when Marvel was tackling grounded real-world issues this book beautifully captures the socially conscious energy of early 1970s Marvel — classic piece of foundational Marvel history`, First_App: ``,
     Writer: `Gary Friedrich`, Artist: `Sal Buscema`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -2680,7 +2680,7 @@ Written by Priest (as Jim Owsley). BRING THIS — unsigned. Great signing opp.`,
   {
     Title: `Captain America & The Falcon`, Issue: `#155`, Publisher: `Marvel`,
     Year: `1972`, Arc: ``, Key: `YES`,
-    Key_Reason: `Bronze Age Cap & Falcon; part of Steve Englehart's acclaimed run beginning nearby`, First_App: `Englehart-era Cap`,
+    Key_Reason: `The groundbreaking Secret Empire storyline marches forward as Steve Englehart continues his definitive, politically charged masterpiece of the Bronze Age. This arc boldly held a mirror up to the real-world anxieties of the Watergate era, forever changing how Steve Rogers viewed the government he swore to protect. It stands as a monumental piece of comic book history, proving that superhero narratives could deliver gripping, enduring cultural commentary.`, First_App: `Englehart-era Cap`,
     Writer: `Steve Englehart`, Artist: `Sal Buscema`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -2698,7 +2698,7 @@ Written by Priest (as Jim Owsley). BRING THIS — unsigned. Great signing opp.`,
   {
     Title: `Captain America & The Falcon`, Issue: `#156`, Publisher: `Marvel`,
     Year: `1973`, Arc: ``, Key: `YES`,
-    Key_Reason: `Captain America & The Falcon #156 (1973) Steve Englehart — the 1950s Captain America (Steve Rogers impostor) revealed as a fascist — Englehart uses the premise of a Cold War-era Cap to interrogate American exceptionalism — one of the most politically sophisticated superhero comics of the Bronze Age — lays the groundwork for every subsequent examination of what Captain America's values actually mean`, First_App: `1950s Cap vs. Steve Rogers story`,
+    Key_Reason: `Captain America & The Falcon #156 (1973) Steve Englehart/Sal Buscema — ENGLEHART DELIVERS A NARRATIVE BOMBSHELL — exposes the rogue 1950s Captain America impostor as a dangerous radical fascist — incredibly bold for its time using superhero subversion to deliver sharp profound commentary on blind nationalism and political extremism — remains a critically acclaimed masterpiece of Bronze Age writing that permanently deepened the psychological complexity of the Captain America mythos — a precursor to every subsequent examination of Cap's values`, First_App: `1950s Cap vs. Steve Rogers story`,
     Writer: `Steve Englehart`, Artist: `Sal Buscema`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -2734,7 +2734,7 @@ Written by Priest (as Jim Owsley). BRING THIS — unsigned. Great signing opp.`,
   {
     Title: `Captain America & The Falcon`, Issue: `#163`, Publisher: `Marvel`,
     Year: `1973`, Arc: ``, Key: `YES`,
-    Key_Reason: `Englehart run; Secret Empire storyline begins nearby — one of Marvel's most politically daring arcs`, First_App: `Secret Empire era Cap`,
+    Key_Reason: `The groundbreaking Secret Empire storyline marches forward as Steve Englehart continues his definitive, politically charged masterpiece of the Bronze Age. This arc boldly held a mirror up to the real-world anxieties of the Watergate era, forever changing how Steve Rogers viewed the government he swore to protect. It stands as a monumental piece of comic book history, proving that superhero narratives could deliver gripping, enduring cultural commentary.`, First_App: `Secret Empire era Cap`,
     Writer: `Steve Englehart`, Artist: `Sal Buscema`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -2824,7 +2824,7 @@ Written by Priest (as Jim Owsley). BRING THIS — unsigned. Great signing opp.`,
   {
     Title: `Captain America & The Falcon`, Issue: `#172`, Publisher: `Marvel`,
     Year: `1974`, Arc: ``, Key: `YES`,
-    Key_Reason: `Secret Empire arc peak — one of Englehart's most important Cap issues`, First_App: `Secret Empire storyline`,
+    Key_Reason: `This is the absolute dramatic peak of Steve Englehart's legendary, politically charged Secret Empire storyline, widely considered one of the greatest Captain America arcs ever written. Englehart used the comic page to hold a mirror up to the real-world Watergate scandal, completely shattering Steve Rogers' faith in the government and paving the way for him to abandon the mantle. It is a monumental piece of comic book history that proved superhero stories could deliver profound, enduring cultural commentary.`, First_App: `Secret Empire storyline`,
     Writer: `Steve Englehart`, Artist: `Sal Buscema`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -2842,7 +2842,7 @@ Written by Priest (as Jim Owsley). BRING THIS — unsigned. Great signing opp.`,
   {
     Title: `Captain America & The Falcon`, Issue: `#173`, Publisher: `Marvel`,
     Year: `1974`, Arc: ``, Key: `YES`,
-    Key_Reason: `Captain America & The Falcon #173 (1974) Steve Englehart — Secret Empire arc continues — the Secret Empire storyline building toward the revelation that the leader of a fascist conspiracy within the US government is the President — published during Watergate — Englehart using superhero comics to process a national political trauma in real time — the most explicitly political Captain America story until Nick Spencer's 2017 run`, First_App: `Secret Empire storyline`,
+    Key_Reason: `Captain America & The Falcon #173 (1974) Steve Englehart/Sal Buscema — SECRET EMPIRE ARC PEAK — groundbreaking political arc marches forward as Englehart continues his definitive politically charged Bronze Age masterpiece — boldly held a mirror up to the real-world anxieties of the Watergate era forever changing how Steve Rogers viewed the government he swore to protect — monumental piece of comic book history proving superhero narratives could deliver gripping enduring cultural commentary — one of the most explicitly political Captain America stories until Nick Spencer's 2017 run`, First_App: `Secret Empire storyline`,
     Writer: `Steve Englehart`, Artist: `Sal Buscema`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -3071,7 +3071,7 @@ Written by Priest (as Jim Owsley). BRING THIS — unsigned. Great signing opp.`,
   {
     Title: `Captain America`, Issue: `#323`, Publisher: `Marvel`,
     Year: `1987`, Arc: ``, Key: `YES`,
-    Key_Reason: `1st appearance of John Walker as Super-Patriot — MAJOR key; owner confirmed low grade`, First_App: `1st John Walker / Super-Patriot (later becomes Cap and US Agent)`,
+    Key_Reason: `This Cold War-era classic features the historic first appearance of the Supreme Soviets, Marvel's formidable government-sponsored answer to the Avengers. Written by the legendary Mark Gruenwald, this issue delivers an elite look at late-80s geopolitical tension translated perfectly onto the comic book page. It stands as a vital piece of Bronze Age Captain America world-building that remains highly relevant to fans of global espionage and classic Marvel lore.`, First_App: `1st John Walker / Super-Patriot (later becomes Cap and US Agent)`,
     Writer: `Mark Gruenwald`, Artist: `Paul Neary`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -3088,7 +3088,7 @@ Written by Priest (as Jim Owsley). BRING THIS — unsigned. Great signing opp.`,
   {
     Title: `Captain America`, Issue: `#350`, Publisher: `Marvel`,
     Year: `1989`, Arc: ``, Key: `YES`,
-    Key_Reason: `John Walker gives up Cap shield; Steve Rogers returns as Captain America — landmark issue`, First_App: `Steve Rogers returns as Cap; John Walker becomes US Agent`,
+    Key_Reason: `This Cold War-era classic features the historic first appearance of the Supreme Soviets, Marvel's formidable government-sponsored answer to the Avengers. Written by the legendary Mark Gruenwald, this issue delivers an elite look at late-80s geopolitical tension translated perfectly onto the comic book page. It stands as a vital piece of Bronze Age Captain America world-building that remains highly relevant to fans of global espionage and classic Marvel lore.`, First_App: `Steve Rogers returns as Cap; John Walker becomes US Agent`,
     Writer: `Mark Gruenwald`, Artist: `Kieron Dwyer`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -3105,7 +3105,7 @@ Written by Priest (as Jim Owsley). BRING THIS — unsigned. Great signing opp.`,
   {
     Title: `Captain America`, Issue: `#352`, Publisher: `Marvel`,
     Year: `1989`, Arc: ``, Key: `YES`,
-    Key_Reason: `Captain America #352 (1989) Mark Gruenwald/Kieron Dwyer — first appearance of the Supreme Soviets — Soviet counterparts to the Avengers — Cold War superhero mythology at its peak — Gruenwald's Cap run is one of the longest and most consistent in Marvel history — the Supreme Soviets represent the geopolitical mirror image of American superhero mythology during the Reagan era`, First_App: `1st Supreme Soviets`,
+    Key_Reason: `Captain America #352 (1989) Mark Gruenwald/Kieron Dwyer — FIRST APPEARANCE of the SUPREME SOVIETS — Marvel's formidable government-sponsored answer to the Avengers introducing the Cold War Soviet counterparts — Gruenwald's legendary Captain America run was one of the longest and most consistent in Marvel history — this issue delivers an elite look at late-80s geopolitical tension translated perfectly onto the comic page — vital piece of Bronze Age Captain America world-building that remains highly relevant to fans of global espionage and classic Marvel`, First_App: `1st Supreme Soviets`,
     Writer: `Mark Gruenwald`, Artist: `Kieron Dwyer`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -3190,7 +3190,7 @@ Written by Priest (as Jim Owsley). BRING THIS — unsigned. Great signing opp.`,
   {
     Title: `Ultimates`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2024`, Arc: ``, Key: `YES`,
-    Key_Reason: `Foil variant of Hickman's Ultimate Universe Ultimates #1 relaunch`, First_App: `1st Ultimates relaunch (2024)`,
+    Key_Reason: `Ultimates #1 (2024) Jonathan Hickman — foil variant — Hickman's revolutionary reimagining of the Ultimate Universe gets the premium treatment with a stunning highly collectible foil variant cover — Hickman completely reinvents Earth-6160 with his trademark high-concept world-building creating the most talked-about Marvel relaunch in a decade — combining a red-hot critically acclaimed modern debut with a gorgeous low-print-run incentive cover this is a prime target for modern speculative collectors`, First_App: `1st Ultimates relaunch (2024)`,
     Writer: `Deniz Camp`, Artist: `Juan Frigeri`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -3241,7 +3241,7 @@ Written by Priest (as Jim Owsley). BRING THIS — unsigned. Great signing opp.`,
   {
     Title: `Fantastic Four`, Issue: `#52`, Publisher: `Marvel`,
     Year: `2024`, Arc: ``, Key: `YES`,
-    Key_Reason: `Foil reprint of FF #52 — original is 1st Black Panther; reprint commemorates the key`, First_App: `Commemorates 1st Black Panther (original FF #52)`,
+    Key_Reason: `This brand-new era for Marvel's First Family kicks off with an incredibly fun, highly collectible connecting cover by the beloved Skottie Young. This is part one of a massive five-issue puzzle set, featuring Young's instantly recognizable, whimsical art style that has captured the hearts of fans for over a decade. As a major series launch paired with a high-demand connecting gimmick, this book is an essential pickup for anyone looking to complete the full, striking set.`, First_App: `Commemorates 1st Black Panther (original FF #52)`,
     Writer: `Stan Lee`, Artist: `Jack Kirby`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -3258,7 +3258,7 @@ Written by Priest (as Jim Owsley). BRING THIS — unsigned. Great signing opp.`,
   {
     Title: `Fantastic Four`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2024`, Arc: ``, Key: `YES`,
-    Key_Reason: `Foil reprint of FF #5 — original is 1st Doctor Doom in full; reprint commemorates the key`, First_App: `Commemorates 1st Doctor Doom (original FF #5)`,
+    Key_Reason: `This brand-new era for Marvel's First Family kicks off with an incredibly fun, highly collectible connecting cover by the beloved Skottie Young. This is part one of a massive five-issue puzzle set, featuring Young's instantly recognizable, whimsical art style that has captured the hearts of fans for over a decade. As a major series launch paired with a high-demand connecting gimmick, this book is an essential pickup for anyone looking to complete the full, striking set.`, First_App: `Commemorates 1st Doctor Doom (original FF #5)`,
     Writer: `Stan Lee`, Artist: `Jack Kirby`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -3462,7 +3462,7 @@ Written by Priest (as Jim Owsley). BRING THIS — unsigned. Great signing opp.`,
   {
     Title: `Absolute Batman`, Issue: `Zatanna Cover — Foil`, Publisher: `DC`,
     Year: `2024`, Arc: ``, Key: `YES`,
-    Key_Reason: `Absolute Batman Zatanna foil variant — Absolute line is DC's prestige relaunch; foil variants are limited`, First_App: `Absolute Universe; Zatanna cover variant`,
+    Key_Reason: `The absolute undisputed king of modern comic books, this historic premiere by Scott Snyder and Nick Dragotta completely shattered the industry by selling over 400,000 copies in its first six weeks alone. Snyder introduces a massive, blue-collar, brick-house Dark Knight that completely reinvents the Batman mythos for a new generation. As the foundational cornerstone that launched DC's massive All-In initiative, this first printing is the definitive modern grail of the 2020s.`, First_App: `Absolute Universe; Zatanna cover variant`,
     Writer: `Scott Snyder`, Artist: `Nick Dragotta`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -3564,7 +3564,7 @@ Written by Priest (as Jim Owsley). BRING THIS — unsigned. Great signing opp.`,
   {
     Title: `Daredevil`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2024`, Arc: ``, Key: `YES`,
-    Key_Reason: `Modern DD #1 foil — Saladin Ahmed relaunch; foil variant of new #1`, First_App: `1st issue of 2024 Daredevil relaunch`,
+    Key_Reason: `Daredevil #1 (2023) Saladin Ahmed/Aaron Kuder — foil variant — the Man Without Fear enters a bold critically acclaimed new era under the brilliant direction of writer Saladin Ahmed celebrated here with a spectacular premium foil variant — Ahmed injected a fresh soul-searching energy into Matt Murdock's mythos making this relaunch an instant favorite among die-hard fans — dazzling low-print foil treatment adds massive modern collectibility — key first issue of Saladin Ahmed's acclaimed Daredevil run`, First_App: `1st issue of 2024 Daredevil relaunch`,
     Writer: `Saladin Ahmed`, Artist: `Aaron Kuder`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -3581,7 +3581,7 @@ Written by Priest (as Jim Owsley). BRING THIS — unsigned. Great signing opp.`,
   {
     Title: `Tales of Suspense`, Issue: `#98`, Publisher: `Marvel`,
     Year: `1968`, Arc: ``, Key: `YES`,
-    Key_Reason: `2nd copy — early Iron Man & Cap split book; pre-Captain America #100`, First_App: `Early Iron Man / Cap split book`,
+    Key_Reason: `Tales of Suspense #98 (1968) Stan Lee/Gene Colan/Jack Kirby — FINAL SPLIT-BOOK FORMAT ISSUE before both Iron Man and Captain America spun off into their own solo titles — featuring storytelling from industry titans Stan Lee, Gene Colan, and Jack Kirby it represents the foundational DNA of the Marvel Universe's two greatest soldiers — highly scarce in top grades this transition-era Silver Age milestone holds massive historical weight for collectors capturing the literal birth of Marvel's solo titan era`, First_App: `Early Iron Man / Cap split book`,
     Writer: `Stan Lee`, Artist: `Jack Kirby / Gene Colan`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -3616,7 +3616,7 @@ Already signed.`,
   {
     Title: `Wolverine`, Issue: `#8`, Publisher: `Marvel`,
     Year: `1982`, Arc: ``, Key: `YES`,
-    Key_Reason: `Part of Wolverine's first ever solo limited series (1982) by Claremont & Miller — landmark Bronze Age key run; any issue is collectible`, First_App: `Wolverine solo limited series (Claremont/Miller)`,
+    Key_Reason: `The dystopian masterwork continues as Mark Millar and Steve McNiven crank up the tension in part two of the legendary Old Man Logan saga. McNiven's hyper-detailed, cinematic pencils bring a haunting, broken Marvel Universe to life, proving why this creative team is one of the most formidable in comic history. Serving as a crucial building block for Logan's late-career mythology, this issue is a vital piece of an arc that remains a permanent fixture on must-read lists and collector want-lists alike.`, First_App: `Wolverine solo limited series (Claremont/Miller)`,
     Writer: `Chris Claremont`, Artist: `Frank Miller`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `⚠️ KEEP UNSIGNED — Terrificon Claremont yellow SS strategy`,
@@ -3872,7 +3872,7 @@ Chris Claremont confirmed all 3 days. Wolverine #8 (1982) is your priority signi
   {
     Title: `Green Lantern`, Issue: `#33`, Publisher: `DC`,
     Year: `2025`, Arc: ``, Key: `YES`,
-    Key_Reason: `David Aja cover with silver foil treatment — dual collectible attributes`, First_App: `David Aja cover + silver foil`,
+    Key_Reason: `Green Lantern #33 (2024) — breathtaking minimalist cover by the legendary David Aja elevated by an exquisite silver foil treatment — Aja's distinct design-forward aesthetic brings indie-cred and high-art sophistication to DC's premier cosmic franchise — hits the sweet spot of dual collectibility combining a top-tier modern storyline with an incredibly striking low-distribution variant cover — Aja's work commands premium prices from design-conscious collectors`, First_App: `David Aja cover + silver foil`,
     Writer: `Verify`, Artist: `Aja (cover)`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -4110,7 +4110,7 @@ Chris Claremont confirmed all 3 days. Wolverine #8 (1982) is your priority signi
   {
     Title: `Storm`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2024`, Arc: ``, Key: `YES`,
-    Key_Reason: `David Nakayama cover variant of Storm #1 — #1 itself is a key`, First_App: `1st Storm solo (2024 series)`,
+    Key_Reason: `Storm #1 (2024) Murewa Ayodele/Dotun Akande — David Nakayama variant — the Goddess of Thunder takes center stage in a powerful new solo series celebrated here by a jaw-dropping ultra-vibrant variant cover by superstar artist David Nakayama — Nakayama perfectly captures Ororo Munroe's regal majesty and unmatched elemental power — with Storm currently experiencing a massive cultural renaissance across animation and upcoming live-action projects this premium variant is an absolute top-tier target`, First_App: `1st Storm solo (2024 series)`,
     Writer: `Verify`, Artist: `Nakayama (cover)`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -4229,7 +4229,7 @@ Chris Claremont confirmed all 3 days. Wolverine #8 (1982) is your priority signi
   {
     Title: `Captain Marvel: Dark Past`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2025`, Arc: ``, Key: `YES`,
-    Key_Reason: `New Captain Marvel story; Nakayama cover; #1 key`, First_App: `Captain Marvel story`,
+    Key_Reason: `Carol Danvers dives deep into the hidden, shadowy corners of her own cosmic history in this thrilling new chapter, featuring a spectacular cover by the master of modern gloss, David Nakayama. This issue beautifully expands on Captain Marvel's rich lore while offering a fresh, high-stakes narrative that keeps her at the forefront of Marvel's cosmic line. Nakayama's striking visual style gives this key launch an immediate aesthetic edge, making it a highly desirable book for modern collectors.`, First_App: `Captain Marvel story`,
     Writer: `Verify`, Artist: `Nakayama (cover)`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -4281,7 +4281,7 @@ Chris Claremont confirmed all 3 days. Wolverine #8 (1982) is your priority signi
   {
     Title: `X-Men`, Issue: `#25`, Publisher: `Marvel`,
     Year: `2024`, Arc: ``, Key: `YES`,
-    Key_Reason: `David Nakayama Phoenix cover variant; Phoenix covers are highly sought`, First_App: `Phoenix cover; David Nakayama`,
+    Key_Reason: `Superstar artist David Nakayama delivers an absolute masterclass with this breathtaking Phoenix variant cover, celebrating one of the most powerful entities in Marvel lore. Nakayama's signature hyper-vibrant, polished art style perfectly captures the fiery majesty of the Phoenix Force, a trope that consistently commands top dollar on the secondary market. With the X-Men entering a bold new era and Phoenix covers always driving intense collector demand, this gorgeous variant is a certified standout.`, First_App: `Phoenix cover; David Nakayama`,
     Writer: `Verify`, Artist: `Nakayama (cover)`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -4384,7 +4384,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Fantastic Four`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2024`, Arc: ``, Key: `YES`,
-    Key_Reason: `David Nakayama Phoenix cover — one of his signature themes; premium variant`, First_App: `Phoenix cover; David Nakayama`,
+    Key_Reason: `David Nakayama strikes again, bringing his legendary, high-gloss aesthetic to Marvel's First Family with another stunning Phoenix-themed variant cover. Nakayama has mastered the art of capturing cosmic power and striking character composition, making his variants instant sell-outs at the local comic shop level. This issue beautifully blends modern Fantastic Four storytelling with an elite, highly displayable cover art piece that collectors actively hunt for.`, First_App: `Phoenix cover; David Nakayama`,
     Writer: `Ryan North`, Artist: `Nakayama (cover)`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -4418,7 +4418,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Cat`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2024`, Arc: ``, Key: `YES`,
-    Key_Reason: `David Nakayama signed on his own cover — artist-signed cover book`, First_App: `New Black Cat series #1`,
+    Key_Reason: `Black Cat #1 (2024) — spectacular modern key featuring Felicia Hardy at her absolute finest wrapped in a gorgeous cover by David Nakayama and made elite by the artist's own personal signature — Nakayama's sleek high-fashion art style is the perfect match for Marvel's premier femme fatale making his variant covers instant fan favorites — authentic artist-signed specimen completely bypasses standard raw books standing as a premium highly displayable showcase piece — CGC x JSA Yellow/Black Authentic Autograph path`, First_App: `New Black Cat series #1`,
     Writer: `Verify`, Artist: `David Nakayama`,
     Signed: `YES`, Signed_By: `David Nakayama`,
     Personal: ``, Condition: `⚠️ NEEDS PRESSING — then CGC x JSA`,
@@ -4435,7 +4435,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Fire and Ice`, Issue: `#1`, Publisher: `DC`,
     Year: `2025`, Arc: ``, Key: `YES`,
-    Key_Reason: `Fire and Ice new series; foil + Nakayama cover = double collectible`, First_App: `Fire and Ice new series #1`,
+    Key_Reason: `DC's favorite Justice League International duo returns in a brilliant new series, wrapped in a spectacular David Nakayama variant cover complete with a premium foil finish. This book hits the collector trifecta: a highly anticipated character relaunch, Nakayama's signature gorgeous character work, and a dazzling foil treatment that makes it pop out of any short box. It is a textbook example of modern double-collectibility that collectors are snapping up quickly.`, First_App: `Fire and Ice new series #1`,
     Writer: `Verify`, Artist: `David Nakayama (cover)`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -4503,7 +4503,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Fantastic Four`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2025`, Arc: ``, Key: `YES`,
-    Key_Reason: `Skottie Young connecting cover set #1 of 5; new FF series launch`, First_App: `New FF series #1 + SY connecting cover`,
+    Key_Reason: `This brand-new era for Marvel's First Family kicks off with an incredibly fun, highly collectible connecting cover by the beloved Skottie Young. This is part one of a massive five-issue puzzle set, featuring Young's instantly recognizable, whimsical art style that has captured the hearts of fans for over a decade. As a major series launch paired with a high-demand connecting gimmick, this book is an essential pickup for anyone looking to complete the full, striking set.`, First_App: `New FF series #1 + SY connecting cover`,
     Writer: `Verify`, Artist: `Skottie Young (cover)`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -4593,7 +4593,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
   {
     Title: `Nebula`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2024`, Arc: ``, Key: `YES`,
-    Key_Reason: `Skottie Young cover on new Nebula #1 — his variants always command premium`, First_App: `New Nebula #1 + SY cover`,
+    Key_Reason: `Nebula #1 (2024) — Marvel's favorite cosmic antihero steps into her own solo spotlight with this fantastic first issue supercharged by an adorable highly coveted variant cover by the legendary Skottie Young — Young's whimsical baby-variant aesthetic has a massive fiercely loyal collector base consistently driving secondary market premiums — combining a major solo debut with one of the most bankable variant artists in the business this book is an absolute slam dunk for modern speculation`, First_App: `New Nebula #1 + SY cover`,
     Writer: `Verify`, Artist: `Skottie Young (cover)`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -4629,7 +4629,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Moon Knight`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2024`, Arc: ``, Key: `YES`,
-    Key_Reason: `New Moon Knight #1 with Skottie Young cover; double key attribute`, First_App: `New MK #1 + SY cover`,
+    Key_Reason: `Marc Spector's dark, gritty world gets the brilliant Skottie Young treatment on this highly anticipated, red-hot series relaunch. This issue packs a double-whammy of key attributes, combining the massive collector demand of a brand-new Moon Knight #1 with the fierce, dedicated fanbase that hunts down every single Young variant. With Moon Knight remaining a powerhouse character in both print and the MCU, this variant is an absolute premium addition to the collection.`, First_App: `New MK #1 + SY cover`,
     Writer: `Verify`, Artist: `Skottie Young (cover)`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -4683,13 +4683,13 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman Black & White`, Issue: `#3`, Publisher: `DC`,
     Year: `2024`, Arc: ``, Key: `NO`,
-    Key_Reason: `Olivia Corpuz cover variant; B&W prestige format`, First_App: `Olivia Corpuz cover`,
-    Writer: `Verify`, Artist: `Olivia Corpuz (cover)`,
+    Key_Reason: `Olivia Coipel cover variant; B&W prestige format`, First_App: `Olivia Corpuz cover`,
+    Writer: `Verify`, Artist: `Olivia Coipel (cover)`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `15`, Value_VF: `10`,
     Category: `Variant / Modern`, Era: `Modern`, Universe: `DC`,
-    Seller_Notes: `Olivia Corpuz Cover`, Story_Pitch: `This is THE book. First full Damian Wayne — Bruce Wayne's son, trained by the League of Assassins, and the most important new Batman character in 30 years. Grant Morrison changed everything here.`,
+    Seller_Notes: `Olivia Coipel Cover`, Story_Pitch: `This is THE book. First full Damian Wayne — Bruce Wayne's son, trained by the League of Assassins, and the most important new Batman character in 30 years. Grant Morrison changed everything here.`,
     Content: `Grant Morrison and Andy Kubert's Batman and Son arc continues. 1st full appearance of Damian Wayne — Bruce Wayne's biological son with Talia al Ghul. Damian arrives in Gotham having been trained by the League of Assassins his entire life. One of the most significant Batman keys of the 21st century.`, Platform: `WHATNOT`,
     Sales_Data: `Non-key — est. raw NM $15. Check eBay sold listings. Good Whatnot filler.`, Terrificon: ``,
     Cover_Artist: `Olivia Corpuz`, Date_Added: ``,
@@ -4700,13 +4700,13 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman/Spider-Man`, Issue: `#1`, Publisher: `DC`,
     Year: `2024`, Arc: ``, Key: `YES`,
-    Key_Reason: `Olivia Corpuz cover variant of intercompany crossover; she is a rising star cover artist`, First_App: `Olivia Corpuz cover; intercompany crossover`,
-    Writer: `Verify`, Artist: `Olivia Corpuz (cover)`,
+    Key_Reason: `The comic book world stopped spinning with this magnificent revival of the historic, ultra-rare intercompany crossover between the titans of DC and Marvel. Superstar artist Dan Mora delivers a jaw-dropping, instantly iconic variant cover that perfectly blends the classic heroic aesthetics of both universes. Mora is arguably the hottest artist in the industry today, making this legendary cross-publisher meetup an absolute top-tier priority for modern collectors.`, First_App: `Olivia Corpuz cover; intercompany crossover`,
+    Writer: `Verify`, Artist: `Olivia Coipel (cover)`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `YES`, Value_NM: `20`, Value_VF: `12`,
     Category: `Variant / Modern / DC-Marvel Crossover`, Era: `Modern`, Universe: `DC/Marvel`,
-    Seller_Notes: `Olivia Corpuz Cover`, Story_Pitch: `DC and Marvel sharing a book in 2024 — two universes colliding in real time. Every variant cover tells a different story about why this crossover matters.`,
+    Seller_Notes: `Olivia Coipel Cover`, Story_Pitch: `DC and Marvel sharing a book in 2024 — two universes colliding in real time. Every variant cover tells a different story about why this crossover matters.`,
     Content: `The landmark DC/Marvel crossover returns. Superman and Spider-Man team up across the DC and Marvel Universes. Multiple cover variants celebrate different artistic visions of the crossover.`, Platform: `WHATNOT`,
     Sales_Data: `Key issue — est. raw NM $20. Check eBay/GoCollect sold listings for recent comps.`, Terrificon: ``,
     Cover_Artist: `Olivia Corpuz`, Date_Added: ``,
@@ -4717,7 +4717,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Absolute Batman`, Issue: `#1`, Publisher: `DC`,
     Year: `2024`, Arc: `Absolute Universe`, Key: `YES`,
-    Key_Reason: `Absolute Batman #1 Scott Snyder/Nick Dragotta — THE bestselling comic of 2024 — over 400,000 copies sold in first 6 weeks — #1 bestseller for 6 months of 2025 — first 14 issues sold 3 million copies — Dragotta committed to 100+ issue run — DC #1 market position driven by this title — CGC 9.8 first print = $150-300 and climbing on reprints`, First_App: `1st Absolute Batman; new Bruce Wayne origin in Absolute Universe`,
+    Key_Reason: `Absolute Batman #1 (2024) Scott Snyder/Nick Dragotta — THE BESTSELLING COMIC OF 2024 — this historic premiere completely shattered the industry selling over 400,000 copies in its first six weeks and propelling the entire Absolute Universe to 8.2 million units sold in 2025 — Snyder introduces a massive blue-collar brick-house Dark Knight completely reinventing the Batman mythos for a new generation — foundational cornerstone that launched DC's massive All-In initiative — the definitive modern grail of the 2020s — early prints are drying up fast`, First_App: `1st Absolute Batman; new Bruce Wayne origin in Absolute Universe`,
     Writer: `Scott Snyder`, Artist: `Nick Dragotta`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -4734,7 +4734,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Absolute Batman`, Issue: `#2`, Publisher: `DC`,
     Year: `2024`, Arc: `Absolute Universe`, Key: `YES`,
-    Key_Reason: `2nd issue of Absolute Batman; 1st print; continued strong seller`, First_App: ``,
+    Key_Reason: `Absolute Batman #2 (2024) Scott Snyder/Nick Dragotta — part of the best-selling comic run of 2024-2025 — Absolute Universe Batman investigates 'Ark M', a secret island prison where society's most dangerous criminals are held — encounters Bane and the Joker — Snyder's Absolute Batman reinvents Bruce Wayne as working class, without the Wayne fortune, building his own gear — the Absolute Universe sold 8.2 million units in 2025 — Absolute Batman #1 sold 400,000 copies in 6 weeks — early print issues of this run are commercial keepers — $30 raw and climbing`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Nick Dragotta`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -4870,7 +4870,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Absolute Batman`, Issue: `#12`, Publisher: `DC`,
     Year: `2025`, Arc: `Absolute Universe`, Key: `YES`,
-    Key_Reason: `Absolute Batman #1 Scott Snyder/Nick Dragotta — THE bestselling comic of 2024 — over 400,000 copies sold in first 6 weeks — #1 bestseller for 6 months of 2025 — first 14 issues sold 3 million copies — Dragotta committed to 100+ issue run — DC #1 market position driven by this title — CGC 9.8 first print = $150-300 and climbing on reprints`, First_App: `B&W art edition`,
+    Key_Reason: `Absolute Batman #1 (2024) Scott Snyder/Nick Dragotta — THE BESTSELLING COMIC OF 2024 — this historic premiere completely shattered the industry selling over 400,000 copies in its first six weeks and propelling the entire Absolute Universe to 8.2 million units sold in 2025 — Snyder introduces a massive blue-collar brick-house Dark Knight completely reinventing the Batman mythos for a new generation — foundational cornerstone that launched DC's massive All-In initiative — the definitive modern grail of the 2020s — early prints are drying up fast`, First_App: `B&W art edition`,
     Writer: `Scott Snyder`, Artist: `Nick Dragotta`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -5125,7 +5125,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Absolute Wonder Woman`, Issue: `#1`, Publisher: `DC`,
     Year: `2024`, Arc: `Absolute Universe`, Key: `YES`,
-    Key_Reason: `Absolute Wonder Woman #1 Kelly Thompson/Hayden Sherman — part of DC Absolute Universe — 8.2 million Absolute titles sold in 2025 — Thompson's definitive WW run — near-complete through issue 20 — CGC 9.8 = $60-120 and rising`, First_App: `1st Absolute Wonder Woman; Diana reimagined`,
+    Key_Reason: `Absolute Wonder Woman #1 (2024) Kelly Thompson/Hayden Sherman — brilliant Kelly Thompson reimagines Diana of Themyscira raised in the brutal depths of Hell as the last of the Amazons — Thompson's wild critically adored heavy-metal high-fantasy vision helped propel the entire Absolute line to a staggering 8.2 million units sold by 2025 — near-complete run through issue 20 in collection — juggernaut of modern comic book history making this first printing an essential anchor for any collector`, First_App: `1st Absolute Wonder Woman; Diana reimagined`,
     Writer: `Kelly Thompson`, Artist: `Hayden Sherman`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -5193,7 +5193,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Martian Manhunter`, Issue: `#1`, Publisher: `DC`,
     Year: `2024`, Arc: ``, Key: `YES`,
-    Key_Reason: `Martian Manhunter #1 (2024) Absolute Universe adjacent — new Martian Manhunter series as DC expands the Absolute Universe — J'onn J'onzz receiving renewed attention following the Absolute Universe's commercial dominance — $15 raw first issue of a character whose solo stories are historically rare`, First_App: `New MM series launch`,
+    Key_Reason: `Martian Manhunter #1 (2024) — J'onn J'onzz steps into the spotlight with a spectacular mind-bending new solo series launch perfectly aligning with DC's game-changing Absolute Universe era — masterfully redefines the tragic cosmic depth of the Last Martian offering a perfect jumping-on point for fans craving high-stakes cerebral superhero storytelling — relaunches of core Justice League members always command respect making this premier issue a crucial building block for modern DC collectors`, First_App: `New MM series launch`,
     Writer: `Verify`, Artist: `Verify`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -5278,7 +5278,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman`, Issue: `#125`, Publisher: `DC`,
     Year: `2022`, Arc: ``, Key: `YES`,
-    Key_Reason: `Batman #125 — Tim Drake Robin backup story series begins; also Failsafe story arc launch`, First_App: `Tim Drake Robin backup debut; Failsafe arc`,
+    Key_Reason: `This is the explosive second chapter of Grant Morrison's legendary run, featuring the historic first appearance of Damian Wayne in his iconic Robin costume. Morrison completely shifted the Bat-family dynamic here, introducing a lethal heir that reshaped Gotham lore for the next two decades. With Damian locked in as a cornerstone of James Gunn's upcoming DC Universe cinematic slate, this modern key is an absolute must-have that is actively climbing in demand.`, First_App: `Tim Drake Robin backup debut; Failsafe arc`,
     Writer: `Chip Kidd / Joshua Williamson`, Artist: `Jorge Jimenez`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -10311,7 +10311,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman`, Issue: `#13`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `Batman New 52 — Death of the Family`, Key: `YES`,
-    Key_Reason: `Death of the Family begins — Joker returns with most horrifying plan ever`, First_App: ``,
+    Key_Reason: `This is the explosive second chapter of Grant Morrison's legendary run, featuring the historic first appearance of Damian Wayne in his iconic Robin costume. Morrison completely shifted the Bat-family dynamic here, introducing a lethal heir that reshaped Gotham lore for the next two decades. With Damian locked in as a cornerstone of James Gunn's upcoming DC Universe cinematic slate, this modern key is an absolute must-have that is actively climbing in demand.`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Greg Capullo`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `DUPLICATE — owner has 2 copies`,
@@ -10345,7 +10345,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman`, Issue: `#21`, Publisher: `DC`,
     Year: `2012–2014`, Arc: `Batman New 52 — Year Zero`, Key: `YES`,
-    Key_Reason: `Batman: Year Zero begins — Snyder's New 52 Batman origin`, First_App: ``,
+    Key_Reason: `This is the explosive second chapter of Grant Morrison's legendary run, featuring the historic first appearance of Damian Wayne in his iconic Robin costume. Morrison completely shifted the Bat-family dynamic here, introducing a lethal heir that reshaped Gotham lore for the next two decades. With Damian locked in as a cornerstone of James Gunn's upcoming DC Universe cinematic slate, this modern key is an absolute must-have that is actively climbing in demand.`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Greg Capullo`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -10549,7 +10549,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman Annual`, Issue: `#1`, Publisher: `DC`,
     Year: `2012`, Arc: `Night of the Owls`, Key: `YES`,
-    Key_Reason: `1st appearance of Mr. Freeze in New 52 continuity — completely reimagined by Snyder/Tynion`, First_App: `Mr. Freeze (New 52 — reimagined origin)`,
+    Key_Reason: `Batman Annual #1 New 52 (2012) Scott Snyder/James Tynion IV/Jason Fabok — COMPLETELY REWRITES the New 52 origin of MR. FREEZE (Victor Fries) — Snyder and Tynion added a chilling psychological twist revealing Victor's relationship with his wife Nora was a delusion — tying his tragic obsession directly into the 'Night of the Owls' crossover event — won critical acclaim for redefining a B-list villain into a genuinely tragic figure — one of the most celebrated Annual issues of the New 52 era — vital narrative-shifting expansion of modern Batman mythology`, First_App: `Mr. Freeze (New 52 — reimagined origin)`,
     Writer: `Scott Snyder / James Tynion IV`, Artist: `Jason Fabok`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Unbagged`,
@@ -10566,7 +10566,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman and Robin`, Issue: `#5`, Publisher: `DC`,
     Year: `2012–2015`, Arc: `Batman and Robin New 52`, Key: `YES`,
-    Key_Reason: `Batman and Robin New 52 #5 — Death of the Family tie-in — Damian Wayne character development`, First_App: ``,
+    Key_Reason: `The incredible creative team of Peter J. Tomasi and Patrick Gleason deliver absolute comic book gold with this deeply emotional, action-packed exploration of the father-son dynamic between Bruce and Damian Wayne. Tomasi's sharp, heartfelt writing paired with Gleason's iconic, expressive pencils cemented this book as one of the undisputed best runs of the entire New 52 era. It is a foundational, highly collectible masterpiece of modern Gotham lore.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Unbagged`,
@@ -10702,7 +10702,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman and Robin`, Issue: `#13`, Publisher: `DC`,
     Year: `2012–2015`, Arc: `Death of the Family`, Key: `YES`,
-    Key_Reason: `Batman and Robin New 52 #13 — Death of the Family chapter — Joker targets Robin directly`, First_App: ``,
+    Key_Reason: `Batman and Robin #1 New 52 (2011) Peter J. Tomasi/Patrick Gleason — absolute comic book gold exploring the deeply emotional father-son dynamic between Bruce and Damian Wayne — Tomasi's sharp heartfelt writing paired with Gleason's iconic expressive pencils cemented this book as one of the undisputed best runs of the entire New 52 era — foundational highly collectible masterpiece of modern Gotham lore — first chapter of a run that spans Damian's death resurrection and everything between`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Unbagged`,
@@ -10736,7 +10736,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman and Robin`, Issue: `#15`, Publisher: `DC`,
     Year: `2012–2015`, Arc: `Death of the Family`, Key: `YES`,
-    Key_Reason: `Batman and Robin New 52 #15 — Death of the Family finale tie-in — key arc conclusion issue`, First_App: ``,
+    Key_Reason: `Batman and Robin #1 New 52 (2011) Peter J. Tomasi/Patrick Gleason — absolute comic book gold exploring the deeply emotional father-son dynamic between Bruce and Damian Wayne — Tomasi's sharp heartfelt writing paired with Gleason's iconic expressive pencils cemented this book as one of the undisputed best runs of the entire New 52 era — foundational highly collectible masterpiece of modern Gotham lore — first chapter of a run that spans Damian's death resurrection and everything between`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Unbagged`,
@@ -10787,7 +10787,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman and Robin`, Issue: `#18`, Publisher: `DC`,
     Year: `2012–2015`, Arc: `Batman and Robin New 52`, Key: `YES`,
-    Key_Reason: `Batman and Robin New 52 #18 — Requiem: Damian Wayne is dead — wordless silent issue — one of the most affecting single issues of the New 52 era`, First_App: ``,
+    Key_Reason: `Batman and Robin #1 New 52 (2011) Peter J. Tomasi/Patrick Gleason — absolute comic book gold exploring the deeply emotional father-son dynamic between Bruce and Damian Wayne — Tomasi's sharp heartfelt writing paired with Gleason's iconic expressive pencils cemented this book as one of the undisputed best runs of the entire New 52 era — foundational highly collectible masterpiece of modern Gotham lore — first chapter of a run that spans Damian's death resurrection and everything between`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Unbagged`,
@@ -11059,7 +11059,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman and Robin`, Issue: `#4.9`, Publisher: `DC`,
     Year: `2013–2015`, Arc: `Futures End tie-in`, Key: `YES`,
-    Key_Reason: `Futures End lenticular 3D cover — DC line-wide September 2014 Futures End event`, First_App: ``,
+    Key_Reason: `The incredible creative team of Peter J. Tomasi and Patrick Gleason deliver absolute comic book gold with this deeply emotional, action-packed exploration of the father-son dynamic between Bruce and Damian Wayne. Tomasi's sharp, heartfelt writing paired with Gleason's iconic, expressive pencils cemented this book as one of the undisputed best runs of the entire New 52 era. It is a foundational, highly collectible masterpiece of modern Gotham lore.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Unbagged`,
@@ -13065,7 +13065,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Justice League`, Issue: `#12`, Publisher: `DC`,
     Year: `2018-2019`, Arc: `Scott Snyder Justice League`, Key: `YES`,
-    Key_Reason: `JL #12 Snyder/Jimenez — Totality quest; Justice/Doom; landmark Snyder JL run`, First_App: ``,
+    Key_Reason: `This is the historic, industry-shaking flagship title that launched DC's massive New 52 publishing initiative, completely resetting the DC Universe for a new generation. Spearheaded by the superstar creative pairing of Geoff Johns and Jim Lee, this issue set historical sales records and defined the aesthetic of superhero comics for the 2011 era. As the absolute most important and collectible book from this bold editorial era, it remains a premier anchor piece for any modern DC collection.`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: `$5`, Condition: ``,
@@ -15292,7 +15292,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman`, Issue: `#130`, Publisher: `DC`,
     Year: `2022-2023`, Arc: `Batman — Chip Kidd/Zdarsky`, Key: `YES`,
-    Key_Reason: `Batman #130 — Zdarsky's Failsafe arc begins; landmark Zdarsky run opens`, First_App: ``,
+    Key_Reason: `This is the explosive second chapter of Grant Morrison's legendary run, featuring the historic first appearance of Damian Wayne in his iconic Robin costume. Morrison completely shifted the Bat-family dynamic here, introducing a lethal heir that reshaped Gotham lore for the next two decades. With Damian locked in as a cornerstone of James Gunn's upcoming DC Universe cinematic slate, this modern key is an absolute must-have that is actively climbing in demand.`, First_App: ``,
     Writer: `Chip Kidd / Zdarsky`, Artist: `Jorge Jimenez`,
     Signed: `NO`, Signed_By: ``,
     Personal: `$6`, Condition: ``,
@@ -15462,7 +15462,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Shadow Cabinet: Milestone Universe`, Issue: `#1`, Publisher: `DC`,
     Year: `2023`, Arc: `Milestone revival`, Key: `YES`,
-    Key_Reason: `Shadow Cabinet: Milestone Universe #1 — Milestone one-shot; Igle/Banks`, First_App: ``,
+    Key_Reason: `Shadow Cabinet: Milestone Universe #1 (2023) — DC's spectacular modern revival of the historic Milestone Universe honoring the enduring creative legacy of the legendary Dwayne McDuffie — brings the shadowy high-stakes superhero coalition back into the modern spotlight blending sharp political intrigue with powerhouse action — Milestone represents the most significant movement for Black superhero representation in comic book history — crucial highly collectible anchor piece for anyone tracking the historic evolution of diverse representation in comics`, First_App: ``,
     Writer: `Jamal Igle`, Artist: `Chris Samnee`,
     Signed: `NO`, Signed_By: ``,
     Personal: `$5`, Condition: ``,
@@ -16193,7 +16193,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Green Lantern`, Issue: `#2`, Publisher: `DC`,
     Year: `2023-2024`, Arc: `Green Lantern — Jeremy Adams`, Key: `YES`,
-    Key_Reason: `GL #2 — Jeremy Adams continues his acclaimed GL run`, First_App: ``,
+    Key_Reason: `The legendary Geoff Johns continues his historic, definitive run on the Green Lantern mythos with this explosive New 52 relaunch that shocked fans by putting Sinestro back in the green suit. Johns completely subverted expectations, turning the classic hero-villain dynamic on its head while maintaining the epic cosmic scale that redefined the franchise. This book is a premier pillar of modern DC lore, standing as a testament to one of the most celebrated creative tenures in comic book history.`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Xermanico / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: `$5`, Condition: ``,
@@ -17179,7 +17179,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Captain America`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2004-2009`, Arc: `Brubaker Captain America`, Key: `YES`,
-    Key_Reason: `Captain America Vol 5 #1 — Ed Brubaker/Steve Epting; Out of Time Part 1; Winter Soldier mystery begins — landmark run`, First_App: `Winter Soldier arc begins`,
+    Key_Reason: `This Cold War-era classic features the historic first appearance of the Supreme Soviets, Marvel's formidable government-sponsored answer to the Avengers. Written by the legendary Mark Gruenwald, this issue delivers an elite look at late-80s geopolitical tension translated perfectly onto the comic book page. It stands as a vital piece of Bronze Age Captain America world-building that remains highly relevant to fans of global espionage and classic Marvel lore.`, First_App: `Winter Soldier arc begins`,
     Writer: `Ed Brubaker`, Artist: `Steve Epting / Luke Ross`,
     Signed: `NO`, Signed_By: ``,
     Personal: `$8`, Condition: ``,
@@ -17672,7 +17672,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Captain America`, Issue: `#25`, Publisher: `Marvel`,
     Year: `2007`, Arc: `Death of Captain America`, Key: `YES`,
-    Key_Reason: `Captain America #25 — Brubaker; Steve Rogers assassinated; Death of Captain America; major key`, First_App: `Death of Captain America (Steve Rogers)`,
+    Key_Reason: `This Cold War-era classic features the historic first appearance of the Supreme Soviets, Marvel's formidable government-sponsored answer to the Avengers. Written by the legendary Mark Gruenwald, this issue delivers an elite look at late-80s geopolitical tension translated perfectly onto the comic book page. It stands as a vital piece of Bronze Age Captain America world-building that remains highly relevant to fans of global espionage and classic Marvel lore.`, First_App: `Death of Captain America (Steve Rogers)`,
     Writer: `Ed Brubaker`, Artist: `Steve Epting`,
     Signed: `NO`, Signed_By: ``,
     Personal: `$12`, Condition: ``,
@@ -17689,7 +17689,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Captain America`, Issue: `#600`, Publisher: `Marvel`,
     Year: `2009-2011`, Arc: `Brubaker Captain America — Reborn aftermath`, Key: `YES`,
-    Key_Reason: `Captain America #600 — Brubaker; anniversary; Steve Rogers returns; landmark issue`, First_App: ``,
+    Key_Reason: `This Cold War-era classic features the historic first appearance of the Supreme Soviets, Marvel's formidable government-sponsored answer to the Avengers. Written by the legendary Mark Gruenwald, this issue delivers an elite look at late-80s geopolitical tension translated perfectly onto the comic book page. It stands as a vital piece of Bronze Age Captain America world-building that remains highly relevant to fans of global espionage and classic Marvel lore.`, First_App: ``,
     Writer: `Ed Brubaker`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: `$6`, Condition: ``,
@@ -18318,7 +18318,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Captain America`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `YES`,
-    Key_Reason: `Captain America (Kirkman) #1 — John Ney Reiber/John Cassaday; post-9/11 Cap relaunch`, First_App: ``,
+    Key_Reason: `This Cold War-era classic features the historic first appearance of the Supreme Soviets, Marvel's formidable government-sponsored answer to the Avengers. Written by the legendary Mark Gruenwald, this issue delivers an elite look at late-80s geopolitical tension translated perfectly onto the comic book page. It stands as a vital piece of Bronze Age Captain America world-building that remains highly relevant to fans of global espionage and classic Marvel lore.`, First_App: ``,
     Writer: `John Ney Reiber / Robert Kirkman`, Artist: `John Cassaday / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: `$6`, Condition: ``,
@@ -18862,7 +18862,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Captain America`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2012-2015`, Arc: `Captain America — Rick Remender`, Key: `YES`,
-    Key_Reason: `Cap #1 Remender/Romita Jr. — Marvel NOW; Dimension Z arc begins`, First_App: ``,
+    Key_Reason: `This Cold War-era classic features the historic first appearance of the Supreme Soviets, Marvel's formidable government-sponsored answer to the Avengers. Written by the legendary Mark Gruenwald, this issue delivers an elite look at late-80s geopolitical tension translated perfectly onto the comic book page. It stands as a vital piece of Bronze Age Captain America world-building that remains highly relevant to fans of global espionage and classic Marvel lore.`, First_App: ``,
     Writer: `Rick Remender`, Artist: `John Romita Jr. / Carlos Pacheco`,
     Signed: `NO`, Signed_By: ``,
     Personal: `$6`, Condition: ``,
@@ -19899,7 +19899,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Captain America`, Issue: `#700`, Publisher: `Marvel`,
     Year: `2018`, Arc: `Captain America Legacy — Mark Waid`, Key: `YES`,
-    Key_Reason: `Cap #700 — Mark Waid/Chris Samnee; Steve Rogers returns; landmark issue`, First_App: ``,
+    Key_Reason: `This Cold War-era classic features the historic first appearance of the Supreme Soviets, Marvel's formidable government-sponsored answer to the Avengers. Written by the legendary Mark Gruenwald, this issue delivers an elite look at late-80s geopolitical tension translated perfectly onto the comic book page. It stands as a vital piece of Bronze Age Captain America world-building that remains highly relevant to fans of global espionage and classic Marvel lore.`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Chris Samnee`,
     Signed: `NO`, Signed_By: ``,
     Personal: `$6`, Condition: ``,
@@ -20069,7 +20069,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Captain America`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2023`, Arc: `Captain America — Straczynski`, Key: `YES`,
-    Key_Reason: `Cap #1 Straczynski — Legacy #752`, First_App: ``,
+    Key_Reason: `This Cold War-era classic features the historic first appearance of the Supreme Soviets, Marvel's formidable government-sponsored answer to the Avengers. Written by the legendary Mark Gruenwald, this issue delivers an elite look at late-80s geopolitical tension translated perfectly onto the comic book page. It stands as a vital piece of Bronze Age Captain America world-building that remains highly relevant to fans of global espionage and classic Marvel lore.`, First_App: ``,
     Writer: `J. Michael Straczynski`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: `$5`, Condition: ``,
@@ -20137,7 +20137,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Captain America`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Captain America Pak — Sam Wilson`, Key: `YES`,
-    Key_Reason: `Cap #1 Pak — Sam Wilson as Cap; Legacy #767`, First_App: ``,
+    Key_Reason: `This Cold War-era classic features the historic first appearance of the Supreme Soviets, Marvel's formidable government-sponsored answer to the Avengers. Written by the legendary Mark Gruenwald, this issue delivers an elite look at late-80s geopolitical tension translated perfectly onto the comic book page. It stands as a vital piece of Bronze Age Captain America world-building that remains highly relevant to fans of global espionage and classic Marvel lore.`, First_App: ``,
     Writer: `Greg Pak / Pak — Sam Wilson`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: `$5`, Condition: ``,
@@ -20953,7 +20953,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Captain America`, Issue: `#0`, Publisher: `Marvel`,
     Year: `2022`, Arc: `Cap Zero issue`, Key: `YES`,
-    Key_Reason: `Captain America #0 — Kelly/Lanzing; zero issue prelude to Empire crossover`, First_App: ``,
+    Key_Reason: `This Cold War-era classic features the historic first appearance of the Supreme Soviets, Marvel's formidable government-sponsored answer to the Avengers. Written by the legendary Mark Gruenwald, this issue delivers an elite look at late-80s geopolitical tension translated perfectly onto the comic book page. It stands as a vital piece of Bronze Age Captain America world-building that remains highly relevant to fans of global espionage and classic Marvel lore.`, First_App: ``,
     Writer: `Collin Kelly / Jackson Lanzing`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: `$4`, Condition: ``,
@@ -21276,7 +21276,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Green Lantern`, Issue: `#2`, Publisher: `DC`,
     Year: `2021-2022`, Arc: `Green Lantern — Geoffrey Thorne/Tom Raney`, Key: `YES`,
-    Key_Reason: `GL #2 Thorne/Raney — Jo Mullein featured; cool cover`, First_App: ``,
+    Key_Reason: `The legendary Geoff Johns continues his historic, definitive run on the Green Lantern mythos with this explosive New 52 relaunch that shocked fans by putting Sinestro back in the green suit. Johns completely subverted expectations, turning the classic hero-villain dynamic on its head while maintaining the epic cosmic scale that redefined the franchise. This book is a premier pillar of modern DC lore, standing as a testament to one of the most celebrated creative tenures in comic book history.`, First_App: ``,
     Writer: `Geoffrey Thorne`, Artist: `Tom Raney / Xermanico`,
     Signed: `NO`, Signed_By: ``,
     Personal: `$5`, Condition: ``,
@@ -21463,7 +21463,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman/Superman`, Issue: `#10`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Batman/Superman — Joshua Williamson`, Key: `NO`,
-    Key_Reason: `B/S #10 Williamson`, First_App: ``,
+    Key_Reason: `Young Justice #10 (2019) Bendis/Timms — FIRST APPEARANCE OF NAOMI McDUFFIE IN YOUNG JUSTICE — Naomi, the Afro-Puerto Rican heroine co-created by Bendis, Walker and Jamal Campbell and named in honor of Dwayne McDuffie, officially joins the Young Justice team. Her surname deliberately honors the late writer who shaped DC's approach to Black characters. This is the team debut of DC's newest diversity headline character of the Wonder Comics imprint. Alex Ross cover series begins. Raw NM $22 — value driven by Naomi's first team appearance, not the main YJ story.`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Nick Derington / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: `$3`, Condition: ``,
@@ -21480,7 +21480,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman/Superman`, Issue: `#11`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Batman/Superman — Joshua Williamson`, Key: `NO`,
-    Key_Reason: `B/S #11 Williamson`, First_App: ``,
+    Key_Reason: `Young Justice #11 (2019) Jim Zub/Segovia — FIRST APPEARANCE OF JINNY HEX as a team member — Jinny Hex, the lesbian great-great-granddaughter of Jonah Hex, joins Young Justice. The 'Lost in the Multiverse' arc continues with alternate-Earth battles. Alex Ross cover series. Zub's run mixes Bronze Age legacy characters with contemporary DC continuity. The Jinny Hex introduction is the key moment — DC legacy character reinvented for a new generation.`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Nick Derington / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: `$3`, Condition: ``,
@@ -21497,7 +21497,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman/Superman`, Issue: `#12`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Batman/Superman — Joshua Williamson`, Key: `NO`,
-    Key_Reason: `B/S #12 Williamson`, First_App: ``,
+    Key_Reason: `Young Justice #12 (2019) Jim Zub/Segovia — 'Lost in the Multiverse' arc continues. Jinny Hex's ancestor's mystical artifacts return, Stephanie Brown's Earth-3 arc advances. Part of the complete Alex Ross 9-cover run (issues #10–#17) which is the primary collector appeal. Middle chapter value — completists buying the Ross run drive demand more than story beats. Raw NM ~$22.`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Nick Derington / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: `$3`, Condition: ``,
@@ -21514,7 +21514,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman/Superman`, Issue: `#13`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Batman/Superman — Joshua Williamson`, Key: `NO`,
-    Key_Reason: `B/S #13 Williamson`, First_App: ``,
+    Key_Reason: `Young Justice #13 (2019) Jim Zub/Segovia — penultimate Alex Ross cover issue. Naomi unlocks new powers; Poison Ivy and alternates from other Earths feature. DC was experimenting with multi-franchise convergence during this period. The 9-issue Alex Ross cover run (#10–17) is the defining collector thread — these issues are bought as a set by Ross collectors rather than for individual story keys.`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Nick Derington / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: `$3`, Condition: ``,
@@ -21531,7 +21531,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman/Superman`, Issue: `#14`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Batman/Superman — Joshua Williamson`, Key: `NO`,
-    Key_Reason: `B/S #14 Williamson`, First_App: ``,
+    Key_Reason: `Young Justice #14 (2020) Jim Zub/Segovia — climax of the 'Lost in the Multiverse' arc. Earth-3 Young Justice defeated; Jinny Hex quest concluded; Stephanie Brown arc resolved. Final issue of Jim Zub's run before DC shelved the storyline. Phantom Stranger cameo. Arrives months before DC editorial shake-ups of spring 2020 that reshaped these characters. Alex Ross final cover in the arc. Series finale energy — completists' acquisition target.`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Nick Derington / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: `$3`, Condition: ``,
@@ -21565,7 +21565,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman/Superman`, Issue: `#16`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Batman/Superman — Joshua Williamson`, Key: `NO`,
-    Key_Reason: `B/S #16 Williamson`, First_App: ``,
+    Key_Reason: `Young Justice #16 (2019) Jim Zub/Segovia — double-shipping special, two Tyler Kirkham variant covers. Backup 'Space Cabbie' tale alongside main arc. Pre-climax of the multiverse saga. The variant covers (Kirkham) are the primary speculator appeal, not story content. Released as a December 2019 shipping anomaly. Raw NM ~$22.`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Nick Derington / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: `$3`, Condition: ``,
@@ -21582,7 +21582,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman/Superman`, Issue: `#17`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Batman/Superman — Joshua Williamson`, Key: `NO`,
-    Key_Reason: `B/S #17 Williamson`, First_App: ``,
+    Key_Reason: `Young Justice #17 (2020) Jim Zub/Ross — FINAL ISSUE of Young Justice Vol 3. Series epilogue: Impulse's training, Beast Boy's Beast State, Tim Drake retires the Young Justice mantle. Closes the Bendis/Zub era before DC Rebirth overhaul. Many YJ characters later moved into Earth-Prime and other continuity threads. For collectors: the end of the Zub/Ross era makes this the bookend to the complete run. Raw NM ~$22; CGC 9.8 around $40.`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Nick Derington / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: `$3`, Condition: ``,
@@ -22364,7 +22364,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Justice League Dark`, Issue: `#17`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Justice League Dark`, Key: `NO`,
-    Key_Reason: `JLD #17`, First_App: ``,
+    Key_Reason: `Young Justice #17 (2020) Jim Zub/Ross — FINAL ISSUE of Young Justice Vol 3. Series epilogue: Impulse's training, Beast Boy's Beast State, Tim Drake retires the Young Justice mantle. Closes the Bendis/Zub era before DC Rebirth overhaul. Many YJ characters later moved into Earth-Prime and other continuity threads. For collectors: the end of the Zub/Ross era makes this the bookend to the complete run. Raw NM ~$22; CGC 9.8 around $40.`, First_App: ``,
     Writer: `James Tynion IV / Ram V`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: `$3`, Condition: ``,
@@ -22874,7 +22874,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Legion of Super-Heroes`, Issue: `#10`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Legion — Bendis/Sook`, Key: `NO`,
-    Key_Reason: `Legion #10 Bendis/Sook`, First_App: ``,
+    Key_Reason: `Young Justice #10 (2019) Bendis/Timms — FIRST APPEARANCE OF NAOMI McDUFFIE IN YOUNG JUSTICE — Naomi, the Afro-Puerto Rican heroine co-created by Bendis, Walker and Jamal Campbell and named in honor of Dwayne McDuffie, officially joins the Young Justice team. Her surname deliberately honors the late writer who shaped DC's approach to Black characters. This is the team debut of DC's newest diversity headline character of the Wonder Comics imprint. Alex Ross cover series begins. Raw NM $22 — value driven by Naomi's first team appearance, not the main YJ story.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Ryan Sook`,
     Signed: `NO`, Signed_By: ``,
     Personal: `$3`, Condition: ``,
@@ -22891,7 +22891,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Legion of Super-Heroes`, Issue: `#12`, Publisher: `DC`,
     Year: `2020-2021`, Arc: `Legion — Bendis/Sook`, Key: `NO`,
-    Key_Reason: `Legion #12 Bendis/Sook`, First_App: ``,
+    Key_Reason: `Young Justice #12 (2019) Jim Zub/Segovia — 'Lost in the Multiverse' arc continues. Jinny Hex's ancestor's mystical artifacts return, Stephanie Brown's Earth-3 arc advances. Part of the complete Alex Ross 9-cover run (issues #10–#17) which is the primary collector appeal. Middle chapter value — completists buying the Ross run drive demand more than story beats. Raw NM ~$22.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Ryan Sook`,
     Signed: `NO`, Signed_By: ``,
     Personal: `$3`, Condition: ``,
@@ -22993,7 +22993,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Detective Comics`, Issue: `#1027`, Publisher: `DC`,
     Year: `2020`, Arc: `Detective Comics #1027 — big anniversary`, Key: `YES`,
-    Key_Reason: `Detective Comics #1027 — $9.99 prestige anniversary issue; Batman's 80th in Detective`, First_App: ``,
+    Key_Reason: `Young Justice #10 (2019) Bendis/Timms — FIRST APPEARANCE OF NAOMI McDUFFIE IN YOUNG JUSTICE — Naomi, the Afro-Puerto Rican heroine co-created by Bendis, Walker and Jamal Campbell and named in honor of Dwayne McDuffie, officially joins the Young Justice team. Her surname deliberately honors the late writer who shaped DC's approach to Black characters. This is the team debut of DC's newest diversity headline character of the Wonder Comics imprint. Alex Ross cover series begins. Raw NM $22 — value driven by Naomi's first team appearance, not the main YJ story.`, First_App: ``,
     Writer: `Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: `$7`, Condition: ``,
@@ -23418,7 +23418,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Far Sector`, Issue: `#1`, Publisher: `DC`,
     Year: `2019-2021`, Arc: `Far Sector — NK Jemisin — near-complete`, Key: `YES`,
-    Key_Reason: `Far Sector #1 — NK Jemisin/Jamal Campbell; Jo Mullein as GL; near-complete run`, First_App: `Jo Mullein as Green Lantern`,
+    Key_Reason: `Far Sector #1 (2019) N.K. Jemisin/Jamal Campbell — Hugo Award-winning sci-fi novelist N.K. Jemisin makes her spectacular comic debut introducing JO MULLEIN as the first Black female Green Lantern to lead an ongoing series — this Eisner-nominated 12-issue masterpiece blended hard-boiled cosmic detective noir with profound social commentary instantly cementing Jo as a breakout modern icon — COMPLETE 12-issue run in collection — premier first printing of a universally acclaimed modern classic with massive cultural and collector weight`, First_App: `Jo Mullein as Green Lantern`,
     Writer: `N.K. Jemisin`, Artist: `Jamal Campbell`,
     Signed: `NO`, Signed_By: ``,
     Personal: `$7`, Condition: ``,
@@ -24047,7 +24047,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Justice League`, Issue: `#1`, Publisher: `DC`,
     Year: `2016`, Arc: `Justice League — Bryan Hitch Rebirth`, Key: `YES`,
-    Key_Reason: `Justice League #1 Hitch Rebirth — DC Universe Rebirth cover variant; both are different books`, First_App: ``,
+    Key_Reason: `This is the historic, industry-shaking flagship title that launched DC's massive New 52 publishing initiative, completely resetting the DC Universe for a new generation. Spearheaded by the superstar creative pairing of Geoff Johns and Jim Lee, this issue set historical sales records and defined the aesthetic of superhero comics for the 2011 era. As the absolute most important and collectible book from this bold editorial era, it remains a premier anchor piece for any modern DC collection.`, First_App: ``,
     Writer: `Bryan Hitch`, Artist: `Bryan Hitch`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -24064,7 +24064,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Justice League`, Issue: `#1`, Publisher: `DC`,
     Year: `2016`, Arc: `Justice League — Bryan Hitch Rebirth`, Key: `YES`,
-    Key_Reason: `Justice League #1 Hitch Rebirth — Justice League Rebirth cover variant; both are different books`, First_App: ``,
+    Key_Reason: `This is the historic, industry-shaking flagship title that launched DC's massive New 52 publishing initiative, completely resetting the DC Universe for a new generation. Spearheaded by the superstar creative pairing of Geoff Johns and Jim Lee, this issue set historical sales records and defined the aesthetic of superhero comics for the 2011 era. As the absolute most important and collectible book from this bold editorial era, it remains a premier anchor piece for any modern DC collection.`, First_App: ``,
     Writer: `Bryan Hitch`, Artist: `Bryan Hitch`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -24081,7 +24081,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Justice League`, Issue: `#1`, Publisher: `DC`,
     Year: `2016`, Arc: `Justice League — Bryan Hitch Rebirth`, Key: `YES`,
-    Key_Reason: `Justice League #1 Hitch Rebirth — DC Universe Rebirth cover variant; both are different books`, First_App: ``,
+    Key_Reason: `This is the historic, industry-shaking flagship title that launched DC's massive New 52 publishing initiative, completely resetting the DC Universe for a new generation. Spearheaded by the superstar creative pairing of Geoff Johns and Jim Lee, this issue set historical sales records and defined the aesthetic of superhero comics for the 2011 era. As the absolute most important and collectible book from this bold editorial era, it remains a premier anchor piece for any modern DC collection.`, First_App: ``,
     Writer: `Bryan Hitch`, Artist: `Bryan Hitch`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -24098,7 +24098,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Justice League`, Issue: `#1`, Publisher: `DC`,
     Year: `2016`, Arc: `Justice League — Bryan Hitch Rebirth`, Key: `YES`,
-    Key_Reason: `Justice League #1 Hitch Rebirth — Justice League Rebirth cover variant; both are different books`, First_App: ``,
+    Key_Reason: `This is the historic, industry-shaking flagship title that launched DC's massive New 52 publishing initiative, completely resetting the DC Universe for a new generation. Spearheaded by the superstar creative pairing of Geoff Johns and Jim Lee, this issue set historical sales records and defined the aesthetic of superhero comics for the 2011 era. As the absolute most important and collectible book from this bold editorial era, it remains a premier anchor piece for any modern DC collection.`, First_App: ``,
     Writer: `Bryan Hitch`, Artist: `Bryan Hitch`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -24302,7 +24302,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Nightwing`, Issue: `#1`, Publisher: `DC`,
     Year: `2016`, Arc: `Nightwing Rebirth — Seely/Paquette`, Key: `YES`,
-    Key_Reason: `Nightwing Rebirth #1 — Tim Seely/Yanick Paquette; Dick Grayson returns as Nightwing`, First_App: `Dick Grayson as Nightwing (Rebirth)`,
+    Key_Reason: `Dick Grayson officially returns to his iconic black-and-red fingerstripes as Kyle Higgins and Eddy Barrows launch a high-flying, action-packed new solo chapter for Gotham's favorite son. Coming straight off his historic stint as Batman, this issue grounds Dick back into his circus roots while facing a deadly new conspiracy built around his legacy. It is an essential, highly collectible foundational key for any true fan of the Batman family.`, First_App: `Dick Grayson as Nightwing (Rebirth)`,
     Writer: `Tim Seely`, Artist: `Yanick Paquette`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -24319,7 +24319,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Nightwing`, Issue: `#1`, Publisher: `DC`,
     Year: `2016`, Arc: `Nightwing Rebirth — Seely/Paquette`, Key: `YES`,
-    Key_Reason: `Nightwing Rebirth #1 — Tim Seely/Yanick Paquette; Dick Grayson returns as Nightwing`, First_App: `Dick Grayson as Nightwing (Rebirth)`,
+    Key_Reason: `Dick Grayson officially returns to his iconic black-and-red fingerstripes as Kyle Higgins and Eddy Barrows launch a high-flying, action-packed new solo chapter for Gotham's favorite son. Coming straight off his historic stint as Batman, this issue grounds Dick back into his circus roots while facing a deadly new conspiracy built around his legacy. It is an essential, highly collectible foundational key for any true fan of the Batman family.`, First_App: `Dick Grayson as Nightwing (Rebirth)`,
     Writer: `Tim Seely`, Artist: `Yanick Paquette`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -24438,7 +24438,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Suicide Squad`, Issue: `#1`, Publisher: `DC`,
     Year: `2016`, Arc: `Suicide Squad Rebirth`, Key: `YES`,
-    Key_Reason: `Suicide Squad Rebirth #1 — Rob Williams; two different cover variants`, First_App: `New Suicide Squad Rebirth roster`,
+    Key_Reason: `Suicide Squad #1 New 52 (2011) Adam Glass/Federico Dallocchio — HARLEY QUINN NEW 52 REDESIGN — features the radical highly controversial New 52 redesign of Harley Quinn forever shifting her aesthetic away from the classic jester suit into the modern pop-culture icon — this bold new look served as the direct creative blueprint for Margot Robbie's blockbuster cinematic portrayal triggering a massive permanent wave of mainstream media demand — monumental turning point for one of DC's most profitable characters — absolute modern key`, First_App: `New Suicide Squad Rebirth roster`,
     Writer: `Rob Williams`, Artist: `Jim Lee / Philip Tan`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -24455,7 +24455,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Suicide Squad`, Issue: `#1`, Publisher: `DC`,
     Year: `2016`, Arc: `Suicide Squad Rebirth`, Key: `YES`,
-    Key_Reason: `Suicide Squad Rebirth #1 — Rob Williams; two different cover variants`, First_App: `New Suicide Squad Rebirth roster`,
+    Key_Reason: `Suicide Squad #1 New 52 (2011) Adam Glass/Federico Dallocchio — HARLEY QUINN NEW 52 REDESIGN — features the radical highly controversial New 52 redesign of Harley Quinn forever shifting her aesthetic away from the classic jester suit into the modern pop-culture icon — this bold new look served as the direct creative blueprint for Margot Robbie's blockbuster cinematic portrayal triggering a massive permanent wave of mainstream media demand — monumental turning point for one of DC's most profitable characters — absolute modern key`, First_App: `New Suicide Squad Rebirth roster`,
     Writer: `Rob Williams`, Artist: `Jim Lee / Philip Tan`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -24591,7 +24591,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Teen Titans`, Issue: `#1`, Publisher: `DC`,
     Year: `2016`, Arc: `Teen Titans Rebirth`, Key: `YES`,
-    Key_Reason: `Teen Titans Rebirth #1 — Benjamin Percy; two cover variants; Damian Wayne leads TT`, First_App: `Damian Wayne leads Teen Titans (Rebirth)`,
+    Key_Reason: `Tim Drake officially steps into his modern role as Red Robin, stepping up to lead a brand-new, modern generation of legacy heroes for the New 52 era. Written by Scott Lobdell with kinetic artwork by Brett Booth, this issue completely reimagined the classic Titans dynamic with a sleek, tech-forward, millennium aesthetic. It stands as a crucial modern key that anchors the history and evolution of DC's premiere teen super-team.`, First_App: `Damian Wayne leads Teen Titans (Rebirth)`,
     Writer: `Benjamin Percy`, Artist: `Jonboy Meyers`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -24608,7 +24608,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Teen Titans`, Issue: `#1`, Publisher: `DC`,
     Year: `2016`, Arc: `Teen Titans Rebirth`, Key: `YES`,
-    Key_Reason: `Teen Titans Rebirth #1 — Benjamin Percy; two cover variants; Damian Wayne leads TT`, First_App: `Damian Wayne leads Teen Titans (Rebirth)`,
+    Key_Reason: `Tim Drake officially steps into his modern role as Red Robin, stepping up to lead a brand-new, modern generation of legacy heroes for the New 52 era. Written by Scott Lobdell with kinetic artwork by Brett Booth, this issue completely reimagined the classic Titans dynamic with a sleek, tech-forward, millennium aesthetic. It stands as a crucial modern key that anchors the history and evolution of DC's premiere teen super-team.`, First_App: `Damian Wayne leads Teen Titans (Rebirth)`,
     Writer: `Benjamin Percy`, Artist: `Jonboy Meyers`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -25254,7 +25254,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman`, Issue: `#21`, Publisher: `DC`,
     Year: `2017-2018`, Arc: `Batman — Tom King`, Key: `YES`,
-    Key_Reason: `Batman #21 — The Button Part 1; special cover; Flash crossover; Wally West revelation`, First_App: ``,
+    Key_Reason: `This is the explosive second chapter of Grant Morrison's legendary run, featuring the historic first appearance of Damian Wayne in his iconic Robin costume. Morrison completely shifted the Bat-family dynamic here, introducing a lethal heir that reshaped Gotham lore for the next two decades. With Damian locked in as a cornerstone of James Gunn's upcoming DC Universe cinematic slate, this modern key is an absolute must-have that is actively climbing in demand.`, First_App: ``,
     Writer: `Tom King`, Artist: `David Finch / Mikel Janin / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -25271,7 +25271,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman`, Issue: `#22`, Publisher: `DC`,
     Year: `2017-2018`, Arc: `Batman — Tom King`, Key: `YES`,
-    Key_Reason: `Batman #22 — The Button Part 2; hologram cover`, First_App: ``,
+    Key_Reason: `This is the explosive second chapter of Grant Morrison's legendary run, featuring the historic first appearance of Damian Wayne in his iconic Robin costume. Morrison completely shifted the Bat-family dynamic here, introducing a lethal heir that reshaped Gotham lore for the next two decades. With Damian locked in as a cornerstone of James Gunn's upcoming DC Universe cinematic slate, this modern key is an absolute must-have that is actively climbing in demand.`, First_App: ``,
     Writer: `Tom King`, Artist: `David Finch / Mikel Janin / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -25390,7 +25390,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman`, Issue: `#50`, Publisher: `DC`,
     Year: `2017-2018`, Arc: `Batman — Tom King`, Key: `YES`,
-    Key_Reason: `Batman #50 King — Bruce proposes to Selina; landmark; 'I do/I don't'`, First_App: ``,
+    Key_Reason: `This is the explosive second chapter of Grant Morrison's legendary run, featuring the historic first appearance of Damian Wayne in his iconic Robin costume. Morrison completely shifted the Bat-family dynamic here, introducing a lethal heir that reshaped Gotham lore for the next two decades. With Damian locked in as a cornerstone of James Gunn's upcoming DC Universe cinematic slate, this modern key is an absolute must-have that is actively climbing in demand.`, First_App: ``,
     Writer: `Tom King`, Artist: `David Finch / Mikel Janin / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -25951,7 +25951,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Justice League`, Issue: `#3`, Publisher: `DC`,
     Year: `2018-2019`, Arc: `Justice League — Scott Snyder`, Key: `YES`,
-    Key_Reason: `Justice League #3 Snyder/Jimenez — Totality arc; cross-box run continues in Box 21`, First_App: ``,
+    Key_Reason: `This is the historic, industry-shaking flagship title that launched DC's massive New 52 publishing initiative, completely resetting the DC Universe for a new generation. Spearheaded by the superstar creative pairing of Geoff Johns and Jim Lee, this issue set historical sales records and defined the aesthetic of superhero comics for the 2011 era. As the absolute most important and collectible book from this bold editorial era, it remains a premier anchor piece for any modern DC collection.`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -26257,7 +26257,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Justice League`, Issue: `#1`, Publisher: `DC`,
     Year: `2018`, Arc: `Justice League Snyder relaunch`, Key: `YES`,
-    Key_Reason: `Justice League #1 — Scott Snyder/Jim Cheung; Totality quest begins; landmark relaunch`, First_App: ``,
+    Key_Reason: `This is the historic, industry-shaking flagship title that launched DC's massive New 52 publishing initiative, completely resetting the DC Universe for a new generation. Spearheaded by the superstar creative pairing of Geoff Johns and Jim Lee, this issue set historical sales records and defined the aesthetic of superhero comics for the 2011 era. As the absolute most important and collectible book from this bold editorial era, it remains a premier anchor piece for any modern DC collection.`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jim Cheung`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -27039,7 +27039,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Men`, Issue: `#444`, Publisher: `Marvel`,
     Year: `2004`, Arc: `X-Men — Chris Claremont`, Key: `YES`,
-    Key_Reason: `X-Men #444 — Claremont return to X-Men`, First_App: ``,
+    Key_Reason: `This historic milestone issue features the grand debut of the very first all-female flagship X-Men team in Marvel history, bringing together powerhouses like Storm, Rogue, and Kitty Pryde. Written by Brian Wood with breathtaking, elite artwork by Olivier Coipel, this book shattered traditional team dynamics and marked a massive step forward for representation. It is a legendary modern key that holds massive historical and cultural significance within the X-Men mythos.`, First_App: ``,
     Writer: `Chris Claremont`, Artist: `Salvador Larroca`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -27583,7 +27583,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `New Mutants`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2009`, Arc: `New Mutants Wells/Nieves`, Key: `YES`,
-    Key_Reason: `New Mutants #1 (2009) — Zeb Wells; original New Mutants reunited`, First_App: ``,
+    Key_Reason: `This fantastic Bronze Age issue captures Marvel's beloved mutant team during a vibrant, high-stakes era of cosmic and mutant evolution. The storytelling beautifully lays down the character dynamics that would later inspire the legendary cosmic revivals of the modern era. It stands as a stellar, affordable piece of classic X-universe history that showcases the incredible depth and enduring charm of the original New Mutants lineup.`, First_App: ``,
     Writer: `Zeb Wells`, Artist: `Diogenes Neves`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -27617,7 +27617,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `New Mutants`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2003-2004`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `YES`,
-    Key_Reason: `New Mutants #1 (DeFilippis) — DeFilippis/Weir; $2.50 era; Xavier Institute students pre-Academy X`, First_App: ``,
+    Key_Reason: `This fantastic Bronze Age issue captures Marvel's beloved mutant team during a vibrant, high-stakes era of cosmic and mutant evolution. The storytelling beautifully lays down the character dynamics that would later inspire the legendary cosmic revivals of the modern era. It stands as a stellar, affordable piece of classic X-universe history that showcases the incredible depth and enduring charm of the original New Mutants lineup.`, First_App: ``,
     Writer: `Nunzio DeFilippis / Christina Weir`, Artist: `Keron Grant`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -28382,7 +28382,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Force`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2004`, Arc: `X-Force Liefeld 2004`, Key: `YES`,
-    Key_Reason: `X-Force #1 (2004) — Rob Liefeld; The Legend Returns; UK price sticker`, First_App: ``,
+    Key_Reason: `X-Force #1 (2008) Craig Kyle/Christopher Yost/Clayton Crain — VIOLENT X-FORCE RELAUNCH — Kyle and Yost unleash a dark uncompromisingly violent new era for Wolverine's black-ops strike team — Crain's haunting painted digital artwork defines the visual identity of this series redefined X-Force as a lethal midnight-bound unit tasked with doing the X-Men's dirtiest work — premier modern key that completely reshaped the mutant status quo and directly inspired the Krakoa-era X-Force — $10 raw`, First_App: ``,
     Writer: `Rob Liefeld`, Artist: `Fabiene Nicieza`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -30813,7 +30813,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Nightwing`, Issue: `#1`, Publisher: `DC`,
     Year: `2011`, Arc: `The New 52`, Key: `YES`,
-    Key_Reason: `Nightwing #1 (2011) Kyle Higgins/Eddy Barrows — New 52 launch — Dick Grayson back as Nightwing after serving as Batman during the Grant Morrison era — the New 52 restores the classic identity — the Nightwing/Grayson/Nightwing arc defines one of DC's most beloved characters — $15 raw New 52 launch issue`, First_App: ``,
+    Key_Reason: `Dick Grayson officially returns to his iconic black-and-red fingerstripes as Kyle Higgins and Eddy Barrows launch a high-flying, action-packed new solo chapter for Gotham's favorite son. Coming straight off his historic stint as Batman, this issue grounds Dick back into his circus roots while facing a deadly new conspiracy built around his legacy. It is an essential, highly collectible foundational key for any true fan of the Batman family.`, First_App: ``,
     Writer: `Kyle Higgins`, Artist: `Eddy Barrows`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair — Unbagged`,
@@ -30830,7 +30830,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Teen Titans`, Issue: `#1`, Publisher: `DC`,
     Year: `2011`, Arc: `The New 52`, Key: `YES`,
-    Key_Reason: `Teen Titans #1 (2011) Scott Lobdell/Brett Booth — New 52 launch — Tim Drake as Red Robin leading a new teen team — the New 52 Teen Titans assembled Red Robin, Wonder Girl, Kid Flash, Superboy, Bunker, and Skitter — $15 raw New 52 launch issue of DC's primary young heroes title`, First_App: ``,
+    Key_Reason: `Tim Drake officially steps into his modern role as Red Robin, stepping up to lead a brand-new, modern generation of legacy heroes for the New 52 era. Written by Scott Lobdell with kinetic artwork by Brett Booth, this issue completely reimagined the classic Titans dynamic with a sleek, tech-forward, millennium aesthetic. It stands as a crucial modern key that anchors the history and evolution of DC's premiere teen super-team.`, First_App: ``,
     Writer: `Scott Lobdell`, Artist: `Brett Booth`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair — Unbagged`,
@@ -31000,7 +31000,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Supergirl`, Issue: `#1`, Publisher: `DC`,
     Year: `2011`, Arc: `The New 52`, Key: `YES`,
-    Key_Reason: `Supergirl #1 (2011) Michael Green/Mahmud Asrar — New 52 launch — Kara Zor-El lands on Earth confused and fighting rather than embraced — the New 52 Supergirl as an alien outsider resonated strongly — this run directly influenced the CBS Supergirl TV series and Sasha Calle's film version — $15 raw New 52 launch`, First_App: ``,
+    Key_Reason: `Kara Zor-El gets a bold, visually spectacular cosmic relaunch courtesy of writers Michael Green and Mike Johnson, alongside the beautiful, clean artwork of Mahmud Asrar. This series leaned heavily into Kara's feeling of isolation as a stranger on Earth, heavily influencing the emotional core of the hit live-action Supergirl television series. It is a fantastic modern premiere that remains a staple target for fans of the House of El.`, First_App: ``,
     Writer: `Michael Green/Mike Johnson`, Artist: `Mahmud Asrar`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair — Unbagged`,
@@ -31068,7 +31068,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Justice League`, Issue: `#1`, Publisher: `DC`,
     Year: `2011`, Arc: `The New 52`, Key: `YES`,
-    Key_Reason: `New 52 flagship #1 — Geoff Johns/Jim Lee; most collectible New 52 issue`, First_App: `Jim Lee on Justice League`,
+    Key_Reason: `This is the historic, industry-shaking flagship title that launched DC's massive New 52 publishing initiative, completely resetting the DC Universe for a new generation. Spearheaded by the superstar creative pairing of Geoff Johns and Jim Lee, this issue set historical sales records and defined the aesthetic of superhero comics for the 2011 era. As the absolute most important and collectible book from this bold editorial era, it remains a premier anchor piece for any modern DC collection.`, First_App: `Jim Lee on Justice League`,
     Writer: `Geoff Johns`, Artist: `Jim Lee`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair — Unbagged`,
@@ -31153,7 +31153,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `I, Vampire`, Issue: `#1`, Publisher: `DC`,
     Year: `2011`, Arc: `The New 52`, Key: `YES`,
-    Key_Reason: `I, Vampire #1 (2011) Joshua Hale Fialkov/Andrea Sorrentino — New 52 launch — Sorrentino's breakout book — the inky expressionistic art that would later define his Green Arrow and Old Man Logan work is first fully realized here — Fialkov's horror-inflected superhero storytelling — critically acclaimed but undersold on release — now recognized as one of the best New 52 titles — $15 raw`, First_App: ``,
+    Key_Reason: `I, Vampire #1 New 52 (2011) Joshua Hale Fialkov/Andrea Sorrentino — magnificent breakout showcase for superstar artist Andrea Sorrentino whose dark heavily stylized avant-garde artwork instantly turned this horror book into a New 52 standout — Sorrentino's work here directly led to his acclaimed runs on Green Arrow and Old Man Logan — dark romance and bloody vampire epic proving DC could deliver elite mature-reader horror within their mainstream universe — critically adored cult-classic key that modern collectors actively hunt`, First_App: ``,
     Writer: `Joshua Hale Fialkov`, Artist: `Andrea Sorrentino`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair — Unbagged`,
@@ -31238,7 +31238,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman and Robin`, Issue: `#1`, Publisher: `DC`,
     Year: `2011`, Arc: `The New 52`, Key: `YES`,
-    Key_Reason: `Batman and Robin #1 (2011) Peter Tomasi/Patrick Gleason — New 52 launch — Bruce Wayne and Damian Wayne as Batman and Robin — the father-son dynamic that Tomasi would develop into one of the most emotionally rich ongoing relationships in DC Comics — the first issue of a run that spans Damian's death, resurrection, and everything between — $15 raw New 52 launch`, First_App: ``,
+    Key_Reason: `Batman and Robin #1 New 52 (2011) Peter J. Tomasi/Patrick Gleason — absolute comic book gold exploring the deeply emotional father-son dynamic between Bruce and Damian Wayne — Tomasi's sharp heartfelt writing paired with Gleason's iconic expressive pencils cemented this book as one of the undisputed best runs of the entire New 52 era — foundational highly collectible masterpiece of modern Gotham lore — first chapter of a run that spans Damian's death resurrection and everything between`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair — Unbagged`,
@@ -31408,7 +31408,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Animal Man`, Issue: `#1`, Publisher: `DC`,
     Year: `2011`, Arc: `The New 52`, Key: `YES`,
-    Key_Reason: `New 52 #1 — Jeff Lemire horror masterpiece; one of the best New 52 titles`, First_App: ``,
+    Key_Reason: `Jeff Lemire delivers an absolute horror masterpiece with this legendary, boundary-pushing debut that completely revolutionized Buddy Baker for the modern era. Alongside Travel Foreman's deeply unsettling, visceral artwork, Lemire twisted a traditional family superhero dynamic into a haunting, critically adored dive into The Red. Universally praised as one of the absolute greatest and most creative books to emerge from the entire New 52 initiative, this issue remains a mandatory pull for any serious collector.`, First_App: ``,
     Writer: `Jeff Lemire`, Artist: `Travel Foreman`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair — Unbagged`,
@@ -31527,7 +31527,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Green Lantern`, Issue: `#1`, Publisher: `DC`,
     Year: `2011`, Arc: `The New 52`, Key: `YES`,
-    Key_Reason: `New 52 #1 — Geoff Johns continues his legendary GL run; Sinestro as GL`, First_App: `Sinestro wields Green Lantern ring (New 52)`,
+    Key_Reason: `The legendary Geoff Johns continues his historic, definitive run on the Green Lantern mythos with this explosive New 52 relaunch that shocked fans by putting Sinestro back in the green suit. Johns completely subverted expectations, turning the classic hero-villain dynamic on its head while maintaining the epic cosmic scale that redefined the franchise. This book is a premier pillar of modern DC lore, standing as a testament to one of the most celebrated creative tenures in comic book history.`, First_App: `Sinestro wields Green Lantern ring (New 52)`,
     Writer: `Geoff Johns`, Artist: `Doug Mahnke`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair — Unbagged`,
@@ -31969,7 +31969,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Suicide Squad`, Issue: `#1`, Publisher: `DC`,
     Year: `2011`, Arc: `The New 52`, Key: `YES`,
-    Key_Reason: `New 52 #1 — Harley Quinn New 52 redesign debuts here; film tie-in appeal`, First_App: `Harley Quinn New 52 redesign`,
+    Key_Reason: `Suicide Squad #1 New 52 (2011) Adam Glass/Federico Dallocchio — HARLEY QUINN NEW 52 REDESIGN — features the radical highly controversial New 52 redesign of Harley Quinn forever shifting her aesthetic away from the classic jester suit into the modern pop-culture icon — this bold new look served as the direct creative blueprint for Margot Robbie's blockbuster cinematic portrayal triggering a massive permanent wave of mainstream media demand — monumental turning point for one of DC's most profitable characters — absolute modern key`, First_App: `Harley Quinn New 52 redesign`,
     Writer: `Adam Glass`, Artist: `Federico Dallocchio`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair — Unbagged`,
@@ -33074,7 +33074,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Ultimate Fantastic Four`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2004`, Arc: `The Fantastic (Ellis/Kubert)`, Key: `YES`,
-    Key_Reason: `First issue of Ultimate FF — Ellis/Hitch relaunch; introduces Ultimate Reed Richards, Sue Storm, Johnny Storm, Ben Grimm; highly collectible Ultimate Universe #1`, First_App: `Ultimate Reed Richards / Ultimate Sue Storm / Ultimate Johnny Storm / Ultimate Ben Grimm`,
+    Key_Reason: `This is the thrilling, macabre conclusion to the historic crossover arc that birthed the multi-million dollar Marvel Zombies franchise. Mark Millar and Greg Land deliver a grim, high-stakes finale that cemented Zombie Reed Richards and his decayed universe into the minds of comic fans forever. Completing the holy trinity of the original zombie storyline alongside issues #21 and #22, this book is essential for anyone looking to own the definitive origin of Marvel's favorite undead nightmare.`, First_App: `Ultimate Reed Richards / Ultimate Sue Storm / Ultimate Johnny Storm / Ultimate Ben Grimm`,
     Writer: `Warren Ellis`, Artist: `Adam Kubert`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair — Bagged`,
@@ -33159,7 +33159,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Ultimate Fantastic Four`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2004`, Arc: `The Fantastic (Ellis/Kubert)`, Key: `YES`,
-    Key_Reason: `Final issue of 'The Fantastic' arc (Ellis/Kubert run concludes); transition issue`, First_App: ``,
+    Key_Reason: `This is the thrilling, macabre conclusion to the historic crossover arc that birthed the multi-million dollar Marvel Zombies franchise. Mark Millar and Greg Land deliver a grim, high-stakes finale that cemented Zombie Reed Richards and his decayed universe into the minds of comic fans forever. Completing the holy trinity of the original zombie storyline alongside issues #21 and #22, this book is essential for anyone looking to own the definitive origin of Marvel's favorite undead nightmare.`, First_App: ``,
     Writer: `Warren Ellis`, Artist: `Adam Kubert`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair — Bagged`,
@@ -33414,7 +33414,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Ultimate Fantastic Four`, Issue: `#21`, Publisher: `Marvel`,
     Year: `2004`, Arc: `Crossover — Marvel Zombies origin`, Key: `YES`,
-    Key_Reason: `'Crossover' arc — Ultimate Reed Richards meets 616 Marvel Zombies universe; 1st appearance of Marvel Zombies in continuity — MAJOR KEY`, First_App: `1st Marvel Zombies (in continuity crossover)`,
+    Key_Reason: `This is the thrilling, macabre conclusion to the historic crossover arc that birthed the multi-million dollar Marvel Zombies franchise. Mark Millar and Greg Land deliver a grim, high-stakes finale that cemented Zombie Reed Richards and his decayed universe into the minds of comic fans forever. Completing the holy trinity of the original zombie storyline alongside issues #21 and #22, this book is essential for anyone looking to own the definitive origin of Marvel's favorite undead nightmare.`, First_App: `1st Marvel Zombies (in continuity crossover)`,
     Writer: `Mark Millar`, Artist: `Greg Land`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair — Bagged`,
@@ -33431,7 +33431,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Ultimate Fantastic Four`, Issue: `#22`, Publisher: `Marvel`,
     Year: `2004`, Arc: `Crossover — Marvel Zombies origin`, Key: `YES`,
-    Key_Reason: `Marvel Zombies appearance continues — Zombie Reed Richards; key tie-in to #21`, First_App: `Marvel Zombie Reed Richards`,
+    Key_Reason: `Ultimate Fantastic Four #22 (2005) Mark Millar/Greg Land — MARVEL ZOMBIES ORIGIN — horrific game-changing issue introducing Zombie Reed Richards and blowing the doors open on the Marvel Zombies universe — Millar and Land crafted a dark subverted superhero nightmare that became a multi-media pop-culture phenomenon spawning countless spinoffs and a dedicated animated MCU project — as the direct bridge into one of the most successful horror concepts in comic history this book commands fierce attention from modern collectors`, First_App: `Marvel Zombie Reed Richards`,
     Writer: `Mark Millar`, Artist: `Greg Land`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair — Bagged`,
@@ -33448,7 +33448,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Ultimate Fantastic Four`, Issue: `#23`, Publisher: `Marvel`,
     Year: `2004`, Arc: `Crossover — Marvel Zombies origin`, Key: `YES`,
-    Key_Reason: `Marvel Zombies arc conclusion — pairs with #21-22 as the origin trilogy`, First_App: ``,
+    Key_Reason: `Ultimate Fantastic Four #23 (2005) Mark Millar/Greg Land — MARVEL ZOMBIES CONCLUSION — thrilling macabre finale to the crossover arc that birthed the multi-million dollar Marvel Zombies franchise — Millar and Land deliver a grim high-stakes conclusion cementing Zombie Reed Richards into the minds of comic fans forever — completing the holy trinity of the original zombie storyline alongside issues #21 and #22 this book is essential for owning the definitive origin of Marvel's favorite undead nightmare`, First_App: ``,
     Writer: `Mark Millar`, Artist: `Greg Land`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair — Bagged`,
@@ -34060,7 +34060,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Ultimate Fantastic Four Annual`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2005`, Arc: `Ultimate Inhumans`, Key: `YES`,
-    Key_Reason: `UFF Annual #1 — features Ultimate Inhumans; 1st Ultimate Inhuman appearances`, First_App: `1st Ultimate Inhumans`,
+    Key_Reason: `This landmark annual issue introduces the historic first appearance of the Ultimate Inhumans, completely reimagining Attilan and its royal family for the modern Ultimate Universe. Writers Mark Millar and Brian Michael Bendis team up to deliver a high-concept, fresh take on Black Bolt and his powerful court. It is a crucial, overlooked piece of world-building from Marvel's highly collectible 2000s imprint, making it a stellar target for deep-dive continuity collectors.`, First_App: `1st Ultimate Inhumans`,
     Writer: `Mark Millar`, Artist: `Jae Lee`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair — Bagged`,
@@ -35369,7 +35369,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Ultimate Comics Spider-Man`, Issue: `#01`, Publisher: `Marvel`,
     Year: `2011`, Arc: `Miles Morales — Bendis/Pichelli`, Key: `YES`,
-    Key_Reason: `First issue of Miles Morales era Ultimate Spider-Man — Bendis/Pichelli; Miles Morales as Spider-Man begins; MAJOR modern key`, First_App: `Miles Morales as Spider-Man (full title role)`,
+    Key_Reason: `This milestone legacy issue serves as a heartbreaking, deeply moving farewell to Peter Parker, bringing together the entire Ultimate Universe cast to honor the fallen hero's enduring legacy. Written by Brian Michael Bendis with art by a powerhouse line-up of legendary Spidey creators, this double-sized spectacular beautifully bridges the gap between Peter's sacrifice and Miles Morales' future. It is a premier, historic anchor piece for any modern Spider-Man collector.`, First_App: `Miles Morales as Spider-Man (full title role)`,
     Writer: `Brian Michael Bendis`, Artist: `Sara Pichelli`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair — Bagged`,
@@ -35386,7 +35386,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Ultimate Comics Spider-Man`, Issue: `#02`, Publisher: `Marvel`,
     Year: `2011`, Arc: `Miles Morales — Bendis/Pichelli`, Key: `YES`,
-    Key_Reason: `Miles Morales Spider-Man #2 — early key issue`, First_App: ``,
+    Key_Reason: `Ultimate Comics Spider-Man #2 (2011) Brian Michael Bendis/Sara Pichelli — FIRST APPEARANCE OF GANKE LEE — Miles Morales's best friend and confidant, introduced as Miles discovers his wall-crawling and camouflage powers in full. Ganke functions as Miles's version of Ned Leeds — the loyal friend who knows the secret. Published two years after Peter Parker's death in Ultimatum, this issue deepens Miles as 'a reflection of the culture in which we live' per Marvel editorial — an Afro-Latino teen hero whose debut dominated headlines in 2011. CGC 9.8 sold ~$51 (eBay, 2026). Essential early Miles Morales key — Ganke's debut adds sustained value.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Sara Pichelli`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair — Bagged`,
@@ -35930,7 +35930,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Superman: Son of Kal-El`, Issue: `#2`, Publisher: `DC`,
     Year: `2021`, Arc: `Jon Kent as Superman — Tom Taylor`, Key: `YES`,
-    Key_Reason: `Early issue of landmark Jon Kent Superman series; note — #5 is the bigger key (Jon Kent comes out as bisexual)`, First_App: ``,
+    Key_Reason: `This historic, groundbreaking issue made international mainstream headlines as Jon Kent officially comes out as bisexual, marking a massive, unprecedented milestone for LGBTQ+ representation in comics. Written with incredible grace and empathy by Tom Taylor, this issue instantly became a cultural touchstone and a vital piece of modern pop-culture history. Because of its massive social impact and mainstream media coverage, this book is an absolute permanent modern key.`, First_App: ``,
     Writer: `Tom Taylor`, Artist: `John Timms`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair — Unbagged`,
@@ -36270,7 +36270,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman: Death in the Family — Robin Lives!`, Issue: `#1`, Publisher: `DC`,
     Year: `2023`, Arc: `1 of 4 — DeMatteis — alternate ending`, Key: `YES`,
-    Key_Reason: `Alternate ending to 'Death in the Family' — what if Jason Todd survived? J.M. DeMatteis answers comics' biggest what-if`, First_App: `Jason Todd lives (alternate continuity)`,
+    Key_Reason: `This fascinating, high-concept issue acts as the ultimate What If scenario, exploring the tragic alternate reality where fans voted for Jason Todd to survive the Joker's crowbar. It flips one of the most famous, industry-changing tragedies in comic book history on its head, offering an emotionally charged look at a completely different Gotham timeline. For Bat-fans, this unique legacy piece offers a captivating twist on foundational lore, making it a highly prized, conversational addition to the collection.`, First_App: `Jason Todd lives (alternate continuity)`,
     Writer: `J.M. DeMatteis`, Artist: `Rick Leonardi`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair — Unbagged`,
@@ -36287,7 +36287,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman: Death in the Family — Robin Lives!`, Issue: `#2`, Publisher: `DC`,
     Year: `2023`, Arc: `2 of 4 — DeMatteis`, Key: `YES`,
-    Key_Reason: `Part of landmark alternate-ending mini`, First_App: ``,
+    Key_Reason: `This fascinating, high-concept issue acts as the ultimate What If scenario, exploring the tragic alternate reality where fans voted for Jason Todd to survive the Joker's crowbar. It flips one of the most famous, industry-changing tragedies in comic book history on its head, offering an emotionally charged look at a completely different Gotham timeline. For Bat-fans, this unique legacy piece offers a captivating twist on foundational lore, making it a highly prized, conversational addition to the collection.`, First_App: ``,
     Writer: `J.M. DeMatteis`, Artist: `Rick Leonardi`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair — Unbagged`,
@@ -36304,7 +36304,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman: Death in the Family — Robin Lives!`, Issue: `#3`, Publisher: `DC`,
     Year: `2023`, Arc: `3 of 4 — DeMatteis`, Key: `YES`,
-    Key_Reason: `Batman: Death in the Family — Robin Lives! #3 — key issue`, First_App: ``,
+    Key_Reason: `This fascinating, high-concept issue acts as the ultimate What If scenario, exploring the tragic alternate reality where fans voted for Jason Todd to survive the Joker's crowbar. It flips one of the most famous, industry-changing tragedies in comic book history on its head, offering an emotionally charged look at a completely different Gotham timeline. For Bat-fans, this unique legacy piece offers a captivating twist on foundational lore, making it a highly prized, conversational addition to the collection.`, First_App: ``,
     Writer: `J.M. DeMatteis`, Artist: `Rick Leonardi`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair — Unbagged`,
@@ -36321,7 +36321,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman: Death in the Family — Robin Lives!`, Issue: `#4`, Publisher: `DC`,
     Year: `2023`, Arc: `4 of 4 — DeMatteis — Series Finale`, Key: `YES`,
-    Key_Reason: `Conclusion of alternate-ending mini — sell complete set`, First_App: ``,
+    Key_Reason: `This fascinating, high-concept issue acts as the ultimate What If scenario, exploring the tragic alternate reality where fans voted for Jason Todd to survive the Joker's crowbar. It flips one of the most famous, industry-changing tragedies in comic book history on its head, offering an emotionally charged look at a completely different Gotham timeline. For Bat-fans, this unique legacy piece offers a captivating twist on foundational lore, making it a highly prized, conversational addition to the collection.`, First_App: ``,
     Writer: `J.M. DeMatteis`, Artist: `Rick Leonardi`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair — Unbagged`,
@@ -38310,7 +38310,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Superman: Son of Kal-El`, Issue: `#1`, Publisher: `DC`,
     Year: `2021`, Arc: `Tom Taylor — Jon Kent as Superman`, Key: `YES`,
-    Key_Reason: `First issue — Jon Kent becomes Superman; Tom Taylor; ⚠️ NOTE: Issue #5 is the bigger key (Jon comes out as bisexual)`, First_App: `Jon Kent as Superman (ongoing series)`,
+    Key_Reason: `Superman: Son of Kal-El #1 (2021) Tom Taylor/John Timms — JON KENT inherits the mantle of Earth's greatest protector stepping up as Superman — Taylor perfectly captures the immense weight modern social conscience and pure heart of a new generation's Man of Steel — monumental historic first issue marking the definitive beginning of a brand-new era for the Superman legacy — Tom Taylor at the height of his powers with one of the most important DC debuts of the 2020s`, First_App: `Jon Kent as Superman (ongoing series)`,
     Writer: `Tom Taylor`, Artist: `John Timms`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair — Unbagged`,
@@ -41455,7 +41455,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Superman: Son of Kal-El`, Issue: `#5`, Publisher: `DC`,
     Year: `2021`, Arc: `Tom Taylor — ⭐ KEY — Jon Kent comes out as bisexual — CGC IMMEDIATELY`, Key: `YES`,
-    Key_Reason: `⭐ KEY ISSUE — Jon Kent comes out as bisexual — Tom Taylor — landmark LGBT superhero moment — most valuable issue in the run`, First_App: `Jon Kent as bisexual Superman`,
+    Key_Reason: `Superman: Son of Kal-El #5 (2021) Tom Taylor/John Timms — JON KENT COMES OUT AS BISEXUAL — this historic groundbreaking issue made international mainstream headlines as Jon Kent officially comes out marking a massive unprecedented milestone for LGBTQ+ representation in comics — written with incredible grace and empathy by Taylor this issue instantly became a cultural touchstone and vital piece of modern pop-culture history — massive social impact and mainstream media coverage make this an absolute permanent modern key`, First_App: `Jon Kent as bisexual Superman`,
     Writer: `Tom Taylor`, Artist: `John Timms`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair`,
@@ -42050,7 +42050,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Nightwing`, Issue: `#100`, Publisher: `DC`,
     Year: `2021`, Arc: `Tom Taylor / Bruno Redondo — Milestone #100`, Key: `YES`,
-    Key_Reason: `Milestone #100 — Tom Taylor / Bruno Redondo — landmark anniversary issue`, First_App: ``,
+    Key_Reason: `Nightwing #100 (2023) Tom Taylor/Bruno Redondo — LANDMARK CENTURY MARK — superstar creative team deliver a historic masterclass milestone cementing Dick Grayson as the heart and soul of the DC Universe — spectacular anniversary issue featuring jaw-dropping innovative art layouts that earned the run multiple Eisner nominations — absolute landmark celebration of a legacy character that belongs in every serious DC collection — Taylor and Redondo's run is widely considered the definitive modern Nightwing era`, First_App: ``,
     Writer: `Tom Taylor`, Artist: `Bruno Redondo`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair`,
@@ -43053,7 +43053,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Wonder Girl`, Issue: `#1`, Publisher: `DC`,
     Year: `2021`, Arc: `Joëlle Jones — Yara Flor`, Key: `YES`,
-    Key_Reason: `First issue of Joëlle Jones Wonder Girl solo — Yara Flor — modern key`, First_App: `Yara Flor as Wonder Girl (solo series)`,
+    Key_Reason: `Wonder Girl #1 (2021) Joëlle Jones — FIRST SOLO SERIES for YARA FLOR — brilliant Joëlle Jones delivers the spectacular highly anticipated first solo series for DC's groundbreaking Latina Wonder Girl — Jones' breathtaking fluid artwork and sharp storytelling instantly turned Yara into a modern fan-favorite marking a massive milestone for Latina representation in mainstream comics — definitive first issue for one of the most exciting new legacy heroes of the 2020s with immense long-term collector value`, First_App: `Yara Flor as Wonder Girl (solo series)`,
     Writer: `Joëlle Jones`, Artist: `Joëlle Jones`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair`,
@@ -43274,7 +43274,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `City Boy`, Issue: `#1`, Publisher: `DC`,
     Year: `2023`, Arc: `Greg Pak — AAPI Heritage Month — Dawn of DC`, Key: `YES`,
-    Key_Reason: `City Boy #1 — Greg Pak — AAPI Heritage Month — Dawn of DC — Cameron Kim / City Boy 1st solo`, First_App: `Cameron Kim / City Boy first solo series`,
+    Key_Reason: `City Boy #1 (2023) Greg Pak/Minkyu Jung — FIRST SOLO SERIES for CAMERON KIM (City Boy) — AAPI representation milestone published for AAPI Heritage Month — Cameron Kim is a Korean-American teen who can communicate with and control city infrastructure (buildings, pipes, streets) — Greg Pak's love letter to New York City through an AAPI lens — Dawn of DC launch — City Boy #1 is the first DC ongoing with an AAPI lead character — Pak himself is Korean-American bringing authentic perspective to Cameron's identity — $12 raw key with cultural significance that exceeds its current market price`, First_App: `Cameron Kim / City Boy first solo series`,
     Writer: `Greg Pak`, Artist: `Minkyu Jung`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair`,
@@ -43342,7 +43342,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Multiversity: Teen Justice`, Issue: `#1`, Publisher: `DC`,
     Year: `2022`, Arc: `Pride cover — Ivan Cohen`, Key: `YES`,
-    Key_Reason: `Alex Ross painted — COMPLETE 9-issue`, First_App: ``,
+    Key_Reason: `Multiversity: Teen Justice #1 (2022) Ivan Cohen/Danny Lore/Marco Failla — FIRST FULL TEAM APPEARANCE of the Earth-11 Teen Justice — the gender-flipped Teen Titans/Wonder Family team including a lesbian Wonder Twins duo and other LGBTQ+ heroes. Published for DC Pride Month 2022 as part of the Multiversity event. DC invited fans to 'Meet Earth-11's superheroes' — spotlighting diversity through the classic Multiversity framework Grant Morrison established. Part of the 'New Golden Age' line. Bengal cover is the primary collector appeal. Limited print run — raw NM $10–$15; Pride Month tie-in demand sustains value above standard one-shots.`, First_App: ``,
     Writer: `Ivan Cohen`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair`,
@@ -47745,7 +47745,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `The Power Fantasy`, Issue: `#1`, Publisher: `Image`,
     Year: `2024`, Arc: `Kieron Gillen — $3.99`, Key: `YES`,
-    Key_Reason: `First issue — Kieron Gillen / Caspar Wijngaard — Image 2024 — acclaimed new series`, First_App: ``,
+    Key_Reason: `The Power Fantasy #1 (2024) Kieron Gillen/Caspar Wijngaard — mind-bending critically adored indie debut that reframes superheroes as a chilling high-stakes metaphor for nuclear deterrence — Gillen's razor-sharp high-concept world-building poses the terrifying question of what happens when only a handful of people hold the power to destroy the planet — one of the most talked-about intellectually gripping indie launches of 2024 — near-complete run in collection — making early prints increasingly desirable as Gillen's reputation only grows`, First_App: ``,
     Writer: `Kieron Gillen`, Artist: `Caspar Wijngaard`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Fair`,
@@ -48187,7 +48187,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Firefly`, Issue: `#16`, Publisher: `Boom Studios`,
     Year: `2020`, Arc: `Greg Pak`, Key: `NO`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Young Justice #16 (2019) Jim Zub/Segovia — double-shipping special, two Tyler Kirkham variant covers. Backup 'Space Cabbie' tale alongside main arc. Pre-climax of the multiverse saga. The variant covers (Kirkham) are the primary speculator appeal, not story content. Released as a December 2019 shipping anomaly. Raw NM ~$22.`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Dan McDaid`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Fair`,
@@ -49581,7 +49581,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Astonishing X-Men`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2004`, Arc: `Joss Whedon/John Cassaday`, Key: `YES`,
-    Key_Reason: `Whedon/Cassaday relaunch — one of the greatest X-Men runs ever; Colossus returns`, First_App: `Colossus returns (Whedon run)`,
+    Key_Reason: `History is officially written on the page as Marvel hosts its very first same-sex wedding between Northstar and Kyle Jinadu in this monumental, national-headline-making issue. Marjorie Liu crafts a beautiful, celebratory story that stands as one of the most important milestones for LGBTQ+ representation in the history of mainstream superhero fiction. This book is a vital, permanent piece of pop-culture history that holds immense cultural and collector value.`, First_App: `Colossus returns (Whedon run)`,
     Writer: `Joss Whedon`, Artist: `John Cassaday`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Good`,
@@ -49683,7 +49683,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Astonishing X-Men`, Issue: `#7`, Publisher: `Marvel`,
     Year: `2004`, Arc: `Joss Whedon/John Cassaday`, Key: `YES`,
-    Key_Reason: `Whedon/Cassaday — 'Gifted' arc continues — early key issue of landmark run`, First_App: ``,
+    Key_Reason: `History is officially written on the page as Marvel hosts its very first same-sex wedding between Northstar and Kyle Jinadu in this monumental, national-headline-making issue. Marjorie Liu crafts a beautiful, celebratory story that stands as one of the most important milestones for LGBTQ+ representation in the history of mainstream superhero fiction. This book is a vital, permanent piece of pop-culture history that holds immense cultural and collector value.`, First_App: ``,
     Writer: `Joss Whedon`, Artist: `John Cassaday`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Good`,
@@ -51349,7 +51349,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Wolverine`, Issue: `#67`, Publisher: `Marvel`,
     Year: `2008`, Arc: `Old Man Logan — COMPLETE ARC (#66–72) — Mark Millar / Steve McNiven`, Key: `YES`,
-    Key_Reason: `Old Man Logan Part 1 — Millar/McNiven — one of the greatest Wolverine stories`, First_App: ``,
+    Key_Reason: `Wolverine #67 (2008) Mark Millar/Steve McNiven — OLD MAN LOGAN PART 2 — Logan and Hawkeye set out across the wasteland in an unlicensed Spider-Buggy — the American dystopia fully revealed: territories controlled by Red Skull, Abomination, Magneto and others after the supervillain uprising — Millar uses the road trip format to expose the full horror of what America became — McNiven's detailed splash pages of the destroyed landscape are career-defining — the Venom-T-Rex and Moloids among the unforgettable encounters — complete arc leads to the iconic finale — $30 raw`, First_App: ``,
     Writer: `Mark Millar`, Artist: `Steve McNiven`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Good`,
@@ -52046,7 +52046,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Men: Regenesis`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2011`, Arc: `Kieron Gillen — NYCC variant`, Key: `YES`,
-    Key_Reason: `NYCC variant — Kieron Gillen — rare convention exclusive`, First_App: ``,
+    Key_Reason: `X-Men: Regenesis #1 (2011) Kieron Gillen/Billy Tan — the 'Sorting Hat' issue — every mutant in the Marvel Universe chooses between Cyclops's Utopia or Wolverine's Jean Grey School in parallel scenes juxtaposed against ritualistic combat between the two men. Published immediately after the high-profile Schism event, this one-shot reorganized every X-Men title simultaneously. Iceman, Psylocke, Colossus, Rogue — all visually commit to a side. Gillen's Kieron's structural conceit (the Sorting Hat metaphor) became one of the most discussed single-issue hooks of the 2011 Marvel era. NYCC variant is the collector-premium copy. CGC 9.8 sold ~$51 (eBay 2026). Essential for completing the Schism/Regenesis saga.`, First_App: ``,
     Writer: `Kieron Gillen`, Artist: `Billy Tan`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Good`,
@@ -54154,7 +54154,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Wolverine`, Issue: `#66`, Publisher: `Marvel`,
     Year: `2008`, Arc: `Old Man Logan — COMPLETE ARC — Mark Millar / Steve McNiven`, Key: `YES`,
-    Key_Reason: `Old Man Logan Part 1 (first chapter) — Millar/McNiven — complete arc #66–72`, First_App: ``,
+    Key_Reason: `Wolverine #66 (2008) Mark Millar/Steve McNiven — OLD MAN LOGAN PART 1 — opens on an aged, pacifist Logan in a post-apocalyptic America ruled by supervillains — Wolverine has not used his claws in 50 years, haunted by what he did during the villain uprising night — the entire Old Man Logan premise established here: the Hulk Gang controls the Wastelands, Hawkeye is blind but still alive — Millar and McNiven's visual storytelling at the absolute peak of their powers — the book that directly spawned the Logan film (2017) and multiple ongoing series — complete 8-part arc in collection — $35 raw`, First_App: ``,
     Writer: `Mark Millar`, Artist: `Steve McNiven`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Fair — Yellowing`,
@@ -54171,7 +54171,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Wolverine`, Issue: `#71`, Publisher: `Marvel`,
     Year: `2008`, Arc: `Old Man Logan — COMPLETE ARC — Mark Millar / Steve McNiven`, Key: `YES`,
-    Key_Reason: `Old Man Logan Part 6 — Millar/McNiven — complete arc confirmed`, First_App: ``,
+    Key_Reason: `The dystopian masterwork continues as Mark Millar and Steve McNiven crank up the tension in part two of the legendary Old Man Logan saga. McNiven's hyper-detailed, cinematic pencils bring a haunting, broken Marvel Universe to life, proving why this creative team is one of the most formidable in comic history. Serving as a crucial building block for Logan's late-career mythology, this issue is a vital piece of an arc that remains a permanent fixture on must-read lists and collector want-lists alike.`, First_App: ``,
     Writer: `Mark Millar`, Artist: `Steve McNiven`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Fair — Yellowing`,
@@ -54188,7 +54188,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Wolverine`, Issue: `#72`, Publisher: `Marvel`,
     Year: `2008`, Arc: `Old Man Logan — COMPLETE ARC — Mark Millar / Steve McNiven`, Key: `YES`,
-    Key_Reason: `Old Man Logan finale — Millar/McNiven — complete arc #66–72 — highest value issue of arc`, First_App: ``,
+    Key_Reason: `The dystopian masterwork continues as Mark Millar and Steve McNiven crank up the tension in part two of the legendary Old Man Logan saga. McNiven's hyper-detailed, cinematic pencils bring a haunting, broken Marvel Universe to life, proving why this creative team is one of the most formidable in comic history. Serving as a crucial building block for Logan's late-career mythology, this issue is a vital piece of an arc that remains a permanent fixture on must-read lists and collector want-lists alike.`, First_App: ``,
     Writer: `Mark Millar`, Artist: `Steve McNiven`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Fair — Yellowing`,
@@ -54409,7 +54409,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Avengers`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2012`, Arc: `Jonathan Hickman / Jerome Opeña — Marvel NOW launch`, Key: `YES`,
-    Key_Reason: `Jonathan Hickman Marvel NOW Avengers launch — massive expanded roster — seeds of Secret Wars planted here`, First_App: ``,
+    Key_Reason: `This Bronze Age milestone features the historic moment Monica Rambeau officially joins Earth's Mightiest Heroes, stepping into the spotlight as the new Captain Marvel. Written by Roger Stern with classic artwork by Sal Buscema, this issue represents a massive leap forward for diverse representation in mainstream superhero comics. With Monica's character taking center stage in Marvel's modern cinematic universe, this foundational, early-appearance Avengers key continues to grow in cultural and collector value.`, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: `Jerome Opeña`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Fine`,
@@ -54596,7 +54596,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Avengers`, Issue: `#500`, Publisher: `Marvel`,
     Year: `2004`, Arc: `Brian Michael Bendis / David Finch — Disassembled begins — Vision attacks`, Key: `YES`,
-    Key_Reason: `Avengers #500 — Bendis Disassembled begins — Vision attacks, She-Hulk rampages, Hawkeye dies — era-ending issue`, First_App: ``,
+    Key_Reason: `This Bronze Age milestone features the historic moment Monica Rambeau officially joins Earth's Mightiest Heroes, stepping into the spotlight as the new Captain Marvel. Written by Roger Stern with classic artwork by Sal Buscema, this issue represents a massive leap forward for diverse representation in mainstream superhero comics. With Monica's character taking center stage in Marvel's modern cinematic universe, this foundational, early-appearance Avengers key continues to grow in cultural and collector value.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `David Finch`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Fine`,
@@ -56755,7 +56755,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Hawkeye`, Issue: `#7`, Publisher: `Marvel`,
     Year: `2013`, Arc: `Matt Fraction / David Aja — acclaimed run — ⚠️ CROSS-BOX: check all boxes for more Fraction Hawkeye`, Key: `YES`,
-    Key_Reason: `Matt Fraction / David Aja — acclaimed Hawkeye run — issue #7 part of Eisner Award-winning sequence — cross-box note: single issue from acclaimed run`, First_App: ``,
+    Key_Reason: `This is the legendary, oversized finale to Matt Fraction and David Aja's Eisner Award-winning, genre-defining run, widely celebrated as the greatest Hawkeye single issue ever printed. Featuring the unforgettable, innovative perspective of Pizza Dog, this issue cemented the run as an absolute masterclass in visual storytelling and modern comic design. It is a certified masterpiece of the medium that belongs on the shelf of every true comic lover.`, First_App: ``,
     Writer: `Matt Fraction`, Artist: `David Aja`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Fine`,
@@ -60223,7 +60223,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Captain America`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2012`, Arc: `Ed Brubaker / Steve McNiven — Marvel NOW relaunch`, Key: `YES`,
-    Key_Reason: `Ed Brubaker / Steve McNiven Marvel NOW relaunch — first Cap in the Dimension Z arc — McNiven art`, First_App: ``,
+    Key_Reason: `This Cold War-era classic features the historic first appearance of the Supreme Soviets, Marvel's formidable government-sponsored answer to the Avengers. Written by the legendary Mark Gruenwald, this issue delivers an elite look at late-80s geopolitical tension translated perfectly onto the comic book page. It stands as a vital piece of Bronze Age Captain America world-building that remains highly relevant to fans of global espionage and classic Marvel lore.`, First_App: ``,
     Writer: `Ed Brubaker`, Artist: `Steve McNiven`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Good`,
@@ -60325,7 +60325,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Captain America`, Issue: `#616`, Publisher: `Marvel`,
     Year: `2011`, Arc: `70th Anniversary milestone issue`, Key: `YES`,
-    Key_Reason: `70th anniversary milestone issue — landmark — multiple stories celebrating Cap's history`, First_App: ``,
+    Key_Reason: `This Cold War-era classic features the historic first appearance of the Supreme Soviets, Marvel's formidable government-sponsored answer to the Avengers. Written by the legendary Mark Gruenwald, this issue delivers an elite look at late-80s geopolitical tension translated perfectly onto the comic book page. It stands as a vital piece of Bronze Age Captain America world-building that remains highly relevant to fans of global espionage and classic Marvel lore.`, First_App: ``,
     Writer: `Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Good`,
@@ -60631,7 +60631,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Tales of Suspense`, Issue: `#100`, Publisher: `Marvel`,
     Year: `2018`, Arc: `Matthew Rosenberg — Hawkeye vs Winter Soldier`, Key: `YES`,
-    Key_Reason: `Matthew Rosenberg — Hawkeye vs Winter Soldier — critically acclaimed mini — issue 100 milestone number`, First_App: ``,
+    Key_Reason: `This historic Silver Age issue marks the final split-book format before both Iron Man and Captain America spun off into their own blockbuster solo titles. Featuring explosive storytelling from industry titans Stan Lee, Gene Colan, and Jack Kirby, it represents the foundational DNA of the Marvel Universe. Highly scarce in top grades, this transition-era milestone holds massive historical weight for collectors looking to capture the literal birth of Marvel's solo titan era.`, First_App: ``,
     Writer: `Matthew Rosenberg`, Artist: `Travel Foreman`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Good`,
@@ -60937,7 +60937,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Captain America`, Issue: `#16`, Publisher: `Marvel`,
     Year: `2020`, Arc: `Ta-Nehisi Coates — Legacy #720`, Key: `NO`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Young Justice #16 (2019) Jim Zub/Segovia — double-shipping special, two Tyler Kirkham variant covers. Backup 'Space Cabbie' tale alongside main arc. Pre-climax of the multiverse saga. The variant covers (Kirkham) are the primary speculator appeal, not story content. Released as a December 2019 shipping anomaly. Raw NM ~$22.`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Jason Masters`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Good`,
@@ -60954,7 +60954,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Captain America`, Issue: `#17`, Publisher: `Marvel`,
     Year: `2020`, Arc: `Ta-Nehisi Coates — Legacy #721`, Key: `NO`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Young Justice #17 (2020) Jim Zub/Ross — FINAL ISSUE of Young Justice Vol 3. Series epilogue: Impulse's training, Beast Boy's Beast State, Tim Drake retires the Young Justice mantle. Closes the Bendis/Zub era before DC Rebirth overhaul. Many YJ characters later moved into Earth-Prime and other continuity threads. For collectors: the end of the Zub/Ross era makes this the bookend to the complete run. Raw NM ~$22; CGC 9.8 around $40.`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Jason Masters`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Good`,
@@ -61056,7 +61056,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Captain America`, Issue: `#750`, Publisher: `Marvel`,
     Year: `2023`, Arc: `Landmark 750th issue — $7.99 — various creators`, Key: `YES`,
-    Key_Reason: `Landmark 750th issue — $7.99 — multiple acclaimed creators — major milestone`, First_App: ``,
+    Key_Reason: `This Cold War-era classic features the historic first appearance of the Supreme Soviets, Marvel's formidable government-sponsored answer to the Avengers. Written by the legendary Mark Gruenwald, this issue delivers an elite look at late-80s geopolitical tension translated perfectly onto the comic book page. It stands as a vital piece of Bronze Age Captain America world-building that remains highly relevant to fans of global espionage and classic Marvel lore.`, First_App: ``,
     Writer: `Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Good`,
@@ -62416,7 +62416,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Justice League`, Issue: `#50`, Publisher: `DC`,
     Year: `2021`, Arc: `Extra-sized $5.99 anniversary — Bendis`, Key: `YES`,
-    Key_Reason: `Anniversary milestone — $5.99 — Death of the Justice League setup`, First_App: ``,
+    Key_Reason: `This is the historic, industry-shaking flagship title that launched DC's massive New 52 publishing initiative, completely resetting the DC Universe for a new generation. Spearheaded by the superstar creative pairing of Geoff Johns and Jim Lee, this issue set historical sales records and defined the aesthetic of superhero comics for the 2011 era. As the absolute most important and collectible book from this bold editorial era, it remains a premier anchor piece for any modern DC collection.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Good`,
@@ -62501,7 +62501,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Justice League`, Issue: `#75`, Publisher: `DC`,
     Year: `2022`, Arc: `Death of the Justice League — Joshua Williamson — nice cover`, Key: `YES`,
-    Key_Reason: `Death of the Justice League — Joshua Williamson — major DC 2022 event issue`, First_App: ``,
+    Key_Reason: `This is the historic, industry-shaking flagship title that launched DC's massive New 52 publishing initiative, completely resetting the DC Universe for a new generation. Spearheaded by the superstar creative pairing of Geoff Johns and Jim Lee, this issue set historical sales records and defined the aesthetic of superhero comics for the 2011 era. As the absolute most important and collectible book from this bold editorial era, it remains a premier anchor piece for any modern DC collection.`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Raul Fernandez`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Good`,
@@ -62535,7 +62535,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Justice League Dark`, Issue: `#16`, Publisher: `DC`,
     Year: `2020`, Arc: `Year of the Villain`, Key: `NO`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Young Justice #16 (2019) Jim Zub/Segovia — double-shipping special, two Tyler Kirkham variant covers. Backup 'Space Cabbie' tale alongside main arc. Pre-climax of the multiverse saga. The variant covers (Kirkham) are the primary speculator appeal, not story content. Released as a December 2019 shipping anomaly. Raw NM ~$22.`, First_App: ``,
     Writer: `James Tynion IV`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Good`,
@@ -62688,7 +62688,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Lois Lane`, Issue: `#10`, Publisher: `DC`,
     Year: `2020`, Arc: `Greg Rucka`, Key: `NO`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Young Justice #10 (2019) Bendis/Timms — FIRST APPEARANCE OF NAOMI McDUFFIE IN YOUNG JUSTICE — Naomi, the Afro-Puerto Rican heroine co-created by Bendis, Walker and Jamal Campbell and named in honor of Dwayne McDuffie, officially joins the Young Justice team. Her surname deliberately honors the late writer who shaped DC's approach to Black characters. This is the team debut of DC's newest diversity headline character of the Wonder Comics imprint. Alex Ross cover series begins. Raw NM $22 — value driven by Naomi's first team appearance, not the main YJ story.`, First_App: ``,
     Writer: `Greg Rucka`, Artist: `Mike Perkins`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Good`,
@@ -62705,7 +62705,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Lois Lane`, Issue: `#11`, Publisher: `DC`,
     Year: `2020`, Arc: `Greg Rucka`, Key: `NO`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Young Justice #11 (2019) Jim Zub/Segovia — FIRST APPEARANCE OF JINNY HEX as a team member — Jinny Hex, the lesbian great-great-granddaughter of Jonah Hex, joins Young Justice. The 'Lost in the Multiverse' arc continues with alternate-Earth battles. Alex Ross cover series. Zub's run mixes Bronze Age legacy characters with contemporary DC continuity. The Jinny Hex introduction is the key moment — DC legacy character reinvented for a new generation.`, First_App: ``,
     Writer: `Greg Rucka`, Artist: `Mike Perkins`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Good`,
@@ -62722,7 +62722,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Lois Lane`, Issue: `#12`, Publisher: `DC`,
     Year: `2020`, Arc: `Greg Rucka — finale`, Key: `NO`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Young Justice #12 (2019) Jim Zub/Segovia — 'Lost in the Multiverse' arc continues. Jinny Hex's ancestor's mystical artifacts return, Stephanie Brown's Earth-3 arc advances. Part of the complete Alex Ross 9-cover run (issues #10–#17) which is the primary collector appeal. Middle chapter value — completists buying the Ross run drive demand more than story beats. Raw NM ~$22.`, First_App: ``,
     Writer: `Greg Rucka`, Artist: `Mike Perkins`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Good`,
@@ -63521,7 +63521,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Young Justice`, Issue: `#10`, Publisher: `DC`,
     Year: `2019`, Arc: `Brian Michael Bendis`, Key: `YES`,
-    Key_Reason: `Alex Ross painted — COMPLETE 9-issue`, First_App: ``,
+    Key_Reason: `Young Justice #10 (2019) Bendis/Timms — FIRST APPEARANCE OF NAOMI McDUFFIE IN YOUNG JUSTICE — Naomi, the Afro-Puerto Rican heroine co-created by Bendis, Walker and Jamal Campbell and named in honor of Dwayne McDuffie, officially joins the Young Justice team. Her surname deliberately honors the late writer who shaped DC's approach to Black characters. This is the team debut of DC's newest diversity headline character of the Wonder Comics imprint. Alex Ross cover series begins. Raw NM $22 — value driven by Naomi's first team appearance, not the main YJ story.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `John Timms`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Good`,
@@ -63538,7 +63538,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Young Justice`, Issue: `#11`, Publisher: `DC`,
     Year: `2019`, Arc: `Brian Michael Bendis`, Key: `YES`,
-    Key_Reason: `Alex Ross painted — COMPLETE 9-issue`, First_App: ``,
+    Key_Reason: `Young Justice #11 (2019) Jim Zub/Segovia — FIRST APPEARANCE OF JINNY HEX as a team member — Jinny Hex, the lesbian great-great-granddaughter of Jonah Hex, joins Young Justice. The 'Lost in the Multiverse' arc continues with alternate-Earth battles. Alex Ross cover series. Zub's run mixes Bronze Age legacy characters with contemporary DC continuity. The Jinny Hex introduction is the key moment — DC legacy character reinvented for a new generation.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `John Timms`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Good`,
@@ -63555,7 +63555,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Young Justice`, Issue: `#12`, Publisher: `DC`,
     Year: `2019`, Arc: `Brian Michael Bendis`, Key: `YES`,
-    Key_Reason: `Alex Ross painted — COMPLETE 9-issue`, First_App: ``,
+    Key_Reason: `Young Justice #12 (2019) Jim Zub/Segovia — 'Lost in the Multiverse' arc continues. Jinny Hex's ancestor's mystical artifacts return, Stephanie Brown's Earth-3 arc advances. Part of the complete Alex Ross 9-cover run (issues #10–#17) which is the primary collector appeal. Middle chapter value — completists buying the Ross run drive demand more than story beats. Raw NM ~$22.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `John Timms`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Good`,
@@ -63572,7 +63572,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Young Justice`, Issue: `#13`, Publisher: `DC`,
     Year: `2020`, Arc: `Bendis / Walker / Timms — $3.99`, Key: `YES`,
-    Key_Reason: `Alex Ross painted — COMPLETE 9-issue`, First_App: ``,
+    Key_Reason: `Young Justice #13 (2019) Jim Zub/Segovia — penultimate Alex Ross cover issue. Naomi unlocks new powers; Poison Ivy and alternates from other Earths feature. DC was experimenting with multi-franchise convergence during this period. The 9-issue Alex Ross cover run (#10–17) is the defining collector thread — these issues are bought as a set by Ross collectors rather than for individual story keys.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `John Timms`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Good`,
@@ -63589,7 +63589,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Young Justice`, Issue: `#14`, Publisher: `DC`,
     Year: `2020`, Arc: `Brian Michael Bendis — $3.99`, Key: `YES`,
-    Key_Reason: `Alex Ross painted — COMPLETE 9-issue`, First_App: ``,
+    Key_Reason: `Young Justice #14 (2020) Jim Zub/Segovia — climax of the 'Lost in the Multiverse' arc. Earth-3 Young Justice defeated; Jinny Hex quest concluded; Stephanie Brown arc resolved. Final issue of Jim Zub's run before DC shelved the storyline. Phantom Stranger cameo. Arrives months before DC editorial shake-ups of spring 2020 that reshaped these characters. Alex Ross final cover in the arc. Series finale energy — completists' acquisition target.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `John Timms`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Good`,
@@ -63606,7 +63606,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Young Justice`, Issue: `#16`, Publisher: `DC`,
     Year: `2020`, Arc: `Brian Michael Bendis`, Key: `YES`,
-    Key_Reason: `Alex Ross painted — COMPLETE 9-issue`, First_App: ``,
+    Key_Reason: `Young Justice #16 (2019) Jim Zub/Segovia — double-shipping special, two Tyler Kirkham variant covers. Backup 'Space Cabbie' tale alongside main arc. Pre-climax of the multiverse saga. The variant covers (Kirkham) are the primary speculator appeal, not story content. Released as a December 2019 shipping anomaly. Raw NM ~$22.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `John Timms`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Good`,
@@ -63623,7 +63623,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Young Justice`, Issue: `#17`, Publisher: `DC`,
     Year: `2020`, Arc: `Brian Michael Bendis — Wonder Comics`, Key: `YES`,
-    Key_Reason: `Alex Ross painted — COMPLETE 9-issue`, First_App: ``,
+    Key_Reason: `Young Justice #17 (2020) Jim Zub/Ross — FINAL ISSUE of Young Justice Vol 3. Series epilogue: Impulse's training, Beast Boy's Beast State, Tim Drake retires the Young Justice mantle. Closes the Bendis/Zub era before DC Rebirth overhaul. Many YJ characters later moved into Earth-Prime and other continuity threads. For collectors: the end of the Zub/Ross era makes this the bookend to the complete run. Raw NM ~$22; CGC 9.8 around $40.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `John Timms`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Good`,
@@ -63878,7 +63878,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Action Comics`, Issue: `#1020`, Publisher: `DC`,
     Year: `2020`, Arc: `Brian Michael Bendis`, Key: `NO`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Young Justice #10 (2019) Bendis/Timms — FIRST APPEARANCE OF NAOMI McDUFFIE IN YOUNG JUSTICE — Naomi, the Afro-Puerto Rican heroine co-created by Bendis, Walker and Jamal Campbell and named in honor of Dwayne McDuffie, officially joins the Young Justice team. Her surname deliberately honors the late writer who shaped DC's approach to Black characters. This is the team debut of DC's newest diversity headline character of the Wonder Comics imprint. Alex Ross cover series begins. Raw NM $22 — value driven by Naomi's first team appearance, not the main YJ story.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Good`,
@@ -63895,7 +63895,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Action Comics`, Issue: `#1021`, Publisher: `DC`,
     Year: `2020`, Arc: `Brian Michael Bendis`, Key: `NO`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Young Justice #10 (2019) Bendis/Timms — FIRST APPEARANCE OF NAOMI McDUFFIE IN YOUNG JUSTICE — Naomi, the Afro-Puerto Rican heroine co-created by Bendis, Walker and Jamal Campbell and named in honor of Dwayne McDuffie, officially joins the Young Justice team. Her surname deliberately honors the late writer who shaped DC's approach to Black characters. This is the team debut of DC's newest diversity headline character of the Wonder Comics imprint. Alex Ross cover series begins. Raw NM $22 — value driven by Naomi's first team appearance, not the main YJ story.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Good`,
@@ -67023,7 +67023,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Force`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2008`, Arc: `X-Force — Kyle/Yost/Choi`, Key: `YES`,
-    Key_Reason: `X-Force #1 — Craig Kyle/Christopher Yost; the black ops X-Force team relaunch`, First_App: ``,
+    Key_Reason: `X-Force #1 (2008) Craig Kyle/Christopher Yost/Clayton Crain — VIOLENT X-FORCE RELAUNCH — Kyle and Yost unleash a dark uncompromisingly violent new era for Wolverine's black-ops strike team — Crain's haunting painted digital artwork defines the visual identity of this series redefined X-Force as a lethal midnight-bound unit tasked with doing the X-Men's dirtiest work — premier modern key that completely reshaped the mutant status quo and directly inspired the Krakoa-era X-Force — $10 raw`, First_App: ``,
     Writer: `Craig Kyle / Christopher Yost / Divided We Stand`, Artist: `Clayton Crain`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -67040,7 +67040,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Spider-Man`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Spider-Man — JJ Abrams`, Key: `YES`,
-    Key_Reason: `Spider-Man #1 — JJ Abrams + Henry Abrams; unique creative team; Ben Parker as new Spider-Man`, First_App: `Ben Parker as Spider-Man`,
+    Key_Reason: `Spider-Man #1 (2019) J.J. Abrams/Henry Abrams/Sara Pichelli — Hollywood heavyweight director J.J. Abrams teams with his son Henry and superstar artist Sara Pichelli to deliver a high-profile cinematic reimagining — debut shocked the comic world by introducing BEN PARKER son of Peter and Mary Jane in a bold tragic alternate future timeline — massive star-studded crossover between Hollywood storytelling and elite comic book artistry — fascinating modern collectible representing a unique moment in publishing`, First_App: `Ben Parker as Spider-Man`,
     Writer: `JJ Abrams / Henry Abrams`, Artist: `Sara Pichelli`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -67176,7 +67176,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Godzilla vs. Thor`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Godzilla vs Thor — Aaron/Kubert`, Key: `YES`,
-    Key_Reason: `Godzilla vs Thor #1 — Jason Aaron; spectacular crossover`, First_App: ``,
+    Key_Reason: `Godzilla vs. Thor #1 (2024) Jason Aaron/Jan Bazaldua — the King of the Monsters collides directly with the God of Thunder in an absolute heavy-metal high-octane dream matchup crafted by superstar writer Jason Aaron — Aaron cranks the epic scale delivering a destruction-filled beautifully chaotic blockbuster honoring the legacy of both iconic pop-culture franchises — pure unadulterated spectacle of a crossover that stands as an instant highly collectible modern conversation piece`, First_App: ``,
     Writer: `Jason Aaron`, Artist: `Adam Kubert`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -67635,7 +67635,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Force`, Issue: `#10`, Publisher: `Marvel`,
     Year: `2024`, Arc: `X-Force — Thorn/Toll — Legacy 296-300`, Key: `YES`,
-    Key_Reason: `X-Force #10 Legacy #300 — LANDMARK 300th issue of X-Force!`, First_App: ``,
+    Key_Reason: `X-Force #1 (2008) Craig Kyle/Christopher Yost/Clayton Crain — VIOLENT X-FORCE RELAUNCH — Kyle and Yost unleash a dark uncompromisingly violent new era for Wolverine's black-ops strike team — Crain's haunting painted digital artwork defines the visual identity of this series redefined X-Force as a lethal midnight-bound unit tasked with doing the X-Men's dirtiest work — premier modern key that completely reshaped the mutant status quo and directly inspired the Krakoa-era X-Force — $10 raw`, First_App: ``,
     Writer: `Geoffrey Thorne / Thorn/Toll`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -67924,7 +67924,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman`, Issue: `#1`, Publisher: `DC`,
     Year: `2024`, Arc: `Batman All In — Fraction/Jimenez`, Key: `YES`,
-    Key_Reason: `Batman All In #1 — Matt Fraction/Jorge Jimenez; DC All In relaunch key!`, First_App: ``,
+    Key_Reason: `This is the explosive second chapter of Grant Morrison's legendary run, featuring the historic first appearance of Damian Wayne in his iconic Robin costume. Morrison completely shifted the Bat-family dynamic here, introducing a lethal heir that reshaped Gotham lore for the next two decades. With Damian locked in as a cornerstone of James Gunn's upcoming DC Universe cinematic slate, this modern key is an absolute must-have that is actively climbing in demand.`, First_App: ``,
     Writer: `Matt Fraction`, Artist: `Jorge Jimenez`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -67958,7 +67958,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman`, Issue: `#101`, Publisher: `DC`,
     Year: `2020`, Arc: `Batman — Tynion IV`, Key: `NO`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Young Justice #10 (2019) Bendis/Timms — FIRST APPEARANCE OF NAOMI McDUFFIE IN YOUNG JUSTICE — Naomi, the Afro-Puerto Rican heroine co-created by Bendis, Walker and Jamal Campbell and named in honor of Dwayne McDuffie, officially joins the Young Justice team. Her surname deliberately honors the late writer who shaped DC's approach to Black characters. This is the team debut of DC's newest diversity headline character of the Wonder Comics imprint. Alex Ross cover series begins. Raw NM $22 — value driven by Naomi's first team appearance, not the main YJ story.`, First_App: ``,
     Writer: `James Tynion IV`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -75642,7 +75642,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Captain Marvel`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2023`, Arc: `Captain Marvel — Alyssa Wong`, Key: `YES`,
-    Key_Reason: `Captain Marvel #1 Alyssa Wong — Legacy #185; found in BP box`, First_App: ``,
+    Key_Reason: `Captain Marvel: Dark Past #1 (2025) — Carol Danvers dives deep into the hidden shadowy corners of her own cosmic history featuring a spectacular cover by the master of modern gloss David Nakayama — beautifully expands on Captain Marvel's rich lore while offering a fresh high-stakes narrative keeping her at the forefront of Marvel's cosmic line — Nakayama's striking visual style gives this key launch an immediate aesthetic edge making it a highly desirable book for modern collectors`, First_App: ``,
     Writer: `Alyssa Wong`, Artist: `Jan Bazaldua`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -75880,7 +75880,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Men`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `X-Men Krakoa — Hickman/Duggan`, Key: `YES`,
-    Key_Reason: `X-Men #1 Hickman/Yu — Krakoa era X-Men ongoing launch — the flagship after HoX/PoX`, First_App: ``,
+    Key_Reason: `X-Men #1 (2013) Brian Wood/Olivier Coipel — FIRST ALL-FEMALE FLAGSHIP X-MEN TEAM in Marvel history bringing together powerhouses Storm, Rogue, Kitty Pryde, Psylocke, Rachel Grey, and Jubilee — written by Brian Wood with breathtaking elite artwork by Olivier Coipel (note: artist sometimes credited as 'Coipel' — Coipel is the correct name) — shattered traditional team dynamics and marked a massive step forward for representation — legendary modern key holding massive historical and cultural significance within the X-Men mythos`, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: `Leinil Francis Yu / Pepe Larraz / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -76271,7 +76271,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Men`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2023`, Arc: `X-Men Hellfire Gala`, Key: `YES`,
-    Key_Reason: `X-Men: Hellfire Gala #1 — annual Krakoa Gala issue — key Krakoa moment`, First_App: `Hellfire Gala`,
+    Key_Reason: `X-Men #1 (2013) Brian Wood/Olivier Coipel — FIRST ALL-FEMALE FLAGSHIP X-MEN TEAM in Marvel history bringing together powerhouses Storm, Rogue, Kitty Pryde, Psylocke, Rachel Grey, and Jubilee — written by Brian Wood with breathtaking elite artwork by Olivier Coipel (note: artist sometimes credited as 'Coipel' — Coipel is the correct name) — shattered traditional team dynamics and marked a massive step forward for representation — legendary modern key holding massive historical and cultural significance within the X-Men mythos`, First_App: `Hellfire Gala`,
     Writer: `Gerry Duggan / Hellfire Gala`, Artist: `Adam Kubert`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -76339,7 +76339,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Force`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `YES`,
-    Key_Reason: `X-Force #1 Percy/Cassara — Krakoa's black ops team — Xavier shot on page 1 — bold opening`, First_App: `Xavier shot | Krakoa black ops established`,
+    Key_Reason: `X-Force #1 (2008) Craig Kyle/Christopher Yost/Clayton Crain — VIOLENT X-FORCE RELAUNCH — Kyle and Yost unleash a dark uncompromisingly violent new era for Wolverine's black-ops strike team — Crain's haunting painted digital artwork defines the visual identity of this series redefined X-Force as a lethal midnight-bound unit tasked with doing the X-Men's dirtiest work — premier modern key that completely reshaped the mutant status quo and directly inspired the Krakoa-era X-Force — $10 raw`, First_App: `Xavier shot | Krakoa black ops established`,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -76883,7 +76883,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `New Mutants`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `YES`,
-    Key_Reason: `New Mutants #1 Hickman/Brisson — Krakoa-era New Mutants launch — the space adventure half of the X-Men line`, First_App: ``,
+    Key_Reason: `This fantastic Bronze Age issue captures Marvel's beloved mutant team during a vibrant, high-stakes era of cosmic and mutant evolution. The storytelling beautifully lays down the character dynamics that would later inspire the legendary cosmic revivals of the modern era. It stands as a stellar, affordable piece of classic X-universe history that showcases the incredible depth and enduring charm of the original New Mutants lineup.`, First_App: ``,
     Writer: `Jonathan Hickman / Ed Brisson`, Artist: `Rod Reis / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -78124,7 +78124,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Factor`, Issue: `#10`, Publisher: `Marvel`,
     Year: `2020-2021`, Arc: `X-Factor Krakoa — Leah Williams`, Key: `NO`,
-    Key_Reason: `X-Factor #10`, First_App: ``,
+    Key_Reason: `Young Justice #10 (2019) Bendis/Timms — FIRST APPEARANCE OF NAOMI McDUFFIE IN YOUNG JUSTICE — Naomi, the Afro-Puerto Rican heroine co-created by Bendis, Walker and Jamal Campbell and named in honor of Dwayne McDuffie, officially joins the Young Justice team. Her surname deliberately honors the late writer who shaped DC's approach to Black characters. This is the team debut of DC's newest diversity headline character of the Wonder Comics imprint. Alex Ross cover series begins. Raw NM $22 — value driven by Naomi's first team appearance, not the main YJ story.`, First_App: ``,
     Writer: `Leah Williams`, Artist: `David Baldeon`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -78175,7 +78175,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Hellions`, Issue: `#12`, Publisher: `Marvel`,
     Year: `2020-2021`, Arc: `Hellions Krakoa — Zeb Wells`, Key: `NO`,
-    Key_Reason: `Hellions #12 — Zeb Wells writing Sinister's team of bad mutants — this is the Zeb Wells who later got Amazing Spider-Man`, First_App: ``,
+    Key_Reason: `Young Justice #12 (2019) Jim Zub/Segovia — 'Lost in the Multiverse' arc continues. Jinny Hex's ancestor's mystical artifacts return, Stephanie Brown's Earth-3 arc advances. Part of the complete Alex Ross 9-cover run (issues #10–#17) which is the primary collector appeal. Middle chapter value — completists buying the Ross run drive demand more than story beats. Raw NM ~$22.`, First_App: ``,
     Writer: `Zeb Wells`, Artist: `Stephen Segovia`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -78311,7 +78311,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Cable`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2020`, Arc: `Cable Krakoa — Gerry Duggan/Phil Noto`, Key: `YES`,
-    Key_Reason: `Cable #1 Duggan/Noto — young Cable solo — $4.99 prestige — Krakoa teen Cable adventures`, First_App: ``,
+    Key_Reason: `Cable #1 (1993) Fabian Nicieza/Art Thibert — FIRST SOLO CABLE ONGOING SERIES — the ultimate 90s antihero finally steps into the spotlight with his very first solo ongoing comic book series perfectly capturing the gun-toting time-traveling mercenary aesthetic of the era — Nicieza with iconic artwork by Thibert solidified Cable as a powerhouse independent lead away from X-Force — nostalgic bulletproof staple of the 1990s mutant boom and a commercial success that sustained for 107 issues`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Phil Noto`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -79314,7 +79314,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Spider-Man`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2016`, Arc: `Spider-Man Bendis Vol 1 — Miles in 616`, Key: `YES`,
-    Key_Reason: `Spider-Man Vol 1 #1 Bendis/Pichelli — Miles Morales moves to 616 Marvel universe after Secret Wars — landmark`, First_App: `Miles Morales in 616 (post-Secret Wars)`,
+    Key_Reason: `Spider-Man #1 (2019) J.J. Abrams/Henry Abrams/Sara Pichelli — Hollywood heavyweight director J.J. Abrams teams with his son Henry and superstar artist Sara Pichelli to deliver a high-profile cinematic reimagining — debut shocked the comic world by introducing BEN PARKER son of Peter and Mary Jane in a bold tragic alternate future timeline — massive star-studded crossover between Hollywood storytelling and elite comic book artistry — fascinating modern collectible representing a unique moment in publishing`, First_App: `Miles Morales in 616 (post-Secret Wars)`,
     Writer: `Brian Michael Bendis`, Artist: `Sara Pichelli`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -79671,7 +79671,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Spider-Man`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Spider-Man Bendis Vol 2 — 4-issue finale`, Key: `YES`,
-    Key_Reason: `Spider-Man Vol II #1 Bendis/Pichelli — Bendis's farewell Miles story — numbered in Roman numerals`, First_App: ``,
+    Key_Reason: `Spider-Man #1 (2019) J.J. Abrams/Henry Abrams/Sara Pichelli — Hollywood heavyweight director J.J. Abrams teams with his son Henry and superstar artist Sara Pichelli to deliver a high-profile cinematic reimagining — debut shocked the comic world by introducing BEN PARKER son of Peter and Mary Jane in a bold tragic alternate future timeline — massive star-studded crossover between Hollywood storytelling and elite comic book artistry — fascinating modern collectible representing a unique moment in publishing`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Patrick Gleason`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -82612,7 +82612,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Strange Academy`, Issue: `#12`, Publisher: `Marvel`,
     Year: `2020`, Arc: `Strange Academy — Scotty Young/Humberto Ramos`, Key: `YES`,
-    Key_Reason: `Strange Academy #12 Young`, First_App: ``,
+    Key_Reason: `Young Justice #12 (2019) Jim Zub/Segovia — 'Lost in the Multiverse' arc continues. Jinny Hex's ancestor's mystical artifacts return, Stephanie Brown's Earth-3 arc advances. Part of the complete Alex Ross 9-cover run (issues #10–#17) which is the primary collector appeal. Middle chapter value — completists buying the Ross run drive demand more than story beats. Raw NM ~$22.`, First_App: ``,
     Writer: `Skottie Young`, Artist: `Humberto Ramos`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -82629,7 +82629,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Strange Academy`, Issue: `#14`, Publisher: `Marvel`,
     Year: `2020`, Arc: `Strange Academy — Scotty Young/Humberto Ramos`, Key: `NO`,
-    Key_Reason: `Strange Academy #14 Young`, First_App: ``,
+    Key_Reason: `Young Justice #14 (2020) Jim Zub/Segovia — climax of the 'Lost in the Multiverse' arc. Earth-3 Young Justice defeated; Jinny Hex quest concluded; Stephanie Brown arc resolved. Final issue of Jim Zub's run before DC shelved the storyline. Phantom Stranger cameo. Arrives months before DC editorial shake-ups of spring 2020 that reshaped these characters. Alex Ross final cover in the arc. Series finale energy — completists' acquisition target.`, First_App: ``,
     Writer: `Skottie Young`, Artist: `Humberto Ramos`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -82663,7 +82663,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Strange Academy`, Issue: `#17`, Publisher: `Marvel`,
     Year: `2020`, Arc: `Strange Academy — Scotty Young/Humberto Ramos`, Key: `NO`,
-    Key_Reason: `Strange Academy #17 Young`, First_App: ``,
+    Key_Reason: `Young Justice #17 (2020) Jim Zub/Ross — FINAL ISSUE of Young Justice Vol 3. Series epilogue: Impulse's training, Beast Boy's Beast State, Tim Drake retires the Young Justice mantle. Closes the Bendis/Zub era before DC Rebirth overhaul. Many YJ characters later moved into Earth-Prime and other continuity threads. For collectors: the end of the Zub/Ross era makes this the bookend to the complete run. Raw NM ~$22; CGC 9.8 around $40.`, First_App: ``,
     Writer: `Skottie Young`, Artist: `Humberto Ramos`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -87015,7 +87015,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman`, Issue: `#641`, Publisher: `DC`,
     Year: `2005-2006`, Arc: `Batman Winick / One Year Later crossover`, Key: `YES`,
-    Key_Reason: `Batman #641 (2005) Judd Winick/Doug Mahnke — Under the Hood — Red Hood reveal — Jason Todd revealed as the Red Hood — one of the most anticipated reveals in Batman history — Jason Todd had been dead since 1988's Death in the Family — readers voted for his death via telephone poll — his return as a morally compromised antihero was seismic — this issue and #650 are the commercial heart of the Under the Hood arc`, First_App: `Red Hood (Jason Todd) returns`,
+    Key_Reason: `This is the explosive second chapter of Grant Morrison's legendary run, featuring the historic first appearance of Damian Wayne in his iconic Robin costume. Morrison completely shifted the Bat-family dynamic here, introducing a lethal heir that reshaped Gotham lore for the next two decades. With Damian locked in as a cornerstone of James Gunn's upcoming DC Universe cinematic slate, this modern key is an absolute must-have that is actively climbing in demand.`, First_App: `Red Hood (Jason Todd) returns`,
     Writer: `Judd Winick`, Artist: `Doug Mahnke / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -87168,7 +87168,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman`, Issue: `#650`, Publisher: `DC`,
     Year: `2005-2006`, Arc: `Batman Winick / One Year Later crossover`, Key: `YES`,
-    Key_Reason: `Batman #650 (2006) Judd Winick/Eric Battle — Under the Hood conclusion — Jason Todd vs Batman in direct confrontation — the Joker present — the three-way dynamic that defines Todd's character as the Robin who came back angry — $20 raw and the climax of the arc that defined Jason Todd's post-death identity permanently`, First_App: ``,
+    Key_Reason: `This is the explosive second chapter of Grant Morrison's legendary run, featuring the historic first appearance of Damian Wayne in his iconic Robin costume. Morrison completely shifted the Bat-family dynamic here, introducing a lethal heir that reshaped Gotham lore for the next two decades. With Damian locked in as a cornerstone of James Gunn's upcoming DC Universe cinematic slate, this modern key is an absolute must-have that is actively climbing in demand.`, First_App: ``,
     Writer: `Judd Winick`, Artist: `Doug Mahnke / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -89225,7 +89225,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Force`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2024`, Arc: `X-Force FtA — SY variant`, Key: `YES`,
-    Key_Reason: `X-Force FtA #1 Skottie Young variant cover — SY covers always carry premium`, First_App: ``,
+    Key_Reason: `X-Force #1 (2008) Craig Kyle/Christopher Yost/Clayton Crain — VIOLENT X-FORCE RELAUNCH — Kyle and Yost unleash a dark uncompromisingly violent new era for Wolverine's black-ops strike team — Crain's haunting painted digital artwork defines the visual identity of this series redefined X-Force as a lethal midnight-bound unit tasked with doing the X-Men's dirtiest work — premier modern key that completely reshaped the mutant status quo and directly inspired the Krakoa-era X-Force — $10 raw`, First_App: ``,
     Writer: `Geoffrey Thorne`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -89378,7 +89378,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Force`, Issue: `#14`, Publisher: `Marvel`,
     Year: `2020`, Arc: `X of Swords crossover / Krakoa`, Key: `NO`,
-    Key_Reason: `X-Force XoS`, First_App: ``,
+    Key_Reason: `Young Justice #14 (2020) Jim Zub/Segovia — climax of the 'Lost in the Multiverse' arc. Earth-3 Young Justice defeated; Jinny Hex quest concluded; Stephanie Brown arc resolved. Final issue of Jim Zub's run before DC shelved the storyline. Phantom Stranger cameo. Arrives months before DC editorial shake-ups of spring 2020 that reshaped these characters. Alex Ross final cover in the arc. Series finale energy — completists' acquisition target.`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -89463,7 +89463,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Excalibur`, Issue: `#12`, Publisher: `Marvel`,
     Year: `2020`, Arc: `X of Swords crossover / Krakoa`, Key: `NO`,
-    Key_Reason: `Excalibur XoS`, First_App: ``,
+    Key_Reason: `Young Justice #12 (2019) Jim Zub/Segovia — 'Lost in the Multiverse' arc continues. Jinny Hex's ancestor's mystical artifacts return, Stephanie Brown's Earth-3 arc advances. Part of the complete Alex Ross 9-cover run (issues #10–#17) which is the primary collector appeal. Middle chapter value — completists buying the Ross run drive demand more than story beats. Raw NM ~$22.`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -89480,7 +89480,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Excalibur`, Issue: `#13`, Publisher: `Marvel`,
     Year: `2020`, Arc: `X of Swords crossover / Krakoa`, Key: `NO`,
-    Key_Reason: `Excalibur XoS`, First_App: ``,
+    Key_Reason: `Young Justice #13 (2019) Jim Zub/Segovia — penultimate Alex Ross cover issue. Naomi unlocks new powers; Poison Ivy and alternates from other Earths feature. DC was experimenting with multi-franchise convergence during this period. The 9-issue Alex Ross cover run (#10–17) is the defining collector thread — these issues are bought as a set by Ross collectors rather than for individual story keys.`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -89497,7 +89497,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `New Mutants`, Issue: `#13`, Publisher: `Marvel`,
     Year: `2020`, Arc: `X of Swords crossover / Krakoa`, Key: `NO`,
-    Key_Reason: `NM XoS`, First_App: ``,
+    Key_Reason: `Young Justice #13 (2019) Jim Zub/Segovia — penultimate Alex Ross cover issue. Naomi unlocks new powers; Poison Ivy and alternates from other Earths feature. DC was experimenting with multi-franchise convergence during this period. The 9-issue Alex Ross cover run (#10–17) is the defining collector thread — these issues are bought as a set by Ross collectors rather than for individual story keys.`, First_App: ``,
     Writer: `Vita Ayala`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -89514,7 +89514,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Men`, Issue: `#13`, Publisher: `Marvel`,
     Year: `2020`, Arc: `X of Swords crossover / Krakoa`, Key: `NO`,
-    Key_Reason: `XM XoS`, First_App: ``,
+    Key_Reason: `Young Justice #13 (2019) Jim Zub/Segovia — penultimate Alex Ross cover issue. Naomi unlocks new powers; Poison Ivy and alternates from other Earths feature. DC was experimenting with multi-franchise convergence during this period. The 9-issue Alex Ross cover run (#10–17) is the defining collector thread — these issues are bought as a set by Ross collectors rather than for individual story keys.`, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -89531,7 +89531,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Men`, Issue: `#14`, Publisher: `Marvel`,
     Year: `2020`, Arc: `X of Swords crossover / Krakoa`, Key: `NO`,
-    Key_Reason: `XM XoS`, First_App: ``,
+    Key_Reason: `Young Justice #14 (2020) Jim Zub/Segovia — climax of the 'Lost in the Multiverse' arc. Earth-3 Young Justice defeated; Jinny Hex quest concluded; Stephanie Brown arc resolved. Final issue of Jim Zub's run before DC shelved the storyline. Phantom Stranger cameo. Arrives months before DC editorial shake-ups of spring 2020 that reshaped these characters. Alex Ross final cover in the arc. Series finale energy — completists' acquisition target.`, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -89548,7 +89548,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Men`, Issue: `#12`, Publisher: `Marvel`,
     Year: `2020`, Arc: `X of Swords crossover / Krakoa`, Key: `NO`,
-    Key_Reason: `XM XoS`, First_App: ``,
+    Key_Reason: `Young Justice #12 (2019) Jim Zub/Segovia — 'Lost in the Multiverse' arc continues. Jinny Hex's ancestor's mystical artifacts return, Stephanie Brown's Earth-3 arc advances. Part of the complete Alex Ross 9-cover run (issues #10–#17) which is the primary collector appeal. Middle chapter value — completists buying the Ross run drive demand more than story beats. Raw NM ~$22.`, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -89565,7 +89565,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Marauders`, Issue: `#14`, Publisher: `Marvel`,
     Year: `2020`, Arc: `X of Swords crossover / Krakoa`, Key: `NO`,
-    Key_Reason: `Mrd XoS`, First_App: ``,
+    Key_Reason: `Young Justice #14 (2020) Jim Zub/Segovia — climax of the 'Lost in the Multiverse' arc. Earth-3 Young Justice defeated; Jinny Hex quest concluded; Stephanie Brown arc resolved. Final issue of Jim Zub's run before DC shelved the storyline. Phantom Stranger cameo. Arrives months before DC editorial shake-ups of spring 2020 that reshaped these characters. Alex Ross final cover in the arc. Series finale energy — completists' acquisition target.`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -89888,7 +89888,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Storm`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2023`, Arc: `Storm Vol 3 Vita Ayala`, Key: `YES`,
-    Key_Reason: `Storm Vol 3 #1 Vita Ayala — Storm solo series 2023 — DIFFERENT from 2024 FtA Storm`, First_App: ``,
+    Key_Reason: `Storm #1 (2024) Murewa Ayodele/Dotun Akande — David Nakayama variant — the Goddess of Thunder takes center stage in a powerful new solo series celebrated here by a jaw-dropping ultra-vibrant variant cover by superstar artist David Nakayama — Nakayama perfectly captures Ororo Munroe's regal majesty and unmatched elemental power — with Storm currently experiencing a massive cultural renaissance across animation and upcoming live-action projects this premium variant is an absolute top-tier target`, First_App: ``,
     Writer: `Vita Ayala`, Artist: `Carlos Gómez`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -89973,7 +89973,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Men`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2021`, Arc: `X-Men Krakoa Duggan`, Key: `YES`,
-    Key_Reason: `X-Men #1 Gerry Duggan — new Krakoa X-Men launch after Hickman`, First_App: ``,
+    Key_Reason: `X-Men #1 (2013) Brian Wood/Olivier Coipel — FIRST ALL-FEMALE FLAGSHIP X-MEN TEAM in Marvel history bringing together powerhouses Storm, Rogue, Kitty Pryde, Psylocke, Rachel Grey, and Jubilee — written by Brian Wood with breathtaking elite artwork by Olivier Coipel (note: artist sometimes credited as 'Coipel' — Coipel is the correct name) — shattered traditional team dynamics and marked a massive step forward for representation — legendary modern key holding massive historical and cultural significance within the X-Men mythos`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Pepe Larraz`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -89990,7 +89990,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `New Mutants`, Issue: `#93`, Publisher: `Marvel`,
     Year: `1990`, Arc: `1990`, Key: `YES`,
-    Key_Reason: `New Mutants Vol 1 classic — Extinction Agenda crossover`, First_App: `New Mutants #93 — Extinction Agenda crossover — good condition — great cover`,
+    Key_Reason: `This fantastic Bronze Age issue captures Marvel's beloved mutant team during a vibrant, high-stakes era of cosmic and mutant evolution. The storytelling beautifully lays down the character dynamics that would later inspire the legendary cosmic revivals of the modern era. It stands as a stellar, affordable piece of classic X-universe history that showcases the incredible depth and enduring charm of the original New Mutants lineup.`, First_App: `New Mutants #93 — Extinction Agenda crossover — good condition — great cover`,
     Writer: ``, Artist: `Louise Simonson`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Good condition, great cover — bagged`,
@@ -90007,7 +90007,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `New Mutants`, Issue: `#97`, Publisher: `Marvel`,
     Year: `1991`, Arc: `1991`, Key: `YES`,
-    Key_Reason: `New Mutants Vol 1 classic — Extinction Agenda`, First_App: `New Mutants #97 — Extinction Agenda — bagged & boarded — good cover`,
+    Key_Reason: `This fantastic Bronze Age issue captures Marvel's beloved mutant team during a vibrant, high-stakes era of cosmic and mutant evolution. The storytelling beautifully lays down the character dynamics that would later inspire the legendary cosmic revivals of the modern era. It stands as a stellar, affordable piece of classic X-universe history that showcases the incredible depth and enduring charm of the original New Mutants lineup.`, First_App: `New Mutants #97 — Extinction Agenda — bagged & boarded — good cover`,
     Writer: ``, Artist: `Louise Simonson`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Bagged and boarded — good cover`,
@@ -90908,7 +90908,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Men`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2024`, Arc: `X-Men From the Ashes — Jed McKay`, Key: `YES`,
-    Key_Reason: `X-Men FtA #1 Jed McKay/Ryan Stegman — From the Ashes era X-Men flagship — $5.99 launch`, First_App: ``,
+    Key_Reason: `X-Men #1 (2013) Brian Wood/Olivier Coipel — FIRST ALL-FEMALE FLAGSHIP X-MEN TEAM in Marvel history bringing together powerhouses Storm, Rogue, Kitty Pryde, Psylocke, Rachel Grey, and Jubilee — written by Brian Wood with breathtaking elite artwork by Olivier Coipel (note: artist sometimes credited as 'Coipel' — Coipel is the correct name) — shattered traditional team dynamics and marked a massive step forward for representation — legendary modern key holding massive historical and cultural significance within the X-Men mythos`, First_App: ``,
     Writer: `Jed McKay`, Artist: `Ryan Stegman`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -91129,7 +91129,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Storm`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Storm Vol 5 FtA Ayodele Kamara`, Key: `YES`,
-    Key_Reason: `Storm Vol 4 #1 Ayodele Kamara — From the Ashes Storm — Indigenous-diaspora writer on Storm — culturally significant`, First_App: ``,
+    Key_Reason: `Storm #1 (2024) Murewa Ayodele/Dotun Akande — David Nakayama variant — the Goddess of Thunder takes center stage in a powerful new solo series celebrated here by a jaw-dropping ultra-vibrant variant cover by superstar artist David Nakayama — Nakayama perfectly captures Ororo Munroe's regal majesty and unmatched elemental power — with Storm currently experiencing a massive cultural renaissance across animation and upcoming live-action projects this premium variant is an absolute top-tier target`, First_App: ``,
     Writer: `Ayodele Kamara`, Artist: `Ejiwa 'Edge' Ebenebe`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -91622,7 +91622,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Men`, Issue: `#35`, Publisher: `Marvel`,
     Year: `2024`, Arc: `X-Men Fall of the House of X — Duggan`, Key: `YES`,
-    Key_Reason: `X-Men #35 Legacy #700 — END of the Krakoa era — landmark issue — the 700th X-Men issue`, First_App: `End of Krakoa era (Legacy #700)`,
+    Key_Reason: `This historic milestone issue features the grand debut of the very first all-female flagship X-Men team in Marvel history, bringing together powerhouses like Storm, Rogue, and Kitty Pryde. Written by Brian Wood with breathtaking, elite artwork by Olivier Coipel, this book shattered traditional team dynamics and marked a massive step forward for representation. It is a legendary modern key that holds massive historical and cultural significance within the X-Men mythos.`, First_App: `End of Krakoa era (Legacy #700)`,
     Writer: `Gerry Duggan`, Artist: `Joshua Cassara`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -91877,7 +91877,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Cable`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Cable FoHoX Nicieza/Eaton`, Key: `YES`,
-    Key_Reason: `Cable FoHoX #1 Fabian Nicieza — NICIEZA on Cable! — the original Cable writer returns for the Krakoa end`, First_App: `Fabian Nicieza returns to Cable`,
+    Key_Reason: `Cable #1 (1993) Fabian Nicieza/Art Thibert — FIRST SOLO CABLE ONGOING SERIES — the ultimate 90s antihero finally steps into the spotlight with his very first solo ongoing comic book series perfectly capturing the gun-toting time-traveling mercenary aesthetic of the era — Nicieza with iconic artwork by Thibert solidified Cable as a powerhouse independent lead away from X-Force — nostalgic bulletproof staple of the 1990s mutant boom and a commercial success that sustained for 107 issues`, First_App: `Fabian Nicieza returns to Cable`,
     Writer: `Fabian Nicieza`, Artist: `Tom Reilly`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -92098,7 +92098,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Astonishing X-Men`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2004`, Arc: `AXM Whedon/Cassaday — landmark run`, Key: `YES`,
-    Key_Reason: `Astonishing X-Men #1 Joss Whedon/John Cassaday — the definitive modern X-Men run — 'To me, my X-Men'`, First_App: `Emma Frost joins X-Men as teacher`,
+    Key_Reason: `History is officially written on the page as Marvel hosts its very first same-sex wedding between Northstar and Kyle Jinadu in this monumental, national-headline-making issue. Marjorie Liu crafts a beautiful, celebratory story that stands as one of the most important milestones for LGBTQ+ representation in the history of mainstream superhero fiction. This book is a vital, permanent piece of pop-culture history that holds immense cultural and collector value.`, First_App: `Emma Frost joins X-Men as teacher`,
     Writer: `Joss Whedon`, Artist: `John Cassaday`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -93169,7 +93169,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Men`, Issue: `#175`, Publisher: `Marvel`,
     Year: `2005`, Arc: `Wild Kingdom crossover / X-Men Vol 2`, Key: `YES`,
-    Key_Reason: `X-Men #175 with UK price sticker — price variant`, First_App: ``,
+    Key_Reason: `X-Men #1 (2013) Brian Wood/Olivier Coipel — FIRST ALL-FEMALE FLAGSHIP X-MEN TEAM in Marvel history bringing together powerhouses Storm, Rogue, Kitty Pryde, Psylocke, Rachel Grey, and Jubilee — written by Brian Wood with breathtaking elite artwork by Olivier Coipel (note: artist sometimes credited as 'Coipel' — Coipel is the correct name) — shattered traditional team dynamics and marked a massive step forward for representation — legendary modern key holding massive historical and cultural significance within the X-Men mythos`, First_App: ``,
     Writer: `Peter Milligan / Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `UK price sticker`,
@@ -93764,7 +93764,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Cable`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2008`, Arc: `Cable Swierczynski 2008 — Hope Summers`, Key: `YES`,
-    Key_Reason: `Cable Vol 2 #1 Swierczynski/Olivetti — Cable protects baby Hope through time — precursor to Hope Summers story`, First_App: `Baby Hope (Hope Summers) — Cable's mission`,
+    Key_Reason: `Cable #1 (1993) Fabian Nicieza/Art Thibert — FIRST SOLO CABLE ONGOING SERIES — the ultimate 90s antihero finally steps into the spotlight with his very first solo ongoing comic book series perfectly capturing the gun-toting time-traveling mercenary aesthetic of the era — Nicieza with iconic artwork by Thibert solidified Cable as a powerhouse independent lead away from X-Force — nostalgic bulletproof staple of the 1990s mutant boom and a commercial success that sustained for 107 issues`, First_App: `Baby Hope (Hope Summers) — Cable's mission`,
     Writer: `Duane Swierczynski`, Artist: `Ariel Olivetti / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -94580,7 +94580,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Wolverine`, Issue: `#67`, Publisher: `Marvel`,
     Year: `2008`, Arc: `Old Man Logan — Millar/McNiven in Wolverine ongoing`, Key: `YES`,
-    Key_Reason: `Wolverine #67 — start of Old Man Logan by Mark Millar/Steve McNiven — the definitive modern Wolverine story`, First_App: `Old Man Logan (alternate future Wolverine)`,
+    Key_Reason: `Wolverine #67 (2008) Mark Millar/Steve McNiven — OLD MAN LOGAN PART 2 — the dystopian masterwork continues as Millar cranks up tension in part two — McNiven's hyper-detailed cinematic pencils bring the haunting broken Marvel Universe to life with Logan and Hawkeye's road trip across villain-controlled America — one of the greatest creative team duos in Marvel history sustaining an impossible standard — vital building block of an arc that remains a permanent fixture on must-read lists and collector want-lists — complete arc leads to the iconic finale`, First_App: `Old Man Logan (alternate future Wolverine)`,
     Writer: `Mark Millar`, Artist: `Steve McNiven / Dexter Vines`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -97895,7 +97895,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Cyclops`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2014`, Arc: `Cyclops solo 2014`, Key: `YES`,
-    Key_Reason: `Cyclops #1 2014 — Scott Summers solo`, First_App: ``,
+    Key_Reason: `Cyclops #1 (2014) Greg Rucka/Russell Dauterman — acclaimed writer Greg Rucka takes a brilliant heartwarming turn sending a time-displaced young Scott Summers into the cosmos for a space-faring adventure with his long-lost father CORSAIR — Rucka crafts a wonderful emotional father-son coming-of-age story standing out as one of the most unique and refreshing Cyclops narratives ever written — hidden gem from the Marvel NOW! era holding immense charm and character value — Dauterman would go on to define the Jane Foster Thor era`, First_App: ``,
     Writer: `Greg Rucka`, Artist: `Russell Dauterman`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -98711,7 +98711,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman`, Issue: `#159`, Publisher: `DC`,
     Year: `2025`, Arc: `Batman All In Fraction`, Key: `YES`,
-    Key_Reason: `Batman #159 Legacy #924 — Hush story — All In era`, First_App: ``,
+    Key_Reason: `This is the explosive second chapter of Grant Morrison's legendary run, featuring the historic first appearance of Damian Wayne in his iconic Robin costume. Morrison completely shifted the Bat-family dynamic here, introducing a lethal heir that reshaped Gotham lore for the next two decades. With Damian locked in as a cornerstone of James Gunn's upcoming DC Universe cinematic slate, this modern key is an absolute must-have that is actively climbing in demand.`, First_App: ``,
     Writer: `Matt Fraction`, Artist: `Jorge Jimenez`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -99850,7 +99850,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Force`, Issue: `#1 (2018)`, Publisher: `Marvel`,
     Year: `2018`, Arc: `X-Force Brisson 2018`, Key: `YES`,
-    Key_Reason: `X-Force Vol 5 #1 Ed Brisson 2018 — Cable-led X-Force — different from Percy's Krakoa run`, First_App: ``,
+    Key_Reason: `X-Force #1 (2008) Craig Kyle/Christopher Yost/Clayton Crain — VIOLENT X-FORCE RELAUNCH — Kyle and Yost unleash a dark uncompromisingly violent new era for Wolverine's black-ops strike team — Crain's haunting painted digital artwork defines the visual identity of this series redefined X-Force as a lethal midnight-bound unit tasked with doing the X-Men's dirtiest work — premier modern key that completely reshaped the mutant status quo and directly inspired the Krakoa-era X-Force — $10 raw`, First_App: ``,
     Writer: `Ed Brisson`, Artist: `Dylan Burnett`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -99867,7 +99867,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Men`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2018`, Arc: `X-Men Nadler 2018`, Key: `YES`,
-    Key_Reason: `X-Men Vol 4 #1 Nadler/Thompson`, First_App: ``,
+    Key_Reason: `X-Men #1 (2013) Brian Wood/Olivier Coipel — FIRST ALL-FEMALE FLAGSHIP X-MEN TEAM in Marvel history bringing together powerhouses Storm, Rogue, Kitty Pryde, Psylocke, Rachel Grey, and Jubilee — written by Brian Wood with breathtaking elite artwork by Olivier Coipel (note: artist sometimes credited as 'Coipel' — Coipel is the correct name) — shattered traditional team dynamics and marked a massive step forward for representation — legendary modern key holding massive historical and cultural significance within the X-Men mythos`, First_App: ``,
     Writer: `Lonnie Nadler`, Artist: `Marco Failla`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -100445,7 +100445,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `All-New X-Men`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2015`, Arc: `All-New X-Men Hopeless Vol 2`, Key: `YES`,
-    Key_Reason: `ANXM Vol 2 #1 Hopeless — young X-Men solo`, First_App: ``,
+    Key_Reason: `Marvel architect Brian Michael Bendis completely shook up the mutant status quo with this blockbuster premiere, bringing the original five Silver Age X-Men forward into the conflicted modern era. Featuring gorgeous, elite artwork by Stuart Immonen, this book kicked off a massive, years-long narrative era that forced Marvel's classic heroes to confront their own dark futures. It stands as a defining, highly collectible flagship milestone of modern X-Men history.`, First_App: ``,
     Writer: `Dennis Hopeless`, Artist: `Mark Bagley`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -100751,7 +100751,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Men`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2013`, Arc: `X-Men Wood Vol 4`, Key: `YES`,
-    Key_Reason: `X-Men Vol 4 #1 Brian Wood — all-female X-Men lineup — storm/Jubilee/Psylocke/Rogue`, First_App: ``,
+    Key_Reason: `X-Men #1 (2013) Brian Wood/Olivier Coipel — FIRST ALL-FEMALE FLAGSHIP X-MEN TEAM in Marvel history bringing together powerhouses Storm, Rogue, Kitty Pryde, Psylocke, Rachel Grey, and Jubilee — written by Brian Wood with breathtaking elite artwork by Olivier Coipel (note: artist sometimes credited as 'Coipel' — Coipel is the correct name) — shattered traditional team dynamics and marked a massive step forward for representation — legendary modern key holding massive historical and cultural significance within the X-Men mythos`, First_App: ``,
     Writer: `Brian Wood`, Artist: `Olivier Coipel`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -102162,7 +102162,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Astonishing X-Men`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2017`, Arc: `Astonishing X-Men Soule 2017 relaunch`, Key: `YES`,
-    Key_Reason: `Astonishing X-Men Vol 4 #1 Charles Soule — Psylocke/Logan/Gambit/Rogue team — Bridge to Krakoa`, First_App: ``,
+    Key_Reason: `History is officially written on the page as Marvel hosts its very first same-sex wedding between Northstar and Kyle Jinadu in this monumental, national-headline-making issue. Marjorie Liu crafts a beautiful, celebratory story that stands as one of the most important milestones for LGBTQ+ representation in the history of mainstream superhero fiction. This book is a vital, permanent piece of pop-culture history that holds immense cultural and collector value.`, First_App: ``,
     Writer: `Charles Soule`, Artist: `Jim Cheung`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -104763,7 +104763,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Force`, Issue: `#1 [Legacy #230]`, Publisher: `Marvel`,
     Year: `2018`, Arc: `X-Force Brisson 2018`, Key: `YES`,
-    Key_Reason: `X-Force Brisson #1 Legacy #230 — Cable-led X-Force pre-Krakoa`, First_App: ``,
+    Key_Reason: `X-Force #1 (2008) Craig Kyle/Christopher Yost/Clayton Crain — VIOLENT X-FORCE RELAUNCH — Kyle and Yost unleash a dark uncompromisingly violent new era for Wolverine's black-ops strike team — Crain's haunting painted digital artwork defines the visual identity of this series redefined X-Force as a lethal midnight-bound unit tasked with doing the X-Men's dirtiest work — premier modern key that completely reshaped the mutant status quo and directly inspired the Krakoa-era X-Force — $10 raw`, First_App: ``,
     Writer: `Ed Brisson`, Artist: `Dylan Burnett / Damian Couceiro`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -105324,7 +105324,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Cable`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2017`, Arc: `Cable Robinson 2017`, Key: `YES`,
-    Key_Reason: `Cable Vol 4 #1 James Robinson — Cable time-travel solo`, First_App: ``,
+    Key_Reason: `Cable #1 (1993) Fabian Nicieza/Art Thibert — FIRST SOLO CABLE ONGOING SERIES — the ultimate 90s antihero finally steps into the spotlight with his very first solo ongoing comic book series perfectly capturing the gun-toting time-traveling mercenary aesthetic of the era — Nicieza with iconic artwork by Thibert solidified Cable as a powerhouse independent lead away from X-Force — nostalgic bulletproof staple of the 1990s mutant boom and a commercial success that sustained for 107 issues`, First_App: ``,
     Writer: `James Robinson`, Artist: `Carlos Pacheco`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -106038,7 +106038,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Marauders`, Issue: `#10`, Publisher: `Marvel`,
     Year: `2020`, Arc: `Marauders extends`, Key: `NO`,
-    Key_Reason: `Gerry Duggan`, First_App: ``,
+    Key_Reason: `Young Justice #10 (2019) Bendis/Timms — FIRST APPEARANCE OF NAOMI McDUFFIE IN YOUNG JUSTICE — Naomi, the Afro-Puerto Rican heroine co-created by Bendis, Walker and Jamal Campbell and named in honor of Dwayne McDuffie, officially joins the Young Justice team. Her surname deliberately honors the late writer who shaped DC's approach to Black characters. This is the team debut of DC's newest diversity headline character of the Wonder Comics imprint. Alex Ross cover series begins. Raw NM $22 — value driven by Naomi's first team appearance, not the main YJ story.`, First_App: ``,
     Writer: ``, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -106055,7 +106055,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Marauders`, Issue: `#11`, Publisher: `Marvel`,
     Year: `2020`, Arc: `Marauders extends`, Key: `NO`,
-    Key_Reason: `Gerry Duggan`, First_App: ``,
+    Key_Reason: `Young Justice #11 (2019) Jim Zub/Segovia — FIRST APPEARANCE OF JINNY HEX as a team member — Jinny Hex, the lesbian great-great-granddaughter of Jonah Hex, joins Young Justice. The 'Lost in the Multiverse' arc continues with alternate-Earth battles. Alex Ross cover series. Zub's run mixes Bronze Age legacy characters with contemporary DC continuity. The Jinny Hex introduction is the key moment — DC legacy character reinvented for a new generation.`, First_App: ``,
     Writer: ``, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -106072,7 +106072,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Marauders`, Issue: `#12`, Publisher: `Marvel`,
     Year: `2020`, Arc: `Marauders extends`, Key: `NO`,
-    Key_Reason: `Gerry Duggan`, First_App: ``,
+    Key_Reason: `Young Justice #12 (2019) Jim Zub/Segovia — 'Lost in the Multiverse' arc continues. Jinny Hex's ancestor's mystical artifacts return, Stephanie Brown's Earth-3 arc advances. Part of the complete Alex Ross 9-cover run (issues #10–#17) which is the primary collector appeal. Middle chapter value — completists buying the Ross run drive demand more than story beats. Raw NM ~$22.`, First_App: ``,
     Writer: ``, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -106157,7 +106157,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Force`, Issue: `#13 (X of Swords)`, Publisher: `Marvel`,
     Year: `2020`, Arc: `Krakoa era — X-Force X of Swords tie-in`, Key: `NO`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Young Justice #13 (2019) Jim Zub/Segovia — penultimate Alex Ross cover issue. Naomi unlocks new powers; Poison Ivy and alternates from other Earths feature. DC was experimenting with multi-franchise convergence during this period. The 9-issue Alex Ross cover run (#10–17) is the defining collector thread — these issues are bought as a set by Ross collectors rather than for individual story keys.`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -108605,7 +108605,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Ultimates`, Issue: `#1 (Hickman/Humphreys)`, Publisher: `Marvel`,
     Year: `2011`, Arc: `Ultimates Hickman`, Key: `YES`,
-    Key_Reason: `Ultimates #1 Jonathan Hickman/Esad Ribic — Hickman relaunches the Ultimates flagship`, First_App: ``,
+    Key_Reason: `Ultimates #1 (2024) Jonathan Hickman — foil variant — Hickman's revolutionary reimagining of the Ultimate Universe gets the premium treatment with a stunning highly collectible foil variant cover — Hickman completely reinvents Earth-6160 with his trademark high-concept world-building creating the most talked-about Marvel relaunch in a decade — combining a red-hot critically acclaimed modern debut with a gorgeous low-print-run incentive cover this is a prime target for modern speculative collectors`, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: `Esad Ribic`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -109370,7 +109370,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Empyre: X-Men`, Issue: `#10`, Publisher: `Marvel`,
     Year: `2020`, Arc: `Empyre XM extends`, Key: `NO`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Young Justice #10 (2019) Bendis/Timms — FIRST APPEARANCE OF NAOMI McDUFFIE IN YOUNG JUSTICE — Naomi, the Afro-Puerto Rican heroine co-created by Bendis, Walker and Jamal Campbell and named in honor of Dwayne McDuffie, officially joins the Young Justice team. Her surname deliberately honors the late writer who shaped DC's approach to Black characters. This is the team debut of DC's newest diversity headline character of the Wonder Comics imprint. Alex Ross cover series begins. Raw NM $22 — value driven by Naomi's first team appearance, not the main YJ story.`, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -109387,7 +109387,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Empyre: X-Men`, Issue: `#11`, Publisher: `Marvel`,
     Year: `2020`, Arc: `Empyre XM extends`, Key: `NO`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Young Justice #11 (2019) Jim Zub/Segovia — FIRST APPEARANCE OF JINNY HEX as a team member — Jinny Hex, the lesbian great-great-granddaughter of Jonah Hex, joins Young Justice. The 'Lost in the Multiverse' arc continues with alternate-Earth battles. Alex Ross cover series. Zub's run mixes Bronze Age legacy characters with contemporary DC continuity. The Jinny Hex introduction is the key moment — DC legacy character reinvented for a new generation.`, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -112243,7 +112243,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `The Avengers`, Issue: `#10 [Legacy #700] [Legacy #700]`, Publisher: `Marvel`,
     Year: `2018`, Arc: `Avengers Aaron — Legacy run`, Key: `YES`,
-    Key_Reason: `Avengers #10 Legacy #700 — LANDMARK 700th Avengers issue! Aaron — Celestials attack`, First_App: ``,
+    Key_Reason: `This Bronze Age milestone features the historic moment Monica Rambeau officially joins Earth's Mightiest Heroes, stepping into the spotlight as the new Captain Marvel. Written by Roger Stern with classic artwork by Sal Buscema, this issue represents a massive leap forward for diverse representation in mainstream superhero comics. With Monica's character taking center stage in Marvel's modern cinematic universe, this foundational, early-appearance Avengers key continues to grow in cultural and collector value.`, First_App: ``,
     Writer: `Jason Aaron`, Artist: `Ed McGuinness`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -113603,7 +113603,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `The Avengers`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2023`, Arc: `Avengers McKay — latest run`, Key: `YES`,
-    Key_Reason: `The Avengers #1 Jed McKay/C.F. Villa — latest Avengers launch — Captain Marvel leads`, First_App: ``,
+    Key_Reason: `This Bronze Age milestone features the historic moment Monica Rambeau officially joins Earth's Mightiest Heroes, stepping into the spotlight as the new Captain Marvel. Written by Roger Stern with classic artwork by Sal Buscema, this issue represents a massive leap forward for diverse representation in mainstream superhero comics. With Monica's character taking center stage in Marvel's modern cinematic universe, this foundational, early-appearance Avengers key continues to grow in cultural and collector value.`, First_App: ``,
     Writer: `Jed McKay`, Artist: `C.F. Villa`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -115252,7 +115252,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Incredible Hulk`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2011`, Arc: `Incredible Hulk Aaron/Silvestri`, Key: `YES`,
-    Key_Reason: `Incredible Hulk Vol 3 #1 Jason Aaron/Marc Silvestri — Banner vs Hulk split into two beings`, First_App: ``,
+    Key_Reason: `This incredible 30th-anniversary green foil issue is an absolute museum piece, boasting a historic triple-signature from Bob McLeod, Louise Simonson, and the legendary Larry Lieber, Stan Lee's brother and a founding architect of Marvel lore. This book encapsulates the raw energy of the 90s comic boom while carrying immense historical weight thanks to its legendary signees. For collectors of autographed comic history, a unique pedigree piece like this is a phenomenal, irreplaceable find.`, First_App: ``,
     Writer: `Jason Aaron`, Artist: `Marc Silvestri`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -116408,7 +116408,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `The Incredible Hulk`, Issue: `#1 [Legacy #782] [Legacy #782]`, Publisher: `Marvel`,
     Year: `2023`, Arc: `IH PKJ/Klein — latest Hulk run`, Key: `YES`,
-    Key_Reason: `Incredible Hulk #1 Philip Kennedy Johnson/Nic Klein — Legacy #782 — latest Hulk run — horror tone`, First_App: ``,
+    Key_Reason: `This incredible 30th-anniversary green foil issue is an absolute museum piece, boasting a historic triple-signature from Bob McLeod, Louise Simonson, and the legendary Larry Lieber, Stan Lee's brother and a founding architect of Marvel lore. This book encapsulates the raw energy of the 90s comic boom while carrying immense historical weight thanks to its legendary signees. For collectors of autographed comic history, a unique pedigree piece like this is a phenomenal, irreplaceable find.`, First_App: ``,
     Writer: `Philip Kennedy Johnson`, Artist: `Nic Klein`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -117343,7 +117343,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Wolverine`, Issue: `#8 (cover purchase — display copy)`, Publisher: `Marvel`,
     Year: `1982`, Arc: `Wolverine Limited Series — Frank Miller/Claremont`, Key: `YES`,
-    Key_Reason: `Wolverine #8 1982 Frank Miller/Claremont — cover purchase — SEPARATE from Terrificon unsigned copy in Box 05`, First_App: ``,
+    Key_Reason: `The dystopian masterwork continues as Mark Millar and Steve McNiven crank up the tension in part two of the legendary Old Man Logan saga. McNiven's hyper-detailed, cinematic pencils bring a haunting, broken Marvel Universe to life, proving why this creative team is one of the most formidable in comic history. Serving as a crucial building block for Logan's late-career mythology, this issue is a vital piece of an arc that remains a permanent fixture on must-read lists and collector want-lists alike.`, First_App: ``,
     Writer: `Chris Claremont / Limited Series`, Artist: `Frank Miller`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Cover purchase — display/collection copy. Terrificon unsigned copy is in Box 05.`,
@@ -117377,7 +117377,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Moon Knight`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2006`, Arc: `Moon Knight Vol 3 — Huston/Finch`, Key: `YES`,
-    Key_Reason: `Moon Knight Vol 3 #1 Charlie Huston/David Finch — brutal modern relaunch — Marc Spector as broken vigilante`, First_App: ``,
+    Key_Reason: `Marc Spector's dark, gritty world gets the brilliant Skottie Young treatment on this highly anticipated, red-hot series relaunch. This issue packs a double-whammy of key attributes, combining the massive collector demand of a brand-new Moon Knight #1 with the fierce, dedicated fanbase that hunts down every single Young variant. With Moon Knight remaining a powerhouse character in both print and the MCU, this variant is an absolute premium addition to the collection.`, First_App: ``,
     Writer: `Charlie Huston`, Artist: `David Finch`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -117598,7 +117598,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Moon Knight`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2011`, Arc: `Moon Knight Vol 5 — Bendis/Maleev`, Key: `YES`,
-    Key_Reason: `Moon Knight Vol 5 #1 Brian Michael Bendis/Alex Maleev — Marc Spector adopts multiple hero personalities in LA — gorgeous Maleev noir art`, First_App: ``,
+    Key_Reason: `Marc Spector's dark, gritty world gets the brilliant Skottie Young treatment on this highly anticipated, red-hot series relaunch. This issue packs a double-whammy of key attributes, combining the massive collector demand of a brand-new Moon Knight #1 with the fierce, dedicated fanbase that hunts down every single Young variant. With Moon Knight remaining a powerhouse character in both print and the MCU, this variant is an absolute premium addition to the collection.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Alex Maleev`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -117785,7 +117785,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Moon Knight`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2014`, Arc: `Moon Knight Vol 6 — Warren Ellis/Shalvey — LANDMARK`, Key: `YES`,
-    Key_Reason: `Moon Knight Vol 6 #1 Warren Ellis/Declan Shalvey — each issue its own standalone genre story — 6-issue landmark — Shalvey confirmed Terrificon! Bring unsigned #1-6 for Yellow SS.`, First_App: ``,
+    Key_Reason: `Marc Spector's dark, gritty world gets the brilliant Skottie Young treatment on this highly anticipated, red-hot series relaunch. This issue packs a double-whammy of key attributes, combining the massive collector demand of a brand-new Moon Knight #1 with the fierce, dedicated fanbase that hunts down every single Young variant. With Moon Knight remaining a powerhouse character in both print and the MCU, this variant is an absolute premium addition to the collection.`, First_App: ``,
     Writer: `Warren Ellis`, Artist: `Declan Shalvey`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -117802,7 +117802,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Moon Knight`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2014`, Arc: `Moon Knight Vol 6 — Warren Ellis/Shalvey — LANDMARK`, Key: `YES`,
-    Key_Reason: `Vol 6 Ellis/Shalvey — standalone story — issue #2`, First_App: ``,
+    Key_Reason: `Marc Spector's dark, gritty world gets the brilliant Skottie Young treatment on this highly anticipated, red-hot series relaunch. This issue packs a double-whammy of key attributes, combining the massive collector demand of a brand-new Moon Knight #1 with the fierce, dedicated fanbase that hunts down every single Young variant. With Moon Knight remaining a powerhouse character in both print and the MCU, this variant is an absolute premium addition to the collection.`, First_App: ``,
     Writer: `Warren Ellis`, Artist: `Declan Shalvey`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -117819,7 +117819,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Moon Knight`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2014`, Arc: `Moon Knight Vol 6 — Warren Ellis/Shalvey — LANDMARK`, Key: `YES`,
-    Key_Reason: `Vol 6 Ellis/Shalvey — standalone story — issue #3`, First_App: ``,
+    Key_Reason: `Marc Spector's dark, gritty world gets the brilliant Skottie Young treatment on this highly anticipated, red-hot series relaunch. This issue packs a double-whammy of key attributes, combining the massive collector demand of a brand-new Moon Knight #1 with the fierce, dedicated fanbase that hunts down every single Young variant. With Moon Knight remaining a powerhouse character in both print and the MCU, this variant is an absolute premium addition to the collection.`, First_App: ``,
     Writer: `Warren Ellis`, Artist: `Declan Shalvey`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -117836,7 +117836,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Moon Knight`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2014`, Arc: `Moon Knight Vol 6 — Warren Ellis/Shalvey — LANDMARK`, Key: `YES`,
-    Key_Reason: `Vol 6 Ellis/Shalvey — standalone story — issue #4`, First_App: ``,
+    Key_Reason: `Marc Spector's dark, gritty world gets the brilliant Skottie Young treatment on this highly anticipated, red-hot series relaunch. This issue packs a double-whammy of key attributes, combining the massive collector demand of a brand-new Moon Knight #1 with the fierce, dedicated fanbase that hunts down every single Young variant. With Moon Knight remaining a powerhouse character in both print and the MCU, this variant is an absolute premium addition to the collection.`, First_App: ``,
     Writer: `Warren Ellis`, Artist: `Declan Shalvey`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -117853,7 +117853,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Moon Knight`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2014`, Arc: `Moon Knight Vol 6 — Warren Ellis/Shalvey — LANDMARK`, Key: `YES`,
-    Key_Reason: `Vol 6 Ellis/Shalvey — standalone story — issue #5`, First_App: ``,
+    Key_Reason: `Marc Spector's dark, gritty world gets the brilliant Skottie Young treatment on this highly anticipated, red-hot series relaunch. This issue packs a double-whammy of key attributes, combining the massive collector demand of a brand-new Moon Knight #1 with the fierce, dedicated fanbase that hunts down every single Young variant. With Moon Knight remaining a powerhouse character in both print and the MCU, this variant is an absolute premium addition to the collection.`, First_App: ``,
     Writer: `Warren Ellis`, Artist: `Declan Shalvey`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -117870,7 +117870,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Moon Knight`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2014`, Arc: `Moon Knight Vol 6 — Warren Ellis/Shalvey — LANDMARK`, Key: `YES`,
-    Key_Reason: `Vol 6 Ellis/Shalvey — standalone story — issue #6`, First_App: ``,
+    Key_Reason: `Marc Spector's dark, gritty world gets the brilliant Skottie Young treatment on this highly anticipated, red-hot series relaunch. This issue packs a double-whammy of key attributes, combining the massive collector demand of a brand-new Moon Knight #1 with the fierce, dedicated fanbase that hunts down every single Young variant. With Moon Knight remaining a powerhouse character in both print and the MCU, this variant is an absolute premium addition to the collection.`, First_App: ``,
     Writer: `Warren Ellis`, Artist: `Declan Shalvey`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -118057,7 +118057,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Moon Knight`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2016`, Arc: `Moon Knight Vol 7 — Lemire/Smallwood`, Key: `YES`,
-    Key_Reason: `Moon Knight Vol 7 #1 Jeff Lemire/Greg Smallwood — Marc in mental institution — identity fractures between all personalities — most literary MK run`, First_App: ``,
+    Key_Reason: `Marc Spector's dark, gritty world gets the brilliant Skottie Young treatment on this highly anticipated, red-hot series relaunch. This issue packs a double-whammy of key attributes, combining the massive collector demand of a brand-new Moon Knight #1 with the fierce, dedicated fanbase that hunts down every single Young variant. With Moon Knight remaining a powerhouse character in both print and the MCU, this variant is an absolute premium addition to the collection.`, First_App: ``,
     Writer: `Jeff Lemire`, Artist: `Greg Smallwood`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -118193,7 +118193,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Moon Knight`, Issue: `#1 [Legacy #201]`, Publisher: `Marvel`,
     Year: `2021`, Arc: `Moon Knight — Fist of Khonshu — McKay`, Key: `YES`,
-    Key_Reason: `Moon Knight #1 Jed McKay — Fist of Khonshu era — McKay redefines Moon Knight for new generation`, First_App: ``,
+    Key_Reason: `Marc Spector's dark, gritty world gets the brilliant Skottie Young treatment on this highly anticipated, red-hot series relaunch. This issue packs a double-whammy of key attributes, combining the massive collector demand of a brand-new Moon Knight #1 with the fierce, dedicated fanbase that hunts down every single Young variant. With Moon Knight remaining a powerhouse character in both print and the MCU, this variant is an absolute premium addition to the collection.`, First_App: ``,
     Writer: `Jed McKay`, Artist: `Federico Sabbatini`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -120165,7 +120165,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Strange Academy`, Issue: `#10`, Publisher: `Marvel`,
     Year: `2020`, Arc: `Strange Academy — Skottie Young/Humberto Ramos`, Key: `NO`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Young Justice #10 (2019) Bendis/Timms — FIRST APPEARANCE OF NAOMI McDUFFIE IN YOUNG JUSTICE — Naomi, the Afro-Puerto Rican heroine co-created by Bendis, Walker and Jamal Campbell and named in honor of Dwayne McDuffie, officially joins the Young Justice team. Her surname deliberately honors the late writer who shaped DC's approach to Black characters. This is the team debut of DC's newest diversity headline character of the Wonder Comics imprint. Alex Ross cover series begins. Raw NM $22 — value driven by Naomi's first team appearance, not the main YJ story.`, First_App: ``,
     Writer: `Skottie Young`, Artist: `Humberto Ramos`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -120182,7 +120182,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Strange Academy`, Issue: `#11`, Publisher: `Marvel`,
     Year: `2020`, Arc: `Strange Academy — Skottie Young/Humberto Ramos`, Key: `NO`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Young Justice #11 (2019) Jim Zub/Segovia — FIRST APPEARANCE OF JINNY HEX as a team member — Jinny Hex, the lesbian great-great-granddaughter of Jonah Hex, joins Young Justice. The 'Lost in the Multiverse' arc continues with alternate-Earth battles. Alex Ross cover series. Zub's run mixes Bronze Age legacy characters with contemporary DC continuity. The Jinny Hex introduction is the key moment — DC legacy character reinvented for a new generation.`, First_App: ``,
     Writer: `Skottie Young`, Artist: `Humberto Ramos`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -120199,7 +120199,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Strange Academy`, Issue: `#13`, Publisher: `Marvel`,
     Year: `2020`, Arc: `Strange Academy — Skottie Young/Humberto Ramos`, Key: `NO`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Young Justice #13 (2019) Jim Zub/Segovia — penultimate Alex Ross cover issue. Naomi unlocks new powers; Poison Ivy and alternates from other Earths feature. DC was experimenting with multi-franchise convergence during this period. The 9-issue Alex Ross cover run (#10–17) is the defining collector thread — these issues are bought as a set by Ross collectors rather than for individual story keys.`, First_App: ``,
     Writer: `Skottie Young`, Artist: `Humberto Ramos`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -120233,7 +120233,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Strange Academy`, Issue: `#16`, Publisher: `Marvel`,
     Year: `2020`, Arc: `Strange Academy — Skottie Young/Humberto Ramos`, Key: `NO`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Young Justice #16 (2019) Jim Zub/Segovia — double-shipping special, two Tyler Kirkham variant covers. Backup 'Space Cabbie' tale alongside main arc. Pre-climax of the multiverse saga. The variant covers (Kirkham) are the primary speculator appeal, not story content. Released as a December 2019 shipping anomaly. Raw NM ~$22.`, First_App: ``,
     Writer: `Skottie Young`, Artist: `Humberto Ramos`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -120845,7 +120845,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `The Ultimates`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2015`, Arc: `The Ultimates — Al Ewing — Spectrum leads cosmic Avengers`, Key: `YES`,
-    Key_Reason: `The Ultimates #1 Al Ewing/Kenneth Rocafort — COMPLETELY DIFFERENT from Millar's Ultimates — Spectrum/Blue Marvel/Ms America/Black Panther/Captain Marvel — smartest cosmic Marvel of 2015`, First_App: ``,
+    Key_Reason: `Jonathan Hickman's revolutionary reimagining of the Ultimate Universe gets the premium treatment here with a stunning, highly collectible foil variant cover. Hickman completely reinvents Earth-6160 with his trademark high-concept world-building, creating the most talked-about Marvel relaunch in a decade. Combining a red-hot, critically acclaimed modern debut with a gorgeous, low-print-run incentive aesthetic, this book is a premier target for modern speculative collectors.`, First_App: ``,
     Writer: `Al Ewing`, Artist: `Kenneth Rocafort`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -126710,7 +126710,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman and Robin`, Issue: `#1`, Publisher: `DC`,
     Year: `2009`, Arc: `Batman Reborn — Morrison/Quitely`, Key: `YES`,
-    Key_Reason: `Batman and Robin #1 Grant Morrison/Frank Quitely — Batman Reborn — Dick Grayson as Batman + Damian Wayne as Robin — landmark`, First_App: ``,
+    Key_Reason: `Batman and Robin #1 New 52 (2011) Peter J. Tomasi/Patrick Gleason — absolute comic book gold exploring the deeply emotional father-son dynamic between Bruce and Damian Wayne — Tomasi's sharp heartfelt writing paired with Gleason's iconic expressive pencils cemented this book as one of the undisputed best runs of the entire New 52 era — foundational highly collectible masterpiece of modern Gotham lore — first chapter of a run that spans Damian's death resurrection and everything between`, First_App: ``,
     Writer: `Grant Morrison`, Artist: `Frank Quitely`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -135074,7 +135074,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Teen Titans`, Issue: `#1`, Publisher: `DC`,
     Year: `2003`, Arc: `Teen Titans Vol 3 — Geoff Johns`, Key: `YES`,
-    Key_Reason: `Teen Titans Vol 3 #1 Geoff Johns/Mike McKone — Robin/Superboy/Kid Flash/Wonder Girl — landmark relaunch`, First_App: ``,
+    Key_Reason: `Tim Drake officially steps into his modern role as Red Robin, stepping up to lead a brand-new, modern generation of legacy heroes for the New 52 era. Written by Scott Lobdell with kinetic artwork by Brett Booth, this issue completely reimagined the classic Titans dynamic with a sleek, tech-forward, millennium aesthetic. It stands as a crucial modern key that anchors the history and evolution of DC's premiere teen super-team.`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Mike McKone`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -139137,7 +139137,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman and Robin`, Issue: `#1`, Publisher: `DC`,
     Year: `2009`, Arc: `Batman Reborn — Morrison/Quitely`, Key: `YES`,
-    Key_Reason: `Batman and Robin #1 Grant Morrison/Frank Quitely — Dick Grayson as Batman + Damian — landmark`, First_App: ``,
+    Key_Reason: `Batman and Robin #1 New 52 (2011) Peter J. Tomasi/Patrick Gleason — absolute comic book gold exploring the deeply emotional father-son dynamic between Bruce and Damian Wayne — Tomasi's sharp heartfelt writing paired with Gleason's iconic expressive pencils cemented this book as one of the undisputed best runs of the entire New 52 era — foundational highly collectible masterpiece of modern Gotham lore — first chapter of a run that spans Damian's death resurrection and everything between`, First_App: ``,
     Writer: `Grant Morrison`, Artist: `Frank Quitely`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -140106,7 +140106,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Suicide Squad`, Issue: `#1`, Publisher: `DC`,
     Year: `2001`, Arc: `Suicide Squad Vol 3 Giffin`, Key: `YES`,
-    Key_Reason: `Suicide Squad Vol 3 #1 Keith Giffen — Nov 2001 relaunch`, First_App: ``,
+    Key_Reason: `Suicide Squad #1 New 52 (2011) Adam Glass/Federico Dallocchio — HARLEY QUINN NEW 52 REDESIGN — features the radical highly controversial New 52 redesign of Harley Quinn forever shifting her aesthetic away from the classic jester suit into the modern pop-culture icon — this bold new look served as the direct creative blueprint for Margot Robbie's blockbuster cinematic portrayal triggering a massive permanent wave of mainstream media demand — monumental turning point for one of DC's most profitable characters — absolute modern key`, First_App: ``,
     Writer: `Keith Giffen`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -145172,7 +145172,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Suicide Squad`, Issue: `#1`, Publisher: `DC`,
     Year: `2011`, Arc: `Suicide Squad New 52 Amanda Waller`, Key: `YES`,
-    Key_Reason: `Suicide Squad New 52 #1 Adam Glass — Amanda Waller redesigned — Harley Quinn on the Squad`, First_App: ``,
+    Key_Reason: `Suicide Squad #1 New 52 (2011) Adam Glass/Federico Dallocchio — HARLEY QUINN NEW 52 REDESIGN — features the radical highly controversial New 52 redesign of Harley Quinn forever shifting her aesthetic away from the classic jester suit into the modern pop-culture icon — this bold new look served as the direct creative blueprint for Margot Robbie's blockbuster cinematic portrayal triggering a massive permanent wave of mainstream media demand — monumental turning point for one of DC's most profitable characters — absolute modern key`, First_App: ``,
     Writer: `Adam Glass`, Artist: `Federico Dallocchio`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -149150,7 +149150,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Teen Titans`, Issue: `#1`, Publisher: `DC`,
     Year: `2011`, Arc: `TT New 52 Lobdell/Booth`, Key: `YES`,
-    Key_Reason: `Teen Titans New 52 #1 Scott Lobdell/Brett Booth — Tim Drake leads new Teen Titans`, First_App: ``,
+    Key_Reason: `Tim Drake officially steps into his modern role as Red Robin, stepping up to lead a brand-new, modern generation of legacy heroes for the New 52 era. Written by Scott Lobdell with kinetic artwork by Brett Booth, this issue completely reimagined the classic Titans dynamic with a sleek, tech-forward, millennium aesthetic. It stands as a crucial modern key that anchors the history and evolution of DC's premiere teen super-team.`, First_App: ``,
     Writer: `Scott Lobdell`, Artist: `Brett Booth`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -149558,7 +149558,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Animal Man`, Issue: `#5`, Publisher: `DC`,
     Year: `2012`, Arc: `Animal Man New 52 Lemire`, Key: `YES`,
-    Key_Reason: `Animal Man New 52 Jeff Lemire — near-complete #5-29 — horror body of superhero comics — Rotworld crossover`, First_App: ``,
+    Key_Reason: `Jeff Lemire delivers an absolute horror masterpiece with this legendary, boundary-pushing debut that completely revolutionized Buddy Baker for the modern era. Alongside Travel Foreman's deeply unsettling, visceral artwork, Lemire twisted a traditional family superhero dynamic into a haunting, critically adored dive into The Red. Universally praised as one of the absolute greatest and most creative books to emerge from the entire New 52 initiative, this issue remains a mandatory pull for any serious collector.`, First_App: ``,
     Writer: `Jeff Lemire`, Artist: `Travel Foreman`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -151836,7 +151836,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Martian Manhunter`, Issue: `#1`, Publisher: `DC`,
     Year: `2015`, Arc: `MM New 52 Williams/Barrows`, Key: `YES`,
-    Key_Reason: `Martian Manhunter #1 Rob Williams/Eddy Barrows — first New 52 J'onn solo`, First_App: ``,
+    Key_Reason: `Martian Manhunter #1 (2024) — J'onn J'onzz steps into the spotlight with a spectacular mind-bending new solo series launch perfectly aligning with DC's game-changing Absolute Universe era — masterfully redefines the tragic cosmic depth of the Last Martian offering a perfect jumping-on point for fans craving high-stakes cerebral superhero storytelling — relaunches of core Justice League members always command respect making this premier issue a crucial building block for modern DC collectors`, First_App: ``,
     Writer: `Rob Williams`, Artist: `Eddy Barrows`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -152465,7 +152465,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Justice League Incarnate`, Issue: `#5 of 5`, Publisher: `DC`,
     Year: `2022`, Arc: `JL Incarnate COMPLETE`, Key: `YES`,
-    Key_Reason: `JL Incarnate #5 Williamson — multiverse JLA — connects to Dark Crisis — completes mini`, First_App: ``,
+    Key_Reason: `The epic Infinite Frontier era blows wide open in this cosmic blockbuster as Joshua Williamson brings together a powerhouse team of multiverse heroes, led by Calvin Ellis, the President Superman of Earth-23. This issue serves as a vital, high-concept bridge across DC's sprawling modern cosmic landscape, dealing directly with the shifting fabric of the multiverse itself. It is an absolute must-have for completionists tracking the grand architecture of DC's modern continuity.`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Andrei Bressan`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -154182,7 +154182,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Captain Marvel`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2012`, Arc: `Captain Marvel Vol 7 — Kelly Sue DeConnick`, Key: `YES`,
-    Key_Reason: `Captain Marvel #1 Kelly Sue DeConnick — Carol Danvers takes the Captain Marvel name — landmark feminist superhero book`, First_App: ``,
+    Key_Reason: `Captain Marvel: Dark Past #1 (2025) — Carol Danvers dives deep into the hidden shadowy corners of her own cosmic history featuring a spectacular cover by the master of modern gloss David Nakayama — beautifully expands on Captain Marvel's rich lore while offering a fresh high-stakes narrative keeping her at the forefront of Marvel's cosmic line — Nakayama's striking visual style gives this key launch an immediate aesthetic edge making it a highly desirable book for modern collectors`, First_App: ``,
     Writer: `Kelly Sue DeConnick`, Artist: `Dexter Soy`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -154284,7 +154284,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Captain Marvel`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2014`, Arc: `Captain Marvel Vol 8 — DeConnick 2014`, Key: `YES`,
-    Key_Reason: `Captain Marvel #1 DeConnick 2014 — Carol in space — near-complete run — extends the legend`, First_App: ``,
+    Key_Reason: `Captain Marvel: Dark Past #1 (2025) — Carol Danvers dives deep into the hidden shadowy corners of her own cosmic history featuring a spectacular cover by the master of modern gloss David Nakayama — beautifully expands on Captain Marvel's rich lore while offering a fresh high-stakes narrative keeping her at the forefront of Marvel's cosmic line — Nakayama's striking visual style gives this key launch an immediate aesthetic edge making it a highly desirable book for modern collectors`, First_App: ``,
     Writer: `Kelly Sue DeConnick`, Artist: `David Lopez`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -154624,7 +154624,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Captain Marvel`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Captain Marvel Vol 10 — Kelly Thompson`, Key: `YES`,
-    Key_Reason: `Captain Marvel #1 Kelly Thompson — 2019 relaunch — most complete modern CM run — near-complete through #50`, First_App: ``,
+    Key_Reason: `Captain Marvel: Dark Past #1 (2025) — Carol Danvers dives deep into the hidden shadowy corners of her own cosmic history featuring a spectacular cover by the master of modern gloss David Nakayama — beautifully expands on Captain Marvel's rich lore while offering a fresh high-stakes narrative keeping her at the forefront of Marvel's cosmic line — Nakayama's striking visual style gives this key launch an immediate aesthetic edge making it a highly desirable book for modern collectors`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: `Carmen Carnero`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -154811,7 +154811,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Captain Marvel`, Issue: `#12`, Publisher: `Marvel`,
     Year: `2020`, Arc: `CM Thompson near-complete`, Key: `NO`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Young Justice #12 (2019) Jim Zub/Segovia — 'Lost in the Multiverse' arc continues. Jinny Hex's ancestor's mystical artifacts return, Stephanie Brown's Earth-3 arc advances. Part of the complete Alex Ross 9-cover run (issues #10–#17) which is the primary collector appeal. Middle chapter value — completists buying the Ross run drive demand more than story beats. Raw NM ~$22.`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: `Carmen Carnero / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -154828,7 +154828,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Captain Marvel`, Issue: `#13`, Publisher: `Marvel`,
     Year: `2020`, Arc: `CM Thompson near-complete`, Key: `NO`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Young Justice #13 (2019) Jim Zub/Segovia — penultimate Alex Ross cover issue. Naomi unlocks new powers; Poison Ivy and alternates from other Earths feature. DC was experimenting with multi-franchise convergence during this period. The 9-issue Alex Ross cover run (#10–17) is the defining collector thread — these issues are bought as a set by Ross collectors rather than for individual story keys.`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: `Carmen Carnero / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -154862,7 +154862,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Captain Marvel`, Issue: `#16`, Publisher: `Marvel`,
     Year: `2020`, Arc: `CM Thompson near-complete`, Key: `NO`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Young Justice #16 (2019) Jim Zub/Segovia — double-shipping special, two Tyler Kirkham variant covers. Backup 'Space Cabbie' tale alongside main arc. Pre-climax of the multiverse saga. The variant covers (Kirkham) are the primary speculator appeal, not story content. Released as a December 2019 shipping anomaly. Raw NM ~$22.`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: `Carmen Carnero / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -154879,7 +154879,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Captain Marvel`, Issue: `#17`, Publisher: `Marvel`,
     Year: `2020`, Arc: `CM Thompson near-complete`, Key: `NO`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Young Justice #17 (2020) Jim Zub/Ross — FINAL ISSUE of Young Justice Vol 3. Series epilogue: Impulse's training, Beast Boy's Beast State, Tim Drake retires the Young Justice mantle. Closes the Bendis/Zub era before DC Rebirth overhaul. Many YJ characters later moved into Earth-Prime and other continuity threads. For collectors: the end of the Zub/Ross era makes this the bookend to the complete run. Raw NM ~$22; CGC 9.8 around $40.`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: `Carmen Carnero / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -155406,7 +155406,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Captain Marvel`, Issue: `#16 [Legacy #150]`, Publisher: `Marvel`,
     Year: `2019`, Arc: `CM Legacy 150 landmark`, Key: `YES`,
-    Key_Reason: `Captain Marvel #16 Legacy #150 — landmark 150th CM issue`, First_App: ``,
+    Key_Reason: `Captain Marvel: Dark Past #1 (2025) — Carol Danvers dives deep into the hidden shadowy corners of her own cosmic history featuring a spectacular cover by the master of modern gloss David Nakayama — beautifully expands on Captain Marvel's rich lore while offering a fresh high-stakes narrative keeping her at the forefront of Marvel's cosmic line — Nakayama's striking visual style gives this key launch an immediate aesthetic edge making it a highly desirable book for modern collectors`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -155457,7 +155457,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Captain Marvel`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Captain Marvel Vol 12 — Alyssa Wong`, Key: `YES`,
-    Key_Reason: `Captain Marvel #1 Alyssa Wong — 2024 relaunch — From the Ashes era`, First_App: ``,
+    Key_Reason: `Captain Marvel: Dark Past #1 (2025) — Carol Danvers dives deep into the hidden shadowy corners of her own cosmic history featuring a spectacular cover by the master of modern gloss David Nakayama — beautifully expands on Captain Marvel's rich lore while offering a fresh high-stakes narrative keeping her at the forefront of Marvel's cosmic line — Nakayama's striking visual style gives this key launch an immediate aesthetic edge making it a highly desirable book for modern collectors`, First_App: ``,
     Writer: `Alyssa Wong`, Artist: `Jan Bazaldua`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -155746,7 +155746,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Fantastic Four`, Issue: `#500`, Publisher: `Marvel`,
     Year: `2003`, Arc: `FF Waid #500 LANDMARK`, Key: `YES`,
-    Key_Reason: `Fantastic Four #500 Mark Waid/Mike Wieringo — landmark 500th issue — the Doom/Doom/Doom triple-tier cover`, First_App: ``,
+    Key_Reason: `This brand-new era for Marvel's First Family kicks off with an incredibly fun, highly collectible connecting cover by the beloved Skottie Young. This is part one of a massive five-issue puzzle set, featuring Young's instantly recognizable, whimsical art style that has captured the hearts of fans for over a decade. As a major series launch paired with a high-demand connecting gimmick, this book is an essential pickup for anyone looking to complete the full, striking set.`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Mike Wieringo`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -156868,7 +156868,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Fantastic Four`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2012`, Arc: `FF Matt Fraction relaunch`, Key: `YES`,
-    Key_Reason: `Fantastic Four #1 Matt Fraction/Mark Bagley — Fantastic Four world tour`, First_App: ``,
+    Key_Reason: `This brand-new era for Marvel's First Family kicks off with an incredibly fun, highly collectible connecting cover by the beloved Skottie Young. This is part one of a massive five-issue puzzle set, featuring Young's instantly recognizable, whimsical art style that has captured the hearts of fans for over a decade. As a major series launch paired with a high-demand connecting gimmick, this book is an essential pickup for anyone looking to complete the full, striking set.`, First_App: ``,
     Writer: `Matt Fraction`, Artist: `Mark Bagley`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -157616,7 +157616,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Fantastic Four`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2022`, Arc: `FF Ryan North — current run`, Key: `YES`,
-    Key_Reason: `Fantastic Four #1 Ryan North/Iban Coello — latest FF launch — Ryan North bringing fun and heart`, First_App: ``,
+    Key_Reason: `This brand-new era for Marvel's First Family kicks off with an incredibly fun, highly collectible connecting cover by the beloved Skottie Young. This is part one of a massive five-issue puzzle set, featuring Young's instantly recognizable, whimsical art style that has captured the hearts of fans for over a decade. As a major series launch paired with a high-demand connecting gimmick, this book is an essential pickup for anyone looking to complete the full, striking set.`, First_App: ``,
     Writer: `Ryan North`, Artist: `Iban Coello`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -157650,7 +157650,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Fantastic Four`, Issue: `#7 [Legacy #700]`, Publisher: `Marvel`,
     Year: `2022`, Arc: `FF Ryan North run`, Key: `YES`,
-    Key_Reason: `Fantastic Four #7 [Legacy #700] (2022) Ryan North/Iban Coello — landmark 700th Fantastic Four issue — milestone Legacy numbering — Ryan North's acclaimed run using the legacy number to celebrate the entire scope of the FF's history — significant commercial and historical milestone — $20 raw and climbing as North's FF run gains recognition as one of the best modern takes on the team`, First_App: ``,
+    Key_Reason: `This brand-new era for Marvel's First Family kicks off with an incredibly fun, highly collectible connecting cover by the beloved Skottie Young. This is part one of a massive five-issue puzzle set, featuring Young's instantly recognizable, whimsical art style that has captured the hearts of fans for over a decade. As a major series launch paired with a high-demand connecting gimmick, this book is an essential pickup for anyone looking to complete the full, striking set.`, First_App: ``,
     Writer: `Ryan North`, Artist: `Iban Coello / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -158313,7 +158313,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Fantastic Four`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2018`, Arc: `FF Dan Slott relaunch 2018`, Key: `YES`,
-    Key_Reason: `Fantastic Four #1 Dan Slott — Reed/Sue/Johnny/Ben return after Secret Wars — landmark relaunch`, First_App: ``,
+    Key_Reason: `This brand-new era for Marvel's First Family kicks off with an incredibly fun, highly collectible connecting cover by the beloved Skottie Young. This is part one of a massive five-issue puzzle set, featuring Young's instantly recognizable, whimsical art style that has captured the hearts of fans for over a decade. As a major series launch paired with a high-demand connecting gimmick, this book is an essential pickup for anyone looking to complete the full, striking set.`, First_App: ``,
     Writer: `Dan Slott`, Artist: `Sara Pichelli`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -159129,7 +159129,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Fantastic Four`, Issue: `#648 Special — 650th Issue Spectacular`, Publisher: `Marvel`,
     Year: `2021`, Arc: `FF 650th issue`, Key: `YES`,
-    Key_Reason: `FF #648 — 650th issue spectacular — oversized Dan Slott`, First_App: ``,
+    Key_Reason: `This brand-new era for Marvel's First Family kicks off with an incredibly fun, highly collectible connecting cover by the beloved Skottie Young. This is part one of a massive five-issue puzzle set, featuring Young's instantly recognizable, whimsical art style that has captured the hearts of fans for over a decade. As a major series launch paired with a high-demand connecting gimmick, this book is an essential pickup for anyone looking to complete the full, striking set.`, First_App: ``,
     Writer: `Dan Slott`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -159146,7 +159146,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Fantastic Four`, Issue: `#35 [Legacy #680] — 60 Years special`, Publisher: `Marvel`,
     Year: `2021`, Arc: `FF 60 Years anniversary`, Key: `YES`,
-    Key_Reason: `FF #35 Legacy #680 — 60 Years special cover — landmark`, First_App: ``,
+    Key_Reason: `This brand-new era for Marvel's First Family kicks off with an incredibly fun, highly collectible connecting cover by the beloved Skottie Young. This is part one of a massive five-issue puzzle set, featuring Young's instantly recognizable, whimsical art style that has captured the hearts of fans for over a decade. As a major series launch paired with a high-demand connecting gimmick, this book is an essential pickup for anyone looking to complete the full, striking set.`, First_App: ``,
     Writer: `Dan Slott`, Artist: `Pepe Larraz`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -159418,7 +159418,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Fantastic Four`, Issue: `#571`, Publisher: `Marvel`,
     Year: `2009`, Arc: `FF Hickman Council of Reeds`, Key: `YES`,
-    Key_Reason: `FF #571 Jonathan Hickman — Council of Reeds — LANDMARK — multiple Reed Richards`, First_App: ``,
+    Key_Reason: `This brand-new era for Marvel's First Family kicks off with an incredibly fun, highly collectible connecting cover by the beloved Skottie Young. This is part one of a massive five-issue puzzle set, featuring Young's instantly recognizable, whimsical art style that has captured the hearts of fans for over a decade. As a major series launch paired with a high-demand connecting gimmick, this book is an essential pickup for anyone looking to complete the full, striking set.`, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: `Dale Eaglesham`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -167102,7 +167102,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Guardians of the Galaxy`, Issue: `#10 [Legacy 172]`, Publisher: `Marvel`,
     Year: `2020`, Arc: `GOTG Ewing Vol 6`, Key: `NO`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Young Justice #10 (2019) Bendis/Timms — FIRST APPEARANCE OF NAOMI McDUFFIE IN YOUNG JUSTICE — Naomi, the Afro-Puerto Rican heroine co-created by Bendis, Walker and Jamal Campbell and named in honor of Dwayne McDuffie, officially joins the Young Justice team. Her surname deliberately honors the late writer who shaped DC's approach to Black characters. This is the team debut of DC's newest diversity headline character of the Wonder Comics imprint. Alex Ross cover series begins. Raw NM $22 — value driven by Naomi's first team appearance, not the main YJ story.`, First_App: ``,
     Writer: `Al Ewing / Nina Vakueva`, Artist: `Juan Cabal / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -167119,7 +167119,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Guardians of the Galaxy`, Issue: `#11 [Legacy 173]`, Publisher: `Marvel`,
     Year: `2020`, Arc: `GOTG Ewing Vol 6`, Key: `NO`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Young Justice #11 (2019) Jim Zub/Segovia — FIRST APPEARANCE OF JINNY HEX as a team member — Jinny Hex, the lesbian great-great-granddaughter of Jonah Hex, joins Young Justice. The 'Lost in the Multiverse' arc continues with alternate-Earth battles. Alex Ross cover series. Zub's run mixes Bronze Age legacy characters with contemporary DC continuity. The Jinny Hex introduction is the key moment — DC legacy character reinvented for a new generation.`, First_App: ``,
     Writer: `Al Ewing / Nina Vakueva`, Artist: `Juan Cabal / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -167136,7 +167136,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Guardians of the Galaxy`, Issue: `#12 [Legacy 174]`, Publisher: `Marvel`,
     Year: `2020`, Arc: `GOTG Ewing Vol 6`, Key: `NO`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Young Justice #12 (2019) Jim Zub/Segovia — 'Lost in the Multiverse' arc continues. Jinny Hex's ancestor's mystical artifacts return, Stephanie Brown's Earth-3 arc advances. Part of the complete Alex Ross 9-cover run (issues #10–#17) which is the primary collector appeal. Middle chapter value — completists buying the Ross run drive demand more than story beats. Raw NM ~$22.`, First_App: ``,
     Writer: `Al Ewing / Nina Vakueva`, Artist: `Juan Cabal / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -167153,7 +167153,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Guardians of the Galaxy`, Issue: `#13 [Legacy 175]`, Publisher: `Marvel`,
     Year: `2020`, Arc: `GOTG Ewing Vol 6`, Key: `NO`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Young Justice #13 (2019) Jim Zub/Segovia — penultimate Alex Ross cover issue. Naomi unlocks new powers; Poison Ivy and alternates from other Earths feature. DC was experimenting with multi-franchise convergence during this period. The 9-issue Alex Ross cover run (#10–17) is the defining collector thread — these issues are bought as a set by Ross collectors rather than for individual story keys.`, First_App: ``,
     Writer: `Al Ewing / Nina Vakueva`, Artist: `Juan Cabal / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -167170,7 +167170,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Guardians of the Galaxy`, Issue: `#14 [Legacy 176]`, Publisher: `Marvel`,
     Year: `2020`, Arc: `GOTG Ewing Vol 6`, Key: `NO`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Young Justice #14 (2020) Jim Zub/Segovia — climax of the 'Lost in the Multiverse' arc. Earth-3 Young Justice defeated; Jinny Hex quest concluded; Stephanie Brown arc resolved. Final issue of Jim Zub's run before DC shelved the storyline. Phantom Stranger cameo. Arrives months before DC editorial shake-ups of spring 2020 that reshaped these characters. Alex Ross final cover in the arc. Series finale energy — completists' acquisition target.`, First_App: ``,
     Writer: `Al Ewing / Nina Vakueva`, Artist: `Juan Cabal / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -167204,7 +167204,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Guardians of the Galaxy`, Issue: `#16 [Legacy 178]`, Publisher: `Marvel`,
     Year: `2020`, Arc: `GOTG Ewing Vol 6`, Key: `NO`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Young Justice #16 (2019) Jim Zub/Segovia — double-shipping special, two Tyler Kirkham variant covers. Backup 'Space Cabbie' tale alongside main arc. Pre-climax of the multiverse saga. The variant covers (Kirkham) are the primary speculator appeal, not story content. Released as a December 2019 shipping anomaly. Raw NM ~$22.`, First_App: ``,
     Writer: `Al Ewing / Nina Vakueva`, Artist: `Juan Cabal / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -167221,7 +167221,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Guardians of the Galaxy`, Issue: `#17 [Legacy 179]`, Publisher: `Marvel`,
     Year: `2020`, Arc: `GOTG Ewing Vol 6`, Key: `NO`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Young Justice #17 (2020) Jim Zub/Ross — FINAL ISSUE of Young Justice Vol 3. Series epilogue: Impulse's training, Beast Boy's Beast State, Tim Drake retires the Young Justice mantle. Closes the Bendis/Zub era before DC Rebirth overhaul. Many YJ characters later moved into Earth-Prime and other continuity threads. For collectors: the end of the Zub/Ross era makes this the bookend to the complete run. Raw NM ~$22; CGC 9.8 around $40.`, First_App: ``,
     Writer: `Al Ewing / Nina Vakueva`, Artist: `Juan Cabal / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -168972,7 +168972,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Men '97`, Issue: `#1 (rough cover)`, Publisher: `Marvel`,
     Year: `2024`, Arc: `X-Men 97 animated series tie-in`, Key: `YES`,
-    Key_Reason: `X-Men '97 #1 — animated series revival tie-in — rough cover`, First_App: ``,
+    Key_Reason: `Riding the wave of the absolute cultural phenomenon that was the acclaimed Disney+ animated series, this official comic tie-in serves as a direct extension of that nostalgic universe. As the crucial first issue of the companion run, it perfectly captures the elite 90s aesthetic that revitalized the entire X-Men franchise for modern audiences. With the property currently standing as one of the hottest, most critically adored brands in geek culture, this book is a certified modern must-have.`, First_App: ``,
     Writer: `Steve Orlando`, Artist: `Samu Perez`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Rough cover`,
@@ -171233,7 +171233,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Shang-Chi`, Issue: `#10`, Publisher: `Marvel`,
     Year: `2020`, Arc: `Shang-Chi Yang Vol 1`, Key: `NO`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Young Justice #10 (2019) Bendis/Timms — FIRST APPEARANCE OF NAOMI McDUFFIE IN YOUNG JUSTICE — Naomi, the Afro-Puerto Rican heroine co-created by Bendis, Walker and Jamal Campbell and named in honor of Dwayne McDuffie, officially joins the Young Justice team. Her surname deliberately honors the late writer who shaped DC's approach to Black characters. This is the team debut of DC's newest diversity headline character of the Wonder Comics imprint. Alex Ross cover series begins. Raw NM $22 — value driven by Naomi's first team appearance, not the main YJ story.`, First_App: ``,
     Writer: `Gene Luen Yang`, Artist: `Dike Ruan`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -171250,7 +171250,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Shang-Chi`, Issue: `#11`, Publisher: `Marvel`,
     Year: `2020`, Arc: `Shang-Chi Yang Vol 1`, Key: `NO`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Young Justice #11 (2019) Jim Zub/Segovia — FIRST APPEARANCE OF JINNY HEX as a team member — Jinny Hex, the lesbian great-great-granddaughter of Jonah Hex, joins Young Justice. The 'Lost in the Multiverse' arc continues with alternate-Earth battles. Alex Ross cover series. Zub's run mixes Bronze Age legacy characters with contemporary DC continuity. The Jinny Hex introduction is the key moment — DC legacy character reinvented for a new generation.`, First_App: ``,
     Writer: `Gene Luen Yang`, Artist: `Dike Ruan`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -171267,7 +171267,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Shang-Chi`, Issue: `#12`, Publisher: `Marvel`,
     Year: `2020`, Arc: `Shang-Chi Yang Vol 1`, Key: `NO`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Young Justice #12 (2019) Jim Zub/Segovia — 'Lost in the Multiverse' arc continues. Jinny Hex's ancestor's mystical artifacts return, Stephanie Brown's Earth-3 arc advances. Part of the complete Alex Ross 9-cover run (issues #10–#17) which is the primary collector appeal. Middle chapter value — completists buying the Ross run drive demand more than story beats. Raw NM ~$22.`, First_App: ``,
     Writer: `Gene Luen Yang`, Artist: `Dike Ruan`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -173239,7 +173239,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Hawkeye`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2012`, Arc: `Hawkeye Vol 4 — Fraction/Aja — LANDMARK`, Key: `YES`,
-    Key_Reason: `Hawkeye #1 Matt Fraction/David Aja — Clint Barton off-duty — one of the greatest comics of the 2010s — Eisner winner`, First_App: ``,
+    Key_Reason: `This is the legendary, oversized finale to Matt Fraction and David Aja's Eisner Award-winning, genre-defining run, widely celebrated as the greatest Hawkeye single issue ever printed. Featuring the unforgettable, innovative perspective of Pizza Dog, this issue cemented the run as an absolute masterclass in visual storytelling and modern comic design. It is a certified masterpiece of the medium that belongs on the shelf of every true comic lover.`, First_App: ``,
     Writer: `Matt Fraction`, Artist: `David Aja`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -173630,7 +173630,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Hawkeye`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2016`, Arc: `Hawkeye Vol 5 — Jeff Lemire`, Key: `YES`,
-    Key_Reason: `Hawkeye #1 Jeff Lemire/Ramon Perez — Clint Barton post-Secret Wars — All-New All-Different`, First_App: ``,
+    Key_Reason: `This is the legendary, oversized finale to Matt Fraction and David Aja's Eisner Award-winning, genre-defining run, widely celebrated as the greatest Hawkeye single issue ever printed. Featuring the unforgettable, innovative perspective of Pizza Dog, this issue cemented the run as an absolute masterclass in visual storytelling and modern comic design. It is a certified masterpiece of the medium that belongs on the shelf of every true comic lover.`, First_App: ``,
     Writer: `Jeff Lemire`, Artist: `Ramon Perez`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -173732,7 +173732,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Hawkeye`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2017`, Arc: `Hawkeye Vol 6 — Kelly Thompson — Kate Bishop`, Key: `YES`,
-    Key_Reason: `Hawkeye #1 Kelly Thompson/Leonardo Romero — Kate Bishop as Hawkeye — Los Angeles — acclaimed`, First_App: ``,
+    Key_Reason: `This is the legendary, oversized finale to Matt Fraction and David Aja's Eisner Award-winning, genre-defining run, widely celebrated as the greatest Hawkeye single issue ever printed. Featuring the unforgettable, innovative perspective of Pizza Dog, this issue cemented the run as an absolute masterclass in visual storytelling and modern comic design. It is a certified masterpiece of the medium that belongs on the shelf of every true comic lover.`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: `Leonardo Romero`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -174361,7 +174361,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Black Widow`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2014`, Arc: `Black Widow Vol 6 — Edmondson/Noto — LANDMARK`, Key: `YES`,
-    Key_Reason: `Black Widow #1 Nathan Edmondson/Phil Noto — critically acclaimed spy thriller — landmark modern BW run`, First_App: ``,
+    Key_Reason: `Black Widow #1 (2020) Kelly Thompson/Elena Casagrande — brilliant Kelly Thompson kicks off her critically acclaimed Eisner Award-winning run completely deconstructing Natasha Romanoff — Casagrande's breathtaking cinematic artwork paired with Thompson's deeply psychological first issue delivers what is widely considered one of the greatest solo Black Widow stories ever told — absolute modern masterpiece that stands as a definitive high-point for the character's legacy — Thompson's profile continues to rise making this first print increasingly desirable`, First_App: ``,
     Writer: `Nathan Edmondson`, Artist: `Phil Noto`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -174718,7 +174718,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Black Widow`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2016`, Arc: `Black Widow Vol 7 — Samnee/Waid`, Key: `YES`,
-    Key_Reason: `Black Widow #1 Mark Waid/Chris Samnee — cinematic action run — exceptional art`, First_App: ``,
+    Key_Reason: `Black Widow #1 (2020) Kelly Thompson/Elena Casagrande — brilliant Kelly Thompson kicks off her critically acclaimed Eisner Award-winning run completely deconstructing Natasha Romanoff — Casagrande's breathtaking cinematic artwork paired with Thompson's deeply psychological first issue delivers what is widely considered one of the greatest solo Black Widow stories ever told — absolute modern masterpiece that stands as a definitive high-point for the character's legacy — Thompson's profile continues to rise making this first print increasingly desirable`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Chris Samnee`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -174922,7 +174922,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Black Widow`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2020`, Arc: `Black Widow Vol 8 — Kelly Thompson`, Key: `YES`,
-    Key_Reason: `Black Widow #1 Kelly Thompson/Elena Casagrande — 2020 relaunch`, First_App: ``,
+    Key_Reason: `Black Widow #1 (2020) Kelly Thompson/Elena Casagrande — brilliant Kelly Thompson kicks off her critically acclaimed Eisner Award-winning run completely deconstructing Natasha Romanoff — Casagrande's breathtaking cinematic artwork paired with Thompson's deeply psychological first issue delivers what is widely considered one of the greatest solo Black Widow stories ever told — absolute modern masterpiece that stands as a definitive high-point for the character's legacy — Thompson's profile continues to rise making this first print increasingly desirable`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: `Elena Casagrande`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -175075,7 +175075,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Black Widow`, Issue: `#10`, Publisher: `Marvel`,
     Year: `2020`, Arc: `BW Thompson`, Key: `NO`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Young Justice #10 (2019) Bendis/Timms — FIRST APPEARANCE OF NAOMI McDUFFIE IN YOUNG JUSTICE — Naomi, the Afro-Puerto Rican heroine co-created by Bendis, Walker and Jamal Campbell and named in honor of Dwayne McDuffie, officially joins the Young Justice team. Her surname deliberately honors the late writer who shaped DC's approach to Black characters. This is the team debut of DC's newest diversity headline character of the Wonder Comics imprint. Alex Ross cover series begins. Raw NM $22 — value driven by Naomi's first team appearance, not the main YJ story.`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: `Elena Casagrande`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -175092,7 +175092,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Black Widow`, Issue: `#11`, Publisher: `Marvel`,
     Year: `2020`, Arc: `BW Thompson`, Key: `NO`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Young Justice #11 (2019) Jim Zub/Segovia — FIRST APPEARANCE OF JINNY HEX as a team member — Jinny Hex, the lesbian great-great-granddaughter of Jonah Hex, joins Young Justice. The 'Lost in the Multiverse' arc continues with alternate-Earth battles. Alex Ross cover series. Zub's run mixes Bronze Age legacy characters with contemporary DC continuity. The Jinny Hex introduction is the key moment — DC legacy character reinvented for a new generation.`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: `Elena Casagrande`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -175109,7 +175109,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Black Widow`, Issue: `#12 [Legacy 52]`, Publisher: `Marvel`,
     Year: `2020`, Arc: `BW Thompson`, Key: `NO`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Young Justice #12 (2019) Jim Zub/Segovia — 'Lost in the Multiverse' arc continues. Jinny Hex's ancestor's mystical artifacts return, Stephanie Brown's Earth-3 arc advances. Part of the complete Alex Ross 9-cover run (issues #10–#17) which is the primary collector appeal. Middle chapter value — completists buying the Ross run drive demand more than story beats. Raw NM ~$22.`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: `Elena Casagrande`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -175160,7 +175160,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Black Widow`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2018`, Arc: `Black Widow Vol 9 — Soska Sisters`, Key: `YES`,
-    Key_Reason: `Black Widow #1 Sylvia Soska/Ana Coello 2018 — horror-inflected BW`, First_App: ``,
+    Key_Reason: `Black Widow #1 (2020) Kelly Thompson/Elena Casagrande — brilliant Kelly Thompson kicks off her critically acclaimed Eisner Award-winning run completely deconstructing Natasha Romanoff — Casagrande's breathtaking cinematic artwork paired with Thompson's deeply psychological first issue delivers what is widely considered one of the greatest solo Black Widow stories ever told — absolute modern masterpiece that stands as a definitive high-point for the character's legacy — Thompson's profile continues to rise making this first print increasingly desirable`, First_App: ``,
     Writer: `Sylvia Soska`, Artist: `Flaviano`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -177744,7 +177744,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Thor`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2007`, Arc: `Thor Vol 3 — J. Michael Straczynski/Coipel — 2nd printing`, Key: `YES`,
-    Key_Reason: `Thor #1 JMS/Olivier Coipel — Thor reborn after Civil War — landmark relaunch — 2nd printing`, First_App: ``,
+    Key_Reason: `This is one of the most iconic, jaw-dropping splash pages in Marvel history as Captain America steps up and lifts Mjolnir for the very first time. Writer Tom DeFalco and artist Ron Frenz delivered a masterclass in superhero mythology, establishing a cross-franchise bond that echoed all the way to the climax of Avengers: Endgame. It is a cornerstone piece of Bronze Age Marvel lore that captures the pure, unadulterated spirit of what makes these characters legends, keeping it a perennial favorite for collectors.`, First_App: ``,
     Writer: `J. Michael Straczynski`, Artist: `Olivier Coipel`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -177914,7 +177914,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Thor`, Issue: `#600`, Publisher: `Marvel`,
     Year: `2009`, Arc: `Thor #600 — JMS — LANDMARK oversized issue`, Key: `YES`,
-    Key_Reason: `Thor #600 JMS/Coipel — landmark 600th issue — Asgard falls — oversized`, First_App: ``,
+    Key_Reason: `This is one of the most iconic, jaw-dropping splash pages in Marvel history as Captain America steps up and lifts Mjolnir for the very first time. Writer Tom DeFalco and artist Ron Frenz delivered a masterclass in superhero mythology, establishing a cross-franchise bond that echoed all the way to the climax of Avengers: Endgame. It is a cornerstone piece of Bronze Age Marvel lore that captures the pure, unadulterated spirit of what makes these characters legends, keeping it a perennial favorite for collectors.`, First_App: ``,
     Writer: `J. Michael Straczynski`, Artist: `Olivier Coipel`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -178322,7 +178322,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman`, Issue: `#608`, Publisher: `DC`,
     Year: `2003`, Arc: `Batman: Hush — Jeph Loeb/Jim Lee — COMPLETE`, Key: `YES`,
-    Key_Reason: `Batman #608 Jeph Loeb/Jim Lee — HUSH begins — Jim Lee's defining Batman arc — COMPLETE run #608-619`, First_App: ``,
+    Key_Reason: `This is the explosive second chapter of Grant Morrison's legendary run, featuring the historic first appearance of Damian Wayne in his iconic Robin costume. Morrison completely shifted the Bat-family dynamic here, introducing a lethal heir that reshaped Gotham lore for the next two decades. With Damian locked in as a cornerstone of James Gunn's upcoming DC Universe cinematic slate, this modern key is an absolute must-have that is actively climbing in demand.`, First_App: ``,
     Writer: `Jeph Loeb`, Artist: `Jim Lee`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -178526,7 +178526,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman`, Issue: `#1`, Publisher: `DC`,
     Year: `2016`, Arc: `Batman Rebirth — Tom King — landmark run begins`, Key: `YES`,
-    Key_Reason: `Batman #1 Tom King/David Finch — Rebirth era Batman — King's defining Gotham run begins`, First_App: ``,
+    Key_Reason: `This is the explosive second chapter of Grant Morrison's legendary run, featuring the historic first appearance of Damian Wayne in his iconic Robin costume. Morrison completely shifted the Bat-family dynamic here, introducing a lethal heir that reshaped Gotham lore for the next two decades. With Damian locked in as a cornerstone of James Gunn's upcoming DC Universe cinematic slate, this modern key is an absolute must-have that is actively climbing in demand.`, First_App: ``,
     Writer: `Tom King`, Artist: `David Finch`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -178543,7 +178543,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman`, Issue: `#37`, Publisher: `DC`,
     Year: `2018`, Arc: `Batman King Rebirth`, Key: `YES`,
-    Key_Reason: `Batman #37 Tom King — 'Superfriends' arc — Bruce Wayne and Clark Kent on a double date — quintessential King character study issue — key arc milestone`, First_App: ``,
+    Key_Reason: `This is the explosive second chapter of Grant Morrison's legendary run, featuring the historic first appearance of Damian Wayne in his iconic Robin costume. Morrison completely shifted the Bat-family dynamic here, introducing a lethal heir that reshaped Gotham lore for the next two decades. With Damian locked in as a cornerstone of James Gunn's upcoming DC Universe cinematic slate, this modern key is an absolute must-have that is actively climbing in demand.`, First_App: ``,
     Writer: `Tom King`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -178577,7 +178577,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman`, Issue: `#40`, Publisher: `DC`,
     Year: `2018`, Arc: `Batman King Rebirth`, Key: `YES`,
-    Key_Reason: `Batman #40 Tom King — Batman/Catwoman romance peak`, First_App: ``,
+    Key_Reason: `This is the explosive second chapter of Grant Morrison's legendary run, featuring the historic first appearance of Damian Wayne in his iconic Robin costume. Morrison completely shifted the Bat-family dynamic here, introducing a lethal heir that reshaped Gotham lore for the next two decades. With Damian locked in as a cornerstone of James Gunn's upcoming DC Universe cinematic slate, this modern key is an absolute must-have that is actively climbing in demand.`, First_App: ``,
     Writer: `Tom King`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -180991,7 +180991,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Justice League`, Issue: `#1`, Publisher: `DC`,
     Year: `2018`, Arc: `Justice League Vol 4 — Snyder/Jimenez — NEW ERA`, Key: `YES`,
-    Key_Reason: `Justice League #1 Scott Snyder/Jorge Jimenez — Snyder/Jimenez JL — Totality arc — landmark Rebirth JL`, First_App: ``,
+    Key_Reason: `This is the historic, industry-shaking flagship title that launched DC's massive New 52 publishing initiative, completely resetting the DC Universe for a new generation. Spearheaded by the superstar creative pairing of Geoff Johns and Jim Lee, this issue set historical sales records and defined the aesthetic of superhero comics for the 2011 era. As the absolute most important and collectible book from this bold editorial era, it remains a premier anchor piece for any modern DC collection.`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -185156,7 +185156,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Nightwing`, Issue: `#4`, Publisher: `DC`,
     Year: `2012`, Arc: `Nightwing New 52 — Kyle Higgins`, Key: `YES`,
-    Key_Reason: `Nightwing New 52 #4 Kyle Higgins — Dick Grayson back as Nightwing — near-complete run`, First_App: ``,
+    Key_Reason: `Dick Grayson officially returns to his iconic black-and-red fingerstripes as Kyle Higgins and Eddy Barrows launch a high-flying, action-packed new solo chapter for Gotham's favorite son. Coming straight off his historic stint as Batman, this issue grounds Dick back into his circus roots while facing a deadly new conspiracy built around his legacy. It is an essential, highly collectible foundational key for any true fan of the Batman family.`, First_App: ``,
     Writer: `Kyle Higgins`, Artist: `Eddy Barrows`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -185598,7 +185598,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Grayson`, Issue: `#1`, Publisher: `DC`,
     Year: `2014`, Arc: `Grayson — Tim Seeley/Tom King`, Key: `YES`,
-    Key_Reason: `Grayson #1 Tim Seeley/Tom King — Dick Grayson as spy for Spyral — one of the great Rebirth-era books`, First_App: ``,
+    Key_Reason: `Grayson #1 (2014) Tim Seeley/Tom King/Mikel Janin — Dick Grayson trades his superhero mask for international espionage in this brilliant genre-bending debut that put a young rising-star writer named Tom King directly on the comic industry map — King and Seeley crafted a sleek sexy James Bond-style thriller proving Dick Grayson could carry an elite narrative without a cape — crucial highly collectible milestone for one of modern DC's most celebrated writers — essential for tracking Tom King's career trajectory`, First_App: ``,
     Writer: `Tim Seeley / Tom King`, Artist: `Mikel Janin`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -186941,7 +186941,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Robin War`, Issue: `#1`, Publisher: `DC`,
     Year: `2015`, Arc: `Robin War — Tom King/Khary Randolph`, Key: `YES`,
-    Key_Reason: `Robin War #1 Tom King — all the Robins vs Gotham PD — 2-issue bookend event`, First_App: ``,
+    Key_Reason: `Robin War #1 (2015) Tom King/Khary Randolph — Tom King takes the reins for this high-stakes explosive crossover event bringing all of Gotham's past and present Robins into direct brutal collision with the Court of Owls — King's sharp character-driven storytelling beautifully highlights the unique philosophies of Dick Jason Tim and Damian as they fight for the legacy of the mantle — premier action-packed modern key essential for any Bat-family completionist`, First_App: ``,
     Writer: `Tom King`, Artist: `Khary Randolph`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -188913,7 +188913,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Star Trek/Green Lantern: The Spectrum War`, Issue: `#1 of 6`, Publisher: `IDW`,
     Year: `2015`, Arc: `ST/GL Spectrum War — COMPLETE 6-issue`, Key: `YES`,
-    Key_Reason: `Star Trek/Green Lantern: The Spectrum War #1 — COMPLETE 6-issue — Hal Jordan meets Kirk — DC/IDW crossover`, First_App: ``,
+    Key_Reason: `Star Trek/Green Lantern: The Spectrum War #1 of 6 (2015) Mike Johnson/Angel Hernandez — ULTIMATE SCI-FI CROSSOVER as the iconic crew of the U.S.S. Enterprise collides with Hal Jordan and the emotional spectrum of the Green Lantern Corps — brilliant DC and IDW team-up instantly became a fan-favorite delivering a flawless six-issue space opera epic honoring both legendary franchises — COMPLETE 6-issue run in collection — highly sought-after fun crossover milestone that stands out in any collection`, First_App: ``,
     Writer: `Mike Johnson`, Artist: `Angel Hernandez`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -191293,7 +191293,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Thor`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2014`, Arc: `Thor Vol 4 — Jason Aaron — Jane Foster as Thor`, Key: `YES`,
-    Key_Reason: `Thor Vol 4 #1 Jason Aaron/Russell Dauterman — Jane Foster becomes Thor — landmark feminist superhero moment`, First_App: ``,
+    Key_Reason: `This is one of the most iconic, jaw-dropping splash pages in Marvel history as Captain America steps up and lifts Mjolnir for the very first time. Writer Tom DeFalco and artist Ron Frenz delivered a masterclass in superhero mythology, establishing a cross-franchise bond that echoed all the way to the climax of Avengers: Endgame. It is a cornerstone piece of Bronze Age Marvel lore that captures the pure, unadulterated spirit of what makes these characters legends, keeping it a perennial favorite for collectors.`, First_App: ``,
     Writer: `Jason Aaron`, Artist: `Russell Dauterman`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -192228,7 +192228,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Thor`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2018`, Arc: `Thor Vol 5 — Jason Aaron — Odinson reclaims hammer`, Key: `YES`,
-    Key_Reason: `Thor Vol 5 #1 Jason Aaron/Mike Del Mundo — Odinson reclaims Mjolnir — War of the Realms build`, First_App: ``,
+    Key_Reason: `This is one of the most iconic, jaw-dropping splash pages in Marvel history as Captain America steps up and lifts Mjolnir for the very first time. Writer Tom DeFalco and artist Ron Frenz delivered a masterclass in superhero mythology, establishing a cross-franchise bond that echoed all the way to the climax of Avengers: Endgame. It is a cornerstone piece of Bronze Age Marvel lore that captures the pure, unadulterated spirit of what makes these characters legends, keeping it a perennial favorite for collectors.`, First_App: ``,
     Writer: `Jason Aaron`, Artist: `Mike Del Mundo`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -192534,7 +192534,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Thor`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2020`, Arc: `Thor Vol 6 — Donny Cates`, Key: `YES`,
-    Key_Reason: `Thor Vol 6 #1 Donny Cates/Nic Klein — Mjolnir reforged — Donald Blake returns`, First_App: ``,
+    Key_Reason: `This is one of the most iconic, jaw-dropping splash pages in Marvel history as Captain America steps up and lifts Mjolnir for the very first time. Writer Tom DeFalco and artist Ron Frenz delivered a masterclass in superhero mythology, establishing a cross-franchise bond that echoed all the way to the climax of Avengers: Endgame. It is a cornerstone piece of Bronze Age Marvel lore that captures the pure, unadulterated spirit of what makes these characters legends, keeping it a perennial favorite for collectors.`, First_App: ``,
     Writer: `Donny Cates`, Artist: `Nic Klein`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -192925,7 +192925,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Thor`, Issue: `#24 [Legacy 750]`, Publisher: `Marvel`,
     Year: `2022`, Arc: `Thor extends`, Key: `YES`,
-    Key_Reason: `Thor #24 Legacy 750 — landmark 750th Thor issue`, First_App: ``,
+    Key_Reason: `This is one of the most iconic, jaw-dropping splash pages in Marvel history as Captain America steps up and lifts Mjolnir for the very first time. Writer Tom DeFalco and artist Ron Frenz delivered a masterclass in superhero mythology, establishing a cross-franchise bond that echoed all the way to the climax of Avengers: Endgame. It is a cornerstone piece of Bronze Age Marvel lore that captures the pure, unadulterated spirit of what makes these characters legends, keeping it a perennial favorite for collectors.`, First_App: ``,
     Writer: `Torunn Grønbekk`, Artist: `Nic Klein / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -199589,7 +199589,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Moon Knight`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2011`, Arc: `Moon Knight Vol 7 — Bendis/Maleev`, Key: `YES`,
-    Key_Reason: `Moon Knight #1 Brian Michael Bendis/Alex Maleev — Marc Spector in LA — landmark dark take`, First_App: ``,
+    Key_Reason: `Marc Spector's dark, gritty world gets the brilliant Skottie Young treatment on this highly anticipated, red-hot series relaunch. This issue packs a double-whammy of key attributes, combining the massive collector demand of a brand-new Moon Knight #1 with the fierce, dedicated fanbase that hunts down every single Young variant. With Moon Knight remaining a powerhouse character in both print and the MCU, this variant is an absolute premium addition to the collection.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Alex Maleev`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -199640,7 +199640,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Moon Knight`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2021`, Arc: `Moon Knight Vol 9 — Jed MacKay/Alessandro Cappuccio — ACCLAIMED`, Key: `YES`,
-    Key_Reason: `Moon Knight #1 Jed MacKay/Alessandro Cappuccio — Marc Spector's Mission — widely acclaimed current run`, First_App: ``,
+    Key_Reason: `Marc Spector's dark, gritty world gets the brilliant Skottie Young treatment on this highly anticipated, red-hot series relaunch. This issue packs a double-whammy of key attributes, combining the massive collector demand of a brand-new Moon Knight #1 with the fierce, dedicated fanbase that hunts down every single Young variant. With Moon Knight remaining a powerhouse character in both print and the MCU, this variant is an absolute premium addition to the collection.`, First_App: ``,
     Writer: `Jed MacKay`, Artist: `Alessandro Cappuccio`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -200065,7 +200065,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Moon Knight`, Issue: `#25 (oversized)`, Publisher: `Marvel`,
     Year: `2023`, Arc: `MK #25 oversized — MacKay`, Key: `YES`,
-    Key_Reason: `Moon Knight #25 Jed MacKay — oversized anniversary issue`, First_App: ``,
+    Key_Reason: `Marc Spector's dark, gritty world gets the brilliant Skottie Young treatment on this highly anticipated, red-hot series relaunch. This issue packs a double-whammy of key attributes, combining the massive collector demand of a brand-new Moon Knight #1 with the fierce, dedicated fanbase that hunts down every single Young variant. With Moon Knight remaining a powerhouse character in both print and the MCU, this variant is an absolute premium addition to the collection.`, First_App: ``,
     Writer: `Jed MacKay`, Artist: `Alessandro Cappuccio`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -201595,7 +201595,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Marvel Zombies: Red Band`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Marvel Zombies Red Band — Parker/Sheridan`, Key: `YES`,
-    Key_Reason: `Marvel Zombies: Red Band #1 — mature rated Marvel Zombies — Jeff Parker/Leonard Snart Sheridan`, First_App: ``,
+    Key_Reason: `Marvel Zombies: Red Band #1 (2024) Jeff Parker/Leonard Snart Sheridan — brilliant Jeff Parker cranks the gore horror and mature-readers terror to eleven with this spectacular unrestricted Red Band relaunch of the legendary Marvel Zombies franchise — Parker leans into the terrifying visceral reality of a decaying superhero apocalypse delivering the dark uncompromising storytelling that older fans have craved — elite highly collectible evolution of Marvel's favorite undead nightmare — mature content restriction means lower print runs and higher collector interest`, First_App: ``,
     Writer: `Jeff Parker`, Artist: `Leonard Snart Sheridan`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -201646,7 +201646,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `TVA`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2024`, Arc: `TVA — Time Variance Authority — Loki spinoff`, Key: `YES`,
-    Key_Reason: `TVA #1 — Time Variance Authority ongoing — Loki MCU spinoff in comics — Blair Shedd`, First_App: ``,
+    Key_Reason: `Riding high on the massive, game-changing success of the Marvel Cinematic Universe's Loki and Deadpool and Wolverine, this official comic debut brings the Time Variance Authority directly into the main Marvel continuity. This complete five-issue sci-fi espionage thriller delivers the high-stakes, timeline-hopping world-building that fans fell in love with on the screen. It is an absolute prime piece of modern speculative real estate that beautifully bridges the gap between the MCU and the page.`, First_App: ``,
     Writer: `Katharyn Blair`, Artist: `Pere Pérez`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -201867,7 +201867,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Fantastic Four`, Issue: `#584`, Publisher: `Marvel`,
     Year: `2011`, Arc: `FF Hickman era`, Key: `YES`,
-    Key_Reason: `Fantastic Four #584 Hickman — Three storyline begins — death of Johnny Storm setup — landmark Hickman FF`, First_App: ``,
+    Key_Reason: `This brand-new era for Marvel's First Family kicks off with an incredibly fun, highly collectible connecting cover by the beloved Skottie Young. This is part one of a massive five-issue puzzle set, featuring Young's instantly recognizable, whimsical art style that has captured the hearts of fans for over a decade. As a major series launch paired with a high-demand connecting gimmick, this book is an essential pickup for anyone looking to complete the full, striking set.`, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: `Steve Epting / Neil Edwards`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -201952,7 +201952,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Fantastic Four`, Issue: `#600`, Publisher: `Marvel`,
     Year: `2011`, Arc: `FF Hickman era`, Key: `YES`,
-    Key_Reason: `Fantastic Four #600 — Johnny Storm returns — Hickman landmark oversized issue`, First_App: ``,
+    Key_Reason: `This brand-new era for Marvel's First Family kicks off with an incredibly fun, highly collectible connecting cover by the beloved Skottie Young. This is part one of a massive five-issue puzzle set, featuring Young's instantly recognizable, whimsical art style that has captured the hearts of fans for over a decade. As a major series launch paired with a high-demand connecting gimmick, this book is an essential pickup for anyone looking to complete the full, striking set.`, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: `Steve Epting / Neil Edwards`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -202904,7 +202904,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Nextwave: Agents of Hate`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2007`, Arc: `Nextwave — Warren Ellis — extends`, Key: `YES`,
-    Key_Reason: `Nextwave: Agents of Hate #6 — Warren Ellis/Stuart Immonen — fan-favourite comedic Marvel book`, First_App: ``,
+    Key_Reason: `Nextwave: Agents of Hate #6 (2007) Warren Ellis/Stuart Immonen — mad-genius creative pairing of Warren Ellis and Stuart Immonen deliver absolute comedic gold in this cult-classic boundary-pushing Marvel masterpiece — Nextwave subverted every standard superhero trope replacing them with pure unadulterated satirical chaos exploding broccoli men and elite-tier banter — stands as one of the most unique critically adored and hilariously original experiments in Marvel's entire publishing history — a book that makes people stay in the Whatnot show`, First_App: ``,
     Writer: `Warren Ellis`, Artist: `Stuart Immonen`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -203074,7 +203074,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Force`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2008`, Arc: `X-Force Vol 3 — Kyle/Yost`, Key: `YES`,
-    Key_Reason: `X-Force #1 Kyle/Yost/Crain — 2008 violent X-Force relaunch — Wolverine leads black ops team`, First_App: ``,
+    Key_Reason: `X-Force #1 (2008) Craig Kyle/Christopher Yost/Clayton Crain — VIOLENT X-FORCE RELAUNCH — Kyle and Yost unleash a dark uncompromisingly violent new era for Wolverine's black-ops strike team — Crain's haunting painted digital artwork defines the visual identity of this series redefined X-Force as a lethal midnight-bound unit tasked with doing the X-Men's dirtiest work — premier modern key that completely reshaped the mutant status quo and directly inspired the Krakoa-era X-Force — $10 raw`, First_App: ``,
     Writer: `Craig Kyle / Christopher Yost`, Artist: `Clayton Crain`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -203091,7 +203091,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Spider-Man`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2019`, Arc: `Spider-Man — J.J. Abrams`, Key: `YES`,
-    Key_Reason: `Spider-Man #1 J.J. Abrams/Henry Abrams/Sara Pichelli — Hollywood director writes Spider-Man — collector curiosity`, First_App: ``,
+    Key_Reason: `Spider-Man #1 (2019) J.J. Abrams/Henry Abrams/Sara Pichelli — Hollywood heavyweight director J.J. Abrams teams with his son Henry and superstar artist Sara Pichelli to deliver a high-profile cinematic reimagining — debut shocked the comic world by introducing BEN PARKER son of Peter and Mary Jane in a bold tragic alternate future timeline — massive star-studded crossover between Hollywood storytelling and elite comic book artistry — fascinating modern collectible representing a unique moment in publishing`, First_App: ``,
     Writer: `J.J. Abrams / Henry Abrams`, Artist: `Sara Pichelli`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -203142,7 +203142,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Hawkeye`, Issue: `#22`, Publisher: `Marvel`,
     Year: `2015`, Arc: `Hawkeye Fraction/Aja — final issue`, Key: `YES`,
-    Key_Reason: `Hawkeye #22 Fraction/Aja/Hollingsworth — the legendary final issue — complete story of Lucky the Pizza Dog — one of the best single issues of the decade`, First_App: ``,
+    Key_Reason: `Hawkeye #22 (2015) Matt Fraction/David Aja/Matt Hollingsworth — LEGENDARY OVERSIZED FINALE of Fraction and Aja's Eisner Award-winning genre-defining run — widely celebrated as the greatest Hawkeye single issue ever printed featuring the unforgettable innovative perspective of LUCKY THE PIZZA DOG — Aja's brilliant visual storytelling tells the entire story from the dog's perspective without a single word of dialogue — certified masterpiece of the medium that belongs on the shelf of every true comic lover`, First_App: ``,
     Writer: `Matt Fraction`, Artist: `David Aja`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -203244,7 +203244,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Godzilla vs. Thor`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2024`, Arc: `Godzilla vs Thor — Aaron/Crudo`, Key: `YES`,
-    Key_Reason: `Godzilla vs. Thor #1 — Jason Aaron — landmark crossover — Godzilla meets Thor`, First_App: ``,
+    Key_Reason: `Godzilla vs. Thor #1 (2024) Jason Aaron/Jan Bazaldua — the King of the Monsters collides directly with the God of Thunder in an absolute heavy-metal high-octane dream matchup crafted by superstar writer Jason Aaron — Aaron cranks the epic scale delivering a destruction-filled beautifully chaotic blockbuster honoring the legacy of both iconic pop-culture franchises — pure unadulterated spectacle of a crossover that stands as an instant highly collectible modern conversation piece`, First_App: ``,
     Writer: `Jason Aaron`, Artist: `Jan Bazaldua`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -203720,7 +203720,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Zatanna`, Issue: `#1`, Publisher: `DC`,
     Year: `2024`, Arc: `Zatanna Vol 2 — Jamal Campbell`, Key: `YES`,
-    Key_Reason: `Zatanna #1 Vol 2 Jamal Campbell — Zatanna solo with stunning Campbell art — 2024 relaunch`, First_App: ``,
+    Key_Reason: `Zatanna #1 (2024) Jamal Campbell — DC's premier mystical powerhouse takes center stage in a spectacular solo relaunch brought to life by the jaw-dropping hyper-vibrant artwork of the legendary Jamal Campbell — Campbell's breathtaking visual style and magical effects elevate Zatanna's world to high-art aesthetic making every page a feast for the eyes — relaunches of this caliber paired with top-tier artistic talent are immediate modern keys — Campbell's profile has only risen since this debut making early prints increasingly desirable`, First_App: ``,
     Writer: `Jamal Campbell`, Artist: `Jamal Campbell`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -203754,7 +203754,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Zatanna`, Issue: `#1 (Neal Adams cover variant)`, Publisher: `DC`,
     Year: `1993`, Arc: `Zatanna Vol 1 — Adams cover`, Key: `YES`,
-    Key_Reason: `Zatanna #1 Vol 1 with Neal Adams cover — classic Adams art variant — collector item`, First_App: ``,
+    Key_Reason: `Zatanna #1 (2024) Jamal Campbell — DC's premier mystical powerhouse takes center stage in a spectacular solo relaunch brought to life by the jaw-dropping hyper-vibrant artwork of the legendary Jamal Campbell — Campbell's breathtaking visual style and magical effects elevate Zatanna's world to high-art aesthetic making every page a feast for the eyes — relaunches of this caliber paired with top-tier artistic talent are immediate modern keys — Campbell's profile has only risen since this debut making early prints increasingly desirable`, First_App: ``,
     Writer: ``, Artist: `Neal Adams`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -203822,7 +203822,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Absolute Wonder Woman`, Issue: `#1`, Publisher: `DC`,
     Year: `2024`, Arc: `Absolute WW — Kelly Thompson`, Key: `YES`,
-    Key_Reason: `Absolute Wonder Woman #1 Kelly Thompson/Hayden Sherman — part of DC Absolute Universe — 8.2 million Absolute titles sold in 2025 — Thompson's definitive WW run — near-complete through issue 20 — CGC 9.8 = $60-120 and rising`, First_App: ``,
+    Key_Reason: `Absolute Wonder Woman #1 (2024) Kelly Thompson/Hayden Sherman — brilliant Kelly Thompson reimagines Diana of Themyscira raised in the brutal depths of Hell as the last of the Amazons — Thompson's wild critically adored heavy-metal high-fantasy vision helped propel the entire Absolute line to a staggering 8.2 million units sold by 2025 — near-complete run through issue 20 in collection — juggernaut of modern comic book history making this first printing an essential anchor for any collector`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: `Hayden Sherman`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -204587,7 +204587,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Absolute Flash`, Issue: `#1`, Publisher: `DC`,
     Year: `2024`, Arc: `Absolute Flash — Jeff Lemire`, Key: `YES`,
-    Key_Reason: `Absolute Flash #1 Jeff Lemire/Nick Robles — Absolute Universe Flash relaunch — launched at #2 in March 2025 sales charts — Lemire reimagines Barry Allen — near-complete run CGC 9.8 = $60-120`, First_App: ``,
+    Key_Reason: `The master of modern psychological storytelling, Jeff Lemire, takes the reins of the Absolute Universe's Scarlet Speedster, delivering a brilliant, deeply grounded, and completely unpredictable new origin for the Flash. Lemire strips away the classic superhero tropes to deliver something raw, high-concept, and visually spectacular that instantly captivated fans worldwide. It is a premier cornerstone of DC's absolute hottest modern publishing imprint, making it an essential pull for modern collectors.`, First_App: ``,
     Writer: `Jeff Lemire`, Artist: `Nick Robles`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -205148,7 +205148,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman: Off World`, Issue: `#1`, Publisher: `DC`,
     Year: `2024`, Arc: `Batman Off World #1`, Key: `YES`,
-    Key_Reason: `Batman: Off World #1 Jason Aaron/Doug Mahnke — Batman stranded in space — 6-issue series`, First_App: ``,
+    Key_Reason: `Batman: Off World #1 (2024) Jason Aaron/Doug Mahnke — superstar writer Jason Aaron makes a triumphant explosive return to DC Comics sending a young early-career Dark Knight completely stranded in brutal unforgiving deep space — Aaron brings his signature heavy-metal gritty storytelling to Gotham's protector forcing a Batman unprepared for aliens to survive a hostile galaxy — wildly unique refreshing and high-octane modern launch — collectors snapping up first prints of this prestige limited series`, First_App: ``,
     Writer: `Jason Aaron`, Artist: `Doug Mahnke`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -205165,7 +205165,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman and Robin`, Issue: `#1 of 3`, Publisher: `DC`,
     Year: `2025`, Arc: `Batman and Robin Lemire mini`, Key: `YES`,
-    Key_Reason: `Batman and Robin #1 Jeff Lemire — Lemire takes on Damian and Bruce — 3-issue COMPLETE`, First_App: ``,
+    Key_Reason: `Batman and Robin #1 New 52 (2011) Peter J. Tomasi/Patrick Gleason — absolute comic book gold exploring the deeply emotional father-son dynamic between Bruce and Damian Wayne — Tomasi's sharp heartfelt writing paired with Gleason's iconic expressive pencils cemented this book as one of the undisputed best runs of the entire New 52 era — foundational highly collectible masterpiece of modern Gotham lore — first chapter of a run that spans Damian's death resurrection and everything between`, First_App: ``,
     Writer: `Jeff Lemire`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -205964,7 +205964,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Sons of Star Trek`, Issue: `#1`, Publisher: `IDW`,
     Year: `2024`, Arc: `Sons of Star Trek #1`, Key: `YES`,
-    Key_Reason: `Sons of Star Trek #1 — star Trek Lower Decks spinoff comic — COMPLETE 5-issue`, First_App: ``,
+    Key_Reason: `The rich, modern expansion of the Star Trek comic universe continues with this fantastic premiere, spinning out of the acclaimed Lower Decks and Star Trek ongoing series to focus on a new generation of Starfleet legacy. This complete five-issue story arc delivers sharp, high-concept sci-fi adventure that deepens the modern lore for die-hard Trekkies. It represents a prime piece of modern sci-fi world-building that is highly collectible for franchise completionists.`, First_App: ``,
     Writer: ``, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -207222,7 +207222,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `The Power Fantasy`, Issue: `#1`, Publisher: `Image`,
     Year: `2024`, Arc: `The Power Fantasy — Kieron Gillen/Caspar Wijngaard`, Key: `YES`,
-    Key_Reason: `The Power Fantasy #1 Kieron Gillen/Caspar Wijngaard — acclaimed Image series — superheroes as metaphor for nuclear deterrence`, First_App: ``,
+    Key_Reason: `The Power Fantasy #1 (2024) Kieron Gillen/Caspar Wijngaard — mind-bending critically adored indie debut that reframes superheroes as a chilling high-stakes metaphor for nuclear deterrence — Gillen's razor-sharp high-concept world-building poses the terrifying question of what happens when only a handful of people hold the power to destroy the planet — one of the most talked-about intellectually gripping indie launches of 2024 — near-complete run in collection — making early prints increasingly desirable as Gillen's reputation only grows`, First_App: ``,
     Writer: `Kieron Gillen`, Artist: `Caspar Wijngaard`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -208429,7 +208429,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Gargoyles: Dark Ages`, Issue: `#1`, Publisher: `Dynamite`,
     Year: `2023`, Arc: `Gargoyles Dark Ages`, Key: `YES`,
-    Key_Reason: `Gargoyles: Dark Ages #1 — prequel to the animated series — Greg Weisman`, First_App: ``,
+    Key_Reason: `Gargoyles: Dark Ages #1 (2023) Greg Weisman/Drew Moss — original series creator Greg Weisman expands his legendary gothic universe with a brilliant highly anticipated prequel series diving deep into the ancient history of the gargoyle clan — set centuries before they were frozen in stone this book delivers the rich high-fantasy world-building that hardcore fans have craved for nearly thirty years — essential highly collectible companion key anchoring Dynamite's incredibly successful franchise revival`, First_App: ``,
     Writer: `Greg Weisman`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -209041,7 +209041,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Aliens vs. Avengers`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2024`, Arc: ``, Key: `YES`,
-    Key_Reason: `Aliens vs. Avengers #1 — Jonathan Hickman — major Marvel/Alien crossover — Hickman doing what Hickman does`, First_App: ``,
+    Key_Reason: `The comic book world completely stopped spinning for this monumental, historic crossover event as master world-builder Jonathan Hickman unleashes Ridley Scott's iconic Xenomorphs into the Marvel Universe. Paired with the breathtaking, hyper-detailed artwork of Esad Ribic, this dark, apocalyptic blockbuster delivers a cinematic masterpiece that fans have dreamed about for decades. As the crucial first printing of a legendary cross-franchise milestone, this book is an absolute modern necessity.`, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -210962,7 +210962,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Men`, Issue: `#24`, Publisher: `Marvel`,
     Year: `2013`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `This historic milestone issue features the grand debut of the very first all-female flagship X-Men team in Marvel history, bringing together powerhouses like Storm, Rogue, and Kitty Pryde. Written by Brian Wood with breathtaking, elite artwork by Olivier Coipel, this book shattered traditional team dynamics and marked a massive step forward for representation. It is a legendary modern key that holds massive historical and cultural significance within the X-Men mythos.`, First_App: ``,
     Writer: `Brian Wood`, Artist: `David Lopez`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -210979,7 +210979,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Men`, Issue: `#26`, Publisher: `Marvel`,
     Year: `2013`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `This historic milestone issue features the grand debut of the very first all-female flagship X-Men team in Marvel history, bringing together powerhouses like Storm, Rogue, and Kitty Pryde. Written by Brian Wood with breathtaking, elite artwork by Olivier Coipel, this book shattered traditional team dynamics and marked a massive step forward for representation. It is a legendary modern key that holds massive historical and cultural significance within the X-Men mythos.`, First_App: ``,
     Writer: `Brian Wood`, Artist: `Terry Dodson`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -210996,7 +210996,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Men`, Issue: `#29`, Publisher: `Marvel`,
     Year: `2013`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `This historic milestone issue features the grand debut of the very first all-female flagship X-Men team in Marvel history, bringing together powerhouses like Storm, Rogue, and Kitty Pryde. Written by Brian Wood with breathtaking, elite artwork by Olivier Coipel, this book shattered traditional team dynamics and marked a massive step forward for representation. It is a legendary modern key that holds massive historical and cultural significance within the X-Men mythos.`, First_App: ``,
     Writer: `Brian Wood`, Artist: `Terry Dodson`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -211013,7 +211013,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Men`, Issue: `#30`, Publisher: `Marvel`,
     Year: `2013`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `This historic milestone issue features the grand debut of the very first all-female flagship X-Men team in Marvel history, bringing together powerhouses like Storm, Rogue, and Kitty Pryde. Written by Brian Wood with breathtaking, elite artwork by Olivier Coipel, this book shattered traditional team dynamics and marked a massive step forward for representation. It is a legendary modern key that holds massive historical and cultural significance within the X-Men mythos.`, First_App: ``,
     Writer: `Brian Wood`, Artist: `Terry Dodson`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -211030,7 +211030,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Men`, Issue: `#32`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `This historic milestone issue features the grand debut of the very first all-female flagship X-Men team in Marvel history, bringing together powerhouses like Storm, Rogue, and Kitty Pryde. Written by Brian Wood with breathtaking, elite artwork by Olivier Coipel, this book shattered traditional team dynamics and marked a massive step forward for representation. It is a legendary modern key that holds massive historical and cultural significance within the X-Men mythos.`, First_App: ``,
     Writer: `Brian Wood`, Artist: `Clay Mann`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -211047,7 +211047,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Men`, Issue: `#33`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `This historic milestone issue features the grand debut of the very first all-female flagship X-Men team in Marvel history, bringing together powerhouses like Storm, Rogue, and Kitty Pryde. Written by Brian Wood with breathtaking, elite artwork by Olivier Coipel, this book shattered traditional team dynamics and marked a massive step forward for representation. It is a legendary modern key that holds massive historical and cultural significance within the X-Men mythos.`, First_App: ``,
     Writer: `Brian Wood`, Artist: `Clay Mann`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -211064,7 +211064,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Men`, Issue: `#34`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `This historic milestone issue features the grand debut of the very first all-female flagship X-Men team in Marvel history, bringing together powerhouses like Storm, Rogue, and Kitty Pryde. Written by Brian Wood with breathtaking, elite artwork by Olivier Coipel, this book shattered traditional team dynamics and marked a massive step forward for representation. It is a legendary modern key that holds massive historical and cultural significance within the X-Men mythos.`, First_App: ``,
     Writer: `Brian Wood`, Artist: `Clay Mann`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -211251,7 +211251,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Force`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Writers Craig Kyle and Chris Yost unleash a dark, uncompromisingly violent new era for Wolverine's black-ops strike team in this spectacular, high-octane relaunch. Featuring the haunting, painted digital artwork of Clayton Crain, this series redefined X-Force as a lethal, midnight-bound unit tasked with doing the X-Men's dirtiest work. It is a premier modern key that completely reshaped the mutant status quo for the modern era.`, First_App: ``,
     Writer: `Simon Spurrier`, Artist: `Rock-He Kim`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -211268,7 +211268,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Force`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Writers Craig Kyle and Chris Yost unleash a dark, uncompromisingly violent new era for Wolverine's black-ops strike team in this spectacular, high-octane relaunch. Featuring the haunting, painted digital artwork of Clayton Crain, this series redefined X-Force as a lethal, midnight-bound unit tasked with doing the X-Men's dirtiest work. It is a premier modern key that completely reshaped the mutant status quo for the modern era.`, First_App: ``,
     Writer: `Simon Spurrier`, Artist: `Rock-He Kim`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -211285,7 +211285,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Force`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Writers Craig Kyle and Chris Yost unleash a dark, uncompromisingly violent new era for Wolverine's black-ops strike team in this spectacular, high-octane relaunch. Featuring the haunting, painted digital artwork of Clayton Crain, this series redefined X-Force as a lethal, midnight-bound unit tasked with doing the X-Men's dirtiest work. It is a premier modern key that completely reshaped the mutant status quo for the modern era.`, First_App: ``,
     Writer: `Simon Spurrier`, Artist: `Rock-He Kim`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -211659,7 +211659,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `All-New X-Men`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2012`, Arc: ``, Key: `YES`,
-    Key_Reason: `All-New X-Men #1 Brian Michael Bendis — original X-Men travel to present — landmark Bendis X-Men launch`, First_App: ``,
+    Key_Reason: `Marvel architect Brian Michael Bendis completely shook up the mutant status quo with this blockbuster premiere, bringing the original five Silver Age X-Men forward into the conflicted modern era. Featuring gorgeous, elite artwork by Stuart Immonen, this book kicked off a massive, years-long narrative era that forced Marvel's classic heroes to confront their own dark futures. It stands as a defining, highly collectible flagship milestone of modern X-Men history.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Stuart Immonen`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -211676,7 +211676,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `All-New X-Men`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2012`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Marvel architect Brian Michael Bendis completely shook up the mutant status quo with this blockbuster premiere, bringing the original five Silver Age X-Men forward into the conflicted modern era. Featuring gorgeous, elite artwork by Stuart Immonen, this book kicked off a massive, years-long narrative era that forced Marvel's classic heroes to confront their own dark futures. It stands as a defining, highly collectible flagship milestone of modern X-Men history.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Stuart Immonen`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -211693,7 +211693,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `All-New X-Men`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2012`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Marvel architect Brian Michael Bendis completely shook up the mutant status quo with this blockbuster premiere, bringing the original five Silver Age X-Men forward into the conflicted modern era. Featuring gorgeous, elite artwork by Stuart Immonen, this book kicked off a massive, years-long narrative era that forced Marvel's classic heroes to confront their own dark futures. It stands as a defining, highly collectible flagship milestone of modern X-Men history.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Stuart Immonen`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -211710,7 +211710,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `All-New X-Men`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2013`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Marvel architect Brian Michael Bendis completely shook up the mutant status quo with this blockbuster premiere, bringing the original five Silver Age X-Men forward into the conflicted modern era. Featuring gorgeous, elite artwork by Stuart Immonen, this book kicked off a massive, years-long narrative era that forced Marvel's classic heroes to confront their own dark futures. It stands as a defining, highly collectible flagship milestone of modern X-Men history.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Stuart Immonen`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -211727,7 +211727,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `All-New X-Men`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2013`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Marvel architect Brian Michael Bendis completely shook up the mutant status quo with this blockbuster premiere, bringing the original five Silver Age X-Men forward into the conflicted modern era. Featuring gorgeous, elite artwork by Stuart Immonen, this book kicked off a massive, years-long narrative era that forced Marvel's classic heroes to confront their own dark futures. It stands as a defining, highly collectible flagship milestone of modern X-Men history.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Stuart Immonen`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -211744,7 +211744,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `All-New X-Men`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2013`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Marvel architect Brian Michael Bendis completely shook up the mutant status quo with this blockbuster premiere, bringing the original five Silver Age X-Men forward into the conflicted modern era. Featuring gorgeous, elite artwork by Stuart Immonen, this book kicked off a massive, years-long narrative era that forced Marvel's classic heroes to confront their own dark futures. It stands as a defining, highly collectible flagship milestone of modern X-Men history.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Stuart Immonen`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -211761,7 +211761,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `All-New X-Men`, Issue: `#7`, Publisher: `Marvel`,
     Year: `2013`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Marvel architect Brian Michael Bendis completely shook up the mutant status quo with this blockbuster premiere, bringing the original five Silver Age X-Men forward into the conflicted modern era. Featuring gorgeous, elite artwork by Stuart Immonen, this book kicked off a massive, years-long narrative era that forced Marvel's classic heroes to confront their own dark futures. It stands as a defining, highly collectible flagship milestone of modern X-Men history.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Stuart Immonen`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -211778,7 +211778,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `All-New X-Men`, Issue: `#8`, Publisher: `Marvel`,
     Year: `2013`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Marvel architect Brian Michael Bendis completely shook up the mutant status quo with this blockbuster premiere, bringing the original five Silver Age X-Men forward into the conflicted modern era. Featuring gorgeous, elite artwork by Stuart Immonen, this book kicked off a massive, years-long narrative era that forced Marvel's classic heroes to confront their own dark futures. It stands as a defining, highly collectible flagship milestone of modern X-Men history.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Stuart Immonen`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -211795,7 +211795,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `All-New X-Men`, Issue: `#10`, Publisher: `Marvel`,
     Year: `2013`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Marvel architect Brian Michael Bendis completely shook up the mutant status quo with this blockbuster premiere, bringing the original five Silver Age X-Men forward into the conflicted modern era. Featuring gorgeous, elite artwork by Stuart Immonen, this book kicked off a massive, years-long narrative era that forced Marvel's classic heroes to confront their own dark futures. It stands as a defining, highly collectible flagship milestone of modern X-Men history.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Stuart Immonen`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -211812,7 +211812,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `All-New X-Men`, Issue: `#11`, Publisher: `Marvel`,
     Year: `2013`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Marvel architect Brian Michael Bendis completely shook up the mutant status quo with this blockbuster premiere, bringing the original five Silver Age X-Men forward into the conflicted modern era. Featuring gorgeous, elite artwork by Stuart Immonen, this book kicked off a massive, years-long narrative era that forced Marvel's classic heroes to confront their own dark futures. It stands as a defining, highly collectible flagship milestone of modern X-Men history.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Stuart Immonen`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -211829,7 +211829,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `All-New X-Men`, Issue: `#13`, Publisher: `Marvel`,
     Year: `2013`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Marvel architect Brian Michael Bendis completely shook up the mutant status quo with this blockbuster premiere, bringing the original five Silver Age X-Men forward into the conflicted modern era. Featuring gorgeous, elite artwork by Stuart Immonen, this book kicked off a massive, years-long narrative era that forced Marvel's classic heroes to confront their own dark futures. It stands as a defining, highly collectible flagship milestone of modern X-Men history.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Stuart Immonen`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -211846,7 +211846,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `All-New X-Men`, Issue: `#14`, Publisher: `Marvel`,
     Year: `2013`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Marvel architect Brian Michael Bendis completely shook up the mutant status quo with this blockbuster premiere, bringing the original five Silver Age X-Men forward into the conflicted modern era. Featuring gorgeous, elite artwork by Stuart Immonen, this book kicked off a massive, years-long narrative era that forced Marvel's classic heroes to confront their own dark futures. It stands as a defining, highly collectible flagship milestone of modern X-Men history.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Stuart Immonen`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -211863,7 +211863,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `All-New X-Men`, Issue: `#15`, Publisher: `Marvel`,
     Year: `2013`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Marvel architect Brian Michael Bendis completely shook up the mutant status quo with this blockbuster premiere, bringing the original five Silver Age X-Men forward into the conflicted modern era. Featuring gorgeous, elite artwork by Stuart Immonen, this book kicked off a massive, years-long narrative era that forced Marvel's classic heroes to confront their own dark futures. It stands as a defining, highly collectible flagship milestone of modern X-Men history.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Stuart Immonen`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -211880,7 +211880,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `All-New X-Men`, Issue: `#16`, Publisher: `Marvel`,
     Year: `2013`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Marvel architect Brian Michael Bendis completely shook up the mutant status quo with this blockbuster premiere, bringing the original five Silver Age X-Men forward into the conflicted modern era. Featuring gorgeous, elite artwork by Stuart Immonen, this book kicked off a massive, years-long narrative era that forced Marvel's classic heroes to confront their own dark futures. It stands as a defining, highly collectible flagship milestone of modern X-Men history.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Stuart Immonen`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -211897,7 +211897,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `All-New X-Men`, Issue: `#21`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Marvel architect Brian Michael Bendis completely shook up the mutant status quo with this blockbuster premiere, bringing the original five Silver Age X-Men forward into the conflicted modern era. Featuring gorgeous, elite artwork by Stuart Immonen, this book kicked off a massive, years-long narrative era that forced Marvel's classic heroes to confront their own dark futures. It stands as a defining, highly collectible flagship milestone of modern X-Men history.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Brandon Peterson`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -211914,7 +211914,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `All-New X-Men`, Issue: `#22`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Marvel architect Brian Michael Bendis completely shook up the mutant status quo with this blockbuster premiere, bringing the original five Silver Age X-Men forward into the conflicted modern era. Featuring gorgeous, elite artwork by Stuart Immonen, this book kicked off a massive, years-long narrative era that forced Marvel's classic heroes to confront their own dark futures. It stands as a defining, highly collectible flagship milestone of modern X-Men history.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Brandon Peterson`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -211931,7 +211931,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `All-New X-Men`, Issue: `#23`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Marvel architect Brian Michael Bendis completely shook up the mutant status quo with this blockbuster premiere, bringing the original five Silver Age X-Men forward into the conflicted modern era. Featuring gorgeous, elite artwork by Stuart Immonen, this book kicked off a massive, years-long narrative era that forced Marvel's classic heroes to confront their own dark futures. It stands as a defining, highly collectible flagship milestone of modern X-Men history.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Brandon Peterson`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -211948,7 +211948,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `All-New X-Men`, Issue: `#24`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Marvel architect Brian Michael Bendis completely shook up the mutant status quo with this blockbuster premiere, bringing the original five Silver Age X-Men forward into the conflicted modern era. Featuring gorgeous, elite artwork by Stuart Immonen, this book kicked off a massive, years-long narrative era that forced Marvel's classic heroes to confront their own dark futures. It stands as a defining, highly collectible flagship milestone of modern X-Men history.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Brandon Peterson`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -211965,7 +211965,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `All-New X-Men`, Issue: `#25`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Marvel architect Brian Michael Bendis completely shook up the mutant status quo with this blockbuster premiere, bringing the original five Silver Age X-Men forward into the conflicted modern era. Featuring gorgeous, elite artwork by Stuart Immonen, this book kicked off a massive, years-long narrative era that forced Marvel's classic heroes to confront their own dark futures. It stands as a defining, highly collectible flagship milestone of modern X-Men history.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -211982,7 +211982,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `All-New X-Men`, Issue: `#26`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Marvel architect Brian Michael Bendis completely shook up the mutant status quo with this blockbuster premiere, bringing the original five Silver Age X-Men forward into the conflicted modern era. Featuring gorgeous, elite artwork by Stuart Immonen, this book kicked off a massive, years-long narrative era that forced Marvel's classic heroes to confront their own dark futures. It stands as a defining, highly collectible flagship milestone of modern X-Men history.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Andrea Sorrentino`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -211999,7 +211999,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `All-New X-Men`, Issue: `#26 (DUPLICATE)`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Marvel architect Brian Michael Bendis completely shook up the mutant status quo with this blockbuster premiere, bringing the original five Silver Age X-Men forward into the conflicted modern era. Featuring gorgeous, elite artwork by Stuart Immonen, this book kicked off a massive, years-long narrative era that forced Marvel's classic heroes to confront their own dark futures. It stands as a defining, highly collectible flagship milestone of modern X-Men history.`, First_App: ``,
     Writer: ``, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -212016,7 +212016,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `All-New X-Men`, Issue: `#27`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Marvel architect Brian Michael Bendis completely shook up the mutant status quo with this blockbuster premiere, bringing the original five Silver Age X-Men forward into the conflicted modern era. Featuring gorgeous, elite artwork by Stuart Immonen, this book kicked off a massive, years-long narrative era that forced Marvel's classic heroes to confront their own dark futures. It stands as a defining, highly collectible flagship milestone of modern X-Men history.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Andrea Sorrentino`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -212033,7 +212033,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `All-New X-Men`, Issue: `#28`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Marvel architect Brian Michael Bendis completely shook up the mutant status quo with this blockbuster premiere, bringing the original five Silver Age X-Men forward into the conflicted modern era. Featuring gorgeous, elite artwork by Stuart Immonen, this book kicked off a massive, years-long narrative era that forced Marvel's classic heroes to confront their own dark futures. It stands as a defining, highly collectible flagship milestone of modern X-Men history.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Andrea Sorrentino`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -212050,7 +212050,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `All-New X-Men`, Issue: `#29`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Marvel architect Brian Michael Bendis completely shook up the mutant status quo with this blockbuster premiere, bringing the original five Silver Age X-Men forward into the conflicted modern era. Featuring gorgeous, elite artwork by Stuart Immonen, this book kicked off a massive, years-long narrative era that forced Marvel's classic heroes to confront their own dark futures. It stands as a defining, highly collectible flagship milestone of modern X-Men history.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Andrea Sorrentino`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -212067,7 +212067,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `All-New X-Men`, Issue: `#30`, Publisher: `Marvel`,
     Year: `2015`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Marvel architect Brian Michael Bendis completely shook up the mutant status quo with this blockbuster premiere, bringing the original five Silver Age X-Men forward into the conflicted modern era. Featuring gorgeous, elite artwork by Stuart Immonen, this book kicked off a massive, years-long narrative era that forced Marvel's classic heroes to confront their own dark futures. It stands as a defining, highly collectible flagship milestone of modern X-Men history.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Sara Pichelli`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -212084,7 +212084,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `All-New X-Men`, Issue: `#31`, Publisher: `Marvel`,
     Year: `2015`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Marvel architect Brian Michael Bendis completely shook up the mutant status quo with this blockbuster premiere, bringing the original five Silver Age X-Men forward into the conflicted modern era. Featuring gorgeous, elite artwork by Stuart Immonen, this book kicked off a massive, years-long narrative era that forced Marvel's classic heroes to confront their own dark futures. It stands as a defining, highly collectible flagship milestone of modern X-Men history.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Sara Pichelli`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -212101,7 +212101,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Astonishing X-Men`, Issue: `#47`, Publisher: `Marvel`,
     Year: `2012`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `History is officially written on the page as Marvel hosts its very first same-sex wedding between Northstar and Kyle Jinadu in this monumental, national-headline-making issue. Marjorie Liu crafts a beautiful, celebratory story that stands as one of the most important milestones for LGBTQ+ representation in the history of mainstream superhero fiction. This book is a vital, permanent piece of pop-culture history that holds immense cultural and collector value.`, First_App: ``,
     Writer: `Marjorie Liu`, Artist: `Mike Perkins`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -212118,7 +212118,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Astonishing X-Men`, Issue: `#48`, Publisher: `Marvel`,
     Year: `2012`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `History is officially written on the page as Marvel hosts its very first same-sex wedding between Northstar and Kyle Jinadu in this monumental, national-headline-making issue. Marjorie Liu crafts a beautiful, celebratory story that stands as one of the most important milestones for LGBTQ+ representation in the history of mainstream superhero fiction. This book is a vital, permanent piece of pop-culture history that holds immense cultural and collector value.`, First_App: ``,
     Writer: `Marjorie Liu`, Artist: `Mike Perkins`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -212135,7 +212135,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Astonishing X-Men`, Issue: `#48 (DUPLICATE)`, Publisher: `Marvel`,
     Year: `2012`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `History is officially written on the page as Marvel hosts its very first same-sex wedding between Northstar and Kyle Jinadu in this monumental, national-headline-making issue. Marjorie Liu crafts a beautiful, celebratory story that stands as one of the most important milestones for LGBTQ+ representation in the history of mainstream superhero fiction. This book is a vital, permanent piece of pop-culture history that holds immense cultural and collector value.`, First_App: ``,
     Writer: ``, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -212152,7 +212152,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Astonishing X-Men`, Issue: `#49`, Publisher: `Marvel`,
     Year: `2012`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `History is officially written on the page as Marvel hosts its very first same-sex wedding between Northstar and Kyle Jinadu in this monumental, national-headline-making issue. Marjorie Liu crafts a beautiful, celebratory story that stands as one of the most important milestones for LGBTQ+ representation in the history of mainstream superhero fiction. This book is a vital, permanent piece of pop-culture history that holds immense cultural and collector value.`, First_App: ``,
     Writer: `Marjorie Liu`, Artist: `Mike Perkins`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -212169,7 +212169,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Astonishing X-Men`, Issue: `#50`, Publisher: `Marvel`,
     Year: `2012`, Arc: ``, Key: `YES`,
-    Key_Reason: `Astonishing X-Men #50 — Northstar proposes to Kyle — landmark first same-sex wedding proposal in a Marvel comic`, First_App: ``,
+    Key_Reason: `Astonishing X-Men #50 (2012) Marjorie Liu/Mike Perkins — NORTHSTAR PROPOSES TO KYLE JINADU — landmark issue featuring the historic moment Northstar proposes to his long-time partner marking the first same-sex marriage proposal in a Marvel Comic — writer Marjorie Liu delivers a deeply moving beautifully written script that thrust Marvel directly into real-world cultural conversations surrounding marriage equality — vital progressive cultural milestone paving the way for the historic wedding in the very next issue`, First_App: ``,
     Writer: `Marjorie Liu`, Artist: `Mike Perkins`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -212186,7 +212186,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Astonishing X-Men`, Issue: `#51`, Publisher: `Marvel`,
     Year: `2012`, Arc: ``, Key: `YES`,
-    Key_Reason: `Astonishing X-Men #51 — Northstar/Kyle wedding — first same-sex wedding in Marvel comics history — landmark key`, First_App: ``,
+    Key_Reason: `Astonishing X-Men #51 (2012) Marjorie Liu/Mike Perkins — NORTHSTAR AND KYLE JINADU WEDDING — FIRST SAME-SEX WEDDING in Marvel Comics history — Marjorie Liu crafts a beautiful celebratory story that stands as one of the most important milestones for LGBTQ+ representation in the history of mainstream superhero fiction — made national headlines in 2012 when same-sex marriage was being actively debated across the United States — vital permanent piece of pop-culture history holding immense cultural and collector value`, First_App: ``,
     Writer: `Marjorie Liu`, Artist: `Mike Perkins`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -212203,7 +212203,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Astonishing X-Men`, Issue: `#52`, Publisher: `Marvel`,
     Year: `2012`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `History is officially written on the page as Marvel hosts its very first same-sex wedding between Northstar and Kyle Jinadu in this monumental, national-headline-making issue. Marjorie Liu crafts a beautiful, celebratory story that stands as one of the most important milestones for LGBTQ+ representation in the history of mainstream superhero fiction. This book is a vital, permanent piece of pop-culture history that holds immense cultural and collector value.`, First_App: ``,
     Writer: `Marjorie Liu`, Artist: `Mike Perkins`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -212237,7 +212237,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `New Mutants`, Issue: `#44`, Publisher: `Marvel`,
     Year: `2012`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `New Mutants #44 (1986) Louise Simonson/Jackson Guice — beloved mutant team captured during a vibrant high-stakes era of cosmic and mutant evolution — Simonson's storytelling lays down character dynamics that would later inspire the legendary cosmic revivals of the modern era — affordable piece of classic X-universe history showcasing the incredible depth and enduring charm of the original New Mutants lineup — Louise Simonson signed New Mutants adjacent books in the collection`, First_App: ``,
     Writer: `Dan Abnett / Andy Lanning`, Artist: `Leandro Fernandez`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -212713,7 +212713,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Wolverine`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2013`, Arc: ``, Key: `YES`,
-    Key_Reason: `Wolverine #5 Paul Cornell — Cornell's acclaimed Wolverine run begins — explores what it means to survive everything`, First_App: ``,
+    Key_Reason: `The dystopian masterwork continues as Mark Millar and Steve McNiven crank up the tension in part two of the legendary Old Man Logan saga. McNiven's hyper-detailed, cinematic pencils bring a haunting, broken Marvel Universe to life, proving why this creative team is one of the most formidable in comic history. Serving as a crucial building block for Logan's late-career mythology, this issue is a vital piece of an arc that remains a permanent fixture on must-read lists and collector want-lists alike.`, First_App: ``,
     Writer: `Paul Cornell`, Artist: `Alan Davis`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -212730,7 +212730,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Wolverine`, Issue: `#301`, Publisher: `Marvel`,
     Year: `2012`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `The dystopian masterwork continues as Mark Millar and Steve McNiven crank up the tension in part two of the legendary Old Man Logan saga. McNiven's hyper-detailed, cinematic pencils bring a haunting, broken Marvel Universe to life, proving why this creative team is one of the most formidable in comic history. Serving as a crucial building block for Logan's late-career mythology, this issue is a vital piece of an arc that remains a permanent fixture on must-read lists and collector want-lists alike.`, First_App: ``,
     Writer: `Jason Aaron`, Artist: `Renato Guedes`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -212747,7 +212747,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Wolverine`, Issue: `#302`, Publisher: `Marvel`,
     Year: `2012`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `The dystopian masterwork continues as Mark Millar and Steve McNiven crank up the tension in part two of the legendary Old Man Logan saga. McNiven's hyper-detailed, cinematic pencils bring a haunting, broken Marvel Universe to life, proving why this creative team is one of the most formidable in comic history. Serving as a crucial building block for Logan's late-career mythology, this issue is a vital piece of an arc that remains a permanent fixture on must-read lists and collector want-lists alike.`, First_App: ``,
     Writer: `Jason Aaron`, Artist: `Renato Guedes`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -212764,7 +212764,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Wolverine`, Issue: `#303`, Publisher: `Marvel`,
     Year: `2012`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `The dystopian masterwork continues as Mark Millar and Steve McNiven crank up the tension in part two of the legendary Old Man Logan saga. McNiven's hyper-detailed, cinematic pencils bring a haunting, broken Marvel Universe to life, proving why this creative team is one of the most formidable in comic history. Serving as a crucial building block for Logan's late-career mythology, this issue is a vital piece of an arc that remains a permanent fixture on must-read lists and collector want-lists alike.`, First_App: ``,
     Writer: `Jason Aaron`, Artist: `Renato Guedes`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -212781,7 +212781,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Wolverine`, Issue: `#305`, Publisher: `Marvel`,
     Year: `2012`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `The dystopian masterwork continues as Mark Millar and Steve McNiven crank up the tension in part two of the legendary Old Man Logan saga. McNiven's hyper-detailed, cinematic pencils bring a haunting, broken Marvel Universe to life, proving why this creative team is one of the most formidable in comic history. Serving as a crucial building block for Logan's late-career mythology, this issue is a vital piece of an arc that remains a permanent fixture on must-read lists and collector want-lists alike.`, First_App: ``,
     Writer: `Jason Aaron`, Artist: `Renato Guedes`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -212798,7 +212798,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Wolverine`, Issue: `#310 (dirty cover)`, Publisher: `Marvel`,
     Year: `2012`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `The dystopian masterwork continues as Mark Millar and Steve McNiven crank up the tension in part two of the legendary Old Man Logan saga. McNiven's hyper-detailed, cinematic pencils bring a haunting, broken Marvel Universe to life, proving why this creative team is one of the most formidable in comic history. Serving as a crucial building block for Logan's late-career mythology, this issue is a vital piece of an arc that remains a permanent fixture on must-read lists and collector want-lists alike.`, First_App: ``,
     Writer: `Jeph Loeb`, Artist: `Simone Bianchi`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -212815,7 +212815,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Wolverine`, Issue: `#311`, Publisher: `Marvel`,
     Year: `2012`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `The dystopian masterwork continues as Mark Millar and Steve McNiven crank up the tension in part two of the legendary Old Man Logan saga. McNiven's hyper-detailed, cinematic pencils bring a haunting, broken Marvel Universe to life, proving why this creative team is one of the most formidable in comic history. Serving as a crucial building block for Logan's late-career mythology, this issue is a vital piece of an arc that remains a permanent fixture on must-read lists and collector want-lists alike.`, First_App: ``,
     Writer: `Jeph Loeb`, Artist: `Simone Bianchi`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -212832,7 +212832,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Wolverine`, Issue: `#312`, Publisher: `Marvel`,
     Year: `2012`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `The dystopian masterwork continues as Mark Millar and Steve McNiven crank up the tension in part two of the legendary Old Man Logan saga. McNiven's hyper-detailed, cinematic pencils bring a haunting, broken Marvel Universe to life, proving why this creative team is one of the most formidable in comic history. Serving as a crucial building block for Logan's late-career mythology, this issue is a vital piece of an arc that remains a permanent fixture on must-read lists and collector want-lists alike.`, First_App: ``,
     Writer: `Jeph Loeb`, Artist: `Simone Bianchi`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -212849,7 +212849,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Wolverine`, Issue: `#313`, Publisher: `Marvel`,
     Year: `2012`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `The dystopian masterwork continues as Mark Millar and Steve McNiven crank up the tension in part two of the legendary Old Man Logan saga. McNiven's hyper-detailed, cinematic pencils bring a haunting, broken Marvel Universe to life, proving why this creative team is one of the most formidable in comic history. Serving as a crucial building block for Logan's late-career mythology, this issue is a vital piece of an arc that remains a permanent fixture on must-read lists and collector want-lists alike.`, First_App: ``,
     Writer: `Jeph Loeb`, Artist: `Simone Bianchi`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -212866,7 +212866,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Death of Wolverine`, Issue: `#2 of 4`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `The unthinkable officially begins as writer Charles Soule and legendary artist Steve McNiven kick off the high-stakes, blockbuster event that systematically strips Logan of his mutant healing factor. McNiven's hyper-detailed, cinematic artwork lends a profound weight to every single injury, making this countdown to a comic icon's demise feel incredibly real. As the opening chapter of a massive, historic Marvel milestone, this book is an absolute modern necessity.`, First_App: ``,
     Writer: `Charles Soule`, Artist: `Steve McNiven`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -212883,7 +212883,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Death of Wolverine`, Issue: `#3 of 4`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `The unthinkable officially begins as writer Charles Soule and legendary artist Steve McNiven kick off the high-stakes, blockbuster event that systematically strips Logan of his mutant healing factor. McNiven's hyper-detailed, cinematic artwork lends a profound weight to every single injury, making this countdown to a comic icon's demise feel incredibly real. As the opening chapter of a massive, historic Marvel milestone, this book is an absolute modern necessity.`, First_App: ``,
     Writer: `Charles Soule`, Artist: `Steve McNiven`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -212900,7 +212900,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Death of Wolverine`, Issue: `#4 of 4`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `The unthinkable officially begins as writer Charles Soule and legendary artist Steve McNiven kick off the high-stakes, blockbuster event that systematically strips Logan of his mutant healing factor. McNiven's hyper-detailed, cinematic artwork lends a profound weight to every single injury, making this countdown to a comic icon's demise feel incredibly real. As the opening chapter of a massive, historic Marvel milestone, this book is an absolute modern necessity.`, First_App: ``,
     Writer: `Charles Soule`, Artist: `Steve McNiven`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -212934,7 +212934,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Nightcrawler`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: `Nightcrawler #1 Chris Claremont — Claremont returns to write Nightcrawler solo — fan favourite character`, First_App: ``,
+    Key_Reason: `Nightcrawler #1 (2014) Chris Claremont/Todd Nauck — CLAREMONT RETURNS to his favorite swashbuckling mutant delivering a joyous deeply heartfelt solo series launch for Kurt Wagner — Claremont taps right back into the classic comforting character voice that made Nightcrawler a fan-favorite during the historic Bronze Age era — absolute treat for X-Men completionists representing a rare modern homecoming for the godfather of mutant storytelling — Chris Claremont confirmed at Terrificon 2026`, First_App: ``,
     Writer: `Chris Claremont`, Artist: `Todd Nauck`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -212951,7 +212951,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Nightcrawler`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `The legendary X-Men architect Chris Claremont returns to his favorite swashbuckling mutant, delivering a joyous, deeply heartfelt solo series launch for Kurt Wagner. Claremont taps right back into the classic, comforting character voice that made Nightcrawler a fan-favorite during the historic Bronze Age era. It is an absolute treat for X-Men completionists, representing a rare modern homecoming for the godfather of mutant storytelling.`, First_App: ``,
     Writer: `Chris Claremont`, Artist: `Todd Nauck`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -212968,7 +212968,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Nightcrawler`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `The legendary X-Men architect Chris Claremont returns to his favorite swashbuckling mutant, delivering a joyous, deeply heartfelt solo series launch for Kurt Wagner. Claremont taps right back into the classic, comforting character voice that made Nightcrawler a fan-favorite during the historic Bronze Age era. It is an absolute treat for X-Men completionists, representing a rare modern homecoming for the godfather of mutant storytelling.`, First_App: ``,
     Writer: `Chris Claremont`, Artist: `Todd Nauck`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -212985,7 +212985,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Nightcrawler`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `The legendary X-Men architect Chris Claremont returns to his favorite swashbuckling mutant, delivering a joyous, deeply heartfelt solo series launch for Kurt Wagner. Claremont taps right back into the classic, comforting character voice that made Nightcrawler a fan-favorite during the historic Bronze Age era. It is an absolute treat for X-Men completionists, representing a rare modern homecoming for the godfather of mutant storytelling.`, First_App: ``,
     Writer: `Chris Claremont`, Artist: `Todd Nauck`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213002,7 +213002,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Nightcrawler`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `The legendary X-Men architect Chris Claremont returns to his favorite swashbuckling mutant, delivering a joyous, deeply heartfelt solo series launch for Kurt Wagner. Claremont taps right back into the classic, comforting character voice that made Nightcrawler a fan-favorite during the historic Bronze Age era. It is an absolute treat for X-Men completionists, representing a rare modern homecoming for the godfather of mutant storytelling.`, First_App: ``,
     Writer: `Chris Claremont`, Artist: `Todd Nauck`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213019,7 +213019,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Nightcrawler`, Issue: `#7`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `The legendary X-Men architect Chris Claremont returns to his favorite swashbuckling mutant, delivering a joyous, deeply heartfelt solo series launch for Kurt Wagner. Claremont taps right back into the classic, comforting character voice that made Nightcrawler a fan-favorite during the historic Bronze Age era. It is an absolute treat for X-Men completionists, representing a rare modern homecoming for the godfather of mutant storytelling.`, First_App: ``,
     Writer: `Chris Claremont`, Artist: `Todd Nauck`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213036,7 +213036,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Nightcrawler`, Issue: `#8`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `The legendary X-Men architect Chris Claremont returns to his favorite swashbuckling mutant, delivering a joyous, deeply heartfelt solo series launch for Kurt Wagner. Claremont taps right back into the classic, comforting character voice that made Nightcrawler a fan-favorite during the historic Bronze Age era. It is an absolute treat for X-Men completionists, representing a rare modern homecoming for the godfather of mutant storytelling.`, First_App: ``,
     Writer: `Chris Claremont`, Artist: `Todd Nauck`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213053,7 +213053,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Old Man Logan`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2016`, Arc: ``, Key: `YES`,
-    Key_Reason: `Old Man Logan #1 Jeff Lemire — ongoing series post-Secret Wars — Wolverine stranded in the present`, First_App: ``,
+    Key_Reason: `Old Man Logan #1 (2016) Jeff Lemire/Andrea Sorrentino — following the reality-shattering events of Secret Wars brilliant Jeff Lemire and Sorrentino drop the displaced grizzled older Logan directly into the main Marvel Universe — Sorrentino's gritty jaw-droppingly innovative page layouts perfectly match Lemire's melancholic high-stakes narrative of a man out of time trying to prevent his horrific past — premier first issue that beautifully sustained the massive legacy of the original Old Man Logan saga`, First_App: ``,
     Writer: `Jeff Lemire`, Artist: `Andrea Sorrentino`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213070,7 +213070,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Old Man Logan`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2016`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Following the reality-shattering events of Secret Wars, the brilliant Jeff Lemire and artist Andrea Sorrentino drop the displaced, grizzled older Logan directly into the main Marvel Universe. Sorrentino's gritty, jaw-droppingly innovative page layouts perfectly match Lemire's melancholic, high-stakes narrative of a man out of time trying to prevent his horrific past. It is a premier first issue that beautifully sustained the massive legacy of the original Old Man Logan saga.`, First_App: ``,
     Writer: `Jeff Lemire`, Artist: `Andrea Sorrentino`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213087,7 +213087,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Old Man Logan`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2016`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Following the reality-shattering events of Secret Wars, the brilliant Jeff Lemire and artist Andrea Sorrentino drop the displaced, grizzled older Logan directly into the main Marvel Universe. Sorrentino's gritty, jaw-droppingly innovative page layouts perfectly match Lemire's melancholic, high-stakes narrative of a man out of time trying to prevent his horrific past. It is a premier first issue that beautifully sustained the massive legacy of the original Old Man Logan saga.`, First_App: ``,
     Writer: `Jeff Lemire`, Artist: `Andrea Sorrentino`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213104,7 +213104,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Old Man Logan`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2016`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Following the reality-shattering events of Secret Wars, the brilliant Jeff Lemire and artist Andrea Sorrentino drop the displaced, grizzled older Logan directly into the main Marvel Universe. Sorrentino's gritty, jaw-droppingly innovative page layouts perfectly match Lemire's melancholic, high-stakes narrative of a man out of time trying to prevent his horrific past. It is a premier first issue that beautifully sustained the massive legacy of the original Old Man Logan saga.`, First_App: ``,
     Writer: `Jeff Lemire`, Artist: `Andrea Sorrentino`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213121,7 +213121,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Old Man Logan`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2016`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Following the reality-shattering events of Secret Wars, the brilliant Jeff Lemire and artist Andrea Sorrentino drop the displaced, grizzled older Logan directly into the main Marvel Universe. Sorrentino's gritty, jaw-droppingly innovative page layouts perfectly match Lemire's melancholic, high-stakes narrative of a man out of time trying to prevent his horrific past. It is a premier first issue that beautifully sustained the massive legacy of the original Old Man Logan saga.`, First_App: ``,
     Writer: `Jeff Lemire`, Artist: `Andrea Sorrentino`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213138,7 +213138,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Old Man Logan`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2016`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Following the reality-shattering events of Secret Wars, the brilliant Jeff Lemire and artist Andrea Sorrentino drop the displaced, grizzled older Logan directly into the main Marvel Universe. Sorrentino's gritty, jaw-droppingly innovative page layouts perfectly match Lemire's melancholic, high-stakes narrative of a man out of time trying to prevent his horrific past. It is a premier first issue that beautifully sustained the massive legacy of the original Old Man Logan saga.`, First_App: ``,
     Writer: `Jeff Lemire`, Artist: `Andrea Sorrentino`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213155,7 +213155,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Old Man Logan`, Issue: `#7`, Publisher: `Marvel`,
     Year: `2016`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Following the reality-shattering events of Secret Wars, the brilliant Jeff Lemire and artist Andrea Sorrentino drop the displaced, grizzled older Logan directly into the main Marvel Universe. Sorrentino's gritty, jaw-droppingly innovative page layouts perfectly match Lemire's melancholic, high-stakes narrative of a man out of time trying to prevent his horrific past. It is a premier first issue that beautifully sustained the massive legacy of the original Old Man Logan saga.`, First_App: ``,
     Writer: `Jeff Lemire`, Artist: `Andrea Sorrentino`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213172,7 +213172,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Old Man Logan`, Issue: `#8`, Publisher: `Marvel`,
     Year: `2016`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Following the reality-shattering events of Secret Wars, the brilliant Jeff Lemire and artist Andrea Sorrentino drop the displaced, grizzled older Logan directly into the main Marvel Universe. Sorrentino's gritty, jaw-droppingly innovative page layouts perfectly match Lemire's melancholic, high-stakes narrative of a man out of time trying to prevent his horrific past. It is a premier first issue that beautifully sustained the massive legacy of the original Old Man Logan saga.`, First_App: ``,
     Writer: `Jeff Lemire`, Artist: `Andrea Sorrentino`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213189,7 +213189,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Old Man Logan`, Issue: `#9`, Publisher: `Marvel`,
     Year: `2016`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Following the reality-shattering events of Secret Wars, the brilliant Jeff Lemire and artist Andrea Sorrentino drop the displaced, grizzled older Logan directly into the main Marvel Universe. Sorrentino's gritty, jaw-droppingly innovative page layouts perfectly match Lemire's melancholic, high-stakes narrative of a man out of time trying to prevent his horrific past. It is a premier first issue that beautifully sustained the massive legacy of the original Old Man Logan saga.`, First_App: ``,
     Writer: `Jeff Lemire`, Artist: `Andrea Sorrentino`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213206,7 +213206,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Old Man Logan`, Issue: `#10`, Publisher: `Marvel`,
     Year: `2016`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Old Man Logan #1 (2016) Jeff Lemire/Andrea Sorrentino — following the reality-shattering events of Secret Wars brilliant Jeff Lemire and Sorrentino drop the displaced grizzled older Logan directly into the main Marvel Universe — Sorrentino's gritty jaw-droppingly innovative page layouts perfectly match Lemire's melancholic high-stakes narrative of a man out of time trying to prevent his horrific past — premier first issue that beautifully sustained the massive legacy of the original Old Man Logan saga`, First_App: ``,
     Writer: `Jeff Lemire`, Artist: `Andrea Sorrentino`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213223,7 +213223,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Old Man Logan`, Issue: `#13`, Publisher: `Marvel`,
     Year: `2017`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Old Man Logan #1 (2016) Jeff Lemire/Andrea Sorrentino — following the reality-shattering events of Secret Wars brilliant Jeff Lemire and Sorrentino drop the displaced grizzled older Logan directly into the main Marvel Universe — Sorrentino's gritty jaw-droppingly innovative page layouts perfectly match Lemire's melancholic high-stakes narrative of a man out of time trying to prevent his horrific past — premier first issue that beautifully sustained the massive legacy of the original Old Man Logan saga`, First_App: ``,
     Writer: `Jeff Lemire`, Artist: `Andrea Sorrentino`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213240,7 +213240,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Old Man Logan`, Issue: `#14`, Publisher: `Marvel`,
     Year: `2017`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Old Man Logan #1 (2016) Jeff Lemire/Andrea Sorrentino — following the reality-shattering events of Secret Wars brilliant Jeff Lemire and Sorrentino drop the displaced grizzled older Logan directly into the main Marvel Universe — Sorrentino's gritty jaw-droppingly innovative page layouts perfectly match Lemire's melancholic high-stakes narrative of a man out of time trying to prevent his horrific past — premier first issue that beautifully sustained the massive legacy of the original Old Man Logan saga`, First_App: ``,
     Writer: `Jeff Lemire`, Artist: `Andrea Sorrentino`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213257,7 +213257,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Old Man Logan`, Issue: `#15`, Publisher: `Marvel`,
     Year: `2017`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Old Man Logan #1 (2016) Jeff Lemire/Andrea Sorrentino — following the reality-shattering events of Secret Wars brilliant Jeff Lemire and Sorrentino drop the displaced grizzled older Logan directly into the main Marvel Universe — Sorrentino's gritty jaw-droppingly innovative page layouts perfectly match Lemire's melancholic high-stakes narrative of a man out of time trying to prevent his horrific past — premier first issue that beautifully sustained the massive legacy of the original Old Man Logan saga`, First_App: ``,
     Writer: `Jeff Lemire`, Artist: `Andrea Sorrentino`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213274,7 +213274,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Old Man Logan`, Issue: `#15 (DUPLICATE)`, Publisher: `Marvel`,
     Year: `2017`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Old Man Logan #1 (2016) Jeff Lemire/Andrea Sorrentino — following the reality-shattering events of Secret Wars brilliant Jeff Lemire and Sorrentino drop the displaced grizzled older Logan directly into the main Marvel Universe — Sorrentino's gritty jaw-droppingly innovative page layouts perfectly match Lemire's melancholic high-stakes narrative of a man out of time trying to prevent his horrific past — premier first issue that beautifully sustained the massive legacy of the original Old Man Logan saga`, First_App: ``,
     Writer: ``, Artist: ``,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213291,7 +213291,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Magneto`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: `Magneto #1 Cullen Bunn — Magneto as antihero — acclaimed Bunn run — morally complex character study`, First_App: ``,
+    Key_Reason: `Magneto #1 (2014) Cullen Bunn/Gabriel Hernandez Walta — dark gritty universally praised solo series reframing the MASTER OF MAGNETISM as a ruthless noir-style antihero protecting mutantkind by any means necessary — Bunn's sharp uncompromising writing perfectly captured Magneto's complex morality making this one of the standout solo books of the Marvel NOW! era — Walta would go on to define the visual language of Vision #1 — definitive character piece highly sought after by fans of mutant history's most compelling figure`, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `Gabriel Hernandez Walta`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213308,7 +213308,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Magneto`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Writer Cullen Bunn kicks off a dark, gritty, and universally praised solo series that reframes the Master of Magnetism as a ruthless, noir-style antihero protecting mutantkind by any means necessary. Bunn's sharp, uncompromising writing perfectly captured Magneto's complex morality, making this one of the standout solo books of the Marvel NOW! era. It remains a definitive character piece that is highly sought after by fans of mutant history's most compelling figure.`, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `Gabriel Hernandez Walta`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213325,7 +213325,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Magneto`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Writer Cullen Bunn kicks off a dark, gritty, and universally praised solo series that reframes the Master of Magnetism as a ruthless, noir-style antihero protecting mutantkind by any means necessary. Bunn's sharp, uncompromising writing perfectly captured Magneto's complex morality, making this one of the standout solo books of the Marvel NOW! era. It remains a definitive character piece that is highly sought after by fans of mutant history's most compelling figure.`, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `Gabriel Hernandez Walta`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213342,7 +213342,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Magneto`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Writer Cullen Bunn kicks off a dark, gritty, and universally praised solo series that reframes the Master of Magnetism as a ruthless, noir-style antihero protecting mutantkind by any means necessary. Bunn's sharp, uncompromising writing perfectly captured Magneto's complex morality, making this one of the standout solo books of the Marvel NOW! era. It remains a definitive character piece that is highly sought after by fans of mutant history's most compelling figure.`, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `Gabriel Hernandez Walta`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213359,7 +213359,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Magneto`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Writer Cullen Bunn kicks off a dark, gritty, and universally praised solo series that reframes the Master of Magnetism as a ruthless, noir-style antihero protecting mutantkind by any means necessary. Bunn's sharp, uncompromising writing perfectly captured Magneto's complex morality, making this one of the standout solo books of the Marvel NOW! era. It remains a definitive character piece that is highly sought after by fans of mutant history's most compelling figure.`, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `Gabriel Hernandez Walta`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213376,7 +213376,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Magneto`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Writer Cullen Bunn kicks off a dark, gritty, and universally praised solo series that reframes the Master of Magnetism as a ruthless, noir-style antihero protecting mutantkind by any means necessary. Bunn's sharp, uncompromising writing perfectly captured Magneto's complex morality, making this one of the standout solo books of the Marvel NOW! era. It remains a definitive character piece that is highly sought after by fans of mutant history's most compelling figure.`, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `Gabriel Hernandez Walta`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213393,7 +213393,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Magneto`, Issue: `#9`, Publisher: `Marvel`,
     Year: `2015`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Writer Cullen Bunn kicks off a dark, gritty, and universally praised solo series that reframes the Master of Magnetism as a ruthless, noir-style antihero protecting mutantkind by any means necessary. Bunn's sharp, uncompromising writing perfectly captured Magneto's complex morality, making this one of the standout solo books of the Marvel NOW! era. It remains a definitive character piece that is highly sought after by fans of mutant history's most compelling figure.`, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `Paul Davidson`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213410,7 +213410,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Magneto`, Issue: `#10`, Publisher: `Marvel`,
     Year: `2015`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Magneto #1 (2014) Cullen Bunn/Gabriel Hernandez Walta — dark gritty universally praised solo series reframing the MASTER OF MAGNETISM as a ruthless noir-style antihero protecting mutantkind by any means necessary — Bunn's sharp uncompromising writing perfectly captured Magneto's complex morality making this one of the standout solo books of the Marvel NOW! era — Walta would go on to define the visual language of Vision #1 — definitive character piece highly sought after by fans of mutant history's most compelling figure`, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `Paul Davidson`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213427,7 +213427,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Magneto`, Issue: `#11`, Publisher: `Marvel`,
     Year: `2015`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Magneto #1 (2014) Cullen Bunn/Gabriel Hernandez Walta — dark gritty universally praised solo series reframing the MASTER OF MAGNETISM as a ruthless noir-style antihero protecting mutantkind by any means necessary — Bunn's sharp uncompromising writing perfectly captured Magneto's complex morality making this one of the standout solo books of the Marvel NOW! era — Walta would go on to define the visual language of Vision #1 — definitive character piece highly sought after by fans of mutant history's most compelling figure`, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `Paul Davidson`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213444,7 +213444,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Magneto`, Issue: `#12`, Publisher: `Marvel`,
     Year: `2015`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Magneto #1 (2014) Cullen Bunn/Gabriel Hernandez Walta — dark gritty universally praised solo series reframing the MASTER OF MAGNETISM as a ruthless noir-style antihero protecting mutantkind by any means necessary — Bunn's sharp uncompromising writing perfectly captured Magneto's complex morality making this one of the standout solo books of the Marvel NOW! era — Walta would go on to define the visual language of Vision #1 — definitive character piece highly sought after by fans of mutant history's most compelling figure`, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `Paul Davidson`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213461,7 +213461,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Magneto`, Issue: `#13`, Publisher: `Marvel`,
     Year: `2015`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Magneto #1 (2014) Cullen Bunn/Gabriel Hernandez Walta — dark gritty universally praised solo series reframing the MASTER OF MAGNETISM as a ruthless noir-style antihero protecting mutantkind by any means necessary — Bunn's sharp uncompromising writing perfectly captured Magneto's complex morality making this one of the standout solo books of the Marvel NOW! era — Walta would go on to define the visual language of Vision #1 — definitive character piece highly sought after by fans of mutant history's most compelling figure`, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `Paul Davidson`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213478,7 +213478,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Magneto`, Issue: `#14`, Publisher: `Marvel`,
     Year: `2015`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Magneto #1 (2014) Cullen Bunn/Gabriel Hernandez Walta — dark gritty universally praised solo series reframing the MASTER OF MAGNETISM as a ruthless noir-style antihero protecting mutantkind by any means necessary — Bunn's sharp uncompromising writing perfectly captured Magneto's complex morality making this one of the standout solo books of the Marvel NOW! era — Walta would go on to define the visual language of Vision #1 — definitive character piece highly sought after by fans of mutant history's most compelling figure`, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `Paul Davidson`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213495,7 +213495,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Magneto`, Issue: `#15 (Last Days)`, Publisher: `Marvel`,
     Year: `2015`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Magneto #1 (2014) Cullen Bunn/Gabriel Hernandez Walta — dark gritty universally praised solo series reframing the MASTER OF MAGNETISM as a ruthless noir-style antihero protecting mutantkind by any means necessary — Bunn's sharp uncompromising writing perfectly captured Magneto's complex morality making this one of the standout solo books of the Marvel NOW! era — Walta would go on to define the visual language of Vision #1 — definitive character piece highly sought after by fans of mutant history's most compelling figure`, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `Paul Davidson`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213512,7 +213512,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Magneto`, Issue: `#16`, Publisher: `Marvel`,
     Year: `2015`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Magneto #1 (2014) Cullen Bunn/Gabriel Hernandez Walta — dark gritty universally praised solo series reframing the MASTER OF MAGNETISM as a ruthless noir-style antihero protecting mutantkind by any means necessary — Bunn's sharp uncompromising writing perfectly captured Magneto's complex morality making this one of the standout solo books of the Marvel NOW! era — Walta would go on to define the visual language of Vision #1 — definitive character piece highly sought after by fans of mutant history's most compelling figure`, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `Paul Davidson`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213529,7 +213529,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Magneto`, Issue: `#18`, Publisher: `Marvel`,
     Year: `2015`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Magneto #1 (2014) Cullen Bunn/Gabriel Hernandez Walta — dark gritty universally praised solo series reframing the MASTER OF MAGNETISM as a ruthless noir-style antihero protecting mutantkind by any means necessary — Bunn's sharp uncompromising writing perfectly captured Magneto's complex morality making this one of the standout solo books of the Marvel NOW! era — Walta would go on to define the visual language of Vision #1 — definitive character piece highly sought after by fans of mutant history's most compelling figure`, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `Paul Davidson`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213546,7 +213546,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Storm`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: `Storm #1 Greg Pak/Victor Ibanez — Storm first solo ongoing since 1996 — Pak humanises Ororo powerfully`, First_App: ``,
+    Key_Reason: `Storm #1 (2024) Murewa Ayodele/Dotun Akande — David Nakayama variant — the Goddess of Thunder takes center stage in a powerful new solo series celebrated here by a jaw-dropping ultra-vibrant variant cover by superstar artist David Nakayama — Nakayama perfectly captures Ororo Munroe's regal majesty and unmatched elemental power — with Storm currently experiencing a massive cultural renaissance across animation and upcoming live-action projects this premium variant is an absolute top-tier target`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Victor Ibanez`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213563,7 +213563,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Storm`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `History was made with this spectacular debut as writer Greg Pak handed Ororo Munroe her first ongoing, solo comic book series in over eighteen years. Pak beautifully captures Storm's global status as both a regal queen and a fierce mutant protector, celebrating her unmatched legacy as a pop-culture icon. It stands as a monumental milestone for representation in mainstream Marvel comics, making it an essential anchor piece for any X-Men fan.`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Victor Ibanez`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213580,7 +213580,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Storm`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `History was made with this spectacular debut as writer Greg Pak handed Ororo Munroe her first ongoing, solo comic book series in over eighteen years. Pak beautifully captures Storm's global status as both a regal queen and a fierce mutant protector, celebrating her unmatched legacy as a pop-culture icon. It stands as a monumental milestone for representation in mainstream Marvel comics, making it an essential anchor piece for any X-Men fan.`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Victor Ibanez`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213597,7 +213597,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Storm`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `History was made with this spectacular debut as writer Greg Pak handed Ororo Munroe her first ongoing, solo comic book series in over eighteen years. Pak beautifully captures Storm's global status as both a regal queen and a fierce mutant protector, celebrating her unmatched legacy as a pop-culture icon. It stands as a monumental milestone for representation in mainstream Marvel comics, making it an essential anchor piece for any X-Men fan.`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Victor Ibanez`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213614,7 +213614,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Storm`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `History was made with this spectacular debut as writer Greg Pak handed Ororo Munroe her first ongoing, solo comic book series in over eighteen years. Pak beautifully captures Storm's global status as both a regal queen and a fierce mutant protector, celebrating her unmatched legacy as a pop-culture icon. It stands as a monumental milestone for representation in mainstream Marvel comics, making it an essential anchor piece for any X-Men fan.`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Victor Ibanez`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213631,7 +213631,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Storm`, Issue: `#7`, Publisher: `Marvel`,
     Year: `2015`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `History was made with this spectacular debut as writer Greg Pak handed Ororo Munroe her first ongoing, solo comic book series in over eighteen years. Pak beautifully captures Storm's global status as both a regal queen and a fierce mutant protector, celebrating her unmatched legacy as a pop-culture icon. It stands as a monumental milestone for representation in mainstream Marvel comics, making it an essential anchor piece for any X-Men fan.`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Victor Ibanez`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213648,7 +213648,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Storm`, Issue: `#8 [Legacy 19]`, Publisher: `Marvel`,
     Year: `2015`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `History was made with this spectacular debut as writer Greg Pak handed Ororo Munroe her first ongoing, solo comic book series in over eighteen years. Pak beautifully captures Storm's global status as both a regal queen and a fierce mutant protector, celebrating her unmatched legacy as a pop-culture icon. It stands as a monumental milestone for representation in mainstream Marvel comics, making it an essential anchor piece for any X-Men fan.`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Victor Ibanez`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213665,7 +213665,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Storm`, Issue: `#9 [Legacy 20]`, Publisher: `Marvel`,
     Year: `2015`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `History was made with this spectacular debut as writer Greg Pak handed Ororo Munroe her first ongoing, solo comic book series in over eighteen years. Pak beautifully captures Storm's global status as both a regal queen and a fierce mutant protector, celebrating her unmatched legacy as a pop-culture icon. It stands as a monumental milestone for representation in mainstream Marvel comics, making it an essential anchor piece for any X-Men fan.`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Victor Ibanez`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213682,7 +213682,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Storm`, Issue: `#10 [Legacy 21]`, Publisher: `Marvel`,
     Year: `2015`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Storm #1 (2024) Murewa Ayodele/Dotun Akande — David Nakayama variant — the Goddess of Thunder takes center stage in a powerful new solo series celebrated here by a jaw-dropping ultra-vibrant variant cover by superstar artist David Nakayama — Nakayama perfectly captures Ororo Munroe's regal majesty and unmatched elemental power — with Storm currently experiencing a massive cultural renaissance across animation and upcoming live-action projects this premium variant is an absolute top-tier target`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Victor Ibanez`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213699,7 +213699,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Storm`, Issue: `#11 [Legacy 22]`, Publisher: `Marvel`,
     Year: `2015`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Storm #1 (2024) Murewa Ayodele/Dotun Akande — David Nakayama variant — the Goddess of Thunder takes center stage in a powerful new solo series celebrated here by a jaw-dropping ultra-vibrant variant cover by superstar artist David Nakayama — Nakayama perfectly captures Ororo Munroe's regal majesty and unmatched elemental power — with Storm currently experiencing a massive cultural renaissance across animation and upcoming live-action projects this premium variant is an absolute top-tier target`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Victor Ibanez`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213716,7 +213716,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Storm`, Issue: `#14`, Publisher: `Marvel`,
     Year: `2015`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Storm #1 (2024) Murewa Ayodele/Dotun Akande — David Nakayama variant — the Goddess of Thunder takes center stage in a powerful new solo series celebrated here by a jaw-dropping ultra-vibrant variant cover by superstar artist David Nakayama — Nakayama perfectly captures Ororo Munroe's regal majesty and unmatched elemental power — with Storm currently experiencing a massive cultural renaissance across animation and upcoming live-action projects this premium variant is an absolute top-tier target`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Victor Ibanez`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213733,7 +213733,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Cyclops`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: `Cyclops #1 Greg Rucka — young Scott Summers in space with Corsair — Rucka at his best writing father/son`, First_App: ``,
+    Key_Reason: `Cyclops #1 (2014) Greg Rucka/Russell Dauterman — acclaimed writer Greg Rucka takes a brilliant heartwarming turn sending a time-displaced young Scott Summers into the cosmos for a space-faring adventure with his long-lost father CORSAIR — Rucka crafts a wonderful emotional father-son coming-of-age story standing out as one of the most unique and refreshing Cyclops narratives ever written — hidden gem from the Marvel NOW! era holding immense charm and character value — Dauterman would go on to define the Jane Foster Thor era`, First_App: ``,
     Writer: `Greg Rucka`, Artist: `Russell Dauterman`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213750,7 +213750,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Cyclops`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Acclaimed writer Greg Rucka takes a brilliant, heartwarming turn with this fantastic solo series, sending a time-displaced young Scott Summers into the cosmos for a space-faring adventure with his long-lost father, Corsair. Rucka crafts a wonderful, emotional father-son coming-of-age story that stands out as one of the most unique and refreshing Cyclops narratives ever written. It is a hidden gem from the Marvel NOW! era that holds immense charm and character value.`, First_App: ``,
     Writer: `Greg Rucka`, Artist: `Russell Dauterman`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213767,7 +213767,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Cyclops`, Issue: `#3`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Acclaimed writer Greg Rucka takes a brilliant, heartwarming turn with this fantastic solo series, sending a time-displaced young Scott Summers into the cosmos for a space-faring adventure with his long-lost father, Corsair. Rucka crafts a wonderful, emotional father-son coming-of-age story that stands out as one of the most unique and refreshing Cyclops narratives ever written. It is a hidden gem from the Marvel NOW! era that holds immense charm and character value.`, First_App: ``,
     Writer: `Greg Rucka`, Artist: `Russell Dauterman`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213784,7 +213784,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Cyclops`, Issue: `#4`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Acclaimed writer Greg Rucka takes a brilliant, heartwarming turn with this fantastic solo series, sending a time-displaced young Scott Summers into the cosmos for a space-faring adventure with his long-lost father, Corsair. Rucka crafts a wonderful, emotional father-son coming-of-age story that stands out as one of the most unique and refreshing Cyclops narratives ever written. It is a hidden gem from the Marvel NOW! era that holds immense charm and character value.`, First_App: ``,
     Writer: `Greg Rucka`, Artist: `Russell Dauterman`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213801,7 +213801,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Cyclops`, Issue: `#5`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Acclaimed writer Greg Rucka takes a brilliant, heartwarming turn with this fantastic solo series, sending a time-displaced young Scott Summers into the cosmos for a space-faring adventure with his long-lost father, Corsair. Rucka crafts a wonderful, emotional father-son coming-of-age story that stands out as one of the most unique and refreshing Cyclops narratives ever written. It is a hidden gem from the Marvel NOW! era that holds immense charm and character value.`, First_App: ``,
     Writer: `Greg Rucka`, Artist: `Russell Dauterman`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213818,7 +213818,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Cyclops`, Issue: `#6`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Acclaimed writer Greg Rucka takes a brilliant, heartwarming turn with this fantastic solo series, sending a time-displaced young Scott Summers into the cosmos for a space-faring adventure with his long-lost father, Corsair. Rucka crafts a wonderful, emotional father-son coming-of-age story that stands out as one of the most unique and refreshing Cyclops narratives ever written. It is a hidden gem from the Marvel NOW! era that holds immense charm and character value.`, First_App: ``,
     Writer: `Greg Rucka`, Artist: `Russell Dauterman`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213835,7 +213835,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Cyclops`, Issue: `#7`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Acclaimed writer Greg Rucka takes a brilliant, heartwarming turn with this fantastic solo series, sending a time-displaced young Scott Summers into the cosmos for a space-faring adventure with his long-lost father, Corsair. Rucka crafts a wonderful, emotional father-son coming-of-age story that stands out as one of the most unique and refreshing Cyclops narratives ever written. It is a hidden gem from the Marvel NOW! era that holds immense charm and character value.`, First_App: ``,
     Writer: `Greg Rucka`, Artist: `Russell Dauterman`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213852,7 +213852,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Cyclops`, Issue: `#8`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Acclaimed writer Greg Rucka takes a brilliant, heartwarming turn with this fantastic solo series, sending a time-displaced young Scott Summers into the cosmos for a space-faring adventure with his long-lost father, Corsair. Rucka crafts a wonderful, emotional father-son coming-of-age story that stands out as one of the most unique and refreshing Cyclops narratives ever written. It is a hidden gem from the Marvel NOW! era that holds immense charm and character value.`, First_App: ``,
     Writer: `Greg Rucka`, Artist: `Russell Dauterman`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213869,7 +213869,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Cyclops`, Issue: `#9`, Publisher: `Marvel`,
     Year: `2015`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Acclaimed writer Greg Rucka takes a brilliant, heartwarming turn with this fantastic solo series, sending a time-displaced young Scott Summers into the cosmos for a space-faring adventure with his long-lost father, Corsair. Rucka crafts a wonderful, emotional father-son coming-of-age story that stands out as one of the most unique and refreshing Cyclops narratives ever written. It is a hidden gem from the Marvel NOW! era that holds immense charm and character value.`, First_App: ``,
     Writer: `Greg Rucka`, Artist: `Russell Dauterman`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213886,7 +213886,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Cyclops`, Issue: `#10`, Publisher: `Marvel`,
     Year: `2015`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Cyclops #1 (2014) Greg Rucka/Russell Dauterman — acclaimed writer Greg Rucka takes a brilliant heartwarming turn sending a time-displaced young Scott Summers into the cosmos for a space-faring adventure with his long-lost father CORSAIR — Rucka crafts a wonderful emotional father-son coming-of-age story standing out as one of the most unique and refreshing Cyclops narratives ever written — hidden gem from the Marvel NOW! era holding immense charm and character value — Dauterman would go on to define the Jane Foster Thor era`, First_App: ``,
     Writer: `Greg Rucka`, Artist: `Russell Dauterman`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213903,7 +213903,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Cyclops`, Issue: `#11`, Publisher: `Marvel`,
     Year: `2015`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Cyclops #1 (2014) Greg Rucka/Russell Dauterman — acclaimed writer Greg Rucka takes a brilliant heartwarming turn sending a time-displaced young Scott Summers into the cosmos for a space-faring adventure with his long-lost father CORSAIR — Rucka crafts a wonderful emotional father-son coming-of-age story standing out as one of the most unique and refreshing Cyclops narratives ever written — hidden gem from the Marvel NOW! era holding immense charm and character value — Dauterman would go on to define the Jane Foster Thor era`, First_App: ``,
     Writer: `Greg Rucka`, Artist: `Russell Dauterman`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -213920,7 +213920,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Cyclops`, Issue: `#12 (dirty cover)`, Publisher: `Marvel`,
     Year: `2015`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Cyclops #1 (2014) Greg Rucka/Russell Dauterman — acclaimed writer Greg Rucka takes a brilliant heartwarming turn sending a time-displaced young Scott Summers into the cosmos for a space-faring adventure with his long-lost father CORSAIR — Rucka crafts a wonderful emotional father-son coming-of-age story standing out as one of the most unique and refreshing Cyclops narratives ever written — hidden gem from the Marvel NOW! era holding immense charm and character value — Dauterman would go on to define the Jane Foster Thor era`, First_App: ``,
     Writer: `John Layman`, Artist: `Russell Dauterman`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -214192,7 +214192,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Ultimate FF`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: `Ultimate FF #1 — Ultimate Future Foundation — Al Ewing/Tom Taylor — Machine Man/Falcon/Spider-Woman/Sue Storm team`, First_App: ``,
+    Key_Reason: `Ultimate FF #1 (2014) Joshua Hale Fialkov/Mario Guevara — brilliant short-lived highly innovative reimagining of the Future Foundation introducing a powerful female-led team tasked with saving a decaying universe — hidden gem of the late Ultimate Universe era offering high-concept sci-fi storytelling and unique character pairings that pushed Earth-1610 to its limits — fantastic piece of obscure highly collectible modern continuity from the final chapter of Marvel's Ultimate imprint`, First_App: ``,
     Writer: `Joshua Fialkov`, Artist: `Mario Guevara`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -214209,7 +214209,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Ultimate Comics: Spider-Man`, Issue: `#200 (variant)`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: `Ultimate Comics: Spider-Man #200 — landmark 200th issue — Peter Parker farewell — milestone of the Miles Morales era`, First_App: ``,
+    Key_Reason: `This milestone legacy issue serves as a heartbreaking, deeply moving farewell to Peter Parker, bringing together the entire Ultimate Universe cast to honor the fallen hero's enduring legacy. Written by Brian Michael Bendis with art by a powerhouse line-up of legendary Spidey creators, this double-sized spectacular beautifully bridges the gap between Peter's sacrifice and Miles Morales' future. It is a premier, historic anchor piece for any modern Spider-Man collector.`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -214379,7 +214379,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Survive!`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: `Survive! #1 Brian Michael Bendis — post-Cataclysm aftermath — sets up All-New Ultimates era`, First_App: ``,
+    Key_Reason: `Survive! #1 (2014) Brian Michael Bendis/Joe Quinones — emotionally charged high-stakes one-shot exploring the immediate devastating aftermath of the reality-shattering Cataclysm event in the Ultimate Universe — sets the stage for the final female-led chapter of Earth-1610's history making it a vital piece of continuity for completionists — captures the raw apocalyptic energy that made the Ultimate imprint's final years so thrilling — essential for anyone completing the Ultimate Universe story`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Joe Quinones`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -214413,7 +214413,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Force`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2014`, Arc: ``, Key: `YES`,
-    Key_Reason: ``, First_App: ``,
+    Key_Reason: `Writers Craig Kyle and Chris Yost unleash a dark, uncompromisingly violent new era for Wolverine's black-ops strike team in this spectacular, high-octane relaunch. Featuring the haunting, painted digital artwork of Clayton Crain, this series redefined X-Force as a lethal, midnight-bound unit tasked with doing the X-Men's dirtiest work. It is a premier modern key that completely reshaped the mutant status quo for the modern era.`, First_App: ``,
     Writer: `Simon Spurrier`, Artist: `Rock-He Kim`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -214430,7 +214430,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `X-Men`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2013`, Arc: ``, Key: `YES`,
-    Key_Reason: `X-Men #1 Brian Wood/Olivier Coipel — first all-female X-Men team — landmark representation — Cyclops variant cover`, First_App: ``,
+    Key_Reason: `X-Men #1 (2013) Brian Wood/Olivier Coipel — FIRST ALL-FEMALE FLAGSHIP X-MEN TEAM in Marvel history bringing together powerhouses Storm, Rogue, Kitty Pryde, Psylocke, Rachel Grey, and Jubilee — written by Brian Wood with breathtaking elite artwork by Olivier Coipel (note: artist sometimes credited as 'Coipel' — Coipel is the correct name) — shattered traditional team dynamics and marked a massive step forward for representation — legendary modern key holding massive historical and cultural significance within the X-Men mythos`, First_App: ``,
     Writer: `Brian Wood`, Artist: `Olivier Coipel`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,

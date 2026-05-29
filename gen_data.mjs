@@ -3,10 +3,10 @@ import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 const XLSX = require('xlsx');
 
-// Auto-detect the newest comics_inventory*.xlsx in attached_assets/
+// Auto-detect the newest comics_inventory*.xlsx in attached_assets/ (supports X_ prefix)
 import { readdirSync, statSync } from 'fs';
 const xlsxFiles = readdirSync('attached_assets')
-  .filter(f => f.startsWith('comics_inventory') && f.endsWith('.xlsx'))
+  .filter(f => f.includes('comics_inventory') && f.endsWith('.xlsx'))
   .map(f => ({ f, mtime: statSync(`attached_assets/${f}`).mtimeMs }))
   .sort((a, b) => b.mtime - a.mtime);
 if (!xlsxFiles.length) { console.error('No comics_inventory*.xlsx found in attached_assets/'); process.exit(1); }
