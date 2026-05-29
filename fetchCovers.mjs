@@ -19,10 +19,12 @@ import { DATA3 } from "./artifacts/comics-inventory/src/data/data3.js";
 const CACHE_FILE = "./covers.json";
 const API_BASE   = process.env.APP_URL || "http://localhost:80";
 
-const args     = process.argv.slice(2);
-const limit    = parseInt(args[args.indexOf("--limit")  + 1] || "190");
-const startAt  = parseInt(args[args.indexOf("--start")  + 1] || "0");
-const onlyKeys = args.includes("--keys-only");
+const args      = process.argv.slice(2);
+const limitIdx  = args.indexOf("--limit");
+const startIdx  = args.indexOf("--start");
+const limit     = limitIdx >= 0 ? parseInt(args[limitIdx + 1] ?? "190") : 190;
+const startAt   = startIdx >= 0 ? parseInt(args[startIdx + 1] ?? "0")   : 0;
+const onlyKeys  = args.includes("--keys-only");
 const delay    = 300; // ms between requests (~200/hr safe margin)
 
 // ── Load cache ────────────────────────────────────────────────────────────────
