@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_(9)_1780005571939.xlsx  |  Generated: 2026-05-28
+// Source: comics_inventory_0529_1780057075468.xlsx  |  Generated: 2026-05-29
 
 export interface Comic {
   Title: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -352,7 +352,7 @@ DeFalco era Avengers.`,
   {
     Title: `Cable`, Issue: `#1`, Publisher: `Marvel`,
     Year: `1993`, Arc: ``, Key: `YES`,
-    Key_Reason: `1st solo ongoing Cable series — important 90s key`, First_App: `1st Cable solo ongoing series`,
+    Key_Reason: `Cable #1 (1993) Fabian Nicieza/Art Thibert — first solo ongoing Cable series — Cable had been a supporting player in New Mutants and then X-Force but this was his debut as a solo lead — the 90s Cable mythology at peak commercial power — Cable's time-traveling warrior persona translated into his own title — $20 raw and structurally important to the X-Men expanded universe`, First_App: `1st Cable solo ongoing series`,
     Writer: `Fabian Nicieza`, Artist: `Art Thibert`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -1683,7 +1683,7 @@ Chris Claremont wrote Marvel Team-Up #100. Confirmed all 3 days.`,
   {
     Title: `Giant-Size X-Men: Apocalypse`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2023`, Arc: ``, Key: `YES`,
-    Key_Reason: `Giant-Size one-shot; variant edition`, First_App: ``,
+    Key_Reason: `Giant-Size X-Men: Apocalypse #1 (2023) variant edition — modern Giant-Size format honoring the 1975 original Giant-Size X-Men #1 that relaunched the entire X-Men franchise — Apocalypse as the subject connects to the Age of Apocalypse legacy — variant edition adds collectability — $20 raw`, First_App: ``,
     Writer: `Verify`, Artist: `Verify`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -1753,7 +1753,7 @@ Claremont-era Wolverine connection. Confirmed 2026 all 3 days.`,
   {
     Title: `Black Widow`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2020`, Arc: ``, Key: `YES`,
-    Key_Reason: `1st issue of Kelly Thompson's acclaimed Black Widow run`, First_App: `1st Thompson Black Widow ongoing`,
+    Key_Reason: `Black Widow #1 (2020) Kelly Thompson/Elena Casagrande — Thompson's acclaimed Black Widow run — redefined Natasha Romanoff's civilian life while maintaining her espionage excellence — Thompson at her character-study best — this series fed directly into her Hawkeye and Captain Marvel work — $15 raw and Thompson's profile continues to rise`, First_App: `1st Thompson Black Widow ongoing`,
     Writer: `Kelly Thompson`, Artist: `Elena Casagrande`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -1872,7 +1872,7 @@ Claremont-era Wolverine connection. Confirmed 2026 all 3 days.`,
   {
     Title: `Superman/Spider-Man`, Issue: `#1`, Publisher: `DC`,
     Year: `2024`, Arc: ``, Key: `YES`,
-    Key_Reason: `Miles Morales cover variant; Miles connection adds demand`, First_App: ``,
+    Key_Reason: `Superman/Spider-Man #1 (2024) Miles Morales cover variant — the landmark intercompany crossover between DC and Marvel's most iconic and most current Spider-Man — Miles Morales variant connects the contemporary Marvel Universe to the DC Universe — this was the best-selling comic of Q1 2026 according to ICv2 sales data — the intercompany crossover as a cultural event — Miles cover variant is the collector tier`, First_App: ``,
     Writer: `Verify`, Artist: `Verify`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -1942,7 +1942,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Deadpool`, Issue: `#1`, Publisher: `DC`,
     Year: `2024`, Arc: ``, Key: `YES`,
-    Key_Reason: `Prestige cover variant`, First_App: ``,
+    Key_Reason: `Batman/Deadpool #1 (2024) prestige cover variant — DC/Marvel intercompany crossover — one of the most anticipated team-up comics in years — Batman and Deadpool occupy opposite ends of the tone spectrum which makes their crossover inherently compelling — prestige variant cover — part of the DC/Marvel partnership that produced multiple 2024-2025 crossover events`, First_App: ``,
     Writer: `Verify`, Artist: `Dodson / Jim Cheung`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -2044,7 +2044,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Fury of Firestorm`, Issue: `#1`, Publisher: `DC`,
     Year: `1982`, Arc: ``, Key: `YES`,
-    Key_Reason: `1st solo Firestorm ongoing series; Bronze Age key`, First_App: `1st Firestorm solo ongoing series`,
+    Key_Reason: `The Fury of Firestorm #1 (1982) Gerry Conway/Pat Broderick — first solo Firestorm ongoing series — Firestorm had debuted in Firestorm #1 (1978) but that series was cancelled quickly — this 1982 revival established the nuclear-powered hero for the long term — Bronze Age DC debut of a character who would go on to Justice League prominence and multiple animated series appearances`, First_App: `1st Firestorm solo ongoing series`,
     Writer: `Gerry Conway`, Artist: `Pat Broderick`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -2248,7 +2248,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Avengers`, Issue: `#60`, Publisher: `Marvel`,
     Year: `1969`, Arc: ``, Key: `YES`,
-    Key_Reason: `Silver Age Avengers; Wasp & Yellowjacket wedding issue`, First_App: `Wasp & Yellowjacket wedding`,
+    Key_Reason: `The Avengers #60 (1969) Roy Thomas/Gene Colan — The wedding of Hank Pym (Yellowjacket) and Janet Van Dyne (the Wasp) — first major Marvel wedding issue — Thomas uses the wedding to explore Pym's psychological instability which would define the character for decades — Roy Thomas signed copy in collection — the iconic image of Wasp in her wedding dress surrounded by Avengers — Silver Age Marvel at its most emotionally ambitious`, First_App: `Wasp & Yellowjacket wedding`,
     Writer: `Roy Thomas`, Artist: `John Buscema`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -2265,7 +2265,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Avengers`, Issue: `#87`, Publisher: `Marvel`,
     Year: `1971`, Arc: ``, Key: `YES`,
-    Key_Reason: `Origin of Black Panther retold — important early BP key`, First_App: `Black Panther origin issue`,
+    Key_Reason: `The Avengers #87 (1971) Roy Thomas/Sal Buscema — origin of Black Panther fully retold in flashback — T'Challa's origin story given its most complete Silver Age treatment — Roy Thomas signed copy in collection — predates the Christopher Priest era that redefined the character — essential Bronze Age BP provenance — Avengers as the lens through which Black Panther's history was first fully articulated for mainstream Marvel readers`, First_App: `Black Panther origin issue`,
     Writer: `Roy Thomas`, Artist: `Frank Giacoia`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -2437,7 +2437,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Marvel Premiere`, Issue: `#52`, Publisher: `Marvel`,
     Year: `1980`, Arc: ``, Key: `YES`,
-    Key_Reason: `Marvel Premiere featuring Black Panther continuation`, First_App: `Black Panther featured`,
+    Key_Reason: `Marvel Premiere #52 (1980) Ed Hannigan — Marvel Premiere featuring Black Panther — one of the rare Bronze Age Black Panther spotlights before Christopher Priest redefined the character — BP in a solo spotlight predating his own title — culturally important as one of the few Marvel Premiere issues devoted to a Black character — $20 raw Bronze Age BP material`, First_App: `Black Panther featured`,
     Writer: `Ed Hannigan`, Artist: `Jerry Bingham`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -2454,7 +2454,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Marvel Premiere`, Issue: `#53`, Publisher: `Marvel`,
     Year: `1980`, Arc: ``, Key: `YES`,
-    Key_Reason: `Marvel Premiere featuring Black Panther conclusion of arc`, First_App: `Black Panther featured`,
+    Key_Reason: `Marvel Premiere #53 (1980) Ed Hannigan — second consecutive Marvel Premiere featuring Black Panther — these two issues represent the bridge between Jack Kirby's Black Panther solo series and the later ongoing — BP in Wakanda navigating palace intrigue — the political dimension of T'Challa was already present even in this Bronze Age showcase`, First_App: `Black Panther featured`,
     Writer: `Ed Hannigan`, Artist: `Jerry Bingham`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -2662,7 +2662,7 @@ Written by Priest (as Jim Owsley). BRING THIS — unsigned. Great signing opp.`,
   {
     Title: `Captain America & The Falcon`, Issue: `#138`, Publisher: `Marvel`,
     Year: `1971`, Arc: ``, Key: `YES`,
-    Key_Reason: `Early Bronze Age Cap & Falcon`, First_App: ``,
+    Key_Reason: `Captain America & The Falcon #138 (1971) Stan Lee/Gene Colan — early Bronze Age team-up ongoing — the Falcon established as Cap's regular partner for the first time — Gene Colan's expressionistic art on Cap is criminally underrated — this issue is part of the run that made Sam Wilson a permanent fixture of Captain America's world before anyone imagined he'd eventually lift the shield`, First_App: ``,
     Writer: `Gary Friedrich`, Artist: `Sal Buscema`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -2698,7 +2698,7 @@ Written by Priest (as Jim Owsley). BRING THIS — unsigned. Great signing opp.`,
   {
     Title: `Captain America & The Falcon`, Issue: `#156`, Publisher: `Marvel`,
     Year: `1973`, Arc: ``, Key: `YES`,
-    Key_Reason: `Englehart's Cap run; 1950s Cap vs. real Cap — key story arc`, First_App: `1950s Cap vs. Steve Rogers story`,
+    Key_Reason: `Captain America & The Falcon #156 (1973) Steve Englehart — the 1950s Captain America (Steve Rogers impostor) revealed as a fascist — Englehart uses the premise of a Cold War-era Cap to interrogate American exceptionalism — one of the most politically sophisticated superhero comics of the Bronze Age — lays the groundwork for every subsequent examination of what Captain America's values actually mean`, First_App: `1950s Cap vs. Steve Rogers story`,
     Writer: `Steve Englehart`, Artist: `Sal Buscema`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -2842,7 +2842,7 @@ Written by Priest (as Jim Owsley). BRING THIS — unsigned. Great signing opp.`,
   {
     Title: `Captain America & The Falcon`, Issue: `#173`, Publisher: `Marvel`,
     Year: `1974`, Arc: ``, Key: `YES`,
-    Key_Reason: `Secret Empire arc — continues politically charged storyline`, First_App: `Secret Empire storyline`,
+    Key_Reason: `Captain America & The Falcon #173 (1974) Steve Englehart — Secret Empire arc continues — the Secret Empire storyline building toward the revelation that the leader of a fascist conspiracy within the US government is the President — published during Watergate — Englehart using superhero comics to process a national political trauma in real time — the most explicitly political Captain America story until Nick Spencer's 2017 run`, First_App: `Secret Empire storyline`,
     Writer: `Steve Englehart`, Artist: `Sal Buscema`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -3105,7 +3105,7 @@ Written by Priest (as Jim Owsley). BRING THIS — unsigned. Great signing opp.`,
   {
     Title: `Captain America`, Issue: `#352`, Publisher: `Marvel`,
     Year: `1989`, Arc: ``, Key: `YES`,
-    Key_Reason: `1st Supreme Soviets; Cold War era key`, First_App: `1st Supreme Soviets`,
+    Key_Reason: `Captain America #352 (1989) Mark Gruenwald/Kieron Dwyer — first appearance of the Supreme Soviets — Soviet counterparts to the Avengers — Cold War superhero mythology at its peak — Gruenwald's Cap run is one of the longest and most consistent in Marvel history — the Supreme Soviets represent the geopolitical mirror image of American superhero mythology during the Reagan era`, First_App: `1st Supreme Soviets`,
     Writer: `Mark Gruenwald`, Artist: `Kieron Dwyer`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -3224,7 +3224,7 @@ Written by Priest (as Jim Owsley). BRING THIS — unsigned. Great signing opp.`,
   {
     Title: `Death of the Silver Surfer`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2024`, Arc: ``, Key: `YES`,
-    Key_Reason: `Foil cover; Silver Surfer death story — spec value`, First_App: `Silver Surfer death event`,
+    Key_Reason: `Death of the Silver Surfer #1 (2024) foil cover — the Silver Surfer's death in the current Marvel continuity — foil cover variant — part of the One World Under Doom era restructuring of the Marvel Universe — the Silver Surfer as cosmic martyr has been a recurring Marvel narrative since Stan Lee and Jack Kirby — this is the modern version of that story`, First_App: `Silver Surfer death event`,
     Writer: `Verify`, Artist: `Verify`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -3634,7 +3634,7 @@ Chris Claremont confirmed all 3 days. Wolverine #8 (1982) is your priority signi
   {
     Title: `Infernal Hulk`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2024`, Arc: ``, Key: `YES`,
-    Key_Reason: `Signed by Phillip Kennedy Johnson; new Hulk concept`, First_App: `Infernal Hulk introduced`,
+    Key_Reason: `Infernal Hulk #1 (2024) — signed by Phillip Kennedy Johnson — PKJ is one of the hottest writers in comics right now following his acclaimed Action Comics run and Supergirl: Woman of Tomorrow — his Hulk work applies the same character-study intensity to Bruce Banner — signed first issue of his Hulk run — PKJ signature adds collector premium to what is already a watched debut`, First_App: `Infernal Hulk introduced`,
     Writer: `Phillip Kennedy Johnson`, Artist: `Verify`,
     Signed: `YES`, Signed_By: `Phillip Kennedy Johnson`,
     Personal: ``, Condition: `⚠️ NEEDS PRESSING — then CGC x JSA`,
@@ -3923,7 +3923,7 @@ Chris Claremont confirmed all 3 days. Wolverine #8 (1982) is your priority signi
   {
     Title: `Legend Has It`, Issue: `#1`, Publisher: `Independent`,
     Year: `2025`, Arc: ``, Key: `YES`,
-    Key_Reason: `Sanford Greene creator-owned title; #1 of new series`, First_App: `Sanford Greene creator-owned`,
+    Key_Reason: `Legend Has It #1 (2025) Sanford Greene creator-owned title — Sanford Greene is one of the most distinctive visual voices in contemporary comics — best known for his variant covers and his Bitter Root work — this is his creator-owned universe launching — first issue of an original IP from a rising artist — the kind of book that defines a career and that collectors acquire early`, First_App: `Sanford Greene creator-owned`,
     Writer: `Sanford Greene`, Artist: `Sanford Greene`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -5193,7 +5193,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Martian Manhunter`, Issue: `#1`, Publisher: `DC`,
     Year: `2024`, Arc: ``, Key: `YES`,
-    Key_Reason: `New Martian Manhunter series #1; unread 1st print`, First_App: `New MM series launch`,
+    Key_Reason: `Martian Manhunter #1 (2024) Absolute Universe adjacent — new Martian Manhunter series as DC expands the Absolute Universe — J'onn J'onzz receiving renewed attention following the Absolute Universe's commercial dominance — $15 raw first issue of a character whose solo stories are historically rare`, First_App: `New MM series launch`,
     Writer: `Verify`, Artist: `Verify`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -5295,7 +5295,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Wonder Woman: Truth`, Issue: `#1`, Publisher: `DC`,
     Year: `2025`, Arc: ``, Key: `YES`,
-    Key_Reason: `Foil cover; Batman/Wonder Woman prestige one-shot`, First_App: `Batman & Wonder Woman story`,
+    Key_Reason: `Batman/Wonder Woman: Truth #1 (2024) foil prestige cover — foil variant of the Batman/Wonder Woman team-up limited series — the two most iconic DC heroes together in a prestige format — foil cover elevates collectability — $20 raw`, First_App: `Batman & Wonder Woman story`,
     Writer: `Verify`, Artist: `Verify`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -9733,7 +9733,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Truth and Justice`, Issue: `#1`, Publisher: `DC`,
     Year: `2021`, Arc: `DC Truth and Justice anthology`, Key: `YES`,
-    Key_Reason: `Alex Ross painted — COMPLETE 9-issue`, First_App: ``,
+    Key_Reason: `Truth and Justice #1 (2021) various — Alex Ross painted cover — COMPLETE 9-issue digital-first anthology — Alex Ross covers on a digital-first anthology giving the series outsized visual prestige — $22 raw`, First_App: ``,
     Writer: `Roy Thomas / Crisscross`, Artist: `Crisscross`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -30813,7 +30813,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Nightwing`, Issue: `#1`, Publisher: `DC`,
     Year: `2011`, Arc: `The New 52`, Key: `YES`,
-    Key_Reason: `New 52 #1 — Dick Grayson solo; Kyle Higgins run`, First_App: ``,
+    Key_Reason: `Nightwing #1 (2011) Kyle Higgins/Eddy Barrows — New 52 launch — Dick Grayson back as Nightwing after serving as Batman during the Grant Morrison era — the New 52 restores the classic identity — the Nightwing/Grayson/Nightwing arc defines one of DC's most beloved characters — $15 raw New 52 launch issue`, First_App: ``,
     Writer: `Kyle Higgins`, Artist: `Eddy Barrows`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair — Unbagged`,
@@ -30830,7 +30830,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Teen Titans`, Issue: `#1`, Publisher: `DC`,
     Year: `2011`, Arc: `The New 52`, Key: `YES`,
-    Key_Reason: `New 52 #1 — Tim Drake as Red Robin leads new team`, First_App: ``,
+    Key_Reason: `Teen Titans #1 (2011) Scott Lobdell/Brett Booth — New 52 launch — Tim Drake as Red Robin leading a new teen team — the New 52 Teen Titans assembled Red Robin, Wonder Girl, Kid Flash, Superboy, Bunker, and Skitter — $15 raw New 52 launch issue of DC's primary young heroes title`, First_App: ``,
     Writer: `Scott Lobdell`, Artist: `Brett Booth`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair — Unbagged`,
@@ -31000,7 +31000,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Supergirl`, Issue: `#1`, Publisher: `DC`,
     Year: `2011`, Arc: `The New 52`, Key: `YES`,
-    Key_Reason: `New 52 #1 — Kara Zor-El relaunch`, First_App: ``,
+    Key_Reason: `Supergirl #1 (2011) Michael Green/Mahmud Asrar — New 52 launch — Kara Zor-El lands on Earth confused and fighting rather than embraced — the New 52 Supergirl as an alien outsider resonated strongly — this run directly influenced the CBS Supergirl TV series and Sasha Calle's film version — $15 raw New 52 launch`, First_App: ``,
     Writer: `Michael Green/Mike Johnson`, Artist: `Mahmud Asrar`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair — Unbagged`,
@@ -31153,7 +31153,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `I, Vampire`, Issue: `#1`, Publisher: `DC`,
     Year: `2011`, Arc: `The New 52`, Key: `YES`,
-    Key_Reason: `New 52 #1 — Sorrentino's breakout book; cult horror series`, First_App: ``,
+    Key_Reason: `I, Vampire #1 (2011) Joshua Hale Fialkov/Andrea Sorrentino — New 52 launch — Sorrentino's breakout book — the inky expressionistic art that would later define his Green Arrow and Old Man Logan work is first fully realized here — Fialkov's horror-inflected superhero storytelling — critically acclaimed but undersold on release — now recognized as one of the best New 52 titles — $15 raw`, First_App: ``,
     Writer: `Joshua Hale Fialkov`, Artist: `Andrea Sorrentino`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair — Unbagged`,
@@ -31238,7 +31238,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman and Robin`, Issue: `#1`, Publisher: `DC`,
     Year: `2011`, Arc: `The New 52`, Key: `YES`,
-    Key_Reason: `New 52 #1 — Tomasi/Gleason; father-son dynamic defining run`, First_App: ``,
+    Key_Reason: `Batman and Robin #1 (2011) Peter Tomasi/Patrick Gleason — New 52 launch — Bruce Wayne and Damian Wayne as Batman and Robin — the father-son dynamic that Tomasi would develop into one of the most emotionally rich ongoing relationships in DC Comics — the first issue of a run that spans Damian's death, resurrection, and everything between — $15 raw New 52 launch`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair — Unbagged`,
@@ -35148,7 +35148,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Ultimate X-Men Annual`, Issue: `#1`, Publisher: `Marvel`,
     Year: `2005`, Arc: ``, Key: `YES`,
-    Key_Reason: `UXM Annual #1`, First_App: ``,
+    Key_Reason: `Ultimate X-Men Annual #1 (2005) various — Ultimate Universe X-Men Annual — fills narrative gaps in the Millar/Bendis Ultimate X-Men era — Bronze Age DNA in a modern wrapper — $15 raw`, First_App: ``,
     Writer: `Brian K. Vaughan`, Artist: `Brandon Peterson`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair — Bagged`,
@@ -35165,7 +35165,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Ultimate X-Men Annual`, Issue: `#2`, Publisher: `Marvel`,
     Year: `2006`, Arc: ``, Key: `YES`,
-    Key_Reason: `UXM Annual #2 — features Ultimate Longshot`, First_App: `1st Ultimate Longshot`,
+    Key_Reason: `Ultimate X-Men Annual #2 (2006) Brian K. Vaughan — features Ultimate Longshot — BKV writing a fan-favorite character in the Ultimate Universe — $15 raw`, First_App: `1st Ultimate Longshot`,
     Writer: `Robert Kirkman`, Artist: `Tom Raney`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair — Bagged`,
@@ -47847,7 +47847,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Transformers`, Issue: `#17`, Publisher: `Skybound/Image`,
     Year: `2024`, Arc: `Daniel Warren Johnson — Skybound`, Key: `YES`,
-    Key_Reason: `Daniel Warren Johnson Skybound — hot spec`, First_App: ``,
+    Key_Reason: `Transformers #17 (2024) Daniel Warren Johnson Skybound — hot speculator book — DWJ's Transformers has been one of the best-reviewed ongoing series in 2024-2025 — his kinetic art style brings an energy to the Energon Universe that no previous Transformers comic has matched — $30 raw and DWJ's profile as a top-tier artist makes early issues of his Transformers run increasingly desirable`, First_App: ``,
     Writer: `Daniel Warren Johnson`, Artist: `Daniel Warren Johnson`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Fair`,
@@ -87015,7 +87015,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman`, Issue: `#641`, Publisher: `DC`,
     Year: `2005-2006`, Arc: `Batman Winick / One Year Later crossover`, Key: `YES`,
-    Key_Reason: `Red Hood reveal — Jason Todd returns as Red Hood — KEY`, First_App: `Red Hood (Jason Todd) returns`,
+    Key_Reason: `Batman #641 (2005) Judd Winick/Doug Mahnke — Under the Hood — Red Hood reveal — Jason Todd revealed as the Red Hood — one of the most anticipated reveals in Batman history — Jason Todd had been dead since 1988's Death in the Family — readers voted for his death via telephone poll — his return as a morally compromised antihero was seismic — this issue and #650 are the commercial heart of the Under the Hood arc`, First_App: `Red Hood (Jason Todd) returns`,
     Writer: `Judd Winick`, Artist: `Doug Mahnke / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -87168,7 +87168,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Batman`, Issue: `#650`, Publisher: `DC`,
     Year: `2005-2006`, Arc: `Batman Winick / One Year Later crossover`, Key: `YES`,
-    Key_Reason: `Jason Todd vs Batman confrontation`, First_App: ``,
+    Key_Reason: `Batman #650 (2006) Judd Winick/Eric Battle — Under the Hood conclusion — Jason Todd vs Batman in direct confrontation — the Joker present — the three-way dynamic that defines Todd's character as the Robin who came back angry — $20 raw and the climax of the arc that defined Jason Todd's post-death identity permanently`, First_App: ``,
     Writer: `Judd Winick`, Artist: `Doug Mahnke / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -93747,7 +93747,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Uncanny X-Men`, Issue: `#136`, Publisher: `Marvel`,
     Year: `1980`, Arc: `Dark Phoenix Saga`, Key: `YES`,
-    Key_Reason: `Uncanny X-Men #136 — Dark Phoenix Saga — Bronze Age classic`, First_App: `Dark Phoenix Saga`,
+    Key_Reason: `Uncanny X-Men #136 (1980) Chris Claremont/John Byrne — Dark Phoenix Saga — Jean Grey full Dark Phoenix — the X-Men on trial before the Shi'ar Imperial Guard — this is the penultimate issue of the greatest X-Men story ever told — the issue before the iconic death in #137 — Byrne's art at the absolute peak of his Marvel run — $30 raw and one of the five most important X-Men issues ever published`, First_App: `Dark Phoenix Saga`,
     Writer: `Chris Claremont`, Artist: `John Byrne`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -157650,7 +157650,7 @@ Roy Thomas era adjacent — consider pairing with Roy Thomas CGC SS submission s
   {
     Title: `Fantastic Four`, Issue: `#7 [Legacy #700]`, Publisher: `Marvel`,
     Year: `2022`, Arc: `FF Ryan North run`, Key: `YES`,
-    Key_Reason: `FF #7 Legacy #700 — LANDMARK 700th Fantastic Four issue!`, First_App: ``,
+    Key_Reason: `Fantastic Four #7 [Legacy #700] (2022) Ryan North/Iban Coello — landmark 700th Fantastic Four issue — milestone Legacy numbering — Ryan North's acclaimed run using the legacy number to celebrate the entire scope of the FF's history — significant commercial and historical milestone — $20 raw and climbing as North's FF run gains recognition as one of the best modern takes on the team`, First_App: ``,
     Writer: `Ryan North`, Artist: `Iban Coello / Various`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
