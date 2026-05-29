@@ -1,5 +1,6 @@
 import { useEffect, useState, useCallback } from "react";
 import { UPDATE_FIELDS, getComicFlag, setComicFlag, clearComicFlag } from "@/lib/comicFlags";
+import { CoverImage, CoverModal } from "@/components/CoverImage";
 
 export type DrawerComic = {
   Title: string;
@@ -288,6 +289,7 @@ export default function ComicDrawer({ comic, comicKey, onClose, onFlagChange }: 
   const [selectedFields, setSelectedFields] = useState<string[]>([]);
   const [notes,          setNotes]          = useState("");
   const [showNotes,      setShowNotes]      = useState(false);
+  const [coverModalUrl,  setCoverModalUrl]  = useState<string | null | undefined>(undefined);
 
   // Load flag state when comic / key changes
   useEffect(() => {
@@ -415,17 +417,33 @@ export default function ComicDrawer({ comic, comicKey, onClose, onFlagChange }: 
         {/* Scrollable body */}
         <div style={{ flex:1, overflowY:"auto", padding:"16px 18px" }}>
 
-          {/* Key reason callout */}
-          {isKey && comic.Key_Reason && (
-            <div style={{ background:"#fff8e0", border:"1.5px solid #fde68a", borderRadius:6, padding:"10px 14px", marginBottom:12 }}>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"2px", color:"#8a6000", marginBottom:4 }}>KEY REASON</div>
-              <div style={{ fontSize:"0.88rem", color:"#5a4000", lineHeight:1.5 }}>{comic.Key_Reason}</div>
-              {comic.First_App && <div style={{ marginTop:6, fontSize:"0.78rem", color:"#8a6000", fontWeight:600 }}>1st App: {comic.First_App}</div>}
+          {/* Cover image */}
+          <div style={{ display:"flex", gap:14, marginBottom:14, alignItems:"flex-start" }}>
+            <CoverImage
+              comic={{ ...comic, Publisher: comic.Publisher ?? "", Year: comic.Year ?? "" }}
+              width={80}
+              height={120}
+              onClick={(large) => setCoverModalUrl(large)}
+              style={{ flexShrink:0, boxShadow:"0 4px 16px rgba(0,0,0,0.18)", borderRadius:5 }}
+            />
+            <div style={{ flex:1, minWidth:0 }}>
+              {isKey && comic.Key_Reason && (
+                <div style={{ background:"#fff8e0", border:"1.5px solid #fde68a", borderRadius:6, padding:"8px 12px" }}>
+                  <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"2px", color:"#8a6000", marginBottom:3 }}>KEY REASON</div>
+                  <div style={{ fontSize:"0.82rem", color:"#5a4000", lineHeight:1.5 }}>{comic.Key_Reason}</div>
+                  {comic.First_App && <div style={{ marginTop:4, fontSize:"0.75rem", color:"#8a6000", fontWeight:600 }}>1st App: {comic.First_App}</div>}
+                </div>
+              )}
+              {(!isKey || !comic.Key_Reason) && comic.Story_Pitch && comic.Story_Pitch.trim() && comic.Story_Pitch !== "nan" && (
+                <div style={{ fontFamily:"'Crimson Pro',serif", fontSize:"0.85rem", color:"var(--muted2)", lineHeight:1.5, fontStyle:"italic" }}>
+                  "{comic.Story_Pitch.substring(0, 180)}"
+                </div>
+              )}
             </div>
-          )}
+          </div>
 
-          {/* Story pitch */}
-          {comic.Story_Pitch && comic.Story_Pitch.trim() && comic.Story_Pitch !== "nan" && (
+          {/* Story pitch (full, shown below the cover/key row for keys; shown normally for non-keys) */}
+          {!isKey && comic.Story_Pitch && comic.Story_Pitch.trim() && comic.Story_Pitch !== "nan" && (
             <div style={{ background:"var(--surface)", border:"1px solid var(--border)", borderRadius:6, padding:"10px 14px", marginBottom:12, fontFamily:"'Crimson Pro',serif", fontSize:"0.92rem", color:"var(--text)", lineHeight:1.6, fontStyle:"italic" }}>
               "{comic.Story_Pitch}"
             </div>
@@ -545,6 +563,15 @@ export default function ComicDrawer({ comic, comicKey, onClose, onFlagChange }: 
           onFieldsChange={handleFieldsChange}
           onNotesChange={handleNotesChange}
           onClose={() => setShowNotes(false)}
+        />
+      )}
+
+      {/* Cover modal */}
+      {coverModalUrl !== undefined && (
+        <CoverModal
+          comic={{ ...comic, Publisher: comic.Publisher ?? "", Year: comic.Year ?? "" }}
+          largeUrl={coverModalUrl}
+          onClose={() => setCoverModalUrl(undefined)}
         />
       )}
 

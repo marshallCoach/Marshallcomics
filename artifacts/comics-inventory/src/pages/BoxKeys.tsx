@@ -1,5 +1,6 @@
 import { useState, useMemo, useRef } from "react";
 import { DATA3 } from "@/data/data3";
+import { CoverImage, CoverModal } from "@/components/CoverImage";
 import { SortableTable, ColDef } from "@/components/SortableTable";
 import { Paginator } from "@/components/Paginator";
 import ComicDrawer, { type DrawerComic } from "@/components/ComicDrawer";
@@ -117,6 +118,7 @@ export default function BoxKeys() {
   const [drawerComic, setDrawerComic] = useState<DrawerComic | null>(null);
   const [drawerKey,   setDrawerKey]   = useState<string | undefined>(undefined);
   const [flagVersion, setFlagVersion] = useState(0);
+  const [coverModal,  setCoverModal]  = useState<{ comic: typeof keys[number]; large: string | null } | null>(null);
 
   const flaggedKeys = useMemo(() => {
     const all = loadAllFlags();
@@ -303,11 +305,22 @@ export default function BoxKeys() {
                 <div key={i} className={`comic-card${isOpen?" open":""}`}
                   style={{ borderTop: isFlagged ? "3px solid #d97706" : "3px solid var(--gold)" }}
                   onClick={()=>toggle(i)}>
-                  <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", gap:6 }}>
-                    <div className="card-title" style={{ flex:1 }}>{k.Title || "Untitled"}</div>
-                    {isFlagged && <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.55rem", letterSpacing:"1px", color:"#92400e", background:"#fef3c7", border:"1px solid #fcd34d", borderRadius:3, padding:"1px 5px", flexShrink:0 }}>UPDATE</span>}
+                  <div style={{ display:"flex", gap:10, marginBottom:8 }}>
+                    <CoverImage
+                      comic={k}
+                      width={52}
+                      height={78}
+                      onClick={(large) => setCoverModal({ comic: k, large })}
+                      style={{ flexShrink: 0 }}
+                    />
+                    <div style={{ flex:1, minWidth:0 }}>
+                      <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", gap:6, marginBottom:4 }}>
+                        <div className="card-title" style={{ flex:1, marginBottom:0 }}>{k.Title || "Untitled"}</div>
+                        {isFlagged && <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.55rem", letterSpacing:"1px", color:"#92400e", background:"#fef3c7", border:"1px solid #fcd34d", borderRadius:3, padding:"1px 5px", flexShrink:0 }}>UPDATE</span>}
+                      </div>
+                      <div className="card-sub">Box {k.Box} · {k.Publisher} #{k.Issue} · {k.Year}</div>
+                    </div>
                   </div>
-                  <div className="card-sub">Box {k.Box} · {k.Publisher} #{k.Issue} · {k.Year}</div>
                   <div className="badges">
                     <span className="badge bk">KEY</span>
                     {isSigned && <span className="badge bs">SIGNED</span>}
@@ -349,6 +362,13 @@ export default function BoxKeys() {
         onClose={() => setDrawerComic(null)}
         onFlagChange={() => setFlagVersion(v => v + 1)}
       />
+      {coverModal && (
+        <CoverModal
+          comic={coverModal.comic}
+          largeUrl={coverModal.large}
+          onClose={() => setCoverModal(null)}
+        />
+      )}
     </div>
   );
 }

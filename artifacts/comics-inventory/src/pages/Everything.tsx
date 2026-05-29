@@ -1,6 +1,7 @@
 import { useState, useMemo, useCallback, useEffect, useRef } from "react";
 import { DATA3 } from "@/data/data3";
 import { getCoverSvgUrl, type ComicLike } from "@/utils/coverThumbnails";
+import { CoverImage, CoverModal } from "@/components/CoverImage";
 import { SortableTable, ColDef } from "@/components/SortableTable";
 import { Paginator } from "@/components/Paginator";
 import ComicDrawer, { type DrawerComic } from "@/components/ComicDrawer";
@@ -88,19 +89,14 @@ function BoxBadge({ box }: { box: string }) {
   );
 }
 
-function CoverThumb({ c }: { c: Comic }) {
-  const searchUrl = `https://comicvine.gamespot.com/search/?q=${encodeURIComponent(c.Title + " " + c.Issue)}`;
-  const svgUrl = getCoverSvgUrl(c as ComicLike, { width: 56, height: 84 });
+function CoverThumb({ c, onCoverClick }: { c: Comic; onCoverClick: (comic: Comic, large: string | null) => void }) {
   return (
-    <a
-      href={searchUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      title={`View cover for ${c.Title} #${c.Issue} on Comic Vine`}
-      style={{ display:"block", width:56, height:84, flexShrink:0, borderRadius:4, overflow:"hidden", textDecoration:"none", transition:"opacity 0.15s" }}
-    >
-      <img src={svgUrl} alt={`${c.Title} #${c.Issue}`} width={56} height={84} style={{ display:"block", width:"100%", height:"100%", borderRadius:4 }} />
-    </a>
+    <CoverImage
+      comic={c}
+      width={56}
+      height={84}
+      onClick={(largeUrl) => onCoverClick(c, largeUrl)}
+    />
   );
 }
 
@@ -130,6 +126,7 @@ export default function Everything({
   const [drawerComic, setDrawerComic] = useState<DrawerComic | null>(null);
   const [drawerKey,   setDrawerKey]   = useState<string | undefined>(undefined);
   const [flagVersion, setFlagVersion] = useState(0);
+  const [coverModal,  setCoverModal]  = useState<{ comic: Comic; large: string | null } | null>(null);
 
   const flaggedKeys = useMemo(() => {
     const all = loadAllFlags();
@@ -456,7 +453,8 @@ export default function Everything({
               <EverythingCard key={i} comic={c}
                 onTitleClick={t=>{setExactTitle(t);setQuery("");setSearched(true);setCardPage(1);}}
                 flagged={flaggedKeys.has(comicFlagKey(c.Title, c.Issue || "", c.Box || ""))}
-                onOpenDrawer={() => openDrawer(c)} />
+                onOpenDrawer={() => openDrawer(c)}
+                onCoverClick={(comic, large) => setCoverModal({ comic, large })} />
             ))}
           </div>
           <Paginator
@@ -480,15 +478,23 @@ export default function Everything({
         onClose={() => setDrawerComic(null)}
         onFlagChange={() => setFlagVersion(v => v + 1)}
       />
+      {coverModal && (
+        <CoverModal
+          comic={coverModal.comic}
+          largeUrl={coverModal.large}
+          onClose={() => setCoverModal(null)}
+        />
+      )}
     </div>
   );
 }
 
-function EverythingCard({ comic: c, onTitleClick, flagged, onOpenDrawer }: {
+function EverythingCard({ comic: c, onTitleClick, flagged, onOpenDrawer, onCoverClick }: {
   comic: Comic;
   onTitleClick?: (title: string) => void;
   flagged?: boolean;
   onOpenDrawer?: () => void;
+  onCoverClick?: (comic: Comic, large: string | null) => void;
 }) {
   const isKey    = (c.Key    || "").toUpperCase() === "YES";
   const isSigned = (c.Signed || "").toUpperCase() === "YES";
@@ -496,7 +502,7 @@ function EverythingCard({ comic: c, onTitleClick, flagged, onOpenDrawer }: {
   return (
     <div className="ev-card" style={{ borderTop: flagged ? "3px solid #d97706" : isKey ? "3px solid #d4a800" : undefined }}>
       <div style={{ display:"flex", gap:10, marginBottom:8 }}>
-        <CoverThumb c={c} />
+        <CoverThumb c={c} onCoverClick={onCoverClick ?? ((_c, _l) => {})} />
         <div style={{ flex:1, minWidth:0 }}>
           <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", marginBottom:4, gap:4 }}>
             <BoxBadge box={c.Box} />
