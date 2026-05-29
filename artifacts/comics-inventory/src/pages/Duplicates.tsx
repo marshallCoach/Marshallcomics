@@ -100,6 +100,8 @@ export default function Duplicates({ onNavigate }: Props) {
   const [sort,       setSort]       = useState<"count" | "alpha">("count");
   const [openKeys,   setOpenKeys]   = useState<Set<string>>(() => new Set(RAW_GROUPS.map(g => g.key)));
   const [showAll,    setShowAll]    = useState(false);
+  const [groupBy,    setGroupBy]    = useState<"title" | "box">("title");
+  const [openBoxes,  setOpenBoxes]  = useState<Set<string>>(new Set());
   const [showOutput,      setShowOutput]      = useState(false);
   const [showClaude,      setShowClaude]      = useState(false);
   const [copied,          setCopied]          = useState(false);
@@ -238,6 +240,23 @@ export default function Duplicates({ onNavigate }: Props) {
   }, [query, filter, sort, hidden]);
 
   const visible = showAll ? filtered : filtered.slice(0, 80);
+
+  // Groups by box
+  const byBox = useMemo(() => {
+    const map = new Map<string, DupGroup[]>();
+    for (const gr of filtered) {
+      const boxes = [...new Set(gr.copies.map(c => c.Box).filter(Boolean))];
+      for (const box of boxes) {
+        if (!map.has(box)) map.set(box, []);
+        map.get(box)!.push(gr);
+      }
+    }
+    return [...map.entries()].sort((a, b) => {
+      const na = parseInt(a[0]) || 9999;
+      const nb = parseInt(b[0]) || 9999;
+      return na - nb;
+    });
+  }, [filtered]);
 
   // Groups with any per-copy decision
   const classifiedGroups = useMemo(() => {
@@ -458,13 +477,183 @@ export default function Duplicates({ onNavigate }: Props) {
           <option value="count">Most Copies First</option>
           <option value="alpha">A → Z</option>
         </select>
-        <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginLeft: "auto", fontFamily: "'Bebas Neue',sans-serif", letterSpacing: "1px" }}>
-          {filtered.length.toLocaleString()} GROUPS
+        <div style={{ display: "flex", gap: 5, marginLeft: "auto", alignItems: "center" }}>
+          {(["title", "box"] as const).map(v => (
+            <button key={v} onClick={() => setGroupBy(v)} style={{
+              fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1.5px",
+              padding: "5px 12px", cursor: "pointer", borderRadius: 5, transition: "all 0.15s",
+              background: groupBy === v ? "var(--red)" : "var(--surface2)",
+              color:      groupBy === v ? "#fff"       : "var(--muted2)",
+              border:     groupBy === v ? "1.5px solid var(--red)" : "1.5px solid var(--border)",
+            }}>
+              {v === "title" ? "BY TITLE" : "BY BOX"}
+            </button>
+          ))}
+          <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginLeft: 8, fontFamily: "'Bebas Neue',sans-serif", letterSpacing: "1px" }}>
+            {filtered.length.toLocaleString()} GROUPS
+          </div>
         </div>
       </div>
 
-      {/* ── GROUP LIST ── */}
-      <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+      {/* ── BOX VIEW ── */}
+      {groupBy === "box" && (
+        <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+          {byBox.length === 0 && (
+            <div style={{ textAlign: "center", padding: "40px 20px", color: "var(--muted)", fontFamily: "'Bebas Neue',sans-serif", letterSpacing: "2px" }}>NO GROUPS MATCH</div>
+          )}
+          {byBox.map(([boxNum, groups]) => {
+            const isBoxOpen = openBoxes.has(boxNum);
+            return (
+              <div key={boxNum} style={{ border: "1.5px solid var(--border)", borderRadius: 8, overflow: "hidden" }}>
+                {/* Box section header */}
+                <div
+                  onClick={() => setOpenBoxes(prev => { const next = new Set(prev); if (next.has(boxNum)) next.delete(boxNum); else next.add(boxNum); return next; })}
+                  style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 14px", background: "var(--surface2)", cursor: "pointer", userSelect: "none" }}>
+                  <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem", letterSpacing: "2px", color: "var(--red)", lineHeight: 1 }}>BOX {boxNum}</div>
+                  <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem", letterSpacing: "1.5px", background: "var(--surface)", border: "1px solid var(--border)", color: "var(--muted2)", borderRadius: 3, padding: "2px 8px" }}>
+                    {groups.length} {groups.length === 1 ? "GROUP" : "GROUPS"}
+                  </span>
+                  <div style={{ marginLeft: "auto", color: "var(--muted)", fontSize: "0.7rem" }}>{isBoxOpen ? "▲" : "▼"}</div>
+                </div>
+
+                {isBoxOpen && (
+                  <div style={{ display: "flex", flexDirection: "column" }}>
+                    {groups.map(gr => {
+                      const isOpen   = openKeys.has(gr.key);
+                      const isHidden = hidden.has(gr.key);
+                      const flagColor = gr.flag === "same-box" ? "#dc2626" : "#d97706";
+                      const copiesInBox     = gr.copies.filter(c => c.Box === boxNum);
+                      const otherBoxes      = [...new Set(gr.copies.filter(c => c.Box !== boxNum).map(c => c.Box).filter(Boolean))].sort((a, b) => parseInt(a) - parseInt(b));
+                      const grCopyCounts    = { planned: 0, check: 0 };
+                      gr.copies.forEach((_, ci) => { const v = copyDecisions.get(ck(gr.key, ci)); if (v) grCopyCounts[v]++; });
+                      const hasCopyDecisions = grCopyCounts.planned > 0 || grCopyCounts.check > 0;
+                      const groupNote = notes.get(gr.key) || "";
+
+                      return (
+                        <div key={gr.key} style={{ borderTop: "1px solid var(--border)", background: isHidden ? "var(--surface2)" : hasCopyDecisions ? "#fefce8" : "var(--surface)", opacity: isHidden ? 0.55 : 1 }}>
+                          {/* Compact row */}
+                          <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "9px 14px", flexWrap: "wrap" }}>
+                            {/* Copy count */}
+                            <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem", color: isHidden ? "#9ca3af" : flagColor, lineHeight: 1, flexShrink: 0, minWidth: 22, textAlign: "center" }}>
+                              {gr.copies.length}
+                              <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.38rem", letterSpacing: "1px", color: "var(--muted)" }}>COPIES</div>
+                            </div>
+                            {/* Title + boxes */}
+                            <div
+                              onClick={() => !isHidden && setOpenKeys(prev => { const next = new Set(prev); if (next.has(gr.key)) next.delete(gr.key); else next.add(gr.key); return next; })}
+                              style={{ flex: 1, minWidth: 0, cursor: isHidden ? "default" : "pointer" }}>
+                              <div>
+                                <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.88rem", letterSpacing: "1px", color: isHidden ? "var(--muted)" : "var(--text)", textDecoration: isHidden ? "line-through" : "none" }}>{gr.title}</span>
+                                <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.82rem", color: "var(--red)", marginLeft: 6 }}>{gr.issue}</span>
+                                {gr.year && <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem", letterSpacing: "1px", color: "var(--muted)", marginLeft: 6 }}>({gr.year})</span>}
+                              </div>
+                              <div style={{ display: "flex", gap: 5, marginTop: 4, flexWrap: "wrap" }}>
+                                <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.54rem", letterSpacing: "1px", color: "#fff", background: "var(--red)", padding: "2px 8px", borderRadius: 3 }}>×{copiesInBox.length} HERE</span>
+                                {otherBoxes.map(b => (
+                                  <span key={b} style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.54rem", letterSpacing: "1px", color: "var(--muted2)", background: "var(--surface2)", border: "1px solid var(--border)", padding: "2px 7px", borderRadius: 3 }}>also Box {b}</span>
+                                ))}
+                              </div>
+                            </div>
+                            {/* Flag badge */}
+                            <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.52rem", letterSpacing: "1.5px", color: isHidden ? "#9ca3af" : flagColor, background: (isHidden ? "#9ca3af" : flagColor) + "14", border: `1px solid ${(isHidden ? "#9ca3af" : flagColor)}40`, padding: "2px 7px", borderRadius: 3, flexShrink: 0 }}>
+                              {gr.flag === "same-box" ? "SAME BOX" : "BOUGHT TWICE"}
+                            </span>
+                            {/* Decision summary badges */}
+                            {hasCopyDecisions && (
+                              <div style={{ display: "flex", gap: 4 }}>
+                                {grCopyCounts.planned > 0 && <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.52rem", letterSpacing: "1px", color: COPY_META.planned.color, background: COPY_META.planned.bg, border: `1px solid ${COPY_META.planned.border}`, padding: "2px 6px", borderRadius: 3 }}>{grCopyCounts.planned}P</span>}
+                                {grCopyCounts.check   > 0 && <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.52rem", letterSpacing: "1px", color: COPY_META.check.color,   background: COPY_META.check.bg,   border: `1px solid ${COPY_META.check.border}`,   padding: "2px 6px", borderRadius: 3 }}>{grCopyCounts.check}C</span>}
+                              </div>
+                            )}
+                            {/* HIDE / SHOW */}
+                            <button onClick={e => { e.stopPropagation(); toggleHide(gr.key); setOpenKeys(prev => { const next = new Set(prev); next.delete(gr.key); return next; }); }}
+                              style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.52rem", letterSpacing: "1px", padding: "4px 10px", border: `1.5px solid ${isHidden ? "#16a34a" : "#9ca3af"}`, background: isHidden ? "#f0faf4" : "var(--surface2)", color: isHidden ? "#16a34a" : "#9ca3af", borderRadius: 4, cursor: "pointer", whiteSpace: "nowrap", flexShrink: 0 }}>
+                              {isHidden ? "RESTORE" : "HIDE"}
+                            </button>
+                            {/* Expand toggle */}
+                            {!isHidden && (
+                              <button onClick={() => setOpenKeys(prev => { const next = new Set(prev); if (next.has(gr.key)) next.delete(gr.key); else next.add(gr.key); return next; })}
+                                style={{ background: "none", border: "1px solid var(--border)", borderRadius: 4, width: 24, height: 24, cursor: "pointer", color: "var(--muted)", fontSize: "0.7rem", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                                {isOpen ? "▲" : "▼"}
+                              </button>
+                            )}
+                          </div>
+
+                          {/* Expanded copy table */}
+                          {isOpen && !isHidden && (
+                            <div style={{ borderTop: "1px solid var(--border)" }}>
+                              <div style={{ overflowX: "auto" }}>
+                                <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.8rem" }}>
+                                  <thead>
+                                    <tr style={{ background: "var(--surface2)", borderBottom: "1.5px solid var(--border)" }}>
+                                      {["#","BOX","VOL","WRITER","ARTIST","ARC / STORY","COND","KEY","SGD","NM","VF","PLANNED","CHECK"].map(h => (
+                                        <th key={h} style={{ padding: "6px 8px", textAlign: h === "PLANNED" || h === "CHECK" ? "center" : "left", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem", letterSpacing: "1.5px", color: h === "PLANNED" ? COPY_META.planned.color : h === "CHECK" ? COPY_META.check.color : "var(--muted)", fontWeight: 400 }}>{h}</th>
+                                      ))}
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    {gr.copies.map((c, ci) => {
+                                      const inThisBox = c.Box === boxNum;
+                                      const boxCopies = gr.copies.filter(x => x.Box === c.Box).length;
+                                      const isKey    = (c.Key    || "").toUpperCase() === "YES";
+                                      const isSigned = (c.Signed || "").toUpperCase() === "YES";
+                                      const copyKey  = ck(gr.key, ci);
+                                      const copyDec  = copyDecisions.get(copyKey);
+                                      const rowBg    = copyDec === "check" ? "#faf5ff" : copyDec === "planned" ? "#fefce8" : inThisBox ? "#fff4f0" : boxCopies > 1 ? "#fff8f8" : "transparent";
+                                      return (
+                                        <tr key={ci} style={{ borderBottom: "1px solid var(--border)", background: rowBg }}>
+                                          <td style={{ padding: "7px 10px", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.65rem", color: "var(--muted)" }}>#{ci + 1}</td>
+                                          <td style={{ padding: "6px 10px", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.78rem", whiteSpace: "nowrap" }}>
+                                            <span style={{ color: inThisBox ? "#fff" : "var(--red)", background: inThisBox ? "var(--red)" : "transparent", padding: inThisBox ? "2px 6px" : "0", borderRadius: 3 }}>Box {c.Box}</span>
+                                          </td>
+                                          <td style={{ padding: "7px 8px", color: "var(--muted2)", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.72rem" }}>{c.Volume ? `V${c.Volume}` : "—"}</td>
+                                          <td style={{ padding: "7px 8px", color: "var(--text2)", maxWidth: 110, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{c.Writer || "—"}</td>
+                                          <td style={{ padding: "7px 8px", color: "var(--text2)", maxWidth: 110, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{c.Artist || "—"}</td>
+                                          <td style={{ padding: "7px 8px", color: "#7c3aed", maxWidth: 130, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", fontFamily: "'Crimson Pro',serif", fontSize: "0.78rem", fontStyle: "italic" }}>{c.Arc || "—"}</td>
+                                          <td style={{ padding: "7px 8px", color: "var(--muted2)", whiteSpace: "nowrap" }}>{c.Condition || "—"}</td>
+                                          <td style={{ padding: "7px 8px" }}>{isKey    && <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.56rem", color: "#d97706", background: "#d9770618", border: "1px solid #d9770640", padding: "2px 5px", borderRadius: 3 }}>KEY</span>}</td>
+                                          <td style={{ padding: "7px 8px" }}>{isSigned && <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.56rem", color: "#8b2be2", background: "#8b2be218", border: "1px solid #8b2be240", padding: "2px 5px", borderRadius: 3 }}>SGD</span>}</td>
+                                          <td style={{ padding: "7px 8px", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.8rem",  color: "var(--red)",    whiteSpace: "nowrap" }}>{fmtVal(c.Value_NM)}</td>
+                                          <td style={{ padding: "7px 8px", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.75rem", color: "var(--muted2)", whiteSpace: "nowrap" }}>{fmtVal(c.Value_VF)}</td>
+                                          <td style={{ padding: "7px 8px", textAlign: "center" }}>
+                                            <button onClick={() => setCopyDecision(copyKey, "planned")} style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.52rem", padding: "3px 7px", border: `1.5px solid ${copyDec === "planned" ? COPY_META.planned.color : "var(--border)"}`, background: copyDec === "planned" ? COPY_META.planned.color : "var(--surface2)", color: copyDec === "planned" ? "#fff" : "var(--muted)", borderRadius: 3, cursor: "pointer" }}>
+                                              {copyDec === "planned" ? "✓" : "+"}
+                                            </button>
+                                          </td>
+                                          <td style={{ padding: "7px 8px", textAlign: "center" }}>
+                                            <button onClick={() => setCopyDecision(copyKey, "check")} style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.52rem", padding: "3px 7px", border: `1.5px solid ${copyDec === "check" ? COPY_META.check.color : "var(--border)"}`, background: copyDec === "check" ? COPY_META.check.color : "var(--surface2)", color: copyDec === "check" ? "#fff" : "var(--muted)", borderRadius: 3, cursor: "pointer" }}>
+                                              {copyDec === "check" ? "✓" : "?"}
+                                            </button>
+                                          </td>
+                                        </tr>
+                                      );
+                                    })}
+                                  </tbody>
+                                </table>
+                              </div>
+                              <div style={{ padding: "10px 14px", borderTop: "1px solid var(--border)", background: "#fafaf8" }}>
+                                <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.56rem", letterSpacing: "1.5px", color: "var(--muted)", marginBottom: 5 }}>NOTE</div>
+                                <textarea value={groupNote} onChange={e => updateNote(gr.key, e.target.value)} placeholder="Add a note…" rows={2}
+                                  style={{ width: "100%", padding: "7px 10px", border: "1.5px solid var(--border)", borderRadius: 5, fontSize: "0.82rem", fontFamily: "'Crimson Pro',serif", color: "var(--text2)", background: "#fff", resize: "vertical", boxSizing: "border-box", outline: "none" }}
+                                  onFocus={e => { e.currentTarget.style.borderColor = "var(--red)"; }}
+                                  onBlur={e => { e.currentTarget.style.borderColor = "var(--border)"; }}
+                                />
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      )}
+
+      {/* ── GROUP LIST (by title) ── */}
+      {groupBy === "title" && <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
         {visible.map(gr => {
           const isOpen    = openKeys.has(gr.key);
           const isHidden  = hidden.has(gr.key);
@@ -687,10 +876,10 @@ export default function Duplicates({ onNavigate }: Props) {
             </div>
           );
         })}
-      </div>
+      </div>}
 
-      {/* Show all */}
-      {filtered.length > 80 && !showAll && (
+      {/* Show all — title view only */}
+      {groupBy === "title" && filtered.length > 80 && !showAll && (
         <div style={{ textAlign: "center", marginTop: 20 }}>
           <button onClick={() => setShowAll(true)}
             style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.85rem", letterSpacing: "2px", color: "var(--red)", background: "none", border: "1.5px solid var(--red)", borderRadius: 6, padding: "10px 28px", cursor: "pointer" }}>
