@@ -64,6 +64,8 @@ export default function Runs() {
   });
   const [drillKey,      setDrillKey]      = useState<"filtered"|"complete"|"near"|"all"|null>(null);
   const [drillView,     setDrillView]     = useState<"list"|"card">("list");
+  const [hideSingle,    setHideSingle]    = useState(false);
+  const [hideComplete,  setHideComplete]  = useState(false);
 
   const togglePublisher = (key: string) =>
     setOpenPublishers(prev => {
@@ -127,13 +129,15 @@ export default function Runs() {
 
   const filtered = useMemo(() => {
     let runs = allRuns.filter(r => r.pct >= threshold);
-    if (pubFilter) runs = runs.filter(r => r.publisher.toLowerCase().includes(pubFilter.toLowerCase()));
+    if (pubFilter)    runs = runs.filter(r => r.publisher.toLowerCase().includes(pubFilter.toLowerCase()));
+    if (hideSingle)   runs = runs.filter(r => r.haveCount > 1);
+    if (hideComplete) runs = runs.filter(r => r.missing.length > 0);
     if (sortBy === "pct")     runs.sort((a, b) => b.pct - a.pct);
     if (sortBy === "count")   runs.sort((a, b) => b.haveCount - a.haveCount);
     if (sortBy === "missing") runs.sort((a, b) => a.missing.length - b.missing.length);
     if (sortBy === "title")   runs.sort((a, b) => a.title.localeCompare(b.title));
     return runs;
-  }, [allRuns, threshold, sortBy, pubFilter]);
+  }, [allRuns, threshold, sortBy, pubFilter, hideSingle, hideComplete]);
 
   // Group into Publisher → Bucket → Runs
   const grouped = useMemo(() =>
@@ -238,6 +242,24 @@ export default function Runs() {
               fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1.5px",
               transition:"all 0.15s",
             }}>{l}</button>
+          ))}
+        </div>
+
+        {/* Visibility toggles */}
+        <div style={{ display:"flex", gap:6, flexWrap:"wrap", alignItems:"center" }}>
+          {([
+            { val: hideSingle,   set: setHideSingle,   label: "HIDE 1-ISSUE" },
+            { val: hideComplete, set: setHideComplete,  label: "HIDE 100%" },
+          ] as const).map(({ val, set, label }) => (
+            <button key={label} onClick={() => set(v => !v)} style={{
+              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px",
+              padding:"4px 11px", cursor:"pointer", borderRadius:5, transition:"all 0.15s",
+              background: val ? "#1e293b" : "var(--surface2)",
+              color:       val ? "#f8fafc"  : "var(--muted2)",
+              border:      val ? "1.5px solid #334155" : "1.5px solid var(--border)",
+            }}>
+              {val ? `✓ ${label}` : label}
+            </button>
           ))}
         </div>
 

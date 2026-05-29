@@ -152,6 +152,59 @@ export default function Duplicates({ onNavigate }: Props) {
     saveMap(LS_NOTES, emptyNotes);
   }, []);
 
+  const exportData = useCallback((
+    hiddenSnap: Set<string>,
+    decisionsSnap: Map<string, CopyAction>,
+    notesSnap: Map<string, string>
+  ) => {
+    const decisionsObj: Record<string, CopyAction> = {};
+    decisionsSnap.forEach((v, k) => { decisionsObj[k] = v; });
+    const notesObj: Record<string, string> = {};
+    notesSnap.forEach((v, k) => { notesObj[k] = v; });
+    const payload = {
+      version: 1,
+      exported: new Date().toISOString(),
+      hidden: [...hiddenSnap],
+      copyDecisions: decisionsObj,
+      notes: notesObj,
+    };
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `brb-duplicates-${new Date().toISOString().slice(0, 10)}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+  }, []);
+
+  const importData = useCallback(() => {
+    const input = document.createElement("input");
+    input.type = "file";
+    input.accept = ".json,application/json";
+    input.onchange = () => {
+      const file = input.files?.[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        try {
+          const raw = JSON.parse(e.target?.result as string);
+          if (!raw || raw.version !== 1) { alert("Unrecognised backup file."); return; }
+          const newHidden    = new Set<string>(raw.hidden || []);
+          const newDecisions = new Map<string, CopyAction>(Object.entries(raw.copyDecisions || {}));
+          const newNotes     = new Map<string, string>(Object.entries(raw.notes || {}));
+          setHidden(newHidden);
+          setCopyDecisions(newDecisions);
+          setNotes(newNotes);
+          saveSet(LS_HIDDEN, newHidden);
+          saveMap(LS_COPY_DECISIONS, newDecisions);
+          saveMap(LS_NOTES, newNotes);
+        } catch { alert("Could not read file — make sure it's a valid BRB duplicates backup."); }
+      };
+      reader.readAsText(file);
+    };
+    input.click();
+  }, []);
+
   // Auto-hide: note + all classified, OR all copies PLANNED
   useEffect(() => {
     setHidden(prev => {
@@ -347,6 +400,24 @@ export default function Duplicates({ onNavigate }: Props) {
             <div style={{ fontSize: "0.65rem", color: "var(--muted)", marginTop: 2 }}>{s.sub}</div>
           </div>
         ))}
+      </div>
+
+      {/* ── BACKUP / RESTORE ── */}
+      <div style={{ display: "flex", gap: 8, marginBottom: 18, alignItems: "center", flexWrap: "wrap" }}>
+        <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.6rem", letterSpacing: "1.5px", color: "var(--muted)", flexShrink: 0 }}>BACKUP</span>
+        <button
+          onClick={() => exportData(hidden, copyDecisions, notes)}
+          style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1.5px", padding: "5px 14px", border: "1.5px solid var(--border)", background: "var(--surface)", color: "var(--muted2)", borderRadius: 4, cursor: "pointer" }}>
+          ↓ EXPORT JSON
+        </button>
+        <button
+          onClick={importData}
+          style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1.5px", padding: "5px 14px", border: "1.5px solid var(--border)", background: "var(--surface)", color: "var(--muted2)", borderRadius: 4, cursor: "pointer" }}>
+          ↑ RESTORE FROM FILE
+        </button>
+        <span style={{ fontSize: "0.7rem", color: "var(--muted)", fontFamily: "'Crimson Pro',serif" }}>
+          Export saves all your notes, decisions &amp; dismissed groups to a file you keep.
+        </span>
       </div>
 
       {/* ── COPY DECISION LEGEND ── */}
