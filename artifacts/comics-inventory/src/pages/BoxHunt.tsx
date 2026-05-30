@@ -17,7 +17,9 @@ const CARD_PAGE = 80;
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
 function parseVal(v: string | undefined | null) {
-  return parseFloat(String(v || "").replace(/[^0-9.]/g, "") || "0");
+  if (!v || v === "nan") return 0;
+  const m = String(v).match(/(\d+(?:\.\d+)?)/);
+  return m ? parseFloat(m[1]) : 0;
 }
 
 function extractVol(title: string): string {
