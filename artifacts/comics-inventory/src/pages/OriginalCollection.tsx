@@ -25,8 +25,9 @@ function platClass(p: string) {
 }
 
 function parseVal(v: string | undefined | null) {
-  if (!v) return 0;
-  return parseFloat(String(v).replace(/[^0-9.]/g, "") || "0");
+  if (!v || v === "nan") return 0;
+  const m = String(v).match(/(\d+(?:\.\d+)?)/);
+  return m ? parseFloat(m[1]) : 0;
 }
 
 const LIST_COLS: ColDef<Comic>[] = [
