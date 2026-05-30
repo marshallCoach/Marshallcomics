@@ -6,3 +6,9 @@ id = "rJSKUxwcV5d3W5Z9FWFyn"
 uri = "file://locbg_export.csv"
 type = "table"
 title = "LOCBG Import — 9,532 Comics"
+
+[[outputs]]
+id = "hn2BZmAuqBUzhBydpSxLS"
+uri = "file://inventory_export.json"
+type = "unspecified"
+title = "Marshall Comics Inventory Export"
