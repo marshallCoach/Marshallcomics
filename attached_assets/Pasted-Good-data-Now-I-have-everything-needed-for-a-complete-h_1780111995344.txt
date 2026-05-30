@@ -1,0 +1,71 @@
+Good data. Now I have everything needed for a complete honest scorecard.
+
+Here’s the full report.
+
+MarshallComics.com Replit Data — Quality Review
+
+Overall score: 81/100 — Solid foundation, three fixable problems
+
+✅ What’s correct
+
+
+
+|Field              |Score|Detail                                                    |
+|-------------------|-----|----------------------------------------------------------|
+|Total record count |10/10|12,612 — exact match to master                            |
+|Key issue count    |10/10|1,797 — exact match                                       |
+|Signed book count  |10/10|55 — exact match                                          |
+|Box count          |10/10|84 boxes — correct                                        |
+|Title contamination|10/10|Zero (Year) or (Name) appended to titles — cleanup worked |
+|Coipel fix         |10/10|Zero “Corpuz” entries — fixed throughout                  |
+|Volume field       |10/10|All 12,612 records have volume data                       |
+|Legacy numbers     |10/10|255 books correctly show [Legacy N] in issue field        |
+|Era distribution   |8/10 |Correct split — 1 record missing era (Saga of Human Torch)|
+
+🔴 Problem 1 — Key_Reason bleed (most serious)
+
+66 groups of books sharing identical Key_Reason text. The matching logic is applying one rich description to every book that shares the same title. Examples:
+
+	•	Batman #657’s description is appearing on Batman #436, #125, #13, #21, #130, #22, #50, #1, #641, #650, #159, #608, and more — 17 Batman issues total sharing one description
+	•	X-Force #117 has X-Force #1 (2008)’s description — completely wrong book
+	•	Superman: MOS #1 has MOS #19’s Death of Superman description — wrong issue
+	•	12 Justice League issues all share Justice League #1’s New 52 description
+	•	5 Black Widow issues all share Black Widow #1’s description
+	•	5 Cable #1 entries (multiple volumes) sharing the same text
+
+Root cause: When Replit does a title match to pull Key_Reason, it’s matching on title only, not title + issue + volume. Any book with the same title gets the first matching description regardless of issue number.
+
+Fix: Match on title + issue + volume as a compound key, not just title.
+
+🟡 Problem 2 — Value format inconsistency
+
+263 records have Value_NM as a range string (5–12 raw, 8–15, 4–10) rather than a clean integer. If Replit is using Value_NM for sorting, filtering, or price display, these will fail or sort incorrectly. Clean numbers (8, 15, 12) work for 12,254 records but the 263 range-string records need parsing before display.
+
+Fix in Replit: Parse the value field — extract the first number from any range string for sorting: parseInt(value.split('–')[0]).
+
+🟡 Problem 3 — Three unverified signed books still flagged
+
+Two books still show VERIFY flags in the signed_by field:
+
+	•	WildCATs #11 — “Jim Lee + HK (unconfirmed second signer — verify surname)”
+	•	Return of Superman 30th Anniversary — “possible 4th sig left edge — verify”
+
+These aren’t wrong — the flags are correct — but the front end should render them differently (a different badge or colour) rather than showing them as fully confirmed signed books.
+
+🟠 Problem 4 — Saga of Human Torch missing data
+
+One record — Saga of the Original Human Torch #3 (Box 1) — is missing Publisher, Year, and Era. This is the book that was removed and re-added. Quick fix in the master spreadsheet.
+
+🟡 Problem 5 — Unverified signed books in the list
+
+Storm #1 signed by Skottie Young and Amazing Spider-Man #70 signed by Skottie Young are showing as signed — these are almost certainly Terrificon/show variant covers he signed at an event, but they’re not in the confirmed signed list from our sessions. Worth a physical check.
+
+Similarly: Mystery in Space #1 (Ann Nocenti), Who’s Who #1 (Peter Sanderson), and Transformers #1 (Bob Budiansky) — the Compendium is confirmed but a raw Transformers #1 being signed is separate. Verify these four in hand.
+
+Priority fix order
+
+	1.	Key_Reason bleed — change matching to title + issue + volume compound key. This affects 66 groups and is the most visible data quality problem on screen.
+	2.	Value parsing — add a parse function for range strings so sorting/filtering works.
+	3.	Saga of Human Torch — add Publisher: Marvel, Year: 1990, Era: Copper to that one record.
+	4.	Signed verification badges — surface the VERIFY flag differently in the UI.
+	5.	Physical check — Storm #1, ASM #70, Mystery in Space #1, Who’s Who #1.

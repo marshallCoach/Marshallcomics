@@ -414,7 +414,7 @@ export default function Everything({
           <div>
             <div style={{ display:"flex", gap:20, flexWrap:"wrap" }}>
               {c.Arc       && <div className="dr"><span className="dl">Arc</span><span className="dv">{c.Arc}</span></div>}
-              {c.Key_Reason   && <div className="dr"><span className="dl">Key</span><span className="dv" style={{color:"var(--gold)"}}>{c.Key_Reason}</span></div>}
+              {(c.Key||"").toUpperCase()==="YES" && c.Key_Reason && <div className="dr"><span className="dl">Key</span><span className="dv" style={{color:"var(--gold)"}}>{c.Key_Reason}</span></div>}
               {c.First_App && <div className="dr"><span className="dl">1st App</span><span className="dv">{c.First_App}</span></div>}
               {(c.Signed||"").toUpperCase()==="YES" && c.Signed_By && <div className="dr"><span className="dl">Signed By</span><span className="dv">{c.Signed_By}</span></div>}
               {c.Terrificon && <div className="dr"><span className="dl">Terrificon</span><span className="dv" style={{color:"#f59e0b"}}>{c.Terrificon}</span></div>}
@@ -538,9 +538,13 @@ function EverythingCard({ comic: c, onTitleClick, flagged, onOpenDrawer, onCover
         </div>
       )}
 
-      {isSigned && c.Signed_By && (
-        <div style={{ fontSize:"0.7rem", color:"var(--brown)", marginTop:4 }}>✍ {c.Signed_By}{c.Personal ? ` — "${c.Personal}"` : ""}</div>
-      )}
+      {isSigned && c.Signed_By && (() => {
+        const lower = c.Signed_By.toLowerCase();
+        const verify = lower.includes("verify") || lower.includes("unconfirmed");
+        return <div style={{ fontSize:"0.7rem", color: verify ? "#92400e" : "var(--brown)", marginTop:4, background: verify ? "#fef3c7" : "transparent", borderRadius:3, padding: verify ? "2px 6px" : "0" }}>
+          ✍ {c.Signed_By}{c.Personal ? ` — "${c.Personal}"` : ""}{verify ? " ⚠" : ""}
+        </div>;
+      })()}
 
       {(c.Value_NM || c.Value_VF) && (
         <div style={{ display:"flex", gap:10, marginTop:6, fontSize:"0.72rem" }}>

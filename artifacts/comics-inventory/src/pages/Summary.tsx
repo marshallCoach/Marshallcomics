@@ -405,7 +405,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
         {/* Interface updates only — writers/artists/value have their own dedicated cards below */}
         <div style={{ display:"flex", flexDirection:"column", gap:4 }}>
           {INTERFACE_UPDATES.map(u => (
-            <div key={u} style={{ fontSize:"2.88rem", color:"var(--muted2)", lineHeight:1.4, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" }}>→ {u}</div>
+            <div key={u} style={{ fontSize:"0.88rem", color:"var(--muted2)", lineHeight:1.4, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" }}>→ {u}</div>
           ))}
         </div>
       </section>

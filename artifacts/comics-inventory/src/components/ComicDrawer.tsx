@@ -355,6 +355,12 @@ export default function ComicDrawer({ comic, comicKey, onClose, onFlagChange }: 
   };
   const accentColor = pubColor[(comic.Publisher||"").toUpperCase()] || "#6b7280";
 
+  function isVerify(signedBy?: string) {
+    if (!signedBy) return false;
+    const lower = signedBy.toLowerCase();
+    return lower.includes("verify") || lower.includes("unconfirmed");
+  }
+
   function Row({ label, val }: { label: string; val?: string }) {
     if (!val || val === "nan" || val.trim() === "") return null;
     return (
@@ -410,7 +416,8 @@ export default function ComicDrawer({ comic, comicKey, onClose, onFlagChange }: 
             {comic.Era       && <span style={{ fontSize:"0.6rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", background:"rgba(255,255,255,0.15)", color:"rgba(255,255,255,0.9)", borderRadius:3, padding:"2px 7px" }}>{comic.Era}</span>}
             {comic.Box       && <span style={{ fontSize:"0.6rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", background:"rgba(255,255,255,0.15)", color:"rgba(255,255,255,0.9)", borderRadius:3, padding:"2px 7px" }}>Box {comic.Box}</span>}
             {isKey    && <span style={{ fontSize:"0.6rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", background:"#fff8e0", color:"#8a6000", borderRadius:3, padding:"2px 7px" }}>★ KEY</span>}
-            {isSigned && <span style={{ fontSize:"0.6rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", background:"#f3e8ff", color:"#7c3aed", borderRadius:3, padding:"2px 7px" }}>✍ SIGNED</span>}
+            {isSigned && !isVerify(comic.Signed_By) && <span style={{ fontSize:"0.6rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", background:"#f3e8ff", color:"#7c3aed", borderRadius:3, padding:"2px 7px" }}>✍ SIGNED</span>}
+            {isSigned &&  isVerify(comic.Signed_By) && <span style={{ fontSize:"0.6rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", background:"#fef3c7", color:"#92400e", borderRadius:3, padding:"2px 7px" }}>✍ SIGNED — VERIFY</span>}
           </div>
         </div>
 
@@ -466,13 +473,19 @@ export default function ComicDrawer({ comic, comicKey, onClose, onFlagChange }: 
           <Row label="Terrificon"   val={comic.Terrificon} />
 
           {/* Signing details */}
-          {isSigned && (
-            <div style={{ background:"#f3e8ff", border:"1px solid #d8b4fe", borderRadius:6, padding:"10px 14px", marginTop:8 }}>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"2px", color:"#7c3aed", marginBottom:4 }}>SIGNATURE</div>
-              {comic.Signed_By && <div style={{ fontSize:"0.88rem", color:"#4c1d95", fontWeight:600 }}>Signed by: {comic.Signed_By}</div>}
-              {comic.Personal && <div style={{ fontSize:"0.82rem", color:"#6d28d9", marginTop:4 }}>"{comic.Personal}"</div>}
-            </div>
-          )}
+          {isSigned && (() => {
+            const verify = isVerify(comic.Signed_By);
+            return (
+              <div style={{ background: verify ? "#fef3c7" : "#f3e8ff", border: `1px solid ${verify ? "#fcd34d" : "#d8b4fe"}`, borderRadius:6, padding:"10px 14px", marginTop:8 }}>
+                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"2px", color: verify ? "#92400e" : "#7c3aed", marginBottom:4 }}>
+                  SIGNATURE{verify ? " — NEEDS VERIFICATION" : ""}
+                </div>
+                {comic.Signed_By && <div style={{ fontSize:"0.88rem", color: verify ? "#78350f" : "#4c1d95", fontWeight:600 }}>Signed by: {comic.Signed_By}</div>}
+                {comic.Personal && <div style={{ fontSize:"0.82rem", color: verify ? "#92400e" : "#6d28d9", marginTop:4 }}>"{comic.Personal}"</div>}
+                {verify && <div style={{ fontSize:"0.75rem", color:"#92400e", marginTop:6, fontStyle:"italic" }}>Physical verification required before grading submission.</div>}
+              </div>
+            );
+          })()}
 
           {/* Seller notes */}
           {comic.Seller_Notes && comic.Seller_Notes.trim() && comic.Seller_Notes !== "nan" && (
