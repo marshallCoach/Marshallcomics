@@ -26,13 +26,15 @@ import DupCheckList from "@/pages/DupCheckList";
 import ComicHistory from "@/pages/ComicHistory";
 import OrganizationPath from "@/pages/OrganizationPath";
 import BoxLabels from "@/pages/BoxLabels";
+import KeyCatalog from "@/pages/KeyCatalog";
+import CoverCatalog from "@/pages/CoverCatalog";
 import PasswordGate from "@/components/PasswordGate";
 
 type TabId =
   | "summary" | "everything" | "collection" | "boxkeys" | "stats" | "runs" | "dataview"
   | "calendar" | "showplanner" | "cgc" | "signings" | "actionplan" | "timeline" | "boxvisual"
   | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "duplicates" | "dupchecklist" | "history"
-  | "orgpath" | "volumes" | "boxlabels";
+  | "orgpath" | "volumes" | "boxlabels" | "keycatalog" | "covercatalog";
 
 export type NavParams = {
   box?: string;
@@ -70,6 +72,14 @@ const NAV = [
       { id: "dupchecklist",  label: "Dup Hunt" },
       { id: "hunting",       label: "Box Hunt" },
       { id: "timeline",    label: "Timeline" },
+    ],
+  },
+  {
+    id: "catalog",
+    label: "Catalog",
+    tabs: [
+      { id: "keycatalog",   label: "Key Issues" },
+      { id: "covercatalog", label: "Cover Art" },
     ],
   },
   {
@@ -272,6 +282,8 @@ export default function App() {
         {activeTab === "duplicates"    && <Duplicates onNavigate={navigateTo} />}
         {activeTab === "dupchecklist"  && <DupCheckList />}
         {activeTab === "history"     && <ComicHistory />}
+        {activeTab === "keycatalog"  && <KeyCatalog />}
+        {activeTab === "covercatalog" && <CoverCatalog />}
       </div>
     </div>
     </PasswordGate>
