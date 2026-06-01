@@ -20,17 +20,16 @@ Private React + Vite comic book inventory app for Roberto Marshall (BlackReadBro
 ## Where things live
 
 - `artifacts/comics-inventory/src/` — main app
-- `artifacts/comics-inventory/src/data/data3.ts` — AUTO-GENERATED from xlsx (12,612 comics, 84 boxes) — source: X_comics_inventory_1780092473293.xlsx
+- `artifacts/comics-inventory/src/data/data3.ts` — AUTO-GENERATED from xlsx (10,424 comics, 89 boxes) — source: comics_inventory_6-1_1780345161049.xlsx
 - `artifacts/comics-inventory/src/pages/` — all page components
 - `artifacts/comics-inventory/src/index.css` — all styles (light/editorial theme)
 - `artifacts/comics-inventory/src/App.tsx` — nav + routing
 
-## Collection Stats (May 29, 2026)
+## Collection Stats (June 1, 2026)
 
-- 12,612 comics total
-- 84 boxes catalogued — COMPLETE
-- 1,357 titles cleaned (May 28): year-appended `Batman (2016)` → `Batman`, person-appended `X-Force (Kyle/Yost)` → `X-Force` w/ writers updated, arc-appended cleaned; Saga of the Original Human Torch #3 restored to Box 1
-- Zero paren-contaminated titles remaining as of this data load
+- 10,424 comics total
+- 89 boxes catalogued — COMPLETE (boxes 85–89 derived from comics data)
+- 1,478 key issues · 50 signed
 
 ## Product
 

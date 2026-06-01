@@ -18,8 +18,8 @@ const ebayCount    = comics.filter(c => (c.Platform || "").toUpperCase() === "EB
 const tfCount      = comics.filter(c => !!(c.Terrificon || "").trim()).length;
 
 // ── Update banner data — derives from live data where possible ────────────────
-const LAST_UPDATE_DATE = "May 28, 2026";
-const UPDATE_DELTAS    = ["+10 Boxes (74→84)", "+835 Comics", "+333 Keys"];
+const LAST_UPDATE_DATE = "June 1, 2026";
+const UPDATE_DELTAS    = ["+5 Boxes (84→89)", "10,424 Comics", "1,478 Keys"];
 const INTERFACE_UPDATES = [
   `Data refresh — ${totalComics.toLocaleString()} comics · ${totalBoxes} boxes · ${keyCount.toLocaleString()} keys · ${signedCount} signed`,
   "Global search added — press ⌘K / Ctrl+K from anywhere to search all comics, boxes, and pages",
@@ -632,7 +632,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
       <section style={{ marginBottom:32 }}>
         <h2 className="section-h2">✍ TOP CREATORS</h2>
         <p style={{ fontSize:"0.78rem", color:"var(--muted2)", marginBottom:12, fontFamily:"'Crimson Pro',serif" }}>
-          Ranked by book count across all {totalComics.toLocaleString()} comics. Arrows show rank change vs. previous snapshot (boxes 1–61).
+          Ranked by book count across all {totalComics.toLocaleString()} comics. Arrows show rank change vs. previous snapshot (boxes 1–84).
         </p>
         <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:12 }}>
           {(["Writer","Artist"] as const).map(field => {
