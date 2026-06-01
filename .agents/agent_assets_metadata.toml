@@ -12,3 +12,9 @@ id = "hn2BZmAuqBUzhBydpSxLS"
 uri = "file://inventory_export.json"
 type = "unspecified"
 title = "Marshall Comics Inventory Export"
+
+[[outputs]]
+id = "KffrpWdkPp5OQa511sqnc"
+uri = "file://marshall-comics-2026-06-01.zip"
+type = "unspecified"
+title = "Marshall Comics — Static HTML Backup (June 1, 2026)"
