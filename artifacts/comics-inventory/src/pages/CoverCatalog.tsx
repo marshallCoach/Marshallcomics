@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useCallback, useEffect } from "react";
 import { DATA3 } from "@/data/data3";
 import { CoverImage } from "@/components/CoverImage";
 
@@ -6,6 +6,39 @@ const ALL_COMICS = DATA3.comics;
 const WITH_ARTIST = ALL_COMICS.filter(c => c.Cover_Artist && c.Cover_Artist.trim() && c.Cover_Artist !== "nan");
 
 const PAGE_SIZE = 16;
+const FLAG_KEY  = "brbFlaggedCovers_v1";
+
+// ── Flag storage helpers ─────────────────────────────────────────────────────
+
+export interface FlaggedCover {
+  id: string;
+  Title: string;
+  Issue: string;
+  Box: string;
+  Cover_Artist: string;
+  Publisher: string;
+  Year: string;
+  flaggedAt: string;
+}
+
+function comicId(c: { Title: string; Issue: string; Box: string }) {
+  return `${c.Title}|||${c.Issue}|||${c.Box}`;
+}
+
+function loadFlags(): Map<string, FlaggedCover> {
+  try {
+    const raw = localStorage.getItem(FLAG_KEY);
+    if (!raw) return new Map();
+    const arr: FlaggedCover[] = JSON.parse(raw);
+    return new Map(arr.map(f => [f.id, f]));
+  } catch { return new Map(); }
+}
+
+function saveFlags(map: Map<string, FlaggedCover>) {
+  localStorage.setItem(FLAG_KEY, JSON.stringify([...map.values()]));
+}
+
+// ── Helpers ──────────────────────────────────────────────────────────────────
 
 function parseNM(v: string) {
   const m = (v || "").match(/(\d+(?:\.\d+)?)/);
@@ -22,6 +55,8 @@ function pubColor(pub: string) {
   return "#5a6270";
 }
 
+// ── Types ────────────────────────────────────────────────────────────────────
+
 interface CoverComic {
   Title: string; Issue: string; Publisher: string; Year: string;
   Cover_Artist: string; Value_NM: string; Value_VF: string;
@@ -30,7 +65,16 @@ interface CoverComic {
   Seller_Notes: string; Arc: string; Writer: string; Artist: string; Box: string;
 }
 
-function CoverCard({ comic, flip }: { comic: CoverComic; flip: boolean }) {
+// ── Card ─────────────────────────────────────────────────────────────────────
+
+function CoverCard({
+  comic, flip, flagged, onToggleFlag,
+}: {
+  comic: CoverComic;
+  flip: boolean;
+  flagged: boolean;
+  onToggleFlag: () => void;
+}) {
   const nm      = parseNM(comic.Value_NM);
   const bid     = parseNM(comic.Start_Bid);
   const isSigned = (comic.Signed || "").toUpperCase() === "YES";
@@ -60,6 +104,23 @@ function CoverCard({ comic, flip }: { comic: CoverComic; flip: boolean }) {
           ${bid} START
         </div>
       )}
+      {/* Flag button */}
+      <button
+        onClick={e => { e.stopPropagation(); onToggleFlag(); }}
+        title={flagged ? "Remove incorrect cover flag" : "Flag as incorrect cover"}
+        style={{
+          position: "absolute", bottom: 44, right: 8, zIndex: 4,
+          background: flagged ? "#c8102e" : "rgba(255,255,255,0.85)",
+          border: flagged ? "2px solid #8b0000" : "2px solid #ccc",
+          borderRadius: "50%", width: 32, height: 32,
+          cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center",
+          fontSize: "0.95rem", lineHeight: 1,
+          boxShadow: "0 2px 8px rgba(0,0,0,0.25)",
+          transition: "all 0.15s",
+        }}
+      >
+        {flagged ? "🚩" : "🏳"}
+      </button>
       {comic.Cover_Artist && (
         <div style={{
           position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 3,
@@ -74,7 +135,7 @@ function CoverCard({ comic, flip }: { comic: CoverComic; flip: boolean }) {
   );
 
   const txtCol = (
-    <div style={{ flex: 1, padding: "22px 24px", display: "flex", flexDirection: "column", gap: 10, background: "var(--surface)" }}>
+    <div style={{ flex: 1, padding: "22px 24px", display: "flex", flexDirection: "column", gap: 10, background: flagged ? "#fff5f5" : "var(--surface)", transition: "background 0.2s" }}>
       <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
         <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.62rem", letterSpacing: "1.5px", background: color, color: "#fff", borderRadius: 3, padding: "2px 8px" }}>
           {comic.Publisher || "Unknown"}
@@ -90,6 +151,9 @@ function CoverCard({ comic, flip }: { comic: CoverComic; flip: boolean }) {
         )}
         {isSigned && (
           <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.62rem", letterSpacing: "1.5px", background: "#166534", color: "#fff", borderRadius: 3, padding: "2px 8px" }}>✍ SIGNED</span>
+        )}
+        {flagged && (
+          <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.62rem", letterSpacing: "1.5px", background: "#c8102e", color: "#fff", borderRadius: 3, padding: "2px 8px" }}>🚩 INCORRECT COVER</span>
         )}
       </div>
 
@@ -153,36 +217,139 @@ function CoverCard({ comic, flip }: { comic: CoverComic; flip: boolean }) {
     <article
       style={{
         display: "flex", flexDirection: "row",
-        border: "1.5px solid var(--border)", borderRadius: 10, overflow: "hidden",
+        border: flagged ? "2px solid #c8102e" : "1.5px solid var(--border)",
+        borderRadius: 10, overflow: "hidden",
         marginBottom: 16, minHeight: 300,
-        boxShadow: "0 3px 16px rgba(0,0,0,0.07)",
-        transition: "box-shadow 0.2s, transform 0.2s",
+        boxShadow: flagged ? "0 0 0 3px rgba(200,16,46,0.15)" : "0 3px 16px rgba(0,0,0,0.07)",
+        transition: "box-shadow 0.2s, transform 0.2s, border-color 0.2s",
       }}
-      onMouseEnter={e => { (e.currentTarget as HTMLElement).style.boxShadow = "0 8px 32px rgba(0,0,0,0.12)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-1px)"; }}
-      onMouseLeave={e => { (e.currentTarget as HTMLElement).style.boxShadow = "0 3px 16px rgba(0,0,0,0.07)"; (e.currentTarget as HTMLElement).style.transform = "none"; }}
+      onMouseEnter={e => { if (!flagged) { (e.currentTarget as HTMLElement).style.boxShadow = "0 8px 32px rgba(0,0,0,0.12)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-1px)"; }}}
+      onMouseLeave={e => { (e.currentTarget as HTMLElement).style.boxShadow = flagged ? "0 0 0 3px rgba(200,16,46,0.15)" : "0 3px 16px rgba(0,0,0,0.07)"; (e.currentTarget as HTMLElement).style.transform = "none"; }}
     >
       {flip ? <>{txtCol}{imgCol}</> : <>{imgCol}{txtCol}</>}
     </article>
   );
 }
 
+// ── Flagged export modal ──────────────────────────────────────────────────────
+
+function FlaggedModal({ flags, onClose, onClear }: { flags: FlaggedCover[]; onClose: () => void; onClear: (id: string) => void }) {
+  const csv = [
+    "Title,Issue,Box,Cover Artist,Publisher,Year,Flagged At",
+    ...flags.map(f => `"${f.Title}","${f.Issue}","${f.Box}","${f.Cover_Artist}","${f.Publisher}","${f.Year}","${f.flaggedAt}"`),
+  ].join("\n");
+
+  function downloadCSV() {
+    const blob = new Blob([csv], { type: "text/csv" });
+    const url  = URL.createObjectURL(blob);
+    const a    = Object.assign(document.createElement("a"), { href: url, download: "incorrect-covers.csv" });
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  function copyToClipboard() {
+    navigator.clipboard.writeText(csv).catch(() => {});
+  }
+
+  return (
+    <div style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.55)", zIndex: 1000, display: "flex", alignItems: "center", justifyContent: "center", padding: 20 }}
+      onClick={e => { if (e.target === e.currentTarget) onClose(); }}>
+      <div style={{ background: "var(--surface)", borderRadius: 12, maxWidth: 640, width: "100%", maxHeight: "80vh", display: "flex", flexDirection: "column", boxShadow: "0 24px 64px rgba(0,0,0,0.3)", border: "1.5px solid var(--border)" }}>
+        <div style={{ padding: "20px 24px", borderBottom: "1.5px solid var(--border)", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+          <div>
+            <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.62rem", letterSpacing: "3px", color: "var(--red)", marginBottom: 2 }}>COVER AUDIT</div>
+            <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "1.5rem", letterSpacing: "2px", color: "var(--text)" }}>🚩 INCORRECT COVERS ({flags.length})</div>
+          </div>
+          <button onClick={onClose} style={{ background: "none", border: "none", fontSize: "1.2rem", cursor: "pointer", color: "var(--muted)" }}>✕</button>
+        </div>
+
+        <div style={{ flex: 1, overflowY: "auto", padding: "12px 24px" }}>
+          {flags.length === 0 ? (
+            <p style={{ fontFamily: "'Crimson Pro', serif", color: "var(--muted)", textAlign: "center", padding: "32px 0" }}>No covers flagged yet.</p>
+          ) : (
+            flags.map(f => (
+              <div key={f.id} style={{ display: "flex", alignItems: "center", gap: 12, padding: "10px 0", borderBottom: "1px solid var(--border)" }}>
+                <div style={{ flex: 1 }}>
+                  <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "1rem", letterSpacing: "1.5px", color: "var(--text)" }}>{f.Title} #{f.Issue}</div>
+                  <div style={{ fontFamily: "'Crimson Pro', serif", fontSize: "0.82rem", color: "var(--muted)" }}>
+                    {f.Cover_Artist} · {f.Publisher} · Box {f.Box} · {f.Year}
+                  </div>
+                  <div style={{ fontFamily: "'Crimson Pro', serif", fontSize: "0.72rem", color: "var(--muted)", marginTop: 2 }}>Flagged {f.flaggedAt}</div>
+                </div>
+                <button onClick={() => onClear(f.id)} title="Remove flag" style={{ background: "none", border: "1px solid var(--border)", borderRadius: 4, padding: "3px 8px", cursor: "pointer", fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.6rem", letterSpacing: "1px", color: "var(--muted)" }}>REMOVE</button>
+              </div>
+            ))
+          )}
+        </div>
+
+        {flags.length > 0 && (
+          <div style={{ padding: "16px 24px", borderTop: "1.5px solid var(--border)", display: "flex", gap: 10, flexWrap: "wrap" }}>
+            <button onClick={downloadCSV} style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.7rem", letterSpacing: "1.5px", padding: "8px 18px", background: "var(--red)", color: "#fff", border: "none", borderRadius: 5, cursor: "pointer" }}>
+              ↓ DOWNLOAD CSV
+            </button>
+            <button onClick={copyToClipboard} style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.7rem", letterSpacing: "1.5px", padding: "8px 18px", background: "var(--surface2)", color: "var(--text)", border: "1.5px solid var(--border)", borderRadius: 5, cursor: "pointer" }}>
+              COPY TO CLIPBOARD
+            </button>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ── Main page ────────────────────────────────────────────────────────────────
+
 const PUB_PILLS = ["All", "Marvel", "DC", "Image", "IDW", "Dark Horse", "Other"];
 
 export default function CoverCatalog() {
-  const [pub,        setPub]        = useState("All");
-  const [artistQ,   setArtistQ]    = useState("");
-  const [titleQ,    setTitleQ]     = useState("");
-  const [whatnotOnly, setWhatnotOnly] = useState(false);
-  const [keyOnly,    setKeyOnly]    = useState(false);
-  const [signedOnly, setSignedOnly] = useState(false);
-  const [sort,       setSort]       = useState("artist");
-  const [page,       setPage]       = useState(1);
+  const [pub,          setPub]          = useState("All");
+  const [artistQ,      setArtistQ]      = useState("");
+  const [titleQ,       setTitleQ]       = useState("");
+  const [whatnotOnly,  setWhatnotOnly]  = useState(false);
+  const [keyOnly,      setKeyOnly]      = useState(false);
+  const [signedOnly,   setSignedOnly]   = useState(false);
+  const [flaggedOnly,  setFlaggedOnly]  = useState(false);
+  const [sort,         setSort]         = useState("artist");
+  const [page,         setPage]         = useState(1);
+  const [showModal,    setShowModal]    = useState(false);
+
+  // Persistent flag state
+  const [flags, setFlags] = useState<Map<string, FlaggedCover>>(() => loadFlags());
+
+  useEffect(() => { saveFlags(flags); }, [flags]);
+
+  const toggleFlag = useCallback((comic: CoverComic) => {
+    const id = comicId(comic);
+    setFlags(prev => {
+      const next = new Map(prev);
+      if (next.has(id)) {
+        next.delete(id);
+      } else {
+        next.set(id, {
+          id,
+          Title:        comic.Title,
+          Issue:        comic.Issue,
+          Box:          comic.Box,
+          Cover_Artist: comic.Cover_Artist,
+          Publisher:    comic.Publisher,
+          Year:         comic.Year,
+          flaggedAt:    new Date().toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }),
+        });
+      }
+      return next;
+    });
+  }, []);
+
+  const clearFlag = useCallback((id: string) => {
+    setFlags(prev => { const next = new Map(prev); next.delete(id); return next; });
+  }, []);
 
   const filtered = useMemo(() => {
     let r = WITH_ARTIST as CoverComic[];
-    if (whatnotOnly) r = r.filter(c => parseNM(c.Start_Bid) >= 10);
-    if (keyOnly)     r = r.filter(c => (c.Key || "").toUpperCase() === "YES");
-    if (signedOnly)  r = r.filter(c => (c.Signed || "").toUpperCase() === "YES");
+    if (whatnotOnly)  r = r.filter(c => parseNM(c.Start_Bid) >= 10);
+    if (keyOnly)      r = r.filter(c => (c.Key || "").toUpperCase() === "YES");
+    if (signedOnly)   r = r.filter(c => (c.Signed || "").toUpperCase() === "YES");
+    if (flaggedOnly)  r = r.filter(c => flags.has(comicId(c)));
     if (pub !== "All") {
       if (pub === "Other") r = r.filter(c => !["MARVEL","DC","IMAGE","IDW","DARK HORSE"].some(p => c.Publisher.toUpperCase().includes(p)));
       else r = r.filter(c => c.Publisher.toUpperCase().includes(pub.toUpperCase()));
@@ -201,16 +368,16 @@ export default function CoverCatalog() {
     else if (sort === "bid")   sorted.sort((a, b) => parseNM(b.Start_Bid) - parseNM(a.Start_Bid));
     else if (sort === "title") sorted.sort((a, b) => a.Title.localeCompare(b.Title));
     return sorted;
-  }, [pub, artistQ, titleQ, whatnotOnly, keyOnly, signedOnly, sort]);
+  }, [pub, artistQ, titleQ, whatnotOnly, keyOnly, signedOnly, flaggedOnly, sort, flags]);
 
   const total   = filtered.length;
   const pages   = Math.ceil(total / PAGE_SIZE);
   const slice   = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
 
-  // Stats
-  const whatnotReady = WITH_ARTIST.filter(c => parseNM(c.Start_Bid) >= 10).length;
+  const whatnotReady  = WITH_ARTIST.filter(c => parseNM(c.Start_Bid) >= 10).length;
   const uniqueArtists = new Set(WITH_ARTIST.map(c => c.Cover_Artist.trim())).size;
   const signedCovers  = WITH_ARTIST.filter(c => (c.Signed || "").toUpperCase() === "YES").length;
+  const flagCount     = flags.size;
 
   function pill(label: string, active: boolean, onClick: () => void, color?: string) {
     return (
@@ -230,7 +397,20 @@ export default function CoverCatalog() {
       {/* Header */}
       <div style={{ marginBottom: 24 }}>
         <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.7rem", letterSpacing: "4px", color: "var(--red)", marginBottom: 4 }}>BLACKREADBROWN COLLECTION</div>
-        <h1 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "clamp(36px, 6vw, 64px)", letterSpacing: "4px", color: "var(--text)", lineHeight: 1, marginBottom: 8 }}>COVER ART CATALOG</h1>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: 12 }}>
+          <h1 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "clamp(36px, 6vw, 64px)", letterSpacing: "4px", color: "var(--text)", lineHeight: 1, marginBottom: 0 }}>COVER ART CATALOG</h1>
+          {flagCount > 0 && (
+            <button onClick={() => setShowModal(true)} style={{
+              fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.68rem", letterSpacing: "1.5px",
+              padding: "8px 16px", background: "#c8102e", color: "#fff",
+              border: "none", borderRadius: 6, cursor: "pointer",
+              display: "flex", alignItems: "center", gap: 6, alignSelf: "center",
+              boxShadow: "0 2px 8px rgba(200,16,46,0.3)",
+            }}>
+              🚩 {flagCount} INCORRECT COVER{flagCount !== 1 ? "S" : ""} FLAGGED
+            </button>
+          )}
+        </div>
         <div style={{ display: "flex", gap: 24, flexWrap: "wrap", marginTop: 12 }}>
           {[
             [WITH_ARTIST.length.toLocaleString(), "Credited Covers"],
@@ -279,6 +459,7 @@ export default function CoverCatalog() {
           {pill(`WHATNOT READY (${whatnotReady})`, whatnotOnly, () => { setWhatnotOnly(!whatnotOnly); setPage(1); }, "#c8102e")}
           {pill("KEYS ONLY", keyOnly, () => { setKeyOnly(!keyOnly); setPage(1); }, "#7a5500")}
           {pill("SIGNED ONLY", signedOnly, () => { setSignedOnly(!signedOnly); setPage(1); }, "#166534")}
+          {pill(`🚩 FLAGGED${flagCount > 0 ? ` (${flagCount})` : ""}`, flaggedOnly, () => { setFlaggedOnly(!flaggedOnly); setPage(1); }, "#c8102e")}
         </div>
       </div>
 
@@ -291,13 +472,18 @@ export default function CoverCatalog() {
       {slice.length === 0 ? (
         <div style={{ textAlign: "center", padding: "60px 20px", color: "var(--muted)", fontFamily: "'Crimson Pro', serif", fontSize: "1rem" }}>No covers match the current filters.</div>
       ) : (
-        slice.map((comic, i) => (
-          <CoverCard
-            key={`${comic.Title}|||${comic.Issue}|||${comic.Box}`}
-            comic={comic as CoverComic}
-            flip={(((page - 1) * PAGE_SIZE + i) % 2) === 1}
-          />
-        ))
+        slice.map((comic, i) => {
+          const id = comicId(comic);
+          return (
+            <CoverCard
+              key={id}
+              comic={comic as CoverComic}
+              flip={(((page - 1) * PAGE_SIZE + i) % 2) === 1}
+              flagged={flags.has(id)}
+              onToggleFlag={() => toggleFlag(comic)}
+            />
+          );
+        })
       )}
 
       {/* Pagination */}
@@ -324,6 +510,15 @@ export default function CoverCatalog() {
             NEXT →
           </button>
         </div>
+      )}
+
+      {/* Flagged modal */}
+      {showModal && (
+        <FlaggedModal
+          flags={[...flags.values()]}
+          onClose={() => setShowModal(false)}
+          onClear={clearFlag}
+        />
       )}
     </div>
   );
