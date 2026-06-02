@@ -6,7 +6,7 @@ const PWD           = "BlackReadBrown!";
 const PASSKEY_KEY   = "brbPasskeyId";   // stored as JSON: { credId: string; rpId: string }
 const PROGRESS_KEY  = "mc_progress_dismissed";
 
-const TARGET_BOXES = 84;
+const TARGET_BOXES = DATA3.boxes.length;
 const _comics      = DATA3.comics;
 const _boxes       = DATA3.boxes.length;
 const _keys        = _comics.filter(c => (c.Key    || "").toUpperCase() === "YES").length;
