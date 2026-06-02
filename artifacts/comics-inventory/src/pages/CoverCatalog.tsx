@@ -258,7 +258,7 @@ function FlaggedModal({ flags, onClose, onClear }: { flags: FlaggedCover[]; onCl
           publisher: f.Publisher, year: f.Year,
           refresh: "1",
         });
-        const res = await fetch(`${BASE}/api/covers/search?${params}`);
+        const res = await fetch(`${BASE}/api/covers/search?${params}`, { cache: "no-store" });
         if (res.ok) {
           const data = await res.json() as { cover_url?: string | null };
           if (data.cover_url) found++; else notFound++;

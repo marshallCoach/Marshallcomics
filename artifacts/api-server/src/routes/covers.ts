@@ -45,6 +45,10 @@ function cvParams(extra: Record<string, string> = {}) {
 
 // ── Route ─────────────────────────────────────────────────────────────────────
 router.get("/covers/search", async (req, res) => {
+  // Never allow browser caching — these are dynamic API responses
+  res.setHeader("Cache-Control", "no-store, no-cache, must-revalidate");
+  res.setHeader("Pragma", "no-cache");
+
   if (!API_KEY) {
     res.status(503).json({ error: "COMIC_VINE_API_KEY not configured" });
     return;
