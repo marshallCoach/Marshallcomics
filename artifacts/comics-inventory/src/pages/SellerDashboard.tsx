@@ -1,5 +1,7 @@
 import React, { useState, useMemo, useEffect } from "react";
 import { DATA } from "@/data/data";
+import type { Comic } from "@/data/data";
+import { CoverImage, CoverModal } from "@/components/CoverImage";
 
 // ── helpers ──────────────────────────────────────────────────────────────────
 function parseVal(v: string | undefined | null): number {
@@ -303,6 +305,7 @@ export default function SellerDashboard() {
   const [cgcTier, setCgcTier] = useState<65|100|200>(65);
   const [cgcPressing, setCgcPressing] = useState(true);
   const [cgcSelected, setCgcSelected] = useState<Set<number>>(new Set());
+  const [ebayComic, setEbayComic] = useState<{ comic: Comic; large: string|null }|null>(null);
 
   const pressPerBook = cgcPressing ? 22 : 0;
   const cgcTotals = useMemo(() => {
@@ -628,6 +631,7 @@ export default function SellerDashboard() {
                       onChange={e => e.target.checked ? selectAllEbay() : clearEbay()}
                       style={{ cursor:"pointer" }} />
                   </th>
+                  <th style={{ width:52, padding:"8px 6px" }}></th>
                   {["Title","Box","Issue","VF Value","eBay Fee","Net Profit","Key"].map(h => (
                     <th key={h} style={{ padding:"8px 10px", textAlign:"left", fontFamily:"'Bebas Neue',sans-serif",
                       letterSpacing:"1.5px", fontSize:"0.65rem", color:"var(--muted)", fontWeight:400 }}>{h}</th>
@@ -650,6 +654,11 @@ export default function SellerDashboard() {
                       <td style={{ padding:"7px 10px" }} onClick={e=>e.stopPropagation()}>
                         <input type="checkbox" checked={isSel} onChange={() => toggleEbay(idx)}
                           style={{ cursor:"pointer" }} />
+                      </td>
+                      <td style={{ padding:"4px 6px", width:52 }} onClick={e=>e.stopPropagation()}>
+                        <CoverImage comic={c} width={40} height={60}
+                          onClick={largeUrl => setEbayComic({ comic:c, large:largeUrl })}
+                          style={{ borderRadius:3, boxShadow:"0 2px 5px rgba(0,0,0,0.15)" }} />
                       </td>
                       <td style={{ padding:"7px 10px", color:"var(--text)", fontWeight: isKey ? 600 : 400 }}>
                         {c.Title}
@@ -896,6 +905,9 @@ export default function SellerDashboard() {
         </div>
       )}
 
+      {ebayComic && (
+        <CoverModal comic={ebayComic.comic} largeUrl={ebayComic.large} onClose={() => setEbayComic(null)} />
+      )}
     </div>
   );
 }
