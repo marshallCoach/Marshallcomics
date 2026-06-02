@@ -95,8 +95,8 @@ function CoverThumb({ c, onCoverClick }: { c: Comic; onCoverClick: (comic: Comic
   return (
     <CoverImage
       comic={c}
-      width={56}
-      height={84}
+      width={80}
+      height={120}
       onClick={(largeUrl) => onCoverClick(c, largeUrl)}
     />
   );
@@ -142,6 +142,17 @@ export default function Everything({
   }, []);
 
   const cols = useMemo<ColDef<Comic>[]>(() => [
+    { key:"cover", label:"", defaultWidth:56, cell: r => (
+      <div style={{ padding:"3px 0" }}>
+        <CoverImage
+          comic={r}
+          width={40}
+          height={60}
+          onClick={largeUrl => setCoverModal({ comic: r, large: largeUrl })}
+          style={{ boxShadow:"0 2px 6px rgba(0,0,0,0.15)", borderRadius:4 }}
+        />
+      </div>
+    )},
     { key:"title",     label:"Title",     defaultWidth:220, sort:(a,b)=>a.Title.localeCompare(b.Title), cell:r=>{
       const fk = comicFlagKey(r.Title, r.Issue || "", r.Box || "");
       return (
@@ -413,35 +424,44 @@ export default function Everything({
       {/* Results — list */}
       {searched && results.length > 0 && view === "list" && (
         <SortableTable rows={results} cols={cols} rowKey={(_r,i)=>String(i)} pageSize={100} defaultSortKey="box" expandCell={c => (
-          <div>
-            <div style={{ display:"flex", gap:20, flexWrap:"wrap" }}>
-              {c.Arc       && <div className="dr"><span className="dl">Arc</span><span className="dv">{c.Arc}</span></div>}
-              {(c.Key||"").toUpperCase()==="YES" && c.Key_Reason && <div className="dr"><span className="dl">Key</span><span className="dv" style={{color:"var(--gold)"}}>{c.Key_Reason}</span></div>}
-              {c.First_App && <div className="dr"><span className="dl">1st App</span><span className="dv">{c.First_App}</span></div>}
-              {(c.Signed||"").toUpperCase()==="YES" && c.Signed_By && <div className="dr"><span className="dl">Signed By</span><span className="dv">{c.Signed_By}</span></div>}
-              {c.Terrificon && <div className="dr"><span className="dl">Terrificon</span><span className="dv" style={{color:"#f59e0b"}}>{c.Terrificon}</span></div>}
-              {c.Condition && <div className="dr"><span className="dl">Condition</span><span className="dv">{c.Condition}</span></div>}
-              {c.Imprint   && <div className="dr"><span className="dl">Imprint</span><span className="dv">{c.Imprint}</span></div>}
-            </div>
-            {c.Story_Pitch && (
-              <div style={{ marginTop:6, color:"var(--muted2)", fontSize:"0.85rem", lineHeight:1.5 }}>{c.Story_Pitch.substring(0,220)}</div>
-            )}
-            <div style={{ marginTop:10, display:"flex", gap:10, alignItems:"center", flexWrap:"wrap" }}>
-              <a href={`https://comicvine.gamespot.com/search/?q=${encodeURIComponent(c.Title + " " + c.Issue)}`} target="_blank" rel="noopener noreferrer"
-                style={{ fontSize:"0.72rem", color:"var(--muted2)", textDecoration:"underline" }}>
-                🔎 View cover on Comic Vine
-              </a>
-              <button
-                onClick={e => { e.stopPropagation(); openDrawer(c); }}
-                style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1.5px", padding:"5px 12px", background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:4, cursor:"pointer", color:"var(--text)" }}
-              >
-                Full Details →
-              </button>
-              {flaggedKeys.has(comicFlagKey(c.Title, c.Issue || "", c.Box || "")) && (
-                <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1px", color:"#92400e", background:"#fef3c7", border:"1px solid #fcd34d", borderRadius:3, padding:"2px 8px" }}>
-                  UPDATE NEEDED
-                </span>
+          <div style={{ display:"flex", gap:16, alignItems:"flex-start" }}>
+            <CoverImage
+              comic={c}
+              width={80}
+              height={120}
+              onClick={largeUrl => setCoverModal({ comic: c, large: largeUrl })}
+              style={{ flexShrink:0, boxShadow:"0 4px 14px rgba(0,0,0,0.18)", borderRadius:5 }}
+            />
+            <div style={{ flex:1, minWidth:0 }}>
+              <div style={{ display:"flex", gap:20, flexWrap:"wrap" }}>
+                {c.Arc       && <div className="dr"><span className="dl">Arc</span><span className="dv">{c.Arc}</span></div>}
+                {(c.Key||"").toUpperCase()==="YES" && c.Key_Reason && <div className="dr"><span className="dl">Key</span><span className="dv" style={{color:"var(--gold)"}}>{c.Key_Reason}</span></div>}
+                {c.First_App && <div className="dr"><span className="dl">1st App</span><span className="dv">{c.First_App}</span></div>}
+                {(c.Signed||"").toUpperCase()==="YES" && c.Signed_By && <div className="dr"><span className="dl">Signed By</span><span className="dv">{c.Signed_By}</span></div>}
+                {c.Terrificon && <div className="dr"><span className="dl">Terrificon</span><span className="dv" style={{color:"#f59e0b"}}>{c.Terrificon}</span></div>}
+                {c.Condition && <div className="dr"><span className="dl">Condition</span><span className="dv">{c.Condition}</span></div>}
+                {c.Imprint   && <div className="dr"><span className="dl">Imprint</span><span className="dv">{c.Imprint}</span></div>}
+              </div>
+              {c.Story_Pitch && (
+                <div style={{ marginTop:6, color:"var(--muted2)", fontSize:"0.85rem", lineHeight:1.5 }}>{c.Story_Pitch.substring(0,220)}</div>
               )}
+              <div style={{ marginTop:10, display:"flex", gap:10, alignItems:"center", flexWrap:"wrap" }}>
+                <a href={`https://comicvine.gamespot.com/search/?q=${encodeURIComponent(c.Title + " " + c.Issue)}`} target="_blank" rel="noopener noreferrer"
+                  style={{ fontSize:"0.72rem", color:"var(--muted2)", textDecoration:"underline" }}>
+                  🔎 Comic Vine
+                </a>
+                <button
+                  onClick={e => { e.stopPropagation(); openDrawer(c); }}
+                  style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1.5px", padding:"5px 12px", background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:4, cursor:"pointer", color:"var(--text)" }}
+                >
+                  Full Details →
+                </button>
+                {flaggedKeys.has(comicFlagKey(c.Title, c.Issue || "", c.Box || "")) && (
+                  <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1px", color:"#92400e", background:"#fef3c7", border:"1px solid #fcd34d", borderRadius:3, padding:"2px 8px" }}>
+                    UPDATE NEEDED
+                  </span>
+                )}
+              </div>
             </div>
           </div>
         )} />
