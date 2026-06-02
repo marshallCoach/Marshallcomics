@@ -826,3 +826,26 @@ body {
   from { opacity: 0; transform: translateX(-4px); }
   to   { opacity: 1; transform: none; }
 }
+
+/* ── Cover Carousel (Home page) ─────────────────────────────────────── */
+@keyframes coverMarquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.cover-carousel-track {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  padding: 4px 16px 10px;
+  animation: coverMarquee 36s linear infinite;
+}
+.cover-carousel-track:hover { animation-play-state: paused; }
+.cover-carousel-card {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.18s;
+}
+.cover-carousel-card:hover { transform: translateY(-4px); }
