@@ -1,7 +1,7 @@
 import { useState, useMemo } from "react";
-import { DATA3 } from "@/data/data3";
+import { DATA } from "@/data/data";
 
-const comics = DATA3.comics;
+const comics = DATA.comics;
 
 // ─── Checklist Data ────────────────────────────────────────────────────────────
 interface ChecklistItem {

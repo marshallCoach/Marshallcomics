@@ -1,6 +1,6 @@
 import { useState, useMemo, useCallback, useRef, useEffect } from "react";
-import { DATA3 } from "@/data/data3";
-import type { Comic } from "@/data/data3";
+import { DATA } from "@/data/data";
+import type { Comic } from "@/data/data";
 
 // ── LocalStorage ──────────────────────────────────────────────────────────────
 const LS_HIDDEN         = "brbHiddenGroups";
@@ -38,7 +38,7 @@ interface DupGroup {
   flag: "same-box" | "bought-twice";
 }
 
-const comics = DATA3.comics;
+const comics = DATA.comics;
 
 const RAW_GROUPS = (() => {
   const map = new Map<string, Comic[]>();

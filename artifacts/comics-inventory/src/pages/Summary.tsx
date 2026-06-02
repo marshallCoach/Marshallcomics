@@ -1,14 +1,14 @@
 import { useState, useEffect, useRef, useMemo } from "react";
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
-import { DATA3 } from "@/data/data3";
+import { DATA } from "@/data/data";
 import { NEXT_STEPS, Status, StepCard, loadStatuses, saveStatuses } from "./ActionPlan";
 import { CALENDAR_EVENTS } from "./Calendar";
 import { CoverImage, CoverModal } from "@/components/CoverImage";
 import type { NavParams } from "../App";
 
 // ── Static data ──────────────────────────────────────────────────────────────
-const comics  = DATA3.comics;
-const boxData = DATA3.boxes;
+const comics  = DATA.comics;
+const boxData = DATA.boxes;
 
 const totalComics  = comics.length;
 const totalBoxes   = boxData.length;

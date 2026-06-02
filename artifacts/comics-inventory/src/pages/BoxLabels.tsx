@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { DATA3 } from "@/data/data3";
+import { DATA } from "@/data/data";
 
 const STORAGE_KEY = "boxlabels_checked";
 
@@ -24,7 +24,7 @@ const PUB_COLORS: Record<PubType, { bg: string; card: string; accent: string; la
 };
 
 function dominantPublisher(boxNum: string): PubType {
-  const comics = DATA3.comics.filter(c => String(c.Box).trim() === String(boxNum).trim());
+  const comics = DATA.comics.filter(c => String(c.Box).trim() === String(boxNum).trim());
   if (!comics.length) return "Mixed";
   const counts: Record<string, number> = {};
   for (const c of comics) {
@@ -53,7 +53,7 @@ export default function BoxLabels() {
   // collapsed groups: set of group-index strings
   const [collapsed, setCollapsed] = useState<Set<number>>(new Set());
 
-  const boxes = DATA3.boxes;
+  const boxes = DATA.boxes;
 
   const enriched = useMemo(() =>
     boxes.map(b => ({ ...b, pub: dominantPublisher(b.Num) })),

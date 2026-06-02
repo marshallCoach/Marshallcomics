@@ -1,9 +1,9 @@
 import { useState, useMemo, useEffect, useRef } from "react";
-import { DATA3 } from "@/data/data3";
+import { DATA } from "@/data/data";
 import { pubColors } from "@/utils/coverThumbnails";
 
-const comics = DATA3.comics;
-const boxes  = DATA3.boxes;
+const comics = DATA.comics;
+const boxes  = DATA.boxes;
 
 function parseIssueParts(issue: string): { main: string; legacy: string | null } {
   const m = String(issue || "").match(/^(.*?)\s*\[Legacy\s*#?(\d+)\]\s*$/i);

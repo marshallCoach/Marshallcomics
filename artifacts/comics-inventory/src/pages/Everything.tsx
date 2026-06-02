@@ -1,14 +1,15 @@
 import { useState, useMemo, useCallback, useEffect, useRef } from "react";
-import { DATA3 } from "@/data/data3";
+import { DATA } from "@/data/data";
 import { getCoverSvgUrl, type ComicLike } from "@/utils/coverThumbnails";
 import { CoverImage, CoverModal } from "@/components/CoverImage";
 import { SortableTable, ColDef } from "@/components/SortableTable";
 import { Paginator } from "@/components/Paginator";
 import ComicDrawer, { type DrawerComic } from "@/components/ComicDrawer";
 import { comicFlagKey, loadAllFlags } from "@/lib/comicFlags";
+import { downloadClaudeNotes } from "@/lib/exportForClaude";
 
 const CARD_PAGE = 80;
-const ALL = DATA3.comics;
+const ALL = DATA.comics;
 
 function parseIssueParts(issue: string): { main: string; legacy: string | null } {
   const m = String(issue || "").match(/^(.*?)\s*\[Legacy\s*#?(\d+)\]\s*$/i);
@@ -401,10 +402,22 @@ export default function Everything({
           <div style={{ fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px", fontSize:"0.82rem", color:"var(--muted2)" }}>
             {results.length === 0
               ? "No results — try a different search"
-              : <><span style={{ color:"var(--red)", fontSize:"1.05rem" }}>{results.length.toLocaleString()}</span> {results.length===1?"book":"books"} {familyFilter && `· ${familyFilter}`} {exactTitle && `· "${exactTitle}" only`} — {ALL.length.toLocaleString()} total, {DATA3.boxes.length} boxes</>
+              : <><span style={{ color:"var(--red)", fontSize:"1.05rem" }}>{results.length.toLocaleString()}</span> {results.length===1?"book":"books"} {familyFilter && `· ${familyFilter}`} {exactTitle && `· "${exactTitle}" only`} — {ALL.length.toLocaleString()} total, {DATA.boxes.length} boxes</>
             }
           </div>
           <div style={{ display:"flex", gap:6 }}>
+            <button
+              onClick={() => downloadClaudeNotes()}
+              title="Download all flagged notes as a .txt file for Claude"
+              style={{
+                fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1.5px",
+                padding:"5px 13px", border:"1.5px solid #7c3aed",
+                background:"none", color:"#7c3aed",
+                borderRadius:4, cursor:"pointer",
+              }}
+            >
+              ↓ Export Notes for Claude
+            </button>
             {(["list","card"] as const).map(v=>(
               <button key={v} onClick={()=>setView(v)}
                 style={{

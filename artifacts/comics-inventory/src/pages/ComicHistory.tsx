@@ -1,8 +1,8 @@
 import { useState, useMemo, useCallback, useEffect, useRef } from "react";
-import { DATA3 } from "@/data/data3";
-import type { Comic } from "@/data/data3";
+import { DATA } from "@/data/data";
+import type { Comic } from "@/data/data";
 
-const comics = DATA3.comics;
+const comics = DATA.comics;
 
 const MONTH_LABELS = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
 const MONTH_FULL   = ["January","February","March","April","May","June","July","August","September","October","November","December"];

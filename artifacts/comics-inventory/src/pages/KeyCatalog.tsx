@@ -1,8 +1,8 @@
 import { useState, useMemo } from "react";
-import { DATA3 } from "@/data/data3";
+import { DATA } from "@/data/data";
 import { CoverImage } from "@/components/CoverImage";
 
-const ALL_KEYS = DATA3.comics.filter(c => (c.Key || "").toUpperCase() === "YES");
+const ALL_KEYS = DATA.comics.filter(c => (c.Key || "").toUpperCase() === "YES");
 const PAGE_SIZE = 18;
 
 function parseNM(v: string) {

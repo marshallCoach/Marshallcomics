@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect, useRef, Fragment } from "react";
-import { DATA3 } from "@/data/data3";
+import { DATA } from "@/data/data";
 import { SortableTable, ColDef } from "@/components/SortableTable";
 import { Paginator } from "@/components/Paginator";
 
@@ -9,8 +9,8 @@ function loadHuntLS(): Set<string> {
   catch { return new Set(); }
 }
 
-const ALL   = DATA3.comics;
-const BOXES = DATA3.boxes;
+const ALL   = DATA.comics;
+const BOXES = DATA.boxes;
 type Comic  = (typeof ALL)[number];
 
 const CARD_PAGE = 80;

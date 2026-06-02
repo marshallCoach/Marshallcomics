@@ -1,5 +1,5 @@
 import { useState, useMemo, useRef } from "react";
-import { DATA3 } from "@/data/data3";
+import { DATA } from "@/data/data";
 import { CoverImage, CoverModal } from "@/components/CoverImage";
 import { SortableTable, ColDef } from "@/components/SortableTable";
 import { Paginator } from "@/components/Paginator";
@@ -8,7 +8,7 @@ import { comicFlagKey, loadAllFlags } from "@/lib/comicFlags";
 
 const CARD_PAGE_SIZE = 100;
 
-const keys  = DATA3.comics.filter(c => (c.Key || "").toUpperCase() === "YES");
+const keys  = DATA.comics.filter(c => (c.Key || "").toUpperCase() === "YES");
 const BOXES = [...new Set(keys.map(k => k.Box).filter(Boolean))].sort((a, b) => Number(a) - Number(b));
 const PUBS  = [...new Set(keys.map(k => k.Publisher).filter(Boolean))].sort();
 const ERAS  = [...new Set(keys.map(k => k.Era).filter(Boolean))].sort();

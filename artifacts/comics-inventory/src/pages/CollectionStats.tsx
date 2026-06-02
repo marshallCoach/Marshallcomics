@@ -1,11 +1,11 @@
 import { useMemo, useState } from "react";
-import { DATA3 } from "@/data/data3";
+import { DATA } from "@/data/data";
 import {
   PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, Tooltip,
   ResponsiveContainer, Legend,
 } from "recharts";
 
-const comics = DATA3.comics;
+const comics = DATA.comics;
 
 // ── helpers ──────────────────────────────────────────────────────────────────
 function countBy<T>(arr: T[], key: (x: T) => string): Record<string, number> {

@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
-import { DATA3 } from "@/data/data3";
+import { DATA } from "@/data/data";
 
 const KEY           = "mc_auth";
 const PWD           = "BlackReadBrown!";
 const PASSKEY_KEY   = "brbPasskeyId";   // stored as JSON: { credId: string; rpId: string }
 const PROGRESS_KEY  = "mc_progress_dismissed";
 
-const TARGET_BOXES = DATA3.boxes.length;
-const _comics      = DATA3.comics;
-const _boxes       = DATA3.boxes.length;
+const TARGET_BOXES = DATA.boxes.length;
+const _comics      = DATA.comics;
+const _boxes       = DATA.boxes.length;
 const _keys        = _comics.filter(c => (c.Key    || "").toUpperCase() === "YES").length;
 const _signed      = _comics.filter(c => (c.Signed || "").toUpperCase() === "YES").length;
 const _boxPct      = Math.round((_boxes / TARGET_BOXES) * 100);

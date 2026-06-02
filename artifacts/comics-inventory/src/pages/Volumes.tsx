@@ -1,8 +1,8 @@
 import { useState, useMemo } from "react";
-import { DATA3 } from "@/data/data3";
+import { DATA } from "@/data/data";
 import type { NavParams } from "../App";
 
-const comics = DATA3.comics;
+const comics = DATA.comics;
 type Comic = (typeof comics)[number];
 
 type NavFn = (page: string, params?: NavParams) => void;
