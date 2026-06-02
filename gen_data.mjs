@@ -1,10 +1,9 @@
-import { readFileSync, writeFileSync } from 'fs';
+import { writeFileSync, readdirSync, statSync } from 'fs';
 import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
-const XLSX = require('xlsx');
+const ExcelJS = require('exceljs');
 
 // Auto-detect the newest comics_inventory*.xlsx in attached_assets/ (supports X_ prefix)
-import { readdirSync, statSync } from 'fs';
 const xlsxFiles = readdirSync('attached_assets')
   .filter(f => f.includes('comics_inventory') && f.endsWith('.xlsx'))
   .map(f => ({ f, mtime: statSync(`attached_assets/${f}`).mtimeMs }))
@@ -12,11 +11,43 @@ const xlsxFiles = readdirSync('attached_assets')
 if (!xlsxFiles.length) { console.error('No comics_inventory*.xlsx found in attached_assets/'); process.exit(1); }
 const XLSX_FILE = `attached_assets/${xlsxFiles[0].f}`;
 console.log(`Using: ${XLSX_FILE}`);
-const wb = XLSX.readFile(XLSX_FILE);
+
+function cellValueToString(v, defval = '') {
+  if (v === null || v === undefined) return defval;
+  if (typeof v === 'object') {
+    if (v instanceof Date) return v.toISOString().slice(0, 10);
+    if (v.text !== undefined) return String(v.text);
+    if (v.result !== undefined) return String(v.result);
+    if (v.error !== undefined) return defval;
+    return String(v);
+  }
+  return String(v);
+}
+
+function worksheetToArrays(worksheet, defval = '') {
+  const rows = [];
+  let maxCol = 0;
+  worksheet.eachRow({ includeEmpty: true }, (row) => {
+    const vals = row.values; // 1-indexed, index 0 is null
+    const arr = [];
+    for (let c = 1; c < vals.length; c++) {
+      arr.push(cellValueToString(vals[c], defval));
+    }
+    maxCol = Math.max(maxCol, arr.length);
+    rows.push(arr);
+  });
+  for (const row of rows) {
+    while (row.length < maxCol) row.push(defval);
+  }
+  return rows;
+}
+
+const wb = new ExcelJS.Workbook();
+await wb.xlsx.readFile(XLSX_FILE);
 
 // ── COMICS ───────────────────────────────────────────────────────────────────
-const comicsSheet = wb.Sheets['Comics Inventory'];
-const allRows = XLSX.utils.sheet_to_json(comicsSheet, { header: 1, defval: '' });
+const comicsSheet = wb.getWorksheet('Comics Inventory');
+const allRows = worksheetToArrays(comicsSheet, '');
 const headers = allRows[0];
 
 function col(name) {
@@ -106,8 +137,8 @@ for (let r = 1; r < allRows.length; r++) {
 // New structure (row 1 = headers, row 2+ = data):
 // col0=Box(Num)  col1=Comics  col2=Keys  col3=Sgnd  col4=Years
 // col5=Label/Contents  col6=FirstBook  col7=LastBook  col8=Location  col9=Notes
-const bsSheet = wb.Sheets['Box Summary'];
-const bsRows  = XLSX.utils.sheet_to_json(bsSheet, { header: 1, defval: '' });
+const bsSheet = wb.getWorksheet('Box Summary');
+const bsRows  = worksheetToArrays(bsSheet, '');
 const boxes = [];
 const coveredBoxNums = new Set();
 for (let r = 2; r < bsRows.length; r++) {
