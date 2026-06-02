@@ -1,5 +1,6 @@
 import { useState, useMemo, useRef } from "react";
 import { DATA } from "@/data/data";
+import { CoverImage, CoverModal } from "@/components/CoverImage";
 import { SortableTable, ColDef } from "@/components/SortableTable";
 import { Paginator } from "@/components/Paginator";
 
@@ -31,6 +32,18 @@ function parseVal(v: string | undefined | null) {
 }
 
 const LIST_COLS: ColDef<Comic>[] = [
+  {
+    key: "cover", label: "", defaultWidth: 52,
+    cell: r => (
+      <div style={{ padding:"3px 0" }}>
+        <CoverImage
+          comic={r} width={40} height={60}
+          onClick={largeUrl => _salCoverClick?.(r, largeUrl)}
+          style={{ boxShadow:"0 2px 6px rgba(0,0,0,0.15)", borderRadius:4 }}
+        />
+      </div>
+    ),
+  },
   {
     key: "box", label: "Box", defaultWidth: 55,
     sort: (a, b) => Number(a.Box) - Number(b.Box),
@@ -104,6 +117,7 @@ const LIST_COLS: ColDef<Comic>[] = [
 ];
 
 let _salTitleClick: ((title: string) => void) | undefined;
+let _salCoverClick: ((comic: Comic, large: string|null) => void) | undefined;
 
 export default function OriginalCollection({ initSigned }: { initSigned?: string }) {
   const searchInputRef = useRef<HTMLInputElement>(null);
@@ -115,9 +129,11 @@ export default function OriginalCollection({ initSigned }: { initSigned?: string
   const [keyOnly,  setKeyOnly]  = useState("");
   const [cgcOnly,  setCgcOnly]  = useState("");
   const [view,     setView]     = useState<"card" | "list">("card");
-  const [open,     setOpen]     = useState<Set<number>>(new Set());
-  const [cardPage, setCardPage] = useState(1);
+  const [open,       setOpen]       = useState<Set<number>>(new Set());
+  const [cardPage,   setCardPage]   = useState(1);
+  const [coverModal, setCoverModal] = useState<{ comic: Comic; large: string|null }|null>(null);
   _salTitleClick = (t: string) => { setQ(t); setCardPage(1); };
+  _salCoverClick = (comic, large) => setCoverModal({ comic, large });
 
   const results = useMemo(() => {
     const ql = q.toLowerCase();
@@ -248,9 +264,14 @@ export default function OriginalCollection({ initSigned }: { initSigned?: string
                     boxShadow: isOpen ? `0 4px 16px ${accentHex}20` : "none",
                   }}>
                   {/* Header */}
-                  <div style={{ display:"flex", alignItems:"flex-start", gap:8, flexWrap:"wrap" }}>
+                  <div style={{ display:"flex", alignItems:"flex-start", gap:10, flexWrap:"nowrap" }}>
+                    <div onClick={e => e.stopPropagation()} style={{ flexShrink:0 }}>
+                      <CoverImage comic={c} width={44} height={66}
+                        onClick={largeUrl => setCoverModal({ comic:c, large:largeUrl })}
+                        style={{ borderRadius:3, boxShadow:"0 2px 5px rgba(0,0,0,0.15)" }} />
+                    </div>
                     <div style={{ flex:1, minWidth:0 }}>
-                      {isTf && <span className="tf-badge" style={{ marginBottom:4, display:"inline-block" }}>TERRIFICON</span>}
+                    {isTf && <span className="tf-badge" style={{ marginBottom:4, display:"inline-block" }}>TERRIFICON</span>}
                       <button
                         className="title-link"
                         onClick={e => { e.stopPropagation(); setQ(c.Title||""); setCardPage(1); }}
@@ -331,6 +352,9 @@ export default function OriginalCollection({ initSigned }: { initSigned?: string
             )}
           />
         </div>
+      )}
+      {coverModal && (
+        <CoverModal comic={coverModal.comic} largeUrl={coverModal.large} onClose={() => setCoverModal(null)} />
       )}
     </div>
   );

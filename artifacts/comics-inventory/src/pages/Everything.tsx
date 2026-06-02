@@ -165,7 +165,12 @@ export default function Everything({
         </span>
       );
     }},
-    { key:"issue",     label:"Issue #",   defaultWidth:65,  sort:(a,b)=>parseVal(a.Issue)-parseVal(b.Issue), cell:r=>{ const ip=parseIssueParts(r.Issue); return <span className="lt-sub" title={ip.legacy?`${ip.main} (${ip.legacy})`:undefined}>{ip.main}{ip.legacy&&<sup style={{fontSize:"0.6em",opacity:0.6,marginLeft:1}}>L</sup>}</span>; } },
+    { key:"issue",     label:"Issue #",   defaultWidth:80,  sort:(a,b)=>parseVal(a.Issue)-parseVal(b.Issue), cell:r=>{ const ip=parseIssueParts(r.Issue); return (
+      <span className="lt-sub">
+        {ip.main}
+        {ip.legacy && <span style={{display:"block",fontSize:"0.65em",color:"var(--muted)",lineHeight:1.2,marginTop:1}}>{ip.legacy}</span>}
+      </span>
+    ); } },
     { key:"volume",    label:"Vol",       defaultWidth:58,  sort:(a,b)=>Number(a.Volume||0)-Number(b.Volume||0), cell:r=><span className="lt-sub">{r.Volume||"—"}</span> },
     { key:"publisher", label:"Publisher", defaultWidth:100, sort:(a,b)=>a.Publisher.localeCompare(b.Publisher), cell:r=><span className="lt-sub">{r.Publisher}</span> },
     { key:"box",       label:"Box",       defaultWidth:70,  sort:(a,b)=>Number(a.Box)-Number(b.Box), cell:r=>(
@@ -173,8 +178,12 @@ export default function Everything({
         ? <button onClick={e=>{e.stopPropagation();onNavigate("boxvisual",{box:r.Box});}} style={{all:"unset",cursor:"pointer"}}><BoxBadge box={r.Box} /></button>
         : <BoxBadge box={r.Box} />
     )},
-    { key:"writer",    label:"Writer",    defaultWidth:130, sort:(a,b)=>a.Writer.localeCompare(b.Writer), cell:r=><span className="lt-sub">{r.Writer||"—"}</span> },
-    { key:"artist",    label:"Artist",    defaultWidth:130, sort:(a,b)=>a.Artist.localeCompare(b.Artist), cell:r=><span className="lt-sub">{r.Artist||"—"}</span> },
+    { key:"writer",    label:"Writer",    defaultWidth:130, sort:(a,b)=>a.Writer.localeCompare(b.Writer), cell:r=> r.Writer && r.Writer!=="nan"
+      ? <button className="title-link" onClick={e=>{e.stopPropagation();setQuery(r.Writer);setExactTitle("");setSearched(true);setCardPage(1);}}>{r.Writer}</button>
+      : <span className="lt-sub">—</span> },
+    { key:"artist",    label:"Artist",    defaultWidth:130, sort:(a,b)=>a.Artist.localeCompare(b.Artist), cell:r=> r.Artist && r.Artist!=="nan"
+      ? <button className="title-link" onClick={e=>{e.stopPropagation();setQuery(r.Artist);setExactTitle("");setSearched(true);setCardPage(1);}}>{r.Artist}</button>
+      : <span className="lt-sub">—</span> },
     { key:"key",       label:"Key",       defaultWidth:55,  sort:(a,b)=>a.Key.localeCompare(b.Key), cell:r=>r.Key?.toUpperCase()==="YES"?<span className="badge bkey" style={{fontSize:"0.6rem"}}>KEY</span>:null },
     { key:"nm",        label:"NM Value",  defaultWidth:90,  sort:(a,b)=>parseVal(a.Value_NM)-parseVal(b.Value_NM), cell:r=><span className="lt-val">{r.Value_NM && r.Value_NM!=="nan" ? `$${r.Value_NM}` : "—"}</span> },
     { key:"vf",        label:"VF Value",  defaultWidth:90,  sort:(a,b)=>parseVal(a.Value_VF)-parseVal(b.Value_VF), cell:r=>{ const v=r.Value_VF&&r.Value_VF!=="nan"?r.Value_VF.match(/(\d+(?:\.\d+)?)/)?.[1]:""; return <span className="lt-vf">{v?`$${v}`:"—"}</span>; }},
