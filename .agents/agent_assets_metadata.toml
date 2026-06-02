@@ -18,3 +18,9 @@ id = "KffrpWdkPp5OQa511sqnc"
 uri = "file://marshall-comics-2026-06-01.zip"
 type = "unspecified"
 title = "Marshall Comics — Static HTML Backup (June 1, 2026)"
+
+[[outputs]]
+id = "EBClhgvGrPzf9f7MAHaEJ"
+uri = "file://attached_assets/marshall_comics_site.zip"
+type = "unspecified"
+title = "Marshall Comics — Static Site (Jun 2, 2026)"
