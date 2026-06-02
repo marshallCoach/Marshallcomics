@@ -152,4 +152,17 @@ router.get("/covers/search", async (req, res) => {
   }
 });
 
+// ── Manually set a cover (user-confirmed correct match) ───────────────────────
+router.post("/covers/set", (req, res) => {
+  res.setHeader("Cache-Control", "no-store");
+  const { title, issue, url, large } = req.body as { title?: string; issue?: string; url?: string | null; large?: string | null };
+  if (!title) { res.status(400).json({ error: "title required" }); return; }
+
+  loadCache();
+  const key = diskKey(title, issue ?? "");
+  diskCache[key] = { url: url ?? null, large: large ?? null, date: new Date().toISOString().slice(0, 10) };
+  saveCache();
+  res.json({ ok: true });
+});
+
 export default router;
