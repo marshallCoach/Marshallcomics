@@ -1,6 +1,6 @@
 import { useState, useMemo, useCallback, useEffect } from "react";
 import { DATA3 } from "@/data/data3";
-import { CoverImage } from "@/components/CoverImage";
+import { CoverImage, clearCoverMemCache } from "@/components/CoverImage";
 
 const ALL_COMICS = DATA3.comics;
 const WITH_ARTIST = ALL_COMICS.filter(c => c.Cover_Artist && c.Cover_Artist.trim() && c.Cover_Artist !== "nan");
@@ -233,7 +233,43 @@ function CoverCard({
 
 // ── Flagged export modal ──────────────────────────────────────────────────────
 
+const BASE = import.meta.env.BASE_URL?.replace(/\/$/, "") ?? "";
+
+type RefetchState = "idle" | "running" | "done";
+
 function FlaggedModal({ flags, onClose, onClear }: { flags: FlaggedCover[]; onClose: () => void; onClear: (id: string) => void }) {
+  const [refetchState, setRefetchState] = useState<RefetchState>("idle");
+  const [refetchProgress, setRefetchProgress] = useState(0);
+  const [refetchResults, setRefetchResults] = useState<{ found: number; notFound: number } | null>(null);
+
+  async function refetchAllCovers() {
+    if (!flags.length) return;
+    setRefetchState("running");
+    setRefetchProgress(0);
+    setRefetchResults(null);
+    let found = 0, notFound = 0;
+    for (let i = 0; i < flags.length; i++) {
+      const f = flags[i];
+      // Clear client-side memory cache so the card re-renders with new data
+      clearCoverMemCache(f.Title, f.Issue);
+      try {
+        const params = new URLSearchParams({
+          title: f.Title, issue: f.Issue,
+          publisher: f.Publisher, year: f.Year,
+          refresh: "1",
+        });
+        const res = await fetch(`${BASE}/api/covers/search?${params}`);
+        if (res.ok) {
+          const data = await res.json() as { cover_url?: string | null };
+          if (data.cover_url) found++; else notFound++;
+        } else { notFound++; }
+      } catch { notFound++; }
+      setRefetchProgress(i + 1);
+    }
+    setRefetchResults({ found, notFound });
+    setRefetchState("done");
+  }
+
   const csv = [
     "Title,Issue,Box,Cover Artist,Publisher,Year,Flagged At",
     ...flags.map(f => `"${f.Title}","${f.Issue}","${f.Box}","${f.Cover_Artist}","${f.Publisher}","${f.Year}","${f.flaggedAt}"`),
@@ -283,13 +319,45 @@ function FlaggedModal({ flags, onClose, onClear }: { flags: FlaggedCover[]; onCl
         </div>
 
         {flags.length > 0 && (
-          <div style={{ padding: "16px 24px", borderTop: "1.5px solid var(--border)", display: "flex", gap: 10, flexWrap: "wrap" }}>
-            <button onClick={downloadCSV} style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.7rem", letterSpacing: "1.5px", padding: "8px 18px", background: "var(--red)", color: "#fff", border: "none", borderRadius: 5, cursor: "pointer" }}>
-              ↓ DOWNLOAD CSV
-            </button>
-            <button onClick={copyToClipboard} style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.7rem", letterSpacing: "1.5px", padding: "8px 18px", background: "var(--surface2)", color: "var(--text)", border: "1.5px solid var(--border)", borderRadius: 5, cursor: "pointer" }}>
-              COPY TO CLIPBOARD
-            </button>
+          <div style={{ padding: "16px 24px", borderTop: "1.5px solid var(--border)", display: "flex", flexDirection: "column", gap: 10 }}>
+            {/* Re-fetch row */}
+            <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
+              <button
+                onClick={refetchAllCovers}
+                disabled={refetchState === "running"}
+                style={{
+                  fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.7rem", letterSpacing: "1.5px",
+                  padding: "8px 18px", borderRadius: 5, border: "none", cursor: refetchState === "running" ? "default" : "pointer",
+                  background: refetchState === "running" ? "#999" : "#1d4ed8", color: "#fff",
+                  opacity: refetchState === "running" ? 0.7 : 1,
+                }}
+              >
+                {refetchState === "running"
+                  ? `FETCHING ${refetchProgress}/${flags.length}…`
+                  : refetchState === "done"
+                  ? "↻ RE-FETCH AGAIN"
+                  : "↻ RE-FETCH FROM COMIC VINE"}
+              </button>
+              {refetchState === "running" && (
+                <div style={{ flex: 1, height: 6, background: "var(--border)", borderRadius: 3, overflow: "hidden", minWidth: 80 }}>
+                  <div style={{ height: "100%", background: "#1d4ed8", borderRadius: 3, width: `${Math.round((refetchProgress / flags.length) * 100)}%`, transition: "width 0.2s" }} />
+                </div>
+              )}
+              {refetchState === "done" && refetchResults && (
+                <span style={{ fontFamily: "'Crimson Pro', serif", fontSize: "0.82rem", color: "var(--muted)" }}>
+                  {refetchResults.found} new covers found · {refetchResults.notFound} still missing — close and scroll to see updates
+                </span>
+              )}
+            </div>
+            {/* Export row */}
+            <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+              <button onClick={downloadCSV} style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.7rem", letterSpacing: "1.5px", padding: "8px 18px", background: "var(--red)", color: "#fff", border: "none", borderRadius: 5, cursor: "pointer" }}>
+                ↓ DOWNLOAD CSV
+              </button>
+              <button onClick={copyToClipboard} style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.7rem", letterSpacing: "1.5px", padding: "8px 18px", background: "var(--surface2)", color: "var(--text)", border: "1.5px solid var(--border)", borderRadius: 5, cursor: "pointer" }}>
+                COPY TO CLIPBOARD
+              </button>
+            </div>
           </div>
         )}
       </div>

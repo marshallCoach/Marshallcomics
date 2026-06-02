@@ -56,6 +56,12 @@ router.get("/covers/search", async (req, res) => {
   loadCache();
   const key = diskKey(title, issue ?? "");
 
+  // ── Force-refresh: delete cached entry so it re-fetches from Comic Vine ───
+  if (req.query["refresh"] === "1" && Object.prototype.hasOwnProperty.call(diskCache, key)) {
+    delete diskCache[key];
+    saveCache();
+  }
+
   // ── Cache hit ──────────────────────────────────────────────────────────────
   if (Object.prototype.hasOwnProperty.call(diskCache, key)) {
     const cached = diskCache[key];
