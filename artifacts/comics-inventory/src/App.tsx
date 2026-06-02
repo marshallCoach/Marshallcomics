@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import { DATA3 } from "@/data/data3";
+import { DATA } from "@/data/data";
 import GlobalSearch from "@/components/GlobalSearch";
 import OriginalCollection from "@/pages/OriginalCollection";
 import BoxKeys from "@/pages/BoxKeys";
@@ -99,11 +99,11 @@ const NAV = [
 
 type SectionId = (typeof NAV)[number]["id"];
 
-const comics = DATA3.comics;
+const comics = DATA.comics;
 const total  = comics.length;
 const signed = comics.filter(c => (c.Signed || "").toUpperCase() === "YES").length;
 const keys   = comics.filter(c => (c.Key    || "").toUpperCase() === "YES").length;
-const boxes  = DATA3.boxes.length;
+const boxes  = DATA.boxes.length;
 
 const TERRIFICON_DATE = new Date(2026, 7, 7, 9, 0, 0);
 

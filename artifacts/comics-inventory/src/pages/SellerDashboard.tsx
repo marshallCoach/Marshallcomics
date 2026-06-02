@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from "react";
-import { DATA3 } from "@/data/data3";
+import { DATA } from "@/data/data";
 
 // ── helpers ──────────────────────────────────────────────────────────────────
 function parseVal(v: string | undefined | null): number {
@@ -225,7 +225,7 @@ function RoiBar({ bars, color }: { bars: number; color: string }) {
 }
 
 // ── main component ────────────────────────────────────────────────────────────
-const EBAY_BOOKS = DATA3.comics.filter(c => (c.Platform||"").toUpperCase() === "EBAY");
+const EBAY_BOOKS = DATA.comics.filter(c => (c.Platform||"").toUpperCase() === "EBAY");
 
 export default function SellerDashboard() {
   type DashTab = "action" | "ebay" | "cgc" | "sell30";

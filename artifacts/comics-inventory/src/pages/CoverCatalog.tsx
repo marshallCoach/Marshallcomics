@@ -1,8 +1,8 @@
 import { useState, useMemo, useCallback, useEffect } from "react";
-import { DATA3 } from "@/data/data3";
+import { DATA } from "@/data/data";
 import { CoverImage, clearCoverMemCache } from "@/components/CoverImage";
 
-const ALL_COMICS = DATA3.comics;
+const ALL_COMICS = DATA.comics;
 const WITH_ARTIST = ALL_COMICS.filter(c => c.Cover_Artist && c.Cover_Artist.trim() && c.Cover_Artist !== "nan");
 
 const PAGE_SIZE = 16;

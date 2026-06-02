@@ -1,8 +1,8 @@
 import { useMemo, useState } from "react";
-import { DATA3 } from "@/data/data3";
+import { DATA } from "@/data/data";
 
-const boxes  = DATA3.boxes;
-const comics = DATA3.comics;
+const boxes  = DATA.boxes;
+const comics = DATA.comics;
 
 const MONTH_ORDER: Record<string, number> = {
   jan:0, feb:1, mar:2, apr:3, may:4, jun:5,

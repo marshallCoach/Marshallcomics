@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { DATA3 } from "@/data/data3";
-const _d = DATA3.comics;
-const _b = DATA3.boxes;
+import { DATA } from "@/data/data";
+const _d = DATA.comics;
+const _b = DATA.boxes;
 const _LIVE_STATS = `May 2026 — Business Plan v6. ${_d.length.toLocaleString()} comics · ${_b.length} boxes · ${_d.filter(c=>(c.Key||"").toUpperCase()==="YES").length.toLocaleString()} keys · ${_d.filter(c=>(c.Signed||"").toUpperCase()==="YES").length} signed. Critical items first.`;
 
 export const NEXT_STEPS = [

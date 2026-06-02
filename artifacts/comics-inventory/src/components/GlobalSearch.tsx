@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef, useCallback } from "react";
-import { DATA3 } from "@/data/data3";
+import { DATA } from "@/data/data";
 import type { NavParams } from "../App";
 
-const comics = DATA3.comics;
-const boxes  = DATA3.boxes;
+const comics = DATA.comics;
+const boxes  = DATA.boxes;
 
 const PAGES = [
   { id:"summary",     label:"Home",          section:"Inventory"    },

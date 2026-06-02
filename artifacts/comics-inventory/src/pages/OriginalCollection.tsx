@@ -1,11 +1,11 @@
 import { useState, useMemo, useRef } from "react";
-import { DATA3 } from "@/data/data3";
+import { DATA } from "@/data/data";
 import { SortableTable, ColDef } from "@/components/SortableTable";
 import { Paginator } from "@/components/Paginator";
 
 const CARD_PAGE_SIZE = 100;
 
-const allComics  = DATA3.comics;
+const allComics  = DATA.comics;
 const comics     = allComics.filter(c =>
   (c.Key    || "").toUpperCase() === "YES" ||
   (c.Signed || "").toUpperCase() === "YES"

@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
-import { DATA3 } from "@/data/data3";
-import type { Comic } from "@/data/data3";
+import { DATA } from "@/data/data";
+import type { Comic } from "@/data/data";
 
 const LS_COPY_DECISIONS = "brbCopyDecisions";
 const LS_NOTES          = "brbDupNotes";
@@ -15,7 +15,7 @@ function loadMap<T>(lsKey: string): Map<string, T> {
 // Same grouping key as Duplicates.tsx
 const GROUP_MAP = (() => {
   const map = new Map<string, Comic[]>();
-  for (const c of DATA3.comics) {
+  for (const c of DATA.comics) {
     const k = [
       c.Title.trim(),
       (c.Issue || "").trim().toLowerCase(),
