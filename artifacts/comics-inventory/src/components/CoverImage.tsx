@@ -10,6 +10,11 @@ function cacheKey(c: ComicLike) {
   return `${c.Title}|||${c.Issue}`;
 }
 
+/** Clears the client-side memory cache for a specific comic so it re-fetches. */
+export function clearCoverMemCache(title: string, issue: string | number) {
+  memCache.delete(`${title}|||${issue}`);
+}
+
 async function fetchCover(c: ComicLike): Promise<string | null> {
   const key = cacheKey(c);
   if (memCache.has(key)) return memCache.get(key)!;
