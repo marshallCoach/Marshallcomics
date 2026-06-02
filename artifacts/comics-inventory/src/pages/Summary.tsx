@@ -1,8 +1,9 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
 import { DATA3 } from "@/data/data3";
 import { NEXT_STEPS, Status, StepCard, loadStatuses, saveStatuses } from "./ActionPlan";
 import { CALENDAR_EVENTS } from "./Calendar";
+import { CoverImage, CoverModal } from "@/components/CoverImage";
 import type { NavParams } from "../App";
 
 // ── Static data ──────────────────────────────────────────────────────────────
@@ -374,6 +375,17 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
   const [bannerClosed, setBannerClosed] = useState(() => localStorage.getItem("mc_update_banner_closed") === "1");
   function closeBanner() { localStorage.setItem("mc_update_banner_closed", "1"); setBannerClosed(true); }
 
+  // Random covers carousel — 10 different comics each mount
+  const carouselComics = useMemo(() => {
+    const arr = [...comics];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr.slice(0, 10);
+  }, []);
+  const [carouselModal, setCarouselModal] = useState<{ comic: typeof comics[0]; large: string | null } | null>(null);
+
   return (
     <div style={{ maxWidth:1100, margin:"0 auto", padding:"20px 16px 80px" }}>
 
@@ -410,6 +422,50 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
         </div>
       </section>
       )}
+
+      {/* ── Cover Carousel ── */}
+      <section style={{ marginBottom:24 }}>
+        <div style={{ display:"flex", alignItems:"baseline", gap:10, marginBottom:10 }}>
+          <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"3px", color:"var(--muted)" }}>
+            TODAY'S PICKS — {new Date().toLocaleDateString("en-US", { month:"long", day:"numeric", year:"numeric" })}
+          </span>
+          <span style={{ fontFamily:"'Crimson Pro',serif", fontSize:"0.78rem", color:"var(--muted)", fontStyle:"italic" }}>
+            10 random books from the collection · refreshes each visit
+          </span>
+        </div>
+        <div style={{ overflow:"hidden", margin:"0 -16px", padding:"4px 0" }}>
+          <div className="cover-carousel-track">
+            {[...carouselComics, ...carouselComics].map((c, i) => (
+              <div
+                key={i}
+                className="cover-carousel-card"
+                onClick={() => setCarouselModal({ comic: c, large: null })}
+              >
+                <CoverImage
+                  comic={c}
+                  width={100}
+                  height={152}
+                  onClick={large => setCarouselModal({ comic: c, large })}
+                  style={{ borderRadius:6, boxShadow:"0 4px 14px rgba(0,0,0,0.18)" }}
+                />
+                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px", color:"var(--muted2)", lineHeight:1.2, marginTop:5, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap", width:100, textAlign:"center" }}>
+                  {c.Title}
+                </div>
+                <div style={{ fontFamily:"'Crimson Pro',serif", fontSize:"0.7rem", color:"var(--muted)", textAlign:"center", width:100 }}>
+                  #{c.Issue}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        {carouselModal && (
+          <CoverModal
+            comic={{ ...carouselModal.comic, Publisher: carouselModal.comic.Publisher ?? "", Year: carouselModal.comic.Year ?? "" }}
+            largeUrl={carouselModal.large}
+            onClose={() => setCarouselModal(null)}
+          />
+        )}
+      </section>
 
       {/* ── Box Progress — animated fill ── */}
       {showProgress && <section className="progress-section" style={{ position:"relative" }}>
