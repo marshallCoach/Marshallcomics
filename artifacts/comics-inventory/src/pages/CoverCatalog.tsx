@@ -237,20 +237,33 @@ const BASE = import.meta.env.BASE_URL?.replace(/\/$/, "") ?? "";
 
 type RefetchState = "idle" | "running" | "done";
 
+interface Candidate {
+  id: number;
+  name: string;
+  issue_number: string;
+  volume: string;
+  image_url: string | null;
+  large_url: string | null;
+  cover_date: string;
+}
+
 function FlaggedModal({ flags, onClose, onClear }: { flags: FlaggedCover[]; onClose: () => void; onClear: (id: string) => void }) {
-  const [refetchState, setRefetchState] = useState<RefetchState>("idle");
+  const [refetchState, setRefetchState]       = useState<RefetchState>("idle");
   const [refetchProgress, setRefetchProgress] = useState(0);
-  const [refetchResults, setRefetchResults] = useState<{ found: number; notFound: number } | null>(null);
+  const [refetchResults, setRefetchResults]   = useState<{ found: number; notFound: number } | null>(null);
+  const [candidates, setCandidates]           = useState<Map<string, Candidate[]>>(new Map());
+  const [picking, setPicking]                 = useState<string | null>(null); // flagId being confirmed
 
   async function refetchAllCovers() {
     if (!flags.length) return;
     setRefetchState("running");
     setRefetchProgress(0);
     setRefetchResults(null);
+    setCandidates(new Map());
     let found = 0, notFound = 0;
+    const newCandidates = new Map<string, Candidate[]>();
     for (let i = 0; i < flags.length; i++) {
       const f = flags[i];
-      // Clear client-side memory cache so the card re-renders with new data
       clearCoverMemCache(f.Title, f.Issue);
       try {
         const params = new URLSearchParams({
@@ -260,14 +273,31 @@ function FlaggedModal({ flags, onClose, onClear }: { flags: FlaggedCover[]; onCl
         });
         const res = await fetch(`${BASE}/api/covers/search?${params}`, { cache: "no-store" });
         if (res.ok) {
-          const data = await res.json() as { cover_url?: string | null };
+          const data = await res.json() as { cover_url?: string | null; candidates?: Candidate[] };
           if (data.cover_url) found++; else notFound++;
+          if (data.candidates?.length) newCandidates.set(f.id, data.candidates.filter(c => c.image_url));
         } else { notFound++; }
       } catch { notFound++; }
       setRefetchProgress(i + 1);
     }
+    setCandidates(new Map(newCandidates));
     setRefetchResults({ found, notFound });
     setRefetchState("done");
+  }
+
+  async function pickCover(flag: FlaggedCover, candidate: Candidate) {
+    setPicking(flag.id);
+    try {
+      clearCoverMemCache(flag.Title, flag.Issue);
+      await fetch(`${BASE}/api/covers/set`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ title: flag.Title, issue: flag.Issue, url: candidate.image_url, large: candidate.large_url }),
+        cache: "no-store",
+      });
+      onClear(flag.id); // remove the flag — cover is now confirmed correct
+    } catch { /* non-fatal */ }
+    setPicking(null);
   }
 
   const csv = [
@@ -303,18 +333,77 @@ function FlaggedModal({ flags, onClose, onClear }: { flags: FlaggedCover[]; onCl
           {flags.length === 0 ? (
             <p style={{ fontFamily: "'Crimson Pro', serif", color: "var(--muted)", textAlign: "center", padding: "32px 0" }}>No covers flagged yet.</p>
           ) : (
-            flags.map(f => (
-              <div key={f.id} style={{ display: "flex", alignItems: "center", gap: 12, padding: "10px 0", borderBottom: "1px solid var(--border)" }}>
-                <div style={{ flex: 1 }}>
-                  <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "1rem", letterSpacing: "1.5px", color: "var(--text)" }}>{f.Title} #{f.Issue}</div>
-                  <div style={{ fontFamily: "'Crimson Pro', serif", fontSize: "0.82rem", color: "var(--muted)" }}>
-                    {f.Cover_Artist} · {f.Publisher} · Box {f.Box} · {f.Year}
+            flags.map(f => {
+              const cands = candidates.get(f.id) ?? [];
+              const isPicking = picking === f.id;
+              return (
+                <div key={f.id} style={{ padding: "12px 0", borderBottom: "1px solid var(--border)" }}>
+                  {/* Header row */}
+                  <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                    <div style={{ flex: 1 }}>
+                      <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "1rem", letterSpacing: "1.5px", color: "var(--text)" }}>{f.Title} #{f.Issue}</div>
+                      <div style={{ fontFamily: "'Crimson Pro', serif", fontSize: "0.82rem", color: "var(--muted)" }}>
+                        {f.Cover_Artist} · {f.Publisher} · Box {f.Box} · {f.Year}
+                      </div>
+                    </div>
+                    <button onClick={() => onClear(f.id)} title="Remove flag" style={{ background: "none", border: "1px solid var(--border)", borderRadius: 4, padding: "3px 8px", cursor: "pointer", fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.6rem", letterSpacing: "1px", color: "var(--muted)", flexShrink: 0 }}>REMOVE</button>
                   </div>
-                  <div style={{ fontFamily: "'Crimson Pro', serif", fontSize: "0.72rem", color: "var(--muted)", marginTop: 2 }}>Flagged {f.flaggedAt}</div>
+
+                  {/* Candidate thumbnail picker — shown after re-fetch */}
+                  {cands.length > 0 && (
+                    <div style={{ marginTop: 10 }}>
+                      <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.58rem", letterSpacing: "2px", color: "#1d4ed8", marginBottom: 6 }}>
+                        PICK THE CORRECT COVER — CLICK TO CONFIRM AND UNFLAG
+                      </div>
+                      <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                        {cands.map((c, ci) => (
+                          <button
+                            key={c.id}
+                            onClick={() => pickCover(f, c)}
+                            disabled={isPicking}
+                            title={`${c.volume} #${c.issue_number}${c.cover_date ? " · " + c.cover_date : ""}`}
+                            style={{
+                              padding: 0, border: ci === 0 ? "2px solid #1d4ed8" : "2px solid var(--border)",
+                              borderRadius: 5, cursor: isPicking ? "default" : "pointer",
+                              overflow: "hidden", background: "#111",
+                              opacity: isPicking ? 0.6 : 1,
+                              position: "relative", flexShrink: 0,
+                            }}
+                          >
+                            <img
+                              src={c.image_url ?? ""}
+                              alt={`${c.volume} #${c.issue_number}`}
+                              style={{ display: "block", width: 60, height: 90, objectFit: "cover" }}
+                              onError={e => { (e.currentTarget.parentElement as HTMLElement).style.display = "none"; }}
+                            />
+                            {ci === 0 && (
+                              <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, background: "#1d4ed8", fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.5rem", letterSpacing: "1px", color: "#fff", textAlign: "center", padding: "2px 0" }}>BEST</div>
+                            )}
+                          </button>
+                        ))}
+                        <button
+                          onClick={() => onClear(f.id)}
+                          title="None of these are right — unflag anyway"
+                          style={{ width: 60, height: 90, border: "2px dashed var(--border)", borderRadius: 5, cursor: "pointer", background: "var(--surface2)", color: "var(--muted)", fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.52rem", letterSpacing: "1px", flexShrink: 0 }}
+                        >
+                          NONE<br/>RIGHT
+                        </button>
+                      </div>
+                      <div style={{ fontFamily: "'Crimson Pro', serif", fontSize: "0.72rem", color: "var(--muted)", marginTop: 4, fontStyle: "italic" }}>
+                        Best match is outlined in blue. Click any thumbnail to confirm it as correct — the flag clears automatically.
+                      </div>
+                    </div>
+                  )}
+
+                  {/* No candidates message */}
+                  {refetchState === "done" && cands.length === 0 && (
+                    <div style={{ fontFamily: "'Crimson Pro', serif", fontSize: "0.75rem", color: "var(--muted)", marginTop: 6, fontStyle: "italic" }}>
+                      Comic Vine returned no cover images for this issue.
+                    </div>
+                  )}
                 </div>
-                <button onClick={() => onClear(f.id)} title="Remove flag" style={{ background: "none", border: "1px solid var(--border)", borderRadius: 4, padding: "3px 8px", cursor: "pointer", fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.6rem", letterSpacing: "1px", color: "var(--muted)" }}>REMOVE</button>
-              </div>
-            ))
+              );
+            })
           )}
         </div>
 
