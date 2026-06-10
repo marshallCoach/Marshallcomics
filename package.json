@@ -8,7 +8,7 @@
     "typecheck:libs": "tsc --build",
     "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck",
     "reingest": "node gen_data.mjs",
-    "dev": "PORT=5173 BASE_PATH=/ pnpm --filter @workspace/comics-inventory run dev",
+    "dev": "PORT=5173 API_PORT=5000 BASE_PATH=/ pnpm --filter @workspace/comics-inventory run dev",
     "api": "PORT=5000 pnpm --filter @workspace/api-server run dev"
   },
   "private": true,
