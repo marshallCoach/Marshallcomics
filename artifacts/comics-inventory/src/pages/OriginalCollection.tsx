@@ -280,7 +280,7 @@ export default function OriginalCollection({ initSigned }: { initSigned?: string
                       >{c.Title || "Untitled"}</button>
                     </div>
                     <div style={{ fontSize:"0.7rem", color:"var(--muted)", flexShrink:0, marginTop:2 }}>
-                      #{c.Issue} {isOpen?"▲":"▼"}
+                      {c.Issue} {isOpen?"▲":"▼"}
                     </div>
                   </div>
                   {/* Subtitle */}

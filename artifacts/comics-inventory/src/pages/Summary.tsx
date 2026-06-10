@@ -452,7 +452,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
                   {c.Title}
                 </div>
                 <div style={{ fontFamily:"'Crimson Pro',serif", fontSize:"0.7rem", color:"var(--muted)", textAlign:"center", width:100 }}>
-                  #{c.Issue}
+                  {c.Issue}
                 </div>
               </div>
             ))}
