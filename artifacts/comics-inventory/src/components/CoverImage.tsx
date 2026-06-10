@@ -101,7 +101,7 @@ export function CoverImage({ comic, width = 56, height = 84, onClick, style }: P
     >
       <img
         src={src}
-        alt={`${comic.Title} #${comic.Issue}`}
+        alt={`${comic.Title} ${comic.Issue}`}
         width={width}
         height={height}
         loading="lazy"
@@ -209,7 +209,7 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
     const lines = [
       "BOOK NOTE REQUEST", divider,
       `Title:     ${comic.Title}`,
-      `Issue:     #${comic.Issue}`,
+      `Issue:     ${comic.Issue}`,
     ];
     if ((comic as { Year?: string }).Year)      lines.push(`Year:      ${(comic as { Year?: string }).Year}`);
     if ((comic as { Publisher?: string }).Publisher) lines.push(`Publisher: ${(comic as { Publisher?: string }).Publisher}`);
@@ -257,7 +257,7 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
         <div style={{ flexShrink: 0, width: 220, alignSelf: "stretch", overflow: "hidden", background: "#111" }}>
           <img
             src={largeUrl ?? fallback}
-            alt={`${comic.Title} #${comic.Issue}`}
+            alt={`${comic.Title} ${comic.Issue}`}
             style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
             onError={e => { (e.target as HTMLImageElement).src = fallback; }}
           />

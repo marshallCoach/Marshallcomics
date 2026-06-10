@@ -118,7 +118,7 @@ export default function DupCheckList() {
                     {comic.Title}
                   </div>
                   <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1rem", color: "var(--red)", marginTop: 2 }}>
-                    #{comic.Issue}
+                    {comic.Issue}
                   </div>
                   {comic.Arc && (
                     <div style={{ fontFamily: "'Crimson Pro',serif", fontSize: "0.82rem", color: "#7c3aed", fontStyle: "italic", marginTop: 2 }}>
