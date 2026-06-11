@@ -236,8 +236,13 @@ export default function Everything({
   }, [searched, query, publisher, era, platform, boxFilter, keysOnly, signedOnly, parenOnly, familyFilter, exactTitle]);
 
   const cardSlice = useMemo(() => {
+    const sorted = [...results].sort((a, b) => {
+      const t = a.Title.localeCompare(b.Title);
+      if (t !== 0) return t;
+      return parseVal(a.Issue) - parseVal(b.Issue);
+    });
     const start = (cardPage - 1) * CARD_PAGE;
-    return results.slice(start, start + CARD_PAGE);
+    return sorted.slice(start, start + CARD_PAGE);
   }, [results, cardPage]);
 
   const handleSearch = useCallback(() => { setSearched(true); setCardPage(1); }, []);
