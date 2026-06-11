@@ -458,8 +458,11 @@ export default function CoverCatalog() {
     setFlags(prev => { const next = new Map(prev); next.delete(id); return next; });
   }, []);
 
-  // Comics for the active tab
-  const tabComics = useMemo(() => DATA.catalogs[activeTab], [activeTab]);
+  // Comics for the active tab — defensive fallback if catalogs missing (stale data3.ts)
+  const tabComics = useMemo(
+    () => (DATA.catalogs as Record<string, CatalogComic[]> | undefined)?.[activeTab] ?? [],
+    [activeTab],
+  );
 
   // Tab-level stats (computed from raw tab comics, not filtered)
   const tabStats = useMemo(() => ({
@@ -531,7 +534,7 @@ export default function CoverCatalog() {
       {/* Tabs */}
       <div style={{ display: "flex", gap: 0, marginBottom: 20, borderBottom: "2px solid var(--border)", overflowX: "auto" }}>
         {TABS.map(tab => {
-          const count = DATA.catalogs[tab.key].length;
+          const count = (DATA.catalogs as Record<string, CatalogComic[]> | undefined)?.[tab.key]?.length ?? 0;
           const isActive = activeTab === tab.key;
           return (
             <button key={tab.key} onClick={() => switchTab(tab.key)} style={{
