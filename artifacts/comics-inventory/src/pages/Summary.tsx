@@ -467,33 +467,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
         )}
       </section>
 
-      {/* ── Box Progress — animated fill ── */}
-      {showProgress && <section className="progress-section" style={{ position:"relative" }}>
-        <button
-          onClick={() => setShowProgress(false)}
-          style={{ position:"absolute", top:10, right:12, background:"none", border:"none", cursor:"pointer", color:"var(--muted)", fontSize:"1.1rem", lineHeight:1, padding:"2px 5px", borderRadius:4 }}
-          title="Dismiss"
-        >×</button>
-        <div className="progress-header">
-          <div>
-            <span className="progress-title">BOX COLLECTION PROGRESS</span>
-            <span className="progress-fraction">{totalBoxes} of {TARGET_BOXES} boxes catalogued</span>
-          </div>
-          <div className="progress-pct">{BOX_PCT}%</div>
-        </div>
-        <div className="progress-track">
-          <div className="progress-fill" style={{
-            width: `${progWidth}%`,
-            backgroundImage: `linear-gradient(90deg, #c8102e 0%, #e85d04 25%, #f4a107 55%, #84cc16 80%, #22c55e 100%)`,
-            backgroundSize: `${progWidth > 0 ? (100 / progWidth) * 100 : 100}% 100%`,
-            backgroundRepeat: "no-repeat",
-          }} />
-          {[...Array(TARGET_BOXES)].map((_,i) => (
-            <div key={i} className={`progress-tick ${i < totalBoxes ? "filled" : ""}`} style={{ left:`${((i+1)/TARGET_BOXES)*100}%` }} />
-          ))}
-        </div>
-        <div className="progress-sub">All {totalBoxes} boxes catalogued — complete ✓ · {COMPLETE_RUNS} runs finished cover-to-cover</div>
-      </section>}
+      {/* ── Quick Search ── */}
 
       {/* ── Quick Search ── */}
       <section className="qs-section">
@@ -976,6 +950,34 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
           ))}
         </div>
       </section>
+
+      {/* ── Box Progress — animated fill ── */}
+      {showProgress && <section className="progress-section" style={{ position:"relative" }}>
+        <button
+          onClick={() => setShowProgress(false)}
+          style={{ position:"absolute", top:10, right:12, background:"none", border:"none", cursor:"pointer", color:"var(--muted)", fontSize:"1.1rem", lineHeight:1, padding:"2px 5px", borderRadius:4 }}
+          title="Dismiss"
+        >×</button>
+        <div className="progress-header">
+          <div>
+            <span className="progress-title">BOX COLLECTION PROGRESS</span>
+            <span className="progress-fraction">{totalBoxes} of {TARGET_BOXES} boxes catalogued</span>
+          </div>
+          <div className="progress-pct">{BOX_PCT}%</div>
+        </div>
+        <div className="progress-track">
+          <div className="progress-fill" style={{
+            width: `${progWidth}%`,
+            backgroundImage: `linear-gradient(90deg, #c8102e 0%, #e85d04 25%, #f4a107 55%, #84cc16 80%, #22c55e 100%)`,
+            backgroundSize: `${progWidth > 0 ? (100 / progWidth) * 100 : 100}% 100%`,
+            backgroundRepeat: "no-repeat",
+          }} />
+          {[...Array(TARGET_BOXES)].map((_,i) => (
+            <div key={i} className={`progress-tick ${i < totalBoxes ? "filled" : ""}`} style={{ left:`${((i+1)/TARGET_BOXES)*100}%` }} />
+          ))}
+        </div>
+        <div className="progress-sub">All {totalBoxes} boxes catalogued — complete ✓ · {COMPLETE_RUNS} runs finished cover-to-cover</div>
+      </section>}
 
     </div>
   );
