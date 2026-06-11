@@ -6,7 +6,8 @@ const router: IRouter = Router();
 
 const CV_BASE  = "https://comicvine.gamespot.com/api";
 const API_KEY  = process.env["COMIC_VINE_API_KEY"] ?? "";
-const CACHE_PATH = resolve(process.cwd(), "covers.json");
+// covers.json lives at the project root (two levels up from artifacts/api-server)
+const CACHE_PATH = resolve(process.cwd(), "../../covers.json");
 
 // ── Disk cache (covers.json) ──────────────────────────────────────────────────
 // Shape: { "Title|||Issue": { url, large, date } | null }
@@ -49,11 +50,6 @@ router.get("/covers/search", async (req, res) => {
   res.setHeader("Cache-Control", "no-store, no-cache, must-revalidate");
   res.setHeader("Pragma", "no-cache");
 
-  if (!API_KEY) {
-    res.status(503).json({ error: "COMIC_VINE_API_KEY not configured" });
-    return;
-  }
-
   const { title, issue, publisher, year } = req.query as Record<string, string>;
   if (!title) { res.status(400).json({ error: "title required" }); return; }
 
@@ -66,7 +62,7 @@ router.get("/covers/search", async (req, res) => {
     saveCache();
   }
 
-  // ── Cache hit ──────────────────────────────────────────────────────────────
+  // ── Cache hit — no API key needed ─────────────────────────────────────────
   if (Object.prototype.hasOwnProperty.call(diskCache, key)) {
     const cached = diskCache[key];
     if (cached === null) {
@@ -78,6 +74,10 @@ router.get("/covers/search", async (req, res) => {
   }
 
   // ── Cache miss → Comic Vine ────────────────────────────────────────────────
+  if (!API_KEY) {
+    res.json({ cover_url: null, large_url: null, match: null, candidates: [], cached: false });
+    return;
+  }
   try {
     const q = `${title} ${issue || ""}`.trim();
     const searchUrl = `${CV_BASE}/search/?${cvParams({
