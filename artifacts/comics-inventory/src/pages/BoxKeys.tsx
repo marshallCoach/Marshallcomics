@@ -30,6 +30,17 @@ function platClass(p: string) {
 
 const LIST_COLS: ColDef<Key>[] = [
   {
+    key: "cover", label: "", defaultWidth: 64,
+    cell: r => (
+      <CoverImage
+        comic={r}
+        width={40}
+        height={60}
+        style={{ display: "block", borderRadius: 3 }}
+      />
+    ),
+  },
+  {
     key: "box", label: "Box", defaultWidth: 55,
     sort: (a, b) => Number(a.Box) - Number(b.Box),
     cell: r => <span className="lt-sub">{r.Box}</span>,
