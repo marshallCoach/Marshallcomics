@@ -357,7 +357,13 @@ const ccBoxNums = new Set(
 );
 console.log(`CC Box numbers: ${[...ccBoxNums].join(', ')}`);
 
-function getCCBoxComics() {
+// catalogExcludeKey normalises a title+issue pair the same way the catalog
+// sheets do, so CC Boxes can skip comics already in the 3 catalog tabs.
+function catalogExcludeKey(title, issue) {
+  return `${title.toLowerCase()}|||${String(issue).replace(/^#/, '').toLowerCase()}`;
+}
+
+function getCCBoxComics(excludeKeys) {
   const result = [];
   for (let r = 1; r < allRows.length; r++) {
     const row = allRows[r];
@@ -366,9 +372,11 @@ function getCCBoxComics() {
     const boxRaw = String(row[C.box] ?? '').trim();
     const boxNorm = boxRaw.replace(/^0+/, '') || boxRaw;
     if (!ccBoxNums.has(boxNorm) && !ccBoxNums.has(boxRaw)) continue;
+    const issue = String(row[C.issue] ?? '').trim();
+    if (excludeKeys.has(catalogExcludeKey(title, issue))) continue;
     result.push({
       Title:        title,
-      Issue:        String(row[C.issue]   ?? '').trim(),
+      Issue:        issue,
       Publisher:    String(row[C.pub]     ?? '').trim(),
       Year:         String(row[C.year]    ?? '').trim(),
       Volume:       String(row[C.volume]  ?? '').trim(),
@@ -397,7 +405,13 @@ console.log('Parsing catalog sheets...');
 const catPulled  = parseCatalogSheet('Pulled Covers Catalog');
 const catBox2    = parseCatalogSheet('Cover Box 2 Catalog');
 const catBox3    = parseCatalogSheet('Cover Box 3 Catalog');
-const catCCBoxes = getCCBoxComics();
+
+// Build exclusion set from the 3 catalog sheets so CC Boxes doesn't repeat them
+const catalogExcludeKeys = new Set(
+  [...catPulled, ...catBox2, ...catBox3].map(c => catalogExcludeKey(c.Title, c.Issue))
+);
+console.log(`  Excluding ${catalogExcludeKeys.size} catalog-sheet keys from CC Boxes`);
+const catCCBoxes = getCCBoxComics(catalogExcludeKeys);
 
 const srcName = xlsxFiles[0].f;
 const ts = `// AUTO-GENERATED — DO NOT EDIT MANUALLY
