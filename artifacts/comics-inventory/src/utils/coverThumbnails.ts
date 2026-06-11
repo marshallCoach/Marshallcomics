@@ -51,7 +51,7 @@ export function generateSpineSVG(
 
   const keyBar     = isKey    ? `<rect x="0" y="0" width="${width}" height="5" fill="${colors.accent}"/>` : "";
   const signedBar  = isSigned ? `<rect x="0" y="0" width="3" height="${height}" fill="#22c55e" opacity="0.85"/>` : "";
-  const issueText  = String(comic.Issue ?? "").substring(0, 4);
+  const issueText  = String(comic.Issue ?? "").replace(/^#/, "").substring(0, 4);
 
   return (
     `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">` +
@@ -87,7 +87,7 @@ export function generateThumbnailSVG(
   const title      = comic.Title || "Unknown";
   const line1      = esc(title.substring(0, 13));
   const line2      = title.length > 13 ? esc(title.substring(13, 24)) : "";
-  const issueText  = esc(String(comic.Issue ?? "").substring(0, 6));
+  const issueText  = esc(String(comic.Issue ?? "").replace(/^#/, "").substring(0, 6));
   const yearText   = esc(String(comic.Year ?? ""));
   const writerText = esc((comic.Writer || "").substring(0, 20));
 
