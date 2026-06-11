@@ -195,6 +195,210 @@ for (const boxNum of derivedBoxNums) {
   console.log(`  Derived BOX ${padded}: ${rows.length} comics, ${keyCount} keys`);
 }
 
+// ── CATALOG SHEETS ───────────────────────────────────────────────────────────
+// Build a lookup map from the main inventory so catalog entries can be
+// enriched with Year, Volume, Cover_Artist, etc. when missing from the sheet.
+// Using exact Title+Issue from inventory ensures cover image cache keys match.
+
+const mainLookupExact = new Map(); // title_lc|||issue_lc → inv obj
+const mainLookupNorm  = new Map(); // title_lc|||issue_without_hash_lc → inv obj
+
+for (let r = 1; r < allRows.length; r++) {
+  const row = allRows[r];
+  const title = String(row[C.title] ?? '').trim();
+  if (!title) continue;
+  const issue = String(row[C.issue] ?? '').trim();
+  const inv = {
+    Title:       title,
+    Issue:       issue,
+    Publisher:   String(row[C.pub]     ?? '').trim(),
+    Year:        String(row[C.year]    ?? '').trim(),
+    Volume:      String(row[C.volume]  ?? '').trim(),
+    Cover_Artist: String(row[C.coverA] ?? '').trim(),
+    Key:         String(row[C.key]     ?? '').trim(),
+    Key_Reason:  String(row[C.keyWhy]  ?? '').trim(),
+    Signed:      String(row[C.signed]  ?? '').trim(),
+    Signed_By:   String(row[C.signedBy] ?? '').trim(),
+    Era:         String(row[C.era]     ?? '').trim(),
+    Writer:      String(row[C.writer]  ?? '').trim(),
+    Value_NM:    String(row[C.nm]      ?? '').trim(),
+    Start_Bid:   String(row[C.bid]     ?? '').trim(),
+    Box:         String(row[C.box]     ?? '').trim(),
+  };
+  const tl = title.toLowerCase();
+  const il = issue.toLowerCase();
+  const keyExact = `${tl}|||${il}`;
+  const keyNorm  = `${tl}|||${il.replace(/^#/, '')}`;
+  if (!mainLookupExact.has(keyExact)) mainLookupExact.set(keyExact, inv);
+  if (!mainLookupNorm.has(keyNorm))   mainLookupNorm.set(keyNorm, inv);
+}
+
+function findInInventory(title, issue) {
+  const tl = title.toLowerCase().trim();
+  const il = issue.toLowerCase().trim();
+  return mainLookupExact.get(`${tl}|||${il}`)
+      ?? mainLookupNorm.get(`${tl}|||${il.replace(/^#/, '')}`)
+      ?? null;
+}
+
+// Escape for TypeScript template literals
+function esc(str) {
+  return String(str ?? '').trim()
+    .replace(/\\/g, '\\\\')
+    .replace(/`/g, '\\`')
+    .replace(/\$\{/g, '\\${');
+}
+
+function catComicTS(c) {
+  return `  {
+    Title: \`${esc(c.Title)}\`, Issue: \`${esc(c.Issue)}\`, Publisher: \`${esc(c.Publisher)}\`,
+    Year: \`${esc(c.Year)}\`, Volume: \`${esc(c.Volume)}\`, Cover_Artist: \`${esc(c.Cover_Artist)}\`,
+    Key: \`${esc(c.Key)}\`, Key_Reason: \`${esc(c.Key_Reason)}\`,
+    Signed: \`${esc(c.Signed)}\`, Signed_By: \`${esc(c.Signed_By)}\`,
+    Era: \`${esc(c.Era)}\`, Writer: \`${esc(c.Writer)}\`,
+    Value_NM: \`${esc(c.Value_NM)}\`, Start_Bid: \`${esc(c.Start_Bid)}\`, Box: \`${esc(c.Box)}\`,
+    Notes: \`${esc(c.Notes)}\`, SortPile: \`${esc(c.SortPile)}\`,
+    CoverNotes: \`${esc(c.CoverNotes)}\`, Flag: \`${esc(c.Flag)}\`,
+  }`;
+}
+
+// Parse one catalog sheet, enriching missing fields from main inventory.
+// Deduplicates within the sheet by Title+Issue (case-insensitive).
+function parseCatalogSheet(sheetName) {
+  const ws = wb.getWorksheet(sheetName);
+  if (!ws) { console.warn(`  [warn] Sheet not found: ${sheetName}`); return []; }
+  const rows = worksheetToArrays(ws);
+  const headerIdx = rows.findIndex(r => r.some(c => String(c).trim() === 'Title'));
+  if (headerIdx < 0) { console.warn(`  [warn] No header row in: ${sheetName}`); return []; }
+
+  const hdrs = rows[headerIdx].map(h => String(h).trim());
+  const fc   = name => hdrs.findIndex(h => h === name);
+
+  const iTitle     = fc('Title');
+  const iIssue     = fc('Issue');
+  const iPub       = fc('Publisher');
+  const iYear      = fc('Year');
+  const iCoverA    = fc('Cover Artist');
+  const iSigned    = fc('Signed?');
+  const iSignedBy  = fc('Signed By');
+  const iKey       = fc('Key?');
+  const iNotes     = fc('Notes');
+  const iPile      = fc('Sort Pile') >= 0 ? fc('Sort Pile') : fc('Pile');
+  const iCoverNote = fc('Cover Notes');
+  const iFlag      = fc('⭐ Flag');
+
+  const result = [];
+  const seen = new Set();
+
+  for (let i = headerIdx + 1; i < rows.length; i++) {
+    const row = rows[i];
+    const title = String(row[iTitle] ?? '').trim();
+    if (!title || title.toLowerCase() === 'title') continue;
+    const issue = String(row[iIssue] ?? '').trim();
+
+    // Within-sheet dedup by title+issue
+    const dedupKey = `${title.toLowerCase()}|||${issue.toLowerCase()}`;
+    if (seen.has(dedupKey)) {
+      console.log(`  [dedup removed] ${sheetName}: "${title}" ${issue}`);
+      continue;
+    }
+    seen.add(dedupKey);
+
+    const catPub       = iPub      >= 0 ? String(row[iPub]      ?? '').trim() : '';
+    const catYear      = iYear     >= 0 ? String(row[iYear]     ?? '').trim() : '';
+    const catCoverA    = iCoverA   >= 0 ? String(row[iCoverA]   ?? '').trim() : '';
+    const catSigned    = iSigned   >= 0 ? String(row[iSigned]   ?? '').trim() : '';
+    const catSignedBy  = iSignedBy >= 0 ? String(row[iSignedBy] ?? '').trim() : '';
+    const catKey       = iKey      >= 0 ? String(row[iKey]      ?? '').trim() : '';
+    const catNotes     = iNotes    >= 0 ? String(row[iNotes]    ?? '').trim() : '';
+    const catPile      = iPile     >= 0 ? String(row[iPile]     ?? '').trim() : '';
+    const catCoverNote = iCoverNote >= 0 ? String(row[iCoverNote] ?? '').trim() : '';
+    const catFlag      = iFlag     >= 0 ? String(row[iFlag]     ?? '').trim() : '';
+
+    // Look up in main inventory — only fills fields that are blank in the catalog
+    const inv = findInInventory(title, issue);
+
+    result.push({
+      // Prefer exact Title/Issue from inventory so cover image cache keys align
+      Title:        inv ? inv.Title        : title,
+      Issue:        inv ? inv.Issue        : issue,
+      Publisher:    catPub     || (inv ? inv.Publisher    : ''),
+      Year:         catYear    || (inv ? inv.Year         : ''),
+      Volume:       inv ? inv.Volume       : '',
+      Cover_Artist: catCoverA  || (inv ? inv.Cover_Artist : ''),
+      Key:          catKey     || (inv ? inv.Key          : ''),
+      Key_Reason:   inv ? inv.Key_Reason   : '',
+      Signed:       catSigned  || (inv ? inv.Signed       : ''),
+      Signed_By:    catSignedBy || (inv ? inv.Signed_By   : ''),
+      Era:          inv ? inv.Era          : '',
+      Writer:       inv ? inv.Writer       : '',
+      Value_NM:     inv ? inv.Value_NM     : '',
+      Start_Bid:    inv ? inv.Start_Bid    : '',
+      Box:          inv ? inv.Box          : '',
+      Notes:        catNotes,
+      SortPile:     catPile,
+      CoverNotes:   catCoverNote,
+      Flag:         catFlag,
+    });
+  }
+
+  console.log(`  ${sheetName}: ${result.length} comics`);
+  return result;
+}
+
+// ── CC BOXES (derived numeric boxes ≥ 82 — not present in Box Summary) ──────
+// Boxes 82+ are not in the Box Summary sheet; they appear only as derived boxes.
+// "Unlabeled" in this context means not catalogued in the summary yet.
+const ccBoxNums = new Set(
+  derivedBoxNums.filter(n => {
+    const num = parseInt(n, 10);
+    return !isNaN(num) && num >= 82;
+  })
+);
+console.log(`CC Box numbers: ${[...ccBoxNums].join(', ')}`);
+
+function getCCBoxComics() {
+  const result = [];
+  for (let r = 1; r < allRows.length; r++) {
+    const row = allRows[r];
+    const title = String(row[C.title] ?? '').trim();
+    if (!title) continue;
+    const boxRaw = String(row[C.box] ?? '').trim();
+    const boxNorm = boxRaw.replace(/^0+/, '') || boxRaw;
+    if (!ccBoxNums.has(boxNorm) && !ccBoxNums.has(boxRaw)) continue;
+    result.push({
+      Title:        title,
+      Issue:        String(row[C.issue]   ?? '').trim(),
+      Publisher:    String(row[C.pub]     ?? '').trim(),
+      Year:         String(row[C.year]    ?? '').trim(),
+      Volume:       String(row[C.volume]  ?? '').trim(),
+      Cover_Artist: String(row[C.coverA]  ?? '').trim(),
+      Key:          String(row[C.key]     ?? '').trim(),
+      Key_Reason:   String(row[C.keyWhy]  ?? '').trim(),
+      Signed:       String(row[C.signed]  ?? '').trim(),
+      Signed_By:    String(row[C.signedBy] ?? '').trim(),
+      Era:          String(row[C.era]     ?? '').trim(),
+      Writer:       String(row[C.writer]  ?? '').trim(),
+      Value_NM:     String(row[C.nm]      ?? '').trim(),
+      Start_Bid:    String(row[C.bid]     ?? '').trim(),
+      Box:          boxRaw,
+      Notes:        '',
+      SortPile:     '',
+      CoverNotes:   '',
+      Flag:         '',
+    });
+  }
+  console.log(`  CC Boxes: ${result.length} comics`);
+  return result;
+}
+
+// Parse all 4 catalog sources
+console.log('Parsing catalog sheets...');
+const catPulled  = parseCatalogSheet('Pulled Covers Catalog');
+const catBox2    = parseCatalogSheet('Cover Box 2 Catalog');
+const catBox3    = parseCatalogSheet('Cover Box 3 Catalog');
+const catCCBoxes = getCCBoxComics();
+
 const srcName = xlsxFiles[0].f;
 const ts = `// AUTO-GENERATED — DO NOT EDIT MANUALLY
 // Source: ${srcName}  |  Generated: ${new Date().toISOString().slice(0,10)}
@@ -216,15 +420,50 @@ export interface BoxSummary {
   Notes: string; DateAdded: string;
 }
 
-export const DATA3: { comics: Comic[]; boxes: BoxSummary[] } = {
+// Comics pulled from catalog sheets (Pulled Covers, Cover Box 2/3, CC Boxes).
+// These are display/sorting copies — NOT counted in the main inventory.
+// Missing fields are filled from the main Comics Inventory where possible.
+export interface CatalogComic {
+  Title: string; Issue: string; Publisher: string; Year: string; Volume: string;
+  Cover_Artist: string; Key: string; Key_Reason: string;
+  Signed: string; Signed_By: string; Era: string; Writer: string;
+  Value_NM: string; Start_Bid: string; Box: string;
+  Notes: string; SortPile: string; CoverNotes: string; Flag: string;
+}
+
+export const DATA3: {
+  comics: Comic[];
+  boxes: BoxSummary[];
+  catalogs: {
+    pulled:  CatalogComic[];
+    box2:    CatalogComic[];
+    box3:    CatalogComic[];
+    ccBoxes: CatalogComic[];
+  };
+} = {
   comics: [
 ${comics.join(',\n')}
   ],
   boxes: [
 ${boxes.join(',\n')}
   ],
+  catalogs: {
+    pulled: [
+${catPulled.map(catComicTS).join(',\n')}
+    ],
+    box2: [
+${catBox2.map(catComicTS).join(',\n')}
+    ],
+    box3: [
+${catBox3.map(catComicTS).join(',\n')}
+    ],
+    ccBoxes: [
+${catCCBoxes.map(catComicTS).join(',\n')}
+    ],
+  },
 };
 `;
 
 writeFileSync('artifacts/comics-inventory/src/data/data3.ts', ts);
 console.log(`Written: ${comics.length} comics, ${boxes.length} boxes`);
+console.log(`Catalogs: pulled=${catPulled.length}, box2=${catBox2.length}, box3=${catBox3.length}, ccBoxes=${catCCBoxes.length}`);
