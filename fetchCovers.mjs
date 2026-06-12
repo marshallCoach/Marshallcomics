@@ -6,8 +6,9 @@
  * Saves results to covers.json (title|||issue -> { url, large, date } | null).
  * Run repeatedly with increasing --start to page through the full inventory.
  *
- * Comic Vine free-tier allows ~200 requests/hour. The script auto-detects
- * rate limiting (420/429) and pauses 65 seconds before continuing.
+ * Comic Vine free-tier allows ~200 requests/hour (1 per 18s).
+ * The script auto-detects rate limiting (420/429) and pauses 65s before
+ * continuing. Use --overnight to set the correct delay automatically.
  *
  * Options:
  *   --limit N        Comics to fetch this run (default 190)
@@ -16,12 +17,18 @@
  *   --retry-nulls    Re-queue comics cached as null (e.g. after prior rate-limit
  *                    errors were incorrectly saved as "not found")
  *   --delay MS       Override ms between requests (default 300)
+ *   --overnight      Sets --limit 1500 and --delay 19000 (stays within
+ *                    Comic Vine 200/hr; runs ~8 hours unattended)
  *
- * Example workflow:
- *   pnpm exec tsx fetchCovers.mjs --limit 190          # first hour
- *   pnpm exec tsx fetchCovers.mjs --limit 190 --start 190  # second hour
- *   # If prior runs were all rate-limited (found=0), clear bad nulls first:
- *   pnpm exec tsx fetchCovers.mjs --retry-nulls --limit 190
+ * Example workflow (overnight run):
+ *   pnpm exec tsx fetchCovers.mjs --overnight
+ *   # → fetches up to 1500 comics at 1 per 19s (~8 hrs, never hits rate limit)
+ *
+ *   # If prior batches were all rate-limited (found=0), retry the bad nulls:
+ *   pnpm exec tsx fetchCovers.mjs --overnight --retry-nulls
+ *
+ * Quick test (hits rate limit after ~200 but good for small batches):
+ *   pnpm exec tsx fetchCovers.mjs --limit 190
  */
 
 import { readFileSync, writeFileSync, existsSync } from "fs";
@@ -35,11 +42,14 @@ const args         = process.argv.slice(2);
 const limitIdx     = args.indexOf("--limit");
 const startIdx     = args.indexOf("--start");
 const delayIdx     = args.indexOf("--delay");
-const limit        = limitIdx  >= 0 ? parseInt(args[limitIdx  + 1] ?? "190") : 190;
-const startAt      = startIdx  >= 0 ? parseInt(args[startIdx  + 1] ?? "0")   : 0;
-const delayMs      = delayIdx  >= 0 ? parseInt(args[delayIdx  + 1] ?? "300") : 300;
+const overnight    = args.includes("--overnight");
 const onlyKeys     = args.includes("--keys-only");
 const retryNulls   = args.includes("--retry-nulls");
+
+// --overnight: 19s delay stays within Comic Vine's 200/hr; 1500 limit ≈ 8 hrs
+const limit    = limitIdx >= 0 ? parseInt(args[limitIdx + 1] ?? "190") : overnight ? 1500 : 190;
+const startAt  = startIdx >= 0 ? parseInt(args[startIdx + 1] ?? "0")   : 0;
+const delayMs  = delayIdx >= 0 ? parseInt(args[delayIdx + 1] ?? "300") : overnight ? 19_000 : 300;
 
 // ── Load cache ────────────────────────────────────────────────────────────────
 let cache = {};
