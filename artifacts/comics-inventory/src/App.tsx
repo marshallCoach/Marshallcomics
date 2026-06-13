@@ -28,13 +28,14 @@ import OrganizationPath from "@/pages/OrganizationPath";
 import BoxLabels from "@/pages/BoxLabels";
 import KeyCatalog from "@/pages/KeyCatalog";
 import CoverCatalog from "@/pages/CoverCatalog";
+import BoxQuest from "@/pages/BoxQuest";
 import PasswordGate from "@/components/PasswordGate";
 
 type TabId =
   | "summary" | "everything" | "collection" | "boxkeys" | "stats" | "runs" | "dataview"
   | "calendar" | "showplanner" | "cgc" | "signings" | "actionplan" | "timeline" | "boxvisual"
   | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "duplicates" | "dupchecklist" | "history"
-  | "orgpath" | "volumes" | "boxlabels" | "keycatalog" | "covercatalog";
+  | "orgpath" | "volumes" | "boxlabels" | "keycatalog" | "covercatalog" | "boxquest";
 
 export type NavParams = {
   box?: string;
@@ -71,6 +72,7 @@ const NAV = [
       { id: "duplicates",     label: "Duplicates" },
       { id: "dupchecklist",  label: "Dup Hunt" },
       { id: "hunting",       label: "Box Hunt" },
+      { id: "boxquest",      label: "Box Quest" },
       { id: "timeline",    label: "Timeline" },
     ],
   },
@@ -284,6 +286,7 @@ export default function App() {
         {activeTab === "history"     && <ComicHistory />}
         {activeTab === "keycatalog"  && <KeyCatalog />}
         {activeTab === "covercatalog" && <CoverCatalog />}
+        {activeTab === "boxquest"     && <BoxQuest />}
       </div>
     </div>
     </PasswordGate>
