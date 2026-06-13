@@ -36,7 +36,7 @@ import { DATA3 } from "./artifacts/comics-inventory/src/data/data3.js";
 
 // ── Config ────────────────────────────────────────────────────────────────────
 const CACHE_FILE = "./covers.json";
-const API_BASE   = process.env.APP_URL || "http://localhost:80";
+const API_BASE   = process.env.APP_URL || "http://localhost:5001";
 
 const args         = process.argv.slice(2);
 const limitIdx     = args.indexOf("--limit");
