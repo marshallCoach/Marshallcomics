@@ -46,7 +46,7 @@ const wb = new ExcelJS.Workbook();
 await wb.xlsx.readFile(XLSX_FILE);
 
 // ── COMICS ───────────────────────────────────────────────────────────────────
-const comicsSheet = wb.getWorksheet('Comics Inventory');
+const comicsSheet = wb.getWorksheet('✅ Clean Inventory');
 const allRows = worksheetToArrays(comicsSheet, '');
 const headers = allRows[0];
 

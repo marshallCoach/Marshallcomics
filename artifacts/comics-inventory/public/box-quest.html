@@ -854,7 +854,7 @@ document.getElementById('findInput').addEventListener('input',function(){
     banner.classList.toggle('checked',cb.checked);
     if(cb.checked){
       setTimeout(()=>banner.classList.add('dismissed'),700);
-      toast('Spare boxes labelled ✓ Let's go!',true);
+      toast('Spare boxes labelled ✓ Let\'s go!',true);
       burst(window.innerWidth/2, document.getElementById('spareBanner').getBoundingClientRect().top+20,'#00E5A0');
     }else{
       banner.classList.remove('dismissed');
@@ -880,7 +880,7 @@ document.getElementById('findInput').addEventListener('input',function(){
       cbox.style.background='var(--mint)';
       cbox.style.borderColor='var(--mint)';
       cbox.querySelector('svg').style.opacity='1';
-      toast('📦 Spare boxes labelled — let's go!',true);
+      toast('📦 Spare boxes labelled — let\'s go!',true);
       burst(window.innerWidth/2,window.innerHeight*.25,'#00E5A0');
       localStorage.setItem('brb_spare_done_v3','1');
       setTimeout(()=>banner.classList.add('dismissed'),900);
