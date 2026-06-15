@@ -171,9 +171,11 @@ for (let r = 1; r < allRows.length; r++) {
   if (!boxComicsMap[boxNum]) boxComicsMap[boxNum] = [];
   boxComicsMap[boxNum].push(row);
 }
-// Sort derived boxes numerically and append them
+// Sort derived boxes numerically and append them (skip CC boxes ≥ 82 — physical boxes only)
 const derivedBoxNums = Object.keys(boxComicsMap).sort((a, b) => Number(a) - Number(b));
 for (const boxNum of derivedBoxNums) {
+  const boxInt = parseInt(boxNum, 10);
+  if (!isNaN(boxInt) && boxInt >= 82) continue;
   const rows = boxComicsMap[boxNum];
   const padded = boxNum.padStart(2, '0');
   const num = `BOX ${padded}`;
