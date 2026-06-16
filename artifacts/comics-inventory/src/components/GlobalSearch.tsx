@@ -19,6 +19,7 @@ const PAGES = [
   { id:"boxlabels",   label:"Box Labels",    section:"Organisation" },
   { id:"duplicates",  label:"Duplicates",    section:"Organisation" },
   { id:"hunting",     label:"Box Hunt",      section:"Organisation" },
+  { id:"boxmap",      label:"Box Map",       section:"Organisation" },
   { id:"timeline",    label:"Timeline",      section:"Organisation" },
   { id:"calendar",    label:"Calendar",      section:"Business"     },
   { id:"showplanner", label:"Whatnot Shows", section:"Business"     },

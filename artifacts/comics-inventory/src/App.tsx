@@ -29,13 +29,14 @@ import BoxLabels from "@/pages/BoxLabels";
 import KeyCatalog from "@/pages/KeyCatalog";
 import CoverCatalog from "@/pages/CoverCatalog";
 import BoxQuest from "@/pages/BoxQuest";
+import BoxMap from "@/pages/BoxMap";
 import PasswordGate from "@/components/PasswordGate";
 
 type TabId =
   | "summary" | "everything" | "collection" | "boxkeys" | "stats" | "runs" | "dataview"
   | "calendar" | "showplanner" | "cgc" | "signings" | "actionplan" | "timeline" | "boxvisual"
   | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "duplicates" | "dupchecklist" | "history"
-  | "orgpath" | "volumes" | "boxlabels" | "keycatalog" | "covercatalog" | "boxquest";
+  | "orgpath" | "volumes" | "boxlabels" | "keycatalog" | "covercatalog" | "boxquest" | "boxmap";
 
 export type NavParams = {
   box?: string;
@@ -73,6 +74,7 @@ const NAV = [
       { id: "dupchecklist",  label: "Dup Hunt" },
       { id: "hunting",       label: "Box Hunt" },
       { id: "boxquest",      label: "Box Quest" },
+      { id: "boxmap",        label: "Box Map" },
       { id: "timeline",    label: "Timeline" },
     ],
   },
@@ -287,6 +289,7 @@ export default function App() {
         {activeTab === "keycatalog"  && <KeyCatalog />}
         {activeTab === "covercatalog" && <CoverCatalog />}
         {activeTab === "boxquest"     && <BoxQuest />}
+        {activeTab === "boxmap"       && <BoxMap />}
       </div>
     </div>
     </PasswordGate>
