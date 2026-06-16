@@ -221,6 +221,10 @@ for (const comic of comics) {
   }
 }
 
+// ── Ghost boxes: no physical books, skip as source boxes ─────────────────────
+// These box numbers exist in inventory records but have no physical presence.
+const GHOST_BOXES = new Set([84, 91, 92, 94, 100]);
+
 // ── For each quest, assign each series to ONE home target box ─────────────────
 // Then build moves: source_box → home_box
 
@@ -274,6 +278,7 @@ function buildQuestMoves(qd) {
 
     for (const [fromBox, issues] of sd.inSource) {
       if (fromBox === homeBox) continue; // Already in right place
+      if (GHOST_BOXES.has(fromBox)) continue; // Skip ghost boxes
       const moveKey = `${fromBox},${homeBox}`;
       if (!moveMap.has(moveKey)) moveMap.set(moveKey, new Map());
       const booksInMove = moveMap.get(moveKey);
@@ -284,11 +289,51 @@ function buildQuestMoves(qd) {
     // Also move issues from wrong target boxes to home box
     for (const [fromBox, issues] of sd.inTarget) {
       if (fromBox === homeBox) continue;
+      if (GHOST_BOXES.has(fromBox)) continue; // Skip ghost boxes
       const moveKey = `${fromBox},${homeBox}`;
       if (!moveMap.has(moveKey)) moveMap.set(moveKey, new Map());
       const booksInMove = moveMap.get(moveKey);
       if (!booksInMove.has(key)) booksInMove.set(key, { title: sd.title, issues: [] });
       booksInMove.get(key).issues.push(...issues);
+    }
+  }
+
+  // ── Micro-move batching ───────────────────────────────────────────────────────
+  // Group all micro-moves (≤3 books) from the same source box into one sweep:
+  // Instead of separate trips (box15→box3, box15→box7, box15→box12 each with 1 book),
+  // collect everything into a single "grab all from box15" move to the most common dest.
+  const microThreshold = 3;
+  const fromBoxMicroBooks = new Map(); // fromBox → Map<titleKey, bookData>
+  const microDestCount = new Map(); // fromBox → Map<toBox, count>
+
+  for (const [moveKey, booksMap] of moveMap) {
+    const totalBooks = [...booksMap.values()].reduce((s, b) => s + b.issues.length, 0);
+    if (totalBooks <= microThreshold) {
+      const [from, to] = moveKey.split(',').map(Number);
+      if (!fromBoxMicroBooks.has(from)) fromBoxMicroBooks.set(from, new Map());
+      if (!microDestCount.has(from)) microDestCount.set(from, new Map());
+      for (const [key, bd] of booksMap) {
+        fromBoxMicroBooks.get(from).set(key, { ...bd, toBox: to });
+      }
+      const dc = microDestCount.get(from);
+      dc.set(to, (dc.get(to) ?? 0) + totalBooks);
+      moveMap.delete(moveKey);
+    }
+  }
+
+  // Re-add batched micro-moves, all going to the most common destination from each source
+  for (const [fromBox, booksMap] of fromBoxMicroBooks) {
+    const dc = microDestCount.get(fromBox);
+    let bestDest = null, bestCount = 0;
+    for (const [dest, cnt] of dc) {
+      if (cnt > bestCount) { bestCount = cnt; bestDest = dest; }
+    }
+    const moveKey = `${fromBox},${bestDest}`;
+    if (!moveMap.has(moveKey)) moveMap.set(moveKey, new Map());
+    const existing = moveMap.get(moveKey);
+    for (const [key, bd] of booksMap) {
+      if (!existing.has(key)) existing.set(key, { title: bd.title, issues: [] });
+      existing.get(key).issues.push(...bd.issues);
     }
   }
 
