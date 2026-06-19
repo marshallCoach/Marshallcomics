@@ -46,7 +46,13 @@ const wb = new ExcelJS.Workbook();
 await wb.xlsx.readFile(XLSX_FILE);
 
 // ── COMICS ───────────────────────────────────────────────────────────────────
-const comicsSheet = wb.getWorksheet('✅ Clean Inventory');
+const comicsSheet = wb.worksheets.find(ws => ws.name.startsWith('✅ Clean Inventory'));
+if (!comicsSheet) {
+  console.error('Cannot find inventory sheet. Available sheets:');
+  wb.worksheets.forEach(ws => console.error(' ', ws.name));
+  process.exit(1);
+}
+console.log(`Sheet: ${comicsSheet.name}`);
 const allRows = worksheetToArrays(comicsSheet, '');
 const headers = allRows[0];
 

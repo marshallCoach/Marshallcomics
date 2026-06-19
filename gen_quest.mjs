@@ -84,7 +84,11 @@ console.log(`Parsed ${existingQuests.length} quests, ${seriesQuestMap.size} seri
 const wb = new ExcelJS.Workbook();
 await wb.xlsx.readFile(XLSX_FILE);
 
-const comicsSheet = wb.getWorksheet('✅ Clean Inventory');
+const comicsSheet = wb.worksheets.find(ws => ws.name.startsWith('✅ Clean Inventory'));
+if (!comicsSheet) {
+  console.error('Cannot find inventory sheet. Available:', wb.worksheets.map(ws => ws.name).join(', '));
+  process.exit(1);
+}
 const allRows = worksheetToArrays(comicsSheet, '');
 const headers = allRows[0];
 
