@@ -102,6 +102,19 @@ const C = {
 function s(row, idx) { return String(row[idx] ?? '').trim().replace(/\\/g, '\\\\').replace(/`/g, '\\`').replace(/\$\{/g, '\\${'); }
 function st(row, idx) { return s(row, idx).replace(/^\[REMOVED\]\s*/i, ''); }
 
+// Extract parenthetical disambiguator from a title.
+// Returns { cleanTitle, disambig } where:
+//   - If parens contain only a 4-digit year → cleanTitle = original, disambig = ''
+//   - Otherwise → cleanTitle = title without the parens, disambig = paren content
+function parseTitle(raw) {
+  const m = raw.match(/^(.*?)\s*\(([^)]+)\)\s*$/);
+  if (!m) return { cleanTitle: raw, disambig: '' };
+  const inner = m[2].trim();
+  // Pure year: exactly 4 digits, or two 4-digit years like 2016-2019
+  if (/^\d{4}(-\d{4})?$/.test(inner)) return { cleanTitle: raw, disambig: '' };
+  return { cleanTitle: m[1].trim(), disambig: inner };
+}
+
 // Derive earliest Date_Added per box from comics data
 const boxDateMap = {};
 for (let r = 1; r < allRows.length; r++) {
@@ -120,8 +133,12 @@ for (let r = 1; r < allRows.length; r++) {
   const row = allRows[r];
   const title = String(row[C.title] ?? '').trim();
   if (!title) continue;
+  const rawTitle = st(row, C.title);
+  const { cleanTitle, disambig } = parseTitle(rawTitle);
+  const esc = v => v.replace(/\\/g, '\\\\').replace(/`/g, '\\`').replace(/\$\{/g, '\\${');
   comics.push(`  {
-    Title: \`${st(row,C.title)}\`, Issue: \`${s(row,C.issue)}\`, Publisher: \`${s(row,C.pub)}\`,
+    Title: \`${esc(cleanTitle)}\`, Issue: \`${s(row,C.issue)}\`, Publisher: \`${s(row,C.pub)}\`,
+    Disambig: \`${esc(disambig)}\`,
     Year: \`${s(row,C.year)}\`, Arc: \`${s(row,C.arc)}\`, Key: \`${s(row,C.key)}\`,
     Key_Reason: \`${s(row,C.keyWhy)}\`, First_App: \`${s(row,C.first)}\`,
     Writer: \`${s(row,C.writer)}\`, Artist: \`${s(row,C.artist)}\`,
@@ -426,7 +443,7 @@ const ts = `// AUTO-GENERATED — DO NOT EDIT MANUALLY
 // Source: ${srcName}  |  Generated: ${new Date().toISOString().slice(0,10)}
 
 export interface Comic {
-  Title: string; Issue: string; Publisher: string; Year: string; Arc: string;
+  Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
   Key: string; Key_Reason: string; First_App: string; Writer: string; Artist: string;
   Signed: string; Signed_By: string; Personal: string; Condition: string;
   CGC_Worth: string; Value_NM: string; Value_VF: string; Category: string;
