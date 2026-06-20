@@ -377,7 +377,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
 
   // Random covers carousel — 10 different comics each mount
   const carouselComics = useMemo(() => {
-    const arr = [...comics];
+    const arr = [...comics].filter(c => (c.Key || "").toUpperCase() === "YES");
     for (let i = arr.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [arr[i], arr[j]] = [arr[j], arr[i]];
@@ -430,7 +430,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
             TODAY'S PICKS — {new Date().toLocaleDateString("en-US", { month:"long", day:"numeric", year:"numeric" })}
           </span>
           <span style={{ fontFamily:"'Crimson Pro',serif", fontSize:"0.78rem", color:"var(--muted)", fontStyle:"italic" }}>
-            10 random books from the collection · refreshes each visit
+            10 random key issues · refreshes each visit
           </span>
         </div>
         <div style={{ overflow:"hidden", margin:"0 -16px", padding:"4px 0" }}>
