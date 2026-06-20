@@ -439,7 +439,6 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
               <div
                 key={i}
                 className="cover-carousel-card"
-                onClick={() => setCarouselModal({ comic: c, large: null })}
               >
                 <CoverImage
                   comic={c}
