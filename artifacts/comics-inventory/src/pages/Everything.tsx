@@ -118,8 +118,9 @@ export default function Everything({
   const [boxFilter,   setBoxFilter]  = useState(initBox      || "");
   const [keysOnly,    setKeysOnly]   = useState(!!initKeysOnly);
   const [signedOnly,  setSignedOnly] = useState(!!initSignedOnly);
-  const [parenOnly,   setParenOnly]  = useState(false);
-  const [annualOnly,  setAnnualOnly] = useState(false);
+  const [yearParenOnly,    setYearParen]   = useState(false);
+  const [creatorParenOnly, setCreatorParen] = useState(false);
+  const [annualOnly,       setAnnualOnly]   = useState(false);
   const [familyFilter,setFamily]     = useState("");
   const [view,        setView]       = useState<"list"|"card">("list");
   const [searched,    setSearched]   = useState(true);
@@ -159,9 +160,12 @@ export default function Everything({
       const fk = comicFlagKey(r.Title, r.Issue || "", r.Box || "");
       return (
         <span style={{ display:"flex", alignItems:"center", gap:5 }}>
-          <button className="title-link" onClick={e=>{e.stopPropagation();setExactTitle(r.Title||"");setQuery("");setSearched(true);setCardPage(1);}}>
-            {r.Title||"Untitled"}
-          </button>
+          <span style={{ display:"flex", flexDirection:"column", gap:1 }}>
+            <button className="title-link" onClick={e=>{e.stopPropagation();setExactTitle(r.Title||"");setQuery("");setSearched(true);setCardPage(1);}}>
+              {r.Title||"Untitled"}
+            </button>
+            {r.Disambig && <span style={{ fontSize:"0.68rem", color:"var(--muted2)", fontStyle:"italic", lineHeight:1.2 }}>{r.Disambig}</span>}
+          </span>
           {flaggedKeys.has(fk) && <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.55rem", letterSpacing:"1px", color:"#92400e", background:"#fef3c7", border:"1px solid #fcd34d", borderRadius:3, padding:"1px 5px", flexShrink:0 }}>UPDATE</span>}
         </span>
       );
@@ -210,7 +214,8 @@ export default function Everything({
     return ALL.filter(c => {
       if (keysOnly   && (c.Key    || "").toUpperCase() !== "YES") return false;
       if (signedOnly && (c.Signed || "").toUpperCase() !== "YES") return false;
-      if (parenOnly  && !c.Title.includes("(")) return false;
+      if (yearParenOnly    && !/\(\d{4}(-\d{4})?\)/.test(c.Title)) return false;
+      if (creatorParenOnly && !c.Disambig) return false;
       if (annualOnly && !c.Title.toLowerCase().includes("annual")) return false;
       if (publisher  && c.Publisher !== publisher)  return false;
       if (era        && c.Era !== era)              return false;
@@ -235,7 +240,7 @@ export default function Everything({
         c.Story_Pitch, c.Imprint, c.Terrificon,
       ].join(" ").toLowerCase().includes(q);
     });
-  }, [searched, query, publisher, era, platform, boxFilter, keysOnly, signedOnly, parenOnly, annualOnly, familyFilter, exactTitle]);
+  }, [searched, query, publisher, era, platform, boxFilter, keysOnly, signedOnly, yearParenOnly, creatorParenOnly, annualOnly, familyFilter, exactTitle]);
 
   const cardSlice = useMemo(() => {
     const sorted = [...results].sort((a, b) => {
@@ -250,7 +255,7 @@ export default function Everything({
   const handleSearch = useCallback(() => { setSearched(true); setCardPage(1); }, []);
   const handleClear  = useCallback(() => {
     setQuery(""); setPub(""); setEra(""); setPlat(""); setBoxFilter("");
-    setKeysOnly(false); setSignedOnly(false); setParenOnly(false); setAnnualOnly(false); setFamily(""); setExactTitle("");
+    setKeysOnly(false); setSignedOnly(false); setYearParen(false); setCreatorParen(false); setAnnualOnly(false); setFamily(""); setExactTitle("");
     setCardPage(1);
     setTimeout(() => searchInputRef.current?.focus(), 0);
   }, []);
@@ -326,7 +331,10 @@ export default function Everything({
                 <input type="checkbox" checked={signedOnly} onChange={e=>setSignedOnly(e.target.checked)} />✍ Signed
               </label>
               <label className="toggle-pill">
-                <input type="checkbox" checked={parenOnly} onChange={e=>setParenOnly(e.target.checked)} />() Title Has ( )
+                <input type="checkbox" checked={yearParenOnly} onChange={e=>setYearParen(e.target.checked)} />(YYYY) Year
+              </label>
+              <label className="toggle-pill">
+                <input type="checkbox" checked={creatorParenOnly} onChange={e=>setCreatorParen(e.target.checked)} />(Creator/Arc)
               </label>
               <label className="toggle-pill">
                 <input type="checkbox" checked={annualOnly} onChange={e=>setAnnualOnly(e.target.checked)} />📅 Annuals
