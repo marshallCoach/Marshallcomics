@@ -5,7 +5,7 @@ const ExcelJS = require('exceljs');
 
 // ── Auto-detect newest xlsx ───────────────────────────────────────────────────
 const xlsxFiles = readdirSync('attached_assets')
-  .filter(f => f.includes('comics_inventory') && f.endsWith('.xlsx'))
+  .filter(f => f.includes('comics_inventory') && f.endsWith('.xlsx') && !f.startsWith('~$'))
   .map(f => ({ f, mtime: statSync(`attached_assets/${f}`).mtimeMs }))
   .sort((a, b) => b.mtime - a.mtime);
 if (!xlsxFiles.length) { console.error('No comics_inventory*.xlsx found in attached_assets/'); process.exit(1); }
