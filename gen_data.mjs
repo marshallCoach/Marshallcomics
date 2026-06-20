@@ -1,4 +1,4 @@
-import { writeFileSync, readdirSync, statSync } from 'fs';
+import { writeFileSync, readdirSync, statSync, copyFileSync, existsSync } from 'fs';
 import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 const ExcelJS = require('exceljs');
@@ -506,3 +506,9 @@ ${catCCBoxes.map(catComicTS).join(',\n')}
 writeFileSync('artifacts/comics-inventory/src/data/data3.ts', ts);
 console.log(`Written: ${comics.length} comics, ${boxes.length} boxes`);
 console.log(`Catalogs: pulled=${catPulled.length}, box2=${catBox2.length}, box3=${catBox3.length}, ccBoxes=${catCCBoxes.length}`);
+
+// Copy covers.json to public folder so the static build can serve it
+if (existsSync('covers.json')) {
+  copyFileSync('covers.json', 'artifacts/comics-inventory/public/covers.json');
+  console.log('Copied covers.json → public/covers.json');
+}

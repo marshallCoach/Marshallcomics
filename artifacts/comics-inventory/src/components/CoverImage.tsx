@@ -4,6 +4,23 @@ import { comicFlagKey, getComicFlag, setComicFlag, clearComicFlag } from "@/lib/
 
 const BASE = import.meta.env.BASE_URL?.replace(/\/$/, "") ?? "";
 
+// ── Static cover map loaded once from /covers.json ───────────────────────────
+let coversMap: Record<string, { url: string | null; large?: string | null }> | null = null;
+let coversLoading: Promise<void> | null = null;
+
+function loadCovers(): Promise<void> {
+  if (coversMap !== null) return Promise.resolve();
+  if (coversLoading) return coversLoading;
+  coversLoading = fetch(`${BASE}/covers.json`)
+    .then(r => r.json())
+    .then(data => { coversMap = data; })
+    .catch(() => { coversMap = {}; });
+  return coversLoading;
+}
+
+// Pre-load covers as soon as the module is imported
+loadCovers();
+
 const memCache = new Map<string, string | null>();
 const inFlight  = new Map<string, Promise<string | null>>();
 
@@ -23,16 +40,10 @@ async function fetchCover(c: ComicLike): Promise<string | null> {
 
   const p = (async () => {
     try {
-      const params = new URLSearchParams({
-        title: c.Title,
-        issue: String(c.Issue || ""),
-        publisher: (c as { Publisher?: string }).Publisher ?? "",
-        year: String((c as { Year?: string }).Year ?? ""),
-      });
-      const res = await fetch(`${BASE}/api/covers/search?${params}`);
-      if (!res.ok) return null;
-      const data = await res.json() as { cover_url?: string | null };
-      const url = data.cover_url ?? null;
+      await loadCovers();
+      // Try with # prefix first, then without
+      const entry = coversMap?.[key] ?? coversMap?.[`${c.Title}|||#${String(c.Issue).replace(/^#/, "")}`] ?? null;
+      const url = entry?.url ?? null;
       memCache.set(key, url);
       return url;
     } catch {
