@@ -119,6 +119,7 @@ export default function Everything({
   const [keysOnly,    setKeysOnly]   = useState(!!initKeysOnly);
   const [signedOnly,  setSignedOnly] = useState(!!initSignedOnly);
   const [parenOnly,   setParenOnly]  = useState(false);
+  const [annualOnly,  setAnnualOnly] = useState(false);
   const [familyFilter,setFamily]     = useState("");
   const [view,        setView]       = useState<"list"|"card">("list");
   const [searched,    setSearched]   = useState(true);
@@ -210,6 +211,7 @@ export default function Everything({
       if (keysOnly   && (c.Key    || "").toUpperCase() !== "YES") return false;
       if (signedOnly && (c.Signed || "").toUpperCase() !== "YES") return false;
       if (parenOnly  && !c.Title.includes("(")) return false;
+      if (annualOnly && !c.Title.toLowerCase().includes("annual")) return false;
       if (publisher  && c.Publisher !== publisher)  return false;
       if (era        && c.Era !== era)              return false;
       if (platform   && c.Platform !== platform)    return false;
@@ -233,7 +235,7 @@ export default function Everything({
         c.Story_Pitch, c.Imprint, c.Terrificon,
       ].join(" ").toLowerCase().includes(q);
     });
-  }, [searched, query, publisher, era, platform, boxFilter, keysOnly, signedOnly, parenOnly, familyFilter, exactTitle]);
+  }, [searched, query, publisher, era, platform, boxFilter, keysOnly, signedOnly, parenOnly, annualOnly, familyFilter, exactTitle]);
 
   const cardSlice = useMemo(() => {
     const sorted = [...results].sort((a, b) => {
@@ -248,7 +250,7 @@ export default function Everything({
   const handleSearch = useCallback(() => { setSearched(true); setCardPage(1); }, []);
   const handleClear  = useCallback(() => {
     setQuery(""); setPub(""); setEra(""); setPlat(""); setBoxFilter("");
-    setKeysOnly(false); setSignedOnly(false); setParenOnly(false); setFamily(""); setExactTitle("");
+    setKeysOnly(false); setSignedOnly(false); setParenOnly(false); setAnnualOnly(false); setFamily(""); setExactTitle("");
     setCardPage(1);
     setTimeout(() => searchInputRef.current?.focus(), 0);
   }, []);
@@ -325,6 +327,9 @@ export default function Everything({
               </label>
               <label className="toggle-pill">
                 <input type="checkbox" checked={parenOnly} onChange={e=>setParenOnly(e.target.checked)} />() Title Has ( )
+              </label>
+              <label className="toggle-pill">
+                <input type="checkbox" checked={annualOnly} onChange={e=>setAnnualOnly(e.target.checked)} />📅 Annuals
               </label>
             </div>
           </div>
