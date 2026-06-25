@@ -63,7 +63,14 @@ console.log(`Loaded ${Object.keys(cache).length} cached covers (${urlsBefore} wi
 // ── Build fetch queue ─────────────────────────────────────────────────────────
 // BUG FIX: use `in` operator — !cache[key] passes null entries (truthy for !null)
 // which caused already-missed comics to be re-queued on every run.
-const comics = DATA3.comics;
+const cats = DATA3.catalogs || {};
+const comics = [
+  ...DATA3.comics,
+  ...(cats.pulled  || []),
+  ...(cats.box2    || []),
+  ...(cats.box3    || []),
+  ...(cats.ccBoxes || []),
+];
 const queue = comics
   .filter(c => !onlyKeys || (c.Key || "").toUpperCase() === "YES")
   .filter(c => {
