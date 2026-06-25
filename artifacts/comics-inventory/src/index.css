@@ -166,7 +166,7 @@ body {
 .tab-btn {
   background: none; border: none; border-bottom: 2px solid transparent;
   color: var(--muted); padding: 7px 12px; cursor: pointer;
-  font-family: 'Bebas Neue', sans-serif; font-size: 0.7rem; letter-spacing: 1.5px;
+  font-family: 'Bebas Neue', sans-serif; font-size: 0.85rem; letter-spacing: 1.5px;
   white-space: nowrap; transition: color 0.15s, border-color 0.15s;
   flex-shrink: 0;
 }
@@ -187,7 +187,7 @@ body {
   .main-nav { top: 74px; padding: 0 10px; }
   .main-nav-btn { padding: 8px 12px; font-size: 0.72rem; }
   .tab-nav { top: 105px; }
-  .tab-btn { padding: 6px 10px; font-size: 0.65rem; }
+  .tab-btn { padding: 6px 10px; font-size: 0.78rem; }
 }
 
 /* ── FILTERS (Everything page) ── */
@@ -322,7 +322,7 @@ body {
 
 /* ── LIST TABLE ── */
 .list-table { width: 100%; padding: 0 4px 20px; overflow-x: auto; }
-.list-table table { width: 100%; border-collapse: collapse; font-size: 1.1rem; }
+.list-table table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
 .list-table thead tr { border-bottom: 2px solid var(--red); }
 .list-table thead th {
   text-align: left; padding: 8px 12px; color: var(--muted2);
