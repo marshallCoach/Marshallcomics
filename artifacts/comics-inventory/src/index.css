@@ -43,7 +43,7 @@ body {
 ::selection { background: rgba(200,16,46,0.15); color: var(--red-dark); }
 
 /* ── PAGE CONTENT WRAPPER ── */
-.page-content { overflow-x: hidden; }
+.page-content { overflow-x: hidden; isolation: isolate; }
 
 /* ── TERRIFICON BANNER ── */
 .terrificon-banner {
@@ -69,7 +69,7 @@ body {
   height: 52px;
   position: sticky;
   top: 29px;
-  z-index: 200;
+  z-index: 301;
   box-shadow: 0 1px 6px rgba(0,0,0,0.06);
 }
 
@@ -137,7 +137,7 @@ body {
 .main-nav {
   background: #111;
   display: flex; padding: 0 16px;
-  position: sticky; top: 81px; z-index: 195;
+  position: sticky; top: 81px; z-index: 300;
   overflow-x: auto; scrollbar-width: none; gap: 0;
 }
 .main-nav::-webkit-scrollbar { display: none; }
@@ -159,7 +159,7 @@ body {
   display: flex; padding: 0 12px;
   border-bottom: 1px solid var(--border);
   overflow-x: auto; scrollbar-width: none;
-  position: sticky; top: 113px; z-index: 190;
+  position: sticky; top: 113px; z-index: 299;
 }
 .tab-nav::-webkit-scrollbar { display: none; }
 
