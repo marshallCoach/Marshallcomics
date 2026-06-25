@@ -83,11 +83,11 @@ def cv_search_issue(title, issue_num, year_hint):
         issue_str = re.sub(r"[^0-9]", "", str(issue_num)) or "1"
 
     params = {
-        "api_key":     API_KEY,
-        "format":      "json",
-        "filter":      f"name:{title},issue_number:{issue_str}",
-        "field_list":  "name,issue_number,volume,cover_date,person_credits",
-        "limit":       5,
+        "api_key":    API_KEY,
+        "format":     "json",
+        "filter":     f"name:{title}",
+        "field_list": "name,issue_number,volume,cover_date,person_credits",
+        "limit":      20,
     }
 
     try:
