@@ -403,11 +403,11 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
         >×</button>
         {/* Header row */}
         <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:14, flexWrap:"wrap", paddingRight:24 }}>
-          <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", letterSpacing:"3px", color:"var(--red)" }}>LATEST UPDATE</span>
-          <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1.5px", color:"var(--muted)", background:"var(--surface2)", padding:"2px 8px", borderRadius:3, border:"1px solid var(--border)" }}>{LAST_UPDATE_DATE}</span>
+          <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem", letterSpacing:"3px", color:"var(--red)" }}>LATEST UPDATE</span>
+          <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem", letterSpacing:"1.5px", color:"var(--muted)", background:"var(--surface2)", padding:"2px 8px", borderRadius:3, border:"1px solid var(--border)" }}>{LAST_UPDATE_DATE}</span>
           <div style={{ display:"flex", gap:5, flexWrap:"wrap" }}>
             {UPDATE_DELTAS.map(d => (
-              <span key={d} style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px", color:"#16a34a", background:"rgba(22,163,74,0.08)", border:"1px solid rgba(22,163,74,0.18)", padding:"2px 8px", borderRadius:3 }}>
+              <span key={d} style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.78rem", letterSpacing:"1px", color:"#16a34a", background:"rgba(22,163,74,0.08)", border:"1px solid rgba(22,163,74,0.18)", padding:"2px 8px", borderRadius:3 }}>
                 {d}
               </span>
             ))}
@@ -417,7 +417,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
         {/* Interface updates only — writers/artists/value have their own dedicated cards below */}
         <div style={{ display:"flex", flexDirection:"column", gap:4 }}>
           {INTERFACE_UPDATES.map(u => (
-            <div key={u} style={{ fontSize:"0.88rem", color:"var(--muted2)", lineHeight:1.4, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" }}>→ {u}</div>
+            <div key={u} style={{ fontSize:"0.95rem", color:"var(--muted2)", lineHeight:1.5, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" }}>→ {u}</div>
           ))}
         </div>
       </section>
@@ -426,10 +426,10 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
       {/* ── Cover Carousel ── */}
       <section style={{ marginBottom:24 }}>
         <div style={{ display:"flex", alignItems:"baseline", gap:10, marginBottom:10 }}>
-          <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"3px", color:"var(--muted)" }}>
+          <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem", letterSpacing:"3px", color:"var(--muted)" }}>
             TODAY'S PICKS — {new Date().toLocaleDateString("en-US", { month:"long", day:"numeric", year:"numeric" })}
           </span>
-          <span style={{ fontFamily:"'Crimson Pro',serif", fontSize:"0.78rem", color:"var(--muted)", fontStyle:"italic" }}>
+          <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"1.5px", color:"var(--muted)" }}>
             10 random key issues · refreshes each visit
           </span>
         </div>
@@ -447,10 +447,10 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
                   onClick={large => setCarouselModal({ comic: c, large })}
                   style={{ borderRadius:6, boxShadow:"0 4px 14px rgba(0,0,0,0.18)" }}
                 />
-                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px", color:"var(--muted2)", lineHeight:1.2, marginTop:5, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap", width:100, textAlign:"center" }}>
+                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"1px", color:"var(--muted2)", lineHeight:1.2, marginTop:5, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap", width:100, textAlign:"center" }}>
                   {c.Title}
                 </div>
-                <div style={{ fontFamily:"'Crimson Pro',serif", fontSize:"0.7rem", color:"var(--muted)", textAlign:"center", width:100 }}>
+                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", color:"var(--muted)", textAlign:"center", width:100 }}>
                   {c.Issue}
                 </div>
               </div>
@@ -615,13 +615,13 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
         <div style={{ background:"#0f1a12", border:"1px solid #1e3a22", borderRadius:10, padding:"22px 24px", overflow:"hidden", position:"relative" }}>
           {/* Scanline texture */}
           <div style={{ position:"absolute", inset:0, backgroundImage:"repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,255,80,0.015) 3px,rgba(0,255,80,0.015) 4px)", pointerEvents:"none" }} />
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"4px", color:"rgba(100,220,120,0.5)", marginBottom:18 }}>
+          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.78rem", letterSpacing:"3px", color:"rgba(100,220,120,0.5)", marginBottom:18 }}>
             COLLECTION VALUE EST. — {LAST_UPDATE_DATE.toUpperCase()}
           </div>
           <div style={{ display:"flex", gap:0, flexWrap:"wrap" }}>
             {/* NM Value */}
             <div style={{ flex:"1 1 200px", paddingRight:32, borderRight:"1px solid #1e3a22" }}>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem", letterSpacing:"3px", color:"rgba(100,220,120,0.45)", marginBottom:6 }}>
+              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"3px", color:"rgba(100,220,120,0.45)", marginBottom:6 }}>
                 NM RAW TOTAL
               </div>
               <div style={{ display:"flex", alignItems:"baseline", gap:4 }}>
@@ -630,13 +630,13 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
                   {cNmValue.toLocaleString()}
                 </span>
               </div>
-              <div style={{ fontSize:"0.62rem", color:"rgba(100,220,120,0.35)", marginTop:6, letterSpacing:"1px" }}>
+              <div style={{ fontSize:"0.82rem", color:"rgba(100,220,120,0.5)", marginTop:6, letterSpacing:"1px" }}>
                 Near Mint (9.4+) raw — {totalComics.toLocaleString()} books
               </div>
             </div>
             {/* VF Value */}
             <div style={{ flex:"1 1 200px", paddingLeft:32 }}>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem", letterSpacing:"3px", color:"rgba(100,220,120,0.45)", marginBottom:6 }}>
+              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"3px", color:"rgba(100,220,120,0.45)", marginBottom:6 }}>
                 VF COLLECTION VALUE EST.
               </div>
               <div style={{ display:"flex", alignItems:"baseline", gap:4 }}>
@@ -645,13 +645,13 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
                   {cVfValue.toLocaleString()}
                 </span>
               </div>
-              <div style={{ fontSize:"0.62rem", color:"rgba(100,220,120,0.35)", marginTop:6, letterSpacing:"1px" }}>
+              <div style={{ fontSize:"0.82rem", color:"rgba(100,220,120,0.5)", marginTop:6, letterSpacing:"1px" }}>
                 Very Fine (8.0) lower bounds — realistic sell-raw estimate
               </div>
             </div>
           </div>
           {/* Bottom note */}
-          <div style={{ marginTop:16, paddingTop:14, borderTop:"1px solid #1e3a22", fontSize:"0.62rem", color:"rgba(100,220,120,0.25)", letterSpacing:"1px" }}>
+          <div style={{ marginTop:16, paddingTop:14, borderTop:"1px solid #1e3a22", fontSize:"0.78rem", color:"rgba(100,220,120,0.4)", letterSpacing:"1px" }}>
             Values derived from Value_NM and Value_VF fields across all {totalComics.toLocaleString()} catalogued books. VF uses lower bound of any range (e.g. "$5–12" counts as $5).
           </div>
         </div>
@@ -660,7 +660,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
       {/* ── TOP CREATORS — with delta arrows ── */}
       <section style={{ marginBottom:32 }}>
         <h2 className="section-h2">✍ TOP CREATORS</h2>
-        <p style={{ fontSize:"0.78rem", color:"var(--muted2)", marginBottom:12, fontFamily:"'Crimson Pro',serif" }}>
+        <p style={{ fontSize:"0.9rem", color:"var(--muted2)", marginBottom:12, fontFamily:"'Crimson Pro',serif" }}>
           Ranked by book count across all {totalComics.toLocaleString()} comics. Arrows show rank change vs. previous snapshot (boxes 1–84).
         </p>
         <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:12 }}>
@@ -669,7 +669,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
             const prev    = field === "Writer" ? TOP_WRITERS_PREV : TOP_ARTISTS_PREV;
             return (
               <div key={field} style={{ background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:8, padding:"14px 16px" }}>
-                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"3px",
+                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem", letterSpacing:"3px",
                   color: field === "Writer" ? "var(--red)" : "#1d6fa4", marginBottom:12 }}>
                   TOP {field.toUpperCase()}S
                 </div>
@@ -692,7 +692,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
                   return (
                     <div key={name} className="creator-row"
                       style={{ display:"flex", alignItems:"center", gap:8, marginBottom:8, position:"relative" }}>
-                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", color:"var(--muted)",
+                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", color:"var(--muted)",
                         minWidth:20, textAlign:"right" }}>#{i+1}</span>
                       <div style={{ width:3, height:20, borderRadius:2, flexShrink:0,
                         background: field === "Writer" ? "var(--red)" : "#1d6fa4", opacity: 1 - i * 0.15 }} />
@@ -748,7 +748,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
                       <div style={{ width:10, height:10, borderRadius:2, background:color, flexShrink:0 }} />
                       <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.78rem", letterSpacing:"1px", color:"var(--muted2)", minWidth:110 }}>{p.name}</span>
                       <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", color:"var(--red)", letterSpacing:"1px" }}>{p.value.toLocaleString()}</span>
-                      <span style={{ fontSize:"0.67rem", color:"var(--muted)" }}>({pct}%)</span>
+                      <span style={{ fontSize:"0.82rem", color:"var(--muted)" }}>({pct}%)</span>
                     </div>
                     <div className="pub-bar-track">
                       <div
@@ -771,7 +771,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
       {/* ── FLAGSHIP ASSETS ── */}
       <section style={{ marginBottom:32 }}>
         <h2 className="section-h2">🏆 FLAGSHIP ASSETS</h2>
-        <p style={{ fontSize:"0.82rem", color:"var(--muted2)", marginBottom:12 }}>Your highest-value books — click any card for full action details.</p>
+        <p style={{ fontSize:"0.95rem", color:"var(--muted2)", marginBottom:12 }}>Your highest-value books — click any card for full action details.</p>
         <div style={{ display:"flex", flexWrap:"wrap", gap:10 }}>
           {FLAGSHIP.map((a, i) => {
             const isOpen = openFlag === i;
@@ -857,7 +857,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
                       </div>
                       <div style={{ fontSize:"0.72rem", color:"var(--muted2)" }}>
                         {e.Date}
-                        <span style={{ marginLeft:8, fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", color: urg }}>
+                        <span style={{ marginLeft:8, fontSize:"0.78rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", color: urg }}>
                           → {info.page === "showplanner" ? "VIEW SHOW PLAN" : "VIEW CALENDAR"}
                         </span>
                       </div>
