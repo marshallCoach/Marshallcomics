@@ -165,6 +165,10 @@ def cv_fetch_volume_issues(volume_id):
 def extract_credits(issue):
     """Pull writer / artist / cover_artist from a CV issue dict."""
     credits = issue.get("person_credits") or []
+    # Debug: print first issue's raw credits to diagnose role field
+    if credits and not hasattr(extract_credits, '_debugged'):
+        extract_credits._debugged = True
+        print(f"  [DEBUG] sample person_credits[0]: {credits[0]}")
     writer, artist, cover_artist = None, None, None
     for p in credits:
         roles = (p.get("role") or "").lower()
