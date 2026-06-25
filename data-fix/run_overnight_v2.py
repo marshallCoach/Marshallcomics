@@ -25,11 +25,30 @@ REVIEW_PATH      = "needs_review.json"
 CHECKPOINT_EVERY = 25
 SKIP_TITLES      = ["The Flash"]   # flagged for separate volume audit
 MAX_YEAR_GAP     = 15
-DELAY_SECONDS    = 18              # Comic Vine free tier: 200 req/hr = 1 per 18s
+DELAY_SECONDS    = 20              # Comic Vine free tier: 200 req/hr = 1 per 18s (20 for safety)
+RETRY_420_WAIT   = 65             # seconds to wait after a 420 rate-limit response
 
 API_KEY = os.environ.get("COMIC_VINE_API_KEY", "")
 CV_BASE = "https://comicvine.gamespot.com/api"
 HEADERS = {"User-Agent": "BRB-Marshall-Comics/1.0"}
+
+def cv_get(url, params, retries=3):
+    """Wrapper around requests.get with automatic 420 backoff."""
+    for attempt in range(retries):
+        try:
+            resp = requests.get(url, params=params, headers=HEADERS, timeout=30)
+            if resp.status_code == 420:
+                wait = RETRY_420_WAIT * (attempt + 1)
+                print(f"  [420] Rate limited — waiting {wait}s before retry {attempt+1}/{retries}")
+                time.sleep(wait)
+                continue
+            resp.raise_for_status()
+            return resp, None
+        except Exception as e:
+            if attempt == retries - 1:
+                return None, str(e)
+            time.sleep(RETRY_420_WAIT)
+    return None, "Max retries exceeded"
 
 # ── LOGGING ───────────────────────────────────────────────────────────────────
 def load_json(p):
@@ -86,12 +105,13 @@ def cv_find_volume_id(title, year_hint):
         "field_list": "id,name,start_year,count_of_issues",
         "limit":      10,
     }
+    resp, err = cv_get(f"{CV_BASE}/volumes/", params)
+    if resp is None:
+        return None, f"HTTP error: {err}"
     try:
-        resp = requests.get(f"{CV_BASE}/volumes/", params=params, headers=HEADERS, timeout=20)
-        resp.raise_for_status()
         data = resp.json()
     except Exception as e:
-        return None, f"HTTP error: {e}"
+        return None, f"JSON error: {e}"
 
     if data.get("status_code") != 1:
         return None, f"CV error: {data.get('error','unknown')}"
@@ -140,12 +160,13 @@ def cv_fetch_issue_ids_for_volume(volume_id):
             "limit":      limit,
             "offset":     offset,
         }
+        resp, err = cv_get(f"{CV_BASE}/issues/", params)
+        if resp is None:
+            return None, f"HTTP error: {err}"
         try:
-            resp = requests.get(f"{CV_BASE}/issues/", params=params, headers=HEADERS, timeout=30)
-            resp.raise_for_status()
             data = resp.json()
         except Exception as e:
-            return None, f"HTTP error: {e}"
+            return None, f"JSON error: {e}"
 
         if data.get("status_code") != 1:
             return None, f"CV error: {data.get('error','unknown')}"
@@ -178,13 +199,13 @@ def cv_fetch_issue_credits(issue_id):
         "format":     "json",
         "field_list": "person_credits",
     }
+    resp, err = cv_get(f"{CV_BASE}/issue/4000-{issue_id}/", params)
+    if resp is None:
+        return None, None, None, f"HTTP error: {err}"
     try:
-        resp = requests.get(f"{CV_BASE}/issue/4000-{issue_id}/", params=params,
-                            headers=HEADERS, timeout=20)
-        resp.raise_for_status()
         data = resp.json()
     except Exception as e:
-        return None, None, None, f"HTTP error: {e}"
+        return None, None, None, f"JSON error: {e}"
 
     if data.get("status_code") != 1:
         return None, None, None, f"CV error: {data.get('error','unknown')}"
