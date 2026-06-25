@@ -123,21 +123,20 @@ def cv_find_volume_id(title, year_hint):
     return vid, None
 
 
-def cv_fetch_volume_issues(volume_id):
+def cv_fetch_issue_ids_for_volume(volume_id):
     """
-    Step 2: fetch ALL issues for a known volume_id from /issues/?filter=volume:{id}.
-    Returns list of issue dicts (each has issue_number + person_credits), or (None, err).
-    May need multiple pages if count > 100.
+    Step 2: get issue_number → issue_id mapping for a volume.
+    Uses field_list=id,issue_number only (bulk fetch, no role data needed here).
+    Returns (dict of issue_num_str → issue_id, error).
     """
-    all_issues = []
-    offset = 0
-    limit  = 100
+    id_map = {}
+    offset, limit = 0, 100
     while True:
         params = {
             "api_key":    API_KEY,
             "format":     "json",
             "filter":     f"volume:{volume_id}",
-            "field_list": "issue_number,person_credits,cover_date",
+            "field_list": "id,issue_number",
             "limit":      limit,
             "offset":     offset,
         }
@@ -151,24 +150,46 @@ def cv_fetch_volume_issues(volume_id):
         if data.get("status_code") != 1:
             return None, f"CV error: {data.get('error','unknown')}"
 
-        batch = data.get("results", [])
-        all_issues.extend(batch)
+        for r in data.get("results", []):
+            num_raw = str(r.get("issue_number", "")).strip()
+            try:
+                num_key = str(int(float(num_raw)))
+            except (ValueError, TypeError):
+                num_key = re.sub(r"[^0-9]", "", num_raw) or num_raw
+            id_map[num_key] = r["id"]
+
         total = data.get("number_of_total_results", 0)
         offset += limit
-        if offset >= total or not batch:
+        if offset >= total or not data.get("results"):
             break
-        time.sleep(DELAY_SECONDS)   # respect rate limit for pagination
+        time.sleep(DELAY_SECONDS)
 
-    return all_issues, None
+    return id_map, None
 
 
-def extract_credits(issue):
-    """Pull writer / artist / cover_artist from a CV issue dict."""
-    credits = issue.get("person_credits") or []
-    # Debug: print first issue's raw credits to diagnose role field
-    if credits and not hasattr(extract_credits, '_debugged'):
-        extract_credits._debugged = True
-        print(f"  [DEBUG] sample person_credits[0]: {credits[0]}")
+def cv_fetch_issue_credits(issue_id):
+    """
+    Step 3: fetch a single issue detail to get person_credits with role data.
+    CV only returns roles on individual issue detail endpoints.
+    Returns (writer, artist, cover_artist) or (None, None, None).
+    """
+    params = {
+        "api_key":    API_KEY,
+        "format":     "json",
+        "field_list": "person_credits",
+    }
+    try:
+        resp = requests.get(f"{CV_BASE}/issue/4000-{issue_id}/", params=params,
+                            headers=HEADERS, timeout=20)
+        resp.raise_for_status()
+        data = resp.json()
+    except Exception as e:
+        return None, None, None, f"HTTP error: {e}"
+
+    if data.get("status_code") != 1:
+        return None, None, None, f"CV error: {data.get('error','unknown')}"
+
+    credits = (data.get("results") or {}).get("person_credits") or []
     writer, artist, cover_artist = None, None, None
     for p in credits:
         roles = (p.get("role") or "").lower()
@@ -181,35 +202,47 @@ def extract_credits(issue):
             artist = name
         if "cover" in roles and not cover_artist:
             cover_artist = name
-    return writer, artist, cover_artist
+    return writer, artist, cover_artist, None
 
 
-def cv_get_all_credits_for_title(title, year_hint):
+def cv_get_all_credits_for_title(title, year_hint, needed_issue_nums):
     """
-    Two-step lookup: volume search → issue list.
-    Returns (credits_by_issue_num, api_calls_used, error) where
-    credits_by_issue_num = {"1": {"writer":..., "artist":..., "cover_artist":...}, ...}
+    Three-step lookup: volume search → issue ID list → individual issue details.
+    Only fetches detail for issues actually needed (blank writers).
+    Returns (credits_by_issue_num, api_calls_used, error).
     """
-    # Step 1 — volume lookup (1 API call)
+    # Step 1 — volume lookup (1 API call, cached)
     volume_id, err = cv_find_volume_id(title, year_hint)
     if volume_id is None:
         return {}, 1, err or "Volume not found"
     time.sleep(DELAY_SECONDS)
 
-    # Step 2 — fetch all issues (1+ API calls)
-    issues, err = cv_fetch_volume_issues(volume_id)
-    calls = 1 + (1 if issues is not None else 1)
-    if issues is None:
+    # Step 2 — get issue ID map (1+ API calls)
+    id_map, err = cv_fetch_issue_ids_for_volume(volume_id)
+    calls = 2
+    if id_map is None:
         return {}, calls, err
 
-    by_num = {}
-    for iss in issues:
-        num_raw = str(iss.get("issue_number", "")).strip()
+    # Normalise needed issue nums to string keys
+    needed_keys = set()
+    for n in needed_issue_nums:
         try:
-            num_key = str(int(float(num_raw)))
+            needed_keys.add(str(int(float(str(n)))))
         except (ValueError, TypeError):
-            num_key = re.sub(r"[^0-9]", "", num_raw) or num_raw
-        w, a, ca = extract_credits(iss)
+            needed_keys.add(re.sub(r"[^0-9]", "", str(n)) or str(n))
+
+    # Step 3 — fetch individual issue details for needed issues only
+    by_num = {}
+    for num_key in needed_keys:
+        issue_id = id_map.get(num_key)
+        if issue_id is None:
+            continue   # issue not in this volume
+        time.sleep(DELAY_SECONDS)
+        calls += 1
+        w, a, ca, detail_err = cv_fetch_issue_credits(issue_id)
+        if detail_err:
+            print(f"  [DETAIL ERR] #{num_key} — {detail_err}")
+            continue
         by_num[num_key] = {"writer": w, "artist": a, "cover_artist": ca}
 
     return by_num, calls, None
@@ -285,8 +318,8 @@ def main():
 
         print(f"[CV] {title} Vol {volume} — {len(issues)} issues (~{year_hint}) [{n_rows} blank rows]")
 
-        # Two-step: volume lookup → bulk issue fetch (far fewer API calls)
-        credits_by_num, calls_used, fetch_err = cv_get_all_credits_for_title(title, year_hint)
+        # Three-step: volume lookup → issue ID map → individual issue details (for roles)
+        credits_by_num, calls_used, fetch_err = cv_get_all_credits_for_title(title, year_hint, issues)
         api_calls += calls_used
 
         if fetch_err and not credits_by_num:
