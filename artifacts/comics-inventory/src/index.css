@@ -43,7 +43,7 @@ body {
 ::selection { background: rgba(200,16,46,0.15); color: var(--red-dark); }
 
 /* ── PAGE CONTENT WRAPPER ── */
-.page-content { overflow-x: hidden; isolation: isolate; }
+.page-content { overflow-x: hidden; }
 
 /* ── TERRIFICON BANNER ── */
 .terrificon-banner {
@@ -52,6 +52,7 @@ body {
   background: #1a1a1a; border: none;
   font-family: 'Bebas Neue', sans-serif; letter-spacing: 2px;
   cursor: pointer; transition: background 0.15s;
+  position: sticky; top: 0; z-index: 9001;
 }
 .terrificon-banner:hover { background: #222; }
 .tf-label { color: var(--red); font-size: 0.78rem; }
@@ -60,7 +61,7 @@ body {
 
 /* ── HEADER ── */
 .app-header {
-  background: var(--surface);
+  background: #ffffff;
   border-bottom: 2px solid var(--border);
   padding: 0 20px;
   display: flex;
@@ -69,8 +70,8 @@ body {
   height: 52px;
   position: sticky;
   top: 29px;
-  z-index: 301;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+  z-index: 9000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 .logo-area { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
@@ -137,7 +138,7 @@ body {
 .main-nav {
   background: #111;
   display: flex; padding: 0 16px;
-  position: sticky; top: 81px; z-index: 300;
+  position: sticky; top: 81px; z-index: 8999; background: #111;
   overflow-x: auto; scrollbar-width: none; gap: 0;
 }
 .main-nav::-webkit-scrollbar { display: none; }
@@ -159,7 +160,7 @@ body {
   display: flex; padding: 0 12px;
   border-bottom: 1px solid var(--border);
   overflow-x: auto; scrollbar-width: none;
-  position: sticky; top: 113px; z-index: 299;
+  position: sticky; top: 113px; z-index: 8998; background: #ffffff;
 }
 .tab-nav::-webkit-scrollbar { display: none; }
 
