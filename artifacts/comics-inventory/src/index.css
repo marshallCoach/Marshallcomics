@@ -54,9 +54,9 @@ body {
   cursor: pointer; transition: background 0.15s;
 }
 .terrificon-banner:hover { background: #222; }
-.tf-label { color: var(--red); font-size: 0.72rem; }
-.tf-divider { color: rgba(255,255,255,0.2); font-size: 0.7rem; }
-.tf-time { color: rgba(255,255,255,0.7); font-size: 0.72rem; }
+.tf-label { color: var(--red); font-size: 0.78rem; }
+.tf-divider { color: rgba(255,255,255,0.2); font-size: 0.75rem; }
+.tf-time { color: rgba(255,255,255,0.7); font-size: 0.78rem; }
 
 /* ── HEADER ── */
 .app-header {
@@ -97,7 +97,7 @@ body {
   letter-spacing: 1px; line-height: 1;
 }
 .stat-lbl {
-  color: var(--muted); font-size: 0.6rem;
+  color: var(--muted); font-size: 0.72rem;
   letter-spacing: 1.5px; text-transform: uppercase;
   font-family: 'Bebas Neue', sans-serif;
 }
@@ -123,12 +123,12 @@ body {
   border-radius: 6px; padding: 5px 10px;
   cursor: pointer; color: var(--muted2);
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 0.65rem; letter-spacing: 1.5px;
+  font-size: 0.75rem; letter-spacing: 1.5px;
   transition: border-color 0.15s; white-space: nowrap;
 }
 .search-btn:hover { border-color: var(--red); color: var(--text); }
 .search-kbd {
-  font-size: 0.55rem; background: var(--surface);
+  font-size: 0.68rem; background: var(--surface);
   border: 1px solid var(--border); border-radius: 3px;
   padding: 1px 4px; color: var(--muted); font-family: sans-serif;
 }
@@ -466,7 +466,7 @@ body {
 /* Section header */
 .section-h2 {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   letter-spacing: 2.5px;
   color: var(--red);
   margin-bottom: 14px;
