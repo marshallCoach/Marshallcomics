@@ -68,30 +68,26 @@ def has_year_collision(df, title, volume):
     return False, None
 
 # ── COMIC VINE LOOKUP ─────────────────────────────────────────────────────────
-def cv_search_issue(title, issue_num, year_hint):
-    """
-    Search Comic Vine for a single issue.
-    Returns dict with writer, artist (penciler), cover_artist — or None if not found.
-    """
-    if not API_KEY:
-        raise RuntimeError("COMIC_VINE_API_KEY not set in environment")
+_volume_cache = {}   # title → volume_id (int) or None
 
-    # Normalise issue number
-    try:
-        issue_str = str(int(float(str(issue_num))))
-    except (ValueError, TypeError):
-        issue_str = re.sub(r"[^0-9]", "", str(issue_num)) or "1"
+def cv_find_volume_id(title, year_hint):
+    """
+    Step 1: query /volumes/ to find the best-matching volume ID for a series title.
+    Returns (volume_id, None) or (None, error_string).
+    Costs 1 API call; result cached in _volume_cache.
+    """
+    if title in _volume_cache:
+        return _volume_cache[title], None
 
     params = {
         "api_key":    API_KEY,
         "format":     "json",
         "filter":     f"name:{title}",
-        "field_list": "name,issue_number,volume,cover_date,person_credits",
-        "limit":      20,
+        "field_list": "id,name,start_year,count_of_issues",
+        "limit":      10,
     }
-
     try:
-        resp = requests.get(f"{CV_BASE}/issues/", params=params, headers=HEADERS, timeout=20)
+        resp = requests.get(f"{CV_BASE}/volumes/", params=params, headers=HEADERS, timeout=20)
         resp.raise_for_status()
         data = resp.json()
     except Exception as e:
@@ -102,34 +98,73 @@ def cv_search_issue(title, issue_num, year_hint):
 
     results = data.get("results", [])
     if not results:
-        return None, "No results"
+        _volume_cache[title] = None
+        return None, "No volumes found"
 
-    # Pick the best match: prefer exact issue number + year alignment
-    best = None
-    for r in results:
-        vol_name = (r.get("volume") or {}).get("name", "").lower()
-        r_issue  = str(r.get("issue_number", "")).strip()
-        if r_issue != issue_str:
-            continue
-        # Prefer result whose volume name matches title
-        if title.lower() in vol_name:
-            best = r
+    # Best match: exact name first, then closest start_year to year_hint
+    title_lower = title.lower()
+    exact = [r for r in results if r.get("name", "").lower() == title_lower]
+    pool  = exact if exact else results
+
+    best = pool[0]
+    if year_hint and year_hint != "?":
+        try:
+            yh = int(year_hint)
+            def year_dist(r):
+                sy = r.get("start_year")
+                return abs(int(sy) - yh) if sy and str(sy).isdigit() else 9999
+            best = min(pool, key=year_dist)
+        except (ValueError, TypeError):
+            pass
+
+    vid = best.get("id")
+    _volume_cache[title] = vid
+    print(f"  [VOL] '{title}' → volume id {vid} ('{best.get('name')}' {best.get('start_year')})")
+    return vid, None
+
+
+def cv_fetch_volume_issues(volume_id):
+    """
+    Step 2: fetch ALL issues for a known volume_id from /issues/?filter=volume:{id}.
+    Returns list of issue dicts (each has issue_number + person_credits), or (None, err).
+    May need multiple pages if count > 100.
+    """
+    all_issues = []
+    offset = 0
+    limit  = 100
+    while True:
+        params = {
+            "api_key":    API_KEY,
+            "format":     "json",
+            "filter":     f"volume:{volume_id}",
+            "field_list": "issue_number,person_credits,cover_date",
+            "limit":      limit,
+            "offset":     offset,
+        }
+        try:
+            resp = requests.get(f"{CV_BASE}/issues/", params=params, headers=HEADERS, timeout=30)
+            resp.raise_for_status()
+            data = resp.json()
+        except Exception as e:
+            return None, f"HTTP error: {e}"
+
+        if data.get("status_code") != 1:
+            return None, f"CV error: {data.get('error','unknown')}"
+
+        batch = data.get("results", [])
+        all_issues.extend(batch)
+        total = data.get("number_of_total_results", 0)
+        offset += limit
+        if offset >= total or not batch:
             break
-        if best is None:
-            best = r
+        time.sleep(DELAY_SECONDS)   # respect rate limit for pagination
 
-    if best is None:
-        # fallback: first result with matching issue number
-        for r in results:
-            if str(r.get("issue_number", "")).strip() == issue_str:
-                best = r
-                break
+    return all_issues, None
 
-    if best is None:
-        return None, f"No issue #{issue_str} in results"
 
-    # Extract person credits by role
-    credits = best.get("person_credits") or []
+def extract_credits(issue):
+    """Pull writer / artist / cover_artist from a CV issue dict."""
+    credits = issue.get("person_credits") or []
     writer, artist, cover_artist = None, None, None
     for p in credits:
         roles = (p.get("role") or "").lower()
@@ -142,8 +177,38 @@ def cv_search_issue(title, issue_num, year_hint):
             artist = name
         if "cover" in roles and not cover_artist:
             cover_artist = name
+    return writer, artist, cover_artist
 
-    return {"writer": writer, "artist": artist, "cover_artist": cover_artist}, None
+
+def cv_get_all_credits_for_title(title, year_hint):
+    """
+    Two-step lookup: volume search → issue list.
+    Returns (credits_by_issue_num, api_calls_used, error) where
+    credits_by_issue_num = {"1": {"writer":..., "artist":..., "cover_artist":...}, ...}
+    """
+    # Step 1 — volume lookup (1 API call)
+    volume_id, err = cv_find_volume_id(title, year_hint)
+    if volume_id is None:
+        return {}, 1, err or "Volume not found"
+    time.sleep(DELAY_SECONDS)
+
+    # Step 2 — fetch all issues (1+ API calls)
+    issues, err = cv_fetch_volume_issues(volume_id)
+    calls = 1 + (1 if issues is not None else 1)
+    if issues is None:
+        return {}, calls, err
+
+    by_num = {}
+    for iss in issues:
+        num_raw = str(iss.get("issue_number", "")).strip()
+        try:
+            num_key = str(int(float(num_raw)))
+        except (ValueError, TypeError):
+            num_key = re.sub(r"[^0-9]", "", num_raw) or num_raw
+        w, a, ca = extract_credits(iss)
+        by_num[num_key] = {"writer": w, "artist": a, "cover_artist": ca}
+
+    return by_num, calls, None
 
 # ── BUILD QUEUE FROM EXCEL ────────────────────────────────────────────────────
 def build_queue(df):
@@ -216,15 +281,29 @@ def main():
 
         print(f"[CV] {title} Vol {volume} — {len(issues)} issues (~{year_hint}) [{n_rows} blank rows]")
 
-        writers_found      = {}
-        artists_found      = {}
+        # Two-step: volume lookup → bulk issue fetch (far fewer API calls)
+        credits_by_num, calls_used, fetch_err = cv_get_all_credits_for_title(title, year_hint)
+        api_calls += calls_used
+
+        if fetch_err and not credits_by_num:
+            print(f"  [ERROR] {fetch_err}")
+            log_issue("SKIPPED_LOW_CONFIDENCE", title, f"CV lookup failed: {fetch_err}")
+            log_review(title, volume, f"CV lookup failed: {fetch_err}")
+            processed += 1
+            continue
+
+        writers_found       = {}
+        artists_found       = {}
         cover_artists_found = {}
-        not_found          = []
+        not_found           = []
 
         for issue_num in issues:
-            result, err = cv_search_issue(title, issue_num, year_hint)
-            api_calls += 1
+            try:
+                issue_key = str(int(float(str(issue_num))))
+            except (ValueError, TypeError):
+                issue_key = re.sub(r"[^0-9]", "", str(issue_num)) or str(issue_num)
 
+            result = credits_by_num.get(issue_key)
             if result:
                 if result["writer"]:
                     writers_found[issue_num] = result["writer"]
@@ -237,9 +316,7 @@ def main():
                     print(f"  [NO WRITER] #{issue_num} — credits found but no writer role")
             else:
                 not_found.append(issue_num)
-                print(f"  [NOT FOUND] #{issue_num} — {err}")
-
-            time.sleep(DELAY_SECONDS)
+                print(f"  [NOT FOUND] #{issue_num} — not in CV volume")
 
         # Apply fills
         filled_count = 0
