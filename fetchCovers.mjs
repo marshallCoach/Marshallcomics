@@ -42,9 +42,20 @@ const args         = process.argv.slice(2);
 const limitIdx     = args.indexOf("--limit");
 const startIdx     = args.indexOf("--start");
 const delayIdx     = args.indexOf("--delay");
+const delayStartIdx = args.indexOf("--delay-start");
 const overnight    = args.includes("--overnight");
 const onlyKeys     = args.includes("--keys-only");
 const retryNulls   = args.includes("--retry-nulls");
+
+// --delay-start N: wait N hours before fetching (useful after rate-limit resets)
+if (delayStartIdx >= 0) {
+  const hours = parseFloat(args[delayStartIdx + 1] ?? "8");
+  const ms = hours * 3600 * 1000;
+  const startAt = new Date(Date.now() + ms);
+  console.log(`--delay-start: waiting ${hours}h — will begin at ${startAt.toLocaleTimeString()}`);
+  await new Promise(r => setTimeout(r, ms));
+  console.log(`Delay complete — starting fetch now.`);
+}
 
 // --overnight: 19s delay stays within Comic Vine's 200/hr; 1500 limit ≈ 8 hrs
 const limit    = limitIdx >= 0 ? parseInt(args[limitIdx + 1] ?? "190") : overnight ? 1500 : 190;
