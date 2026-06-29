@@ -1,0 +1,6 @@
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+Loaded 4637 cached covers (2797 with URL, 1840 null/missed).
+--retry-nulls: null entries will be re-fetched this run.
+Queue: 1500 comics to fetch (limit=1500, start=0, delay=19000ms)
+[1/1500] found=0 missed=1 errors=0   [2/1500] found=0 missed=2 errors=0   [3/1500] found=0 missed=3 errors=0   [4/1500] found=0 missed=4 errors=0   [5/1500] found=0 missed=5 errors=0   [6/1500] found=0 missed=6 errors=0   [7/1500] found=0 missed=7 errors=0   [8/1500] found=0 missed=8 errors=0   [9/1500] found=0 missed=9 errors=0   
