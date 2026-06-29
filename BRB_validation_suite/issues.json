@@ -1,0 +1,577 @@
+[
+  {
+    "category": "VOLUME_CONTIGUITY_VIOLATION_SUMMARY",
+    "title": "ALL TITLES",
+    "detail": "82 titles found where Volume numbers overlap in year-range rather than being contiguous/sequential. This means the Volume column cannot be trusted as a reliable key for distinguishing different runs of the same title without also cross-checking Year and Writer/Artist. Full list of 82 titles logged separately."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY_VIOLATION_SUMMARY",
+    "title": "ALL TITLES",
+    "detail": "82 titles found where Volume numbers overlap in year-range rather than being contiguous/sequential. This means the Volume column cannot be trusted as a reliable key for distinguishing different runs of the same title without also cross-checking Year and Writer/Artist. Full list of 82 titles logged separately."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Action Comics",
+    "detail": "Vol 1 (1981-2025) overlaps Vol 2 (2018-2018) by ~7 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "All-New X-Men",
+    "detail": "Vol 2 (2015-2015) overlaps Vol 4 (2013-2013) by ~2 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Alpha Flight",
+    "detail": "Vol 1 (1983-2023) overlaps Vol 3 (2004-2004) by ~19 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Aquaman",
+    "detail": "Vol 1 (2000-2024) overlaps Vol 5 (1996-2001) by ~28 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Avengers",
+    "detail": "Vol 1 (1993-2025) overlaps Vol 3 (2004-2004) by ~21 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Birds of Prey",
+    "detail": "Vol 1 (1999-2024) overlaps Vol 2 (2012-2014) by ~12 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Black Panther",
+    "detail": "Vol 1 (2006-2006) overlaps Vol 3 (1999-2003) by ~7 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Black Panther",
+    "detail": "Vol 6 (2016-2018) overlaps Vol 7 (2016-2016) by ~2 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Black Panther and the Agents of Wakanda",
+    "detail": "Vol 1 (2020-2020) overlaps Vol 8 (2019-2019) by ~1 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Black Widow",
+    "detail": "Vol 4 (2016-2016) overlaps Vol 6 (2014-2015) by ~2 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Black Widow",
+    "detail": "Vol 8 (2020-2022) overlaps Vol 9 (2018-2018) by ~4 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Cable",
+    "detail": "Vol 1 (1993-2024) overlaps Vol 2 (2008-2009) by ~16 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Cable",
+    "detail": "Vol 3 (2017-2018) overlaps Vol 4 (2017-2020) by ~1 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Captain America",
+    "detail": "Vol 1 (2016-2025) overlaps Vol 5 (2007-2012) by ~18 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Captain America",
+    "detail": "Vol 5 (2007-2012) overlaps Vol 6 (2007-2011) by ~5 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Captain America",
+    "detail": "Vol 7 (2012-2013) overlaps Vol 9 (1981-2024) by ~32 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Captain Marvel",
+    "detail": "Vol 1 (2016-2023) overlaps Vol 7 (2012-2012) by ~11 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Cyborg",
+    "detail": "Vol 1 (2015-2024) overlaps Vol 2 (2016-2016) by ~8 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Deathstroke",
+    "detail": "Vol 1 (2011-2018) overlaps Vol 3 (2017-2017) by ~1 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Eternals",
+    "detail": "Vol 1 (2006-2007) overlaps Vol 4 (2006-2006) by ~1 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Exiles",
+    "detail": "Vol 1 (2001-2021) overlaps Vol 2 (2018-2018) by ~3 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Fantastic Four",
+    "detail": "Vol 1 (2007-2025) overlaps Vol 3 (1999-2022) by ~26 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Fantastic Four",
+    "detail": "Vol 3 (1999-2022) overlaps Vol 4 (2012-2014) by ~10 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Giant-Size X-Men",
+    "detail": "Vol 1 (2020-2024) overlaps Vol 6 (2022-2022) by ~2 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Green Arrow",
+    "detail": "Vol 1 (2025-2025) overlaps Vol 3 (2001-2007) by ~24 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Green Lantern",
+    "detail": "Vol 1 (2012-2012) overlaps Vol 4 (2011-2011) by ~1 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Hawkeye",
+    "detail": "Vol 3 (2015-2015) overlaps Vol 4 (2012-2012) by ~3 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Hulk",
+    "detail": "Vol 1 (2022-2024) overlaps Vol 2 (2008-2011) by ~16 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Incredible Hulk",
+    "detail": "Vol 1 (2024-2024) overlaps Vol 2 (1992-1992) by ~32 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Invincible Iron Man",
+    "detail": "Vol 1 (2005-2024) overlaps Vol 2 (2008-2022) by ~16 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Invincible Iron Man",
+    "detail": "Vol 2 (2008-2022) overlaps Vol 3 (2015-2018) by ~7 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Invincible Iron Man",
+    "detail": "Vol 3 (2015-2018) overlaps Vol 4 (2017-2017) by ~1 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Iron Fist",
+    "detail": "Vol 1 (2024-2024) overlaps Vol 5 (2017-2017) by ~7 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Iron Man",
+    "detail": "Vol 1 (2011-2024) overlaps Vol 5 (2012-2012) by ~12 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Iron Man",
+    "detail": "Vol 6 (2020-2023) overlaps Vol 7 (2022-2022) by ~1 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Journey into Mystery",
+    "detail": "Vol 1 (2011-2019) overlaps Vol 3 (2012-2013) by ~7 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Justice League",
+    "detail": "Vol 1 (2011-2024) overlaps Vol 2 (2012-2018) by ~12 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Justice League",
+    "detail": "Vol 2 (2012-2018) overlaps Vol 3 (2016-2016) by ~2 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Justice League of America",
+    "detail": "Vol 1 (2010-2017) overlaps Vol 2 (2006-2013) by ~11 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Marc Spector: Moon Knight",
+    "detail": "Vol 9 (2025-2025) overlaps Vol 11 (2024-2024) by ~1 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Moon Knight",
+    "detail": "Vol 1 (2011-2011) overlaps Vol 3 (2006-2006) by ~5 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Moon Knight",
+    "detail": "Vol 6 (2014-2014) overlaps Vol 7 (2011-2011) by ~3 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Moon Knight",
+    "detail": "Vol 8 (2016-2022) overlaps Vol 9 (2021-2023) by ~1 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Moon Knight: Fist of Khonshu",
+    "detail": "Vol 9 (2025-2025) overlaps Vol 11 (2024-2024) by ~1 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "New Avengers",
+    "detail": "Vol 1 (2005-2014) overlaps Vol 4 (2011-2011) by ~3 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "New Warriors",
+    "detail": "Vol 1 (1990-2014) overlaps Vol 3 (2007-2007) by ~7 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Nightwing",
+    "detail": "Vol 1 (2011-2023) overlaps Vol 2 (2000-2006) by ~23 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Old Man Logan",
+    "detail": "Vol 2 (2018-2019) overlaps Vol 8 (2018-2018) by ~1 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Outsiders",
+    "detail": "Vol 1 (2024-2024) overlaps Vol 3 (2003-2007) by ~21 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Power Man and Iron Fist",
+    "detail": "Vol 1 (2016-2016) overlaps Vol 2 (2011-2011) by ~5 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Rocket Raccoon",
+    "detail": "Vol 1 (2024-2024) overlaps Vol 2 (2014-2014) by ~10 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "S.H.I.E.L.D.",
+    "detail": "Vol 1 (2010-2015) overlaps Vol 2 (2011-2011) by ~4 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Scarlet Witch",
+    "detail": "Vol 1 (2023-2024) overlaps Vol 2 (2015-2016) by ~9 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Secret Six",
+    "detail": "Vol 1 (2024-2025) overlaps Vol 2 (2008-2011) by ~17 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Silver Surfer",
+    "detail": "Vol 1 (1991-1991) overlaps Vol 2 (1988-1988) by ~3 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Spider-Man",
+    "detail": "Vol 1 (2016-2020) overlaps Vol 2 (2019-2019) by ~1 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Star Trek",
+    "detail": "Vol 1 (2011-2024) overlaps Vol 2 (2022-2022) by ~2 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Storm",
+    "detail": "Vol 1 (1996-2024) overlaps Vol 3 (2023-2023) by ~1 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Suicide Squad",
+    "detail": "Vol 1 (1988-2016) overlaps Vol 2 (2001-2002) by ~15 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Superman",
+    "detail": "Vol 1 (2019-2025) overlaps Vol 2 (2004-2004) by ~21 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Teen Titans",
+    "detail": "Vol 1 (2011-2016) overlaps Vol 3 (2003-2007) by ~13 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "The Amazing Spider-Man",
+    "detail": "Vol 1 (1972-2024) overlaps Vol 4 (2018-2018) by ~6 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "The Flash",
+    "detail": "Vol 1 (2012-2024) overlaps Vol 2 (2007-2007) by ~17 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "The Incredible Hulk",
+    "detail": "Vol 1 (2018-2018) overlaps Vol 2 (1999-1999) by ~19 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "The Ultimates",
+    "detail": "Vol 1 (2011-2024) overlaps Vol 4 (2015-2016) by ~9 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Thor",
+    "detail": "Vol 1 (2010-2019) overlaps Vol 3 (2007-2010) by ~12 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Thunderbolts",
+    "detail": "Vol 1 (1997-2024) overlaps Vol 2 (2012-2012) by ~12 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Thunderbolts",
+    "detail": "Vol 3 (2013-2014) overlaps Vol 4 (2011-2022) by ~3 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Titans",
+    "detail": "Vol 1 (2018-2024) overlaps Vol 2 (2017-2017) by ~7 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Titans Annual",
+    "detail": "Vol 1 (2025-2025) overlaps Vol 2 (2017-2018) by ~8 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Ultimate X-Men",
+    "detail": "Vol 1 (2002-2002) overlaps Vol 2 (2001-2024) by ~1 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Uncanny Avengers",
+    "detail": "Vol 3 (2017-2017) overlaps Vol 4 (2012-2012) by ~5 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Uncanny X-Force",
+    "detail": "Vol 2 (2013-2013) overlaps Vol 3 (2010-2010) by ~3 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Uncanny X-Men",
+    "detail": "Vol 1 (2002-2019) overlaps Vol 2 (1991-1992) by ~28 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Uncanny X-Men",
+    "detail": "Vol 3 (2005-2013) overlaps Vol 4 (2012-2013) by ~1 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Uncanny X-Men Annual",
+    "detail": "Vol 1 (2018-2018) overlaps Vol 4 (2011-2011) by ~7 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "WildC.A.T.s",
+    "detail": "Vol 1 (1992-2002) overlaps Vol 2 (1999-1999) by ~3 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Wonder Woman",
+    "detail": "Vol 1 (2016-2025) overlaps Vol 4 (2012-2018) by ~13 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "Wonder Woman Annual",
+    "detail": "Vol 1 (2018-2019) overlaps Vol 4 (2013-2013) by ~6 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "X-Men",
+    "detail": "Vol 1 (2009-2022) overlaps Vol 3 (2004-2005) by ~18 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "X-Men",
+    "detail": "Vol 5 (2024-2024) overlaps Vol 6 (2021-2024) by ~3 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY",
+    "title": "X-Men Legends",
+    "detail": "Vol 2 (2022-2022) overlaps Vol 6 (2021-2021) by ~1 years. Volumes should be contiguous/sequential, not overlapping."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY_VIOLATION_SUMMARY",
+    "title": "ALL TITLES",
+    "detail": "82 titles found where Volume numbers overlap in year-range rather than being contiguous/sequential. This means the Volume column cannot be trusted as a reliable key for distinguishing different runs of the same title without also cross-checking Year and Writer/Artist. Full list of 82 titles logged separately."
+  },
+  {
+    "category": "FILLED",
+    "title": "Star Trek: Defiant",
+    "detail": "27 rows filled. Writer: Christopher Cantwell, Artist: \u00c1ngel Unzueta. Confirmed via Wikipedia + IDW press release, stable team across full 27-issue run (2023-2025)."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY_VIOLATION_SUMMARY",
+    "title": "ALL TITLES",
+    "detail": "82 titles found where Volume numbers overlap in year-range rather than being contiguous/sequential. This means the Volume column cannot be trusted as a reliable key for distinguishing different runs of the same title without also cross-checking Year and Writer/Artist. Full list of 82 titles logged separately."
+  },
+  {
+    "category": "FILLED_PARTIAL",
+    "title": "Ultimate Comics: X-Men",
+    "detail": "23 rows \u2014 Writer filled (Nick Spencer, confirmed full run 2011-2013). Artist NOT filled \u2014 Paco Medina did early issues but artist/penciller changed multiple times across the 33-issue run per Marvel Database. Needs per-issue lookup if Artist data is required."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY_VIOLATION_SUMMARY",
+    "title": "ALL TITLES",
+    "detail": "82 titles found where Volume numbers overlap in year-range rather than being contiguous/sequential. This means the Volume column cannot be trusted as a reliable key for distinguishing different runs of the same title without also cross-checking Year and Writer/Artist. Full list of 82 titles logged separately."
+  },
+  {
+    "category": "STRUCTURAL_GAP",
+    "title": "World's Finest Comics",
+    "detail": "Golden Age (1941-1947) issues are true ANTHOLOGY books \u2014 each issue has multiple unrelated stories by different writer/artist teams (e.g. Bill Finger/Bob Kane on Batman, Siegel/Shuster on Superman, George Papp on Green Arrow, all within the same issue). There is no single 'Writer' or 'Artist' for the whole book. Cannot fill with one name without misrepresenting the book. Needs a decision: either leave blank, or pick a 'primary feature' convention (e.g. credit the Batman story only) and document that rule."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY_VIOLATION_SUMMARY",
+    "title": "ALL TITLES",
+    "detail": "82 titles found where Volume numbers overlap in year-range rather than being contiguous/sequential. This means the Volume column cannot be trusted as a reliable key for distinguishing different runs of the same title without also cross-checking Year and Writer/Artist. Full list of 82 titles logged separately."
+  },
+  {
+    "category": "FILLED",
+    "title": "Captain America",
+    "detail": "18 rows (Vol 9, 2023-2024). Writer: J. Michael Straczynski, Artist: Jes\u00fas Saiz. Confirmed via Marvel.com + multiple sources, stable team across 16-issue run."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY_VIOLATION_SUMMARY",
+    "title": "ALL TITLES",
+    "detail": "82 titles found where Volume numbers overlap in year-range rather than being contiguous/sequential. This means the Volume column cannot be trusted as a reliable key for distinguishing different runs of the same title without also cross-checking Year and Writer/Artist. Full list of 82 titles logged separately."
+  },
+  {
+    "category": "FILLED_PARTIAL",
+    "title": "Old Man Logan",
+    "detail": "15 rows (Vol 2, 2019). Writer: Ed Brisson confirmed stable. Artist NOT filled \u2014 penciller rotates issue-to-issue (Manna, Roberson, Ferreyra, Couceiro, Talajic) per Marvel.com issue list. Needs per-issue lookup if Artist required."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY_VIOLATION_SUMMARY",
+    "title": "ALL TITLES",
+    "detail": "82 titles found where Volume numbers overlap in year-range rather than being contiguous/sequential. This means the Volume column cannot be trusted as a reliable key for distinguishing different runs of the same title without also cross-checking Year and Writer/Artist. Full list of 82 titles logged separately."
+  },
+  {
+    "category": "FILLED_PARTIAL",
+    "title": "The Avengers",
+    "detail": "14 rows (Vol 9, 2023). Writer: Jed MacKay confirmed stable. Artist NOT filled \u2014 base artist C.F. Villa but guest artists rotate per arc (e.g. Francesco Mortarino on #9). Needs per-issue lookup if Artist required."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY_VIOLATION_SUMMARY",
+    "title": "ALL TITLES",
+    "detail": "82 titles found where Volume numbers overlap in year-range rather than being contiguous/sequential. This means the Volume column cannot be trusted as a reliable key for distinguishing different runs of the same title without also cross-checking Year and Writer/Artist. Full list of 82 titles logged separately."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY_VIOLATION_SUMMARY",
+    "title": "ALL TITLES",
+    "detail": "82 titles found where Volume numbers overlap in year-range rather than being contiguous/sequential. This means the Volume column cannot be trusted as a reliable key for distinguishing different runs of the same title without also cross-checking Year and Writer/Artist. Full list of 82 titles logged separately."
+  },
+  {
+    "category": "FILLED",
+    "title": "Marauders",
+    "detail": "28 rows #1-12: Gerry Duggan. 13 rows #13+: Vita Ayala (X of Swords handoff confirmed via Wikipedia/Amazon/multiple sources)."
+  },
+  {
+    "category": "DATA_QUALITY_ISSUE",
+    "title": "Marauders",
+    "detail": "Issue #1 appears with BOTH Year=2019 and Year=2022 \u2014 impossible for single printing. Multiple issues (#7,8,9,10,11,12) have 2-3 duplicate rows each with different years. This title has its own internal duplicate/year problem beyond the missing Writer/Artist issue \u2014 needs separate dedup review."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY_VIOLATION_SUMMARY",
+    "title": "ALL TITLES",
+    "detail": "82 titles found where Volume numbers overlap in year-range rather than being contiguous/sequential. This means the Volume column cannot be trusted as a reliable key for distinguishing different runs of the same title without also cross-checking Year and Writer/Artist. Full list of 82 titles logged separately."
+  },
+  {
+    "category": "FILLED",
+    "title": "Secret Avengers",
+    "detail": "27 rows total. 4 different writers across this volume: Brubaker (#1-12), Spencer (#12.1), Ellis (#16-21), Remender (#21.1-37). Confirmed via Goodreads collected-editions breakdown."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY_VIOLATION_SUMMARY",
+    "title": "ALL TITLES",
+    "detail": "82 titles found where Volume numbers overlap in year-range rather than being contiguous/sequential. This means the Volume column cannot be trusted as a reliable key for distinguishing different runs of the same title without also cross-checking Year and Writer/Artist. Full list of 82 titles logged separately."
+  },
+  {
+    "category": "FILLED",
+    "title": "Batman and Robin: Year One",
+    "detail": "12 rows. Writer: Mark Waid, Artist: Chris Samnee. Stable single creative team across full 12-issue run (2024-2025), confirmed via DC.com announcement + multiple reviews."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY_VIOLATION_SUMMARY",
+    "title": "ALL TITLES",
+    "detail": "82 titles found where Volume numbers overlap in year-range rather than being contiguous/sequential. This means the Volume column cannot be trusted as a reliable key for distinguishing different runs of the same title without also cross-checking Year and Writer/Artist. Full list of 82 titles logged separately."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY_VIOLATION_SUMMARY",
+    "title": "ALL TITLES",
+    "detail": "82 titles found where Volume numbers overlap in year-range rather than being contiguous/sequential. This means the Volume column cannot be trusted as a reliable key for distinguishing different runs of the same title without also cross-checking Year and Writer/Artist. Full list of 82 titles logged separately."
+  },
+  {
+    "category": "SEARCH_MISMATCH_CAUGHT",
+    "title": "The Flash",
+    "detail": "Initial search targeted 1987 Messner-Loebs run based on assumed era, but actual rows in inventory (15 rows, all tagged Volume=1) span 2016-2018 (Rebirth) and 2023-2024 (Williamson/Adams later run), plus 2 anomalous Legacy-numbered entries (#783, #802) that don't fit either era. Volume=1 label is WRONG for all of these \u2014 none are the true Vol 1 (1959-1985) or even Vol 2 (1987-2009). This is a volume-mislabeling issue, not a simple missing-writer gap. Stopped before applying wrong data. Needs separate targeted research per actual year-cluster (2016-18 vs 2023-24 vs the 2 outliers) plus a Volume correction pass."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY_VIOLATION_SUMMARY",
+    "title": "ALL TITLES",
+    "detail": "82 titles found where Volume numbers overlap in year-range rather than being contiguous/sequential. This means the Volume column cannot be trusted as a reliable key for distinguishing different runs of the same title without also cross-checking Year and Writer/Artist. Full list of 82 titles logged separately."
+  },
+  {
+    "category": "STRUCTURAL_GAP",
+    "title": "The Flash",
+    "detail": "241 rows under 'The Flash' with Volume values (1,2,4,5,6) that don't reliably map to actual publishing volumes \u2014 confirmed by finding 2016-2024 era books mislabeled as 'Volume 1'. This title needs a dedicated, separate audit pass keying off Year clusters and actual issue-number ranges rather than the existing Volume column, which cannot be trusted for this title. SKIPPED in today's Writer-fill pass \u2014 do not apply any creator data to 'The Flash' until Volume is corrected first, to avoid compounding the error."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY_VIOLATION_SUMMARY",
+    "title": "ALL TITLES",
+    "detail": "82 titles found where Volume numbers overlap in year-range rather than being contiguous/sequential. This means the Volume column cannot be trusted as a reliable key for distinguishing different runs of the same title without also cross-checking Year and Writer/Artist. Full list of 82 titles logged separately."
+  },
+  {
+    "category": "FILLED",
+    "title": "Justice League Dark (2018)",
+    "detail": "23 rows. Writer: James Tynion IV, Artist: \u00c1lvaro Mart\u00ednez Bueno. Stable creative team confirmed across #1-29 via Amazon/Barnes & Noble listings."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY_VIOLATION_SUMMARY",
+    "title": "ALL TITLES",
+    "detail": "82 titles found where Volume numbers overlap in year-range rather than being contiguous/sequential. This means the Volume column cannot be trusted as a reliable key for distinguishing different runs of the same title without also cross-checking Year and Writer/Artist. Full list of 82 titles logged separately."
+  },
+  {
+    "category": "FILLED",
+    "title": "Sensational She-Hulk",
+    "detail": "8 rows #1-8: John Byrne (writer+artist). 2 rows #9-10: Steve Gerber (writer), Bryan Hitch (artist) \u2014 Byrne departed after #8, returned #31-50. Confirmed via Marvel.com + TV Tropes + Goodreads."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY_VIOLATION_SUMMARY",
+    "title": "ALL TITLES",
+    "detail": "82 titles found where Volume numbers overlap in year-range rather than being contiguous/sequential. This means the Volume column cannot be trusted as a reliable key for distinguishing different runs of the same title without also cross-checking Year and Writer/Artist. Full list of 82 titles logged separately."
+  },
+  {
+    "category": "VOLUME_CONTIGUITY_VIOLATION_SUMMARY",
+    "title": "ALL TITLES",
+    "detail": "82 titles found where Volume numbers overlap in year-range rather than being contiguous/sequential. This means the Volume column cannot be trusted as a reliable key for distinguishing different runs of the same title without also cross-checking Year and Writer/Artist. Full list of 82 titles logged separately."
+  }
+]

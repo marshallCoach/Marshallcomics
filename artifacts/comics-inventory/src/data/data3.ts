@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_2506_1325_notes.xlsx  |  Generated: 2026-06-26
+// Source: comics_inventory_2706_0030.xlsx  |  Generated: 2026-06-29
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -534,7 +534,7 @@ Ron Lim drew this Silver Surfer run. Bring for signing at Terrificon.`,
     Cover_Artist: `Ron Lim`, Date_Added: ``,
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `1`, Entry: `29`,
+    Volume: `3`, Entry: `29`,
   },
   {
     Title: `Uncanny X-Men`, Issue: `275`, Publisher: `Marvel`,
@@ -553,7 +553,7 @@ Jim Lee (SAT ONLY) + Scott Williams both confirmed. UXM #275 is a Lee/Williams c
     Cover_Artist: `Jim Lee`, Date_Added: ``,
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `10`,
-    Volume: `2`, Entry: `30`,
+    Volume: `1`, Entry: `30`,
   },
   {
     Title: `Falcon`, Issue: `1`, Publisher: `Marvel`,
@@ -735,7 +735,7 @@ ALREADY SIGNED. CGC SS witness at Terrificon is the move.`,
     Cover_Artist: `John Buscema (interior artist — cover verify)`, Date_Added: ``,
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `13`,
-    Volume: `2`, Entry: `40`,
+    Volume: `3`, Entry: `40`,
   },
   {
     Title: `WildC.A.T.s`, Issue: `3`, Publisher: `Image`,
@@ -743,7 +743,7 @@ ALREADY SIGNED. CGC SS witness at Terrificon is the move.`,
     Year: `1993`, Arc: `WildCATs Trilogy`, Key: `YES`,
     Key_Reason: `WildC.A.T.s #3 signed by Chris Claremont and Mike Li — Claremont wrote early WildCATs issues — Image founding era 1992`, First_App: `Early Image key; Jim Lee signature`,
     Writer: `Brandon Choi`, Artist: `Jim Lee`,
-    Signed: `YES`, Signed_By: `Chris Claremont / Mike Li`,
+    Signed: `YES`, Signed_By: `Chris Claremont & Mike Li`,
     Personal: ``, Condition: `⚠️ NEEDS PRESSING — then CGC x JSA`,
     CGC_Worth: `YES`, Value_NM: `80`, Value_VF: `40`,
     Category: `Signed / Image / Key`, Era: `Copper`, Universe: `Image`,
@@ -762,7 +762,7 @@ WildCATs #2 — Jim Lee pencils, Scott Williams inks. Both confirmed 2026. SAT O
     Year: `1994`, Arc: ``, Key: `YES`,
     Key_Reason: `WildC.A.T.s #11 — DOUBLE SIGNED by Jim Lee and a second creator (initials HK — surname unconfirmed). Jim Lee creator-owned Image founding issue. Dual signature — submit to CGC x JSA for Yellow/Black Authentic Autograph label once second signer is confirmed.`, First_App: `Travis Charest art`,
     Writer: `Scott Lobdell`, Artist: `Travis Charest`,
-    Signed: `YES`, Signed_By: `Jim Lee + HK (unconfirmed second signer — verify surname)`,
+    Signed: `YES`, Signed_By: `Chris Claremont & Mike Li`,
     Personal: ``, Condition: `⚠️ NEEDS PRESSING — then CGC x JSA`,
     CGC_Worth: `YES`, Value_NM: `40`, Value_VF: `20`,
     Category: `Signed / Image`, Era: `Copper`, Universe: `Image`,
@@ -1236,7 +1236,7 @@ Already signed by Starlin. CGC SS witness.`,
     Cover_Artist: `Whilce Portacio (interior artist — cover verify)`, Date_Added: ``,
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `10`,
-    Volume: `2`, Entry: `68`,
+    Volume: `1`, Entry: `68`,
   },
   {
     Title: `X-Factor`, Issue: `24`, Publisher: `Marvel`,
@@ -1612,7 +1612,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Cover_Artist: `Dale Keown (verify)`, Date_Added: ``,
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `20`,
-    Volume: `2`, Entry: `88`,
+    Volume: `1`, Entry: `88`,
   },
   {
     Title: `World's Finest`, Issue: `47`, Publisher: `DC`,
@@ -31505,7 +31505,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Adam Kubert`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `15`,
-    Volume: `2`, Entry: `2000`,
+    Volume: `1`, Entry: `2000`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `16`, Publisher: `Marvel`,
@@ -31523,7 +31523,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2001`,
+    Volume: `1`, Entry: `2001`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `17`, Publisher: `Marvel`,
@@ -31541,7 +31541,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2002`,
+    Volume: `1`, Entry: `2002`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `18`, Publisher: `Marvel`,
@@ -31559,7 +31559,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2003`,
+    Volume: `1`, Entry: `2003`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `19`, Publisher: `Marvel`,
@@ -31577,7 +31577,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2004`,
+    Volume: `1`, Entry: `2004`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `20`, Publisher: `Marvel`,
@@ -31595,7 +31595,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2005`,
+    Volume: `1`, Entry: `2005`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `40`, Publisher: `Marvel`,
@@ -31613,7 +31613,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2006`,
+    Volume: `1`, Entry: `2006`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `41`, Publisher: `Marvel`,
@@ -31631,7 +31631,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2007`,
+    Volume: `1`, Entry: `2007`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `42`, Publisher: `Marvel`,
@@ -31649,7 +31649,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2008`,
+    Volume: `1`, Entry: `2008`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `43`, Publisher: `Marvel`,
@@ -31667,7 +31667,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2009`,
+    Volume: `1`, Entry: `2009`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `44`, Publisher: `Marvel`,
@@ -31685,7 +31685,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2010`,
+    Volume: `1`, Entry: `2010`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `45`, Publisher: `Marvel`,
@@ -31703,7 +31703,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2011`,
+    Volume: `1`, Entry: `2011`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `50`, Publisher: `Marvel`,
@@ -31721,7 +31721,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2012`,
+    Volume: `1`, Entry: `2012`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `51`, Publisher: `Marvel`,
@@ -31739,7 +31739,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2013`,
+    Volume: `1`, Entry: `2013`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `52`, Publisher: `Marvel`,
@@ -31757,7 +31757,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2014`,
+    Volume: `1`, Entry: `2014`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `53`, Publisher: `Marvel`,
@@ -31775,7 +31775,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2015`,
+    Volume: `1`, Entry: `2015`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `54`, Publisher: `Marvel`,
@@ -31793,7 +31793,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2016`,
+    Volume: `1`, Entry: `2016`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `55`, Publisher: `Marvel`,
@@ -31811,7 +31811,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2017`,
+    Volume: `1`, Entry: `2017`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `56`, Publisher: `Marvel`,
@@ -31829,7 +31829,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2018`,
+    Volume: `1`, Entry: `2018`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `57`, Publisher: `Marvel`,
@@ -31847,7 +31847,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2019`,
+    Volume: `1`, Entry: `2019`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `58`, Publisher: `Marvel`,
@@ -31865,7 +31865,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2020`,
+    Volume: `1`, Entry: `2020`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `59`, Publisher: `Marvel`,
@@ -31883,7 +31883,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2021`,
+    Volume: `1`, Entry: `2021`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `60`, Publisher: `Marvel`,
@@ -31901,7 +31901,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2022`,
+    Volume: `1`, Entry: `2022`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `61`, Publisher: `Marvel`,
@@ -31919,7 +31919,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2023`,
+    Volume: `1`, Entry: `2023`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `62`, Publisher: `Marvel`,
@@ -31937,7 +31937,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2024`,
+    Volume: `1`, Entry: `2024`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `63`, Publisher: `Marvel`,
@@ -31955,7 +31955,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2025`,
+    Volume: `1`, Entry: `2025`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `64`, Publisher: `Marvel`,
@@ -31973,7 +31973,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2026`,
+    Volume: `1`, Entry: `2026`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `65`, Publisher: `Marvel`,
@@ -31991,7 +31991,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2027`,
+    Volume: `1`, Entry: `2027`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `66`, Publisher: `Marvel`,
@@ -32009,7 +32009,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2028`,
+    Volume: `1`, Entry: `2028`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `67`, Publisher: `Marvel`,
@@ -32027,7 +32027,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2029`,
+    Volume: `1`, Entry: `2029`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `68`, Publisher: `Marvel`,
@@ -32045,7 +32045,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2030`,
+    Volume: `1`, Entry: `2030`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `69`, Publisher: `Marvel`,
@@ -32063,7 +32063,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2031`,
+    Volume: `1`, Entry: `2031`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `70`, Publisher: `Marvel`,
@@ -32081,7 +32081,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2032`,
+    Volume: `1`, Entry: `2032`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `71`, Publisher: `Marvel`,
@@ -32099,7 +32099,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2033`,
+    Volume: `1`, Entry: `2033`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `72`, Publisher: `Marvel`,
@@ -32117,7 +32117,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2034`,
+    Volume: `1`, Entry: `2034`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `73`, Publisher: `Marvel`,
@@ -32135,7 +32135,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2035`,
+    Volume: `1`, Entry: `2035`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `74`, Publisher: `Marvel`,
@@ -32153,7 +32153,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2036`,
+    Volume: `1`, Entry: `2036`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `75`, Publisher: `Marvel`,
@@ -32171,7 +32171,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2037`,
+    Volume: `1`, Entry: `2037`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `76`, Publisher: `Marvel`,
@@ -32189,7 +32189,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2038`,
+    Volume: `1`, Entry: `2038`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `77`, Publisher: `Marvel`,
@@ -32207,7 +32207,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2039`,
+    Volume: `1`, Entry: `2039`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `78`, Publisher: `Marvel`,
@@ -32225,7 +32225,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2040`,
+    Volume: `1`, Entry: `2040`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `79`, Publisher: `Marvel`,
@@ -32243,7 +32243,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `2`, Entry: `2041`,
+    Volume: `1`, Entry: `2041`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `80`, Publisher: `Marvel`,
@@ -32261,7 +32261,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: `Ultimatum (Loeb)`, Start_Bid: `1`,
-    Volume: `2`, Entry: `2042`,
+    Volume: `1`, Entry: `2042`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `81`, Publisher: `Marvel`,
@@ -32279,7 +32279,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: `Ultimatum (Loeb)`, Start_Bid: `1`,
-    Volume: `2`, Entry: `2043`,
+    Volume: `1`, Entry: `2043`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `82`, Publisher: `Marvel`,
@@ -32297,7 +32297,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: `Ultimatum (Loeb)`, Start_Bid: `1`,
-    Volume: `2`, Entry: `2044`,
+    Volume: `1`, Entry: `2044`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `83`, Publisher: `Marvel`,
@@ -32315,7 +32315,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: `Ultimatum (Loeb)`, Start_Bid: `1`,
-    Volume: `2`, Entry: `2045`,
+    Volume: `1`, Entry: `2045`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `84`, Publisher: `Marvel`,
@@ -32333,7 +32333,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: `Ultimatum (Loeb)`, Start_Bid: `1`,
-    Volume: `2`, Entry: `2046`,
+    Volume: `1`, Entry: `2046`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `86`, Publisher: `Marvel`,
@@ -32351,7 +32351,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: `Ultimatum (Loeb)`, Start_Bid: `1`,
-    Volume: `2`, Entry: `2047`,
+    Volume: `1`, Entry: `2047`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `87`, Publisher: `Marvel`,
@@ -32369,7 +32369,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: `Ultimatum (Loeb)`, Start_Bid: `1`,
-    Volume: `2`, Entry: `2048`,
+    Volume: `1`, Entry: `2048`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `88`, Publisher: `Marvel`,
@@ -32387,7 +32387,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: `Ultimatum (Loeb)`, Start_Bid: `1`,
-    Volume: `2`, Entry: `2049`,
+    Volume: `1`, Entry: `2049`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `89`, Publisher: `Marvel`,
@@ -32405,7 +32405,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: `Ultimatum (Loeb)`, Start_Bid: `1`,
-    Volume: `2`, Entry: `2050`,
+    Volume: `1`, Entry: `2050`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `90`, Publisher: `Marvel`,
@@ -32423,7 +32423,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: `Ultimatum (Loeb)`, Start_Bid: `1`,
-    Volume: `2`, Entry: `2051`,
+    Volume: `1`, Entry: `2051`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `91`, Publisher: `Marvel`,
@@ -32441,7 +32441,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: `Ultimatum (Loeb)`, Start_Bid: `1`,
-    Volume: `2`, Entry: `2052`,
+    Volume: `1`, Entry: `2052`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `92`, Publisher: `Marvel`,
@@ -32459,7 +32459,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: `Ultimatum (Loeb)`, Start_Bid: `1`,
-    Volume: `2`, Entry: `2053`,
+    Volume: `1`, Entry: `2053`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `93`, Publisher: `Marvel`,
@@ -32477,7 +32477,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: `Ultimatum (Loeb)`, Start_Bid: `1`,
-    Volume: `2`, Entry: `2054`,
+    Volume: `1`, Entry: `2054`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `94`, Publisher: `Marvel`,
@@ -32495,7 +32495,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: `Ultimatum (Loeb)`, Start_Bid: `1`,
-    Volume: `2`, Entry: `2055`,
+    Volume: `1`, Entry: `2055`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `95`, Publisher: `Marvel`,
@@ -32513,7 +32513,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: `Ultimatum (Loeb)`, Start_Bid: `1`,
-    Volume: `2`, Entry: `2056`,
+    Volume: `1`, Entry: `2056`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `96`, Publisher: `Marvel`,
@@ -32531,7 +32531,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: `Ultimatum (Loeb)`, Start_Bid: `1`,
-    Volume: `2`, Entry: `2057`,
+    Volume: `1`, Entry: `2057`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `97`, Publisher: `Marvel`,
@@ -32549,7 +32549,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: `Ultimatum (Loeb)`, Start_Bid: `1`,
-    Volume: `2`, Entry: `2058`,
+    Volume: `1`, Entry: `2058`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `98`, Publisher: `Marvel`,
@@ -32567,7 +32567,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: `Ultimatum (Loeb)`, Start_Bid: `1`,
-    Volume: `2`, Entry: `2059`,
+    Volume: `1`, Entry: `2059`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `99`, Publisher: `Marvel`,
@@ -32585,7 +32585,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: `Ultimatum (Loeb)`, Start_Bid: `1`,
-    Volume: `2`, Entry: `2060`,
+    Volume: `1`, Entry: `2060`,
   },
   {
     Title: `Ultimate X-Men Annual`, Issue: `1`, Publisher: `Marvel`,
@@ -52943,7 +52943,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `David Finch`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Marvel`, Box: `24`,
     Crossover: `Avengers: Disassembled (Bendis)`, Start_Bid: `5`,
-    Volume: `3`, Entry: `3206`,
+    Volume: `1`, Entry: `3206`,
   },
   {
     Title: `Avengers: Finale`, Issue: `1`, Publisher: `Marvel`,
@@ -76955,7 +76955,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: ``, Date_Added: `May 19, 2026`,
     Imprint: `Marvel Krakoa Era`, Box: `14`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `1`, Entry: `4648`,
+    Volume: `5`, Entry: `4648`,
   },
   {
     Title: `Alpha Flight`, Issue: `5`, Publisher: `Marvel`,
@@ -76973,7 +76973,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: ``, Date_Added: `May 19, 2026`,
     Imprint: `Marvel Krakoa Era`, Box: `14`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `1`, Entry: `4649`,
+    Volume: `5`, Entry: `4649`,
   },
   {
     Title: `Miles Morales: The Ultimate Spider-Man`, Issue: `1`, Publisher: `Marvel`,
@@ -89717,7 +89717,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: ``, Date_Added: `May 20, 2026`,
     Imprint: `Marvel Krakoa Era`, Box: `11`,
     Crossover: `Fall of X`, Start_Bid: `2`,
-    Volume: `1`, Entry: `5371`,
+    Volume: `5`, Entry: `5371`,
   },
   {
     Title: `Alpha Flight`, Issue: `2`, Publisher: `Marvel`,
@@ -89735,7 +89735,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: ``, Date_Added: `May 20, 2026`,
     Imprint: `Marvel Krakoa Era`, Box: `11`,
     Crossover: `Fall of X`, Start_Bid: `2`,
-    Volume: `1`, Entry: `5372`,
+    Volume: `5`, Entry: `5372`,
   },
   {
     Title: `Alpha Flight`, Issue: `3`, Publisher: `Marvel`,
@@ -89753,7 +89753,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: ``, Date_Added: `May 20, 2026`,
     Imprint: `Marvel Krakoa Era`, Box: `11`,
     Crossover: `Fall of X`, Start_Bid: `2`,
-    Volume: `1`, Entry: `5373`,
+    Volume: `5`, Entry: `5373`,
   },
   {
     Title: `Jean Grey`, Issue: `1`, Publisher: `Marvel`,
@@ -110021,7 +110021,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Declan Shalvey`, Date_Added: `May 23, 2026`,
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `8`,
-    Volume: `6`, Entry: `6923`,
+    Volume: `8`, Entry: `6923`,
   },
   {
     Title: `Moon Knight`, Issue: `2`, Publisher: `Marvel`,
@@ -110039,7 +110039,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Declan Shalvey`, Date_Added: `May 23, 2026`,
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `5`,
-    Volume: `6`, Entry: `6924`,
+    Volume: `8`, Entry: `6924`,
   },
   {
     Title: `Moon Knight`, Issue: `3`, Publisher: `Marvel`,
@@ -110057,7 +110057,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Declan Shalvey`, Date_Added: `May 23, 2026`,
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `5`,
-    Volume: `6`, Entry: `6925`,
+    Volume: `8`, Entry: `6925`,
   },
   {
     Title: `Moon Knight`, Issue: `4`, Publisher: `Marvel`,
@@ -110075,7 +110075,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Declan Shalvey`, Date_Added: `May 23, 2026`,
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `5`,
-    Volume: `6`, Entry: `6926`,
+    Volume: `8`, Entry: `6926`,
   },
   {
     Title: `Moon Knight`, Issue: `5`, Publisher: `Marvel`,
@@ -110093,7 +110093,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Declan Shalvey`, Date_Added: `May 23, 2026`,
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `5`,
-    Volume: `6`, Entry: `6927`,
+    Volume: `8`, Entry: `6927`,
   },
   {
     Title: `Moon Knight`, Issue: `6`, Publisher: `Marvel`,
@@ -110111,7 +110111,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Declan Shalvey`, Date_Added: `May 23, 2026`,
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `5`,
-    Volume: `6`, Entry: `6928`,
+    Volume: `8`, Entry: `6928`,
   },
   {
     Title: `Moon Knight`, Issue: `7`, Publisher: `Marvel`,
@@ -110129,7 +110129,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Declan Shalvey & Various`, Date_Added: `May 23, 2026`,
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `6`, Entry: `6929`,
+    Volume: `8`, Entry: `6929`,
   },
   {
     Title: `Moon Knight`, Issue: `8`, Publisher: `Marvel`,
@@ -110147,7 +110147,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Declan Shalvey & Various`, Date_Added: `May 23, 2026`,
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `6`, Entry: `6930`,
+    Volume: `8`, Entry: `6930`,
   },
   {
     Title: `Moon Knight`, Issue: `10`, Publisher: `Marvel`,
@@ -110165,7 +110165,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Declan Shalvey & Various`, Date_Added: `May 23, 2026`,
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `6`, Entry: `6931`,
+    Volume: `8`, Entry: `6931`,
   },
   {
     Title: `Moon Knight`, Issue: `11`, Publisher: `Marvel`,
@@ -110183,7 +110183,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Declan Shalvey & Various`, Date_Added: `May 23, 2026`,
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `6`, Entry: `6932`,
+    Volume: `8`, Entry: `6932`,
   },
   {
     Title: `Moon Knight`, Issue: `12`, Publisher: `Marvel`,
@@ -110201,7 +110201,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Declan Shalvey & Various`, Date_Added: `May 23, 2026`,
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `6`, Entry: `6933`,
+    Volume: `8`, Entry: `6933`,
   },
   {
     Title: `Moon Knight`, Issue: `13`, Publisher: `Marvel`,
@@ -110219,7 +110219,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Declan Shalvey & Various`, Date_Added: `May 23, 2026`,
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `6`, Entry: `6934`,
+    Volume: `8`, Entry: `6934`,
   },
   {
     Title: `Moon Knight`, Issue: `14`, Publisher: `Marvel`,
@@ -110237,7 +110237,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Declan Shalvey & Various`, Date_Added: `May 23, 2026`,
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `6`, Entry: `6935`,
+    Volume: `8`, Entry: `6935`,
   },
   {
     Title: `Moon Knight`, Issue: `15`, Publisher: `Marvel`,
@@ -110255,7 +110255,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Declan Shalvey & Various`, Date_Added: `May 23, 2026`,
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `6`, Entry: `6936`,
+    Volume: `8`, Entry: `6936`,
   },
   {
     Title: `Moon Knight`, Issue: `16`, Publisher: `Marvel`,
@@ -110273,7 +110273,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Declan Shalvey & Various`, Date_Added: `May 23, 2026`,
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `6`, Entry: `6937`,
+    Volume: `8`, Entry: `6937`,
   },
   {
     Title: `Moon Knight`, Issue: `17`, Publisher: `Marvel`,
@@ -110291,7 +110291,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Declan Shalvey & Various`, Date_Added: `May 23, 2026`,
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `6`, Entry: `6938`,
+    Volume: `8`, Entry: `6938`,
   },
   {
     Title: `Moon Knight`, Issue: `1`, Publisher: `Marvel`,
@@ -182723,7 +182723,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: ``, Date_Added: `May 26, 2026`,
     Imprint: `Marvel`, Box: `40`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `2`, Entry: `11538`,
+    Volume: `1`, Entry: `11538`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `22`, Publisher: `Marvel`,
@@ -182741,7 +182741,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: ``, Date_Added: `May 26, 2026`,
     Imprint: `Marvel`, Box: `40`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `2`, Entry: `11539`,
+    Volume: `1`, Entry: `11539`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `23`, Publisher: `Marvel`,
@@ -182759,7 +182759,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: ``, Date_Added: `May 26, 2026`,
     Imprint: `Marvel`, Box: `40`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `2`, Entry: `11540`,
+    Volume: `1`, Entry: `11540`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `24`, Publisher: `Marvel`,
@@ -182777,7 +182777,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: ``, Date_Added: `May 26, 2026`,
     Imprint: `Marvel`, Box: `40`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `2`, Entry: `11541`,
+    Volume: `1`, Entry: `11541`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `25`, Publisher: `Marvel`,
@@ -182795,7 +182795,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: ``, Date_Added: `May 26, 2026`,
     Imprint: `Marvel`, Box: `40`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `2`, Entry: `11542`,
+    Volume: `1`, Entry: `11542`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `27`, Publisher: `Marvel`,
@@ -182813,7 +182813,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: ``, Date_Added: `May 26, 2026`,
     Imprint: `Marvel`, Box: `40`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `2`, Entry: `11543`,
+    Volume: `1`, Entry: `11543`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `28`, Publisher: `Marvel`,
@@ -182831,7 +182831,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: ``, Date_Added: `May 26, 2026`,
     Imprint: `Marvel`, Box: `40`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `2`, Entry: `11544`,
+    Volume: `1`, Entry: `11544`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `29`, Publisher: `Marvel`,
@@ -182849,7 +182849,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: ``, Date_Added: `May 26, 2026`,
     Imprint: `Marvel`, Box: `40`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `2`, Entry: `11545`,
+    Volume: `1`, Entry: `11545`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `30`, Publisher: `Marvel`,
@@ -182867,7 +182867,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: ``, Date_Added: `May 26, 2026`,
     Imprint: `Marvel`, Box: `40`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `2`, Entry: `11546`,
+    Volume: `1`, Entry: `11546`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `31`, Publisher: `Marvel`,
@@ -182885,7 +182885,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: ``, Date_Added: `May 26, 2026`,
     Imprint: `Marvel`, Box: `40`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `2`, Entry: `11547`,
+    Volume: `1`, Entry: `11547`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `32`, Publisher: `Marvel`,
@@ -182903,7 +182903,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: ``, Date_Added: `May 26, 2026`,
     Imprint: `Marvel`, Box: `40`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `2`, Entry: `11548`,
+    Volume: `1`, Entry: `11548`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `33`, Publisher: `Marvel`,
@@ -182921,7 +182921,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: ``, Date_Added: `May 26, 2026`,
     Imprint: `Marvel`, Box: `40`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `2`, Entry: `11549`,
+    Volume: `1`, Entry: `11549`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `34`, Publisher: `Marvel`,
@@ -182939,7 +182939,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: ``, Date_Added: `May 26, 2026`,
     Imprint: `Marvel`, Box: `40`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `2`, Entry: `11550`,
+    Volume: `1`, Entry: `11550`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `35`, Publisher: `Marvel`,
@@ -182957,7 +182957,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: ``, Date_Added: `May 26, 2026`,
     Imprint: `Marvel`, Box: `40`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `2`, Entry: `11551`,
+    Volume: `1`, Entry: `11551`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `37`, Publisher: `Marvel`,
@@ -182975,7 +182975,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: ``, Date_Added: `May 26, 2026`,
     Imprint: `Marvel`, Box: `40`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `2`, Entry: `11552`,
+    Volume: `1`, Entry: `11552`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `38`, Publisher: `Marvel`,
@@ -182993,7 +182993,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: ``, Date_Added: `May 26, 2026`,
     Imprint: `Marvel`, Box: `40`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `2`, Entry: `11553`,
+    Volume: `1`, Entry: `11553`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `39`, Publisher: `Marvel`,
@@ -183011,7 +183011,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: ``, Date_Added: `May 26, 2026`,
     Imprint: `Marvel`, Box: `40`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `2`, Entry: `11554`,
+    Volume: `1`, Entry: `11554`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `46`, Publisher: `Marvel`,
@@ -183029,7 +183029,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: ``, Date_Added: `May 26, 2026`,
     Imprint: `Marvel`, Box: `40`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `2`, Entry: `11555`,
+    Volume: `1`, Entry: `11555`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `47`, Publisher: `Marvel`,
@@ -183047,7 +183047,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: ``, Date_Added: `May 26, 2026`,
     Imprint: `Marvel`, Box: `40`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `2`, Entry: `11556`,
+    Volume: `1`, Entry: `11556`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `48`, Publisher: `Marvel`,
@@ -183065,7 +183065,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: ``, Date_Added: `May 26, 2026`,
     Imprint: `Marvel`, Box: `40`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `2`, Entry: `11557`,
+    Volume: `1`, Entry: `11557`,
   },
   {
     Title: `Ultimate X-Men`, Issue: `49`, Publisher: `Marvel`,
@@ -183083,7 +183083,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: ``, Date_Added: `May 26, 2026`,
     Imprint: `Marvel`, Box: `40`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `2`, Entry: `11558`,
+    Volume: `1`, Entry: `11558`,
   },
   {
     Title: `Ultimate X`, Issue: `1`, Publisher: `Marvel`,
@@ -191975,7 +191975,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: ``, Date_Added: `May 27, 2026`,
     Imprint: `Marvel`, Box: `79`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `1`, Entry: `12352`,
+    Volume: `5`, Entry: `12352`,
   },
   {
     Title: `Giant-Size Dark Phoenix Saga`, Issue: `1`, Publisher: `Marvel`,
@@ -193118,7 +193118,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   },
   {
     Title: `Uncanny X-Men`, Issue: `286`, Publisher: `Marvel`,
-    Year: `1992`, Volume: `2`, Cover_Artist: `Whilce Portacio (interior artist — cover verify)`,
+    Year: `1992`, Volume: `1`, Cover_Artist: `Whilce Portacio (interior artist — cover verify)`,
     Key: `NO`, Key_Reason: `Non-key Portacio/Lobdell transition issue`,
     Signed: `YES`, Signed_By: `Louise Simonson`,
     Era: `Copper`, Writer: `Scott Lobdell`,
@@ -193228,7 +193228,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   },
   {
     Title: `Incredible Hulk`, Issue: `393`, Publisher: `Marvel`,
-    Year: `1992`, Volume: `2`, Cover_Artist: `Dale Keown (verify)`,
+    Year: `1992`, Volume: `1`, Cover_Artist: `Dale Keown (verify)`,
     Key: `YES`, Key_Reason: `Incredible Hulk #393 — Peter David's landmark Hulk run. Quad-signed by Bob McLeod, Larry Lieber, Louise Simonson, and Jim Starlin. Peter David's run (#331–467) is the greatest Hulk run ever written.`,
     Signed: `YES`, Signed_By: `Multiple`,
     Era: `Copper`, Writer: `Peter David`,

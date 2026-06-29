@@ -1,0 +1,3380 @@
+[
+  {
+    "ts": "2026-06-25T02:31:49.824245",
+    "title": "One World Under Doom",
+    "volume": 1,
+    "reason": "CV lookup failed: HTTP error: Max retries exceeded"
+  },
+  {
+    "ts": "2026-06-25T02:38:40.688275",
+    "title": "Star Trek",
+    "volume": 1,
+    "reason": "CV lookup failed: HTTP error: Max retries exceeded"
+  },
+  {
+    "ts": "2026-06-25T02:43:07.146725",
+    "title": "The Ultimates",
+    "volume": 1,
+    "reason": "9 issues not found on CV: [np.float64(15.0), np.float64(17.0), np.float64(23.0), np.float64(24.0), np.float64(26.0), np.float64(27.0), np.float64(28.0), np.float64(29.0), np.float64(30.0)]"
+  },
+  {
+    "ts": "2026-06-25T02:47:14.095767",
+    "title": "Legion Lost",
+    "volume": 2,
+    "reason": "8 issues not found on CV: [np.float64(4.0), np.float64(5.0), np.float64(6.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0), np.float64(11.0)]"
+  },
+  {
+    "ts": "2026-06-25T02:51:00.502612",
+    "title": "Suicide Squad: From the Ashes",
+    "volume": 4,
+    "reason": "6 issues not found on CV: [np.float64(3.0), np.float64(4.0), np.float64(5.0), np.float64(6.0), np.float64(7.0), np.float64(8.0)]"
+  },
+  {
+    "ts": "2026-06-25T02:53:46.488757",
+    "title": "All-Star Batman and Robin, the Boy Wonder",
+    "volume": 1,
+    "reason": "6 issues not found on CV: [np.float64(5.0), np.float64(6.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0)]"
+  },
+  {
+    "ts": "2026-06-25T02:58:35.272446",
+    "title": "Suicide Squad Most Wanted: Deadshot and Katana",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T02:58:35.927624",
+    "title": "Star Trek: Deep Space Nine \u2014 The Dog of War",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T02:58:36.777397",
+    "title": "S.H.I.E.L.D. Infinite",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:00:40.162019",
+    "title": "X",
+    "volume": 1,
+    "reason": "5 issues not found on CV: [np.float64(6.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0)]"
+  },
+  {
+    "ts": "2026-06-25T03:01:21.747749",
+    "title": "Imperial",
+    "volume": 1,
+    "reason": "3 issues not found on CV: [np.float64(2.0), np.float64(3.0), np.float64(4.0)]"
+  },
+  {
+    "ts": "2026-06-25T03:01:22.277547",
+    "title": "Legion of Superheroes",
+    "volume": 6,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:01:43.130605",
+    "title": "Domino",
+    "volume": 3,
+    "reason": "5 issues not found on CV: [np.float64(6.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0)]"
+  },
+  {
+    "ts": "2026-06-25T03:01:43.647272",
+    "title": "Star Trek: Strange New Worlds \u2014 The Illyrian Enigma",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:01:44.378453",
+    "title": "Star Trek: Deep Space Nine \u2014 Too Long a Sacrifice",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:03:27.883295",
+    "title": "Silver Surfer: Surfer No More",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:03:27.891701",
+    "title": "Silver Surfer: Rebirth",
+    "volume": 1,
+    "reason": "Year gap: Filled avg year 2022, blank avg 1992 (gap 30y)"
+  },
+  {
+    "ts": "2026-06-25T03:03:28.620458",
+    "title": "Star Trek: Voyager \u2014 Seven's Reckoning",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:04:14.414232",
+    "title": "DCKO",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:04:15.009927",
+    "title": "SGU: Stargate Universe",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:06:19.194699",
+    "title": "Invincible Iron Man",
+    "volume": 2,
+    "reason": "4 issues not found on CV: [np.float64(79.0), np.float64(80.0), np.float64(81.0), np.float64(82.0)]"
+  },
+  {
+    "ts": "2026-06-25T03:14:58.306828",
+    "title": "Avengers: Defenders \u2014 Tarot",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:17:01.819779",
+    "title": "Original Sin: Hulk vs. Iron Man",
+    "volume": 3,
+    "reason": "3 issues not found on CV: [np.float64(2.0), np.float64(3.0), np.float64(4.0)]"
+  },
+  {
+    "ts": "2026-06-25T03:20:27.386610",
+    "title": "War of the Realms: Giant-Man",
+    "volume": 1,
+    "reason": "2 issues not found on CV: [np.float64(2.0), np.float64(3.0)]"
+  },
+  {
+    "ts": "2026-06-25T03:20:28.071114",
+    "title": "Robin and Batman: Jason Todd",
+    "volume": 5,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:20:28.658011",
+    "title": "What If? Avengers vs. X-Men",
+    "volume": 4,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:20:29.303187",
+    "title": "Robin: The Joker's Wild",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:20:29.881901",
+    "title": "Unbreakable X-Men: Age of Revelation",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:23:15.005963",
+    "title": "Strange Academy: Bloodhunt",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:23:15.651609",
+    "title": "Dracula: Bloodhunt",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:24:58.939966",
+    "title": "Space Corps",
+    "volume": 1,
+    "reason": "2 issues not found on CV: [np.float64(2.0), np.float64(3.0)]"
+  },
+  {
+    "ts": "2026-06-25T03:28:48.907223",
+    "title": "Black Panther: Bloodhunt",
+    "volume": 10,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:31:54.131195",
+    "title": "Star Trek: Discovery \u2014 Aftermath",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:33:16.936370",
+    "title": "DCKO: Night Fight",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:33:17.578131",
+    "title": "Gene Grade",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:33:58.391708",
+    "title": "Legion Lost",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(0.0)]"
+  },
+  {
+    "ts": "2026-06-25T03:34:39.807043",
+    "title": "Green Lantern: Fractured Spectrum",
+    "volume": 7,
+    "reason": "1 issues not found on CV: [np.float64(7.0)]"
+  },
+  {
+    "ts": "2026-06-25T03:36:43.974934",
+    "title": "Justice League Dark",
+    "volume": 1,
+    "reason": "2 issues not found on CV: [np.float64(0.0), np.float64(23.2)]"
+  },
+  {
+    "ts": "2026-06-25T03:37:04.761793",
+    "title": "Justice League",
+    "volume": 1,
+    "reason": "2 issues not found on CV: [np.float64(0.0), np.float64(8.0)]"
+  },
+  {
+    "ts": "2026-06-25T03:40:10.337679",
+    "title": "New Mutants",
+    "volume": 1,
+    "reason": "2 issues not found on CV: [np.float64(93.0), np.float64(97.0)]"
+  },
+  {
+    "ts": "2026-06-25T03:42:34.841634",
+    "title": "Star Trek Annual",
+    "volume": 1,
+    "reason": "2 issues not found on CV: [np.float64(2023.0), np.float64(2024.0)]"
+  },
+  {
+    "ts": "2026-06-25T03:42:35.627677",
+    "title": "Star Trek: Picard \u2014 Stargazer",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:42:36.341654",
+    "title": "Star Trek: The Next Generation \u2014 Mirror Broken",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:42:36.913258",
+    "title": "The Orville: Digressions",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:42:37.441676",
+    "title": "The Orville: Heroes",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:42:38.026175",
+    "title": "The Orville: Launch Day",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:42:38.849172",
+    "title": "The Orville: The Word of Avis",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:43:40.375421",
+    "title": "World's Finest",
+    "volume": 1,
+    "reason": "Year gap: Filled avg year 2013, blank avg 1949 (gap 64y)"
+  },
+  {
+    "ts": "2026-06-25T03:43:40.955174",
+    "title": "X-Vengers: Age of Revelation",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:43:41.549512",
+    "title": "Free Comic Book Day: Spider-Man",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:43:42.118645",
+    "title": "Young Justice: Sins of the Father",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:44:03.064527",
+    "title": "Aquaman",
+    "volume": 1,
+    "reason": "2 issues not found on CV: [np.float64(0.0), np.float64(69.0)]"
+  },
+  {
+    "ts": "2026-06-25T03:45:25.807790",
+    "title": "Age of Apocalypse",
+    "volume": 2,
+    "reason": "2 issues not found on CV: [np.float64(20.0), np.float64(26.0)]"
+  },
+  {
+    "ts": "2026-06-25T03:46:28.347421",
+    "title": "Doctor Strange: Asgard",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:46:28.997302",
+    "title": "Avengers/Fantastic Four: Empyre",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:49:14.632057",
+    "title": "Cataclysm: Ultimate Comics X-Men",
+    "volume": 5,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:49:15.265723",
+    "title": "Batgirl: All In",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:49:15.802894",
+    "title": "Cloak and Dagger: Age of Revelation",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:50:40.780800",
+    "title": "Extreme X-Men",
+    "volume": 6,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:51:23.819574",
+    "title": "Star Trek: The Next Generation \u2014 The Gift",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:55:33.255220",
+    "title": "Batgirl",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(0.0)]"
+  },
+  {
+    "ts": "2026-06-25T03:55:33.795673",
+    "title": "Avengers: Wasp",
+    "volume": 7,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:56:35.680685",
+    "title": "Suicide Squad",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(0.0)]"
+  },
+  {
+    "ts": "2026-06-25T03:56:36.332061",
+    "title": "Star Trek: The Mirror War \u2014 Sisko",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:57:18.900841",
+    "title": "Avengers: Giant-Man",
+    "volume": 7,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:58:00.919455",
+    "title": "Avengers: Empyre",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:58:01.522660",
+    "title": "Superman Special: Endless Winter",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:59:25.874469",
+    "title": "The All-Star Story of the Dodgers",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:59:26.789126",
+    "title": "Star Trek: The Mirror War \u2014 Troi",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:01:31.810548",
+    "title": "Silop",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:02:55.043102",
+    "title": "Buffy the Vampire Slayer Annual",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(1.0)]"
+  },
+  {
+    "ts": "2026-06-25T04:02:55.057443",
+    "title": "Blue Beetle",
+    "volume": 1,
+    "reason": "Year gap: Filled avg year 2007, blank avg 2023 (gap 16y)"
+  },
+  {
+    "ts": "2026-06-25T04:02:55.652886",
+    "title": "Silver Surfer: The Legacy",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:02:56.452584",
+    "title": "Bloodhunters",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:02:57.138562",
+    "title": "Bloodhunt: Moon Knight",
+    "volume": 8,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:04:00.515984",
+    "title": "Bloodhunt: Jubilee",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:04:01.141974",
+    "title": "Black Widow: The Lost Days",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:05:03.580315",
+    "title": "Star Trek: Countdown to Darkness",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(4.0)]"
+  },
+  {
+    "ts": "2026-06-25T04:05:04.185570",
+    "title": "Star Trek: DS9 \u2014 Too Long a Sacrifice",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:05:04.839977",
+    "title": "Star Trek: Day of Blood \u2014 Prelude",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:05:46.347399",
+    "title": "Black Panther: Bloodhunt",
+    "volume": 1,
+    "reason": "CV lookup failed: Volume not found"
+  },
+  {
+    "ts": "2026-06-25T04:05:47.076291",
+    "title": "Black Panther Intergalactic",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:06:08.070037",
+    "title": "Star Trek: Defiant Annual",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(2024.0)]"
+  },
+  {
+    "ts": "2026-06-25T04:06:29.051064",
+    "title": "Batwing",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(0.0)]"
+  },
+  {
+    "ts": "2026-06-25T04:06:29.574782",
+    "title": "Star Trek: Generations",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:06:30.236246",
+    "title": "Star Trek: Generations \u2014 The Official Comics Adaptation",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:07:53.925539",
+    "title": "The Iron Age: Alpha",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:09:59.083926",
+    "title": "What If? X-Men Deadly Genesis",
+    "volume": 3,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:09:59.778764",
+    "title": "Wildstorm Starts Now!",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:10:00.463384",
+    "title": "Wolverine and the X-Men Annual",
+    "volume": 4,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:12:07.480548",
+    "title": "Wonder Man and the Beast",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:12:08.091353",
+    "title": "Wonder Woman 1984: Museum Mayhem",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:12:50.242549",
+    "title": "Agents of S.H.I.E.L.D. Standoff",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:12:51.088883",
+    "title": "Avengers and Moon Girl",
+    "volume": 7,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:14:34.627116",
+    "title": "X-Men",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(27.0)]"
+  },
+  {
+    "ts": "2026-06-25T04:14:35.459668",
+    "title": "X-Men Origins: X-Men Blue",
+    "volume": 6,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:15:18.272946",
+    "title": "X-Men/Eternals: Manifest Destiny",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:16:22.872039",
+    "title": "X-Men: Secret",
+    "volume": 6,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:16:43.929061",
+    "title": "Age of Revelation",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(1.0)]"
+  },
+  {
+    "ts": "2026-06-25T04:17:26.443653",
+    "title": "What If? Magic",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:17:27.068641",
+    "title": "What If? Galactus Transformed Moon Knight",
+    "volume": 11,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:17:27.731393",
+    "title": "What If? Galactus Transformed Hulk",
+    "volume": 6,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:19:32.809522",
+    "title": "Aquaman Special: Endless Winter",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:19:53.260450",
+    "title": "Aquaman",
+    "volume": 5,
+    "reason": "1 issues not found on CV: [np.float64(75.0)]"
+  },
+  {
+    "ts": "2026-06-25T04:20:14.224715",
+    "title": "The Trials of Shazam",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(9.0)]"
+  },
+  {
+    "ts": "2026-06-25T04:20:14.849395",
+    "title": "Time Slide",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:20:15.542524",
+    "title": "Titans/Outsiders: Secret Files and Origins",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:21:18.017778",
+    "title": "Ultimatum: Fantastic Four",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(60.0)]"
+  },
+  {
+    "ts": "2026-06-25T04:22:41.789066",
+    "title": "Ultraman vs. Avengers",
+    "volume": 7,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:22:42.651653",
+    "title": "Aquaboy and Lagoon Man",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:23:45.725367",
+    "title": "Uncanny X-Men",
+    "volume": 4,
+    "reason": "1 issues not found on CV: [np.float64(13.0)]"
+  },
+  {
+    "ts": "2026-06-25T04:23:46.381859",
+    "title": "Uncanny X-Men Special: No End in Sight Part 3",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:23:47.140685",
+    "title": "Union Jack the Ripper: Bloodhunt",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:24:08.122163",
+    "title": "Voodoo",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(0.0)]"
+  },
+  {
+    "ts": "2026-06-25T04:24:50.639310",
+    "title": "War of the Realms: Savage Avengers",
+    "volume": 7,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:26:15.500097",
+    "title": "Amazing X-Men: Age of Revelation",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:26:16.261390",
+    "title": "Shang-Chi vs. Captain America",
+    "volume": 9,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:26:17.648283",
+    "title": "Secret Invasion: Miss Marvel",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:26:18.410690",
+    "title": "Captain America and Volstagg",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:28:05.359586",
+    "title": "Green Lantern Corps: Civil Corps",
+    "volume": 7,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:30:52.608424",
+    "title": "Guardians of the Galaxy: Bane of the Blastaar",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:31:34.411633",
+    "title": "House of M Sketchbook",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(1.0)]"
+  },
+  {
+    "ts": "2026-06-25T04:31:35.347039",
+    "title": "Hulk Smash the Avengers",
+    "volume": 4,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:39:16.570065",
+    "title": "Iron Man Special: No End in Sight Part 2",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:39:38.806929",
+    "title": "Journey into Mystery",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(5.0)]"
+  },
+  {
+    "ts": "2026-06-25T04:40:21.871938",
+    "title": "Doctor Who: Free Comic Book Day 2015",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:43:14.370148",
+    "title": "Expatriate X-Men: Age of Revelation",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:44:36.542104",
+    "title": "Fantastic Four Annual",
+    "volume": 3,
+    "reason": "1 issues not found on CV: [np.float64(32.0)]"
+  },
+  {
+    "ts": "2026-06-25T04:44:37.671907",
+    "title": "Fantastic Four \u00d7 Gargoyles",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:44:38.760379",
+    "title": "Fantastic Four: Doom War",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:44:59.843723",
+    "title": "Fantastic Four: Empyre",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(0.0)]"
+  },
+  {
+    "ts": "2026-06-25T04:45:00.439626",
+    "title": "Free Comic Book Day: Civil War",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:45:01.120240",
+    "title": "Free Comic Book Day: Doctor Who",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:45:02.081325",
+    "title": "Eternals: When Gods Walked the Earth",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:45:02.094338",
+    "title": "Friendly Neighborhood Spider-Man",
+    "volume": 1,
+    "reason": "Year gap: Filled avg year 2005, blank avg 2024 (gap 19y)"
+  },
+  {
+    "ts": "2026-06-25T04:45:02.702083",
+    "title": "Futures End: Aquaman",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:45:03.426798",
+    "title": "Futures End: Batgirl",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:45:04.209674",
+    "title": "Futures End: Batman and Robin",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:45:04.987649",
+    "title": "Futures End: Batman/Superman",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:45:05.685288",
+    "title": "Futures End: Birds of Prey",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:45:06.497781",
+    "title": "Futures End: Earth 2",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:45:07.231846",
+    "title": "Futures End: Grayson",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:45:07.860766",
+    "title": "Futures End: Huntress/Power Girl",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:45:08.857052",
+    "title": "Futures End: Justice League",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:45:09.742065",
+    "title": "Futures End: New Suicide Squad",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:45:10.314672",
+    "title": "Futures End: Superman/Wonder Woman",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:46:53.983118",
+    "title": "Justice League",
+    "volume": 2,
+    "reason": "1 issues not found on CV: [np.float64(23.4)]"
+  },
+  {
+    "ts": "2026-06-25T04:46:58.282731",
+    "title": "Justice League Dark: Tomorrow's Special",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:47:40.587266",
+    "title": "DC: 5 of a Kind \u2014 Thunder/Martian Manhunter",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:47:41.224393",
+    "title": "Nova Special: No End in Sight",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:47:42.021210",
+    "title": "DC: 5 of a Kind \u2014 Nightwing/Captain Boomerang",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:47:42.660548",
+    "title": "DC: 5 of a Kind \u2014 Metamorpho/Aquaman",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:48:25.041464",
+    "title": "DC: 5 of a Kind \u2014 Katana/Shazam",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:48:25.683204",
+    "title": "Planet DC: Batgirl",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:48:26.388601",
+    "title": "DC vs. Marvel: The Legion",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:53:41.227558",
+    "title": "Red Hulk",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(3.0)]"
+  },
+  {
+    "ts": "2026-06-25T04:54:03.959919",
+    "title": "Catwoman",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(0.0)]"
+  },
+  {
+    "ts": "2026-06-25T04:56:11.863310",
+    "title": "S.H.I.E.L.D.: Quake \u2014 50th Anniversary",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:57:14.519739",
+    "title": "Secret Avengers",
+    "volume": 5,
+    "reason": "1 issues not found on CV: [np.float64(28.0)]"
+  },
+  {
+    "ts": "2026-06-25T04:58:59.957565",
+    "title": "Nightwing",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(0.0)]"
+  },
+  {
+    "ts": "2026-06-25T05:06:55.240682",
+    "title": "Demon Knights",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(0.0)]"
+  },
+  {
+    "ts": "2026-06-25T05:06:55.858894",
+    "title": "Dark Reign: Deadpool vs. Thunderbolts",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T05:06:56.511027",
+    "title": "DCKO: The Kids Are All Fight Special",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T05:07:38.872071",
+    "title": "Longshots: Age of Revelation",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T05:07:38.885482",
+    "title": "Action Comics",
+    "volume": 1,
+    "reason": "Year gap: Filled avg year 2020, blank avg 1981 (gap 39y)"
+  },
+  {
+    "ts": "2026-06-25T05:07:39.623234",
+    "title": "Marvel Must Have: Fantastic Four",
+    "volume": 3,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T05:08:25.480452",
+    "title": "DCKO: Red Hood vs. The Joker",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T05:08:27.409784",
+    "title": "Midnight Suns: Bloodhunt",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T05:15:43.418471",
+    "title": "Miles Morales: Spider-Man and Moon Girl",
+    "volume": 1,
+    "reason": "CV lookup failed: HTTP error: Max retries exceeded"
+  },
+  {
+    "ts": "2026-06-25T05:22:15.486464",
+    "title": "Moon Knight",
+    "volume": 1,
+    "reason": "CV lookup failed: HTTP error: Max retries exceeded"
+  },
+  {
+    "ts": "2026-06-25T05:22:16.989270",
+    "title": "Moon Knight and the Infinity Watch",
+    "volume": 11,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T05:22:17.669546",
+    "title": "Ms. Marvel and Moon Knight",
+    "volume": 11,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T05:22:18.329135",
+    "title": "Ms. Marvel: The Muse Menace",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T05:23:47.969026",
+    "title": "DC: 5 of a Kind \u2014 Wonder Woman/Grace",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T05:23:49.181676",
+    "title": "A Death in the Family: Robin Lives!",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:28:27.489111",
+    "title": "The Ultimates",
+    "volume": 1,
+    "reason": "9 issues not found on CV: [np.float64(15.0), np.float64(17.0), np.float64(23.0), np.float64(24.0), np.float64(26.0), np.float64(27.0), np.float64(28.0), np.float64(29.0), np.float64(30.0)]"
+  },
+  {
+    "ts": "2026-06-26T12:29:48.126869",
+    "title": "The Ultimates",
+    "volume": 1,
+    "reason": "9 issues not found on CV: [np.float64(15.0), np.float64(17.0), np.float64(23.0), np.float64(24.0), np.float64(26.0), np.float64(27.0), np.float64(28.0), np.float64(29.0), np.float64(30.0)]"
+  },
+  {
+    "ts": "2026-06-26T12:32:41.088868",
+    "title": "Legion Lost",
+    "volume": 2,
+    "reason": "8 issues not found on CV: [np.float64(4.0), np.float64(5.0), np.float64(6.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0), np.float64(11.0)]"
+  },
+  {
+    "ts": "2026-06-26T12:33:56.631996",
+    "title": "Legion Lost",
+    "volume": 2,
+    "reason": "8 issues not found on CV: [np.float64(4.0), np.float64(5.0), np.float64(6.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0), np.float64(11.0)]"
+  },
+  {
+    "ts": "2026-06-26T12:36:34.291241",
+    "title": "Suicide Squad: From the Ashes",
+    "volume": 4,
+    "reason": "6 issues not found on CV: [np.float64(3.0), np.float64(4.0), np.float64(5.0), np.float64(6.0), np.float64(7.0), np.float64(8.0)]"
+  },
+  {
+    "ts": "2026-06-26T12:37:42.954505",
+    "title": "Suicide Squad: From the Ashes",
+    "volume": 4,
+    "reason": "6 issues not found on CV: [np.float64(3.0), np.float64(4.0), np.float64(5.0), np.float64(6.0), np.float64(7.0), np.float64(8.0)]"
+  },
+  {
+    "ts": "2026-06-26T12:39:24.443232",
+    "title": "All-Star Batman and Robin, the Boy Wonder",
+    "volume": 1,
+    "reason": "6 issues not found on CV: [np.float64(5.0), np.float64(6.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0)]"
+  },
+  {
+    "ts": "2026-06-26T12:40:27.684412",
+    "title": "All-Star Batman and Robin, the Boy Wonder",
+    "volume": 1,
+    "reason": "6 issues not found on CV: [np.float64(5.0), np.float64(6.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0)]"
+  },
+  {
+    "ts": "2026-06-26T12:44:18.601470",
+    "title": "Suicide Squad Most Wanted: Deadshot and Katana",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:44:19.547201",
+    "title": "Star Trek: Deep Space Nine \u2014 The Dog of War",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:44:20.552741",
+    "title": "S.H.I.E.L.D. Infinite",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:45:15.145972",
+    "title": "Suicide Squad Most Wanted: Deadshot and Katana",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:45:15.434827",
+    "title": "Star Trek: Deep Space Nine \u2014 The Dog of War",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:45:15.745262",
+    "title": "S.H.I.E.L.D. Infinite",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:46:25.788749",
+    "title": "X",
+    "volume": 1,
+    "reason": "5 issues not found on CV: [np.float64(6.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0)]"
+  },
+  {
+    "ts": "2026-06-26T12:47:08.703454",
+    "title": "Imperial",
+    "volume": 1,
+    "reason": "3 issues not found on CV: [np.float64(2.0), np.float64(3.0), np.float64(4.0)]"
+  },
+  {
+    "ts": "2026-06-26T12:47:09.836668",
+    "title": "Legion of Superheroes",
+    "volume": 6,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:47:18.948606",
+    "title": "X",
+    "volume": 1,
+    "reason": "5 issues not found on CV: [np.float64(6.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0)]"
+  },
+  {
+    "ts": "2026-06-26T12:47:31.828712",
+    "title": "Domino",
+    "volume": 3,
+    "reason": "5 issues not found on CV: [np.float64(6.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0)]"
+  },
+  {
+    "ts": "2026-06-26T12:47:33.023745",
+    "title": "Star Trek: Strange New Worlds \u2014 The Illyrian Enigma",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:47:34.143673",
+    "title": "Star Trek: Deep Space Nine \u2014 Too Long a Sacrifice",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:48:00.275356",
+    "title": "Imperial",
+    "volume": 1,
+    "reason": "3 issues not found on CV: [np.float64(2.0), np.float64(3.0), np.float64(4.0)]"
+  },
+  {
+    "ts": "2026-06-26T12:48:00.756876",
+    "title": "Legion of Superheroes",
+    "volume": 6,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:48:21.591513",
+    "title": "Domino",
+    "volume": 3,
+    "reason": "5 issues not found on CV: [np.float64(6.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0)]"
+  },
+  {
+    "ts": "2026-06-26T12:48:21.959819",
+    "title": "Star Trek: Strange New Worlds \u2014 The Illyrian Enigma",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:48:22.349913",
+    "title": "Star Trek: Deep Space Nine \u2014 Too Long a Sacrifice",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:49:21.990060",
+    "title": "Silver Surfer: Surfer No More",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:49:22.010131",
+    "title": "Silver Surfer: Rebirth",
+    "volume": 1,
+    "reason": "Year gap: Filled avg year 2022, blank avg 1992 (gap 30y)"
+  },
+  {
+    "ts": "2026-06-26T12:49:23.152641",
+    "title": "Star Trek: Voyager \u2014 Seven's Reckoning",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:50:05.318888",
+    "title": "Silver Surfer: Surfer No More",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:50:05.336166",
+    "title": "Silver Surfer: Rebirth",
+    "volume": 1,
+    "reason": "Year gap: Filled avg year 2022, blank avg 1992 (gap 30y)"
+  },
+  {
+    "ts": "2026-06-26T12:50:05.824011",
+    "title": "Star Trek: Voyager \u2014 Seven's Reckoning",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:50:10.240131",
+    "title": "DCKO",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:50:11.281559",
+    "title": "SGU: Stargate Universe",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:50:50.576807",
+    "title": "DCKO",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:50:50.945793",
+    "title": "SGU: Stargate Universe",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:52:19.596623",
+    "title": "Invincible Iron Man",
+    "volume": 2,
+    "reason": "4 issues not found on CV: [np.float64(79.0), np.float64(80.0), np.float64(81.0), np.float64(82.0)]"
+  },
+  {
+    "ts": "2026-06-26T12:52:56.762419",
+    "title": "Invincible Iron Man",
+    "volume": 2,
+    "reason": "4 issues not found on CV: [np.float64(79.0), np.float64(80.0), np.float64(81.0), np.float64(82.0)]"
+  },
+  {
+    "ts": "2026-06-26T13:01:57.599397",
+    "title": "Avengers: Defenders \u2014 Tarot",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:03:02.975807",
+    "title": "Avengers: Defenders \u2014 Tarot",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:04:03.029049",
+    "title": "Original Sin: Hulk vs. Iron Man",
+    "volume": 3,
+    "reason": "3 issues not found on CV: [np.float64(2.0), np.float64(3.0), np.float64(4.0)]"
+  },
+  {
+    "ts": "2026-06-26T13:05:04.471969",
+    "title": "Original Sin: Hulk vs. Iron Man",
+    "volume": 3,
+    "reason": "3 issues not found on CV: [np.float64(2.0), np.float64(3.0), np.float64(4.0)]"
+  },
+  {
+    "ts": "2026-06-26T13:07:31.280751",
+    "title": "War of the Realms: Giant-Man",
+    "volume": 1,
+    "reason": "2 issues not found on CV: [np.float64(2.0), np.float64(3.0)]"
+  },
+  {
+    "ts": "2026-06-26T13:07:32.312151",
+    "title": "Robin and Batman: Jason Todd",
+    "volume": 5,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:07:33.256581",
+    "title": "What If? Avengers vs. X-Men",
+    "volume": 4,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:07:34.328143",
+    "title": "Robin: The Joker's Wild",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:07:35.476215",
+    "title": "Unbreakable X-Men: Age of Revelation",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:08:27.292552",
+    "title": "War of the Realms: Giant-Man",
+    "volume": 1,
+    "reason": "2 issues not found on CV: [np.float64(2.0), np.float64(3.0)]"
+  },
+  {
+    "ts": "2026-06-26T13:08:27.476167",
+    "title": "Robin and Batman: Jason Todd",
+    "volume": 5,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:08:27.639058",
+    "title": "What If? Avengers vs. X-Men",
+    "volume": 4,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:08:27.840458",
+    "title": "Robin: The Joker's Wild",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:08:27.995359",
+    "title": "Unbreakable X-Men: Age of Revelation",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:10:22.942612",
+    "title": "Strange Academy: Bloodhunt",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:10:24.141241",
+    "title": "Dracula: Bloodhunt",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:11:10.296259",
+    "title": "Strange Academy: Bloodhunt",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:11:10.518681",
+    "title": "Dracula: Bloodhunt",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:12:10.103425",
+    "title": "Space Corps",
+    "volume": 1,
+    "reason": "2 issues not found on CV: [np.float64(2.0), np.float64(3.0)]"
+  },
+  {
+    "ts": "2026-06-26T13:12:52.143392",
+    "title": "Space Corps",
+    "volume": 1,
+    "reason": "2 issues not found on CV: [np.float64(2.0), np.float64(3.0)]"
+  },
+  {
+    "ts": "2026-06-26T13:16:06.292260",
+    "title": "Black Panther: Bloodhunt",
+    "volume": 10,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:16:38.341758",
+    "title": "Black Panther: Bloodhunt",
+    "volume": 10,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:19:14.417397",
+    "title": "Star Trek: Discovery \u2014 Aftermath",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:19:41.884062",
+    "title": "Star Trek: Discovery \u2014 Aftermath",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:20:38.415606",
+    "title": "DCKO: Night Fight",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:20:39.401042",
+    "title": "Gene Grade",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:21:03.268704",
+    "title": "DCKO: Night Fight",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:21:03.499707",
+    "title": "Gene Grade",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:21:20.586949",
+    "title": "Legion Lost",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(0.0)]"
+  },
+  {
+    "ts": "2026-06-26T13:21:43.852438",
+    "title": "Legion Lost",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(0.0)]"
+  },
+  {
+    "ts": "2026-06-26T13:22:02.809070",
+    "title": "Green Lantern: Fractured Spectrum",
+    "volume": 7,
+    "reason": "1 issues not found on CV: [np.float64(7.0)]"
+  },
+  {
+    "ts": "2026-06-26T13:22:24.446059",
+    "title": "Green Lantern: Fractured Spectrum",
+    "volume": 7,
+    "reason": "1 issues not found on CV: [np.float64(7.0)]"
+  },
+  {
+    "ts": "2026-06-26T13:24:08.999655",
+    "title": "Justice League Dark",
+    "volume": 1,
+    "reason": "2 issues not found on CV: [np.float64(0.0), np.float64(23.2)]"
+  },
+  {
+    "ts": "2026-06-26T13:24:26.010578",
+    "title": "Justice League Dark",
+    "volume": 1,
+    "reason": "2 issues not found on CV: [np.float64(0.0), np.float64(23.2)]"
+  },
+  {
+    "ts": "2026-06-26T13:24:30.623805",
+    "title": "Justice League",
+    "volume": 1,
+    "reason": "2 issues not found on CV: [np.float64(0.0), np.float64(8.0)]"
+  },
+  {
+    "ts": "2026-06-26T13:24:46.361300",
+    "title": "Justice League",
+    "volume": 1,
+    "reason": "2 issues not found on CV: [np.float64(0.0), np.float64(8.0)]"
+  },
+  {
+    "ts": "2026-06-26T13:27:38.305004",
+    "title": "New Mutants",
+    "volume": 1,
+    "reason": "2 issues not found on CV: [np.float64(93.0), np.float64(97.0)]"
+  },
+  {
+    "ts": "2026-06-26T13:27:48.916452",
+    "title": "New Mutants",
+    "volume": 1,
+    "reason": "2 issues not found on CV: [np.float64(93.0), np.float64(97.0)]"
+  },
+  {
+    "ts": "2026-06-26T13:30:04.890779",
+    "title": "Star Trek Annual",
+    "volume": 1,
+    "reason": "2 issues not found on CV: [np.float64(2023.0), np.float64(2024.0)]"
+  },
+  {
+    "ts": "2026-06-26T13:30:05.895381",
+    "title": "Star Trek: Picard \u2014 Stargazer",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:30:06.901495",
+    "title": "Star Trek: The Next Generation \u2014 Mirror Broken",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:30:07.706212",
+    "title": "The Orville: Digressions",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:30:08.778984",
+    "title": "The Orville: Heroes",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:30:09.770691",
+    "title": "The Orville: Launch Day",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:30:10.662375",
+    "title": "Star Trek Annual",
+    "volume": 1,
+    "reason": "2 issues not found on CV: [np.float64(2023.0), np.float64(2024.0)]"
+  },
+  {
+    "ts": "2026-06-26T13:30:10.709862",
+    "title": "The Orville: The Word of Avis",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:30:10.860555",
+    "title": "Star Trek: Picard \u2014 Stargazer",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:30:11.217461",
+    "title": "Star Trek: The Next Generation \u2014 Mirror Broken",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:30:11.403411",
+    "title": "The Orville: Digressions",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:30:11.663479",
+    "title": "The Orville: Heroes",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:30:11.837060",
+    "title": "The Orville: Launch Day",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:30:12.024868",
+    "title": "The Orville: The Word of Avis",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:31:13.249867",
+    "title": "World's Finest",
+    "volume": 1,
+    "reason": "Year gap: Filled avg year 2013, blank avg 1949 (gap 64y)"
+  },
+  {
+    "ts": "2026-06-26T13:31:13.267281",
+    "title": "World's Finest",
+    "volume": 1,
+    "reason": "Year gap: Filled avg year 2013, blank avg 1949 (gap 64y)"
+  },
+  {
+    "ts": "2026-06-26T13:31:14.118731",
+    "title": "X-Vengers: Age of Revelation",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:31:15.038820",
+    "title": "Free Comic Book Day: Spider-Man",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:31:15.851292",
+    "title": "Young Justice: Sins of the Father",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:31:37.267284",
+    "title": "Aquaman",
+    "volume": 1,
+    "reason": "2 issues not found on CV: [np.float64(0.0), np.float64(69.0)]"
+  },
+  {
+    "ts": "2026-06-26T13:33:01.383452",
+    "title": "Age of Apocalypse",
+    "volume": 2,
+    "reason": "2 issues not found on CV: [np.float64(20.0), np.float64(26.0)]"
+  },
+  {
+    "ts": "2026-06-26T13:34:05.542175",
+    "title": "Doctor Strange: Asgard",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:34:06.890986",
+    "title": "Avengers/Fantastic Four: Empyre",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:36:54.183153",
+    "title": "Cataclysm: Ultimate Comics X-Men",
+    "volume": 5,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:36:55.084876",
+    "title": "Batgirl: All In",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:36:55.973427",
+    "title": "Cloak and Dagger: Age of Revelation",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:38:21.055986",
+    "title": "Extreme X-Men",
+    "volume": 6,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:39:05.362702",
+    "title": "Star Trek: The Next Generation \u2014 The Gift",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:43:15.933363",
+    "title": "Batgirl",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(0.0)]"
+  },
+  {
+    "ts": "2026-06-26T13:43:16.781287",
+    "title": "Avengers: Wasp",
+    "volume": 7,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:44:19.309224",
+    "title": "Suicide Squad",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(0.0)]"
+  },
+  {
+    "ts": "2026-06-26T13:44:20.116143",
+    "title": "Star Trek: The Mirror War \u2014 Sisko",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:45:03.178881",
+    "title": "Avengers: Giant-Man",
+    "volume": 7,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:45:45.913173",
+    "title": "Avengers: Empyre",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:45:47.003469",
+    "title": "Superman Special: Endless Winter",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:47:11.804495",
+    "title": "The All-Star Story of the Dodgers",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:47:12.762657",
+    "title": "Star Trek: The Mirror War \u2014 Troi",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:49:19.508659",
+    "title": "Silop",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:50:43.775392",
+    "title": "Buffy the Vampire Slayer Annual",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(1.0)]"
+  },
+  {
+    "ts": "2026-06-26T13:50:43.801888",
+    "title": "Blue Beetle",
+    "volume": 1,
+    "reason": "Year gap: Filled avg year 2007, blank avg 2023 (gap 16y)"
+  },
+  {
+    "ts": "2026-06-26T13:50:44.575601",
+    "title": "Silver Surfer: The Legacy",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:50:45.650606",
+    "title": "Bloodhunters",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:50:46.622067",
+    "title": "Bloodhunt: Moon Knight",
+    "volume": 8,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:51:51.194763",
+    "title": "Bloodhunt: Jubilee",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:51:51.917507",
+    "title": "Black Widow: The Lost Days",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:52:56.162262",
+    "title": "Star Trek: Countdown to Darkness",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(4.0)]"
+  },
+  {
+    "ts": "2026-06-26T13:52:57.080161",
+    "title": "Star Trek: DS9 \u2014 Too Long a Sacrifice",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:52:57.873550",
+    "title": "Star Trek: Day of Blood \u2014 Prelude",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:53:40.118765",
+    "title": "Black Panther: Bloodhunt",
+    "volume": 1,
+    "reason": "CV lookup failed: Volume not found"
+  },
+  {
+    "ts": "2026-06-26T13:53:41.112545",
+    "title": "Black Panther Intergalactic",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:54:02.864001",
+    "title": "Star Trek: Defiant Annual",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(2024.0)]"
+  },
+  {
+    "ts": "2026-06-26T13:54:24.398226",
+    "title": "Batwing",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(0.0)]"
+  },
+  {
+    "ts": "2026-06-26T13:54:25.294281",
+    "title": "Star Trek: Generations",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:54:26.019403",
+    "title": "Star Trek: Generations \u2014 The Official Comics Adaptation",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:55:51.313249",
+    "title": "The Iron Age: Alpha",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:57:59.056135",
+    "title": "What If? X-Men Deadly Genesis",
+    "volume": 3,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:57:59.952566",
+    "title": "Wildstorm Starts Now!",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:58:01.539664",
+    "title": "Wolverine and the X-Men Annual",
+    "volume": 4,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:00:13.258316",
+    "title": "Wonder Man and the Beast",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:00:14.132810",
+    "title": "Wonder Woman 1984: Museum Mayhem",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:00:57.251765",
+    "title": "Agents of S.H.I.E.L.D. Standoff",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:00:58.188183",
+    "title": "Avengers and Moon Girl",
+    "volume": 7,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:02:44.117585",
+    "title": "X-Men",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(27.0)]"
+  },
+  {
+    "ts": "2026-06-26T14:02:44.963079",
+    "title": "X-Men Origins: X-Men Blue",
+    "volume": 6,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:03:27.718302",
+    "title": "X-Men/Eternals: Manifest Destiny",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:04:32.328905",
+    "title": "X-Men: Secret",
+    "volume": 6,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:04:53.857262",
+    "title": "Age of Revelation",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(1.0)]"
+  },
+  {
+    "ts": "2026-06-26T14:05:36.913517",
+    "title": "What If? Magic",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:05:37.759227",
+    "title": "What If? Galactus Transformed Moon Knight",
+    "volume": 11,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:05:38.909856",
+    "title": "What If? Galactus Transformed Hulk",
+    "volume": 6,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:07:47.800156",
+    "title": "Aquaman Special: Endless Winter",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:08:08.215207",
+    "title": "Aquaman",
+    "volume": 5,
+    "reason": "1 issues not found on CV: [np.float64(75.0)]"
+  },
+  {
+    "ts": "2026-06-26T14:08:29.550080",
+    "title": "The Trials of Shazam",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(9.0)]"
+  },
+  {
+    "ts": "2026-06-26T14:08:31.715815",
+    "title": "Time Slide",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:08:33.104012",
+    "title": "Titans/Outsiders: Secret Files and Origins",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:09:36.268555",
+    "title": "Ultimatum: Fantastic Four",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(60.0)]"
+  },
+  {
+    "ts": "2026-06-26T14:11:01.315747",
+    "title": "Ultraman vs. Avengers",
+    "volume": 7,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:11:02.075104",
+    "title": "Aquaboy and Lagoon Man",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:12:05.777766",
+    "title": "Uncanny X-Men",
+    "volume": 4,
+    "reason": "1 issues not found on CV: [np.float64(13.0)]"
+  },
+  {
+    "ts": "2026-06-26T14:12:08.212373",
+    "title": "Uncanny X-Men Special: No End in Sight Part 3",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:12:09.022226",
+    "title": "Union Jack the Ripper: Bloodhunt",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:12:30.402285",
+    "title": "Voodoo",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(0.0)]"
+  },
+  {
+    "ts": "2026-06-26T14:13:16.202364",
+    "title": "War of the Realms: Savage Avengers",
+    "volume": 7,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:14:41.410525",
+    "title": "Amazing X-Men: Age of Revelation",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:14:42.386249",
+    "title": "Shang-Chi vs. Captain America",
+    "volume": 9,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:14:43.151657",
+    "title": "Secret Invasion: Miss Marvel",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:14:44.054541",
+    "title": "Captain America and Volstagg",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:16:34.044146",
+    "title": "Green Lantern Corps: Civil Corps",
+    "volume": 7,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:19:31.409712",
+    "title": "Guardians of the Galaxy: Bane of the Blastaar",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:20:15.794865",
+    "title": "House of M Sketchbook",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(1.0)]"
+  },
+  {
+    "ts": "2026-06-26T14:20:17.091002",
+    "title": "Hulk Smash the Avengers",
+    "volume": 4,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:28:21.349436",
+    "title": "Iron Man Special: No End in Sight Part 2",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:28:43.211871",
+    "title": "Journey into Mystery",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(5.0)]"
+  },
+  {
+    "ts": "2026-06-26T14:29:28.995656",
+    "title": "Doctor Who: Free Comic Book Day 2015",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:32:23.814742",
+    "title": "Expatriate X-Men: Age of Revelation",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:33:51.106276",
+    "title": "Fantastic Four Annual",
+    "volume": 3,
+    "reason": "1 issues not found on CV: [np.float64(32.0)]"
+  },
+  {
+    "ts": "2026-06-26T14:33:53.036086",
+    "title": "Fantastic Four \u00d7 Gargoyles",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:33:55.313288",
+    "title": "Fantastic Four: Doom War",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:34:17.445604",
+    "title": "Fantastic Four: Empyre",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(0.0)]"
+  },
+  {
+    "ts": "2026-06-26T14:34:19.837740",
+    "title": "Free Comic Book Day: Civil War",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:34:21.838990",
+    "title": "Free Comic Book Day: Doctor Who",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:34:22.934688",
+    "title": "Eternals: When Gods Walked the Earth",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:34:22.955428",
+    "title": "Friendly Neighborhood Spider-Man",
+    "volume": 1,
+    "reason": "Year gap: Filled avg year 2005, blank avg 2024 (gap 19y)"
+  },
+  {
+    "ts": "2026-06-26T14:34:24.317553",
+    "title": "Futures End: Aquaman",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:34:25.554728",
+    "title": "Futures End: Batgirl",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:34:26.730525",
+    "title": "Futures End: Batman and Robin",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:34:27.554002",
+    "title": "Futures End: Batman/Superman",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:34:28.814379",
+    "title": "Futures End: Birds of Prey",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:34:30.912906",
+    "title": "Futures End: Earth 2",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:34:31.894307",
+    "title": "Futures End: Grayson",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:34:32.863730",
+    "title": "Futures End: Huntress/Power Girl",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:34:35.220741",
+    "title": "Futures End: Justice League",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:34:36.635434",
+    "title": "Futures End: New Suicide Squad",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:34:37.413324",
+    "title": "Futures End: Superman/Wonder Woman",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:36:22.674744",
+    "title": "Justice League",
+    "volume": 2,
+    "reason": "1 issues not found on CV: [np.float64(23.4)]"
+  },
+  {
+    "ts": "2026-06-26T14:36:27.336088",
+    "title": "Justice League Dark: Tomorrow's Special",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:37:10.684432",
+    "title": "DC: 5 of a Kind \u2014 Thunder/Martian Manhunter",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:37:11.573437",
+    "title": "Nova Special: No End in Sight",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:37:12.512823",
+    "title": "DC: 5 of a Kind \u2014 Nightwing/Captain Boomerang",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:37:14.115648",
+    "title": "DC: 5 of a Kind \u2014 Metamorpho/Aquaman",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:37:58.360658",
+    "title": "DC: 5 of a Kind \u2014 Katana/Shazam",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:38:00.741960",
+    "title": "Planet DC: Batgirl",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:38:01.672903",
+    "title": "DC vs. Marvel: The Legion",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:43:25.039056",
+    "title": "Red Hulk",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(3.0)]"
+  },
+  {
+    "ts": "2026-06-26T14:43:48.303915",
+    "title": "Catwoman",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(0.0)]"
+  },
+  {
+    "ts": "2026-06-26T14:45:56.721293",
+    "title": "S.H.I.E.L.D.: Quake \u2014 50th Anniversary",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:47:01.448223",
+    "title": "Secret Avengers",
+    "volume": 5,
+    "reason": "1 issues not found on CV: [np.float64(28.0)]"
+  },
+  {
+    "ts": "2026-06-26T14:48:48.353130",
+    "title": "Nightwing",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(0.0)]"
+  },
+  {
+    "ts": "2026-06-26T14:56:58.630863",
+    "title": "Demon Knights",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(0.0)]"
+  },
+  {
+    "ts": "2026-06-26T14:56:59.715148",
+    "title": "Dark Reign: Deadpool vs. Thunderbolts",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:57:00.607328",
+    "title": "DCKO: The Kids Are All Fight Special",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:57:44.433823",
+    "title": "Longshots: Age of Revelation",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:57:44.441321",
+    "title": "Action Comics",
+    "volume": 1,
+    "reason": "Year gap: Filled avg year 2020, blank avg 1981 (gap 39y)"
+  },
+  {
+    "ts": "2026-06-26T14:57:45.832095",
+    "title": "Marvel Must Have: Fantastic Four",
+    "volume": 3,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:58:29.903121",
+    "title": "DCKO: Red Hood vs. The Joker",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:58:31.116007",
+    "title": "Midnight Suns: Bloodhunt",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T15:00:40.462094",
+    "title": "Moon Knight and the Infinity Watch",
+    "volume": 11,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T15:00:41.521072",
+    "title": "Ms. Marvel and Moon Knight",
+    "volume": 11,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T15:00:42.348416",
+    "title": "Ms. Marvel: The Muse Menace",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T15:02:10.604185",
+    "title": "DC: 5 of a Kind \u2014 Wonder Woman/Grace",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T15:02:11.311054",
+    "title": "A Death in the Family: Robin Lives!",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T20:50:53.177592",
+    "title": "The Ultimates",
+    "volume": 1,
+    "reason": "9 issues not found on CV: [np.float64(15.0), np.float64(17.0), np.float64(23.0), np.float64(24.0), np.float64(26.0), np.float64(27.0), np.float64(28.0), np.float64(29.0), np.float64(30.0)]"
+  },
+  {
+    "ts": "2026-06-28T20:55:06.611603",
+    "title": "Legion Lost",
+    "volume": 2,
+    "reason": "8 issues not found on CV: [np.float64(4.0), np.float64(5.0), np.float64(6.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0), np.float64(11.0)]"
+  },
+  {
+    "ts": "2026-06-28T20:58:58.564985",
+    "title": "Suicide Squad: From the Ashes",
+    "volume": 4,
+    "reason": "6 issues not found on CV: [np.float64(3.0), np.float64(4.0), np.float64(5.0), np.float64(6.0), np.float64(7.0), np.float64(8.0)]"
+  },
+  {
+    "ts": "2026-06-28T21:01:45.053687",
+    "title": "All-Star Batman and Robin, the Boy Wonder",
+    "volume": 1,
+    "reason": "6 issues not found on CV: [np.float64(5.0), np.float64(6.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0)]"
+  },
+  {
+    "ts": "2026-06-28T21:06:36.609142",
+    "title": "Suicide Squad Most Wanted: Deadshot and Katana",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:06:37.543100",
+    "title": "Star Trek: Deep Space Nine \u2014 The Dog of War",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:06:38.455028",
+    "title": "S.H.I.E.L.D. Infinite",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:08:42.189274",
+    "title": "X",
+    "volume": 1,
+    "reason": "5 issues not found on CV: [np.float64(6.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0)]"
+  },
+  {
+    "ts": "2026-06-28T21:09:24.029697",
+    "title": "Imperial",
+    "volume": 1,
+    "reason": "3 issues not found on CV: [np.float64(2.0), np.float64(3.0), np.float64(4.0)]"
+  },
+  {
+    "ts": "2026-06-28T21:09:24.945326",
+    "title": "Legion of Superheroes",
+    "volume": 6,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:09:46.349878",
+    "title": "Domino",
+    "volume": 3,
+    "reason": "5 issues not found on CV: [np.float64(6.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0)]"
+  },
+  {
+    "ts": "2026-06-28T21:09:47.281386",
+    "title": "Star Trek: Strange New Worlds \u2014 The Illyrian Enigma",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:09:48.164414",
+    "title": "Star Trek: Deep Space Nine \u2014 Too Long a Sacrifice",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:11:32.661381",
+    "title": "Silver Surfer: Surfer No More",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:11:32.686226",
+    "title": "Silver Surfer: Rebirth",
+    "volume": 1,
+    "reason": "Year gap: Filled avg year 2022, blank avg 1992 (gap 30y)"
+  },
+  {
+    "ts": "2026-06-28T21:11:33.472489",
+    "title": "Star Trek: Voyager \u2014 Seven's Reckoning",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:12:19.389701",
+    "title": "DCKO",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:12:20.201550",
+    "title": "SGU: Stargate Universe",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:14:25.489368",
+    "title": "Invincible Iron Man",
+    "volume": 2,
+    "reason": "4 issues not found on CV: [np.float64(79.0), np.float64(80.0), np.float64(81.0), np.float64(82.0)]"
+  },
+  {
+    "ts": "2026-06-28T21:24:24.483392",
+    "title": "Avengers: Defenders \u2014 Tarot",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:26:30.761966",
+    "title": "Original Sin: Hulk vs. Iron Man",
+    "volume": 3,
+    "reason": "3 issues not found on CV: [np.float64(2.0), np.float64(3.0), np.float64(4.0)]"
+  },
+  {
+    "ts": "2026-06-28T21:29:58.943217",
+    "title": "War of the Realms: Giant-Man",
+    "volume": 1,
+    "reason": "2 issues not found on CV: [np.float64(2.0), np.float64(3.0)]"
+  },
+  {
+    "ts": "2026-06-28T21:30:00.191906",
+    "title": "Robin and Batman: Jason Todd",
+    "volume": 5,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:30:00.982066",
+    "title": "What If? Avengers vs. X-Men",
+    "volume": 4,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:30:01.814476",
+    "title": "Robin: The Joker's Wild",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:30:02.755034",
+    "title": "Unbreakable X-Men: Age of Revelation",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:32:52.226648",
+    "title": "Strange Academy: Bloodhunt",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:32:53.231789",
+    "title": "Dracula: Bloodhunt",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:34:38.068698",
+    "title": "Space Corps",
+    "volume": 1,
+    "reason": "2 issues not found on CV: [np.float64(2.0), np.float64(3.0)]"
+  },
+  {
+    "ts": "2026-06-28T21:38:34.164290",
+    "title": "Black Panther: Bloodhunt",
+    "volume": 10,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:41:44.183420",
+    "title": "Star Trek: Discovery \u2014 Aftermath",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:43:09.060647",
+    "title": "DCKO: Night Fight",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:43:10.152955",
+    "title": "Gene Grade",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:43:51.478369",
+    "title": "Legion Lost",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(0.0)]"
+  },
+  {
+    "ts": "2026-06-28T21:44:34.851949",
+    "title": "Green Lantern: Fractured Spectrum",
+    "volume": 7,
+    "reason": "1 issues not found on CV: [np.float64(7.0)]"
+  },
+  {
+    "ts": "2026-06-28T21:46:44.659013",
+    "title": "Justice League Dark",
+    "volume": 1,
+    "reason": "2 issues not found on CV: [np.float64(0.0), np.float64(23.2)]"
+  },
+  {
+    "ts": "2026-06-28T21:47:05.774460",
+    "title": "Justice League",
+    "volume": 1,
+    "reason": "2 issues not found on CV: [np.float64(0.0), np.float64(8.0)]"
+  },
+  {
+    "ts": "2026-06-28T21:50:16.507300",
+    "title": "New Mutants",
+    "volume": 1,
+    "reason": "2 issues not found on CV: [np.float64(93.0), np.float64(97.0)]"
+  },
+  {
+    "ts": "2026-06-28T21:52:43.522706",
+    "title": "Star Trek Annual",
+    "volume": 1,
+    "reason": "2 issues not found on CV: [np.float64(2023.0), np.float64(2024.0)]"
+  },
+  {
+    "ts": "2026-06-28T21:52:44.731454",
+    "title": "Star Trek: Picard \u2014 Stargazer",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:52:46.151786",
+    "title": "Star Trek: The Next Generation \u2014 Mirror Broken",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:52:46.792745",
+    "title": "The Orville: Digressions",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:52:47.724279",
+    "title": "The Orville: Heroes",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:52:48.486909",
+    "title": "The Orville: Launch Day",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:52:49.286322",
+    "title": "The Orville: The Word of Avis",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:53:52.383160",
+    "title": "World's Finest",
+    "volume": 1,
+    "reason": "Year gap: Filled avg year 2013, blank avg 1949 (gap 64y)"
+  },
+  {
+    "ts": "2026-06-28T21:53:53.563865",
+    "title": "X-Vengers: Age of Revelation",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:53:54.274560",
+    "title": "Free Comic Book Day: Spider-Man",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:53:55.066415",
+    "title": "Young Justice: Sins of the Father",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:54:16.509143",
+    "title": "Aquaman",
+    "volume": 1,
+    "reason": "2 issues not found on CV: [np.float64(0.0), np.float64(69.0)]"
+  },
+  {
+    "ts": "2026-06-28T21:55:42.551468",
+    "title": "Age of Apocalypse",
+    "volume": 2,
+    "reason": "2 issues not found on CV: [np.float64(20.0), np.float64(26.0)]"
+  },
+  {
+    "ts": "2026-06-28T21:56:51.010785",
+    "title": "Doctor Strange: Asgard",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:56:52.717759",
+    "title": "Avengers/Fantastic Four: Empyre",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:59:43.621566",
+    "title": "Cataclysm: Ultimate Comics X-Men",
+    "volume": 5,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:59:44.455108",
+    "title": "Batgirl: All In",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:59:46.060771",
+    "title": "Cloak and Dagger: Age of Revelation",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:01:12.704334",
+    "title": "Extreme X-Men",
+    "volume": 6,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:01:55.750942",
+    "title": "Star Trek: The Next Generation \u2014 The Gift",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:06:11.181851",
+    "title": "Batgirl",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(0.0)]"
+  },
+  {
+    "ts": "2026-06-28T22:06:12.239612",
+    "title": "Avengers: Wasp",
+    "volume": 7,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:07:15.990027",
+    "title": "Suicide Squad",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(0.0)]"
+  },
+  {
+    "ts": "2026-06-28T22:07:17.981769",
+    "title": "Star Trek: The Mirror War \u2014 Sisko",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:08:02.823808",
+    "title": "Avengers: Giant-Man",
+    "volume": 7,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:08:45.687115",
+    "title": "Avengers: Empyre",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:08:46.712978",
+    "title": "Superman Special: Endless Winter",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:10:13.474816",
+    "title": "The All-Star Story of the Dodgers",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:10:14.355655",
+    "title": "Star Trek: The Mirror War \u2014 Troi",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:12:23.211458",
+    "title": "Silop",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:13:49.384622",
+    "title": "Buffy the Vampire Slayer Annual",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(1.0)]"
+  },
+  {
+    "ts": "2026-06-28T22:13:49.414285",
+    "title": "Blue Beetle",
+    "volume": 1,
+    "reason": "Year gap: Filled avg year 2007, blank avg 2023 (gap 16y)"
+  },
+  {
+    "ts": "2026-06-28T22:13:50.241197",
+    "title": "Silver Surfer: The Legacy",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:13:51.991345",
+    "title": "Bloodhunters",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:13:52.967765",
+    "title": "Bloodhunt: Moon Knight",
+    "volume": 8,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:14:58.841683",
+    "title": "Bloodhunt: Jubilee",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:14:59.599553",
+    "title": "Black Widow: The Lost Days",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:16:03.993392",
+    "title": "Star Trek: Countdown to Darkness",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(4.0)]"
+  },
+  {
+    "ts": "2026-06-28T22:16:05.008262",
+    "title": "Star Trek: DS9 \u2014 Too Long a Sacrifice",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:16:06.339420",
+    "title": "Star Trek: Day of Blood \u2014 Prelude",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:16:48.137064",
+    "title": "Black Panther: Bloodhunt",
+    "volume": 1,
+    "reason": "CV lookup failed: Volume not found"
+  },
+  {
+    "ts": "2026-06-28T22:16:49.139583",
+    "title": "Black Panther Intergalactic",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:17:10.977411",
+    "title": "Star Trek: Defiant Annual",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(2024.0)]"
+  },
+  {
+    "ts": "2026-06-28T22:17:33.136839",
+    "title": "Batwing",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(0.0)]"
+  },
+  {
+    "ts": "2026-06-28T22:17:34.084999",
+    "title": "Star Trek: Generations",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:17:35.119185",
+    "title": "Star Trek: Generations \u2014 The Official Comics Adaptation",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:19:00.540520",
+    "title": "The Iron Age: Alpha",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:21:08.356518",
+    "title": "What If? X-Men Deadly Genesis",
+    "volume": 3,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:21:09.344051",
+    "title": "Wildstorm Starts Now!",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:21:10.325214",
+    "title": "Wolverine and the X-Men Annual",
+    "volume": 4,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:23:19.765794",
+    "title": "Wonder Man and the Beast",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:23:20.813270",
+    "title": "Wonder Woman 1984: Museum Mayhem",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:24:04.058262",
+    "title": "Agents of S.H.I.E.L.D. Standoff",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:24:04.922674",
+    "title": "Avengers and Moon Girl",
+    "volume": 7,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:25:50.662773",
+    "title": "X-Men",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(27.0)]"
+  },
+  {
+    "ts": "2026-06-28T22:25:51.579171",
+    "title": "X-Men Origins: X-Men Blue",
+    "volume": 6,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:26:34.535771",
+    "title": "X-Men/Eternals: Manifest Destiny",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:27:39.332016",
+    "title": "X-Men: Secret",
+    "volume": 6,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:28:00.558322",
+    "title": "Age of Revelation",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(1.0)]"
+  },
+  {
+    "ts": "2026-06-28T22:28:43.706814",
+    "title": "What If? Magic",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:28:44.592108",
+    "title": "What If? Galactus Transformed Moon Knight",
+    "volume": 11,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:28:45.517389",
+    "title": "What If? Galactus Transformed Hulk",
+    "volume": 6,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:30:52.846699",
+    "title": "Aquaman Special: Endless Winter",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:31:13.391543",
+    "title": "Aquaman",
+    "volume": 5,
+    "reason": "1 issues not found on CV: [np.float64(75.0)]"
+  },
+  {
+    "ts": "2026-06-28T22:31:35.437504",
+    "title": "The Trials of Shazam",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(9.0)]"
+  },
+  {
+    "ts": "2026-06-28T22:31:36.884229",
+    "title": "Time Slide",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:31:37.688688",
+    "title": "Titans/Outsiders: Secret Files and Origins",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:32:41.097177",
+    "title": "Ultimatum: Fantastic Four",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(60.0)]"
+  },
+  {
+    "ts": "2026-06-28T22:34:06.549795",
+    "title": "Ultraman vs. Avengers",
+    "volume": 7,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:34:07.612850",
+    "title": "Aquaboy and Lagoon Man",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:35:11.154846",
+    "title": "Uncanny X-Men",
+    "volume": 4,
+    "reason": "1 issues not found on CV: [np.float64(13.0)]"
+  },
+  {
+    "ts": "2026-06-28T22:35:11.995146",
+    "title": "Uncanny X-Men Special: No End in Sight Part 3",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:35:12.843052",
+    "title": "Union Jack the Ripper: Bloodhunt",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:35:34.354548",
+    "title": "Voodoo",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(0.0)]"
+  },
+  {
+    "ts": "2026-06-28T22:36:17.752054",
+    "title": "War of the Realms: Savage Avengers",
+    "volume": 7,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:37:41.797772",
+    "title": "Amazing X-Men: Age of Revelation",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:37:42.798272",
+    "title": "Shang-Chi vs. Captain America",
+    "volume": 9,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:37:43.581393",
+    "title": "Secret Invasion: Miss Marvel",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:37:44.651020",
+    "title": "Captain America and Volstagg",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:39:32.733877",
+    "title": "Green Lantern Corps: Civil Corps",
+    "volume": 7,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:42:22.375303",
+    "title": "Guardians of the Galaxy: Bane of the Blastaar",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:43:04.709578",
+    "title": "House of M Sketchbook",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(1.0)]"
+  },
+  {
+    "ts": "2026-06-28T22:43:05.607544",
+    "title": "Hulk Smash the Avengers",
+    "volume": 4,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:50:55.428366",
+    "title": "Iron Man Special: No End in Sight Part 2",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:51:16.725329",
+    "title": "Journey into Mystery",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(5.0)]"
+  },
+  {
+    "ts": "2026-06-28T22:52:00.350589",
+    "title": "Doctor Who: Free Comic Book Day 2015",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:54:54.967805",
+    "title": "Expatriate X-Men: Age of Revelation",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:56:18.233490",
+    "title": "Fantastic Four Annual",
+    "volume": 3,
+    "reason": "1 issues not found on CV: [np.float64(32.0)]"
+  },
+  {
+    "ts": "2026-06-28T22:56:19.213427",
+    "title": "Fantastic Four \u00d7 Gargoyles",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:56:20.022523",
+    "title": "Fantastic Four: Doom War",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:56:41.961615",
+    "title": "Fantastic Four: Empyre",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(0.0)]"
+  },
+  {
+    "ts": "2026-06-28T22:56:42.793630",
+    "title": "Free Comic Book Day: Civil War",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:56:43.713083",
+    "title": "Free Comic Book Day: Doctor Who",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:56:44.940775",
+    "title": "Eternals: When Gods Walked the Earth",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:56:44.957798",
+    "title": "Friendly Neighborhood Spider-Man",
+    "volume": 1,
+    "reason": "Year gap: Filled avg year 2005, blank avg 2024 (gap 19y)"
+  },
+  {
+    "ts": "2026-06-28T22:56:45.765062",
+    "title": "Futures End: Aquaman",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:56:46.850328",
+    "title": "Futures End: Batgirl",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:56:47.830986",
+    "title": "Futures End: Batman and Robin",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:56:48.665634",
+    "title": "Futures End: Batman/Superman",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:56:49.496750",
+    "title": "Futures End: Birds of Prey",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:56:50.448259",
+    "title": "Futures End: Earth 2",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:56:51.626081",
+    "title": "Futures End: Grayson",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:56:52.933351",
+    "title": "Futures End: Huntress/Power Girl",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:56:53.728924",
+    "title": "Futures End: Justice League",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:56:54.859470",
+    "title": "Futures End: New Suicide Squad",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:56:55.961536",
+    "title": "Futures End: Superman/Wonder Woman",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:58:41.177734",
+    "title": "Justice League",
+    "volume": 2,
+    "reason": "1 issues not found on CV: [np.float64(23.4)]"
+  },
+  {
+    "ts": "2026-06-28T22:58:45.147183",
+    "title": "Justice League Dark: Tomorrow's Special",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:59:28.575996",
+    "title": "DC: 5 of a Kind \u2014 Thunder/Martian Manhunter",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:59:29.412283",
+    "title": "Nova Special: No End in Sight",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:59:30.315775",
+    "title": "DC: 5 of a Kind \u2014 Nightwing/Captain Boomerang",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:59:31.040273",
+    "title": "DC: 5 of a Kind \u2014 Metamorpho/Aquaman",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T23:00:14.217822",
+    "title": "DC: 5 of a Kind \u2014 Katana/Shazam",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T23:00:15.202061",
+    "title": "Planet DC: Batgirl",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T23:00:16.118960",
+    "title": "DC vs. Marvel: The Legion",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T23:05:32.222972",
+    "title": "Red Hulk",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(3.0)]"
+  },
+  {
+    "ts": "2026-06-28T23:05:53.932218",
+    "title": "Catwoman",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(0.0)]"
+  },
+  {
+    "ts": "2026-06-28T23:08:00.417025",
+    "title": "S.H.I.E.L.D.: Quake \u2014 50th Anniversary",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T23:09:03.781943",
+    "title": "Secret Avengers",
+    "volume": 5,
+    "reason": "1 issues not found on CV: [np.float64(28.0)]"
+  },
+  {
+    "ts": "2026-06-28T23:10:49.958798",
+    "title": "Nightwing",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(0.0)]"
+  },
+  {
+    "ts": "2026-06-28T23:18:53.780637",
+    "title": "Demon Knights",
+    "volume": 1,
+    "reason": "1 issues not found on CV: [np.float64(0.0)]"
+  },
+  {
+    "ts": "2026-06-28T23:18:54.575641",
+    "title": "Dark Reign: Deadpool vs. Thunderbolts",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T23:18:55.741853",
+    "title": "DCKO: The Kids Are All Fight Special",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T23:19:38.591091",
+    "title": "Longshots: Age of Revelation",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T23:19:38.613733",
+    "title": "Action Comics",
+    "volume": 1,
+    "reason": "Year gap: Filled avg year 2020, blank avg 1981 (gap 39y)"
+  },
+  {
+    "ts": "2026-06-28T23:19:40.029941",
+    "title": "Marvel Must Have: Fantastic Four",
+    "volume": 3,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T23:20:23.439411",
+    "title": "DCKO: Red Hood vs. The Joker",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T23:20:24.367170",
+    "title": "Midnight Suns: Bloodhunt",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T23:22:33.540762",
+    "title": "Moon Knight and the Infinity Watch",
+    "volume": 11,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T23:22:34.689201",
+    "title": "Ms. Marvel and Moon Knight",
+    "volume": 11,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T23:22:35.956074",
+    "title": "Ms. Marvel: The Muse Menace",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T23:24:04.429291",
+    "title": "DC: 5 of a Kind \u2014 Wonder Woman/Grace",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T23:24:05.212135",
+    "title": "A Death in the Family: Robin Lives!",
+    "volume": 1,
+    "reason": "CV lookup failed: No volumes found"
+  }
+]

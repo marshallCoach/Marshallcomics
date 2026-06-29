@@ -1,0 +1,883 @@
+/Users/robertmarshall/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[2026-06-28 20:39:36.628668] BRB Overnight Writer+Artist Fill (Comic Vine) starting...
+Queue: 308 Title+Volume runs with blank writers.
+Delay: 20s between requests (~180 req/hr, within free tier)
+[CV] One World Under Doom Vol 1 — 8 issues (~2025) [11 blank rows]
+  [VOL] 'One World Under Doom' → volume id 162403 ('One World Under Doom' 2025)
+  → Filled 11 rows | artists: 0 | missed: 0
+[CV] Star Trek Vol 1 — 9 issues (~2012) [10 blank rows]
+  [VOL] 'Star Trek' → volume id 4212 ('Star Trek' 1989)
+  → Filled 10 rows | artists: 9 | missed: 0
+[CV] Secret Six Vol 2 — 10 issues (~2009) [10 blank rows]
+  [VOL] 'Secret Six' → volume id 22841 ('Secret Six' 2008)
+  → Filled 10 rows | artists: 10 | missed: 0
+[CV] The Ultimates Vol 1 — 10 issues (~2013) [10 blank rows]
+  [VOL] 'The Ultimates' → volume id 18327 ('The Ultimates' 2002)
+  [NOT FOUND] #15.0 — not in CV volume
+  [NOT FOUND] #17.0 — not in CV volume
+  [NOT FOUND] #23.0 — not in CV volume
+  [NOT FOUND] #24.0 — not in CV volume
+  [NOT FOUND] #26.0 — not in CV volume
+  [NOT FOUND] #27.0 — not in CV volume
+  [NOT FOUND] #28.0 — not in CV volume
+  [NOT FOUND] #29.0 — not in CV volume
+  [NOT FOUND] #30.0 — not in CV volume
+  → Filled 1 rows | artists: 1 | missed: 9
+[CV] Suicide Squad Vol 2 — 10 issues (~2002) [10 blank rows]
+  [VOL] 'Suicide Squad' → volume id 19127 ('Suicide Squad' 2001)
+  → Filled 10 rows | artists: 10 | missed: 0
+[CV] Legion Lost Vol 2 — 8 issues (~2012) [8 blank rows]
+  [VOL] 'Legion Lost' → volume id 41092 ('Legion Lost' 2011)
+  [NOT FOUND] #4.0 — not in CV volume
+  [NOT FOUND] #5.0 — not in CV volume
+  [NOT FOUND] #6.0 — not in CV volume
+  [NOT FOUND] #7.0 — not in CV volume
+  [NOT FOUND] #8.0 — not in CV volume
+  [NOT FOUND] #9.0 — not in CV volume
+  [NOT FOUND] #10.0 — not in CV volume
+  [NOT FOUND] #11.0 — not in CV volume
+  → No writers found — logged to needs_review.json
+[CV] Justice League Unlimited Vol 1 — 8 issues (~2024) [8 blank rows]
+  [VOL] 'Justice League Unlimited' → volume id 161311 ('Justice League Unlimited' 2025)
+  → Filled 8 rows | artists: 1 | missed: 0
+[CV] Suicide Squad: From the Ashes Vol 4 — 7 issues (~2007) [7 blank rows]
+  [VOL] 'Suicide Squad: From the Ashes' → volume id 39338 ('Suicide Squad: From the Ashes' 2008)
+  [NOT FOUND] #3.0 — not in CV volume
+  [NOT FOUND] #4.0 — not in CV volume
+  [NOT FOUND] #5.0 — not in CV volume
+  [NOT FOUND] #6.0 — not in CV volume
+  [NOT FOUND] #7.0 — not in CV volume
+  [NOT FOUND] #8.0 — not in CV volume
+  → Filled 1 rows | artists: 1 | missed: 6
+[CV] Nova: Centurion Vol 1 — 6 issues (~2025) [6 blank rows]
+  [VOL] 'Nova: Centurion' → volume id 168564 ('Nova: Centurion' 2026)
+  → Filled 6 rows | artists: 0 | missed: 0
+[CV] All-Star Batman and Robin, the Boy Wonder Vol 1 — 6 issues (~2007) [6 blank rows]
+  [VOL] 'All-Star Batman and Robin, the Boy Wonder' → volume id 75354 ('Absolute All-Star Batman and Robin, The Boy Wonder' 2014)
+  [NOT FOUND] #5.0 — not in CV volume
+  [NOT FOUND] #6.0 — not in CV volume
+  [NOT FOUND] #7.0 — not in CV volume
+  [NOT FOUND] #8.0 — not in CV volume
+  [NOT FOUND] #9.0 — not in CV volume
+  [NOT FOUND] #10.0 — not in CV volume
+  → No writers found — logged to needs_review.json
+[CV] Red She-Hulk Vol 3 — 6 issues (~2012) [6 blank rows]
+  [VOL] 'Red She-Hulk' → volume id 52884 ('Red She-Hulk' 2012)
+  → Filled 6 rows | artists: 6 | missed: 0
+[CV] Legionnaires Vol 1 — 6 issues (~1999) [6 blank rows]
+  [VOL] 'Legionnaires' → volume id 4971 ('Legionnaires' 1993)
+  → Filled 6 rows | artists: 4 | missed: 0
+[CV] Suicide Squad Most Wanted: Deadshot and Katana Vol 1 — 5 issues (~2016) [5 blank rows]
+  [ERROR] No volumes found
+[CV] Star Trek: Deep Space Nine — The Dog of War Vol 1 — 5 issues (~2023) [5 blank rows]
+  [ERROR] No volumes found
+[CV] S.H.I.E.L.D. Infinite Vol 1 — 5 issues (~2014) [5 blank rows]
+  [ERROR] No volumes found
+[CV] X Vol 1 — 5 issues (~2023) [5 blank rows]
+  [VOL] 'X' → volume id 1758 ('Mysteries of Unexplored Worlds' 1956)
+  [NO WRITER] #6.0 — credits found but no writer role
+  [NO WRITER] #7.0 — credits found but no writer role
+  [NO WRITER] #8.0 — credits found but no writer role
+  [NO WRITER] #9.0 — credits found but no writer role
+  [NO WRITER] #10.0 — credits found but no writer role
+  → No writers found — logged to needs_review.json
+[CV] Imperial Vol 1 — 4 issues (~2025) [5 blank rows]
+  [VOL] 'Imperial' → volume id 81242 ('Imperial' 2015)
+  [NOT FOUND] #2.0 — not in CV volume
+  [NOT FOUND] #3.0 — not in CV volume
+  [NOT FOUND] #4.0 — not in CV volume
+  → Filled 1 rows | artists: 0 | missed: 3
+[CV] Legion of Superheroes Vol 6 — 5 issues (~2010) [5 blank rows]
+  [ERROR] No volumes found
+[CV] Domino Vol 3 — 5 issues (~2018) [5 blank rows]
+  [VOL] 'Domino' → volume id 10904 ('Domino' 2003)
+  [NOT FOUND] #6.0 — not in CV volume
+  [NOT FOUND] #7.0 — not in CV volume
+  [NOT FOUND] #8.0 — not in CV volume
+  [NOT FOUND] #9.0 — not in CV volume
+  [NOT FOUND] #10.0 — not in CV volume
+  → No writers found — logged to needs_review.json
+[CV] Star Trek: Strange New Worlds — The Illyrian Enigma Vol 1 — 4 issues (~2022) [4 blank rows]
+  [ERROR] No volumes found
+[CV] Star Trek: Deep Space Nine — Too Long a Sacrifice Vol 1 — 4 issues (~2020) [4 blank rows]
+  [ERROR] No volumes found
+[CV] Blade Vol 1 — 4 issues (~2023) [4 blank rows]
+  [VOL] 'Blade' → volume id 18117 ('Blade' 2006)
+  → Filled 4 rows | artists: 0 | missed: 0
+[CV] Silver Surfer: Surfer No More Vol 1 — 4 issues (~2011) [4 blank rows]
+  [ERROR] No volumes found
+[SKIP-COLLISION] Silver Surfer: Rebirth Vol 1
+[CV] Star Trek: Voyager — Seven's Reckoning Vol 1 — 4 issues (~2020) [4 blank rows]
+  [ERROR] No volumes found
+[CV] Justice League of America Vol 2 — 4 issues (~2013) [4 blank rows]
+  [VOL] 'Justice League of America' → volume id 18127 ('Justice League of America' 2006)
+  → Filled 4 rows | artists: 4 | missed: 0
+[CHECKPOINT] Saved comics_inventory_2806_2112.xlsx after 25 titles (118 API calls)
+[CV] DCKO Vol 1 — 4 issues (~2024) [4 blank rows]
+  [ERROR] No volumes found
+[CV] SGU: Stargate Universe Vol 1 — 4 issues (~2017) [4 blank rows]
+  [ERROR] No volumes found
+[CV] Dazzler Vol 1 — 4 issues (~2024) [4 blank rows]
+  [VOL] 'Dazzler' → volume id 159808 ('Dazzler' 2024)
+  → Filled 4 rows | artists: 0 | missed: 0
+[CV] Invincible Iron Man Vol 2 — 4 issues (~2022) [4 blank rows]
+  [VOL] 'Invincible Iron Man' → volume id 21487 ('Invincible Iron Man' 2008)
+  [NOT FOUND] #79.0 — not in CV volume
+  [NOT FOUND] #80.0 — not in CV volume
+  [NOT FOUND] #81.0 — not in CV volume
+  [NOT FOUND] #82.0 — not in CV volume
+  → No writers found — logged to needs_review.json
+[CV] Alien vs. Captain America Vol 1 — 4 issues (~2025) [4 blank rows]
+  [VOL] 'Alien vs. Captain America' → volume id 168194 ('Alien vs. Captain America' 2026)
+  → Filled 4 rows | artists: 0 | missed: 0
+[CV] Green Lantern Vol 5 — 4 issues (~2013) [4 blank rows]
+  [VOL] 'Green Lantern' → volume id 4363 ('Green Lantern' 1990)
+  → Filled 4 rows | artists: 4 | missed: 0
+[CV] The Ones Vol 1 — 4 issues (~2023) [4 blank rows]
+  [VOL] 'The Ones' → volume id 145798 ('The Ones' 2022)
+  → Filled 4 rows | artists: 0 | missed: 0
+[CV] Web of Black Widow Vol 1 — 4 issues (~2019) [4 blank rows]
+  [VOL] 'Web of Black Widow' → volume id 121119 ('Web of Black Widow' 2019)
+  → Filled 4 rows | artists: 1 | missed: 0
+[CV] Superman Vol 2 — 4 issues (~2004) [4 blank rows]
+  [VOL] 'Superman' → volume id 3816 ('Superman' 1987)
+  → Filled 4 rows | artists: 4 | missed: 0
+[CV] Avengers: Defenders — Tarot Vol 1 — 4 issues (~2024) [4 blank rows]
+  [ERROR] No volumes found
+[CV] Wolverine: Madripoor Knights Vol 1 — 4 issues (~2024) [4 blank rows]
+  [VOL] 'Wolverine: Madripoor Knights' → volume id 156648 ('Wolverine: Madripoor Knights' 2024)
+  → Filled 4 rows | artists: 0 | missed: 0
+[CV] Original Sin: Hulk vs. Iron Man Vol 3 — 3 issues (~2014) [3 blank rows]
+  [VOL] 'Original Sin: Hulk vs. Iron Man' → volume id 77758 ('Original Sin: Hulk vs. Iron Man' 2014)
+  [NOT FOUND] #2.0 — not in CV volume
+  [NOT FOUND] #3.0 — not in CV volume
+  [NOT FOUND] #4.0 — not in CV volume
+  → No writers found — logged to needs_review.json
+[CV] Cable: Love and Chrome Vol 1 — 3 issues (~2025) [3 blank rows]
+  [VOL] 'Cable: Love and Chrome' → volume id 161843 ('Cable: Love and Chrome' 2025)
+  → Filled 3 rows | artists: 0 | missed: 0
+[CV] Predator vs. Black Panther Vol 10 — 3 issues (~2024) [3 blank rows]
+  [VOL] 'Predator vs. Black Panther' → volume id 159324 ('Predator vs. Black Panther' 2024)
+  → Filled 3 rows | artists: 2 | missed: 0
+[CV] War of the Realms: Giant-Man Vol 1 — 3 issues (~2019) [3 blank rows]
+  [VOL] 'War of the Realms: Giant-Man' → volume id 120580 ('War of the Realms: Giant-Man' 2019)
+  [NOT FOUND] #2.0 — not in CV volume
+  [NOT FOUND] #3.0 — not in CV volume
+  → Filled 1 rows | artists: 0 | missed: 2
+[CV] Robin and Batman: Jason Todd Vol 5 — 3 issues (~2025) [3 blank rows]
+  [ERROR] No volumes found
+[CV] What If? Avengers vs. X-Men Vol 4 — 3 issues (~2013) [3 blank rows]
+  [ERROR] No volumes found
+[CV] Robin: The Joker's Wild Vol 1 — 3 issues (~2024) [3 blank rows]
+  [ERROR] No volumes found
+[CV] Unbreakable X-Men: Age of Revelation Vol 1 — 3 issues (~2025) [3 blank rows]
+  [ERROR] No volumes found
+[CV] Night Thrasher Vol 1 — 3 issues (~1993) [3 blank rows]
+  [VOL] 'Night Thrasher' → volume id 5034 ('Night Thrasher' 1993)
+  → Filled 3 rows | artists: 3 | missed: 0
+[CV] Power Man: Timeless Vol 1 — 3 issues (~2021) [3 blank rows]
+  [VOL] 'Power Man: Timeless' → volume id 162321 ('Power Man: Timeless' 2025)
+  → Filled 3 rows | artists: 0 | missed: 0
+[CV] Strange Academy: Bloodhunt Vol 1 — 2 issues (~2024) [3 blank rows]
+  [ERROR] No volumes found
+[CV] Dracula: Bloodhunt Vol 1 — 3 issues (~2024) [3 blank rows]
+  [ERROR] No volumes found
+[CV] Sorcerer Supreme Vol 1 — 2 issues (~2025) [3 blank rows]
+  [VOL] 'Sorcerer Supreme' → volume id 169659 ('Sorcerer Supreme' 2026)
+  → Filled 3 rows | artists: 0 | missed: 0
+[CV] Space Corps Vol 1 — 3 issues (~2024) [3 blank rows]
+  [VOL] 'Space Corps' → volume id 72981 ('Space Corps' 2012)
+  [NOT FOUND] #2.0 — not in CV volume
+  [NOT FOUND] #3.0 — not in CV volume
+  → Filled 1 rows | artists: 0 | missed: 2
+[CHECKPOINT] Saved comics_inventory_2806_2134.xlsx after 50 titles (200 API calls)
+[CV] Fantastic Four Vol 3 — 2 issues (~1999) [3 blank rows]
+  [VOL] 'Fantastic Four' → volume id 6211 ('Fantastic Four' 1998)
+  → Filled 3 rows | artists: 2 | missed: 0
+[CV] Star Trek: Countdown Vol 1 — 3 issues (~2009) [3 blank rows]
+  [VOL] 'Star Trek: Countdown' → volume id 25667 ('Star Trek: Countdown' 2009)
+  → Filled 3 rows | artists: 0 | missed: 0
+[CV] Black Panther: Intergalactic Vol 1 — 2 issues (~2025) [3 blank rows]
+  [VOL] 'Black Panther: Intergalactic' → volume id 169342 ('Black Panther: Intergalactic' 2026)
+  → Filled 3 rows | artists: 0 | missed: 0
+[CV] Black Panther: Bloodhunt Vol 10 — 3 issues (~2024) [3 blank rows]
+  [ERROR] No volumes found
+[CV] Black Panther Vol 1 — 3 issues (~2006) [3 blank rows]
+  [VOL] 'Black Panther' → volume id 11502 ('Black Panther' 2005)
+  → Filled 3 rows | artists: 3 | missed: 0
+[CV] Birds of Prey Vol 1 — 3 issues (~2007) [3 blank rows]
+  [VOL] 'Birds of Prey' → volume id 6498 ('Birds of Prey' 1999)
+  → Filled 3 rows | artists: 3 | missed: 0
+[CV] Star Trek: Discovery — Aftermath Vol 1 — 3 issues (~2019) [3 blank rows]
+  [ERROR] No volumes found
+[CV] Xin: Journey of the Monkey King Vol 2 — 3 issues (~2023) [3 blank rows]
+  [VOL] 'Xin: Journey of the Monkey King' → volume id 30164 ('Xin: Journey Of The Monkey King' 2003)
+  → Filled 3 rows | artists: 0 | missed: 0
+[CV] DCKO: Night Fight Vol 1 — 3 issues (~2024) [3 blank rows]
+  [ERROR] No volumes found
+[CV] Gene Grade Vol 1 — 2 issues (~2022) [2 blank rows]
+  [ERROR] No volumes found
+[CV] Legion Lost Vol 1 — 2 issues (~2000) [2 blank rows]
+  [NOT FOUND] #0.0 — not in CV volume
+  → Filled 1 rows | artists: 0 | missed: 1
+[CV] Green Lantern: Fractured Spectrum Vol 7 — 2 issues (~2024) [2 blank rows]
+  [VOL] 'Green Lantern: Fractured Spectrum' → volume id 162010 ('Green Lantern: Fractured Spectrum' 2025)
+  [NOT FOUND] #7.0 — not in CV volume
+  → Filled 1 rows | artists: 0 | missed: 1
+[CV] Giant-Size X-Men Vol 1 — 1 issues (~2024) [2 blank rows]
+  [VOL] 'Giant-Size X-Men' → volume id 2763 ('Giant-Size X-Men' 1975)
+  → Filled 2 rows | artists: 1 | missed: 0
+[CV] Justice League Red Vol 1 — 2 issues (~2024) [2 blank rows]
+  [VOL] 'Justice League Red' → volume id 166296 ('Justice League Red' 2025)
+  → Filled 2 rows | artists: 0 | missed: 0
+[CV] Justice League Dark Vol 1 — 2 issues (~2012) [2 blank rows]
+  [VOL] 'Justice League Dark' → volume id 61600 ('Justice League Dark' 2012)
+  [NOT FOUND] #0.0 — not in CV volume
+  [NOT FOUND] #23.2 — not in CV volume
+  → No writers found — logged to needs_review.json
+[CV] Justice League Vol 1 — 2 issues (~2012) [2 blank rows]
+  [VOL] 'Justice League' → volume id 3796 ('Justice League' 1987)
+  [NOT FOUND] #0.0 — not in CV volume
+  [NOT FOUND] #8.0 — not in CV volume
+  → No writers found — logged to needs_review.json
+[CV] Lords of Empyre Vol 1 — 1 issues (~2020) [2 blank rows]
+  [VOL] 'Lords of Empyre' → volume id 128881 ('Lords of Empyre: Emperor Hulkling' 2020)
+  → Filled 2 rows | artists: 1 | missed: 0
+[CV] Spider-Punk Vol 1 — 2 issues (~2022) [2 blank rows]
+  [VOL] 'Spider-Punk' → volume id 142144 ('Spider-Punk' 2022)
+  → Filled 2 rows | artists: 0 | missed: 0
+[CV] Marvel Zombies Vol 1 — 2 issues (~2024) [2 blank rows]
+  [VOL] 'Marvel Zombies' → volume id 19252 ('Marvel Zombies' 2005)
+  → Filled 2 rows | artists: 0 | missed: 0
+[CV] New Mutants Vol 1 — 2 issues (~1990) [2 blank rows]
+  [VOL] 'New Mutants' → volume id 18351 ('New Mutants' 2003)
+  [NOT FOUND] #93.0 — not in CV volume
+  [NOT FOUND] #97.0 — not in CV volume
+  → No writers found — logged to needs_review.json
+[CV] Planet of the Apes vs. Fantastic Four Vol 1 — 2 issues (~2024) [2 blank rows]
+  [VOL] 'Planet of the Apes vs. Fantastic Four' → volume id 170478 ('Planet of the Apes vs. Fantastic Four' 2026)
+  → Filled 2 rows | artists: 0 | missed: 0
+[CV] Power Man and Iron Fist Vol 2 — 2 issues (~2011) [2 blank rows]
+  [VOL] 'Power Man and Iron Fist' → volume id 38907 ('Power Man and Iron Fist' 2011)
+  → Filled 2 rows | artists: 2 | missed: 0
+[CV] Star Trek Annual Vol 1 — 2 issues (~2023) [2 blank rows]
+  [VOL] 'Star Trek Annual' → volume id 69874 ('Star Trek Annual' 2013)
+  [NOT FOUND] #2023.0 — not in CV volume
+  [NOT FOUND] #2024.0 — not in CV volume
+  → No writers found — logged to needs_review.json
+[CV] Star Trek: Picard — Stargazer Vol 1 — 2 issues (~2022) [2 blank rows]
+  [ERROR] No volumes found
+[CV] Star Trek: The Next Generation — Mirror Broken Vol 1 — 2 issues (~2017) [2 blank rows]
+  [ERROR] No volumes found
+[CV] The Orville: Digressions Vol 1 — 2 issues (~2019) [2 blank rows]
+  [ERROR] No volumes found
+[CV] The Orville: Heroes Vol 1 — 2 issues (~2019) [2 blank rows]
+  [ERROR] No volumes found
+[CV] The Orville: Launch Day Vol 1 — 2 issues (~2019) [2 blank rows]
+  [ERROR] No volumes found
+[CV] The Orville: The Word of Avis Vol 1 — 2 issues (~2019) [2 blank rows]
+  [ERROR] No volumes found
+[CV] The Question: All Along the Watchtower Vol 1 — 2 issues (~2024) [2 blank rows]
+  [VOL] 'The Question: All Along the Watchtower' → volume id 161113 ('The Question: All Along the Watchtower' 2025)
+  → Filled 2 rows | artists: 0 | missed: 0
+[SKIP-COLLISION] World's Finest Vol 1
+[CV] X-Vengers: Age of Revelation Vol 1 — 2 issues (~2025) [2 blank rows]
+  [ERROR] No volumes found
+[CV] Free Comic Book Day: Spider-Man Vol 1 — 1 issues (~2022) [2 blank rows]
+  [ERROR] No volumes found
+[CV] Young Justice: Sins of the Father Vol 1 — 2 issues (~1998) [2 blank rows]
+  [ERROR] No volumes found
+[CV] Aquaman Vol 1 — 2 issues (~2000) [2 blank rows]
+  [VOL] 'Aquaman' → volume id 9517 ('Aquaman' 2003)
+  [NOT FOUND] #0.0 — not in CV volume
+  [NOT FOUND] #69.0 — not in CV volume
+  → No writers found — logged to needs_review.json
+[CV] Bastard Samurai Vol 1 — 2 issues (~2002) [2 blank rows]
+  [VOL] 'Bastard Samurai' → volume id 25181 ('Bastard Samurai' 2002)
+  → Filled 2 rows | artists: 2 | missed: 0
+[CV] Age of Apocalypse Vol 2 — 2 issues (~2013) [2 blank rows]
+  [VOL] 'Age of Apocalypse' → volume id 25127 ('What If? X-Men: Age Of Apocalypse' 2007)
+  [NOT FOUND] #20.0 — not in CV volume
+  [NOT FOUND] #26.0 — not in CV volume
+  → No writers found — logged to needs_review.json
+[CV] Earth 2 Annual Vol 1 — 2 issues (~2013) [2 blank rows]
+  [VOL] 'Earth 2 Annual' → volume id 62350 ('Earth 2 Annual' 2013)
+  → Filled 2 rows | artists: 2 | missed: 0
+[CV] Doctor Strange: Asgard Vol 1 — 2 issues (~2025) [2 blank rows]
+  [ERROR] No volumes found
+[CV] Avengers/Fantastic Four: Empyre Vol 1 — 2 issues (~2020) [2 blank rows]
+  [ERROR] No volumes found
+[CV] Aquaman Vol 6 — 2 issues (~2013) [2 blank rows]
+  → Filled 2 rows | artists: 2 | missed: 0
+[CV] Black Panther: World of Wakanda Vol 7 — 2 issues (~2017) [2 blank rows]
+  [VOL] 'Black Panther: World of Wakanda' → volume id 95579 ('Black Panther: World of Wakanda' 2017)
+  → Filled 2 rows | artists: 2 | missed: 0
+[CV] DC vs. Vampires: World War V Vol 1 — 2 issues (~2024) [2 blank rows]
+  [VOL] 'DC vs. Vampires: World War V' → volume id 159245 ('DC vs. Vampires: World War V' 2024)
+  → Filled 2 rows | artists: 0 | missed: 0
+[CV] Cataclysm: Ultimate Comics X-Men Vol 5 — 2 issues (~2014) [2 blank rows]
+  [ERROR] No volumes found
+[CV] Batgirl: All In Vol 1 — 2 issues (~2024) [2 blank rows]
+  [ERROR] No volumes found
+[CV] Cloak and Dagger: Age of Revelation Vol 1 — 2 issues (~2025) [2 blank rows]
+  [ERROR] No volumes found
+[CV] Star Trek: Waypoint Vol 1 — 1 issues (~2016) [1 blank rows]
+  [VOL] 'Star Trek: Waypoint' → volume id 94392 ('Star Trek: Waypoint' 2016)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Star Trek: Waypoint Special Vol 1 — 1 issues (~2017) [1 blank rows]
+  [VOL] 'Star Trek: Waypoint Special' → volume id 115862 ('Star Trek: Waypoint Special' 2018)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Extreme X-Men Vol 6 — 1 issues (~2022) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Strange Academy: Miles Morales Vol 1 — 1 issues (~2024) [1 blank rows]
+  [VOL] 'Strange Academy: Miles Morales' → volume id 152655 ('Strange Academy: Miles Morales' 2023)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Star Trek: The Next Generation — The Gift Vol 1 — 1 issues (~2013) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Batman Vol 1 — 1 issues (~2004) [1 blank rows]
+  [VOL] 'Batman' → volume id 796 ('Batman' 1940)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] Star Trek: The Next Generation Vol 1 — 1 issues (~2021) [1 blank rows]
+  [VOL] 'Star Trek: The Next Generation' → volume id 4214 ('Star Trek: The Next Generation' 1989)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] Batgirl Vol 1 — 1 issues (~2012) [1 blank rows]
+  [VOL] 'Batgirl' → volume id 27457 ('Batgirl' 2009)
+  [NOT FOUND] #0.0 — not in CV volume
+  → No writers found — logged to needs_review.json
+[CV] Avengers: Wasp Vol 7 — 1 issues (~2023) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Strange Academy: Moon Knight Vol 1 — 1 issues (~2023) [1 blank rows]
+  [VOL] 'Strange Academy: Moon Knight' → volume id 153631 ('Strange Academy: Moon Knight' 2023)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Suicide Squad Vol 1 — 1 issues (~2012) [1 blank rows]
+  [NOT FOUND] #0.0 — not in CV volume
+  → No writers found — logged to needs_review.json
+[CV] Star Trek: The Mirror War — Sisko Vol 1 — 1 issues (~2022) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Suicide Squad: Amanda Waller Vol 1 — 1 issues (~2012) [1 blank rows]
+  [VOL] 'Suicide Squad: Amanda Waller' → volume id 72547 ('Suicide Squad: Amanda Waller' 2014)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] Avengers: Giant-Man Vol 7 — 1 issues (~2019) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Supergirl Vol 1 — 1 issues (~2012) [1 blank rows]
+  [VOL] 'Supergirl' → volume id 18012 ('Supergirl' 2005)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] Avengers: Empyre Vol 1 — 1 issues (~2020) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Superman Special: Endless Winter Vol 1 — 1 issues (~2021) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Superman/Batman Annual Vol 1 — 1 issues (~2009) [1 blank rows]
+  [VOL] 'Superman/Batman Annual' → volume id 19020 ('Superman/Batman Annual' 2006)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] Teen Titans: Endless Winter Special Vol 1 — 1 issues (~2021) [1 blank rows]
+  [VOL] 'Teen Titans: Endless Winter Special' → volume id 132567 ('Teen Titans: Endless Winter Special' 2020)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] The All-Star Story of the Dodgers Vol 1 — 1 issues (~1979) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Star Trek: The Mirror War — Troi Vol 1 — 1 issues (~2022) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Star Trek: Khan Vol 1 — 1 issues (~2013) [1 blank rows]
+  [VOL] 'Star Trek: Khan' → volume id 68324 ('Star Trek: Khan' 2013)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] Batman Beyond: Return of the Joker Vol 1 — 1 issues (~2001) [1 blank rows]
+  [VOL] 'Batman Beyond: Return of the Joker' → volume id 27496 ('Batman Beyond: Return of The Joker' 2001)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] Blood Squad Seven Vol 1 — 1 issues (~2024) [1 blank rows]
+  [VOL] 'Blood Squad Seven' → volume id 158244 ('Blood Squad Seven' 2024)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Silop Vol 1 — 1 issues (~2024) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Silver Surfer Annual Vol 1 — 1 issues (~1987) [1 blank rows]
+  [VOL] 'Silver Surfer Annual' → volume id 4069 ('Silver Surfer Annual' 1988)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] Buffy the Vampire Slayer Annual Vol 1 — 1 issues (~1999) [1 blank rows]
+  [VOL] 'Buffy the Vampire Slayer Annual' → volume id 21454 ('Buffy the Vampire Slayer Annual 1999' 1999)
+  [NO WRITER] #1.0 — credits found but no writer role
+  → No writers found — logged to needs_review.json
+[SKIP-COLLISION] Blue Beetle Vol 1
+[CV] Silver Surfer: The Legacy Vol 1 — 1 issues (~2024) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Bloodhunters Vol 1 — 1 issues (~2024) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Bloodhunt: Moon Knight Vol 8 — 1 issues (~2024) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Spectacular Spider-Man Vol 1 — 1 issues (~2004) [1 blank rows]
+  [VOL] 'Spectacular Spider-Man' → volume id 11069 ('Spectacular Spider-Man' 2003)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] Spider-Man/Deadpool Vol 1 — 0 issues (~2016) [1 blank rows]
+  [VOL] 'Spider-Man/Deadpool' → volume id 87182 ('Spider-Man/Deadpool' 2016)
+  → No writers found — logged to needs_review.json
+[CV] Bloodhunt: Jubilee Vol 1 — 1 issues (~2024) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Black Widow: The Lost Days Vol 1 — 1 issues (~2019) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Batman and Robin Vol 1 — 1 issues (~2012) [1 blank rows]
+  [VOL] 'Batman and Robin' → volume id 42692 ('Batman and Robin' 2011)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] Star Trek: Countdown to Darkness Vol 1 — 1 issues (~2013) [1 blank rows]
+  [VOL] 'Star Trek: Countdown to Darkness' → volume id 39192 ('Star Trek: Countdown To Darkness' 2013)
+  [NOT FOUND] #4.0 — not in CV volume
+  → No writers found — logged to needs_review.json
+[CV] Star Trek: DS9 — Too Long a Sacrifice Vol 1 — 1 issues (~2020) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Star Trek: Day of Blood — Prelude Vol 1 — 1 issues (~2023) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Star Trek: Deep Space Nine Vol 1 — 1 issues (~2024) [1 blank rows]
+  [VOL] 'Star Trek: Deep Space Nine' → volume id 5790 ('Star Trek: Deep Space Nine' 1996)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] Black Panther: Bloodhunt Vol 1 — 1 issues (~2024) [1 blank rows]
+  [ERROR] Volume not found
+[CV] Black Panther Intergalactic Vol 1 — 1 issues (~2025) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Star Trek: Defiant Annual Vol 1 — 1 issues (~2024) [1 blank rows]
+  [VOL] 'Star Trek: Defiant Annual' → volume id 156394 ('Star Trek: Defiant Annual' 2024)
+  [NOT FOUND] #2024.0 — not in CV volume
+  → No writers found — logged to needs_review.json
+[CV] Batwing Vol 1 — 1 issues (~2012) [1 blank rows]
+  [VOL] 'Batwing' → volume id 50588 ('Batwing' 2012)
+  [NOT FOUND] #0.0 — not in CV volume
+  → No writers found — logged to needs_review.json
+[CV] Star Trek: Generations Vol 1 — 1 issues (~2017) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Star Trek: Generations — The Official Comics Adaptation Vol 1 — 1 issues (~1994) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Avengers: Captain America Vol 7 — 1 issues (~2023) [1 blank rows]
+  [VOL] 'Avengers: Captain America' → volume id 125810 ('Marvel's Avengers: Captain America' 2020)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] Avengers Standoff Vol 6 — 1 issues (~2016) [1 blank rows]
+  [VOL] 'Avengers Standoff' → volume id 88187 ('Avengers Standoff: Welcome to Pleasant Hill' 2016)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] The Iron Age: Alpha Vol 1 — 1 issues (~2011) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Aliens vs. Avengers Vol 1 — 1 issues (~2024) [1 blank rows]
+  [VOL] 'Aliens vs. Avengers' → volume id 159480 ('Aliens vs. Avengers' 2024)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] What If? Wolverine: Enemy of the State Vol 3 — 1 issues (~2007) [1 blank rows]
+  [VOL] 'What If? Wolverine: Enemy of the State' → volume id 23084 ('What if? Wolverine: Enemy of the State' 2007)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] What If? X-Men Vol 6 — 1 issues (~2023) [1 blank rows]
+  [VOL] 'What If? X-Men' → volume id 114100 ('What If? X-Men' 2018)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] What If? X-Men Deadly Genesis Vol 3 — 1 issues (~2007) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Wildstorm Starts Now! Vol 1 — 0 issues (~2006) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Wolverine and the X-Men Annual Vol 4 — 1 issues (~2013) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Wolverine vs. Blade Vol 1 — 1 issues (~2019) [1 blank rows]
+  [VOL] 'Wolverine vs. Blade' → volume id 120144 ('Wolverine vs. Blade' 2019)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CHECKPOINT] Saved comics_inventory_2806_2221.xlsx after 150 titles (422 API calls)
+[CV] All-New, All-Different Savage Avengers Vol 7 — 1 issues (~2022) [1 blank rows]
+  [VOL] 'All-New, All-Different Savage Avengers' → volume id 36629 ('The All-New Batman: The Brave and the Bold' 2011)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] Wolverine: Madripoor Knights Vol 7 — 1 issues (~2024) [1 blank rows]
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Wonder Man and the Beast Vol 1 — 1 issues (~2023) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Wonder Woman 1984: Museum Mayhem Vol 1 — 1 issues (~2020) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Wonder Woman: Futures End Vol 4 — 1 issues (~2014) [1 blank rows]
+  [VOL] 'Wonder Woman: Futures End' → volume id 76956 ('Wonder Woman: Futures End' 2014)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] Agents of S.H.I.E.L.D. Standoff Vol 1 — 1 issues (~2016) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Avengers and Moon Girl Vol 7 — 1 issues (~2022) [1 blank rows]
+  [ERROR] No volumes found
+[CV] X-23 Vol 1 — 1 issues (~2023) [1 blank rows]
+  [VOL] 'X-23' → volume id 32044 ('X-23' 2010)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] X-Force Vol 4 — 1 issues (~2011) [1 blank rows]
+  [VOL] 'X-Force' → volume id 20511 ('X-Force' 2008)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] X-Men Vol 1 — 1 issues (~2022) [1 blank rows]
+  [VOL] 'X-Men' → volume id 4428 ('X-Men Spotlight on... Starjammers' 1990)
+  [NOT FOUND] #27.0 — not in CV volume
+  → No writers found — logged to needs_review.json
+[CV] X-Men Origins: X-Men Blue Vol 6 — 1 issues (~2023) [1 blank rows]
+  [ERROR] No volumes found
+[CV] X-Men and Moon Girl Vol 6 — 1 issues (~2023) [1 blank rows]
+  [VOL] 'X-Men and Moon Girl' → volume id 144978 ('X-Men and Moon Girl' 2022)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] X-Men/Eternals: Manifest Destiny Vol 1 — 1 issues (~2009) [1 blank rows]
+  [ERROR] No volumes found
+[CV] X-Men: Hope Vol 4 — 0 issues (~2010) [1 blank rows]
+  [VOL] 'X-Men: Hope' → volume id 31726 ('X-Men: Hope' 2010)
+  → No writers found — logged to needs_review.json
+[CV] X-Men: Magik Vol 6 — 1 issues (~2024) [1 blank rows]
+  [VOL] 'X-Men: Magik' → volume id 11667 ('X-Men: Magik' 2000)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] X-Men: Secret Vol 6 — 1 issues (~2024) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Age of Revelation Vol 1 — 1 issues (~2025) [1 blank rows]
+  [VOL] 'Age of Revelation' → volume id 165548 ('X-Men: Age of Revelation' 2025)
+  [NOT FOUND] #1.0 — not in CV volume
+  → No writers found — logged to needs_review.json
+[CV] Young Justice: Sins of Youth Vol 1 — 1 issues (~2000) [1 blank rows]
+  [VOL] 'Young Justice: Sins of Youth' → volume id 23755 ('Young Justice: Sins of Youth' 2000)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] What If? Magic Vol 1 — 1 issues (~2022) [1 blank rows]
+  [ERROR] No volumes found
+[CV] What If? Galactus Transformed Moon Knight Vol 11 — 1 issues (~2023) [1 blank rows]
+  [ERROR] No volumes found
+[CV] What If? Galactus Transformed Hulk Vol 6 — 1 issues (~2023) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Amazing Spider-Man Vol 1 — 1 issues (~2024) [1 blank rows]
+  [VOL] 'Amazing Spider-Man' → volume id 22405 ('The Amazing Spider-Man:  EXTRA!' 2008)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] Shang-Chi Vol 1 — 1 issues (~2023) [1 blank rows]
+  [VOL] 'Shang-Chi' → volume id 130763 ('Shang-Chi' 2020)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] Avengers Vol 1 — 1 issues (~2018) [1 blank rows]
+  [VOL] 'Avengers' → volume id 3859 ('Solo Avengers' 1987)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] Aquaman Special: Endless Winter Vol 1 — 1 issues (~2021) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Aquaman Vol 5 — 1 issues (~2001) [1 blank rows]
+  [NOT FOUND] #75.0 — not in CV volume
+  → No writers found — logged to needs_review.json
+[CV] The Trials of Shazam Vol 1 — 1 issues (~2007) [1 blank rows]
+  [VOL] 'The Trials of Shazam' → volume id 40479 ('The Trials Of Shazam!' 2007)
+  [NOT FOUND] #9.0 — not in CV volume
+  → No writers found — logged to needs_review.json
+[CV] Time Slide Vol 1 — 1 issues (~2022) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Titans/Outsiders: Secret Files and Origins Vol 1 — 1 issues (~2003) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Ultimates Vol 1 — 1 issues (~2003) [1 blank rows]
+  [VOL] 'Ultimates' → volume id 18327 ('The Ultimates' 2002)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] Ultimatum: Fantastic Four Vol 1 — 1 issues (~2011) [1 blank rows]
+  [VOL] 'Ultimatum: Fantastic Four' → volume id 27281 ('Ultimatum: Fantastic Four Requiem' 2009)
+  [NOT FOUND] #60.0 — not in CV volume
+  → No writers found — logged to needs_review.json
+[CV] Ultimatum: Fantastic Four Requiem Vol 1 — 1 issues (~2009) [1 blank rows]
+  [VOL] 'Ultimatum: Fantastic Four Requiem' → volume id 27281 ('Ultimatum: Fantastic Four Requiem' 2009)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] Ultimatum: X-Men Requiem Vol 1 — 1 issues (~2009) [1 blank rows]
+  [VOL] 'Ultimatum: X-Men Requiem' → volume id 27283 ('Ultimatum: X-Men Requiem' 2009)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Ultraman vs. Avengers Vol 7 — 1 issues (~2023) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Aquaboy and Lagoon Man Vol 1 — 1 issues (~2000) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Uncanny Inhumans Annual Vol 1 — 1 issues (~2016) [1 blank rows]
+  [VOL] 'Uncanny Inhumans Annual' → volume id 93396 ('Uncanny Inhumans Annual' 2016)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] Uncanny X-Men Vol 4 — 1 issues (~2013) [1 blank rows]
+  [VOL] 'Uncanny X-Men' → volume id 26666 ('Uncanny X-Men: First Class Giant-Size Special' 2009)
+  [NOT FOUND] #13.0 — not in CV volume
+  → No writers found — logged to needs_review.json
+[CV] Uncanny X-Men Special: No End in Sight Part 3 Vol 1 — 1 issues (~2009) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Union Jack the Ripper: Bloodhunt Vol 1 — 1 issues (~2024) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Voodoo Vol 1 — 1 issues (~2012) [1 blank rows]
+  [VOL] 'Voodoo' → volume id 6262 ('Voodoo' 1997)
+  [NOT FOUND] #0.0 — not in CV volume
+  → No writers found — logged to needs_review.json
+[CV] Animal Man Vol 1 — 1 issues (~2012) [1 blank rows]
+  [VOL] 'Animal Man' → volume id 42600 ('Animal Man' 2011)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] War of the Realms: Savage Avengers Vol 7 — 1 issues (~2019) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Weapon X-Men Vol 1 — 1 issues (~2024) [1 blank rows]
+  [VOL] 'Weapon X-Men' → volume id 157128 ('Weapon X-Men' 2024)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Weapon X-Men Vol 6 — 1 issues (~2024) [1 blank rows]
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Amazing X-Men: Age of Revelation Vol 1 — 1 issues (~2025) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Shang-Chi vs. Captain America Vol 9 — 1 issues (~2023) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Secret Invasion: Miss Marvel Vol 1 — 1 issues (~2009) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Captain America and Volstagg Vol 1 — 1 issues (~2011) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Imperial War: Planet She-Hulk Vol 1 — 1 issues (~2025) [1 blank rows]
+  [VOL] 'Imperial War: Planet She-Hulk' → volume id 166451 ('Imperial War: Planet She-Hulk' 2025)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Green Lantern Vol 1 — 1 issues (~2012) [1 blank rows]
+  → Filled 1 rows | artists: 1 | missed: 0
+[CHECKPOINT] Saved comics_inventory_2806_2239.xlsx after 200 titles (520 API calls)
+[CV] Green Lantern Corps: Civil Corps Vol 7 — 1 issues (~2024) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Earth 2 Vol 1 — 1 issues (~2012) [1 blank rows]
+  [VOL] 'Earth 2' → volume id 48505 ('Earth 2' 2012)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Guardians Team-Up Vol 1 — 1 issues (~2015) [1 blank rows]
+  [VOL] 'Guardians Team-Up' → volume id 80454 ('Guardians Team-Up' 2015)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Guardians of the Galaxy Vol 3 — 1 issues (~2014) [1 blank rows]
+  [VOL] 'Guardians of the Galaxy' → volume id 21550 ('Guardians of the Galaxy' 2008)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] Guardians of the Galaxy Prelude Vol 3 — 1 issues (~2014) [1 blank rows]
+  [VOL] 'Guardians of the Galaxy Prelude' → volume id 72793 ('Marvel's Guardians of the Galaxy Prelude' 2014)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] Guardians of the Galaxy: Bane of the Blastaar Vol 1 — 1 issues (~2023) [1 blank rows]
+  [ERROR] No volumes found
+[CV] House of M Sketchbook Vol 1 — 1 issues (~2005) [1 blank rows]
+  [VOL] 'House of M Sketchbook' → volume id 30467 ('House of M Sketchbook' 2005)
+  [NO WRITER] #1.0 — credits found but no writer role
+  → No writers found — logged to needs_review.json
+[CV] Hulk Smash the Avengers Vol 4 — 1 issues (~2012) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Dungeons of Doom Vol 1 — 1 issues (~2024) [1 blank rows]
+  [VOL] 'Dungeons of Doom' → volume id 170103 ('Dungeons of Doom' 2026)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Imperial War: Black Panther Vol 1 — 1 issues (~2025) [1 blank rows]
+  [VOL] 'Imperial War: Black Panther' → volume id 166450 ('Imperial War: Black Panther' 2025)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Impulse Vol 1 — 1 issues (~2000) [1 blank rows]
+  [VOL] 'Impulse' → volume id 5509 ('Impulse' 1995)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] Secret Invasion: Thor Vol 1 — 1 issues (~2008) [1 blank rows]
+  [VOL] 'Secret Invasion: Thor' → volume id 22561 ('Secret Invasion: Thor' 2008)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] Infinity Countdown Prime Vol 1 — 1 issues (~2018) [1 blank rows]
+  [VOL] 'Infinity Countdown Prime' → volume id 108818 ('Infinity Countdown Prime' 2018)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Infinity Countdown: Adam Warlock Vol 1 — 1 issues (~2018) [1 blank rows]
+  [VOL] 'Infinity Countdown: Adam Warlock' → volume id 108528 ('Infinity Countdown: Adam Warlock' 2018)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Infinity Countdown: Black Widow Vol 1 — 1 issues (~2018) [1 blank rows]
+  [VOL] 'Infinity Countdown: Black Widow' → volume id 111676 ('Infinity Countdown: Black Widow' 2018)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Infinity Countdown: Captain Marvel Vol 1 — 1 issues (~2018) [1 blank rows]
+  [VOL] 'Infinity Countdown: Captain Marvel' → volume id 111142 ('Infinity Countdown: Captain Marvel' 2018)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Infinity Countdown: Champions Vol 1 — 1 issues (~2018) [1 blank rows]
+  [VOL] 'Infinity Countdown: Champions' → volume id 111677 ('Infinity Countdown: Champions' 2018)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Inglorious X-Force Vol 1 — 1 issues (~2025) [1 blank rows]
+  [VOL] 'Inglorious X-Force' → volume id 170252 ('Inglorious X-Force' 2026)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Doom Academy Vol 1 — 1 issues (~2025) [1 blank rows]
+  [VOL] 'Doom Academy' → volume id 162480 ('Doom Academy' 2025)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Iron Man Special: No End in Sight Part 2 Vol 1 — 1 issues (~2009) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Journey into Mystery Vol 1 — 1 issues (~2019) [1 blank rows]
+  [VOL] 'Journey into Mystery' → volume id 39761 ('Journey into Mystery' 2011)
+  [NOT FOUND] #5.0 — not in CV volume
+  → No writers found — logged to needs_review.json
+[CV] Jubilee: Deadly Reunion Vol 1 — 1 issues (~2024) [1 blank rows]
+  [VOL] 'Jubilee: Deadly Reunion' → volume id 171777 ('Jubilee: Deadly Reunion' 2026)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Doctor Who: Free Comic Book Day 2015 Vol 1 — 1 issues (~2015) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Green Arrow Vol 5 — 1 issues (~2013) [1 blank rows]
+  [VOL] 'Green Arrow' → volume id 9113 ('Green Arrow' 2001)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Godzilla vs. Avengers Vol 1 — 1 issues (~2025) [1 blank rows]
+  [VOL] 'Godzilla vs. Avengers' → volume id 165086 ('Godzilla vs. Avengers' 2025)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CHECKPOINT] Saved comics_inventory_2806_2253.xlsx after 225 titles (584 API calls)
+[CV] Earth 2: Society Annual Vol 1 — 1 issues (~2016) [1 blank rows]
+  [VOL] 'Earth 2: Society Annual' → volume id 93658 ('Earth 2: Society Annual' 2016)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] Giant-Size Fantastic Four Vol 1 — 1 issues (~2022) [1 blank rows]
+  [VOL] 'Giant-Size Fantastic Four' → volume id 157035 ('Giant-Size Fantastic Four' 2024)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] Expatriate X-Men: Age of Revelation Vol 1 — 1 issues (~2025) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Fantastic Four Vol 5 — 1 issues (~2018) [1 blank rows]
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] Fantastic Four Annual Vol 3 — 1 issues (~2008) [1 blank rows]
+  [VOL] 'Fantastic Four Annual' → volume id 142377 ('Fantastic Four Annual' 2006)
+  [NOT FOUND] #32.0 — not in CV volume
+  → No writers found — logged to needs_review.json
+[CV] Fantastic Four × Gargoyles Vol 1 — 1 issues (~2024) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Fantastic Four: Doom War Vol 1 — 1 issues (~2010) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Fantastic Four: Empyre Vol 1 — 1 issues (~2020) [1 blank rows]
+  [VOL] 'Fantastic Four: Empyre' → volume id 132321 ('Fantastic Four: Empyre' 2020)
+  [NOT FOUND] #0.0 — not in CV volume
+  → No writers found — logged to needs_review.json
+[CV] Free Comic Book Day: Civil War Vol 1 — 1 issues (~2016) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Free Comic Book Day: Doctor Who Vol 1 — 1 issues (~2024) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Eternals: When Gods Walked the Earth Vol 1 — 1 issues (~2025) [1 blank rows]
+  [ERROR] No volumes found
+[SKIP-COLLISION] Friendly Neighborhood Spider-Man Vol 1
+[CV] Futures End: Aquaman Vol 1 — 1 issues (~2014) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Futures End: Batgirl Vol 1 — 1 issues (~2014) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Futures End: Batman and Robin Vol 1 — 1 issues (~2014) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Futures End: Batman/Superman Vol 1 — 1 issues (~2014) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Futures End: Birds of Prey Vol 1 — 1 issues (~2014) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Futures End: Earth 2 Vol 1 — 1 issues (~2014) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Futures End: Grayson Vol 1 — 1 issues (~2014) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Futures End: Huntress/Power Girl Vol 1 — 1 issues (~2014) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Futures End: Justice League Vol 1 — 1 issues (~2014) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Futures End: New Suicide Squad Vol 1 — 1 issues (~2014) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Futures End: Superman/Wonder Woman Vol 1 — 1 issues (~2014) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Eternals Vol 5 — 1 issues (~2022) [1 blank rows]
+  [VOL] 'Eternals' → volume id 21937 ('Eternals' 2008)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Giant-Size Dark Phoenix Saga Vol 1 — 1 issues (~2024) [1 blank rows]
+  [VOL] 'Giant-Size Dark Phoenix Saga' → volume id 165019 ('Giant-Size Dark Phoenix Saga' 2025)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Justice League Vol 2 — 1 issues (~2013) [1 blank rows]
+  [NOT FOUND] #23.4 — not in CV volume
+  → No writers found — logged to needs_review.json
+[CHECKPOINT] Saved comics_inventory_2806_2258.xlsx after 250 titles (622 API calls)
+[CV] Justice League Dark: Tomorrow's Special Vol 1 — 1 issues (~2024) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Doctor Strange of Asgard Vol 1 — 1 issues (~2024) [1 blank rows]
+  [VOL] 'Doctor Strange of Asgard' → volume id 162622 ('Doctor Strange of Asgard' 2025)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] DC: 5 of a Kind — Thunder/Martian Manhunter Vol 1 — 1 issues (~2007) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Nova Special: No End in Sight Vol 1 — 1 issues (~2009) [1 blank rows]
+  [ERROR] No volumes found
+[CV] DC: 5 of a Kind — Nightwing/Captain Boomerang Vol 1 — 1 issues (~2007) [1 blank rows]
+  [ERROR] No volumes found
+[CV] DC: 5 of a Kind — Metamorpho/Aquaman Vol 1 — 1 issues (~2007) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Original Sin Annual Vol 1 — 1 issues (~2014) [1 blank rows]
+  [VOL] 'Original Sin Annual' → volume id 77577 ('Original Sin Annual' 2014)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] DC: 5 of a Kind — Katana/Shazam Vol 1 — 1 issues (~2007) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Planet DC: Batgirl Vol 1 — 1 issues (~2000) [1 blank rows]
+  [ERROR] No volumes found
+[CV] DC vs. Marvel: The Legion Vol 1 — 1 issues (~2002) [1 blank rows]
+  [ERROR] No volumes found
+[CV] DC Universe: Last Will and Testament Vol 1 — 1 issues (~2008) [1 blank rows]
+  [VOL] 'DC Universe: Last Will and Testament' → volume id 22764 ('DC Universe: Last Will And Testament' 2008)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Powers of X Vol 1 — 1 issues (~2019) [1 blank rows]
+  [VOL] 'Powers of X' → volume id 120407 ('Powers of X' 2019)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Predator vs. Black Panther Vol 1 — 1 issues (~2024) [1 blank rows]
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] DC Pride: Tim Drake Special Vol 1 — 1 issues (~2022) [1 blank rows]
+  [VOL] 'DC Pride: Tim Drake Special' → volume id 143618 ('DC Pride: Tim Drake Special' 2022)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Psylocke Vol 1 — 1 issues (~2024) [1 blank rows]
+  [VOL] 'Psylocke' → volume id 161029 ('Psylocke' 2025)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Red Hood and the Outlaws Vol 1 — 1 issues (~2012) [1 blank rows]
+  [VOL] 'Red Hood and the Outlaws' → volume id 42919 ('Red Hood and the Outlaws' 2011)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] Red Hood and the Outlaws: Futures End Vol 1 — 1 issues (~2014) [1 blank rows]
+  [VOL] 'Red Hood and the Outlaws: Futures End' → volume id 76953 ('Red Hood and the Outlaws: Futures End' 2014)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Red Hulk Vol 1 — 1 issues (~2024) [1 blank rows]
+  [VOL] 'Red Hulk' → volume id 155435 ('Hulk: Red Hulk Omnibus' 2023)
+  [NOT FOUND] #3.0 — not in CV volume
+  → No writers found — logged to needs_review.json
+[CV] Catwoman Vol 1 — 1 issues (~2012) [1 blank rows]
+  [VOL] 'Catwoman' → volume id 7328 ('Catwoman' 2002)
+  [NOT FOUND] #0.0 — not in CV volume
+  → No writers found — logged to needs_review.json
+[CV] Rocket Raccoon Vol 1 — 1 issues (~2024) [1 blank rows]
+  [VOL] 'Rocket Raccoon' → volume id 75336 ('Rocket Raccoon' 2014)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Rogue Storm Vol 1 — 1 issues (~2025) [1 blank rows]
+  [VOL] 'Rogue Storm' → volume id 167658 ('Rogue Storm' 2025)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Captain Marvel Vol 1 — 1 issues (~2019) [1 blank rows]
+  [VOL] 'Captain Marvel' → volume id 18296 ('Captain Marvel' 2002)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] S.H.I.E.L.D.: Quake — 50th Anniversary Vol 1 — 1 issues (~2015) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Captain America: Homecoming Vol 1 — 1 issues (~2016) [1 blank rows]
+  [VOL] 'Captain America: Homecoming' → volume id 72578 ('Captain America: Homecoming' 2014)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] Secret Avengers Vol 5 — 1 issues (~2012) [1 blank rows]
+  [VOL] 'Secret Avengers' → volume id 42900 ('Secret Avengers' 2011)
+  [NOT FOUND] #28.0 — not in CV volume
+  → No writers found — logged to needs_review.json
+[CHECKPOINT] Saved comics_inventory_2806_2309.xlsx after 275 titles (676 API calls)
+[CV] Fantastic Four Vol 1 — 1 issues (~2025) [1 blank rows]
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] Nightwing Vol 1 — 1 issues (~2012) [1 blank rows]
+  [VOL] 'Nightwing' → volume id 5755 ('Nightwing' 1996)
+  [NOT FOUND] #0.0 — not in CV volume
+  → No writers found — logged to needs_review.json
+[CV] New Mutants: Lethal Legion Vol 1 — 1 issues (~2023) [1 blank rows]
+  [VOL] 'New Mutants: Lethal Legion' → volume id 148780 ('New Mutants: Lethal Legion' 2023)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] Doctor Strange Annual Vol 5 — 1 issues (~2025) [1 blank rows]
+  [VOL] 'Doctor Strange Annual' → volume id 122487 ('Doctor Strange Annual' 2019)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] New Mutants Vol 4 — 1 issues (~2019) [1 blank rows]
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] Doctor Doom Vol 1 — 1 issues (~2024) [1 blank rows]
+  [VOL] 'Doctor Doom' → volume id 121896 ('Doctor Doom' 2019)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Justice League of America Vol 3 — 1 issues (~2013) [1 blank rows]
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] Justice League: The Omega Act Special Vol 1 — 1 issues (~2024) [1 blank rows]
+  [VOL] 'Justice League: The Omega Act Special' → volume id 167322 ('Justice League: The Omega Act Special' 2025)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Detective Comics Vol 1 — 1 issues (~2015) [1 blank rows]
+  [VOL] 'Detective Comics' → volume id 18058 ('Detective Comics' 1937)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] Demon Knights Vol 1 — 1 issues (~2012) [1 blank rows]
+  [VOL] 'Demon Knights' → volume id 70823 ('Demon Knights' 2012)
+  [NOT FOUND] #0.0 — not in CV volume
+  → No writers found — logged to needs_review.json
+[CV] Dark Reign: Deadpool vs. Thunderbolts Vol 1 — 1 issues (~2009) [1 blank rows]
+  [ERROR] No volumes found
+[CV] DCKO: The Kids Are All Fight Special Vol 1 — 1 issues (~2024) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Longshots Vol 1 — 1 issues (~2025) [1 blank rows]
+  [VOL] 'Longshots' → volume id 167505 ('Longshots' 2025)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Longshots: Age of Revelation Vol 1 — 1 issues (~2025) [1 blank rows]
+  [ERROR] No volumes found
+[SKIP-COLLISION] Action Comics Vol 1
+[CV] Marvel Must Have: Fantastic Four Vol 3 — 1 issues (~2025) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Marvel Super Heroes Secret Wars Vol 1 — 1 issues (~2024) [1 blank rows]
+  [VOL] 'Marvel Super Heroes Secret Wars' → volume id 3352 ('Marvel Super Heroes Secret Wars' 1984)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] DCKO: Red Hood vs. The Joker Vol 1 — 1 issues (~2024) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Midnight Suns: Bloodhunt Vol 1 — 1 issues (~2024) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Miles Morales: Spider-Man Vol 1 — 1 issues (~2019) [1 blank rows]
+  [VOL] 'Miles Morales: Spider-Man' → volume id 115897 ('Miles Morales: Spider-Man' 2019)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Miles Morales: Spider-Man and Moon Girl Vol 1 — 1 issues (~2022) [1 blank rows]
+  [VOL] 'Miles Morales: Spider-Man and Moon Girl' → volume id 143843 ('Miles Morales: Spider-Man and Moon Girl' 2022)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] Moon Knight Vol 1 — 1 issues (~2011) [1 blank rows]
+  [VOL] 'Moon Knight' → volume id 18105 ('Moon Knight' 2006)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CV] Moon Knight and the Infinity Watch Vol 11 — 1 issues (~2024) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Ms. Marvel and Moon Knight Vol 11 — 1 issues (~2022) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Ms. Marvel: The Muse Menace Vol 1 — 1 issues (~2024) [1 blank rows]
+  [ERROR] No volumes found
+[CV] Namor Vol 3 — 1 issues (~2022) [1 blank rows]
+  [VOL] 'Namor' → volume id 22134 ('Namor' 2003)
+  → Filled 1 rows | artists: 1 | missed: 0
+[CHECKPOINT] Saved comics_inventory_2806_2323.xlsx after 300 titles (731 API calls)
+[CV] Nebula Vol 1 — 1 issues (~2024) [1 blank rows]
+  [VOL] 'Nebula' → volume id 124989 ('Nebula' 2020)
+  → Filled 1 rows | artists: 0 | missed: 0
+[CV] DC: 5 of a Kind — Wonder Woman/Grace Vol 1 — 1 issues (~2007) [1 blank rows]
+  [ERROR] No volumes found
+[CV] A Death in the Family: Robin Lives! Vol 1 — 1 issues (~2024) [1 blank rows]
+  [ERROR] No volumes found
+
+[DONE] 303 titles | 736 Comic Vine calls | Output: comics_inventory_FINAL_2806_2324.xlsx
+Review needed: needs_review.json

@@ -1,0 +1,6044 @@
+[
+  {
+    "ts": "2026-06-25T02:31:49.823671",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "One World Under Doom",
+    "detail": "CV lookup failed: HTTP error: Max retries exceeded"
+  },
+  {
+    "ts": "2026-06-25T02:38:40.687230",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek",
+    "detail": "CV lookup failed: HTTP error: Max retries exceeded"
+  },
+  {
+    "ts": "2026-06-25T02:42:25.919395",
+    "category": "FILLED",
+    "title": "Secret Six",
+    "detail": "10/10 rows filled via Comic Vine. Artists: 10. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T02:43:07.146962",
+    "category": "FILLED",
+    "title": "The Ultimates",
+    "detail": "1/10 rows filled via Comic Vine. Artists: 1. Not found: 9."
+  },
+  {
+    "ts": "2026-06-25T02:46:52.833423",
+    "category": "FILLED",
+    "title": "Suicide Squad",
+    "detail": "10/10 rows filled via Comic Vine. Artists: 10. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T02:47:14.097371",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Legion Lost",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T02:50:19.185286",
+    "category": "FILLED",
+    "title": "Justice League Unlimited",
+    "detail": "8/8 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T02:51:00.502831",
+    "category": "FILLED",
+    "title": "Suicide Squad: From the Ashes",
+    "detail": "1/7 rows filled via Comic Vine. Artists: 1. Not found: 6."
+  },
+  {
+    "ts": "2026-06-25T02:53:24.839427",
+    "category": "FILLED",
+    "title": "Nova: Centurion",
+    "detail": "6/6 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T02:53:46.489684",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "All-Star Batman and Robin, the Boy Wonder",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T02:56:10.453831",
+    "category": "FILLED",
+    "title": "Red She-Hulk",
+    "detail": "6/6 rows filled via Comic Vine. Artists: 6. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T02:58:34.565529",
+    "category": "FILLED",
+    "title": "Legionnaires",
+    "detail": "6/6 rows filled via Comic Vine. Artists: 4. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T02:58:35.270651",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Suicide Squad Most Wanted: Deadshot and Katana",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T02:58:35.926710",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Deep Space Nine \u2014 The Dog of War",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T02:58:36.776470",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "S.H.I.E.L.D. Infinite",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:00:40.162276",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "X",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T03:01:21.748313",
+    "category": "FILLED",
+    "title": "Imperial",
+    "detail": "1/5 rows filled via Comic Vine. Artists: 0. Not found: 3."
+  },
+  {
+    "ts": "2026-06-25T03:01:22.276629",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Legion of Superheroes",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:01:43.131561",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Domino",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T03:01:43.646269",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Strange New Worlds \u2014 The Illyrian Enigma",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:01:44.377383",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Deep Space Nine \u2014 Too Long a Sacrifice",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:03:26.987023",
+    "category": "FILLED",
+    "title": "Blade",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:03:27.882478",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Silver Surfer: Surfer No More",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:03:27.891391",
+    "category": "SKIPPED_COLLISION",
+    "title": "Silver Surfer: Rebirth",
+    "detail": "Filled avg year 2022, blank avg 1992 (gap 30y)"
+  },
+  {
+    "ts": "2026-06-25T03:03:28.619650",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Voyager \u2014 Seven's Reckoning",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:04:10.733575",
+    "category": "FILLED",
+    "title": "Justice League of America",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 4. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:04:14.413026",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "DCKO",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:04:15.008654",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "SGU: Stargate Universe",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:05:58.484656",
+    "category": "FILLED",
+    "title": "Dazzler",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:06:19.195836",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Invincible Iron Man",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T03:08:03.372047",
+    "category": "FILLED",
+    "title": "Alien vs. Captain America",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:09:06.346167",
+    "category": "FILLED",
+    "title": "Green Lantern",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 4. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:10:50.861588",
+    "category": "FILLED",
+    "title": "The Ones",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:12:34.216990",
+    "category": "FILLED",
+    "title": "Web of Black Widow",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:14:57.724397",
+    "category": "FILLED",
+    "title": "Superman",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 4. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:14:58.305295",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Avengers: Defenders \u2014 Tarot",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:16:40.944343",
+    "category": "FILLED",
+    "title": "Wolverine: Madripoor Knights",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:17:01.820774",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Original Sin: Hulk vs. Iron Man",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T03:18:23.967951",
+    "category": "FILLED",
+    "title": "Cable: Love and Chrome",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:19:46.125260",
+    "category": "FILLED",
+    "title": "Predator vs. Black Panther",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 2. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:20:27.387829",
+    "category": "FILLED",
+    "title": "War of the Realms: Giant-Man",
+    "detail": "1/3 rows filled via Comic Vine. Artists: 0. Not found: 2."
+  },
+  {
+    "ts": "2026-06-25T03:20:28.069771",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Robin and Batman: Jason Todd",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:20:28.656263",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "What If? Avengers vs. X-Men",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:20:29.301320",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Robin: The Joker's Wild",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:20:29.880336",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Unbreakable X-Men: Age of Revelation",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:21:52.195741",
+    "category": "FILLED",
+    "title": "Night Thrasher",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 3. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:23:14.341795",
+    "category": "FILLED",
+    "title": "Power Man: Timeless",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:23:15.003681",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Strange Academy: Bloodhunt",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:23:15.650000",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Dracula: Bloodhunt",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:24:17.623405",
+    "category": "FILLED",
+    "title": "Sorcerer Supreme",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:24:58.941052",
+    "category": "FILLED",
+    "title": "Space Corps",
+    "detail": "1/3 rows filled via Comic Vine. Artists: 0. Not found: 2."
+  },
+  {
+    "ts": "2026-06-25T03:26:24.085669",
+    "category": "FILLED",
+    "title": "Fantastic Four",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 2. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:27:46.778801",
+    "category": "FILLED",
+    "title": "Star Trek: Countdown",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:28:48.306114",
+    "category": "FILLED",
+    "title": "Black Panther: Intergalactic",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:28:48.905499",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Black Panther: Bloodhunt",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:30:10.917029",
+    "category": "FILLED",
+    "title": "Black Panther",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 3. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:31:53.561628",
+    "category": "FILLED",
+    "title": "Birds of Prey",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 3. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:31:54.128709",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Discovery \u2014 Aftermath",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:33:16.349421",
+    "category": "FILLED",
+    "title": "Xin: Journey of the Monkey King",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:33:16.933823",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "DCKO: Night Fight",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:33:17.576190",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Gene Grade",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:33:58.392542",
+    "category": "FILLED",
+    "title": "Legion Lost",
+    "detail": "1/2 rows filled via Comic Vine. Artists: 0. Not found: 1."
+  },
+  {
+    "ts": "2026-06-25T03:34:39.808684",
+    "category": "FILLED",
+    "title": "Green Lantern: Fractured Spectrum",
+    "detail": "1/2 rows filled via Comic Vine. Artists: 0. Not found: 1."
+  },
+  {
+    "ts": "2026-06-25T03:35:21.174288",
+    "category": "FILLED",
+    "title": "Giant-Size X-Men",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:36:23.170180",
+    "category": "FILLED",
+    "title": "Justice League Red",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:36:43.976158",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Justice League Dark",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T03:37:04.762886",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Justice League",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T03:37:46.189714",
+    "category": "FILLED",
+    "title": "Lords of Empyre",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:38:47.967586",
+    "category": "FILLED",
+    "title": "Spider-Punk",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:39:49.488564",
+    "category": "FILLED",
+    "title": "Marvel Zombies",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:40:10.339265",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "New Mutants",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T03:41:12.280645",
+    "category": "FILLED",
+    "title": "Planet of the Apes vs. Fantastic Four",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:42:13.897377",
+    "category": "FILLED",
+    "title": "Power Man and Iron Fist",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 2. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:42:34.843082",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek Annual",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T03:42:35.625905",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Picard \u2014 Stargazer",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:42:36.339842",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: The Next Generation \u2014 Mirror Broken",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:42:36.911686",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "The Orville: Digressions",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:42:37.440102",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "The Orville: Heroes",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:42:38.024522",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "The Orville: Launch Day",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:42:38.847885",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "The Orville: The Word of Avis",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:43:40.364865",
+    "category": "FILLED",
+    "title": "The Question: All Along the Watchtower",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:43:40.374669",
+    "category": "SKIPPED_COLLISION",
+    "title": "World's Finest",
+    "detail": "Filled avg year 2013, blank avg 1949 (gap 64y)"
+  },
+  {
+    "ts": "2026-06-25T03:43:40.953856",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "X-Vengers: Age of Revelation",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:43:41.547663",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Free Comic Book Day: Spider-Man",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:43:42.116909",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Young Justice: Sins of the Father",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:44:03.065930",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Aquaman",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T03:45:04.906923",
+    "category": "FILLED",
+    "title": "Bastard Samurai",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 2. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:45:25.809293",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Age of Apocalypse",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T03:46:27.782023",
+    "category": "FILLED",
+    "title": "Earth 2 Annual",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 2. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:46:28.345491",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Doctor Strange: Asgard",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:46:28.995559",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Avengers/Fantastic Four: Empyre",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:47:09.656587",
+    "category": "FILLED",
+    "title": "Aquaman",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 2. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:48:11.549875",
+    "category": "FILLED",
+    "title": "Black Panther: World of Wakanda",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 2. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:49:14.017656",
+    "category": "FILLED",
+    "title": "DC vs. Vampires: World War V",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:49:14.630975",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Cataclysm: Ultimate Comics X-Men",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:49:15.264020",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Batgirl: All In",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:49:15.801112",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Cloak and Dagger: Age of Revelation",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:49:58.257269",
+    "category": "FILLED",
+    "title": "Star Trek: Waypoint",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:50:40.010764",
+    "category": "FILLED",
+    "title": "Star Trek: Waypoint Special",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:50:40.778720",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Extreme X-Men",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:51:23.183420",
+    "category": "FILLED",
+    "title": "Strange Academy: Miles Morales",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:51:23.818204",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: The Next Generation \u2014 The Gift",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:54:31.110433",
+    "category": "FILLED",
+    "title": "Batman",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:55:12.478876",
+    "category": "FILLED",
+    "title": "Star Trek: The Next Generation",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:55:33.256774",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Batgirl",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T03:55:33.793516",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Avengers: Wasp",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:56:15.334805",
+    "category": "FILLED",
+    "title": "Strange Academy: Moon Knight",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:56:35.682543",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Suicide Squad",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T03:56:36.330297",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: The Mirror War \u2014 Sisko",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:57:17.883672",
+    "category": "FILLED",
+    "title": "Suicide Squad: Amanda Waller",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:57:18.898799",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Avengers: Giant-Man",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:58:00.376981",
+    "category": "FILLED",
+    "title": "Supergirl",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:58:00.917534",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Avengers: Empyre",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:58:01.520447",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Superman Special: Endless Winter",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:58:43.007192",
+    "category": "FILLED",
+    "title": "Superman/Batman Annual",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:59:24.957656",
+    "category": "FILLED",
+    "title": "Teen Titans: Endless Winter Special",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T03:59:25.872679",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "The All-Star Story of the Dodgers",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T03:59:26.786994",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: The Mirror War \u2014 Troi",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:00:08.362129",
+    "category": "FILLED",
+    "title": "Star Trek: Khan",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:00:49.663226",
+    "category": "FILLED",
+    "title": "Batman Beyond: Return of the Joker",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:01:31.244485",
+    "category": "FILLED",
+    "title": "Blood Squad Seven",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:01:31.808362",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Silop",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:02:13.397146",
+    "category": "FILLED",
+    "title": "Silver Surfer Annual",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:02:55.044888",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Buffy the Vampire Slayer Annual",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T04:02:55.056523",
+    "category": "SKIPPED_COLLISION",
+    "title": "Blue Beetle",
+    "detail": "Filled avg year 2007, blank avg 2023 (gap 16y)"
+  },
+  {
+    "ts": "2026-06-25T04:02:55.650969",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Silver Surfer: The Legacy",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:02:56.451013",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Bloodhunters",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:02:57.136712",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Bloodhunt: Moon Knight",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:03:38.915530",
+    "category": "FILLED",
+    "title": "Spectacular Spider-Man",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:03:59.914164",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Spider-Man/Deadpool",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T04:04:00.513905",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Bloodhunt: Jubilee",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:04:01.139699",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Black Widow: The Lost Days",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:04:42.566089",
+    "category": "FILLED",
+    "title": "Batman and Robin",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:05:03.581760",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Countdown to Darkness",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T04:05:04.184005",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: DS9 \u2014 Too Long a Sacrifice",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:05:04.837900",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Day of Blood \u2014 Prelude",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:05:46.337138",
+    "category": "FILLED",
+    "title": "Star Trek: Deep Space Nine",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:05:46.346535",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Black Panther: Bloodhunt",
+    "detail": "CV lookup failed: Volume not found"
+  },
+  {
+    "ts": "2026-06-25T04:05:47.074121",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Black Panther Intergalactic",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:06:08.071822",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Defiant Annual",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T04:06:29.052625",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Batwing",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T04:06:29.572742",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Generations",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:06:30.234202",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Generations \u2014 The Official Comics Adaptation",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:07:11.929484",
+    "category": "FILLED",
+    "title": "Avengers: Captain America",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:07:53.402786",
+    "category": "FILLED",
+    "title": "Avengers Standoff",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:07:53.923595",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "The Iron Age: Alpha",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:08:35.167211",
+    "category": "FILLED",
+    "title": "Aliens vs. Avengers",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:09:17.061195",
+    "category": "FILLED",
+    "title": "What If? Wolverine: Enemy of the State",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:09:58.569401",
+    "category": "FILLED",
+    "title": "What If? X-Men",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:09:59.081873",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "What If? X-Men Deadly Genesis",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:09:59.776728",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Wildstorm Starts Now!",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:10:00.460905",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Wolverine and the X-Men Annual",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:10:41.890108",
+    "category": "FILLED",
+    "title": "Wolverine vs. Blade",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:11:26.148577",
+    "category": "FILLED",
+    "title": "All-New, All-Different Savage Avengers",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:12:06.845317",
+    "category": "FILLED",
+    "title": "Wolverine: Madripoor Knights",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:12:07.477189",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Wonder Man and the Beast",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:12:08.089311",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Wonder Woman 1984: Museum Mayhem",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:12:49.510840",
+    "category": "FILLED",
+    "title": "Wonder Woman: Futures End",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:12:50.240403",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Agents of S.H.I.E.L.D. Standoff",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:12:51.087040",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Avengers and Moon Girl",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:13:32.353346",
+    "category": "FILLED",
+    "title": "X-23",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:14:13.706767",
+    "category": "FILLED",
+    "title": "X-Force",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:14:34.628975",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "X-Men",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T04:14:35.457581",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "X-Men Origins: X-Men Blue",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:15:17.507220",
+    "category": "FILLED",
+    "title": "X-Men and Moon Girl",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:15:18.270536",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "X-Men/Eternals: Manifest Destiny",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:15:39.757066",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "X-Men: Hope",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T04:16:22.240398",
+    "category": "FILLED",
+    "title": "X-Men: Magik",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:16:22.870027",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "X-Men: Secret",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:16:43.930818",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Age of Revelation",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T04:17:25.670560",
+    "category": "FILLED",
+    "title": "Young Justice: Sins of Youth",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:17:26.441013",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "What If? Magic",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:17:27.066426",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "What If? Galactus Transformed Moon Knight",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:17:27.729158",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "What If? Galactus Transformed Hulk",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:18:09.183338",
+    "category": "FILLED",
+    "title": "Amazing Spider-Man",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:18:50.585758",
+    "category": "FILLED",
+    "title": "Shang-Chi",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:19:31.896320",
+    "category": "FILLED",
+    "title": "Avengers",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:19:32.807156",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Aquaman Special: Endless Winter",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:19:53.262497",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Aquaman",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T04:20:14.226335",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "The Trials of Shazam",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T04:20:14.847418",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Time Slide",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:20:15.540388",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Titans/Outsiders: Secret Files and Origins",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:20:56.619406",
+    "category": "FILLED",
+    "title": "Ultimates",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:21:18.020103",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Ultimatum: Fantastic Four",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T04:21:59.434379",
+    "category": "FILLED",
+    "title": "Ultimatum: Fantastic Four Requiem",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:22:41.061843",
+    "category": "FILLED",
+    "title": "Ultimatum: X-Men Requiem",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:22:41.787116",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Ultraman vs. Avengers",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:22:42.649369",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Aquaboy and Lagoon Man",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:23:24.195349",
+    "category": "FILLED",
+    "title": "Uncanny Inhumans Annual",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:23:45.727676",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Uncanny X-Men",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T04:23:46.379565",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Uncanny X-Men Special: No End in Sight Part 3",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:23:47.138587",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Union Jack the Ripper: Bloodhunt",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:24:08.123787",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Voodoo",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T04:24:49.585441",
+    "category": "FILLED",
+    "title": "Animal Man",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:24:50.636870",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "War of the Realms: Savage Avengers",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:25:33.255941",
+    "category": "FILLED",
+    "title": "Weapon X-Men",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:26:14.857886",
+    "category": "FILLED",
+    "title": "Weapon X-Men",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:26:15.497584",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Amazing X-Men: Age of Revelation",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:26:16.258722",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Shang-Chi vs. Captain America",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:26:17.646140",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Secret Invasion: Miss Marvel",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:26:18.408267",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Captain America and Volstagg",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:27:00.031947",
+    "category": "FILLED",
+    "title": "Imperial War: Planet She-Hulk",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:28:01.575378",
+    "category": "FILLED",
+    "title": "Green Lantern",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:28:05.356195",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Green Lantern Corps: Civil Corps",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:28:47.143550",
+    "category": "FILLED",
+    "title": "Earth 2",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:29:28.803733",
+    "category": "FILLED",
+    "title": "Guardians Team-Up",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:30:10.261034",
+    "category": "FILLED",
+    "title": "Guardians of the Galaxy",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:30:51.839489",
+    "category": "FILLED",
+    "title": "Guardians of the Galaxy Prelude",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:30:52.605773",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Guardians of the Galaxy: Bane of the Blastaar",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:31:34.412509",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "House of M Sketchbook",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T04:31:35.344792",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Hulk Smash the Avengers",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:32:16.846943",
+    "category": "FILLED",
+    "title": "Dungeons of Doom",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:32:58.460514",
+    "category": "FILLED",
+    "title": "Imperial War: Black Panther",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:33:40.296762",
+    "category": "FILLED",
+    "title": "Impulse",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:34:22.053982",
+    "category": "FILLED",
+    "title": "Secret Invasion: Thor",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:35:03.737540",
+    "category": "FILLED",
+    "title": "Infinity Countdown Prime",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:35:45.539166",
+    "category": "FILLED",
+    "title": "Infinity Countdown: Adam Warlock",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:36:27.093673",
+    "category": "FILLED",
+    "title": "Infinity Countdown: Black Widow",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:37:09.201063",
+    "category": "FILLED",
+    "title": "Infinity Countdown: Captain Marvel",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:37:51.867668",
+    "category": "FILLED",
+    "title": "Infinity Countdown: Champions",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:38:33.253785",
+    "category": "FILLED",
+    "title": "Inglorious X-Force",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:39:15.873675",
+    "category": "FILLED",
+    "title": "Doom Academy",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:39:16.567175",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Iron Man Special: No End in Sight Part 2",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:39:38.809662",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Journey into Mystery",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T04:40:21.082716",
+    "category": "FILLED",
+    "title": "Jubilee: Deadly Reunion",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:40:21.869036",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Doctor Who: Free Comic Book Day 2015",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:41:03.277989",
+    "category": "FILLED",
+    "title": "Green Arrow",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:41:45.408294",
+    "category": "FILLED",
+    "title": "Godzilla vs. Avengers",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:42:30.327096",
+    "category": "FILLED",
+    "title": "Earth 2: Society Annual",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:43:12.613862",
+    "category": "FILLED",
+    "title": "Giant-Size Fantastic Four",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:43:14.366700",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Expatriate X-Men: Age of Revelation",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:44:15.488660",
+    "category": "FILLED",
+    "title": "Fantastic Four",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:44:36.544105",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Fantastic Four Annual",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T04:44:37.669200",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Fantastic Four \u00d7 Gargoyles",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:44:38.757602",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Fantastic Four: Doom War",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:44:59.845616",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Fantastic Four: Empyre",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T04:45:00.436892",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Free Comic Book Day: Civil War",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:45:01.117442",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Free Comic Book Day: Doctor Who",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:45:02.078295",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Eternals: When Gods Walked the Earth",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:45:02.092802",
+    "category": "SKIPPED_COLLISION",
+    "title": "Friendly Neighborhood Spider-Man",
+    "detail": "Filled avg year 2005, blank avg 2024 (gap 19y)"
+  },
+  {
+    "ts": "2026-06-25T04:45:02.699424",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Futures End: Aquaman",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:45:03.423309",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Futures End: Batgirl",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:45:04.206857",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Futures End: Batman and Robin",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:45:04.982755",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Futures End: Batman/Superman",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:45:05.680736",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Futures End: Birds of Prey",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:45:06.494414",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Futures End: Earth 2",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:45:07.227157",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Futures End: Grayson",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:45:07.857504",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Futures End: Huntress/Power Girl",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:45:08.854543",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Futures End: Justice League",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:45:09.739567",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Futures End: New Suicide Squad",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:45:10.310601",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Futures End: Superman/Wonder Woman",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:45:51.782418",
+    "category": "FILLED",
+    "title": "Eternals",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:46:33.656633",
+    "category": "FILLED",
+    "title": "Giant-Size Dark Phoenix Saga",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:46:53.985482",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Justice League",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T04:46:58.279855",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Justice League Dark: Tomorrow's Special",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:47:39.793058",
+    "category": "FILLED",
+    "title": "Doctor Strange of Asgard",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:47:40.584558",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "DC: 5 of a Kind \u2014 Thunder/Martian Manhunter",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:47:41.221682",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Nova Special: No End in Sight",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:47:42.018538",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "DC: 5 of a Kind \u2014 Nightwing/Captain Boomerang",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:47:42.657520",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "DC: 5 of a Kind \u2014 Metamorpho/Aquaman",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:48:24.224805",
+    "category": "FILLED",
+    "title": "Original Sin Annual",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:48:25.038725",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "DC: 5 of a Kind \u2014 Katana/Shazam",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:48:25.680607",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Planet DC: Batgirl",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:48:26.385929",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "DC vs. Marvel: The Legion",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:49:07.902838",
+    "category": "FILLED",
+    "title": "DC Universe: Last Will and Testament",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:49:49.529040",
+    "category": "FILLED",
+    "title": "Powers of X",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:50:30.282079",
+    "category": "FILLED",
+    "title": "Predator vs. Black Panther",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:51:11.863861",
+    "category": "FILLED",
+    "title": "DC Pride: Tim Drake Special",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:51:55.218685",
+    "category": "FILLED",
+    "title": "Psylocke",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:52:37.780243",
+    "category": "FILLED",
+    "title": "Red Hood and the Outlaws",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:53:20.219037",
+    "category": "FILLED",
+    "title": "Red Hood and the Outlaws: Futures End",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:53:41.229955",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Red Hulk",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T04:54:03.961900",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Catwoman",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T04:54:46.163153",
+    "category": "FILLED",
+    "title": "Rocket Raccoon",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:55:28.838709",
+    "category": "FILLED",
+    "title": "Rogue Storm",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:56:11.073607",
+    "category": "FILLED",
+    "title": "Captain Marvel",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:56:11.860004",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "S.H.I.E.L.D.: Quake \u2014 50th Anniversary",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T04:56:53.568519",
+    "category": "FILLED",
+    "title": "Captain America: Homecoming",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:57:14.522080",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Secret Avengers",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T04:58:18.290826",
+    "category": "FILLED",
+    "title": "Fantastic Four",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T04:58:59.959505",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Nightwing",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T04:59:41.905582",
+    "category": "FILLED",
+    "title": "New Mutants: Lethal Legion",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T05:00:23.598124",
+    "category": "FILLED",
+    "title": "Doctor Strange Annual",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T05:01:04.278471",
+    "category": "FILLED",
+    "title": "New Mutants",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T05:01:45.978298",
+    "category": "FILLED",
+    "title": "Doctor Doom",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T05:02:26.691189",
+    "category": "FILLED",
+    "title": "Justice League of America",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T05:03:08.150045",
+    "category": "FILLED",
+    "title": "Justice League: The Omega Act Special",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T05:06:34.126423",
+    "category": "FILLED",
+    "title": "Detective Comics",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T05:06:55.242776",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Demon Knights",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-25T05:06:55.855755",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Dark Reign: Deadpool vs. Thunderbolts",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T05:06:56.507539",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "DCKO: The Kids Are All Fight Special",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T05:07:38.016199",
+    "category": "FILLED",
+    "title": "Longshots",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T05:07:38.868687",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Longshots: Age of Revelation",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T05:07:38.883629",
+    "category": "SKIPPED_COLLISION",
+    "title": "Action Comics",
+    "detail": "Filled avg year 2020, blank avg 1981 (gap 39y)"
+  },
+  {
+    "ts": "2026-06-25T05:07:39.619468",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Marvel Must Have: Fantastic Four",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T05:08:22.275615",
+    "category": "FILLED",
+    "title": "Marvel Super Heroes Secret Wars",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T05:08:25.477287",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "DCKO: Red Hood vs. The Joker",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T05:08:27.406491",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Midnight Suns: Bloodhunt",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T05:09:11.010843",
+    "category": "FILLED",
+    "title": "Miles Morales: Spider-Man",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T05:15:43.414790",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Miles Morales: Spider-Man and Moon Girl",
+    "detail": "CV lookup failed: HTTP error: Max retries exceeded"
+  },
+  {
+    "ts": "2026-06-25T05:22:15.483524",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Moon Knight",
+    "detail": "CV lookup failed: HTTP error: Max retries exceeded"
+  },
+  {
+    "ts": "2026-06-25T05:22:16.986007",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Moon Knight and the Infinity Watch",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T05:22:17.665823",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Ms. Marvel and Moon Knight",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T05:22:18.324303",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Ms. Marvel: The Muse Menace",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T05:23:01.984141",
+    "category": "FILLED",
+    "title": "Namor",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T05:23:46.819259",
+    "category": "FILLED",
+    "title": "Nebula",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-25T05:23:47.965989",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "DC: 5 of a Kind \u2014 Wonder Woman/Grace",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T05:23:49.177852",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "A Death in the Family: Robin Lives!",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-25T05:32:14.335791",
+    "category": "FILLED",
+    "title": "One World Under Doom",
+    "detail": "11/11 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T12:20:24.930900",
+    "category": "FILLED",
+    "title": "One World Under Doom",
+    "detail": "11/11 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T12:21:56.461548",
+    "category": "FILLED",
+    "title": "One World Under Doom",
+    "detail": "11/11 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T12:23:55.565839",
+    "category": "FILLED",
+    "title": "Star Trek",
+    "detail": "10/10 rows filled via Comic Vine. Artists: 9. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T12:25:21.125942",
+    "category": "FILLED",
+    "title": "Star Trek",
+    "detail": "10/10 rows filled via Comic Vine. Artists: 9. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T12:27:44.472611",
+    "category": "FILLED",
+    "title": "Secret Six",
+    "detail": "10/10 rows filled via Comic Vine. Artists: 10. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T12:28:27.491908",
+    "category": "FILLED",
+    "title": "The Ultimates",
+    "detail": "1/10 rows filled via Comic Vine. Artists: 1. Not found: 9."
+  },
+  {
+    "ts": "2026-06-26T12:29:06.884561",
+    "category": "FILLED",
+    "title": "Secret Six",
+    "detail": "10/10 rows filled via Comic Vine. Artists: 10. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T12:29:48.129541",
+    "category": "FILLED",
+    "title": "The Ultimates",
+    "detail": "1/10 rows filled via Comic Vine. Artists: 1. Not found: 9."
+  },
+  {
+    "ts": "2026-06-26T12:32:18.287645",
+    "category": "FILLED",
+    "title": "Suicide Squad",
+    "detail": "10/10 rows filled via Comic Vine. Artists: 10. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T12:32:41.093801",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Legion Lost",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T12:33:36.012213",
+    "category": "FILLED",
+    "title": "Suicide Squad",
+    "detail": "10/10 rows filled via Comic Vine. Artists: 10. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T12:33:56.634660",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Legion Lost",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T12:35:50.762066",
+    "category": "FILLED",
+    "title": "Justice League Unlimited",
+    "detail": "8/8 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T12:36:34.293906",
+    "category": "FILLED",
+    "title": "Suicide Squad: From the Ashes",
+    "detail": "1/7 rows filled via Comic Vine. Artists: 1. Not found: 6."
+  },
+  {
+    "ts": "2026-06-26T12:37:01.454035",
+    "category": "FILLED",
+    "title": "Justice League Unlimited",
+    "detail": "8/8 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T12:37:42.957138",
+    "category": "FILLED",
+    "title": "Suicide Squad: From the Ashes",
+    "detail": "1/7 rows filled via Comic Vine. Artists: 1. Not found: 6."
+  },
+  {
+    "ts": "2026-06-26T12:39:02.008097",
+    "category": "FILLED",
+    "title": "Nova: Centurion",
+    "detail": "6/6 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T12:39:24.447577",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "All-Star Batman and Robin, the Boy Wonder",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T12:40:06.657443",
+    "category": "FILLED",
+    "title": "Nova: Centurion",
+    "detail": "6/6 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T12:40:27.688334",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "All-Star Batman and Robin, the Boy Wonder",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T12:41:51.066736",
+    "category": "FILLED",
+    "title": "Red She-Hulk",
+    "detail": "6/6 rows filled via Comic Vine. Artists: 6. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T12:42:51.374744",
+    "category": "FILLED",
+    "title": "Red She-Hulk",
+    "detail": "6/6 rows filled via Comic Vine. Artists: 6. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T12:44:17.637934",
+    "category": "FILLED",
+    "title": "Legionnaires",
+    "detail": "6/6 rows filled via Comic Vine. Artists: 4. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T12:44:18.597402",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Suicide Squad Most Wanted: Deadshot and Katana",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:44:19.543860",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Deep Space Nine \u2014 The Dog of War",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:44:20.549641",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "S.H.I.E.L.D. Infinite",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:45:14.801719",
+    "category": "FILLED",
+    "title": "Legionnaires",
+    "detail": "6/6 rows filled via Comic Vine. Artists: 4. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T12:45:15.142126",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Suicide Squad Most Wanted: Deadshot and Katana",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:45:15.429544",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Deep Space Nine \u2014 The Dog of War",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:45:15.741387",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "S.H.I.E.L.D. Infinite",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:46:25.791634",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "X",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T12:47:08.706903",
+    "category": "FILLED",
+    "title": "Imperial",
+    "detail": "1/5 rows filled via Comic Vine. Artists: 0. Not found: 3."
+  },
+  {
+    "ts": "2026-06-26T12:47:09.830435",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Legion of Superheroes",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:47:18.951651",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "X",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T12:47:31.831658",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Domino",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T12:47:33.020131",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Strange New Worlds \u2014 The Illyrian Enigma",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:47:34.137595",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Deep Space Nine \u2014 Too Long a Sacrifice",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:48:00.279836",
+    "category": "FILLED",
+    "title": "Imperial",
+    "detail": "1/5 rows filled via Comic Vine. Artists: 0. Not found: 3."
+  },
+  {
+    "ts": "2026-06-26T12:48:00.749893",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Legion of Superheroes",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:48:21.595099",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Domino",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T12:48:21.952099",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Strange New Worlds \u2014 The Illyrian Enigma",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:48:22.344141",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Deep Space Nine \u2014 Too Long a Sacrifice",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:49:20.951089",
+    "category": "FILLED",
+    "title": "Blade",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T12:49:21.986149",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Silver Surfer: Surfer No More",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:49:22.006118",
+    "category": "SKIPPED_COLLISION",
+    "title": "Silver Surfer: Rebirth",
+    "detail": "Filled avg year 2022, blank avg 1992 (gap 30y)"
+  },
+  {
+    "ts": "2026-06-26T12:49:23.148708",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Voyager \u2014 Seven's Reckoning",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:50:04.928580",
+    "category": "FILLED",
+    "title": "Blade",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T12:50:05.314397",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Silver Surfer: Surfer No More",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:50:05.332698",
+    "category": "SKIPPED_COLLISION",
+    "title": "Silver Surfer: Rebirth",
+    "detail": "Filled avg year 2022, blank avg 1992 (gap 30y)"
+  },
+  {
+    "ts": "2026-06-26T12:50:05.819051",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Voyager \u2014 Seven's Reckoning",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:50:05.995025",
+    "category": "FILLED",
+    "title": "Justice League of America",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 4. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T12:50:10.232697",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "DCKO",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:50:11.274691",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "SGU: Stargate Universe",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:50:46.989260",
+    "category": "FILLED",
+    "title": "Justice League of America",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 4. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T12:50:50.572366",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "DCKO",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:50:50.940231",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "SGU: Stargate Universe",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T12:51:57.480906",
+    "category": "FILLED",
+    "title": "Dazzler",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T12:52:19.600686",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Invincible Iron Man",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T12:52:33.965750",
+    "category": "FILLED",
+    "title": "Dazzler",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T12:52:56.766991",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Invincible Iron Man",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T12:54:15.067784",
+    "category": "FILLED",
+    "title": "Alien vs. Captain America",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T12:54:45.306531",
+    "category": "FILLED",
+    "title": "Alien vs. Captain America",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T12:55:27.001838",
+    "category": "FILLED",
+    "title": "Green Lantern",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 4. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T12:55:55.050321",
+    "category": "FILLED",
+    "title": "Green Lantern",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 4. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T12:57:20.194330",
+    "category": "FILLED",
+    "title": "The Ones",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T12:57:43.926956",
+    "category": "FILLED",
+    "title": "The Ones",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T12:59:30.000268",
+    "category": "FILLED",
+    "title": "Web of Black Widow",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:00:40.064045",
+    "category": "FILLED",
+    "title": "Web of Black Widow",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:01:56.623341",
+    "category": "FILLED",
+    "title": "Superman",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 4. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:01:57.590610",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Avengers: Defenders \u2014 Tarot",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:03:02.798479",
+    "category": "FILLED",
+    "title": "Superman",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 4. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:03:02.970166",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Avengers: Defenders \u2014 Tarot",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:03:41.646584",
+    "category": "FILLED",
+    "title": "Wolverine: Madripoor Knights",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:04:03.035542",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Original Sin: Hulk vs. Iron Man",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T13:04:43.992162",
+    "category": "FILLED",
+    "title": "Wolverine: Madripoor Knights",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:05:04.474668",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Original Sin: Hulk vs. Iron Man",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T13:05:26.083249",
+    "category": "FILLED",
+    "title": "Cable: Love and Chrome",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:06:25.565700",
+    "category": "FILLED",
+    "title": "Cable: Love and Chrome",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:06:49.153066",
+    "category": "FILLED",
+    "title": "Predator vs. Black Panther",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 2. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:07:31.284231",
+    "category": "FILLED",
+    "title": "War of the Realms: Giant-Man",
+    "detail": "1/3 rows filled via Comic Vine. Artists: 0. Not found: 2."
+  },
+  {
+    "ts": "2026-06-26T13:07:32.304882",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Robin and Batman: Jason Todd",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:07:33.250236",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "What If? Avengers vs. X-Men",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:07:34.322676",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Robin: The Joker's Wild",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:07:35.468899",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Unbreakable X-Men: Age of Revelation",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:07:46.816440",
+    "category": "FILLED",
+    "title": "Predator vs. Black Panther",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 2. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:08:27.296329",
+    "category": "FILLED",
+    "title": "War of the Realms: Giant-Man",
+    "detail": "1/3 rows filled via Comic Vine. Artists: 0. Not found: 2."
+  },
+  {
+    "ts": "2026-06-26T13:08:27.468970",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Robin and Batman: Jason Todd",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:08:27.634357",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "What If? Avengers vs. X-Men",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:08:27.831977",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Robin: The Joker's Wild",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:08:27.989247",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Unbreakable X-Men: Age of Revelation",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:08:58.624298",
+    "category": "FILLED",
+    "title": "Night Thrasher",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 3. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:09:48.908836",
+    "category": "FILLED",
+    "title": "Night Thrasher",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 3. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:10:22.092605",
+    "category": "FILLED",
+    "title": "Power Man: Timeless",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:10:22.934813",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Strange Academy: Bloodhunt",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:10:24.133380",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Dracula: Bloodhunt",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:11:10.113252",
+    "category": "FILLED",
+    "title": "Power Man: Timeless",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:11:10.290879",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Strange Academy: Bloodhunt",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:11:10.511929",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Dracula: Bloodhunt",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:11:27.055125",
+    "category": "FILLED",
+    "title": "Sorcerer Supreme",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:12:10.107901",
+    "category": "FILLED",
+    "title": "Space Corps",
+    "detail": "1/3 rows filled via Comic Vine. Artists: 0. Not found: 2."
+  },
+  {
+    "ts": "2026-06-26T13:12:11.305999",
+    "category": "FILLED",
+    "title": "Sorcerer Supreme",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:12:52.147545",
+    "category": "FILLED",
+    "title": "Space Corps",
+    "detail": "1/3 rows filled via Comic Vine. Artists: 0. Not found: 2."
+  },
+  {
+    "ts": "2026-06-26T13:13:38.133168",
+    "category": "FILLED",
+    "title": "Fantastic Four",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 2. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:14:16.450963",
+    "category": "FILLED",
+    "title": "Fantastic Four",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 2. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:15:02.007075",
+    "category": "FILLED",
+    "title": "Star Trek: Countdown",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:15:37.538860",
+    "category": "FILLED",
+    "title": "Star Trek: Countdown",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:16:05.089275",
+    "category": "FILLED",
+    "title": "Black Panther: Intergalactic",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:16:06.283055",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Black Panther: Bloodhunt",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:16:38.186814",
+    "category": "FILLED",
+    "title": "Black Panther: Intergalactic",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:16:38.334364",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Black Panther: Bloodhunt",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:17:29.217825",
+    "category": "FILLED",
+    "title": "Black Panther",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 3. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:18:00.041962",
+    "category": "FILLED",
+    "title": "Black Panther",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 3. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:19:13.033273",
+    "category": "FILLED",
+    "title": "Birds of Prey",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 3. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:19:14.409185",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Discovery \u2014 Aftermath",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:19:41.613993",
+    "category": "FILLED",
+    "title": "Birds of Prey",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 3. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:19:41.877810",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Discovery \u2014 Aftermath",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:20:37.517897",
+    "category": "FILLED",
+    "title": "Xin: Journey of the Monkey King",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:20:38.407987",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "DCKO: Night Fight",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:20:39.394314",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Gene Grade",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:21:03.063689",
+    "category": "FILLED",
+    "title": "Xin: Journey of the Monkey King",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:21:03.261237",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "DCKO: Night Fight",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:21:03.494640",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Gene Grade",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:21:20.591796",
+    "category": "FILLED",
+    "title": "Legion Lost",
+    "detail": "1/2 rows filled via Comic Vine. Artists: 0. Not found: 1."
+  },
+  {
+    "ts": "2026-06-26T13:21:43.858488",
+    "category": "FILLED",
+    "title": "Legion Lost",
+    "detail": "1/2 rows filled via Comic Vine. Artists: 0. Not found: 1."
+  },
+  {
+    "ts": "2026-06-26T13:22:02.814935",
+    "category": "FILLED",
+    "title": "Green Lantern: Fractured Spectrum",
+    "detail": "1/2 rows filled via Comic Vine. Artists: 0. Not found: 1."
+  },
+  {
+    "ts": "2026-06-26T13:22:24.452130",
+    "category": "FILLED",
+    "title": "Green Lantern: Fractured Spectrum",
+    "detail": "1/2 rows filled via Comic Vine. Artists: 0. Not found: 1."
+  },
+  {
+    "ts": "2026-06-26T13:22:45.049183",
+    "category": "FILLED",
+    "title": "Giant-Size X-Men",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:23:04.916298",
+    "category": "FILLED",
+    "title": "Giant-Size X-Men",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:23:47.730995",
+    "category": "FILLED",
+    "title": "Justice League Red",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:24:05.712877",
+    "category": "FILLED",
+    "title": "Justice League Red",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:24:09.005515",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Justice League Dark",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T13:24:26.016790",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Justice League Dark",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T13:24:30.629583",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Justice League",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T13:24:46.364038",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Justice League",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T13:25:13.008899",
+    "category": "FILLED",
+    "title": "Lords of Empyre",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:25:26.912295",
+    "category": "FILLED",
+    "title": "Lords of Empyre",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:26:14.882853",
+    "category": "FILLED",
+    "title": "Spider-Punk",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:26:27.853505",
+    "category": "FILLED",
+    "title": "Spider-Punk",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:27:17.226011",
+    "category": "FILLED",
+    "title": "Marvel Zombies",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:27:28.549570",
+    "category": "FILLED",
+    "title": "Marvel Zombies",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:27:38.307944",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "New Mutants",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T13:27:48.920768",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "New Mutants",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T13:28:40.900208",
+    "category": "FILLED",
+    "title": "Planet of the Apes vs. Fantastic Four",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:28:49.583467",
+    "category": "FILLED",
+    "title": "Planet of the Apes vs. Fantastic Four",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:29:43.475221",
+    "category": "FILLED",
+    "title": "Power Man and Iron Fist",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 2. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:29:50.322665",
+    "category": "FILLED",
+    "title": "Power Man and Iron Fist",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 2. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:30:04.893824",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek Annual",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T13:30:05.890212",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Picard \u2014 Stargazer",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:30:06.894061",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: The Next Generation \u2014 Mirror Broken",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:30:07.699497",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "The Orville: Digressions",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:30:08.770867",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "The Orville: Heroes",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:30:09.762507",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "The Orville: Launch Day",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:30:10.668413",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek Annual",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T13:30:10.705520",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "The Orville: The Word of Avis",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:30:10.852274",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Picard \u2014 Stargazer",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:30:11.210771",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: The Next Generation \u2014 Mirror Broken",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:30:11.397177",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "The Orville: Digressions",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:30:11.658595",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "The Orville: Heroes",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:30:11.832310",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "The Orville: Launch Day",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:30:12.018637",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "The Orville: The Word of Avis",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:31:13.224495",
+    "category": "FILLED",
+    "title": "The Question: All Along the Watchtower",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:31:13.243489",
+    "category": "SKIPPED_COLLISION",
+    "title": "World's Finest",
+    "detail": "Filled avg year 2013, blank avg 1949 (gap 64y)"
+  },
+  {
+    "ts": "2026-06-26T13:31:13.260449",
+    "category": "FILLED",
+    "title": "The Question: All Along the Watchtower",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:31:13.265898",
+    "category": "SKIPPED_COLLISION",
+    "title": "World's Finest",
+    "detail": "Filled avg year 2013, blank avg 1949 (gap 64y)"
+  },
+  {
+    "ts": "2026-06-26T13:31:14.110366",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "X-Vengers: Age of Revelation",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:31:15.033561",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Free Comic Book Day: Spider-Man",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:31:15.844938",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Young Justice: Sins of the Father",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:31:37.271408",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Aquaman",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T13:32:40.251052",
+    "category": "FILLED",
+    "title": "Bastard Samurai",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 2. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:33:01.387310",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Age of Apocalypse",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T13:34:04.518042",
+    "category": "FILLED",
+    "title": "Earth 2 Annual",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 2. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:34:05.535767",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Doctor Strange: Asgard",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:34:06.882919",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Avengers/Fantastic Four: Empyre",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:34:47.820801",
+    "category": "FILLED",
+    "title": "Aquaman",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 2. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:35:50.228328",
+    "category": "FILLED",
+    "title": "Black Panther: World of Wakanda",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 2. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:36:52.833467",
+    "category": "FILLED",
+    "title": "DC vs. Vampires: World War V",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:36:54.175178",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Cataclysm: Ultimate Comics X-Men",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:36:55.079347",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Batgirl: All In",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:36:55.965774",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Cloak and Dagger: Age of Revelation",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:37:38.122611",
+    "category": "FILLED",
+    "title": "Star Trek: Waypoint",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:38:20.156160",
+    "category": "FILLED",
+    "title": "Star Trek: Waypoint Special",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:38:21.049758",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Extreme X-Men",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:39:04.030811",
+    "category": "FILLED",
+    "title": "Strange Academy: Miles Morales",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:39:05.343428",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: The Next Generation \u2014 The Gift",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:42:12.362849",
+    "category": "FILLED",
+    "title": "Batman",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:42:54.752729",
+    "category": "FILLED",
+    "title": "Star Trek: The Next Generation",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:43:15.937932",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Batgirl",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T13:43:16.774669",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Avengers: Wasp",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:43:58.845366",
+    "category": "FILLED",
+    "title": "Strange Academy: Moon Knight",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:44:19.315679",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Suicide Squad",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T13:44:20.106370",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: The Mirror War \u2014 Sisko",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:45:02.240076",
+    "category": "FILLED",
+    "title": "Suicide Squad: Amanda Waller",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:45:03.172820",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Avengers: Giant-Man",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:45:45.047523",
+    "category": "FILLED",
+    "title": "Supergirl",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:45:45.905667",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Avengers: Empyre",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:45:46.995782",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Superman Special: Endless Winter",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:46:28.878535",
+    "category": "FILLED",
+    "title": "Superman/Batman Annual",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:47:10.851625",
+    "category": "FILLED",
+    "title": "Teen Titans: Endless Winter Special",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:47:11.799476",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "The All-Star Story of the Dodgers",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:47:12.757591",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: The Mirror War \u2014 Troi",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:47:54.850096",
+    "category": "FILLED",
+    "title": "Star Trek: Khan",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:48:36.738890",
+    "category": "FILLED",
+    "title": "Batman Beyond: Return of the Joker",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:49:18.749035",
+    "category": "FILLED",
+    "title": "Blood Squad Seven",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:49:19.500918",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Silop",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:50:01.623308",
+    "category": "FILLED",
+    "title": "Silver Surfer Annual",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:50:43.779800",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Buffy the Vampire Slayer Annual",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T13:50:43.799513",
+    "category": "SKIPPED_COLLISION",
+    "title": "Blue Beetle",
+    "detail": "Filled avg year 2007, blank avg 2023 (gap 16y)"
+  },
+  {
+    "ts": "2026-06-26T13:50:44.569643",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Silver Surfer: The Legacy",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:50:45.640603",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Bloodhunters",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:50:46.616074",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Bloodhunt: Moon Knight",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:51:28.487617",
+    "category": "FILLED",
+    "title": "Spectacular Spider-Man",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:51:50.281497",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Spider-Man/Deadpool",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T13:51:51.187130",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Bloodhunt: Jubilee",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:51:51.908325",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Black Widow: The Lost Days",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:52:34.323122",
+    "category": "FILLED",
+    "title": "Batman and Robin",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:52:56.168974",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Countdown to Darkness",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T13:52:57.073129",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: DS9 \u2014 Too Long a Sacrifice",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:52:57.863874",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Day of Blood \u2014 Prelude",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:53:40.098208",
+    "category": "FILLED",
+    "title": "Star Trek: Deep Space Nine",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:53:40.115391",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Black Panther: Bloodhunt",
+    "detail": "CV lookup failed: Volume not found"
+  },
+  {
+    "ts": "2026-06-26T13:53:41.106180",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Black Panther Intergalactic",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:54:02.868816",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Defiant Annual",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T13:54:24.403626",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Batwing",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T13:54:25.287226",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Generations",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:54:26.010041",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Generations \u2014 The Official Comics Adaptation",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:55:08.151213",
+    "category": "FILLED",
+    "title": "Avengers: Captain America",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:55:50.484160",
+    "category": "FILLED",
+    "title": "Avengers Standoff",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:55:51.305401",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "The Iron Age: Alpha",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:56:33.140947",
+    "category": "FILLED",
+    "title": "Aliens vs. Avengers",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:57:15.536739",
+    "category": "FILLED",
+    "title": "What If? Wolverine: Enemy of the State",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:57:58.096850",
+    "category": "FILLED",
+    "title": "What If? X-Men",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:57:59.047535",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "What If? X-Men Deadly Genesis",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:57:59.943968",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Wildstorm Starts Now!",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:58:01.530227",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Wolverine and the X-Men Annual",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T13:58:44.364193",
+    "category": "FILLED",
+    "title": "Wolverine vs. Blade",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T13:59:30.225376",
+    "category": "FILLED",
+    "title": "All-New, All-Different Savage Avengers",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:00:12.265750",
+    "category": "FILLED",
+    "title": "Wolverine: Madripoor Knights",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:00:13.250000",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Wonder Man and the Beast",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:00:14.126225",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Wonder Woman 1984: Museum Mayhem",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:00:56.374367",
+    "category": "FILLED",
+    "title": "Wonder Woman: Futures End",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:00:57.244336",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Agents of S.H.I.E.L.D. Standoff",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:00:58.181426",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Avengers and Moon Girl",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:01:40.915304",
+    "category": "FILLED",
+    "title": "X-23",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:02:22.798085",
+    "category": "FILLED",
+    "title": "X-Force",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:02:44.123070",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "X-Men",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T14:02:44.956457",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "X-Men Origins: X-Men Blue",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:03:26.832480",
+    "category": "FILLED",
+    "title": "X-Men and Moon Girl",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:03:27.712744",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "X-Men/Eternals: Manifest Destiny",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:03:49.176154",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "X-Men: Hope",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T14:04:31.474534",
+    "category": "FILLED",
+    "title": "X-Men: Magik",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:04:32.320779",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "X-Men: Secret",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:04:53.863663",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Age of Revelation",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T14:05:35.942865",
+    "category": "FILLED",
+    "title": "Young Justice: Sins of Youth",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:05:36.906006",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "What If? Magic",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:05:37.750870",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "What If? Galactus Transformed Moon Knight",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:05:38.901036",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "What If? Galactus Transformed Hulk",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:06:21.911898",
+    "category": "FILLED",
+    "title": "Amazing Spider-Man",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:07:05.007220",
+    "category": "FILLED",
+    "title": "Shang-Chi",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:07:46.772288",
+    "category": "FILLED",
+    "title": "Avengers",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:07:47.790691",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Aquaman Special: Endless Winter",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:08:08.220651",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Aquaman",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T14:08:29.554394",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "The Trials of Shazam",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T14:08:31.707484",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Time Slide",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:08:33.097539",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Titans/Outsiders: Secret Files and Origins",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:09:14.712754",
+    "category": "FILLED",
+    "title": "Ultimates",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:09:36.272968",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Ultimatum: Fantastic Four",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T14:10:17.887365",
+    "category": "FILLED",
+    "title": "Ultimatum: Fantastic Four Requiem",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:10:59.903451",
+    "category": "FILLED",
+    "title": "Ultimatum: X-Men Requiem",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:11:01.306870",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Ultraman vs. Avengers",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:11:02.066723",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Aquaboy and Lagoon Man",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:11:44.222571",
+    "category": "FILLED",
+    "title": "Uncanny Inhumans Annual",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:12:05.783273",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Uncanny X-Men",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T14:12:08.205965",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Uncanny X-Men Special: No End in Sight Part 3",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:12:09.013374",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Union Jack the Ripper: Bloodhunt",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:12:30.408590",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Voodoo",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T14:13:13.412946",
+    "category": "FILLED",
+    "title": "Animal Man",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:13:16.195364",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "War of the Realms: Savage Avengers",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:13:58.840891",
+    "category": "FILLED",
+    "title": "Weapon X-Men",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:14:40.685726",
+    "category": "FILLED",
+    "title": "Weapon X-Men",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:14:41.401355",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Amazing X-Men: Age of Revelation",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:14:42.380083",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Shang-Chi vs. Captain America",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:14:43.142492",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Secret Invasion: Miss Marvel",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:14:44.047984",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Captain America and Volstagg",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:15:27.629612",
+    "category": "FILLED",
+    "title": "Imperial War: Planet She-Hulk",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:16:29.640338",
+    "category": "FILLED",
+    "title": "Green Lantern",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:16:34.034612",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Green Lantern Corps: Civil Corps",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:17:20.794635",
+    "category": "FILLED",
+    "title": "Earth 2",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:18:02.983512",
+    "category": "FILLED",
+    "title": "Guardians Team-Up",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:18:45.217460",
+    "category": "FILLED",
+    "title": "Guardians of the Galaxy",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:19:29.696731",
+    "category": "FILLED",
+    "title": "Guardians of the Galaxy Prelude",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:19:31.400833",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Guardians of the Galaxy: Bane of the Blastaar",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:20:15.800119",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "House of M Sketchbook",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T14:20:17.083002",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Hulk Smash the Avengers",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:21:00.375776",
+    "category": "FILLED",
+    "title": "Dungeons of Doom",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:21:43.788404",
+    "category": "FILLED",
+    "title": "Imperial War: Black Panther",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:22:29.263008",
+    "category": "FILLED",
+    "title": "Impulse",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:23:13.312601",
+    "category": "FILLED",
+    "title": "Secret Invasion: Thor",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:23:58.094752",
+    "category": "FILLED",
+    "title": "Infinity Countdown Prime",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:24:42.899178",
+    "category": "FILLED",
+    "title": "Infinity Countdown: Adam Warlock",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:25:26.924223",
+    "category": "FILLED",
+    "title": "Infinity Countdown: Black Widow",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:26:11.106538",
+    "category": "FILLED",
+    "title": "Infinity Countdown: Captain Marvel",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:26:53.523625",
+    "category": "FILLED",
+    "title": "Infinity Countdown: Champions",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:27:37.854195",
+    "category": "FILLED",
+    "title": "Inglorious X-Force",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:28:20.591008",
+    "category": "FILLED",
+    "title": "Doom Academy",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:28:21.343201",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Iron Man Special: No End in Sight Part 2",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:28:43.216084",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Journey into Mystery",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T14:29:26.817074",
+    "category": "FILLED",
+    "title": "Jubilee: Deadly Reunion",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:29:28.985670",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Doctor Who: Free Comic Book Day 2015",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:30:10.692578",
+    "category": "FILLED",
+    "title": "Green Arrow",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:30:53.731758",
+    "category": "FILLED",
+    "title": "Godzilla vs. Avengers",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:31:39.792714",
+    "category": "FILLED",
+    "title": "Earth 2: Society Annual",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:32:22.914630",
+    "category": "FILLED",
+    "title": "Giant-Size Fantastic Four",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:32:23.808240",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Expatriate X-Men: Age of Revelation",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:33:27.814038",
+    "category": "FILLED",
+    "title": "Fantastic Four",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:33:51.112232",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Fantastic Four Annual",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T14:33:53.026981",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Fantastic Four \u00d7 Gargoyles",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:33:55.304433",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Fantastic Four: Doom War",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:34:17.453693",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Fantastic Four: Empyre",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T14:34:19.827204",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Free Comic Book Day: Civil War",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:34:21.829388",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Free Comic Book Day: Doctor Who",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:34:22.924487",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Eternals: When Gods Walked the Earth",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:34:22.951200",
+    "category": "SKIPPED_COLLISION",
+    "title": "Friendly Neighborhood Spider-Man",
+    "detail": "Filled avg year 2005, blank avg 2024 (gap 19y)"
+  },
+  {
+    "ts": "2026-06-26T14:34:24.312235",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Futures End: Aquaman",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:34:25.545745",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Futures End: Batgirl",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:34:26.723442",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Futures End: Batman and Robin",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:34:27.547494",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Futures End: Batman/Superman",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:34:28.808130",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Futures End: Birds of Prey",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:34:30.907895",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Futures End: Earth 2",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:34:31.885214",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Futures End: Grayson",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:34:32.853690",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Futures End: Huntress/Power Girl",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:34:35.208908",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Futures End: Justice League",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:34:36.623940",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Futures End: New Suicide Squad",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:34:37.402925",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Futures End: Superman/Wonder Woman",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:35:18.881738",
+    "category": "FILLED",
+    "title": "Eternals",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:36:02.238386",
+    "category": "FILLED",
+    "title": "Giant-Size Dark Phoenix Saga",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:36:22.678881",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Justice League",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T14:36:27.330189",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Justice League Dark: Tomorrow's Special",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:37:09.841971",
+    "category": "FILLED",
+    "title": "Doctor Strange of Asgard",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:37:10.675311",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "DC: 5 of a Kind \u2014 Thunder/Martian Manhunter",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:37:11.564329",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Nova Special: No End in Sight",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:37:12.503099",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "DC: 5 of a Kind \u2014 Nightwing/Captain Boomerang",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:37:14.104810",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "DC: 5 of a Kind \u2014 Metamorpho/Aquaman",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:37:57.254098",
+    "category": "FILLED",
+    "title": "Original Sin Annual",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:37:58.349763",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "DC: 5 of a Kind \u2014 Katana/Shazam",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:38:00.730682",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Planet DC: Batgirl",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:38:01.664588",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "DC vs. Marvel: The Legion",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:38:44.339430",
+    "category": "FILLED",
+    "title": "DC Universe: Last Will and Testament",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:39:26.041292",
+    "category": "FILLED",
+    "title": "Powers of X",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:40:09.405257",
+    "category": "FILLED",
+    "title": "Predator vs. Black Panther",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:40:53.119539",
+    "category": "FILLED",
+    "title": "DC Pride: Tim Drake Special",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:41:35.950842",
+    "category": "FILLED",
+    "title": "Psylocke",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:42:17.978504",
+    "category": "FILLED",
+    "title": "Red Hood and the Outlaws",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:43:00.929911",
+    "category": "FILLED",
+    "title": "Red Hood and the Outlaws: Futures End",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:43:25.045834",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Red Hulk",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T14:43:48.307786",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Catwoman",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T14:44:30.856491",
+    "category": "FILLED",
+    "title": "Rocket Raccoon",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:45:13.123080",
+    "category": "FILLED",
+    "title": "Rogue Storm",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:45:54.989053",
+    "category": "FILLED",
+    "title": "Captain Marvel",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:45:56.714721",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "S.H.I.E.L.D.: Quake \u2014 50th Anniversary",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:46:40.224171",
+    "category": "FILLED",
+    "title": "Captain America: Homecoming",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:47:01.453171",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Secret Avengers",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T14:48:06.184242",
+    "category": "FILLED",
+    "title": "Fantastic Four",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:48:48.356733",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Nightwing",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T14:49:33.172149",
+    "category": "FILLED",
+    "title": "New Mutants: Lethal Legion",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:50:15.098631",
+    "category": "FILLED",
+    "title": "Doctor Strange Annual",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:50:56.037999",
+    "category": "FILLED",
+    "title": "New Mutants",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:51:38.147241",
+    "category": "FILLED",
+    "title": "Doctor Doom",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:52:21.128473",
+    "category": "FILLED",
+    "title": "Justice League of America",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:53:04.906267",
+    "category": "FILLED",
+    "title": "Justice League: The Omega Act Special",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:56:36.695131",
+    "category": "FILLED",
+    "title": "Detective Comics",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:56:58.637255",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Demon Knights",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-26T14:56:59.704322",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Dark Reign: Deadpool vs. Thunderbolts",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:57:00.595950",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "DCKO: The Kids Are All Fight Special",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:57:43.468157",
+    "category": "FILLED",
+    "title": "Longshots",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:57:44.427830",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Longshots: Age of Revelation",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:57:44.439459",
+    "category": "SKIPPED_COLLISION",
+    "title": "Action Comics",
+    "detail": "Filled avg year 2020, blank avg 1981 (gap 39y)"
+  },
+  {
+    "ts": "2026-06-26T14:57:45.826512",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Marvel Must Have: Fantastic Four",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:58:28.540912",
+    "category": "FILLED",
+    "title": "Marvel Super Heroes Secret Wars",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:58:29.899303",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "DCKO: Red Hood vs. The Joker",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:58:31.110364",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Midnight Suns: Bloodhunt",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T14:59:13.629979",
+    "category": "FILLED",
+    "title": "Miles Morales: Spider-Man",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T14:59:56.418351",
+    "category": "FILLED",
+    "title": "Miles Morales: Spider-Man and Moon Girl",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T15:00:39.074101",
+    "category": "FILLED",
+    "title": "Moon Knight",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T15:00:40.450468",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Moon Knight and the Infinity Watch",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T15:00:41.508913",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Ms. Marvel and Moon Knight",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T15:00:42.337565",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Ms. Marvel: The Muse Menace",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T15:01:24.205954",
+    "category": "FILLED",
+    "title": "Namor",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T15:02:09.535298",
+    "category": "FILLED",
+    "title": "Nebula",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-26T15:02:10.594227",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "DC: 5 of a Kind \u2014 Wonder Woman/Grace",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-26T15:02:11.300744",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "A Death in the Family: Robin Lives!",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T20:42:49.922674",
+    "category": "FILLED",
+    "title": "One World Under Doom",
+    "detail": "11/11 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T20:46:21.451218",
+    "category": "FILLED",
+    "title": "Star Trek",
+    "detail": "10/10 rows filled via Comic Vine. Artists: 9. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T20:50:11.230355",
+    "category": "FILLED",
+    "title": "Secret Six",
+    "detail": "10/10 rows filled via Comic Vine. Artists: 10. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T20:50:53.183063",
+    "category": "FILLED",
+    "title": "The Ultimates",
+    "detail": "1/10 rows filled via Comic Vine. Artists: 1. Not found: 9."
+  },
+  {
+    "ts": "2026-06-28T20:54:44.431684",
+    "category": "FILLED",
+    "title": "Suicide Squad",
+    "detail": "10/10 rows filled via Comic Vine. Artists: 10. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T20:55:06.616517",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Legion Lost",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T20:58:16.620127",
+    "category": "FILLED",
+    "title": "Justice League Unlimited",
+    "detail": "8/8 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T20:58:58.569574",
+    "category": "FILLED",
+    "title": "Suicide Squad: From the Ashes",
+    "detail": "1/7 rows filled via Comic Vine. Artists: 1. Not found: 6."
+  },
+  {
+    "ts": "2026-06-28T21:01:23.560104",
+    "category": "FILLED",
+    "title": "Nova: Centurion",
+    "detail": "6/6 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:01:45.061197",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "All-Star Batman and Robin, the Boy Wonder",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T21:04:10.210171",
+    "category": "FILLED",
+    "title": "Red She-Hulk",
+    "detail": "6/6 rows filled via Comic Vine. Artists: 6. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:06:35.780903",
+    "category": "FILLED",
+    "title": "Legionnaires",
+    "detail": "6/6 rows filled via Comic Vine. Artists: 4. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:06:36.598539",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Suicide Squad Most Wanted: Deadshot and Katana",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:06:37.533577",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Deep Space Nine \u2014 The Dog of War",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:06:38.442859",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "S.H.I.E.L.D. Infinite",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:08:42.194681",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "X",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T21:09:24.037175",
+    "category": "FILLED",
+    "title": "Imperial",
+    "detail": "1/5 rows filled via Comic Vine. Artists: 0. Not found: 3."
+  },
+  {
+    "ts": "2026-06-28T21:09:24.936934",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Legion of Superheroes",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:09:46.358554",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Domino",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T21:09:47.272955",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Strange New Worlds \u2014 The Illyrian Enigma",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:09:48.155684",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Deep Space Nine \u2014 Too Long a Sacrifice",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:11:31.742124",
+    "category": "FILLED",
+    "title": "Blade",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:11:32.650028",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Silver Surfer: Surfer No More",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:11:32.681709",
+    "category": "SKIPPED_COLLISION",
+    "title": "Silver Surfer: Rebirth",
+    "detail": "Filled avg year 2022, blank avg 1992 (gap 30y)"
+  },
+  {
+    "ts": "2026-06-28T21:11:33.462143",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Voyager \u2014 Seven's Reckoning",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:12:15.400466",
+    "category": "FILLED",
+    "title": "Justice League of America",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 4. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:12:19.379154",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "DCKO",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:12:20.191119",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "SGU: Stargate Universe",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:14:04.208605",
+    "category": "FILLED",
+    "title": "Dazzler",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:14:25.497243",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Invincible Iron Man",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T21:16:08.983050",
+    "category": "FILLED",
+    "title": "Alien vs. Captain America",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:17:11.686589",
+    "category": "FILLED",
+    "title": "Green Lantern",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 4. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:18:55.622233",
+    "category": "FILLED",
+    "title": "The Ones",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:21:58.317441",
+    "category": "FILLED",
+    "title": "Web of Black Widow",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:24:23.304565",
+    "category": "FILLED",
+    "title": "Superman",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 4. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:24:24.473751",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Avengers: Defenders \u2014 Tarot",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:26:08.851706",
+    "category": "FILLED",
+    "title": "Wolverine: Madripoor Knights",
+    "detail": "4/4 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:26:30.769259",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Original Sin: Hulk vs. Iron Man",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T21:27:53.910905",
+    "category": "FILLED",
+    "title": "Cable: Love and Chrome",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:29:17.255966",
+    "category": "FILLED",
+    "title": "Predator vs. Black Panther",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 2. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:29:58.948832",
+    "category": "FILLED",
+    "title": "War of the Realms: Giant-Man",
+    "detail": "1/3 rows filled via Comic Vine. Artists: 0. Not found: 2."
+  },
+  {
+    "ts": "2026-06-28T21:30:00.182555",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Robin and Batman: Jason Todd",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:30:00.969928",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "What If? Avengers vs. X-Men",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:30:01.800593",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Robin: The Joker's Wild",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:30:02.743088",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Unbreakable X-Men: Age of Revelation",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:31:27.741392",
+    "category": "FILLED",
+    "title": "Night Thrasher",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 3. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:32:51.387425",
+    "category": "FILLED",
+    "title": "Power Man: Timeless",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:32:52.215689",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Strange Academy: Bloodhunt",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:32:53.221529",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Dracula: Bloodhunt",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:33:55.892422",
+    "category": "FILLED",
+    "title": "Sorcerer Supreme",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:34:38.074805",
+    "category": "FILLED",
+    "title": "Space Corps",
+    "detail": "1/3 rows filled via Comic Vine. Artists: 0. Not found: 2."
+  },
+  {
+    "ts": "2026-06-28T21:36:05.256922",
+    "category": "FILLED",
+    "title": "Fantastic Four",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 2. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:37:28.808314",
+    "category": "FILLED",
+    "title": "Star Trek: Countdown",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:38:33.101794",
+    "category": "FILLED",
+    "title": "Black Panther: Intergalactic",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:38:34.153859",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Black Panther: Bloodhunt",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:39:58.568555",
+    "category": "FILLED",
+    "title": "Black Panther",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 3. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:41:43.296402",
+    "category": "FILLED",
+    "title": "Birds of Prey",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 3. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:41:44.169801",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Discovery \u2014 Aftermath",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:43:08.110224",
+    "category": "FILLED",
+    "title": "Xin: Journey of the Monkey King",
+    "detail": "3/3 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:43:09.052924",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "DCKO: Night Fight",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:43:10.141502",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Gene Grade",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:43:51.486367",
+    "category": "FILLED",
+    "title": "Legion Lost",
+    "detail": "1/2 rows filled via Comic Vine. Artists: 0. Not found: 1."
+  },
+  {
+    "ts": "2026-06-28T21:44:34.860316",
+    "category": "FILLED",
+    "title": "Green Lantern: Fractured Spectrum",
+    "detail": "1/2 rows filled via Comic Vine. Artists: 0. Not found: 1."
+  },
+  {
+    "ts": "2026-06-28T21:45:18.436807",
+    "category": "FILLED",
+    "title": "Giant-Size X-Men",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:46:23.547717",
+    "category": "FILLED",
+    "title": "Justice League Red",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:46:44.667082",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Justice League Dark",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T21:47:05.782460",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Justice League",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T21:47:48.490826",
+    "category": "FILLED",
+    "title": "Lords of Empyre",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:48:51.915474",
+    "category": "FILLED",
+    "title": "Spider-Punk",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:49:54.800822",
+    "category": "FILLED",
+    "title": "Marvel Zombies",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:50:16.513197",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "New Mutants",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T21:51:19.291137",
+    "category": "FILLED",
+    "title": "Planet of the Apes vs. Fantastic Four",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:52:22.181526",
+    "category": "FILLED",
+    "title": "Power Man and Iron Fist",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 2. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:52:43.533176",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek Annual",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T21:52:44.720746",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Picard \u2014 Stargazer",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:52:46.138597",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: The Next Generation \u2014 Mirror Broken",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:52:46.779061",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "The Orville: Digressions",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:52:47.712169",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "The Orville: Heroes",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:52:48.473146",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "The Orville: Launch Day",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:52:49.278016",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "The Orville: The Word of Avis",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:53:52.356155",
+    "category": "FILLED",
+    "title": "The Question: All Along the Watchtower",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:53:52.377581",
+    "category": "SKIPPED_COLLISION",
+    "title": "World's Finest",
+    "detail": "Filled avg year 2013, blank avg 1949 (gap 64y)"
+  },
+  {
+    "ts": "2026-06-28T21:53:53.556893",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "X-Vengers: Age of Revelation",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:53:54.263208",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Free Comic Book Day: Spider-Man",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:53:55.054796",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Young Justice: Sins of the Father",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:54:16.514330",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Aquaman",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T21:55:19.227848",
+    "category": "FILLED",
+    "title": "Bastard Samurai",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 2. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:55:42.556842",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Age of Apocalypse",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T21:56:48.850364",
+    "category": "FILLED",
+    "title": "Earth 2 Annual",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 2. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:56:50.997782",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Doctor Strange: Asgard",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:56:52.707534",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Avengers/Fantastic Four: Empyre",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:57:33.477014",
+    "category": "FILLED",
+    "title": "Aquaman",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 2. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:58:39.839545",
+    "category": "FILLED",
+    "title": "Black Panther: World of Wakanda",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 2. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:59:42.638333",
+    "category": "FILLED",
+    "title": "DC vs. Vampires: World War V",
+    "detail": "2/2 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T21:59:43.607849",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Cataclysm: Ultimate Comics X-Men",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:59:44.442283",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Batgirl: All In",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T21:59:46.047719",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Cloak and Dagger: Age of Revelation",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:00:29.149042",
+    "category": "FILLED",
+    "title": "Star Trek: Waypoint",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:01:11.614445",
+    "category": "FILLED",
+    "title": "Star Trek: Waypoint Special",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:01:12.693022",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Extreme X-Men",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:01:54.868306",
+    "category": "FILLED",
+    "title": "Strange Academy: Miles Morales",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:01:55.739108",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: The Next Generation \u2014 The Gift",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:05:05.268078",
+    "category": "FILLED",
+    "title": "Batman",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:05:48.916267",
+    "category": "FILLED",
+    "title": "Star Trek: The Next Generation",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:06:11.189030",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Batgirl",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T22:06:12.227784",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Avengers: Wasp",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:06:55.482890",
+    "category": "FILLED",
+    "title": "Strange Academy: Moon Knight",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:07:15.999975",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Suicide Squad",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T22:07:17.966987",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: The Mirror War \u2014 Sisko",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:08:01.870864",
+    "category": "FILLED",
+    "title": "Suicide Squad: Amanda Waller",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:08:02.811233",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Avengers: Giant-Man",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:08:44.822301",
+    "category": "FILLED",
+    "title": "Supergirl",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:08:45.674900",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Avengers: Empyre",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:08:46.699810",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Superman Special: Endless Winter",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:09:28.777246",
+    "category": "FILLED",
+    "title": "Superman/Batman Annual",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:10:12.651287",
+    "category": "FILLED",
+    "title": "Teen Titans: Endless Winter Special",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:10:13.462514",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "The All-Star Story of the Dodgers",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:10:14.342637",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: The Mirror War \u2014 Troi",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:10:57.814145",
+    "category": "FILLED",
+    "title": "Star Trek: Khan",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:11:39.687602",
+    "category": "FILLED",
+    "title": "Batman Beyond: Return of the Joker",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:12:21.925058",
+    "category": "FILLED",
+    "title": "Blood Squad Seven",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:12:23.196564",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Silop",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:13:07.495460",
+    "category": "FILLED",
+    "title": "Silver Surfer Annual",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:13:49.392606",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Buffy the Vampire Slayer Annual",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T22:13:49.411869",
+    "category": "SKIPPED_COLLISION",
+    "title": "Blue Beetle",
+    "detail": "Filled avg year 2007, blank avg 2023 (gap 16y)"
+  },
+  {
+    "ts": "2026-06-28T22:13:50.229582",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Silver Surfer: The Legacy",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:13:51.980572",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Bloodhunters",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:13:52.957242",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Bloodhunt: Moon Knight",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:14:36.205580",
+    "category": "FILLED",
+    "title": "Spectacular Spider-Man",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:14:57.817371",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Spider-Man/Deadpool",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T22:14:58.826518",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Bloodhunt: Jubilee",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:14:59.591977",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Black Widow: The Lost Days",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:15:42.274961",
+    "category": "FILLED",
+    "title": "Batman and Robin",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:16:04.001748",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Countdown to Darkness",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T22:16:04.996347",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: DS9 \u2014 Too Long a Sacrifice",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:16:06.325521",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Day of Blood \u2014 Prelude",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:16:48.116184",
+    "category": "FILLED",
+    "title": "Star Trek: Deep Space Nine",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:16:48.133962",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Black Panther: Bloodhunt",
+    "detail": "CV lookup failed: Volume not found"
+  },
+  {
+    "ts": "2026-06-28T22:16:49.129251",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Black Panther Intergalactic",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:17:10.985632",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Defiant Annual",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T22:17:33.144895",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Batwing",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T22:17:34.074384",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Generations",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:17:35.109102",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Star Trek: Generations \u2014 The Official Comics Adaptation",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:18:17.206711",
+    "category": "FILLED",
+    "title": "Avengers: Captain America",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:18:59.762317",
+    "category": "FILLED",
+    "title": "Avengers Standoff",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:19:00.531623",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "The Iron Age: Alpha",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:19:42.924206",
+    "category": "FILLED",
+    "title": "Aliens vs. Avengers",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:20:25.178197",
+    "category": "FILLED",
+    "title": "What If? Wolverine: Enemy of the State",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:21:07.461297",
+    "category": "FILLED",
+    "title": "What If? X-Men",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:21:08.343576",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "What If? X-Men Deadly Genesis",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:21:09.331568",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Wildstorm Starts Now!",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:21:10.310502",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Wolverine and the X-Men Annual",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:21:52.451225",
+    "category": "FILLED",
+    "title": "Wolverine vs. Blade",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:22:37.516076",
+    "category": "FILLED",
+    "title": "All-New, All-Different Savage Avengers",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:23:18.866722",
+    "category": "FILLED",
+    "title": "Wolverine: Madripoor Knights",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:23:19.753358",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Wonder Man and the Beast",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:23:20.804101",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Wonder Woman 1984: Museum Mayhem",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:24:03.024239",
+    "category": "FILLED",
+    "title": "Wonder Woman: Futures End",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:24:04.044894",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Agents of S.H.I.E.L.D. Standoff",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:24:04.910919",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Avengers and Moon Girl",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:24:47.114663",
+    "category": "FILLED",
+    "title": "X-23",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:25:29.084082",
+    "category": "FILLED",
+    "title": "X-Force",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:25:50.667656",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "X-Men",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T22:25:51.565201",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "X-Men Origins: X-Men Blue",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:26:33.545696",
+    "category": "FILLED",
+    "title": "X-Men and Moon Girl",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:26:34.526625",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "X-Men/Eternals: Manifest Destiny",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:26:56.139868",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "X-Men: Hope",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T22:27:38.493829",
+    "category": "FILLED",
+    "title": "X-Men: Magik",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:27:39.320657",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "X-Men: Secret",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:28:00.567768",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Age of Revelation",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T22:28:42.756069",
+    "category": "FILLED",
+    "title": "Young Justice: Sins of Youth",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:28:43.692957",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "What If? Magic",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:28:44.580454",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "What If? Galactus Transformed Moon Knight",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:28:45.505966",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "What If? Galactus Transformed Hulk",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:29:28.034649",
+    "category": "FILLED",
+    "title": "Amazing Spider-Man",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:30:10.237677",
+    "category": "FILLED",
+    "title": "Shang-Chi",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:30:51.844076",
+    "category": "FILLED",
+    "title": "Avengers",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:30:52.832958",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Aquaman Special: Endless Winter",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:31:13.400543",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Aquaman",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T22:31:35.442344",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "The Trials of Shazam",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T22:31:36.876662",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Time Slide",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:31:37.680751",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Titans/Outsiders: Secret Files and Origins",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:32:19.640440",
+    "category": "FILLED",
+    "title": "Ultimates",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:32:41.106785",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Ultimatum: Fantastic Four",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T22:33:23.259539",
+    "category": "FILLED",
+    "title": "Ultimatum: Fantastic Four Requiem",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:34:05.763218",
+    "category": "FILLED",
+    "title": "Ultimatum: X-Men Requiem",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:34:06.536702",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Ultraman vs. Avengers",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:34:07.599534",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Aquaboy and Lagoon Man",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:34:49.817439",
+    "category": "FILLED",
+    "title": "Uncanny Inhumans Annual",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:35:11.166840",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Uncanny X-Men",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T22:35:11.980729",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Uncanny X-Men Special: No End in Sight Part 3",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:35:12.831538",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Union Jack the Ripper: Bloodhunt",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:35:34.364859",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Voodoo",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T22:36:16.662326",
+    "category": "FILLED",
+    "title": "Animal Man",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:36:17.736583",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "War of the Realms: Savage Avengers",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:37:00.166767",
+    "category": "FILLED",
+    "title": "Weapon X-Men",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:37:41.018476",
+    "category": "FILLED",
+    "title": "Weapon X-Men",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:37:41.787311",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Amazing X-Men: Age of Revelation",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:37:42.783976",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Shang-Chi vs. Captain America",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:37:43.567917",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Secret Invasion: Miss Marvel",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:37:44.638977",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Captain America and Volstagg",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:38:27.035039",
+    "category": "FILLED",
+    "title": "Imperial War: Planet She-Hulk",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:39:28.674945",
+    "category": "FILLED",
+    "title": "Green Lantern",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:39:32.725573",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Green Lantern Corps: Civil Corps",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:40:14.711013",
+    "category": "FILLED",
+    "title": "Earth 2",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:40:57.391365",
+    "category": "FILLED",
+    "title": "Guardians Team-Up",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:41:39.492799",
+    "category": "FILLED",
+    "title": "Guardians of the Galaxy",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:42:21.432135",
+    "category": "FILLED",
+    "title": "Guardians of the Galaxy Prelude",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:42:22.359049",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Guardians of the Galaxy: Bane of the Blastaar",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:43:04.715847",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "House of M Sketchbook",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T22:43:05.594496",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Hulk Smash the Avengers",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:43:50.229724",
+    "category": "FILLED",
+    "title": "Dungeons of Doom",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:44:33.663540",
+    "category": "FILLED",
+    "title": "Imperial War: Black Panther",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:45:16.264290",
+    "category": "FILLED",
+    "title": "Impulse",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:45:59.067897",
+    "category": "FILLED",
+    "title": "Secret Invasion: Thor",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:46:41.258962",
+    "category": "FILLED",
+    "title": "Infinity Countdown Prime",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:47:23.773580",
+    "category": "FILLED",
+    "title": "Infinity Countdown: Adam Warlock",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:48:05.768226",
+    "category": "FILLED",
+    "title": "Infinity Countdown: Black Widow",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:48:48.032372",
+    "category": "FILLED",
+    "title": "Infinity Countdown: Captain Marvel",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:49:30.833554",
+    "category": "FILLED",
+    "title": "Infinity Countdown: Champions",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:50:12.614770",
+    "category": "FILLED",
+    "title": "Inglorious X-Force",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:50:54.601036",
+    "category": "FILLED",
+    "title": "Doom Academy",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:50:55.414288",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Iron Man Special: No End in Sight Part 2",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:51:16.730414",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Journey into Mystery",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T22:51:59.215808",
+    "category": "FILLED",
+    "title": "Jubilee: Deadly Reunion",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:52:00.335274",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Doctor Who: Free Comic Book Day 2015",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:52:42.896109",
+    "category": "FILLED",
+    "title": "Green Arrow",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:53:25.362661",
+    "category": "FILLED",
+    "title": "Godzilla vs. Avengers",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:54:11.231214",
+    "category": "FILLED",
+    "title": "Earth 2: Society Annual",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:54:53.536485",
+    "category": "FILLED",
+    "title": "Giant-Size Fantastic Four",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:54:54.952376",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Expatriate X-Men: Age of Revelation",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:55:56.831558",
+    "category": "FILLED",
+    "title": "Fantastic Four",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:56:18.244011",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Fantastic Four Annual",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T22:56:19.200963",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Fantastic Four \u00d7 Gargoyles",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:56:20.009155",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Fantastic Four: Doom War",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:56:41.972461",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Fantastic Four: Empyre",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T22:56:42.781224",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Free Comic Book Day: Civil War",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:56:43.702137",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Free Comic Book Day: Doctor Who",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:56:44.929385",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Eternals: When Gods Walked the Earth",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:56:44.955192",
+    "category": "SKIPPED_COLLISION",
+    "title": "Friendly Neighborhood Spider-Man",
+    "detail": "Filled avg year 2005, blank avg 2024 (gap 19y)"
+  },
+  {
+    "ts": "2026-06-28T22:56:45.750549",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Futures End: Aquaman",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:56:46.835628",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Futures End: Batgirl",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:56:47.815122",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Futures End: Batman and Robin",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:56:48.651477",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Futures End: Batman/Superman",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:56:49.484728",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Futures End: Birds of Prey",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:56:50.435429",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Futures End: Earth 2",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:56:51.613893",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Futures End: Grayson",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:56:52.920825",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Futures End: Huntress/Power Girl",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:56:53.717052",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Futures End: Justice League",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:56:54.848975",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Futures End: New Suicide Squad",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:56:55.947147",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Futures End: Superman/Wonder Woman",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:57:38.200536",
+    "category": "FILLED",
+    "title": "Eternals",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:58:20.664881",
+    "category": "FILLED",
+    "title": "Giant-Size Dark Phoenix Saga",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:58:41.190608",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Justice League",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T22:58:45.132646",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Justice League Dark: Tomorrow's Special",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:59:27.774573",
+    "category": "FILLED",
+    "title": "Doctor Strange of Asgard",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T22:59:28.561930",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "DC: 5 of a Kind \u2014 Thunder/Martian Manhunter",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:59:29.397694",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Nova Special: No End in Sight",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:59:30.301199",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "DC: 5 of a Kind \u2014 Nightwing/Captain Boomerang",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T22:59:31.024983",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "DC: 5 of a Kind \u2014 Metamorpho/Aquaman",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T23:00:13.343385",
+    "category": "FILLED",
+    "title": "Original Sin Annual",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T23:00:14.203798",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "DC: 5 of a Kind \u2014 Katana/Shazam",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T23:00:15.187481",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Planet DC: Batgirl",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T23:00:16.104939",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "DC vs. Marvel: The Legion",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T23:00:58.340670",
+    "category": "FILLED",
+    "title": "DC Universe: Last Will and Testament",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T23:01:40.646772",
+    "category": "FILLED",
+    "title": "Powers of X",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T23:02:21.570633",
+    "category": "FILLED",
+    "title": "Predator vs. Black Panther",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T23:03:04.155855",
+    "category": "FILLED",
+    "title": "DC Pride: Tim Drake Special",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T23:03:46.151513",
+    "category": "FILLED",
+    "title": "Psylocke",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T23:04:28.506343",
+    "category": "FILLED",
+    "title": "Red Hood and the Outlaws",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T23:05:10.552087",
+    "category": "FILLED",
+    "title": "Red Hood and the Outlaws: Futures End",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T23:05:32.232444",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Red Hulk",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T23:05:53.942411",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Catwoman",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T23:06:35.828722",
+    "category": "FILLED",
+    "title": "Rocket Raccoon",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T23:07:17.629802",
+    "category": "FILLED",
+    "title": "Rogue Storm",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T23:07:59.387745",
+    "category": "FILLED",
+    "title": "Captain Marvel",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T23:08:00.401592",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "S.H.I.E.L.D.: Quake \u2014 50th Anniversary",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T23:08:42.397417",
+    "category": "FILLED",
+    "title": "Captain America: Homecoming",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T23:09:03.791370",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Secret Avengers",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T23:10:07.754053",
+    "category": "FILLED",
+    "title": "Fantastic Four",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T23:10:49.968055",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Nightwing",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T23:11:32.597938",
+    "category": "FILLED",
+    "title": "New Mutants: Lethal Legion",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T23:12:15.089915",
+    "category": "FILLED",
+    "title": "Doctor Strange Annual",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T23:12:56.811178",
+    "category": "FILLED",
+    "title": "New Mutants",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T23:13:38.865438",
+    "category": "FILLED",
+    "title": "Doctor Doom",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T23:14:20.704265",
+    "category": "FILLED",
+    "title": "Justice League of America",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T23:15:03.528297",
+    "category": "FILLED",
+    "title": "Justice League: The Omega Act Special",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T23:18:32.343169",
+    "category": "FILLED",
+    "title": "Detective Comics",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T23:18:53.789122",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Demon Knights",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-06-28T23:18:54.560771",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Dark Reign: Deadpool vs. Thunderbolts",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T23:18:55.727150",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "DCKO: The Kids Are All Fight Special",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T23:19:37.546161",
+    "category": "FILLED",
+    "title": "Longshots",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T23:19:38.578690",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Longshots: Age of Revelation",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T23:19:38.607922",
+    "category": "SKIPPED_COLLISION",
+    "title": "Action Comics",
+    "detail": "Filled avg year 2020, blank avg 1981 (gap 39y)"
+  },
+  {
+    "ts": "2026-06-28T23:19:40.013513",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Marvel Must Have: Fantastic Four",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T23:20:22.420734",
+    "category": "FILLED",
+    "title": "Marvel Super Heroes Secret Wars",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T23:20:23.429009",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "DCKO: Red Hood vs. The Joker",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T23:20:24.351648",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Midnight Suns: Bloodhunt",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T23:21:06.920956",
+    "category": "FILLED",
+    "title": "Miles Morales: Spider-Man",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T23:21:49.451072",
+    "category": "FILLED",
+    "title": "Miles Morales: Spider-Man and Moon Girl",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T23:22:32.679031",
+    "category": "FILLED",
+    "title": "Moon Knight",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T23:22:33.524177",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Moon Knight and the Infinity Watch",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T23:22:34.674864",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Ms. Marvel and Moon Knight",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T23:22:35.940266",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Ms. Marvel: The Muse Menace",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T23:23:17.934926",
+    "category": "FILLED",
+    "title": "Namor",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T23:24:03.292016",
+    "category": "FILLED",
+    "title": "Nebula",
+    "detail": "1/1 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-06-28T23:24:04.413945",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "DC: 5 of a Kind \u2014 Wonder Woman/Grace",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-06-28T23:24:05.198566",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "A Death in the Family: Robin Lives!",
+    "detail": "CV lookup failed: No volumes found"
+  }
+]
