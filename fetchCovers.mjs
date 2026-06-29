@@ -111,6 +111,7 @@ for (const c of queue) {
     issue:     c.Issue     || "",
     publisher: c.Publisher || "",
     year:      c.Year      || "",
+    ...(retryNulls ? { refresh: "1" } : {}),
   });
 
   try {
