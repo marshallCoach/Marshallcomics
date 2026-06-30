@@ -62,6 +62,48 @@ def log_issue(cat, title, detail):
     log.append({"ts": datetime.now().isoformat(), "category": cat, "title": title, "detail": detail})
     save_json(LOG_PATH, log)
 
+# ── SAFE WRITE: row-count assertion + integrity log sheet ─────────────────────
+_integrity_log = []  # accumulated across the run
+
+def safe_write(df, path, sheet, rows_initial, label="checkpoint"):
+    """Write xlsx only if row count is stable; append a Data Integrity Log sheet."""
+    rows_now = len(df)
+    status = "OK" if rows_now >= rows_initial else "LOST"
+    _integrity_log.append({
+        "ts":      datetime.now().isoformat(),
+        "label":   label,
+        "before":  rows_initial,
+        "after":   rows_now,
+        "delta":   rows_now - rows_initial,
+        "status":  status,
+    })
+    if rows_now < rows_initial:
+        msg = (f"DATA LOSS DETECTED at {label}: started {rows_initial} rows, "
+               f"now {rows_now} ({rows_initial - rows_now} missing). Aborting write to {path}.")
+        log_issue("DATA_LOSS", "safe_write", msg)
+        raise RuntimeError(msg)
+    df.to_excel(path, sheet_name=sheet, index=False)
+    # Append integrity log sheet
+    import openpyxl
+    wb = openpyxl.load_workbook(path)
+    if "📝 Data Integrity Log" in wb.sheetnames:
+        del wb["📝 Data Integrity Log"]
+    ws = wb.create_sheet("📝 Data Integrity Log")
+    headers = ["ts", "label", "before", "after", "delta", "status"]
+    ws.append(headers)
+    for entry in _integrity_log:
+        ws.append([entry[h] for h in headers])
+    wb.save(path)
+
+def get_year_mode_safe(series, title="unknown"):
+    """Return mode year string or '?' — logs when all values are non-numeric."""
+    mode_result = series.mode()
+    if len(mode_result) == 0:
+        log_issue("YEAR_PARSE_FAILURE", title,
+                  f"All {len(series)} Year values are non-numeric; defaulting to '?'")
+        return "?"
+    return str(mode_result.iloc[0])[:4]
+
 def log_review(title, vol, reason):
     rv = load_json(REVIEW_PATH)
     rv.append({"ts": datetime.now().isoformat(), "title": title, "volume": vol, "reason": reason})
@@ -296,6 +338,9 @@ def main():
         df["Volume"] = 1
     df["Volume"] = pd.to_numeric(df["Volume"], errors="coerce").fillna(1)
 
+    rows_initial = len(df)
+    print(f"Loaded {rows_initial} rows from {INVENTORY_PATH}")
+
     queue = build_queue(df)
     queue = queue[~queue["Title"].isin(SKIP_TITLES)]
     print(f"Queue: {len(queue)} Title+Volume runs with blank writers.")
@@ -332,8 +377,7 @@ def main():
             print(f"[SKIP-COLLISION] {title} Vol {volume}")
             continue
 
-        year_hint = df.loc[mask, "Year"].mode()
-        year_hint = str(year_hint.iloc[0])[:4] if len(year_hint) else "?"
+        year_hint = get_year_mode_safe(df.loc[mask, "Year"], title=title)
         issues    = df.loc[mask, "Issue #"].dropna().sort_values().unique()
         n_rows    = int(mask.sum())
 
@@ -410,12 +454,12 @@ def main():
         if processed % CHECKPOINT_EVERY == 0:
             ts  = datetime.now().strftime("%d%m_%H%M")
             out = f"comics_inventory_{ts}.xlsx"
-            df.to_excel(out, sheet_name=f"✅ Clean Inventory {ts}", index=False)
+            safe_write(df, out, f"✅ Clean Inventory {ts}", rows_initial, label=f"checkpoint_{processed}")
             print(f"[CHECKPOINT] Saved {out} after {processed} titles ({api_calls} API calls)")
 
     ts    = datetime.now().strftime("%d%m_%H%M")
     final = f"comics_inventory_FINAL_{ts}.xlsx"
-    df.to_excel(final, sheet_name=f"✅ Clean Inventory {ts}", index=False)
+    safe_write(df, final, f"✅ Clean Inventory {ts}", rows_initial, label="FINAL")
     print(f"\n[DONE] {processed} titles | {api_calls} Comic Vine calls | Output: {final}")
     print(f"Review needed: {REVIEW_PATH}")
 
