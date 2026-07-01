@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# DEPRECATED — do not run this copy.
+# LIVE version is: ~/marshallcomics/BRB_overnight_script_v2/run_overnight_v2.py
 """
 BRB Overnight Writer+Artist Fill Script — v2
 Uses DC Fandom Wiki URL construction for DC titles (no search needed, no guessing).
