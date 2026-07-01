@@ -82,6 +82,7 @@ def safe_write(df, path, sheet, rows_initial, label="checkpoint"):
                f"now {rows_now} ({rows_initial - rows_now} missing). Aborting write to {path}.")
         log_issue("DATA_LOSS", "safe_write", msg)
         raise RuntimeError(msg)
+    assert_box_capacities(df, label=label)
     df.to_excel(path, sheet_name=sheet, index=False)
     # Append integrity log sheet
     import openpyxl
@@ -94,6 +95,29 @@ def safe_write(df, path, sheet, rows_initial, label="checkpoint"):
     for entry in _integrity_log:
         ws.append([entry[h] for h in headers])
     wb.save(path)
+
+# ── BOX CAPACITY CHECK ───────────────────────────────────────────────────────
+BOX_CAPACITY_DEFAULT = 175
+BOX_CAPACITY_EXCEPTIONS = {15: 150, 23: 155, 40: 80, 44: 200, 72: 80}
+
+def assert_box_capacities(df, label=""):
+    """Halt if any box exceeds its defined capacity. Call before every write."""
+    if "Box #" not in df.columns:
+        return
+    counts = df.groupby("Box #").size()
+    violations = []
+    for box, count in counts.items():
+        try:
+            box_num = int(float(str(box)))
+        except (ValueError, TypeError):
+            continue
+        capacity = BOX_CAPACITY_EXCEPTIONS.get(box_num, BOX_CAPACITY_DEFAULT)
+        if count > capacity:
+            violations.append(f"  Box {box_num}: {count} comics (capacity {capacity}, overage +{count - capacity})")
+    if violations:
+        msg = f"BOX CAPACITY VIOLATED at {label}:\n" + "\n".join(violations)
+        log_issue("BOX_OVERAGE", "assert_box_capacities", msg)
+        raise RuntimeError(msg)
 
 def get_year_mode_safe(series, title="unknown"):
     """Return mode year string or '?' — logs when all values are non-numeric."""
