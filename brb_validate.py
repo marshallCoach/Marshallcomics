@@ -234,6 +234,23 @@ def check_issue_number_present(df):
     return pct < 5
 
 
+# ── Sheet loader ─────────────────────────────────────────────────────────────
+
+def _load_inventory_sheet(path: str) -> pd.DataFrame:
+    """Load the first sheet that contains all REQUIRED_COLUMNS; fall back to sheet 0."""
+    xl = pd.ExcelFile(path)
+    for name in xl.sheet_names:
+        df = xl.parse(name)
+        if all(c in df.columns for c in REQUIRED_COLUMNS):
+            if name != xl.sheet_names[0]:
+                print(f"     (using sheet '{name}')")
+            return df
+    # No sheet has all required columns — return sheet 0 so checks report the real errors
+    print(f"     WARNING: no sheet contains all required columns.")
+    print(f"     Available sheets: {xl.sheet_names}")
+    return xl.parse(xl.sheet_names[0])
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
@@ -277,8 +294,8 @@ def main():
         print(f"  Prev : {os.path.relpath(prev_path, REPO_ROOT)}")
     print(f"{'=' * 60}")
 
-    df = pd.read_excel(xlsx_path, sheet_name=0)
-    prev_df = pd.read_excel(prev_path, sheet_name=0) if prev_path else None
+    df = _load_inventory_sheet(xlsx_path)
+    prev_df = _load_inventory_sheet(prev_path) if prev_path else None
 
     results = []
     results.append(check_required_columns(df))
