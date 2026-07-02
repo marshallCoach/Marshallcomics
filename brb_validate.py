@@ -118,17 +118,19 @@ def check_box_capacity(df):
 
 
 def check_duplicate_rows(df):
-    section("CHECK 6 — Duplicate rows (same Title + Issue # + Box #)")
-    dupes = df[df.duplicated(subset=["Title", "Issue #", "Box #"], keep=False)]
+    section("CHECK 6 — Duplicate rows (same Title + Issue # + Box # + Volume)")
+    key = ["Title", "Issue #", "Box #", "Volume"]
+    available = [c for c in key if c in df.columns]
+    dupes = df[df.duplicated(subset=available, keep=False)]
     if len(dupes):
-        fail(f"{len(dupes)} rows are duplicates by Title+Issue#+Box#")
-        sample = dupes.groupby(["Title", "Issue #", "Box #"]).size().reset_index(name="count")
+        fail(f"{len(dupes)} rows are duplicates by {' + '.join(available)}")
+        sample = dupes.groupby(available).size().reset_index(name="count")
         for _, row in sample.head(10).iterrows():
-            info(f"  '{row['Title']}' #{row['Issue #']} Box#{row['Box #']} — {row['count']}x")
+            info(f"  '{row['Title']}' #{row['Issue #']} Box#{row['Box #']} Vol{row.get('Volume','?')} — {row['count']}x")
         if len(sample) > 10:
             info(f"  ... and {len(sample)-10} more groups")
         return False
-    ok("No duplicate Title+Issue#+Box# combinations")
+    ok(f"No duplicate {' + '.join(available)} combinations")
     return True
 
 
