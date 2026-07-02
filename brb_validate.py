@@ -2,24 +2,59 @@
 """
 brb_validate.py — Read-only inventory health check.
 Location: ~/marshallcomics/brb_validate.py
+Run from:  ~/marshallcomics/
 
 THIS SCRIPT MAKES ZERO WRITES. It reads one xlsx file and prints a report.
 
-Usage:
-    python3 brb_validate.py <path-to-xlsx>
-    python3 brb_validate.py attached_assets/comics_inventory_2906_1500.xlsx
+Usage (all run from ~/marshallcomics/):
 
-Optional: compare row count against a previous file:
-    python3 brb_validate.py current.xlsx --prev previous.xlsx
+    # Auto-detect latest *VALIDATED*.xlsx in attached_assets/:
+    python3 brb_validate.py
+
+    # Filename only — auto-resolved to attached_assets/:
+    python3 brb_validate.py comics_inventory_0207_0130_VALIDATED.xlsx
+
+    # Explicit relative or absolute path:
+    python3 brb_validate.py attached_assets/comics_inventory_0207_0130_VALIDATED.xlsx
+
+Optional: compare row count against a previous file (same resolution rules):
+    python3 brb_validate.py --prev comics_inventory_0107_2230_VALIDATED.xlsx
 """
 
 import sys
 import os
+import glob as _glob
 import pandas as pd
 import argparse
 
+# ── Paths ─────────────────────────────────────────────────────────────────────
+REPO_ROOT  = os.path.dirname(os.path.abspath(__file__))
+ASSETS_DIR = os.path.join(REPO_ROOT, "attached_assets")
+
+
+def _resolve(raw: str) -> str:
+    """Resolve a file argument: try raw path, then attached_assets/<basename>."""
+    if os.path.exists(raw):
+        return os.path.abspath(raw)
+    candidate = os.path.join(ASSETS_DIR, os.path.basename(raw))
+    if os.path.exists(candidate):
+        return candidate
+    return raw  # will fail with a clear message below
+
+
+def _latest_validated() -> str:
+    """Return the most-recently-modified *VALIDATED*.xlsx in attached_assets/."""
+    pattern = os.path.join(ASSETS_DIR, "comics_inventory_*VALIDATED*.xlsx")
+    matches = _glob.glob(pattern)
+    if not matches:
+        matches = _glob.glob(os.path.join(ASSETS_DIR, "comics_inventory_*.xlsx"))
+    if not matches:
+        return ""
+    return max(matches, key=os.path.getmtime)
+
+
 # ── Box capacity table ────────────────────────────────────────────────────────
-BOX_CAPACITY_DEFAULT = 175
+BOX_CAPACITY_DEFAULT    = 175
 BOX_CAPACITY_EXCEPTIONS = {15: 150, 23: 155, 40: 80, 44: 200, 72: 80}
 
 REQUIRED_COLUMNS = ["Title", "Issue #", "Box #", "Publisher", "Year", "Writer(s)"]
@@ -202,24 +237,48 @@ def check_issue_number_present(df):
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
-    parser = argparse.ArgumentParser(description="BRB inventory read-only health check")
-    parser.add_argument("xlsx", help="Path to inventory xlsx file")
-    parser.add_argument("--prev", help="Optional: path to previous xlsx for row-count comparison", default=None)
+    parser = argparse.ArgumentParser(
+        description="BRB inventory read-only health check. Run from ~/marshallcomics/."
+    )
+    parser.add_argument(
+        "xlsx", nargs="?", default=None,
+        help="xlsx file: filename, relative path, or absolute path. "
+             "Omit to auto-detect the latest *VALIDATED*.xlsx in attached_assets/."
+    )
+    parser.add_argument(
+        "--prev", default=None,
+        help="Optional: previous xlsx for row-count comparison (same resolution rules)."
+    )
     args = parser.parse_args()
 
-    if not os.path.exists(args.xlsx):
-        print(f"ERROR: File not found: {args.xlsx}")
+    # Resolve xlsx path
+    if args.xlsx is None:
+        xlsx_path = _latest_validated()
+        if not xlsx_path:
+            print(f"ERROR: No comics_inventory_*.xlsx found in {ASSETS_DIR}")
+            sys.exit(1)
+    else:
+        xlsx_path = _resolve(args.xlsx)
+
+    if not os.path.exists(xlsx_path):
+        print(f"ERROR: File not found: {xlsx_path}")
+        print(f"       Looked in: {ASSETS_DIR}")
+        sys.exit(1)
+
+    prev_path = _resolve(args.prev) if args.prev else None
+    if prev_path and not os.path.exists(prev_path):
+        print(f"ERROR: Previous file not found: {prev_path}")
         sys.exit(1)
 
     print(f"\n{'=' * 60}")
     print(f"  BRB INVENTORY VALIDATOR — READ ONLY")
-    print(f"  File : {args.xlsx}")
-    if args.prev:
-        print(f"  Prev : {args.prev}")
+    print(f"  File : {os.path.relpath(xlsx_path, REPO_ROOT)}")
+    if prev_path:
+        print(f"  Prev : {os.path.relpath(prev_path, REPO_ROOT)}")
     print(f"{'=' * 60}")
 
-    df = pd.read_excel(args.xlsx, sheet_name=0)
-    prev_df = pd.read_excel(args.prev, sheet_name=0) if args.prev else None
+    df = pd.read_excel(xlsx_path, sheet_name=0)
+    prev_df = pd.read_excel(prev_path, sheet_name=0) if prev_path else None
 
     results = []
     results.append(check_required_columns(df))
