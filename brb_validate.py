@@ -57,6 +57,10 @@ def _latest_validated() -> str:
 BOX_CAPACITY_DEFAULT    = 175
 BOX_CAPACITY_EXCEPTIONS = {15: 150, 23: 155, 40: 80, 44: 200, 72: 80}
 
+# Non-numeric Box # values that are deliberate status strings, not errors.
+# These track active CGC/pressing submissions and must never be treated as invalid.
+BOX_STATUS_ALLOWLIST = {"AT CGC", "AT MAGIC PRESSING → CGC"}
+
 REQUIRED_COLUMNS = ["Title", "Issue #", "Box #", "Publisher", "Year", "Writer(s)"]
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
@@ -208,15 +212,28 @@ def check_writer_fill_rate(df):
 
 
 def check_box_number_range(df):
-    section("CHECK 9 — Box # values are positive integers")
+    section("CHECK 9 — Box # values are positive integers (or known status strings)")
     numeric = pd.to_numeric(df["Box #"], errors="coerce")
-    bad = df[numeric.isna() | (numeric < 1) | (numeric != numeric.apply(lambda x: round(x) if pd.notna(x) else x))]
+    is_allowed_status = df["Box #"].apply(
+        lambda v: str(v).strip() in BOX_STATUS_ALLOWLIST
+    )
+    bad = df[
+        ~is_allowed_status &
+        (numeric.isna() | (numeric < 1) | (
+            numeric != numeric.apply(lambda x: round(x) if pd.notna(x) else x)
+        ))
+    ]
+    cgc_count = is_allowed_status.sum()
+    if cgc_count:
+        info(f"{cgc_count} rows have status Box # (AT CGC / AT MAGIC PRESSING) — excluded from check")
     if len(bad):
-        fail(f"{len(bad)} rows have invalid Box # values (non-integer or < 1)")
+        fail(f"{len(bad)} rows have invalid Box # values (non-integer, < 1, or unrecognised status)")
         for _, row in bad.head(10).iterrows():
             info(f"  '{row.get('Title','?')}' — Box #='{row.get('Box #','?')}'")
+        if len(bad) > 10:
+            info(f"  ... and {len(bad)-10} more")
         return False
-    ok("All Box # values are valid positive integers")
+    ok("All Box # values are valid positive integers or known status strings")
     return True
 
 
