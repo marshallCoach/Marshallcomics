@@ -51,14 +51,23 @@ def main():
     df, sheet = _load(path)
     print(f"Loaded '{sheet}' — {len(df):,} rows from {os.path.basename(path)}")
 
+    # Deliberate status strings — AT CGC and AT MAGIC PRESSING track active submissions.
+    # Only rows with no known status (UNKNOWN / blank-ish) need physical reassignment.
+    BOX_STATUS_ALLOWLIST = {"AT CGC", "AT MAGIC PRESSING → CGC"}
     numeric = pd.to_numeric(df["Box #"], errors="coerce")
-    bad_mask = numeric.isna() | (numeric < 1) | (
-        numeric != numeric.apply(lambda x: round(x) if pd.notna(x) else x)
+    is_allowed = df["Box #"].apply(lambda v: str(v).strip() in BOX_STATUS_ALLOWLIST)
+    bad_mask = ~is_allowed & (
+        numeric.isna() | (numeric < 1) | (
+            numeric != numeric.apply(lambda x: round(x) if pd.notna(x) else x)
+        )
     )
     bad = df[bad_mask].copy()
     bad["correct_box_num"] = ""   # column for you to fill in
 
-    print(f"\n{len(bad)} rows with invalid Box #:\n")
+    allowed_count = is_allowed.sum()
+    if allowed_count:
+        print(f"  ({allowed_count} rows with AT CGC / AT MAGIC PRESSING status — intentional, skipped)")
+    print(f"\n{len(bad)} rows with unresolved Box # (need physical assignment):\n")
 
     # Summary by category
     for val, grp in bad.groupby("Box #", sort=False):
