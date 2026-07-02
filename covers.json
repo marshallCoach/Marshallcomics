@@ -1843,8 +1843,6 @@
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11116/111168846/8629151-robin001.jpg",
     "date": "2021-07-01"
   },
-  "The Flash|||211": null,
-  "The Flash|||212": null,
   "The Flash|||213": null,
   "The Flash|||214": null,
   "The Flash|||215": null,
@@ -16297,5 +16295,10 @@
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/5/56044/1774265-flash__1987_2nd_series__210.jpeg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/5/56044/1774265-flash__1987_2nd_series__210.jpeg",
     "date": "2004-07-01"
+  },
+  "The Flash|||211": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/1/11307/393793-3790-130554-1-flash.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/1/11307/393793-3790-130554-1-flash.jpg",
+    "date": "2004-08-01"
   }
 }
