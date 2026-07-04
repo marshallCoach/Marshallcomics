@@ -138,6 +138,46 @@ def nm_value(row):
 def vf_value(row):
     return parse_value(row, "Est. Raw Value (VF) $", "VF Value", "Value VF")
 
+# Condition string → multiplier of NM price
+CONDITION_MULTIPLIERS = {
+    "fine":        0.75,
+    "good/fine":   0.65,
+    "good":        0.50,
+    "fair":        0.30,
+    "poor/fair":   0.25,
+    "poor":        0.15,
+    "bad":         0.10,
+    "reader":      0.15,
+    "unbagged":    0.50,  # assume Good unless stated otherwise
+}
+
+def condition_adjusted_value(row):
+    """Return realistic sale value based on condition."""
+    nm  = nm_value(row)
+    vf  = vf_value(row)
+    if not nm and not vf:
+        return 0.0
+
+    cond = str(row.get("Condition", "") or "").lower().strip()
+
+    # Use VF value directly if available and condition is VF-ish
+    if vf and any(x in cond for x in ["fine", "vf", "very fine"]):
+        return vf
+
+    # Find best multiplier match
+    multiplier = None
+    for key, mult in CONDITION_MULTIPLIERS.items():
+        if key in cond:
+            multiplier = mult
+            break
+
+    if multiplier is None:
+        # Blank condition — assume mid-grade
+        multiplier = 0.50
+
+    base = nm if nm else (vf / 0.75 if vf else 0)
+    return round(base * multiplier, 2)
+
 
 def main():
     parser = argparse.ArgumentParser(description="eBay sold pricing for high-value comics")
@@ -176,10 +216,11 @@ def main():
     queue = []
     seen  = set()
     for _, row in df.iterrows():
-        nm  = nm_value(row)
-        vf  = vf_value(row)
-        # Include if NM > min_value OR VF > half of min_value
-        if nm < args.min_value and vf < (args.min_value / 2):
+        nm    = nm_value(row)
+        vf    = vf_value(row)
+        adj   = condition_adjusted_value(row)
+        # Include if condition-adjusted value >= min_value
+        if adj < args.min_value:
             continue
         title  = str(row.get("Title", "")).strip()
         issue  = row.get("Issue #", "")
@@ -194,26 +235,27 @@ def main():
             "publisher":  row.get("Publisher", ""),
             "nm_value":   nm,
             "vf_value":   vf,
+            "adj_value":  adj,
             "condition":  str(row.get("Condition", "")).strip(),
             "box":        row.get("Box #", ""),
             "writer":     row.get("Writer(s)", ""),
         })
 
-    queue.sort(key=lambda x: x["nm_value"], reverse=True)
+    queue.sort(key=lambda x: x["adj_value"], reverse=True)
     if args.limit:
         queue = queue[:args.limit]
 
     print(f"Queue: {len(queue)} unique titles with NM Value ≥ ${args.min_value:.0f}")
 
     if args.dry_run:
-        print(f"\nTop 20 by NM Value:")
-        print(f"  {'Title':<38} {'Iss':>5}  {'NM':>6}  {'VF':>6}  {'Cond':<8}  Box")
-        print(f"  {'─'*38} {'─'*5}  {'─'*6}  {'─'*6}  {'─'*8}  {'─'*5}")
+        print(f"\nTop 20 by condition-adjusted value:")
+        print(f"  {'Title':<38} {'Iss':>5}  {'NM':>6}  {'Adj':>6}  {'Cond':<12}  Box")
+        print(f"  {'─'*38} {'─'*5}  {'─'*6}  {'─'*6}  {'─'*12}  {'─'*5}")
         for i, c in enumerate(queue[:20]):
             nm   = f"${c['nm_value']:.0f}" if c['nm_value'] else "—"
-            vf   = f"${c['vf_value']:.0f}" if c.get('vf_value') else "—"
-            cond = (c.get("condition") or "")[:8]
-            print(f"  {c['title']:<38} #{str(c['issue']):>4}  {nm:>6}  {vf:>6}  {cond:<8}  {c['box']}")
+            adj  = f"${c['adj_value']:.0f}"
+            cond = (c.get("condition") or "ungraded")[:12]
+            print(f"  {c['title']:<38} #{str(c['issue']):>4}  {nm:>6}  {adj:>6}  {cond:<12}  {c['box']}")
         sys.exit(0)
 
     # Load existing results
