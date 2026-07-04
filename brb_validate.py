@@ -59,7 +59,12 @@ BOX_CAPACITY_EXCEPTIONS = {15: 150, 23: 155, 40: 80, 44: 200, 72: 80}
 
 # Non-numeric Box # values that are deliberate status strings, not errors.
 # These track active CGC/pressing submissions and must never be treated as invalid.
-BOX_STATUS_ALLOWLIST = {"AT CGC", "AT MAGIC PRESSING → CGC", "AT CGC — Roy Thomas SS"}
+BOX_STATUS_ALLOWLIST = {
+    "AT CGC",
+    "AT MAGIC PRESSING → CGC",
+    "AT CGC — Roy Thomas SS",
+    "UNKNOWN — needs physical reassignment",
+}
 
 REQUIRED_COLUMNS = ["Title", "Issue #", "Box #", "Publisher", "Year", "Writer(s)"]
 
@@ -160,7 +165,12 @@ def check_duplicate_rows(df):
     section("CHECK 6 — Duplicate rows (same Title + Issue # + Box # + Volume)")
     key = ["Title", "Issue #", "Box #", "Volume"]
     available = [c for c in key if c in df.columns]
-    dupes = df[df.duplicated(subset=available, keep=False)]
+    # Exclude status-box rows — UNKNOWN/CGC rows share a Box # value by design, not duplication
+    physical = df[~df["Box #"].apply(lambda v: str(v).strip() in BOX_STATUS_ALLOWLIST)]
+    excluded = len(df) - len(physical)
+    if excluded:
+        info(f"{excluded} status-box rows (UNKNOWN/CGC) excluded from duplicate check")
+    dupes = physical[physical.duplicated(subset=available, keep=False)]
     if len(dupes):
         fail(f"{len(dupes)} rows are duplicates by {' + '.join(available)}")
         sample = dupes.groupby(available).size().reset_index(name="count")
