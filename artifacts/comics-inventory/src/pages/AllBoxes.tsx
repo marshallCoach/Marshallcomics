@@ -237,7 +237,7 @@ export default function AllBoxes() {
               return (
                 <div key={i} className={`comic-card${isOpen?" open":""}`} onClick={()=>toggle(i)}>
                   <div className="card-title">{c.Title || "Untitled"}</div>
-                  <div className="card-sub">Box {c.Box} · {c.Publisher} #{c.Issue} · {c.Year}</div>
+                  <div className="card-sub">Box {c.Box} · {c.Publisher} {c.Issue} · {c.Year}</div>
                   <div className="badges">
                     {isKey    && <span className="badge bk">KEY</span>}
                     {isSigned && <span className="badge bs">SIGNED</span>}

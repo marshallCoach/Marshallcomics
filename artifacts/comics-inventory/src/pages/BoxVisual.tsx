@@ -386,9 +386,9 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
           {view === "visual" && (
             <div style={{ display: "grid",
               gridTemplateColumns: selectedTitle ? "1fr 300px" : "1fr",
-              gap: 16, alignItems: "start" }}>
+              gap: 16, alignItems: "start", width: "100%", minWidth: 0 }}>
 
-              <div>
+              <div style={{ minWidth: 0 }}>
                 <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem",
                   letterSpacing: "2px", color: "var(--muted)", marginBottom: 8 }}>
                   {sorted
@@ -407,6 +407,8 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                   overflowX: "auto",
                   position: "relative",
                   boxShadow: "0 4px 16px rgba(0,0,0,0.12)",
+                  maxWidth: "100%",
+                  boxSizing: "border-box",
                 }}>
                   <div style={{ position: "absolute", top: -18, left: "50%", transform: "translateX(-50%)",
                     fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem",

@@ -418,7 +418,7 @@ export default function Runs() {
                                 fontFamily:"'Bebas Neue',sans-serif",
                                 color: isKey ? "#8a6000" : "var(--text2)",
                               }}>
-                                #{c.Issue}
+                                {c.Issue}
                                 {isKey    && <span style={{ color:"#c8102e", marginLeft:2 }}>★</span>}
                                 {isSigned && <span style={{ color:"#22c55e", marginLeft:2 }}>✍</span>}
                               </div>
@@ -521,7 +521,7 @@ export default function Runs() {
                                   fontFamily:"'Bebas Neue',sans-serif",
                                   color: isKey ? "#8a6000" : "var(--text2)",
                                 }}>
-                                  #{c.Issue}
+                                  {c.Issue}
                                   {isKey    && <span style={{ color:"#c8102e", marginLeft:2 }}>★</span>}
                                   {isSigned && <span style={{ color:"#22c55e", marginLeft:2 }}>✍</span>}
                                 </div>
@@ -817,7 +817,7 @@ export default function Runs() {
                                                 fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"0.5px",
                                                 color: isKey ? "#8a6000" : "var(--text2)",
                                               }}>
-                                                #{c.Issue}
+                                                {c.Issue}
                                                 {isKey    && <span style={{ color:"#c8102e", marginLeft:2 }}>★</span>}
                                                 {isSigned && <span style={{ color:"#22c55e", marginLeft:2 }}>✍</span>}
                                               </div>

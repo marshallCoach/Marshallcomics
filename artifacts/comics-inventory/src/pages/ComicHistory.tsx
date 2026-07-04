@@ -49,7 +49,13 @@ const BY_YEAR = (() => {
     m.get(y)!.push(c);
   }
   for (const [, arr] of m) {
-    arr.sort((a, b) => a.Title.localeCompare(b.Title) || a.Issue.localeCompare(b.Issue));
+    arr.sort((a, b) => {
+      const t = a.Title.localeCompare(b.Title);
+      if (t !== 0) return t;
+      const na = parseFloat(String(a.Issue).replace(/[^0-9.]/g, "")) || 0;
+      const nb = parseFloat(String(b.Issue).replace(/[^0-9.]/g, "")) || 0;
+      return na - nb;
+    });
   }
   return m;
 })();

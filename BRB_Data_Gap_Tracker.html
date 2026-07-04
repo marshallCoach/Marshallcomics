@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BRB Data Gap Tracker</title>
+<style>
+  :root{--bg:#0a0a0f;--surface:#13131a;--card:#1c1c26;--border:#2a2a38;--red:#e53935;--green:#43a047;--amber:#fb8c00;--blue:#1e88e5;--text:#e8e8f0;--muted:#6b6b80;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--text);font-family:'Courier New',monospace;min-height:100vh;padding-bottom:40px;}
+  header{background:var(--surface);border-bottom:2px solid var(--red);padding:16px;position:sticky;top:0;z-index:100;}
+  .logo-main{font-size:16px;font-weight:bold;color:var(--red);letter-spacing:2px;}
+  .logo-sub{font-size:9px;color:var(--muted);letter-spacing:1px;margin-top:2px;}
+  main{padding:16px;max-width:1000px;margin:0 auto;}
+
+  .finding{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:16px;margin-bottom:20px;}
+  .finding h2{font-size:13px;color:var(--amber);letter-spacing:1px;margin-bottom:8px;}
+  .finding p{font-size:11px;color:var(--text);line-height:1.6;margin-bottom:6px;}
+  .stat-bar{display:flex;gap:14px;margin:14px 0;flex-wrap:wrap;}
+  .stat{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:10px 14px;text-align:center;min-width:90px;}
+  .stat-n{font-size:20px;font-weight:bold;color:var(--red);}
+  .stat-l{font-size:9px;color:var(--muted);letter-spacing:1px;margin-top:2px;}
+
+  table{width:100%;border-collapse:collapse;margin:10px 0;font-size:11px;}
+  th{background:#1A237E;color:#fff;text-align:left;padding:8px 10px;font-size:10px;letter-spacing:0.5px;}
+  td{padding:7px 10px;border-bottom:1px solid var(--border);}
+  tr:nth-child(even){background:rgba(255,255,255,0.02);}
+  .pct-high{color:var(--red);font-weight:bold;}
+  .pct-med{color:var(--amber);font-weight:bold;}
+  .pct-low{color:var(--green);font-weight:bold;}
+
+  .section-title{font-size:14px;color:var(--text);margin:28px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--border);letter-spacing:1px;}
+
+  /* FORM */
+  .form-card{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:18px;margin-bottom:16px;}
+  .form-row{display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap;}
+  .form-group{flex:1;min-width:160px;}
+  label{display:block;font-size:9px;color:var(--muted);letter-spacing:1px;margin-bottom:4px;}
+  input,select,textarea{width:100%;background:var(--surface);border:1px solid var(--border);color:var(--text);padding:8px;font-family:inherit;font-size:12px;border-radius:3px;}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue);}
+  textarea{resize:vertical;min-height:50px;}
+  button{background:var(--green);color:#fff;border:none;padding:10px 20px;font-family:inherit;font-size:11px;letter-spacing:1px;border-radius:3px;cursor:pointer;}
+  button:hover{opacity:0.85;}
+  button.secondary{background:var(--border);}
+  .btn-row{display:flex;gap:8px;margin-top:8px;}
+
+  .entry-list{margin-top:20px;}
+  .entry-card{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--blue);border-radius:4px;padding:12px 14px;margin-bottom:8px;}
+  .entry-title{font-size:12px;font-weight:bold;color:var(--text);}
+  .entry-meta{font-size:10px;color:var(--muted);margin-top:4px;display:flex;gap:14px;flex-wrap:wrap;}
+  .entry-meta span{color:var(--blue);}
+  .empty-state{text-align:center;padding:30px;color:var(--muted);font-size:11px;}
+
+  .export-bar{display:flex;gap:8px;justify-content:flex-end;margin:12px 0;}
+  .export-bar button{padding:7px 14px;font-size:10px;}
+
+  .badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:9px;font-weight:bold;margin-left:6px;}
+  .badge.high{background:rgba(229,57,53,0.2);color:var(--red);}
+  .badge.med{background:rgba(251,140,0,0.2);color:var(--amber);}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo-main">📋 BRB DATA GAP TRACKER</div>
+  <div class="logo-sub">BLACKREADBROWN · DATA INTEGRITY · BUILT 19/06 03:50</div>
+</header>
+
+<main>
+
+  <div class="finding">
+    <h2>⚠ FINDING A — THE PHANTOM-DUPLICATE FINGERPRINT IS CONFIRMED, NOT ANECDOTAL</h2>
+    <p>164 rows were purged this session as duplicates, hallucinations, or self-flagged errors. Comparing field-completeness between purged rows and the surviving clean inventory shows a clear, repeatable pattern — phantom rows are <strong>3.3x more likely</strong> to have a blank Artist field and <strong>2.5x more likely</strong> to have a blank Writer field than legitimate rows.</p>
+    <div class="stat-bar">
+      <div class="stat"><div class="stat-n">48.2%</div><div class="stat-l">ARTIST BLANK<br>IN PURGED ROWS</div></div>
+      <div class="stat"><div class="stat-n">14.7%</div><div class="stat-l">ARTIST BLANK<br>IN CLEAN ROWS</div></div>
+      <div class="stat"><div class="stat-n">17.7%</div><div class="stat-l">WRITER BLANK<br>IN PURGED ROWS</div></div>
+      <div class="stat"><div class="stat-n">6.9%</div><div class="stat-l">WRITER BLANK<br>IN CLEAN ROWS</div></div>
+    </div>
+    <p><strong>Actionable rule:</strong> any future duplicate-title alert where one copy has a populated Artist field and the other is blank — treat the blank one as the likely phantom, same as the Defenders/Black Lightning pattern this session.</p>
+  </div>
+
+  <div class="finding">
+    <h2>⚠ FINDING B — 730 LIVE ROWS CARRY THE SAME RISK SIGNATURE, UNFLAGGED</h2>
+    <p>730 rows currently in the clean inventory (6.8% of the whole collection) have <strong>both</strong> Artist and Writer blank — the same risk profile as confirmed phantoms, but they were never caught because they don't have a duplicate "twin" in a different box to compare against. These aren't necessarily errors, but they're the highest-priority candidates for a future audit pass.</p>
+  </div>
+
+  <div class="section-title">📊 MISSING DATA — FULL INVENTORY, RANKED BY GAP SIZE</div>
+  <p style="font-size:10px;color:#6b6b80;margin-bottom:10px;">This is the real list of what's commonly missing across all 10,697 live rows — not just the purged ones. Use this to prioritize what to fill in below.</p>
+  <table>
+    <tr><th>FIELD</th><th>% BLANK</th><th>ROWS MISSING</th><th>PRIORITY</th></tr>
+    <tr><td>Signed By</td><td class="pct-low">99.5%</td><td>10,643</td><td>Low — expected, most books unsigned</td></tr>
+    <tr><td>1st Appearances</td><td class="pct-low">97.6%</td><td>10,441</td><td>Low — only relevant for keys</td></tr>
+    <tr><td>Crossover / Event</td><td class="pct-low">88.8%</td><td>9,502</td><td>Low — only relevant for event tie-ins</td></tr>
+    <tr><td>Condition</td><td class="pct-med">79.5%</td><td>8,499</td><td><strong>HIGH — affects every sale price</strong></td></tr>
+    <tr><td>Key Issue — Why</td><td class="pct-med">62.8%</td><td>6,720</td><td>Medium — only matters if Key Issue = YES</td></tr>
+    <tr><td>Cover Artist</td><td class="pct-med">39.6%</td><td>4,239</td><td>Medium — useful for Whatnot listings</td></tr>
+    <tr><td>Artist(s)</td><td class="pct-high">14.7%</td><td>1,574</td><td><strong>HIGH — phantom-duplicate risk field</strong></td></tr>
+    <tr><td>Writer(s)</td><td class="pct-high">6.9%</td><td>734</td><td><strong>HIGH — phantom-duplicate risk field</strong></td></tr>
+  </table>
+
+  <div class="section-title">✍️ ADD / UPDATE MISSING DATA</div>
+  <p style="font-size:10px;color:#6b6b80;margin-bottom:10px;">Fill this in as you go through boxes. Entries save locally in your browser. Export to CSV when ready to upload to the master inventory.</p>
+
+  <div class="form-card">
+    <div class="form-row">
+      <div class="form-group">
+        <label>TITLE *</label>
+        <input type="text" id="f-title" placeholder="e.g. Black Panther">
+      </div>
+      <div class="form-group">
+        <label>ISSUE #</label>
+        <input type="text" id="f-issue" placeholder="e.g. 17">
+      </div>
+      <div class="form-group">
+        <label>BOX #</label>
+        <input type="text" id="f-box" placeholder="e.g. 7">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>FIELD TO UPDATE *</label>
+        <select id="f-field">
+          <option value="">— select field —</option>
+          <option value="Condition">Condition</option>
+          <option value="Artist(s)">Artist(s)</option>
+          <option value="Writer(s)">Writer(s)</option>
+          <option value="Cover Artist">Cover Artist</option>
+          <option value="Key Issue — Why">Key Issue — Why</option>
+          <option value="1st Appearances">1st Appearances</option>
+          <option value="Crossover / Event">Crossover / Event</option>
+          <option value="Signed By">Signed By</option>
+          <option value="Volume">Volume</option>
+          <option value="Other">Other (specify in value)</option>
+        </select>
+      </div>
+      <div class="form-group" style="flex:2;">
+        <label>NEW VALUE *</label>
+        <input type="text" id="f-value" placeholder="e.g. NM- (9.2)">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group" style="flex:1;">
+        <label>NOTES (optional)</label>
+        <textarea id="f-notes" placeholder="Any extra context — e.g. source of info, confidence level"></textarea>
+      </div>
+    </div>
+    <div class="btn-row">
+      <button onclick="addEntry()">+ ADD ENTRY</button>
+      <button class="secondary" onclick="clearForm()">CLEAR FORM</button>
+    </div>
+  </div>
+
+  <div class="export-bar">
+    <span id="entry-count" style="font-size:10px;color:#6b6b80;align-self:center;">0 entries saved</span>
+    <button onclick="exportCSV()">⬇ EXPORT CSV</button>
+    <button class="secondary" onclick="clearAll()">🗑 CLEAR ALL</button>
+  </div>
+
+  <div class="entry-list" id="entry-list">
+    <div class="empty-state">No entries yet. Add updates above as you go through boxes.</div>
+  </div>
+
+</main>
+
+<script>
+var STORAGE_KEY = 'brb_data_gap_entries';
+var entries = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+
+function save() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
+}
+
+function addEntry() {
+  var title = document.getElementById('f-title').value.trim();
+  var field = document.getElementById('f-field').value;
+  var value = document.getElementById('f-value').value.trim();
+
+  if (!title || !field || !value) {
+    alert('Title, Field, and New Value are required.');
+    return;
+  }
+
+  var entry = {
+    id: Date.now(),
+    title: title,
+    issue: document.getElementById('f-issue').value.trim(),
+    box: document.getElementById('f-box').value.trim(),
+    field: field,
+    value: value,
+    notes: document.getElementById('f-notes').value.trim(),
+    timestamp: new Date().toISOString()
+  };
+
+  entries.unshift(entry);
+  save();
+  render();
+  clearForm();
+}
+
+function clearForm() {
+  document.getElementById('f-title').value = '';
+  document.getElementById('f-issue').value = '';
+  document.getElementById('f-box').value = '';
+  document.getElementById('f-field').value = '';
+  document.getElementById('f-value').value = '';
+  document.getElementById('f-notes').value = '';
+}
+
+function deleteEntry(id) {
+  entries = entries.filter(function(e) { return e.id !== id; });
+  save();
+  render();
+}
+
+function clearAll() {
+  if (!confirm('Clear all saved entries? This cannot be undone.')) return;
+  entries = [];
+  save();
+  render();
+}
+
+function render() {
+  var list = document.getElementById('entry-list');
+  document.getElementById('entry-count').textContent = entries.length + ' entries saved';
+
+  if (entries.length === 0) {
+    list.innerHTML = '<div class="empty-state">No entries yet. Add updates above as you go through boxes.</div>';
+    return;
+  }
+
+  list.innerHTML = '';
+  entries.forEach(function(e) {
+    var card = document.createElement('div');
+    card.className = 'entry-card';
+    var meta = [];
+    if (e.issue) meta.push('Issue #' + e.issue);
+    if (e.box) meta.push('Box ' + e.box);
+    meta.push('<span>' + e.field + '</span> → ' + e.value);
+
+    card.innerHTML =
+      '<div class="entry-title">' + e.title + '</div>' +
+      '<div class="entry-meta">' + meta.join(' &nbsp;·&nbsp; ') + '</div>' +
+      (e.notes ? '<div class="entry-meta" style="margin-top:4px;font-style:italic;">' + e.notes + '</div>' : '') +
+      '<div style="margin-top:8px;"><button class="secondary" style="padding:4px 10px;font-size:9px;" onclick="deleteEntry(' + e.id + ')">DELETE</button></div>';
+    list.appendChild(card);
+  });
+}
+
+function exportCSV() {
+  if (entries.length === 0) {
+    alert('No entries to export.');
+    return;
+  }
+  var headers = ['Title','Issue #','Box #','Field','New Value','Notes','Timestamp'];
+  var rows = entries.map(function(e) {
+    return [e.title, e.issue, e.box, e.field, e.value, e.notes, e.timestamp]
+      .map(function(v) { return '"' + String(v || '').replace(/"/g, '""') + '"'; })
+      .join(',');
+  });
+  var csv = headers.join(',') + '\n' + rows.join('\n');
+  var blob = new Blob([csv], {type: 'text/csv'});
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'brb-data-gap-updates-' + new Date().toISOString().slice(0,10) + '.csv';
+  a.click();
+}
+
+render();
+</script>
+</body>
+</html>

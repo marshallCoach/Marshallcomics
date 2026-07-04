@@ -168,7 +168,7 @@ function NotesModal({ comic, comicKey, fields, notes, onFieldsChange, onNotesCha
             <div>
               <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"2px", color:"rgba(255,255,255,0.7)", marginBottom:3 }}>UPDATE NOTES</div>
               <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.15rem", letterSpacing:"2px", color:"#fff", lineHeight:1.1 }}>
-                {comic.Title} <span style={{ opacity:0.75 }}>#{comic.Issue}</span>
+                {comic.Title} <span style={{ opacity:0.75 }}>{comic.Issue}</span>
               </div>
               {(comic.Publisher || comic.Year || comic.Box) && (
                 <div style={{ fontSize:"0.72rem", color:"rgba(255,255,255,0.65)", marginTop:4, fontFamily:"'Crimson Pro',serif" }}>

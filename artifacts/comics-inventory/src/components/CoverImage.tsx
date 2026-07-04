@@ -4,6 +4,23 @@ import { comicFlagKey, getComicFlag, setComicFlag, clearComicFlag } from "@/lib/
 
 const BASE = import.meta.env.BASE_URL?.replace(/\/$/, "") ?? "";
 
+// ── Static cover map loaded once from /covers.json ───────────────────────────
+let coversMap: Record<string, { url: string | null; large?: string | null }> | null = null;
+let coversLoading: Promise<void> | null = null;
+
+function loadCovers(): Promise<void> {
+  if (coversMap !== null) return Promise.resolve();
+  if (coversLoading) return coversLoading;
+  coversLoading = fetch(`${BASE}/covers.json`)
+    .then(r => r.json())
+    .then(data => { coversMap = data; })
+    .catch(() => { coversMap = {}; });
+  return coversLoading;
+}
+
+// Pre-load covers as soon as the module is imported
+loadCovers();
+
 const memCache = new Map<string, string | null>();
 const inFlight  = new Map<string, Promise<string | null>>();
 
@@ -23,16 +40,10 @@ async function fetchCover(c: ComicLike): Promise<string | null> {
 
   const p = (async () => {
     try {
-      const params = new URLSearchParams({
-        title: c.Title,
-        issue: String(c.Issue || ""),
-        publisher: (c as { Publisher?: string }).Publisher ?? "",
-        year: String((c as { Year?: string }).Year ?? ""),
-      });
-      const res = await fetch(`${BASE}/api/covers/search?${params}`);
-      if (!res.ok) return null;
-      const data = await res.json() as { cover_url?: string | null };
-      const url = data.cover_url ?? null;
+      await loadCovers();
+      // Try with # prefix first, then without
+      const entry = coversMap?.[key] ?? coversMap?.[`${c.Title}|||#${String(c.Issue).replace(/^#/, "")}`] ?? null;
+      const url = entry?.url ?? null;
       memCache.set(key, url);
       return url;
     } catch {
@@ -101,7 +112,7 @@ export function CoverImage({ comic, width = 56, height = 84, onClick, style }: P
     >
       <img
         src={src}
-        alt={`${comic.Title} #${comic.Issue}`}
+        alt={`${comic.Title} ${comic.Issue}`}
         width={width}
         height={height}
         loading="lazy"
@@ -209,7 +220,7 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
     const lines = [
       "BOOK NOTE REQUEST", divider,
       `Title:     ${comic.Title}`,
-      `Issue:     #${comic.Issue}`,
+      `Issue:     ${comic.Issue}`,
     ];
     if ((comic as { Year?: string }).Year)      lines.push(`Year:      ${(comic as { Year?: string }).Year}`);
     if ((comic as { Publisher?: string }).Publisher) lines.push(`Publisher: ${(comic as { Publisher?: string }).Publisher}`);
@@ -257,7 +268,7 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
         <div style={{ flexShrink: 0, width: 220, alignSelf: "stretch", overflow: "hidden", background: "#111" }}>
           <img
             src={largeUrl ?? fallback}
-            alt={`${comic.Title} #${comic.Issue}`}
+            alt={`${comic.Title} ${comic.Issue}`}
             style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
             onError={e => { (e.target as HTMLImageElement).src = fallback; }}
           />

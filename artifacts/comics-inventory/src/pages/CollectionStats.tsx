@@ -606,7 +606,7 @@ export default function CollectionStats({ onNavigate }: { onNavigate?: (tab: str
               .map((c, i) => (
                 <div key={i} style={{ background:"var(--surface)", border:"1.5px solid #d97706", borderLeft:"3px solid #d97706", borderRadius:6, padding:"8px 12px", flex:"1 1 220px" }}>
                   <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem", color:"#d97706", letterSpacing:"1px" }}>{c.First_App}</div>
-                  <div style={{ fontSize:"0.8rem", color:"var(--text)", marginTop:2 }}>{c.Title} #{c.Issue}</div>
+                  <div style={{ fontSize:"0.8rem", color:"var(--text)", marginTop:2 }}>{c.Title} {c.Issue}</div>
                   <div style={{ fontSize:"0.72rem", color:"var(--muted2)", marginTop:1 }}>Box {c.Box} · {c.Publisher} {c.Year}</div>
                 </div>
               ))}

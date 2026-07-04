@@ -28,13 +28,15 @@ import OrganizationPath from "@/pages/OrganizationPath";
 import BoxLabels from "@/pages/BoxLabels";
 import KeyCatalog from "@/pages/KeyCatalog";
 import CoverCatalog from "@/pages/CoverCatalog";
+import BoxQuest from "@/pages/BoxQuest";
+import BoxMap from "@/pages/BoxMap";
 import PasswordGate from "@/components/PasswordGate";
 
 type TabId =
   | "summary" | "everything" | "collection" | "boxkeys" | "stats" | "runs" | "dataview"
   | "calendar" | "showplanner" | "cgc" | "signings" | "actionplan" | "timeline" | "boxvisual"
   | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "duplicates" | "dupchecklist" | "history"
-  | "orgpath" | "volumes" | "boxlabels" | "keycatalog" | "covercatalog";
+  | "orgpath" | "volumes" | "boxlabels" | "keycatalog" | "covercatalog" | "boxquest" | "boxmap";
 
 export type NavParams = {
   box?: string;
@@ -71,6 +73,8 @@ const NAV = [
       { id: "duplicates",     label: "Duplicates" },
       { id: "dupchecklist",  label: "Dup Hunt" },
       { id: "hunting",       label: "Box Hunt" },
+      { id: "boxquest",      label: "Box Quest" },
+      { id: "boxmap",        label: "Box Map" },
       { id: "timeline",    label: "Timeline" },
     ],
   },
@@ -165,57 +169,44 @@ export default function App() {
     <div style={{ minHeight:"100vh" }}>
       {showSearch && <GlobalSearch onNavigate={navigateTo} onClose={closeSearch} />}
 
+      {/* TERRIFICON BANNER */}
+      {!cd.past && (
+        <button className="terrificon-banner" onClick={() => navigateTo("cgc")}>
+          <span className="tf-label">TERRIFICON · AUG 7–9</span>
+          <span className="tf-divider">·</span>
+          <span className="tf-time">{cd.days}d {cd.hours}h {String(cd.minutes).padStart(2,"0")}m {String(cd.seconds).padStart(2,"0")}s</span>
+        </button>
+      )}
+
       {/* HEADER */}
       <header className="app-header">
         <div className="logo-area">
-          <button onClick={() => navigateTo("everything")} style={{ background:"none", border:"none", padding:0, cursor:"pointer", display:"flex" }}>
+          <button onClick={() => navigateTo("summary")} className="logo-btn">
             <img src="/logo.png" alt="BlackReadBrown" className="site-logo" />
           </button>
-          <div>
-            <div className="app-title">Marshall Comics</div>
-            <div className="app-subtitle">BlackReadBrown Inventory Hub</div>
-          </div>
-          {!cd.past && (
-            <button className="terrificon-cdown" onClick={() => navigateTo("cgc")}>
-              <span className="tf-cd-label">TERRIFICON AUG 7–9</span>
-              <span className="tf-cd-time">
-                {cd.days}d {cd.hours}h {String(cd.minutes).padStart(2,"0")}m {String(cd.seconds).padStart(2,"0")}s
-              </span>
-            </button>
-          )}
+          <div className="app-title">Marshall Comics</div>
         </div>
 
-        <div className="header-center">
-          <div className="header-stats">
-            <div className="stat"><span className="stat-val">{total.toLocaleString()}</span><span className="stat-lbl">Comics</span></div>
-            <div className="stat"><span className="stat-val">{boxes}</span><span className="stat-lbl">Boxes</span></div>
-            <div className="stat"><span className="stat-val">{keys.toLocaleString()}</span><span className="stat-lbl">Keys</span></div>
-            <div className="stat"><span className="stat-val">{signed}</span><span className="stat-lbl">Signed</span></div>
+        <div className="header-stats">
+          <div className="stat"><span className="stat-val">{total.toLocaleString()}</span><span className="stat-lbl">Comics</span></div>
+          <div className="stat"><span className="stat-val">{boxes}</span><span className="stat-lbl">Boxes</span></div>
+          <div className="stat"><span className="stat-val">{keys.toLocaleString()}</span><span className="stat-lbl">Keys</span></div>
+          <div className="stat"><span className="stat-val">{signed}</span><span className="stat-lbl">Signed</span></div>
+        </div>
+
+        <div className="header-actions">
+          <div className="header-social">
+            <a href="https://www.instagram.com/blackreadbrown" target="_blank" rel="noopener noreferrer" className="social-link ig" aria-label="Instagram">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://www.whatnot.com/user/blackreadbrown" target="_blank" rel="noopener noreferrer" className="social-link wn" aria-label="Whatnot">WN</a>
+            <a href="https://www.ebay.com/usr/blackreadbrown" target="_blank" rel="noopener noreferrer" className="social-link eb" aria-label="eBay">EB</a>
           </div>
-          <button
-            onClick={openSearch}
-            title="Search (⌘K)"
-            style={{ marginTop:6, display:"flex", alignItems:"center", gap:7, background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:6, padding:"5px 11px", cursor:"pointer", color:"var(--muted2)", fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1.5px", transition:"border-color 0.15s" }}
-            onMouseOver={e => (e.currentTarget.style.borderColor = "var(--red)")}
-            onMouseOut={e => (e.currentTarget.style.borderColor = "var(--border)")}
-          >
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-            Search
-            <kbd style={{ fontSize:"0.55rem", background:"var(--surface)", border:"1px solid var(--border)", borderRadius:3, padding:"1px 4px", color:"var(--muted)", fontFamily:"sans-serif" }}>⌘K</kbd>
+          <button className="search-btn" onClick={openSearch} title="Search (⌘K)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <span className="search-btn-label">Search</span>
+            <kbd className="search-kbd">⌘K</kbd>
           </button>
-        </div>
-
-        <div className="header-social">
-          <a href="https://www.instagram.com/blackreadbrown" target="_blank" rel="noopener noreferrer" className="social-link ig">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-            <span>@blackreadbrown</span>
-          </a>
-          <a href="https://www.whatnot.com/user/blackreadbrown" target="_blank" rel="noopener noreferrer" className="social-link wn">
-            <span>Whatnot</span>
-          </a>
-          <a href="https://www.ebay.com/usr/blackreadbrown" target="_blank" rel="noopener noreferrer" className="social-link eb">
-            <span>eBay</span>
-          </a>
         </div>
       </header>
 
@@ -228,11 +219,6 @@ export default function App() {
             onClick={() => handleSection(section.id as SectionId)}
           >{section.label}</button>
         ))}
-        <button
-          className={`main-nav-btn sitemap-btn${activeTab === "sitemap" ? " active" : ""}`}
-          onClick={() => setActiveTab("sitemap")}
-          title="Site Map"
-        >⊞ Site Map</button>
       </div>
 
       {/* SUB NAV */}
@@ -284,6 +270,8 @@ export default function App() {
         {activeTab === "history"     && <ComicHistory />}
         {activeTab === "keycatalog"  && <KeyCatalog />}
         {activeTab === "covercatalog" && <CoverCatalog />}
+        {activeTab === "boxquest"     && <BoxQuest />}
+        {activeTab === "boxmap"       && <BoxMap />}
       </div>
     </div>
     </PasswordGate>
