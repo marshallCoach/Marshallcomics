@@ -123,8 +123,8 @@ def is_blank(v):
 
 
 def nm_value(row):
-    """Extract numeric NM value from 'NM Value' or 'Value NM' column."""
-    for col in ["NM Value", "Value NM", "NM_Value"]:
+    """Extract numeric NM value from inventory columns."""
+    for col in ["Est. Raw Value (NM) $", "NM Value", "Value NM", "NM_Value"]:
         if col in row.index and not is_blank(row[col]):
             try:
                 v = str(row[col]).replace("$", "").replace(",", "").strip()
