@@ -122,16 +122,21 @@ def is_blank(v):
     return pd.isna(v) or str(v).strip() in ("", "nan", "None")
 
 
-def nm_value(row):
-    """Extract numeric NM value from inventory columns."""
-    for col in ["Est. Raw Value (NM) $", "NM Value", "Value NM", "NM_Value"]:
+def parse_value(row, *cols):
+    """Extract first numeric value from a list of column names."""
+    for col in cols:
         if col in row.index and not is_blank(row[col]):
             try:
-                v = str(row[col]).replace("$", "").replace(",", "").strip()
-                return float(v)
+                return float(str(row[col]).replace("$", "").replace(",", "").strip())
             except ValueError:
                 pass
     return 0.0
+
+def nm_value(row):
+    return parse_value(row, "Est. Raw Value (NM) $", "NM Value", "Value NM", "NM_Value")
+
+def vf_value(row):
+    return parse_value(row, "Est. Raw Value (VF) $", "VF Value", "Value VF")
 
 
 def main():
@@ -171,8 +176,10 @@ def main():
     queue = []
     seen  = set()
     for _, row in df.iterrows():
-        val = nm_value(row)
-        if val < args.min_value:
+        nm  = nm_value(row)
+        vf  = vf_value(row)
+        # Include if NM > min_value OR VF > half of min_value
+        if nm < args.min_value and vf < (args.min_value / 2):
             continue
         title  = str(row.get("Title", "")).strip()
         issue  = row.get("Issue #", "")
@@ -181,13 +188,15 @@ def main():
             continue
         seen.add(key)
         queue.append({
-            "title":     title,
-            "issue":     issue,
-            "year":      row.get("Year", ""),
-            "publisher": row.get("Publisher", ""),
-            "nm_value":  val,
-            "box":       row.get("Box #", ""),
-            "writer":    row.get("Writer(s)", ""),
+            "title":      title,
+            "issue":      issue,
+            "year":       row.get("Year", ""),
+            "publisher":  row.get("Publisher", ""),
+            "nm_value":   nm,
+            "vf_value":   vf,
+            "condition":  str(row.get("Condition", "")).strip(),
+            "box":        row.get("Box #", ""),
+            "writer":     row.get("Writer(s)", ""),
         })
 
     queue.sort(key=lambda x: x["nm_value"], reverse=True)
@@ -197,9 +206,14 @@ def main():
     print(f"Queue: {len(queue)} unique titles with NM Value ≥ ${args.min_value:.0f}")
 
     if args.dry_run:
-        print("\nTop 20 by NM Value:")
+        print(f"\nTop 20 by NM Value:")
+        print(f"  {'Title':<38} {'Iss':>5}  {'NM':>6}  {'VF':>6}  {'Cond':<8}  Box")
+        print(f"  {'─'*38} {'─'*5}  {'─'*6}  {'─'*6}  {'─'*8}  {'─'*5}")
         for i, c in enumerate(queue[:20]):
-            print(f"  {i+1:>3}. {c['title']} #{c['issue']}  NM=${c['nm_value']:.0f}  Box {c['box']}")
+            nm   = f"${c['nm_value']:.0f}" if c['nm_value'] else "—"
+            vf   = f"${c['vf_value']:.0f}" if c.get('vf_value') else "—"
+            cond = (c.get("condition") or "")[:8]
+            print(f"  {c['title']:<38} #{str(c['issue']):>4}  {nm:>6}  {vf:>6}  {cond:<8}  {c['box']}")
         sys.exit(0)
 
     # Load existing results
@@ -234,6 +248,8 @@ def main():
                 "title":      comic["title"],
                 "issue":      str(comic["issue"]),
                 "nm_value":   comic["nm_value"],
+                "vf_value":   comic.get("vf_value", 0),
+                "condition":  comic.get("condition", ""),
                 "box":        str(comic["box"]),
                 "writer":     str(comic["writer"]),
                 "prices":     prices,
@@ -276,12 +292,15 @@ def main():
     priced.sort(key=lambda x: x["avg"], reverse=True)
     if priced:
         print(f"\nTop 20 by average sold price:")
-        print(f"  {'Title':<40} {'Issue':>6}  {'NM':>5}  {'Avg Sold':>9}  {'Range':>14}  Box")
-        print(f"  {'─'*40} {'─'*6}  {'─'*5}  {'─'*9}  {'─'*14}  {'─'*5}")
+        print(f"  {'Title':<38} {'Iss':>5}  {'NM':>5}  {'VF':>5}  {'Cond':<6}  {'Avg Sold':>9}  {'Range':>12}  Box")
+        print(f"  {'─'*38} {'─'*5}  {'─'*5}  {'─'*5}  {'─'*6}  {'─'*9}  {'─'*12}  {'─'*5}")
         for c in priced[:20]:
-            rng = f"${c['low']:.0f}–${c['high']:.0f}"
-            print(f"  {c['title']:<40} #{str(c['issue']):>5}  "
-                  f"${c['nm_value']:>4.0f}  ${c['avg']:>8.2f}  {rng:>14}  {c['box']}")
+            rng  = f"${c['low']:.0f}–${c['high']:.0f}"
+            nm   = f"${c['nm_value']:.0f}" if c['nm_value'] else "—"
+            vf   = f"${c.get('vf_value',0):.0f}" if c.get('vf_value') else "—"
+            cond = (c.get("condition") or "")[:6]
+            print(f"  {c['title']:<38} #{str(c['issue']):>4}  "
+                  f"{nm:>5}  {vf:>5}  {cond:<6}  ${c['avg']:>8.2f}  {rng:>12}  {c['box']}")
 
 
 if __name__ == "__main__":
