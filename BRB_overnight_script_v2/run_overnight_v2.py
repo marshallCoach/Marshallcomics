@@ -18,8 +18,30 @@ import json, os, re, time
 from datetime import datetime
 
 # ── CONFIG ────────────────────────────────────────────────────────────────────
-INVENTORY_PATH   = "comics_inventory_2006_2015.xlsx"
-SHEET_NAME       = "✅ Clean Inventory 2006_2015"
+import glob as _glob
+
+def _find_inventory():
+    """Auto-detect latest VALIDATED xlsx in ../attached_assets/ relative to this script."""
+    base = os.path.dirname(os.path.abspath(__file__))
+    assets = os.path.join(base, "..", "attached_assets")
+    matches = _glob.glob(os.path.join(assets, "comics_inventory_*VALIDATED*.xlsx"))
+    if not matches:
+        matches = _glob.glob(os.path.join(assets, "comics_inventory_*.xlsx"))
+    if not matches:
+        raise FileNotFoundError(f"No comics_inventory_*.xlsx found in {assets}")
+    return max(matches, key=os.path.getmtime)
+
+def _find_sheet(path):
+    """Return the sheet name that contains the inventory columns."""
+    xl = pd.ExcelFile(path)
+    for name in xl.sheet_names:
+        df = xl.parse(name, nrows=1)
+        if "Title" in df.columns and "Writer(s)" in df.columns:
+            return name
+    return xl.sheet_names[0]
+
+INVENTORY_PATH   = _find_inventory()
+SHEET_NAME       = _find_sheet(INVENTORY_PATH)
 LOG_PATH         = "issues.json"
 REVIEW_PATH      = "needs_review.json"
 CHECKPOINT_EVERY = 25
