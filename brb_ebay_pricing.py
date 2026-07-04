@@ -78,7 +78,10 @@ def search_sold(title, issue, year, publisher, token):
     Returns list of sold prices (float) or empty list.
     """
     # Build search query
-    issue_str = str(int(float(str(issue)))) if issue else ""
+    try:
+        issue_str = str(int(float(str(issue)))) if issue and str(issue).strip() not in ("", "nan", "None") else ""
+    except (ValueError, TypeError):
+        issue_str = ""
     query = f"{title} #{issue_str} comic"
     if year and str(year).strip() not in ("", "nan", "None"):
         query += f" {str(year)[:4]}"
