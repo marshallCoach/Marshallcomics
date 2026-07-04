@@ -358,8 +358,11 @@ def cv_get_all_credits_for_title(title, year_hint, needed_issue_nums):
 
 # ── BUILD QUEUE FROM EXCEL ────────────────────────────────────────────────────
 def build_queue(df):
-    blank_mask = df["Writer(s)"].apply(is_blank)
-    blank_df   = df[blank_mask].copy()
+    # Queue titles where writer OR cover artist is missing
+    writer_blank = df["Writer(s)"].apply(is_blank)
+    ca_blank     = df["Cover_Artist"].apply(is_blank) if "Cover_Artist" in df.columns else pd.Series(True, index=df.index)
+    blank_mask   = writer_blank | ca_blank
+    blank_df     = df[blank_mask].copy()
     blank_df["Volume"] = pd.to_numeric(blank_df.get("Volume", 1), errors="coerce").fillna(1)
     counts = (
         blank_df.groupby(["Title", "Volume"])
@@ -384,6 +387,10 @@ def main():
         df["Volume"] = 1
     df["Volume"] = pd.to_numeric(df["Volume"], errors="coerce").fillna(1)
 
+    if "Cover_Artist" not in df.columns:
+        df["Cover_Artist"] = ""
+        print("  (Cover_Artist column not found — added)")
+
     rows_initial = len(df)
     print(f"Loaded {rows_initial} rows from {INVENTORY_PATH}")
 
@@ -407,16 +414,18 @@ def main():
         if key in done_keys:
             continue
 
+        ca_blank_col = df["Cover_Artist"].apply(is_blank) if "Cover_Artist" in df.columns else pd.Series(True, index=df.index)
         mask = (
             (df["Title"] == title) &
             (df["Volume"] == volume) &
-            df["Writer(s)"].apply(is_blank)
+            (df["Writer(s)"].apply(is_blank) | ca_blank_col)
         )
         if mask.sum() == 0:
             continue
 
-        # Collision check
-        collision, cdesc = has_year_collision(df, title, volume)
+        # Collision check only applies when writer is missing (year-gap logic is writer-based)
+        writer_missing = mask & df["Writer(s)"].apply(is_blank)
+        collision, cdesc = has_year_collision(df, title, volume) if writer_missing.any() else (False, None)
         if collision:
             log_issue("SKIPPED_COLLISION", title, cdesc)
             log_review(title, volume, f"Year gap: {cdesc}")
