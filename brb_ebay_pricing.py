@@ -148,8 +148,32 @@ CONDITION_MULTIPLIERS = {
     "poor":        0.15,
     "bad":         0.10,
     "reader":      0.15,
-    "unbagged":    0.50,  # assume Good unless stated otherwise
+    "unbagged":    0.50,
 }
+
+# Conditions that mean "pressed/ready — treat as NM"
+PRESSED_SIGNALS = [
+    "needs pressing",
+    "press first",
+    "needs press",
+    "⚠️ needs pre",
+    "⚠️ press fir",
+]
+
+# Conditions that mean "at CGC — skip raw pricing"
+CGC_SIGNALS = [
+    "at cgc",
+    "at magic pressing",
+]
+
+def is_cgc_bound(row):
+    cond = str(row.get("Condition", "") or "").lower()
+    box  = str(row.get("Box #", "") or "").lower()
+    return any(s in cond or s in box for s in CGC_SIGNALS)
+
+def is_pressed(row):
+    cond = str(row.get("Condition", "") or "").lower()
+    return any(s in cond for s in PRESSED_SIGNALS)
 
 def condition_adjusted_value(row):
     """Return realistic sale value based on condition."""
@@ -158,9 +182,17 @@ def condition_adjusted_value(row):
     if not nm and not vf:
         return 0.0
 
+    # CGC-bound books skipped at queue level — return 0 here
+    if is_cgc_bound(row):
+        return 0.0
+
+    # Pressed books are now ready — treat as NM
+    if is_pressed(row):
+        return nm if nm else (vf / 0.75 if vf else 0)
+
     cond = str(row.get("Condition", "") or "").lower().strip()
 
-    # Use VF value directly if available and condition is VF-ish
+    # Use VF value directly if condition is VF-ish
     if vf and any(x in cond for x in ["fine", "vf", "very fine"]):
         return vf
 
@@ -172,8 +204,7 @@ def condition_adjusted_value(row):
             break
 
     if multiplier is None:
-        # Blank condition — assume mid-grade
-        multiplier = 0.50
+        multiplier = 0.50  # blank condition — assume mid-grade
 
     base = nm if nm else (vf / 0.75 if vf else 0)
     return round(base * multiplier, 2)
@@ -213,49 +244,69 @@ def main():
         token = None
 
     # Build queue: rows with NM Value > min_value, deduplicated by Title+Issue
-    queue = []
-    seen  = set()
+    queue     = []
+    cgc_queue = []
+    seen      = set()
     for _, row in df.iterrows():
         nm    = nm_value(row)
         vf    = vf_value(row)
-        adj   = condition_adjusted_value(row)
-        # Include if condition-adjusted value >= min_value
-        if adj < args.min_value:
-            continue
-        title  = str(row.get("Title", "")).strip()
-        issue  = row.get("Issue #", "")
-        key    = f"{title}|||{issue}"
-        if key in seen or not title:
+        title = str(row.get("Title", "")).strip()
+        issue = row.get("Issue #", "")
+        key   = f"{title}|||{issue}"
+        if not title or key in seen:
             continue
         seen.add(key)
-        queue.append({
-            "title":      title,
-            "issue":      issue,
-            "year":       row.get("Year", ""),
-            "publisher":  row.get("Publisher", ""),
-            "nm_value":   nm,
-            "vf_value":   vf,
-            "adj_value":  adj,
-            "condition":  str(row.get("Condition", "")).strip(),
-            "box":        row.get("Box #", ""),
-            "writer":     row.get("Writer(s)", ""),
-        })
+
+        comic = {
+            "title":     title,
+            "issue":     issue,
+            "year":      row.get("Year", ""),
+            "publisher": row.get("Publisher", ""),
+            "nm_value":  nm,
+            "vf_value":  vf,
+            "condition": str(row.get("Condition", "")).strip(),
+            "box":       str(row.get("Box #", "")),
+            "writer":    row.get("Writer(s)", ""),
+        }
+
+        if is_cgc_bound(row):
+            if nm >= args.min_value:
+                comic["adj_value"] = nm  # pending grade — NM is ceiling
+                cgc_queue.append(comic)
+            continue
+
+        adj = condition_adjusted_value(row)
+        if adj < args.min_value:
+            continue
+        comic["adj_value"] = adj
+        queue.append(comic)
 
     queue.sort(key=lambda x: x["adj_value"], reverse=True)
+    cgc_queue.sort(key=lambda x: x["nm_value"], reverse=True)
     if args.limit:
         queue = queue[:args.limit]
 
-    print(f"Queue: {len(queue)} unique titles with NM Value ≥ ${args.min_value:.0f}")
+    print(f"Queue: {len(queue)} raw/pressed titles with adj value ≥ ${args.min_value:.0f}")
+    print(f"       {len(cgc_queue)} CGC-bound titles (flagged separately, not priced as raw)")
 
     if args.dry_run:
-        print(f"\nTop 20 by condition-adjusted value:")
-        print(f"  {'Title':<38} {'Iss':>5}  {'NM':>6}  {'Adj':>6}  {'Cond':<12}  Box")
-        print(f"  {'─'*38} {'─'*5}  {'─'*6}  {'─'*6}  {'─'*12}  {'─'*5}")
-        for i, c in enumerate(queue[:20]):
+        print(f"\nTop 20 raw/pressed — sorted by adjusted sale value:")
+        print(f"  {'Title':<38} {'Iss':>5}  {'NM':>6}  {'Adj':>6}  {'Cond':<14}  Box")
+        print(f"  {'─'*38} {'─'*5}  {'─'*6}  {'─'*6}  {'─'*14}  {'─'*5}")
+        for c in queue[:20]:
             nm   = f"${c['nm_value']:.0f}" if c['nm_value'] else "—"
             adj  = f"${c['adj_value']:.0f}"
-            cond = (c.get("condition") or "ungraded")[:12]
-            print(f"  {c['title']:<38} #{str(c['issue']):>4}  {nm:>6}  {adj:>6}  {cond:<12}  {c['box']}")
+            cond = (c.get("condition") or "ungraded")[:14]
+            print(f"  {c['title']:<38} #{str(c['issue']):>4}  {nm:>6}  {adj:>6}  {cond:<14}  {c['box']}")
+
+        if cgc_queue:
+            print(f"\nCGC-bound — pending grade (not priced as raw):")
+            print(f"  {'Title':<38} {'Iss':>5}  {'NM':>6}  {'Cond':<20}  Box")
+            print(f"  {'─'*38} {'─'*5}  {'─'*6}  {'─'*20}  {'─'*10}")
+            for c in cgc_queue:
+                nm   = f"${c['nm_value']:.0f}" if c['nm_value'] else "—"
+                cond = (c.get("condition") or "")[:20]
+                print(f"  {c['title']:<38} #{str(c['issue']):>4}  {nm:>6}  {cond:<20}  {c['box']}")
         sys.exit(0)
 
     # Load existing results
