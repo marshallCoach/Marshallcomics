@@ -119,7 +119,7 @@ def safe_write(df, path, sheet, rows_initial, label="checkpoint"):
     wb.save(path)
 
 # ── BOX CAPACITY CHECK ───────────────────────────────────────────────────────
-BOX_CAPACITY_DEFAULT = 175
+BOX_CAPACITY_DEFAULT = 240
 BOX_CAPACITY_EXCEPTIONS = {15: 150, 23: 155, 40: 80, 44: 200, 72: 80}
 
 def assert_box_capacities(df, label=""):
