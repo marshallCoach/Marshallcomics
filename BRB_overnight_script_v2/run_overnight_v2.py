@@ -120,7 +120,7 @@ def safe_write(df, path, sheet, rows_initial, label="checkpoint"):
 
 # ── BOX CAPACITY CHECK ───────────────────────────────────────────────────────
 BOX_CAPACITY_DEFAULT = 240
-BOX_CAPACITY_EXCEPTIONS = {15: 150, 23: 155, 40: 80, 44: 200, 72: 80}
+BOX_CAPACITY_EXCEPTIONS = {15: 150, 23: 155, 40: 80, 44: 200, 72: 80, 85: 155}
 
 def assert_box_capacities(df, label=""):
     """Halt if any box exceeds its defined capacity. Call before every write."""

@@ -55,7 +55,7 @@ def _latest_validated() -> str:
 
 # ── Box capacity table ────────────────────────────────────────────────────────
 BOX_CAPACITY_DEFAULT    = 240
-BOX_CAPACITY_EXCEPTIONS = {15: 150, 23: 155, 40: 80, 44: 200, 72: 80}
+BOX_CAPACITY_EXCEPTIONS = {15: 150, 23: 155, 40: 80, 44: 200, 72: 80, 85: 155}
 
 # Non-numeric Box # values that are deliberate status strings, not errors.
 # These track active CGC/pressing submissions and must never be treated as invalid.
@@ -141,14 +141,14 @@ def check_blank_box_numbers(df):
 
 
 def check_box_capacity(df):
-    section("CHECK 5 — Box capacity (default 175; exceptions: 15=150, 23=155, 40=80, 44=200, 72=80)")
-    counts = df.groupby("Box #").size()
+    section(f"CHECK 5 — Box capacity (default {BOX_CAPACITY_DEFAULT}; exceptions: "
+            + ", ".join(f"{k}={v}" for k, v in sorted(BOX_CAPACITY_EXCEPTIONS.items())) + ")")
+    # Normalize all box numbers to int before grouping — prevents "7" and "7.0" splitting
+    numeric_mask = pd.to_numeric(df["Box #"], errors="coerce").notna()
+    box_int = pd.to_numeric(df.loc[numeric_mask, "Box #"], errors="coerce").astype(int)
+    counts = box_int.value_counts()
     violations = []
-    for box, count in counts.items():
-        try:
-            box_num = int(float(str(box)))
-        except (ValueError, TypeError):
-            continue
+    for box_num, count in counts.items():
         cap = BOX_CAPACITY_EXCEPTIONS.get(box_num, BOX_CAPACITY_DEFAULT)
         if count > cap:
             violations.append((box_num, count, cap, count - cap))
