@@ -158,6 +158,20 @@ def log_review(title, vol, reason):
 def is_blank(v):
     return pd.isna(v) or str(v).strip() in ("", "nan", "None")
 
+def normalize_credits(s):
+    """Canonicalize credit separators so 'A / B', 'A & B', 'A, B' all compare equal.
+    Also strips extra whitespace. Applied before writing and before conflict detection."""
+    if not s or pd.isna(s):
+        return s
+    s = str(s).strip()
+    # Normalize all separators to ' & '
+    s = re.sub(r'\s*/\s*', ' & ', s)
+    s = re.sub(r'\s*,\s*', ' & ', s)
+    s = re.sub(r'\s+and\s+', ' & ', s, flags=re.IGNORECASE)
+    # Collapse multiple spaces
+    s = re.sub(r'\s{2,}', ' ', s)
+    return s
+
 # ── YEAR-GAP COLLISION CHECK ──────────────────────────────────────────────────
 def has_year_collision(df, title, volume):
     rows   = df[(df["Title"] == title) & (df["Volume"] == volume)]
@@ -475,22 +489,22 @@ def main():
                 not_found.append(issue_num)
                 print(f"  [NOT FOUND] #{issue_num} — not in CV volume")
 
-        # Apply fills
+        # Apply fills — normalize separators before writing
         filled_count = 0
         for issue_num, writer in writers_found.items():
             row_mask = mask & (df["Issue #"] == issue_num)
-            df.loc[row_mask, "Writer(s)"] = writer
+            df.loc[row_mask, "Writer(s)"] = normalize_credits(writer)
             filled_count += int(row_mask.sum())
 
         for issue_num, artist in artists_found.items():
             row_mask = mask & (df["Issue #"] == issue_num)
             if "Artist(s)" in df.columns:
-                df.loc[row_mask & df["Artist(s)"].apply(is_blank), "Artist(s)"] = artist
+                df.loc[row_mask & df["Artist(s)"].apply(is_blank), "Artist(s)"] = normalize_credits(artist)
 
         for issue_num, ca in cover_artists_found.items():
             row_mask = mask & (df["Issue #"] == issue_num)
             if "Cover_Artist" in df.columns:
-                df.loc[row_mask & df["Cover_Artist"].apply(is_blank), "Cover_Artist"] = ca
+                df.loc[row_mask & df["Cover_Artist"].apply(is_blank), "Cover_Artist"] = normalize_credits(ca)
 
         if not_found:
             log_review(title, volume, f"{len(not_found)} issues not found on CV: {sorted(not_found)[:10]}")
