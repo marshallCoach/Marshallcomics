@@ -40,7 +40,15 @@ API_KEY   = os.environ.get("COMIC_VINE_API_KEY", "")
 CV_BASE   = "https://comicvine.gamespot.com/api"
 CV_DELAY  = 20.0   # Comic Vine free tier: 200 req/hr
 
-HEADERS = {"User-Agent": "BRB-Comics/1.0 (robertnmarshall@gmail.com)"}
+HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/124.0.0.0 Safari/537.36"
+    ),
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.5",
+}
 
 DC_PUBLISHERS     = {"dc comics", "dc", "vertigo", "wildstorm", "black label"}
 MARVEL_PUBLISHERS = {"marvel", "marvel comics", "marvel worldwide"}
@@ -237,7 +245,8 @@ def cv_search_volumes(title, publisher=None, use_cache=True):
         print(f"  CV search error: {e}")
         return [], False
 
-    results = []
+    # Sort CV results by start_year to assign sequential volume numbers
+    raw = []
     for item in data.get("results", []):
         name = item.get("name", "")
         if title.lower() not in name.lower():
@@ -247,7 +256,7 @@ def cv_search_volumes(title, publisher=None, use_cache=True):
             pub = item["publisher"].get("name", "")
         if publisher and publisher.lower() not in pub.lower():
             continue
-        results.append({
+        raw.append({
             "cv_id":         item.get("id"),
             "name":          name,
             "start_year":    item.get("start_year"),
@@ -256,6 +265,14 @@ def cv_search_volumes(title, publisher=None, use_cache=True):
             "volume_number": item.get("volume_number"),
             "source":        "comic_vine",
         })
+
+    # If CV didn't return volume_number, infer it from chronological order
+    raw.sort(key=lambda x: x.get("start_year") or "0")
+    for i, r in enumerate(raw):
+        if not r.get("volume_number"):
+            r["volume_number"] = i + 1
+
+    results = raw
 
     cache[cache_key] = results
     _save_cache(cache)
