@@ -54,7 +54,7 @@ def _latest_validated() -> str:
 
 
 # ── Box capacity table ────────────────────────────────────────────────────────
-BOX_CAPACITY_DEFAULT    = 175
+BOX_CAPACITY_DEFAULT    = 240
 BOX_CAPACITY_EXCEPTIONS = {15: 150, 23: 155, 40: 80, 44: 200, 72: 80}
 
 # Non-numeric Box # values that are deliberate status strings, not errors.
