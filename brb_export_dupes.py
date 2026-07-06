@@ -17,8 +17,6 @@ BOX_STATUS_ALLOWLIST = {
     "UNKNOWN — needs physical reassignment",
 }
 
-KEY = ["Title", "Issue #", "Volume"]
-
 def resolve(path):
     if path and os.path.exists(path):
         return os.path.abspath(path)
@@ -52,33 +50,46 @@ def main():
     # exclude status-box rows
     physical = df[~df["Box #"].apply(lambda v: str(v).strip() in BOX_STATUS_ALLOWLIST)].copy()
 
-    available_key = [c for c in KEY if c in df.columns]
-    same_box_key  = available_key + ["Box #"]
+    # Build composite keys matching the Mac validator exactly:
+    # R2: title+issue+year+box  (same-box exact dupes)
+    # R3: title+issue+year across different boxes, missing verify flag
+    t   = physical["Title"].str.lower().fillna("")
+    iss = physical["Issue #"].astype(str).str.strip()
+    yr  = physical["Year"].astype(str).str.strip()
+    box = physical["Box #"].astype(str).str.strip()
 
-    # Rule 2: same-box exact duplicates
-    same_box_dupes = physical[physical.duplicated(subset=same_box_key, keep=False)].copy()
-    same_box_dupes = same_box_dupes.sort_values(same_box_key)
+    k2 = t + "|" + iss + "|" + yr + "|" + box
+    k3 = t + "|" + iss + "|" + yr
+
+    # Rule 2: same-box exact duplicates (extra copies only, like validator)
+    same_box_mask = k2.duplicated(keep=False)
+    same_box_dupes = physical[same_box_mask].copy()
+    same_box_dupes["_key"] = k2[same_box_mask]
+    same_box_dupes = same_box_dupes.sort_values("_key")
 
     # Rule 3: cross-box dupes missing verify flag
-    has_flag_col = "⚠ Verify Duplicate" in df.columns
-    cross_box_dupes = physical[physical.duplicated(subset=available_key, keep=False)].copy()
-    # remove rows that are already same-box dupes (those are Rule 2)
-    cross_box_only = cross_box_dupes[~cross_box_dupes.duplicated(subset=same_box_key, keep=False)].copy()
-    if has_flag_col:
-        missing_flag = cross_box_only[
-            cross_box_only["⚠ Verify Duplicate"].apply(
-                lambda v: pd.isna(v) or str(v).strip() == ""
-            )
-        ].copy()
-    else:
-        missing_flag = cross_box_only.copy()
-    missing_flag = missing_flag.sort_values(available_key)
+    vd = df.get("⚠ Verify Duplicate")
+    dup_k3 = k3[k3.duplicated(keep=False)]
+    cross_candidates = physical[k3.isin(dup_k3)].copy()
+    cross_candidates["_k3"] = k3[k3.isin(dup_k3)]
+
+    missing_flag_rows = []
+    for k, g in cross_candidates.groupby("_k3"):
+        if g["Box #"].astype(str).str.strip().nunique() > 1:
+            if vd is not None:
+                unflagged = vd.loc[g.index].astype(str).str.strip().isin(["", "nan", "None"])
+                if unflagged.any():
+                    missing_flag_rows.append(g[unflagged])
+            else:
+                missing_flag_rows.append(g)
+
+    missing_flag = pd.concat(missing_flag_rows).sort_values(["Title", "Issue #"]) if missing_flag_rows else pd.DataFrame(columns=physical.columns)
 
     # export
     out1 = os.path.join(REPO_ROOT, "dupes_same_box.csv")
     out2 = os.path.join(REPO_ROOT, "dupes_cross_box.csv")
 
-    cols = same_box_key + [c for c in ["Publisher", "Year", "Writer(s)", "Condition", "Grade"] if c in df.columns]
+    cols = [c for c in ["Title", "Issue #", "Year", "Box #", "Volume", "Publisher", "Writer(s)", "Condition", "Grade"] if c in df.columns]
     same_box_dupes[cols].to_csv(out1, index=True)
     missing_flag[[c for c in cols if c in missing_flag.columns]].to_csv(out2, index=True)
 
