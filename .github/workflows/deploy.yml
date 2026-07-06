@@ -2,40 +2,52 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - claude/comic-catalog-recreation-czco7k
-      - main
+    branches: [claude/upbeat-babbage-2f5gr2]
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
       - uses: pnpm/action-setup@v4
         with:
-          version: 9
+          version: 10
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: pnpm
 
       - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Build
-        working-directory: artifacts/comics-inventory
+        run: pnpm --filter @workspace/comics-inventory run build
         env:
           BASE_PATH: /Marshallcomics/
-        run: pnpm build
+          NODE_ENV: production
 
-      - name: Deploy to gh-pages branch
-        uses: peaceiris/actions-gh-pages@v4
+      - uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: artifacts/comics-inventory/dist/public
+          path: artifacts/comics-inventory/dist/public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
