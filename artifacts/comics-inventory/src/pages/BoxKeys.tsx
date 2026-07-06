@@ -84,6 +84,15 @@ const LIST_COLS: ColDef<Key>[] = [
     },
   },
   {
+    key: "ebay_avg", label: "eBay Avg", defaultWidth: 90,
+    sort: (a, b) => (a.eBay_Avg ?? -1) - (b.eBay_Avg ?? -1),
+    cell: r => {
+      const v = r.eBay_Avg;
+      if (v == null) return <span className="lt-sub" style={{ color:"var(--muted)" }}>—</span>;
+      return <span className="lt-val" style={{ color:"#16a34a", fontVariantNumeric:"tabular-nums" }}>${v.toFixed(0)}</span>;
+    },
+  },
+  {
     key: "bid", label: "Start Bid", defaultWidth: 80,
     sort: (a, b) => parseVal(a.Start_Bid) - parseVal(b.Start_Bid),
     cell: r => {
