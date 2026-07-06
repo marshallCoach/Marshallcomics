@@ -40,7 +40,15 @@ API_KEY   = os.environ.get("COMIC_VINE_API_KEY", "")
 CV_BASE   = "https://comicvine.gamespot.com/api"
 CV_DELAY  = 20.0   # Comic Vine free tier: 200 req/hr
 
-HEADERS = {"User-Agent": "BRB-Comics/1.0 (robertnmarshall@gmail.com)"}
+HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/124.0.0.0 Safari/537.36"
+    ),
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.5",
+}
 
 DC_PUBLISHERS     = {"dc comics", "dc", "vertigo", "wildstorm", "black label"}
 MARVEL_PUBLISHERS = {"marvel", "marvel comics", "marvel worldwide"}
@@ -237,7 +245,8 @@ def cv_search_volumes(title, publisher=None, use_cache=True):
         print(f"  CV search error: {e}")
         return [], False
 
-    results = []
+    # Sort CV results by start_year to assign sequential volume numbers
+    raw = []
     for item in data.get("results", []):
         name = item.get("name", "")
         if title.lower() not in name.lower():
@@ -247,7 +256,7 @@ def cv_search_volumes(title, publisher=None, use_cache=True):
             pub = item["publisher"].get("name", "")
         if publisher and publisher.lower() not in pub.lower():
             continue
-        results.append({
+        raw.append({
             "cv_id":         item.get("id"),
             "name":          name,
             "start_year":    item.get("start_year"),
@@ -256,6 +265,14 @@ def cv_search_volumes(title, publisher=None, use_cache=True):
             "volume_number": item.get("volume_number"),
             "source":        "comic_vine",
         })
+
+    # If CV didn't return volume_number, infer it from chronological order
+    raw.sort(key=lambda x: x.get("start_year") or "0")
+    for i, r in enumerate(raw):
+        if not r.get("volume_number"):
+            r["volume_number"] = i + 1
+
+    results = raw
 
     cache[cache_key] = results
     _save_cache(cache)
@@ -358,6 +375,35 @@ def print_merged(title, merged):
 
 # ── Inventory cross-reference ─────────────────────────────────────────────────
 
+def _extract_year(s):
+    """
+    Extract a usable integer year from a year field.
+    Handles: "1997", "1997–1998", "1997-1998", "2023-2024".
+    Returns (int year, bool is_range).
+    """
+    s = str(s).strip()
+    m = re.match(r"(\d{4})[–\-](\d{4})", s)
+    if m:
+        return int(m.group(1)), True
+    if re.match(r"^\d{4}$", s):
+        return int(s), False
+    return None, False
+
+
+def _year_within_run(year, start_year, issue_count):
+    """
+    Estimate whether a given year falls within a volume's publishing run.
+    Assumes ~12 issues/year average.
+    """
+    if not start_year or not issue_count:
+        return False
+    try:
+        end_year = int(start_year) + max(1, int(issue_count) // 12)
+        return int(start_year) <= year <= end_year + 1  # +1 buffer
+    except (TypeError, ValueError):
+        return False
+
+
 def check_title_against_all(title, df_rows, merged):
     """
     Cross-reference inventory rows against merged CV+fandom volume list.
@@ -365,15 +411,32 @@ def check_title_against_all(title, df_rows, merged):
     """
     mismatches = []
 
-    # Build lookup: start_year (int) → merged entry
-    year_map = {}
+    # Build volume list sorted by start_year for range matching
+    volumes = []
     for e in merged:
         try:
             yr = int(e.get("start_year") or 0)
             if yr:
-                year_map[yr] = e
+                volumes.append((yr, e))
         except (TypeError, ValueError):
             pass
+    volumes.sort(key=lambda x: x[0])
+
+    def find_best_volume(year_int):
+        """Find the best matching volume for a given year.
+        Prefers volumes whose run contains the year; falls back to closest start."""
+        # First: check if year falls within any volume's run
+        for yr, entry in volumes:
+            if _year_within_run(year_int, yr, entry.get("issue_count")):
+                return entry, 0  # within-run match, delta=0
+        # Fallback: closest start year
+        best, best_delta = None, 999
+        for yr, entry in volumes:
+            delta = abs(yr - year_int)
+            if delta < best_delta:
+                best_delta = delta
+                best = entry
+        return best, best_delta
 
     for _, row in df_rows.iterrows():
         inv_year = str(row.get("Year", "")).strip()
@@ -381,32 +444,25 @@ def check_title_against_all(title, df_rows, merged):
         issue    = row.get("Issue #", "")
         box      = row.get("Box #", "")
 
-        if is_blank(inv_year) or not inv_year.strip().isdigit():
+        year_int, is_range = _extract_year(inv_year)
+
+        if year_int is None:
             mismatches.append({
                 "issue": issue, "box": box,
                 "inv_year": inv_year, "inv_vol": inv_vol,
-                "problem": "non-numeric year in inventory",
-                "match": None,
+                "problem": "unparseable year in inventory",
+                "match": None, "extracted_year": None, "is_range": False,
             })
             continue
 
-        year_int = int(inv_year)
-
-        # Find closest merged entry
-        best = None
-        best_delta = 999
-        for yr, entry in year_map.items():
-            delta = abs(yr - year_int)
-            if delta < best_delta:
-                best_delta = delta
-                best = entry
+        best, best_delta = find_best_volume(year_int)
 
         if best is None:
             mismatches.append({
                 "issue": issue, "box": box,
                 "inv_year": inv_year, "inv_vol": inv_vol,
                 "problem": "no volume data found in any source",
-                "match": None,
+                "match": None, "extracted_year": year_int, "is_range": is_range,
             })
         elif best_delta > 3:
             sources = []
@@ -414,24 +470,28 @@ def check_title_against_all(title, df_rows, merged):
                 sources.append(f"CV:{best['start_year']}")
             if best.get("fandom"):
                 sources.append(f"Fandom:{best['fandom'].get('start_year')}")
+            year_desc = f"{year_int} (from range '{inv_year}')" if is_range else str(inv_year)
+            problem = (f"year {year_desc} doesn't match any known volume "
+                       f"(closest: {best.get('start_year')} [{', '.join(sources)}])")
             mismatches.append({
                 "issue": issue, "box": box,
                 "inv_year": inv_year, "inv_vol": inv_vol,
-                "problem": (f"year {inv_year} doesn't match any known volume "
-                            f"(closest: {best.get('start_year')} [{', '.join(sources)}])"),
+                "problem": problem,
                 "match": best,
+                "extracted_year": year_int,
+                "is_range": is_range,
             })
 
     return mismatches
 
 
-def cmd_check_inventory(title, publisher, df, merged):
+def cmd_check_inventory(title, publisher, df, merged, fix=False, out_path=None):
     mask = df["Title"].str.strip().str.lower() == title.lower()
     rows = df[mask]
 
     if rows.empty:
         print(f"\nNo rows found in inventory for '{title}'.")
-        return
+        return df
 
     print(f"\nInventory rows for '{title}': {len(rows)}")
     print(f"  {'Issue':>6}  {'Box':>5}  {'Inv Year':>8}  {'Vol':>4}  Status")
@@ -449,20 +509,107 @@ def cmd_check_inventory(title, publisher, df, merged):
         flag  = "⚠  MISMATCH" if key in mismatch_keys else "✓"
         print(f"  #{str(issue):>5}  {str(box):>5}  {year:>8}  {vol:>4}  {flag}")
 
-    if mismatches:
-        print(f"\nMismatches ({len(mismatches)}):")
-        for m in mismatches:
-            print(f"  Issue #{m['issue']} Box {m['box']}: {m['problem']}")
-            if m["match"]:
-                e = m["match"]
-                fdom = e.get("fandom")
-                print(f"    → CV:     {e.get('name','')} start={e.get('start_year')} "
-                      f"issues={e.get('issue_count')} vol={e.get('volume_number')}")
-                if fdom:
-                    print(f"    → Fandom: start={fdom.get('start_year')} "
-                          f"issues={fdom.get('issue_count')} {fdom.get('url','')}")
-    else:
+    if not mismatches:
         print("\n  All rows match known volumes within 3-year tolerance. ✓")
+        return df
+
+    print(f"\nMismatches ({len(mismatches)}):")
+    fixable = []
+    for m in mismatches:
+        print(f"  Issue #{m['issue']} Box {m['box']}: {m['problem']}")
+        if m["match"]:
+            e = m["match"]
+            fdom = e.get("fandom")
+            correct_year = e.get("start_year")
+            correct_vol  = e.get("volume_number")
+            print(f"    → CV:     {e.get('name','')} start={correct_year} "
+                  f"issues={e.get('issue_count')} vol={correct_vol}")
+            if fdom:
+                print(f"    → Fandom: start={fdom.get('start_year')} "
+                      f"issues={fdom.get('issue_count')} {fdom.get('url','')}")
+            # Determine corrected year:
+            # - range year → use extracted start year (e.g. "1997–1998" → "1997")
+            # - year-out-of-range → use CV start year only if within-run confirmed
+            fdom_year = fdom.get("start_year") if fdom else None
+            sources_agree = (fdom_year is None) or (str(fdom_year) == str(correct_year))
+            extracted = m.get("extracted_year")
+            is_range  = m.get("is_range", False)
+            if is_range and extracted:
+                # Use the extracted start year from the range — don't overwrite with vol start
+                new_year = str(extracted)
+                fixable.append({
+                    "issue": m["issue"], "box": m["box"],
+                    "old_year": m["inv_year"], "new_year": new_year,
+                    "old_vol":  m["inv_vol"],  "new_vol":  correct_vol,
+                    "reason": f"range → start year {new_year}",
+                })
+            elif correct_year and sources_agree:
+                fixable.append({
+                    "issue": m["issue"], "box": m["box"],
+                    "old_year": m["inv_year"], "new_year": str(correct_year),
+                    "old_vol":  m["inv_vol"],  "new_vol":  correct_vol,
+                    "reason": f"CV/fandom agree: {correct_year}",
+                })
+
+    if not fix:
+        if fixable:
+            print(f"\n{len(fixable)} rows have a clear correction available.")
+            print(f"  Re-run with --fix to apply. Always review first.")
+        return df
+
+    # ── FIX MODE ─────────────────────────────────────────────────────────────
+    if not fixable:
+        print("\n  No rows with unambiguous corrections — nothing written.")
+        return df
+
+    print(f"\n── FIX MODE ── {len(fixable)} rows to correct:")
+    for fx in fixable:
+        print(f"  Issue #{fx['issue']} Box {fx['box']}:  "
+              f"Year {fx['old_year']} → {fx['new_year']}  |  "
+              f"Vol {fx['old_vol']} → {fx['new_vol']}  ({fx.get('reason','')})")
+
+    answer = input(f"\nApply {len(fixable)} corrections? [y/N] ").strip().lower()
+    if answer != "y":
+        print("  Aborted — no changes written.")
+        return df
+
+    # Apply corrections to df
+    fixed = 0
+    for fx in fixable:
+        row_mask = (
+            (df["Title"].str.strip().str.lower() == title.lower()) &
+            (df["Issue #"].astype(str) == str(fx["issue"])) &
+            (df["Box #"].astype(str) == str(fx["box"]))
+        )
+        if row_mask.any():
+            df.loc[row_mask, "Year"] = fx["new_year"]
+            if fx["new_vol"] and "Volume" in df.columns:
+                df.loc[row_mask, "Volume"] = fx["new_vol"]
+            fixed += int(row_mask.sum())
+
+    if not out_path:
+        print("  ERROR: no output path — pass --file to write back.")
+        return df
+
+    # Write back — preserve all other sheets
+    xl = pd.ExcelFile(out_path)
+    sheet_name = None
+    for name in xl.sheet_names:
+        tmp = xl.parse(name)
+        if "Title" in tmp.columns and "Issue #" in tmp.columns:
+            sheet_name = name
+            break
+    if not sheet_name:
+        print("  ERROR: could not identify inventory sheet.")
+        return df
+
+    with pd.ExcelWriter(out_path, engine="openpyxl", mode="a",
+                        if_sheet_exists="replace") as writer:
+        df.to_excel(writer, sheet_name=sheet_name, index=False)
+
+    print(f"\n  ✓ Fixed {fixed} rows — written back to {os.path.basename(out_path)}")
+    print(f"  Run brb_validate.py to confirm no regressions.")
+    return df
 
 
 def cmd_check_all_years(df):
@@ -505,6 +652,7 @@ def main():
     parser.add_argument("--volume",           type=int, default=None, help="Show details for a specific volume number")
     parser.add_argument("--check-inventory",  action="store_true",   help="Cross-reference inventory rows")
     parser.add_argument("--check-all-years",  action="store_true",   help="List all titles with bad years in inventory")
+    parser.add_argument("--fix",              action="store_true",   help="Apply year/volume corrections (requires --check-inventory; prompts before writing)")
     parser.add_argument("--no-cache",         action="store_true",   help="Bypass cache, hit APIs fresh")
     parser.add_argument("--file",             default=None,          help="xlsx path override")
     args = parser.parse_args()
@@ -578,9 +726,13 @@ def main():
         if not path:
             print(f"ERROR: No xlsx found in {ASSETS_DIR}")
             sys.exit(1)
+        if args.fix and not path:
+            print("ERROR: --fix requires --file to know where to write.")
+            sys.exit(1)
         df, sheet = _load_df(path)
         print(f"\nLoaded '{sheet}' — {len(df):,} rows")
-        cmd_check_inventory(title, publisher, df, merged)
+        cmd_check_inventory(title, publisher, df, merged,
+                            fix=args.fix, out_path=path if args.fix else None)
 
 
 if __name__ == "__main__":
