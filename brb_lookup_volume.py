@@ -375,6 +375,35 @@ def print_merged(title, merged):
 
 # ── Inventory cross-reference ─────────────────────────────────────────────────
 
+def _extract_year(s):
+    """
+    Extract a usable integer year from a year field.
+    Handles: "1997", "1997–1998", "1997-1998", "2023-2024".
+    Returns (int year, bool is_range).
+    """
+    s = str(s).strip()
+    m = re.match(r"(\d{4})[–\-](\d{4})", s)
+    if m:
+        return int(m.group(1)), True
+    if re.match(r"^\d{4}$", s):
+        return int(s), False
+    return None, False
+
+
+def _year_within_run(year, start_year, issue_count):
+    """
+    Estimate whether a given year falls within a volume's publishing run.
+    Assumes ~12 issues/year average.
+    """
+    if not start_year or not issue_count:
+        return False
+    try:
+        end_year = int(start_year) + max(1, int(issue_count) // 12)
+        return int(start_year) <= year <= end_year + 1  # +1 buffer
+    except (TypeError, ValueError):
+        return False
+
+
 def check_title_against_all(title, df_rows, merged):
     """
     Cross-reference inventory rows against merged CV+fandom volume list.
@@ -382,15 +411,32 @@ def check_title_against_all(title, df_rows, merged):
     """
     mismatches = []
 
-    # Build lookup: start_year (int) → merged entry
-    year_map = {}
+    # Build volume list sorted by start_year for range matching
+    volumes = []
     for e in merged:
         try:
             yr = int(e.get("start_year") or 0)
             if yr:
-                year_map[yr] = e
+                volumes.append((yr, e))
         except (TypeError, ValueError):
             pass
+    volumes.sort(key=lambda x: x[0])
+
+    def find_best_volume(year_int):
+        """Find the best matching volume for a given year.
+        Prefers volumes whose run contains the year; falls back to closest start."""
+        # First: check if year falls within any volume's run
+        for yr, entry in volumes:
+            if _year_within_run(year_int, yr, entry.get("issue_count")):
+                return entry, 0  # within-run match, delta=0
+        # Fallback: closest start year
+        best, best_delta = None, 999
+        for yr, entry in volumes:
+            delta = abs(yr - year_int)
+            if delta < best_delta:
+                best_delta = delta
+                best = entry
+        return best, best_delta
 
     for _, row in df_rows.iterrows():
         inv_year = str(row.get("Year", "")).strip()
@@ -398,45 +444,43 @@ def check_title_against_all(title, df_rows, merged):
         issue    = row.get("Issue #", "")
         box      = row.get("Box #", "")
 
-        if is_blank(inv_year) or not inv_year.strip().isdigit():
+        year_int, is_range = _extract_year(inv_year)
+
+        if year_int is None:
             mismatches.append({
                 "issue": issue, "box": box,
                 "inv_year": inv_year, "inv_vol": inv_vol,
-                "problem": "non-numeric year in inventory",
-                "match": None,
+                "problem": "unparseable year in inventory",
+                "match": None, "extracted_year": None, "is_range": False,
             })
             continue
 
-        year_int = int(inv_year)
-
-        # Find closest merged entry
-        best = None
-        best_delta = 999
-        for yr, entry in year_map.items():
-            delta = abs(yr - year_int)
-            if delta < best_delta:
-                best_delta = delta
-                best = entry
+        best, best_delta = find_best_volume(year_int)
 
         if best is None:
             mismatches.append({
                 "issue": issue, "box": box,
                 "inv_year": inv_year, "inv_vol": inv_vol,
                 "problem": "no volume data found in any source",
-                "match": None,
+                "match": None, "extracted_year": year_int, "is_range": is_range,
             })
-        elif best_delta > 3:
+        elif is_range or best_delta > 3:
             sources = []
             if best.get("cv_id"):
                 sources.append(f"CV:{best['start_year']}")
             if best.get("fandom"):
                 sources.append(f"Fandom:{best['fandom'].get('start_year')}")
+            problem = (f"range year '{inv_year}' → extracted {year_int}"
+                       if is_range else
+                       f"year {inv_year} doesn't match any known volume "
+                       f"(closest: {best.get('start_year')} [{', '.join(sources)}])")
             mismatches.append({
                 "issue": issue, "box": box,
                 "inv_year": inv_year, "inv_vol": inv_vol,
-                "problem": (f"year {inv_year} doesn't match any known volume "
-                            f"(closest: {best.get('start_year')} [{', '.join(sources)}])"),
+                "problem": problem,
                 "match": best,
+                "extracted_year": year_int,
+                "is_range": is_range,
             })
 
     return mismatches
@@ -484,14 +528,28 @@ def cmd_check_inventory(title, publisher, df, merged, fix=False, out_path=None):
             if fdom:
                 print(f"    → Fandom: start={fdom.get('start_year')} "
                       f"issues={fdom.get('issue_count')} {fdom.get('url','')}")
-            # Only fixable if CV and fandom agree (or fandom absent) and year is clear
+            # Determine corrected year:
+            # - range year → use extracted start year (e.g. "1997–1998" → "1997")
+            # - year-out-of-range → use CV start year only if within-run confirmed
             fdom_year = fdom.get("start_year") if fdom else None
             sources_agree = (fdom_year is None) or (str(fdom_year) == str(correct_year))
-            if correct_year and sources_agree:
+            extracted = m.get("extracted_year")
+            is_range  = m.get("is_range", False)
+            if is_range and extracted:
+                # Use the extracted start year from the range — don't overwrite with vol start
+                new_year = str(extracted)
+                fixable.append({
+                    "issue": m["issue"], "box": m["box"],
+                    "old_year": m["inv_year"], "new_year": new_year,
+                    "old_vol":  m["inv_vol"],  "new_vol":  correct_vol,
+                    "reason": f"range → start year {new_year}",
+                })
+            elif correct_year and sources_agree:
                 fixable.append({
                     "issue": m["issue"], "box": m["box"],
                     "old_year": m["inv_year"], "new_year": str(correct_year),
                     "old_vol":  m["inv_vol"],  "new_vol":  correct_vol,
+                    "reason": f"CV/fandom agree: {correct_year}",
                 })
 
     if not fix:
@@ -509,7 +567,7 @@ def cmd_check_inventory(title, publisher, df, merged, fix=False, out_path=None):
     for fx in fixable:
         print(f"  Issue #{fx['issue']} Box {fx['box']}:  "
               f"Year {fx['old_year']} → {fx['new_year']}  |  "
-              f"Vol {fx['old_vol']} → {fx['new_vol']}")
+              f"Vol {fx['old_vol']} → {fx['new_vol']}  ({fx.get('reason','')})")
 
     answer = input(f"\nApply {len(fixable)} corrections? [y/N] ").strip().lower()
     if answer != "y":
