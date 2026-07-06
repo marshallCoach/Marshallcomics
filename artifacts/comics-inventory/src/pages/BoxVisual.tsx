@@ -225,11 +225,100 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                         >
                           <div className="box-tile-count">{b.Comics}</div>
                           <div className="box-tile-num">{b.Num.replace("BOX ", "Box ")}</div>
-                          {Number(b.Keys)   > 0 && <div className="box-tile-keys">{b.Keys} K</div>}
+                          {Number(b.Keys)   > 0 && <div className="box-tile-keys">{b.Keys} Keys</div>}
                           {Number(b.Signed) > 0 && <div className="box-tile-sgn">{b.Signed} S</div>}
                         </div>
                       );
                     })}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        );
+      })()}
+
+      {/* Ignored / status-box comics — AT CGC, UNKNOWN, etc. */}
+      {(() => {
+        const STATUS_LABELS: Record<string, { label: string; color: string; bg: string; icon: string }> = {
+          "AT CGC":                           { label: "AT CGC",                            color: "#7c3aed", bg: "#f5f3ff", icon: "🏛" },
+          "AT MAGIC PRESSING → CGC":          { label: "AT MAGIC PRESSING → CGC",           color: "#7c3aed", bg: "#f5f3ff", icon: "🔧" },
+          "AT CGC — Roy Thomas SS":           { label: "AT CGC — Roy Thomas SS",            color: "#7c3aed", bg: "#f5f3ff", icon: "✍️" },
+          "UNKNOWN — needs physical reassignment": { label: "UNKNOWN", color: "#d97706", bg: "#fffbf0", icon: "❓" },
+        };
+
+        const statusComics = comics.filter(c => {
+          const b = String(c.Box || "").trim();
+          return isNaN(Number(b)) && b !== "";
+        });
+
+        if (statusComics.length === 0) return null;
+
+        const byStatus: Record<string, typeof comics> = {};
+        for (const c of statusComics) {
+          const key = String(c.Box || "").trim();
+          if (!byStatus[key]) byStatus[key] = [];
+          byStatus[key].push(c);
+        }
+
+        return (
+          <div style={{ marginTop: 32, marginBottom: 24 }}>
+            <div style={{
+              display: "flex", alignItems: "baseline", gap: 10, marginBottom: 12,
+              borderBottom: "2px solid #e0e0e060", paddingBottom: 6,
+            }}>
+              <span style={{
+                fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem",
+                letterSpacing: "3px", color: "var(--muted)",
+              }}>NOT IN COLLECTION</span>
+              <span style={{ fontSize: "1.1rem", color: "var(--muted2)", fontFamily: "'Crimson Pro',serif" }}>
+                Comics currently at CGC, pressing, or unassigned
+              </span>
+              <span style={{
+                marginLeft: "auto", fontFamily: "'Bebas Neue',sans-serif",
+                fontSize: "1.1rem", letterSpacing: "1.5px", color: "var(--muted)",
+              }}>
+                {statusComics.length} books
+              </span>
+            </div>
+            {Object.entries(byStatus).map(([status, group]) => {
+              const meta = STATUS_LABELS[status] ?? { label: status, color: "#888", bg: "#f8f8f8", icon: "📦" };
+              const keyCount = group.filter(c => (c.Key || "").toUpperCase() === "YES").length;
+              return (
+                <div key={status} style={{ marginBottom: 16 }}>
+                  <div style={{
+                    display: "flex", alignItems: "center", gap: 8, marginBottom: 8,
+                    padding: "8px 12px", borderRadius: 8,
+                    background: meta.bg, border: `1.5px solid ${meta.color}33`,
+                  }}>
+                    <span style={{ fontSize: "1.1rem" }}>{meta.icon}</span>
+                    <span style={{
+                      fontFamily: "'Bebas Neue',sans-serif", fontSize: "1rem",
+                      letterSpacing: "2px", color: meta.color,
+                    }}>{meta.label}</span>
+                    <span style={{ fontSize: "0.85rem", color: "var(--muted2)", marginLeft: 4 }}>
+                      {group.length} book{group.length !== 1 ? "s" : ""}
+                      {keyCount > 0 && ` · ${keyCount} Keys`}
+                    </span>
+                  </div>
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: 8, paddingLeft: 4 }}>
+                    {group.map((c, i) => (
+                      <div key={i} style={{
+                        padding: "4px 10px", borderRadius: 6,
+                        background: "var(--card)", border: "1px solid var(--border)",
+                        fontSize: "0.8rem", color: "var(--text)",
+                        display: "flex", gap: 6, alignItems: "center",
+                      }}>
+                        <span style={{ fontWeight: 600 }}>{c.Title}</span>
+                        <span style={{ color: "var(--muted)" }}>#{c.Issue}</span>
+                        {(c.Key || "").toUpperCase() === "YES" && (
+                          <span style={{
+                            fontSize: "0.7rem", background: meta.color, color: "#fff",
+                            borderRadius: 3, padding: "1px 5px", fontWeight: 700,
+                          }}>KEY</span>
+                        )}
+                      </div>
+                    ))}
                   </div>
                 </div>
               );
