@@ -82,13 +82,20 @@ const comics = [
   ...(cats.box3    || []),
   ...(cats.ccBoxes || []),
 ];
+// Volume-aware cache key: Title|||Issue|||Volume (Volume defaults to "1" when blank)
+function coverKey(c) {
+  const vol = String(c.Volume || "1").trim();
+  return `${c.Title}|||${c.Issue}|||${vol}`;
+}
+
 const queue = comics
   .filter(c => !onlyKeys || (c.Key || "").toUpperCase() === "YES")
   .filter(c => {
-    const key = `${c.Title}|||${c.Issue}`;
-    if (!(key in cache)) return true;          // never fetched → include
-    if (retryNulls && cache[key] === null) return true;  // retry flag → re-queue nulls
-    return false;                               // already has a result → skip
+    const key = coverKey(c);
+    const legacyKey = `${c.Title}|||${c.Issue}`;
+    if (!(key in cache) && !(legacyKey in cache)) return true; // never fetched → include
+    if (retryNulls && (cache[key] === null || cache[legacyKey] === null)) return true;
+    return false;
   })
   .slice(startAt, startAt + limit);
 
@@ -105,7 +112,7 @@ if (queue.length === 0) {
 let fetched = 0, found = 0, missed = 0, errors = 0;
 
 for (const c of queue) {
-  const cacheKey = `${c.Title}|||${c.Issue}`;
+  const cacheKey = coverKey(c);
   const params   = new URLSearchParams({
     title:     c.Title,
     issue:     c.Issue     || "",
