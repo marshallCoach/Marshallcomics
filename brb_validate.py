@@ -162,24 +162,70 @@ def check_box_capacity(df):
 
 
 def check_duplicate_rows(df):
-    section("CHECK 6 — Duplicate rows (same Title + Issue # + Box # + Volume)")
-    key = ["Title", "Issue #", "Box #", "Volume"]
-    available = [c for c in key if c in df.columns]
-    # Exclude status-box rows — UNKNOWN/CGC rows share a Box # value by design, not duplication
-    physical = df[~df["Box #"].apply(lambda v: str(v).strip() in BOX_STATUS_ALLOWLIST)]
+    # Key matches Mac validator Rule 2: Title + Issue # + Year + Box #  (no Volume)
+    section("CHECK 6 — Same-box duplicates (Title + Issue # + Year + Box #)")
+    physical = df[~df["Box #"].apply(lambda v: str(v).strip() in BOX_STATUS_ALLOWLIST)].copy()
     excluded = len(df) - len(physical)
     if excluded:
         info(f"{excluded} status-box rows (UNKNOWN/CGC) excluded from duplicate check")
-    dupes = physical[physical.duplicated(subset=available, keep=False)]
+
+    t   = physical["Title"].str.lower().fillna("")
+    iss = physical["Issue #"].astype(str).str.strip()
+    yr  = physical["Year"].astype(str).str.strip()
+    box = physical["Box #"].astype(str).str.strip()
+    k2  = t + "|" + iss + "|" + yr + "|" + box
+
+    dupes = physical[k2.duplicated(keep=False)]
     if len(dupes):
-        fail(f"{len(dupes)} rows are duplicates by {' + '.join(available)}")
-        sample = dupes.groupby(available).size().reset_index(name="count")
+        fail(f"{len(dupes)} rows are same-box duplicates (Title+Issue#+Year+Box#)")
+        sample = dupes.assign(_k=k2[k2.duplicated(keep=False)]).groupby("_k").size().reset_index(name="count")
         for _, row in sample.head(10).iterrows():
-            info(f"  '{row['Title']}' #{row['Issue #']} Box#{row['Box #']} Vol{row.get('Volume','?')} — {row['count']}x")
+            parts = row["_k"].split("|")
+            info(f"  '{parts[0]}' #{parts[1]} {parts[2]} Box#{parts[3]} — {row['count']}x")
         if len(sample) > 10:
             info(f"  ... and {len(sample)-10} more groups")
         return False
-    ok(f"No duplicate {' + '.join(available)} combinations")
+    ok("No same-box duplicate Title+Issue#+Year+Box# combinations")
+    return True
+
+
+def check_cross_box_duplicates(df):
+    # Matches Mac validator Rule 3: same Title+Issue#+Year across different boxes,
+    # not flagged with '⚠ Verify Duplicate'
+    section("CHECK 6b — Cross-box duplicates missing '⚠ Verify Duplicate' flag")
+    physical = df[~df["Box #"].apply(lambda v: str(v).strip() in BOX_STATUS_ALLOWLIST)].copy()
+
+    t   = physical["Title"].str.lower().fillna("")
+    iss = physical["Issue #"].astype(str).str.strip()
+    yr  = physical["Year"].astype(str).str.strip()
+    box = physical["Box #"].astype(str).str.strip()
+    k3  = t + "|" + iss + "|" + yr
+
+    dup_k3 = k3[k3.duplicated(keep=False)]
+    cross_candidates = physical[k3.isin(dup_k3)].copy()
+    cross_candidates["_k3"] = k3[k3.isin(dup_k3)]
+
+    vd = df.get("⚠ Verify Duplicate")
+    missing_rows = []
+    for k, g in cross_candidates.groupby("_k3"):
+        if g["Box #"].astype(str).str.strip().nunique() > 1:
+            if vd is not None:
+                unflagged = vd.loc[g.index].astype(str).str.strip().isin(["", "nan", "None"])
+                if unflagged.any():
+                    missing_rows.append(g[unflagged])
+            else:
+                missing_rows.append(g)
+
+    if missing_rows:
+        import pandas as _pd
+        bad = _pd.concat(missing_rows)
+        fail(f"{len(bad)} rows appear in multiple boxes without '⚠ Verify Duplicate' flag")
+        for _, row in bad.head(10).iterrows():
+            info(f"  '{row.get('Title','?')}' #{row.get('Issue #','?')} {row.get('Year','?')} Box#{row.get('Box #','?')}")
+        if len(bad) > 10:
+            info(f"  ... and {len(bad)-10} more")
+        return False
+    ok("All cross-box duplicates are flagged with '⚠ Verify Duplicate'")
     return True
 
 
@@ -331,6 +377,7 @@ def main():
     results.append(check_blank_box_numbers(df))
     results.append(check_box_capacity(df))
     results.append(check_duplicate_rows(df))
+    results.append(check_cross_box_duplicates(df))
     results.append(check_year_format(df))
     results.append(check_writer_fill_rate(df))
     results.append(check_box_number_range(df))
