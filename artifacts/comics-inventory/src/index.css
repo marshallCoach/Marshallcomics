@@ -117,6 +117,7 @@ body {
 .social-link.ig { color: #e1306c; border: 1px solid #e1306c30; background: #e1306c08; }
 .social-link.wn { color: #7c3aed; border: 1px solid #7c3aed30; background: #7c3aed08; }
 .social-link.eb { color: #c8102e; border: 1px solid #c8102e30; background: #c8102e08; }
+.social-link.gh { color: #6e7681; border: 1px solid #6e768130; background: #6e768108; }
 
 .search-btn {
   display: flex; align-items: center; gap: 6px;
