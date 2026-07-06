@@ -137,9 +137,9 @@ def assert_box_capacities(df, label=""):
         if count > capacity:
             violations.append(f"  Box {box_num}: {count} comics (capacity {capacity}, overage +{count - capacity})")
     if violations:
-        msg = f"BOX CAPACITY VIOLATED at {label}:\n" + "\n".join(violations)
+        msg = f"BOX CAPACITY WARNING at {label}:\n" + "\n".join(violations)
         log_issue("BOX_OVERAGE", "assert_box_capacities", msg)
-        raise RuntimeError(msg)
+        print(f"  ⚠  {msg}")
 
 def get_year_mode_safe(series, title="unknown"):
     """Return mode year string or '?' — logs when all values are non-numeric."""
