@@ -25,7 +25,8 @@ const memCache = new Map<string, string | null>();
 const inFlight  = new Map<string, Promise<string | null>>();
 
 function cacheKey(c: ComicLike) {
-  return `${c.Title}|||${c.Issue}`;
+  const vol = String((c as { Volume?: string | number }).Volume || "1").trim();
+  return `${c.Title}|||${c.Issue}|||${vol}`;
 }
 
 /** Clears the client-side memory cache for a specific comic so it re-fetches. */
@@ -41,8 +42,13 @@ async function fetchCover(c: ComicLike): Promise<string | null> {
   const p = (async () => {
     try {
       await loadCovers();
-      // Try with # prefix first, then without
-      const entry = coversMap?.[key] ?? coversMap?.[`${c.Title}|||#${String(c.Issue).replace(/^#/, "")}`] ?? null;
+      const issueStr = String(c.Issue);
+      // Lookup priority: volume-aware key → legacy key → legacy with # prefix
+      const entry =
+        coversMap?.[key] ??
+        coversMap?.[`${c.Title}|||${issueStr}`] ??
+        coversMap?.[`${c.Title}|||#${issueStr.replace(/^#/, "")}`] ??
+        null;
       const url = entry?.url ?? null;
       memCache.set(key, url);
       return url;
