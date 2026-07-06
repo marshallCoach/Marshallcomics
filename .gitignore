@@ -63,3 +63,20 @@ ebay_err.txt
 ebay_log.txt
 overnight_err.txt
 overnight_log.txt
+
+# Mac-local operational files — not tracked in git
+BRB\ Ops\ Reference*.html
+BRB\ Ops\ Reference*_files/
+BRB_Action_Detail_Plan.txt
+BRB_Box_Map.html
+BRB_Juneteenth_Show_June19_v2.docx
+BRB_Pipeline_Tracker_2026.html
+BRB_Session_Compact_0207.md
+BRB_Shelf_Map*.html
+BRB_Trello_Top75_Keys.csv
+BRB_eBay_Strategy.docx
+BRB_overnight_script_v2*.zip
+issues.json
+needs_review.json
+volume_lookup_cache.json
+FETCH_HEAD
