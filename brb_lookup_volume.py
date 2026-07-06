@@ -464,15 +464,14 @@ def check_title_against_all(title, df_rows, merged):
                 "problem": "no volume data found in any source",
                 "match": None, "extracted_year": year_int, "is_range": is_range,
             })
-        elif is_range or best_delta > 3:
+        elif best_delta > 3:
             sources = []
             if best.get("cv_id"):
                 sources.append(f"CV:{best['start_year']}")
             if best.get("fandom"):
                 sources.append(f"Fandom:{best['fandom'].get('start_year')}")
-            problem = (f"range year '{inv_year}' → extracted {year_int}"
-                       if is_range else
-                       f"year {inv_year} doesn't match any known volume "
+            year_desc = f"{year_int} (from range '{inv_year}')" if is_range else str(inv_year)
+            problem = (f"year {year_desc} doesn't match any known volume "
                        f"(closest: {best.get('start_year')} [{', '.join(sources)}])")
             mismatches.append({
                 "issue": issue, "box": box,
