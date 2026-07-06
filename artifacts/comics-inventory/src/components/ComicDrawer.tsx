@@ -32,6 +32,10 @@ export type DrawerComic = {
   Box?: string;
   Terrificon?: string;
   Imprint?: string;
+  eBay_Avg?: number | null;
+  eBay_Low?: number | null;
+  eBay_High?: number | null;
+  eBay_Count?: number | null;
 };
 
 function buildClaudePrompt(comic: DrawerComic, fields: string[], notes: string): string {
@@ -471,6 +475,34 @@ export default function ComicDrawer({ comic, comicKey, onClose, onFlagChange }: 
           <Row label="Platform"     val={comic.Platform} />
           <Row label="Category"     val={comic.Category} />
           <Row label="Terrificon"   val={comic.Terrificon} />
+
+          {/* eBay market data */}
+          {comic.eBay_Avg != null && (
+            <div style={{ marginTop:10, background:"var(--surface)", border:"1px solid var(--border)", borderRadius:6, padding:"10px 14px" }}>
+              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"2px", color:"var(--muted)", marginBottom:8 }}>
+                EBAY SOLD DATA
+                {comic.eBay_Count != null && (
+                  <span style={{ marginLeft:6, fontFamily:"'Crimson Pro',serif", fontSize:"0.7rem", letterSpacing:0, fontStyle:"italic", color:"var(--muted)" }}>
+                    ({comic.eBay_Count} sales)
+                  </span>
+                )}
+              </div>
+              <div style={{ display:"flex", gap:0 }}>
+                <div style={{ flex:1, textAlign:"center", borderRight:"1px solid var(--border)" }}>
+                  <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem", letterSpacing:"1.5px", color:"var(--muted)", marginBottom:2 }}>AVG</div>
+                  <div style={{ fontSize:"1.05rem", fontWeight:700, color:"var(--text)", fontVariantNumeric:"tabular-nums" }}>${comic.eBay_Avg.toFixed(0)}</div>
+                </div>
+                <div style={{ flex:1, textAlign:"center", borderRight:"1px solid var(--border)" }}>
+                  <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem", letterSpacing:"1.5px", color:"var(--muted)", marginBottom:2 }}>LOW</div>
+                  <div style={{ fontSize:"1.05rem", color:"#16a34a", fontVariantNumeric:"tabular-nums" }}>${comic.eBay_Low != null ? comic.eBay_Low.toFixed(0) : "—"}</div>
+                </div>
+                <div style={{ flex:1, textAlign:"center" }}>
+                  <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem", letterSpacing:"1.5px", color:"var(--muted)", marginBottom:2 }}>HIGH</div>
+                  <div style={{ fontSize:"1.05rem", color:"#dc2626", fontVariantNumeric:"tabular-nums" }}>${comic.eBay_High != null ? comic.eBay_High.toFixed(0) : "—"}</div>
+                </div>
+              </div>
+            </div>
+          )}
 
           {/* Signing details */}
           {isSigned && (() => {
