@@ -54,3 +54,12 @@ ebay_pricing_results.json
 purge_log.json
 invalid_boxes_to_fix.csv
 __pycache__/
+
+# Mac inventory files — source of truth on Mac, never tracked in git
+attached_assets/*.xlsx
+*.xlsx
+dupes_*.csv
+ebay_err.txt
+ebay_log.txt
+overnight_err.txt
+overnight_log.txt
