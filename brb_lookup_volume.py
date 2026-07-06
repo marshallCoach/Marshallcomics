@@ -442,13 +442,13 @@ def check_title_against_all(title, df_rows, merged):
     return mismatches
 
 
-def cmd_check_inventory(title, publisher, df, merged):
+def cmd_check_inventory(title, publisher, df, merged, fix=False, out_path=None):
     mask = df["Title"].str.strip().str.lower() == title.lower()
     rows = df[mask]
 
     if rows.empty:
         print(f"\nNo rows found in inventory for '{title}'.")
-        return
+        return df
 
     print(f"\nInventory rows for '{title}': {len(rows)}")
     print(f"  {'Issue':>6}  {'Box':>5}  {'Inv Year':>8}  {'Vol':>4}  Status")
@@ -466,20 +466,93 @@ def cmd_check_inventory(title, publisher, df, merged):
         flag  = "⚠  MISMATCH" if key in mismatch_keys else "✓"
         print(f"  #{str(issue):>5}  {str(box):>5}  {year:>8}  {vol:>4}  {flag}")
 
-    if mismatches:
-        print(f"\nMismatches ({len(mismatches)}):")
-        for m in mismatches:
-            print(f"  Issue #{m['issue']} Box {m['box']}: {m['problem']}")
-            if m["match"]:
-                e = m["match"]
-                fdom = e.get("fandom")
-                print(f"    → CV:     {e.get('name','')} start={e.get('start_year')} "
-                      f"issues={e.get('issue_count')} vol={e.get('volume_number')}")
-                if fdom:
-                    print(f"    → Fandom: start={fdom.get('start_year')} "
-                          f"issues={fdom.get('issue_count')} {fdom.get('url','')}")
-    else:
+    if not mismatches:
         print("\n  All rows match known volumes within 3-year tolerance. ✓")
+        return df
+
+    print(f"\nMismatches ({len(mismatches)}):")
+    fixable = []
+    for m in mismatches:
+        print(f"  Issue #{m['issue']} Box {m['box']}: {m['problem']}")
+        if m["match"]:
+            e = m["match"]
+            fdom = e.get("fandom")
+            correct_year = e.get("start_year")
+            correct_vol  = e.get("volume_number")
+            print(f"    → CV:     {e.get('name','')} start={correct_year} "
+                  f"issues={e.get('issue_count')} vol={correct_vol}")
+            if fdom:
+                print(f"    → Fandom: start={fdom.get('start_year')} "
+                      f"issues={fdom.get('issue_count')} {fdom.get('url','')}")
+            # Only fixable if CV and fandom agree (or fandom absent) and year is clear
+            fdom_year = fdom.get("start_year") if fdom else None
+            sources_agree = (fdom_year is None) or (str(fdom_year) == str(correct_year))
+            if correct_year and sources_agree:
+                fixable.append({
+                    "issue": m["issue"], "box": m["box"],
+                    "old_year": m["inv_year"], "new_year": str(correct_year),
+                    "old_vol":  m["inv_vol"],  "new_vol":  correct_vol,
+                })
+
+    if not fix:
+        if fixable:
+            print(f"\n{len(fixable)} rows have a clear correction available.")
+            print(f"  Re-run with --fix to apply. Always review first.")
+        return df
+
+    # ── FIX MODE ─────────────────────────────────────────────────────────────
+    if not fixable:
+        print("\n  No rows with unambiguous corrections — nothing written.")
+        return df
+
+    print(f"\n── FIX MODE ── {len(fixable)} rows to correct:")
+    for fx in fixable:
+        print(f"  Issue #{fx['issue']} Box {fx['box']}:  "
+              f"Year {fx['old_year']} → {fx['new_year']}  |  "
+              f"Vol {fx['old_vol']} → {fx['new_vol']}")
+
+    answer = input(f"\nApply {len(fixable)} corrections? [y/N] ").strip().lower()
+    if answer != "y":
+        print("  Aborted — no changes written.")
+        return df
+
+    # Apply corrections to df
+    fixed = 0
+    for fx in fixable:
+        row_mask = (
+            (df["Title"].str.strip().str.lower() == title.lower()) &
+            (df["Issue #"].astype(str) == str(fx["issue"])) &
+            (df["Box #"].astype(str) == str(fx["box"]))
+        )
+        if row_mask.any():
+            df.loc[row_mask, "Year"] = fx["new_year"]
+            if fx["new_vol"] and "Volume" in df.columns:
+                df.loc[row_mask, "Volume"] = fx["new_vol"]
+            fixed += int(row_mask.sum())
+
+    if not out_path:
+        print("  ERROR: no output path — pass --file to write back.")
+        return df
+
+    # Write back — preserve all other sheets
+    xl = pd.ExcelFile(out_path)
+    sheet_name = None
+    for name in xl.sheet_names:
+        tmp = xl.parse(name)
+        if "Title" in tmp.columns and "Issue #" in tmp.columns:
+            sheet_name = name
+            break
+    if not sheet_name:
+        print("  ERROR: could not identify inventory sheet.")
+        return df
+
+    with pd.ExcelWriter(out_path, engine="openpyxl", mode="a",
+                        if_sheet_exists="replace") as writer:
+        df.to_excel(writer, sheet_name=sheet_name, index=False)
+
+    print(f"\n  ✓ Fixed {fixed} rows — written back to {os.path.basename(out_path)}")
+    print(f"  Run brb_validate.py to confirm no regressions.")
+    return df
 
 
 def cmd_check_all_years(df):
@@ -522,6 +595,7 @@ def main():
     parser.add_argument("--volume",           type=int, default=None, help="Show details for a specific volume number")
     parser.add_argument("--check-inventory",  action="store_true",   help="Cross-reference inventory rows")
     parser.add_argument("--check-all-years",  action="store_true",   help="List all titles with bad years in inventory")
+    parser.add_argument("--fix",              action="store_true",   help="Apply year/volume corrections (requires --check-inventory; prompts before writing)")
     parser.add_argument("--no-cache",         action="store_true",   help="Bypass cache, hit APIs fresh")
     parser.add_argument("--file",             default=None,          help="xlsx path override")
     args = parser.parse_args()
@@ -595,9 +669,13 @@ def main():
         if not path:
             print(f"ERROR: No xlsx found in {ASSETS_DIR}")
             sys.exit(1)
+        if args.fix and not path:
+            print("ERROR: --fix requires --file to know where to write.")
+            sys.exit(1)
         df, sheet = _load_df(path)
         print(f"\nLoaded '{sheet}' — {len(df):,} rows")
-        cmd_check_inventory(title, publisher, df, merged)
+        cmd_check_inventory(title, publisher, df, merged,
+                            fix=args.fix, out_path=path if args.fix else None)
 
 
 if __name__ == "__main__":
