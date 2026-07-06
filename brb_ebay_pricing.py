@@ -7,13 +7,19 @@ Uses eBay Browse API (Production) to search completed/sold listings.
 Rate limit: 5,000 calls/day on free tier — script stays well within this.
 
 Usage:
-    export EBAY_APP_ID=RobertMa-marshall-PRD-d0ac9b6db-45992c91
-    python3 brb_ebay_pricing.py
-    python3 brb_ebay_pricing.py --min-value 20     # only books with NM > $20
-    python3 brb_ebay_pricing.py --limit 50         # cap at 50 books (test run)
-    python3 brb_ebay_pricing.py --dry-run          # show queue, fetch nothing
+    python3 brb_ebay_pricing.py                        # standard run (NM > $10)
+    python3 brb_ebay_pricing.py --min-value 20         # only NM > $20
+    python3 brb_ebay_pricing.py --limit 50             # cap at 50 (test run)
+    python3 brb_ebay_pricing.py --dry-run              # show queue, fetch nothing
+    python3 brb_ebay_pricing.py --modern-pass          # Task 3: Modern era priority queue
+    python3 brb_ebay_pricing.py --reprocess            # Task 2: re-pull & trim existing results
+    python3 brb_ebay_pricing.py --modern-pass --limit 200  # first batch of 200
 
 Output: ebay_pricing_results.json + summary printed to terminal
+
+Era normalization: "Modern Age" and "Modern" are treated identically.
+Outlier trimming: drops any price >3x the median; flags if >30% trimmed
+  or if fewer than 3 comps remain (LOW confidence).
 """
 
 import sys, os, json, re, time, glob as _glob, argparse
@@ -118,7 +124,50 @@ def search_sold(title, issue, year, publisher, token):
         except (ValueError, TypeError):
             continue
 
-    return prices[:5], None   # return at most 5 most recent
+    return prices, None
+
+
+def compute_stats(prices):
+    """
+    Compute stats with outlier trimming.
+    Drops any price > 3x the median of the full set.
+    Returns dict with median, avg, low, high, count, trimmed_count, low_confidence, skewed.
+    """
+    if not prices:
+        return None
+
+    sorted_p = sorted(prices)
+    n = len(sorted_p)
+    raw_median = sorted_p[n // 2] if n % 2 else (sorted_p[n//2-1] + sorted_p[n//2]) / 2
+
+    trimmed = [p for p in sorted_p if p <= 3 * raw_median]
+    trimmed_count = n - len(trimmed)
+    trim_pct = trimmed_count / n if n else 0
+
+    if not trimmed:
+        trimmed = sorted_p  # all outliers — keep original set
+
+    tn = len(trimmed)
+    median = round(trimmed[tn // 2] if tn % 2 else (trimmed[tn//2-1] + trimmed[tn//2]) / 2, 2)
+    mean   = round(sum(trimmed) / tn, 2)
+    low    = round(min(trimmed), 2)
+    high   = round(max(trimmed), 2)
+
+    low_confidence = tn < 3
+    flagged_trim   = trim_pct > 0.30
+    skewed         = abs(mean - median) / max(median, 0.01) > 0.40
+
+    return {
+        "median":         median,
+        "avg_price":      mean,
+        "low":            low,
+        "high":           high,
+        "count":          tn,
+        "trimmed_count":  trimmed_count,
+        "low_confidence": low_confidence,
+        "flagged_trim":   flagged_trim,
+        "skewed":         skewed,
+    }
 
 
 def is_blank(v):
@@ -217,8 +266,10 @@ def main():
     parser = argparse.ArgumentParser(description="eBay sold pricing for high-value comics")
     parser.add_argument("--min-value", type=float, default=10.0, help="Minimum NM Value to include (default: 10)")
     parser.add_argument("--limit",     type=int,   default=0,    help="Max comics to price (0=all)")
-    parser.add_argument("--dry-run",   action="store_true",      help="Show queue only, fetch nothing")
-    parser.add_argument("--file",      default=None,             help="xlsx file override")
+    parser.add_argument("--dry-run",     action="store_true", help="Show queue only, fetch nothing")
+    parser.add_argument("--file",        default=None,        help="xlsx file override")
+    parser.add_argument("--reprocess",   action="store_true", help="Re-pull & trim existing results")
+    parser.add_argument("--modern-pass", action="store_true", help="Priority queue: Modern/Modern Age era only, unpriced rows")
     args = parser.parse_args()
 
     if not EBAY_APP_ID:
@@ -235,16 +286,79 @@ def main():
     df, sheet = _load(path)
     print(f"Loaded '{sheet}' — {len(df):,} rows from {os.path.basename(path)}")
 
+    # Era normalization: treat "Modern Age" as "Modern"
+    if "Era" in df.columns:
+        df["Era"] = df["Era"].apply(lambda v: "Modern" if str(v).strip().lower() == "modern age" else v)
+
     # Get OAuth token
     if not args.dry_run:
         print("Getting eBay OAuth token...")
         token = _get_oauth_token()
         if not token:
-            # Try using App ID directly (some Browse API endpoints accept it)
             token = EBAY_APP_ID
             print("  (using App ID as token — set EBAY_CERT_ID for full OAuth)")
     else:
         token = None
+
+    # Load existing results early — needed for --reprocess and --modern-pass skip logic
+    results = json.load(open(RESULTS_PATH)) if os.path.exists(RESULTS_PATH) else {}
+
+    # ── --reprocess: re-pull & apply outlier trimming to all existing priced results ──────────
+    if args.reprocess:
+        keys_to_reprocess = [
+            k for k, v in results.items()
+            if v and v.get("prices") and v.get("avg") is not None
+        ]
+        if args.limit:
+            keys_to_reprocess = keys_to_reprocess[:args.limit]
+        print(f"\n--reprocess: {len(keys_to_reprocess)} existing priced results to re-pull and trim")
+
+        needs_trim = 0; low_conf = 0; fetched_r = 0; errors_r = 0
+        for i, key in enumerate(keys_to_reprocess):
+            rec = results[key]
+            prices, err = search_sold(rec["title"], rec["issue"], rec.get("year",""), rec.get("publisher",""), token)
+            if err == "auth_error":
+                print("\nAuth error — check EBAY_APP_ID and EBAY_CERT_ID")
+                break
+            if prices:
+                stats = compute_stats(prices)
+                if stats:
+                    if stats["flagged_trim"]:
+                        needs_trim += 1
+                    if stats["low_confidence"]:
+                        low_conf += 1
+                    results[key].update({
+                        "prices":        prices,
+                        "median":        stats["median"],
+                        "avg":           stats["avg_price"],
+                        "avg_price":     stats["avg_price"],
+                        "low":           stats["low"],
+                        "high":          stats["high"],
+                        "count":         stats["count"],
+                        "trimmed_count": stats["trimmed_count"],
+                        "low_confidence":stats["low_confidence"],
+                        "flagged_trim":  stats["flagged_trim"],
+                        "skewed":        stats["skewed"],
+                        "fetched_at":    datetime.now().isoformat(),
+                        "error":         None,
+                    })
+                    fetched_r += 1
+                    flag = " ⚠TRIM" if stats["flagged_trim"] else (" LOW-CONF" if stats["low_confidence"] else "")
+                    print(f"  [{i+1}/{len(keys_to_reprocess)}] {rec['title']} #{rec['issue']}  "
+                          f"median=${stats['median']}  avg=${stats['avg_price']}  ({stats['count']} comps, {stats['trimmed_count']} trimmed){flag}")
+            else:
+                errors_r += 1
+                print(f"  [{i+1}/{len(keys_to_reprocess)}] {rec['title']} #{rec['issue']}  NO RESULTS ({err})")
+            if (fetched_r + errors_r) % 10 == 0:
+                with open(RESULTS_PATH, "w") as f:
+                    json.dump(results, f, indent=2)
+            time.sleep(DELAY)
+
+        with open(RESULTS_PATH, "w") as f:
+            json.dump(results, f, indent=2)
+        print(f"\n--reprocess done. Re-fetched: {fetched_r}  Errors: {errors_r}")
+        print(f"  Flagged (>30% trimmed): {needs_trim}  Low confidence (<3 comps): {low_conf}")
+        sys.exit(0)
 
     # Build queue: rows with NM Value > min_value, deduplicated by Title+Issue
     queue     = []
@@ -260,6 +374,8 @@ def main():
             continue
         seen.add(key)
 
+        era = str(row.get("Era", "")).strip()
+
         comic = {
             "title":     title,
             "issue":     issue,
@@ -270,11 +386,14 @@ def main():
             "condition": str(row.get("Condition", "")).strip(),
             "box":       str(row.get("Box #", "")),
             "writer":    row.get("Writer(s)", ""),
+            "era":       era,
+            "is_key":    str(row.get("Key", "")).strip().upper() == "YES",
+            "is_signed": str(row.get("Signed", "")).strip().upper() == "YES",
         }
 
         if is_cgc_bound(row):
             if nm >= args.min_value:
-                comic["adj_value"] = nm  # pending grade — NM is ceiling
+                comic["adj_value"] = nm
                 cgc_queue.append(comic)
             continue
 
@@ -284,7 +403,25 @@ def main():
         comic["adj_value"] = adj
         queue.append(comic)
 
-    queue.sort(key=lambda x: x["adj_value"], reverse=True)
+    # ── --modern-pass: filter to Modern era only, unpriced, priority sort ────────────────────
+    if args.modern_pass:
+        queue = [c for c in queue if c.get("era", "").lower() == "modern"]
+        queue = [c for c in queue if not results.get(f"{c['title']}|||{c['issue']}", {}).get("avg")]
+        # Priority: Key=YES first, then Signed=YES, then NM > $15, else by adj_value
+        def modern_sort(c):
+            return (
+                0 if c["is_key"] else (1 if c["is_signed"] else (2 if c["nm_value"] > 15 else 3)),
+                -c["adj_value"],
+            )
+        queue.sort(key=modern_sort)
+        print(f"--modern-pass: {len(queue)} unpriced Modern-era comics in priority queue")
+        key_count   = sum(1 for c in queue if c["is_key"])
+        sign_count  = sum(1 for c in queue if not c["is_key"] and c["is_signed"])
+        other_count = len(queue) - key_count - sign_count
+        print(f"  Keys: {key_count}  Signed: {sign_count}  Other: {other_count}")
+    else:
+        queue.sort(key=lambda x: x["adj_value"], reverse=True)
+
     cgc_queue.sort(key=lambda x: x["nm_value"], reverse=True)
     if args.limit:
         queue = queue[:args.limit]
@@ -312,17 +449,14 @@ def main():
                 print(f"  {c['title']:<38} #{str(c['issue']):>4}  {nm:>6}  {cond:<20}  {c['box']}")
         sys.exit(0)
 
-    # Load existing results
-    results = json.load(open(RESULTS_PATH)) if os.path.exists(RESULTS_PATH) else {}
-
     # Fetch
     fetched = skipped = errors = 0
     for i, comic in enumerate(queue):
         key = f"{comic['title']}|||{comic['issue']}"
 
-        # Skip if already priced recently (within 7 days)
+        # Skip if already priced recently (within 7 days) — unless --modern-pass already filtered
         existing = results.get(key, {})
-        if existing.get("fetched_at"):
+        if not args.modern_pass and existing.get("fetched_at"):
             age_days = (datetime.now() - datetime.fromisoformat(existing["fetched_at"])).days
             if age_days < 7:
                 skipped += 1
@@ -337,36 +471,34 @@ def main():
             break
 
         if prices:
-            sorted_p = sorted(prices)
-            n      = len(sorted_p)
-            median = round(sorted_p[n // 2] if n % 2 else (sorted_p[n//2-1] + sorted_p[n//2]) / 2, 2)
-            mean   = round(sum(prices) / n, 2)
-            low    = round(min(prices), 2)
-            high   = round(max(prices), 2)
-            # Flag outlier-skewed results where mean and median diverge >40%
-            skewed = abs(mean - median) / max(median, 0.01) > 0.40
+            stats = compute_stats(prices)
             results[key] = {
-                "title":      comic["title"],
-                "issue":      str(comic["issue"]),
-                "nm_value":   comic["nm_value"],
-                "vf_value":   comic.get("vf_value", 0),
-                "condition":  comic.get("condition", ""),
-                "box":        str(comic["box"]),
-                "writer":     str(comic["writer"]),
-                "prices":     prices,
-                "median":     median,
-                "avg":        mean,
-                "low":        low,
-                "high":       high,
-                "count":      n,
-                "skewed":     skewed,
-                "fetched_at": datetime.now().isoformat(),
-                "error":      None,
+                "title":         comic["title"],
+                "issue":         str(comic["issue"]),
+                "nm_value":      comic["nm_value"],
+                "vf_value":      comic.get("vf_value", 0),
+                "condition":     comic.get("condition", ""),
+                "box":           str(comic["box"]),
+                "writer":        str(comic["writer"]),
+                "prices":        prices,
+                "median":        stats["median"],
+                "avg":           stats["avg_price"],
+                "avg_price":     stats["avg_price"],
+                "low":           stats["low"],
+                "high":          stats["high"],
+                "count":         stats["count"],
+                "trimmed_count": stats["trimmed_count"],
+                "low_confidence":stats["low_confidence"],
+                "flagged_trim":  stats["flagged_trim"],
+                "skewed":        stats["skewed"],
+                "fetched_at":    datetime.now().isoformat(),
+                "error":         None,
             }
             fetched += 1
-            skew_flag = "  ⚠ OUTLIER" if skewed else ""
+            flag = " ⚠TRIM" if stats["flagged_trim"] else (" LOW-CONF" if stats["low_confidence"] else "")
             print(f"  [{i+1}/{len(queue)}] {comic['title']} #{comic['issue']}  "
-                  f"median=${median}  mean=${mean}  range=${low}-${high}  ({n} sales){skew_flag}")
+                  f"median=${stats['median']}  avg=${stats['avg_price']}  "
+                  f"range=${stats['low']}-${stats['high']}  ({stats['count']} comps, {stats['trimmed_count']} trimmed){flag}")
         else:
             results[key] = {
                 **comic,
