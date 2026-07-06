@@ -53,3 +53,4 @@ data-fix/
 ebay_pricing_results.json
 purge_log.json
 invalid_boxes_to_fix.csv
+__pycache__/
