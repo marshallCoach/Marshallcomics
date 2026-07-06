@@ -337,9 +337,14 @@ def main():
             break
 
         if prices:
-            avg   = round(sum(prices) / len(prices), 2)
-            low   = round(min(prices), 2)
-            high  = round(max(prices), 2)
+            sorted_p = sorted(prices)
+            n      = len(sorted_p)
+            median = round(sorted_p[n // 2] if n % 2 else (sorted_p[n//2-1] + sorted_p[n//2]) / 2, 2)
+            mean   = round(sum(prices) / n, 2)
+            low    = round(min(prices), 2)
+            high   = round(max(prices), 2)
+            # Flag outlier-skewed results where mean and median diverge >40%
+            skewed = abs(mean - median) / max(median, 0.01) > 0.40
             results[key] = {
                 "title":      comic["title"],
                 "issue":      str(comic["issue"]),
@@ -349,16 +354,19 @@ def main():
                 "box":        str(comic["box"]),
                 "writer":     str(comic["writer"]),
                 "prices":     prices,
-                "avg":        avg,
+                "median":     median,
+                "avg":        mean,
                 "low":        low,
                 "high":       high,
-                "count":      len(prices),
+                "count":      n,
+                "skewed":     skewed,
                 "fetched_at": datetime.now().isoformat(),
                 "error":      None,
             }
             fetched += 1
+            skew_flag = "  ⚠ OUTLIER" if skewed else ""
             print(f"  [{i+1}/{len(queue)}] {comic['title']} #{comic['issue']}  "
-                  f"avg=${avg}  range=${low}-${high}  ({len(prices)} sales)")
+                  f"median=${median}  mean=${mean}  range=${low}-${high}  ({n} sales){skew_flag}")
         else:
             results[key] = {
                 **comic,
@@ -383,20 +391,25 @@ def main():
     print(f"\nDone. Fetched: {fetched}  Skipped (recent): {skipped}  No results: {errors}")
     print(f"Results saved to: {RESULTS_PATH}")
 
-    # Print top 20 by avg sold price
-    priced = [v for v in results.values() if v.get("avg")]
-    priced.sort(key=lambda x: x["avg"], reverse=True)
+    # Print top 20 by median sold price (more reliable than mean with outliers)
+    priced = [v for v in results.values() if v.get("median") or v.get("avg")]
+    priced.sort(key=lambda x: x.get("median") or x.get("avg", 0), reverse=True)
     if priced:
-        print(f"\nTop 20 by average sold price:")
-        print(f"  {'Title':<38} {'Iss':>5}  {'NM':>5}  {'VF':>5}  {'Cond':<6}  {'Avg Sold':>9}  {'Range':>12}  Box")
-        print(f"  {'─'*38} {'─'*5}  {'─'*5}  {'─'*5}  {'─'*6}  {'─'*9}  {'─'*12}  {'─'*5}")
+        skewed_count = sum(1 for v in priced if v.get("skewed"))
+        if skewed_count:
+            print(f"  ⚠  {skewed_count} results flagged as outlier-skewed (mean/median diverge >40%) — trust median column")
+        print(f"\nTop 20 by median sold price:")
+        print(f"  {'Title':<38} {'Iss':>5}  {'NM':>5}  {'Cond':<6}  {'Median':>7}  {'Mean':>7}  {'Range':>12}  {'⚠':>2}  Box")
+        print(f"  {'─'*38} {'─'*5}  {'─'*5}  {'─'*6}  {'─'*7}  {'─'*7}  {'─'*12}  {'─'*2}  {'─'*5}")
         for c in priced[:20]:
-            rng  = f"${c['low']:.0f}–${c['high']:.0f}"
-            nm   = f"${c['nm_value']:.0f}" if c['nm_value'] else "—"
-            vf   = f"${c.get('vf_value',0):.0f}" if c.get('vf_value') else "—"
-            cond = (c.get("condition") or "")[:6]
+            rng    = f"${c['low']:.0f}–${c['high']:.0f}"
+            nm     = f"${c['nm_value']:.0f}" if c['nm_value'] else "—"
+            cond   = (c.get("condition") or "")[:6]
+            median = f"${c.get('median', c.get('avg', 0)):.2f}"
+            mean   = f"${c.get('avg', 0):.2f}"
+            flag   = "⚠" if c.get("skewed") else ""
             print(f"  {c['title']:<38} #{str(c['issue']):>4}  "
-                  f"{nm:>5}  {vf:>5}  {cond:<6}  ${c['avg']:>8.2f}  {rng:>12}  {c['box']}")
+                  f"{nm:>5}  {cond:<6}  {median:>7}  {mean:>7}  {rng:>12}  {flag:>2}  {c['box']}")
 
 
 if __name__ == "__main__":

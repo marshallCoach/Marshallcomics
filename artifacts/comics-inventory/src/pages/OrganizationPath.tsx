@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { DATA3 } from "../data/data3";
 
 const LS_LABELED  = "brbBoxLabeled";
 const LS_RUNS     = "brbRunsDone";
@@ -238,6 +239,21 @@ const BOXES: BoxEntry[] = [
   { newNum:72, oldNum:5,  group:"mixed",     name:"Variants + Absolute 1st Prints",     desc:"Wolverine #8 UNSIGNED, Absolute Batman/WW/Superman variants",                                                                              comics:75  },
   { newNum:73, oldNum:3,  group:"mixed",     name:"Marvel Mix",                         desc:"A-Force, Miles, Mockingbird, Star Wars mixed",                                                                                             comics:54  },
   { newNum:74, oldNum:74, group:"tpb",       name:"Trade Paperbacks / Graphic Novels",  desc:"Crisis on IE, JLA Earth 2, JLA/Avengers, Spider-Man Life Story, DC One Million, X-Men Asgardian Wars, The Escapist. 28 items.",          comics:28  },
+  { newNum:75, oldNum:75, group:"marvel",    name:"Marvel Current",                      desc:"Ultimate Spider-Man Hickman near-complete. TVA COMPLETE. BP 60th Anniversary Priest. Age of Revelation. FF Hickman era. One World Under Doom.", comics:199 },
+  { newNum:76, oldNum:76, group:"dc",        name:"DC Recent",                           desc:"Absolute Flash near-complete. Absolute Wonder Woman near-complete. Batman Off World COMPLETE. Batman and Robin Lemire COMPLETE. Zatanna Campbell.", comics:108 },
+  { newNum:77, oldNum:77, group:"other",     name:"Mixed/Other — Energon Universe",      desc:"Power Fantasy Gillen near-complete. Gargoyles Weisman complete. GI Joe/Transformers/Void Rivals. Firefly/Serenity. Magic Order Vols 2–4.", comics:177 },
+  { newNum:78, oldNum:78, group:"marvel",    name:"Marvel Recent Small",                 desc:"World of Revelation #1. Inglorious X-Force #1. Moon Knight Fist of Khonshu. Small overflow box.", comics:7   },
+  { newNum:79, oldNum:79, group:"marvel",    name:"Marvel Small Mixed",                  desc:"Wolverine Madripoor Knights COMPLETE. Empyre. Aliens vs Avengers Hickman. She-Hulk Rowell. Blade. Secret Wars reprints.", comics:90  },
+  { newNum:80, oldNum:80, group:"other",     name:"Pulled Covers — Display",             desc:"Box of pulled covers used as display pieces. Not for sale. Not true duplicates.", comics:11  },
+  { newNum:81, oldNum:81, group:"mixed",     name:"Box 81 — Unlabeled",                  desc:"X Club through Indestructible Hulk #20. Needs labeling.", comics:165 },
+  { newNum:82, oldNum:82, group:"dc",        name:"DC New 52 Overflow A",               desc:"DC Universe: Rebirth #1 through Animal Man #29. Box 42 split overflow.", comics:115 },
+  { newNum:83, oldNum:83, group:"dc",        name:"DC New 52 Overflow B",               desc:"Titans: Rebirth #1 through DC Comics: Bombshells #6. Box 42 split overflow.", comics:140 },
+  { newNum:84, oldNum:84, group:"dc",        name:"DC New 52 Overflow C",               desc:"Bombshells #7 through Batman/Superman: World's Finest #2. Box 42 split overflow.", comics:121 },
+  { newNum:85, oldNum:85, group:"mixed",     name:"Box 85 — Mixed",                     desc:"Black Panther #1 through Ultimate Universe: One Year In #1. 2 signed.", comics:175 },
+  { newNum:86, oldNum:86, group:"mixed",     name:"Box 86 — Mixed (Large)",             desc:"A-Force #1 through Years of Future Past #4. 1 signed. 58 keys.", comics:496 },
+  { newNum:87, oldNum:87, group:"mixed",     name:"Box 87 — Mixed",                     desc:"Avengers #363 through Venom #15.", comics:219 },
+  { newNum:88, oldNum:88, group:"mixed",     name:"Box 88 — Mixed",                     desc:"Batman #656 through Ex Machina #16. 3 signed. 24 keys.", comics:373 },
+  { newNum:89, oldNum:89, group:"mixed",     name:"Box 89 — Small Mixed",               desc:"X-Men #1 (2024 variant) through Iron Man 2.0 #7.", comics:62  },
 ];
 
 // ─── CONSOLIDATION RUNS ──────────────────────────────────────────────────────
@@ -339,19 +355,22 @@ const STEPS: OrgStep[] = [
 
 // ─── GROUP META ───────────────────────────────────────────────────────────────
 const GROUP_META: Record<string, { label: string; color: string; accent: string }> = {
-  inventory: { label:"Inventory",          color:"#c8102e", accent:"#fff0f0" },
-  marvel:    { label:"Marvel (Boxes 2–41)", color:"#c8102e", accent:"#fff8f8" },
-  dc:        { label:"DC (Boxes 42–63)",    color:"#1d6fa4", accent:"#f0f6ff" },
-  other:     { label:"Other (Boxes 64–67)", color:"#16a34a", accent:"#f0faf2" },
-  mixed:     { label:"Mixed (Boxes 68–73)", color:"#d97706", accent:"#fffbf0" },
-  tpb:       { label:"TPB (Box 74)",        color:"#6b7280", accent:"#f8f8f8" },
+  inventory: { label:"Inventory",               color:"#c8102e", accent:"#fff0f0" },
+  marvel:    { label:"Marvel (Boxes 2–41, 75, 78–79)", color:"#c8102e", accent:"#fff8f8" },
+  dc:        { label:"DC (Boxes 42–63, 76, 82–84)",    color:"#1d6fa4", accent:"#f0f6ff" },
+  other:     { label:"Other (Boxes 64–67, 77, 80)",    color:"#16a34a", accent:"#f0faf2" },
+  mixed:     { label:"Mixed (Boxes 68–73, 81, 85–89)", color:"#d97706", accent:"#fffbf0" },
+  tpb:       { label:"TPB (Box 74)",             color:"#6b7280", accent:"#f8f8f8" },
 };
 const GROUP_ORDER = ["inventory","marvel","dc","other","mixed","tpb"];
 
 // ─── SUB-COMPONENTS ───────────────────────────────────────────────────────────
-function BoxCard({ b, labeled, onToggle }: { b: BoxEntry; labeled: boolean; onToggle: () => void }) {
+function BoxCard({ b, labeled, liveComics, liveKeys, onToggle }: {
+  b: BoxEntry; labeled: boolean; liveComics?: number; liveKeys?: number; onToggle: () => void;
+}) {
   const gm = GROUP_META[b.group];
   const changed = b.newNum !== b.oldNum;
+  const comicCount = liveComics ?? b.comics;
   return (
     <div style={{
       border: labeled ? "1.5px solid #16a34a" : `1.5px solid ${gm.color}30`,
@@ -378,7 +397,15 @@ function BoxCard({ b, labeled, onToggle }: { b: BoxEntry; labeled: boolean; onTo
       <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem", letterSpacing:"0.8px", color:"var(--text)", marginBottom:3, lineHeight:1.2 }}>{b.name}</div>
       <div style={{ fontSize:"0.72rem", color:"var(--muted2)", lineHeight:1.4, marginBottom:8 }}>{b.desc}</div>
       <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between" }}>
-        <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.7rem", letterSpacing:"1px", color:gm.color }}>{b.comics} COMICS</span>
+        <div style={{ display:"flex", gap:8, alignItems:"center" }}>
+          <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.7rem", letterSpacing:"1px", color:gm.color }}>{comicCount} COMICS</span>
+          {(liveKeys ?? 0) > 0 && (
+            <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1px",
+              background:"#fff8e0", color:"#8a6000", border:"1px solid #d4a800", borderRadius:3, padding:"1px 5px" }}>
+              ★{liveKeys}
+            </span>
+          )}
+        </div>
         <button onClick={onToggle} style={{
           fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1px",
           padding:"3px 10px", borderRadius:4, cursor:"pointer", transition:"all 0.12s",
@@ -534,6 +561,12 @@ export default function OrganizationPath() {
   const [splitFilter, setSplitFilter] = useState(false);
   const [bagPrioFilter, setBagPrioFilter] = useState<BagPriority | "">("");
 
+  // Merge live box data from DATA3 with hardcoded metadata
+  const liveBoxMap = Object.fromEntries(
+    DATA3.boxes.map(b => [parseInt(b.Num.replace("BOX ", "")), b])
+  );
+  const totalBoxCount = DATA3.boxes.length;
+
   useEffect(() => { localStorage.setItem(LS_LABELED, JSON.stringify(labeled)); }, [labeled]);
   useEffect(() => { localStorage.setItem(LS_BAGGED,  JSON.stringify(bagged)); }, [bagged]);
   useEffect(() => { localStorage.setItem(LS_RUNS,    JSON.stringify(runsDone)); }, [runsDone]);
@@ -584,8 +617,8 @@ export default function OrganizationPath() {
       <div style={{ display:"flex", gap:12, marginBottom:20, flexWrap:"wrap" }}>
         {[
           { label:"STEPS COMPLETE",      val:stepsDoneCount, total:STEPS.length,  color:"var(--red)" },
-          { label:"BOXES BAGGED",        val:baggedCount,    total:74,            color:"#1d6fa4"    },
-          { label:"BOXES LABELED",       val:labeledCount,   total:74,            color:"#16a34a"    },
+          { label:"BOXES BAGGED",        val:baggedCount,    total:totalBoxCount, color:"#1d6fa4"    },
+          { label:"BOXES LABELED",       val:labeledCount,   total:totalBoxCount, color:"#16a34a"    },
           { label:"RUNS CONSOLIDATED",   val:runsDoneCount,  total:RUNS.length,   color:"#d97706"    },
         ].map(({ label, val, total, color }) => (
           <div key={label} style={{ flex:"1 1 140px", background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:8, padding:"10px 14px" }}>
@@ -847,7 +880,7 @@ export default function OrganizationPath() {
         <div>
           <div style={{ display:"flex", alignItems:"center", gap:12, marginBottom:14, flexWrap:"wrap" }}>
             <span style={{ fontSize:"0.8rem", color:"var(--muted2)", fontFamily:"'Crimson Pro',serif" }}>
-              {labeledCount} of 74 boxes labeled. Check off each box as you apply the new number label.
+              {labeledCount} of {totalBoxCount} boxes labeled. Check off each box as you apply the new number label.
             </span>
             {labeledCount > 0 && (
               <button onClick={() => setLabeled({})} style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1px",
@@ -871,6 +904,8 @@ export default function OrganizationPath() {
                 <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(240px, 1fr))", gap:10 }}>
                   {groupBoxes.map(b => (
                     <BoxCard key={b.newNum} b={b} labeled={!!labeled[b.newNum]}
+                      liveComics={liveBoxMap[b.newNum]?.Comics}
+                      liveKeys={liveBoxMap[b.newNum]?.Keys}
                       onToggle={() => setLabeled(p => ({ ...p, [b.newNum]: !p[b.newNum] }))} />
                   ))}
                 </div>
