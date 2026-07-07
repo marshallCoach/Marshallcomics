@@ -161,7 +161,10 @@ for (let r = 1; r < allRows.length; r++) {
 // col0=Box(Num)  col1=Comics  col2=Keys  col3=Sgnd  col4=Years
 // col5=Label/Contents  col6=FirstBook  col7=LastBook  col8=Location  col9=Notes
 const bsSheet = wb.getWorksheet('Box Summary');
-const bsRows  = worksheetToArrays(bsSheet, '');
+if (!bsSheet) {
+  console.warn('Warning: No "Box Summary" sheet found — box data will be derived from comics rows only.');
+}
+const bsRows  = bsSheet ? worksheetToArrays(bsSheet, '') : [[]];
 const boxes = [];
 const coveredBoxNums = new Set();
 for (let r = 2; r < bsRows.length; r++) {
