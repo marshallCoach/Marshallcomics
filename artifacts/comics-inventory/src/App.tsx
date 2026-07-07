@@ -32,6 +32,7 @@ import BoxQuest from "@/pages/BoxQuest";
 import BoxMap from "@/pages/BoxMap";
 import EbayPipeline from "@/pages/EbayPipeline";
 import OpsReference from "@/pages/OpsReference";
+import EbayListingGuide from "@/pages/EbayListingGuide";
 import PasswordGate from "@/components/PasswordGate";
 
 type TabId =
@@ -39,7 +40,7 @@ type TabId =
   | "calendar" | "showplanner" | "cgc" | "signings" | "actionplan" | "timeline" | "boxvisual"
   | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "duplicates" | "dupchecklist" | "history"
   | "orgpath" | "volumes" | "boxlabels" | "keycatalog" | "covercatalog" | "boxquest" | "boxmap"
-  | "ebaypipeline" | "opsreference";
+  | "ebaypipeline" | "opsreference" | "ebaylistingguide";
 
 export type NavParams = {
   box?: string;
@@ -79,8 +80,9 @@ const NAV = [
       { id: "boxquest",      label: "Box Quest" },
       { id: "boxmap",        label: "Box Map" },
       { id: "timeline",    label: "Timeline" },
-      { id: "ebaypipeline",  label: "eBay Pipeline" },
-      { id: "opsreference",  label: "Ops Reference" },
+      { id: "ebaypipeline",     label: "eBay Pipeline" },
+      { id: "opsreference",     label: "Ops Reference" },
+      { id: "ebaylistingguide", label: "Phase 1 Listing Guide" },
     ],
   },
   {
@@ -282,6 +284,7 @@ export default function App() {
         {activeTab === "boxmap"       && <BoxMap />}
         {activeTab === "ebaypipeline" && <EbayPipeline />}
         {activeTab === "opsreference" && <OpsReference />}
+        {activeTab === "ebaylistingguide" && <EbayListingGuide />}
       </div>
     </div>
     </PasswordGate>
