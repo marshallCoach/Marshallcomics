@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_0406_1100_VALIDATED.xlsx  |  Generated: 2026-07-07
+// Source: comics_inventory_0407_2200_VALIDATED.xlsx  |  Generated: 2026-07-07
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -2413,7 +2413,7 @@ Chris Claremont confirmed all 3 days. Wolverine #8 (1982) is your priority signi
     Disambig: ``,
     Year: `2024`, Arc: ``, Key: `NO`,
     Key_Reason: `David Nakayama cover variant`, First_App: `David Nakayama cover`,
-    Writer: `Verify`, Artist: `Nakayama (cover)`,
+    Writer: `Jed MacKay`, Artist: `Netho Diaz`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `15`, Value_VF: `10`,
@@ -199175,7 +199175,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Year: `2024`, Volume: `6`, Cover_Artist: `David Nakayama`,
     Key: `NO`, Key_Reason: `David Nakayama cover variant`,
     Signed: `NO`, Signed_By: ``,
-    Era: `Modern`, Writer: `Verify`,
+    Era: `Modern`, Writer: `Jed MacKay`,
     Value_NM: `15`, Start_Bid: `3`, Box: `72`,
     Notes: ``, SortPile: `Marvel X-Men / Mutants`,
     CoverNotes: `60 Uncanny Years — wraparound`, Flag: ``,
