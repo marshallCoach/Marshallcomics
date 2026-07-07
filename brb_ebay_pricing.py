@@ -88,21 +88,25 @@ def search_sold(title, issue, year, publisher, token):
         issue_str = str(int(float(str(issue)))) if issue and str(issue).strip() not in ("", "nan", "None") else ""
     except (ValueError, TypeError):
         issue_str = ""
-    title_safe = title.encode("ascii", "ignore").decode("ascii")
-    query = f"{title_safe} #{issue_str} comic"
+    def _ascii(s):
+        return str(s).encode("ascii", "ignore").decode("ascii").strip()
+
+    query = f"{_ascii(title)} #{issue_str} comic"
     if year and str(year).strip() not in ("", "nan", "None"):
-        query += f" {str(year)[:4]}"
+        query += f" {_ascii(str(year)[:4])}"
 
     headers = {"Authorization": f"Bearer {token}", "X-EBAY-C-MARKETPLACE-ID": "EBAY_US"}
 
     params = {
-        "q":            query,
-        "filter":       "buyingOptions:{FIXED_PRICE},conditions:{USED|LIKE_NEW|VERY_GOOD|GOOD},"
-                        "soldItems:true",
-        "sort":         "endingSoonest",
-        "limit":        10,
-        "fieldgroups":  "MATCHING_ITEMS",
+        "q":           query,
+        "filter":      "buyingOptions:{FIXED_PRICE},conditions:{USED|LIKE_NEW|VERY_GOOD|GOOD},"
+                       "soldItems:true",
+        "sort":        "endingSoonest",
+        "limit":       10,
+        "fieldgroups": "MATCHING_ITEMS",
     }
+    # Ensure all param values are ASCII-safe (macOS Python 3.9 uses latin-1 for URL encoding)
+    params = {k: _ascii(v) if isinstance(v, str) else v for k, v in params.items()}
 
     try:
         resp = requests.get(EBAY_API_URL, headers=headers, params=params, timeout=15)
