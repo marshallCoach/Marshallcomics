@@ -95,7 +95,10 @@ def search_sold(title, issue, year, publisher, token):
     if year and str(year).strip() not in ("", "nan", "None"):
         query += f" {_ascii(str(year)[:4])}"
 
-    headers = {"Authorization": f"Bearer {token}", "X-EBAY-C-MARKETPLACE-ID": "EBAY_US"}
+    token_safe = token.encode("ascii", "ignore").decode("ascii") if token else ""
+    if token_safe != token:
+        return [], "token_has_non_ascii — check EBAY_APP_ID in ~/.zshrc"
+    headers = {"Authorization": f"Bearer {token_safe}", "X-EBAY-C-MARKETPLACE-ID": "EBAY_US"}
 
     params = {
         "q":           query,
