@@ -88,7 +88,8 @@ def search_sold(title, issue, year, publisher, token):
         issue_str = str(int(float(str(issue)))) if issue and str(issue).strip() not in ("", "nan", "None") else ""
     except (ValueError, TypeError):
         issue_str = ""
-    query = f"{title} #{issue_str} comic"
+    title_safe = title.encode("ascii", "ignore").decode("ascii")
+    query = f"{title_safe} #{issue_str} comic"
     if year and str(year).strip() not in ("", "nan", "None"):
         query += f" {str(year)[:4]}"
 
