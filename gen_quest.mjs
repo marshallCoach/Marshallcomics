@@ -92,6 +92,26 @@ if (!comicsSheet) {
 const allRows = worksheetToArrays(comicsSheet, '');
 const headers = allRows[0];
 
+// ── Box → physical location, from Box Summary sheet ───────────────────────────
+const boxSummarySheet = wb.worksheets.find(ws => ws.name === 'Box Summary');
+const boxLocations = {};
+if (boxSummarySheet) {
+  const summaryRows = worksheetToArrays(boxSummarySheet, '');
+  const sHeaders = summaryRows[0];
+  const boxCol = sHeaders.findIndex(h => String(h).trim() === 'Box #');
+  const locCol = sHeaders.findIndex(h => String(h).trim() === 'Location');
+  if (boxCol !== -1 && locCol !== -1) {
+    for (let r = 1; r < summaryRows.length; r++) {
+      const boxNum = parseInt(summaryRows[r][boxCol], 10);
+      const loc = String(summaryRows[r][locCol] ?? '').trim();
+      if (!isNaN(boxNum) && loc) boxLocations[boxNum] = loc;
+    }
+  }
+  console.log(`Read ${Object.keys(boxLocations).length} box locations from Box Summary sheet`);
+} else {
+  console.warn('Box Summary sheet not found — locations will be unavailable in Box Quest');
+}
+
 function col(name) {
   const i = headers.findIndex(h => String(h).trim() === name);
   if (i === -1) console.warn('Missing column:', name);
@@ -443,7 +463,7 @@ for (const qd of questData) {
 console.log(`\nTotal: ${totalMoves} moves, ${totalLines} lines (was ${prevTotals.moves} moves, ${prevTotals.lines} lines)`);
 
 // ── Write updated DATA back to HTML ──────────────────────────────────────────
-const newData = { quests: newQuests };
+const newData = { quests: newQuests, locations: boxLocations };
 const newDataStr = JSON.stringify(newData);
 
 // Find the extent of the old DATA object in HTML
