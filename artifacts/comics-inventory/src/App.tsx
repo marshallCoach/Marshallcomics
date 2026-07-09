@@ -189,7 +189,7 @@ export default function App() {
       <header className="app-header">
         <div className="logo-area">
           <button onClick={() => navigateTo("summary")} className="logo-btn">
-            <img src="/logo.png" alt="BlackReadBrown" className="site-logo" />
+            <img src={`${import.meta.env.BASE_URL}logo.png`} alt="BlackReadBrown" className="site-logo" />
           </button>
           <div className="app-title">Marshall Comics</div>
         </div>
