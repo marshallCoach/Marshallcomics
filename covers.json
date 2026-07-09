@@ -2440,7 +2440,6 @@
     "date": "2024-01-01"
   },
   "Captain America: Winter Soldier: Winter Kills|||1": null,
-  "Captain America/Black Panther: Flags of Our Fathers|||1": null,
   "Captain America/Black Panther: Flags of Our Fathers|||2": null,
   "Captain America/Black Panther: Flags of Our Fathers|||3": null,
   "Captain America/Black Panther: Flags of Our Fathers|||4": null,
@@ -2662,23 +2661,19 @@
   "Invaders|||10": null,
   "Invaders|||11": null,
   "Invaders|||12": null,
-  "Captain America: Living Legend|||1": null,
   "Captain America: Living Legend|||2": null,
   "Captain America: Living Legend|||3": null,
   "Captain America: Living Legend|||4": null,
-  "Captain America: White|||1": null,
   "Captain America: White|||2": null,
   "Captain America: White|||3": null,
   "Captain America: White|||4": null,
   "Captain America: White|||5": null,
   "All-New Captain America Special|||1": null,
-  "Inhuman Error|||1": null,
   "Inhuman Error|||2": null,
   "Inhuman Error|||3": null,
   "Free Comic Book Day: Steve Rogers Captain America|||1": null,
   "Captain America: Homecoming|||1": null,
   "Captain America and the Mighty Avengers|||1": null,
-  "Captain America|||0": null,
   "Batman/Superman: World's Finest|||1": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/10093810-cover.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/10093810-cover.jpg",
@@ -18575,7 +18570,6 @@
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/3125/9797546-fla47.jpg",
     "date": "1963-03-01"
   },
-  "Winter Soldier: Winter Kills|||1": null,
   "Captain America|||625": null,
   "Captain America|||633": null,
   "Captain America|||634": null,
@@ -26356,5 +26350,565 @@
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/8868876-scan-001.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/8868876-scan-001.jpg",
     "date": "2020-11-01"
+  },
+  "Winter Soldier: Winter Kills|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6712697-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/6712697-01.jpg",
+    "date": "2019-02-01"
+  },
+  "Captain America/Black Panther: Flags of Our Fathers|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5141409-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5141409-01.jpg",
+    "date": "2010-10-31"
+  },
+  "Captain America: Living Legend|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/3345298-01a.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/3345298-01a.jpg",
+    "date": "2013-12-01"
+  },
+  "Captain America: White|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11112/111121983/6998469-0665982341-CAPTA.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11112/111121983/6998469-0665982341-CAPTA.jpg",
+    "date": "2016-05-01"
+  },
+  "Inhuman Error|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11116/111168846/7987547-001.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11116/111168846/7987547-001.jpg",
+    "date": "2021-02-01"
+  },
+  "Captain America|||0": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/8509479-9179144481-20832.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/8509479-9179144481-20832.jpg",
+    "date": "2022-06-01"
+  },
+  "Wolverine|||66": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/40/421911-Wolverine66.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/40/421911-Wolverine66.jpg",
+    "date": "2008-08-01"
+  },
+  "Wolverine|||71": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/9/96747/3470185-71.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/9/96747/3470185-71.jpg",
+    "date": "2010-10-16"
+  },
+  "Wolverine|||72": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/9/96747/3470205-72.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/9/96747/3470205-72.jpg",
+    "date": "2010-11-09"
+  },
+  "Avengers|||500": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/9/98094/1745055-avengers_disassembled_13___avengers_500___director_s_cut___00___fc.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/9/98094/1745055-avengers_disassembled_13___avengers_500___director_s_cut___00___fc.jpg",
+    "date": "2004-10-31"
+  },
+  "Avengers: Finale|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11112/111121457/5255919-avengers%20finale%20v2005%20%231%20%282005_1%29%20-%20page%201.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11112/111121457/5255919-avengers%20finale%20v2005%20%231%20%282005_1%29%20-%20page%201.jpg",
+    "date": "2005-01-31"
+  },
+  "Timeless|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11159/111592040/9213374-img_3430.jpeg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11159/111592040/9213374-img_3430.jpeg",
+    "date": "2024-02-01"
+  },
+  "Fury|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9830175-wwww.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9830175-wwww.jpg",
+    "date": "2005-08-01"
+  },
+  "Mosaic|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5398602-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5398602-01.jpg",
+    "date": "2016-08-31"
+  },
+  "Scarlet Witch|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11144/111442876/8772602-cththt.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11144/111442876/8772602-cththt.jpg",
+    "date": "2023-03-01"
+  },
+  "America|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7234741-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/7234741-01.jpg",
+    "date": "2020-04-01"
+  },
+  "Infinity Wars|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6538882-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/6538882-01.jpg",
+    "date": "2018-10-01"
+  },
+  "Nextwave: Agents of H.A.T.E.|||2": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/77/104770-18133-107961-1-nextwave-agents-of.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/77/104770-18133-107961-1-nextwave-agents-of.jpg",
+    "date": "2006-04-01"
+  },
+  "Nextwave: Agents of H.A.T.E.|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/77/104769-18133-107960-1-nextwave-agents-of.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/77/104769-18133-107960-1-nextwave-agents-of.jpg",
+    "date": "2006-03-24"
+  },
+  "Darkhawk|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/8122040-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/8122040-01.jpg",
+    "date": "2021-10-01"
+  },
+  "Darkhawk: Heart of the Hawk|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7914324-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/7914324-01.jpg",
+    "date": "2021-06-01"
+  },
+  "Monica Rambeau: Photon|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11159/111592040/9100664-img_2536.jpeg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11159/111592040/9100664-img_2536.jpeg",
+    "date": "2023-09-20"
+  },
+  "Secret Invasion|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/5551/914179-shehulk004_1_.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/5551/914179-shehulk004_1_.jpg",
+    "date": "2008-10-01"
+  },
+  "Blade|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9661565-blade-001.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9661565-blade-001.jpg",
+    "date": "2023-03-01"
+  },
+  "Siege: Captain America|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/1867/1189105-casiege.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/1867/1189105-casiege.jpg",
+    "date": "2010-06-01"
+  },
+  "Captain America: Who Will Wield the Shield?|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11159/111592040/9100154-img_2560.webp.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11159/111592040/9100154-img_2560.webp.jpg",
+    "date": "2023-11-01"
+  },
+  "Captain America|||616": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/7/70563/1749185-cap_616_cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/7/70563/1749185-cap_616_cover.jpg",
+    "date": "2011-05-01"
+  },
+  "Winter Soldier|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/3732880-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/3732880-01.jpg",
+    "date": "2014-06-01"
+  },
+  "Tales of Suspense|||100": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6195224-100.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/6195224-100.jpg",
+    "date": "2018-02-28"
+  },
+  "Captain America|||750": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7234741-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/7234741-01.jpg",
+    "date": "2020-04-01"
+  },
+  "Civil War: The Confession|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/40/98620-18258-106909-1-civil-war-the-confe.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/40/98620-18258-106909-1-civil-war-the-confe.jpg",
+    "date": "2007-05-31"
+  },
+  "Captain America: Finale|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9067827-wwww.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9067827-wwww.jpg",
+    "date": "2023-10-01"
+  },
+  "Howling Commandos of S.H.I.E.L.D.|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/8868237-img001.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/8868237-img001.jpg",
+    "date": "2015-07-01"
+  },
+  "Justice League|||50": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7500410-50.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/7500410-50.jpg",
+    "date": "2020-10-01"
+  },
+  "Justice League|||75": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/8472975-wwww.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/8472975-wwww.jpg",
+    "date": "2022-06-01"
+  },
+  "Lois Lane|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6991025-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/6991025-01.jpg",
+    "date": "2019-09-01"
+  },
+  "The Flash|||750": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7265754-750.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/7265754-750.jpg",
+    "date": "2020-05-01"
+  },
+  "Young Justice|||10": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/7670507-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/7670507-01.jpg",
+    "date": "2020-04-01"
+  },
+  "Young Justice|||11": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/7670508-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/7670508-01.jpg",
+    "date": "2020-05-01"
+  },
+  "Young Justice|||12": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/8324136-0001.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/8324136-0001.jpg",
+    "date": "2020-06-01"
+  },
+  "Young Justice|||13": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/8324137-0001.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/8324137-0001.jpg",
+    "date": "2020-07-01"
+  },
+  "Young Justice|||14": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/8324138-0001.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/8324138-0001.jpg",
+    "date": "2020-09-01"
+  },
+  "Young Justice|||16": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/8324140-0001.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/8324140-0001.jpg",
+    "date": "2020-11-01"
+  },
+  "Young Justice|||17": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/8324141-0007.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/8324141-0007.jpg",
+    "date": "2020-12-01"
+  },
+  "Robin 80th Anniversary 100-Page Super Spectacular|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7282224-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/7282224-01.jpg",
+    "date": "2020-05-01"
+  },
+  "Strange Adventures|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9197549-scan0000.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9197549-scan0000.jpg",
+    "date": "2020-10-01"
+  },
+  "Jay Garrick: The Flash|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9136170-wwww.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9136170-wwww.jpg",
+    "date": "2023-12-01"
+  },
+  "Marvel Knights: The World to Come|||2": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9791767-wwww.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9791767-wwww.jpg",
+    "date": "2025-09-01"
+  },
+  "Miles Morales: Spider-Man Annual|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/1/15776/9032266-mmsm1.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/1/15776/9032266-mmsm1.jpg",
+    "date": "2023-07-20"
+  },
+  "Death of the Silver Surfer|||2": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9791753-wwww.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9791753-wwww.jpg",
+    "date": "2025-09-01"
+  },
+  "Bishop: War College|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11144/111442876/8812224-opiol.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11144/111442876/8812224-opiol.jpg",
+    "date": "2023-04-01"
+  },
+  "Storm: Life Dream|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/3978752-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/3978752-01.jpg",
+    "date": "2014-09-30"
+  },
+  "Storm: Earth's Mightiest Mutant|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11182/111829875/9753832-img_9100.jpeg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11182/111829875/9753832-img_9100.jpeg",
+    "date": "2025-06-14"
+  },
+  "X-Men: Magneto Hunt — Omega|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9403581-wwww.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9403581-wwww.jpg",
+    "date": "2024-09-01"
+  },
+  "Laura Kinney: Wolverine|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11182/111829875/9828431-img_9690.jpeg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11182/111829875/9828431-img_9690.jpeg",
+    "date": "2025-08-15"
+  },
+  "Magik|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5716416-05.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5716416-05.jpg",
+    "date": "2007-12-31"
+  },
+  "Batman and Robin: Year One|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/9938866-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9938866-cover.jpg",
+    "date": "2025-12-17"
+  },
+  "DCKO|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4340122-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4340122-01.jpg",
+    "date": "2015-01-31"
+  },
+  "DCKO: Red Hood vs. The Joker|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9859735-wwww.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9859735-wwww.jpg",
+    "date": "2025-11-01"
+  },
+  "Green Lantern: Fractured Spectrum|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9599486-wwww.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9599486-wwww.jpg",
+    "date": "2025-03-01"
+  },
+  "Justice League: The Omega Act Special|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/9881647-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9881647-cover.jpg",
+    "date": "2025-12-01"
+  },
+  "Justice League Red|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9831558-wwww.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9831558-wwww.jpg",
+    "date": "2025-10-01"
+  },
+  "Justice League Dark: Tomorrow's Special|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9806662-wwww.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9806662-wwww.jpg",
+    "date": "2025-09-01"
+  },
+  "DCKO: Night Fight|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7904340-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/7904340-01.jpg",
+    "date": "2021-04-10"
+  },
+  "The Power Company: Recharged|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9707931-wwww.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9707931-wwww.jpg",
+    "date": "2025-06-01"
+  },
+  "Batman/Superman: World's Finest|||50": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/10029357-wwww.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/10029357-wwww.jpg",
+    "date": "2026-06-01"
+  },
+  "Legion of Super-Heroes: Millennium|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7059741-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/7059741-01.jpg",
+    "date": "2019-11-01"
+  },
+  "Mr. Terrific|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9736794-wwww.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9736794-wwww.jpg",
+    "date": "2025-07-01"
+  },
+  "DC Pride: Tim Drake Special|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11144/111442876/8533934-dc-pride-tim-drake-special-1-1.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11144/111442876/8533934-dc-pride-tim-drake-special-1-1.jpg",
+    "date": "2022-08-01"
+  },
+  "Robin and Batman: Jason Todd|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9751563-wwww.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9751563-wwww.jpg",
+    "date": "2025-08-01"
+  },
+  "Inglorious X-Force|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/9967025-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9967025-cover.jpg",
+    "date": "2026-03-01"
+  },
+  "Vengeance of the Moon Knight|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11159/111592040/9220951-img_3484.jpg.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11159/111592040/9220951-img_3484.jpg.jpg",
+    "date": "2024-03-01"
+  },
+  "Moon Knight and the Infinity Watch|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9561157-wwww.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9561157-wwww.jpg",
+    "date": "2025-02-01"
+  },
+  "The Immortal Thor|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9743689-wwww.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9743689-wwww.jpg",
+    "date": "2025-08-01"
+  },
+  "Immortal Thor Annual|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11182/111829875/9882060-img_0021.jpeg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11182/111829875/9882060-img_0021.jpeg",
+    "date": "2025-10-02"
+  },
+  "Doctor Strange Annual|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7125468-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/7125468-01.jpg",
+    "date": "2019-12-01"
+  },
+  "Doctor Strange|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11159/111592040/9120884-img_2719.jpeg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11159/111592040/9120884-img_2719.jpeg",
+    "date": "2023-10-03"
+  },
+  "Doctor Strange|||4": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/10009815-wwww.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/10009815-wwww.jpg",
+    "date": "2026-05-01"
+  },
+  "Black Panther|||25": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/43449-6496-50809-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/43449-6496-50809-1-black-panther.jpg",
+    "date": "2000-12-01"
+  },
+  "Black Panther|||50": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11112/111121983/6987334-9963395327-BLACK.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11112/111121983/6987334-9963395327-BLACK.jpg",
+    "date": "2016-05-01"
+  },
+  "Black Panther|||60": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11112/111121983/6987334-9963395327-BLACK.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11112/111121983/6987334-9963395327-BLACK.jpg",
+    "date": "2016-05-01"
+  },
+  "Black Panther|||15": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/41188-6496-46495-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/41188-6496-46495-1-black-panther.jpg",
+    "date": "2000-02-01"
+  },
+  "Black Panther|||5": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/1/10390/342794-11502-126176-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/1/10390/342794-11502-126176-1-black-panther.jpg",
+    "date": "2005-08-01"
+  },
+  "Black Panther: World of Wakanda|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5897066-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5897066-01.jpg",
+    "date": "2017-06-30"
+  },
+  "Black Panther|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9436383-wwww.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9436383-wwww.jpg",
+    "date": "2024-10-01"
+  },
+  "Amazing Spider-Man: Wakanda Forever|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6657951-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/6657951-01.jpg",
+    "date": "2018-10-24"
+  },
+  "X-Men: Wakanda Forever|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6657951-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/6657951-01.jpg",
+    "date": "2018-10-24"
+  },
+  "Avengers: Wakanda Forever|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6657951-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/6657951-01.jpg",
+    "date": "2018-10-24"
+  },
+  "Rise of the Black Panther|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6538893-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/6538893-01.jpg",
+    "date": "2018-08-01"
+  },
+  "Black Panther and the Crew|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11112/111121983/6987334-9963395327-BLACK.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11112/111121983/6987334-9963395327-BLACK.jpg",
+    "date": "2016-05-01"
+  },
+  "Black Panther and the Agents of Wakanda|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7267027-07.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/7267027-07.jpg",
+    "date": "2020-05-01"
+  },
+  "Killmonger|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6913166-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/6913166-01.jpg",
+    "date": "2019-05-02"
+  },
+  "Black Panther vs. Deadpool|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6657907-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/6657907-01.jpg",
+    "date": "2018-12-01"
+  },
+  "Shuri|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6651002-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/6651002-01.jpg",
+    "date": "2018-12-01"
+  },
+  "Wakanda|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/8965482-0001.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/8965482-0001.jpg",
+    "date": "2022-06-01"
+  },
+  "Black Panther: 60th Anniversary Special|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11112/111121983/6987334-9963395327-BLACK.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11112/111121983/6987334-9963395327-BLACK.jpg",
+    "date": "2016-05-01"
+  },
+  "Black Panther: Intergalactic|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/9938877-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9938877-cover.jpg",
+    "date": "2026-02-01"
+  },
+  "Predator vs. Black Panther|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9448500-wwww.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9448500-wwww.jpg",
+    "date": "2024-10-01"
+  },
+  "Black Panther: Unconquered|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11144/111442876/8715021-fgwacmpxkaqno8r.jfif.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11144/111442876/8715021-fgwacmpxkaqno8r.jfif.jpg",
+    "date": "2023-01-01"
+  },
+  "Captain Marvel|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11159/111592040/8913185-img_0517.jpeg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11159/111592040/8913185-img_0517.jpeg",
+    "date": "2023-02-01"
+  },
+  "House of X|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/8183320-7505114075-77168.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/8183320-7505114075-77168.jpg",
+    "date": "2019-07-01"
+  },
+  "House of X|||2": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7033148-02.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/7033148-02.jpg",
+    "date": "2019-10-01"
+  },
+  "Powers of X|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7175958-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/7175958-01.jpg",
+    "date": "2019-12-12"
+  },
+  "Free Comic Book Day: X-Men|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7468031-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/7468031-01.jpg",
+    "date": "2020-05-01"
+  },
+  "X-Men Origins: X-Men Blue|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9181826-wwww.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9181826-wwww.jpg",
+    "date": "2024-01-01"
+  },
+  "Excalibur|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/9/96747/7253791-snpat082_0.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/9/96747/7253791-snpat082_0.jpg",
+    "date": "2020-02-22"
+  },
+  "X-Factor|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/9/96747/2246674-x_factor_v2__1.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/9/96747/2246674-x_factor_v2__1.jpg",
+    "date": "2011-09-01"
+  },
+  "S.W.O.R.D.|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/8335192-untitled.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/8335192-untitled.jpg",
+    "date": "2021-04-01"
+  },
+  "Way of X|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/8043296-03.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/8043296-03.jpg",
+    "date": "2021-08-01"
+  },
+  "Giant-Size X-Men: Jean Grey and Emma Frost|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7259077-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/7259077-01.jpg",
+    "date": "2020-04-01"
+  },
+  "Giant-Size X-Men|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5790275-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5790275-01.jpg",
+    "date": "2017-06-30"
+  },
+  "Planet-Size X-Men|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/8031056-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/8031056-01.jpg",
+    "date": "2021-08-01"
   }
 }
