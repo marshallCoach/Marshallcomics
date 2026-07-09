@@ -202,7 +202,7 @@ export default function PasswordGate({ children }: Props) {
   if (stage === "offer-faceid") {
     return (
       <div style={{ minHeight:"100vh", background:"#111", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", padding:24 }}>
-        <img src="/logo.png" alt="Marshall Comics" style={{ width:64, height:64, borderRadius:10, marginBottom:24, objectFit:"cover" }} />
+        <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Marshall Comics" style={{ width:64, height:64, borderRadius:10, marginBottom:24, objectFit:"cover" }} />
         <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.6rem", letterSpacing:"5px", color:"#c8102e", marginBottom:8 }}>Use {bio.name}?</div>
         <div style={{ fontFamily:"'Crimson Pro',serif", fontSize:"1rem", color:"rgba(255,255,255,0.55)", textAlign:"center", maxWidth:300, lineHeight:1.6, marginBottom:32 }}>
           Skip the password next time — just use your {bio.verb} to unlock on this device.
@@ -231,7 +231,7 @@ export default function PasswordGate({ children }: Props) {
 
   return (
     <div style={{ minHeight:"100vh", background:"#111", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", padding:24 }}>
-      <img src="/logo.png" alt="Marshall Comics" style={{ width:72, height:72, borderRadius:10, marginBottom:24, objectFit:"cover" }} />
+      <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Marshall Comics" style={{ width:72, height:72, borderRadius:10, marginBottom:24, objectFit:"cover" }} />
       <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"2rem", letterSpacing:"6px", color:"#c8102e", marginBottom:4 }}>
         Marshall Comics
       </div>
