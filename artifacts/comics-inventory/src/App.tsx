@@ -35,6 +35,7 @@ import EbayPipeline from "@/pages/EbayPipeline";
 import OpsReference from "@/pages/OpsReference";
 import EbayListingGuide from "@/pages/EbayListingGuide";
 import PasswordGate from "@/components/PasswordGate";
+import { BookOpen, Boxes, Image, Briefcase } from "lucide-react";
 
 type TabId =
   | "summary" | "everything" | "collection" | "boxkeys" | "stats" | "runs" | "dataview"
@@ -71,19 +72,19 @@ const NAV = [
     id: "organisation",
     label: "Organisation",
     tabs: [
-      { id: "orgpath",     label: "Org Path" },
-      { id: "boxvisual",   label: "Box View" },
-      { id: "boxkeys",     label: "Box Keys" },
-      { id: "boxlabels",   label: "Box Labels" },
-      { id: "duplicates",     label: "Duplicates" },
-      { id: "dupchecklist",  label: "Dup Hunt" },
-      { id: "hunting",       label: "Box Hunt" },
-      { id: "boxquest",      label: "Box Quest" },
-      { id: "boxmap",        label: "Box Map" },
-      { id: "timeline",    label: "Timeline" },
-      { id: "ebaypipeline",     label: "eBay Pipeline" },
-      { id: "opsreference",     label: "Ops Reference" },
-      { id: "ebaylistingguide", label: "Phase 1 Listing Guide" },
+      { id: "boxvisual",   label: "Box View",   group: "Boxes" },
+      { id: "boxkeys",     label: "Box Keys",   group: "Boxes" },
+      { id: "boxlabels",   label: "Box Labels", group: "Boxes" },
+      { id: "boxquest",    label: "Box Quest",  group: "Boxes" },
+      { id: "boxmap",      label: "Box Map",    group: "Boxes" },
+      { id: "hunting",     label: "Box Hunt",   group: "Boxes" },
+      { id: "duplicates",    label: "Duplicates", group: "Duplicates" },
+      { id: "dupchecklist",  label: "Dup Hunt",   group: "Duplicates" },
+      { id: "orgpath",           label: "Org Path",           group: "Ops & Docs" },
+      { id: "timeline",          label: "Timeline",           group: "Ops & Docs" },
+      { id: "ebaypipeline",      label: "eBay Pipeline",      group: "Ops & Docs" },
+      { id: "opsreference",      label: "Ops Reference",      group: "Ops & Docs" },
+      { id: "ebaylistingguide",  label: "Phase 1 Listing Guide", group: "Ops & Docs" },
     ],
   },
   {
@@ -111,6 +112,13 @@ const NAV = [
 ] as const;
 
 type SectionId = (typeof NAV)[number]["id"];
+
+const SECTION_ICONS: Record<SectionId, React.ComponentType<{ size?: number }>> = {
+  inventory: BookOpen,
+  organisation: Boxes,
+  catalog: Image,
+  business: Briefcase,
+};
 
 const comics = DATA.comics;
 const total  = comics.length;
@@ -224,24 +232,37 @@ export default function App() {
 
       {/* MAIN NAV */}
       <div className="main-nav">
-        {NAV.map(section => (
-          <button
-            key={section.id}
-            className={`main-nav-btn${activeSection === section.id ? " active" : ""}`}
-            onClick={() => handleSection(section.id as SectionId)}
-          >{section.label}</button>
-        ))}
+        {NAV.map(section => {
+          const Icon = SECTION_ICONS[section.id as SectionId];
+          return (
+            <button
+              key={section.id}
+              className={`main-nav-btn${activeSection === section.id ? " active" : ""}`}
+              onClick={() => handleSection(section.id as SectionId)}
+            >
+              <Icon size={13} />
+              {section.label}
+            </button>
+          );
+        })}
       </div>
 
       {/* SUB NAV */}
       <nav className="tab-nav">
-        {currentSection.tabs.map(tab => (
-          <button
-            key={tab.id}
-            className={`tab-btn${activeTab === tab.id ? " active" : ""}`}
-            onClick={() => setActiveTab(tab.id as TabId)}
-          >{tab.label}</button>
-        ))}
+        {currentSection.tabs.map((tab, i) => {
+          const group = (tab as { group?: string }).group;
+          const prevGroup = i > 0 ? (currentSection.tabs[i - 1] as { group?: string }).group : undefined;
+          const showDivider = group && group !== prevGroup;
+          return (
+            <div key={tab.id} style={{ display: "contents" }}>
+              {showDivider && <span className="tab-group-label">{group}</span>}
+              <button
+                className={`tab-btn${activeTab === tab.id ? " active" : ""}`}
+                onClick={() => setActiveTab(tab.id as TabId)}
+              >{tab.label}</button>
+            </div>
+          );
+        })}
       </nav>
 
       {/* PAGES */}
