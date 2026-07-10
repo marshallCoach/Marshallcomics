@@ -32,7 +32,7 @@ export function Paginator({ page, pageCount, total, pageSize, onChange }: Props)
       flexWrap: "wrap",
       gap: 8,
     }}>
-      <span style={{ fontSize: "0.75rem", color: "var(--muted2)", fontFamily: "'Crimson Pro', serif" }}>
+      <span style={{ fontSize: "0.875rem", color: "var(--muted2)", fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>
         Showing {from}–{to} of {total}
       </span>
       <div style={{ display: "flex", gap: 4, alignItems: "center" }}>
@@ -44,7 +44,7 @@ export function Paginator({ page, pageCount, total, pageSize, onChange }: Props)
 
         {pages.map((p, i) =>
           p === "…"
-            ? <span key={`e${i}`} style={{ padding: "0 4px", color: "var(--muted2)", fontSize: "0.75rem" }}>…</span>
+            ? <span key={`e${i}`} style={{ padding: "0 4px", color: "var(--muted2)", fontSize: "0.875rem" }}>…</span>
             : <button
                 key={p}
                 onClick={() => onChange(p as number)}
@@ -65,8 +65,8 @@ export function Paginator({ page, pageCount, total, pageSize, onChange }: Props)
 function btnStyle(active: boolean, disabled: boolean): React.CSSProperties {
   return {
     padding: "4px 10px",
-    fontSize: "0.75rem",
-    fontFamily: "'Bebas Neue', sans-serif",
+    fontSize: "0.875rem",
+    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
     letterSpacing: "1px",
     border: active ? "1.5px solid var(--red)" : "1.5px solid var(--border)",
     borderRadius: 3,

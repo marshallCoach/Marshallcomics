@@ -248,15 +248,15 @@ export default function CapFalconChecklist() {
 
       {/* Header */}
       <div style={{ marginBottom: 24 }}>
-        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem",
+        <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
           letterSpacing:"3px", color:"var(--muted)", marginBottom:4 }}>
           COLLECTOR'S RUN CHECKLIST
         </div>
-        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"2.4rem",
+        <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"1.75rem",
           letterSpacing:"4px", color:"var(--red)", lineHeight:1, marginBottom:6 }}>
           CAPTAIN AMERICA &amp; THE FALCON
         </div>
-        <div style={{ fontSize:"0.9rem", color:"var(--muted2)", fontFamily:"'Crimson Pro',serif",
+        <div style={{ fontSize:"0.875rem", color:"var(--muted2)", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
           lineHeight:1.6, maxWidth:620 }}>
           Full Cap Vol.1 run (#100–#255) plus key issues from 6 other series — 1964 to 2022.
           Owned issues are highlighted in the collection. Every gap is shown.
@@ -268,41 +268,41 @@ export default function CapFalconChecklist() {
         borderRadius:10, padding:"16px 20px", marginBottom:20,
         display:"flex", gap:24, flexWrap:"wrap", alignItems:"center" }}>
         <div>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"2.4rem",
+          <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"1.75rem",
             color:"var(--red)", lineHeight:1 }}>{ownedCount}</div>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+          <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
             letterSpacing:"2px", color:"var(--muted)", marginTop:2 }}>OWNED</div>
         </div>
         <div>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"2.4rem",
+          <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"1.75rem",
             color:"var(--muted2)", lineHeight:1 }}>{missingCount}</div>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+          <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
             letterSpacing:"2px", color:"var(--muted)", marginTop:2 }}>MISSING</div>
         </div>
         <div>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"2.4rem",
+          <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"1.75rem",
             color:"#8a6000", lineHeight:1 }}>{ownedKeys}/{keyItems.length}</div>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+          <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
             letterSpacing:"2px", color:"var(--muted)", marginTop:2 }}>KEYS OWNED</div>
         </div>
         <div>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"2.4rem",
+          <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"1.75rem",
             color:"#7c3aed", lineHeight:1 }}>{ownedMajors}/{majorKeys.length}</div>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+          <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
             letterSpacing:"2px", color:"var(--muted)", marginTop:2 }}>MAJOR KEYS</div>
         </div>
         <div style={{ flex:1, minWidth:160 }}>
           <div style={{ display:"flex", justifyContent:"space-between", marginBottom:5 }}>
-            <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+            <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
               letterSpacing:"2px", color:"var(--muted)" }}>RUN COMPLETION</span>
-            <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem",
+            <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
               color:"var(--red)" }}>{pct}%</span>
           </div>
           <div style={{ background:"var(--border)", borderRadius:99, height:8, overflow:"hidden" }}>
             <div style={{ background:"var(--red)", height:"100%", borderRadius:99,
               width:`${pct}%`, transition:"width 0.6s ease" }}/>
           </div>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+          <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
             letterSpacing:"1.5px", color:"var(--muted)", marginTop:4 }}>
             {ownedCount} OF {enriched.length} ISSUES
           </div>
@@ -314,7 +314,7 @@ export default function CapFalconChecklist() {
         <div style={{ background:"#fff8e0", border:"1.5px solid #d4a800",
           borderLeft:"4px solid #d4a800", borderRadius:8,
           padding:"12px 16px", marginBottom:20 }}>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem",
+          <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
             letterSpacing:"2px", color:"#8a6000", marginBottom:8 }}>
             🎯 MAJOR KEYS YOU'RE MISSING — THE GRAILS
           </div>
@@ -329,20 +329,20 @@ export default function CapFalconChecklist() {
                 onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 4px 12px rgba(212,168,0,0.3)"; (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(-1px)"; }}
                 onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.boxShadow = "none"; (e.currentTarget as HTMLAnchorElement).style.transform = "none"; }}
               >
-                <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem",
+                <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                   letterSpacing:"1px", color:"#8a6000", lineHeight:1 }}>
                   {item.issue}
                 </span>
-                <span style={{ fontSize:"0.75rem", color:"var(--muted2)", marginTop:2,
-                  fontFamily:"'Crimson Pro',serif" }}>
+                <span style={{ fontSize:"0.875rem", color:"var(--muted2)", marginTop:2,
+                  fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>
                   {item.series.replace("Captain America","CA").replace("(Vol.","v")}
                 </span>
-                <span style={{ fontSize:"0.68rem", color:"#8a6000", marginTop:3,
-                  fontFamily:"'Crimson Pro',serif", fontStyle:"italic", lineHeight:1.3 }}>
+                <span style={{ fontSize:"0.875rem", color:"#8a6000", marginTop:3,
+                  fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontStyle:"italic", lineHeight:1.3 }}>
                   {item.significance.split(";")[0].replace(" MAJOR KEY","").replace(/[🦅❄️💀🌟🔫]/gu,"")}
                 </span>
-                <span style={{ fontSize:"0.62rem", color:"var(--muted)", marginTop:4,
-                  fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>
+                <span style={{ fontSize:"0.875rem", color:"var(--muted)", marginTop:4,
+                  fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px" }}>
                   {item.value} → search ↗
                 </span>
               </a>
@@ -361,7 +361,7 @@ export default function CapFalconChecklist() {
               background: filter === f ? "var(--red)" : "none",
               color: filter === f ? "#fff" : "var(--muted2)",
               border:"none", borderRadius:5, padding:"5px 12px", cursor:"pointer",
-              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1.5px",
+              fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
               transition:"all 0.12s",
             }}>
               {f === "all" ? `ALL (${enriched.length})`
@@ -379,7 +379,7 @@ export default function CapFalconChecklist() {
             color: seriesFilter === "all" ? "#fff" : "var(--muted2)",
             border:`1.5px solid ${seriesFilter === "all" ? "var(--brown-light)" : "var(--border)"}`,
             borderRadius:20, padding:"4px 12px", cursor:"pointer",
-            fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px",
+            fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
             transition:"all 0.12s",
           }}>ALL SERIES</button>
 
@@ -394,7 +394,7 @@ export default function CapFalconChecklist() {
                 color: active ? "#fff" : col,
                 border:`1.5px solid ${col}`,
                 borderRadius:20, padding:"4px 12px", cursor:"pointer",
-                fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px",
+                fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
                 transition:"all 0.12s", whiteSpace:"nowrap",
               }}>
                 {SERIES_SHORT[s]}
@@ -406,7 +406,7 @@ export default function CapFalconChecklist() {
       </div>
 
       {/* Issue count for current filter */}
-      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem",
+      <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
         letterSpacing:"2px", color:"var(--muted)", marginBottom:14 }}>
         SHOWING {filtered.length} ISSUE{filtered.length !== 1 ? "S" : ""}
         {seriesFilter !== "all" ? ` · ${seriesFilter.toUpperCase()}` : ""}
@@ -426,11 +426,11 @@ export default function CapFalconChecklist() {
             <div style={{ display:"flex", alignItems:"center", gap:12, marginBottom:10,
               borderBottom:`2px solid ${col}`, paddingBottom:8 }}>
               <div style={{ flex:1 }}>
-                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.2rem",
+                <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                   letterSpacing:"2.5px", color:col, lineHeight:1 }}>
                   {seriesName}
                 </div>
-                <div style={{ fontSize:"0.75rem", color:"var(--muted)", marginTop:3 }}>
+                <div style={{ fontSize:"0.875rem", color:"var(--muted)", marginTop:3 }}>
                   {ownedInSeries}/{items.length} issues
                   {" · "}
                   <span style={{ color: items.filter(i=>isKey(i.significance)&&i.owned).length > 0 ? "#8a6000" : "var(--muted)" }}>
@@ -444,7 +444,7 @@ export default function CapFalconChecklist() {
                   <div style={{ background:col, height:"100%", width:`${sp}%`,
                     borderRadius:99, transition:"width 0.5s ease" }}/>
                 </div>
-                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+                <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                   letterSpacing:"1.5px", color:"var(--muted)", marginTop:3, textAlign:"right" }}>
                   {sp}%
                 </div>
@@ -488,21 +488,21 @@ export default function CapFalconChecklist() {
                         display:"flex", alignItems:"center", justifyContent:"center",
                         background: owned ? "#fce4ec" : "var(--surface2)",
                         border: `2px solid ${owned ? "#e91e63" : "var(--border)"}`,
-                        fontSize:"0.68rem",
+                        fontSize:"0.875rem",
                         transition:"all 0.15s",
                       }}>
                         {owned ? "✓" : ""}
                       </div>
 
                       {/* Issue number */}
-                      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem",
+                      <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                         letterSpacing:"1px", color: owned ? col : "var(--muted2)",
                         minWidth:70, flexShrink:0 }}>
                         {item.issue}
                       </div>
 
                       {/* Year */}
-                      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+                      <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                         letterSpacing:"1px", color:"var(--muted)", minWidth:36, flexShrink:0 }}>
                         {item.year}
                       </div>
@@ -510,10 +510,10 @@ export default function CapFalconChecklist() {
                       {/* Significance */}
                       <div style={{ flex:1, minWidth:0 }}>
                         <div style={{
-                          fontSize:"0.82rem",
+                          fontSize:"0.875rem",
                           color: major ? "#8a6000" : key ? "var(--text2)" : "var(--muted2)",
                           fontWeight: major ? 700 : key ? 600 : 400,
-                          fontFamily: major || key ? "'Crimson Pro',serif" : "inherit",
+                          fontFamily: major || key ? "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" : "inherit",
                           overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap",
                         }}>
                           {item.significance}
@@ -524,23 +524,23 @@ export default function CapFalconChecklist() {
                       <div style={{ display:"flex", gap:5, flexShrink:0, alignItems:"center" }}>
                         {major && (
                           <span style={{ background:"#d4a800", color:"#fff", borderRadius:4,
-                            padding:"2px 7px", fontFamily:"'Bebas Neue',sans-serif",
-                            fontSize:"0.62rem", letterSpacing:"1px" }}>MAJOR</span>
+                            padding:"2px 7px", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+                            fontSize:"0.875rem", letterSpacing:"1px" }}>MAJOR</span>
                         )}
                         {key && !major && (
-                          <span className="badge bkey" style={{ fontSize:"0.62rem" }}>KEY</span>
+                          <span className="badge bkey" style={{ fontSize:"0.875rem" }}>KEY</span>
                         )}
                         {owned ? (
                           <span style={{ background:"#fce4ec", color:"#880e4f", border:"1px solid #f48fb1",
-                            borderRadius:4, padding:"2px 7px", fontFamily:"'Bebas Neue',sans-serif",
-                            fontSize:"0.62rem", letterSpacing:"1px" }}>OWNED</span>
+                            borderRadius:4, padding:"2px 7px", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+                            fontSize:"0.875rem", letterSpacing:"1px" }}>OWNED</span>
                         ) : (
                           <span style={{ background:"var(--surface2)", color:"var(--muted)",
                             border:"1px solid var(--border)", borderRadius:4, padding:"2px 7px",
-                            fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+                            fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                             letterSpacing:"1px" }}>NEED</span>
                         )}
-                        <span style={{ color:"var(--muted)", fontSize:"0.75rem", marginLeft:2 }}>
+                        <span style={{ color:"var(--muted)", fontSize:"0.875rem", marginLeft:2 }}>
                           {isExpanded ? "▲" : "▼"}
                         </span>
                       </div>
@@ -553,20 +553,20 @@ export default function CapFalconChecklist() {
                         background: major ? "#fefdf5" : "var(--surface)" }}>
                         <div style={{ display:"flex", gap:20, flexWrap:"wrap", marginBottom:10 }}>
                           <div>
-                            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+                            <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                               letterSpacing:"2px", color:"var(--muted)", marginBottom:3 }}>CREDITS</div>
-                            <div style={{ fontSize:"0.82rem", color:"var(--text2)",
-                              fontFamily:"'Crimson Pro',serif" }}>{item.credits}</div>
+                            <div style={{ fontSize:"0.875rem", color:"var(--text2)",
+                              fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>{item.credits}</div>
                           </div>
                           <div>
-                            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+                            <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                               letterSpacing:"2px", color:"var(--muted)", marginBottom:3 }}>EST. VALUE RAW</div>
-                            <div style={{ fontSize:"0.82rem", color:"#16a34a", fontWeight:700 }}>{item.value}</div>
+                            <div style={{ fontSize:"0.875rem", color:"#16a34a", fontWeight:700 }}>{item.value}</div>
                           </div>
                           <div>
-                            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+                            <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                               letterSpacing:"2px", color:"var(--muted)", marginBottom:3 }}>STATUS</div>
-                            <div style={{ fontSize:"0.82rem", color: owned ? "#880e4f" : "var(--muted2)",
+                            <div style={{ fontSize:"0.875rem", color: owned ? "#880e4f" : "var(--muted2)",
                               fontWeight:600 }}>{owned ? "✓ In Collection" : "Not yet owned"}</div>
                           </div>
                         </div>
@@ -576,7 +576,7 @@ export default function CapFalconChecklist() {
                             style={{ display:"inline-flex", alignItems:"center", gap:6,
                               background:"var(--red)", color:"#fff", borderRadius:5,
                               padding:"6px 14px", textDecoration:"none",
-                              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem",
+                              fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                               letterSpacing:"1.5px", transition:"opacity 0.12s" }}
                             onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.opacity = "0.85"}
                             onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.opacity = "1"}
@@ -596,7 +596,7 @@ export default function CapFalconChecklist() {
 
       {filtered.length === 0 && (
         <div style={{ textAlign:"center", padding:"40px 20px", color:"var(--muted)",
-          fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem", letterSpacing:"3px" }}>
+          fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"3px" }}>
           NO ISSUES MATCH THESE FILTERS
         </div>
       )}

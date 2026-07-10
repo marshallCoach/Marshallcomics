@@ -166,9 +166,9 @@ export default function Runs() {
 
       {/* Header */}
       <div style={{ marginBottom: 16 }}>
-        <h1 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.8rem", color:"var(--red)",
+        <h1 style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"1.75rem", color:"var(--red)",
           letterSpacing:"3px", lineHeight:1, margin:0 }}>Run Completion</h1>
-        <p style={{ color:"var(--muted2)", fontSize:"0.9rem", marginTop:6 }}>
+        <p style={{ color:"var(--muted2)", fontSize:"0.875rem", marginTop:6 }}>
           Titles where you own {threshold}%+ of a consecutive run — grouped by publisher.
         </p>
       </div>
@@ -193,14 +193,14 @@ export default function Runs() {
                 boxShadow: isActive ? "0 4px 14px rgba(200,16,46,0.22)" : "none",
                 transform: isActive ? "translateY(-2px)" : "none",
               }}>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.4rem",
+              <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"1.75rem",
                 color: isActive ? "#fff" : "var(--red)",
                 letterSpacing:"1px", lineHeight:1 }}>{s.val}</div>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px",
+              <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
                 color: isActive ? "rgba(255,255,255,0.8)" : "var(--muted)", marginTop:3 }}>{s.lbl}</div>
               {isActive && (
-                <div style={{ fontSize:"0.62rem", color:"rgba(255,255,255,0.65)", marginTop:4,
-                  fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>CLICK TO CLOSE ▲</div>
+                <div style={{ fontSize:"0.875rem", color:"rgba(255,255,255,0.65)", marginTop:4,
+                  fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px" }}>CLICK TO CLOSE ▲</div>
               )}
             </div>
           );
@@ -212,20 +212,20 @@ export default function Runs() {
         background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:6, padding:"12px 14px" }}>
 
         <div style={{ display:"flex", alignItems:"center", gap:8, flexShrink:0 }}>
-          <label style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem",
+          <label style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
             letterSpacing:"1.5px", color:"var(--muted2)", whiteSpace:"nowrap" }}>
             MIN COMPLETE
           </label>
           <input type="range" min={50} max={100} step={5} value={threshold}
             onChange={e => setThreshold(Number(e.target.value))}
             style={{ width:90, accentColor:"var(--red)" }} />
-          <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", color:"var(--red)",
+          <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:"var(--red)",
             letterSpacing:"1px", minWidth:36 }}>{threshold}%</span>
         </div>
 
         <select value={pubFilter} onChange={e => setPubFilter(e.target.value)}
           style={{ background:"var(--bg)", border:"1.5px solid var(--border)", color:"var(--text)",
-            padding:"6px 10px", borderRadius:5, fontFamily:"'Crimson Pro',serif", fontSize:"0.9rem" }}>
+            padding:"6px 10px", borderRadius:5, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem" }}>
           <option value="">All Publishers</option>
           <option value="Marvel">Marvel</option>
           <option value="DC">DC</option>
@@ -239,7 +239,7 @@ export default function Runs() {
               color: sortBy===v ? "#fff" : "var(--muted2)",
               border: sortBy===v ? "1.5px solid var(--red)" : "1.5px solid var(--border)",
               borderRadius:5, padding:"5px 12px", cursor:"pointer",
-              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1.5px",
+              fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
               transition:"all 0.15s",
             }}>{l}</button>
           ))}
@@ -252,7 +252,7 @@ export default function Runs() {
             { val: hideComplete, set: setHideComplete,  label: "HIDE 100%" },
           ] as const).map(({ val, set, label }) => (
             <button key={label} onClick={() => set(v => !v)} style={{
-              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px",
+              fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
               padding:"4px 11px", cursor:"pointer", borderRadius:5, transition:"all 0.15s",
               background: val ? "#1e293b" : "var(--surface2)",
               color:       val ? "#f8fafc"  : "var(--muted2)",
@@ -267,14 +267,14 @@ export default function Runs() {
         <div style={{ marginLeft:"auto", display:"flex", gap:6, alignItems:"center" }}>
           <button
             onClick={() => setOpenPublishers(new Set(PUB_GROUPS.map(p=>p.key)))}
-            style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px",
+            style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
               background:"var(--surface2)", color:"var(--muted2)", border:"1.5px solid var(--border)",
               borderRadius:5, padding:"4px 10px", cursor:"pointer" }}>
             Expand All
           </button>
           <button
             onClick={() => { setOpenPublishers(new Set()); setOpenBuckets(new Set()); }}
-            style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px",
+            style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
               background:"var(--surface2)", color:"var(--muted2)", border:"1.5px solid var(--border)",
               borderRadius:5, padding:"4px 10px", cursor:"pointer" }}>
             Collapse All
@@ -285,10 +285,10 @@ export default function Runs() {
       {/* Results bar */}
       <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center",
         marginBottom:14, flexWrap:"wrap", gap:8 }}>
-        <div style={{ fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px", fontSize:"0.82rem", color:"var(--muted2)" }}>
+        <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1.5px", fontSize:"0.875rem", color:"var(--muted2)" }}>
           {filtered.length === 0
             ? "No runs found — try lowering the threshold"
-            : <><span style={{ color:"var(--red)", fontSize:"1rem" }}>{filtered.length.toLocaleString()}</span> {filtered.length===1?"run":"runs"} — {allRuns.length.toLocaleString()} total groups</>
+            : <><span style={{ color:"var(--red)", fontSize:"0.875rem" }}>{filtered.length.toLocaleString()}</span> {filtered.length===1?"run":"runs"} — {allRuns.length.toLocaleString()} total groups</>
           }
         </div>
         {!drillKey && (
@@ -296,7 +296,7 @@ export default function Runs() {
             {(["grouped","card"] as const).map(v => (
               <button key={v} onClick={() => setView(v)}
                 style={{
-                  fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"1.5px",
+                  fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
                   padding:"5px 14px", border:`1.5px solid ${view===v?"var(--red)":"var(--border)"}`,
                   background:view===v?"var(--red)":"var(--surface)", color:view===v?"#fff":"var(--muted2)",
                   borderRadius:4, cursor:"pointer", transition:"all 0.15s",
@@ -313,18 +313,18 @@ export default function Runs() {
         <div style={{ marginBottom:28 }}>
           {/* Drill header */}
           <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:12, flexWrap:"wrap" }}>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem",
+            <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
               letterSpacing:"2px", color:"var(--red)" }}>
               {{ filtered:`Runs ≥ ${threshold}%`, complete:"Complete Runs", near:"≥ 95% Complete", all:"All Title Groups" }[drillKey]}
             </div>
-            <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", color:"var(--muted)",
+            <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:"var(--muted)",
               background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:10, padding:"2px 10px" }}>
               {drillRuns.length} runs
             </span>
             <div style={{ marginLeft:"auto", display:"flex", gap:5 }}>
               {(["list","card"] as const).map(v => (
                 <button key={v} onClick={() => setDrillView(v)} style={{
-                  fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1.5px",
+                  fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
                   padding:"4px 12px", border:`1.5px solid ${drillView===v?"var(--red)":"var(--border)"}`,
                   background:drillView===v?"var(--red)":"var(--surface)",
                   color:drillView===v?"#fff":"var(--muted2)",
@@ -352,19 +352,19 @@ export default function Runs() {
                       boxShadow: isSelected ? `0 4px 16px ${pg.color}20` : "none",
                     }}>
                     <div style={{ display:"flex", alignItems:"flex-start", gap:8 }}>
-                      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem",
+                      <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                         letterSpacing:"1px", color:pg.color, flex:1, lineHeight:1.2 }}>
                         {run.title}
-                        {run.volume !== "1" && <span style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", background:"rgba(0,0,0,0.08)", borderRadius:3, padding:"1px 5px", marginLeft:5 }}>Vol {run.volume}</span>}
+                        {run.volume !== "1" && <span style={{ fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px", background:"rgba(0,0,0,0.08)", borderRadius:3, padding:"1px 5px", marginLeft:5 }}>Vol {run.volume}</span>}
                       </div>
-                      <div style={{ fontSize:"0.68rem", color:"var(--muted)", flexShrink:0 }}>{isSelected?"▲":"▼"}</div>
+                      <div style={{ fontSize:"0.875rem", color:"var(--muted)", flexShrink:0 }}>{isSelected?"▲":"▼"}</div>
                     </div>
                     <div style={{ display:"flex", gap:5, marginTop:5, flexWrap:"wrap" }}>
-                      <span style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif",
+                      <span style={{ fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
                         letterSpacing:"1px", background:pg.accent, color:pg.color,
                         border:`1px solid ${pg.border}`, borderRadius:3, padding:"1px 6px" }}>{pg.label}</span>
                       {run.keys > 0 && (
-                        <span style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif",
+                        <span style={{ fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
                           letterSpacing:"1px", background:"#fff8e0", color:"#8a6000",
                           border:"1px solid #fde68a", borderRadius:3, padding:"1px 6px" }}>
                           {run.keys} KEY{run.keys>1?"S":""}
@@ -375,11 +375,11 @@ export default function Runs() {
                       <div style={{ width:`${pctFill}%`, height:"100%", background:pg.color, borderRadius:3, transition:"width 0.4s" }} />
                     </div>
                     <div style={{ display:"flex", justifyContent:"space-between", alignItems:"baseline" }}>
-                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem",
+                      <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                         color:pg.color, letterSpacing:"1px", lineHeight:1 }}>
                         {run.pct >= 100 ? "COMPLETE" : `${run.pct.toFixed(0)}%`}
                       </span>
-                      <span style={{ fontSize:"0.68rem", color:"var(--muted)" }}>
+                      <span style={{ fontSize:"0.875rem", color:"var(--muted)" }}>
                         {run.haveCount}/{run.rangeSize}
                         {run.missing.length > 0 && <span style={{ color:"var(--red)", marginLeft:4 }}>{run.missing.length} missing</span>}
                       </span>
@@ -388,7 +388,7 @@ export default function Runs() {
                       <div style={{ marginTop:10, borderTop:"1px solid var(--border)", paddingTop:8 }}>
                         {run.missing.length > 0 && (
                           <>
-                            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+                            <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                               letterSpacing:"2px", color:"var(--red)", marginBottom:6 }}>MISSING ({run.missing.length})</div>
                             <div style={{ display:"flex", flexWrap:"wrap", gap:4, marginBottom:10 }}>
                               {run.missing.map(n => (
@@ -396,15 +396,15 @@ export default function Runs() {
                                   href={`https://comicvine.gamespot.com/search/?q=${encodeURIComponent(run.title + " " + n)}&resources=issue`}
                                   target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()}
                                   style={{ background:"#fff0f0", color:"var(--red)", border:"1.5px solid #f5c8c8",
-                                    borderRadius:4, padding:"2px 8px", fontSize:"0.75rem",
-                                    fontFamily:"'Bebas Neue',sans-serif", textDecoration:"none" }}>
+                                    borderRadius:4, padding:"2px 8px", fontSize:"0.875rem",
+                                    fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", textDecoration:"none" }}>
                                   #{n}
                                 </a>
                               ))}
                             </div>
                           </>
                         )}
-                        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+                        <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                           letterSpacing:"2px", color:"var(--muted2)", marginBottom:6 }}>YOU OWN ({run.haveCount})</div>
                         <div style={{ display:"flex", flexWrap:"wrap", gap:3 }}>
                           {run.issues.map((c, ci) => {
@@ -414,8 +414,8 @@ export default function Runs() {
                               <div key={ci} title={isKey ? c.Key_Reason : c.Arc} style={{
                                 background: isKey ? "#fff8e0" : "var(--surface2)",
                                 border: isKey ? "1.5px solid #d4a800" : "1.5px solid var(--border)",
-                                borderRadius:4, padding:"2px 7px", fontSize:"0.75rem",
-                                fontFamily:"'Bebas Neue',sans-serif",
+                                borderRadius:4, padding:"2px 7px", fontSize:"0.875rem",
+                                fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
                                 color: isKey ? "#8a6000" : "var(--text2)",
                               }}>
                                 {c.Issue}
@@ -425,7 +425,7 @@ export default function Runs() {
                             );
                           })}
                         </div>
-                        <div style={{ marginTop:8, fontSize:"0.68rem", color:"var(--muted)" }}>
+                        <div style={{ marginTop:8, fontSize:"0.875rem", color:"var(--muted)" }}>
                           Boxes: {Array.from(new Set(run.issues.map(c => `Box ${c.Box}`))).join(", ")}
                         </div>
                       </div>
@@ -453,12 +453,12 @@ export default function Runs() {
                       style={{ display:"flex", alignItems:"center", gap:12, padding:"10px 16px", cursor:"pointer", flexWrap:"wrap" }}>
                       <div style={{ width:6, height:6, borderRadius:"50%", background:pg.color, flexShrink:0 }} />
                       <div style={{ flex:1, minWidth:0 }}>
-                        <div style={{ fontSize:"0.9rem", fontWeight:600, color:"var(--brown-light)",
+                        <div style={{ fontSize:"0.875rem", fontWeight:600, color:"var(--brown-light)",
                           overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>
                           {run.title}
-                          {run.volume !== "1" && <span style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", background:"rgba(0,0,0,0.08)", borderRadius:3, padding:"1px 5px", marginLeft:5 }}>Vol {run.volume}</span>}
+                          {run.volume !== "1" && <span style={{ fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px", background:"rgba(0,0,0,0.08)", borderRadius:3, padding:"1px 5px", marginLeft:5 }}>Vol {run.volume}</span>}
                         </div>
-                        <div style={{ fontSize:"0.82rem", color:"var(--text2)", marginTop:2, lineHeight:1.4 }}>
+                        <div style={{ fontSize:"0.875rem", color:"var(--text2)", marginTop:2, lineHeight:1.4 }}>
                           <span style={{ color:"var(--muted2)" }}>#{run.rangeMin}–#{run.rangeMax}</span>
                           {run.keys   > 0 && <span style={{ color:"#d97706", marginLeft:6, fontWeight:600 }}>· {run.keys} key{run.keys>1?"s":""}</span>}
                           {run.signed > 0 && <span style={{ color:"#8b2be2", marginLeft:6, fontWeight:600 }}>· {run.signed} signed</span>}
@@ -468,22 +468,22 @@ export default function Runs() {
                         <div style={{ width:`${pctFill}%`, height:"100%", background:pg.color, borderRadius:3, transition:"width 0.4s" }} />
                       </div>
                       <div style={{ textAlign:"right", flexShrink:0, minWidth:80 }}>
-                        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem",
+                        <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                           color:pg.color, letterSpacing:"1px", lineHeight:1 }}>
                           {run.pct >= 100 ? "COMPLETE" : `${run.pct.toFixed(0)}%`}
                         </div>
-                        <div style={{ fontSize:"0.62rem", color:"var(--muted)", marginTop:1 }}>
+                        <div style={{ fontSize:"0.875rem", color:"var(--muted)", marginTop:1 }}>
                           {run.haveCount}/{run.rangeSize}
                           {run.missing.length > 0 && ` · ${run.missing.length} missing`}
                         </div>
                       </div>
-                      <span style={{ color:"var(--muted)", fontSize:"0.68rem", flexShrink:0 }}>{isSelected?"▲":"▼"}</span>
+                      <span style={{ color:"var(--muted)", fontSize:"0.875rem", flexShrink:0 }}>{isSelected?"▲":"▼"}</span>
                     </div>
                     {isSelected && (
                       <div style={{ padding:"12px 16px 14px 34px", borderTop:"1px solid var(--border)", background:"var(--surface)" }}>
                         {run.missing.length > 0 && (
                           <div style={{ marginBottom:12 }}>
-                            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+                            <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                               letterSpacing:"2px", color:"var(--red)", marginBottom:6 }}>
                               MISSING ISSUES ({run.missing.length})
                             </div>
@@ -493,19 +493,19 @@ export default function Runs() {
                                   href={`https://comicvine.gamespot.com/search/?q=${encodeURIComponent(run.title + " " + n)}&resources=issue`}
                                   target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()}
                                   style={{ background:"#fff0f0", color:"var(--red)", border:"1.5px solid #f5c8c8",
-                                    borderRadius:4, padding:"3px 10px", fontSize:"0.75rem",
-                                    fontFamily:"'Bebas Neue',sans-serif", textDecoration:"none" }}>
+                                    borderRadius:4, padding:"3px 10px", fontSize:"0.875rem",
+                                    fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", textDecoration:"none" }}>
                                   #{n}
                                 </a>
                               ))}
                             </div>
-                            <div style={{ fontSize:"0.68rem", color:"var(--muted)", marginTop:5, fontStyle:"italic" }}>
+                            <div style={{ fontSize:"0.875rem", color:"var(--muted)", marginTop:5, fontStyle:"italic" }}>
                               Click any missing issue to search Comic Vine
                             </div>
                           </div>
                         )}
                         <div>
-                          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+                          <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                             letterSpacing:"2px", color:"var(--muted2)", marginBottom:6 }}>
                             ISSUES YOU OWN ({run.haveCount})
                           </div>
@@ -517,8 +517,8 @@ export default function Runs() {
                                 <div key={ci} title={isKey ? c.Key_Reason : c.Arc} style={{
                                   background: isKey ? "#fff8e0" : "var(--surface2)",
                                   border: isKey ? "1.5px solid #d4a800" : "1.5px solid var(--border)",
-                                  borderRadius:4, padding:"3px 8px", fontSize:"0.75rem",
-                                  fontFamily:"'Bebas Neue',sans-serif",
+                                  borderRadius:4, padding:"3px 8px", fontSize:"0.875rem",
+                                  fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
                                   color: isKey ? "#8a6000" : "var(--text2)",
                                 }}>
                                   {c.Issue}
@@ -529,7 +529,7 @@ export default function Runs() {
                             })}
                           </div>
                         </div>
-                        <div style={{ marginTop:8, fontSize:"0.68rem", color:"var(--muted)" }}>
+                        <div style={{ marginTop:8, fontSize:"0.875rem", color:"var(--muted)" }}>
                           Boxes: {Array.from(new Set(run.issues.map(c => `Box ${c.Box}`))).join(", ")}
                         </div>
                       </div>
@@ -542,7 +542,7 @@ export default function Runs() {
 
           {/* Divider before publisher groups */}
           <div style={{ marginTop:28, borderTop:"2px solid var(--border)", paddingTop:6, display:"flex", alignItems:"center", gap:8 }}>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"2px", color:"var(--muted)", flex:1 }}>
+            <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:"var(--muted)", flex:1 }}>
               ALL PUBLISHER GROUPS BELOW
             </div>
           </div>
@@ -567,19 +567,19 @@ export default function Runs() {
                   boxShadow: isSelected ? `0 4px 16px ${pg.color}20` : "none",
                 }}>
                 <div style={{ display:"flex", alignItems:"flex-start", gap:8 }}>
-                  <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem",
+                  <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                     letterSpacing:"1px", color:pg.color, flex:1, lineHeight:1.2 }}>
                     {run.title}
-                    {run.volume !== "1" && <span style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", background:"rgba(0,0,0,0.08)", borderRadius:3, padding:"1px 5px", marginLeft:5 }}>Vol {run.volume}</span>}
+                    {run.volume !== "1" && <span style={{ fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px", background:"rgba(0,0,0,0.08)", borderRadius:3, padding:"1px 5px", marginLeft:5 }}>Vol {run.volume}</span>}
                   </div>
-                  <div style={{ fontSize:"0.68rem", color:"var(--muted)", flexShrink:0, marginTop:1 }}>{isSelected?"▲":"▼"}</div>
+                  <div style={{ fontSize:"0.875rem", color:"var(--muted)", flexShrink:0, marginTop:1 }}>{isSelected?"▲":"▼"}</div>
                 </div>
                 <div style={{ display:"flex", gap:5, marginTop:6, flexWrap:"wrap" }}>
-                  <span style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif",
+                  <span style={{ fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
                     letterSpacing:"1px", background:pg.accent, color:pg.color,
                     border:`1px solid ${pg.border}`, borderRadius:3, padding:"1px 7px" }}>{pg.label}</span>
                   {run.keys > 0 && (
-                    <span style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif",
+                    <span style={{ fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
                       letterSpacing:"1px", background:"#fff8e0", color:"#8a6000",
                       border:"1px solid #fde68a", borderRadius:3, padding:"1px 7px" }}>
                       {run.keys} KEY{run.keys>1?"S":""}
@@ -590,18 +590,18 @@ export default function Runs() {
                   <div style={{ width:`${pct}%`, height:"100%", background:pg.color, borderRadius:3, transition:"width 0.4s" }} />
                 </div>
                 <div style={{ display:"flex", justifyContent:"space-between", alignItems:"baseline" }}>
-                  <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.2rem",
+                  <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                     color:pg.color, letterSpacing:"1px", lineHeight:1 }}>
                     {run.pct >= 100 ? "COMPLETE" : `${run.pct.toFixed(0)}%`}
                   </span>
-                  <span style={{ fontSize:"0.68rem", color:"var(--muted)" }}>
+                  <span style={{ fontSize:"0.875rem", color:"var(--muted)" }}>
                     {run.haveCount}/{run.rangeSize}
                     {run.missing.length > 0 && <span style={{ color:"var(--red)", marginLeft:4 }}>{run.missing.length} missing</span>}
                   </span>
                 </div>
                 {isSelected && run.missing.length > 0 && (
                   <div style={{ marginTop:10, borderTop:"1px solid var(--border)", paddingTop:8 }}>
-                    <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+                    <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                       letterSpacing:"2px", color:"var(--red)", marginBottom:6 }}>MISSING</div>
                     <div style={{ display:"flex", flexWrap:"wrap", gap:4 }}>
                       {run.missing.map(n => (
@@ -610,8 +610,8 @@ export default function Runs() {
                           target="_blank" rel="noopener noreferrer"
                           onClick={e => e.stopPropagation()}
                           style={{ background:"#fff0f0", color:"var(--red)", border:"1.5px solid #f5c8c8",
-                            borderRadius:4, padding:"2px 8px", fontSize:"0.75rem",
-                            fontFamily:"'Bebas Neue',sans-serif", textDecoration:"none" }}>
+                            borderRadius:4, padding:"2px 8px", fontSize:"0.875rem",
+                            fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", textDecoration:"none" }}>
                           #{n}
                         </a>
                       ))}
@@ -644,17 +644,17 @@ export default function Runs() {
                 {/* Publisher badge */}
                 <div style={{ width:28, height:28, borderRadius:6, background:pg.color,
                   display:"flex", alignItems:"center", justifyContent:"center",
-                  fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem",
+                  fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                   color:"#fff", letterSpacing:"1px", flexShrink:0 }}>
                   {pg.key === "Other" ? "IND" : pg.key.toUpperCase()}
                 </div>
 
                 <div style={{ flex:1 }}>
-                  <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem",
+                  <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                     letterSpacing:"3px", color: pg.color, lineHeight:1 }}>
                     {pg.label}
                   </div>
-                  <div style={{ fontSize:"0.75rem", color:"var(--muted)", marginTop:2 }}>
+                  <div style={{ fontSize:"0.875rem", color:"var(--muted)", marginTop:2 }}>
                     {pg.runs.length} runs · {complete} complete
                     {" · "}avg {(pg.runs.reduce((s,r)=>s+r.pct,0)/pg.runs.length).toFixed(0)}%
                   </div>
@@ -663,7 +663,7 @@ export default function Runs() {
                 {/* Bucket pills summary */}
                 <div style={{ display:"flex", gap:5, flexShrink:0, flexWrap:"wrap" }}>
                   {pg.buckets.map(b => (
-                    <span key={b.label} style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif",
+                    <span key={b.label} style={{ fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
                       letterSpacing:"0.5px", background:b.bg, color:b.color,
                       border:`1px solid ${b.border}`, borderRadius:10, padding:"2px 8px" }}>
                       {b.label === "100% — COMPLETE" ? "100%" : b.label} · {b.runs.length}
@@ -671,7 +671,7 @@ export default function Runs() {
                   ))}
                 </div>
 
-                <span style={{ color:"var(--muted)", fontSize:"0.82rem", flexShrink:0 }}>
+                <span style={{ color:"var(--muted)", fontSize:"0.875rem", flexShrink:0 }}>
                   {isPubOpen ? "▲" : "▼"}
                 </span>
               </button>
@@ -696,22 +696,22 @@ export default function Runs() {
                             transition:"background 0.15s", borderLeft:`3px solid ${bucket.color}` }}>
 
                           <div style={{ width:8, height:8, borderRadius:"50%", background:bucket.color, flexShrink:0 }} />
-                          <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem",
+                          <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                             letterSpacing:"2px", color: bucket.color, flex:1 }}>
                             {bucket.label}
                           </span>
-                          <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+                          <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                             letterSpacing:"1.5px", color:"var(--muted)", background:"var(--surface)",
                             border:"1px solid var(--border)", borderRadius:10, padding:"2px 8px", flexShrink:0 }}>
                             {bucket.runs.length} {bucket.runs.length === 1 ? "run" : "runs"}
                           </span>
                           {isComplete && (
-                            <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px",
+                            <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
                               background:"#16a34a", color:"#fff", borderRadius:3, padding:"2px 8px", flexShrink:0 }}>
                               🎉 ALL COMPLETE
                             </span>
                           )}
-                          <span style={{ color:"var(--muted)", fontSize:"0.75rem", flexShrink:0 }}>
+                          <span style={{ color:"var(--muted)", fontSize:"0.875rem", flexShrink:0 }}>
                             {isBucketOpen ? "▲" : "▼"}
                           </span>
                         </button>
@@ -736,12 +736,12 @@ export default function Runs() {
                                       cursor:"pointer", flexWrap:"wrap" }}>
 
                                     <div style={{ flex:1, minWidth:0 }}>
-                                      <div style={{ fontSize:"0.9rem", fontWeight:600, color:"var(--brown-light)",
+                                      <div style={{ fontSize:"0.875rem", fontWeight:600, color:"var(--brown-light)",
                                         overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>
                                         {run.title}
-                                        {run.volume !== "1" && <span style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", background:"rgba(0,0,0,0.08)", borderRadius:3, padding:"1px 5px", marginLeft:5 }}>Vol {run.volume}</span>}
+                                        {run.volume !== "1" && <span style={{ fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px", background:"rgba(0,0,0,0.08)", borderRadius:3, padding:"1px 5px", marginLeft:5 }}>Vol {run.volume}</span>}
                                       </div>
-                                      <div style={{ fontSize:"0.75rem", color:"var(--muted)", marginTop:1 }}>
+                                      <div style={{ fontSize:"0.875rem", color:"var(--muted)", marginTop:1 }}>
                                         #{run.rangeMin}–#{run.rangeMax}
                                         {run.keys > 0 && ` · ${run.keys} key${run.keys>1?"s":""}`}
                                         {run.signed > 0 && ` · ${run.signed} signed`}
@@ -749,17 +749,17 @@ export default function Runs() {
                                     </div>
 
                                     <div style={{ textAlign:"right", flexShrink:0, minWidth:90 }}>
-                                      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem",
+                                      <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                                         color: bucket.color, letterSpacing:"1px", lineHeight:1 }}>
                                         {run.pct >= 100 ? "COMPLETE" : `${run.pct.toFixed(0)}%`}
                                       </div>
-                                      <div style={{ fontSize:"0.62rem", color:"var(--muted)", marginTop:1 }}>
+                                      <div style={{ fontSize:"0.875rem", color:"var(--muted)", marginTop:1 }}>
                                         {run.haveCount}/{run.rangeSize}
                                         {run.missing.length > 0 && ` · ${run.missing.length} missing`}
                                       </div>
                                     </div>
 
-                                    <span style={{ color:"var(--muted)", fontSize:"0.68rem", flexShrink:0 }}>
+                                    <span style={{ color:"var(--muted)", fontSize:"0.875rem", flexShrink:0 }}>
                                       {isSelected ? "▲" : "▼"}
                                     </span>
                                   </div>
@@ -776,7 +776,7 @@ export default function Runs() {
 
                                       {run.missing.length > 0 && (
                                         <div style={{ marginBottom:14 }}>
-                                          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem",
+                                          <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                                             letterSpacing:"2px", color:"var(--red)", marginBottom:8 }}>
                                             MISSING ISSUES ({run.missing.length})
                                           </div>
@@ -787,21 +787,21 @@ export default function Runs() {
                                                 target="_blank" rel="noopener noreferrer"
                                                 onClick={e => e.stopPropagation()}
                                                 style={{ background:"#fff0f0", color:"var(--red)", border:"1.5px solid #f5c8c8",
-                                                  borderRadius:4, padding:"3px 10px", fontSize:"0.75rem",
-                                                  fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"0.5px",
+                                                  borderRadius:4, padding:"3px 10px", fontSize:"0.875rem",
+                                                  fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"0.5px",
                                                   textDecoration:"none" }}>
                                                 #{n}
                                               </a>
                                             ))}
                                           </div>
-                                          <div style={{ fontSize:"0.75rem", color:"var(--muted)", marginTop:6, fontStyle:"italic" }}>
+                                          <div style={{ fontSize:"0.875rem", color:"var(--muted)", marginTop:6, fontStyle:"italic" }}>
                                             Click any missing issue to search Comic Vine
                                           </div>
                                         </div>
                                       )}
 
                                       <div>
-                                        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem",
+                                        <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                                           letterSpacing:"2px", color:"var(--muted2)", marginBottom:8 }}>
                                           ISSUES YOU OWN ({run.haveCount})
                                         </div>
@@ -813,8 +813,8 @@ export default function Runs() {
                                               <div key={ci} title={isKey ? c.Key_Reason : c.Arc} style={{
                                                 background: isKey ? "#fff8e0" : "var(--surface2)",
                                                 border: isKey ? "1.5px solid #d4a800" : "1.5px solid var(--border)",
-                                                borderRadius:4, padding:"3px 8px", fontSize:"0.75rem",
-                                                fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"0.5px",
+                                                borderRadius:4, padding:"3px 8px", fontSize:"0.875rem",
+                                                fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"0.5px",
                                                 color: isKey ? "#8a6000" : "var(--text2)",
                                               }}>
                                                 {c.Issue}
@@ -826,7 +826,7 @@ export default function Runs() {
                                         </div>
                                       </div>
 
-                                      <div style={{ marginTop:10, fontSize:"0.75rem", color:"var(--muted)" }}>
+                                      <div style={{ marginTop:10, fontSize:"0.875rem", color:"var(--muted)" }}>
                                         Boxes: {Array.from(new Set(run.issues.map(c => `Box ${c.Box}`))).join(", ")}
                                       </div>
                                     </div>
@@ -848,7 +848,7 @@ export default function Runs() {
 
       {filtered.length === 0 && (
         <div style={{ textAlign:"center", color:"var(--muted)", padding:"60px 20px",
-          fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem", letterSpacing:"2px" }}>
+          fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px" }}>
           NO RUNS FOUND AT {threshold}% — TRY LOWERING THE THRESHOLD
         </div>
       )}

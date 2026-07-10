@@ -61,7 +61,7 @@ const LIST_COLS: ColDef<Comic>[] = [
   {
     key: "era", label: "Era", defaultWidth: 80,
     sort: (a, b) => (a.Era || "").localeCompare(b.Era || ""),
-    cell: r => r.Era ? <span className="badge be" style={{ fontSize:"0.62rem" }}>{r.Era}</span> : null,
+    cell: r => r.Era ? <span className="badge be" style={{ fontSize:"0.875rem" }}>{r.Era}</span> : null,
   },
   {
     key: "writer", label: "Writer", defaultWidth: 130,
@@ -95,16 +95,16 @@ const LIST_COLS: ColDef<Comic>[] = [
   {
     key: "platform", label: "Platform", defaultWidth: 90,
     sort: (a, b) => (a.Platform || "").localeCompare(b.Platform || ""),
-    cell: r => r.Platform ? <span className={`badge ${platClass(r.Platform)}`} style={{ fontSize:"0.62rem" }}>{r.Platform}</span> : null,
+    cell: r => r.Platform ? <span className={`badge ${platClass(r.Platform)}`} style={{ fontSize:"0.875rem" }}>{r.Platform}</span> : null,
   },
   {
     key: "key", label: "Key", defaultWidth: 70,
     sort: (a, b) => ((b.Key || "") > (a.Key || "") ? 1 : -1),
     cell: r => (
       <div style={{ display:"flex", gap:3 }}>
-        {(r.Key || "").toUpperCase() === "YES" && <span className="badge bk" style={{ fontSize:"0.62rem" }}>KEY</span>}
-        {!!(r.Terrificon || "").trim()         && <span className="badge bt" style={{ fontSize:"0.62rem" }}>TF</span>}
-        {(r.Signed || "").toUpperCase() === "YES" && <span className="badge be" style={{ fontSize:"0.62rem" }}>SIGNED</span>}
+        {(r.Key || "").toUpperCase() === "YES" && <span className="badge bk" style={{ fontSize:"0.875rem" }}>KEY</span>}
+        {!!(r.Terrificon || "").trim()         && <span className="badge bt" style={{ fontSize:"0.875rem" }}>TF</span>}
+        {(r.Signed || "").toUpperCase() === "YES" && <span className="badge be" style={{ fontSize:"0.875rem" }}>SIGNED</span>}
       </div>
     ),
   },
@@ -291,7 +291,7 @@ export default function AllBoxes() {
                   {c.Terrificon && <div className="dr"><span className="dl">Terrificon</span><span className="dv" style={{color:"#f59e0b"}}>{c.Terrificon}</span></div>}
                 </div>
                 {c.Story_Pitch && c.Story_Pitch !== "nan" && (
-                  <div style={{ marginTop:6, fontStyle:"italic", color:"var(--muted2)", fontSize:"0.82rem" }}>
+                  <div style={{ marginTop:6, fontStyle:"italic", color:"var(--muted2)", fontSize:"0.875rem" }}>
                     {c.Story_Pitch.substring(0,200)}
                   </div>
                 )}

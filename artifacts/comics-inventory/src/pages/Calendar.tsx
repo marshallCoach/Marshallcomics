@@ -137,8 +137,8 @@ export default function Calendar() {
           { val: "$9k–$18k",     lbl: "Revenue" },
         ].map(s => (
           <div key={s.lbl} style={{ textAlign:"center" }}>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.2rem", color:"var(--red)", letterSpacing:"1px" }}>{s.val}</div>
-            <div style={{ fontSize:"0.62rem", letterSpacing:"1.5px", fontFamily:"'Bebas Neue',sans-serif", color:"var(--muted)" }}>{s.lbl}</div>
+            <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:"var(--red)", letterSpacing:"1px" }}>{s.val}</div>
+            <div style={{ fontSize:"0.875rem", letterSpacing:"1.5px", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", color:"var(--muted)" }}>{s.lbl}</div>
           </div>
         ))}
       </div>
@@ -151,12 +151,12 @@ export default function Calendar() {
           placeholder="Search events…"
           value={q} onChange={e => setQ(e.target.value)}
           style={{ background:"var(--bg)", border:"1.5px solid var(--border)", color:"var(--text)",
-            padding:"7px 12px", borderRadius:5, fontFamily:"'Crimson Pro',serif", fontSize:"0.9rem",
+            padding:"7px 12px", borderRadius:5, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
             flex:"1 1 160px", minWidth:120 }}
         />
         <select value={type} onChange={e => setType(e.target.value)}
           style={{ background:"var(--bg)", border:"1.5px solid var(--border)", color:"var(--text)",
-            padding:"7px 10px", borderRadius:5, fontFamily:"'Crimson Pro',serif", fontSize:"0.9rem" }}>
+            padding:"7px 10px", borderRadius:5, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem" }}>
           <option value="">All Types</option>
           <option value="WHATNOT">Whatnot</option>
           <option value="CGC">CGC</option>
@@ -169,8 +169,8 @@ export default function Calendar() {
           onClick={() => setSortDir(d => d === "asc" ? "desc" : "asc")}
           title={sortDir === "asc" ? "Oldest first — click for newest first" : "Newest first — click for oldest first"}
           style={{ background:"var(--surface2)", border:"1.5px solid var(--border)", borderRadius:5,
-            padding:"7px 14px", cursor:"pointer", fontFamily:"'Bebas Neue',sans-serif",
-            fontSize:"0.75rem", letterSpacing:"1.5px", color:"var(--text2)",
+            padding:"7px 14px", cursor:"pointer", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+            fontSize:"0.875rem", letterSpacing:"1.5px", color:"var(--text2)",
             display:"flex", alignItems:"center", gap:5, whiteSpace:"nowrap",
             transition:"border-color 0.15s" }}>
           {sortDir === "asc" ? "↑ DATE ASC" : "↓ DATE DESC"}
@@ -183,7 +183,7 @@ export default function Calendar() {
               background: view===v ? "var(--red)" : "var(--surface2)",
               color: view===v ? "#fff" : "var(--muted2)",
               border:"none", padding:"7px 14px", cursor:"pointer",
-              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"1.5px",
+              fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
               transition:"all 0.15s",
             }}>
               {v === "list" ? "☰ LIST" : v === "card" ? "⊞ CARDS" : "📅 CAL"}
@@ -194,16 +194,16 @@ export default function Calendar() {
         {(q || type) && (
           <button onClick={() => { setQ(""); setType(""); setOpen(new Set()); setTimeout(() => searchInputRef.current?.focus(), 0); }}
             style={{ background:"transparent", color:"var(--muted2)", border:"1.5px solid var(--border)",
-              padding:"7px 14px", borderRadius:5, cursor:"pointer", fontFamily:"'Bebas Neue',sans-serif",
-              fontSize:"0.75rem", letterSpacing:"1.5px" }}>
+              padding:"7px 14px", borderRadius:5, cursor:"pointer", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+              fontSize:"0.875rem", letterSpacing:"1.5px" }}>
             ✕ CLEAR
           </button>
         )}
       </div>
 
       {/* Results count */}
-      <div style={{ padding:"6px 20px", fontSize:"0.75rem", color:"var(--muted)",
-        fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px",
+      <div style={{ padding:"6px 20px", fontSize:"0.875rem", color:"var(--muted)",
+        fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1.5px",
         borderBottom:"1px solid var(--border)", background:"var(--surface2)" }}>
         {filtered.length} of {events.length} events · sorted {sortDir === "asc" ? "earliest first" : "latest first"}
       </div>
@@ -218,17 +218,17 @@ export default function Calendar() {
             return (
               <div key={i} className={`lcard ${calClass(ev.Type)}${isOpen ? " open" : ""}`} onClick={() => toggle(i)}>
                 <div className="lcard-head">
-                  <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem",
+                  <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                     color:"var(--red)", minWidth:90, letterSpacing:"0.5px" }}>{ev.Date}</span>
                   <span style={{ background:ti.bg, color:ti.color, border:`1px solid ${ti.color}22`,
-                    borderRadius:3, padding:"1px 7px", fontSize:"0.62rem",
-                    fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px",
+                    borderRadius:3, padding:"1px 7px", fontSize:"0.875rem",
+                    fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px",
                     whiteSpace:"nowrap", flexShrink:0 }}>
                     {ti.icon} {ti.label}
                   </span>
                   <span className="lcard-title">{ev.Theme.substring(0, 90)}</span>
                   {revenue && <span className="lcard-right">{revenue}</span>}
-                  <span style={{ color:"var(--muted)", fontSize:"0.68rem", flexShrink:0 }}>{isOpen?"▲":"▼"}</span>
+                  <span style={{ color:"var(--muted)", fontSize:"0.875rem", flexShrink:0 }}>{isOpen?"▲":"▼"}</span>
                 </div>
                 {isOpen && (
                   <div className="lcard-expand">
@@ -248,7 +248,7 @@ export default function Calendar() {
         <div style={{ padding:"16px 18px 40px" }}>
           {/* Legend */}
           <div style={{ display:"flex", gap:14, flexWrap:"wrap", marginBottom:18, alignItems:"center" }}>
-            <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px", color:"var(--muted)" }}>LEGEND:</span>
+            <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px", color:"var(--muted)" }}>LEGEND:</span>
             {[
               { label:"Whatnot Show", bg:"#e8f5e8", color:"#1a6a1a" },
               { label:"CGC",          bg:"#e8f0ff", color:"#1a4a99" },
@@ -256,7 +256,7 @@ export default function Calendar() {
             ].map(t => (
               <div key={t.label} style={{ display:"flex", alignItems:"center", gap:5 }}>
                 <div style={{ width:14, height:14, borderRadius:3, background:t.bg, border:`1.5px solid ${t.color}55` }} />
-                <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px", color:"var(--muted2)" }}>{t.label}</span>
+                <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--muted2)" }}>{t.label}</span>
               </div>
             ))}
           </div>
@@ -282,7 +282,7 @@ export default function Calendar() {
                   background:"var(--surface)", border:`1.5px solid ${hasAny?"rgba(200,16,46,0.25)":"var(--border)"}`,
                   borderRadius:8, padding:"12px 14px",
                 }}>
-                  <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem",
+                  <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                     letterSpacing:"3px", color: hasAny ? "var(--red)" : "var(--muted2)",
                     marginBottom:10, lineHeight:1 }}>
                     {name} {year}
@@ -291,7 +291,7 @@ export default function Calendar() {
                   {/* Day headers */}
                   <div style={{ display:"grid", gridTemplateColumns:"repeat(7,1fr)", gap:1, marginBottom:3 }}>
                     {["S","M","T","W","T","F","S"].map((d,i) => (
-                      <div key={i} style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+                      <div key={i} style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                         letterSpacing:"0.5px", color:"var(--muted)", textAlign:"center" }}>{d}</div>
                     ))}
                   </div>
@@ -308,8 +308,8 @@ export default function Calendar() {
                         <div key={idx}
                           title={has ? dayEvs.map(e => e.Theme.substring(0,55)).join("; ") : undefined}
                           style={{
-                            textAlign:"center", fontFamily:"'Bebas Neue',sans-serif",
-                            fontSize:"0.68rem", letterSpacing:"0.5px", lineHeight:1,
+                            textAlign:"center", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+                            fontSize:"0.875rem", letterSpacing:"0.5px", lineHeight:1,
                             padding:"4px 1px", borderRadius:4,
                             background: has ? ti!.bg : "transparent",
                             color: has ? ti!.color : "var(--text)",
@@ -319,7 +319,7 @@ export default function Calendar() {
                           }}>
                           {d}
                           {dayEvs.length > 1 && (
-                            <div style={{ fontSize:"0.62rem", lineHeight:1, marginTop:1, color:ti!.color }}>×{dayEvs.length}</div>
+                            <div style={{ fontSize:"0.875rem", lineHeight:1, marginTop:1, color:ti!.color }}>×{dayEvs.length}</div>
                           )}
                         </div>
                       );
@@ -335,10 +335,10 @@ export default function Calendar() {
                         const ti2 = typeIcon(ev.Type);
                         return (
                           <div key={i} style={{ display:"flex", gap:6, alignItems:"flex-start" }}>
-                            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem",
+                            <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                               color:ti2.color, minWidth:18, flexShrink:0, marginTop:1 }}>{day}</div>
                             <div style={{ flex:1, minWidth:0 }}>
-                              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+                              <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                                 letterSpacing:"0.5px", color:ti2.color, lineHeight:1.3 }}>
                                 {ti2.icon} {ev.Theme.substring(0,48)}{ev.Theme.length>48?"…":""}
                               </div>
@@ -371,24 +371,24 @@ export default function Calendar() {
               }}>
                 <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:8 }}>
                   <span style={{ background:ti.bg, color:ti.color, border:`1px solid ${ti.color}22`,
-                    borderRadius:3, padding:"1px 8px", fontSize:"0.62rem",
-                    fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>
+                    borderRadius:3, padding:"1px 8px", fontSize:"0.875rem",
+                    fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px" }}>
                     {ti.icon} {ti.label}
                   </span>
-                  <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem",
+                  <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                     color:"var(--red)", marginLeft:"auto", letterSpacing:"0.5px" }}>{ev.Date}</span>
                 </div>
-                <div style={{ fontSize:"0.9rem", fontWeight:600, color:"var(--brown-light)", lineHeight:1.35, marginBottom:6 }}>
+                <div style={{ fontSize:"0.875rem", fontWeight:600, color:"var(--brown-light)", lineHeight:1.35, marginBottom:6 }}>
                   {ev.Theme}
                 </div>
                 {ev.Revenue && (
-                  <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem",
+                  <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                     color:"var(--gold)", letterSpacing:"0.5px" }}>
                     {ev.Revenue.match(/\$[\d,k–\-]+(?:–\$[\d,k]+)?/)?.[0] || ""}
                   </div>
                 )}
                 {isOpen && (
-                  <div style={{ marginTop:10, paddingTop:10, borderTop:"1px solid var(--border)", fontSize:"0.82rem", color:"var(--muted2)" }}>
+                  <div style={{ marginTop:10, paddingTop:10, borderTop:"1px solid var(--border)", fontSize:"0.875rem", color:"var(--muted2)" }}>
                     {ev.Books && <div style={{ marginBottom:6 }}><strong style={{ color:"var(--muted)" }}>Books: </strong>{ev.Books}</div>}
                     {ev.Prep  && <div style={{ marginBottom:6 }}><strong style={{ color:"var(--muted)" }}>Prep: </strong>{ev.Prep}</div>}
                   </div>

@@ -68,7 +68,7 @@ const LIST_COLS: ColDef<Key>[] = [
   {
     key: "era", label: "Era", defaultWidth: 80,
     sort: (a, b) => (a.Era || "").localeCompare(b.Era || ""),
-    cell: r => r.Era ? <span className="badge be" style={{ fontSize:"0.62rem" }}>{r.Era}</span> : null,
+    cell: r => r.Era ? <span className="badge be" style={{ fontSize:"0.875rem" }}>{r.Era}</span> : null,
   },
   {
     key: "writer", label: "Writer", defaultWidth: 130,
@@ -103,21 +103,21 @@ const LIST_COLS: ColDef<Key>[] = [
   {
     key: "platform", label: "Platform", defaultWidth: 90,
     sort: (a, b) => (a.Platform || "").localeCompare(b.Platform || ""),
-    cell: r => r.Platform ? <span className={`badge ${platClass(r.Platform)}`} style={{ fontSize:"0.62rem" }}>{r.Platform}</span> : null,
+    cell: r => r.Platform ? <span className={`badge ${platClass(r.Platform)}`} style={{ fontSize:"0.875rem" }}>{r.Platform}</span> : null,
   },
   {
     key: "cgc", label: "CGC?", defaultWidth: 70,
     sort: (a, b) => (a.CGC_Worth || "").localeCompare(b.CGC_Worth || ""),
     cell: r => {
       const v = (r.CGC_Worth || "").toUpperCase();
-      if (v === "YES" || v.includes("YES")) return <span className="badge bc" style={{ fontSize:"0.62rem" }}>CGC ✓</span>;
+      if (v === "YES" || v.includes("YES")) return <span className="badge bc" style={{ fontSize:"0.875rem" }}>CGC ✓</span>;
       return null;
     },
   },
   {
     key: "tf", label: "Terrificon", defaultWidth: 90,
     sort: (a, b) => (a.Terrificon || "").localeCompare(b.Terrificon || ""),
-    cell: r => r.Terrificon ? <span className="badge bt" style={{ fontSize:"0.62rem" }}>TF</span> : null,
+    cell: r => r.Terrificon ? <span className="badge bt" style={{ fontSize:"0.875rem" }}>TF</span> : null,
   },
 ];
 
@@ -184,8 +184,8 @@ export default function BoxKeys() {
           { val: BOXES.length, lbl: "Across Boxes" },
         ].map(s => (
           <div key={s.lbl} style={{ textAlign:"center" }}>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.2rem", color:"var(--red)", letterSpacing:"1px" }}>{s.val}</div>
-            <div style={{ fontSize:"0.62rem", letterSpacing:"1.5px", fontFamily:"'Bebas Neue',sans-serif", color:"var(--muted)" }}>{s.lbl}</div>
+            <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:"var(--red)", letterSpacing:"1px" }}>{s.val}</div>
+            <div style={{ fontSize:"0.875rem", letterSpacing:"1.5px", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", color:"var(--muted)" }}>{s.lbl}</div>
           </div>
         ))}
       </div>
@@ -252,17 +252,17 @@ export default function BoxKeys() {
 
       <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center",
         margin:"10px 16px 0", flexWrap:"wrap", gap:8 }}>
-        <div style={{ fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px", fontSize:"0.82rem", color:"var(--muted2)" }}>
+        <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1.5px", fontSize:"0.875rem", color:"var(--muted2)" }}>
           {results.length === 0
             ? "No results — try a different search"
-            : <><span style={{ color:"var(--red)", fontSize:"1rem" }}>{results.length.toLocaleString()}</span> of {keys.length.toLocaleString()} key issues</>
+            : <><span style={{ color:"var(--red)", fontSize:"0.875rem" }}>{results.length.toLocaleString()}</span> of {keys.length.toLocaleString()} key issues</>
           }
         </div>
         <div style={{ display:"flex", gap:6 }}>
           {(["list","card"] as const).map(v => (
             <button key={v} onClick={() => setView(v)}
               style={{
-                fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"1.5px",
+                fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
                 padding:"5px 14px", border:`1.5px solid ${view===v?"var(--red)":"var(--border)"}`,
                 background:view===v?"var(--red)":"var(--surface)", color:view===v?"#fff":"var(--muted2)",
                 borderRadius:4, cursor:"pointer", transition:"all 0.15s",
@@ -290,16 +290,16 @@ export default function BoxKeys() {
                   {k.Value_VF  && k.Value_VF !== "nan"  && <div className="dr"><span className="dl">VF Value</span><span className="dv">${k.Value_VF}</span></div>}
                   {k.Sales_Data && k.Sales_Data !== "nan" && <div className="dr"><span className="dl">Sales</span><span className="dv">{k.Sales_Data.substring(0,120)}</span></div>}
                 </div>
-                {k.Key_Reason && <div style={{ marginTop:6, fontSize:"0.82rem", color:"var(--gold)" }}>{k.Key_Reason}</div>}
+                {k.Key_Reason && <div style={{ marginTop:6, fontSize:"0.875rem", color:"var(--gold)" }}>{k.Key_Reason}</div>}
                 <div style={{ marginTop:10, display:"flex", gap:10, alignItems:"center", flexWrap:"wrap" }}>
                   <button
                     onClick={e => { e.stopPropagation(); openDrawer(k); }}
-                    style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px", padding:"5px 12px", background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:4, cursor:"pointer", color:"var(--text)" }}
+                    style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px", padding:"5px 12px", background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:4, cursor:"pointer", color:"var(--text)" }}
                   >
                     Full Details →
                   </button>
                   {flaggedKeys.has(comicFlagKey(k.Title, k.Issue || "", k.Box || "")) && (
-                    <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px", color:"#92400e", background:"#fef3c7", border:"1px solid #fcd34d", borderRadius:3, padding:"2px 8px" }}>
+                    <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"#92400e", background:"#fef3c7", border:"1px solid #fcd34d", borderRadius:3, padding:"2px 8px" }}>
                       UPDATE NEEDED
                     </span>
                   )}
@@ -336,7 +336,7 @@ export default function BoxKeys() {
                     <div style={{ flex:1, minWidth:0 }}>
                       <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", gap:6, marginBottom:4 }}>
                         <div className="card-title" style={{ flex:1, marginBottom:0 }}>{k.Title || "Untitled"}</div>
-                        {isFlagged && <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px", color:"#92400e", background:"#fef3c7", border:"1px solid #fcd34d", borderRadius:3, padding:"1px 5px", flexShrink:0 }}>UPDATE</span>}
+                        {isFlagged && <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"#92400e", background:"#fef3c7", border:"1px solid #fcd34d", borderRadius:3, padding:"1px 5px", flexShrink:0 }}>UPDATE</span>}
                       </div>
                       <div className="card-sub">Box {k.Box} · {k.Publisher} #{k.Issue} · {k.Year}</div>
                     </div>
@@ -350,7 +350,7 @@ export default function BoxKeys() {
                     {k.Platform && <span className={`badge ${platClass(k.Platform)}`}>{k.Platform}</span>}
                   </div>
                   {nmVal && <div className="card-value">NM: <span className="v">${nmVal}</span></div>}
-                  {k.Key_Reason && <div style={{ fontSize:"0.82rem", color:"var(--gold)", marginTop:4, lineHeight:1.4 }}>{k.Key_Reason.substring(0,120)}</div>}
+                  {k.Key_Reason && <div style={{ fontSize:"0.875rem", color:"var(--gold)", marginTop:4, lineHeight:1.4 }}>{k.Key_Reason.substring(0,120)}</div>}
                   {isOpen && (
                     <div className="card-expand">
                       {k.Writer    && <div className="dr"><span className="dl">W</span><span className="dv">{k.Writer}</span></div>}
@@ -361,7 +361,7 @@ export default function BoxKeys() {
                       {k.Sales_Data && <div className="dr"><span className="dl">Sales</span><span className="dv">{k.Sales_Data.substring(0,120)}</span></div>}
                       <button
                         onClick={e => { e.stopPropagation(); openDrawer(k); }}
-                        style={{ marginTop:8, fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px", padding:"5px 12px", background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:4, cursor:"pointer", color:"var(--text)" }}
+                        style={{ marginTop:8, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px", padding:"5px 12px", background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:4, cursor:"pointer", color:"var(--text)" }}
                       >
                         Full Details →
                       </button>

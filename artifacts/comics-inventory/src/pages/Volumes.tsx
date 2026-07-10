@@ -178,9 +178,9 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
 
       {/* Header */}
       <div style={{ marginBottom: 16 }}>
-        <h1 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.8rem", color:"var(--red)",
+        <h1 style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"1.75rem", color:"var(--red)",
           letterSpacing:"3px", lineHeight:1, margin:0 }}>Volumes</h1>
-        <p style={{ color:"var(--muted2)", fontSize:"0.9rem", marginTop:6 }}>
+        <p style={{ color:"var(--muted2)", fontSize:"0.875rem", marginTop:6 }}>
           Every title in the collection, broken into distinct volumes — grouped by publisher. Click any volume to browse its issues.
         </p>
       </div>
@@ -207,19 +207,19 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
                 transform: isActive ? "translateY(-2px)" : "none",
                 transition:"all 0.18s",
               }}>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.4rem",
+              <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"1.75rem",
                 color: isActive ? "#fff" : "warn" in s && s.warn ? "#8a6000" : "var(--red)",
                 letterSpacing:"1px", lineHeight:1 }}>{s.val}</div>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px",
+              <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
                 color: isActive ? "rgba(255,255,255,0.8)" : "warn" in s && s.warn ? "#8a6000" : "var(--muted)",
                 marginTop:3 }}>{s.lbl}</div>
               {"click" in s && s.click && !isActive && (
-                <div style={{ fontSize:"0.62rem", color:"var(--muted)", marginTop:3,
-                  fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>CLICK TO FILTER</div>
+                <div style={{ fontSize:"0.875rem", color:"var(--muted)", marginTop:3,
+                  fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px" }}>CLICK TO FILTER</div>
               )}
               {isActive && (
-                <div style={{ fontSize:"0.62rem", color:"rgba(255,255,255,0.65)", marginTop:3,
-                  fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>CLICK TO CLEAR ▲</div>
+                <div style={{ fontSize:"0.875rem", color:"rgba(255,255,255,0.65)", marginTop:3,
+                  fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px" }}>CLICK TO CLEAR ▲</div>
               )}
             </div>
           );
@@ -234,13 +234,13 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
           value={search} onChange={e => setSearch(e.target.value)}
           placeholder="Search title or publisher…"
           style={{ background:"var(--bg)", border:"1.5px solid var(--border)", color:"var(--text)",
-            padding:"6px 10px", borderRadius:5, fontFamily:"'Crimson Pro',serif", fontSize:"0.9rem",
+            padding:"6px 10px", borderRadius:5, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
             flex:"1 1 180px", minWidth:0 }}
         />
 
         <select value={pubFilter} onChange={e => setPubFilter(e.target.value as typeof pubFilter)}
           style={{ background:"var(--bg)", border:"1.5px solid var(--border)", color:"var(--text)",
-            padding:"6px 10px", borderRadius:5, fontFamily:"'Crimson Pro',serif", fontSize:"0.9rem" }}>
+            padding:"6px 10px", borderRadius:5, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem" }}>
           <option value="">All Publishers</option>
           <option value="Marvel">Marvel</option>
           <option value="DC">DC</option>
@@ -254,7 +254,7 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
               color: sortBy===v ? "#fff" : "var(--muted2)",
               border: sortBy===v ? "1.5px solid var(--red)" : "1.5px solid var(--border)",
               borderRadius:5, padding:"5px 12px", cursor:"pointer",
-              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1.5px",
+              fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
               transition:"all 0.15s",
             }}>{l}</button>
           ))}
@@ -265,7 +265,7 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
           color: multiOnly ? "#a78bfa" : "var(--muted2)",
           border: multiOnly ? "1.5px solid #a78bfa" : "1.5px solid var(--border)",
           borderRadius:5, padding:"5px 14px", cursor:"pointer",
-          fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1.5px",
+          fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
           transition:"all 0.15s", whiteSpace:"nowrap",
         }}>
           {multiOnly ? "▦ MULTI-VOL ONLY ✓" : "▦ MULTI-VOL ONLY"}
@@ -273,20 +273,20 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
 
         <div style={{ marginLeft:"auto", display:"flex", gap:6, alignItems:"center" }}>
           <button onClick={expandAll}
-            style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px",
+            style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
               background:"var(--surface2)", color:"var(--muted2)", border:"1.5px solid var(--border)",
               borderRadius:5, padding:"4px 10px", cursor:"pointer" }}>Expand All</button>
           <button onClick={collapseAll}
-            style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px",
+            style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
               background:"var(--surface2)", color:"var(--muted2)", border:"1.5px solid var(--border)",
               borderRadius:5, padding:"4px 10px", cursor:"pointer" }}>Collapse All</button>
         </div>
       </div>
 
       {/* Results bar */}
-      <div style={{ fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px", fontSize:"0.82rem",
+      <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1.5px", fontSize:"0.875rem",
         color:"var(--muted2)", marginBottom:14 }}>
-        <span style={{ color:"var(--red)", fontSize:"1rem" }}>{filtered.length.toLocaleString()}</span>
+        <span style={{ color:"var(--red)", fontSize:"0.875rem" }}>{filtered.length.toLocaleString()}</span>
         {" "}titles · {totalVols.toLocaleString()} volumes
         {search && <span style={{ marginLeft:10, color:"var(--muted)" }}>— filtered by "{search}"</span>}
       </div>
@@ -309,14 +309,14 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
                 borderBottom:`2px solid ${pg.color}`, paddingBottom:8, marginBottom: isOpen ? 10 : 0,
                 textAlign:"left",
               }}>
-                <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem",
+                <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                   letterSpacing:"3px", color:pg.color }}>{pg.label}</span>
-                <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+                <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                   letterSpacing:"1.5px", color:"var(--muted)" }}>
                   {titles.length} TITLES · {pgVols} VOLUMES
                 </span>
-                <span style={{ marginLeft:"auto", color:pg.color, fontSize:"0.68rem",
-                  fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>
+                <span style={{ marginLeft:"auto", color:pg.color, fontSize:"0.875rem",
+                  fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px" }}>
                   {isOpen ? "▲ COLLAPSE" : "▼ EXPAND"}
                 </span>
               </button>
@@ -345,12 +345,12 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
                         }}>
                           <div style={{ flex:1, minWidth:0 }}>
                             <span style={{
-                              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem",
+                              fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                               letterSpacing:"1.5px", color:"var(--text)",
                               display:"block", overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap",
                             }}>{t.title}</span>
-                            <span style={{ fontSize:"0.75rem", color:"var(--muted2)",
-                              fontFamily:"'Crimson Pro',serif" }}>
+                            <span style={{ fontSize:"0.875rem", color:"var(--muted2)",
+                              fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>
                               {t.publisher}
                             </span>
                           </div>
@@ -358,37 +358,37 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
                           <div style={{ display:"flex", gap:8, alignItems:"center", flexShrink:0 }}>
                             {t.hasOverlap && (
                               <span style={{
-                                fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px",
+                                fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
                                 background:"#fff8e0", color:"#8a6000", border:"1px solid #d4a800",
                                 borderRadius:3, padding:"2px 7px",
                               }}>⚠ OVERLAP</span>
                             )}
                             {multiV && (
                               <span style={{
-                                fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px",
+                                fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
                                 background:pg.color, color:"#fff", borderRadius:3, padding:"2px 7px",
                               }}>{t.volumes.length} VOLS</span>
                             )}
-                            <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+                            <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                               letterSpacing:"1px", color:"var(--muted)", minWidth:52, textAlign:"right" }}>
                               {t.totalIssues} issues
                             </span>
                             {t.totalKeys > 0 && (
-                              <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+                              <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                                 letterSpacing:"1px", color:"#8a6000", background:"#fff8e0",
                                 border:"1px solid #d4a800", borderRadius:3, padding:"1px 6px" }}>
                                 {t.totalKeys}k
                               </span>
                             )}
                             {t.totalSigned > 0 && (
-                              <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+                              <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                                 letterSpacing:"1px", color:"#1a7a1a", background:"#f0faf0",
                                 border:"1px solid #c8e6c8", borderRadius:3, padding:"1px 6px" }}>
                                 {t.totalSigned}s
                               </span>
                             )}
-                            <span style={{ color:"var(--muted)", fontSize:"0.68rem",
-                              fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", marginLeft:4 }}>
+                            <span style={{ color:"var(--muted)", fontSize:"0.875rem",
+                              fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px", marginLeft:4 }}>
                               {tOpen ? "▲" : "▼"}
                             </span>
                           </div>
@@ -420,15 +420,15 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
                                   {/* Volume label */}
                                   <div style={{ flexShrink:0, minWidth:66 }}>
                                     <div style={{
-                                      fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem",
+                                      fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                                       letterSpacing:"2px",
                                       color: isOverlap ? "#d97706" : t.volumes.length > 1 ? pg.color : "var(--muted2)",
                                       lineHeight:1,
                                     }}>
                                       {t.volumes.length > 1 ? `Vol. ${v.volNum}` : "Series"}
-                                      {isOverlap && <span style={{ marginLeft:4, fontSize:"0.62rem" }}>⚠</span>}
+                                      {isOverlap && <span style={{ marginLeft:4, fontSize:"0.875rem" }}>⚠</span>}
                                     </div>
-                                    <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+                                    <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                                       letterSpacing:"1px", color: isOverlap ? "#b45309" : "var(--muted)", marginTop:2 }}>
                                       {yearStr}
                                     </div>
@@ -437,41 +437,41 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
                                   {/* Writer / Artist */}
                                   <div style={{ flex:1, minWidth:180, display:"flex", gap:20, flexWrap:"wrap" }}>
                                     <div>
-                                      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+                                      <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                                         letterSpacing:"2px", color:"var(--muted)", marginBottom:1 }}>WRITER</div>
-                                      <div style={{ fontFamily:"'Crimson Pro',serif", fontSize:"0.82rem",
+                                      <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                                         color:"var(--text2)", lineHeight:1.3 }}>{v.writer}</div>
                                     </div>
                                     <div>
-                                      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+                                      <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                                         letterSpacing:"2px", color:"var(--muted)", marginBottom:1 }}>ARTIST</div>
-                                      <div style={{ fontFamily:"'Crimson Pro',serif", fontSize:"0.82rem",
+                                      <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                                         color:"var(--text2)", lineHeight:1.3 }}>{v.artist}</div>
                                     </div>
                                   </div>
 
                                   {/* Issue count + badges + link hint */}
                                   <div style={{ display:"flex", gap:8, alignItems:"center", flexShrink:0 }}>
-                                    <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem",
+                                    <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                                       letterSpacing:"1.5px", color:"var(--muted)", minWidth:52, textAlign:"right" }}>
                                       {v.issues.length} issues
                                     </span>
                                     {v.keyCount > 0 && (
-                                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+                                      <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                                         letterSpacing:"1px", color:"#8a6000", background:"#fff8e0",
                                         border:"1px solid #d4a800", borderRadius:3, padding:"1px 6px" }}>
                                         ★ {v.keyCount} key{v.keyCount > 1 ? "s" : ""}
                                       </span>
                                     )}
                                     {v.signedCount > 0 && (
-                                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+                                      <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                                         letterSpacing:"1px", color:"#1a7a1a", background:"#f0faf0",
                                         border:"1px solid #c8e6c8", borderRadius:3, padding:"1px 6px" }}>
                                         ✍ {v.signedCount} sgd
                                       </span>
                                     )}
                                     <span style={{
-                                      fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+                                      fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                                       letterSpacing:"1px", color: pg.color, opacity:0.7,
                                     }}>→ VIEW</span>
                                   </div>
@@ -484,8 +484,8 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
                               <div style={{
                                 padding:"8px 14px 8px 20px", background:"#fef9ec",
                                 borderTop:"1px solid #fde68a",
-                                fontSize:"0.75rem", color:"#92400e",
-                                fontFamily:"'Crimson Pro',serif", lineHeight:1.5,
+                                fontSize:"0.875rem", color:"#92400e",
+                                fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", lineHeight:1.5,
                               }}>
                                 <strong>⚠ Overlapping years detected.</strong> These volumes share publication years — this may mean issues from different series are filed under the same title in the data, or the volume split didn't fire correctly on a numbering restart. Browse the issues to check.
                               </div>
@@ -503,7 +503,7 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
 
       {filtered.length === 0 && (
         <div style={{ textAlign:"center", padding:"60px 20px",
-          fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", letterSpacing:"2px", color:"var(--muted)" }}>
+          fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:"var(--muted)" }}>
           NO TITLES MATCH YOUR SEARCH
         </div>
       )}

@@ -170,17 +170,17 @@ function NotesModal({ comic, comicKey, fields, notes, onFieldsChange, onNotesCha
         <div style={{ background:"#92400e", padding:"14px 18px 12px", borderRadius:"8px 8px 0 0", flexShrink:0 }}>
           <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start" }}>
             <div>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"2px", color:"rgba(255,255,255,0.7)", marginBottom:3 }}>UPDATE NOTES</div>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.2rem", letterSpacing:"2px", color:"#fff", lineHeight:1.1 }}>
+              <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:"rgba(255,255,255,0.7)", marginBottom:3 }}>UPDATE NOTES</div>
+              <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:"#fff", lineHeight:1.1 }}>
                 {comic.Title} <span style={{ opacity:0.75 }}>{comic.Issue}</span>
               </div>
               {(comic.Publisher || comic.Year || comic.Box) && (
-                <div style={{ fontSize:"0.75rem", color:"rgba(255,255,255,0.65)", marginTop:4, fontFamily:"'Crimson Pro',serif" }}>
+                <div style={{ fontSize:"0.875rem", color:"rgba(255,255,255,0.65)", marginTop:4, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>
                   {[comic.Publisher, comic.Year, comic.Box ? `Box ${comic.Box}` : ""].filter(Boolean).join(" · ")}
                 </div>
               )}
             </div>
-            <button onClick={onClose} style={{ background:"rgba(255,255,255,0.2)", border:"none", color:"#fff", borderRadius:6, width:30, height:30, cursor:"pointer", fontSize:"1rem", display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0 }}>×</button>
+            <button onClick={onClose} style={{ background:"rgba(255,255,255,0.2)", border:"none", color:"#fff", borderRadius:6, width:30, height:30, cursor:"pointer", fontSize:"0.875rem", display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0 }}>×</button>
           </div>
         </div>
 
@@ -189,7 +189,7 @@ function NotesModal({ comic, comicKey, fields, notes, onFieldsChange, onNotesCha
 
           {/* Field selector */}
           <div style={{ marginBottom:18 }}>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"2px", color:"var(--muted)", marginBottom:8 }}>
+            <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:"var(--muted)", marginBottom:8 }}>
               FIELDS NEEDING UPDATE
               {fields.length > 0 && <span style={{ marginLeft:8, color:"#d97706" }}>({fields.length} selected)</span>}
             </div>
@@ -201,7 +201,7 @@ function NotesModal({ comic, comicKey, fields, notes, onFieldsChange, onNotesCha
                     key={field}
                     onClick={() => toggleField(field)}
                     style={{
-                      fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px",
+                      fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
                       padding:"5px 11px",
                       border:`1.5px solid ${active ? "#d97706" : "var(--border)"}`,
                       background: active ? "#d97706" : "var(--surface2)",
@@ -216,7 +216,7 @@ function NotesModal({ comic, comicKey, fields, notes, onFieldsChange, onNotesCha
 
           {/* Notes field */}
           <div style={{ marginBottom:18 }}>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"2px", color:"var(--muted)", marginBottom:6 }}>NOTES</div>
+            <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:"var(--muted)", marginBottom:6 }}>NOTES</div>
             <textarea
               value={notes}
               onChange={e => handleNotesChange(e.target.value)}
@@ -224,7 +224,7 @@ function NotesModal({ comic, comicKey, fields, notes, onFieldsChange, onNotesCha
               style={{
                 width:"100%", boxSizing:"border-box",
                 padding:"10px 12px", minHeight:100,
-                fontFamily:"'Crimson Pro',serif", fontSize:"0.9rem", lineHeight:1.6,
+                fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", lineHeight:1.6,
                 color:"var(--text)", background:"var(--surface)",
                 border:"1.5px solid var(--border)", borderRadius:6,
                 resize:"vertical", outline:"none",
@@ -236,7 +236,7 @@ function NotesModal({ comic, comicKey, fields, notes, onFieldsChange, onNotesCha
 
           {/* Claude prompt preview */}
           <div>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"2px", color:"var(--muted)", marginBottom:6 }}>CLAUDE PROMPT PREVIEW</div>
+            <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:"var(--muted)", marginBottom:6 }}>CLAUDE PROMPT PREVIEW</div>
             <textarea
               id="claude-prompt-preview"
               readOnly
@@ -244,7 +244,7 @@ function NotesModal({ comic, comicKey, fields, notes, onFieldsChange, onNotesCha
               style={{
                 width:"100%", boxSizing:"border-box",
                 padding:"10px 12px", height:160,
-                fontFamily:"'Courier New',monospace", fontSize:"0.75rem", lineHeight:1.5,
+                fontFamily:"'Courier New',monospace", fontSize:"0.875rem", lineHeight:1.5,
                 color:"var(--muted2)", background:"var(--surface)",
                 border:"1px solid var(--border)", borderRadius:6,
                 resize:"none", outline:"none",
@@ -259,7 +259,7 @@ function NotesModal({ comic, comicKey, fields, notes, onFieldsChange, onNotesCha
             onClick={copyForClaude}
             style={{
               flex:2, padding:"10px 0",
-              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"1.5px",
+              fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
               background: copied ? "#16a34a" : "#d97706",
               border:"none", borderRadius:6, color:"#fff", cursor:"pointer", transition:"background 0.2s",
             }}
@@ -270,7 +270,7 @@ function NotesModal({ comic, comicKey, fields, notes, onFieldsChange, onNotesCha
             onClick={onClose}
             style={{
               flex:1, padding:"10px 0",
-              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"1.5px",
+              fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
               background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:6,
               color:"var(--muted2)", cursor:"pointer",
             }}
@@ -369,8 +369,8 @@ export default function ComicDrawer({ comic, comicKey, onClose, onFlagChange }: 
     if (!val || val === "nan" || val.trim() === "") return null;
     return (
       <div style={{ display:"flex", gap:8, padding:"7px 0", borderBottom:"1px solid var(--border)" }}>
-        <div style={{ flex:"0 0 110px", fontSize:"0.68rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px", color:"var(--muted)", paddingTop:1 }}>{label}</div>
-        <div style={{ flex:1, fontSize:"0.82rem", color:"var(--text)", lineHeight:1.5 }}>{val}</div>
+        <div style={{ flex:"0 0 110px", fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1.5px", color:"var(--muted)", paddingTop:1 }}>{label}</div>
+        <div style={{ flex:1, fontSize:"0.875rem", color:"var(--text)", lineHeight:1.5 }}>{val}</div>
       </div>
     );
   }
@@ -398,30 +398,30 @@ export default function ComicDrawer({ comic, comicKey, onClose, onFlagChange }: 
           <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start" }}>
             <div style={{ flex:1, paddingRight:12 }}>
               <div style={{ display:"flex", alignItems:"center", gap:8 }}>
-                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.4rem", letterSpacing:"2px", color:"#fff", lineHeight:1.1 }}>{comic.Title}</div>
+                <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"1.75rem", letterSpacing:"2px", color:"#fff", lineHeight:1.1 }}>{comic.Title}</div>
                 {flagged && (
-                  <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px", background:"rgba(255,255,255,0.25)", color:"#fff", border:"1px solid rgba(255,255,255,0.4)", borderRadius:3, padding:"2px 7px", flexShrink:0 }}>
+                  <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px", background:"rgba(255,255,255,0.25)", color:"#fff", border:"1px solid rgba(255,255,255,0.4)", borderRadius:3, padding:"2px 7px", flexShrink:0 }}>
                     UPDATE{selectedFields.length > 0 ? ` · ${selectedFields.length}` : ""}
                   </span>
                 )}
               </div>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem", letterSpacing:"1px", color:"rgba(255,255,255,0.8)", marginTop:4 }}>
+              <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"rgba(255,255,255,0.8)", marginTop:4 }}>
                 {comic.Issue}
-                {comic.Volume && comic.Volume !== "1" && <span style={{ marginLeft:6, fontSize:"0.68rem", background:"rgba(255,255,255,0.2)", borderRadius:3, padding:"1px 6px" }}>Vol {comic.Volume}</span>}
+                {comic.Volume && comic.Volume !== "1" && <span style={{ marginLeft:6, fontSize:"0.875rem", background:"rgba(255,255,255,0.2)", borderRadius:3, padding:"1px 6px" }}>Vol {comic.Volume}</span>}
                 {comic.Year && <span style={{ marginLeft:8, opacity:0.7 }}>{comic.Year}</span>}
               </div>
             </div>
-            <button onClick={onClose} style={{ background:"rgba(255,255,255,0.2)", border:"none", color:"#fff", borderRadius:6, width:30, height:30, cursor:"pointer", fontSize:"1rem", display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0 }}>×</button>
+            <button onClick={onClose} style={{ background:"rgba(255,255,255,0.2)", border:"none", color:"#fff", borderRadius:6, width:30, height:30, cursor:"pointer", fontSize:"0.875rem", display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0 }}>×</button>
           </div>
 
           {/* Badges */}
           <div style={{ display:"flex", gap:5, marginTop:8, flexWrap:"wrap" }}>
-            {comic.Publisher && <span style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", background:"rgba(255,255,255,0.2)", color:"#fff", borderRadius:3, padding:"2px 7px" }}>{comic.Publisher}</span>}
-            {comic.Era       && <span style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", background:"rgba(255,255,255,0.15)", color:"rgba(255,255,255,0.9)", borderRadius:3, padding:"2px 7px" }}>{comic.Era}</span>}
-            {comic.Box       && <span style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", background:"rgba(255,255,255,0.15)", color:"rgba(255,255,255,0.9)", borderRadius:3, padding:"2px 7px" }}>Box {comic.Box}</span>}
-            {isKey    && <span style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", background:"#fff8e0", color:"#8a6000", borderRadius:3, padding:"2px 7px" }}>★ KEY</span>}
-            {isSigned && !isVerify(comic.Signed_By) && <span style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", background:"#f3e8ff", color:"#7c3aed", borderRadius:3, padding:"2px 7px" }}>✍ SIGNED</span>}
-            {isSigned &&  isVerify(comic.Signed_By) && <span style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", background:"#fef3c7", color:"#92400e", borderRadius:3, padding:"2px 7px" }}>✍ SIGNED — VERIFY</span>}
+            {comic.Publisher && <span style={{ fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px", background:"rgba(255,255,255,0.2)", color:"#fff", borderRadius:3, padding:"2px 7px" }}>{comic.Publisher}</span>}
+            {comic.Era       && <span style={{ fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px", background:"rgba(255,255,255,0.15)", color:"rgba(255,255,255,0.9)", borderRadius:3, padding:"2px 7px" }}>{comic.Era}</span>}
+            {comic.Box       && <span style={{ fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px", background:"rgba(255,255,255,0.15)", color:"rgba(255,255,255,0.9)", borderRadius:3, padding:"2px 7px" }}>Box {comic.Box}</span>}
+            {isKey    && <span style={{ fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px", background:"#fff8e0", color:"#8a6000", borderRadius:3, padding:"2px 7px" }}>★ KEY</span>}
+            {isSigned && !isVerify(comic.Signed_By) && <span style={{ fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px", background:"#f3e8ff", color:"#7c3aed", borderRadius:3, padding:"2px 7px" }}>✍ SIGNED</span>}
+            {isSigned &&  isVerify(comic.Signed_By) && <span style={{ fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px", background:"#fef3c7", color:"#92400e", borderRadius:3, padding:"2px 7px" }}>✍ SIGNED — VERIFY</span>}
           </div>
         </div>
 
@@ -440,13 +440,13 @@ export default function ComicDrawer({ comic, comicKey, onClose, onFlagChange }: 
             <div style={{ flex:1, minWidth:0 }}>
               {isKey && comic.Key_Reason && (
                 <div style={{ background:"#fff8e0", border:"1.5px solid #fde68a", borderRadius:6, padding:"8px 12px" }}>
-                  <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"2px", color:"#8a6000", marginBottom:3 }}>KEY REASON</div>
-                  <div style={{ fontSize:"0.82rem", color:"#5a4000", lineHeight:1.5 }}>{comic.Key_Reason}</div>
-                  {comic.First_App && <div style={{ marginTop:4, fontSize:"0.75rem", color:"#8a6000", fontWeight:600 }}>1st App: {comic.First_App}</div>}
+                  <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:"#8a6000", marginBottom:3 }}>KEY REASON</div>
+                  <div style={{ fontSize:"0.875rem", color:"#5a4000", lineHeight:1.5 }}>{comic.Key_Reason}</div>
+                  {comic.First_App && <div style={{ marginTop:4, fontSize:"0.875rem", color:"#8a6000", fontWeight:600 }}>1st App: {comic.First_App}</div>}
                 </div>
               )}
               {(!isKey || !comic.Key_Reason) && comic.Story_Pitch && comic.Story_Pitch.trim() && comic.Story_Pitch !== "nan" && (
-                <div style={{ fontFamily:"'Crimson Pro',serif", fontSize:"0.82rem", color:"var(--muted2)", lineHeight:1.5, fontStyle:"italic" }}>
+                <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:"var(--muted2)", lineHeight:1.5, fontStyle:"italic" }}>
                   "{comic.Story_Pitch.substring(0, 180)}"
                 </div>
               )}
@@ -455,7 +455,7 @@ export default function ComicDrawer({ comic, comicKey, onClose, onFlagChange }: 
 
           {/* Story pitch (full, shown below the cover/key row for keys; shown normally for non-keys) */}
           {!isKey && comic.Story_Pitch && comic.Story_Pitch.trim() && comic.Story_Pitch !== "nan" && (
-            <div style={{ background:"var(--surface)", border:"1px solid var(--border)", borderRadius:6, padding:"10px 14px", marginBottom:12, fontFamily:"'Crimson Pro',serif", fontSize:"0.9rem", color:"var(--text)", lineHeight:1.6, fontStyle:"italic" }}>
+            <div style={{ background:"var(--surface)", border:"1px solid var(--border)", borderRadius:6, padding:"10px 14px", marginBottom:12, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:"var(--text)", lineHeight:1.6, fontStyle:"italic" }}>
               "{comic.Story_Pitch}"
             </div>
           )}
@@ -479,26 +479,26 @@ export default function ComicDrawer({ comic, comicKey, onClose, onFlagChange }: 
           {/* eBay market data */}
           {comic.eBay_Avg != null && (
             <div style={{ marginTop:10, background:"var(--surface)", border:"1px solid var(--border)", borderRadius:6, padding:"10px 14px" }}>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"2px", color:"var(--muted)", marginBottom:8 }}>
+              <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:"var(--muted)", marginBottom:8 }}>
                 EBAY SOLD DATA
                 {comic.eBay_Count != null && (
-                  <span style={{ marginLeft:6, fontFamily:"'Crimson Pro',serif", fontSize:"0.68rem", letterSpacing:0, fontStyle:"italic", color:"var(--muted)" }}>
+                  <span style={{ marginLeft:6, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:0, fontStyle:"italic", color:"var(--muted)" }}>
                     ({comic.eBay_Count} sales)
                   </span>
                 )}
               </div>
               <div style={{ display:"flex", gap:0 }}>
                 <div style={{ flex:1, textAlign:"center", borderRight:"1px solid var(--border)" }}>
-                  <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px", color:"var(--muted)", marginBottom:2 }}>AVG</div>
-                  <div style={{ fontSize:"1rem", fontWeight:700, color:"var(--text)", fontVariantNumeric:"tabular-nums" }}>${comic.eBay_Avg.toFixed(0)}</div>
+                  <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px", color:"var(--muted)", marginBottom:2 }}>AVG</div>
+                  <div style={{ fontSize:"0.875rem", fontWeight:700, color:"var(--text)", fontVariantNumeric:"tabular-nums" }}>${comic.eBay_Avg.toFixed(0)}</div>
                 </div>
                 <div style={{ flex:1, textAlign:"center", borderRight:"1px solid var(--border)" }}>
-                  <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px", color:"var(--muted)", marginBottom:2 }}>LOW</div>
-                  <div style={{ fontSize:"1rem", color:"#16a34a", fontVariantNumeric:"tabular-nums" }}>${comic.eBay_Low != null ? comic.eBay_Low.toFixed(0) : "—"}</div>
+                  <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px", color:"var(--muted)", marginBottom:2 }}>LOW</div>
+                  <div style={{ fontSize:"0.875rem", color:"#16a34a", fontVariantNumeric:"tabular-nums" }}>${comic.eBay_Low != null ? comic.eBay_Low.toFixed(0) : "—"}</div>
                 </div>
                 <div style={{ flex:1, textAlign:"center" }}>
-                  <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px", color:"var(--muted)", marginBottom:2 }}>HIGH</div>
-                  <div style={{ fontSize:"1rem", color:"#dc2626", fontVariantNumeric:"tabular-nums" }}>${comic.eBay_High != null ? comic.eBay_High.toFixed(0) : "—"}</div>
+                  <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px", color:"var(--muted)", marginBottom:2 }}>HIGH</div>
+                  <div style={{ fontSize:"0.875rem", color:"#dc2626", fontVariantNumeric:"tabular-nums" }}>${comic.eBay_High != null ? comic.eBay_High.toFixed(0) : "—"}</div>
                 </div>
               </div>
             </div>
@@ -509,12 +509,12 @@ export default function ComicDrawer({ comic, comicKey, onClose, onFlagChange }: 
             const verify = isVerify(comic.Signed_By);
             return (
               <div style={{ background: verify ? "#fef3c7" : "#f3e8ff", border: `1px solid ${verify ? "#fcd34d" : "#d8b4fe"}`, borderRadius:6, padding:"10px 14px", marginTop:8 }}>
-                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"2px", color: verify ? "#92400e" : "#7c3aed", marginBottom:4 }}>
+                <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color: verify ? "#92400e" : "#7c3aed", marginBottom:4 }}>
                   SIGNATURE{verify ? " — NEEDS VERIFICATION" : ""}
                 </div>
-                {comic.Signed_By && <div style={{ fontSize:"0.9rem", color: verify ? "#78350f" : "#4c1d95", fontWeight:600 }}>Signed by: {comic.Signed_By}</div>}
-                {comic.Personal && <div style={{ fontSize:"0.82rem", color: verify ? "#92400e" : "#6d28d9", marginTop:4 }}>"{comic.Personal}"</div>}
-                {verify && <div style={{ fontSize:"0.75rem", color:"#92400e", marginTop:6, fontStyle:"italic" }}>Physical verification required before grading submission.</div>}
+                {comic.Signed_By && <div style={{ fontSize:"0.875rem", color: verify ? "#78350f" : "#4c1d95", fontWeight:600 }}>Signed by: {comic.Signed_By}</div>}
+                {comic.Personal && <div style={{ fontSize:"0.875rem", color: verify ? "#92400e" : "#6d28d9", marginTop:4 }}>"{comic.Personal}"</div>}
+                {verify && <div style={{ fontSize:"0.875rem", color:"#92400e", marginTop:6, fontStyle:"italic" }}>Physical verification required before grading submission.</div>}
               </div>
             );
           })()}
@@ -522,8 +522,8 @@ export default function ComicDrawer({ comic, comicKey, onClose, onFlagChange }: 
           {/* Seller notes */}
           {comic.Seller_Notes && comic.Seller_Notes.trim() && comic.Seller_Notes !== "nan" && (
             <div style={{ marginTop:8, padding:"10px 14px", background:"var(--surface)", border:"1px solid var(--border)", borderRadius:6 }}>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"2px", color:"var(--muted)", marginBottom:4 }}>SELLER NOTES</div>
-              <div style={{ fontSize:"0.82rem", color:"var(--muted2)", lineHeight:1.5 }}>{comic.Seller_Notes}</div>
+              <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:"var(--muted)", marginBottom:4 }}>SELLER NOTES</div>
+              <div style={{ fontSize:"0.875rem", color:"var(--muted2)", lineHeight:1.5 }}>{comic.Seller_Notes}</div>
             </div>
           )}
 
@@ -532,30 +532,30 @@ export default function ComicDrawer({ comic, comicKey, onClose, onFlagChange }: 
             <div style={{ marginTop:16, borderTop:"1.5px solid var(--border)", paddingTop:14 }}>
               <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", gap:8 }}>
                 <div style={{ flex:1 }}>
-                  <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"2px", color: flagged ? "#d97706" : "var(--muted)", marginBottom:2 }}>DATA FLAG</div>
+                  <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color: flagged ? "#d97706" : "var(--muted)", marginBottom:2 }}>DATA FLAG</div>
                   {flagged ? (
                     <div style={{ display:"flex", alignItems:"center", gap:6, flexWrap:"wrap" }}>
-                      <span style={{ fontSize:"0.75rem", color:"#92400e", fontFamily:"'Crimson Pro',serif" }}>
+                      <span style={{ fontSize:"0.875rem", color:"#92400e", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>
                         {selectedFields.length > 0
                           ? `${selectedFields.length} field${selectedFields.length === 1 ? "" : "s"} flagged`
                           : "Flagged — no fields yet"}
                       </span>
-                      {notes.trim() && <span style={{ fontSize:"0.68rem", color:"var(--muted)", fontFamily:"'Crimson Pro',serif", fontStyle:"italic" }}>· has notes</span>}
+                      {notes.trim() && <span style={{ fontSize:"0.875rem", color:"var(--muted)", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontStyle:"italic" }}>· has notes</span>}
                       <button
                         onClick={() => setShowNotes(true)}
-                        style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px", background:"none", border:"none", color: hasFieldsOrNotes ? "#d97706" : "var(--muted)", cursor:"pointer", padding:"0 2px", textDecoration:"underline", textDecorationStyle:"dotted" }}
+                        style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px", background:"none", border:"none", color: hasFieldsOrNotes ? "#d97706" : "var(--muted)", cursor:"pointer", padding:"0 2px", textDecoration:"underline", textDecorationStyle:"dotted" }}
                       >
                         {hasFieldsOrNotes ? "Edit Notes →" : "Open Notes →"}
                       </button>
                     </div>
                   ) : (
-                    <div style={{ fontSize:"0.75rem", color:"var(--muted2)", fontFamily:"'Crimson Pro',serif" }}>Mark this book's data as needing an update</div>
+                    <div style={{ fontSize:"0.875rem", color:"var(--muted2)", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>Mark this book's data as needing an update</div>
                   )}
                 </div>
                 <button
                   onClick={toggleFlag}
                   style={{
-                    fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px",
+                    fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
                     padding:"7px 13px",
                     border:`1.5px solid ${flagged ? "#d97706" : "var(--border)"}`,
                     background: flagged ? "#d97706" : "var(--surface2)",
@@ -571,7 +571,7 @@ export default function ComicDrawer({ comic, comicKey, onClose, onFlagChange }: 
               {flagged && selectedFields.length > 0 && (
                 <div style={{ marginTop:8, display:"flex", flexWrap:"wrap", gap:4 }}>
                   {selectedFields.map(f => (
-                    <span key={f} style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px", color:"#92400e", background:"#fef3c7", border:"1px solid #fcd34d", borderRadius:3, padding:"2px 7px" }}>{f}</span>
+                    <span key={f} style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"#92400e", background:"#fef3c7", border:"1px solid #fcd34d", borderRadius:3, padding:"2px 7px" }}>{f}</span>
                   ))}
                 </div>
               )}
@@ -585,13 +585,13 @@ export default function ComicDrawer({ comic, comicKey, onClose, onFlagChange }: 
             href={cvUrl}
             target="_blank"
             rel="noopener noreferrer"
-            style={{ flex:1, textAlign:"center", padding:"9px 0", background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:6, fontSize:"0.68rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", color:"var(--text)", textDecoration:"none" }}
+            style={{ flex:1, textAlign:"center", padding:"9px 0", background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:6, fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px", color:"var(--text)", textDecoration:"none" }}
           >
             Search Comic Vine →
           </a>
           <button
             onClick={onClose}
-            style={{ flex:1, padding:"9px 0", background: flagged ? "#d97706" : accentColor, border:"none", borderRadius:6, fontSize:"0.68rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", color:"#fff", cursor:"pointer" }}
+            style={{ flex:1, padding:"9px 0", background: flagged ? "#d97706" : accentColor, border:"none", borderRadius:6, fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px", color:"#fff", cursor:"pointer" }}
           >
             Close
           </button>

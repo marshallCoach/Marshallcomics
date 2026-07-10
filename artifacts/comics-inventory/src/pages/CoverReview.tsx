@@ -121,10 +121,10 @@ export default function CoverReview() {
   }, [pool]);
 
   if (pool === null) {
-    return <div style={{ padding: 40, fontFamily: "'Bebas Neue',sans-serif", color: "var(--muted)" }}>Loading cover pool…</div>;
+    return <div style={{ padding: 40, fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", color: "var(--muted)" }}>Loading cover pool…</div>;
   }
   if (pool.length === 0) {
-    return <div style={{ padding: 40, fontFamily: "'Bebas Neue',sans-serif", color: "var(--muted)" }}>No covers found in covers.json.</div>;
+    return <div style={{ padding: 40, fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", color: "var(--muted)" }}>No covers found in covers.json.</div>;
   }
 
   const pct = Math.max(0, Math.min(100, 100 - (msLeft / CYCLE_MS) * 100));
@@ -133,10 +133,10 @@ export default function CoverReview() {
     <div style={{ padding: "20px 24px 60px" }}>
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 12, marginBottom: 8 }}>
         <div>
-          <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.8rem", letterSpacing: "2px", color: "var(--text)" }}>
+          <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "1.75rem", letterSpacing: "2px", color: "var(--text)" }}>
             Cover Review
           </div>
-          <div style={{ fontSize: "0.82rem", color: "var(--muted)" }}>
+          <div style={{ fontSize: "0.875rem", color: "var(--muted)" }}>
             {pool.length.toLocaleString()} covers in pool · batch {Math.floor(batchStart / BATCH_SIZE) + 1} of {Math.ceil(pool.length / BATCH_SIZE)} · {flags.size} flagged so far
           </div>
         </div>
@@ -152,7 +152,7 @@ export default function CoverReview() {
 
       {lanes.map((lane, li) => (
         <div key={li} style={{ marginBottom: 18 }}>
-          <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.75rem", letterSpacing: "1.5px", color: "var(--muted)", marginBottom: 6 }}>
+          <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1.5px", color: "var(--muted)", marginBottom: 6 }}>
             LANE {li + 1}
           </div>
           <div style={{ display: "flex", gap: 12, overflowX: "auto", paddingBottom: 8 }}>
@@ -164,10 +164,10 @@ export default function CoverReview() {
                   <div style={{ width: 96, height: 144, borderRadius: 4, overflow: "hidden", background: "#1a1628", border: flagged ? "2px solid var(--red)" : "1px solid var(--border)" }}>
                     <img src={p.url} alt={`${p.comic.Title} ${p.comic.Issue}`} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} loading="lazy" />
                   </div>
-                  <div style={{ fontSize: "0.62rem", color: "var(--muted)", marginTop: 4, lineHeight: 1.3, height: 28, overflow: "hidden" }}>
+                  <div style={{ fontSize: "0.875rem", color: "var(--muted)", marginTop: 4, lineHeight: 1.3, height: 28, overflow: "hidden" }}>
                     {p.comic.Title} #{p.comic.Issue}
                   </div>
-                  <label style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 4, fontSize: "0.62rem", color: flagged ? "var(--red)" : "var(--muted)", cursor: "pointer", marginTop: 2 }}>
+                  <label style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 4, fontSize: "0.875rem", color: flagged ? "var(--red)" : "var(--muted)", cursor: "pointer", marginTop: 2 }}>
                     <input type="checkbox" checked={flagged} onChange={() => toggleFlag(p)} />
                     wrong
                   </label>
@@ -183,7 +183,7 @@ export default function CoverReview() {
 
 function btnStyle(primary: boolean): React.CSSProperties {
   return {
-    fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.75rem", letterSpacing: "1px",
+    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1px",
     padding: "8px 14px", borderRadius: 6, cursor: "pointer",
     background: primary ? "var(--red)" : "var(--surface2)",
     color: primary ? "#fff" : "var(--muted2)",
