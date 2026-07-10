@@ -3,7 +3,7 @@ import { DATA, type CatalogComic } from "@/data/data";
 import { CoverImage, clearCoverMemCache } from "@/components/CoverImage";
 
 const PAGE_SIZE = 16;
-const FLAG_KEY  = "brbFlaggedCovers_v1";
+export const FLAG_KEY  = "brbFlaggedCovers_v1";
 
 // ── Tab definitions ──────────────────────────────────────────────────────────
 
@@ -29,11 +29,11 @@ export interface FlaggedCover {
   flaggedAt: string;
 }
 
-function comicId(c: { Title: string; Issue: string; Box: string }) {
+export function comicId(c: { Title: string; Issue: string; Box: string }) {
   return `${c.Title}|||${c.Issue}|||${c.Box}`;
 }
 
-function loadFlags(): Map<string, FlaggedCover> {
+export function loadFlags(): Map<string, FlaggedCover> {
   try {
     const raw = localStorage.getItem(FLAG_KEY);
     if (!raw) return new Map();
@@ -42,7 +42,7 @@ function loadFlags(): Map<string, FlaggedCover> {
   } catch { return new Map(); }
 }
 
-function saveFlags(map: Map<string, FlaggedCover>) {
+export function saveFlags(map: Map<string, FlaggedCover>) {
   localStorage.setItem(FLAG_KEY, JSON.stringify([...map.values()]));
 }
 
