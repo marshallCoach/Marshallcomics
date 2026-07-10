@@ -36,18 +36,18 @@ export default function EbayListingGuide() {
   const toggle = (id: string) => setOpenSection(s => s === id ? null : id);
 
   return (
-    <div style={{ maxWidth: 860, margin: "0 auto", padding: "24px 16px", fontFamily: "'Crimson Pro', Georgia, serif" }}>
+    <div style={{ maxWidth: 860, margin: "0 auto", padding: "24px 16px", fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>
       <div style={{ marginBottom: 24 }}>
-        <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--muted, #888)", marginBottom: 4 }}>Organisation</div>
-        <h1 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 4px" }}>eBay Phase 1 — Listing Guide</h1>
-        <p style={{ margin: 0, color: "var(--muted, #888)", fontSize: 13 }}>19 books · Prep tonight → Photos tomorrow → List after</p>
+        <div style={{ fontSize: 14, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--muted, #888)", marginBottom: 4 }}>Organisation</div>
+        <h1 style={{ fontSize: 28, fontWeight: 700, margin: "0 0 4px" }}>eBay Phase 1 — Listing Guide</h1>
+        <p style={{ margin: 0, color: "var(--muted, #888)", fontSize: 14 }}>19 books · Prep tonight → Photos tomorrow → List after</p>
       </div>
 
       {/* Pull list */}
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 14, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 12, color: "var(--muted,#888)" }}>The 19 Books — Pull Tonight</h2>
         <div style={{ overflowX: "auto" }}>
-          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13 }}>
+          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
             <thead>
               <tr style={{ borderBottom: "2px solid var(--border,#e5e7eb)" }}>
                 <th style={{ textAlign: "left", padding: "6px 10px", fontWeight: 600 }}>Box</th>
@@ -66,8 +66,8 @@ export default function EbayListingGuide() {
                   <td style={{ padding: "7px 10px", fontVariantNumeric: "tabular-nums", color: "#16a34a" }}>{b.price}</td>
                   <td style={{ padding: "7px 10px", color: b.warn ? "#b45309" : undefined }}>
                     {b.writer}
-                    {b.warn && <span style={{ marginLeft: 6, fontSize: 11, background: "#fef08a", borderRadius: 3, padding: "1px 5px" }}>⚠ unverified</span>}
-                    {b.note && <div style={{ fontSize: 11, color: "var(--muted,#888)", marginTop: 3 }}>{b.note}</div>}
+                    {b.warn && <span style={{ marginLeft: 6, fontSize: 14, background: "#fef08a", borderRadius: 3, padding: "1px 5px" }}>⚠ unverified</span>}
+                    {b.note && <div style={{ fontSize: 14, color: "var(--muted,#888)", marginTop: 3 }}>{b.note}</div>}
                   </td>
                 </tr>
               ))}
@@ -81,7 +81,7 @@ export default function EbayListingGuide() {
         {
           id: "stage1", label: "Stage 1 — Tonight (no photos)",
           content: (
-            <ol style={{ margin: 0, paddingLeft: 20, lineHeight: 1.8, fontSize: 13 }}>
+            <ol style={{ margin: 0, paddingLeft: 20, lineHeight: 1.8, fontSize: 14 }}>
               <li>Pull all 19 books, stack near your photo setup.</li>
               <li>Grade each book honestly — one grade down if unsure. Write grade on a sticky note per book.</li>
               <li>Confirm eBay Seller Hub: Account Health → Above Standard, free shipping template saved, 30-day returns enabled, payment/bank linked.</li>
@@ -92,7 +92,7 @@ export default function EbayListingGuide() {
         {
           id: "stage2", label: "Stage 2 — Morning Photos (natural daylight)",
           content: (
-            <div style={{ fontSize: 13, lineHeight: 1.8 }}>
+            <div style={{ fontSize: 14, lineHeight: 1.8 }}>
               <p style={{ marginTop: 0 }}><strong>Setup:</strong> Window, indirect light. No direct sun (glare). No artificial light (yellow cast). Plain neutral background. Camera directly overhead or straight-on. Flash OFF. Grid lines ON.</p>
               <p><strong>Per book — 3 photos minimum:</strong></p>
               <ol style={{ margin: "0 0 8px", paddingLeft: 20 }}>
@@ -108,10 +108,10 @@ export default function EbayListingGuide() {
         {
           id: "stage3", label: "Stage 3 — Listing",
           content: (
-            <div style={{ fontSize: 13, lineHeight: 1.8 }}>
+            <div style={{ fontSize: 14, lineHeight: 1.8 }}>
               <p style={{ marginTop: 0 }}><strong>List individually, not via bulk CSV.</strong> eBay File Exchange is for high-volume identical SKUs. 19 unique books with unique photos and conditions list faster one-at-a-time through the normal Sell flow.</p>
               <p><strong>Listing template:</strong></p>
-              <pre style={{ background: "var(--code-bg,#f4f4f5)", borderRadius: 6, padding: "12px 14px", fontSize: 12, overflowX: "auto", margin: "0 0 12px" }}>{TEMPLATE}</pre>
+              <pre style={{ background: "var(--code-bg,#f4f4f5)", borderRadius: 6, padding: "12px 14px", fontSize: 14, overflowX: "auto", margin: "0 0 12px" }}>{TEMPLATE}</pre>
               <p style={{ margin: 0 }}><strong>Order:</strong> List singles first (fastest, builds momentum). Save the Hulk lot decision (lot vs. split) for last.</p>
             </div>
           )
@@ -119,7 +119,7 @@ export default function EbayListingGuide() {
         {
           id: "after", label: "After All 19 Are Listed",
           content: (
-            <ul style={{ margin: 0, paddingLeft: 20, fontSize: 13, lineHeight: 1.8 }}>
+            <ul style={{ margin: 0, paddingLeft: 20, fontSize: 14, lineHeight: 1.8 }}>
               <li>Confirm free shipping applied to all 19.</li>
               <li>Screenshot your listings page as a dated record.</li>
               <li>Log the listing date in the inventory (Data Gaps column or a new "Listed Date" note).</li>
@@ -133,7 +133,7 @@ export default function EbayListingGuide() {
             style={{ width: "100%", textAlign: "left", padding: "12px 16px", background: "var(--card-bg,#fafafa)", border: "none", cursor: "pointer", fontWeight: 600, fontSize: 14, display: "flex", justifyContent: "space-between", alignItems: "center" }}
           >
             {label}
-            <span style={{ fontSize: 12, color: "var(--muted,#888)" }}>{openSection === id ? "▲" : "▼"}</span>
+            <span style={{ fontSize: 14, color: "var(--muted,#888)" }}>{openSection === id ? "▲" : "▼"}</span>
           </button>
           {openSection === id && (
             <div style={{ padding: "14px 16px", borderTop: "1px solid var(--border,#e5e7eb)" }}>

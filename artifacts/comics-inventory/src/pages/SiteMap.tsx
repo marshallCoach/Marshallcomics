@@ -142,10 +142,10 @@ export default function SiteMap({ onNavigate }: { onNavigate: NavFn }) {
 
       <div style={{ marginBottom: 28 }}>
         <div style={{
-          fontFamily: "'Bebas Neue', sans-serif", fontSize: "1.8rem",
+          fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "1.75rem",
           letterSpacing: "4px", color: "var(--red)", lineHeight: 1,
         }}>SITE MAP</div>
-        <div style={{ fontSize: "0.82rem", color: "var(--muted2)", marginTop: 4 }}>
+        <div style={{ fontSize: "0.875rem", color: "var(--muted2)", marginTop: 4 }}>
           Every page in the Marshall Comics Inventory Hub — click any card to navigate there.
         </div>
       </div>
@@ -167,9 +167,9 @@ export default function SiteMap({ onNavigate }: { onNavigate: NavFn }) {
       <div style={{
         marginTop: 32, padding: "16px 20px",
         background: "var(--surface)", border: "1.5px solid var(--border)",
-        borderRadius: 8, fontSize: "0.75rem", color: "var(--muted2)", lineHeight: 1.7,
+        borderRadius: 8, fontSize: "0.875rem", color: "var(--muted2)", lineHeight: 1.7,
       }}>
-        <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.68rem",
+        <span style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
           letterSpacing: "2px", color: "var(--red)", marginRight: 10 }}>DATA</span>
         11,776 comics · 74 boxes · 1,462 key issues · 54 signed books · 31 tracked fields per comic
         <span style={{ margin: "0 10px", color: "var(--border)" }}>·</span>
@@ -192,10 +192,10 @@ function Section({
       <div style={{ display: "flex", alignItems: "baseline", gap: 14, marginBottom: 14,
         borderBottom: "2px solid var(--red)", paddingBottom: 8 }}>
         <span style={{
-          fontFamily: "'Bebas Neue', sans-serif", fontSize: "1.2rem",
+          fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
           letterSpacing: "3px", color: "var(--red)",
         }}>{label}</span>
-        <span style={{ fontSize: "0.75rem", color: "var(--muted2)" }}>{sublabel}</span>
+        <span style={{ fontSize: "0.875rem", color: "var(--muted2)" }}>{sublabel}</span>
       </div>
 
       <div style={{
@@ -244,16 +244,16 @@ function PageCard({ page, onNavigate }: { page: PageEntry; onNavigate: NavFn }) 
     >
       <div style={{ display: "flex", alignItems: "flex-start", gap: 10 }}>
         <div style={{
-          fontFamily: "'Bebas Neue', sans-serif",
-          fontSize: "1.4rem", lineHeight: 1,
+          fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+          fontSize: "1.75rem", lineHeight: 1,
           color: accent, flexShrink: 0, minWidth: 24, textAlign: "center",
         }}>{page.icon}</div>
         <div style={{ flex: 1 }}>
           <div style={{
-            fontFamily: "'Bebas Neue', sans-serif", fontSize: "1rem",
+            fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
             letterSpacing: "2px", color: "var(--text)", lineHeight: 1, marginBottom: 4,
           }}>{page.label}</div>
-          <div style={{ fontSize: "0.75rem", color: "var(--muted2)", lineHeight: 1.5 }}>
+          <div style={{ fontSize: "0.875rem", color: "var(--muted2)", lineHeight: 1.5 }}>
             {page.desc}
           </div>
         </div>
@@ -262,8 +262,8 @@ function PageCard({ page, onNavigate }: { page: PageEntry; onNavigate: NavFn }) 
       <div style={{ display: "flex", flexWrap: "wrap", gap: 4, marginTop: 2 }}>
         {page.features.map(f => (
           <span key={f} style={{
-            fontSize: "0.62rem",
-            fontFamily: "'Bebas Neue', sans-serif",
+            fontSize: "0.875rem",
+            fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
             letterSpacing: "0.8px",
             background: "var(--surface2)",
             color: "var(--muted)",
@@ -280,7 +280,7 @@ function PageCard({ page, onNavigate }: { page: PageEntry; onNavigate: NavFn }) 
         display: "flex", justifyContent: "flex-end",
       }}>
         <span style={{
-          fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.62rem",
+          fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
           letterSpacing: "1.5px", color: accent, opacity: 0.8,
         }}>OPEN →</span>
       </div>

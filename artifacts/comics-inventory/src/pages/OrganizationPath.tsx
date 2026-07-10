@@ -378,36 +378,36 @@ function BoxCard({ b, labeled, liveComics, liveKeys, onToggle }: {
       borderRadius:8, padding:"12px 14px", position:"relative",
       opacity: labeled ? 0.7 : 1, transition:"all 0.15s",
     }}>
-      {labeled && <div style={{ position:"absolute", top:6, right:8, color:"#16a34a", fontSize:"0.82rem", fontWeight:700 }}>✓</div>}
+      {labeled && <div style={{ position:"absolute", top:6, right:8, color:"#16a34a", fontSize:"0.875rem", fontWeight:700 }}>✓</div>}
       <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:5 }}>
-        <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.4rem", letterSpacing:"1px", color:gm.color, lineHeight:1 }}>
+        <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"1.75rem", letterSpacing:"1px", color:gm.color, lineHeight:1 }}>
           {String(b.newNum).padStart(2,"0")}
         </span>
         {changed ? (
           <div style={{ display:"flex", alignItems:"center", gap:4 }}>
-            <span style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", color:"var(--muted)", background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:3, padding:"1px 6px" }}>
+            <span style={{ fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px", color:"var(--muted)", background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:3, padding:"1px 6px" }}>
               was {b.oldNum}
             </span>
-            <span style={{ color:"var(--muted)", fontSize:"0.82rem" }}>→</span>
+            <span style={{ color:"var(--muted)", fontSize:"0.875rem" }}>→</span>
           </div>
         ) : (
-          <span style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", color:"var(--muted)", background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:3, padding:"1px 6px" }}>UNCHANGED</span>
+          <span style={{ fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px", color:"var(--muted)", background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:3, padding:"1px 6px" }}>UNCHANGED</span>
         )}
       </div>
-      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem", letterSpacing:"0.8px", color:"var(--text)", marginBottom:3, lineHeight:1.2 }}>{b.name}</div>
-      <div style={{ fontSize:"0.75rem", color:"var(--muted2)", lineHeight:1.4, marginBottom:8 }}>{b.desc}</div>
+      <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"0.8px", color:"var(--text)", marginBottom:3, lineHeight:1.2 }}>{b.name}</div>
+      <div style={{ fontSize:"0.875rem", color:"var(--muted2)", lineHeight:1.4, marginBottom:8 }}>{b.desc}</div>
       <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between" }}>
         <div style={{ display:"flex", gap:8, alignItems:"center" }}>
-          <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1px", color:gm.color }}>{comicCount} COMICS</span>
+          <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:gm.color }}>{comicCount} COMICS</span>
           {(liveKeys ?? 0) > 0 && (
-            <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px",
+            <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
               background:"#fff8e0", color:"#8a6000", border:"1px solid #d4a800", borderRadius:3, padding:"1px 5px" }}>
               ★{liveKeys}
             </span>
           )}
         </div>
         <button onClick={onToggle} style={{
-          fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px",
+          fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
           padding:"3px 10px", borderRadius:4, cursor:"pointer", transition:"all 0.12s",
           background: labeled ? "#16a34a" : "transparent",
           color: labeled ? "#fff" : "#16a34a", border:`1.5px solid #16a34a`,
@@ -432,21 +432,21 @@ function RunCard({ run, done, onToggle }: { run: ConsolidationRun; done: boolean
           width:20, height:20, flexShrink:0, borderRadius:4, cursor:"pointer", transition:"all 0.15s",
           border:`2px solid ${done ? "#16a34a" : "var(--border)"}`, background: done ? "#16a34a" : "transparent",
           display:"flex", alignItems:"center", justifyContent:"center", marginTop:1,
-        }}>{done && <span style={{ color:"#fff", fontSize:"0.68rem" }}>✓</span>}</button>
+        }}>{done && <span style={{ color:"#fff", fontSize:"0.875rem" }}>✓</span>}</button>
         <div style={{ flex:1 }}>
           <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:4 }}>
-            <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px",
+            <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
               background:pColor+"18", border:`1px solid ${pColor}`, color:pColor, borderRadius:3, padding:"1px 8px" }}>
               PRIORITY {run.priority}
             </span>
           </div>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", letterSpacing:"0.5px",
+          <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"0.5px",
             color:"var(--text)", marginBottom:4, textDecoration: done ? "line-through" : "none" }}>
             {run.title}
           </div>
           <div style={{ display:"flex", flexWrap:"wrap", gap:4, marginBottom:6 }}>
             {run.currentBoxes.map(n => (
-              <span key={n} style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px",
+              <span key={n} style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
                 background: n === run.targetBox ? "#16a34a20" : "var(--surface2)",
                 border:`1px solid ${n === run.targetBox ? "#16a34a" : "var(--border)"}`,
                 color: n === run.targetBox ? "#16a34a" : "var(--muted)",
@@ -457,15 +457,15 @@ function RunCard({ run, done, onToggle }: { run: ConsolidationRun; done: boolean
           </div>
           {!open ? (
             <button onClick={() => setOpen(true)} style={{ background:"none", border:"none", cursor:"pointer",
-              fontSize:"0.75rem", color:"var(--muted)", fontFamily:"'Crimson Pro',serif", fontStyle:"italic" }}>
+              fontSize:"0.875rem", color:"var(--muted)", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontStyle:"italic" }}>
               Show action + impact ▾
             </button>
           ) : (
             <div>
-              <div style={{ fontSize:"0.82rem", color:"var(--text)", lineHeight:1.55, marginBottom:4 }}><strong>Action:</strong> {run.action}</div>
-              <div style={{ fontSize:"0.82rem", color:"var(--muted2)", lineHeight:1.55, fontStyle:"italic" }}><strong>Impact:</strong> {run.impact}</div>
+              <div style={{ fontSize:"0.875rem", color:"var(--text)", lineHeight:1.55, marginBottom:4 }}><strong>Action:</strong> {run.action}</div>
+              <div style={{ fontSize:"0.875rem", color:"var(--muted2)", lineHeight:1.55, fontStyle:"italic" }}><strong>Impact:</strong> {run.impact}</div>
               <button onClick={() => setOpen(false)} style={{ background:"none", border:"none", cursor:"pointer",
-                fontSize:"0.75rem", color:"var(--muted)", fontFamily:"'Crimson Pro',serif", marginTop:4 }}>
+                fontSize:"0.875rem", color:"var(--muted)", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", marginTop:4 }}>
                 ▲ collapse
               </button>
             </div>
@@ -493,30 +493,30 @@ function StepCard({ step, stepDone, tasksDone, onStepToggle, onTaskToggle }: {
           width:32, height:32, borderRadius:"50%", flexShrink:0,
           background: stepDone ? "#16a34a" : "var(--red)", color:"#fff",
           display:"flex", alignItems:"center", justifyContent:"center",
-          fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem", letterSpacing:"1px",
+          fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
         }}>{stepDone ? "✓" : step.num}</div>
         <div style={{ flex:1 }}>
           <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:2 }}>
-            <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem", letterSpacing:"0.5px",
+            <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"0.5px",
               color:"var(--text)", textDecoration: stepDone ? "line-through" : "none" }}>
               {step.title}
             </span>
-            <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px",
+            <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
               color:"var(--muted)", background:"var(--surface2)", border:"1px solid var(--border)",
               borderRadius:3, padding:"1px 8px" }}>{step.time}</span>
           </div>
-          <div style={{ fontSize:"0.75rem", color:"var(--muted2)", marginBottom:6 }}>
+          <div style={{ fontSize:"0.875rem", color:"var(--muted2)", marginBottom:6 }}>
             <strong>Tools:</strong> {step.tools}
           </div>
           <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom: open ? 10 : 0 }}>
-            <div style={{ fontSize:"0.68rem", color:"var(--muted)", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>
+            <div style={{ fontSize:"0.875rem", color:"var(--muted)", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px" }}>
               {completed}/{step.tasks.length} TASKS
             </div>
             <div style={{ flex:1, height:4, background:"var(--surface2)", borderRadius:2, overflow:"hidden" }}>
               <div style={{ height:"100%", background:"#16a34a", width:`${(completed/step.tasks.length)*100}%`, transition:"width 0.3s" }} />
             </div>
             <button onClick={() => setOpen(o => !o)} style={{ background:"none", border:"none", cursor:"pointer",
-              fontSize:"0.75rem", color:"var(--muted)", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>
+              fontSize:"0.875rem", color:"var(--muted)", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px" }}>
               {open ? "COLLAPSE ▲" : "TASKS ▾"}
             </button>
           </div>
@@ -529,13 +529,13 @@ function StepCard({ step, stepDone, tasksDone, onStepToggle, onTaskToggle }: {
                     border:`2px solid ${tasksDone[i] ? "#16a34a" : "var(--border)"}`,
                     background: tasksDone[i] ? "#16a34a" : "transparent",
                     display:"flex", alignItems:"center", justifyContent:"center",
-                  }}>{tasksDone[i] && <span style={{ color:"#fff", fontSize:"0.62rem" }}>✓</span>}</div>
-                  <span style={{ fontSize:"0.82rem", color: tasksDone[i] ? "var(--muted)" : "var(--text2)",
+                  }}>{tasksDone[i] && <span style={{ color:"#fff", fontSize:"0.875rem" }}>✓</span>}</div>
+                  <span style={{ fontSize:"0.875rem", color: tasksDone[i] ? "var(--muted)" : "var(--text2)",
                     textDecoration: tasksDone[i] ? "line-through" : "none", lineHeight:1.5 }}>{t}</span>
                 </label>
               ))}
               <button onClick={onStepToggle} style={{
-                fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px",
+                fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
                 alignSelf:"flex-start", padding:"5px 16px", borderRadius:4, cursor:"pointer", marginTop:6,
                 background: stepDone ? "#16a34a" : "transparent",
                 color: stepDone ? "#fff" : "#16a34a", border:"1.5px solid #16a34a",
@@ -590,10 +590,10 @@ export default function OrganizationPath() {
         display:"flex", gap:14, alignItems:"flex-start", flexWrap:"wrap",
       }}>
         <div style={{ flex:1, minWidth:200 }}>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem", letterSpacing:"2px", color:"#8a6000", marginBottom:4 }}>
+          <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:"#8a6000", marginBottom:4 }}>
             ⚠ URGENT — ROY THOMAS SS DEADLINE: JULY 10, 2026
           </div>
-          <div style={{ fontSize:"0.82rem", color:"#7a5500", lineHeight:1.55, fontFamily:"'Crimson Pro',serif" }}>
+          <div style={{ fontSize:"0.875rem", color:"#7a5500", lineHeight:1.55, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>
             <strong>Saga of the Human Torch #3</strong> — book in hand, NOT YET SUBMITTED.
             Press immediately (CGC in-house pressing — add to next CGC submission as an add-on).
             Then ship to Roy Thomas CGC SS before July 10. Expected return: $50–80 post-signing.
@@ -605,10 +605,10 @@ export default function OrganizationPath() {
 
       {/* Header */}
       <div style={{ marginBottom:14 }}>
-        <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.4rem", letterSpacing:"2px", color:"var(--red)", margin:0, marginBottom:4 }}>
+        <h2 style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"1.75rem", letterSpacing:"2px", color:"var(--red)", margin:0, marginBottom:4 }}>
           Organization Path — v2
         </h2>
-        <p style={{ fontSize:"0.9rem", color:"var(--muted2)", margin:0, fontFamily:"'Crimson Pro',serif" }}>
+        <p style={{ fontSize:"0.875rem", color:"var(--muted2)", margin:0, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>
           May 2026 — 11,776 comics · 74 boxes · 1,463 keys · 56 signed · 18 new short boxes needed · 70% unbagged
         </p>
       </div>
@@ -622,9 +622,9 @@ export default function OrganizationPath() {
           { label:"RUNS CONSOLIDATED",   val:runsDoneCount,  total:RUNS.length,   color:"#d97706"    },
         ].map(({ label, val, total, color }) => (
           <div key={label} style={{ flex:"1 1 140px", background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:8, padding:"10px 14px" }}>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"2px", color:"var(--muted)", marginBottom:4 }}>{label}</div>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.4rem", letterSpacing:"1px", color, lineHeight:1 }}>
-              {val}<span style={{ fontSize:"0.82rem", color:"var(--muted)", marginLeft:4 }}>/ {total}</span>
+            <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:"var(--muted)", marginBottom:4 }}>{label}</div>
+            <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"1.75rem", letterSpacing:"1px", color, lineHeight:1 }}>
+              {val}<span style={{ fontSize:"0.875rem", color:"var(--muted)", marginLeft:4 }}>/ {total}</span>
             </div>
             <div style={{ height:3, background:"var(--surface2)", borderRadius:2, marginTop:6, overflow:"hidden" }}>
               <div style={{ height:"100%", background:color, width:`${(val/total)*100}%`, transition:"width 0.3s" }} />
@@ -643,7 +643,7 @@ export default function OrganizationPath() {
           ["runs",     "Consolidate"],
         ] as const).map(([id, label]) => (
           <button key={id} onClick={() => setTab(id)} style={{
-            fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"1.5px",
+            fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
             padding:"8px 16px", cursor:"pointer", background:"none", whiteSpace:"nowrap",
             color: tab===id ? "var(--red)" : "var(--muted2)",
             border:"none", borderBottom: tab===id ? "3px solid var(--red)" : "3px solid transparent",
@@ -674,10 +674,10 @@ export default function OrganizationPath() {
       {tab === "supplies" && (
         <div>
           <div style={{ background:"#fff8e0", border:"1.5px solid #d4a800", borderRadius:6, padding:"12px 16px", marginBottom:20 }}>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"2px", color:"#8a6000", marginBottom:6 }}>
+            <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:"#8a6000", marginBottom:6 }}>
               11,776 comics · 74 short boxes at 150 capacity = 79 boxes needed · 18 new short boxes required for overspill · 70% unbagged ≈ 8,250 comics needing bags and boards
             </div>
-            <div style={{ fontSize:"0.82rem", color:"#7a5500", fontFamily:"'Crimson Pro',serif", lineHeight:1.6 }}>
+            <div style={{ fontSize:"0.875rem", color:"#7a5500", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", lineHeight:1.6 }}>
               <strong>ORDER VIA YOUR COMIC SHOP</strong> — trade pricing saves ~$280 vs retail.
               Order bags + boards together. Buy short boxes in packs (5-pack is cheapest per unit).
               <strong> DO NOT order boxes until after you have bagged one box</strong> and confirmed your actual comics-per-box number — it varies by board thickness.
@@ -689,7 +689,7 @@ export default function OrganizationPath() {
             <div style={{ display:"grid", gridTemplateColumns:"2fr 80px 2fr 90px 90px",
               background:"#1a1a1a", padding:"8px 14px", gap:12 }}>
               {["ITEM","QTY","NOTES","RETAIL","VIA SHOP"].map(h => (
-                <span key={h} style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"2px", color:"rgba(255,255,255,0.7)" }}>{h}</span>
+                <span key={h} style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:"rgba(255,255,255,0.7)" }}>{h}</span>
               ))}
             </div>
             {SUPPLIES.map((s, i) => (
@@ -699,11 +699,11 @@ export default function OrganizationPath() {
                 background: i % 2 === 0 ? "var(--surface)" : "var(--surface2)",
                 borderTop:"1px solid var(--border)",
               }}>
-                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", letterSpacing:"0.5px", color:"var(--text)", lineHeight:1.3 }}>{s.item}</div>
-                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.2rem", letterSpacing:"1px", color:"var(--red)" }}>{s.qty}</div>
-                <div style={{ fontSize:"0.82rem", color:"var(--muted2)", lineHeight:1.5, fontFamily:"'Crimson Pro',serif" }}>{s.notes}</div>
-                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", color:"var(--muted2)" }}>{s.retail}</div>
-                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", color:"#16a34a" }}>{s.shop}</div>
+                <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"0.5px", color:"var(--text)", lineHeight:1.3 }}>{s.item}</div>
+                <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--red)" }}>{s.qty}</div>
+                <div style={{ fontSize:"0.875rem", color:"var(--muted2)", lineHeight:1.5, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>{s.notes}</div>
+                <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:"var(--muted2)" }}>{s.retail}</div>
+                <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:"#16a34a" }}>{s.shop}</div>
               </div>
             ))}
             {/* Totals row */}
@@ -712,22 +712,22 @@ export default function OrganizationPath() {
               gap:12, padding:"12px 14px", alignItems:"start",
               background:"var(--surface)", borderTop:"2px solid var(--border)",
             }}>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", letterSpacing:"1px", color:"var(--text)", gridColumn:"1/3" }}>TOTAL</div>
+              <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--text)", gridColumn:"1/3" }}>TOTAL</div>
               <div />
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem", color:"var(--muted2)" }}>~$705</div>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem", color:"#16a34a", fontWeight:700 }}>~$427</div>
+              <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:"var(--muted2)" }}>~$705</div>
+              <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:"#16a34a", fontWeight:700 }}>~$427</div>
             </div>
           </div>
 
           {/* Box splitting summary */}
           <div style={{ marginTop:28 }}>
             <div style={{ display:"flex", alignItems:"center", gap:12, marginBottom:14, borderBottom:"2px solid var(--border)", paddingBottom:8 }}>
-              <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem", letterSpacing:"2px", color:"var(--red)" }}>BOX SPLITTING — WHERE THE 18 NEW BOXES GO</span>
-              <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px", color:"var(--muted)" }}>
+              <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:"var(--red)" }}>BOX SPLITTING — WHERE THE 18 NEW BOXES GO</span>
+              <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--muted)" }}>
                 38 BOXES OVER 150 CAPACITY
               </span>
               <button onClick={() => setSplitFilter(v => !v)} style={{
-                marginLeft:"auto", fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px",
+                marginLeft:"auto", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
                 padding:"4px 12px", borderRadius:4, cursor:"pointer",
                 background: splitFilter ? "var(--red)" : "transparent",
                 color: splitFilter ? "#fff" : "var(--red)", border:"1.5px solid var(--red)",
@@ -736,11 +736,11 @@ export default function OrganizationPath() {
               </button>
             </div>
             <div style={{ overflowX:"auto" }}>
-              <table style={{ width:"100%", borderCollapse:"collapse", fontSize:"0.82rem" }}>
+              <table style={{ width:"100%", borderCollapse:"collapse", fontSize:"0.875rem" }}>
                 <thead>
                   <tr style={{ background:"var(--surface2)" }}>
                     {["Box","Comics","Over 150","New Boxes","Keys","Contents"].map(h => (
-                      <th key={h} style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px",
+                      <th key={h} style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
                         color:"var(--muted)", padding:"7px 10px", textAlign:"left", whiteSpace:"nowrap", borderBottom:"2px solid var(--border)" }}>{h}</th>
                     ))}
                   </tr>
@@ -748,18 +748,18 @@ export default function OrganizationPath() {
                 <tbody>
                   {(splitFilter ? [...SPLITS].sort((a,b) => b.over - a.over) : SPLITS).map((s, i) => (
                     <tr key={s.box} style={{ background: i % 2 === 0 ? "var(--surface)" : "var(--surface2)" }}>
-                      <td style={{ padding:"7px 10px", fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem", letterSpacing:"1px", color:"var(--red)" }}>{s.box}</td>
-                      <td style={{ padding:"7px 10px", fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", color:"var(--text)" }}>{s.comics}</td>
-                      <td style={{ padding:"7px 10px", fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", color:"#dc2626" }}>+{s.over}</td>
+                      <td style={{ padding:"7px 10px", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--red)" }}>{s.box}</td>
+                      <td style={{ padding:"7px 10px", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:"var(--text)" }}>{s.comics}</td>
+                      <td style={{ padding:"7px 10px", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:"#dc2626" }}>+{s.over}</td>
                       <td style={{ padding:"7px 10px" }}>
-                        <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"1px",
+                        <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
                           background:"#fff5f5", color:"#dc2626", border:"1px solid #fca5a5", borderRadius:3, padding:"2px 8px" }}>{s.newBoxes}</span>
                       </td>
                       <td style={{ padding:"7px 10px" }}>
-                        {s.keys > 0 && <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"1px",
+                        {s.keys > 0 && <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
                           background:"#fff8e0", color:"#8a6000", border:"1px solid #d4a800", borderRadius:3, padding:"1px 7px" }}>★ {s.keys}</span>}
                       </td>
-                      <td style={{ padding:"7px 10px", fontSize:"0.75rem", color:"var(--muted2)", lineHeight:1.4 }}>{s.contents}</td>
+                      <td style={{ padding:"7px 10px", fontSize:"0.875rem", color:"var(--muted2)", lineHeight:1.4 }}>{s.contents}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -781,18 +781,18 @@ export default function OrganizationPath() {
                 background: bagPrioFilter === p ? m.color : m.bg,
                 border:`1.5px solid ${m.color}`,
               }}>
-                <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1.5px",
+                <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
                   color: bagPrioFilter === p ? "#fff" : m.color }}>{m.label}</span>
-                <span style={{ fontSize:"0.68rem", color: bagPrioFilter === p ? "rgba(255,255,255,0.8)" : "var(--muted2)",
-                  fontFamily:"'Crimson Pro',serif", lineHeight:1.3 }}>{m.desc}</span>
+                <span style={{ fontSize:"0.875rem", color: bagPrioFilter === p ? "rgba(255,255,255,0.8)" : "var(--muted2)",
+                  fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", lineHeight:1.3 }}>{m.desc}</span>
               </button>
             ))}
           </div>
 
-          <div style={{ fontSize:"0.82rem", color:"var(--muted2)", marginBottom:14, fontFamily:"'Crimson Pro',serif" }}>
+          <div style={{ fontSize:"0.875rem", color:"var(--muted2)", marginBottom:14, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>
             {baggedCount} of 74 boxes bagged. Tap a row to mark it done.
             {baggedCount > 0 && (
-              <button onClick={() => setBagged({})} style={{ marginLeft:12, fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px",
+              <button onClick={() => setBagged({})} style={{ marginLeft:12, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
                 background:"none", border:"1px solid var(--border)", color:"var(--muted)", borderRadius:3, padding:"2px 10px", cursor:"pointer" }}>
                 RESET
               </button>
@@ -823,46 +823,46 @@ export default function OrganizationPath() {
                       background: done ? "#16a34a" : "transparent",
                       display:"flex", alignItems:"center", justifyContent:"center",
                     }}>
-                      {done && <span style={{ color:"#fff", fontSize:"0.75rem" }}>✓</span>}
+                      {done && <span style={{ color:"#fff", fontSize:"0.875rem" }}>✓</span>}
                     </div>
-                    <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px", color:"var(--muted)" }}>#{b.order}</span>
+                    <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--muted)" }}>#{b.order}</span>
                   </div>
 
                   {/* Box number */}
                   <div style={{ flexShrink:0, minWidth:54 }}>
-                    <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.4rem", letterSpacing:"1px", color: done ? "var(--muted)" : pm.color, lineHeight:1 }}>
+                    <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"1.75rem", letterSpacing:"1px", color: done ? "var(--muted)" : pm.color, lineHeight:1 }}>
                       {String(b.box).padStart(2,"0")}
                     </div>
-                    <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px", color:"var(--muted)", marginTop:1 }}>{b.priority}</div>
+                    <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px", color:"var(--muted)", marginTop:1 }}>{b.priority}</div>
                   </div>
 
                   {/* Contents */}
                   <div style={{ flex:1, minWidth:0 }}>
-                    <div style={{ fontSize:"0.82rem", color: done ? "var(--muted)" : "var(--text)", lineHeight:1.45,
-                      fontFamily:"'Crimson Pro',serif", textDecoration: done ? "line-through" : "none" }}>
+                    <div style={{ fontSize:"0.875rem", color: done ? "var(--muted)" : "var(--text)", lineHeight:1.45,
+                      fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", textDecoration: done ? "line-through" : "none" }}>
                       {b.contents}
                     </div>
                   </div>
 
                   {/* Right badges */}
                   <div style={{ display:"flex", flexDirection:"column", gap:4, alignItems:"flex-end", flexShrink:0 }}>
-                    <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1px", color:"var(--muted)" }}>
+                    <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--muted)" }}>
                       {b.comics}
                     </span>
                     {b.keys > 0 && (
-                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px",
+                      <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
                         background:"#fff8e0", color:"#8a6000", border:"1px solid #d4a800", borderRadius:3, padding:"1px 5px" }}>
                         ★{b.keys}
                       </span>
                     )}
                     {b.sgn > 0 && (
-                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px",
+                      <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
                         background:"#f0faf0", color:"#16a34a", border:"1px solid #c8e6c8", borderRadius:3, padding:"1px 5px" }}>
                         ✍{b.sgn}
                       </span>
                     )}
                     {needsSplit && (
-                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px",
+                      <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
                         background:"#fff0f0", color:"#dc2626", border:"1px solid #fca5a5", borderRadius:3, padding:"1px 5px" }}>
                         {b.extra}
                       </span>
@@ -879,11 +879,11 @@ export default function OrganizationPath() {
       {tab === "boxes" && (
         <div>
           <div style={{ display:"flex", alignItems:"center", gap:12, marginBottom:14, flexWrap:"wrap" }}>
-            <span style={{ fontSize:"0.82rem", color:"var(--muted2)", fontFamily:"'Crimson Pro',serif" }}>
+            <span style={{ fontSize:"0.875rem", color:"var(--muted2)", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>
               {labeledCount} of {totalBoxCount} boxes labeled. Check off each box as you apply the new number label.
             </span>
             {labeledCount > 0 && (
-              <button onClick={() => setLabeled({})} style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px",
+              <button onClick={() => setLabeled({})} style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
                 background:"none", border:"1px solid var(--border)", color:"var(--muted)", borderRadius:3, padding:"2px 10px", cursor:"pointer" }}>
                 RESET ALL
               </button>
@@ -896,8 +896,8 @@ export default function OrganizationPath() {
             return (
               <div key={grp} style={{ marginBottom:28 }}>
                 <div style={{ display:"flex", alignItems:"center", gap:12, marginBottom:10, borderBottom:`2px solid ${gm.color}30`, paddingBottom:8 }}>
-                  <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem", letterSpacing:"2px", color:gm.color }}>{gm.label}</span>
-                  <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px", color:"var(--muted)" }}>
+                  <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:gm.color }}>{gm.label}</span>
+                  <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--muted)" }}>
                     {doneInGroup}/{groupBoxes.length} LABELED
                   </span>
                 </div>
@@ -918,7 +918,7 @@ export default function OrganizationPath() {
       {/* ── RUNS ── */}
       {tab === "runs" && (
         <div>
-          <p style={{ fontSize:"0.9rem", color:"var(--muted2)", marginBottom:16, fontFamily:"'Crimson Pro',serif" }}>
+          <p style={{ fontSize:"0.875rem", color:"var(--muted2)", marginBottom:16, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>
             338 series are currently split across multiple boxes. Work through Priority 1 first — these are the runs with the most commercial and collecting significance.
           </p>
           {([1,2,3] as const).map(p => {
@@ -929,8 +929,8 @@ export default function OrganizationPath() {
             return (
               <div key={p} style={{ marginBottom:28 }}>
                 <div style={{ display:"flex", alignItems:"center", gap:12, marginBottom:10, borderBottom:`2px solid ${pColor}30`, paddingBottom:6 }}>
-                  <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem", letterSpacing:"2px", color:pColor }}>{pLabel}</span>
-                  <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px", color:"var(--muted)" }}>
+                  <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:pColor }}>{pLabel}</span>
+                  <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--muted)" }}>
                     {doneInGroup}/{pRuns.length} DONE
                   </span>
                 </div>

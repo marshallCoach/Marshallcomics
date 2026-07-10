@@ -74,17 +74,17 @@ export default function BoxTimeline() {
         background: "var(--surface)", border: "1.5px solid var(--border)", borderRadius: 8 }}>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 10, flexWrap: "wrap", gap: 8 }}>
           <div>
-            <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.75rem", letterSpacing: "2px", color: "var(--red)", marginBottom: 2 }}>
+            <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "2px", color: "var(--red)", marginBottom: 2 }}>
               BOX COLLECTION PROGRESS
             </div>
-            <div style={{ fontSize: "0.82rem", color: "var(--muted2)" }}>
-              <strong style={{ color: "var(--text)", fontFamily: "'Bebas Neue',sans-serif", fontSize: "1rem" }}>{entries.length}</strong> of{" "}
-              <strong style={{ color: "var(--text)", fontFamily: "'Bebas Neue',sans-serif", fontSize: "1rem" }}>{TARGET_BOXES}</strong> boxes catalogued
+            <div style={{ fontSize: "0.875rem", color: "var(--muted2)" }}>
+              <strong style={{ color: "var(--text)", fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem" }}>{entries.length}</strong> of{" "}
+              <strong style={{ color: "var(--text)", fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem" }}>{TARGET_BOXES}</strong> boxes catalogued
               &nbsp;·&nbsp;{TARGET_BOXES - entries.length} remaining
               &nbsp;·&nbsp;<span style={{ color: "var(--muted)" }}>{groups.length} entry sessions</span>
             </div>
           </div>
-          <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.8rem", color: "var(--red)", letterSpacing: "1px", lineHeight: 1 }}>
+          <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "1.75rem", color: "var(--red)", letterSpacing: "1px", lineHeight: 1 }}>
             {boxPct}%
           </div>
         </div>
@@ -94,7 +94,7 @@ export default function BoxTimeline() {
       </div>
 
       {/* Timeline label */}
-      <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.82rem", letterSpacing: "2px", color: "var(--red)", marginBottom: 16 }}>
+      <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "2px", color: "var(--red)", marginBottom: 16 }}>
         COLLECTION TIMELINE — BOXES BY DATE ADDED
       </div>
 
@@ -127,15 +127,15 @@ export default function BoxTimeline() {
                 }}
               >
                 <span style={{
-                  fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.82rem", letterSpacing: "2px",
+                  fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "2px",
                   color: isOriginal ? "var(--brown)" : "var(--red)",
                 }}>
                   {dateLabel.toUpperCase()}
                 </span>
-                <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.68rem", letterSpacing: "1px", color: "var(--muted)" }}>
+                <span style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1px", color: "var(--muted)" }}>
                   {groupBoxes.length} {groupBoxes.length === 1 ? "box" : "boxes"}
                 </span>
-                <span style={{ fontSize: "0.68rem", color: "var(--muted)", marginLeft: "auto" }}>
+                <span style={{ fontSize: "0.875rem", color: "var(--muted)", marginLeft: "auto" }}>
                   {isOpen ? "▲" : "▼"}
                 </span>
               </button>
@@ -153,27 +153,27 @@ export default function BoxTimeline() {
                         borderLeft: `4px solid ${isOriginal ? "#4a3018" : "var(--red)"}`,
                       }}>
                         <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 8, flexWrap: "wrap" }}>
-                          <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1rem",
+                          <span style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
                             color: isOriginal ? "var(--brown)" : "var(--red)", letterSpacing: "1px", minWidth: 56 }}>
                             {box.Num}
                           </span>
-                          <span style={{ fontSize: "0.9rem", fontWeight: 600, color: "var(--brown-light)", flex: 1 }}>
+                          <span style={{ fontSize: "0.875rem", fontWeight: 600, color: "var(--brown-light)", flex: 1 }}>
                             {shortLabel}
                           </span>
                           <div style={{ display: "flex", gap: 10, flexShrink: 0 }}>
-                            <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.82rem",
+                            <span style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
                               color: "var(--text)", letterSpacing: "0.5px" }}>
-                              {box.comicCount} <span style={{ color: "var(--muted)", fontSize: "0.62rem", letterSpacing: "1px" }}>COMICS</span>
+                              {box.comicCount} <span style={{ color: "var(--muted)", fontSize: "0.875rem", letterSpacing: "1px" }}>COMICS</span>
                             </span>
                             {box.keys > 0 && (
-                              <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.75rem",
+                              <span style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
                                 background: "#fff8e0", color: "#8a6000", border: "1px solid #d4a800",
                                 borderRadius: 3, padding: "1px 7px", letterSpacing: "1px" }}>
                                 {box.keys} KEY{box.keys !== 1 ? "S" : ""}
                               </span>
                             )}
                             {box.signed > 0 && (
-                              <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.75rem",
+                              <span style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
                                 background: "var(--green-bg)", color: "var(--green-text)", border: "1px solid #c8e6c8",
                                 borderRadius: 3, padding: "1px 7px", letterSpacing: "1px" }}>
                                 {box.signed} SIGNED
@@ -190,7 +190,7 @@ export default function BoxTimeline() {
                         </div>
 
                         {/* Meta row */}
-                        <div style={{ display: "flex", gap: 12, marginTop: 6, fontSize: "0.75rem", color: "var(--muted)", flexWrap: "wrap" }}>
+                        <div style={{ display: "flex", gap: 12, marginTop: 6, fontSize: "0.875rem", color: "var(--muted)", flexWrap: "wrap" }}>
                           {box.YearRange && <span>{box.YearRange}</span>}
                           {box.Notes && <span style={{ color: "var(--muted2)", fontStyle: "italic" }}>{box.Notes.slice(0,80)}{box.Notes.length>80?"…":""}</span>}
                         </div>
@@ -208,12 +208,12 @@ export default function BoxTimeline() {
           <div style={{ position: "absolute", left: -22, top: 3,
             width: 14, height: 14, borderRadius: "50%",
             background: "var(--border)", border: "2px dashed var(--muted)" }} />
-          <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.82rem", letterSpacing: "2px",
+          <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "2px",
             color: "var(--muted)", marginBottom: 8 }}>
             TARGET: {TARGET_BOXES} BOXES
           </div>
           <div style={{ background: "var(--surface2)", border: "1.5px dashed var(--border)", borderRadius: 6,
-            padding: "10px 16px", color: "var(--muted)", fontSize: "0.82rem", fontStyle: "italic" }}>
+            padding: "10px 16px", color: "var(--muted)", fontSize: "0.875rem", fontStyle: "italic" }}>
             {TARGET_BOXES - entries.length} more boxes to catalogue. You're {boxPct}% of the way there.
           </div>
         </div>

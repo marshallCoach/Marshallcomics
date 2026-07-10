@@ -64,7 +64,7 @@ function UrgencyBadge({ u }: { u: string }) {
     <span style={{
       background:m.color+"15", border:`1.5px solid ${m.color}`,
       borderRadius:3, padding:"2px 9px",
-      fontSize:"0.68rem", fontFamily:"'Bebas Neue',sans-serif",
+      fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
       letterSpacing:"1px", color:m.color,
     }}>{m.label}</span>
   );
@@ -92,22 +92,22 @@ export function StepCard({
       <div style={{ flex:"0 0 auto", display:"flex", flexDirection:"column", alignItems:"center", gap:6, minWidth:80 }}>
         <UrgencyBadge u={step.urgency} />
         <span style={{
-          fontSize:"0.68rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px",
+          fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px",
           background:cc+"18", border:`1px solid ${cc}`, color:cc,
           borderRadius:3, padding:"2px 8px",
         }}>{step.category}</span>
-        <span style={{ fontSize:"0.75rem", color:step.urgency==="critical"?"#dc2626":"var(--muted2)", fontWeight:step.urgency==="critical"?700:400 }}>
+        <span style={{ fontSize:"0.875rem", color:step.urgency==="critical"?"#dc2626":"var(--muted2)", fontWeight:step.urgency==="critical"?700:400 }}>
           {step.deadline}
         </span>
       </div>
 
       <div style={{ flex:1 }}>
         <div style={{
-          fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem", letterSpacing:"1px",
+          fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
           color:"var(--text)", marginBottom:4,
           textDecoration: isDone ? "line-through" : "none",
         }}>{step.title}</div>
-        <div style={{ fontSize:"0.9rem", color:"var(--muted2)", lineHeight:1.6 }}>{step.detail}</div>
+        <div style={{ fontSize:"0.875rem", color:"var(--muted2)", lineHeight:1.6 }}>{step.detail}</div>
       </div>
 
       <div style={{ flex:"0 0 auto", display:"flex", flexDirection:"column", alignItems:"flex-end", gap:9 }}>
@@ -122,9 +122,9 @@ export function StepCard({
               cursor:"pointer", transition:"all 0.15s", flexShrink:0,
             }}
           >
-            {isDone && <span style={{ color:"#fff", fontSize:"0.75rem", lineHeight:1 }}>✓</span>}
+            {isDone && <span style={{ color:"#fff", fontSize:"0.875rem", lineHeight:1 }}>✓</span>}
           </div>
-          <span style={{ fontSize:"0.68rem", color:"var(--muted2)", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>DONE</span>
+          <span style={{ fontSize:"0.875rem", color:"var(--muted2)", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px" }}>DONE</span>
         </label>
 
         <select
@@ -134,7 +134,7 @@ export function StepCard({
           style={{
             background:"var(--surface2)", border:`1px solid ${statusObj.color}`,
             color:statusObj.color, borderRadius:4,
-            fontSize:"0.68rem", fontFamily:"'Bebas Neue',sans-serif",
+            fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
             letterSpacing:"1px", padding:"4px 8px", cursor:"pointer",
             outline:"none", appearance:"none", textAlign:"center",
           }}
@@ -164,22 +164,22 @@ export default function ActionPlan() {
   return (
     <div style={{ maxWidth:1100, margin:"0 auto", padding:"24px 20px 60px" }}>
       <div style={{ display:"flex", alignItems:"baseline", gap:16, marginBottom:8 }}>
-        <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.4rem", letterSpacing:"2px", color:"var(--red)", margin:0 }}>
+        <h2 style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"1.75rem", letterSpacing:"2px", color:"var(--red)", margin:0 }}>
           Action Plan — v6
         </h2>
         {doneCount > 0 && (
-          <span style={{ fontSize:"0.82rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px", color:"#16a34a" }}>
+          <span style={{ fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1.5px", color:"#16a34a" }}>
             {doneCount} / {NEXT_STEPS.length} DONE
           </span>
         )}
       </div>
-      <p style={{ fontSize:"0.9rem", color:"var(--muted2)", marginBottom:20 }}>
+      <p style={{ fontSize:"0.875rem", color:"var(--muted2)", marginBottom:20 }}>
         {_LIVE_STATS}
       </p>
 
       {critical.length > 0 && (
         <div style={{ marginBottom:20 }}>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem", letterSpacing:"2px", color:"#dc2626", marginBottom:10 }}>🔴 CRITICAL — ACT NOW</div>
+          <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:"#dc2626", marginBottom:10 }}>🔴 CRITICAL — ACT NOW</div>
           <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
             {critical.map((s,i) => <StepCard key={i} step={s} status={getStatus(s.title)} onStatusChange={st=>setStatus(s.title,st)} />)}
           </div>
@@ -188,7 +188,7 @@ export default function ActionPlan() {
 
       {high.length > 0 && (
         <div style={{ marginBottom:20 }}>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem", letterSpacing:"2px", color:"#d97706", marginBottom:10, marginTop:24 }}>🟠 HIGH PRIORITY</div>
+          <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:"#d97706", marginBottom:10, marginTop:24 }}>🟠 HIGH PRIORITY</div>
           <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
             {high.map((s,i) => <StepCard key={i} step={s} status={getStatus(s.title)} onStatusChange={st=>setStatus(s.title,st)} />)}
           </div>
@@ -197,7 +197,7 @@ export default function ActionPlan() {
 
       {rest.length > 0 && (
         <div>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem", letterSpacing:"2px", color:"var(--muted2)", marginBottom:10, marginTop:24 }}>UPCOMING & ONGOING</div>
+          <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:"var(--muted2)", marginBottom:10, marginTop:24 }}>UPCOMING & ONGOING</div>
           <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
             {rest.map((s,i) => <StepCard key={i} step={s} status={getStatus(s.title)} onStatusChange={st=>setStatus(s.title,st)} />)}
           </div>

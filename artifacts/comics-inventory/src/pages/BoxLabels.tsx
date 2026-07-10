@@ -120,8 +120,8 @@ export default function BoxLabels() {
         {/* Progress bar */}
         <div style={{ marginBottom: 10 }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 5 }}>
-            <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.75rem", letterSpacing: "1.5px", color: "var(--muted2)" }}>LABELLED</span>
-            <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.9rem", letterSpacing: "1px", color: checked.size > 0 ? "var(--red)" : "var(--muted2)" }}>
+            <span style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1.5px", color: "var(--muted2)" }}>LABELLED</span>
+            <span style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1px", color: checked.size > 0 ? "var(--red)" : "var(--muted2)" }}>
               {checked.size} / {boxes.length} — {progress}%
             </span>
           </div>
@@ -134,7 +134,7 @@ export default function BoxLabels() {
         <div style={{ display: "flex", gap: 7, flexWrap: "wrap", alignItems: "center" }}>
           {(["todo","all","done"] as const).map(f => (
             <button key={f} onClick={() => setFilter(f)} style={{
-              fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.75rem", letterSpacing: "1.5px",
+              fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1.5px",
               padding: "5px 12px", borderRadius: 20, border: "1.5px solid",
               cursor: "pointer", transition: "all 0.15s",
               background: filter === f ? "var(--red)" : "transparent",
@@ -150,7 +150,7 @@ export default function BoxLabels() {
             const isOn = pubFilter === p;
             return (
               <button key={p} onClick={() => setPubFilter(isOn ? "" : p)} style={{
-                fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.68rem", letterSpacing: "1.2px",
+                fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1.2px",
                 padding: "5px 11px", borderRadius: 20, border: `1.5px solid ${col.bg}`,
                 cursor: "pointer", transition: "all 0.15s",
                 background: isOn ? col.bg : "transparent",
@@ -164,13 +164,13 @@ export default function BoxLabels() {
 
           {/* Collapse / Expand All */}
           <button onClick={expandAll} disabled={allExpanded} style={{
-            fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.68rem", letterSpacing: "1.2px",
+            fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1.2px",
             padding: "5px 11px", borderRadius: 20, border: "1.5px solid var(--border)",
             cursor: allExpanded ? "default" : "pointer", background: "transparent",
             color: allExpanded ? "var(--muted)" : "var(--text2)", opacity: allExpanded ? 0.45 : 1,
           }}>Expand All</button>
           <button onClick={collapseAll} disabled={allCollapsed || groups.length === 0} style={{
-            fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.68rem", letterSpacing: "1.2px",
+            fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1.2px",
             padding: "5px 11px", borderRadius: 20, border: "1.5px solid var(--border)",
             cursor: (allCollapsed || groups.length === 0) ? "default" : "pointer", background: "transparent",
             color: (allCollapsed || groups.length === 0) ? "var(--muted)" : "var(--text2)",
@@ -179,7 +179,7 @@ export default function BoxLabels() {
 
           {checked.size > 0 && (
             <button onClick={clearAll} style={{
-              fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.68rem", letterSpacing: "1.2px",
+              fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1.2px",
               padding: "5px 11px", borderRadius: 20, border: "1.5px solid var(--border)",
               cursor: "pointer", background: "transparent", color: "var(--muted2)",
               marginLeft: "auto",
@@ -193,9 +193,9 @@ export default function BoxLabels() {
         display: "flex", gap: 8, flexWrap: "wrap", padding: "10px 14px 4px",
         borderBottom: "1px solid var(--border)", background: "var(--surface)",
       }}>
-        <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1.5px", color: "var(--muted)", alignSelf: "center" }}>KEY:</span>
+        <span style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1.5px", color: "var(--muted)", alignSelf: "center" }}>KEY:</span>
         {(Object.entries(PUB_COLORS) as [PubType, typeof PUB_COLORS[PubType]][]).map(([p, col]) => (
-          <span key={p} style={{ display: "inline-flex", alignItems: "center", gap: 5, fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1px", color: "var(--text2)" }}>
+          <span key={p} style={{ display: "inline-flex", alignItems: "center", gap: 5, fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1px", color: "var(--text2)" }}>
             <span style={{ display: "inline-block", width: 12, height: 12, borderRadius: 2, background: col.bg, flexShrink: 0 }} />
             {p}
           </span>
@@ -208,7 +208,7 @@ export default function BoxLabels() {
         {groups.length === 0 && (
           <div style={{
             textAlign: "center", padding: "60px 20px",
-            fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.9rem",
+            fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
             letterSpacing: "2px", color: "var(--muted)",
           }}>
             {filter === "done" ? "No boxes labelled yet — tap a card to mark it done." : "ALL DONE — GREAT WORK!"}
@@ -235,25 +235,25 @@ export default function BoxLabels() {
                   borderBottom: isCollapsed ? "1.5px solid var(--border)" : "none",
                   borderRadius: isCollapsed ? 8 : "8px 8px 0 0",
                   padding: "10px 16px", cursor: "pointer",
-                  fontFamily: "'Bebas Neue',sans-serif",
+                  fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
                   transition: "background 0.15s",
                 }}
               >
                 {/* Chevron */}
                 <span style={{
-                  display: "inline-block", fontSize: "0.68rem",
+                  display: "inline-block", fontSize: "0.875rem",
                   color: "var(--muted)", transition: "transform 0.2s",
                   transform: isCollapsed ? "rotate(-90deg)" : "rotate(0deg)",
                 }}>▼</span>
 
                 {/* Range label */}
-                <span style={{ fontSize: "0.82rem", letterSpacing: "3px", color: "var(--text2)", flex: 1, textAlign: "left" }}>
+                <span style={{ fontSize: "0.875rem", letterSpacing: "3px", color: "var(--text2)", flex: 1, textAlign: "left" }}>
                   BOXES {String(firstNum).padStart(2, "0")} – {String(lastNum).padStart(2, "0")}
                 </span>
 
                 {/* Progress badge */}
                 <span style={{
-                  fontSize: "0.62rem", letterSpacing: "1px",
+                  fontSize: "0.875rem", letterSpacing: "1px",
                   color: allDone ? "#16a34a" : doneInGroup > 0 ? "var(--red)" : "var(--muted)",
                   background: allDone ? "#f0faf2" : doneInGroup > 0 ? "#fff5f6" : "var(--surface2)",
                   border: `1px solid ${allDone ? "#bbf7d0" : doneInGroup > 0 ? "#fecdd3" : "var(--border)"}`,
@@ -321,13 +321,13 @@ export default function BoxLabels() {
                         {/* Publisher badge */}
                         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
                           <span style={{
-                            fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "2px",
+                            fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "2px",
                             background: isDone ? "#c0beba" : col.bg, color: isDone ? "#7a7875" : col.label,
                             padding: "2px 9px", borderRadius: 3,
                           }}>{b.pub.toUpperCase()}</span>
                           {b.Location && (
                             <span style={{
-                              fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1px",
+                              fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1px",
                               color: "var(--muted)", background: "var(--surface2)",
                               padding: "2px 8px", borderRadius: 3, border: "1px solid var(--border)",
                             }}>{b.Location}</span>
@@ -336,7 +336,7 @@ export default function BoxLabels() {
 
                         {/* Box Number — HUGE */}
                         <div style={{
-                          fontFamily: "'Bebas Neue',sans-serif",
+                          fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
                           fontSize: "clamp(3.5rem, 14vw, 5rem)",
                           lineHeight: 0.9, letterSpacing: "2px",
                           color: isDone ? "#a0a09a" : col.accent,
@@ -347,8 +347,8 @@ export default function BoxLabels() {
                         {/* Label */}
                         {b.Label && b.Label !== "nan" && (
                           <div style={{
-                            fontFamily: "'Bebas Neue',sans-serif",
-                            fontSize: "1.2rem", letterSpacing: "2px",
+                            fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+                            fontSize: "0.875rem", letterSpacing: "2px",
                             color: isDone ? "#a0a09a" : "var(--text2)", lineHeight: 1.2,
                           }}>
                             {b.Label}
@@ -362,8 +362,8 @@ export default function BoxLabels() {
                               background: "rgba(0,0,0,0.04)", borderRadius: 6, padding: "10px 12px",
                               borderLeft: `3px solid ${isDone ? "#c0beba" : col.accent}`,
                             }}>
-                              <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "2px", color: "var(--muted)", marginBottom: 4 }}>{lbl}</div>
-                              <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "clamp(0.82rem, 3.2vw, 1rem)", letterSpacing: "0.5px", lineHeight: 1.3, color: isDone ? "#a0a09a" : "var(--text)" }}>
+                              <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "2px", color: "var(--muted)", marginBottom: 4 }}>{lbl}</div>
+                              <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "clamp(0.82rem, 3.2vw, 1rem)", letterSpacing: "0.5px", lineHeight: 1.3, color: isDone ? "#a0a09a" : "var(--text)" }}>
                                 {val && val !== "nan" ? val : "—"}
                               </div>
                             </div>
@@ -372,21 +372,21 @@ export default function BoxLabels() {
 
                         {/* Stats row */}
                         <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-                          <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1rem", letterSpacing: "1px", color: isDone ? "#a0a09a" : "var(--text2)" }}>
-                            {b.Comics} <span style={{ fontSize: "0.62rem", letterSpacing: "1.5px", color: "var(--muted)" }}>COMICS</span>
+                          <span style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1px", color: isDone ? "#a0a09a" : "var(--text2)" }}>
+                            {b.Comics} <span style={{ fontSize: "0.875rem", letterSpacing: "1.5px", color: "var(--muted)" }}>COMICS</span>
                           </span>
                           {b.Keys > 0 && (
-                            <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1rem", letterSpacing: "1px", color: isDone ? "#a0a09a" : "#8a6000" }}>
-                              {b.Keys} <span style={{ fontSize: "0.62rem", letterSpacing: "1.5px", color: isDone ? "var(--muted)" : "#8a6000" }}>KEYS</span>
+                            <span style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1px", color: isDone ? "#a0a09a" : "#8a6000" }}>
+                              {b.Keys} <span style={{ fontSize: "0.875rem", letterSpacing: "1.5px", color: isDone ? "var(--muted)" : "#8a6000" }}>KEYS</span>
                             </span>
                           )}
                           {b.Signed > 0 && (
-                            <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1rem", letterSpacing: "1px", color: isDone ? "#a0a09a" : "#16a34a" }}>
-                              {b.Signed} <span style={{ fontSize: "0.62rem", letterSpacing: "1.5px", color: isDone ? "var(--muted)" : "#16a34a" }}>SIGNED</span>
+                            <span style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1px", color: isDone ? "#a0a09a" : "#16a34a" }}>
+                              {b.Signed} <span style={{ fontSize: "0.875rem", letterSpacing: "1.5px", color: isDone ? "var(--muted)" : "#16a34a" }}>SIGNED</span>
                             </span>
                           )}
                           {b.YearRange && b.YearRange !== "nan" && (
-                            <span style={{ marginLeft: "auto", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.82rem", letterSpacing: "1px", color: "var(--muted)" }}>
+                            <span style={{ marginLeft: "auto", fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1px", color: "var(--muted)" }}>
                               {b.YearRange}
                             </span>
                           )}
@@ -394,14 +394,14 @@ export default function BoxLabels() {
 
                         {/* Notes */}
                         {b.Notes && b.Notes !== "nan" && (
-                          <div style={{ fontFamily: "'Crimson Pro',serif", fontSize: "0.82rem", lineHeight: 1.4, color: "var(--muted2)", borderTop: "1px solid var(--border)", paddingTop: 8 }}>
+                          <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", lineHeight: 1.4, color: "var(--muted2)", borderTop: "1px solid var(--border)", paddingTop: 8 }}>
                             {b.Notes}
                           </div>
                         )}
 
                         {/* Done overlay text */}
                         {isDone && (
-                          <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.75rem", letterSpacing: "2.5px", color: "#b0ada8", textAlign: "center", marginTop: 4 }}>
+                          <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "2.5px", color: "#b0ada8", textAlign: "center", marginTop: 4 }}>
                             TAP TO UNMARK
                           </div>
                         )}

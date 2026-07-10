@@ -86,7 +86,7 @@ const LIST_COLS: ColDef<Comic>[] = [
   {
     key: "era", label: "Era", defaultWidth: 80,
     sort: (a, b) => (a.Era || "").localeCompare(b.Era || ""),
-    cell: r => r.Era ? <span className="badge be" style={{ fontSize: "0.62rem" }}>{r.Era}</span> : null,
+    cell: r => r.Era ? <span className="badge be" style={{ fontSize: "0.875rem" }}>{r.Era}</span> : null,
   },
   {
     key: "nm", label: "NM Value", defaultWidth: 90,
@@ -101,16 +101,16 @@ const LIST_COLS: ColDef<Comic>[] = [
   {
     key: "platform", label: "Platform", defaultWidth: 110,
     sort: (a, b) => (a.Platform || "").localeCompare(b.Platform || ""),
-    cell: r => r.Platform ? <span className={`badge ${platClass(r.Platform)}`} style={{ fontSize: "0.62rem" }}>{r.Platform}</span> : null,
+    cell: r => r.Platform ? <span className={`badge ${platClass(r.Platform)}`} style={{ fontSize: "0.875rem" }}>{r.Platform}</span> : null,
   },
   {
     key: "flags", label: "Flags", defaultWidth: 90,
     cell: r => (
       <div style={{ display: "flex", gap: 3, flexWrap: "wrap" }}>
-        {(r.Key || "").toUpperCase() === "YES"       && <span className="badge bk" style={{ fontSize: "0.62rem" }}>KEY</span>}
-        {(r.Signed || "").toUpperCase() === "YES"    && <span className="badge bs" style={{ fontSize: "0.62rem" }}>✍</span>}
-        {(r.CGC_Worth || "").toUpperCase() === "YES" && <span className="badge bc" style={{ fontSize: "0.62rem" }}>CGC</span>}
-        {!!(r.Terrificon || "").trim()               && <span className="badge bt" style={{ fontSize: "0.62rem" }}>TF</span>}
+        {(r.Key || "").toUpperCase() === "YES"       && <span className="badge bk" style={{ fontSize: "0.875rem" }}>KEY</span>}
+        {(r.Signed || "").toUpperCase() === "YES"    && <span className="badge bs" style={{ fontSize: "0.875rem" }}>✍</span>}
+        {(r.CGC_Worth || "").toUpperCase() === "YES" && <span className="badge bc" style={{ fontSize: "0.875rem" }}>CGC</span>}
+        {!!(r.Terrificon || "").trim()               && <span className="badge bt" style={{ fontSize: "0.875rem" }}>TF</span>}
       </div>
     ),
   },
@@ -218,18 +218,18 @@ export default function OriginalCollection({ initSigned }: { initSigned?: string
 
       <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center",
         margin:"10px 16px 0", flexWrap:"wrap", gap:8 }}>
-        <div style={{ fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px", fontSize:"0.82rem", color:"var(--muted2)" }}>
+        <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1.5px", fontSize:"0.875rem", color:"var(--muted2)" }}>
           {results.length === 0
             ? "No results — try a different search"
-            : <><span style={{ color:"var(--red)", fontSize:"1rem" }}>{results.length.toLocaleString()}</span> of {comics.length.toLocaleString()} key &amp; signed books</>
+            : <><span style={{ color:"var(--red)", fontSize:"0.875rem" }}>{results.length.toLocaleString()}</span> of {comics.length.toLocaleString()} key &amp; signed books</>
           }
         </div>
         <div style={{ display:"flex", gap:6, alignItems:"center" }}>
-          <span style={{ fontSize:"0.75rem", color:"var(--muted2)" }}>Click headers to sort · Drag to resize</span>
+          <span style={{ fontSize:"0.875rem", color:"var(--muted2)" }}>Click headers to sort · Drag to resize</span>
           {(["list","card"] as const).map(v => (
             <button key={v} onClick={() => setView(v as "list"|"card")}
               style={{
-                fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"1.5px",
+                fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
                 padding:"5px 14px", border:`1.5px solid ${view===v?"var(--red)":"var(--border)"}`,
                 background:view===v?"var(--red)":"var(--surface)", color:view===v?"#fff":"var(--muted2)",
                 borderRadius:4, cursor:"pointer", transition:"all 0.15s",
@@ -275,33 +275,33 @@ export default function OriginalCollection({ initSigned }: { initSigned?: string
                       <button
                         className="title-link"
                         onClick={e => { e.stopPropagation(); setQ(c.Title||""); setCardPage(1); }}
-                        style={{ display:"block", textAlign:"left", fontFamily:"'Bebas Neue',sans-serif",
-                          fontSize:"0.9rem", letterSpacing:"1px", lineHeight:1.2 }}
+                        style={{ display:"block", textAlign:"left", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+                          fontSize:"0.875rem", letterSpacing:"1px", lineHeight:1.2 }}
                       >{c.Title || "Untitled"}</button>
                     </div>
-                    <div style={{ fontSize:"0.68rem", color:"var(--muted)", flexShrink:0, marginTop:2 }}>
+                    <div style={{ fontSize:"0.875rem", color:"var(--muted)", flexShrink:0, marginTop:2 }}>
                       {c.Issue} {isOpen?"▲":"▼"}
                     </div>
                   </div>
                   {/* Subtitle */}
-                  <div style={{ fontSize:"0.82rem", color:"var(--muted2)", marginTop:4 }}>
+                  <div style={{ fontSize:"0.875rem", color:"var(--muted2)", marginTop:4 }}>
                     {[c.Publisher, c.Year, c.Era].filter(Boolean).join(" · ")}
                     {c.Platform ? ` · ${c.Platform}` : ""}
                   </div>
                   {/* Badges */}
                   <div style={{ display:"flex", gap:5, marginTop:7, flexWrap:"wrap" }}>
-                    {isKey    && <span className="badge bk" style={{fontSize:"0.62rem"}}>KEY</span>}
-                    {isSigned && <span className="badge bs" style={{fontSize:"0.62rem"}}>SIGNED</span>}
+                    {isKey    && <span className="badge bk" style={{fontSize:"0.875rem"}}>KEY</span>}
+                    {isSigned && <span className="badge bs" style={{fontSize:"0.875rem"}}>SIGNED</span>}
                   </div>
                   {/* NM value */}
                   {nmVal && (
-                    <div style={{ fontSize:"0.82rem", color:"var(--brown)", marginTop:6 }}>
+                    <div style={{ fontSize:"0.875rem", color:"var(--brown)", marginTop:6 }}>
                       NM: <span style={{ color:"var(--red)", fontWeight:700 }}>{nmVal}</span>
                     </div>
                   )}
                   {/* Pitch (collapsed) */}
                   {pitch && !isOpen && (
-                    <div style={{ fontSize:"0.82rem", color:"var(--muted2)", lineHeight:1.5, marginTop:5 }}>
+                    <div style={{ fontSize:"0.875rem", color:"var(--muted2)", lineHeight:1.5, marginTop:5 }}>
                       {pitch.substring(0,120)}{pitch.length>120?"…":""}
                     </div>
                   )}
@@ -316,7 +316,7 @@ export default function OriginalCollection({ initSigned }: { initSigned?: string
                       {c.First_App  && c.First_App  !== "nan" && <div className="dr"><span className="dl">1st App</span><span className="dv">{c.First_App}</span></div>}
                       {c.Condition  && c.Condition  !== "nan" && <div className="dr"><span className="dl">Condition</span><span className="dv">{c.Condition}</span></div>}
                       {isTf && c.Terrificon && <div className="dr"><span className="dl">Terrificon</span><span className="dv" style={{color:"#f59e0b"}}>{c.Terrificon}</span></div>}
-                      {pitch && <div style={{ flex:"1 1 100%", marginTop:6, fontSize:"0.82rem", color:"var(--muted2)", lineHeight:1.5 }}>{pitch}</div>}
+                      {pitch && <div style={{ flex:"1 1 100%", marginTop:6, fontSize:"0.875rem", color:"var(--muted2)", lineHeight:1.5 }}>{pitch}</div>}
                     </div>
                   )}
                 </div>
@@ -344,7 +344,7 @@ export default function OriginalCollection({ initSigned }: { initSigned?: string
                   {c.Condition && c.Condition !== "nan" && <div className="dr"><span className="dl">Condition</span><span className="dv">{c.Condition}</span></div>}
                 </div>
                 {c.Story_Pitch && c.Story_Pitch !== "nan" && (
-                  <div style={{ marginTop:6, color:"var(--muted2)", fontSize:"0.9rem" }}>
+                  <div style={{ marginTop:6, color:"var(--muted2)", fontSize:"0.875rem" }}>
                     {c.Story_Pitch.substring(0,200)}
                   </div>
                 )}

@@ -200,10 +200,10 @@ export default function PullList() {
       {/* Page header */}
       <div style={{ marginBottom: 20 }}>
         <div style={{ display:"flex", alignItems:"baseline", gap:14, flexWrap:"wrap", marginBottom:12 }}>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.8rem", letterSpacing:"3px", color:"var(--red)", lineHeight:1 }}>
+          <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"1.75rem", letterSpacing:"3px", color:"var(--red)", lineHeight:1 }}>
             PULL LIST
           </div>
-          <div style={{ fontFamily:"'Crimson Pro',serif", color:"var(--muted2)", fontSize:"0.9rem", marginTop:2 }}>
+          <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", color:"var(--muted2)", fontSize:"0.875rem", marginTop:2 }}>
             {SERIES.filter(s=>s.cadence==="new").length} new titles · {SERIES.filter(s=>s.cadence==="existing").length} ongoing · {SERIES.filter(s=>s.type==="mini").length} minis
           </div>
         </div>
@@ -220,15 +220,15 @@ export default function PullList() {
               background:"var(--surface)", border:"1.5px solid var(--border)",
               borderRadius:6, padding:"6px 14px", textAlign:"center", minWidth:72,
             }}>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.4rem", color:s.c, lineHeight:1 }}>{s.n}</div>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px", color:"var(--muted)", marginTop:1 }}>{s.l}</div>
+              <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"1.75rem", color:s.c, lineHeight:1 }}>{s.n}</div>
+              <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px", color:"var(--muted)", marginTop:1 }}>{s.l}</div>
             </div>
           ))}
           <div style={{ marginLeft:"auto", display:"flex", gap:6, alignItems:"center" }}>
             <button onClick={exportTxt} style={{
               background:"var(--surface)", border:"1.5px solid var(--border)",
               borderRadius:5, padding:"6px 14px", cursor:"pointer",
-              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem",
+              fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
               letterSpacing:"1.5px", color:"var(--muted2)",
             }}
               onMouseEnter={e=>{(e.currentTarget as HTMLButtonElement).style.borderColor="var(--red)";(e.currentTarget as HTMLButtonElement).style.color="var(--red)";}}
@@ -245,7 +245,7 @@ export default function PullList() {
             onChange={e=>setQuery(e.target.value)}
             style={{
               padding:"7px 12px", border:"1.5px solid var(--border)", borderRadius:5,
-              fontSize:"0.82rem", fontFamily:"'Crimson Pro',serif",
+              fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
               outline:"none", background:"#fff", minWidth:180,
             }}
           />
@@ -260,14 +260,14 @@ export default function PullList() {
                   color: isActive ? (pc?.text ?? "#fff") : "var(--muted2)",
                   border: isActive ? `1.5px solid ${pc?.bg ?? "var(--red)"}` : "1.5px solid var(--border)",
                   borderRadius:4, padding:"5px 11px", cursor:"pointer",
-                  fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1px",
+                  fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
                 }}>{p}</button>
               );
             })}
           </div>
           <select value={filterType} onChange={e=>setFilterType(e.target.value as typeof filterType)} style={{
             padding:"6px 10px", border:"1.5px solid var(--border)", borderRadius:5,
-            fontSize:"0.75rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px",
+            fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px",
             background:"#fff", cursor:"pointer",
           }}>
             <option value="all">ONGOING + MINI</option>
@@ -276,7 +276,7 @@ export default function PullList() {
           </select>
           <select value={filterNew} onChange={e=>setFilterNew(e.target.value as typeof filterNew)} style={{
             padding:"6px 10px", border:"1.5px solid var(--border)", borderRadius:5,
-            fontSize:"0.75rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px",
+            fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px",
             background:"#fff", cursor:"pointer",
           }}>
             <option value="all">NEW + EXISTING</option>
@@ -291,7 +291,7 @@ export default function PullList() {
                 color: view===v ? "#fff" : "var(--muted2)",
                 border: view===v ? "1.5px solid var(--red)" : "1.5px solid var(--border)",
                 borderRadius:5, padding:"6px 12px", cursor:"pointer",
-                fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1px",
+                fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
               }}>{v==="card" ? "⊞ CARD" : "≡ LIST"}</button>
             ))}
           </div>
@@ -305,13 +305,13 @@ export default function PullList() {
             <div key={pub} style={{ marginBottom:28 }}>
               <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:10 }}>
                 <div style={{
-                  fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem",
+                  fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                   letterSpacing:"3px", color: pubColors(pub).bg,
                 }}>
                   {pub.toUpperCase()}
                 </div>
                 <div style={{ flex:1, height:1, background:"var(--border)" }}/>
-                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px", color:"var(--muted)" }}>
+                <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px", color:"var(--muted)" }}>
                   {byPub[pub].length} TITLE{byPub[pub].length!==1?"S":""}
                 </div>
               </div>
@@ -369,7 +369,7 @@ export default function PullList() {
       {filtered.length === 0 && (
         <div style={{
           padding:"48px 20px", textAlign:"center",
-          fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem",
+          fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
           letterSpacing:"2px", color:"var(--muted)",
           border:"1.5px dashed var(--border)", borderRadius:8,
         }}>NO TITLES MATCH THIS FILTER</div>
@@ -405,7 +405,7 @@ function StatusPill({ status, onChange }: { status: IssueStatus; onChange: (s: I
       <button onClick={()=>setOpen(o=>!o)} style={{
         background:m.bg, border:`1.5px solid ${m.color}40`,
         borderRadius:4, padding:"2px 8px", cursor:"pointer",
-        fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+        fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
         letterSpacing:"1px", color:m.color, whiteSpace:"nowrap",
       }}>{m.label} ▾</button>
       {open && (
@@ -421,7 +421,7 @@ function StatusPill({ status, onChange }: { status: IssueStatus; onChange: (s: I
               <div key={st} onClick={()=>{onChange(st);setOpen(false);}} style={{
                 padding:"7px 12px", cursor:"pointer",
                 background: st===status ? sm.bg : "#fff",
-                fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+                fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                 letterSpacing:"1px", color:sm.color,
                 borderBottom:"1px solid var(--border)",
               }}
@@ -446,14 +446,14 @@ function AddIssueForm({ newIssue, newNote, onIssue, onNote, onAdd, onCancel }: {
     <div style={{ display:"flex", gap:6, alignItems:"center", flexWrap:"wrap", marginTop:8, padding:"8px 10px", background:"var(--surface)", borderRadius:5 }}>
       <input placeholder="#" value={newIssue} onChange={e=>onIssue(e.target.value)}
         onKeyDown={e=>e.key==="Enter"&&onAdd()}
-        style={{ width:54, padding:"5px 8px", border:"1.5px solid var(--border)", borderRadius:4, fontSize:"0.82rem", fontFamily:"'Crimson Pro',serif", outline:"none", background:"#fff" }}
+        style={{ width:54, padding:"5px 8px", border:"1.5px solid var(--border)", borderRadius:4, fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", outline:"none", background:"#fff" }}
       />
       <input placeholder="Note (optional)" value={newNote} onChange={e=>onNote(e.target.value)}
         onKeyDown={e=>e.key==="Enter"&&onAdd()}
-        style={{ flex:1, minWidth:100, padding:"5px 8px", border:"1.5px solid var(--border)", borderRadius:4, fontSize:"0.82rem", fontFamily:"'Crimson Pro',serif", outline:"none", background:"#fff" }}
+        style={{ flex:1, minWidth:100, padding:"5px 8px", border:"1.5px solid var(--border)", borderRadius:4, fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", outline:"none", background:"#fff" }}
       />
-      <button onClick={onAdd} style={{ background:"var(--red)", color:"#fff", border:"none", borderRadius:4, padding:"5px 12px", cursor:"pointer", fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1px" }}>ADD</button>
-      <button onClick={onCancel} style={{ background:"none", border:"1.5px solid var(--border)", borderRadius:4, padding:"5px 10px", cursor:"pointer", fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1px", color:"var(--muted)" }}>✕</button>
+      <button onClick={onAdd} style={{ background:"var(--red)", color:"#fff", border:"none", borderRadius:4, padding:"5px 12px", cursor:"pointer", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px" }}>ADD</button>
+      <button onClick={onCancel} style={{ background:"none", border:"1.5px solid var(--border)", borderRadius:4, padding:"5px 10px", cursor:"pointer", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--muted)" }}>✕</button>
     </div>
   );
 }
@@ -465,7 +465,7 @@ function IssueList({ issues, onStatusChange, onRemove }: {
   onRemove: (idx:number)=>void;
 }) {
   if (!issues.length) return (
-    <div style={{ padding:"8px 0", color:"var(--muted)", fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px" }}>
+    <div style={{ padding:"8px 0", color:"var(--muted)", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px" }}>
       NO ISSUES TRACKED YET
     </div>
   );
@@ -480,11 +480,11 @@ function IssueList({ issues, onStatusChange, onRemove }: {
             padding:"5px 8px", borderRadius:4,
             background: m.bg, border:`1px solid ${m.color}20`,
           }}>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", color:m.color, minWidth:28 }}>#{iss.issueNum}</div>
-            {iss.notes && <div style={{ flex:1, fontSize:"0.75rem", color:"var(--muted2)", fontStyle:"italic" }}>{iss.notes}</div>}
+            <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:m.color, minWidth:28 }}>#{iss.issueNum}</div>
+            {iss.notes && <div style={{ flex:1, fontSize:"0.875rem", color:"var(--muted2)", fontStyle:"italic" }}>{iss.notes}</div>}
             {!iss.notes && <div style={{ flex:1 }}/>}
             <StatusPill status={iss.status} onChange={st=>onStatusChange(idx,st)} />
-            <button onClick={()=>onRemove(idx)} style={{ background:"none", border:"none", cursor:"pointer", color:"var(--muted)", fontSize:"0.82rem", opacity:0.45, padding:"0 2px" }}
+            <button onClick={()=>onRemove(idx)} style={{ background:"none", border:"none", cursor:"pointer", color:"var(--muted)", fontSize:"0.875rem", opacity:0.45, padding:"0 2px" }}
               onMouseEnter={e=>{(e.currentTarget as HTMLButtonElement).style.opacity="1";}}
               onMouseLeave={e=>{(e.currentTarget as HTMLButtonElement).style.opacity="0.45";}}
             >✕</button>
@@ -519,38 +519,38 @@ function SeriesCard(p: SeriesProps) {
         <div style={{ flex:1, minWidth:0 }}>
           <div style={{ display:"flex", gap:4, marginBottom:4, flexWrap:"wrap" }}>
             <span style={{
-              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px",
+              fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
               padding:"1px 6px", borderRadius:3,
               ...pubBadgeStyle(s.publisher),
             }}>{s.publisher.toUpperCase()}</span>
             <span style={{
-              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px",
+              fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
               padding:"1px 6px", borderRadius:3,
               background: s.type==="mini" ? "#f3f0ff" : "#f0faf0",
               color:       s.type==="mini" ? "#5b4fc8"  : "#16a34a",
             }}>{s.type==="mini" ? "MINI" : "ONGOING"}</span>
             {isNew && (
               <span style={{
-                fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px",
+                fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
                 padding:"1px 6px", borderRadius:3, background:"#fef3c7", color:"#b45309",
               }}>NEW</span>
             )}
           </div>
-          <div style={{ fontSize:"0.82rem", fontWeight:700, color:"var(--brown-light)", lineHeight:1.25 }}>
+          <div style={{ fontSize:"0.875rem", fontWeight:700, color:"var(--brown-light)", lineHeight:1.25 }}>
             {s.title}
           </div>
           {latest && (
-            <div style={{ fontSize:"0.68rem", color: ISSUE_STATUS[latest.status].color, marginTop:3, fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"0.5px" }}>
+            <div style={{ fontSize:"0.875rem", color: ISSUE_STATUS[latest.status].color, marginTop:3, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"0.5px" }}>
               #{latest.issueNum} — {ISSUE_STATUS[latest.status].label}
             </div>
           )}
           {!latest && (
-            <div style={{ fontSize:"0.68rem", color:"var(--muted)", marginTop:3, fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"0.5px" }}>
+            <div style={{ fontSize:"0.875rem", color:"var(--muted)", marginTop:3, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"0.5px" }}>
               {issues.length} ISSUE{issues.length!==1?"S":""} TRACKED
             </div>
           )}
         </div>
-        <div style={{ color:"var(--muted)", fontSize:"0.75rem", alignSelf:"flex-start", paddingTop:2 }}>
+        <div style={{ color:"var(--muted)", fontSize:"0.875rem", alignSelf:"flex-start", paddingTop:2 }}>
           {expanded ? "▲" : "▼"}
         </div>
       </div>
@@ -559,14 +559,14 @@ function SeriesCard(p: SeriesProps) {
       {expanded && (
         <div style={{ padding:"0 10px 10px", borderTop:"1px solid var(--border)" }}>
           <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", paddingTop:8, marginBottom:4 }}>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px", color:"var(--muted)" }}>
+            <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px", color:"var(--muted)" }}>
               ISSUES — {issues.length}
             </div>
             {!p.addingFor && (
               <button onClick={p.onStartAdd} style={{
                 background:"var(--red)", color:"#fff", border:"none",
                 borderRadius:4, padding:"3px 10px", cursor:"pointer",
-                fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px",
+                fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
               }}>+ ADD ISSUE</button>
             )}
           </div>
@@ -600,38 +600,38 @@ function SeriesRow(p: SeriesProps) {
           style={{ borderRadius:2, flexShrink:0, display:"block" }} />
         <div style={{ flex:1, minWidth:0 }}>
           <div style={{ display:"flex", gap:5, alignItems:"baseline", flexWrap:"wrap" }}>
-            <span style={{ fontSize:"0.9rem", fontWeight:700, color:"var(--brown-light)" }}>{s.title}</span>
-            <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px", color:pc.bg }}>{s.publisher.toUpperCase()}</span>
+            <span style={{ fontSize:"0.875rem", fontWeight:700, color:"var(--brown-light)" }}>{s.title}</span>
+            <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:pc.bg }}>{s.publisher.toUpperCase()}</span>
             <span style={{
-              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px",
+              fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
               color: s.type==="mini" ? "#5b4fc8" : "#16a34a",
             }}>{s.type==="mini" ? "MINI" : "ONGOING"}</span>
-            {isNew && <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px", color:"#b45309" }}>NEW</span>}
+            {isNew && <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"#b45309" }}>NEW</span>}
           </div>
           {latest && (
-            <div style={{ fontSize:"0.68rem", color:ISSUE_STATUS[latest.status].color, fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"0.5px", marginTop:1 }}>
+            <div style={{ fontSize:"0.875rem", color:ISSUE_STATUS[latest.status].color, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"0.5px", marginTop:1 }}>
               Latest: #{latest.issueNum} — {ISSUE_STATUS[latest.status].label}
-              {latest.notes && <span style={{ color:"var(--muted)", fontFamily:"'Crimson Pro',serif", fontStyle:"italic", marginLeft:6 }}>{latest.notes}</span>}
+              {latest.notes && <span style={{ color:"var(--muted)", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontStyle:"italic", marginLeft:6 }}>{latest.notes}</span>}
             </div>
           )}
         </div>
-        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px", color:"var(--muted)", marginRight:6 }}>
+        <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--muted)", marginRight:6 }}>
           {issues.length > 0 ? `${issues.length} ISS` : ""}
         </div>
-        <div style={{ color:"var(--muted)", fontSize:"0.75rem" }}>{expanded ? "▲" : "▼"}</div>
+        <div style={{ color:"var(--muted)", fontSize:"0.875rem" }}>{expanded ? "▲" : "▼"}</div>
       </div>
 
       {expanded && (
         <div style={{ padding:"0 12px 10px", borderTop:"1px solid var(--border)" }}>
           <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", paddingTop:8 }}>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px", color:"var(--muted)" }}>
+            <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px", color:"var(--muted)" }}>
               ISSUES — {issues.length}
             </div>
             {!p.addingFor && (
               <button onClick={p.onStartAdd} style={{
                 background:"var(--red)", color:"#fff", border:"none",
                 borderRadius:4, padding:"3px 10px", cursor:"pointer",
-                fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px",
+                fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
               }}>+ ADD ISSUE</button>
             )}
           </div>
