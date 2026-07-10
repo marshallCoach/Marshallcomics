@@ -349,10 +349,10 @@ export default function SellerDashboard() {
 
       {/* ── page header ───────────────────────────────────────────────────── */}
       <div style={{ background:"#1a0a0a", padding:"20px 20px 16px", borderBottom:"3px solid var(--red)" }}>
-        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.7rem", letterSpacing:"4px", color:"#fff", lineHeight:1 }}>
+        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.8rem", letterSpacing:"4px", color:"#fff", lineHeight:1 }}>
           SELLER COMMAND CENTER
         </div>
-        <div style={{ fontSize:"0.72rem", letterSpacing:"2px", color:"rgba(255,255,255,0.4)", marginTop:4, fontFamily:"'Bebas Neue',sans-serif" }}>
+        <div style={{ fontSize:"0.75rem", letterSpacing:"2px", color:"rgba(255,255,255,0.4)", marginTop:4, fontFamily:"'Bebas Neue',sans-serif" }}>
           ROBERTO MARSHALL · BLACKREADBROWN · ROI + ACTION TRACKER
         </div>
         {/* Headline bar */}
@@ -365,9 +365,9 @@ export default function SellerDashboard() {
             { lbl:"eBay Inventory",  val: EBAY_BOOKS.length.toLocaleString(), sub:"books tagged eBay",   color:"#a78bfa" },
           ].map(s => (
             <div key={s.lbl} style={{ flex:"1 1 120px", padding:"10px 14px", borderRight:"1px solid rgba(255,255,255,0.08)" }}>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.3rem", color:s.color, letterSpacing:"1px" }}>{s.val}</div>
-              <div style={{ fontSize:"0.6rem", color:"rgba(255,255,255,0.35)", letterSpacing:"1.5px", textTransform:"uppercase", marginTop:2 }}>{s.lbl}</div>
-              <div style={{ fontSize:"0.58rem", color:"rgba(255,255,255,0.2)", marginTop:1 }}>{s.sub}</div>
+              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.4rem", color:s.color, letterSpacing:"1px" }}>{s.val}</div>
+              <div style={{ fontSize:"0.62rem", color:"rgba(255,255,255,0.35)", letterSpacing:"1.5px", textTransform:"uppercase", marginTop:2 }}>{s.lbl}</div>
+              <div style={{ fontSize:"0.62rem", color:"rgba(255,255,255,0.2)", marginTop:1 }}>{s.sub}</div>
             </div>
           ))}
         </div>
@@ -395,7 +395,7 @@ export default function SellerDashboard() {
           <div style={{ background:"var(--surface2)", padding:"12px 16px", borderBottom:"1px solid var(--border)",
             display:"flex", gap:20, flexWrap:"wrap", alignItems:"center" }}>
             <div>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.1rem", color:"var(--green-text)", letterSpacing:"1px" }}>
+              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.2rem", color:"var(--green-text)", letterSpacing:"1px" }}>
                 {fmtMoney(actionTotals.doneVal)} secured
               </div>
               <div style={{ fontSize:"0.62rem", color:"var(--muted)", letterSpacing:"1px" }}>
@@ -408,7 +408,7 @@ export default function SellerDashboard() {
                   width:`${Math.round((actionTotals.doneVal/actionTotals.all)*100)}%`,
                   transition:"width 0.4s ease" }} />
               </div>
-              <div style={{ fontSize:"0.58rem", color:"var(--muted)", marginTop:3 }}>
+              <div style={{ fontSize:"0.62rem", color:"var(--muted)", marginTop:3 }}>
                 {fmtMoney(actionTotals.all - actionTotals.doneVal)} still on the table
               </div>
             </div>
@@ -416,7 +416,7 @@ export default function SellerDashboard() {
             <div style={{ display:"flex", gap:4 }}>
               {(["priority","value","roi"] as const).map(s => (
                 <button key={s} onClick={() => setActionSort(s)}
-                  style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1.5px",
+                  style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px",
                     padding:"4px 10px", border:`1.5px solid ${actionSort===s?"var(--red)":"var(--border)"}`,
                     background:actionSort===s?"var(--red)":"transparent", color:actionSort===s?"#fff":"var(--muted2)",
                     borderRadius:3, cursor:"pointer" }}>
@@ -451,17 +451,17 @@ export default function SellerDashboard() {
                     <div style={{ flex:1, minWidth:0 }}>
                       <div style={{ display:"flex", gap:8, alignItems:"center", marginBottom:4, flexWrap:"wrap" }}>
                         <PriorityDot p={item.priority} />
-                        <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"2px",
+                        <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"2px",
                           background:pColor+"18", color:pColor, padding:"1px 7px", borderRadius:2 }}>
                           {item.deadline}
                         </span>
                         <span style={{ fontSize:"0.62rem", color:"var(--muted)", letterSpacing:"1px" }}>
                           {CAT_ICON[item.category]} {item.category.toUpperCase()}
                         </span>
-                        {isDone && <span style={{ fontSize:"0.6rem", color:"var(--green-text)", letterSpacing:"1px",
+                        {isDone && <span style={{ fontSize:"0.62rem", color:"var(--green-text)", letterSpacing:"1px",
                           fontFamily:"'Bebas Neue',sans-serif" }}>✓ DONE</span>}
                       </div>
-                      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.98rem", letterSpacing:"1.5px",
+                      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem", letterSpacing:"1.5px",
                         color: isDone ? "var(--muted)" : "var(--text)", lineHeight:1.2 }}>
                         {item.label}
                       </div>
@@ -484,7 +484,7 @@ export default function SellerDashboard() {
                       )}
                       <div style={{ marginTop:5 }}>
                         <RoiBar bars={bars} color={roiColor} />
-                        <div style={{ fontSize:"0.58rem", color:roiColor, marginTop:2, textAlign:"right" }}>
+                        <div style={{ fontSize:"0.62rem", color:roiColor, marginTop:2, textAlign:"right" }}>
                           {roi >= 999 ? "FREE MONEY" : `$${roi.toLocaleString()}/hr net`}
                         </div>
                       </div>
@@ -510,7 +510,7 @@ export default function SellerDashboard() {
                     <div style={{ marginLeft:"auto", display:"flex", gap:6 }}>
                       {isOpen && (
                         <button onClick={e=>{e.stopPropagation();toggleDone(item.id);}}
-                          style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1.5px",
+                          style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px",
                             padding:"4px 12px", borderRadius:3, cursor:"pointer", border:"none",
                             background: isDone ? "#dc262622" : "var(--green-text)",
                             color: isDone ? "#dc2626" : "#fff" }}>
@@ -550,13 +550,13 @@ export default function SellerDashboard() {
                   background:"var(--surface)", color:"var(--text)" }} />
               {ebayQuery && <button onClick={()=>setEbayQuery("")}
                 style={{ padding:"7px 12px", border:"1.5px solid var(--border)", borderRadius:4,
-                  background:"transparent", color:"var(--muted)", cursor:"pointer", fontSize:"0.8rem" }}>
+                  background:"transparent", color:"var(--muted)", cursor:"pointer", fontSize:"0.82rem" }}>
                 Clear
               </button>}
               <div style={{ display:"flex", gap:4 }}>
                 {(["vf","profit","title"] as const).map(s => (
                   <button key={s} onClick={()=>setEbaySort(s)}
-                    style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1.5px",
+                    style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px",
                       padding:"4px 10px", border:`1.5px solid ${ebaySort===s?"var(--red)":"var(--border)"}`,
                       background:ebaySort===s?"var(--red)":"transparent", color:ebaySort===s?"#fff":"var(--muted2)",
                       borderRadius:3, cursor:"pointer" }}>
@@ -566,7 +566,7 @@ export default function SellerDashboard() {
               </div>
             </div>
             <div style={{ display:"flex", gap:20, flexWrap:"wrap", alignItems:"center", marginTop:10 }}>
-              <label style={{ display:"flex", gap:6, alignItems:"center", fontSize:"0.78rem", color:"var(--muted2)" }}>
+              <label style={{ display:"flex", gap:6, alignItems:"center", fontSize:"0.75rem", color:"var(--muted2)" }}>
                 eBay fee
                 <input type="number" value={ebayFee} min={0} max={25} step={0.25}
                   onChange={e=>setEbayFee(+e.target.value)}
@@ -574,7 +574,7 @@ export default function SellerDashboard() {
                     background:"var(--surface)", color:"var(--text)", fontSize:"0.82rem" }} />
                 %
               </label>
-              <label style={{ display:"flex", gap:6, alignItems:"center", fontSize:"0.78rem", color:"var(--muted2)" }}>
+              <label style={{ display:"flex", gap:6, alignItems:"center", fontSize:"0.75rem", color:"var(--muted2)" }}>
                 Shipping cost
                 <input type="number" value={ebayShip} min={0} max={20} step={0.5}
                   onChange={e=>setEbayShip(+e.target.value)}
@@ -582,11 +582,11 @@ export default function SellerDashboard() {
                     background:"var(--surface)", color:"var(--text)", fontSize:"0.82rem" }} />
                 $
               </label>
-              <span style={{ fontSize:"0.72rem", color:"var(--muted)", marginLeft:"auto" }}>
+              <span style={{ fontSize:"0.75rem", color:"var(--muted)", marginLeft:"auto" }}>
                 Using <strong style={{color:"var(--red)"}}>VF value only</strong> · {ebayResults.length.toLocaleString()} books shown
               </span>
               <button onClick={selectAllEbay}
-                style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1.5px",
+                style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px",
                   padding:"4px 10px", border:"1.5px solid var(--border)", borderRadius:3,
                   background:"transparent", color:"var(--muted2)", cursor:"pointer" }}>
                 SELECT ALL
@@ -599,7 +599,7 @@ export default function SellerDashboard() {
             <div style={{ position:"sticky", top:94, zIndex:20, background:"#1a0a0a",
               borderBottom:"2px solid var(--red)", padding:"10px 16px",
               display:"flex", gap:20, flexWrap:"wrap", alignItems:"center" }}>
-              <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem", color:"#fff", letterSpacing:"1.5px" }}>
+              <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem", color:"#fff", letterSpacing:"1.5px" }}>
                 {ebayTotals.count} SELECTED
               </span>
               {[
@@ -609,12 +609,12 @@ export default function SellerDashboard() {
                 { lbl:"NET PROFIT", val:`$${ebayTotals.net.toFixed(2)}`,          color:"#4ade80" },
               ].map(s => (
                 <div key={s.lbl}>
-                  <span style={{ fontSize:"0.6rem", color:"rgba(255,255,255,0.4)", letterSpacing:"1.5px" }}>{s.lbl} </span>
+                  <span style={{ fontSize:"0.62rem", color:"rgba(255,255,255,0.4)", letterSpacing:"1.5px" }}>{s.lbl} </span>
                   <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem", color:s.color, letterSpacing:"1px" }}>{s.val}</span>
                 </div>
               ))}
               <button onClick={clearEbay}
-                style={{ marginLeft:"auto", fontSize:"0.7rem", padding:"4px 10px", border:"1.5px solid rgba(255,255,255,0.2)",
+                style={{ marginLeft:"auto", fontSize:"0.68rem", padding:"4px 10px", border:"1.5px solid rgba(255,255,255,0.2)",
                   background:"transparent", color:"rgba(255,255,255,0.5)", borderRadius:3, cursor:"pointer" }}>
                 Clear
               </button>
@@ -623,7 +623,7 @@ export default function SellerDashboard() {
 
           {/* Book list */}
           <div style={{ overflowX:"auto" }}>
-            <table style={{ width:"100%", borderCollapse:"collapse", fontSize:"0.8rem" }}>
+            <table style={{ width:"100%", borderCollapse:"collapse", fontSize:"0.82rem" }}>
               <thead>
                 <tr style={{ background:"var(--surface2)", borderBottom:"2px solid var(--border)" }}>
                   <th style={{ width:36, padding:"8px 10px" }}>
@@ -634,7 +634,7 @@ export default function SellerDashboard() {
                   <th style={{ width:52, padding:"8px 6px" }}></th>
                   {["Title","Box","Issue","VF Value","eBay Fee","Net Profit","Key"].map(h => (
                     <th key={h} style={{ padding:"8px 10px", textAlign:"left", fontFamily:"'Bebas Neue',sans-serif",
-                      letterSpacing:"1.5px", fontSize:"0.65rem", color:"var(--muted)", fontWeight:400 }}>{h}</th>
+                      letterSpacing:"1.5px", fontSize:"0.62rem", color:"var(--muted)", fontWeight:400 }}>{h}</th>
                   ))}
                 </tr>
               </thead>
@@ -664,7 +664,7 @@ export default function SellerDashboard() {
                         {c.Title}
                       </td>
                       <td style={{ padding:"7px 10px", color:"var(--muted2)" }}>
-                        <span style={{ fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", fontSize:"0.72rem",
+                        <span style={{ fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", fontSize:"0.75rem",
                           background:"#7a5c3a18", border:"1.5px solid #7a5c3a", color:"#7a5c3a",
                           borderRadius:3, padding:"1px 6px" }}>Box {c.Box}</span>
                       </td>
@@ -672,14 +672,14 @@ export default function SellerDashboard() {
                       <td style={{ padding:"7px 10px", color: vfStr ? "var(--green-text)" : "var(--muted)", fontWeight:600 }}>
                         {vfStr ? `$${vfStr}` : "—"}
                       </td>
-                      <td style={{ padding:"7px 10px", color:"#f87171", fontSize:"0.76rem" }}>
+                      <td style={{ padding:"7px 10px", color:"#f87171", fontSize:"0.75rem" }}>
                         {vfN > 0 ? `-$${fee.toFixed(2)}` : "—"}
                       </td>
                       <td style={{ padding:"7px 10px", color: net > 0 ? "#4ade80" : "var(--muted)", fontWeight:600 }}>
                         {net > 0 ? `$${net.toFixed(2)}` : "—"}
                       </td>
                       <td style={{ padding:"7px 10px" }}>
-                        {isKey && <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1.5px",
+                        {isKey && <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px",
                           background:"#d4a80022", border:"1.5px solid #d4a800", color:"#d4a800",
                           borderRadius:2, padding:"1px 5px" }}>KEY</span>}
                       </td>
@@ -705,17 +705,17 @@ export default function SellerDashboard() {
           {/* Controls */}
           <div style={{ background:"var(--surface2)", padding:"12px 16px", borderBottom:"1px solid var(--border)" }}>
             <div style={{ display:"flex", gap:10, flexWrap:"wrap", alignItems:"center" }}>
-              <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"2px", color:"var(--muted)" }}>CGC TIER</span>
+              <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"2px", color:"var(--muted)" }}>CGC TIER</span>
               {([65,100,200] as const).map(t => (
                 <button key={t} onClick={()=>setCgcTier(t)}
-                  style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"1.5px",
+                  style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"1.5px",
                     padding:"5px 14px", border:`1.5px solid ${cgcTier===t?"var(--red)":"var(--border)"}`,
                     background:cgcTier===t?"var(--red)":"transparent", color:cgcTier===t?"#fff":"var(--muted2)",
                     borderRadius:4, cursor:"pointer" }}>
                   {t === 65 ? "Economy $65" : t === 100 ? "Standard $100" : "Express $200"}
                 </button>
               ))}
-              <label style={{ display:"flex", gap:6, alignItems:"center", fontSize:"0.78rem", color:"var(--muted2)",
+              <label style={{ display:"flex", gap:6, alignItems:"center", fontSize:"0.75rem", color:"var(--muted2)",
                 cursor:"pointer", marginLeft:8 }}>
                 <input type="checkbox" checked={cgcPressing} onChange={e=>setCgcPressing(e.target.checked)} />
                 Pressing ($22/book)
@@ -728,7 +728,7 @@ export default function SellerDashboard() {
             <div style={{ position:"sticky", top:94, zIndex:20, background:"#1a0a0a",
               borderBottom:"2px solid var(--red)", padding:"10px 16px",
               display:"flex", gap:20, flexWrap:"wrap", alignItems:"center" }}>
-              <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem", color:"#fff", letterSpacing:"1.5px" }}>
+              <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem", color:"#fff", letterSpacing:"1.5px" }}>
                 {cgcTotals.count} BOOKS SELECTED
               </span>
               {[
@@ -739,7 +739,7 @@ export default function SellerDashboard() {
                 { lbl:"Min NET GAIN",   val:fmtMoney(cgcTotals.net),             color: cgcTotals.net >= 0 ? "#4ade80" : "#f87171" },
               ].map(s => (
                 <div key={s.lbl}>
-                  <span style={{ fontSize:"0.6rem", color:"rgba(255,255,255,0.4)", letterSpacing:"1.5px" }}>{s.lbl} </span>
+                  <span style={{ fontSize:"0.62rem", color:"rgba(255,255,255,0.4)", letterSpacing:"1.5px" }}>{s.lbl} </span>
                   <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem", color:s.color, letterSpacing:"1px" }}>{s.val}</span>
                 </div>
               ))}
@@ -748,7 +748,7 @@ export default function SellerDashboard() {
 
           {/* CGC table */}
           <div style={{ overflowX:"auto" }}>
-            <table style={{ width:"100%", borderCollapse:"collapse", fontSize:"0.8rem" }}>
+            <table style={{ width:"100%", borderCollapse:"collapse", fontSize:"0.82rem" }}>
               <thead>
                 <tr style={{ background:"var(--surface2)", borderBottom:"2px solid var(--border)" }}>
                   <th style={{ width:36, padding:"8px 10px" }} />
@@ -774,13 +774,13 @@ export default function SellerDashboard() {
                           style={{ cursor:"pointer" }} />
                       </td>
                       <td style={{ padding:"8px 10px", color:"var(--muted)", fontFamily:"'Bebas Neue',sans-serif",
-                        letterSpacing:"1px", fontSize:"0.72rem" }}>{book.id}</td>
+                        letterSpacing:"1px", fontSize:"0.75rem" }}>{book.id}</td>
                       <td style={{ padding:"8px 10px" }}>
                         <div style={{ fontWeight:600, color:"var(--text)" }}>{book.title}</div>
-                        <div style={{ fontSize:"0.7rem", color:"var(--muted2)", marginTop:1 }}>{book.subtitle}</div>
+                        <div style={{ fontSize:"0.68rem", color:"var(--muted2)", marginTop:1 }}>{book.subtitle}</div>
                       </td>
                       <td style={{ padding:"8px 10px" }}>
-                        <span style={{ fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", fontSize:"0.7rem",
+                        <span style={{ fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", fontSize:"0.68rem",
                           background:"#7a5c3a18", border:"1.5px solid #7a5c3a", color:"#7a5c3a",
                           borderRadius:3, padding:"1px 5px" }}>Box {book.box}</span>
                       </td>
@@ -797,7 +797,7 @@ export default function SellerDashboard() {
                         {net >= 0 ? "+" : ""}{fmtMoney(net)}
                       </td>
                       <td style={{ padding:"8px 10px" }}>
-                        <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem", letterSpacing:"1px",
+                        <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px",
                           background: book.label.includes("Yellow") ? "#d4a80022" : book.label.includes("Blue") ? "#1d6fa422" : "#16a34a22",
                           border:`1.5px solid ${book.label.includes("Yellow") ? "#d4a800" : book.label.includes("Blue") ? "#1d6fa4" : "#16a34a"}`,
                           color: book.label.includes("Yellow") ? "#d4a800" : book.label.includes("Blue") ? "#1d6fa4" : "#16a34a",
@@ -822,10 +822,10 @@ export default function SellerDashboard() {
           {/* Controls */}
           <div style={{ background:"var(--surface2)", padding:"12px 16px", borderBottom:"1px solid var(--border)",
             display:"flex", gap:10, flexWrap:"wrap", alignItems:"center" }}>
-            <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"2px", color:"var(--muted)" }}>SORT</span>
+            <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"2px", color:"var(--muted)" }}>SORT</span>
             {(["rank","return","vf"] as const).map(s => (
               <button key={s} onClick={()=>setSellSort(s)}
-                style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1.5px",
+                style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px",
                   padding:"4px 10px", border:`1.5px solid ${sellSort===s?"var(--red)":"var(--border)"}`,
                   background:sellSort===s?"var(--red)":"transparent", color:sellSort===s?"#fff":"var(--muted2)",
                   borderRadius:3, cursor:"pointer" }}>
@@ -833,10 +833,10 @@ export default function SellerDashboard() {
               </button>
             ))}
             <span style={{ margin:"0 4px", color:"var(--border)" }}>|</span>
-            <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"2px", color:"var(--muted)" }}>FILTER</span>
+            <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"2px", color:"var(--muted)" }}>FILTER</span>
             {(["all","RED","AMBER","GREEN"] as const).map(f => (
               <button key={f} onClick={()=>setSellFilter(f)}
-                style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1.5px",
+                style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px",
                   padding:"4px 10px", borderRadius:3, cursor:"pointer",
                   border:`1.5px solid ${sellFilter===f ? (f==="all"?"var(--red)":PRIORITY_COLOR[f as Priority]) : "var(--border)"}`,
                   background: sellFilter===f ? (f==="all"?"var(--red)":PRIORITY_COLOR[f as Priority]+"22") : "transparent",
@@ -844,7 +844,7 @@ export default function SellerDashboard() {
                 {f === "all" ? "ALL 30" : f === "RED" ? "THIS WEEK" : f === "AMBER" ? "THIS MONTH" : "BY AUG 7"}
               </button>
             ))}
-            <span style={{ marginLeft:"auto", fontSize:"0.7rem", color:"var(--muted)" }}>
+            <span style={{ marginLeft:"auto", fontSize:"0.68rem", color:"var(--muted)" }}>
               Total upside: <strong style={{color:"var(--green-text)"}}>
                 {fmtMoney(sortedSell.reduce((s,b) => s + b.expectedMin, 0))}–{fmtMoney(sortedSell.reduce((s,b) => s + b.expectedMax, 0))}
               </strong>
@@ -861,41 +861,41 @@ export default function SellerDashboard() {
                   border:`1px solid ${pColor}44`, borderTop:`3px solid ${pColor}`,
                   borderRadius:6, padding:"12px 14px" }}>
                   <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", marginBottom:6 }}>
-                    <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"2px",
+                    <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"2px",
                       color:"var(--muted)", background:"var(--surface2)", padding:"1px 7px", borderRadius:2 }}>
                       #{book.rank}
                     </span>
-                    <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1.5px",
+                    <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px",
                       background:pColor+"18", color:pColor, padding:"1px 7px", borderRadius:2 }}>
                       {PRIORITY_LABEL[book.actionPriority]}
                     </span>
                   </div>
-                  <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.95rem", letterSpacing:"1px",
+                  <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", letterSpacing:"1px",
                     color:"var(--text)", lineHeight:1.2 }}>
                     {book.title} {book.issue}
                   </div>
-                  <div style={{ fontSize:"0.72rem", color:"var(--muted2)", marginTop:3, lineHeight:1.4 }}>
+                  <div style={{ fontSize:"0.75rem", color:"var(--muted2)", marginTop:3, lineHeight:1.4 }}>
                     {book.subtitle}
                   </div>
                   <div style={{ fontSize:"0.68rem", color:"var(--muted)", marginTop:4 }}>Box {book.box}</div>
                   <div style={{ display:"flex", gap:10, marginTop:8 }}>
                     <div>
-                      <div style={{ fontSize:"0.58rem", color:"var(--muted)", letterSpacing:"1.5px" }}>VF VALUE</div>
+                      <div style={{ fontSize:"0.62rem", color:"var(--muted)", letterSpacing:"1.5px" }}>VF VALUE</div>
                       <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", color:"var(--muted2)", letterSpacing:"1px" }}>{vfStr}</div>
                     </div>
                     <div style={{ borderLeft:"1px solid var(--border)", paddingLeft:10 }}>
-                      <div style={{ fontSize:"0.58rem", color:"var(--muted)", letterSpacing:"1.5px" }}>EXPECTED</div>
+                      <div style={{ fontSize:"0.62rem", color:"var(--muted)", letterSpacing:"1.5px" }}>EXPECTED</div>
                       <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", color:"var(--green-text)", letterSpacing:"1px" }}>
                         {fmtMoney(book.expectedMin)}–{fmtMoney(book.expectedMax)}
                       </div>
                     </div>
                     <div style={{ borderLeft:"1px solid var(--border)", paddingLeft:10, flex:1 }}>
-                      <div style={{ fontSize:"0.58rem", color:"var(--muted)", letterSpacing:"1.5px" }}>PLATFORM</div>
-                      <div style={{ fontSize:"0.72rem", color:"var(--text)", marginTop:1 }}>{book.platform}</div>
+                      <div style={{ fontSize:"0.62rem", color:"var(--muted)", letterSpacing:"1.5px" }}>PLATFORM</div>
+                      <div style={{ fontSize:"0.75rem", color:"var(--text)", marginTop:1 }}>{book.platform}</div>
                     </div>
                   </div>
                   <div style={{ marginTop:8, padding:"5px 8px", background: pColor+"11",
-                    border:`1px solid ${pColor}33`, borderRadius:3, fontSize:"0.7rem", color:pColor, lineHeight:1.4 }}>
+                    border:`1px solid ${pColor}33`, borderRadius:3, fontSize:"0.68rem", color:pColor, lineHeight:1.4 }}>
                     → {book.action}
                   </div>
                 </div>

@@ -286,32 +286,32 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
           <div style={{ padding: "16px 18px 12px", borderBottom: "1.5px solid var(--border)", background: "var(--surface)" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
               <div>
-                <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.5rem", letterSpacing: "2px", color: "var(--text)", lineHeight: 1 }}>
+                <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.4rem", letterSpacing: "2px", color: "var(--text)", lineHeight: 1 }}>
                   {comic.Title}
                 </div>
                 <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1rem", color: "var(--red)", letterSpacing: "1px", marginTop: 4 }}>
                   #{comic.Issue}
-                  {(comic as { Year?: string }).Year && <span style={{ color: "var(--muted)", marginLeft: 8, fontSize: "0.8rem" }}>{(comic as { Year?: string }).Year}</span>}
+                  {(comic as { Year?: string }).Year && <span style={{ color: "var(--muted)", marginLeft: 8, fontSize: "0.82rem" }}>{(comic as { Year?: string }).Year}</span>}
                 </div>
               </div>
               <button onClick={onClose} style={{ background: "var(--surface2)", border: "1px solid var(--border)", borderRadius: 6, width: 30, height: 30, cursor: "pointer", color: "var(--muted)", fontSize: "1rem", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>×</button>
             </div>
             <div style={{ display: "flex", gap: 6, marginTop: 8, flexWrap: "wrap" }}>
               {(comic as { Publisher?: string }).Publisher && (
-                <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem", letterSpacing: "1px", background: "var(--surface2)", border: "1px solid var(--border)", color: "var(--muted2)", borderRadius: 3, padding: "2px 8px" }}>
+                <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1px", background: "var(--surface2)", border: "1px solid var(--border)", color: "var(--muted2)", borderRadius: 3, padding: "2px 8px" }}>
                   {(comic as { Publisher?: string }).Publisher}
                 </span>
               )}
               {box && (
-                <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem", letterSpacing: "1px", background: "#7a5c3a18", border: "1.5px solid #7a5c3a", color: "#7a5c3a", borderRadius: 3, padding: "2px 8px" }}>
+                <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1px", background: "#7a5c3a18", border: "1.5px solid #7a5c3a", color: "#7a5c3a", borderRadius: 3, padding: "2px 8px" }}>
                   Box {box}
                 </span>
               )}
               {isKey && (
-                <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem", letterSpacing: "1px", background: "#fff8e0", color: "#8a6000", border: "1px solid #fde68a", borderRadius: 3, padding: "2px 8px" }}>★ KEY</span>
+                <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1px", background: "#fff8e0", color: "#8a6000", border: "1px solid #fde68a", borderRadius: 3, padding: "2px 8px" }}>★ KEY</span>
               )}
               {(comic as { Condition?: string }).Condition && (
-                <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem", letterSpacing: "1px", background: "var(--surface2)", color: "var(--muted2)", border: "1px solid var(--border)", borderRadius: 3, padding: "2px 8px" }}>
+                <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1px", background: "var(--surface2)", color: "var(--muted2)", border: "1px solid var(--border)", borderRadius: 3, padding: "2px 8px" }}>
                   {(comic as { Condition?: string }).Condition}
                 </span>
               )}
@@ -322,20 +322,20 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
           <div style={{ flex: 1, overflowY: "auto", padding: "14px 18px 18px" }}>
             {isKey && (comic as { Key_Reason?: string }).Key_Reason && (
               <div style={{ background: "#fff8e0", border: "1.5px solid #fde68a", borderRadius: 6, padding: "10px 14px", marginBottom: 12 }}>
-                <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.6rem", letterSpacing: "2px", color: "#8a6000", marginBottom: 4 }}>KEY REASON</div>
-                <div style={{ fontSize: "0.88rem", color: "#5a4000", lineHeight: 1.5 }}>{(comic as { Key_Reason?: string }).Key_Reason}</div>
+                <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "2px", color: "#8a6000", marginBottom: 4 }}>KEY REASON</div>
+                <div style={{ fontSize: "0.9rem", color: "#5a4000", lineHeight: 1.5 }}>{(comic as { Key_Reason?: string }).Key_Reason}</div>
               </div>
             )}
             {(comic as { Value_NM?: string }).Value_NM && (
               <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
-                <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.6rem", letterSpacing: "1.5px", color: "var(--muted)", paddingTop: 1, flexShrink: 0, width: 70 }}>VALUE NM</span>
-                <span style={{ fontSize: "0.88rem", color: "var(--red)", fontWeight: 600 }}>{(comic as { Value_NM?: string }).Value_NM}</span>
+                <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1.5px", color: "var(--muted)", paddingTop: 1, flexShrink: 0, width: 70 }}>VALUE NM</span>
+                <span style={{ fontSize: "0.9rem", color: "var(--red)", fontWeight: 600 }}>{(comic as { Value_NM?: string }).Value_NM}</span>
               </div>
             )}
 
             {/* ── Flag cover as incorrect ── */}
             <div style={{ borderTop: "1px solid var(--border)", paddingTop: 12, marginBottom: 14 }}>
-              <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.6rem", letterSpacing: "2px", color: "var(--muted)", marginBottom: 7 }}>COVER AUDIT</div>
+              <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "2px", color: "var(--muted)", marginBottom: 7 }}>COVER AUDIT</div>
               <button
                 onClick={handleCoverFlag}
                 style={{
@@ -350,7 +350,7 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
                 {coverFlagged ? "🚩 COVER FLAGGED AS INCORRECT" : "🚩 FLAG COVER AS INCORRECT"}
               </button>
               {coverFlagged && (
-                <div style={{ fontFamily: "'Crimson Pro',serif", fontSize: "0.78rem", color: "var(--muted)", marginTop: 5, fontStyle: "italic" }}>
+                <div style={{ fontFamily: "'Crimson Pro',serif", fontSize: "0.75rem", color: "var(--muted)", marginTop: 5, fontStyle: "italic" }}>
                   Queued for review in Cover Catalog → Flagged section
                 </div>
               )}
@@ -358,7 +358,7 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
 
             {/* ── Claude note ── */}
             <div style={{ borderTop: "1px solid var(--border)", paddingTop: 12 }}>
-              <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.6rem", letterSpacing: "2px", color: hasNote ? "#d97706" : "var(--muted)", marginBottom: 7 }}>
+              <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "2px", color: hasNote ? "#d97706" : "var(--muted)", marginBottom: 7 }}>
                 NOTE TO CLAUDE{hasNote ? " ●" : ""}
               </div>
               <textarea
@@ -368,7 +368,7 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
                 style={{
                   width: "100%", boxSizing: "border-box",
                   padding: "9px 11px", minHeight: 80,
-                  fontFamily: "'Crimson Pro',serif", fontSize: "0.88rem", lineHeight: 1.55,
+                  fontFamily: "'Crimson Pro',serif", fontSize: "0.9rem", lineHeight: 1.55,
                   color: "var(--text)", background: "var(--surface)",
                   border: `1.5px solid ${hasNote ? "#d97706" : "var(--border)"}`,
                   borderRadius: 6, resize: "vertical", outline: "none",
@@ -395,7 +395,7 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
                     onClick={copyForClaude}
                     style={{
                       marginTop: 8, width: "100%", padding: "9px 0",
-                      fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.7rem", letterSpacing: "1.5px",
+                      fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.68rem", letterSpacing: "1.5px",
                       background: copied ? "#16a34a" : "#d97706",
                       border: "none", borderRadius: 6, color: "#fff", cursor: "pointer", transition: "background 0.2s",
                     }}

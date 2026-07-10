@@ -184,8 +184,8 @@ export default function BoxKeys() {
           { val: BOXES.length, lbl: "Across Boxes" },
         ].map(s => (
           <div key={s.lbl} style={{ textAlign:"center" }}>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.1rem", color:"var(--red)", letterSpacing:"1px" }}>{s.val}</div>
-            <div style={{ fontSize:"0.6rem", letterSpacing:"1.5px", fontFamily:"'Bebas Neue',sans-serif", color:"var(--muted)" }}>{s.lbl}</div>
+            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.2rem", color:"var(--red)", letterSpacing:"1px" }}>{s.val}</div>
+            <div style={{ fontSize:"0.62rem", letterSpacing:"1.5px", fontFamily:"'Bebas Neue',sans-serif", color:"var(--muted)" }}>{s.lbl}</div>
           </div>
         ))}
       </div>
@@ -255,14 +255,14 @@ export default function BoxKeys() {
         <div style={{ fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px", fontSize:"0.82rem", color:"var(--muted2)" }}>
           {results.length === 0
             ? "No results — try a different search"
-            : <><span style={{ color:"var(--red)", fontSize:"1.05rem" }}>{results.length.toLocaleString()}</span> of {keys.length.toLocaleString()} key issues</>
+            : <><span style={{ color:"var(--red)", fontSize:"1rem" }}>{results.length.toLocaleString()}</span> of {keys.length.toLocaleString()} key issues</>
           }
         </div>
         <div style={{ display:"flex", gap:6 }}>
           {(["list","card"] as const).map(v => (
             <button key={v} onClick={() => setView(v)}
               style={{
-                fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"1.5px",
+                fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"1.5px",
                 padding:"5px 14px", border:`1.5px solid ${view===v?"var(--red)":"var(--border)"}`,
                 background:view===v?"var(--red)":"var(--surface)", color:view===v?"#fff":"var(--muted2)",
                 borderRadius:4, cursor:"pointer", transition:"all 0.15s",
@@ -290,16 +290,16 @@ export default function BoxKeys() {
                   {k.Value_VF  && k.Value_VF !== "nan"  && <div className="dr"><span className="dl">VF Value</span><span className="dv">${k.Value_VF}</span></div>}
                   {k.Sales_Data && k.Sales_Data !== "nan" && <div className="dr"><span className="dl">Sales</span><span className="dv">{k.Sales_Data.substring(0,120)}</span></div>}
                 </div>
-                {k.Key_Reason && <div style={{ marginTop:6, fontSize:"0.85rem", color:"var(--gold)" }}>{k.Key_Reason}</div>}
+                {k.Key_Reason && <div style={{ marginTop:6, fontSize:"0.82rem", color:"var(--gold)" }}>{k.Key_Reason}</div>}
                 <div style={{ marginTop:10, display:"flex", gap:10, alignItems:"center", flexWrap:"wrap" }}>
                   <button
                     onClick={e => { e.stopPropagation(); openDrawer(k); }}
-                    style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1.5px", padding:"5px 12px", background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:4, cursor:"pointer", color:"var(--text)" }}
+                    style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px", padding:"5px 12px", background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:4, cursor:"pointer", color:"var(--text)" }}
                   >
                     Full Details →
                   </button>
                   {flaggedKeys.has(comicFlagKey(k.Title, k.Issue || "", k.Box || "")) && (
-                    <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1px", color:"#92400e", background:"#fef3c7", border:"1px solid #fcd34d", borderRadius:3, padding:"2px 8px" }}>
+                    <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px", color:"#92400e", background:"#fef3c7", border:"1px solid #fcd34d", borderRadius:3, padding:"2px 8px" }}>
                       UPDATE NEEDED
                     </span>
                   )}
@@ -336,7 +336,7 @@ export default function BoxKeys() {
                     <div style={{ flex:1, minWidth:0 }}>
                       <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", gap:6, marginBottom:4 }}>
                         <div className="card-title" style={{ flex:1, marginBottom:0 }}>{k.Title || "Untitled"}</div>
-                        {isFlagged && <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.55rem", letterSpacing:"1px", color:"#92400e", background:"#fef3c7", border:"1px solid #fcd34d", borderRadius:3, padding:"1px 5px", flexShrink:0 }}>UPDATE</span>}
+                        {isFlagged && <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px", color:"#92400e", background:"#fef3c7", border:"1px solid #fcd34d", borderRadius:3, padding:"1px 5px", flexShrink:0 }}>UPDATE</span>}
                       </div>
                       <div className="card-sub">Box {k.Box} · {k.Publisher} #{k.Issue} · {k.Year}</div>
                     </div>
@@ -361,7 +361,7 @@ export default function BoxKeys() {
                       {k.Sales_Data && <div className="dr"><span className="dl">Sales</span><span className="dv">{k.Sales_Data.substring(0,120)}</span></div>}
                       <button
                         onClick={e => { e.stopPropagation(); openDrawer(k); }}
-                        style={{ marginTop:8, fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1.5px", padding:"5px 12px", background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:4, cursor:"pointer", color:"var(--text)" }}
+                        style={{ marginTop:8, fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px", padding:"5px 12px", background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:4, cursor:"pointer", color:"var(--text)" }}
                       >
                         Full Details →
                       </button>

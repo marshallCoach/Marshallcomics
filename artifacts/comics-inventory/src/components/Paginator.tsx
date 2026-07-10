@@ -44,7 +44,7 @@ export function Paginator({ page, pageCount, total, pageSize, onChange }: Props)
 
         {pages.map((p, i) =>
           p === "…"
-            ? <span key={`e${i}`} style={{ padding: "0 4px", color: "var(--muted2)", fontSize: "0.78rem" }}>…</span>
+            ? <span key={`e${i}`} style={{ padding: "0 4px", color: "var(--muted2)", fontSize: "0.75rem" }}>…</span>
             : <button
                 key={p}
                 onClick={() => onChange(p as number)}

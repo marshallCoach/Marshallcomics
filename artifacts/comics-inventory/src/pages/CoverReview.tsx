@@ -133,10 +133,10 @@ export default function CoverReview() {
     <div style={{ padding: "20px 24px 60px" }}>
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 12, marginBottom: 8 }}>
         <div>
-          <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.6rem", letterSpacing: "2px", color: "var(--text)" }}>
+          <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.8rem", letterSpacing: "2px", color: "var(--text)" }}>
             Cover Review
           </div>
-          <div style={{ fontSize: "0.8rem", color: "var(--muted)" }}>
+          <div style={{ fontSize: "0.82rem", color: "var(--muted)" }}>
             {pool.length.toLocaleString()} covers in pool · batch {Math.floor(batchStart / BATCH_SIZE) + 1} of {Math.ceil(pool.length / BATCH_SIZE)} · {flags.size} flagged so far
           </div>
         </div>
@@ -152,7 +152,7 @@ export default function CoverReview() {
 
       {lanes.map((lane, li) => (
         <div key={li} style={{ marginBottom: 18 }}>
-          <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.72rem", letterSpacing: "1.5px", color: "var(--muted)", marginBottom: 6 }}>
+          <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.75rem", letterSpacing: "1.5px", color: "var(--muted)", marginBottom: 6 }}>
             LANE {li + 1}
           </div>
           <div style={{ display: "flex", gap: 12, overflowX: "auto", paddingBottom: 8 }}>
@@ -167,7 +167,7 @@ export default function CoverReview() {
                   <div style={{ fontSize: "0.62rem", color: "var(--muted)", marginTop: 4, lineHeight: 1.3, height: 28, overflow: "hidden" }}>
                     {p.comic.Title} #{p.comic.Issue}
                   </div>
-                  <label style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 4, fontSize: "0.65rem", color: flagged ? "var(--red)" : "var(--muted)", cursor: "pointer", marginTop: 2 }}>
+                  <label style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 4, fontSize: "0.62rem", color: flagged ? "var(--red)" : "var(--muted)", cursor: "pointer", marginTop: 2 }}>
                     <input type="checkbox" checked={flagged} onChange={() => toggleFlag(p)} />
                     wrong
                   </label>

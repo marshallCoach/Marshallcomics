@@ -178,9 +178,9 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
 
       {/* Header */}
       <div style={{ marginBottom: 16 }}>
-        <h1 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.6rem", color:"var(--red)",
+        <h1 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.8rem", color:"var(--red)",
           letterSpacing:"3px", lineHeight:1, margin:0 }}>Volumes</h1>
-        <p style={{ color:"var(--muted2)", fontSize:"0.88rem", marginTop:6 }}>
+        <p style={{ color:"var(--muted2)", fontSize:"0.9rem", marginTop:6 }}>
           Every title in the collection, broken into distinct volumes — grouped by publisher. Click any volume to browse its issues.
         </p>
       </div>
@@ -207,18 +207,18 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
                 transform: isActive ? "translateY(-2px)" : "none",
                 transition:"all 0.18s",
               }}>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.5rem",
+              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.4rem",
                 color: isActive ? "#fff" : "warn" in s && s.warn ? "#8a6000" : "var(--red)",
                 letterSpacing:"1px", lineHeight:1 }}>{s.val}</div>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1.5px",
+              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px",
                 color: isActive ? "rgba(255,255,255,0.8)" : "warn" in s && s.warn ? "#8a6000" : "var(--muted)",
                 marginTop:3 }}>{s.lbl}</div>
               {"click" in s && s.click && !isActive && (
-                <div style={{ fontSize:"0.52rem", color:"var(--muted)", marginTop:3,
+                <div style={{ fontSize:"0.62rem", color:"var(--muted)", marginTop:3,
                   fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>CLICK TO FILTER</div>
               )}
               {isActive && (
-                <div style={{ fontSize:"0.52rem", color:"rgba(255,255,255,0.65)", marginTop:3,
+                <div style={{ fontSize:"0.62rem", color:"rgba(255,255,255,0.65)", marginTop:3,
                   fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>CLICK TO CLEAR ▲</div>
               )}
             </div>
@@ -234,13 +234,13 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
           value={search} onChange={e => setSearch(e.target.value)}
           placeholder="Search title or publisher…"
           style={{ background:"var(--bg)", border:"1.5px solid var(--border)", color:"var(--text)",
-            padding:"6px 10px", borderRadius:5, fontFamily:"'Crimson Pro',serif", fontSize:"0.88rem",
+            padding:"6px 10px", borderRadius:5, fontFamily:"'Crimson Pro',serif", fontSize:"0.9rem",
             flex:"1 1 180px", minWidth:0 }}
         />
 
         <select value={pubFilter} onChange={e => setPubFilter(e.target.value as typeof pubFilter)}
           style={{ background:"var(--bg)", border:"1.5px solid var(--border)", color:"var(--text)",
-            padding:"6px 10px", borderRadius:5, fontFamily:"'Crimson Pro',serif", fontSize:"0.88rem" }}>
+            padding:"6px 10px", borderRadius:5, fontFamily:"'Crimson Pro',serif", fontSize:"0.9rem" }}>
           <option value="">All Publishers</option>
           <option value="Marvel">Marvel</option>
           <option value="DC">DC</option>
@@ -286,7 +286,7 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
       {/* Results bar */}
       <div style={{ fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px", fontSize:"0.82rem",
         color:"var(--muted2)", marginBottom:14 }}>
-        <span style={{ color:"var(--red)", fontSize:"1.05rem" }}>{filtered.length.toLocaleString()}</span>
+        <span style={{ color:"var(--red)", fontSize:"1rem" }}>{filtered.length.toLocaleString()}</span>
         {" "}titles · {totalVols.toLocaleString()} volumes
         {search && <span style={{ marginLeft:10, color:"var(--muted)" }}>— filtered by "{search}"</span>}
       </div>
@@ -315,7 +315,7 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
                   letterSpacing:"1.5px", color:"var(--muted)" }}>
                   {titles.length} TITLES · {pgVols} VOLUMES
                 </span>
-                <span style={{ marginLeft:"auto", color:pg.color, fontSize:"0.7rem",
+                <span style={{ marginLeft:"auto", color:pg.color, fontSize:"0.68rem",
                   fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>
                   {isOpen ? "▲ COLLAPSE" : "▼ EXPAND"}
                 </span>
@@ -345,11 +345,11 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
                         }}>
                           <div style={{ flex:1, minWidth:0 }}>
                             <span style={{
-                              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.92rem",
+                              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem",
                               letterSpacing:"1.5px", color:"var(--text)",
                               display:"block", overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap",
                             }}>{t.title}</span>
-                            <span style={{ fontSize:"0.72rem", color:"var(--muted2)",
+                            <span style={{ fontSize:"0.75rem", color:"var(--muted2)",
                               fontFamily:"'Crimson Pro',serif" }}>
                               {t.publisher}
                             </span>
@@ -358,36 +358,36 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
                           <div style={{ display:"flex", gap:8, alignItems:"center", flexShrink:0 }}>
                             {t.hasOverlap && (
                               <span style={{
-                                fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem", letterSpacing:"1px",
+                                fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px",
                                 background:"#fff8e0", color:"#8a6000", border:"1px solid #d4a800",
                                 borderRadius:3, padding:"2px 7px",
                               }}>⚠ OVERLAP</span>
                             )}
                             {multiV && (
                               <span style={{
-                                fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1.5px",
+                                fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px",
                                 background:pg.color, color:"#fff", borderRadius:3, padding:"2px 7px",
                               }}>{t.volumes.length} VOLS</span>
                             )}
-                            <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem",
+                            <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
                               letterSpacing:"1px", color:"var(--muted)", minWidth:52, textAlign:"right" }}>
                               {t.totalIssues} issues
                             </span>
                             {t.totalKeys > 0 && (
-                              <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem",
+                              <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
                                 letterSpacing:"1px", color:"#8a6000", background:"#fff8e0",
                                 border:"1px solid #d4a800", borderRadius:3, padding:"1px 6px" }}>
                                 {t.totalKeys}k
                               </span>
                             )}
                             {t.totalSigned > 0 && (
-                              <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem",
+                              <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
                                 letterSpacing:"1px", color:"#1a7a1a", background:"#f0faf0",
                                 border:"1px solid #c8e6c8", borderRadius:3, padding:"1px 6px" }}>
                                 {t.totalSigned}s
                               </span>
                             )}
-                            <span style={{ color:"var(--muted)", fontSize:"0.7rem",
+                            <span style={{ color:"var(--muted)", fontSize:"0.68rem",
                               fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", marginLeft:4 }}>
                               {tOpen ? "▲" : "▼"}
                             </span>
@@ -420,15 +420,15 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
                                   {/* Volume label */}
                                   <div style={{ flexShrink:0, minWidth:66 }}>
                                     <div style={{
-                                      fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.78rem",
+                                      fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem",
                                       letterSpacing:"2px",
                                       color: isOverlap ? "#d97706" : t.volumes.length > 1 ? pg.color : "var(--muted2)",
                                       lineHeight:1,
                                     }}>
                                       {t.volumes.length > 1 ? `Vol. ${v.volNum}` : "Series"}
-                                      {isOverlap && <span style={{ marginLeft:4, fontSize:"0.65rem" }}>⚠</span>}
+                                      {isOverlap && <span style={{ marginLeft:4, fontSize:"0.62rem" }}>⚠</span>}
                                     </div>
-                                    <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem",
+                                    <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
                                       letterSpacing:"1px", color: isOverlap ? "#b45309" : "var(--muted)", marginTop:2 }}>
                                       {yearStr}
                                     </div>
@@ -437,15 +437,15 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
                                   {/* Writer / Artist */}
                                   <div style={{ flex:1, minWidth:180, display:"flex", gap:20, flexWrap:"wrap" }}>
                                     <div>
-                                      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.55rem",
+                                      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
                                         letterSpacing:"2px", color:"var(--muted)", marginBottom:1 }}>WRITER</div>
-                                      <div style={{ fontFamily:"'Crimson Pro',serif", fontSize:"0.85rem",
+                                      <div style={{ fontFamily:"'Crimson Pro',serif", fontSize:"0.82rem",
                                         color:"var(--text2)", lineHeight:1.3 }}>{v.writer}</div>
                                     </div>
                                     <div>
-                                      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.55rem",
+                                      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
                                         letterSpacing:"2px", color:"var(--muted)", marginBottom:1 }}>ARTIST</div>
-                                      <div style={{ fontFamily:"'Crimson Pro',serif", fontSize:"0.85rem",
+                                      <div style={{ fontFamily:"'Crimson Pro',serif", fontSize:"0.82rem",
                                         color:"var(--text2)", lineHeight:1.3 }}>{v.artist}</div>
                                     </div>
                                   </div>
@@ -457,21 +457,21 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
                                       {v.issues.length} issues
                                     </span>
                                     {v.keyCount > 0 && (
-                                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem",
+                                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
                                         letterSpacing:"1px", color:"#8a6000", background:"#fff8e0",
                                         border:"1px solid #d4a800", borderRadius:3, padding:"1px 6px" }}>
                                         ★ {v.keyCount} key{v.keyCount > 1 ? "s" : ""}
                                       </span>
                                     )}
                                     {v.signedCount > 0 && (
-                                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem",
+                                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
                                         letterSpacing:"1px", color:"#1a7a1a", background:"#f0faf0",
                                         border:"1px solid #c8e6c8", borderRadius:3, padding:"1px 6px" }}>
                                         ✍ {v.signedCount} sgd
                                       </span>
                                     )}
                                     <span style={{
-                                      fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem",
+                                      fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
                                       letterSpacing:"1px", color: pg.color, opacity:0.7,
                                     }}>→ VIEW</span>
                                   </div>

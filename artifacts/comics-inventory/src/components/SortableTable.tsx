@@ -108,7 +108,7 @@ export function SortableTable<T>({ cols, rows, pageSize = DEFAULT_PAGE_SIZE, exp
                     padding: "8px 20px 8px 12px",
                     textAlign: "left",
                     fontFamily: "'Bebas Neue', sans-serif",
-                    fontSize: "0.7rem",
+                    fontSize: "0.68rem",
                     letterSpacing: "1.5px",
                     color: sortKey === col.key ? "var(--red)" : "var(--muted2)",
                     whiteSpace: "nowrap",

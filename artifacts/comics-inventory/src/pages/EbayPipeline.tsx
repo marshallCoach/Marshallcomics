@@ -82,9 +82,9 @@ export default function EbayPipeline() {
     <div style={{ padding:"24px 24px 80px", maxWidth:720, margin:"0 auto" }}>
       {/* Header */}
       <div style={{ marginBottom:28 }}>
-        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"3px", color:"var(--muted)", marginBottom:6 }}>BRB OPS · COMIC INVENTORY SYSTEM</div>
-        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.6rem", letterSpacing:"1px", color:"var(--text)", lineHeight:1.1, marginBottom:6 }}>eBay Pricing Pipeline</div>
-        <div style={{ fontSize:"0.78rem", color:"var(--muted)" }}>Status as of July 6, 2026 · 10,899 rows · 1,285 priced in xlsx · 1,313 matched in app data</div>
+        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"3px", color:"var(--muted)", marginBottom:6 }}>BRB OPS · COMIC INVENTORY SYSTEM</div>
+        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.8rem", letterSpacing:"1px", color:"var(--text)", lineHeight:1.1, marginBottom:6 }}>eBay Pricing Pipeline</div>
+        <div style={{ fontSize:"0.75rem", color:"var(--muted)" }}>Status as of July 6, 2026 · 10,899 rows · 1,285 priced in xlsx · 1,313 matched in app data</div>
       </div>
 
       {/* Summary chips */}
@@ -95,7 +95,7 @@ export default function EbayPipeline() {
           { text: "Step 3 — most failures (5×)", color: "#f5a623" },
           { text: "Step 2 — auth failures (3×)", color: "#f5a623" },
         ].map(c => (
-          <div key={c.text} style={{ display:"flex", alignItems:"center", gap:5, fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1.5px", padding:"2px 8px", borderRadius:3, background:`${c.color}12`, color:c.color }}>
+          <div key={c.text} style={{ display:"flex", alignItems:"center", gap:5, fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px", padding:"2px 8px", borderRadius:3, background:`${c.color}12`, color:c.color }}>
             <div style={{ width:6, height:6, borderRadius:"50%", background:c.color, flexShrink:0 }} />
             {c.text}
           </div>
@@ -114,7 +114,7 @@ export default function EbayPipeline() {
                   width:20, height:20, borderRadius:"50%", border:`2px solid ${color}`,
                   background: step.status === "now" ? `${color}12` : "var(--bg)",
                   display:"flex", alignItems:"center", justifyContent:"center",
-                  fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", color,
+                  fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", color,
                   marginTop:14, flexShrink:0,
                   boxShadow: step.status === "now" ? `0 0 0 3px ${color}20` : undefined,
                 }}>
@@ -128,16 +128,16 @@ export default function EbayPipeline() {
                   borderRadius:6, padding:"12px 14px", marginBottom:6,
                 }}>
                   <div style={{ display:"flex", alignItems:"flex-start", justifyContent:"space-between", gap:10, marginBottom:6 }}>
-                    <div style={{ fontSize:"0.83rem", fontWeight:600, color:"var(--text)", lineHeight:1.3 }}>{step.title}</div>
-                    <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1px", padding:"2px 7px", borderRadius:3, flexShrink:0, background:`${color}18`, color }}>
+                    <div style={{ fontSize:"0.82rem", fontWeight:600, color:"var(--text)", lineHeight:1.3 }}>{step.title}</div>
+                    <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px", padding:"2px 7px", borderRadius:3, flexShrink:0, background:`${color}18`, color }}>
                       {statusLabel[step.status]}
                     </span>
                   </div>
-                  <div style={{ fontSize:"0.78rem", color:"var(--muted)", lineHeight:1.55 }}>{step.body}</div>
+                  <div style={{ fontSize:"0.75rem", color:"var(--muted)", lineHeight:1.55 }}>{step.body}</div>
                   {step.failures.length > 0 && (
                     <div style={{ display:"flex", flexWrap:"wrap", gap:4, marginTop:8 }}>
                       {step.failures.map(f => (
-                        <span key={f} style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", padding:"2px 7px", borderRadius:3, background:"#e0555514", color:"#e05555", border:"1px solid #e0555525" }}>✗ {f}</span>
+                        <span key={f} style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", padding:"2px 7px", borderRadius:3, background:"#e0555514", color:"#e05555", border:"1px solid #e0555525" }}>✗ {f}</span>
                       ))}
                     </div>
                   )}
@@ -149,23 +149,23 @@ export default function EbayPipeline() {
       </div>
 
       {/* Audit table */}
-      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"2.5px", color:"var(--muted)", marginBottom:12 }}>FAILURE AUDIT — FIRST-TIME SUCCESS RATE BY STEP</div>
+      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"2.5px", color:"var(--muted)", marginBottom:12 }}>FAILURE AUDIT — FIRST-TIME SUCCESS RATE BY STEP</div>
       <div style={{ overflowX:"auto", marginBottom:28 }}>
         <table style={{ width:"100%", borderCollapse:"collapse", fontSize:"0.75rem", fontVariantNumeric:"tabular-nums" }}>
           <thead>
             <tr>
               {["Step", "Failures", "Root Cause", "Fixed By"].map(h => (
-                <th key={h} style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1px", color:"var(--muted)", textAlign:"left", padding:"6px 10px 8px", borderBottom:"1px solid var(--border)", fontWeight:600 }}>{h}</th>
+                <th key={h} style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px", color:"var(--muted)", textAlign:"left", padding:"6px 10px 8px", borderBottom:"1px solid var(--border)", fontWeight:600 }}>{h}</th>
               ))}
             </tr>
           </thead>
           <tbody>
             {auditRows.map(r => (
               <tr key={r.step}>
-                <td style={{ padding:"8px 10px", borderBottom:"1px solid var(--border)", fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1px", color:"var(--muted)", whiteSpace:"nowrap" }}>{r.step}</td>
+                <td style={{ padding:"8px 10px", borderBottom:"1px solid var(--border)", fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px", color:"var(--muted)", whiteSpace:"nowrap" }}>{r.step}</td>
                 <td style={{ padding:"8px 10px", borderBottom:"1px solid var(--border)", fontWeight:700, color: r.fails > 0 ? "#e05555" : "var(--muted2)", fontVariantNumeric:"tabular-nums" }}>{r.fails > 0 ? `${r.fails}×` : "0"}</td>
-                <td style={{ padding:"8px 10px", borderBottom:"1px solid var(--border)", color:"var(--muted)", lineHeight:1.4, fontSize:"0.73rem" }}>{r.cause}</td>
-                <td style={{ padding:"8px 10px", borderBottom:"1px solid var(--border)", color:"var(--text)", lineHeight:1.4, fontSize:"0.73rem" }}>{r.fix}</td>
+                <td style={{ padding:"8px 10px", borderBottom:"1px solid var(--border)", color:"var(--muted)", lineHeight:1.4, fontSize:"0.75rem" }}>{r.cause}</td>
+                <td style={{ padding:"8px 10px", borderBottom:"1px solid var(--border)", color:"var(--text)", lineHeight:1.4, fontSize:"0.75rem" }}>{r.fix}</td>
               </tr>
             ))}
           </tbody>
@@ -174,10 +174,10 @@ export default function EbayPipeline() {
 
       {/* Permanent fixes */}
       <div style={{ padding:"16px 18px", background:"var(--surface)", borderLeft:"3px solid #4dabf7", borderRadius:"0 6px 6px 0", border:"1px solid var(--border)" }}>
-        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"2px", color:"#4dabf7", marginBottom:14 }}>PERMANENT FIXES — DO THESE ONCE ON MAC</div>
+        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"2px", color:"#4dabf7", marginBottom:14 }}>PERMANENT FIXES — DO THESE ONCE ON MAC</div>
         {fixes.map(f => (
-          <div key={f.label} style={{ display:"grid", gridTemplateColumns:"180px 1fr", gap:"8px 14px", padding:"8px 0", borderBottom:"1px solid var(--border)", fontSize:"0.76rem", lineHeight:1.5 }}>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1px", color:"var(--muted)", paddingTop:1 }}>{f.label}</div>
+          <div key={f.label} style={{ display:"grid", gridTemplateColumns:"180px 1fr", gap:"8px 14px", padding:"8px 0", borderBottom:"1px solid var(--border)", fontSize:"0.75rem", lineHeight:1.5 }}>
+            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px", color:"var(--muted)", paddingTop:1 }}>{f.label}</div>
             <div style={{ color:"var(--text)" }}>{f.desc}</div>
           </div>
         ))}

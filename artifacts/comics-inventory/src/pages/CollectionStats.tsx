@@ -173,7 +173,7 @@ function LeaderRow({ rank, name, count, total, color="#c8102e" }: {
       <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", color:"var(--muted)", minWidth:24, textAlign:"right" }}>#{rank}</span>
       <span style={{ flex:1, fontSize:"0.9rem", fontWeight: rank<=3?600:400, color:"var(--text)", minWidth:0, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>{name}</span>
       <MiniBar pct={pct} color={color} />
-      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.95rem", color, minWidth:34, textAlign:"right" }}>{count}</span>
+      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", color, minWidth:34, textAlign:"right" }}>{count}</span>
     </div>
   );
 }
@@ -182,7 +182,7 @@ function SectionHead({ title, sub }: { title: string; sub?: string }) {
   return (
     <div style={{ marginBottom:16, marginTop:36 }}>
       <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.4rem", letterSpacing:"2px", color:"var(--red)", margin:0 }}>{title}</h2>
-      {sub && <div style={{ fontSize:"0.85rem", color:"var(--muted2)", marginTop:3 }}>{sub}</div>}
+      {sub && <div style={{ fontSize:"0.82rem", color:"var(--muted2)", marginTop:3 }}>{sub}</div>}
     </div>
   );
 }
@@ -200,10 +200,10 @@ function StatTile({ val, lbl, sub, color="#c8102e", onClick, cta }: { val: strin
         transform: hov && onClick ? "translateY(-2px)" : "none",
         boxShadow: hov && onClick ? `0 6px 18px ${color}22` : "none",
       }}>
-      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.9rem", color, letterSpacing:"1px", lineHeight:1 }}>{val}</div>
+      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.8rem", color, letterSpacing:"1px", lineHeight:1 }}>{val}</div>
       <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"1.5px", color:"var(--text)", marginTop:4 }}>{lbl}</div>
       {sub && <div style={{ fontSize:"0.75rem", color:"var(--muted2)", marginTop:3, lineHeight:1.4 }}>{sub}</div>}
-      {cta && onClick && <div style={{ fontSize:"0.6rem", color, marginTop:6, fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", opacity:0.8 }}>{cta}</div>}
+      {cta && onClick && <div style={{ fontSize:"0.62rem", color, marginTop:6, fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", opacity:0.8 }}>{cta}</div>}
     </div>
   );
 }
@@ -211,7 +211,7 @@ function StatTile({ val, lbl, sub, color="#c8102e", onClick, cta }: { val: strin
 const CUSTOM_TOOLTIP = ({ active, payload }: { active?: boolean; payload?: {name:string; value:number}[] }) => {
   if (!active || !payload?.length) return null;
   return (
-    <div style={{ background:"var(--surface)", border:"1px solid var(--border)", borderRadius:6, padding:"8px 14px", fontSize:"0.85rem" }}>
+    <div style={{ background:"var(--surface)", border:"1px solid var(--border)", borderRadius:6, padding:"8px 14px", fontSize:"0.82rem" }}>
       <div style={{ fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", color:"var(--text)" }}>{payload[0].name}</div>
       <div style={{ color:"var(--red)", fontWeight:600 }}>{payload[0].value.toLocaleString()} books</div>
     </div>
@@ -274,7 +274,7 @@ export default function CollectionStats({ onNavigate }: { onNavigate?: (tab: str
               padding:"8px 18px", borderRadius:4, cursor:"pointer", border:"1.5px solid var(--border)",
               background: subView === id ? "var(--red)" : "var(--surface)",
               color:       subView === id ? "#fff" : "var(--text)",
-              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem", letterSpacing:"1.5px",
+              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem", letterSpacing:"1.5px",
               transition:"all 0.15s",
             }}
           >{lbl}</button>
@@ -314,9 +314,9 @@ export default function CollectionStats({ onNavigate }: { onNavigate?: (tab: str
               { pub:"Others", n:otherTotal, color:"#6b7280", share:((otherTotal/comics.length)*100).toFixed(1) },
             ].map(p => (
               <div key={p.pub} style={{ background:"var(--surface)", border:`2px solid ${p.color}40`, borderRadius:6, padding:"18px 16px", textAlign:"center" }}>
-                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"2.5rem", color:p.color, letterSpacing:"1px", lineHeight:1 }}>{p.n.toLocaleString()}</div>
+                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"2.4rem", color:p.color, letterSpacing:"1px", lineHeight:1 }}>{p.n.toLocaleString()}</div>
                 <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem", letterSpacing:"2px", color:"var(--text)", marginTop:4 }}>{p.pub}</div>
-                <div style={{ fontSize:"0.85rem", color:"var(--muted2)", marginTop:4 }}>{p.share}% of collection</div>
+                <div style={{ fontSize:"0.82rem", color:"var(--muted2)", marginTop:4 }}>{p.share}% of collection</div>
                 <div style={{ marginTop:10, height:6, background:"var(--border)", borderRadius:3, overflow:"hidden" }}>
                   <div style={{ width:`${p.share}%`, height:"100%", background:p.color, borderRadius:3 }} />
                 </div>
@@ -329,8 +329,8 @@ export default function CollectionStats({ onNavigate }: { onNavigate?: (tab: str
 
             {/* ── Panel 1: Marvel + DC on their own big scale ── */}
             <div style={{ background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:6, padding:"16px" }}>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem", letterSpacing:"2px", color:"var(--red)", marginBottom:2 }}>THE BIG TWO</div>
-              <div style={{ fontSize:"0.7rem", color:"var(--muted2)", marginBottom:14 }}>Marvel & DC — sized against each other</div>
+              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem", letterSpacing:"2px", color:"var(--red)", marginBottom:2 }}>THE BIG TWO</div>
+              <div style={{ fontSize:"0.68rem", color:"var(--muted2)", marginBottom:14 }}>Marvel & DC — sized against each other</div>
               {(() => {
                 const big = [
                   { name:"Marvel", value: byPubRaw["Marvel"]||0, color:"#c8102e" },
@@ -344,12 +344,12 @@ export default function CollectionStats({ onNavigate }: { onNavigate?: (tab: str
                     <div key={p.name} style={{ marginBottom:14 }}>
                       <div style={{ display:"flex", justifyContent:"space-between", alignItems:"baseline", marginBottom:5 }}>
                         <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem", letterSpacing:"2px", color:"var(--text)" }}>{p.name}</span>
-                        <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.1rem", color:p.color, letterSpacing:"1px" }}>{p.value.toLocaleString()}</span>
+                        <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.2rem", color:p.color, letterSpacing:"1px" }}>{p.value.toLocaleString()}</span>
                       </div>
                       <div style={{ height:22, background:"var(--border)", borderRadius:4, overflow:"hidden" }}>
                         <div style={{ width:`${barPct}%`, height:"100%", background:p.color, borderRadius:4,
                           display:"flex", alignItems:"center", paddingLeft:8, transition:"width 0.5s ease" }}>
-                          <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", color:"rgba(255,255,255,0.88)", letterSpacing:"1px", whiteSpace:"nowrap" }}>
+                          <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", color:"rgba(255,255,255,0.88)", letterSpacing:"1px", whiteSpace:"nowrap" }}>
                             {collPct}% of collection
                           </span>
                         </div>
@@ -370,15 +370,15 @@ export default function CollectionStats({ onNavigate }: { onNavigate?: (tab: str
                   />
                 ))}
               </div>
-              <div style={{ fontSize:"0.6rem", color:"var(--muted)", marginTop:4, textAlign:"right" }}>
+              <div style={{ fontSize:"0.62rem", color:"var(--muted)", marginTop:4, textAlign:"right" }}>
                 proportional to each other
               </div>
             </div>
 
             {/* ── Panel 2: Every other publisher — their own scale ── */}
             <div style={{ background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:6, padding:"16px" }}>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem", letterSpacing:"2px", color:"var(--red)", marginBottom:2 }}>INDEPENDENT PUBLISHERS</div>
-              <div style={{ fontSize:"0.7rem", color:"var(--muted2)", marginBottom:14 }}>Each bar = share within this group — own scale so you can actually see them</div>
+              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem", letterSpacing:"2px", color:"var(--red)", marginBottom:2 }}>INDEPENDENT PUBLISHERS</div>
+              <div style={{ fontSize:"0.68rem", color:"var(--muted2)", marginBottom:14 }}>Each bar = share within this group — own scale so you can actually see them</div>
               {(() => {
                 const others = byPub.filter(([name]) => name !== "Marvel" && name !== "DC");
                 const maxOther = others[0]?.[1] || 1;
@@ -389,12 +389,12 @@ export default function CollectionStats({ onNavigate }: { onNavigate?: (tab: str
                   return (
                     <div key={name} style={{ display:"flex", alignItems:"center", gap:8, marginBottom:7 }}>
                       <div style={{ width:9, height:9, borderRadius:2, background:color, flexShrink:0 }} />
-                      <span style={{ flex:"0 0 100px", fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.7rem", letterSpacing:"1px", color:"var(--text2)", overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>{name}</span>
+                      <span style={{ flex:"0 0 100px", fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1px", color:"var(--text2)", overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>{name}</span>
                       <div style={{ flex:1, height:14, background:"var(--border)", borderRadius:3, overflow:"hidden" }}>
                         <div style={{ width:`${barPct}%`, height:"100%", background:color, borderRadius:3, transition:"width 0.5s ease" }} />
                       </div>
-                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.8rem", color, minWidth:38, textAlign:"right" }}>{value.toLocaleString()}</span>
-                      <span style={{ fontSize:"0.6rem", color:"var(--muted)", minWidth:32, textAlign:"right" }}>{collPct}%</span>
+                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem", color, minWidth:38, textAlign:"right" }}>{value.toLocaleString()}</span>
+                      <span style={{ fontSize:"0.62rem", color:"var(--muted)", minWidth:32, textAlign:"right" }}>{collPct}%</span>
                     </div>
                   );
                 });
@@ -404,8 +404,8 @@ export default function CollectionStats({ onNavigate }: { onNavigate?: (tab: str
 
           {/* ── Era Cards ── */}
           <div style={{ background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:6, padding:"16px" }}>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem", letterSpacing:"2px", color:"var(--red)", marginBottom:3 }}>BY ERA</div>
-            <div style={{ fontSize:"0.72rem", color:"var(--muted2)", marginBottom:12 }}>Your collection spans {byEra.filter(e => e.count > 0).length} distinct eras</div>
+            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem", letterSpacing:"2px", color:"var(--red)", marginBottom:3 }}>BY ERA</div>
+            <div style={{ fontSize:"0.75rem", color:"var(--muted2)", marginBottom:12 }}>Your collection spans {byEra.filter(e => e.count > 0).length} distinct eras</div>
             {/* Era timeline strip */}
             <div style={{ display:"flex", height:10, borderRadius:4, overflow:"hidden", marginBottom:16, gap:1 }}>
               {byEra.map(e => {
@@ -428,13 +428,13 @@ export default function CollectionStats({ onNavigate }: { onNavigate?: (tab: str
                 const color = ERA_VIZ_COLORS[e.name] ?? "#6b7280";
                 return (
                   <div key={e.name} style={{ background:"var(--surface2)", border:`1.5px solid ${color}28`, borderRadius:5, padding:"10px 12px", borderTop:`3px solid ${color}` }}>
-                    <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.25rem", color, letterSpacing:"1px", lineHeight:1 }}>{e.count.toLocaleString()}</div>
-                    <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.7rem", letterSpacing:"1.5px", color:"var(--text)", marginTop:3 }}>{e.name}</div>
+                    <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.2rem", color, letterSpacing:"1px", lineHeight:1 }}>{e.count.toLocaleString()}</div>
+                    <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1.5px", color:"var(--text)", marginTop:3 }}>{e.name}</div>
                     <div style={{ fontSize:"0.62rem", color:"var(--muted2)", marginTop:2 }}>{ERA_RANGE[e.name] ?? ""}</div>
                     <div style={{ marginTop:6, height:3, background:"var(--border)", borderRadius:2, overflow:"hidden" }}>
                       <div style={{ width:`${pct}%`, height:"100%", background:color, borderRadius:2 }} />
                     </div>
-                    <div style={{ fontSize:"0.6rem", color:"var(--muted)", marginTop:3, textAlign:"right" }}>{pct.toFixed(1)}%</div>
+                    <div style={{ fontSize:"0.62rem", color:"var(--muted)", marginTop:3, textAlign:"right" }}>{pct.toFixed(1)}%</div>
                   </div>
                 );
               })}
@@ -566,7 +566,7 @@ export default function CollectionStats({ onNavigate }: { onNavigate?: (tab: str
               </ResponsiveContainer>
             </div>
             <div style={{ background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:6, padding:"16px" }}>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem", letterSpacing:"2px", color:"var(--red)", marginBottom:12 }}>FAMILY COUNT</div>
+              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem", letterSpacing:"2px", color:"var(--red)", marginBottom:12 }}>FAMILY COUNT</div>
               {familyData.slice(0, 14).map(({ name, count, color }, i) => {
                 const fam = FAMILIES.find(f => f.name === name);
                 const label = fam ? `${fam.emoji} ${name}` : name;
@@ -591,7 +591,7 @@ export default function CollectionStats({ onNavigate }: { onNavigate?: (tab: str
               return (
                 <div key={team} style={{ background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:6, padding:"10px 16px", minWidth:120, textAlign:"center" }}>
                   <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.4rem", color:"var(--red)" }}>{count}</div>
-                  <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.7rem", letterSpacing:"1.5px", color:"var(--muted)" }}>{team}</div>
+                  <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1.5px", color:"var(--muted)" }}>{team}</div>
                 </div>
               );
             })}
@@ -606,8 +606,8 @@ export default function CollectionStats({ onNavigate }: { onNavigate?: (tab: str
               .map((c, i) => (
                 <div key={i} style={{ background:"var(--surface)", border:"1.5px solid #d97706", borderLeft:"3px solid #d97706", borderRadius:6, padding:"8px 12px", flex:"1 1 220px" }}>
                   <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem", color:"#d97706", letterSpacing:"1px" }}>{c.First_App}</div>
-                  <div style={{ fontSize:"0.8rem", color:"var(--text)", marginTop:2 }}>{c.Title} {c.Issue}</div>
-                  <div style={{ fontSize:"0.72rem", color:"var(--muted2)", marginTop:1 }}>Box {c.Box} · {c.Publisher} {c.Year}</div>
+                  <div style={{ fontSize:"0.82rem", color:"var(--text)", marginTop:2 }}>{c.Title} {c.Issue}</div>
+                  <div style={{ fontSize:"0.75rem", color:"var(--muted2)", marginTop:1 }}>Box {c.Box} · {c.Publisher} {c.Year}</div>
                 </div>
               ))}
           </div>
@@ -644,8 +644,8 @@ export default function CollectionStats({ onNavigate }: { onNavigate?: (tab: str
           <div style={{ display:"flex", flexWrap:"wrap", gap:8 }}>
             {deepRunTitles.map(([title, count]) => (
               <div key={title} style={{ background:"var(--surface)", border:"1.5px solid #c8102e40", borderLeft:"3px solid #c8102e", borderRadius:6, padding:"10px 14px", flex:"1 1 200px" }}>
-                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.3rem", color:"#c8102e" }}>{count}</div>
-                <div style={{ fontSize:"0.85rem", color:"var(--text)", fontWeight:500, marginTop:2 }}>{title}</div>
+                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.4rem", color:"#c8102e" }}>{count}</div>
+                <div style={{ fontSize:"0.82rem", color:"var(--text)", fontWeight:500, marginTop:2 }}>{title}</div>
               </div>
             ))}
           </div>
@@ -666,7 +666,7 @@ export default function CollectionStats({ onNavigate }: { onNavigate?: (tab: str
           <div style={{ display:"flex", flexWrap:"wrap", gap:6 }}>
             {annuals.map((c, i) => (
               <div key={i} style={{ background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:5, padding:"6px 12px", fontSize:"0.82rem", color:"var(--text)" }}>
-                {c.Title} {c.Issue} <span style={{ color:"var(--muted2)", fontSize:"0.72rem" }}>Box {c.Box}</span>
+                {c.Title} {c.Issue} <span style={{ color:"var(--muted2)", fontSize:"0.75rem" }}>Box {c.Box}</span>
               </div>
             ))}
           </div>

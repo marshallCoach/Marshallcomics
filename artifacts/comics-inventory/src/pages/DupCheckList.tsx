@@ -67,7 +67,7 @@ export default function DupCheckList() {
 
       {/* Header */}
       <div style={{ marginBottom: 20 }}>
-        <h1 style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "2rem", letterSpacing: "3px", color: "var(--red)", margin: 0, lineHeight: 1 }}>
+        <h1 style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.8rem", letterSpacing: "3px", color: "var(--red)", margin: 0, lineHeight: 1 }}>
           DUP HUNT
         </h1>
         <p style={{ fontSize: "0.82rem", color: "var(--muted2)", marginTop: 6, fontFamily: "'Crimson Pro',serif" }}>
@@ -79,12 +79,12 @@ export default function DupCheckList() {
       {checkItems.length > 0 && (
         <div style={{ display: "flex", gap: 10, marginBottom: 24, flexWrap: "wrap" }}>
           <div style={{ background: "var(--surface)", border: "1.5px solid #e9d5ff", borderTop: "3px solid #9333ea", borderRadius: 7, padding: "10px 16px", flex: "1 1 100px" }}>
-            <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.6rem", color: "#9333ea", lineHeight: 1 }}>{checkItems.length}</div>
-            <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem", letterSpacing: "1.5px", color: "var(--muted2)", marginTop: 3 }}>COPIES TO CHECK</div>
+            <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.8rem", color: "#9333ea", lineHeight: 1 }}>{checkItems.length}</div>
+            <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1.5px", color: "var(--muted2)", marginTop: 3 }}>COPIES TO CHECK</div>
           </div>
           <div style={{ background: "var(--surface)", border: "1.5px solid var(--border)", borderTop: "3px solid var(--red)", borderRadius: 7, padding: "10px 16px", flex: "1 1 100px" }}>
-            <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.6rem", color: "var(--red)", lineHeight: 1 }}>{byBox.size}</div>
-            <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem", letterSpacing: "1.5px", color: "var(--muted2)", marginTop: 3 }}>BOXES TO PULL</div>
+            <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.8rem", color: "var(--red)", lineHeight: 1 }}>{byBox.size}</div>
+            <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1.5px", color: "var(--muted2)", marginTop: 3 }}>BOXES TO PULL</div>
           </div>
         </div>
       )}
@@ -99,7 +99,7 @@ export default function DupCheckList() {
                 BOX {box}
               </div>
               <div style={{ flex: 1, height: 1, background: "var(--border)" }} />
-              <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem", letterSpacing: "1px", color: "var(--muted)" }}>
+              <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1px", color: "var(--muted)" }}>
                 {items.length} {items.length === 1 ? "COPY" : "COPIES"}
               </div>
             </div>
@@ -114,7 +114,7 @@ export default function DupCheckList() {
                   borderRadius: 8,
                   padding: "14px 16px",
                 }}>
-                  <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.15rem", letterSpacing: "1px", color: "var(--text)", lineHeight: 1.2 }}>
+                  <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.2rem", letterSpacing: "1px", color: "var(--text)", lineHeight: 1.2 }}>
                     {comic.Title}
                   </div>
                   <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1rem", color: "var(--red)", marginTop: 2 }}>
@@ -125,17 +125,17 @@ export default function DupCheckList() {
                       {comic.Arc}
                     </div>
                   )}
-                  <div style={{ fontSize: "0.72rem", color: "var(--muted)", marginTop: 4, display: "flex", gap: 8, flexWrap: "wrap" }}>
+                  <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginTop: 4, display: "flex", gap: 8, flexWrap: "wrap" }}>
                     <span>{comic.Publisher}{comic.Year ? ` · ${comic.Year}` : ""}</span>
                     {comic.Volume && <span>Vol {comic.Volume}</span>}
                     {comic.Condition && (
-                      <span style={{ fontFamily: "'Bebas Neue',sans-serif", letterSpacing: "0.5px", fontSize: "0.65rem" }}>
+                      <span style={{ fontFamily: "'Bebas Neue',sans-serif", letterSpacing: "0.5px", fontSize: "0.62rem" }}>
                         {comic.Condition}
                       </span>
                     )}
                   </div>
                   {(comic.Writer || comic.Artist) && (
-                    <div style={{ fontSize: "0.7rem", color: "var(--muted2)", marginTop: 3, fontFamily: "'Crimson Pro',serif" }}>
+                    <div style={{ fontSize: "0.68rem", color: "var(--muted2)", marginTop: 3, fontFamily: "'Crimson Pro',serif" }}>
                       {comic.Writer && <span>W: {comic.Writer}</span>}
                       {comic.Writer && comic.Artist && <span> · </span>}
                       {comic.Artist && <span>A: {comic.Artist}</span>}
@@ -155,8 +155,8 @@ export default function DupCheckList() {
 
       {checkItems.length === 0 && (
         <div style={{ textAlign: "center", padding: "60px 20px", color: "var(--muted)" }}>
-          <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem", letterSpacing: "3px", marginBottom: 8 }}>NO CHECK ITEMS</div>
-          <div style={{ fontSize: "0.8rem", fontFamily: "'Crimson Pro',serif" }}>
+          <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.2rem", letterSpacing: "3px", marginBottom: 8 }}>NO CHECK ITEMS</div>
+          <div style={{ fontSize: "0.82rem", fontFamily: "'Crimson Pro',serif" }}>
             Mark individual copies as CHECK on the Duplicates page to build this hunt list.
           </div>
         </div>

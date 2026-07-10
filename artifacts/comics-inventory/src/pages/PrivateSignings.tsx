@@ -87,7 +87,7 @@ export default function PrivateSignings() {
       </div>
 
       {/* Label legend */}
-      <div style={{ background:"var(--surface)", borderBottom:"1px solid var(--border)", padding:"10px 24px", display:"flex", gap:16, flexWrap:"wrap", fontSize:"0.72rem", color:"var(--muted2)" }}>
+      <div style={{ background:"var(--surface)", borderBottom:"1px solid var(--border)", padding:"10px 24px", display:"flex", gap:16, flexWrap:"wrap", fontSize:"0.75rem", color:"var(--muted2)" }}>
         <span>🟡 <strong>Yellow SS</strong> = unsigned book + witnessed signing at con → highest CGC value</span>
         <span>🟡⬛ <strong>Yellow/Black CGC×JSA</strong> = already-signed book mailed to CGC × JSA → authenticated</span>
         <span>🟡🟢 <strong>Yellow/Green combo</strong> = witnessed + unwitnessed sigs on same book</span>
@@ -103,8 +103,8 @@ export default function PrivateSignings() {
           { val: watch.length,     lbl:"WATCH",       color:"#6366f1" },
         ].map(s => (
           <div key={s.lbl} style={{ textAlign:"center" }}>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.1rem", color:s.color, letterSpacing:"1px", lineHeight:1 }}>{s.val}</div>
-            <div style={{ fontSize:"0.58rem", letterSpacing:"1.5px", fontFamily:"'Bebas Neue',sans-serif", color:"var(--muted)" }}>{s.lbl}</div>
+            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.2rem", color:s.color, letterSpacing:"1px", lineHeight:1 }}>{s.val}</div>
+            <div style={{ fontSize:"0.62rem", letterSpacing:"1.5px", fontFamily:"'Bebas Neue',sans-serif", color:"var(--muted)" }}>{s.lbl}</div>
           </div>
         ))}
       </div>
@@ -114,7 +114,7 @@ export default function PrivateSignings() {
         {(["list","card"] as const).map(v => (
           <button key={v} onClick={() => setViewMode(v)}
             style={{
-              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"1.5px",
+              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"1.5px",
               padding:"5px 14px", border:`1.5px solid ${viewMode===v?"var(--red)":"var(--border)"}`,
               background:viewMode===v?"var(--red)":"var(--surface)", color:viewMode===v?"#fff":"var(--muted2)",
               borderRadius:4, cursor:"pointer",
@@ -129,7 +129,7 @@ export default function PrivateSignings() {
         <div style={{ padding:"14px 16px 40px" }}>
           {sections.map(sec => (
             <div key={sec.label} style={{ marginBottom:24 }}>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.8rem", letterSpacing:"2px", color:sec.color, marginBottom:10, borderBottom:`1.5px solid ${sec.color}22`, paddingBottom:4 }}>
+              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem", letterSpacing:"2px", color:sec.color, marginBottom:10, borderBottom:`1.5px solid ${sec.color}22`, paddingBottom:4 }}>
                 {sec.label}
               </div>
               <div style={{ display:"flex", flexDirection:"column", gap:6 }}>
@@ -159,7 +159,7 @@ export default function PrivateSignings() {
                             }}>{statusBadge(s.Status)}</span>
                             <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", letterSpacing:"1px", color:"var(--text)" }}>{s.Creator}</span>
                           </div>
-                          <div style={{ fontSize:"0.72rem", color:"var(--muted2)", marginTop:1 }}>
+                          <div style={{ fontSize:"0.75rem", color:"var(--muted2)", marginTop:1 }}>
                             {s.Deadline} · {s.Fee}
                           </div>
                         </div>
@@ -206,11 +206,11 @@ export default function PrivateSignings() {
                     fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px",
                     background:sc+"20", border:`1px solid ${sc}`, color:sc, borderRadius:3, padding:"1px 7px",
                   }}>{statusBadge(s.Status)}</span>
-                  <span style={{ fontSize:"0.7rem", color:"var(--red)", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>{s.ExpectedValue}</span>
+                  <span style={{ fontSize:"0.68rem", color:"var(--red)", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>{s.ExpectedValue}</span>
                 </div>
-                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.95rem", letterSpacing:"1px", color:"var(--text)", marginBottom:2 }}>{s.Creator}</div>
-                <div style={{ fontSize:"0.7rem", color:"var(--muted2)", marginBottom:6 }}>{s.Deadline} · {s.Fee}</div>
-                <div style={{ fontSize:"0.78rem", color:"var(--text)", lineHeight:1.4, marginBottom:6 }}>{s.Books.substring(0, 120)}</div>
+                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", letterSpacing:"1px", color:"var(--text)", marginBottom:2 }}>{s.Creator}</div>
+                <div style={{ fontSize:"0.68rem", color:"var(--muted2)", marginBottom:6 }}>{s.Deadline} · {s.Fee}</div>
+                <div style={{ fontSize:"0.75rem", color:"var(--text)", lineHeight:1.4, marginBottom:6 }}>{s.Books.substring(0, 120)}</div>
                 <div style={{ fontSize:"0.75rem", color:"var(--muted2)", lineHeight:1.4 }}>{s.Strategy.substring(0, 180)}</div>
               </div>
             );

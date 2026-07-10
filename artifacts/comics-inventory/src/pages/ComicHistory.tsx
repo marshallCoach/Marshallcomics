@@ -128,7 +128,7 @@ function ComicCover({ comic, mi, year, isAnimating, pool, curIdx }: {
       {/* month label top-left */}
       <div style={{
         position: "absolute", top: 8, left: 10,
-        fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.6rem", letterSpacing: "2px",
+        fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "2px",
         color: pub ? "rgba(255,255,255,0.7)" : "var(--muted)",
       }}>
         {MONTH_FULL[mi].toUpperCase()} {year}
@@ -138,7 +138,7 @@ function ComicCover({ comic, mi, year, isAnimating, pool, curIdx }: {
       {pool.length > 1 && (
         <div style={{
           position: "absolute", top: 8, right: 8,
-          fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.52rem", letterSpacing: "1px",
+          fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1px",
           color: "rgba(255,255,255,0.65)",
           background: "rgba(0,0,0,0.28)", borderRadius: 10, padding: "2px 7px",
         }}>
@@ -193,7 +193,7 @@ function ComicCover({ comic, mi, year, isAnimating, pool, curIdx }: {
         <div style={{
           position: "absolute", bottom: 0, left: 0, right: 0,
           background: "rgba(217,119,6,0.85)",
-          fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.55rem", letterSpacing: "2px",
+          fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "2px",
           color: "#fff", textAlign: "center", padding: "3px 0",
         }}>
           ★ KEY ISSUE
@@ -225,7 +225,7 @@ function SpinBtn({ pubKey, isSpinning, onClick, poolLen }: {
           background: `${bg}18`,
           border: `2.5px solid ${bg}`,
           color: bg,
-          fontSize: "1.7rem", lineHeight: 1,
+          fontSize: "1.8rem", lineHeight: 1,
           cursor: isSpinning ? "default" : "pointer",
           display: "flex", alignItems: "center", justifyContent: "center",
           flexShrink: 0,
@@ -239,7 +239,7 @@ function SpinBtn({ pubKey, isSpinning, onClick, poolLen }: {
         ↻
       </button>
       <div style={{
-        fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.52rem", letterSpacing: "1.5px",
+        fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1.5px",
         color: "var(--muted)",
       }}>
         {poolLen} BOOKS
@@ -296,7 +296,7 @@ function MonthCard({ year, mi, pool, spinIdx, spinning, animating, onSpin }: {
         {comic && (
           <div style={{ display: "flex", gap: 4, alignItems: "center", flexWrap: "wrap", justifyContent: "center" }}>
             <span style={{
-              fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.55rem", letterSpacing: "1.5px",
+              fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1.5px",
               color: pub.bg, background: pub.bg + "18",
               border: `1px solid ${pub.bg}40`,
               padding: "2px 7px", borderRadius: 3,
@@ -305,7 +305,7 @@ function MonthCard({ year, mi, pool, spinIdx, spinning, animating, onSpin }: {
             </span>
             {isSigned && (
               <span style={{
-                fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.55rem", letterSpacing: "1px",
+                fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1px",
                 color: "#8b2be2", background: "#8b2be215",
                 border: "1px solid #8b2be230", padding: "2px 6px", borderRadius: 3,
               }}>✍ SIGNED</span>
@@ -316,7 +316,7 @@ function MonthCard({ year, mi, pool, spinIdx, spinning, animating, onSpin }: {
         {/* Key reason */}
         {comic && (comic.Key || "").toUpperCase() === "YES" && comic.Key_Reason && (
           <div style={{
-            fontSize: "0.63rem", color: "var(--muted2)", fontFamily: "'Crimson Pro',serif",
+            fontSize: "0.62rem", color: "var(--muted2)", fontFamily: "'Crimson Pro',serif",
             textAlign: "center", lineHeight: 1.35, fontStyle: "italic",
             display: "-webkit-box", WebkitLineClamp: 2,
             WebkitBoxOrient: "vertical" as const, overflow: "hidden",
@@ -340,7 +340,7 @@ function MonthCard({ year, mi, pool, spinIdx, spinning, animating, onSpin }: {
         ) : pool.length === 1 ? (
           <div style={{ height: 60, display: "flex", alignItems: "center" }}>
             <div style={{
-              fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.52rem", letterSpacing: "1.5px",
+              fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1.5px",
               color: "var(--muted)", padding: "4px 10px", border: "1px dashed var(--border)", borderRadius: 20,
             }}>
               1 BOOK
@@ -349,7 +349,7 @@ function MonthCard({ year, mi, pool, spinIdx, spinning, animating, onSpin }: {
         ) : (
           <div style={{ height: 60, display: "flex", alignItems: "center" }}>
             <div style={{
-              fontFamily: "'Crimson Pro',serif", fontSize: "0.65rem",
+              fontFamily: "'Crimson Pro',serif", fontSize: "0.62rem",
               color: "var(--muted)", fontStyle: "italic",
             }}>
               no match
@@ -446,7 +446,7 @@ export default function ComicHistory() {
           COMIC HISTORY
         </h1>
         <p style={{
-          fontSize: "0.87rem", color: "var(--muted2)", marginTop: 7,
+          fontSize: "0.9rem", color: "var(--muted2)", marginTop: 7,
           fontFamily: "'Crimson Pro',serif",
         }}>
           July 1974 to today — one book from Roberto's collection for every month in history.
@@ -470,7 +470,7 @@ export default function ComicHistory() {
                 key={f.id}
                 onClick={() => setPubFilter(f.id)}
                 style={{
-                  fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.7rem", letterSpacing: "1.5px",
+                  fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.68rem", letterSpacing: "1.5px",
                   padding: "5px 14px", borderRadius: 20,
                   background: active ? color : "transparent",
                   color: active ? "#fff" : "var(--muted)",
@@ -496,7 +496,7 @@ export default function ComicHistory() {
             key={t.label}
             onClick={t.toggle}
             style={{
-              fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.7rem", letterSpacing: "1.5px",
+              fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.68rem", letterSpacing: "1.5px",
               padding: "5px 14px", borderRadius: 20,
               background: t.active ? t.color : "transparent",
               color: t.active ? "#fff" : "var(--muted)",
@@ -511,7 +511,7 @@ export default function ComicHistory() {
         {/* Result count */}
         <div style={{
           marginLeft: "auto",
-          fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.65rem", letterSpacing: "1.5px",
+          fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1.5px",
           color: "var(--muted)",
         }}>
           {(yearStats.get(selectedYear) ?? 0)} IN {selectedYear} · {totalFiltered.toLocaleString()} TOTAL
@@ -537,13 +537,13 @@ export default function ComicHistory() {
 
         <div style={{ flex:1, textAlign:"center" }}>
           <div style={{
-            fontFamily:"'Bebas Neue',sans-serif", fontSize:"3.2rem",
+            fontFamily:"'Bebas Neue',sans-serif", fontSize:"2.4rem",
             letterSpacing:"6px", color:"var(--red)", lineHeight:1,
           }}>
             {selectedYear}
           </div>
           <div style={{
-            fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem",
+            fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
             letterSpacing:"2px", color:"var(--muted)", marginTop:4,
           }}>
             {yearIdx + 1} OF {YEARS_PRESENT.length} YEARS IN COLLECTION
@@ -574,14 +574,14 @@ export default function ComicHistory() {
           display:"flex", flexWrap:"wrap", alignItems:"center", gap:8,
         }}>
           <span style={{
-            fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem",
+            fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
             letterSpacing:"1.5px", color:"#c2410c", flexShrink:0,
           }}>
             ⚠ MONTHS WITH 0 BOOKS:
           </span>
           {zeroMonths.map(({ lbl }) => (
             <span key={lbl} style={{
-              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1px",
+              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px",
               background:"#fff", border:"1px solid #f97316",
               borderRadius:3, padding:"2px 8px", color:"#c2410c",
             }}>{lbl}</span>
@@ -597,7 +597,7 @@ export default function ComicHistory() {
         if (!BY_YEAR.has(selectedYear)) {
           return (
             <div style={{ textAlign:"center", padding:"60px 20px", color:"var(--muted)",
-              fontFamily:"'Crimson Pro',serif", fontSize:"1.1rem", fontStyle:"italic" }}>
+              fontFamily:"'Crimson Pro',serif", fontSize:"1.2rem", fontStyle:"italic" }}>
               No comics from {selectedYear} in this collection.
             </div>
           );
@@ -646,7 +646,7 @@ export default function ComicHistory() {
           onClick={() => { if (prevYear) { setSelectedYear(prevYear); window.scrollTo({ top: 0, behavior: "smooth" }); }}}
           disabled={!prevYear}
           style={{
-            fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.78rem", letterSpacing:"2px",
+            fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"2px",
             color: prevYear ? "var(--red)" : "var(--muted)", background:"none",
             border: prevYear ? "1.5px solid var(--red)" : "1.5px solid var(--border)",
             borderRadius:6, padding:"9px 22px", cursor: prevYear ? "pointer" : "default", opacity: prevYear ? 1 : 0.35,
@@ -657,7 +657,7 @@ export default function ComicHistory() {
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           style={{
-            fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.78rem", letterSpacing:"2px",
+            fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"2px",
             color:"var(--muted)", background:"none", border:"1.5px solid var(--border)",
             borderRadius:6, padding:"9px 22px", cursor:"pointer",
           }}
@@ -668,7 +668,7 @@ export default function ComicHistory() {
           onClick={() => { if (nextYear) { setSelectedYear(nextYear); window.scrollTo({ top: 0, behavior: "smooth" }); }}}
           disabled={!nextYear}
           style={{
-            fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.78rem", letterSpacing:"2px",
+            fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"2px",
             color: nextYear ? "var(--red)" : "var(--muted)", background:"none",
             border: nextYear ? "1.5px solid var(--red)" : "1.5px solid var(--border)",
             borderRadius:6, padding:"9px 22px", cursor: nextYear ? "pointer" : "default", opacity: nextYear ? 1 : 0.35,

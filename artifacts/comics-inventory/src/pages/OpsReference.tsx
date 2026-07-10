@@ -2,7 +2,7 @@ import { useState } from "react";
 
 function CmdBlock({ children }: { children: React.ReactNode }) {
   return (
-    <div style={{ background:"var(--surface2,rgba(0,0,0,0.12))", border:"1px solid var(--border)", borderRadius:4, padding:"8px 10px", margin:"6px 0", fontFamily:"'Courier New',monospace", fontSize:"0.76rem", lineHeight:1.7, overflowX:"auto" }}>
+    <div style={{ background:"var(--surface2,rgba(0,0,0,0.12))", border:"1px solid var(--border)", borderRadius:4, padding:"8px 10px", margin:"6px 0", fontFamily:"'Courier New',monospace", fontSize:"0.75rem", lineHeight:1.7, overflowX:"auto" }}>
       {children}
     </div>
   );
@@ -12,9 +12,9 @@ function Card({ color, title, tag, children, fullWidth }: { color: string; title
   const colors: Record<string, string> = { amber:"#e8a020", green:"#3fb950", blue:"#58a6ff", red:"#f85149", purple:"#bc8cff" };
   return (
     <div style={{ background:"var(--surface)", border:"1px solid var(--border)", borderLeft:`3px solid ${colors[color]||"var(--border)"}`, borderRadius:6, padding:"14px 16px", gridColumn: fullWidth ? "1 / -1" : undefined }}>
-      <div style={{ fontFamily:"'Courier New',monospace", fontSize:"0.78rem", fontWeight:600, color:"var(--text)", marginBottom:10, display:"flex", alignItems:"center", gap:8, flexWrap:"wrap" }}>
+      <div style={{ fontFamily:"'Courier New',monospace", fontSize:"0.75rem", fontWeight:600, color:"var(--text)", marginBottom:10, display:"flex", alignItems:"center", gap:8, flexWrap:"wrap" }}>
         {title}
-        {tag && <span style={{ fontSize:"0.6rem", letterSpacing:"0.08em", textTransform:"uppercase", color:"var(--muted)", background:"var(--border)", padding:"1px 6px", borderRadius:3 }}>{tag}</span>}
+        {tag && <span style={{ fontSize:"0.62rem", letterSpacing:"0.08em", textTransform:"uppercase", color:"var(--muted)", background:"var(--border)", padding:"1px 6px", borderRadius:3 }}>{tag}</span>}
       </div>
       {children}
     </div>
@@ -22,12 +22,12 @@ function Card({ color, title, tag, children, fullWidth }: { color: string; title
 }
 
 function Note({ children }: { children: React.ReactNode }) {
-  return <p style={{ fontSize:"0.72rem", color:"var(--muted)", marginTop:6, lineHeight:1.5 }}>{children}</p>;
+  return <p style={{ fontSize:"0.75rem", color:"var(--muted)", marginTop:6, lineHeight:1.5 }}>{children}</p>;
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <div style={{ display:"flex", alignItems:"center", gap:10, fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"2.5px", color:"var(--muted)", marginBottom:12 }}>
+    <div style={{ display:"flex", alignItems:"center", gap:10, fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"2.5px", color:"var(--muted)", marginBottom:12 }}>
       {children}
       <div style={{ flex:1, height:1, background:"var(--border)" }} />
     </div>
@@ -80,7 +80,7 @@ export default function OpsReference() {
       {/* Header */}
       <div style={{ borderBottom:"1px solid var(--border)", paddingBottom:16, marginBottom:28, display:"flex", alignItems:"baseline", gap:16, flexWrap:"wrap" }}>
         <span style={{ fontFamily:"'Courier New',monospace", fontSize:"1rem", fontWeight:600, color:"#e8a020", letterSpacing:"0.03em" }}>~/marshallcomics — ops reference</span>
-        <span style={{ fontFamily:"'Courier New',monospace", fontSize:"0.78rem", color:"var(--muted)" }}>branch: claude/upbeat-babbage-2f5gr2</span>
+        <span style={{ fontFamily:"'Courier New',monospace", fontSize:"0.75rem", color:"var(--muted)" }}>branch: claude/upbeat-babbage-2f5gr2</span>
         <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"2px", padding:"2px 8px", border:"1px solid var(--border)", borderRadius:3, color:"var(--muted)" }}>JULY 2026</span>
       </div>
 
@@ -263,12 +263,12 @@ export default function OpsReference() {
               onMouseLeave={e => (e.currentTarget.style.background = "")}
             >
               <span style={{ fontFamily:"'Courier New',monospace", fontSize:"0.68rem", color:"var(--muted)", flexShrink:0, width:22 }}>{p.num}</span>
-              <span style={{ fontSize:"0.86rem", fontWeight:500, color:"var(--text)", flex:1 }}>{p.q}</span>
-              <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"0.08em", textTransform:"uppercase", padding:"2px 6px", borderRadius:3, flexShrink:0, background:`${p.tagColor}15`, color:p.tagColor, border:`1px solid ${p.tagColor}30` }}>{p.tag}</span>
+              <span style={{ fontSize:"0.82rem", fontWeight:500, color:"var(--text)", flex:1 }}>{p.q}</span>
+              <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"0.08em", textTransform:"uppercase", padding:"2px 6px", borderRadius:3, flexShrink:0, background:`${p.tagColor}15`, color:p.tagColor, border:`1px solid ${p.tagColor}30` }}>{p.tag}</span>
             </div>
             {open.has(p.num) && (
               <div style={{ padding:"0 14px 14px 46px", borderTop:"1px solid var(--border)" }}>
-                <p style={{ fontSize:"0.8rem", color:"var(--muted)", margin:"10px 0 8px", lineHeight:1.6 }}>{p.body}</p>
+                <p style={{ fontSize:"0.82rem", color:"var(--muted)", margin:"10px 0 8px", lineHeight:1.6 }}>{p.body}</p>
                 {p.cmd && <CmdBlock><div style={{ color:"var(--muted2,#aaa)" }}>{p.cmd}</div></CmdBlock>}
               </div>
             )}

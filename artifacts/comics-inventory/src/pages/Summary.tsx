@@ -407,7 +407,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
           <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem", letterSpacing:"1.5px", color:"var(--muted)", background:"var(--surface2)", padding:"2px 8px", borderRadius:3, border:"1px solid var(--border)" }}>{LAST_UPDATE_DATE}</span>
           <div style={{ display:"flex", gap:5, flexWrap:"wrap" }}>
             {UPDATE_DELTAS.map(d => (
-              <span key={d} style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.78rem", letterSpacing:"1px", color:"#16a34a", background:"rgba(22,163,74,0.08)", border:"1px solid rgba(22,163,74,0.18)", padding:"2px 8px", borderRadius:3 }}>
+              <span key={d} style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"1px", color:"#16a34a", background:"rgba(22,163,74,0.08)", border:"1px solid rgba(22,163,74,0.18)", padding:"2px 8px", borderRadius:3 }}>
                 {d}
               </span>
             ))}
@@ -417,7 +417,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
         {/* Interface updates only — writers/artists/value have their own dedicated cards below */}
         <div style={{ display:"flex", flexDirection:"column", gap:4 }}>
           {INTERFACE_UPDATES.map(u => (
-            <div key={u} style={{ fontSize:"0.95rem", color:"var(--muted2)", lineHeight:1.5, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" }}>→ {u}</div>
+            <div key={u} style={{ fontSize:"0.9rem", color:"var(--muted2)", lineHeight:1.5, fontFamily:"'Crimson Pro', Georgia, serif" }}>→ {u}</div>
           ))}
         </div>
       </section>
@@ -450,7 +450,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
                 <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"1px", color:"var(--muted2)", lineHeight:1.2, marginTop:5, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap", width:100, textAlign:"center" }}>
                   {c.Title}
                 </div>
-                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", color:"var(--muted)", textAlign:"center", width:100 }}>
+                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", color:"var(--muted)", textAlign:"center", width:100 }}>
                   {c.Issue}
                 </div>
               </div>
@@ -615,7 +615,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
         <div style={{ background:"#0f1a12", border:"1px solid #1e3a22", borderRadius:10, padding:"22px 24px", overflow:"hidden", position:"relative" }}>
           {/* Scanline texture */}
           <div style={{ position:"absolute", inset:0, backgroundImage:"repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,255,80,0.015) 3px,rgba(0,255,80,0.015) 4px)", pointerEvents:"none" }} />
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.78rem", letterSpacing:"3px", color:"rgba(100,220,120,0.5)", marginBottom:18 }}>
+          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"3px", color:"rgba(100,220,120,0.5)", marginBottom:18 }}>
             COLLECTION VALUE EST. — {LAST_UPDATE_DATE.toUpperCase()}
           </div>
           <div style={{ display:"flex", gap:0, flexWrap:"wrap" }}>
@@ -626,7 +626,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
               </div>
               <div style={{ display:"flex", alignItems:"baseline", gap:4 }}>
                 <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", color:"rgba(100,220,120,0.6)", letterSpacing:"1px", alignSelf:"flex-start", marginTop:6 }}>$</span>
-                <span className="gas-num" style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"3.2rem", color:"#4ade80", letterSpacing:"3px", lineHeight:1, fontVariantNumeric:"tabular-nums" }}>
+                <span className="gas-num" style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"2.4rem", color:"#4ade80", letterSpacing:"3px", lineHeight:1, fontVariantNumeric:"tabular-nums" }}>
                   {cNmValue.toLocaleString()}
                 </span>
               </div>
@@ -641,7 +641,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
               </div>
               <div style={{ display:"flex", alignItems:"baseline", gap:4 }}>
                 <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", color:"rgba(100,220,120,0.4)", letterSpacing:"1px", alignSelf:"flex-start", marginTop:6 }}>$</span>
-                <span className="gas-num" style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"3.2rem", color:"#86efac", letterSpacing:"3px", lineHeight:1, fontVariantNumeric:"tabular-nums" }}>
+                <span className="gas-num" style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"2.4rem", color:"#86efac", letterSpacing:"3px", lineHeight:1, fontVariantNumeric:"tabular-nums" }}>
                   {cVfValue.toLocaleString()}
                 </span>
               </div>
@@ -651,7 +651,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
             </div>
           </div>
           {/* Bottom note */}
-          <div style={{ marginTop:16, paddingTop:14, borderTop:"1px solid #1e3a22", fontSize:"0.78rem", color:"rgba(100,220,120,0.4)", letterSpacing:"1px" }}>
+          <div style={{ marginTop:16, paddingTop:14, borderTop:"1px solid #1e3a22", fontSize:"0.75rem", color:"rgba(100,220,120,0.4)", letterSpacing:"1px" }}>
             Values derived from Value_NM and Value_VF fields across all {totalComics.toLocaleString()} catalogued books. VF uses lower bound of any range (e.g. "$5–12" counts as $5).
           </div>
         </div>
@@ -704,7 +704,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
                       {/* Delta arrow with tooltip */}
                       <div className="delta-wrap" style={{ position:"relative", flexShrink:0 }}>
                         <span className="delta-arrow" style={{ fontFamily:"'Bebas Neue',sans-serif",
-                          fontSize:"0.8rem", color:arrowColor, cursor:"default",
+                          fontSize:"0.82rem", color:arrowColor, cursor:"default",
                           display:"inline-flex", alignItems:"center", justifyContent:"center",
                           width:20, height:20, borderRadius:3,
                           background: dir === "up" ? "#16a34a18" : dir === "down" ? "#dc262618" : "#6b728018" }}>
@@ -746,7 +746,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
                   <div key={p.name}>
                     <div style={{ display:"flex", alignItems:"center", gap:8 }}>
                       <div style={{ width:10, height:10, borderRadius:2, background:color, flexShrink:0 }} />
-                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.78rem", letterSpacing:"1px", color:"var(--muted2)", minWidth:110 }}>{p.name}</span>
+                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"1px", color:"var(--muted2)", minWidth:110 }}>{p.name}</span>
                       <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", color:"var(--red)", letterSpacing:"1px" }}>{p.value.toLocaleString()}</span>
                       <span style={{ fontSize:"0.82rem", color:"var(--muted)" }}>({pct}%)</span>
                     </div>
@@ -771,7 +771,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
       {/* ── FLAGSHIP ASSETS ── */}
       <section style={{ marginBottom:32 }}>
         <h2 className="section-h2">🏆 FLAGSHIP ASSETS</h2>
-        <p style={{ fontSize:"0.95rem", color:"var(--muted2)", marginBottom:12 }}>Your highest-value books — click any card for full action details.</p>
+        <p style={{ fontSize:"0.9rem", color:"var(--muted2)", marginBottom:12 }}>Your highest-value books — click any card for full action details.</p>
         <div style={{ display:"flex", flexWrap:"wrap", gap:10 }}>
           {FLAGSHIP.map((a, i) => {
             const isOpen = openFlag === i;
@@ -789,8 +789,8 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
               >
                 <div style={{ display:"flex", alignItems:"center", gap:8, flexWrap:"wrap" }}>
                   {a.terrificon && <span className="tf-badge">TERRIFICON</span>}
-                  <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.92rem", letterSpacing:"1px", color:a.color, flex:1 }}>{a.book}</div>
-                  <div style={{ fontSize:"0.7rem", color:"var(--muted)", flexShrink:0 }}>Box {a.box} {isOpen?"▲":"▼"}</div>
+                  <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", letterSpacing:"1px", color:a.color, flex:1 }}>{a.book}</div>
+                  <div style={{ fontSize:"0.68rem", color:"var(--muted)", flexShrink:0 }}>Box {a.box} {isOpen?"▲":"▼"}</div>
                 </div>
                 <div style={{ fontSize:"0.82rem", color:"var(--muted2)", lineHeight:1.5, marginTop:4 }}>{a.note}</div>
                 {isOpen && (
@@ -808,7 +808,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
                         <span className="dv">{r.v}</span>
                       </div>
                     ))}
-                    <div style={{ flex:"1 1 100%", marginTop:6, padding:"8px 12px", background:`${a.color}0d`, borderRadius:4, fontSize:"0.85rem", color:a.color, fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>
+                    <div style={{ flex:"1 1 100%", marginTop:6, padding:"8px 12px", background:`${a.color}0d`, borderRadius:4, fontSize:"0.82rem", color:a.color, fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>
                       → {a.action}
                     </div>
                   </div>
@@ -843,7 +843,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
                     onClick={() => onNavigate(info.page)}
                   >
                     <div style={{ display:"flex", flexDirection:"column", alignItems:"center", minWidth:38, flexShrink:0 }}>
-                      <div style={{ fontSize:"1.1rem", lineHeight:1 }}>{info.icon}</div>
+                      <div style={{ fontSize:"1.2rem", lineHeight:1 }}>{info.icon}</div>
                       <div className="sched-days" style={{ color: urg }}>
                         {days === 0 ? "NOW" : days === 1 ? "TMRW" : `${days}`}
                       </div>
@@ -855,9 +855,9 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
                       <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem", letterSpacing:"1px", color:info.color, lineHeight:1.2, marginBottom:2 }}>
                         {e.Theme.length > 72 ? e.Theme.substring(0,72)+"…" : e.Theme}
                       </div>
-                      <div style={{ fontSize:"0.72rem", color:"var(--muted2)" }}>
+                      <div style={{ fontSize:"0.75rem", color:"var(--muted2)" }}>
                         {e.Date}
-                        <span style={{ marginLeft:8, fontSize:"0.78rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", color: urg }}>
+                        <span style={{ marginLeft:8, fontSize:"0.75rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", color: urg }}>
                           → {info.page === "showplanner" ? "VIEW SHOW PLAN" : "VIEW CALENDAR"}
                         </span>
                       </div>
@@ -954,7 +954,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
       {showProgress && <section className="progress-section" style={{ position:"relative" }}>
         <button
           onClick={() => setShowProgress(false)}
-          style={{ position:"absolute", top:10, right:12, background:"none", border:"none", cursor:"pointer", color:"var(--muted)", fontSize:"1.1rem", lineHeight:1, padding:"2px 5px", borderRadius:4 }}
+          style={{ position:"absolute", top:10, right:12, background:"none", border:"none", cursor:"pointer", color:"var(--muted)", fontSize:"1.2rem", lineHeight:1, padding:"2px 5px", borderRadius:4 }}
           title="Dismiss"
         >×</button>
         <div className="progress-header">
