@@ -113,7 +113,7 @@ function CoverCard({
           border: flagged ? "2px solid #8b0000" : "2px solid #ccc",
           borderRadius: "50%", width: 32, height: 32,
           cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center",
-          fontSize: "0.95rem", lineHeight: 1,
+          fontSize: "0.9rem", lineHeight: 1,
           boxShadow: "0 2px 8px rgba(0,0,0,0.25)",
           transition: "all 0.15s",
         }}
@@ -167,34 +167,34 @@ function CoverCard({
 
       {comic.Cover_Artist && (
         <div style={{ borderLeft: "3px solid var(--red)", paddingLeft: 10 }}>
-          <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.58rem", letterSpacing: "2px", color: "var(--muted)", marginBottom: 2 }}>COVER ARTIST</div>
+          <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.62rem", letterSpacing: "2px", color: "var(--muted)", marginBottom: 2 }}>COVER ARTIST</div>
           <div style={{ fontFamily: "'Crimson Pro', serif", fontSize: "1rem", color: "var(--text2)", fontWeight: 600 }}>{comic.Cover_Artist}</div>
         </div>
       )}
 
       {isKey && comic.Key_Reason && comic.Key_Reason !== "nan" && (
         <div style={{ background: "#fff8e0", border: "1px solid #f0d060", borderRadius: 5, padding: "7px 10px" }}>
-          <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.58rem", letterSpacing: "2px", color: "#7a5500", marginBottom: 2 }}>KEY REASON</div>
-          <div style={{ fontFamily: "'Crimson Pro', serif", fontSize: "0.85rem", color: "#5a3800", lineHeight: 1.4 }}>{comic.Key_Reason.substring(0, 120)}</div>
+          <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.62rem", letterSpacing: "2px", color: "#7a5500", marginBottom: 2 }}>KEY REASON</div>
+          <div style={{ fontFamily: "'Crimson Pro', serif", fontSize: "0.82rem", color: "#5a3800", lineHeight: 1.4 }}>{comic.Key_Reason.substring(0, 120)}</div>
         </div>
       )}
 
       {/* Sort pile tag (Cover Box 2 / 3) */}
       {comic.SortPile && comic.SortPile.trim() && (
-        <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.6rem", letterSpacing: "1.5px", color: "var(--muted2)", background: "var(--surface2)", borderRadius: 4, padding: "3px 8px", alignSelf: "flex-start" }}>
+        <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.62rem", letterSpacing: "1.5px", color: "var(--muted2)", background: "var(--surface2)", borderRadius: 4, padding: "3px 8px", alignSelf: "flex-start" }}>
           {comic.SortPile}
         </div>
       )}
 
       {/* Cover notes / general notes */}
       {notesText && notesText !== "nan" && (
-        <div style={{ fontFamily: "'Crimson Pro', serif", fontSize: "0.85rem", color: "var(--muted2)", lineHeight: 1.5, fontStyle: "italic" }}>
+        <div style={{ fontFamily: "'Crimson Pro', serif", fontSize: "0.82rem", color: "var(--muted2)", lineHeight: 1.5, fontStyle: "italic" }}>
           "{notesText.substring(0, 160)}"
         </div>
       )}
 
       {comic.Writer && comic.Writer !== "nan" && (
-        <div style={{ fontSize: "0.72rem", color: "var(--muted)" }}>
+        <div style={{ fontSize: "0.75rem", color: "var(--muted)" }}>
           W: {comic.Writer}
         </div>
       )}
@@ -202,18 +202,18 @@ function CoverCard({
       <div style={{ display: "flex", gap: 12, marginTop: "auto", paddingTop: 8, borderTop: "1px solid var(--border)", alignItems: "center", flexWrap: "wrap" }}>
         {nm > 0 && (
           <div>
-            <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.58rem", letterSpacing: "1.5px", color: "var(--muted)" }}>NM </span>
-            <strong style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.95rem", color: "var(--red)" }}>${comic.Value_NM}</strong>
+            <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.62rem", letterSpacing: "1.5px", color: "var(--muted)" }}>NM </span>
+            <strong style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.9rem", color: "var(--red)" }}>${comic.Value_NM}</strong>
           </div>
         )}
         {bid > 0 && (
           <div style={{ background: "rgba(200,16,46,0.07)", border: "1px solid rgba(200,16,46,0.2)", borderRadius: 4, padding: "3px 10px" }}>
-            <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.58rem", letterSpacing: "1.5px", color: "var(--muted)" }}>WHATNOT START </span>
+            <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.62rem", letterSpacing: "1.5px", color: "var(--muted)" }}>WHATNOT START </span>
             <strong style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.9rem", color: "var(--red)" }}>${comic.Start_Bid}</strong>
           </div>
         )}
         {comic.Box && (
-          <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.58rem", letterSpacing: "1.5px", color: "var(--muted)", marginLeft: "auto" }}>BOX {comic.Box}</span>
+          <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.62rem", letterSpacing: "1.5px", color: "var(--muted)", marginLeft: "auto" }}>BOX {comic.Box}</span>
         )}
       </div>
     </div>
@@ -322,7 +322,7 @@ function FlaggedModal({ flags, onClose, onClear }: { flags: FlaggedCover[]; onCl
         <div style={{ padding: "20px 24px", borderBottom: "1.5px solid var(--border)", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <div>
             <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.62rem", letterSpacing: "3px", color: "var(--red)", marginBottom: 2 }}>COVER AUDIT</div>
-            <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "1.5rem", letterSpacing: "2px", color: "var(--text)" }}>🚩 INCORRECT COVERS ({flags.length})</div>
+            <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "1.4rem", letterSpacing: "2px", color: "var(--text)" }}>🚩 INCORRECT COVERS ({flags.length})</div>
           </div>
           <button onClick={onClose} style={{ background: "none", border: "none", fontSize: "1.2rem", cursor: "pointer", color: "var(--muted)" }}>✕</button>
         </div>
@@ -343,11 +343,11 @@ function FlaggedModal({ flags, onClose, onClear }: { flags: FlaggedCover[]; onCl
                         {f.Cover_Artist} · {f.Publisher} · Box {f.Box} · {f.Year}
                       </div>
                     </div>
-                    <button onClick={() => onClear(f.id)} style={{ background: "none", border: "1px solid var(--border)", borderRadius: 4, padding: "3px 8px", cursor: "pointer", fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.6rem", letterSpacing: "1px", color: "var(--muted)", flexShrink: 0 }}>REMOVE</button>
+                    <button onClick={() => onClear(f.id)} style={{ background: "none", border: "1px solid var(--border)", borderRadius: 4, padding: "3px 8px", cursor: "pointer", fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.62rem", letterSpacing: "1px", color: "var(--muted)", flexShrink: 0 }}>REMOVE</button>
                   </div>
                   {cands.length > 0 && (
                     <div style={{ marginTop: 10 }}>
-                      <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.58rem", letterSpacing: "2px", color: "#1d4ed8", marginBottom: 6 }}>PICK THE CORRECT COVER — CLICK TO CONFIRM AND UNFLAG</div>
+                      <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.62rem", letterSpacing: "2px", color: "#1d4ed8", marginBottom: 6 }}>PICK THE CORRECT COVER — CLICK TO CONFIRM AND UNFLAG</div>
                       <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
                         {cands.map((c, ci) => (
                           <button key={c.id} onClick={() => pickCover(f, c)} disabled={isPicking}
@@ -356,11 +356,11 @@ function FlaggedModal({ flags, onClose, onClear }: { flags: FlaggedCover[]; onCl
                             <img src={c.image_url ?? ""} alt={`${c.volume} #${c.issue_number}`}
                               style={{ display: "block", width: 60, height: 90, objectFit: "cover" }}
                               onError={e => { (e.currentTarget.parentElement as HTMLElement).style.display = "none"; }} />
-                            {ci === 0 && <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, background: "#1d4ed8", fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.5rem", letterSpacing: "1px", color: "#fff", textAlign: "center", padding: "2px 0" }}>BEST</div>}
+                            {ci === 0 && <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, background: "#1d4ed8", fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.62rem", letterSpacing: "1px", color: "#fff", textAlign: "center", padding: "2px 0" }}>BEST</div>}
                           </button>
                         ))}
                         <button onClick={() => onClear(f.id)} title="None correct — unflag anyway"
-                          style={{ width: 60, height: 90, border: "2px dashed var(--border)", borderRadius: 5, cursor: "pointer", background: "var(--surface2)", color: "var(--muted)", fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.52rem", letterSpacing: "1px", flexShrink: 0 }}>
+                          style={{ width: 60, height: 90, border: "2px dashed var(--border)", borderRadius: 5, cursor: "pointer", background: "var(--surface2)", color: "var(--muted)", fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.62rem", letterSpacing: "1px", flexShrink: 0 }}>
                           NONE<br/>RIGHT
                         </button>
                       </div>
@@ -378,7 +378,7 @@ function FlaggedModal({ flags, onClose, onClear }: { flags: FlaggedCover[]; onCl
         {flags.length > 0 && (
           <div style={{ padding: "16px 24px", borderTop: "1.5px solid var(--border)", display: "flex", flexDirection: "column", gap: 10 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
-              <button onClick={refetchAllCovers} disabled={refetchState === "running"} style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.7rem", letterSpacing: "1.5px", padding: "8px 18px", borderRadius: 5, border: "none", cursor: refetchState === "running" ? "default" : "pointer", background: refetchState === "running" ? "#999" : "#1d4ed8", color: "#fff", opacity: refetchState === "running" ? 0.7 : 1 }}>
+              <button onClick={refetchAllCovers} disabled={refetchState === "running"} style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.68rem", letterSpacing: "1.5px", padding: "8px 18px", borderRadius: 5, border: "none", cursor: refetchState === "running" ? "default" : "pointer", background: refetchState === "running" ? "#999" : "#1d4ed8", color: "#fff", opacity: refetchState === "running" ? 0.7 : 1 }}>
                 {refetchState === "running" ? `FETCHING ${refetchProgress}/${flags.length}…` : refetchState === "done" ? "↻ RE-FETCH AGAIN" : "↻ RE-FETCH FROM COMIC VINE"}
               </button>
               {refetchState === "running" && (
@@ -391,8 +391,8 @@ function FlaggedModal({ flags, onClose, onClear }: { flags: FlaggedCover[]; onCl
               )}
             </div>
             <div style={{ display: "flex", gap: 10 }}>
-              <button onClick={downloadCSV} style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.7rem", letterSpacing: "1.5px", padding: "8px 18px", background: "var(--red)", color: "#fff", border: "none", borderRadius: 5, cursor: "pointer" }}>↓ DOWNLOAD CSV</button>
-              <button onClick={() => navigator.clipboard.writeText(csv).catch(() => {})} style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.7rem", letterSpacing: "1.5px", padding: "8px 18px", background: "var(--surface2)", color: "var(--text)", border: "1.5px solid var(--border)", borderRadius: 5, cursor: "pointer" }}>COPY TO CLIPBOARD</button>
+              <button onClick={downloadCSV} style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.68rem", letterSpacing: "1.5px", padding: "8px 18px", background: "var(--red)", color: "#fff", border: "none", borderRadius: 5, cursor: "pointer" }}>↓ DOWNLOAD CSV</button>
+              <button onClick={() => navigator.clipboard.writeText(csv).catch(() => {})} style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.68rem", letterSpacing: "1.5px", padding: "8px 18px", background: "var(--surface2)", color: "var(--text)", border: "1.5px solid var(--border)", borderRadius: 5, cursor: "pointer" }}>COPY TO CLIPBOARD</button>
             </div>
           </div>
         )}
@@ -519,7 +519,7 @@ export default function CoverCatalog() {
 
       {/* Header */}
       <div style={{ marginBottom: 20 }}>
-        <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.7rem", letterSpacing: "4px", color: "var(--red)", marginBottom: 4 }}>BLACKREADBROWN COLLECTION</div>
+        <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.68rem", letterSpacing: "4px", color: "var(--red)", marginBottom: 4 }}>BLACKREADBROWN COLLECTION</div>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: 12 }}>
           <h1 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "clamp(36px, 6vw, 64px)", letterSpacing: "4px", color: "var(--text)", lineHeight: 1, marginBottom: 0 }}>COVER ART CATALOG</h1>
           {flagCount > 0 && (
@@ -539,7 +539,7 @@ export default function CoverCatalog() {
           return (
             <button key={tab.key} onClick={() => switchTab(tab.key)} style={{
               fontFamily: "'Bebas Neue', sans-serif",
-              fontSize: "0.72rem", letterSpacing: "1.5px",
+              fontSize: "0.75rem", letterSpacing: "1.5px",
               padding: "10px 18px",
               border: "none", borderBottom: isActive ? "3px solid var(--red)" : "3px solid transparent",
               background: "none",
@@ -565,8 +565,8 @@ export default function CoverCatalog() {
           [tabStats.artists.toString(),     "Artists"],
         ].map(([n, l]) => (
           <div key={l} style={{ textAlign: "center" }}>
-            <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "1.5rem", color: "var(--red)", letterSpacing: "1px" }}>{n}</div>
-            <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.58rem", letterSpacing: "2px", color: "var(--muted)" }}>{l}</div>
+            <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "1.4rem", color: "var(--red)", letterSpacing: "1px" }}>{n}</div>
+            <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.62rem", letterSpacing: "2px", color: "var(--muted)" }}>{l}</div>
           </div>
         ))}
       </div>
@@ -574,7 +574,7 @@ export default function CoverCatalog() {
       {/* Filters */}
       <div style={{ background: "var(--surface)", border: "1.5px solid var(--border)", borderRadius: 8, padding: "14px 16px", marginBottom: 20, display: "flex", flexDirection: "column", gap: 10 }}>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 6, alignItems: "center" }}>
-          <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.6rem", letterSpacing: "2px", color: "var(--muted)", marginRight: 4 }}>PUBLISHER</span>
+          <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.62rem", letterSpacing: "2px", color: "var(--muted)", marginRight: 4 }}>PUBLISHER</span>
           {PUB_PILLS.map(p => pill(p, pub === p, () => { setPub(p); setPage(1); }))}
         </div>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 10, alignItems: "center" }}>
@@ -592,7 +592,7 @@ export default function CoverCatalog() {
             onFocus={e => (e.target.style.borderColor = "var(--red)")}
             onBlur={e => (e.target.style.borderColor = "var(--border)")}
           />
-          <select value={sort} onChange={e => { setSort(e.target.value); setPage(1); }} style={{ padding: "6px 10px", border: "1.5px solid var(--border)", borderRadius: 6, fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.7rem", letterSpacing: "1px", background: "var(--bg)", color: "var(--text)", cursor: "pointer" }}>
+          <select value={sort} onChange={e => { setSort(e.target.value); setPage(1); }} style={{ padding: "6px 10px", border: "1.5px solid var(--border)", borderRadius: 6, fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.68rem", letterSpacing: "1px", background: "var(--bg)", color: "var(--text)", cursor: "pointer" }}>
             <option value="title">Sort: Title A–Z</option>
             <option value="artist">Sort: Artist A–Z</option>
             <option value="value">Sort: Highest Value</option>
@@ -606,7 +606,7 @@ export default function CoverCatalog() {
       </div>
 
       {/* Result count */}
-      <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.7rem", letterSpacing: "2px", color: "var(--muted)", marginBottom: 16 }}>
+      <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.68rem", letterSpacing: "2px", color: "var(--muted)", marginBottom: 16 }}>
         {total.toLocaleString()} COVER{total !== 1 ? "S" : ""} · PAGE {page} OF {pages || 1}
       </div>
 
@@ -633,7 +633,7 @@ export default function CoverCatalog() {
         <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 8, marginTop: 32, flexWrap: "wrap" }}>
           <button onClick={() => { setPage(p => Math.max(1, p - 1)); window.scrollTo({ top: 0, behavior: "smooth" }); }}
             disabled={page === 1}
-            style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.7rem", letterSpacing: "1.5px", padding: "6px 14px", border: "1.5px solid var(--border)", borderRadius: 5, background: "var(--surface)", color: page === 1 ? "var(--muted)" : "var(--text)", cursor: page === 1 ? "default" : "pointer" }}>
+            style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.68rem", letterSpacing: "1.5px", padding: "6px 14px", border: "1.5px solid var(--border)", borderRadius: 5, background: "var(--surface)", color: page === 1 ? "var(--muted)" : "var(--text)", cursor: page === 1 ? "default" : "pointer" }}>
             ← PREV
           </button>
           {Array.from({ length: Math.min(pages, 9) }, (_, i) => {
@@ -641,14 +641,14 @@ export default function CoverCatalog() {
             if (p < 1 || p > pages) return null;
             return (
               <button key={p} onClick={() => { setPage(p); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-                style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.7rem", letterSpacing: "1px", padding: "6px 11px", border: `1.5px solid ${p === page ? "var(--red)" : "var(--border)"}`, borderRadius: 5, background: p === page ? "var(--red)" : "var(--surface)", color: p === page ? "#fff" : "var(--text)", cursor: "pointer" }}>
+                style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.68rem", letterSpacing: "1px", padding: "6px 11px", border: `1.5px solid ${p === page ? "var(--red)" : "var(--border)"}`, borderRadius: 5, background: p === page ? "var(--red)" : "var(--surface)", color: p === page ? "#fff" : "var(--text)", cursor: "pointer" }}>
                 {p}
               </button>
             );
           })}
           <button onClick={() => { setPage(p => Math.min(pages, p + 1)); window.scrollTo({ top: 0, behavior: "smooth" }); }}
             disabled={page === pages}
-            style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.7rem", letterSpacing: "1.5px", padding: "6px 14px", border: "1.5px solid var(--border)", borderRadius: 5, background: "var(--surface)", color: page === pages ? "var(--muted)" : "var(--text)", cursor: page === pages ? "default" : "pointer" }}>
+            style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.68rem", letterSpacing: "1.5px", padding: "6px 14px", border: "1.5px solid var(--border)", borderRadius: 5, background: "var(--surface)", color: page === pages ? "var(--muted)" : "var(--text)", cursor: page === pages ? "default" : "pointer" }}>
             NEXT →
           </button>
         </div>

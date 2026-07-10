@@ -36,7 +36,7 @@ export default function EbayListingGuide() {
   const toggle = (id: string) => setOpenSection(s => s === id ? null : id);
 
   return (
-    <div style={{ maxWidth: 860, margin: "0 auto", padding: "24px 16px", fontFamily: "var(--font-body, system-ui)" }}>
+    <div style={{ maxWidth: 860, margin: "0 auto", padding: "24px 16px", fontFamily: "'Crimson Pro', Georgia, serif" }}>
       <div style={{ marginBottom: 24 }}>
         <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--muted, #888)", marginBottom: 4 }}>Organisation</div>
         <h1 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 4px" }}>eBay Phase 1 — Listing Guide</h1>

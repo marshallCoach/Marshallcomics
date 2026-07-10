@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_0407_2300_VALIDATED.xlsx  |  Generated: 2026-07-08
+// Source: comics_inventory_0408_0030_VALIDATED.xlsx  |  Generated: 2026-07-10
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -196511,15 +196511,15 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Year: ``, Arc: ``, Key: `YES`,
     Key_Reason: `Days of Future Past two-parter — one of the most significant X-Men stories ever published, basis for the 2014 film`, First_App: ``,
     Writer: ``, Artist: ``,
-    Signed: ``, Signed_By: ``,
-    Personal: ``, Condition: ``,
+    Signed: `NO`, Signed_By: ``,
+    Personal: ``, Condition: `NM (raw) — CGC grade to come`,
     CGC_Worth: ``, Value_NM: ``, Value_VF: ``,
     Category: ``, Era: ``, Universe: ``,
     Seller_Notes: ``, Story_Pitch: ``,
     Content: ``, Platform: ``,
     Sales_Data: ``, Terrificon: ``,
     Cover_Artist: ``, Date_Added: `2026-07-06`,
-    Imprint: ``, Box: ``,
+    Imprint: ``, Box: `AT MAGIC PRESSING → CGC`,
     Crossover: ``, Start_Bid: ``,
     Volume: ``, Entry: `13172`,
   },
@@ -196529,15 +196529,15 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Year: ``, Arc: ``, Key: `YES`,
     Key_Reason: `Days of Future Past two-parter — one of the most significant X-Men stories ever published, basis for the 2014 film`, First_App: ``,
     Writer: ``, Artist: ``,
-    Signed: ``, Signed_By: ``,
-    Personal: ``, Condition: ``,
+    Signed: `NO`, Signed_By: ``,
+    Personal: ``, Condition: `NM (raw) — CGC grade to come`,
     CGC_Worth: ``, Value_NM: ``, Value_VF: ``,
     Category: ``, Era: ``, Universe: ``,
     Seller_Notes: ``, Story_Pitch: ``,
     Content: ``, Platform: ``,
     Sales_Data: ``, Terrificon: ``,
     Cover_Artist: ``, Date_Added: `2026-07-06`,
-    Imprint: ``, Box: ``,
+    Imprint: ``, Box: `AT MAGIC PRESSING → CGC`,
     Crossover: ``, Start_Bid: ``,
     Volume: ``, Entry: `13173`,
   }
@@ -196940,10 +196940,10 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Location: ``, Notes: ``, DateAdded: ``,
   },
   {
-    Num: `BOX AT MAGIC PRESSING → CGC`, Comics: 1, Keys: 0,
+    Num: `BOX AT MAGIC PRESSING → CGC`, Comics: 3, Keys: 2,
     Signed: 0, YearRange: `2011-2011`,
-    Label: ``, FirstBook: `New Avengers Annual 2`, LastBook: `New Avengers Annual 2`,
-    Location: ``, Notes: ``, DateAdded: `May 18, 2026`,
+    Label: ``, FirstBook: `New Avengers Annual 2`, LastBook: `Uncanny X-Men 142`,
+    Location: ``, Notes: ``, DateAdded: `2026-07-06`,
   },
   {
     Num: `BOX AT CGC — Roy Thomas SS`, Comics: 3, Keys: 3,

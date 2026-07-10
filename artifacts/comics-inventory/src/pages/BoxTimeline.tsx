@@ -84,7 +84,7 @@ export default function BoxTimeline() {
               &nbsp;·&nbsp;<span style={{ color: "var(--muted)" }}>{groups.length} entry sessions</span>
             </div>
           </div>
-          <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "2rem", color: "var(--red)", letterSpacing: "1px", lineHeight: 1 }}>
+          <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.8rem", color: "var(--red)", letterSpacing: "1px", lineHeight: 1 }}>
             {boxPct}%
           </div>
         </div>
@@ -94,7 +94,7 @@ export default function BoxTimeline() {
       </div>
 
       {/* Timeline label */}
-      <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.8rem", letterSpacing: "2px", color: "var(--red)", marginBottom: 16 }}>
+      <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.82rem", letterSpacing: "2px", color: "var(--red)", marginBottom: 16 }}>
         COLLECTION TIMELINE — BOXES BY DATE ADDED
       </div>
 
@@ -127,7 +127,7 @@ export default function BoxTimeline() {
                 }}
               >
                 <span style={{
-                  fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.85rem", letterSpacing: "2px",
+                  fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.82rem", letterSpacing: "2px",
                   color: isOriginal ? "var(--brown)" : "var(--red)",
                 }}>
                   {dateLabel.toUpperCase()}
@@ -135,7 +135,7 @@ export default function BoxTimeline() {
                 <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.68rem", letterSpacing: "1px", color: "var(--muted)" }}>
                   {groupBoxes.length} {groupBoxes.length === 1 ? "box" : "boxes"}
                 </span>
-                <span style={{ fontSize: "0.7rem", color: "var(--muted)", marginLeft: "auto" }}>
+                <span style={{ fontSize: "0.68rem", color: "var(--muted)", marginLeft: "auto" }}>
                   {isOpen ? "▲" : "▼"}
                 </span>
               </button>
@@ -161,9 +161,9 @@ export default function BoxTimeline() {
                             {shortLabel}
                           </span>
                           <div style={{ display: "flex", gap: 10, flexShrink: 0 }}>
-                            <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.85rem",
+                            <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.82rem",
                               color: "var(--text)", letterSpacing: "0.5px" }}>
-                              {box.comicCount} <span style={{ color: "var(--muted)", fontSize: "0.65rem", letterSpacing: "1px" }}>COMICS</span>
+                              {box.comicCount} <span style={{ color: "var(--muted)", fontSize: "0.62rem", letterSpacing: "1px" }}>COMICS</span>
                             </span>
                             {box.keys > 0 && (
                               <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.75rem",
@@ -208,7 +208,7 @@ export default function BoxTimeline() {
           <div style={{ position: "absolute", left: -22, top: 3,
             width: 14, height: 14, borderRadius: "50%",
             background: "var(--border)", border: "2px dashed var(--muted)" }} />
-          <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.85rem", letterSpacing: "2px",
+          <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.82rem", letterSpacing: "2px",
             color: "var(--muted)", marginBottom: 8 }}>
             TARGET: {TARGET_BOXES} BOXES
           </div>

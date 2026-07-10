@@ -248,15 +248,15 @@ export default function CapFalconChecklist() {
 
       {/* Header */}
       <div style={{ marginBottom: 24 }}>
-        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem",
+        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem",
           letterSpacing:"3px", color:"var(--muted)", marginBottom:4 }}>
           COLLECTOR'S RUN CHECKLIST
         </div>
-        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"2.2rem",
+        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"2.4rem",
           letterSpacing:"4px", color:"var(--red)", lineHeight:1, marginBottom:6 }}>
           CAPTAIN AMERICA &amp; THE FALCON
         </div>
-        <div style={{ fontSize:"0.95rem", color:"var(--muted2)", fontFamily:"'Crimson Pro',serif",
+        <div style={{ fontSize:"0.9rem", color:"var(--muted2)", fontFamily:"'Crimson Pro',serif",
           lineHeight:1.6, maxWidth:620 }}>
           Full Cap Vol.1 run (#100–#255) plus key issues from 6 other series — 1964 to 2022.
           Owned issues are highlighted in the collection. Every gap is shown.
@@ -268,27 +268,27 @@ export default function CapFalconChecklist() {
         borderRadius:10, padding:"16px 20px", marginBottom:20,
         display:"flex", gap:24, flexWrap:"wrap", alignItems:"center" }}>
         <div>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"2.2rem",
+          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"2.4rem",
             color:"var(--red)", lineHeight:1 }}>{ownedCount}</div>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem",
+          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
             letterSpacing:"2px", color:"var(--muted)", marginTop:2 }}>OWNED</div>
         </div>
         <div>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"2.2rem",
+          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"2.4rem",
             color:"var(--muted2)", lineHeight:1 }}>{missingCount}</div>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem",
+          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
             letterSpacing:"2px", color:"var(--muted)", marginTop:2 }}>MISSING</div>
         </div>
         <div>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"2.2rem",
+          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"2.4rem",
             color:"#8a6000", lineHeight:1 }}>{ownedKeys}/{keyItems.length}</div>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem",
+          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
             letterSpacing:"2px", color:"var(--muted)", marginTop:2 }}>KEYS OWNED</div>
         </div>
         <div>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"2.2rem",
+          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"2.4rem",
             color:"#7c3aed", lineHeight:1 }}>{ownedMajors}/{majorKeys.length}</div>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem",
+          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
             letterSpacing:"2px", color:"var(--muted)", marginTop:2 }}>MAJOR KEYS</div>
         </div>
         <div style={{ flex:1, minWidth:160 }}>
@@ -302,7 +302,7 @@ export default function CapFalconChecklist() {
             <div style={{ background:"var(--red)", height:"100%", borderRadius:99,
               width:`${pct}%`, transition:"width 0.6s ease" }}/>
           </div>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.55rem",
+          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
             letterSpacing:"1.5px", color:"var(--muted)", marginTop:4 }}>
             {ownedCount} OF {enriched.length} ISSUES
           </div>
@@ -333,11 +333,11 @@ export default function CapFalconChecklist() {
                   letterSpacing:"1px", color:"#8a6000", lineHeight:1 }}>
                   {item.issue}
                 </span>
-                <span style={{ fontSize:"0.72rem", color:"var(--muted2)", marginTop:2,
+                <span style={{ fontSize:"0.75rem", color:"var(--muted2)", marginTop:2,
                   fontFamily:"'Crimson Pro',serif" }}>
                   {item.series.replace("Captain America","CA").replace("(Vol.","v")}
                 </span>
-                <span style={{ fontSize:"0.7rem", color:"#8a6000", marginTop:3,
+                <span style={{ fontSize:"0.68rem", color:"#8a6000", marginTop:3,
                   fontFamily:"'Crimson Pro',serif", fontStyle:"italic", lineHeight:1.3 }}>
                   {item.significance.split(";")[0].replace(" MAJOR KEY","").replace(/[🦅❄️💀🌟🔫]/gu,"")}
                 </span>
@@ -361,7 +361,7 @@ export default function CapFalconChecklist() {
               background: filter === f ? "var(--red)" : "none",
               color: filter === f ? "#fff" : "var(--muted2)",
               border:"none", borderRadius:5, padding:"5px 12px", cursor:"pointer",
-              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.7rem", letterSpacing:"1.5px",
+              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1.5px",
               transition:"all 0.12s",
             }}>
               {f === "all" ? `ALL (${enriched.length})`
@@ -379,7 +379,7 @@ export default function CapFalconChecklist() {
             color: seriesFilter === "all" ? "#fff" : "var(--muted2)",
             border:`1.5px solid ${seriesFilter === "all" ? "var(--brown-light)" : "var(--border)"}`,
             borderRadius:20, padding:"4px 12px", cursor:"pointer",
-            fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1.5px",
+            fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px",
             transition:"all 0.12s",
           }}>ALL SERIES</button>
 
@@ -426,7 +426,7 @@ export default function CapFalconChecklist() {
             <div style={{ display:"flex", alignItems:"center", gap:12, marginBottom:10,
               borderBottom:`2px solid ${col}`, paddingBottom:8 }}>
               <div style={{ flex:1 }}>
-                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.1rem",
+                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.2rem",
                   letterSpacing:"2.5px", color:col, lineHeight:1 }}>
                   {seriesName}
                 </div>
@@ -444,7 +444,7 @@ export default function CapFalconChecklist() {
                   <div style={{ background:col, height:"100%", width:`${sp}%`,
                     borderRadius:99, transition:"width 0.5s ease" }}/>
                 </div>
-                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem",
+                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
                   letterSpacing:"1.5px", color:"var(--muted)", marginTop:3, textAlign:"right" }}>
                   {sp}%
                 </div>
@@ -488,7 +488,7 @@ export default function CapFalconChecklist() {
                         display:"flex", alignItems:"center", justifyContent:"center",
                         background: owned ? "#fce4ec" : "var(--surface2)",
                         border: `2px solid ${owned ? "#e91e63" : "var(--border)"}`,
-                        fontSize:"0.7rem",
+                        fontSize:"0.68rem",
                         transition:"all 0.15s",
                       }}>
                         {owned ? "✓" : ""}
@@ -502,7 +502,7 @@ export default function CapFalconChecklist() {
                       </div>
 
                       {/* Year */}
-                      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem",
+                      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
                         letterSpacing:"1px", color:"var(--muted)", minWidth:36, flexShrink:0 }}>
                         {item.year}
                       </div>
@@ -510,7 +510,7 @@ export default function CapFalconChecklist() {
                       {/* Significance */}
                       <div style={{ flex:1, minWidth:0 }}>
                         <div style={{
-                          fontSize:"0.85rem",
+                          fontSize:"0.82rem",
                           color: major ? "#8a6000" : key ? "var(--text2)" : "var(--muted2)",
                           fontWeight: major ? 700 : key ? 600 : 400,
                           fontFamily: major || key ? "'Crimson Pro',serif" : "inherit",
@@ -525,19 +525,19 @@ export default function CapFalconChecklist() {
                         {major && (
                           <span style={{ background:"#d4a800", color:"#fff", borderRadius:4,
                             padding:"2px 7px", fontFamily:"'Bebas Neue',sans-serif",
-                            fontSize:"0.58rem", letterSpacing:"1px" }}>MAJOR</span>
+                            fontSize:"0.62rem", letterSpacing:"1px" }}>MAJOR</span>
                         )}
                         {key && !major && (
-                          <span className="badge bkey" style={{ fontSize:"0.58rem" }}>KEY</span>
+                          <span className="badge bkey" style={{ fontSize:"0.62rem" }}>KEY</span>
                         )}
                         {owned ? (
                           <span style={{ background:"#fce4ec", color:"#880e4f", border:"1px solid #f48fb1",
                             borderRadius:4, padding:"2px 7px", fontFamily:"'Bebas Neue',sans-serif",
-                            fontSize:"0.58rem", letterSpacing:"1px" }}>OWNED</span>
+                            fontSize:"0.62rem", letterSpacing:"1px" }}>OWNED</span>
                         ) : (
                           <span style={{ background:"var(--surface2)", color:"var(--muted)",
                             border:"1px solid var(--border)", borderRadius:4, padding:"2px 7px",
-                            fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem",
+                            fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
                             letterSpacing:"1px" }}>NEED</span>
                         )}
                         <span style={{ color:"var(--muted)", fontSize:"0.75rem", marginLeft:2 }}>
@@ -553,20 +553,20 @@ export default function CapFalconChecklist() {
                         background: major ? "#fefdf5" : "var(--surface)" }}>
                         <div style={{ display:"flex", gap:20, flexWrap:"wrap", marginBottom:10 }}>
                           <div>
-                            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem",
+                            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
                               letterSpacing:"2px", color:"var(--muted)", marginBottom:3 }}>CREDITS</div>
-                            <div style={{ fontSize:"0.85rem", color:"var(--text2)",
+                            <div style={{ fontSize:"0.82rem", color:"var(--text2)",
                               fontFamily:"'Crimson Pro',serif" }}>{item.credits}</div>
                           </div>
                           <div>
-                            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem",
+                            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
                               letterSpacing:"2px", color:"var(--muted)", marginBottom:3 }}>EST. VALUE RAW</div>
-                            <div style={{ fontSize:"0.85rem", color:"#16a34a", fontWeight:700 }}>{item.value}</div>
+                            <div style={{ fontSize:"0.82rem", color:"#16a34a", fontWeight:700 }}>{item.value}</div>
                           </div>
                           <div>
-                            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem",
+                            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
                               letterSpacing:"2px", color:"var(--muted)", marginBottom:3 }}>STATUS</div>
-                            <div style={{ fontSize:"0.85rem", color: owned ? "#880e4f" : "var(--muted2)",
+                            <div style={{ fontSize:"0.82rem", color: owned ? "#880e4f" : "var(--muted2)",
                               fontWeight:600 }}>{owned ? "✓ In Collection" : "Not yet owned"}</div>
                           </div>
                         </div>

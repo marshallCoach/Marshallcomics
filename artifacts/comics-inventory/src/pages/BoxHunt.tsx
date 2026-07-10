@@ -85,7 +85,7 @@ const QUICK_PILLS = ["Steranko","Falcon","X-Men","Miller","Punisher","Brubaker",
 // ── Sub-components ────────────────────────────────────────────────────────────
 function BoxBadge({ box }: { box: string }) {
   return (
-    <span style={{ fontSize:"0.6rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px",
+    <span style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px",
       background:"#7a5c3a18", border:"1.5px solid #7a5c3a", color:"#7a5c3a",
       borderRadius:3, padding:"1px 7px", whiteSpace:"nowrap" }}>Box {box}</span>
   );
@@ -107,13 +107,13 @@ function CoverThumb({ c }: { c: Comic }) {
         borderRadius:4, overflow:"hidden", position:"relative", textDecoration:"none" }}>
       <div style={{ position:"absolute", inset:0, display:"flex", flexDirection:"column",
         alignItems:"center", justifyContent:"center", padding:4, gap:2 }}>
-        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.1rem", color, lineHeight:1, opacity:0.55 }}>{abbr}</div>
-        <div style={{ fontSize:"0.44rem", color:"var(--text)", textAlign:"center", lineHeight:1.25,
+        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.2rem", color, lineHeight:1, opacity:0.55 }}>{abbr}</div>
+        <div style={{ fontSize:"0.62rem", color:"var(--text)", textAlign:"center", lineHeight:1.25,
           fontWeight:600, wordBreak:"break-word", maxWidth:"100%" }}>{c.Title.slice(0,22)}</div>
-        {(c.Year||"").trim() && <div style={{ fontSize:"0.4rem", color:"var(--muted2)" }}>{c.Year}</div>}
+        {(c.Year||"").trim() && <div style={{ fontSize:"0.62rem", color:"var(--muted2)" }}>{c.Year}</div>}
       </div>
       {isKey && <div style={{ position:"absolute", bottom:0, left:0, right:0, background:"#d4a800",
-        color:"#fff", fontSize:"0.42rem", fontFamily:"'Bebas Neue',sans-serif",
+        color:"#fff", fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif",
         letterSpacing:"1px", textAlign:"center", padding:"1px 0" }}>KEY</div>}
     </a>
   );
@@ -130,41 +130,41 @@ function HuntCard({ comic: c, onTitleClick }: { comic: Comic; onTitleClick?: (t:
           <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", marginBottom:4, gap:4 }}>
             <BoxBadge box={c.Box} />
             <div style={{ display:"flex", gap:3, flexWrap:"wrap", justifyContent:"flex-end" }}>
-              {isKey    && <span className="badge bkey"  style={{fontSize:"0.57rem"}}>KEY</span>}
-              {isSigned && <span className="badge bgold" style={{fontSize:"0.57rem"}}>SGD</span>}
-              {c.Platform && <span className={`badge ${platClass(c.Platform)}`} style={{fontSize:"0.57rem"}}>{c.Platform}</span>}
+              {isKey    && <span className="badge bkey"  style={{fontSize:"0.62rem"}}>KEY</span>}
+              {isSigned && <span className="badge bgold" style={{fontSize:"0.62rem"}}>SGD</span>}
+              {c.Platform && <span className={`badge ${platClass(c.Platform)}`} style={{fontSize:"0.62rem"}}>{c.Platform}</span>}
             </div>
           </div>
           <button
             onClick={e => { e.stopPropagation(); onTitleClick?.(c.Title); }}
             style={{ background:"none", border:"none", padding:0, cursor:"pointer",
-              fontWeight:600, fontSize:"0.88rem", color:"var(--brown-light)", lineHeight:1.3,
+              fontWeight:600, fontSize:"0.9rem", color:"var(--brown-light)", lineHeight:1.3,
               textAlign:"left", display:"block", width:"100%" }}
             title="Filter to this title"
           >{c.Title}</button>
-          <div style={{ fontSize:"0.78rem", color:"var(--muted2)", marginTop:2 }}>
+          <div style={{ fontSize:"0.75rem", color:"var(--muted2)", marginTop:2 }}>
             {c.Issue}{extractVol(c.Title) ? ` · ${extractVol(c.Title)}` : ""}{c.Year ? ` · ${c.Year}` : ""}
           </div>
-          {c.Publisher && <div style={{ fontSize:"0.72rem", color:"var(--muted)" }}>{c.Publisher}</div>}
+          {c.Publisher && <div style={{ fontSize:"0.75rem", color:"var(--muted)" }}>{c.Publisher}</div>}
         </div>
       </div>
       {(c.Writer || c.Artist) && (
-        <div style={{ fontSize:"0.72rem", color:"var(--muted2)", lineHeight:1.4, marginBottom:4 }}>
+        <div style={{ fontSize:"0.75rem", color:"var(--muted2)", lineHeight:1.4, marginBottom:4 }}>
           {c.Writer && <div><span style={{color:"var(--muted)"}}>W:</span> {c.Writer}</div>}
           {c.Artist && c.Artist !== c.Writer && <div><span style={{color:"var(--muted)"}}>A:</span> {c.Artist}</div>}
         </div>
       )}
       {isKey && c.Key_Reason && (
-        <div style={{ fontSize:"0.78rem", color:"#8a6000", marginTop:4, lineHeight:1.4,
+        <div style={{ fontSize:"0.75rem", color:"#8a6000", marginTop:4, lineHeight:1.4,
           background:"#fff8e0", borderRadius:3, padding:"3px 8px" }}>
           {c.Key_Reason.substring(0, 110)}
         </div>
       )}
       {isSigned && c.Signed_By && (
-        <div style={{ fontSize:"0.7rem", color:"var(--brown)", marginTop:4 }}>✍ {c.Signed_By}</div>
+        <div style={{ fontSize:"0.68rem", color:"var(--brown)", marginTop:4 }}>✍ {c.Signed_By}</div>
       )}
       {(c.Value_NM || c.Value_VF) && (
-        <div style={{ display:"flex", gap:10, marginTop:6, fontSize:"0.72rem" }}>
+        <div style={{ display:"flex", gap:10, marginTop:6, fontSize:"0.75rem" }}>
           {c.Value_NM && <span style={{color:"var(--green-text)"}}>NM <strong>${c.Value_NM}</strong></span>}
           {c.Value_VF && <span style={{color:"var(--muted)"}}>VF ${c.Value_VF}</span>}
         </div>
@@ -266,7 +266,7 @@ export default function BoxHunt() {
     { key:"vol",    label:"Vol",       defaultWidth:58,  sort:(a,b)=>extractVol(a.Title).localeCompare(extractVol(b.Title)), cell:r=><span className="lt-sub">{extractVol(r.Title)||"—"}</span> },
     { key:"pub",    label:"Publisher", defaultWidth:100, sort:(a,b)=>a.Publisher.localeCompare(b.Publisher), cell:r=><span className="lt-sub">{r.Publisher}</span> },
     { key:"writer", label:"Writer",    defaultWidth:130, sort:(a,b)=>a.Writer.localeCompare(b.Writer),     cell:r=><span className="lt-sub">{r.Writer||"—"}</span> },
-    { key:"key",    label:"Key",       defaultWidth:55,  sort:(a,b)=>a.Key.localeCompare(b.Key),           cell:r=>r.Key?.toUpperCase()==="YES"?<span className="badge bkey" style={{fontSize:"0.6rem"}}>KEY</span>:null },
+    { key:"key",    label:"Key",       defaultWidth:55,  sort:(a,b)=>a.Key.localeCompare(b.Key),           cell:r=>r.Key?.toUpperCase()==="YES"?<span className="badge bkey" style={{fontSize:"0.62rem"}}>KEY</span>:null },
     { key:"nm",     label:"NM Value",  defaultWidth:90,  sort:(a,b)=>parseVal(a.Value_NM)-parseVal(b.Value_NM), cell:r=><span className="lt-val">{r.Value_NM && r.Value_NM!=="nan" ? `$${r.Value_NM}` : "—"}</span> },
     { key:"vf",     label:"VF Value",  defaultWidth:90,  sort:(a,b)=>parseVal(a.Value_VF)-parseVal(b.Value_VF), cell:r=>{ const v=r.Value_VF&&r.Value_VF!=="nan"?r.Value_VF.match(/(\d+(?:\.\d+)?)/)?.[1]:""; return <span className="lt-vf">{v?`$${v}`:"—"}</span>; }},
     { key:"year",   label:"Year",      defaultWidth:65,  sort:(a,b)=>parseVal(a.Year)-parseVal(b.Year),   cell:r=><span className="lt-sub">{r.Year}</span> },
@@ -321,7 +321,7 @@ export default function BoxHunt() {
 
       {/* Page header */}
       <div style={{ marginBottom:18 }}>
-        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"2rem",
+        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.8rem",
           letterSpacing:"4px", color:"var(--red)", lineHeight:1 }}>BOX HUNT</div>
         <div style={{ fontSize:"0.9rem", color:"var(--muted2)", marginTop:4,
           fontFamily:"'Crimson Pro',serif" }}>
@@ -393,7 +393,7 @@ export default function BoxHunt() {
       {/* ── Exact title filter badge ── */}
       {exactTitle && (
         <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:10 }}>
-          <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"1px",
+          <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"1px",
             background:"#fff0f0", color:"var(--red)", border:"1.5px solid #f5c8c8",
             borderRadius:4, padding:"3px 10px" }}>
             TITLE: {exactTitle}
@@ -401,7 +401,7 @@ export default function BoxHunt() {
           <button onClick={() => setExactTitle("")} style={{
             background:"none", border:"1.5px solid var(--border)", borderRadius:4,
             padding:"2px 8px", cursor:"pointer", color:"var(--muted)",
-            fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1px" }}>
+            fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px" }}>
             ✕ CLEAR
           </button>
         </div>
@@ -415,14 +415,14 @@ export default function BoxHunt() {
             fontSize:"0.82rem", color:"var(--muted2)" }}>
             {results.length === 0
               ? "No results — try a different search"
-              : <><span style={{color:"var(--red)",fontSize:"1.05rem"}}>{results.length.toLocaleString()}</span> {results.length===1?"book":"books"} across <span style={{color:"var(--red)"}}>{Object.keys(matchesByBox).length}</span> {Object.keys(matchesByBox).length===1?"box":"boxes"} · {results.filter(c=>(c.Key||"").toUpperCase()==="YES").length} keys · {ALL.length.toLocaleString()} total in collection</>
+              : <><span style={{color:"var(--red)",fontSize:"1rem"}}>{results.length.toLocaleString()}</span> {results.length===1?"book":"books"} across <span style={{color:"var(--red)"}}>{Object.keys(matchesByBox).length}</span> {Object.keys(matchesByBox).length===1?"box":"boxes"} · {results.filter(c=>(c.Key||"").toUpperCase()==="YES").length} keys · {ALL.length.toLocaleString()} total in collection</>
             }
           </div>
           {results.length > 0 && (
             <div style={{ display:"flex", gap:6, flexWrap:"wrap" }}>
               {([["list","≡ List"],["card","⊞ Cards"],["hunt","✓ Hunt Mode"]] as const).map(([v, label]) => (
                 <button key={v} onClick={() => setView(v)} style={{
-                  fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"1.5px",
+                  fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"1.5px",
                   padding:"5px 14px", border:`1.5px solid ${view===v?"var(--red)":"var(--border)"}`,
                   background:view===v?"var(--red)":"var(--surface)",
                   color:view===v?"#fff":"var(--muted2)",
@@ -467,7 +467,7 @@ export default function BoxHunt() {
                   </div>
                   <div className="box-tile-num">{b.Num.replace("BOX ","Box ")}</div>
                   {isHit && (
-                    <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.52rem",
+                    <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
                       letterSpacing:"1px", color:"var(--red)", marginTop:1 }}>
                       {hitCount === 1 ? "1 HIT" : `${hitCount} HITS`}
                     </div>
@@ -486,12 +486,12 @@ export default function BoxHunt() {
             borderRadius:8, padding:"14px 18px", marginBottom:14,
             display:"flex", alignItems:"flex-start", gap:16, flexWrap:"wrap" }}>
             <div style={{ flex:1 }}>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.5rem",
+              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.4rem",
                 color:"var(--red)", letterSpacing:"2px", lineHeight:1 }}>{selectedBoxData.Num}</div>
-              <div style={{ fontSize:"0.92rem", fontWeight:700, color:"var(--brown-light)", marginTop:4 }}>
+              <div style={{ fontSize:"0.9rem", fontWeight:700, color:"var(--brown-light)", marginTop:4 }}>
                 {selectedBoxData.Label.replace(/^Box \d+ — /i,"")}
               </div>
-              <div style={{ fontSize:"0.78rem", color:"var(--muted)", marginTop:4 }}>
+              <div style={{ fontSize:"0.75rem", color:"var(--muted)", marginTop:4 }}>
                 {selectedBoxData.YearRange}
               </div>
             </div>
@@ -503,14 +503,14 @@ export default function BoxHunt() {
                 <div key={s.lbl} style={{ textAlign:"center" }}>
                   <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.8rem",
                     color:s.red?"var(--red)":"var(--muted2)", lineHeight:1 }}>{s.val}</div>
-                  <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.55rem",
+                  <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
                     letterSpacing:"1.5px", color:"var(--muted)", marginTop:2 }}>{s.lbl}</div>
                 </div>
               ))}
               <button onClick={() => setSelectedBox(null)} style={{
                 background:"none", border:"1.5px solid var(--border)", borderRadius:5,
                 padding:"6px 14px", cursor:"pointer", color:"var(--muted)",
-                fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.7rem", letterSpacing:"1px" }}>
+                fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1px" }}>
                 CLOSE ✕
               </button>
             </div>
@@ -518,7 +518,7 @@ export default function BoxHunt() {
 
           {/* Spine visualization */}
           <div style={{ marginBottom:14 }}>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem",
+            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
               letterSpacing:"2px", color:"var(--muted)", marginBottom:8 }}>
               SPINE VIEW — RED &amp; WIDER = YOUR MATCH · HOVER FOR TITLE
             </div>
@@ -575,7 +575,7 @@ export default function BoxHunt() {
           </div>
 
           {/* Match list */}
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem",
+          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
             letterSpacing:"2px", color:"var(--muted)", marginBottom:10 }}>
             {selectedBoxMatches.length} MATCH{selectedBoxMatches.length !== 1 ? "ES" : ""} IN {selectedBoxData.Num}
           </div>
@@ -592,30 +592,30 @@ export default function BoxHunt() {
                   borderRadius:6, padding:"10px 14px",
                 }}>
                   <div style={{ flex:1 }}>
-                    <div style={{ fontWeight:700, color:"var(--brown-light)", fontSize:"0.95rem" }}>
+                    <div style={{ fontWeight:700, color:"var(--brown-light)", fontSize:"0.9rem" }}>
                       {c.Title}
-                      <span style={{ fontWeight:400, color:"var(--muted2)", marginLeft:6, fontSize:"0.85rem" }}>
+                      <span style={{ fontWeight:400, color:"var(--muted2)", marginLeft:6, fontSize:"0.82rem" }}>
                         {c.Issue}{extractVol(c.Title) ? ` · ${extractVol(c.Title)}` : ""}
                       </span>
                     </div>
-                    <div style={{ fontSize:"0.8rem", color:"var(--muted)", marginTop:3 }}>
+                    <div style={{ fontSize:"0.82rem", color:"var(--muted)", marginTop:3 }}>
                       {[c.Year, c.Publisher, c.Writer].filter(Boolean).join(" · ")}
                     </div>
                     {isKey && c.Key_Reason && (
-                      <div style={{ fontSize:"0.8rem", color:"#8a6000", marginTop:4,
+                      <div style={{ fontSize:"0.82rem", color:"#8a6000", marginTop:4,
                         fontFamily:"'Crimson Pro',serif", fontStyle:"italic" }}>★ {c.Key_Reason}</div>
                     )}
                     {isSigned && (
-                      <div style={{ fontSize:"0.78rem", color:"#16a34a", marginTop:3 }}>
+                      <div style={{ fontSize:"0.75rem", color:"#16a34a", marginTop:3 }}>
                         ✍ {c.Signed_By || "Signed"}
                       </div>
                     )}
                   </div>
                   <div style={{ display:"flex", flexDirection:"column", gap:4, alignItems:"flex-end", flexShrink:0 }}>
                     <BoxBadge box={c.Box} />
-                    {isKey    && <span className="badge bkey"  style={{fontSize:"0.58rem"}}>KEY</span>}
-                    {isSigned && <span className="badge bgold" style={{fontSize:"0.58rem"}}>SGD</span>}
-                    {c.Value_NM && <span style={{ fontSize:"0.78rem", color:"var(--green-text)", fontWeight:600 }}>${c.Value_NM}</span>}
+                    {isKey    && <span className="badge bkey"  style={{fontSize:"0.62rem"}}>KEY</span>}
+                    {isSigned && <span className="badge bgold" style={{fontSize:"0.62rem"}}>SGD</span>}
+                    {c.Value_NM && <span style={{ fontSize:"0.75rem", color:"var(--green-text)", fontWeight:600 }}>${c.Value_NM}</span>}
                   </div>
                 </div>
               );
@@ -631,8 +631,8 @@ export default function BoxHunt() {
           <div style={{ display:"flex", alignItems:"center", gap:14, marginBottom:16, background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:8, padding:"12px 16px" }}>
             <div style={{ flex:1 }}>
               <div style={{ display:"flex", justifyContent:"space-between", marginBottom:5 }}>
-                <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"2px", color:"var(--muted)" }}>HUNT PROGRESS</span>
-                <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1px", color:"#16a34a" }}>
+                <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"2px", color:"var(--muted)" }}>HUNT PROGRESS</span>
+                <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px", color:"#16a34a" }}>
                   {results.filter(c => huntFound.has(`${c.Title}|||${c.Issue}|||${c.Box}`)).length} / {results.length} TRACKED
                 </span>
               </div>
@@ -643,7 +643,7 @@ export default function BoxHunt() {
             </div>
             {huntFound.size > 0 && (
               <button onClick={() => setHuntFound(new Set())} style={{
-                fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1px",
+                fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px",
                 background:"none", border:"1px solid var(--border)", color:"var(--muted)",
                 borderRadius:3, padding:"3px 10px", cursor:"pointer", flexShrink:0,
               }}>RESET</button>
@@ -660,8 +660,8 @@ export default function BoxHunt() {
                 <div key={boxNum} style={{ marginBottom:18 }}>
                   {/* Box header */}
                   <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:8, borderBottom:"2px solid var(--border)", paddingBottom:6 }}>
-                    <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.1rem", letterSpacing:"2px", color:"var(--red)" }}>BOX {boxNum}</span>
-                    <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1.5px", color:"var(--muted)" }}>
+                    <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.2rem", letterSpacing:"2px", color:"var(--red)" }}>BOX {boxNum}</span>
+                    <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px", color:"var(--muted)" }}>
                       {doneInBox}/{sorted.length} FOUND
                     </span>
                     <div style={{ flex:1, height:3, background:"var(--surface2)", borderRadius:2, overflow:"hidden" }}>
@@ -692,19 +692,19 @@ export default function BoxHunt() {
                             background: found ? "#16a34a" : "transparent",
                             display:"flex", alignItems:"center", justifyContent:"center",
                           }}>
-                            {found && <span style={{ color:"#fff", fontSize:"0.72rem" }}>✓</span>}
+                            {found && <span style={{ color:"#fff", fontSize:"0.75rem" }}>✓</span>}
                           </div>
                           {/* Title + details */}
                           <div style={{ flex:1, minWidth:0 }}>
                             <div style={{
-                              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.95rem", letterSpacing:"0.5px",
+                              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", letterSpacing:"0.5px",
                               color: found ? "var(--muted)" : "var(--text)",
                               textDecoration: found ? "line-through" : "none", lineHeight:1.2,
                             }}>
                               {c.Title}
-                              <span style={{ fontWeight:400, fontSize:"0.85rem", color:"var(--red)", marginLeft:6 }}>{c.Issue}</span>
+                              <span style={{ fontWeight:400, fontSize:"0.82rem", color:"var(--red)", marginLeft:6 }}>{c.Issue}</span>
                             </div>
-                            <div style={{ fontSize:"0.72rem", color:"var(--muted2)", marginTop:2 }}>
+                            <div style={{ fontSize:"0.75rem", color:"var(--muted2)", marginTop:2 }}>
                               {[c.Year, c.Publisher, c.Writer].filter(Boolean).join(" · ")}
                             </div>
                             {isKey && c.Key_Reason && (
@@ -715,9 +715,9 @@ export default function BoxHunt() {
                           </div>
                           {/* Badges */}
                           <div style={{ display:"flex", flexDirection:"column", gap:3, alignItems:"flex-end", flexShrink:0 }}>
-                            {isKey    && <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem", letterSpacing:"1px", background:"#fff8e0", color:"#8a6000", border:"1px solid #d4a800", borderRadius:3, padding:"1px 5px" }}>★ KEY</span>}
-                            {isSigned && <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem", letterSpacing:"1px", background:"#f0faf0", color:"#16a34a", border:"1px solid #c8e6c8", borderRadius:3, padding:"1px 5px" }}>✍ SGD</span>}
-                            {c.Value_NM && c.Value_NM !== "nan" && <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.7rem", color:"var(--red)" }}>${c.Value_NM}</span>}
+                            {isKey    && <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px", background:"#fff8e0", color:"#8a6000", border:"1px solid #d4a800", borderRadius:3, padding:"1px 5px" }}>★ KEY</span>}
+                            {isSigned && <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px", background:"#f0faf0", color:"#16a34a", border:"1px solid #c8e6c8", borderRadius:3, padding:"1px 5px" }}>✍ SGD</span>}
+                            {c.Value_NM && c.Value_NM !== "nan" && <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", color:"var(--red)" }}>${c.Value_NM}</span>}
                           </div>
                         </div>
                       );
@@ -743,12 +743,12 @@ export default function BoxHunt() {
                 {(c.Signed||"").toUpperCase()==="YES" && c.Signed_By && <div className="dr"><span className="dl">Signed By</span><span className="dv">{c.Signed_By}</span></div>}
               </div>
               {c.Story_Pitch && (
-                <div style={{ marginTop:6, color:"var(--muted2)", fontSize:"0.85rem", lineHeight:1.5 }}>{c.Story_Pitch.substring(0,200)}</div>
+                <div style={{ marginTop:6, color:"var(--muted2)", fontSize:"0.82rem", lineHeight:1.5 }}>{c.Story_Pitch.substring(0,200)}</div>
               )}
               <div style={{ marginTop:8 }}>
                 <a href={`https://comicvine.gamespot.com/search/?q=${encodeURIComponent(c.Title+" "+c.Issue)}`}
                   target="_blank" rel="noopener noreferrer"
-                  style={{ fontSize:"0.72rem", color:"var(--muted2)", textDecoration:"underline" }}>
+                  style={{ fontSize:"0.75rem", color:"var(--muted2)", textDecoration:"underline" }}>
                   🔎 View on Comic Vine
                 </a>
               </div>
@@ -774,7 +774,7 @@ export default function BoxHunt() {
       {/* ── Show results when a box is selected (filtered to that box only) ── */}
       {searched && results.length > 0 && selectedBox && view === "list" && (
         <Fragment>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem",
+          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
             letterSpacing:"2px", color:"var(--muted)", marginBottom:10, marginTop:4 }}>
             ALL {results.length.toLocaleString()} RESULTS — CLICK A BOX ABOVE TO DRILL IN, OR CLOSE BOX TO SEE FULL LIST
           </div>
@@ -786,7 +786,7 @@ export default function BoxHunt() {
         <div style={{ textAlign:"center", padding:"50px 20px 20px" }}>
           <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.4rem",
             letterSpacing:"4px", color:"var(--muted)", marginBottom:10 }}>WHAT ARE YOU HUNTING?</div>
-          <div style={{ fontSize:"0.95rem", color:"var(--muted2)", fontFamily:"'Crimson Pro',serif",
+          <div style={{ fontSize:"0.9rem", color:"var(--muted2)", fontFamily:"'Crimson Pro',serif",
             maxWidth:460, margin:"0 auto", lineHeight:1.7 }}>
             Pick a search field above, type your term, and hit Search. The full collection is yours —
             results appear as a list or card grid, and the box grid shows exactly where your books live.
@@ -796,7 +796,7 @@ export default function BoxHunt() {
 
       {searched && results.length === 0 && (
         <div style={{ textAlign:"center", padding:"48px 20px", color:"var(--muted2)", fontSize:"0.9rem" }}>
-          <div style={{ fontSize:"1.5rem", marginBottom:8, opacity:0.4 }}>🔍</div>
+          <div style={{ fontSize:"1.4rem", marginBottom:8, opacity:0.4 }}>🔍</div>
           No comics found — try a different search or field.
         </div>
       )}
@@ -806,7 +806,7 @@ export default function BoxHunt() {
           position:"fixed", left:hoveredSpine.x, top:hoveredSpine.y - 6,
           transform:"translateX(-50%) translateY(-100%)",
           background:"rgba(18,18,35,0.97)", color:"#fff",
-          borderRadius:5, padding:"5px 10px", fontSize:"0.7rem",
+          borderRadius:5, padding:"5px 10px", fontSize:"0.68rem",
           zIndex:900, pointerEvents:"none",
           boxShadow:"0 2px 10px rgba(0,0,0,0.4)",
           fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"0.5px",
@@ -817,7 +817,7 @@ export default function BoxHunt() {
             {hoveredSpine.hit && <span style={{marginRight:6}}>← MATCH</span>}
             {hoveredSpine.title}
           </div>
-          <div style={{color:"#aaa", fontSize:"0.65rem"}}>
+          <div style={{color:"#aaa", fontSize:"0.62rem"}}>
             #{hoveredSpine.issue}
             {hoveredSpine.isKey    && <span style={{color:"#fbbf24",marginLeft:4}}>★ KEY</span>}
             {hoveredSpine.isSigned && <span style={{color:"#22c55e",marginLeft:4}}>✍ SIGNED</span>}

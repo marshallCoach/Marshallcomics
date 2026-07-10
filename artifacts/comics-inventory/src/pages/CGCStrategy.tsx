@@ -171,10 +171,10 @@ export default function CGCStrategy() {
       <div style={{ background:"#0b0b18", borderBottom:"2px solid #d4a800", padding:"10px 20px",
         display:"flex", alignItems:"center", gap:24, flexWrap:"wrap" }}>
         <div>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"2px", color:"#d4a800" }}>
+          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"2px", color:"#d4a800" }}>
             🎪 TERRIFICON — AUG 7–9, 2026 · MOHEGAN SUN, CT
           </div>
-          <div style={{ fontSize:"0.72rem", color:"rgba(255,255,255,0.5)", marginTop:1 }}>
+          <div style={{ fontSize:"0.75rem", color:"rgba(255,255,255,0.5)", marginTop:1 }}>
             Hotel: Hyatt code G-TRFC · Jim Lee = Saturday Aug 8 ONLY — 10am sharp
           </div>
         </div>
@@ -190,7 +190,7 @@ export default function CGCStrategy() {
                 <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.4rem", color:"#d4a800", lineHeight:1, minWidth:36, textAlign:"center" }}>
                   {String(u.val).padStart(2,"0")}
                 </div>
-                <div style={{ fontSize:"0.52rem", letterSpacing:"1.5px", color:"rgba(255,255,255,0.4)", fontFamily:"'Bebas Neue',sans-serif" }}>{u.lbl}</div>
+                <div style={{ fontSize:"0.62rem", letterSpacing:"1.5px", color:"rgba(255,255,255,0.4)", fontFamily:"'Bebas Neue',sans-serif" }}>{u.lbl}</div>
               </div>
             ))}
           </div>
@@ -198,8 +198,8 @@ export default function CGCStrategy() {
       </div>
 
       {/* Critical Rules banner */}
-      <div style={{ background:"#fef2f2", borderBottom:"2px solid #dc2626", padding:"10px 20px 12px", fontSize:"0.8rem", color:"#7f1d1d", lineHeight:1.8 }}>
-        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem", letterSpacing:"1.5px", color:"#dc2626", marginBottom:4 }}>⚡ CRITICAL RULES — READ BEFORE PACKING</div>
+      <div style={{ background:"#fef2f2", borderBottom:"2px solid #dc2626", padding:"10px 20px 12px", fontSize:"0.82rem", color:"#7f1d1d", lineHeight:1.8 }}>
+        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem", letterSpacing:"1.5px", color:"#dc2626", marginBottom:4 }}>⚡ CRITICAL RULES — READ BEFORE PACKING</div>
         <div>🚫 <strong>Wolverine #8:</strong> MUST REMAIN UNSIGNED — this is your $500+ Yellow SS book with Chris Claremont</div>
         <div>⏰ <strong>Jim Lee is SATURDAY AUG 8 ONLY</strong> — arrive 10AM SHARP. His line fills immediately. ({jimLeeBooks.length} books)</div>
         <div>📋 Pre-fill ALL CGC submission forms at <strong>cgccomics.com</strong> before leaving home</div>
@@ -234,10 +234,10 @@ export default function CGCStrategy() {
               { val:`+$${netGainLow.toLocaleString()}`, lbl:"Net Projected Gain", sub:`high: +$${netGainHigh.toLocaleString()}` },
             ].map(s => (
               <div key={s.lbl} style={{ textAlign:"center", flex:"0 0 auto" }}>
-                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.1rem",
+                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.2rem",
                   color: s.accent ? "var(--red)" : "var(--red)", letterSpacing:"1px", lineHeight:1 }}>{s.val}</div>
-                <div style={{ fontSize:"0.6rem", letterSpacing:"1.5px", fontFamily:"'Bebas Neue',sans-serif", color:"var(--muted)" }}>{s.lbl}</div>
-                {s.sub && <div style={{ fontSize:"0.6rem", color:"var(--muted2)" }}>{s.sub}</div>}
+                <div style={{ fontSize:"0.62rem", letterSpacing:"1.5px", fontFamily:"'Bebas Neue',sans-serif", color:"var(--muted)" }}>{s.lbl}</div>
+                {s.sub && <div style={{ fontSize:"0.62rem", color:"var(--muted2)" }}>{s.sub}</div>}
               </div>
             ))}
 
@@ -269,8 +269,8 @@ export default function CGCStrategy() {
 
           {/* Tier reference */}
           <div style={{ background:"#fffff8", borderBottom:"1px solid var(--border)", padding:"6px 20px",
-            display:"flex", gap:16, flexWrap:"wrap", fontSize:"0.72rem", color:"var(--muted2)", alignItems:"center" }}>
-            <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1.5px", color:"var(--muted)" }}>TIER PRICING:</span>
+            display:"flex", gap:16, flexWrap:"wrap", fontSize:"0.75rem", color:"var(--muted2)", alignItems:"center" }}>
+            <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px", color:"var(--muted)" }}>TIER PRICING:</span>
             {[
               { label:"🗜️ Press", price:"$20/book (flat — all except no-press books)" },
               { label:"📋 Modern", price:"$53/book (post-2000)" },
@@ -283,7 +283,7 @@ export default function CGCStrategy() {
 
           {/* Table */}
           <div style={{ overflowX:"auto" }}>
-            <table style={{ width:"100%", borderCollapse:"collapse", fontSize:"0.78rem" }}>
+            <table style={{ width:"100%", borderCollapse:"collapse", fontSize:"0.75rem" }}>
               <thead>
                 <tr style={{ background:"var(--surface2)", borderBottom:"2px solid var(--border)" }}>
                   {([
@@ -302,7 +302,7 @@ export default function CGCStrategy() {
                     <th key={h}
                       onClick={f ? () => { sortField===f ? setSortDesc(d=>!d) : (setSortField(f!), setSortDesc(false)); } : undefined}
                       style={{ padding:"8px 10px", textAlign:"left", fontFamily:"'Bebas Neue',sans-serif",
-                        fontSize:"0.65rem", letterSpacing:"1.5px", whiteSpace:"nowrap",
+                        fontSize:"0.62rem", letterSpacing:"1.5px", whiteSpace:"nowrap",
                         color: f && sortField===f ? "var(--red)" : "var(--muted)",
                         cursor: f ? "pointer" : "default", userSelect:"none",
                         transition:"color 0.12s",
@@ -324,26 +324,26 @@ export default function CGCStrategy() {
                       background: b.doNotPress ? "#fff8f8" : i%2===0 ? "transparent" : "var(--surface2)",
                     }}>
                       <td style={{ padding:"8px 10px", textAlign:"center" }}>
-                        <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem",
+                        <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem",
                           color:tc, border:`1px solid ${tc}30`, background:`${tc}10`,
                           borderRadius:3, padding:"1px 5px" }}>{b.priority}</span>
                       </td>
                       <td style={{ padding:"8px 10px", minWidth:200 }}>
                         <div style={{ fontWeight:600, color:"var(--brown-light)", lineHeight:1.3 }}>{b.book}</div>
                         {b.doNotPress && (
-                          <span style={{ fontSize:"0.6rem", background:"#dc2626", color:"#fff", fontFamily:"'Bebas Neue',sans-serif",
+                          <span style={{ fontSize:"0.62rem", background:"#dc2626", color:"#fff", fontFamily:"'Bebas Neue',sans-serif",
                             letterSpacing:"1px", borderRadius:3, padding:"1px 6px", display:"inline-block", marginTop:2 }}>
                             🚫 DO NOT PRESS
                           </span>
                         )}
                         {b.alert && b.alert !== "DO NOT PRESS" && (
-                          <span style={{ fontSize:"0.6rem", background:"#d97706", color:"#fff", fontFamily:"'Bebas Neue',sans-serif",
+                          <span style={{ fontSize:"0.62rem", background:"#d97706", color:"#fff", fontFamily:"'Bebas Neue',sans-serif",
                             letterSpacing:"1px", borderRadius:3, padding:"1px 6px", display:"inline-block", marginTop:2, marginLeft:4 }}>
                             ⚠️ {b.alert}
                           </span>
                         )}
                         {b.terrificon && (
-                          <span style={{ fontSize:"0.6rem", background:"#d4a800", color:"#000", fontFamily:"'Bebas Neue',sans-serif",
+                          <span style={{ fontSize:"0.62rem", background:"#d4a800", color:"#000", fontFamily:"'Bebas Neue',sans-serif",
                             letterSpacing:"1px", borderRadius:3, padding:"1px 6px", display:"inline-block", marginTop:2, marginLeft:4 }}>
                             🎪 TF
                           </span>
@@ -358,7 +358,7 @@ export default function CGCStrategy() {
                       </td>
                       <td style={{ padding:"8px 10px", textAlign:"center", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>
                         {b.doNotPress
-                          ? <span style={{ color:"#dc2626", fontSize:"0.7rem" }}>$0</span>
+                          ? <span style={{ color:"#dc2626", fontSize:"0.68rem" }}>$0</span>
                           : <span style={{ color:"var(--text)" }}>${b.pressedCost}</span>
                         }
                       </td>
@@ -374,10 +374,10 @@ export default function CGCStrategy() {
                         <span style={{ marginLeft:5, fontSize:"0.62rem", cursor:"help", color:"var(--muted2)", verticalAlign:"middle" }}
                           title={`Projected range: $${b.projectedLow}–$${b.projectedHigh}`}>ⓘ</span>
                       </td>
-                      <td style={{ padding:"8px 10px", textAlign:"center", color:"#16a34a", fontWeight:700, whiteSpace:"nowrap", fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem" }}>
+                      <td style={{ padding:"8px 10px", textAlign:"center", color:"#16a34a", fontWeight:700, whiteSpace:"nowrap", fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem" }}>
                         {b.roiMultiple}
                       </td>
-                      <td style={{ padding:"8px 10px", color:"var(--muted2)", fontSize:"0.72rem", maxWidth:200 }}>
+                      <td style={{ padding:"8px 10px", color:"var(--muted2)", fontSize:"0.75rem", maxWidth:200 }}>
                         {b.note}
                       </td>
                     </tr>
@@ -421,7 +421,7 @@ export default function CGCStrategy() {
               { color:"#dc2626", label:"⚠️ STAN LEE SPECIAL", desc:"DO NOT PRESS. Authenticate via PSA/DNA at NYCC first. BP #513 is your most valuable single book." },
             ].map(l => (
               <div key={l.label} style={{ flex:"1 1 220px", background:"var(--surface)", border:`1.5px solid ${l.color}40`, borderRadius:6, padding:"12px 14px" }}>
-                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"1.5px", color:l.color, marginBottom:4 }}>{l.label}</div>
+                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"1.5px", color:l.color, marginBottom:4 }}>{l.label}</div>
                 <div style={{ fontSize:"0.75rem", color:"var(--muted2)", lineHeight:1.5 }}>{l.desc}</div>
               </div>
             ))}
@@ -440,8 +440,8 @@ export default function CGCStrategy() {
               { val: jimLeeBooks.length,           lbl: "Jim Lee (Sat Only)" },
             ].map(s => (
               <div key={s.lbl} style={{ textAlign:"center" }}>
-                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.1rem", color:"var(--red)", letterSpacing:"1px" }}>{s.val}</div>
-                <div style={{ fontSize:"0.6rem", letterSpacing:"1.5px", fontFamily:"'Bebas Neue',sans-serif", color:"var(--muted)" }}>{s.lbl}</div>
+                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.2rem", color:"var(--red)", letterSpacing:"1px" }}>{s.val}</div>
+                <div style={{ fontSize:"0.62rem", letterSpacing:"1.5px", fontFamily:"'Bebas Neue',sans-serif", color:"var(--muted)" }}>{s.lbl}</div>
               </div>
             ))}
           </div>
@@ -452,7 +452,7 @@ export default function CGCStrategy() {
           ] as const).map(group => (
             <div key={group.label}>
               <div style={{ padding:"10px 18px 6px", background:`${group.accent}0d`, borderBottom:`1px solid ${group.accent}30`, borderTop:"1px solid var(--border)" }}>
-                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem", letterSpacing:"2px", color:group.accent }}>{group.label}</div>
+                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem", letterSpacing:"2px", color:group.accent }}>{group.label}</div>
                 <div style={{ fontSize:"0.75rem", color:"var(--muted2)", marginTop:2 }}>{group.sublabel}</div>
               </div>
               <div className="list-view" style={{ marginBottom:0 }}>
@@ -466,18 +466,18 @@ export default function CGCStrategy() {
                       style={{ borderLeft:`3px solid ${pc}`, background: isOpen ? pb : undefined }}
                       onClick={() => toggleTf(gi)}>
                       <div className="lcard-head">
-                        <span style={{ fontSize:"0.6rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px",
+                        <span style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px",
                           background:`${pc}18`, border:`1px solid ${pc}`, color:pc,
                           borderRadius:3, padding:"1px 7px", whiteSpace:"nowrap", flexShrink:0 }}>{s.priority}</span>
                         <span className="lcard-title" style={{ fontWeight: ["HIGH","#1","#2"].includes(s.priority) ? 600 : undefined }}>
                           {s.book}
                         </span>
-                        <span style={{ fontSize:"0.7rem", color:"var(--muted)", flexShrink:0 }}>Box {s.box}</span>
-                        {s.jimlee    && <span style={{ fontSize:"0.6rem", background:"#d97706", color:"#fff", borderRadius:3, padding:"1px 6px", flexShrink:0, fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>SAT ONLY</span>}
-                        {s.critical  && <span style={{ fontSize:"0.6rem", background:"#dc2626", color:"#fff", borderRadius:3, padding:"1px 6px", flexShrink:0, fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>🚫 UNSIGNED</span>}
-                        {s.alreadySigned && <span style={{ fontSize:"0.6rem", background:"#2563eb", color:"#fff", borderRadius:3, padding:"1px 6px", flexShrink:0, fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>SIGNED</span>}
+                        <span style={{ fontSize:"0.68rem", color:"var(--muted)", flexShrink:0 }}>Box {s.box}</span>
+                        {s.jimlee    && <span style={{ fontSize:"0.62rem", background:"#d97706", color:"#fff", borderRadius:3, padding:"1px 6px", flexShrink:0, fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>SAT ONLY</span>}
+                        {s.critical  && <span style={{ fontSize:"0.62rem", background:"#dc2626", color:"#fff", borderRadius:3, padding:"1px 6px", flexShrink:0, fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>🚫 UNSIGNED</span>}
+                        {s.alreadySigned && <span style={{ fontSize:"0.62rem", background:"#2563eb", color:"#fff", borderRadius:3, padding:"1px 6px", flexShrink:0, fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>SIGNED</span>}
                       </div>
-                      {!isOpen && <div style={{ fontSize:"0.78rem", color:"var(--muted2)", marginTop:3, paddingLeft:4 }}>{s.creator}</div>}
+                      {!isOpen && <div style={{ fontSize:"0.75rem", color:"var(--muted2)", marginTop:3, paddingLeft:4 }}>{s.creator}</div>}
                       {isOpen && (
                         <div className="lcard-expand">
                           <div className="dr"><span className="dl">Creator</span><span className="dv">{s.creator}</span></div>
@@ -497,7 +497,7 @@ export default function CGCStrategy() {
       {/* ── PRESS LIST ── */}
       {view === "press" && (
         <>
-          <div style={{ background:"#fff8e0", borderBottom:"2px solid #d4a800", padding:"10px 20px", fontSize:"0.8rem", color:"#8a6000", lineHeight:1.7 }}>
+          <div style={{ background:"#fff8e0", borderBottom:"2px solid #d4a800", padding:"10px 20px", fontSize:"0.82rem", color:"#8a6000", lineHeight:1.7 }}>
             <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem", letterSpacing:"2px", marginBottom:4 }}>
               🗜️ PRESS SCHEDULE — ALL BOOKS MUST BE BACK BEFORE AUG 7
             </div>
@@ -509,12 +509,12 @@ export default function CGCStrategy() {
           </div>
 
           <div style={{ overflowX:"auto" }}>
-            <table style={{ width:"100%", borderCollapse:"collapse", fontSize:"0.79rem" }}>
+            <table style={{ width:"100%", borderCollapse:"collapse", fontSize:"0.82rem" }}>
               <thead>
                 <tr style={{ background:"var(--surface2)", borderBottom:"2px solid var(--border)" }}>
                   {["Book","Box","CGC Path","🗜️ Press","📋 CGC Submit","💰 Total","Projected Value"].map(h => (
                     <th key={h} style={{ padding:"8px 14px", textAlign:"left", fontFamily:"'Bebas Neue',sans-serif",
-                      fontSize:"0.65rem", letterSpacing:"1.5px", color:"var(--muted)", whiteSpace:"nowrap" }}>{h}</th>
+                      fontSize:"0.62rem", letterSpacing:"1.5px", color:"var(--muted)", whiteSpace:"nowrap" }}>{h}</th>
                   ))}
                 </tr>
               </thead>
@@ -527,11 +527,11 @@ export default function CGCStrategy() {
                       <td style={{ padding:"9px 14px", fontWeight:600 }}>
                         {p.book}
                         {p.alert && (
-                          <span style={{ fontSize:"0.6rem", background:"#d97706", color:"#fff", fontFamily:"'Bebas Neue',sans-serif",
+                          <span style={{ fontSize:"0.62rem", background:"#d97706", color:"#fff", fontFamily:"'Bebas Neue',sans-serif",
                             letterSpacing:"1px", borderRadius:3, padding:"1px 6px", marginLeft:6 }}>⚠️ {p.alert}</span>
                         )}
                         {p.terrificon && (
-                          <span style={{ fontSize:"0.6rem", background:"#d4a800", color:"#000", fontFamily:"'Bebas Neue',sans-serif",
+                          <span style={{ fontSize:"0.62rem", background:"#d4a800", color:"#000", fontFamily:"'Bebas Neue',sans-serif",
                             letterSpacing:"1px", borderRadius:3, padding:"1px 6px", marginLeft:4 }}>🎪</span>
                         )}
                       </td>
@@ -554,13 +554,13 @@ export default function CGCStrategy() {
                   <tr key={p.priority} style={{ borderBottom:"1px solid var(--border)", background:"#fff0f0" }}>
                     <td style={{ padding:"9px 14px", fontWeight:600 }}>
                       {p.book}
-                      <span style={{ fontSize:"0.6rem", background:"#16a34a", color:"#fff", fontFamily:"'Bebas Neue',sans-serif",
+                      <span style={{ fontSize:"0.62rem", background:"#16a34a", color:"#fff", fontFamily:"'Bebas Neue',sans-serif",
                         letterSpacing:"1px", borderRadius:3, padding:"1px 6px", marginLeft:6 }}>
                         {p.status === "AT CGC — SUBMITTED" ? "✅ AT CGC" : "🚫 DO NOT PRESS"}
                       </span>
                     </td>
                     <td style={{ padding:"9px 14px", color:"var(--muted)", textAlign:"center" }}>{p.box}</td>
-                    <td style={{ padding:"9px 14px", fontSize:"0.72rem", color:"#16a34a" }}>
+                    <td style={{ padding:"9px 14px", fontSize:"0.75rem", color:"#16a34a" }}>
                       {p.status === "AT CGC — SUBMITTED" ? "Already submitted — tracking at cgccomics.com" : p.labelType}
                     </td>
                     <td style={{ padding:"9px 14px", textAlign:"center", color:"#dc2626", fontFamily:"'Bebas Neue',sans-serif" }}>$0</td>
@@ -581,7 +581,7 @@ export default function CGCStrategy() {
                   <td style={{ padding:"10px 14px", textAlign:"center", fontFamily:"'Bebas Neue',sans-serif" }}>
                     ${totalCGCInvest}
                   </td>
-                  <td style={{ padding:"10px 14px", textAlign:"center", fontFamily:"'Bebas Neue',sans-serif", color:"var(--red)", fontSize:"0.95rem" }}>
+                  <td style={{ padding:"10px 14px", textAlign:"center", fontFamily:"'Bebas Neue',sans-serif", color:"var(--red)", fontSize:"0.9rem" }}>
                     ${totalAllIn}
                   </td>
                   <td style={{ padding:"10px 14px", color:"var(--gold)", fontWeight:700 }}>
@@ -601,7 +601,7 @@ export default function CGCStrategy() {
               { color:"#dc2626", label:"🚫 NOT GREEN QUALIFIED",         desc:"Green Qualified is for PHYSICAL DEFECTS only (missing pages/coupons). Do NOT use for signatures — that is now Yellow/Black CGC×JSA." },
             ].map(l => (
               <div key={l.label} style={{ flex:"1 1 220px", background:"var(--surface)", border:`1.5px solid ${l.color}40`, borderRadius:6, padding:"12px 14px" }}>
-                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"1.5px", color:l.color, marginBottom:4 }}>{l.label}</div>
+                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"1.5px", color:l.color, marginBottom:4 }}>{l.label}</div>
                 <div style={{ fontSize:"0.75rem", color:"var(--muted2)", lineHeight:1.5 }}>{l.desc}</div>
               </div>
             ))}
@@ -612,16 +612,16 @@ export default function CGCStrategy() {
       {/* ── NYCC ── */}
       {view === "nycc" && (
         <div style={{ padding:"40px 24px", textAlign:"center", color:"var(--muted2)" }}>
-          <div style={{ fontSize:"2rem", marginBottom:12 }}>🏙️</div>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.1rem", letterSpacing:"2px", color:"var(--text)", marginBottom:8 }}>NYCC — Oct 8–11, 2026 · Javits Center, NYC</div>
-          <div style={{ fontSize:"0.85rem", lineHeight:1.8, maxWidth:520, margin:"0 auto" }}>
+          <div style={{ fontSize:"1.8rem", marginBottom:12 }}>🏙️</div>
+          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.2rem", letterSpacing:"2px", color:"var(--text)", marginBottom:8 }}>NYCC — Oct 8–11, 2026 · Javits Center, NYC</div>
+          <div style={{ fontSize:"0.82rem", lineHeight:1.8, maxWidth:520, margin:"0 auto" }}>
             Stan Lee BP #513 is <strong style={{color:"#16a34a"}}>already at CGC</strong> — no NYCC action needed for that book.<br/>
             Focus: Heritage Auctions networking + dealer floor buys + post-NYCC haul show.<br/>
             Haul show (Oct 14) is your highest-engagement Whatnot show of Q4.
           </div>
           <div style={{ marginTop:20, display:"inline-block", background:"var(--surface)", border:"1.5px solid var(--border)",
             borderRadius:6, padding:"16px 28px", textAlign:"left" }}>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"2px", color:"var(--red)", marginBottom:8 }}>NYCC CHECKLIST</div>
+            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"2px", color:"var(--red)", marginBottom:8 }}>NYCC CHECKLIST</div>
             {[
               "Heritage Auctions dealer floor — bring Thor #169 CGC 8.0 for evaluation",
               "Buy budget: $100–300 for undervalued keys on the dealer floor",
@@ -629,7 +629,7 @@ export default function CGCStrategy() {
               "Post-NYCC haul show Oct 14 — highest Q4 Whatnot show",
               "Pre-register online for faster entry",
             ].map((item, i) => (
-              <div key={i} style={{ fontSize:"0.8rem", color:"var(--muted2)", lineHeight:2, display:"flex", gap:8 }}>
+              <div key={i} style={{ fontSize:"0.82rem", color:"var(--muted2)", lineHeight:2, display:"flex", gap:8 }}>
                 <span style={{ color:"var(--red)" }}>→</span> {item}
               </div>
             ))}

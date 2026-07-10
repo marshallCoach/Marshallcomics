@@ -386,7 +386,7 @@ export default function Duplicates({ onNavigate }: Props) {
       {/* ── HEADER ── */}
       <div style={{ marginBottom: 24, display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 16, flexWrap: "wrap" }}>
         <div>
-          <h1 style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "2rem", letterSpacing: "3px", color: "var(--red)", margin: 0, lineHeight: 1 }}>
+          <h1 style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.8rem", letterSpacing: "3px", color: "var(--red)", margin: 0, lineHeight: 1 }}>
             DUPLICATE DETECTOR
           </h1>
           <p style={{ fontSize: "0.82rem", color: "var(--muted2)", marginTop: 6, fontFamily: "'Crimson Pro',serif", maxWidth: 600 }}>
@@ -398,7 +398,7 @@ export default function Duplicates({ onNavigate }: Props) {
         {onNavigate && (
           <button
             onClick={() => onNavigate("dupchecklist")}
-            style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.72rem", letterSpacing: "2px", padding: "9px 18px", border: "2px solid #9333ea", background: "#faf5ff", color: "#9333ea", borderRadius: 6, cursor: "pointer", whiteSpace: "nowrap", flexShrink: 0, alignSelf: "flex-start" }}
+            style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.75rem", letterSpacing: "2px", padding: "9px 18px", border: "2px solid #9333ea", background: "#faf5ff", color: "#9333ea", borderRadius: 6, cursor: "pointer", whiteSpace: "nowrap", flexShrink: 0, alignSelf: "flex-start" }}
           >
             CHECK LIST →
           </button>
@@ -415,15 +415,15 @@ export default function Duplicates({ onNavigate }: Props) {
         ].map((s, i) => (
           <div key={i} style={{ background: "var(--surface)", border: "1.5px solid var(--border)", borderTop: `3px solid ${s.color}`, borderRadius: 8, padding: "12px 14px" }}>
             <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.8rem", color: s.color, letterSpacing: "2px", lineHeight: 1 }}>{s.val}</div>
-            <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.65rem", letterSpacing: "2px", color: "var(--muted2)", marginTop: 4 }}>{s.lbl}</div>
-            <div style={{ fontSize: "0.65rem", color: "var(--muted)", marginTop: 2 }}>{s.sub}</div>
+            <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "2px", color: "var(--muted2)", marginTop: 4 }}>{s.lbl}</div>
+            <div style={{ fontSize: "0.62rem", color: "var(--muted)", marginTop: 2 }}>{s.sub}</div>
           </div>
         ))}
       </div>
 
       {/* ── BACKUP / RESTORE ── */}
       <div style={{ display: "flex", gap: 8, marginBottom: 18, alignItems: "center", flexWrap: "wrap" }}>
-        <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.6rem", letterSpacing: "1.5px", color: "var(--muted)", flexShrink: 0 }}>BACKUP</span>
+        <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1.5px", color: "var(--muted)", flexShrink: 0 }}>BACKUP</span>
         <button
           onClick={() => exportData(hidden, copyDecisions, notes)}
           style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1.5px", padding: "5px 14px", border: "1.5px solid var(--border)", background: "var(--surface)", color: "var(--muted2)", borderRadius: 4, cursor: "pointer" }}>
@@ -434,7 +434,7 @@ export default function Duplicates({ onNavigate }: Props) {
           style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1.5px", padding: "5px 14px", border: "1.5px solid var(--border)", background: "var(--surface)", color: "var(--muted2)", borderRadius: 4, cursor: "pointer" }}>
           ↑ RESTORE FROM FILE
         </button>
-        <span style={{ fontSize: "0.7rem", color: "var(--muted)", fontFamily: "'Crimson Pro',serif" }}>
+        <span style={{ fontSize: "0.68rem", color: "var(--muted)", fontFamily: "'Crimson Pro',serif" }}>
           Export saves all your notes, decisions &amp; dismissed groups to a file you keep.
         </span>
       </div>
@@ -445,9 +445,9 @@ export default function Duplicates({ onNavigate }: Props) {
         {(Object.entries(COPY_META) as [CopyAction, typeof COPY_META[CopyAction]][]).map(([action, meta]) => {
           const count = [...copyDecisions.values()].filter(v => v === action).length;
           return (
-            <div key={action} style={{ display: "flex", alignItems: "center", gap: 5, fontSize: "0.7rem", color: "var(--muted2)" }}>
-              <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem", letterSpacing: "1.5px", color: meta.color, background: meta.bg, border: `1px solid ${meta.border}`, padding: "2px 6px", borderRadius: 3 }}>{meta.label}</span>
-              {count > 0 && <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem", color: meta.color }}>({count} copies)</span>}
+            <div key={action} style={{ display: "flex", alignItems: "center", gap: 5, fontSize: "0.68rem", color: "var(--muted2)" }}>
+              <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1.5px", color: meta.color, background: meta.bg, border: `1px solid ${meta.border}`, padding: "2px 6px", borderRadius: 3 }}>{meta.label}</span>
+              {count > 0 && <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", color: meta.color }}>({count} copies)</span>}
             </div>
           );
         })}
@@ -462,7 +462,7 @@ export default function Duplicates({ onNavigate }: Props) {
           placeholder="Search title or issue…"
           value={query}
           onChange={e => setQuery(e.target.value)}
-          style={{ flex: "1 1 220px", padding: "8px 12px", border: "1.5px solid var(--border)", borderRadius: 6, fontSize: "0.85rem", fontFamily: "'Crimson Pro',serif", background: "var(--surface)", color: "var(--text2)" }}
+          style={{ flex: "1 1 220px", padding: "8px 12px", border: "1.5px solid var(--border)", borderRadius: 6, fontSize: "0.82rem", fontFamily: "'Crimson Pro',serif", background: "var(--surface)", color: "var(--text2)" }}
         />
         <select value={filter} onChange={e => { setFilter(e.target.value as typeof filter); setShowAll(false); }}
           style={{ padding: "8px 10px", border: "1.5px solid var(--border)", borderRadius: 6, fontSize: "0.82rem", background: "var(--surface)", color: "var(--text2)", fontFamily: "'Bebas Neue',sans-serif", letterSpacing: "1px" }}>
@@ -509,11 +509,11 @@ export default function Duplicates({ onNavigate }: Props) {
                 <div
                   onClick={() => setOpenBoxes(prev => { const next = new Set(prev); if (next.has(boxNum)) next.delete(boxNum); else next.add(boxNum); return next; })}
                   style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 14px", background: "var(--surface2)", cursor: "pointer", userSelect: "none" }}>
-                  <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem", letterSpacing: "2px", color: "var(--red)", lineHeight: 1 }}>BOX {boxNum}</div>
-                  <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem", letterSpacing: "1.5px", background: "var(--surface)", border: "1px solid var(--border)", color: "var(--muted2)", borderRadius: 3, padding: "2px 8px" }}>
+                  <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.2rem", letterSpacing: "2px", color: "var(--red)", lineHeight: 1 }}>BOX {boxNum}</div>
+                  <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1.5px", background: "var(--surface)", border: "1px solid var(--border)", color: "var(--muted2)", borderRadius: 3, padding: "2px 8px" }}>
                     {groups.length} {groups.length === 1 ? "GROUP" : "GROUPS"}
                   </span>
-                  <div style={{ marginLeft: "auto", color: "var(--muted)", fontSize: "0.7rem" }}>{isBoxOpen ? "▲" : "▼"}</div>
+                  <div style={{ marginLeft: "auto", color: "var(--muted)", fontSize: "0.68rem" }}>{isBoxOpen ? "▲" : "▼"}</div>
                 </div>
 
                 {isBoxOpen && (
@@ -534,46 +534,46 @@ export default function Duplicates({ onNavigate }: Props) {
                           {/* Compact row */}
                           <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "9px 14px", flexWrap: "wrap" }}>
                             {/* Copy count */}
-                            <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem", color: isHidden ? "#9ca3af" : flagColor, lineHeight: 1, flexShrink: 0, minWidth: 22, textAlign: "center" }}>
+                            <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.2rem", color: isHidden ? "#9ca3af" : flagColor, lineHeight: 1, flexShrink: 0, minWidth: 22, textAlign: "center" }}>
                               {gr.copies.length}
-                              <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.38rem", letterSpacing: "1px", color: "var(--muted)" }}>COPIES</div>
+                              <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1px", color: "var(--muted)" }}>COPIES</div>
                             </div>
                             {/* Title + boxes */}
                             <div
                               onClick={() => !isHidden && setOpenKeys(prev => { const next = new Set(prev); if (next.has(gr.key)) next.delete(gr.key); else next.add(gr.key); return next; })}
                               style={{ flex: 1, minWidth: 0, cursor: isHidden ? "default" : "pointer" }}>
                               <div>
-                                <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.88rem", letterSpacing: "1px", color: isHidden ? "var(--muted)" : "var(--text)", textDecoration: isHidden ? "line-through" : "none" }}>{gr.title}</span>
+                                <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.9rem", letterSpacing: "1px", color: isHidden ? "var(--muted)" : "var(--text)", textDecoration: isHidden ? "line-through" : "none" }}>{gr.title}</span>
                                 <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.82rem", color: "var(--red)", marginLeft: 6 }}>{gr.issue}</span>
-                                {gr.year && <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem", letterSpacing: "1px", color: "var(--muted)", marginLeft: 6 }}>({gr.year})</span>}
+                                {gr.year && <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1px", color: "var(--muted)", marginLeft: 6 }}>({gr.year})</span>}
                               </div>
                               <div style={{ display: "flex", gap: 5, marginTop: 4, flexWrap: "wrap" }}>
-                                <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.54rem", letterSpacing: "1px", color: "#fff", background: "var(--red)", padding: "2px 8px", borderRadius: 3 }}>×{copiesInBox.length} HERE</span>
+                                <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1px", color: "#fff", background: "var(--red)", padding: "2px 8px", borderRadius: 3 }}>×{copiesInBox.length} HERE</span>
                                 {otherBoxes.map(b => (
-                                  <span key={b} style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.54rem", letterSpacing: "1px", color: "var(--muted2)", background: "var(--surface2)", border: "1px solid var(--border)", padding: "2px 7px", borderRadius: 3 }}>also Box {b}</span>
+                                  <span key={b} style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1px", color: "var(--muted2)", background: "var(--surface2)", border: "1px solid var(--border)", padding: "2px 7px", borderRadius: 3 }}>also Box {b}</span>
                                 ))}
                               </div>
                             </div>
                             {/* Flag badge */}
-                            <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.52rem", letterSpacing: "1.5px", color: isHidden ? "#9ca3af" : flagColor, background: (isHidden ? "#9ca3af" : flagColor) + "14", border: `1px solid ${(isHidden ? "#9ca3af" : flagColor)}40`, padding: "2px 7px", borderRadius: 3, flexShrink: 0 }}>
+                            <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1.5px", color: isHidden ? "#9ca3af" : flagColor, background: (isHidden ? "#9ca3af" : flagColor) + "14", border: `1px solid ${(isHidden ? "#9ca3af" : flagColor)}40`, padding: "2px 7px", borderRadius: 3, flexShrink: 0 }}>
                               {gr.flag === "same-box" ? "SAME BOX" : "BOUGHT TWICE"}
                             </span>
                             {/* Decision summary badges */}
                             {hasCopyDecisions && (
                               <div style={{ display: "flex", gap: 4 }}>
-                                {grCopyCounts.planned > 0 && <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.52rem", letterSpacing: "1px", color: COPY_META.planned.color, background: COPY_META.planned.bg, border: `1px solid ${COPY_META.planned.border}`, padding: "2px 6px", borderRadius: 3 }}>{grCopyCounts.planned}P</span>}
-                                {grCopyCounts.check   > 0 && <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.52rem", letterSpacing: "1px", color: COPY_META.check.color,   background: COPY_META.check.bg,   border: `1px solid ${COPY_META.check.border}`,   padding: "2px 6px", borderRadius: 3 }}>{grCopyCounts.check}C</span>}
+                                {grCopyCounts.planned > 0 && <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1px", color: COPY_META.planned.color, background: COPY_META.planned.bg, border: `1px solid ${COPY_META.planned.border}`, padding: "2px 6px", borderRadius: 3 }}>{grCopyCounts.planned}P</span>}
+                                {grCopyCounts.check   > 0 && <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1px", color: COPY_META.check.color,   background: COPY_META.check.bg,   border: `1px solid ${COPY_META.check.border}`,   padding: "2px 6px", borderRadius: 3 }}>{grCopyCounts.check}C</span>}
                               </div>
                             )}
                             {/* HIDE / SHOW */}
                             <button onClick={e => { e.stopPropagation(); toggleHide(gr.key); setOpenKeys(prev => { const next = new Set(prev); next.delete(gr.key); return next; }); }}
-                              style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.52rem", letterSpacing: "1px", padding: "4px 10px", border: `1.5px solid ${isHidden ? "#16a34a" : "#9ca3af"}`, background: isHidden ? "#f0faf4" : "var(--surface2)", color: isHidden ? "#16a34a" : "#9ca3af", borderRadius: 4, cursor: "pointer", whiteSpace: "nowrap", flexShrink: 0 }}>
+                              style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1px", padding: "4px 10px", border: `1.5px solid ${isHidden ? "#16a34a" : "#9ca3af"}`, background: isHidden ? "#f0faf4" : "var(--surface2)", color: isHidden ? "#16a34a" : "#9ca3af", borderRadius: 4, cursor: "pointer", whiteSpace: "nowrap", flexShrink: 0 }}>
                               {isHidden ? "RESTORE" : "HIDE"}
                             </button>
                             {/* Expand toggle */}
                             {!isHidden && (
                               <button onClick={() => setOpenKeys(prev => { const next = new Set(prev); if (next.has(gr.key)) next.delete(gr.key); else next.add(gr.key); return next; })}
-                                style={{ background: "none", border: "1px solid var(--border)", borderRadius: 4, width: 24, height: 24, cursor: "pointer", color: "var(--muted)", fontSize: "0.7rem", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                                style={{ background: "none", border: "1px solid var(--border)", borderRadius: 4, width: 24, height: 24, cursor: "pointer", color: "var(--muted)", fontSize: "0.68rem", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                                 {isOpen ? "▲" : "▼"}
                               </button>
                             )}
@@ -583,11 +583,11 @@ export default function Duplicates({ onNavigate }: Props) {
                           {isOpen && !isHidden && (
                             <div style={{ borderTop: "1px solid var(--border)" }}>
                               <div style={{ overflowX: "auto" }}>
-                                <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.8rem" }}>
+                                <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.82rem" }}>
                                   <thead>
                                     <tr style={{ background: "var(--surface2)", borderBottom: "1.5px solid var(--border)" }}>
                                       {["#","BOX","VOL","WRITER","ARTIST","ARC / STORY","COND","KEY","SGD","NM","VF","PLANNED","CHECK"].map(h => (
-                                        <th key={h} style={{ padding: "6px 8px", textAlign: h === "PLANNED" || h === "CHECK" ? "center" : "left", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem", letterSpacing: "1.5px", color: h === "PLANNED" ? COPY_META.planned.color : h === "CHECK" ? COPY_META.check.color : "var(--muted)", fontWeight: 400 }}>{h}</th>
+                                        <th key={h} style={{ padding: "6px 8px", textAlign: h === "PLANNED" || h === "CHECK" ? "center" : "left", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1.5px", color: h === "PLANNED" ? COPY_META.planned.color : h === "CHECK" ? COPY_META.check.color : "var(--muted)", fontWeight: 400 }}>{h}</th>
                                       ))}
                                     </tr>
                                   </thead>
@@ -602,26 +602,26 @@ export default function Duplicates({ onNavigate }: Props) {
                                       const rowBg    = copyDec === "check" ? "#faf5ff" : copyDec === "planned" ? "#fefce8" : inThisBox ? "#fff4f0" : boxCopies > 1 ? "#fff8f8" : "transparent";
                                       return (
                                         <tr key={ci} style={{ borderBottom: "1px solid var(--border)", background: rowBg }}>
-                                          <td style={{ padding: "7px 10px", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.65rem", color: "var(--muted)" }}>#{ci + 1}</td>
-                                          <td style={{ padding: "6px 10px", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.78rem", whiteSpace: "nowrap" }}>
+                                          <td style={{ padding: "7px 10px", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", color: "var(--muted)" }}>#{ci + 1}</td>
+                                          <td style={{ padding: "6px 10px", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.75rem", whiteSpace: "nowrap" }}>
                                             <span style={{ color: inThisBox ? "#fff" : "var(--red)", background: inThisBox ? "var(--red)" : "transparent", padding: inThisBox ? "2px 6px" : "0", borderRadius: 3 }}>Box {c.Box}</span>
                                           </td>
-                                          <td style={{ padding: "7px 8px", color: "var(--muted2)", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.72rem" }}>{c.Volume ? `V${c.Volume}` : "—"}</td>
+                                          <td style={{ padding: "7px 8px", color: "var(--muted2)", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.75rem" }}>{c.Volume ? `V${c.Volume}` : "—"}</td>
                                           <td style={{ padding: "7px 8px", color: "var(--text2)", maxWidth: 110, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{c.Writer || "—"}</td>
                                           <td style={{ padding: "7px 8px", color: "var(--text2)", maxWidth: 110, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{c.Artist || "—"}</td>
-                                          <td style={{ padding: "7px 8px", color: "#7c3aed", maxWidth: 130, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", fontFamily: "'Crimson Pro',serif", fontSize: "0.78rem", fontStyle: "italic" }}>{c.Arc || "—"}</td>
+                                          <td style={{ padding: "7px 8px", color: "#7c3aed", maxWidth: 130, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", fontFamily: "'Crimson Pro',serif", fontSize: "0.75rem", fontStyle: "italic" }}>{c.Arc || "—"}</td>
                                           <td style={{ padding: "7px 8px", color: "var(--muted2)", whiteSpace: "nowrap" }}>{c.Condition || "—"}</td>
-                                          <td style={{ padding: "7px 8px" }}>{isKey    && <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.56rem", color: "#d97706", background: "#d9770618", border: "1px solid #d9770640", padding: "2px 5px", borderRadius: 3 }}>KEY</span>}</td>
-                                          <td style={{ padding: "7px 8px" }}>{isSigned && <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.56rem", color: "#8b2be2", background: "#8b2be218", border: "1px solid #8b2be240", padding: "2px 5px", borderRadius: 3 }}>SGD</span>}</td>
-                                          <td style={{ padding: "7px 8px", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.8rem",  color: "var(--red)",    whiteSpace: "nowrap" }}>{fmtVal(c.Value_NM)}</td>
+                                          <td style={{ padding: "7px 8px" }}>{isKey    && <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", color: "#d97706", background: "#d9770618", border: "1px solid #d9770640", padding: "2px 5px", borderRadius: 3 }}>KEY</span>}</td>
+                                          <td style={{ padding: "7px 8px" }}>{isSigned && <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", color: "#8b2be2", background: "#8b2be218", border: "1px solid #8b2be240", padding: "2px 5px", borderRadius: 3 }}>SGD</span>}</td>
+                                          <td style={{ padding: "7px 8px", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.82rem",  color: "var(--red)",    whiteSpace: "nowrap" }}>{fmtVal(c.Value_NM)}</td>
                                           <td style={{ padding: "7px 8px", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.75rem", color: "var(--muted2)", whiteSpace: "nowrap" }}>{fmtVal(c.Value_VF)}</td>
                                           <td style={{ padding: "7px 8px", textAlign: "center" }}>
-                                            <button onClick={() => setCopyDecision(copyKey, "planned")} style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.52rem", padding: "3px 7px", border: `1.5px solid ${copyDec === "planned" ? COPY_META.planned.color : "var(--border)"}`, background: copyDec === "planned" ? COPY_META.planned.color : "var(--surface2)", color: copyDec === "planned" ? "#fff" : "var(--muted)", borderRadius: 3, cursor: "pointer" }}>
+                                            <button onClick={() => setCopyDecision(copyKey, "planned")} style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", padding: "3px 7px", border: `1.5px solid ${copyDec === "planned" ? COPY_META.planned.color : "var(--border)"}`, background: copyDec === "planned" ? COPY_META.planned.color : "var(--surface2)", color: copyDec === "planned" ? "#fff" : "var(--muted)", borderRadius: 3, cursor: "pointer" }}>
                                               {copyDec === "planned" ? "✓" : "+"}
                                             </button>
                                           </td>
                                           <td style={{ padding: "7px 8px", textAlign: "center" }}>
-                                            <button onClick={() => setCopyDecision(copyKey, "check")} style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.52rem", padding: "3px 7px", border: `1.5px solid ${copyDec === "check" ? COPY_META.check.color : "var(--border)"}`, background: copyDec === "check" ? COPY_META.check.color : "var(--surface2)", color: copyDec === "check" ? "#fff" : "var(--muted)", borderRadius: 3, cursor: "pointer" }}>
+                                            <button onClick={() => setCopyDecision(copyKey, "check")} style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", padding: "3px 7px", border: `1.5px solid ${copyDec === "check" ? COPY_META.check.color : "var(--border)"}`, background: copyDec === "check" ? COPY_META.check.color : "var(--surface2)", color: copyDec === "check" ? "#fff" : "var(--muted)", borderRadius: 3, cursor: "pointer" }}>
                                               {copyDec === "check" ? "✓" : "?"}
                                             </button>
                                           </td>
@@ -632,7 +632,7 @@ export default function Duplicates({ onNavigate }: Props) {
                                 </table>
                               </div>
                               <div style={{ padding: "10px 14px", borderTop: "1px solid var(--border)", background: "#fafaf8" }}>
-                                <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.56rem", letterSpacing: "1.5px", color: "var(--muted)", marginBottom: 5 }}>NOTE</div>
+                                <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1.5px", color: "var(--muted)", marginBottom: 5 }}>NOTE</div>
                                 <textarea value={groupNote} onChange={e => updateNote(gr.key, e.target.value)} placeholder="Add a note…" rows={2}
                                   style={{ width: "100%", padding: "7px 10px", border: "1.5px solid var(--border)", borderRadius: 5, fontSize: "0.82rem", fontFamily: "'Crimson Pro',serif", color: "var(--text2)", background: "#fff", resize: "vertical", boxSizing: "border-box", outline: "none" }}
                                   onFocus={e => { e.currentTarget.style.borderColor = "var(--red)"; }}
@@ -684,8 +684,8 @@ export default function Duplicates({ onNavigate }: Props) {
 
                 {/* Copy count */}
                 <div style={{ flexShrink: 0, textAlign: "center", minWidth: 32 }}>
-                  <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.3rem", color: isHidden ? "#9ca3af" : hasCopyDecisions ? "#d97706" : cc, lineHeight: 1 }}>{gr.copies.length}</div>
-                  <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.42rem", letterSpacing: "1.5px", color: "var(--muted)" }}>COPIES</div>
+                  <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.4rem", color: isHidden ? "#9ca3af" : hasCopyDecisions ? "#d97706" : cc, lineHeight: 1 }}>{gr.copies.length}</div>
+                  <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1.5px", color: "var(--muted)" }}>COPIES</div>
                 </div>
 
                 {/* Title */}
@@ -694,37 +694,37 @@ export default function Duplicates({ onNavigate }: Props) {
                   style={{ flex: 1, minWidth: 0, cursor: isHidden ? "default" : "pointer", userSelect: "text" }}
                 >
                   <div>
-                    <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.95rem", letterSpacing: "1px",
+                    <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.9rem", letterSpacing: "1px",
                       color: isHidden ? "var(--muted)" : "var(--text)",
                       textDecoration: isHidden ? "line-through" : "none" }}>
                       {gr.title}
                     </span>
-                    <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.85rem", color: isHidden ? "var(--muted)" : "var(--red)", marginLeft: 6 }}>
+                    <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.82rem", color: isHidden ? "var(--muted)" : "var(--red)", marginLeft: 6 }}>
                       {gr.issue}
                     </span>
                     {gr.volume && (
-                      <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.6rem", letterSpacing: "1px",
+                      <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1px",
                         color: "var(--muted2)", marginLeft: 6, background: "var(--surface2)",
                         border: "1px solid var(--border)", padding: "1px 5px", borderRadius: 3 }}>
                         VOL {gr.volume}
                       </span>
                     )}
                   </div>
-                  <div style={{ fontSize: "0.67rem", color: "var(--muted)", marginTop: 2, display: "flex", gap: "4px 10px", flexWrap: "wrap" }}>
+                  <div style={{ fontSize: "0.68rem", color: "var(--muted)", marginTop: 2, display: "flex", gap: "4px 10px", flexWrap: "wrap" }}>
                     <span>{gr.publisher}{gr.year ? ` · ${gr.year}` : ""}</span>
                     <span>{boxes.slice(0,5).map(b => `Box ${b}`).join(", ")}{boxes.length > 5 ? ` +${boxes.length-5}` : ""}</span>
                     {grCopyCounts.planned > 0 && (
-                      <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.56rem", letterSpacing: "1px", color: COPY_META.planned.color, background: COPY_META.planned.bg, border: `1px solid ${COPY_META.planned.border}`, padding: "1px 5px", borderRadius: 3 }}>
+                      <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1px", color: COPY_META.planned.color, background: COPY_META.planned.bg, border: `1px solid ${COPY_META.planned.border}`, padding: "1px 5px", borderRadius: 3 }}>
                         {grCopyCounts.planned} PLANNED
                       </span>
                     )}
                     {grCopyCounts.check > 0 && (
-                      <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.56rem", letterSpacing: "1px", color: COPY_META.check.color, background: COPY_META.check.bg, border: `1px solid ${COPY_META.check.border}`, padding: "1px 5px", borderRadius: 3 }}>
+                      <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1px", color: COPY_META.check.color, background: COPY_META.check.bg, border: `1px solid ${COPY_META.check.border}`, padding: "1px 5px", borderRadius: 3 }}>
                         {grCopyCounts.check} CHECK
                       </span>
                     )}
                     {groupNote && (
-                      <span style={{ fontSize: "0.67rem", fontFamily: "'Crimson Pro',serif", fontStyle: "italic", color: "var(--muted2)" }} title={groupNote}>
+                      <span style={{ fontSize: "0.68rem", fontFamily: "'Crimson Pro',serif", fontStyle: "italic", color: "var(--muted2)" }} title={groupNote}>
                         ✏ {groupNote.length > 50 ? groupNote.slice(0, 50) + "…" : groupNote}
                       </span>
                     )}
@@ -732,7 +732,7 @@ export default function Duplicates({ onNavigate }: Props) {
                 </div>
 
                 {/* Flag badge */}
-                <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.55rem", letterSpacing: "1.5px",
+                <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1.5px",
                   color: isHidden ? "#9ca3af" : flagColor,
                   background: (isHidden ? "#9ca3af" : flagColor) + "14",
                   border: `1px solid ${(isHidden ? "#9ca3af" : flagColor)}40`,
@@ -745,7 +745,7 @@ export default function Duplicates({ onNavigate }: Props) {
                   onClick={e => { e.stopPropagation(); toggleHide(gr.key); setOpenKeys(prev => { const next = new Set(prev); next.delete(gr.key); return next; }); }}
                   title={isHidden ? "Restore to active list" : "Dismiss — not a real duplicate"}
                   style={{
-                    fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.56rem", letterSpacing: "1px",
+                    fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1px",
                     padding: "4px 10px",
                     border: `1.5px solid ${isHidden ? "#16a34a" : "#9ca3af"}`,
                     background: isHidden ? "#f0faf4" : "var(--surface2)",
@@ -760,7 +760,7 @@ export default function Duplicates({ onNavigate }: Props) {
                 {!isHidden && (
                   <button
                     onClick={() => setOpenKeys(prev => { const next = new Set(prev); if (next.has(gr.key)) next.delete(gr.key); else next.add(gr.key); return next; })}
-                    style={{ background: "none", border: "1px solid var(--border)", borderRadius: 4, width: 24, height: 24, cursor: "pointer", color: "var(--muted)", fontSize: "0.7rem", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                    style={{ background: "none", border: "1px solid var(--border)", borderRadius: 4, width: 24, height: 24, cursor: "pointer", color: "var(--muted)", fontSize: "0.68rem", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                     {isOpen ? "▲" : "▼"}
                   </button>
                 )}
@@ -770,11 +770,11 @@ export default function Duplicates({ onNavigate }: Props) {
               {isOpen && !isHidden && (
                 <div style={{ borderTop: "1px solid var(--border)" }}>
                   <div style={{ overflowX: "auto" }}>
-                    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.8rem" }}>
+                    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.82rem" }}>
                       <thead>
                         <tr style={{ background: "var(--surface2)", borderBottom: "1.5px solid var(--border)" }}>
                           {["#","BOX","VOL","WRITER","ARTIST","ARC / STORY","CONDITION","KEY","SIGNED","NM","VF","PLANNED","CHECK"].map(h => (
-                            <th key={h} style={{ padding: "6px 8px", textAlign: h === "PLANNED" || h === "CHECK" ? "center" : "left", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem", letterSpacing: "1.5px", color: h === "PLANNED" ? COPY_META.planned.color : h === "CHECK" ? COPY_META.check.color : "var(--muted)", fontWeight: 400 }}>{h}</th>
+                            <th key={h} style={{ padding: "6px 8px", textAlign: h === "PLANNED" || h === "CHECK" ? "center" : "left", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1.5px", color: h === "PLANNED" ? COPY_META.planned.color : h === "CHECK" ? COPY_META.check.color : "var(--muted)", fontWeight: 400 }}>{h}</th>
                           ))}
                         </tr>
                       </thead>
@@ -790,22 +790,22 @@ export default function Duplicates({ onNavigate }: Props) {
 
                           return (
                             <tr key={ci} style={{ borderBottom: "1px solid var(--border)", background: rowBg }}>
-                              <td style={{ padding: "7px 10px", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.65rem", color: "var(--muted)" }}>#{ci + 1}</td>
-                              <td style={{ padding: "7px 10px", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.78rem", color: "var(--red)", whiteSpace: "nowrap" }}>
-                                Box {c.Box}{boxDup && <span style={{ marginLeft: 3, fontSize: "0.5rem", color: "#dc2626" }}>⚠</span>}
+                              <td style={{ padding: "7px 10px", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", color: "var(--muted)" }}>#{ci + 1}</td>
+                              <td style={{ padding: "7px 10px", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.75rem", color: "var(--red)", whiteSpace: "nowrap" }}>
+                                Box {c.Box}{boxDup && <span style={{ marginLeft: 3, fontSize: "0.62rem", color: "#dc2626" }}>⚠</span>}
                               </td>
-                              <td style={{ padding: "7px 8px", color: "var(--muted2)", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.72rem" }}>{c.Volume ? `V${c.Volume}` : "—"}</td>
+                              <td style={{ padding: "7px 8px", color: "var(--muted2)", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.75rem" }}>{c.Volume ? `V${c.Volume}` : "—"}</td>
                               <td style={{ padding: "7px 8px", color: "var(--text2)", maxWidth: 140, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }} title={c.Writer || ""}>{c.Writer || "—"}</td>
                               <td style={{ padding: "7px 8px", color: "var(--text2)", maxWidth: 140, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }} title={c.Artist || ""}>{c.Artist || "—"}</td>
-                              <td style={{ padding: "7px 8px", color: "#7c3aed", maxWidth: 160, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", fontFamily: "'Crimson Pro',serif", fontSize: "0.78rem", fontStyle: "italic" }} title={c.Arc || ""}>{c.Arc || "—"}</td>
+                              <td style={{ padding: "7px 8px", color: "#7c3aed", maxWidth: 160, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", fontFamily: "'Crimson Pro',serif", fontSize: "0.75rem", fontStyle: "italic" }} title={c.Arc || ""}>{c.Arc || "—"}</td>
                               <td style={{ padding: "7px 8px", color: "var(--muted2)", whiteSpace: "nowrap" }}>{c.Condition || "—"}</td>
                               <td style={{ padding: "7px 8px" }}>
-                                {isKey && <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.56rem", color: "#d97706", background: "#d9770618", border: "1px solid #d9770640", padding: "2px 5px", borderRadius: 3 }}>KEY</span>}
+                                {isKey && <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", color: "#d97706", background: "#d9770618", border: "1px solid #d9770640", padding: "2px 5px", borderRadius: 3 }}>KEY</span>}
                               </td>
                               <td style={{ padding: "7px 8px" }}>
-                                {isSigned && <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.56rem", color: "#8b2be2", background: "#8b2be218", border: "1px solid #8b2be240", padding: "2px 5px", borderRadius: 3 }}>SGD</span>}
+                                {isSigned && <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", color: "#8b2be2", background: "#8b2be218", border: "1px solid #8b2be240", padding: "2px 5px", borderRadius: 3 }}>SGD</span>}
                               </td>
-                              <td style={{ padding: "7px 8px", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.8rem", color: "var(--red)", whiteSpace: "nowrap" }}>{fmtVal(c.Value_NM)}</td>
+                              <td style={{ padding: "7px 8px", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.82rem", color: "var(--red)", whiteSpace: "nowrap" }}>{fmtVal(c.Value_NM)}</td>
                               <td style={{ padding: "7px 8px", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.75rem", color: "var(--muted2)", whiteSpace: "nowrap" }}>{fmtVal(c.Value_VF)}</td>
 
                               {/* PLANNED toggle */}
@@ -814,7 +814,7 @@ export default function Duplicates({ onNavigate }: Props) {
                                   onClick={() => setCopyDecision(copyKey, "planned")}
                                   title="Mark this copy as Planned (intentional extra)"
                                   style={{
-                                    fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.52rem", letterSpacing: "1px",
+                                    fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1px",
                                     padding: "3px 7px",
                                     border: `1.5px solid ${copyDec === "planned" ? COPY_META.planned.color : "var(--border)"}`,
                                     background: copyDec === "planned" ? COPY_META.planned.color : "var(--surface2)",
@@ -831,7 +831,7 @@ export default function Duplicates({ onNavigate }: Props) {
                                   onClick={() => setCopyDecision(copyKey, "check")}
                                   title="Flag this copy as Needs Checking"
                                   style={{
-                                    fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.52rem", letterSpacing: "1px",
+                                    fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1px",
                                     padding: "3px 7px",
                                     border: `1.5px solid ${copyDec === "check" ? COPY_META.check.color : "var(--border)"}`,
                                     background: copyDec === "check" ? COPY_META.check.color : "var(--surface2)",
@@ -849,7 +849,7 @@ export default function Duplicates({ onNavigate }: Props) {
                   </div>
                   {/* ── NOTE TAKER ── */}
                   <div style={{ padding: "10px 14px", borderTop: "1px solid var(--border)", background: "#fafaf8" }}>
-                    <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.56rem", letterSpacing: "1.5px", color: "var(--muted)", marginBottom: 5 }}>NOTE</div>
+                    <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1.5px", color: "var(--muted)", marginBottom: 5 }}>NOTE</div>
                     <textarea
                       value={groupNote}
                       onChange={e => updateNote(gr.key, e.target.value)}
@@ -860,14 +860,14 @@ export default function Duplicates({ onNavigate }: Props) {
                       onBlur={e => { e.currentTarget.style.borderColor = "var(--border)"; }}
                     />
                   </div>
-                  <div style={{ padding: "7px 14px 9px", background: (gr.flag === "same-box" ? "#dc2626" : "#d97706") + "08", borderTop: "1px solid var(--border)", fontSize: "0.72rem", color: "var(--muted2)", fontFamily: "'Crimson Pro',serif", display: "flex", alignItems: "center", gap: 12 }}>
+                  <div style={{ padding: "7px 14px 9px", background: (gr.flag === "same-box" ? "#dc2626" : "#d97706") + "08", borderTop: "1px solid var(--border)", fontSize: "0.75rem", color: "var(--muted2)", fontFamily: "'Crimson Pro',serif", display: "flex", alignItems: "center", gap: 12 }}>
                     <span>
                       {gr.flag === "same-box"    && "⚠ Two or more copies share a box — likely a data entry error unless you own multiple copies."}
                       {gr.flag === "bought-twice" && "↗ Same book in different boxes — likely purchased more than once."}
                     </span>
                     <button
                       onClick={() => { toggleHide(gr.key); setOpenKeys(prev => { const next = new Set(prev); next.delete(gr.key); return next; }); }}
-                      style={{ marginLeft: "auto", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.56rem", letterSpacing: "1px", padding: "3px 10px", border: "1px solid #9ca3af", background: "none", color: "#9ca3af", borderRadius: 3, cursor: "pointer", whiteSpace: "nowrap", flexShrink: 0 }}>
+                      style={{ marginLeft: "auto", fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1px", padding: "3px 10px", border: "1px solid #9ca3af", background: "none", color: "#9ca3af", borderRadius: 3, cursor: "pointer", whiteSpace: "nowrap", flexShrink: 0 }}>
                       HIDE THIS GROUP
                     </button>
                   </div>
@@ -882,7 +882,7 @@ export default function Duplicates({ onNavigate }: Props) {
       {groupBy === "title" && filtered.length > 80 && !showAll && (
         <div style={{ textAlign: "center", marginTop: 20 }}>
           <button onClick={() => setShowAll(true)}
-            style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.85rem", letterSpacing: "2px", color: "var(--red)", background: "none", border: "1.5px solid var(--red)", borderRadius: 6, padding: "10px 28px", cursor: "pointer" }}>
+            style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.82rem", letterSpacing: "2px", color: "var(--red)", background: "none", border: "1.5px solid var(--red)", borderRadius: 6, padding: "10px 28px", cursor: "pointer" }}>
             SHOW ALL {filtered.length.toLocaleString()} GROUPS
           </button>
         </div>
@@ -890,10 +890,10 @@ export default function Duplicates({ onNavigate }: Props) {
 
       {filtered.length === 0 && (
         <div style={{ textAlign: "center", padding: "60px 20px", color: "var(--muted)" }}>
-          <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem", letterSpacing: "3px", marginBottom: 8 }}>
+          <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.2rem", letterSpacing: "3px", marginBottom: 8 }}>
             {filter === "active" && hidden.size > 0 ? "ALL GROUPS DISMISSED" : "NO MATCHES"}
           </div>
-          <div style={{ fontSize: "0.8rem" }}>
+          <div style={{ fontSize: "0.82rem" }}>
             {filter === "active" && hidden.size > 0
               ? `You've dismissed all ${hidden.size} groups. Switch to "All Groups" or "Dismissed" to review them.`
               : "Try adjusting your search or filter."}
@@ -909,24 +909,24 @@ export default function Duplicates({ onNavigate }: Props) {
               REVIEW OUTPUT
             </h2>
             {hidden.size > 0 && (
-              <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.65rem", letterSpacing: "1.5px", background: "#f3f4f6", color: "#6b7280", border: "1px solid #d1d5db", borderRadius: 3, padding: "2px 8px" }}>
+              <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1.5px", background: "#f3f4f6", color: "#6b7280", border: "1px solid #d1d5db", borderRadius: 3, padding: "2px 8px" }}>
                 {hidden.size} DISMISSED
               </span>
             )}
             {copyDecisions.size > 0 && (
-              <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.65rem", letterSpacing: "1.5px", background: "#fefce8", color: "#d97706", border: "1px solid #fcd34d", borderRadius: 3, padding: "2px 8px" }}>
+              <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1.5px", background: "#fefce8", color: "#d97706", border: "1px solid #fcd34d", borderRadius: 3, padding: "2px 8px" }}>
                 {copyDecisions.size} COPY DECISIONS
               </span>
             )}
             <div style={{ marginLeft: "auto", display: "flex", gap: 8 }}>
               {copyDecisions.size > 0 && (
                 <button onClick={() => setShowOutput(v => !v)}
-                  style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.72rem", letterSpacing: "1.5px", padding: "7px 18px", border: "1.5px solid var(--red)", background: showOutput ? "var(--red)" : "none", color: showOutput ? "#fff" : "var(--red)", borderRadius: 4, cursor: "pointer" }}>
+                  style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.75rem", letterSpacing: "1.5px", padding: "7px 18px", border: "1.5px solid var(--red)", background: showOutput ? "var(--red)" : "none", color: showOutput ? "#fff" : "var(--red)", borderRadius: 4, cursor: "pointer" }}>
                   {showOutput ? "HIDE OUTPUT" : "GENERATE OUTPUT"}
                 </button>
               )}
               <button onClick={clearAll}
-                style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.65rem", letterSpacing: "1px", padding: "7px 14px", border: "1px solid var(--border)", background: "none", color: "var(--muted)", borderRadius: 4, cursor: "pointer" }}>
+                style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1px", padding: "7px 14px", border: "1px solid var(--border)", background: "none", color: "var(--muted)", borderRadius: 4, cursor: "pointer" }}>
                 CLEAR ALL
               </button>
             </div>
@@ -938,12 +938,12 @@ export default function Duplicates({ onNavigate }: Props) {
                 ref={outputRef}
                 readOnly
                 value={outputText}
-                style={{ width: "100%", minHeight: 260, padding: "14px 16px", fontFamily: "monospace", fontSize: "0.8rem", lineHeight: 1.6, background: "#0f1a12", color: "#4ade80", border: "1.5px solid #1e3a22", borderRadius: 8, resize: "vertical", boxSizing: "border-box" }}
+                style={{ width: "100%", minHeight: 260, padding: "14px 16px", fontFamily: "monospace", fontSize: "0.82rem", lineHeight: 1.6, background: "#0f1a12", color: "#4ade80", border: "1.5px solid #1e3a22", borderRadius: 8, resize: "vertical", boxSizing: "border-box" }}
                 onFocus={e => e.target.select()}
               />
               <button
                 onClick={() => { navigator.clipboard.writeText(outputText).then(() => { setCopied(true); setTimeout(() => setCopied(false), 2000); }); }}
-                style={{ position: "absolute", top: 10, right: 10, fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.65rem", letterSpacing: "1.5px", padding: "5px 14px", border: `1.5px solid ${copied ? "#16a34a" : "#2d6a3f"}`, background: copied ? "#16a34a" : "#1e3a22", color: copied ? "#fff" : "#4ade80", borderRadius: 4, cursor: "pointer" }}>
+                style={{ position: "absolute", top: 10, right: 10, fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1.5px", padding: "5px 14px", border: `1.5px solid ${copied ? "#16a34a" : "#2d6a3f"}`, background: copied ? "#16a34a" : "#1e3a22", color: copied ? "#fff" : "#4ade80", borderRadius: 4, cursor: "pointer" }}>
                 {copied ? "COPIED ✓" : "COPY"}
               </button>
             </div>
@@ -956,12 +956,12 @@ export default function Duplicates({ onNavigate }: Props) {
                 <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.75rem", letterSpacing: "2px", color: "#6d28d9" }}>
                   NOTES FOR CLAUDE
                 </div>
-                <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem", letterSpacing: "1px", background: "#ede9fe", color: "#7c3aed", border: "1px solid #ddd6fe", borderRadius: 3, padding: "2px 7px" }}>
+                <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1px", background: "#ede9fe", color: "#7c3aed", border: "1px solid #ddd6fe", borderRadius: 3, padding: "2px 7px" }}>
                   {notes.size} GROUPS WITH NOTES
                 </span>
                 <button
                   onClick={() => setShowClaude(v => !v)}
-                  style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.65rem", letterSpacing: "1.5px", padding: "5px 14px", border: "1.5px solid #7c3aed", background: showClaude ? "#7c3aed" : "none", color: showClaude ? "#fff" : "#7c3aed", borderRadius: 4, cursor: "pointer" }}>
+                  style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1.5px", padding: "5px 14px", border: "1.5px solid #7c3aed", background: showClaude ? "#7c3aed" : "none", color: showClaude ? "#fff" : "#7c3aed", borderRadius: 4, cursor: "pointer" }}>
                   {showClaude ? "HIDE" : "SHOW SCRIPT"}
                 </button>
               </div>
@@ -971,12 +971,12 @@ export default function Duplicates({ onNavigate }: Props) {
                     ref={claudeRef}
                     readOnly
                     value={claudeScript}
-                    style={{ width: "100%", minHeight: 260, padding: "14px 16px", fontFamily: "monospace", fontSize: "0.8rem", lineHeight: 1.6, background: "#1a0f2e", color: "#c4b5fd", border: "1.5px solid #4c1d95", borderRadius: 8, resize: "vertical", boxSizing: "border-box" }}
+                    style={{ width: "100%", minHeight: 260, padding: "14px 16px", fontFamily: "monospace", fontSize: "0.82rem", lineHeight: 1.6, background: "#1a0f2e", color: "#c4b5fd", border: "1.5px solid #4c1d95", borderRadius: 8, resize: "vertical", boxSizing: "border-box" }}
                     onFocus={e => e.target.select()}
                   />
                   <button
                     onClick={() => { navigator.clipboard.writeText(claudeScript).then(() => { setCopiedClaude(true); setTimeout(() => setCopiedClaude(false), 2000); }); }}
-                    style={{ position: "absolute", top: 10, right: 10, fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.65rem", letterSpacing: "1.5px", padding: "5px 14px", border: `1.5px solid ${copiedClaude ? "#6d28d9" : "#4c1d95"}`, background: copiedClaude ? "#6d28d9" : "#2e1065", color: copiedClaude ? "#fff" : "#c4b5fd", borderRadius: 4, cursor: "pointer" }}>
+                    style={{ position: "absolute", top: 10, right: 10, fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.62rem", letterSpacing: "1.5px", padding: "5px 14px", border: `1.5px solid ${copiedClaude ? "#6d28d9" : "#4c1d95"}`, background: copiedClaude ? "#6d28d9" : "#2e1065", color: copiedClaude ? "#fff" : "#c4b5fd", borderRadius: 4, cursor: "pointer" }}>
                     {copiedClaude ? "COPIED ✓" : "COPY"}
                   </button>
                 </div>

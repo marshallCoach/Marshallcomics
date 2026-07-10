@@ -291,7 +291,7 @@ export default function AllBoxes() {
                   {c.Terrificon && <div className="dr"><span className="dl">Terrificon</span><span className="dv" style={{color:"#f59e0b"}}>{c.Terrificon}</span></div>}
                 </div>
                 {c.Story_Pitch && c.Story_Pitch !== "nan" && (
-                  <div style={{ marginTop:6, fontStyle:"italic", color:"var(--muted2)", fontSize:"0.8rem" }}>
+                  <div style={{ marginTop:6, fontStyle:"italic", color:"var(--muted2)", fontSize:"0.82rem" }}>
                     {c.Story_Pitch.substring(0,200)}
                   </div>
                 )}
