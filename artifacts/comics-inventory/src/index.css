@@ -141,6 +141,8 @@ body {
   display: flex; padding: 0 16px;
   position: sticky; top: 81px; z-index: 8999; background: #111;
   overflow-x: auto; scrollbar-width: none; gap: 0;
+  mask-image: linear-gradient(to right, transparent 0, #000 16px, #000 calc(100% - 16px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 16px, #000 calc(100% - 16px), transparent 100%);
 }
 .main-nav::-webkit-scrollbar { display: none; }
 
@@ -151,17 +153,21 @@ body {
   font-family: 'Bebas Neue', sans-serif; font-size: 0.78rem; letter-spacing: 2px;
   white-space: nowrap; transition: color 0.15s, border-color 0.15s;
   flex-shrink: 0;
+  display: flex; align-items: center; gap: 7px;
 }
 .main-nav-btn:hover { color: rgba(255,255,255,0.8); }
 .main-nav-btn.active { color: #fff; border-bottom-color: var(--red); }
+.main-nav-btn svg { flex-shrink: 0; opacity: 0.85; }
 
 /* ── TAB NAV ── */
 .tab-nav {
   background: var(--surface);
-  display: flex; padding: 0 12px;
+  display: flex; align-items: center; padding: 0 12px;
   border-bottom: 1px solid var(--border);
   overflow-x: auto; scrollbar-width: none;
   position: sticky; top: 113px; z-index: 8998; background: #ffffff;
+  mask-image: linear-gradient(to right, transparent 0, #000 16px, #000 calc(100% - 16px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 16px, #000 calc(100% - 16px), transparent 100%);
 }
 .tab-nav::-webkit-scrollbar { display: none; }
 
@@ -174,6 +180,16 @@ body {
 }
 .tab-btn:hover { color: var(--text); }
 .tab-btn.active { color: var(--red); border-bottom-color: var(--red); }
+
+.tab-group-label {
+  font-family: 'Bebas Neue', sans-serif; font-size: 0.62rem; letter-spacing: 1.5px;
+  text-transform: uppercase; color: var(--muted2); opacity: 0.55;
+  padding: 0 8px 0 14px; flex-shrink: 0; white-space: nowrap;
+  display: flex; align-items: center;
+  border-left: 1px solid var(--border);
+  align-self: stretch;
+}
+.tab-group-label:first-child { border-left: none; padding-left: 0; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 860px) {
