@@ -152,7 +152,7 @@ export function SortableTable<T>({ cols, rows, pageSize = DEFAULT_PAGE_SIZE, exp
                     {cols.map(col => (
                       <td
                         key={col.key}
-                        style={{ padding: "8px 12px", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", verticalAlign: "middle" }}
+                        style={{ padding: "8px 12px", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", verticalAlign: "middle", fontSize: "0.875rem" }}
                       >
                         {col.cell(row)}
                       </td>
