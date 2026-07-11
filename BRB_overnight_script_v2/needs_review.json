@@ -3376,5 +3376,329 @@
     "title": "A Death in the Family: Robin Lives!",
     "volume": 1,
     "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-07-08T22:00:08.282527",
+    "title": "Justice League",
+    "volume": 1.0,
+    "reason": "68 issues not found on CV: [np.float64(0.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0), np.float64(11.0), np.float64(12.0), np.float64(13.0), np.float64(14.0), np.float64(15.0)]"
+  },
+  {
+    "ts": "2026-07-09T01:23:26.356958",
+    "title": "Batgirl",
+    "volume": 1.0,
+    "reason": "4 issues not found on CV: [np.float64(0.0), np.float64(12.0), np.float64(36.0), np.float64(58.0)]"
+  },
+  {
+    "ts": "2026-07-09T02:14:59.890906",
+    "title": "Robin",
+    "volume": 2.0,
+    "reason": "68 issues not found on CV: [np.float64(7.0), np.float64(68.0), np.float64(69.0), np.float64(71.0), np.float64(72.0), np.float64(73.0), np.float64(74.0), np.float64(75.0), np.float64(76.0), np.float64(77.0)]"
+  },
+  {
+    "ts": "2026-07-09T11:10:42.772445",
+    "title": "Fantastic Four",
+    "volume": 3.0,
+    "reason": "1 issues not found on CV: [np.float64(499.0)]"
+  },
+  {
+    "ts": "2026-07-09T11:40:50.297111",
+    "title": "Justice League of America",
+    "volume": 2.0,
+    "reason": "18 issues not found on CV: [np.float64(100.0), np.float64(106.0), np.float64(110.0), np.float64(111.0), np.float64(112.0), np.float64(113.0), np.float64(114.0), np.float64(115.0), np.float64(116.0), np.float64(117.0)]"
+  },
+  {
+    "ts": "2026-07-09T12:11:38.642137",
+    "title": "Captain America",
+    "volume": 9.0,
+    "reason": "10 issues not found on CV: [np.float64(0.0), np.float64(264.0), np.float64(698.0), np.float64(699.0), np.float64(700.0), np.float64(701.0), np.float64(702.0), np.float64(703.0), np.float64(704.0), np.float64(750.0)]"
+  },
+  {
+    "ts": "2026-07-09T12:12:19.900640",
+    "title": "Uncanny X-Men",
+    "volume": 3.0,
+    "reason": "55 issues not found on CV: [np.float64(2.0), np.float64(3.0), np.float64(4.0), np.float64(5.0), np.float64(6.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0), np.float64(11.0)]"
+  },
+  {
+    "ts": "2026-07-09T12:43:34.435828",
+    "title": "Young Justice",
+    "volume": 1.0,
+    "reason": "2 issues not found on CV: [np.float64(36.0), np.float64(55.0)]"
+  },
+  {
+    "ts": "2026-07-09T12:57:54.377565",
+    "title": "Wonder Woman",
+    "volume": 4.0,
+    "reason": "9 issues not found on CV: [np.float64(0.0), np.float64(45.0), np.float64(46.0), np.float64(47.0), np.float64(48.0), np.float64(49.0), np.float64(50.0), np.float64(51.0), np.float64(52.0)]"
+  },
+  {
+    "ts": "2026-07-09T13:13:17.762774",
+    "title": "X-Men",
+    "volume": 4.0,
+    "reason": "33 issues not found on CV: [np.float64(3.0), np.float64(4.0), np.float64(5.0), np.float64(6.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0), np.float64(11.0), np.float64(12.0)]"
+  },
+  {
+    "ts": "2026-07-09T13:17:45.005718",
+    "title": "Avengers",
+    "volume": 7.0,
+    "reason": "39 issues not found on CV: [np.float64(21.0), np.float64(23.0), np.float64(25.0), np.float64(26.0), np.float64(27.0), np.float64(28.0), np.float64(29.0), np.float64(30.0), np.float64(31.0), np.float64(32.0)]"
+  },
+  {
+    "ts": "2026-07-09T14:08:46.317520",
+    "title": "New Avengers",
+    "volume": 1.0,
+    "reason": "3 issues not found on CV: [np.float64(13.0), np.float64(60.0), np.float64(61.0)]"
+  },
+  {
+    "ts": "2026-07-09T14:17:40.260006",
+    "title": "Captain America",
+    "volume": 5.0,
+    "reason": "21 issues not found on CV: [np.float64(33.0), np.float64(48.0), np.float64(49.0), np.float64(50.0), np.float64(600.0), np.float64(601.0), np.float64(602.0), np.float64(603.0), np.float64(604.0), np.float64(605.0)]"
+  },
+  {
+    "ts": "2026-07-09T14:19:02.162548",
+    "title": "Justice League",
+    "volume": 2.0,
+    "reason": "45 issues not found on CV: [np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0), np.float64(11.0), np.float64(12.0), np.float64(13.0), np.float64(14.0), np.float64(15.0), np.float64(16.0)]"
+  },
+  {
+    "ts": "2026-07-09T14:29:17.403358",
+    "title": "Deadpool",
+    "volume": 1.0,
+    "reason": "Year gap: Filled avg year 2000, blank avg 2024 (gap 24y)"
+  },
+  {
+    "ts": "2026-07-09T14:36:28.356084",
+    "title": "Captain Marvel",
+    "volume": 10.0,
+    "reason": "24 issues not found on CV: [np.float64(26.0), np.float64(27.0), np.float64(28.0), np.float64(29.0), np.float64(30.0), np.float64(31.0), np.float64(32.0), np.float64(33.0), np.float64(34.0), np.float64(35.0)]"
+  },
+  {
+    "ts": "2026-07-09T14:51:12.252978",
+    "title": "Fantastic Four",
+    "volume": 5.0,
+    "reason": "1 issues not found on CV: [np.float64(648.0)]"
+  },
+  {
+    "ts": "2026-07-09T15:31:54.715450",
+    "title": "Black Panther",
+    "volume": 7.0,
+    "reason": "2 issues not found on CV: [np.float64(17.0), np.float64(23.0)]"
+  },
+  {
+    "ts": "2026-07-09T15:36:43.181205",
+    "title": "Detective Comics",
+    "volume": 1.0,
+    "reason": "36 issues not found on CV: [np.float64(934.0), np.float64(935.0), np.float64(936.0), np.float64(937.0), np.float64(938.0), np.float64(939.0), np.float64(940.0), np.float64(941.0), np.float64(942.0), np.float64(943.0)]"
+  },
+  {
+    "ts": "2026-07-09T15:37:24.562495",
+    "title": "Hulk",
+    "volume": 2.0,
+    "reason": "40 issues not found on CV: [np.float64(3.0), np.float64(4.0), np.float64(5.0), np.float64(6.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0), np.float64(11.0), np.float64(12.0)]"
+  },
+  {
+    "ts": "2026-07-09T15:37:24.586774",
+    "title": "Aquaman",
+    "volume": 1.0,
+    "reason": "Year gap: Filled avg year 2018, blank avg 2001 (gap 17y)"
+  },
+  {
+    "ts": "2026-07-09T15:37:24.600792",
+    "title": "Batman",
+    "volume": 1.0,
+    "reason": "Year gap: Filled avg year 2008, blank avg 2025 (gap 17y)"
+  },
+  {
+    "ts": "2026-07-09T15:38:47.251725",
+    "title": "Justice League Dark",
+    "volume": 1.0,
+    "reason": "28 issues not found on CV: [np.float64(0.0), np.float64(2.0), np.float64(3.0), np.float64(4.0), np.float64(5.0), np.float64(6.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0)]"
+  },
+  {
+    "ts": "2026-07-09T16:13:14.474114",
+    "title": "Captain America",
+    "volume": 7.0,
+    "reason": "12 issues not found on CV: [np.float64(622.0), np.float64(623.0), np.float64(624.0), np.float64(629.0), np.float64(633.0), np.float64(634.0), np.float64(635.0), np.float64(635.1), np.float64(636.0), np.float64(637.0)]"
+  },
+  {
+    "ts": "2026-07-09T16:40:46.996068",
+    "title": "Titans",
+    "volume": 1.0,
+    "reason": "30 issues not found on CV: [np.float64(1.0), np.float64(2.0), np.float64(3.0), np.float64(4.0), np.float64(5.0), np.float64(6.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0)]"
+  },
+  {
+    "ts": "2026-07-09T16:57:22.608120",
+    "title": "Wildcats: Version 3.0",
+    "volume": 1.0,
+    "reason": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-07-09T17:06:16.548584",
+    "title": "Guardians of the Galaxy",
+    "volume": 3.0,
+    "reason": "4 issues not found on CV: [np.float64(0.1), np.float64(26.0), np.float64(27.0), np.float64(2013.0)]"
+  },
+  {
+    "ts": "2026-07-09T17:40:33.234364",
+    "title": "Savage Avengers",
+    "volume": 7.0,
+    "reason": "1 issues not found on CV: [np.float64(30.0)]"
+  },
+  {
+    "ts": "2026-07-09T17:45:22.464496",
+    "title": "New Mutants",
+    "volume": 4.0,
+    "reason": "20 issues not found on CV: [np.float64(14.0), np.float64(15.0), np.float64(16.0), np.float64(17.0), np.float64(18.0), np.float64(19.0), np.float64(20.0), np.float64(21.0), np.float64(22.0), np.float64(23.0)]"
+  },
+  {
+    "ts": "2026-07-09T17:46:04.549576",
+    "title": "Shazam!",
+    "volume": 1.0,
+    "reason": "20 issues not found on CV: [np.float64(2.0), np.float64(3.0), np.float64(4.0), np.float64(5.0), np.float64(6.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0), np.float64(11.0)]"
+  },
+  {
+    "ts": "2026-07-09T17:47:06.084879",
+    "title": "X-Men",
+    "volume": 1.0,
+    "reason": "28 issues not found on CV: [np.float64(3.0), np.float64(4.0), np.float64(5.0), np.float64(6.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0), np.float64(12.0), np.float64(13.0)]"
+  },
+  {
+    "ts": "2026-07-09T17:49:32.019740",
+    "title": "Batman/Superman: World's Finest",
+    "volume": 4.0,
+    "reason": "29 issues not found on CV: [np.float64(5.0), np.float64(8.0), np.float64(9.0), np.float64(10.0), np.float64(11.0), np.float64(12.0), np.float64(13.0), np.float64(14.0), np.float64(15.0), np.float64(16.0)]"
+  },
+  {
+    "ts": "2026-07-09T18:11:40.569241",
+    "title": "Star Trek",
+    "volume": 1.0,
+    "reason": "1 issues not found on CV: [np.float64(500.0)]"
+  },
+  {
+    "ts": "2026-07-09T18:14:44.825258",
+    "title": "Wonder Woman",
+    "volume": 1.0,
+    "reason": "24 issues not found on CV: [np.float64(0.0), np.float64(50.0), np.float64(52.0), np.float64(53.0), np.float64(54.0), np.float64(55.0), np.float64(56.0), np.float64(57.0), np.float64(60.0), np.float64(61.0)]"
+  },
+  {
+    "ts": "2026-07-09T18:32:59.787940",
+    "title": "X-Force",
+    "volume": 6.0,
+    "reason": "12 issues not found on CV: [np.float64(29.0), np.float64(30.0), np.float64(31.0), np.float64(32.0), np.float64(33.0), np.float64(34.0), np.float64(39.0), np.float64(40.0), np.float64(41.0), np.float64(42.0)]"
+  },
+  {
+    "ts": "2026-07-09T18:54:49.913681",
+    "title": "Nova",
+    "volume": 5.0,
+    "reason": "1 issues not found on CV: [np.float64(100.0)]"
+  },
+  {
+    "ts": "2026-07-09T19:13:42.595253",
+    "title": "Spider-Man",
+    "volume": 1.0,
+    "reason": "6 issues not found on CV: [np.float64(234.0), np.float64(235.0), np.float64(237.0), np.float64(238.0), np.float64(239.0), np.float64(240.0)]"
+  },
+  {
+    "ts": "2026-07-09T20:02:59.764153",
+    "title": "Invincible Iron Man",
+    "volume": 2.0,
+    "reason": "4 issues not found on CV: [np.float64(79.0), np.float64(80.0), np.float64(81.0), np.float64(82.0)]"
+  },
+  {
+    "ts": "2026-07-09T20:12:19.005532",
+    "title": "Fantastic Four",
+    "volume": 1.0,
+    "reason": "3 issues not found on CV: [np.float64(413.0), np.float64(433.0), np.float64(593.0)]"
+  },
+  {
+    "ts": "2026-07-09T20:36:03.923974",
+    "title": "Batwoman",
+    "volume": 1.0,
+    "reason": "25 issues not found on CV: [np.float64(0.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0), np.float64(11.0), np.float64(12.0), np.float64(13.0), np.float64(14.0), np.float64(15.0)]"
+  },
+  {
+    "ts": "2026-07-09T20:38:07.754257",
+    "title": "Batwing",
+    "volume": 1.0,
+    "reason": "26 issues not found on CV: [np.float64(0.0), np.float64(6.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0), np.float64(11.0), np.float64(12.0), np.float64(13.0), np.float64(14.0)]"
+  },
+  {
+    "ts": "2026-07-09T20:49:26.111087",
+    "title": "X-Men Blue",
+    "volume": 1.0,
+    "reason": "28 issues not found on CV: [np.float64(2.0), np.float64(3.0), np.float64(4.0), np.float64(5.0), np.float64(6.0), np.float64(10.0), np.float64(11.0), np.float64(12.0), np.float64(13.0), np.float64(14.0)]"
+  },
+  {
+    "ts": "2026-07-09T21:25:33.218035",
+    "title": "Hawkman",
+    "volume": 1.0,
+    "reason": "2 issues not found on CV: [np.float64(8.0), np.float64(22.0)]"
+  },
+  {
+    "ts": "2026-07-09T22:04:03.266780",
+    "title": "Uncanny X-Men",
+    "volume": 1.0,
+    "reason": "25 issues not found on CV: [np.float64(5.0), np.float64(6.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0), np.float64(11.0), np.float64(12.0), np.float64(13.0), np.float64(14.0)]"
+  },
+  {
+    "ts": "2026-07-09T22:25:18.760345",
+    "title": "World's Finest",
+    "volume": 1.0,
+    "reason": "23 issues not found on CV: [np.float64(5.0), np.float64(6.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0), np.float64(11.0), np.float64(12.0), np.float64(13.0), np.float64(14.0)]"
+  },
+  {
+    "ts": "2026-07-09T22:36:42.522783",
+    "title": "Captain America",
+    "volume": 6.0,
+    "reason": "21 issues not found on CV: [np.float64(34.0), np.float64(35.0), np.float64(36.0), np.float64(37.0), np.float64(39.0), np.float64(40.0), np.float64(41.0), np.float64(42.0), np.float64(43.0), np.float64(44.0)]"
+  },
+  {
+    "ts": "2026-07-09T23:02:18.810320",
+    "title": "Star Trek: Defiant",
+    "volume": 1.0,
+    "reason": "1 issues not found on CV: [np.float64(5.0)]"
+  },
+  {
+    "ts": "2026-07-09T23:12:32.770184",
+    "title": "X-Men Gold",
+    "volume": 1.0,
+    "reason": "26 issues not found on CV: [np.float64(1.0), np.float64(2.0), np.float64(3.0), np.float64(4.0), np.float64(5.0), np.float64(6.0), np.float64(9.0), np.float64(10.0), np.float64(11.0), np.float64(12.0)]"
+  },
+  {
+    "ts": "2026-07-09T23:32:18.911996",
+    "title": "X-Force",
+    "volume": 3.0,
+    "reason": "22 issues not found on CV: [np.float64(94.0), np.float64(95.0), np.float64(96.0), np.float64(97.0), np.float64(98.0), np.float64(99.0), np.float64(101.0), np.float64(102.0), np.float64(103.0), np.float64(104.0)]"
+  },
+  {
+    "ts": "2026-07-09T23:47:58.016578",
+    "title": "Ultimate Spider-Man",
+    "volume": 1.0,
+    "reason": "5 issues not found on CV: [np.float64(16.0), np.float64(18.0), np.float64(19.0), np.float64(92.0), np.float64(125.0)]"
+  },
+  {
+    "ts": "2026-07-10T10:02:34.229365",
+    "title": "Justice League",
+    "volume": 1.0,
+    "reason": "68 issues not found on CV: [np.float64(0.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0), np.float64(11.0), np.float64(12.0), np.float64(13.0), np.float64(14.0), np.float64(15.0)]"
+  },
+  {
+    "ts": "2026-07-11T17:37:32.284782",
+    "title": "Batgirl",
+    "volume": 1.0,
+    "reason": "8 issues not found on CV: [np.float64(0.0), np.float64(7.0), np.float64(9.0), np.float64(38.0), np.float64(43.0), np.float64(47.0), np.float64(48.0), np.float64(57.0)]"
+  },
+  {
+    "ts": "2026-07-11T18:29:16.617486",
+    "title": "Robin",
+    "volume": 2.0,
+    "reason": "68 issues not found on CV: [np.float64(7.0), np.float64(68.0), np.float64(69.0), np.float64(71.0), np.float64(72.0), np.float64(73.0), np.float64(74.0), np.float64(75.0), np.float64(76.0), np.float64(77.0)]"
+  },
+  {
+    "ts": "2026-07-11T19:23:09.299173",
+    "title": "Fantastic Four",
+    "volume": 3.0,
+    "reason": "6 issues not found on CV: [np.float64(499.0), np.float64(510.0), np.float64(512.0), np.float64(563.0), np.float64(568.0), np.float64(571.0)]"
   }
 ]
