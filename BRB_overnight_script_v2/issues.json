@@ -6040,5 +6040,605 @@
     "category": "SKIPPED_LOW_CONFIDENCE",
     "title": "A Death in the Family: Robin Lives!",
     "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-07-08T21:57:40.197775",
+    "category": "FILLED",
+    "title": "Birds of Prey",
+    "detail": "112/112 rows filled via Comic Vine. Artists: 91. Not found: 0."
+  },
+  {
+    "ts": "2026-07-08T22:00:08.285698",
+    "category": "FILLED",
+    "title": "Justice League",
+    "detail": "16/97 rows filled via Comic Vine. Artists: 6. Not found: 68."
+  },
+  {
+    "ts": "2026-07-08T22:30:14.962857",
+    "category": "FILLED",
+    "title": "Ultimate X-Men",
+    "detail": "85/85 rows filled via Comic Vine. Artists: 72. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T01:23:26.359170",
+    "category": "FILLED",
+    "title": "Batgirl",
+    "detail": "80/85 rows filled via Comic Vine. Artists: 67. Not found: 4."
+  },
+  {
+    "ts": "2026-07-09T01:50:25.274544",
+    "category": "FILLED",
+    "title": "JLA",
+    "detail": "78/78 rows filled via Comic Vine. Artists: 61. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T02:14:39.111526",
+    "category": "FILLED",
+    "title": "Exiles",
+    "detail": "71/71 rows filled via Comic Vine. Artists: 69. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T02:14:59.896159",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Robin",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-07-09T11:10:42.774518",
+    "category": "FILLED",
+    "title": "Fantastic Four",
+    "detail": "61/62 rows filled via Comic Vine. Artists: 46. Not found: 1."
+  },
+  {
+    "ts": "2026-07-09T11:28:08.017159",
+    "category": "FILLED",
+    "title": "Black Panther",
+    "detail": "59/59 rows filled via Comic Vine. Artists: 43. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T11:40:50.299656",
+    "category": "FILLED",
+    "title": "Justice League of America",
+    "detail": "40/58 rows filled via Comic Vine. Artists: 36. Not found: 18."
+  },
+  {
+    "ts": "2026-07-09T12:01:03.168977",
+    "category": "FILLED",
+    "title": "Ultimate Fantastic Four",
+    "detail": "58/58 rows filled via Comic Vine. Artists: 48. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T12:11:38.644309",
+    "category": "FILLED",
+    "title": "Captain America",
+    "detail": "46/56 rows filled via Comic Vine. Artists: 30. Not found: 10."
+  },
+  {
+    "ts": "2026-07-09T12:12:19.902928",
+    "category": "FILLED",
+    "title": "Uncanny X-Men",
+    "detail": "1/56 rows filled via Comic Vine. Artists: 1. Not found: 55."
+  },
+  {
+    "ts": "2026-07-09T12:43:34.438580",
+    "category": "FILLED",
+    "title": "Young Justice",
+    "detail": "52/54 rows filled via Comic Vine. Artists: 49. Not found: 2."
+  },
+  {
+    "ts": "2026-07-09T12:57:54.380135",
+    "category": "FILLED",
+    "title": "Wonder Woman",
+    "detail": "44/53 rows filled via Comic Vine. Artists: 36. Not found: 9."
+  },
+  {
+    "ts": "2026-07-09T13:12:15.708830",
+    "category": "FILLED",
+    "title": "Miles Morales: Spider-Man",
+    "detail": "53/53 rows filled via Comic Vine. Artists: 12. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T13:13:17.765017",
+    "category": "FILLED",
+    "title": "X-Men",
+    "detail": "6/52 rows filled via Comic Vine. Artists: 2. Not found: 33."
+  },
+  {
+    "ts": "2026-07-09T13:17:45.007852",
+    "category": "FILLED",
+    "title": "Avengers",
+    "detail": "12/52 rows filled via Comic Vine. Artists: 12. Not found: 39."
+  },
+  {
+    "ts": "2026-07-09T13:32:05.521326",
+    "category": "FILLED",
+    "title": "Outsiders",
+    "detail": "51/51 rows filled via Comic Vine. Artists: 37. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T14:08:46.320418",
+    "category": "FILLED",
+    "title": "New Avengers",
+    "detail": "47/51 rows filled via Comic Vine. Artists: 34. Not found: 3."
+  },
+  {
+    "ts": "2026-07-09T14:17:40.262371",
+    "category": "FILLED",
+    "title": "Captain America",
+    "detail": "30/51 rows filled via Comic Vine. Artists: 25. Not found: 21."
+  },
+  {
+    "ts": "2026-07-09T14:19:02.166043",
+    "category": "FILLED",
+    "title": "Justice League",
+    "detail": "3/48 rows filled via Comic Vine. Artists: 3. Not found: 45."
+  },
+  {
+    "ts": "2026-07-09T14:29:17.387199",
+    "category": "FILLED",
+    "title": "Moon Knight",
+    "detail": "47/47 rows filled via Comic Vine. Artists: 10. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T14:29:17.400442",
+    "category": "SKIPPED_COLLISION",
+    "title": "Deadpool",
+    "detail": "Filled avg year 2000, blank avg 2024 (gap 24y)"
+  },
+  {
+    "ts": "2026-07-09T14:36:28.358595",
+    "category": "FILLED",
+    "title": "Captain Marvel",
+    "detail": "21/47 rows filled via Comic Vine. Artists: 19. Not found: 24."
+  },
+  {
+    "ts": "2026-07-09T14:51:12.255879",
+    "category": "FILLED",
+    "title": "Fantastic Four",
+    "detail": "44/45 rows filled via Comic Vine. Artists: 41. Not found: 1."
+  },
+  {
+    "ts": "2026-07-09T14:51:12.276983",
+    "category": "BOX_OVERAGE",
+    "title": "assert_box_capacities",
+    "detail": "BOX CAPACITY WARNING at checkpoint_25:\n  Box 3: 257 comics (capacity 240, overage +17)\n  Box 4: 246 comics (capacity 240, overage +6)\n  Box 10: 254 comics (capacity 240, overage +14)\n  Box 15: 202 comics (capacity 150, overage +52)\n  Box 23: 160 comics (capacity 155, overage +5)\n  Box 85: 162 comics (capacity 155, overage +7)"
+  },
+  {
+    "ts": "2026-07-09T15:06:43.758924",
+    "category": "FILLED",
+    "title": "The Titans",
+    "detail": "44/44 rows filled via Comic Vine. Artists: 39. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T15:31:54.719679",
+    "category": "FILLED",
+    "title": "Black Panther",
+    "detail": "39/41 rows filled via Comic Vine. Artists: 19. Not found: 2."
+  },
+  {
+    "ts": "2026-07-09T15:36:43.186039",
+    "category": "FILLED",
+    "title": "Detective Comics",
+    "detail": "5/41 rows filled via Comic Vine. Artists: 5. Not found: 36."
+  },
+  {
+    "ts": "2026-07-09T15:37:24.567940",
+    "category": "FILLED",
+    "title": "Hulk",
+    "detail": "1/41 rows filled via Comic Vine. Artists: 1. Not found: 40."
+  },
+  {
+    "ts": "2026-07-09T15:37:24.583721",
+    "category": "SKIPPED_COLLISION",
+    "title": "Aquaman",
+    "detail": "Filled avg year 2018, blank avg 2001 (gap 17y)"
+  },
+  {
+    "ts": "2026-07-09T15:37:24.597887",
+    "category": "SKIPPED_COLLISION",
+    "title": "Batman",
+    "detail": "Filled avg year 2008, blank avg 2025 (gap 17y)"
+  },
+  {
+    "ts": "2026-07-09T15:38:47.261147",
+    "category": "FILLED",
+    "title": "Justice League Dark",
+    "detail": "1/40 rows filled via Comic Vine. Artists: 0. Not found: 28."
+  },
+  {
+    "ts": "2026-07-09T15:52:27.901401",
+    "category": "FILLED",
+    "title": "Red Hood and the Outlaws",
+    "detail": "39/39 rows filled via Comic Vine. Artists: 20. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T16:05:06.043300",
+    "category": "FILLED",
+    "title": "Impulse",
+    "detail": "39/39 rows filled via Comic Vine. Artists: 25. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T16:13:14.478266",
+    "category": "FILLED",
+    "title": "Captain America",
+    "detail": "27/39 rows filled via Comic Vine. Artists: 23. Not found: 12."
+  },
+  {
+    "ts": "2026-07-09T16:26:53.716954",
+    "category": "FILLED",
+    "title": "Fantastic Four",
+    "detail": "38/38 rows filled via Comic Vine. Artists: 38. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T16:40:25.902495",
+    "category": "FILLED",
+    "title": "The Legion",
+    "detail": "37/37 rows filled via Comic Vine. Artists: 37. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T16:40:47.008906",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Titans",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-07-09T16:49:40.757081",
+    "category": "FILLED",
+    "title": "Marauders",
+    "detail": "36/36 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T16:57:21.592385",
+    "category": "FILLED",
+    "title": "Green Lantern",
+    "detail": "35/35 rows filled via Comic Vine. Artists: 16. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T16:57:22.591549",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Wildcats: Version 3.0",
+    "detail": "CV lookup failed: No volumes found"
+  },
+  {
+    "ts": "2026-07-09T17:06:16.552478",
+    "category": "FILLED",
+    "title": "Guardians of the Galaxy",
+    "detail": "31/35 rows filled via Comic Vine. Artists: 20. Not found: 4."
+  },
+  {
+    "ts": "2026-07-09T17:18:18.837036",
+    "category": "FILLED",
+    "title": "Superman/Batman",
+    "detail": "35/35 rows filled via Comic Vine. Artists: 29. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T17:30:38.401221",
+    "category": "FILLED",
+    "title": "Elektra",
+    "detail": "35/35 rows filled via Comic Vine. Artists: 23. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T17:40:33.237964",
+    "category": "FILLED",
+    "title": "Savage Avengers",
+    "detail": "34/35 rows filled via Comic Vine. Artists: 1. Not found: 1."
+  },
+  {
+    "ts": "2026-07-09T17:45:22.467389",
+    "category": "FILLED",
+    "title": "New Mutants",
+    "detail": "14/34 rows filled via Comic Vine. Artists: 13. Not found: 20."
+  },
+  {
+    "ts": "2026-07-09T17:46:04.556856",
+    "category": "FILLED",
+    "title": "Shazam!",
+    "detail": "4/34 rows filled via Comic Vine. Artists: 0. Not found: 20."
+  },
+  {
+    "ts": "2026-07-09T17:47:06.087414",
+    "category": "FILLED",
+    "title": "X-Men",
+    "detail": "2/34 rows filled via Comic Vine. Artists: 2. Not found: 28."
+  },
+  {
+    "ts": "2026-07-09T17:49:32.025165",
+    "category": "FILLED",
+    "title": "Batman/Superman: World's Finest",
+    "detail": "5/34 rows filled via Comic Vine. Artists: 0. Not found: 29."
+  },
+  {
+    "ts": "2026-07-09T18:00:09.173669",
+    "category": "FILLED",
+    "title": "Earth 2",
+    "detail": "34/34 rows filled via Comic Vine. Artists: 29. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T18:11:40.572789",
+    "category": "FILLED",
+    "title": "Star Trek",
+    "detail": "32/33 rows filled via Comic Vine. Artists: 30. Not found: 1."
+  },
+  {
+    "ts": "2026-07-09T18:14:44.828326",
+    "category": "FILLED",
+    "title": "Wonder Woman",
+    "detail": "9/33 rows filled via Comic Vine. Artists: 5. Not found: 24."
+  },
+  {
+    "ts": "2026-07-09T18:14:44.835562",
+    "category": "BOX_OVERAGE",
+    "title": "assert_box_capacities",
+    "detail": "BOX CAPACITY WARNING at checkpoint_50:\n  Box 3: 257 comics (capacity 240, overage +17)\n  Box 4: 246 comics (capacity 240, overage +6)\n  Box 10: 254 comics (capacity 240, overage +14)\n  Box 15: 202 comics (capacity 150, overage +52)\n  Box 23: 160 comics (capacity 155, overage +5)\n  Box 85: 162 comics (capacity 155, overage +7)"
+  },
+  {
+    "ts": "2026-07-09T18:25:49.241116",
+    "category": "FILLED",
+    "title": "Aquaman",
+    "detail": "33/33 rows filled via Comic Vine. Artists: 31. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T18:32:59.791885",
+    "category": "FILLED",
+    "title": "X-Force",
+    "detail": "20/32 rows filled via Comic Vine. Artists: 8. Not found: 12."
+  },
+  {
+    "ts": "2026-07-09T18:44:55.774901",
+    "category": "FILLED",
+    "title": "Savage Dragon",
+    "detail": "32/32 rows filled via Comic Vine. Artists: 28. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T18:54:49.917964",
+    "category": "FILLED",
+    "title": "Nova",
+    "detail": "31/32 rows filled via Comic Vine. Artists: 23. Not found: 1."
+  },
+  {
+    "ts": "2026-07-09T19:06:10.775918",
+    "category": "FILLED",
+    "title": "Captain America",
+    "detail": "32/32 rows filled via Comic Vine. Artists: 32. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T19:13:42.599097",
+    "category": "FILLED",
+    "title": "Spider-Man",
+    "detail": "26/32 rows filled via Comic Vine. Artists: 5. Not found: 6."
+  },
+  {
+    "ts": "2026-07-09T20:02:59.767345",
+    "category": "FILLED",
+    "title": "Invincible Iron Man",
+    "detail": "27/31 rows filled via Comic Vine. Artists: 3. Not found: 4."
+  },
+  {
+    "ts": "2026-07-09T20:12:19.007984",
+    "category": "FILLED",
+    "title": "Fantastic Four",
+    "detail": "28/31 rows filled via Comic Vine. Artists: 22. Not found: 3."
+  },
+  {
+    "ts": "2026-07-09T20:22:34.565346",
+    "category": "FILLED",
+    "title": "Green Arrow",
+    "detail": "31/31 rows filled via Comic Vine. Artists: 26. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T20:33:40.366082",
+    "category": "FILLED",
+    "title": "Firefly",
+    "detail": "31/31 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T20:36:03.927834",
+    "category": "FILLED",
+    "title": "Batwoman",
+    "detail": "6/31 rows filled via Comic Vine. Artists: 2. Not found: 25."
+  },
+  {
+    "ts": "2026-07-09T20:38:07.756561",
+    "category": "FILLED",
+    "title": "Batwing",
+    "detail": "5/31 rows filled via Comic Vine. Artists: 1. Not found: 26."
+  },
+  {
+    "ts": "2026-07-09T20:48:44.345226",
+    "category": "FILLED",
+    "title": "Batman and Robin",
+    "detail": "30/30 rows filled via Comic Vine. Artists: 29. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T20:49:26.119259",
+    "category": "FILLED",
+    "title": "X-Men Blue",
+    "detail": "1/30 rows filled via Comic Vine. Artists: 0. Not found: 28."
+  },
+  {
+    "ts": "2026-07-09T20:58:59.220589",
+    "category": "FILLED",
+    "title": "Green Lantern",
+    "detail": "30/30 rows filled via Comic Vine. Artists: 26. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T21:25:33.220372",
+    "category": "FILLED",
+    "title": "Hawkman",
+    "detail": "27/29 rows filled via Comic Vine. Artists: 27. Not found: 2."
+  },
+  {
+    "ts": "2026-07-09T21:35:51.187654",
+    "category": "FILLED",
+    "title": "Gen 13",
+    "detail": "29/29 rows filled via Comic Vine. Artists: 28. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T21:45:31.547125",
+    "category": "FILLED",
+    "title": "Astonishing X-Men",
+    "detail": "29/29 rows filled via Comic Vine. Artists: 8. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T21:54:05.950334",
+    "category": "FILLED",
+    "title": "Black Panther",
+    "detail": "28/28 rows filled via Comic Vine. Artists: 19. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T22:03:21.765260",
+    "category": "FILLED",
+    "title": "Suicide Squad",
+    "detail": "27/27 rows filled via Comic Vine. Artists: 8. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T22:04:03.274247",
+    "category": "FILLED",
+    "title": "Uncanny X-Men",
+    "detail": "1/27 rows filled via Comic Vine. Artists: 1. Not found: 25."
+  },
+  {
+    "ts": "2026-07-09T22:13:41.248532",
+    "category": "FILLED",
+    "title": "Astonishing X-Men",
+    "detail": "27/27 rows filled via Comic Vine. Artists: 5. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T22:23:36.320002",
+    "category": "FILLED",
+    "title": "Nightwing",
+    "detail": "27/27 rows filled via Comic Vine. Artists: 27. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T22:25:18.762539",
+    "category": "FILLED",
+    "title": "World's Finest",
+    "detail": "4/27 rows filled via Comic Vine. Artists: 2. Not found: 23."
+  },
+  {
+    "ts": "2026-07-09T22:34:11.274760",
+    "category": "FILLED",
+    "title": "Secret Avengers",
+    "detail": "27/27 rows filled via Comic Vine. Artists: 1. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T22:34:11.278594",
+    "category": "BOX_OVERAGE",
+    "title": "assert_box_capacities",
+    "detail": "BOX CAPACITY WARNING at checkpoint_75:\n  Box 3: 257 comics (capacity 240, overage +17)\n  Box 4: 246 comics (capacity 240, overage +6)\n  Box 10: 254 comics (capacity 240, overage +14)\n  Box 15: 202 comics (capacity 150, overage +52)\n  Box 23: 160 comics (capacity 155, overage +5)\n  Box 85: 162 comics (capacity 155, overage +7)"
+  },
+  {
+    "ts": "2026-07-09T22:36:42.525291",
+    "category": "FILLED",
+    "title": "Captain America",
+    "detail": "6/27 rows filled via Comic Vine. Artists: 6. Not found: 21."
+  },
+  {
+    "ts": "2026-07-09T22:46:15.859606",
+    "category": "FILLED",
+    "title": "Old Man Logan",
+    "detail": "27/27 rows filled via Comic Vine. Artists: 0. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T23:02:18.817138",
+    "category": "FILLED",
+    "title": "Star Trek: Defiant",
+    "detail": "26/27 rows filled via Comic Vine. Artists: 1. Not found: 1."
+  },
+  {
+    "ts": "2026-07-09T23:11:51.086694",
+    "category": "FILLED",
+    "title": "Star Trek",
+    "detail": "27/27 rows filled via Comic Vine. Artists: 27. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T23:12:32.780978",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "X-Men Gold",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-07-09T23:21:45.111379",
+    "category": "FILLED",
+    "title": "Buffy the Vampire Slayer",
+    "detail": "26/26 rows filled via Comic Vine. Artists: 25. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T23:30:36.549438",
+    "category": "FILLED",
+    "title": "Thor",
+    "detail": "26/26 rows filled via Comic Vine. Artists: 20. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T23:32:18.914369",
+    "category": "FILLED",
+    "title": "X-Force",
+    "detail": "4/26 rows filled via Comic Vine. Artists: 1. Not found: 22."
+  },
+  {
+    "ts": "2026-07-09T23:40:48.055207",
+    "category": "FILLED",
+    "title": "Black Panther",
+    "detail": "25/25 rows filled via Comic Vine. Artists: 20. Not found: 0."
+  },
+  {
+    "ts": "2026-07-09T23:47:58.019048",
+    "category": "FILLED",
+    "title": "Ultimate Spider-Man",
+    "detail": "20/25 rows filled via Comic Vine. Artists: 8. Not found: 5."
+  },
+  {
+    "ts": "2026-07-09T23:56:49.472358",
+    "category": "FILLED",
+    "title": "Animal Man",
+    "detail": "25/25 rows filled via Comic Vine. Artists: 11. Not found: 0."
+  },
+  {
+    "ts": "2026-07-10T10:00:10.406949",
+    "category": "FILLED",
+    "title": "Birds of Prey",
+    "detail": "112/112 rows filled via Comic Vine. Artists: 91. Not found: 0."
+  },
+  {
+    "ts": "2026-07-10T10:02:34.232097",
+    "category": "FILLED",
+    "title": "Justice League",
+    "detail": "16/97 rows filled via Comic Vine. Artists: 6. Not found: 68."
+  },
+  {
+    "ts": "2026-07-10T10:32:33.492089",
+    "category": "FILLED",
+    "title": "Ultimate X-Men",
+    "detail": "85/85 rows filled via Comic Vine. Artists: 72. Not found: 0."
+  },
+  {
+    "ts": "2026-07-11T17:37:32.287100",
+    "category": "FILLED",
+    "title": "Batgirl",
+    "detail": "75/85 rows filled via Comic Vine. Artists: 63. Not found: 8."
+  },
+  {
+    "ts": "2026-07-11T18:04:39.534025",
+    "category": "FILLED",
+    "title": "JLA",
+    "detail": "78/78 rows filled via Comic Vine. Artists: 61. Not found: 0."
+  },
+  {
+    "ts": "2026-07-11T18:28:55.518913",
+    "category": "FILLED",
+    "title": "Exiles",
+    "detail": "71/71 rows filled via Comic Vine. Artists: 69. Not found: 0."
+  },
+  {
+    "ts": "2026-07-11T18:29:16.630389",
+    "category": "SKIPPED_LOW_CONFIDENCE",
+    "title": "Robin",
+    "detail": "No writer credits found on Comic Vine for any issue."
+  },
+  {
+    "ts": "2026-07-11T19:23:09.301689",
+    "category": "FILLED",
+    "title": "Fantastic Four",
+    "detail": "56/62 rows filled via Comic Vine. Artists: 42. Not found: 6."
   }
 ]
