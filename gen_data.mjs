@@ -1,7 +1,29 @@
 import { writeFileSync, readdirSync, statSync, copyFileSync, existsSync } from 'fs';
+import { execSync } from 'child_process';
 import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 const ExcelJS = require('exceljs');
+
+// ── Refuse to reingest while the overnight fill script is running ─────────────
+// It holds writer/artist fills in memory and only checkpoints every 25 titles
+// (to a NEW file, not the source xlsx) - reingesting mid-run just re-reads the
+// stale xlsx, and killing it to "fix" that destroys unsaved in-memory progress.
+try {
+  const pids = execSync('pgrep -f run_overnight_v2.py', { encoding: 'utf8' }).trim();
+  if (pids) {
+    console.error('\n⚠ REFUSING TO REINGEST — run_overnight_v2.py is currently running.\n');
+    console.error(`  PID(s): ${pids.split('\n').join(', ')}`);
+    console.error('  Reingesting now would just re-read the stale xlsx (the running');
+    console.error('  script has not written its fills yet - it only checkpoints every');
+    console.error('  25 titles, to a new file, not this one).\n');
+    console.error('  Before killing it: check how many titles it has processed against');
+    console.error('  its checkpoint interval, or you will lose unsaved progress.\n');
+    process.exit(1);
+  }
+} catch {
+  // pgrep exits non-zero (and throws) when no process matches - that's the
+  // normal "nothing running" case, not an error.
+}
 
 // Auto-detect the newest comics_inventory*.xlsx in attached_assets/ (supports X_ prefix)
 const xlsxFiles = readdirSync('attached_assets')
