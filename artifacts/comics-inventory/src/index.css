@@ -183,7 +183,7 @@ body {
 
 .tab-group-label {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 0.875rem; letter-spacing: 1.5px;
-  text-transform: uppercase; color: var(--muted2); opacity: 0.55;
+  color: var(--muted2); opacity: 0.55;
   padding: 0 8px 0 14px; flex-shrink: 0; white-space: nowrap;
   display: flex; align-items: center;
   border-left: 1px solid var(--border);
@@ -629,7 +629,7 @@ body {
 }
 .timeline-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
 .timeline-days {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 1.75rem; letter-spacing: 1px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 0.875rem; font-weight: 700; letter-spacing: 1px;
   line-height: 1; min-width: 44px; text-align: center;
 }
 .timeline-body { flex: 1; min-width: 0; }

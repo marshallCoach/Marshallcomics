@@ -39,6 +39,8 @@ function KeyCard({ comic, flip }: { comic: KeyComic; flip: boolean }) {
     <div style={{ position: "relative", minHeight: 280, background: "#f0eeeb", flexShrink: 0, width: "42%" }}>
       <CoverImage
         comic={comic}
+        width={300}
+        height={450}
         style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}
       />
       {nm >= 1 && (
@@ -88,7 +90,7 @@ function KeyCard({ comic, flip }: { comic: KeyComic; flip: boolean }) {
       </div>
 
       <div>
-        <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "clamp(18px, 2.5vw, 26px)", letterSpacing: "2px", color: "var(--text)", lineHeight: 1.1 }}>
+        <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", fontWeight: 700, letterSpacing: "2px", color: "var(--text)", lineHeight: 1.1 }}>
           {comic.Title}
         </div>
         <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "2px", color: "var(--red)", marginTop: 2 }}>
@@ -206,7 +208,7 @@ export default function KeyCatalog() {
       {/* Header */}
       <div style={{ marginBottom: 24 }}>
         <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "4px", color: "var(--red)", marginBottom: 4 }}>BLACKREADBROWN COLLECTION</div>
-        <h1 style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "clamp(36px, 6vw, 64px)", letterSpacing: "4px", color: "var(--text)", lineHeight: 1, marginBottom: 8 }}>KEY ISSUE CATALOG</h1>
+        <h1 style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "1.75rem", fontWeight: 700, letterSpacing: "4px", color: "var(--text)", lineHeight: 1, marginBottom: 8 }}>KEY ISSUE CATALOG</h1>
         <div style={{ display: "flex", gap: 24, flexWrap: "wrap", marginTop: 12 }}>
           {[
             [ALL_KEYS.length.toLocaleString(), "Key Issues"],

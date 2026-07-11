@@ -89,6 +89,8 @@ function CoverCard({
     <div style={{ position: "relative", minHeight: 300, background: "#1a1628", flexShrink: 0, width: "42%" }}>
       <CoverImage
         comic={comic}
+        width={300}
+        height={450}
         style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}
       />
       {bid >= 1 && (
@@ -157,7 +159,7 @@ function CoverCard({
       </div>
 
       <div>
-        <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "clamp(18px, 2.2vw, 24px)", letterSpacing: "2px", color: "var(--text)", lineHeight: 1.1 }}>
+        <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", fontWeight: 700, letterSpacing: "2px", color: "var(--text)", lineHeight: 1.1 }}>
           {comic.Title}
         </div>
         <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "2px", color: "var(--red)", marginTop: 2 }}>
@@ -521,7 +523,7 @@ export default function CoverCatalog() {
       <div style={{ marginBottom: 20 }}>
         <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "4px", color: "var(--red)", marginBottom: 4 }}>BLACKREADBROWN COLLECTION</div>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: 12 }}>
-          <h1 style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "clamp(36px, 6vw, 64px)", letterSpacing: "4px", color: "var(--text)", lineHeight: 1, marginBottom: 0 }}>COVER ART CATALOG</h1>
+          <h1 style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "1.75rem", fontWeight: 700, letterSpacing: "4px", color: "var(--text)", lineHeight: 1, marginBottom: 0 }}>COVER ART CATALOG</h1>
           {flagCount > 0 && (
             <button onClick={() => setShowModal(true)} style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1.5px", padding: "8px 16px", background: "#c8102e", color: "#fff", border: "none", borderRadius: 6, cursor: "pointer", display: "flex", alignItems: "center", gap: 6, alignSelf: "center", boxShadow: "0 2px 8px rgba(200,16,46,0.3)" }}>
               🚩 {flagCount} INCORRECT COVER{flagCount !== 1 ? "S" : ""} FLAGGED
