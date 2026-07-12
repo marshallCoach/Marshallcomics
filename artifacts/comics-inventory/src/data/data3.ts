@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_0408_0030_VALIDATED.xlsx  |  Generated: 2026-07-11
+// Source: comics_inventory_0408_0030_VALIDATED.xlsx  |  Generated: 2026-07-12
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -40,7 +40,7 @@ export const DATA3: {
     ccBoxes: CatalogComic[];
   };
 } = {
-  generatedAt: "2026-07-11",
+  generatedAt: "2026-07-12",
   comics: [
   {
     Title: `Barack Obama: Presidential Material`, Issue: `1`, Publisher: `IDW`,

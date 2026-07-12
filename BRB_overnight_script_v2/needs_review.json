@@ -3700,5 +3700,47 @@
     "title": "Fantastic Four",
     "volume": 3.0,
     "reason": "6 issues not found on CV: [np.float64(499.0), np.float64(510.0), np.float64(512.0), np.float64(563.0), np.float64(568.0), np.float64(571.0)]"
+  },
+  {
+    "ts": "2026-07-11T20:24:12.977379",
+    "title": "Justice League",
+    "volume": 1.0,
+    "reason": "68 issues not found on CV: [np.float64(0.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0), np.float64(11.0), np.float64(12.0), np.float64(13.0), np.float64(14.0), np.float64(15.0)]"
+  },
+  {
+    "ts": "2026-07-11T21:14:44.910072",
+    "title": "Ultimate X-Men",
+    "volume": 1.0,
+    "reason": "3 issues not found on CV: [np.float64(34.0), np.float64(38.0), np.float64(47.0)]"
+  },
+  {
+    "ts": "2026-07-11T21:39:11.821939",
+    "title": "Batgirl",
+    "volume": 1.0,
+    "reason": "1 issues not found on CV: [np.float64(0.0)]"
+  },
+  {
+    "ts": "2026-07-11T22:46:12.664488",
+    "title": "JLA",
+    "volume": 1.0,
+    "reason": "6 issues not found on CV: [np.float64(31.0), np.float64(49.0), np.float64(53.0), np.float64(76.0), np.float64(98.0), np.float64(105.0)]"
+  },
+  {
+    "ts": "2026-07-11T23:10:47.220102",
+    "title": "Robin",
+    "volume": 2.0,
+    "reason": "68 issues not found on CV: [np.float64(7.0), np.float64(68.0), np.float64(69.0), np.float64(71.0), np.float64(72.0), np.float64(73.0), np.float64(74.0), np.float64(75.0), np.float64(76.0), np.float64(77.0)]"
+  },
+  {
+    "ts": "2026-07-11T23:31:35.207235",
+    "title": "Fantastic Four",
+    "volume": 3.0,
+    "reason": "1 issues not found on CV: [np.float64(499.0)]"
+  },
+  {
+    "ts": "2026-07-12T17:02:47.021062",
+    "title": "Justice League of America",
+    "volume": 2.0,
+    "reason": "18 issues not found on CV: [np.float64(100.0), np.float64(106.0), np.float64(110.0), np.float64(111.0), np.float64(112.0), np.float64(113.0), np.float64(114.0), np.float64(115.0), np.float64(116.0), np.float64(117.0)]"
   }
 ]
