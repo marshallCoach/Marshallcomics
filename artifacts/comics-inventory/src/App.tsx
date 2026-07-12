@@ -35,7 +35,7 @@ import EbayPipeline from "@/pages/EbayPipeline";
 import OpsReference from "@/pages/OpsReference";
 import EbayListingGuide from "@/pages/EbayListingGuide";
 import PasswordGate from "@/components/PasswordGate";
-import { BookOpen, Boxes, Image, Briefcase } from "lucide-react";
+import { BookOpen, Boxes, Wrench, Image, Briefcase } from "lucide-react";
 
 type TabId =
   | "summary" | "everything" | "collection" | "boxkeys" | "stats" | "runs" | "dataview"
@@ -69,15 +69,21 @@ const NAV = [
     ],
   },
   {
+    id: "boxes",
+    label: "Boxes",
+    tabs: [
+      { id: "boxvisual",   label: "Box View" },
+      { id: "boxkeys",     label: "Box Keys" },
+      { id: "boxlabels",   label: "Box Labels" },
+      { id: "boxquest",    label: "Box Quest" },
+      { id: "boxmap",      label: "Box Map" },
+      { id: "hunting",     label: "Box Hunt" },
+    ],
+  },
+  {
     id: "organisation",
     label: "Organisation",
     tabs: [
-      { id: "boxvisual",   label: "Box View",   group: "Boxes" },
-      { id: "boxkeys",     label: "Box Keys",   group: "Boxes" },
-      { id: "boxlabels",   label: "Box Labels", group: "Boxes" },
-      { id: "boxquest",    label: "Box Quest",  group: "Boxes" },
-      { id: "boxmap",      label: "Box Map",    group: "Boxes" },
-      { id: "hunting",     label: "Box Hunt",   group: "Boxes" },
       { id: "duplicates",    label: "Duplicates", group: "Dupe Tools" },
       { id: "dupchecklist",  label: "Dup Hunt",   group: "Dupe Tools" },
       { id: "orgpath",           label: "Org Path",           group: "Ops & Docs" },
@@ -115,7 +121,8 @@ type SectionId = (typeof NAV)[number]["id"];
 
 const SECTION_ICONS: Record<SectionId, React.ComponentType<{ size?: number }>> = {
   inventory: BookOpen,
-  organisation: Boxes,
+  boxes: Boxes,
+  organisation: Wrench,
   catalog: Image,
   business: Briefcase,
 };
