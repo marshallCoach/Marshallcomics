@@ -22,7 +22,8 @@ function loadOverride(): Pick<typeof _DATA3, "comics" | "boxes"> | null {
 const override = loadOverride();
 
 export const DATA = {
-  comics:   override?.comics   ?? _DATA3.comics,
-  boxes:    override?.boxes    ?? _DATA3.boxes,
-  catalogs: _DATA3.catalogs,   // always from static build
+  comics:      override?.comics   ?? _DATA3.comics,
+  boxes:       override?.boxes    ?? _DATA3.boxes,
+  catalogs:    _DATA3.catalogs,   // always from static build
+  generatedAt: _DATA3.generatedAt,
 };

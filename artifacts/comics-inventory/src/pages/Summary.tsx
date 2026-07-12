@@ -18,9 +18,45 @@ const whatnotCount = comics.filter(c => (c.Platform || "").toUpperCase().include
 const ebayCount    = comics.filter(c => (c.Platform || "").toUpperCase() === "EBAY").length;
 const tfCount      = comics.filter(c => !!(c.Terrificon || "").trim()).length;
 
-// ── Update banner data — derives from live data where possible ────────────────
-const LAST_UPDATE_DATE = "June 1, 2026";
-const UPDATE_DELTAS    = ["+5 Boxes (84→89)", "10,424 Comics", "1,478 Keys"];
+// ── Update banner data — fully derived from live data ─────────────────────────
+function formatGeneratedDate(iso: string): string {
+  const d = new Date(`${iso}T00:00:00`);
+  if (isNaN(d.getTime())) return iso;
+  return d.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
+}
+
+const UPDATE_SNAPSHOT_KEY = "brbLastUpdateSnapshot";
+
+function computeUpdateDeltas(): string[] {
+  const now = { comics: totalComics, boxes: totalBoxes, keys: keyCount };
+  let prev: typeof now | null = null;
+  try {
+    const raw = localStorage.getItem(UPDATE_SNAPSHOT_KEY);
+    if (raw) prev = JSON.parse(raw);
+  } catch { /* ignore */ }
+  try { localStorage.setItem(UPDATE_SNAPSHOT_KEY, JSON.stringify(now)); } catch { /* ignore */ }
+
+  const deltas: string[] = [];
+  if (prev && prev.boxes !== now.boxes) {
+    const sign = now.boxes > prev.boxes ? "+" : "";
+    deltas.push(`${sign}${now.boxes - prev.boxes} Boxes (${prev.boxes}→${now.boxes})`);
+  }
+  if (prev && prev.comics !== now.comics) {
+    const sign = now.comics > prev.comics ? "+" : "";
+    deltas.push(`${sign}${(now.comics - prev.comics).toLocaleString()} Comics`);
+  }
+  if (prev && prev.keys !== now.keys) {
+    const sign = now.keys > prev.keys ? "+" : "";
+    deltas.push(`${sign}${now.keys - prev.keys} Keys`);
+  }
+  if (deltas.length === 0) {
+    deltas.push(`${now.comics.toLocaleString()} Comics`, `${now.boxes} Boxes`, `${now.keys.toLocaleString()} Keys`);
+  }
+  return deltas;
+}
+
+const LAST_UPDATE_DATE = formatGeneratedDate(DATA.generatedAt);
+const UPDATE_DELTAS    = computeUpdateDeltas();
 const INTERFACE_UPDATES = [
   `Data refresh — ${totalComics.toLocaleString()} comics · ${totalBoxes} boxes · ${keyCount.toLocaleString()} keys · ${signedCount} signed`,
   "Global search added — press ⌘K / Ctrl+K from anywhere to search all comics, boxes, and pages",

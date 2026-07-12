@@ -32,6 +32,7 @@ export interface CatalogComic {
 export const DATA3: {
   comics: Comic[];
   boxes: BoxSummary[];
+  generatedAt: string;
   catalogs: {
     pulled:  CatalogComic[];
     box2:    CatalogComic[];
@@ -39,6 +40,7 @@ export const DATA3: {
     ccBoxes: CatalogComic[];
   };
 } = {
+  generatedAt: "2026-07-11",
   comics: [
   {
     Title: `Barack Obama: Presidential Material`, Issue: `1`, Publisher: `IDW`,
