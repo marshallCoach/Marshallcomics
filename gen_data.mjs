@@ -464,8 +464,9 @@ console.log(`  Excluding ${catalogExcludeKeys.size} catalog-sheet keys from CC B
 const catCCBoxes = getCCBoxComics(catalogExcludeKeys);
 
 const srcName = xlsxFiles[0].f;
+const generatedAt = new Date().toISOString().slice(0, 10);
 const ts = `// AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: ${srcName}  |  Generated: ${new Date().toISOString().slice(0,10)}
+// Source: ${srcName}  |  Generated: ${generatedAt}
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -498,6 +499,7 @@ export interface CatalogComic {
 export const DATA3: {
   comics: Comic[];
   boxes: BoxSummary[];
+  generatedAt: string;
   catalogs: {
     pulled:  CatalogComic[];
     box2:    CatalogComic[];
@@ -505,6 +507,7 @@ export const DATA3: {
     ccBoxes: CatalogComic[];
   };
 } = {
+  generatedAt: "${generatedAt}",
   comics: [
 ${comics.join(',\n')}
   ],
