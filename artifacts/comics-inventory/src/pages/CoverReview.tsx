@@ -1,6 +1,9 @@
 import { useState, useEffect, useRef, useMemo, useCallback } from "react";
 import { DATA, type Comic } from "@/data/data";
 import { comicId, loadFlags, saveFlags, type FlaggedCover } from "./CoverCatalog";
+import flaggedBaseline from "@/data/flaggedCoversBaseline.json";
+
+const BASELINE_FLAGGED_IDS = new Set((flaggedBaseline as { id: string }[]).map(f => f.id));
 
 const BASE = import.meta.env.BASE_URL?.replace(/\/$/, "") ?? "";
 const LANES = 5;
@@ -29,9 +32,12 @@ export default function CoverReview() {
   const [msLeft, setMsLeft]     = useState(CYCLE_MS);
   const tickRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  // Build the review pool once: every comic that has a real (non-placeholder) cover.
+  // Build the review pool once: every comic that has a real (non-placeholder) cover,
+  // excluding anything already flagged as an incorrect cover (baseline export or this
+  // browser's live flags) - once it's confirmed wrong, no point re-showing it.
   useEffect(() => {
     let cancelled = false;
+    const liveFlagged = loadFlags();
     fetch(`${BASE}/covers.json`)
       .then(r => r.json())
       .then((coversMap: Record<string, { url: string | null }>) => {
@@ -42,6 +48,8 @@ export default function CoverReview() {
           const vol = String(c.Volume || "1").trim();
           const key = `${c.Title}|||${c.Issue}|||${vol}`;
           if (seen.has(key)) continue;
+          const flagId = comicId({ Title: c.Title, Issue: c.Issue, Box: c.Box });
+          if (BASELINE_FLAGGED_IDS.has(flagId) || liveFlagged.has(flagId)) continue;
           const entry = coversMap[key] ?? coversMap[`${c.Title}|||${c.Issue}`];
           if (entry?.url) {
             seen.add(key);
@@ -164,10 +172,10 @@ export default function CoverReview() {
                   <div style={{ width: 96, height: 144, borderRadius: 4, overflow: "hidden", background: "#1a1628", border: flagged ? "2px solid var(--red)" : "1px solid var(--border)" }}>
                     <img src={p.url} alt={`${p.comic.Title} ${p.comic.Issue}`} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} loading="lazy" />
                   </div>
-                  <div style={{ fontSize: "0.875rem", color: "var(--muted)", marginTop: 4, lineHeight: 1.3, height: 28, overflow: "hidden" }}>
+                  <div style={{ fontSize: "0.875rem", color: "var(--muted)", marginTop: 4, lineHeight: 1.3, height: 36, overflow: "hidden" }}>
                     {p.comic.Title} #{p.comic.Issue}
                   </div>
-                  <label style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 4, fontSize: "0.875rem", color: flagged ? "var(--red)" : "var(--muted)", cursor: "pointer", marginTop: 2 }}>
+                  <label style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 4, fontSize: "0.875rem", color: flagged ? "var(--red)" : "var(--muted)", cursor: "pointer", marginTop: 8 }}>
                     <input type="checkbox" checked={flagged} onChange={() => toggleFlag(p)} />
                     wrong
                   </label>
