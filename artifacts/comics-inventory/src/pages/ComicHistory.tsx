@@ -45,7 +45,11 @@ const BY_YEAR = (() => {
   const m = new Map<number, Comic[]>();
   for (const c of comics) {
     const y = parseInt(c.Year || "0");
-    if (y < START_YEAR || y > END_YEAR) continue;
+    // Some Year values are descriptive text with no leading digit (e.g.
+    // "modern — verify exact year"), which parseInt turns into NaN - and
+    // NaN < / > any number is always false, so the range check below never
+    // catches it unless excluded explicitly here first.
+    if (isNaN(y) || y < START_YEAR || y > END_YEAR) continue;
     if (!m.has(y)) m.set(y, []);
     m.get(y)!.push(c);
   }
