@@ -27,6 +27,11 @@ VOLUME_COL       = "Volume"
 
 # eBay xlsx columns (written by brb_ebay_pricing.py merge step)
 EBAY_AVG_COL     = "eBay Avg Sold $"
+NM_VALUE_COL     = "Est. Raw Value (NM) $"
+EBAY_MIN_VALUE   = 10.0  # matches brb_ebay_pricing.py's --min-value default -
+                          # comics below this were never queued, so counting
+                          # them against the full inventory understates the
+                          # real fill rate for the pipeline's actual scope.
 
 
 def _resolve(raw):
@@ -113,12 +118,34 @@ def fill_rate_volume(df):
     return filled, total, pct
 
 
+def _parse_dollar(v):
+    import re
+    if is_blank(v):
+        return 0.0
+    m = re.search(r"(\d+(?:\.\d+)?)", str(v))
+    return float(m.group(1)) if m else 0.0
+
+
 def fill_rate_ebay(df):
-    """eBay Avg Sold $ is filled if non-blank."""
+    """eBay Avg Sold $ is filled if non-blank, against the full inventory."""
     if EBAY_AVG_COL not in df.columns:
         return None, None, None
     total  = len(df)
     filled = int((~df[EBAY_AVG_COL].apply(is_blank)).sum())
+    pct    = 100 * filled / total if total else 0
+    return filled, total, pct
+
+
+def fill_rate_ebay_addressable(df):
+    """eBay Avg Sold $ fill rate against only the comics brb_ebay_pricing.py
+    actually queues (NM value >= EBAY_MIN_VALUE) - the full-inventory rate
+    above understates progress because most rows are low-value back issues
+    that were never meant to be priced in the first place."""
+    if EBAY_AVG_COL not in df.columns or NM_VALUE_COL not in df.columns:
+        return None, None, None
+    qualifying = df[df[NM_VALUE_COL].apply(_parse_dollar) >= EBAY_MIN_VALUE]
+    total  = len(qualifying)
+    filled = int((~qualifying[EBAY_AVG_COL].apply(is_blank)).sum())
     pct    = 100 * filled / total if total else 0
     return filled, total, pct
 
@@ -173,13 +200,23 @@ def report(df, sheet, filename, label=""):
         print(f"        Cover Images    (covers.json not found — run fetchCovers.mjs first)")
 
     print(f"\n  ── EBAY PRICING ─────────────────────────────────────")
-    # eBay data in xlsx
+    # eBay data in xlsx, against the full inventory (most rows are common
+    # back issues never meant to be priced - see the addressable line below
+    # for the number that actually reflects pipeline health)
     ebay_filled, ebay_tot, ebay_pct = fill_rate_ebay(df)
     if ebay_filled is None:
         print(f"        eBay (xlsx)     ('{EBAY_AVG_COL}' column not present)")
     else:
         flag = "✓" if ebay_pct >= 50 else ("⚠" if ebay_pct >= 20 else "✗")
         print(f"  {flag}  {'eBay (xlsx)':<14}  {ebay_filled:>6,} / {ebay_tot:,}  ({ebay_pct:5.1f}%)  {bar(ebay_pct, 24)}")
+        print(f"       (of full inventory - most rows are under ${EBAY_MIN_VALUE:.0f} NM and were never queued)")
+
+    # eBay data in xlsx, against only the comics actually worth pricing
+    addr_filled, addr_tot, addr_pct = fill_rate_ebay_addressable(df)
+    if addr_filled is not None:
+        flag = "✓" if addr_pct >= 80 else ("⚠" if addr_pct >= 50 else "✗")
+        print(f"  {flag}  {'eBay (addressable)':<14}  {addr_filled:>6,} / {addr_tot:,}  ({addr_pct:5.1f}%)  {bar(addr_pct, 24)}")
+        print(f"       (of comics with NM value >= ${EBAY_MIN_VALUE:.0f} - the real pipeline coverage)")
 
     # eBay data in JSON cache
     json_filled, json_total = ebay_from_json()
