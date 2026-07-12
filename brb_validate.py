@@ -307,6 +307,49 @@ def check_issue_number_present(df):
     return pct < 5
 
 
+def _norm_str(series):
+    """Whitespace-trim + lowercase. Sensitive fields (Title/Signed?/Condition)
+    have inconsistent casing and stray whitespace from manual entry/imports -
+    without this, an exact-match key under-counts real clones (confirmed:
+    naive match found 80 groups/82 excess rows vs. 81/83 normalized on the
+    same file). Bake normalization in here rather than re-deriving it by hand
+    each time - same failure category as the mixed-type Box # bug."""
+    return series.astype(str).str.strip().str.lower().replace({"nan": ""})
+
+
+def check_exact_clones(df):
+    # Stricter than CHECK 6 (Rule 2): same physical copy entered twice, not
+    # just "same book, same box" (which legitimately includes multiple
+    # distinct copies differing by condition/signature). Adds Condition and
+    # Signed? to the key so genuine multi-copy ownership doesn't get flagged.
+    section("CHECK 11 — Exact clones (Title+Issue#+Year+Condition+Signed?+Box#, normalized)")
+    physical = df[~df["Box #"].apply(lambda v: str(v).strip() in BOX_STATUS_ALLOWLIST)].copy()
+
+    t    = _norm_str(physical["Title"])
+    iss  = physical["Issue #"].astype(str).str.strip()
+    yr   = physical["Year"].astype(str).str.strip()
+    box  = physical["Box #"].astype(str).str.strip()
+    cond = _norm_str(physical["Condition"]) if "Condition" in physical.columns else ""
+    signed = _norm_str(physical["Signed?"]) if "Signed?" in physical.columns else ""
+    k = t + "|" + iss + "|" + yr + "|" + cond + "|" + signed + "|" + box
+
+    dupes = physical[k.duplicated(keep=False)]
+    if len(dupes):
+        groups = k[k.duplicated(keep=False)]
+        n_groups = groups.nunique()
+        fail(f"{n_groups} exact-clone groups / {len(dupes)} excess rows "
+             f"(Title+Issue#+Year+Condition+Signed?+Box#, normalized)")
+        sample = dupes.assign(_k=groups).groupby("_k").size().reset_index(name="count")
+        for _, row in sample.head(10).iterrows():
+            parts = row["_k"].split("|")
+            info(f"  '{parts[0]}' #{parts[1]} {parts[2]} cond='{parts[3]}' signed='{parts[4]}' Box#{parts[5]} — {row['count']}x")
+        if len(sample) > 10:
+            info(f"  ... and {len(sample)-10} more groups")
+        return False
+    ok("No exact-clone rows (Title+Issue#+Year+Condition+Signed?+Box#, normalized)")
+    return True
+
+
 # ── Sheet loader ─────────────────────────────────────────────────────────────
 
 def _load_inventory_sheet(path: str) -> pd.DataFrame:
@@ -382,6 +425,7 @@ def main():
     results.append(check_writer_fill_rate(df))
     results.append(check_box_number_range(df))
     results.append(check_issue_number_present(df))
+    results.append(check_exact_clones(df))
 
     passed = sum(results)
     total  = len(results)
