@@ -14,7 +14,7 @@ Usage:
 
 import pandas as pd
 import requests
-import json, os, re, time
+import json, os, re, sys, time
 from datetime import datetime
 
 # ── CONFIG ────────────────────────────────────────────────────────────────────
@@ -407,6 +407,24 @@ def main():
 
     rows_initial = len(df)
     print(f"Loaded {rows_initial} rows from {INVENTORY_PATH}")
+
+    # Safe shutdown: save whatever's in memory on kill/Ctrl-C instead of losing
+    # it silently. Checkpoints only fire every CHECKPOINT_EVERY titles, so a
+    # kill between checkpoints previously discarded everything fetched since
+    # the last one (confirmed: a full ~34hr run was lost this way).
+    import signal
+    def _save_and_exit(signum, frame):
+        ts = datetime.now().strftime("%d%m_%H%M")
+        out = f"comics_inventory_{ts}_INTERRUPTED.xlsx"
+        print(f"\n[SIGNAL {signum}] Saving in-progress work to {out} before exiting...")
+        try:
+            safe_write(df, out, f"✅ Clean Inventory {ts}", rows_initial, label=f"interrupted_{signum}")
+            print(f"[SIGNAL {signum}] Saved. Safe to kill.")
+        except Exception as e:
+            print(f"[SIGNAL {signum}] Save failed: {e}")
+        sys.exit(1)
+    signal.signal(signal.SIGTERM, _save_and_exit)
+    signal.signal(signal.SIGINT, _save_and_exit)
 
     queue = build_queue(df)
     queue = queue[~queue["Title"].isin(SKIP_TITLES)]
