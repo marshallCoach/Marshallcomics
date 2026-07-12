@@ -177,7 +177,11 @@ def check_duplicate_rows(df):
 
     dupes = physical[k2.duplicated(keep=False)]
     if len(dupes):
-        fail(f"{len(dupes)} rows are same-box duplicates (Title+Issue#+Year+Box#)")
+        groups_k2 = k2[k2.duplicated(keep=False)]
+        n_groups_k2 = groups_k2.nunique()
+        excess_k2 = len(dupes) - n_groups_k2  # net rows to purge, not total rows in groups
+        fail(f"{n_groups_k2} same-box duplicate groups / {excess_k2} excess rows "
+             f"(Title+Issue#+Year+Box#) — {len(dupes)} total rows across all groups")
         sample = dupes.assign(_k=k2[k2.duplicated(keep=False)]).groupby("_k").size().reset_index(name="count")
         for _, row in sample.head(10).iterrows():
             parts = row["_k"].split("|")
@@ -337,8 +341,10 @@ def check_exact_clones(df):
     if len(dupes):
         groups = k[k.duplicated(keep=False)]
         n_groups = groups.nunique()
-        fail(f"{n_groups} exact-clone groups / {len(dupes)} excess rows "
-             f"(Title+Issue#+Year+Condition+Signed?+Box#, normalized)")
+        excess = len(dupes) - n_groups  # net rows to purge, not total rows in groups
+        fail(f"{n_groups} exact-clone groups / {excess} excess rows "
+             f"(Title+Issue#+Year+Condition+Signed?+Box#, normalized) — "
+             f"{len(dupes)} total rows across all groups")
         sample = dupes.assign(_k=groups).groupby("_k").size().reset_index(name="count")
         for _, row in sample.head(10).iterrows():
             parts = row["_k"].split("|")
