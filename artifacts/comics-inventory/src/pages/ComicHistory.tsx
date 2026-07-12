@@ -1,6 +1,7 @@
 import { useState, useMemo, useCallback, useEffect, useRef } from "react";
 import { DATA } from "@/data/data";
 import type { Comic } from "@/data/data";
+import { CoverImage } from "@/components/CoverImage";
 
 const comics = DATA.comics;
 
@@ -98,38 +99,32 @@ function ComicCover({ comic, mi, year, isAnimating, pool, curIdx }: {
   const pub = comic ? PUB_META[pk] : null;
 
   return (
-    <div style={{
-      height: 172,
-      background: pub
-        ? `linear-gradient(150deg, ${pub.bg} 0%, ${pub.dark} 100%)`
-        : "var(--surface2)",
-      position: "relative",
-      overflow: "hidden",
-      flexShrink: 0,
-    }}>
-      {/* halftone-dot texture overlay */}
-      {pub && (
-        <div style={{
-          position: "absolute", inset: 0,
-          backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.15) 1px, transparent 1px)`,
-          backgroundSize: "8px 8px",
-          pointerEvents: "none",
-        }} />
-      )}
-      {/* shine */}
-      {pub && (
-        <div style={{
-          position: "absolute", inset: 0,
-          background: "radial-gradient(ellipse at 25% 25%, rgba(255,255,255,0.18) 0%, transparent 55%)",
-          pointerEvents: "none",
-        }} />
+    <div
+      className={isAnimating ? "hc-comic-in" : ""}
+      style={{
+        height: 172,
+        background: pub ? pub.dark : "var(--surface2)",
+        position: "relative",
+        overflow: "hidden",
+        flexShrink: 0,
+      }}
+    >
+      {/* Real cover photo (falls back to the site's standard generated
+          placeholder when no photo exists - same as every other page) */}
+      {comic && (
+        <CoverImage
+          comic={comic}
+          width={300}
+          height={450}
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}
+        />
       )}
 
-      {/* month label top-left */}
+      {/* month label top-left - background chip so it reads over any cover */}
       <div style={{
         position: "absolute", top: 8, left: 10,
         fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "2px",
-        color: pub ? "rgba(255,255,255,0.7)" : "var(--muted)",
+        color: "#fff", background: "rgba(0,0,0,0.45)", borderRadius: 4, padding: "2px 7px",
       }}>
         {MONTH_FULL[mi].toUpperCase()} {year}
       </div>
@@ -139,54 +134,23 @@ function ComicCover({ comic, mi, year, isAnimating, pool, curIdx }: {
         <div style={{
           position: "absolute", top: 8, right: 8,
           fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1px",
-          color: "rgba(255,255,255,0.65)",
-          background: "rgba(0,0,0,0.28)", borderRadius: 10, padding: "2px 7px",
+          color: "rgba(255,255,255,0.85)",
+          background: "rgba(0,0,0,0.45)", borderRadius: 10, padding: "2px 7px",
         }}>
           {curIdx + 1} / {pool.length}
         </div>
       )}
 
-      {/* Comic title + issue */}
-      <div
-        className={isAnimating ? "hc-comic-in" : ""}
-        style={{
-          position: "absolute", inset: "0 0 0 0",
-          display: "flex", flexDirection: "column",
-          alignItems: "center", justifyContent: "center",
-          padding: "28px 10px 10px",
-          textAlign: "center",
-          gap: 4,
-        }}
-      >
-        {comic ? (
-          <>
-            <div style={{
-              fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-              fontSize: comic.Title.length > 24 ? "0.88rem" : comic.Title.length > 16 ? "1.05rem" : "1.2rem",
-              letterSpacing: "1px", color: "#fff",
-              lineHeight: 1.15, textShadow: "0 2px 6px rgba(0,0,0,0.45)",
-              textTransform: "uppercase",
-              maxHeight: 72, overflow: "hidden",
-            }}>
-              {comic.Title}
-            </div>
-            <div style={{
-              fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "1.75rem",
-              letterSpacing: "4px", color: "rgba(255,255,255,0.92)",
-              textShadow: "0 2px 8px rgba(0,0,0,0.5)", lineHeight: 1,
-            }}>
-              #{comic.Issue.replace(/^#/, "")}
-            </div>
-          </>
-        ) : (
-          <div style={{
-            fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
-            color: "var(--muted)", fontStyle: "italic",
-          }}>
-            No book this month
-          </div>
-        )}
-      </div>
+      {!comic && (
+        <div style={{
+          position: "absolute", inset: 0,
+          display: "flex", alignItems: "center", justifyContent: "center",
+          fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
+          color: "var(--muted)", fontStyle: "italic",
+        }}>
+          No book this month
+        </div>
+      )}
 
       {/* KEY banner bottom ribbon */}
       {comic && (comic.Key || "").toUpperCase() === "YES" && (
@@ -292,6 +256,16 @@ function MonthCard({ year, mi, pool, spinIdx, spinning, animating, onSpin }: {
         alignItems: "center", gap: 8,
         flex: 1,
       }}>
+        {/* Title + issue caption */}
+        {comic && (
+          <div style={{
+            fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", fontWeight: 700,
+            color: "var(--text)", textAlign: "center", lineHeight: 1.25,
+          }}>
+            {comic.Title} #{comic.Issue.replace(/^#/, "")}
+          </div>
+        )}
+
         {/* Publisher + signed badge row */}
         {comic && (
           <div style={{ display: "flex", gap: 4, alignItems: "center", flexWrap: "wrap", justifyContent: "center" }}>
