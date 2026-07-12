@@ -17,31 +17,46 @@ REPO_ROOT   = os.path.dirname(os.path.abspath(__file__))
 COVERS_PATH = os.path.join(REPO_ROOT, "covers.json")
 
 
-def find_key(covers, title, issue):
-    """Find the covers.json key for a title+issue, tolerating float formatting."""
-    # Try exact, then float-formatted issue
-    candidates = [
-        f"{title}|||{issue}",
-        f"{title}|||{float(issue)}",
-        f"{title}|||{int(float(issue))}.0",
-    ]
-    for c in candidates:
-        if c in covers:
-            return c
-    # Fuzzy: case-insensitive title match
+def find_keys(covers, title, issue):
+    """Find ALL covers.json keys for a title+issue, tolerating float formatting
+    and the Title|||Issue|||Volume key format (multiple physical copies of the
+    same title+issue in different volumes/runs share the same Title+Issue but
+    get distinct keys - a plain 2-part lookup silently misses all of them).
+    Returns a list since a title+issue can legitimately match several volumes;
+    caller is responsible for nulling all of them when that happens."""
     title_lower = title.lower()
     issue_str   = str(issue)
+
+    def issue_matches(stored_issue):
+        try:
+            return abs(float(stored_issue) - float(issue_str)) < 0.01
+        except ValueError:
+            return stored_issue == issue_str
+
+    # Exact 2-part candidates first (fast path, preserves prior behavior)
+    candidates = [
+        f"{title}|||{issue}",
+        f"{title}|||{float(issue)}" if issue_str.replace(".", "", 1).isdigit() else None,
+        f"{title}|||{int(float(issue))}.0" if issue_str.replace(".", "", 1).isdigit() else None,
+    ]
+    exact = [c for c in candidates if c and c in covers]
+    if exact:
+        return exact
+
+    # Fuzzy scan: case-insensitive title match, both 2-part (Title|||Issue) and
+    # 3-part (Title|||Issue|||Volume) keys. Collect every match - do not stop
+    # at the first one, since multiple volumes of the same title+issue can
+    # coexist and all need to be nulled if the caller can't disambiguate.
+    matches = []
     for k in covers:
         parts = k.split("|||")
-        if len(parts) == 2 and parts[0].lower() == title_lower:
-            stored_issue = parts[1]
-            try:
-                if abs(float(stored_issue) - float(issue_str)) < 0.01:
-                    return k
-            except ValueError:
-                if stored_issue == issue_str:
-                    return k
-    return None
+        if len(parts) not in (2, 3):
+            continue
+        if parts[0].lower() != title_lower:
+            continue
+        if issue_matches(parts[1]):
+            matches.append(k)
+    return matches
 
 
 def main():
@@ -64,15 +79,19 @@ def main():
     missing = []
 
     for title, issue in pairs:
-        key = find_key(covers, title, issue)
-        if key is None:
+        keys = find_keys(covers, title, issue)
+        if not keys:
             missing.append(f"  NOT FOUND: '{title}' #{issue}")
             continue
-        old = covers[key]
-        covers[key] = None
-        old_url = (old or {}).get("url", "no url") if old else "already null"
-        nulled.append(f"  Nulled: {key}")
-        print(f"  ✓  '{title}' #{issue}  →  null  (was: {str(old_url)[:60]})")
+        if len(keys) > 1:
+            print(f"  ⚠  '{title}' #{issue}  matches {len(keys)} volumes - "
+                  f"nulling all of them (can't disambiguate from title+issue alone)")
+        for key in keys:
+            old = covers[key]
+            covers[key] = None
+            old_url = (old or {}).get("url", "no url") if old else "already null"
+            nulled.append(f"  Nulled: {key}")
+            print(f"  ✓  {key}  →  null  (was: {str(old_url)[:60]})")
 
     if missing:
         print()
