@@ -356,6 +356,67 @@ def check_exact_clones(df):
     return True
 
 
+def _normalize_title(t):
+    """Lowercase, strip punctuation/hyphens, collapse whitespace. Two titles
+    that differ only by punctuation/case ('Batman Europa' vs 'Batman: Europa',
+    'X Club' vs 'X-Club') normalize to the same string. Shared convention for
+    the cover-fetch cache key and duplicate detection - a split here silently
+    fragments a series across the whole pipeline."""
+    import re as _re
+    return _re.sub(r"[^a-z0-9]+", " ", str(t).lower()).strip()
+
+
+def check_similar_titles(df):
+    # Advisory (WARN, non-blocking): surfaces title-string inconsistencies that
+    # fragment a single series - the class of bug behind the Legion of
+    # Super-Heroes / Superheroes and Extreme / X-Treme X-Men cover misses.
+    section("CHECK 12 — Title consistency (advisory)")
+    import re as _re, difflib
+    titles = sorted({str(t).strip() for t in df["Title"].dropna() if str(t).strip()})
+
+    # 1. High-confidence: distinct titles that normalize to the same string.
+    groups = {}
+    for t in titles:
+        groups.setdefault(_normalize_title(t), []).append(t)
+    collisions = {k: v for k, v in groups.items() if len(set(v)) > 1}
+
+    # 2. Advisory fuzzy: near-identical spellings, excluding differences that
+    #    are only a trailing number/issue suffix (sequels/volumes are distinct).
+    def _strip_tail_num(s):
+        return _re.sub(r"\s*\d+$", "", s).strip()
+    norms = sorted(groups.keys())
+    fuzzy = []
+    for i, a in enumerate(norms):
+        for b in norms[i + 1:]:
+            if abs(len(a) - len(b)) > 4:
+                continue
+            if _strip_tail_num(a) != a or _strip_tail_num(b) != b:
+                if _strip_tail_num(a) == _strip_tail_num(b):
+                    continue  # differ only by a trailing number -> sequel, skip
+            if difflib.SequenceMatcher(None, a, b).ratio() >= 0.94:
+                fuzzy.append((groups[a][0], groups[b][0]))
+
+    if not collisions and not fuzzy:
+        ok("No title-string inconsistencies detected")
+        return True
+
+    if collisions:
+        warn(f"{len(collisions)} title(s) split by punctuation/case only "
+             f"(same series, different spelling):")
+        for _, v in sorted(collisions.items())[:15]:
+            info("  " + "  ↔  ".join(f"'{x}'" for x in sorted(set(v))))
+        if len(collisions) > 15:
+            info(f"  ... and {len(collisions) - 15} more")
+    if fuzzy:
+        warn(f"{len(fuzzy)} near-identical title pair(s) — review (may include "
+             f"real distinct series):")
+        for a, b in fuzzy[:15]:
+            info(f"  '{a}'  ~  '{b}'")
+        if len(fuzzy) > 15:
+            info(f"  ... and {len(fuzzy) - 15} more")
+    return True  # advisory only — never blocks the pipeline
+
+
 # ── Sheet loader ─────────────────────────────────────────────────────────────
 
 def _load_inventory_sheet(path: str) -> pd.DataFrame:
@@ -432,6 +493,7 @@ def main():
     results.append(check_box_number_range(df))
     results.append(check_issue_number_present(df))
     results.append(check_exact_clones(df))
+    results.append(check_similar_titles(df))
 
     passed = sum(results)
     total  = len(results)
