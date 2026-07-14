@@ -67,6 +67,10 @@ overnight_log.txt
 # Mac-local operational files — not tracked in git
 BRB\ Ops\ Reference*.html
 BRB\ Ops\ Reference*_files/
+
+# brb.py pipeline runtime state (local, per-machine)
+.brb_pipeline_state.json
+cover_fix_report.json
 BRB_Action_Detail_Plan.txt
 BRB_Box_Map.html
 BRB_Juneteenth_Show_June19_v2.docx

@@ -1,6 +1,7 @@
-// AUTO-GENERATED quest data — source: comics_inventory_1207_2103_1.xlsx (10917 rows) · generated 2026-07-14
+// AUTO-GENERATED quest data — source: comics_inventory_1207_2103_2.xlsx (10917 rows) · generated 2026-07-14
+// Regenerate with: node gen_quest_data.mjs
 window.QUEST_DATA = {
- "source": "comics_inventory_1207_2103_1.xlsx",
+ "source": "comics_inventory_1207_2103_2.xlsx",
  "generated": "2026-07-14",
  "totalRows": 10917,
  "dupe": {
@@ -70,948 +71,711 @@ window.QUEST_DATA = {
    "loc": "Bedroom — FLOOR",
    "zone": "Bedroom",
    "rows": 97,
-   "keys": 55,
-   "signed": 50,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 6,
-   "clones": 2,
-   "vcap": 240
+   "clones": 2
   },
   {
    "box": 3,
    "loc": "Upstairs Closet — TOP",
    "zone": "Upstairs Closet",
    "rows": 257,
-   "keys": 14,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 4,
    "loc": "Basement Front B — ROW1",
    "zone": "Basement Front B",
    "rows": 246,
-   "keys": 24,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 15,
-   "clones": 15,
-   "vcap": 240
+   "clones": 15
   },
   {
    "box": 5,
    "loc": "Basement Front B — ROW1",
    "zone": "Basement Front B",
    "rows": 210,
-   "keys": 26,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 2,
-   "clones": 2,
-   "vcap": 240
+   "clones": 2
   },
   {
    "box": 6,
    "loc": "Basement Front B — ROW2",
    "zone": "Basement Front B",
    "rows": 124,
-   "keys": 13,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 9,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 7,
    "loc": "Basement Front A — ROW1",
    "zone": "Basement Front A",
    "rows": 249,
-   "keys": 30,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 5,
-   "clones": 5,
-   "vcap": 240
+   "clones": 5
   },
   {
    "box": 8,
    "loc": "Basement Front A — ROW2",
    "zone": "Basement Front A",
    "rows": 236,
-   "keys": 22,
-   "signed": 1,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 9,
    "loc": "Basement Front A — ROW4",
    "zone": "Basement Front A",
    "rows": 223,
-   "keys": 31,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 2,
-   "clones": 2,
-   "vcap": 240
+   "clones": 2
   },
   {
    "box": 10,
    "loc": "Basement Front A — ROW3",
    "zone": "Basement Front A",
    "rows": 256,
-   "keys": 24,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 11,
    "loc": "Basement Front B — ROW3",
    "zone": "Basement Front B",
    "rows": 203,
-   "keys": 47,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 12,
-   "clones": 12,
-   "vcap": 240
+   "clones": 12
   },
   {
    "box": 12,
    "loc": "Basement Front A — ROW4",
    "zone": "Basement Front A",
    "rows": 209,
-   "keys": 24,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 4,
-   "clones": 2,
-   "vcap": 240
+   "clones": 2
   },
   {
    "box": 13,
    "loc": "Basement Front B — ROW3",
    "zone": "Basement Front B",
    "rows": 173,
-   "keys": 23,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 4,
-   "clones": 4,
-   "vcap": 240
+   "clones": 4
   },
   {
    "box": 14,
    "loc": "Basement Front B — ROW3",
    "zone": "Basement Front B",
    "rows": 202,
-   "keys": 28,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 2,
-   "clones": 2,
-   "vcap": 240
+   "clones": 2
   },
   {
    "box": 15,
    "loc": "Basement Front A — ROW1",
    "zone": "Basement Front A",
    "rows": 202,
-   "keys": 18,
-   "signed": 0,
-   "cap": 150,
+   "vcap": 150,
    "dupes": 4,
-   "clones": 4,
-   "vcap": 150
+   "clones": 4
   },
   {
    "box": 16,
    "loc": "Basement Front C — TOP",
    "zone": "Basement Front C",
    "rows": 173,
-   "keys": 18,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 10,
-   "clones": 10,
-   "vcap": 240
+   "clones": 10
   },
   {
    "box": 17,
    "loc": "Basement Front A — ROW3",
    "zone": "Basement Front A",
    "rows": 191,
-   "keys": 22,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 2,
-   "clones": 2,
-   "vcap": 240
+   "clones": 2
   },
   {
    "box": 18,
    "loc": "Basement Front B — ROW2",
    "zone": "Basement Front B",
    "rows": 182,
-   "keys": 26,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 12,
-   "clones": 10,
-   "vcap": 240
+   "clones": 10
   },
   {
    "box": 19,
    "loc": "Basement Front B — ROW1",
    "zone": "Basement Front B",
    "rows": 195,
-   "keys": 21,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 6,
-   "clones": 6,
-   "vcap": 240
+   "clones": 6
   },
   {
    "box": 20,
    "loc": "Basement Front A — ROW1",
    "zone": "Basement Front A",
    "rows": 174,
-   "keys": 22,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 15,
-   "clones": 6,
-   "vcap": 240
+   "clones": 6
   },
   {
    "box": 21,
    "loc": "Basement Front A — ROW2",
    "zone": "Basement Front A",
    "rows": 176,
-   "keys": 25,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 22,
    "loc": "Basement Front C — ROW1",
    "zone": "Basement Front C",
    "rows": 170,
-   "keys": 18,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 23,
    "loc": "Basement Front A — ROW3",
    "zone": "Basement Front A",
    "rows": 160,
-   "keys": 23,
-   "signed": 0,
-   "cap": 155,
+   "vcap": 155,
    "dupes": 2,
-   "clones": 0,
-   "vcap": 155
+   "clones": 0
   },
   {
    "box": 24,
    "loc": "Basement Front C — ROW3",
    "zone": "Basement Front C",
    "rows": 152,
-   "keys": 13,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 2,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 25,
    "loc": "Basement Front C — ROW2",
    "zone": "Basement Front C",
    "rows": 127,
-   "keys": 14,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 26,
    "loc": "Basement Front C — ROW2",
    "zone": "Basement Front C",
    "rows": 143,
-   "keys": 24,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 4,
-   "clones": 4,
-   "vcap": 240
+   "clones": 4
   },
   {
    "box": 27,
    "loc": "Basement Front A — ROW2",
    "zone": "Basement Front A",
    "rows": 126,
-   "keys": 26,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 2,
-   "clones": 2,
-   "vcap": 240
+   "clones": 2
   },
   {
    "box": 28,
    "loc": "Basement Front B — ROW2",
    "zone": "Basement Front B",
    "rows": 122,
-   "keys": 20,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 2,
-   "clones": 2,
-   "vcap": 240
+   "clones": 2
   },
   {
    "box": 29,
    "loc": "Bedroom — TOP",
    "zone": "Bedroom",
    "rows": 103,
-   "keys": 10,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 30,
    "loc": "Basement Front C — ROW4",
    "zone": "Basement Front C",
    "rows": 113,
-   "keys": 11,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 2,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 31,
    "loc": "Basement Front A — ROW2",
    "zone": "Basement Front A",
    "rows": 84,
-   "keys": 12,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 33,
    "loc": "Basement Front C — ROW2",
    "zone": "Basement Front C",
    "rows": 112,
-   "keys": 14,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 43,
-   "clones": 42,
-   "vcap": 240
+   "clones": 42
   },
   {
    "box": 35,
    "loc": "Basement Front A — ROW4",
    "zone": "Basement Front A",
    "rows": 108,
-   "keys": 3,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 36,
    "loc": "VERIFY",
    "zone": "VERIFY",
    "rows": 77,
-   "keys": 9,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 37,
    "loc": "VERIFY",
    "zone": "VERIFY",
    "rows": 70,
-   "keys": 11,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 4,
-   "clones": 4,
-   "vcap": 240
+   "clones": 4
   },
   {
    "box": 39,
    "loc": "Basement Front C — TOP",
    "zone": "Basement Front C",
    "rows": 34,
-   "keys": 6,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 2,
-   "clones": 2,
-   "vcap": 240
+   "clones": 2
   },
   {
    "box": 40,
    "loc": "Basement Front A — TOP",
    "zone": "Basement Front A",
    "rows": 28,
-   "keys": 2,
-   "signed": 0,
-   "cap": 80,
+   "vcap": 80,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 80
+   "clones": 0
   },
   {
    "box": 42,
    "loc": "Boiler Room — TOP",
    "zone": "Boiler Room",
    "rows": 152,
-   "keys": 5,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 43,
    "loc": "Basement Front C — ROW1",
    "zone": "Basement Front C",
    "rows": 130,
-   "keys": 23,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 44,
    "loc": "Basement Front C — ROW1",
    "zone": "Basement Front C",
    "rows": 191,
-   "keys": 17,
-   "signed": 0,
-   "cap": 200,
+   "vcap": 200,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 200
+   "clones": 0
   },
   {
    "box": 45,
    "loc": "Boiler Room — ROW2",
    "zone": "Boiler Room",
    "rows": 215,
-   "keys": 8,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 46,
    "loc": "Boiler Room — TOP",
    "zone": "Boiler Room",
    "rows": 191,
-   "keys": 14,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 47,
    "loc": "Boiler Room — ROW1",
    "zone": "Boiler Room",
    "rows": 79,
-   "keys": 10,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 48,
    "loc": "Boiler Room — TOP",
    "zone": "Boiler Room",
    "rows": 164,
-   "keys": 38,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 49,
    "loc": "Boiler Room — TOP",
    "zone": "Boiler Room",
    "rows": 159,
-   "keys": 18,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 50,
    "loc": "Boiler Room — ROW1",
    "zone": "Boiler Room",
    "rows": 178,
-   "keys": 21,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 51,
    "loc": "Boiler Room — ROW2",
    "zone": "Boiler Room",
    "rows": 151,
-   "keys": 4,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 52,
    "loc": "Boiler Room — ROW1",
    "zone": "Boiler Room",
    "rows": 150,
-   "keys": 43,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 7,
-   "clones": 2,
-   "vcap": 240
+   "clones": 2
   },
   {
    "box": 53,
    "loc": "Boiler Room — ROW2",
    "zone": "Boiler Room",
    "rows": 132,
-   "keys": 5,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 54,
    "loc": "Upstairs Closet — TOP",
    "zone": "Upstairs Closet",
    "rows": 138,
-   "keys": 16,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 55,
    "loc": "Boiler Room — ROW4",
    "zone": "Boiler Room",
    "rows": 139,
-   "keys": 15,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 56,
    "loc": "Boiler Room — ROW3",
    "zone": "Boiler Room",
    "rows": 138,
-   "keys": 14,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 57,
    "loc": "Bedroom — MID",
    "zone": "Bedroom",
    "rows": 139,
-   "keys": 15,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 58,
    "loc": "Basement Front A — ROW3",
    "zone": "Basement Front A",
    "rows": 129,
-   "keys": 17,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 59,
    "loc": "Bedroom — TOP",
    "zone": "Bedroom",
    "rows": 108,
-   "keys": 18,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 2,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 60,
    "loc": "Boiler Room — ROW4",
    "zone": "Boiler Room",
    "rows": 95,
-   "keys": 14,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 62,
    "loc": "Bedroom — TOP",
    "zone": "Bedroom",
    "rows": 53,
-   "keys": 11,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 64,
    "loc": "Basement Front C — ROW3",
    "zone": "Basement Front C",
    "rows": 164,
-   "keys": 14,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 2,
-   "clones": 2,
-   "vcap": 240
+   "clones": 2
   },
   {
    "box": 65,
    "loc": "Boiler Room — ROW3",
    "zone": "Boiler Room",
    "rows": 149,
-   "keys": 24,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 66,
    "loc": "Basement Front A — ROW4",
    "zone": "Basement Front A",
    "rows": 121,
-   "keys": 36,
-   "signed": 1,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 67,
    "loc": "Basement Front C — TOP",
    "zone": "Basement Front C",
    "rows": 112,
-   "keys": 17,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 68,
    "loc": "Boiler Room — ROW2",
    "zone": "Boiler Room",
    "rows": 224,
-   "keys": 12,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 6,
-   "clones": 6,
-   "vcap": 240
+   "clones": 6
   },
   {
    "box": 70,
    "loc": "Upstairs Closet — FLOOR",
    "zone": "Upstairs Closet",
    "rows": 130,
-   "keys": 11,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 72,
    "loc": "Bedroom — FLOOR",
    "zone": "Bedroom",
    "rows": 76,
-   "keys": 26,
-   "signed": 2,
-   "cap": 80,
+   "vcap": 80,
    "dupes": 4,
-   "clones": 4,
-   "vcap": 80
+   "clones": 4
   },
   {
    "box": 75,
    "loc": "Bedroom — MID",
    "zone": "Bedroom",
    "rows": 158,
-   "keys": 38,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 79,
    "loc": "VERIFY",
    "zone": "VERIFY",
    "rows": 75,
-   "keys": 20,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 80,
    "loc": "Bedroom — MID",
    "zone": "Bedroom",
    "rows": 8,
-   "keys": 0,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 82,
    "loc": "Boiler Room — ROW3",
    "zone": "Boiler Room",
    "rows": 151,
-   "keys": 6,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 2,
-   "clones": 2,
-   "vcap": 240
+   "clones": 2
   },
   {
    "box": 83,
    "loc": "Boiler Room — ROW3",
    "zone": "Boiler Room",
    "rows": 154,
-   "keys": 51,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 2,
-   "clones": 2,
-   "vcap": 240
+   "clones": 2
   },
   {
    "box": 85,
    "loc": "Basement Front C — ROW4",
    "zone": "Basement Front C",
    "rows": 180,
-   "keys": 0,
-   "signed": 0,
-   "cap": 155,
+   "vcap": 155,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 155
+   "clones": 0
   },
   {
    "box": 86,
    "loc": "Basement Front C — ROW4",
    "zone": "Basement Front C",
    "rows": 113,
-   "keys": 0,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 87,
    "loc": "Basement Front C — ROW3",
    "zone": "Basement Front C",
    "rows": 126,
-   "keys": 0,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 88,
    "loc": "Boiler Room — ROW1",
    "zone": "Boiler Room",
    "rows": 166,
-   "keys": 0,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 95,
    "loc": "Basement Front B — TOP",
    "zone": "Basement Front B",
    "rows": 0,
-   "keys": 0,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 97,
    "loc": "Basement Front A — ROW1",
    "zone": "Basement Front A",
    "rows": 0,
-   "keys": 0,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 98,
    "loc": "Boiler Room — ROW4",
    "zone": "Boiler Room",
    "rows": 0,
-   "keys": 0,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 99,
    "loc": "Boiler Room — ROW4",
    "zone": "Boiler Room",
    "rows": 0,
-   "keys": 0,
-   "signed": 0,
-   "cap": 175,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 101,
    "loc": "Bedroom — Mid shelf",
    "zone": "Bedroom",
    "rows": 15,
-   "keys": 0,
-   "signed": 0,
-   "cap": 0,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 102,
    "loc": "Bedroom — Mid shelf",
    "zone": "Bedroom",
    "rows": 24,
-   "keys": 0,
-   "signed": 0,
-   "cap": 0,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   },
   {
    "box": 103,
    "loc": "Bedroom — Mid shelf",
    "zone": "Bedroom",
    "rows": 6,
-   "keys": 0,
-   "signed": 0,
-   "cap": 0,
+   "vcap": 240,
    "dupes": 0,
-   "clones": 0,
-   "vcap": 240
+   "clones": 0
   }
  ],
  "guide": [
@@ -1134,7 +898,7 @@ window.QUEST_DATA = {
    "title": "The Sandwich Rows",
    "est": "books filed under the wrong box number",
    "accent": "gold",
-   "blurb": "Rows where one book's box number looks wrong because both its neighbors agree and it doesn't — a known import glitch. ~72 rows per last audit (reconfirm live). Some are the glitch, some are real single placements. Never bulk-fix.",
+   "blurb": "Rows where one book’s box number looks wrong because both its neighbors agree and it doesn’t — a known import glitch. ~72 rows per last audit (reconfirm live). Some are the glitch, some are real single placements. Never bulk-fix.",
    "sittings": [
     {
      "id": "B1",
@@ -1189,7 +953,7 @@ window.QUEST_DATA = {
    "title": "The Lost Books",
    "est": "real books, no known home",
    "accent": "purple",
-   "blurb": "Books that exist but the data doesn't know which box they're in. ~247 per last audit (reconfirm live). Not duplicates — a treasure hunt. One title cluster per sitting.",
+   "blurb": "Books that exist but the data doesn’t know which box they’re in. ~247 per last audit (reconfirm live). Not duplicates — a treasure hunt. One title cluster per sitting.",
    "sittings": [
     {
      "id": "C1",
@@ -1241,7 +1005,7 @@ window.QUEST_DATA = {
       },
       {
        "id": "C6",
-       "text": "Can't find a book anywhere? Leave it UNKNOWN + note \"hunted [date].\" Never force it."
+       "text": "Can’t find a book anywhere? Leave it UNKNOWN + note \"hunted [date].\" Never force it."
       },
       {
        "id": "C7",
@@ -1297,7 +1061,7 @@ window.QUEST_DATA = {
       },
       {
        "id": "E3",
-       "text": "Save as a new VALIDATED file with today's timestamp."
+       "text": "Save as a new VALIDATED file with today’s timestamp."
       },
       {
        "id": "E4",
@@ -1319,7 +1083,7 @@ window.QUEST_DATA = {
  "tripwires": [
   "Row count moved by a number nobody predicted → STOP, ask for a diff.",
   "Duplicate count went UP after a purge → STOP.",
-  "A box total jumped ±10 that wasn't part of the batch → STOP.",
+  "A box total jumped ±10 that wasn’t part of the batch → STOP.",
   "A check that passed before now fails → STOP.",
   "Two runs disagree on the same file → demand the row-level diff, never a theory."
  ]
