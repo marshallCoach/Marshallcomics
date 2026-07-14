@@ -21,7 +21,7 @@ EBAY_JSON        = os.path.join(REPO_ROOT, "ebay_pricing_results.json")
 # Column names to check — covers.json is the source for cover images
 WRITER_COL       = "Writer(s)"
 ARTIST_COL       = "Artist(s)"
-COVER_ARTIST_COL = "Cover_Artist"
+COVER_ARTIST_COL = "Cover Artist"
 YEAR_COL         = "Year"
 VOLUME_COL       = "Volume"
 
