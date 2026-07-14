@@ -10,8 +10,16 @@ const API_KEY  = process.env["COMIC_VINE_API_KEY"] ?? "";
 const CACHE_PATH = resolve(process.cwd(), "../../covers.json");
 
 // ── Disk cache (covers.json) ──────────────────────────────────────────────────
-// Shape: { "Title|||Issue": { url, large, date } | null }
-interface CacheEntry { url: string | null; large: string | null; date: string }
+// Shape: { "Title|||Issue": { url, large, date, volume_id?, volume_name? } | null }
+// volume_id/volume_name are Comic Vine's own volume identity for the matched
+// issue — captured from the SAME response as the cover (zero extra API calls) so
+// brb_reconcile_volumes.py can cluster/auto-number volumes without a new pass.
+// volume_start_year is captured only if CV happens to include it (the issue
+// search usually doesn't); chronological ordering uses `date` (cover_date).
+interface CacheEntry {
+  url: string | null; large: string | null; date: string;
+  volume_id?: number | null; volume_name?: string | null; volume_start_year?: number | null;
+}
 
 let diskCache: Record<string, CacheEntry | null> = {};
 let cacheLoaded = false;
@@ -110,7 +118,13 @@ router.get("/covers/search", async (req, res) => {
     if (cached === null) {
       res.json({ cover_url: null, large_url: null, match: null, candidates: [], cached: true });
     } else {
-      res.json({ cover_url: cached.url, large_url: cached.large, match: null, candidates: [], cached: true });
+      res.json({
+        cover_url: cached.url, large_url: cached.large,
+        match: (cached.volume_id != null || cached.volume_name != null)
+          ? { volume_id: cached.volume_id ?? null, volume_name: cached.volume_name ?? null, cover_date: cached.date }
+          : null,
+        candidates: [], cached: true,
+      });
     }
     return;
   }
@@ -139,7 +153,7 @@ router.get("/covers/search", async (req, res) => {
         id: number;
         name: string;
         issue_number: string;
-        volume?: { name: string };
+        volume?: { id?: number; name?: string; start_year?: number | string };
         image?: { medium_url?: string; small_url?: string; super_url?: string };
         cover_date?: string;
       }>;
@@ -149,7 +163,9 @@ router.get("/covers/search", async (req, res) => {
       id:           r.id,
       name:         r.name,
       issue_number: r.issue_number,
-      volume:       r.volume?.name ?? "",
+      volume:       r.volume?.name ?? "",           // name — used by scoring below
+      volume_id:    r.volume?.id ?? null,           // CV's volume identity (for reconciliation)
+      volume_start_year: r.volume?.start_year != null ? parseInt(String(r.volume.start_year), 10) : null,
       image_url:    r.image?.medium_url ?? r.image?.small_url ?? null,
       large_url:    r.image?.super_url  ?? r.image?.medium_url ?? null,
       cover_date:   r.cover_date ?? "",
@@ -204,14 +220,15 @@ router.get("/covers/search", async (req, res) => {
     // matched). Legacy 2-part entries are read but never written going
     // forward.
     diskCache[key] = best
-      ? { url: best.image_url ?? null, large: best.large_url ?? null, date: best.cover_date }
+      ? { url: best.image_url ?? null, large: best.large_url ?? null, date: best.cover_date,
+          volume_id: best.volume_id, volume_name: best.volume || null, volume_start_year: best.volume_start_year }
       : null;
     saveCache();
 
     res.json({
       cover_url:  best?.image_url  ?? null,
       large_url:  best?.large_url  ?? null,
-      match:      best ? { id: best.id, name: best.name, issue: best.issue_number, volume: best.volume, cover_date: best.cover_date } : null,
+      match:      best ? { id: best.id, name: best.name, issue: best.issue_number, volume: best.volume, volume_id: best.volume_id, volume_name: best.volume || null, volume_start_year: best.volume_start_year, cover_date: best.cover_date } : null,
       candidates: scored.slice(0, 5).map(({ score: _s, ...r }) => r),
       cached:     false,
     });

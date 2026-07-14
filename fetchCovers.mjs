@@ -149,6 +149,11 @@ for (const c of queue) {
         url:   data.cover_url,
         large: data.large_url  ?? null,
         date:  data.match?.cover_date ?? "",
+        // Comic Vine's own volume identity, captured from the same response —
+        // feeds brb_reconcile_volumes.py (no extra API calls).
+        volume_id:         data.match?.volume_id ?? null,
+        volume_name:       data.match?.volume_name ?? null,
+        volume_start_year: data.match?.volume_start_year ?? null,
       };
       found++;
     } else {
