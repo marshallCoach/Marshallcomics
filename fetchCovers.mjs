@@ -118,6 +118,7 @@ for (const c of queue) {
     issue:     c.Issue     || "",
     publisher: c.Publisher || "",
     year:      c.Year      || "",
+    volume:    String(c.Volume || "1").trim(),
     ...(retryNulls ? { refresh: "1" } : {}),
   });
 
