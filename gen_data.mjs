@@ -83,6 +83,18 @@ function col(name) {
   if (i === -1) console.warn('Missing column:', name);
   return i;
 }
+// Optional column — returns -1 without warning (used for eBay columns, which
+// only exist after brb_ebay_pricing.py has merged them into the xlsx).
+function colOpt(name) {
+  return headers.findIndex(h => String(h).trim() === name);
+}
+// Emit a numeric literal (or `null`) for the generated TS, from a "$12.50"-style
+// cell. Keeps eBay_* fields as real numbers so the UI can .toFixed() / sort them.
+function numLit(row, idx) {
+  if (idx < 0) return 'null';
+  const m = String(row[idx] ?? '').match(/-?\d+(?:\.\d+)?/);
+  return m ? m[0] : 'null';
+}
 
 const C = {
   title:    col('Title'),
@@ -119,6 +131,12 @@ const C = {
   bid:      col('Whatnot Starting Bid'),
   volume:   col('Volume'),
   entry:    col('#'),
+  // eBay pricing (optional — present only after brb_ebay_pricing.py merge)
+  ebayMedian: colOpt('eBay Median Sold $'),
+  ebayAvg:    colOpt('eBay Avg Sold $'),
+  ebayLow:    colOpt('eBay Low $'),
+  ebayHigh:   colOpt('eBay High $'),
+  ebayCount:  colOpt('eBay Comp Count'),
 };
 
 function s(row, idx) { return String(row[idx] ?? '').trim().replace(/\\/g, '\\\\').replace(/`/g, '\\`').replace(/\$\{/g, '\\${'); }
@@ -175,6 +193,7 @@ for (let r = 1; r < allRows.length; r++) {
     Imprint: \`${s(row,C.imprint)}\`, Box: \`${s(row,C.box)}\`,
     Crossover: \`${s(row,C.crossover)}\`, Start_Bid: \`${s(row,C.bid)}\`,
     Volume: \`${s(row,C.volume)}\`, Entry: \`${s(row,C.entry)}\`,
+    eBay_Avg: ${numLit(row,C.ebayAvg)}, eBay_Low: ${numLit(row,C.ebayLow)}, eBay_High: ${numLit(row,C.ebayHigh)}, eBay_Count: ${numLit(row,C.ebayCount)}, eBay_Median: ${numLit(row,C.ebayMedian)},
   }`);
 }
 
@@ -477,6 +496,8 @@ export interface Comic {
   Content: string; Platform: string; Sales_Data: string; Terrificon: string;
   Cover_Artist: string; Date_Added: string; Imprint: string; Box: string;
   Crossover: string; Start_Bid: string; Volume: string; Entry: string;
+  eBay_Avg?: number | null; eBay_Low?: number | null; eBay_High?: number | null;
+  eBay_Count?: number | null; eBay_Median?: number | null; eBay_Phase?: string;
 }
 
 export interface BoxSummary {

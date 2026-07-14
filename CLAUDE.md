@@ -11,9 +11,12 @@ All development: `claude/upbeat-babbage-2f5gr2`
 ## Mac one-time setup (do these once, not per session)
 
 ### eBay auth — add to ~/.zshrc
+Keep the real values ONLY in ~/.zshrc (never commit them). The cert that used
+to live here has been scrubbed — rotate it in the eBay developer console if it
+was ever pushed, since it remains in git history.
 ```
-export EBAY_APP_ID=BobMarsh…
-export EBAY_CERT_ID=PRD-0ac9b6dbcb3f-8e93-4187-b8ee-4d60
+export EBAY_APP_ID=<your eBay App ID>
+export EBAY_CERT_ID=<your eBay Cert ID>
 ```
 Then: `source ~/.zshrc`
 
