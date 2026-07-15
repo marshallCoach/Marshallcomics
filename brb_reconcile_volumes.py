@@ -15,7 +15,7 @@ How it works (the "piggyback" approach):
      and the only tier worth a human/AI/GCD lookup.
 
 Requires covers.json entries to carry volume_id — i.e. run a cover fetch with the
-updated code first (node fetchCovers.mjs --retry-nulls, or a normal batch). Rows
+updated code first (pnpm exec tsx fetchCovers.mjs --retry-nulls, or a batch). Rows
 without a volume_id yet are reported as "no CV volume data" (not as mismatches).
 
 Usage:
@@ -169,7 +169,7 @@ def main():
     print(f"  · No CV volume data yet (re-fetch)    : {no_cv:,}")
     if have_cv == 0:
         print(f"\n  ⚠ No rows have volume_id yet. Run a cover fetch with the updated")
-        print(f"    code first:  node fetchCovers.mjs --retry-nulls")
+        print(f"    code first:  pnpm exec tsx fetchCovers.mjs --retry-nulls")
     if worklist:
         print(f"\n  ── WORKLIST (first 25) ──────────────────────────────────────")
         for w in sorted(worklist, key=lambda x: x["Title"])[:25]:

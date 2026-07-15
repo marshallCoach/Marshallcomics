@@ -86,6 +86,80 @@ function volumeStartYear(volumeName: string | undefined): number | null {
   return n > 1900 && n < 2100 ? n : null;
 }
 
+// ── Two-step volume-scoped lookup ──────────────────────────────────────────────
+// The free-text /search/ endpoint returns <=10 issues with no series scoping, so
+// for common titles the correct issue often isn't in the list at all — and no
+// re-scoring can pick a candidate that isn't there. This resolves the exact CV
+// VOLUME first (by name + year + publisher), then fetches the issue INSIDE that
+// volume. That's the accurate path; the free-text search stays as a fallback so
+// this can only improve matches, never regress them.
+interface ResolvedVolume { id: number; name: string; start_year: number | null; }
+
+// Resolved volumes are cached in-memory per server run, keyed by normalized
+// title + start-year, so a title with 20 issues costs one /volumes/ call, not 20.
+const volumeCache = new Map<string, ResolvedVolume | null>();
+function normTitle(t: string): string {
+  return String(t || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+}
+async function cvFetch(url: string): Promise<any | null> {
+  try {
+    const r = await fetch(url, { headers: { "User-Agent": "BlackReadBrown-Comics/1.0" } });
+    if (!r.ok) return null;
+    return await r.json();
+  } catch { return null; }
+}
+
+async function resolveVolume(title: string, yearRange: [number, number] | null, publisher: string): Promise<ResolvedVolume | null> {
+  const cacheKey = `${normTitle(title)}|${yearRange ? yearRange[0] : ""}`;
+  if (volumeCache.has(cacheKey)) return volumeCache.get(cacheKey)!;
+
+  const url = `${CV_BASE}/volumes/?${cvParams({
+    filter: `name:${title}`,
+    field_list: "id,name,start_year,count_of_issues,publisher",
+    limit: "50",
+  })}`;
+  const data = await cvFetch(url);
+  const results: Array<{ id: number; name: string; start_year?: string | number; publisher?: { name?: string } }> = data?.results ?? [];
+
+  const tnorm = normTitle(title);
+  let best: ResolvedVolume | null = null;
+  let bestScore = -Infinity;
+  for (const v of results) {
+    const vnorm = normTitle(v.name || "");
+    let score = 0;
+    if (vnorm === tnorm) score += 20;                                  // exact name match
+    else if (vnorm.includes(tnorm) || tnorm.includes(vnorm)) score += 6;
+    else continue;                                                     // unrelated name — skip
+    const sy = v.start_year != null ? parseInt(String(v.start_year), 10) : NaN;
+    if (yearRange && !isNaN(sy)) {
+      if (sy >= yearRange[0] - 1 && sy <= yearRange[1] + 1) score += 15;
+      else score -= Math.min(10, Math.abs(sy - yearRange[0]));
+    }
+    if (publisher && v.publisher?.name && v.publisher.name.toLowerCase().includes(publisher.toLowerCase())) score += 4;
+    if (score > bestScore) { bestScore = score; best = { id: v.id, name: v.name, start_year: isNaN(sy) ? null : sy }; }
+  }
+  // Require a genuine name match (exact = 20, or contains + year corroboration).
+  const resolved = best && bestScore >= 20 ? best : null;
+  volumeCache.set(cacheKey, resolved);
+  return resolved;
+}
+
+async function fetchIssueInVolume(vol: ResolvedVolume, issueNum: string): Promise<{ image_url: string | null; large_url: string | null; cover_date: string } | null> {
+  const url = `${CV_BASE}/issues/?${cvParams({
+    filter: `volume:${vol.id},issue_number:${issueNum}`,
+    field_list: "id,issue_number,image,cover_date",
+    limit: "1",
+  })}`;
+  const data = await cvFetch(url);
+  const r = (data?.results ?? [])[0];
+  if (!r?.image) return null;
+  return {
+    image_url: r.image.medium_url ?? r.image.small_url ?? null,
+    large_url: r.image.super_url ?? r.image.medium_url ?? null,
+    cover_date: r.cover_date ?? "",
+  };
+}
+
 // ── Route ─────────────────────────────────────────────────────────────────────
 router.get("/covers/search", async (req, res) => {
   // Never allow browser caching — these are dynamic API responses
@@ -135,6 +209,31 @@ router.get("/covers/search", async (req, res) => {
     return;
   }
   try {
+    const issueNum  = String(issue || "").replace(/^#/, "").trim();
+    const yearRange = parseYearRange(year);
+
+    // ── Primary: resolve the exact volume, then fetch the issue inside it ─────
+    if (issueNum) {
+      const vol = await resolveVolume(title, yearRange, publisher);
+      if (vol) {
+        const iss = await fetchIssueInVolume(vol, issueNum);
+        if (iss && iss.image_url) {
+          diskCache[key] = {
+            url: iss.image_url, large: iss.large_url, date: iss.cover_date,
+            volume_id: vol.id, volume_name: vol.name, volume_start_year: vol.start_year,
+          };
+          saveCache();
+          res.json({
+            cover_url: iss.image_url, large_url: iss.large_url,
+            match: { volume_id: vol.id, volume_name: vol.name, volume_start_year: vol.start_year, cover_date: iss.cover_date, source: "volume-scoped" },
+            candidates: [], cached: false,
+          });
+          return;
+        }
+      }
+    }
+
+    // ── Fallback: free-text issue search + scoring ───────────────────────────
     const q = `${title} ${issue || ""}`.trim();
     const searchUrl = `${CV_BASE}/search/?${cvParams({
       query: q,
@@ -171,8 +270,6 @@ router.get("/covers/search", async (req, res) => {
       cover_date:   r.cover_date ?? "",
     }));
 
-    const issueNum  = String(issue || "").replace(/^#/, "").trim();
-    const yearRange = parseYearRange(year);
     const scored = results.map(r => {
       let score = 0;
       const rVol       = (r.volume || "").toLowerCase();
