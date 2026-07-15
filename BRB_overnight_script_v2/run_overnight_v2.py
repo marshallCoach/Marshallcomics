@@ -527,12 +527,18 @@ def main():
                   not_found.append(issue_num)
                   print(f"  [NOT FOUND] #{issue_num} — not in CV volume")
 
-          # Apply fills — normalize separators before writing
+          # Apply fills — normalize separators before writing.
+          # Writer(s) must be guarded with is_blank, same as Artist(s)/Cover_Artist
+          # below: `mask` includes rows queued because Cover_Artist was blank even
+          # when Writer(s) already had a value, and the batch's CV volume is
+          # resolved from the group's Year mode, not per-row — a bad match there
+          # was unconditionally overwriting correct existing writer credits.
           filled_count = 0
           for issue_num, writer in writers_found.items():
               row_mask = mask & (df["Issue #"] == issue_num)
-              df.loc[row_mask, "Writer(s)"] = normalize_credits(writer)
-              filled_count += int(row_mask.sum())
+              writer_row_mask = row_mask & df["Writer(s)"].apply(is_blank)
+              df.loc[writer_row_mask, "Writer(s)"] = normalize_credits(writer)
+              filled_count += int(writer_row_mask.sum())
 
           for issue_num, artist in artists_found.items():
               row_mask = mask & (df["Issue #"] == issue_num)
