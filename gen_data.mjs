@@ -1,4 +1,4 @@
-import { writeFileSync, readdirSync, statSync, copyFileSync, existsSync } from 'fs';
+import { writeFileSync, readFileSync, readdirSync, statSync, copyFileSync, existsSync } from 'fs';
 import { execSync } from 'child_process';
 import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
@@ -168,11 +168,42 @@ for (let r = 1; r < allRows.length; r++) {
   if (!boxDateMap[box] || clean < boxDateMap[box]) boxDateMap[box] = clean;
 }
 
+// ── eBay overlay ──────────────────────────────────────────────────────────────
+// Merge ebay_pricing_results.json (written by brb_ebay_pricing.py) ON TOP of the
+// xlsx eBay columns at generate time. This is how fresh eBay prices reach the app
+// WITHOUT writing the source xlsx (which stays the Mac-side source of truth).
+function normIss(v) {
+  const s = String(v ?? '').trim();
+  const f = parseFloat(s);
+  return (!isNaN(f) && f === Math.trunc(f) && /^\d+(\.0+)?$/.test(s)) ? String(Math.trunc(f)) : s;
+}
+const ebayJson = {};
+if (existsSync('ebay_pricing_results.json')) {
+  try {
+    // Python's json.dump writes bare NaN (invalid JSON) for blank floats — JS
+    // JSON.parse rejects it, so replace NaN with null before parsing.
+    const raw = JSON.parse(readFileSync('ebay_pricing_results.json', 'utf8').replace(/\bNaN\b/g, 'null'));
+    for (const [k, v] of Object.entries(raw)) {
+      const p = k.split('|||');
+      if (p.length !== 2) continue;
+      ebayJson[`${p[0]}|||${normIss(p[1])}`] = v;
+    }
+    const priced = Object.values(ebayJson).filter(v => v && (v.avg != null || v.avg_price != null)).length;
+    console.log(`eBay overlay: ${priced} priced entries from ebay_pricing_results.json`);
+  } catch (e) { console.warn('eBay overlay skipped:', e.message); }
+}
+// Emit the JSON value (fresher) if present, else fall back to the xlsx column.
+function ebField(eb, jkey, colIdx, row) {
+  if (eb && eb[jkey] != null && !isNaN(eb[jkey])) return String(eb[jkey]);
+  return numLit(row, colIdx);
+}
+
 const comics = [];
 for (let r = 1; r < allRows.length; r++) {
   const row = allRows[r];
   const title = String(row[C.title] ?? '').trim();
   if (!title) continue;
+  const eb = ebayJson[`${title}|||${normIss(String(row[C.issue] ?? ''))}`];
   const rawTitle = st(row, C.title);
   const { cleanTitle, disambig } = parseTitle(rawTitle);
   const esc = v => v.replace(/\\/g, '\\\\').replace(/`/g, '\\`').replace(/\$\{/g, '\\${');
@@ -193,7 +224,7 @@ for (let r = 1; r < allRows.length; r++) {
     Imprint: \`${s(row,C.imprint)}\`, Box: \`${s(row,C.box)}\`,
     Crossover: \`${s(row,C.crossover)}\`, Start_Bid: \`${s(row,C.bid)}\`,
     Volume: \`${s(row,C.volume)}\`, Entry: \`${s(row,C.entry)}\`,
-    eBay_Avg: ${numLit(row,C.ebayAvg)}, eBay_Low: ${numLit(row,C.ebayLow)}, eBay_High: ${numLit(row,C.ebayHigh)}, eBay_Count: ${numLit(row,C.ebayCount)}, eBay_Median: ${numLit(row,C.ebayMedian)},
+    eBay_Avg: ${ebField(eb,'avg',C.ebayAvg,row)}, eBay_Low: ${ebField(eb,'low',C.ebayLow,row)}, eBay_High: ${ebField(eb,'high',C.ebayHigh,row)}, eBay_Count: ${ebField(eb,'count',C.ebayCount,row)}, eBay_Median: ${ebField(eb,'median',C.ebayMedian,row)},
   }`);
 }
 

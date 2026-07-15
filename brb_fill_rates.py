@@ -41,9 +41,10 @@ def _resolve(raw):
 
 
 def _latest_validated():
-    matches = _glob.glob(os.path.join(ASSETS_DIR, "comics_inventory_*VALIDATED*.xlsx"))
-    if not matches:
-        matches = _glob.glob(os.path.join(ASSETS_DIR, "comics_inventory_*.xlsx"))
+    # Newest comics_inventory_*.xlsx by mtime (matches gen_data.mjs) — reads the
+    # one current file regardless of whether its name contains 'VALIDATED'.
+    matches = [f for f in _glob.glob(os.path.join(ASSETS_DIR, "comics_inventory_*.xlsx"))
+               if not os.path.basename(f).startswith("~$")]
     return max(matches, key=os.path.getmtime) if matches else ""
 
 
