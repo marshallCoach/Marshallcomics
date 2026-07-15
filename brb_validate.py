@@ -43,14 +43,12 @@ def _resolve(raw: str) -> str:
 
 
 def _latest_validated() -> str:
-    """Return the most-recently-modified *VALIDATED*.xlsx in attached_assets/."""
-    pattern = os.path.join(ASSETS_DIR, "comics_inventory_*VALIDATED*.xlsx")
-    matches = _glob.glob(pattern)
-    if not matches:
-        matches = _glob.glob(os.path.join(ASSETS_DIR, "comics_inventory_*.xlsx"))
-    if not matches:
-        return ""
-    return max(matches, key=os.path.getmtime)
+    """Newest comics_inventory_*.xlsx by mtime in attached_assets/ — same
+    convention as gen_data.mjs, so every script reads the one current file
+    (not whichever happens to carry 'VALIDATED' in its name)."""
+    matches = [f for f in _glob.glob(os.path.join(ASSETS_DIR, "comics_inventory_*.xlsx"))
+               if not os.path.basename(f).startswith("~$")]
+    return max(matches, key=os.path.getmtime) if matches else ""
 
 
 # ── Box capacity table ────────────────────────────────────────────────────────

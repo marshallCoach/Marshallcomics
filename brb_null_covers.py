@@ -31,11 +31,11 @@ ASSETS_DIR  = os.path.join(REPO_ROOT, "attached_assets")
 
 
 def _latest_xlsx() -> str | None:
-    """Newest comics_inventory*VALIDATED*.xlsx in attached_assets/ (same
-    auto-detect convention as brb_validate.py / gen_data.mjs)."""
-    matches = _glob.glob(os.path.join(ASSETS_DIR, "comics_inventory_*VALIDATED*.xlsx"))
-    if not matches:
-        matches = _glob.glob(os.path.join(ASSETS_DIR, "comics_inventory_*.xlsx"))
+    """Newest comics_inventory_*.xlsx by mtime in attached_assets/ (same
+    auto-detect convention as gen_data.mjs — reads the one current file
+    regardless of whether its name contains 'VALIDATED')."""
+    matches = [f for f in _glob.glob(os.path.join(ASSETS_DIR, "comics_inventory_*.xlsx"))
+               if not os.path.basename(f).startswith("~$")]
     if not matches:
         return None
     return max(matches, key=os.path.getmtime)

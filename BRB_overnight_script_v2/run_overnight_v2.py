@@ -14,19 +14,36 @@ Usage:
 
 import pandas as pd
 import requests
-import json, os, re, sys, time
+import json, os, re, sys, time, signal
 from datetime import datetime
+
+# Line-buffer stdout so the log is a truthful heartbeat even when redirected to
+# a file (nohup ... > overnight_log.txt). Without this, stdout is block-buffered
+# and "no output for 24 min" is ambiguous between "hung" and "buffer not flushed".
+try:
+    sys.stdout.reconfigure(line_buffering=True)
+except Exception:
+    pass
+
+# Per-title watchdog: if a single title's processing exceeds this, SIGALRM fires
+# and we skip it instead of letting one wedged iteration hang the whole night.
+TITLE_TIMEOUT = 600  # seconds (10 min — generous vs. a legit multi-issue title)
+class _TitleTimeout(Exception):
+    pass
+def _title_alarm(signum, frame):
+    raise _TitleTimeout()
 
 # ── CONFIG ────────────────────────────────────────────────────────────────────
 import glob as _glob
 
 def _find_inventory():
-    """Auto-detect latest VALIDATED xlsx in ../attached_assets/ relative to this script."""
+    """Newest comics_inventory_*.xlsx by mtime in ../attached_assets/ — same
+    convention as gen_data.mjs, so every script reads the one current file
+    (not whichever happens to carry 'VALIDATED' in its name)."""
     base = os.path.dirname(os.path.abspath(__file__))
     assets = os.path.join(base, "..", "attached_assets")
-    matches = _glob.glob(os.path.join(assets, "comics_inventory_*VALIDATED*.xlsx"))
-    if not matches:
-        matches = _glob.glob(os.path.join(assets, "comics_inventory_*.xlsx"))
+    matches = [f for f in _glob.glob(os.path.join(assets, "comics_inventory_*.xlsx"))
+               if not os.path.basename(f).startswith("~$")]
     if not matches:
         raise FileNotFoundError(f"No comics_inventory_*.xlsx found in {assets}")
     return max(matches, key=os.path.getmtime)
@@ -439,6 +456,7 @@ def main():
 
     processed = 0
     api_calls  = 0
+    signal.signal(signal.SIGALRM, _title_alarm)
 
     for _, run in queue.iterrows():
         title, volume = run["Title"], run["Volume"]
@@ -446,97 +464,106 @@ def main():
         if key in done_keys:
             continue
 
-        ca_blank_col = df["Cover_Artist"].apply(is_blank) if "Cover_Artist" in df.columns else pd.Series(True, index=df.index)
-        mask = (
-            (df["Title"] == title) &
-            (df["Volume"] == volume) &
-            (df["Writer(s)"].apply(is_blank) | ca_blank_col)
-        )
-        if mask.sum() == 0:
-            continue
+        signal.alarm(TITLE_TIMEOUT)  # watchdog: skip this title if it wedges
+        try:
+          ca_blank_col = df["Cover_Artist"].apply(is_blank) if "Cover_Artist" in df.columns else pd.Series(True, index=df.index)
+          mask = (
+              (df["Title"] == title) &
+              (df["Volume"] == volume) &
+              (df["Writer(s)"].apply(is_blank) | ca_blank_col)
+          )
+          if mask.sum() == 0:
+              continue
 
-        # Collision check only applies when writer is missing (year-gap logic is writer-based)
-        writer_missing = mask & df["Writer(s)"].apply(is_blank)
-        collision, cdesc = has_year_collision(df, title, volume) if writer_missing.any() else (False, None)
-        if collision:
-            log_issue("SKIPPED_COLLISION", title, cdesc)
-            log_review(title, volume, f"Year gap: {cdesc}")
-            print(f"[SKIP-COLLISION] {title} Vol {volume}")
-            continue
+          # Collision check only applies when writer is missing (year-gap logic is writer-based)
+          writer_missing = mask & df["Writer(s)"].apply(is_blank)
+          collision, cdesc = has_year_collision(df, title, volume) if writer_missing.any() else (False, None)
+          if collision:
+              log_issue("SKIPPED_COLLISION", title, cdesc)
+              log_review(title, volume, f"Year gap: {cdesc}")
+              print(f"[SKIP-COLLISION] {title} Vol {volume}")
+              continue
 
-        year_hint = get_year_mode_safe(df.loc[mask, "Year"], title=title)
-        issues    = df.loc[mask, "Issue #"].dropna().sort_values().unique()
-        n_rows    = int(mask.sum())
+          year_hint = get_year_mode_safe(df.loc[mask, "Year"], title=title)
+          issues    = df.loc[mask, "Issue #"].dropna().sort_values().unique()
+          n_rows    = int(mask.sum())
 
-        print(f"[CV] {title} Vol {volume} — {len(issues)} issues (~{year_hint}) [{n_rows} blank rows]")
+          print(f"[CV] {title} Vol {volume} — {len(issues)} issues (~{year_hint}) [{n_rows} blank rows]")
 
-        # Three-step: volume lookup → issue ID map → individual issue details (for roles)
-        credits_by_num, calls_used, fetch_err = cv_get_all_credits_for_title(title, year_hint, issues)
-        api_calls += calls_used
+          # Three-step: volume lookup → issue ID map → individual issue details (for roles)
+          credits_by_num, calls_used, fetch_err = cv_get_all_credits_for_title(title, year_hint, issues)
+          api_calls += calls_used
 
-        if fetch_err and not credits_by_num:
-            print(f"  [ERROR] {fetch_err}")
-            log_issue("SKIPPED_LOW_CONFIDENCE", title, f"CV lookup failed: {fetch_err}")
-            log_review(title, volume, f"CV lookup failed: {fetch_err}")
+          if fetch_err and not credits_by_num:
+              print(f"  [ERROR] {fetch_err}")
+              log_issue("SKIPPED_LOW_CONFIDENCE", title, f"CV lookup failed: {fetch_err}")
+              log_review(title, volume, f"CV lookup failed: {fetch_err}")
+              processed += 1
+              continue
+
+          writers_found       = {}
+          artists_found       = {}
+          cover_artists_found = {}
+          not_found           = []
+
+          for issue_num in issues:
+              try:
+                  issue_key = str(int(float(str(issue_num))))
+              except (ValueError, TypeError):
+                  issue_key = re.sub(r"[^0-9]", "", str(issue_num)) or str(issue_num)
+
+              result = credits_by_num.get(issue_key)
+              if result:
+                  if result["writer"]:
+                      writers_found[issue_num] = result["writer"]
+                  if result["artist"]:
+                      artists_found[issue_num] = result["artist"]
+                  if result["cover_artist"]:
+                      cover_artists_found[issue_num] = result["cover_artist"]
+                  if not result["writer"]:
+                      not_found.append(issue_num)
+                      print(f"  [NO WRITER] #{issue_num} — credits found but no writer role")
+              else:
+                  not_found.append(issue_num)
+                  print(f"  [NOT FOUND] #{issue_num} — not in CV volume")
+
+          # Apply fills — normalize separators before writing
+          filled_count = 0
+          for issue_num, writer in writers_found.items():
+              row_mask = mask & (df["Issue #"] == issue_num)
+              df.loc[row_mask, "Writer(s)"] = normalize_credits(writer)
+              filled_count += int(row_mask.sum())
+
+          for issue_num, artist in artists_found.items():
+              row_mask = mask & (df["Issue #"] == issue_num)
+              if "Artist(s)" in df.columns:
+                  df.loc[row_mask & df["Artist(s)"].apply(is_blank), "Artist(s)"] = normalize_credits(artist)
+
+          for issue_num, ca in cover_artists_found.items():
+              row_mask = mask & (df["Issue #"] == issue_num)
+              if "Cover_Artist" in df.columns:
+                  df.loc[row_mask & df["Cover_Artist"].apply(is_blank), "Cover_Artist"] = normalize_credits(ca)
+
+          if not_found:
+              log_review(title, volume, f"{len(not_found)} issues not found on CV: {sorted(not_found)[:10]}")
+
+          if filled_count > 0:
+              log_issue("FILLED", title,
+                  f"{filled_count}/{n_rows} rows filled via Comic Vine. "
+                  f"Artists: {len(artists_found)}. Not found: {len(not_found)}.")
+              print(f"  → Filled {filled_count} rows | artists: {len(artists_found)} | missed: {len(not_found)}")
+          else:
+              log_issue("SKIPPED_LOW_CONFIDENCE", title, f"No writer credits found on Comic Vine for any issue.")
+              print(f"  → No writers found — logged to needs_review.json")
+
+          processed += 1
+        except _TitleTimeout:
+            log_issue("SKIPPED_TIMEOUT", title, f"exceeded {TITLE_TIMEOUT}s watchdog — skipped")
+            log_review(title, volume, f"watchdog timeout after {TITLE_TIMEOUT}s")
+            print(f"  [WATCHDOG] {title} Vol {volume} exceeded {TITLE_TIMEOUT}s — skipped")
             processed += 1
-            continue
-
-        writers_found       = {}
-        artists_found       = {}
-        cover_artists_found = {}
-        not_found           = []
-
-        for issue_num in issues:
-            try:
-                issue_key = str(int(float(str(issue_num))))
-            except (ValueError, TypeError):
-                issue_key = re.sub(r"[^0-9]", "", str(issue_num)) or str(issue_num)
-
-            result = credits_by_num.get(issue_key)
-            if result:
-                if result["writer"]:
-                    writers_found[issue_num] = result["writer"]
-                if result["artist"]:
-                    artists_found[issue_num] = result["artist"]
-                if result["cover_artist"]:
-                    cover_artists_found[issue_num] = result["cover_artist"]
-                if not result["writer"]:
-                    not_found.append(issue_num)
-                    print(f"  [NO WRITER] #{issue_num} — credits found but no writer role")
-            else:
-                not_found.append(issue_num)
-                print(f"  [NOT FOUND] #{issue_num} — not in CV volume")
-
-        # Apply fills — normalize separators before writing
-        filled_count = 0
-        for issue_num, writer in writers_found.items():
-            row_mask = mask & (df["Issue #"] == issue_num)
-            df.loc[row_mask, "Writer(s)"] = normalize_credits(writer)
-            filled_count += int(row_mask.sum())
-
-        for issue_num, artist in artists_found.items():
-            row_mask = mask & (df["Issue #"] == issue_num)
-            if "Artist(s)" in df.columns:
-                df.loc[row_mask & df["Artist(s)"].apply(is_blank), "Artist(s)"] = normalize_credits(artist)
-
-        for issue_num, ca in cover_artists_found.items():
-            row_mask = mask & (df["Issue #"] == issue_num)
-            if "Cover_Artist" in df.columns:
-                df.loc[row_mask & df["Cover_Artist"].apply(is_blank), "Cover_Artist"] = normalize_credits(ca)
-
-        if not_found:
-            log_review(title, volume, f"{len(not_found)} issues not found on CV: {sorted(not_found)[:10]}")
-
-        if filled_count > 0:
-            log_issue("FILLED", title,
-                f"{filled_count}/{n_rows} rows filled via Comic Vine. "
-                f"Artists: {len(artists_found)}. Not found: {len(not_found)}.")
-            print(f"  → Filled {filled_count} rows | artists: {len(artists_found)} | missed: {len(not_found)}")
-        else:
-            log_issue("SKIPPED_LOW_CONFIDENCE", title, f"No writer credits found on Comic Vine for any issue.")
-            print(f"  → No writers found — logged to needs_review.json")
-
-        processed += 1
+        finally:
+            signal.alarm(0)  # clear the watchdog before checkpoint / next title
 
         if processed % CHECKPOINT_EVERY == 0:
             ts  = datetime.now().strftime("%d%m_%H%M")
