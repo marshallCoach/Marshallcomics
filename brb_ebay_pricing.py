@@ -278,6 +278,7 @@ def main():
     parser.add_argument("--file",        default=None,        help="xlsx file override")
     parser.add_argument("--reprocess",   action="store_true", help="Re-pull & trim existing results")
     parser.add_argument("--modern-pass", action="store_true", help="Priority queue: Modern/Modern Age era only, unpriced rows")
+    parser.add_argument("--key-tier",    action="store_true", help="Tier 2: also queue Key Issue?=YES rows never eBay-fetched, regardless of value")
     args = parser.parse_args()
 
     if not EBAY_APP_ID:
@@ -384,6 +385,14 @@ def main():
 
         era = str(row.get("Era", "")).strip()
 
+        # Column names are "Key Issue?" / "Signed?" — not "Key" / "Signed".
+        # The old code read the wrong names, so is_key/is_signed were always
+        # False (silently breaking --modern-pass's key/signed priority).
+        is_key    = str(row.get("Key Issue?", "")).strip().upper() == "YES"
+        is_signed = str(row.get("Signed?", "")).strip().upper() == "YES"
+        ebay_fetched = str(row.get("eBay Fetched", "")).strip()
+        never_fetched = ebay_fetched in ("", "nan", "None")
+
         comic = {
             "title":     title,
             "issue":     issue,
@@ -395,8 +404,8 @@ def main():
             "box":       str(row.get("Box #", "")),
             "writer":    row.get("Writer(s)", ""),
             "era":       era,
-            "is_key":    str(row.get("Key", "")).strip().upper() == "YES",
-            "is_signed": str(row.get("Signed", "")).strip().upper() == "YES",
+            "is_key":    is_key,
+            "is_signed": is_signed,
         }
 
         if is_cgc_bound(row):
@@ -406,9 +415,15 @@ def main():
             continue
 
         adj = condition_adjusted_value(row)
-        if adj < args.min_value:
+        # Tier 2 (--key-tier): a Key Issue that has never been eBay-fetched gets
+        # queued regardless of its Est. Raw Value. The value field is often a
+        # flat import bucket ($5/$6/$8), so gating keys on it hides genuinely
+        # significant books (e.g. the Absolute line) from ever being priced.
+        tier2 = args.key_tier and is_key and never_fetched
+        if adj < args.min_value and not tier2:
             continue
         comic["adj_value"] = adj
+        comic["tier2"] = tier2
         queue.append(comic)
 
     # ── --modern-pass: filter to Modern era only, unpriced, priority sort ────────────────────
@@ -434,7 +449,9 @@ def main():
     if args.limit:
         queue = queue[:args.limit]
 
-    print(f"Queue: {len(queue)} raw/pressed titles with adj value ≥ ${args.min_value:.0f}")
+    tier2_count = sum(1 for c in queue if c.get("tier2"))
+    print(f"Queue: {len(queue)} raw/pressed titles with adj value ≥ ${args.min_value:.0f}"
+          + (f"  (incl. {tier2_count} Tier-2 key issues under threshold)" if tier2_count else ""))
     print(f"       {len(cgc_queue)} CGC-bound titles (flagged separately, not priced as raw)")
 
     if args.dry_run:
