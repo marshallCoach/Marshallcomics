@@ -140,6 +140,14 @@ async function resolveVolume(title: string, yearRange: [number, number] | null, 
   }
   // Require a genuine name match (exact = 20, or contains + year corroboration).
   const resolved = best && bestScore >= 20 ? best : null;
+  if (!resolved) {
+    // Diagnostic only: a batch of these on a real run showed the fix engaging
+    // for just 30/101 titles, falling through to the less-reliable free-text
+    // path the other 70% of the time - this makes the actual cause (CV
+    // returned no results at all vs. a real candidate that scored too low)
+    // inspectable on the next run instead of guessed at.
+    console.log(`[resolveVolume] no confident match for "${title}" (year=${yearRange ? yearRange.join("-") : "?"}, pub=${publisher || "?"}) — ${results.length} raw candidates, best scored ${best ? bestScore : "n/a"}${best ? ` (${best.name}, ${best.start_year})` : ""}`);
+  }
   volumeCache.set(cacheKey, resolved);
   return resolved;
 }
@@ -225,7 +233,7 @@ router.get("/covers/search", async (req, res) => {
           saveCache();
           res.json({
             cover_url: iss.image_url, large_url: iss.large_url,
-            match: { volume_id: vol.id, volume_name: vol.name, volume_start_year: vol.start_year, cover_date: iss.cover_date, source: "volume-scoped" },
+            match: { volume_id: vol.id, volume_name: vol.name, volume_start_year: vol.start_year, cover_date: iss.cover_date, issue: issueNum, source: "volume-scoped" },
             candidates: [], cached: false,
           });
           return;
