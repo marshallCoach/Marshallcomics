@@ -82,6 +82,7 @@ def find_series(conn, title, year=None, publisher=None):
 
 COMIC_STORY_TYPE_ID = 19  # 'comic story' in gcd_story_type — excludes letters
                           # pages(12), covers(6), ads(2/16), etc.
+COVER_STORY_TYPE_ID = 6   # 'cover' — its penciller credit is the cover artist.
 # credit_type_id sets (from gcd_credit_type): script-bearing = writer,
 # pencils/painting-bearing = artist. Combo types (10-13) carry both.
 WRITER_TYPES = {1, 10, 11, 12, 13}
@@ -114,28 +115,41 @@ def find_credits(conn, series_id, issue):
         return None
     iid, number, key_date, pub_date = match
 
-    story_ids = [r[0] for r in conn.execute(
-        "SELECT id FROM gcd_story WHERE issue_id = ? AND type_id = ? ORDER BY sequence_number",
-        (iid, COMIC_STORY_TYPE_ID))]
-    writer = artist = None
-    if story_ids:
+    def _credits_for(story_ids):
+        """(writer, artist) from the given stories, first usable credit per role."""
+        w = a = None
+        if not story_ids:
+            return w, a
         qs = ",".join("?" * len(story_ids))
-        rows = conn.execute(
-            f"SELECT c.credit_type_id, COALESCE(NULLIF(cn.name,''), c.credit_name), c.story_id "
+        for ctype, name in conn.execute(
+            f"SELECT c.credit_type_id, COALESCE(NULLIF(cn.name,''), c.credit_name) "
             f"FROM gcd_story_credit c LEFT JOIN gcd_creator_name_detail cn ON cn.id = c.creator_id "
-            f"WHERE c.story_id IN ({qs}) ORDER BY c.story_id, c.id", story_ids).fetchall()
-        for ctype, name, sid in rows:
+            f"WHERE c.story_id IN ({qs}) ORDER BY c.story_id, c.id", story_ids):
             nm = _clean_name(name)
             if not nm:
                 continue
-            if writer is None and ctype in WRITER_TYPES:
-                writer = nm
-            if artist is None and ctype in ARTIST_TYPES:
-                artist = nm
-            if writer and artist:
+            if w is None and ctype in WRITER_TYPES:
+                w = nm
+            if a is None and ctype in ARTIST_TYPES:
+                a = nm
+            if w and a:
                 break
+        return w, a
+
+    comic_story_ids = [r[0] for r in conn.execute(
+        "SELECT id FROM gcd_story WHERE issue_id = ? AND type_id = ? ORDER BY sequence_number",
+        (iid, COMIC_STORY_TYPE_ID))]
+    writer, artist = _credits_for(comic_story_ids)
+
+    # Cover artist: the penciller/painter credited on the cover story (type_id=6).
+    cover_story_ids = [r[0] for r in conn.execute(
+        "SELECT id FROM gcd_story WHERE issue_id = ? AND type_id = ? ORDER BY sequence_number",
+        (iid, COVER_STORY_TYPE_ID))]
+    _, cover_artist = _credits_for(cover_story_ids)
+
     return {"issue_id": iid, "number": number, "key_date": key_date, "publication_date": pub_date,
-            "writer": writer, "artist": artist, "comic_story_count": len(story_ids)}
+            "writer": writer, "artist": artist, "cover_artist": cover_artist,
+            "comic_story_count": len(comic_story_ids)}
 
 
 def lookup(title, issue, year=None, publisher=None):
@@ -168,7 +182,7 @@ def self_test():
             continue
         s, i = r["series"], r["issue"]
         print(f"  series: {s['name']} ({s['year_began']}-{s['year_ended'] or '?'}) pub={s['publisher']} score={s['score']}")
-        print(f"  issue #{i['number']}  writer={i['writer']!r}  artist={i['artist']!r}  ({i['comic_story_count']} comic stories)")
+        print(f"  issue #{i['number']}  writer={i['writer']!r}  artist={i['artist']!r}  cover={i['cover_artist']!r}")
 
 
 def main():

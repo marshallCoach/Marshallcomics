@@ -56,8 +56,9 @@ def main():
     H = [c.value for c in next(ws.iter_rows(max_row=1))]
     ci = {name: H.index(name) + 1 for name in ("Title", "Issue #", "Year", "Publisher", "Writer(s)")}
     ai = H.index("Artist(s)") + 1 if "Artist(s)" in H else None
+    cvi = H.index("Cover Artist") + 1 if "Cover Artist" in H else None
 
-    filled_w = filled_a = not_found = no_gap = 0
+    filled_w = filled_a = filled_c = not_found = no_gap = 0
     fills = []
     for row in ws.iter_rows(min_row=2):
         title = str(row[ci["Title"] - 1].value or "").strip()
@@ -65,7 +66,8 @@ def main():
             continue
         w_blank = is_blank(row[ci["Writer(s)"] - 1].value)
         a_blank = ai is not None and is_blank(row[ai - 1].value)
-        if not w_blank and not a_blank:
+        c_blank = cvi is not None and is_blank(row[cvi - 1].value)
+        if not w_blank and not a_blank and not c_blank:
             no_gap += 1
             continue
 
@@ -87,12 +89,17 @@ def main():
             if args.apply:
                 row[ai - 1].value = cr["artist"]
             filled_a += 1; did.append(f"A={cr['artist']}")
+        if c_blank and cr.get("cover_artist"):
+            if args.apply:
+                row[cvi - 1].value = cr["cover_artist"]
+            filled_c += 1; did.append(f"C={cr['cover_artist']}")
         if did:
             fills.append((title, str(issue), r["series"]["name"], r["series"]["year_began"], " ".join(did)))
 
-    print(f"\nRows with a Writer/Artist gap that GCD resolved:")
-    print(f"  Writers filled:  {filled_w}")
-    print(f"  Artists filled:  {filled_a}")
+    print(f"\nRows with a Writer/Artist/Cover gap that GCD resolved:")
+    print(f"  Writers filled:       {filled_w}")
+    print(f"  Artists filled:       {filled_a}")
+    print(f"  Cover Artists filled: {filled_c}")
     print(f"  Gap rows GCD couldn't resolve (series/issue not found): {not_found}")
     print(f"  Rows with no gap (skipped): {no_gap}")
 
