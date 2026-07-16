@@ -92,3 +92,4 @@ gcd_local.sqlite-journal
 gcd_build.log
 gcd_credits.log
 *.sql
+volume_check_worklist.csv
