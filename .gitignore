@@ -85,3 +85,10 @@ needs_review.json
 volume_lookup_cache.json
 FETCH_HEAD
 .pytest_cache/
+
+# GCD local extraction — derived from the ~3.8GB dump, rebuildable via gcd_build_local_db.py + gcd_add_credits.py
+gcd_local.sqlite
+gcd_local.sqlite-journal
+gcd_build.log
+gcd_credits.log
+*.sql
