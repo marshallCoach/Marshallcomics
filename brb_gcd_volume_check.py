@@ -46,6 +46,15 @@ def pub_match(inv_pub, gcd_pub):
     return a in b or b in a
 
 
+def tight(t):
+    """Same loose key as gcd_rescan_missing.py — '&'='and', drop all
+    punctuation AND spaces, so split inventory spellings of one real title
+    ('Ultimate Comics: X-Men' vs 'Ultimate Comics X-Men') merge into one
+    series pool instead of undercounting both."""
+    t = re.sub(r"&", " and ", str(t or "").lower())
+    return re.sub(r"[^a-z0-9]", "", t)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--csv", default=None)
@@ -55,12 +64,24 @@ def main():
     print(f"Inventory: {os.path.basename(xlsx)}")
     conn = sqlite3.connect(DB)
 
-    # All GCD series per matched title, with publisher names.
-    gcd_by_title = defaultdict(list)
+    # All GCD series pooled by the loose tight-key (merges matched_title
+    # spelling variants), plus explicit aliases from gcd_rescan_missing.py.
+    gcd_by_key = defaultdict(dict)  # tight-key -> {series_id: series}
     for sid, mt, name, yb, ye, pub in conn.execute(
         "SELECT s.id, s.matched_title, s.name, s.year_began, s.year_ended, p.name "
         "FROM gcd_series s LEFT JOIN gcd_publisher p ON p.id = s.publisher_id"):
-        gcd_by_title[mt].append({"id": sid, "name": name, "yb": yb, "ye": ye, "pub": pub})
+        gcd_by_key[tight(mt)][sid] = {"id": sid, "name": name, "yb": yb, "ye": ye, "pub": pub}
+    try:
+        aliases = dict(conn.execute("SELECT alias, matched_title FROM gcd_title_alias"))
+    except sqlite3.OperationalError:
+        aliases = {}
+
+    def series_for(title):
+        pool = dict(gcd_by_key.get(tight(title), {}))
+        al = aliases.get(title)
+        if al:
+            pool.update(gcd_by_key.get(tight(al), {}))
+        return list(pool.values())
 
     import openpyxl
     wb = openpyxl.load_workbook(xlsx, read_only=True, data_only=True)
@@ -91,7 +112,7 @@ def main():
         pub = str(r[pi] or "").strip()
         ck = (title, pub)
         if ck not in numbering_cache:
-            cands = [s for s in gcd_by_title.get(title, []) if pub_match(pub, s["pub"]) and s["yb"]]
+            cands = [s for s in series_for(title) if pub_match(pub, s["pub"]) and s["yb"]]
             # de-duplicate same-name-same-year (GCD sometimes has printings as
             # separate series entries starting the same year) by keeping the
             # earliest id per year_began

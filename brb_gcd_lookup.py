@@ -46,11 +46,20 @@ def find_series(conn, title, year=None, publisher=None):
     """Return the best-matching gcd_series row for a title, scored by
     exact-name match + year proximity + publisher-name corroboration."""
     tnorm = normalize_title(title)
-    rows = conn.execute(
-        "SELECT s.id, s.name, s.year_began, s.year_ended, s.publisher_id, p.name as pub_name "
-        "FROM gcd_series s LEFT JOIN gcd_publisher p ON p.id = s.publisher_id "
-        "WHERE s.matched_title = ?", (title,)
-    ).fetchall()
+    q = ("SELECT s.id, s.name, s.year_began, s.year_ended, s.publisher_id, p.name as pub_name "
+         "FROM gcd_series s LEFT JOIN gcd_publisher p ON p.id = s.publisher_id "
+         "WHERE s.matched_title = ?")
+    rows = conn.execute(q, (title,)).fetchall()
+    if not rows:
+        # variant alias (built by gcd_rescan_missing.py): e.g. 'The Immortal
+        # Thor' → 'Immortal Thor' when the series was already extracted under
+        # the other spelling of the same name
+        try:
+            al = conn.execute("SELECT matched_title FROM gcd_title_alias WHERE alias = ?", (title,)).fetchone()
+        except sqlite3.OperationalError:
+            al = None  # alias table not built yet
+        if al:
+            rows = conn.execute(q, (al[0],)).fetchall()
     if not rows:
         return None
 
