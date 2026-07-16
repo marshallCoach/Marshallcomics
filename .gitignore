@@ -93,3 +93,6 @@ gcd_build.log
 gcd_credits.log
 *.sql
 volume_check_worklist.csv
+gcd_rescan.log
+gcd_unmatched_titles.csv
+volume_clash_cover_issues.csv
