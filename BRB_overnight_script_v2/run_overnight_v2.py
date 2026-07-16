@@ -391,7 +391,7 @@ def cv_get_all_credits_for_title(title, year_hint, needed_issue_nums):
 def build_queue(df):
     # Queue titles where writer OR cover artist is missing
     writer_blank = df["Writer(s)"].apply(is_blank)
-    ca_blank     = df["Cover_Artist"].apply(is_blank) if "Cover_Artist" in df.columns else pd.Series(True, index=df.index)
+    ca_blank     = df["Cover Artist"].apply(is_blank) if "Cover Artist" in df.columns else pd.Series(True, index=df.index)
     blank_mask   = writer_blank | ca_blank
     blank_df     = df[blank_mask].copy()
     blank_df["Volume"] = pd.to_numeric(blank_df.get("Volume", 1), errors="coerce").fillna(1)
@@ -418,9 +418,9 @@ def main():
         df["Volume"] = 1
     df["Volume"] = pd.to_numeric(df["Volume"], errors="coerce").fillna(1)
 
-    if "Cover_Artist" not in df.columns:
-        df["Cover_Artist"] = ""
-        print("  (Cover_Artist column not found — added)")
+    if "Cover Artist" not in df.columns:
+        df["Cover Artist"] = ""
+        print("  (Cover Artist column not found — added)")
 
     rows_initial = len(df)
     print(f"Loaded {rows_initial} rows from {INVENTORY_PATH}")
@@ -464,9 +464,10 @@ def main():
         if key in done_keys:
             continue
 
-        signal.alarm(TITLE_TIMEOUT)  # watchdog: skip this title if it wedges
+        title_budget = TITLE_TIMEOUT  # re-armed with a workload-scaled value once issue count is known
+        signal.alarm(title_budget)    # watchdog: skip this title if it wedges
         try:
-          ca_blank_col = df["Cover_Artist"].apply(is_blank) if "Cover_Artist" in df.columns else pd.Series(True, index=df.index)
+          ca_blank_col = df["Cover Artist"].apply(is_blank) if "Cover Artist" in df.columns else pd.Series(True, index=df.index)
           mask = (
               (df["Title"] == title) &
               (df["Volume"] == volume) &
@@ -488,7 +489,17 @@ def main():
           issues    = df.loc[mask, "Issue #"].dropna().sort_values().unique()
           n_rows    = int(mask.sum())
 
-          print(f"[CV] {title} Vol {volume} — {len(issues)} issues (~{year_hint}) [{n_rows} blank rows]")
+          # Re-arm the watchdog scaled to this title's real workload: each issue
+          # costs DELAY_SECONDS + the API call (+ possible 420 backoffs), so a
+          # flat 600s murdered every legitimately-large title mid-fetch (a
+          # 97-issue title needs ~50+ min of NORMAL work). Verified on the
+          # 15/07 run: 34 of 89 titles were watchdog-killed while healthy.
+          # The wedge this guards against is minutes of NO progress, so
+          # workload-scaled + generous is still an effective tripwire.
+          title_budget = max(TITLE_TIMEOUT, len(issues) * (DELAY_SECONDS + 20) + 300)
+          signal.alarm(title_budget)
+
+          print(f"[CV] {title} Vol {volume} — {len(issues)} issues (~{year_hint}) [{n_rows} blank rows, watchdog {title_budget}s]")
 
           # Three-step: volume lookup → issue ID map → individual issue details (for roles)
           credits_by_num, calls_used, fetch_err = cv_get_all_credits_for_title(title, year_hint, issues)
@@ -547,8 +558,8 @@ def main():
 
           for issue_num, ca in cover_artists_found.items():
               row_mask = mask & (df["Issue #"] == issue_num)
-              if "Cover_Artist" in df.columns:
-                  df.loc[row_mask & df["Cover_Artist"].apply(is_blank), "Cover_Artist"] = normalize_credits(ca)
+              if "Cover Artist" in df.columns:
+                  df.loc[row_mask & df["Cover Artist"].apply(is_blank), "Cover Artist"] = normalize_credits(ca)
 
           if not_found:
               log_review(title, volume, f"{len(not_found)} issues not found on CV: {sorted(not_found)[:10]}")
@@ -564,9 +575,9 @@ def main():
 
           processed += 1
         except _TitleTimeout:
-            log_issue("SKIPPED_TIMEOUT", title, f"exceeded {TITLE_TIMEOUT}s watchdog — skipped")
-            log_review(title, volume, f"watchdog timeout after {TITLE_TIMEOUT}s")
-            print(f"  [WATCHDOG] {title} Vol {volume} exceeded {TITLE_TIMEOUT}s — skipped")
+            log_issue("SKIPPED_TIMEOUT", title, f"exceeded {title_budget}s watchdog — skipped")
+            log_review(title, volume, f"watchdog timeout after {title_budget}s")
+            print(f"  [WATCHDOG] {title} Vol {volume} exceeded {title_budget}s — skipped")
             processed += 1
         finally:
             signal.alarm(0)  # clear the watchdog before checkpoint / next title
