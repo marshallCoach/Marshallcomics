@@ -42,7 +42,18 @@ def main():
     ap.add_argument("xlsx", nargs="?", default=None)
     ap.add_argument("--apply", action="store_true", help="write the fixed file (default is dry-run)")
     ap.add_argument("--out", default=None)
+    ap.add_argument("--approved", default=None, metavar="CSV",
+                    help="CSV of Title,Decision rows (human-reviewed). ONLY titles marked 'y' "
+                         "are processed, with the <=3-series gate and direction rules bypassed: "
+                         "every mismatching row of an approved title moves to the GCD-derived number.")
     args = ap.parse_args()
+
+    approved = None
+    if args.approved:
+        import csv as _csv
+        with open(args.approved) as f:
+            approved = {r["Title"] for r in _csv.DictReader(f) if r["Decision"].strip().lower() == "y"}
+        print(f"Approved-titles mode: {len(approved)} titles from {os.path.basename(args.approved)}")
 
     xlsx = os.path.abspath(args.xlsx) if args.xlsx else latest_xlsx()
     print(f"Source: {os.path.basename(xlsx)}   (mode: {'APPLY' if args.apply else 'DRY-RUN'})")
@@ -91,7 +102,12 @@ def main():
                 by_year.setdefault(s["yb"], s)
             numbering_cache[ck] = sorted(by_year.values(), key=lambda s: s["yb"])
         ordered = numbering_cache[ck]
-        if not ordered or len(ordered) > MAX_SERIES_COUNT:
+        if not ordered:
+            continue
+        if approved is not None:
+            if title not in approved:
+                continue
+        elif len(ordered) > MAX_SERIES_COUNT:
             continue
 
         yr = parse_year_range(row[yi].value)
@@ -110,6 +126,9 @@ def main():
         elif declared_n > derived_n:
             direction = "reverse"
             fixed_rev += 1
+        elif approved is not None:
+            direction = "approved"  # declared < derived, non-default — allowed only on reviewed titles
+            fixed_fwd += 1
         else:
             continue  # declared < derived but not the default-1 pattern — out of scope
 
