@@ -1,18 +1,18 @@
-// AUTO-GENERATED quest data — source: comics_inventory_1707_0925.xlsx (10917 rows) · generated 2026-07-17
+// AUTO-GENERATED quest data — source: comics_inventory_1707_0931.xlsx (10900 rows) · generated 2026-07-17
 // Regenerate with: node gen_quest_data.mjs
 window.QUEST_DATA = {
- "source": "comics_inventory_1707_0925.xlsx",
+ "source": "comics_inventory_1707_0931.xlsx",
  "generated": "2026-07-17",
- "totalRows": 10917,
+ "totalRows": 10900,
  "dupe": {
-  "groups": 114,
-  "rows": 236,
-  "excess": 122
+  "groups": 97,
+  "rows": 202,
+  "excess": 105
  },
  "clone": {
-  "groups": 97,
-  "rows": 196,
-  "excess": 99
+  "groups": 80,
+  "rows": 162,
+  "excess": 82
  },
  "overCap": [
   {
@@ -37,13 +37,6 @@ window.QUEST_DATA = {
    "loc": "Upstairs Closet — TOP"
   },
   {
-   "box": 10,
-   "rows": 256,
-   "cap": 240,
-   "over": 16,
-   "loc": "Basement Front A — ROW3"
-  },
-  {
    "box": 7,
    "rows": 249,
    "cap": 240,
@@ -62,6 +55,13 @@ window.QUEST_DATA = {
    "rows": 160,
    "cap": 155,
    "over": 5,
+   "loc": "Basement Front A — ROW3"
+  },
+  {
+   "box": 10,
+   "rows": 244,
+   "cap": 240,
+   "over": 4,
    "loc": "Basement Front A — ROW3"
   }
  ],
@@ -124,10 +124,10 @@ window.QUEST_DATA = {
    "box": 8,
    "loc": "Basement Front A — ROW2",
    "zone": "Basement Front A",
-   "rows": 236,
+   "rows": 235,
    "vcap": 240,
-   "dupes": 2,
-   "clones": 2
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 9,
@@ -142,10 +142,10 @@ window.QUEST_DATA = {
    "box": 10,
    "loc": "Basement Front A — ROW3",
    "zone": "Basement Front A",
-   "rows": 256,
+   "rows": 244,
    "vcap": 240,
-   "dupes": 26,
-   "clones": 26
+   "dupes": 2,
+   "clones": 2
   },
   {
    "box": 11,
@@ -223,10 +223,10 @@ window.QUEST_DATA = {
    "box": 19,
    "loc": "Basement Front B — ROW1",
    "zone": "Basement Front B",
-   "rows": 195,
+   "rows": 193,
    "vcap": 240,
-   "dupes": 10,
-   "clones": 10
+   "dupes": 6,
+   "clones": 6
   },
   {
    "box": 20,
@@ -322,10 +322,10 @@ window.QUEST_DATA = {
    "box": 30,
    "loc": "Basement Front C — ROW4",
    "zone": "Basement Front C",
-   "rows": 113,
+   "rows": 112,
    "vcap": 240,
-   "dupes": 4,
-   "clones": 2
+   "dupes": 2,
+   "clones": 0
   },
   {
    "box": 31,
@@ -637,10 +637,10 @@ window.QUEST_DATA = {
    "box": 75,
    "loc": "Bedroom — MID",
    "zone": "Bedroom",
-   "rows": 158,
+   "rows": 157,
    "vcap": 240,
-   "dupes": 2,
-   "clones": 2
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 79,
@@ -809,7 +809,7 @@ window.QUEST_DATA = {
       },
       {
        "id": "0.5",
-       "text": "Confirm the chat reads back 10,917 rows. If not — STOP, wrong file."
+       "text": "Confirm the chat reads back 10,900 rows. If not — STOP, wrong file."
       }
      ]
     }
@@ -820,7 +820,7 @@ window.QUEST_DATA = {
    "title": "The Clones",
    "est": "identical twin rows — safest wins first",
    "accent": "green",
-   "blurb": "Rows that are exact copies of another row: same book, same box, logged twice. Live count: 97 clone groups / 99 excess rows. Highest confidence, lowest effort, biggest visible progress.",
+   "blurb": "Rows that are exact copies of another row: same book, same box, logged twice. Live count: 80 clone groups / 82 excess rows. Highest confidence, lowest effort, biggest visible progress.",
    "sittings": [
     {
      "id": "A1",
