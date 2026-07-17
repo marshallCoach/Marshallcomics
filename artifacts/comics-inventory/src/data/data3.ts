@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_1707_0100.xlsx  |  Generated: 2026-07-17
+// Source: comics_inventory_1707_0856.xlsx  |  Generated: 2026-07-17
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -3100,7 +3100,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Nick Dragotta`, Date_Added: ``,
     Imprint: `DC All In`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
-    Volume: `5`, Entry: `276`,
+    Volume: `1`, Entry: `276`,
     eBay_Avg: 49.83, eBay_Low: 10, eBay_High: 119.97, eBay_Count: 9, eBay_Median: 45,
   },
   {
@@ -3119,7 +3119,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Nick Dragotta`, Date_Added: ``,
     Imprint: `DC All In`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
-    Volume: `5`, Entry: `277`,
+    Volume: `1`, Entry: `277`,
     eBay_Avg: 25.01, eBay_Low: 10, eBay_High: 65, eBay_Count: 7, eBay_Median: 13.99,
   },
   {
@@ -3138,7 +3138,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Nick Dragotta`, Date_Added: ``,
     Imprint: `DC All In`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
-    Volume: `5`, Entry: `278`,
+    Volume: `1`, Entry: `278`,
     eBay_Avg: 23.2, eBay_Low: 6.5, eBay_High: 55, eBay_Count: 6, eBay_Median: 19.99,
   },
   {
@@ -3157,7 +3157,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Nick Dragotta`, Date_Added: ``,
     Imprint: `DC All In`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
-    Volume: `5`, Entry: `279`,
+    Volume: `1`, Entry: `279`,
     eBay_Avg: 105.97, eBay_Low: 11.99, eBay_High: 327.51, eBay_Count: 9, eBay_Median: 100,
   },
   {
@@ -26227,7 +26227,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Astonishing X-Men: Exogenesis`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Astonishing X-Men: Xenogenesis`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2010`, Arc: `Astonishing X-Men Exogenesis — COMPLETE Warren Ellis mini`, Key: `YES`,
     Key_Reason: `AXM Exogenesis #1 — Warren Ellis; 🎉 COMPLETE 5-issue Warren Ellis Astonishing mini!`, First_App: ``,
@@ -26243,10 +26243,10 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `12`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `4`, Entry: `1641`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
+    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Astonishing X-Men: Exogenesis`, Issue: `2`, Publisher: `Marvel`,
+    Title: `Astonishing X-Men: Xenogenesis`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2010`, Arc: `Astonishing X-Men Exogenesis — COMPLETE Warren Ellis mini`, Key: `NO`,
     Key_Reason: `Exogenesis #2`, First_App: ``,
@@ -26265,7 +26265,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Astonishing X-Men: Exogenesis`, Issue: `3`, Publisher: `Marvel`,
+    Title: `Astonishing X-Men: Xenogenesis`, Issue: `3`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2010`, Arc: `Astonishing X-Men Exogenesis — COMPLETE Warren Ellis mini`, Key: `NO`,
     Key_Reason: `Exogenesis #3`, First_App: ``,
@@ -26284,7 +26284,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Astonishing X-Men: Exogenesis`, Issue: `4`, Publisher: `Marvel`,
+    Title: `Astonishing X-Men: Xenogenesis`, Issue: `4`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2010`, Arc: `Astonishing X-Men Exogenesis — COMPLETE Warren Ellis mini`, Key: `NO`,
     Key_Reason: `Exogenesis #4`, First_App: ``,
@@ -26303,7 +26303,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Astonishing X-Men: Exogenesis`, Issue: `5`, Publisher: `Marvel`,
+    Title: `Astonishing X-Men: Xenogenesis`, Issue: `5`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2010`, Arc: `Astonishing X-Men Exogenesis — COMPLETE Warren Ellis mini`, Key: `NO`,
     Key_Reason: `Exogenesis #5`, First_App: ``,
@@ -52884,7 +52884,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Astonishing X-Men: Exogenesis`, Issue: `4`, Publisher: `Marvel`,
+    Title: `Astonishing X-Men: Xenogenesis`, Issue: `4`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2010`, Arc: `Warren Ellis / Kaare Andrews`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
