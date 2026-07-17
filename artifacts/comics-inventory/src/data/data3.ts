@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_1707_0916.xlsx  |  Generated: 2026-07-17
+// Source: comics_inventory_1707_0925.xlsx  |  Generated: 2026-07-17
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -11559,7 +11559,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Challenges of the Unknown`, Issue: `1`, Publisher: `DC`,
+    Title: `Challengers of the Unknown`, Issue: `1`, Publisher: `DC`,
     Disambig: ``,
     Year: `2021`, Arc: `Challengers of the Unknown`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -11578,7 +11578,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Challenges of the Unknown`, Issue: `2`, Publisher: `DC`,
+    Title: `Challengers of the Unknown`, Issue: `2`, Publisher: `DC`,
     Disambig: ``,
     Year: `2021`, Arc: `Challengers of the Unknown`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -23054,7 +23054,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `The Wildstorm`, Issue: `1`, Publisher: `DC`,
+    Title: `The Wild Storm`, Issue: `1`, Publisher: `DC`,
     Disambig: ``,
     Year: `2017`, Arc: `The Wildstorm — Warren Ellis`, Key: `YES`,
     Key_Reason: `The Wildstorm #1 — Warren Ellis; Wildstorm universe fully rebooted; mature readers`, First_App: `New Wildstorm Universe`,
@@ -26360,7 +26360,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: 5.9, eBay_Low: 2.95, eBay_High: 10.99, eBay_Count: 8, eBay_Median: 4.49,
   },
   {
-    Title: `Dark Reign: Deadpool/Thunderbolts`, Issue: `9`, Publisher: `Marvel`,
+    Title: `Dark Reign: Deadpool / Thunderbolts`, Issue: `9`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2009`, Arc: `Dark Reign Deadpool`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -26379,7 +26379,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Dark Reign: Deadpool/Thunderbolts`, Issue: `10`, Publisher: `Marvel`,
+    Title: `Dark Reign: Deadpool / Thunderbolts`, Issue: `10`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2009`, Arc: `Dark Reign Deadpool`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -30426,7 +30426,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Legion: Secret Origins`, Issue: `1`, Publisher: `DC`,
+    Title: `Legion: Secret Origin`, Issue: `1`, Publisher: `DC`,
     Disambig: ``,
     Year: `2011`, Arc: `The New 52 — The Girl Who Fell Through the Universes`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -42130,7 +42130,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Justice League vs. The Legion of Super-Heroes`, Issue: `5`, Publisher: `DC`,
+    Title: `Justice League vs. Legion of Super-Heroes`, Issue: `5`, Publisher: `DC`,
     Disambig: ``,
     Year: `2022`, Arc: `5 of 6 — Bendis`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -42149,7 +42149,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Justice League vs. The Legion of Super-Heroes`, Issue: `6`, Publisher: `DC`,
+    Title: `Justice League vs. Legion of Super-Heroes`, Issue: `6`, Publisher: `DC`,
     Disambig: ``,
     Year: `2022`, Arc: `6 of 6 — Bendis`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -59439,7 +59439,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Bloodhunt`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Blood Hunt`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2024`, Arc: `Titan one-shot — Blood Hunt tie-in`, Key: `YES`,
     Key_Reason: ``, First_App: ``,
@@ -59455,7 +59455,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `20`,
     Crossover: `Blood Hunt (MacKay/Larraz)`, Start_Bid: `2`,
     Volume: `1`, Entry: `3411`,
-    eBay_Avg: 29.14, eBay_Low: 5.89, eBay_High: 60, eBay_Count: 9, eBay_Median: 19.95,
+    eBay_Avg: 14.2, eBay_Low: 3.5, eBay_High: 35, eBay_Count: 9, eBay_Median: 10.99,
   },
   {
     Title: `Operation: S.I.N.`, Issue: `3`, Publisher: `Marvel`,
@@ -63638,7 +63638,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: 15.95, eBay_Low: 6.99, eBay_High: 29, eBay_Count: 8, eBay_Median: 14.47,
   },
   {
-    Title: `United States of Captain America`, Issue: `2`, Publisher: `Marvel`,
+    Title: `The United States of Captain America`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2021`, Arc: `Christopher Cantwell — 2 of 5`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -63657,7 +63657,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `United States of Captain America`, Issue: `3`, Publisher: `Marvel`,
+    Title: `The United States of Captain America`, Issue: `3`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2021`, Arc: `Christopher Cantwell — 3 of 5`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -63676,7 +63676,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `United States of Captain America`, Issue: `4`, Publisher: `Marvel`,
+    Title: `The United States of Captain America`, Issue: `4`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2021`, Arc: `Christopher Cantwell — 4 of 5`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -63695,7 +63695,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `United States of Captain America`, Issue: `5`, Publisher: `Marvel`,
+    Title: `The United States of Captain America`, Issue: `5`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2021`, Arc: `Christopher Cantwell — 5 of 5 — finale`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -127916,7 +127916,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Legion of Superheroes`, Issue: `112`, Publisher: `DC`,
+    Title: `Legion of Super-Heroes`, Issue: `112`, Publisher: `DC`,
     Disambig: ``,
     Year: `1999`, Arc: `LSH Vol 4 late run`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -127935,7 +127935,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Legion of Superheroes`, Issue: `118`, Publisher: `DC`,
+    Title: `Legion of Super-Heroes`, Issue: `118`, Publisher: `DC`,
     Disambig: ``,
     Year: `1999`, Arc: `LSH Vol 4 late run`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -127954,7 +127954,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Legion of Superheroes`, Issue: `119`, Publisher: `DC`,
+    Title: `Legion of Super-Heroes`, Issue: `119`, Publisher: `DC`,
     Disambig: ``,
     Year: `1999`, Arc: `LSH Vol 4 late run`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -127973,7 +127973,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Legion of Superheroes`, Issue: `120`, Publisher: `DC`,
+    Title: `Legion of Super-Heroes`, Issue: `120`, Publisher: `DC`,
     Disambig: ``,
     Year: `2000`, Arc: `LSH Vol 4 late run`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -127992,7 +127992,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Legion of Superheroes`, Issue: `121`, Publisher: `DC`,
+    Title: `Legion of Super-Heroes`, Issue: `121`, Publisher: `DC`,
     Disambig: ``,
     Year: `2000`, Arc: `LSH Vol 4 late run`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -128011,7 +128011,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Legion of Superheroes`, Issue: `123`, Publisher: `DC`,
+    Title: `Legion of Super-Heroes`, Issue: `123`, Publisher: `DC`,
     Disambig: ``,
     Year: `2000`, Arc: `LSH Vol 4 late run`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -128030,7 +128030,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Legion of Superheroes`, Issue: `125`, Publisher: `DC`,
+    Title: `Legion of Super-Heroes`, Issue: `125`, Publisher: `DC`,
     Disambig: ``,
     Year: `2000`, Arc: `LSH Vol 4 late run`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -129075,7 +129075,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Legion of Superheroes`, Issue: `1`, Publisher: `DC`,
+    Title: `Legion of Super-Heroes`, Issue: `1`, Publisher: `DC`,
     Disambig: ``,
     Year: `2010`, Arc: `Legion of Superheroes Vol 6 — Paul Levitz`, Key: `YES`,
     Key_Reason: `LSH #1 Paul Levitz January 2010 — Levitz returns to write the Legion after 25 years`, First_App: ``,
@@ -129091,10 +129091,10 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `53`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `6`, Entry: `7736`,
-    eBay_Avg: 5.27, eBay_Low: 2, eBay_High: 10.57, eBay_Count: 8, eBay_Median: 4.27,
+    eBay_Avg: 5.3, eBay_Low: 2.6, eBay_High: 8.5, eBay_Count: 9, eBay_Median: 5,
   },
   {
-    Title: `Legion of Superheroes`, Issue: `2`, Publisher: `DC`,
+    Title: `Legion of Super-Heroes`, Issue: `2`, Publisher: `DC`,
     Disambig: ``,
     Year: `2010`, Arc: `LSH Levitz Vol 6`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -129113,7 +129113,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Legion of Superheroes`, Issue: `3`, Publisher: `DC`,
+    Title: `Legion of Super-Heroes`, Issue: `3`, Publisher: `DC`,
     Disambig: ``,
     Year: `2010`, Arc: `LSH Levitz Vol 6`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -129132,7 +129132,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Legion of Superheroes`, Issue: `4`, Publisher: `DC`,
+    Title: `Legion of Super-Heroes`, Issue: `4`, Publisher: `DC`,
     Disambig: ``,
     Year: `2010`, Arc: `LSH Levitz Vol 6`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -129151,7 +129151,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Legion of Superheroes`, Issue: `5`, Publisher: `DC`,
+    Title: `Legion of Super-Heroes`, Issue: `5`, Publisher: `DC`,
     Disambig: ``,
     Year: `2010`, Arc: `LSH Levitz Vol 6`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -129167,10 +129167,10 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `53`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `6`, Entry: `7740`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 6.51, eBay_Low: 2.66, eBay_High: 15.29, eBay_Count: 8, eBay_Median: 5.15,
   },
   {
-    Title: `Legion of Superheroes`, Issue: `7`, Publisher: `DC`,
+    Title: `Legion of Super-Heroes`, Issue: `7`, Publisher: `DC`,
     Disambig: ``,
     Year: `2010`, Arc: `LSH Levitz Vol 6`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -152826,7 +152826,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     eBay_Avg: 16.76, eBay_Low: 5.99, eBay_High: 45, eBay_Count: 7, eBay_Median: 12.99,
   },
   {
-    Title: `Dark Reign: Deadpool vs. Thunderbolts`, Issue: `8`, Publisher: `Marvel`,
+    Title: `Dark Reign: Deadpool / Thunderbolts`, Issue: `8`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2009`, Arc: `Dark Reign DP vs TB`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -191588,7 +191588,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Ultimate End Game`, Issue: `3`, Publisher: `Marvel`,
+    Title: `Ultimate Endgame`, Issue: `3`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2025`, Arc: `Ultimate End Game`, Key: `YES`,
     Key_Reason: `Ultimate End Game #3 — conclusion of the first Ultimate Universe event arc`, First_App: ``,
@@ -194514,7 +194514,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     eBay_Avg: 12.6, eBay_Low: 3.99, eBay_High: 27.38, eBay_Count: 9, eBay_Median: 9.1,
   },
   {
-    Title: `Bloodhunt`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Blood Hunt`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2024`, Arc: `Bloodhunt Marvel event #1`, Key: `YES`,
     Key_Reason: `Bloodhunt #1 — Jed MacKay — Marvel vampire event 2024`, First_App: ``,
@@ -194530,7 +194530,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `20`,
     Crossover: `Bloodhunt`, Start_Bid: `2`,
     Volume: `1`, Entry: `11945`,
-    eBay_Avg: 29.14, eBay_Low: 5.89, eBay_High: 60, eBay_Count: 9, eBay_Median: 19.95,
+    eBay_Avg: 14.2, eBay_Low: 3.5, eBay_High: 35, eBay_Count: 9, eBay_Median: 10.99,
   },
   {
     Title: `Nebula`, Issue: `2`, Publisher: `Marvel`,
@@ -195426,7 +195426,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Bloodhunt`, Issue: `2`, Publisher: `Marvel`,
+    Title: `Blood Hunt`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2024`, Arc: ``, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -195442,7 +195442,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `79`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `12289`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 5.42, eBay_Low: 2.16, eBay_High: 11.99, eBay_Count: 9, eBay_Median: 5.11,
   },
   {
     Title: `Avengers vs. Aliens`, Issue: `1`, Publisher: `Marvel`,
@@ -207815,7 +207815,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Num: `BOX 53`, Comics: 132, Keys: 5,
     Signed: 0, YearRange: `1981-2012`,
-    Label: ``, FirstBook: `Legion of Superheroes 112`, LastBook: `Outsiders 48`,
+    Label: ``, FirstBook: `Legion of Super-Heroes 112`, LastBook: `Outsiders 48`,
     Location: ``, Notes: ``, DateAdded: `May 24, 2026`,
   },
   {
@@ -207911,7 +207911,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Num: `BOX 75`, Comics: 158, Keys: 30,
     Signed: 0, YearRange: `2006-2026`,
-    Label: ``, FirstBook: `Ultimate End Game 3`, LastBook: `Sam Wilson: Captain America 1`,
+    Label: ``, FirstBook: `Ultimate Endgame 3`, LastBook: `Sam Wilson: Captain America 1`,
     Location: ``, Notes: ``, DateAdded: `2026-06-29`,
   },
   {
