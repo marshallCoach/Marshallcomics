@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_1707_0856.xlsx  |  Generated: 2026-07-17
+// Source: comics_inventory_1707_0916.xlsx  |  Generated: 2026-07-17
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -8367,7 +8367,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: 13.25, eBay_Low: 5.33, eBay_High: 29.95, eBay_Count: 10, eBay_Median: 10.84,
   },
   {
-    Title: `Batman Europa`, Issue: `1`, Publisher: `DC`,
+    Title: `Batman: Europa`, Issue: `1`, Publisher: `DC`,
     Disambig: ``,
     Year: `2015`, Arc: `Batman Europa prestige mini`, Key: `YES`,
     Key_Reason: `Batman Europa #1 — Casali/Lee prestige limited series; Jim Lee art + Joker team-up across European capitals`, First_App: ``,
@@ -8386,7 +8386,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: 11.29, eBay_Low: 2.9, eBay_High: 25, eBay_Count: 10, eBay_Median: 11.47,
   },
   {
-    Title: `Batman Europa`, Issue: `2`, Publisher: `DC`,
+    Title: `Batman: Europa`, Issue: `2`, Publisher: `DC`,
     Disambig: ``,
     Year: `2015`, Arc: `Batman Europa prestige mini`, Key: `NO`,
     Key_Reason: `Batman Europa continues across Europe`, First_App: ``,
@@ -8405,7 +8405,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Batman Europa`, Issue: `3`, Publisher: `DC`,
+    Title: `Batman: Europa`, Issue: `3`, Publisher: `DC`,
     Disambig: ``,
     Year: `2015`, Arc: `Batman Europa prestige mini`, Key: `NO`,
     Key_Reason: `Batman Europa continues across Europe`, First_App: ``,
@@ -9640,7 +9640,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Wonder Woman Evolution`, Issue: `2`, Publisher: `DC`,
+    Title: `Wonder Woman: Evolution`, Issue: `2`, Publisher: `DC`,
     Disambig: ``,
     Year: `2022`, Arc: `Wonder Woman Evolution`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -14466,7 +14466,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Wonder Woman Evolution`, Issue: `3`, Publisher: `DC`,
+    Title: `Wonder Woman: Evolution`, Issue: `3`, Publisher: `DC`,
     Disambig: ``,
     Year: `2022`, Arc: `WW Evolution`, Key: `NO`,
     Key_Reason: `WW Evolution #3`, First_App: ``,
@@ -14485,7 +14485,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Wonder Woman Evolution`, Issue: `5`, Publisher: `DC`,
+    Title: `Wonder Woman: Evolution`, Issue: `5`, Publisher: `DC`,
     Disambig: ``,
     Year: `2022`, Arc: `WW Evolution`, Key: `NO`,
     Key_Reason: `WW Evolution #5`, First_App: ``,
@@ -16936,7 +16936,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Sam Wilson, Captain America`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Sam Wilson: Captain America`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2015-2017`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `YES`,
     Key_Reason: `Sam Wilson Cap #1 — Nick Spencer; Sam Wilson as Captain America ongoing; Falcon becomes Cap solo`, First_App: ``,
@@ -16955,7 +16955,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: 22.32, eBay_Low: 3.99, eBay_High: 45, eBay_Count: 10, eBay_Median: 16,
   },
   {
-    Title: `Sam Wilson, Captain America`, Issue: `2`, Publisher: `Marvel`,
+    Title: `Sam Wilson: Captain America`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2015-2017`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `NO`,
     Key_Reason: `SW Cap #2`, First_App: ``,
@@ -16974,7 +16974,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Sam Wilson, Captain America`, Issue: `3`, Publisher: `Marvel`,
+    Title: `Sam Wilson: Captain America`, Issue: `3`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2015-2017`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `NO`,
     Key_Reason: `SW Cap #3`, First_App: ``,
@@ -16993,7 +16993,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Sam Wilson, Captain America`, Issue: `4`, Publisher: `Marvel`,
+    Title: `Sam Wilson: Captain America`, Issue: `4`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2015-2017`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `NO`,
     Key_Reason: `SW Cap #4`, First_App: ``,
@@ -17012,7 +17012,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Sam Wilson, Captain America`, Issue: `5`, Publisher: `Marvel`,
+    Title: `Sam Wilson: Captain America`, Issue: `5`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2015-2017`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `NO`,
     Key_Reason: `SW Cap #5`, First_App: ``,
@@ -17031,7 +17031,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Sam Wilson, Captain America`, Issue: `6`, Publisher: `Marvel`,
+    Title: `Sam Wilson: Captain America`, Issue: `6`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2015-2017`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `NO`,
     Key_Reason: `SW Cap #6`, First_App: ``,
@@ -17050,7 +17050,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Sam Wilson, Captain America`, Issue: `9`, Publisher: `Marvel`,
+    Title: `Sam Wilson: Captain America`, Issue: `9`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2015-2017`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `NO`,
     Key_Reason: `SW Cap #9`, First_App: ``,
@@ -17069,7 +17069,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Sam Wilson, Captain America`, Issue: `10`, Publisher: `Marvel`,
+    Title: `Sam Wilson: Captain America`, Issue: `10`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2015-2017`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `NO`,
     Key_Reason: `SW Cap #10`, First_App: ``,
@@ -17088,7 +17088,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Sam Wilson, Captain America`, Issue: `15`, Publisher: `Marvel`,
+    Title: `Sam Wilson: Captain America`, Issue: `15`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2015-2017`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `NO`,
     Key_Reason: `SW Cap #15`, First_App: ``,
@@ -17107,7 +17107,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Sam Wilson, Captain America`, Issue: `16`, Publisher: `Marvel`,
+    Title: `Sam Wilson: Captain America`, Issue: `16`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2015-2017`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `NO`,
     Key_Reason: `SW Cap #16`, First_App: ``,
@@ -17126,7 +17126,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Sam Wilson, Captain America`, Issue: `17`, Publisher: `Marvel`,
+    Title: `Sam Wilson: Captain America`, Issue: `17`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2015-2017`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `NO`,
     Key_Reason: `SW Cap #17`, First_App: ``,
@@ -17145,7 +17145,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Sam Wilson, Captain America`, Issue: `18`, Publisher: `Marvel`,
+    Title: `Sam Wilson: Captain America`, Issue: `18`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2015-2017`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `NO`,
     Key_Reason: `SW Cap #18`, First_App: ``,
@@ -17297,7 +17297,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Sam Wilson, Captain America`, Issue: `7`, Publisher: `Marvel`,
+    Title: `Sam Wilson: Captain America`, Issue: `7`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2016`, Arc: `Standoff crossover — $5.99`, Key: `NO`,
     Key_Reason: `Sam Wilson Cap #7 — Standoff crossover; $5.99`, First_App: ``,
@@ -17810,7 +17810,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Sam Wilson, Captain America`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Sam Wilson: Captain America`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2024`, Arc: `Captain America Pak — Sam Wilson`, Key: `YES`,
     Key_Reason: `Cap #1 Pak — Sam Wilson as Cap; Legacy #767`, First_App: ``,
@@ -19995,7 +19995,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Wonder Woman Evolution`, Issue: `1`, Publisher: `DC`,
+    Title: `Wonder Woman: Evolution`, Issue: `1`, Publisher: `DC`,
     Disambig: ``,
     Year: `2022`, Arc: `WW Evolution — Phillips`, Key: `YES`,
     Key_Reason: `Wonder Woman Evolution #1 — Stephanie Phillips; 8-issue mini launch`, First_App: ``,
@@ -24745,7 +24745,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Justice League/Aquaman: Drowned Earth`, Issue: `1`, Publisher: `DC`,
+    Title: `Justice League / Aquaman: Drowned Earth`, Issue: `1`, Publisher: `DC`,
     Disambig: ``,
     Year: `2018`, Arc: `Drowned Earth crossover`, Key: `YES`,
     Key_Reason: `JL/Aquaman: Drowned Earth #1 — Snyder; Drowned Earth event one-shot`, First_App: ``,
@@ -24764,7 +24764,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: 5.91, eBay_Low: 1.49, eBay_High: 10, eBay_Count: 10, eBay_Median: 5,
   },
   {
-    Title: `Justice League: Aquaman: Drowned Earth`, Issue: `1`, Publisher: `DC`,
+    Title: `Justice League / Aquaman: Drowned Earth`, Issue: `1`, Publisher: `DC`,
     Disambig: ``,
     Year: `2018`, Arc: `Drowned Earth`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -28374,7 +28374,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `X Club`, Issue: `1`, Publisher: `Marvel`,
+    Title: `X-Club`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2012`, Arc: `X Club — Simon Spurrier`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -34245,7 +34245,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: 4.96, eBay_Low: 1.28, eBay_High: 9, eBay_Count: 7, eBay_Median: 5.54,
   },
   {
-    Title: `Ultimate Comics X-Men`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Ultimate Comics: X-Men`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2011`, Arc: `Spencer — post-Ultimatum mutant internment`, Key: `YES`,
     Key_Reason: `Nick Spencer's post-Ultimatum X-Men relaunch — mutants in camps; politically charged`, First_App: ``,
@@ -34264,7 +34264,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: 9.67, eBay_Low: 4, eBay_High: 17, eBay_Count: 9, eBay_Median: 8.99,
   },
   {
-    Title: `Ultimate Comics X-Men`, Issue: `2`, Publisher: `Marvel`,
+    Title: `Ultimate Comics: X-Men`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2011`, Arc: `Spencer — post-Ultimatum mutant internment`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -34283,7 +34283,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Ultimate Comics X-Men`, Issue: `3`, Publisher: `Marvel`,
+    Title: `Ultimate Comics: X-Men`, Issue: `3`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2011`, Arc: `Spencer — post-Ultimatum mutant internment`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -34302,7 +34302,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Ultimate Comics X-Men`, Issue: `4`, Publisher: `Marvel`,
+    Title: `Ultimate Comics: X-Men`, Issue: `4`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2011`, Arc: `Spencer — post-Ultimatum mutant internment`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -46367,7 +46367,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: 40.55, eBay_Low: 5.99, eBay_High: 79.99, eBay_Count: 9, eBay_Median: 38.99,
   },
   {
-    Title: `New Avengers/Illuminati`, Issue: `1`, Publisher: `Marvel`,
+    Title: `New Avengers: Illuminati`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2006`, Arc: `Civil War Special — $5.75 — direct edition`, Key: `YES`,
     Key_Reason: `New Avengers: Illuminati Civil War Special — Bendis — $5.75 — direct edition — establishes secret Illuminati group`, First_App: `Marvel Illuminati (Iron Man, Reed Richards, Professor X, Black Bolt, Dr. Strange, Namor) as formal group`,
@@ -46383,7 +46383,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: `Civil War (Millar/McNiven)`, Start_Bid: `5`,
     Volume: `1`, Entry: `2714`,
-    eBay_Avg: 23.61, eBay_Low: 4.98, eBay_High: 52.09, eBay_Count: 10, eBay_Median: 17.5,
+    eBay_Avg: 25.23, eBay_Low: 7.99, eBay_High: 52.09, eBay_Count: 9, eBay_Median: 19.95,
   },
   {
     Title: `New Avengers: Illuminati`, Issue: `1`, Publisher: `Marvel`,
@@ -48932,7 +48932,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Serenity: No Power in the Verse`, Issue: `5`, Publisher: `Independent`,
+    Title: `Serenity: No Power in the 'Verse`, Issue: `5`, Publisher: `Independent`,
     Disambig: ``,
     Year: `2017`, Arc: `Chris Roberson / Georges Jeanty`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -59458,7 +59458,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: 29.14, eBay_Low: 5.89, eBay_High: 60, eBay_Count: 9, eBay_Median: 19.95,
   },
   {
-    Title: `Operation S.I.N.`, Issue: `3`, Publisher: `Marvel`,
+    Title: `Operation: S.I.N.`, Issue: `3`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2015`, Arc: `Kathryn Immonen / Rich Ellis — Peggy Carter & Howard Stark`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -59477,7 +59477,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Operation S.I.N.`, Issue: `4`, Publisher: `Marvel`,
+    Title: `Operation: S.I.N.`, Issue: `4`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2015`, Arc: `Kathryn Immonen / Rich Ellis`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -59496,7 +59496,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Operation S.I.N.`, Issue: `5`, Publisher: `Marvel`,
+    Title: `Operation: S.I.N.`, Issue: `5`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2015`, Arc: `Kathryn Immonen / Rich Ellis — finale`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -63714,7 +63714,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Sam Wilson, Captain America`, Issue: `12`, Publisher: `Marvel`,
+    Title: `Sam Wilson: Captain America`, Issue: `12`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2016`, Arc: `Nick Spencer — Legacy #716`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -76863,7 +76863,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Black Panther: 60th Anniversary Special`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Black Panther 60th Anniversary Special`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2025`, Arc: `BP 60th Anniversary — Priest`, Key: `YES`,
     Key_Reason: `BP 60th Anniversary #1 — Christopher Priest returns to write his character! Cultural landmark.`, First_App: `Priest returns to his definitive run`,
@@ -107586,7 +107586,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Sam Wilson, Captain America`, Issue: `11`, Publisher: `Marvel`,
+    Title: `Sam Wilson: Captain America`, Issue: `11`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2016`, Arc: `Civil War II crossover`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -107605,7 +107605,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Sam Wilson, Captain America`, Issue: `13`, Publisher: `Marvel`,
+    Title: `Sam Wilson: Captain America`, Issue: `13`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2016`, Arc: `Civil War II crossover`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -170003,7 +170003,7 @@ Jurgens is a DC legend — could sign this.`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Sam Wilson, Captain America`, Issue: `14`, Publisher: `Marvel`,
+    Title: `Sam Wilson: Captain America`, Issue: `14`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2016`, Arc: `Sam Wilson Cap America extends`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -191759,7 +191759,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     eBay_Avg: 5.38, eBay_Low: 2.97, eBay_High: 7.99, eBay_Count: 7, eBay_Median: 4.99,
   },
   {
-    Title: `Sam Wilson, Captain America`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Sam Wilson: Captain America`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2025`, Arc: `Sam Wilson Cap America`, Key: `YES`,
     Key_Reason: `Sam Wilson: Captain America #1 — Sam Wilson as Captain America — standalone series`, First_App: ``,
@@ -192386,7 +192386,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Black Panther Intergalactic`, Issue: `4`, Publisher: `Marvel`,
+    Title: `Black Panther: Intergalactic`, Issue: `4`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2025`, Arc: `BP Intergalactic`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -196852,7 +196852,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Return of Superman: 30th Anniversary Special`, Issue: `1`, Publisher: `DC`,
+    Title: `Return of Superman 30th Anniversary Special`, Issue: `1`, Publisher: `DC`,
     Disambig: ``,
     Year: `2023`, Arc: `Return of Superman 30th Anniversary — signed foil hardcover`, Key: `YES`,
     Key_Reason: `Return of Superman: 30th Anniversary #1 foil hardcover — SIGNED by Brett Breeding (inker), Dan Jurgens (writer/artist), Jerry Ordway (artist), and Louise Simonson (writer) — 4 creator signatures on the 30th anniversary of the Death and Return of Superman — landmark DC anniversary edition — original 1993 storyline creative team reunited for the signing`, First_App: ``,
@@ -198814,7 +198814,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     eBay_Avg: 17.28, eBay_Low: 3.99, eBay_High: 40, eBay_Count: 10, eBay_Median: 17.48,
   },
   {
-    Title: `Ultimate Comics: The Ultimates`, Issue: `23`, Publisher: `Marvel`,
+    Title: `Ultimate Comics The Ultimates`, Issue: `23`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2013`, Arc: ``, Key: `YES`,
     Key_Reason: ``, First_App: ``,
@@ -207857,7 +207857,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Num: `BOX 60`, Comics: 95, Keys: 13,
     Signed: 0, YearRange: `2014-2025`,
-    Label: ``, FirstBook: `Wonder Woman Evolution 2`, LastBook: `Justice League 13`,
+    Label: ``, FirstBook: `Wonder Woman: Evolution 2`, LastBook: `Justice League 13`,
     Location: ``, Notes: ``, DateAdded: `May 17, 2026`,
   },
   {
@@ -215020,7 +215020,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `New Avengers/Illuminati`, Issue: `1`, Publisher: `Marvel`,
+    Title: `New Avengers: Illuminati`, Issue: `1`, Publisher: `Marvel`,
     Year: `2006`, Volume: `1`, Cover_Artist: `Jim Cheung`,
     Key: `YES`, Key_Reason: `New Avengers: Illuminati Civil War Special — Bendis — $5.75 — direct edition — establishes secret Illuminati group`,
     Signed: `NO`, Signed_By: ``,
@@ -219910,7 +219910,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Ultimate Comics: The Ultimates`, Issue: `23`, Publisher: `Marvel`,
+    Title: `Ultimate Comics The Ultimates`, Issue: `23`, Publisher: `Marvel`,
     Year: `2013`, Volume: `1`, Cover_Artist: ``,
     Key: `YES`, Key_Reason: ``,
     Signed: `NO`, Signed_By: ``,
