@@ -1,25 +1,25 @@
-// AUTO-GENERATED quest data — source: comics_inventory_1707_0935.xlsx (10900 rows) · generated 2026-07-17
+// AUTO-GENERATED quest data — source: comics_inventory_1707_1509.xlsx (10853 rows) · generated 2026-07-17
 // Regenerate with: node gen_quest_data.mjs
 window.QUEST_DATA = {
- "source": "comics_inventory_1707_0935.xlsx",
+ "source": "comics_inventory_1707_1509.xlsx",
  "generated": "2026-07-17",
- "totalRows": 10900,
+ "totalRows": 10853,
  "dupe": {
-  "groups": 97,
-  "rows": 202,
-  "excess": 105
+  "groups": 50,
+  "rows": 108,
+  "excess": 58
  },
  "clone": {
-  "groups": 80,
-  "rows": 162,
-  "excess": 82
+  "groups": 33,
+  "rows": 68,
+  "excess": 35
  },
  "overCap": [
   {
    "box": 15,
-   "rows": 202,
+   "rows": 201,
    "cap": 150,
-   "over": 52,
+   "over": 51,
    "loc": "Basement Front A — ROW1"
   },
   {
@@ -38,17 +38,10 @@ window.QUEST_DATA = {
   },
   {
    "box": 7,
-   "rows": 249,
+   "rows": 248,
    "cap": 240,
-   "over": 9,
+   "over": 8,
    "loc": "Basement Front A — ROW1"
-  },
-  {
-   "box": 4,
-   "rows": 246,
-   "cap": 240,
-   "over": 6,
-   "loc": "Basement Front B — ROW1"
   },
   {
    "box": 23,
@@ -63,6 +56,13 @@ window.QUEST_DATA = {
    "cap": 240,
    "over": 4,
    "loc": "Basement Front A — ROW3"
+  },
+  {
+   "box": 4,
+   "rows": 243,
+   "cap": 240,
+   "over": 3,
+   "loc": "Basement Front B — ROW1"
   }
  ],
  "boxes": [
@@ -88,19 +88,19 @@ window.QUEST_DATA = {
    "box": 4,
    "loc": "Basement Front B — ROW1",
    "zone": "Basement Front B",
-   "rows": 246,
+   "rows": 243,
    "vcap": 240,
-   "dupes": 15,
-   "clones": 15
+   "dupes": 9,
+   "clones": 9
   },
   {
    "box": 5,
    "loc": "Basement Front B — ROW1",
    "zone": "Basement Front B",
-   "rows": 210,
+   "rows": 209,
    "vcap": 240,
-   "dupes": 2,
-   "clones": 2
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 6,
@@ -115,10 +115,10 @@ window.QUEST_DATA = {
    "box": 7,
    "loc": "Basement Front A — ROW1",
    "zone": "Basement Front A",
-   "rows": 249,
+   "rows": 248,
    "vcap": 240,
-   "dupes": 5,
-   "clones": 5
+   "dupes": 3,
+   "clones": 3
   },
   {
    "box": 8,
@@ -133,10 +133,10 @@ window.QUEST_DATA = {
    "box": 9,
    "loc": "Basement Front A — ROW4",
    "zone": "Basement Front A",
-   "rows": 223,
+   "rows": 222,
    "vcap": 240,
-   "dupes": 2,
-   "clones": 2
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 10,
@@ -151,19 +151,19 @@ window.QUEST_DATA = {
    "box": 11,
    "loc": "Basement Front B — ROW3",
    "zone": "Basement Front B",
-   "rows": 203,
+   "rows": 201,
    "vcap": 240,
-   "dupes": 12,
-   "clones": 12
+   "dupes": 8,
+   "clones": 8
   },
   {
    "box": 12,
    "loc": "Basement Front A — ROW4",
    "zone": "Basement Front A",
-   "rows": 209,
+   "rows": 208,
    "vcap": 240,
-   "dupes": 4,
-   "clones": 2
+   "dupes": 2,
+   "clones": 0
   },
   {
    "box": 13,
@@ -187,46 +187,46 @@ window.QUEST_DATA = {
    "box": 15,
    "loc": "Basement Front A — ROW1",
    "zone": "Basement Front A",
-   "rows": 202,
+   "rows": 201,
    "vcap": 150,
-   "dupes": 4,
-   "clones": 4
+   "dupes": 2,
+   "clones": 2
   },
   {
    "box": 16,
    "loc": "Basement Front C — TOP",
    "zone": "Basement Front C",
-   "rows": 173,
+   "rows": 171,
    "vcap": 240,
-   "dupes": 10,
-   "clones": 10
+   "dupes": 6,
+   "clones": 6
   },
   {
    "box": 17,
    "loc": "Basement Front A — ROW3",
    "zone": "Basement Front A",
-   "rows": 191,
+   "rows": 190,
    "vcap": 240,
-   "dupes": 2,
-   "clones": 2
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 18,
    "loc": "Basement Front B — ROW2",
    "zone": "Basement Front B",
-   "rows": 182,
+   "rows": 177,
    "vcap": 240,
-   "dupes": 12,
-   "clones": 10
+   "dupes": 2,
+   "clones": 0
   },
   {
    "box": 19,
    "loc": "Basement Front B — ROW1",
    "zone": "Basement Front B",
-   "rows": 193,
+   "rows": 190,
    "vcap": 240,
-   "dupes": 6,
-   "clones": 6
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 20,
@@ -286,28 +286,28 @@ window.QUEST_DATA = {
    "box": 26,
    "loc": "Basement Front C — ROW2",
    "zone": "Basement Front C",
-   "rows": 143,
+   "rows": 141,
    "vcap": 240,
-   "dupes": 4,
-   "clones": 4
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 27,
    "loc": "Basement Front A — ROW2",
    "zone": "Basement Front A",
-   "rows": 126,
+   "rows": 125,
    "vcap": 240,
-   "dupes": 2,
-   "clones": 2
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 28,
    "loc": "Basement Front B — ROW2",
    "zone": "Basement Front B",
-   "rows": 122,
+   "rows": 121,
    "vcap": 240,
-   "dupes": 2,
-   "clones": 2
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 29,
@@ -340,10 +340,10 @@ window.QUEST_DATA = {
    "box": 33,
    "loc": "Basement Front C — ROW2",
    "zone": "Basement Front C",
-   "rows": 112,
+   "rows": 94,
    "vcap": 240,
-   "dupes": 43,
-   "clones": 42
+   "dupes": 7,
+   "clones": 6
   },
   {
    "box": 35,
@@ -376,10 +376,10 @@ window.QUEST_DATA = {
    "box": 39,
    "loc": "Basement Front C — TOP",
    "zone": "Basement Front C",
-   "rows": 34,
+   "rows": 33,
    "vcap": 240,
-   "dupes": 2,
-   "clones": 2
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 40,
@@ -610,10 +610,10 @@ window.QUEST_DATA = {
    "box": 68,
    "loc": "Boiler Room — ROW2",
    "zone": "Boiler Room",
-   "rows": 224,
+   "rows": 221,
    "vcap": 240,
-   "dupes": 6,
-   "clones": 6
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 70,
@@ -809,7 +809,7 @@ window.QUEST_DATA = {
       },
       {
        "id": "0.5",
-       "text": "Confirm the chat reads back 10,900 rows. If not — STOP, wrong file."
+       "text": "Confirm the chat reads back 10,853 rows. If not — STOP, wrong file."
       }
      ]
     }
@@ -820,7 +820,7 @@ window.QUEST_DATA = {
    "title": "The Clones",
    "est": "identical twin rows — safest wins first",
    "accent": "green",
-   "blurb": "Rows that are exact copies of another row: same book, same box, logged twice. Live count: 80 clone groups / 82 excess rows. Highest confidence, lowest effort, biggest visible progress.",
+   "blurb": "Rows that are exact copies of another row: same book, same box, logged twice. Live count: 33 clone groups / 35 excess rows. Highest confidence, lowest effort, biggest visible progress.",
    "sittings": [
     {
      "id": "A1",
