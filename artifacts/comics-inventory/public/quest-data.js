@@ -1,18 +1,18 @@
-// AUTO-GENERATED quest data — source: comics_inventory_1707_0856.xlsx (10917 rows) · generated 2026-07-17
+// AUTO-GENERATED quest data — source: comics_inventory_1707_0916.xlsx (10917 rows) · generated 2026-07-17
 // Regenerate with: node gen_quest_data.mjs
 window.QUEST_DATA = {
- "source": "comics_inventory_1707_0856.xlsx",
+ "source": "comics_inventory_1707_0916.xlsx",
  "generated": "2026-07-17",
  "totalRows": 10917,
  "dupe": {
-  "groups": 95,
-  "rows": 198,
-  "excess": 103
+  "groups": 114,
+  "rows": 236,
+  "excess": 122
  },
  "clone": {
-  "groups": 78,
-  "rows": 158,
-  "excess": 80
+  "groups": 97,
+  "rows": 196,
+  "excess": 99
  },
  "overCap": [
   {
@@ -126,8 +126,8 @@ window.QUEST_DATA = {
    "zone": "Basement Front A",
    "rows": 236,
    "vcap": 240,
-   "dupes": 0,
-   "clones": 0
+   "dupes": 2,
+   "clones": 2
   },
   {
    "box": 9,
@@ -144,8 +144,8 @@ window.QUEST_DATA = {
    "zone": "Basement Front A",
    "rows": 256,
    "vcap": 240,
-   "dupes": 0,
-   "clones": 0
+   "dupes": 26,
+   "clones": 26
   },
   {
    "box": 11,
@@ -225,8 +225,8 @@ window.QUEST_DATA = {
    "zone": "Basement Front B",
    "rows": 195,
    "vcap": 240,
-   "dupes": 6,
-   "clones": 6
+   "dupes": 10,
+   "clones": 10
   },
   {
    "box": 20,
@@ -324,8 +324,8 @@ window.QUEST_DATA = {
    "zone": "Basement Front C",
    "rows": 113,
    "vcap": 240,
-   "dupes": 2,
-   "clones": 0
+   "dupes": 4,
+   "clones": 2
   },
   {
    "box": 31,
@@ -450,8 +450,8 @@ window.QUEST_DATA = {
    "zone": "Boiler Room",
    "rows": 164,
    "vcap": 240,
-   "dupes": 0,
-   "clones": 0
+   "dupes": 2,
+   "clones": 2
   },
   {
    "box": 49,
@@ -639,8 +639,8 @@ window.QUEST_DATA = {
    "zone": "Bedroom",
    "rows": 158,
    "vcap": 240,
-   "dupes": 0,
-   "clones": 0
+   "dupes": 2,
+   "clones": 2
   },
   {
    "box": 79,
@@ -820,7 +820,7 @@ window.QUEST_DATA = {
    "title": "The Clones",
    "est": "identical twin rows — safest wins first",
    "accent": "green",
-   "blurb": "Rows that are exact copies of another row: same book, same box, logged twice. Live count: 78 clone groups / 80 excess rows. Highest confidence, lowest effort, biggest visible progress.",
+   "blurb": "Rows that are exact copies of another row: same book, same box, logged twice. Live count: 97 clone groups / 99 excess rows. Highest confidence, lowest effort, biggest visible progress.",
    "sittings": [
     {
      "id": "A1",
