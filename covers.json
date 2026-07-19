@@ -2391,7 +2391,6 @@
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4532216-06.jpg",
     "date": "2015-06-30"
   },
-  "Sam Wilson: Captain America|||1": null,
   "Sam Wilson: Captain America|||2": null,
   "Sam Wilson: Captain America|||3": null,
   "Sam Wilson: Captain America|||4": null,
@@ -2409,7 +2408,6 @@
   "Steve Rogers: Captain America|||8": null,
   "Steve Rogers: Captain America|||9": null,
   "Steve Rogers: Captain America|||10": null,
-  "Sam Wilson: Captain America|||7": null,
   "Captain America|||698": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6280592-698.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/6280592-698.jpg",
@@ -30636,14 +30634,6 @@
     "volume_name": "Captain America: Sam Wilson",
     "volume_start_year": null
   },
-  "Sam Wilson: Captain America|||7|||1": {
-    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5456954-13.jpg",
-    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5456954-13.jpg",
-    "date": "2016-11-30",
-    "volume_id": 85274,
-    "volume_name": "Captain America: Sam Wilson",
-    "volume_start_year": null
-  },
   "Captain America|||21|||9": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/8/85763/2266325-capmuk21.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/8/85763/2266325-capmuk21.jpg",
@@ -30667,14 +30657,6 @@
     "volume_id": 35207,
     "volume_name": "Marvel Masterworks: Captain America",
     "volume_start_year": null
-  },
-  "Sam Wilson: Captain America|||1|||9": {
-    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9584972-wwww.jpg",
-    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9584972-wwww.jpg",
-    "date": "2025-03-01",
-    "volume_id": 161845,
-    "volume_name": "Sam Wilson: Captain America",
-    "volume_start_year": 2025
   },
   "Green Lantern|||5|||8": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/3125/6785610-cla5.jpg",
@@ -31691,5 +31673,1045 @@
     "volume_id": 40712,
     "volume_name": "Captain America Corps",
     "volume_start_year": 2011
+  },
+  "Batman|||639|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/3125/8355507-bat639.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/3125/8355507-bat639.jpg",
+    "date": "",
+    "volume_id": 126840,
+    "volume_name": "Batman",
+    "volume_start_year": null
+  },
+  "Batman|||640|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/1/18938/2786466-n640.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/1/18938/2786466-n640.jpg",
+    "date": "",
+    "volume_id": 47490,
+    "volume_name": "Tintin",
+    "volume_start_year": null
+  },
+  "Batman|||642|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/3125/8356762-bat642.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/3125/8356762-bat642.jpg",
+    "date": "",
+    "volume_id": 126840,
+    "volume_name": "Batman",
+    "volume_start_year": null
+  },
+  "Batman|||643|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/3125/8356764-bat643.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/3125/8356764-bat643.jpg",
+    "date": "",
+    "volume_id": 126840,
+    "volume_name": "Batman",
+    "volume_start_year": null
+  },
+  "Batman|||644|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11154/111543045/8277151-c6072c71ade244f3a1c6c5a03bef55b7.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11154/111543045/8277151-c6072c71ade244f3a1c6c5a03bef55b7.jpg",
+    "date": "2005-03-01",
+    "volume_id": 35580,
+    "volume_name": "Condorito",
+    "volume_start_year": null
+  },
+  "Batman|||645|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/3125/8356773-bat645.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/3125/8356773-bat645.jpg",
+    "date": "",
+    "volume_id": 126840,
+    "volume_name": "Batman",
+    "volume_start_year": null
+  },
+  "Batman|||646|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/3125/8358365-bat646.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/3125/8358365-bat646.jpg",
+    "date": "",
+    "volume_id": 126840,
+    "volume_name": "Batman",
+    "volume_start_year": null
+  },
+  "Batman|||647|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/3125/8358368-bat547.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/3125/8358368-bat547.jpg",
+    "date": "",
+    "volume_id": 126840,
+    "volume_name": "Batman",
+    "volume_start_year": null
+  },
+  "Batman|||648|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/3125/8358370-bat648.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/3125/8358370-bat648.jpg",
+    "date": "",
+    "volume_id": 126840,
+    "volume_name": "Batman",
+    "volume_start_year": null
+  },
+  "Batman|||649|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/3125/8358372-bat649.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/3125/8358372-bat649.jpg",
+    "date": "",
+    "volume_id": 126840,
+    "volume_name": "Batman",
+    "volume_start_year": null
+  },
+  "Batman|||651|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/9506/290998-796-121997-1-batman.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/9506/290998-796-121997-1-batman.jpg",
+    "date": "2006-05-01",
+    "volume_id": 796,
+    "volume_name": "Batman",
+    "volume_start_year": null
+  },
+  "Batman|||652|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/3125/8359711-bat652.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/3125/8359711-bat652.jpg",
+    "date": "",
+    "volume_id": 126840,
+    "volume_name": "Batman",
+    "volume_start_year": null
+  },
+  "Batman|||653|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/1/14535/344342-19752-126303-1-2000-a-d.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/1/14535/344342-19752-126303-1-2000-a-d.jpg",
+    "date": "1989-11-18",
+    "volume_id": 19752,
+    "volume_name": "2000 AD",
+    "volume_start_year": null
+  },
+  "Batman|||654|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/5/56044/1764760-batman__1940__654.jpeg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/5/56044/1764760-batman__1940__654.jpeg",
+    "date": "2006-08-01",
+    "volume_id": 796,
+    "volume_name": "Batman",
+    "volume_start_year": null
+  },
+  "Black Panther|||10|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/41183-6496-46490-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/41183-6496-46490-1-black-panther.jpg",
+    "date": "1999-08-01",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||11|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/41184-6496-46491-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/41184-6496-46491-1-black-panther.jpg",
+    "date": "1999-09-01",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||12|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/41185-6496-46492-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/41185-6496-46492-1-black-panther.jpg",
+    "date": "1999-10-01",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||13|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/41186-6496-46493-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/41186-6496-46493-1-black-panther.jpg",
+    "date": "1999-12-10",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||14|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/41187-6496-46494-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/41187-6496-46494-1-black-panther.jpg",
+    "date": "2000-01-01",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||16|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/41189-6496-46496-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/41189-6496-46496-1-black-panther.jpg",
+    "date": "2000-03-10",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||18|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/41191-6496-46498-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/41191-6496-46498-1-black-panther.jpg",
+    "date": "2000-05-01",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||19|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/41192-6496-46499-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/41192-6496-46499-1-black-panther.jpg",
+    "date": "2000-06-01",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||20|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/41193-6496-46500-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/41193-6496-46500-1-black-panther.jpg",
+    "date": "2000-07-01",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||21|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/41194-6496-46501-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/41194-6496-46501-1-black-panther.jpg",
+    "date": "2000-08-01",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||23|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/43447-6496-50807-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/43447-6496-50807-1-black-panther.jpg",
+    "date": "2000-10-31",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||24|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/43448-6496-50808-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/43448-6496-50808-1-black-panther.jpg",
+    "date": "2000-11-01",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||27|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/43451-6496-50811-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/43451-6496-50811-1-black-panther.jpg",
+    "date": "2001-02-01",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||28|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/43452-6496-50812-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/43452-6496-50812-1-black-panther.jpg",
+    "date": "2001-03-01",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||29|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/43453-6496-50813-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/43453-6496-50813-1-black-panther.jpg",
+    "date": "2001-04-01",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||31|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/43455-6496-50815-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/43455-6496-50815-1-black-panther.jpg",
+    "date": "2001-06-01",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||32|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/43456-6496-50816-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/43456-6496-50816-1-black-panther.jpg",
+    "date": "2001-07-01",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||33|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/43457-6496-50817-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/43457-6496-50817-1-black-panther.jpg",
+    "date": "2001-08-01",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||34|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/43458-6496-50818-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/43458-6496-50818-1-black-panther.jpg",
+    "date": "2001-09-01",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||35|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/43459-6496-50819-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/43459-6496-50819-1-black-panther.jpg",
+    "date": "2001-10-01",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||37|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/43461-6496-50821-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/43461-6496-50821-1-black-panther.jpg",
+    "date": "2002-01-01",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||38|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/43462-6496-50822-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/43462-6496-50822-1-black-panther.jpg",
+    "date": "2002-01-01",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||39|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/43463-6496-50823-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/43463-6496-50823-1-black-panther.jpg",
+    "date": "2002-02-01",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||40|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/74786-6496-78166-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/74786-6496-78166-1-black-panther.jpg",
+    "date": "2002-03-01",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||41|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/74787-6496-78167-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/74787-6496-78167-1-black-panther.jpg",
+    "date": "2002-04-01",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||42|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/74788-6496-78168-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/74788-6496-78168-1-black-panther.jpg",
+    "date": "2002-05-31",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||43|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/74789-6496-78169-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/74789-6496-78169-1-black-panther.jpg",
+    "date": "2002-06-30",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||44|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/56052-6496-78170-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/56052-6496-78170-1-black-panther.jpg",
+    "date": "2002-07-31",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||45|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/56053-6496-78171-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/56053-6496-78171-1-black-panther.jpg",
+    "date": "2002-08-31",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||46|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/74961-6496-80543-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/74961-6496-80543-1-black-panther.jpg",
+    "date": "2002-09-01",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||47|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/1867/340767-6496-126057-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/1867/340767-6496-126057-1-black-panther.jpg",
+    "date": "2002-10-01",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||48|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/1867/340768-6496-126058-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/1867/340768-6496-126058-1-black-panther.jpg",
+    "date": "2002-10-01",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||49|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/1867/340946-6496-126067-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/1867/340946-6496-126067-1-black-panther.jpg",
+    "date": "2002-11-01",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||55|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/2/26954/659333-5394_20060926192716_large.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/2/26954/659333-5394_20060926192716_large.jpg",
+    "date": "2003-05-01",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||56|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/2/26954/659335-5395_20060926192902_large.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/2/26954/659335-5395_20060926192902_large.jpg",
+    "date": "2003-06-01",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||57|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/2/26954/659346-5396_20060926195054_large.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/2/26954/659346-5396_20060926195054_large.jpg",
+    "date": "2003-06-30",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||58|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/2/26954/659349-5395_20060926192902_large.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/2/26954/659349-5395_20060926192902_large.jpg",
+    "date": "2003-06-30",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||59|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/2/26954/659356-5395_20060926192902_large.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/2/26954/659356-5395_20060926192902_large.jpg",
+    "date": "2003-07-01",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||61|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/2/26954/659362-5400_20060926200018_large.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/2/26954/659362-5400_20060926200018_large.jpg",
+    "date": "2003-08-01",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||62|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/2/26954/659363-5400_20060926200018_large.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/2/26954/659363-5400_20060926200018_large.jpg",
+    "date": "2003-09-01",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther|||2|||4": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/68459-11502-101457-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/68459-11502-101457-1-black-panther.jpg",
+    "date": "2005-05-01",
+    "volume_id": 11502,
+    "volume_name": "Black Panther",
+    "volume_start_year": 2005
+  },
+  "Black Panther|||3|||4": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/68460-11502-101458-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/68460-11502-101458-1-black-panther.jpg",
+    "date": "2005-06-01",
+    "volume_id": 11502,
+    "volume_name": "Black Panther",
+    "volume_start_year": 2005
+  },
+  "Black Panther|||4|||4": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/1/10390/342769-11502-126175-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/1/10390/342769-11502-126175-1-black-panther.jpg",
+    "date": "2005-07-01",
+    "volume_id": 11502,
+    "volume_name": "Black Panther",
+    "volume_start_year": 2005
+  },
+  "Black Panther|||6|||4": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/4/48343/992683-bp6.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/4/48343/992683-bp6.jpg",
+    "date": "2005-09-06",
+    "volume_id": 11502,
+    "volume_name": "Black Panther",
+    "volume_start_year": 2005
+  },
+  "Black Panther|||7|||4": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/1/10390/342804-11502-126178-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/1/10390/342804-11502-126178-1-black-panther.jpg",
+    "date": "2005-10-01",
+    "volume_id": 11502,
+    "volume_name": "Black Panther",
+    "volume_start_year": 2005
+  },
+  "Black Panther|||10|||4": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/2764610-acvr.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/2764610-acvr.jpg",
+    "date": "2006-01-01",
+    "volume_id": 11502,
+    "volume_name": "Black Panther",
+    "volume_start_year": 2005
+  },
+  "Black Panther|||11|||4": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/1/10390/342844-11502-126182-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/1/10390/342844-11502-126182-1-black-panther.jpg",
+    "date": "2006-02-01",
+    "volume_id": 11502,
+    "volume_name": "Black Panther",
+    "volume_start_year": 2005
+  },
+  "Black Panther|||12|||4": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/1/10390/342850-11502-126183-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/1/10390/342850-11502-126183-1-black-panther.jpg",
+    "date": "2006-03-01",
+    "volume_id": 11502,
+    "volume_name": "Black Panther",
+    "volume_start_year": 2005
+  },
+  "Black Panther|||13|||4": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/1/10390/342852-11502-126184-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/1/10390/342852-11502-126184-1-black-panther.jpg",
+    "date": "2006-04-01",
+    "volume_id": 11502,
+    "volume_name": "Black Panther",
+    "volume_start_year": 2005
+  },
+  "Black Panther|||14|||4": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/787/103680-11502-107855-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/787/103680-11502-107855-1-black-panther.jpg",
+    "date": "2006-05-01",
+    "volume_id": 11502,
+    "volume_name": "Black Panther",
+    "volume_start_year": 2005
+  },
+  "Black Panther|||16|||4": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/787/135952-11502-110528-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/787/135952-11502-110528-1-black-panther.jpg",
+    "date": "2006-07-01",
+    "volume_id": 11502,
+    "volume_name": "Black Panther",
+    "volume_start_year": 2005
+  },
+  "Black Panther|||18|||4": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/574/111111-11502-108675-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/574/111111-11502-108675-1-black-panther.jpg",
+    "date": "2006-09-01",
+    "volume_id": 11502,
+    "volume_name": "Black Panther",
+    "volume_start_year": 2005
+  },
+  "Black Panther|||19|||4": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/574/102403-11502-107679-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/574/102403-11502-107679-1-black-panther.jpg",
+    "date": "2006-10-01",
+    "volume_id": 11502,
+    "volume_name": "Black Panther",
+    "volume_start_year": 2005
+  },
+  "Black Panther|||20|||4": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/2945020-acvr.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/2945020-acvr.jpg",
+    "date": "2006-11-01",
+    "volume_id": 11502,
+    "volume_name": "Black Panther",
+    "volume_start_year": 2005
+  },
+  "Black Panther|||22|||4": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/2779387-acvr.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/2779387-acvr.jpg",
+    "date": "2007-01-01",
+    "volume_id": 11502,
+    "volume_name": "Black Panther",
+    "volume_start_year": 2005
+  },
+  "Black Panther|||23|||4": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/574/114364-11502-108954-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/574/114364-11502-108954-1-black-panther.jpg",
+    "date": "2007-02-01",
+    "volume_id": 11502,
+    "volume_name": "Black Panther",
+    "volume_start_year": 2005
+  },
+  "Black Panther|||24|||4": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/2/89456-11502-106282-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/2/89456-11502-106282-1-black-panther.jpg",
+    "date": "2007-03-01",
+    "volume_id": 11502,
+    "volume_name": "Black Panther",
+    "volume_start_year": 2005
+  },
+  "Black Panther|||25|||4": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/40/94480-11502-106708-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/40/94480-11502-106708-1-black-panther.jpg",
+    "date": "2007-04-01",
+    "volume_id": 11502,
+    "volume_name": "Black Panther",
+    "volume_start_year": 2005
+  },
+  "Black Panther|||26|||4": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/40/102216-11502-107598-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/40/102216-11502-107598-1-black-panther.jpg",
+    "date": "2007-05-01",
+    "volume_id": 11502,
+    "volume_name": "Black Panther",
+    "volume_start_year": 2005
+  },
+  "Black Panther|||27|||4": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/308/118893-11502-109262-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/308/118893-11502-109262-1-black-panther.jpg",
+    "date": "2007-06-01",
+    "volume_id": 11502,
+    "volume_name": "Black Panther",
+    "volume_start_year": 2005
+  },
+  "Black Panther|||10|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5665582-10.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5665582-10.jpg",
+    "date": "2017-03-31",
+    "volume_id": 89350,
+    "volume_name": "Black Panther",
+    "volume_start_year": 2016
+  },
+  "Black Panther|||11|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5712126-11.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5712126-11.jpg",
+    "date": "2017-04-30",
+    "volume_id": 89350,
+    "volume_name": "Black Panther",
+    "volume_start_year": 2016
+  },
+  "Black Panther|||13|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5820772-13.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5820772-13.jpg",
+    "date": "2017-06-30",
+    "volume_id": 89350,
+    "volume_name": "Black Panther",
+    "volume_start_year": 2016
+  },
+  "Black Panther|||14|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5864487-14.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5864487-14.jpg",
+    "date": "2017-07-31",
+    "volume_id": 89350,
+    "volume_name": "Black Panther",
+    "volume_start_year": 2016
+  },
+  "Black Panther|||15|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5929752-15.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5929752-15.jpg",
+    "date": "2017-08-31",
+    "volume_id": 89350,
+    "volume_name": "Black Panther",
+    "volume_start_year": 2016
+  },
+  "Black Panther|||16|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5973909-16.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5973909-16.jpg",
+    "date": "2017-09-30",
+    "volume_id": 89350,
+    "volume_name": "Black Panther",
+    "volume_start_year": 2016
+  },
+  "Black Panther|||18|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6071387-18.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/6071387-18.jpg",
+    "date": "2017-11-30",
+    "volume_id": 89350,
+    "volume_name": "Black Panther",
+    "volume_start_year": 2016
+  },
+  "Black Panther|||19|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/9834501-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9834501-cover.jpg",
+    "date": "2025-10-01",
+    "volume_id": 156647,
+    "volume_name": "Ultimate Black Panther",
+    "volume_start_year": null
+  },
+  "Black Panther|||20|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/9869569-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9869569-cover.jpg",
+    "date": "2025-11-01",
+    "volume_id": 156647,
+    "volume_name": "Ultimate Black Panther",
+    "volume_start_year": null
+  },
+  "Black Panther|||21|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/9887579-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9887579-cover.jpg",
+    "date": "2025-12-01",
+    "volume_id": 156647,
+    "volume_name": "Ultimate Black Panther",
+    "volume_start_year": null
+  },
+  "Black Panther|||22|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/9913107-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9913107-cover.jpg",
+    "date": "2026-01-01",
+    "volume_id": 156647,
+    "volume_name": "Ultimate Black Panther",
+    "volume_start_year": null
+  },
+  "Black Panther|||23|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/9933543-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9933543-cover.jpg",
+    "date": "2026-02-01",
+    "volume_id": 156647,
+    "volume_name": "Ultimate Black Panther",
+    "volume_start_year": null
+  },
+  "Black Panther|||24|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/9967102-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9967102-cover.jpg",
+    "date": "2026-03-01",
+    "volume_id": 156647,
+    "volume_name": "Ultimate Black Panther",
+    "volume_start_year": null
+  },
+  "Black Panther|||25|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/43449-6496-50809-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/43449-6496-50809-1-black-panther.jpg",
+    "date": "2000-12-01",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": null
+  },
+  "Black Panther|||16|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9722050-wwww.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9722050-wwww.jpg",
+    "date": "2025-07-01",
+    "volume_id": 156647,
+    "volume_name": "Ultimate Black Panther",
+    "volume_start_year": null
+  },
+  "Black Panther|||18|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9791778-wwww.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9791778-wwww.jpg",
+    "date": "2025-09-01",
+    "volume_id": 156647,
+    "volume_name": "Ultimate Black Panther",
+    "volume_start_year": null
+  },
+  "Black Panther|||19|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7184518-19.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/7184518-19.jpg",
+    "date": "2020-02-01",
+    "volume_id": 111034,
+    "volume_name": "Black Panther",
+    "volume_start_year": null
+  },
+  "Black Panther|||20|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7219924-20.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/7219924-20.jpg",
+    "date": "2020-03-01",
+    "volume_id": 111034,
+    "volume_name": "Black Panther",
+    "volume_start_year": null
+  },
+  "Black Panther|||21|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7259087-21.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/7259087-21.jpg",
+    "date": "2020-04-01",
+    "volume_id": 111034,
+    "volume_name": "Black Panther",
+    "volume_start_year": null
+  },
+  "Black Panther|||22|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7293939-22.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/7293939-22.jpg",
+    "date": "2020-05-01",
+    "volume_id": 111034,
+    "volume_name": "Black Panther",
+    "volume_start_year": null
+  },
+  "Black Panther|||23|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/9933543-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9933543-cover.jpg",
+    "date": "2026-02-01",
+    "volume_id": 156647,
+    "volume_name": "Ultimate Black Panther",
+    "volume_start_year": null
+  },
+  "Black Panther|||24|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7884034-24.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/7884034-24.jpg",
+    "date": "2021-05-01",
+    "volume_id": 111034,
+    "volume_name": "Black Panther",
+    "volume_start_year": null
+  },
+  "Black Panther|||25|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/4/43449-6496-50809-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/4/43449-6496-50809-1-black-panther.jpg",
+    "date": "2000-12-01",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": null
+  },
+  "Black Panther|||2|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/12/124259/8251045-blapleg2021002_preview.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/12/124259/8251045-blapleg2021002_preview.jpg",
+    "date": "2022-01-01",
+    "volume_id": 139563,
+    "volume_name": "Black Panther Legends",
+    "volume_start_year": null
+  },
+  "Black Panther|||3|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/8357548-8566929695-1.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/8357548-8566929695-1.jpg",
+    "date": "2022-04-01",
+    "volume_id": 139563,
+    "volume_name": "Black Panther Legends",
+    "volume_start_year": null
+  },
+  "Black Panther|||4|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/8522258-5799351392-20758.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/8522258-5799351392-20758.jpg",
+    "date": "2022-07-01",
+    "volume_id": 139563,
+    "volume_name": "Black Panther Legends",
+    "volume_start_year": null
+  },
+  "Black Panther|||5|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/8449136-wwww.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/8449136-wwww.jpg",
+    "date": "2022-06-01",
+    "volume_id": 140222,
+    "volume_name": "Black Panther",
+    "volume_start_year": null
+  },
+  "Black Panther|||6|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/8587481-0652678748-20907.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/8587481-0652678748-20907.jpg",
+    "date": "2022-07-01",
+    "volume_id": 140222,
+    "volume_name": "Black Panther",
+    "volume_start_year": null
+  },
+  "Black Panther|||10|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9547093-wwww.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9547093-wwww.jpg",
+    "date": "2025-01-01",
+    "volume_id": 156647,
+    "volume_name": "Ultimate Black Panther",
+    "volume_start_year": null
+  },
+  "Black Panther|||11|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11171/111715454/8778714-8302505862-clean.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11171/111715454/8778714-8302505862-clean.jpg",
+    "date": "2022-10-01",
+    "volume_id": 147345,
+    "volume_name": "Who Is the Black Panther Infinity Comic",
+    "volume_start_year": null
+  },
+  "Black Panther|||12|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11171/111715454/8778715-1245833431-clean.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11171/111715454/8778715-1245833431-clean.jpg",
+    "date": "2022-10-01",
+    "volume_id": 147345,
+    "volume_name": "Who Is the Black Panther Infinity Comic",
+    "volume_start_year": null
+  },
+  "Black Panther|||13|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/9635341-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9635341-cover.jpg",
+    "date": "2025-04-01",
+    "volume_id": 156647,
+    "volume_name": "Ultimate Black Panther",
+    "volume_start_year": null
+  },
+  "Black Panther|||14|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/9663896-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9663896-cover.jpg",
+    "date": "2025-05-01",
+    "volume_id": 156647,
+    "volume_name": "Ultimate Black Panther",
+    "volume_start_year": null
+  },
+  "Black Panther|||15|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/8/84205/4275218-bp15vf8m121.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/8/84205/4275218-bp15vf8m121.jpg",
+    "date": "1979-05-01",
+    "volume_id": 2896,
+    "volume_name": "Black Panther",
+    "volume_start_year": null
+  },
+  "Black Panther|||51|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/0/1867/345615-6496-126529-1-black-panther.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/0/1867/345615-6496-126529-1-black-panther.jpg",
+    "date": "2003-01-01",
+    "volume_id": 6496,
+    "volume_name": "Black Panther",
+    "volume_start_year": 1998
+  },
+  "Black Panther: The Man Without Fear|||514|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/2170155-514.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/2170155-514.jpg",
+    "date": "2011-03-01",
+    "volume_id": 37502,
+    "volume_name": "Black Panther: The Man Without Fear",
+    "volume_start_year": 2011
+  },
+  "Black Panther: The Man Without Fear|||516|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/8/87073/1748396-blackpanthermanwithoutfear516.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/8/87073/1748396-blackpanthermanwithoutfear516.jpg",
+    "date": "2011-05-01",
+    "volume_id": 37502,
+    "volume_name": "Black Panther: The Man Without Fear",
+    "volume_start_year": 2011
+  },
+  "Black Panther: The Man Without Fear|||517|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/8/83524/1769661-blackpanther517_f.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/8/83524/1769661-blackpanther517_f.jpg",
+    "date": "2011-06-01",
+    "volume_id": 37502,
+    "volume_name": "Black Panther: The Man Without Fear",
+    "volume_start_year": 2011
+  },
+  "Black Panther: The Man Without Fear|||519|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/1925318-519.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/1925318-519.jpg",
+    "date": "2011-08-31",
+    "volume_id": 37502,
+    "volume_name": "Black Panther: The Man Without Fear",
+    "volume_start_year": 2011
+  },
+  "Sam Wilson: Captain America|||7|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5456954-13.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5456954-13.jpg",
+    "date": "2016-11-30",
+    "volume_id": 85274,
+    "volume_name": "Captain America: Sam Wilson",
+    "volume_start_year": null
+  },
+  "Black Panther: The Man Without Fear|||520|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/5/55223/1872728-black_panther_520.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/5/55223/1872728-black_panther_520.jpg",
+    "date": "2011-08-31",
+    "volume_id": 37502,
+    "volume_name": "Black Panther: The Man Without Fear",
+    "volume_start_year": 2011
+  },
+  "Black Panther: The Man Without Fear|||523|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/2033291-523.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/2033291-523.jpg",
+    "date": "2011-11-30",
+    "volume_id": 37502,
+    "volume_name": "Black Panther: The Man Without Fear",
+    "volume_start_year": 2011
+  },
+  "Black Panther: The Man Without Fear|||525|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/2033291-523.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/2033291-523.jpg",
+    "date": "2011-11-30",
+    "volume_id": 37502,
+    "volume_name": "Black Panther: The Man Without Fear",
+    "volume_start_year": null
+  },
+  "Black Panther: The Man Without Fear|||526|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/2033291-523.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/2033291-523.jpg",
+    "date": "2011-11-30",
+    "volume_id": 37502,
+    "volume_name": "Black Panther: The Man Without Fear",
+    "volume_start_year": null
+  },
+  "Black Panther: The Man Without Fear|||527|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/2033291-523.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/2033291-523.jpg",
+    "date": "2011-11-30",
+    "volume_id": 37502,
+    "volume_name": "Black Panther: The Man Without Fear",
+    "volume_start_year": null
+  },
+  "Black Panther: The Man Without Fear|||528|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/2033291-523.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/2033291-523.jpg",
+    "date": "2011-11-30",
+    "volume_id": 37502,
+    "volume_name": "Black Panther: The Man Without Fear",
+    "volume_start_year": null
+  },
+  "Black Panther: The Man Without Fear|||529|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/2033291-523.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/2033291-523.jpg",
+    "date": "2011-11-30",
+    "volume_id": 37502,
+    "volume_name": "Black Panther: The Man Without Fear",
+    "volume_start_year": null
+  },
+  "Black Panther: The Man Without Fear|||515|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/2170156-515.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/2170156-515.jpg",
+    "date": "2011-04-01",
+    "volume_id": 37502,
+    "volume_name": "Black Panther: The Man Without Fear",
+    "volume_start_year": 2011
+  },
+  "Sam Wilson: Captain America|||1|||9": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9584972-wwww.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9584972-wwww.jpg",
+    "date": "2025-03-01",
+    "volume_id": 161845,
+    "volume_name": "Sam Wilson: Captain America",
+    "volume_start_year": 2025
+  },
+  "Doctor Strange|||17|||5": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9403552-wwww.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9403552-wwww.jpg",
+    "date": "2024-09-01",
+    "volume_id": 148962,
+    "volume_name": "Doctor Strange",
+    "volume_start_year": null
+  },
+  "Doctor Strange|||18|||5": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9436373-wwww.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9436373-wwww.jpg",
+    "date": "2024-10-01",
+    "volume_id": 148962,
+    "volume_name": "Doctor Strange",
+    "volume_start_year": null
+  },
+  "Excalibur|||2|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7153384-02.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/7153384-02.jpg",
+    "date": "2020-01-01",
+    "volume_id": 122488,
+    "volume_name": "Excalibur",
+    "volume_start_year": 2019
+  },
+  "Excalibur|||3|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7169587-03.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/7169587-03.jpg",
+    "date": "2020-02-01",
+    "volume_id": 122488,
+    "volume_name": "Excalibur",
+    "volume_start_year": 2019
+  },
+  "Excalibur|||4|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7184521-04.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/7184521-04.jpg",
+    "date": "2020-02-01",
+    "volume_id": 122488,
+    "volume_name": "Excalibur",
+    "volume_start_year": 2019
+  },
+  "Excalibur|||5|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7204814-05.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/7204814-05.jpg",
+    "date": "2020-03-01",
+    "volume_id": 122488,
+    "volume_name": "Excalibur",
+    "volume_start_year": 2019
+  },
+  "Excalibur|||6|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7219928-06.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/7219928-06.jpg",
+    "date": "2020-03-01",
+    "volume_id": 122488,
+    "volume_name": "Excalibur",
+    "volume_start_year": 2019
   }
 }
