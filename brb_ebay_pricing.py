@@ -370,19 +370,35 @@ def main():
         print(f"  Flagged (>30% trimmed): {needs_trim}  Low confidence (<3 comps): {low_conf}")
         sys.exit(0)
 
-    # Build queue: rows with NM Value > min_value, deduplicated by Title+Issue
+    # Build queue: rows with NM Value > min_value, deduplicated by Title+Issue.
+    #
+    # De-dup picks the BEST row per Title+Issue, not the first one encountered.
+    # The old code added the key to `seen` before the value/tier filters ran, so
+    # if a low-value Key='NO' copy happened to sit earlier in the sheet it
+    # claimed the slot and the Key='YES' copy of the same book was silently
+    # dropped — that alone hid 27 key issues from --key-tier. Prefer a key
+    # issue, then the highest NM value.
+    def _dedup_rank(row):
+        is_k = str(row.get("Key Issue?", "")).strip().upper() == "YES"
+        return (0 if is_k else 1, -(nm_value(row) or 0))
+
+    best_rows = {}
+    for _, row in df.iterrows():
+        title = str(row.get("Title", "")).strip()
+        if not title:
+            continue
+        key = f'{title}|||{row.get("Issue #", "")}'
+        cur = best_rows.get(key)
+        if cur is None or _dedup_rank(row) < _dedup_rank(cur):
+            best_rows[key] = row
+
     queue     = []
     cgc_queue = []
-    seen      = set()
-    for _, row in df.iterrows():
+    for key, row in best_rows.items():
         nm    = nm_value(row)
         vf    = vf_value(row)
         title = str(row.get("Title", "")).strip()
         issue = row.get("Issue #", "")
-        key   = f"{title}|||{issue}"
-        if not title or key in seen:
-            continue
-        seen.add(key)
 
         era = str(row.get("Era", "")).strip()
 
