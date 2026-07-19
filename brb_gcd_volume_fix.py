@@ -33,8 +33,22 @@ import openpyxl
 
 from brb_gcd_volume_check import tight, pub_match, parse_year_range, latest_xlsx, DB
 
+ROOT = os.path.dirname(os.path.abspath(__file__))
 MAX_SERIES_COUNT = 3  # convention-noise gate — never touch titles above this
 WATCH_TITLES = {"Absolute Batman"}
+EXCLUSIONS_CSV = "volume_fix_exclusions.csv"  # human-reviewed titles, never auto-changed
+
+
+def load_exclusions():
+    """Titles a human has already adjudicated. GCD's derived number is known to be
+    wrong for these (usually because GCD counts reprints/artifacts as volumes), so
+    they must never resurface as 'pending' fixes."""
+    path = os.path.join(ROOT, EXCLUSIONS_CSV)
+    if not os.path.exists(path):
+        return {}
+    import csv as _csv
+    with open(path) as f:
+        return {r["Title"]: r.get("Reason", "") for r in _csv.DictReader(f) if r.get("Title")}
 
 
 def main():
@@ -57,6 +71,9 @@ def main():
 
     xlsx = os.path.abspath(args.xlsx) if args.xlsx else latest_xlsx()
     print(f"Source: {os.path.basename(xlsx)}   (mode: {'APPLY' if args.apply else 'DRY-RUN'})")
+    exclusions = load_exclusions()
+    if exclusions:
+        print(f"Exclusions loaded: {len(exclusions)} human-reviewed title(s) will be skipped")
     conn = sqlite3.connect(DB)
 
     # series pools merged across spelling variants + aliases (same as the check)
@@ -93,6 +110,8 @@ def main():
         except (ValueError, TypeError):
             continue
 
+        if title in exclusions:
+            continue
         pub = str(row[pi].value or "").strip()
         ck = (title, pub)
         if ck not in numbering_cache:
