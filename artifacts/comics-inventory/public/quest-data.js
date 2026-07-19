@@ -1,9 +1,9 @@
-// AUTO-GENERATED quest data — source: comics_inventory_1707_1511.xlsx (10853 rows) · generated 2026-07-17
+// AUTO-GENERATED quest data — source: comics_inventory_1907_1223.xlsx (10855 rows) · generated 2026-07-19
 // Regenerate with: node gen_quest_data.mjs
 window.QUEST_DATA = {
- "source": "comics_inventory_1707_1511.xlsx",
- "generated": "2026-07-17",
- "totalRows": 10853,
+ "source": "comics_inventory_1907_1223.xlsx",
+ "generated": "2026-07-19",
+ "totalRows": 10855,
  "dupe": {
   "groups": 50,
   "rows": 108,
@@ -63,6 +63,13 @@ window.QUEST_DATA = {
    "cap": 240,
    "over": 3,
    "loc": "Basement Front B — ROW1"
+  },
+  {
+   "box": 72,
+   "rows": 83,
+   "cap": 80,
+   "over": 3,
+   "loc": "Bedroom — FLOOR"
   }
  ],
  "boxes": [
@@ -403,7 +410,7 @@ window.QUEST_DATA = {
    "box": 43,
    "loc": "Basement Front C — ROW1",
    "zone": "Basement Front C",
-   "rows": 130,
+   "rows": 128,
    "vcap": 240,
    "dupes": 0,
    "clones": 0
@@ -610,7 +617,7 @@ window.QUEST_DATA = {
    "box": 68,
    "loc": "Boiler Room — ROW2",
    "zone": "Boiler Room",
-   "rows": 221,
+   "rows": 220,
    "vcap": 240,
    "dupes": 0,
    "clones": 0
@@ -628,7 +635,7 @@ window.QUEST_DATA = {
    "box": 72,
    "loc": "Bedroom — FLOOR",
    "zone": "Bedroom",
-   "rows": 76,
+   "rows": 83,
    "vcap": 80,
    "dupes": 4,
    "clones": 4
@@ -809,7 +816,7 @@ window.QUEST_DATA = {
       },
       {
        "id": "0.5",
-       "text": "Confirm the chat reads back 10,853 rows. If not — STOP, wrong file."
+       "text": "Confirm the chat reads back 10,855 rows. If not — STOP, wrong file."
       }
      ]
     }
