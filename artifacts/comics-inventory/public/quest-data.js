@@ -1,7 +1,7 @@
-// AUTO-GENERATED quest data — source: comics_inventory_1907_1223.xlsx (10855 rows) · generated 2026-07-19
+// AUTO-GENERATED quest data — source: comics_inventory_1907_1238.xlsx (10855 rows) · generated 2026-07-19
 // Regenerate with: node gen_quest_data.mjs
 window.QUEST_DATA = {
- "source": "comics_inventory_1907_1223.xlsx",
+ "source": "comics_inventory_1907_1238.xlsx",
  "generated": "2026-07-19",
  "totalRows": 10855,
  "dupe": {
@@ -63,13 +63,6 @@ window.QUEST_DATA = {
    "cap": 240,
    "over": 3,
    "loc": "Basement Front B — ROW1"
-  },
-  {
-   "box": 72,
-   "rows": 83,
-   "cap": 80,
-   "over": 3,
-   "loc": "Bedroom — FLOOR"
   }
  ],
  "boxes": [
@@ -151,8 +144,8 @@ window.QUEST_DATA = {
    "zone": "Basement Front A",
    "rows": 244,
    "vcap": 240,
-   "dupes": 2,
-   "clones": 2
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 11,
@@ -466,8 +459,8 @@ window.QUEST_DATA = {
    "zone": "Boiler Room",
    "rows": 159,
    "vcap": 240,
-   "dupes": 0,
-   "clones": 0
+   "dupes": 2,
+   "clones": 2
   },
   {
    "box": 50,
@@ -636,7 +629,7 @@ window.QUEST_DATA = {
    "loc": "Bedroom — FLOOR",
    "zone": "Bedroom",
    "rows": 83,
-   "vcap": 80,
+   "vcap": 100,
    "dupes": 4,
    "clones": 4
   },

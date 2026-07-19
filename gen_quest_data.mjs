@@ -24,7 +24,7 @@ const OUT = 'artifacts/comics-inventory/public/quest-data.js';
 
 // ── Validator BOX_CAPACITY (must match brb_validate.py Check 5 / CLAUDE.md) ──
 const DEFAULT_CAP = 240;
-const CAP_EXCEPTIONS = { 15: 150, 23: 155, 40: 80, 44: 200, 72: 80, 85: 155 };
+const CAP_EXCEPTIONS = { 15: 150, 23: 155, 40: 80, 44: 200, 72: 100, 85: 155 };
 const capOf = (b) => (b in CAP_EXCEPTIONS ? CAP_EXCEPTIONS[b] : DEFAULT_CAP);
 
 // ── BOX_STATUS_ALLOWLIST (rows excluded from physical dup checks) ────────────

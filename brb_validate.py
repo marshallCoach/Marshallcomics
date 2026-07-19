@@ -53,7 +53,9 @@ def _latest_validated() -> str:
 
 # ── Box capacity table ────────────────────────────────────────────────────────
 BOX_CAPACITY_DEFAULT    = 240
-BOX_CAPACITY_EXCEPTIONS = {15: 150, 23: 155, 40: 80, 44: 200, 72: 80, 85: 155}
+# Box 72 = the signed vault (special purpose). Cap raised 80 -> 100 on 1907 per
+# Roberto, to accommodate pressing/Terrificon returns.
+BOX_CAPACITY_EXCEPTIONS = {15: 150, 23: 155, 40: 80, 44: 200, 72: 100, 85: 155}
 
 # Non-numeric Box # values that are deliberate status strings, not errors.
 # These track active CGC/pressing submissions and must never be treated as invalid.
@@ -354,6 +356,25 @@ def check_exact_clones(df):
     return True
 
 
+# Title pairs a human has confirmed are GENUINELY DIFFERENT SERIES. The fuzzy
+# matcher cannot tell "Tenth" from "Twelfth" Doctor, or a singular from a plural
+# title, so without this they warn forever. Confirmed by Roberto 1907 with
+# publisher source links (Titan Comics series 768/112/995; marvel.com series 37824).
+REVIEWED_DISTINCT = [
+    ("Doctor Who: New Adventures with the Eleventh Doctor", "Doctor Who: New Adventures with the Tenth Doctor"),
+    ("Doctor Who: New Adventures with the Tenth Doctor", "Doctor Who: New Adventures with the Twelfth Doctor"),
+    ("Doctor Who: New Adventures with the Eleventh Doctor", "Doctor Who: New Adventures with the Twelfth Doctor"),
+    ("Doctor Who: The Tenth Doctor — Year Two", "Doctor Who: The Twelfth Doctor — Year Two"),
+    ("The Spectacular Spider-Man", "The Spectacular Spider-Men"),
+    ("She-Hulk", "She-Hulks"),
+]
+
+
+def _reviewed_distinct(pair):
+    a, b = pair
+    return (a, b) in REVIEWED_DISTINCT or (b, a) in REVIEWED_DISTINCT
+
+
 def _normalize_title(t):
     """Lowercase, strip punctuation/hyphens, collapse whitespace. Two titles
     that differ only by punctuation/case ('Batman Europa' vs 'Batman: Europa',
@@ -392,7 +413,10 @@ def check_similar_titles(df):
                 if _strip_tail_num(a) == _strip_tail_num(b):
                     continue  # differ only by a trailing number -> sequel, skip
             if difflib.SequenceMatcher(None, a, b).ratio() >= 0.94:
-                fuzzy.append((groups[a][0], groups[b][0]))
+                pair = (groups[a][0], groups[b][0])
+                if _reviewed_distinct(pair):
+                    continue  # human-confirmed different series — see REVIEWED_DISTINCT
+                fuzzy.append(pair)
 
     if not collisions and not fuzzy:
         ok("No title-string inconsistencies detected")

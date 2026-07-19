@@ -46,7 +46,7 @@ BOX_STATUS_ALLOWLIST = {
 
 ## BOX_CAPACITY
 - Default: 240
-- Exceptions: {15:150, 23:155, 40:80, 44:200, 72:80, 85:155}
+- Exceptions: {15:150, 23:155, 40:80, 44:200, 72:100, 85:155}
 - Over-capacity triggers a logged warning, not a crash
 
 ## Duplicate key (must match Mac validator)
