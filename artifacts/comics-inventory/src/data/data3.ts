@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_1907_1829.xlsx  |  Generated: 2026-07-19
+// Source: comics_inventory_1907_1926.xlsx  |  Generated: 2026-07-19
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -5253,7 +5253,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `42`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2001`, Arc: `JLA Transition Era`, Key: `NO`,
+    Year: `2000`, Arc: `JLA Transition Era`, Key: `NO`,
     Key_Reason: `Morrison's landmark JLA run — Big 7 at their peak; issue #42`, First_App: ``,
     Writer: `Grant Morrison`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -5272,7 +5272,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `43`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2001`, Arc: `JLA Transition Era`, Key: `NO`,
+    Year: `2000`, Arc: `JLA Transition Era`, Key: `NO`,
     Key_Reason: `Morrison's landmark JLA run — Big 7 at their peak; issue #43`, First_App: ``,
     Writer: `Grant Morrison`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -5291,7 +5291,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `44`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2001`, Arc: `JLA Transition Era`, Key: `NO`,
+    Year: `2000`, Arc: `JLA Transition Era`, Key: `NO`,
     Key_Reason: `Morrison's landmark JLA run — Big 7 at their peak; issue #44`, First_App: ``,
     Writer: `Grant Morrison`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -5310,7 +5310,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `45`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2001`, Arc: `JLA Transition Era`, Key: `NO`,
+    Year: `2000`, Arc: `JLA Transition Era`, Key: `NO`,
     Key_Reason: `Morrison's landmark JLA run — Big 7 at their peak; issue #45`, First_App: ``,
     Writer: `Grant Morrison`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -5329,7 +5329,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `46`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2001`, Arc: `JLA Transition Era`, Key: `NO`,
+    Year: `2000`, Arc: `JLA Transition Era`, Key: `NO`,
     Key_Reason: `Morrison's landmark JLA run — Big 7 at their peak; issue #46`, First_App: ``,
     Writer: `Grant Morrison`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -5348,7 +5348,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `47`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2001`, Arc: `Joe Kelly's JLA — Obsidian Age era`, Key: `NO`,
+    Year: `2000`, Arc: `Joe Kelly's JLA — Obsidian Age era`, Key: `NO`,
     Key_Reason: `Joe Kelly's JLA run — Obsidian Age and its aftermath; issue #47`, First_App: ``,
     Writer: `Joe Kelly`, Artist: `Doug Mahnke & Yvel Guichet`,
     Signed: `NO`, Signed_By: ``,
@@ -5367,7 +5367,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `48`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2001`, Arc: `Joe Kelly's JLA — Obsidian Age era`, Key: `NO`,
+    Year: `2000`, Arc: `Joe Kelly's JLA — Obsidian Age era`, Key: `NO`,
     Key_Reason: `Joe Kelly's JLA run — Obsidian Age and its aftermath; issue #48`, First_App: ``,
     Writer: `Joe Kelly`, Artist: `Doug Mahnke & Yvel Guichet`,
     Signed: `NO`, Signed_By: ``,
@@ -5386,7 +5386,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `49`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2001`, Arc: `Joe Kelly's JLA — Obsidian Age era`, Key: `NO`,
+    Year: `2001`, Arc: `Joe Kelly's JLA — Obsidian Age era`, Key: `NO`,
     Key_Reason: `Joe Kelly's JLA run — Obsidian Age and its aftermath; issue #49`, First_App: ``,
     Writer: `Joe Kelly`, Artist: `Doug Mahnke & Yvel Guichet`,
     Signed: `NO`, Signed_By: ``,
@@ -5405,7 +5405,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `50`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2001`, Arc: `Joe Kelly's JLA — Obsidian Age era`, Key: `YES`,
+    Year: `2001`, Arc: `Joe Kelly's JLA — Obsidian Age era`, Key: `YES`,
     Key_Reason: `JLA #50 anniversary issue — Kelly era milestone`, First_App: `Anniversary landmark`,
     Writer: `Joe Kelly`, Artist: `Doug Mahnke & Yvel Guichet`,
     Signed: `NO`, Signed_By: ``,
@@ -5424,7 +5424,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `51`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2001`, Arc: `Joe Kelly's JLA — Obsidian Age era`, Key: `NO`,
+    Year: `2001`, Arc: `Joe Kelly's JLA — Obsidian Age era`, Key: `NO`,
     Key_Reason: `Joe Kelly's JLA run — Obsidian Age and its aftermath; issue #51`, First_App: ``,
     Writer: `Joe Kelly`, Artist: `Doug Mahnke & Yvel Guichet`,
     Signed: `NO`, Signed_By: ``,
@@ -5443,7 +5443,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `52`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2001`, Arc: `Joe Kelly's JLA — Obsidian Age era`, Key: `NO`,
+    Year: `2001`, Arc: `Joe Kelly's JLA — Obsidian Age era`, Key: `NO`,
     Key_Reason: `Joe Kelly's JLA run — Obsidian Age and its aftermath; issue #52`, First_App: ``,
     Writer: `Joe Kelly`, Artist: `Doug Mahnke & Yvel Guichet`,
     Signed: `NO`, Signed_By: ``,
@@ -5462,7 +5462,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `53`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2001`, Arc: `Joe Kelly's JLA — Obsidian Age era`, Key: `NO`,
+    Year: `2001`, Arc: `Joe Kelly's JLA — Obsidian Age era`, Key: `NO`,
     Key_Reason: `Joe Kelly's JLA run — Obsidian Age and its aftermath; issue #53`, First_App: ``,
     Writer: `Joe Kelly`, Artist: `Doug Mahnke & Yvel Guichet`,
     Signed: `NO`, Signed_By: ``,
@@ -5481,7 +5481,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `54`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2001`, Arc: `Joe Kelly's JLA — Obsidian Age era`, Key: `NO`,
+    Year: `2001`, Arc: `Joe Kelly's JLA — Obsidian Age era`, Key: `NO`,
     Key_Reason: `Joe Kelly's JLA run — Obsidian Age and its aftermath; issue #54`, First_App: ``,
     Writer: `Joe Kelly`, Artist: `Doug Mahnke & Yvel Guichet`,
     Signed: `NO`, Signed_By: ``,
@@ -5500,7 +5500,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `55`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2001`, Arc: `Joe Kelly's JLA — Obsidian Age era`, Key: `NO`,
+    Year: `2001`, Arc: `Joe Kelly's JLA — Obsidian Age era`, Key: `NO`,
     Key_Reason: `Joe Kelly's JLA run — Obsidian Age and its aftermath; issue #55`, First_App: ``,
     Writer: `Joe Kelly`, Artist: `Doug Mahnke & Yvel Guichet`,
     Signed: `NO`, Signed_By: ``,
@@ -5519,7 +5519,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `56`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2001`, Arc: `Joe Kelly's JLA — Obsidian Age era`, Key: `NO`,
+    Year: `2001`, Arc: `Joe Kelly's JLA — Obsidian Age era`, Key: `NO`,
     Key_Reason: `Joe Kelly's JLA run — Obsidian Age and its aftermath; issue #56`, First_App: ``,
     Writer: `Joe Kelly`, Artist: `Doug Mahnke & Yvel Guichet`,
     Signed: `NO`, Signed_By: ``,
@@ -5538,7 +5538,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `57`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2001`, Arc: `Joe Kelly's JLA — Obsidian Age era`, Key: `NO`,
+    Year: `2001`, Arc: `Joe Kelly's JLA — Obsidian Age era`, Key: `NO`,
     Key_Reason: `Joe Kelly's JLA run — Obsidian Age and its aftermath; issue #57`, First_App: ``,
     Writer: `Joe Kelly`, Artist: `Doug Mahnke & Yvel Guichet`,
     Signed: `NO`, Signed_By: ``,
@@ -5557,7 +5557,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `58`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2001`, Arc: `Joe Kelly's JLA — Obsidian Age era`, Key: `NO`,
+    Year: `2001`, Arc: `Joe Kelly's JLA — Obsidian Age era`, Key: `NO`,
     Key_Reason: `Joe Kelly's JLA run — Obsidian Age and its aftermath; issue #58`, First_App: ``,
     Writer: `Joe Kelly`, Artist: `Doug Mahnke & Yvel Guichet`,
     Signed: `NO`, Signed_By: ``,
@@ -5576,7 +5576,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `59`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2001`, Arc: `Joe Kelly's JLA — Obsidian Age era`, Key: `NO`,
+    Year: `2001`, Arc: `Joe Kelly's JLA — Obsidian Age era`, Key: `NO`,
     Key_Reason: `Joe Kelly's JLA run — Obsidian Age and its aftermath; issue #59`, First_App: ``,
     Writer: `Joe Kelly`, Artist: `Doug Mahnke & Yvel Guichet`,
     Signed: `NO`, Signed_By: ``,
@@ -5595,7 +5595,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `60`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2001`, Arc: `Joe Kelly's JLA — Obsidian Age era`, Key: `NO`,
+    Year: `2002`, Arc: `Joe Kelly's JLA — Obsidian Age era`, Key: `NO`,
     Key_Reason: `Joe Kelly's JLA run — Obsidian Age and its aftermath; issue #60`, First_App: ``,
     Writer: `Joe Kelly`, Artist: `Doug Mahnke & Yvel Guichet`,
     Signed: `NO`, Signed_By: ``,
@@ -5899,7 +5899,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `76`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2002–2003`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
+    Year: `2003`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
     Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #76`, First_App: ``,
     Writer: `Joe Kelly & Mark Waid & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -5918,7 +5918,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `79`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2002–2003`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
+    Year: `2003`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
     Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #79`, First_App: ``,
     Writer: `Joe Kelly & Mark Waid & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -5937,7 +5937,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `80`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2002–2003`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
+    Year: `2003`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
     Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #80`, First_App: ``,
     Writer: `Joe Kelly & Mark Waid & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -5956,7 +5956,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `81`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2002–2003`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
+    Year: `2003`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
     Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #81`, First_App: ``,
     Writer: `Joe Kelly & Mark Waid & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -5975,7 +5975,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `82`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2002–2003`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
+    Year: `2003`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
     Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #82`, First_App: ``,
     Writer: `Joe Kelly & Mark Waid & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -5994,7 +5994,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `83`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2002–2003`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
+    Year: `2003`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
     Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #83`, First_App: ``,
     Writer: `Joe Kelly & Mark Waid & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -6013,7 +6013,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `84`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2002–2003`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
+    Year: `2003`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
     Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #84`, First_App: ``,
     Writer: `Joe Kelly & Mark Waid & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -6032,7 +6032,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `85`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2002–2003`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
+    Year: `2003`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
     Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #85`, First_App: ``,
     Writer: `Joe Kelly & Mark Waid & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -6051,7 +6051,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `86`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2002–2003`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
+    Year: `2003`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
     Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #86`, First_App: ``,
     Writer: `Joe Kelly & Mark Waid & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -6070,7 +6070,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `87`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2002–2003`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
+    Year: `2003`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
     Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #87`, First_App: ``,
     Writer: `Joe Kelly & Mark Waid & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -6089,7 +6089,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `88`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2002–2003`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
+    Year: `2003`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
     Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #88`, First_App: ``,
     Writer: `Joe Kelly & Mark Waid & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -6108,7 +6108,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `89`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2002–2003`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
+    Year: `2003`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
     Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #89`, First_App: ``,
     Writer: `Joe Kelly & Mark Waid & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -6127,7 +6127,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `90`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2002–2003`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
+    Year: `2004`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
     Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #90`, First_App: ``,
     Writer: `Joe Kelly & Mark Waid & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -6146,7 +6146,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `91`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2004–2005`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
+    Year: `2004`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
     Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #91`, First_App: ``,
     Writer: `Joe Kelly & Mark Waid & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -6165,7 +6165,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `92`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2004–2005`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
+    Year: `2004`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
     Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #92`, First_App: ``,
     Writer: `Joe Kelly & Mark Waid & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -6184,7 +6184,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `93`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2004–2005`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
+    Year: `2004`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
     Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #93`, First_App: ``,
     Writer: `Joe Kelly & Mark Waid & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -6203,7 +6203,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `94`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2004–2005`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
+    Year: `2004`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
     Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #94`, First_App: ``,
     Writer: `Joe Kelly & Mark Waid & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -6222,7 +6222,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `95`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2004–2005`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
+    Year: `2004`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
     Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #95`, First_App: ``,
     Writer: `Joe Kelly & Mark Waid & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -6241,7 +6241,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `96`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2004–2005`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
+    Year: `2004`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
     Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #96`, First_App: ``,
     Writer: `Joe Kelly & Mark Waid & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -6260,7 +6260,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `97`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2004–2005`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
+    Year: `2004`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
     Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #97`, First_App: ``,
     Writer: `Joe Kelly & Mark Waid & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -6279,7 +6279,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `98`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2004–2005`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
+    Year: `2004`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
     Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #98`, First_App: ``,
     Writer: `Joe Kelly & Mark Waid & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -6298,7 +6298,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `99`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2004–2005`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
+    Year: `2004`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
     Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #99`, First_App: ``,
     Writer: `Joe Kelly & Mark Waid & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -6317,7 +6317,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `100`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2004–2005`, Arc: `JLA Later Run — Various writers`, Key: `YES`,
+    Year: `2004`, Arc: `JLA Later Run — Various writers`, Key: `YES`,
     Key_Reason: `JLA #100 anniversary — major landmark DC issue`, First_App: `100th issue anniversary`,
     Writer: `Joe Kelly & Mark Waid & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -6336,7 +6336,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `101`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2004–2005`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
+    Year: `2004`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
     Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #101`, First_App: ``,
     Writer: `Joe Kelly & Mark Waid & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -6355,7 +6355,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `102`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2004–2005`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
+    Year: `2004`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
     Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #102`, First_App: ``,
     Writer: `Joe Kelly & Mark Waid & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -6374,7 +6374,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `103`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2004–2005`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
+    Year: `2004`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
     Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #103`, First_App: ``,
     Writer: `Joe Kelly & Mark Waid & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -6393,7 +6393,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `104`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2004–2005`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
+    Year: `2004`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
     Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #104`, First_App: ``,
     Writer: `Joe Kelly & Mark Waid & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -6412,7 +6412,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `105`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2004–2005`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
+    Year: `2004`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
     Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #105`, First_App: ``,
     Writer: `Joe Kelly & Mark Waid & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -6431,7 +6431,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `106`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2004–2005`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
+    Year: `2004`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
     Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #106`, First_App: ``,
     Writer: `Joe Kelly & Mark Waid & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -6450,7 +6450,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `107`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2004–2005`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
+    Year: `2004`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
     Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #107`, First_App: ``,
     Writer: `Joe Kelly & Mark Waid & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -6469,7 +6469,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `108`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2004–2005`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
+    Year: `2005`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
     Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #108`, First_App: ``,
     Writer: `Joe Kelly & Mark Waid & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -6488,7 +6488,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `JLA`, Issue: `109`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2004–2005`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
+    Year: `2005`, Arc: `JLA Later Run — Various writers`, Key: `NO`,
     Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #109`, First_App: ``,
     Writer: `Joe Kelly & Mark Waid & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -7058,7 +7058,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman`, Issue: `17`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2014`, Arc: `New 52 — Night of the Owls, Scott Snyder/Greg Capullo`, Key: `NO`,
+    Year: `2013`, Arc: `New 52 — Night of the Owls, Scott Snyder/Greg Capullo`, Key: `NO`,
     Key_Reason: `Batman New 52 #17 — Death of the Family aftermath`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Greg Capullo`,
     Signed: `NO`, Signed_By: ``,
@@ -7096,7 +7096,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman`, Issue: `22`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2014`, Arc: `New 52 — Night of the Owls, Scott Snyder/Greg Capullo`, Key: `NO`,
+    Year: `2013`, Arc: `New 52 — Night of the Owls, Scott Snyder/Greg Capullo`, Key: `NO`,
     Key_Reason: `Batman New 52 #22 — Year Zero`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Greg Capullo`,
     Signed: `NO`, Signed_By: ``,
@@ -7115,7 +7115,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman`, Issue: `23`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2014`, Arc: `New 52 — Night of the Owls, Scott Snyder/Greg Capullo`, Key: `NO`,
+    Year: `2013`, Arc: `New 52 — Night of the Owls, Scott Snyder/Greg Capullo`, Key: `NO`,
     Key_Reason: `Batman New 52 #23 — Year Zero`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Greg Capullo`,
     Signed: `NO`, Signed_By: ``,
@@ -7153,7 +7153,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman`, Issue: `25`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2014`, Arc: `New 52 — Night of the Owls, Scott Snyder/Greg Capullo`, Key: `NO`,
+    Year: `2014`, Arc: `New 52 — Night of the Owls, Scott Snyder/Greg Capullo`, Key: `NO`,
     Key_Reason: `Batman New 52 #25 — Year Zero`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Greg Capullo`,
     Signed: `NO`, Signed_By: ``,
@@ -7172,7 +7172,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman`, Issue: `26`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2014`, Arc: `New 52 — Night of the Owls, Scott Snyder/Greg Capullo`, Key: `NO`,
+    Year: `2014`, Arc: `New 52 — Night of the Owls, Scott Snyder/Greg Capullo`, Key: `NO`,
     Key_Reason: `Batman New 52 #26 — Year Zero`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Greg Capullo`,
     Signed: `NO`, Signed_By: ``,
@@ -7191,7 +7191,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman`, Issue: `27`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2014`, Arc: `New 52 — Night of the Owls, Scott Snyder/Greg Capullo`, Key: `NO`,
+    Year: `2014`, Arc: `New 52 — Night of the Owls, Scott Snyder/Greg Capullo`, Key: `NO`,
     Key_Reason: `Batman New 52 #27 — Year Zero`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Greg Capullo`,
     Signed: `NO`, Signed_By: ``,
@@ -7210,7 +7210,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman`, Issue: `29`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2014`, Arc: `New 52 — Night of the Owls, Scott Snyder/Greg Capullo`, Key: `NO`,
+    Year: `2014`, Arc: `New 52 — Night of the Owls, Scott Snyder/Greg Capullo`, Key: `NO`,
     Key_Reason: `Batman New 52 #29 — Endgame`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Greg Capullo`,
     Signed: `NO`, Signed_By: ``,
@@ -7381,7 +7381,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman and Robin`, Issue: `8`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2015`, Arc: `Batman and Robin New 52`, Key: `NO`,
+    Year: `2012`, Arc: `Batman and Robin New 52`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #8.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
     Signed: `NO`, Signed_By: ``,
@@ -7400,7 +7400,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman and Robin`, Issue: `9`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2015`, Arc: `Batman and Robin New 52`, Key: `NO`,
+    Year: `2012`, Arc: `Batman and Robin New 52`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #9.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
     Signed: `NO`, Signed_By: ``,
@@ -7419,7 +7419,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman and Robin`, Issue: `10`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2015`, Arc: `Batman and Robin New 52`, Key: `NO`,
+    Year: `2012`, Arc: `Batman and Robin New 52`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #10.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
     Signed: `NO`, Signed_By: ``,
@@ -7438,7 +7438,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman and Robin`, Issue: `11`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2015`, Arc: `Batman and Robin New 52`, Key: `NO`,
+    Year: `2012`, Arc: `Batman and Robin New 52`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #11.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
     Signed: `NO`, Signed_By: ``,
@@ -7457,7 +7457,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman and Robin`, Issue: `12`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2015`, Arc: `Batman and Robin New 52`, Key: `NO`,
+    Year: `2012`, Arc: `Batman and Robin New 52`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #12.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
     Signed: `NO`, Signed_By: ``,
@@ -7476,7 +7476,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman and Robin`, Issue: `13`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2015`, Arc: `Death of the Family`, Key: `YES`,
+    Year: `2012`, Arc: `Death of the Family`, Key: `YES`,
     Key_Reason: `Batman and Robin New 52 #13 — Death of the Family chapter — Joker targets Robin directly`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
     Signed: `NO`, Signed_By: ``,
@@ -7495,7 +7495,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman and Robin`, Issue: `14`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2015`, Arc: `Death of the Family`, Key: `NO`,
+    Year: `2013`, Arc: `Death of the Family`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #14.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
     Signed: `NO`, Signed_By: ``,
@@ -7514,7 +7514,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman and Robin`, Issue: `15`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2015`, Arc: `Death of the Family`, Key: `YES`,
+    Year: `2013`, Arc: `Death of the Family`, Key: `YES`,
     Key_Reason: `Batman and Robin New 52 #15 — Death of the Family finale tie-in — key arc conclusion issue`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
     Signed: `NO`, Signed_By: ``,
@@ -7685,7 +7685,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman and Robin`, Issue: `29`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2015`, Arc: `Batman and Robin New 52`, Key: `NO`,
+    Year: `2014`, Arc: `Batman and Robin New 52`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #29. Batman and Aquaman guest-star issue.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
     Signed: `NO`, Signed_By: ``,
@@ -7704,7 +7704,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman and Robin`, Issue: `30`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2015`, Arc: `Batman and Robin New 52`, Key: `NO`,
+    Year: `2014`, Arc: `Batman and Robin New 52`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #30. Batman and Wonder Woman guest-star issue.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
     Signed: `NO`, Signed_By: ``,
@@ -7723,7 +7723,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman and Robin`, Issue: `33`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2015`, Arc: `Robin Rises`, Key: `NO`,
+    Year: `2014`, Arc: `Robin Rises`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #33.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
     Signed: `NO`, Signed_By: ``,
@@ -7742,7 +7742,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman and Robin`, Issue: `34`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2015`, Arc: `Robin Rises`, Key: `NO`,
+    Year: `2014`, Arc: `Robin Rises`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #34.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
     Signed: `NO`, Signed_By: ``,
@@ -7761,7 +7761,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman and Robin`, Issue: `35`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2015`, Arc: `Robin Rises`, Key: `NO`,
+    Year: `2014`, Arc: `Robin Rises`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #35.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
     Signed: `NO`, Signed_By: ``,
@@ -7780,7 +7780,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman and Robin`, Issue: `36`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2015`, Arc: `Robin Rises`, Key: `NO`,
+    Year: `2015`, Arc: `Robin Rises`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #36.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
     Signed: `NO`, Signed_By: ``,
@@ -7799,7 +7799,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman and Robin`, Issue: `37`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2015`, Arc: `Robin Rises`, Key: `NO`,
+    Year: `2015`, Arc: `Robin Rises`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #37.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
     Signed: `NO`, Signed_By: ``,
@@ -7818,7 +7818,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman and Robin`, Issue: `38`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2015`, Arc: `Robin Rises`, Key: `NO`,
+    Year: `2015`, Arc: `Robin Rises`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #38.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
     Signed: `NO`, Signed_By: ``,
@@ -7837,7 +7837,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman and Robin`, Issue: `39`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2015`, Arc: `Robin Rises`, Key: `NO`,
+    Year: `2015`, Arc: `Robin Rises`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #39.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
     Signed: `NO`, Signed_By: ``,
@@ -7856,7 +7856,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman and Robin`, Issue: `40`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2015`, Arc: `Robin Rises`, Key: `NO`,
+    Year: `2015`, Arc: `Robin Rises`, Key: `NO`,
     Key_Reason: `Batman and Robin New 52 #40.`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
     Signed: `NO`, Signed_By: ``,
@@ -7894,7 +7894,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman and Robin Annual`, Issue: `1`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2015`, Arc: `Batman and Robin Annual #1`, Key: `NO`,
+    Year: `2013`, Arc: `Batman and Robin Annual #1`, Key: `NO`,
     Key_Reason: `Batman and Robin Annual #1`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
     Signed: `NO`, Signed_By: ``,
@@ -7913,7 +7913,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman and Robin Annual`, Issue: `2`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2015`, Arc: `Batman and Robin Annual #2`, Key: `NO`,
+    Year: `2014`, Arc: `Batman and Robin Annual #2`, Key: `NO`,
     Key_Reason: `Batman and Robin Annual #2`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
     Signed: `NO`, Signed_By: ``,
@@ -7932,7 +7932,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman and Robin Annual`, Issue: `3`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2015`, Arc: `Batman and Robin Annual #3`, Key: `NO`,
+    Year: `2015`, Arc: `Batman and Robin Annual #3`, Key: `NO`,
     Key_Reason: `Batman and Robin Annual #3`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
     Signed: `NO`, Signed_By: ``,
@@ -8046,7 +8046,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman`, Issue: `6`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
+    Year: `2014`, Arc: `Batman/Superman New 52`, Key: `NO`,
     Key_Reason: `Greg Pak's Batman/Superman New 52 run #6`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Jae Lee & Ardian Syaf`,
     Signed: `NO`, Signed_By: ``,
@@ -8065,7 +8065,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman`, Issue: `7`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
+    Year: `2014`, Arc: `Batman/Superman New 52`, Key: `NO`,
     Key_Reason: `Greg Pak's Batman/Superman New 52 run #7`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Jae Lee & Ardian Syaf`,
     Signed: `NO`, Signed_By: ``,
@@ -8084,7 +8084,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman`, Issue: `8`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
+    Year: `2014`, Arc: `Batman/Superman New 52`, Key: `NO`,
     Key_Reason: `Greg Pak's Batman/Superman New 52 run #8`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Jae Lee & Ardian Syaf`,
     Signed: `NO`, Signed_By: ``,
@@ -8103,7 +8103,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman`, Issue: `9`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
+    Year: `2014`, Arc: `Batman/Superman New 52`, Key: `NO`,
     Key_Reason: `Greg Pak's Batman/Superman New 52 run #9`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Jae Lee & Ardian Syaf`,
     Signed: `NO`, Signed_By: ``,
@@ -8122,7 +8122,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman`, Issue: `10`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
+    Year: `2014`, Arc: `Batman/Superman New 52`, Key: `NO`,
     Key_Reason: `Greg Pak's Batman/Superman New 52 run #10`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Jae Lee & Ardian Syaf`,
     Signed: `NO`, Signed_By: ``,
@@ -8141,7 +8141,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman`, Issue: `12`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
+    Year: `2014`, Arc: `Batman/Superman New 52`, Key: `NO`,
     Key_Reason: `Greg Pak's Batman/Superman New 52 run #12`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Jae Lee & Ardian Syaf`,
     Signed: `NO`, Signed_By: ``,
@@ -8160,7 +8160,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman`, Issue: `13`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
+    Year: `2014`, Arc: `Batman/Superman New 52`, Key: `NO`,
     Key_Reason: `Greg Pak's Batman/Superman New 52 run #13`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Jae Lee & Ardian Syaf`,
     Signed: `NO`, Signed_By: ``,
@@ -8198,7 +8198,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman`, Issue: `16`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
+    Year: `2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
     Key_Reason: `Greg Pak's Batman/Superman New 52 run #16`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Jae Lee & Ardian Syaf`,
     Signed: `NO`, Signed_By: ``,
@@ -8217,7 +8217,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman`, Issue: `17`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
+    Year: `2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
     Key_Reason: `Greg Pak's Batman/Superman New 52 run #17`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Jae Lee & Ardian Syaf`,
     Signed: `NO`, Signed_By: ``,
@@ -8236,7 +8236,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman`, Issue: `20`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
+    Year: `2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
     Key_Reason: `Greg Pak's Batman/Superman New 52 run #20`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Jae Lee & Ardian Syaf`,
     Signed: `NO`, Signed_By: ``,
@@ -8255,7 +8255,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman`, Issue: `23`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
+    Year: `2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
     Key_Reason: `Greg Pak's Batman/Superman New 52 run #23`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Jae Lee & Ardian Syaf`,
     Signed: `NO`, Signed_By: ``,
@@ -8274,7 +8274,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman`, Issue: `24`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
+    Year: `2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
     Key_Reason: `Greg Pak's Batman/Superman New 52 run #24`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Jae Lee & Ardian Syaf`,
     Signed: `NO`, Signed_By: ``,
@@ -8293,7 +8293,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman`, Issue: `26`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2015`, Arc: `Batman/Superman New 52`, Key: `NO`,
+    Year: `2016`, Arc: `Batman/Superman New 52`, Key: `NO`,
     Key_Reason: `Greg Pak's Batman/Superman New 52 run #26`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Jae Lee & Ardian Syaf`,
     Signed: `NO`, Signed_By: ``,
@@ -8559,7 +8559,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman Unchained`, Issue: `1`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2014`, Arc: `Superman Unchained`, Key: `YES`,
+    Year: `2013`, Arc: `Superman Unchained`, Key: `YES`,
     Key_Reason: `Superman Unchained #1 — Scott Snyder / Jim Lee launch; 1st Wraith (Ascended)`, First_App: `Wraith (Ascended)`,
     Writer: `Scott Snyder`, Artist: `Jim Lee`,
     Signed: `NO`, Signed_By: ``,
@@ -8578,7 +8578,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman Unchained`, Issue: `2`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2014`, Arc: `Superman Unchained`, Key: `NO`,
+    Year: `2013`, Arc: `Superman Unchained`, Key: `NO`,
     Key_Reason: `Superman Unchained #2 — Snyder/Lee prestige Superman`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jim Lee`,
     Signed: `NO`, Signed_By: ``,
@@ -8597,7 +8597,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman Unchained`, Issue: `3`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2014`, Arc: `Superman Unchained`, Key: `NO`,
+    Year: `2013`, Arc: `Superman Unchained`, Key: `NO`,
     Key_Reason: `Superman Unchained #3 — Snyder/Lee prestige Superman`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jim Lee`,
     Signed: `NO`, Signed_By: ``,
@@ -8616,7 +8616,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman Unchained`, Issue: `4`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2014`, Arc: `Superman Unchained`, Key: `NO`,
+    Year: `2013`, Arc: `Superman Unchained`, Key: `NO`,
     Key_Reason: `Superman Unchained #4 — Snyder/Lee prestige Superman`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jim Lee`,
     Signed: `NO`, Signed_By: ``,
@@ -8635,7 +8635,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman Unchained`, Issue: `5`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2014`, Arc: `Superman Unchained`, Key: `NO`,
+    Year: `2014`, Arc: `Superman Unchained`, Key: `NO`,
     Key_Reason: `Superman Unchained #5 — Snyder/Lee prestige Superman`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jim Lee`,
     Signed: `NO`, Signed_By: ``,
@@ -8654,7 +8654,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman Unchained`, Issue: `6`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2014`, Arc: `Superman Unchained`, Key: `NO`,
+    Year: `2014`, Arc: `Superman Unchained`, Key: `NO`,
     Key_Reason: `Superman Unchained #6 — Snyder/Lee prestige Superman`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jim Lee`,
     Signed: `NO`, Signed_By: ``,
@@ -8673,7 +8673,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman Unchained`, Issue: `7`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2014`, Arc: `Superman Unchained`, Key: `NO`,
+    Year: `2014`, Arc: `Superman Unchained`, Key: `NO`,
     Key_Reason: `Superman Unchained #7 — Snyder/Lee prestige Superman`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jim Lee`,
     Signed: `NO`, Signed_By: ``,
@@ -8692,7 +8692,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman Unchained`, Issue: `8`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2014`, Arc: `Superman Unchained`, Key: `NO`,
+    Year: `2014`, Arc: `Superman Unchained`, Key: `NO`,
     Key_Reason: `Superman Unchained #8 — Snyder/Lee prestige Superman`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jim Lee`,
     Signed: `NO`, Signed_By: ``,
@@ -8711,7 +8711,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman Unchained`, Issue: `9`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2014`, Arc: `Superman Unchained`, Key: `NO`,
+    Year: `2015`, Arc: `Superman Unchained`, Key: `NO`,
     Key_Reason: `Superman Unchained #9 — Snyder/Lee prestige Superman`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jim Lee`,
     Signed: `NO`, Signed_By: ``,
@@ -8806,7 +8806,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman/Wonder Woman`, Issue: `5`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2015`, Arc: `Superman/Wonder Woman New 52`, Key: `NO`,
+    Year: `2014`, Arc: `Superman/Wonder Woman New 52`, Key: `NO`,
     Key_Reason: `Superman/Wonder Woman #5 — Soule's acclaimed run`, First_App: ``,
     Writer: `Charles Soule`, Artist: `Tony Daniel`,
     Signed: `NO`, Signed_By: ``,
@@ -8825,7 +8825,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman/Wonder Woman`, Issue: `6`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2015`, Arc: `Superman/Wonder Woman New 52`, Key: `NO`,
+    Year: `2014`, Arc: `Superman/Wonder Woman New 52`, Key: `NO`,
     Key_Reason: `Superman/Wonder Woman #6 — Soule's acclaimed run`, First_App: ``,
     Writer: `Charles Soule`, Artist: `Tony Daniel`,
     Signed: `NO`, Signed_By: ``,
@@ -8844,7 +8844,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman/Wonder Woman`, Issue: `7`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2015`, Arc: `Superman/Wonder Woman New 52`, Key: `NO`,
+    Year: `2014`, Arc: `Superman/Wonder Woman New 52`, Key: `NO`,
     Key_Reason: `Superman/Wonder Woman #7 — Soule's acclaimed run`, First_App: ``,
     Writer: `Charles Soule`, Artist: `Tony Daniel`,
     Signed: `NO`, Signed_By: ``,
@@ -8863,7 +8863,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman/Wonder Woman`, Issue: `13`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2015`, Arc: `Superman/Wonder Woman New 52`, Key: `NO`,
+    Year: `2015`, Arc: `Superman/Wonder Woman New 52`, Key: `NO`,
     Key_Reason: `Superman/Wonder Woman #13 — Soule's acclaimed run`, First_App: ``,
     Writer: `Charles Soule`, Artist: `Tony Daniel`,
     Signed: `NO`, Signed_By: ``,
@@ -8882,7 +8882,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman/Wonder Woman`, Issue: `14`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2015`, Arc: `Superman/Wonder Woman New 52`, Key: `NO`,
+    Year: `2015`, Arc: `Superman/Wonder Woman New 52`, Key: `NO`,
     Key_Reason: `Superman/Wonder Woman #14 — Soule's acclaimed run`, First_App: ``,
     Writer: `Charles Soule`, Artist: `Tony Daniel`,
     Signed: `NO`, Signed_By: ``,
@@ -8901,7 +8901,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman/Wonder Woman`, Issue: `15`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2015`, Arc: `Superman/Wonder Woman New 52`, Key: `NO`,
+    Year: `2015`, Arc: `Superman/Wonder Woman New 52`, Key: `NO`,
     Key_Reason: `Superman/Wonder Woman #15 — Soule's acclaimed run`, First_App: ``,
     Writer: `Charles Soule`, Artist: `Tony Daniel`,
     Signed: `NO`, Signed_By: ``,
@@ -8920,7 +8920,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman/Wonder Woman`, Issue: `16`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2015`, Arc: `Superman/Wonder Woman New 52`, Key: `NO`,
+    Year: `2015`, Arc: `Superman/Wonder Woman New 52`, Key: `NO`,
     Key_Reason: `Superman/Wonder Woman #16 — Soule's acclaimed run`, First_App: ``,
     Writer: `Charles Soule`, Artist: `Tony Daniel`,
     Signed: `NO`, Signed_By: ``,
@@ -8939,7 +8939,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman/Wonder Woman`, Issue: `17`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2015`, Arc: `Superman/Wonder Woman New 52`, Key: `NO`,
+    Year: `2015`, Arc: `Superman/Wonder Woman New 52`, Key: `NO`,
     Key_Reason: `Superman/Wonder Woman #17 — Soule's acclaimed run`, First_App: ``,
     Writer: `Charles Soule`, Artist: `Tony Daniel`,
     Signed: `NO`, Signed_By: ``,
@@ -8958,7 +8958,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman/Wonder Woman`, Issue: `18`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2015`, Arc: `Superman/Wonder Woman New 52`, Key: `NO`,
+    Year: `2015`, Arc: `Superman/Wonder Woman New 52`, Key: `NO`,
     Key_Reason: `Superman/Wonder Woman #18 — Soule's acclaimed run`, First_App: ``,
     Writer: `Charles Soule`, Artist: `Tony Daniel`,
     Signed: `NO`, Signed_By: ``,
@@ -8977,7 +8977,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman/Wonder Woman`, Issue: `19`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2015`, Arc: `Superman/Wonder Woman New 52`, Key: `NO`,
+    Year: `2015`, Arc: `Superman/Wonder Woman New 52`, Key: `NO`,
     Key_Reason: `Superman/Wonder Woman #19 — Soule's acclaimed run`, First_App: ``,
     Writer: `Charles Soule`, Artist: `Tony Daniel`,
     Signed: `NO`, Signed_By: ``,
@@ -9110,7 +9110,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Supergirl`, Issue: `7`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2014`, Arc: `Supergirl New 52`, Key: `NO`,
+    Year: `2012`, Arc: `Supergirl New 52`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #7.`, First_App: ``,
     Writer: `Michael Green & Mike Johnson`, Artist: `Mahmud Asrar`,
     Signed: `NO`, Signed_By: ``,
@@ -9129,7 +9129,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Supergirl`, Issue: `8`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2014`, Arc: `Supergirl New 52`, Key: `NO`,
+    Year: `2012`, Arc: `Supergirl New 52`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #8.`, First_App: ``,
     Writer: `Michael Green & Mike Johnson`, Artist: `Mahmud Asrar`,
     Signed: `NO`, Signed_By: ``,
@@ -9148,7 +9148,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Supergirl`, Issue: `9`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2014`, Arc: `Supergirl New 52`, Key: `NO`,
+    Year: `2012`, Arc: `Supergirl New 52`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #9.`, First_App: ``,
     Writer: `Michael Green & Mike Johnson`, Artist: `Mahmud Asrar`,
     Signed: `NO`, Signed_By: ``,
@@ -9167,7 +9167,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Supergirl`, Issue: `10`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2014`, Arc: `Supergirl New 52`, Key: `NO`,
+    Year: `2012`, Arc: `Supergirl New 52`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #10.`, First_App: ``,
     Writer: `Michael Green & Mike Johnson`, Artist: `Mahmud Asrar`,
     Signed: `NO`, Signed_By: ``,
@@ -9186,7 +9186,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Supergirl`, Issue: `11`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2014`, Arc: `Supergirl New 52`, Key: `NO`,
+    Year: `2012`, Arc: `Supergirl New 52`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #11.`, First_App: ``,
     Writer: `Michael Green & Mike Johnson`, Artist: `Mahmud Asrar`,
     Signed: `NO`, Signed_By: ``,
@@ -9205,7 +9205,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Supergirl`, Issue: `12`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2014`, Arc: `Supergirl New 52`, Key: `NO`,
+    Year: `2012`, Arc: `Supergirl New 52`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #12.`, First_App: ``,
     Writer: `Michael Green & Mike Johnson`, Artist: `Mahmud Asrar`,
     Signed: `NO`, Signed_By: ``,
@@ -9224,7 +9224,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Supergirl`, Issue: `13`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2014`, Arc: `H'El on Earth`, Key: `NO`,
+    Year: `2012`, Arc: `H'El on Earth`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #13.`, First_App: ``,
     Writer: `Michael Green & Mike Johnson`, Artist: `Mahmud Asrar`,
     Signed: `NO`, Signed_By: ``,
@@ -9243,7 +9243,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Supergirl`, Issue: `14`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2014`, Arc: `H'El on Earth`, Key: `NO`,
+    Year: `2013`, Arc: `H'El on Earth`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #14. Superman/Krypton crossover issue.`, First_App: ``,
     Writer: `Tony Bedard`, Artist: `Mahmud Asrar`,
     Signed: `NO`, Signed_By: ``,
@@ -9262,7 +9262,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Supergirl`, Issue: `15`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2014`, Arc: `H'El on Earth`, Key: `NO`,
+    Year: `2013`, Arc: `H'El on Earth`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #15.`, First_App: ``,
     Writer: `Tony Bedard`, Artist: `Mahmud Asrar`,
     Signed: `NO`, Signed_By: ``,
@@ -9281,7 +9281,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Supergirl`, Issue: `16`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2014`, Arc: `H'El on Earth`, Key: `NO`,
+    Year: `2013`, Arc: `H'El on Earth`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #16.`, First_App: ``,
     Writer: `Tony Bedard`, Artist: `Mahmud Asrar`,
     Signed: `NO`, Signed_By: ``,
@@ -9300,7 +9300,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Supergirl`, Issue: `17`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2014`, Arc: `H'El on Earth`, Key: `NO`,
+    Year: `2013`, Arc: `H'El on Earth`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #17.`, First_App: ``,
     Writer: `Tony Bedard`, Artist: `Mahmud Asrar`,
     Signed: `NO`, Signed_By: ``,
@@ -9319,7 +9319,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Supergirl`, Issue: `18`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2014`, Arc: `Supergirl New 52`, Key: `NO`,
+    Year: `2013`, Arc: `Supergirl New 52`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #18.`, First_App: ``,
     Writer: `Tony Bedard`, Artist: `Mahmud Asrar`,
     Signed: `NO`, Signed_By: ``,
@@ -9338,7 +9338,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Supergirl`, Issue: `19`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2014`, Arc: `Supergirl New 52`, Key: `NO`,
+    Year: `2013`, Arc: `Supergirl New 52`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #19.`, First_App: ``,
     Writer: `Tony Bedard`, Artist: `Mahmud Asrar`,
     Signed: `NO`, Signed_By: ``,
@@ -9357,7 +9357,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Supergirl`, Issue: `20`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2014`, Arc: `Supergirl New 52`, Key: `NO`,
+    Year: `2013`, Arc: `Supergirl New 52`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #20.`, First_App: ``,
     Writer: `Various`, Artist: `Mahmud Asrar`,
     Signed: `NO`, Signed_By: ``,
@@ -9376,7 +9376,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Supergirl`, Issue: `21`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2014`, Arc: `Supergirl New 52`, Key: `NO`,
+    Year: `2013`, Arc: `Supergirl New 52`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #21.`, First_App: ``,
     Writer: `Various`, Artist: `Mahmud Asrar`,
     Signed: `NO`, Signed_By: ``,
@@ -9395,7 +9395,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Supergirl`, Issue: `22`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2014`, Arc: `Supergirl New 52`, Key: `NO`,
+    Year: `2013`, Arc: `Supergirl New 52`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #22.`, First_App: ``,
     Writer: `Various`, Artist: `Mahmud Asrar`,
     Signed: `NO`, Signed_By: ``,
@@ -9414,7 +9414,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Supergirl`, Issue: `24`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2012–2014`, Arc: `Supergirl New 52`, Key: `NO`,
+    Year: `2013`, Arc: `Supergirl New 52`, Key: `NO`,
     Key_Reason: `Supergirl New 52 #24.`, First_App: ``,
     Writer: `Various`, Artist: `Mahmud Asrar`,
     Signed: `NO`, Signed_By: ``,
@@ -12929,7 +12929,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman`, Issue: `7`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Batman/Superman — Joshua Williamson`, Key: `NO`,
+    Year: `2020`, Arc: `Batman/Superman — Joshua Williamson`, Key: `NO`,
     Key_Reason: `B/S #7 Williamson`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Nick Derington & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -12948,7 +12948,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman`, Issue: `8`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Batman/Superman — Joshua Williamson`, Key: `NO`,
+    Year: `2020`, Arc: `Batman/Superman — Joshua Williamson`, Key: `NO`,
     Key_Reason: `B/S #8 Williamson`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Nick Derington & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -12967,7 +12967,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman`, Issue: `9`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Batman/Superman — Joshua Williamson`, Key: `NO`,
+    Year: `2020`, Arc: `Batman/Superman — Joshua Williamson`, Key: `NO`,
     Key_Reason: `B/S #9 Williamson`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Nick Derington & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -12986,7 +12986,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman`, Issue: `10`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Batman/Superman — Joshua Williamson`, Key: `NO`,
+    Year: `2020`, Arc: `Batman/Superman — Joshua Williamson`, Key: `NO`,
     Key_Reason: `B/S #10 Williamson`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Nick Derington & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -13062,7 +13062,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman`, Issue: `14`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Batman/Superman — Joshua Williamson`, Key: `NO`,
+    Year: `2021`, Arc: `Batman/Superman — Joshua Williamson`, Key: `NO`,
     Key_Reason: `B/S #14 Williamson`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Nick Derington & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -13138,7 +13138,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman`, Issue: `15`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Batman/Superman — Joshua Williamson`, Key: `NO`,
+    Year: `2021`, Arc: `Batman/Superman — Joshua Williamson`, Key: `NO`,
     Key_Reason: `B/S #15 Williamson`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Nick Derington & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -13157,7 +13157,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman`, Issue: `16`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Batman/Superman — Joshua Williamson`, Key: `NO`,
+    Year: `2021`, Arc: `Batman/Superman — Joshua Williamson`, Key: `NO`,
     Key_Reason: `B/S #16 Williamson`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Nick Derington & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -13176,7 +13176,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman`, Issue: `17`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Batman/Superman — Joshua Williamson`, Key: `NO`,
+    Year: `2021`, Arc: `Batman/Superman — Joshua Williamson`, Key: `NO`,
     Key_Reason: `B/S #17 Williamson`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Nick Derington & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -13195,7 +13195,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman: World's Finest`, Issue: `19`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `World's Finest — Waid/Mora`, Key: `NO`,
+    Year: `2023`, Arc: `World's Finest — Waid/Mora`, Key: `NO`,
     Key_Reason: `World's Finest #19 — Waid/Mora`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Dan Mora`,
     Signed: `NO`, Signed_By: ``,
@@ -13214,7 +13214,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman: World's Finest`, Issue: `20`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `World's Finest — Waid/Mora`, Key: `NO`,
+    Year: `2023`, Arc: `World's Finest — Waid/Mora`, Key: `NO`,
     Key_Reason: `World's Finest #20 — Waid/Mora`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Dan Mora`,
     Signed: `NO`, Signed_By: ``,
@@ -13233,7 +13233,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman: World's Finest`, Issue: `21`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `World's Finest — Waid/Mora`, Key: `NO`,
+    Year: `2024`, Arc: `World's Finest — Waid/Mora`, Key: `NO`,
     Key_Reason: `World's Finest #21 — Waid/Mora`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Dan Mora`,
     Signed: `NO`, Signed_By: ``,
@@ -13252,7 +13252,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman: World's Finest`, Issue: `22`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `World's Finest — Waid/Mora`, Key: `NO`,
+    Year: `2024`, Arc: `World's Finest — Waid/Mora`, Key: `NO`,
     Key_Reason: `World's Finest #22 — Waid/Mora`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Dan Mora`,
     Signed: `NO`, Signed_By: ``,
@@ -13271,7 +13271,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman: World's Finest`, Issue: `23`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `World's Finest — Waid/Mora`, Key: `NO`,
+    Year: `2024`, Arc: `World's Finest — Waid/Mora`, Key: `NO`,
     Key_Reason: `World's Finest #23 — Waid/Mora`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Dan Mora`,
     Signed: `NO`, Signed_By: ``,
@@ -13290,7 +13290,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman: World's Finest`, Issue: `24`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `World's Finest — Waid/Mora`, Key: `NO`,
+    Year: `2024`, Arc: `World's Finest — Waid/Mora`, Key: `NO`,
     Key_Reason: `World's Finest #24 — Waid/Mora`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Dan Mora`,
     Signed: `NO`, Signed_By: ``,
@@ -13309,7 +13309,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman: World's Finest`, Issue: `25`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `World's Finest — Waid/Mora`, Key: `NO`,
+    Year: `2024`, Arc: `World's Finest — Waid/Mora`, Key: `NO`,
     Key_Reason: `World's Finest #25 — Waid/Mora`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Dan Mora`,
     Signed: `NO`, Signed_By: ``,
@@ -13328,7 +13328,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman: World's Finest`, Issue: `26`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `World's Finest — Waid/Mora`, Key: `NO`,
+    Year: `2024`, Arc: `World's Finest — Waid/Mora`, Key: `NO`,
     Key_Reason: `World's Finest #26 — Waid/Mora`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Dan Mora`,
     Signed: `NO`, Signed_By: ``,
@@ -13347,7 +13347,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman: World's Finest`, Issue: `27`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `World's Finest — Waid/Mora`, Key: `NO`,
+    Year: `2024`, Arc: `World's Finest — Waid/Mora`, Key: `NO`,
     Key_Reason: `World's Finest #27 — Waid/Mora`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Dan Mora`,
     Signed: `NO`, Signed_By: ``,
@@ -13442,7 +13442,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman: World's Finest`, Issue: `28`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `World's Finest — Waid/Mora`, Key: `NO`,
+    Year: `2024`, Arc: `World's Finest — Waid/Mora`, Key: `NO`,
     Key_Reason: `World's Finest #28 — Waid/Mora`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Dan Mora`,
     Signed: `NO`, Signed_By: ``,
@@ -13461,7 +13461,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman: World's Finest`, Issue: `29`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `World's Finest — Waid/Mora`, Key: `NO`,
+    Year: `2024`, Arc: `World's Finest — Waid/Mora`, Key: `NO`,
     Key_Reason: `World's Finest #29 — Waid/Mora`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Dan Mora`,
     Signed: `NO`, Signed_By: ``,
@@ -13480,7 +13480,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman: World's Finest`, Issue: `30`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `World's Finest — Waid/Mora`, Key: `NO`,
+    Year: `2024`, Arc: `World's Finest — Waid/Mora`, Key: `NO`,
     Key_Reason: `World's Finest #30 — Waid/Mora`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Dan Mora`,
     Signed: `NO`, Signed_By: ``,
@@ -13499,7 +13499,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman: World's Finest`, Issue: `31`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `World's Finest — Waid/Mora`, Key: `NO`,
+    Year: `2024`, Arc: `World's Finest — Waid/Mora`, Key: `NO`,
     Key_Reason: `World's Finest #31 — Waid/Mora`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Dan Mora`,
     Signed: `NO`, Signed_By: ``,
@@ -13518,7 +13518,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman: World's Finest`, Issue: `33`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `World's Finest — Waid/Mora`, Key: `NO`,
+    Year: `2025`, Arc: `World's Finest — Waid/Mora`, Key: `NO`,
     Key_Reason: `World's Finest #33 — Waid/Mora`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Dan Mora`,
     Signed: `NO`, Signed_By: ``,
@@ -13537,7 +13537,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman/Superman: World's Finest`, Issue: `34`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `World's Finest — Waid/Mora`, Key: `NO`,
+    Year: `2025`, Arc: `World's Finest — Waid/Mora`, Key: `NO`,
     Key_Reason: `World's Finest #34 — Waid/Mora`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Dan Mora`,
     Signed: `NO`, Signed_By: ``,
@@ -13556,7 +13556,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Birds of Prey`, Issue: `4`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `Birds of Prey — Kelly Thompson — 🎉 NOW COMPLETE #1-12 across boxes!`, Key: `NO`,
+    Year: `2024`, Arc: `Birds of Prey — Kelly Thompson — 🎉 NOW COMPLETE #1-12 across boxes!`, Key: `NO`,
     Key_Reason: `Birds of Prey #4 Thompson — 🎉 COMPLETE #1-12 now confirmed across Box 16 + Box 22!`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: `Leonardo Romero`,
     Signed: `NO`, Signed_By: ``,
@@ -13575,7 +13575,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Birds of Prey`, Issue: `5`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `Birds of Prey — Kelly Thompson — 🎉 NOW COMPLETE #1-12 across boxes!`, Key: `NO`,
+    Year: `2024`, Arc: `Birds of Prey — Kelly Thompson — 🎉 NOW COMPLETE #1-12 across boxes!`, Key: `NO`,
     Key_Reason: `Birds of Prey #5 Thompson — 🎉 COMPLETE #1-12 now confirmed across Box 16 + Box 22!`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: `Leonardo Romero`,
     Signed: `NO`, Signed_By: ``,
@@ -13594,7 +13594,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Birds of Prey`, Issue: `6`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `Birds of Prey — Kelly Thompson — 🎉 NOW COMPLETE #1-12 across boxes!`, Key: `NO`,
+    Year: `2024`, Arc: `Birds of Prey — Kelly Thompson — 🎉 NOW COMPLETE #1-12 across boxes!`, Key: `NO`,
     Key_Reason: `Birds of Prey #6 Thompson — 🎉 COMPLETE #1-12 now confirmed across Box 16 + Box 22!`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: `Leonardo Romero`,
     Signed: `NO`, Signed_By: ``,
@@ -13613,7 +13613,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Birds of Prey`, Issue: `7`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `Birds of Prey — Kelly Thompson — 🎉 NOW COMPLETE #1-12 across boxes!`, Key: `NO`,
+    Year: `2024`, Arc: `Birds of Prey — Kelly Thompson — 🎉 NOW COMPLETE #1-12 across boxes!`, Key: `NO`,
     Key_Reason: `Birds of Prey #7 Thompson — 🎉 COMPLETE #1-12 now confirmed across Box 16 + Box 22!`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: `Leonardo Romero`,
     Signed: `NO`, Signed_By: ``,
@@ -13632,7 +13632,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Birds of Prey`, Issue: `8`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `Birds of Prey — Kelly Thompson — 🎉 NOW COMPLETE #1-12 across boxes!`, Key: `NO`,
+    Year: `2024`, Arc: `Birds of Prey — Kelly Thompson — 🎉 NOW COMPLETE #1-12 across boxes!`, Key: `NO`,
     Key_Reason: `Birds of Prey #8 Thompson — 🎉 COMPLETE #1-12 now confirmed across Box 16 + Box 22!`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: `Leonardo Romero`,
     Signed: `NO`, Signed_By: ``,
@@ -13651,7 +13651,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Birds of Prey`, Issue: `9`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `Birds of Prey — Kelly Thompson — 🎉 NOW COMPLETE #1-12 across boxes!`, Key: `NO`,
+    Year: `2024`, Arc: `Birds of Prey — Kelly Thompson — 🎉 NOW COMPLETE #1-12 across boxes!`, Key: `NO`,
     Key_Reason: `Birds of Prey #9 Thompson — 🎉 COMPLETE #1-12 now confirmed across Box 16 + Box 22!`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: `Leonardo Romero`,
     Signed: `NO`, Signed_By: ``,
@@ -13670,7 +13670,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Birds of Prey`, Issue: `10`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `Birds of Prey — Kelly Thompson — 🎉 NOW COMPLETE #1-12 across boxes!`, Key: `NO`,
+    Year: `2024`, Arc: `Birds of Prey — Kelly Thompson — 🎉 NOW COMPLETE #1-12 across boxes!`, Key: `NO`,
     Key_Reason: `Birds of Prey #10 Thompson — 🎉 COMPLETE #1-12 now confirmed across Box 16 + Box 22!`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: `Leonardo Romero`,
     Signed: `NO`, Signed_By: ``,
@@ -13689,7 +13689,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Birds of Prey`, Issue: `11`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `Birds of Prey — Kelly Thompson — 🎉 NOW COMPLETE #1-12 across boxes!`, Key: `NO`,
+    Year: `2024`, Arc: `Birds of Prey — Kelly Thompson — 🎉 NOW COMPLETE #1-12 across boxes!`, Key: `NO`,
     Key_Reason: `Birds of Prey #11 Thompson — 🎉 COMPLETE #1-12 now confirmed across Box 16 + Box 22!`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: `Leonardo Romero`,
     Signed: `NO`, Signed_By: ``,
@@ -13708,7 +13708,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Birds of Prey`, Issue: `12`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `Birds of Prey — Kelly Thompson — 🎉 NOW COMPLETE #1-12 across boxes!`, Key: `NO`,
+    Year: `2024`, Arc: `Birds of Prey — Kelly Thompson — 🎉 NOW COMPLETE #1-12 across boxes!`, Key: `NO`,
     Key_Reason: `Birds of Prey #12 Thompson — 🎉 COMPLETE #1-12 now confirmed across Box 16 + Box 22!`, First_App: ``,
     Writer: `Kelly Thompson`, Artist: `Leonardo Romero`,
     Signed: `NO`, Signed_By: ``,
@@ -13727,7 +13727,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Birds of Prey`, Issue: `89`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2005-2007`, Arc: `Birds of Prey Simone`, Key: `NO`,
+    Year: `2006`, Arc: `Birds of Prey Simone`, Key: `NO`,
     Key_Reason: `BoP #89 Simone`, First_App: ``,
     Writer: `Gail Simone`, Artist: `Ed Benes & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -13746,7 +13746,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Birds of Prey`, Issue: `90`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2005-2007`, Arc: `Birds of Prey Simone`, Key: `NO`,
+    Year: `2006`, Arc: `Birds of Prey Simone`, Key: `NO`,
     Key_Reason: `BoP #90 Simone`, First_App: ``,
     Writer: `Gail Simone`, Artist: `Ed Benes & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -13765,7 +13765,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Birds of Prey`, Issue: `91`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2005-2007`, Arc: `Birds of Prey Simone`, Key: `NO`,
+    Year: `2006`, Arc: `Birds of Prey Simone`, Key: `NO`,
     Key_Reason: `BoP #91 Simone`, First_App: ``,
     Writer: `Gail Simone`, Artist: `Ed Benes & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -13784,7 +13784,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Birds of Prey`, Issue: `92`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2005-2007`, Arc: `Birds of Prey Simone`, Key: `NO`,
+    Year: `2006`, Arc: `Birds of Prey Simone`, Key: `NO`,
     Key_Reason: `BoP #92 Simone`, First_App: ``,
     Writer: `Gail Simone`, Artist: `Ed Benes & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -13803,7 +13803,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Birds of Prey`, Issue: `98`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2005-2007`, Arc: `Birds of Prey Simone`, Key: `NO`,
+    Year: `2006`, Arc: `Birds of Prey Simone`, Key: `NO`,
     Key_Reason: `BoP #98 Simone`, First_App: ``,
     Writer: `Gail Simone`, Artist: `Ed Benes & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -13822,7 +13822,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Birds of Prey`, Issue: `100`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2005-2007`, Arc: `Birds of Prey Simone`, Key: `YES`,
+    Year: `2007`, Arc: `Birds of Prey Simone`, Key: `YES`,
     Key_Reason: `BoP #100 Simone — landmark 100th issue`, First_App: ``,
     Writer: `Gail Simone`, Artist: `Ed Benes & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -13841,7 +13841,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Adam`, Issue: `6`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2022-2023`, Arc: `Black Adam Priest`, Key: `NO`,
+    Year: `2023`, Arc: `Black Adam Priest`, Key: `NO`,
     Key_Reason: `Black Adam #6 Priest`, First_App: ``,
     Writer: `Priest`, Artist: `Rafa Sandoval`,
     Signed: `NO`, Signed_By: ``,
@@ -13860,7 +13860,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Adam`, Issue: `7`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2022-2023`, Arc: `Black Adam Priest`, Key: `NO`,
+    Year: `2023`, Arc: `Black Adam Priest`, Key: `NO`,
     Key_Reason: `Black Adam #7 Priest`, First_App: ``,
     Writer: `Priest`, Artist: `Rafa Sandoval`,
     Signed: `NO`, Signed_By: ``,
@@ -13879,7 +13879,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Adam`, Issue: `8`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2022-2023`, Arc: `Black Adam Priest`, Key: `NO`,
+    Year: `2023`, Arc: `Black Adam Priest`, Key: `NO`,
     Key_Reason: `Black Adam #8 Priest`, First_App: ``,
     Writer: `Priest`, Artist: `Rafa Sandoval`,
     Signed: `NO`, Signed_By: ``,
@@ -14335,7 +14335,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Adam`, Issue: `9`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2022-2023`, Arc: `Black Adam Priest`, Key: `NO`,
+    Year: `2023`, Arc: `Black Adam Priest`, Key: `NO`,
     Key_Reason: `Black Adam #9 Priest`, First_App: ``,
     Writer: `Priest`, Artist: `Rafa Sandoval`,
     Signed: `NO`, Signed_By: ``,
@@ -14354,7 +14354,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `8`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `1999`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #8 Priest — Priest BP #8`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -14373,7 +14373,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `9`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `1999`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #9 Priest — Priest BP #9`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -14392,7 +14392,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `10`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `1999`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #10 Priest — Priest BP #10`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -14411,7 +14411,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `11`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `1999`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #11 Priest — Priest BP #11`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -14430,7 +14430,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `12`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `1999`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #12 Priest — Priest BP #12`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -14449,7 +14449,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `13`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `1999`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #13 Priest — Priest BP #13`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -14525,7 +14525,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `14`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2000`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #14 Priest — Priest BP #14`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -14544,7 +14544,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `15`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2000`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #15 Priest — Priest BP #15`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -14563,7 +14563,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `16`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2000`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #16 Priest — Priest BP #16`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -14582,7 +14582,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `18`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2000`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #18 Priest — Priest BP #18`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -14601,7 +14601,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `19`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2000`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #19 Priest — Priest BP #19`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -14620,7 +14620,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `20`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2000`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #20 Priest — Priest BP #20`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -14639,7 +14639,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `21`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2000`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #21 Priest — Priest BP #21`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -14658,7 +14658,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `23`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2000`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #23 Priest — Priest BP #23`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -14677,7 +14677,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `24`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2000`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #24 Priest — Priest BP #24`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -14696,7 +14696,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `25`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `YES`,
+    Year: `2000`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `YES`,
     Key_Reason: `BP #25 Priest — Maximum Security tie-in`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -14715,7 +14715,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `27`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2001`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #27 Priest — Priest BP #27`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -14734,7 +14734,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `28`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2001`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #28 Priest — Priest BP #28`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -14753,7 +14753,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `29`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2001`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #29 Priest — Priest BP #29`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -14772,7 +14772,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `31`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2001`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #31 Priest — Priest BP #31`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -14791,7 +14791,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `32`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2001`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #32 Priest — Priest BP #32`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -14810,7 +14810,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `33`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2001`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #33 Priest — Priest BP #33`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -14829,7 +14829,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `34`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2001`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #34 Priest — Priest BP #34`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -14848,7 +14848,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `35`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2001`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #35 Priest — Priest BP #35`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -14867,7 +14867,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `37`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2001`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #37 Priest — Priest BP #37`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -14886,7 +14886,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `38`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2002`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #38 Priest — Priest BP #38`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -14905,7 +14905,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `39`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2002`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #39 Priest — Priest BP #39`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -14924,7 +14924,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `40`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2002`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #40 Priest — Priest BP #40`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -14943,7 +14943,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `41`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2002`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #41 Priest — Priest BP #41`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -14962,7 +14962,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `42`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2002`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #42 Priest — Priest BP #42`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -14981,7 +14981,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `43`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2002`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #43 Priest — Priest BP #43`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -15000,7 +15000,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `44`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2002`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #44 Priest — Priest BP #44`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -15019,7 +15019,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `45`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2002`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #45 Priest — Priest BP #45`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -15038,7 +15038,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `46`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2002`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #46 Priest — Priest BP #46`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -15057,7 +15057,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `47`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2002`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #47 Priest — Priest BP #47`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -15095,7 +15095,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `48`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2002`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #48 Priest — Priest BP #48`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -15114,7 +15114,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `49`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2002`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #49 Priest — Priest BP #49`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -15133,7 +15133,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `50`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `YES`,
+    Year: `2002`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `YES`,
     Key_Reason: `BP #50 Priest — Black & White Prologue landmark`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -15152,7 +15152,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `55`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #55 Priest — Priest BP #55`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -15171,7 +15171,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `56`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #56 Priest — Priest BP #56`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -15190,7 +15190,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `57`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #57 Priest — Priest BP #57`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -15209,7 +15209,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `58`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #58 Priest — Priest BP #58`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -15228,7 +15228,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `59`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #59 Priest — Priest BP #59`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -15247,7 +15247,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `60`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `YES`,
+    Year: `2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `YES`,
     Key_Reason: `BP #60 Priest — Priest BP #60`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -15266,7 +15266,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `61`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #61 Priest — Priest BP #61`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -15285,7 +15285,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `62`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1998-2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
+    Year: `2003`, Arc: `Black Panther — Christopher Priest Marvel Knights run`, Key: `NO`,
     Key_Reason: `BP #62 Priest — Priest BP #62`, First_App: ``,
     Writer: `Christopher Priest`, Artist: `Sal Velluto & Jim Califiore & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -15798,7 +15798,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `10`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2005-2008`, Arc: `Black Panther — Hudlin`, Key: `NO`,
+    Year: `2006`, Arc: `Black Panther — Hudlin`, Key: `NO`,
     Key_Reason: `BP #10 Hudlin`, First_App: ``,
     Writer: `Reginald Hudlin`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -15817,7 +15817,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `11`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2005-2008`, Arc: `Black Panther — Hudlin`, Key: `NO`,
+    Year: `2006`, Arc: `Black Panther — Hudlin`, Key: `NO`,
     Key_Reason: `BP #11 Hudlin`, First_App: ``,
     Writer: `Reginald Hudlin`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -15836,7 +15836,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `12`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2005-2008`, Arc: `Black Panther — Hudlin`, Key: `NO`,
+    Year: `2006`, Arc: `Black Panther — Hudlin`, Key: `NO`,
     Key_Reason: `BP #12 Hudlin`, First_App: ``,
     Writer: `Reginald Hudlin`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -15855,7 +15855,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `13`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2005-2008`, Arc: `Black Panther — Hudlin`, Key: `NO`,
+    Year: `2006`, Arc: `Black Panther — Hudlin`, Key: `NO`,
     Key_Reason: `BP #13 Hudlin`, First_App: ``,
     Writer: `Reginald Hudlin`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -15874,7 +15874,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `14`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2005-2008`, Arc: `Black Panther — Hudlin`, Key: `NO`,
+    Year: `2006`, Arc: `Black Panther — Hudlin`, Key: `NO`,
     Key_Reason: `BP #14 Hudlin`, First_App: ``,
     Writer: `Reginald Hudlin`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -15893,7 +15893,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `16`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2005-2008`, Arc: `Black Panther — Hudlin`, Key: `NO`,
+    Year: `2006`, Arc: `Black Panther — Hudlin`, Key: `NO`,
     Key_Reason: `BP #16 Hudlin`, First_App: ``,
     Writer: `Reginald Hudlin`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -15912,7 +15912,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `17`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2005-2008`, Arc: `Black Panther — Hudlin`, Key: `NO`,
+    Year: `2006`, Arc: `Black Panther — Hudlin`, Key: `NO`,
     Key_Reason: `BP #17 Hudlin`, First_App: ``,
     Writer: `Reginald Hudlin`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -15931,7 +15931,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `18`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2005-2008`, Arc: `Black Panther — Hudlin`, Key: `NO`,
+    Year: `2006`, Arc: `Black Panther — Hudlin`, Key: `NO`,
     Key_Reason: `BP #18 Hudlin`, First_App: ``,
     Writer: `Reginald Hudlin`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -15950,7 +15950,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `19`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2005-2008`, Arc: `Black Panther — Hudlin`, Key: `NO`,
+    Year: `2006`, Arc: `Black Panther — Hudlin`, Key: `NO`,
     Key_Reason: `BP #19 Hudlin`, First_App: ``,
     Writer: `Reginald Hudlin`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -15969,7 +15969,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `20`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2005-2008`, Arc: `Black Panther — Hudlin`, Key: `NO`,
+    Year: `2006`, Arc: `Black Panther — Hudlin`, Key: `NO`,
     Key_Reason: `BP #20 Hudlin`, First_App: ``,
     Writer: `Reginald Hudlin`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -15988,7 +15988,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `22`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2005-2008`, Arc: `Black Panther — Hudlin`, Key: `NO`,
+    Year: `2007`, Arc: `Black Panther — Hudlin`, Key: `NO`,
     Key_Reason: `BP #22 Hudlin`, First_App: ``,
     Writer: `Reginald Hudlin`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -16007,7 +16007,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `23`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2005-2008`, Arc: `Black Panther — Hudlin`, Key: `NO`,
+    Year: `2007`, Arc: `Black Panther — Hudlin`, Key: `NO`,
     Key_Reason: `BP #23 Hudlin`, First_App: ``,
     Writer: `Reginald Hudlin`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -16026,7 +16026,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `24`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2005-2008`, Arc: `Black Panther — Hudlin`, Key: `NO`,
+    Year: `2007`, Arc: `Black Panther — Hudlin`, Key: `NO`,
     Key_Reason: `BP #24 Hudlin`, First_App: ``,
     Writer: `Reginald Hudlin`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -16045,7 +16045,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `25`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2005-2008`, Arc: `Black Panther — Hudlin`, Key: `NO`,
+    Year: `2007`, Arc: `Black Panther — Hudlin`, Key: `NO`,
     Key_Reason: `BP #25 Hudlin`, First_App: ``,
     Writer: `Reginald Hudlin`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -16064,7 +16064,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `26`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2005-2008`, Arc: `Black Panther — Hudlin`, Key: `NO`,
+    Year: `2007`, Arc: `Black Panther — Hudlin`, Key: `NO`,
     Key_Reason: `BP #26 Hudlin`, First_App: ``,
     Writer: `Reginald Hudlin`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -16083,7 +16083,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `27`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2005-2008`, Arc: `Black Panther — Hudlin`, Key: `NO`,
+    Year: `2007`, Arc: `Black Panther — Hudlin`, Key: `NO`,
     Key_Reason: `BP #27 Hudlin`, First_App: ``,
     Writer: `Reginald Hudlin`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -16102,7 +16102,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `9`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2017-2018`, Arc: `Black Panther — Coates/Various`, Key: `NO`,
+    Year: `2017`, Arc: `Black Panther — Coates/Various`, Key: `NO`,
     Key_Reason: `Coates BP #9 Legacy #177`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña`,
     Signed: `NO`, Signed_By: ``,
@@ -16121,7 +16121,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `10`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2017-2018`, Arc: `Black Panther — Coates/Various`, Key: `NO`,
+    Year: `2017`, Arc: `Black Panther — Coates/Various`, Key: `NO`,
     Key_Reason: `Coates BP #10 Legacy #178`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña`,
     Signed: `NO`, Signed_By: ``,
@@ -16140,7 +16140,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `11`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2017-2018`, Arc: `Black Panther — Coates/Various`, Key: `NO`,
+    Year: `2017`, Arc: `Black Panther — Coates/Various`, Key: `NO`,
     Key_Reason: `Coates BP #11 Legacy #179`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña`,
     Signed: `NO`, Signed_By: ``,
@@ -16159,7 +16159,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `13`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2017-2018`, Arc: `Black Panther — Coates/Various`, Key: `NO`,
+    Year: `2017`, Arc: `Black Panther — Coates/Various`, Key: `NO`,
     Key_Reason: `Coates BP #13 Legacy #180`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Leonard Kirk`,
     Signed: `NO`, Signed_By: ``,
@@ -16178,7 +16178,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `14`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2017-2018`, Arc: `Black Panther — Coates/Various`, Key: `NO`,
+    Year: `2017`, Arc: `Black Panther — Coates/Various`, Key: `NO`,
     Key_Reason: `Coates BP #14 Legacy #181`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Chris Sprouse`,
     Signed: `NO`, Signed_By: ``,
@@ -16197,7 +16197,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `15`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2017-2018`, Arc: `Black Panther — Coates/Various`, Key: `NO`,
+    Year: `2017`, Arc: `Black Panther — Coates/Various`, Key: `NO`,
     Key_Reason: `Coates BP #15 Legacy #182`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Leonard Kirk`,
     Signed: `NO`, Signed_By: ``,
@@ -16216,7 +16216,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `16`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2017-2018`, Arc: `Black Panther — Coates/Various`, Key: `NO`,
+    Year: `2017`, Arc: `Black Panther — Coates/Various`, Key: `NO`,
     Key_Reason: `Coates BP #16 Legacy #183`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Chris Sprouse`,
     Signed: `NO`, Signed_By: ``,
@@ -16235,7 +16235,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `17`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2017-2018`, Arc: `Black Panther — Coates/Various`, Key: `NO`,
+    Year: `2017`, Arc: `Black Panther — Coates/Various`, Key: `NO`,
     Key_Reason: `Coates BP #17 Legacy #184`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Leonard Kirk`,
     Signed: `NO`, Signed_By: ``,
@@ -16254,7 +16254,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `18`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2017-2018`, Arc: `Black Panther — Coates/Various`, Key: `NO`,
+    Year: `2017`, Arc: `Black Panther — Coates/Various`, Key: `NO`,
     Key_Reason: `Coates BP #18 Legacy #185`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Chris Sprouse`,
     Signed: `NO`, Signed_By: ``,
@@ -16425,7 +16425,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2018-2021`, Arc: `Intergalactic Empire of Wakanda`, Key: `NO`,
+    Year: `2018`, Arc: `Intergalactic Empire of Wakanda`, Key: `NO`,
     Key_Reason: `Intergalactic BP #2 — IEoW #2`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña & Kev Walker & Brian Stelfreeze`,
     Signed: `NO`, Signed_By: ``,
@@ -16482,7 +16482,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `5`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2018-2021`, Arc: `Intergalactic Empire of Wakanda`, Key: `NO`,
+    Year: `2018`, Arc: `Intergalactic Empire of Wakanda`, Key: `NO`,
     Key_Reason: `Intergalactic BP #5 — IEoW #5`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña & Kev Walker & Brian Stelfreeze`,
     Signed: `NO`, Signed_By: ``,
@@ -16501,7 +16501,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `6`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2018-2021`, Arc: `Intergalactic Empire of Wakanda`, Key: `NO`,
+    Year: `2019`, Arc: `Intergalactic Empire of Wakanda`, Key: `NO`,
     Key_Reason: `Intergalactic BP #6 — IEoW #6`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña & Kev Walker & Brian Stelfreeze`,
     Signed: `NO`, Signed_By: ``,
@@ -16520,7 +16520,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `7`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2018-2021`, Arc: `Intergalactic Empire of Wakanda`, Key: `YES`,
+    Year: `2019`, Arc: `Intergalactic Empire of Wakanda`, Key: `YES`,
     Key_Reason: `Intergalactic BP #7 — Key arc issue`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña & Kev Walker & Brian Stelfreeze`,
     Signed: `NO`, Signed_By: ``,
@@ -16577,7 +16577,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `10`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2018-2021`, Arc: `Intergalactic Empire of Wakanda`, Key: `NO`,
+    Year: `2017`, Arc: `Intergalactic Empire of Wakanda`, Key: `NO`,
     Key_Reason: `Intergalactic BP #10 — IEoW #10`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña & Kev Walker & Brian Stelfreeze`,
     Signed: `NO`, Signed_By: ``,
@@ -16596,7 +16596,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `11`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2018-2021`, Arc: `Intergalactic Empire of Wakanda`, Key: `NO`,
+    Year: `2017`, Arc: `Intergalactic Empire of Wakanda`, Key: `NO`,
     Key_Reason: `Intergalactic BP #11 — IEoW #11`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña & Kev Walker & Brian Stelfreeze`,
     Signed: `NO`, Signed_By: ``,
@@ -16615,7 +16615,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `12`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2018-2021`, Arc: `Intergalactic Empire of Wakanda`, Key: `NO`,
+    Year: `2017`, Arc: `Intergalactic Empire of Wakanda`, Key: `NO`,
     Key_Reason: `Intergalactic BP #12 — IEoW #12`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña & Kev Walker & Brian Stelfreeze`,
     Signed: `NO`, Signed_By: ``,
@@ -16634,7 +16634,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `13`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2018-2021`, Arc: `Intergalactic Empire of Wakanda`, Key: `NO`,
+    Year: `2017`, Arc: `Intergalactic Empire of Wakanda`, Key: `NO`,
     Key_Reason: `Intergalactic BP #13 — IEoW #13`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña & Kev Walker & Brian Stelfreeze`,
     Signed: `NO`, Signed_By: ``,
@@ -16653,7 +16653,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `14`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2018-2021`, Arc: `Intergalactic Empire of Wakanda`, Key: `NO`,
+    Year: `2017`, Arc: `Intergalactic Empire of Wakanda`, Key: `NO`,
     Key_Reason: `Intergalactic BP #14 — IEoW #14`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña & Kev Walker & Brian Stelfreeze`,
     Signed: `NO`, Signed_By: ``,
@@ -16672,7 +16672,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `15`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2018-2021`, Arc: `Intergalactic Empire of Wakanda`, Key: `NO`,
+    Year: `2017`, Arc: `Intergalactic Empire of Wakanda`, Key: `NO`,
     Key_Reason: `Intergalactic BP #15 — IEoW #15`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña & Kev Walker & Brian Stelfreeze`,
     Signed: `NO`, Signed_By: ``,
@@ -16691,7 +16691,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `16`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2018-2021`, Arc: `Intergalactic Empire of Wakanda`, Key: `NO`,
+    Year: `2017`, Arc: `Intergalactic Empire of Wakanda`, Key: `NO`,
     Key_Reason: `Intergalactic BP #16 — IEoW #16`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña & Kev Walker & Brian Stelfreeze`,
     Signed: `NO`, Signed_By: ``,
@@ -16710,7 +16710,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `17`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2018-2021`, Arc: `Intergalactic Empire of Wakanda`, Key: `NO`,
+    Year: `2017`, Arc: `Intergalactic Empire of Wakanda`, Key: `NO`,
     Key_Reason: `Intergalactic BP #17 — IEoW #17`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña & Kev Walker & Brian Stelfreeze`,
     Signed: `NO`, Signed_By: ``,
@@ -16729,7 +16729,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `18`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2018-2021`, Arc: `Intergalactic Empire of Wakanda`, Key: `NO`,
+    Year: `2017`, Arc: `Intergalactic Empire of Wakanda`, Key: `NO`,
     Key_Reason: `Intergalactic BP #18 — IEoW #18`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Daniel Acuña & Kev Walker & Brian Stelfreeze`,
     Signed: `NO`, Signed_By: ``,
@@ -16881,7 +16881,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2021-2023`, Arc: `Black Panther — John Ridley`, Key: `YES`,
+    Year: `2022`, Arc: `Black Panther — John Ridley`, Key: `YES`,
     Key_Reason: `BP #1 Ridley — John Ridley (12 Years a Slave Oscar winner) writes BP; major cultural moment`, First_App: `John Ridley (Oscar winner) on Black Panther`,
     Writer: `John Ridley`, Artist: `Juann Cabal & German Peralta`,
     Signed: `NO`, Signed_By: ``,
@@ -16919,7 +16919,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `3`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2021-2023`, Arc: `Black Panther — John Ridley`, Key: `NO`,
+    Year: `2020`, Arc: `Black Panther — John Ridley`, Key: `NO`,
     Key_Reason: `Ridley BP #3 Legacy #200`, First_App: ``,
     Writer: `John Ridley`, Artist: `Juann Cabal & German Peralta`,
     Signed: `NO`, Signed_By: ``,
@@ -16938,7 +16938,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `4`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2021-2023`, Arc: `Black Panther — John Ridley`, Key: `NO`,
+    Year: `2022`, Arc: `Black Panther — John Ridley`, Key: `NO`,
     Key_Reason: `Ridley BP #4 Legacy #201`, First_App: ``,
     Writer: `John Ridley`, Artist: `Juann Cabal & German Peralta`,
     Signed: `NO`, Signed_By: ``,
@@ -17014,7 +17014,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `8`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2021-2023`, Arc: `Black Panther — John Ridley`, Key: `NO`,
+    Year: `2020`, Arc: `Black Panther — John Ridley`, Key: `NO`,
     Key_Reason: `Ridley BP #8 Legacy #205`, First_App: ``,
     Writer: `John Ridley`, Artist: `Juann Cabal & German Peralta`,
     Signed: `NO`, Signed_By: ``,
@@ -17033,7 +17033,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `9`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2021-2023`, Arc: `Black Panther — John Ridley`, Key: `NO`,
+    Year: `2021`, Arc: `Black Panther — John Ridley`, Key: `NO`,
     Key_Reason: `Ridley BP #9 Legacy #206`, First_App: ``,
     Writer: `John Ridley`, Artist: `Juann Cabal & German Peralta`,
     Signed: `NO`, Signed_By: ``,
@@ -17128,7 +17128,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `14`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2021-2023`, Arc: `Black Panther — John Ridley`, Key: `NO`,
+    Year: `2023`, Arc: `Black Panther — John Ridley`, Key: `NO`,
     Key_Reason: `Ridley BP #14 Legacy #211`, First_App: ``,
     Writer: `John Ridley`, Artist: `Juann Cabal & German Peralta`,
     Signed: `NO`, Signed_By: ``,
@@ -17147,7 +17147,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther`, Issue: `15`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2021-2023`, Arc: `Black Panther — John Ridley`, Key: `NO`,
+    Year: `2023`, Arc: `Black Panther — John Ridley`, Key: `NO`,
     Key_Reason: `Ridley BP #15 Legacy #212`, First_App: ``,
     Writer: `John Ridley`, Artist: `Juann Cabal & German Peralta`,
     Signed: `NO`, Signed_By: ``,
@@ -17204,7 +17204,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther: The Man Without Fear`, Issue: `513`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2010-2012`, Arc: `BP Man Without Fear — David Liss`, Key: `YES`,
+    Year: `2011`, Arc: `BP Man Without Fear — David Liss`, Key: `YES`,
     Key_Reason: `BP #513 — Man Without Fear UNSIGNED copy. NOTE: Box 2 has the STAN LEE SIGNED copy — DO NOT CONFUSE.`, First_App: ``,
     Writer: `David Liss`, Artist: `Francesco Francavilla & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -17223,7 +17223,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther: The Man Without Fear`, Issue: `514`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2010-2012`, Arc: `BP Man Without Fear — David Liss`, Key: `NO`,
+    Year: `2011`, Arc: `BP Man Without Fear — David Liss`, Key: `NO`,
     Key_Reason: `BP MWF #514 Liss`, First_App: ``,
     Writer: `David Liss`, Artist: `Francesco Francavilla & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -17242,7 +17242,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther: The Man Without Fear`, Issue: `516`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2010-2012`, Arc: `BP Man Without Fear — David Liss`, Key: `NO`,
+    Year: `2011`, Arc: `BP Man Without Fear — David Liss`, Key: `NO`,
     Key_Reason: `BP MWF #516 Liss`, First_App: ``,
     Writer: `David Liss`, Artist: `Francesco Francavilla & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -17261,7 +17261,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther: The Man Without Fear`, Issue: `517`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2010-2012`, Arc: `BP Man Without Fear — David Liss`, Key: `NO`,
+    Year: `2011`, Arc: `BP Man Without Fear — David Liss`, Key: `NO`,
     Key_Reason: `BP MWF #517 Liss`, First_App: ``,
     Writer: `David Liss`, Artist: `Francesco Francavilla & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -17280,7 +17280,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther: The Man Without Fear`, Issue: `519`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2010-2012`, Arc: `BP Man Without Fear — David Liss`, Key: `NO`,
+    Year: `2011`, Arc: `BP Man Without Fear — David Liss`, Key: `NO`,
     Key_Reason: `BP MWF #519 Liss`, First_App: ``,
     Writer: `David Liss`, Artist: `Francesco Francavilla & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -17318,7 +17318,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther: The Man Without Fear`, Issue: `520`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2010-2012`, Arc: `BP Man Without Fear — David Liss`, Key: `NO`,
+    Year: `2011`, Arc: `BP Man Without Fear — David Liss`, Key: `NO`,
     Key_Reason: `BP MWF #520 Liss`, First_App: ``,
     Writer: `David Liss`, Artist: `Francesco Francavilla & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -17337,7 +17337,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther: The Man Without Fear`, Issue: `523`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2010-2012`, Arc: `BP Man Without Fear — David Liss`, Key: `NO`,
+    Year: `2011`, Arc: `BP Man Without Fear — David Liss`, Key: `NO`,
     Key_Reason: `BP MWF #523 Liss`, First_App: ``,
     Writer: `David Liss`, Artist: `Francesco Francavilla & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -17470,7 +17470,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Cable`, Issue: `17`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2009-2011`, Arc: `Cable — Jason Aaron / Various`, Key: `NO`,
+    Year: `2009`, Arc: `Cable — Jason Aaron / Various`, Key: `NO`,
     Key_Reason: `Cable #17`, First_App: ``,
     Writer: `Jason Aaron & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -17489,7 +17489,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Cable`, Issue: `18`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2009-2011`, Arc: `Cable — Jason Aaron / Various`, Key: `NO`,
+    Year: `2009`, Arc: `Cable — Jason Aaron / Various`, Key: `NO`,
     Key_Reason: `Cable #18`, First_App: ``,
     Writer: `Jason Aaron & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -19047,7 +19047,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Cable`, Issue: `21`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2009-2011`, Arc: `Cable — Jason Aaron / Various`, Key: `NO`,
+    Year: `2010`, Arc: `Cable — Jason Aaron / Various`, Key: `NO`,
     Key_Reason: `Cable #21`, First_App: ``,
     Writer: `Jason Aaron & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -19066,7 +19066,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Cable`, Issue: `22`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2009-2011`, Arc: `Cable — Jason Aaron / Various`, Key: `NO`,
+    Year: `2010`, Arc: `Cable — Jason Aaron / Various`, Key: `NO`,
     Key_Reason: `Cable #22`, First_App: ``,
     Writer: `Jason Aaron & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -19085,7 +19085,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Cable`, Issue: `23`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2009-2011`, Arc: `Cable — Jason Aaron / Various`, Key: `NO`,
+    Year: `2010`, Arc: `Cable — Jason Aaron / Various`, Key: `NO`,
     Key_Reason: `Cable #23`, First_App: ``,
     Writer: `Jason Aaron & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -19104,7 +19104,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Cable`, Issue: `24`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2009-2011`, Arc: `Cable — Jason Aaron / Various`, Key: `NO`,
+    Year: `2010`, Arc: `Cable — Jason Aaron / Various`, Key: `NO`,
     Key_Reason: `Cable #24`, First_App: ``,
     Writer: `Jason Aaron & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -19123,7 +19123,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Cable`, Issue: `25`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2009-2011`, Arc: `Cable — Jason Aaron / Various`, Key: `NO`,
+    Year: `2010`, Arc: `Cable — Jason Aaron / Various`, Key: `NO`,
     Key_Reason: `Cable #25`, First_App: ``,
     Writer: `Jason Aaron & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -19256,7 +19256,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `6`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2004-2009`, Arc: `Brubaker Captain America`, Key: `NO`,
+    Year: `2005`, Arc: `Brubaker Captain America`, Key: `NO`,
     Key_Reason: `Brubaker Cap #6`, First_App: ``,
     Writer: `Ed Brubaker`, Artist: `Steve Epting & Luke Ross`,
     Signed: `NO`, Signed_By: ``,
@@ -19712,7 +19712,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `33`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2004-2009`, Arc: `Brubaker Captain America`, Key: `NO`,
+    Year: `2008`, Arc: `Brubaker Captain America`, Key: `NO`,
     Key_Reason: `Brubaker Cap #33`, First_App: ``,
     Writer: `Ed Brubaker`, Artist: `Steve Epting & Luke Ross`,
     Signed: `NO`, Signed_By: ``,
@@ -19731,7 +19731,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `48`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2004-2009`, Arc: `Brubaker Captain America`, Key: `NO`,
+    Year: `2009`, Arc: `Brubaker Captain America`, Key: `NO`,
     Key_Reason: `Brubaker Cap #48`, First_App: ``,
     Writer: `Ed Brubaker`, Artist: `Steve Epting & Luke Ross`,
     Signed: `NO`, Signed_By: ``,
@@ -19750,7 +19750,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `49`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2004-2009`, Arc: `Brubaker Captain America`, Key: `NO`,
+    Year: `2009`, Arc: `Brubaker Captain America`, Key: `NO`,
     Key_Reason: `Brubaker Cap #49`, First_App: ``,
     Writer: `Ed Brubaker`, Artist: `Steve Epting & Luke Ross`,
     Signed: `NO`, Signed_By: ``,
@@ -20263,7 +20263,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `50`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2004-2009`, Arc: `Brubaker Captain America`, Key: `NO`,
+    Year: `2009`, Arc: `Brubaker Captain America`, Key: `NO`,
     Key_Reason: `Brubaker Cap #50`, First_App: ``,
     Writer: `Ed Brubaker`, Artist: `Steve Epting & Luke Ross`,
     Signed: `NO`, Signed_By: ``,
@@ -20282,7 +20282,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `600`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2009-2011`, Arc: `Brubaker Captain America — Reborn aftermath`, Key: `YES`,
+    Year: `2009`, Arc: `Brubaker Captain America — Reborn aftermath`, Key: `YES`,
     Key_Reason: `Captain America #600 — Brubaker; anniversary; Steve Rogers returns; landmark issue`, First_App: ``,
     Writer: `Ed Brubaker`, Artist: `Butch Guice & Howard Chaykin & Rafael Albuquerque & David Aja & Mitch Breitweiser`,
     Signed: `NO`, Signed_By: ``,
@@ -20301,7 +20301,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `601`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2009-2011`, Arc: `Brubaker Captain America — Reborn aftermath`, Key: `NO`,
+    Year: `2009`, Arc: `Brubaker Captain America — Reborn aftermath`, Key: `NO`,
     Key_Reason: `Cap #601 Brubaker`, First_App: ``,
     Writer: `Ed Brubaker`, Artist: `Gene Colan`,
     Signed: `NO`, Signed_By: ``,
@@ -20320,7 +20320,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `602`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2009-2011`, Arc: `Brubaker Captain America — Reborn aftermath`, Key: `NO`,
+    Year: `2010`, Arc: `Brubaker Captain America — Reborn aftermath`, Key: `NO`,
     Key_Reason: `Cap #602 Brubaker`, First_App: ``,
     Writer: `Ed Brubaker`, Artist: `Luke Ross`,
     Signed: `NO`, Signed_By: ``,
@@ -20339,7 +20339,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `603`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2009-2011`, Arc: `Brubaker Captain America — Reborn aftermath`, Key: `NO`,
+    Year: `2010`, Arc: `Brubaker Captain America — Reborn aftermath`, Key: `NO`,
     Key_Reason: `Cap #603 Brubaker`, First_App: ``,
     Writer: `Ed Brubaker`, Artist: `Luke Ross`,
     Signed: `NO`, Signed_By: ``,
@@ -20358,7 +20358,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `604`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2009-2011`, Arc: `Brubaker Captain America — Reborn aftermath`, Key: `NO`,
+    Year: `2010`, Arc: `Brubaker Captain America — Reborn aftermath`, Key: `NO`,
     Key_Reason: `Cap #604 Brubaker`, First_App: ``,
     Writer: `Ed Brubaker`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -20377,7 +20377,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `605`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2009-2011`, Arc: `Brubaker Captain America — Reborn aftermath`, Key: `NO`,
+    Year: `2010`, Arc: `Brubaker Captain America — Reborn aftermath`, Key: `NO`,
     Key_Reason: `Cap #605 Brubaker`, First_App: ``,
     Writer: `Ed Brubaker`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -20396,7 +20396,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `606`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2009-2011`, Arc: `Brubaker Captain America — Reborn aftermath`, Key: `NO`,
+    Year: `2010`, Arc: `Brubaker Captain America — Reborn aftermath`, Key: `NO`,
     Key_Reason: `Cap #606 Brubaker`, First_App: ``,
     Writer: `Ed Brubaker`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -20415,7 +20415,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `607`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2009-2011`, Arc: `Brubaker Captain America — Reborn aftermath`, Key: `NO`,
+    Year: `2010`, Arc: `Brubaker Captain America — Reborn aftermath`, Key: `NO`,
     Key_Reason: `Cap #607 Brubaker`, First_App: ``,
     Writer: `Ed Brubaker`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -20434,7 +20434,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `608`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2009-2011`, Arc: `Brubaker Captain America — Reborn aftermath`, Key: `NO`,
+    Year: `2010`, Arc: `Brubaker Captain America — Reborn aftermath`, Key: `NO`,
     Key_Reason: `Cap #608 Brubaker`, First_App: ``,
     Writer: `Ed Brubaker`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -20453,7 +20453,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `609`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2009-2011`, Arc: `Brubaker Captain America — Reborn aftermath`, Key: `NO`,
+    Year: `2010`, Arc: `Brubaker Captain America — Reborn aftermath`, Key: `NO`,
     Key_Reason: `Cap #609 Brubaker`, First_App: ``,
     Writer: `Ed Brubaker`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -20472,7 +20472,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `610`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2009-2011`, Arc: `Brubaker Captain America — Reborn aftermath`, Key: `NO`,
+    Year: `2010`, Arc: `Brubaker Captain America — Reborn aftermath`, Key: `NO`,
     Key_Reason: `Cap #610 Brubaker`, First_App: ``,
     Writer: `Ed Brubaker`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -20548,7 +20548,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `611`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2009-2011`, Arc: `Brubaker Captain America — Reborn aftermath`, Key: `NO`,
+    Year: `2010`, Arc: `Brubaker Captain America — Reborn aftermath`, Key: `NO`,
     Key_Reason: `Cap #611 Brubaker`, First_App: ``,
     Writer: `Ed Brubaker`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -20567,7 +20567,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `612`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2009-2011`, Arc: `Brubaker Captain America — Reborn aftermath`, Key: `NO`,
+    Year: `2011`, Arc: `Brubaker Captain America — Reborn aftermath`, Key: `NO`,
     Key_Reason: `Cap #612 Brubaker`, First_App: ``,
     Writer: `Ed Brubaker`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -20586,7 +20586,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `613`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2009-2011`, Arc: `Brubaker Captain America — Reborn aftermath`, Key: `NO`,
+    Year: `2011`, Arc: `Brubaker Captain America — Reborn aftermath`, Key: `NO`,
     Key_Reason: `Cap #613 Brubaker`, First_App: ``,
     Writer: `Ed Brubaker`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -20605,7 +20605,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `614`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2009-2011`, Arc: `Brubaker Captain America — Reborn aftermath`, Key: `NO`,
+    Year: `2011`, Arc: `Brubaker Captain America — Reborn aftermath`, Key: `NO`,
     Key_Reason: `Cap #614 Brubaker`, First_App: ``,
     Writer: `Ed Brubaker`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -20624,7 +20624,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `615`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2009-2011`, Arc: `Brubaker Captain America — Reborn aftermath`, Key: `NO`,
+    Year: `2011`, Arc: `Brubaker Captain America — Reborn aftermath`, Key: `NO`,
     Key_Reason: `Cap #615 Brubaker`, First_App: ``,
     Writer: `Ed Brubaker`, Artist: `Butch Guice`,
     Signed: `NO`, Signed_By: ``,
@@ -20985,7 +20985,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `13`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
+    Year: `2003`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #13`, First_App: ``,
     Writer: `John Ney Reiber & Robert Kirkman`, Artist: `John Cassaday & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -21004,7 +21004,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `14`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
+    Year: `2003`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #14`, First_App: ``,
     Writer: `John Ney Reiber & Robert Kirkman`, Artist: `John Cassaday & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -21023,7 +21023,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `15`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
+    Year: `2003`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #15`, First_App: ``,
     Writer: `John Ney Reiber & Robert Kirkman`, Artist: `John Cassaday & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -21042,7 +21042,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `16`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
+    Year: `2003`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #16`, First_App: ``,
     Writer: `John Ney Reiber & Robert Kirkman`, Artist: `John Cassaday & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -21061,7 +21061,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `17`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
+    Year: `2003`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #17`, First_App: ``,
     Writer: `John Ney Reiber & Robert Kirkman`, Artist: `John Cassaday & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -21080,7 +21080,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `18`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
+    Year: `2003`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #18`, First_App: ``,
     Writer: `John Ney Reiber & Robert Kirkman`, Artist: `John Cassaday & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -21099,7 +21099,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `19`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
+    Year: `2003`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #19`, First_App: ``,
     Writer: `John Ney Reiber & Robert Kirkman`, Artist: `John Cassaday & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -21118,7 +21118,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `20`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
+    Year: `2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #20`, First_App: ``,
     Writer: `John Ney Reiber & Robert Kirkman`, Artist: `John Cassaday & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -21137,7 +21137,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `21`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
+    Year: `2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #21`, First_App: ``,
     Writer: `John Ney Reiber & Robert Kirkman`, Artist: `John Cassaday & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -21156,7 +21156,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `22`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
+    Year: `2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #22`, First_App: ``,
     Writer: `John Ney Reiber & Robert Kirkman`, Artist: `John Cassaday & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -21175,7 +21175,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `23`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
+    Year: `2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #23`, First_App: ``,
     Writer: `John Ney Reiber & Robert Kirkman`, Artist: `John Cassaday & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -21194,7 +21194,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `24`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
+    Year: `2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #24`, First_App: ``,
     Writer: `John Ney Reiber & Robert Kirkman`, Artist: `John Cassaday & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -21213,7 +21213,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `25`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
+    Year: `2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #25`, First_App: ``,
     Writer: `John Ney Reiber & Robert Kirkman`, Artist: `John Cassaday & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -21232,7 +21232,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `26`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
+    Year: `2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #26`, First_App: ``,
     Writer: `John Ney Reiber & Robert Kirkman`, Artist: `John Cassaday & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -21251,7 +21251,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `27`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
+    Year: `2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #27`, First_App: ``,
     Writer: `John Ney Reiber & Robert Kirkman`, Artist: `John Cassaday & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -21270,7 +21270,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `28`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
+    Year: `2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #28`, First_App: ``,
     Writer: `John Ney Reiber & Robert Kirkman`, Artist: `John Cassaday & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -21289,7 +21289,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `29`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
+    Year: `2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #29`, First_App: ``,
     Writer: `John Ney Reiber & Robert Kirkman`, Artist: `John Cassaday & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -21308,7 +21308,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `30`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
+    Year: `2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #30`, First_App: ``,
     Writer: `John Ney Reiber & Robert Kirkman`, Artist: `John Cassaday & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -21327,7 +21327,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `31`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
+    Year: `2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #31`, First_App: ``,
     Writer: `John Ney Reiber & Robert Kirkman`, Artist: `John Cassaday & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -21346,7 +21346,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `32`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2002-2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
+    Year: `2004`, Arc: `Captain America — Robert Kirkman`, Key: `NO`,
     Key_Reason: `Kirkman Cap #32`, First_App: ``,
     Writer: `John Ney Reiber & Robert Kirkman`, Artist: `John Cassaday & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -22809,7 +22809,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `22`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2012-2015`, Arc: `Captain America — Rick Remender`, Key: `NO`,
+    Year: `2014`, Arc: `Captain America — Rick Remender`, Key: `NO`,
     Key_Reason: `Remender Cap #22`, First_App: ``,
     Writer: `Rick Remender`, Artist: `John Romita Jr. & Carlos Pacheco`,
     Signed: `NO`, Signed_By: ``,
@@ -22828,7 +22828,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `23`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2012-2015`, Arc: `Captain America — Rick Remender`, Key: `NO`,
+    Year: `2014`, Arc: `Captain America — Rick Remender`, Key: `NO`,
     Key_Reason: `Remender Cap #23`, First_App: ``,
     Writer: `Rick Remender`, Artist: `John Romita Jr. & Carlos Pacheco`,
     Signed: `NO`, Signed_By: ``,
@@ -22847,7 +22847,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `24`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2012-2015`, Arc: `Captain America — Rick Remender`, Key: `NO`,
+    Year: `2014`, Arc: `Captain America — Rick Remender`, Key: `NO`,
     Key_Reason: `Remender Cap #24`, First_App: ``,
     Writer: `Rick Remender`, Artist: `John Romita Jr. & Carlos Pacheco`,
     Signed: `NO`, Signed_By: ``,
@@ -22866,7 +22866,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `25`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2012-2015`, Arc: `Captain America — Rick Remender`, Key: `NO`,
+    Year: `2014`, Arc: `Captain America — Rick Remender`, Key: `NO`,
     Key_Reason: `Remender Cap #25`, First_App: ``,
     Writer: `Rick Remender`, Artist: `John Romita Jr. & Carlos Pacheco`,
     Signed: `NO`, Signed_By: ``,
@@ -23379,7 +23379,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America: Steve Rogers`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2016-2017`, Arc: `Steve Rogers Captain America — Spencer`, Key: `YES`,
+    Year: `2016`, Arc: `Steve Rogers Captain America — Spencer`, Key: `YES`,
     Key_Reason: `Steve Rogers Cap #1 — Nick Spencer; Steve Rogers returns as Cap; 'Hail Hydra' begins`, First_App: `Hydra Cap twist begins`,
     Writer: `Nick Spencer`, Artist: `Jesus Saiz`,
     Signed: `NO`, Signed_By: ``,
@@ -23436,7 +23436,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America: Steve Rogers`, Issue: `7`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2016-2017`, Arc: `Steve Rogers Captain America — Spencer`, Key: `NO`,
+    Year: `2017`, Arc: `Steve Rogers Captain America — Spencer`, Key: `NO`,
     Key_Reason: `SR Cap #7`, First_App: ``,
     Writer: `Nick Spencer`, Artist: `Jesus Saiz`,
     Signed: `NO`, Signed_By: ``,
@@ -23455,7 +23455,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America: Steve Rogers`, Issue: `8`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2016-2017`, Arc: `Steve Rogers Captain America — Spencer`, Key: `NO`,
+    Year: `2017`, Arc: `Steve Rogers Captain America — Spencer`, Key: `NO`,
     Key_Reason: `SR Cap #8`, First_App: ``,
     Writer: `Nick Spencer`, Artist: `Jesus Saiz`,
     Signed: `NO`, Signed_By: ``,
@@ -23474,7 +23474,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America: Steve Rogers`, Issue: `9`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2016-2017`, Arc: `Steve Rogers Captain America — Spencer`, Key: `NO`,
+    Year: `2017`, Arc: `Steve Rogers Captain America — Spencer`, Key: `NO`,
     Key_Reason: `SR Cap #9`, First_App: ``,
     Writer: `Nick Spencer`, Artist: `Jesus Saiz`,
     Signed: `NO`, Signed_By: ``,
@@ -23493,7 +23493,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America: Steve Rogers`, Issue: `10`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2016-2017`, Arc: `Steve Rogers Captain America — Spencer`, Key: `NO`,
+    Year: `2017`, Arc: `Steve Rogers Captain America — Spencer`, Key: `NO`,
     Key_Reason: `SR Cap #10`, First_App: ``,
     Writer: `Nick Spencer`, Artist: `Jesus Saiz`,
     Signed: `NO`, Signed_By: ``,
@@ -23512,7 +23512,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Doctor Strange`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `Doctor Strange — Waid/McKay`, Key: `YES`,
+    Year: `2024`, Arc: `Doctor Strange — Waid/McKay`, Key: `YES`,
     Key_Reason: `Doctor Strange #1 — Mark Waid`, First_App: ``,
     Writer: `Mark Waid`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
@@ -23531,7 +23531,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Doctor Strange`, Issue: `4`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `Doctor Strange — Waid/McKay`, Key: `YES`,
+    Year: `2023`, Arc: `Doctor Strange — Waid/McKay`, Key: `YES`,
     Key_Reason: `Doctor Strange #4 — Mark Waid Legacy #414`, First_App: ``,
     Writer: `Mark Waid`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
@@ -23721,7 +23721,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Excalibur`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
+    Year: `2020`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #2`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -23740,7 +23740,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Excalibur`, Issue: `3`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
+    Year: `2020`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #3`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -23759,7 +23759,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Excalibur`, Issue: `4`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
+    Year: `2020`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #4`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -23778,7 +23778,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Excalibur`, Issue: `5`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
+    Year: `2020`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #5`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -23797,7 +23797,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Excalibur`, Issue: `6`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
+    Year: `2020`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #6`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -23816,7 +23816,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Excalibur`, Issue: `7`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
+    Year: `2020`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #7`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -23835,7 +23835,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Excalibur`, Issue: `8`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
+    Year: `2020`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #8`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -23854,7 +23854,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Excalibur`, Issue: `9`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
+    Year: `2020`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #9`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -23873,7 +23873,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Excalibur`, Issue: `10`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
+    Year: `2020`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #10`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -23892,7 +23892,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Excalibur`, Issue: `11`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
+    Year: `2020`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #11`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -23911,7 +23911,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Excalibur`, Issue: `17`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
+    Year: `2021`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #17`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -23930,7 +23930,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Excalibur`, Issue: `19`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
+    Year: `2021`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #19`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -24082,7 +24082,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Excalibur`, Issue: `20`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
+    Year: `2021`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #20`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -24101,7 +24101,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Excalibur`, Issue: `21`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
+    Year: `2021`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #21`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -24120,7 +24120,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Excalibur`, Issue: `22`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
+    Year: `2021`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #22`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -24139,7 +24139,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Excalibur`, Issue: `23`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
+    Year: `2021`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #23`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -24158,7 +24158,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Excalibur`, Issue: `24`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
+    Year: `2021`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #24`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -24196,7 +24196,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Excalibur`, Issue: `26`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
+    Year: `2022`, Arc: `Excalibur Krakoa — Tini Howard`, Key: `NO`,
     Key_Reason: `Excalibur #26`, First_App: ``,
     Writer: `Tini Howard`, Artist: `Marcus To & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -24215,7 +24215,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Far Sector`, Issue: `1`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Far Sector — NK Jemisin — near-complete`, Key: `YES`,
+    Year: `2020`, Arc: `Far Sector — NK Jemisin — near-complete`, Key: `YES`,
     Key_Reason: `Far Sector #1 — NK Jemisin/Jamal Campbell; Jo Mullein as GL; near-complete run`, First_App: `Jo Mullein as Green Lantern`,
     Writer: `N.K. Jemisin`, Artist: `Jamal Campbell`,
     Signed: `NO`, Signed_By: ``,
@@ -24234,7 +24234,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Far Sector`, Issue: `2`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Far Sector — NK Jemisin — near-complete`, Key: `NO`,
+    Year: `2020`, Arc: `Far Sector — NK Jemisin — near-complete`, Key: `NO`,
     Key_Reason: `Far Sector #2`, First_App: ``,
     Writer: `N.K. Jemisin`, Artist: `Jamal Campbell`,
     Signed: `NO`, Signed_By: ``,
@@ -24253,7 +24253,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Far Sector`, Issue: `3`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Far Sector — NK Jemisin — near-complete`, Key: `NO`,
+    Year: `2020`, Arc: `Far Sector — NK Jemisin — near-complete`, Key: `NO`,
     Key_Reason: `Far Sector #3`, First_App: ``,
     Writer: `N.K. Jemisin`, Artist: `Jamal Campbell`,
     Signed: `NO`, Signed_By: ``,
@@ -24272,7 +24272,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Far Sector`, Issue: `4`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Far Sector — NK Jemisin — near-complete`, Key: `NO`,
+    Year: `2020`, Arc: `Far Sector — NK Jemisin — near-complete`, Key: `NO`,
     Key_Reason: `Far Sector #4`, First_App: ``,
     Writer: `N.K. Jemisin`, Artist: `Jamal Campbell`,
     Signed: `NO`, Signed_By: ``,
@@ -25336,7 +25336,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Far Sector`, Issue: `5`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Far Sector — NK Jemisin — near-complete`, Key: `NO`,
+    Year: `2020`, Arc: `Far Sector — NK Jemisin — near-complete`, Key: `NO`,
     Key_Reason: `Far Sector #5`, First_App: ``,
     Writer: `N.K. Jemisin`, Artist: `Jamal Campbell`,
     Signed: `NO`, Signed_By: ``,
@@ -25355,7 +25355,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Far Sector`, Issue: `6`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Far Sector — NK Jemisin — near-complete`, Key: `NO`,
+    Year: `2020`, Arc: `Far Sector — NK Jemisin — near-complete`, Key: `NO`,
     Key_Reason: `Far Sector #6`, First_App: ``,
     Writer: `N.K. Jemisin`, Artist: `Jamal Campbell`,
     Signed: `NO`, Signed_By: ``,
@@ -25374,7 +25374,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Far Sector`, Issue: `7`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Far Sector — NK Jemisin — near-complete`, Key: `NO`,
+    Year: `2020`, Arc: `Far Sector — NK Jemisin — near-complete`, Key: `NO`,
     Key_Reason: `Far Sector #7`, First_App: ``,
     Writer: `N.K. Jemisin`, Artist: `Jamal Campbell`,
     Signed: `NO`, Signed_By: ``,
@@ -25393,7 +25393,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Far Sector`, Issue: `8`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Far Sector — NK Jemisin — near-complete`, Key: `NO`,
+    Year: `2020`, Arc: `Far Sector — NK Jemisin — near-complete`, Key: `NO`,
     Key_Reason: `Far Sector #8`, First_App: ``,
     Writer: `N.K. Jemisin`, Artist: `Jamal Campbell`,
     Signed: `NO`, Signed_By: ``,
@@ -25412,7 +25412,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Far Sector`, Issue: `11`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Far Sector — NK Jemisin — near-complete`, Key: `NO`,
+    Year: `2021`, Arc: `Far Sector — NK Jemisin — near-complete`, Key: `NO`,
     Key_Reason: `Far Sector #11`, First_App: ``,
     Writer: `N.K. Jemisin`, Artist: `Jamal Campbell`,
     Signed: `NO`, Signed_By: ``,
@@ -25431,7 +25431,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Firefly`, Issue: `15`, Publisher: `BOOM! Studios`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Firefly Greg Pak run`, Key: `NO`,
+    Year: `2020`, Arc: `Firefly Greg Pak run`, Key: `NO`,
     Key_Reason: `Firefly #15 Greg Pak`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -25450,7 +25450,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Firefly`, Issue: `17`, Publisher: `BOOM! Studios`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Firefly Greg Pak run`, Key: `NO`,
+    Year: `2020`, Arc: `Firefly Greg Pak run`, Key: `NO`,
     Key_Reason: `Firefly #17 Greg Pak`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -25469,7 +25469,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Firefly`, Issue: `18`, Publisher: `BOOM! Studios`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Firefly Greg Pak run`, Key: `NO`,
+    Year: `2020`, Arc: `Firefly Greg Pak run`, Key: `NO`,
     Key_Reason: `Firefly #18 Greg Pak`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -25488,7 +25488,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Firefly`, Issue: `19`, Publisher: `BOOM! Studios`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Firefly Greg Pak run`, Key: `NO`,
+    Year: `2020`, Arc: `Firefly Greg Pak run`, Key: `NO`,
     Key_Reason: `Firefly #19 Greg Pak`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -25507,7 +25507,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Firefly`, Issue: `20`, Publisher: `BOOM! Studios`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Firefly Greg Pak run`, Key: `NO`,
+    Year: `2020`, Arc: `Firefly Greg Pak run`, Key: `NO`,
     Key_Reason: `Firefly #20 Greg Pak`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -25526,7 +25526,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Firefly`, Issue: `21`, Publisher: `BOOM! Studios`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Firefly Greg Pak run`, Key: `NO`,
+    Year: `2020`, Arc: `Firefly Greg Pak run`, Key: `NO`,
     Key_Reason: `Firefly #21 Greg Pak`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -25545,7 +25545,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Firefly`, Issue: `22`, Publisher: `BOOM! Studios`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Firefly Greg Pak run`, Key: `NO`,
+    Year: `2020`, Arc: `Firefly Greg Pak run`, Key: `NO`,
     Key_Reason: `Firefly #22 Greg Pak`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -25564,7 +25564,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Firefly`, Issue: `23`, Publisher: `BOOM! Studios`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Firefly Greg Pak run`, Key: `NO`,
+    Year: `2020`, Arc: `Firefly Greg Pak run`, Key: `NO`,
     Key_Reason: `Firefly #23 Greg Pak`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -25583,7 +25583,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Firefly`, Issue: `24`, Publisher: `BOOM! Studios`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Firefly Greg Pak run`, Key: `NO`,
+    Year: `2020`, Arc: `Firefly Greg Pak run`, Key: `NO`,
     Key_Reason: `Firefly #24 Greg Pak`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -25602,7 +25602,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Firefly`, Issue: `25`, Publisher: `BOOM! Studios`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Firefly Greg Pak run`, Key: `NO`,
+    Year: `2021`, Arc: `Firefly Greg Pak run`, Key: `NO`,
     Key_Reason: `Firefly #25 Greg Pak`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -25621,7 +25621,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Firefly`, Issue: `26`, Publisher: `BOOM! Studios`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Firefly Greg Pak run`, Key: `NO`,
+    Year: `2021`, Arc: `Firefly Greg Pak run`, Key: `NO`,
     Key_Reason: `Firefly #26 Greg Pak`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -25640,7 +25640,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Firefly`, Issue: `27`, Publisher: `BOOM! Studios`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Firefly Greg Pak run`, Key: `NO`,
+    Year: `2021`, Arc: `Firefly Greg Pak run`, Key: `NO`,
     Key_Reason: `Firefly #27 Greg Pak`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -25659,7 +25659,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Firefly`, Issue: `28`, Publisher: `BOOM! Studios`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Firefly Greg Pak run`, Key: `NO`,
+    Year: `2021`, Arc: `Firefly Greg Pak run`, Key: `NO`,
     Key_Reason: `Firefly #28 Greg Pak`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -25678,7 +25678,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Firefly`, Issue: `29`, Publisher: `BOOM! Studios`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Firefly Greg Pak run`, Key: `NO`,
+    Year: `2021`, Arc: `Firefly Greg Pak run`, Key: `NO`,
     Key_Reason: `Firefly #29 Greg Pak`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -25697,7 +25697,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Firefly`, Issue: `30`, Publisher: `BOOM! Studios`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Firefly Greg Pak run`, Key: `NO`,
+    Year: `2021`, Arc: `Firefly Greg Pak run`, Key: `NO`,
     Key_Reason: `Firefly #30 Greg Pak`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -25811,7 +25811,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Firefly`, Issue: `31`, Publisher: `BOOM! Studios`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Firefly Greg Pak run`, Key: `NO`,
+    Year: `2021`, Arc: `Firefly Greg Pak run`, Key: `NO`,
     Key_Reason: `Firefly #31 Greg Pak`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -25830,7 +25830,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Firefly`, Issue: `32`, Publisher: `BOOM! Studios`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Firefly Greg Pak run`, Key: `NO`,
+    Year: `2021`, Arc: `Firefly Greg Pak run`, Key: `NO`,
     Key_Reason: `Firefly #32 Greg Pak`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -25849,7 +25849,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Firefly`, Issue: `33`, Publisher: `BOOM! Studios`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Firefly Greg Pak run`, Key: `NO`,
+    Year: `2021`, Arc: `Firefly Greg Pak run`, Key: `NO`,
     Key_Reason: `Firefly #33 Greg Pak`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -25868,7 +25868,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Firefly`, Issue: `34`, Publisher: `BOOM! Studios`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Firefly Greg Pak run`, Key: `NO`,
+    Year: `2021`, Arc: `Firefly Greg Pak run`, Key: `NO`,
     Key_Reason: `Firefly #34 Greg Pak`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -25887,7 +25887,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Firefly`, Issue: `35`, Publisher: `BOOM! Studios`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Firefly Greg Pak run`, Key: `NO`,
+    Year: `2021`, Arc: `Firefly Greg Pak run`, Key: `NO`,
     Key_Reason: `Firefly #35 Greg Pak`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -25906,7 +25906,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Firefly`, Issue: `36`, Publisher: `BOOM! Studios`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Firefly Greg Pak run`, Key: `NO`,
+    Year: `2022`, Arc: `Firefly Greg Pak run`, Key: `NO`,
     Key_Reason: `Firefly #36 Greg Pak`, First_App: ``,
     Writer: `Greg Pak`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -26001,7 +26001,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Generation X`, Issue: `59`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2001`, Arc: `Generation X late run`, Key: `NO`,
+    Year: `2000`, Arc: `Generation X late run`, Key: `NO`,
     Key_Reason: `Generation X #59 — late run issues #55-75`, First_App: ``,
     Writer: `Jay Faerber & Brian Wood`, Artist: `Kevin Sharpe & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -26020,7 +26020,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Generation X`, Issue: `60`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2001`, Arc: `Generation X late run`, Key: `NO`,
+    Year: `2000`, Arc: `Generation X late run`, Key: `NO`,
     Key_Reason: `Generation X #60 — late run issues #55-75`, First_App: ``,
     Writer: `Jay Faerber & Brian Wood`, Artist: `Kevin Sharpe & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -26039,7 +26039,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Generation X`, Issue: `61`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2001`, Arc: `Generation X late run`, Key: `NO`,
+    Year: `2000`, Arc: `Generation X late run`, Key: `NO`,
     Key_Reason: `Generation X #61 — late run issues #55-75`, First_App: ``,
     Writer: `Jay Faerber & Brian Wood`, Artist: `Kevin Sharpe & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -26685,7 +26685,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Generation X`, Issue: `62`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2001`, Arc: `Generation X late run`, Key: `NO`,
+    Year: `2000`, Arc: `Generation X late run`, Key: `NO`,
     Key_Reason: `Generation X #62 — late run issues #55-75`, First_App: ``,
     Writer: `Jay Faerber & Brian Wood`, Artist: `Kevin Sharpe & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -26704,7 +26704,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Generation X`, Issue: `63`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2001`, Arc: `Generation X late run`, Key: `NO`,
+    Year: `2000`, Arc: `Generation X late run`, Key: `NO`,
     Key_Reason: `Generation X #63 — late run issues #55-75`, First_App: ``,
     Writer: `Jay Faerber & Brian Wood`, Artist: `Kevin Sharpe & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -26723,7 +26723,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Generation X`, Issue: `64`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2001`, Arc: `Generation X late run`, Key: `NO`,
+    Year: `2000`, Arc: `Generation X late run`, Key: `NO`,
     Key_Reason: `Generation X #64 — late run issues #55-75`, First_App: ``,
     Writer: `Jay Faerber & Brian Wood`, Artist: `Kevin Sharpe & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -26742,7 +26742,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Generation X`, Issue: `65`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2001`, Arc: `Generation X late run`, Key: `NO`,
+    Year: `2000`, Arc: `Generation X late run`, Key: `NO`,
     Key_Reason: `Generation X #65 — late run issues #55-75`, First_App: ``,
     Writer: `Jay Faerber & Brian Wood`, Artist: `Kevin Sharpe & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -26761,7 +26761,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Generation X`, Issue: `66`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2001`, Arc: `Generation X late run`, Key: `NO`,
+    Year: `2000`, Arc: `Generation X late run`, Key: `NO`,
     Key_Reason: `Generation X #66 — late run issues #55-75`, First_App: ``,
     Writer: `Jay Faerber & Brian Wood`, Artist: `Kevin Sharpe & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -26780,7 +26780,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Generation X`, Issue: `67`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2001`, Arc: `Generation X late run`, Key: `NO`,
+    Year: `2000`, Arc: `Generation X late run`, Key: `NO`,
     Key_Reason: `Generation X #67 — late run issues #55-75`, First_App: ``,
     Writer: `Jay Faerber & Brian Wood`, Artist: `Kevin Sharpe & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -26799,7 +26799,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Generation X`, Issue: `68`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2001`, Arc: `Generation X late run`, Key: `NO`,
+    Year: `2000`, Arc: `Generation X late run`, Key: `NO`,
     Key_Reason: `Generation X #68 — late run issues #55-75`, First_App: ``,
     Writer: `Jay Faerber & Brian Wood`, Artist: `Kevin Sharpe & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -26818,7 +26818,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Generation X`, Issue: `69`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2001`, Arc: `Generation X late run`, Key: `NO`,
+    Year: `2000`, Arc: `Generation X late run`, Key: `NO`,
     Key_Reason: `Generation X #69 — late run issues #55-75`, First_App: ``,
     Writer: `Jay Faerber & Brian Wood`, Artist: `Kevin Sharpe & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -26837,7 +26837,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Generation X`, Issue: `70`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2001`, Arc: `Generation X late run`, Key: `NO`,
+    Year: `2000`, Arc: `Generation X late run`, Key: `NO`,
     Key_Reason: `Generation X #70 — late run issues #55-75`, First_App: ``,
     Writer: `Jay Faerber & Brian Wood`, Artist: `Kevin Sharpe & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -26856,7 +26856,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Generation X`, Issue: `71`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2001`, Arc: `Generation X late run`, Key: `NO`,
+    Year: `2001`, Arc: `Generation X late run`, Key: `NO`,
     Key_Reason: `Generation X #71 — late run issues #55-75`, First_App: ``,
     Writer: `Jay Faerber & Brian Wood`, Artist: `Kevin Sharpe & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -26875,7 +26875,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Generation X`, Issue: `72`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2001`, Arc: `Generation X late run`, Key: `NO`,
+    Year: `2001`, Arc: `Generation X late run`, Key: `NO`,
     Key_Reason: `Generation X #72 — late run issues #55-75`, First_App: ``,
     Writer: `Jay Faerber & Brian Wood`, Artist: `Kevin Sharpe & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -26894,7 +26894,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Generation X`, Issue: `73`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2001`, Arc: `Generation X late run`, Key: `NO`,
+    Year: `2001`, Arc: `Generation X late run`, Key: `NO`,
     Key_Reason: `Generation X #73 — late run issues #55-75`, First_App: ``,
     Writer: `Jay Faerber & Brian Wood`, Artist: `Kevin Sharpe & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -26913,7 +26913,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Generation X`, Issue: `74`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2001`, Arc: `Generation X late run`, Key: `NO`,
+    Year: `2001`, Arc: `Generation X late run`, Key: `NO`,
     Key_Reason: `Generation X #74 — late run issues #55-75`, First_App: ``,
     Writer: `Jay Faerber & Brian Wood`, Artist: `Kevin Sharpe & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -26932,7 +26932,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Generation X`, Issue: `75`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2001`, Arc: `Generation X late run`, Key: `NO`,
+    Year: `2001`, Arc: `Generation X late run`, Key: `NO`,
     Key_Reason: `Generation X #75 — late run issues #55-75`, First_App: ``,
     Writer: `Jay Faerber & Brian Wood`, Artist: `Kevin Sharpe & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -27483,7 +27483,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Green Lantern`, Issue: `13`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `Green Lantern — Jeremy Adams`, Key: `NO`,
+    Year: `2024`, Arc: `Green Lantern — Jeremy Adams`, Key: `NO`,
     Key_Reason: `GL #13 Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Xermanico & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -27502,7 +27502,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Green Lantern`, Issue: `14`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `Green Lantern — Jeremy Adams`, Key: `NO`,
+    Year: `2024`, Arc: `Green Lantern — Jeremy Adams`, Key: `NO`,
     Key_Reason: `GL #14 Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Xermanico & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -27521,7 +27521,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Green Lantern`, Issue: `15`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `Green Lantern — Jeremy Adams`, Key: `NO`,
+    Year: `2024`, Arc: `Green Lantern — Jeremy Adams`, Key: `NO`,
     Key_Reason: `GL #15 Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Xermanico & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -27673,7 +27673,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Green Lantern`, Issue: `8`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2021-2022`, Arc: `Green Lantern — Geoffrey Thorne/Tom Raney`, Key: `NO`,
+    Year: `2022`, Arc: `Green Lantern — Geoffrey Thorne/Tom Raney`, Key: `NO`,
     Key_Reason: `GL #8 Thorne/Raney; cool Joe Mullen cover noted on some`, First_App: ``,
     Writer: `Geoffrey Thorne`, Artist: `Tom Raney & Xermanico`,
     Signed: `NO`, Signed_By: ``,
@@ -27692,7 +27692,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Green Lantern`, Issue: `9`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2021-2022`, Arc: `Green Lantern — Geoffrey Thorne/Tom Raney`, Key: `NO`,
+    Year: `2022`, Arc: `Green Lantern — Geoffrey Thorne/Tom Raney`, Key: `NO`,
     Key_Reason: `GL #9 Thorne/Raney; cool Joe Mullen cover noted on some`, First_App: ``,
     Writer: `Geoffrey Thorne`, Artist: `Tom Raney & Xermanico`,
     Signed: `NO`, Signed_By: ``,
@@ -27711,7 +27711,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Green Lantern: War Journal`, Issue: `3`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `GL War Journal — Johnson/Montos`, Key: `YES`,
+    Year: `2024`, Arc: `GL War Journal — Johnson/Montos`, Key: `YES`,
     Key_Reason: `GL War Journal #3`, First_App: ``,
     Writer: `Phillip Kennedy Johnson`, Artist: `Montos`,
     Signed: `NO`, Signed_By: ``,
@@ -27730,7 +27730,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Green Lantern: War Journal`, Issue: `4`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `GL War Journal — Johnson/Montos`, Key: `NO`,
+    Year: `2024`, Arc: `GL War Journal — Johnson/Montos`, Key: `NO`,
     Key_Reason: `GL War Journal #4`, First_App: ``,
     Writer: `Phillip Kennedy Johnson`, Artist: `Montos`,
     Signed: `NO`, Signed_By: ``,
@@ -27749,7 +27749,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Green Lantern: War Journal`, Issue: `5`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `GL War Journal — Johnson/Montos`, Key: `NO`,
+    Year: `2024`, Arc: `GL War Journal — Johnson/Montos`, Key: `NO`,
     Key_Reason: `GL War Journal #5`, First_App: ``,
     Writer: `Phillip Kennedy Johnson`, Artist: `Montos`,
     Signed: `NO`, Signed_By: ``,
@@ -27768,7 +27768,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Green Lantern: War Journal`, Issue: `6`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `GL War Journal — Johnson/Montos`, Key: `NO`,
+    Year: `2024`, Arc: `GL War Journal — Johnson/Montos`, Key: `NO`,
     Key_Reason: `GL War Journal #6`, First_App: ``,
     Writer: `Phillip Kennedy Johnson`, Artist: `Montos`,
     Signed: `NO`, Signed_By: ``,
@@ -27806,7 +27806,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Green Lantern: War Journal`, Issue: `7`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `GL War Journal — Johnson/Montos`, Key: `NO`,
+    Year: `2024`, Arc: `GL War Journal — Johnson/Montos`, Key: `NO`,
     Key_Reason: `GL War Journal #7`, First_App: ``,
     Writer: `Phillip Kennedy Johnson`, Artist: `Montos`,
     Signed: `NO`, Signed_By: ``,
@@ -27825,7 +27825,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Green Lantern: War Journal`, Issue: `8`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `GL War Journal — Johnson/Montos`, Key: `NO`,
+    Year: `2024`, Arc: `GL War Journal — Johnson/Montos`, Key: `NO`,
     Key_Reason: `GL War Journal #8`, First_App: ``,
     Writer: `Phillip Kennedy Johnson`, Artist: `Montos`,
     Signed: `NO`, Signed_By: ``,
@@ -27844,7 +27844,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Green Lantern: War Journal`, Issue: `9`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `GL War Journal — Johnson/Montos`, Key: `NO`,
+    Year: `2024`, Arc: `GL War Journal — Johnson/Montos`, Key: `NO`,
     Key_Reason: `GL War Journal #9`, First_App: ``,
     Writer: `Phillip Kennedy Johnson`, Artist: `Montos`,
     Signed: `NO`, Signed_By: ``,
@@ -28034,7 +28034,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Green Lantern: War Journal`, Issue: `10`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `GL War Journal — Johnson/Montos`, Key: `NO`,
+    Year: `2024`, Arc: `GL War Journal — Johnson/Montos`, Key: `NO`,
     Key_Reason: `GL War Journal #10`, First_App: ``,
     Writer: `Phillip Kennedy Johnson`, Artist: `Montos`,
     Signed: `NO`, Signed_By: ``,
@@ -28053,7 +28053,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Green Lantern: War Journal`, Issue: `11`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `GL War Journal — Johnson/Montos`, Key: `NO`,
+    Year: `2024`, Arc: `GL War Journal — Johnson/Montos`, Key: `NO`,
     Key_Reason: `GL War Journal #11`, First_App: ``,
     Writer: `Phillip Kennedy Johnson`, Artist: `Montos`,
     Signed: `NO`, Signed_By: ``,
@@ -28072,7 +28072,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Green Lantern: War Journal`, Issue: `12`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `GL War Journal — Johnson/Montos`, Key: `NO`,
+    Year: `2024`, Arc: `GL War Journal — Johnson/Montos`, Key: `NO`,
     Key_Reason: `GL War Journal #12`, First_App: ``,
     Writer: `Phillip Kennedy Johnson`, Artist: `Montos`,
     Signed: `NO`, Signed_By: ``,
@@ -28091,7 +28091,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Hawkman`, Issue: `14`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Hawkman — Venditti`, Key: `NO`,
+    Year: `2019`, Arc: `Hawkman — Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #14 Venditti — extends Box 21 run`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -28110,7 +28110,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Hawkman`, Issue: `15`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Hawkman — Venditti`, Key: `NO`,
+    Year: `2019`, Arc: `Hawkman — Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #15 Venditti — extends Box 21 run`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -28129,7 +28129,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Hawkman`, Issue: `16`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Hawkman — Venditti`, Key: `NO`,
+    Year: `2019`, Arc: `Hawkman — Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #16 Venditti — extends Box 21 run cool cover`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -28148,7 +28148,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Hawkman`, Issue: `17`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Hawkman — Venditti`, Key: `NO`,
+    Year: `2019`, Arc: `Hawkman — Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #17 Venditti — extends Box 21 run`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -28167,7 +28167,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Hawkman`, Issue: `18`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Hawkman — Venditti`, Key: `NO`,
+    Year: `2020`, Arc: `Hawkman — Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #18 Venditti — extends Box 21 run`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -28186,7 +28186,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Hawkman`, Issue: `19`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Hawkman — Venditti`, Key: `NO`,
+    Year: `2020`, Arc: `Hawkman — Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #19 Venditti — extends Box 21 run`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -28205,7 +28205,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Hawkman`, Issue: `20`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Hawkman — Venditti`, Key: `NO`,
+    Year: `2020`, Arc: `Hawkman — Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #20 Venditti — extends Box 21 run`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -28224,7 +28224,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Hawkman`, Issue: `21`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Hawkman — Venditti`, Key: `NO`,
+    Year: `2020`, Arc: `Hawkman — Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #21 Venditti — extends Box 21 run`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -28243,7 +28243,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Hawkman`, Issue: `22`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Hawkman — Venditti`, Key: `NO`,
+    Year: `2020`, Arc: `Hawkman — Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #22 Venditti — extends Box 21 run`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -28262,7 +28262,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Hawkman`, Issue: `23`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Hawkman — Venditti`, Key: `NO`,
+    Year: `2020`, Arc: `Hawkman — Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #23 Venditti — extends Box 21 run`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -28281,7 +28281,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Hawkman`, Issue: `24`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Hawkman — Venditti`, Key: `NO`,
+    Year: `2020`, Arc: `Hawkman — Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #24 Venditti — extends Box 21 run`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -28300,7 +28300,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Hawkman`, Issue: `25`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Hawkman — Venditti`, Key: `NO`,
+    Year: `2020`, Arc: `Hawkman — Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #25 Venditti — extends Box 21 run`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -28319,7 +28319,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Hawkman`, Issue: `26`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Hawkman — Venditti`, Key: `NO`,
+    Year: `2020`, Arc: `Hawkman — Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #26 Venditti — extends Box 21 run`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -28338,7 +28338,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Hawkman`, Issue: `27`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Hawkman — Venditti`, Key: `NO`,
+    Year: `2020`, Arc: `Hawkman — Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #27 Venditti — extends Box 21 run`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -28357,7 +28357,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Hawkman`, Issue: `28`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Hawkman — Venditti`, Key: `NO`,
+    Year: `2020`, Arc: `Hawkman — Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #28 Venditti — extends Box 21 run`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -72456,7 +72456,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Hawkman`, Issue: `29`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Hawkman — Venditti`, Key: `NO`,
+    Year: `2021`, Arc: `Hawkman — Venditti`, Key: `NO`,
     Key_Reason: `Hawkman #29 Venditti — extends Box 21 run`, First_App: ``,
     Writer: `Robert Venditti`, Artist: `Bryan Hitch & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -72475,7 +72475,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Hellions`, Issue: `7`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Hellions Krakoa — Zeb Wells`, Key: `NO`,
+    Year: `2021`, Arc: `Hellions Krakoa — Zeb Wells`, Key: `NO`,
     Key_Reason: `Hellions #7 — Zeb Wells writing Sinister's team of bad mutants — this is the Zeb Wells who later got Amazing Spider-Man`, First_App: ``,
     Writer: `Zeb Wells`, Artist: `Stephen Segovia`,
     Signed: `NO`, Signed_By: ``,
@@ -72494,7 +72494,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Hellions`, Issue: `9`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Hellions Krakoa — Zeb Wells`, Key: `NO`,
+    Year: `2021`, Arc: `Hellions Krakoa — Zeb Wells`, Key: `NO`,
     Key_Reason: `Hellions #9 — Zeb Wells writing Sinister's team of bad mutants — this is the Zeb Wells who later got Amazing Spider-Man`, First_App: ``,
     Writer: `Zeb Wells`, Artist: `Stephen Segovia`,
     Signed: `NO`, Signed_By: ``,
@@ -72513,7 +72513,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Hellions`, Issue: `12`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Hellions Krakoa — Zeb Wells`, Key: `NO`,
+    Year: `2021`, Arc: `Hellions Krakoa — Zeb Wells`, Key: `NO`,
     Key_Reason: `Hellions #12 — Zeb Wells writing Sinister's team of bad mutants — this is the Zeb Wells who later got Amazing Spider-Man`, First_App: ``,
     Writer: `Zeb Wells`, Artist: `Stephen Segovia`,
     Signed: `NO`, Signed_By: ``,
@@ -72798,7 +72798,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Justice League`, Issue: `51`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Bendis/Tynion Dark Metal era`, Key: `NO`,
+    Year: `2020`, Arc: `Bendis/Tynion Dark Metal era`, Key: `NO`,
     Key_Reason: `JL #51 — Dark Knights Death Metal / Endless Winter crossovers`, First_App: ``,
     Writer: `Brian Michael Bendis & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -72817,7 +72817,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Justice League`, Issue: `52`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Bendis/Tynion Dark Metal era`, Key: `NO`,
+    Year: `2020`, Arc: `Bendis/Tynion Dark Metal era`, Key: `NO`,
     Key_Reason: `JL #52 — Dark Knights Death Metal / Endless Winter crossovers`, First_App: ``,
     Writer: `Brian Michael Bendis & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -72836,7 +72836,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Justice League`, Issue: `53`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Bendis/Tynion Dark Metal era`, Key: `NO`,
+    Year: `2020`, Arc: `Bendis/Tynion Dark Metal era`, Key: `NO`,
     Key_Reason: `JL #53 — Dark Knights Death Metal / Endless Winter crossovers`, First_App: ``,
     Writer: `Brian Michael Bendis & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -72855,7 +72855,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Justice League`, Issue: `54`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Bendis/Tynion Dark Metal era`, Key: `NO`,
+    Year: `2020`, Arc: `Bendis/Tynion Dark Metal era`, Key: `NO`,
     Key_Reason: `JL #54 — Dark Knights Death Metal / Endless Winter crossovers`, First_App: ``,
     Writer: `Brian Michael Bendis & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -72874,7 +72874,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Justice League`, Issue: `55`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Bendis/Tynion Dark Metal era`, Key: `NO`,
+    Year: `2020`, Arc: `Bendis/Tynion Dark Metal era`, Key: `NO`,
     Key_Reason: `JL #55 — Dark Knights Death Metal / Endless Winter crossovers`, First_App: ``,
     Writer: `Brian Michael Bendis & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -72893,7 +72893,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Justice League`, Issue: `56`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Bendis/Tynion Dark Metal era`, Key: `NO`,
+    Year: `2021`, Arc: `Bendis/Tynion Dark Metal era`, Key: `NO`,
     Key_Reason: `JL #56 — Dark Knights Death Metal / Endless Winter crossovers`, First_App: ``,
     Writer: `Brian Michael Bendis & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -72912,7 +72912,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Justice League`, Issue: `57`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Bendis/Tynion Dark Metal era`, Key: `NO`,
+    Year: `2021`, Arc: `Bendis/Tynion Dark Metal era`, Key: `NO`,
     Key_Reason: `JL #57 — Dark Knights Death Metal / Endless Winter crossovers`, First_App: ``,
     Writer: `Brian Michael Bendis & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -72931,7 +72931,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Justice League`, Issue: `58`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Bendis/Tynion Dark Metal era`, Key: `NO`,
+    Year: `2021`, Arc: `Bendis/Tynion Dark Metal era`, Key: `NO`,
     Key_Reason: `JL #58 — Dark Knights Death Metal / Endless Winter crossovers`, First_App: ``,
     Writer: `Brian Michael Bendis & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -72950,7 +72950,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Justice League`, Issue: `59`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Bendis/Tynion Dark Metal era`, Key: `NO`,
+    Year: `2021`, Arc: `Bendis/Tynion Dark Metal era`, Key: `NO`,
     Key_Reason: `JL #59 — Dark Knights Death Metal / Endless Winter crossovers`, First_App: ``,
     Writer: `Brian Michael Bendis & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -72969,7 +72969,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Justice League`, Issue: `60`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Bendis/Tynion Dark Metal era`, Key: `NO`,
+    Year: `2021`, Arc: `Bendis/Tynion Dark Metal era`, Key: `NO`,
     Key_Reason: `JL #60 — Dark Knights Death Metal / Endless Winter crossovers`, First_App: ``,
     Writer: `Brian Michael Bendis & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -72988,7 +72988,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Justice League`, Issue: `61`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Bendis/Tynion Dark Metal era`, Key: `NO`,
+    Year: `2021`, Arc: `Bendis/Tynion Dark Metal era`, Key: `NO`,
     Key_Reason: `JL #61 — Dark Knights Death Metal / Endless Winter crossovers`, First_App: ``,
     Writer: `Brian Michael Bendis & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -73007,7 +73007,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Justice League`, Issue: `62`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Bendis/Tynion Dark Metal era`, Key: `NO`,
+    Year: `2021`, Arc: `Bendis/Tynion Dark Metal era`, Key: `NO`,
     Key_Reason: `JL #62 — Dark Knights Death Metal / Endless Winter crossovers`, First_App: ``,
     Writer: `Brian Michael Bendis & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -73026,7 +73026,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Justice League`, Issue: `67`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Bendis/Tynion Dark Metal era`, Key: `NO`,
+    Year: `2021`, Arc: `Bendis/Tynion Dark Metal era`, Key: `NO`,
     Key_Reason: `JL #67 — Dark Knights Death Metal / Endless Winter crossovers`, First_App: ``,
     Writer: `Brian Michael Bendis & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -73045,7 +73045,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Justice League`, Issue: `68`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Bendis/Tynion Dark Metal era`, Key: `NO`,
+    Year: `2021`, Arc: `Bendis/Tynion Dark Metal era`, Key: `NO`,
     Key_Reason: `JL #68 — Dark Knights Death Metal / Endless Winter crossovers`, First_App: ``,
     Writer: `Brian Michael Bendis & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -73064,7 +73064,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Justice League`, Issue: `69`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Bendis/Tynion Dark Metal era`, Key: `NO`,
+    Year: `2022`, Arc: `Bendis/Tynion Dark Metal era`, Key: `NO`,
     Key_Reason: `JL #69 — Dark Knights Death Metal / Endless Winter crossovers`, First_App: ``,
     Writer: `Brian Michael Bendis & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -73159,7 +73159,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Justice League`, Issue: `7`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2018-2019`, Arc: `Justice League — Scott Snyder`, Key: `NO`,
+    Year: `2018`, Arc: `Justice League — Scott Snyder`, Key: `NO`,
     Key_Reason: `JL #7 Snyder`, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Jorge Jimenez & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -73292,7 +73292,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Justice League Dark`, Issue: `17`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Justice League Dark`, Key: `NO`,
+    Year: `2020`, Arc: `Justice League Dark`, Key: `NO`,
     Key_Reason: `JLD #17`, First_App: ``,
     Writer: `James Tynion IV`, Artist: `Álvaro Martínez Bueno`,
     Signed: `NO`, Signed_By: ``,
@@ -73311,7 +73311,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Justice League Dark`, Issue: `18`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Justice League Dark`, Key: `NO`,
+    Year: `2020`, Arc: `Justice League Dark`, Key: `NO`,
     Key_Reason: `JLD #18`, First_App: ``,
     Writer: `James Tynion IV`, Artist: `Álvaro Martínez Bueno`,
     Signed: `NO`, Signed_By: ``,
@@ -73330,7 +73330,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Justice League Dark`, Issue: `19`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Justice League Dark`, Key: `NO`,
+    Year: `2020`, Arc: `Justice League Dark`, Key: `NO`,
     Key_Reason: `JLD #19`, First_App: ``,
     Writer: `James Tynion IV`, Artist: `Álvaro Martínez Bueno`,
     Signed: `NO`, Signed_By: ``,
@@ -73349,7 +73349,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Justice League Dark`, Issue: `20`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Justice League Dark`, Key: `NO`,
+    Year: `2020`, Arc: `Justice League Dark`, Key: `NO`,
     Key_Reason: `JLD #20`, First_App: ``,
     Writer: `James Tynion IV`, Artist: `Álvaro Martínez Bueno`,
     Signed: `NO`, Signed_By: ``,
@@ -73368,7 +73368,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Justice League Dark`, Issue: `21`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Justice League Dark`, Key: `NO`,
+    Year: `2020`, Arc: `Justice League Dark`, Key: `NO`,
     Key_Reason: `JLD #21`, First_App: ``,
     Writer: `James Tynion IV`, Artist: `Álvaro Martínez Bueno`,
     Signed: `NO`, Signed_By: ``,
@@ -73387,7 +73387,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Justice League Dark`, Issue: `22`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Justice League Dark`, Key: `NO`,
+    Year: `2020`, Arc: `Justice League Dark`, Key: `NO`,
     Key_Reason: `JLD #22`, First_App: ``,
     Writer: `James Tynion IV`, Artist: `Álvaro Martínez Bueno`,
     Signed: `NO`, Signed_By: ``,
@@ -73653,7 +73653,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Justice League Dark`, Issue: `23`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Justice League Dark`, Key: `NO`,
+    Year: `2020`, Arc: `Justice League Dark`, Key: `NO`,
     Key_Reason: `JLD #23`, First_App: ``,
     Writer: `James Tynion IV`, Artist: `Álvaro Martínez Bueno`,
     Signed: `NO`, Signed_By: ``,
@@ -73672,7 +73672,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Justice League Dark`, Issue: `24`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Justice League Dark`, Key: `NO`,
+    Year: `2020`, Arc: `Justice League Dark`, Key: `NO`,
     Key_Reason: `JLD #24`, First_App: ``,
     Writer: `James Tynion IV`, Artist: `Álvaro Martínez Bueno`,
     Signed: `NO`, Signed_By: ``,
@@ -73691,7 +73691,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Justice League Dark`, Issue: `25`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Justice League Dark`, Key: `NO`,
+    Year: `2020`, Arc: `Justice League Dark`, Key: `NO`,
     Key_Reason: `JLD #25`, First_App: ``,
     Writer: `James Tynion IV`, Artist: `Álvaro Martínez Bueno`,
     Signed: `NO`, Signed_By: ``,
@@ -73710,7 +73710,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Justice League Dark`, Issue: `26`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Justice League Dark`, Key: `NO`,
+    Year: `2020`, Arc: `Justice League Dark`, Key: `NO`,
     Key_Reason: `JLD #26`, First_App: ``,
     Writer: `James Tynion IV`, Artist: `Álvaro Martínez Bueno`,
     Signed: `NO`, Signed_By: ``,
@@ -73729,7 +73729,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Justice League Dark`, Issue: `27`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Justice League Dark`, Key: `NO`,
+    Year: `2020`, Arc: `Justice League Dark`, Key: `NO`,
     Key_Reason: `JLD #27`, First_App: ``,
     Writer: `James Tynion IV`, Artist: `Álvaro Martínez Bueno`,
     Signed: `NO`, Signed_By: ``,
@@ -73748,7 +73748,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Justice League Dark`, Issue: `29`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Justice League Dark`, Key: `NO`,
+    Year: `2021`, Arc: `Justice League Dark`, Key: `NO`,
     Key_Reason: `JLD #29`, First_App: ``,
     Writer: `James Tynion IV`, Artist: `Álvaro Martínez Bueno`,
     Signed: `NO`, Signed_By: ``,
@@ -73805,7 +73805,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Justice League Odyssey`, Issue: `4`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2018-2019`, Arc: `Justice League Odyssey`, Key: `NO`,
+    Year: `2019`, Arc: `Justice League Odyssey`, Key: `NO`,
     Key_Reason: `JLO #4`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Stjepan Sejic`,
     Signed: `NO`, Signed_By: ``,
@@ -73824,7 +73824,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Justice League Odyssey`, Issue: `5`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2018-2019`, Arc: `Justice League Odyssey`, Key: `NO`,
+    Year: `2019`, Arc: `Justice League Odyssey`, Key: `NO`,
     Key_Reason: `JLO #5`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Stjepan Sejic`,
     Signed: `NO`, Signed_By: ``,
@@ -73843,7 +73843,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Justice League Odyssey`, Issue: `8`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2018-2019`, Arc: `Justice League Odyssey`, Key: `NO`,
+    Year: `2019`, Arc: `Justice League Odyssey`, Key: `NO`,
     Key_Reason: `JLO #8`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Stjepan Sejic`,
     Signed: `NO`, Signed_By: ``,
@@ -73862,7 +73862,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Legion of Super-Heroes`, Issue: `5`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Legion — Bendis/Sook`, Key: `YES`,
+    Year: `2020`, Arc: `Legion — Bendis/Sook`, Key: `YES`,
     Key_Reason: `Legion #5 Bendis/Sook`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Ryan Sook`,
     Signed: `NO`, Signed_By: ``,
@@ -73881,7 +73881,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Legion of Super-Heroes`, Issue: `6`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Legion — Bendis/Sook`, Key: `NO`,
+    Year: `2020`, Arc: `Legion — Bendis/Sook`, Key: `NO`,
     Key_Reason: `Legion #6 Bendis/Sook`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Ryan Sook`,
     Signed: `NO`, Signed_By: ``,
@@ -73900,7 +73900,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Legion of Super-Heroes`, Issue: `7`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Legion — Bendis/Sook`, Key: `NO`,
+    Year: `2020`, Arc: `Legion — Bendis/Sook`, Key: `NO`,
     Key_Reason: `Legion #7 Bendis/Sook`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Ryan Sook`,
     Signed: `NO`, Signed_By: ``,
@@ -73919,7 +73919,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Legion of Super-Heroes`, Issue: `8`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Legion — Bendis/Sook`, Key: `NO`,
+    Year: `2020`, Arc: `Legion — Bendis/Sook`, Key: `NO`,
     Key_Reason: `Legion #8 Bendis/Sook`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Ryan Sook`,
     Signed: `NO`, Signed_By: ``,
@@ -73938,7 +73938,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Legion of Super-Heroes`, Issue: `9`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Legion — Bendis/Sook`, Key: `NO`,
+    Year: `2020`, Arc: `Legion — Bendis/Sook`, Key: `NO`,
     Key_Reason: `Legion #9 Bendis/Sook`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Ryan Sook`,
     Signed: `NO`, Signed_By: ``,
@@ -73957,7 +73957,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Legion of Super-Heroes`, Issue: `10`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Legion — Bendis/Sook`, Key: `NO`,
+    Year: `2020`, Arc: `Legion — Bendis/Sook`, Key: `NO`,
     Key_Reason: `Legion #10 Bendis/Sook`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Ryan Sook`,
     Signed: `NO`, Signed_By: ``,
@@ -73976,7 +73976,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Legion of Super-Heroes`, Issue: `12`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Legion — Bendis/Sook`, Key: `NO`,
+    Year: `2021`, Arc: `Legion — Bendis/Sook`, Key: `NO`,
     Key_Reason: `Legion #12 Bendis/Sook`, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Ryan Sook`,
     Signed: `NO`, Signed_By: ``,
@@ -74261,7 +74261,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Marauders`, Issue: `16`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `Krakoa era — Gerry Duggan/Various`, Key: `NO`,
+    Year: `2021`, Arc: `Krakoa era — Gerry Duggan/Various`, Key: `NO`,
     Key_Reason: `Marauders #16 Gerry Duggan`, First_App: ``,
     Writer: `Vita Ayala`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -74280,7 +74280,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Marauders`, Issue: `17`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `Krakoa era — Gerry Duggan/Various`, Key: `NO`,
+    Year: `2021`, Arc: `Krakoa era — Gerry Duggan/Various`, Key: `NO`,
     Key_Reason: `Marauders #17 Gerry Duggan`, First_App: ``,
     Writer: `Vita Ayala`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -74299,7 +74299,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Marauders`, Issue: `18`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `Krakoa era — Gerry Duggan/Various`, Key: `NO`,
+    Year: `2021`, Arc: `Krakoa era — Gerry Duggan/Various`, Key: `NO`,
     Key_Reason: `Marauders #18 Gerry Duggan`, First_App: ``,
     Writer: `Vita Ayala`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -74318,7 +74318,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Marauders`, Issue: `19`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `Krakoa era — Gerry Duggan/Various`, Key: `NO`,
+    Year: `2021`, Arc: `Krakoa era — Gerry Duggan/Various`, Key: `NO`,
     Key_Reason: `Marauders #19 Gerry Duggan`, First_App: ``,
     Writer: `Vita Ayala`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -74337,7 +74337,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Marauders`, Issue: `21`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `Krakoa era — Gerry Duggan/Various`, Key: `NO`,
+    Year: `2021`, Arc: `Krakoa era — Gerry Duggan/Various`, Key: `NO`,
     Key_Reason: `Marauders #21 Gerry Duggan`, First_App: ``,
     Writer: `Vita Ayala`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -74356,7 +74356,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Marauders`, Issue: `22`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `Krakoa era — Gerry Duggan/Various`, Key: `NO`,
+    Year: `2021`, Arc: `Krakoa era — Gerry Duggan/Various`, Key: `NO`,
     Key_Reason: `Marauders #22 Gerry Duggan`, First_App: ``,
     Writer: `Vita Ayala`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -74375,7 +74375,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Marauders`, Issue: `23`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `Krakoa era — Gerry Duggan/Various`, Key: `NO`,
+    Year: `2021`, Arc: `Krakoa era — Gerry Duggan/Various`, Key: `NO`,
     Key_Reason: `Marauders #23 Gerry Duggan`, First_App: ``,
     Writer: `Vita Ayala`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -74394,7 +74394,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Marauders`, Issue: `24`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `Krakoa era — Gerry Duggan/Various`, Key: `NO`,
+    Year: `2021`, Arc: `Krakoa era — Gerry Duggan/Various`, Key: `NO`,
     Key_Reason: `Marauders #24 Gerry Duggan`, First_App: ``,
     Writer: `Vita Ayala`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -74413,7 +74413,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Marauders`, Issue: `25`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `Krakoa era — Gerry Duggan/Various`, Key: `NO`,
+    Year: `2021`, Arc: `Krakoa era — Gerry Duggan/Various`, Key: `NO`,
     Key_Reason: `Marauders #25 Gerry Duggan`, First_App: ``,
     Writer: `Vita Ayala`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -74451,7 +74451,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Marauders`, Issue: `27`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `Krakoa era — Gerry Duggan/Various`, Key: `NO`,
+    Year: `2022`, Arc: `Krakoa era — Gerry Duggan/Various`, Key: `NO`,
     Key_Reason: `Marauders #27 Steve Orlando`, First_App: ``,
     Writer: `Vita Ayala`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -74661,7 +74661,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Namor: The First Mutant`, Issue: `3`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2010-2011`, Arc: `Namor: The First Mutant — DnA`, Key: `NO`,
+    Year: `2010`, Arc: `Namor: The First Mutant — DnA`, Key: `NO`,
     Key_Reason: `Namor #3`, First_App: ``,
     Writer: `Dan Abnett & Andy Lanning`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -74680,7 +74680,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Namor: The First Mutant`, Issue: `4`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2010-2011`, Arc: `Namor: The First Mutant — DnA`, Key: `NO`,
+    Year: `2011`, Arc: `Namor: The First Mutant — DnA`, Key: `NO`,
     Key_Reason: `Namor #4`, First_App: ``,
     Writer: `Dan Abnett & Andy Lanning`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -74699,7 +74699,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Namor: The First Mutant`, Issue: `5`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2010-2011`, Arc: `Namor: The First Mutant — DnA`, Key: `NO`,
+    Year: `2011`, Arc: `Namor: The First Mutant — DnA`, Key: `NO`,
     Key_Reason: `Namor #5`, First_App: ``,
     Writer: `Dan Abnett & Andy Lanning`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -74718,7 +74718,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Namor: The First Mutant`, Issue: `6`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2010-2011`, Arc: `Namor: The First Mutant — DnA`, Key: `NO`,
+    Year: `2011`, Arc: `Namor: The First Mutant — DnA`, Key: `NO`,
     Key_Reason: `Namor #6`, First_App: ``,
     Writer: `Dan Abnett & Andy Lanning`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -74737,7 +74737,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Namor: The First Mutant`, Issue: `7`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2010-2011`, Arc: `Namor: The First Mutant — DnA`, Key: `NO`,
+    Year: `2011`, Arc: `Namor: The First Mutant — DnA`, Key: `NO`,
     Key_Reason: `Namor #7`, First_App: ``,
     Writer: `Dan Abnett & Andy Lanning`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -74756,7 +74756,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Namor: The First Mutant`, Issue: `8`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2010-2011`, Arc: `Namor: The First Mutant — DnA`, Key: `NO`,
+    Year: `2011`, Arc: `Namor: The First Mutant — DnA`, Key: `NO`,
     Key_Reason: `Namor #8`, First_App: ``,
     Writer: `Dan Abnett & Andy Lanning`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -74775,7 +74775,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Namor: The First Mutant`, Issue: `9`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2010-2011`, Arc: `Namor: The First Mutant — DnA`, Key: `NO`,
+    Year: `2011`, Arc: `Namor: The First Mutant — DnA`, Key: `NO`,
     Key_Reason: `Namor #9`, First_App: ``,
     Writer: `Dan Abnett & Andy Lanning`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -74794,7 +74794,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Namor: The First Mutant`, Issue: `10`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2010-2011`, Arc: `Namor: The First Mutant — DnA`, Key: `NO`,
+    Year: `2011`, Arc: `Namor: The First Mutant — DnA`, Key: `NO`,
     Key_Reason: `Namor #10`, First_App: ``,
     Writer: `Dan Abnett & Andy Lanning`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -74813,7 +74813,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Namor: The First Mutant`, Issue: `11`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2010-2011`, Arc: `Namor: The First Mutant — DnA`, Key: `NO`,
+    Year: `2011`, Arc: `Namor: The First Mutant — DnA`, Key: `NO`,
     Key_Reason: `Namor #11`, First_App: ``,
     Writer: `Dan Abnett & Andy Lanning`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -74832,7 +74832,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2003-2004`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `YES`,
+    Year: `2003`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `YES`,
     Key_Reason: `New Mutants #1 (DeFilippis) — DeFilippis/Weir; $2.50 era; Xavier Institute students pre-Academy X`, First_App: ``,
     Writer: `Nunzio DeFilippis & Christina Weir`, Artist: `Keron Grant`,
     Signed: `NO`, Signed_By: ``,
@@ -74851,7 +74851,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2003-2004`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
+    Year: `2003`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
     Key_Reason: `New Mutants #2 DePhilippis`, First_App: ``,
     Writer: `Nunzio DeFilippis & Christina Weir`, Artist: `Keron Grant`,
     Signed: `NO`, Signed_By: ``,
@@ -74870,7 +74870,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `3`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2003-2004`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
+    Year: `2003`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
     Key_Reason: `New Mutants #3 DePhilippis`, First_App: ``,
     Writer: `Nunzio DeFilippis & Christina Weir`, Artist: `Keron Grant`,
     Signed: `NO`, Signed_By: ``,
@@ -74889,7 +74889,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `4`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2003-2004`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
+    Year: `2003`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
     Key_Reason: `New Mutants #4 DePhilippis`, First_App: ``,
     Writer: `Nunzio DeFilippis & Christina Weir`, Artist: `Keron Grant`,
     Signed: `NO`, Signed_By: ``,
@@ -74908,7 +74908,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `5`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2003-2004`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
+    Year: `2003`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
     Key_Reason: `New Mutants #5 DePhilippis`, First_App: ``,
     Writer: `Nunzio DeFilippis & Christina Weir`, Artist: `Keron Grant`,
     Signed: `NO`, Signed_By: ``,
@@ -74927,7 +74927,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `6`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2003-2004`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
+    Year: `2003`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
     Key_Reason: `New Mutants #6 DePhilippis`, First_App: ``,
     Writer: `Nunzio DeFilippis & Christina Weir`, Artist: `Keron Grant`,
     Signed: `NO`, Signed_By: ``,
@@ -75022,7 +75022,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `7`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2003-2004`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
+    Year: `2004`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
     Key_Reason: `New Mutants #7 DePhilippis`, First_App: ``,
     Writer: `Nunzio DeFilippis & Christina Weir`, Artist: `Keron Grant`,
     Signed: `NO`, Signed_By: ``,
@@ -75041,7 +75041,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `8`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2003-2004`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
+    Year: `2004`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
     Key_Reason: `New Mutants #8 DePhilippis`, First_App: ``,
     Writer: `Nunzio DeFilippis & Christina Weir`, Artist: `Keron Grant`,
     Signed: `NO`, Signed_By: ``,
@@ -75060,7 +75060,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `9`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2003-2004`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
+    Year: `2004`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
     Key_Reason: `New Mutants #9 DePhilippis`, First_App: ``,
     Writer: `Nunzio DeFilippis & Christina Weir`, Artist: `Keron Grant`,
     Signed: `NO`, Signed_By: ``,
@@ -75079,7 +75079,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `10`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2003-2004`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
+    Year: `2004`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
     Key_Reason: `New Mutants #10 DePhilippis`, First_App: ``,
     Writer: `Nunzio DeFilippis & Christina Weir`, Artist: `Keron Grant`,
     Signed: `NO`, Signed_By: ``,
@@ -75098,7 +75098,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `11`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2003-2004`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
+    Year: `2004`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
     Key_Reason: `New Mutants #11 DePhilippis`, First_App: ``,
     Writer: `Nunzio DeFilippis & Christina Weir`, Artist: `Keron Grant`,
     Signed: `NO`, Signed_By: ``,
@@ -75117,7 +75117,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `12`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2003-2004`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
+    Year: `2004`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
     Key_Reason: `New Mutants #12 DePhilippis`, First_App: ``,
     Writer: `Nunzio DeFilippis & Christina Weir`, Artist: `Keron Grant`,
     Signed: `NO`, Signed_By: ``,
@@ -75136,7 +75136,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `13`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2003-2004`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
+    Year: `2004`, Arc: `New Mutants — DeFilippis/Weir ($2.50)`, Key: `NO`,
     Key_Reason: `New Mutants #13 DePhilippis`, First_App: ``,
     Writer: `Nunzio DeFilippis & Christina Weir`, Artist: `Keron Grant`,
     Signed: `NO`, Signed_By: ``,
@@ -75212,7 +75212,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `15`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2009-2012`, Arc: `New Mutants Wells/DnA`, Key: `NO`,
+    Year: `2010`, Arc: `New Mutants Wells/DnA`, Key: `NO`,
     Key_Reason: `New Mutants #15`, First_App: ``,
     Writer: `Zeb Wells & Dan Abnett & Andy Lanning`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -75231,7 +75231,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `16`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2009-2012`, Arc: `New Mutants Wells/DnA`, Key: `NO`,
+    Year: `2010`, Arc: `New Mutants Wells/DnA`, Key: `NO`,
     Key_Reason: `New Mutants #16`, First_App: ``,
     Writer: `Zeb Wells & Dan Abnett & Andy Lanning`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -75250,7 +75250,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `17`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2009-2012`, Arc: `New Mutants Wells/DnA`, Key: `NO`,
+    Year: `2010`, Arc: `New Mutants Wells/DnA`, Key: `NO`,
     Key_Reason: `New Mutants #17`, First_App: ``,
     Writer: `Zeb Wells & Dan Abnett & Andy Lanning`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -75269,7 +75269,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `18`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2009-2012`, Arc: `New Mutants Wells/DnA`, Key: `NO`,
+    Year: `2010`, Arc: `New Mutants Wells/DnA`, Key: `NO`,
     Key_Reason: `New Mutants #18`, First_App: ``,
     Writer: `Zeb Wells & Dan Abnett & Andy Lanning`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -75288,7 +75288,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `19`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2009-2012`, Arc: `New Mutants Wells/DnA`, Key: `NO`,
+    Year: `2011`, Arc: `New Mutants Wells/DnA`, Key: `NO`,
     Key_Reason: `New Mutants #19`, First_App: ``,
     Writer: `Zeb Wells & Dan Abnett & Andy Lanning`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -75307,7 +75307,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `20`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2009-2012`, Arc: `New Mutants Wells/DnA`, Key: `NO`,
+    Year: `2011`, Arc: `New Mutants Wells/DnA`, Key: `NO`,
     Key_Reason: `New Mutants #20`, First_App: ``,
     Writer: `Zeb Wells & Dan Abnett & Andy Lanning`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -75326,7 +75326,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `26`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2009-2012`, Arc: `New Mutants Wells/DnA`, Key: `NO`,
+    Year: `2011`, Arc: `New Mutants Wells/DnA`, Key: `NO`,
     Key_Reason: `New Mutants #26`, First_App: ``,
     Writer: `Zeb Wells & Dan Abnett & Andy Lanning`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -75345,7 +75345,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `YES`,
+    Year: `2020`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `YES`,
     Key_Reason: `New Mutants #1 Hickman/Brisson — Krakoa-era New Mutants launch — the space adventure half of the X-Men line`, First_App: ``,
     Writer: `Jonathan Hickman & Ed Brisson`, Artist: `Rod Reis & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -75364,7 +75364,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
+    Year: `2020`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #2`, First_App: ``,
     Writer: `Jonathan Hickman & Ed Brisson`, Artist: `Rod Reis & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -75383,7 +75383,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `6`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
+    Year: `2020`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #6`, First_App: ``,
     Writer: `Jonathan Hickman & Ed Brisson`, Artist: `Rod Reis & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -75402,7 +75402,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `7`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
+    Year: `2020`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #7`, First_App: ``,
     Writer: `Jonathan Hickman & Ed Brisson`, Artist: `Rod Reis & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -75421,7 +75421,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `8`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
+    Year: `2020`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #8`, First_App: ``,
     Writer: `Jonathan Hickman & Ed Brisson`, Artist: `Rod Reis & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -75440,7 +75440,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `9`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
+    Year: `2020`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #9`, First_App: ``,
     Writer: `Jonathan Hickman & Ed Brisson`, Artist: `Rod Reis & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -75459,7 +75459,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `10`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
+    Year: `2020`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #10`, First_App: ``,
     Writer: `Jonathan Hickman & Ed Brisson`, Artist: `Rod Reis & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -75478,7 +75478,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `11`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
+    Year: `2020`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #11`, First_App: ``,
     Writer: `Jonathan Hickman & Ed Brisson`, Artist: `Rod Reis & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -75782,7 +75782,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `12`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
+    Year: `2020`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #12`, First_App: ``,
     Writer: `Jonathan Hickman & Ed Brisson`, Artist: `Rod Reis & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -75801,7 +75801,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `14`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
+    Year: `2021`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #14`, First_App: ``,
     Writer: `Jonathan Hickman & Ed Brisson`, Artist: `Rod Reis & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -75820,7 +75820,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `15`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
+    Year: `2021`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #15`, First_App: ``,
     Writer: `Jonathan Hickman & Ed Brisson`, Artist: `Rod Reis & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -75839,7 +75839,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `16`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
+    Year: `2021`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #16`, First_App: ``,
     Writer: `Jonathan Hickman & Ed Brisson`, Artist: `Rod Reis & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -75858,7 +75858,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `17`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
+    Year: `2021`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #17`, First_App: ``,
     Writer: `Jonathan Hickman & Ed Brisson`, Artist: `Rod Reis & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -75877,7 +75877,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `18`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
+    Year: `2021`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #18`, First_App: ``,
     Writer: `Jonathan Hickman & Ed Brisson`, Artist: `Rod Reis & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -75896,7 +75896,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `19`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
+    Year: `2021`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #19`, First_App: ``,
     Writer: `Jonathan Hickman & Ed Brisson`, Artist: `Rod Reis & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -75915,7 +75915,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `20`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
+    Year: `2021`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #20`, First_App: ``,
     Writer: `Jonathan Hickman & Ed Brisson`, Artist: `Rod Reis & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -75934,7 +75934,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `21`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
+    Year: `2021`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #21`, First_App: ``,
     Writer: `Jonathan Hickman & Ed Brisson`, Artist: `Rod Reis & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -75953,7 +75953,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `22`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
+    Year: `2021`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #22`, First_App: ``,
     Writer: `Jonathan Hickman & Ed Brisson`, Artist: `Rod Reis & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -75972,7 +75972,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `23`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
+    Year: `2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #23`, First_App: ``,
     Writer: `Jonathan Hickman & Ed Brisson`, Artist: `Rod Reis & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -75991,7 +75991,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `24`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
+    Year: `2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #24`, First_App: ``,
     Writer: `Jonathan Hickman & Ed Brisson`, Artist: `Rod Reis & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -76010,7 +76010,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `25`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
+    Year: `2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #25`, First_App: ``,
     Writer: `Jonathan Hickman & Ed Brisson`, Artist: `Rod Reis & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -76029,7 +76029,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `26`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
+    Year: `2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #26`, First_App: ``,
     Writer: `Jonathan Hickman & Ed Brisson`, Artist: `Rod Reis & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -76048,7 +76048,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `27`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
+    Year: `2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #27`, First_App: ``,
     Writer: `Jonathan Hickman & Ed Brisson`, Artist: `Rod Reis & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -77416,7 +77416,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `28`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
+    Year: `2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #28`, First_App: ``,
     Writer: `Jonathan Hickman & Ed Brisson`, Artist: `Rod Reis & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -77435,7 +77435,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `29`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
+    Year: `2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #29`, First_App: ``,
     Writer: `Jonathan Hickman & Ed Brisson`, Artist: `Rod Reis & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -77454,7 +77454,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `30`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
+    Year: `2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #30`, First_App: ``,
     Writer: `Jonathan Hickman & Ed Brisson`, Artist: `Rod Reis & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -77473,7 +77473,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `31`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
+    Year: `2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #31`, First_App: ``,
     Writer: `Jonathan Hickman & Ed Brisson`, Artist: `Rod Reis & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -77492,7 +77492,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New Mutants`, Issue: `32`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
+    Year: `2023`, Arc: `New Mutants Krakoa — Hickman/Brisson/Ayala`, Key: `NO`,
     Key_Reason: `NM #32`, First_App: ``,
     Writer: `Jonathan Hickman & Ed Brisson`, Artist: `Rod Reis & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -77530,7 +77530,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New X-Men`, Issue: `114`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2004`, Arc: `New X-Men — Grant Morrison`, Key: `NO`,
+    Year: `2001`, Arc: `New X-Men — Grant Morrison`, Key: `NO`,
     Key_Reason: `New X-Men #114 Morrison`, First_App: ``,
     Writer: `Grant Morrison`, Artist: `Frank Quitely & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -77549,7 +77549,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New X-Men`, Issue: `145`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2004`, Arc: `New X-Men — Grant Morrison`, Key: `NO`,
+    Year: `2003`, Arc: `New X-Men — Grant Morrison`, Key: `NO`,
     Key_Reason: `New X-Men #145 Morrison`, First_App: ``,
     Writer: `Grant Morrison`, Artist: `Frank Quitely & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -77568,7 +77568,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New X-Men`, Issue: `150`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2004`, Arc: `New X-Men — Grant Morrison`, Key: `YES`,
+    Year: `2004`, Arc: `New X-Men — Grant Morrison`, Key: `YES`,
     Key_Reason: `New X-Men #150 — Morrison; Planet X conclusion; Magneto reveal; landmark`, First_App: ``,
     Writer: `Grant Morrison`, Artist: `Frank Quitely & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -77587,7 +77587,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New X-Men`, Issue: `151`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2004`, Arc: `New X-Men — Grant Morrison`, Key: `NO`,
+    Year: `2004`, Arc: `New X-Men — Grant Morrison`, Key: `NO`,
     Key_Reason: `New X-Men #151 Morrison`, First_App: ``,
     Writer: `Grant Morrison`, Artist: `Frank Quitely & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -77606,7 +77606,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New X-Men`, Issue: `152`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2004`, Arc: `New X-Men — Grant Morrison`, Key: `NO`,
+    Year: `2004`, Arc: `New X-Men — Grant Morrison`, Key: `NO`,
     Key_Reason: `New X-Men #152 Morrison`, First_App: ``,
     Writer: `Grant Morrison`, Artist: `Frank Quitely & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -77625,7 +77625,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New X-Men`, Issue: `153`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2004`, Arc: `New X-Men — Grant Morrison`, Key: `NO`,
+    Year: `2004`, Arc: `New X-Men — Grant Morrison`, Key: `NO`,
     Key_Reason: `New X-Men #153 Morrison`, First_App: ``,
     Writer: `Grant Morrison`, Artist: `Frank Quitely & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -77644,7 +77644,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `New X-Men`, Issue: `154`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2004`, Arc: `New X-Men — Grant Morrison`, Key: `NO`,
+    Year: `2004`, Arc: `New X-Men — Grant Morrison`, Key: `NO`,
     Key_Reason: `New X-Men #154 Morrison`, First_App: ``,
     Writer: `Grant Morrison`, Artist: `Frank Quitely & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -77663,7 +77663,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Nightwing`, Issue: `5`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Nightwing — Jurgens era`, Key: `NO`,
+    Year: `2022`, Arc: `Nightwing — Jurgens era`, Key: `NO`,
     Key_Reason: `Nightwing #5`, First_App: ``,
     Writer: `Dan Jurgens & Various`, Artist: `Bruno Redondo`,
     Signed: `NO`, Signed_By: ``,
@@ -77682,7 +77682,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Nightwing`, Issue: `75`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Nightwing — Jurgens era`, Key: `NO`,
+    Year: `2020`, Arc: `Nightwing — Jurgens era`, Key: `NO`,
     Key_Reason: `Nightwing #75`, First_App: ``,
     Writer: `Dan Jurgens & Various`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
@@ -77701,7 +77701,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Nightwing`, Issue: `76`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Nightwing — Jurgens era`, Key: `NO`,
+    Year: `2021`, Arc: `Nightwing — Jurgens era`, Key: `NO`,
     Key_Reason: `Nightwing #76`, First_App: ``,
     Writer: `Dan Jurgens & Various`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
@@ -77720,7 +77720,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Nightwing`, Issue: `77`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `Nightwing — Jurgens era`, Key: `NO`,
+    Year: `2021`, Arc: `Nightwing — Jurgens era`, Key: `NO`,
     Key_Reason: `Nightwing #77`, First_App: ``,
     Writer: `Dan Jurgens & Various`, Artist: ``,
     Signed: `NO`, Signed_By: ``,
@@ -77777,7 +77777,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Power Girl`, Issue: `4`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `Power Girl Leah Williams`, Key: `NO`,
+    Year: `2024`, Arc: `Power Girl Leah Williams`, Key: `NO`,
     Key_Reason: `Power Girl #4 Williams — extends Box 16 run`, First_App: ``,
     Writer: `Leah Williams`, Artist: `Eduardo Pansica`,
     Signed: `NO`, Signed_By: ``,
@@ -77796,7 +77796,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Power Girl`, Issue: `10`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `Power Girl Leah Williams`, Key: `NO`,
+    Year: `2024`, Arc: `Power Girl Leah Williams`, Key: `NO`,
     Key_Reason: `Power Girl #10 Williams — extends Box 16 run`, First_App: ``,
     Writer: `Leah Williams`, Artist: `Eduardo Pansica`,
     Signed: `NO`, Signed_By: ``,
@@ -77815,7 +77815,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Robin`, Issue: `136`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2005-2006`, Arc: `Robin Willingham run`, Key: `NO`,
+    Year: `2005`, Arc: `Robin Willingham run`, Key: `NO`,
     Key_Reason: `Robin #136 Willingham`, First_App: ``,
     Writer: `Bill Willingham`, Artist: `Damion Scott & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -77910,7 +77910,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Robin`, Issue: `137`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2005-2006`, Arc: `Robin Willingham run`, Key: `NO`,
+    Year: `2005`, Arc: `Robin Willingham run`, Key: `NO`,
     Key_Reason: `Robin #137 Willingham`, First_App: ``,
     Writer: `Bill Willingham`, Artist: `Damion Scott & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -77929,7 +77929,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Robin`, Issue: `138`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2005-2006`, Arc: `Robin Willingham run`, Key: `NO`,
+    Year: `2005`, Arc: `Robin Willingham run`, Key: `NO`,
     Key_Reason: `Robin #138 Willingham`, First_App: ``,
     Writer: `Bill Willingham`, Artist: `Damion Scott & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -77948,7 +77948,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Robin`, Issue: `139`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2005-2006`, Arc: `Robin Willingham run`, Key: `NO`,
+    Year: `2005`, Arc: `Robin Willingham run`, Key: `NO`,
     Key_Reason: `Robin #139 Willingham`, First_App: ``,
     Writer: `Bill Willingham`, Artist: `Damion Scott & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -77967,7 +77967,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Robin`, Issue: `140`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2005-2006`, Arc: `Robin Willingham run`, Key: `NO`,
+    Year: `2005`, Arc: `Robin Willingham run`, Key: `NO`,
     Key_Reason: `Robin #140 Willingham`, First_App: ``,
     Writer: `Bill Willingham`, Artist: `Damion Scott & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -77986,7 +77986,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Robin`, Issue: `141`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2005-2006`, Arc: `Robin Willingham run`, Key: `NO`,
+    Year: `2005`, Arc: `Robin Willingham run`, Key: `NO`,
     Key_Reason: `Robin #141 Willingham`, First_App: ``,
     Writer: `Bill Willingham`, Artist: `Damion Scott & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -78005,7 +78005,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Robin`, Issue: `142`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2005-2006`, Arc: `Robin Willingham run`, Key: `NO`,
+    Year: `2005`, Arc: `Robin Willingham run`, Key: `NO`,
     Key_Reason: `Robin #142 Willingham`, First_App: ``,
     Writer: `Bill Willingham`, Artist: `Damion Scott & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -78024,7 +78024,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Robin`, Issue: `143`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2005-2006`, Arc: `Robin Willingham run`, Key: `NO`,
+    Year: `2005`, Arc: `Robin Willingham run`, Key: `NO`,
     Key_Reason: `Robin #143 Willingham`, First_App: ``,
     Writer: `Bill Willingham`, Artist: `Damion Scott & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -78043,7 +78043,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Robin`, Issue: `144`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2005-2006`, Arc: `Robin Willingham run`, Key: `NO`,
+    Year: `2006`, Arc: `Robin Willingham run`, Key: `NO`,
     Key_Reason: `Robin #144 Willingham`, First_App: ``,
     Writer: `Bill Willingham`, Artist: `Damion Scott & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -78062,7 +78062,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Robin`, Issue: `145`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2005-2006`, Arc: `Robin Willingham run`, Key: `NO`,
+    Year: `2006`, Arc: `Robin Willingham run`, Key: `NO`,
     Key_Reason: `Robin #145 Willingham`, First_App: ``,
     Writer: `Bill Willingham`, Artist: `Damion Scott & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -78081,7 +78081,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Robin`, Issue: `146`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2005-2006`, Arc: `Robin Willingham run`, Key: `NO`,
+    Year: `2006`, Arc: `Robin Willingham run`, Key: `NO`,
     Key_Reason: `Robin #146 Willingham`, First_App: ``,
     Writer: `Bill Willingham`, Artist: `Damion Scott & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -78100,7 +78100,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Robin`, Issue: `147`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2005-2006`, Arc: `Robin Willingham run`, Key: `NO`,
+    Year: `2006`, Arc: `Robin Willingham run`, Key: `NO`,
     Key_Reason: `Robin #147 Willingham`, First_App: ``,
     Writer: `Bill Willingham`, Artist: `Damion Scott & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -78119,7 +78119,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Robin`, Issue: `148`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2005-2006`, Arc: `Robin Willingham run`, Key: `NO`,
+    Year: `2006`, Arc: `Robin Willingham run`, Key: `NO`,
     Key_Reason: `Robin #148 Willingham`, First_App: ``,
     Writer: `Bill Willingham`, Artist: `Damion Scott & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -78138,7 +78138,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Robin`, Issue: `149`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2005-2006`, Arc: `Robin Willingham run`, Key: `NO`,
+    Year: `2006`, Arc: `Robin Willingham run`, Key: `NO`,
     Key_Reason: `Robin #149 Willingham`, First_App: ``,
     Writer: `Bill Willingham`, Artist: `Damion Scott & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -78157,7 +78157,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Robin`, Issue: `150`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2005-2006`, Arc: `Robin Willingham run`, Key: `NO`,
+    Year: `2006`, Arc: `Robin Willingham run`, Key: `NO`,
     Key_Reason: `Robin #150 Willingham`, First_App: ``,
     Writer: `Bill Willingham`, Artist: `Damion Scott & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -78176,7 +78176,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Robin`, Issue: `151`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2005-2006`, Arc: `Robin Willingham run`, Key: `NO`,
+    Year: `2006`, Arc: `Robin Willingham run`, Key: `NO`,
     Key_Reason: `Robin #151 Willingham`, First_App: ``,
     Writer: `Bill Willingham`, Artist: `Damion Scott & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -78195,7 +78195,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Robin`, Issue: `152`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2005-2006`, Arc: `Robin Willingham run`, Key: `NO`,
+    Year: `2006`, Arc: `Robin Willingham run`, Key: `NO`,
     Key_Reason: `Robin #152 Willingham`, First_App: ``,
     Writer: `Bill Willingham`, Artist: `Damion Scott & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -78214,7 +78214,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Robin`, Issue: `153`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2005-2006`, Arc: `Robin Willingham run`, Key: `NO`,
+    Year: `2006`, Arc: `Robin Willingham run`, Key: `NO`,
     Key_Reason: `Robin #153 Willingham`, First_App: ``,
     Writer: `Bill Willingham`, Artist: `Damion Scott & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -78233,7 +78233,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Robin`, Issue: `154`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2005-2006`, Arc: `Robin Willingham run`, Key: `NO`,
+    Year: `2006`, Arc: `Robin Willingham run`, Key: `NO`,
     Key_Reason: `Robin #154 Willingham`, First_App: ``,
     Writer: `Bill Willingham`, Artist: `Damion Scott & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -78252,7 +78252,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Robin`, Issue: `155`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2005-2006`, Arc: `Robin Willingham run`, Key: `NO`,
+    Year: `2006`, Arc: `Robin Willingham run`, Key: `NO`,
     Key_Reason: `Robin #155 Willingham`, First_App: ``,
     Writer: `Bill Willingham`, Artist: `Damion Scott & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -78271,7 +78271,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `S.W.O.R.D.`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `S.W.O.R.D. Krakoa — Al Ewing`, Key: `YES`,
+    Year: `2021`, Arc: `S.W.O.R.D. Krakoa — Al Ewing`, Key: `YES`,
     Key_Reason: `S.W.O.R.D. #1 Al Ewing/Valerio Schiti — space arm of Krakoa — Magneto in space — near-complete 7-issue run`, First_App: ``,
     Writer: `Al Ewing`, Artist: `Valerio Schiti`,
     Signed: `NO`, Signed_By: ``,
@@ -78290,7 +78290,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `S.W.O.R.D.`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `S.W.O.R.D. Krakoa — Al Ewing`, Key: `NO`,
+    Year: `2021`, Arc: `S.W.O.R.D. Krakoa — Al Ewing`, Key: `NO`,
     Key_Reason: `SWORD #2`, First_App: ``,
     Writer: `Al Ewing`, Artist: `Valerio Schiti`,
     Signed: `NO`, Signed_By: ``,
@@ -78309,7 +78309,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `S.W.O.R.D.`, Issue: `3`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `S.W.O.R.D. Krakoa — Al Ewing`, Key: `NO`,
+    Year: `2021`, Arc: `S.W.O.R.D. Krakoa — Al Ewing`, Key: `NO`,
     Key_Reason: `SWORD #3`, First_App: ``,
     Writer: `Al Ewing`, Artist: `Valerio Schiti`,
     Signed: `NO`, Signed_By: ``,
@@ -78328,7 +78328,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `S.W.O.R.D.`, Issue: `4`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `S.W.O.R.D. Krakoa — Al Ewing`, Key: `NO`,
+    Year: `2021`, Arc: `S.W.O.R.D. Krakoa — Al Ewing`, Key: `NO`,
     Key_Reason: `SWORD #4`, First_App: ``,
     Writer: `Al Ewing`, Artist: `Valerio Schiti`,
     Signed: `NO`, Signed_By: ``,
@@ -78347,7 +78347,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `S.W.O.R.D.`, Issue: `5`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `S.W.O.R.D. Krakoa — Al Ewing`, Key: `NO`,
+    Year: `2021`, Arc: `S.W.O.R.D. Krakoa — Al Ewing`, Key: `NO`,
     Key_Reason: `SWORD #5`, First_App: ``,
     Writer: `Al Ewing`, Artist: `Valerio Schiti`,
     Signed: `NO`, Signed_By: ``,
@@ -78366,7 +78366,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `S.W.O.R.D.`, Issue: `6`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `S.W.O.R.D. Krakoa — Al Ewing`, Key: `NO`,
+    Year: `2021`, Arc: `S.W.O.R.D. Krakoa — Al Ewing`, Key: `NO`,
     Key_Reason: `SWORD #6`, First_App: ``,
     Writer: `Al Ewing`, Artist: `Valerio Schiti`,
     Signed: `NO`, Signed_By: ``,
@@ -78385,7 +78385,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `S.W.O.R.D.`, Issue: `7`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `S.W.O.R.D. Krakoa — Al Ewing`, Key: `NO`,
+    Year: `2021`, Arc: `S.W.O.R.D. Krakoa — Al Ewing`, Key: `NO`,
     Key_Reason: `SWORD #7`, First_App: ``,
     Writer: `Al Ewing`, Artist: `Valerio Schiti`,
     Signed: `NO`, Signed_By: ``,
@@ -78651,7 +78651,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Shazam!`, Issue: `6`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Shazam Johns/Eaglesham`, Key: `NO`,
+    Year: `2019`, Arc: `Shazam Johns/Eaglesham`, Key: `NO`,
     Key_Reason: `Shazam #6 Johns`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Dale Eaglesham`,
     Signed: `NO`, Signed_By: ``,
@@ -78670,7 +78670,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Shazam!`, Issue: `7`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Shazam Johns/Eaglesham`, Key: `NO`,
+    Year: `2019`, Arc: `Shazam Johns/Eaglesham`, Key: `NO`,
     Key_Reason: `Shazam #7 Johns`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Dale Eaglesham`,
     Signed: `NO`, Signed_By: ``,
@@ -78689,7 +78689,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Shazam!`, Issue: `8`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Shazam Johns/Eaglesham`, Key: `NO`,
+    Year: `2020`, Arc: `Shazam Johns/Eaglesham`, Key: `NO`,
     Key_Reason: `Shazam #8 Johns`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Dale Eaglesham`,
     Signed: `NO`, Signed_By: ``,
@@ -78708,7 +78708,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Shazam!`, Issue: `9`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Shazam Johns/Eaglesham`, Key: `NO`,
+    Year: `2020`, Arc: `Shazam Johns/Eaglesham`, Key: `NO`,
     Key_Reason: `Shazam #9 Johns`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Dale Eaglesham`,
     Signed: `NO`, Signed_By: ``,
@@ -78727,7 +78727,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Shazam!`, Issue: `10`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Shazam Johns/Eaglesham`, Key: `NO`,
+    Year: `2020`, Arc: `Shazam Johns/Eaglesham`, Key: `NO`,
     Key_Reason: `Shazam #10 Johns`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Dale Eaglesham`,
     Signed: `NO`, Signed_By: ``,
@@ -78746,7 +78746,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Shazam!`, Issue: `11`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Shazam Johns/Eaglesham`, Key: `NO`,
+    Year: `2020`, Arc: `Shazam Johns/Eaglesham`, Key: `NO`,
     Key_Reason: `Shazam #11 Johns`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Dale Eaglesham`,
     Signed: `NO`, Signed_By: ``,
@@ -78765,7 +78765,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Shazam!`, Issue: `12`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Shazam Johns/Eaglesham`, Key: `NO`,
+    Year: `2020`, Arc: `Shazam Johns/Eaglesham`, Key: `NO`,
     Key_Reason: `Shazam #12 Johns`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Dale Eaglesham`,
     Signed: `NO`, Signed_By: ``,
@@ -78784,7 +78784,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Shazam!`, Issue: `13`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Shazam Johns/Eaglesham`, Key: `NO`,
+    Year: `2020`, Arc: `Shazam Johns/Eaglesham`, Key: `NO`,
     Key_Reason: `Shazam #13 Johns`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Dale Eaglesham`,
     Signed: `NO`, Signed_By: ``,
@@ -78803,7 +78803,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Shazam!`, Issue: `14`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Shazam Johns/Eaglesham`, Key: `NO`,
+    Year: `2020`, Arc: `Shazam Johns/Eaglesham`, Key: `NO`,
     Key_Reason: `Shazam #14 Johns`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Dale Eaglesham`,
     Signed: `NO`, Signed_By: ``,
@@ -78822,7 +78822,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Shazam!`, Issue: `15`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2019-2021`, Arc: `Shazam Johns/Eaglesham`, Key: `NO`,
+    Year: `2020`, Arc: `Shazam Johns/Eaglesham`, Key: `NO`,
     Key_Reason: `Shazam #15 Johns`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Dale Eaglesham`,
     Signed: `NO`, Signed_By: ``,
@@ -78993,7 +78993,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman/Batman`, Issue: `3`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003-2006`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
+    Year: `2003`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
     Key_Reason: `S/B #3`, First_App: ``,
     Writer: `Jeff Loeb`, Artist: `Ed McGuinness`,
     Signed: `NO`, Signed_By: ``,
@@ -79012,7 +79012,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman/Batman`, Issue: `4`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003-2006`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
+    Year: `2004`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
     Key_Reason: `S/B #4`, First_App: ``,
     Writer: `Jeff Loeb`, Artist: `Ed McGuinness`,
     Signed: `NO`, Signed_By: ``,
@@ -79031,7 +79031,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman/Batman`, Issue: `5`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003-2006`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
+    Year: `2004`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
     Key_Reason: `S/B #5`, First_App: ``,
     Writer: `Jeff Loeb`, Artist: `Ed McGuinness`,
     Signed: `NO`, Signed_By: ``,
@@ -79050,7 +79050,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman/Batman`, Issue: `6`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003-2006`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
+    Year: `2004`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
     Key_Reason: `S/B #6`, First_App: ``,
     Writer: `Jeff Loeb`, Artist: `Ed McGuinness`,
     Signed: `NO`, Signed_By: ``,
@@ -79069,7 +79069,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman/Batman`, Issue: `7`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003-2006`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
+    Year: `2004`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
     Key_Reason: `S/B #7`, First_App: ``,
     Writer: `Jeff Loeb`, Artist: `Ed McGuinness`,
     Signed: `NO`, Signed_By: ``,
@@ -79088,7 +79088,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman/Batman`, Issue: `8`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003-2006`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
+    Year: `2004`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
     Key_Reason: `S/B #8`, First_App: ``,
     Writer: `Jeff Loeb`, Artist: `Ed McGuinness`,
     Signed: `NO`, Signed_By: ``,
@@ -79107,7 +79107,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman/Batman`, Issue: `9`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003-2006`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
+    Year: `2004`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
     Key_Reason: `S/B #9`, First_App: ``,
     Writer: `Jeff Loeb`, Artist: `Ed McGuinness`,
     Signed: `NO`, Signed_By: ``,
@@ -79126,7 +79126,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman/Batman`, Issue: `10`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003-2006`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
+    Year: `2004`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
     Key_Reason: `S/B #10`, First_App: ``,
     Writer: `Jeff Loeb`, Artist: `Ed McGuinness`,
     Signed: `NO`, Signed_By: ``,
@@ -79145,7 +79145,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman/Batman`, Issue: `11`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003-2006`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
+    Year: `2004`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
     Key_Reason: `S/B #11`, First_App: ``,
     Writer: `Jeff Loeb`, Artist: `Ed McGuinness`,
     Signed: `NO`, Signed_By: ``,
@@ -79164,7 +79164,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman/Batman`, Issue: `12`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003-2006`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
+    Year: `2004`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
     Key_Reason: `S/B #12`, First_App: ``,
     Writer: `Jeff Loeb`, Artist: `Ed McGuinness`,
     Signed: `NO`, Signed_By: ``,
@@ -79183,7 +79183,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman/Batman`, Issue: `20`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003-2006`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
+    Year: `2005`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
     Key_Reason: `S/B #20`, First_App: ``,
     Writer: `Jeff Loeb`, Artist: `Ed McGuinness`,
     Signed: `NO`, Signed_By: ``,
@@ -79202,7 +79202,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman/Batman`, Issue: `21`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003-2006`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
+    Year: `2005`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
     Key_Reason: `S/B #21`, First_App: ``,
     Writer: `Jeff Loeb`, Artist: `Ed McGuinness`,
     Signed: `NO`, Signed_By: ``,
@@ -79221,7 +79221,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman/Batman`, Issue: `22`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003-2006`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
+    Year: `2005`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
     Key_Reason: `S/B #22`, First_App: ``,
     Writer: `Jeff Loeb`, Artist: `Ed McGuinness`,
     Signed: `NO`, Signed_By: ``,
@@ -79240,7 +79240,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman/Batman`, Issue: `23`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003-2006`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
+    Year: `2005`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
     Key_Reason: `S/B #23`, First_App: ``,
     Writer: `Jeff Loeb`, Artist: `Ed McGuinness`,
     Signed: `NO`, Signed_By: ``,
@@ -79259,7 +79259,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman/Batman`, Issue: `24`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003-2006`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
+    Year: `2006`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
     Key_Reason: `S/B #24`, First_App: ``,
     Writer: `Jeff Loeb`, Artist: `Ed McGuinness`,
     Signed: `NO`, Signed_By: ``,
@@ -79278,7 +79278,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman/Batman`, Issue: `25`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003-2006`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
+    Year: `2006`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
     Key_Reason: `S/B #25`, First_App: ``,
     Writer: `Jeff Loeb`, Artist: `Ed McGuinness`,
     Signed: `NO`, Signed_By: ``,
@@ -79297,7 +79297,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman/Batman`, Issue: `26`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003-2006`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
+    Year: `2006`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
     Key_Reason: `S/B #26`, First_App: ``,
     Writer: `Jeff Loeb`, Artist: `Ed McGuinness`,
     Signed: `NO`, Signed_By: ``,
@@ -79316,7 +79316,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman/Batman`, Issue: `27`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003-2006`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
+    Year: `2006`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
     Key_Reason: `S/B #27`, First_App: ``,
     Writer: `Jeff Loeb`, Artist: `Ed McGuinness`,
     Signed: `NO`, Signed_By: ``,
@@ -79335,7 +79335,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman/Batman`, Issue: `28`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003-2006`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
+    Year: `2006`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
     Key_Reason: `S/B #28`, First_App: ``,
     Writer: `Jeff Loeb`, Artist: `Ed McGuinness`,
     Signed: `NO`, Signed_By: ``,
@@ -79392,7 +79392,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman/Batman`, Issue: `29`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003-2006`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
+    Year: `2006`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
     Key_Reason: `S/B #29`, First_App: ``,
     Writer: `Jeff Loeb`, Artist: `Ed McGuinness`,
     Signed: `NO`, Signed_By: ``,
@@ -79411,7 +79411,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman/Batman`, Issue: `30`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003-2006`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
+    Year: `2006`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
     Key_Reason: `S/B #30`, First_App: ``,
     Writer: `Jeff Loeb`, Artist: `Ed McGuinness`,
     Signed: `NO`, Signed_By: ``,
@@ -79430,7 +79430,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman/Batman`, Issue: `31`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003-2006`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
+    Year: `2007`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
     Key_Reason: `S/B #31`, First_App: ``,
     Writer: `Jeff Loeb`, Artist: `Ed McGuinness`,
     Signed: `NO`, Signed_By: ``,
@@ -79449,7 +79449,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Superman/Batman`, Issue: `33`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003-2006`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
+    Year: `2007`, Arc: `Superman/Batman — Loeb/McGuinness`, Key: `NO`,
     Key_Reason: `S/B #33`, First_App: ``,
     Writer: `Jeff Loeb`, Artist: `Ed McGuinness`,
     Signed: `NO`, Signed_By: ``,
@@ -79468,7 +79468,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `788`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `Dawn of DC Flash`, Key: `NO`,
+    Year: `2023`, Arc: `Dawn of DC Flash`, Key: `NO`,
     Key_Reason: `Flash #788 Jeremy Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Fernando Pasarin`,
     Signed: `NO`, Signed_By: ``,
@@ -79487,7 +79487,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `789`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `Dawn of DC Flash`, Key: `NO`,
+    Year: `2023`, Arc: `Dawn of DC Flash`, Key: `NO`,
     Key_Reason: `Flash #789 Jeremy Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Fernando Pasarin`,
     Signed: `NO`, Signed_By: ``,
@@ -79506,7 +79506,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `790`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `Dawn of DC Flash`, Key: `NO`,
+    Year: `2023`, Arc: `Dawn of DC Flash`, Key: `NO`,
     Key_Reason: `Flash #790 Jeremy Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Roger Cruz`,
     Signed: `NO`, Signed_By: ``,
@@ -79525,7 +79525,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `791`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `Dawn of DC Flash`, Key: `NO`,
+    Year: `2023`, Arc: `Dawn of DC Flash`, Key: `NO`,
     Key_Reason: `Flash #791 Jeremy Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Roger Cruz`,
     Signed: `NO`, Signed_By: ``,
@@ -79544,7 +79544,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `792`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `Dawn of DC Flash`, Key: `NO`,
+    Year: `2023`, Arc: `Dawn of DC Flash`, Key: `NO`,
     Key_Reason: `Flash #792 Jeremy Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Roger Cruz`,
     Signed: `NO`, Signed_By: ``,
@@ -79563,7 +79563,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `793`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `Dawn of DC Flash`, Key: `NO`,
+    Year: `2023`, Arc: `Dawn of DC Flash`, Key: `NO`,
     Key_Reason: `Flash #793 Jeremy Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Roger Cruz`,
     Signed: `NO`, Signed_By: ``,
@@ -79582,7 +79582,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `794`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `Dawn of DC Flash`, Key: `NO`,
+    Year: `2023`, Arc: `Dawn of DC Flash`, Key: `NO`,
     Key_Reason: `Flash #794 Jeremy Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Roger Cruz`,
     Signed: `NO`, Signed_By: ``,
@@ -79601,7 +79601,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `795`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `Dawn of DC Flash`, Key: `NO`,
+    Year: `2023`, Arc: `Dawn of DC Flash`, Key: `NO`,
     Key_Reason: `Flash #795 Jeremy Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Roger Cruz`,
     Signed: `NO`, Signed_By: ``,
@@ -79620,7 +79620,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `796`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `Dawn of DC Flash`, Key: `NO`,
+    Year: `2023`, Arc: `Dawn of DC Flash`, Key: `NO`,
     Key_Reason: `Flash #796 Jeremy Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Roger Cruz`,
     Signed: `NO`, Signed_By: ``,
@@ -79639,7 +79639,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `797`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `Dawn of DC Flash`, Key: `NO`,
+    Year: `2023`, Arc: `Dawn of DC Flash`, Key: `NO`,
     Key_Reason: `Flash #797 Jeremy Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Serg Acuña`,
     Signed: `NO`, Signed_By: ``,
@@ -79658,7 +79658,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `798`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `Dawn of DC Flash`, Key: `NO`,
+    Year: `2023`, Arc: `Dawn of DC Flash`, Key: `NO`,
     Key_Reason: `Flash #798 Jeremy Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Fernando Pasarin`,
     Signed: `NO`, Signed_By: ``,
@@ -79677,7 +79677,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `799`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `Dawn of DC Flash`, Key: `NO`,
+    Year: `2023`, Arc: `Dawn of DC Flash`, Key: `NO`,
     Key_Reason: `Flash #799 Jeremy Adams`, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `Fernando Pasarin`,
     Signed: `NO`, Signed_By: ``,
@@ -79696,7 +79696,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `21`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2017-2018`, Arc: `Rebirth — Joshua Williamson/Howard Porter`, Key: `YES`,
+    Year: `2017`, Arc: `Rebirth — Joshua Williamson/Howard Porter`, Key: `YES`,
     Key_Reason: `Flash #21 — The Button crossover; Wally West revelation`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Howard Porter & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -79848,7 +79848,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `53`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2017-2018`, Arc: `Rebirth — Joshua Williamson/Howard Porter`, Key: `NO`,
+    Year: `2018`, Arc: `Rebirth — Joshua Williamson/Howard Porter`, Key: `NO`,
     Key_Reason: `Flash #53 Williamson`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Howard Porter & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -79867,7 +79867,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `54`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2017-2018`, Arc: `Rebirth — Joshua Williamson/Howard Porter`, Key: `NO`,
+    Year: `2018`, Arc: `Rebirth — Joshua Williamson/Howard Porter`, Key: `NO`,
     Key_Reason: `Flash #54 Williamson`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Howard Porter & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -79886,7 +79886,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `55`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2017-2018`, Arc: `Rebirth — Joshua Williamson/Howard Porter`, Key: `NO`,
+    Year: `2018`, Arc: `Rebirth — Joshua Williamson/Howard Porter`, Key: `NO`,
     Key_Reason: `Flash #55 Williamson`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Howard Porter & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -79905,7 +79905,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `56`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2017-2018`, Arc: `Rebirth — Joshua Williamson/Howard Porter`, Key: `NO`,
+    Year: `2018`, Arc: `Rebirth — Joshua Williamson/Howard Porter`, Key: `NO`,
     Key_Reason: `Flash #56 Williamson`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Howard Porter & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -79924,7 +79924,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `57`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2017-2018`, Arc: `Rebirth — Joshua Williamson/Howard Porter`, Key: `NO`,
+    Year: `2018`, Arc: `Rebirth — Joshua Williamson/Howard Porter`, Key: `NO`,
     Key_Reason: `Flash #57 Williamson`, First_App: ``,
     Writer: `Joshua Williamson`, Artist: `Howard Porter & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -79943,7 +79943,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Titans`, Issue: `12`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `Titans Taylor/Scott`, Key: `NO`,
+    Year: `2024`, Arc: `Titans Taylor/Scott`, Key: `NO`,
     Key_Reason: `Titans #12 Taylor — extends Box 16 run`, First_App: ``,
     Writer: `Tom Taylor`, Artist: `Nicola Scott`,
     Signed: `NO`, Signed_By: ``,
@@ -79962,7 +79962,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Titans`, Issue: `13`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `Titans Taylor/Scott`, Key: `NO`,
+    Year: `2024`, Arc: `Titans Taylor/Scott`, Key: `NO`,
     Key_Reason: `Titans #13 Taylor — extends Box 16 run`, First_App: ``,
     Writer: `Tom Taylor`, Artist: `Nicola Scott`,
     Signed: `NO`, Signed_By: ``,
@@ -79981,7 +79981,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Titans`, Issue: `14`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `Titans Taylor/Scott`, Key: `NO`,
+    Year: `2024`, Arc: `Titans Taylor/Scott`, Key: `NO`,
     Key_Reason: `Titans #14 Taylor — extends Box 16 run`, First_App: ``,
     Writer: `Tom Taylor`, Artist: `Nicola Scott`,
     Signed: `NO`, Signed_By: ``,
@@ -80000,7 +80000,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Titans`, Issue: `15`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `Titans Taylor/Scott`, Key: `NO`,
+    Year: `2024`, Arc: `Titans Taylor/Scott`, Key: `NO`,
     Key_Reason: `Titans #15 Taylor — extends Box 16 run`, First_App: ``,
     Writer: `Tom Taylor`, Artist: `Nicola Scott`,
     Signed: `NO`, Signed_By: ``,
@@ -80019,7 +80019,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Titans`, Issue: `16`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `Titans Taylor/Scott`, Key: `NO`,
+    Year: `2024`, Arc: `Titans Taylor/Scott`, Key: `NO`,
     Key_Reason: `Titans #16 Taylor — extends Box 16 run`, First_App: ``,
     Writer: `Tom Taylor`, Artist: `Nicola Scott`,
     Signed: `NO`, Signed_By: ``,
@@ -80038,7 +80038,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Titans`, Issue: `17`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `Titans Taylor/Scott`, Key: `NO`,
+    Year: `2025`, Arc: `Titans Taylor/Scott`, Key: `NO`,
     Key_Reason: `Titans #17 Taylor — extends Box 16 run`, First_App: ``,
     Writer: `Tom Taylor`, Artist: `Nicola Scott`,
     Signed: `NO`, Signed_By: ``,
@@ -80057,7 +80057,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Titans`, Issue: `18`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2023-2024`, Arc: `Titans Taylor/Scott`, Key: `NO`,
+    Year: `2025`, Arc: `Titans Taylor/Scott`, Key: `NO`,
     Key_Reason: `Titans #18 Taylor — extends Box 16 run`, First_App: ``,
     Writer: `Tom Taylor`, Artist: `Nicola Scott`,
     Signed: `NO`, Signed_By: ``,
@@ -85168,7 +85168,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Titans`, Issue: `7`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2016-2019`, Arc: `Titans Rebirth — Abnett`, Key: `NO`,
+    Year: `2017`, Arc: `Titans Rebirth — Abnett`, Key: `NO`,
     Key_Reason: `Titans #7 Abnett/Booth`, First_App: ``,
     Writer: `Dan Abnett`, Artist: `Brett Booth`,
     Signed: `NO`, Signed_By: ``,
@@ -85187,7 +85187,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Titans`, Issue: `8`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2016-2019`, Arc: `Titans Rebirth — Abnett`, Key: `NO`,
+    Year: `2017`, Arc: `Titans Rebirth — Abnett`, Key: `NO`,
     Key_Reason: `Titans #8 Abnett/Booth`, First_App: ``,
     Writer: `Dan Abnett`, Artist: `Brett Booth`,
     Signed: `NO`, Signed_By: ``,
@@ -85206,7 +85206,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Titans`, Issue: `9`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2016-2019`, Arc: `Titans Rebirth — Abnett`, Key: `NO`,
+    Year: `2017`, Arc: `Titans Rebirth — Abnett`, Key: `NO`,
     Key_Reason: `Titans #9 Abnett/Booth`, First_App: ``,
     Writer: `Dan Abnett`, Artist: `Brett Booth`,
     Signed: `NO`, Signed_By: ``,
@@ -85225,7 +85225,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Titans`, Issue: `10`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2016-2019`, Arc: `Titans Rebirth — Abnett`, Key: `NO`,
+    Year: `2017`, Arc: `Titans Rebirth — Abnett`, Key: `NO`,
     Key_Reason: `Titans #10 Abnett/Booth`, First_App: ``,
     Writer: `Dan Abnett`, Artist: `Brett Booth`,
     Signed: `NO`, Signed_By: ``,
@@ -85244,7 +85244,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Titans`, Issue: `24`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2016-2019`, Arc: `Titans Rebirth — Abnett`, Key: `NO`,
+    Year: `2018`, Arc: `Titans Rebirth — Abnett`, Key: `NO`,
     Key_Reason: `Titans #24 Abnett/Booth`, First_App: ``,
     Writer: `Dan Abnett`, Artist: `Brett Booth`,
     Signed: `NO`, Signed_By: ``,
@@ -85263,7 +85263,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Titans`, Issue: `25`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2016-2019`, Arc: `Titans Rebirth — Abnett`, Key: `NO`,
+    Year: `2018`, Arc: `Titans Rebirth — Abnett`, Key: `NO`,
     Key_Reason: `Titans #25 Abnett/Booth`, First_App: ``,
     Writer: `Dan Abnett`, Artist: `Brett Booth`,
     Signed: `NO`, Signed_By: ``,
@@ -85282,7 +85282,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Titans`, Issue: `26`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2016-2019`, Arc: `Titans Rebirth — Abnett`, Key: `NO`,
+    Year: `2018`, Arc: `Titans Rebirth — Abnett`, Key: `NO`,
     Key_Reason: `Titans #26 Abnett/Booth`, First_App: ``,
     Writer: `Dan Abnett`, Artist: `Brett Booth`,
     Signed: `NO`, Signed_By: ``,
@@ -85301,7 +85301,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Titans`, Issue: `27`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2016-2019`, Arc: `Titans Rebirth — Abnett`, Key: `NO`,
+    Year: `2018`, Arc: `Titans Rebirth — Abnett`, Key: `NO`,
     Key_Reason: `Titans #27 Abnett/Booth`, First_App: ``,
     Writer: `Dan Abnett`, Artist: `Brett Booth`,
     Signed: `NO`, Signed_By: ``,
@@ -85320,7 +85320,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Titans`, Issue: `28`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2016-2019`, Arc: `Titans Rebirth — Abnett`, Key: `NO`,
+    Year: `2018`, Arc: `Titans Rebirth — Abnett`, Key: `NO`,
     Key_Reason: `Titans #28 Abnett/Booth`, First_App: ``,
     Writer: `Dan Abnett`, Artist: `Brett Booth`,
     Signed: `NO`, Signed_By: ``,
@@ -85339,7 +85339,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Factor`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `X-Factor Krakoa — Leah Williams`, Key: `YES`,
+    Year: `2020`, Arc: `X-Factor Krakoa — Leah Williams`, Key: `YES`,
     Key_Reason: `X-Factor #1 Leah Williams — X-Factor Investigations on Krakoa — who's not resurrecting? mystery book`, First_App: ``,
     Writer: `Leah Williams`, Artist: `David Baldeon`,
     Signed: `NO`, Signed_By: ``,
@@ -85358,7 +85358,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Factor`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `X-Factor Krakoa — Leah Williams`, Key: `NO`,
+    Year: `2020`, Arc: `X-Factor Krakoa — Leah Williams`, Key: `NO`,
     Key_Reason: `X-Factor #2`, First_App: ``,
     Writer: `Leah Williams`, Artist: `David Baldeon`,
     Signed: `NO`, Signed_By: ``,
@@ -85377,7 +85377,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Factor`, Issue: `3`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `X-Factor Krakoa — Leah Williams`, Key: `NO`,
+    Year: `2020`, Arc: `X-Factor Krakoa — Leah Williams`, Key: `NO`,
     Key_Reason: `X-Factor #3`, First_App: ``,
     Writer: `Leah Williams`, Artist: `David Baldeon`,
     Signed: `NO`, Signed_By: ``,
@@ -85396,7 +85396,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Factor`, Issue: `5`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `X-Factor Krakoa — Leah Williams`, Key: `NO`,
+    Year: `2021`, Arc: `X-Factor Krakoa — Leah Williams`, Key: `NO`,
     Key_Reason: `X-Factor #5`, First_App: ``,
     Writer: `Leah Williams`, Artist: `David Baldeon`,
     Signed: `NO`, Signed_By: ``,
@@ -85415,7 +85415,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Factor`, Issue: `6`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `X-Factor Krakoa — Leah Williams`, Key: `NO`,
+    Year: `2021`, Arc: `X-Factor Krakoa — Leah Williams`, Key: `NO`,
     Key_Reason: `X-Factor #6`, First_App: ``,
     Writer: `Leah Williams`, Artist: `David Baldeon`,
     Signed: `NO`, Signed_By: ``,
@@ -85434,7 +85434,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Factor`, Issue: `7`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `X-Factor Krakoa — Leah Williams`, Key: `NO`,
+    Year: `2021`, Arc: `X-Factor Krakoa — Leah Williams`, Key: `NO`,
     Key_Reason: `X-Factor #7`, First_App: ``,
     Writer: `Leah Williams`, Artist: `David Baldeon`,
     Signed: `NO`, Signed_By: ``,
@@ -85453,7 +85453,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Factor`, Issue: `8`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `X-Factor Krakoa — Leah Williams`, Key: `NO`,
+    Year: `2021`, Arc: `X-Factor Krakoa — Leah Williams`, Key: `NO`,
     Key_Reason: `X-Factor #8`, First_App: ``,
     Writer: `Leah Williams`, Artist: `David Baldeon`,
     Signed: `NO`, Signed_By: ``,
@@ -85472,7 +85472,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Factor`, Issue: `10`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2020-2021`, Arc: `X-Factor Krakoa — Leah Williams`, Key: `NO`,
+    Year: `2021`, Arc: `X-Factor Krakoa — Leah Williams`, Key: `NO`,
     Key_Reason: `X-Factor #10`, First_App: ``,
     Writer: `Leah Williams`, Artist: `David Baldeon`,
     Signed: `NO`, Signed_By: ``,
@@ -89519,7 +89519,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Force`, Issue: `4`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
+    Year: `2020`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #4 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -89538,7 +89538,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Force`, Issue: `5`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
+    Year: `2020`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #5 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -89557,7 +89557,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Force`, Issue: `6`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
+    Year: `2020`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #6 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -89595,7 +89595,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Force`, Issue: `11`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
+    Year: `2020`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #11 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -89614,7 +89614,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Force`, Issue: `12`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
+    Year: `2020`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #12 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -89633,7 +89633,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Force`, Issue: `15`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
+    Year: `2021`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #15 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -89652,7 +89652,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Force`, Issue: `16`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
+    Year: `2021`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #16 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -89671,7 +89671,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Force`, Issue: `17`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
+    Year: `2021`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #17 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -89690,7 +89690,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Force`, Issue: `18`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
+    Year: `2021`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #18 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -89709,7 +89709,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Force`, Issue: `19`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
+    Year: `2021`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #19 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -89728,7 +89728,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Force`, Issue: `20`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
+    Year: `2021`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #20 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -89747,7 +89747,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Force`, Issue: `21`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
+    Year: `2021`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #21 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -89766,7 +89766,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Force`, Issue: `22`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
+    Year: `2021`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #22 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -90127,7 +90127,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Force`, Issue: `23`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
+    Year: `2021`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #23 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -90146,7 +90146,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Force`, Issue: `25`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
+    Year: `2022`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #25 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -90165,7 +90165,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Force`, Issue: `27`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
+    Year: `2022`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #27 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -90184,7 +90184,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Force`, Issue: `28`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
+    Year: `2022`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #28 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -90203,7 +90203,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Force`, Issue: `29`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
+    Year: `2022`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #29 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -90222,7 +90222,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Force`, Issue: `30`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
+    Year: `2022`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #30 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -90260,7 +90260,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Force`, Issue: `31`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
+    Year: `2022`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #31 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -90279,7 +90279,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Force`, Issue: `32`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
+    Year: `2022`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #32 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -90298,7 +90298,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Force`, Issue: `33`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
+    Year: `2022`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #33 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -90317,7 +90317,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Force`, Issue: `34`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
+    Year: `2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #34 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -90336,7 +90336,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Force`, Issue: `39`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
+    Year: `2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #39 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -90355,7 +90355,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Force`, Issue: `40`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
+    Year: `2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #40 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -90374,7 +90374,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Force`, Issue: `41`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
+    Year: `2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #41 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -90393,7 +90393,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Force`, Issue: `42`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
+    Year: `2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #42 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -90412,7 +90412,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Force`, Issue: `43`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
+    Year: `2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #43 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -90431,7 +90431,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Force`, Issue: `44`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
+    Year: `2023`, Arc: `X-Force Krakoa — Benjamin Percy — near-complete run`, Key: `NO`,
     Key_Reason: `X-Force #44 Percy`, First_App: ``,
     Writer: `Benjamin Percy`, Artist: `Joshua Cassara & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -90469,7 +90469,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Men`, Issue: `8`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2010-2012`, Arc: `X-Men — Victor Gischler`, Key: `NO`,
+    Year: `2011`, Arc: `X-Men — Victor Gischler`, Key: `NO`,
     Key_Reason: `X-Men #8 Gischler`, First_App: ``,
     Writer: `Victor Gischler`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -90488,7 +90488,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Men`, Issue: `22`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2010-2012`, Arc: `X-Men — Victor Gischler`, Key: `NO`,
+    Year: `2012`, Arc: `X-Men — Victor Gischler`, Key: `NO`,
     Key_Reason: `X-Men #22 Gischler`, First_App: ``,
     Writer: `Victor Gischler`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -90887,7 +90887,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Men`, Issue: `22`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `X-Men Krakoa — Hickman/Duggan`, Key: `NO`,
+    Year: `2023`, Arc: `X-Men Krakoa — Hickman/Duggan`, Key: `NO`,
     Key_Reason: `X-Men #22 Gerry Duggan`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Leinil Francis Yu & Pepe Larraz & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -90906,7 +90906,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Men`, Issue: `24`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2022`, Arc: `X-Men Krakoa — Hickman/Duggan`, Key: `NO`,
+    Year: `2023`, Arc: `X-Men Krakoa — Hickman/Duggan`, Key: `NO`,
     Key_Reason: `X-Men #24 Gerry Duggan`, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Leinil Francis Yu & Pepe Larraz & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -90982,7 +90982,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Treme X-Men`, Issue: `9`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2004`, Arc: `Extreme X-Men — Claremont`, Key: `NO`,
+    Year: `2002`, Arc: `Extreme X-Men — Claremont`, Key: `NO`,
     Key_Reason: `Extreme X-Men #9`, First_App: ``,
     Writer: `Chris Claremont`, Artist: `Salvador Larroca & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -91001,7 +91001,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Treme X-Men`, Issue: `10`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2004`, Arc: `Extreme X-Men — Claremont`, Key: `NO`,
+    Year: `2002`, Arc: `Extreme X-Men — Claremont`, Key: `NO`,
     Key_Reason: `Extreme X-Men #10`, First_App: ``,
     Writer: `Chris Claremont`, Artist: `Salvador Larroca & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -91039,7 +91039,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Treme X-Men`, Issue: `12`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2004`, Arc: `Extreme X-Men — Claremont`, Key: `NO`,
+    Year: `2002`, Arc: `Extreme X-Men — Claremont`, Key: `NO`,
     Key_Reason: `Extreme X-Men #12`, First_App: ``,
     Writer: `Chris Claremont`, Artist: `Salvador Larroca & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -91058,7 +91058,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Treme X-Men`, Issue: `13`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2004`, Arc: `Extreme X-Men — Claremont`, Key: `NO`,
+    Year: `2002`, Arc: `Extreme X-Men — Claremont`, Key: `NO`,
     Key_Reason: `Extreme X-Men #13`, First_App: ``,
     Writer: `Chris Claremont`, Artist: `Salvador Larroca & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -91077,7 +91077,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Treme X-Men`, Issue: `14`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2004`, Arc: `Extreme X-Men — Claremont`, Key: `NO`,
+    Year: `2002`, Arc: `Extreme X-Men — Claremont`, Key: `NO`,
     Key_Reason: `Extreme X-Men #14`, First_App: ``,
     Writer: `Chris Claremont`, Artist: `Salvador Larroca & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -91096,7 +91096,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `X-Treme X-Men`, Issue: `15`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2004`, Arc: `Extreme X-Men — Claremont`, Key: `NO`,
+    Year: `2002`, Arc: `Extreme X-Men — Claremont`, Key: `NO`,
     Key_Reason: `Extreme X-Men #15`, First_App: ``,
     Writer: `Chris Claremont`, Artist: `Salvador Larroca & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -196324,7 +196324,7 @@ Already signed.`,
   {
     Title: `X-Treme X-Men`, Issue: `16`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2004`, Arc: `Extreme X-Men — Claremont`, Key: `NO`,
+    Year: `2002`, Arc: `Extreme X-Men — Claremont`, Key: `NO`,
     Key_Reason: `Extreme X-Men #16`, First_App: ``,
     Writer: `Chris Claremont`, Artist: `Salvador Larroca & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -196343,7 +196343,7 @@ Already signed.`,
   {
     Title: `X-Treme X-Men`, Issue: `17`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2004`, Arc: `Extreme X-Men — Claremont`, Key: `NO`,
+    Year: `2002`, Arc: `Extreme X-Men — Claremont`, Key: `NO`,
     Key_Reason: `Extreme X-Men #17`, First_App: ``,
     Writer: `Chris Claremont`, Artist: `Salvador Larroca & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -196362,7 +196362,7 @@ Already signed.`,
   {
     Title: `X-Treme X-Men`, Issue: `18`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2004`, Arc: `Extreme X-Men — Claremont`, Key: `NO`,
+    Year: `2002`, Arc: `Extreme X-Men — Claremont`, Key: `NO`,
     Key_Reason: `Extreme X-Men #18`, First_App: ``,
     Writer: `Chris Claremont`, Artist: `Salvador Larroca & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -196381,7 +196381,7 @@ Already signed.`,
   {
     Title: `X-Treme X-Men`, Issue: `19`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2004`, Arc: `Extreme X-Men — Claremont`, Key: `NO`,
+    Year: `2002`, Arc: `Extreme X-Men — Claremont`, Key: `NO`,
     Key_Reason: `Extreme X-Men #19`, First_App: ``,
     Writer: `Chris Claremont`, Artist: `Salvador Larroca & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -196400,7 +196400,7 @@ Already signed.`,
   {
     Title: `X-Treme X-Men`, Issue: `20`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2004`, Arc: `Extreme X-Men — Claremont`, Key: `NO`,
+    Year: `2003`, Arc: `Extreme X-Men — Claremont`, Key: `NO`,
     Key_Reason: `Extreme X-Men #20`, First_App: ``,
     Writer: `Chris Claremont`, Artist: `Salvador Larroca & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -196419,7 +196419,7 @@ Already signed.`,
   {
     Title: `X-Treme X-Men`, Issue: `21`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2004`, Arc: `Extreme X-Men — Claremont`, Key: `NO`,
+    Year: `2003`, Arc: `Extreme X-Men — Claremont`, Key: `NO`,
     Key_Reason: `Extreme X-Men #21`, First_App: ``,
     Writer: `Chris Claremont`, Artist: `Salvador Larroca & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -196438,7 +196438,7 @@ Already signed.`,
   {
     Title: `X-Treme X-Men`, Issue: `22`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2004`, Arc: `Extreme X-Men — Claremont`, Key: `NO`,
+    Year: `2003`, Arc: `Extreme X-Men — Claremont`, Key: `NO`,
     Key_Reason: `Extreme X-Men #22`, First_App: ``,
     Writer: `Chris Claremont`, Artist: `Salvador Larroca & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -205922,7 +205922,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `X-Treme X-Men`, Issue: `23`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2004`, Arc: `Extreme X-Men — Claremont`, Key: `NO`,
+    Year: `2003`, Arc: `Extreme X-Men — Claremont`, Key: `NO`,
     Key_Reason: `Extreme X-Men #23`, First_App: ``,
     Writer: `Chris Claremont`, Artist: `Salvador Larroca & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -205941,7 +205941,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `X-Treme X-Men`, Issue: `24`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2004`, Arc: `Extreme X-Men — Claremont`, Key: `NO`,
+    Year: `2003`, Arc: `Extreme X-Men — Claremont`, Key: `NO`,
     Key_Reason: `Extreme X-Men #24`, First_App: ``,
     Writer: `Chris Claremont`, Artist: `Salvador Larroca & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -205960,7 +205960,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `X-Treme X-Men`, Issue: `25`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2004`, Arc: `Extreme X-Men — Claremont`, Key: `NO`,
+    Year: `2003`, Arc: `Extreme X-Men — Claremont`, Key: `NO`,
     Key_Reason: `Extreme X-Men #25`, First_App: ``,
     Writer: `Chris Claremont`, Artist: `Salvador Larroca & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -206408,7 +206408,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Num: `BOX 10`, Comics: 244, Keys: 28,
-    Signed: 0, YearRange: `2007-2024`,
+    Signed: 0, YearRange: `2003-2024`,
     Label: ``, FirstBook: `All-New Captain America 1`, LastBook: `Marvel Knights: Captain America 8`,
     Location: ``, Notes: ``, DateAdded: `2026-06-29`,
   },
@@ -206600,7 +206600,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Num: `BOX 47`, Comics: 79, Keys: 5,
-    Signed: 0, YearRange: `2001-2009`,
+    Signed: 0, YearRange: `2000-2009`,
     Label: ``, FirstBook: `The Flash 201`, LastBook: `Justice League of America: 80-Page Giant 1`,
     Location: ``, Notes: ``, DateAdded: `May 17, 2026`,
   },
@@ -206618,7 +206618,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Num: `BOX 50`, Comics: 178, Keys: 22,
-    Signed: 0, YearRange: `2001-2024`,
+    Signed: 0, YearRange: `2001-2025`,
     Label: ``, FirstBook: `Batman 130`, LastBook: `Absolute Power: Crown Jewels 1`,
     Location: ``, Notes: ``, DateAdded: `2026-06-29`,
   },
@@ -208893,7 +208893,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `X-Men`, Issue: `8`, Publisher: `Marvel`,
-    Year: `2010-2012`, Volume: `4`, Cover_Artist: `Various`,
+    Year: `2011`, Volume: `4`, Cover_Artist: `Various`,
     Key: `NO`, Key_Reason: `X-Men #8 Gischler`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Victor Gischler`,
@@ -209973,7 +209973,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Black Panther`, Issue: `22`, Publisher: `Marvel`,
-    Year: `2005-2008`, Volume: `4`, Cover_Artist: `Various`,
+    Year: `2007`, Volume: `4`, Cover_Artist: `Various`,
     Key: `NO`, Key_Reason: `BP #22 Hudlin`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Reginald Hudlin`,
@@ -212347,7 +212347,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `JLA`, Issue: `42`, Publisher: `DC`,
-    Year: `2000–2001`, Volume: `1`, Cover_Artist: `Howard Porter`,
+    Year: `2000`, Volume: `1`, Cover_Artist: `Howard Porter`,
     Key: `NO`, Key_Reason: `Morrison's landmark JLA run — Big 7 at their peak; issue #42`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Grant Morrison`,
@@ -212357,7 +212357,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `JLA`, Issue: `43`, Publisher: `DC`,
-    Year: `2000–2001`, Volume: `1`, Cover_Artist: `Howard Porter`,
+    Year: `2000`, Volume: `1`, Cover_Artist: `Howard Porter`,
     Key: `NO`, Key_Reason: `Morrison's landmark JLA run — Big 7 at their peak; issue #43`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Grant Morrison`,
@@ -212367,7 +212367,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `JLA`, Issue: `51`, Publisher: `DC`,
-    Year: `2000–2001`, Volume: `1`, Cover_Artist: `Doug Mahnke`,
+    Year: `2001`, Volume: `1`, Cover_Artist: `Doug Mahnke`,
     Key: `NO`, Key_Reason: `Joe Kelly's JLA run — Obsidian Age and its aftermath; issue #51`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Joe Kelly`,
@@ -212377,7 +212377,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `JLA`, Issue: `52`, Publisher: `DC`,
-    Year: `2000–2001`, Volume: `1`, Cover_Artist: `Doug Mahnke`,
+    Year: `2001`, Volume: `1`, Cover_Artist: `Doug Mahnke`,
     Key: `NO`, Key_Reason: `Joe Kelly's JLA run — Obsidian Age and its aftermath; issue #52`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Joe Kelly`,
@@ -212387,7 +212387,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `JLA`, Issue: `53`, Publisher: `DC`,
-    Year: `2000–2001`, Volume: `1`, Cover_Artist: `Doug Mahnke`,
+    Year: `2001`, Volume: `1`, Cover_Artist: `Doug Mahnke`,
     Key: `NO`, Key_Reason: `Joe Kelly's JLA run — Obsidian Age and its aftermath; issue #53`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Joe Kelly`,
@@ -212457,7 +212457,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `JLA`, Issue: `81`, Publisher: `DC`,
-    Year: `2002–2003`, Volume: `1`, Cover_Artist: `Doug Mahnke`,
+    Year: `2003`, Volume: `1`, Cover_Artist: `Doug Mahnke`,
     Key: `NO`, Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #81`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Joe Kelly & Mark Waid & Various`,
@@ -212467,7 +212467,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `JLA`, Issue: `82`, Publisher: `DC`,
-    Year: `2002–2003`, Volume: `1`, Cover_Artist: `Doug Mahnke`,
+    Year: `2003`, Volume: `1`, Cover_Artist: `Doug Mahnke`,
     Key: `NO`, Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #82`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Joe Kelly & Mark Waid & Various`,
@@ -212477,7 +212477,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `JLA`, Issue: `83`, Publisher: `DC`,
-    Year: `2002–2003`, Volume: `1`, Cover_Artist: `Doug Mahnke`,
+    Year: `2003`, Volume: `1`, Cover_Artist: `Doug Mahnke`,
     Key: `NO`, Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #83`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Joe Kelly & Mark Waid & Various`,
@@ -212487,7 +212487,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `JLA`, Issue: `91`, Publisher: `DC`,
-    Year: `2004–2005`, Volume: `1`, Cover_Artist: `Doug Mahnke`,
+    Year: `2004`, Volume: `1`, Cover_Artist: `Doug Mahnke`,
     Key: `NO`, Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #91`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Joe Kelly & Mark Waid & Various`,
@@ -212497,7 +212497,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `JLA`, Issue: `92`, Publisher: `DC`,
-    Year: `2004–2005`, Volume: `1`, Cover_Artist: `Doug Mahnke`,
+    Year: `2004`, Volume: `1`, Cover_Artist: `Doug Mahnke`,
     Key: `NO`, Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #92`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Joe Kelly & Mark Waid & Various`,
@@ -212507,7 +212507,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `JLA`, Issue: `93`, Publisher: `DC`,
-    Year: `2004–2005`, Volume: `1`, Cover_Artist: `Doug Mahnke`,
+    Year: `2004`, Volume: `1`, Cover_Artist: `Doug Mahnke`,
     Key: `NO`, Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #93`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Joe Kelly & Mark Waid & Various`,
@@ -212517,7 +212517,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `JLA`, Issue: `100`, Publisher: `DC`,
-    Year: `2004–2005`, Volume: `1`, Cover_Artist: `Doug Mahnke`,
+    Year: `2004`, Volume: `1`, Cover_Artist: `Doug Mahnke`,
     Key: `YES`, Key_Reason: `JLA #100 anniversary — major landmark DC issue`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Joe Kelly & Mark Waid & Various`,
@@ -212527,7 +212527,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `JLA`, Issue: `101`, Publisher: `DC`,
-    Year: `2004–2005`, Volume: `1`, Cover_Artist: `Ron Garney`,
+    Year: `2004`, Volume: `1`, Cover_Artist: `Ron Garney`,
     Key: `NO`, Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #101`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Joe Kelly & Mark Waid & Various`,
@@ -212537,7 +212537,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `JLA`, Issue: `102`, Publisher: `DC`,
-    Year: `2004–2005`, Volume: `1`, Cover_Artist: `Ron Garney`,
+    Year: `2004`, Volume: `1`, Cover_Artist: `Ron Garney`,
     Key: `NO`, Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #102`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Joe Kelly & Mark Waid & Various`,
@@ -212547,7 +212547,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `JLA`, Issue: `103`, Publisher: `DC`,
-    Year: `2004–2005`, Volume: `1`, Cover_Artist: `Ron Garney`,
+    Year: `2004`, Volume: `1`, Cover_Artist: `Ron Garney`,
     Key: `NO`, Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #103`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Joe Kelly & Mark Waid & Various`,
@@ -212557,7 +212557,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `JLA`, Issue: `104`, Publisher: `DC`,
-    Year: `2004–2005`, Volume: `1`, Cover_Artist: `Ron Garney`,
+    Year: `2004`, Volume: `1`, Cover_Artist: `Ron Garney`,
     Key: `NO`, Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #104`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Joe Kelly & Mark Waid & Various`,
@@ -212567,7 +212567,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `JLA`, Issue: `105`, Publisher: `DC`,
-    Year: `2004–2005`, Volume: `1`, Cover_Artist: `Ron Garney`,
+    Year: `2004`, Volume: `1`, Cover_Artist: `Ron Garney`,
     Key: `NO`, Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #105`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Joe Kelly & Mark Waid & Various`,
@@ -212577,7 +212577,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `JLA`, Issue: `106`, Publisher: `DC`,
-    Year: `2004–2005`, Volume: `1`, Cover_Artist: `Ron Garney`,
+    Year: `2004`, Volume: `1`, Cover_Artist: `Ron Garney`,
     Key: `NO`, Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #106`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Joe Kelly & Mark Waid & Various`,
@@ -212587,7 +212587,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `JLA`, Issue: `107`, Publisher: `DC`,
-    Year: `2004–2005`, Volume: `1`, Cover_Artist: `Ron Garney`,
+    Year: `2004`, Volume: `1`, Cover_Artist: `Ron Garney`,
     Key: `NO`, Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #107`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Joe Kelly & Mark Waid & Various`,
@@ -212597,7 +212597,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `JLA`, Issue: `108`, Publisher: `DC`,
-    Year: `2004–2005`, Volume: `1`, Cover_Artist: `Ron Garney`,
+    Year: `2005`, Volume: `1`, Cover_Artist: `Ron Garney`,
     Key: `NO`, Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #108`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Joe Kelly & Mark Waid & Various`,
@@ -212607,7 +212607,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `JLA`, Issue: `109`, Publisher: `DC`,
-    Year: `2004–2005`, Volume: `1`, Cover_Artist: `Ron Garney`,
+    Year: `2005`, Volume: `1`, Cover_Artist: `Ron Garney`,
     Key: `NO`, Key_Reason: `JLA Vol 1 later run — post-Morrison/Kelly era; issue #109`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Joe Kelly & Mark Waid & Various`,
@@ -214237,7 +214237,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Justice League`, Issue: `51`, Publisher: `DC`,
-    Year: `2020-2021`, Volume: `7`, Cover_Artist: `Various`,
+    Year: `2020`, Volume: `7`, Cover_Artist: `Various`,
     Key: `NO`, Key_Reason: `JL #51 — Dark Knights Death Metal / Endless Winter crossovers`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Brian Michael Bendis & Various`,
@@ -214247,7 +214247,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Justice League`, Issue: `52`, Publisher: `DC`,
-    Year: `2020-2021`, Volume: `7`, Cover_Artist: `Various`,
+    Year: `2020`, Volume: `7`, Cover_Artist: `Various`,
     Key: `NO`, Key_Reason: `JL #52 — Dark Knights Death Metal / Endless Winter crossovers`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Brian Michael Bendis & Various`,
@@ -214257,7 +214257,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Justice League`, Issue: `53`, Publisher: `DC`,
-    Year: `2020-2021`, Volume: `7`, Cover_Artist: `Various`,
+    Year: `2020`, Volume: `7`, Cover_Artist: `Various`,
     Key: `NO`, Key_Reason: `JL #53 — Dark Knights Death Metal / Endless Winter crossovers`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Brian Michael Bendis & Various`,
@@ -214267,7 +214267,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Justice League`, Issue: `54`, Publisher: `DC`,
-    Year: `2020-2021`, Volume: `7`, Cover_Artist: `Various`,
+    Year: `2020`, Volume: `7`, Cover_Artist: `Various`,
     Key: `NO`, Key_Reason: `JL #54 — Dark Knights Death Metal / Endless Winter crossovers`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Brian Michael Bendis & Various`,
@@ -214277,7 +214277,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Justice League`, Issue: `55`, Publisher: `DC`,
-    Year: `2020-2021`, Volume: `7`, Cover_Artist: `Various`,
+    Year: `2020`, Volume: `7`, Cover_Artist: `Various`,
     Key: `NO`, Key_Reason: `JL #55 — Dark Knights Death Metal / Endless Winter crossovers`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Brian Michael Bendis & Various`,
@@ -214287,7 +214287,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Justice League`, Issue: `56`, Publisher: `DC`,
-    Year: `2020-2021`, Volume: `7`, Cover_Artist: `Various`,
+    Year: `2021`, Volume: `7`, Cover_Artist: `Various`,
     Key: `NO`, Key_Reason: `JL #56 — Dark Knights Death Metal / Endless Winter crossovers`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Brian Michael Bendis & Various`,
@@ -214297,7 +214297,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Justice League`, Issue: `57`, Publisher: `DC`,
-    Year: `2020-2021`, Volume: `7`, Cover_Artist: `Various`,
+    Year: `2021`, Volume: `7`, Cover_Artist: `Various`,
     Key: `NO`, Key_Reason: `JL #57 — Dark Knights Death Metal / Endless Winter crossovers`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Brian Michael Bendis & Various`,
@@ -214307,7 +214307,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Justice League`, Issue: `58`, Publisher: `DC`,
-    Year: `2020-2021`, Volume: `7`, Cover_Artist: `Various`,
+    Year: `2021`, Volume: `7`, Cover_Artist: `Various`,
     Key: `NO`, Key_Reason: `JL #58 — Dark Knights Death Metal / Endless Winter crossovers`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Brian Michael Bendis & Various`,
@@ -214317,7 +214317,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Justice League`, Issue: `59`, Publisher: `DC`,
-    Year: `2020-2021`, Volume: `7`, Cover_Artist: `Various`,
+    Year: `2021`, Volume: `7`, Cover_Artist: `Various`,
     Key: `NO`, Key_Reason: `JL #59 — Dark Knights Death Metal / Endless Winter crossovers`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Brian Michael Bendis & Various`,
@@ -214327,7 +214327,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Justice League`, Issue: `67`, Publisher: `DC`,
-    Year: `2020-2021`, Volume: `7`, Cover_Artist: `Various`,
+    Year: `2021`, Volume: `7`, Cover_Artist: `Various`,
     Key: `NO`, Key_Reason: `JL #67 — Dark Knights Death Metal / Endless Winter crossovers`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Brian Michael Bendis & Various`,
@@ -214337,7 +214337,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Justice League`, Issue: `68`, Publisher: `DC`,
-    Year: `2020-2021`, Volume: `7`, Cover_Artist: `Various`,
+    Year: `2021`, Volume: `7`, Cover_Artist: `Various`,
     Key: `NO`, Key_Reason: `JL #68 — Dark Knights Death Metal / Endless Winter crossovers`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Brian Michael Bendis & Various`,
@@ -214347,7 +214347,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Justice League`, Issue: `69`, Publisher: `DC`,
-    Year: `2020-2021`, Volume: `7`, Cover_Artist: `Various`,
+    Year: `2022`, Volume: `7`, Cover_Artist: `Various`,
     Key: `NO`, Key_Reason: `JL #69 — Dark Knights Death Metal / Endless Winter crossovers`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Brian Michael Bendis & Various`,
