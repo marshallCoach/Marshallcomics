@@ -64,9 +64,15 @@ def main():
     print(f"Source: {os.path.basename(xlsx)}   (mode: {'APPLY' if args.apply else 'DRY-RUN'})")
 
     conn = sqlite3.connect(DB)
+    # Index by BOTH the GCD series name and the matched_title it was extracted
+    # under. Name alone is article-blind: GCD calls the 1987-2006 Wally West run
+    # "Flash" while the inventory says "The Flash", so a name-only index misses
+    # every volume the variant rescan recovered.
     by_name = defaultdict(list)
-    for sid, name in conn.execute("SELECT id, name FROM gcd_series"):
+    for sid, name, mt in conn.execute("SELECT id, name, matched_title FROM gcd_series"):
         by_name[tight(name)].append(sid)
+        if mt and tight(mt) != tight(name):
+            by_name[tight(mt)].append(sid)
     # issue-number -> years, per series, built lazily per title
     issue_cache = {}
 
