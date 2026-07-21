@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_1907_1926.xlsx  |  Generated: 2026-07-19
+// Source: comics_inventory_1907_2148.xlsx  |  Generated: 2026-07-21
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -42,7 +42,7 @@ export const DATA3: {
     ccBoxes: CatalogComic[];
   };
 } = {
-  generatedAt: "2026-07-19",
+  generatedAt: "2026-07-21",
   comics: [
   {
     Title: `Barack Obama: Presidential Material`, Issue: `1`, Publisher: `IDW`,
@@ -3163,7 +3163,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `112`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1997–1998`, Arc: `Mark Waid era — Wally West as Flash`, Key: `NO`,
+    Year: `1996`, Arc: `Mark Waid era — Wally West as Flash`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Mark Waid run; Wally West as The Flash`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Oscar Jimenez & Paul Ryan`,
     Signed: `NO`, Signed_By: ``,
@@ -3182,7 +3182,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `113`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1997–1998`, Arc: `Mark Waid era — Wally West as Flash`, Key: `NO`,
+    Year: `1996`, Arc: `Mark Waid era — Wally West as Flash`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Mark Waid run; Wally West as The Flash`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Oscar Jimenez & Paul Ryan`,
     Signed: `NO`, Signed_By: ``,
@@ -3201,7 +3201,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `114`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1997–1998`, Arc: `Mark Waid era — Wally West as Flash`, Key: `NO`,
+    Year: `1996`, Arc: `Mark Waid era — Wally West as Flash`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Mark Waid run; Wally West as The Flash`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Oscar Jimenez & Paul Ryan`,
     Signed: `NO`, Signed_By: ``,
@@ -3220,7 +3220,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `115`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1997–1998`, Arc: `Mark Waid era — Wally West as Flash`, Key: `NO`,
+    Year: `1996`, Arc: `Mark Waid era — Wally West as Flash`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Mark Waid run; Wally West as The Flash`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Oscar Jimenez & Paul Ryan`,
     Signed: `NO`, Signed_By: ``,
@@ -3239,7 +3239,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `116`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1997–1998`, Arc: `Mark Waid era — Wally West as Flash`, Key: `NO`,
+    Year: `1996`, Arc: `Mark Waid era — Wally West as Flash`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Mark Waid run; Wally West as The Flash`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Oscar Jimenez & Paul Ryan`,
     Signed: `NO`, Signed_By: ``,
@@ -3258,7 +3258,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `117`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1997–1998`, Arc: `Mark Waid era — Wally West as Flash`, Key: `NO`,
+    Year: `1996`, Arc: `Mark Waid era — Wally West as Flash`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Mark Waid run; Wally West as The Flash`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Oscar Jimenez & Paul Ryan`,
     Signed: `NO`, Signed_By: ``,
@@ -3277,7 +3277,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `118`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1997–1998`, Arc: `Mark Waid era — Wally West as Flash`, Key: `NO`,
+    Year: `1996`, Arc: `Mark Waid era — Wally West as Flash`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Mark Waid run; Wally West as The Flash`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Oscar Jimenez & Paul Ryan`,
     Signed: `NO`, Signed_By: ``,
@@ -3296,7 +3296,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `119`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1997–1998`, Arc: `Mark Waid era — Wally West as Flash`, Key: `NO`,
+    Year: `1996`, Arc: `Mark Waid era — Wally West as Flash`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Mark Waid run; Wally West as The Flash`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Oscar Jimenez & Paul Ryan`,
     Signed: `NO`, Signed_By: ``,
@@ -3315,7 +3315,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `120`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1997–1998`, Arc: `Mark Waid era — Wally West as Flash`, Key: `NO`,
+    Year: `1996`, Arc: `Mark Waid era — Wally West as Flash`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Mark Waid run; Wally West as The Flash`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Oscar Jimenez & Paul Ryan`,
     Signed: `NO`, Signed_By: ``,
@@ -3334,7 +3334,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `122`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1997–1998`, Arc: `Mark Waid era — Wally West as Flash`, Key: `NO`,
+    Year: `1997`, Arc: `Mark Waid era — Wally West as Flash`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Mark Waid run; Wally West as The Flash`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Oscar Jimenez & Paul Ryan`,
     Signed: `NO`, Signed_By: ``,
@@ -3353,7 +3353,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `123`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1997–1998`, Arc: `Mark Waid era — Wally West as Flash`, Key: `NO`,
+    Year: `1997`, Arc: `Mark Waid era — Wally West as Flash`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Mark Waid run; Wally West as The Flash`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Oscar Jimenez & Paul Ryan`,
     Signed: `NO`, Signed_By: ``,
@@ -3372,7 +3372,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `124`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1997–1998`, Arc: `Mark Waid era — Wally West as Flash`, Key: `NO`,
+    Year: `1997`, Arc: `Mark Waid era — Wally West as Flash`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Mark Waid run; Wally West as The Flash`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Oscar Jimenez & Paul Ryan`,
     Signed: `NO`, Signed_By: ``,
@@ -3391,7 +3391,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `125`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1997–1998`, Arc: `Mark Waid era — Wally West as Flash`, Key: `NO`,
+    Year: `1997`, Arc: `Mark Waid era — Wally West as Flash`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Mark Waid run; Wally West as The Flash`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Oscar Jimenez & Paul Ryan`,
     Signed: `NO`, Signed_By: ``,
@@ -3410,7 +3410,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `126`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1997–1998`, Arc: `Mark Waid era — Wally West as Flash`, Key: `NO`,
+    Year: `1997`, Arc: `Mark Waid era — Wally West as Flash`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Mark Waid run; Wally West as The Flash`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Oscar Jimenez & Paul Ryan`,
     Signed: `NO`, Signed_By: ``,
@@ -3429,7 +3429,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `127`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1997–1998`, Arc: `Mark Waid era — Wally West as Flash`, Key: `NO`,
+    Year: `1997`, Arc: `Mark Waid era — Wally West as Flash`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Mark Waid run; Wally West as The Flash`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Oscar Jimenez & Paul Ryan`,
     Signed: `NO`, Signed_By: ``,
@@ -3448,7 +3448,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `128`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1997–1998`, Arc: `Mark Waid era — Wally West as Flash`, Key: `NO`,
+    Year: `1997`, Arc: `Mark Waid era — Wally West as Flash`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Mark Waid run; Wally West as The Flash`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Oscar Jimenez & Paul Ryan`,
     Signed: `NO`, Signed_By: ``,
@@ -3467,7 +3467,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `129`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1997–1998`, Arc: `Mark Waid era — Wally West as Flash`, Key: `NO`,
+    Year: `1997`, Arc: `Mark Waid era — Wally West as Flash`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Mark Waid run; Wally West as The Flash`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Oscar Jimenez & Paul Ryan`,
     Signed: `NO`, Signed_By: ``,
@@ -3486,7 +3486,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `130`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1998–1999`, Arc: `Morrison/Millar run`, Key: `NO`,
+    Year: `1997`, Arc: `Morrison/Millar run`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Grant Morrison & Mark Millar run; Wally West as The Flash`, First_App: ``,
     Writer: `Grant Morrison & Mark Millar`, Artist: `Paul Ryan & Ron Lim`,
     Signed: `NO`, Signed_By: ``,
@@ -3505,7 +3505,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `131`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1998–1999`, Arc: `Morrison/Millar run`, Key: `NO`,
+    Year: `1997`, Arc: `Morrison/Millar run`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Grant Morrison & Mark Millar run; Wally West as The Flash`, First_App: ``,
     Writer: `Grant Morrison & Mark Millar`, Artist: `Paul Ryan & Ron Lim`,
     Signed: `NO`, Signed_By: ``,
@@ -3524,7 +3524,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `132`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1998–1999`, Arc: `Morrison/Millar run`, Key: `NO`,
+    Year: `1997`, Arc: `Morrison/Millar run`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Grant Morrison & Mark Millar run; Wally West as The Flash`, First_App: ``,
     Writer: `Grant Morrison & Mark Millar`, Artist: `Paul Ryan & Ron Lim`,
     Signed: `NO`, Signed_By: ``,
@@ -3543,7 +3543,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `133`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1998–1999`, Arc: `Morrison/Millar run`, Key: `NO`,
+    Year: `1998`, Arc: `Morrison/Millar run`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Grant Morrison & Mark Millar run; Wally West as The Flash`, First_App: ``,
     Writer: `Grant Morrison & Mark Millar`, Artist: `Paul Ryan & Ron Lim`,
     Signed: `NO`, Signed_By: ``,
@@ -3562,7 +3562,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `134`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1998–1999`, Arc: `Morrison/Millar run`, Key: `NO`,
+    Year: `1998`, Arc: `Morrison/Millar run`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Grant Morrison & Mark Millar run; Wally West as The Flash`, First_App: ``,
     Writer: `Grant Morrison & Mark Millar`, Artist: `Paul Ryan & Ron Lim`,
     Signed: `NO`, Signed_By: ``,
@@ -3581,7 +3581,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `135`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1998–1999`, Arc: `Morrison/Millar run`, Key: `NO`,
+    Year: `1998`, Arc: `Morrison/Millar run`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Grant Morrison & Mark Millar run; Wally West as The Flash`, First_App: ``,
     Writer: `Grant Morrison & Mark Millar`, Artist: `Paul Ryan & Ron Lim`,
     Signed: `NO`, Signed_By: ``,
@@ -3600,7 +3600,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `136`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1998–1999`, Arc: `Morrison/Millar run`, Key: `NO`,
+    Year: `1998`, Arc: `Morrison/Millar run`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Grant Morrison & Mark Millar run; Wally West as The Flash`, First_App: ``,
     Writer: `Grant Morrison & Mark Millar`, Artist: `Paul Ryan & Ron Lim`,
     Signed: `NO`, Signed_By: ``,
@@ -3619,7 +3619,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `152`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1999–2000`, Arc: `Waid return — Chain Lightning / Dark Flash`, Key: `NO`,
+    Year: `1999`, Arc: `Waid return — Chain Lightning / Dark Flash`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Mark Waid / Brian Augustyn run; Wally West as The Flash`, First_App: ``,
     Writer: `Mark Waid & Brian Augustyn`, Artist: `Paul Pelletier & Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -3638,7 +3638,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `153`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1999–2000`, Arc: `Waid return — Chain Lightning / Dark Flash`, Key: `NO`,
+    Year: `1999`, Arc: `Waid return — Chain Lightning / Dark Flash`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Mark Waid / Brian Augustyn run; Wally West as The Flash`, First_App: ``,
     Writer: `Mark Waid & Brian Augustyn`, Artist: `Paul Pelletier & Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -3657,7 +3657,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `154`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1999–2000`, Arc: `Waid return — Chain Lightning / Dark Flash`, Key: `NO`,
+    Year: `1999`, Arc: `Waid return — Chain Lightning / Dark Flash`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Mark Waid / Brian Augustyn run; Wally West as The Flash`, First_App: ``,
     Writer: `Mark Waid & Brian Augustyn`, Artist: `Paul Pelletier & Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -3676,7 +3676,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `155`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1999–2000`, Arc: `Waid return — Chain Lightning / Dark Flash`, Key: `NO`,
+    Year: `1999`, Arc: `Waid return — Chain Lightning / Dark Flash`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Mark Waid / Brian Augustyn run; Wally West as The Flash`, First_App: ``,
     Writer: `Mark Waid & Brian Augustyn`, Artist: `Paul Pelletier & Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -3695,7 +3695,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `156`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1999–2000`, Arc: `Waid return — Chain Lightning / Dark Flash`, Key: `NO`,
+    Year: `2000`, Arc: `Waid return — Chain Lightning / Dark Flash`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Mark Waid / Brian Augustyn run; Wally West as The Flash`, First_App: ``,
     Writer: `Mark Waid & Brian Augustyn`, Artist: `Paul Pelletier & Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -3714,7 +3714,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `157`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1999–2000`, Arc: `Waid return — Chain Lightning / Dark Flash`, Key: `NO`,
+    Year: `2000`, Arc: `Waid return — Chain Lightning / Dark Flash`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Mark Waid / Brian Augustyn run; Wally West as The Flash`, First_App: ``,
     Writer: `Mark Waid & Brian Augustyn`, Artist: `Paul Pelletier & Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -3733,7 +3733,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `158`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1999–2000`, Arc: `Waid return — Chain Lightning / Dark Flash`, Key: `NO`,
+    Year: `2000`, Arc: `Waid return — Chain Lightning / Dark Flash`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Mark Waid / Brian Augustyn run; Wally West as The Flash`, First_App: ``,
     Writer: `Mark Waid & Brian Augustyn`, Artist: `Paul Pelletier & Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -3752,7 +3752,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `159`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1999–2000`, Arc: `Waid return — Chain Lightning / Dark Flash`, Key: `NO`,
+    Year: `2000`, Arc: `Waid return — Chain Lightning / Dark Flash`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Mark Waid / Brian Augustyn run; Wally West as The Flash`, First_App: ``,
     Writer: `Mark Waid & Brian Augustyn`, Artist: `Paul Pelletier & Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -3771,7 +3771,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `160`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1999–2000`, Arc: `Waid return — Chain Lightning / Dark Flash`, Key: `NO`,
+    Year: `2000`, Arc: `Waid return — Chain Lightning / Dark Flash`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Mark Waid / Brian Augustyn run; Wally West as The Flash`, First_App: ``,
     Writer: `Mark Waid & Brian Augustyn`, Artist: `Paul Pelletier & Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -3790,7 +3790,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `161`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1999–2000`, Arc: `Waid return — Chain Lightning / Dark Flash`, Key: `NO`,
+    Year: `2000`, Arc: `Waid return — Chain Lightning / Dark Flash`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Mark Waid / Brian Augustyn run; Wally West as The Flash`, First_App: ``,
     Writer: `Mark Waid & Brian Augustyn`, Artist: `Paul Pelletier & Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -3809,7 +3809,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `162`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1999–2000`, Arc: `Waid return — Chain Lightning / Dark Flash`, Key: `NO`,
+    Year: `2000`, Arc: `Waid return — Chain Lightning / Dark Flash`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Mark Waid / Brian Augustyn run; Wally West as The Flash`, First_App: ``,
     Writer: `Mark Waid & Brian Augustyn`, Artist: `Paul Pelletier & Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -3828,7 +3828,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `163`, Publisher: `DC`,
     Disambig: ``,
-    Year: `1999–2000`, Arc: `Waid return — Chain Lightning / Dark Flash`, Key: `NO`,
+    Year: `2000`, Arc: `Waid return — Chain Lightning / Dark Flash`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Mark Waid / Brian Augustyn run; Wally West as The Flash`, First_App: ``,
     Writer: `Mark Waid & Brian Augustyn`, Artist: `Paul Pelletier & Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -3847,7 +3847,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `164`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `YES`,
+    Year: `2000`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `YES`,
     Key_Reason: `1st issue of Geoff Johns' legendary Flash run — massive key for Johns collectors`, First_App: `Johns begins Flash run`,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -3866,7 +3866,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `165`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
+    Year: `2000`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -3885,7 +3885,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `166`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
+    Year: `2000`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -3904,7 +3904,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `167`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
+    Year: `2000`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -3923,7 +3923,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `168`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
+    Year: `2001`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -3942,7 +3942,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `169`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
+    Year: `2001`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -3961,7 +3961,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `170`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
+    Year: `2001`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -3980,7 +3980,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `171`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
+    Year: `2001`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -3999,7 +3999,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `172`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
+    Year: `2001`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -4018,7 +4018,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `173`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
+    Year: `2001`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -4037,7 +4037,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `174`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
+    Year: `2001`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -4056,7 +4056,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `175`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
+    Year: `2001`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -4075,7 +4075,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `176`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
+    Year: `2001`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -4094,7 +4094,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `177`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
+    Year: `2001`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -4113,7 +4113,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `178`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
+    Year: `2001`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -4132,7 +4132,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `179`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
+    Year: `2001`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -4151,7 +4151,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `180`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
+    Year: `2002`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -4170,7 +4170,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `181`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
+    Year: `2002`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -4189,7 +4189,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `182`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `YES`,
+    Year: `2002`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `YES`,
     Key_Reason: `1st Zoom (Hunter Zolomon) as Reverse-Flash — major villain key`, First_App: `1st Zoom (Hunter Zolomon / Reverse-Flash II)`,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -4208,7 +4208,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `183`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
+    Year: `2002`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -4227,7 +4227,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `184`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
+    Year: `2002`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -4246,7 +4246,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `185`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
+    Year: `2002`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -4265,7 +4265,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `186`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
+    Year: `2002`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -4284,7 +4284,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `187`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
+    Year: `2002`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -4303,7 +4303,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `188`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
+    Year: `2002`, Arc: `Geoff Johns — Rogues Gallery Rebuilt (Iron Heights era)`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -4322,7 +4322,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `189`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Blitz / Zoom introduction`, Key: `NO`,
+    Year: `2002`, Arc: `Geoff Johns — Blitz / Zoom introduction`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -4341,7 +4341,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `190`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Blitz / Zoom introduction`, Key: `NO`,
+    Year: `2002`, Arc: `Geoff Johns — Blitz / Zoom introduction`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -4360,7 +4360,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `191`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Blitz / Zoom introduction`, Key: `NO`,
+    Year: `2002`, Arc: `Geoff Johns — Blitz / Zoom introduction`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -4379,7 +4379,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `192`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Blitz / Zoom introduction`, Key: `NO`,
+    Year: `2003`, Arc: `Geoff Johns — Blitz / Zoom introduction`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -4398,7 +4398,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `193`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Blitz / Zoom introduction`, Key: `NO`,
+    Year: `2003`, Arc: `Geoff Johns — Blitz / Zoom introduction`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -4417,7 +4417,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `194`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Blitz / Zoom introduction`, Key: `NO`,
+    Year: `2003`, Arc: `Geoff Johns — Blitz / Zoom introduction`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -4436,7 +4436,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `195`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Blitz / Zoom introduction`, Key: `NO`,
+    Year: `2003`, Arc: `Geoff Johns — Blitz / Zoom introduction`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -4455,7 +4455,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `196`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Blitz / Zoom introduction`, Key: `NO`,
+    Year: `2003`, Arc: `Geoff Johns — Blitz / Zoom introduction`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -4474,7 +4474,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `197`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Blitz / Zoom introduction`, Key: `YES`,
+    Year: `2003`, Arc: `Geoff Johns — Blitz / Zoom introduction`, Key: `YES`,
     Key_Reason: `Zoom origin issue — 'Blitz' arc peak; one of Johns' finest Flash issues`, First_App: `Zoom origin`,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -4493,7 +4493,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `198`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Blitz / Zoom introduction`, Key: `NO`,
+    Year: `2003`, Arc: `Geoff Johns — Blitz / Zoom introduction`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -4512,7 +4512,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `199`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Blitz / Zoom introduction`, Key: `NO`,
+    Year: `2003`, Arc: `Geoff Johns — Blitz / Zoom introduction`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -4531,7 +4531,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `200`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2000–2003`, Arc: `Geoff Johns — Blitz / Zoom introduction`, Key: `YES`,
+    Year: `2003`, Arc: `Geoff Johns — Blitz / Zoom introduction`, Key: `YES`,
     Key_Reason: `Flash #200 — landmark anniversary issue; Wally's identity restored; Johns peak`, First_App: `Anniversary; Wally identity restored`,
     Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: `NO`, Signed_By: ``,
@@ -4550,7 +4550,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `201`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003–2005`, Arc: `Geoff Johns — Rogue War build-up`, Key: `NO`,
+    Year: `2003`, Arc: `Geoff Johns — Rogue War build-up`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Signed: `NO`, Signed_By: ``,
@@ -4569,7 +4569,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `202`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003–2005`, Arc: `Geoff Johns — Rogue War build-up`, Key: `NO`,
+    Year: `2003`, Arc: `Geoff Johns — Rogue War build-up`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Signed: `NO`, Signed_By: ``,
@@ -4588,7 +4588,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `203`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003–2005`, Arc: `Geoff Johns — Rogue War build-up`, Key: `NO`,
+    Year: `2003`, Arc: `Geoff Johns — Rogue War build-up`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Signed: `NO`, Signed_By: ``,
@@ -4607,7 +4607,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `204`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003–2005`, Arc: `Geoff Johns — Rogue War build-up`, Key: `NO`,
+    Year: `2004`, Arc: `Geoff Johns — Rogue War build-up`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Signed: `NO`, Signed_By: ``,
@@ -4626,7 +4626,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `205`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003–2005`, Arc: `Geoff Johns — Rogue War build-up`, Key: `NO`,
+    Year: `2004`, Arc: `Geoff Johns — Rogue War build-up`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Signed: `NO`, Signed_By: ``,
@@ -4645,7 +4645,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `206`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003–2005`, Arc: `Geoff Johns — Rogue War build-up`, Key: `NO`,
+    Year: `2004`, Arc: `Geoff Johns — Rogue War build-up`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Signed: `NO`, Signed_By: ``,
@@ -4664,7 +4664,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `207`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003–2005`, Arc: `Geoff Johns — Rogue War build-up`, Key: `NO`,
+    Year: `2004`, Arc: `Geoff Johns — Rogue War build-up`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Signed: `NO`, Signed_By: ``,
@@ -4683,7 +4683,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `208`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003–2005`, Arc: `Geoff Johns — Rogue War build-up`, Key: `NO`,
+    Year: `2004`, Arc: `Geoff Johns — Rogue War build-up`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Signed: `NO`, Signed_By: ``,
@@ -4702,7 +4702,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `209`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003–2005`, Arc: `Geoff Johns — Rogue War build-up`, Key: `NO`,
+    Year: `2004`, Arc: `Geoff Johns — Rogue War build-up`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Signed: `NO`, Signed_By: ``,
@@ -4721,7 +4721,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `210`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003–2005`, Arc: `Geoff Johns — Rogue War build-up`, Key: `NO`,
+    Year: `2004`, Arc: `Geoff Johns — Rogue War build-up`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Signed: `NO`, Signed_By: ``,
@@ -4740,7 +4740,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `211`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003–2005`, Arc: `Geoff Johns — Rogue War build-up`, Key: `NO`,
+    Year: `2004`, Arc: `Geoff Johns — Rogue War build-up`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Signed: `NO`, Signed_By: ``,
@@ -4759,7 +4759,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `212`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003–2005`, Arc: `Geoff Johns — Rogue War build-up`, Key: `NO`,
+    Year: `2004`, Arc: `Geoff Johns — Rogue War build-up`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Signed: `NO`, Signed_By: ``,
@@ -4778,7 +4778,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `213`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003–2005`, Arc: `Geoff Johns — Rogue War build-up`, Key: `NO`,
+    Year: `2004`, Arc: `Geoff Johns — Rogue War build-up`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Signed: `NO`, Signed_By: ``,
@@ -4797,7 +4797,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `214`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003–2005`, Arc: `Geoff Johns — Rogue War / Infinite Crisis lead-in`, Key: `NO`,
+    Year: `2004`, Arc: `Geoff Johns — Rogue War / Infinite Crisis lead-in`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Signed: `NO`, Signed_By: ``,
@@ -4816,7 +4816,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `215`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003–2005`, Arc: `Geoff Johns — Rogue War / Infinite Crisis lead-in`, Key: `NO`,
+    Year: `2004`, Arc: `Geoff Johns — Rogue War / Infinite Crisis lead-in`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Signed: `NO`, Signed_By: ``,
@@ -4835,7 +4835,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `216`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003–2005`, Arc: `Geoff Johns — Rogue War / Infinite Crisis lead-in`, Key: `NO`,
+    Year: `2005`, Arc: `Geoff Johns — Rogue War / Infinite Crisis lead-in`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Signed: `NO`, Signed_By: ``,
@@ -4854,7 +4854,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `217`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003–2005`, Arc: `Geoff Johns — Rogue War / Infinite Crisis lead-in`, Key: `NO`,
+    Year: `2005`, Arc: `Geoff Johns — Rogue War / Infinite Crisis lead-in`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Signed: `NO`, Signed_By: ``,
@@ -4873,7 +4873,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `218`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003–2005`, Arc: `Geoff Johns — Rogue War / Infinite Crisis lead-in`, Key: `NO`,
+    Year: `2005`, Arc: `Geoff Johns — Rogue War / Infinite Crisis lead-in`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Signed: `NO`, Signed_By: ``,
@@ -4892,7 +4892,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `219`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003–2005`, Arc: `Geoff Johns — Rogue War / Infinite Crisis lead-in`, Key: `NO`,
+    Year: `2005`, Arc: `Geoff Johns — Rogue War / Infinite Crisis lead-in`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Signed: `NO`, Signed_By: ``,
@@ -4911,7 +4911,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `220`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003–2005`, Arc: `Geoff Johns — Rogue War / Infinite Crisis lead-in`, Key: `NO`,
+    Year: `2005`, Arc: `Geoff Johns — Rogue War / Infinite Crisis lead-in`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Signed: `NO`, Signed_By: ``,
@@ -4930,7 +4930,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `221`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003–2005`, Arc: `Geoff Johns — Rogue War / Infinite Crisis lead-in`, Key: `NO`,
+    Year: `2005`, Arc: `Geoff Johns — Rogue War / Infinite Crisis lead-in`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Signed: `NO`, Signed_By: ``,
@@ -4949,7 +4949,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `222`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003–2005`, Arc: `Geoff Johns — Rogue War / Infinite Crisis lead-in`, Key: `NO`,
+    Year: `2005`, Arc: `Geoff Johns — Rogue War / Infinite Crisis lead-in`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Signed: `NO`, Signed_By: ``,
@@ -4968,7 +4968,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `223`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003–2005`, Arc: `Geoff Johns — Rogue War / Infinite Crisis lead-in`, Key: `NO`,
+    Year: `2005`, Arc: `Geoff Johns — Rogue War / Infinite Crisis lead-in`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Signed: `NO`, Signed_By: ``,
@@ -4987,7 +4987,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `224`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003–2005`, Arc: `Geoff Johns — Rogue War / Infinite Crisis lead-in`, Key: `NO`,
+    Year: `2005`, Arc: `Geoff Johns — Rogue War / Infinite Crisis lead-in`, Key: `NO`,
     Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`, First_App: ``,
     Writer: `Geoff Johns`, Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Signed: `NO`, Signed_By: ``,
@@ -5006,7 +5006,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Flash`, Issue: `225`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003–2005`, Arc: `Geoff Johns — Rogue War / Infinite Crisis lead-in`, Key: `YES`,
+    Year: `2005`, Arc: `Geoff Johns — Rogue War / Infinite Crisis lead-in`, Key: `YES`,
     Key_Reason: `Final issue of Geoff Johns' Flash run — concludes Rogue War; Infinite Crisis lead-in`, First_App: `Geoff Johns Flash run finale`,
     Writer: `Geoff Johns`, Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Signed: `NO`, Signed_By: ``,
@@ -7110,7 +7110,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC New 52`, Box: `57`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `2`, Entry: `604`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 10.28, eBay_Low: 3.47, eBay_High: 24.24, eBay_Count: 10, eBay_Median: 9.5,
   },
   {
     Title: `Batman`, Issue: `23`, Publisher: `DC`,
@@ -11670,7 +11670,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Rebirth`, Box: `48`,
     Crossover: `DC Rebirth / The Button`, Start_Bid: `5`,
     Volume: `3`, Entry: `1481`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 10.28, eBay_Low: 3.47, eBay_High: 24.24, eBay_Count: 10, eBay_Median: 9.5,
   },
   {
     Title: `Batman`, Issue: `30`, Publisher: `DC`,
@@ -13437,7 +13437,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC All In`, Box: `50`,
     Crossover: `Dawn of DC`, Start_Bid: `1`,
     Volume: `1`, Entry: `945`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 5.21, eBay_Low: 1.43, eBay_High: 13.75, eBay_Count: 8, eBay_Median: 4.12,
   },
   {
     Title: `Batman/Superman: World's Finest`, Issue: `28`, Publisher: `DC`,
@@ -14558,7 +14558,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Heroes Reborn`, Box: `7`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `3`, Entry: `4206`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 7.24, eBay_Low: 3.14, eBay_High: 10, eBay_Count: 8, eBay_Median: 8.24,
   },
   {
     Title: `Black Panther`, Issue: `16`, Publisher: `Marvel`,
@@ -15090,7 +15090,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `8`, Entry: `1034`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 6.71, eBay_Low: 4, eBay_High: 10, eBay_Count: 7, eBay_Median: 5.99,
   },
   {
     Title: `Black Panther`, Issue: `48`, Publisher: `Marvel`,
@@ -15793,7 +15793,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `4`, Entry: `4263`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 11.96, eBay_Low: 3.99, eBay_High: 26.74, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `Black Panther`, Issue: `10`, Publisher: `Marvel`,
@@ -16211,7 +16211,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `6`, Entry: `4316`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 7.24, eBay_Low: 3.14, eBay_High: 10, eBay_Count: 8, eBay_Median: 8.24,
   },
   {
     Title: `Black Panther`, Issue: `16`, Publisher: `Marvel`,
@@ -16534,7 +16534,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `7`, Entry: `4337`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 11.96, eBay_Low: 3.99, eBay_High: 26.74, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `Black Panther`, Issue: `8`, Publisher: `Marvel`,
@@ -16686,7 +16686,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `7`, Entry: `4345`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 7.24, eBay_Low: 3.14, eBay_High: 10, eBay_Count: 8, eBay_Median: 8.24,
   },
   {
     Title: `Black Panther`, Issue: `16`, Publisher: `Marvel`,
@@ -17009,7 +17009,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `7`, Entry: `4377`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 11.96, eBay_Low: 3.99, eBay_High: 26.74, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `Black Panther`, Issue: `8`, Publisher: `Marvel`,
@@ -17161,7 +17161,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `7`, Entry: `4385`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 7.24, eBay_Low: 3.14, eBay_High: 10, eBay_Count: 8, eBay_Median: 8.24,
   },
   {
     Title: `Black Panther`, Issue: `51`, Publisher: `Marvel`,
@@ -19688,7 +19688,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `5`, Entry: `1028`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 6.71, eBay_Low: 4, eBay_High: 10, eBay_Count: 7, eBay_Median: 5.99,
   },
   {
     Title: `Captain America`, Issue: `32`, Publisher: `Marvel`,
@@ -21227,7 +21227,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `4`, Entry: `1096`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 6.71, eBay_Low: 4, eBay_High: 10, eBay_Count: 7, eBay_Median: 5.99,
   },
   {
     Title: `Captain America`, Issue: `26`, Publisher: `Marvel`,
@@ -22120,7 +22120,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Rebirth`, Box: `48`,
     Crossover: `DC Rebirth`, Start_Bid: `5`,
     Volume: `1`, Entry: `1409`,
-    eBay_Avg: 47, eBay_Low: 1.5, eBay_High: 113.54, eBay_Count: 9, eBay_Median: 25.99,
+    eBay_Avg: 23, eBay_Low: 4.5, eBay_High: 35, eBay_Count: 9, eBay_Median: 25,
   },
   {
     Title: `Justice League`, Issue: `2`, Publisher: `DC`,
@@ -22158,7 +22158,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Rebirth`, Box: `48`,
     Crossover: `DC Rebirth`, Start_Bid: `1`,
     Volume: `1`, Entry: `1414`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 8.82, eBay_Low: 3.33, eBay_High: 16.95, eBay_Count: 10, eBay_Median: 9.5,
   },
   {
     Title: `Justice League`, Issue: `4`, Publisher: `DC`,
@@ -22880,7 +22880,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `7`, Entry: `1126`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 6.71, eBay_Low: 4, eBay_High: 10, eBay_Count: 7, eBay_Median: 5.99,
   },
   {
     Title: `Captain America`, Issue: `20`, Publisher: `Marvel`,
@@ -22994,7 +22994,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `9`, Entry: `1158`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 6.71, eBay_Low: 4, eBay_High: 10, eBay_Count: 7, eBay_Median: 5.99,
   },
   {
     Title: `Captain America`, Issue: `27`, Publisher: `Marvel`,
@@ -24305,7 +24305,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Rebirth`, Box: `48`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `1539`,
-    eBay_Avg: 47, eBay_Low: 1.5, eBay_High: 113.54, eBay_Count: 9, eBay_Median: 25.99,
+    eBay_Avg: 23, eBay_Low: 4.5, eBay_High: 35, eBay_Count: 9, eBay_Median: 25,
   },
   {
     Title: `Justice League Dark`, Issue: `1`, Publisher: `DC`,
@@ -25084,7 +25084,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Rebirth`, Box: `48`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `1580`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 8.82, eBay_Low: 3.33, eBay_High: 16.95, eBay_Count: 10, eBay_Median: 9.5,
   },
   {
     Title: `Justice League`, Issue: `4`, Publisher: `DC`,
@@ -28599,7 +28599,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `12`,
     Crossover: `Secret Wars`, Start_Bid: `1`,
     Volume: `1`, Entry: `1765`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 5.31, eBay_Low: 4.49, eBay_High: 9.95, eBay_Count: 9, eBay_Median: 4.64,
   },
   {
     Title: `What If? Newer Fantastic Four`, Issue: `1`, Publisher: `Marvel`,
@@ -29682,7 +29682,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC New 52`, Box: `52`,
     Crossover: `DC New 52 Relaunch`, Start_Bid: `10`,
     Volume: `2`, Entry: `1822`,
-    eBay_Avg: 47, eBay_Low: 1.5, eBay_High: 113.54, eBay_Count: 9, eBay_Median: 25.99,
+    eBay_Avg: 23, eBay_Low: 4.5, eBay_High: 35, eBay_Count: 9, eBay_Median: 25,
   },
   {
     Title: `Justice League`, Issue: `2`, Publisher: `DC`,
@@ -29720,7 +29720,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC New 52`, Box: `52`,
     Crossover: `DC New 52 Relaunch`, Start_Bid: `2`,
     Volume: `2`, Entry: `1824`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 8.82, eBay_Low: 3.33, eBay_High: 16.95, eBay_Count: 10, eBay_Median: 9.5,
   },
   {
     Title: `Green Lantern Corps`, Issue: `1`, Publisher: `DC`,
@@ -29872,7 +29872,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC New 52`, Box: `52`,
     Crossover: `DC New 52 Relaunch`, Start_Bid: `5`,
     Volume: `1`, Entry: `1832`,
-    eBay_Avg: 13.74, eBay_Low: 2.58, eBay_High: 40, eBay_Count: 9, eBay_Median: 14.08,
+    eBay_Avg: 27, eBay_Low: 10.47, eBay_High: 50, eBay_Count: 10, eBay_Median: 25,
   },
   {
     Title: `Batman and Robin`, Issue: `2`, Publisher: `DC`,
@@ -30119,7 +30119,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC New 52`, Box: `52`,
     Crossover: `DC New 52 Relaunch`, Start_Bid: `1`,
     Volume: `1`, Entry: `1845`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 5.34, eBay_Low: 1.5, eBay_High: 9.99, eBay_Count: 10, eBay_Median: 5.13,
   },
   {
     Title: `Birds of Prey`, Issue: `1`, Publisher: `DC`,
@@ -35021,7 +35021,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Infinite Frontier`, Box: `62`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2106`,
-    eBay_Avg: 9.93, eBay_Low: 7.21, eBay_High: 13.36, eBay_Count: 9, eBay_Median: 9.6,
+    eBay_Avg: 15.56, eBay_Low: 8.9, eBay_High: 28, eBay_Count: 9, eBay_Median: 12.99,
   },
   {
     Title: `DC Legends of Tomorrow: Earth Prime`, Issue: `3`, Publisher: `DC`,
@@ -53299,7 +53299,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `3`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `4`, Entry: `3080`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 10.8, eBay_Low: 4.25, eBay_High: 14.99, eBay_Count: 7, eBay_Median: 12.59,
   },
   {
     Title: `X-Men`, Issue: `2`, Publisher: `Marvel`,
@@ -54059,7 +54059,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `3`,
     Crossover: ``, Start_Bid: `15`,
     Volume: `4`, Entry: `3120`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 10.8, eBay_Low: 4.25, eBay_High: 14.99, eBay_Count: 7, eBay_Median: 12.59,
   },
   {
     Title: `Wolverine`, Issue: `42`, Publisher: `Marvel`,
@@ -69088,7 +69088,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `54`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `4014`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 8.59, eBay_Low: 3.21, eBay_High: 18.75, eBay_Count: 10, eBay_Median: 7.59,
   },
   {
     Title: `Birds of Prey`, Issue: `26`, Publisher: `DC`,
@@ -73097,7 +73097,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Rebirth`, Box: `48`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `1521`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 8.82, eBay_Low: 3.33, eBay_High: 16.95, eBay_Count: 10, eBay_Median: 9.5,
   },
   {
     Title: `Justice League`, Issue: `4`, Publisher: `DC`,
@@ -73439,7 +73439,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `3`, Entry: `4246`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 7.24, eBay_Low: 3.14, eBay_High: 10, eBay_Count: 8, eBay_Median: 8.24,
   },
   {
     Title: `Black Panther`, Issue: `18`, Publisher: `Marvel`,
@@ -74618,7 +74618,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `6`, Entry: `4309`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 11.96, eBay_Low: 3.99, eBay_High: 26.74, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `Black Panther`, Issue: `8`, Publisher: `Marvel`,
@@ -76195,7 +76195,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `8`, Entry: `4392`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 11.96, eBay_Low: 3.99, eBay_High: 26.74, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `Black Panther`, Issue: `8`, Publisher: `Marvel`,
@@ -77867,7 +77867,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `14`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `6`, Entry: `4481`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 10.8, eBay_Low: 4.25, eBay_High: 14.99, eBay_Count: 7, eBay_Median: 12.59,
   },
   {
     Title: `Free Comic Book Day: X-Men`, Issue: `1`, Publisher: `Marvel`,
@@ -83947,7 +83947,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `16`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `4805`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 10.03, eBay_Low: 2.99, eBay_High: 18.99, eBay_Count: 9, eBay_Median: 11.43,
   },
   {
     Title: `Spider-Woman`, Issue: `2`, Publisher: `Marvel`,
@@ -84080,7 +84080,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `16`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `7`, Entry: `4812`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 10.03, eBay_Low: 2.99, eBay_High: 18.99, eBay_Count: 9, eBay_Median: 11.43,
   },
   {
     Title: `Spider-Woman`, Issue: `1`, Publisher: `Marvel`,
@@ -84099,7 +84099,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `16`,
     Crossover: `Spider-Verse`, Start_Bid: `2`,
     Volume: `1`, Entry: `4813`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 10.03, eBay_Low: 2.99, eBay_High: 18.99, eBay_Count: 9, eBay_Median: 11.43,
   },
   {
     Title: `Spider-Woman`, Issue: `2`, Publisher: `Marvel`,
@@ -90521,7 +90521,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `14`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `4458`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 10.8, eBay_Low: 4.25, eBay_High: 14.99, eBay_Count: 7, eBay_Median: 12.59,
   },
   {
     Title: `X-Men`, Issue: `2`, Publisher: `Marvel`,
@@ -92839,14 +92839,14 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `11`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `6`, Entry: `5287`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 10.8, eBay_Low: 4.25, eBay_High: 14.99, eBay_Count: 7, eBay_Median: 12.59,
   },
   {
     Title: `New Mutants`, Issue: `93`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `1990`, Arc: `1990`, Key: `YES`,
     Key_Reason: `New Mutants Vol 1 classic — Extinction Agenda crossover`, First_App: `New Mutants #93 — Extinction Agenda crossover — good condition — great cover`,
-    Writer: ``, Artist: `Louise Simonson`,
+    Writer: `Louise Simonson`, Artist: `Louise Simonson`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Good condition, great cover — bagged`,
     CGC_Worth: `NO`, Value_NM: `12`, Value_VF: `6`,
@@ -92865,7 +92865,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Disambig: ``,
     Year: `1991`, Arc: `1991`, Key: `YES`,
     Key_Reason: `New Mutants Vol 1 classic — Extinction Agenda`, First_App: `New Mutants #97 — Extinction Agenda — bagged & boarded — good cover`,
-    Writer: ``, Artist: `Louise Simonson`,
+    Writer: `Louise Simonson`, Artist: `Louise Simonson`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Bagged and boarded — good cover`,
     CGC_Worth: `NO`, Value_NM: `12`, Value_VF: `6`,
@@ -93884,7 +93884,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `11`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `5`, Entry: `5342`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 10.8, eBay_Low: 4.25, eBay_High: 14.99, eBay_Count: 7, eBay_Median: 12.59,
   },
   {
     Title: `X-Men`, Issue: `2`, Publisher: `Marvel`,
@@ -96259,7 +96259,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `15`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `4`, Entry: `5869`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 10.8, eBay_Low: 4.25, eBay_High: 14.99, eBay_Count: 7, eBay_Median: 12.59,
   },
   {
     Title: `Extermination`, Issue: `1`, Publisher: `Marvel`,
@@ -97247,7 +97247,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `15`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `4`, Entry: `5921`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 10.8, eBay_Low: 4.25, eBay_High: 14.99, eBay_Count: 7, eBay_Median: 12.59,
   },
   {
     Title: `X-Men`, Issue: `2`, Publisher: `Marvel`,
@@ -97589,7 +97589,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `15`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `4`, Entry: `5939`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 5.31, eBay_Low: 2.99, eBay_High: 9.99, eBay_Count: 9, eBay_Median: 3.74,
   },
   {
     Title: `X-Men`, Issue: `28`, Publisher: `Marvel`,
@@ -102586,7 +102586,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `9`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `6215`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 5.31, eBay_Low: 2.99, eBay_High: 9.99, eBay_Count: 9, eBay_Median: 3.74,
   },
   {
     Title: `X-Men`, Issue: `28`, Publisher: `Marvel`,
@@ -112834,7 +112834,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Disambig: ``,
     Year: `2011`, Arc: `She-Hulks Slott/Pelletier`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Dan Slott`, Artist: ``,
+    Writer: `Dan Slott`, Artist: `Ron Wimberly`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -114993,7 +114993,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `6900`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 9.44, eBay_Low: 4.37, eBay_High: 24.99, eBay_Count: 7, eBay_Median: 8,
   },
   {
     Title: `Moon Knight`, Issue: `3`, Publisher: `Marvel`,
@@ -115012,7 +115012,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `6901`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 11.12, eBay_Low: 3.99, eBay_High: 27.99, eBay_Count: 8, eBay_Median: 9.97,
   },
   {
     Title: `Moon Knight`, Issue: `4`, Publisher: `Marvel`,
@@ -115031,7 +115031,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `6902`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 9.99, eBay_Low: 2.99, eBay_High: 19.99, eBay_Count: 10, eBay_Median: 8.64,
   },
   {
     Title: `Moon Knight`, Issue: `5`, Publisher: `Marvel`,
@@ -115050,7 +115050,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `6903`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 4.54, eBay_Low: 1, eBay_High: 9.99, eBay_Count: 9, eBay_Median: 3.49,
   },
   {
     Title: `Moon Knight`, Issue: `6`, Publisher: `Marvel`,
@@ -115069,7 +115069,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `6904`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 8.46, eBay_Low: 3, eBay_High: 12.99, eBay_Count: 10, eBay_Median: 8.94,
   },
   {
     Title: `Moon Knight`, Issue: `7`, Publisher: `Marvel`,
@@ -115240,7 +115240,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `7`, Entry: `6913`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 9.44, eBay_Low: 4.37, eBay_High: 24.99, eBay_Count: 7, eBay_Median: 8,
   },
   {
     Title: `Moon Knight`, Issue: `3`, Publisher: `Marvel`,
@@ -115259,7 +115259,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `7`, Entry: `6914`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 11.12, eBay_Low: 3.99, eBay_High: 27.99, eBay_Count: 8, eBay_Median: 9.97,
   },
   {
     Title: `Moon Knight`, Issue: `4`, Publisher: `Marvel`,
@@ -115278,7 +115278,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `7`, Entry: `6915`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 9.99, eBay_Low: 2.99, eBay_High: 19.99, eBay_Count: 10, eBay_Median: 8.64,
   },
   {
     Title: `Moon Knight`, Issue: `5`, Publisher: `Marvel`,
@@ -115297,7 +115297,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `7`, Entry: `6916`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 4.54, eBay_Low: 1, eBay_High: 9.99, eBay_Count: 9, eBay_Median: 3.49,
   },
   {
     Title: `Moon Knight`, Issue: `6`, Publisher: `Marvel`,
@@ -115316,7 +115316,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `7`, Entry: `6917`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 8.46, eBay_Low: 3, eBay_High: 12.99, eBay_Count: 10, eBay_Median: 8.94,
   },
   {
     Title: `Moon Knight`, Issue: `7`, Publisher: `Marvel`,
@@ -115449,7 +115449,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `8`, Entry: `6924`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 9.44, eBay_Low: 4.37, eBay_High: 24.99, eBay_Count: 7, eBay_Median: 8,
   },
   {
     Title: `Moon Knight`, Issue: `3`, Publisher: `Marvel`,
@@ -115468,7 +115468,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `8`, Entry: `6925`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 11.12, eBay_Low: 3.99, eBay_High: 27.99, eBay_Count: 8, eBay_Median: 9.97,
   },
   {
     Title: `Moon Knight`, Issue: `4`, Publisher: `Marvel`,
@@ -115487,7 +115487,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `8`, Entry: `6926`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 9.99, eBay_Low: 2.99, eBay_High: 19.99, eBay_Count: 10, eBay_Median: 8.64,
   },
   {
     Title: `Moon Knight`, Issue: `5`, Publisher: `Marvel`,
@@ -115506,7 +115506,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `8`, Entry: `6927`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 4.54, eBay_Low: 1, eBay_High: 9.99, eBay_Count: 9, eBay_Median: 3.49,
   },
   {
     Title: `Moon Knight`, Issue: `6`, Publisher: `Marvel`,
@@ -115525,7 +115525,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `8`, Entry: `6928`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 8.46, eBay_Low: 3, eBay_High: 12.99, eBay_Count: 10, eBay_Median: 8.94,
   },
   {
     Title: `Moon Knight`, Issue: `7`, Publisher: `Marvel`,
@@ -115753,7 +115753,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `9`, Entry: `6940`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 9.44, eBay_Low: 4.37, eBay_High: 24.99, eBay_Count: 7, eBay_Median: 8,
   },
   {
     Title: `Moon Knight`, Issue: `3`, Publisher: `Marvel`,
@@ -115772,7 +115772,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `9`, Entry: `6941`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 11.12, eBay_Low: 3.99, eBay_High: 27.99, eBay_Count: 8, eBay_Median: 9.97,
   },
   {
     Title: `Moon Knight: City of the Dead`, Issue: `1`, Publisher: `Marvel`,
@@ -115905,7 +115905,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `10`, Entry: `6948`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 4.54, eBay_Low: 1, eBay_High: 9.99, eBay_Count: 9, eBay_Median: 3.49,
   },
   {
     Title: `Moon Knight`, Issue: `6`, Publisher: `Marvel`,
@@ -115924,7 +115924,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `10`, Entry: `6949`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 8.46, eBay_Low: 3, eBay_High: 12.99, eBay_Count: 10, eBay_Median: 8.94,
   },
   {
     Title: `Moon Knight`, Issue: `7`, Publisher: `Marvel`,
@@ -116851,7 +116851,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Seller_Notes: `The Sentry ##2 of 8. Paul Jenkins.`, Story_Pitch: `The Sentry ##2 of 8.`,
     Content: `The Sentry ##2 of 8.`, Platform: `EBAY`,
     Sales_Data: `NM $5, VF $3`, Terrificon: ``,
-    Cover_Artist: ``, Date_Added: `May 23, 2026`,
+    Cover_Artist: `John Romita Jr.`, Date_Added: `May 23, 2026`,
     Imprint: `Marvel`, Box: `26`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `7089`,
@@ -116870,7 +116870,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Seller_Notes: `The Sentry ##3 of 8. Paul Jenkins.`, Story_Pitch: `The Sentry ##3 of 8.`,
     Content: `The Sentry ##3 of 8.`, Platform: `EBAY`,
     Sales_Data: `NM $5, VF $3`, Terrificon: ``,
-    Cover_Artist: ``, Date_Added: `May 23, 2026`,
+    Cover_Artist: `John Romita Jr.`, Date_Added: `May 23, 2026`,
     Imprint: `Marvel`, Box: `26`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `7090`,
@@ -116889,7 +116889,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Seller_Notes: `The Sentry ##4 of 8. Paul Jenkins.`, Story_Pitch: `The Sentry ##4 of 8.`,
     Content: `The Sentry ##4 of 8.`, Platform: `EBAY`,
     Sales_Data: `NM $5, VF $3`, Terrificon: ``,
-    Cover_Artist: ``, Date_Added: `May 23, 2026`,
+    Cover_Artist: `John Romita Jr.`, Date_Added: `May 23, 2026`,
     Imprint: `Marvel`, Box: `26`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `7091`,
@@ -116908,7 +116908,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Seller_Notes: `The Sentry ##5 of 8. Paul Jenkins.`, Story_Pitch: `The Sentry ##5 of 8.`,
     Content: `The Sentry ##5 of 8.`, Platform: `EBAY`,
     Sales_Data: `NM $5, VF $3`, Terrificon: ``,
-    Cover_Artist: ``, Date_Added: `May 23, 2026`,
+    Cover_Artist: `John Romita Jr.`, Date_Added: `May 23, 2026`,
     Imprint: `Marvel`, Box: `26`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `7092`,
@@ -116927,7 +116927,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Seller_Notes: `The Sentry ##7 of 8. Paul Jenkins.`, Story_Pitch: `The Sentry ##7 of 8.`,
     Content: `The Sentry ##7 of 8.`, Platform: `EBAY`,
     Sales_Data: `NM $5, VF $3`, Terrificon: ``,
-    Cover_Artist: ``, Date_Added: `May 23, 2026`,
+    Cover_Artist: `John Romita Jr.`, Date_Added: `May 23, 2026`,
     Imprint: `Marvel`, Box: `26`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `7093`,
@@ -119762,7 +119762,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `45`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `7250`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 8.59, eBay_Low: 3.21, eBay_High: 18.75, eBay_Count: 10, eBay_Median: 7.59,
   },
   {
     Title: `Birds of Prey`, Issue: `26`, Publisher: `DC`,
@@ -123524,7 +123524,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `72`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `7448`,
-    eBay_Avg: 13.74, eBay_Low: 2.58, eBay_High: 40, eBay_Count: 9, eBay_Median: 14.08,
+    eBay_Avg: 27, eBay_Low: 10.47, eBay_High: 50, eBay_Count: 10, eBay_Median: 25,
   },
   {
     Title: `Justice League of America`, Issue: `1`, Publisher: `DC`,
@@ -125431,7 +125431,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Disambig: ``,
     Year: `2007`, Arc: `All-Star Batman Miller/Jim Lee extends`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Frank Miller`, Artist: `Jim Lee`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `6`, Value_VF: `3`,
@@ -125439,7 +125439,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Seller_Notes: `All-Star Batman and Robin, the Boy Wonder #5. .`, Story_Pitch: `All-Star Batman and Robin, the Boy Wonder #5.`,
     Content: `All-Star Batman and Robin, the Boy Wonder #5.`, Platform: `EBAY`,
     Sales_Data: `$6`, Terrificon: ``,
-    Cover_Artist: ``, Date_Added: `May 24, 2026`,
+    Cover_Artist: `Jim Lee`, Date_Added: `May 24, 2026`,
     Imprint: `DC`, Box: `68`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `7552`,
@@ -125450,7 +125450,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Disambig: ``,
     Year: `2007`, Arc: `All-Star Batman Miller/Jim Lee extends`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Frank Miller`, Artist: `Jim Lee`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `6`, Value_VF: `3`,
@@ -125458,7 +125458,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Seller_Notes: `All-Star Batman and Robin, the Boy Wonder #6. .`, Story_Pitch: `All-Star Batman and Robin, the Boy Wonder #6.`,
     Content: `All-Star Batman and Robin, the Boy Wonder #6.`, Platform: `EBAY`,
     Sales_Data: `$6`, Terrificon: ``,
-    Cover_Artist: ``, Date_Added: `May 24, 2026`,
+    Cover_Artist: `Jim Lee`, Date_Added: `May 24, 2026`,
     Imprint: `DC`, Box: `68`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `7553`,
@@ -125469,7 +125469,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Disambig: ``,
     Year: `2007`, Arc: `All-Star Batman Miller/Jim Lee extends`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Frank Miller`, Artist: `Jim Lee`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `6`, Value_VF: `3`,
@@ -125477,7 +125477,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Seller_Notes: `All-Star Batman and Robin, the Boy Wonder #7. .`, Story_Pitch: `All-Star Batman and Robin, the Boy Wonder #7.`,
     Content: `All-Star Batman and Robin, the Boy Wonder #7.`, Platform: `EBAY`,
     Sales_Data: `$6`, Terrificon: ``,
-    Cover_Artist: ``, Date_Added: `May 24, 2026`,
+    Cover_Artist: `Jim Lee`, Date_Added: `May 24, 2026`,
     Imprint: `DC`, Box: `68`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `7554`,
@@ -125488,7 +125488,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Disambig: ``,
     Year: `2007`, Arc: `All-Star Batman Miller/Jim Lee extends`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Frank Miller`, Artist: `Jim Lee`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `6`, Value_VF: `3`,
@@ -125496,7 +125496,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Seller_Notes: `All-Star Batman and Robin, the Boy Wonder #8. .`, Story_Pitch: `All-Star Batman and Robin, the Boy Wonder #8.`,
     Content: `All-Star Batman and Robin, the Boy Wonder #8.`, Platform: `EBAY`,
     Sales_Data: `$6`, Terrificon: ``,
-    Cover_Artist: ``, Date_Added: `May 24, 2026`,
+    Cover_Artist: `Jim Lee`, Date_Added: `May 24, 2026`,
     Imprint: `DC`, Box: `68`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `7555`,
@@ -125507,7 +125507,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Disambig: ``,
     Year: `2007`, Arc: `All-Star Batman Miller/Jim Lee extends`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Frank Miller`, Artist: `Jim Lee`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `6`, Value_VF: `3`,
@@ -125515,7 +125515,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Seller_Notes: `All-Star Batman and Robin, the Boy Wonder #9. .`, Story_Pitch: `All-Star Batman and Robin, the Boy Wonder #9.`,
     Content: `All-Star Batman and Robin, the Boy Wonder #9.`, Platform: `EBAY`,
     Sales_Data: `$6`, Terrificon: ``,
-    Cover_Artist: ``, Date_Added: `May 24, 2026`,
+    Cover_Artist: `Jim Lee`, Date_Added: `May 24, 2026`,
     Imprint: `DC`, Box: `68`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `7556`,
@@ -125526,7 +125526,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Disambig: ``,
     Year: `2007`, Arc: `All-Star Batman Miller/Jim Lee extends`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Frank Miller`, Artist: `Jim Lee`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `6`, Value_VF: `3`,
@@ -125534,7 +125534,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Seller_Notes: `All-Star Batman and Robin, the Boy Wonder #10. .`, Story_Pitch: `All-Star Batman and Robin, the Boy Wonder #10.`,
     Content: `All-Star Batman and Robin, the Boy Wonder #10.`, Platform: `EBAY`,
     Sales_Data: `$6`, Terrificon: ``,
-    Cover_Artist: ``, Date_Added: `May 24, 2026`,
+    Cover_Artist: `Jim Lee`, Date_Added: `May 24, 2026`,
     Imprint: `DC`, Box: `68`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `7557`,
@@ -125648,7 +125648,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Seller_Notes: `The Trials of Shazam #3. Judd Winick.`, Story_Pitch: `The Trials of Shazam #3.`,
     Content: `The Trials of Shazam #3.`, Platform: `EBAY`,
     Sales_Data: `$5`, Terrificon: ``,
-    Cover_Artist: ``, Date_Added: `May 24, 2026`,
+    Cover_Artist: `Howard Porter`, Date_Added: `May 24, 2026`,
     Imprint: `DC`, Box: `68`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `7563`,
@@ -125667,7 +125667,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Seller_Notes: `The Trials of Shazam #4. Judd Winick.`, Story_Pitch: `The Trials of Shazam #4.`,
     Content: `The Trials of Shazam #4.`, Platform: `EBAY`,
     Sales_Data: `$5`, Terrificon: ``,
-    Cover_Artist: ``, Date_Added: `May 24, 2026`,
+    Cover_Artist: `Howard Porter`, Date_Added: `May 24, 2026`,
     Imprint: `DC`, Box: `68`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `7564`,
@@ -125686,7 +125686,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Seller_Notes: `The Trials of Shazam #5. Judd Winick.`, Story_Pitch: `The Trials of Shazam #5.`,
     Content: `The Trials of Shazam #5.`, Platform: `EBAY`,
     Sales_Data: `$5`, Terrificon: ``,
-    Cover_Artist: ``, Date_Added: `May 24, 2026`,
+    Cover_Artist: `Howard Porter`, Date_Added: `May 24, 2026`,
     Imprint: `DC`, Box: `68`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `7565`,
@@ -125705,7 +125705,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Seller_Notes: `The Trials of Shazam #6. Judd Winick.`, Story_Pitch: `The Trials of Shazam #6.`,
     Content: `The Trials of Shazam #6.`, Platform: `EBAY`,
     Sales_Data: `$5`, Terrificon: ``,
-    Cover_Artist: ``, Date_Added: `May 24, 2026`,
+    Cover_Artist: `Howard Porter`, Date_Added: `May 24, 2026`,
     Imprint: `DC`, Box: `68`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `7566`,
@@ -125724,7 +125724,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Seller_Notes: `The Trials of Shazam #7. Judd Winick.`, Story_Pitch: `The Trials of Shazam #7.`,
     Content: `The Trials of Shazam #7.`, Platform: `EBAY`,
     Sales_Data: `$5`, Terrificon: ``,
-    Cover_Artist: ``, Date_Added: `May 24, 2026`,
+    Cover_Artist: `Howard Porter`, Date_Added: `May 24, 2026`,
     Imprint: `DC`, Box: `68`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `7567`,
@@ -125743,7 +125743,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Seller_Notes: `The Trials of Shazam #8. Judd Winick.`, Story_Pitch: `The Trials of Shazam #8.`,
     Content: `The Trials of Shazam #8.`, Platform: `EBAY`,
     Sales_Data: `$5`, Terrificon: ``,
-    Cover_Artist: ``, Date_Added: `May 24, 2026`,
+    Cover_Artist: `Howard Porter`, Date_Added: `May 24, 2026`,
     Imprint: `DC`, Box: `68`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `7568`,
@@ -141518,7 +141518,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC New 52`, Box: `42`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `4`, Entry: `8657`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 5.21, eBay_Low: 1.43, eBay_High: 13.75, eBay_Count: 8, eBay_Median: 4.12,
   },
   {
     Title: `The Flash`, Issue: `5`, Publisher: `DC`,
@@ -143513,7 +143513,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC New 52`, Box: `82`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `2`, Entry: `8792`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 5.34, eBay_Low: 1.5, eBay_High: 9.99, eBay_Count: 10, eBay_Median: 5.13,
   },
   {
     Title: `Animal Man`, Issue: `6`, Publisher: `DC`,
@@ -146591,7 +146591,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `18`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `8`, Entry: `9077`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 11.58, eBay_Low: 4.21, eBay_High: 28, eBay_Count: 10, eBay_Median: 9.62,
   },
   {
     Title: `Captain Marvel`, Issue: `17`, Publisher: `Marvel`,
@@ -147066,7 +147066,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `18`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `10`, Entry: `9104`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 11.58, eBay_Low: 4.21, eBay_High: 28, eBay_Count: 10, eBay_Median: 9.62,
   },
   {
     Title: `Captain Marvel`, Issue: `17`, Publisher: `Marvel`,
@@ -147674,7 +147674,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `18`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `10`, Entry: `9136`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 11.58, eBay_Low: 4.21, eBay_High: 28, eBay_Count: 10, eBay_Median: 9.62,
   },
   {
     Title: `Captain Marvel`, Issue: `1`, Publisher: `Marvel`,
@@ -149365,7 +149365,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `8`, Entry: `9227`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 5.34, eBay_Low: 2.31, eBay_High: 10.33, eBay_Count: 7, eBay_Median: 4.99,
   },
   {
     Title: `Fantastic Four`, Issue: `8`, Publisher: `Marvel`,
@@ -150106,7 +150106,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `6`, Entry: `9268`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 5.34, eBay_Low: 2.31, eBay_High: 10.33, eBay_Count: 7, eBay_Median: 4.99,
   },
   {
     Title: `Fantastic Four`, Issue: `9`, Publisher: `Marvel`,
@@ -150961,7 +150961,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `10`, Entry: `9313`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 5.34, eBay_Low: 2.31, eBay_High: 10.33, eBay_Count: 7, eBay_Median: 4.99,
   },
   {
     Title: `Fantastic Four`, Issue: `8`, Publisher: `Marvel`,
@@ -153735,7 +153735,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `28`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `9472`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 4.63, eBay_Low: 2.9, eBay_High: 8.99, eBay_Count: 7, eBay_Median: 4.5,
   },
   {
     Title: `Nova`, Issue: `26`, Publisher: `Marvel`,
@@ -153830,7 +153830,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `28`,
     Crossover: `AXIS`, Start_Bid: `2`,
     Volume: `5`, Entry: `9478`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 4.63, eBay_Low: 2.9, eBay_High: 8.99, eBay_Count: 7, eBay_Median: 4.5,
   },
   {
     Title: `Nova`, Issue: `26`, Publisher: `Marvel`,
@@ -159158,7 +159158,7 @@ Jurgens is a DC legend — could sign this.`,
     Disambig: ``,
     Year: `2018`, Arc: `Asgardians of the Galaxy GOTG tie-in`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Cullen Bunn`, Artist: ``,
+    Writer: `Cullen Bunn`, Artist: `Matteo Lolli`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -159177,7 +159177,7 @@ Jurgens is a DC legend — could sign this.`,
     Disambig: ``,
     Year: `2018`, Arc: `Asgardians of the Galaxy GOTG tie-in`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Cullen Bunn`, Artist: ``,
+    Writer: `Cullen Bunn`, Artist: `Matteo Lolli`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -159196,7 +159196,7 @@ Jurgens is a DC legend — could sign this.`,
     Disambig: ``,
     Year: `2018`, Arc: `Asgardians of the Galaxy GOTG tie-in`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Cullen Bunn`, Artist: ``,
+    Writer: `Cullen Bunn`, Artist: `Matteo Lolli`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -159215,7 +159215,7 @@ Jurgens is a DC legend — could sign this.`,
     Disambig: ``,
     Year: `2018`, Arc: `Asgardians of the Galaxy GOTG tie-in`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Cullen Bunn`, Artist: ``,
+    Writer: `Cullen Bunn`, Artist: `Matteo Lolli`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -159234,7 +159234,7 @@ Jurgens is a DC legend — could sign this.`,
     Disambig: ``,
     Year: `2018`, Arc: `Asgardians of the Galaxy GOTG tie-in`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Cullen Bunn`, Artist: ``,
+    Writer: `Cullen Bunn`, Artist: `Matteo Lolli`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -159253,7 +159253,7 @@ Jurgens is a DC legend — could sign this.`,
     Disambig: ``,
     Year: `2018`, Arc: `Asgardians of the Galaxy GOTG tie-in`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Cullen Bunn`, Artist: ``,
+    Writer: `Cullen Bunn`, Artist: `Matteo Buffagni`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -173188,7 +173188,7 @@ Jurgens is a DC legend — could sign this.`,
     Seller_Notes: `The Flash: Rebirth #1.`, Story_Pitch: `The Flash: Rebirth #1.`,
     Content: `The Flash: Rebirth #1.`, Platform: `WHATNOT`,
     Sales_Data: ``, Terrificon: ``,
-    Cover_Artist: ``, Date_Added: `May 26, 2026`,
+    Cover_Artist: `Karl Kerschl`, Date_Added: `May 26, 2026`,
     Imprint: `DC Rebirth`, Box: `43`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `10538`,
@@ -178728,7 +178728,7 @@ Jurgens is a DC legend — could sign this.`,
     Disambig: ``,
     Year: `2015`, Arc: `Doctor Who FCBD 2015`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Nick Abadzis`, Artist: `Eleonora Carlini`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `4`, Value_VF: `2`,
@@ -190293,7 +190293,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `7`, Entry: `11736`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 9.44, eBay_Low: 4.37, eBay_High: 24.99, eBay_Count: 7, eBay_Median: 8,
   },
   {
     Title: `Moon Knight: Free Comic Book Day`, Issue: `1`, Publisher: `Marvel`,
@@ -190388,7 +190388,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `13`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `10`, Entry: `11762`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 13.21, eBay_Low: 2.14, eBay_High: 30, eBay_Count: 9, eBay_Median: 14.99,
   },
   {
     Title: `Moon Knight`, Issue: `25`, Publisher: `Marvel`,
@@ -190407,7 +190407,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `13`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `10`, Entry: `11763`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 13.21, eBay_Low: 2.14, eBay_High: 30, eBay_Count: 9, eBay_Median: 14.99,
   },
   {
     Title: `Moon Knight: Acts of Evil Annual`, Issue: `1`, Publisher: `Marvel`,
@@ -194549,7 +194549,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `79`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `12288`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 5.31, eBay_Low: 2.99, eBay_High: 9.99, eBay_Count: 9, eBay_Median: 3.74,
   },
   {
     Title: `Blood Hunt`, Issue: `2`, Publisher: `Marvel`,
@@ -195096,7 +195096,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Seller_Notes: `Web of Black Widow #2.`, Story_Pitch: `Web of Black Widow #2.`,
     Content: `Web of Black Widow #2.`, Platform: `EBAY`,
     Sales_Data: ``, Terrificon: ``,
-    Cover_Artist: ``, Date_Added: `May 27, 2026`,
+    Cover_Artist: `Junggeun Yoon`, Date_Added: `May 27, 2026`,
     Imprint: `Marvel`, Box: `79`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `12318`,
@@ -195115,7 +195115,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Seller_Notes: `Web of Black Widow #3.`, Story_Pitch: `Web of Black Widow #3.`,
     Content: `Web of Black Widow #3.`, Platform: `EBAY`,
     Sales_Data: ``, Terrificon: ``,
-    Cover_Artist: ``, Date_Added: `May 27, 2026`,
+    Cover_Artist: `Junggeun Yoon`, Date_Added: `May 27, 2026`,
     Imprint: `Marvel`, Box: `79`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `12319`,
@@ -195126,7 +195126,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Disambig: ``,
     Year: `2019`, Arc: ``, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Jody Houser`, Artist: ``,
+    Writer: `Jody Houser`, Artist: `Stephen Mooney`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -195134,7 +195134,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Seller_Notes: `Web of Black Widow #5.`, Story_Pitch: `Web of Black Widow #5.`,
     Content: `Web of Black Widow #5.`, Platform: `EBAY`,
     Sales_Data: ``, Terrificon: ``,
-    Cover_Artist: ``, Date_Added: `May 27, 2026`,
+    Cover_Artist: `Junggeun Yoon`, Date_Added: `May 27, 2026`,
     Imprint: `Marvel`, Box: `79`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `12320`,
@@ -195880,7 +195880,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `7`, Entry: `12366`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 9.44, eBay_Low: 4.37, eBay_High: 24.99, eBay_Count: 7, eBay_Median: 8,
   },
   {
     Title: `Ultimates`, Issue: `12`, Publisher: `Marvel`,
@@ -195975,7 +195975,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     Imprint: `DC`, Box: `1`,
     Crossover: ``, Start_Bid: `50`,
     Volume: `1`, Entry: `12612`,
-    eBay_Avg: 9.93, eBay_Low: 7.21, eBay_High: 13.36, eBay_Count: 9, eBay_Median: 9.6,
+    eBay_Avg: 15.56, eBay_Low: 8.9, eBay_High: 28, eBay_Count: 9, eBay_Median: 12.99,
   },
   {
     Title: `The Avengers`, Issue: `60`, Publisher: `Marvel`,
@@ -197307,7 +197307,7 @@ Already signed.`,
     Imprint: ``, Box: `102`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `2`, Entry: `12702`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 5.31, eBay_Low: 4.49, eBay_High: 9.95, eBay_Count: 9, eBay_Median: 4.64,
   },
   {
     Title: `Superman: Book of Lex`, Issue: `10`, Publisher: `DC`,
@@ -203758,7 +203758,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Disambig: ``,
     Year: `2000`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Joe Casey`, Artist: `Sean Phillips`,
     Signed: ``, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: ``, Value_NM: ``, Value_VF: ``,
@@ -203766,7 +203766,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Seller_Notes: ``, Story_Pitch: ``,
     Content: ``, Platform: ``,
     Sales_Data: ``, Terrificon: ``,
-    Cover_Artist: ``, Date_Added: `2026-06-29`,
+    Cover_Artist: `Travis Charest`, Date_Added: `2026-06-29`,
     Imprint: ``, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: ``,
     Volume: ``, Entry: `13042`,
@@ -203777,7 +203777,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Disambig: ``,
     Year: `2000`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Joe Casey`, Artist: `Sean Phillips`,
     Signed: ``, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: ``, Value_NM: ``, Value_VF: ``,
@@ -203785,7 +203785,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Seller_Notes: ``, Story_Pitch: ``,
     Content: ``, Platform: ``,
     Sales_Data: ``, Terrificon: ``,
-    Cover_Artist: ``, Date_Added: `2026-06-29`,
+    Cover_Artist: `J. G. Jones`, Date_Added: `2026-06-29`,
     Imprint: ``, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: ``,
     Volume: ``, Entry: `13043`,
@@ -203796,7 +203796,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Disambig: ``,
     Year: `2000`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Joe Casey`, Artist: `Sean Phillips`,
     Signed: ``, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: ``, Value_NM: ``, Value_VF: ``,
@@ -203804,7 +203804,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Seller_Notes: ``, Story_Pitch: ``,
     Content: ``, Platform: ``,
     Sales_Data: ``, Terrificon: ``,
-    Cover_Artist: ``, Date_Added: `2026-06-29`,
+    Cover_Artist: `Sean Phillips`, Date_Added: `2026-06-29`,
     Imprint: ``, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: ``,
     Volume: ``, Entry: `13044`,
@@ -209896,7 +209896,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Year: `1991`, Volume: `1`, Cover_Artist: `Louise Simonson`,
     Key: `YES`, Key_Reason: `New Mutants Vol 1 classic — Extinction Agenda`,
     Signed: `NO`, Signed_By: ``,
-    Era: `Copper`, Writer: ``,
+    Era: `Copper`, Writer: `Louise Simonson`,
     Value_NM: `12`, Start_Bid: `2`, Box: `11`,
     Notes: ``, SortPile: `Marvel X-Men / Mutants`,
     CoverNotes: `Extinction Agenda — unsigned`, Flag: ``,
@@ -209906,7 +209906,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Year: `1990`, Volume: `1`, Cover_Artist: `Louise Simonson`,
     Key: `YES`, Key_Reason: `New Mutants Vol 1 classic — Extinction Agenda crossover`,
     Signed: `NO`, Signed_By: ``,
-    Era: `Copper`, Writer: ``,
+    Era: `Copper`, Writer: `Louise Simonson`,
     Value_NM: `12`, Start_Bid: `2`, Box: `11`,
     Notes: ``, SortPile: `Marvel X-Men / Mutants`,
     CoverNotes: `unsigned`, Flag: ``,
@@ -211387,7 +211387,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     ccBoxes: [
   {
     Title: `The Flash`, Issue: `112`, Publisher: `DC`,
-    Year: `1997–1998`, Volume: `2`, Cover_Artist: `Oscar Jimenez & Paul Ryan`,
+    Year: `1996`, Volume: `2`, Cover_Artist: `Oscar Jimenez & Paul Ryan`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Mark Waid run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Copper`, Writer: `Mark Waid`,
@@ -211397,7 +211397,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `113`, Publisher: `DC`,
-    Year: `1997–1998`, Volume: `2`, Cover_Artist: `Oscar Jimenez & Paul Ryan`,
+    Year: `1996`, Volume: `2`, Cover_Artist: `Oscar Jimenez & Paul Ryan`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Mark Waid run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Copper`, Writer: `Mark Waid`,
@@ -211407,7 +211407,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `114`, Publisher: `DC`,
-    Year: `1997–1998`, Volume: `2`, Cover_Artist: `Oscar Jimenez & Paul Ryan`,
+    Year: `1996`, Volume: `2`, Cover_Artist: `Oscar Jimenez & Paul Ryan`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Mark Waid run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Copper`, Writer: `Mark Waid`,
@@ -211417,7 +211417,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `115`, Publisher: `DC`,
-    Year: `1997–1998`, Volume: `2`, Cover_Artist: `Oscar Jimenez & Paul Ryan`,
+    Year: `1996`, Volume: `2`, Cover_Artist: `Oscar Jimenez & Paul Ryan`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Mark Waid run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Copper`, Writer: `Mark Waid`,
@@ -211427,7 +211427,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `116`, Publisher: `DC`,
-    Year: `1997–1998`, Volume: `2`, Cover_Artist: `Oscar Jimenez & Paul Ryan`,
+    Year: `1996`, Volume: `2`, Cover_Artist: `Oscar Jimenez & Paul Ryan`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Mark Waid run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Copper`, Writer: `Mark Waid`,
@@ -211437,7 +211437,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `117`, Publisher: `DC`,
-    Year: `1997–1998`, Volume: `2`, Cover_Artist: `Oscar Jimenez & Paul Ryan`,
+    Year: `1996`, Volume: `2`, Cover_Artist: `Oscar Jimenez & Paul Ryan`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Mark Waid run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Copper`, Writer: `Mark Waid`,
@@ -211447,7 +211447,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `118`, Publisher: `DC`,
-    Year: `1997–1998`, Volume: `2`, Cover_Artist: `Oscar Jimenez & Paul Ryan`,
+    Year: `1996`, Volume: `2`, Cover_Artist: `Oscar Jimenez & Paul Ryan`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Mark Waid run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Copper`, Writer: `Mark Waid`,
@@ -211457,7 +211457,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `119`, Publisher: `DC`,
-    Year: `1997–1998`, Volume: `2`, Cover_Artist: `Oscar Jimenez & Paul Ryan`,
+    Year: `1996`, Volume: `2`, Cover_Artist: `Oscar Jimenez & Paul Ryan`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Mark Waid run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Copper`, Writer: `Mark Waid`,
@@ -211467,7 +211467,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `120`, Publisher: `DC`,
-    Year: `1997–1998`, Volume: `2`, Cover_Artist: `Oscar Jimenez & Paul Ryan`,
+    Year: `1996`, Volume: `2`, Cover_Artist: `Oscar Jimenez & Paul Ryan`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Mark Waid run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Copper`, Writer: `Mark Waid`,
@@ -211477,7 +211477,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `122`, Publisher: `DC`,
-    Year: `1997–1998`, Volume: `2`, Cover_Artist: `Oscar Jimenez & Paul Ryan`,
+    Year: `1997`, Volume: `2`, Cover_Artist: `Oscar Jimenez & Paul Ryan`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Mark Waid run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Copper`, Writer: `Mark Waid`,
@@ -211487,7 +211487,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `123`, Publisher: `DC`,
-    Year: `1997–1998`, Volume: `2`, Cover_Artist: `Oscar Jimenez & Paul Ryan`,
+    Year: `1997`, Volume: `2`, Cover_Artist: `Oscar Jimenez & Paul Ryan`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Mark Waid run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Copper`, Writer: `Mark Waid`,
@@ -211497,7 +211497,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `124`, Publisher: `DC`,
-    Year: `1997–1998`, Volume: `2`, Cover_Artist: `Oscar Jimenez & Paul Ryan`,
+    Year: `1997`, Volume: `2`, Cover_Artist: `Oscar Jimenez & Paul Ryan`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Mark Waid run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Copper`, Writer: `Mark Waid`,
@@ -211507,7 +211507,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `125`, Publisher: `DC`,
-    Year: `1997–1998`, Volume: `2`, Cover_Artist: `Oscar Jimenez & Paul Ryan`,
+    Year: `1997`, Volume: `2`, Cover_Artist: `Oscar Jimenez & Paul Ryan`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Mark Waid run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Copper`, Writer: `Mark Waid`,
@@ -211517,7 +211517,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `126`, Publisher: `DC`,
-    Year: `1997–1998`, Volume: `2`, Cover_Artist: `Oscar Jimenez & Paul Ryan`,
+    Year: `1997`, Volume: `2`, Cover_Artist: `Oscar Jimenez & Paul Ryan`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Mark Waid run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Copper`, Writer: `Mark Waid`,
@@ -211527,7 +211527,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `127`, Publisher: `DC`,
-    Year: `1997–1998`, Volume: `2`, Cover_Artist: `Oscar Jimenez & Paul Ryan`,
+    Year: `1997`, Volume: `2`, Cover_Artist: `Oscar Jimenez & Paul Ryan`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Mark Waid run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Copper`, Writer: `Mark Waid`,
@@ -211537,7 +211537,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `128`, Publisher: `DC`,
-    Year: `1997–1998`, Volume: `2`, Cover_Artist: `Oscar Jimenez & Paul Ryan`,
+    Year: `1997`, Volume: `2`, Cover_Artist: `Oscar Jimenez & Paul Ryan`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Mark Waid run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Copper`, Writer: `Mark Waid`,
@@ -211547,7 +211547,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `129`, Publisher: `DC`,
-    Year: `1997–1998`, Volume: `2`, Cover_Artist: `Oscar Jimenez & Paul Ryan`,
+    Year: `1997`, Volume: `2`, Cover_Artist: `Oscar Jimenez & Paul Ryan`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Mark Waid run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Copper`, Writer: `Mark Waid`,
@@ -211557,7 +211557,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `130`, Publisher: `DC`,
-    Year: `1998–1999`, Volume: `2`, Cover_Artist: `Paul Ryan & Ron Lim`,
+    Year: `1997`, Volume: `2`, Cover_Artist: `Paul Ryan & Ron Lim`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Grant Morrison & Mark Millar run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Copper`, Writer: `Grant Morrison & Mark Millar`,
@@ -211567,7 +211567,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `131`, Publisher: `DC`,
-    Year: `1998–1999`, Volume: `2`, Cover_Artist: `Paul Ryan & Ron Lim`,
+    Year: `1997`, Volume: `2`, Cover_Artist: `Paul Ryan & Ron Lim`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Grant Morrison & Mark Millar run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Copper`, Writer: `Grant Morrison & Mark Millar`,
@@ -211577,7 +211577,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `132`, Publisher: `DC`,
-    Year: `1998–1999`, Volume: `2`, Cover_Artist: `Paul Ryan & Ron Lim`,
+    Year: `1997`, Volume: `2`, Cover_Artist: `Paul Ryan & Ron Lim`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Grant Morrison & Mark Millar run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Copper`, Writer: `Grant Morrison & Mark Millar`,
@@ -211587,7 +211587,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `133`, Publisher: `DC`,
-    Year: `1998–1999`, Volume: `2`, Cover_Artist: `Paul Ryan & Ron Lim`,
+    Year: `1998`, Volume: `2`, Cover_Artist: `Paul Ryan & Ron Lim`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Grant Morrison & Mark Millar run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Copper`, Writer: `Grant Morrison & Mark Millar`,
@@ -211597,7 +211597,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `134`, Publisher: `DC`,
-    Year: `1998–1999`, Volume: `2`, Cover_Artist: `Paul Ryan & Ron Lim`,
+    Year: `1998`, Volume: `2`, Cover_Artist: `Paul Ryan & Ron Lim`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Grant Morrison & Mark Millar run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Copper`, Writer: `Grant Morrison & Mark Millar`,
@@ -211607,7 +211607,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `135`, Publisher: `DC`,
-    Year: `1998–1999`, Volume: `2`, Cover_Artist: `Paul Ryan & Ron Lim`,
+    Year: `1998`, Volume: `2`, Cover_Artist: `Paul Ryan & Ron Lim`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Grant Morrison & Mark Millar run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Copper`, Writer: `Grant Morrison & Mark Millar`,
@@ -211617,7 +211617,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `136`, Publisher: `DC`,
-    Year: `1998–1999`, Volume: `2`, Cover_Artist: `Paul Ryan & Ron Lim`,
+    Year: `1998`, Volume: `2`, Cover_Artist: `Paul Ryan & Ron Lim`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Grant Morrison & Mark Millar run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Copper`, Writer: `Grant Morrison & Mark Millar`,
@@ -211627,7 +211627,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `152`, Publisher: `DC`,
-    Year: `1999–2000`, Volume: `2`, Cover_Artist: `Paul Pelletier & Scott Kolins`,
+    Year: `1999`, Volume: `2`, Cover_Artist: `Paul Pelletier & Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Mark Waid / Brian Augustyn run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Mark Waid & Brian Augustyn`,
@@ -211637,7 +211637,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `153`, Publisher: `DC`,
-    Year: `1999–2000`, Volume: `2`, Cover_Artist: `Paul Pelletier & Scott Kolins`,
+    Year: `1999`, Volume: `2`, Cover_Artist: `Paul Pelletier & Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Mark Waid / Brian Augustyn run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Mark Waid & Brian Augustyn`,
@@ -211647,7 +211647,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `154`, Publisher: `DC`,
-    Year: `1999–2000`, Volume: `2`, Cover_Artist: `Paul Pelletier & Scott Kolins`,
+    Year: `1999`, Volume: `2`, Cover_Artist: `Paul Pelletier & Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Mark Waid / Brian Augustyn run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Mark Waid & Brian Augustyn`,
@@ -211657,7 +211657,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `155`, Publisher: `DC`,
-    Year: `1999–2000`, Volume: `2`, Cover_Artist: `Paul Pelletier & Scott Kolins`,
+    Year: `1999`, Volume: `2`, Cover_Artist: `Paul Pelletier & Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Mark Waid / Brian Augustyn run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Mark Waid & Brian Augustyn`,
@@ -211667,7 +211667,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `156`, Publisher: `DC`,
-    Year: `1999–2000`, Volume: `2`, Cover_Artist: `Paul Pelletier & Scott Kolins`,
+    Year: `2000`, Volume: `2`, Cover_Artist: `Paul Pelletier & Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Mark Waid / Brian Augustyn run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Mark Waid & Brian Augustyn`,
@@ -211677,7 +211677,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `157`, Publisher: `DC`,
-    Year: `1999–2000`, Volume: `2`, Cover_Artist: `Paul Pelletier & Scott Kolins`,
+    Year: `2000`, Volume: `2`, Cover_Artist: `Paul Pelletier & Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Mark Waid / Brian Augustyn run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Mark Waid & Brian Augustyn`,
@@ -211687,7 +211687,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `158`, Publisher: `DC`,
-    Year: `1999–2000`, Volume: `2`, Cover_Artist: `Paul Pelletier & Scott Kolins`,
+    Year: `2000`, Volume: `2`, Cover_Artist: `Paul Pelletier & Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Mark Waid / Brian Augustyn run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Mark Waid & Brian Augustyn`,
@@ -211697,7 +211697,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `159`, Publisher: `DC`,
-    Year: `1999–2000`, Volume: `2`, Cover_Artist: `Paul Pelletier & Scott Kolins`,
+    Year: `2000`, Volume: `2`, Cover_Artist: `Paul Pelletier & Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Mark Waid / Brian Augustyn run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Mark Waid & Brian Augustyn`,
@@ -211707,7 +211707,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `160`, Publisher: `DC`,
-    Year: `1999–2000`, Volume: `2`, Cover_Artist: `Paul Pelletier & Scott Kolins`,
+    Year: `2000`, Volume: `2`, Cover_Artist: `Paul Pelletier & Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Mark Waid / Brian Augustyn run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Mark Waid & Brian Augustyn`,
@@ -211717,7 +211717,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `161`, Publisher: `DC`,
-    Year: `1999–2000`, Volume: `2`, Cover_Artist: `Paul Pelletier & Scott Kolins`,
+    Year: `2000`, Volume: `2`, Cover_Artist: `Paul Pelletier & Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Mark Waid / Brian Augustyn run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Mark Waid & Brian Augustyn`,
@@ -211727,7 +211727,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `162`, Publisher: `DC`,
-    Year: `1999–2000`, Volume: `2`, Cover_Artist: `Paul Pelletier & Scott Kolins`,
+    Year: `2000`, Volume: `2`, Cover_Artist: `Paul Pelletier & Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Mark Waid / Brian Augustyn run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Mark Waid & Brian Augustyn`,
@@ -211737,7 +211737,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `163`, Publisher: `DC`,
-    Year: `1999–2000`, Volume: `2`, Cover_Artist: `Paul Pelletier & Scott Kolins`,
+    Year: `2000`, Volume: `2`, Cover_Artist: `Paul Pelletier & Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Mark Waid / Brian Augustyn run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Mark Waid & Brian Augustyn`,
@@ -211747,7 +211747,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `164`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2000`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `YES`, Key_Reason: `1st issue of Geoff Johns' legendary Flash run — massive key for Johns collectors`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -211757,7 +211757,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `165`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2000`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -211767,7 +211767,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `166`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2000`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -211777,7 +211777,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `167`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2000`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -211787,7 +211787,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `168`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2001`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -211797,7 +211797,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `169`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2001`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -211807,7 +211807,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `170`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2001`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -211817,7 +211817,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `171`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2001`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -211827,7 +211827,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `172`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2001`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -211837,7 +211837,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `173`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2001`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -211847,7 +211847,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `174`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2001`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -211857,7 +211857,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `175`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2001`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -211867,7 +211867,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `176`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2001`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -211877,7 +211877,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `177`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2001`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -211887,7 +211887,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `178`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2001`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -211897,7 +211897,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `179`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2001`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -211907,7 +211907,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `180`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2002`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -211917,7 +211917,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `181`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2002`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -211927,7 +211927,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `182`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2002`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `YES`, Key_Reason: `1st Zoom (Hunter Zolomon) as Reverse-Flash — major villain key`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -211937,7 +211937,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `183`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2002`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -211947,7 +211947,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `184`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2002`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -211957,7 +211957,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `185`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2002`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -211967,7 +211967,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `186`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2002`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -211977,7 +211977,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `187`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2002`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -211987,7 +211987,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `188`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2002`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -211997,7 +211997,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `189`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2002`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -212007,7 +212007,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `190`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2002`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -212017,7 +212017,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `191`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2002`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -212027,7 +212027,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `192`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -212037,7 +212037,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `193`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -212047,7 +212047,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `194`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -212057,7 +212057,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `195`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -212067,7 +212067,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `196`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -212077,7 +212077,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `197`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `YES`, Key_Reason: `Zoom origin issue — 'Blitz' arc peak; one of Johns' finest Flash issues`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -212087,7 +212087,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `198`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -212097,7 +212097,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `199`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -212107,7 +212107,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `200`, Publisher: `DC`,
-    Year: `2000–2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
+    Year: `2003`, Volume: `2`, Cover_Artist: `Scott Kolins`,
     Key: `YES`, Key_Reason: `Flash #200 — landmark anniversary issue; Wally's identity restored; Johns peak`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -212117,7 +212117,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `209`, Publisher: `DC`,
-    Year: `2003–2005`, Volume: `2`, Cover_Artist: `Howard Porter & Scott Kolins & Justiniano`,
+    Year: `2004`, Volume: `2`, Cover_Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -212127,7 +212127,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `210`, Publisher: `DC`,
-    Year: `2003–2005`, Volume: `2`, Cover_Artist: `Howard Porter & Scott Kolins & Justiniano`,
+    Year: `2004`, Volume: `2`, Cover_Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -212137,7 +212137,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `211`, Publisher: `DC`,
-    Year: `2003–2005`, Volume: `2`, Cover_Artist: `Howard Porter & Scott Kolins & Justiniano`,
+    Year: `2004`, Volume: `2`, Cover_Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -212147,7 +212147,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `212`, Publisher: `DC`,
-    Year: `2003–2005`, Volume: `2`, Cover_Artist: `Howard Porter & Scott Kolins & Justiniano`,
+    Year: `2004`, Volume: `2`, Cover_Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -212157,7 +212157,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `213`, Publisher: `DC`,
-    Year: `2003–2005`, Volume: `2`, Cover_Artist: `Howard Porter & Scott Kolins & Justiniano`,
+    Year: `2004`, Volume: `2`, Cover_Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -212167,7 +212167,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `214`, Publisher: `DC`,
-    Year: `2003–2005`, Volume: `2`, Cover_Artist: `Howard Porter & Scott Kolins & Justiniano`,
+    Year: `2004`, Volume: `2`, Cover_Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -212177,7 +212177,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `215`, Publisher: `DC`,
-    Year: `2003–2005`, Volume: `2`, Cover_Artist: `Howard Porter & Scott Kolins & Justiniano`,
+    Year: `2004`, Volume: `2`, Cover_Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -212187,7 +212187,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `216`, Publisher: `DC`,
-    Year: `2003–2005`, Volume: `2`, Cover_Artist: `Howard Porter & Scott Kolins & Justiniano`,
+    Year: `2005`, Volume: `2`, Cover_Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -212197,7 +212197,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `217`, Publisher: `DC`,
-    Year: `2003–2005`, Volume: `2`, Cover_Artist: `Howard Porter & Scott Kolins & Justiniano`,
+    Year: `2005`, Volume: `2`, Cover_Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -212207,7 +212207,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `218`, Publisher: `DC`,
-    Year: `2003–2005`, Volume: `2`, Cover_Artist: `Howard Porter & Scott Kolins & Justiniano`,
+    Year: `2005`, Volume: `2`, Cover_Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -212217,7 +212217,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `219`, Publisher: `DC`,
-    Year: `2003–2005`, Volume: `2`, Cover_Artist: `Howard Porter & Scott Kolins & Justiniano`,
+    Year: `2005`, Volume: `2`, Cover_Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
@@ -212227,7 +212227,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `The Flash`, Issue: `220`, Publisher: `DC`,
-    Year: `2003–2005`, Volume: `2`, Cover_Artist: `Howard Porter & Scott Kolins & Justiniano`,
+    Year: `2005`, Volume: `2`, Cover_Artist: `Howard Porter & Scott Kolins & Justiniano`,
     Key: `NO`, Key_Reason: `Flash Vol 2 — Geoff Johns run; Wally West as The Flash`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Geoff Johns`,
