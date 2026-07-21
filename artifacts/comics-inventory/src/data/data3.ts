@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_2007_2032.xlsx  |  Generated: 2026-07-21
+// Source: comics_inventory_2107_1213.xlsx  |  Generated: 2026-07-21
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -2370,7 +2370,7 @@ Already signed.`,
     eBay_Avg: 19.61, eBay_Low: 2.81, eBay_High: 58.5, eBay_Count: 7, eBay_Median: 12.99,
   },
   {
-    Title: `Cloak and Dagger: Age of Revelation`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Cloak or Dagger`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2025`, Arc: ``, Key: `YES`,
     Key_Reason: `New C&D one-shot or mini; verify title`, First_App: `New Cloak or Dagger series`,
@@ -2386,7 +2386,7 @@ Already signed.`,
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `239`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
+    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
     Title: `Green Lantern`, Issue: `18`, Publisher: `DC`,
@@ -2657,7 +2657,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: 9.81, eBay_Low: 3.25, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
-    Title: `Black Theory: Best of the Best`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Black Canary: Best of the Best`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2025`, Arc: ``, Key: `YES`,
     Key_Reason: `Certificate of Authenticity from Amazing Comic Conventions; Nakayama cover; COA adds collectibility`, First_App: `COA from Amazing Comic Conventions`,
@@ -2673,7 +2673,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Independent`, Box: `72`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `1`, Entry: `254`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
+    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
     Title: `Black Cat`, Issue: `1`, Publisher: `Marvel`,
@@ -67381,7 +67381,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Storm: Life Dream`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Storm: Lifedream`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2024`, Arc: `Storm Life Dream one-shot`, Key: `YES`,
     Key_Reason: `Storm: Life Dream #1 — prestige $4.99 Storm one-shot`, First_App: ``,
@@ -67397,7 +67397,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `29`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `3836`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
+    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
     Title: `Storm: Earth's Mightiest Mutant`, Issue: `1`, Publisher: `Marvel`,
@@ -69110,7 +69110,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `DCKO`, Issue: `1`, Publisher: `DC`,
+    Title: `DC K.O.`, Issue: `1`, Publisher: `DC`,
     Disambig: ``,
     Year: `2024`, Arc: `DC Knights Omnibus — DCKO`, Key: `YES`,
     Key_Reason: `DCKO #1 — new DC event series launch`, First_App: ``,
@@ -69126,10 +69126,10 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `54`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `4016`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
+    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `DCKO`, Issue: `3`, Publisher: `DC`,
+    Title: `DC K.O.`, Issue: `3`, Publisher: `DC`,
     Disambig: ``,
     Year: `2024`, Arc: `DC Knights Omnibus — DCKO`, Key: `NO`,
     Key_Reason: `DCKO #3`, First_App: ``,
@@ -69148,7 +69148,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `DCKO`, Issue: `4`, Publisher: `DC`,
+    Title: `DC K.O.`, Issue: `4`, Publisher: `DC`,
     Disambig: ``,
     Year: `2024`, Arc: `DC Knights Omnibus — DCKO`, Key: `NO`,
     Key_Reason: `DCKO #4`, First_App: ``,
@@ -69167,7 +69167,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `DCKO`, Issue: `5`, Publisher: `DC`,
+    Title: `DC K.O.`, Issue: `5`, Publisher: `DC`,
     Disambig: ``,
     Year: `2024`, Arc: `DC Knights Omnibus — DCKO`, Key: `NO`,
     Key_Reason: `DCKO #5`, First_App: ``,
@@ -69186,7 +69186,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `DCKO: Red Hood vs. The Joker`, Issue: `1`, Publisher: `DC`,
+    Title: `DC K.O.: Red Hood vs. Joker`, Issue: `1`, Publisher: `DC`,
     Disambig: ``,
     Year: `2024`, Arc: `DCKO tie-in`, Key: `YES`,
     Key_Reason: `DCKO: Red Hood vs Joker #1`, First_App: ``,
@@ -69202,7 +69202,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `54`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `4020`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
+    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
     Title: `The Flash`, Issue: `27`, Publisher: `DC`,
@@ -69813,7 +69813,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `DCKO: Night Fight`, Issue: `1`, Publisher: `DC`,
+    Title: `DC K.O.: Knightfight`, Issue: `1`, Publisher: `DC`,
     Disambig: ``,
     Year: `2024`, Arc: `DCKO Night Fight mini`, Key: `YES`,
     Key_Reason: `DCKO Night Fight #1`, First_App: ``,
@@ -69829,10 +69829,10 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `54`,
     Crossover: `DCKO`, Start_Bid: `5`,
     Volume: `1`, Entry: `4054`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
+    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `DCKO: Night Fight`, Issue: `2`, Publisher: `DC`,
+    Title: `DC K.O.: Knightfight`, Issue: `2`, Publisher: `DC`,
     Disambig: ``,
     Year: `2024`, Arc: `DCKO Night Fight mini`, Key: `NO`,
     Key_Reason: `#2`, First_App: ``,
@@ -69851,7 +69851,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `DCKO: Night Fight`, Issue: `4`, Publisher: `DC`,
+    Title: `DC K.O.: Knightfight`, Issue: `4`, Publisher: `DC`,
     Disambig: ``,
     Year: `2024`, Arc: `DCKO Night Fight mini`, Key: `NO`,
     Key_Reason: `#4`, First_App: ``,
@@ -94552,7 +94552,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `X-Men '97: Hellfire Gala Special`, Issue: `1`, Publisher: `Marvel`,
+    Title: `X-Men: Hellfire Gala`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2023`, Arc: `X-Men 97 Hellfire Gala variant`, Key: `YES`,
     Key_Reason: `X-Men '97 Hellfire Gala #1 variant — animated series crossover — hot spec with X-Men '97 Disney+ show`, First_App: ``,
@@ -94568,7 +94568,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `11`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `6`, Entry: `5386`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
+    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
     Title: `New Mutants: Lethal Legion`, Issue: `1`, Publisher: `Marvel`,
@@ -111177,7 +111177,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Ultraman vs. Avengers`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Ultraman x Avengers`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2023`, Arc: `Ultraman Avengers crossover`, Key: `YES`,
     Key_Reason: `Ultraman vs Avengers #1 — Tsuburaya/Marvel crossover — rare licensed book`, First_App: ``,
@@ -111193,7 +111193,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `27`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `7`, Entry: `6692`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
+    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
     Title: `All-Out Avengers`, Issue: `1`, Publisher: `Marvel`,
@@ -150793,7 +150793,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     eBay_Avg: 5.88, eBay_Low: 2.99, eBay_High: 8.01, eBay_Count: 5, eBay_Median: 6.35,
   },
   {
-    Title: `Reckoning War: Mortals`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Reckoning War: Alpha`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2022`, Arc: `Reckoning War tie-in`, Key: `YES`,
     Key_Reason: `Reckoning War: Mortals — Reckoning War`, First_App: ``,
@@ -150809,7 +150809,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `4`,
     Crossover: `Reckoning War`, Start_Bid: `2`,
     Volume: `1`, Entry: `9305`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
+    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
     Title: `Fantastic Four: Reckoning War Alpha`, Issue: `1`, Publisher: `Marvel`,
@@ -151933,7 +151933,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     eBay_Avg: 38.24, eBay_Low: 22, eBay_High: 79.95, eBay_Count: 7, eBay_Median: 25,
   },
   {
-    Title: `Fantastic Four: Grimoire`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Fantastic Four: Grimm Noir`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2023`, Arc: `FF Grimoire one-shot — Duggan`, Key: `YES`,
     Key_Reason: `FF Grimoire #1 Gerry Duggan — Wizard/Reed rivalry`, First_App: ``,
@@ -151949,7 +151949,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `9376`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
+    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
     Title: `Fantastic 4 in 12 Time`, Issue: `1`, Publisher: `Marvel`,
@@ -185982,7 +185982,7 @@ Jurgens is a DC legend — could sign this.`,
     eBay_Avg: 14.82, eBay_Low: 2.5, eBay_High: 40, eBay_Count: 8, eBay_Median: 13,
   },
   {
-    Title: `Thunderbolts: World Strike`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Thunderbolts: Worldstrike`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2024`, Arc: `Thunderbolts World Strike — Kelly/Lanzing`, Key: `YES`,
     Key_Reason: `Thunderbolts: World Strike #1 Collin Kelly/Jackson Lanzing — Thunderbolts MCU movie tie-in prequel`, First_App: ``,
@@ -185998,7 +185998,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `37`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11470`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
+    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
     Title: `Champions`, Issue: `1`, Publisher: `Marvel`,
@@ -191531,7 +191531,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Cloak and Dagger: Age of Revelation`, Issue: `2`, Publisher: `Marvel`,
+    Title: `Cloak or Dagger`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2025`, Arc: `AOR crossover`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -191550,7 +191550,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Cloak and Dagger: Age of Revelation`, Issue: `3`, Publisher: `Marvel`,
+    Title: `Cloak or Dagger`, Issue: `3`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2025`, Arc: `AOR crossover`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -191797,7 +191797,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Eternals: When Gods Walked the Earth`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Eternals 50th Anniversary Special`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2025`, Arc: `Eternals variant`, Key: `YES`,
     Key_Reason: `Eternals: When Gods Walked the Earth #1 variant edition — 2025 release`, First_App: ``,
@@ -191813,7 +191813,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `75`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11840`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
+    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
     Title: `Inglorious X-Force`, Issue: `3`, Publisher: `Marvel`,
