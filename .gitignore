@@ -111,3 +111,5 @@ title_merge_ebay*.csv
 title_merge_manual.csv
 manual_title_review.xlsx
 gcd_manual_rescan.log
+title_merge_cv.csv
+cv_title_guesses.xlsx
