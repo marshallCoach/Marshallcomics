@@ -108,3 +108,6 @@ cv_title_guesses.xlsx
 fuzzy_title_guesses.xlsx
 ebay_zero_comp_review.xlsx
 title_merge_ebay*.csv
+title_merge_manual.csv
+manual_title_review.xlsx
+gcd_manual_rescan.log
