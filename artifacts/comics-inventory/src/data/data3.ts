@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_2107_1513.xlsx  |  Generated: 2026-07-21
+// Source: comics_inventory_2107_1614.xlsx  |  Generated: 2026-07-21
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -43137,7 +43137,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: 11.48, eBay_Low: 4.99, eBay_High: 25, eBay_Count: 9, eBay_Median: 10,
   },
   {
-    Title: `Dawn of DC: Night Terrors`, Issue: `0`, Publisher: `DC`,
+    Title: `Dawn of DC Knight Terrors FCBD Special Edition`, Issue: `0`, Publisher: `DC`,
     Disambig: ``,
     Year: `2023`, Arc: `Free Comic Book Day`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -48932,7 +48932,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Serenity: No Power in the 'Verse`, Issue: `5`, Publisher: `Independent`,
+    Title: `Serenity: Firefly Class 03-K64-No Power In The 'Verse`, Issue: `5`, Publisher: `Independent`,
     Disambig: ``,
     Year: `2017`, Arc: `Chris Roberson / Georges Jeanty`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -60655,7 +60655,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Infinity Warps: Soldier Supreme`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Infinity Wars: Soldier Supreme`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2018`, Arc: `Thor/Iron Man mashup warp character`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -60674,7 +60674,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Infinity Warps: Soldier Supreme`, Issue: `2`, Publisher: `Marvel`,
+    Title: `Infinity Wars: Soldier Supreme`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2018`, Arc: `Mashup warp character`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -60693,7 +60693,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Infinity Warps: Iron Hammer`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Infinity Wars: Iron Hammer`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2018`, Arc: `Thor/Iron Man warp mashup`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -61719,7 +61719,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: 15.24, eBay_Low: 4.99, eBay_High: 25, eBay_Count: 8, eBay_Median: 15.75,
   },
   {
-    Title: `Captain America: Who Will Wield the Shield?`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Captain America Reborn: Who Will Wield The Shield?`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2010`, Arc: `Ed Brubaker — Steve Rogers returns`, Key: `YES`,
     Key_Reason: `Brubaker — Steve Rogers returns — pivotal transition issue — Bucky and Steve both active`, First_App: ``,
@@ -62061,7 +62061,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Fallen Son: The Death of Captain America — Avengers`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Fallen Son: The Death of Captain America`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2007`, Arc: `Jeph Loeb — Avengers chapter`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -64569,7 +64569,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Four Robins`, Issue: `1`, Publisher: `DC`,
+    Title: `Robins`, Issue: `1`, Publisher: `DC`,
     Disambig: ``,
     Year: `2022`, Arc: `1 of 6 — Tim Seeley`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -64588,7 +64588,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Four Robins`, Issue: `2`, Publisher: `DC`,
+    Title: `Robins`, Issue: `2`, Publisher: `DC`,
     Disambig: ``,
     Year: `2022`, Arc: `2 of 6`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -64607,7 +64607,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Four Robins`, Issue: `3`, Publisher: `DC`,
+    Title: `Robins`, Issue: `3`, Publisher: `DC`,
     Disambig: ``,
     Year: `2022`, Arc: `3 of 6`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -64626,7 +64626,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Four Robins`, Issue: `4`, Publisher: `DC`,
+    Title: `Robins`, Issue: `4`, Publisher: `DC`,
     Disambig: ``,
     Year: `2022`, Arc: `4 of 6`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -64645,7 +64645,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Four Robins`, Issue: `5`, Publisher: `DC`,
+    Title: `Robins`, Issue: `5`, Publisher: `DC`,
     Disambig: ``,
     Year: `2022`, Arc: `5 of 6`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -64664,7 +64664,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Four Robins`, Issue: `6`, Publisher: `DC`,
+    Title: `Robins`, Issue: `6`, Publisher: `DC`,
     Disambig: ``,
     Year: `2022`, Arc: `6 of 6 — finale`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -64740,7 +64740,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Sensational Comics Featuring Wonder Woman`, Issue: `1`, Publisher: `DC`,
+    Title: `Sensation Comics Featuring Wonder Woman`, Issue: `1`, Publisher: `DC`,
     Disambig: ``,
     Year: `2014`, Arc: `Various anthology — $3.99 — beautiful cover`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -64759,7 +64759,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Sensational Comics Featuring Wonder Woman`, Issue: `2`, Publisher: `DC`,
+    Title: `Sensation Comics Featuring Wonder Woman`, Issue: `2`, Publisher: `DC`,
     Disambig: ``,
     Year: `2014`, Arc: `Various anthology`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -64778,7 +64778,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Sensational Comics Featuring Wonder Woman`, Issue: `3`, Publisher: `DC`,
+    Title: `Sensation Comics Featuring Wonder Woman`, Issue: `3`, Publisher: `DC`,
     Disambig: ``,
     Year: `2014`, Arc: `Various`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -64797,7 +64797,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Sensational Comics Featuring Wonder Woman`, Issue: `4`, Publisher: `DC`,
+    Title: `Sensation Comics Featuring Wonder Woman`, Issue: `4`, Publisher: `DC`,
     Disambig: ``,
     Year: `2014`, Arc: `Various`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -64816,7 +64816,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Sensational Comics Featuring Wonder Woman`, Issue: `5`, Publisher: `DC`,
+    Title: `Sensation Comics Featuring Wonder Woman`, Issue: `5`, Publisher: `DC`,
     Disambig: ``,
     Year: `2014`, Arc: `Various`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -64835,7 +64835,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Sensational Comics Featuring Wonder Woman`, Issue: `6`, Publisher: `DC`,
+    Title: `Sensation Comics Featuring Wonder Woman`, Issue: `6`, Publisher: `DC`,
     Disambig: ``,
     Year: `2015`, Arc: `Various`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -64854,7 +64854,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Sensational Comics Featuring Wonder Woman`, Issue: `7`, Publisher: `DC`,
+    Title: `Sensation Comics Featuring Wonder Woman`, Issue: `7`, Publisher: `DC`,
     Disambig: ``,
     Year: `2015`, Arc: `Various`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -64873,7 +64873,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Sensational Comics Featuring Wonder Woman`, Issue: `8`, Publisher: `DC`,
+    Title: `Sensation Comics Featuring Wonder Woman`, Issue: `8`, Publisher: `DC`,
     Disambig: ``,
     Year: `2015`, Arc: `Various`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -64892,7 +64892,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Sensational Comics Featuring Wonder Woman`, Issue: `9`, Publisher: `DC`,
+    Title: `Sensation Comics Featuring Wonder Woman`, Issue: `9`, Publisher: `DC`,
     Disambig: ``,
     Year: `2015`, Arc: `Various`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -64911,7 +64911,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Sensational Comics Featuring Wonder Woman`, Issue: `10`, Publisher: `DC`,
+    Title: `Sensation Comics Featuring Wonder Woman`, Issue: `10`, Publisher: `DC`,
     Disambig: ``,
     Year: `2015`, Arc: `Various`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -64930,7 +64930,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Sensational Comics Featuring Wonder Woman`, Issue: `11`, Publisher: `DC`,
+    Title: `Sensation Comics Featuring Wonder Woman`, Issue: `11`, Publisher: `DC`,
     Disambig: ``,
     Year: `2015`, Arc: `Various`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -64949,7 +64949,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Sensational Comics Featuring Wonder Woman`, Issue: `12`, Publisher: `DC`,
+    Title: `Sensation Comics Featuring Wonder Woman`, Issue: `12`, Publisher: `DC`,
     Disambig: ``,
     Year: `2015`, Arc: `Various`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -64968,7 +64968,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Sensational Comics Featuring Wonder Woman`, Issue: `13`, Publisher: `DC`,
+    Title: `Sensation Comics Featuring Wonder Woman`, Issue: `13`, Publisher: `DC`,
     Disambig: ``,
     Year: `2015`, Arc: `Various`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -64987,7 +64987,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Sensational Comics Featuring Wonder Woman`, Issue: `14`, Publisher: `DC`,
+    Title: `Sensation Comics Featuring Wonder Woman`, Issue: `14`, Publisher: `DC`,
     Disambig: ``,
     Year: `2015`, Arc: `Various`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -65006,7 +65006,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Sensational Comics Featuring Wonder Woman`, Issue: `15`, Publisher: `DC`,
+    Title: `Sensation Comics Featuring Wonder Woman`, Issue: `15`, Publisher: `DC`,
     Disambig: ``,
     Year: `2015`, Arc: `Various`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -65025,7 +65025,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Sensational Comics Featuring Wonder Woman`, Issue: `16`, Publisher: `DC`,
+    Title: `Sensation Comics Featuring Wonder Woman`, Issue: `16`, Publisher: `DC`,
     Disambig: ``,
     Year: `2015`, Arc: `Various`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -65044,7 +65044,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Sensational Comics Featuring Wonder Woman`, Issue: `17`, Publisher: `DC`,
+    Title: `Sensation Comics Featuring Wonder Woman`, Issue: `17`, Publisher: `DC`,
     Disambig: ``,
     Year: `2015`, Arc: `Various — final issue`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -65861,7 +65861,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Year of the Villain: The Batman Who Laughs`, Issue: `4`, Publisher: `DC`,
+    Title: `The Batman Who Laughs`, Issue: `4`, Publisher: `DC`,
     Disambig: ``,
     Year: `2019`, Arc: `Batman Who Laughs tie-in`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -65899,7 +65899,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Year of the Villain: Doom Rising`, Issue: `1`, Publisher: `DC`,
+    Title: `DC's Year of the Villain Special`, Issue: `1`, Publisher: `DC`,
     Disambig: ``,
     Year: `2019`, Arc: `Doom Rising one-shot`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -69870,7 +69870,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Metamorpho: The Elemental Man`, Issue: `3`, Publisher: `DC`,
+    Title: `Metamorpho: The Element Man`, Issue: `3`, Publisher: `DC`,
     Disambig: ``,
     Year: `2025`, Arc: `Metamorpho All In — Ewing/Lieber`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -70554,7 +70554,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: 7.36, eBay_Low: 5, eBay_High: 11, eBay_Count: 8, eBay_Median: 5.99,
   },
   {
-    Title: `Mr. Terrific`, Issue: `1`, Publisher: `DC`,
+    Title: `Mr. Terrific: Year One`, Issue: `1`, Publisher: `DC`,
     Disambig: ``,
     Year: `2025`, Arc: `Mr. Terrific — COMPLETE 6-issue run`, Key: `YES`,
     Key_Reason: `Mr. Terrific #1 — Letzen/Delandro; 🎉 COMPLETE 6-issue run!`, First_App: ``,
@@ -70573,7 +70573,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: 13.19, eBay_Low: 2.55, eBay_High: 24.72, eBay_Count: 9, eBay_Median: 10,
   },
   {
-    Title: `Mr. Terrific`, Issue: `2`, Publisher: `DC`,
+    Title: `Mr. Terrific: Year One`, Issue: `2`, Publisher: `DC`,
     Disambig: ``,
     Year: `2025`, Arc: `Mr. Terrific — COMPLETE 6-issue run`, Key: `NO`,
     Key_Reason: `#2`, First_App: ``,
@@ -70592,7 +70592,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Mr. Terrific`, Issue: `3`, Publisher: `DC`,
+    Title: `Mr. Terrific: Year One`, Issue: `3`, Publisher: `DC`,
     Disambig: ``,
     Year: `2025`, Arc: `Mr. Terrific — COMPLETE 6-issue run`, Key: `NO`,
     Key_Reason: `#3`, First_App: ``,
@@ -70611,7 +70611,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Mr. Terrific`, Issue: `4`, Publisher: `DC`,
+    Title: `Mr. Terrific: Year One`, Issue: `4`, Publisher: `DC`,
     Disambig: ``,
     Year: `2025`, Arc: `Mr. Terrific — COMPLETE 6-issue run`, Key: `NO`,
     Key_Reason: `#4`, First_App: ``,
@@ -70630,7 +70630,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Mr. Terrific`, Issue: `5`, Publisher: `DC`,
+    Title: `Mr. Terrific: Year One`, Issue: `5`, Publisher: `DC`,
     Disambig: ``,
     Year: `2025`, Arc: `Mr. Terrific — COMPLETE 6-issue run`, Key: `NO`,
     Key_Reason: `#5`, First_App: ``,
@@ -70649,7 +70649,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Mr. Terrific`, Issue: `6`, Publisher: `DC`,
+    Title: `Mr. Terrific: Year One`, Issue: `6`, Publisher: `DC`,
     Disambig: ``,
     Year: `2025`, Arc: `Mr. Terrific — COMPLETE 6-issue run`, Key: `NO`,
     Key_Reason: `#6`, First_App: ``,
@@ -73480,7 +73480,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: 17.62, eBay_Low: 5.95, eBay_High: 41.76, eBay_Count: 7, eBay_Median: 14.68,
   },
   {
-    Title: `Black Panther — Black & White`, Issue: `52`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `52`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2002`, Arc: `BP Black & White — Priest/Lucas`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -73496,10 +73496,10 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `3`, Entry: `4249`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 50.8, eBay_Low: 5.22, eBay_High: 110, eBay_Count: 8, eBay_Median: 49.07,
   },
   {
-    Title: `Black Panther — Black & White`, Issue: `53`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `53`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2002`, Arc: `BP Black & White — Priest/Lucas`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -73518,7 +73518,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Black Panther — Black & White`, Issue: `54`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `54`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2002`, Arc: `BP Black & White — Priest/Lucas`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -73537,7 +73537,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Black Panther — Black & White`, Issue: `50`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `50`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2002`, Arc: `BP Black & White — Priest/Lucas`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -73553,7 +73553,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `3`, Entry: `4252`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 17.62, eBay_Low: 5.95, eBay_High: 41.76, eBay_Count: 7, eBay_Median: 14.68,
   },
   {
     Title: `Black Panther`, Issue: `56`, Publisher: `Marvel`,
@@ -77889,7 +77889,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: 4.71, eBay_Low: 2, eBay_High: 9.99, eBay_Count: 10, eBay_Median: 3.5,
   },
   {
-    Title: `X-Men Origins: X-Men Blue`, Issue: `1`, Publisher: `Marvel`,
+    Title: `X-Men Blue: Origins`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2023`, Arc: `X-Men Origins`, Key: `YES`,
     Key_Reason: `X-Men Origins: X-Men Blue #1 — origin special`, First_App: ``,
@@ -84957,7 +84957,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Mr. Truesdale and the Fall of Hyperborea`, Issue: `2`, Publisher: `Dark Horse`,
+    Title: `Miss Truesdale and the Fall of Hyperborea`, Issue: `2`, Publisher: `Dark Horse`,
     Disambig: ``,
     Year: `2024`, Arc: `Hellboy Universe`, Key: `NO`,
     Key_Reason: `From the World of Hellboy — Mignola`, First_App: ``,
@@ -92690,7 +92690,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Wonder Man and the Beast`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Avengers Two: Wonder Man And Beast - Marvel Tales`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2023`, Arc: `Wonder Man and the Beast mini — found in X-Men box`, Key: `YES`,
     Key_Reason: `Wonder Man and the Beast #1 — found in X-Men box`, First_App: ``,
@@ -94780,7 +94780,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Ms. Marvel: The Muse Menace`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Ms. Marvel: Mutant Menace`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2024`, Arc: `Ms. Marvel Muse Menace`, Key: `YES`,
     Key_Reason: `Ms. Marvel: Muse Menace #1 — Kamala Khan X-Men adjacent`, First_App: ``,
@@ -94796,7 +94796,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `11`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `5398`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
+    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
     Title: `Cable`, Issue: `1`, Publisher: `Marvel`,
@@ -99378,7 +99378,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: 27.76, eBay_Low: 4, eBay_High: 85, eBay_Count: 9, eBay_Median: 27.81,
   },
   {
-    Title: `Hunt for Wolverine: The Adamantium Agenda`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Hunt For Wolverine: Adamantium Agenda`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2018`, Arc: `Hunt for Wolverine`, Key: `YES`,
     Key_Reason: `Adamantium Agenda #1 Taylor — 4-part Hunt for Wolverine mini`, First_App: ``,
@@ -99397,7 +99397,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: 6.62, eBay_Low: 3, eBay_High: 18, eBay_Count: 10, eBay_Median: 6.17,
   },
   {
-    Title: `Hunt for Wolverine: The Adamantium Agenda`, Issue: `2`, Publisher: `Marvel`,
+    Title: `Hunt For Wolverine: Adamantium Agenda`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2018`, Arc: `Hunt for Wolverine`, Key: `NO`,
     Key_Reason: `#2`, First_App: ``,
@@ -99416,7 +99416,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Hunt for Wolverine: The Adamantium Agenda`, Issue: `3`, Publisher: `Marvel`,
+    Title: `Hunt For Wolverine: Adamantium Agenda`, Issue: `3`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2018`, Arc: `Hunt for Wolverine`, Key: `NO`,
     Key_Reason: `#3`, First_App: ``,
@@ -99435,7 +99435,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Hunt for Wolverine: The Adamantium Agenda`, Issue: `4`, Publisher: `Marvel`,
+    Title: `Hunt For Wolverine: Adamantium Agenda`, Issue: `4`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2018`, Arc: `Hunt for Wolverine`, Key: `NO`,
     Key_Reason: `#4`, First_App: ``,
@@ -102874,7 +102874,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `X-Men: Magik`, Issue: `1`, Publisher: `Marvel`,
+    Title: `X-Men: Blood Hunt - Magik`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2024`, Arc: `Blood Hunt tie-in`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -103995,7 +103995,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Ultimatum: Ultimate Spider-Man`, Issue: `129`, Publisher: `Marvel`,
+    Title: `Ultimate Spider-Man`, Issue: `129`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2009`, Arc: `Ultimatum UXS crossover`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -104014,7 +104014,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Ultimatum: Ultimate Spider-Man`, Issue: `131`, Publisher: `Marvel`,
+    Title: `Ultimate Spider-Man`, Issue: `131`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2009`, Arc: `Ultimatum UXS`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -104090,7 +104090,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Ultimate Comics: All-New Spider-Man`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Ultimate Comics Spider-Man`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2012`, Arc: `UCASM #1 — Miles Morales first ongoing solo`, Key: `YES`,
     Key_Reason: `Ultimate Comics: All-New Spider-Man #1 Bendis/Marquez — Miles Morales gets his own solo ongoing — landmark`, First_App: ``,
@@ -104106,10 +104106,10 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `25`,
     Crossover: ``, Start_Bid: `6`,
     Volume: `1`, Entry: `6304`,
-    eBay_Avg: 44.88, eBay_Low: 3.99, eBay_High: 129.99, eBay_Count: 8, eBay_Median: 32.49,
+    eBay_Avg: 48.08, eBay_Low: 10, eBay_High: 89.99, eBay_Count: 9, eBay_Median: 44.99,
   },
   {
-    Title: `Ultimate Comics: All-New Spider-Man`, Issue: `5`, Publisher: `Marvel`,
+    Title: `Ultimate Comics Spider-Man`, Issue: `5`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2012`, Arc: `UCASM Miles Morales ongoing`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -104128,7 +104128,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Ultimate Comics: All-New Spider-Man`, Issue: `8`, Publisher: `Marvel`,
+    Title: `Ultimate Comics Spider-Man`, Issue: `8`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2012`, Arc: `UCASM Miles Morales ongoing`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -104147,7 +104147,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Ultimate Comics: All-New Spider-Man`, Issue: `9`, Publisher: `Marvel`,
+    Title: `Ultimate Comics Spider-Man`, Issue: `9`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2012`, Arc: `UCASM Miles Morales ongoing`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -104166,7 +104166,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Ultimate Comics: All-New Spider-Man`, Issue: `10`, Publisher: `Marvel`,
+    Title: `Ultimate Comics Spider-Man`, Issue: `10`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2012`, Arc: `UCASM Miles Morales ongoing`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -104185,7 +104185,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Ultimate Comics: All-New Spider-Man`, Issue: `11`, Publisher: `Marvel`,
+    Title: `Ultimate Comics Spider-Man`, Issue: `11`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2012`, Arc: `UCASM Miles Morales ongoing`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -104204,7 +104204,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Ultimate Comics: All-New Spider-Man`, Issue: `13`, Publisher: `Marvel`,
+    Title: `Ultimate Comics Spider-Man`, Issue: `13`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2012`, Arc: `UCASM Miles Morales ongoing`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -104223,7 +104223,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Ultimate Comics: All-New Spider-Man`, Issue: `14`, Publisher: `Marvel`,
+    Title: `Ultimate Comics Spider-Man`, Issue: `14`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2012`, Arc: `UCASM Miles Morales ongoing`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -104242,7 +104242,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Ultimate Comics: All-New Spider-Man`, Issue: `15`, Publisher: `Marvel`,
+    Title: `Ultimate Comics Spider-Man`, Issue: `15`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2012`, Arc: `UCASM Miles Morales ongoing`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -104261,7 +104261,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Ultimate Comics: All-New Spider-Man`, Issue: `16`, Publisher: `Marvel`,
+    Title: `Ultimate Comics Spider-Man`, Issue: `16`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2012`, Arc: `UCASM Miles Morales ongoing`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -104280,7 +104280,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Ultimate Comics: All-New Spider-Man`, Issue: `17`, Publisher: `Marvel`,
+    Title: `Ultimate Comics Spider-Man`, Issue: `17`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2012`, Arc: `UCASM Miles Morales ongoing`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -104299,7 +104299,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Ultimate Comics: All-New Spider-Man`, Issue: `18`, Publisher: `Marvel`,
+    Title: `Ultimate Comics Spider-Man`, Issue: `18`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2012`, Arc: `UCASM Miles Morales ongoing`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -104318,7 +104318,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Ultimate Comics: All-New Spider-Man`, Issue: `19`, Publisher: `Marvel`,
+    Title: `Ultimate Comics Spider-Man`, Issue: `19`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2012`, Arc: `UCASM Miles Morales ongoing`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -104337,7 +104337,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Ultimate Comics: All-New Spider-Man`, Issue: `20`, Publisher: `Marvel`,
+    Title: `Ultimate Comics Spider-Man`, Issue: `20`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2012`, Arc: `UCASM Miles Morales ongoing`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -104356,7 +104356,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Ultimate Comics: All-New Spider-Man`, Issue: `21`, Publisher: `Marvel`,
+    Title: `Ultimate Comics Spider-Man`, Issue: `21`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2012`, Arc: `UCASM Miles Morales ongoing`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -104375,7 +104375,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Ultimate Comics: All-New Spider-Man`, Issue: `22`, Publisher: `Marvel`,
+    Title: `Ultimate Comics Spider-Man`, Issue: `22`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2012`, Arc: `UCASM Miles Morales ongoing`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -104394,7 +104394,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Ultimate Comics: All-New Spider-Man`, Issue: `23`, Publisher: `Marvel`,
+    Title: `Ultimate Comics Spider-Man`, Issue: `23`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2012`, Arc: `UCASM Miles Morales ongoing`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -104413,7 +104413,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Ultimate Comics: All-New Spider-Man`, Issue: `24`, Publisher: `Marvel`,
+    Title: `Ultimate Comics Spider-Man`, Issue: `24`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2012`, Arc: `UCASM Miles Morales ongoing`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -104432,7 +104432,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Ultimate Comics: All-New Spider-Man`, Issue: `25`, Publisher: `Marvel`,
+    Title: `Ultimate Comics Spider-Man`, Issue: `25`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2012`, Arc: `UCASM Miles Morales ongoing`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -104451,7 +104451,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Ultimate Comics: All-New Spider-Man`, Issue: `26`, Publisher: `Marvel`,
+    Title: `Ultimate Comics Spider-Man`, Issue: `26`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2012`, Arc: `UCASM Miles Morales ongoing`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -104470,7 +104470,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Ultimate Comics: All-New Spider-Man`, Issue: `27`, Publisher: `Marvel`,
+    Title: `Ultimate Comics Spider-Man`, Issue: `27`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2012`, Arc: `UCASM Miles Morales ongoing`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -104489,7 +104489,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Ultimate Comics: All-New Spider-Man`, Issue: `28`, Publisher: `Marvel`,
+    Title: `Ultimate Comics Spider-Man`, Issue: `28`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2012`, Arc: `UCASM Miles Morales ongoing`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -104508,7 +104508,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Ultimate Comics: All-New Spider-Man`, Issue: `29`, Publisher: `Marvel`,
+    Title: `Ultimate Comics Spider-Man`, Issue: `29`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2012`, Arc: `UCASM Miles Morales ongoing`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -105040,7 +105040,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Cataclysm: Ultimate Comics Spider-Man`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Cataclysm: Ultimate Spider-Man`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2014`, Arc: `Cataclysm crossover`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -105059,7 +105059,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Cataclysm: Ultimate Comics Spider-Man`, Issue: `2`, Publisher: `Marvel`,
+    Title: `Cataclysm: Ultimate Spider-Man`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2014`, Arc: `Cataclysm crossover`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -105078,7 +105078,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Cataclysm: Ultimate Comics Spider-Man`, Issue: `3`, Publisher: `Marvel`,
+    Title: `Cataclysm: Ultimate Spider-Man`, Issue: `3`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2014`, Arc: `Cataclysm crossover`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -105097,7 +105097,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Cataclysm: Ultimate Comics X-Men`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Cataclysm: Ultimate X-Men`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2014`, Arc: `Cataclysm crossover`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -105116,7 +105116,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Cataclysm: Ultimate Comics X-Men`, Issue: `2`, Publisher: `Marvel`,
+    Title: `Cataclysm: Ultimate X-Men`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2014`, Arc: `Cataclysm crossover`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -105135,7 +105135,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Cataclysm: Ultimate Comics Ultimates`, Issue: `2`, Publisher: `Marvel`,
+    Title: `Cataclysm: The Ultimates`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2014`, Arc: `Cataclysm crossover`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -106180,11 +106180,11 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Empyre: Avengers/Fantastic Four`, Issue: `3`, Publisher: `Marvel`,
+    Title: `Empyre: Avengers`, Issue: `3`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2020`, Arc: `Empyre crossover`, Key: `NO`,
     Key_Reason: `Empyre: Avengers/Fantastic Four #3`, First_App: ``,
-    Writer: `Al Ewing`, Artist: ``,
+    Writer: `Al Ewing`, Artist: `Carlos Magno`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -106199,7 +106199,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Empyre: Avengers/Fantastic Four`, Issue: `4`, Publisher: `Marvel`,
+    Title: `Empyre: Avengers`, Issue: `4`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2020`, Arc: `Empyre crossover`, Key: `NO`,
     Key_Reason: `Empyre: Avengers/Fantastic Four #4`, First_App: ``,
@@ -106218,7 +106218,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Empyre: Avengers/Fantastic Four`, Issue: `5`, Publisher: `Marvel`,
+    Title: `Empyre: Avengers`, Issue: `5`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2020`, Arc: `Empyre crossover`, Key: `NO`,
     Key_Reason: `Empyre: Avengers/Fantastic Four #5`, First_App: ``,
@@ -106237,7 +106237,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Empyre: Avengers/Fantastic Four`, Issue: `6`, Publisher: `Marvel`,
+    Title: `Empyre: Avengers`, Issue: `6`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2020`, Arc: `Empyre crossover`, Key: `NO`,
     Key_Reason: `Empyre: Avengers/Fantastic Four #6`, First_App: ``,
@@ -106313,7 +106313,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: 5.62, eBay_Low: 2, eBay_High: 9.99, eBay_Count: 9, eBay_Median: 5,
   },
   {
-    Title: `Empyre: Captain Marvel`, Issue: `18`, Publisher: `Marvel`,
+    Title: `Captain Marvel`, Issue: `18`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2020`, Arc: `Empyre CM`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -106332,7 +106332,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Empyre: Captain Marvel`, Issue: `19`, Publisher: `Marvel`,
+    Title: `Captain Marvel`, Issue: `19`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2020`, Arc: `Empyre CM`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -106351,7 +106351,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Empyre: Captain Marvel`, Issue: `20`, Publisher: `Marvel`,
+    Title: `Captain Marvel`, Issue: `20`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2020`, Arc: `Empyre CM`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -106370,7 +106370,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Empyre: Captain Marvel`, Issue: `21`, Publisher: `Marvel`,
+    Title: `Captain Marvel`, Issue: `21`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2020`, Arc: `Empyre CM`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -108536,7 +108536,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `What If? Avengers vs. X-Men`, Issue: `2`, Publisher: `Marvel`,
+    Title: `Avengers Vs. X-Men`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2013`, Arc: `What If AvX`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -108555,7 +108555,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `What If? Avengers vs. X-Men`, Issue: `3`, Publisher: `Marvel`,
+    Title: `Avengers Vs. X-Men`, Issue: `3`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2013`, Arc: `What If AvX`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -108574,7 +108574,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `What If? Avengers vs. X-Men`, Issue: `4`, Publisher: `Marvel`,
+    Title: `Avengers Vs. X-Men`, Issue: `4`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2013`, Arc: `What If AvX`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -109334,7 +109334,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Avengers: Hulk`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Marvel's Avengers: Hulk`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2021`, Arc: `Avengers Hulk — game of verse`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -110322,7 +110322,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Young Avengers and Runaways: Civil War`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Civil War: Young Avengers & Runaways`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2006`, Arc: `Civil War crossover`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -111386,11 +111386,11 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Avengers: Wasp`, Issue: `3`, Publisher: `Marvel`,
+    Title: `Wasp`, Issue: `3`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2023`, Arc: `Avengers Wasp`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Al Ewing`, Artist: `Kasia Nie`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -111405,7 +111405,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Avengers: Giant-Man`, Issue: `3`, Publisher: `Marvel`,
+    Title: `Giant-Man`, Issue: `3`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2019`, Arc: `WotR Giant-Man`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -114768,7 +114768,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `What If? Galactus Transformed Hulk`, Issue: `1`, Publisher: `Marvel`,
+    Title: `What If...? Galactus: Galactus Transformed Hulk?`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2023`, Arc: `What If Hulk Galactus`, Key: `YES`,
     Key_Reason: `What If Galactus Transformed the Hulk — fun cosmic one-shot`, First_App: ``,
@@ -114784,7 +114784,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `22`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `6`, Entry: `6889`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
+    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
     Title: `Hulk Annual`, Issue: `1`, Publisher: `Marvel`,
@@ -116573,7 +116573,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `What If? Galactus Transformed Moon Knight`, Issue: `1`, Publisher: `Marvel`,
+    Title: `What If...? Dark: Moon Knight`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2023`, Arc: `What If Moon Knight variant`, Key: `YES`,
     Key_Reason: `What If? Galactus Transformed Moon Knight — variant edition`, First_App: ``,
@@ -116589,7 +116589,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `11`, Entry: `6984`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
+    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
     Title: `Ms. Marvel and Moon Knight`, Issue: `1`, Publisher: `Marvel`,
@@ -116611,7 +116611,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: 4.3, eBay_Low: 0.99, eBay_High: 5.79, eBay_Count: 8, eBay_Median: 4.99,
   },
   {
-    Title: `Moon Knight: Second Printing`, Issue: `2`, Publisher: `Marvel`,
+    Title: `Moon Knight`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2022`, Arc: `Moon Knight McKay 2nd printing`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -116627,7 +116627,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `11`, Entry: `6986`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 9.44, eBay_Low: 4.37, eBay_High: 24.99, eBay_Count: 7, eBay_Median: 8,
   },
   {
     Title: `Punisher War Journal`, Issue: `6`, Publisher: `Marvel`,
@@ -118093,7 +118093,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Astonishing Ant-Man Annual`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Ant-Man Annual`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2016`, Arc: `AAM Annual`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -126643,7 +126643,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Buffy the Vampire Slayer Annual`, Issue: `1`, Publisher: `Dark Horse`,
+    Title: `Buffy the Vampire Slayer Annual 1999`, Issue: `1`, Publisher: `Dark Horse`,
     Disambig: ``,
     Year: `1999`, Arc: `Buffy Annual`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -127232,7 +127232,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `DC: 5 of a Kind — Nightwing/Captain Boomerang`, Issue: `1`, Publisher: `DC`,
+    Title: `Outsiders: Five of a Kind - Nightwing/Boomerang`, Issue: `1`, Publisher: `DC`,
     Disambig: ``,
     Year: `2007`, Arc: `DC 5 of a Kind crossover event`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -127251,7 +127251,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `DC: 5 of a Kind — Katana/Shazam`, Issue: `1`, Publisher: `DC`,
+    Title: `Outsiders: Five of a Kind - Katana/Shazam`, Issue: `1`, Publisher: `DC`,
     Disambig: ``,
     Year: `2007`, Arc: `DC 5 of a Kind crossover event`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -127270,7 +127270,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `DC: 5 of a Kind — Thunder/Martian Manhunter`, Issue: `1`, Publisher: `DC`,
+    Title: `Outsiders: Five of a Kind - Martian Manhunter/Thunder`, Issue: `1`, Publisher: `DC`,
     Disambig: ``,
     Year: `2007`, Arc: `DC 5 of a Kind crossover event`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -127289,7 +127289,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `DC: 5 of a Kind — Metamorpho/Aquaman`, Issue: `1`, Publisher: `DC`,
+    Title: `Outsiders: Five of a Kind - Metamorpho/Aquaman`, Issue: `1`, Publisher: `DC`,
     Disambig: ``,
     Year: `2007`, Arc: `DC 5 of a Kind crossover event`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -127308,7 +127308,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `DC: 5 of a Kind — Wonder Woman/Grace`, Issue: `1`, Publisher: `DC`,
+    Title: `Outsiders: Five of a Kind - Wonder Woman/Grace`, Issue: `1`, Publisher: `DC`,
     Disambig: ``,
     Year: `2007`, Arc: `DC 5 of a Kind crossover event`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -153168,7 +153168,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Nova: Rising from Annihilation`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Nova: Annihilation Conquest`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2007`, Arc: `Nova Rising from Annihilation Abnett`, Key: `YES`,
     Key_Reason: `Nova Rising from Annihilation #1 Abnett/Lanning — Richard Rider builds Nova Corps — start of landmark run`, First_App: ``,
@@ -178534,7 +178534,7 @@ Jurgens is a DC legend — could sign this.`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Doctor Who BBC Comics`, Issue: `1`, Publisher: `Titan Comics`,
+    Title: `Doctor Who`, Issue: `1`, Publisher: `Titan Comics`,
     Disambig: ``,
     Year: `2021`, Arc: `Doctor Who comics`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -178546,14 +178546,14 @@ Jurgens is a DC legend — could sign this.`,
     Seller_Notes: `Doctor Who BBC Comics #1 (Empire of the Wolf). Various. | Empire of the Wolf`, Story_Pitch: `Doctor Who BBC Comics #1 (Empire of the Wolf).`,
     Content: `Doctor Who BBC Comics #1 (Empire of the Wolf).`, Platform: `EBAY`,
     Sales_Data: `NM $5, VF $3`, Terrificon: ``,
-    Cover_Artist: ``, Date_Added: `May 20, 2026`,
+    Cover_Artist: `Peach Momoko`, Date_Added: `May 20, 2026`,
     Imprint: `Titan Comics`, Box: `66`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `4875`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Doctor Who BBC Comics`, Issue: `2`, Publisher: `Titan Comics`,
+    Title: `Doctor Who`, Issue: `2`, Publisher: `Titan Comics`,
     Disambig: ``,
     Year: `2022`, Arc: `Doctor Who comics`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -178565,14 +178565,14 @@ Jurgens is a DC legend — could sign this.`,
     Seller_Notes: `Doctor Who BBC Comics #2 (Empire of the Wolf). Various. | Empire of the Wolf`, Story_Pitch: `Doctor Who BBC Comics #2 (Empire of the Wolf).`,
     Content: `Doctor Who BBC Comics #2 (Empire of the Wolf).`, Platform: `EBAY`,
     Sales_Data: `NM $5, VF $3`, Terrificon: ``,
-    Cover_Artist: ``, Date_Added: `May 20, 2026`,
+    Cover_Artist: `Peach Momoko`, Date_Added: `May 20, 2026`,
     Imprint: `Titan Comics`, Box: `66`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `4876`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 9.83, eBay_Low: 3.98, eBay_High: 22.68, eBay_Count: 10, eBay_Median: 9,
   },
   {
-    Title: `Doctor Who BBC Comics`, Issue: `3`, Publisher: `Titan Comics`,
+    Title: `Doctor Who`, Issue: `3`, Publisher: `Titan Comics`,
     Disambig: ``,
     Year: `2022`, Arc: `Doctor Who comics`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -178584,14 +178584,14 @@ Jurgens is a DC legend — could sign this.`,
     Seller_Notes: `Doctor Who BBC Comics #3 (Empire of the Wolf). Various. | Empire of the Wolf`, Story_Pitch: `Doctor Who BBC Comics #3 (Empire of the Wolf).`,
     Content: `Doctor Who BBC Comics #3 (Empire of the Wolf).`, Platform: `EBAY`,
     Sales_Data: `NM $5, VF $3`, Terrificon: ``,
-    Cover_Artist: ``, Date_Added: `May 20, 2026`,
+    Cover_Artist: `Meghan Hetrick`, Date_Added: `May 20, 2026`,
     Imprint: `Titan Comics`, Box: `66`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `4877`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Doctor Who BBC Comics`, Issue: `4`, Publisher: `Titan Comics`,
+    Title: `Doctor Who`, Issue: `4`, Publisher: `Titan Comics`,
     Disambig: ``,
     Year: `2022`, Arc: `Doctor Who comics`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -178603,7 +178603,7 @@ Jurgens is a DC legend — could sign this.`,
     Seller_Notes: `Doctor Who BBC Comics #4 (Jody Hauser — BBC). Various. | Jody Hauser — BBC`, Story_Pitch: `Doctor Who BBC Comics #4 (Jody Hauser — BBC).`,
     Content: `Doctor Who BBC Comics #4 (Jody Hauser — BBC).`, Platform: `EBAY`,
     Sales_Data: `NM $5, VF $3`, Terrificon: ``,
-    Cover_Artist: ``, Date_Added: `May 20, 2026`,
+    Cover_Artist: `Claudia Ianniciello`, Date_Added: `May 20, 2026`,
     Imprint: `Titan Comics`, Box: `66`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `4878`,
@@ -180396,7 +180396,7 @@ Jurgens is a DC legend — could sign this.`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Serenity: No Power in the 'Verse`, Issue: `1`, Publisher: `Dark Horse`,
+    Title: `Serenity: Firefly Class 03-K64-No Power In The 'Verse`, Issue: `1`, Publisher: `Dark Horse`,
     Disambig: ``,
     Year: `2016`, Arc: `Serenity No Power in the Verse — Robertson`, Key: `YES`,
     Key_Reason: `Serenity: No Power in the 'Verse #1 Chris Roberson — Firefly canonical continuation`, First_App: ``,
@@ -180415,7 +180415,7 @@ Jurgens is a DC legend — could sign this.`,
     eBay_Avg: 6.83, eBay_Low: 3.56, eBay_High: 13, eBay_Count: 9, eBay_Median: 4.99,
   },
   {
-    Title: `Serenity: No Power in the 'Verse`, Issue: `2`, Publisher: `Dark Horse`,
+    Title: `Serenity: Firefly Class 03-K64-No Power In The 'Verse`, Issue: `2`, Publisher: `Dark Horse`,
     Disambig: ``,
     Year: `2016`, Arc: `Serenity NP extends`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -190581,7 +190581,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Uncanny X-Men Special: No End in Sight Part 3`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Uncanny X-Men Special`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2009`, Arc: `No End in Sight crossover`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -191455,7 +191455,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Unbreakable X-Men: Age of Revelation`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Unbreakable X-Men`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2025`, Arc: `AOR crossover`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -191474,7 +191474,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Unbreakable X-Men: Age of Revelation`, Issue: `2`, Publisher: `Marvel`,
+    Title: `Unbreakable X-Men`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2025`, Arc: `AOR crossover`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -191493,7 +191493,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Unbreakable X-Men: Age of Revelation`, Issue: `3`, Publisher: `Marvel`,
+    Title: `Unbreakable X-Men`, Issue: `3`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2025`, Arc: `AOR crossover`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -194381,7 +194381,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Avengers/Fantastic Four: Empyre`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Fantastic Four: Empyre`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2020`, Arc: ``, Key: `YES`,
     Key_Reason: `Avengers/Fantastic Four: Empyre #1 — major Marvel event — Kree/Skrull vs Earth`, First_App: ``,
@@ -194400,7 +194400,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     eBay_Avg: 6.7, eBay_Low: 2, eBay_High: 12.99, eBay_Count: 10, eBay_Median: 4.84,
   },
   {
-    Title: `Avengers/Fantastic Four: Empyre`, Issue: `2`, Publisher: `Marvel`,
+    Title: `Fantastic Four: Empyre`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2020`, Arc: ``, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -194419,11 +194419,11 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Avengers/Fantastic Four: Empyre`, Issue: `0`, Publisher: `Marvel`,
+    Title: `Fantastic Four: Empyre`, Issue: `0`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2020`, Arc: ``, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Dan Slott`, Artist: `R. B. Silva`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -194431,7 +194431,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Seller_Notes: `Avengers/Fantastic Four: Empyre #0.`, Story_Pitch: `Avengers/Fantastic Four: Empyre #0.`,
     Content: `Avengers/Fantastic Four: Empyre #0.`, Platform: `EBAY`,
     Sales_Data: ``, Terrificon: ``,
-    Cover_Artist: ``, Date_Added: `May 27, 2026`,
+    Cover_Artist: `Jim Cheung`, Date_Added: `May 27, 2026`,
     Imprint: `Marvel`, Box: `79`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `12280`,
@@ -209042,12 +209042,12 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     CoverNotes: `Storm shaving head — Warhol 4 colours`, Flag: ``,
   },
   {
-    Title: `Cataclysm: Ultimate Comics X-Men`, Issue: `1`, Publisher: `Marvel`,
-    Year: `2014`, Volume: `5`, Cover_Artist: `Jim Lee & Various`,
-    Key: `NO`, Key_Reason: ``,
-    Signed: `NO`, Signed_By: ``,
-    Era: `Modern`, Writer: ``,
-    Value_NM: `5`, Start_Bid: `2`, Box: `25`,
+    Title: `Cataclysm: Ultimate Comics X-Men`, Issue: `#1`, Publisher: `Marvel`,
+    Year: ``, Volume: ``, Cover_Artist: ``,
+    Key: ``, Key_Reason: ``,
+    Signed: ``, Signed_By: ``,
+    Era: ``, Writer: ``,
+    Value_NM: ``, Start_Bid: ``, Box: ``,
     Notes: ``, SortPile: `Marvel X-Men / Mutants`,
     CoverNotes: `Galactus cover`, Flag: ``,
   },
@@ -214796,7 +214796,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Ultimatum: Ultimate Spider-Man`, Issue: `129`, Publisher: `Marvel`,
+    Title: `Ultimate Spider-Man`, Issue: `129`, Publisher: `Marvel`,
     Year: `2009`, Volume: `1`, Cover_Artist: `Sara Pichelli & Various`,
     Key: `NO`, Key_Reason: ``,
     Signed: `NO`, Signed_By: ``,
@@ -214806,7 +214806,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Ultimatum: Ultimate Spider-Man`, Issue: `131`, Publisher: `Marvel`,
+    Title: `Ultimate Spider-Man`, Issue: `131`, Publisher: `Marvel`,
     Year: `2009`, Volume: `1`, Cover_Artist: `Sara Pichelli & Various`,
     Key: `NO`, Key_Reason: ``,
     Signed: `NO`, Signed_By: ``,
@@ -215056,7 +215056,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Young Avengers and Runaways: Civil War`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Civil War: Young Avengers & Runaways`, Issue: `1`, Publisher: `Marvel`,
     Year: `2006`, Volume: `1`, Cover_Artist: `Jim Cheung & Various`,
     Key: `NO`, Key_Reason: ``,
     Signed: `NO`, Signed_By: ``,
