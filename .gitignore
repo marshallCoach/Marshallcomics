@@ -104,3 +104,7 @@ title_merge_map5.csv
 dupes_samwilson.csv
 dupes_47.csv
 gcd_variants.log
+cv_title_guesses.xlsx
+fuzzy_title_guesses.xlsx
+ebay_zero_comp_review.xlsx
+title_merge_ebay*.csv
