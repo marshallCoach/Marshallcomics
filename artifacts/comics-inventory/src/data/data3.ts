@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_2107_1614.xlsx  |  Generated: 2026-07-21
+// Source: comics_inventory_2207_1311.xlsx  |  Generated: 2026-07-22
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -42,7 +42,7 @@ export const DATA3: {
     ccBoxes: CatalogComic[];
   };
 } = {
-  generatedAt: "2026-07-21",
+  generatedAt: "2026-07-22",
   comics: [
   {
     Title: `Barack Obama: Presidential Material`, Issue: `1`, Publisher: `IDW`,
@@ -69829,7 +69829,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `54`,
     Crossover: `DCKO`, Start_Bid: `5`,
     Volume: `1`, Entry: `4054`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
   },
   {
     Title: `Dc K.O. Knightfight`, Issue: `2`, Publisher: `DC`,
@@ -94796,7 +94796,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `11`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `5398`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 11.2, eBay_Low: 5, eBay_High: 21, eBay_Count: 8, eBay_Median: 8.34,
   },
   {
     Title: `Cable`, Issue: `1`, Publisher: `Marvel`,
@@ -114784,7 +114784,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `22`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `6`, Entry: `6889`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
   },
   {
     Title: `Hulk Annual`, Issue: `1`, Publisher: `Marvel`,
@@ -116589,7 +116589,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `11`, Entry: `6984`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 6, eBay_Low: 3.99, eBay_High: 11.89, eBay_Count: 9, eBay_Median: 4.99,
   },
   {
     Title: `Ms. Marvel and Moon Knight`, Issue: `1`, Publisher: `Marvel`,
@@ -180697,7 +180697,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `IDW Publishing`, Box: `64`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11120`,
-    eBay_Avg: 19.8, eBay_Low: 4.5, eBay_High: 37.6, eBay_Count: 10, eBay_Median: 20.01,
+    eBay_Avg: 20.08, eBay_Low: 4.5, eBay_High: 37.84, eBay_Count: 10, eBay_Median: 20.07,
   },
   {
     Title: `Star Trek: The Next Generation – Hive`, Issue: `2`, Publisher: `IDW`,
@@ -185846,7 +185846,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `37`,
     Crossover: `Dark Reign`, Start_Bid: `2`,
     Volume: `1`, Entry: `11462`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: 10.92, eBay_Low: 3, eBay_High: 29.51, eBay_Count: 7, eBay_Median: 8.99,
   },
   {
     Title: `Thunderbolts`, Issue: `1`, Publisher: `Marvel`,
@@ -191034,7 +191034,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `75`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11797`,
-    eBay_Avg: 27.96, eBay_Low: 6.99, eBay_High: 45, eBay_Count: 3, eBay_Median: 31.88,
+    eBay_Avg: 10.62, eBay_Low: 7.99, eBay_High: 19.99, eBay_Count: 7, eBay_Median: 8.99,
   },
   {
     Title: `Riri Williams, the Invincible Ironheart`, Issue: `1`, Publisher: `Marvel`,
@@ -191053,7 +191053,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `75`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11798`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
+    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
   },
   {
     Title: `Old Man Logan`, Issue: `30`, Publisher: `Marvel`,
