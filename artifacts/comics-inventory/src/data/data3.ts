@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_2307_1235.xlsx  |  Generated: 2026-07-23
+// Source: comics_inventory_2307_1426.xlsx  |  Generated: 2026-07-23
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -1015,7 +1015,7 @@ Already signed by Priest. CGC witness at Terrificon.`,
     eBay_Avg: 29.99, eBay_Low: 19.99, eBay_High: 40, eBay_Count: 2, eBay_Median: 29.99,
   },
   {
-    Title: `Black Panther: The World to Come`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Marvel Knights: The World to Come`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2022`, Arc: ``, Key: `YES`,
     Key_Reason: `John Ridley BP run; not a Christopher Priest book — owner may have misidentified signer; Tier 1 #4 — signed by Christopher Priest. Per classification spec rule 4, a signature makes the copy unique and is always a key, independent of issue significance.`, First_App: ``,
@@ -1032,7 +1032,7 @@ Signed — verify Priest connection to this book.`,
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `9`, Entry: `53`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
+    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
     Title: `Black Panther Annual`, Issue: `1`, Publisher: `Marvel`,
@@ -1075,7 +1075,7 @@ Already signed. CGC SS witness.`,
     eBay_Avg: 8.64, eBay_Low: 2.13, eBay_High: 20.99, eBay_Count: 8, eBay_Median: 7.49,
   },
   {
-    Title: `Black Panther: First Contact`, Issue: `30`, Publisher: `Marvel`,
+    Title: `Black Panther`, Issue: `30`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2001`, Arc: ``, Key: `YES`,
     Key_Reason: `Part of Priest's BP run but non-key individual issue; Tier 1 #4 — signed by Christopher Priest. Per classification spec rule 4, a signature makes the copy unique and is always a key, independent of issue significance.`, First_App: ``,
@@ -1091,8 +1091,8 @@ Already signed.`,
     Cover_Artist: `Sal Velluto`, Date_Added: ``,
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `10`,
-    Volume: `3`, Entry: `56`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
+    Volume: `2`, Entry: `56`,
+    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
     Title: `Tales of Suspense`, Issue: `98`, Publisher: `Marvel`,
@@ -103805,7 +103805,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `New Ultimates`, Issue: `2`, Publisher: `Marvel`,
+    Title: `Ultimate New Ultimates`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2010`, Arc: `New Ultimates Loeb/Cho`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -103824,7 +103824,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `New Ultimates`, Issue: `3`, Publisher: `Marvel`,
+    Title: `Ultimate New Ultimates`, Issue: `3`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2010`, Arc: `New Ultimates Loeb/Cho`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -195389,7 +195389,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Thunderbolts: Doom Strike`, Issue: `3`, Publisher: `Marvel`,
+    Title: `Thunderbolts: Doomstrike`, Issue: `3`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2025`, Arc: ``, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -204136,7 +204136,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Spider-Man: Incursion`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2025`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Deniz Camp`, Artist: `Jonas Scharf`,
     Signed: ``, Signed_By: ``,
@@ -204155,7 +204155,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Spider-Man: Incursion`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2025`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Deniz Camp`, Artist: `Jonas Scharf`,
     Signed: ``, Signed_By: ``,
@@ -204174,7 +204174,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Spider-Man: Incursion`, Issue: `3`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2025`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Deniz Camp`, Artist: `Jonas Scharf`,
     Signed: ``, Signed_By: ``,
@@ -204193,7 +204193,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Black Panther`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Bryan Hill`, Artist: `Stefano Caselli`,
     Signed: ``, Signed_By: ``,
@@ -204212,7 +204212,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Black Panther`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Bryan Hill`, Artist: `Stefano Caselli`,
     Signed: ``, Signed_By: ``,
@@ -204231,7 +204231,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Black Panther`, Issue: `3`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Bryan Hill`, Artist: `Stefano Caselli`,
     Signed: ``, Signed_By: ``,
@@ -204250,7 +204250,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Black Panther`, Issue: `4`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Bryan Hill`, Artist: `Stefano Caselli`,
     Signed: ``, Signed_By: ``,
@@ -204269,7 +204269,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Black Panther`, Issue: `5`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Bryan Hill`, Artist: `Carlos Nieto`,
     Signed: ``, Signed_By: ``,
@@ -204288,7 +204288,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Black Panther`, Issue: `6`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Bryan Hill`, Artist: `Carlos Nieto`,
     Signed: ``, Signed_By: ``,
@@ -204307,7 +204307,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Black Panther`, Issue: `7`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Bryan Hill`, Artist: `Stefano Caselli`,
     Signed: ``, Signed_By: ``,
@@ -204326,7 +204326,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Black Panther`, Issue: `8`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Bryan Hill`, Artist: `Stefano Caselli`,
     Signed: ``, Signed_By: ``,
@@ -204345,7 +204345,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Black Panther`, Issue: `9`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Bryan Hill`, Artist: `Stefano Caselli`,
     Signed: ``, Signed_By: ``,
@@ -204364,7 +204364,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Black Panther`, Issue: `10`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Bryan Hill`, Artist: `Carlos Nieto`,
     Signed: ``, Signed_By: ``,
@@ -204383,7 +204383,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Black Panther`, Issue: `11`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Bryan Hill`, Artist: `Carlos Nieto`,
     Signed: ``, Signed_By: ``,
@@ -204402,7 +204402,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Black Panther`, Issue: `12`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Bryan Hill`, Artist: `Stefano Caselli`,
     Signed: ``, Signed_By: ``,
@@ -204421,7 +204421,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Black Panther`, Issue: `14`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Bryan Hill`, Artist: `Carlos Nieto`,
     Signed: ``, Signed_By: ``,
@@ -204440,7 +204440,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Black Panther`, Issue: `15`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Bryan Hill`, Artist: `Stefano Caselli`,
     Signed: ``, Signed_By: ``,
@@ -204459,7 +204459,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Black Panther`, Issue: `16`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Bryan Hill`, Artist: `Carlos Nieto`,
     Signed: ``, Signed_By: ``,
@@ -204478,7 +204478,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Black Panther`, Issue: `17`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Bryan Hill`, Artist: `Stefano Caselli`,
     Signed: ``, Signed_By: ``,
@@ -204497,7 +204497,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Black Panther`, Issue: `18`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Bryan Hill`, Artist: `Stefano Caselli`,
     Signed: ``, Signed_By: ``,
@@ -204516,7 +204516,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Spider-Man`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Mark Bagley`,
     Signed: ``, Signed_By: ``,
@@ -204535,7 +204535,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Spider-Man`, Issue: `3`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Mark Bagley`,
     Signed: ``, Signed_By: ``,
@@ -204554,7 +204554,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Spider-Man`, Issue: `4`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Mark Bagley`,
     Signed: ``, Signed_By: ``,
@@ -204573,7 +204573,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Spider-Man`, Issue: `5`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Mark Bagley`,
     Signed: ``, Signed_By: ``,
@@ -204592,7 +204592,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Spider-Man`, Issue: `6`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Mark Bagley`,
     Signed: ``, Signed_By: ``,
@@ -204611,7 +204611,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Spider-Man`, Issue: `7`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Mark Bagley`,
     Signed: ``, Signed_By: ``,
@@ -204630,7 +204630,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Spider-Man`, Issue: `8`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Mark Bagley`,
     Signed: ``, Signed_By: ``,
@@ -204649,7 +204649,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Spider-Man`, Issue: `9`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Mark Bagley`,
     Signed: ``, Signed_By: ``,
@@ -204668,7 +204668,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Spider-Man`, Issue: `10`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Mark Bagley`,
     Signed: ``, Signed_By: ``,
@@ -204687,7 +204687,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Spider-Man`, Issue: `11`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Mark Bagley`,
     Signed: ``, Signed_By: ``,
@@ -204706,7 +204706,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Spider-Man`, Issue: `12`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Mark Bagley`,
     Signed: ``, Signed_By: ``,
@@ -204725,7 +204725,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Spider-Man`, Issue: `13`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Mark Bagley`,
     Signed: ``, Signed_By: ``,
@@ -204744,7 +204744,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Spider-Man`, Issue: `14`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Mark Bagley`,
     Signed: ``, Signed_By: ``,
@@ -204763,7 +204763,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Spider-Man`, Issue: `15`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Mark Bagley`,
     Signed: ``, Signed_By: ``,
@@ -204782,7 +204782,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Spider-Man`, Issue: `16`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Mark Bagley`,
     Signed: ``, Signed_By: ``,
@@ -204801,7 +204801,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Spider-Man`, Issue: `18`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Mark Bagley`,
     Signed: ``, Signed_By: ``,
@@ -204820,7 +204820,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Spider-Man`, Issue: `19`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Brian Michael Bendis`, Artist: `Mark Bagley`,
     Signed: ``, Signed_By: ``,
@@ -204858,7 +204858,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Universe`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2023`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: `Stefano Caselli`,
     Signed: ``, Signed_By: ``,
@@ -204877,7 +204877,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Giant-Size House of M`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2025`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Saladin Ahmed`, Artist: `Martín Cóccolo`,
     Signed: ``, Signed_By: ``,
@@ -204896,7 +204896,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Giant-Size X-Men`, Issue: `51`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2025`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: ``, Artist: ``,
     Signed: ``, Signed_By: ``,
@@ -204915,7 +204915,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Exceptional X-Men`, Issue: `11`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Eve L. Ewing`, Artist: `Federica Mancin`,
     Signed: ``, Signed_By: ``,
@@ -204934,7 +204934,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate X`, Issue: `5`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2010`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Jeph Loeb`, Artist: `Arthur Adams`,
     Signed: ``, Signed_By: ``,
@@ -204953,7 +204953,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Captain America`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2011`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Jason Aaron`, Artist: `Ron Garney`,
     Signed: ``, Signed_By: ``,
@@ -204972,7 +204972,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Captain America`, Issue: `3`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2011`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Jason Aaron`, Artist: `Ron Garney`,
     Signed: ``, Signed_By: ``,
@@ -204991,7 +204991,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Captain America`, Issue: `4`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2011`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Jason Aaron`, Artist: `Ron Garney`,
     Signed: ``, Signed_By: ``,
@@ -205008,9 +205008,9 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `New Ultimates`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Ultimate New Ultimates`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2010`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: ``, Artist: ``,
     Signed: ``, Signed_By: ``,
@@ -205027,9 +205027,9 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `New Ultimates`, Issue: `4`, Publisher: `Marvel`,
+    Title: `Ultimate New Ultimates`, Issue: `4`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2010`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: ``, Artist: ``,
     Signed: ``, Signed_By: ``,
@@ -205046,9 +205046,9 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `New Ultimates`, Issue: `5`, Publisher: `Marvel`,
+    Title: `Ultimate New Ultimates`, Issue: `5`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2010`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: ``, Artist: ``,
     Signed: ``, Signed_By: ``,
@@ -205067,7 +205067,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Thor`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2010`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: `Carlos Pacheco`,
     Signed: ``, Signed_By: ``,
@@ -205086,7 +205086,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Thor`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2010`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: `Carlos Pacheco`,
     Signed: ``, Signed_By: ``,
@@ -205105,7 +205105,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Thor`, Issue: `4`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2010`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: `Carlos Pacheco`,
     Signed: ``, Signed_By: ``,
@@ -205124,7 +205124,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Iron Man II`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2007`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Orson Scott Card`, Artist: `Pasqual Ferry`,
     Signed: ``, Signed_By: ``,
@@ -205143,7 +205143,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Iron Man II`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2007`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Orson Scott Card`, Artist: `Pasqual Ferry`,
     Signed: ``, Signed_By: ``,
@@ -205162,7 +205162,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Iron Man II`, Issue: `3`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2007`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Orson Scott Card`, Artist: `Pasqual Ferry`,
     Signed: ``, Signed_By: ``,
@@ -205181,7 +205181,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Iron Man II`, Issue: `4`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2007`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Orson Scott Card`, Artist: `Pasqual Ferry`,
     Signed: ``, Signed_By: ``,
@@ -205200,7 +205200,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ultimate Iron Man II`, Issue: `5`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2007`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Orson Scott Card`, Artist: `Pasqual Ferry`,
     Signed: ``, Signed_By: ``,
@@ -205466,7 +205466,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Aliens vs. Avengers`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: `Esad Ribić`,
     Signed: ``, Signed_By: ``,
@@ -205485,7 +205485,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Aliens vs. Avengers`, Issue: `3`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: `Esad Ribić`,
     Signed: ``, Signed_By: ``,
@@ -205504,7 +205504,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `GODS`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2023`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Jonathan Hickman`, Artist: `Valerio Schiti`,
     Signed: ``, Signed_By: ``,
@@ -205521,9 +205521,9 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Thunderbolts: Doom Strike`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Thunderbolts: Doomstrike`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2025`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Jackson Lanzing`, Artist: `Tommaso Bianchi`,
     Signed: ``, Signed_By: ``,
@@ -205540,9 +205540,9 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Thunderbolts: Doom Strike`, Issue: `2`, Publisher: `Marvel`,
+    Title: `Thunderbolts: Doomstrike`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2025`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Jackson Lanzing`, Artist: `Tommaso Bianchi`,
     Signed: ``, Signed_By: ``,
@@ -205559,9 +205559,9 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Thunderbolts: Doom Strike`, Issue: `5`, Publisher: `Marvel`,
+    Title: `Thunderbolts: Doomstrike`, Issue: `5`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2025`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Jackson Lanzing`, Artist: `Tommaso Bianchi`,
     Signed: ``, Signed_By: ``,
@@ -205599,7 +205599,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Ant-Man: Last Days`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2015`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Nick Spencer`, Artist: `Ramón Rosanas`,
     Signed: ``, Signed_By: ``,
@@ -205618,7 +205618,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Marvel Age`, Issue: `1000`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2023`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: ``, Artist: ``,
     Signed: ``, Signed_By: ``,
@@ -205635,9 +205635,9 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Planet Hulk`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Planet She-Hulk`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2025`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Sam Humphries`, Artist: `Leonard Kirk`,
     Signed: ``, Signed_By: ``,
@@ -205656,7 +205656,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Deadpool's Secret Secret Wars`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2015`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `Jacopo Camagni`,
     Signed: ``, Signed_By: ``,
@@ -205675,7 +205675,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Deadpool's Secret Secret Wars`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2015`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Cullen Bunn`, Artist: `Matteo Lolli`,
     Signed: ``, Signed_By: ``,
@@ -205694,7 +205694,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `1872`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2015`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Nik Virella`,
     Signed: ``, Signed_By: ``,
@@ -205713,7 +205713,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `1872`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2015`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Nik Virella`,
     Signed: ``, Signed_By: ``,
@@ -205732,7 +205732,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `1872`, Issue: `3`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2015`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Nik Virella`,
     Signed: ``, Signed_By: ``,
@@ -205751,7 +205751,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `1872`, Issue: `4`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2015`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Gerry Duggan`, Artist: `Nik Virella`,
     Signed: ``, Signed_By: ``,
@@ -205768,9 +205768,9 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Corvus Glaive Saga`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Korvac Saga`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2015`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: ``, Artist: ``,
     Signed: ``, Signed_By: ``,
@@ -205787,9 +205787,9 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Corvus Glaive Saga`, Issue: `2`, Publisher: `Marvel`,
+    Title: `Korvac Saga`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2015`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: ``, Artist: ``,
     Signed: ``, Signed_By: ``,
@@ -205806,9 +205806,9 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Corvus Glaive Saga`, Issue: `3`, Publisher: `Marvel`,
+    Title: `Korvac Saga`, Issue: `3`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2015`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: ``, Artist: ``,
     Signed: ``, Signed_By: ``,
@@ -205825,9 +205825,9 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Corvus Glaive Saga`, Issue: `4`, Publisher: `Marvel`,
+    Title: `Korvac Saga`, Issue: `4`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2015`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: ``, Artist: ``,
     Signed: ``, Signed_By: ``,
@@ -205846,7 +205846,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `X-Tinction Agenda`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2015`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Marc Guggenheim`, Artist: `Carmine Di Giandomenico`,
     Signed: ``, Signed_By: ``,
@@ -205865,7 +205865,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `X-Tinction Agenda`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2015`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Marc Guggenheim`, Artist: `Carmine Di Giandomenico`,
     Signed: ``, Signed_By: ``,
@@ -205884,7 +205884,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Marvel Knights: Captain America`, Issue: `8`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2003`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: ``, Artist: ``,
     Signed: ``, Signed_By: ``,
@@ -205979,7 +205979,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Fury of Firestorm`, Issue: `4`, Publisher: `DC`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2026`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Gerry Conway`, Artist: `Pat Broderick`,
     Signed: ``, Signed_By: ``,
@@ -205998,7 +205998,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Transformers`, Issue: `34`, Publisher: `Image/Skybound`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2026`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Robert Kirkman`, Artist: `Jason Howard`,
     Signed: ``, Signed_By: ``,
@@ -206017,7 +206017,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `M.A.S.K.`, Issue: `2`, Publisher: `Image/Skybound`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2026`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Dan Watters`, Artist: `Pye Parr & Pierluigi Casolino`,
     Signed: ``, Signed_By: ``,
@@ -206036,7 +206036,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Civil War: Unmasked`, Issue: `3`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2026`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Christos Gage`, Artist: `Edgar Salazar`,
     Signed: ``, Signed_By: ``,
@@ -206055,7 +206055,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Black Cat`, Issue: `12`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2026`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `G. Willow Wilson`, Artist: `Andrés Genolet`,
     Signed: ``, Signed_By: ``,
@@ -206093,7 +206093,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Barbara Gordon: Breakout`, Issue: `3`, Publisher: `DC`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2026`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Mariko Tamaki`, Artist: `Amancay Nahuelpan`,
     Signed: ``, Signed_By: ``,
@@ -206112,7 +206112,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Absolute Catwoman`, Issue: `2`, Publisher: `DC`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: `YES`,
+    Year: `2026`, Arc: ``, Key: `YES`,
     Key_Reason: ``, First_App: ``,
     Writer: `Scott Snyder`, Artist: `Bengal`,
     Signed: ``, Signed_By: ``,
@@ -206131,7 +206131,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Destination Kill`, Issue: `3`, Publisher: `[NEEDS VERIFY]`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2026`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: ``, Artist: ``,
     Signed: ``, Signed_By: ``,
@@ -206150,7 +206150,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `X-Men '97`, Issue: `0`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2026`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: ``, Artist: ``,
     Signed: ``, Signed_By: ``,
@@ -206188,7 +206188,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Red Hood: The Hill`, Issue: `3`, Publisher: `DC`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Shawn Martinbrough`, Artist: `Tony Akins`,
     Signed: ``, Signed_By: ``,
@@ -206207,7 +206207,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Uncanny X-Men`, Issue: `141`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: `YES`,
+    Year: `1980`, Arc: ``, Key: `YES`,
     Key_Reason: `Days of Future Past two-parter — one of the most significant X-Men stories ever published, basis for the 2014 film`, First_App: ``,
     Writer: ``, Artist: ``,
     Signed: `NO`, Signed_By: ``,
@@ -206226,7 +206226,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Uncanny X-Men`, Issue: `142`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: ``, Arc: ``, Key: `YES`,
+    Year: `1980`, Arc: ``, Key: `YES`,
     Key_Reason: `Days of Future Past two-parter — one of the most significant X-Men stories ever published, basis for the 2014 film`, First_App: ``,
     Writer: ``, Artist: ``,
     Signed: `NO`, Signed_By: ``,
@@ -206462,7 +206462,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Num: `BOX 19`, Comics: 190, Keys: 20,
-    Signed: 0, YearRange: `2007-2023`,
+    Signed: 0, YearRange: `2007-2025`,
     Label: ``, FirstBook: `New Warriors 2`, LastBook: `X-Tinction Agenda 2`,
     Location: ``, Notes: ``, DateAdded: `2026-06-29`,
   },
@@ -207030,12 +207030,12 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Black Panther: The World to Come`, Issue: `1`, Publisher: `Marvel`,
-    Year: `2022`, Volume: `9`, Cover_Artist: `Juann Cabal (interior artist — cover verify)`,
-    Key: `YES`, Key_Reason: `John Ridley BP run; not a Christopher Priest book — owner may have misidentified signer; Tier 1 #4 — signed by Christopher Priest. Per classification spec rule 4, a signature makes the copy unique and is always a key, independent of issue significance.`,
+    Title: `Black Panther: The World to Come`, Issue: `#1`, Publisher: `Marvel`,
+    Year: `2022`, Volume: ``, Cover_Artist: ``,
+    Key: ``, Key_Reason: ``,
     Signed: `YES`, Signed_By: `Christopher Priest`,
-    Era: `Modern`, Writer: `John Ridley`,
-    Value_NM: `15`, Start_Bid: `10`, Box: `1`,
+    Era: ``, Writer: ``,
+    Value_NM: ``, Start_Bid: ``, Box: ``,
     Notes: `Signed`, SortPile: ``,
     CoverNotes: ``, Flag: ``,
   },
@@ -207060,12 +207060,12 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Black Panther`, Issue: `#30`, Publisher: `Marvel`,
-    Year: `2001`, Volume: ``, Cover_Artist: ``,
-    Key: ``, Key_Reason: ``,
+    Title: `Black Panther`, Issue: `30`, Publisher: `Marvel`,
+    Year: `2001`, Volume: `2`, Cover_Artist: `Sal Velluto`,
+    Key: `YES`, Key_Reason: `Part of Priest's BP run but non-key individual issue; Tier 1 #4 — signed by Christopher Priest. Per classification spec rule 4, a signature makes the copy unique and is always a key, independent of issue significance.`,
     Signed: `YES`, Signed_By: `Christopher Priest`,
-    Era: ``, Writer: ``,
-    Value_NM: ``, Start_Bid: ``, Box: ``,
+    Era: `Modern`, Writer: `Christopher Priest`,
+    Value_NM: `25`, Start_Bid: `10`, Box: `1`,
     Notes: `Cap vs BP cover`, SortPile: ``,
     CoverNotes: ``, Flag: ``,
   },
@@ -219697,7 +219697,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Spider-Man: Incursion`, Issue: `1`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Sara Pichelli`,
+    Year: `2025`, Volume: ``, Cover_Artist: `Sara Pichelli`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Deniz Camp`,
@@ -219707,7 +219707,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Spider-Man: Incursion`, Issue: `2`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Sara Pichelli`,
+    Year: `2025`, Volume: ``, Cover_Artist: `Sara Pichelli`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Deniz Camp`,
@@ -219717,7 +219717,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Spider-Man: Incursion`, Issue: `3`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Sara Pichelli`,
+    Year: `2025`, Volume: ``, Cover_Artist: `Sara Pichelli`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Deniz Camp`,
@@ -219727,7 +219727,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Black Panther`, Issue: `1`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Stefano Caselli`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Stefano Caselli`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Bryan Hill`,
@@ -219737,7 +219737,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Black Panther`, Issue: `2`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Stefano Caselli`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Stefano Caselli`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Bryan Hill`,
@@ -219747,7 +219747,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Black Panther`, Issue: `3`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Stefano Caselli`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Stefano Caselli`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Bryan Hill`,
@@ -219757,7 +219757,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Black Panther`, Issue: `4`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Stefano Caselli`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Stefano Caselli`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Bryan Hill`,
@@ -219767,7 +219767,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Black Panther`, Issue: `5`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Stefano Caselli`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Stefano Caselli`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Bryan Hill`,
@@ -219777,7 +219777,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Black Panther`, Issue: `6`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Stefano Caselli`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Stefano Caselli`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Bryan Hill`,
@@ -219787,7 +219787,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Black Panther`, Issue: `7`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Stefano Caselli`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Stefano Caselli`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Bryan Hill`,
@@ -219797,7 +219797,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Black Panther`, Issue: `8`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Stefano Caselli`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Stefano Caselli`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Bryan Hill`,
@@ -219807,7 +219807,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Black Panther`, Issue: `9`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Stefano Caselli`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Stefano Caselli`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Bryan Hill`,
@@ -219817,7 +219817,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Black Panther`, Issue: `10`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Stefano Caselli`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Stefano Caselli`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Bryan Hill`,
@@ -219827,7 +219827,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Black Panther`, Issue: `11`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Stefano Caselli`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Stefano Caselli`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Bryan Hill`,
@@ -219837,7 +219837,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Black Panther`, Issue: `12`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Stefano Caselli`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Stefano Caselli`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Bryan Hill`,
@@ -219847,7 +219847,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Black Panther`, Issue: `14`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Stefano Caselli`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Stefano Caselli`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Bryan Hill`,
@@ -219857,7 +219857,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Black Panther`, Issue: `15`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Stefano Caselli`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Stefano Caselli`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Bryan Hill`,
@@ -219867,7 +219867,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Black Panther`, Issue: `16`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Stefano Caselli`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Stefano Caselli`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Bryan Hill`,
@@ -219877,7 +219877,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Black Panther`, Issue: `17`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Stefano Caselli`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Stefano Caselli`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Bryan Hill`,
@@ -219887,7 +219887,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Black Panther`, Issue: `18`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Stefano Caselli`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Stefano Caselli`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Bryan Hill`,
@@ -219897,7 +219897,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Spider-Man`, Issue: `2`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Mark Bagley`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Mark Bagley`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Brian Michael Bendis`,
@@ -219907,7 +219907,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Spider-Man`, Issue: `3`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Mark Bagley`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Mark Bagley`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Brian Michael Bendis`,
@@ -219917,7 +219917,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Spider-Man`, Issue: `4`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Mark Bagley`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Mark Bagley`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Brian Michael Bendis`,
@@ -219927,7 +219927,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Spider-Man`, Issue: `5`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Mark Bagley`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Mark Bagley`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Brian Michael Bendis`,
@@ -219937,7 +219937,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Spider-Man`, Issue: `6`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Mark Bagley`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Mark Bagley`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Brian Michael Bendis`,
@@ -219947,7 +219947,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Spider-Man`, Issue: `7`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Mark Bagley`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Mark Bagley`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Brian Michael Bendis`,
@@ -219957,7 +219957,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Spider-Man`, Issue: `8`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Mark Bagley`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Mark Bagley`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Brian Michael Bendis`,
@@ -219967,7 +219967,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Spider-Man`, Issue: `9`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Mark Bagley`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Mark Bagley`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Brian Michael Bendis`,
@@ -219977,7 +219977,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Spider-Man`, Issue: `10`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Mark Bagley`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Mark Bagley`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Brian Michael Bendis`,
@@ -219987,7 +219987,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Spider-Man`, Issue: `11`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Mark Bagley`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Mark Bagley`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Brian Michael Bendis`,
@@ -219997,7 +219997,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Spider-Man`, Issue: `12`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Mark Bagley`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Mark Bagley`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Brian Michael Bendis`,
@@ -220007,7 +220007,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Spider-Man`, Issue: `13`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Mark Bagley`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Mark Bagley`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Brian Michael Bendis`,
@@ -220017,7 +220017,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Spider-Man`, Issue: `14`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: ``,
+    Year: `2024`, Volume: ``, Cover_Artist: ``,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Brian Michael Bendis`,
@@ -220027,7 +220027,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Spider-Man`, Issue: `15`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Mark Bagley`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Mark Bagley`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Brian Michael Bendis`,
@@ -220037,7 +220037,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Spider-Man`, Issue: `16`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Mark Bagley`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Mark Bagley`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Brian Michael Bendis`,
@@ -220047,7 +220047,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Spider-Man`, Issue: `18`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Mark Bagley`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Mark Bagley`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Brian Michael Bendis`,
@@ -220057,7 +220057,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Spider-Man`, Issue: `19`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Mark Bagley`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Mark Bagley`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Brian Michael Bendis`,
@@ -220077,7 +220077,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Universe`, Issue: `1`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Bryan Hitch`,
+    Year: `2023`, Volume: ``, Cover_Artist: `Bryan Hitch`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Jonathan Hickman`,
@@ -220087,7 +220087,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Giant-Size House of M`, Issue: `1`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Adam Kubert`,
+    Year: `2025`, Volume: ``, Cover_Artist: `Adam Kubert`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Saladin Ahmed`,
@@ -220097,7 +220097,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Giant-Size X-Men`, Issue: `51`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: ``,
+    Year: `2025`, Volume: ``, Cover_Artist: ``,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: ``,
@@ -220107,7 +220107,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Exceptional X-Men`, Issue: `11`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Carmen Carnero`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Carmen Carnero`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Eve L. Ewing`,
@@ -220117,7 +220117,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate X`, Issue: `5`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Arthur Adams`,
+    Year: `2010`, Volume: ``, Cover_Artist: `Arthur Adams`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Jeph Loeb`,
@@ -220127,7 +220127,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Captain America`, Issue: `2`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Ron Garney`,
+    Year: `2011`, Volume: ``, Cover_Artist: `Ron Garney`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Jason Aaron`,
@@ -220137,7 +220137,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Captain America`, Issue: `3`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Ron Garney`,
+    Year: `2011`, Volume: ``, Cover_Artist: `Ron Garney`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Jason Aaron`,
@@ -220147,7 +220147,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Captain America`, Issue: `4`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Ron Garney`,
+    Year: `2011`, Volume: ``, Cover_Artist: `Ron Garney`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Jason Aaron`,
@@ -220156,8 +220156,8 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `New Ultimates`, Issue: `1`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: ``,
+    Title: `Ultimate New Ultimates`, Issue: `1`, Publisher: `Marvel`,
+    Year: `2010`, Volume: ``, Cover_Artist: ``,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: ``,
@@ -220166,8 +220166,8 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `New Ultimates`, Issue: `4`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: ``,
+    Title: `Ultimate New Ultimates`, Issue: `4`, Publisher: `Marvel`,
+    Year: `2010`, Volume: ``, Cover_Artist: ``,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: ``,
@@ -220176,8 +220176,8 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `New Ultimates`, Issue: `5`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: ``,
+    Title: `Ultimate New Ultimates`, Issue: `5`, Publisher: `Marvel`,
+    Year: `2010`, Volume: ``, Cover_Artist: ``,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: ``,
@@ -220187,7 +220187,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Thor`, Issue: `1`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Carlos Pacheco`,
+    Year: `2010`, Volume: ``, Cover_Artist: `Carlos Pacheco`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Jonathan Hickman`,
@@ -220197,7 +220197,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Thor`, Issue: `2`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Carlos Pacheco`,
+    Year: `2010`, Volume: ``, Cover_Artist: `Carlos Pacheco`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Jonathan Hickman`,
@@ -220207,7 +220207,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Thor`, Issue: `4`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Carlos Pacheco`,
+    Year: `2010`, Volume: ``, Cover_Artist: `Carlos Pacheco`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Jonathan Hickman`,
@@ -220217,7 +220217,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Iron Man II`, Issue: `1`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Pasqual Ferry`,
+    Year: `2007`, Volume: ``, Cover_Artist: `Pasqual Ferry`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Orson Scott Card`,
@@ -220227,7 +220227,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Iron Man II`, Issue: `2`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Pasqual Ferry`,
+    Year: `2007`, Volume: ``, Cover_Artist: `Pasqual Ferry`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Orson Scott Card`,
@@ -220237,7 +220237,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Iron Man II`, Issue: `3`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Pasqual Ferry`,
+    Year: `2007`, Volume: ``, Cover_Artist: `Pasqual Ferry`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Orson Scott Card`,
@@ -220247,7 +220247,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Iron Man II`, Issue: `4`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Pasqual Ferry`,
+    Year: `2007`, Volume: ``, Cover_Artist: `Pasqual Ferry`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Orson Scott Card`,
@@ -220257,7 +220257,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Ultimate Iron Man II`, Issue: `5`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Pasqual Ferry`,
+    Year: `2007`, Volume: ``, Cover_Artist: `Pasqual Ferry`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Orson Scott Card`,
@@ -220397,7 +220397,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Aliens vs. Avengers`, Issue: `2`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Esad Ribić`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Esad Ribić`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Jonathan Hickman`,
@@ -220407,7 +220407,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Aliens vs. Avengers`, Issue: `3`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Esad Ribić`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Esad Ribić`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Jonathan Hickman`,
@@ -220417,7 +220417,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `GODS`, Issue: `1`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Mateus Manhanini`,
+    Year: `2023`, Volume: ``, Cover_Artist: `Mateus Manhanini`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Jonathan Hickman`,
@@ -220426,8 +220426,8 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Thunderbolts: Doom Strike`, Issue: `1`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Leinil Francis Yu`,
+    Title: `Thunderbolts: Doomstrike`, Issue: `1`, Publisher: `Marvel`,
+    Year: `2025`, Volume: ``, Cover_Artist: `Leinil Francis Yu`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Jackson Lanzing`,
@@ -220436,8 +220436,8 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Thunderbolts: Doom Strike`, Issue: `2`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Leinil Francis Yu`,
+    Title: `Thunderbolts: Doomstrike`, Issue: `2`, Publisher: `Marvel`,
+    Year: `2025`, Volume: ``, Cover_Artist: `Leinil Francis Yu`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Jackson Lanzing`,
@@ -220446,8 +220446,8 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Thunderbolts: Doom Strike`, Issue: `5`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Leinil Francis Yu`,
+    Title: `Thunderbolts: Doomstrike`, Issue: `5`, Publisher: `Marvel`,
+    Year: `2025`, Volume: ``, Cover_Artist: `Leinil Francis Yu`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Jackson Lanzing`,
@@ -220457,7 +220457,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Fury of Firestorm`, Issue: `4`, Publisher: `DC`,
-    Year: ``, Volume: ``, Cover_Artist: `Pat Broderick`,
+    Year: `2026`, Volume: ``, Cover_Artist: `Pat Broderick`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Gerry Conway`,
@@ -220467,7 +220467,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Transformers`, Issue: `34`, Publisher: `Image/Skybound`,
-    Year: ``, Volume: ``, Cover_Artist: `David Nakayama`,
+    Year: `2026`, Volume: ``, Cover_Artist: `David Nakayama`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Robert Kirkman`,
@@ -220477,7 +220477,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `M.A.S.K.`, Issue: `2`, Publisher: `Image/Skybound`,
-    Year: ``, Volume: ``, Cover_Artist: `Pye Parr`,
+    Year: `2026`, Volume: ``, Cover_Artist: `Pye Parr`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Dan Watters`,
@@ -220487,7 +220487,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Civil War: Unmasked`, Issue: `3`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Alex Ross`,
+    Year: `2026`, Volume: ``, Cover_Artist: `Alex Ross`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Christos Gage`,
@@ -220497,7 +220497,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Black Cat`, Issue: `12`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: `Josemaria Casanovas`,
+    Year: `2026`, Volume: ``, Cover_Artist: `Josemaria Casanovas`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `G. Willow Wilson`,
@@ -220507,7 +220507,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Barbara Gordon: Breakout`, Issue: `3`, Publisher: `DC`,
-    Year: ``, Volume: ``, Cover_Artist: `Karl Kerschl`,
+    Year: `2026`, Volume: ``, Cover_Artist: `Karl Kerschl`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Mariko Tamaki`,
@@ -220517,7 +220517,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Absolute Catwoman`, Issue: `2`, Publisher: `DC`,
-    Year: ``, Volume: ``, Cover_Artist: `Bengal`,
+    Year: `2026`, Volume: ``, Cover_Artist: `Bengal`,
     Key: `YES`, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Scott Snyder`,
@@ -220527,7 +220527,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Destination Kill`, Issue: `3`, Publisher: `[NEEDS VERIFY]`,
-    Year: ``, Volume: ``, Cover_Artist: ``,
+    Year: `2026`, Volume: ``, Cover_Artist: ``,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: ``,
@@ -220537,7 +220537,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `X-Men '97`, Issue: `0`, Publisher: `Marvel`,
-    Year: ``, Volume: ``, Cover_Artist: ``,
+    Year: `2026`, Volume: ``, Cover_Artist: ``,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: ``,
@@ -220547,7 +220547,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Red Hood: The Hill`, Issue: `3`, Publisher: `DC`,
-    Year: ``, Volume: ``, Cover_Artist: `Sanford Greene`,
+    Year: `2024`, Volume: ``, Cover_Artist: `Sanford Greene`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: ``, Writer: `Shawn Martinbrough`,
