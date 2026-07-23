@@ -104,6 +104,13 @@ applying a reason. A reason valid for Volume 1 does **not** carry to Volume 7.
 
 ---
 
+## Companion spec
+
+[`FIRST_APPEARANCES_CLASSIFICATION.md`](FIRST_APPEARANCES_CLASSIFICATION.md) —
+how `1st Appearances` and `Key Issue — Why` are researched and written
+(Comic Vine character pages first, then Marvel/DC Fandom, then manual
+cross-reference; cameo vs. full always distinguished).
+
 ## Tooling
 
 - `brb_key_report.py` — standing report: keys ordered by value, threshold
