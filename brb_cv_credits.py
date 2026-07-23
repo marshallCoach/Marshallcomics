@@ -26,10 +26,19 @@ SAFETY — the hard-won rules from this project:
 Needs COMIC_VINE_API_KEY. Rate-limited (CV allows ~200/hr) -> overnight job.
 Do NOT run alongside a cover fetch; they share the same quota.
 
+EFFICIENCY: the 982 rows needing credits span only ~336 distinct title+year
+groups, so this resolves ONE volume per group and pulls that volume's issues in
+a single call, then maps credits onto every row of the group. That is ~672 calls
+(~3.5 hrs) instead of ~1,964 (~10.4 hrs).
+
+Dry-run makes NO API calls — it prints the plan (groups, calls, ETA) so you can
+size the job without spending quota.
+
 Usage:
     export COMIC_VINE_API_KEY=...            # or rely on ~/.zshrc
-    python3 brb_cv_credits.py --limit 20     # sample first, verify, then:
-    python3 brb_cv_credits.py --apply
+    python3 brb_cv_credits.py                # plan only, no API calls
+    python3 brb_cv_credits.py --limit 5 --apply   # small live sample
+    python3 brb_cv_credits.py --apply             # full run
 """
 import argparse, glob, json, os, re, time, urllib.parse, urllib.request
 from collections import defaultdict
@@ -112,6 +121,43 @@ def resolve_volume(title, year):
     return out
 
 
+def volume_issue_credits(volume_id):
+    """All issues of a volume WITH credits, in as few calls as possible.
+    CV's issue-list endpoint sometimes omits person_credits; if so, fall back to
+    per-issue detail calls for the issues we actually need."""
+    out = {}
+    try:
+        d = cv("issues", filter=f"volume:{volume_id}",
+               field_list="id,issue_number,person_credits", limit=100)
+        for res in d.get("results", []) or []:
+            num = norm_issue(res.get("issue_number"))
+            pc = res.get("person_credits")
+            if pc is None:
+                return None          # list endpoint has no credits -> caller falls back
+            out[num] = _map_credits(pc)
+    except Exception:
+        return None
+    finally:
+        time.sleep(DELAY)
+    return out
+
+
+def _map_credits(pc):
+    w = a = c = None
+    for p in pc or []:
+        roles = {x.strip().lower() for x in str(p.get("role", "")).split(",")}
+        name = p.get("name")
+        if not name:
+            continue
+        if not w and roles & WRITER_ROLES:
+            w = name
+        if not a and roles & ARTIST_ROLES:
+            a = name
+        if not c and roles & COVER_ROLES:
+            c = name
+    return {"writer": w, "artist": a, "cover": c}
+
+
 def credits_for(volume_id, issue):
     try:
         d = cv("issues", filter=f"volume:{volume_id},issue_number:{issue}",
@@ -162,55 +208,58 @@ def main():
     ti, ii, yi, wi, ai, ci = (C["Title"], C["Issue #"], C["Year"],
                               C["Writer(s)"], C["Artist(s)"], C["Cover Artist"])
 
-    targets = []
+    # ---- group rows by (title, year): one volume resolve per GROUP, not per row
+    groups = defaultdict(list)
     for row in ws.iter_rows(min_row=2):
         if blank(row[wi].value) or blank(row[ai].value) or blank(row[ci].value):
-            targets.append(row)
+            groups[(str(row[ti].value or "").strip(), year_of(row[yi].value))].append(row)
+    nrows = sum(len(v) for v in groups.values())
+    todo = [g for g in groups if state.get(f"G::{g[0]}::{g[1]}") != "done"]
     if args.limit:
-        targets = targets[: args.limit]
-    print(f"Rows with >=1 blank credit: {len(targets)}   (~{len(targets)*DELAY*2/3600:.1f} hrs at {DELAY:g}s/call)")
+        todo = todo[: args.limit]
+    print(f"  rows needing credits : {nrows}")
+    print(f"  distinct title+year groups: {len(groups)}  ({len(todo)} not yet done)")
+    print(f"  estimated CV calls   : ~{len(todo)*2}  (~{len(todo)*2*DELAY/3600:.1f} hrs)")
 
-    fw = fa = fc = miss = 0
-    for n, row in enumerate(targets, 1):
-        title = str(row[ti].value or "").strip()
-        issue = norm_issue(row[ii].value)
-        key = f"{title}|||{issue}"
-        if state.get(key) == "done":
-            continue
-        vol = resolve_volume(title, year_of(row[yi].value))
+    if not args.apply:
+        print("\n[DRY RUN] No API calls made, nothing written.")
+        print("  run a small live sample:  python3 brb_cv_credits.py --limit 5 --apply")
+        return
+
+    fw = fa = fc = 0
+    nogroup = 0
+    for n, gkey in enumerate(todo, 1):
+        title, year = gkey
+        rows_in = groups[gkey]
+        vol = resolve_volume(title, year)
         if not vol:
-            miss += 1
-            state[key] = "done"
+            nogroup += 1
+            state[f"G::{title}::{year}"] = "done"
             continue
-        cr = credits_for(vol["id"], issue)
-        if not cr:
-            miss += 1
-            state[key] = "done"
-            continue
-        if blank(row[wi].value) and cr["writer"]:
-            if args.apply: row[wi].value = cr["writer"]
-            fw += 1
-        if blank(row[ai].value) and cr["artist"]:
-            if args.apply: row[ai].value = cr["artist"]
-            fa += 1
-        if blank(row[ci].value) and cr["cover"]:
-            if args.apply: row[ci].value = cr["cover"]
-            fc += 1
-        state[key] = "done"
-        if n % 10 == 0:
+        # one call for the whole volume; fall back per-issue if credits absent
+        table = volume_issue_credits(vol["id"])
+        for row in rows_in:
+            iss = norm_issue(row[ii].value)
+            cr = table.get(iss) if table is not None else credits_for(vol["id"], iss)
+            if not cr:
+                continue
+            if blank(row[wi].value) and cr["writer"]:
+                row[wi].value = cr["writer"]; fw += 1
+            if blank(row[ai].value) and cr["artist"]:
+                row[ai].value = cr["artist"]; fa += 1
+            if blank(row[ci].value) and cr["cover"]:
+                row[ci].value = cr["cover"]; fc += 1
+        state[f"G::{title}::{year}"] = "done"
+        if n % 5 == 0:
             json.dump(state, open(STATE, "w"))
-            print(f"  [{n}/{len(targets)}] W+{fw} A+{fa} CA+{fc} miss={miss}", flush=True)
-            if args.apply:
-                out = args.out or xlsx.replace(".xlsx", "_CVCREDITS.xlsx")
-                wb.save(out)          # incremental flush — survives a crash
+            out = args.out or xlsx.replace(".xlsx", "_CVCREDITS.xlsx")
+            wb.save(out)                      # incremental flush — survives a crash
+            print(f"  [{n}/{len(todo)} groups] W+{fw} A+{fa} CA+{fc} unresolved={nogroup}", flush=True)
 
     json.dump(state, open(STATE, "w"))
-    print(f"\n  Writers +{fw}   Artists +{fa}   Cover Artists +{fc}   unresolved {miss}")
-    if not args.apply:
-        print("\n[DRY RUN] No file written.")
-        return
     out = args.out or xlsx.replace(".xlsx", "_CVCREDITS.xlsx")
     wb.save(out)
+    print(f"\n  Writers +{fw}   Artists +{fa}   Cover Artists +{fc}   groups unresolved {nogroup}")
     print(f"  Written: {out}")
 
 
