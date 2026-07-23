@@ -81,12 +81,19 @@ def year_of(v):
     return n[0] if n else None
 
 
+VERBOSE = False
+
+
 def cv(path, **params):
     p = {"api_key": KEY, "format": "json", **params}
     url = f"{API}/{path}/?{urllib.parse.urlencode(p)}"
     req = urllib.request.Request(url, headers={"User-Agent": UA})
     with urllib.request.urlopen(req, timeout=30) as r:
-        return json.load(r)
+        d = json.load(r)
+    # CV signals problems in-band with status_code, not HTTP errors
+    if d.get("status_code") not in (1, None):
+        print(f"    [CV ERROR] status_code={d.get('status_code')} {d.get('error')}", flush=True)
+    return d
 
 
 _volcache = {}
@@ -100,8 +107,10 @@ def resolve_volume(title, year):
     out = None
     try:
         d = cv("volumes", filter=f"name:{title}", field_list="id,name,start_year", limit=50)
+        results = d.get("results", []) or []
         best, bs = None, 0
-        for v in d.get("results", []):
+        near = []
+        for v in results:
             if re.sub(r"[^a-z0-9]", "", (v.get("name") or "").lower()) != re.sub(r"[^a-z0-9]", "", title.lower()):
                 continue
             sy = v.get("start_year")
@@ -109,12 +118,17 @@ def resolve_volume(title, year):
                 sy = int(sy)
             except (TypeError, ValueError):
                 continue
+            near.append((v.get("name"), sy))
             if year and abs(sy - year) <= 2:          # year gate — blocks wrong-era volumes
                 score = 10 - abs(sy - year)
                 if score > bs:
                     best, bs = v, score
         out = best
-    except Exception:
+        if VERBOSE and not out:
+            print(f"    [no volume] {title!r} year={year} — {len(results)} CV results, "
+                  f"name-matched years={[y for _, y in near][:6]}", flush=True)
+    except Exception as e:
+        print(f"    [EXC resolve_volume] {title!r}: {type(e).__name__}: {e}", flush=True)
         out = None
     _volcache[k] = out
     time.sleep(DELAY)
@@ -135,10 +149,13 @@ def volume_issue_credits(volume_id):
             if pc is None:
                 return None          # list endpoint has no credits -> caller falls back
             out[num] = _map_credits(pc)
-    except Exception:
+    except Exception as e:
+        print(f"    [EXC issue-list] volume {volume_id}: {type(e).__name__}: {e}", flush=True)
         return None
     finally:
         time.sleep(DELAY)
+    if VERBOSE:
+        print(f"    [volume {volume_id}] {len(out)} issues with credits", flush=True)
     return out
 
 
@@ -190,7 +207,10 @@ def main():
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--out", default=None)
+    ap.add_argument("--verbose", action="store_true", help="explain every lookup (use with --limit)")
     args = ap.parse_args()
+    global VERBOSE
+    VERBOSE = args.verbose
 
     if not KEY:
         raise SystemExit("ERROR: COMIC_VINE_API_KEY not set (source ~/.zshrc)")
@@ -231,12 +251,16 @@ def main():
     for n, gkey in enumerate(todo, 1):
         title, year = gkey
         rows_in = groups[gkey]
+        if VERBOSE:
+            print(f"  [{n}/{len(todo)}] {title!r} year={year} ({len(rows_in)} rows)", flush=True)
         vol = resolve_volume(title, year)
         if not vol:
             nogroup += 1
             state[f"G::{title}::{year}"] = "done"
             continue
         # one call for the whole volume; fall back per-issue if credits absent
+        if VERBOSE:
+            print(f"    -> volume {vol['id']} {vol.get('name')!r} ({vol.get('start_year')})", flush=True)
         table = volume_issue_credits(vol["id"])
         for row in rows_in:
             iss = norm_issue(row[ii].value)
