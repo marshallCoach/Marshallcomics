@@ -27951,14 +27951,6 @@
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/6616006-01.jpg",
     "date": "2018-11-01"
   },
-  "Iron Fist|||1|||6": {
-    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6632918-01.jpg",
-    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/6632918-01.jpg",
-    "date": "2018-12-01",
-    "volume_id": 114112,
-    "volume_name": "Iron Fist",
-    "volume_start_year": 2018
-  },
   "Iron Fist: Heart of the Dragon|||1|||1": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7772119-01.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/7772119-01.jpg",
@@ -27998,14 +27990,6 @@
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/2161211-01.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/2161211-01.jpg",
     "date": "2011-12-01"
-  },
-  "Shang-Chi|||1|||1": {
-    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7596418-01.jpg",
-    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/7596418-01.jpg",
-    "date": "2020-11-01",
-    "volume_id": 130763,
-    "volume_name": "Shang-Chi",
-    "volume_start_year": 2020
   },
   "Shang-Chi and the Ten Rings|||1|||2": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11141/111414280/8583470-5147833147-Shang.jpg",
@@ -28056,14 +28040,6 @@
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11118/111185606/8508064-ultimatecomicshawkeye-web%281920%29pagecover.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11118/111185606/8508064-ultimatecomicshawkeye-web%281920%29pagecover.jpg",
     "date": "2012-04-01"
-  },
-  "Hawkeye|||1|||5": {
-    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/3190455-01a.jpg",
-    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/3190455-01a.jpg",
-    "date": "2012-10-01",
-    "volume_id": 50941,
-    "volume_name": "Hawkeye",
-    "volume_start_year": 2012
   },
   "Hawkeye|||1|||6": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5586824-01.jpg",
@@ -58115,14 +58091,6 @@
     "volume_name": "Star Trek: The Next Generation: Mirror Broken",
     "volume_start_year": null
   },
-  "Justice League of America|||2|||3": {
-    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/66303/2937257-jla_cv2_ds.jpg",
-    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/66303/2937257-jla_cv2_ds.jpg",
-    "date": "2013-05-31",
-    "volume_id": 57485,
-    "volume_name": "Justice League of America",
-    "volume_start_year": 2013
-  },
   "Forever Evil: Rogues Rebellion|||3|||1": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/66303/3506964-forever%20rogue%2001.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/66303/3506964-forever%20rogue%2001.jpg",
@@ -58923,14 +58891,6 @@
     "volume_name": "Wonder Woman",
     "volume_start_year": null
   },
-  "Wonder Woman|||37|||4": {
-    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/8800475-wwww.jpg",
-    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/8800475-wwww.jpg",
-    "date": "",
-    "volume_id": 147775,
-    "volume_name": "Wonder Woman",
-    "volume_start_year": null
-  },
   "Wonder Woman|||38|||4": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/8800476-00.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/8800476-00.jpg",
@@ -59056,6 +59016,14 @@
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/66303/3330278-wonder%20woman.png",
     "date": "2013-11-30",
     "volume_id": 42953,
+    "volume_name": "Wonder Woman",
+    "volume_start_year": null
+  },
+  "Wonder Woman|||37|||4": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/8800475-wwww.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/8800475-wwww.jpg",
+    "date": "",
+    "volume_id": 147775,
     "volume_name": "Wonder Woman",
     "volume_start_year": null
   },
@@ -60211,14 +60179,6 @@
     "volume_name": "Green Arrow",
     "volume_start_year": null
   },
-  "Green Arrow|||28|||5": {
-    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9873431-wwww.jpg",
-    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9873431-wwww.jpg",
-    "date": "2025-11-01",
-    "volume_id": 149738,
-    "volume_name": "Green Arrow",
-    "volume_start_year": null
-  },
   "Green Arrow|||29|||5": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9897374-wwww.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9897374-wwww.jpg",
@@ -60368,6 +60328,14 @@
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/66303/3285029-green%20arrow.jpg",
     "date": "2013-11-01",
     "volume_id": 42598,
+    "volume_name": "Green Arrow",
+    "volume_start_year": null
+  },
+  "Green Arrow|||28|||5": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9873431-wwww.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9873431-wwww.jpg",
+    "date": "2025-11-01",
+    "volume_id": 149738,
     "volume_name": "Green Arrow",
     "volume_start_year": null
   },
@@ -61475,26 +61443,10 @@
     "volume_name": "Eternals",
     "volume_start_year": 2021
   },
-  "Eternals|||7|||5": {
-    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/12/124259/8248146-large-7431162.jpg",
-    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/12/124259/8248146-large-7431162.jpg",
-    "date": "2022-01-01",
-    "volume_id": 133080,
-    "volume_name": "Eternals",
-    "volume_start_year": 2021
-  },
   "Eternals|||8|||5": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/12/124259/8290176-etrnls2021008_preview.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/12/124259/8290176-etrnls2021008_preview.jpg",
     "date": "2022-02-01",
-    "volume_id": 133080,
-    "volume_name": "Eternals",
-    "volume_start_year": 2021
-  },
-  "Eternals|||9|||5": {
-    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11131/111316219/8340596-01.jpg",
-    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11131/111316219/8340596-01.jpg",
-    "date": "2022-03-01",
     "volume_id": 133080,
     "volume_name": "Eternals",
     "volume_start_year": 2021
@@ -61519,6 +61471,22 @@
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/8541474-7513873544-20908.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/8541474-7513873544-20908.jpg",
     "date": "2022-07-01",
+    "volume_id": 133080,
+    "volume_name": "Eternals",
+    "volume_start_year": 2021
+  },
+  "Eternals|||7|||5": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/12/124259/8248146-large-7431162.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/12/124259/8248146-large-7431162.jpg",
+    "date": "2022-01-01",
+    "volume_id": 133080,
+    "volume_name": "Eternals",
+    "volume_start_year": 2021
+  },
+  "Eternals|||9|||5": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11131/111316219/8340596-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11131/111316219/8340596-01.jpg",
+    "date": "2022-03-01",
     "volume_id": 133080,
     "volume_name": "Eternals",
     "volume_start_year": 2021
@@ -64075,14 +64043,6 @@
     "volume_name": "Nova",
     "volume_start_year": 2013
   },
-  "Nova|||6|||6": {
-    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/3176708-06.jpg",
-    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/3176708-06.jpg",
-    "date": "2013-09-30",
-    "volume_id": 57535,
-    "volume_name": "Nova",
-    "volume_start_year": 2013
-  },
   "Nova|||7|||6": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/3252918-07.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/3252918-07.jpg",
@@ -64227,14 +64187,6 @@
     "volume_name": "Nova",
     "volume_start_year": 2013
   },
-  "Nova|||26|||5": {
-    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4354929-26.jpg",
-    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4354929-26.jpg",
-    "date": "2015-03-31",
-    "volume_id": 57535,
-    "volume_name": "Nova",
-    "volume_start_year": 2013
-  },
   "Nova|||27|||5": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4398347-27.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4398347-27.jpg",
@@ -64255,6 +64207,14 @@
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4585941-31.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4585941-31.jpg",
     "date": "2015-07-31",
+    "volume_id": 57535,
+    "volume_name": "Nova",
+    "volume_start_year": 2013
+  },
+  "Nova|||26|||5": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4354929-26.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4354929-26.jpg",
+    "date": "2015-03-31",
     "volume_id": 57535,
     "volume_name": "Nova",
     "volume_start_year": 2013
@@ -64731,38 +64691,6 @@
     "volume_name": "Earth 2",
     "volume_start_year": 2012
   },
-  "Earth 2|||16|||1": {
-    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4118445-16.jpg",
-    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4118445-16.jpg",
-    "date": "2014-09-30",
-    "volume_id": 64248,
-    "volume_name": "Godzilla: Rulers of Earth",
-    "volume_start_year": null
-  },
-  "Earth 2|||17|||1": {
-    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/66303/3422837-earth%202%2001.jpg",
-    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/66303/3422837-earth%202%2001.jpg",
-    "date": "2014-01-31",
-    "volume_id": 48505,
-    "volume_name": "Earth 2",
-    "volume_start_year": null
-  },
-  "Earth 2|||18|||1": {
-    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/66303/3481809-earth%202%2001.jpg",
-    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/66303/3481809-earth%202%2001.jpg",
-    "date": "2014-02-28",
-    "volume_id": 48505,
-    "volume_name": "Earth 2",
-    "volume_start_year": null
-  },
-  "Earth 2|||19|||1": {
-    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/66303/3555340-earth%202%2001.jpg",
-    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/66303/3555340-earth%202%2001.jpg",
-    "date": "2014-03-31",
-    "volume_id": 48505,
-    "volume_name": "Earth 2",
-    "volume_start_year": null
-  },
   "Earth 2|||21|||1": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/66303/3675887-earth%202%2001.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/66303/3675887-earth%202%2001.jpg",
@@ -64855,6 +64783,38 @@
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/66303/3301005-earth%202.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/66303/3301005-earth%202.jpg",
     "date": "2013-11-30",
+    "volume_id": 48505,
+    "volume_name": "Earth 2",
+    "volume_start_year": null
+  },
+  "Earth 2|||16|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4118445-16.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4118445-16.jpg",
+    "date": "2014-09-30",
+    "volume_id": 64248,
+    "volume_name": "Godzilla: Rulers of Earth",
+    "volume_start_year": null
+  },
+  "Earth 2|||17|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/66303/3422837-earth%202%2001.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/66303/3422837-earth%202%2001.jpg",
+    "date": "2014-01-31",
+    "volume_id": 48505,
+    "volume_name": "Earth 2",
+    "volume_start_year": null
+  },
+  "Earth 2|||18|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/66303/3481809-earth%202%2001.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/66303/3481809-earth%202%2001.jpg",
+    "date": "2014-02-28",
+    "volume_id": 48505,
+    "volume_name": "Earth 2",
+    "volume_start_year": null
+  },
+  "Earth 2|||19|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/66303/3555340-earth%202%2001.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/66303/3555340-earth%202%2001.jpg",
+    "date": "2014-03-31",
     "volume_id": 48505,
     "volume_name": "Earth 2",
     "volume_start_year": null
@@ -65483,6 +65443,14 @@
     "volume_name": "Justice League",
     "volume_start_year": null
   },
+  "Justice League of America|||2|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/66303/2937257-jla_cv2_ds.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/66303/2937257-jla_cv2_ds.jpg",
+    "date": "2013-05-31",
+    "volume_id": 57485,
+    "volume_name": "Justice League of America",
+    "volume_start_year": 2013
+  },
   "Justice League of America|||4|||3": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/66303/3071417-jla.png",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/66303/3071417-jla.png",
@@ -65891,34 +65859,10 @@
     "volume_name": "Guardians of the Galaxy",
     "volume_start_year": null
   },
-  "Guardians of the Galaxy|||24|||3": {
-    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4383804-24.jpg",
-    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4383804-24.jpg",
-    "date": "2015-04-30",
-    "volume_id": 57960,
-    "volume_name": "Guardians of the Galaxy",
-    "volume_start_year": null
-  },
-  "Guardians of the Galaxy|||25|||3": {
-    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4466403-25.jpg",
-    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4466403-25.jpg",
-    "date": "2015-05-31",
-    "volume_id": 57960,
-    "volume_name": "Guardians of the Galaxy",
-    "volume_start_year": null
-  },
   "Guardians of the Galaxy|||26|||3": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4519414-26.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4519414-26.jpg",
     "date": "2015-06-30",
-    "volume_id": 57960,
-    "volume_name": "Guardians of the Galaxy",
-    "volume_start_year": null
-  },
-  "Guardians of the Galaxy|||27|||3": {
-    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4572742-27.jpg",
-    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4572742-27.jpg",
-    "date": "2015-07-31",
     "volume_id": 57960,
     "volume_name": "Guardians of the Galaxy",
     "volume_start_year": null
@@ -66987,6 +66931,30 @@
     "volume_name": "Gamora",
     "volume_start_year": 2017
   },
+  "Guardians of the Galaxy|||24|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4383804-24.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4383804-24.jpg",
+    "date": "2015-04-30",
+    "volume_id": 57960,
+    "volume_name": "Guardians of the Galaxy",
+    "volume_start_year": null
+  },
+  "Guardians of the Galaxy|||25|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4466403-25.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4466403-25.jpg",
+    "date": "2015-05-31",
+    "volume_id": 57960,
+    "volume_name": "Guardians of the Galaxy",
+    "volume_start_year": null
+  },
+  "Guardians of the Galaxy|||27|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4572742-27.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4572742-27.jpg",
+    "date": "2015-07-31",
+    "volume_id": 57960,
+    "volume_name": "Guardians of the Galaxy",
+    "volume_start_year": null
+  },
   "Nova|||28|||5": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4466409-28.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4466409-28.jpg",
@@ -67010,6 +66978,14 @@
     "volume_id": 86334,
     "volume_name": "All-New X-Men",
     "volume_start_year": null
+  },
+  "Nova|||6|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/3176708-06.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/3176708-06.jpg",
+    "date": "2013-09-30",
+    "volume_id": 57535,
+    "volume_name": "Nova",
+    "volume_start_year": 2013
   },
   "Nova|||3|||5": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/2985817-03a.jpg",
@@ -67363,6 +67339,14 @@
     "volume_name": "Iron Fist",
     "volume_start_year": 2017
   },
+  "Iron Fist|||1|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6632918-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/6632918-01.jpg",
+    "date": "2018-12-01",
+    "volume_id": 114112,
+    "volume_name": "Iron Fist",
+    "volume_start_year": 2018
+  },
   "Iron Fist|||2|||6": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6677245-02.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/6677245-02.jpg",
@@ -67418,22 +67402,6 @@
     "volume_id": 133355,
     "volume_name": "Iron Fist: Heart of the Dragon",
     "volume_start_year": 2021
-  },
-  "Power Man and Iron Fist|||1|||3": {
-    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5051574-01.jpg",
-    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5051574-01.jpg",
-    "date": "2016-04-30",
-    "volume_id": 88214,
-    "volume_name": "Power Man and Iron Fist",
-    "volume_start_year": 2016
-  },
-  "Power Man and Iron Fist|||2|||3": {
-    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5100021-02.jpg",
-    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5100021-02.jpg",
-    "date": "2016-05-31",
-    "volume_id": 88214,
-    "volume_name": "Power Man and Iron Fist",
-    "volume_start_year": 2016
   },
   "Power Man and Iron Fist|||3|||3": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5160364-03.jpg",
@@ -67522,6 +67490,22 @@
     "volume_id": 38907,
     "volume_name": "Power Man and Iron Fist",
     "volume_start_year": 2011
+  },
+  "Power Man and Iron Fist|||1|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5051574-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5051574-01.jpg",
+    "date": "2016-04-30",
+    "volume_id": 88214,
+    "volume_name": "Power Man and Iron Fist",
+    "volume_start_year": 2016
+  },
+  "Power Man and Iron Fist|||2|||3": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5100021-02.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5100021-02.jpg",
+    "date": "2016-05-31",
+    "volume_id": 88214,
+    "volume_name": "Power Man and Iron Fist",
+    "volume_start_year": 2016
   },
   "Power Man: Timeless|||1|||1": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9621265-wwww.jpg",
@@ -67850,6 +67834,14 @@
     "volume_id": 44363,
     "volume_name": "Defenders",
     "volume_start_year": null
+  },
+  "Shang-Chi|||1|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7596418-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/7596418-01.jpg",
+    "date": "2020-11-01",
+    "volume_id": 130763,
+    "volume_name": "Shang-Chi",
+    "volume_start_year": 2020
   },
   "Shang-Chi|||2|||1": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7642741-02.jpg",
@@ -68731,6 +68723,14 @@
     "volume_name": "Mockingbird",
     "volume_start_year": 2016
   },
+  "Hawkeye|||1|||5": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/3190455-01a.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/3190455-01a.jpg",
+    "date": "2012-10-01",
+    "volume_id": 50941,
+    "volume_name": "Hawkeye",
+    "volume_start_year": 2012
+  },
   "Hawkeye|||3|||5": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/7/71975/2650324-prev_img.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/7/71975/2650324-prev_img.jpg",
@@ -68882,5 +68882,805 @@
     "volume_id": 65627,
     "volume_name": "Hawkeye Annual",
     "volume_start_year": 2013
+  },
+  "Fantastic Four|||16|||8": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4092567-16.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4092567-16.jpg",
+    "date": "2014-09-30",
+    "volume_id": 35197,
+    "volume_name": "Marvel Masterworks: The Fantastic Four",
+    "volume_start_year": null
+  },
+  "Hawkeye vs. Deadpool|||0|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4071723-00.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4071723-00.jpg",
+    "date": "2014-11-30",
+    "volume_id": 76735,
+    "volume_name": "Hawkeye vs. Deadpool",
+    "volume_start_year": 2014
+  },
+  "Hawkeye vs. Deadpool|||1|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4143655-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4143655-01.jpg",
+    "date": "2014-12-31",
+    "volume_id": 76735,
+    "volume_name": "Hawkeye vs. Deadpool",
+    "volume_start_year": 2014
+  },
+  "Hawkeye vs. Deadpool|||2|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4212102-02.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4212102-02.jpg",
+    "date": "2015-01-31",
+    "volume_id": 76735,
+    "volume_name": "Hawkeye vs. Deadpool",
+    "volume_start_year": 2014
+  },
+  "Hawkeye|||2|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5628642-02.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5628642-02.jpg",
+    "date": "2017-03-31",
+    "volume_id": 96661,
+    "volume_name": "Hawkeye",
+    "volume_start_year": 2017
+  },
+  "Hawkeye|||3|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5677454-03.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5677454-03.jpg",
+    "date": "2017-04-30",
+    "volume_id": 96661,
+    "volume_name": "Hawkeye",
+    "volume_start_year": 2017
+  },
+  "Hawkeye|||4|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5723768-04.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5723768-04.jpg",
+    "date": "2017-05-31",
+    "volume_id": 96661,
+    "volume_name": "Hawkeye",
+    "volume_start_year": 2017
+  },
+  "Hawkeye|||5|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5786941-05.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5786941-05.jpg",
+    "date": "2017-06-30",
+    "volume_id": 96661,
+    "volume_name": "Hawkeye",
+    "volume_start_year": 2017
+  },
+  "Hawkeye|||6|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5831855-06.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5831855-06.jpg",
+    "date": "2017-07-31",
+    "volume_id": 96661,
+    "volume_name": "Hawkeye",
+    "volume_start_year": 2017
+  },
+  "Hawkeye|||1|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5586824-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5586824-01.jpg",
+    "date": "2017-02-28",
+    "volume_id": 96661,
+    "volume_name": "Hawkeye",
+    "volume_start_year": 2017
+  },
+  "Hawkeye|||2|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5628642-02.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5628642-02.jpg",
+    "date": "2017-03-31",
+    "volume_id": 96661,
+    "volume_name": "Hawkeye",
+    "volume_start_year": 2017
+  },
+  "Hawkeye|||8|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5937208-08.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5937208-08.jpg",
+    "date": "2017-09-30",
+    "volume_id": 96661,
+    "volume_name": "Hawkeye",
+    "volume_start_year": 2017
+  },
+  "Hawkeye|||9|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5985358-09.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5985358-09.jpg",
+    "date": "2017-10-31",
+    "volume_id": 96661,
+    "volume_name": "Hawkeye",
+    "volume_start_year": 2017
+  },
+  "Hawkeye|||10|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6040326-10.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/6040326-10.jpg",
+    "date": "2017-11-30",
+    "volume_id": 96661,
+    "volume_name": "Hawkeye",
+    "volume_start_year": 2017
+  },
+  "Hawkeye|||11|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11122/111222211/6373148-blank.png",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11122/111222211/6373148-blank.png",
+    "date": "2017-12-31",
+    "volume_id": 96661,
+    "volume_name": "Hawkeye",
+    "volume_start_year": 2017
+  },
+  "Hawkeye: Freefall|||2|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7226443-02.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/7226443-02.jpg",
+    "date": "2020-03-01",
+    "volume_id": 123859,
+    "volume_name": "Hawkeye: Freefall",
+    "volume_start_year": 2020
+  },
+  "Hawkeye: Freefall|||3|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7242079-03.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/7242079-03.jpg",
+    "date": "2020-04-01",
+    "volume_id": 123859,
+    "volume_name": "Hawkeye: Freefall",
+    "volume_start_year": 2020
+  },
+  "Hawkeye: Kate Bishop|||2|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/12/124259/8299478-hawkeye-kate-bishop-2-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/12/124259/8299478-hawkeye-kate-bishop-2-cover.jpg",
+    "date": "2022-02-01",
+    "volume_id": 140220,
+    "volume_name": "Hawkeye: Kate Bishop",
+    "volume_start_year": 2022
+  },
+  "Hawkeye: Kate Bishop|||3|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11122/111222211/6373148-blank.png",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11122/111222211/6373148-blank.png",
+    "date": "2022-03-01",
+    "volume_id": 140220,
+    "volume_name": "Hawkeye: Kate Bishop",
+    "volume_start_year": 2022
+  },
+  "Hawkeye: Kate Bishop|||4|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11122/111222211/6373148-blank.png",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11122/111222211/6373148-blank.png",
+    "date": "2022-04-01",
+    "volume_id": 140220,
+    "volume_name": "Hawkeye: Kate Bishop",
+    "volume_start_year": 2022
+  },
+  "Hawkeye: Kate Bishop|||5|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/8411733-7099430415-20758.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/8411733-7099430415-20758.jpg",
+    "date": "2022-05-01",
+    "volume_id": 140220,
+    "volume_name": "Hawkeye: Kate Bishop",
+    "volume_start_year": 2022
+  },
+  "Hawkeye|||3|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5677454-03.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5677454-03.jpg",
+    "date": "2017-04-30",
+    "volume_id": 96661,
+    "volume_name": "Hawkeye",
+    "volume_start_year": 2017
+  },
+  "Hawkeye|||4|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5723768-04.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5723768-04.jpg",
+    "date": "2017-05-31",
+    "volume_id": 96661,
+    "volume_name": "Hawkeye",
+    "volume_start_year": 2017
+  },
+  "Hawkeye|||5|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5786941-05.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5786941-05.jpg",
+    "date": "2017-06-30",
+    "volume_id": 96661,
+    "volume_name": "Hawkeye",
+    "volume_start_year": 2017
+  },
+  "Hawkeye|||6|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5831855-06.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5831855-06.jpg",
+    "date": "2017-07-31",
+    "volume_id": 96661,
+    "volume_name": "Hawkeye",
+    "volume_start_year": 2017
+  },
+  "Old Man Hawkeye|||2|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6280601-02.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/6280601-02.jpg",
+    "date": "2018-04-30",
+    "volume_id": 107664,
+    "volume_name": "Old Man Hawkeye",
+    "volume_start_year": 2018
+  },
+  "Old Man Hawkeye|||3|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6352589-03.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/6352589-03.jpg",
+    "date": "2018-05-31",
+    "volume_id": 107664,
+    "volume_name": "Old Man Hawkeye",
+    "volume_start_year": 2018
+  },
+  "Old Man Hawkeye|||4|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6397227-04.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/6397227-04.jpg",
+    "date": "2018-06-30",
+    "volume_id": 107664,
+    "volume_name": "Old Man Hawkeye",
+    "volume_start_year": 2018
+  },
+  "Old Man Hawkeye|||5|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6438981-05.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/6438981-05.jpg",
+    "date": "2018-07-01",
+    "volume_id": 107664,
+    "volume_name": "Old Man Hawkeye",
+    "volume_start_year": 2018
+  },
+  "Old Man Hawkeye|||6|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6489014-06.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/6489014-06.jpg",
+    "date": "2018-08-01",
+    "volume_id": 107664,
+    "volume_name": "Old Man Hawkeye",
+    "volume_start_year": 2018
+  },
+  "Old Man Hawkeye|||7|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6518429-07.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/6518429-07.jpg",
+    "date": "2018-09-01",
+    "volume_id": 107664,
+    "volume_name": "Old Man Hawkeye",
+    "volume_start_year": 2018
+  },
+  "Old Man Hawkeye|||8|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6572708-08.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/6572708-08.jpg",
+    "date": "2018-10-01",
+    "volume_id": 107664,
+    "volume_name": "Old Man Hawkeye",
+    "volume_start_year": 2018
+  },
+  "Old Man Hawkeye|||9|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6624957-09.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/6624957-09.jpg",
+    "date": "2018-11-01",
+    "volume_id": 107664,
+    "volume_name": "Old Man Hawkeye",
+    "volume_start_year": 2018
+  },
+  "Old Man Hawkeye|||10|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6668501-10.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/6668501-10.jpg",
+    "date": "2018-12-01",
+    "volume_id": 107664,
+    "volume_name": "Old Man Hawkeye",
+    "volume_start_year": 2018
+  },
+  "Old Man Hawkeye|||11|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6704369-11.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/6704369-11.jpg",
+    "date": "2019-01-01",
+    "volume_id": 107664,
+    "volume_name": "Old Man Hawkeye",
+    "volume_start_year": 2018
+  },
+  "Old Man Hawkeye|||12|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6730751-12.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/6730751-12.jpg",
+    "date": "2019-02-01",
+    "volume_id": 107664,
+    "volume_name": "Old Man Hawkeye",
+    "volume_start_year": 2018
+  },
+  "Force Works 2020|||2|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7293937-02.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/7293937-02.jpg",
+    "date": "2020-05-01",
+    "volume_id": 125299,
+    "volume_name": "2020 Force Works",
+    "volume_start_year": null
+  },
+  "Black Widow|||2|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/3588605-02a.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/3588605-02a.jpg",
+    "date": "2014-03-01",
+    "volume_id": 70705,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2014
+  },
+  "Black Widow|||3|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/3619493-03a.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/3619493-03a.jpg",
+    "date": "2014-04-01",
+    "volume_id": 70705,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2014
+  },
+  "Black Widow|||4|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/3788804-04.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/3788804-04.jpg",
+    "date": "2014-05-31",
+    "volume_id": 70705,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2014
+  },
+  "Black Widow|||5|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/3732878-05.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/3732878-05.jpg",
+    "date": "2014-06-30",
+    "volume_id": 70705,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2014
+  },
+  "Black Widow|||6|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4093168-06.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4093168-06.jpg",
+    "date": "2014-07-31",
+    "volume_id": 70705,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2014
+  },
+  "Black Widow|||7|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/3866929-07.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/3866929-07.jpg",
+    "date": "2014-08-31",
+    "volume_id": 70705,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2014
+  },
+  "Black Widow|||8|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/3930265-08.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/3930265-08.jpg",
+    "date": "2014-09-30",
+    "volume_id": 70705,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2014
+  },
+  "Black Widow|||9|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4009353-09.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4009353-09.jpg",
+    "date": "2014-10-31",
+    "volume_id": 70705,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2014
+  },
+  "Black Widow|||10|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4071709-10.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4071709-10.jpg",
+    "date": "2014-11-30",
+    "volume_id": 70705,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2014
+  },
+  "Black Widow|||11|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4129727-11.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4129727-11.jpg",
+    "date": "2014-12-31",
+    "volume_id": 70705,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2014
+  },
+  "Black Widow|||12|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4226470-12.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4226470-12.jpg",
+    "date": "2015-01-31",
+    "volume_id": 70705,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2014
+  },
+  "Black Widow|||14|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4340181-14.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4340181-14.jpg",
+    "date": "2015-03-31",
+    "volume_id": 70705,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2014
+  },
+  "Black Widow|||15|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4398334-15.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4398334-15.jpg",
+    "date": "2015-04-30",
+    "volume_id": 70705,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2014
+  },
+  "Black Widow|||16|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4452877-16.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4452877-16.jpg",
+    "date": "2015-05-31",
+    "volume_id": 70705,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2014
+  },
+  "Black Widow|||17|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4519413-17.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4519413-17.jpg",
+    "date": "2015-06-30",
+    "volume_id": 70705,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2014
+  },
+  "Black Widow|||18|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4585937-18.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4585937-18.jpg",
+    "date": "2015-07-31",
+    "volume_id": 70705,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2014
+  },
+  "Black Widow|||19|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4642821-19.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4642821-19.jpg",
+    "date": "2015-08-31",
+    "volume_id": 70705,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2014
+  },
+  "Black Widow|||20|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4713226-20.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4713226-20.jpg",
+    "date": "2015-09-30",
+    "volume_id": 70705,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2014
+  },
+  "Black Widow|||13|||6": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4277181-13.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4277181-13.jpg",
+    "date": "2015-02-01",
+    "volume_id": 70705,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2014
+  },
+  "Black Widow|||2|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5134401-02.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5134401-02.jpg",
+    "date": "2016-06-30",
+    "volume_id": 88554,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2016
+  },
+  "Black Widow|||3|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5187697-03.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5187697-03.jpg",
+    "date": "2016-07-31",
+    "volume_id": 88554,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2016
+  },
+  "Black Widow|||4|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5264901-04.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5264901-04.jpg",
+    "date": "2016-08-31",
+    "volume_id": 88554,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2016
+  },
+  "Black Widow|||5|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5329109-05.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5329109-05.jpg",
+    "date": "2016-09-30",
+    "volume_id": 88554,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2016
+  },
+  "Black Widow|||6|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5385491-06.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5385491-06.jpg",
+    "date": "2016-10-31",
+    "volume_id": 88554,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2016
+  },
+  "Black Widow|||7|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5490464-07.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5490464-07.jpg",
+    "date": "2016-12-31",
+    "volume_id": 88554,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2016
+  },
+  "Black Widow|||8|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5559893-08.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5559893-08.jpg",
+    "date": "2017-01-31",
+    "volume_id": 88554,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2016
+  },
+  "Black Widow|||9|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5613994-09.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5613994-09.jpg",
+    "date": "2017-02-28",
+    "volume_id": 88554,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2016
+  },
+  "Black Widow|||10|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5652809-10.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5652809-10.jpg",
+    "date": "2017-03-31",
+    "volume_id": 88554,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2016
+  },
+  "Black Widow|||11|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5689563-11.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5689563-11.jpg",
+    "date": "2017-04-30",
+    "volume_id": 88554,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2016
+  },
+  "Black Widow|||12|||7": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5773204-12.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5773204-12.jpg",
+    "date": "2017-05-31",
+    "volume_id": 88554,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2016
+  },
+  "Black Widow|||2|||8": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5134401-02.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5134401-02.jpg",
+    "date": "2016-06-30",
+    "volume_id": 88554,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2016
+  },
+  "Black Widow|||3|||8": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5187697-03.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5187697-03.jpg",
+    "date": "2016-07-31",
+    "volume_id": 88554,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2016
+  },
+  "Black Widow|||4|||8": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5264901-04.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5264901-04.jpg",
+    "date": "2016-08-31",
+    "volume_id": 88554,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2016
+  },
+  "Black Widow|||5|||8": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5329109-05.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5329109-05.jpg",
+    "date": "2016-09-30",
+    "volume_id": 88554,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2016
+  },
+  "Black Widow|||6|||8": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5385491-06.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5385491-06.jpg",
+    "date": "2016-10-31",
+    "volume_id": 88554,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2016
+  },
+  "Black Widow|||7|||8": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5490464-07.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5490464-07.jpg",
+    "date": "2016-12-31",
+    "volume_id": 88554,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2016
+  },
+  "Black Widow|||8|||8": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5559893-08.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5559893-08.jpg",
+    "date": "2017-01-31",
+    "volume_id": 88554,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2016
+  },
+  "Black Widow|||9|||8": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5613994-09.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5613994-09.jpg",
+    "date": "2017-02-28",
+    "volume_id": 88554,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2016
+  },
+  "Black Widow|||10|||8": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5652809-10.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5652809-10.jpg",
+    "date": "2017-03-31",
+    "volume_id": 88554,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2016
+  },
+  "Black Widow|||11|||8": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5689563-11.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5689563-11.jpg",
+    "date": "2017-04-30",
+    "volume_id": 88554,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2016
+  },
+  "Black Widow|||12|||8": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5773204-12.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/5773204-12.jpg",
+    "date": "2017-05-31",
+    "volume_id": 88554,
+    "volume_name": "Black Widow",
+    "volume_start_year": 2016
+  },
+  "Black Widow|||30|||8": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11131/111316219/8329518-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11131/111316219/8329518-01.jpg",
+    "date": "2022-03-01",
+    "volume_id": 141179,
+    "volume_name": "Wastelanders: Black Widow",
+    "volume_start_year": null
+  },
+  "Black Widow|||3|||9": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6864484-03.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/6864484-03.jpg",
+    "date": "2019-05-01",
+    "volume_id": 116493,
+    "volume_name": "Black Widow",
+    "volume_start_year": null
+  },
+  "Black Widow|||4|||9": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6904570-04.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/6904570-04.jpg",
+    "date": "2019-06-01",
+    "volume_id": 116493,
+    "volume_name": "Black Widow",
+    "volume_start_year": null
+  },
+  "Black Widow|||5|||9": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6931790-05.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/6931790-05.jpg",
+    "date": "2019-07-01",
+    "volume_id": 116493,
+    "volume_name": "Black Widow",
+    "volume_start_year": null
+  },
+  "Black Widow / Hawkeye|||2|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9334357-wwww.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9334357-wwww.jpg",
+    "date": "2024-06-01",
+    "volume_id": 157213,
+    "volume_name": "Black Widow & Hawkeye",
+    "volume_start_year": null
+  },
+  "Black Widow / Hawkeye|||3|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9366693-wwww.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9366693-wwww.jpg",
+    "date": "2024-07-01",
+    "volume_id": 157213,
+    "volume_name": "Black Widow & Hawkeye",
+    "volume_start_year": null
+  },
+  "Black Widow / Hawkeye|||4|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9396829-wwww.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9396829-wwww.jpg",
+    "date": "2024-08-01",
+    "volume_id": 157213,
+    "volume_name": "Black Widow & Hawkeye",
+    "volume_start_year": null
+  },
+  "Wastelanders: Black Widow|||1|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11131/111316219/8329518-01.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11131/111316219/8329518-01.jpg",
+    "date": "2022-03-01",
+    "volume_id": 141179,
+    "volume_name": "Wastelanders: Black Widow",
+    "volume_start_year": 2022
+  },
+  "White Widow|||3|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9237744-wwww.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9237744-wwww.jpg",
+    "date": "2024-03-01",
+    "volume_id": 154418,
+    "volume_name": "White Widow",
+    "volume_start_year": 2024
+  },
+  "White Widow|||4|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9282344-wwww.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9282344-wwww.jpg",
+    "date": "2024-04-01",
+    "volume_id": 154418,
+    "volume_name": "White Widow",
+    "volume_start_year": 2024
+  },
+  "Black Widow|||20|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4713226-20.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4713226-20.jpg",
+    "date": "2015-09-30",
+    "volume_id": 70705,
+    "volume_name": "Black Widow",
+    "volume_start_year": null
+  },
+  "Winter Soldier|||2|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/10/109024/2200648-winter_soldier_issue_02_cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/10/109024/2200648-winter_soldier_issue_02_cover.jpg",
+    "date": "2012-04-15",
+    "volume_id": 45518,
+    "volume_name": "Winter Soldier",
+    "volume_start_year": 2012
+  },
+  "Winter Soldier|||3|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/2232041-www.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/2232041-www.jpg",
+    "date": "2012-05-01",
+    "volume_id": 45518,
+    "volume_name": "Winter Soldier",
+    "volume_start_year": 2012
+  },
+  "Winter Soldier|||4|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/7/71975/2288267-prev_img_7.jpeg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/7/71975/2288267-prev_img_7.jpeg",
+    "date": "2012-06-01",
+    "volume_id": 45518,
+    "volume_name": "Winter Soldier",
+    "volume_start_year": 2012
+  },
+  "Winter Soldier|||5|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/7/71975/2345454-prev_img_1.jpeg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/7/71975/2345454-prev_img_1.jpeg",
+    "date": "2012-07-01",
+    "volume_id": 45518,
+    "volume_name": "Winter Soldier",
+    "volume_start_year": 2012
+  },
+  "Winter Soldier|||6|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/7/71975/2385692-prev_img.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/7/71975/2385692-prev_img.jpg",
+    "date": "2012-08-01",
+    "volume_id": 45518,
+    "volume_name": "Winter Soldier",
+    "volume_start_year": 2012
+  },
+  "Winter Soldier|||7|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/7/71975/2415297-prev_img.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/7/71975/2415297-prev_img.jpg",
+    "date": "2012-08-01",
+    "volume_id": 45518,
+    "volume_name": "Winter Soldier",
+    "volume_start_year": 2012
+  },
+  "Winter Soldier|||8|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/3/31666/2488139-prv13047_cov.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/3/31666/2488139-prv13047_cov.jpg",
+    "date": "2012-09-01",
+    "volume_id": 45518,
+    "volume_name": "Winter Soldier",
+    "volume_start_year": 2012
+  },
+  "Winter Soldier|||9|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/7/71975/2556950-prev_img.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/7/71975/2556950-prev_img.jpg",
+    "date": "2012-10-01",
+    "volume_id": 45518,
+    "volume_name": "Winter Soldier",
+    "volume_start_year": 2012
+  },
+  "Winter Soldier|||10|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/7/71975/2586346-prev_img_1.jpeg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/7/71975/2586346-prev_img_1.jpeg",
+    "date": "2012-11-01",
+    "volume_id": 45518,
+    "volume_name": "Winter Soldier",
+    "volume_start_year": 2012
+  },
+  "Winter Soldier|||11|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/7/71975/2611458-prev_img.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/7/71975/2611458-prev_img.jpg",
+    "date": "2012-11-01",
+    "volume_id": 45518,
+    "volume_name": "Winter Soldier",
+    "volume_start_year": 2012
+  },
+  "Winter Soldier|||12|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/2675509-www.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/2675509-www.jpg",
+    "date": "2012-12-01",
+    "volume_id": 45518,
+    "volume_name": "Winter Soldier",
+    "volume_start_year": 2012
   }
 }
