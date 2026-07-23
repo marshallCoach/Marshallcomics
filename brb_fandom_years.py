@@ -20,6 +20,15 @@ wrong page can't silently rewrite a good row.
 
 Read-only: writes a review xlsx. Nothing is applied.
 
+⚠ CALIBRATION (Roberto, 2307): only trust rows flagged "in-range". The volume
+sweep below WILL find a same-numbered issue in some other era when the right
+volume has no such issue — e.g. X-Men #1-4 matched 1963, Green Lantern matched
+1941, JLA #100-120 matched 1972. Those books are all MODERN; the sweep simply
+landed on the wrong volume. Out-of-range hits are therefore BAD MATCHES, not
+data findings, and must not be applied. The in-range gate is what makes this
+safe: the wiki year must corroborate the row's own declared range before it is
+used, so a wrong-era page can never pass.
+
 Usage:
     python3 brb_fandom_years.py              # all unresolved rows
     python3 brb_fandom_years.py --limit 25   # sample first
