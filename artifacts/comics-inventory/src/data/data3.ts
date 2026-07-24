@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_2307_1802.xlsx  |  Generated: 2026-07-23
+// Source: comics_inventory_2407_0912.xlsx  |  Generated: 2026-07-24
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -42,7 +42,7 @@ export const DATA3: {
     ccBoxes: CatalogComic[];
   };
 } = {
-  generatedAt: "2026-07-23",
+  generatedAt: "2026-07-24",
   comics: [
   {
     Title: `Barack Obama: Presidential Material`, Issue: `1`, Publisher: `IDW`,
@@ -2967,7 +2967,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Skottie Young`, Date_Added: ``,
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
-    Volume: `9`, Entry: `269`,
+    Volume: `13`, Entry: `269`,
     eBay_Avg: 12.57, eBay_Low: 4, eBay_High: 23, eBay_Count: 7, eBay_Median: 10,
   },
   {
@@ -16894,7 +16894,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Juann Cabal & German Peralta`, Date_Added: `May 19, 2026`,
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `5`,
-    Volume: `7`, Entry: `4371`,
+    Volume: `8`, Entry: `4371`,
     eBay_Avg: 12.65, eBay_Low: 2.13, eBay_High: 35, eBay_Count: 8, eBay_Median: 10.52,
   },
   {
@@ -16932,7 +16932,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Juann Cabal & German Peralta`, Date_Added: `May 19, 2026`,
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `7`, Entry: `4373`,
+    Volume: `8`, Entry: `4373`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -16951,7 +16951,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Juann Cabal & German Peralta`, Date_Added: `May 19, 2026`,
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `7`, Entry: `4374`,
+    Volume: `8`, Entry: `4374`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -17027,7 +17027,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Juann Cabal & German Peralta`, Date_Added: `May 19, 2026`,
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `7`, Entry: `4378`,
+    Volume: `8`, Entry: `4378`,
     eBay_Avg: 8.64, eBay_Low: 2.13, eBay_High: 20.99, eBay_Count: 8, eBay_Median: 7.49,
   },
   {
@@ -17046,7 +17046,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Juann Cabal & German Peralta`, Date_Added: `May 19, 2026`,
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `7`, Entry: `4379`,
+    Volume: `8`, Entry: `4379`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -17141,7 +17141,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Juann Cabal & German Peralta`, Date_Added: `May 19, 2026`,
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `7`, Entry: `4384`,
+    Volume: `8`, Entry: `4384`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -17160,7 +17160,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Juann Cabal & German Peralta`, Date_Added: `May 19, 2026`,
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `7`, Entry: `4385`,
+    Volume: `8`, Entry: `4385`,
     eBay_Avg: 7.24, eBay_Low: 3.14, eBay_High: 10, eBay_Count: 8, eBay_Median: 8.24,
   },
   {
@@ -23012,7 +23012,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Adam Kubert & Various`, Date_Added: `May 17, 2026`,
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `9`, Entry: `1159`,
+    Volume: `10`, Entry: `1159`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -23335,7 +23335,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Adam Kubert & Various`, Date_Added: `May 17, 2026`,
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `9`, Entry: `1160`,
+    Volume: `10`, Entry: `1160`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -23354,7 +23354,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Adam Kubert & Various`, Date_Added: `May 17, 2026`,
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `9`, Entry: `1161`,
+    Volume: `10`, Entry: `1161`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -23373,7 +23373,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Adam Kubert & Various`, Date_Added: `May 17, 2026`,
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `9`, Entry: `1162`,
+    Volume: `10`, Entry: `1162`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -61791,7 +61791,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Steve McNiven`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Marvel`, Box: `30`,
     Crossover: ``, Start_Bid: `5`,
-    Volume: `9`, Entry: `3537`,
+    Volume: `6`, Entry: `3537`,
     eBay_Avg: 11.08, eBay_Low: 3, eBay_High: 26, eBay_Count: 10, eBay_Median: 8.89,
   },
   {
@@ -61810,7 +61810,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Steve McNiven`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Marvel`, Box: `30`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `9`, Entry: `3538`,
+    Volume: `6`, Entry: `3538`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -61829,7 +61829,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Steve McNiven`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Marvel`, Box: `30`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `9`, Entry: `3539`,
+    Volume: `6`, Entry: `3539`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -62342,7 +62342,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Leinil Francis Yu`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Marvel`, Box: `30`,
     Crossover: ``, Start_Bid: `3`,
-    Volume: `9`, Entry: `3566`,
+    Volume: `10`, Entry: `3566`,
     eBay_Avg: 11.08, eBay_Low: 3, eBay_High: 26, eBay_Count: 10, eBay_Median: 8.89,
   },
   {
@@ -62361,7 +62361,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Leinil Francis Yu`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Marvel`, Box: `30`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `9`, Entry: `3567`,
+    Volume: `10`, Entry: `3567`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -62380,7 +62380,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Leinil Francis Yu`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Marvel`, Box: `30`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `9`, Entry: `3568`,
+    Volume: `10`, Entry: `3568`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -62399,7 +62399,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Leinil Francis Yu`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Marvel`, Box: `30`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `9`, Entry: `3569`,
+    Volume: `10`, Entry: `3569`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -62418,7 +62418,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Leinil Francis Yu`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Marvel`, Box: `30`,
     Crossover: `Cap: Captain of Nothing (Coates)`, Start_Bid: `1`,
-    Volume: `9`, Entry: `3570`,
+    Volume: `10`, Entry: `3570`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -62437,7 +62437,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Leinil Francis Yu`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Marvel`, Box: `30`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `9`, Entry: `3571`,
+    Volume: `10`, Entry: `3571`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -62456,7 +62456,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Jason Masters`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Marvel`, Box: `30`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `9`, Entry: `3572`,
+    Volume: `10`, Entry: `3572`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -62475,7 +62475,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Jason Masters`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Marvel`, Box: `30`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `9`, Entry: `3573`,
+    Volume: `10`, Entry: `3573`,
     eBay_Avg: 12.57, eBay_Low: 4, eBay_High: 23, eBay_Count: 7, eBay_Median: 10,
   },
   {
@@ -62494,7 +62494,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Jason Masters`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Marvel`, Box: `30`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `9`, Entry: `3574`,
+    Volume: `10`, Entry: `3574`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -62513,7 +62513,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Jason Masters`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Marvel`, Box: `30`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `9`, Entry: `3575`,
+    Volume: `10`, Entry: `3575`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -62532,7 +62532,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Jason Masters`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Marvel`, Box: `30`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `9`, Entry: `3576`,
+    Volume: `10`, Entry: `3576`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -62551,7 +62551,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Jason Masters`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Marvel`, Box: `30`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `9`, Entry: `3577`,
+    Volume: `10`, Entry: `3577`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -62570,7 +62570,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Jason Masters`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Marvel`, Box: `30`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `9`, Entry: `3578`,
+    Volume: `10`, Entry: `3578`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -66731,7 +66731,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Steve Epting & Various`, Date_Added: `May 19, 2026`,
     Imprint: `Marvel From the Ashes`, Box: `29`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `9`, Entry: `3800`,
+    Volume: `13`, Entry: `3800`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -66750,7 +66750,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Steve Epting & Various`, Date_Added: `May 19, 2026`,
     Imprint: `Marvel From the Ashes`, Box: `29`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `9`, Entry: `3801`,
+    Volume: `13`, Entry: `3801`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -66769,7 +66769,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Steve Epting & Various`, Date_Added: `May 19, 2026`,
     Imprint: `Marvel From the Ashes`, Box: `29`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `9`, Entry: `3802`,
+    Volume: `13`, Entry: `3802`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -66788,7 +66788,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Steve Epting & Various`, Date_Added: `May 19, 2026`,
     Imprint: `Marvel From the Ashes`, Box: `29`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `9`, Entry: `3803`,
+    Volume: `13`, Entry: `3803`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -66807,7 +66807,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Steve Epting & Various`, Date_Added: `May 19, 2026`,
     Imprint: `Marvel From the Ashes`, Box: `29`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `9`, Entry: `3804`,
+    Volume: `13`, Entry: `3804`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -72108,7 +72108,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Steve Epting & Various`, Date_Added: `May 19, 2026`,
     Imprint: `Marvel From the Ashes`, Box: `36`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `9`, Entry: `4176`,
+    Volume: `13`, Entry: `4176`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -72127,7 +72127,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Steve Epting & Various`, Date_Added: `May 19, 2026`,
     Imprint: `Marvel From the Ashes`, Box: `36`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `9`, Entry: `4177`,
+    Volume: `13`, Entry: `4177`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -72146,7 +72146,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Steve Epting & Various`, Date_Added: `May 19, 2026`,
     Imprint: `Marvel From the Ashes`, Box: `36`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `9`, Entry: `4178`,
+    Volume: `13`, Entry: `4178`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -72165,7 +72165,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Steve Epting & Various`, Date_Added: `May 19, 2026`,
     Imprint: `Marvel From the Ashes`, Box: `36`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `9`, Entry: `4179`,
+    Volume: `13`, Entry: `4179`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -72184,7 +72184,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Steve Epting & Various`, Date_Added: `May 19, 2026`,
     Imprint: `Marvel From the Ashes`, Box: `36`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `9`, Entry: `4180`,
+    Volume: `13`, Entry: `4180`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -72203,7 +72203,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Steve Epting & Various`, Date_Added: `May 19, 2026`,
     Imprint: `Marvel From the Ashes`, Box: `36`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `9`, Entry: `4181`,
+    Volume: `13`, Entry: `4181`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -72222,7 +72222,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Steve Epting & Various`, Date_Added: `May 19, 2026`,
     Imprint: `Marvel From the Ashes`, Box: `36`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `9`, Entry: `4182`,
+    Volume: `13`, Entry: `4182`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -109129,7 +109129,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Disambig: ``,
     Year: `2012`, Arc: `Avengers Bendis AvX`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Brian Michael Bendis`, Artist: ``,
+    Writer: `Brian Michael Bendis`, Artist: `Salvador Larroca`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -109148,7 +109148,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Disambig: ``,
     Year: `2012`, Arc: `Avengers Bendis AvX`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Brian Michael Bendis`, Artist: ``,
+    Writer: `Brian Michael Bendis`, Artist: `Salvador Larroca`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -109167,7 +109167,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Disambig: ``,
     Year: `2012`, Arc: `Avengers Bendis AvX`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Brian Michael Bendis`, Artist: ``,
+    Writer: `Brian Michael Bendis`, Artist: `Leinil Francis Yu`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -109186,7 +109186,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Disambig: ``,
     Year: `2012`, Arc: `Avengers Bendis AvX`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Brian Michael Bendis`, Artist: ``,
+    Writer: `Brian Michael Bendis`, Artist: `Leinil Francis Yu`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -110250,7 +110250,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Disambig: ``,
     Year: `2017`, Arc: `Legacy numbering — Mark Waid/Jason Aaron`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Mark Waid & Jason Aaron`, Artist: ``,
+    Writer: `Mark Waid & Jason Aaron`, Artist: `Jesús Saíz`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -110269,7 +110269,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Disambig: ``,
     Year: `2017`, Arc: `Legacy numbering — Mark Waid/Jason Aaron`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Mark Waid & Jason Aaron`, Artist: ``,
+    Writer: `Mark Waid & Jason Aaron`, Artist: `Javier Pina`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -110288,7 +110288,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Disambig: ``,
     Year: `2017`, Arc: `Legacy numbering — Mark Waid/Jason Aaron`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Mark Waid & Jason Aaron`, Artist: ``,
+    Writer: `Mark Waid & Jason Aaron`, Artist: `Jesús Saíz`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -110915,7 +110915,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Disambig: ``,
     Year: `2023`, Arc: `Avengers McKay extends`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Jed MacKay`, Artist: ``,
+    Writer: `Jed MacKay`, Artist: `Carlos Villa`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -110934,7 +110934,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Disambig: ``,
     Year: `2023`, Arc: `Avengers McKay extends`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Jed MacKay`, Artist: ``,
+    Writer: `Jed MacKay`, Artist: `Carlos Villa`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -110953,7 +110953,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Disambig: ``,
     Year: `2023`, Arc: `Avengers McKay extends`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Jed MacKay`, Artist: ``,
+    Writer: `Jed MacKay`, Artist: `Carlos Villa`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -110972,7 +110972,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Disambig: ``,
     Year: `2023`, Arc: `Avengers McKay extends`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Jed MacKay`, Artist: ``,
+    Writer: `Jed MacKay`, Artist: `Ivan Fiorelli`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -110991,7 +110991,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Disambig: ``,
     Year: `2023`, Arc: `Avengers McKay extends`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Jed MacKay`, Artist: ``,
+    Writer: `Jed MacKay`, Artist: `Ivan Fiorelli`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -111010,7 +111010,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Disambig: ``,
     Year: `2023`, Arc: `Avengers McKay extends`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Jed MacKay`, Artist: ``,
+    Writer: `Jed MacKay`, Artist: `Carlos Villa`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -111029,7 +111029,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Disambig: ``,
     Year: `2023`, Arc: `Avengers McKay extends`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Jed MacKay`, Artist: ``,
+    Writer: `Jed MacKay`, Artist: `Carlos Villa`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -111048,7 +111048,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Disambig: ``,
     Year: `2023`, Arc: `Avengers McKay extends`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Jed MacKay`, Artist: ``,
+    Writer: `Jed MacKay`, Artist: `Carlos Villa`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -111067,7 +111067,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Disambig: ``,
     Year: `2023`, Arc: `Avengers McKay extends`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Jed MacKay`, Artist: ``,
+    Writer: `Jed MacKay`, Artist: `Ivan Fiorelli`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -111086,7 +111086,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Disambig: ``,
     Year: `2023`, Arc: `Avengers McKay extends`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Jed MacKay`, Artist: ``,
+    Writer: `Jed MacKay`, Artist: `C.F. Villa`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -111105,7 +111105,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Disambig: ``,
     Year: `2023`, Arc: `Avengers McKay extends`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Jed MacKay`, Artist: ``,
+    Writer: `Jed MacKay`, Artist: `C.F. Villa`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -111124,7 +111124,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Disambig: ``,
     Year: `2023`, Arc: `Avengers McKay extends`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Jed MacKay`, Artist: ``,
+    Writer: `Jed MacKay`, Artist: `C.F. Villa`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -111143,7 +111143,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Disambig: ``,
     Year: `2023`, Arc: `Avengers McKay extends`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Jed MacKay`, Artist: ``,
+    Writer: `Jed MacKay`, Artist: `Farid Karami`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -151017,7 +151017,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Cover_Artist: ``, Date_Added: `May 24, 2026`,
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `5`, Entry: `9316`,
+    Volume: `6`, Entry: `9316`,
     eBay_Avg: 17.75, eBay_Low: 3, eBay_High: 45.99, eBay_Count: 6, eBay_Median: 9.88,
   },
   {
@@ -151036,7 +151036,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Cover_Artist: ``, Date_Added: `May 24, 2026`,
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `5`, Entry: `9317`,
+    Volume: `6`, Entry: `9317`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -151055,7 +151055,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Cover_Artist: ``, Date_Added: `May 24, 2026`,
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `5`, Entry: `9318`,
+    Volume: `6`, Entry: `9318`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -151074,7 +151074,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Cover_Artist: ``, Date_Added: `May 24, 2026`,
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `5`, Entry: `9319`,
+    Volume: `6`, Entry: `9319`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -151093,7 +151093,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Cover_Artist: ``, Date_Added: `May 24, 2026`,
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `5`, Entry: `9320`,
+    Volume: `6`, Entry: `9320`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -151112,7 +151112,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Cover_Artist: ``, Date_Added: `May 24, 2026`,
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `5`, Entry: `9321`,
+    Volume: `6`, Entry: `9321`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -151131,7 +151131,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Cover_Artist: ``, Date_Added: `May 24, 2026`,
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `5`, Entry: `9322`,
+    Volume: `6`, Entry: `9322`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -151150,7 +151150,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Cover_Artist: ``, Date_Added: `May 24, 2026`,
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `5`, Entry: `9323`,
+    Volume: `6`, Entry: `9323`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -151169,7 +151169,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Cover_Artist: ``, Date_Added: `May 24, 2026`,
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `5`, Entry: `9324`,
+    Volume: `6`, Entry: `9324`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -151188,7 +151188,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Cover_Artist: ``, Date_Added: `May 24, 2026`,
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `5`, Entry: `9325`,
+    Volume: `6`, Entry: `9325`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -151207,7 +151207,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Cover_Artist: ``, Date_Added: `May 24, 2026`,
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `5`, Entry: `9326`,
+    Volume: `6`, Entry: `9326`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -151226,7 +151226,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Cover_Artist: ``, Date_Added: `May 24, 2026`,
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `5`, Entry: `9327`,
+    Volume: `6`, Entry: `9327`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -151245,7 +151245,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Cover_Artist: ``, Date_Added: `May 24, 2026`,
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `5`, Entry: `9328`,
+    Volume: `6`, Entry: `9328`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -151264,7 +151264,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Cover_Artist: ``, Date_Added: `May 24, 2026`,
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `5`, Entry: `9329`,
+    Volume: `6`, Entry: `9329`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -151283,7 +151283,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Cover_Artist: ``, Date_Added: `May 24, 2026`,
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `5`, Entry: `9330`,
+    Volume: `6`, Entry: `9330`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -151302,7 +151302,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Cover_Artist: ``, Date_Added: `May 24, 2026`,
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `5`, Entry: `9331`,
+    Volume: `6`, Entry: `9331`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -151321,7 +151321,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Cover_Artist: ``, Date_Added: `May 24, 2026`,
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `5`, Entry: `9332`,
+    Volume: `6`, Entry: `9332`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -151340,7 +151340,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Cover_Artist: ``, Date_Added: `May 24, 2026`,
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `5`, Entry: `9333`,
+    Volume: `6`, Entry: `9333`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -151359,7 +151359,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Cover_Artist: ``, Date_Added: `May 24, 2026`,
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `5`, Entry: `9334`,
+    Volume: `6`, Entry: `9334`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -151378,7 +151378,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Cover_Artist: ``, Date_Added: `May 24, 2026`,
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `5`, Entry: `9335`,
+    Volume: `6`, Entry: `9335`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -151397,7 +151397,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Cover_Artist: ``, Date_Added: `May 24, 2026`,
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `5`, Entry: `9336`,
+    Volume: `6`, Entry: `9336`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -151416,7 +151416,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Cover_Artist: ``, Date_Added: `May 24, 2026`,
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `5`, Entry: `9337`,
+    Volume: `6`, Entry: `9337`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -151435,7 +151435,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Cover_Artist: `Peach Momoko`, Date_Added: `May 24, 2026`,
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `5`, Entry: `9338`,
+    Volume: `6`, Entry: `9338`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -151454,7 +151454,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Cover_Artist: ``, Date_Added: `May 24, 2026`,
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `5`, Entry: `9339`,
+    Volume: `6`, Entry: `9339`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -151473,7 +151473,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Cover_Artist: `John Romita Jr.`, Date_Added: `May 24, 2026`,
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `5`, Entry: `9340`,
+    Volume: `6`, Entry: `9340`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -151492,7 +151492,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Cover_Artist: ``, Date_Added: `May 24, 2026`,
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `5`, Entry: `9341`,
+    Volume: `6`, Entry: `9341`,
     eBay_Avg: 15.12, eBay_Low: 4.99, eBay_High: 23.06, eBay_Count: 9, eBay_Median: 14.68,
   },
   {
@@ -151511,7 +151511,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Cover_Artist: ``, Date_Added: `May 24, 2026`,
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `5`, Entry: `9342`,
+    Volume: `6`, Entry: `9342`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -151530,7 +151530,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Cover_Artist: ``, Date_Added: `May 24, 2026`,
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `5`, Entry: `9343`,
+    Volume: `6`, Entry: `9343`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -151549,7 +151549,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Cover_Artist: ``, Date_Added: `May 24, 2026`,
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `5`, Entry: `9347`,
+    Volume: `6`, Entry: `9347`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -151568,7 +151568,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Cover_Artist: ``, Date_Added: `May 24, 2026`,
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `5`, Entry: `9348`,
+    Volume: `6`, Entry: `9348`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -151606,7 +151606,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Cover_Artist: ``, Date_Added: `May 24, 2026`,
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
-    Volume: `5`, Entry: `9356`,
+    Volume: `6`, Entry: `9356`,
     eBay_Avg: 15.12, eBay_Low: 4.99, eBay_High: 23.06, eBay_Count: 9, eBay_Median: 14.68,
   },
   {
@@ -152537,7 +152537,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Cover_Artist: `Steve McNiven`, Date_Added: `May 24, 2026`,
     Imprint: `Marvel`, Box: `30`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `9`, Entry: `9407`,
+    Volume: `7`, Entry: `9407`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -202086,7 +202086,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Disambig: ``,
     Year: `2001`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Geoff Johns`, Artist: `Olivier Coipel`,
     Signed: ``, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: ``, Value_NM: ``, Value_VF: ``,
@@ -202105,7 +202105,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Disambig: ``,
     Year: `2001`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Geoff Johns`, Artist: `Olivier Coipel`,
     Signed: ``, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: ``, Value_NM: ``, Value_VF: ``,
@@ -202124,7 +202124,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Disambig: ``,
     Year: `2001`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Geoff Johns`, Artist: `Olivier Coipel`,
     Signed: ``, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: ``, Value_NM: ``, Value_VF: ``,
@@ -202143,7 +202143,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Disambig: ``,
     Year: `2001`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Geoff Johns`, Artist: `Olivier Coipel`,
     Signed: ``, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: ``, Value_NM: ``, Value_VF: ``,
@@ -202162,7 +202162,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Disambig: ``,
     Year: `2001`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Geoff Johns`, Artist: `Stephen Sadowski`,
     Signed: ``, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: ``, Value_NM: ``, Value_VF: ``,
@@ -202181,7 +202181,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Disambig: ``,
     Year: `2001`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Geoff Johns`, Artist: `Scott Kolins`,
     Signed: ``, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: ``, Value_NM: ``, Value_VF: ``,
@@ -202200,7 +202200,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Disambig: ``,
     Year: `2001`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Geoff Johns`, Artist: `Steve Sadowski`,
     Signed: ``, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: ``, Value_NM: ``, Value_VF: ``,
@@ -202219,7 +202219,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Disambig: ``,
     Year: `2002`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Chuck Austen`, Artist: `Scott Kolins`,
     Signed: ``, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: ``, Value_NM: ``, Value_VF: ``,
@@ -202238,7 +202238,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Disambig: ``,
     Year: `2002`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Chuck Austen`, Artist: `Scott Kolins`,
     Signed: ``, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: ``, Value_NM: ``, Value_VF: ``,
@@ -202257,7 +202257,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Disambig: ``,
     Year: `2002`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
+    Writer: `Chuck Austen`, Artist: `Scott Kolins`,
     Signed: ``, Signed_By: ``,
     Personal: ``, Condition: ``,
     CGC_Worth: ``, Value_NM: ``, Value_VF: ``,
@@ -206861,7 +206861,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Batman`, Issue: `125`, Publisher: `DC`,
-    Year: `2023`, Volume: `3`, Cover_Artist: `Jorge Jimenez`,
+    Year: `2022`, Volume: `3`, Cover_Artist: `Jorge Jimenez`,
     Key: `YES`, Key_Reason: `First appearance of Failsafe`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Chip Zdarsky`,
@@ -211095,7 +211095,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Captain America`, Issue: `10`, Publisher: `Marvel`,
-    Year: `2024`, Volume: `9`, Cover_Artist: `Skottie Young`,
+    Year: `2024`, Volume: `13`, Cover_Artist: `Skottie Young`,
     Key: `NO`, Key_Reason: `Skottie Young cover variant`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `J. Michael Straczynski`,
