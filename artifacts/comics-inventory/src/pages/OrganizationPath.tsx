@@ -1,6 +1,17 @@
 import { useState, useEffect } from "react";
 import { DATA3 } from "../data/data3";
 
+// Live collection totals so the plan tracks the generated data, not a stale snapshot.
+const _OYES        = (v?: string) => (v || "").toUpperCase() === "YES";
+const O_COMICS     = DATA3.comics.length;
+const O_BOXES      = DATA3.boxes.length;
+const O_KEYS       = DATA3.comics.filter(c => _OYES(c.Key)).length;
+const O_SIGNED     = DATA3.comics.filter(c => _OYES(c.Signed)).length;
+const O_BOX_CAP    = 150;                                   // planning: short-box capacity
+const O_BOXES_NEED = Math.ceil(O_COMICS / O_BOX_CAP);       // boxes required at that cap
+const O_NEW_BOXES  = Math.max(0, O_BOXES_NEED - O_BOXES);   // overspill needing new boxes
+const O_UNBAGGED   = Math.round(O_COMICS * 0.70);           // planning: ~70% still unbagged
+
 const LS_LABELED  = "brbBoxLabeled";
 const LS_RUNS     = "brbRunsDone";
 const LS_STEPS    = "brbStepsDone";
@@ -293,7 +304,7 @@ const STEPS: OrgStep[] = [
   { key:"s2", num:2, title:"Bag Box 1 — INVENTORY (Priority 0)", time:"~45 min",
     tools:"BCW current bags, backing boards, Box 1 contents list",
     tasks:[
-      "Open Box 1. This contains all 56 signed books + premium keys.",
+      `Open Box 1. This contains all ${O_SIGNED} signed books + premium keys.`,
       "Bag every single book. Board inside, comic on top, bag sealed.",
       "Handle signed books with care — spine side in first, no bending.",
       "The Stan Lee, ASM #361, and Batman #125 are already at CGC — do not bag those.",
@@ -609,7 +620,7 @@ export default function OrganizationPath() {
           Organization Path — v2
         </h2>
         <p style={{ fontSize:"0.875rem", color:"var(--muted2)", margin:0, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>
-          May 2026 — 11,776 comics · 74 boxes · 1,463 keys · 56 signed · 18 new short boxes needed · 70% unbagged
+          {O_COMICS.toLocaleString()} comics · {O_BOXES} boxes · {O_KEYS.toLocaleString()} keys · {O_SIGNED} signed · {O_NEW_BOXES} new short boxes needed · ~70% unbagged
         </p>
       </div>
 
@@ -675,7 +686,7 @@ export default function OrganizationPath() {
         <div>
           <div style={{ background:"#fff8e0", border:"1.5px solid #d4a800", borderRadius:6, padding:"12px 16px", marginBottom:20 }}>
             <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:"#8a6000", marginBottom:6 }}>
-              11,776 comics · 74 short boxes at 150 capacity = 79 boxes needed · 18 new short boxes required for overspill · 70% unbagged ≈ 8,250 comics needing bags and boards
+              {O_COMICS.toLocaleString()} comics · {O_BOXES} short boxes at {O_BOX_CAP} capacity = {O_BOXES_NEED} boxes needed · {O_NEW_BOXES} new short boxes required for overspill · ~70% unbagged ≈ {O_UNBAGGED.toLocaleString()} comics needing bags and boards
             </div>
             <div style={{ fontSize:"0.875rem", color:"#7a5500", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", lineHeight:1.6 }}>
               <strong>ORDER VIA YOUR COMIC SHOP</strong> — trade pricing saves ~$280 vs retail.
@@ -790,7 +801,7 @@ export default function OrganizationPath() {
           </div>
 
           <div style={{ fontSize:"0.875rem", color:"var(--muted2)", marginBottom:14, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>
-            {baggedCount} of 74 boxes bagged. Tap a row to mark it done.
+            {baggedCount} of {totalBoxCount} boxes bagged. Tap a row to mark it done.
             {baggedCount > 0 && (
               <button onClick={() => setBagged({})} style={{ marginLeft:12, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
                 background:"none", border:"1px solid var(--border)", color:"var(--muted)", borderRadius:3, padding:"2px 10px", cursor:"pointer" }}>

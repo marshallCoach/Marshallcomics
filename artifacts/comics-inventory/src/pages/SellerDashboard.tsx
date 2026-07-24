@@ -3,6 +3,10 @@ import { DATA } from "@/data/data";
 import type { Comic } from "@/data/data";
 import { CoverImage, CoverModal } from "@/components/CoverImage";
 
+// Live count of eBay-tagged books — used in the action list copy below so it
+// tracks the generated data instead of a hand-typed snapshot.
+const EBAY_TAGGED = DATA.comics.filter(c => (c.Platform || "").toUpperCase() === "EBAY").length;
+
 // ── helpers ──────────────────────────────────────────────────────────────────
 function parseVal(v: string | undefined | null): number {
   const m = (v || "").match(/(\d+(?:\.\d+)?)/);
@@ -148,8 +152,8 @@ const ACTION_PLAN: ActionItem[] = [
     costMin:0, costMax:0, returnMin:2000, returnMax:8000, effortHours:20 },
   { id:18, priority:"GREEN", category:"sell",
     label:"List eBay Non-Key Run Issues",
-    detail:"6,357 books tagged eBay. Start with Flash runs (Johns era), non-key JLA, UK sticker variants. $3-15 each — pure passive income. Batch 50 at a time.",
-    deadline:"Ongoing", book:"~6,357 eBay-tagged books", box:"Various",
+    detail:`${EBAY_TAGGED.toLocaleString()} books tagged eBay. Start with Flash runs (Johns era), non-key JLA, UK sticker variants. $3-15 each — pure passive income. Batch 50 at a time.`,
+    deadline:"Ongoing", book:`~${EBAY_TAGGED.toLocaleString()} eBay-tagged books`, box:"Various",
     costMin:0, costMax:0, returnMin:4000, returnMax:9000, effortHours:40 },
 ];
 
