@@ -32,7 +32,7 @@
  */
 
 import { readFileSync, writeFileSync, existsSync } from "fs";
-import { DATA3 } from "./artifacts/comics-inventory/src/data/data3.js";
+import { DATA3 } from "./artifacts/comics-inventory/src/data/data3.ts";
 
 // ── Config ────────────────────────────────────────────────────────────────────
 const CACHE_FILE = "./covers.json";
