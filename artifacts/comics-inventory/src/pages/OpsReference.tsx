@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { DATA3 } from "@/data/data3";
 
 function CmdBlock({ children }: { children: React.ReactNode }) {
   return (
@@ -52,7 +53,7 @@ const PROBLEMS = [
     body: <><strong>(a)</strong> Sheet name doesn't start with <code>✅ Clean Inventory</code> — rename it. <strong>(b)</strong> <code>Box Summary</code> sheet is missing — copy from master XLSX.</>,
     cmd: <><span style={{color:"var(--muted)"}}>% </span>python3 -c "import openpyxl; wb=openpyxl.load_workbook('attached_assets/FILE.xlsx', read_only=True); print(wb.sheetnames)"</> },
   { num: "05", q: "\"Which inventory file is authoritative right now?\"", tag: "Data", tagColor: "#58a6ff",
-    body: <>Always check the <strong>Data Integrity Log tab</strong> inside the xlsx first. Current authoritative working file: <code>comics_inventory_0407_1400_VALIDATED.xlsx</code> (10,899 rows). Validator baseline: Rule 5 (5 boxes over cap) · Rule 6 (354 same-box dupes — genuine distinct copies).</>,
+    body: <>Always check the <strong>Data Integrity Log tab</strong> inside the xlsx first. Current authoritative working file: <code>comics_inventory_2407_0912.xlsx</code> ({DATA3.comics.length.toLocaleString()} rows). Validator baseline: Rule 5 (5 boxes over cap) · Rule 6 (354 same-box dupes — genuine distinct copies).</>,
     cmd: null },
   { num: "06", q: "Validator shows CGC rows flagged as invalid", tag: "Data", tagColor: "#58a6ff",
     body: <>BOX_STATUS_ALLOWLIST: <code>AT CGC</code>, <code>AT MAGIC PRESSING → CGC</code>, <code>AT CGC — Roy Thomas SS</code>, <code>UNKNOWN — needs physical reassignment</code>. If a new status string appears, add it to both <code>brb_validate.py</code> and <code>brb_invalid_boxes.py</code>.</>,

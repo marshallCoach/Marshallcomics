@@ -279,6 +279,7 @@ def main():
     parser.add_argument("--file",        default=None,        help="xlsx file override")
     parser.add_argument("--reprocess",   action="store_true", help="Re-pull & trim existing results")
     parser.add_argument("--modern-pass", action="store_true", help="Priority queue: Modern/Modern Age era only, unpriced rows")
+    parser.add_argument("--min-year", type=int, default=0, help="Only queue books whose Year >= this (targeted recent-era de-risk pass)")
     parser.add_argument("--key-tier",    action="store_true", help="Tier 2: also queue Key Issue?=YES rows never eBay-fetched, regardless of value")
     args = parser.parse_args()
 
@@ -401,6 +402,15 @@ def main():
         issue = row.get("Issue #", "")
 
         era = str(row.get("Era", "")).strip()
+
+        # --min-year: targeted recent-era de-risk pass. A book old enough to have
+        # spiked would already carry NM >= $10 and be priced; the Absolute-Batman
+        # blind spot is RECENT books that jumped unexpectedly. Skip anything older.
+        if args.min_year:
+            ym = re.findall(r"\d{4}", str(row.get("Year", "")))
+            yv = next((int(y) for y in ym if 1900 < int(y) < 2100), 0)
+            if yv < args.min_year:
+                continue
 
         # Column names are "Key Issue?" / "Signed?" — not "Key" / "Signed".
         # The old code read the wrong names, so is_key/is_signed were always

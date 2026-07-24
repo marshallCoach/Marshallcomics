@@ -1,3 +1,10 @@
+import { DATA } from "@/data/data";
+
+// Live figures for the status strip — the numbered steps below stay as the
+// historical build log, but the headline status must reflect current data.
+const EP_ROWS   = DATA.comics.length;
+const EP_PRICED = DATA.comics.filter(c => c.eBay_Median != null || c.eBay_Avg != null).length;
+
 export default function EbayPipeline() {
   const steps = [
     {
@@ -84,7 +91,7 @@ export default function EbayPipeline() {
       <div style={{ marginBottom:28 }}>
         <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"3px", color:"var(--muted)", marginBottom:6 }}>BRB OPS · COMIC INVENTORY SYSTEM</div>
         <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"1.75rem", letterSpacing:"1px", color:"var(--text)", lineHeight:1.1, marginBottom:6 }}>eBay Pricing Pipeline</div>
-        <div style={{ fontSize:"0.875rem", color:"var(--muted)" }}>Status as of July 6, 2026 · 10,899 rows · 1,285 priced in xlsx · 1,313 matched in app data</div>
+        <div style={{ fontSize:"0.875rem", color:"var(--muted)" }}>Current data · {EP_ROWS.toLocaleString()} rows · {EP_PRICED.toLocaleString()} with eBay pricing in app data</div>
       </div>
 
       {/* Summary chips */}
