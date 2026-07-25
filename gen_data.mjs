@@ -269,11 +269,14 @@ for (let r = 1; r < allRows.length; r++) {
   if (!boxComicsMap[boxNum]) boxComicsMap[boxNum] = [];
   boxComicsMap[boxNum].push(row);
 }
-// Sort derived boxes numerically and append them (skip CC boxes ≥ 82 — physical boxes only)
+// Sort derived boxes numerically and append them. Boxes 82-103 are CC / holding /
+// bedroom-shelf boxes, not display boxes, so they stay out of the box map. Box 104
+// (the DC Absolute box, built 2407) IS a real physical box — include it.
+const PHYSICAL_HIGH_BOXES = new Set([104]);
 const derivedBoxNums = Object.keys(boxComicsMap).sort((a, b) => Number(a) - Number(b));
 for (const boxNum of derivedBoxNums) {
   const boxInt = parseInt(boxNum, 10);
-  if (!isNaN(boxInt) && boxInt >= 82) continue;
+  if (!isNaN(boxInt) && boxInt >= 82 && !PHYSICAL_HIGH_BOXES.has(boxInt)) continue;
   const rows = boxComicsMap[boxNum];
   const padded = boxNum.padStart(2, '0');
   const num = `BOX ${padded}`;

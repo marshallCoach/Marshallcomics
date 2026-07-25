@@ -95,6 +95,14 @@ def search_sold(title, issue, year, publisher, token):
     query = f"{_ascii(title)} #{issue_str} comic"
     if year and str(year).strip() not in ("", "nan", "None"):
         query += f" {_ascii(str(year)[:4])}"
+    # Negative keywords — added 2407 after the median-contamination bug (Roberto
+    # caught Fantastic Four x Gargoyles #1 priced at $222 vs a ~$6 real value).
+    # A loose title match pulls in a SECOND book's listings; the wrong comps were
+    # overwhelmingly graded slabs (CGC/CBCS/PGX), multi-book lots, and reprint
+    # sets — all far pricier than the single raw issue we're actually pricing.
+    # Excluding them keeps the comp set on the target book. Raw prices only; the
+    # inventory values raw copies, and CGC-bound books are handled separately.
+    query += " -cgc -cbcs -pgx -graded -slab -lot -set -reprint -facsimile"
 
     token_safe = token.encode("ascii", "ignore").decode("ascii") if token else ""
     if token_safe != token:
