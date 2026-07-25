@@ -333,7 +333,22 @@ router.get("/covers/search", async (req, res) => {
       return { ...r, score };
     }).sort((a, b) => b.score - a.score);
 
-    const best = scored[0] ?? null;
+    let best = scored[0] ?? null;
+
+    // HARD YEAR GATE — never return a wrong-ERA cover. If the target year is
+    // known and the best match's cover_date is >2 years outside it, CV does not
+    // have the right issue in its results (common for modern volumes of reused
+    // titles buried under reprints/foreign editions — e.g. "Green Lantern"
+    // 2024 returning the 1941 #1). A missing cover is honest and goes to the
+    // manual worklist; a 1941 cover on a 2024 book is a defect. Only reject on a
+    // CONFIRMED mismatch (cover_date present and out of range); blank dates pass.
+    if (best && yearRange) {
+      const by = best.cover_date ? parseInt(best.cover_date.slice(0, 4), 10) : NaN;
+      if (!isNaN(by) && (by < yearRange[0] - 2 || by > yearRange[1] + 2)) {
+        console.log(`[year-gate] rejected "${title}" #${issueNum}: best cover_date ${by} outside target ${yearRange.join("-")} — returning no cover`);
+        best = null;
+      }
+    }
 
     // Write result to disk cache under the new 3-part key (null if nothing
     // matched). Legacy 2-part entries are read but never written going
