@@ -99,7 +99,10 @@ interface ResolvedVolume { id: number; name: string; start_year: number | null; 
 // title + start-year, so a title with 20 issues costs one /volumes/ call, not 20.
 const volumeCache = new Map<string, ResolvedVolume | null>();
 function normTitle(t: string): string {
-  return String(t || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  // Strip a leading article so "Amazing Spider-Man" matches CV's "The Amazing
+  // Spider-Man" (and vice versa) — otherwise the exact-name score never fires
+  // and the resolver falls through with best score 0.
+  return String(t || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim().replace(/^the /, "");
 }
 async function cvFetch(url: string): Promise<any | null> {
   try {
@@ -113,16 +116,18 @@ async function resolveVolume(title: string, yearRange: [number, number] | null, 
   const cacheKey = `${normTitle(title)}|${yearRange ? yearRange[0] : ""}`;
   if (volumeCache.has(cacheKey)) return volumeCache.get(cacheKey)!;
 
+  // CV returns the name filter OLDEST-first (id ascending). Prolific titles
+  // (Batman, Green Lantern, Captain America, Avengers) have far more than 100
+  // volumes, so the modern one is never in the window — the log showed
+  // "best scored 14 (Batman, 1940)" even at limit 100. For a modern target
+  // year, sort NEWEST-first so the current volume is in the first 100; for an
+  // older target, keep default order so its era is still captured.
+  const sortModernFirst = !!yearRange && yearRange[0] >= 2000;
   const url = `${CV_BASE}/volumes/?${cvParams({
     filter: `name:${title}`,
     field_list: "id,name,start_year,count_of_issues,publisher",
-    // 100 (CV max), not 50: heavily-reused titles like "Green Lantern",
-    // "The Flash", "Titans" have dozens of volumes, and CV does not sort the
-    // name filter by relevance — the MODERN volume (the one we usually want)
-    // routinely fell outside the first 50, so resolveVolume returned no
-    // confident match and the cover came back wrong or empty. Once the correct
-    // volume is in the candidate set it wins on exact-name(20)+year(15).
     limit: "100",
+    ...(sortModernFirst ? { sort: "start_year:desc" } : {}),
   })}`;
   const data = await cvFetch(url);
   const results: Array<{ id: number; name: string; start_year?: string | number; publisher?: { name?: string } }> = data?.results ?? [];
