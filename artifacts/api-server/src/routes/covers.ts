@@ -116,7 +116,13 @@ async function resolveVolume(title: string, yearRange: [number, number] | null, 
   const url = `${CV_BASE}/volumes/?${cvParams({
     filter: `name:${title}`,
     field_list: "id,name,start_year,count_of_issues,publisher",
-    limit: "50",
+    // 100 (CV max), not 50: heavily-reused titles like "Green Lantern",
+    // "The Flash", "Titans" have dozens of volumes, and CV does not sort the
+    // name filter by relevance — the MODERN volume (the one we usually want)
+    // routinely fell outside the first 50, so resolveVolume returned no
+    // confident match and the cover came back wrong or empty. Once the correct
+    // volume is in the candidate set it wins on exact-name(20)+year(15).
+    limit: "100",
   })}`;
   const data = await cvFetch(url);
   const results: Array<{ id: number; name: string; start_year?: string | number; publisher?: { name?: string } }> = data?.results ?? [];
@@ -247,7 +253,10 @@ router.get("/covers/search", async (req, res) => {
       query: q,
       resources: "issue",
       field_list: "id,name,issue_number,volume,image,cover_date",
-      limit: "10",
+      // 25, not 10: for a reused title the right-year issue often sat past the
+      // first 10 search hits, so year scoring never saw it. Wider net lets the
+      // year gate below pick the correct-era cover.
+      limit: "25",
     })}`;
 
     const resp = await fetch(searchUrl, {
