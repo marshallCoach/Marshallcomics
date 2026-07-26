@@ -333,7 +333,7 @@ router.get("/covers/search", async (req, res) => {
       return { ...r, score };
     }).sort((a, b) => b.score - a.score);
 
-    let best = scored[0] ?? null;
+    let best: (typeof scored)[number] | null = scored[0] ?? null;
 
     // HARD YEAR GATE — never return a wrong-ERA cover. If the target year is
     // known and the best match's cover_date is >2 years outside it, CV does not
