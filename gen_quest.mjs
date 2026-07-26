@@ -112,6 +112,29 @@ if (boxSummarySheet) {
   console.warn('Box Summary sheet not found — locations will be unavailable in Box Quest');
 }
 
+// ── Box Locations tab → photo-verified zone codes (preferred, added 2507) ─────
+// Overrides Box Summary with "Zone Full Name — CODE" (e.g. "Boiler Room — BLR-5")
+// for confirmed-real boxes; ghost boxes (36/37/79/97) are absent from this tab.
+{
+  const blSheet = wb.worksheets.find(ws => ws.name === 'Box Locations');
+  if (blSheet) {
+    const blRows = worksheetToArrays(blSheet, '');
+    const lh = blRows[0];
+    const cB = lh.findIndex(h => String(h).trim() === 'Box #');
+    const cCode = lh.findIndex(h => String(h).trim() === 'Location Code');
+    const cZoneFull = lh.findIndex(h => String(h).trim() === 'Zone Full Name');
+    let n = 0;
+    for (let r = 1; r < blRows.length; r++) {
+      const boxNum = parseInt(blRows[r][cB], 10);
+      if (isNaN(boxNum)) continue;
+      const code = String(blRows[r][cCode] ?? '').trim();
+      const zoneFull = String(blRows[r][cZoneFull] ?? '').trim();
+      if (zoneFull || code) { boxLocations[boxNum] = `${zoneFull}${code ? ' — ' + code : ''}`; n++; }
+    }
+    console.log(`Read ${n} zone codes from Box Locations tab (preferred)`);
+  }
+}
+
 function col(name) {
   const i = headers.findIndex(h => String(h).trim() === name);
   if (i === -1) console.warn('Missing column:', name);
