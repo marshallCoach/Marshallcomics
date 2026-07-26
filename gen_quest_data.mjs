@@ -108,6 +108,32 @@ if (bsSheet) {
   console.warn('Box Summary sheet not found — locations unavailable');
 }
 
+// ── Box Locations tab → photo-verified zone codes (preferred over Box Summary) ─
+// Added 2507: the "Box Locations" tab carries photo-verified zone codes
+// (BFA-3 = Basement Front A, row 3) for every confirmed-real box. Prefer it:
+// it is the authority for which boxes exist and where. Boxes cleared from it
+// (36, 37, 79, 97 — proven non-existent) simply won't get a code/zone.
+const boxCode = {}, boxZoneFull = {}, boxStatus = {};
+const blSheet = wb.worksheets.find(ws => ws.name === 'Box Locations');
+if (blSheet) {
+  const blRows = sheetRows(blSheet);
+  const lh = blRows[0];
+  const col = (name) => lh.findIndex(h => String(h).trim() === name);
+  const cB = col('Box #'), cCode = col('Location Code'), cZoneFull = col('Zone Full Name'), cStatus = col('Status');
+  for (let r = 1; r < blRows.length; r++) {
+    const bn = parseInt(blRows[r][cB], 10);
+    if (isNaN(bn)) continue;
+    const code = String(blRows[r][cCode] ?? '').trim();
+    const zoneFull = String(blRows[r][cZoneFull] ?? '').trim();
+    if (code) boxCode[bn] = code;
+    if (zoneFull) boxZoneFull[bn] = zoneFull;
+    boxStatus[bn] = String(blRows[r][cStatus] ?? '').trim();
+    // Compose a location string zoneOf() can still split, so downstream stays happy.
+    if (zoneFull || code) boxLoc[bn] = `${zoneFull}${code ? ' — ' + code : ''}`;
+  }
+  console.log(`Read ${Object.keys(boxCode).length} zone codes from Box Locations tab`);
+}
+
 // ── Per-box counts + dup/clone detection ─────────────────────────────────────
 const boxCount = {};
 const k2 = new Map();   // Check 6:  title|issue|year|box
@@ -139,7 +165,8 @@ for (const [, boxes] of k11) if (boxes.length > 1) { cloneGroups++; cloneRows +=
 
 // ── Assemble boxes ───────────────────────────────────────────────────────────
 const boxes = Object.keys(boxLoc).map(Number).sort((a, b) => a - b).map(bn => ({
-  box: bn, loc: boxLoc[bn], zone: zoneOf(boxLoc[bn]),
+  box: bn, loc: boxLoc[bn], zone: boxZoneFull[bn] || zoneOf(boxLoc[bn]),
+  code: boxCode[bn] || '', status: boxStatus[bn] || '',
   rows: boxCount[bn] ?? boxSummaryComics[bn] ?? 0,
   vcap: capOf(bn), dupes: dupePerBox[bn] || 0, clones: clonePerBox[bn] || 0,
 }));
