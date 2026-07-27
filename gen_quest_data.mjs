@@ -164,9 +164,14 @@ for (const [, boxes] of k2) if (boxes.length > 1) { dupeGroups++; dupeRows += bo
 for (const [, boxes] of k11) if (boxes.length > 1) { cloneGroups++; cloneRows += boxes.length; for (const b of boxes) clonePerBox[b] = (clonePerBox[b] || 0) + 1; }
 
 // ── Assemble boxes ───────────────────────────────────────────────────────────
+// Physical-label aliases: a box whose data number differs from the number
+// written on the physical box. Data Box 98 lives in the box labeled "49"
+// (0408 finding: shelf labels and data numbers drifted). Show both.
+const BOX_LABEL_ALIAS = { 98: '49' };
 const boxes = Object.keys(boxLoc).map(Number).sort((a, b) => a - b).map(bn => ({
   box: bn, loc: boxLoc[bn], zone: boxZoneFull[bn] || zoneOf(boxLoc[bn]),
   code: boxCode[bn] || '', status: boxStatus[bn] || '',
+  labeledAs: BOX_LABEL_ALIAS[bn] || '',
   rows: boxCount[bn] ?? boxSummaryComics[bn] ?? 0,
   vcap: capOf(bn), dupes: dupePerBox[bn] || 0, clones: clonePerBox[bn] || 0,
 }));
