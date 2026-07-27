@@ -237,6 +237,42 @@ if (!bsSheet) {
   console.warn('Warning: No "Box Summary" sheet found — box data will be derived from comics rows only.');
 }
 const bsRows  = bsSheet ? worksheetToArrays(bsSheet, '') : [[]];
+
+// ── BOX LOCATIONS tab → photo-verified zone codes + which boxes really exist ──
+// Added 2707: the "Box Locations" tab is the authority for confirmed-real boxes
+// and their zone codes (BFA-3 etc.). Real physical boxes numbered >= 82 (95, 98,
+// 99, 104) live only here — the >= 82 rule below would otherwise drop them, so
+// the app showed only 65 boxes and no location codes.
+const boxLocData = {};            // boxNum -> { code, zoneFull }
+const realHighBoxes = new Set();  // confirmed-real box numbers >= 82
+{
+  const blSheet = wb.getWorksheet('Box Locations');
+  if (blSheet) {
+    const blRows = worksheetToArrays(blSheet, '');
+    const lh = blRows[0].map(h => String(h).trim());
+    const cB = lh.indexOf('Box #'), cCode = lh.indexOf('Location Code'), cZoneFull = lh.indexOf('Zone Full Name'), cStatus = lh.indexOf('Status');
+    for (let r = 1; r < blRows.length; r++) {
+      const raw = String(blRows[r][cB] ?? '').trim();
+      const bn = raw.replace(/^0+/, '') || raw;
+      if (!bn || !/^\d+$/.test(bn)) continue;
+      const code = String(blRows[r][cCode] ?? '').trim();
+      const zoneFull = String(blRows[r][cZoneFull] ?? '').trim();
+      const status = String(blRows[r][cStatus] ?? '').trim().toLowerCase();
+      boxLocData[bn] = { code, zoneFull };
+      if (parseInt(bn, 10) >= 82 && status.includes('confirmed')) realHighBoxes.add(bn);
+    }
+    console.log(`Read ${Object.keys(boxLocData).length} box locations from Box Locations tab (${realHighBoxes.size} confirmed-real >=82)`);
+  }
+}
+const locStr = (bn) => {
+  const d = boxLocData[bn];
+  return d ? `${d.zoneFull}${d.code ? ' — ' + d.code : ''}` : '';
+};
+const codeOf = (bn) => (boxLocData[bn]?.code || '');
+// Physical-label aliases: data Box 98 lives in the box physically labeled "49".
+const BOX_LABEL_ALIAS = { '98': '49' };
+const labeledAsOf = (bn) => (BOX_LABEL_ALIAS[bn] || '');
+
 const boxes = [];
 const coveredBoxNums = new Set();
 for (let r = 2; r < bsRows.length; r++) {
@@ -251,7 +287,7 @@ for (let r = 2; r < bsRows.length; r++) {
     Num: \`${num}\`, Comics: ${Number(row[1])||0}, Keys: ${Number(row[2])||0},
     Signed: ${Number(row[3])||0}, YearRange: \`${s(row,4)}\`,
     Label: \`${s(row,5)}\`, FirstBook: \`${s(row,6)}\`, LastBook: \`${s(row,7)}\`,
-    Location: \`${s(row,8)}\`, Notes: \`${s(row,9)}\`, DateAdded: \`${dateAdded}\`,
+    Location: \`${locStr(boxNum) || s(row,8)}\`, Code: \`${codeOf(boxNum)}\`, Notes: \`${s(row,9)}\`, DateAdded: \`${dateAdded}\`,
   }`);
 }
 
@@ -272,11 +308,12 @@ for (let r = 1; r < allRows.length; r++) {
 // Sort derived boxes numerically and append them. Boxes 82-103 are CC / holding /
 // bedroom-shelf boxes, not display boxes, so they stay out of the box map. Box 104
 // (the DC Absolute box, built 2407) IS a real physical box — include it.
-const PHYSICAL_HIGH_BOXES = new Set([104]);
 const derivedBoxNums = Object.keys(boxComicsMap).sort((a, b) => Number(a) - Number(b));
 for (const boxNum of derivedBoxNums) {
   const boxInt = parseInt(boxNum, 10);
-  if (!isNaN(boxInt) && boxInt >= 82 && !PHYSICAL_HIGH_BOXES.has(boxInt)) continue;
+  // Boxes >= 82 are CC/holding by default, EXCEPT those the Box Locations tab
+  // confirms as real physical boxes (95, 98, 99, 104 …).
+  if (!isNaN(boxInt) && boxInt >= 82 && !realHighBoxes.has(boxNum)) continue;
   const rows = boxComicsMap[boxNum];
   const padded = boxNum.padStart(2, '0');
   const num = `BOX ${padded}`;
@@ -293,7 +330,7 @@ for (const boxNum of derivedBoxNums) {
     Num: \`${num}\`, Comics: ${rows.length}, Keys: ${keyCount},
     Signed: ${signCount}, YearRange: \`${yearRange}\`,
     Label: \`\`, FirstBook: \`${firstBook.replace(/`/g,'\\`')}\`, LastBook: \`${lastBook.replace(/`/g,'\\`')}\`,
-    Location: \`\`, Notes: \`\`, DateAdded: \`${dateAdded}\`,
+    Location: \`${locStr(boxNum)}\`, Code: \`${codeOf(boxNum)}\`, labeledAs: \`${labeledAsOf(boxNum)}\`, Notes: \`\`, DateAdded: \`${dateAdded}\`,
   }`);
   console.log(`  Derived BOX ${padded}: ${rows.length} comics, ${keyCount} keys`);
 }
@@ -537,7 +574,7 @@ export interface Comic {
 export interface BoxSummary {
   Num: string; Comics: number; Keys: number; Signed: number; YearRange: string;
   Label: string; FirstBook: string; LastBook: string; Location: string;
-  Notes: string; DateAdded: string;
+  Code?: string; labeledAs?: string; Notes: string; DateAdded: string;
 }
 
 // Comics pulled from catalog sheets (Pulled Covers, Cover Box 2/3, CC Boxes).
