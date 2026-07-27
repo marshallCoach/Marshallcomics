@@ -225,6 +225,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                         >
                           <div className="box-tile-count">{b.Comics}</div>
                           <div className="box-tile-num">{b.Num.replace("BOX ", "Box ")}</div>
+                          {b.Code && <div className="box-tile-num" style={{ fontSize:"0.7em", opacity:0.7, letterSpacing:"0.5px" }}>{b.Code}</div>}
                           {Number(b.Keys)   > 0 && <div className="box-tile-keys">{b.Keys} Keys</div>}
                           {Number(b.Signed) > 0 && <div className="box-tile-sgn">{b.Signed} S</div>}
                         </div>
@@ -390,7 +391,15 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
               <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "1.75rem",
                 color: "var(--red)", letterSpacing: "2px", lineHeight: 1 }}>
                 {selectedBoxData.Num}
+                {(selectedBoxData as { labeledAs?: string }).labeledAs && (
+                  <span style={{ fontSize: "0.9rem", opacity: 0.7 }}> (labeled {(selectedBoxData as { labeledAs?: string }).labeledAs})</span>
+                )}
               </div>
+              {(selectedBoxData.Location || selectedBoxData.Code) && (
+                <div style={{ fontSize: "0.8rem", fontWeight: 600, color: "var(--red)", letterSpacing: "1px", marginTop: 4 }}>
+                  📍 {selectedBoxData.Location || selectedBoxData.Code}
+                </div>
+              )}
               <div style={{ fontSize: "0.875rem", fontWeight: 600, color: "var(--brown-light)", marginTop: 3 }}>
                 {selectedBoxData.Label.replace(/^Box \d+ — /i, "")}
               </div>

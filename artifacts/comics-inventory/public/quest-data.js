@@ -1,18 +1,18 @@
-// AUTO-GENERATED quest data — source: comics_inventory_2707_1015.xlsx (10914 rows) · generated 2026-07-27
+// AUTO-GENERATED quest data — source: comics_inventory_2707_1045.xlsx (10914 rows) · generated 2026-07-27
 // Regenerate with: node gen_quest_data.mjs
 window.QUEST_DATA = {
- "source": "comics_inventory_2707_1015.xlsx",
+ "source": "comics_inventory_2707_1045.xlsx",
  "generated": "2026-07-27",
  "totalRows": 10914,
  "dupe": {
-  "groups": 131,
-  "rows": 284,
-  "excess": 153
+  "groups": 101,
+  "rows": 213,
+  "excess": 112
  },
  "clone": {
-  "groups": 114,
-  "rows": 244,
-  "excess": 130
+  "groups": 84,
+  "rows": 173,
+  "excess": 89
  },
  "overCap": [
   {
@@ -142,8 +142,8 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 248,
    "vcap": 240,
-   "dupes": 70,
-   "clones": 70
+   "dupes": 46,
+   "clones": 46
   },
   {
    "box": 8,
@@ -178,8 +178,8 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 250,
    "vcap": 240,
-   "dupes": 65,
-   "clones": 65
+   "dupes": 18,
+   "clones": 18
   },
   {
    "box": 11,
@@ -1028,7 +1028,7 @@ window.QUEST_DATA = {
    "title": "The Clones",
    "est": "identical twin rows — safest wins first",
    "accent": "green",
-   "blurb": "Rows that are exact copies of another row: same book, same box, logged twice. Live count: 114 clone groups / 130 excess rows. Highest confidence, lowest effort, biggest visible progress.",
+   "blurb": "Rows that are exact copies of another row: same book, same box, logged twice. Live count: 84 clone groups / 89 excess rows. Highest confidence, lowest effort, biggest visible progress.",
    "sittings": [
     {
      "id": "A1",
