@@ -96,7 +96,11 @@ def main():
         y = yr(g(r, "Year")) or 0
         cnt = e.get("count") or 0
         ratio = med / nm if nm else 99
-        if y < 2015 or ratio < 3:
+        # Suppress inflated prices from year 2000 on (the wrong-issue contamination
+        # era — cheap digital/New-52-era books mismatched to older valuable issues).
+        # Pre-2000 vintage is left alone (its eBay value is more likely genuine).
+        # Confirmed KEYS are always exempt above, so real value is preserved.
+        if y < 2000 or ratio < 3:
             continue
         rec = dict(title=t, issue=g(r, "Issue #"), year=y, nm=nm, med=med, ratio=ratio, cnt=cnt, delta=med - nm)
         # Roberto (2707): go with the LOWER value for ALL borderline modern
