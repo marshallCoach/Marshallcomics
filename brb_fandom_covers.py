@@ -31,7 +31,7 @@ COVERS = os.path.join(ROOT, "covers.json")
 PUBLIC = os.path.join(ROOT, "artifacts/comics-inventory/public/covers.json")
 WIKIS = ["https://marvel.fandom.com/api.php", "https://dc.fandom.com/api.php"]
 UA = "MarshallComicsInventory/1.0"
-DELAY = 0.5
+DELAY = 1.3
 
 
 def latest_xlsx():
