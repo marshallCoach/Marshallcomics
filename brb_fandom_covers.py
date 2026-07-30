@@ -31,7 +31,7 @@ COVERS = os.path.join(ROOT, "covers.json")
 PUBLIC = os.path.join(ROOT, "artifacts/comics-inventory/public/covers.json")
 WIKIS = ["https://marvel.fandom.com/api.php", "https://dc.fandom.com/api.php"]
 UA = "MarshallComicsInventory/1.0"
-DELAY = 1.3
+DELAY = 0.6
 
 
 def latest_xlsx():
@@ -132,7 +132,7 @@ def main():
 
     filled = 0
     for i, (t, iss, vol) in enumerate(todo, 1):
-        res = fandom_cover(t, iss, vol)
+        res = fandom_cover(t, vol, iss)   # (title, vol, issue) — order matters!
         if res:
             url, date, wiki = res
             covers[f"{t}|||{iss}|||{vol}"] = {"url": url, "large": url, "date": date, "source": f"fandom-{wiki}"}
