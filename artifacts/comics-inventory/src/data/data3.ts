@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_2707_1500.xlsx  |  Generated: 2026-07-30
+// Source: comics_inventory_2707_1545.xlsx  |  Generated: 2026-07-30
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -1130,7 +1130,7 @@ Already signed.`,
     Cover_Artist: `Carmen Carnero (interior artist — cover verify)`, Date_Added: ``,
     Imprint: `Marvel`, Box: `72`,
     Crossover: ``, Start_Bid: `10`,
-    Volume: `9`, Entry: `58`,
+    Volume: `1`, Entry: `58`,
     eBay_Avg: 9.63, eBay_Low: 2.95, eBay_High: 14.59, eBay_Count: 7, eBay_Median: 9.45,
   },
   {
@@ -17521,7 +17521,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Chris Samnee`, Date_Added: `May 17, 2026`,
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `9`, Entry: `1163`,
+    Volume: `1`, Entry: `1163`,
     eBay_Avg: 6, eBay_Low: 1, eBay_High: 11, eBay_Count: 3, eBay_Median: 6,
   },
   {
@@ -17540,7 +17540,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Chris Samnee`, Date_Added: `May 17, 2026`,
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `9`, Entry: `1164`,
+    Volume: `1`, Entry: `1164`,
     eBay_Avg: 9.99, eBay_Low: 9.99, eBay_High: 9.99, eBay_Count: 2, eBay_Median: 9.99,
   },
   {
@@ -17559,7 +17559,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Chris Samnee`, Date_Added: `May 17, 2026`,
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `20`,
-    Volume: `9`, Entry: `1165`,
+    Volume: `1`, Entry: `1165`,
     eBay_Avg: 15.87, eBay_Low: 4.95, eBay_High: 31.99, eBay_Count: 8, eBay_Median: 14.76,
   },
   {
@@ -17578,7 +17578,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Michael Cho`, Date_Added: `May 17, 2026`,
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `9`, Entry: `1166`,
+    Volume: `1`, Entry: `1166`,
     eBay_Avg: 2.94, eBay_Low: 1, eBay_High: 5.8, eBay_Count: 5, eBay_Median: 2,
   },
   {
@@ -17597,7 +17597,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Michael Cho`, Date_Added: `May 17, 2026`,
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `9`, Entry: `1167`,
+    Volume: `1`, Entry: `1167`,
     eBay_Avg: 2.22, eBay_Low: 1, eBay_High: 3.96, eBay_Count: 4, eBay_Median: 1.96,
   },
   {
@@ -17616,7 +17616,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Michael Cho`, Date_Added: `May 17, 2026`,
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `9`, Entry: `1168`,
+    Volume: `1`, Entry: `1168`,
     eBay_Avg: 4.8, eBay_Low: 1, eBay_High: 9.99, eBay_Count: 6, eBay_Median: 3.4,
   },
   {
@@ -17635,7 +17635,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Michael Cho`, Date_Added: `May 17, 2026`,
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `9`, Entry: `1169`,
+    Volume: `1`, Entry: `1169`,
     eBay_Avg: 5.8, eBay_Low: 1, eBay_High: 12, eBay_Count: 9, eBay_Median: 4.88,
   },
   {
@@ -18680,7 +18680,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Gene Colan`, Date_Added: `May 17, 2026`,
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `8`, Entry: `1226`,
+    Volume: `1`, Entry: `1226`,
     eBay_Avg: 7.72, eBay_Low: 1, eBay_High: 20, eBay_Count: 9, eBay_Median: 5.99,
   },
   {
@@ -20295,7 +20295,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 17, 2026`,
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `20`,
-    Volume: `5`, Entry: `1035`,
+    Volume: `1`, Entry: `1035`,
     eBay_Avg: 9.12, eBay_Low: 4.99, eBay_High: 20.75, eBay_Count: 8, eBay_Median: 8,
   },
   {
@@ -20333,7 +20333,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 17, 2026`,
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `5`, Entry: `1037`,
+    Volume: `1`, Entry: `1037`,
     eBay_Avg: 7.53, eBay_Low: 1.3, eBay_High: 9.99, eBay_Count: 5, eBay_Median: 9.99,
   },
   {
@@ -20352,7 +20352,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 17, 2026`,
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `5`, Entry: `1038`,
+    Volume: `1`, Entry: `1038`,
     eBay_Avg: 8.52, eBay_Low: 2, eBay_High: 9.99, eBay_Count: 10, eBay_Median: 9.99,
   },
   {
@@ -20371,7 +20371,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 17, 2026`,
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `5`, Entry: `1039`,
+    Volume: `1`, Entry: `1039`,
     eBay_Avg: 9.83, eBay_Low: 9, eBay_High: 9.99, eBay_Count: 6, eBay_Median: 9.99,
   },
   {
@@ -20390,7 +20390,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 17, 2026`,
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `5`, Entry: `1040`,
+    Volume: `1`, Entry: `1040`,
     eBay_Avg: 8.89, eBay_Low: 2, eBay_High: 10.95, eBay_Count: 10, eBay_Median: 9.99,
   },
   {
@@ -20409,7 +20409,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 17, 2026`,
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `5`, Entry: `1041`,
+    Volume: `1`, Entry: `1041`,
     eBay_Avg: 8.79, eBay_Low: 6.12, eBay_High: 11, eBay_Count: 4, eBay_Median: 9.01,
   },
   {
@@ -20428,7 +20428,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 17, 2026`,
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `5`, Entry: `1042`,
+    Volume: `1`, Entry: `1042`,
     eBay_Avg: 9.99, eBay_Low: 9.99, eBay_High: 9.99, eBay_Count: 2, eBay_Median: 9.99,
   },
   {
@@ -20447,7 +20447,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 17, 2026`,
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `5`, Entry: `1043`,
+    Volume: `1`, Entry: `1043`,
     eBay_Avg: 4.99, eBay_Low: 4.99, eBay_High: 4.99, eBay_Count: 1, eBay_Median: 4.99,
   },
   {
@@ -20466,7 +20466,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 17, 2026`,
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `5`, Entry: `1044`,
+    Volume: `1`, Entry: `1044`,
     eBay_Avg: 9.99, eBay_Low: 9.99, eBay_High: 9.99, eBay_Count: 5, eBay_Median: 9.99,
   },
   {
@@ -20485,7 +20485,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 17, 2026`,
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `5`, Entry: `1045`,
+    Volume: `1`, Entry: `1045`,
     eBay_Avg: 9.48, eBay_Low: 6.95, eBay_High: 9.99, eBay_Count: 6, eBay_Median: 9.99,
   },
   {
@@ -20561,7 +20561,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 17, 2026`,
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `5`, Entry: `1046`,
+    Volume: `1`, Entry: `1046`,
     eBay_Avg: 11.98, eBay_Low: 11.98, eBay_High: 11.98, eBay_Count: 1, eBay_Median: 11.98,
   },
   {
@@ -20580,7 +20580,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 17, 2026`,
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `5`, Entry: `1047`,
+    Volume: `1`, Entry: `1047`,
     eBay_Avg: 9.99, eBay_Low: 9.99, eBay_High: 9.99, eBay_Count: 4, eBay_Median: 9.99,
   },
   {
@@ -20599,7 +20599,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 17, 2026`,
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `5`, Entry: `1048`,
+    Volume: `1`, Entry: `1048`,
     eBay_Avg: 7.66, eBay_Low: 2.99, eBay_High: 9.99, eBay_Count: 3, eBay_Median: 9.99,
   },
   {
@@ -20618,7 +20618,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 17, 2026`,
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `5`, Entry: `1049`,
+    Volume: `1`, Entry: `1049`,
     eBay_Avg: 9.99, eBay_Low: 9.99, eBay_High: 9.99, eBay_Count: 5, eBay_Median: 9.99,
   },
   {
@@ -20637,7 +20637,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 17, 2026`,
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `5`, Entry: `1050`,
+    Volume: `1`, Entry: `1050`,
     eBay_Avg: 4.62, eBay_Low: 4.24, eBay_High: 5, eBay_Count: 2, eBay_Median: 4.62,
   },
   {
@@ -41803,7 +41803,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `DC Infinite Frontier`, Box: `56`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `6`, Entry: `2470`,
+    Volume: `1`, Entry: `2470`,
     eBay_Avg: 7.5, eBay_Low: 3.2, eBay_High: 17.99, eBay_Count: 7, eBay_Median: 6.98,
   },
   {
@@ -41822,7 +41822,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `DC Infinite Frontier`, Box: `56`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `6`, Entry: `2471`,
+    Volume: `1`, Entry: `2471`,
     eBay_Avg: 3.45, eBay_Low: 1.99, eBay_High: 6.64, eBay_Count: 9, eBay_Median: 2.95,
   },
   {
@@ -41841,7 +41841,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `DC Infinite Frontier`, Box: `56`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `6`, Entry: `2472`,
+    Volume: `1`, Entry: `2472`,
     eBay_Avg: 4.89, eBay_Low: 2, eBay_High: 9.99, eBay_Count: 10, eBay_Median: 4.47,
   },
   {
@@ -41860,7 +41860,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `DC Infinite Frontier`, Box: `56`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `6`, Entry: `2473`,
+    Volume: `1`, Entry: `2473`,
     eBay_Avg: 5.09, eBay_Low: 2.25, eBay_High: 10, eBay_Count: 9, eBay_Median: 5,
   },
   {
@@ -41879,7 +41879,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `DC Infinite Frontier`, Box: `56`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `6`, Entry: `2474`,
+    Volume: `1`, Entry: `2474`,
     eBay_Avg: 5.59, eBay_Low: 2.25, eBay_High: 9.95, eBay_Count: 10, eBay_Median: 5.03,
   },
   {
@@ -41898,7 +41898,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `DC Infinite Frontier`, Box: `56`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `6`, Entry: `2475`,
+    Volume: `1`, Entry: `2475`,
     eBay_Avg: 4.19, eBay_Low: 2.25, eBay_High: 7.14, eBay_Count: 9, eBay_Median: 3.99,
   },
   {
@@ -41917,7 +41917,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `DC Infinite Frontier`, Box: `56`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `6`, Entry: `2476`,
+    Volume: `1`, Entry: `2476`,
     eBay_Avg: 5.25, eBay_Low: 2.25, eBay_High: 9.99, eBay_Count: 10, eBay_Median: 4.99,
   },
   {
@@ -41936,7 +41936,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `DC Infinite Frontier`, Box: `56`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `6`, Entry: `2477`,
+    Volume: `1`, Entry: `2477`,
     eBay_Avg: 12.3, eBay_Low: 3.96, eBay_High: 17.99, eBay_Count: 3, eBay_Median: 14.96,
   },
   {
@@ -41955,7 +41955,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `DC Infinite Frontier`, Box: `56`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `6`, Entry: `2478`,
+    Volume: `1`, Entry: `2478`,
     eBay_Avg: 4.43, eBay_Low: 2.5, eBay_High: 7.26, eBay_Count: 8, eBay_Median: 3.75,
   },
   {
@@ -41974,7 +41974,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `DC Infinite Frontier`, Box: `56`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `6`, Entry: `2479`,
+    Volume: `1`, Entry: `2479`,
     eBay_Avg: 3.73, eBay_Low: 2.99, eBay_High: 3.99, eBay_Count: 4, eBay_Median: 3.98,
   },
   {
@@ -41993,7 +41993,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `DC Infinite Frontier`, Box: `56`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `6`, Entry: `2480`,
+    Volume: `1`, Entry: `2480`,
     eBay_Avg: 2.58, eBay_Low: 1.15, eBay_High: 4, eBay_Count: 2, eBay_Median: 2.58,
   },
   {
@@ -42012,7 +42012,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `DC Infinite Frontier`, Box: `56`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `6`, Entry: `2481`,
+    Volume: `1`, Entry: `2481`,
     eBay_Avg: 14.45, eBay_Low: 2.99, eBay_High: 24.95, eBay_Count: 6, eBay_Median: 17.99,
   },
   {
@@ -42031,7 +42031,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `DC Infinite Frontier`, Box: `56`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `6`, Entry: `2482`,
+    Volume: `1`, Entry: `2482`,
     eBay_Avg: 13.73, eBay_Low: 3.99, eBay_High: 17.99, eBay_Count: 4, eBay_Median: 16.48,
   },
   {
@@ -42050,7 +42050,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `DC Infinite Frontier`, Box: `56`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `6`, Entry: `2483`,
+    Volume: `1`, Entry: `2483`,
     eBay_Avg: 21.47, eBay_Low: 17.99, eBay_High: 24.95, eBay_Count: 2, eBay_Median: 21.47,
   },
   {
@@ -42069,7 +42069,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `DC Infinite Frontier`, Box: `56`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `6`, Entry: `2484`,
+    Volume: `1`, Entry: `2484`,
     eBay_Avg: 21.47, eBay_Low: 17.99, eBay_High: 24.95, eBay_Count: 2, eBay_Median: 21.47,
   },
   {
@@ -42088,7 +42088,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `DC Infinite Frontier`, Box: `56`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `6`, Entry: `2485`,
+    Volume: `1`, Entry: `2485`,
     eBay_Avg: 3.47, eBay_Low: 2.99, eBay_High: 3.95, eBay_Count: 2, eBay_Median: 3.47,
   },
   {
@@ -42107,7 +42107,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `DC Infinite Frontier`, Box: `56`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `6`, Entry: `2486`,
+    Volume: `1`, Entry: `2486`,
     eBay_Avg: 10.99, eBay_Low: 3.99, eBay_High: 17.99, eBay_Count: 2, eBay_Median: 10.99,
   },
   {
@@ -42126,7 +42126,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `DC Infinite Frontier`, Box: `56`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `6`, Entry: `2487`,
+    Volume: `1`, Entry: `2487`,
     eBay_Avg: 10.99, eBay_Low: 3.99, eBay_High: 17.99, eBay_Count: 2, eBay_Median: 10.99,
   },
   {
@@ -61905,7 +61905,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Travis Charest & Steve Epting`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Marvel`, Box: `30`,
     Crossover: ``, Start_Bid: `4`,
-    Volume: `6`, Entry: `3543`,
+    Volume: `1`, Entry: `3543`,
     eBay_Avg: 10.45, eBay_Low: 3.13, eBay_High: 20, eBay_Count: 8, eBay_Median: 10,
   },
   {
@@ -61924,7 +61924,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Marvel`, Box: `30`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `6`, Entry: `3544`,
+    Volume: `1`, Entry: `3544`,
     eBay_Avg: 6.23, eBay_Low: 3.99, eBay_High: 9.99, eBay_Count: 4, eBay_Median: 5.47,
   },
   {
@@ -61943,7 +61943,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Marvel`, Box: `30`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `6`, Entry: `3545`,
+    Volume: `1`, Entry: `3545`,
     eBay_Avg: 8.49, eBay_Low: 3.99, eBay_High: 9.99, eBay_Count: 4, eBay_Median: 9.99,
   },
   {
@@ -61962,7 +61962,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `Marvel`, Box: `30`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `6`, Entry: `3546`,
+    Volume: `1`, Entry: `3546`,
     eBay_Avg: 8.11, eBay_Low: 3.69, eBay_High: 9.99, eBay_Count: 6, eBay_Median: 9.99,
   },
   {
@@ -65363,7 +65363,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `DC Rebirth`, Box: `55`,
     Crossover: ``, Start_Bid: `5`,
-    Volume: `5`, Entry: `3726`,
+    Volume: `1`, Entry: `3726`,
     eBay_Avg: 8.76, eBay_Low: 2.5, eBay_High: 14.99, eBay_Count: 10, eBay_Median: 8.99,
   },
   {
@@ -65382,7 +65382,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Cover_Artist: `Various`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `DC Infinite Frontier`, Box: `55`,
     Crossover: ``, Start_Bid: `1`,
-    Volume: `6`, Entry: `3727`,
+    Volume: `1`, Entry: `3727`,
     eBay_Avg: 6.76, eBay_Low: 1.25, eBay_High: 18.19, eBay_Count: 9, eBay_Median: 5.99,
   },
   {
@@ -208122,7 +208122,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   },
   {
     Title: `Captain America`, Issue: `264`, Publisher: `Marvel`,
-    Year: `1982`, Volume: `9`, Cover_Artist: `Carmen Carnero (interior artist — cover verify)`,
+    Year: `1982`, Volume: `1`, Cover_Artist: `Carmen Carnero (interior artist — cover verify)`,
     Key: `YES`, Key_Reason: `Captain America #264 (1981) — SIGNED by Mike Zeck. Zeck is the legendary Cap artist known for the iconic "Kraven's Last Hunt" and Secret Wars covers. JM DeMatteis era. CGC x JSA Yellow/Black Authentic Autograph candidate.; Tier 1 #4 — signed by Mike Zeck. Per classification spec rule 4, a signature makes the copy unique and is always a key, independent of issue significance.`,
     Signed: `YES`, Signed_By: `Kyle Baker`,
     Era: `Modern`, Writer: `Collin Kelly & Jackson Lanzing`,
