@@ -487,6 +487,15 @@ def main():
         other_count = len(queue) - key_count - sign_count
         print(f"  Keys: {key_count}  Signed: {sign_count}  Other: {other_count}")
     else:
+        # Cheap-books sweep (--max-value): drop books already priced so --limit
+        # advances to UNPRICED ones each run (resumable). Without this the sorted
+        # first-1000 are the already-fetched books, all skipped, and the sweep
+        # never reaches the tail — "Fetched: 0  Skipped (recent): 1000" forever.
+        if args.max_value:
+            # Skip anything already ATTEMPTED (has fetched_at) — priced, suppressed,
+            # or no-results alike — so the sweep only fetches never-tried books.
+            queue = [c for c in queue
+                     if not (results.get(f"{c['title']}|||{c['issue']}") or {}).get("fetched_at")]
         queue.sort(key=lambda x: x["adj_value"], reverse=True)
 
     cgc_queue.sort(key=lambda x: x["nm_value"], reverse=True)
