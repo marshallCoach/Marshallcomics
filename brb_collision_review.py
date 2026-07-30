@@ -26,7 +26,7 @@ from openpyxl.styles import Font, PatternFill
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 ASSETS = os.path.join(ROOT, "attached_assets")
-API = "https://marvel.fandom.com/api.php"
+WIKIS = ["https://marvel.fandom.com/api.php", "https://dc.fandom.com/api.php"]
 UA = "MarshallComicsInventory/1.0"
 DELAY = 0.25
 
@@ -67,13 +67,16 @@ def fandom_year_cover(page):
     if page in _cache:
         return _cache[page]
     out = (None, None)
-    try:
-        u = (f"{API}?action=parse&page={urllib.parse.quote(page)}&prop=wikitext"
-             "&format=json&formatversion=2&redirects=1")
-        with urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": UA}), timeout=30) as r:
-            d = json.load(r)
-        wt = d.get("parse", {}).get("wikitext", "")
-        if wt:
+    for API in WIKIS:              # try Marvel, then DC
+        try:
+            u = (f"{API}?action=parse&page={urllib.parse.quote(page)}&prop=wikitext"
+                 "&format=json&formatversion=2&redirects=1")
+            with urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": UA}), timeout=30) as r:
+                d = json.load(r)
+            wt = d.get("parse", {}).get("wikitext", "")
+            time.sleep(DELAY)
+            if not wt:
+                continue
             def f(*names):
                 for n in names:
                     m = re.search(r"\|\s*" + n + r"\s*=\s*([^\n|]+)", wt)
@@ -82,11 +85,14 @@ def fandom_year_cover(page):
                         if v:
                             return v
                 return None
-            out = (yr(f("ReleaseDate", "CoverDate", "Year")), f("CoverArtist1_1", "CoverArtist_1"))
-    except Exception:
-        pass
+            # DC uses Pubyear/Year; Marvel uses ReleaseDate/CoverDate
+            y = yr(f("ReleaseDate", "CoverDate", "Pubyear", "Year"))
+            if y:
+                out = (y, f("CoverArtist1_1", "CoverArtist_1", "CoverArtist1"))
+                break
+        except Exception:
+            time.sleep(DELAY)
     _cache[page] = out
-    time.sleep(DELAY)
     return out
 
 
@@ -96,6 +102,7 @@ def main():
     ap.add_argument("--out", default="collision_review.xlsx")
     args = ap.parse_args()
     boxes = {b.strip() for b in args.boxes.split(",")}
+    all_boxes = "all" in boxes
 
     xlsx = latest_xlsx()
     print(f"Source: {os.path.basename(xlsx)}  boxes: {sorted(boxes)}", flush=True)
@@ -110,7 +117,7 @@ def main():
     groups = defaultdict(list)
     for r in rows[1:]:
         b = str(g(r, "Box #") or "").strip()
-        if b not in boxes:
+        if not all_boxes and b not in boxes:
             continue
         groups[(str(g(r, "Title") or "").strip(), ni(g(r, "Issue #")), str(g(r, "Year") or "").strip(), b)].append(r)
     coll = {k: v for k, v in groups.items() if len(v) > 1}

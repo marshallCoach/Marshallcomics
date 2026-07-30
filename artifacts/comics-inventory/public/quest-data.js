@@ -1,18 +1,18 @@
-// AUTO-GENERATED quest data — source: comics_inventory_2707_1200.xlsx (10914 rows) · generated 2026-07-30
+// AUTO-GENERATED quest data — source: comics_inventory_2707_1330.xlsx (10914 rows) · generated 2026-07-30
 // Regenerate with: node gen_quest_data.mjs
 window.QUEST_DATA = {
- "source": "comics_inventory_2707_1200.xlsx",
+ "source": "comics_inventory_2707_1330.xlsx",
  "generated": "2026-07-30",
  "totalRows": 10914,
  "dupe": {
-  "groups": 102,
-  "rows": 215,
-  "excess": 113
+  "groups": 86,
+  "rows": 181,
+  "excess": 95
  },
  "clone": {
-  "groups": 85,
-  "rows": 175,
-  "excess": 90
+  "groups": 74,
+  "rows": 154,
+  "excess": 80
  },
  "overCap": [
   {
@@ -82,7 +82,7 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 76,
    "vcap": 240,
-   "dupes": 4,
+   "dupes": 2,
    "clones": 2
   },
   {
@@ -106,8 +106,8 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 243,
    "vcap": 240,
-   "dupes": 11,
-   "clones": 11
+   "dupes": 10,
+   "clones": 10
   },
   {
    "box": 5,
@@ -130,7 +130,7 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 123,
    "vcap": 240,
-   "dupes": 9,
+   "dupes": 6,
    "clones": 0
   },
   {
@@ -214,8 +214,8 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 173,
    "vcap": 240,
-   "dupes": 4,
-   "clones": 4
+   "dupes": 2,
+   "clones": 2
   },
   {
    "box": 14,
@@ -250,8 +250,8 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 171,
    "vcap": 240,
-   "dupes": 6,
-   "clones": 6
+   "dupes": 2,
+   "clones": 2
   },
   {
    "box": 17,
@@ -274,7 +274,7 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 177,
    "vcap": 240,
-   "dupes": 2,
+   "dupes": 0,
    "clones": 0
   },
   {
@@ -298,8 +298,8 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 174,
    "vcap": 240,
-   "dupes": 15,
-   "clones": 6
+   "dupes": 14,
+   "clones": 4
   },
   {
    "box": 21,
@@ -346,7 +346,7 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 152,
    "vcap": 240,
-   "dupes": 2,
+   "dupes": 0,
    "clones": 0
   },
   {
@@ -442,7 +442,7 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 94,
    "vcap": 240,
-   "dupes": 7,
+   "dupes": 8,
    "clones": 6
   },
   {
@@ -562,8 +562,8 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 164,
    "vcap": 240,
-   "dupes": 8,
-   "clones": 8
+   "dupes": 2,
+   "clones": 2
   },
   {
    "box": 49,
@@ -610,7 +610,7 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 150,
    "vcap": 240,
-   "dupes": 7,
+   "dupes": 5,
    "clones": 2
   },
   {
@@ -694,7 +694,7 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 108,
    "vcap": 240,
-   "dupes": 2,
+   "dupes": 0,
    "clones": 0
   },
   {
@@ -802,8 +802,8 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 122,
    "vcap": 100,
-   "dupes": 8,
-   "clones": 6
+   "dupes": 4,
+   "clones": 4
   },
   {
    "box": 75,
@@ -922,8 +922,8 @@ window.QUEST_DATA = {
    "labeledAs": "49",
    "rows": 158,
    "vcap": 240,
-   "dupes": 12,
-   "clones": 12
+   "dupes": 8,
+   "clones": 8
   },
   {
    "box": 99,
@@ -1028,7 +1028,7 @@ window.QUEST_DATA = {
    "title": "The Clones",
    "est": "identical twin rows — safest wins first",
    "accent": "green",
-   "blurb": "Rows that are exact copies of another row: same book, same box, logged twice. Live count: 85 clone groups / 90 excess rows. Highest confidence, lowest effort, biggest visible progress.",
+   "blurb": "Rows that are exact copies of another row: same book, same box, logged twice. Live count: 74 clone groups / 80 excess rows. Highest confidence, lowest effort, biggest visible progress.",
    "sittings": [
     {
      "id": "A1",
