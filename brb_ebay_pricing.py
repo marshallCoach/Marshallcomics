@@ -102,7 +102,10 @@ def search_sold(title, issue, year, publisher, token):
     # sets — all far pricier than the single raw issue we're actually pricing.
     # Excluding them keeps the comp set on the target book. Raw prices only; the
     # inventory values raw copies, and CGC-bound books are handled separately.
-    query += " -cgc -cbcs -pgx -graded -slab -lot -set -reprint -facsimile"
+    # NOTE: eBay Browse API does NOT support "-keyword" exclusion syntax in q —
+    # it treats the tokens as literal text and matches nothing, so every search
+    # returned NO RESULTS. Contamination is handled after the fetch by
+    # brb_ebay_rescore.py (cluster split on the NM prior) instead.
 
     token_safe = token.encode("ascii", "ignore").decode("ascii") if token else ""
     if token_safe != token:
