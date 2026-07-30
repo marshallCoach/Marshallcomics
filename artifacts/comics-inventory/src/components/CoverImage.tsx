@@ -71,9 +71,10 @@ interface Props {
   onClick?: (largeUrl: string | null) => void;
   className?: string;
   style?: React.CSSProperties;
+  objectFit?: "cover" | "contain";
 }
 
-export function CoverImage({ comic, width = 56, height = 84, onClick, style }: Props) {
+export function CoverImage({ comic, width = 56, height = 84, onClick, style, objectFit = "cover" }: Props) {
   const [src, setSrc]         = useState<string>(() => getCoverSvgUrl(comic as ComicLike, { width, height }));
   const [realUrl, setRealUrl] = useState<string | null>(null);
   const [loaded, setLoaded]   = useState(false);
@@ -133,7 +134,7 @@ export function CoverImage({ comic, width = 56, height = 84, onClick, style }: P
           display: "block",
           width: "100%",
           height: "100%",
-          objectFit: "cover",
+          objectFit,
           borderRadius: 4,
           transition: "opacity 0.2s",
           opacity: (isSvg || loaded) && !error ? 1 : 0.7,
