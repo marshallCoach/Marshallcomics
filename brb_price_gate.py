@@ -98,15 +98,17 @@ def main():
         ratio = med / nm if nm else 99
         if y < 2015 or ratio < 3:
             continue
-        rec = dict(title=t, issue=g(r, "Issue #"), year=y, nm=nm, med=med, ratio=ratio, cnt=cnt)
-        if ratio >= 5 or cnt < 3:
-            suppressed.append((key, rec))
-        else:
-            flagged.append((key, rec))
+        rec = dict(title=t, issue=g(r, "Issue #"), year=y, nm=nm, med=med, ratio=ratio, cnt=cnt, delta=med - nm)
+        # Roberto (2707): go with the LOWER value for ALL borderline modern
+        # non-key books (manage expectations) — suppress the inflated eBay price
+        # and fall back to NM. Only surface for review the ones with a >= $25
+        # delta (median - NM); smaller deltas aren't worth attention.
+        suppressed.append((key, rec))
 
+    review = [(k, r) for k, r in suppressed if r["delta"] >= 25]
     print(f"eBay-priced modern non-key books >$10 with median >= 3x NM:")
-    print(f"  SUPPRESS (ratio>=5 or <3 comps — wrong-issue near-certain): {len(suppressed)}")
-    print(f"  FLAG for review (ratio 3-5, >=3 comps)                    : {len(flagged)}")
+    print(f"  SUPPRESSED (all -> fall back to lower NM value): {len(suppressed)}")
+    print(f"  of which worth your review (>= $25 delta)      : {len(review)}")
     print(f"\n  top suppressions (eBay median -> NM fallback):")
     for key, rec in sorted(suppressed, key=lambda x: -x[1]["med"])[:12]:
         print(f"    {rec['title'][:30]:<31} #{rec['issue']} ({rec['year']})  ${rec['med']:.0f} -> ${rec['nm']:.0f}  ({rec['cnt']}c)")
@@ -126,17 +128,16 @@ def main():
         json.dump(d, open(EBAY, "w"))
         print(f"\n  Applied: blanked {len(seen)} inflated eBay medians (fall back to NM). Re-run: node gen_data.mjs")
 
-    rb = openpyxl.Workbook(); sh = rb.active; sh.title = "Price gate"
-    sh.append(["Action", "Title", "Issue", "Year", "eBay median", "NM est", "ratio", "comps"])
+    rb = openpyxl.Workbook(); sh = rb.active; sh.title = "Price gate review >=$25"
+    sh.append(["Title", "Issue", "Year", "eBay median (suppressed)", "NM est (now shown)", "delta", "comps"])
     for c in sh[1]:
         c.font = Font(bold=True, color="FFFFFF"); c.fill = PatternFill("solid", fgColor="C00000")
     sh.freeze_panes = "A2"
-    for tag, lst in (("SUPPRESSED", suppressed), ("FLAG-REVIEW", flagged)):
-        for key, rec in sorted(lst, key=lambda x: -x[1]["med"]):
-            sh.append([tag, rec["title"], rec["issue"], rec["year"], round(rec["med"], 2),
-                       rec["nm"], round(rec["ratio"], 1), rec["cnt"]])
+    for key, rec in sorted(review, key=lambda x: -x[1]["delta"]):
+        sh.append([rec["title"], rec["issue"], rec["year"], round(rec["med"], 2),
+                   rec["nm"], round(rec["delta"], 2), rec["cnt"]])
     rb.save(args.review)
-    print(f"  Review: {args.review}")
+    print(f"  Review ({len(review)} rows, >= $25 delta): {args.review}")
 
 
 if __name__ == "__main__":

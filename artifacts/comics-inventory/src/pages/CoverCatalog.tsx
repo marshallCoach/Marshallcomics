@@ -88,6 +88,7 @@ function CoverCard({
   const imgCol = (
     <div style={{ position: "relative", minHeight: 300, background: "#1a1628", flexShrink: 0, width: "42%" }}>
       <CoverImage
+        objectFit="contain"
         comic={comic}
         width={300}
         height={450}

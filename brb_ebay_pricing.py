@@ -285,6 +285,7 @@ def condition_adjusted_value(row):
 def main():
     parser = argparse.ArgumentParser(description="eBay sold pricing for high-value comics")
     parser.add_argument("--min-value", type=float, default=10.0, help="Minimum NM Value to include (default: 10)")
+    parser.add_argument("--max-value", type=float, default=0, help="Max NM Value to include (0=no cap). Use --min-value 0 --max-value 10 for the cheap-books sweep")
     parser.add_argument("--limit",     type=int,   default=0,    help="Max comics to price (0=all)")
     parser.add_argument("--dry-run",     action="store_true", help="Show queue only, fetch nothing")
     parser.add_argument("--file",        default=None,        help="xlsx file override")
@@ -459,6 +460,11 @@ def main():
         # significant books (e.g. the Absolute line) from ever being priced.
         tier2 = args.key_tier and is_key and never_fetched
         if adj < args.min_value and not tier2:
+            continue
+        # --max-value: cap for the cheap-books sweep (e.g. --min-value 0
+        # --max-value 10 prices only the <=$10 books, to catch any secretly
+        # worth more). The recent-fetch skip below makes it resumable overnight.
+        if args.max_value and adj > args.max_value and not tier2:
             continue
         comic["adj_value"] = adj
         comic["tier2"] = tier2
