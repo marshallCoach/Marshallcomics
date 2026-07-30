@@ -52,10 +52,10 @@ def _latest_validated() -> str:
 
 
 # ── Box capacity table ────────────────────────────────────────────────────────
-BOX_CAPACITY_DEFAULT    = 240
+BOX_CAPACITY_DEFAULT    = 300
 # Box 72 = the signed vault (special purpose). Cap raised 80 -> 100 on 1907 per
 # Roberto, to accommodate pressing/Terrificon returns.
-BOX_CAPACITY_EXCEPTIONS = {15: 150, 23: 155, 40: 80, 44: 200, 72: 100, 85: 155}
+BOX_CAPACITY_EXCEPTIONS = {15: 210, 23: 170, 40: 80, 44: 200, 72: 130, 85: 190}
 
 # Non-numeric Box # values that are deliberate status strings, not errors.
 # These track active CGC/pressing submissions and must never be treated as invalid.
