@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useMemo, useCallback } from "react";
 import { DATA, type Comic } from "@/data/data";
-import { comicId, loadFlags, saveFlags, type FlaggedCover } from "./CoverCatalog";
+import { comicId, loadFlags, saveFlags, FLAG_KEY, type FlaggedCover } from "./CoverCatalog";
 import flaggedBaseline from "@/data/flaggedCoversBaseline.json";
 
 const BASELINE_FLAGGED_IDS = new Set((flaggedBaseline as { id: string }[]).map(f => f.id));
@@ -123,6 +123,12 @@ export default function CoverReview() {
     URL.revokeObjectURL(url);
   }, []);
 
+  const clearFlags = useCallback(() => {
+    if (!window.confirm(`Clear all ${flags.size} flagged covers? This resets the count to 0 and cannot be undone (export first if you haven't).`)) return;
+    localStorage.removeItem(FLAG_KEY);
+    setFlags(new Map());
+  }, [flags.size]);
+
   const nextNow = useCallback(() => {
     if (!pool || pool.length === 0) return;
     setBatchStart(s => (s + BATCH_SIZE) % pool.length);
@@ -151,6 +157,9 @@ export default function CoverReview() {
         <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
           <button onClick={nextNow} style={btnStyle(false)}>Skip batch →</button>
           <button onClick={exportFlags} style={btnStyle(true)}>Export flagged ({flags.size})</button>
+          {flags.size > 0 && (
+            <button onClick={clearFlags} style={{ ...btnStyle(false), color: "var(--red)", borderColor: "var(--red)" }}>Clear flags</button>
+          )}
         </div>
       </div>
 
