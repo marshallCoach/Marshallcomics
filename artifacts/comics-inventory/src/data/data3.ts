@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_2707_1630.xlsx  |  Generated: 2026-08-01
+// Source: comics_inventory_2707_1645.xlsx  |  Generated: 2026-08-02
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -42,7 +42,7 @@ export const DATA3: {
     ccBoxes: CatalogComic[];
   };
 } = {
-  generatedAt: "2026-08-01",
+  generatedAt: "2026-08-02",
   comics: [
   {
     Title: `Barack Obama: Presidential Material`, Issue: `1`, Publisher: `IDW`,
@@ -2144,8 +2144,8 @@ Already signed.`,
   {
     Title: `Legend Has It`, Issue: `1`, Publisher: `Independent`,
     Disambig: ``,
-    Year: `2025`, Arc: ``, Key: `YES`,
-    Key_Reason: `Sanford Greene creator-owned title; #1 of new series`, First_App: `Sanford Greene creator-owned`,
+    Year: `2025`, Arc: ``, Key: `NO`,
+    Key_Reason: ``, First_App: `Sanford Greene creator-owned`,
     Writer: `Sanford Greene`, Artist: `Sanford Greene`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -2158,7 +2158,7 @@ Already signed.`,
     Imprint: `Independent`, Box: `72`,
     Crossover: ``, Start_Bid: `6`,
     Volume: `1`, Entry: `226`,
-    eBay_Avg: 636.88, eBay_Low: 350, eBay_High: 1499.99, eBay_Count: 10, eBay_Median: 500,
+    eBay_Avg: null, eBay_Low: 350, eBay_High: 1499.99, eBay_Count: 10, eBay_Median: null,
   },
   {
     Title: `DC K.O.: Superman vs. Captain Atom`, Issue: `1`, Publisher: `DC`,
@@ -207828,7 +207828,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Location: `Bedroom (Upstairs) — BDR-3`, Code: `BDR-3`, labeledAs: ``, Notes: ``, DateAdded: `May 18, 2026`,
   },
   {
-    Num: `BOX 72`, Comics: 122, Keys: 64,
+    Num: `BOX 72`, Comics: 122, Keys: 63,
     Signed: 34, YearRange: `1962-2025`,
     Label: ``, FirstBook: `Suicide Squad 10`, LastBook: `The Amazing Spider-Man 114`,
     Location: `Bedroom (Upstairs) — BDR-1`, Code: `BDR-1`, labeledAs: ``, Notes: ``, DateAdded: `2026-07-06`,
@@ -211417,7 +211417,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
   {
     Title: `Legend Has It`, Issue: `1`, Publisher: `Marvel/Mass Appeal`,
     Year: `2025`, Volume: `1`, Cover_Artist: `Sanford Greene`,
-    Key: `YES`, Key_Reason: `Sanford Greene creator-owned title; #1 of new series`,
+    Key: `NO`, Key_Reason: ``,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Sanford Greene`,
     Value_NM: `20`, Start_Bid: `6`, Box: `72`,
