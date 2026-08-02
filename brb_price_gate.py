@@ -79,7 +79,15 @@ def main():
     def g(r, n):
         i = C.get(n); return r[i] if i is not None else None
 
-    suppressed, flagged = [], []
+    def bimodal(e):
+        # comps split into two clusters (>=4x gap, >=2 each side) = wrong-issue mix
+        ps = sorted(p for p in (e.get("prices") or []) if p and p > 0)
+        if len(ps) < 4:
+            return False
+        g2, idx = max(((ps[i + 1] / ps[i], i) for i in range(len(ps) - 1) if ps[i] > 0), default=(0, 0))
+        return g2 >= 4 and len(ps[:idx + 1]) >= 2 and len(ps[idx + 1:]) >= 2
+
+    suppressed, flagged, key_review = [], [], []
     for r in rows[1:]:
         t = str(g(r, "Title") or "").strip()
         iss = norm(g(r, "Issue #"))
@@ -91,6 +99,14 @@ def main():
         if not med or med < 10:
             continue
         if yes(g(r, "Key Issue?")):
+            # Keys are exempt from auto-suppression (can be genuinely valuable),
+            # but a KEY with a high, bimodal-comp price is the wrong-volume-match
+            # signature (JSA #1 2024 matched the 1999 issue). Flag for human review
+            # rather than trust or blank it. Roberto/Chat confirm which is real.
+            if med >= 50 and bimodal(e):
+                key_review.append((key, dict(title=t, issue=g(r, "Issue #"), year=yr(g(r, "Year")) or 0,
+                                             nm=num(g(r, "Est. Raw Value (NM) $")) or 0, med=med,
+                                             cnt=e.get("count") or 0)))
             continue
         nm = num(g(r, "Est. Raw Value (NM) $")) or 0
         y = yr(g(r, "Year")) or 0
@@ -113,6 +129,9 @@ def main():
     print(f"eBay-priced modern non-key books >$10 with median >= 3x NM:")
     print(f"  SUPPRESSED (all -> fall back to lower NM value): {len(suppressed)}")
     print(f"  of which worth your review (>= $25 delta)      : {len(review)}")
+    print(f"  KEYS with bimodal/high price to VERIFY (not auto-changed): {len(key_review)}")
+    for k, rc in sorted(key_review, key=lambda x: -x[1]["med"])[:12]:
+        print(f"    KEY? {rc['title'][:28]:<29} #{rc['issue']} ({rc['year']})  ${rc['med']:.0f} vs NM ${rc['nm']:.0f} ({rc['cnt']}c)")
     print(f"\n  top suppressions (eBay median -> NM fallback):")
     for key, rec in sorted(suppressed, key=lambda x: -x[1]["med"])[:12]:
         print(f"    {rec['title'][:30]:<31} #{rec['issue']} ({rec['year']})  ${rec['med']:.0f} -> ${rec['nm']:.0f}  ({rec['cnt']}c)")
@@ -137,6 +156,13 @@ def main():
     for c in sh[1]:
         c.font = Font(bold=True, color="FFFFFF"); c.fill = PatternFill("solid", fgColor="C00000")
     sh.freeze_panes = "A2"
+    if key_review:
+        ks = rb.create_sheet("Keys to verify (bimodal)")
+        ks.append(["Title", "Issue", "Year", "eBay median", "NM est", "comps", "Real price? (confirm)"])
+        for c in ks[1]:
+            c.font = Font(bold=True, color="FFFFFF"); c.fill = PatternFill("solid", fgColor="7a5c3a")
+        for k, rc in sorted(key_review, key=lambda x: -x[1]["med"]):
+            ks.append([rc["title"], rc["issue"], rc["year"], round(rc["med"], 2), rc["nm"], rc["cnt"], ""])
     for key, rec in sorted(review, key=lambda x: -x[1]["delta"]):
         sh.append([rec["title"], rec["issue"], rec["year"], round(rec["med"], 2),
                    rec["nm"], round(rec["delta"], 2), rec["cnt"]])
