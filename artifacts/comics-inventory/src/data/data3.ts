@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_0308_1400.xlsx  |  Generated: 2026-08-02
+// Source: comics_inventory_0308_1400.xlsx  |  Generated: 2026-08-03
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -42,7 +42,7 @@ export const DATA3: {
     ccBoxes: CatalogComic[];
   };
 } = {
-  generatedAt: "2026-08-02",
+  generatedAt: "2026-08-03",
   comics: [
   {
     Title: `Barack Obama: Presidential Material`, Issue: `1`, Publisher: `IDW`,
@@ -196,7 +196,7 @@ Jurgens is a DC copper age legend. Could sign this key.`,
     Imprint: `DC`, Box: `1`,
     Crossover: ``, Start_Bid: `40`,
     Volume: `1`, Entry: `8`,
-    eBay_Avg: 35.99, eBay_Low: 35.99, eBay_High: 35.99, eBay_Count: 1, eBay_Median: 35.99,
+    eBay_Avg: 61, eBay_Low: 27.6, eBay_High: 116.99, eBay_Count: 9, eBay_Median: 52.5,
   },
   {
     Title: `Batman`, Issue: `657`, Publisher: `DC`,
@@ -215,7 +215,7 @@ Jurgens is a DC copper age legend. Could sign this key.`,
     Imprint: `DC`, Box: `1`,
     Crossover: ``, Start_Bid: `26`,
     Volume: `1`, Entry: `9`,
-    eBay_Avg: 13.58, eBay_Low: 4, eBay_High: 22.93, eBay_Count: 5, eBay_Median: 17,
+    eBay_Avg: 13.61, eBay_Low: 4, eBay_High: 23.05, eBay_Count: 5, eBay_Median: 17,
   },
   {
     Title: `Batman`, Issue: `436`, Publisher: `DC`,
@@ -234,7 +234,7 @@ Jurgens is a DC copper age legend. Could sign this key.`,
     Imprint: `DC`, Box: `1`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `1`, Entry: `10`,
-    eBay_Avg: 23.77, eBay_Low: 5.99, eBay_High: 53, eBay_Count: 9, eBay_Median: 19.5,
+    eBay_Avg: 14.17, eBay_Low: 6.14, eBay_High: 28, eBay_Count: 8, eBay_Median: 12.13,
   },
   {
     Title: `Doom Patrol`, Issue: `9`, Publisher: `DC`,
@@ -274,7 +274,7 @@ Kupperberg co-wrote this crossover.`,
     Imprint: `DC`, Box: `1`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `1`, Entry: `13`,
-    eBay_Avg: 6.24, eBay_Low: 2.73, eBay_High: 9.99, eBay_Count: 3, eBay_Median: 6,
+    eBay_Avg: 9.17, eBay_Low: 2.9, eBay_High: 24.99, eBay_Count: 9, eBay_Median: 7.96,
   },
   {
     Title: `Suicide Squad`, Issue: `10`, Publisher: `DC`,
@@ -332,7 +332,7 @@ DeFalco wrote Thor #390 (Cap lifts Mjolnir). Great signing opp.`,
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `26`,
     Volume: `1`, Entry: `16`,
-    eBay_Avg: 58.33, eBay_Low: 25, eBay_High: 100, eBay_Count: 3, eBay_Median: 50,
+    eBay_Avg: 26.99, eBay_Low: 10, eBay_High: 55, eBay_Count: 8, eBay_Median: 24.99,
   },
   {
     Title: `Avengers`, Issue: `363`, Publisher: `Marvel`,
@@ -371,7 +371,7 @@ DeFalco era Avengers.`,
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `18`,
-    eBay_Avg: null, eBay_Low: 8, eBay_High: 89, eBay_Count: 10, eBay_Median: null,
+    eBay_Avg: 18.58, eBay_Low: 8, eBay_High: 32.99, eBay_Count: 8, eBay_Median: 15.34,
   },
   {
     Title: `U.S. Agent`, Issue: `1`, Publisher: `Marvel`,
@@ -409,7 +409,7 @@ DeFalco era Avengers.`,
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `6`,
     Volume: `1`, Entry: `20`,
-    eBay_Avg: 9.3, eBay_Low: 2.99, eBay_High: 13, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 5.34, eBay_Low: 1.54, eBay_High: 11, eBay_Count: 8, eBay_Median: 3.79,
   },
   {
     Title: `Klaws of the Panther`, Issue: `1`, Publisher: `Marvel`,
@@ -468,7 +468,7 @@ Claremont-adjacent (Byrne era). Confirmed all 3 days.`,
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `23`,
-    eBay_Avg: null, eBay_Low: 9.95, eBay_High: 62, eBay_Count: 9, eBay_Median: null,
+    eBay_Avg: 26.92, eBay_Low: 3, eBay_High: 62, eBay_Count: 9, eBay_Median: 22.99,
   },
   {
     Title: `The Mighty Thor`, Issue: `412`, Publisher: `Marvel`,
@@ -488,7 +488,7 @@ DeFalco wrote the 1st New Warriors appearance.`,
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `24`,
-    eBay_Avg: 22.69, eBay_Low: 9.95, eBay_High: 35.75, eBay_Count: 7, eBay_Median: 20,
+    eBay_Avg: 17.59, eBay_Low: 8.5, eBay_High: 35.75, eBay_Count: 9, eBay_Median: 15.66,
   },
   {
     Title: `Exiles`, Issue: `23`, Publisher: `Marvel`,
@@ -526,7 +526,7 @@ DeFalco wrote the 1st New Warriors appearance.`,
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `6`,
     Volume: `2`, Entry: `27`,
-    eBay_Avg: 12.05, eBay_Low: 5, eBay_High: 29.95, eBay_Count: 8, eBay_Median: 9.99,
+    eBay_Avg: 20.8, eBay_Low: 4.99, eBay_High: 39.99, eBay_Count: 10, eBay_Median: 16.21,
   },
   {
     Title: `Miles Morales: Spider-Man`, Issue: `1`, Publisher: `Marvel`,
@@ -545,7 +545,7 @@ DeFalco wrote the 1st New Warriors appearance.`,
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `2`, Entry: `28`,
-    eBay_Avg: 11.35, eBay_Low: 2.99, eBay_High: 25, eBay_Count: 10, eBay_Median: 10.62,
+    eBay_Avg: 13.67, eBay_Low: 6.99, eBay_High: 30, eBay_Count: 7, eBay_Median: 10.7,
   },
   {
     Title: `Silver Surfer`, Issue: `50`, Publisher: `Marvel`,
@@ -585,7 +585,7 @@ Jim Lee (SAT ONLY) + Scott Williams both confirmed. UXM #275 is a Lee/Williams c
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `1`, Entry: `30`,
-    eBay_Avg: 9.56, eBay_Low: 1.7, eBay_High: 25, eBay_Count: 9, eBay_Median: 7,
+    eBay_Avg: 15.37, eBay_Low: 7, eBay_High: 24.99, eBay_Count: 8, eBay_Median: 13.5,
   },
   {
     Title: `Falcon`, Issue: `1`, Publisher: `Marvel`,
@@ -605,7 +605,7 @@ Written by Priest (as Jim Owsley). BRING THIS — unsigned. Great signing opp.`,
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `16`,
     Volume: `1`, Entry: `31`,
-    eBay_Avg: 16.34, eBay_Low: 1.5, eBay_High: 34.95, eBay_Count: 10, eBay_Median: 15.75,
+    eBay_Avg: 13.83, eBay_Low: 3.5, eBay_High: 25, eBay_Count: 9, eBay_Median: 15,
   },
   {
     Title: `X-Factor`, Issue: `2`, Publisher: `Marvel`,
@@ -643,7 +643,7 @@ Written by Priest (as Jim Owsley). BRING THIS — unsigned. Great signing opp.`,
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `13`,
     Volume: `1`, Entry: `33`,
-    eBay_Avg: 26.98, eBay_Low: 19.99, eBay_High: 34.95, eBay_Count: 9, eBay_Median: 26,
+    eBay_Avg: 18.22, eBay_Low: 2.13, eBay_High: 35, eBay_Count: 6, eBay_Median: 21.05,
   },
   {
     Title: `The Immortal Hulk`, Issue: `2`, Publisher: `Marvel`,
@@ -681,7 +681,7 @@ Written by Priest (as Jim Owsley). BRING THIS — unsigned. Great signing opp.`,
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `6`,
     Volume: `1`, Entry: `35`,
-    eBay_Avg: 8.74, eBay_Low: 5, eBay_High: 13.98, eBay_Count: 4, eBay_Median: 8,
+    eBay_Avg: 7.92, eBay_Low: 2.69, eBay_High: 19.99, eBay_Count: 10, eBay_Median: 8,
   },
   {
     Title: `What If? Magic`, Issue: `1`, Publisher: `Marvel`,
@@ -719,7 +719,7 @@ Written by Priest (as Jim Owsley). BRING THIS — unsigned. Great signing opp.`,
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `8`,
     Volume: `1`, Entry: `37`,
-    eBay_Avg: 7.09, eBay_Low: 3.57, eBay_High: 11, eBay_Count: 10, eBay_Median: 6.79,
+    eBay_Avg: 13.36, eBay_Low: 2.58, eBay_High: 28, eBay_Count: 9, eBay_Median: 10,
   },
   {
     Title: `A-Force: Secret Wars`, Issue: `1`, Publisher: `Marvel`,
@@ -739,7 +739,7 @@ ALREADY SIGNED. CGC SS witness at Terrificon is the move.`,
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `8`,
     Volume: `1`, Entry: `38`,
-    eBay_Avg: 30.79, eBay_Low: 5.9, eBay_High: 69.99, eBay_Count: 7, eBay_Median: 22.49,
+    eBay_Avg: 14.74, eBay_Low: 4, eBay_High: 27.95, eBay_Count: 10, eBay_Median: 13.87,
   },
   {
     Title: `Mockingbird`, Issue: `1`, Publisher: `Marvel`,
@@ -777,7 +777,7 @@ ALREADY SIGNED. CGC SS witness at Terrificon is the move.`,
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `13`,
     Volume: `3`, Entry: `40`,
-    eBay_Avg: 19.14, eBay_Low: 9.99, eBay_High: 45.5, eBay_Count: 10, eBay_Median: 15.99,
+    eBay_Avg: 20.03, eBay_Low: 5, eBay_High: 37.09, eBay_Count: 9, eBay_Median: 19.99,
   },
   {
     Title: `WildC.A.T.s`, Issue: `3`, Publisher: `Image`,
@@ -797,7 +797,7 @@ WildCATs #2 — Jim Lee pencils, Scott Williams inks. Both confirmed 2026. SAT O
     Imprint: `Image Comics`, Box: `1`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `41`,
-    eBay_Avg: 7.75, eBay_Low: 2.24, eBay_High: 9.99, eBay_Count: 10, eBay_Median: 8.75,
+    eBay_Avg: 5.53, eBay_Low: 1.99, eBay_High: 10.45, eBay_Count: 8, eBay_Median: 5,
   },
   {
     Title: `WildC.A.T.s`, Issue: `11`, Publisher: `Image`,
@@ -817,7 +817,7 @@ WildCATs #11 — Scott Williams inked the Jim Lee era. Both attending.`,
     Imprint: `Image Comics`, Box: `1`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `1`, Entry: `42`,
-    eBay_Avg: 10.73, eBay_Low: 2.99, eBay_High: 20, eBay_Count: 6, eBay_Median: 10.99,
+    eBay_Avg: 6.59, eBay_Low: 2.5, eBay_High: 12.99, eBay_Count: 9, eBay_Median: 5.4,
   },
   {
     Title: `The Savage Dragon`, Issue: `1`, Publisher: `Image`,
@@ -836,7 +836,7 @@ WildCATs #11 — Scott Williams inked the Jim Lee era. Both attending.`,
     Imprint: `Image Comics`, Box: `1`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `43`,
-    eBay_Avg: 9.37, eBay_Low: 0.99, eBay_High: 25.99, eBay_Count: 10, eBay_Median: 9.99,
+    eBay_Avg: 10.36, eBay_Low: 2.49, eBay_High: 23.54, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `Transformers`, Issue: `1`, Publisher: `Marvel`,
@@ -855,7 +855,7 @@ WildCATs #11 — Scott Williams inked the Jim Lee era. Both attending.`,
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `44`,
-    eBay_Avg: 54.26, eBay_Low: 9.99, eBay_High: 119.99, eBay_Count: 8, eBay_Median: 37.05,
+    eBay_Avg: 21.92, eBay_Low: 3.99, eBay_High: 35, eBay_Count: 7, eBay_Median: 24.5,
   },
   {
     Title: `Mystery in Space`, Issue: `1`, Publisher: `DC`,
@@ -874,7 +874,7 @@ WildCATs #11 — Scott Williams inked the Jim Lee era. Both attending.`,
     Imprint: `DC`, Box: `72`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `1`, Entry: `45`,
-    eBay_Avg: 6.2, eBay_Low: 1.74, eBay_High: 9.99, eBay_Count: 10, eBay_Median: 6.45,
+    eBay_Avg: 10.81, eBay_Low: 2.04, eBay_High: 17.25, eBay_Count: 10, eBay_Median: 10.99,
   },
   {
     Title: `Supergirl: Woman of Tomorrow`, Issue: `1`, Publisher: `DC`,
@@ -894,7 +894,7 @@ Tom King SIGNED. Film in 2026. CGC SS witness at Terrificon is urgent.`,
     Imprint: `DC`, Box: `1`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `46`,
-    eBay_Avg: 86.63, eBay_Low: 29.95, eBay_High: 135, eBay_Count: 3, eBay_Median: 94.95,
+    eBay_Avg: 25.94, eBay_Low: 10, eBay_High: 45.99, eBay_Count: 7, eBay_Median: 25.62,
   },
   {
     Title: `Black Lightning`, Issue: `1`, Publisher: `DC`,
@@ -913,7 +913,7 @@ Tom King SIGNED. Film in 2026. CGC SS witness at Terrificon is urgent.`,
     Imprint: `DC`, Box: `1`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `47`,
-    eBay_Avg: 44.81, eBay_Low: 18, eBay_High: 113.95, eBay_Count: 9, eBay_Median: 39.95,
+    eBay_Avg: 24.22, eBay_Low: 2.29, eBay_High: 63, eBay_Count: 10, eBay_Median: 23,
   },
   {
     Title: `Who's Who: The Definitive Directory of the DC Universe`, Issue: `1`, Publisher: `DC`,
@@ -932,7 +932,7 @@ Tom King SIGNED. Film in 2026. CGC SS witness at Terrificon is urgent.`,
     Imprint: `DC`, Box: `1`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `1`, Entry: `48`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
+    eBay_Avg: 8.39, eBay_Low: 4.19, eBay_High: 14.99, eBay_Count: 10, eBay_Median: 5.38,
   },
   {
     Title: `Storm`, Issue: `1`, Publisher: `Marvel`,
@@ -952,7 +952,7 @@ Already signed — CGC SS witness opportunity at Terrificon. SY confirmed all 3 
     Imprint: `Heroes Reborn`, Box: `1`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `49`,
-    eBay_Avg: 10.08, eBay_Low: 7.95, eBay_High: 11.95, eBay_Count: 10, eBay_Median: 9.99,
+    eBay_Avg: 7.19, eBay_Low: 2.99, eBay_High: 15, eBay_Count: 9, eBay_Median: 6.99,
   },
   {
     Title: `The Amazing Spider-Man`, Issue: `70`, Publisher: `Marvel`,
@@ -972,7 +972,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `1`, Entry: `50`,
-    eBay_Avg: 12.71, eBay_Low: 7.97, eBay_High: 17.45, eBay_Count: 2, eBay_Median: 12.71,
+    eBay_Avg: 11.65, eBay_Low: 2.49, eBay_High: 17.51, eBay_Count: 8, eBay_Median: 14.62,
   },
   {
     Title: `Black Panther`, Issue: `1`, Publisher: `Marvel`,
@@ -992,7 +992,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `7`, Entry: `51`,
-    eBay_Avg: 11.01, eBay_Low: 2, eBay_High: 25.84, eBay_Count: 10, eBay_Median: 10,
+    eBay_Avg: 23.79, eBay_Low: 2.5, eBay_High: 52.5, eBay_Count: 9, eBay_Median: 13.99,
   },
   {
     Title: `Black Panther`, Issue: `17`, Publisher: `Marvel`,
@@ -1012,7 +1012,7 @@ Already signed by Priest. CGC witness at Terrificon.`,
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `3`, Entry: `52`,
-    eBay_Avg: null, eBay_Low: 40, eBay_High: 40, eBay_Count: 1, eBay_Median: null,
+    eBay_Avg: 32.07, eBay_Low: 16.24, eBay_High: 40, eBay_Count: 3, eBay_Median: 39.96,
   },
   {
     Title: `Marvel Knights: The World to Come`, Issue: `1`, Publisher: `Marvel`,
@@ -1032,7 +1032,7 @@ Signed — verify Priest connection to this book.`,
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `9`, Entry: `53`,
-    eBay_Avg: null, eBay_Low: 40, eBay_High: 105, eBay_Count: 2, eBay_Median: null,
+    eBay_Avg: 67.5, eBay_Low: 40, eBay_High: 95, eBay_Count: 2, eBay_Median: 67.5,
   },
   {
     Title: `Black Panther Annual`, Issue: `1`, Publisher: `Marvel`,
@@ -1052,7 +1052,7 @@ Already signed.`,
     Imprint: `Marvel`, Box: `72`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `2`, Entry: `54`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
+    eBay_Avg: 6.72, eBay_Low: 2.7, eBay_High: 9.98, eBay_Count: 5, eBay_Median: 6.95,
   },
   {
     Title: `Black Panther`, Issue: `8`, Publisher: `Marvel`,
@@ -1072,7 +1072,7 @@ Already signed. CGC SS witness.`,
     Imprint: `Marvel`, Box: `72`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `3`, Entry: `55`,
-    eBay_Avg: 9.99, eBay_Low: 9.99, eBay_High: 9.99, eBay_Count: 1, eBay_Median: 9.99,
+    eBay_Avg: 8.13, eBay_Low: 1.89, eBay_High: 22.71, eBay_Count: 8, eBay_Median: 6.61,
   },
   {
     Title: `Black Panther`, Issue: `30`, Publisher: `Marvel`,
@@ -1092,7 +1092,7 @@ Already signed.`,
     Imprint: `Marvel`, Box: `72`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `2`, Entry: `56`,
-    eBay_Avg: 15.17, eBay_Low: 11.38, eBay_High: 24.99, eBay_Count: 9, eBay_Median: 14.99,
+    eBay_Avg: 19.79, eBay_Low: 9.99, eBay_High: 33.82, eBay_Count: 10, eBay_Median: 16.75,
   },
   {
     Title: `Tales of Suspense`, Issue: `98`, Publisher: `Marvel`,
@@ -1112,7 +1112,7 @@ Already signed.`,
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `9`, Entry: `57`,
-    eBay_Avg: 68, eBay_Low: 34.99, eBay_High: 84, eBay_Count: 4, eBay_Median: 76.5,
+    eBay_Avg: 96.79, eBay_Low: 25, eBay_High: 235.25, eBay_Count: 8, eBay_Median: 90.03,
   },
   {
     Title: `Captain America`, Issue: `264`, Publisher: `Marvel`,
@@ -1131,7 +1131,7 @@ Already signed.`,
     Imprint: `Marvel`, Box: `72`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `1`, Entry: `58`,
-    eBay_Avg: 9.63, eBay_Low: 2.95, eBay_High: 14.59, eBay_Count: 7, eBay_Median: 9.45,
+    eBay_Avg: 12.17, eBay_Low: 2.75, eBay_High: 28.6, eBay_Count: 8, eBay_Median: 7.03,
   },
   {
     Title: `Exiles`, Issue: `3`, Publisher: `Marvel`,
@@ -1169,7 +1169,7 @@ Already signed.`,
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `60`,
-    eBay_Avg: 13.66, eBay_Low: 5.25, eBay_High: 24.99, eBay_Count: 9, eBay_Median: 11.99,
+    eBay_Avg: 10.98, eBay_Low: 3.99, eBay_High: 17.99, eBay_Count: 9, eBay_Median: 13.99,
   },
   {
     Title: `Agent Carter: S.H.I.E.L.D. 50th Anniversary`, Issue: `1`, Publisher: `Marvel`,
@@ -1188,7 +1188,7 @@ Already signed.`,
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `62`,
-    eBay_Avg: 5.75, eBay_Low: 3.4, eBay_High: 7.6, eBay_Count: 10, eBay_Median: 6.08,
+    eBay_Avg: 6.67, eBay_Low: 3.99, eBay_High: 9.99, eBay_Count: 9, eBay_Median: 6.2,
   },
   {
     Title: `Ultimate Spider-Man`, Issue: `1`, Publisher: `Marvel`,
@@ -1208,7 +1208,7 @@ Jonathan Hickman is confirmed for Terrificon 2026 (confirmed all 3 days). Bring 
     Imprint: `Ultimate Marvel`, Box: `72`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `63`,
-    eBay_Avg: 67.24, eBay_Low: 12.99, eBay_High: 175, eBay_Count: 8, eBay_Median: 50.49,
+    eBay_Avg: 40.33, eBay_Low: 9.99, eBay_High: 80, eBay_Count: 9, eBay_Median: 34.99,
   },
   {
     Title: `Ultimate Wolverine`, Issue: `1`, Publisher: `Marvel`,
@@ -1228,7 +1228,7 @@ Hickman Ultimate Universe — he has appeared with Terrificon regularly.`,
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `7`, Entry: `64`,
-    eBay_Avg: 3, eBay_Low: 0.99, eBay_High: 5, eBay_Count: 2, eBay_Median: 3,
+    eBay_Avg: 40.49, eBay_Low: 6.25, eBay_High: 89.99, eBay_Count: 10, eBay_Median: 37.04,
   },
   {
     Title: `Ultimate Wolverine`, Issue: `3`, Publisher: `Marvel`,
@@ -1247,7 +1247,7 @@ Hickman Ultimate Universe — he has appeared with Terrificon regularly.`,
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `7`, Entry: `65`,
-    eBay_Avg: 17.4, eBay_Low: 3.95, eBay_High: 42.36, eBay_Count: 8, eBay_Median: 16.47,
+    eBay_Avg: 13.76, eBay_Low: 3.95, eBay_High: 29.99, eBay_Count: 9, eBay_Median: 14.95,
   },
   {
     Title: `The Amazing Spider-Man`, Issue: `50`, Publisher: `Marvel`,
@@ -1266,7 +1266,7 @@ Hickman Ultimate Universe — he has appeared with Terrificon regularly.`,
     Imprint: `Marvel`, Box: `72`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `66`,
-    eBay_Avg: 16.51, eBay_Low: 5.7, eBay_High: 28.49, eBay_Count: 8, eBay_Median: 13.98,
+    eBay_Avg: 16.18, eBay_Low: 4.85, eBay_High: 28.49, eBay_Count: 8, eBay_Median: 13.98,
   },
   {
     Title: `The Amazing Spider-Man`, Issue: `114`, Publisher: `Marvel`,
@@ -1286,7 +1286,7 @@ Already signed by Starlin. CGC SS witness.`,
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `1`, Entry: `67`,
-    eBay_Avg: 49, eBay_Low: 30, eBay_High: 79.99, eBay_Count: 3, eBay_Median: 37,
+    eBay_Avg: 34.83, eBay_Low: 7.99, eBay_High: 90, eBay_Count: 9, eBay_Median: 30,
   },
   {
     Title: `Uncanny X-Men`, Issue: `286`, Publisher: `Marvel`,
@@ -1305,7 +1305,7 @@ Already signed by Starlin. CGC SS witness.`,
     Imprint: `Marvel`, Box: `72`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `1`, Entry: `68`,
-    eBay_Avg: 6.1, eBay_Low: 3, eBay_High: 10, eBay_Count: 9, eBay_Median: 4.99,
+    eBay_Avg: 9.44, eBay_Low: 1.99, eBay_High: 22.71, eBay_Count: 9, eBay_Median: 7,
   },
   {
     Title: `X-Factor`, Issue: `24`, Publisher: `Marvel`,
@@ -1325,7 +1325,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Imprint: `Marvel`, Box: `72`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `69`,
-    eBay_Avg: 33.59, eBay_Low: 16.74, eBay_High: 79.75, eBay_Count: 10, eBay_Median: 26.99,
+    eBay_Avg: 42.72, eBay_Low: 19.99, eBay_High: 99, eBay_Count: 9, eBay_Median: 31.49,
   },
   {
     Title: `X-Men Legends`, Issue: `3`, Publisher: `Marvel`,
@@ -1345,7 +1345,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Imprint: `Marvel`, Box: `72`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `2`, Entry: `70`,
-    eBay_Avg: 8.56, eBay_Low: 5, eBay_High: 9.99, eBay_Count: 8, eBay_Median: 9.99,
+    eBay_Avg: 4.71, eBay_Low: 2.9, eBay_High: 9.99, eBay_Count: 8, eBay_Median: 3.99,
   },
   {
     Title: `New Mutants`, Issue: `96`, Publisher: `Marvel`,
@@ -1365,7 +1365,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Imprint: `Marvel`, Box: `72`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `71`,
-    eBay_Avg: 4.55, eBay_Low: 4.55, eBay_High: 4.55, eBay_Count: 1, eBay_Median: 4.55,
+    eBay_Avg: 13.77, eBay_Low: 4.49, eBay_High: 34.99, eBay_Count: 9, eBay_Median: 14.26,
   },
   {
     Title: `The Mighty Thor`, Issue: `339`, Publisher: `Marvel`,
@@ -1385,7 +1385,7 @@ Louise Simonson confirmed. Thor #339 already DUAL SIGNED. CGC SS witness on-site
     Imprint: `Marvel`, Box: `72`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `72`,
-    eBay_Avg: 33.59, eBay_Low: 20, eBay_High: 49.99, eBay_Count: 10, eBay_Median: 30.49,
+    eBay_Avg: 28.46, eBay_Low: 12.98, eBay_High: 59.95, eBay_Count: 9, eBay_Median: 26.99,
   },
   {
     Title: `Superman: The Man of Steel`, Issue: `1`, Publisher: `DC`,
@@ -1405,7 +1405,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Imprint: `DC`, Box: `1`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `73`,
-    eBay_Avg: 7.29, eBay_Low: 1.9, eBay_High: 18, eBay_Count: 9, eBay_Median: 6.01,
+    eBay_Avg: 6.62, eBay_Low: 3.5, eBay_High: 9.99, eBay_Count: 7, eBay_Median: 6.29,
   },
   {
     Title: `Superman: The Man of Steel`, Issue: `18`, Publisher: `DC`,
@@ -1425,7 +1425,7 @@ TRIPLE-SIGNED already. Dan Jurgens AND Louise Simonson both confirmed 2026 — c
     Imprint: `DC`, Box: `72`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `74`,
-    eBay_Avg: 25.17, eBay_Low: 7.99, eBay_High: 44, eBay_Count: 10, eBay_Median: 19.99,
+    eBay_Avg: 29.47, eBay_Low: 7, eBay_High: 62.39, eBay_Count: 8, eBay_Median: 27.2,
   },
   {
     Title: `Superman: The Man of Steel`, Issue: `19`, Publisher: `DC`,
@@ -1445,7 +1445,7 @@ Already triple signed. Jurgens and Simonson both confirmed. CGC witness on-site.
     Imprint: `DC`, Box: `1`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `75`,
-    eBay_Avg: 14.69, eBay_Low: 8.99, eBay_High: 29, eBay_Count: 10, eBay_Median: 11.25,
+    eBay_Avg: 15.61, eBay_Low: 4, eBay_High: 36, eBay_Count: 9, eBay_Median: 13,
   },
   {
     Title: `Justice League`, Issue: `21`, Publisher: `DC`,
@@ -1465,7 +1465,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `DC New 52`, Box: `1`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `76`,
-    eBay_Avg: 8.98, eBay_Low: 2.95, eBay_High: 20, eBay_Count: 10, eBay_Median: 8.99,
+    eBay_Avg: 9.29, eBay_Low: 2.9, eBay_High: 19, eBay_Count: 8, eBay_Median: 9.87,
   },
   {
     Title: `Green Arrow`, Issue: `1`, Publisher: `DC`,
@@ -1484,7 +1484,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `DC`, Box: `1`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `3`, Entry: `77`,
-    eBay_Avg: 17.41, eBay_Low: 2.95, eBay_High: 40, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 8.42, eBay_Low: 3, eBay_High: 18, eBay_Count: 8, eBay_Median: 6.5,
   },
   {
     Title: `Vision`, Issue: `1`, Publisher: `Marvel`,
@@ -1504,7 +1504,7 @@ Tom King SIGNED this book already. CGC SS WITNESS on-site at Terrificon — high
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `78`,
-    eBay_Avg: 231.91, eBay_Low: 65, eBay_High: 736.25, eBay_Count: 5, eBay_Median: 142.45,
+    eBay_Avg: 12.95, eBay_Low: 3.71, eBay_High: 32.95, eBay_Count: 8, eBay_Median: 9,
   },
   {
     Title: `Truth: Red, White & Black`, Issue: `1`, Publisher: `Marvel`,
@@ -1523,7 +1523,7 @@ Tom King SIGNED this book already. CGC SS WITNESS on-site at Terrificon — high
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `79`,
-    eBay_Avg: 25.99, eBay_Low: 9.99, eBay_High: 39.99, eBay_Count: 10, eBay_Median: 30.49,
+    eBay_Avg: 11.83, eBay_Low: 4.99, eBay_High: 25.99, eBay_Count: 6, eBay_Median: 10,
   },
   {
     Title: `Star Wars: Lando`, Issue: `1`, Publisher: `Marvel`,
@@ -1543,7 +1543,7 @@ Already signed (verify). CGC SS witness at Terrificon.`,
     Imprint: `Marvel`, Box: `72`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `80`,
-    eBay_Avg: 6.09, eBay_Low: 1.19, eBay_High: 14.95, eBay_Count: 9, eBay_Median: 4.99,
+    eBay_Avg: 39, eBay_Low: 7.99, eBay_High: 80, eBay_Count: 10, eBay_Median: 37.5,
   },
   {
     Title: `New Warriors`, Issue: `1`, Publisher: `Marvel`,
@@ -1563,7 +1563,7 @@ ALREADY SIGNED. CGC SS witness opportunity at Terrificon.`,
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `81`,
-    eBay_Avg: 14.69, eBay_Low: 4.55, eBay_High: 24.99, eBay_Count: 9, eBay_Median: 10.95,
+    eBay_Avg: 19.99, eBay_Low: 8, eBay_High: 50, eBay_Count: 10, eBay_Median: 16.97,
   },
   {
     Title: `The Amazing Spider-Man`, Issue: `361`, Publisher: `Marvel`,
@@ -1603,7 +1603,7 @@ Hickman SIGNED Secret Wars #1. CGC SS witness on-site. Highest-value Hickman boo
     Imprint: `Marvel`, Box: `72`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `83`,
-    eBay_Avg: 17.16, eBay_Low: 1.92, eBay_High: 39.99, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 17.79, eBay_Low: 11.75, eBay_High: 29.99, eBay_Count: 6, eBay_Median: 14.99,
   },
   {
     Title: `Doom`, Issue: `1`, Publisher: `Marvel`,
@@ -1622,7 +1622,7 @@ Hickman SIGNED Secret Wars #1. CGC SS witness on-site. Highest-value Hickman boo
     Imprint: `Marvel From the Ashes`, Box: `1`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `1`, Entry: `84`,
-    eBay_Avg: 27.58, eBay_Low: 9.99, eBay_High: 45.49, eBay_Count: 8, eBay_Median: 26,
+    eBay_Avg: 42.5, eBay_Low: 19.49, eBay_High: 85, eBay_Count: 8, eBay_Median: 30.5,
   },
   {
     Title: `Mockingbird`, Issue: `8`, Publisher: `Marvel`,
@@ -1642,7 +1642,7 @@ ALREADY SIGNED. Feminist agenda cover. CGC SS witness at Terrificon.`,
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `85`,
-    eBay_Avg: 31.54, eBay_Low: 19.93, eBay_High: 50, eBay_Count: 3, eBay_Median: 24.7,
+    eBay_Avg: 30.08, eBay_Low: 12.12, eBay_High: 64.19, eBay_Count: 10, eBay_Median: 27.5,
   },
   {
     Title: `Champions`, Issue: `1`, Publisher: `Marvel`,
@@ -1662,7 +1662,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `72`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `86`,
-    eBay_Avg: 6.1, eBay_Low: 1.92, eBay_High: 14.99, eBay_Count: 8, eBay_Median: 5,
+    eBay_Avg: 28.33, eBay_Low: 9.99, eBay_High: 60, eBay_Count: 9, eBay_Median: 22,
   },
   {
     Title: `Black Panther: The Man Without Fear`, Issue: `513`, Publisher: `Marvel`,
@@ -1701,7 +1701,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `88`,
-    eBay_Avg: 15.12, eBay_Low: 3.99, eBay_High: 30, eBay_Count: 10, eBay_Median: 12.99,
+    eBay_Avg: 11.54, eBay_Low: 3.99, eBay_High: 30, eBay_Count: 7, eBay_Median: 9.5,
   },
   {
     Title: `World's Finest`, Issue: `47`, Publisher: `DC`,
@@ -1720,7 +1720,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Imprint: `DC`, Box: `1`,
     Crossover: ``, Start_Bid: `6`,
     Volume: `1`, Entry: `89`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
+    eBay_Avg: 12.54, eBay_Low: 8.08, eBay_High: 17, eBay_Count: 2, eBay_Median: 12.54,
   },
   {
     Title: `World's Finest`, Issue: `26`, Publisher: `DC`,
@@ -1739,7 +1739,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Imprint: `DC`, Box: `1`,
     Crossover: ``, Start_Bid: `26`,
     Volume: `1`, Entry: `90`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
+    eBay_Avg: 4.97, eBay_Low: 2.49, eBay_High: 10, eBay_Count: 9, eBay_Median: 3.96,
   },
   {
     Title: `Daredevil`, Issue: `1`, Publisher: `Marvel`,
@@ -1758,7 +1758,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `6`,
     Volume: `7`, Entry: `205`,
-    eBay_Avg: 7.58, eBay_Low: 3.99, eBay_High: 20, eBay_Count: 7, eBay_Median: 4.75,
+    eBay_Avg: 14.6, eBay_Low: 3.25, eBay_High: 35, eBay_Count: 7, eBay_Median: 12.99,
   },
   {
     Title: `Tales of Suspense`, Issue: `98`, Publisher: `Marvel`,
@@ -1778,7 +1778,7 @@ Already signed.`,
     Imprint: `Marvel Silver Age`, Box: `72`,
     Crossover: ``, Start_Bid: `13`,
     Volume: `1`, Entry: `206`,
-    eBay_Avg: 68, eBay_Low: 34.99, eBay_High: 84, eBay_Count: 4, eBay_Median: 76.5,
+    eBay_Avg: 96.79, eBay_Low: 25, eBay_High: 235.25, eBay_Count: 8, eBay_Median: 90.03,
   },
   {
     Title: `Secret Wars`, Issue: `8`, Publisher: `Marvel`,
@@ -1797,7 +1797,7 @@ Already signed.`,
     Imprint: `Marvel`, Box: `72`,
     Crossover: ``, Start_Bid: `26`,
     Volume: `1`, Entry: `207`,
-    eBay_Avg: 22.34, eBay_Low: 3.99, eBay_High: 35.87, eBay_Count: 9, eBay_Median: 26.14,
+    eBay_Avg: 440.19, eBay_Low: 16.19, eBay_High: 1299.99, eBay_Count: 10, eBay_Median: 460.37,
   },
   {
     Title: `Wolverine`, Issue: `8`, Publisher: `Marvel`,
@@ -1816,7 +1816,7 @@ Already signed.`,
     Imprint: ``, Box: `72`,
     Crossover: ``, Start_Bid: ``,
     Volume: `1`, Entry: `208`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
+    eBay_Avg: 12.69, eBay_Low: 3.57, eBay_High: 32, eBay_Count: 8, eBay_Median: 9.62,
   },
   {
     Title: `Infernal Hulk`, Issue: `1`, Publisher: `Marvel`,
@@ -1835,7 +1835,7 @@ Already signed.`,
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `6`, Entry: `209`,
-    eBay_Avg: 4.11, eBay_Low: 3.75, eBay_High: 5.28, eBay_Count: 5, eBay_Median: 3.84,
+    eBay_Avg: 4.12, eBay_Low: 3.75, eBay_High: 5.33, eBay_Count: 5, eBay_Median: 3.84,
   },
   {
     Title: `Fantastic Four`, Issue: `5`, Publisher: `Marvel`,
@@ -1854,7 +1854,7 @@ Already signed.`,
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `210`,
-    eBay_Avg: 7.2, eBay_Low: 2.66, eBay_High: 15, eBay_Count: 8, eBay_Median: 4.47,
+    eBay_Avg: 16.39, eBay_Low: 2.94, eBay_High: 44.99, eBay_Count: 8, eBay_Median: 9.87,
   },
   {
     Title: `One World Under Doom`, Issue: `9`, Publisher: `Marvel`,
@@ -1873,7 +1873,7 @@ Already signed.`,
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `211`,
-    eBay_Avg: 6.68, eBay_Low: 4.99, eBay_High: 9.49, eBay_Count: 8, eBay_Median: 4.99,
+    eBay_Avg: 36.88, eBay_Low: 3.22, eBay_High: 99.99, eBay_Count: 10, eBay_Median: 34.52,
   },
   {
     Title: `Rogue Storm`, Issue: `2`, Publisher: `Marvel`,
@@ -1892,7 +1892,7 @@ Already signed.`,
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `212`,
-    eBay_Avg: 3.77, eBay_Low: 3.33, eBay_High: 3.99, eBay_Count: 3, eBay_Median: 3.99,
+    eBay_Avg: 5.31, eBay_Low: 2.99, eBay_High: 11.99, eBay_Count: 6, eBay_Median: 4.22,
   },
   {
     Title: `The Mortal Thor`, Issue: `4`, Publisher: `Marvel`,
@@ -1911,7 +1911,7 @@ Already signed.`,
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `6`,
     Volume: `1`, Entry: `213`,
-    eBay_Avg: 5.44, eBay_Low: 4.49, eBay_High: 9.95, eBay_Count: 8, eBay_Median: 4.92,
+    eBay_Avg: 5.34, eBay_Low: 4.42, eBay_High: 9.95, eBay_Count: 9, eBay_Median: 4.86,
   },
   {
     Title: `Batman`, Issue: `2`, Publisher: `DC`,
@@ -1930,7 +1930,7 @@ Already signed.`,
     Imprint: `DC All In`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `5`, Entry: `214`,
-    eBay_Avg: 25.31, eBay_Low: 3.5, eBay_High: 55, eBay_Count: 8, eBay_Median: 17.99,
+    eBay_Avg: 10.47, eBay_Low: 3.99, eBay_High: 16.99, eBay_Count: 7, eBay_Median: 10.36,
   },
   {
     Title: `Batman`, Issue: `3`, Publisher: `DC`,
@@ -1949,7 +1949,7 @@ Already signed.`,
     Imprint: `DC All In`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `5`, Entry: `215`,
-    eBay_Avg: 29.37, eBay_Low: 9, eBay_High: 60, eBay_Count: 8, eBay_Median: 22.49,
+    eBay_Avg: 13.86, eBay_Low: 6.99, eBay_High: 19.99, eBay_Count: 8, eBay_Median: 15.49,
   },
   {
     Title: `Batman`, Issue: `4`, Publisher: `DC`,
@@ -1968,7 +1968,7 @@ Already signed.`,
     Imprint: `DC All In`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `5`, Entry: `216`,
-    eBay_Avg: 12.71, eBay_Low: 8, eBay_High: 15.99, eBay_Count: 7, eBay_Median: 12.99,
+    eBay_Avg: 14.66, eBay_Low: 6.99, eBay_High: 32.99, eBay_Count: 9, eBay_Median: 12.99,
   },
   {
     Title: `Batman`, Issue: `5`, Publisher: `DC`,
@@ -1987,7 +1987,7 @@ Already signed.`,
     Imprint: `DC All In`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `5`, Entry: `217`,
-    eBay_Avg: 13.59, eBay_Low: 4.1, eBay_High: 25, eBay_Count: 8, eBay_Median: 11.49,
+    eBay_Avg: 11.82, eBay_Low: 1.25, eBay_High: 25, eBay_Count: 8, eBay_Median: 7.49,
   },
   {
     Title: `Batman`, Issue: `9`, Publisher: `DC`,
@@ -2006,7 +2006,7 @@ Already signed.`,
     Imprint: `DC All In`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `5`, Entry: `218`,
-    eBay_Avg: null, eBay_Low: 5.14, eBay_High: 57.32, eBay_Count: 9, eBay_Median: null,
+    eBay_Avg: 29.86, eBay_Low: 5.14, eBay_High: 57.62, eBay_Count: 9, eBay_Median: 30,
   },
   {
     Title: `Wonder Woman`, Issue: `29`, Publisher: `DC`,
@@ -2025,7 +2025,7 @@ Already signed.`,
     Imprint: `DC All In`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `219`,
-    eBay_Avg: 6.34, eBay_Low: 3.74, eBay_High: 9, eBay_Count: 9, eBay_Median: 5.99,
+    eBay_Avg: 6.89, eBay_Low: 3.74, eBay_High: 12, eBay_Count: 10, eBay_Median: 6.49,
   },
   {
     Title: `Superman`, Issue: `30`, Publisher: `DC`,
@@ -2044,7 +2044,7 @@ Already signed.`,
     Imprint: `DC All In`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `220`,
-    eBay_Avg: 3.63, eBay_Low: 1.29, eBay_High: 5.87, eBay_Count: 7, eBay_Median: 3.25,
+    eBay_Avg: 7.19, eBay_Low: 2.99, eBay_High: 15.99, eBay_Count: 8, eBay_Median: 5,
   },
   {
     Title: `Superman`, Issue: `31`, Publisher: `DC`,
@@ -2063,7 +2063,7 @@ Already signed.`,
     Imprint: `DC All In`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `221`,
-    eBay_Avg: 4.18, eBay_Low: 0.99, eBay_High: 6.5, eBay_Count: 9, eBay_Median: 4.2,
+    eBay_Avg: 6.47, eBay_Low: 3.92, eBay_High: 10.77, eBay_Count: 9, eBay_Median: 5.99,
   },
   {
     Title: `Superman`, Issue: `32`, Publisher: `DC`,
@@ -2082,7 +2082,7 @@ Already signed.`,
     Imprint: `DC All In`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `222`,
-    eBay_Avg: 7.69, eBay_Low: 1.99, eBay_High: 15, eBay_Count: 10, eBay_Median: 7.79,
+    eBay_Avg: 5.68, eBay_Low: 2.99, eBay_High: 12, eBay_Count: 9, eBay_Median: 4,
   },
   {
     Title: `Green Lantern`, Issue: `33`, Publisher: `DC`,
@@ -2101,7 +2101,7 @@ Already signed.`,
     Imprint: `DC All In`, Box: `72`,
     Crossover: ``, Start_Bid: `8`,
     Volume: `7`, Entry: `223`,
-    eBay_Avg: 8.25, eBay_Low: 8.25, eBay_High: 8.25, eBay_Count: 1, eBay_Median: 8.25,
+    eBay_Avg: 6.96, eBay_Low: 4.05, eBay_High: 12, eBay_Count: 7, eBay_Median: 6.99,
   },
   {
     Title: `Green Arrow`, Issue: `25`, Publisher: `DC`,
@@ -2120,7 +2120,7 @@ Already signed.`,
     Imprint: `DC`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `224`,
-    eBay_Avg: 4.66, eBay_Low: 2.97, eBay_High: 6.69, eBay_Count: 7, eBay_Median: 4.99,
+    eBay_Avg: 10.96, eBay_Low: 0.99, eBay_High: 25, eBay_Count: 10, eBay_Median: 8.97,
   },
   {
     Title: `Black Panther`, Issue: `1`, Publisher: `Marvel`,
@@ -2139,7 +2139,7 @@ Already signed.`,
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `26`,
     Volume: `10`, Entry: `225`,
-    eBay_Avg: 11.01, eBay_Low: 2, eBay_High: 25.84, eBay_Count: 10, eBay_Median: 10,
+    eBay_Avg: 23.79, eBay_Low: 2.5, eBay_High: 52.5, eBay_Count: 9, eBay_Median: 13.99,
   },
   {
     Title: `Legend Has It`, Issue: `1`, Publisher: `Independent`,
@@ -2158,7 +2158,7 @@ Already signed.`,
     Imprint: `Independent`, Box: `72`,
     Crossover: ``, Start_Bid: `6`,
     Volume: `1`, Entry: `226`,
-    eBay_Avg: null, eBay_Low: 350, eBay_High: 1499.99, eBay_Count: 10, eBay_Median: null,
+    eBay_Avg: 409.74, eBay_Low: 124.5, eBay_High: 949.99, eBay_Count: 10, eBay_Median: 447.5,
   },
   {
     Title: `DC K.O.: Superman vs. Captain Atom`, Issue: `1`, Publisher: `DC`,
@@ -2177,7 +2177,7 @@ Already signed.`,
     Imprint: `DC All In`, Box: `72`,
     Crossover: ``, Start_Bid: `8`,
     Volume: `1`, Entry: `227`,
-    eBay_Avg: 8.4, eBay_Low: 3, eBay_High: 15, eBay_Count: 10, eBay_Median: 6,
+    eBay_Avg: 6.84, eBay_Low: 2.95, eBay_High: 14.99, eBay_Count: 10, eBay_Median: 5.63,
   },
   {
     Title: `Age of Revelation`, Issue: `1`, Publisher: `Marvel`,
@@ -2196,7 +2196,7 @@ Already signed.`,
     Imprint: `DC/Marvel Crossover`, Box: `72`,
     Crossover: ``, Start_Bid: `6`,
     Volume: `1`, Entry: `228`,
-    eBay_Avg: 4.61, eBay_Low: 2.98, eBay_High: 5.99, eBay_Count: 9, eBay_Median: 4.66,
+    eBay_Avg: 12.82, eBay_Low: 5.7, eBay_High: 20.99, eBay_Count: 8, eBay_Median: 13.34,
   },
   {
     Title: `Ultimate Endgame`, Issue: `1`, Publisher: `Marvel`,
@@ -2215,7 +2215,7 @@ Already signed.`,
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `8`,
     Volume: `1`, Entry: `229`,
-    eBay_Avg: 9.74, eBay_Low: 4.99, eBay_High: 23.99, eBay_Count: 8, eBay_Median: 7.99,
+    eBay_Avg: 11.78, eBay_Low: 4.5, eBay_High: 30, eBay_Count: 8, eBay_Median: 8.19,
   },
   {
     Title: `Marauders`, Issue: `13`, Publisher: `Marvel`,
@@ -2234,7 +2234,7 @@ Already signed.`,
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `2`, Entry: `230`,
-    eBay_Avg: 1.66, eBay_Low: 1.32, eBay_High: 1.99, eBay_Count: 2, eBay_Median: 1.66,
+    eBay_Avg: 1.66, eBay_Low: 1.33, eBay_High: 1.99, eBay_Count: 2, eBay_Median: 1.66,
   },
   {
     Title: `Wonder Woman`, Issue: `20`, Publisher: `DC`,
@@ -2253,7 +2253,7 @@ Already signed.`,
     Imprint: `DC All In`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `231`,
-    eBay_Avg: 6.31, eBay_Low: 0.99, eBay_High: 14.69, eBay_Count: 7, eBay_Median: 5.99,
+    eBay_Avg: 18.77, eBay_Low: 4.99, eBay_High: 54.95, eBay_Count: 7, eBay_Median: 8.04,
   },
   {
     Title: `Wonder Woman`, Issue: `21`, Publisher: `DC`,
@@ -2272,7 +2272,7 @@ Already signed.`,
     Imprint: `DC All In`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `232`,
-    eBay_Avg: null, eBay_Low: 0.99, eBay_High: 33.36, eBay_Count: 9, eBay_Median: null,
+    eBay_Avg: 16.21, eBay_Low: 1.49, eBay_High: 33.64, eBay_Count: 7, eBay_Median: 20,
   },
   {
     Title: `Wonder Woman`, Issue: `30`, Publisher: `DC`,
@@ -2291,7 +2291,7 @@ Already signed.`,
     Imprint: `DC All In`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `234`,
-    eBay_Avg: 9.09, eBay_Low: 4.62, eBay_High: 18.99, eBay_Count: 8, eBay_Median: 6.23,
+    eBay_Avg: 7.53, eBay_Low: 4.63, eBay_High: 13.99, eBay_Count: 9, eBay_Median: 6.24,
   },
   {
     Title: `Wonder Woman`, Issue: `31`, Publisher: `DC`,
@@ -2310,7 +2310,7 @@ Already signed.`,
     Imprint: `DC All In`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `235`,
-    eBay_Avg: 6.05, eBay_Low: 2.24, eBay_High: 12, eBay_Count: 8, eBay_Median: 5.44,
+    eBay_Avg: 6.62, eBay_Low: 2.24, eBay_High: 12.12, eBay_Count: 9, eBay_Median: 5,
   },
   {
     Title: `Sorcerer Supreme`, Issue: `3`, Publisher: `Marvel`,
@@ -2348,7 +2348,7 @@ Already signed.`,
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `6`,
     Volume: `1`, Entry: `237`,
-    eBay_Avg: 10.08, eBay_Low: 7.95, eBay_High: 11.95, eBay_Count: 10, eBay_Median: 9.99,
+    eBay_Avg: 7.19, eBay_Low: 2.99, eBay_High: 15, eBay_Count: 9, eBay_Median: 6.99,
   },
   {
     Title: `Storm`, Issue: `4`, Publisher: `Marvel`,
@@ -2367,7 +2367,7 @@ Already signed.`,
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `238`,
-    eBay_Avg: 10.58, eBay_Low: 0.99, eBay_High: 25.99, eBay_Count: 8, eBay_Median: 6.39,
+    eBay_Avg: 22.06, eBay_Low: 2.93, eBay_High: 49.99, eBay_Count: 8, eBay_Median: 24.98,
   },
   {
     Title: `Cloak or Dagger`, Issue: `1`, Publisher: `Marvel`,
@@ -2386,7 +2386,7 @@ Already signed.`,
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `239`,
-    eBay_Avg: 14.27, eBay_Low: 2.99, eBay_High: 34.99, eBay_Count: 9, eBay_Median: 7.79,
+    eBay_Avg: 18.26, eBay_Low: 3.99, eBay_High: 39.99, eBay_Count: 9, eBay_Median: 12.99,
   },
   {
     Title: `Green Lantern`, Issue: `18`, Publisher: `DC`,
@@ -2405,7 +2405,7 @@ Already signed.`,
     Imprint: `DC All In`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `7`, Entry: `240`,
-    eBay_Avg: 4.83, eBay_Low: 0.99, eBay_High: 12, eBay_Count: 8, eBay_Median: 4.17,
+    eBay_Avg: 11.28, eBay_Low: 4.95, eBay_High: 33, eBay_Count: 9, eBay_Median: 10,
   },
   {
     Title: `Green Lantern`, Issue: `34`, Publisher: `DC`,
@@ -2424,7 +2424,7 @@ Already signed.`,
     Imprint: `DC All In`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `7`, Entry: `241`,
-    eBay_Avg: 35.95, eBay_Low: 6.99, eBay_High: 75, eBay_Count: 7, eBay_Median: 33.99,
+    eBay_Avg: 35.97, eBay_Low: 6.99, eBay_High: 75, eBay_Count: 7, eBay_Median: 33.99,
   },
   {
     Title: `Action Comics`, Issue: `1078`, Publisher: `DC`,
@@ -2443,7 +2443,7 @@ Already signed.`,
     Imprint: `DC All In`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `2`, Entry: `242`,
-    eBay_Avg: 7.33, eBay_Low: 3.4, eBay_High: 15, eBay_Count: 9, eBay_Median: 4.99,
+    eBay_Avg: 5.8, eBay_Low: 3.45, eBay_High: 10.49, eBay_Count: 10, eBay_Median: 4.22,
   },
   {
     Title: `Cyborg`, Issue: `3`, Publisher: `DC`,
@@ -2462,7 +2462,7 @@ Already signed.`,
     Imprint: `DC`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `4`, Entry: `243`,
-    eBay_Avg: 10.91, eBay_Low: 3.99, eBay_High: 28, eBay_Count: 10, eBay_Median: 9.86,
+    eBay_Avg: 8.3, eBay_Low: 3.99, eBay_High: 14.95, eBay_Count: 9, eBay_Median: 8,
   },
   {
     Title: `Captain Marvel: Dark Past`, Issue: `1`, Publisher: `Marvel`,
@@ -2520,7 +2520,7 @@ Chris Claremont confirmed all 3 days. Wolverine #8 (1982) is your priority signi
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `7`, Entry: `246`,
-    eBay_Avg: 2.88, eBay_Low: 0.99, eBay_High: 9, eBay_Count: 8, eBay_Median: 1.49,
+    eBay_Avg: 6.57, eBay_Low: 1.78, eBay_High: 16.99, eBay_Count: 8, eBay_Median: 3.8,
   },
   {
     Title: `X-Men`, Issue: `25`, Publisher: `Marvel`,
@@ -2539,7 +2539,7 @@ Chris Claremont confirmed all 3 days. Wolverine #8 (1982) is your priority signi
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `8`,
     Volume: `6`, Entry: `247`,
-    eBay_Avg: null, eBay_Low: 2.58, eBay_High: 59.99, eBay_Count: 10, eBay_Median: null,
+    eBay_Avg: 19.46, eBay_Low: 4.39, eBay_High: 54.99, eBay_Count: 9, eBay_Median: 19.25,
   },
   {
     Title: `X-Men`, Issue: `28`, Publisher: `Marvel`,
@@ -2558,7 +2558,7 @@ Chris Claremont confirmed all 3 days. Wolverine #8 (1982) is your priority signi
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `6`, Entry: `248`,
-    eBay_Avg: 8.32, eBay_Low: 0.99, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 8,
+    eBay_Avg: 6.67, eBay_Low: 0.99, eBay_High: 13.65, eBay_Count: 8, eBay_Median: 6.87,
   },
   {
     Title: `Punisher`, Issue: `3`, Publisher: `Marvel`,
@@ -2577,7 +2577,7 @@ Chris Claremont confirmed all 3 days. Wolverine #8 (1982) is your priority signi
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `249`,
-    eBay_Avg: 9.26, eBay_Low: 0.99, eBay_High: 24.99, eBay_Count: 9, eBay_Median: 7.99,
+    eBay_Avg: 21.63, eBay_Low: 4.99, eBay_High: 44.47, eBay_Count: 10, eBay_Median: 15.99,
   },
   {
     Title: `Marc Spector: Moon Knight`, Issue: `3`, Publisher: `Marvel`,
@@ -2616,7 +2616,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `6`, Entry: `251`,
-    eBay_Avg: 32.91, eBay_Low: 3.85, eBay_High: 88.89, eBay_Count: 8, eBay_Median: 11.71,
+    eBay_Avg: 57.95, eBay_Low: 3.85, eBay_High: 149.06, eBay_Count: 10, eBay_Median: 60.98,
   },
   {
     Title: `Rogue`, Issue: `4`, Publisher: `Marvel`,
@@ -2635,7 +2635,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `252`,
-    eBay_Avg: 29.13, eBay_Low: 3.99, eBay_High: 69.99, eBay_Count: 9, eBay_Median: 24.99,
+    eBay_Avg: 17.04, eBay_Low: 4.44, eBay_High: 35, eBay_Count: 9, eBay_Median: 14.99,
   },
   {
     Title: `Fantastic Four`, Issue: `2`, Publisher: `Marvel`,
@@ -2654,7 +2654,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `8`,
     Volume: `1`, Entry: `253`,
-    eBay_Avg: null, eBay_Low: 14.95, eBay_High: 48.94, eBay_Count: 2, eBay_Median: null,
+    eBay_Avg: 17.18, eBay_Low: 3.25, eBay_High: 34.99, eBay_Count: 9, eBay_Median: 14.75,
   },
   {
     Title: `Black Canary: Best of the Best`, Issue: `1`, Publisher: `Marvel`,
@@ -2673,7 +2673,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Independent`, Box: `72`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `1`, Entry: `254`,
-    eBay_Avg: 1.65, eBay_Low: 1.65, eBay_High: 1.65, eBay_Count: 1, eBay_Median: 1.65,
+    eBay_Avg: 8.54, eBay_Low: 1.65, eBay_High: 12.21, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `Black Cat`, Issue: `1`, Publisher: `Marvel`,
@@ -2692,7 +2692,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `255`,
-    eBay_Avg: 10.72, eBay_Low: 3.13, eBay_High: 19.97, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 20.57, eBay_Low: 3.99, eBay_High: 49.93, eBay_Count: 10, eBay_Median: 19.49,
   },
   {
     Title: `Fire and Ice`, Issue: `1`, Publisher: `DC`,
@@ -2711,7 +2711,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `72`,
     Crossover: ``, Start_Bid: `8`,
     Volume: `1`, Entry: `256`,
-    eBay_Avg: 8.18, eBay_Low: 4.44, eBay_High: 14.12, eBay_Count: 3, eBay_Median: 5.99,
+    eBay_Avg: 8.56, eBay_Low: 3.88, eBay_High: 19.99, eBay_Count: 8, eBay_Median: 6,
   },
   {
     Title: `Transformers`, Issue: `26`, Publisher: `Image`,
@@ -2730,7 +2730,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Skybound`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `257`,
-    eBay_Avg: 7.38, eBay_Low: 1.5, eBay_High: 18.95, eBay_Count: 8, eBay_Median: 4.99,
+    eBay_Avg: 15.91, eBay_Low: 1.5, eBay_High: 49.99, eBay_Count: 8, eBay_Median: 13,
   },
   {
     Title: `Transformers`, Issue: `30`, Publisher: `Image`,
@@ -2749,7 +2749,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Skybound`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `258`,
-    eBay_Avg: 29.7, eBay_Low: 3.49, eBay_High: 85.42, eBay_Count: 10, eBay_Median: 28.49,
+    eBay_Avg: 25.6, eBay_Low: 3.49, eBay_High: 49.99, eBay_Count: 10, eBay_Median: 27.74,
   },
   {
     Title: `Fantastic Four`, Issue: `10`, Publisher: `Marvel`,
@@ -2768,7 +2768,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `259`,
-    eBay_Avg: null, eBay_Low: 4.25, eBay_High: 125, eBay_Count: 9, eBay_Median: null,
+    eBay_Avg: 20.92, eBay_Low: 3.15, eBay_High: 49.99, eBay_Count: 9, eBay_Median: 14.75,
   },
   {
     Title: `Fantastic Four`, Issue: `1`, Publisher: `Marvel`,
@@ -2788,7 +2788,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `8`,
     Volume: `1`, Entry: `260`,
-    eBay_Avg: 6.58, eBay_Low: 2, eBay_High: 14.44, eBay_Count: 8, eBay_Median: 5.62,
+    eBay_Avg: 23.59, eBay_Low: 8.99, eBay_High: 53.99, eBay_Count: 9, eBay_Median: 19.49,
   },
   {
     Title: `Fantastic Four`, Issue: `2`, Publisher: `Marvel`,
@@ -2808,7 +2808,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `1`, Entry: `261`,
-    eBay_Avg: null, eBay_Low: 14.95, eBay_High: 48.94, eBay_Count: 2, eBay_Median: null,
+    eBay_Avg: 17.18, eBay_Low: 3.25, eBay_High: 34.99, eBay_Count: 9, eBay_Median: 14.75,
   },
   {
     Title: `Fantastic Four`, Issue: `3`, Publisher: `Marvel`,
@@ -2828,7 +2828,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `1`, Entry: `262`,
-    eBay_Avg: 11.35, eBay_Low: 3.95, eBay_High: 27.99, eBay_Count: 8, eBay_Median: 7.49,
+    eBay_Avg: 15.04, eBay_Low: 4.99, eBay_High: 27.99, eBay_Count: 7, eBay_Median: 14.99,
   },
   {
     Title: `Fantastic Four`, Issue: `4`, Publisher: `Marvel`,
@@ -2848,7 +2848,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `1`, Entry: `263`,
-    eBay_Avg: 8.04, eBay_Low: 2.49, eBay_High: 18.99, eBay_Count: 8, eBay_Median: 6.97,
+    eBay_Avg: 9.74, eBay_Low: 2.99, eBay_High: 24.99, eBay_Count: 8, eBay_Median: 7.5,
   },
   {
     Title: `Fantastic Four`, Issue: `5`, Publisher: `Marvel`,
@@ -2868,7 +2868,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `1`, Entry: `264`,
-    eBay_Avg: 7.2, eBay_Low: 2.66, eBay_High: 15, eBay_Count: 8, eBay_Median: 4.47,
+    eBay_Avg: 16.39, eBay_Low: 2.94, eBay_High: 44.99, eBay_Count: 8, eBay_Median: 9.87,
   },
   {
     Title: `Nebula`, Issue: `1`, Publisher: `Marvel`,
@@ -2888,7 +2888,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `6`,
     Volume: `1`, Entry: `265`,
-    eBay_Avg: 5.91, eBay_Low: 1.49, eBay_High: 14.99, eBay_Count: 7, eBay_Median: 3.75,
+    eBay_Avg: 6.22, eBay_Low: 1.99, eBay_High: 12.99, eBay_Count: 8, eBay_Median: 5.83,
   },
   {
     Title: `Vengeance of the Moon Knight`, Issue: `6`, Publisher: `Marvel`,
@@ -2908,7 +2908,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `2`, Entry: `266`,
-    eBay_Avg: 6.37, eBay_Low: 3.5, eBay_High: 15.99, eBay_Count: 9, eBay_Median: 5.67,
+    eBay_Avg: 6.87, eBay_Low: 3, eBay_High: 13.48, eBay_Count: 10, eBay_Median: 4.99,
   },
   {
     Title: `Moon Knight`, Issue: `1`, Publisher: `Marvel`,
@@ -2928,7 +2928,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `8`,
     Volume: `10`, Entry: `267`,
-    eBay_Avg: 13.38, eBay_Low: 8.5, eBay_High: 24.99, eBay_Count: 10, eBay_Median: 10.75,
+    eBay_Avg: 13.52, eBay_Low: 7, eBay_High: 24.99, eBay_Count: 9, eBay_Median: 14.99,
   },
   {
     Title: `Iron Man`, Issue: `4`, Publisher: `Marvel`,
@@ -2948,7 +2948,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `268`,
-    eBay_Avg: 9.06, eBay_Low: 4.99, eBay_High: 12.71, eBay_Count: 7, eBay_Median: 9.25,
+    eBay_Avg: 28.31, eBay_Low: 1.43, eBay_High: 62.44, eBay_Count: 10, eBay_Median: 32.5,
   },
   {
     Title: `Captain America`, Issue: `10`, Publisher: `Marvel`,
@@ -2968,7 +2968,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `13`, Entry: `269`,
-    eBay_Avg: 11.38, eBay_Low: 3.85, eBay_High: 24.49, eBay_Count: 6, eBay_Median: 7,
+    eBay_Avg: 15.83, eBay_Low: 1.43, eBay_High: 35.99, eBay_Count: 6, eBay_Median: 13.29,
   },
   {
     Title: `Batman Black & White`, Issue: `3`, Publisher: `DC`,
@@ -2987,7 +2987,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC All In`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `4`, Entry: `270`,
-    eBay_Avg: 21.07, eBay_Low: 4.99, eBay_High: 34.95, eBay_Count: 10, eBay_Median: 22.49,
+    eBay_Avg: 16.06, eBay_Low: 4.99, eBay_High: 34.95, eBay_Count: 10, eBay_Median: 12.55,
   },
   {
     Title: `Superman/Spider-Man`, Issue: `1`, Publisher: `DC`,
@@ -3006,7 +3006,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC/Marvel Crossover`, Box: `72`,
     Crossover: ``, Start_Bid: `6`,
     Volume: `1`, Entry: `271`,
-    eBay_Avg: 14.66, eBay_Low: 8.99, eBay_High: 24.99, eBay_Count: 3, eBay_Median: 9.99,
+    eBay_Avg: 12.42, eBay_Low: 5.71, eBay_High: 24.99, eBay_Count: 4, eBay_Median: 9.49,
   },
   {
     Title: `Absolute Batman`, Issue: `1`, Publisher: `DC`,
@@ -3025,7 +3025,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC All In`, Box: `72`,
     Crossover: ``, Start_Bid: `26`,
     Volume: `1`, Entry: `272`,
-    eBay_Avg: 75.31, eBay_Low: 1.44, eBay_High: 190.76, eBay_Count: 5, eBay_Median: 16.94,
+    eBay_Avg: 191.68, eBay_Low: 2.75, eBay_High: 650, eBay_Count: 8, eBay_Median: 40.5,
   },
   {
     Title: `Absolute Batman`, Issue: `2`, Publisher: `DC`,
@@ -3044,7 +3044,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC All In`, Box: `104`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `1`, Entry: `273`,
-    eBay_Avg: 30.73, eBay_Low: 4.99, eBay_High: 79.99, eBay_Count: 7, eBay_Median: 14.99,
+    eBay_Avg: 26.67, eBay_Low: 9.62, eBay_High: 79.99, eBay_Count: 7, eBay_Median: 15,
   },
   {
     Title: `Absolute Batman`, Issue: `3`, Publisher: `DC`,
@@ -3063,7 +3063,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC All In`, Box: `104`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `274`,
-    eBay_Avg: 12.29, eBay_Low: 12.29, eBay_High: 12.29, eBay_Count: 1, eBay_Median: 12.29,
+    eBay_Avg: 23.02, eBay_Low: 2.68, eBay_High: 65, eBay_Count: 8, eBay_Median: 20,
   },
   {
     Title: `Absolute Batman`, Issue: `4`, Publisher: `DC`,
@@ -3082,7 +3082,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC All In`, Box: `104`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `275`,
-    eBay_Avg: 6.71, eBay_Low: 5.25, eBay_High: 10, eBay_Count: 6, eBay_Median: 6,
+    eBay_Avg: 23.68, eBay_Low: 5.29, eBay_High: 49.99, eBay_Count: 10, eBay_Median: 19,
   },
   {
     Title: `Absolute Batman`, Issue: `5`, Publisher: `DC`,
@@ -3101,7 +3101,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC All In`, Box: `104`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `276`,
-    eBay_Avg: 51.9, eBay_Low: 6.5, eBay_High: 129.99, eBay_Count: 9, eBay_Median: 35.59,
+    eBay_Avg: 106.45, eBay_Low: 5.33, eBay_High: 289, eBay_Count: 9, eBay_Median: 94.99,
   },
   {
     Title: `Absolute Batman`, Issue: `6`, Publisher: `DC`,
@@ -3120,7 +3120,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC All In`, Box: `104`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `277`,
-    eBay_Avg: 60.71, eBay_Low: 10.99, eBay_High: 149.99, eBay_Count: 10, eBay_Median: 70.59,
+    eBay_Avg: 44.41, eBay_Low: 12.99, eBay_High: 75, eBay_Count: 9, eBay_Median: 49.99,
   },
   {
     Title: `Absolute Batman`, Issue: `7`, Publisher: `DC`,
@@ -3139,7 +3139,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC All In`, Box: `104`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `278`,
-    eBay_Avg: 34.94, eBay_Low: 6.49, eBay_High: 80, eBay_Count: 9, eBay_Median: 22,
+    eBay_Avg: 50.03, eBay_Low: 12.99, eBay_High: 129.99, eBay_Count: 9, eBay_Median: 48.5,
   },
   {
     Title: `Absolute Batman`, Issue: `8`, Publisher: `DC`,
@@ -3158,7 +3158,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC All In`, Box: `104`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `279`,
-    eBay_Avg: 52.14, eBay_Low: 44.3, eBay_High: 59.99, eBay_Count: 2, eBay_Median: 52.14,
+    eBay_Avg: 46.82, eBay_Low: 12.99, eBay_High: 100, eBay_Count: 10, eBay_Median: 42.5,
   },
   {
     Title: `The Flash`, Issue: `112`, Publisher: `DC`,
@@ -4545,7 +4545,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `88`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `2`, Entry: `381`,
-    eBay_Avg: 36.36, eBay_Low: 3.26, eBay_High: 79.99, eBay_Count: 9, eBay_Median: 17.99,
+    eBay_Avg: 6.93, eBay_Low: 4.5, eBay_High: 14.99, eBay_Count: 8, eBay_Median: 5.22,
   },
   {
     Title: `The Flash`, Issue: `201`, Publisher: `DC`,
@@ -5020,7 +5020,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `47`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `2`, Entry: `406`,
-    eBay_Avg: 6.84, eBay_Low: 1, eBay_High: 12, eBay_Count: 8, eBay_Median: 6.47,
+    eBay_Avg: 11.07, eBay_Low: 4.95, eBay_High: 24.11, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `DC Comics Presents: The Flash`, Issue: `1`, Publisher: `DC`,
@@ -5894,7 +5894,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `47`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `452`,
-    eBay_Avg: 18.8, eBay_Low: 2.8, eBay_High: 49.99, eBay_Count: 8, eBay_Median: 16.65,
+    eBay_Avg: 30.89, eBay_Low: 1.3, eBay_High: 65, eBay_Count: 10, eBay_Median: 23.14,
   },
   {
     Title: `JLA`, Issue: `76`, Publisher: `DC`,
@@ -6331,7 +6331,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `88`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `475`,
-    eBay_Avg: 11.46, eBay_Low: 2.13, eBay_High: 25, eBay_Count: 10, eBay_Median: 9.99,
+    eBay_Avg: 11.55, eBay_Low: 4.05, eBay_High: 25.08, eBay_Count: 8, eBay_Median: 9.04,
   },
   {
     Title: `JLA`, Issue: `101`, Publisher: `DC`,
@@ -6521,7 +6521,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `47`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `485`,
-    eBay_Avg: 5.17, eBay_Low: 2.13, eBay_High: 9.99, eBay_Count: 10, eBay_Median: 5.14,
+    eBay_Avg: 6.59, eBay_Low: 2.99, eBay_High: 18, eBay_Count: 7, eBay_Median: 5,
   },
   {
     Title: `JLA`, Issue: `59`, Publisher: `DC`,
@@ -6654,7 +6654,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `47`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `492`,
-    eBay_Avg: 11.46, eBay_Low: 2.13, eBay_High: 25, eBay_Count: 10, eBay_Median: 9.99,
+    eBay_Avg: 11.55, eBay_Low: 4.05, eBay_High: 25.08, eBay_Count: 8, eBay_Median: 9.04,
   },
   {
     Title: `JLA`, Issue: `106`, Publisher: `DC`,
@@ -7034,7 +7034,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC New 52`, Box: `57`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `2`, Entry: `600`,
-    eBay_Avg: null, eBay_Low: 5.14, eBay_High: 57.32, eBay_Count: 9, eBay_Median: null,
+    eBay_Avg: 29.86, eBay_Low: 5.14, eBay_High: 57.62, eBay_Count: 9, eBay_Median: 30,
   },
   {
     Title: `Batman`, Issue: `13`, Publisher: `DC`,
@@ -7091,7 +7091,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC New 52`, Box: `57`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `2`, Entry: `603`,
-    eBay_Avg: 12.19, eBay_Low: 4.48, eBay_High: 27.99, eBay_Count: 8, eBay_Median: 11.27,
+    eBay_Avg: 10.92, eBay_Low: 3, eBay_High: 29.99, eBay_Count: 9, eBay_Median: 11,
   },
   {
     Title: `Batman`, Issue: `22`, Publisher: `DC`,
@@ -7110,7 +7110,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC New 52`, Box: `57`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `2`, Entry: `604`,
-    eBay_Avg: 8.15, eBay_Low: 2.39, eBay_High: 14.24, eBay_Count: 9, eBay_Median: 7.99,
+    eBay_Avg: 8.75, eBay_Low: 3, eBay_High: 22.95, eBay_Count: 8, eBay_Median: 5.75,
   },
   {
     Title: `Batman`, Issue: `23`, Publisher: `DC`,
@@ -7319,7 +7319,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC New 52`, Box: `57`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `2`, Entry: `615`,
-    eBay_Avg: 8.19, eBay_Low: 2.66, eBay_High: 14.99, eBay_Count: 7, eBay_Median: 8.1,
+    eBay_Avg: 8.02, eBay_Low: 3.57, eBay_High: 16.99, eBay_Count: 7, eBay_Median: 5.33,
   },
   {
     Title: `Batman and Robin`, Issue: `5`, Publisher: `DC`,
@@ -7585,7 +7585,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC New 52`, Box: `57`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `2`, Entry: `629`,
-    eBay_Avg: 5.45, eBay_Low: 2.9, eBay_High: 9.99, eBay_Count: 10, eBay_Median: 4.46,
+    eBay_Avg: 6.5, eBay_Low: 2.9, eBay_High: 10.72, eBay_Count: 10, eBay_Median: 6.45,
   },
   {
     Title: `Batman and Robin`, Issue: `19`, Publisher: `DC`,
@@ -7965,7 +7965,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC New 52`, Box: `57`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `649`,
-    eBay_Avg: 11.62, eBay_Low: 5.64, eBay_High: 19.99, eBay_Count: 10, eBay_Median: 11,
+    eBay_Avg: 10.8, eBay_Low: 3, eBay_High: 19.99, eBay_Count: 10, eBay_Median: 10.99,
   },
   {
     Title: `Batman/Superman`, Issue: `2`, Publisher: `DC`,
@@ -8345,7 +8345,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `57`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `669`,
-    eBay_Avg: 11.48, eBay_Low: 5, eBay_High: 20, eBay_Count: 9, eBay_Median: 8.99,
+    eBay_Avg: 11.2, eBay_Low: 4.29, eBay_High: 20, eBay_Count: 9, eBay_Median: 10,
   },
   {
     Title: `Batman and Robin Eternal`, Issue: `1`, Publisher: `DC`,
@@ -8383,7 +8383,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC New 52`, Box: `57`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `2`, Entry: `671`,
-    eBay_Avg: 14.58, eBay_Low: 7.79, eBay_High: 24.08, eBay_Count: 9, eBay_Median: 11.24,
+    eBay_Avg: 12.74, eBay_Low: 7.79, eBay_High: 20, eBay_Count: 9, eBay_Median: 11,
   },
   {
     Title: `Batman: Europa`, Issue: `2`, Publisher: `DC`,
@@ -8573,7 +8573,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC New 52`, Box: `57`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `681`,
-    eBay_Avg: 14.14, eBay_Low: 2.49, eBay_High: 30, eBay_Count: 10, eBay_Median: 14.99,
+    eBay_Avg: 8.22, eBay_Low: 4.95, eBay_High: 12.95, eBay_Count: 8, eBay_Median: 7.97,
   },
   {
     Title: `Superman Unchained`, Issue: `2`, Publisher: `DC`,
@@ -9675,7 +9675,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Infinite Frontier`, Box: `60`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `740`,
-    eBay_Avg: 15.3, eBay_Low: 5, eBay_High: 40, eBay_Count: 7, eBay_Median: 14.18,
+    eBay_Avg: 9.36, eBay_Low: 5.4, eBay_High: 15, eBay_Count: 9, eBay_Median: 9,
   },
   {
     Title: `Event Leviathan`, Issue: `1`, Publisher: `DC`,
@@ -10112,7 +10112,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `1127`,
-    eBay_Avg: 18.66, eBay_Low: 0.99, eBay_High: 50, eBay_Count: 10, eBay_Median: 17.47,
+    eBay_Avg: 5.71, eBay_Low: 2.75, eBay_High: 9.99, eBay_Count: 8, eBay_Median: 4.99,
   },
   {
     Title: `All-New Captain America`, Issue: `2`, Publisher: `Marvel`,
@@ -10492,7 +10492,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `60`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `783`,
-    eBay_Avg: 5.64, eBay_Low: 2.13, eBay_High: 12, eBay_Count: 8, eBay_Median: 4.93,
+    eBay_Avg: 6.78, eBay_Low: 2, eBay_High: 13.47, eBay_Count: 10, eBay_Median: 6.31,
   },
   {
     Title: `Young Justice`, Issue: `2`, Publisher: `DC`,
@@ -10853,7 +10853,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Rebirth`, Box: `60`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `2`, Entry: `803`,
-    eBay_Avg: 17.41, eBay_Low: 7.95, eBay_High: 31, eBay_Count: 7, eBay_Median: 17.99,
+    eBay_Avg: 24.34, eBay_Low: 8.99, eBay_High: 59.99, eBay_Count: 7, eBay_Median: 20,
   },
   {
     Title: `Dark Days: The Forge`, Issue: `1`, Publisher: `DC`,
@@ -10910,7 +10910,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `60`,
     Crossover: `Dark Nights: Metal`, Start_Bid: `20`,
     Volume: `1`, Entry: `806`,
-    eBay_Avg: 30.49, eBay_Low: 7, eBay_High: 59.99, eBay_Count: 8, eBay_Median: 23.49,
+    eBay_Avg: 33.1, eBay_Low: 7, eBay_High: 59.99, eBay_Count: 9, eBay_Median: 25,
   },
   {
     Title: `Dark Knights: Metal`, Issue: `3`, Publisher: `DC`,
@@ -11081,7 +11081,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `60`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `3`, Entry: `815`,
-    eBay_Avg: 18.37, eBay_Low: 9.44, eBay_High: 32.95, eBay_Count: 9, eBay_Median: 14.99,
+    eBay_Avg: 15.62, eBay_Low: 1.92, eBay_High: 30, eBay_Count: 10, eBay_Median: 13.47,
   },
   {
     Title: `Hawkman`, Issue: `8`, Publisher: `DC`,
@@ -11651,7 +11651,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Rebirth`, Box: `48`,
     Crossover: `DC Rebirth / The Button`, Start_Bid: `5`,
     Volume: `3`, Entry: `1480`,
-    eBay_Avg: 12.19, eBay_Low: 4.48, eBay_High: 27.99, eBay_Count: 8, eBay_Median: 11.27,
+    eBay_Avg: 10.92, eBay_Low: 3, eBay_High: 29.99, eBay_Count: 9, eBay_Median: 11,
   },
   {
     Title: `Batman`, Issue: `22`, Publisher: `DC`,
@@ -11670,7 +11670,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Rebirth`, Box: `48`,
     Crossover: `DC Rebirth / The Button`, Start_Bid: `5`,
     Volume: `3`, Entry: `1481`,
-    eBay_Avg: 8.15, eBay_Low: 2.39, eBay_High: 14.24, eBay_Count: 9, eBay_Median: 7.99,
+    eBay_Avg: 8.75, eBay_Low: 3, eBay_High: 22.95, eBay_Count: 8, eBay_Median: 5.75,
   },
   {
     Title: `Batman`, Issue: `30`, Publisher: `DC`,
@@ -11803,7 +11803,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Rebirth`, Box: `48`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `3`, Entry: `1488`,
-    eBay_Avg: 7.46, eBay_Low: 3.99, eBay_High: 14.99, eBay_Count: 6, eBay_Median: 6.12,
+    eBay_Avg: 16.16, eBay_Low: 7.99, eBay_High: 29.97, eBay_Count: 9, eBay_Median: 13.5,
   },
   {
     Title: `Batman`, Issue: `51`, Publisher: `DC`,
@@ -12202,7 +12202,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Infinite Frontier`, Box: `50`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `876`,
-    eBay_Avg: 9.53, eBay_Low: 4.95, eBay_High: 20, eBay_Count: 10, eBay_Median: 8.99,
+    eBay_Avg: 11.4, eBay_Low: 7.99, eBay_High: 19.99, eBay_Count: 10, eBay_Median: 9.99,
   },
   {
     Title: `Joker of the World`, Issue: `0`, Publisher: `DC`,
@@ -12316,7 +12316,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `50`,
     Crossover: `Absolute Power`, Start_Bid: `20`,
     Volume: `1`, Entry: `882`,
-    eBay_Avg: 8.91, eBay_Low: 2.75, eBay_High: 15.99, eBay_Count: 10, eBay_Median: 7,
+    eBay_Avg: 8.51, eBay_Low: 2.75, eBay_High: 14.99, eBay_Count: 10, eBay_Median: 7,
   },
   {
     Title: `Absolute Power`, Issue: `2`, Publisher: `DC`,
@@ -12544,7 +12544,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `58`,
     Crossover: ``, Start_Bid: `6`,
     Volume: `1`, Entry: `5113`,
-    eBay_Avg: 7, eBay_Low: 3, eBay_High: 9.99, eBay_Count: 7, eBay_Median: 7.65,
+    eBay_Avg: 13.62, eBay_Low: 3, eBay_High: 26, eBay_Count: 10, eBay_Median: 12.96,
   },
   {
     Title: `Batman`, Issue: `642`, Publisher: `DC`,
@@ -12753,7 +12753,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC All In`, Box: `50`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `909`,
-    eBay_Avg: 8.34, eBay_Low: 2.49, eBay_High: 19.99, eBay_Count: 7, eBay_Median: 5,
+    eBay_Avg: 29.11, eBay_Low: 3.95, eBay_High: 65, eBay_Count: 8, eBay_Median: 18.49,
   },
   {
     Title: `Batman`, Issue: `646`, Publisher: `DC`,
@@ -12848,7 +12848,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `58`,
     Crossover: ``, Start_Bid: `6`,
     Volume: `1`, Entry: `5122`,
-    eBay_Avg: 8.76, eBay_Low: 1.99, eBay_High: 17.7, eBay_Count: 7, eBay_Median: 9.99,
+    eBay_Avg: 8.14, eBay_Low: 2.95, eBay_High: 10.77, eBay_Count: 10, eBay_Median: 8.88,
   },
   {
     Title: `Batman`, Issue: `651`, Publisher: `DC`,
@@ -13380,7 +13380,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Infinite Frontier`, Box: `50`,
     Crossover: `One Minute War`, Start_Bid: `20`,
     Volume: `6`, Entry: `942`,
-    eBay_Avg: null, eBay_Low: 2.58, eBay_High: 26.2, eBay_Count: 8, eBay_Median: null,
+    eBay_Avg: 10.76, eBay_Low: 2.58, eBay_High: 28.08, eBay_Count: 7, eBay_Median: 6.28,
   },
   {
     Title: `The Flash`, Issue: `802`, Publisher: `DC`,
@@ -13836,7 +13836,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `58`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `5150`,
-    eBay_Avg: 5.01, eBay_Low: 1.49, eBay_High: 10, eBay_Count: 10, eBay_Median: 4.13,
+    eBay_Avg: 4.78, eBay_Low: 1.49, eBay_High: 10, eBay_Count: 9, eBay_Median: 4,
   },
   {
     Title: `Black Adam`, Issue: `6`, Publisher: `DC`,
@@ -14007,7 +14007,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `50`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `976`,
-    eBay_Avg: null, eBay_Low: 150, eBay_High: 1500, eBay_Count: 7, eBay_Median: null,
+    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
     Title: `JSA`, Issue: `2`, Publisher: `DC`,
@@ -14368,7 +14368,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Heroes Reborn`, Box: `7`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `3`, Entry: `4199`,
-    eBay_Avg: 9.99, eBay_Low: 9.99, eBay_High: 9.99, eBay_Count: 1, eBay_Median: 9.99,
+    eBay_Avg: 8.13, eBay_Low: 1.89, eBay_High: 22.71, eBay_Count: 8, eBay_Median: 6.61,
   },
   {
     Title: `Black Panther`, Issue: `9`, Publisher: `Marvel`,
@@ -14520,7 +14520,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Infinite Frontier`, Box: `50`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `1004`,
-    eBay_Avg: 11.59, eBay_Low: 4.79, eBay_High: 24.99, eBay_Count: 8, eBay_Median: 10.49,
+    eBay_Avg: 12.07, eBay_Low: 4.2, eBay_High: 31.33, eBay_Count: 9, eBay_Median: 10.99,
   },
   {
     Title: `Black Panther`, Issue: `14`, Publisher: `Marvel`,
@@ -14710,7 +14710,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Heroes Reborn`, Box: `7`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `3`, Entry: `4214`,
-    eBay_Avg: 7.41, eBay_Low: 2.13, eBay_High: 10.99, eBay_Count: 8, eBay_Median: 8.1,
+    eBay_Avg: 7.22, eBay_Low: 4.99, eBay_High: 10.99, eBay_Count: 7, eBay_Median: 6.98,
   },
   {
     Title: `Black Panther`, Issue: `27`, Publisher: `Marvel`,
@@ -15147,7 +15147,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Heroes Reborn`, Box: `7`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `3`, Entry: `4236`,
-    eBay_Avg: null, eBay_Low: 8.32, eBay_High: 54.11, eBay_Count: 10, eBay_Median: null,
+    eBay_Avg: 51.54, eBay_Low: 6, eBay_High: 124.81, eBay_Count: 9, eBay_Median: 47.95,
   },
   {
     Title: `Black Panther`, Issue: `55`, Publisher: `Marvel`,
@@ -15261,7 +15261,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Heroes Reborn`, Box: `7`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `3`, Entry: `4242`,
-    eBay_Avg: 5.14, eBay_Low: 0.99, eBay_High: 11, eBay_Count: 9, eBay_Median: 4.99,
+    eBay_Avg: 5.13, eBay_Low: 0.99, eBay_High: 11, eBay_Count: 9, eBay_Median: 4.99,
   },
   {
     Title: `Black Panther`, Issue: `61`, Publisher: `Marvel`,
@@ -15793,7 +15793,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `4`, Entry: `4263`,
-    eBay_Avg: 9.02, eBay_Low: 4.48, eBay_High: 13.48, eBay_Count: 10, eBay_Median: 9.63,
+    eBay_Avg: 10.15, eBay_Low: 2.6, eBay_High: 20.22, eBay_Count: 9, eBay_Median: 8.08,
   },
   {
     Title: `Black Panther`, Issue: `10`, Publisher: `Marvel`,
@@ -15926,7 +15926,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `4`, Entry: `4270`,
-    eBay_Avg: null, eBay_Low: 40, eBay_High: 40, eBay_Count: 1, eBay_Median: null,
+    eBay_Avg: 32.07, eBay_Low: 16.24, eBay_High: 40, eBay_Count: 3, eBay_Median: 39.96,
   },
   {
     Title: `Black Panther`, Issue: `18`, Publisher: `Marvel`,
@@ -16059,7 +16059,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `4`, Entry: `4277`,
-    eBay_Avg: 7.41, eBay_Low: 2.13, eBay_High: 10.99, eBay_Count: 8, eBay_Median: 8.1,
+    eBay_Avg: 7.22, eBay_Low: 4.99, eBay_High: 10.99, eBay_Count: 7, eBay_Median: 6.98,
   },
   {
     Title: `Black Panther`, Issue: `26`, Publisher: `Marvel`,
@@ -16249,7 +16249,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `6`, Entry: `4318`,
-    eBay_Avg: null, eBay_Low: 40, eBay_High: 40, eBay_Count: 1, eBay_Median: null,
+    eBay_Avg: 32.07, eBay_Low: 16.24, eBay_High: 40, eBay_Count: 3, eBay_Median: 39.96,
   },
   {
     Title: `Black Panther`, Issue: `18`, Publisher: `Marvel`,
@@ -16401,7 +16401,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `6`, Entry: `4326`,
-    eBay_Avg: 7.41, eBay_Low: 2.13, eBay_High: 10.99, eBay_Count: 8, eBay_Median: 8.1,
+    eBay_Avg: 7.22, eBay_Low: 4.99, eBay_High: 10.99, eBay_Count: 7, eBay_Median: 6.98,
   },
   {
     Title: `Black Panther`, Issue: `1`, Publisher: `Marvel`,
@@ -16420,7 +16420,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `7`, Entry: `4331`,
-    eBay_Avg: 11.01, eBay_Low: 2, eBay_High: 25.84, eBay_Count: 10, eBay_Median: 10,
+    eBay_Avg: 23.79, eBay_Low: 2.5, eBay_High: 52.5, eBay_Count: 9, eBay_Median: 13.99,
   },
   {
     Title: `Black Panther`, Issue: `2`, Publisher: `Marvel`,
@@ -16534,7 +16534,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `7`, Entry: `4337`,
-    eBay_Avg: 9.02, eBay_Low: 4.48, eBay_High: 13.48, eBay_Count: 10, eBay_Median: 9.63,
+    eBay_Avg: 10.15, eBay_Low: 2.6, eBay_High: 20.22, eBay_Count: 9, eBay_Median: 8.08,
   },
   {
     Title: `Black Panther`, Issue: `8`, Publisher: `Marvel`,
@@ -16553,7 +16553,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `7`, Entry: `4338`,
-    eBay_Avg: 9.99, eBay_Low: 9.99, eBay_High: 9.99, eBay_Count: 1, eBay_Median: 9.99,
+    eBay_Avg: 8.13, eBay_Low: 1.89, eBay_High: 22.71, eBay_Count: 8, eBay_Median: 6.61,
   },
   {
     Title: `Black Panther`, Issue: `9`, Publisher: `Marvel`,
@@ -16724,7 +16724,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `7`, Entry: `4347`,
-    eBay_Avg: null, eBay_Low: 40, eBay_High: 40, eBay_Count: 1, eBay_Median: null,
+    eBay_Avg: 32.07, eBay_Low: 16.24, eBay_High: 40, eBay_Count: 3, eBay_Median: 39.96,
   },
   {
     Title: `Black Panther`, Issue: `18`, Publisher: `Marvel`,
@@ -16876,7 +16876,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `7`, Entry: `4355`,
-    eBay_Avg: 7.41, eBay_Low: 2.13, eBay_High: 10.99, eBay_Count: 8, eBay_Median: 8.1,
+    eBay_Avg: 7.22, eBay_Low: 4.99, eBay_High: 10.99, eBay_Count: 7, eBay_Median: 6.98,
   },
   {
     Title: `Black Panther`, Issue: `1`, Publisher: `Marvel`,
@@ -16895,7 +16895,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `8`, Entry: `4371`,
-    eBay_Avg: 11.01, eBay_Low: 2, eBay_High: 25.84, eBay_Count: 10, eBay_Median: 10,
+    eBay_Avg: 23.79, eBay_Low: 2.5, eBay_High: 52.5, eBay_Count: 9, eBay_Median: 13.99,
   },
   {
     Title: `Black Panther`, Issue: `2`, Publisher: `Marvel`,
@@ -17009,7 +17009,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `7`, Entry: `4377`,
-    eBay_Avg: 9.02, eBay_Low: 4.48, eBay_High: 13.48, eBay_Count: 10, eBay_Median: 9.63,
+    eBay_Avg: 10.15, eBay_Low: 2.6, eBay_High: 20.22, eBay_Count: 9, eBay_Median: 8.08,
   },
   {
     Title: `Black Panther`, Issue: `8`, Publisher: `Marvel`,
@@ -17028,7 +17028,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `8`, Entry: `4378`,
-    eBay_Avg: 9.99, eBay_Low: 9.99, eBay_High: 9.99, eBay_Count: 1, eBay_Median: 9.99,
+    eBay_Avg: 8.13, eBay_Low: 1.89, eBay_High: 22.71, eBay_Count: 8, eBay_Median: 6.61,
   },
   {
     Title: `Black Panther`, Issue: `9`, Publisher: `Marvel`,
@@ -17199,7 +17199,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: ``, Box: `7`,
     Crossover: ``, Start_Bid: ``,
     Volume: ``, Entry: `13158`,
-    eBay_Avg: 8.63, eBay_Low: 2.99, eBay_High: 16.12, eBay_Count: 10, eBay_Median: 9.79,
+    eBay_Avg: 7.63, eBay_Low: 1.79, eBay_High: 16.12, eBay_Count: 10, eBay_Median: 8.5,
   },
   {
     Title: `Black Panther: The Man Without Fear`, Issue: `513`, Publisher: `Marvel`,
@@ -17560,7 +17560,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `1165`,
-    eBay_Avg: 7.54, eBay_Low: 2.99, eBay_High: 14.23, eBay_Count: 9, eBay_Median: 6.62,
+    eBay_Avg: 19.85, eBay_Low: 7.95, eBay_High: 35.99, eBay_Count: 7, eBay_Median: 14.03,
   },
   {
     Title: `Captain America`, Issue: `701`, Publisher: `Marvel`,
@@ -17655,7 +17655,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `1170`,
-    eBay_Avg: 10.93, eBay_Low: 3.49, eBay_High: 23, eBay_Count: 9, eBay_Median: 6.99,
+    eBay_Avg: 10.53, eBay_Low: 4.33, eBay_High: 23, eBay_Count: 8, eBay_Median: 9.97,
   },
   {
     Title: `Captain America: Sentinel of Liberty`, Issue: `1`, Publisher: `Marvel`,
@@ -17750,7 +17750,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `17`, Entry: `1175`,
-    eBay_Avg: 16.87, eBay_Low: 1, eBay_High: 30, eBay_Count: 8, eBay_Median: 14.97,
+    eBay_Avg: 20.77, eBay_Low: 9.99, eBay_High: 40, eBay_Count: 9, eBay_Median: 15,
   },
   {
     Title: `Captain America`, Issue: `2`, Publisher: `Marvel`,
@@ -17826,7 +17826,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `10`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `9`, Entry: `1179`,
-    eBay_Avg: 13.6, eBay_Low: 3.95, eBay_High: 42, eBay_Count: 7, eBay_Median: 7.79,
+    eBay_Avg: 17.5, eBay_Low: 3.99, eBay_High: 42, eBay_Count: 8, eBay_Median: 16.5,
   },
   {
     Title: `Captain Carter`, Issue: `2`, Publisher: `Marvel`,
@@ -18130,7 +18130,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `1196`,
-    eBay_Avg: 5.42, eBay_Low: 1.6, eBay_High: 10.48, eBay_Count: 8, eBay_Median: 4.26,
+    eBay_Avg: 9.88, eBay_Low: 4.49, eBay_High: 22.99, eBay_Count: 8, eBay_Median: 7.8,
   },
   {
     Title: `Invaders`, Issue: `2`, Publisher: `Marvel`,
@@ -18358,7 +18358,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `1208`,
-    eBay_Avg: 15.6, eBay_Low: 2.9, eBay_High: 39.99, eBay_Count: 8, eBay_Median: 13.5,
+    eBay_Avg: 14.36, eBay_Low: 2.9, eBay_High: 39.99, eBay_Count: 8, eBay_Median: 10.5,
   },
   {
     Title: `Captain America: Living Legend`, Issue: `2`, Publisher: `Marvel`,
@@ -18529,7 +18529,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `10`,
     Crossover: `Civil War`, Start_Bid: `1`,
     Volume: `1`, Entry: `1217`,
-    eBay_Avg: 16.87, eBay_Low: 1, eBay_High: 30, eBay_Count: 8, eBay_Median: 14.97,
+    eBay_Avg: 20.77, eBay_Low: 9.99, eBay_High: 40, eBay_Count: 9, eBay_Median: 15,
   },
   {
     Title: `All-New Captain America Special`, Issue: `1`, Publisher: `Marvel`,
@@ -18662,7 +18662,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `5`, Entry: `1224`,
-    eBay_Avg: 16.87, eBay_Low: 1, eBay_High: 30, eBay_Count: 8, eBay_Median: 14.97,
+    eBay_Avg: 20.77, eBay_Low: 9.99, eBay_High: 40, eBay_Count: 9, eBay_Median: 15,
   },
   {
     Title: `Captain America`, Issue: `601`, Publisher: `Marvel`,
@@ -18700,7 +18700,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `10`,
     Crossover: `Empire Crossover`, Start_Bid: `20`,
     Volume: `11`, Entry: `1227`,
-    eBay_Avg: 14.9, eBay_Low: 4.55, eBay_High: 34.2, eBay_Count: 8, eBay_Median: 12,
+    eBay_Avg: 20.37, eBay_Low: 4.5, eBay_High: 39.99, eBay_Count: 8, eBay_Median: 15.97,
   },
   {
     Title: `Batman/Superman: World's Finest`, Issue: `1`, Publisher: `DC`,
@@ -18719,7 +18719,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Infinite Frontier`, Box: `98`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `4`, Entry: `1228`,
-    eBay_Avg: 13.4, eBay_Low: 6.5, eBay_High: 20, eBay_Count: 9, eBay_Median: 13.99,
+    eBay_Avg: 12.61, eBay_Low: 6.5, eBay_High: 23.99, eBay_Count: 10, eBay_Median: 12,
   },
   {
     Title: `Low Slain`, Issue: `2`, Publisher: `DC`,
@@ -19175,7 +19175,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `5`, Entry: `1005`,
-    eBay_Avg: 16.87, eBay_Low: 1, eBay_High: 30, eBay_Count: 8, eBay_Median: 14.97,
+    eBay_Avg: 20.77, eBay_Low: 9.99, eBay_High: 40, eBay_Count: 9, eBay_Median: 15,
   },
   {
     Title: `Captain America`, Issue: `2`, Publisher: `Marvel`,
@@ -19327,7 +19327,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `5`, Entry: `1013`,
-    eBay_Avg: 11.38, eBay_Low: 3.85, eBay_High: 24.49, eBay_Count: 6, eBay_Median: 7,
+    eBay_Avg: 15.83, eBay_Low: 1.43, eBay_High: 35.99, eBay_Count: 6, eBay_Median: 13.29,
   },
   {
     Title: `Captain America`, Issue: `11`, Publisher: `Marvel`,
@@ -20524,7 +20524,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `98`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `1323`,
-    eBay_Avg: 11.2, eBay_Low: 6.95, eBay_High: 14.99, eBay_Count: 8, eBay_Median: 11.09,
+    eBay_Avg: 11.01, eBay_Low: 9.95, eBay_High: 14, eBay_Count: 10, eBay_Median: 10.5,
   },
   {
     Title: `Generations Forged`, Issue: `1`, Publisher: `DC`,
@@ -20657,7 +20657,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `4`, Entry: `1072`,
-    eBay_Avg: 16.87, eBay_Low: 1, eBay_High: 30, eBay_Count: 8, eBay_Median: 14.97,
+    eBay_Avg: 20.77, eBay_Low: 9.99, eBay_High: 40, eBay_Count: 9, eBay_Median: 15,
   },
   {
     Title: `Captain America`, Issue: `2`, Publisher: `Marvel`,
@@ -20828,7 +20828,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `4`, Entry: `1081`,
-    eBay_Avg: 11.38, eBay_Low: 3.85, eBay_High: 24.49, eBay_Count: 6, eBay_Median: 7,
+    eBay_Avg: 15.83, eBay_Low: 1.43, eBay_High: 35.99, eBay_Count: 6, eBay_Median: 13.29,
   },
   {
     Title: `Captain America`, Issue: `11`, Publisher: `Marvel`,
@@ -20980,7 +20980,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Rebirth`, Box: `98`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `2`, Entry: `1347`,
-    eBay_Avg: 17.87, eBay_Low: 5, eBay_High: 40, eBay_Count: 9, eBay_Median: 11,
+    eBay_Avg: 12.84, eBay_Low: 7.99, eBay_High: 25, eBay_Count: 7, eBay_Median: 10,
   },
   {
     Title: `Captain America`, Issue: `13`, Publisher: `Marvel`,
@@ -21379,7 +21379,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `6`, Entry: `1104`,
-    eBay_Avg: 16.87, eBay_Low: 1, eBay_High: 30, eBay_Count: 8, eBay_Median: 14.97,
+    eBay_Avg: 20.77, eBay_Low: 9.99, eBay_High: 40, eBay_Count: 9, eBay_Median: 15,
   },
   {
     Title: `Captain America`, Issue: `2`, Publisher: `Marvel`,
@@ -21569,7 +21569,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `6`, Entry: `1113`,
-    eBay_Avg: 11.38, eBay_Low: 3.85, eBay_High: 24.49, eBay_Count: 6, eBay_Median: 7,
+    eBay_Avg: 15.83, eBay_Low: 1.43, eBay_High: 35.99, eBay_Count: 6, eBay_Median: 13.29,
   },
   {
     Title: `Captain America`, Issue: `11`, Publisher: `Marvel`,
@@ -21987,7 +21987,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Rebirth`, Box: `48`,
     Crossover: `DC Rebirth`, Start_Bid: `5`,
     Volume: `1`, Entry: `1402`,
-    eBay_Avg: 6.78, eBay_Low: 3.99, eBay_High: 14.99, eBay_Count: 7, eBay_Median: 5,
+    eBay_Avg: 7.8, eBay_Low: 2.99, eBay_High: 14.99, eBay_Count: 9, eBay_Median: 5.55,
   },
   {
     Title: `Death of Hawkman`, Issue: `1`, Publisher: `DC`,
@@ -22120,7 +22120,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Rebirth`, Box: `48`,
     Crossover: `DC Rebirth`, Start_Bid: `5`,
     Volume: `1`, Entry: `1409`,
-    eBay_Avg: 4.94, eBay_Low: 1.49, eBay_High: 6.99, eBay_Count: 7, eBay_Median: 4.99,
+    eBay_Avg: 19.99, eBay_Low: 3.25, eBay_High: 35, eBay_Count: 9, eBay_Median: 19,
   },
   {
     Title: `Justice League`, Issue: `2`, Publisher: `DC`,
@@ -22481,7 +22481,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Rebirth`, Box: `48`,
     Crossover: `DC Rebirth`, Start_Bid: `5`,
     Volume: `1`, Entry: `1432`,
-    eBay_Avg: null, eBay_Low: 9.99, eBay_High: 62.99, eBay_Count: 8, eBay_Median: null,
+    eBay_Avg: 10.77, eBay_Low: 5.39, eBay_High: 14.99, eBay_Count: 7, eBay_Median: 10,
   },
   {
     Title: `Suicide Squad Special: War Crimes`, Issue: `1`, Publisher: `DC`,
@@ -23070,7 +23070,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `48`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `1466`,
-    eBay_Avg: 3.65, eBay_Low: 1.92, eBay_High: 6.65, eBay_Count: 9, eBay_Median: 2.99,
+    eBay_Avg: 8.75, eBay_Low: 2.11, eBay_High: 19, eBay_Count: 8, eBay_Median: 8.33,
   },
   {
     Title: `Justice League vs. Suicide Squad`, Issue: `1`, Publisher: `DC`,
@@ -23089,7 +23089,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Rebirth`, Box: `48`,
     Crossover: `DC Rebirth`, Start_Bid: `5`,
     Volume: `1`, Entry: `1467`,
-    eBay_Avg: 11.27, eBay_Low: 2.99, eBay_High: 15.63, eBay_Count: 9, eBay_Median: 14.95,
+    eBay_Avg: 8.7, eBay_Low: 2.99, eBay_High: 15.29, eBay_Count: 9, eBay_Median: 7.13,
   },
   {
     Title: `Justice League vs. Suicide Squad`, Issue: `2`, Publisher: `DC`,
@@ -23393,7 +23393,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `1145`,
-    eBay_Avg: 8.29, eBay_Low: 2.99, eBay_High: 15, eBay_Count: 6, eBay_Median: 9.37,
+    eBay_Avg: 17.9, eBay_Low: 2.95, eBay_High: 39.99, eBay_Count: 10, eBay_Median: 22.49,
   },
   {
     Title: `Captain America: Steve Rogers`, Issue: `2`, Publisher: `Marvel`,
@@ -23526,7 +23526,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `5`, Entry: `4195`,
-    eBay_Avg: 9.79, eBay_Low: 5.19, eBay_High: 24.99, eBay_Count: 8, eBay_Median: 8.47,
+    eBay_Avg: 98.76, eBay_Low: 5.3, eBay_High: 250, eBay_Count: 9, eBay_Median: 142.25,
   },
   {
     Title: `Doctor Strange`, Issue: `4`, Publisher: `Marvel`,
@@ -23716,7 +23716,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `14`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `4`, Entry: `4563`,
-    eBay_Avg: 6.57, eBay_Low: 2.99, eBay_High: 11.99, eBay_Count: 8, eBay_Median: 5.85,
+    eBay_Avg: 7.36, eBay_Low: 4, eBay_High: 15.29, eBay_Count: 9, eBay_Median: 6.99,
   },
   {
     Title: `Excalibur`, Issue: `2`, Publisher: `Marvel`,
@@ -23963,7 +23963,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `48`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `1514`,
-    eBay_Avg: 8.16, eBay_Low: 3.99, eBay_High: 15.98, eBay_Count: 8, eBay_Median: 6.62,
+    eBay_Avg: 6.73, eBay_Low: 3.92, eBay_High: 11, eBay_Count: 9, eBay_Median: 6.25,
   },
   {
     Title: `Hawkman`, Issue: `2`, Publisher: `DC`,
@@ -24229,7 +24229,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `98`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `1372`,
-    eBay_Avg: 48.66, eBay_Low: 7, eBay_High: 105, eBay_Count: 9, eBay_Median: 24.99,
+    eBay_Avg: 19.2, eBay_Low: 4.92, eBay_High: 55, eBay_Count: 7, eBay_Median: 14.99,
   },
   {
     Title: `Far Sector`, Issue: `2`, Publisher: `DC`,
@@ -24305,7 +24305,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Rebirth`, Box: `48`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `1539`,
-    eBay_Avg: 4.94, eBay_Low: 1.49, eBay_High: 6.99, eBay_Count: 7, eBay_Median: 4.99,
+    eBay_Avg: 19.99, eBay_Low: 3.25, eBay_High: 35, eBay_Count: 9, eBay_Median: 19,
   },
   {
     Title: `Justice League Dark`, Issue: `1`, Publisher: `DC`,
@@ -24324,7 +24324,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Rebirth`, Box: `48`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `1540`,
-    eBay_Avg: 10.27, eBay_Low: 5, eBay_High: 25, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 5.96, eBay_Low: 1, eBay_High: 10.97, eBay_Count: 10, eBay_Median: 5.33,
   },
   {
     Title: `Justice League Dark`, Issue: `2`, Publisher: `DC`,
@@ -24571,7 +24571,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `48`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `1553`,
-    eBay_Avg: 8.15, eBay_Low: 4.99, eBay_High: 15, eBay_Count: 10, eBay_Median: 6.95,
+    eBay_Avg: 9.65, eBay_Low: 2.99, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 6.95,
   },
   {
     Title: `Catwoman`, Issue: `2`, Publisher: `DC`,
@@ -24818,7 +24818,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `48`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `1566`,
-    eBay_Avg: 22.48, eBay_Low: 12.99, eBay_High: 39, eBay_Count: 8, eBay_Median: 22.99,
+    eBay_Avg: 21.92, eBay_Low: 3.17, eBay_High: 40.45, eBay_Count: 10, eBay_Median: 21.44,
   },
   {
     Title: `Justice League Odyssey`, Issue: `1`, Publisher: `DC`,
@@ -25065,7 +25065,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Rebirth`, Box: `48`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `6`, Entry: `1579`,
-    eBay_Avg: 12.33, eBay_Low: 6.99, eBay_High: 20, eBay_Count: 10, eBay_Median: 10.5,
+    eBay_Avg: 11.24, eBay_Low: 7.3, eBay_High: 20, eBay_Count: 7, eBay_Median: 10,
   },
   {
     Title: `Justice League`, Issue: `3`, Publisher: `DC`,
@@ -25787,7 +25787,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `12`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `3`, Entry: `1617`,
-    eBay_Avg: 13.13, eBay_Low: 1.34, eBay_High: 33.99, eBay_Count: 8, eBay_Median: 7.97,
+    eBay_Avg: 11.28, eBay_Low: 1.92, eBay_High: 29.99, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `New Mutants`, Issue: `2`, Publisher: `Marvel`,
@@ -26338,7 +26338,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `86`,
     Crossover: `Utopia`, Start_Bid: `5`,
     Volume: `1`, Entry: `1646`,
-    eBay_Avg: 3.75, eBay_Low: 2.9, eBay_High: 4.99, eBay_Count: 8, eBay_Median: 3.49,
+    eBay_Avg: 4.74, eBay_Low: 2.9, eBay_High: 7.99, eBay_Count: 9, eBay_Median: 4.19,
   },
   {
     Title: `Dark Avengers/Uncanny X-Men: Exodus`, Issue: `1`, Publisher: `Marvel`,
@@ -26680,7 +26680,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `12`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `2`, Entry: `1664`,
-    eBay_Avg: 10.26, eBay_Low: 2.09, eBay_High: 29.99, eBay_Count: 7, eBay_Median: 7.99,
+    eBay_Avg: 9.24, eBay_Low: 4.86, eBay_High: 19, eBay_Count: 8, eBay_Median: 7.05,
   },
   {
     Title: `Generation X`, Issue: `62`, Publisher: `Marvel`,
@@ -27117,7 +27117,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `12`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `1687`,
-    eBay_Avg: 30.95, eBay_Low: 10, eBay_High: 79.99, eBay_Count: 8, eBay_Median: 24.84,
+    eBay_Avg: 22.22, eBay_Low: 10, eBay_High: 45, eBay_Count: 7, eBay_Median: 22.95,
   },
   {
     Title: `X-Force: Sex and Violence`, Issue: `2`, Publisher: `Marvel`,
@@ -27212,7 +27212,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `12`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `1692`,
-    eBay_Avg: 4.29, eBay_Low: 1.5, eBay_High: 9.99, eBay_Count: 8, eBay_Median: 3.25,
+    eBay_Avg: 7.17, eBay_Low: 1.5, eBay_High: 22, eBay_Count: 7, eBay_Median: 3.95,
   },
   {
     Title: `X-Men: Deadly Genesis`, Issue: `6`, Publisher: `Marvel`,
@@ -27364,7 +27364,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `12`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `1700`,
-    eBay_Avg: 11.44, eBay_Low: 6.95, eBay_High: 24.99, eBay_Count: 9, eBay_Median: 9.95,
+    eBay_Avg: 10.97, eBay_Low: 6.95, eBay_High: 24.99, eBay_Count: 9, eBay_Median: 9.95,
   },
   {
     Title: `Wolverine: Old Man Logan`, Issue: `72`, Publisher: `Marvel`,
@@ -28447,7 +28447,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `12`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `1757`,
-    eBay_Avg: 18.74, eBay_Low: 11, eBay_High: 25.49, eBay_Count: 6, eBay_Median: 19.98,
+    eBay_Avg: 18.8, eBay_Low: 2.9, eBay_High: 48, eBay_Count: 9, eBay_Median: 19.95,
   },
   {
     Title: `Uncanny X-Men: First Class Giant-Size`, Issue: `1`, Publisher: `Marvel`,
@@ -28675,7 +28675,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `12`,
     Crossover: `Dark Reign`, Start_Bid: `5`,
     Volume: `3`, Entry: `1769`,
-    eBay_Avg: 15.92, eBay_Low: 6.86, eBay_High: 34.7, eBay_Count: 8, eBay_Median: 14.97,
+    eBay_Avg: 22.91, eBay_Low: 4.99, eBay_High: 69.99, eBay_Count: 7, eBay_Median: 17.99,
   },
   {
     Title: `Deadpool`, Issue: `2`, Publisher: `Marvel`,
@@ -28865,7 +28865,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `12`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `3`, Entry: `1779`,
-    eBay_Avg: 11.57, eBay_Low: 5.91, eBay_High: 19.93, eBay_Count: 5, eBay_Median: 10.99,
+    eBay_Avg: 11.57, eBay_Low: 5.91, eBay_High: 19.96, eBay_Count: 5, eBay_Median: 10.99,
   },
   {
     Title: `Quest of the Mutants: X-Men #1`, Issue: `1`, Publisher: `Marvel`,
@@ -29150,7 +29150,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC New 52`, Box: `52`,
     Crossover: `DC New 52 Relaunch`, Start_Bid: `10`,
     Volume: `1`, Entry: `1794`,
-    eBay_Avg: 15.05, eBay_Low: 2.58, eBay_High: 22, eBay_Count: 8, eBay_Median: 17.49,
+    eBay_Avg: 14.96, eBay_Low: 2.58, eBay_High: 39.95, eBay_Count: 8, eBay_Median: 12.54,
   },
   {
     Title: `Aquaman`, Issue: `2`, Publisher: `DC`,
@@ -29226,7 +29226,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC New 52`, Box: `52`,
     Crossover: `DC New 52 Relaunch`, Start_Bid: `5`,
     Volume: `1`, Entry: `1798`,
-    eBay_Avg: 7.78, eBay_Low: 2.99, eBay_High: 17.99, eBay_Count: 8, eBay_Median: 6.49,
+    eBay_Avg: 15.04, eBay_Low: 4.5, eBay_High: 29.99, eBay_Count: 9, eBay_Median: 15,
   },
   {
     Title: `Batgirl`, Issue: `2`, Publisher: `DC`,
@@ -29340,7 +29340,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC New 52`, Box: `52`,
     Crossover: `DC New 52 Relaunch`, Start_Bid: `5`,
     Volume: `3`, Entry: `1804`,
-    eBay_Avg: null, eBay_Low: 2.58, eBay_High: 26.2, eBay_Count: 8, eBay_Median: null,
+    eBay_Avg: 10.76, eBay_Low: 2.58, eBay_High: 28.08, eBay_Count: 7, eBay_Median: 6.28,
   },
   {
     Title: `The Flash`, Issue: `2`, Publisher: `DC`,
@@ -29682,7 +29682,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC New 52`, Box: `52`,
     Crossover: `DC New 52 Relaunch`, Start_Bid: `10`,
     Volume: `2`, Entry: `1822`,
-    eBay_Avg: 4.94, eBay_Low: 1.49, eBay_High: 6.99, eBay_Count: 7, eBay_Median: 4.99,
+    eBay_Avg: 19.99, eBay_Low: 3.25, eBay_High: 35, eBay_Count: 9, eBay_Median: 19,
   },
   {
     Title: `Justice League`, Issue: `2`, Publisher: `DC`,
@@ -29872,7 +29872,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC New 52`, Box: `52`,
     Crossover: `DC New 52 Relaunch`, Start_Bid: `5`,
     Volume: `1`, Entry: `1832`,
-    eBay_Avg: 10.84, eBay_Low: 5.77, eBay_High: 19.99, eBay_Count: 8, eBay_Median: 9.99,
+    eBay_Avg: 16.74, eBay_Low: 2.87, eBay_High: 29.99, eBay_Count: 9, eBay_Median: 19.99,
   },
   {
     Title: `Batman and Robin`, Issue: `2`, Publisher: `DC`,
@@ -30062,7 +30062,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC New 52`, Box: `52`,
     Crossover: `DC New 52 Relaunch`, Start_Bid: `5`,
     Volume: `1`, Entry: `1842`,
-    eBay_Avg: 9.22, eBay_Low: 3.2, eBay_High: 16, eBay_Count: 9, eBay_Median: 6.5,
+    eBay_Avg: 14.32, eBay_Low: 5.99, eBay_High: 34.95, eBay_Count: 9, eBay_Median: 12,
   },
   {
     Title: `Animal Man`, Issue: `2`, Publisher: `DC`,
@@ -30138,7 +30138,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC New 52`, Box: `52`,
     Crossover: `DC New 52 Relaunch`, Start_Bid: `4`,
     Volume: `1`, Entry: `1846`,
-    eBay_Avg: 11.94, eBay_Low: 4.98, eBay_High: 17.22, eBay_Count: 10, eBay_Median: 11.04,
+    eBay_Avg: 7.5, eBay_Low: 3, eBay_High: 15, eBay_Count: 8, eBay_Median: 4,
   },
   {
     Title: `Birds of Prey`, Issue: `2`, Publisher: `DC`,
@@ -30195,7 +30195,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC New 52`, Box: `52`,
     Crossover: `DC New 52 Relaunch`, Start_Bid: `5`,
     Volume: `4`, Entry: `1849`,
-    eBay_Avg: 10.98, eBay_Low: 2.99, eBay_High: 29.99, eBay_Count: 8, eBay_Median: 9.5,
+    eBay_Avg: 7.65, eBay_Low: 2.58, eBay_High: 12, eBay_Count: 7, eBay_Median: 9,
   },
   {
     Title: `Huntress`, Issue: `1`, Publisher: `DC`,
@@ -30252,7 +30252,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC New 52`, Box: `52`,
     Crossover: `DC New 52 Relaunch`, Start_Bid: `10`,
     Volume: `1`, Entry: `1852`,
-    eBay_Avg: 9.73, eBay_Low: 1.99, eBay_High: 25, eBay_Count: 9, eBay_Median: 7.19,
+    eBay_Avg: 15.58, eBay_Low: 4.5, eBay_High: 25.99, eBay_Count: 10, eBay_Median: 14.13,
   },
   {
     Title: `Batwoman`, Issue: `2`, Publisher: `DC`,
@@ -30385,7 +30385,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC New 52`, Box: `52`,
     Crossover: `DC New 52 Relaunch`, Start_Bid: `4`,
     Volume: `1`, Entry: `1859`,
-    eBay_Avg: 10.26, eBay_Low: 3, eBay_High: 19.84, eBay_Count: 9, eBay_Median: 9,
+    eBay_Avg: 17.75, eBay_Low: 0.99, eBay_High: 42.05, eBay_Count: 9, eBay_Median: 11.89,
   },
   {
     Title: `Legion of Super-Heroes`, Issue: `2`, Publisher: `DC`,
@@ -30613,7 +30613,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `52`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `1871`,
-    eBay_Avg: 9.96, eBay_Low: 2.6, eBay_High: 20, eBay_Count: 10, eBay_Median: 9.99,
+    eBay_Avg: 5.65, eBay_Low: 2.6, eBay_High: 14, eBay_Count: 7, eBay_Median: 4.89,
   },
   {
     Title: `Villains United: Infinite Crisis Special`, Issue: `1`, Publisher: `DC`,
@@ -30689,7 +30689,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC New 52`, Box: `52`,
     Crossover: `DC New 52 Relaunch`, Start_Bid: `5`,
     Volume: `1`, Entry: `1875`,
-    eBay_Avg: null, eBay_Low: 9.99, eBay_High: 62.99, eBay_Count: 8, eBay_Median: null,
+    eBay_Avg: 10.77, eBay_Low: 5.39, eBay_High: 14.99, eBay_Count: 7, eBay_Median: 10,
   },
   {
     Title: `Deathstroke`, Issue: `1`, Publisher: `DC`,
@@ -30917,7 +30917,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC New 52`, Box: `52`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `1887`,
-    eBay_Avg: 15.14, eBay_Low: 7.98, eBay_High: 33, eBay_Count: 10, eBay_Median: 14.62,
+    eBay_Avg: 11.66, eBay_Low: 2.39, eBay_High: 25, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `Supergirl Annual`, Issue: `2`, Publisher: `DC`,
@@ -31677,7 +31677,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC New 52`, Box: `52`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `2`, Entry: `1927`,
-    eBay_Avg: 18.06, eBay_Low: 4.99, eBay_High: 34.99, eBay_Count: 8, eBay_Median: 15,
+    eBay_Avg: 14.53, eBay_Low: 2.6, eBay_High: 33, eBay_Count: 8, eBay_Median: 11.1,
   },
   {
     Title: `Flashpoint`, Issue: `2`, Publisher: `DC`,
@@ -31753,7 +31753,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC New 52`, Box: `52`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `2`, Entry: `1931`,
-    eBay_Avg: 8.95, eBay_Low: 4.63, eBay_High: 16.99, eBay_Count: 10, eBay_Median: 8.41,
+    eBay_Avg: 9.86, eBay_Low: 2.6, eBay_High: 21.39, eBay_Count: 7, eBay_Median: 7.2,
   },
   {
     Title: `52`, Issue: `1`, Publisher: `DC`,
@@ -31924,7 +31924,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `1`, Entry: `1940`,
-    eBay_Avg: 85.66, eBay_Low: 75, eBay_High: 92, eBay_Count: 3, eBay_Median: 89.99,
+    eBay_Avg: 11.62, eBay_Low: 3, eBay_High: 25, eBay_Count: 8, eBay_Median: 11,
   },
   {
     Title: `Ultimate Fantastic Four`, Issue: `2`, Publisher: `Marvel`,
@@ -32304,7 +32304,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: `Marvel Zombies Origin Trilogy (UFF #21-23)`, Start_Bid: `30`,
     Volume: `1`, Entry: `1960`,
-    eBay_Avg: 9.99, eBay_Low: 9.99, eBay_High: 9.99, eBay_Count: 2, eBay_Median: 9.99,
+    eBay_Avg: 35.11, eBay_Low: 9, eBay_High: 60, eBay_Count: 8, eBay_Median: 35.49,
   },
   {
     Title: `Ultimate Fantastic Four`, Issue: `22`, Publisher: `Marvel`,
@@ -32323,7 +32323,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: `Marvel Zombies Origin Trilogy (UFF #21-23)`, Start_Bid: `15`,
     Volume: `1`, Entry: `1961`,
-    eBay_Avg: 31.59, eBay_Low: 8.99, eBay_High: 60, eBay_Count: 9, eBay_Median: 29.95,
+    eBay_Avg: 30.91, eBay_Low: 8.99, eBay_High: 60, eBay_Count: 7, eBay_Median: 29.95,
   },
   {
     Title: `Ultimate Fantastic Four`, Issue: `23`, Publisher: `Marvel`,
@@ -32342,7 +32342,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: `Marvel Zombies Origin Trilogy (UFF #21-23)`, Start_Bid: `10`,
     Volume: `1`, Entry: `1962`,
-    eBay_Avg: 121.66, eBay_Low: 60, eBay_High: 225, eBay_Count: 3, eBay_Median: 79.99,
+    eBay_Avg: 5, eBay_Low: 1, eBay_High: 15, eBay_Count: 7, eBay_Median: 1.5,
   },
   {
     Title: `Ultimate Fantastic Four`, Issue: `24`, Publisher: `Marvel`,
@@ -33026,7 +33026,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `1998`,
-    eBay_Avg: 8.41, eBay_Low: 2.13, eBay_High: 20.04, eBay_Count: 9, eBay_Median: 6.69,
+    eBay_Avg: 10.97, eBay_Low: 1.99, eBay_High: 28.5, eBay_Count: 8, eBay_Median: 8.99,
   },
   {
     Title: `Ultimate Fantastic Four Annual`, Issue: `2`, Publisher: `Marvel`,
@@ -33064,7 +33064,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `15`,
     Volume: `1`, Entry: `2000`,
-    eBay_Avg: 10.62, eBay_Low: 1, eBay_High: 29.69, eBay_Count: 8, eBay_Median: 9.99,
+    eBay_Avg: 16.29, eBay_Low: 4, eBay_High: 45, eBay_Count: 7, eBay_Median: 15,
   },
   {
     Title: `Ultimate X-Men`, Issue: `16`, Publisher: `Marvel`,
@@ -34470,7 +34470,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `2075`,
-    eBay_Avg: 13.34, eBay_Low: 2.62, eBay_High: 40, eBay_Count: 6, eBay_Median: 9.96,
+    eBay_Avg: 77.49, eBay_Low: 7.99, eBay_High: 200, eBay_Count: 8, eBay_Median: 59.99,
   },
   {
     Title: `Ultimate Comics Spider-Man`, Issue: `2`, Publisher: `Marvel`,
@@ -34489,7 +34489,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `1`, Entry: `2076`,
-    eBay_Avg: 67.74, eBay_Low: 13.99, eBay_High: 150, eBay_Count: 10, eBay_Median: 52.75,
+    eBay_Avg: 31.17, eBay_Low: 7.99, eBay_High: 75, eBay_Count: 8, eBay_Median: 12.99,
   },
   {
     Title: `Ultimate Comics Spider-Man`, Issue: `3`, Publisher: `Marvel`,
@@ -34546,7 +34546,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `2079`,
-    eBay_Avg: 9.68, eBay_Low: 2.23, eBay_High: 18.7, eBay_Count: 10, eBay_Median: 9.99,
+    eBay_Avg: 10.78, eBay_Low: 1.43, eBay_High: 24, eBay_Count: 10, eBay_Median: 10.99,
   },
   {
     Title: `Ultimate Origins`, Issue: `2`, Publisher: `Marvel`,
@@ -34698,7 +34698,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Ultimate Marvel`, Box: `85`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `1`, Entry: `2088`,
-    eBay_Avg: 11.34, eBay_Low: 2, eBay_High: 20.08, eBay_Count: 8, eBay_Median: 12.5,
+    eBay_Avg: 9.74, eBay_Low: 2.68, eBay_High: 22.49, eBay_Count: 8, eBay_Median: 6.96,
   },
   {
     Title: `Ultimates 3`, Issue: `1`, Publisher: `Marvel`,
@@ -34717,7 +34717,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Ultimate Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `2089`,
-    eBay_Avg: 17.68, eBay_Low: 9.99, eBay_High: 24.99, eBay_Count: 10, eBay_Median: 19.99,
+    eBay_Avg: 10.79, eBay_Low: 2.25, eBay_High: 20.21, eBay_Count: 9, eBay_Median: 9.95,
   },
   {
     Title: `Ultimates 3`, Issue: `2`, Publisher: `Marvel`,
@@ -34812,7 +34812,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `2095`,
-    eBay_Avg: 8.04, eBay_Low: 2, eBay_High: 20.04, eBay_Count: 8, eBay_Median: 7.49,
+    eBay_Avg: 8.02, eBay_Low: 2.35, eBay_High: 20.21, eBay_Count: 9, eBay_Median: 4.95,
   },
   {
     Title: `Ultimatum`, Issue: `2`, Publisher: `Marvel`,
@@ -34983,7 +34983,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `3`, Entry: `2104`,
-    eBay_Avg: 16.53, eBay_Low: 8.5, eBay_High: 30, eBay_Count: 10, eBay_Median: 12.89,
+    eBay_Avg: 16.56, eBay_Low: 8.5, eBay_High: 30, eBay_Count: 10, eBay_Median: 12.89,
   },
   {
     Title: `Kiss`, Issue: `1`, Publisher: `Independent`,
@@ -35002,7 +35002,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Dynamite Entertainment`, Box: `62`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2105`,
-    eBay_Avg: 18.89, eBay_Low: 1.59, eBay_High: 44.9, eBay_Count: 8, eBay_Median: 12.99,
+    eBay_Avg: 13.03, eBay_Low: 3.99, eBay_High: 29.99, eBay_Count: 8, eBay_Median: 11.5,
   },
   {
     Title: `Return of Superman 30th Anniversary Special`, Issue: `1`, Publisher: `DC`,
@@ -35021,7 +35021,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Infinite Frontier`, Box: `62`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2106`,
-    eBay_Avg: 14.58, eBay_Low: 14.58, eBay_High: 14.58, eBay_Count: 1, eBay_Median: 14.58,
+    eBay_Avg: 10.78, eBay_Low: 6.7, eBay_High: 14.79, eBay_Count: 10, eBay_Median: 9.99,
   },
   {
     Title: `DC Legends of Tomorrow: Earth Prime`, Issue: `3`, Publisher: `DC`,
@@ -35439,7 +35439,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Infinite Frontier`, Box: `62`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `4`, Entry: `2128`,
-    eBay_Avg: 11.46, eBay_Low: 4.24, eBay_High: 20.99, eBay_Count: 8, eBay_Median: 10.99,
+    eBay_Avg: 11.74, eBay_Low: 4.99, eBay_High: 20.99, eBay_Count: 8, eBay_Median: 10.99,
   },
   {
     Title: `Batman: Death in the Family — Robin Lives!`, Issue: `2`, Publisher: `DC`,
@@ -36142,7 +36142,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC All In`, Box: `59`,
     Crossover: `Dawn of DC Initiative`, Start_Bid: `5`,
     Volume: `4`, Entry: `2165`,
-    eBay_Avg: 19.77, eBay_Low: 11, eBay_High: 45, eBay_Count: 9, eBay_Median: 15.99,
+    eBay_Avg: 18.55, eBay_Low: 11, eBay_High: 45, eBay_Count: 9, eBay_Median: 15.99,
   },
   {
     Title: `Titans`, Issue: `11`, Publisher: `DC`,
@@ -36275,7 +36275,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC All In`, Box: `59`,
     Crossover: `Dawn of DC Initiative`, Start_Bid: `4`,
     Volume: `2`, Entry: `2172`,
-    eBay_Avg: 7.84, eBay_Low: 4.24, eBay_High: 12.99, eBay_Count: 5, eBay_Median: 6.99,
+    eBay_Avg: 98.21, eBay_Low: 5, eBay_High: 250, eBay_Count: 9, eBay_Median: 109.99,
   },
   {
     Title: `DC: Earth Prime`, Issue: `4`, Publisher: `DC`,
@@ -36351,7 +36351,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Infinite Frontier`, Box: `59`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `4`, Entry: `2176`,
-    eBay_Avg: 14.73, eBay_Low: 4.6, eBay_High: 24.99, eBay_Count: 9, eBay_Median: 15,
+    eBay_Avg: 15.99, eBay_Low: 7.95, eBay_High: 35.1, eBay_Count: 10, eBay_Median: 13,
   },
   {
     Title: `Batman/Superman: World's Finest`, Issue: `10`, Publisher: `DC`,
@@ -36864,7 +36864,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC All In`, Box: `59`,
     Crossover: `Dawn of DC Initiative`, Start_Bid: `5`,
     Volume: `1`, Entry: `2203`,
-    eBay_Avg: 22.48, eBay_Low: 12.99, eBay_High: 39, eBay_Count: 8, eBay_Median: 22.99,
+    eBay_Avg: 21.92, eBay_Low: 3.17, eBay_High: 40.45, eBay_Count: 10, eBay_Median: 21.44,
   },
   {
     Title: `Shazam!`, Issue: `3`, Publisher: `DC`,
@@ -36978,7 +36978,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC All In`, Box: `59`,
     Crossover: `DC All In Initiative`, Start_Bid: `4`,
     Volume: `1`, Entry: `2209`,
-    eBay_Avg: 145.5, eBay_Low: 7.99, eBay_High: 391.54, eBay_Count: 9, eBay_Median: 127,
+    eBay_Avg: 39.47, eBay_Low: 6.86, eBay_High: 127, eBay_Count: 6, eBay_Median: 24.98,
   },
   {
     Title: `Black Canary: Best of the Best`, Issue: `2`, Publisher: `DC`,
@@ -37548,7 +37548,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `59`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `1`, Entry: `2244`,
-    eBay_Avg: 22.48, eBay_Low: 12.99, eBay_High: 39, eBay_Count: 8, eBay_Median: 22.99,
+    eBay_Avg: 21.92, eBay_Low: 3.17, eBay_High: 40.45, eBay_Count: 10, eBay_Median: 21.44,
   },
   {
     Title: `Shazam!`, Issue: `2`, Publisher: `DC`,
@@ -37624,7 +37624,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Infinite Frontier`, Box: `59`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `2248`,
-    eBay_Avg: 7.73, eBay_Low: 3.99, eBay_High: 10.87, eBay_Count: 5, eBay_Median: 7.79,
+    eBay_Avg: 26.2, eBay_Low: 2.72, eBay_High: 74.95, eBay_Count: 7, eBay_Median: 9.99,
   },
   {
     Title: `Superman and Robin Special`, Issue: `1`, Publisher: `DC`,
@@ -38042,7 +38042,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Wildstorm`, Box: `70`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `2270`,
-    eBay_Avg: 12.71, eBay_Low: 3.6, eBay_High: 27, eBay_Count: 9, eBay_Median: 10.99,
+    eBay_Avg: 12.36, eBay_Low: 3.6, eBay_High: 27, eBay_Count: 10, eBay_Median: 10.49,
   },
   {
     Title: `Batman/Deathblow: After the Fire`, Issue: `2`, Publisher: `DC`,
@@ -38156,7 +38156,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Wildstorm`, Box: `70`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `1`, Entry: `2276`,
-    eBay_Avg: 35.42, eBay_Low: 8.95, eBay_High: 69.99, eBay_Count: 10, eBay_Median: 35.55,
+    eBay_Avg: 16.48, eBay_Low: 7.99, eBay_High: 40, eBay_Count: 8, eBay_Median: 12.49,
   },
   {
     Title: `Ex Machina`, Issue: `2`, Publisher: `DC`,
@@ -38384,7 +38384,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Wildstorm`, Box: `70`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `2`, Entry: `2289`,
-    eBay_Avg: 5.85, eBay_Low: 1.59, eBay_High: 12.56, eBay_Count: 10, eBay_Median: 4.97,
+    eBay_Avg: 4.36, eBay_Low: 1.59, eBay_High: 10, eBay_Count: 9, eBay_Median: 3,
   },
   {
     Title: `Worldstorm Starts Now!`, Issue: `0`, Publisher: `DC`,
@@ -39163,7 +39163,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Wildstorm`, Box: `70`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `2330`,
-    eBay_Avg: null, eBay_Low: 157.99, eBay_High: 157.99, eBay_Count: 1, eBay_Median: null,
+    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
     Title: `Gen 13`, Issue: `42`, Publisher: `DC`,
@@ -39828,7 +39828,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Wildstorm`, Box: `70`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `2365`,
-    eBay_Avg: 9.34, eBay_Low: 4, eBay_High: 21.1, eBay_Count: 9, eBay_Median: 7.95,
+    eBay_Avg: 7.69, eBay_Low: 4, eBay_High: 15, eBay_Count: 9, eBay_Median: 5.99,
   },
   {
     Title: `Bastard Samurai`, Issue: `1`, Publisher: `Image`,
@@ -40740,7 +40740,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `WildStorm`, Box: `56`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `2413`,
-    eBay_Avg: 5.85, eBay_Low: 1.59, eBay_High: 12.56, eBay_Count: 10, eBay_Median: 4.97,
+    eBay_Avg: 4.36, eBay_Low: 1.59, eBay_High: 10, eBay_Count: 9, eBay_Median: 3,
   },
   {
     Title: `Justice League: Last Ride`, Issue: `1`, Publisher: `DC`,
@@ -41101,7 +41101,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Infinite Frontier`, Box: `56`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `1`, Entry: `2433`,
-    eBay_Avg: 7.6, eBay_Low: 3.51, eBay_High: 13.22, eBay_Count: 10, eBay_Median: 6.5,
+    eBay_Avg: 9.54, eBay_Low: 2.79, eBay_High: 22.99, eBay_Count: 9, eBay_Median: 8.2,
   },
   {
     Title: `Superman: Son of Kal-El`, Issue: `6`, Publisher: `DC`,
@@ -41766,7 +41766,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Infinite Frontier`, Box: `56`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `4`, Entry: `2468`,
-    eBay_Avg: 18.44, eBay_Low: 2.99, eBay_High: 36, eBay_Count: 6, eBay_Median: 13.32,
+    eBay_Avg: 13.27, eBay_Low: 2.99, eBay_High: 34.99, eBay_Count: 6, eBay_Median: 10,
   },
   {
     Title: `Nightwing Annual`, Issue: `2022`, Publisher: `DC`,
@@ -42507,7 +42507,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Infinite Frontier`, Box: `56`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `2507`,
-    eBay_Avg: 4.78, eBay_Low: 2, eBay_High: 5.84, eBay_Count: 9, eBay_Median: 4.99,
+    eBay_Avg: 12.28, eBay_Low: 2, eBay_High: 35, eBay_Count: 7, eBay_Median: 9.99,
   },
   {
     Title: `I Am Batman`, Issue: `12`, Publisher: `DC`,
@@ -42887,7 +42887,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `56`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `3`, Entry: `2527`,
-    eBay_Avg: 8.71, eBay_Low: 2.35, eBay_High: 24.95, eBay_Count: 8, eBay_Median: 4.75,
+    eBay_Avg: 3.87, eBay_Low: 2.99, eBay_High: 5.5, eBay_Count: 8, eBay_Median: 3.75,
   },
   {
     Title: `Wonder Girl`, Issue: `2`, Publisher: `DC`,
@@ -43191,7 +43191,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `59`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `2543`,
-    eBay_Avg: 22.48, eBay_Low: 12.99, eBay_High: 39, eBay_Count: 8, eBay_Median: 22.99,
+    eBay_Avg: 21.92, eBay_Low: 3.17, eBay_High: 40.45, eBay_Count: 10, eBay_Median: 21.44,
   },
   {
     Title: `Multiversity: Teen Justice`, Issue: `1`, Publisher: `DC`,
@@ -43210,7 +43210,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `56`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2544`,
-    eBay_Avg: 11.28, eBay_Low: 2.99, eBay_High: 24.99, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 7.09, eBay_Low: 4.99, eBay_High: 15, eBay_Count: 9, eBay_Median: 5.28,
   },
   {
     Title: `Savage Avengers`, Issue: `1`, Publisher: `Marvel`,
@@ -43229,7 +43229,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `2545`,
-    eBay_Avg: 6.97, eBay_Low: 2.2, eBay_High: 12.99, eBay_Count: 10, eBay_Median: 5.25,
+    eBay_Avg: 12.54, eBay_Low: 2.26, eBay_High: 32.99, eBay_Count: 8, eBay_Median: 9.5,
   },
   {
     Title: `Savage Avengers`, Issue: `2`, Publisher: `Marvel`,
@@ -43248,7 +43248,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2546`,
-    eBay_Avg: 3.56, eBay_Low: 3.56, eBay_High: 3.56, eBay_Count: 6, eBay_Median: 3.56,
+    eBay_Avg: 21.44, eBay_Low: 2.9, eBay_High: 39.99, eBay_Count: 10, eBay_Median: 15.3,
   },
   {
     Title: `Savage Avengers`, Issue: `4`, Publisher: `Marvel`,
@@ -43267,7 +43267,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2547`,
-    eBay_Avg: 9.2, eBay_Low: 2.84, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 7.33,
+    eBay_Avg: 10.44, eBay_Low: 3.99, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `Savage Avengers`, Issue: `5`, Publisher: `Marvel`,
@@ -43286,7 +43286,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2548`,
-    eBay_Avg: 9.94, eBay_Low: 3.95, eBay_High: 21.95, eBay_Count: 9, eBay_Median: 7.33,
+    eBay_Avg: 6.28, eBay_Low: 3.51, eBay_High: 12.16, eBay_Count: 9, eBay_Median: 6.67,
   },
   {
     Title: `Savage Avengers`, Issue: `6`, Publisher: `Marvel`,
@@ -43305,7 +43305,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2549`,
-    eBay_Avg: 6.43, eBay_Low: 1.5, eBay_High: 9.99, eBay_Count: 10, eBay_Median: 6.97,
+    eBay_Avg: 5.3, eBay_Low: 1.5, eBay_High: 11, eBay_Count: 9, eBay_Median: 5.54,
   },
   {
     Title: `Savage Avengers`, Issue: `7`, Publisher: `Marvel`,
@@ -43324,7 +43324,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2550`,
-    eBay_Avg: 7.73, eBay_Low: 3.56, eBay_High: 14.39, eBay_Count: 10, eBay_Median: 7.16,
+    eBay_Avg: 6.93, eBay_Low: 2.39, eBay_High: 14.39, eBay_Count: 9, eBay_Median: 5,
   },
   {
     Title: `Savage Avengers`, Issue: `8`, Publisher: `Marvel`,
@@ -43343,7 +43343,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2551`,
-    eBay_Avg: 12.59, eBay_Low: 3.99, eBay_High: 21.95, eBay_Count: 10, eBay_Median: 12.73,
+    eBay_Avg: 10.86, eBay_Low: 3.99, eBay_High: 19.99, eBay_Count: 10, eBay_Median: 10.72,
   },
   {
     Title: `Savage Avengers`, Issue: `9`, Publisher: `Marvel`,
@@ -43362,7 +43362,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2552`,
-    eBay_Avg: 10.12, eBay_Low: 3.95, eBay_High: 21.95, eBay_Count: 10, eBay_Median: 8,
+    eBay_Avg: 11.58, eBay_Low: 3.51, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 10.76,
   },
   {
     Title: `Savage Avengers`, Issue: `10`, Publisher: `Marvel`,
@@ -43381,7 +43381,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2553`,
-    eBay_Avg: 7.79, eBay_Low: 3.95, eBay_High: 12.99, eBay_Count: 9, eBay_Median: 5.99,
+    eBay_Avg: 6.71, eBay_Low: 1.42, eBay_High: 12.99, eBay_Count: 8, eBay_Median: 4.97,
   },
   {
     Title: `Savage Avengers`, Issue: `11`, Publisher: `Marvel`,
@@ -43400,7 +43400,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2554`,
-    eBay_Avg: 20.01, eBay_Low: 2.4, eBay_High: 53.12, eBay_Count: 9, eBay_Median: 10.16,
+    eBay_Avg: 11.74, eBay_Low: 2.4, eBay_High: 29.99, eBay_Count: 8, eBay_Median: 6.88,
   },
   {
     Title: `Savage Avengers`, Issue: `12`, Publisher: `Marvel`,
@@ -43419,7 +43419,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2555`,
-    eBay_Avg: 20.17, eBay_Low: 6.5, eBay_High: 44.99, eBay_Count: 9, eBay_Median: 17.89,
+    eBay_Avg: 20.07, eBay_Low: 6.39, eBay_High: 44.99, eBay_Count: 9, eBay_Median: 17.89,
   },
   {
     Title: `Savage Avengers`, Issue: `13`, Publisher: `Marvel`,
@@ -43438,7 +43438,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2556`,
-    eBay_Avg: 8.16, eBay_Low: 2.26, eBay_High: 19, eBay_Count: 9, eBay_Median: 5.99,
+    eBay_Avg: 8.17, eBay_Low: 2.26, eBay_High: 19, eBay_Count: 9, eBay_Median: 5.99,
   },
   {
     Title: `Savage Avengers`, Issue: `14`, Publisher: `Marvel`,
@@ -43457,7 +43457,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2557`,
-    eBay_Avg: 7.98, eBay_Low: 3.95, eBay_High: 15, eBay_Count: 7, eBay_Median: 7.02,
+    eBay_Avg: 8.01, eBay_Low: 3.95, eBay_High: 15, eBay_Count: 7, eBay_Median: 7.08,
   },
   {
     Title: `Savage Avengers`, Issue: `15`, Publisher: `Marvel`,
@@ -43476,7 +43476,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2558`,
-    eBay_Avg: 19.81, eBay_Low: 3.95, eBay_High: 44.55, eBay_Count: 7, eBay_Median: 10.7,
+    eBay_Avg: 19.83, eBay_Low: 3.95, eBay_High: 44.55, eBay_Count: 7, eBay_Median: 10.79,
   },
   {
     Title: `Savage Avengers`, Issue: `16`, Publisher: `Marvel`,
@@ -43495,7 +43495,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2559`,
-    eBay_Avg: null, eBay_Low: 3.95, eBay_High: 75.99, eBay_Count: 10, eBay_Median: null,
+    eBay_Avg: 34.84, eBay_Low: 3.95, eBay_High: 75.99, eBay_Count: 10, eBay_Median: 37.49,
   },
   {
     Title: `Savage Avengers`, Issue: `17`, Publisher: `Marvel`,
@@ -43514,7 +43514,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2560`,
-    eBay_Avg: 10.03, eBay_Low: 1.99, eBay_High: 26, eBay_Count: 7, eBay_Median: 6,
+    eBay_Avg: 5.4, eBay_Low: 1.99, eBay_High: 9.99, eBay_Count: 5, eBay_Median: 5.08,
   },
   {
     Title: `Savage Avengers`, Issue: `18`, Publisher: `Marvel`,
@@ -43533,7 +43533,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2561`,
-    eBay_Avg: 18.02, eBay_Low: 2.45, eBay_High: 50, eBay_Count: 8, eBay_Median: 11.01,
+    eBay_Avg: 18.03, eBay_Low: 2.45, eBay_High: 50, eBay_Count: 8, eBay_Median: 11.04,
   },
   {
     Title: `Savage Avengers`, Issue: `19`, Publisher: `Marvel`,
@@ -43552,7 +43552,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2562`,
-    eBay_Avg: 7.38, eBay_Low: 3.5, eBay_High: 15.78, eBay_Count: 6, eBay_Median: 5.68,
+    eBay_Avg: 7.78, eBay_Low: 3.5, eBay_High: 15.91, eBay_Count: 7, eBay_Median: 5.73,
   },
   {
     Title: `Savage Avengers`, Issue: `20`, Publisher: `Marvel`,
@@ -43571,7 +43571,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2563`,
-    eBay_Avg: 8.15, eBay_Low: 3.99, eBay_High: 19.49, eBay_Count: 7, eBay_Median: 6.26,
+    eBay_Avg: 8.19, eBay_Low: 3.99, eBay_High: 19.49, eBay_Count: 7, eBay_Median: 6.32,
   },
   {
     Title: `Savage Avengers`, Issue: `21`, Publisher: `Marvel`,
@@ -43590,7 +43590,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2564`,
-    eBay_Avg: 6.01, eBay_Low: 4.01, eBay_High: 7.02, eBay_Count: 3, eBay_Median: 6.99,
+    eBay_Avg: 25.68, eBay_Low: 4.04, eBay_High: 75.99, eBay_Count: 6, eBay_Median: 18.54,
   },
   {
     Title: `Savage Avengers`, Issue: `22`, Publisher: `Marvel`,
@@ -43609,7 +43609,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2565`,
-    eBay_Avg: 9, eBay_Low: 3.85, eBay_High: 19, eBay_Count: 8, eBay_Median: 7.23,
+    eBay_Avg: 9.01, eBay_Low: 3.85, eBay_High: 19, eBay_Count: 8, eBay_Median: 7.26,
   },
   {
     Title: `Savage Avengers`, Issue: `23`, Publisher: `Marvel`,
@@ -43628,7 +43628,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2566`,
-    eBay_Avg: 9.45, eBay_Low: 3.99, eBay_High: 13.99, eBay_Count: 8, eBay_Median: 9.99,
+    eBay_Avg: 11.59, eBay_Low: 3.99, eBay_High: 29.99, eBay_Count: 8, eBay_Median: 9.06,
   },
   {
     Title: `Savage Avengers`, Issue: `24`, Publisher: `Marvel`,
@@ -43647,7 +43647,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2567`,
-    eBay_Avg: 6.8, eBay_Low: 3, eBay_High: 14.99, eBay_Count: 7, eBay_Median: 5.49,
+    eBay_Avg: 7.22, eBay_Low: 3, eBay_High: 14.99, eBay_Count: 8, eBay_Median: 6.24,
   },
   {
     Title: `Savage Avengers`, Issue: `25`, Publisher: `Marvel`,
@@ -43666,7 +43666,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2568`,
-    eBay_Avg: 11.75, eBay_Low: 4.48, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 12.5,
+    eBay_Avg: 16.76, eBay_Low: 3.99, eBay_High: 39.95, eBay_Count: 9, eBay_Median: 14.99,
   },
   {
     Title: `Savage Avengers`, Issue: `26`, Publisher: `Marvel`,
@@ -43685,7 +43685,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2569`,
-    eBay_Avg: 14.94, eBay_Low: 9.29, eBay_High: 29.99, eBay_Count: 4, eBay_Median: 10.25,
+    eBay_Avg: 14.96, eBay_Low: 9.37, eBay_High: 29.99, eBay_Count: 4, eBay_Median: 10.25,
   },
   {
     Title: `Savage Avengers`, Issue: `27`, Publisher: `Marvel`,
@@ -43723,7 +43723,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2571`,
-    eBay_Avg: 4.43, eBay_Low: 3, eBay_High: 7.29, eBay_Count: 3, eBay_Median: 3,
+    eBay_Avg: 55.02, eBay_Low: 2.99, eBay_High: 125, eBay_Count: 10, eBay_Median: 62.49,
   },
   {
     Title: `Savage Avengers`, Issue: `30`, Publisher: `Marvel`,
@@ -43742,7 +43742,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2572`,
-    eBay_Avg: null, eBay_Low: 59.99, eBay_High: 133, eBay_Count: 3, eBay_Median: null,
+    eBay_Avg: 69.99, eBay_Low: 59.99, eBay_High: 79.99, eBay_Count: 2, eBay_Median: 69.99,
   },
   {
     Title: `Savage Avengers Annual`, Issue: `1`, Publisher: `Marvel`,
@@ -43761,7 +43761,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `7`, Entry: `2573`,
-    eBay_Avg: null, eBay_Low: 32.04, eBay_High: 90, eBay_Count: 3, eBay_Median: null,
+    eBay_Avg: 58.4, eBay_Low: 32.09, eBay_High: 90, eBay_Count: 3, eBay_Median: 53.12,
   },
   {
     Title: `Chadwick Boseman: Rest in Power`, Issue: `1`, Publisher: `Marvel`,
@@ -43799,7 +43799,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `7`, Entry: `2575`,
-    eBay_Avg: 6.97, eBay_Low: 2.2, eBay_High: 12.99, eBay_Count: 10, eBay_Median: 5.25,
+    eBay_Avg: 12.54, eBay_Low: 2.26, eBay_High: 32.99, eBay_Count: 8, eBay_Median: 9.5,
   },
   {
     Title: `Savage Avengers`, Issue: `2`, Publisher: `Marvel`,
@@ -43818,7 +43818,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `7`, Entry: `2576`,
-    eBay_Avg: 3.56, eBay_Low: 3.56, eBay_High: 3.56, eBay_Count: 6, eBay_Median: 3.56,
+    eBay_Avg: 21.44, eBay_Low: 2.9, eBay_High: 39.99, eBay_Count: 10, eBay_Median: 15.3,
   },
   {
     Title: `Savage Avengers`, Issue: `3`, Publisher: `Marvel`,
@@ -43837,7 +43837,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `7`, Entry: `2577`,
-    eBay_Avg: 3.3, eBay_Low: 1.49, eBay_High: 5.95, eBay_Count: 9, eBay_Median: 2.95,
+    eBay_Avg: 4.26, eBay_Low: 2.09, eBay_High: 5.77, eBay_Count: 7, eBay_Median: 3.99,
   },
   {
     Title: `Savage Avengers`, Issue: `7`, Publisher: `Marvel`,
@@ -43856,7 +43856,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `7`, Entry: `2578`,
-    eBay_Avg: 7.73, eBay_Low: 3.56, eBay_High: 14.39, eBay_Count: 10, eBay_Median: 7.16,
+    eBay_Avg: 6.93, eBay_Low: 2.39, eBay_High: 14.39, eBay_Count: 9, eBay_Median: 5,
   },
   {
     Title: `Heroes Reborn`, Issue: `2`, Publisher: `Marvel`,
@@ -43875,7 +43875,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `2`, Entry: `2579`,
-    eBay_Avg: 13.7, eBay_Low: 4.5, eBay_High: 35.99, eBay_Count: 9, eBay_Median: 11,
+    eBay_Avg: 5.32, eBay_Low: 1.99, eBay_High: 9.49, eBay_Count: 10, eBay_Median: 4.92,
   },
   {
     Title: `Heroes Reborn: Young Squadron`, Issue: `1`, Publisher: `Marvel`,
@@ -43894,7 +43894,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2580`,
-    eBay_Avg: 4.44, eBay_Low: 2.35, eBay_High: 6.4, eBay_Count: 8, eBay_Median: 4.75,
+    eBay_Avg: 4.14, eBay_Low: 2, eBay_High: 7.39, eBay_Count: 9, eBay_Median: 4,
   },
   {
     Title: `Avengers`, Issue: `1`, Publisher: `Marvel`,
@@ -43913,7 +43913,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: `Avengers: No Surrender`, Start_Bid: `3`,
     Volume: `7`, Entry: `2581`,
-    eBay_Avg: 8.49, eBay_Low: 2.97, eBay_High: 15.25, eBay_Count: 9, eBay_Median: 5.5,
+    eBay_Avg: 27.6, eBay_Low: 6.49, eBay_High: 60, eBay_Count: 9, eBay_Median: 25,
   },
   {
     Title: `Avengers`, Issue: `2`, Publisher: `Marvel`,
@@ -43932,7 +43932,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: `Avengers: No Surrender`, Start_Bid: `1`,
     Volume: `7`, Entry: `2582`,
-    eBay_Avg: 7.37, eBay_Low: 5, eBay_High: 10.95, eBay_Count: 7, eBay_Median: 5.99,
+    eBay_Avg: 13.86, eBay_Low: 5, eBay_High: 31, eBay_Count: 9, eBay_Median: 8,
   },
   {
     Title: `Avengers`, Issue: `3`, Publisher: `Marvel`,
@@ -43951,7 +43951,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: `Avengers: No Surrender`, Start_Bid: `1`,
     Volume: `7`, Entry: `2583`,
-    eBay_Avg: 14.06, eBay_Low: 1.25, eBay_High: 28, eBay_Count: 8, eBay_Median: 13,
+    eBay_Avg: 15.81, eBay_Low: 1.25, eBay_High: 28, eBay_Count: 8, eBay_Median: 18,
   },
   {
     Title: `Avengers`, Issue: `4`, Publisher: `Marvel`,
@@ -43970,7 +43970,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: `Avengers: No Surrender`, Start_Bid: `1`,
     Volume: `7`, Entry: `2584`,
-    eBay_Avg: 7.05, eBay_Low: 2.55, eBay_High: 16.99, eBay_Count: 7, eBay_Median: 2.99,
+    eBay_Avg: 16.85, eBay_Low: 3.99, eBay_High: 45, eBay_Count: 9, eBay_Median: 14.39,
   },
   {
     Title: `Avengers`, Issue: `5`, Publisher: `Marvel`,
@@ -43989,7 +43989,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: `Avengers: No Surrender`, Start_Bid: `1`,
     Volume: `7`, Entry: `2585`,
-    eBay_Avg: null, eBay_Low: 6, eBay_High: 90, eBay_Count: 8, eBay_Median: null,
+    eBay_Avg: 23.33, eBay_Low: 6, eBay_High: 35, eBay_Count: 9, eBay_Median: 24.99,
   },
   {
     Title: `Avengers`, Issue: `6`, Publisher: `Marvel`,
@@ -44008,7 +44008,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: `Avengers: No Surrender`, Start_Bid: `1`,
     Volume: `7`, Entry: `2586`,
-    eBay_Avg: 12.07, eBay_Low: 6, eBay_High: 31, eBay_Count: 7, eBay_Median: 7.49,
+    eBay_Avg: 16.31, eBay_Low: 4, eBay_High: 44.99, eBay_Count: 8, eBay_Median: 8.97,
   },
   {
     Title: `Avengers`, Issue: `7`, Publisher: `Marvel`,
@@ -44027,7 +44027,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: `Avengers: No Surrender`, Start_Bid: `1`,
     Volume: `7`, Entry: `2587`,
-    eBay_Avg: 14.83, eBay_Low: 6.67, eBay_High: 25, eBay_Count: 8, eBay_Median: 13,
+    eBay_Avg: 37.13, eBay_Low: 3, eBay_High: 79.99, eBay_Count: 10, eBay_Median: 32.59,
   },
   {
     Title: `Avengers`, Issue: `9`, Publisher: `Marvel`,
@@ -44046,7 +44046,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: `Avengers: No Surrender`, Start_Bid: `1`,
     Volume: `7`, Entry: `2588`,
-    eBay_Avg: 23.39, eBay_Low: 2.55, eBay_High: 59, eBay_Count: 7, eBay_Median: 14.99,
+    eBay_Avg: 26.41, eBay_Low: 3.59, eBay_High: 58, eBay_Count: 9, eBay_Median: 19.99,
   },
   {
     Title: `Avengers`, Issue: `11`, Publisher: `Marvel`,
@@ -44065,7 +44065,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: `Avengers: No Surrender`, Start_Bid: `1`,
     Volume: `7`, Entry: `2589`,
-    eBay_Avg: 7.43, eBay_Low: 1.25, eBay_High: 14.99, eBay_Count: 8, eBay_Median: 5,
+    eBay_Avg: 12.97, eBay_Low: 1.25, eBay_High: 24.69, eBay_Count: 10, eBay_Median: 12.89,
   },
   {
     Title: `Avengers`, Issue: `12`, Publisher: `Marvel`,
@@ -44084,7 +44084,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: `Avengers: No Surrender`, Start_Bid: `1`,
     Volume: `7`, Entry: `2590`,
-    eBay_Avg: 16.7, eBay_Low: 7.5, eBay_High: 25.99, eBay_Count: 9, eBay_Median: 14.99,
+    eBay_Avg: 16.33, eBay_Low: 8.79, eBay_High: 24.69, eBay_Count: 9, eBay_Median: 14.99,
   },
   {
     Title: `Avengers`, Issue: `8`, Publisher: `Marvel`,
@@ -44103,7 +44103,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `6`, Entry: `2592`,
-    eBay_Avg: 6.44, eBay_Low: 1.68, eBay_High: 9.99, eBay_Count: 7, eBay_Median: 8.35,
+    eBay_Avg: 9.57, eBay_Low: 8, eBay_High: 10.99, eBay_Count: 7, eBay_Median: 9.99,
   },
   {
     Title: `Avengers`, Issue: `18`, Publisher: `Marvel`,
@@ -44122,7 +44122,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `9`, Entry: `2593`,
-    eBay_Avg: 7.77, eBay_Low: 3.67, eBay_High: 13.99, eBay_Count: 7, eBay_Median: 6.98,
+    eBay_Avg: 5.33, eBay_Low: 2.5, eBay_High: 11.95, eBay_Count: 8, eBay_Median: 4.24,
   },
   {
     Title: `Avengers`, Issue: `19`, Publisher: `Marvel`,
@@ -44141,7 +44141,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `9`, Entry: `2594`,
-    eBay_Avg: 6.21, eBay_Low: 3.74, eBay_High: 13, eBay_Count: 8, eBay_Median: 5.81,
+    eBay_Avg: 9.27, eBay_Low: 3.99, eBay_High: 22, eBay_Count: 6, eBay_Median: 7.33,
   },
   {
     Title: `Avengers`, Issue: `21`, Publisher: `Marvel`,
@@ -44160,7 +44160,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `9`, Entry: `2595`,
-    eBay_Avg: 16.4, eBay_Low: 3.99, eBay_High: 39.99, eBay_Count: 8, eBay_Median: 9.99,
+    eBay_Avg: 28.85, eBay_Low: 4.72, eBay_High: 53, eBay_Count: 9, eBay_Median: 29.99,
   },
   {
     Title: `Avengers`, Issue: `23`, Publisher: `Marvel`,
@@ -44179,7 +44179,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `9`, Entry: `2596`,
-    eBay_Avg: 12.63, eBay_Low: 3.95, eBay_High: 29.95, eBay_Count: 8, eBay_Median: 9.99,
+    eBay_Avg: 19.68, eBay_Low: 4.49, eBay_High: 58.06, eBay_Count: 9, eBay_Median: 19.99,
   },
   {
     Title: `Avengers`, Issue: `25`, Publisher: `Marvel`,
@@ -44198,7 +44198,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `9`, Entry: `2597`,
-    eBay_Avg: 13.63, eBay_Low: 4.27, eBay_High: 24.99, eBay_Count: 9, eBay_Median: 14.99,
+    eBay_Avg: 22.54, eBay_Low: 11, eBay_High: 49.95, eBay_Count: 10, eBay_Median: 17.49,
   },
   {
     Title: `Avengers`, Issue: `26`, Publisher: `Marvel`,
@@ -44217,7 +44217,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `9`, Entry: `2598`,
-    eBay_Avg: 10.6, eBay_Low: 5, eBay_High: 19.99, eBay_Count: 8, eBay_Median: 9.23,
+    eBay_Avg: 15.15, eBay_Low: 5, eBay_High: 29.99, eBay_Count: 8, eBay_Median: 10.61,
   },
   {
     Title: `Avengers`, Issue: `27`, Publisher: `Marvel`,
@@ -44236,7 +44236,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `9`, Entry: `2599`,
-    eBay_Avg: 12.73, eBay_Low: 2.79, eBay_High: 28.99, eBay_Count: 9, eBay_Median: 8.25,
+    eBay_Avg: 11.17, eBay_Low: 6.4, eBay_High: 22, eBay_Count: 9, eBay_Median: 8.99,
   },
   {
     Title: `Avengers`, Issue: `28`, Publisher: `Marvel`,
@@ -44255,7 +44255,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `9`, Entry: `2600`,
-    eBay_Avg: 12.32, eBay_Low: 3.29, eBay_High: 24, eBay_Count: 8, eBay_Median: 11.14,
+    eBay_Avg: 8.1, eBay_Low: 1.25, eBay_High: 19.99, eBay_Count: 8, eBay_Median: 8.25,
   },
   {
     Title: `Avengers`, Issue: `29`, Publisher: `Marvel`,
@@ -44274,7 +44274,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `9`, Entry: `2601`,
-    eBay_Avg: 9.13, eBay_Low: 6.67, eBay_High: 19.99, eBay_Count: 10, eBay_Median: 8.25,
+    eBay_Avg: 9.43, eBay_Low: 3.95, eBay_High: 19.99, eBay_Count: 8, eBay_Median: 8.25,
   },
   {
     Title: `Avengers`, Issue: `30`, Publisher: `Marvel`,
@@ -44293,7 +44293,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `9`, Entry: `2602`,
-    eBay_Avg: 8.75, eBay_Low: 3, eBay_High: 18.05, eBay_Count: 8, eBay_Median: 6,
+    eBay_Avg: 8.81, eBay_Low: 1.25, eBay_High: 16.99, eBay_Count: 8, eBay_Median: 8.49,
   },
   {
     Title: `Avengers`, Issue: `31`, Publisher: `Marvel`,
@@ -44312,7 +44312,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `9`, Entry: `2603`,
-    eBay_Avg: 10.06, eBay_Low: 3.69, eBay_High: 20.03, eBay_Count: 10, eBay_Median: 9.47,
+    eBay_Avg: 9.69, eBay_Low: 3.29, eBay_High: 19.95, eBay_Count: 9, eBay_Median: 8.99,
   },
   {
     Title: `Avengers`, Issue: `32`, Publisher: `Marvel`,
@@ -44331,7 +44331,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `9`, Entry: `2604`,
-    eBay_Avg: 5.97, eBay_Low: 3.89, eBay_High: 9.99, eBay_Count: 8, eBay_Median: 5.45,
+    eBay_Avg: 4.22, eBay_Low: 1.42, eBay_High: 7, eBay_Count: 8, eBay_Median: 3.94,
   },
   {
     Title: `Avengers`, Issue: `33`, Publisher: `Marvel`,
@@ -44350,7 +44350,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `9`, Entry: `2605`,
-    eBay_Avg: 9.29, eBay_Low: 4.22, eBay_High: 19.99, eBay_Count: 8, eBay_Median: 8.25,
+    eBay_Avg: 9.3, eBay_Low: 4.22, eBay_High: 19.99, eBay_Count: 8, eBay_Median: 8.25,
   },
   {
     Title: `Avengers`, Issue: `34`, Publisher: `Marvel`,
@@ -44369,7 +44369,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `9`, Entry: `2606`,
-    eBay_Avg: 8.34, eBay_Low: 2.99, eBay_High: 11.35, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 4.4, eBay_Low: 2.9, eBay_High: 10.11, eBay_Count: 7, eBay_Median: 3.99,
   },
   {
     Title: `Avengers`, Issue: `35`, Publisher: `Marvel`,
@@ -44388,7 +44388,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `9`, Entry: `2607`,
-    eBay_Avg: 10.21, eBay_Low: 2.99, eBay_High: 25, eBay_Count: 8, eBay_Median: 8.49,
+    eBay_Avg: 11.99, eBay_Low: 3.59, eBay_High: 34.99, eBay_Count: 7, eBay_Median: 10.11,
   },
   {
     Title: `Avengers`, Issue: `36`, Publisher: `Marvel`,
@@ -44407,7 +44407,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `9`, Entry: `2608`,
-    eBay_Avg: 4.49, eBay_Low: 1.99, eBay_High: 9.99, eBay_Count: 8, eBay_Median: 2.99,
+    eBay_Avg: 4.92, eBay_Low: 4, eBay_High: 5.99, eBay_Count: 6, eBay_Median: 4.98,
   },
   {
     Title: `Avengers`, Issue: `37`, Publisher: `Marvel`,
@@ -44426,7 +44426,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `9`, Entry: `2609`,
-    eBay_Avg: 8.15, eBay_Low: 3.49, eBay_High: 15.99, eBay_Count: 9, eBay_Median: 7.02,
+    eBay_Avg: 9.38, eBay_Low: 4.99, eBay_High: 16.34, eBay_Count: 8, eBay_Median: 8.74,
   },
   {
     Title: `Avengers`, Issue: `38`, Publisher: `Marvel`,
@@ -44445,7 +44445,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `9`, Entry: `2610`,
-    eBay_Avg: 5.18, eBay_Low: 2.99, eBay_High: 8.99, eBay_Count: 8, eBay_Median: 4.74,
+    eBay_Avg: 11.6, eBay_Low: 3.59, eBay_High: 26.99, eBay_Count: 10, eBay_Median: 9.95,
   },
   {
     Title: `Avengers`, Issue: `39`, Publisher: `Marvel`,
@@ -44464,7 +44464,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `9`, Entry: `2611`,
-    eBay_Avg: 6.95, eBay_Low: 3.99, eBay_High: 11.47, eBay_Count: 8, eBay_Median: 7.07,
+    eBay_Avg: 6.28, eBay_Low: 2.39, eBay_High: 12, eBay_Count: 7, eBay_Median: 6,
   },
   {
     Title: `Avengers`, Issue: `40`, Publisher: `Marvel`,
@@ -44483,7 +44483,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `9`, Entry: `2612`,
-    eBay_Avg: 7.02, eBay_Low: 3.5, eBay_High: 10.99, eBay_Count: 8, eBay_Median: 7.25,
+    eBay_Avg: 9.21, eBay_Low: 2.75, eBay_High: 14.99, eBay_Count: 7, eBay_Median: 8,
   },
   {
     Title: `Avengers`, Issue: `41`, Publisher: `Marvel`,
@@ -44502,7 +44502,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `9`, Entry: `2613`,
-    eBay_Avg: 8.03, eBay_Low: 3.56, eBay_High: 9.99, eBay_Count: 8, eBay_Median: 9.99,
+    eBay_Avg: 12.81, eBay_Low: 4, eBay_High: 29.99, eBay_Count: 10, eBay_Median: 12.99,
   },
   {
     Title: `Avengers`, Issue: `42`, Publisher: `Marvel`,
@@ -44521,7 +44521,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `9`, Entry: `2614`,
-    eBay_Avg: 4.44, eBay_Low: 1.59, eBay_High: 10.99, eBay_Count: 9, eBay_Median: 3.69,
+    eBay_Avg: 6.04, eBay_Low: 3.49, eBay_High: 9.12, eBay_Count: 10, eBay_Median: 5.33,
   },
   {
     Title: `Avengers`, Issue: `43`, Publisher: `Marvel`,
@@ -44540,7 +44540,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `9`, Entry: `2615`,
-    eBay_Avg: 5.92, eBay_Low: 2.39, eBay_High: 12, eBay_Count: 7, eBay_Median: 4.95,
+    eBay_Avg: 7.25, eBay_Low: 3.19, eBay_High: 15, eBay_Count: 8, eBay_Median: 6.74,
   },
   {
     Title: `Avengers`, Issue: `44`, Publisher: `Marvel`,
@@ -44559,7 +44559,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `9`, Entry: `2616`,
-    eBay_Avg: 8.04, eBay_Low: 2.99, eBay_High: 17.99, eBay_Count: 9, eBay_Median: 5.99,
+    eBay_Avg: 5.73, eBay_Low: 3.5, eBay_High: 15, eBay_Count: 9, eBay_Median: 5,
   },
   {
     Title: `Avengers`, Issue: `45`, Publisher: `Marvel`,
@@ -44578,7 +44578,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `9`, Entry: `2617`,
-    eBay_Avg: 5.9, eBay_Low: 1.99, eBay_High: 11.99, eBay_Count: 9, eBay_Median: 4.99,
+    eBay_Avg: 14.36, eBay_Low: 3, eBay_High: 31.19, eBay_Count: 9, eBay_Median: 11.99,
   },
   {
     Title: `Avengers`, Issue: `46`, Publisher: `Marvel`,
@@ -44597,7 +44597,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `9`, Entry: `2618`,
-    eBay_Avg: 6.28, eBay_Low: 2.99, eBay_High: 15.12, eBay_Count: 8, eBay_Median: 4.49,
+    eBay_Avg: 13.22, eBay_Low: 2.9, eBay_High: 31.19, eBay_Count: 10, eBay_Median: 11.07,
   },
   {
     Title: `Avengers`, Issue: `47`, Publisher: `Marvel`,
@@ -44616,7 +44616,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `9`, Entry: `2619`,
-    eBay_Avg: 4.96, eBay_Low: 2.9, eBay_High: 8.99, eBay_Count: 8, eBay_Median: 4,
+    eBay_Avg: 15.78, eBay_Low: 4.99, eBay_High: 29.99, eBay_Count: 9, eBay_Median: 13.99,
   },
   {
     Title: `Avengers`, Issue: `48`, Publisher: `Marvel`,
@@ -44635,7 +44635,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `9`, Entry: `2620`,
-    eBay_Avg: 9.55, eBay_Low: 5.79, eBay_High: 15.12, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 8.56, eBay_Low: 4.99, eBay_High: 14.99, eBay_Count: 7, eBay_Median: 9.99,
   },
   {
     Title: `Avengers`, Issue: `49`, Publisher: `Marvel`,
@@ -44654,7 +44654,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `9`, Entry: `2621`,
-    eBay_Avg: 3.92, eBay_Low: 2.55, eBay_High: 6, eBay_Count: 9, eBay_Median: 3.99,
+    eBay_Avg: 3.66, eBay_Low: 1.79, eBay_High: 7.5, eBay_Count: 9, eBay_Median: 2.9,
   },
   {
     Title: `Avengers`, Issue: `50`, Publisher: `Marvel`,
@@ -44673,7 +44673,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `9`, Entry: `2622`,
-    eBay_Avg: 11.74, eBay_Low: 3.73, eBay_High: 17.99, eBay_Count: 9, eBay_Median: 14.99,
+    eBay_Avg: 14.18, eBay_Low: 4.28, eBay_High: 32.95, eBay_Count: 8, eBay_Median: 11,
   },
   {
     Title: `Avengers`, Issue: `55`, Publisher: `Marvel`,
@@ -44692,7 +44692,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `9`, Entry: `2623`,
-    eBay_Avg: 4.94, eBay_Low: 1.99, eBay_High: 7.25, eBay_Count: 8, eBay_Median: 4.92,
+    eBay_Avg: 5.04, eBay_Low: 2.65, eBay_High: 12, eBay_Count: 7, eBay_Median: 2.99,
   },
   {
     Title: `Avengers`, Issue: `56`, Publisher: `Marvel`,
@@ -44711,7 +44711,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `9`, Entry: `2624`,
-    eBay_Avg: 7.47, eBay_Low: 2.99, eBay_High: 14.99, eBay_Count: 10, eBay_Median: 6.75,
+    eBay_Avg: 65.32, eBay_Low: 2.49, eBay_High: 165, eBay_Count: 9, eBay_Median: 14.99,
   },
   {
     Title: `Avengers`, Issue: `57`, Publisher: `Marvel`,
@@ -44730,7 +44730,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `9`, Entry: `2625`,
-    eBay_Avg: 4.82, eBay_Low: 2.9, eBay_High: 9.99, eBay_Count: 8, eBay_Median: 3.75,
+    eBay_Avg: 8.18, eBay_Low: 2.99, eBay_High: 16, eBay_Count: 9, eBay_Median: 9.42,
   },
   {
     Title: `Avengers`, Issue: `58`, Publisher: `Marvel`,
@@ -44749,7 +44749,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `9`, Entry: `2626`,
-    eBay_Avg: 8.34, eBay_Low: 3.2, eBay_High: 17.95, eBay_Count: 9, eBay_Median: 8,
+    eBay_Avg: 6.89, eBay_Low: 1.25, eBay_High: 15, eBay_Count: 10, eBay_Median: 5.82,
   },
   {
     Title: `Avengers`, Issue: `65`, Publisher: `Marvel`,
@@ -44768,7 +44768,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `7`, Entry: `2627`,
-    eBay_Avg: 3.7, eBay_Low: 0.99, eBay_High: 10, eBay_Count: 9, eBay_Median: 3.2,
+    eBay_Avg: 4.11, eBay_Low: 1, eBay_High: 8.22, eBay_Count: 8, eBay_Median: 3.25,
   },
   {
     Title: `Avengers`, Issue: `10`, Publisher: `Marvel`,
@@ -44787,7 +44787,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `2628`,
-    eBay_Avg: 10.32, eBay_Low: 5.95, eBay_High: 23, eBay_Count: 10, eBay_Median: 8.48,
+    eBay_Avg: 12.09, eBay_Low: 2.75, eBay_High: 24.99, eBay_Count: 8, eBay_Median: 11,
   },
   {
     Title: `Avengers`, Issue: `12.1`, Publisher: `Marvel`,
@@ -44806,7 +44806,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `5`, Entry: `2629`,
-    eBay_Avg: 17.62, eBay_Low: 6.67, eBay_High: 40, eBay_Count: 10, eBay_Median: 14.93,
+    eBay_Avg: 12.59, eBay_Low: 2.99, eBay_High: 24.99, eBay_Count: 9, eBay_Median: 10.95,
   },
   {
     Title: `Avengers`, Issue: `1`, Publisher: `Marvel`,
@@ -44825,7 +44825,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: `Heroic Age (post-Siege)`, Start_Bid: `3`,
     Volume: `5`, Entry: `2630`,
-    eBay_Avg: 8.49, eBay_Low: 2.97, eBay_High: 15.25, eBay_Count: 9, eBay_Median: 5.5,
+    eBay_Avg: 27.6, eBay_Low: 6.49, eBay_High: 60, eBay_Count: 9, eBay_Median: 25,
   },
   {
     Title: `Avengers`, Issue: `77`, Publisher: `Marvel`,
@@ -44844,7 +44844,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `5`, Entry: `2631`,
-    eBay_Avg: 9.22, eBay_Low: 4.95, eBay_High: 15, eBay_Count: 10, eBay_Median: 9.99,
+    eBay_Avg: 8.79, eBay_Low: 4.79, eBay_High: 15, eBay_Count: 10, eBay_Median: 9.99,
   },
   {
     Title: `Avengers`, Issue: `78`, Publisher: `Marvel`,
@@ -44863,7 +44863,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `5`, Entry: `2632`,
-    eBay_Avg: 7.49, eBay_Low: 2, eBay_High: 9.99, eBay_Count: 10, eBay_Median: 9.99,
+    eBay_Avg: 8.79, eBay_Low: 2.24, eBay_High: 9.99, eBay_Count: 10, eBay_Median: 9.99,
   },
   {
     Title: `Avengers`, Issue: `79`, Publisher: `Marvel`,
@@ -44901,7 +44901,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `5`, Entry: `2634`,
-    eBay_Avg: 9.15, eBay_Low: 2.24, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 7.82, eBay_Low: 2.24, eBay_High: 12, eBay_Count: 9, eBay_Median: 9.2,
   },
   {
     Title: `Avengers`, Issue: `81`, Publisher: `Marvel`,
@@ -44939,7 +44939,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `6`, Entry: `2636`,
-    eBay_Avg: 7.63, eBay_Low: 2.8, eBay_High: 20, eBay_Count: 9, eBay_Median: 4.99,
+    eBay_Avg: 5.18, eBay_Low: 2.75, eBay_High: 12.99, eBay_Count: 8, eBay_Median: 4.99,
   },
   {
     Title: `Avengers Forever`, Issue: `3`, Publisher: `Marvel`,
@@ -44958,7 +44958,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `6`, Entry: `2637`,
-    eBay_Avg: 8.47, eBay_Low: 3, eBay_High: 20, eBay_Count: 8, eBay_Median: 6.31,
+    eBay_Avg: 5.83, eBay_Low: 3, eBay_High: 12.5, eBay_Count: 8, eBay_Median: 4.52,
   },
   {
     Title: `Avengers Forever`, Issue: `6`, Publisher: `Marvel`,
@@ -44977,7 +44977,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `6`, Entry: `2638`,
-    eBay_Avg: 12.43, eBay_Low: 2.8, eBay_High: 29.99, eBay_Count: 9, eBay_Median: 11.99,
+    eBay_Avg: 12.31, eBay_Low: 2.75, eBay_High: 35, eBay_Count: 8, eBay_Median: 9.18,
   },
   {
     Title: `Avengers Forever`, Issue: `13`, Publisher: `Marvel`,
@@ -44996,7 +44996,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `6`, Entry: `2639`,
-    eBay_Avg: 4.86, eBay_Low: 3.5, eBay_High: 7.15, eBay_Count: 6, eBay_Median: 4.81,
+    eBay_Avg: 4.79, eBay_Low: 3.5, eBay_High: 7.15, eBay_Count: 8, eBay_Median: 4.81,
   },
   {
     Title: `Vengeance Forever`, Issue: `1`, Publisher: `Marvel`,
@@ -45015,7 +45015,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2640`,
-    eBay_Avg: 5.46, eBay_Low: 2.9, eBay_High: 9.49, eBay_Count: 10, eBay_Median: 5.12,
+    eBay_Avg: 7.79, eBay_Low: 2.9, eBay_High: 15, eBay_Count: 8, eBay_Median: 7.49,
   },
   {
     Title: `Avengers: Curse of the Man-Thing`, Issue: `1`, Publisher: `Marvel`,
@@ -45034,7 +45034,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2641`,
-    eBay_Avg: 7.66, eBay_Low: 3.99, eBay_High: 12.95, eBay_Count: 9, eBay_Median: 8.02,
+    eBay_Avg: 5.95, eBay_Low: 2.9, eBay_High: 12.95, eBay_Count: 10, eBay_Median: 5.19,
   },
   {
     Title: `Avengers Inc.`, Issue: `1`, Publisher: `Marvel`,
@@ -45053,7 +45053,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2642`,
-    eBay_Avg: 19.84, eBay_Low: 2.8, eBay_High: 45, eBay_Count: 10, eBay_Median: 15.61,
+    eBay_Avg: 8.49, eBay_Low: 2.5, eBay_High: 20, eBay_Count: 9, eBay_Median: 3.99,
   },
   {
     Title: `Avengers Inc.`, Issue: `2`, Publisher: `Marvel`,
@@ -45072,7 +45072,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2643`,
-    eBay_Avg: 12.16, eBay_Low: 2.9, eBay_High: 25, eBay_Count: 10, eBay_Median: 12.71,
+    eBay_Avg: 3.63, eBay_Low: 2.9, eBay_High: 4.99, eBay_Count: 6, eBay_Median: 3.49,
   },
   {
     Title: `Avengers Inc.`, Issue: `3`, Publisher: `Marvel`,
@@ -45091,7 +45091,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2644`,
-    eBay_Avg: 6.8, eBay_Low: 2.99, eBay_High: 16.99, eBay_Count: 8, eBay_Median: 3.87,
+    eBay_Avg: 4.22, eBay_Low: 3.99, eBay_High: 4.99, eBay_Count: 7, eBay_Median: 3.99,
   },
   {
     Title: `Avengers: War Across Time`, Issue: `1`, Publisher: `Marvel`,
@@ -45110,7 +45110,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2645`,
-    eBay_Avg: 21.08, eBay_Low: 4.56, eBay_High: 40.1, eBay_Count: 9, eBay_Median: 19.99,
+    eBay_Avg: 6.85, eBay_Low: 3.99, eBay_High: 13.99, eBay_Count: 8, eBay_Median: 5,
   },
   {
     Title: `Avengers: War Across Time`, Issue: `2`, Publisher: `Marvel`,
@@ -45129,7 +45129,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2646`,
-    eBay_Avg: 6.8, eBay_Low: 2.73, eBay_High: 19.1, eBay_Count: 7, eBay_Median: 3.95,
+    eBay_Avg: 4.54, eBay_Low: 2.35, eBay_High: 9.99, eBay_Count: 9, eBay_Median: 2.9,
   },
   {
     Title: `Avengers: War Across Time`, Issue: `3`, Publisher: `Marvel`,
@@ -45148,7 +45148,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2647`,
-    eBay_Avg: 4.81, eBay_Low: 2.67, eBay_High: 7.95, eBay_Count: 8, eBay_Median: 4.64,
+    eBay_Avg: 5.25, eBay_Low: 2.7, eBay_High: 9.99, eBay_Count: 10, eBay_Median: 4.65,
   },
   {
     Title: `Avengers: War Across Time`, Issue: `4`, Publisher: `Marvel`,
@@ -45167,7 +45167,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2648`,
-    eBay_Avg: 3.95, eBay_Low: 2.49, eBay_High: 5, eBay_Count: 7, eBay_Median: 3.99,
+    eBay_Avg: 3.67, eBay_Low: 2.75, eBay_High: 5, eBay_Count: 10, eBay_Median: 3.62,
   },
   {
     Title: `Avengers: War Across Time`, Issue: `5`, Publisher: `Marvel`,
@@ -45186,7 +45186,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2649`,
-    eBay_Avg: 2.74, eBay_Low: 2.73, eBay_High: 2.74, eBay_Count: 2, eBay_Median: 2.74,
+    eBay_Avg: 6.2, eBay_Low: 2.93, eBay_High: 15.89, eBay_Count: 7, eBay_Median: 4.63,
   },
   {
     Title: `Avengers: The Children's Crusade`, Issue: `3`, Publisher: `Marvel`,
@@ -45205,7 +45205,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `2650`,
-    eBay_Avg: 8.61, eBay_Low: 3, eBay_High: 20, eBay_Count: 7, eBay_Median: 7.98,
+    eBay_Avg: 7.85, eBay_Low: 3, eBay_High: 14.99, eBay_Count: 7, eBay_Median: 7.98,
   },
   {
     Title: `Avengers: The Children's Crusade`, Issue: `4`, Publisher: `Marvel`,
@@ -45300,7 +45300,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `6`, Entry: `2655`,
-    eBay_Avg: 4.4, eBay_Low: 2.01, eBay_High: 8.54, eBay_Count: 8, eBay_Median: 4.25,
+    eBay_Avg: 6.37, eBay_Low: 1.35, eBay_High: 11.96, eBay_Count: 9, eBay_Median: 6.99,
   },
   {
     Title: `Uncanny Avengers`, Issue: `28`, Publisher: `Marvel`,
@@ -45319,7 +45319,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `6`, Entry: `2656`,
-    eBay_Avg: 7.92, eBay_Low: 3.5, eBay_High: 12.99, eBay_Count: 8, eBay_Median: 8.44,
+    eBay_Avg: 6.35, eBay_Low: 2.54, eBay_High: 9.03, eBay_Count: 9, eBay_Median: 6.95,
   },
   {
     Title: `Uncanny Avengers`, Issue: `30`, Publisher: `Marvel`,
@@ -45338,7 +45338,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `6`, Entry: `2657`,
-    eBay_Avg: 11.15, eBay_Low: 3.5, eBay_High: 20.06, eBay_Count: 7, eBay_Median: 12,
+    eBay_Avg: 11.17, eBay_Low: 3.5, eBay_High: 20.22, eBay_Count: 7, eBay_Median: 12,
   },
   {
     Title: `Avengers: Shards of Infinity`, Issue: `1`, Publisher: `Marvel`,
@@ -45357,7 +45357,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2658`,
-    eBay_Avg: 3.97, eBay_Low: 1.92, eBay_High: 7.95, eBay_Count: 8, eBay_Median: 3.94,
+    eBay_Avg: 3.27, eBay_Low: 1.99, eBay_High: 4.99, eBay_Count: 9, eBay_Median: 2.9,
   },
   {
     Title: `New Avengers`, Issue: `1`, Publisher: `Marvel`,
@@ -45376,7 +45376,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `72`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `2659`,
-    eBay_Avg: 19.72, eBay_Low: 3.99, eBay_High: 29.99, eBay_Count: 7, eBay_Median: 24.99,
+    eBay_Avg: 33.02, eBay_Low: 5.99, eBay_High: 72, eBay_Count: 9, eBay_Median: 25.99,
   },
   {
     Title: `New Avengers`, Issue: `2`, Publisher: `Marvel`,
@@ -45395,7 +45395,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2660`,
-    eBay_Avg: 8.35, eBay_Low: 1, eBay_High: 19.99, eBay_Count: 8, eBay_Median: 7,
+    eBay_Avg: 6.29, eBay_Low: 2.75, eBay_High: 13.99, eBay_Count: 9, eBay_Median: 5.99,
   },
   {
     Title: `New Avengers`, Issue: `3`, Publisher: `Marvel`,
@@ -45414,7 +45414,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2661`,
-    eBay_Avg: 6.39, eBay_Low: 3.56, eBay_High: 12.99, eBay_Count: 7, eBay_Median: 6,
+    eBay_Avg: 11.86, eBay_Low: 2.55, eBay_High: 34.99, eBay_Count: 8, eBay_Median: 9,
   },
   {
     Title: `New Avengers`, Issue: `4`, Publisher: `Marvel`,
@@ -45433,7 +45433,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2662`,
-    eBay_Avg: 12.81, eBay_Low: 5.99, eBay_High: 23.99, eBay_Count: 10, eBay_Median: 10.99,
+    eBay_Avg: 11.86, eBay_Low: 3.97, eBay_High: 20, eBay_Count: 8, eBay_Median: 12.5,
   },
   {
     Title: `New Avengers`, Issue: `5`, Publisher: `Marvel`,
@@ -45452,7 +45452,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2663`,
-    eBay_Avg: 8.18, eBay_Low: 3.88, eBay_High: 20.04, eBay_Count: 8, eBay_Median: 6.11,
+    eBay_Avg: 2.88, eBay_Low: 2.55, eBay_High: 3.5, eBay_Count: 7, eBay_Median: 2.55,
   },
   {
     Title: `New Avengers`, Issue: `6`, Publisher: `Marvel`,
@@ -45471,7 +45471,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `1`, Entry: `2664`,
-    eBay_Avg: 6.42, eBay_Low: 1.59, eBay_High: 13.98, eBay_Count: 8, eBay_Median: 6.25,
+    eBay_Avg: 14.4, eBay_Low: 5.99, eBay_High: 34.99, eBay_Count: 8, eBay_Median: 13.68,
   },
   {
     Title: `New Avengers`, Issue: `7`, Publisher: `Marvel`,
@@ -45490,7 +45490,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2665`,
-    eBay_Avg: null, eBay_Low: 11, eBay_High: 69.99, eBay_Count: 9, eBay_Median: null,
+    eBay_Avg: 29.42, eBay_Low: 3, eBay_High: 69.99, eBay_Count: 10, eBay_Median: 26.14,
   },
   {
     Title: `New Avengers`, Issue: `8`, Publisher: `Marvel`,
@@ -45509,7 +45509,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2666`,
-    eBay_Avg: 6.53, eBay_Low: 1, eBay_High: 15.99, eBay_Count: 8, eBay_Median: 5.63,
+    eBay_Avg: 8.96, eBay_Low: 2.55, eBay_High: 19.5, eBay_Count: 9, eBay_Median: 8.08,
   },
   {
     Title: `New Avengers`, Issue: `9`, Publisher: `Marvel`,
@@ -45528,7 +45528,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2667`,
-    eBay_Avg: 4.17, eBay_Low: 1, eBay_High: 12.99, eBay_Count: 7, eBay_Median: 2,
+    eBay_Avg: 6.15, eBay_Low: 2.99, eBay_High: 10.76, eBay_Count: 7, eBay_Median: 7.4,
   },
   {
     Title: `New Avengers`, Issue: `10`, Publisher: `Marvel`,
@@ -45547,7 +45547,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2668`,
-    eBay_Avg: 10.99, eBay_Low: 1.93, eBay_High: 30, eBay_Count: 9, eBay_Median: 8.99,
+    eBay_Avg: 8.89, eBay_Low: 2.99, eBay_High: 19.95, eBay_Count: 8, eBay_Median: 7.49,
   },
   {
     Title: `New Avengers`, Issue: `11`, Publisher: `Marvel`,
@@ -45566,7 +45566,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2669`,
-    eBay_Avg: null, eBay_Low: 6.99, eBay_High: 85, eBay_Count: 9, eBay_Median: null,
+    eBay_Avg: 17.9, eBay_Low: 5.95, eBay_High: 40.34, eBay_Count: 8, eBay_Median: 15.47,
   },
   {
     Title: `New Avengers`, Issue: `12`, Publisher: `Marvel`,
@@ -45585,7 +45585,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2670`,
-    eBay_Avg: 6.6, eBay_Low: 1, eBay_High: 15.99, eBay_Count: 8, eBay_Median: 6.36,
+    eBay_Avg: 6.92, eBay_Low: 2.55, eBay_High: 19.5, eBay_Count: 8, eBay_Median: 4.97,
   },
   {
     Title: `New Avengers`, Issue: `13`, Publisher: `Marvel`,
@@ -45604,7 +45604,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2671`,
-    eBay_Avg: 4.78, eBay_Low: 1, eBay_High: 10.62, eBay_Count: 8, eBay_Median: 3.99,
+    eBay_Avg: 9.87, eBay_Low: 2.98, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 7.99,
   },
   {
     Title: `New Avengers`, Issue: `17`, Publisher: `Marvel`,
@@ -45623,7 +45623,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2672`,
-    eBay_Avg: 6.67, eBay_Low: 1, eBay_High: 19.99, eBay_Count: 7, eBay_Median: 3,
+    eBay_Avg: 12.73, eBay_Low: 3, eBay_High: 28.49, eBay_Count: 9, eBay_Median: 10.28,
   },
   {
     Title: `New Avengers`, Issue: `18`, Publisher: `Marvel`,
@@ -45642,7 +45642,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2673`,
-    eBay_Avg: 3.49, eBay_Low: 1, eBay_High: 8.99, eBay_Count: 6, eBay_Median: 2.8,
+    eBay_Avg: 8.67, eBay_Low: 2.75, eBay_High: 15, eBay_Count: 8, eBay_Median: 8.24,
   },
   {
     Title: `New Avengers`, Issue: `19`, Publisher: `Marvel`,
@@ -45661,7 +45661,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2674`,
-    eBay_Avg: 9.75, eBay_Low: 1, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 8.51,
+    eBay_Avg: 13.97, eBay_Low: 5.49, eBay_High: 29.99, eBay_Count: 9, eBay_Median: 10.99,
   },
   {
     Title: `New Avengers`, Issue: `21`, Publisher: `Marvel`,
@@ -45680,7 +45680,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: `Civil War (Millar/McNiven)`, Start_Bid: `2`,
     Volume: `1`, Entry: `2675`,
-    eBay_Avg: 4.45, eBay_Low: 1, eBay_High: 9.56, eBay_Count: 6, eBay_Median: 4,
+    eBay_Avg: 13.23, eBay_Low: 2.85, eBay_High: 30, eBay_Count: 8, eBay_Median: 10.14,
   },
   {
     Title: `New Avengers`, Issue: `22`, Publisher: `Marvel`,
@@ -45699,7 +45699,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: `Civil War (Millar/McNiven)`, Start_Bid: `2`,
     Volume: `1`, Entry: `2676`,
-    eBay_Avg: 10.88, eBay_Low: 1, eBay_High: 23.99, eBay_Count: 9, eBay_Median: 10,
+    eBay_Avg: 11.09, eBay_Low: 2.7, eBay_High: 27.25, eBay_Count: 8, eBay_Median: 10.14,
   },
   {
     Title: `New Avengers`, Issue: `23`, Publisher: `Marvel`,
@@ -45718,7 +45718,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: `Civil War (Millar/McNiven)`, Start_Bid: `2`,
     Volume: `1`, Entry: `2677`,
-    eBay_Avg: 7.34, eBay_Low: 1, eBay_High: 21.98, eBay_Count: 8, eBay_Median: 6,
+    eBay_Avg: 3.96, eBay_Low: 1.5, eBay_High: 7.99, eBay_Count: 7, eBay_Median: 3.74,
   },
   {
     Title: `New Avengers`, Issue: `24`, Publisher: `Marvel`,
@@ -45737,7 +45737,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: `Civil War (Millar/McNiven)`, Start_Bid: `2`,
     Volume: `1`, Entry: `2678`,
-    eBay_Avg: 7.46, eBay_Low: 1, eBay_High: 21.98, eBay_Count: 7, eBay_Median: 5,
+    eBay_Avg: 6.47, eBay_Low: 2.24, eBay_High: 12.99, eBay_Count: 8, eBay_Median: 5.25,
   },
   {
     Title: `New Avengers`, Issue: `25`, Publisher: `Marvel`,
@@ -45756,7 +45756,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: `Civil War (Millar/McNiven)`, Start_Bid: `2`,
     Volume: `1`, Entry: `2679`,
-    eBay_Avg: 14.27, eBay_Low: 4, eBay_High: 27.02, eBay_Count: 9, eBay_Median: 10,
+    eBay_Avg: 5.92, eBay_Low: 2.7, eBay_High: 10, eBay_Count: 7, eBay_Median: 5.49,
   },
   {
     Title: `New Avengers`, Issue: `29`, Publisher: `Marvel`,
@@ -45775,7 +45775,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: `Civil War (Millar/McNiven)`, Start_Bid: `2`,
     Volume: `1`, Entry: `2680`,
-    eBay_Avg: 4.27, eBay_Low: 1, eBay_High: 10, eBay_Count: 7, eBay_Median: 3.48,
+    eBay_Avg: 12.02, eBay_Low: 2.99, eBay_High: 28.49, eBay_Count: 10, eBay_Median: 11.05,
   },
   {
     Title: `New Avengers`, Issue: `30`, Publisher: `Marvel`,
@@ -45794,7 +45794,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: `Civil War (Millar/McNiven)`, Start_Bid: `2`,
     Volume: `1`, Entry: `2681`,
-    eBay_Avg: 14.16, eBay_Low: 3.48, eBay_High: 32.48, eBay_Count: 9, eBay_Median: 8.99,
+    eBay_Avg: 14.3, eBay_Low: 3.99, eBay_High: 30, eBay_Count: 9, eBay_Median: 12.1,
   },
   {
     Title: `New Avengers`, Issue: `32`, Publisher: `Marvel`,
@@ -45813,7 +45813,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: `Secret Invasion`, Start_Bid: `2`,
     Volume: `1`, Entry: `2682`,
-    eBay_Avg: 7.44, eBay_Low: 2.99, eBay_High: 14.91, eBay_Count: 8, eBay_Median: 6.19,
+    eBay_Avg: 6.98, eBay_Low: 2.95, eBay_High: 15, eBay_Count: 9, eBay_Median: 4.99,
   },
   {
     Title: `New Avengers`, Issue: `33`, Publisher: `Marvel`,
@@ -45832,7 +45832,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: `Secret Invasion`, Start_Bid: `2`,
     Volume: `1`, Entry: `2683`,
-    eBay_Avg: 15, eBay_Low: 2.99, eBay_High: 40, eBay_Count: 9, eBay_Median: 12.78,
+    eBay_Avg: 9.42, eBay_Low: 0.99, eBay_High: 16.24, eBay_Count: 9, eBay_Median: 10.88,
   },
   {
     Title: `New Avengers`, Issue: `34`, Publisher: `Marvel`,
@@ -45851,7 +45851,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: `Secret Invasion`, Start_Bid: `2`,
     Volume: `1`, Entry: `2684`,
-    eBay_Avg: 8.54, eBay_Low: 2.99, eBay_High: 14.91, eBay_Count: 8, eBay_Median: 7.82,
+    eBay_Avg: 8.44, eBay_Low: 2.99, eBay_High: 13.5, eBay_Count: 7, eBay_Median: 9.06,
   },
   {
     Title: `New Avengers`, Issue: `35`, Publisher: `Marvel`,
@@ -45870,7 +45870,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: `Secret Invasion`, Start_Bid: `2`,
     Volume: `1`, Entry: `2685`,
-    eBay_Avg: 15.32, eBay_Low: 5.66, eBay_High: 25, eBay_Count: 8, eBay_Median: 13.99,
+    eBay_Avg: 16.36, eBay_Low: 6.41, eBay_High: 25, eBay_Count: 8, eBay_Median: 14.45,
   },
   {
     Title: `New Avengers`, Issue: `36`, Publisher: `Marvel`,
@@ -45889,7 +45889,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: `Secret Invasion`, Start_Bid: `2`,
     Volume: `1`, Entry: `2686`,
-    eBay_Avg: 11.15, eBay_Low: 3.5, eBay_High: 25, eBay_Count: 7, eBay_Median: 10,
+    eBay_Avg: 7.17, eBay_Low: 2.75, eBay_High: 13.99, eBay_Count: 7, eBay_Median: 6.99,
   },
   {
     Title: `New Avengers`, Issue: `37`, Publisher: `Marvel`,
@@ -45908,7 +45908,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: `Secret Invasion`, Start_Bid: `2`,
     Volume: `1`, Entry: `2687`,
-    eBay_Avg: 6.15, eBay_Low: 1, eBay_High: 16.34, eBay_Count: 7, eBay_Median: 3.56,
+    eBay_Avg: 5.95, eBay_Low: 2.25, eBay_High: 13.91, eBay_Count: 7, eBay_Median: 4.99,
   },
   {
     Title: `New Avengers`, Issue: `38`, Publisher: `Marvel`,
@@ -45927,7 +45927,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: `Secret Invasion`, Start_Bid: `2`,
     Volume: `1`, Entry: `2688`,
-    eBay_Avg: 4.59, eBay_Low: 1, eBay_High: 8.99, eBay_Count: 8, eBay_Median: 4.08,
+    eBay_Avg: 8.04, eBay_Low: 0.99, eBay_High: 22.99, eBay_Count: 8, eBay_Median: 4.99,
   },
   {
     Title: `New Avengers`, Issue: `40`, Publisher: `Marvel`,
@@ -45946,7 +45946,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: `Secret Invasion`, Start_Bid: `2`,
     Volume: `1`, Entry: `2689`,
-    eBay_Avg: 14.84, eBay_Low: 4, eBay_High: 34.99, eBay_Count: 9, eBay_Median: 10.2,
+    eBay_Avg: 5.84, eBay_Low: 2.55, eBay_High: 12.95, eBay_Count: 7, eBay_Median: 4.95,
   },
   {
     Title: `New Avengers`, Issue: `41`, Publisher: `Marvel`,
@@ -45965,7 +45965,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: `Secret Invasion`, Start_Bid: `2`,
     Volume: `1`, Entry: `2690`,
-    eBay_Avg: 5, eBay_Low: 1, eBay_High: 13.5, eBay_Count: 6, eBay_Median: 4.28,
+    eBay_Avg: 14.46, eBay_Low: 2.25, eBay_High: 31.5, eBay_Count: 9, eBay_Median: 13.5,
   },
   {
     Title: `New Avengers`, Issue: `42`, Publisher: `Marvel`,
@@ -45984,7 +45984,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: `Secret Invasion`, Start_Bid: `2`,
     Volume: `1`, Entry: `2691`,
-    eBay_Avg: 7.75, eBay_Low: 1, eBay_High: 24.95, eBay_Count: 7, eBay_Median: 4.17,
+    eBay_Avg: 8.81, eBay_Low: 2.25, eBay_High: 25.99, eBay_Count: 7, eBay_Median: 5.49,
   },
   {
     Title: `New Avengers`, Issue: `43`, Publisher: `Marvel`,
@@ -46003,7 +46003,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: `Secret Invasion`, Start_Bid: `2`,
     Volume: `1`, Entry: `2692`,
-    eBay_Avg: 3.5, eBay_Low: 1, eBay_High: 5.49, eBay_Count: 7, eBay_Median: 3.56,
+    eBay_Avg: 7.5, eBay_Low: 2.99, eBay_High: 15, eBay_Count: 7, eBay_Median: 5.49,
   },
   {
     Title: `New Avengers`, Issue: `44`, Publisher: `Marvel`,
@@ -46022,7 +46022,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: `Secret Invasion`, Start_Bid: `2`,
     Volume: `1`, Entry: `2693`,
-    eBay_Avg: 5.38, eBay_Low: 3.56, eBay_High: 8, eBay_Count: 6, eBay_Median: 4.87,
+    eBay_Avg: 5.92, eBay_Low: 1.79, eBay_High: 12.99, eBay_Count: 10, eBay_Median: 5,
   },
   {
     Title: `New Avengers`, Issue: `45`, Publisher: `Marvel`,
@@ -46041,7 +46041,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: `Secret Invasion`, Start_Bid: `2`,
     Volume: `1`, Entry: `2694`,
-    eBay_Avg: 3.08, eBay_Low: 1, eBay_High: 5, eBay_Count: 6, eBay_Median: 3.28,
+    eBay_Avg: 8.14, eBay_Low: 2.25, eBay_High: 16.18, eBay_Count: 8, eBay_Median: 6.86,
   },
   {
     Title: `New Avengers`, Issue: `46`, Publisher: `Marvel`,
@@ -46060,7 +46060,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: `Secret Invasion`, Start_Bid: `2`,
     Volume: `1`, Entry: `2695`,
-    eBay_Avg: 3.35, eBay_Low: 1, eBay_High: 5, eBay_Count: 6, eBay_Median: 3.54,
+    eBay_Avg: 14.41, eBay_Low: 2.25, eBay_High: 31.5, eBay_Count: 9, eBay_Median: 11,
   },
   {
     Title: `New Avengers`, Issue: `47`, Publisher: `Marvel`,
@@ -46079,7 +46079,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: `Secret Invasion`, Start_Bid: `2`,
     Volume: `1`, Entry: `2696`,
-    eBay_Avg: 5.26, eBay_Low: 3, eBay_High: 8.99, eBay_Count: 6, eBay_Median: 5,
+    eBay_Avg: 18.91, eBay_Low: 4.99, eBay_High: 44.98, eBay_Count: 9, eBay_Median: 15,
   },
   {
     Title: `New Avengers`, Issue: `48`, Publisher: `Marvel`,
@@ -46098,7 +46098,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: `Secret Invasion`, Start_Bid: `2`,
     Volume: `1`, Entry: `2697`,
-    eBay_Avg: 6, eBay_Low: 3, eBay_High: 8.99, eBay_Count: 8, eBay_Median: 5.5,
+    eBay_Avg: 7.52, eBay_Low: 4.99, eBay_High: 9.99, eBay_Count: 9, eBay_Median: 7.99,
   },
   {
     Title: `New Avengers`, Issue: `49`, Publisher: `Marvel`,
@@ -46117,7 +46117,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: `Secret Invasion`, Start_Bid: `2`,
     Volume: `1`, Entry: `2698`,
-    eBay_Avg: 5.5, eBay_Low: 4, eBay_High: 7.99, eBay_Count: 6, eBay_Median: 5.49,
+    eBay_Avg: 8.35, eBay_Low: 1.49, eBay_High: 25, eBay_Count: 7, eBay_Median: 5.99,
   },
   {
     Title: `New Avengers`, Issue: `50`, Publisher: `Marvel`,
@@ -46136,7 +46136,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: `Dark Reign`, Start_Bid: `2`,
     Volume: `1`, Entry: `2699`,
-    eBay_Avg: null, eBay_Low: 2.99, eBay_High: 54, eBay_Count: 10, eBay_Median: null,
+    eBay_Avg: 30.26, eBay_Low: 2.99, eBay_High: 60, eBay_Count: 10, eBay_Median: 32.33,
   },
   {
     Title: `New Avengers`, Issue: `56`, Publisher: `Marvel`,
@@ -46155,7 +46155,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: `Heroic Age (post-Siege)`, Start_Bid: `2`,
     Volume: `1`, Entry: `2700`,
-    eBay_Avg: 10.31, eBay_Low: 1.93, eBay_High: 16, eBay_Count: 9, eBay_Median: 12.78,
+    eBay_Avg: 10.8, eBay_Low: 1.99, eBay_High: 25.99, eBay_Count: 10, eBay_Median: 10.44,
   },
   {
     Title: `New Avengers`, Issue: `58`, Publisher: `Marvel`,
@@ -46174,7 +46174,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: `Heroic Age (post-Siege)`, Start_Bid: `2`,
     Volume: `1`, Entry: `2701`,
-    eBay_Avg: 7.64, eBay_Low: 1.75, eBay_High: 16, eBay_Count: 8, eBay_Median: 6.49,
+    eBay_Avg: 5.73, eBay_Low: 3, eBay_High: 10.88, eBay_Count: 9, eBay_Median: 4.99,
   },
   {
     Title: `New Avengers`, Issue: `59`, Publisher: `Marvel`,
@@ -46193,7 +46193,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: `Heroic Age (post-Siege)`, Start_Bid: `2`,
     Volume: `1`, Entry: `2702`,
-    eBay_Avg: 9.85, eBay_Low: 2.08, eBay_High: 25.99, eBay_Count: 8, eBay_Median: 6.49,
+    eBay_Avg: 7.25, eBay_Low: 3, eBay_High: 19.99, eBay_Count: 7, eBay_Median: 4.99,
   },
   {
     Title: `New Avengers`, Issue: `60`, Publisher: `Marvel`,
@@ -46212,7 +46212,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: `Heroic Age (post-Siege)`, Start_Bid: `2`,
     Volume: `1`, Entry: `2703`,
-    eBay_Avg: 8.21, eBay_Low: 1.93, eBay_High: 16, eBay_Count: 9, eBay_Median: 7.99,
+    eBay_Avg: 9.87, eBay_Low: 3.19, eBay_High: 24, eBay_Count: 10, eBay_Median: 9.99,
   },
   {
     Title: `New Avengers`, Issue: `61`, Publisher: `Marvel`,
@@ -46231,7 +46231,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: `Heroic Age (post-Siege)`, Start_Bid: `2`,
     Volume: `1`, Entry: `2704`,
-    eBay_Avg: 5.82, eBay_Low: 1.93, eBay_High: 12.07, eBay_Count: 8, eBay_Median: 5,
+    eBay_Avg: 5.97, eBay_Low: 3.37, eBay_High: 10.28, eBay_Count: 8, eBay_Median: 4.49,
   },
   {
     Title: `New Avengers`, Issue: `62`, Publisher: `Marvel`,
@@ -46250,7 +46250,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: `Heroic Age (post-Siege)`, Start_Bid: `2`,
     Volume: `1`, Entry: `2705`,
-    eBay_Avg: 7, eBay_Low: 3, eBay_High: 15.66, eBay_Count: 8, eBay_Median: 5,
+    eBay_Avg: 9.12, eBay_Low: 2.08, eBay_High: 23.99, eBay_Count: 9, eBay_Median: 6.73,
   },
   {
     Title: `New Avengers`, Issue: `63`, Publisher: `Marvel`,
@@ -46269,7 +46269,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: `Heroic Age (post-Siege)`, Start_Bid: `2`,
     Volume: `1`, Entry: `2706`,
-    eBay_Avg: 4.95, eBay_Low: 1.93, eBay_High: 8, eBay_Count: 7, eBay_Median: 4.99,
+    eBay_Avg: 18.33, eBay_Low: 4.99, eBay_High: 45, eBay_Count: 10, eBay_Median: 15.24,
   },
   {
     Title: `New Avengers`, Issue: `64`, Publisher: `Marvel`,
@@ -46288,7 +46288,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: `Heroic Age (post-Siege)`, Start_Bid: `2`,
     Volume: `1`, Entry: `2707`,
-    eBay_Avg: 13.68, eBay_Low: 2.15, eBay_High: 39.99, eBay_Count: 6, eBay_Median: 8.5,
+    eBay_Avg: 101.77, eBay_Low: 3.99, eBay_High: 280, eBay_Count: 9, eBay_Median: 72,
   },
   {
     Title: `New Avengers`, Issue: `16.1`, Publisher: `Marvel`,
@@ -46307,7 +46307,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `4`, Entry: `2708`,
-    eBay_Avg: 5.72, eBay_Low: 2.13, eBay_High: 12.98, eBay_Count: 8, eBay_Median: 3.45,
+    eBay_Avg: 8.9, eBay_Low: 2.55, eBay_High: 21.05, eBay_Count: 10, eBay_Median: 8.49,
   },
   {
     Title: `Avengers Annual`, Issue: `2`, Publisher: `Marvel`,
@@ -46345,7 +46345,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `2710`,
-    eBay_Avg: 7.79, eBay_Low: 2.99, eBay_High: 10.48, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 7.83, eBay_Low: 1.99, eBay_High: 19.5, eBay_Count: 10, eBay_Median: 7.43,
   },
   {
     Title: `New Avengers`, Issue: `1`, Publisher: `Marvel`,
@@ -46364,7 +46364,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: `Heroic Age (post-Siege)`, Start_Bid: `3`,
     Volume: `1`, Entry: `2713`,
-    eBay_Avg: 19.72, eBay_Low: 3.99, eBay_High: 29.99, eBay_Count: 7, eBay_Median: 24.99,
+    eBay_Avg: 33.02, eBay_Low: 5.99, eBay_High: 72, eBay_Count: 9, eBay_Median: 25.99,
   },
   {
     Title: `New Avengers: Illuminati`, Issue: `1`, Publisher: `Marvel`,
@@ -46383,7 +46383,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: `Civil War (Millar/McNiven)`, Start_Bid: `5`,
     Volume: `1`, Entry: `2714`,
-    eBay_Avg: 9.08, eBay_Low: 7.99, eBay_High: 10.48, eBay_Count: 6, eBay_Median: 8.99,
+    eBay_Avg: 17.11, eBay_Low: 7, eBay_High: 30, eBay_Count: 9, eBay_Median: 15.99,
   },
   {
     Title: `New Avengers: Illuminati`, Issue: `1`, Publisher: `Marvel`,
@@ -46402,7 +46402,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `2`, Entry: `2715`,
-    eBay_Avg: 9.08, eBay_Low: 7.99, eBay_High: 10.48, eBay_Count: 6, eBay_Median: 8.99,
+    eBay_Avg: 17.11, eBay_Low: 7, eBay_High: 30, eBay_Count: 9, eBay_Median: 15.99,
   },
   {
     Title: `New Avengers: Illuminati`, Issue: `2`, Publisher: `Marvel`,
@@ -46421,7 +46421,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `2`, Entry: `2716`,
-    eBay_Avg: 4.27, eBay_Low: 2.13, eBay_High: 9.95, eBay_Count: 6, eBay_Median: 3.15,
+    eBay_Avg: 9.36, eBay_Low: 2.8, eBay_High: 14.99, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `New Avengers: Illuminati`, Issue: `3`, Publisher: `Marvel`,
@@ -46440,7 +46440,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `2`, Entry: `2717`,
-    eBay_Avg: 4.32, eBay_Low: 2.98, eBay_High: 6.3, eBay_Count: 7, eBay_Median: 4.2,
+    eBay_Avg: 9.74, eBay_Low: 2.12, eBay_High: 20, eBay_Count: 10, eBay_Median: 9.71,
   },
   {
     Title: `New Avengers: Illuminati`, Issue: `4`, Publisher: `Marvel`,
@@ -46459,7 +46459,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `2`, Entry: `2718`,
-    eBay_Avg: 4.88, eBay_Low: 2.8, eBay_High: 9.99, eBay_Count: 7, eBay_Median: 3.29,
+    eBay_Avg: 6.67, eBay_Low: 1.5, eBay_High: 14.99, eBay_Count: 10, eBay_Median: 6.42,
   },
   {
     Title: `New Avengers: Illuminati`, Issue: `5`, Publisher: `Marvel`,
@@ -46478,7 +46478,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `2`, Entry: `2719`,
-    eBay_Avg: null, eBay_Low: 5.83, eBay_High: 70.2, eBay_Count: 9, eBay_Median: null,
+    eBay_Avg: 22.74, eBay_Low: 4.95, eBay_High: 54.6, eBay_Count: 10, eBay_Median: 19.99,
   },
   {
     Title: `Mighty Avengers`, Issue: `1`, Publisher: `Marvel`,
@@ -46497,7 +46497,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `2720`,
-    eBay_Avg: 8.94, eBay_Low: 3.97, eBay_High: 9.99, eBay_Count: 10, eBay_Median: 9.99,
+    eBay_Avg: 8.85, eBay_Low: 2.49, eBay_High: 20.21, eBay_Count: 9, eBay_Median: 8.99,
   },
   {
     Title: `Mighty Avengers`, Issue: `2`, Publisher: `Marvel`,
@@ -46516,7 +46516,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2721`,
-    eBay_Avg: 6.21, eBay_Low: 1.97, eBay_High: 16.99, eBay_Count: 8, eBay_Median: 4.5,
+    eBay_Avg: 15.89, eBay_Low: 1.95, eBay_High: 39.99, eBay_Count: 8, eBay_Median: 11.66,
   },
   {
     Title: `Mighty Avengers`, Issue: `3`, Publisher: `Marvel`,
@@ -46535,7 +46535,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2722`,
-    eBay_Avg: 4.08, eBay_Low: 1.97, eBay_High: 7.57, eBay_Count: 7, eBay_Median: 2.99,
+    eBay_Avg: 7.1, eBay_Low: 3, eBay_High: 12.99, eBay_Count: 8, eBay_Median: 6.03,
   },
   {
     Title: `Mighty Avengers`, Issue: `4`, Publisher: `Marvel`,
@@ -46554,7 +46554,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2723`,
-    eBay_Avg: 8.26, eBay_Low: 1.97, eBay_High: 16.99, eBay_Count: 10, eBay_Median: 7.46,
+    eBay_Avg: 3.51, eBay_Low: 1.79, eBay_High: 7, eBay_Count: 8, eBay_Median: 2.7,
   },
   {
     Title: `Mighty Avengers`, Issue: `6`, Publisher: `Marvel`,
@@ -46573,7 +46573,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2724`,
-    eBay_Avg: 11.8, eBay_Low: 1.49, eBay_High: 22, eBay_Count: 9, eBay_Median: 10.8,
+    eBay_Avg: 16.34, eBay_Low: 1.79, eBay_High: 39.99, eBay_Count: 9, eBay_Median: 17,
   },
   {
     Title: `Mighty Avengers`, Issue: `7`, Publisher: `Marvel`,
@@ -46592,7 +46592,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2725`,
-    eBay_Avg: 16.5, eBay_Low: 2.99, eBay_High: 39.99, eBay_Count: 9, eBay_Median: 16.99,
+    eBay_Avg: 16.4, eBay_Low: 2.99, eBay_High: 40.45, eBay_Count: 9, eBay_Median: 9,
   },
   {
     Title: `Mighty Avengers`, Issue: `9`, Publisher: `Marvel`,
@@ -46611,7 +46611,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2726`,
-    eBay_Avg: 11.34, eBay_Low: 1.79, eBay_High: 22.49, eBay_Count: 8, eBay_Median: 9.47,
+    eBay_Avg: 9.49, eBay_Low: 1.79, eBay_High: 20.21, eBay_Count: 9, eBay_Median: 8.95,
   },
   {
     Title: `Mighty Avengers`, Issue: `11`, Publisher: `Marvel`,
@@ -46630,7 +46630,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2727`,
-    eBay_Avg: 14.31, eBay_Low: 3.99, eBay_High: 39.99, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 9.22, eBay_Low: 3, eBay_High: 19.97, eBay_Count: 9, eBay_Median: 6.99,
   },
   {
     Title: `Mighty Avengers`, Issue: `13`, Publisher: `Marvel`,
@@ -46649,7 +46649,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2728`,
-    eBay_Avg: 14.13, eBay_Low: 2.99, eBay_High: 29.95, eBay_Count: 7, eBay_Median: 10.99,
+    eBay_Avg: 25.24, eBay_Low: 2.99, eBay_High: 79.99, eBay_Count: 9, eBay_Median: 24.99,
   },
   {
     Title: `Mighty Avengers`, Issue: `14`, Publisher: `Marvel`,
@@ -46668,7 +46668,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2729`,
-    eBay_Avg: 17.26, eBay_Low: 1.97, eBay_High: 39.99, eBay_Count: 10, eBay_Median: 14.99,
+    eBay_Avg: 7.82, eBay_Low: 1.79, eBay_High: 15, eBay_Count: 9, eBay_Median: 5.62,
   },
   {
     Title: `Mighty Avengers`, Issue: `15`, Publisher: `Marvel`,
@@ -46687,7 +46687,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2730`,
-    eBay_Avg: 11.46, eBay_Low: 1.29, eBay_High: 29.95, eBay_Count: 10, eBay_Median: 10.75,
+    eBay_Avg: 6.76, eBay_Low: 1.29, eBay_High: 14.99, eBay_Count: 8, eBay_Median: 6.17,
   },
   {
     Title: `Mighty Avengers`, Issue: `16`, Publisher: `Marvel`,
@@ -46706,7 +46706,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2731`,
-    eBay_Avg: 5.98, eBay_Low: 1.75, eBay_High: 14.99, eBay_Count: 9, eBay_Median: 4.17,
+    eBay_Avg: 4.43, eBay_Low: 1.79, eBay_High: 7.95, eBay_Count: 7, eBay_Median: 3.99,
   },
   {
     Title: `Mighty Avengers`, Issue: `17`, Publisher: `Marvel`,
@@ -46725,7 +46725,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2732`,
-    eBay_Avg: 6.48, eBay_Low: 1.97, eBay_High: 14.99, eBay_Count: 8, eBay_Median: 5.49,
+    eBay_Avg: 5.16, eBay_Low: 2.25, eBay_High: 8.4, eBay_Count: 9, eBay_Median: 4.99,
   },
   {
     Title: `Mighty Avengers`, Issue: `18`, Publisher: `Marvel`,
@@ -46744,7 +46744,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `87`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2733`,
-    eBay_Avg: 6.36, eBay_Low: 1.97, eBay_High: 14.99, eBay_Count: 8, eBay_Median: 4.99,
+    eBay_Avg: 4.01, eBay_Low: 1.99, eBay_High: 7.95, eBay_Count: 9, eBay_Median: 3.51,
   },
   {
     Title: `Mighty Avengers`, Issue: `21`, Publisher: `Marvel`,
@@ -46763,7 +46763,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `2734`,
-    eBay_Avg: 13.52, eBay_Low: 1.38, eBay_High: 34.95, eBay_Count: 8, eBay_Median: 6.98,
+    eBay_Avg: 7.41, eBay_Low: 1.81, eBay_High: 20.21, eBay_Count: 7, eBay_Median: 7.95,
   },
   {
     Title: `Young Avengers`, Issue: `1`, Publisher: `Marvel`,
@@ -46782,7 +46782,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `15`,
     Volume: `1`, Entry: `2735`,
-    eBay_Avg: 10.33, eBay_Low: 9.99, eBay_High: 11, eBay_Count: 3, eBay_Median: 9.99,
+    eBay_Avg: 83.55, eBay_Low: 9.99, eBay_High: 180, eBay_Count: 9, eBay_Median: 75,
   },
   {
     Title: `Young Avengers`, Issue: `2`, Publisher: `Marvel`,
@@ -46801,7 +46801,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `2736`,
-    eBay_Avg: null, eBay_Low: 3.58, eBay_High: 64.99, eBay_Count: 7, eBay_Median: null,
+    eBay_Avg: 22.73, eBay_Low: 1, eBay_High: 54.99, eBay_Count: 8, eBay_Median: 13.47,
   },
   {
     Title: `Young Avengers`, Issue: `3`, Publisher: `Marvel`,
@@ -46820,7 +46820,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `2737`,
-    eBay_Avg: 9.62, eBay_Low: 5.99, eBay_High: 13.99, eBay_Count: 8, eBay_Median: 9.99,
+    eBay_Avg: 20.12, eBay_Low: 6, eBay_High: 45, eBay_Count: 7, eBay_Median: 9.99,
   },
   {
     Title: `Young Avengers`, Issue: `4`, Publisher: `Marvel`,
@@ -46839,7 +46839,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `2738`,
-    eBay_Avg: 25.64, eBay_Low: 5.99, eBay_High: 59.99, eBay_Count: 9, eBay_Median: 15.99,
+    eBay_Avg: 33.54, eBay_Low: 1, eBay_High: 84.95, eBay_Count: 8, eBay_Median: 30.68,
   },
   {
     Title: `Young Avengers`, Issue: `6`, Publisher: `Marvel`,
@@ -46858,7 +46858,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `2739`,
-    eBay_Avg: null, eBay_Low: 5.99, eBay_High: 240.71, eBay_Count: 5, eBay_Median: null,
+    eBay_Avg: 23.49, eBay_Low: 0.99, eBay_High: 50, eBay_Count: 8, eBay_Median: 23.99,
   },
   {
     Title: `Young Avengers`, Issue: `7`, Publisher: `Marvel`,
@@ -46877,7 +46877,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `2740`,
-    eBay_Avg: 13.3, eBay_Low: 4, eBay_High: 26, eBay_Count: 7, eBay_Median: 10.49,
+    eBay_Avg: 7.72, eBay_Low: 1, eBay_High: 18, eBay_Count: 7, eBay_Median: 8,
   },
   {
     Title: `Young Avengers`, Issue: `8`, Publisher: `Marvel`,
@@ -46896,7 +46896,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `2741`,
-    eBay_Avg: 9.84, eBay_Low: 5.99, eBay_High: 13.26, eBay_Count: 5, eBay_Median: 9.99,
+    eBay_Avg: 10.89, eBay_Low: 8, eBay_High: 18, eBay_Count: 7, eBay_Median: 9.9,
   },
   {
     Title: `Young Avengers`, Issue: `9`, Publisher: `Marvel`,
@@ -46915,7 +46915,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `2742`,
-    eBay_Avg: 17.94, eBay_Low: 9.79, eBay_High: 35, eBay_Count: 9, eBay_Median: 11.99,
+    eBay_Avg: 16.53, eBay_Low: 6.5, eBay_High: 40, eBay_Count: 8, eBay_Median: 12.75,
   },
   {
     Title: `Young Avengers`, Issue: `10`, Publisher: `Marvel`,
@@ -46934,7 +46934,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `2743`,
-    eBay_Avg: null, eBay_Low: 27.96, eBay_High: 304.42, eBay_Count: 2, eBay_Median: null,
+    eBay_Avg: 18, eBay_Low: 1, eBay_High: 33.95, eBay_Count: 6, eBay_Median: 17.49,
   },
   {
     Title: `Young Avengers`, Issue: `11`, Publisher: `Marvel`,
@@ -46953,7 +46953,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `2744`,
-    eBay_Avg: 12.15, eBay_Low: 10.48, eBay_High: 13.98, eBay_Count: 3, eBay_Median: 12,
+    eBay_Avg: 15.32, eBay_Low: 5, eBay_High: 40, eBay_Count: 8, eBay_Median: 13.02,
   },
   {
     Title: `Young Avengers`, Issue: `12`, Publisher: `Marvel`,
@@ -46972,7 +46972,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `2745`,
-    eBay_Avg: null, eBay_Low: 84.96, eBay_High: 304.42, eBay_Count: 2, eBay_Median: null,
+    eBay_Avg: 52.26, eBay_Low: 11.99, eBay_High: 118.99, eBay_Count: 8, eBay_Median: 20.53,
   },
   {
     Title: `Young Avengers Presents`, Issue: `1`, Publisher: `Marvel`,
@@ -46991,7 +46991,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2746`,
-    eBay_Avg: 11.24, eBay_Low: 3.99, eBay_High: 21.35, eBay_Count: 7, eBay_Median: 13.52,
+    eBay_Avg: 14.33, eBay_Low: 7.1, eBay_High: 34.57, eBay_Count: 7, eBay_Median: 10.99,
   },
   {
     Title: `Young Avengers Presents`, Issue: `3`, Publisher: `Marvel`,
@@ -47010,7 +47010,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2747`,
-    eBay_Avg: 22.11, eBay_Low: 4.7, eBay_High: 46.73, eBay_Count: 9, eBay_Median: 22.41,
+    eBay_Avg: 22.27, eBay_Low: 4.7, eBay_High: 49.95, eBay_Count: 9, eBay_Median: 22.41,
   },
   {
     Title: `Young Avengers Presents`, Issue: `4`, Publisher: `Marvel`,
@@ -47029,7 +47029,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2748`,
-    eBay_Avg: 11.07, eBay_Low: 2.99, eBay_High: 26.74, eBay_Count: 7, eBay_Median: 7.97,
+    eBay_Avg: 13.52, eBay_Low: 2.99, eBay_High: 26.97, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `Young Avengers Presents`, Issue: `5`, Publisher: `Marvel`,
@@ -47048,7 +47048,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2749`,
-    eBay_Avg: 21.25, eBay_Low: 5, eBay_High: 50, eBay_Count: 10, eBay_Median: 17.49,
+    eBay_Avg: 20.05, eBay_Low: 7.1, eBay_High: 50, eBay_Count: 9, eBay_Median: 14.99,
   },
   {
     Title: `Avengers Academy`, Issue: `2`, Publisher: `Marvel`,
@@ -47067,7 +47067,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2750`,
-    eBay_Avg: 3.71, eBay_Low: 1.93, eBay_High: 3.99, eBay_Count: 9, eBay_Median: 3.99,
+    eBay_Avg: 10.6, eBay_Low: 0.99, eBay_High: 25, eBay_Count: 10, eBay_Median: 10.54,
   },
   {
     Title: `Avengers Academy`, Issue: `5`, Publisher: `Marvel`,
@@ -47086,7 +47086,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2751`,
-    eBay_Avg: 4.99, eBay_Low: 1.93, eBay_High: 9.99, eBay_Count: 10, eBay_Median: 4,
+    eBay_Avg: 6.96, eBay_Low: 1.2, eBay_High: 12.5, eBay_Count: 9, eBay_Median: 8,
   },
   {
     Title: `Avengers Academy`, Issue: `6`, Publisher: `Marvel`,
@@ -47105,7 +47105,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2752`,
-    eBay_Avg: 7.56, eBay_Low: 0.99, eBay_High: 18.04, eBay_Count: 8, eBay_Median: 7.25,
+    eBay_Avg: 18.18, eBay_Low: 0.99, eBay_High: 49.99, eBay_Count: 8, eBay_Median: 16.99,
   },
   {
     Title: `Avengers Academy`, Issue: `7`, Publisher: `Marvel`,
@@ -47124,7 +47124,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2753`,
-    eBay_Avg: 4.42, eBay_Low: 0.99, eBay_High: 8.5, eBay_Count: 8, eBay_Median: 4.49,
+    eBay_Avg: 4.19, eBay_Low: 0.99, eBay_High: 8.5, eBay_Count: 7, eBay_Median: 3.99,
   },
   {
     Title: `Avengers Academy`, Issue: `8`, Publisher: `Marvel`,
@@ -47143,7 +47143,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2754`,
-    eBay_Avg: 19.99, eBay_Low: 0.99, eBay_High: 53.48, eBay_Count: 8, eBay_Median: 6.75,
+    eBay_Avg: 6.77, eBay_Low: 0.99, eBay_High: 19.99, eBay_Count: 6, eBay_Median: 4.5,
   },
   {
     Title: `Avengers Academy`, Issue: `9`, Publisher: `Marvel`,
@@ -47162,7 +47162,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2755`,
-    eBay_Avg: 6.34, eBay_Low: 0.99, eBay_High: 13, eBay_Count: 7, eBay_Median: 4.99,
+    eBay_Avg: 12.04, eBay_Low: 0.99, eBay_High: 30, eBay_Count: 7, eBay_Median: 11.39,
   },
   {
     Title: `Avengers Academy`, Issue: `10`, Publisher: `Marvel`,
@@ -47181,7 +47181,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2756`,
-    eBay_Avg: 2.6, eBay_Low: 1.93, eBay_High: 4.99, eBay_Count: 7, eBay_Median: 1.93,
+    eBay_Avg: 17.88, eBay_Low: 4.99, eBay_High: 52, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `Avengers Academy`, Issue: `11`, Publisher: `Marvel`,
@@ -47200,7 +47200,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2757`,
-    eBay_Avg: 3.36, eBay_Low: 2.01, eBay_High: 6, eBay_Count: 10, eBay_Median: 2.87,
+    eBay_Avg: 8.22, eBay_Low: 0.99, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 5,
   },
   {
     Title: `Avengers Academy`, Issue: `12`, Publisher: `Marvel`,
@@ -47219,7 +47219,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2758`,
-    eBay_Avg: 2.41, eBay_Low: 0.99, eBay_High: 3.99, eBay_Count: 9, eBay_Median: 2.01,
+    eBay_Avg: 1.87, eBay_Low: 0.99, eBay_High: 2.02, eBay_Count: 7, eBay_Median: 2.02,
   },
   {
     Title: `Avengers Academy`, Issue: `13`, Publisher: `Marvel`,
@@ -47238,7 +47238,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2759`,
-    eBay_Avg: 6.05, eBay_Low: 2.43, eBay_High: 9, eBay_Count: 8, eBay_Median: 6.5,
+    eBay_Avg: 21.06, eBay_Low: 2.46, eBay_High: 65, eBay_Count: 7, eBay_Median: 9,
   },
   {
     Title: `Avengers Academy`, Issue: `14`, Publisher: `Marvel`,
@@ -47257,7 +47257,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2760`,
-    eBay_Avg: 6.08, eBay_Low: 0.99, eBay_High: 12.57, eBay_Count: 7, eBay_Median: 5,
+    eBay_Avg: 6.09, eBay_Low: 0.99, eBay_High: 12.57, eBay_Count: 6, eBay_Median: 5.99,
   },
   {
     Title: `Avengers Academy`, Issue: `21`, Publisher: `Marvel`,
@@ -47276,7 +47276,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2761`,
-    eBay_Avg: null, eBay_Low: 7.99, eBay_High: 115, eBay_Count: 9, eBay_Median: null,
+    eBay_Avg: 104.07, eBay_Low: 16.24, eBay_High: 269.66, eBay_Count: 10, eBay_Median: 97.19,
   },
   {
     Title: `Avengers Academy`, Issue: `22`, Publisher: `Marvel`,
@@ -47295,7 +47295,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2762`,
-    eBay_Avg: 11.23, eBay_Low: 2.01, eBay_High: 24.99, eBay_Count: 9, eBay_Median: 11.98,
+    eBay_Avg: 14.38, eBay_Low: 4.99, eBay_High: 24.99, eBay_Count: 8, eBay_Median: 13.48,
   },
   {
     Title: `Avengers Academy`, Issue: `14.1`, Publisher: `Marvel`,
@@ -47314,7 +47314,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `4`, Entry: `2763`,
-    eBay_Avg: 4.31, eBay_Low: 0.99, eBay_High: 9.99, eBay_Count: 9, eBay_Median: 3.99,
+    eBay_Avg: 5.43, eBay_Low: 0.99, eBay_High: 10.18, eBay_Count: 9, eBay_Median: 3.99,
   },
   {
     Title: `Avengers Academy Giant-Size`, Issue: `80`, Publisher: `Marvel`,
@@ -47333,7 +47333,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `2764`,
-    eBay_Avg: 5.85, eBay_Low: 4.87, eBay_High: 8, eBay_Count: 6, eBay_Median: 5.45,
+    eBay_Avg: 5.86, eBay_Low: 4.91, eBay_High: 8, eBay_Count: 6, eBay_Median: 5.45,
   },
   {
     Title: `Secret Avengers`, Issue: `6`, Publisher: `Marvel`,
@@ -47352,7 +47352,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `4`, Entry: `2765`,
-    eBay_Avg: 12.38, eBay_Low: 2.43, eBay_High: 27.96, eBay_Count: 10, eBay_Median: 9.99,
+    eBay_Avg: 18.2, eBay_Low: 1.8, eBay_High: 28.07, eBay_Count: 10, eBay_Median: 18.52,
   },
   {
     Title: `Secret Avengers`, Issue: `9`, Publisher: `Marvel`,
@@ -47371,7 +47371,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `4`, Entry: `2766`,
-    eBay_Avg: 12.3, eBay_Low: 2.59, eBay_High: 33.47, eBay_Count: 8, eBay_Median: 7.33,
+    eBay_Avg: 3.62, eBay_Low: 2.95, eBay_High: 5.38, eBay_Count: 6, eBay_Median: 3.19,
   },
   {
     Title: `Secret Avengers`, Issue: `10`, Publisher: `Marvel`,
@@ -47390,7 +47390,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `4`, Entry: `2767`,
-    eBay_Avg: 7.29, eBay_Low: 1.93, eBay_High: 23, eBay_Count: 8, eBay_Median: 4.57,
+    eBay_Avg: 12.88, eBay_Low: 3.99, eBay_High: 35.99, eBay_Count: 8, eBay_Median: 6.9,
   },
   {
     Title: `Secret Avengers`, Issue: `11`, Publisher: `Marvel`,
@@ -47409,7 +47409,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `4`, Entry: `2768`,
-    eBay_Avg: 4.25, eBay_Low: 2.05, eBay_High: 8.99, eBay_Count: 7, eBay_Median: 3.47,
+    eBay_Avg: 9.86, eBay_Low: 2.97, eBay_High: 19.99, eBay_Count: 8, eBay_Median: 6.38,
   },
   {
     Title: `Secret Avengers`, Issue: `12`, Publisher: `Marvel`,
@@ -47428,7 +47428,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `4`, Entry: `2769`,
-    eBay_Avg: 14.72, eBay_Low: 2.78, eBay_High: 40.11, eBay_Count: 8, eBay_Median: 8.49,
+    eBay_Avg: 8.37, eBay_Low: 2.81, eBay_High: 20, eBay_Count: 8, eBay_Median: 3.5,
   },
   {
     Title: `Secret Avengers`, Issue: `15`, Publisher: `Marvel`,
@@ -47447,7 +47447,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: `Fear Itself`, Start_Bid: `1`,
     Volume: `1`, Entry: `2770`,
-    eBay_Avg: null, eBay_Low: 2.59, eBay_High: 142.38, eBay_Count: 10, eBay_Median: null,
+    eBay_Avg: 36.04, eBay_Low: 7.49, eBay_High: 89.14, eBay_Count: 9, eBay_Median: 31.49,
   },
   {
     Title: `Secret Avengers`, Issue: `16`, Publisher: `Marvel`,
@@ -47466,7 +47466,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `4`, Entry: `2771`,
-    eBay_Avg: 16.79, eBay_Low: 2, eBay_High: 40.11, eBay_Count: 9, eBay_Median: 9.49,
+    eBay_Avg: 13.71, eBay_Low: 3.37, eBay_High: 29.99, eBay_Count: 9, eBay_Median: 9.49,
   },
   {
     Title: `Secret Avengers`, Issue: `17`, Publisher: `Marvel`,
@@ -47485,7 +47485,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `4`, Entry: `2772`,
-    eBay_Avg: 5.83, eBay_Low: 2.05, eBay_High: 16.04, eBay_Count: 8, eBay_Median: 4.34,
+    eBay_Avg: 6.88, eBay_Low: 2.99, eBay_High: 16.18, eBay_Count: 8, eBay_Median: 4.4,
   },
   {
     Title: `Secret Avengers`, Issue: `18`, Publisher: `Marvel`,
@@ -47504,7 +47504,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `4`, Entry: `2773`,
-    eBay_Avg: 3.58, eBay_Low: 3, eBay_High: 4, eBay_Count: 4, eBay_Median: 3.67,
+    eBay_Avg: 20.72, eBay_Low: 3, eBay_High: 49.99, eBay_Count: 10, eBay_Median: 19.49,
   },
   {
     Title: `Secret Avengers`, Issue: `19`, Publisher: `Marvel`,
@@ -47523,7 +47523,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `4`, Entry: `2774`,
-    eBay_Avg: 17.44, eBay_Low: 2.99, eBay_High: 44.99, eBay_Count: 8, eBay_Median: 13.49,
+    eBay_Avg: 13.5, eBay_Low: 2.99, eBay_High: 30.6, eBay_Count: 9, eBay_Median: 11.99,
   },
   {
     Title: `Secret Avengers`, Issue: `12.1`, Publisher: `Marvel`,
@@ -47542,7 +47542,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `4`, Entry: `2775`,
-    eBay_Avg: 4.74, eBay_Low: 2.13, eBay_High: 10.95, eBay_Count: 8, eBay_Median: 3.32,
+    eBay_Avg: 7.89, eBay_Low: 2.95, eBay_High: 13.59, eBay_Count: 10, eBay_Median: 9,
   },
   {
     Title: `Avengers/Invaders`, Issue: `1`, Publisher: `Marvel`,
@@ -47561,7 +47561,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `2776`,
-    eBay_Avg: 8.19, eBay_Low: 1.25, eBay_High: 19.95, eBay_Count: 10, eBay_Median: 9.12,
+    eBay_Avg: 7.99, eBay_Low: 3, eBay_High: 19.95, eBay_Count: 7, eBay_Median: 4.99,
   },
   {
     Title: `Avengers/Invaders`, Issue: `2`, Publisher: `Marvel`,
@@ -47580,7 +47580,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2777`,
-    eBay_Avg: 4.91, eBay_Low: 1.34, eBay_High: 10, eBay_Count: 8, eBay_Median: 3.75,
+    eBay_Avg: 5.55, eBay_Low: 2.9, eBay_High: 10.95, eBay_Count: 8, eBay_Median: 4.83,
   },
   {
     Title: `Avengers/Invaders`, Issue: `3`, Publisher: `Marvel`,
@@ -47599,7 +47599,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2778`,
-    eBay_Avg: 3.36, eBay_Low: 1.38, eBay_High: 7.7, eBay_Count: 8, eBay_Median: 2.7,
+    eBay_Avg: 8.93, eBay_Low: 2.39, eBay_High: 10.95, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `Avengers/Invaders`, Issue: `4`, Publisher: `Marvel`,
@@ -47618,7 +47618,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2779`,
-    eBay_Avg: 4.45, eBay_Low: 1.2, eBay_High: 10.43, eBay_Count: 8, eBay_Median: 3.25,
+    eBay_Avg: 7.18, eBay_Low: 2.9, eBay_High: 13.99, eBay_Count: 9, eBay_Median: 4.72,
   },
   {
     Title: `Avengers/Invaders`, Issue: `5`, Publisher: `Marvel`,
@@ -47637,7 +47637,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2780`,
-    eBay_Avg: 9.43, eBay_Low: 1.38, eBay_High: 17.37, eBay_Count: 9, eBay_Median: 10.76,
+    eBay_Avg: 6.97, eBay_Low: 2.9, eBay_High: 19.99, eBay_Count: 8, eBay_Median: 3.79,
   },
   {
     Title: `Avengers/Invaders`, Issue: `6`, Publisher: `Marvel`,
@@ -47656,7 +47656,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2781`,
-    eBay_Avg: 3.36, eBay_Low: 1.38, eBay_High: 5.99, eBay_Count: 9, eBay_Median: 2.66,
+    eBay_Avg: 4.38, eBay_Low: 1.99, eBay_High: 9.74, eBay_Count: 9, eBay_Median: 3.26,
   },
   {
     Title: `Avengers/Invaders`, Issue: `7`, Publisher: `Marvel`,
@@ -47675,7 +47675,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2782`,
-    eBay_Avg: 4.6, eBay_Low: 1.34, eBay_High: 10.76, eBay_Count: 8, eBay_Median: 3.76,
+    eBay_Avg: 4.91, eBay_Low: 2.68, eBay_High: 8.06, eBay_Count: 8, eBay_Median: 4.62,
   },
   {
     Title: `Avengers/Invaders`, Issue: `8`, Publisher: `Marvel`,
@@ -47694,7 +47694,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2783`,
-    eBay_Avg: 5.17, eBay_Low: 1.38, eBay_High: 10.76, eBay_Count: 8, eBay_Median: 3.25,
+    eBay_Avg: 9.14, eBay_Low: 2, eBay_High: 24, eBay_Count: 10, eBay_Median: 9.37,
   },
   {
     Title: `Demon Days: X-Men`, Issue: `1`, Publisher: `Marvel`,
@@ -47713,7 +47713,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `1`, Entry: `2784`,
-    eBay_Avg: 9.39, eBay_Low: 4.99, eBay_High: 20, eBay_Count: 9, eBay_Median: 8.99,
+    eBay_Avg: 11.77, eBay_Low: 2.99, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 12.99,
   },
   {
     Title: `X-Men vs. The Avengers`, Issue: `1`, Publisher: `Marvel`,
@@ -47732,7 +47732,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `2785`,
-    eBay_Avg: 14.26, eBay_Low: 1.5, eBay_High: 25, eBay_Count: 9, eBay_Median: 11.99,
+    eBay_Avg: 18.04, eBay_Low: 7.99, eBay_High: 35, eBay_Count: 9, eBay_Median: 19,
   },
   {
     Title: `X-Men vs. The Avengers`, Issue: `2`, Publisher: `Marvel`,
@@ -47751,7 +47751,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2786`,
-    eBay_Avg: 9.04, eBay_Low: 4, eBay_High: 15, eBay_Count: 10, eBay_Median: 8.3,
+    eBay_Avg: 9.74, eBay_Low: 4.28, eBay_High: 19, eBay_Count: 9, eBay_Median: 7.1,
   },
   {
     Title: `X-Men vs. The Avengers`, Issue: `3`, Publisher: `Marvel`,
@@ -47770,7 +47770,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2787`,
-    eBay_Avg: 7.86, eBay_Low: 2.13, eBay_High: 12.95, eBay_Count: 10, eBay_Median: 7.95,
+    eBay_Avg: 9, eBay_Low: 1.99, eBay_High: 19, eBay_Count: 10, eBay_Median: 8.52,
   },
   {
     Title: `X-Men vs. The Avengers`, Issue: `4`, Publisher: `Marvel`,
@@ -47789,7 +47789,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2788`,
-    eBay_Avg: 12.36, eBay_Low: 3.14, eBay_High: 23, eBay_Count: 8, eBay_Median: 13.12,
+    eBay_Avg: 17.23, eBay_Low: 5, eBay_High: 35, eBay_Count: 9, eBay_Median: 19.5,
   },
   {
     Title: `House of M: Avengers`, Issue: `1`, Publisher: `Marvel`,
@@ -47808,7 +47808,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `86`,
     Crossover: `House of M`, Start_Bid: `4`,
     Volume: `1`, Entry: `2789`,
-    eBay_Avg: 8.55, eBay_Low: 3.69, eBay_High: 13.42, eBay_Count: 2, eBay_Median: 8.55,
+    eBay_Avg: 11.16, eBay_Low: 3.03, eBay_High: 24.99, eBay_Count: 10, eBay_Median: 12.03,
   },
   {
     Title: `House of M: Avengers`, Issue: `2`, Publisher: `Marvel`,
@@ -47827,7 +47827,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `86`,
     Crossover: `House of M`, Start_Bid: `1`,
     Volume: `1`, Entry: `2790`,
-    eBay_Avg: 7.06, eBay_Low: 1.25, eBay_High: 13.49, eBay_Count: 9, eBay_Median: 6,
+    eBay_Avg: 7.07, eBay_Low: 1.25, eBay_High: 13.52, eBay_Count: 9, eBay_Median: 6,
   },
   {
     Title: `House of M: Avengers`, Issue: `3`, Publisher: `Marvel`,
@@ -47846,7 +47846,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `86`,
     Crossover: `House of M`, Start_Bid: `1`,
     Volume: `1`, Entry: `2791`,
-    eBay_Avg: 11.31, eBay_Low: 3.69, eBay_High: 14.05, eBay_Count: 5, eBay_Median: 13.25,
+    eBay_Avg: 11.32, eBay_Low: 3.69, eBay_High: 14.05, eBay_Count: 5, eBay_Median: 13.25,
   },
   {
     Title: `Young Avengers`, Issue: `1`, Publisher: `Marvel`,
@@ -47865,7 +47865,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `4`, Entry: `2792`,
-    eBay_Avg: 10.33, eBay_Low: 9.99, eBay_High: 11, eBay_Count: 3, eBay_Median: 9.99,
+    eBay_Avg: 83.55, eBay_Low: 9.99, eBay_High: 180, eBay_Count: 9, eBay_Median: 75,
   },
   {
     Title: `Gatchaman`, Issue: `3`, Publisher: `IDW/Dynamite`,
@@ -47960,7 +47960,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `IDW Publishing`, Box: `67`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `2797`,
-    eBay_Avg: 9.99, eBay_Low: 9.99, eBay_High: 9.99, eBay_Count: 1, eBay_Median: 9.99,
+    eBay_Avg: 21.53, eBay_Low: 3.99, eBay_High: 49.99, eBay_Count: 9, eBay_Median: 19.99,
   },
   {
     Title: `Rocketeer`, Issue: `4`, Publisher: `Independent`,
@@ -47979,7 +47979,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `IDW Publishing`, Box: `67`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `2798`,
-    eBay_Avg: 8.3, eBay_Low: 4.25, eBay_High: 11.98, eBay_Count: 4, eBay_Median: 8.49,
+    eBay_Avg: 13.88, eBay_Low: 2.02, eBay_High: 42.79, eBay_Count: 7, eBay_Median: 11.98,
   },
   {
     Title: `The Ones`, Issue: `1`, Publisher: `Independent`,
@@ -48169,7 +48169,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Skybound`, Box: `67`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2809`,
-    eBay_Avg: 11.53, eBay_Low: 4.99, eBay_High: 12.46, eBay_Count: 8, eBay_Median: 12.46,
+    eBay_Avg: 15.49, eBay_Low: 7.99, eBay_High: 25, eBay_Count: 8, eBay_Median: 15,
   },
   {
     Title: `Radiant Black`, Issue: `1`, Publisher: `Image`,
@@ -48188,7 +48188,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Image Comics`, Box: `67`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `2810`,
-    eBay_Avg: 22.21, eBay_Low: 9.99, eBay_High: 34.99, eBay_Count: 9, eBay_Median: 29.99,
+    eBay_Avg: 11.13, eBay_Low: 7, eBay_High: 19.95, eBay_Count: 10, eBay_Median: 10,
   },
   {
     Title: `Magic Order`, Issue: `0`, Publisher: `Image/Netflix`,
@@ -49575,7 +49575,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Image Comics`, Box: `67`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2884`,
-    eBay_Avg: 20.71, eBay_Low: 4.95, eBay_High: 40.5, eBay_Count: 10, eBay_Median: 19.3,
+    eBay_Avg: 21.54, eBay_Low: 4.95, eBay_High: 45, eBay_Count: 10, eBay_Median: 19.35,
   },
   {
     Title: `Die`, Issue: `8`, Publisher: `Image`,
@@ -50088,7 +50088,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `3`,
     Crossover: `Astonishing X-Men: Whedon/Cassaday Era`, Start_Bid: `5`,
     Volume: `3`, Entry: `2911`,
-    eBay_Avg: 12.33, eBay_Low: 5.95, eBay_High: 30, eBay_Count: 9, eBay_Median: 10.62,
+    eBay_Avg: 25.12, eBay_Low: 4, eBay_High: 60, eBay_Count: 8, eBay_Median: 19.99,
   },
   {
     Title: `Astonishing X-Men`, Issue: `2`, Publisher: `Marvel`,
@@ -50601,7 +50601,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `3`,
     Crossover: `Astonishing X-Men: Whedon/Cassaday Era`, Start_Bid: `5`,
     Volume: `1`, Entry: `2938`,
-    eBay_Avg: 7.58, eBay_Low: 2.99, eBay_High: 14.99, eBay_Count: 10, eBay_Median: 5.46,
+    eBay_Avg: 8, eBay_Low: 2.95, eBay_High: 15, eBay_Count: 9, eBay_Median: 6.41,
   },
   {
     Title: `Astonishing X-Men`, Issue: `30`, Publisher: `Marvel`,
@@ -51038,7 +51038,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `3`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `2`, Entry: `2961`,
-    eBay_Avg: 9.3, eBay_Low: 2.99, eBay_High: 13, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 5.34, eBay_Low: 1.54, eBay_High: 11, eBay_Count: 8, eBay_Median: 3.79,
   },
   {
     Title: `King-Size Cable`, Issue: `1`, Publisher: `Marvel`,
@@ -51076,7 +51076,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `3`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `2963`,
-    eBay_Avg: 27.8, eBay_Low: 7.79, eBay_High: 64.07, eBay_Count: 9, eBay_Median: 24.95,
+    eBay_Avg: 44.08, eBay_Low: 7, eBay_High: 121.28, eBay_Count: 7, eBay_Median: 32.09,
   },
   {
     Title: `Uncanny X-Force`, Issue: `2`, Publisher: `Marvel`,
@@ -52007,7 +52007,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `3`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `4`, Entry: `3012`,
-    eBay_Avg: 8.25, eBay_Low: 3.66, eBay_High: 16.74, eBay_Count: 7, eBay_Median: 6.62,
+    eBay_Avg: 5.37, eBay_Low: 1.99, eBay_High: 12.99, eBay_Count: 8, eBay_Median: 4.2,
   },
   {
     Title: `Uncanny X-Men: Dark Reign`, Issue: `2`, Publisher: `Marvel`,
@@ -52064,7 +52064,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `9`,
     Crossover: `Old Man Logan (Millar/McNiven)`, Start_Bid: `10`,
     Volume: `3`, Entry: `3015`,
-    eBay_Avg: 16.26, eBay_Low: 9, eBay_High: 25, eBay_Count: 4, eBay_Median: 15.52,
+    eBay_Avg: 38.37, eBay_Low: 5, eBay_High: 99.99, eBay_Count: 8, eBay_Median: 26.12,
   },
   {
     Title: `Wolverine`, Issue: `68`, Publisher: `Marvel`,
@@ -52083,7 +52083,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `9`,
     Crossover: `Old Man Logan (Millar/McNiven)`, Start_Bid: `5`,
     Volume: `3`, Entry: `3016`,
-    eBay_Avg: 7.84, eBay_Low: 5.06, eBay_High: 9.99, eBay_Count: 6, eBay_Median: 8.47,
+    eBay_Avg: 8.33, eBay_Low: 2.95, eBay_High: 17.5, eBay_Count: 9, eBay_Median: 6.95,
   },
   {
     Title: `Wolverine`, Issue: `69`, Publisher: `Marvel`,
@@ -52102,7 +52102,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `9`,
     Crossover: `Old Man Logan (Millar/McNiven)`, Start_Bid: `5`,
     Volume: `3`, Entry: `3017`,
-    eBay_Avg: 7.99, eBay_Low: 7.99, eBay_High: 7.99, eBay_Count: 1, eBay_Median: 7.99,
+    eBay_Avg: 14.77, eBay_Low: 5.99, eBay_High: 38.99, eBay_Count: 7, eBay_Median: 11.31,
   },
   {
     Title: `Wolverine`, Issue: `70`, Publisher: `Marvel`,
@@ -52121,7 +52121,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `9`,
     Crossover: `Old Man Logan (Millar/McNiven)`, Start_Bid: `5`,
     Volume: `3`, Entry: `3018`,
-    eBay_Avg: 8.99, eBay_Low: 8.99, eBay_High: 8.99, eBay_Count: 1, eBay_Median: 8.99,
+    eBay_Avg: 39.81, eBay_Low: 7.99, eBay_High: 78.45, eBay_Count: 8, eBay_Median: 39.49,
   },
   {
     Title: `X-Men`, Issue: `175`, Publisher: `Marvel`,
@@ -52748,7 +52748,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `3`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `1`, Entry: `3051`,
-    eBay_Avg: 10.07, eBay_Low: 2.5, eBay_High: 23.99, eBay_Count: 9, eBay_Median: 6.98,
+    eBay_Avg: 13.09, eBay_Low: 2.9, eBay_High: 33.71, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `X-Men: Schism`, Issue: `2`, Publisher: `Marvel`,
@@ -52843,7 +52843,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `3`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `3056`,
-    eBay_Avg: 7.22, eBay_Low: 2.99, eBay_High: 9.99, eBay_Count: 5, eBay_Median: 7.67,
+    eBay_Avg: 5.4, eBay_Low: 2.65, eBay_High: 10.53, eBay_Count: 9, eBay_Median: 3.99,
   },
   {
     Title: `Wolverine and the X-Men`, Issue: `1`, Publisher: `Marvel`,
@@ -52862,7 +52862,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `3`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `3057`,
-    eBay_Avg: 8.3, eBay_Low: 3.75, eBay_High: 18, eBay_Count: 7, eBay_Median: 5.19,
+    eBay_Avg: 6.39, eBay_Low: 2.99, eBay_High: 14.99, eBay_Count: 8, eBay_Median: 4.47,
   },
   {
     Title: `Wolverine and the X-Men`, Issue: `2`, Publisher: `Marvel`,
@@ -53147,7 +53147,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `3`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `1`, Entry: `3072`,
-    eBay_Avg: 18.37, eBay_Low: 9.99, eBay_High: 39.99, eBay_Count: 8, eBay_Median: 9.99,
+    eBay_Avg: 12.43, eBay_Low: 1.5, eBay_High: 29.99, eBay_Count: 8, eBay_Median: 6.5,
   },
   {
     Title: `X-Men: Deadly Genesis`, Issue: `2`, Publisher: `Marvel`,
@@ -53299,7 +53299,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `3`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `4`, Entry: `3080`,
-    eBay_Avg: 7.84, eBay_Low: 4.12, eBay_High: 9.99, eBay_Count: 6, eBay_Median: 8.97,
+    eBay_Avg: 11.27, eBay_Low: 5.9, eBay_High: 17.99, eBay_Count: 6, eBay_Median: 10.25,
   },
   {
     Title: `X-Men`, Issue: `2`, Publisher: `Marvel`,
@@ -53831,7 +53831,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `3`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `3108`,
-    eBay_Avg: 5.72, eBay_Low: 2.99, eBay_High: 9.99, eBay_Count: 9, eBay_Median: 4.99,
+    eBay_Avg: 8.31, eBay_Low: 5.33, eBay_High: 13.94, eBay_Count: 9, eBay_Median: 8,
   },
   {
     Title: `Young X-Men`, Issue: `2`, Publisher: `Marvel`,
@@ -53926,7 +53926,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `3`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `3113`,
-    eBay_Avg: 7.68, eBay_Low: 2.25, eBay_High: 16.5, eBay_Count: 9, eBay_Median: 5.33,
+    eBay_Avg: 13.32, eBay_Low: 3.57, eBay_High: 29.99, eBay_Count: 10, eBay_Median: 12.7,
   },
   {
     Title: `New X-Men`, Issue: `143`, Publisher: `Marvel`,
@@ -54059,7 +54059,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `3`,
     Crossover: ``, Start_Bid: `15`,
     Volume: `4`, Entry: `3120`,
-    eBay_Avg: 7.84, eBay_Low: 4.12, eBay_High: 9.99, eBay_Count: 6, eBay_Median: 8.97,
+    eBay_Avg: 11.27, eBay_Low: 5.9, eBay_High: 17.99, eBay_Count: 6, eBay_Median: 10.25,
   },
   {
     Title: `Wolverine`, Issue: `42`, Publisher: `Marvel`,
@@ -54173,7 +54173,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `3`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `3126`,
-    eBay_Avg: 8.37, eBay_Low: 2.9, eBay_High: 17.99, eBay_Count: 10, eBay_Median: 6.22,
+    eBay_Avg: 6.37, eBay_Low: 2.7, eBay_High: 12.5, eBay_Count: 10, eBay_Median: 4.87,
   },
   {
     Title: `Warlock`, Issue: `2`, Publisher: `Marvel`,
@@ -54325,7 +54325,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `3`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `2`, Entry: `3134`,
-    eBay_Avg: 14.97, eBay_Low: 2, eBay_High: 36.07, eBay_Count: 8, eBay_Median: 14.35,
+    eBay_Avg: 7.43, eBay_Low: 3.49, eBay_High: 17.55, eBay_Count: 7, eBay_Median: 4.99,
   },
   {
     Title: `Domino`, Issue: `2`, Publisher: `Marvel`,
@@ -55199,7 +55199,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `9`,
     Crossover: `Old Man Logan (Millar/McNiven)`, Start_Bid: `10`,
     Volume: `3`, Entry: `3180`,
-    eBay_Avg: 38.74, eBay_Low: 20, eBay_High: 60, eBay_Count: 4, eBay_Median: 37.49,
+    eBay_Avg: 61.43, eBay_Low: 14.99, eBay_High: 130, eBay_Count: 8, eBay_Median: 51.25,
   },
   {
     Title: `Wolverine`, Issue: `71`, Publisher: `Marvel`,
@@ -55218,7 +55218,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `9`,
     Crossover: `Old Man Logan (Millar/McNiven)`, Start_Bid: `5`,
     Volume: `3`, Entry: `3181`,
-    eBay_Avg: 34.68, eBay_Low: 1.19, eBay_High: 89, eBay_Count: 9, eBay_Median: 30,
+    eBay_Avg: 35.66, eBay_Low: 9.99, eBay_High: 89, eBay_Count: 9, eBay_Median: 30,
   },
   {
     Title: `Wolverine`, Issue: `72`, Publisher: `Marvel`,
@@ -55237,7 +55237,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `9`,
     Crossover: `Old Man Logan (Millar/McNiven)`, Start_Bid: `10`,
     Volume: `3`, Entry: `3182`,
-    eBay_Avg: 9.08, eBay_Low: 1.49, eBay_High: 16.03, eBay_Count: 6, eBay_Median: 9.99,
+    eBay_Avg: 73.97, eBay_Low: 9.99, eBay_High: 181.79, eBay_Count: 10, eBay_Median: 80.87,
   },
   {
     Title: `Karnak`, Issue: `2`, Publisher: `Marvel`,
@@ -55484,7 +55484,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `5`, Entry: `3195`,
-    eBay_Avg: 8.49, eBay_Low: 2.97, eBay_High: 15.25, eBay_Count: 9, eBay_Median: 5.5,
+    eBay_Avg: 27.6, eBay_Low: 6.49, eBay_High: 60, eBay_Count: 9, eBay_Median: 25,
   },
   {
     Title: `Avengers`, Issue: `13`, Publisher: `Marvel`,
@@ -55693,7 +55693,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: `Avengers: Disassembled (Bendis)`, Start_Bid: `5`,
     Volume: `1`, Entry: `3206`,
-    eBay_Avg: 8.24, eBay_Low: 2.81, eBay_High: 13.17, eBay_Count: 10, eBay_Median: 8.99,
+    eBay_Avg: 10.6, eBay_Low: 3, eBay_High: 25, eBay_Count: 9, eBay_Median: 9.49,
   },
   {
     Title: `Avengers: Finale`, Issue: `1`, Publisher: `Marvel`,
@@ -55712,7 +55712,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: `Avengers: Disassembled (Bendis)`, Start_Bid: `5`,
     Volume: `3`, Entry: `3207`,
-    eBay_Avg: 11.34, eBay_Low: 3.19, eBay_High: 30, eBay_Count: 8, eBay_Median: 8.64,
+    eBay_Avg: 6.28, eBay_Low: 2.02, eBay_High: 9.99, eBay_Count: 7, eBay_Median: 5,
   },
   {
     Title: `Avengers`, Issue: `1`, Publisher: `Marvel`,
@@ -55731,7 +55731,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `6`, Entry: `3208`,
-    eBay_Avg: 8.49, eBay_Low: 2.97, eBay_High: 15.25, eBay_Count: 9, eBay_Median: 5.5,
+    eBay_Avg: 27.6, eBay_Low: 6.49, eBay_High: 60, eBay_Count: 9, eBay_Median: 25,
   },
   {
     Title: `Avengers`, Issue: `2`, Publisher: `Marvel`,
@@ -55750,7 +55750,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `6`, Entry: `3209`,
-    eBay_Avg: 7.37, eBay_Low: 5, eBay_High: 10.95, eBay_Count: 7, eBay_Median: 5.99,
+    eBay_Avg: 13.86, eBay_Low: 5, eBay_High: 31, eBay_Count: 9, eBay_Median: 8,
   },
   {
     Title: `Avengers`, Issue: `3`, Publisher: `Marvel`,
@@ -55769,7 +55769,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `6`, Entry: `3210`,
-    eBay_Avg: 14.06, eBay_Low: 1.25, eBay_High: 28, eBay_Count: 8, eBay_Median: 13,
+    eBay_Avg: 15.81, eBay_Low: 1.25, eBay_High: 28, eBay_Count: 8, eBay_Median: 18,
   },
   {
     Title: `Avengers`, Issue: `4`, Publisher: `Marvel`,
@@ -55788,7 +55788,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `6`, Entry: `3211`,
-    eBay_Avg: 7.05, eBay_Low: 2.55, eBay_High: 16.99, eBay_Count: 7, eBay_Median: 2.99,
+    eBay_Avg: 16.85, eBay_Low: 3.99, eBay_High: 45, eBay_Count: 9, eBay_Median: 14.39,
   },
   {
     Title: `Avengers`, Issue: `5`, Publisher: `Marvel`,
@@ -55807,7 +55807,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `6`, Entry: `3212`,
-    eBay_Avg: null, eBay_Low: 6, eBay_High: 90, eBay_Count: 8, eBay_Median: null,
+    eBay_Avg: 23.33, eBay_Low: 6, eBay_High: 35, eBay_Count: 9, eBay_Median: 24.99,
   },
   {
     Title: `Avengers`, Issue: `6`, Publisher: `Marvel`,
@@ -55826,7 +55826,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `6`, Entry: `3213`,
-    eBay_Avg: 12.07, eBay_Low: 6, eBay_High: 31, eBay_Count: 7, eBay_Median: 7.49,
+    eBay_Avg: 16.31, eBay_Low: 4, eBay_High: 44.99, eBay_Count: 8, eBay_Median: 8.97,
   },
   {
     Title: `Avengers`, Issue: `7`, Publisher: `Marvel`,
@@ -55845,7 +55845,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `6`, Entry: `3214`,
-    eBay_Avg: 14.83, eBay_Low: 6.67, eBay_High: 25, eBay_Count: 8, eBay_Median: 13,
+    eBay_Avg: 37.13, eBay_Low: 3, eBay_High: 79.99, eBay_Count: 10, eBay_Median: 32.59,
   },
   {
     Title: `Avengers`, Issue: `8`, Publisher: `Marvel`,
@@ -55864,7 +55864,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `6`, Entry: `3215`,
-    eBay_Avg: 6.44, eBay_Low: 1.68, eBay_High: 9.99, eBay_Count: 7, eBay_Median: 8.35,
+    eBay_Avg: 9.57, eBay_Low: 8, eBay_High: 10.99, eBay_Count: 7, eBay_Median: 9.99,
   },
   {
     Title: `Avengers`, Issue: `9`, Publisher: `Marvel`,
@@ -55883,7 +55883,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `6`, Entry: `3216`,
-    eBay_Avg: 23.39, eBay_Low: 2.55, eBay_High: 59, eBay_Count: 7, eBay_Median: 14.99,
+    eBay_Avg: 26.41, eBay_Low: 3.59, eBay_High: 58, eBay_Count: 9, eBay_Median: 19.99,
   },
   {
     Title: `Avengers`, Issue: `10`, Publisher: `Marvel`,
@@ -55902,7 +55902,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `6`, Entry: `3217`,
-    eBay_Avg: 10.32, eBay_Low: 5.95, eBay_High: 23, eBay_Count: 10, eBay_Median: 8.48,
+    eBay_Avg: 12.09, eBay_Low: 2.75, eBay_High: 24.99, eBay_Count: 8, eBay_Median: 11,
   },
   {
     Title: `Avengers`, Issue: `0`, Publisher: `Marvel`,
@@ -55940,7 +55940,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `5`, Entry: `3219`,
-    eBay_Avg: 19.72, eBay_Low: 3.99, eBay_High: 29.99, eBay_Count: 7, eBay_Median: 24.99,
+    eBay_Avg: 33.02, eBay_Low: 5.99, eBay_High: 72, eBay_Count: 9, eBay_Median: 25.99,
   },
   {
     Title: `New Avengers`, Issue: `20`, Publisher: `Marvel`,
@@ -56054,7 +56054,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `5`, Entry: `3225`,
-    eBay_Avg: 19.72, eBay_Low: 3.99, eBay_High: 29.99, eBay_Count: 7, eBay_Median: 24.99,
+    eBay_Avg: 33.02, eBay_Low: 5.99, eBay_High: 72, eBay_Count: 9, eBay_Median: 25.99,
   },
   {
     Title: `New Avengers`, Issue: `2`, Publisher: `Marvel`,
@@ -56073,7 +56073,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `6`, Entry: `3226`,
-    eBay_Avg: 8.35, eBay_Low: 1, eBay_High: 19.99, eBay_Count: 8, eBay_Median: 7,
+    eBay_Avg: 6.29, eBay_Low: 2.75, eBay_High: 13.99, eBay_Count: 9, eBay_Median: 5.99,
   },
   {
     Title: `New Avengers`, Issue: `3`, Publisher: `Marvel`,
@@ -56092,7 +56092,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `6`, Entry: `3227`,
-    eBay_Avg: 6.39, eBay_Low: 3.56, eBay_High: 12.99, eBay_Count: 7, eBay_Median: 6,
+    eBay_Avg: 11.86, eBay_Low: 2.55, eBay_High: 34.99, eBay_Count: 8, eBay_Median: 9,
   },
   {
     Title: `New Avengers`, Issue: `4`, Publisher: `Marvel`,
@@ -56111,7 +56111,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `6`, Entry: `3228`,
-    eBay_Avg: 12.81, eBay_Low: 5.99, eBay_High: 23.99, eBay_Count: 10, eBay_Median: 10.99,
+    eBay_Avg: 11.86, eBay_Low: 3.97, eBay_High: 20, eBay_Count: 8, eBay_Median: 12.5,
   },
   {
     Title: `New Avengers`, Issue: `5`, Publisher: `Marvel`,
@@ -56130,7 +56130,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `6`, Entry: `3229`,
-    eBay_Avg: 8.18, eBay_Low: 3.88, eBay_High: 20.04, eBay_Count: 8, eBay_Median: 6.11,
+    eBay_Avg: 2.88, eBay_Low: 2.55, eBay_High: 3.5, eBay_Count: 7, eBay_Median: 2.55,
   },
   {
     Title: `New Avengers`, Issue: `6`, Publisher: `Marvel`,
@@ -56149,7 +56149,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `6`, Entry: `3230`,
-    eBay_Avg: 6.42, eBay_Low: 1.59, eBay_High: 13.98, eBay_Count: 8, eBay_Median: 6.25,
+    eBay_Avg: 14.4, eBay_Low: 5.99, eBay_High: 34.99, eBay_Count: 8, eBay_Median: 13.68,
   },
   {
     Title: `New Avengers`, Issue: `20`, Publisher: `Marvel`,
@@ -56187,7 +56187,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `6`, Entry: `3232`,
-    eBay_Avg: 10.88, eBay_Low: 1, eBay_High: 23.99, eBay_Count: 9, eBay_Median: 10,
+    eBay_Avg: 11.09, eBay_Low: 2.7, eBay_High: 27.25, eBay_Count: 8, eBay_Median: 10.14,
   },
   {
     Title: `Uncanny Avengers`, Issue: `1`, Publisher: `Marvel`,
@@ -56206,7 +56206,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `4`, Entry: `3233`,
-    eBay_Avg: 9.95, eBay_Low: 2.45, eBay_High: 19.99, eBay_Count: 10, eBay_Median: 8.66,
+    eBay_Avg: 26.88, eBay_Low: 2.99, eBay_High: 64.99, eBay_Count: 9, eBay_Median: 28.99,
   },
   {
     Title: `Uncanny Avengers`, Issue: `2`, Publisher: `Marvel`,
@@ -56453,7 +56453,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `3246`,
-    eBay_Avg: 24.12, eBay_Low: 3.5, eBay_High: 59.99, eBay_Count: 8, eBay_Median: 17.49,
+    eBay_Avg: 20.92, eBay_Low: 5.99, eBay_High: 50, eBay_Count: 8, eBay_Median: 15.18,
   },
   {
     Title: `Uncanny Avengers`, Issue: `1`, Publisher: `Marvel`,
@@ -56472,7 +56472,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `5`, Entry: `3247`,
-    eBay_Avg: 9.95, eBay_Low: 2.45, eBay_High: 19.99, eBay_Count: 10, eBay_Median: 8.66,
+    eBay_Avg: 26.88, eBay_Low: 2.99, eBay_High: 64.99, eBay_Count: 9, eBay_Median: 28.99,
   },
   {
     Title: `Uncanny Avengers`, Issue: `2`, Publisher: `Marvel`,
@@ -56757,7 +56757,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `5`, Entry: `3262`,
-    eBay_Avg: 14.19, eBay_Low: 6.99, eBay_High: 26.93, eBay_Count: 10, eBay_Median: 9.99,
+    eBay_Avg: 8.49, eBay_Low: 2.99, eBay_High: 9.99, eBay_Count: 8, eBay_Median: 9.99,
   },
   {
     Title: `Secret Avengers`, Issue: `2`, Publisher: `Marvel`,
@@ -56852,7 +56852,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `5`, Entry: `3267`,
-    eBay_Avg: 12.38, eBay_Low: 2.43, eBay_High: 27.96, eBay_Count: 10, eBay_Median: 9.99,
+    eBay_Avg: 18.2, eBay_Low: 1.8, eBay_High: 28.07, eBay_Count: 10, eBay_Median: 18.52,
   },
   {
     Title: `Secret Avengers`, Issue: `7`, Publisher: `Marvel`,
@@ -56909,7 +56909,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `5`, Entry: `3270`,
-    eBay_Avg: 12.3, eBay_Low: 2.59, eBay_High: 33.47, eBay_Count: 8, eBay_Median: 7.33,
+    eBay_Avg: 3.62, eBay_Low: 2.95, eBay_High: 5.38, eBay_Count: 6, eBay_Median: 3.19,
   },
   {
     Title: `Secret Avengers`, Issue: `24`, Publisher: `Marvel`,
@@ -57156,7 +57156,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `4`, Entry: `3283`,
-    eBay_Avg: 26.63, eBay_Low: 4.56, eBay_High: 72.99, eBay_Count: 8, eBay_Median: 10,
+    eBay_Avg: 13.04, eBay_Low: 5, eBay_High: 29.99, eBay_Count: 8, eBay_Median: 10.99,
   },
   {
     Title: `Avengers Assemble`, Issue: `2`, Publisher: `Marvel`,
@@ -57403,7 +57403,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `3296`,
-    eBay_Avg: 3.64, eBay_Low: 2.39, eBay_High: 8.1, eBay_Count: 9, eBay_Median: 3.13,
+    eBay_Avg: 4.49, eBay_Low: 2.39, eBay_High: 9.99, eBay_Count: 9, eBay_Median: 3.37,
   },
   {
     Title: `Avengers Undercover`, Issue: `10`, Publisher: `Marvel`,
@@ -57441,7 +57441,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: `Avengers Arena: Murder World`, Start_Bid: `4`,
     Volume: `5`, Entry: `3298`,
-    eBay_Avg: null, eBay_Low: 113.27, eBay_High: 113.27, eBay_Count: 1, eBay_Median: null,
+    eBay_Avg: 23.18, eBay_Low: 3, eBay_High: 57.06, eBay_Count: 10, eBay_Median: 20.99,
   },
   {
     Title: `Avengers Arena`, Issue: `2`, Publisher: `Marvel`,
@@ -57707,7 +57707,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `86`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `3312`,
-    eBay_Avg: 11.39, eBay_Low: 1.56, eBay_High: 28.99, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 21.82, eBay_Low: 5.99, eBay_High: 42, eBay_Count: 9, eBay_Median: 19.99,
   },
   {
     Title: `Age of Ultron`, Issue: `2`, Publisher: `Marvel`,
@@ -57897,7 +57897,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `86`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `3322`,
-    eBay_Avg: 6.66, eBay_Low: 2.65, eBay_High: 10.56, eBay_Count: 9, eBay_Median: 5.99,
+    eBay_Avg: 4.14, eBay_Low: 3, eBay_High: 7.99, eBay_Count: 7, eBay_Median: 3,
   },
   {
     Title: `Infinity`, Issue: `2`, Publisher: `Marvel`,
@@ -57992,7 +57992,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `5`, Entry: `3327`,
-    eBay_Avg: 10.33, eBay_Low: 9.99, eBay_High: 11, eBay_Count: 3, eBay_Median: 9.99,
+    eBay_Avg: 83.55, eBay_Low: 9.99, eBay_High: 180, eBay_Count: 9, eBay_Median: 75,
   },
   {
     Title: `Young Avengers`, Issue: `2`, Publisher: `Marvel`,
@@ -58011,7 +58011,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `3328`,
-    eBay_Avg: null, eBay_Low: 3.58, eBay_High: 64.99, eBay_Count: 7, eBay_Median: null,
+    eBay_Avg: 22.73, eBay_Low: 1, eBay_High: 54.99, eBay_Count: 8, eBay_Median: 13.47,
   },
   {
     Title: `Avenging Spider-Man`, Issue: `5`, Publisher: `Marvel`,
@@ -58087,7 +58087,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `3333`,
-    eBay_Avg: 11.55, eBay_Low: 9.45, eBay_High: 17, eBay_Count: 6, eBay_Median: 10.5,
+    eBay_Avg: 8.27, eBay_Low: 2.99, eBay_High: 10.77, eBay_Count: 10, eBay_Median: 9.99,
   },
   {
     Title: `Guardians of the Galaxy`, Issue: `1`, Publisher: `Marvel`,
@@ -58106,7 +58106,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `3`, Entry: `3334`,
-    eBay_Avg: 10.82, eBay_Low: 5, eBay_High: 19.99, eBay_Count: 7, eBay_Median: 9.9,
+    eBay_Avg: 19.88, eBay_Low: 10, eBay_High: 23.04, eBay_Count: 7, eBay_Median: 23.04,
   },
   {
     Title: `Avengers Assemble`, Issue: `1`, Publisher: `Marvel`,
@@ -58125,7 +58125,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `7`, Entry: `3335`,
-    eBay_Avg: 26.63, eBay_Low: 4.56, eBay_High: 72.99, eBay_Count: 8, eBay_Median: 10,
+    eBay_Avg: 13.04, eBay_Low: 5, eBay_High: 29.99, eBay_Count: 8, eBay_Median: 10.99,
   },
   {
     Title: `Death of Doctor Strange: Avengers`, Issue: `1`, Publisher: `Marvel`,
@@ -58144,7 +58144,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `3336`,
-    eBay_Avg: 10.89, eBay_Low: 4.99, eBay_High: 26, eBay_Count: 9, eBay_Median: 6.99,
+    eBay_Avg: 9.17, eBay_Low: 3.29, eBay_High: 22.49, eBay_Count: 10, eBay_Median: 7.85,
   },
   {
     Title: `Annihilation: Earthfall`, Issue: `2`, Publisher: `Marvel`,
@@ -58277,7 +58277,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `3345`,
-    eBay_Avg: 11.02, eBay_Low: 4, eBay_High: 19.5, eBay_Count: 10, eBay_Median: 9.99,
+    eBay_Avg: 11.48, eBay_Low: 2.25, eBay_High: 19.5, eBay_Count: 10, eBay_Median: 9.99,
   },
   {
     Title: `Marvel Universe vs. The Avengers`, Issue: `2`, Publisher: `Marvel`,
@@ -58315,7 +58315,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `4`, Entry: `3347`,
-    eBay_Avg: 10.83, eBay_Low: 3.71, eBay_High: 24.99, eBay_Count: 8, eBay_Median: 8.27,
+    eBay_Avg: 27.13, eBay_Low: 3.14, eBay_High: 64.99, eBay_Count: 10, eBay_Median: 22.5,
   },
   {
     Title: `Alpha Flight`, Issue: `0.1`, Publisher: `Marvel`,
@@ -58353,7 +58353,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `20`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `3`, Entry: `3349`,
-    eBay_Avg: null, eBay_Low: 9.95, eBay_High: 62, eBay_Count: 9, eBay_Median: null,
+    eBay_Avg: 26.92, eBay_Low: 3, eBay_High: 62, eBay_Count: 9, eBay_Median: 22.99,
   },
   {
     Title: `The Marvels`, Issue: `2`, Publisher: `Marvel`,
@@ -58695,7 +58695,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `20`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `1`, Entry: `3367`,
-    eBay_Avg: 5.84, eBay_Low: 3.5, eBay_High: 9.99, eBay_Count: 10, eBay_Median: 3.99,
+    eBay_Avg: 12.64, eBay_Low: 3.99, eBay_High: 29.99, eBay_Count: 10, eBay_Median: 11.1,
   },
   {
     Title: `What If? Infinity — X-Men`, Issue: `1`, Publisher: `Marvel`,
@@ -58809,7 +58809,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `20`,
     Crossover: `Blood Hunt (MacKay/Larraz)`, Start_Bid: `3`,
     Volume: `1`, Entry: `3373`,
-    eBay_Avg: 6.69, eBay_Low: 4.24, eBay_High: 10.99, eBay_Count: 6, eBay_Median: 4.97,
+    eBay_Avg: 6.65, eBay_Low: 3.99, eBay_High: 10.99, eBay_Count: 6, eBay_Median: 4.97,
   },
   {
     Title: `Fear Itself`, Issue: `2`, Publisher: `Marvel`,
@@ -59132,7 +59132,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `20`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `1`, Entry: `3390`,
-    eBay_Avg: 13.56, eBay_Low: 2.45, eBay_High: 29.99, eBay_Count: 9, eBay_Median: 10,
+    eBay_Avg: 5.02, eBay_Low: 2.6, eBay_High: 10, eBay_Count: 7, eBay_Median: 4.25,
   },
   {
     Title: `War of the Realms`, Issue: `2`, Publisher: `Marvel`,
@@ -59284,7 +59284,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `20`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `1`, Entry: `3398`,
-    eBay_Avg: null, eBay_Low: 3, eBay_High: 250, eBay_Count: 9, eBay_Median: null,
+    eBay_Avg: 15.34, eBay_Low: 5.84, eBay_High: 25, eBay_Count: 6, eBay_Median: 15.62,
   },
   {
     Title: `Blood Hunt`, Issue: `2`, Publisher: `Marvel`,
@@ -59455,7 +59455,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `20`,
     Crossover: `Blood Hunt (MacKay/Larraz)`, Start_Bid: `2`,
     Volume: `1`, Entry: `3411`,
-    eBay_Avg: null, eBay_Low: 5, eBay_High: 50, eBay_Count: 10, eBay_Median: null,
+    eBay_Avg: 22.82, eBay_Low: 5, eBay_High: 50, eBay_Count: 10, eBay_Median: 18.42,
   },
   {
     Title: `Operation: S.I.N.`, Issue: `3`, Publisher: `Marvel`,
@@ -59531,7 +59531,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `20`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `1`, Entry: `3415`,
-    eBay_Avg: 9.5, eBay_Low: 0.99, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 6.99,
+    eBay_Avg: 7.47, eBay_Low: 2.75, eBay_High: 15, eBay_Count: 9, eBay_Median: 5.95,
   },
   {
     Title: `Amazing Fantasy`, Issue: `1`, Publisher: `Marvel`,
@@ -59645,7 +59645,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `20`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `1`, Entry: `3421`,
-    eBay_Avg: 9.95, eBay_Low: 4.63, eBay_High: 18.95, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 7.27, eBay_Low: 2.99, eBay_High: 9.99, eBay_Count: 9, eBay_Median: 7.99,
   },
   {
     Title: `Dark Ages`, Issue: `3`, Publisher: `Marvel`,
@@ -59797,7 +59797,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Heroes Reborn`, Box: `20`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `1`, Entry: `3429`,
-    eBay_Avg: 11.32, eBay_Low: 3.99, eBay_High: 24, eBay_Count: 10, eBay_Median: 10.12,
+    eBay_Avg: 10.99, eBay_Low: 3.99, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 8.99,
   },
   {
     Title: `Punisher War Journal`, Issue: `2`, Publisher: `Marvel`,
@@ -59987,7 +59987,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `20`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `1`, Entry: `3439`,
-    eBay_Avg: 13.02, eBay_Low: 4, eBay_High: 29.95, eBay_Count: 10, eBay_Median: 9.99,
+    eBay_Avg: 5.37, eBay_Low: 3.21, eBay_High: 9.99, eBay_Count: 7, eBay_Median: 4.95,
   },
   {
     Title: `Royals`, Issue: `2`, Publisher: `Marvel`,
@@ -60063,7 +60063,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `20`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `6`, Entry: `3443`,
-    eBay_Avg: 8.09, eBay_Low: 3.83, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 6.99,
+    eBay_Avg: 6.57, eBay_Low: 3.83, eBay_High: 9.99, eBay_Count: 8, eBay_Median: 6.1,
   },
   {
     Title: `Godzilla vs. Fantastic Four`, Issue: `1`, Publisher: `Marvel`,
@@ -60101,7 +60101,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `20`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `1`, Entry: `3445`,
-    eBay_Avg: 7.78, eBay_Low: 3.75, eBay_High: 20.04, eBay_Count: 8, eBay_Median: 5.35,
+    eBay_Avg: 5.46, eBay_Low: 1.95, eBay_High: 11.9, eBay_Count: 8, eBay_Median: 4.06,
   },
   {
     Title: `Marvel Voices: Identity`, Issue: `1`, Publisher: `Marvel`,
@@ -60367,7 +60367,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `20`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `1`, Entry: `3459`,
-    eBay_Avg: 12.11, eBay_Low: 4.95, eBay_High: 24.99, eBay_Count: 9, eBay_Median: 9.95,
+    eBay_Avg: 6.17, eBay_Low: 2, eBay_High: 15, eBay_Count: 7, eBay_Median: 4.99,
   },
   {
     Title: `Fury`, Issue: `1`, Publisher: `Marvel`,
@@ -60386,7 +60386,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `20`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `1`, Entry: `3460`,
-    eBay_Avg: 12.28, eBay_Low: 2.56, eBay_High: 29.99, eBay_Count: 9, eBay_Median: 9,
+    eBay_Avg: 11.74, eBay_Low: 3.6, eBay_High: 24.99, eBay_Count: 6, eBay_Median: 9.5,
   },
   {
     Title: `Mosaic`, Issue: `1`, Publisher: `Marvel`,
@@ -60443,7 +60443,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `20`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `3`, Entry: `3463`,
-    eBay_Avg: 27.25, eBay_Low: 12.99, eBay_High: 51.99, eBay_Count: 8, eBay_Median: 15,
+    eBay_Avg: 17.18, eBay_Low: 2.82, eBay_High: 45, eBay_Count: 8, eBay_Median: 14,
   },
   {
     Title: `Night Thrasher`, Issue: `4`, Publisher: `Marvel`,
@@ -60481,7 +60481,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `20`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `3465`,
-    eBay_Avg: 2.55, eBay_Low: 1, eBay_High: 4.19, eBay_Count: 7, eBay_Median: 2.32,
+    eBay_Avg: 12.62, eBay_Low: 3, eBay_High: 39.99, eBay_Count: 7, eBay_Median: 4.99,
   },
   {
     Title: `Typhoid Fever: Spider-Man`, Issue: `1`, Publisher: `Marvel`,
@@ -60538,7 +60538,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `20`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `1`, Entry: `3468`,
-    eBay_Avg: 12.09, eBay_Low: 5.29, eBay_High: 28, eBay_Count: 9, eBay_Median: 8.5,
+    eBay_Avg: 13.62, eBay_Low: 5, eBay_High: 28, eBay_Count: 9, eBay_Median: 12.99,
   },
   {
     Title: `Infinity Wars`, Issue: `2`, Publisher: `Marvel`,
@@ -60766,7 +60766,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `20`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `1`, Entry: `3480`,
-    eBay_Avg: 7.88, eBay_Low: 2.76, eBay_High: 11, eBay_Count: 10, eBay_Median: 8.34,
+    eBay_Avg: 9.89, eBay_Low: 4.99, eBay_High: 24, eBay_Count: 9, eBay_Median: 8.08,
   },
   {
     Title: `Nextwave: Agents of H.A.T.E.`, Issue: `1`, Publisher: `Marvel`,
@@ -60785,7 +60785,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `20`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `3481`,
-    eBay_Avg: 1.92, eBay_Low: 1.92, eBay_High: 1.92, eBay_Count: 1, eBay_Median: 1.92,
+    eBay_Avg: 17.93, eBay_Low: 9.99, eBay_High: 29.99, eBay_Count: 10, eBay_Median: 16.8,
   },
   {
     Title: `Nextwave: Agents of H.A.T.E.`, Issue: `3`, Publisher: `Marvel`,
@@ -61089,7 +61089,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `20`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `3`, Entry: `3500`,
-    eBay_Avg: 10.13, eBay_Low: 4.95, eBay_High: 19.95, eBay_Count: 8, eBay_Median: 10,
+    eBay_Avg: 5.46, eBay_Low: 2.35, eBay_High: 10, eBay_Count: 8, eBay_Median: 4.47,
   },
   {
     Title: `Darkhawk`, Issue: `2`, Publisher: `Marvel`,
@@ -61184,7 +61184,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `20`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `1`, Entry: `3505`,
-    eBay_Avg: 4.09, eBay_Low: 2.25, eBay_High: 8.55, eBay_Count: 8, eBay_Median: 3.1,
+    eBay_Avg: 3.93, eBay_Low: 2.35, eBay_High: 5.77, eBay_Count: 9, eBay_Median: 3.2,
   },
   {
     Title: `Monica Rambeau: Photon`, Issue: `1`, Publisher: `Marvel`,
@@ -61203,7 +61203,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `20`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `1`, Entry: `3506`,
-    eBay_Avg: 6.51, eBay_Low: 2.84, eBay_High: 14.99, eBay_Count: 10, eBay_Median: 5.95,
+    eBay_Avg: 7.52, eBay_Low: 2.84, eBay_High: 14.99, eBay_Count: 10, eBay_Median: 6.95,
   },
   {
     Title: `Monica Rambeau: Photon`, Issue: `2`, Publisher: `Marvel`,
@@ -61393,7 +61393,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `20`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `1`, Entry: `3516`,
-    eBay_Avg: 14.63, eBay_Low: 4, eBay_High: 28.48, eBay_Count: 7, eBay_Median: 11,
+    eBay_Avg: 19.67, eBay_Low: 9.99, eBay_High: 40, eBay_Count: 10, eBay_Median: 19.99,
   },
   {
     Title: `Blade`, Issue: `3`, Publisher: `Marvel`,
@@ -61545,7 +61545,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `20`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `1`, Entry: `3524`,
-    eBay_Avg: 14.63, eBay_Low: 4, eBay_High: 28.48, eBay_Count: 7, eBay_Median: 11,
+    eBay_Avg: 19.67, eBay_Low: 9.99, eBay_High: 40, eBay_Count: 10, eBay_Median: 19.99,
   },
   {
     Title: `Bloodline: Daughter of Blade`, Issue: `4`, Publisher: `Marvel`,
@@ -61678,7 +61678,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `30`,
     Crossover: `Siege`, Start_Bid: `3`,
     Volume: `1`, Entry: `3531`,
-    eBay_Avg: 8.98, eBay_Low: 2.51, eBay_High: 19.5, eBay_Count: 9, eBay_Median: 5.95,
+    eBay_Avg: 14.72, eBay_Low: 2.35, eBay_High: 35.2, eBay_Count: 7, eBay_Median: 9.99,
   },
   {
     Title: `Captain America: Reborn`, Issue: `5`, Publisher: `Marvel`,
@@ -61735,7 +61735,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `30`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `6`, Entry: `3534`,
-    eBay_Avg: 3, eBay_Low: 3, eBay_High: 3, eBay_Count: 1, eBay_Median: 3,
+    eBay_Avg: 8.24, eBay_Low: 2.99, eBay_High: 17.95, eBay_Count: 10, eBay_Median: 8.24,
   },
   {
     Title: `Steve Rogers: Super-Soldier`, Issue: `1`, Publisher: `Marvel`,
@@ -61792,7 +61792,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `30`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `6`, Entry: `3537`,
-    eBay_Avg: 16.87, eBay_Low: 1, eBay_High: 30, eBay_Count: 8, eBay_Median: 14.97,
+    eBay_Avg: 20.77, eBay_Low: 9.99, eBay_High: 40, eBay_Count: 9, eBay_Median: 15,
   },
   {
     Title: `Captain America`, Issue: `2`, Publisher: `Marvel`,
@@ -61868,7 +61868,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `30`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `5`, Entry: `3541`,
-    eBay_Avg: 16.87, eBay_Low: 1, eBay_High: 30, eBay_Count: 8, eBay_Median: 14.97,
+    eBay_Avg: 20.77, eBay_Low: 9.99, eBay_High: 40, eBay_Count: 9, eBay_Median: 15,
   },
   {
     Title: `Captain America`, Issue: `2`, Publisher: `Marvel`,
@@ -61906,7 +61906,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `30`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `1`, Entry: `3543`,
-    eBay_Avg: 11.35, eBay_Low: 2.22, eBay_High: 28.8, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 9.47, eBay_Low: 2.22, eBay_High: 22, eBay_Count: 7, eBay_Median: 9,
   },
   {
     Title: `Captain America`, Issue: `617`, Publisher: `Marvel`,
@@ -62229,7 +62229,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `30`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `1`, Entry: `3560`,
-    eBay_Avg: 17.2, eBay_Low: 9.45, eBay_High: 24.95, eBay_Count: 2, eBay_Median: 17.2,
+    eBay_Avg: 10.09, eBay_Low: 3.14, eBay_High: 25, eBay_Count: 8, eBay_Median: 8,
   },
   {
     Title: `Tales of Suspense`, Issue: `100`, Publisher: `Marvel`,
@@ -62248,7 +62248,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `30`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `3`, Entry: `3561`,
-    eBay_Avg: 7.52, eBay_Low: 4, eBay_High: 10.5, eBay_Count: 10, eBay_Median: 7.9,
+    eBay_Avg: 7.47, eBay_Low: 4, eBay_High: 10.5, eBay_Count: 9, eBay_Median: 7.99,
   },
   {
     Title: `Tales of Suspense`, Issue: `101`, Publisher: `Marvel`,
@@ -62343,7 +62343,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `30`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `10`, Entry: `3566`,
-    eBay_Avg: 16.87, eBay_Low: 1, eBay_High: 30, eBay_Count: 8, eBay_Median: 14.97,
+    eBay_Avg: 20.77, eBay_Low: 9.99, eBay_High: 40, eBay_Count: 9, eBay_Median: 15,
   },
   {
     Title: `Captain America`, Issue: `2`, Publisher: `Marvel`,
@@ -62476,7 +62476,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `30`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `10`, Entry: `3573`,
-    eBay_Avg: 11.38, eBay_Low: 3.85, eBay_High: 24.49, eBay_Count: 6, eBay_Median: 7,
+    eBay_Avg: 15.83, eBay_Low: 1.43, eBay_High: 35.99, eBay_Count: 6, eBay_Median: 13.29,
   },
   {
     Title: `Captain America`, Issue: `11`, Publisher: `Marvel`,
@@ -62723,7 +62723,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `30`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `12`, Entry: `3586`,
-    eBay_Avg: 9.46, eBay_Low: 2.89, eBay_High: 21.35, eBay_Count: 9, eBay_Median: 7.99,
+    eBay_Avg: 5.44, eBay_Low: 4, eBay_High: 8, eBay_Count: 8, eBay_Median: 4.25,
   },
   {
     Title: `Captain America`, Issue: `26`, Publisher: `Marvel`,
@@ -62856,7 +62856,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `30`,
     Crossover: `Cap: Bucky as Captain America (Brubaker)`, Start_Bid: `3`,
     Volume: `5`, Entry: `3593`,
-    eBay_Avg: 14.72, eBay_Low: 5, eBay_High: 28.47, eBay_Count: 9, eBay_Median: 11.99,
+    eBay_Avg: 12.47, eBay_Low: 7.48, eBay_High: 20, eBay_Count: 8, eBay_Median: 12.25,
   },
   {
     Title: `Captain America`, Issue: `35`, Publisher: `Marvel`,
@@ -63103,7 +63103,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `86`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `3606`,
-    eBay_Avg: 6.51, eBay_Low: 2.9, eBay_High: 13.37, eBay_Count: 9, eBay_Median: 4,
+    eBay_Avg: 5.99, eBay_Low: 2.9, eBay_High: 13.48, eBay_Count: 10, eBay_Median: 4.5,
   },
   {
     Title: `Captain America: Sentinel of Liberty`, Issue: `3`, Publisher: `Marvel`,
@@ -63483,7 +63483,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `30`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `9`, Entry: `3627`,
-    eBay_Avg: 12.57, eBay_Low: 2, eBay_High: 31, eBay_Count: 8, eBay_Median: 6.35,
+    eBay_Avg: 14.08, eBay_Low: 4.88, eBay_High: 31, eBay_Count: 7, eBay_Median: 6.75,
   },
   {
     Title: `Howling Commandos of S.H.I.E.L.D.`, Issue: `1`, Publisher: `Marvel`,
@@ -64224,7 +64224,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Infinite Frontier`, Box: `55`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `7`, Entry: `3666`,
-    eBay_Avg: null, eBay_Low: 3.95, eBay_High: 46.4, eBay_Count: 9, eBay_Median: null,
+    eBay_Avg: 15.58, eBay_Low: 3.95, eBay_High: 39.99, eBay_Count: 9, eBay_Median: 15,
   },
   {
     Title: `Justice League`, Issue: `60`, Publisher: `DC`,
@@ -64319,7 +64319,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Infinite Frontier`, Box: `55`,
     Crossover: `Death of the Justice League (Williamson)`, Start_Bid: `5`,
     Volume: `1`, Entry: `3671`,
-    eBay_Avg: 5.77, eBay_Low: 3.34, eBay_High: 8.99, eBay_Count: 8, eBay_Median: 5.49,
+    eBay_Avg: 10.3, eBay_Low: 5, eBay_High: 21.99, eBay_Count: 8, eBay_Median: 6.99,
   },
   {
     Title: `Justice League Dark`, Issue: `13`, Publisher: `DC`,
@@ -64414,7 +64414,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `55`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `2`, Entry: `3676`,
-    eBay_Avg: 9.45, eBay_Low: 5, eBay_High: 18, eBay_Count: 10, eBay_Median: 7.52,
+    eBay_Avg: 8.48, eBay_Low: 4, eBay_High: 17.99, eBay_Count: 8, eBay_Median: 6.54,
   },
   {
     Title: `Lois Lane`, Issue: `5`, Publisher: `DC`,
@@ -65364,7 +65364,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Rebirth`, Box: `55`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `3726`,
-    eBay_Avg: 11.73, eBay_Low: 3.71, eBay_High: 18.99, eBay_Count: 9, eBay_Median: 13.3,
+    eBay_Avg: 8.34, eBay_Low: 5.11, eBay_High: 10, eBay_Count: 9, eBay_Median: 7.99,
   },
   {
     Title: `The Flash`, Issue: `767`, Publisher: `DC`,
@@ -65459,7 +65459,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `55`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `3`, Entry: `3731`,
-    eBay_Avg: 21.75, eBay_Low: 3.49, eBay_High: 40, eBay_Count: 2, eBay_Median: 21.75,
+    eBay_Avg: 6.62, eBay_Low: 3, eBay_High: 12.79, eBay_Count: 9, eBay_Median: 6.67,
   },
   {
     Title: `Young Justice`, Issue: `11`, Publisher: `DC`,
@@ -65478,7 +65478,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `55`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `3`, Entry: `3732`,
-    eBay_Avg: 4.82, eBay_Low: 3.99, eBay_High: 5.65, eBay_Count: 2, eBay_Median: 4.82,
+    eBay_Avg: 12.41, eBay_Low: 2.5, eBay_High: 24.99, eBay_Count: 9, eBay_Median: 8.56,
   },
   {
     Title: `Young Justice`, Issue: `12`, Publisher: `DC`,
@@ -65497,7 +65497,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `55`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `3`, Entry: `3733`,
-    eBay_Avg: 43, eBay_Low: 40, eBay_High: 45.99, eBay_Count: 2, eBay_Median: 43,
+    eBay_Avg: 13.99, eBay_Low: 2.09, eBay_High: 29.99, eBay_Count: 9, eBay_Median: 9.44,
   },
   {
     Title: `Young Justice`, Issue: `13`, Publisher: `DC`,
@@ -65516,7 +65516,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `55`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `3`, Entry: `3734`,
-    eBay_Avg: 5.47, eBay_Low: 1.92, eBay_High: 8.49, eBay_Count: 8, eBay_Median: 5.97,
+    eBay_Avg: 4.69, eBay_Low: 2.99, eBay_High: 7.64, eBay_Count: 10, eBay_Median: 3.99,
   },
   {
     Title: `Young Justice`, Issue: `14`, Publisher: `DC`,
@@ -65535,7 +65535,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `55`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `3`, Entry: `3735`,
-    eBay_Avg: 6.1, eBay_Low: 4.95, eBay_High: 8.49, eBay_Count: 4, eBay_Median: 5.47,
+    eBay_Avg: 7.12, eBay_Low: 3.2, eBay_High: 12.79, eBay_Count: 10, eBay_Median: 5.97,
   },
   {
     Title: `Young Justice`, Issue: `16`, Publisher: `DC`,
@@ -65554,7 +65554,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `55`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `3`, Entry: `3736`,
-    eBay_Avg: 7.72, eBay_Low: 6.95, eBay_High: 8.49, eBay_Count: 2, eBay_Median: 7.72,
+    eBay_Avg: 5.85, eBay_Low: 2.5, eBay_High: 10.99, eBay_Count: 10, eBay_Median: 4.85,
   },
   {
     Title: `Young Justice`, Issue: `17`, Publisher: `DC`,
@@ -65573,7 +65573,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `55`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `3`, Entry: `3737`,
-    eBay_Avg: 6.37, eBay_Low: 1.95, eBay_High: 11, eBay_Count: 9, eBay_Median: 6,
+    eBay_Avg: 4.61, eBay_Low: 2.9, eBay_High: 9, eBay_Count: 9, eBay_Median: 3.99,
   },
   {
     Title: `Adventures of the Super Sons`, Issue: `6`, Publisher: `DC`,
@@ -65725,7 +65725,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `55`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `1`, Entry: `3745`,
-    eBay_Avg: 11.3, eBay_Low: 6.99, eBay_High: 22, eBay_Count: 9, eBay_Median: 10,
+    eBay_Avg: 15.46, eBay_Low: 8, eBay_High: 32.4, eBay_Count: 9, eBay_Median: 11.99,
   },
   {
     Title: `Action Comics`, Issue: `1015`, Publisher: `DC`,
@@ -65934,7 +65934,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Rebirth`, Box: `55`,
     Crossover: `Batman Who Laughs Storyline`, Start_Bid: `3`,
     Volume: `4`, Entry: `3757`,
-    eBay_Avg: 11.48, eBay_Low: 5, eBay_High: 20, eBay_Count: 9, eBay_Median: 8.99,
+    eBay_Avg: 11.2, eBay_Low: 4.29, eBay_High: 20, eBay_Count: 9, eBay_Median: 10,
   },
   {
     Title: `Batman/Superman`, Issue: `2`, Publisher: `DC`,
@@ -66010,7 +66010,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `55`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `3761`,
-    eBay_Avg: 7.94, eBay_Low: 2.5, eBay_High: 17.99, eBay_Count: 10, eBay_Median: 7,
+    eBay_Avg: 5.55, eBay_Low: 2.99, eBay_High: 10, eBay_Count: 8, eBay_Median: 4.27,
   },
   {
     Title: `Event Leviathan`, Issue: `4`, Publisher: `DC`,
@@ -66466,7 +66466,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `24`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `5`, Entry: `3786`,
-    eBay_Avg: 19.72, eBay_Low: 3.99, eBay_High: 29.99, eBay_Count: 7, eBay_Median: 24.99,
+    eBay_Avg: 33.02, eBay_Low: 5.99, eBay_High: 72, eBay_Count: 9, eBay_Median: 25.99,
   },
   {
     Title: `New Avengers`, Issue: `2`, Publisher: `Marvel`,
@@ -66485,7 +66485,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `29`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `3787`,
-    eBay_Avg: 8.35, eBay_Low: 1, eBay_High: 19.99, eBay_Count: 8, eBay_Median: 7,
+    eBay_Avg: 6.29, eBay_Low: 2.75, eBay_High: 13.99, eBay_Count: 9, eBay_Median: 5.99,
   },
   {
     Title: `New Avengers`, Issue: `3`, Publisher: `Marvel`,
@@ -66504,7 +66504,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `29`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `3788`,
-    eBay_Avg: 6.39, eBay_Low: 3.56, eBay_High: 12.99, eBay_Count: 7, eBay_Median: 6,
+    eBay_Avg: 11.86, eBay_Low: 2.55, eBay_High: 34.99, eBay_Count: 8, eBay_Median: 9,
   },
   {
     Title: `New Avengers`, Issue: `4`, Publisher: `Marvel`,
@@ -66523,7 +66523,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `29`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `3789`,
-    eBay_Avg: 12.81, eBay_Low: 5.99, eBay_High: 23.99, eBay_Count: 10, eBay_Median: 10.99,
+    eBay_Avg: 11.86, eBay_Low: 3.97, eBay_High: 20, eBay_Count: 8, eBay_Median: 12.5,
   },
   {
     Title: `New Avengers`, Issue: `5`, Publisher: `Marvel`,
@@ -66542,7 +66542,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `29`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `3790`,
-    eBay_Avg: 8.18, eBay_Low: 3.88, eBay_High: 20.04, eBay_Count: 8, eBay_Median: 6.11,
+    eBay_Avg: 2.88, eBay_Low: 2.55, eBay_High: 3.5, eBay_Count: 7, eBay_Median: 2.55,
   },
   {
     Title: `New Avengers`, Issue: `6`, Publisher: `Marvel`,
@@ -66561,7 +66561,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `29`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `3791`,
-    eBay_Avg: 6.42, eBay_Low: 1.59, eBay_High: 13.98, eBay_Count: 8, eBay_Median: 6.25,
+    eBay_Avg: 14.4, eBay_Low: 5.99, eBay_High: 34.99, eBay_Count: 8, eBay_Median: 13.68,
   },
   {
     Title: `New Avengers`, Issue: `7`, Publisher: `Marvel`,
@@ -66580,7 +66580,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `29`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `3792`,
-    eBay_Avg: null, eBay_Low: 11, eBay_High: 69.99, eBay_Count: 9, eBay_Median: null,
+    eBay_Avg: 29.42, eBay_Low: 3, eBay_High: 69.99, eBay_Count: 10, eBay_Median: 26.14,
   },
   {
     Title: `New Avengers`, Issue: `8`, Publisher: `Marvel`,
@@ -66599,7 +66599,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `29`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `3793`,
-    eBay_Avg: 6.53, eBay_Low: 1, eBay_High: 15.99, eBay_Count: 8, eBay_Median: 5.63,
+    eBay_Avg: 8.96, eBay_Low: 2.55, eBay_High: 19.5, eBay_Count: 9, eBay_Median: 8.08,
   },
   {
     Title: `New Avengers`, Issue: `9`, Publisher: `Marvel`,
@@ -66618,7 +66618,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `29`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `3794`,
-    eBay_Avg: 4.17, eBay_Low: 1, eBay_High: 12.99, eBay_Count: 7, eBay_Median: 2,
+    eBay_Avg: 6.15, eBay_Low: 2.99, eBay_High: 10.76, eBay_Count: 7, eBay_Median: 7.4,
   },
   {
     Title: `Red Hawk`, Issue: `5`, Publisher: `Marvel`,
@@ -66827,7 +66827,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `29`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `9`, Entry: `3805`,
-    eBay_Avg: 26.24, eBay_Low: 18.7, eBay_High: 40.04, eBay_Count: 3, eBay_Median: 19.99,
+    eBay_Avg: 26.41, eBay_Low: 18.86, eBay_High: 40.38, eBay_Count: 3, eBay_Median: 19.99,
   },
   {
     Title: `The World to Come`, Issue: `3`, Publisher: `Marvel`,
@@ -67302,7 +67302,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `29`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `3831`,
-    eBay_Avg: 8.14, eBay_Low: 4.99, eBay_High: 15.99, eBay_Count: 8, eBay_Median: 8.54,
+    eBay_Avg: 4.9, eBay_Low: 2.99, eBay_High: 7, eBay_Count: 10, eBay_Median: 4.88,
   },
   {
     Title: `Bishop: War College`, Issue: `2`, Publisher: `Marvel`,
@@ -67416,7 +67416,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `29`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `3837`,
-    eBay_Avg: 5.9, eBay_Low: 3.75, eBay_High: 10, eBay_Count: 5, eBay_Median: 3.95,
+    eBay_Avg: 5.91, eBay_Low: 3.75, eBay_High: 10, eBay_Count: 5, eBay_Median: 3.95,
   },
   {
     Title: `Uncanny X-Men`, Issue: `10`, Publisher: `Marvel`,
@@ -68233,7 +68233,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `29`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `7`, Entry: `3881`,
-    eBay_Avg: 5.71, eBay_Low: 2, eBay_High: 12.99, eBay_Count: 7, eBay_Median: 4.99,
+    eBay_Avg: 17.19, eBay_Low: 4.99, eBay_High: 50, eBay_Count: 7, eBay_Median: 13,
   },
   {
     Title: `Laura Kinney: Wolverine`, Issue: `2`, Publisher: `Marvel`,
@@ -68328,7 +68328,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `29`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `3886`,
-    eBay_Avg: 19.99, eBay_Low: 2.98, eBay_High: 49.99, eBay_Count: 9, eBay_Median: 16.99,
+    eBay_Avg: 18.95, eBay_Low: 2.98, eBay_High: 45, eBay_Count: 7, eBay_Median: 12.99,
   },
   {
     Title: `Magik`, Issue: `2`, Publisher: `Marvel`,
@@ -68670,7 +68670,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC All In`, Box: `54`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `4`, Entry: `3990`,
-    eBay_Avg: 14.93, eBay_Low: 2.33, eBay_High: 19.99, eBay_Count: 10, eBay_Median: 15.99,
+    eBay_Avg: 21.14, eBay_Low: 1.96, eBay_High: 65, eBay_Count: 8, eBay_Median: 7.6,
   },
   {
     Title: `Batman`, Issue: `6`, Publisher: `DC`,
@@ -68727,7 +68727,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC All In`, Box: `54`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `5`, Entry: `3993`,
-    eBay_Avg: 12.91, eBay_Low: 3.75, eBay_High: 18, eBay_Count: 9, eBay_Median: 12.49,
+    eBay_Avg: 8.02, eBay_Low: 2.9, eBay_High: 17.99, eBay_Count: 9, eBay_Median: 4.2,
   },
   {
     Title: `Batman and Robin: Year One`, Issue: `2`, Publisher: `DC`,
@@ -69126,7 +69126,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `54`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `4016`,
-    eBay_Avg: 6.32, eBay_Low: 3.99, eBay_High: 10, eBay_Count: 6, eBay_Median: 5.49,
+    eBay_Avg: 8.33, eBay_Low: 3.99, eBay_High: 19.99, eBay_Count: 6, eBay_Median: 5.49,
   },
   {
     Title: `DC K.O.`, Issue: `3`, Publisher: `DC`,
@@ -69373,7 +69373,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC All In`, Box: `54`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `7`, Entry: `4030`,
-    eBay_Avg: 4.83, eBay_Low: 0.99, eBay_High: 12, eBay_Count: 8, eBay_Median: 4.17,
+    eBay_Avg: 11.28, eBay_Low: 4.95, eBay_High: 33, eBay_Count: 9, eBay_Median: 10,
   },
   {
     Title: `Green Lantern`, Issue: `19`, Publisher: `DC`,
@@ -69430,7 +69430,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC All In`, Box: `54`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `7`, Entry: `4033`,
-    eBay_Avg: 71.89, eBay_Low: 9, eBay_High: 149.95, eBay_Count: 3, eBay_Median: 56.71,
+    eBay_Avg: 33.03, eBay_Low: 9, eBay_High: 57.06, eBay_Count: 2, eBay_Median: 33.03,
   },
   {
     Title: `Green Lantern: Fractured Spectrum`, Issue: `7`, Publisher: `DC`,
@@ -69620,7 +69620,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC All In`, Box: `54`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `4043`,
-    eBay_Avg: 17.8, eBay_Low: 3.99, eBay_High: 45, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 18.01, eBay_Low: 3.99, eBay_High: 45, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `Justice League Red`, Issue: `2`, Publisher: `DC`,
@@ -70456,7 +70456,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC All In`, Box: `54`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `5`, Entry: `4087`,
-    eBay_Avg: 5.03, eBay_Low: 3.33, eBay_High: 6, eBay_Count: 10, eBay_Median: 5.33,
+    eBay_Avg: 81.7, eBay_Low: 4.63, eBay_High: 150, eBay_Count: 10, eBay_Median: 69.99,
   },
   {
     Title: `Superman`, Issue: `28`, Publisher: `DC`,
@@ -70570,7 +70570,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `54`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `4094`,
-    eBay_Avg: 20.35, eBay_Low: 3.59, eBay_High: 34.99, eBay_Count: 10, eBay_Median: 22.49,
+    eBay_Avg: 16.07, eBay_Low: 2.99, eBay_High: 36.5, eBay_Count: 9, eBay_Median: 14.99,
   },
   {
     Title: `Mr. Terrific: Year One`, Issue: `2`, Publisher: `DC`,
@@ -71349,7 +71349,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `2`, Entry: `4136`,
-    eBay_Avg: 12.88, eBay_Low: 3.99, eBay_High: 22.99, eBay_Count: 9, eBay_Median: 14.99,
+    eBay_Avg: 25.24, eBay_Low: 9.99, eBay_High: 46.36, eBay_Count: 9, eBay_Median: 20.21,
   },
   {
     Title: `Vengeance of the Moon Knight`, Issue: `3`, Publisher: `Marvel`,
@@ -71444,7 +71444,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: `Bloodhunt`, Start_Bid: `2`,
     Volume: `8`, Entry: `4141`,
-    eBay_Avg: 12.88, eBay_Low: 3.99, eBay_High: 22.99, eBay_Count: 9, eBay_Median: 14.99,
+    eBay_Avg: 25.24, eBay_Low: 9.99, eBay_High: 46.36, eBay_Count: 9, eBay_Median: 20.21,
   },
   {
     Title: `Moon Knight Annual`, Issue: `1`, Publisher: `Marvel`,
@@ -71539,7 +71539,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `4146`,
-    eBay_Avg: 16.39, eBay_Low: 6, eBay_High: 33.43, eBay_Count: 8, eBay_Median: 15.86,
+    eBay_Avg: 9.15, eBay_Low: 4.59, eBay_High: 22.89, eBay_Count: 8, eBay_Median: 8.08,
   },
   {
     Title: `The Immortal Thor`, Issue: `2`, Publisher: `Marvel`,
@@ -72451,7 +72451,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `5`, Entry: `4194`,
-    eBay_Avg: null, eBay_Low: 8.01, eBay_High: 298, eBay_Count: 10, eBay_Median: null,
+    eBay_Avg: 159.66, eBay_Low: 6.73, eBay_High: 298, eBay_Count: 10, eBay_Median: 158,
   },
   {
     Title: `Hawkman`, Issue: `29`, Publisher: `DC`,
@@ -72698,7 +72698,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Rebirth`, Box: `60`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `3`, Entry: `771`,
-    eBay_Avg: 8.98, eBay_Low: 2.95, eBay_High: 20, eBay_Count: 10, eBay_Median: 8.99,
+    eBay_Avg: 9.29, eBay_Low: 2.9, eBay_High: 19, eBay_Count: 8, eBay_Median: 9.87,
   },
   {
     Title: `Justice League`, Issue: `22`, Publisher: `DC`,
@@ -73477,7 +73477,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `3`, Entry: `4248`,
-    eBay_Avg: null, eBay_Low: 8.32, eBay_High: 54.11, eBay_Count: 10, eBay_Median: null,
+    eBay_Avg: 51.54, eBay_Low: 6, eBay_High: 124.81, eBay_Count: 9, eBay_Median: 47.95,
   },
   {
     Title: `Black Panther`, Issue: `52`, Publisher: `Marvel`,
@@ -73496,7 +73496,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `3`, Entry: `4249`,
-    eBay_Avg: 8.63, eBay_Low: 2.99, eBay_High: 16.12, eBay_Count: 10, eBay_Median: 9.79,
+    eBay_Avg: 7.63, eBay_Low: 1.79, eBay_High: 16.12, eBay_Count: 10, eBay_Median: 8.5,
   },
   {
     Title: `Black Panther`, Issue: `53`, Publisher: `Marvel`,
@@ -73553,7 +73553,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `3`, Entry: `4252`,
-    eBay_Avg: null, eBay_Low: 8.32, eBay_High: 54.11, eBay_Count: 10, eBay_Median: null,
+    eBay_Avg: 51.54, eBay_Low: 6, eBay_High: 124.81, eBay_Count: 9, eBay_Median: 47.95,
   },
   {
     Title: `Black Panther`, Issue: `56`, Publisher: `Marvel`,
@@ -73648,7 +73648,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `4`, Entry: `4257`,
-    eBay_Avg: 11.01, eBay_Low: 2, eBay_High: 25.84, eBay_Count: 10, eBay_Median: 10,
+    eBay_Avg: 23.79, eBay_Low: 2.5, eBay_High: 52.5, eBay_Count: 9, eBay_Median: 13.99,
   },
   {
     Title: `Justice League Dark`, Issue: `23`, Publisher: `DC`,
@@ -74085,7 +74085,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `5`, Entry: `4280`,
-    eBay_Avg: 11.01, eBay_Low: 2, eBay_High: 25.84, eBay_Count: 10, eBay_Median: 10,
+    eBay_Avg: 23.79, eBay_Low: 2.5, eBay_High: 52.5, eBay_Count: 9, eBay_Median: 13.99,
   },
   {
     Title: `Black Panther`, Issue: `2`, Publisher: `Marvel`,
@@ -74237,7 +74237,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `4`, Entry: `4289`,
-    eBay_Avg: 7.41, eBay_Low: 2.13, eBay_High: 10.99, eBay_Count: 8, eBay_Median: 8.1,
+    eBay_Avg: 7.22, eBay_Low: 4.99, eBay_High: 10.99, eBay_Count: 7, eBay_Median: 6.98,
   },
   {
     Title: `Black Panther`, Issue: `26`, Publisher: `Marvel`,
@@ -74504,7 +74504,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `6`, Entry: `4303`,
-    eBay_Avg: 11.01, eBay_Low: 2, eBay_High: 25.84, eBay_Count: 10, eBay_Median: 10,
+    eBay_Avg: 23.79, eBay_Low: 2.5, eBay_High: 52.5, eBay_Count: 9, eBay_Median: 13.99,
   },
   {
     Title: `Black Panther`, Issue: `2`, Publisher: `Marvel`,
@@ -74618,7 +74618,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `6`, Entry: `4309`,
-    eBay_Avg: 9.02, eBay_Low: 4.48, eBay_High: 13.48, eBay_Count: 10, eBay_Median: 9.63,
+    eBay_Avg: 10.15, eBay_Low: 2.6, eBay_High: 20.22, eBay_Count: 9, eBay_Median: 8.08,
   },
   {
     Title: `Black Panther`, Issue: `8`, Publisher: `Marvel`,
@@ -74637,7 +74637,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `6`, Entry: `4310`,
-    eBay_Avg: 9.99, eBay_Low: 9.99, eBay_High: 9.99, eBay_Count: 1, eBay_Median: 9.99,
+    eBay_Avg: 8.13, eBay_Low: 1.89, eBay_High: 22.71, eBay_Count: 8, eBay_Median: 6.61,
   },
   {
     Title: `Namor: The First Mutant`, Issue: `2`, Publisher: `Marvel`,
@@ -74846,7 +74846,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `12`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `2`, Entry: `1619`,
-    eBay_Avg: 13.13, eBay_Low: 1.34, eBay_High: 33.99, eBay_Count: 8, eBay_Median: 7.97,
+    eBay_Avg: 11.28, eBay_Low: 1.92, eBay_High: 29.99, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `New Mutants`, Issue: `2`, Publisher: `Marvel`,
@@ -74960,7 +74960,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `7`, Entry: `4327`,
-    eBay_Avg: 22.26, eBay_Low: 1.99, eBay_High: 49.99, eBay_Count: 9, eBay_Median: 14.99,
+    eBay_Avg: 15.73, eBay_Low: 3, eBay_High: 35, eBay_Count: 7, eBay_Median: 12.49,
   },
   {
     Title: `Black Panther: World of Wakanda`, Issue: `2`, Publisher: `Marvel`,
@@ -75359,7 +75359,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `14`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `4`, Entry: `4517`,
-    eBay_Avg: 13.13, eBay_Low: 1.34, eBay_High: 33.99, eBay_Count: 8, eBay_Median: 7.97,
+    eBay_Avg: 11.28, eBay_Low: 1.92, eBay_High: 29.99, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `New Mutants`, Issue: `2`, Publisher: `Marvel`,
@@ -75568,7 +75568,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `4359`,
-    eBay_Avg: 12.95, eBay_Low: 4.5, eBay_High: 21.35, eBay_Count: 8, eBay_Median: 12.2,
+    eBay_Avg: 11.41, eBay_Low: 3.99, eBay_High: 27.99, eBay_Count: 8, eBay_Median: 10.25,
   },
   {
     Title: `Rise of the Black Panther`, Issue: `2`, Publisher: `Marvel`,
@@ -75682,7 +75682,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `4365`,
-    eBay_Avg: 7.04, eBay_Low: 1.12, eBay_High: 27.7, eBay_Count: 8, eBay_Median: 3.64,
+    eBay_Avg: 9.17, eBay_Low: 3.2, eBay_High: 27.7, eBay_Count: 8, eBay_Median: 7.5,
   },
   {
     Title: `Black Panther and the Crew`, Issue: `2`, Publisher: `Marvel`,
@@ -76081,7 +76081,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `8`, Entry: `4386`,
-    eBay_Avg: 11.01, eBay_Low: 2, eBay_High: 25.84, eBay_Count: 10, eBay_Median: 10,
+    eBay_Avg: 23.79, eBay_Low: 2.5, eBay_High: 52.5, eBay_Count: 9, eBay_Median: 13.99,
   },
   {
     Title: `Black Panther`, Issue: `2`, Publisher: `Marvel`,
@@ -76195,7 +76195,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `8`, Entry: `4392`,
-    eBay_Avg: 9.02, eBay_Low: 4.48, eBay_High: 13.48, eBay_Count: 10, eBay_Median: 9.63,
+    eBay_Avg: 10.15, eBay_Low: 2.6, eBay_High: 20.22, eBay_Count: 9, eBay_Median: 8.08,
   },
   {
     Title: `Black Panther`, Issue: `8`, Publisher: `Marvel`,
@@ -76214,7 +76214,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `8`, Entry: `4393`,
-    eBay_Avg: 9.99, eBay_Low: 9.99, eBay_High: 9.99, eBay_Count: 1, eBay_Median: 9.99,
+    eBay_Avg: 8.13, eBay_Low: 1.89, eBay_High: 22.71, eBay_Count: 8, eBay_Median: 6.61,
   },
   {
     Title: `Black Panther`, Issue: `9`, Publisher: `Marvel`,
@@ -76347,7 +76347,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `4400`,
-    eBay_Avg: 33.78, eBay_Low: 10.82, eBay_High: 62.99, eBay_Count: 5, eBay_Median: 30.1,
+    eBay_Avg: 33.86, eBay_Low: 10.88, eBay_High: 63.17, eBay_Count: 5, eBay_Median: 30.28,
   },
   {
     Title: `Black Panther: World of Wakanda`, Issue: `2`, Publisher: `Marvel`,
@@ -76423,7 +76423,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `4404`,
-    eBay_Avg: 22.19, eBay_Low: 4.95, eBay_High: 52, eBay_Count: 10, eBay_Median: 20.5,
+    eBay_Avg: 11.55, eBay_Low: 2.62, eBay_High: 21, eBay_Count: 9, eBay_Median: 8,
   },
   {
     Title: `Killmonger`, Issue: `2`, Publisher: `Marvel`,
@@ -76518,7 +76518,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `4410`,
-    eBay_Avg: 8.46, eBay_Low: 2.97, eBay_High: 20, eBay_Count: 7, eBay_Median: 7.26,
+    eBay_Avg: 10.72, eBay_Low: 2.49, eBay_High: 20, eBay_Count: 8, eBay_Median: 10.72,
   },
   {
     Title: `Black Panther vs. Deadpool`, Issue: `2`, Publisher: `Marvel`,
@@ -76613,7 +76613,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `4415`,
-    eBay_Avg: 23.9, eBay_Low: 6.62, eBay_High: 49.99, eBay_Count: 8, eBay_Median: 17.5,
+    eBay_Avg: 11.76, eBay_Low: 4.21, eBay_High: 27.99, eBay_Count: 8, eBay_Median: 8.88,
   },
   {
     Title: `Shuri`, Issue: `2`, Publisher: `Marvel`,
@@ -77126,7 +77126,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `6`, Entry: `4442`,
-    eBay_Avg: 9.99, eBay_Low: 9.99, eBay_High: 9.99, eBay_Count: 1, eBay_Median: 9.99,
+    eBay_Avg: 8.13, eBay_Low: 1.89, eBay_High: 22.71, eBay_Count: 8, eBay_Median: 6.61,
   },
   {
     Title: `Avengers`, Issue: `12`, Publisher: `Marvel`,
@@ -77145,7 +77145,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `6`, Entry: `4443`,
-    eBay_Avg: 16.7, eBay_Low: 7.5, eBay_High: 25.99, eBay_Count: 9, eBay_Median: 14.99,
+    eBay_Avg: 16.33, eBay_Low: 8.79, eBay_High: 24.69, eBay_Count: 9, eBay_Median: 14.99,
   },
   {
     Title: `Captain Marvel`, Issue: `1`, Publisher: `Marvel`,
@@ -77164,7 +77164,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `7`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `4444`,
-    eBay_Avg: 12.83, eBay_Low: 3.99, eBay_High: 29.99, eBay_Count: 6, eBay_Median: 9.99,
+    eBay_Avg: 23.87, eBay_Low: 9.99, eBay_High: 42, eBay_Count: 8, eBay_Median: 21.49,
   },
   {
     Title: `New Mutants`, Issue: `1`, Publisher: `Marvel`,
@@ -77183,7 +77183,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `14`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `4`, Entry: `4445`,
-    eBay_Avg: 13.13, eBay_Low: 1.34, eBay_High: 33.99, eBay_Count: 8, eBay_Median: 7.97,
+    eBay_Avg: 11.28, eBay_Low: 1.92, eBay_High: 29.99, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `House of X`, Issue: `1`, Publisher: `Marvel`,
@@ -77202,7 +77202,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `14`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `1`, Entry: `4446`,
-    eBay_Avg: 87.49, eBay_Low: 49.99, eBay_High: 119.99, eBay_Count: 4, eBay_Median: 90,
+    eBay_Avg: 34.35, eBay_Low: 3.95, eBay_High: 97.99, eBay_Count: 8, eBay_Median: 16.99,
   },
   {
     Title: `House of X`, Issue: `2`, Publisher: `Marvel`,
@@ -77221,7 +77221,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `14`,
     Crossover: ``, Start_Bid: `6`,
     Volume: `1`, Entry: `4447`,
-    eBay_Avg: 13.77, eBay_Low: 8.99, eBay_High: 18.56, eBay_Count: 2, eBay_Median: 13.77,
+    eBay_Avg: 10.94, eBay_Low: 2.99, eBay_High: 24.99, eBay_Count: 10, eBay_Median: 8.8,
   },
   {
     Title: `House of X`, Issue: `3`, Publisher: `Marvel`,
@@ -77240,7 +77240,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `14`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `4448`,
-    eBay_Avg: 7.3, eBay_Low: 3.99, eBay_High: 13.37, eBay_Count: 8, eBay_Median: 5.83,
+    eBay_Avg: 13.76, eBay_Low: 4.99, eBay_High: 26.33, eBay_Count: 10, eBay_Median: 9.48,
   },
   {
     Title: `House of X`, Issue: `4`, Publisher: `Marvel`,
@@ -77259,7 +77259,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `14`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `4449`,
-    eBay_Avg: 16.51, eBay_Low: 4, eBay_High: 45, eBay_Count: 8, eBay_Median: 14.18,
+    eBay_Avg: 5.6, eBay_Low: 2.99, eBay_High: 9.99, eBay_Count: 9, eBay_Median: 4.95,
   },
   {
     Title: `House of X`, Issue: `5`, Publisher: `Marvel`,
@@ -77278,7 +77278,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `14`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `4450`,
-    eBay_Avg: 5.31, eBay_Low: 3.95, eBay_High: 6.99, eBay_Count: 3, eBay_Median: 5,
+    eBay_Avg: 11.33, eBay_Low: 3.99, eBay_High: 21.06, eBay_Count: 9, eBay_Median: 7.99,
   },
   {
     Title: `House of X`, Issue: `6`, Publisher: `Marvel`,
@@ -77297,7 +77297,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `14`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `4451`,
-    eBay_Avg: 7.83, eBay_Low: 3.92, eBay_High: 20.95, eBay_Count: 7, eBay_Median: 4.3,
+    eBay_Avg: 6.54, eBay_Low: 3.49, eBay_High: 11.88, eBay_Count: 8, eBay_Median: 4.99,
   },
   {
     Title: `Powers of X`, Issue: `1`, Publisher: `Marvel`,
@@ -77316,7 +77316,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `14`,
     Crossover: ``, Start_Bid: `6`,
     Volume: `1`, Entry: `4452`,
-    eBay_Avg: 8.63, eBay_Low: 2, eBay_High: 16.55, eBay_Count: 9, eBay_Median: 7.91,
+    eBay_Avg: 22.52, eBay_Low: 9.99, eBay_High: 49.95, eBay_Count: 9, eBay_Median: 19.99,
   },
   {
     Title: `Powers of X`, Issue: `2`, Publisher: `Marvel`,
@@ -77582,7 +77582,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `12`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `2`, Entry: `1706`,
-    eBay_Avg: 5.63, eBay_Low: 2.97, eBay_High: 8.99, eBay_Count: 9, eBay_Median: 5,
+    eBay_Avg: 7.37, eBay_Low: 1.99, eBay_High: 20, eBay_Count: 8, eBay_Median: 6.49,
   },
   {
     Title: `New X-Men`, Issue: `151`, Publisher: `Marvel`,
@@ -77753,7 +77753,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `50`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `3`, Entry: `923`,
-    eBay_Avg: 31.47, eBay_Low: 7, eBay_High: 70.88, eBay_Count: 10, eBay_Median: 28.99,
+    eBay_Avg: 23.93, eBay_Low: 4.19, eBay_High: 50, eBay_Count: 10, eBay_Median: 19.99,
   },
   {
     Title: `Power Girl`, Issue: `3`, Publisher: `DC`,
@@ -77867,7 +77867,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `14`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `6`, Entry: `4481`,
-    eBay_Avg: 7.84, eBay_Low: 4.12, eBay_High: 9.99, eBay_Count: 6, eBay_Median: 8.97,
+    eBay_Avg: 11.27, eBay_Low: 5.9, eBay_High: 17.99, eBay_Count: 6, eBay_Median: 10.25,
   },
   {
     Title: `Free Comic Book Day: X-Men`, Issue: `1`, Publisher: `Marvel`,
@@ -77905,7 +77905,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `14`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `6`, Entry: `4484`,
-    eBay_Avg: 6.78, eBay_Low: 6.4, eBay_High: 6.99, eBay_Count: 4, eBay_Median: 6.87,
+    eBay_Avg: 51.19, eBay_Low: 6.78, eBay_High: 160, eBay_Count: 8, eBay_Median: 34.39,
   },
   {
     Title: `Robin`, Issue: `137`, Publisher: `DC`,
@@ -78285,7 +78285,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `14`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `2`, Entry: `4594`,
-    eBay_Avg: 7.99, eBay_Low: 3, eBay_High: 12.99, eBay_Count: 8, eBay_Median: 6.22,
+    eBay_Avg: 7.27, eBay_Low: 3.69, eBay_High: 12.99, eBay_Count: 8, eBay_Median: 6.25,
   },
   {
     Title: `S.W.O.R.D.`, Issue: `2`, Publisher: `Marvel`,
@@ -78418,7 +78418,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `1133`,
-    eBay_Avg: 13.6, eBay_Low: 3.95, eBay_High: 42, eBay_Count: 7, eBay_Median: 7.79,
+    eBay_Avg: 17.5, eBay_Low: 3.99, eBay_High: 42, eBay_Count: 8, eBay_Median: 16.5,
   },
   {
     Title: `Sam Wilson: Captain America`, Issue: `2`, Publisher: `Marvel`,
@@ -78646,7 +78646,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `12634`,
-    eBay_Avg: 13.6, eBay_Low: 3.95, eBay_High: 42, eBay_Count: 7, eBay_Median: 7.79,
+    eBay_Avg: 17.5, eBay_Low: 3.99, eBay_High: 42, eBay_Count: 8, eBay_Median: 16.5,
   },
   {
     Title: `Shazam!`, Issue: `6`, Publisher: `DC`,
@@ -78969,7 +78969,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `58`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `5172`,
-    eBay_Avg: 20.87, eBay_Low: 2.69, eBay_High: 44.98, eBay_Count: 7, eBay_Median: 15.95,
+    eBay_Avg: 17.27, eBay_Low: 6, eBay_High: 40, eBay_Count: 7, eBay_Median: 14.95,
   },
   {
     Title: `Superman/Batman`, Issue: `2`, Publisher: `DC`,
@@ -79368,7 +79368,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `14`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `4561`,
-    eBay_Avg: 37.74, eBay_Low: 4.99, eBay_High: 106.75, eBay_Count: 9, eBay_Median: 33.41,
+    eBay_Avg: 3.77, eBay_Low: 1.95, eBay_High: 4.71, eBay_Count: 6, eBay_Median: 4.38,
   },
   {
     Title: `Marauders`, Issue: `6`, Publisher: `Marvel`,
@@ -79710,7 +79710,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Rebirth`, Box: `48`,
     Crossover: `The Button`, Start_Bid: `5`,
     Volume: `5`, Entry: `1501`,
-    eBay_Avg: 8.12, eBay_Low: 4.01, eBay_High: 15, eBay_Count: 9, eBay_Median: 6.49,
+    eBay_Avg: 7.45, eBay_Low: 3.14, eBay_High: 14.99, eBay_Count: 9, eBay_Median: 6.73,
   },
   {
     Title: `The Flash`, Issue: `46`, Publisher: `DC`,
@@ -79805,7 +79805,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC Rebirth`, Box: `48`,
     Crossover: `Flash War`, Start_Bid: `5`,
     Volume: `5`, Entry: `1506`,
-    eBay_Avg: 3.79, eBay_Low: 1.99, eBay_High: 5, eBay_Count: 7, eBay_Median: 3.99,
+    eBay_Avg: 8.74, eBay_Low: 1.99, eBay_High: 20, eBay_Count: 9, eBay_Median: 5,
   },
   {
     Title: `The Flash`, Issue: `51`, Publisher: `DC`,
@@ -80128,7 +80128,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `14`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `4`, Entry: `4601`,
-    eBay_Avg: 9.3, eBay_Low: 2.99, eBay_High: 13, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 5.34, eBay_Low: 1.54, eBay_High: 11, eBay_Count: 8, eBay_Median: 3.79,
   },
   {
     Title: `Cable`, Issue: `7`, Publisher: `Marvel`,
@@ -80261,7 +80261,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `14`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `4608`,
-    eBay_Avg: 14.96, eBay_Low: 4.99, eBay_High: 32.01, eBay_Count: 9, eBay_Median: 15,
+    eBay_Avg: 19.42, eBay_Low: 4.99, eBay_High: 35.99, eBay_Count: 9, eBay_Median: 20.16,
   },
   {
     Title: `Giant-Size X-Men`, Issue: `1`, Publisher: `Marvel`,
@@ -80280,7 +80280,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `14`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `6`, Entry: `4609`,
-    eBay_Avg: 5.3, eBay_Low: 1.97, eBay_High: 12, eBay_Count: 8, eBay_Median: 4.47,
+    eBay_Avg: 10.97, eBay_Low: 4.99, eBay_High: 16.99, eBay_Count: 8, eBay_Median: 11.43,
   },
   {
     Title: `Planet-Size X-Men`, Issue: `1`, Publisher: `Marvel`,
@@ -80299,7 +80299,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `14`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `4610`,
-    eBay_Avg: 8.03, eBay_Low: 3.99, eBay_High: 14.96, eBay_Count: 9, eBay_Median: 5.66,
+    eBay_Avg: 4.95, eBay_Low: 2.9, eBay_High: 7.1, eBay_Count: 7, eBay_Median: 4.99,
   },
   {
     Title: `X-Men Legends`, Issue: `1`, Publisher: `Marvel`,
@@ -80356,7 +80356,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `14`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `4613`,
-    eBay_Avg: 9.18, eBay_Low: 2.99, eBay_High: 16.95, eBay_Count: 9, eBay_Median: 10.15,
+    eBay_Avg: 9.88, eBay_Low: 4.19, eBay_High: 16.95, eBay_Count: 8, eBay_Median: 9.49,
   },
   {
     Title: `Ms. Marvel: The New Mutant`, Issue: `2`, Publisher: `Marvel`,
@@ -80413,7 +80413,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `14`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `4616`,
-    eBay_Avg: 5.2, eBay_Low: 2.52, eBay_High: 10.99, eBay_Count: 10, eBay_Median: 4.81,
+    eBay_Avg: 6.8, eBay_Low: 3.49, eBay_High: 16, eBay_Count: 8, eBay_Median: 4.99,
   },
   {
     Title: `X-Men '92: House of XCII`, Issue: `2`, Publisher: `Marvel`,
@@ -80584,7 +80584,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `14`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `7`, Entry: `4625`,
-    eBay_Avg: 9.95, eBay_Low: 2.45, eBay_High: 19.99, eBay_Count: 10, eBay_Median: 8.66,
+    eBay_Avg: 26.88, eBay_Low: 2.99, eBay_High: 64.99, eBay_Count: 9, eBay_Median: 28.99,
   },
   {
     Title: `Uncanny Avengers`, Issue: `2`, Publisher: `Marvel`,
@@ -80698,7 +80698,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `14`,
     Crossover: `AXE: Judgment Day`, Start_Bid: `5`,
     Volume: `1`, Entry: `4631`,
-    eBay_Avg: 14.82, eBay_Low: 4, eBay_High: 38, eBay_Count: 9, eBay_Median: 12.31,
+    eBay_Avg: 12.18, eBay_Low: 2.5, eBay_High: 38, eBay_Count: 8, eBay_Median: 10.97,
   },
   {
     Title: `A.X.E.: Judgment Day`, Issue: `2`, Publisher: `Marvel`,
@@ -80812,7 +80812,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `14`,
     Crossover: `AXE: Judgment Day`, Start_Bid: `5`,
     Volume: `1`, Entry: `4640`,
-    eBay_Avg: 7.56, eBay_Low: 3, eBay_High: 13.37, eBay_Count: 10, eBay_Median: 7.44,
+    eBay_Avg: 8.07, eBay_Low: 3, eBay_High: 13.48, eBay_Count: 10, eBay_Median: 7,
   },
   {
     Title: `X-Men Red`, Issue: `1`, Publisher: `Marvel`,
@@ -80831,7 +80831,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `14`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `2`, Entry: `4641`,
-    eBay_Avg: 5.01, eBay_Low: 2, eBay_High: 11.69, eBay_Count: 8, eBay_Median: 4.22,
+    eBay_Avg: 15.28, eBay_Low: 2, eBay_High: 36.89, eBay_Count: 7, eBay_Median: 11.69,
   },
   {
     Title: `X-Men Red`, Issue: `2`, Publisher: `Marvel`,
@@ -81002,7 +81002,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Ultimate Marvel`, Box: `16`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `4650`,
-    eBay_Avg: 15.01, eBay_Low: 6.67, eBay_High: 29.99, eBay_Count: 9, eBay_Median: 11.99,
+    eBay_Avg: 28.77, eBay_Low: 11.99, eBay_High: 59.96, eBay_Count: 7, eBay_Median: 25.99,
   },
   {
     Title: `Miles Morales: The Ultimate Spider-Man`, Issue: `2`, Publisher: `Marvel`,
@@ -81762,7 +81762,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `16`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `4690`,
-    eBay_Avg: 11.35, eBay_Low: 2.99, eBay_High: 25, eBay_Count: 10, eBay_Median: 10.62,
+    eBay_Avg: 13.67, eBay_Low: 6.99, eBay_High: 30, eBay_Count: 7, eBay_Median: 10.7,
   },
   {
     Title: `Miles Morales: Spider-Man`, Issue: `3`, Publisher: `Marvel`,
@@ -82541,7 +82541,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `16`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `2`, Entry: `4731`,
-    eBay_Avg: 22.27, eBay_Low: 2.88, eBay_High: 55.61, eBay_Count: 9, eBay_Median: 16,
+    eBay_Avg: 15.42, eBay_Low: 2.88, eBay_High: 45, eBay_Count: 8, eBay_Median: 12.01,
   },
   {
     Title: `Scarlet Spider`, Issue: `4`, Publisher: `Marvel`,
@@ -83149,7 +83149,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `16`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `4763`,
-    eBay_Avg: 12.35, eBay_Low: 2.66, eBay_High: 30.32, eBay_Count: 10, eBay_Median: 10.74,
+    eBay_Avg: 8.56, eBay_Low: 3.9, eBay_High: 12.99, eBay_Count: 7, eBay_Median: 7.99,
   },
   {
     Title: `Peter Parker: The Spectacular Spider-Man`, Issue: `2`, Publisher: `Marvel`,
@@ -83187,7 +83187,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `16`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `4765`,
-    eBay_Avg: 10.23, eBay_Low: 3, eBay_High: 19.99, eBay_Count: 7, eBay_Median: 8.01,
+    eBay_Avg: 5.87, eBay_Low: 3, eBay_High: 11.99, eBay_Count: 8, eBay_Median: 4.5,
   },
   {
     Title: `Marvel Knights Spider-Man`, Issue: `3`, Publisher: `Marvel`,
@@ -83510,7 +83510,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `16`,
     Crossover: `The Other: Evolve or Die`, Start_Bid: `5`,
     Volume: `1`, Entry: `4782`,
-    eBay_Avg: 10.42, eBay_Low: 3.15, eBay_High: 23.25, eBay_Count: 8, eBay_Median: 7.47,
+    eBay_Avg: 8.61, eBay_Low: 3, eBay_High: 17.95, eBay_Count: 7, eBay_Median: 5.38,
   },
   {
     Title: `Marvel Knights Spider-Man`, Issue: `19`, Publisher: `Marvel`,
@@ -83871,7 +83871,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `16`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `4`, Entry: `4801`,
-    eBay_Avg: 12.49, eBay_Low: 9.99, eBay_High: 15, eBay_Count: 10, eBay_Median: 12.47,
+    eBay_Avg: 9.99, eBay_Low: 4.99, eBay_High: 14.99, eBay_Count: 7, eBay_Median: 9.99,
   },
   {
     Title: `The Amazing Spider-Man`, Issue: `27`, Publisher: `Marvel`,
@@ -83928,7 +83928,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `16`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `4`, Entry: `4804`,
-    eBay_Avg: 194.37, eBay_Low: 20, eBay_High: 499.99, eBay_Count: 8, eBay_Median: 152.5,
+    eBay_Avg: 135.24, eBay_Low: 20, eBay_High: 450, eBay_Count: 8, eBay_Median: 85,
   },
   {
     Title: `Spider-Woman`, Issue: `1`, Publisher: `Marvel`,
@@ -84137,7 +84137,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `16`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `4815`,
-    eBay_Avg: 18.81, eBay_Low: 7.91, eBay_High: 40, eBay_Count: 9, eBay_Median: 15.75,
+    eBay_Avg: 15.04, eBay_Low: 6, eBay_High: 40, eBay_Count: 8, eBay_Median: 9.49,
   },
   {
     Title: `Spider-Man/Deadpool`, Issue: `3`, Publisher: `Marvel`,
@@ -84441,7 +84441,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `16`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `4831`,
-    eBay_Avg: 13.73, eBay_Low: 2.99, eBay_High: 24.95, eBay_Count: 9, eBay_Median: 16.24,
+    eBay_Avg: 11.57, eBay_Low: 2.99, eBay_High: 24.99, eBay_Count: 8, eBay_Median: 11,
   },
   {
     Title: `Venom: Space Knight`, Issue: `3`, Publisher: `Marvel`,
@@ -84631,7 +84631,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `16`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `4841`,
-    eBay_Avg: 5.47, eBay_Low: 2.9, eBay_High: 7.75, eBay_Count: 8, eBay_Median: 5.98,
+    eBay_Avg: 12.3, eBay_Low: 3.99, eBay_High: 32.09, eBay_Count: 7, eBay_Median: 8.56,
   },
   {
     Title: `Amazing Spider-Man`, Issue: `0`, Publisher: `Marvel`,
@@ -84688,7 +84688,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `16`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `4844`,
-    eBay_Avg: 11.35, eBay_Low: 2.99, eBay_High: 25, eBay_Count: 10, eBay_Median: 10.62,
+    eBay_Avg: 13.67, eBay_Low: 6.99, eBay_High: 30, eBay_Count: 7, eBay_Median: 10.7,
   },
   {
     Title: `Miles Morales: Spider-Man and Moon Girl`, Issue: `1`, Publisher: `Marvel`,
@@ -84783,7 +84783,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Image`, Box: `66`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `2`, Entry: `4862`,
-    eBay_Avg: 10.62, eBay_Low: 5.2, eBay_High: 23.25, eBay_Count: 8, eBay_Median: 8.75,
+    eBay_Avg: 13.57, eBay_Low: 5.2, eBay_High: 28.75, eBay_Count: 8, eBay_Median: 10,
   },
   {
     Title: `Scarlet`, Issue: `2`, Publisher: `Image`,
@@ -84859,7 +84859,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `IDW Publishing`, Box: `66`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `4866`,
-    eBay_Avg: 6.98, eBay_Low: 6, eBay_High: 9.17, eBay_Count: 7, eBay_Median: 6.99,
+    eBay_Avg: 5.92, eBay_Low: 5.15, eBay_High: 6.99, eBay_Count: 7, eBay_Median: 6,
   },
   {
     Title: `Gatchaman`, Issue: `1`, Publisher: `IDW`,
@@ -85011,7 +85011,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Image`, Box: `66`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `4874`,
-    eBay_Avg: 5.85, eBay_Low: 1.59, eBay_High: 12.56, eBay_Count: 10, eBay_Median: 4.97,
+    eBay_Avg: 4.36, eBay_Low: 1.59, eBay_High: 10, eBay_Count: 9, eBay_Median: 3,
   },
   {
     Title: `Doctor Who`, Issue: `3`, Publisher: `IDW`,
@@ -85106,7 +85106,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Skybound`, Box: `66`,
     Crossover: ``, Start_Bid: `8`,
     Volume: `1`, Entry: `4879`,
-    eBay_Avg: 54.26, eBay_Low: 9.99, eBay_High: 119.99, eBay_Count: 8, eBay_Median: 37.05,
+    eBay_Avg: 21.92, eBay_Low: 3.99, eBay_High: 35, eBay_Count: 7, eBay_Median: 24.5,
   },
   {
     Title: `Titans`, Issue: `4`, Publisher: `DC`,
@@ -85353,7 +85353,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `14`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `4583`,
-    eBay_Avg: 6.9, eBay_Low: 2.65, eBay_High: 20, eBay_Count: 7, eBay_Median: 2.99,
+    eBay_Avg: 6.56, eBay_Low: 2.17, eBay_High: 13.46, eBay_Count: 8, eBay_Median: 5.09,
   },
   {
     Title: `X-Factor`, Issue: `2`, Publisher: `Marvel`,
@@ -85524,7 +85524,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `BOOM! Studios`, Box: `66`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `2`, Entry: `4901`,
-    eBay_Avg: 21.26, eBay_Low: 21.26, eBay_High: 21.26, eBay_Count: 1, eBay_Median: 21.26,
+    eBay_Avg: 21.4, eBay_Low: 21.4, eBay_High: 21.4, eBay_Count: 1, eBay_Median: 21.4,
   },
   {
     Title: `Firefly: Blue Sun Rising`, Issue: `1`, Publisher: `BOOM! Studios`,
@@ -85866,7 +85866,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Image`, Box: `66`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `4919`,
-    eBay_Avg: 14.99, eBay_Low: 3.6, eBay_High: 39.99, eBay_Count: 9, eBay_Median: 13.06,
+    eBay_Avg: 17.03, eBay_Low: 7.08, eBay_High: 38.24, eBay_Count: 9, eBay_Median: 12.99,
   },
   {
     Title: `Space Corps`, Issue: `1`, Publisher: `CEX Publishing`,
@@ -86094,7 +86094,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Image`, Box: `66`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `4931`,
-    eBay_Avg: 10.45, eBay_Low: 3.08, eBay_High: 27.46, eBay_Count: 10, eBay_Median: 9.7,
+    eBay_Avg: 6.07, eBay_Low: 3.08, eBay_High: 9.99, eBay_Count: 9, eBay_Median: 5,
   },
   {
     Title: `Die`, Issue: `11`, Publisher: `Image`,
@@ -86113,7 +86113,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Image`, Box: `66`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `4932`,
-    eBay_Avg: 14.99, eBay_Low: 3.99, eBay_High: 41.12, eBay_Count: 9, eBay_Median: 15.15,
+    eBay_Avg: 10.44, eBay_Low: 3.99, eBay_High: 18.44, eBay_Count: 8, eBay_Median: 9.96,
   },
   {
     Title: `Die`, Issue: `12`, Publisher: `Image`,
@@ -86132,7 +86132,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Image`, Box: `66`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `4933`,
-    eBay_Avg: 12.15, eBay_Low: 2.09, eBay_High: 20.99, eBay_Count: 10, eBay_Median: 14.33,
+    eBay_Avg: 11.97, eBay_Low: 2.09, eBay_High: 20.99, eBay_Count: 10, eBay_Median: 13.3,
   },
   {
     Title: `Die`, Issue: `13`, Publisher: `Image`,
@@ -86189,7 +86189,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Image`, Box: `66`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `4936`,
-    eBay_Avg: 19.4, eBay_Low: 2, eBay_High: 26.72, eBay_Count: 7, eBay_Median: 21.99,
+    eBay_Avg: 19.47, eBay_Low: 2.12, eBay_High: 26.72, eBay_Count: 7, eBay_Median: 21.99,
   },
   {
     Title: `Die`, Issue: `16`, Publisher: `Image`,
@@ -86246,7 +86246,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Image`, Box: `66`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `4939`,
-    eBay_Avg: 34.93, eBay_Low: 5.15, eBay_High: 85, eBay_Count: 9, eBay_Median: 30.75,
+    eBay_Avg: 41.02, eBay_Low: 5.19, eBay_High: 85.35, eBay_Count: 10, eBay_Median: 35.66,
   },
   {
     Title: `Die`, Issue: `19`, Publisher: `Image`,
@@ -86360,7 +86360,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Devil's Due`, Box: `66`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `4945`,
-    eBay_Avg: 13.49, eBay_Low: 4.99, eBay_High: 35, eBay_Count: 8, eBay_Median: 12.99,
+    eBay_Avg: 13.37, eBay_Low: 4.99, eBay_High: 35, eBay_Count: 8, eBay_Median: 12.99,
   },
   {
     Title: `Alexandria Ocasio-Cortez and the Freshman Force: Squad Special`, Issue: `1`, Publisher: `Devil's Due`,
@@ -86455,7 +86455,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Dark Horse`, Box: `66`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `4951`,
-    eBay_Avg: 8.83, eBay_Low: 4.27, eBay_High: 15, eBay_Count: 6, eBay_Median: 8.5,
+    eBay_Avg: 11.35, eBay_Low: 2.49, eBay_High: 28, eBay_Count: 10, eBay_Median: 9.79,
   },
   {
     Title: `Paper Girls`, Issue: `1`, Publisher: `Image`,
@@ -86474,7 +86474,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Image`, Box: `66`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `1`, Entry: `4952`,
-    eBay_Avg: 18.99, eBay_Low: 5.99, eBay_High: 25, eBay_Count: 9, eBay_Median: 19.99,
+    eBay_Avg: 13.47, eBay_Low: 2.74, eBay_High: 29.99, eBay_Count: 8, eBay_Median: 10,
   },
   {
     Title: `Paper Girls`, Issue: `2`, Publisher: `Image`,
@@ -86569,7 +86569,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Image`, Box: `66`,
     Crossover: ``, Start_Bid: `8`,
     Volume: `1`, Entry: `4957`,
-    eBay_Avg: 188.34, eBay_Low: 11.99, eBay_High: 474.95, eBay_Count: 8, eBay_Median: 193.72,
+    eBay_Avg: 58.33, eBay_Low: 4.81, eBay_High: 99, eBay_Count: 8, eBay_Median: 69.97,
   },
   {
     Title: `Monstress`, Issue: `2`, Publisher: `Image`,
@@ -86645,7 +86645,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Image`, Box: `66`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `4961`,
-    eBay_Avg: 9.92, eBay_Low: 1.25, eBay_High: 26, eBay_Count: 10, eBay_Median: 8.85,
+    eBay_Avg: 6.3, eBay_Low: 1.25, eBay_High: 12.49, eBay_Count: 9, eBay_Median: 7.1,
   },
   {
     Title: `Huck`, Issue: `2`, Publisher: `Image`,
@@ -86759,7 +86759,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Black Mask Studios`, Box: `85`,
     Crossover: ``, Start_Bid: `6`,
     Volume: `1`, Entry: `4967`,
-    eBay_Avg: 8.69, eBay_Low: 1, eBay_High: 21.99, eBay_Count: 8, eBay_Median: 5.87,
+    eBay_Avg: 12.07, eBay_Low: 2.6, eBay_High: 25.2, eBay_Count: 9, eBay_Median: 10,
   },
   {
     Title: `Black`, Issue: `2`, Publisher: `Black Mask Studios`,
@@ -86835,7 +86835,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Valiant`, Box: `66`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `4`, Entry: `4971`,
-    eBay_Avg: 5.97, eBay_Low: 0.99, eBay_High: 9.99, eBay_Count: 8, eBay_Median: 6.08,
+    eBay_Avg: 15.3, eBay_Low: 5.2, eBay_High: 33.69, eBay_Count: 9, eBay_Median: 14.4,
   },
   {
     Title: `Shadow Man`, Issue: `2`, Publisher: `Valiant`,
@@ -87101,7 +87101,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Dark Horse`, Box: `66`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `4985`,
-    eBay_Avg: 7.01, eBay_Low: 2.9, eBay_High: 12.99, eBay_Count: 8, eBay_Median: 6.29,
+    eBay_Avg: 6.77, eBay_Low: 2.9, eBay_High: 12.99, eBay_Count: 8, eBay_Median: 5.83,
   },
   {
     Title: `The Wake`, Issue: `1`, Publisher: `DC/Vertigo`,
@@ -87120,7 +87120,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `66`,
     Crossover: ``, Start_Bid: `6`,
     Volume: `1`, Entry: `4986`,
-    eBay_Avg: 8.05, eBay_Low: 2.29, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 4.99,
+    eBay_Avg: 5.15, eBay_Low: 2.15, eBay_High: 10, eBay_Count: 9, eBay_Median: 4.72,
   },
   {
     Title: `The Sandman: Overture`, Issue: `1`, Publisher: `DC/Vertigo`,
@@ -87139,7 +87139,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Vertigo`, Box: `66`,
     Crossover: ``, Start_Bid: `13`,
     Volume: `1`, Entry: `4987`,
-    eBay_Avg: 6.3, eBay_Low: 2.38, eBay_High: 9.99, eBay_Count: 5, eBay_Median: 6,
+    eBay_Avg: 33.36, eBay_Low: 8.55, eBay_High: 69.99, eBay_Count: 10, eBay_Median: 34.98,
   },
   {
     Title: `Exiles`, Issue: `1`, Publisher: `Marvel`,
@@ -87158,7 +87158,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `35`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `4988`,
-    eBay_Avg: 16.25, eBay_Low: 2.01, eBay_High: 50, eBay_Count: 9, eBay_Median: 17.8,
+    eBay_Avg: 3.64, eBay_Low: 1.9, eBay_High: 6.99, eBay_Count: 6, eBay_Median: 3,
   },
   {
     Title: `Exiles`, Issue: `2`, Publisher: `Marvel`,
@@ -88640,7 +88640,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `35`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `6`, Entry: `5066`,
-    eBay_Avg: null, eBay_Low: 2.58, eBay_High: 59.99, eBay_Count: 10, eBay_Median: null,
+    eBay_Avg: 19.46, eBay_Low: 4.39, eBay_High: 54.99, eBay_Count: 9, eBay_Median: 19.25,
   },
   {
     Title: `Giant-Size X-Men`, Issue: `1`, Publisher: `Marvel`,
@@ -88659,7 +88659,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `35`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `5067`,
-    eBay_Avg: 5.3, eBay_Low: 1.97, eBay_High: 12, eBay_Count: 8, eBay_Median: 4.47,
+    eBay_Avg: 10.97, eBay_Low: 4.99, eBay_High: 16.99, eBay_Count: 8, eBay_Median: 11.43,
   },
   {
     Title: `DC Special: The Return of Donna Troy`, Issue: `1`, Publisher: `DC`,
@@ -88678,7 +88678,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `58`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `5068`,
-    eBay_Avg: 7.81, eBay_Low: 2.13, eBay_High: 14.24, eBay_Count: 9, eBay_Median: 9.95,
+    eBay_Avg: 8.73, eBay_Low: 2.85, eBay_High: 14.82, eBay_Count: 10, eBay_Median: 8.98,
   },
   {
     Title: `DC Special: The Return of Donna Troy`, Issue: `2`, Publisher: `DC`,
@@ -88773,7 +88773,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `58`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `3`, Entry: `5073`,
-    eBay_Avg: 3.6, eBay_Low: 1.79, eBay_High: 4.99, eBay_Count: 7, eBay_Median: 4,
+    eBay_Avg: 4.3, eBay_Low: 2.9, eBay_High: 6.3, eBay_Count: 7, eBay_Median: 4,
   },
   {
     Title: `Green Arrow`, Issue: `71`, Publisher: `DC`,
@@ -88811,7 +88811,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `88`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `5075`,
-    eBay_Avg: 19.05, eBay_Low: 2.32, eBay_High: 60, eBay_Count: 7, eBay_Median: 14.99,
+    eBay_Avg: 18.34, eBay_Low: 2.32, eBay_High: 60, eBay_Count: 7, eBay_Median: 10.39,
   },
   {
     Title: `Marvel Universe: The End`, Issue: `1`, Publisher: `Marvel`,
@@ -89020,7 +89020,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `58`,
     Crossover: ``, Start_Bid: `6`,
     Volume: `1`, Entry: `5086`,
-    eBay_Avg: 7.64, eBay_Low: 2.69, eBay_High: 9.99, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 2.83, eBay_Low: 2.6, eBay_High: 4, eBay_Count: 6, eBay_Median: 2.6,
   },
   {
     Title: `Identity Crisis`, Issue: `2`, Publisher: `DC`,
@@ -89153,7 +89153,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `58`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `5093`,
-    eBay_Avg: 6.46, eBay_Low: 2.8, eBay_High: 9.99, eBay_Count: 10, eBay_Median: 6.29,
+    eBay_Avg: 6.21, eBay_Low: 2.59, eBay_High: 16.32, eBay_Count: 10, eBay_Median: 5.5,
   },
   {
     Title: `Infinite Crisis`, Issue: `1`, Publisher: `DC`,
@@ -89172,7 +89172,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `58`,
     Crossover: ``, Start_Bid: `6`,
     Volume: `1`, Entry: `5094`,
-    eBay_Avg: 7.6, eBay_Low: 3.93, eBay_High: 10, eBay_Count: 9, eBay_Median: 8,
+    eBay_Avg: 3.86, eBay_Low: 2.59, eBay_High: 5, eBay_Count: 6, eBay_Median: 4,
   },
   {
     Title: `Infinite Crisis`, Issue: `2`, Publisher: `DC`,
@@ -89305,7 +89305,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `58`,
     Crossover: `Infinite Crisis`, Start_Bid: `5`,
     Volume: `1`, Entry: `5101`,
-    eBay_Avg: 12.06, eBay_Low: 2.15, eBay_High: 28, eBay_Count: 10, eBay_Median: 9.99,
+    eBay_Avg: 13.39, eBay_Low: 8, eBay_High: 20, eBay_Count: 10, eBay_Median: 13.47,
   },
   {
     Title: `Rann-Thanagar War`, Issue: `2`, Publisher: `DC`,
@@ -89419,7 +89419,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `58`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `4`, Entry: `5107`,
-    eBay_Avg: 11.95, eBay_Low: 1, eBay_High: 35.79, eBay_Count: 8, eBay_Median: 10.29,
+    eBay_Avg: 11.36, eBay_Low: 1.79, eBay_High: 26.57, eBay_Count: 10, eBay_Median: 10,
   },
   {
     Title: `Doom Patrol`, Issue: `2`, Publisher: `DC`,
@@ -89495,7 +89495,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `14`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `6`, Entry: `4485`,
-    eBay_Avg: 10.26, eBay_Low: 2.09, eBay_High: 29.99, eBay_Count: 7, eBay_Median: 7.99,
+    eBay_Avg: 9.24, eBay_Low: 4.86, eBay_High: 19, eBay_Count: 8, eBay_Median: 7.05,
   },
   {
     Title: `X-Force`, Issue: `2`, Publisher: `Marvel`,
@@ -89894,7 +89894,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `58`,
     Crossover: ``, Start_Bid: `6`,
     Volume: `1`, Entry: `5132`,
-    eBay_Avg: 3.25, eBay_Low: 1.56, eBay_High: 7, eBay_Count: 9, eBay_Median: 2.06,
+    eBay_Avg: 18.64, eBay_Low: 2.6, eBay_High: 49.99, eBay_Count: 9, eBay_Median: 19,
   },
   {
     Title: `Justice`, Issue: `2`, Publisher: `DC`,
@@ -90065,7 +90065,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `58`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `5141`,
-    eBay_Avg: 6, eBay_Low: 1.68, eBay_High: 9.29, eBay_Count: 7, eBay_Median: 6,
+    eBay_Avg: 11.2, eBay_Low: 5.99, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 10.59,
   },
   {
     Title: `All-Star Batman and Robin, the Boy Wonder`, Issue: `2`, Publisher: `DC`,
@@ -90084,7 +90084,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `58`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `5142`,
-    eBay_Avg: 10.42, eBay_Low: 1.99, eBay_High: 25, eBay_Count: 9, eBay_Median: 9.4,
+    eBay_Avg: 11.79, eBay_Low: 1.99, eBay_High: 25, eBay_Count: 9, eBay_Median: 11.99,
   },
   {
     Title: `All-Star Batman and Robin, the Boy Wonder`, Issue: `3`, Publisher: `DC`,
@@ -90103,7 +90103,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `58`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `5143`,
-    eBay_Avg: 11.81, eBay_Low: 3.98, eBay_High: 20.04, eBay_Count: 10, eBay_Median: 12,
+    eBay_Avg: 10.36, eBay_Low: 3.98, eBay_High: 20.21, eBay_Count: 10, eBay_Median: 10.82,
   },
   {
     Title: `All-Star Batman and Robin, the Boy Wonder`, Issue: `4`, Publisher: `DC`,
@@ -90122,7 +90122,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `49`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `5144`,
-    eBay_Avg: 16.56, eBay_Low: 6.45, eBay_High: 39, eBay_Count: 9, eBay_Median: 12.99,
+    eBay_Avg: 15.89, eBay_Low: 3, eBay_High: 39, eBay_Count: 9, eBay_Median: 12.99,
   },
   {
     Title: `X-Force`, Issue: `23`, Publisher: `Marvel`,
@@ -90521,7 +90521,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `14`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `5`, Entry: `4458`,
-    eBay_Avg: 7.84, eBay_Low: 4.12, eBay_High: 9.99, eBay_Count: 6, eBay_Median: 8.97,
+    eBay_Avg: 11.27, eBay_Low: 5.9, eBay_High: 17.99, eBay_Count: 6, eBay_Median: 10.25,
   },
   {
     Title: `X-Men`, Issue: `2`, Publisher: `Marvel`,
@@ -91414,7 +91414,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `11`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `5212`,
-    eBay_Avg: 25.23, eBay_Low: 9.95, eBay_High: 59, eBay_Count: 8, eBay_Median: 20.97,
+    eBay_Avg: 18.74, eBay_Low: 8.25, eBay_High: 36, eBay_Count: 7, eBay_Median: 14.99,
   },
   {
     Title: `Phoenix Resurrection: The Return of Jean Grey`, Issue: `2`, Publisher: `Marvel`,
@@ -91509,7 +91509,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `11`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `5217`,
-    eBay_Avg: 10.72, eBay_Low: 3, eBay_High: 24.99, eBay_Count: 10, eBay_Median: 9.99,
+    eBay_Avg: 7.88, eBay_Low: 2.59, eBay_High: 12, eBay_Count: 8, eBay_Median: 9.99,
   },
   {
     Title: `Children of the Atom`, Issue: `4`, Publisher: `Marvel`,
@@ -91604,7 +91604,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `11`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `5222`,
-    eBay_Avg: 5.01, eBay_Low: 2, eBay_High: 11.69, eBay_Count: 8, eBay_Median: 4.22,
+    eBay_Avg: 15.28, eBay_Low: 2, eBay_High: 36.89, eBay_Count: 7, eBay_Median: 11.69,
   },
   {
     Title: `X-Men Red`, Issue: `2`, Publisher: `Marvel`,
@@ -91775,7 +91775,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `11`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `2`, Entry: `5231`,
-    eBay_Avg: 5.44, eBay_Low: 3.34, eBay_High: 10.68, eBay_Count: 9, eBay_Median: 4.26,
+    eBay_Avg: 10.32, eBay_Low: 4.95, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `X-Terminators`, Issue: `2`, Publisher: `Marvel`,
@@ -91813,7 +91813,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `11`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `3`, Entry: `5233`,
-    eBay_Avg: 86.11, eBay_Low: 7.99, eBay_High: 299.99, eBay_Count: 8, eBay_Median: 37.97,
+    eBay_Avg: 6.13, eBay_Low: 4.99, eBay_High: 12.99, eBay_Count: 7, eBay_Median: 4.99,
   },
   {
     Title: `Dazzler`, Issue: `2`, Publisher: `Marvel`,
@@ -92003,7 +92003,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `11`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `7`, Entry: `5243`,
-    eBay_Avg: 10.26, eBay_Low: 2.09, eBay_High: 29.99, eBay_Count: 7, eBay_Median: 7.99,
+    eBay_Avg: 9.24, eBay_Low: 4.86, eBay_High: 19, eBay_Count: 8, eBay_Median: 7.05,
   },
   {
     Title: `X-Force`, Issue: `3`, Publisher: `Marvel`,
@@ -92079,7 +92079,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `11`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `5247`,
-    eBay_Avg: 6.2, eBay_Low: 1.97, eBay_High: 12, eBay_Count: 9, eBay_Median: 6,
+    eBay_Avg: 10.11, eBay_Low: 4.99, eBay_High: 14.99, eBay_Count: 7, eBay_Median: 11,
   },
   {
     Title: `X of Swords: Creation`, Issue: `1`, Publisher: `Marvel`,
@@ -92098,7 +92098,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `11`,
     Crossover: `X of Swords`, Start_Bid: `5`,
     Volume: `1`, Entry: `5248`,
-    eBay_Avg: 8.68, eBay_Low: 2.99, eBay_High: 18, eBay_Count: 10, eBay_Median: 8,
+    eBay_Avg: 7.08, eBay_Low: 2.99, eBay_High: 14.99, eBay_Count: 9, eBay_Median: 5.73,
   },
   {
     Title: `X of Swords: Stasis`, Issue: `1`, Publisher: `Marvel`,
@@ -92136,7 +92136,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `11`,
     Crossover: `X of Swords`, Start_Bid: `5`,
     Volume: `1`, Entry: `5250`,
-    eBay_Avg: 6.61, eBay_Low: 4.79, eBay_High: 10.63, eBay_Count: 9, eBay_Median: 5.15,
+    eBay_Avg: 9.24, eBay_Low: 4.95, eBay_High: 16.99, eBay_Count: 10, eBay_Median: 8.52,
   },
   {
     Title: `X-Force`, Issue: `9`, Publisher: `Marvel`,
@@ -92478,7 +92478,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `11`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `5268`,
-    eBay_Avg: 37.74, eBay_Low: 4.99, eBay_High: 106.75, eBay_Count: 9, eBay_Median: 33.41,
+    eBay_Avg: 3.77, eBay_Low: 1.95, eBay_High: 4.71, eBay_Count: 6, eBay_Median: 4.38,
   },
   {
     Title: `Marauders`, Issue: `3`, Publisher: `Marvel`,
@@ -92592,7 +92592,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `11`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `5274`,
-    eBay_Avg: 1.66, eBay_Low: 1.32, eBay_High: 1.99, eBay_Count: 2, eBay_Median: 1.66,
+    eBay_Avg: 1.66, eBay_Low: 1.33, eBay_High: 1.99, eBay_Count: 2, eBay_Median: 1.66,
   },
   {
     Title: `X-Men`, Issue: `7`, Publisher: `Marvel`,
@@ -92630,7 +92630,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `86`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `2`, Entry: `5276`,
-    eBay_Avg: 15.49, eBay_Low: 6, eBay_High: 25, eBay_Count: 10, eBay_Median: 15,
+    eBay_Avg: 4.39, eBay_Low: 1.99, eBay_High: 7.99, eBay_Count: 7, eBay_Median: 4,
   },
   {
     Title: `Inferno`, Issue: `2`, Publisher: `Marvel`,
@@ -92725,7 +92725,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `6`, Entry: `5281`,
-    eBay_Avg: 7.37, eBay_Low: 5, eBay_High: 10.95, eBay_Count: 7, eBay_Median: 5.99,
+    eBay_Avg: 13.86, eBay_Low: 5, eBay_High: 31, eBay_Count: 9, eBay_Median: 8,
   },
   {
     Title: `Storm`, Issue: `1`, Publisher: `Marvel`,
@@ -92744,7 +92744,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `11`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `3`, Entry: `5282`,
-    eBay_Avg: 10.08, eBay_Low: 7.95, eBay_High: 11.95, eBay_Count: 10, eBay_Median: 9.99,
+    eBay_Avg: 7.19, eBay_Low: 2.99, eBay_High: 15, eBay_Count: 9, eBay_Median: 6.99,
   },
   {
     Title: `Excalibur`, Issue: `16`, Publisher: `Marvel`,
@@ -92839,7 +92839,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `11`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `6`, Entry: `5287`,
-    eBay_Avg: 7.84, eBay_Low: 4.12, eBay_High: 9.99, eBay_Count: 6, eBay_Median: 8.97,
+    eBay_Avg: 11.27, eBay_Low: 5.9, eBay_High: 17.99, eBay_Count: 6, eBay_Median: 10.25,
   },
   {
     Title: `New Mutants`, Issue: `93`, Publisher: `Marvel`,
@@ -92858,7 +92858,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `11`,
     Crossover: `Extinction Agenda`, Start_Bid: `2`,
     Volume: `1`, Entry: `5288`,
-    eBay_Avg: 18.61, eBay_Low: 3.12, eBay_High: 55, eBay_Count: 8, eBay_Median: 13.49,
+    eBay_Avg: 24.72, eBay_Low: 9.99, eBay_High: 55, eBay_Count: 10, eBay_Median: 18.75,
   },
   {
     Title: `New Mutants`, Issue: `97`, Publisher: `Marvel`,
@@ -92877,7 +92877,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `11`,
     Crossover: `Extinction Agenda`, Start_Bid: `2`,
     Volume: `1`, Entry: `5289`,
-    eBay_Avg: 7.49, eBay_Low: 3.12, eBay_High: 15.99, eBay_Count: 10, eBay_Median: 6.25,
+    eBay_Avg: 11.49, eBay_Low: 3.95, eBay_High: 20, eBay_Count: 9, eBay_Median: 10,
   },
   {
     Title: `Mystique`, Issue: `1`, Publisher: `Marvel`,
@@ -92896,7 +92896,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `11`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `3`, Entry: `5290`,
-    eBay_Avg: 17.09, eBay_Low: 3.65, eBay_High: 35, eBay_Count: 7, eBay_Median: 13.99,
+    eBay_Avg: 11.78, eBay_Low: 3.95, eBay_High: 32.5, eBay_Count: 7, eBay_Median: 9.5,
   },
   {
     Title: `Mystique`, Issue: `2`, Publisher: `Marvel`,
@@ -93067,7 +93067,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `11`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `5`, Entry: `5299`,
-    eBay_Avg: 8.25, eBay_Low: 3.66, eBay_High: 16.74, eBay_Count: 7, eBay_Median: 6.62,
+    eBay_Avg: 5.37, eBay_Low: 1.99, eBay_High: 12.99, eBay_Count: 8, eBay_Median: 4.2,
   },
   {
     Title: `Uncanny X-Men`, Issue: `2`, Publisher: `Marvel`,
@@ -93295,7 +93295,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `11`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `2`, Entry: `5311`,
-    eBay_Avg: 29.36, eBay_Low: 3.99, eBay_High: 75, eBay_Count: 8, eBay_Median: 22.48,
+    eBay_Avg: 20.18, eBay_Low: 3.99, eBay_High: 59.99, eBay_Count: 8, eBay_Median: 8.75,
   },
   {
     Title: `Phoenix`, Issue: `2`, Publisher: `Marvel`,
@@ -93390,7 +93390,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `11`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `2`, Entry: `5316`,
-    eBay_Avg: 5.68, eBay_Low: 1.79, eBay_High: 9.99, eBay_Count: 9, eBay_Median: 4.99,
+    eBay_Avg: 8.25, eBay_Low: 2.74, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 7.08,
   },
   {
     Title: `X-Men Legends`, Issue: `5`, Publisher: `Marvel`,
@@ -93466,7 +93466,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `11`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `2`, Entry: `5320`,
-    eBay_Avg: 8.56, eBay_Low: 5, eBay_High: 9.99, eBay_Count: 8, eBay_Median: 9.99,
+    eBay_Avg: 4.71, eBay_Low: 2.9, eBay_High: 9.99, eBay_Count: 8, eBay_Median: 3.99,
   },
   {
     Title: `X-Men Legends`, Issue: `4`, Publisher: `Marvel`,
@@ -93485,7 +93485,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `11`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `2`, Entry: `5321`,
-    eBay_Avg: 5.68, eBay_Low: 1.79, eBay_High: 9.99, eBay_Count: 9, eBay_Median: 4.99,
+    eBay_Avg: 8.25, eBay_Low: 2.74, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 7.08,
   },
   {
     Title: `X-Men Legends`, Issue: `5`, Publisher: `Marvel`,
@@ -93770,7 +93770,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `11`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `3`, Entry: `5336`,
-    eBay_Avg: 13.54, eBay_Low: 4.99, eBay_High: 27.44, eBay_Count: 10, eBay_Median: 13.99,
+    eBay_Avg: 8.99, eBay_Low: 3.99, eBay_High: 19.99, eBay_Count: 8, eBay_Median: 7.99,
   },
   {
     Title: `Astonishing Iceman`, Issue: `1`, Publisher: `Marvel`,
@@ -93789,7 +93789,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `11`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `5337`,
-    eBay_Avg: 3.94, eBay_Low: 1.81, eBay_High: 7.99, eBay_Count: 8, eBay_Median: 3.74,
+    eBay_Avg: 4.33, eBay_Low: 2.9, eBay_High: 7.99, eBay_Count: 8, eBay_Median: 3.99,
   },
   {
     Title: `Astonishing Iceman`, Issue: `2`, Publisher: `Marvel`,
@@ -93865,7 +93865,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `11`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `5341`,
-    eBay_Avg: 9.67, eBay_Low: 1.99, eBay_High: 19.95, eBay_Count: 9, eBay_Median: 10,
+    eBay_Avg: 11.58, eBay_Low: 1.99, eBay_High: 22, eBay_Count: 10, eBay_Median: 12.91,
   },
   {
     Title: `X-Men`, Issue: `1`, Publisher: `Marvel`,
@@ -93884,7 +93884,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `11`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `5`, Entry: `5342`,
-    eBay_Avg: 7.84, eBay_Low: 4.12, eBay_High: 9.99, eBay_Count: 6, eBay_Median: 8.97,
+    eBay_Avg: 11.27, eBay_Low: 5.9, eBay_High: 17.99, eBay_Count: 6, eBay_Median: 10.25,
   },
   {
     Title: `X-Men`, Issue: `2`, Publisher: `Marvel`,
@@ -94055,7 +94055,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `72`,
     Crossover: ``, Start_Bid: `6`,
     Volume: `4`, Entry: `5355`,
-    eBay_Avg: 10.08, eBay_Low: 7.95, eBay_High: 11.95, eBay_Count: 10, eBay_Median: 9.99,
+    eBay_Avg: 7.19, eBay_Low: 2.99, eBay_High: 15, eBay_Count: 9, eBay_Median: 6.99,
   },
   {
     Title: `Storm`, Issue: `2`, Publisher: `Marvel`,
@@ -94093,7 +94093,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `11`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `2`, Entry: `5357`,
-    eBay_Avg: 28.5, eBay_Low: 5.99, eBay_High: 45, eBay_Count: 6, eBay_Median: 33.5,
+    eBay_Avg: 23.74, eBay_Low: 5.99, eBay_High: 45, eBay_Count: 8, eBay_Median: 19.99,
   },
   {
     Title: `Exceptional X-Men`, Issue: `3`, Publisher: `Marvel`,
@@ -94131,7 +94131,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `11`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `5359`,
-    eBay_Avg: 13.56, eBay_Low: 1.99, eBay_High: 24.99, eBay_Count: 10, eBay_Median: 14.99,
+    eBay_Avg: 11.28, eBay_Low: 5.59, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 12.99,
   },
   {
     Title: `Exceptional X-Men`, Issue: `2`, Publisher: `Marvel`,
@@ -94188,7 +94188,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `11`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `5362`,
-    eBay_Avg: 11.74, eBay_Low: 6, eBay_High: 19.5, eBay_Count: 6, eBay_Median: 10.62,
+    eBay_Avg: 15.65, eBay_Low: 5, eBay_High: 39.99, eBay_Count: 10, eBay_Median: 14.25,
   },
   {
     Title: `Phoenix Song: Echo`, Issue: `1`, Publisher: `Marvel`,
@@ -94207,7 +94207,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `11`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `5363`,
-    eBay_Avg: 5.68, eBay_Low: 3.99, eBay_High: 8.65, eBay_Count: 10, eBay_Median: 5,
+    eBay_Avg: 8.62, eBay_Low: 3.61, eBay_High: 20, eBay_Count: 8, eBay_Median: 5.21,
   },
   {
     Title: `Phoenix Song: Echo`, Issue: `2`, Publisher: `Marvel`,
@@ -94283,7 +94283,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `11`,
     Crossover: `Fall of X`, Start_Bid: `2`,
     Volume: `5`, Entry: `5371`,
-    eBay_Avg: null, eBay_Low: 9.95, eBay_High: 62, eBay_Count: 9, eBay_Median: null,
+    eBay_Avg: 26.92, eBay_Low: 3, eBay_High: 62, eBay_Count: 9, eBay_Median: 22.99,
   },
   {
     Title: `Alpha Flight`, Issue: `2`, Publisher: `Marvel`,
@@ -94340,7 +94340,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `11`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `2`, Entry: `5374`,
-    eBay_Avg: 6.59, eBay_Low: 3.99, eBay_High: 10, eBay_Count: 5, eBay_Median: 5.99,
+    eBay_Avg: 7.48, eBay_Low: 1.65, eBay_High: 19.99, eBay_Count: 7, eBay_Median: 4.99,
   },
   {
     Title: `Jean Grey`, Issue: `2`, Publisher: `Marvel`,
@@ -94378,7 +94378,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `88`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `6`, Entry: `5376`,
-    eBay_Avg: 11.97, eBay_Low: 1.89, eBay_High: 24.99, eBay_Count: 10, eBay_Median: 12.84,
+    eBay_Avg: 12.61, eBay_Low: 4.95, eBay_High: 19.99, eBay_Count: 8, eBay_Median: 10,
   },
   {
     Title: `X-Force: Killshot Anniversary Special`, Issue: `1`, Publisher: `Marvel`,
@@ -94397,7 +94397,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `11`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `7`, Entry: `5377`,
-    eBay_Avg: 5.8, eBay_Low: 3.45, eBay_High: 10.19, eBay_Count: 8, eBay_Median: 5.7,
+    eBay_Avg: 11.82, eBay_Low: 2.99, eBay_High: 21.99, eBay_Count: 10, eBay_Median: 11.07,
   },
   {
     Title: `X-23`, Issue: `1`, Publisher: `Marvel`,
@@ -94435,7 +94435,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `11`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `5379`,
-    eBay_Avg: 16.51, eBay_Low: 4, eBay_High: 29.95, eBay_Count: 8, eBay_Median: 17.38,
+    eBay_Avg: 8.81, eBay_Low: 0.99, eBay_High: 14.98, eBay_Count: 7, eBay_Median: 9,
   },
   {
     Title: `X-Men`, Issue: `31`, Publisher: `Marvel`,
@@ -94530,7 +94530,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `11`,
     Crossover: `Fall of the House of X`, Start_Bid: `6`,
     Volume: `6`, Entry: `5384`,
-    eBay_Avg: null, eBay_Low: 1.99, eBay_High: 69.99, eBay_Count: 6, eBay_Median: null,
+    eBay_Avg: 27.88, eBay_Low: 3.51, eBay_High: 59.99, eBay_Count: 9, eBay_Median: 25,
   },
   {
     Title: `X Lives of Wolverine`, Issue: `5`, Publisher: `Marvel`,
@@ -94568,7 +94568,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `11`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `6`, Entry: `5386`,
-    eBay_Avg: 32.92, eBay_Low: 7.25, eBay_High: 80.99, eBay_Count: 8, eBay_Median: 28.49,
+    eBay_Avg: 11.74, eBay_Low: 4.99, eBay_High: 29, eBay_Count: 8, eBay_Median: 8.99,
   },
   {
     Title: `New Mutants: Lethal Legion`, Issue: `1`, Publisher: `Marvel`,
@@ -94682,7 +94682,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel Krakoa Era`, Box: `11`,
     Crossover: `Fall of the House of X`, Start_Bid: `5`,
     Volume: `1`, Entry: `5392`,
-    eBay_Avg: 16.27, eBay_Low: 5.99, eBay_High: 26.34, eBay_Count: 9, eBay_Median: 14.44,
+    eBay_Avg: 18.16, eBay_Low: 1.89, eBay_High: 29.99, eBay_Count: 9, eBay_Median: 19.95,
   },
   {
     Title: `Rise of the Powers of X`, Issue: `2`, Publisher: `Marvel`,
@@ -94815,7 +94815,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `11`,
     Crossover: `Fall of the House of X`, Start_Bid: `5`,
     Volume: `1`, Entry: `5399`,
-    eBay_Avg: 9.3, eBay_Low: 2.99, eBay_High: 13, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 5.34, eBay_Low: 1.54, eBay_High: 11, eBay_Count: 8, eBay_Median: 3.79,
   },
   {
     Title: `Cable`, Issue: `2`, Publisher: `Marvel`,
@@ -95480,7 +95480,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `15`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `5827`,
-    eBay_Avg: 8.34, eBay_Low: 2.14, eBay_High: 19.36, eBay_Count: 7, eBay_Median: 6.99,
+    eBay_Avg: 7.15, eBay_Low: 3, eBay_High: 11, eBay_Count: 8, eBay_Median: 7.44,
   },
   {
     Title: `X-Men Gold`, Issue: `20`, Publisher: `Marvel`,
@@ -95784,7 +95784,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `15`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `3`, Entry: `5844`,
-    eBay_Avg: 8.25, eBay_Low: 3.66, eBay_High: 16.74, eBay_Count: 7, eBay_Median: 6.62,
+    eBay_Avg: 5.37, eBay_Low: 1.99, eBay_High: 12.99, eBay_Count: 8, eBay_Median: 4.2,
   },
   {
     Title: `Uncanny X-Men`, Issue: `2`, Publisher: `Marvel`,
@@ -96202,7 +96202,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `15`,
     Crossover: `X-Men Disassembled`, Start_Bid: `5`,
     Volume: `1`, Entry: `5866`,
-    eBay_Avg: 8.25, eBay_Low: 3.66, eBay_High: 16.74, eBay_Count: 7, eBay_Median: 6.62,
+    eBay_Avg: 5.37, eBay_Low: 1.99, eBay_High: 12.99, eBay_Count: 8, eBay_Median: 4.2,
   },
   {
     Title: `Multiple Man`, Issue: `2`, Publisher: `Marvel`,
@@ -96240,7 +96240,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `15`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `5`, Entry: `5868`,
-    eBay_Avg: 10.26, eBay_Low: 2.09, eBay_High: 29.99, eBay_Count: 7, eBay_Median: 7.99,
+    eBay_Avg: 9.24, eBay_Low: 4.86, eBay_High: 19, eBay_Count: 8, eBay_Median: 7.05,
   },
   {
     Title: `X-Men`, Issue: `1`, Publisher: `Marvel`,
@@ -96259,7 +96259,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `15`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `4`, Entry: `5869`,
-    eBay_Avg: 7.84, eBay_Low: 4.12, eBay_High: 9.99, eBay_Count: 6, eBay_Median: 8.97,
+    eBay_Avg: 11.27, eBay_Low: 5.9, eBay_High: 17.99, eBay_Count: 6, eBay_Median: 10.25,
   },
   {
     Title: `Extermination`, Issue: `1`, Publisher: `Marvel`,
@@ -96278,7 +96278,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `15`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `5870`,
-    eBay_Avg: 8.66, eBay_Low: 1.5, eBay_High: 21, eBay_Count: 9, eBay_Median: 5.99,
+    eBay_Avg: 11.96, eBay_Low: 6.73, eBay_High: 21, eBay_Count: 10, eBay_Median: 11,
   },
   {
     Title: `Extermination`, Issue: `2`, Publisher: `Marvel`,
@@ -97038,7 +97038,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `15`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `2`, Entry: `5910`,
-    eBay_Avg: 27.8, eBay_Low: 7.79, eBay_High: 64.07, eBay_Count: 9, eBay_Median: 24.95,
+    eBay_Avg: 44.08, eBay_Low: 7, eBay_High: 121.28, eBay_Count: 7, eBay_Median: 32.09,
   },
   {
     Title: `Uncanny X-Force`, Issue: `2`, Publisher: `Marvel`,
@@ -97247,7 +97247,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `15`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `4`, Entry: `5921`,
-    eBay_Avg: 7.84, eBay_Low: 4.12, eBay_High: 9.99, eBay_Count: 6, eBay_Median: 8.97,
+    eBay_Avg: 11.27, eBay_Low: 5.9, eBay_High: 17.99, eBay_Count: 6, eBay_Median: 10.25,
   },
   {
     Title: `X-Men`, Issue: `2`, Publisher: `Marvel`,
@@ -97570,7 +97570,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `15`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `4`, Entry: `5938`,
-    eBay_Avg: null, eBay_Low: 2.58, eBay_High: 59.99, eBay_Count: 10, eBay_Median: null,
+    eBay_Avg: 19.46, eBay_Low: 4.39, eBay_High: 54.99, eBay_Count: 9, eBay_Median: 19.25,
   },
   {
     Title: `X-Men`, Issue: `27`, Publisher: `Marvel`,
@@ -97589,7 +97589,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `15`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `4`, Entry: `5939`,
-    eBay_Avg: 5.77, eBay_Low: 5.19, eBay_High: 11, eBay_Count: 10, eBay_Median: 5.19,
+    eBay_Avg: 22.22, eBay_Low: 3.5, eBay_High: 58.49, eBay_Count: 8, eBay_Median: 10.5,
   },
   {
     Title: `X-Men`, Issue: `28`, Publisher: `Marvel`,
@@ -97608,7 +97608,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `15`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `4`, Entry: `5940`,
-    eBay_Avg: 8.32, eBay_Low: 0.99, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 8,
+    eBay_Avg: 6.67, eBay_Low: 0.99, eBay_High: 13.65, eBay_Count: 8, eBay_Median: 6.87,
   },
   {
     Title: `X-Men`, Issue: `31`, Publisher: `Marvel`,
@@ -97646,7 +97646,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `15`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `4`, Entry: `5942`,
-    eBay_Avg: null, eBay_Low: 1.99, eBay_High: 69.99, eBay_Count: 6, eBay_Median: null,
+    eBay_Avg: 27.88, eBay_Low: 3.51, eBay_High: 59.99, eBay_Count: 9, eBay_Median: 25,
   },
   {
     Title: `X-Men`, Issue: `36`, Publisher: `Marvel`,
@@ -97779,7 +97779,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `15`,
     Crossover: `Battle of the Atom`, Start_Bid: `5`,
     Volume: `1`, Entry: `5949`,
-    eBay_Avg: 5.9, eBay_Low: 1.42, eBay_High: 13, eBay_Count: 8, eBay_Median: 5.62,
+    eBay_Avg: 10.35, eBay_Low: 3.51, eBay_High: 24.99, eBay_Count: 9, eBay_Median: 8,
   },
   {
     Title: `X-Men: Battle of the Atom`, Issue: `2`, Publisher: `Marvel`,
@@ -97798,7 +97798,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `15`,
     Crossover: `Battle of the Atom`, Start_Bid: `5`,
     Volume: `1`, Entry: `5950`,
-    eBay_Avg: 6.69, eBay_Low: 1.6, eBay_High: 17, eBay_Count: 10, eBay_Median: 6.74,
+    eBay_Avg: 5.24, eBay_Low: 2.99, eBay_High: 8.46, eBay_Count: 8, eBay_Median: 4.48,
   },
   {
     Title: `Wolverine and the X-Men`, Issue: `8`, Publisher: `Marvel`,
@@ -98254,7 +98254,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `15`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `4`, Entry: `5976`,
-    eBay_Avg: 13.27, eBay_Low: 1.99, eBay_High: 30, eBay_Count: 9, eBay_Median: 12,
+    eBay_Avg: 12.96, eBay_Low: 3, eBay_High: 23.6, eBay_Count: 8, eBay_Median: 13.55,
   },
   {
     Title: `Extraordinary X-Men`, Issue: `1`, Publisher: `Marvel`,
@@ -98425,7 +98425,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `15`,
     Crossover: `Death of X`, Start_Bid: `5`,
     Volume: `1`, Entry: `5985`,
-    eBay_Avg: 14.53, eBay_Low: 1.34, eBay_High: 37.99, eBay_Count: 9, eBay_Median: 14,
+    eBay_Avg: 13.01, eBay_Low: 3.57, eBay_High: 20, eBay_Count: 10, eBay_Median: 16.49,
   },
   {
     Title: `Death of X`, Issue: `2`, Publisher: `Marvel`,
@@ -98558,7 +98558,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `15`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `5992`,
-    eBay_Avg: 11.15, eBay_Low: 3.5, eBay_High: 20.06, eBay_Count: 7, eBay_Median: 12,
+    eBay_Avg: 11.17, eBay_Low: 3.5, eBay_High: 20.22, eBay_Count: 7, eBay_Median: 12,
   },
   {
     Title: `Uncanny Avengers`, Issue: `32`, Publisher: `Marvel`,
@@ -98786,7 +98786,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `15`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `4`, Entry: `6004`,
-    eBay_Avg: 12.33, eBay_Low: 5.95, eBay_High: 30, eBay_Count: 9, eBay_Median: 10.62,
+    eBay_Avg: 25.12, eBay_Low: 4, eBay_High: 60, eBay_Count: 8, eBay_Median: 19.99,
   },
   {
     Title: `Amazing X-Men`, Issue: `11`, Publisher: `Marvel`,
@@ -99375,7 +99375,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `72`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `1`, Entry: `6035`,
-    eBay_Avg: 7.49, eBay_Low: 1.92, eBay_High: 19, eBay_Count: 10, eBay_Median: 7,
+    eBay_Avg: 24.44, eBay_Low: 4, eBay_High: 65, eBay_Count: 9, eBay_Median: 20,
   },
   {
     Title: `Hunt For Wolverine: Adamantium Agenda`, Issue: `1`, Publisher: `Marvel`,
@@ -99584,7 +99584,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `9`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `6046`,
-    eBay_Avg: 4.84, eBay_Low: 1.95, eBay_High: 8.8, eBay_Count: 9, eBay_Median: 4,
+    eBay_Avg: 6.68, eBay_Low: 3.49, eBay_High: 10, eBay_Count: 8, eBay_Median: 6.5,
   },
   {
     Title: `Domino: Hot Shots`, Issue: `2`, Publisher: `Marvel`,
@@ -100021,7 +100021,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `9`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `6072`,
-    eBay_Avg: 10.58, eBay_Low: 5.28, eBay_High: 19.95, eBay_Count: 9, eBay_Median: 9.35,
+    eBay_Avg: 8.91, eBay_Low: 3.99, eBay_High: 14.99, eBay_Count: 6, eBay_Median: 8.74,
   },
   {
     Title: `Uncanny X-Men`, Issue: `5`, Publisher: `Marvel`,
@@ -100306,7 +100306,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `9`,
     Crossover: `Age of X-Man`, Start_Bid: `5`,
     Volume: `1`, Entry: `6087`,
-    eBay_Avg: 6.92, eBay_Low: 3.99, eBay_High: 15, eBay_Count: 8, eBay_Median: 5.86,
+    eBay_Avg: 4.59, eBay_Low: 1.95, eBay_High: 9.99, eBay_Count: 8, eBay_Median: 4.25,
   },
   {
     Title: `Dead Man Logan`, Issue: `1`, Publisher: `Marvel`,
@@ -100325,7 +100325,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `9`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `6088`,
-    eBay_Avg: 5.29, eBay_Low: 3, eBay_High: 8.99, eBay_Count: 8, eBay_Median: 4.47,
+    eBay_Avg: 9.54, eBay_Low: 4.95, eBay_High: 15, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `Dead Man Logan`, Issue: `2`, Publisher: `Marvel`,
@@ -100724,7 +100724,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `9`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `2`, Entry: `6114`,
-    eBay_Avg: 8.77, eBay_Low: 1.72, eBay_High: 19.99, eBay_Count: 8, eBay_Median: 7.25,
+    eBay_Avg: 10.17, eBay_Low: 1.72, eBay_High: 19.99, eBay_Count: 7, eBay_Median: 12.99,
   },
   {
     Title: `X-Men Gold`, Issue: `2`, Publisher: `Marvel`,
@@ -101484,7 +101484,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `15`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `5`, Entry: `6157`,
-    eBay_Avg: 10.26, eBay_Low: 2.09, eBay_High: 29.99, eBay_Count: 7, eBay_Median: 7.99,
+    eBay_Avg: 9.24, eBay_Low: 4.86, eBay_High: 19, eBay_Count: 8, eBay_Median: 7.05,
   },
   {
     Title: `X-Force`, Issue: `2`, Publisher: `Marvel`,
@@ -101674,7 +101674,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `9`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `2`, Entry: `6167`,
-    eBay_Avg: 16.25, eBay_Low: 2.01, eBay_High: 50, eBay_Count: 9, eBay_Median: 17.8,
+    eBay_Avg: 3.64, eBay_Low: 1.9, eBay_High: 6.99, eBay_Count: 6, eBay_Median: 3,
   },
   {
     Title: `Exiles`, Issue: `2`, Publisher: `Marvel`,
@@ -101864,7 +101864,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `9`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `3`, Entry: `6177`,
-    eBay_Avg: 11.67, eBay_Low: 6.99, eBay_High: 17.31, eBay_Count: 8, eBay_Median: 9.99,
+    eBay_Avg: 14.54, eBay_Low: 3, eBay_High: 29.99, eBay_Count: 9, eBay_Median: 11.23,
   },
   {
     Title: `Weapon X`, Issue: `2`, Publisher: `Marvel`,
@@ -102111,7 +102111,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `9`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `4`, Entry: `6190`,
-    eBay_Avg: 9.3, eBay_Low: 2.99, eBay_High: 13, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 5.34, eBay_Low: 1.54, eBay_High: 11, eBay_Count: 8, eBay_Median: 3.79,
   },
   {
     Title: `Cable`, Issue: `2`, Publisher: `Marvel`,
@@ -102187,7 +102187,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `9`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `3`, Entry: `6194`,
-    eBay_Avg: 9.14, eBay_Low: 3, eBay_High: 24.99, eBay_Count: 8, eBay_Median: 6.49,
+    eBay_Avg: 9.69, eBay_Low: 2.25, eBay_High: 24.99, eBay_Count: 9, eBay_Median: 7.99,
   },
   {
     Title: `Iceman`, Issue: `2`, Publisher: `Marvel`,
@@ -102339,7 +102339,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `9`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `6202`,
-    eBay_Avg: 6.59, eBay_Low: 3.99, eBay_High: 10, eBay_Count: 5, eBay_Median: 5.99,
+    eBay_Avg: 7.48, eBay_Low: 1.65, eBay_High: 19.99, eBay_Count: 7, eBay_Median: 4.99,
   },
   {
     Title: `Jean Grey`, Issue: `2`, Publisher: `Marvel`,
@@ -102510,7 +102510,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `9`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `4`, Entry: `6211`,
-    eBay_Avg: 8.67, eBay_Low: 3.99, eBay_High: 19.99, eBay_Count: 8, eBay_Median: 5.99,
+    eBay_Avg: 8.88, eBay_Low: 5, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 5.99,
   },
   {
     Title: `Ultimate X-Men`, Issue: `1`, Publisher: `Marvel`,
@@ -102529,7 +102529,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Ultimate Marvel`, Box: `9`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `3`, Entry: `6212`,
-    eBay_Avg: 10.62, eBay_Low: 1, eBay_High: 29.69, eBay_Count: 8, eBay_Median: 9.99,
+    eBay_Avg: 16.29, eBay_Low: 4, eBay_High: 45, eBay_Count: 7, eBay_Median: 15,
   },
   {
     Title: `Rise of the Powers of X`, Issue: `4`, Publisher: `Marvel`,
@@ -102586,7 +102586,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `9`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `6215`,
-    eBay_Avg: 5.77, eBay_Low: 5.19, eBay_High: 11, eBay_Count: 10, eBay_Median: 5.19,
+    eBay_Avg: 22.22, eBay_Low: 3.5, eBay_High: 58.49, eBay_Count: 8, eBay_Median: 10.5,
   },
   {
     Title: `X-Men`, Issue: `28`, Publisher: `Marvel`,
@@ -102605,7 +102605,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `9`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `5`, Entry: `6216`,
-    eBay_Avg: 8.32, eBay_Low: 0.99, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 8,
+    eBay_Avg: 6.67, eBay_Low: 0.99, eBay_High: 13.65, eBay_Count: 8, eBay_Median: 6.87,
   },
   {
     Title: `X-Men`, Issue: `29`, Publisher: `Marvel`,
@@ -102643,7 +102643,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `9`,
     Crossover: `Fall of the House of X`, Start_Bid: `5`,
     Volume: `1`, Entry: `6218`,
-    eBay_Avg: 9.47, eBay_Low: 3.99, eBay_High: 17.99, eBay_Count: 7, eBay_Median: 7.35,
+    eBay_Avg: 12.34, eBay_Low: 6, eBay_High: 17.99, eBay_Count: 7, eBay_Median: 13.48,
   },
   {
     Title: `X-Force`, Issue: `47`, Publisher: `Marvel`,
@@ -102738,7 +102738,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `11`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `2`, Entry: `6224`,
-    eBay_Avg: 28.5, eBay_Low: 5.99, eBay_High: 45, eBay_Count: 6, eBay_Median: 33.5,
+    eBay_Avg: 23.74, eBay_Low: 5.99, eBay_High: 45, eBay_Count: 8, eBay_Median: 19.99,
   },
   {
     Title: `X-Men Legends`, Issue: `1`, Publisher: `Marvel`,
@@ -102795,7 +102795,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `11`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `6227`,
-    eBay_Avg: 5.68, eBay_Low: 3.99, eBay_High: 8.65, eBay_Count: 10, eBay_Median: 5,
+    eBay_Avg: 8.62, eBay_Low: 3.61, eBay_High: 20, eBay_Count: 8, eBay_Median: 5.21,
   },
   {
     Title: `X-Men: Secret`, Issue: `1`, Publisher: `Marvel`,
@@ -102814,7 +102814,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `9`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `6`, Entry: `6228`,
-    eBay_Avg: 43.49, eBay_Low: 12.99, eBay_High: 99.99, eBay_Count: 8, eBay_Median: 29.98,
+    eBay_Avg: 16.33, eBay_Low: 2.75, eBay_High: 34.99, eBay_Count: 8, eBay_Median: 14.1,
   },
   {
     Title: `Marauders`, Issue: `10`, Publisher: `Marvel`,
@@ -102966,7 +102966,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `9`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `3`, Entry: `6240`,
-    eBay_Avg: 14.97, eBay_Low: 2, eBay_High: 36.07, eBay_Count: 8, eBay_Median: 14.35,
+    eBay_Avg: 7.43, eBay_Low: 3.49, eBay_High: 17.55, eBay_Count: 7, eBay_Median: 4.99,
   },
   {
     Title: `Weapon H`, Issue: `1`, Publisher: `Marvel`,
@@ -103004,7 +103004,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `9`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `6242`,
-    eBay_Avg: 25.94, eBay_Low: 8, eBay_High: 62.38, eBay_Count: 8, eBay_Median: 22.31,
+    eBay_Avg: 21.56, eBay_Low: 3.4, eBay_High: 48, eBay_Count: 9, eBay_Median: 23.16,
   },
   {
     Title: `Wolverine: Madripoor Knights`, Issue: `5`, Publisher: `Marvel`,
@@ -103118,7 +103118,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Ultimate Marvel`, Box: `25`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `6249`,
-    eBay_Avg: 14.09, eBay_Low: 3.28, eBay_High: 35, eBay_Count: 10, eBay_Median: 12.5,
+    eBay_Avg: 17.69, eBay_Low: 3, eBay_High: 28.59, eBay_Count: 10, eBay_Median: 18.7,
   },
   {
     Title: `Ultimate Avengers`, Issue: `2`, Publisher: `Marvel`,
@@ -103441,7 +103441,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `25`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `6266`,
-    eBay_Avg: 13.78, eBay_Low: 6, eBay_High: 25, eBay_Count: 9, eBay_Median: 10,
+    eBay_Avg: 9.39, eBay_Low: 2.9, eBay_High: 20.21, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `Ultimate Nightmare`, Issue: `2`, Publisher: `Marvel`,
@@ -103536,7 +103536,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `25`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `6271`,
-    eBay_Avg: 13.18, eBay_Low: 5.99, eBay_High: 24.98, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 10.78, eBay_Low: 1, eBay_High: 20, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `Ultimate Extinction`, Issue: `2`, Publisher: `Marvel`,
@@ -103631,7 +103631,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `23`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `3`, Entry: `6276`,
-    eBay_Avg: 16.53, eBay_Low: 8.5, eBay_High: 30, eBay_Count: 10, eBay_Median: 12.89,
+    eBay_Avg: 16.56, eBay_Low: 8.5, eBay_High: 30, eBay_Count: 10, eBay_Median: 12.89,
   },
   {
     Title: `Ultimate Wolverine vs. Hulk`, Issue: `2`, Publisher: `Marvel`,
@@ -103745,7 +103745,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `25`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `6282`,
-    eBay_Avg: 12.68, eBay_Low: 3.29, eBay_High: 30, eBay_Count: 9, eBay_Median: 12,
+    eBay_Avg: 11.93, eBay_Low: 3.95, eBay_High: 30, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `Ultimate Iron Man`, Issue: `3`, Publisher: `Marvel`,
@@ -104106,7 +104106,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `25`,
     Crossover: ``, Start_Bid: `6`,
     Volume: `1`, Entry: `6304`,
-    eBay_Avg: 13.34, eBay_Low: 2.62, eBay_High: 40, eBay_Count: 6, eBay_Median: 9.96,
+    eBay_Avg: 77.49, eBay_Low: 7.99, eBay_High: 200, eBay_Count: 8, eBay_Median: 59.99,
   },
   {
     Title: `Ultimate Comics Spider-Man`, Issue: `5`, Publisher: `Marvel`,
@@ -104980,7 +104980,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Ultimate Marvel`, Box: `85`,
     Crossover: `Cataclysm`, Start_Bid: `5`,
     Volume: `1`, Entry: `6350`,
-    eBay_Avg: 15.67, eBay_Low: 3.89, eBay_High: 29.99, eBay_Count: 8, eBay_Median: 14,
+    eBay_Avg: 14.06, eBay_Low: 6.99, eBay_High: 29.99, eBay_Count: 8, eBay_Median: 9.99,
   },
   {
     Title: `Cataclysm: The Ultimates' Last Stand`, Issue: `2`, Publisher: `Marvel`,
@@ -105189,7 +105189,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `25`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `6361`,
-    eBay_Avg: 15.57, eBay_Low: 5.99, eBay_High: 25.99, eBay_Count: 9, eBay_Median: 16.99,
+    eBay_Avg: 14.29, eBay_Low: 5.99, eBay_High: 29.99, eBay_Count: 10, eBay_Median: 12.47,
   },
   {
     Title: `Ultimate Invasion`, Issue: `2`, Publisher: `Marvel`,
@@ -105284,7 +105284,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Ultimate Marvel`, Box: `85`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `6366`,
-    eBay_Avg: 12, eBay_Low: 4.99, eBay_High: 27.99, eBay_Count: 9, eBay_Median: 9.84,
+    eBay_Avg: 12.82, eBay_Low: 4.99, eBay_High: 27.99, eBay_Count: 10, eBay_Median: 11.39,
   },
   {
     Title: `Ultimate Spider-Man`, Issue: `156`, Publisher: `Marvel`,
@@ -105379,7 +105379,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Ultimate Marvel`, Box: `85`,
     Crossover: ``, Start_Bid: `6`,
     Volume: `1`, Entry: `6371`,
-    eBay_Avg: 14.26, eBay_Low: 5.63, eBay_High: 27.96, eBay_Count: 6, eBay_Median: 11,
+    eBay_Avg: 21.07, eBay_Low: 4.99, eBay_High: 57.6, eBay_Count: 7, eBay_Median: 12.99,
   },
   {
     Title: `Ultimate Fallout`, Issue: `3`, Publisher: `Marvel`,
@@ -105607,7 +105607,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Ultimate Marvel`, Box: `85`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `6383`,
-    eBay_Avg: 65.74, eBay_Low: 9.99, eBay_High: 150, eBay_Count: 9, eBay_Median: 44.99,
+    eBay_Avg: 69.21, eBay_Low: 9, eBay_High: 150, eBay_Count: 8, eBay_Median: 59.99,
   },
   {
     Title: `Ultimate FF`, Issue: `2`, Publisher: `Marvel`,
@@ -105949,7 +105949,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `19`,
     Crossover: `Empyre`, Start_Bid: `5`,
     Volume: `1`, Entry: `6402`,
-    eBay_Avg: 5.03, eBay_Low: 2.75, eBay_High: 9.99, eBay_Count: 10, eBay_Median: 3.95,
+    eBay_Avg: 7.48, eBay_Low: 2.75, eBay_High: 14.99, eBay_Count: 9, eBay_Median: 6.99,
   },
   {
     Title: `Empyre`, Issue: `2`, Publisher: `Marvel`,
@@ -106139,7 +106139,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `19`,
     Crossover: `Empyre`, Start_Bid: `5`,
     Volume: `1`, Entry: `6412`,
-    eBay_Avg: 8.03, eBay_Low: 1.99, eBay_High: 17, eBay_Count: 10, eBay_Median: 8.99,
+    eBay_Avg: 8.26, eBay_Low: 2.75, eBay_High: 14.99, eBay_Count: 10, eBay_Median: 8.47,
   },
   {
     Title: `Empyre: Avengers`, Issue: `2`, Publisher: `Marvel`,
@@ -106462,7 +106462,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `19`,
     Crossover: `Siege`, Start_Bid: `5`,
     Volume: `1`, Entry: `6430`,
-    eBay_Avg: 8.17, eBay_Low: 3.99, eBay_High: 19.5, eBay_Count: 8, eBay_Median: 6.47,
+    eBay_Avg: 14.01, eBay_Low: 2.35, eBay_High: 35.2, eBay_Count: 9, eBay_Median: 6.99,
   },
   {
     Title: `Siege`, Issue: `2`, Publisher: `Marvel`,
@@ -106538,7 +106538,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `19`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `5`, Entry: `6434`,
-    eBay_Avg: 14.19, eBay_Low: 6.99, eBay_High: 26.93, eBay_Count: 10, eBay_Median: 9.99,
+    eBay_Avg: 8.49, eBay_Low: 2.99, eBay_High: 9.99, eBay_Count: 8, eBay_Median: 9.99,
   },
   {
     Title: `Secret Avengers`, Issue: `2`, Publisher: `Marvel`,
@@ -106595,7 +106595,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `19`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `6437`,
-    eBay_Avg: 12.38, eBay_Low: 2.43, eBay_High: 27.96, eBay_Count: 10, eBay_Median: 9.99,
+    eBay_Avg: 18.2, eBay_Low: 1.8, eBay_High: 28.07, eBay_Count: 10, eBay_Median: 18.52,
   },
   {
     Title: `Secret Avengers`, Issue: `1`, Publisher: `Marvel`,
@@ -106614,7 +106614,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `19`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `4`, Entry: `6438`,
-    eBay_Avg: 14.19, eBay_Low: 6.99, eBay_High: 26.93, eBay_Count: 10, eBay_Median: 9.99,
+    eBay_Avg: 8.49, eBay_Low: 2.99, eBay_High: 9.99, eBay_Count: 8, eBay_Median: 9.99,
   },
   {
     Title: `Secret Avengers`, Issue: `2`, Publisher: `Marvel`,
@@ -106709,7 +106709,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `19`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `4`, Entry: `6443`,
-    eBay_Avg: 12.38, eBay_Low: 2.43, eBay_High: 27.96, eBay_Count: 10, eBay_Median: 9.99,
+    eBay_Avg: 18.2, eBay_Low: 1.8, eBay_High: 28.07, eBay_Count: 10, eBay_Median: 18.52,
   },
   {
     Title: `Secret Avengers`, Issue: `7`, Publisher: `Marvel`,
@@ -106899,7 +106899,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `19`,
     Crossover: `Original Sin`, Start_Bid: `5`,
     Volume: `1`, Entry: `6453`,
-    eBay_Avg: 12.43, eBay_Low: 1.59, eBay_High: 34, eBay_Count: 8, eBay_Median: 6.92,
+    eBay_Avg: 58.19, eBay_Low: 4, eBay_High: 142.64, eBay_Count: 10, eBay_Median: 52.66,
   },
   {
     Title: `Original Sin`, Issue: `2`, Publisher: `Marvel`,
@@ -107146,7 +107146,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `19`,
     Crossover: `Civil War II`, Start_Bid: `5`,
     Volume: `1`, Entry: `6466`,
-    eBay_Avg: 7.35, eBay_Low: 4, eBay_High: 12, eBay_Count: 7, eBay_Median: 8,
+    eBay_Avg: 19.52, eBay_Low: 2.83, eBay_High: 31, eBay_Count: 10, eBay_Median: 21,
   },
   {
     Title: `Civil War II`, Issue: `1`, Publisher: `Marvel`,
@@ -108039,7 +108039,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `19`,
     Crossover: `AXIS`, Start_Bid: `5`,
     Volume: `1`, Entry: `6520`,
-    eBay_Avg: 9.97, eBay_Low: 2.99, eBay_High: 24.99, eBay_Count: 7, eBay_Median: 8.54,
+    eBay_Avg: 8.7, eBay_Low: 1.97, eBay_High: 15, eBay_Count: 8, eBay_Median: 8.33,
   },
   {
     Title: `Avengers & X-Men: AXIS`, Issue: `2`, Publisher: `Marvel`,
@@ -108210,7 +108210,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `19`,
     Crossover: `Avengers vs X-Men`, Start_Bid: `5`,
     Volume: `1`, Entry: `6529`,
-    eBay_Avg: null, eBay_Low: 3.95, eBay_High: 195, eBay_Count: 9, eBay_Median: null,
+    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
     Title: `Avengers vs. X-Men`, Issue: `1`, Publisher: `Marvel`,
@@ -108229,7 +108229,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `19`,
     Crossover: `Avengers vs X-Men`, Start_Bid: `5`,
     Volume: `1`, Entry: `6530`,
-    eBay_Avg: null, eBay_Low: 25, eBay_High: 227.5, eBay_Count: 10, eBay_Median: null,
+    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
     Title: `Avengers vs. X-Men`, Issue: `2`, Publisher: `Marvel`,
@@ -109217,7 +109217,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `19`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `3`, Entry: `6585`,
-    eBay_Avg: 19.69, eBay_Low: 5.35, eBay_High: 55, eBay_Count: 7, eBay_Median: 10.43,
+    eBay_Avg: 17.29, eBay_Low: 6.99, eBay_High: 40.45, eBay_Count: 7, eBay_Median: 10.79,
   },
   {
     Title: `The Iron Age: Alpha`, Issue: `1`, Publisher: `Marvel`,
@@ -109426,7 +109426,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `27`,
     Crossover: ``, Start_Bid: `6`,
     Volume: `8`, Entry: `6597`,
-    eBay_Avg: 7.56, eBay_Low: 5.69, eBay_High: 8.99, eBay_Count: 3, eBay_Median: 8,
+    eBay_Avg: 11.56, eBay_Low: 4.99, eBay_High: 29.99, eBay_Count: 7, eBay_Median: 9.99,
   },
   {
     Title: `The Avengers`, Issue: `13`, Publisher: `Marvel`,
@@ -109901,7 +109901,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `27`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `6`, Entry: `6622`,
-    eBay_Avg: 12.33, eBay_Low: 2.32, eBay_High: 25, eBay_Count: 9, eBay_Median: 11.99,
+    eBay_Avg: 8.27, eBay_Low: 2.75, eBay_High: 19.99, eBay_Count: 8, eBay_Median: 3.94,
   },
   {
     Title: `Avengers Assemble: Alpha`, Issue: `1`, Publisher: `Marvel`,
@@ -110357,7 +110357,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `6646`,
-    eBay_Avg: 6.97, eBay_Low: 2.2, eBay_High: 12.99, eBay_Count: 10, eBay_Median: 5.25,
+    eBay_Avg: 12.54, eBay_Low: 2.26, eBay_High: 32.99, eBay_Count: 8, eBay_Median: 9.5,
   },
   {
     Title: `Savage Avengers`, Issue: `2`, Publisher: `Marvel`,
@@ -110376,7 +110376,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `6647`,
-    eBay_Avg: 3.56, eBay_Low: 3.56, eBay_High: 3.56, eBay_Count: 6, eBay_Median: 3.56,
+    eBay_Avg: 21.44, eBay_Low: 2.9, eBay_High: 39.99, eBay_Count: 10, eBay_Median: 15.3,
   },
   {
     Title: `Savage Avengers`, Issue: `3`, Publisher: `Marvel`,
@@ -110395,7 +110395,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `6648`,
-    eBay_Avg: 3.3, eBay_Low: 1.49, eBay_High: 5.95, eBay_Count: 9, eBay_Median: 2.95,
+    eBay_Avg: 4.26, eBay_Low: 2.09, eBay_High: 5.77, eBay_Count: 7, eBay_Median: 3.99,
   },
   {
     Title: `Savage Avengers`, Issue: `1`, Publisher: `Marvel`,
@@ -110414,7 +110414,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `27`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `7`, Entry: `6651`,
-    eBay_Avg: 6.97, eBay_Low: 2.2, eBay_High: 12.99, eBay_Count: 10, eBay_Median: 5.25,
+    eBay_Avg: 12.54, eBay_Low: 2.26, eBay_High: 32.99, eBay_Count: 8, eBay_Median: 9.5,
   },
   {
     Title: `Savage Avengers`, Issue: `2`, Publisher: `Marvel`,
@@ -110433,7 +110433,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `27`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `7`, Entry: `6652`,
-    eBay_Avg: 3.56, eBay_Low: 3.56, eBay_High: 3.56, eBay_Count: 6, eBay_Median: 3.56,
+    eBay_Avg: 21.44, eBay_Low: 2.9, eBay_High: 39.99, eBay_Count: 10, eBay_Median: 15.3,
   },
   {
     Title: `Avengers`, Issue: `59`, Publisher: `Marvel`,
@@ -110490,7 +110490,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `9`, Entry: `6655`,
-    eBay_Avg: 16.4, eBay_Low: 3.99, eBay_High: 39.99, eBay_Count: 8, eBay_Median: 9.99,
+    eBay_Avg: 28.85, eBay_Low: 4.72, eBay_High: 53, eBay_Count: 9, eBay_Median: 29.99,
   },
   {
     Title: `War of the Realms: Giant-Man`, Issue: `1`, Publisher: `Marvel`,
@@ -110775,7 +110775,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `27`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `6670`,
-    eBay_Avg: 3.67, eBay_Low: 1.94, eBay_High: 5.99, eBay_Count: 9, eBay_Median: 3.49,
+    eBay_Avg: 5.96, eBay_Low: 2.9, eBay_High: 11, eBay_Count: 9, eBay_Median: 4.99,
   },
   {
     Title: `Avengers: Twilight`, Issue: `1`, Publisher: `Marvel`,
@@ -110794,7 +110794,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `27`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `6671`,
-    eBay_Avg: 14.59, eBay_Low: 4.99, eBay_High: 30, eBay_Count: 8, eBay_Median: 13.99,
+    eBay_Avg: 14.8, eBay_Low: 9.99, eBay_High: 20, eBay_Count: 9, eBay_Median: 13.99,
   },
   {
     Title: `Avengers: Twilight`, Issue: `2`, Publisher: `Marvel`,
@@ -110908,7 +110908,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `27`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `9`, Entry: `6677`,
-    eBay_Avg: 40.92, eBay_Low: 4.95, eBay_High: 112, eBay_Count: 10, eBay_Median: 40.94,
+    eBay_Avg: 23.74, eBay_Low: 4.95, eBay_High: 56, eBay_Count: 9, eBay_Median: 20,
   },
   {
     Title: `The Avengers`, Issue: `2`, Publisher: `Marvel`,
@@ -111060,7 +111060,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `27`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `9`, Entry: `6685`,
-    eBay_Avg: 7.56, eBay_Low: 5.69, eBay_High: 8.99, eBay_Count: 3, eBay_Median: 8,
+    eBay_Avg: 11.56, eBay_Low: 4.99, eBay_High: 29.99, eBay_Count: 7, eBay_Median: 9.99,
   },
   {
     Title: `The Avengers`, Issue: `11`, Publisher: `Marvel`,
@@ -111440,7 +111440,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `27`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `6709`,
-    eBay_Avg: 9.74, eBay_Low: 4.5, eBay_High: 19.95, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 7.33, eBay_Low: 2, eBay_High: 12.99, eBay_Count: 9, eBay_Median: 7.99,
   },
   {
     Title: `Infinity Countdown`, Issue: `2`, Publisher: `Marvel`,
@@ -111668,7 +111668,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `22`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `5`, Entry: `6816`,
-    eBay_Avg: 12.42, eBay_Low: 5.35, eBay_High: 26, eBay_Count: 9, eBay_Median: 10,
+    eBay_Avg: 11.47, eBay_Low: 5, eBay_High: 22.49, eBay_Count: 9, eBay_Median: 10,
   },
   {
     Title: `Shang-Chi`, Issue: `2`, Publisher: `Marvel`,
@@ -111706,7 +111706,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `22`,
     Crossover: ``, Start_Bid: `6`,
     Volume: `2`, Entry: `6725`,
-    eBay_Avg: 18.52, eBay_Low: 1.92, eBay_High: 44.99, eBay_Count: 9, eBay_Median: 13.99,
+    eBay_Avg: 14.45, eBay_Low: 4, eBay_High: 38.99, eBay_Count: 7, eBay_Median: 9.95,
   },
   {
     Title: `Hulk`, Issue: `3`, Publisher: `Marvel`,
@@ -111953,7 +111953,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `22`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `6738`,
-    eBay_Avg: 16.35, eBay_Low: 9.95, eBay_High: 23.5, eBay_Count: 8, eBay_Median: 16.72,
+    eBay_Avg: 15.11, eBay_Low: 2.9, eBay_High: 27.99, eBay_Count: 9, eBay_Median: 14.26,
   },
   {
     Title: `Hulk`, Issue: `600`, Publisher: `Marvel`,
@@ -112637,7 +112637,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `22`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `4`, Entry: `6774`,
-    eBay_Avg: 21.71, eBay_Low: 5, eBay_High: 50.46, eBay_Count: 8, eBay_Median: 15.61,
+    eBay_Avg: 17.1, eBay_Low: 3.99, eBay_High: 30, eBay_Count: 8, eBay_Median: 16.27,
   },
   {
     Title: `Incredible Hulk`, Issue: `2`, Publisher: `Marvel`,
@@ -113036,7 +113036,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `22`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `6795`,
-    eBay_Avg: 7.09, eBay_Low: 6.67, eBay_High: 8.72, eBay_Count: 8, eBay_Median: 6.67,
+    eBay_Avg: 13.1, eBay_Low: 3.5, eBay_High: 27.99, eBay_Count: 9, eBay_Median: 10.48,
   },
   {
     Title: `The Totally Awesome Hulk`, Issue: `2`, Publisher: `Marvel`,
@@ -113378,7 +113378,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `22`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `3`, Entry: `6814`,
-    eBay_Avg: 23.22, eBay_Low: 4.99, eBay_High: 49.99, eBay_Count: 9, eBay_Median: 20.07,
+    eBay_Avg: 23.5, eBay_Low: 3.85, eBay_High: 52.99, eBay_Count: 8, eBay_Median: 15.99,
   },
   {
     Title: `Red Hulk`, Issue: `2`, Publisher: `Marvel`,
@@ -113663,7 +113663,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `22`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `5`, Entry: `6829`,
-    eBay_Avg: 18.52, eBay_Low: 1.92, eBay_High: 44.99, eBay_Count: 9, eBay_Median: 13.99,
+    eBay_Avg: 14.45, eBay_Low: 4, eBay_High: 38.99, eBay_Count: 7, eBay_Median: 9.95,
   },
   {
     Title: `Hulk`, Issue: `2`, Publisher: `Marvel`,
@@ -113910,7 +113910,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `22`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `6`, Entry: `6842`,
-    eBay_Avg: 11.89, eBay_Low: 3.75, eBay_High: 25, eBay_Count: 7, eBay_Median: 9.99,
+    eBay_Avg: 14.87, eBay_Low: 3.75, eBay_High: 24.5, eBay_Count: 6, eBay_Median: 12.99,
   },
   {
     Title: `The Incredible Hulk`, Issue: `2`, Publisher: `Marvel`,
@@ -114176,7 +114176,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `22`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `6857`,
-    eBay_Avg: 10.49, eBay_Low: 1.99, eBay_High: 22.99, eBay_Count: 8, eBay_Median: 8.47,
+    eBay_Avg: 9.97, eBay_Low: 3, eBay_High: 22.99, eBay_Count: 8, eBay_Median: 9.24,
   },
   {
     Title: `Indestructible Hulk`, Issue: `2`, Publisher: `Marvel`,
@@ -114499,7 +114499,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `22`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `6874`,
-    eBay_Avg: 9.4, eBay_Low: 1.99, eBay_High: 20, eBay_Count: 10, eBay_Median: 8.23,
+    eBay_Avg: 9.75, eBay_Low: 5.25, eBay_High: 24.99, eBay_Count: 10, eBay_Median: 8.73,
   },
   {
     Title: `Thanos vs. Hulk`, Issue: `2`, Publisher: `Marvel`,
@@ -114575,7 +114575,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `22`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `3`, Entry: `6878`,
-    eBay_Avg: 18.52, eBay_Low: 1.92, eBay_High: 44.99, eBay_Count: 9, eBay_Median: 13.99,
+    eBay_Avg: 14.45, eBay_Low: 4, eBay_High: 38.99, eBay_Count: 7, eBay_Median: 9.95,
   },
   {
     Title: `Hulk`, Issue: `2`, Publisher: `Marvel`,
@@ -114803,7 +114803,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `22`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `3`, Entry: `6890`,
-    eBay_Avg: 7.73, eBay_Low: 3.61, eBay_High: 14.95, eBay_Count: 7, eBay_Median: 8,
+    eBay_Avg: 9.9, eBay_Low: 1.19, eBay_High: 19.99, eBay_Count: 8, eBay_Median: 9.36,
   },
   {
     Title: `Maestro`, Issue: `1`, Publisher: `Marvel`,
@@ -114822,7 +114822,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `22`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `6891`,
-    eBay_Avg: 69.4, eBay_Low: 15, eBay_High: 225, eBay_Count: 5, eBay_Median: 25.99,
+    eBay_Avg: 16.94, eBay_Low: 4.99, eBay_High: 35, eBay_Count: 9, eBay_Median: 16.2,
   },
   {
     Title: `Maestro`, Issue: `2`, Publisher: `Marvel`,
@@ -114936,7 +114936,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `6897`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
+    eBay_Avg: 12.69, eBay_Low: 3.57, eBay_High: 32, eBay_Count: 8, eBay_Median: 9.62,
   },
   {
     Title: `WildC.A.T.s`, Issue: `2`, Publisher: `Image/WildStorm`,
@@ -114955,7 +114955,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Wildstorm`, Box: `72`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `6898`,
-    eBay_Avg: 6.69, eBay_Low: 2.84, eBay_High: 12.99, eBay_Count: 8, eBay_Median: 6.25,
+    eBay_Avg: 9.24, eBay_Low: 2.4, eBay_High: 19.99, eBay_Count: 10, eBay_Median: 8,
   },
   {
     Title: `Moon Knight`, Issue: `1`, Publisher: `Marvel`,
@@ -114974,7 +114974,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `5`, Entry: `6899`,
-    eBay_Avg: 13.38, eBay_Low: 8.5, eBay_High: 24.99, eBay_Count: 10, eBay_Median: 10.75,
+    eBay_Avg: 13.52, eBay_Low: 7, eBay_High: 24.99, eBay_Count: 9, eBay_Median: 14.99,
   },
   {
     Title: `Moon Knight`, Issue: `2`, Publisher: `Marvel`,
@@ -114993,7 +114993,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `6900`,
-    eBay_Avg: 9.49, eBay_Low: 2.25, eBay_High: 20, eBay_Count: 7, eBay_Median: 9.99,
+    eBay_Avg: 25.06, eBay_Low: 8.99, eBay_High: 64.99, eBay_Count: 7, eBay_Median: 14.99,
   },
   {
     Title: `Moon Knight`, Issue: `3`, Publisher: `Marvel`,
@@ -115012,7 +115012,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `6901`,
-    eBay_Avg: null, eBay_Low: 2.25, eBay_High: 75, eBay_Count: 10, eBay_Median: null,
+    eBay_Avg: 7.72, eBay_Low: 3.03, eBay_High: 9.99, eBay_Count: 6, eBay_Median: 8.18,
   },
   {
     Title: `Moon Knight`, Issue: `4`, Publisher: `Marvel`,
@@ -115031,7 +115031,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `6902`,
-    eBay_Avg: 8.41, eBay_Low: 3.94, eBay_High: 13, eBay_Count: 8, eBay_Median: 8.48,
+    eBay_Avg: 7.85, eBay_Low: 3.98, eBay_High: 13, eBay_Count: 8, eBay_Median: 7.35,
   },
   {
     Title: `Moon Knight`, Issue: `5`, Publisher: `Marvel`,
@@ -115050,7 +115050,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `6903`,
-    eBay_Avg: 6.61, eBay_Low: 2.25, eBay_High: 15.23, eBay_Count: 9, eBay_Median: 5,
+    eBay_Avg: 5, eBay_Low: 1, eBay_High: 12.99, eBay_Count: 8, eBay_Median: 3.25,
   },
   {
     Title: `Moon Knight`, Issue: `6`, Publisher: `Marvel`,
@@ -115069,7 +115069,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `6904`,
-    eBay_Avg: 9.33, eBay_Low: 2.25, eBay_High: 25.36, eBay_Count: 8, eBay_Median: 8.5,
+    eBay_Avg: 9.56, eBay_Low: 2.99, eBay_High: 25.58, eBay_Count: 8, eBay_Median: 8.5,
   },
   {
     Title: `Moon Knight`, Issue: `7`, Publisher: `Marvel`,
@@ -115221,7 +115221,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `7`, Entry: `6912`,
-    eBay_Avg: 13.38, eBay_Low: 8.5, eBay_High: 24.99, eBay_Count: 10, eBay_Median: 10.75,
+    eBay_Avg: 13.52, eBay_Low: 7, eBay_High: 24.99, eBay_Count: 9, eBay_Median: 14.99,
   },
   {
     Title: `Moon Knight`, Issue: `2`, Publisher: `Marvel`,
@@ -115240,7 +115240,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `7`, Entry: `6913`,
-    eBay_Avg: 9.49, eBay_Low: 2.25, eBay_High: 20, eBay_Count: 7, eBay_Median: 9.99,
+    eBay_Avg: 25.06, eBay_Low: 8.99, eBay_High: 64.99, eBay_Count: 7, eBay_Median: 14.99,
   },
   {
     Title: `Moon Knight`, Issue: `3`, Publisher: `Marvel`,
@@ -115259,7 +115259,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `7`, Entry: `6914`,
-    eBay_Avg: null, eBay_Low: 2.25, eBay_High: 75, eBay_Count: 10, eBay_Median: null,
+    eBay_Avg: 7.72, eBay_Low: 3.03, eBay_High: 9.99, eBay_Count: 6, eBay_Median: 8.18,
   },
   {
     Title: `Moon Knight`, Issue: `4`, Publisher: `Marvel`,
@@ -115278,7 +115278,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `7`, Entry: `6915`,
-    eBay_Avg: 8.41, eBay_Low: 3.94, eBay_High: 13, eBay_Count: 8, eBay_Median: 8.48,
+    eBay_Avg: 7.85, eBay_Low: 3.98, eBay_High: 13, eBay_Count: 8, eBay_Median: 7.35,
   },
   {
     Title: `Moon Knight`, Issue: `5`, Publisher: `Marvel`,
@@ -115297,7 +115297,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `7`, Entry: `6916`,
-    eBay_Avg: 6.61, eBay_Low: 2.25, eBay_High: 15.23, eBay_Count: 9, eBay_Median: 5,
+    eBay_Avg: 5, eBay_Low: 1, eBay_High: 12.99, eBay_Count: 8, eBay_Median: 3.25,
   },
   {
     Title: `Moon Knight`, Issue: `6`, Publisher: `Marvel`,
@@ -115316,7 +115316,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `7`, Entry: `6917`,
-    eBay_Avg: 9.33, eBay_Low: 2.25, eBay_High: 25.36, eBay_Count: 8, eBay_Median: 8.5,
+    eBay_Avg: 9.56, eBay_Low: 2.99, eBay_High: 25.58, eBay_Count: 8, eBay_Median: 8.5,
   },
   {
     Title: `Moon Knight`, Issue: `7`, Publisher: `Marvel`,
@@ -115430,7 +115430,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `8`,
     Volume: `8`, Entry: `6923`,
-    eBay_Avg: 13.38, eBay_Low: 8.5, eBay_High: 24.99, eBay_Count: 10, eBay_Median: 10.75,
+    eBay_Avg: 13.52, eBay_Low: 7, eBay_High: 24.99, eBay_Count: 9, eBay_Median: 14.99,
   },
   {
     Title: `Moon Knight`, Issue: `2`, Publisher: `Marvel`,
@@ -115449,7 +115449,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `8`, Entry: `6924`,
-    eBay_Avg: 9.49, eBay_Low: 2.25, eBay_High: 20, eBay_Count: 7, eBay_Median: 9.99,
+    eBay_Avg: 25.06, eBay_Low: 8.99, eBay_High: 64.99, eBay_Count: 7, eBay_Median: 14.99,
   },
   {
     Title: `Moon Knight`, Issue: `3`, Publisher: `Marvel`,
@@ -115468,7 +115468,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `8`, Entry: `6925`,
-    eBay_Avg: null, eBay_Low: 2.25, eBay_High: 75, eBay_Count: 10, eBay_Median: null,
+    eBay_Avg: 7.72, eBay_Low: 3.03, eBay_High: 9.99, eBay_Count: 6, eBay_Median: 8.18,
   },
   {
     Title: `Moon Knight`, Issue: `4`, Publisher: `Marvel`,
@@ -115487,7 +115487,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `8`, Entry: `6926`,
-    eBay_Avg: 8.41, eBay_Low: 3.94, eBay_High: 13, eBay_Count: 8, eBay_Median: 8.48,
+    eBay_Avg: 7.85, eBay_Low: 3.98, eBay_High: 13, eBay_Count: 8, eBay_Median: 7.35,
   },
   {
     Title: `Moon Knight`, Issue: `5`, Publisher: `Marvel`,
@@ -115506,7 +115506,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `8`, Entry: `6927`,
-    eBay_Avg: 6.61, eBay_Low: 2.25, eBay_High: 15.23, eBay_Count: 9, eBay_Median: 5,
+    eBay_Avg: 5, eBay_Low: 1, eBay_High: 12.99, eBay_Count: 8, eBay_Median: 3.25,
   },
   {
     Title: `Moon Knight`, Issue: `6`, Publisher: `Marvel`,
@@ -115525,7 +115525,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `8`, Entry: `6928`,
-    eBay_Avg: 9.33, eBay_Low: 2.25, eBay_High: 25.36, eBay_Count: 8, eBay_Median: 8.5,
+    eBay_Avg: 9.56, eBay_Low: 2.99, eBay_High: 25.58, eBay_Count: 8, eBay_Median: 8.5,
   },
   {
     Title: `Moon Knight`, Issue: `7`, Publisher: `Marvel`,
@@ -115734,7 +115734,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `9`, Entry: `6939`,
-    eBay_Avg: 13.38, eBay_Low: 8.5, eBay_High: 24.99, eBay_Count: 10, eBay_Median: 10.75,
+    eBay_Avg: 13.52, eBay_Low: 7, eBay_High: 24.99, eBay_Count: 9, eBay_Median: 14.99,
   },
   {
     Title: `Moon Knight`, Issue: `2`, Publisher: `Marvel`,
@@ -115753,7 +115753,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `9`, Entry: `6940`,
-    eBay_Avg: 9.49, eBay_Low: 2.25, eBay_High: 20, eBay_Count: 7, eBay_Median: 9.99,
+    eBay_Avg: 25.06, eBay_Low: 8.99, eBay_High: 64.99, eBay_Count: 7, eBay_Median: 14.99,
   },
   {
     Title: `Moon Knight`, Issue: `3`, Publisher: `Marvel`,
@@ -115772,7 +115772,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `9`, Entry: `6941`,
-    eBay_Avg: null, eBay_Low: 2.25, eBay_High: 75, eBay_Count: 10, eBay_Median: null,
+    eBay_Avg: 7.72, eBay_Low: 3.03, eBay_High: 9.99, eBay_Count: 6, eBay_Median: 8.18,
   },
   {
     Title: `Moon Knight: City of the Dead`, Issue: `1`, Publisher: `Marvel`,
@@ -115791,7 +115791,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `6942`,
-    eBay_Avg: 6.57, eBay_Low: 3.99, eBay_High: 9.99, eBay_Count: 6, eBay_Median: 5.25,
+    eBay_Avg: 7.14, eBay_Low: 2.77, eBay_High: 12.84, eBay_Count: 9, eBay_Median: 7.99,
   },
   {
     Title: `Moon Knight: City of the Dead`, Issue: `2`, Publisher: `Marvel`,
@@ -115886,7 +115886,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `10`, Entry: `6947`,
-    eBay_Avg: 13.38, eBay_Low: 8.5, eBay_High: 24.99, eBay_Count: 10, eBay_Median: 10.75,
+    eBay_Avg: 13.52, eBay_Low: 7, eBay_High: 24.99, eBay_Count: 9, eBay_Median: 14.99,
   },
   {
     Title: `Moon Knight`, Issue: `5`, Publisher: `Marvel`,
@@ -115905,7 +115905,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `10`, Entry: `6948`,
-    eBay_Avg: 6.61, eBay_Low: 2.25, eBay_High: 15.23, eBay_Count: 9, eBay_Median: 5,
+    eBay_Avg: 5, eBay_Low: 1, eBay_High: 12.99, eBay_Count: 8, eBay_Median: 3.25,
   },
   {
     Title: `Moon Knight`, Issue: `6`, Publisher: `Marvel`,
@@ -115924,7 +115924,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `10`, Entry: `6949`,
-    eBay_Avg: 9.33, eBay_Low: 2.25, eBay_High: 25.36, eBay_Count: 8, eBay_Median: 8.5,
+    eBay_Avg: 9.56, eBay_Low: 2.99, eBay_High: 25.58, eBay_Count: 8, eBay_Median: 8.5,
   },
   {
     Title: `Moon Knight`, Issue: `7`, Publisher: `Marvel`,
@@ -116380,7 +116380,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `2`, Entry: `6973`,
-    eBay_Avg: 6.37, eBay_Low: 3.5, eBay_High: 15.99, eBay_Count: 9, eBay_Median: 5.67,
+    eBay_Avg: 6.87, eBay_Low: 3, eBay_High: 13.48, eBay_Count: 10, eBay_Median: 4.99,
   },
   {
     Title: `Vengeance of the Moon Knight`, Issue: `7`, Publisher: `Marvel`,
@@ -116418,7 +116418,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel From the Ashes`, Box: `33`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `2`, Entry: `6975`,
-    eBay_Avg: 12.88, eBay_Low: 3.99, eBay_High: 22.99, eBay_Count: 9, eBay_Median: 14.99,
+    eBay_Avg: 25.24, eBay_Low: 9.99, eBay_High: 46.36, eBay_Count: 9, eBay_Median: 20.21,
   },
   {
     Title: `Vengeance of the Moon Knight`, Issue: `2`, Publisher: `Marvel`,
@@ -116627,7 +116627,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `11`, Entry: `6986`,
-    eBay_Avg: 9.49, eBay_Low: 2.25, eBay_High: 20, eBay_Count: 7, eBay_Median: 9.99,
+    eBay_Avg: 25.06, eBay_Low: 8.99, eBay_High: 64.99, eBay_Count: 7, eBay_Median: 14.99,
   },
   {
     Title: `Punisher War Journal`, Issue: `6`, Publisher: `Marvel`,
@@ -116703,7 +116703,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `26`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `7081`,
-    eBay_Avg: 9.88, eBay_Low: 2.82, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 9.95,
+    eBay_Avg: 8.08, eBay_Low: 2.9, eBay_High: 11.99, eBay_Count: 8, eBay_Median: 8.5,
   },
   {
     Title: `S.H.I.E.L.D.`, Issue: `2`, Publisher: `Marvel`,
@@ -116817,7 +116817,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `26`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `3`, Entry: `7087`,
-    eBay_Avg: 14.69, eBay_Low: 4.55, eBay_High: 24.99, eBay_Count: 9, eBay_Median: 10.95,
+    eBay_Avg: 19.99, eBay_Low: 8, eBay_High: 50, eBay_Count: 10, eBay_Median: 16.97,
   },
   {
     Title: `The Sentry`, Issue: `1`, Publisher: `Marvel`,
@@ -116836,7 +116836,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `26`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `7088`,
-    eBay_Avg: 26.81, eBay_Low: 2.13, eBay_High: 50, eBay_Count: 10, eBay_Median: 30.88,
+    eBay_Avg: 13.18, eBay_Low: 3, eBay_High: 34, eBay_Count: 8, eBay_Median: 9.97,
   },
   {
     Title: `The Sentry`, Issue: `2`, Publisher: `Marvel`,
@@ -117121,7 +117121,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Ultimate Marvel`, Box: `85`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `2`, Entry: `7103`,
-    eBay_Avg: null, eBay_Low: 3.75, eBay_High: 37.99, eBay_Count: 10, eBay_Median: null,
+    eBay_Avg: 13.02, eBay_Low: 3.18, eBay_High: 20, eBay_Count: 6, eBay_Median: 12.49,
   },
   {
     Title: `The Ultimates`, Issue: `2`, Publisher: `Marvel`,
@@ -117349,7 +117349,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Ultimate Marvel`, Box: `26`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `4`, Entry: `7115`,
-    eBay_Avg: 10.99, eBay_Low: 5.99, eBay_High: 22.98, eBay_Count: 7, eBay_Median: 8.65,
+    eBay_Avg: 18, eBay_Low: 6.73, eBay_High: 30.94, eBay_Count: 9, eBay_Median: 16.88,
   },
   {
     Title: `Ultimates 2`, Issue: `2`, Publisher: `Marvel`,
@@ -118147,7 +118147,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `26`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `7163`,
-    eBay_Avg: 8.74, eBay_Low: 3.95, eBay_High: 14.24, eBay_Count: 7, eBay_Median: 8.99,
+    eBay_Avg: 9.77, eBay_Low: 3.95, eBay_High: 16, eBay_Count: 8, eBay_Median: 9.99,
   },
   {
     Title: `Black Knight`, Issue: `2`, Publisher: `Marvel`,
@@ -118242,7 +118242,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `26`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `2`, Entry: `7168`,
-    eBay_Avg: 51.46, eBay_Low: 17.5, eBay_High: 133.63, eBay_Count: 6, eBay_Median: 33.77,
+    eBay_Avg: 13.1, eBay_Low: 5.33, eBay_High: 24.99, eBay_Count: 8, eBay_Median: 10.21,
   },
   {
     Title: `Contest of Champions`, Issue: `2`, Publisher: `Marvel`,
@@ -118432,7 +118432,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `26`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `7178`,
-    eBay_Avg: 4.76, eBay_Low: 2.5, eBay_High: 9.99, eBay_Count: 8, eBay_Median: 3.29,
+    eBay_Avg: 5.82, eBay_Low: 2.75, eBay_High: 9.79, eBay_Count: 8, eBay_Median: 6.02,
   },
   {
     Title: `Deathlok`, Issue: `2`, Publisher: `Marvel`,
@@ -118622,7 +118622,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `26`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `7188`,
-    eBay_Avg: 5.53, eBay_Low: 2.69, eBay_High: 9.99, eBay_Count: 7, eBay_Median: 5.35,
+    eBay_Avg: 4.75, eBay_Low: 2.9, eBay_High: 9.99, eBay_Count: 8, eBay_Median: 3.81,
   },
   {
     Title: `Agents of S.H.I.E.L.D.`, Issue: `2`, Publisher: `Marvel`,
@@ -118812,7 +118812,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `26`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `3`, Entry: `7198`,
-    eBay_Avg: 9.88, eBay_Low: 2.82, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 9.95,
+    eBay_Avg: 8.08, eBay_Low: 2.9, eBay_High: 11.99, eBay_Count: 8, eBay_Median: 8.5,
   },
   {
     Title: `S.H.I.E.L.D.`, Issue: `2`, Publisher: `Marvel`,
@@ -119154,7 +119154,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `26`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `7216`,
-    eBay_Avg: 12.28, eBay_Low: 2.56, eBay_High: 29.99, eBay_Count: 9, eBay_Median: 9,
+    eBay_Avg: 11.74, eBay_Low: 3.6, eBay_High: 24.99, eBay_Count: 6, eBay_Median: 9.5,
   },
   {
     Title: `Scarlet Witch`, Issue: `2`, Publisher: `Marvel`,
@@ -119211,7 +119211,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Marvel`, Box: `26`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `3`, Entry: `7219`,
-    eBay_Avg: 8.05, eBay_Low: 3.99, eBay_High: 19.99, eBay_Count: 8, eBay_Median: 5.38,
+    eBay_Avg: 3.27, eBay_Low: 1.43, eBay_High: 5, eBay_Count: 6, eBay_Median: 3.5,
   },
   {
     Title: `Marvel Voices: Legacy`, Issue: `1`, Publisher: `Marvel`,
@@ -119439,7 +119439,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `45`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `7233`,
-    eBay_Avg: 11.94, eBay_Low: 4.98, eBay_High: 17.22, eBay_Count: 10, eBay_Median: 11.04,
+    eBay_Avg: 7.5, eBay_Low: 3, eBay_High: 15, eBay_Count: 8, eBay_Median: 4,
   },
   {
     Title: `Birds of Prey`, Issue: `9`, Publisher: `DC`,
@@ -120940,7 +120940,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `45`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `2`, Entry: `7312`,
-    eBay_Avg: 7.12, eBay_Low: 1, eBay_High: 12.7, eBay_Count: 9, eBay_Median: 6,
+    eBay_Avg: 8.45, eBay_Low: 3.99, eBay_High: 14.99, eBay_Count: 8, eBay_Median: 8,
   },
   {
     Title: `Robin`, Issue: `68`, Publisher: `DC`,
@@ -121548,7 +121548,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `45`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `2`, Entry: `7344`,
-    eBay_Avg: 6.42, eBay_Low: 2.9, eBay_High: 11.35, eBay_Count: 10, eBay_Median: 4.99,
+    eBay_Avg: 7.69, eBay_Low: 3.9, eBay_High: 13.47, eBay_Count: 10, eBay_Median: 7.58,
   },
   {
     Title: `Robin`, Issue: `101`, Publisher: `DC`,
@@ -122232,7 +122232,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `45`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `7380`,
-    eBay_Avg: 7.78, eBay_Low: 2.99, eBay_High: 17.99, eBay_Count: 8, eBay_Median: 6.49,
+    eBay_Avg: 15.04, eBay_Low: 4.5, eBay_High: 29.99, eBay_Count: 9, eBay_Median: 15,
   },
   {
     Title: `Batgirl`, Issue: `2`, Publisher: `DC`,
@@ -123106,7 +123106,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `45`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `7426`,
-    eBay_Avg: 8.71, eBay_Low: 3.8, eBay_High: 20, eBay_Count: 8, eBay_Median: 7.95,
+    eBay_Avg: 10.05, eBay_Low: 3.8, eBay_High: 20, eBay_Count: 8, eBay_Median: 9,
   },
   {
     Title: `Batgirl`, Issue: `51`, Publisher: `DC`,
@@ -123524,7 +123524,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `72`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `7448`,
-    eBay_Avg: 10.84, eBay_Low: 5.77, eBay_High: 19.99, eBay_Count: 8, eBay_Median: 9.99,
+    eBay_Avg: 16.74, eBay_Low: 2.87, eBay_High: 29.99, eBay_Count: 9, eBay_Median: 19.99,
   },
   {
     Title: `Justice League of America`, Issue: `1`, Publisher: `DC`,
@@ -123543,7 +123543,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `68`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `2`, Entry: `7449`,
-    eBay_Avg: 15.67, eBay_Low: 4.99, eBay_High: 34.99, eBay_Count: 9, eBay_Median: 14.99,
+    eBay_Avg: 13.49, eBay_Low: 1.99, eBay_High: 34.99, eBay_Count: 8, eBay_Median: 11.99,
   },
   {
     Title: `Justice League of America`, Issue: `2`, Publisher: `DC`,
@@ -124189,7 +124189,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `68`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `7483`,
-    eBay_Avg: 24.25, eBay_Low: 5, eBay_High: 70, eBay_Count: 10, eBay_Median: 26.73,
+    eBay_Avg: 24.53, eBay_Low: 3.9, eBay_High: 64.95, eBay_Count: 8, eBay_Median: 21.5,
   },
   {
     Title: `DC Universe: Last Will and Testament`, Issue: `1`, Publisher: `DC`,
@@ -124227,7 +124227,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `68`,
     Crossover: `Final Crisis`, Start_Bid: `3`,
     Volume: `1`, Entry: `7485`,
-    eBay_Avg: 13.14, eBay_Low: 1.42, eBay_High: 25, eBay_Count: 9, eBay_Median: 12.95,
+    eBay_Avg: 14.84, eBay_Low: 4.95, eBay_High: 32.49, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `Final Crisis`, Issue: `2`, Publisher: `DC`,
@@ -124455,7 +124455,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `68`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `3`, Entry: `7498`,
-    eBay_Avg: 7.13, eBay_Low: 3.03, eBay_High: 15, eBay_Count: 8, eBay_Median: 5.75,
+    eBay_Avg: 7.19, eBay_Low: 3.03, eBay_High: 10, eBay_Count: 6, eBay_Median: 7.88,
   },
   {
     Title: `Secret Six`, Issue: `2`, Publisher: `DC`,
@@ -125614,7 +125614,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `68`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `7561`,
-    eBay_Avg: 2.16, eBay_Low: 1.92, eBay_High: 3, eBay_Count: 6, eBay_Median: 1.99,
+    eBay_Avg: 10.42, eBay_Low: 2.99, eBay_High: 20, eBay_Count: 9, eBay_Median: 10.95,
   },
   {
     Title: `The Trials of Shazam`, Issue: `2`, Publisher: `DC`,
@@ -125918,7 +125918,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `68`,
     Crossover: `Infinite Crisis`, Start_Bid: `2`,
     Volume: `2`, Entry: `7577`,
-    eBay_Avg: 22.21, eBay_Low: 14, eBay_High: 42.99, eBay_Count: 7, eBay_Median: 19.95,
+    eBay_Avg: 10.48, eBay_Low: 1.79, eBay_High: 20, eBay_Count: 10, eBay_Median: 8.34,
   },
   {
     Title: `Adam Strange`, Issue: `2`, Publisher: `DC`,
@@ -126051,7 +126051,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `68`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `7584`,
-    eBay_Avg: 8.95, eBay_Low: 2.35, eBay_High: 24.99, eBay_Count: 9, eBay_Median: 9.87,
+    eBay_Avg: 5.92, eBay_Low: 2.9, eBay_High: 9.99, eBay_Count: 9, eBay_Median: 5,
   },
   {
     Title: `Black Lightning: Year One`, Issue: `2`, Publisher: `DC`,
@@ -126165,7 +126165,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Dark Horse`, Box: `68`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `7590`,
-    eBay_Avg: 13.25, eBay_Low: 2.99, eBay_High: 27, eBay_Count: 8, eBay_Median: 12,
+    eBay_Avg: 16.48, eBay_Low: 11.75, eBay_High: 35.99, eBay_Count: 10, eBay_Median: 13.99,
   },
   {
     Title: `Buffy the Vampire Slayer`, Issue: `2`, Publisher: `Dark Horse`,
@@ -126678,7 +126678,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `Dark Horse`, Box: `68`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `7617`,
-    eBay_Avg: 9.1, eBay_Low: 1, eBay_High: 12.99, eBay_Count: 9, eBay_Median: 9.87,
+    eBay_Avg: 11.08, eBay_Low: 6.74, eBay_High: 16.16, eBay_Count: 7, eBay_Median: 9.99,
   },
   {
     Title: `Buffy the Vampire Slayer: Season Eight`, Issue: `2`, Publisher: `Dark Horse`,
@@ -127457,7 +127457,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `68`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `2`, Entry: `7658`,
-    eBay_Avg: null, eBay_Low: 9.99, eBay_High: 62.99, eBay_Count: 8, eBay_Median: null,
+    eBay_Avg: 10.77, eBay_Low: 5.39, eBay_High: 14.99, eBay_Count: 7, eBay_Median: 10,
   },
   {
     Title: `Suicide Squad`, Issue: `2`, Publisher: `DC`,
@@ -128046,7 +128046,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `53`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `7689`,
-    eBay_Avg: 3.22, eBay_Low: 1.8, eBay_High: 5.01, eBay_Count: 8, eBay_Median: 3.12,
+    eBay_Avg: 4.17, eBay_Low: 2.13, eBay_High: 10, eBay_Count: 9, eBay_Median: 3.26,
   },
   {
     Title: `The Legion`, Issue: `2`, Publisher: `DC`,
@@ -128806,7 +128806,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `53`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `7729`,
-    eBay_Avg: 11.13, eBay_Low: 9.99, eBay_High: 21.36, eBay_Count: 10, eBay_Median: 9.99,
+    eBay_Avg: 3.43, eBay_Low: 1.99, eBay_High: 4.95, eBay_Count: 6, eBay_Median: 3.48,
   },
   {
     Title: `Legion Worlds`, Issue: `2`, Publisher: `DC`,
@@ -128939,7 +128939,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Imprint: `DC`, Box: `53`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `6`, Entry: `7736`,
-    eBay_Avg: 10.26, eBay_Low: 3, eBay_High: 19.84, eBay_Count: 9, eBay_Median: 9,
+    eBay_Avg: 17.75, eBay_Low: 0.99, eBay_High: 42.05, eBay_Count: 9, eBay_Median: 11.89,
   },
   {
     Title: `Legion of Super-Heroes`, Issue: `2`, Publisher: `DC`,
@@ -130669,7 +130669,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC`, Box: `51`,
     Crossover: `Sins of Youth`, Start_Bid: `2`,
     Volume: `1`, Entry: `7841`,
-    eBay_Avg: 5.47, eBay_Low: 2.13, eBay_High: 9.99, eBay_Count: 9, eBay_Median: 4.99,
+    eBay_Avg: 5.42, eBay_Low: 2.85, eBay_High: 9.99, eBay_Count: 10, eBay_Median: 4.99,
   },
   {
     Title: `Young Justice`, Issue: `1`, Publisher: `DC`,
@@ -130688,7 +130688,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC`, Box: `51`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `7842`,
-    eBay_Avg: 5.64, eBay_Low: 2.13, eBay_High: 12, eBay_Count: 8, eBay_Median: 4.93,
+    eBay_Avg: 6.78, eBay_Low: 2, eBay_High: 13.47, eBay_Count: 10, eBay_Median: 6.31,
   },
   {
     Title: `Young Justice`, Issue: `2`, Publisher: `DC`,
@@ -130764,7 +130764,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC`, Box: `51`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `7846`,
-    eBay_Avg: 4.82, eBay_Low: 3.99, eBay_High: 5.65, eBay_Count: 2, eBay_Median: 4.82,
+    eBay_Avg: 12.41, eBay_Low: 2.5, eBay_High: 24.99, eBay_Count: 9, eBay_Median: 8.56,
   },
   {
     Title: `Young Justice`, Issue: `12`, Publisher: `DC`,
@@ -130783,7 +130783,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC`, Box: `51`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `7847`,
-    eBay_Avg: 43, eBay_Low: 40, eBay_High: 45.99, eBay_Count: 2, eBay_Median: 43,
+    eBay_Avg: 13.99, eBay_Low: 2.09, eBay_High: 29.99, eBay_Count: 9, eBay_Median: 9.44,
   },
   {
     Title: `Young Justice`, Issue: `13`, Publisher: `DC`,
@@ -130802,7 +130802,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC`, Box: `51`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `7848`,
-    eBay_Avg: 5.47, eBay_Low: 1.92, eBay_High: 8.49, eBay_Count: 8, eBay_Median: 5.97,
+    eBay_Avg: 4.69, eBay_Low: 2.99, eBay_High: 7.64, eBay_Count: 10, eBay_Median: 3.99,
   },
   {
     Title: `Young Justice`, Issue: `14`, Publisher: `DC`,
@@ -130821,7 +130821,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC`, Box: `51`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `7849`,
-    eBay_Avg: 6.1, eBay_Low: 4.95, eBay_High: 8.49, eBay_Count: 4, eBay_Median: 5.47,
+    eBay_Avg: 7.12, eBay_Low: 3.2, eBay_High: 12.79, eBay_Count: 10, eBay_Median: 5.97,
   },
   {
     Title: `Young Justice`, Issue: `15`, Publisher: `DC`,
@@ -130859,7 +130859,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC`, Box: `51`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `7851`,
-    eBay_Avg: 7.72, eBay_Low: 6.95, eBay_High: 8.49, eBay_Count: 2, eBay_Median: 7.72,
+    eBay_Avg: 5.85, eBay_Low: 2.5, eBay_High: 10.99, eBay_Count: 10, eBay_Median: 4.85,
   },
   {
     Title: `Young Justice`, Issue: `17`, Publisher: `DC`,
@@ -130878,7 +130878,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC`, Box: `51`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `7852`,
-    eBay_Avg: 6.37, eBay_Low: 1.95, eBay_High: 11, eBay_Count: 9, eBay_Median: 6,
+    eBay_Avg: 4.61, eBay_Low: 2.9, eBay_High: 9, eBay_Count: 9, eBay_Median: 3.99,
   },
   {
     Title: `Young Justice`, Issue: `18`, Publisher: `DC`,
@@ -134735,7 +134735,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `IDW Publishing`, Box: `65`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `8055`,
-    eBay_Avg: 11.35, eBay_Low: 3.95, eBay_High: 25, eBay_Count: 10, eBay_Median: 9.8,
+    eBay_Avg: 11.2, eBay_Low: 3, eBay_High: 21.6, eBay_Count: 9, eBay_Median: 9.1,
   },
   {
     Title: `Star Trek: The Next Generation — Mirror Broken`, Issue: `2`, Publisher: `IDW`,
@@ -135134,7 +135134,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `IDW Publishing`, Box: `65`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `8076`,
-    eBay_Avg: 11.18, eBay_Low: 2.9, eBay_High: 20.99, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 13.71, eBay_Low: 6.2, eBay_High: 20.99, eBay_Count: 10, eBay_Median: 12.81,
   },
   {
     Title: `Star Trek: Picard — Countdown`, Issue: `2`, Publisher: `IDW`,
@@ -135362,7 +135362,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `IDW Publishing`, Box: `65`,
     Crossover: `ST/LSH crossover`, Start_Bid: `2`,
     Volume: `1`, Entry: `8088`,
-    eBay_Avg: 13.08, eBay_Low: 3.49, eBay_High: 30, eBay_Count: 9, eBay_Median: 9.95,
+    eBay_Avg: 15.23, eBay_Low: 3.49, eBay_High: 35.04, eBay_Count: 9, eBay_Median: 6.99,
   },
   {
     Title: `Star Trek / Legion of Superheroes`, Issue: `2`, Publisher: `IDW`,
@@ -135476,7 +135476,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `IDW / Marvel`, Box: `65`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `8095`,
-    eBay_Avg: 21.9, eBay_Low: 9.4, eBay_High: 43.19, eBay_Count: 9, eBay_Median: 20.01,
+    eBay_Avg: 22.67, eBay_Low: 9.4, eBay_High: 45.59, eBay_Count: 8, eBay_Median: 20.59,
   },
   {
     Title: `Star Trek: Generations`, Issue: `1`, Publisher: `IDW`,
@@ -135514,7 +135514,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `IDW Publishing`, Box: `65`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `8097`,
-    eBay_Avg: 12.99, eBay_Low: 4.99, eBay_High: 19.99, eBay_Count: 3, eBay_Median: 13.99,
+    eBay_Avg: 13.05, eBay_Low: 4.99, eBay_High: 20.16, eBay_Count: 3, eBay_Median: 13.99,
   },
   {
     Title: `Star Trek: Deep Space Nine: Too Long a Sacrifice`, Issue: `2`, Publisher: `IDW`,
@@ -135970,7 +135970,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `IDW Publishing`, Box: `65`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `8121`,
-    eBay_Avg: 22.56, eBay_Low: 5.99, eBay_High: 35.29, eBay_Count: 10, eBay_Median: 22.82,
+    eBay_Avg: 26.1, eBay_Low: 12, eBay_High: 35.29, eBay_Count: 10, eBay_Median: 26.99,
   },
   {
     Title: `DC Universe: Rebirth`, Issue: `1`, Publisher: `DC`,
@@ -135989,7 +135989,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC Rebirth`, Box: `82`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `8344`,
-    eBay_Avg: 7.19, eBay_Low: 2.75, eBay_High: 13, eBay_Count: 8, eBay_Median: 7.47,
+    eBay_Avg: 32.24, eBay_Low: 4.99, eBay_High: 80, eBay_Count: 8, eBay_Median: 27.49,
   },
   {
     Title: `Titans: Rebirth`, Issue: `1`, Publisher: `DC`,
@@ -136008,7 +136008,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC Rebirth`, Box: `83`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `8345`,
-    eBay_Avg: 14.66, eBay_Low: 2.23, eBay_High: 29.99, eBay_Count: 10, eBay_Median: 18.95,
+    eBay_Avg: 15.4, eBay_Low: 2.99, eBay_High: 44.95, eBay_Count: 8, eBay_Median: 14.69,
   },
   {
     Title: `Green Arrow: Rebirth`, Issue: `1`, Publisher: `DC`,
@@ -136065,7 +136065,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC Rebirth`, Box: `82`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `8348`,
-    eBay_Avg: 15.15, eBay_Low: 5.99, eBay_High: 39.99, eBay_Count: 9, eBay_Median: 13,
+    eBay_Avg: 8.7, eBay_Low: 4.99, eBay_High: 14.29, eBay_Count: 7, eBay_Median: 7.99,
   },
   {
     Title: `Supergirl: Rebirth`, Issue: `1`, Publisher: `DC`,
@@ -136141,7 +136141,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC Rebirth`, Box: `83`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `8352`,
-    eBay_Avg: 14.41, eBay_Low: 5.99, eBay_High: 39.99, eBay_Count: 8, eBay_Median: 11.27,
+    eBay_Avg: 25.65, eBay_Low: 5, eBay_High: 59.99, eBay_Count: 9, eBay_Median: 16.89,
   },
   {
     Title: `Justice League of America`, Issue: `1`, Publisher: `DC`,
@@ -136160,7 +136160,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC Rebirth`, Box: `83`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `3`, Entry: `8354`,
-    eBay_Avg: 15.67, eBay_Low: 4.99, eBay_High: 34.99, eBay_Count: 9, eBay_Median: 14.99,
+    eBay_Avg: 13.49, eBay_Low: 1.99, eBay_High: 34.99, eBay_Count: 8, eBay_Median: 11.99,
   },
   {
     Title: `Justice League of America`, Issue: `2`, Publisher: `DC`,
@@ -136274,7 +136274,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC`, Box: `83`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `8360`,
-    eBay_Avg: 15, eBay_Low: 2.14, eBay_High: 42.49, eBay_Count: 10, eBay_Median: 14.39,
+    eBay_Avg: 10.85, eBay_Low: 2.09, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 11.99,
   },
   {
     Title: `The Multiversity`, Issue: `1`, Publisher: `DC`,
@@ -136293,7 +136293,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC`, Box: `83`,
     Crossover: `The Multiversity`, Start_Bid: `5`,
     Volume: `1`, Entry: `8361`,
-    eBay_Avg: 9.74, eBay_Low: 2.72, eBay_High: 15, eBay_Count: 10, eBay_Median: 9.99,
+    eBay_Avg: 4.79, eBay_Low: 3.25, eBay_High: 10.39, eBay_Count: 8, eBay_Median: 3.25,
   },
   {
     Title: `The Multiversity`, Issue: `2`, Publisher: `DC`,
@@ -136312,7 +136312,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC`, Box: `83`,
     Crossover: `The Multiversity`, Start_Bid: `2`,
     Volume: `1`, Entry: `8362`,
-    eBay_Avg: 9.41, eBay_Low: 3.99, eBay_High: 20.67, eBay_Count: 8, eBay_Median: 8.75,
+    eBay_Avg: 16.09, eBay_Low: 3.99, eBay_High: 27.99, eBay_Count: 10, eBay_Median: 15,
   },
   {
     Title: `The Multiversity Guidebook`, Issue: `1`, Publisher: `DC`,
@@ -136331,7 +136331,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC`, Box: `83`,
     Crossover: `The Multiversity`, Start_Bid: `2`,
     Volume: `1`, Entry: `8363`,
-    eBay_Avg: 11.44, eBay_Low: 6.67, eBay_High: 28, eBay_Count: 10, eBay_Median: 9.94,
+    eBay_Avg: 12.77, eBay_Low: 6.73, eBay_High: 28, eBay_Count: 10, eBay_Median: 10.49,
   },
   {
     Title: `The Multiversity: Ultra Comics`, Issue: `1`, Publisher: `DC`,
@@ -136350,7 +136350,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC`, Box: `83`,
     Crossover: `The Multiversity`, Start_Bid: `2`,
     Volume: `1`, Entry: `8364`,
-    eBay_Avg: 6.66, eBay_Low: 2.95, eBay_High: 11.32, eBay_Count: 9, eBay_Median: 6,
+    eBay_Avg: 6.68, eBay_Low: 2.95, eBay_High: 11.34, eBay_Count: 9, eBay_Median: 6,
   },
   {
     Title: `The Multiversity: The Just`, Issue: `1`, Publisher: `DC`,
@@ -136369,7 +136369,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC`, Box: `83`,
     Crossover: `The Multiversity`, Start_Bid: `2`,
     Volume: `1`, Entry: `8365`,
-    eBay_Avg: 8.42, eBay_Low: 1, eBay_High: 19.95, eBay_Count: 9, eBay_Median: 6.99,
+    eBay_Avg: 6.62, eBay_Low: 2.72, eBay_High: 9.99, eBay_Count: 9, eBay_Median: 6.73,
   },
   {
     Title: `The Multiversity: Pax Americana`, Issue: `1`, Publisher: `DC`,
@@ -136388,7 +136388,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC`, Box: `83`,
     Crossover: `The Multiversity`, Start_Bid: `2`,
     Volume: `1`, Entry: `8366`,
-    eBay_Avg: 20.04, eBay_Low: 10.79, eBay_High: 49.99, eBay_Count: 10, eBay_Median: 17.52,
+    eBay_Avg: 23.27, eBay_Low: 10.79, eBay_High: 49.99, eBay_Count: 10, eBay_Median: 20.5,
   },
   {
     Title: `The Multiversity: Society of Super-Heroes`, Issue: `1`, Publisher: `DC`,
@@ -136407,7 +136407,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC`, Box: `83`,
     Crossover: `The Multiversity`, Start_Bid: `2`,
     Volume: `1`, Entry: `8367`,
-    eBay_Avg: 4.67, eBay_Low: 1, eBay_High: 10.39, eBay_Count: 8, eBay_Median: 3.35,
+    eBay_Avg: 8.73, eBay_Low: 1.59, eBay_High: 23, eBay_Count: 9, eBay_Median: 8.08,
   },
   {
     Title: `The Multiversity: Thunderworld Adventures`, Issue: `1`, Publisher: `DC`,
@@ -136426,7 +136426,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC`, Box: `83`,
     Crossover: `The Multiversity`, Start_Bid: `2`,
     Volume: `1`, Entry: `8368`,
-    eBay_Avg: 8.59, eBay_Low: 1.42, eBay_High: 13.91, eBay_Count: 3, eBay_Median: 10.43,
+    eBay_Avg: 8.66, eBay_Low: 1.42, eBay_High: 14.03, eBay_Count: 3, eBay_Median: 10.52,
   },
   {
     Title: `The Multiversity: Mastermen`, Issue: `1`, Publisher: `DC`,
@@ -136445,7 +136445,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC`, Box: `83`,
     Crossover: `The Multiversity`, Start_Bid: `2`,
     Volume: `1`, Entry: `8369`,
-    eBay_Avg: 33.6, eBay_Low: 17.38, eBay_High: 49.83, eBay_Count: 2, eBay_Median: 33.6,
+    eBay_Avg: 33.73, eBay_Low: 17.54, eBay_High: 49.93, eBay_Count: 2, eBay_Median: 33.73,
   },
   {
     Title: `Forever Evil`, Issue: `1`, Publisher: `DC`,
@@ -136464,7 +136464,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC`, Box: `83`,
     Crossover: `Forever Evil`, Start_Bid: `3`,
     Volume: `1`, Entry: `8370`,
-    eBay_Avg: 3.48, eBay_Low: 2.6, eBay_High: 6.5, eBay_Count: 9, eBay_Median: 2.6,
+    eBay_Avg: 3.43, eBay_Low: 2.6, eBay_High: 5.99, eBay_Count: 7, eBay_Median: 2.6,
   },
   {
     Title: `Forever Evil`, Issue: `2`, Publisher: `DC`,
@@ -136711,7 +136711,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC`, Box: `83`,
     Crossover: `Forever Evil`, Start_Bid: `2`,
     Volume: `1`, Entry: `8383`,
-    eBay_Avg: 7.98, eBay_Low: 1, eBay_High: 20.59, eBay_Count: 9, eBay_Median: 8,
+    eBay_Avg: 9.68, eBay_Low: 3, eBay_High: 20.76, eBay_Count: 9, eBay_Median: 8.49,
   },
   {
     Title: `Forever Evil: A.R.G.U.S.`, Issue: `2`, Publisher: `DC`,
@@ -137357,7 +137357,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC Convergence`, Box: `83`,
     Crossover: `Convergence`, Start_Bid: `2`,
     Volume: `1`, Entry: `8417`,
-    eBay_Avg: 6.01, eBay_Low: 2.75, eBay_High: 9.25, eBay_Count: 9, eBay_Median: 6,
+    eBay_Avg: 8.85, eBay_Low: 2.75, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 6,
   },
   {
     Title: `Convergence`, Issue: `2`, Publisher: `DC`,
@@ -137509,7 +137509,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC Convergence`, Box: `83`,
     Crossover: `Convergence`, Start_Bid: `2`,
     Volume: `1`, Entry: `8425`,
-    eBay_Avg: 9.04, eBay_Low: 3.99, eBay_High: 17.5, eBay_Count: 10, eBay_Median: 9.99,
+    eBay_Avg: 8.47, eBay_Low: 4, eBay_High: 11.5, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `Convergence: Batgirl`, Issue: `2`, Publisher: `DC`,
@@ -137661,7 +137661,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC Convergence`, Box: `83`,
     Crossover: `Convergence`, Start_Bid: `2`,
     Volume: `1`, Entry: `8433`,
-    eBay_Avg: 6.78, eBay_Low: 2.9, eBay_High: 11.95, eBay_Count: 10, eBay_Median: 6.54,
+    eBay_Avg: 7.35, eBay_Low: 2.99, eBay_High: 16.99, eBay_Count: 10, eBay_Median: 6.55,
   },
   {
     Title: `Convergence: The Question`, Issue: `2`, Publisher: `DC`,
@@ -138269,7 +138269,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC New 52`, Box: `42`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `4`, Entry: `8465`,
-    eBay_Avg: 14.96, eBay_Low: 4, eBay_High: 35, eBay_Count: 9, eBay_Median: 13.3,
+    eBay_Avg: 15.08, eBay_Low: 2.99, eBay_High: 35, eBay_Count: 8, eBay_Median: 13.65,
   },
   {
     Title: `Wonder Woman`, Issue: `4`, Publisher: `DC`,
@@ -138592,7 +138592,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC New 52`, Box: `42`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `4`, Entry: `8482`,
-    eBay_Avg: 6.31, eBay_Low: 0.99, eBay_High: 14.69, eBay_Count: 7, eBay_Median: 5.99,
+    eBay_Avg: 18.77, eBay_Low: 4.99, eBay_High: 54.95, eBay_Count: 7, eBay_Median: 8.04,
   },
   {
     Title: `Wonder Woman`, Issue: `21`, Publisher: `DC`,
@@ -138611,7 +138611,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC New 52`, Box: `42`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `4`, Entry: `8483`,
-    eBay_Avg: null, eBay_Low: 0.99, eBay_High: 33.36, eBay_Count: 9, eBay_Median: null,
+    eBay_Avg: 16.21, eBay_Low: 1.49, eBay_High: 33.64, eBay_Count: 7, eBay_Median: 20,
   },
   {
     Title: `Wonder Woman`, Issue: `22`, Publisher: `DC`,
@@ -138763,7 +138763,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC New 52`, Box: `42`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `4`, Entry: `8491`,
-    eBay_Avg: 6.34, eBay_Low: 3.74, eBay_High: 9, eBay_Count: 9, eBay_Median: 5.99,
+    eBay_Avg: 6.89, eBay_Low: 3.74, eBay_High: 12, eBay_Count: 10, eBay_Median: 6.49,
   },
   {
     Title: `Wonder Woman`, Issue: `30`, Publisher: `DC`,
@@ -138782,7 +138782,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC New 52`, Box: `42`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `4`, Entry: `8492`,
-    eBay_Avg: 9.09, eBay_Low: 4.62, eBay_High: 18.99, eBay_Count: 8, eBay_Median: 6.23,
+    eBay_Avg: 7.53, eBay_Low: 4.63, eBay_High: 13.99, eBay_Count: 9, eBay_Median: 6.24,
   },
   {
     Title: `Wonder Woman`, Issue: `31`, Publisher: `DC`,
@@ -138801,7 +138801,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC New 52`, Box: `42`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `4`, Entry: `8493`,
-    eBay_Avg: 6.05, eBay_Low: 2.24, eBay_High: 12, eBay_Count: 8, eBay_Median: 5.44,
+    eBay_Avg: 6.62, eBay_Low: 2.24, eBay_High: 12.12, eBay_Count: 9, eBay_Median: 5,
   },
   {
     Title: `Wonder Woman`, Issue: `32`, Publisher: `DC`,
@@ -139295,7 +139295,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC New 52`, Box: `42`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `3`, Entry: `8520`,
-    eBay_Avg: 7.13, eBay_Low: 3.03, eBay_High: 15, eBay_Count: 8, eBay_Median: 5.75,
+    eBay_Avg: 7.19, eBay_Low: 3.03, eBay_High: 10, eBay_Count: 6, eBay_Median: 7.88,
   },
   {
     Title: `Secret Six`, Issue: `2`, Publisher: `DC`,
@@ -139561,7 +139561,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC New 52`, Box: `52`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `4`, Entry: `8534`,
-    eBay_Avg: null, eBay_Low: 9.99, eBay_High: 62.99, eBay_Count: 8, eBay_Median: null,
+    eBay_Avg: 10.77, eBay_Low: 5.39, eBay_High: 14.99, eBay_Count: 7, eBay_Median: 10,
   },
   {
     Title: `Suicide Squad: Amanda Waller`, Issue: `1`, Publisher: `DC`,
@@ -140606,7 +140606,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC New 52`, Box: `42`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `8591`,
-    eBay_Avg: 10.42, eBay_Low: 5.31, eBay_High: 15.99, eBay_Count: 10, eBay_Median: 9.99,
+    eBay_Avg: 9.35, eBay_Low: 3.69, eBay_High: 12, eBay_Count: 10, eBay_Median: 9.99,
   },
   {
     Title: `Katana`, Issue: `2`, Publisher: `DC`,
@@ -140682,7 +140682,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC`, Box: `42`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `8596`,
-    eBay_Avg: 27.86, eBay_Low: 7.68, eBay_High: 61.95, eBay_Count: 9, eBay_Median: 24.95,
+    eBay_Avg: 15.78, eBay_Low: 3.99, eBay_High: 35.99, eBay_Count: 10, eBay_Median: 13.21,
   },
   {
     Title: `Legends of Tomorrow`, Issue: `2`, Publisher: `DC`,
@@ -140796,7 +140796,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC`, Box: `82`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `8602`,
-    eBay_Avg: 9.23, eBay_Low: 4.99, eBay_High: 15, eBay_Count: 10, eBay_Median: 9.87,
+    eBay_Avg: 13, eBay_Low: 1.94, eBay_High: 25.99, eBay_Count: 10, eBay_Median: 10.95,
   },
   {
     Title: `DC Comics: Bombshells`, Issue: `2`, Publisher: `DC`,
@@ -140910,7 +140910,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC New 52`, Box: `82`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `8616`,
-    eBay_Avg: 10.19, eBay_Low: 3.95, eBay_High: 24, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 7.88, eBay_Low: 0.99, eBay_High: 11.5, eBay_Count: 10, eBay_Median: 8.29,
   },
   {
     Title: `Cyborg`, Issue: `2`, Publisher: `DC`,
@@ -140948,7 +140948,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC New 52`, Box: `82`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `8618`,
-    eBay_Avg: 10.91, eBay_Low: 3.99, eBay_High: 28, eBay_Count: 10, eBay_Median: 9.86,
+    eBay_Avg: 8.3, eBay_Low: 3.99, eBay_High: 14.95, eBay_Count: 9, eBay_Median: 8,
   },
   {
     Title: `Cyborg`, Issue: `4`, Publisher: `DC`,
@@ -141119,7 +141119,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC Rebirth`, Box: `82`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `2`, Entry: `8628`,
-    eBay_Avg: 10.19, eBay_Low: 3.95, eBay_High: 24, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 7.88, eBay_Low: 0.99, eBay_High: 11.5, eBay_Count: 10, eBay_Median: 8.29,
   },
   {
     Title: `Cyborg`, Issue: `2`, Publisher: `DC`,
@@ -141157,7 +141157,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC Rebirth`, Box: `82`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `2`, Entry: `8630`,
-    eBay_Avg: 10.91, eBay_Low: 3.99, eBay_High: 28, eBay_Count: 10, eBay_Median: 9.86,
+    eBay_Avg: 8.3, eBay_Low: 3.99, eBay_High: 14.95, eBay_Count: 9, eBay_Median: 8,
   },
   {
     Title: `Cyborg`, Issue: `4`, Publisher: `DC`,
@@ -141195,7 +141195,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC New 52`, Box: `82`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `4`, Entry: `8640`,
-    eBay_Avg: 10.06, eBay_Low: 2.5, eBay_High: 32.99, eBay_Count: 8, eBay_Median: 5,
+    eBay_Avg: 7.62, eBay_Low: 1.37, eBay_High: 14.4, eBay_Count: 9, eBay_Median: 7.13,
   },
   {
     Title: `Doctor Fate`, Issue: `2`, Publisher: `DC`,
@@ -141841,7 +141841,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC New 52`, Box: `82`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `4`, Entry: `8674`,
-    eBay_Avg: 8.12, eBay_Low: 4.01, eBay_High: 15, eBay_Count: 9, eBay_Median: 6.49,
+    eBay_Avg: 7.45, eBay_Low: 3.14, eBay_High: 14.99, eBay_Count: 9, eBay_Median: 6.73,
   },
   {
     Title: `The Flash`, Issue: `22`, Publisher: `DC`,
@@ -142487,7 +142487,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC New 52`, Box: `82`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `8711`,
-    eBay_Avg: 4.66, eBay_Low: 2.97, eBay_High: 6.69, eBay_Count: 7, eBay_Median: 4.99,
+    eBay_Avg: 10.96, eBay_Low: 0.99, eBay_High: 25, eBay_Count: 10, eBay_Median: 8.97,
   },
   {
     Title: `Green Arrow`, Issue: `26`, Publisher: `DC`,
@@ -143190,7 +143190,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC New 52`, Box: `82`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `8749`,
-    eBay_Avg: 4.83, eBay_Low: 0.99, eBay_High: 12, eBay_Count: 8, eBay_Median: 4.17,
+    eBay_Avg: 11.28, eBay_Low: 4.95, eBay_High: 33, eBay_Count: 9, eBay_Median: 10,
   },
   {
     Title: `Green Lantern`, Issue: `19`, Publisher: `DC`,
@@ -143988,7 +143988,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC New 52`, Box: `42`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `6`, Entry: `8820`,
-    eBay_Avg: 19.89, eBay_Low: 11.95, eBay_High: 29.5, eBay_Count: 5, eBay_Median: 19.99,
+    eBay_Avg: 7.77, eBay_Low: 3.96, eBay_High: 13.95, eBay_Count: 9, eBay_Median: 7.27,
   },
   {
     Title: `Aquaman`, Issue: `6`, Publisher: `DC`,
@@ -144653,7 +144653,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `18`,
     Crossover: `Inhumanity`, Start_Bid: `3`,
     Volume: `1`, Entry: `8964`,
-    eBay_Avg: 11.79, eBay_Low: 4.99, eBay_High: 28, eBay_Count: 10, eBay_Median: 9.99,
+    eBay_Avg: 12.63, eBay_Low: 4.99, eBay_High: 28, eBay_Count: 10, eBay_Median: 10.5,
   },
   {
     Title: `Inhumanity: The Awakening`, Issue: `1`, Publisher: `Marvel`,
@@ -144710,7 +144710,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `18`,
     Crossover: `Inhumanity`, Start_Bid: `2`,
     Volume: `1`, Entry: `8967`,
-    eBay_Avg: 4.78, eBay_Low: 1, eBay_High: 10.62, eBay_Count: 8, eBay_Median: 3.99,
+    eBay_Avg: 9.87, eBay_Low: 2.98, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 7.99,
   },
   {
     Title: `Secret Invasion: Inhumans`, Issue: `1`, Publisher: `Marvel`,
@@ -144805,7 +144805,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `18`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `8972`,
-    eBay_Avg: 8.96, eBay_Low: 1.47, eBay_High: 17, eBay_Count: 10, eBay_Median: 9.99,
+    eBay_Avg: 13.04, eBay_Low: 2.49, eBay_High: 19.99, eBay_Count: 10, eBay_Median: 13.49,
   },
   {
     Title: `Silent War`, Issue: `2`, Publisher: `Marvel`,
@@ -144862,7 +144862,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `18`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `8975`,
-    eBay_Avg: 10.16, eBay_Low: 5.88, eBay_High: 14.95, eBay_Count: 8, eBay_Median: 9.99,
+    eBay_Avg: 5.02, eBay_Low: 2.95, eBay_High: 10, eBay_Count: 8, eBay_Median: 4.53,
   },
   {
     Title: `Inhuman`, Issue: `2`, Publisher: `Marvel`,
@@ -145128,7 +145128,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `18`,
     Crossover: `IvX`, Start_Bid: `3`,
     Volume: `1`, Entry: `8989`,
-    eBay_Avg: 7.84, eBay_Low: 2, eBay_High: 12.87, eBay_Count: 9, eBay_Median: 9.87,
+    eBay_Avg: 15.27, eBay_Low: 2.5, eBay_High: 39.99, eBay_Count: 9, eBay_Median: 12.83,
   },
   {
     Title: `Uncanny Inhumans`, Issue: `4`, Publisher: `Marvel`,
@@ -145622,7 +145622,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `18`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `9018`,
-    eBay_Avg: 6.08, eBay_Low: 2.57, eBay_High: 9.98, eBay_Count: 7, eBay_Median: 6.67,
+    eBay_Avg: 12.11, eBay_Low: 2.5, eBay_High: 39.99, eBay_Count: 7, eBay_Median: 7,
   },
   {
     Title: `All-New Inhumans`, Issue: `2`, Publisher: `Marvel`,
@@ -145774,7 +145774,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `18`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `9029`,
-    eBay_Avg: 8.32, eBay_Low: 2.99, eBay_High: 12.81, eBay_Count: 8, eBay_Median: 8.99,
+    eBay_Avg: 15.69, eBay_Low: 2.9, eBay_High: 39.9, eBay_Count: 8, eBay_Median: 9,
   },
   {
     Title: `Eternals`, Issue: `1`, Publisher: `Marvel`,
@@ -145793,7 +145793,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `18`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `4`, Entry: `9030`,
-    eBay_Avg: null, eBay_Low: 1.45, eBay_High: 45, eBay_Count: 9, eBay_Median: null,
+    eBay_Avg: 12.25, eBay_Low: 1.45, eBay_High: 20, eBay_Count: 9, eBay_Median: 8.99,
   },
   {
     Title: `Eternals`, Issue: `2`, Publisher: `Marvel`,
@@ -145907,7 +145907,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `18`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `4`, Entry: `9036`,
-    eBay_Avg: null, eBay_Low: 2.95, eBay_High: 64.95, eBay_Count: 10, eBay_Median: null,
+    eBay_Avg: 30.45, eBay_Low: 16.99, eBay_High: 45, eBay_Count: 9, eBay_Median: 29.99,
   },
   {
     Title: `Eternals Annual`, Issue: `1`, Publisher: `Marvel`,
@@ -145983,7 +145983,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `18`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `5`, Entry: `9040`,
-    eBay_Avg: null, eBay_Low: 1.45, eBay_High: 45, eBay_Count: 9, eBay_Median: null,
+    eBay_Avg: 12.25, eBay_Low: 1.45, eBay_High: 20, eBay_Count: 9, eBay_Median: 8.99,
   },
   {
     Title: `Eternals`, Issue: `2`, Publisher: `Marvel`,
@@ -146097,7 +146097,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `18`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `9046`,
-    eBay_Avg: null, eBay_Low: 2.95, eBay_High: 64.95, eBay_Count: 10, eBay_Median: null,
+    eBay_Avg: 30.45, eBay_Low: 16.99, eBay_High: 45, eBay_Count: 9, eBay_Median: 29.99,
   },
   {
     Title: `Eternals`, Issue: `8`, Publisher: `Marvel`,
@@ -146211,7 +146211,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `18`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `9052`,
-    eBay_Avg: null, eBay_Low: 2.95, eBay_High: 64.95, eBay_Count: 10, eBay_Median: null,
+    eBay_Avg: 30.45, eBay_Low: 16.99, eBay_High: 45, eBay_Count: 9, eBay_Median: 29.99,
   },
   {
     Title: `Eternals`, Issue: `9`, Publisher: `Marvel`,
@@ -146249,7 +146249,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `18`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `9059`,
-    eBay_Avg: null, eBay_Low: 1.45, eBay_High: 45, eBay_Count: 9, eBay_Median: null,
+    eBay_Avg: 12.25, eBay_Low: 1.45, eBay_High: 20, eBay_Count: 9, eBay_Median: 8.99,
   },
   {
     Title: `Eternals NOW!`, Issue: `1`, Publisher: `Marvel`,
@@ -146344,7 +146344,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `18`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `7`, Entry: `9064`,
-    eBay_Avg: 12.83, eBay_Low: 3.99, eBay_High: 29.99, eBay_Count: 6, eBay_Median: 9.99,
+    eBay_Avg: 23.87, eBay_Low: 9.99, eBay_High: 42, eBay_Count: 8, eBay_Median: 21.49,
   },
   {
     Title: `Captain Marvel`, Issue: `2`, Publisher: `Marvel`,
@@ -146458,7 +146458,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `18`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `8`, Entry: `9070`,
-    eBay_Avg: 12.83, eBay_Low: 3.99, eBay_High: 29.99, eBay_Count: 6, eBay_Median: 9.99,
+    eBay_Avg: 23.87, eBay_Low: 9.99, eBay_High: 42, eBay_Count: 8, eBay_Median: 21.49,
   },
   {
     Title: `Captain Marvel`, Issue: `2`, Publisher: `Marvel`,
@@ -146800,7 +146800,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `18`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `10`, Entry: `9090`,
-    eBay_Avg: 12.83, eBay_Low: 3.99, eBay_High: 29.99, eBay_Count: 6, eBay_Median: 9.99,
+    eBay_Avg: 23.87, eBay_Low: 9.99, eBay_High: 42, eBay_Count: 8, eBay_Median: 21.49,
   },
   {
     Title: `Captain Marvel`, Issue: `2`, Publisher: `Marvel`,
@@ -147617,7 +147617,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `18`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `10`, Entry: `9133`,
-    eBay_Avg: null, eBay_Low: 8, eBay_High: 89, eBay_Count: 10, eBay_Median: null,
+    eBay_Avg: 18.58, eBay_Low: 8, eBay_High: 32.99, eBay_Count: 8, eBay_Median: 15.34,
   },
   {
     Title: `Captain Marvel Annual`, Issue: `1`, Publisher: `Marvel`,
@@ -147693,7 +147693,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `18`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `12`, Entry: `9139`,
-    eBay_Avg: 12.83, eBay_Low: 3.99, eBay_High: 29.99, eBay_Count: 6, eBay_Median: 9.99,
+    eBay_Avg: 23.87, eBay_Low: 9.99, eBay_High: 42, eBay_Count: 8, eBay_Median: 21.49,
   },
   {
     Title: `Captain Marvel`, Issue: `2`, Publisher: `Marvel`,
@@ -147902,7 +147902,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `18`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `9150`,
-    eBay_Avg: 6.81, eBay_Low: 2.95, eBay_High: 12.99, eBay_Count: 9, eBay_Median: 4.99,
+    eBay_Avg: 10.09, eBay_Low: 2.95, eBay_High: 17.12, eBay_Count: 6, eBay_Median: 10,
   },
   {
     Title: `The Life of Captain Marvel`, Issue: `2`, Publisher: `Marvel`,
@@ -148016,7 +148016,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `5`, Entry: `9156`,
-    eBay_Avg: 7.34, eBay_Low: 3.99, eBay_High: 15, eBay_Count: 8, eBay_Median: 6,
+    eBay_Avg: 12.43, eBay_Low: 4, eBay_High: 24.99, eBay_Count: 9, eBay_Median: 11.95,
   },
   {
     Title: `Fantastic Four`, Issue: `501`, Publisher: `Marvel`,
@@ -149118,7 +149118,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `9214`,
-    eBay_Avg: 10.45, eBay_Low: 2.13, eBay_High: 23.97, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 11.27, eBay_Low: 4.99, eBay_High: 24.95, eBay_Count: 8, eBay_Median: 10.26,
   },
   {
     Title: `FF`, Issue: `8`, Publisher: `Marvel`,
@@ -149270,7 +149270,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `7`, Entry: `9222`,
-    eBay_Avg: 6.58, eBay_Low: 2, eBay_High: 14.44, eBay_Count: 8, eBay_Median: 5.62,
+    eBay_Avg: 23.59, eBay_Low: 8.99, eBay_High: 53.99, eBay_Count: 9, eBay_Median: 19.49,
   },
   {
     Title: `Fantastic Four`, Issue: `3`, Publisher: `Marvel`,
@@ -149289,7 +149289,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `8`, Entry: `9223`,
-    eBay_Avg: 11.35, eBay_Low: 3.95, eBay_High: 27.99, eBay_Count: 8, eBay_Median: 7.49,
+    eBay_Avg: 15.04, eBay_Low: 4.99, eBay_High: 27.99, eBay_Count: 7, eBay_Median: 14.99,
   },
   {
     Title: `Fantastic Four`, Issue: `4`, Publisher: `Marvel`,
@@ -149308,7 +149308,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `8`, Entry: `9224`,
-    eBay_Avg: 8.04, eBay_Low: 2.49, eBay_High: 18.99, eBay_Count: 8, eBay_Median: 6.97,
+    eBay_Avg: 9.74, eBay_Low: 2.99, eBay_High: 24.99, eBay_Count: 8, eBay_Median: 7.5,
   },
   {
     Title: `Fantastic Four`, Issue: `5`, Publisher: `Marvel`,
@@ -149327,7 +149327,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `8`, Entry: `9225`,
-    eBay_Avg: 7.2, eBay_Low: 2.66, eBay_High: 15, eBay_Count: 8, eBay_Median: 4.47,
+    eBay_Avg: 16.39, eBay_Low: 2.94, eBay_High: 44.99, eBay_Count: 8, eBay_Median: 9.87,
   },
   {
     Title: `Fantastic Four`, Issue: `6`, Publisher: `Marvel`,
@@ -149365,7 +149365,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `8`, Entry: `9227`,
-    eBay_Avg: 12.47, eBay_Low: 9.99, eBay_High: 14.95, eBay_Count: 2, eBay_Median: 12.47,
+    eBay_Avg: 7.25, eBay_Low: 1.49, eBay_High: 14.14, eBay_Count: 9, eBay_Median: 7.7,
   },
   {
     Title: `Fantastic Four`, Issue: `8`, Publisher: `Marvel`,
@@ -149422,7 +149422,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `8`, Entry: `9230`,
-    eBay_Avg: null, eBay_Low: 4.25, eBay_High: 125, eBay_Count: 9, eBay_Median: null,
+    eBay_Avg: 20.92, eBay_Low: 3.15, eBay_High: 49.99, eBay_Count: 9, eBay_Median: 14.75,
   },
   {
     Title: `Fantastic Four`, Issue: `11`, Publisher: `Marvel`,
@@ -149555,7 +149555,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `9238`,
-    eBay_Avg: 10.45, eBay_Low: 2.13, eBay_High: 23.97, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 11.27, eBay_Low: 4.99, eBay_High: 24.95, eBay_Count: 8, eBay_Median: 10.26,
   },
   {
     Title: `FF`, Issue: `8`, Publisher: `Marvel`,
@@ -149631,7 +149631,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `9243`,
-    eBay_Avg: 7.16, eBay_Low: 1.99, eBay_High: 15, eBay_Count: 9, eBay_Median: 4.99,
+    eBay_Avg: 10.94, eBay_Low: 1.57, eBay_High: 23, eBay_Count: 10, eBay_Median: 9.97,
   },
   {
     Title: `Marvel Knights: 4`, Issue: `3`, Publisher: `Marvel`,
@@ -150068,7 +150068,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `6`, Entry: `9266`,
-    eBay_Avg: 6.58, eBay_Low: 2, eBay_High: 14.44, eBay_Count: 8, eBay_Median: 5.62,
+    eBay_Avg: 23.59, eBay_Low: 8.99, eBay_High: 53.99, eBay_Count: 9, eBay_Median: 19.49,
   },
   {
     Title: `Fantastic Four`, Issue: `6`, Publisher: `Marvel`,
@@ -150106,7 +150106,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `6`, Entry: `9268`,
-    eBay_Avg: 12.47, eBay_Low: 9.99, eBay_High: 14.95, eBay_Count: 2, eBay_Median: 12.47,
+    eBay_Avg: 7.25, eBay_Low: 1.49, eBay_High: 14.14, eBay_Count: 9, eBay_Median: 7.7,
   },
   {
     Title: `Fantastic Four`, Issue: `9`, Publisher: `Marvel`,
@@ -150847,7 +150847,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `10`, Entry: `9307`,
-    eBay_Avg: 6.58, eBay_Low: 2, eBay_High: 14.44, eBay_Count: 8, eBay_Median: 5.62,
+    eBay_Avg: 23.59, eBay_Low: 8.99, eBay_High: 53.99, eBay_Count: 9, eBay_Median: 19.49,
   },
   {
     Title: `Fantastic Four`, Issue: `2`, Publisher: `Marvel`,
@@ -150866,7 +150866,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `10`, Entry: `9308`,
-    eBay_Avg: null, eBay_Low: 14.95, eBay_High: 48.94, eBay_Count: 2, eBay_Median: null,
+    eBay_Avg: 17.18, eBay_Low: 3.25, eBay_High: 34.99, eBay_Count: 9, eBay_Median: 14.75,
   },
   {
     Title: `Fantastic Four`, Issue: `3`, Publisher: `Marvel`,
@@ -150885,7 +150885,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `10`, Entry: `9309`,
-    eBay_Avg: 11.35, eBay_Low: 3.95, eBay_High: 27.99, eBay_Count: 8, eBay_Median: 7.49,
+    eBay_Avg: 15.04, eBay_Low: 4.99, eBay_High: 27.99, eBay_Count: 7, eBay_Median: 14.99,
   },
   {
     Title: `Fantastic Four`, Issue: `4`, Publisher: `Marvel`,
@@ -150904,7 +150904,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `10`, Entry: `9310`,
-    eBay_Avg: 8.04, eBay_Low: 2.49, eBay_High: 18.99, eBay_Count: 8, eBay_Median: 6.97,
+    eBay_Avg: 9.74, eBay_Low: 2.99, eBay_High: 24.99, eBay_Count: 8, eBay_Median: 7.5,
   },
   {
     Title: `Fantastic Four`, Issue: `5`, Publisher: `Marvel`,
@@ -150923,7 +150923,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `10`, Entry: `9311`,
-    eBay_Avg: 7.2, eBay_Low: 2.66, eBay_High: 15, eBay_Count: 8, eBay_Median: 4.47,
+    eBay_Avg: 16.39, eBay_Low: 2.94, eBay_High: 44.99, eBay_Count: 8, eBay_Median: 9.87,
   },
   {
     Title: `Fantastic Four`, Issue: `6`, Publisher: `Marvel`,
@@ -150961,7 +150961,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `10`, Entry: `9313`,
-    eBay_Avg: 12.47, eBay_Low: 9.99, eBay_High: 14.95, eBay_Count: 2, eBay_Median: 12.47,
+    eBay_Avg: 7.25, eBay_Low: 1.49, eBay_High: 14.14, eBay_Count: 9, eBay_Median: 7.7,
   },
   {
     Title: `Fantastic Four`, Issue: `8`, Publisher: `Marvel`,
@@ -151018,7 +151018,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `6`, Entry: `9316`,
-    eBay_Avg: null, eBay_Low: 4.25, eBay_High: 125, eBay_Count: 9, eBay_Median: null,
+    eBay_Avg: 20.92, eBay_Low: 3.15, eBay_High: 49.99, eBay_Count: 9, eBay_Median: 14.75,
   },
   {
     Title: `Fantastic Four`, Issue: `11`, Publisher: `Marvel`,
@@ -151664,7 +151664,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `3`, Entry: `9360`,
-    eBay_Avg: 7.2, eBay_Low: 2.66, eBay_High: 15, eBay_Count: 8, eBay_Median: 4.47,
+    eBay_Avg: 16.39, eBay_Low: 2.94, eBay_High: 44.99, eBay_Count: 8, eBay_Median: 9.87,
   },
   {
     Title: `Fantastic Four: Dark Reign`, Issue: `1`, Publisher: `Marvel`,
@@ -151702,7 +151702,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `9362`,
-    eBay_Avg: 5.93, eBay_Low: 2.25, eBay_High: 16.99, eBay_Count: 8, eBay_Median: 4.33,
+    eBay_Avg: 13.69, eBay_Low: 3.99, eBay_High: 22.97, eBay_Count: 10, eBay_Median: 14.14,
   },
   {
     Title: `New Fantastic Four`, Issue: `1`, Publisher: `Marvel`,
@@ -151930,7 +151930,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `10`, Entry: `9375`,
-    eBay_Avg: 6.58, eBay_Low: 2, eBay_High: 14.44, eBay_Count: 8, eBay_Median: 5.62,
+    eBay_Avg: 23.59, eBay_Low: 8.99, eBay_High: 53.99, eBay_Count: 9, eBay_Median: 19.49,
   },
   {
     Title: `Fantastic Four: Grimm Noir`, Issue: `1`, Publisher: `Marvel`,
@@ -152082,7 +152082,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `3`, Entry: `9383`,
-    eBay_Avg: 6.58, eBay_Low: 2, eBay_High: 14.44, eBay_Count: 8, eBay_Median: 5.62,
+    eBay_Avg: 23.59, eBay_Low: 8.99, eBay_High: 53.99, eBay_Count: 9, eBay_Median: 19.49,
   },
   {
     Title: `Annihilation Scourge: Fantastic Four`, Issue: `1`, Publisher: `Marvel`,
@@ -152139,7 +152139,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `9386`,
-    eBay_Avg: 9.82, eBay_Low: 3.99, eBay_High: 14.99, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 9.74, eBay_Low: 3.75, eBay_High: 14.99, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `Invisible Woman`, Issue: `2`, Publisher: `Marvel`,
@@ -152215,7 +152215,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `2`, Entry: `9390`,
-    eBay_Avg: 9.56, eBay_Low: 5, eBay_High: 20.95, eBay_Count: 8, eBay_Median: 8.49,
+    eBay_Avg: 13.55, eBay_Low: 5.99, eBay_High: 30, eBay_Count: 8, eBay_Median: 10.49,
   },
   {
     Title: `X-Men + Fantastic Four`, Issue: `2`, Publisher: `Marvel`,
@@ -152310,7 +152310,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `9395`,
-    eBay_Avg: 3.96, eBay_Low: 2.99, eBay_High: 9.22, eBay_Count: 9, eBay_Median: 3,
+    eBay_Avg: 3.09, eBay_Low: 1.2, eBay_High: 4.98, eBay_Count: 8, eBay_Median: 3,
   },
   {
     Title: `Human Torch`, Issue: `3`, Publisher: `Marvel`,
@@ -152500,7 +152500,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `4`,
     Crossover: `House of M`, Start_Bid: `2`,
     Volume: `3`, Entry: `9405`,
-    eBay_Avg: 6.58, eBay_Low: 2, eBay_High: 14.44, eBay_Count: 8, eBay_Median: 5.62,
+    eBay_Avg: 23.59, eBay_Low: 8.99, eBay_High: 53.99, eBay_Count: 9, eBay_Median: 19.49,
   },
   {
     Title: `Dark Reign: Deadpool / Thunderbolts`, Issue: `8`, Publisher: `Marvel`,
@@ -152576,7 +152576,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `28`,
     Crossover: `Annihilation`, Start_Bid: `2`,
     Volume: `1`, Entry: `9410`,
-    eBay_Avg: 9.7, eBay_Low: 3.85, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 9.75,
+    eBay_Avg: 11.93, eBay_Low: 4.5, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 10.03,
   },
   {
     Title: `Annihilation: Nova`, Issue: `2`, Publisher: `Marvel`,
@@ -152652,7 +152652,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `28`,
     Crossover: `Annihilation`, Start_Bid: `2`,
     Volume: `1`, Entry: `9414`,
-    eBay_Avg: 20.67, eBay_Low: 7.95, eBay_High: 33.81, eBay_Count: 10, eBay_Median: 19.99,
+    eBay_Avg: 13.98, eBay_Low: 4.91, eBay_High: 20, eBay_Count: 10, eBay_Median: 15.82,
   },
   {
     Title: `Annihilation: Silver Surfer`, Issue: `2`, Publisher: `Marvel`,
@@ -152937,7 +152937,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `28`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `9430`,
-    eBay_Avg: 18.27, eBay_Low: 6.02, eBay_High: 40, eBay_Count: 9, eBay_Median: 12.5,
+    eBay_Avg: 17.51, eBay_Low: 2, eBay_High: 40, eBay_Count: 9, eBay_Median: 12.5,
   },
   {
     Title: `Silver Surfer: Rebirth — Legacies`, Issue: `2`, Publisher: `Marvel`,
@@ -153013,7 +153013,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `28`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `7`, Entry: `9434`,
-    eBay_Avg: 19.14, eBay_Low: 9.99, eBay_High: 45.5, eBay_Count: 10, eBay_Median: 15.99,
+    eBay_Avg: 20.03, eBay_Low: 5, eBay_High: 37.09, eBay_Count: 9, eBay_Median: 19.99,
   },
   {
     Title: `Silver Surfer: Ghost Light`, Issue: `1`, Publisher: `Marvel`,
@@ -153032,7 +153032,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `28`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `9435`,
-    eBay_Avg: 56.58, eBay_Low: 5, eBay_High: 115, eBay_Count: 10, eBay_Median: 46.49,
+    eBay_Avg: 14.09, eBay_Low: 5.96, eBay_High: 29.99, eBay_Count: 7, eBay_Median: 11.39,
   },
   {
     Title: `Silver Surfer: Ghost Light`, Issue: `2`, Publisher: `Marvel`,
@@ -153184,7 +153184,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `28`,
     Crossover: `Annihilation`, Start_Bid: `2`,
     Volume: `4`, Entry: `9443`,
-    eBay_Avg: 11.01, eBay_Low: 10.03, eBay_High: 11.99, eBay_Count: 2, eBay_Median: 11.01,
+    eBay_Avg: 10.77, eBay_Low: 6, eBay_High: 19.95, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `Nova`, Issue: `1`, Publisher: `Marvel`,
@@ -153203,7 +153203,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `28`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `9444`,
-    eBay_Avg: 21.64, eBay_Low: 5, eBay_High: 44.99, eBay_Count: 8, eBay_Median: 18.11,
+    eBay_Avg: 16.37, eBay_Low: 6.99, eBay_High: 30, eBay_Count: 8, eBay_Median: 14.5,
   },
   {
     Title: `Nova`, Issue: `2`, Publisher: `Marvel`,
@@ -153279,7 +153279,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `28`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `6`, Entry: `9448`,
-    eBay_Avg: 21.64, eBay_Low: 5, eBay_High: 44.99, eBay_Count: 8, eBay_Median: 18.11,
+    eBay_Avg: 16.37, eBay_Low: 6.99, eBay_High: 30, eBay_Count: 8, eBay_Median: 14.5,
   },
   {
     Title: `Nova`, Issue: `2`, Publisher: `Marvel`,
@@ -154305,7 +154305,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `28`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `9503`,
-    eBay_Avg: 11.09, eBay_Low: 2.5, eBay_High: 28.89, eBay_Count: 10, eBay_Median: 9.7,
+    eBay_Avg: 7.72, eBay_Low: 2.5, eBay_High: 13.54, eBay_Count: 9, eBay_Median: 7.5,
   },
   {
     Title: `I Am Groot`, Issue: `2`, Publisher: `Marvel`,
@@ -154571,7 +154571,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `28`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `9517`,
-    eBay_Avg: 12.25, eBay_Low: 2.5, eBay_High: 28.47, eBay_Count: 10, eBay_Median: 10.32,
+    eBay_Avg: 9.57, eBay_Low: 1.5, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `Drax`, Issue: `2`, Publisher: `Marvel`,
@@ -154799,7 +154799,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `28`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `9529`,
-    eBay_Avg: 10.9, eBay_Low: 2.87, eBay_High: 25, eBay_Count: 10, eBay_Median: 11.25,
+    eBay_Avg: 16.03, eBay_Low: 3.99, eBay_High: 29.99, eBay_Count: 8, eBay_Median: 15,
   },
   {
     Title: `Thanos Rising`, Issue: `4`, Publisher: `Marvel`,
@@ -154856,7 +154856,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Marvel`, Box: `28`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `2`, Entry: `9532`,
-    eBay_Avg: 8.05, eBay_Low: 3.99, eBay_High: 19.99, eBay_Count: 8, eBay_Median: 5.38,
+    eBay_Avg: 3.27, eBay_Low: 1.43, eBay_High: 5, eBay_Count: 6, eBay_Median: 3.5,
   },
   {
     Title: `Earth 2`, Issue: `1`, Publisher: `DC`,
@@ -154875,7 +154875,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC New 52`, Box: `46`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `9533`,
-    eBay_Avg: 5.78, eBay_Low: 1.42, eBay_High: 9.99, eBay_Count: 8, eBay_Median: 5.12,
+    eBay_Avg: 9.1, eBay_Low: 1.43, eBay_High: 21.95, eBay_Count: 7, eBay_Median: 6,
   },
   {
     Title: `Earth 2`, Issue: `2`, Publisher: `DC`,
@@ -155540,7 +155540,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC New 52`, Box: `46`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `9577`,
-    eBay_Avg: 4.46, eBay_Low: 2.5, eBay_High: 9.99, eBay_Count: 7, eBay_Median: 3.49,
+    eBay_Avg: 14.71, eBay_Low: 1.55, eBay_High: 30, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `Earth 2: World's End`, Issue: `2`, Publisher: `DC`,
@@ -155749,7 +155749,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC New 52`, Box: `46`,
     Crossover: `Convergence`, Start_Bid: `2`,
     Volume: `1`, Entry: `9588`,
-    eBay_Avg: 4.52, eBay_Low: 2.66, eBay_High: 9.99, eBay_Count: 9, eBay_Median: 2.66,
+    eBay_Avg: 6.2, eBay_Low: 2.25, eBay_High: 12.35, eBay_Count: 9, eBay_Median: 3.99,
   },
   {
     Title: `Earth 2: Society`, Issue: `2`, Publisher: `DC`,
@@ -156129,7 +156129,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `DC New 52`, Box: `46`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `9608`,
-    eBay_Avg: 7.25, eBay_Low: 2.1, eBay_High: 14.95, eBay_Count: 9, eBay_Median: 7.99,
+    eBay_Avg: 8.37, eBay_Low: 3.49, eBay_High: 17.75, eBay_Count: 9, eBay_Median: 7.1,
   },
   {
     Title: `World's Finest`, Issue: `2`, Publisher: `DC`,
@@ -156928,7 +156928,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `DC New 52`, Box: `46`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `2`, Entry: `9651`,
-    eBay_Avg: 8.98, eBay_Low: 2.95, eBay_High: 20, eBay_Count: 10, eBay_Median: 8.99,
+    eBay_Avg: 9.29, eBay_Low: 2.9, eBay_High: 19, eBay_Count: 8, eBay_Median: 9.87,
   },
   {
     Title: `Justice League`, Issue: `22`, Publisher: `DC`,
@@ -157441,7 +157441,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `DC New 52`, Box: `46`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `2`, Entry: `9678`,
-    eBay_Avg: null, eBay_Low: 3.95, eBay_High: 46.4, eBay_Count: 9, eBay_Median: null,
+    eBay_Avg: 15.58, eBay_Low: 3.95, eBay_High: 39.99, eBay_Count: 9, eBay_Median: 15,
   },
   {
     Title: `Justice League`, Issue: `52`, Publisher: `DC`,
@@ -157574,7 +157574,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `DC New 52`, Box: `46`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `3`, Entry: `9685`,
-    eBay_Avg: 15.67, eBay_Low: 4.99, eBay_High: 34.99, eBay_Count: 9, eBay_Median: 14.99,
+    eBay_Avg: 13.49, eBay_Low: 1.99, eBay_High: 34.99, eBay_Count: 8, eBay_Median: 11.99,
   },
   {
     Title: `Justice League of America`, Issue: `2`, Publisher: `DC`,
@@ -158524,7 +158524,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `17`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `3`, Entry: `9746`,
-    eBay_Avg: 10.32, eBay_Low: 8.99, eBay_High: 13.99, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 7.95, eBay_Low: 2.02, eBay_High: 9.99, eBay_Count: 10, eBay_Median: 8.99,
   },
   {
     Title: `Guardians of the Galaxy`, Issue: `1`, Publisher: `Marvel`,
@@ -158543,7 +158543,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `17`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `3`, Entry: `9747`,
-    eBay_Avg: 10.82, eBay_Low: 5, eBay_High: 19.99, eBay_Count: 7, eBay_Median: 9.9,
+    eBay_Avg: 19.88, eBay_Low: 10, eBay_High: 23.04, eBay_Count: 7, eBay_Median: 23.04,
   },
   {
     Title: `Guardians of the Galaxy`, Issue: `2`, Publisher: `Marvel`,
@@ -159075,7 +159075,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `17`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `3`, Entry: `9775`,
-    eBay_Avg: 10.82, eBay_Low: 5, eBay_High: 19.99, eBay_Count: 7, eBay_Median: 9.9,
+    eBay_Avg: 19.88, eBay_Low: 10, eBay_High: 23.04, eBay_Count: 7, eBay_Median: 23.04,
   },
   {
     Title: `Marvel's Guardians of the Galaxy Prelude`, Issue: `1`, Publisher: `Marvel`,
@@ -159113,7 +159113,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `17`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `3`, Entry: `9777`,
-    eBay_Avg: 4.38, eBay_Low: 2.75, eBay_High: 5.99, eBay_Count: 7, eBay_Median: 3.99,
+    eBay_Avg: 17.16, eBay_Low: 4, eBay_High: 23.04, eBay_Count: 7, eBay_Median: 22.99,
   },
   {
     Title: `Guardians of the Galaxy`, Issue: `1`, Publisher: `Marvel`,
@@ -159132,7 +159132,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `17`,
     Crossover: `Monsters Unleashed`, Start_Bid: `2`,
     Volume: `3`, Entry: `9778`,
-    eBay_Avg: 10.82, eBay_Low: 5, eBay_High: 19.99, eBay_Count: 7, eBay_Median: 9.9,
+    eBay_Avg: 19.88, eBay_Low: 10, eBay_High: 23.04, eBay_Count: 7, eBay_Median: 23.04,
   },
   {
     Title: `Infinity Wars: Fallen Guardian`, Issue: `1`, Publisher: `Marvel`,
@@ -159284,7 +159284,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `17`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `9786`,
-    eBay_Avg: 15.83, eBay_Low: 2.75, eBay_High: 39.75, eBay_Count: 8, eBay_Median: 11.1,
+    eBay_Avg: 12.02, eBay_Low: 1.5, eBay_High: 29.99, eBay_Count: 9, eBay_Median: 12.75,
   },
   {
     Title: `All-New Guardians of the Galaxy`, Issue: `2`, Publisher: `Marvel`,
@@ -159512,7 +159512,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `17`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `9798`,
-    eBay_Avg: 10.6, eBay_Low: 3.99, eBay_High: 19.5, eBay_Count: 10, eBay_Median: 10,
+    eBay_Avg: 12.09, eBay_Low: 3.99, eBay_High: 24.25, eBay_Count: 10, eBay_Median: 10.25,
   },
   {
     Title: `Guardians of the Galaxy: Mother Entropy`, Issue: `2`, Publisher: `Marvel`,
@@ -159607,7 +159607,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `17`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `5`, Entry: `9803`,
-    eBay_Avg: 10.82, eBay_Low: 5, eBay_High: 19.99, eBay_Count: 7, eBay_Median: 9.9,
+    eBay_Avg: 19.88, eBay_Low: 10, eBay_High: 23.04, eBay_Count: 7, eBay_Median: 23.04,
   },
   {
     Title: `Guardians of the Galaxy`, Issue: `2`, Publisher: `Marvel`,
@@ -159835,7 +159835,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `17`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `6`, Entry: `9815`,
-    eBay_Avg: 10.82, eBay_Low: 5, eBay_High: 19.99, eBay_Count: 7, eBay_Median: 9.9,
+    eBay_Avg: 19.88, eBay_Low: 10, eBay_High: 23.04, eBay_Count: 7, eBay_Median: 23.04,
   },
   {
     Title: `Guardians of the Galaxy`, Issue: `2`, Publisher: `Marvel`,
@@ -160215,7 +160215,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `17`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `7`, Entry: `9835`,
-    eBay_Avg: 10.82, eBay_Low: 5, eBay_High: 19.99, eBay_Count: 7, eBay_Median: 9.9,
+    eBay_Avg: 19.88, eBay_Low: 10, eBay_High: 23.04, eBay_Count: 7, eBay_Median: 23.04,
   },
   {
     Title: `Guardians of the Galaxy`, Issue: `2`, Publisher: `Marvel`,
@@ -160842,7 +160842,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `17`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `9868`,
-    eBay_Avg: 6.55, eBay_Low: 2.97, eBay_High: 11, eBay_Count: 10, eBay_Median: 5.97,
+    eBay_Avg: 9.41, eBay_Low: 4.55, eBay_High: 20.21, eBay_Count: 8, eBay_Median: 7.71,
   },
   {
     Title: `Guardians Team-Up`, Issue: `2`, Publisher: `Marvel`,
@@ -161374,7 +161374,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `17`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `2`, Entry: `9896`,
-    eBay_Avg: 8.67, eBay_Low: 3.99, eBay_High: 19.99, eBay_Count: 8, eBay_Median: 5.99,
+    eBay_Avg: 8.88, eBay_Low: 5, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 5.99,
   },
   {
     Title: `Rocket Raccoon`, Issue: `2`, Publisher: `Marvel`,
@@ -161659,7 +161659,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `17`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `9911`,
-    eBay_Avg: 13.12, eBay_Low: 3.99, eBay_High: 25, eBay_Count: 8, eBay_Median: 12.5,
+    eBay_Avg: 14.27, eBay_Low: 3.99, eBay_High: 25, eBay_Count: 9, eBay_Median: 12.99,
   },
   {
     Title: `Groot`, Issue: `2`, Publisher: `Marvel`,
@@ -161830,7 +161830,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `17`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `9921`,
-    eBay_Avg: 9.06, eBay_Low: 1, eBay_High: 21.99, eBay_Count: 9, eBay_Median: 8.99,
+    eBay_Avg: 12.58, eBay_Low: 3.5, eBay_High: 29.99, eBay_Count: 9, eBay_Median: 11,
   },
   {
     Title: `Gamora`, Issue: `2`, Publisher: `Marvel`,
@@ -162058,7 +162058,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `17`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `2`, Entry: `9934`,
-    eBay_Avg: 17.82, eBay_Low: 7.97, eBay_High: 28.48, eBay_Count: 6, eBay_Median: 17.74,
+    eBay_Avg: 16.09, eBay_Low: 5, eBay_High: 28.75, eBay_Count: 8, eBay_Median: 15.73,
   },
   {
     Title: `Nova`, Issue: `6`, Publisher: `Marvel`,
@@ -162134,7 +162134,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `21`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `9938`,
-    eBay_Avg: 8.02, eBay_Low: 4.03, eBay_High: 12, eBay_Count: 2, eBay_Median: 8.02,
+    eBay_Avg: 8.75, eBay_Low: 1.89, eBay_High: 19.5, eBay_Count: 9, eBay_Median: 8,
   },
   {
     Title: `The Immortal Iron Fist`, Issue: `2`, Publisher: `Marvel`,
@@ -162571,7 +162571,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `21`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `9961`,
-    eBay_Avg: 5.67, eBay_Low: 3.55, eBay_High: 9.99, eBay_Count: 5, eBay_Median: 4.98,
+    eBay_Avg: 5.68, eBay_Low: 3.56, eBay_High: 9.99, eBay_Count: 5, eBay_Median: 4.98,
   },
   {
     Title: `Immortal Iron Fist: Orson Randall and the Green Mist of Death`, Issue: `1`, Publisher: `Marvel`,
@@ -162666,7 +162666,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `21`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `9966`,
-    eBay_Avg: 13.21, eBay_Low: 3.77, eBay_High: 30, eBay_Count: 9, eBay_Median: 10,
+    eBay_Avg: 14.24, eBay_Low: 8.95, eBay_High: 25, eBay_Count: 8, eBay_Median: 12.5,
   },
   {
     Title: `Iron Fist: The Living Weapon`, Issue: `2`, Publisher: `Marvel`,
@@ -162894,7 +162894,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `21`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `9978`,
-    eBay_Avg: 5.28, eBay_Low: 0.99, eBay_High: 7.99, eBay_Count: 9, eBay_Median: 6,
+    eBay_Avg: 5.54, eBay_Low: 2.5, eBay_High: 8.02, eBay_Count: 6, eBay_Median: 5.12,
   },
   {
     Title: `Iron Fist`, Issue: `1`, Publisher: `Marvel`,
@@ -162913,7 +162913,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `21`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `9979`,
-    eBay_Avg: 5.28, eBay_Low: 0.99, eBay_High: 7.99, eBay_Count: 9, eBay_Median: 6,
+    eBay_Avg: 5.54, eBay_Low: 2.5, eBay_High: 8.02, eBay_Count: 6, eBay_Median: 5.12,
   },
   {
     Title: `Iron Fist`, Issue: `2`, Publisher: `Marvel`,
@@ -163046,7 +163046,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `21`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `6`, Entry: `9986`,
-    eBay_Avg: 5.28, eBay_Low: 0.99, eBay_High: 7.99, eBay_Count: 9, eBay_Median: 6,
+    eBay_Avg: 5.54, eBay_Low: 2.5, eBay_High: 8.02, eBay_Count: 6, eBay_Median: 5.12,
   },
   {
     Title: `Iron Fist`, Issue: `2`, Publisher: `Marvel`,
@@ -163122,7 +163122,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `21`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `9990`,
-    eBay_Avg: 8.13, eBay_Low: 2.9, eBay_High: 19.5, eBay_Count: 8, eBay_Median: 6.99,
+    eBay_Avg: 5.99, eBay_Low: 4.49, eBay_High: 9, eBay_Count: 9, eBay_Median: 5.95,
   },
   {
     Title: `Iron Fist: Heart of the Dragon`, Issue: `2`, Publisher: `Marvel`,
@@ -163217,7 +163217,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `21`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `3`, Entry: `9996`,
-    eBay_Avg: 6.86, eBay_Low: 3.5, eBay_High: 11, eBay_Count: 6, eBay_Median: 5.76,
+    eBay_Avg: 4.8, eBay_Low: 1.95, eBay_High: 9.99, eBay_Count: 8, eBay_Median: 4.47,
   },
   {
     Title: `Power Man and Iron Fist`, Issue: `2`, Publisher: `Marvel`,
@@ -163445,7 +163445,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `21`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `2`, Entry: `10008`,
-    eBay_Avg: 6.86, eBay_Low: 3.5, eBay_High: 11, eBay_Count: 6, eBay_Median: 5.76,
+    eBay_Avg: 4.8, eBay_Low: 1.95, eBay_High: 9.99, eBay_Count: 8, eBay_Median: 4.47,
   },
   {
     Title: `Power Man and Iron Fist`, Issue: `2`, Publisher: `Marvel`,
@@ -163483,7 +163483,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `21`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `3`, Entry: `10010`,
-    eBay_Avg: 6.86, eBay_Low: 3.5, eBay_High: 11, eBay_Count: 6, eBay_Median: 5.76,
+    eBay_Avg: 4.8, eBay_Low: 1.95, eBay_High: 9.99, eBay_Count: 8, eBay_Median: 4.47,
   },
   {
     Title: `Power Man and Iron Fist`, Issue: `2`, Publisher: `Marvel`,
@@ -163559,7 +163559,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `21`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `10014`,
-    eBay_Avg: 20.09, eBay_Low: 6.98, eBay_High: 51.99, eBay_Count: 9, eBay_Median: 12.99,
+    eBay_Avg: 15.57, eBay_Low: 8, eBay_High: 28, eBay_Count: 8, eBay_Median: 13.61,
   },
   {
     Title: `Luke Cage`, Issue: `2`, Publisher: `Marvel`,
@@ -163654,7 +163654,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `21`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `10019`,
-    eBay_Avg: 17.95, eBay_Low: 1.5, eBay_High: 51.18, eBay_Count: 7, eBay_Median: 9.99,
+    eBay_Avg: 21.91, eBay_Low: 4.99, eBay_High: 49.99, eBay_Count: 8, eBay_Median: 14.63,
   },
   {
     Title: `Cage!`, Issue: `2`, Publisher: `Marvel`,
@@ -163730,7 +163730,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `21`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `2`, Entry: `10023`,
-    eBay_Avg: 17.42, eBay_Low: 1.34, eBay_High: 36, eBay_Count: 9, eBay_Median: 19.99,
+    eBay_Avg: 19.6, eBay_Low: 3.99, eBay_High: 50, eBay_Count: 10, eBay_Median: 19.99,
   },
   {
     Title: `Jessica Jones`, Issue: `2`, Publisher: `Marvel`,
@@ -164072,7 +164072,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `21`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `10041`,
-    eBay_Avg: 7.05, eBay_Low: 2.77, eBay_High: 12.88, eBay_Count: 7, eBay_Median: 5.95,
+    eBay_Avg: 14.61, eBay_Low: 5.68, eBay_High: 29, eBay_Count: 10, eBay_Median: 13.8,
   },
   {
     Title: `Heroes for Hire`, Issue: `4`, Publisher: `Marvel`,
@@ -164186,7 +164186,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `21`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `10047`,
-    eBay_Avg: 7.35, eBay_Low: 1.99, eBay_High: 17.99, eBay_Count: 7, eBay_Median: 6,
+    eBay_Avg: 8.65, eBay_Low: 2.02, eBay_High: 15, eBay_Count: 8, eBay_Median: 8.48,
   },
   {
     Title: `The Defenders`, Issue: `2`, Publisher: `Marvel`,
@@ -164395,7 +164395,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `21`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `10058`,
-    eBay_Avg: 8.79, eBay_Low: 1.99, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 5.88,
+    eBay_Avg: 12.52, eBay_Low: 5.88, eBay_High: 29.88, eBay_Count: 9, eBay_Median: 10,
   },
   {
     Title: `Shang-Chi`, Issue: `2`, Publisher: `Marvel`,
@@ -164623,7 +164623,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `21`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `2`, Entry: `10070`,
-    eBay_Avg: 13.7, eBay_Low: 6, eBay_High: 23, eBay_Count: 10, eBay_Median: 12.87,
+    eBay_Avg: 14.36, eBay_Low: 3.69, eBay_High: 26.95, eBay_Count: 10, eBay_Median: 16.99,
   },
   {
     Title: `Shang-Chi and the Ten Rings`, Issue: `2`, Publisher: `Marvel`,
@@ -164737,7 +164737,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `21`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `3`, Entry: `10076`,
-    eBay_Avg: 5.1, eBay_Low: 2.99, eBay_High: 9.02, eBay_Count: 8, eBay_Median: 4.79,
+    eBay_Avg: 5.11, eBay_Low: 2.99, eBay_High: 9.1, eBay_Count: 8, eBay_Median: 4.79,
   },
   {
     Title: `Shang-Chi vs. the Marvel Universe`, Issue: `1`, Publisher: `Marvel`,
@@ -164775,7 +164775,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `21`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `10078`,
-    eBay_Avg: 9.88, eBay_Low: 2.82, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 9.95,
+    eBay_Avg: 8.08, eBay_Low: 2.9, eBay_High: 11.99, eBay_Count: 8, eBay_Median: 8.5,
   },
   {
     Title: `S.H.I.E.L.D.`, Issue: `5`, Publisher: `Marvel`,
@@ -164927,7 +164927,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `20`,
     Crossover: `Infinity Wars`, Start_Bid: `4`,
     Volume: `1`, Entry: `10087`,
-    eBay_Avg: 12.09, eBay_Low: 5.29, eBay_High: 28, eBay_Count: 9, eBay_Median: 8.5,
+    eBay_Avg: 13.62, eBay_Low: 5, eBay_High: 28, eBay_Count: 9, eBay_Median: 12.99,
   },
   {
     Title: `Hawkeye and Mockingbird`, Issue: `1`, Publisher: `Marvel`,
@@ -165497,7 +165497,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `8`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `10118`,
-    eBay_Avg: 12.19, eBay_Low: 2.95, eBay_High: 34.98, eBay_Count: 8, eBay_Median: 9.34,
+    eBay_Avg: 16.4, eBay_Low: 5.43, eBay_High: 49.99, eBay_Count: 7, eBay_Median: 11.35,
   },
   {
     Title: `Marvel Knights: Elektra`, Issue: `2`, Publisher: `Marvel`,
@@ -165877,7 +165877,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `8`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `3`, Entry: `10138`,
-    eBay_Avg: 8.11, eBay_Low: 1.54, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 4.99,
+    eBay_Avg: 11.69, eBay_Low: 4.95, eBay_High: 24.26, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `Elektra`, Issue: `2`, Publisher: `Marvel`,
@@ -166542,7 +166542,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `8`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `10173`,
-    eBay_Avg: 16.05, eBay_Low: 4.89, eBay_High: 28.99, eBay_Count: 10, eBay_Median: 16.68,
+    eBay_Avg: 14.71, eBay_Low: 4.93, eBay_High: 28.99, eBay_Count: 10, eBay_Median: 14.25,
   },
   {
     Title: `Widow Maker`, Issue: `2`, Publisher: `Marvel`,
@@ -166751,7 +166751,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `8`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `5`, Entry: `10185`,
-    eBay_Avg: 41.2, eBay_Low: 2.29, eBay_High: 119.99, eBay_Count: 9, eBay_Median: 24.97,
+    eBay_Avg: 20.94, eBay_Low: 2.99, eBay_High: 45, eBay_Count: 9, eBay_Median: 19.5,
   },
   {
     Title: `Hawkeye`, Issue: `3`, Publisher: `Marvel`,
@@ -167188,7 +167188,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `8`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `6`, Entry: `10208`,
-    eBay_Avg: 41.2, eBay_Low: 2.29, eBay_High: 119.99, eBay_Count: 9, eBay_Median: 24.97,
+    eBay_Avg: 20.94, eBay_Low: 2.99, eBay_High: 45, eBay_Count: 9, eBay_Median: 19.5,
   },
   {
     Title: `Hawkeye`, Issue: `2`, Publisher: `Marvel`,
@@ -167302,7 +167302,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `8`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `7`, Entry: `10214`,
-    eBay_Avg: 41.2, eBay_Low: 2.29, eBay_High: 119.99, eBay_Count: 9, eBay_Median: 24.97,
+    eBay_Avg: 20.94, eBay_Low: 2.99, eBay_High: 45, eBay_Count: 9, eBay_Median: 19.5,
   },
   {
     Title: `Hawkeye`, Issue: `2`, Publisher: `Marvel`,
@@ -167416,7 +167416,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `8`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `7`, Entry: `10220`,
-    eBay_Avg: 11.55, eBay_Low: 9.45, eBay_High: 17, eBay_Count: 6, eBay_Median: 10.5,
+    eBay_Avg: 8.27, eBay_Low: 2.99, eBay_High: 10.77, eBay_Count: 10, eBay_Median: 9.99,
   },
   {
     Title: `Hawkeye`, Issue: `8`, Publisher: `Marvel`,
@@ -167511,7 +167511,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `72`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `10225`,
-    eBay_Avg: 5.37, eBay_Low: 2.95, eBay_High: 6.97, eBay_Count: 7, eBay_Median: 5.19,
+    eBay_Avg: 5.83, eBay_Low: 2.9, eBay_High: 10.99, eBay_Count: 9, eBay_Median: 5,
   },
   {
     Title: `Hawkeye: Freefall`, Issue: `2`, Publisher: `Marvel`,
@@ -167739,7 +167739,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `8`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `10237`,
-    eBay_Avg: 15.01, eBay_Low: 8.35, eBay_High: 22.99, eBay_Count: 8, eBay_Median: 14.75,
+    eBay_Avg: 11.05, eBay_Low: 4.99, eBay_High: 19, eBay_Count: 7, eBay_Median: 10.2,
   },
   {
     Title: `Old Man Hawkeye`, Issue: `2`, Publisher: `Marvel`,
@@ -168005,7 +168005,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `8`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `6`, Entry: `10251`,
-    eBay_Avg: null, eBay_Low: 1.95, eBay_High: 125, eBay_Count: 7, eBay_Median: null,
+    eBay_Avg: 15.14, eBay_Low: 4.89, eBay_High: 35.99, eBay_Count: 6, eBay_Median: 9.99,
   },
   {
     Title: `Black Widow`, Issue: `2`, Publisher: `Marvel`,
@@ -168404,7 +168404,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `8`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `7`, Entry: `10272`,
-    eBay_Avg: null, eBay_Low: 1.95, eBay_High: 125, eBay_Count: 7, eBay_Median: null,
+    eBay_Avg: 15.14, eBay_Low: 4.89, eBay_High: 35.99, eBay_Count: 6, eBay_Median: 9.99,
   },
   {
     Title: `Black Widow`, Issue: `2`, Publisher: `Marvel`,
@@ -168632,7 +168632,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `8`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `8`, Entry: `10284`,
-    eBay_Avg: null, eBay_Low: 1.95, eBay_High: 125, eBay_Count: 7, eBay_Median: null,
+    eBay_Avg: 15.14, eBay_Low: 4.89, eBay_High: 35.99, eBay_Count: 6, eBay_Median: 9.99,
   },
   {
     Title: `Black Widow`, Issue: `2`, Publisher: `Marvel`,
@@ -168860,7 +168860,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `8`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `8`, Entry: `10296`,
-    eBay_Avg: null, eBay_Low: 1.95, eBay_High: 125, eBay_Count: 7, eBay_Median: null,
+    eBay_Avg: 15.14, eBay_Low: 4.89, eBay_High: 35.99, eBay_Count: 6, eBay_Median: 9.99,
   },
   {
     Title: `Black Widow`, Issue: `30`, Publisher: `Marvel`,
@@ -168898,7 +168898,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `8`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `9`, Entry: `10298`,
-    eBay_Avg: null, eBay_Low: 1.95, eBay_High: 125, eBay_Count: 7, eBay_Median: null,
+    eBay_Avg: 15.14, eBay_Low: 4.89, eBay_High: 35.99, eBay_Count: 6, eBay_Median: 9.99,
   },
   {
     Title: `Black Widow`, Issue: `3`, Publisher: `Marvel`,
@@ -169145,7 +169145,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `8`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `10311`,
-    eBay_Avg: 17.2, eBay_Low: 9.45, eBay_High: 24.95, eBay_Count: 2, eBay_Median: 17.2,
+    eBay_Avg: 10.09, eBay_Low: 3.14, eBay_High: 25, eBay_Count: 8, eBay_Median: 8,
   },
   {
     Title: `Winter Soldier`, Issue: `2`, Publisher: `Marvel`,
@@ -169506,7 +169506,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `8`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `10330`,
-    eBay_Avg: 8.43, eBay_Low: 1, eBay_High: 18.5, eBay_Count: 8, eBay_Median: 6.49,
+    eBay_Avg: 12.95, eBay_Low: 4.22, eBay_High: 26.97, eBay_Count: 9, eBay_Median: 7.95,
   },
   {
     Title: `Bucky Barnes: The Winter Soldier`, Issue: `2`, Publisher: `Marvel`,
@@ -169658,7 +169658,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `8`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `10338`,
-    eBay_Avg: 8.24, eBay_Low: 4.99, eBay_High: 14.99, eBay_Count: 6, eBay_Median: 5.74,
+    eBay_Avg: 33.83, eBay_Low: 2, eBay_High: 99, eBay_Count: 10, eBay_Median: 33.7,
   },
   {
     Title: `All-New Invaders`, Issue: `1`, Publisher: `Marvel`,
@@ -169677,7 +169677,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `8`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `10339`,
-    eBay_Avg: 10.96, eBay_Low: 0.99, eBay_High: 23.75, eBay_Count: 8, eBay_Median: 9.99,
+    eBay_Avg: 4.35, eBay_Low: 2.75, eBay_High: 9.5, eBay_Count: 7, eBay_Median: 2.75,
   },
   {
     Title: `All-New Invaders`, Issue: `2`, Publisher: `Marvel`,
@@ -169981,7 +169981,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `31`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `4`, Entry: `10356`,
-    eBay_Avg: 9.79, eBay_Low: 5.19, eBay_High: 24.99, eBay_Count: 8, eBay_Median: 8.47,
+    eBay_Avg: 98.76, eBay_Low: 5.3, eBay_High: 250, eBay_Count: 9, eBay_Median: 142.25,
   },
   {
     Title: `Doctor Strange`, Issue: `2`, Publisher: `Marvel`,
@@ -170399,7 +170399,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `31`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `10378`,
-    eBay_Avg: null, eBay_Low: 8.01, eBay_High: 298, eBay_Count: 10, eBay_Median: null,
+    eBay_Avg: 159.66, eBay_Low: 6.73, eBay_High: 298, eBay_Count: 10, eBay_Median: 158,
   },
   {
     Title: `Doctor Strange`, Issue: `1`, Publisher: `Marvel`,
@@ -170418,7 +170418,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `31`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `10379`,
-    eBay_Avg: 9.79, eBay_Low: 5.19, eBay_High: 24.99, eBay_Count: 8, eBay_Median: 8.47,
+    eBay_Avg: 98.76, eBay_Low: 5.3, eBay_High: 250, eBay_Count: 9, eBay_Median: 142.25,
   },
   {
     Title: `Doctor Strange`, Issue: `2`, Publisher: `Marvel`,
@@ -170703,7 +170703,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `31`,
     Crossover: `Monsters Unleashed`, Start_Bid: `2`,
     Volume: `5`, Entry: `10394`,
-    eBay_Avg: 9.79, eBay_Low: 5.19, eBay_High: 24.99, eBay_Count: 8, eBay_Median: 8.47,
+    eBay_Avg: 98.76, eBay_Low: 5.3, eBay_High: 250, eBay_Count: 9, eBay_Median: 142.25,
   },
   {
     Title: `Doctor Strange`, Issue: `1`, Publisher: `Marvel`,
@@ -170722,7 +170722,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `31`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `6`, Entry: `10395`,
-    eBay_Avg: 9.79, eBay_Low: 5.19, eBay_High: 24.99, eBay_Count: 8, eBay_Median: 8.47,
+    eBay_Avg: 98.76, eBay_Low: 5.3, eBay_High: 250, eBay_Count: 9, eBay_Median: 142.25,
   },
   {
     Title: `Doctor Strange`, Issue: `2`, Publisher: `Marvel`,
@@ -170779,7 +170779,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `31`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `7`, Entry: `10398`,
-    eBay_Avg: 9.79, eBay_Low: 5.19, eBay_High: 24.99, eBay_Count: 8, eBay_Median: 8.47,
+    eBay_Avg: 98.76, eBay_Low: 5.3, eBay_High: 250, eBay_Count: 9, eBay_Median: 142.25,
   },
   {
     Title: `Doctor Strange`, Issue: `12`, Publisher: `Marvel`,
@@ -170912,7 +170912,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `31`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `10405`,
-    eBay_Avg: 15.66, eBay_Low: 5, eBay_High: 30, eBay_Count: 9, eBay_Median: 12.99,
+    eBay_Avg: 13.69, eBay_Low: 4.99, eBay_High: 24.96, eBay_Count: 10, eBay_Median: 12.99,
   },
   {
     Title: `Death of Doctor Strange`, Issue: `2`, Publisher: `Marvel`,
@@ -171007,7 +171007,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `31`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `10410`,
-    eBay_Avg: 8.3, eBay_Low: 2.14, eBay_High: 22.99, eBay_Count: 8, eBay_Median: 7.45,
+    eBay_Avg: 12.36, eBay_Low: 4.49, eBay_High: 25, eBay_Count: 9, eBay_Median: 11.95,
   },
   {
     Title: `Strange Academy`, Issue: `2`, Publisher: `Marvel`,
@@ -171330,7 +171330,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `31`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `10427`,
-    eBay_Avg: 8.17, eBay_Low: 3.12, eBay_High: 15, eBay_Count: 9, eBay_Median: 6.62,
+    eBay_Avg: 8.26, eBay_Low: 3.99, eBay_High: 21.39, eBay_Count: 9, eBay_Median: 7,
   },
   {
     Title: `Strange Academy: Finals`, Issue: `2`, Publisher: `Marvel`,
@@ -171577,7 +171577,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `39`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `4`, Entry: `10450`,
-    eBay_Avg: null, eBay_Low: 3.99, eBay_High: 59.99, eBay_Count: 8, eBay_Median: null,
+    eBay_Avg: 12.7, eBay_Low: 3.99, eBay_High: 24.99, eBay_Count: 8, eBay_Median: 11.2,
   },
   {
     Title: `Thor`, Issue: `2`, Publisher: `Marvel`,
@@ -171767,7 +171767,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `39`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `4`, Entry: `10460`,
-    eBay_Avg: 8.36, eBay_Low: 2.8, eBay_High: 16, eBay_Count: 8, eBay_Median: 7.2,
+    eBay_Avg: 7.58, eBay_Low: 3.5, eBay_High: 10, eBay_Count: 6, eBay_Median: 8.49,
   },
   {
     Title: `Thor`, Issue: `607`, Publisher: `Marvel`,
@@ -171995,7 +171995,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `39`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `2`, Entry: `10472`,
-    eBay_Avg: 6.07, eBay_Low: 3.74, eBay_High: 13, eBay_Count: 9, eBay_Median: 4.48,
+    eBay_Avg: 12.4, eBay_Low: 7.99, eBay_High: 19.99, eBay_Count: 8, eBay_Median: 11.12,
   },
   {
     Title: `The Mighty Thor`, Issue: `2`, Publisher: `Marvel`,
@@ -172109,7 +172109,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `39`,
     Crossover: `Secret Invasion`, Start_Bid: `2`,
     Volume: `1`, Entry: `10478`,
-    eBay_Avg: 12.61, eBay_Low: 2.66, eBay_High: 25, eBay_Count: 10, eBay_Median: 9.25,
+    eBay_Avg: 10.69, eBay_Low: 2, eBay_High: 18.99, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `Journey into Mystery`, Issue: `1`, Publisher: `Marvel`,
@@ -172128,7 +172128,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `39`,
     Crossover: `Fear Itself`, Start_Bid: `2`,
     Volume: `1`, Entry: `10479`,
-    eBay_Avg: 8.22, eBay_Low: 2.23, eBay_High: 14.99, eBay_Count: 10, eBay_Median: 9.99,
+    eBay_Avg: 12.76, eBay_Low: 3.99, eBay_High: 19.95, eBay_Count: 10, eBay_Median: 13.95,
   },
   {
     Title: `The Unworthy Thor`, Issue: `1`, Publisher: `Marvel`,
@@ -172147,7 +172147,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `39`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `10480`,
-    eBay_Avg: 9.67, eBay_Low: 2.99, eBay_High: 25, eBay_Count: 8, eBay_Median: 7.06,
+    eBay_Avg: 16.85, eBay_Low: 4.99, eBay_High: 37.08, eBay_Count: 9, eBay_Median: 14.99,
   },
   {
     Title: `The Unworthy Thor`, Issue: `2`, Publisher: `Marvel`,
@@ -172204,7 +172204,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `10483`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
+    eBay_Avg: 63.22, eBay_Low: 26.9, eBay_High: 83.96, eBay_Count: 10, eBay_Median: 65,
   },
   {
     Title: `Batman`, Issue: `608`, Publisher: `DC`,
@@ -172223,7 +172223,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `DC`, Box: `72`,
     Crossover: `Hush`, Start_Bid: `5`,
     Volume: `1`, Entry: `10484`,
-    eBay_Avg: 24.21, eBay_Low: 9.99, eBay_High: 35, eBay_Count: 7, eBay_Median: 24.99,
+    eBay_Avg: 23.26, eBay_Low: 14.91, eBay_High: 26.95, eBay_Count: 7, eBay_Median: 24.99,
   },
   {
     Title: `Batman`, Issue: `609`, Publisher: `DC`,
@@ -172451,7 +172451,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `DC Rebirth`, Box: `43`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `10497`,
-    eBay_Avg: 6.59, eBay_Low: 1.25, eBay_High: 16.99, eBay_Count: 8, eBay_Median: 4.88,
+    eBay_Avg: 4.17, eBay_Low: 2.39, eBay_High: 7.48, eBay_Count: 9, eBay_Median: 3.95,
   },
   {
     Title: `Batman`, Issue: `39`, Publisher: `DC`,
@@ -172489,7 +172489,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `DC Rebirth`, Box: `43`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `10499`,
-    eBay_Avg: 7.27, eBay_Low: 1.25, eBay_High: 10, eBay_Count: 8, eBay_Median: 8.45,
+    eBay_Avg: 4.95, eBay_Low: 2.9, eBay_High: 7.99, eBay_Count: 8, eBay_Median: 4.5,
   },
   {
     Title: `Batman`, Issue: `41`, Publisher: `DC`,
@@ -172641,7 +172641,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `DC Rebirth`, Box: `43`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `2`, Entry: `10507`,
-    eBay_Avg: 9.49, eBay_Low: 1, eBay_High: 24.91, eBay_Count: 8, eBay_Median: 6.83,
+    eBay_Avg: 10.41, eBay_Low: 2.82, eBay_High: 26.24, eBay_Count: 8, eBay_Median: 7.66,
   },
   {
     Title: `Detective Comics`, Issue: `935`, Publisher: `DC`,
@@ -173192,7 +173192,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `DC Rebirth`, Box: `43`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `10538`,
-    eBay_Avg: 7.88, eBay_Low: 2.99, eBay_High: 15.55, eBay_Count: 10, eBay_Median: 7.45,
+    eBay_Avg: 6.25, eBay_Low: 2.25, eBay_High: 11.99, eBay_Count: 9, eBay_Median: 4.88,
   },
   {
     Title: `The Flash`, Issue: `34`, Publisher: `DC`,
@@ -173230,7 +173230,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `DC Rebirth`, Box: `43`,
     Crossover: `Flash War`, Start_Bid: `2`,
     Volume: `1`, Entry: `10571`,
-    eBay_Avg: 12.88, eBay_Low: 4.32, eBay_High: 28.08, eBay_Count: 6, eBay_Median: 10.49,
+    eBay_Avg: 12.88, eBay_Low: 4.05, eBay_High: 28.31, eBay_Count: 6, eBay_Median: 10.49,
   },
   {
     Title: `The Flash`, Issue: `36`, Publisher: `DC`,
@@ -173325,7 +173325,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `DC Rebirth`, Box: `50`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `10616`,
-    eBay_Avg: 14.96, eBay_Low: 4, eBay_High: 35, eBay_Count: 9, eBay_Median: 13.3,
+    eBay_Avg: 15.08, eBay_Low: 2.99, eBay_High: 35, eBay_Count: 8, eBay_Median: 13.65,
   },
   {
     Title: `Justice League: No Justice`, Issue: `1`, Publisher: `DC`,
@@ -173344,7 +173344,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `DC Rebirth`, Box: `43`,
     Crossover: `No Justice`, Start_Bid: `2`,
     Volume: `1`, Entry: `10643`,
-    eBay_Avg: 14.34, eBay_Low: 6.49, eBay_High: 25.95, eBay_Count: 10, eBay_Median: 9.99,
+    eBay_Avg: 15.23, eBay_Low: 6.49, eBay_High: 25.95, eBay_Count: 10, eBay_Median: 14.69,
   },
   {
     Title: `Justice League: No Justice`, Issue: `2`, Publisher: `DC`,
@@ -173610,7 +173610,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `DC Rebirth`, Box: `43`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `10675`,
-    eBay_Avg: 8.89, eBay_Low: 2, eBay_High: 9.99, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 10.45, eBay_Low: 2.49, eBay_High: 19.49, eBay_Count: 9, eBay_Median: 11.39,
   },
   {
     Title: `Deathstroke`, Issue: `19`, Publisher: `DC`,
@@ -173686,7 +173686,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `DC Rebirth`, Box: `43`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `10685`,
-    eBay_Avg: 12.74, eBay_Low: 3.9, eBay_High: 24.99, eBay_Count: 10, eBay_Median: 10.99,
+    eBay_Avg: 10.67, eBay_Low: 3.9, eBay_High: 25, eBay_Count: 8, eBay_Median: 9,
   },
   {
     Title: `Super Sons`, Issue: `2`, Publisher: `DC`,
@@ -174028,7 +174028,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `DC Rebirth`, Box: `43`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `10703`,
-    eBay_Avg: 12.39, eBay_Low: 2.59, eBay_High: 25.99, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 11.37, eBay_Low: 1.97, eBay_High: 25, eBay_Count: 8, eBay_Median: 9.99,
   },
   {
     Title: `The Terrifics`, Issue: `2`, Publisher: `DC`,
@@ -174598,7 +174598,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `DC Rebirth`, Box: `43`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `2`, Entry: `10735`,
-    eBay_Avg: 14.15, eBay_Low: 1, eBay_High: 35, eBay_Count: 9, eBay_Median: 10,
+    eBay_Avg: 4.67, eBay_Low: 1.97, eBay_High: 10, eBay_Count: 9, eBay_Median: 3.99,
   },
   {
     Title: `Damage`, Issue: `2`, Publisher: `DC`,
@@ -174655,7 +174655,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `DC Rebirth`, Box: `43`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `10744`,
-    eBay_Avg: 4.2, eBay_Low: 2.97, eBay_High: 8.87, eBay_Count: 7, eBay_Median: 3.4,
+    eBay_Avg: 11.03, eBay_Low: 2.9, eBay_High: 20, eBay_Count: 10, eBay_Median: 9.78,
   },
   {
     Title: `Action Comics`, Issue: `1000`, Publisher: `DC`,
@@ -174674,7 +174674,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `DC Rebirth`, Box: `43`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `2`, Entry: `10745`,
-    eBay_Avg: 11.49, eBay_Low: 6, eBay_High: 13.99, eBay_Count: 10, eBay_Median: 11.99,
+    eBay_Avg: 13.58, eBay_Low: 5.99, eBay_High: 25.99, eBay_Count: 8, eBay_Median: 11.6,
   },
   {
     Title: `Batgirl`, Issue: `18`, Publisher: `DC`,
@@ -174788,7 +174788,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `DC Rebirth`, Box: `44`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `10771`,
-    eBay_Avg: 7.78, eBay_Low: 2.99, eBay_High: 17.99, eBay_Count: 8, eBay_Median: 6.49,
+    eBay_Avg: 15.04, eBay_Low: 4.5, eBay_High: 29.99, eBay_Count: 9, eBay_Median: 15,
   },
   {
     Title: `Batgirl and the Birds of Prey: Rebirth`, Issue: `1`, Publisher: `DC`,
@@ -175358,7 +175358,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `DC New 52`, Box: `44`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `10804`,
-    eBay_Avg: 8.49, eBay_Low: 2.99, eBay_High: 17.99, eBay_Count: 9, eBay_Median: 7.81,
+    eBay_Avg: 22.98, eBay_Low: 2.99, eBay_High: 54.99, eBay_Count: 10, eBay_Median: 24,
   },
   {
     Title: `Batwoman`, Issue: `5`, Publisher: `DC`,
@@ -176783,7 +176783,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `DC New 52`, Box: `44`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `10912`,
-    eBay_Avg: 11.52, eBay_Low: 2.81, eBay_High: 27.99, eBay_Count: 9, eBay_Median: 8.99,
+    eBay_Avg: 5.16, eBay_Low: 2.5, eBay_High: 9.99, eBay_Count: 8, eBay_Median: 4.51,
   },
   {
     Title: `Grayson`, Issue: `2`, Publisher: `DC`,
@@ -177771,7 +177771,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `DC New 52`, Box: `44`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `10964`,
-    eBay_Avg: 8.41, eBay_Low: 2.29, eBay_High: 10, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 7.58, eBay_Low: 1, eBay_High: 17.83, eBay_Count: 10, eBay_Median: 7.49,
   },
   {
     Title: `Red Hood/Arsenal`, Issue: `2`, Publisher: `DC`,
@@ -178265,7 +178265,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `DC New 52`, Box: `44`,
     Crossover: `Robin War`, Start_Bid: `2`,
     Volume: `1`, Entry: `10991`,
-    eBay_Avg: 7.69, eBay_Low: 6.62, eBay_High: 12.99, eBay_Count: 7, eBay_Median: 6.67,
+    eBay_Avg: 11.35, eBay_Low: 6.67, eBay_High: 24.24, eBay_Count: 7, eBay_Median: 8.95,
   },
   {
     Title: `Robin War`, Issue: `2`, Publisher: `DC`,
@@ -178322,7 +178322,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Titan Comics`, Box: `64`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `10994`,
-    eBay_Avg: 15.42, eBay_Low: 5.95, eBay_High: 29.99, eBay_Count: 6, eBay_Median: 14,
+    eBay_Avg: 16.4, eBay_Low: 5.95, eBay_High: 29.99, eBay_Count: 6, eBay_Median: 14,
   },
   {
     Title: `The Blacklist`, Issue: `2`, Publisher: `Titan Comics`,
@@ -178645,7 +178645,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Titan Comics`, Box: `64`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11002`,
-    eBay_Avg: 9.92, eBay_Low: 2.9, eBay_High: 25, eBay_Count: 8, eBay_Median: 7.33,
+    eBay_Avg: 23.89, eBay_Low: 8, eBay_High: 50, eBay_Count: 9, eBay_Median: 18,
   },
   {
     Title: `Doctor Who: Four Doctors`, Issue: `2`, Publisher: `Titan Comics`,
@@ -180032,7 +180032,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Dynamite Entertainment`, Box: `64`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11085`,
-    eBay_Avg: 14.82, eBay_Low: 1.28, eBay_High: 34.99, eBay_Count: 9, eBay_Median: 12,
+    eBay_Avg: 3.52, eBay_Low: 2.14, eBay_High: 5.99, eBay_Count: 7, eBay_Median: 2.99,
   },
   {
     Title: `The Lone Ranger`, Issue: `2`, Publisher: `Dynamite`,
@@ -180450,7 +180450,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `IDW Publishing`, Box: `64`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11107`,
-    eBay_Avg: 15.18, eBay_Low: 4.01, eBay_High: 34.77, eBay_Count: 8, eBay_Median: 10.5,
+    eBay_Avg: 19.88, eBay_Low: 9.99, eBay_High: 48, eBay_Count: 9, eBay_Median: 14.99,
   },
   {
     Title: `Star Trek/Green Lantern: The Spectrum War`, Issue: `2`, Publisher: `IDW`,
@@ -180583,7 +180583,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `IDW Publishing`, Box: `64`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11113`,
-    eBay_Avg: 35.99, eBay_Low: 7.99, eBay_High: 65, eBay_Count: 9, eBay_Median: 30,
+    eBay_Avg: 33.96, eBay_Low: 7.99, eBay_High: 65, eBay_Count: 9, eBay_Median: 30.95,
   },
   {
     Title: `Star Trek: The Next Generation / Doctor Who — Assimilation²`, Issue: `2`, Publisher: `IDW`,
@@ -180697,7 +180697,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `IDW Publishing`, Box: `64`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11120`,
-    eBay_Avg: 20.08, eBay_Low: 4.5, eBay_High: 37.84, eBay_Count: 10, eBay_Median: 20.07,
+    eBay_Avg: 19.89, eBay_Low: 4.5, eBay_High: 37.98, eBay_Count: 10, eBay_Median: 19.63,
   },
   {
     Title: `Star Trek: The Next Generation – Hive`, Issue: `2`, Publisher: `IDW`,
@@ -181438,7 +181438,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `5`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11188`,
-    eBay_Avg: 11.99, eBay_Low: 11.99, eBay_High: 11.99, eBay_Count: 1, eBay_Median: 11.99,
+    eBay_Avg: 16.86, eBay_Low: 2.99, eBay_High: 40, eBay_Count: 8, eBay_Median: 14.97,
   },
   {
     Title: `Original Sin: Thor & Loki - The Tenth Realm`, Issue: `2`, Publisher: `Marvel`,
@@ -181533,7 +181533,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `5`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11193`,
-    eBay_Avg: 19.19, eBay_Low: 4.99, eBay_High: 40.15, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 11.72, eBay_Low: 2.75, eBay_High: 20, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `Loki: Agent of Asgard`, Issue: `2`, Publisher: `Marvel`,
@@ -182027,7 +182027,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `5`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11219`,
-    eBay_Avg: 22.86, eBay_Low: 7.96, eBay_High: 55, eBay_Count: 9, eBay_Median: 18.99,
+    eBay_Avg: 9.92, eBay_Low: 3.37, eBay_High: 18.99, eBay_Count: 7, eBay_Median: 8.02,
   },
   {
     Title: `Thor: God of Thunder`, Issue: `1`, Publisher: `Marvel`,
@@ -182046,7 +182046,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `5`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `11220`,
-    eBay_Avg: 17.83, eBay_Low: 9.95, eBay_High: 42.71, eBay_Count: 8, eBay_Median: 14.99,
+    eBay_Avg: 93.16, eBay_Low: 9.49, eBay_High: 219.99, eBay_Count: 9, eBay_Median: 67.42,
   },
   {
     Title: `Thor: God of Thunder`, Issue: `2`, Publisher: `Marvel`,
@@ -183015,7 +183015,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `5`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `2`, Entry: `11287`,
-    eBay_Avg: 25.98, eBay_Low: 14.99, eBay_High: 40, eBay_Count: 9, eBay_Median: 24.95,
+    eBay_Avg: 27.39, eBay_Low: 14.99, eBay_High: 40, eBay_Count: 9, eBay_Median: 24.99,
   },
   {
     Title: `The Mighty Thor`, Issue: `9`, Publisher: `Marvel`,
@@ -183699,7 +183699,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `5`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `9`, Entry: `11343`,
-    eBay_Avg: 7.76, eBay_Low: 2.99, eBay_High: 14.96, eBay_Count: 9, eBay_Median: 7.99,
+    eBay_Avg: 8.84, eBay_Low: 4.04, eBay_High: 12.47, eBay_Count: 8, eBay_Median: 10.49,
   },
   {
     Title: `Thor`, Issue: `25`, Publisher: `Marvel`,
@@ -183927,7 +183927,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `5`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `6`, Entry: `11355`,
-    eBay_Avg: 22.86, eBay_Low: 7.96, eBay_High: 55, eBay_Count: 9, eBay_Median: 18.99,
+    eBay_Avg: 9.92, eBay_Low: 3.37, eBay_High: 18.99, eBay_Count: 7, eBay_Median: 8.02,
   },
   {
     Title: `Thor: Lightning and Lament`, Issue: `1`, Publisher: `Marvel`,
@@ -183965,7 +183965,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `5`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11357`,
-    eBay_Avg: 8.72, eBay_Low: 2.49, eBay_High: 27, eBay_Count: 8, eBay_Median: 6.99,
+    eBay_Avg: 11.16, eBay_Low: 3.95, eBay_High: 22.5, eBay_Count: 8, eBay_Median: 9.99,
   },
   {
     Title: `King Thor`, Issue: `2`, Publisher: `Marvel`,
@@ -184288,7 +184288,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `5`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11376`,
-    eBay_Avg: 4.63, eBay_Low: 2.99, eBay_High: 8, eBay_Count: 7, eBay_Median: 3.49,
+    eBay_Avg: 13.66, eBay_Low: 3.99, eBay_High: 31.49, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `Jane Foster: The Mighty Thor`, Issue: `2`, Publisher: `Marvel`,
@@ -184383,7 +184383,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `5`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11381`,
-    eBay_Avg: 7.1, eBay_Low: 1, eBay_High: 17.35, eBay_Count: 9, eBay_Median: 6.99,
+    eBay_Avg: 8.43, eBay_Low: 1.25, eBay_High: 20.99, eBay_Count: 10, eBay_Median: 7.53,
   },
   {
     Title: `Jane Foster: Valkyrie`, Issue: `2`, Publisher: `Marvel`,
@@ -184687,7 +184687,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `5`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `3`, Entry: `11397`,
-    eBay_Avg: 10.64, eBay_Low: 2.45, eBay_High: 26.37, eBay_Count: 9, eBay_Median: 10,
+    eBay_Avg: 11.44, eBay_Low: 4.44, eBay_High: 30, eBay_Count: 9, eBay_Median: 11,
   },
   {
     Title: `Loki`, Issue: `2`, Publisher: `Marvel`,
@@ -184744,7 +184744,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `5`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11400`,
-    eBay_Avg: 7.47, eBay_Low: 3.51, eBay_High: 13.3, eBay_Count: 9, eBay_Median: 7,
+    eBay_Avg: 6.89, eBay_Low: 3.99, eBay_High: 13.42, eBay_Count: 8, eBay_Median: 5,
   },
   {
     Title: `Angela: Asgard's Assassin`, Issue: `1`, Publisher: `Marvel`,
@@ -184763,7 +184763,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `5`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11401`,
-    eBay_Avg: 12.73, eBay_Low: 5.89, eBay_High: 24.94, eBay_Count: 9, eBay_Median: 10,
+    eBay_Avg: 12.52, eBay_Low: 5.89, eBay_High: 25, eBay_Count: 9, eBay_Median: 9.99,
   },
   {
     Title: `Angela: Asgard's Assassin`, Issue: `2`, Publisher: `Marvel`,
@@ -185086,7 +185086,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `5`,
     Crossover: `War of the Realms`, Start_Bid: `2`,
     Volume: `1`, Entry: `11418`,
-    eBay_Avg: 14.99, eBay_Low: 1.79, eBay_High: 35.59, eBay_Count: 10, eBay_Median: 13,
+    eBay_Avg: 8.36, eBay_Low: 2.9, eBay_High: 14.99, eBay_Count: 10, eBay_Median: 9.42,
   },
   {
     Title: `War of the Realms: Journey into Mystery`, Issue: `2`, Publisher: `Marvel`,
@@ -185181,7 +185181,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `5`,
     Crossover: `Banner of War`, Start_Bid: `2`,
     Volume: `1`, Entry: `11423`,
-    eBay_Avg: 6.26, eBay_Low: 4.89, eBay_High: 9.99, eBay_Count: 9, eBay_Median: 4.99,
+    eBay_Avg: 6.93, eBay_Low: 3, eBay_High: 14.99, eBay_Count: 9, eBay_Median: 4.99,
   },
   {
     Title: `Weapons of Mutant Destruction`, Issue: `1`, Publisher: `Marvel`,
@@ -185200,7 +185200,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `5`,
     Crossover: `WMD`, Start_Bid: `2`,
     Volume: `1`, Entry: `11426`,
-    eBay_Avg: 10.27, eBay_Low: 1.99, eBay_High: 17.99, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 9.31, eBay_Low: 3.91, eBay_High: 16.95, eBay_Count: 9, eBay_Median: 4.99,
   },
   {
     Title: `Totally Awesome Hulk`, Issue: `20`, Publisher: `Marvel`,
@@ -185409,7 +185409,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `95`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `11439`,
-    eBay_Avg: 7.9, eBay_Low: 2.58, eBay_High: 18.99, eBay_Count: 8, eBay_Median: 5.25,
+    eBay_Avg: 7.51, eBay_Low: 4.99, eBay_High: 12.99, eBay_Count: 7, eBay_Median: 5.5,
   },
   {
     Title: `Thunderbolts`, Issue: `3`, Publisher: `Marvel`,
@@ -185865,7 +185865,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `95`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `2`, Entry: `11463`,
-    eBay_Avg: 7.9, eBay_Low: 2.58, eBay_High: 18.99, eBay_Count: 8, eBay_Median: 5.25,
+    eBay_Avg: 7.51, eBay_Low: 4.99, eBay_High: 12.99, eBay_Count: 7, eBay_Median: 5.5,
   },
   {
     Title: `Thunderbolts`, Issue: `1`, Publisher: `Marvel`,
@@ -185884,7 +185884,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `95`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `2`, Entry: `11464`,
-    eBay_Avg: 7.9, eBay_Low: 2.58, eBay_High: 18.99, eBay_Count: 8, eBay_Median: 5.25,
+    eBay_Avg: 7.51, eBay_Low: 4.99, eBay_High: 12.99, eBay_Count: 7, eBay_Median: 5.5,
   },
   {
     Title: `Thunderbolts`, Issue: `2`, Publisher: `Marvel`,
@@ -185941,7 +185941,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `95`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `3`, Entry: `11467`,
-    eBay_Avg: 7.9, eBay_Low: 2.58, eBay_High: 18.99, eBay_Count: 8, eBay_Median: 5.25,
+    eBay_Avg: 7.51, eBay_Low: 4.99, eBay_High: 12.99, eBay_Count: 7, eBay_Median: 5.5,
   },
   {
     Title: `Thunderbolts`, Issue: `2`, Publisher: `Marvel`,
@@ -185979,7 +185979,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `95`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `4`, Entry: `11469`,
-    eBay_Avg: 7.9, eBay_Low: 2.58, eBay_High: 18.99, eBay_Count: 8, eBay_Median: 5.25,
+    eBay_Avg: 7.51, eBay_Low: 4.99, eBay_High: 12.99, eBay_Count: 7, eBay_Median: 5.5,
   },
   {
     Title: `Thunderbolts: Worldstrike`, Issue: `1`, Publisher: `Marvel`,
@@ -185998,7 +185998,7 @@ Jurgens is a DC legend — could sign this.`,
     Imprint: `Marvel`, Box: `95`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11470`,
-    eBay_Avg: 23.16, eBay_Low: 9.1, eBay_High: 47.17, eBay_Count: 5, eBay_Median: 18.32,
+    eBay_Avg: 17.65, eBay_Low: 9.1, eBay_High: 25.19, eBay_Count: 5, eBay_Median: 18.32,
   },
   {
     Title: `Champions`, Issue: `1`, Publisher: `Marvel`,
@@ -186018,7 +186018,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `1`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `11471`,
-    eBay_Avg: 6.1, eBay_Low: 1.92, eBay_High: 14.99, eBay_Count: 8, eBay_Median: 5,
+    eBay_Avg: 28.33, eBay_Low: 9.99, eBay_High: 60, eBay_Count: 9, eBay_Median: 22,
   },
   {
     Title: `Champions`, Issue: `2`, Publisher: `Marvel`,
@@ -186303,7 +186303,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `95`,
     Crossover: `Monsters Unleashed`, Start_Bid: `2`,
     Volume: `1`, Entry: `11486`,
-    eBay_Avg: 6.1, eBay_Low: 1.92, eBay_High: 14.99, eBay_Count: 8, eBay_Median: 5,
+    eBay_Avg: 28.33, eBay_Low: 9.99, eBay_High: 60, eBay_Count: 9, eBay_Median: 22,
   },
   {
     Title: `Champions`, Issue: `1`, Publisher: `Marvel`,
@@ -186322,7 +186322,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `95`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `2`, Entry: `11487`,
-    eBay_Avg: 6.1, eBay_Low: 1.92, eBay_High: 14.99, eBay_Count: 8, eBay_Median: 5,
+    eBay_Avg: 28.33, eBay_Low: 9.99, eBay_High: 60, eBay_Count: 9, eBay_Median: 22,
   },
   {
     Title: `Champions`, Issue: `2`, Publisher: `Marvel`,
@@ -186683,7 +186683,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `95`,
     Crossover: `Outlawed`, Start_Bid: `2`,
     Volume: `1`, Entry: `11506`,
-    eBay_Avg: 7.58, eBay_Low: 2.24, eBay_High: 20, eBay_Count: 10, eBay_Median: 6.88,
+    eBay_Avg: 12.22, eBay_Low: 2.65, eBay_High: 21.59, eBay_Count: 10, eBay_Median: 12.41,
   },
   {
     Title: `New Champions`, Issue: `1`, Publisher: `Marvel`,
@@ -187158,7 +187158,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `35`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11559`,
-    eBay_Avg: 11.72, eBay_Low: 4.46, eBay_High: 29.99, eBay_Count: 7, eBay_Median: 9.99,
+    eBay_Avg: 22.11, eBay_Low: 7.99, eBay_High: 50.4, eBay_Count: 10, eBay_Median: 17.91,
   },
   {
     Title: `Ultimate X`, Issue: `2`, Publisher: `Marvel`,
@@ -187291,7 +187291,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `13`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `11566`,
-    eBay_Avg: 7.13, eBay_Low: 4.55, eBay_High: 11.99, eBay_Count: 4, eBay_Median: 5.99,
+    eBay_Avg: 8.43, eBay_Low: 2.12, eBay_High: 19.99, eBay_Count: 8, eBay_Median: 7.87,
   },
   {
     Title: `Invincible Iron Man`, Issue: `2`, Publisher: `Marvel`,
@@ -187405,7 +187405,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `13`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `2`, Entry: `11572`,
-    eBay_Avg: 7.13, eBay_Low: 4.55, eBay_High: 11.99, eBay_Count: 4, eBay_Median: 5.99,
+    eBay_Avg: 8.43, eBay_Low: 2.12, eBay_High: 19.99, eBay_Count: 8, eBay_Median: 7.87,
   },
   {
     Title: `Invincible Iron Man`, Issue: `2`, Publisher: `Marvel`,
@@ -187899,7 +187899,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `13`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `3`, Entry: `11601`,
-    eBay_Avg: 7.13, eBay_Low: 4.55, eBay_High: 11.99, eBay_Count: 4, eBay_Median: 5.99,
+    eBay_Avg: 8.43, eBay_Low: 2.12, eBay_High: 19.99, eBay_Count: 8, eBay_Median: 7.87,
   },
   {
     Title: `Invincible Iron Man`, Issue: `2`, Publisher: `Marvel`,
@@ -188108,7 +188108,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `13`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `3`, Entry: `11614`,
-    eBay_Avg: 7.78, eBay_Low: 2.21, eBay_High: 14.95, eBay_Count: 8, eBay_Median: 8.25,
+    eBay_Avg: 9.22, eBay_Low: 2, eBay_High: 19.99, eBay_Count: 8, eBay_Median: 8.28,
   },
   {
     Title: `Invincible Iron Man`, Issue: `1`, Publisher: `Marvel`,
@@ -188127,7 +188127,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `13`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `11615`,
-    eBay_Avg: 7.13, eBay_Low: 4.55, eBay_High: 11.99, eBay_Count: 4, eBay_Median: 5.99,
+    eBay_Avg: 8.43, eBay_Low: 2.12, eBay_High: 19.99, eBay_Count: 8, eBay_Median: 7.87,
   },
   {
     Title: `Invincible Iron Man`, Issue: `1`, Publisher: `Marvel`,
@@ -188146,7 +188146,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `13`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `4`, Entry: `11616`,
-    eBay_Avg: 7.13, eBay_Low: 4.55, eBay_High: 11.99, eBay_Count: 4, eBay_Median: 5.99,
+    eBay_Avg: 8.43, eBay_Low: 2.12, eBay_High: 19.99, eBay_Count: 8, eBay_Median: 7.87,
   },
   {
     Title: `Invincible Iron Man`, Issue: `2`, Publisher: `Marvel`,
@@ -188393,7 +188393,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `13`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11631`,
-    eBay_Avg: 10.14, eBay_Low: 2.5, eBay_High: 19.99, eBay_Count: 7, eBay_Median: 9.99,
+    eBay_Avg: 14.75, eBay_Low: 2.9, eBay_High: 25, eBay_Count: 8, eBay_Median: 15.97,
   },
   {
     Title: `Iron Man 2.0`, Issue: `2`, Publisher: `Marvel`,
@@ -188602,7 +188602,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `13`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `11642`,
-    eBay_Avg: 12.51, eBay_Low: 2.75, eBay_High: 20.75, eBay_Count: 10, eBay_Median: 12.47,
+    eBay_Avg: 15.87, eBay_Low: 2.99, eBay_High: 33, eBay_Count: 10, eBay_Median: 15,
   },
   {
     Title: `Iron Man`, Issue: `2`, Publisher: `Marvel`,
@@ -188887,7 +188887,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `13`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11658`,
-    eBay_Avg: 11.81, eBay_Low: 2.14, eBay_High: 24.99, eBay_Count: 10, eBay_Median: 9.99,
+    eBay_Avg: 11.06, eBay_Low: 5.68, eBay_High: 20, eBay_Count: 9, eBay_Median: 9,
   },
   {
     Title: `Tony Stark: Iron Man`, Issue: `2`, Publisher: `Marvel`,
@@ -189248,7 +189248,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `13`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `6`, Entry: `11677`,
-    eBay_Avg: 12.51, eBay_Low: 2.75, eBay_High: 20.75, eBay_Count: 10, eBay_Median: 12.47,
+    eBay_Avg: 15.87, eBay_Low: 2.99, eBay_High: 33, eBay_Count: 10, eBay_Median: 15,
   },
   {
     Title: `Iron Man`, Issue: `2`, Publisher: `Marvel`,
@@ -189343,7 +189343,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `13`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `6`, Entry: `11683`,
-    eBay_Avg: 12.51, eBay_Low: 2.75, eBay_High: 20.75, eBay_Count: 10, eBay_Median: 12.47,
+    eBay_Avg: 15.87, eBay_Low: 2.99, eBay_High: 33, eBay_Count: 10, eBay_Median: 15,
   },
   {
     Title: `Iron Man`, Issue: `1`, Publisher: `Marvel`,
@@ -189362,7 +189362,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `13`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `7`, Entry: `11684`,
-    eBay_Avg: 12.51, eBay_Low: 2.75, eBay_High: 20.75, eBay_Count: 10, eBay_Median: 12.47,
+    eBay_Avg: 15.87, eBay_Low: 2.99, eBay_High: 33, eBay_Count: 10, eBay_Median: 15,
   },
   {
     Title: `Iron Man`, Issue: `2`, Publisher: `Marvel`,
@@ -189457,7 +189457,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `13`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `6`, Entry: `11690`,
-    eBay_Avg: 6.3, eBay_Low: 3.99, eBay_High: 10.36, eBay_Count: 6, eBay_Median: 5.69,
+    eBay_Avg: 6.34, eBay_Low: 3.99, eBay_High: 10.45, eBay_Count: 6, eBay_Median: 5.72,
   },
   {
     Title: `Iron Man: Inevitable`, Issue: `1`, Publisher: `Marvel`,
@@ -189476,7 +189476,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `13`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11691`,
-    eBay_Avg: 13.75, eBay_Low: 4.11, eBay_High: 23.99, eBay_Count: 10, eBay_Median: 13,
+    eBay_Avg: 15.52, eBay_Low: 7.48, eBay_High: 23.99, eBay_Count: 10, eBay_Median: 14.5,
   },
   {
     Title: `Iron Man: Inevitable`, Issue: `2`, Publisher: `Marvel`,
@@ -189590,7 +189590,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `13`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11697`,
-    eBay_Avg: 9.54, eBay_Low: 1.79, eBay_High: 20.04, eBay_Count: 10, eBay_Median: 9,
+    eBay_Avg: 10.33, eBay_Low: 2.9, eBay_High: 20.21, eBay_Count: 9, eBay_Median: 8,
   },
   {
     Title: `Iron Man: Viva Las Vegas`, Issue: `2`, Publisher: `Marvel`,
@@ -189742,7 +189742,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `13`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11705`,
-    eBay_Avg: 11.19, eBay_Low: 4, eBay_High: 27.99, eBay_Count: 10, eBay_Median: 9.99,
+    eBay_Avg: 20.59, eBay_Low: 2.95, eBay_High: 48, eBay_Count: 10, eBay_Median: 17.49,
   },
   {
     Title: `International Iron Man`, Issue: `2`, Publisher: `Marvel`,
@@ -189856,7 +189856,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `13`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `11711`,
-    eBay_Avg: 7.13, eBay_Low: 4.55, eBay_High: 11.99, eBay_Count: 4, eBay_Median: 5.99,
+    eBay_Avg: 8.43, eBay_Low: 2.12, eBay_High: 19.99, eBay_Count: 8, eBay_Median: 7.87,
   },
   {
     Title: `Invincible Iron Man`, Issue: `2`, Publisher: `Marvel`,
@@ -190027,7 +190027,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `13`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `5`, Entry: `11722`,
-    eBay_Avg: 7.13, eBay_Low: 4.55, eBay_High: 11.99, eBay_Count: 4, eBay_Median: 5.99,
+    eBay_Avg: 8.43, eBay_Low: 2.12, eBay_High: 19.99, eBay_Count: 8, eBay_Median: 7.87,
   },
   {
     Title: `Ironheart`, Issue: `1`, Publisher: `Marvel`,
@@ -190046,7 +190046,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `13`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11723`,
-    eBay_Avg: 12.1, eBay_Low: 3.95, eBay_High: 24.99, eBay_Count: 9, eBay_Median: 9.59,
+    eBay_Avg: 5.54, eBay_Low: 1.95, eBay_High: 12.99, eBay_Count: 7, eBay_Median: 4.21,
   },
   {
     Title: `Ironheart`, Issue: `2`, Publisher: `Marvel`,
@@ -190274,7 +190274,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `7`, Entry: `11735`,
-    eBay_Avg: 13.38, eBay_Low: 8.5, eBay_High: 24.99, eBay_Count: 10, eBay_Median: 10.75,
+    eBay_Avg: 13.52, eBay_Low: 7, eBay_High: 24.99, eBay_Count: 9, eBay_Median: 14.99,
   },
   {
     Title: `Moon Knight`, Issue: `2`, Publisher: `Marvel`,
@@ -190293,7 +190293,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `7`, Entry: `11736`,
-    eBay_Avg: 9.49, eBay_Low: 2.25, eBay_High: 20, eBay_Count: 7, eBay_Median: 9.99,
+    eBay_Avg: 25.06, eBay_Low: 8.99, eBay_High: 64.99, eBay_Count: 7, eBay_Median: 14.99,
   },
   {
     Title: `Free Comic Book Day`, Issue: `1`, Publisher: `Marvel`,
@@ -190331,7 +190331,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `10`, Entry: `11738`,
-    eBay_Avg: 13.38, eBay_Low: 8.5, eBay_High: 24.99, eBay_Count: 10, eBay_Median: 10.75,
+    eBay_Avg: 13.52, eBay_Low: 7, eBay_High: 24.99, eBay_Count: 9, eBay_Median: 14.99,
   },
   {
     Title: `Moon Knight`, Issue: `11`, Publisher: `Marvel`,
@@ -190388,7 +190388,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `13`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `10`, Entry: `11762`,
-    eBay_Avg: 10.88, eBay_Low: 7.91, eBay_High: 14.99, eBay_Count: 10, eBay_Median: 9.99,
+    eBay_Avg: 10.89, eBay_Low: 1.95, eBay_High: 24.99, eBay_Count: 10, eBay_Median: 8.99,
   },
   {
     Title: `Moon Knight`, Issue: `25`, Publisher: `Marvel`,
@@ -190407,7 +190407,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `13`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `10`, Entry: `11763`,
-    eBay_Avg: 10.88, eBay_Low: 7.91, eBay_High: 14.99, eBay_Count: 10, eBay_Median: 9.99,
+    eBay_Avg: 10.89, eBay_Low: 1.95, eBay_High: 24.99, eBay_Count: 10, eBay_Median: 8.99,
   },
   {
     Title: `Moon Knight Annual`, Issue: `1`, Publisher: `Marvel`,
@@ -190445,7 +190445,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `13`,
     Crossover: `AXIS`, Start_Bid: `2`,
     Volume: `1`, Entry: `11765`,
-    eBay_Avg: 9.13, eBay_Low: 3.99, eBay_High: 14.95, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 16.53, eBay_Low: 4, eBay_High: 44.99, eBay_Count: 8, eBay_Median: 12.5,
   },
   {
     Title: `Superior Iron Man`, Issue: `2`, Publisher: `Marvel`,
@@ -190673,7 +190673,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Image`, Box: `72`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `1`, Entry: `11777`,
-    eBay_Avg: 2.95, eBay_Low: 2.95, eBay_High: 2.95, eBay_Count: 1, eBay_Median: 2.95,
+    eBay_Avg: 4.34, eBay_Low: 1.35, eBay_High: 10, eBay_Count: 6, eBay_Median: 3.49,
   },
   {
     Title: `The Ultimates`, Issue: `16`, Publisher: `Marvel`,
@@ -191015,7 +191015,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `75`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11796`,
-    eBay_Avg: 13.6, eBay_Low: 3.95, eBay_High: 42, eBay_Count: 7, eBay_Median: 7.79,
+    eBay_Avg: 17.5, eBay_Low: 3.99, eBay_High: 42, eBay_Count: 8, eBay_Median: 16.5,
   },
   {
     Title: `X-Men: Hellfire Vigil`, Issue: `1`, Publisher: `Marvel`,
@@ -191034,7 +191034,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `75`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11797`,
-    eBay_Avg: 10.62, eBay_Low: 7.99, eBay_High: 19.99, eBay_Count: 7, eBay_Median: 8.99,
+    eBay_Avg: 9.12, eBay_Low: 6.99, eBay_High: 12.99, eBay_Count: 6, eBay_Median: 8.39,
   },
   {
     Title: `Riri Williams, the Invincible Ironheart`, Issue: `1`, Publisher: `Marvel`,
@@ -191300,7 +191300,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `11`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `2`, Entry: `11811`,
-    eBay_Avg: 29.36, eBay_Low: 3.99, eBay_High: 75, eBay_Count: 8, eBay_Median: 22.48,
+    eBay_Avg: 20.18, eBay_Low: 3.99, eBay_High: 59.99, eBay_Count: 8, eBay_Median: 8.75,
   },
   {
     Title: `Marc Spector: Moon Knight`, Issue: `1`, Publisher: `Marvel`,
@@ -191357,7 +191357,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `75`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11814`,
-    eBay_Avg: 27.06, eBay_Low: 2.86, eBay_High: 69.99, eBay_Count: 10, eBay_Median: 26,
+    eBay_Avg: 5.39, eBay_Low: 3.84, eBay_High: 12, eBay_Count: 6, eBay_Median: 3.95,
   },
   {
     Title: `Friendly Neighborhood Spider-Man`, Issue: `1`, Publisher: `Marvel`,
@@ -191376,7 +191376,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `75`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11815`,
-    eBay_Avg: 10.42, eBay_Low: 3.15, eBay_High: 23.25, eBay_Count: 8, eBay_Median: 7.47,
+    eBay_Avg: 8.61, eBay_Low: 3, eBay_High: 17.95, eBay_Count: 7, eBay_Median: 5.38,
   },
   {
     Title: `X-Men: Age of Revelation — Overture`, Issue: `1`, Publisher: `Marvel`,
@@ -191395,7 +191395,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `75`,
     Crossover: `Age of Revelation`, Start_Bid: `3`,
     Volume: `1`, Entry: `11816`,
-    eBay_Avg: 5.77, eBay_Low: 4.4, eBay_High: 11.75, eBay_Count: 10, eBay_Median: 5.2,
+    eBay_Avg: 5.92, eBay_Low: 5.63, eBay_High: 6.25, eBay_Count: 6, eBay_Median: 5.97,
   },
   {
     Title: `X-Vengers`, Issue: `1`, Publisher: `Marvel`,
@@ -191851,7 +191851,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `75`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11842`,
-    eBay_Avg: 5.3, eBay_Low: 1.97, eBay_High: 12, eBay_Count: 8, eBay_Median: 4.47,
+    eBay_Avg: 10.97, eBay_Low: 4.99, eBay_High: 16.99, eBay_Count: 8, eBay_Median: 11.43,
   },
   {
     Title: `Fantastic Four × Gargoyles`, Issue: `1`, Publisher: `Marvel`,
@@ -191984,7 +191984,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `75`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11849`,
-    eBay_Avg: 12.28, eBay_Low: 2.56, eBay_High: 29.99, eBay_Count: 9, eBay_Median: 9,
+    eBay_Avg: 11.74, eBay_Low: 3.6, eBay_High: 24.99, eBay_Count: 6, eBay_Median: 9.5,
   },
   {
     Title: `Shang-Chi`, Issue: `5`, Publisher: `Marvel`,
@@ -192022,7 +192022,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `75`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `3`, Entry: `11851`,
-    eBay_Avg: 6.58, eBay_Low: 2, eBay_High: 14.44, eBay_Count: 8, eBay_Median: 5.62,
+    eBay_Avg: 23.59, eBay_Low: 8.99, eBay_High: 53.99, eBay_Count: 9, eBay_Median: 19.49,
   },
   {
     Title: `Mystique`, Issue: `4`, Publisher: `Marvel`,
@@ -192060,7 +192060,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `75`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11853`,
-    eBay_Avg: 4.56, eBay_Low: 4.2, eBay_High: 4.99, eBay_Count: 4, eBay_Median: 4.52,
+    eBay_Avg: 18.53, eBay_Low: 4.2, eBay_High: 44.99, eBay_Count: 8, eBay_Median: 12.49,
   },
   {
     Title: `Marvel Zombies: Red Band`, Issue: `2`, Publisher: `Marvel`,
@@ -192117,7 +192117,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `75`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11856`,
-    eBay_Avg: 9.2, eBay_Low: 3, eBay_High: 18.48, eBay_Count: 9, eBay_Median: 5.16,
+    eBay_Avg: 40.04, eBay_Low: 4.63, eBay_High: 99.95, eBay_Count: 9, eBay_Median: 6.99,
   },
   {
     Title: `TVA`, Issue: `2`, Publisher: `Marvel`,
@@ -192364,7 +192364,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `75`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `11869`,
-    eBay_Avg: 13.57, eBay_Low: 9.93, eBay_High: 19.99, eBay_Count: 5, eBay_Median: 12.81,
+    eBay_Avg: 16.94, eBay_Low: 9.93, eBay_High: 33.75, eBay_Count: 6, eBay_Median: 13.99,
   },
   {
     Title: `Fantastic Four`, Issue: `585`, Publisher: `Marvel`,
@@ -192459,7 +192459,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `75`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `11874`,
-    eBay_Avg: 21.74, eBay_Low: 7.99, eBay_High: 39.97, eBay_Count: 9, eBay_Median: 24.99,
+    eBay_Avg: 19.24, eBay_Low: 5.75, eBay_High: 39.99, eBay_Count: 9, eBay_Median: 14.99,
   },
   {
     Title: `FF`, Issue: `1`, Publisher: `Marvel`,
@@ -192478,7 +192478,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11875`,
-    eBay_Avg: 10.45, eBay_Low: 2.13, eBay_High: 23.97, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 11.27, eBay_Low: 4.99, eBay_High: 24.95, eBay_Count: 8, eBay_Median: 10.26,
   },
   {
     Title: `FF`, Issue: `2`, Publisher: `Marvel`,
@@ -192649,7 +192649,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `4`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11884`,
-    eBay_Avg: 10.45, eBay_Low: 2.13, eBay_High: 23.97, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 11.27, eBay_Low: 4.99, eBay_High: 24.95, eBay_Count: 8, eBay_Median: 10.26,
   },
   {
     Title: `Fantastic Four: First Family`, Issue: `1`, Publisher: `Marvel`,
@@ -193390,7 +193390,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `75`,
     Crossover: `Bloodhunt`, Start_Bid: `2`,
     Volume: `1`, Entry: `11929`,
-    eBay_Avg: null, eBay_Low: 5, eBay_High: 50, eBay_Count: 10, eBay_Median: null,
+    eBay_Avg: 22.82, eBay_Low: 5, eBay_High: 50, eBay_Count: 10, eBay_Median: 18.42,
   },
   {
     Title: `Nextwave: Agents of Hate`, Issue: `6`, Publisher: `Marvel`,
@@ -193599,7 +193599,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `75`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `3`, Entry: `11940`,
-    eBay_Avg: 10.26, eBay_Low: 2.09, eBay_High: 29.99, eBay_Count: 7, eBay_Median: 7.99,
+    eBay_Avg: 9.24, eBay_Low: 4.86, eBay_High: 19, eBay_Count: 8, eBay_Median: 7.05,
   },
   {
     Title: `Spider-Man`, Issue: `1`, Publisher: `Marvel`,
@@ -193637,7 +193637,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `75`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `3`, Entry: `11944`,
-    eBay_Avg: 6.43, eBay_Low: 2.14, eBay_High: 10, eBay_Count: 10, eBay_Median: 6.84,
+    eBay_Avg: 6.24, eBay_Low: 2.14, eBay_High: 10, eBay_Count: 10, eBay_Median: 5.49,
   },
   {
     Title: `Blood Hunt`, Issue: `1`, Publisher: `Marvel`,
@@ -193656,7 +193656,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `20`,
     Crossover: `Bloodhunt`, Start_Bid: `2`,
     Volume: `1`, Entry: `11945`,
-    eBay_Avg: null, eBay_Low: 5, eBay_High: 50, eBay_Count: 10, eBay_Median: null,
+    eBay_Avg: 22.82, eBay_Low: 5, eBay_High: 50, eBay_Count: 10, eBay_Median: 18.42,
   },
   {
     Title: `Nebula`, Issue: `2`, Publisher: `Marvel`,
@@ -193694,7 +193694,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `75`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11947`,
-    eBay_Avg: 20.14, eBay_Low: 4.49, eBay_High: 49.99, eBay_Count: 8, eBay_Median: 15.5,
+    eBay_Avg: 10.5, eBay_Low: 3.25, eBay_High: 25.99, eBay_Count: 7, eBay_Median: 5.5,
   },
   {
     Title: `Rocket Raccoon`, Issue: `1`, Publisher: `Marvel`,
@@ -193713,7 +193713,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `75`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `11948`,
-    eBay_Avg: 8.67, eBay_Low: 3.99, eBay_High: 19.99, eBay_Count: 8, eBay_Median: 5.99,
+    eBay_Avg: 8.88, eBay_Low: 5, eBay_High: 19.99, eBay_Count: 9, eBay_Median: 5.99,
   },
   {
     Title: `Psylocke`, Issue: `2`, Publisher: `Marvel`,
@@ -194226,7 +194226,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `12269`,
-    eBay_Avg: 95.45, eBay_Low: 9.99, eBay_High: 199, eBay_Count: 8, eBay_Median: 94.99,
+    eBay_Avg: 31.36, eBay_Low: 4.99, eBay_High: 51.41, eBay_Count: 8, eBay_Median: 29.98,
   },
   {
     Title: `Marvel's Voices: Legends`, Issue: `1`, Publisher: `Marvel`,
@@ -194283,7 +194283,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `12272`,
-    eBay_Avg: 16.37, eBay_Low: 9, eBay_High: 29.99, eBay_Count: 8, eBay_Median: 15,
+    eBay_Avg: 9.24, eBay_Low: 3.95, eBay_High: 19.25, eBay_Count: 8, eBay_Median: 8.89,
   },
   {
     Title: `Wolverine: Madripoor Knights`, Issue: `2`, Publisher: `Marvel`,
@@ -194359,7 +194359,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `12276`,
-    eBay_Avg: 10.72, eBay_Low: 3.99, eBay_High: 24.99, eBay_Count: 8, eBay_Median: 6.9,
+    eBay_Avg: 10.53, eBay_Low: 3.99, eBay_High: 24.99, eBay_Count: 8, eBay_Median: 5.99,
   },
   {
     Title: `Empyre: Fantastic Four`, Issue: `1`, Publisher: `Marvel`,
@@ -194397,7 +194397,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `12278`,
-    eBay_Avg: 6.24, eBay_Low: 2.75, eBay_High: 9.49, eBay_Count: 9, eBay_Median: 5.99,
+    eBay_Avg: 7.81, eBay_Low: 2.75, eBay_High: 14.99, eBay_Count: 10, eBay_Median: 8.25,
   },
   {
     Title: `Fantastic Four: Empyre`, Issue: `2`, Publisher: `Marvel`,
@@ -194492,7 +194492,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `12283`,
-    eBay_Avg: 10.97, eBay_Low: 1.99, eBay_High: 19.95, eBay_Count: 10, eBay_Median: 11.49,
+    eBay_Avg: 7.18, eBay_Low: 1.33, eBay_High: 15, eBay_Count: 10, eBay_Median: 7.49,
   },
   {
     Title: `Night Thrasher`, Issue: `2`, Publisher: `Marvel`,
@@ -194549,7 +194549,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `12288`,
-    eBay_Avg: 5.77, eBay_Low: 5.19, eBay_High: 11, eBay_Count: 10, eBay_Median: 5.19,
+    eBay_Avg: 22.22, eBay_Low: 3.5, eBay_High: 58.49, eBay_Count: 8, eBay_Median: 10.5,
   },
   {
     Title: `Blood Hunt`, Issue: `2`, Publisher: `Marvel`,
@@ -194606,7 +194606,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `12291`,
-    eBay_Avg: 29.74, eBay_Low: 3.95, eBay_High: 59.99, eBay_Count: 9, eBay_Median: 13.99,
+    eBay_Avg: 21.35, eBay_Low: 3.95, eBay_High: 49.99, eBay_Count: 9, eBay_Median: 14.26,
   },
   {
     Title: `Aliens vs. Avengers`, Issue: `4`, Publisher: `Marvel`,
@@ -194644,7 +194644,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `12293`,
-    eBay_Avg: 16.16, eBay_Low: 10, eBay_High: 26, eBay_Count: 6, eBay_Median: 14,
+    eBay_Avg: 14.5, eBay_Low: 7, eBay_High: 26, eBay_Count: 8, eBay_Median: 13,
   },
   {
     Title: `Spider-Punk`, Issue: `2`, Publisher: `Marvel`,
@@ -194720,7 +194720,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `12297`,
-    eBay_Avg: 12.21, eBay_Low: 4.99, eBay_High: 25.62, eBay_Count: 8, eBay_Median: 9.79,
+    eBay_Avg: 19.73, eBay_Low: 9.99, eBay_High: 35.99, eBay_Count: 9, eBay_Median: 16.99,
   },
   {
     Title: `Scarlet Witch`, Issue: `1`, Publisher: `Marvel`,
@@ -194739,7 +194739,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `12298`,
-    eBay_Avg: 27.25, eBay_Low: 12.99, eBay_High: 51.99, eBay_Count: 8, eBay_Median: 15,
+    eBay_Avg: 17.18, eBay_Low: 2.82, eBay_High: 45, eBay_Count: 8, eBay_Median: 14,
   },
   {
     Title: `Scarlet Witch`, Issue: `6`, Publisher: `Marvel`,
@@ -194796,7 +194796,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `12302`,
-    eBay_Avg: 14.68, eBay_Low: 2.93, eBay_High: 31.5, eBay_Count: 9, eBay_Median: 12.99,
+    eBay_Avg: 12.98, eBay_Low: 2.93, eBay_High: 29.99, eBay_Count: 8, eBay_Median: 12.99,
   },
   {
     Title: `Sensational She-Hulk`, Issue: `2`, Publisher: `Marvel`,
@@ -195081,7 +195081,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `12317`,
-    eBay_Avg: 11.4, eBay_Low: 3.99, eBay_High: 24.99, eBay_Count: 9, eBay_Median: 7.69,
+    eBay_Avg: 4.39, eBay_Low: 2.9, eBay_High: 7.75, eBay_Count: 8, eBay_Median: 4.1,
   },
   {
     Title: `Web of Black Widow`, Issue: `2`, Publisher: `Marvel`,
@@ -195157,7 +195157,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
     Imprint: `Marvel`, Box: `20`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `1`, Entry: `12321`,
-    eBay_Avg: 14.63, eBay_Low: 4, eBay_High: 28.48, eBay_Count: 7, eBay_Median: 11,
+    eBay_Avg: 19.67, eBay_Low: 9.99, eBay_High: 40, eBay_Count: 10, eBay_Median: 19.99,
   },
   {
     Title: `Blade`, Issue: `2`, Publisher: `Marvel`,
@@ -195253,7 +195253,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     Imprint: `Marvel`, Box: `72`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `1`, Entry: `12326`,
-    eBay_Avg: 7.2, eBay_Low: 2.66, eBay_High: 15, eBay_Count: 8, eBay_Median: 4.47,
+    eBay_Avg: 16.39, eBay_Low: 2.94, eBay_High: 44.99, eBay_Count: 8, eBay_Median: 9.87,
   },
   {
     Title: `Fantastic Four`, Issue: `433`, Publisher: `Marvel`,
@@ -195329,7 +195329,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     Imprint: `Marvel`, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `12331`,
-    eBay_Avg: 17.9, eBay_Low: 4.98, eBay_High: 35, eBay_Count: 10, eBay_Median: 14,
+    eBay_Avg: 9.32, eBay_Low: 5.84, eBay_High: 12.99, eBay_Count: 7, eBay_Median: 9.99,
   },
   {
     Title: `Avengers`, Issue: `24`, Publisher: `Marvel`,
@@ -195367,7 +195367,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     Imprint: `Marvel`, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `8`, Entry: `12333`,
-    eBay_Avg: null, eBay_Low: 3.99, eBay_High: 59.99, eBay_Count: 8, eBay_Median: null,
+    eBay_Avg: 12.7, eBay_Low: 3.99, eBay_High: 24.99, eBay_Count: 8, eBay_Median: 11.2,
   },
   {
     Title: `Fantastic Four`, Issue: `27`, Publisher: `Marvel`,
@@ -195462,7 +195462,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     Imprint: `Marvel`, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `12339`,
-    eBay_Avg: 14.79, eBay_Low: 3.99, eBay_High: 29.99, eBay_Count: 10, eBay_Median: 15,
+    eBay_Avg: 14.73, eBay_Low: 3.94, eBay_High: 25, eBay_Count: 9, eBay_Median: 14.99,
   },
   {
     Title: `Hulk`, Issue: `4`, Publisher: `Marvel`,
@@ -195519,7 +195519,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     Imprint: `Marvel`, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `10`, Entry: `12344`,
-    eBay_Avg: 10.6, eBay_Low: 5, eBay_High: 19.99, eBay_Count: 8, eBay_Median: 9.23,
+    eBay_Avg: 15.15, eBay_Low: 5, eBay_High: 29.99, eBay_Count: 8, eBay_Median: 10.61,
   },
   {
     Title: `Fantastic Four`, Issue: `31`, Publisher: `Marvel`,
@@ -195576,7 +195576,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     Imprint: `Marvel`, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `10`, Entry: `12348`,
-    eBay_Avg: 13.63, eBay_Low: 4.27, eBay_High: 24.99, eBay_Count: 9, eBay_Median: 14.99,
+    eBay_Avg: 22.54, eBay_Low: 11, eBay_High: 49.95, eBay_Count: 10, eBay_Median: 17.49,
   },
   {
     Title: `Silver Surfer Rebirth: Legacy`, Issue: `1`, Publisher: `Marvel`,
@@ -195595,7 +195595,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     Imprint: `Marvel`, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `12350`,
-    eBay_Avg: 8.62, eBay_Low: 3.99, eBay_High: 18.09, eBay_Count: 9, eBay_Median: 8.99,
+    eBay_Avg: 6.42, eBay_Low: 2.25, eBay_High: 9.99, eBay_Count: 9, eBay_Median: 4.99,
   },
   {
     Title: `Weapon X-Men`, Issue: `2`, Publisher: `Marvel`,
@@ -195671,7 +195671,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     Imprint: `Marvel`, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `12354`,
-    eBay_Avg: 17.88, eBay_Low: 5, eBay_High: 38.24, eBay_Count: 9, eBay_Median: 14.99,
+    eBay_Avg: 8.24, eBay_Low: 4.99, eBay_High: 16.99, eBay_Count: 8, eBay_Median: 5.99,
   },
   {
     Title: `Fantastic Four Fanfare`, Issue: `2`, Publisher: `Marvel`,
@@ -195709,7 +195709,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     Imprint: `Marvel`, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `10`, Entry: `12356`,
-    eBay_Avg: 12.73, eBay_Low: 2.79, eBay_High: 28.99, eBay_Count: 9, eBay_Median: 8.25,
+    eBay_Avg: 11.17, eBay_Low: 6.4, eBay_High: 22, eBay_Count: 9, eBay_Median: 8.99,
   },
   {
     Title: `Godzilla vs. Avengers`, Issue: `1`, Publisher: `Marvel`,
@@ -195766,7 +195766,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     Imprint: `Marvel`, Box: `80`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `6`, Entry: `12359`,
-    eBay_Avg: 16.87, eBay_Low: 1, eBay_High: 30, eBay_Count: 8, eBay_Median: 14.97,
+    eBay_Avg: 20.77, eBay_Low: 9.99, eBay_High: 40, eBay_Count: 9, eBay_Median: 15,
   },
   {
     Title: `Captain Marvel`, Issue: `1`, Publisher: `Marvel`,
@@ -195785,7 +195785,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     Imprint: `Marvel`, Box: `18`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `12361`,
-    eBay_Avg: 12.83, eBay_Low: 3.99, eBay_High: 29.99, eBay_Count: 6, eBay_Median: 9.99,
+    eBay_Avg: 23.87, eBay_Low: 9.99, eBay_High: 42, eBay_Count: 8, eBay_Median: 21.49,
   },
   {
     Title: `Avengers`, Issue: `12`, Publisher: `Marvel`,
@@ -195804,7 +195804,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     Imprint: `Marvel`, Box: `6`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `12362`,
-    eBay_Avg: 16.7, eBay_Low: 7.5, eBay_High: 25.99, eBay_Count: 9, eBay_Median: 14.99,
+    eBay_Avg: 16.33, eBay_Low: 8.79, eBay_High: 24.69, eBay_Count: 9, eBay_Median: 14.99,
   },
   {
     Title: `Black Panther`, Issue: `19`, Publisher: `Marvel`,
@@ -195880,7 +195880,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     Imprint: `Marvel`, Box: `33`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `7`, Entry: `12366`,
-    eBay_Avg: 9.49, eBay_Low: 2.25, eBay_High: 20, eBay_Count: 7, eBay_Median: 9.99,
+    eBay_Avg: 25.06, eBay_Low: 8.99, eBay_High: 64.99, eBay_Count: 7, eBay_Median: 14.99,
   },
   {
     Title: `Ultimates`, Issue: `12`, Publisher: `Marvel`,
@@ -195975,7 +195975,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     Imprint: `DC`, Box: `1`,
     Crossover: ``, Start_Bid: `50`,
     Volume: `1`, Entry: `12612`,
-    eBay_Avg: 14.58, eBay_Low: 14.58, eBay_High: 14.58, eBay_Count: 1, eBay_Median: 14.58,
+    eBay_Avg: 10.78, eBay_Low: 6.7, eBay_High: 14.79, eBay_Count: 10, eBay_Median: 9.99,
   },
   {
     Title: `The Avengers`, Issue: `60`, Publisher: `Marvel`,
@@ -196509,7 +196509,7 @@ Already signed.`,
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `5`, Entry: `12655`,
-    eBay_Avg: 6.61, eBay_Low: 1.95, eBay_High: 15, eBay_Count: 7, eBay_Median: 6.62,
+    eBay_Avg: 6.9, eBay_Low: 1.95, eBay_High: 15, eBay_Count: 7, eBay_Median: 6.67,
   },
   {
     Title: `WildC.A.T.s: Wildcats in the DC Universe — Since the Shattering`, Issue: `1`, Publisher: `DC`,
@@ -196547,7 +196547,7 @@ Already signed.`,
     Imprint: `Marvel`, Box: `30`,
     Crossover: ``, Start_Bid: `4`,
     Volume: `1`, Entry: `12657`,
-    eBay_Avg: 15.18, eBay_Low: 2.24, eBay_High: 39.99, eBay_Count: 10, eBay_Median: 14.75,
+    eBay_Avg: 4.13, eBay_Low: 2.25, eBay_High: 9.4, eBay_Count: 7, eBay_Median: 2.9,
   },
   {
     Title: `Captain America and the Falcon`, Issue: `2`, Publisher: `Marvel`,
@@ -196680,7 +196680,7 @@ Already signed.`,
     Imprint: `Marvel`, Box: `27`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `7`, Entry: `12667`,
-    eBay_Avg: 16.87, eBay_Low: 1, eBay_High: 30, eBay_Count: 8, eBay_Median: 14.97,
+    eBay_Avg: 20.77, eBay_Low: 9.99, eBay_High: 40, eBay_Count: 9, eBay_Median: 15,
   },
   {
     Title: `Shang-Chi`, Issue: `2`, Publisher: `Marvel`,
@@ -196775,7 +196775,7 @@ Already signed.`,
     Imprint: ``, Box: `102`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `12674`,
-    eBay_Avg: 13.6, eBay_Low: 4.61, eBay_High: 26, eBay_Count: 9, eBay_Median: 9.99,
+    eBay_Avg: 23.95, eBay_Low: 4.99, eBay_High: 59.99, eBay_Count: 10, eBay_Median: 25.99,
   },
   {
     Title: `Ultimate Universe: Finale`, Issue: `1`, Publisher: `Marvel`,
@@ -196794,7 +196794,7 @@ Already signed.`,
     Imprint: ``, Box: `102`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `12675`,
-    eBay_Avg: 11.99, eBay_Low: 5.99, eBay_High: 25.99, eBay_Count: 9, eBay_Median: 8.76,
+    eBay_Avg: 14.38, eBay_Low: 6.99, eBay_High: 25.99, eBay_Count: 9, eBay_Median: 13.42,
   },
   {
     Title: `X-Men: Outback`, Issue: `1`, Publisher: `Marvel`,
@@ -197041,7 +197041,7 @@ Already signed.`,
     Imprint: ``, Box: `101`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `12688`,
-    eBay_Avg: 9.09, eBay_Low: 4.62, eBay_High: 18.99, eBay_Count: 8, eBay_Median: 6.23,
+    eBay_Avg: 7.53, eBay_Low: 4.63, eBay_High: 13.99, eBay_Count: 9, eBay_Median: 6.24,
   },
   {
     Title: `Incredible Hulk`, Issue: `26`, Publisher: `Marvel`,
@@ -197136,7 +197136,7 @@ Already signed.`,
     Imprint: ``, Box: `102`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `12693`,
-    eBay_Avg: 20.09, eBay_Low: 6.98, eBay_High: 51.99, eBay_Count: 9, eBay_Median: 12.99,
+    eBay_Avg: 15.57, eBay_Low: 8, eBay_High: 28, eBay_Count: 8, eBay_Median: 13.61,
   },
   {
     Title: `Blood Hunt`, Issue: `1`, Publisher: `Marvel`,
@@ -197155,7 +197155,7 @@ Already signed.`,
     Imprint: ``, Box: `102`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `12694`,
-    eBay_Avg: null, eBay_Low: 5, eBay_High: 50, eBay_Count: 10, eBay_Median: null,
+    eBay_Avg: 22.82, eBay_Low: 5, eBay_High: 50, eBay_Count: 10, eBay_Median: 18.42,
   },
   {
     Title: `Supergirl: Survive`, Issue: `2`, Publisher: `DC`,
@@ -197403,7 +197403,7 @@ Jonathan Hickman is confirmed for Terrificon 2026 (confirmed all 3 days). Bring 
     Imprint: `Ultimate Marvel`, Box: `85`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `12707`,
-    eBay_Avg: null, eBay_Low: 3.95, eBay_High: 199.99, eBay_Count: 9, eBay_Median: null,
+    eBay_Avg: 96.37, eBay_Low: 3.95, eBay_High: 199.99, eBay_Count: 9, eBay_Median: 89.99,
   },
   {
     Title: `Black Panther`, Issue: `36`, Publisher: `Marvel`,
@@ -197423,7 +197423,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Imprint: `Marvel`, Box: `85`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `3`, Entry: `12708`,
-    eBay_Avg: 10.24, eBay_Low: 4.49, eBay_High: 24, eBay_Count: 10, eBay_Median: 8.49,
+    eBay_Avg: 7.17, eBay_Low: 2.99, eBay_High: 13.47, eBay_Count: 10, eBay_Median: 7.23,
   },
   {
     Title: `Black Panther`, Issue: `52`, Publisher: `Marvel`,
@@ -197443,7 +197443,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Imprint: `Marvel`, Box: `85`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `3`, Entry: `12709`,
-    eBay_Avg: 8.63, eBay_Low: 2.99, eBay_High: 16.12, eBay_Count: 10, eBay_Median: 9.79,
+    eBay_Avg: 7.63, eBay_Low: 1.79, eBay_High: 16.12, eBay_Count: 10, eBay_Median: 8.5,
   },
   {
     Title: `Civil War`, Issue: `1`, Publisher: `Marvel`,
@@ -197462,7 +197462,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Imprint: `Marvel`, Box: `86`,
     Crossover: ``, Start_Bid: `10`,
     Volume: `1`, Entry: `12710`,
-    eBay_Avg: 9.61, eBay_Low: 2.99, eBay_High: 14.99, eBay_Count: 8, eBay_Median: 10.23,
+    eBay_Avg: 7.99, eBay_Low: 0.99, eBay_High: 20.21, eBay_Count: 7, eBay_Median: 5.49,
   },
   {
     Title: `New Avengers`, Issue: `16`, Publisher: `Marvel`,
@@ -197557,7 +197557,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Imprint: `Marvel`, Box: `86`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `12715`,
-    eBay_Avg: 7.23, eBay_Low: 0.99, eBay_High: 11.45, eBay_Count: 10, eBay_Median: 8.07,
+    eBay_Avg: 6.6, eBay_Low: 1.49, eBay_High: 12.99, eBay_Count: 10, eBay_Median: 6.05,
   },
   {
     Title: `Age of Apocalypse`, Issue: `3`, Publisher: `Marvel`,
@@ -197595,7 +197595,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Imprint: `Marvel`, Box: `86`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `2`, Entry: `12717`,
-    eBay_Avg: 4.89, eBay_Low: 2.9, eBay_High: 9.99, eBay_Count: 8, eBay_Median: 4,
+    eBay_Avg: 5.69, eBay_Low: 3.35, eBay_High: 9.99, eBay_Count: 8, eBay_Median: 4.25,
   },
   {
     Title: `Ultimate Comics The Ultimates`, Issue: `23`, Publisher: `Marvel`,
@@ -197747,7 +197747,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Imprint: ``, Box: `85`,
     Crossover: ``, Start_Bid: ``,
     Volume: `1`, Entry: `12725`,
-    eBay_Avg: 19.43, eBay_Low: 10, eBay_High: 36.5, eBay_Count: 10, eBay_Median: 17.38,
+    eBay_Avg: 19.43, eBay_Low: 10, eBay_High: 36.5, eBay_Count: 10, eBay_Median: 17.4,
   },
   {
     Title: `The Ultimates`, Issue: `13`, Publisher: `Marvel`,
@@ -197804,7 +197804,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Imprint: ``, Box: `85`,
     Crossover: ``, Start_Bid: ``,
     Volume: `1`, Entry: `12728`,
-    eBay_Avg: 9.98, eBay_Low: 2.95, eBay_High: 20.04, eBay_Count: 10, eBay_Median: 9.61,
+    eBay_Avg: 8.99, eBay_Low: 1.99, eBay_High: 20.21, eBay_Count: 10, eBay_Median: 8.88,
   },
   {
     Title: `Ultimate Human`, Issue: `2`, Publisher: `Marvel`,
@@ -197842,7 +197842,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Imprint: ``, Box: `85`,
     Crossover: ``, Start_Bid: ``,
     Volume: `1`, Entry: `12730`,
-    eBay_Avg: 5.41, eBay_Low: 2.13, eBay_High: 9.99, eBay_Count: 10, eBay_Median: 4.49,
+    eBay_Avg: 6.25, eBay_Low: 2.9, eBay_High: 12.99, eBay_Count: 10, eBay_Median: 5.2,
   },
   {
     Title: `Ultimate Universe: One Year In`, Issue: `1`, Publisher: `Marvel`,
@@ -197861,7 +197861,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Imprint: ``, Box: `85`,
     Crossover: ``, Start_Bid: ``,
     Volume: `1`, Entry: `12731`,
-    eBay_Avg: 26.87, eBay_Low: 5.27, eBay_High: 53, eBay_Count: 9, eBay_Median: 20,
+    eBay_Avg: 16.88, eBay_Low: 8.99, eBay_High: 44.1, eBay_Count: 8, eBay_Median: 12,
   },
   {
     Title: `1602: Witch Hunter Angela`, Issue: `1`, Publisher: `Marvel`,
@@ -198222,7 +198222,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Imprint: ``, Box: `86`,
     Crossover: ``, Start_Bid: ``,
     Volume: `1`, Entry: `12750`,
-    eBay_Avg: 3.94, eBay_Low: 1.99, eBay_High: 7.98, eBay_Count: 10, eBay_Median: 3.01,
+    eBay_Avg: 5.33, eBay_Low: 2.9, eBay_High: 9.99, eBay_Count: 10, eBay_Median: 5.45,
   },
   {
     Title: `Fear Itself: Book of the Skull`, Issue: `1`, Publisher: `Marvel`,
@@ -199438,7 +199438,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Imprint: `DC All In`, Box: `104`,
     Crossover: ``, Start_Bid: `13`,
     Volume: `1`, Entry: `12814`,
-    eBay_Avg: 5.14, eBay_Low: 2.75, eBay_High: 7.99, eBay_Count: 5, eBay_Median: 4.95,
+    eBay_Avg: 10.11, eBay_Low: 2.75, eBay_High: 34.99, eBay_Count: 6, eBay_Median: 5.47,
   },
   {
     Title: `Batman/Wonder Woman: Truth`, Issue: `1`, Publisher: `DC`,
@@ -199476,7 +199476,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Imprint: `DC Future State`, Box: `49`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `12816`,
-    eBay_Avg: 8.24, eBay_Low: 4.25, eBay_High: 20, eBay_Count: 10, eBay_Median: 6.87,
+    eBay_Avg: 4.76, eBay_Low: 1.74, eBay_High: 9.99, eBay_Count: 8, eBay_Median: 3.34,
   },
   {
     Title: `Future State: Aquaman`, Issue: `2`, Publisher: `DC`,
@@ -199780,7 +199780,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Imprint: `DC`, Box: `104`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `12832`,
-    eBay_Avg: 6.64, eBay_Low: 4.99, eBay_High: 7.99, eBay_Count: 3, eBay_Median: 6.95,
+    eBay_Avg: 29.93, eBay_Low: 4.99, eBay_High: 69.99, eBay_Count: 8, eBay_Median: 20.14,
   },
   {
     Title: `Absolute Wonder Woman`, Issue: `3`, Publisher: `DC`,
@@ -199799,7 +199799,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Imprint: `DC`, Box: `104`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `12833`,
-    eBay_Avg: 16.91, eBay_Low: 5.95, eBay_High: 34.99, eBay_Count: 9, eBay_Median: 10.96,
+    eBay_Avg: 17.18, eBay_Low: 2.68, eBay_High: 37.74, eBay_Count: 8, eBay_Median: 11.97,
   },
   {
     Title: `Absolute Wonder Woman`, Issue: `4`, Publisher: `DC`,
@@ -199989,7 +199989,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Imprint: `DC`, Box: `104`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `12843`,
-    eBay_Avg: 80.69, eBay_Low: 9.6, eBay_High: 249.99, eBay_Count: 8, eBay_Median: 77.5,
+    eBay_Avg: 88.28, eBay_Low: 34.99, eBay_High: 249.99, eBay_Count: 7, eBay_Median: 69.99,
   },
   {
     Title: `Absolute Wonder Woman`, Issue: `16`, Publisher: `DC`,
@@ -200103,7 +200103,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Imprint: `DC`, Box: `104`,
     Crossover: ``, Start_Bid: `3`,
     Volume: `1`, Entry: `12849`,
-    eBay_Avg: 8.88, eBay_Low: 1.49, eBay_High: 19.5, eBay_Count: 10, eBay_Median: 7.12,
+    eBay_Avg: 4.17, eBay_Low: 1.99, eBay_High: 8.24, eBay_Count: 7, eBay_Median: 3.99,
   },
   {
     Title: `Absolute Flash`, Issue: `3`, Publisher: `DC`,
@@ -200217,7 +200217,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Imprint: `DC`, Box: `104`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `12855`,
-    eBay_Avg: 7.12, eBay_Low: 3, eBay_High: 10.8, eBay_Count: 6, eBay_Median: 7.82,
+    eBay_Avg: 6.71, eBay_Low: 3, eBay_High: 10.8, eBay_Count: 5, eBay_Median: 6.36,
   },
   {
     Title: `Absolute Flash`, Issue: `9`, Publisher: `DC`,
@@ -200920,7 +200920,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Imprint: `Image/Skybound`, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: `Energon Universe`, Start_Bid: `2`,
     Volume: `1`, Entry: `12892`,
-    eBay_Avg: 18.42, eBay_Low: 4.99, eBay_High: 29.5, eBay_Count: 8, eBay_Median: 19.97,
+    eBay_Avg: 27.58, eBay_Low: 9.99, eBay_High: 75, eBay_Count: 8, eBay_Median: 22.99,
   },
   {
     Title: `Transformers`, Issue: `18`, Publisher: `Image`,
@@ -203903,7 +203903,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Imprint: ``, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: ``,
     Volume: `1`, Entry: `13049`,
-    eBay_Avg: 18.83, eBay_Low: 4.43, eBay_High: 34.95, eBay_Count: 10, eBay_Median: 17,
+    eBay_Avg: 29.34, eBay_Low: 6.99, eBay_High: 71.99, eBay_Count: 10, eBay_Median: 24.99,
   },
   {
     Title: `Phoenix`, Issue: `1`, Publisher: `Marvel`,
@@ -203922,7 +203922,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Imprint: ``, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: ``,
     Volume: `2`, Entry: `13050`,
-    eBay_Avg: 29.36, eBay_Low: 3.99, eBay_High: 75, eBay_Count: 8, eBay_Median: 22.48,
+    eBay_Avg: 20.18, eBay_Low: 3.99, eBay_High: 59.99, eBay_Count: 8, eBay_Median: 8.75,
   },
   {
     Title: `X-Force: Killshot Anniversary Special`, Issue: `1`, Publisher: `Marvel`,
@@ -203941,7 +203941,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Imprint: ``, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: ``,
     Volume: ``, Entry: `13051`,
-    eBay_Avg: 5.8, eBay_Low: 3.45, eBay_High: 10.19, eBay_Count: 8, eBay_Median: 5.7,
+    eBay_Avg: 11.82, eBay_Low: 2.99, eBay_High: 21.99, eBay_Count: 10, eBay_Median: 11.07,
   },
   {
     Title: `Original X-Men`, Issue: `1`, Publisher: `Marvel`,
@@ -203960,7 +203960,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Imprint: ``, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: ``,
     Volume: `1`, Entry: `13052`,
-    eBay_Avg: 20.42, eBay_Low: 6.11, eBay_High: 50, eBay_Count: 8, eBay_Median: 13.5,
+    eBay_Avg: 17.79, eBay_Low: 6.16, eBay_High: 31.25, eBay_Count: 8, eBay_Median: 14.97,
   },
   {
     Title: `Uncanny X-Men`, Issue: `703`, Publisher: `Marvel`,
@@ -204017,7 +204017,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Imprint: ``, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: ``,
     Volume: `1`, Entry: `13055`,
-    eBay_Avg: 12.77, eBay_Low: 3.34, eBay_High: 30.78, eBay_Count: 8, eBay_Median: 9.99,
+    eBay_Avg: 8.92, eBay_Low: 2.98, eBay_High: 19.99, eBay_Count: 10, eBay_Median: 7.44,
   },
   {
     Title: `Star-Lord and Kitty Pryde`, Issue: `1`, Publisher: `Marvel`,
@@ -204074,7 +204074,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Imprint: ``, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: ``,
     Volume: `1`, Entry: `13059`,
-    eBay_Avg: 12.77, eBay_Low: 3.34, eBay_High: 30.78, eBay_Count: 8, eBay_Median: 9.99,
+    eBay_Avg: 8.92, eBay_Low: 2.98, eBay_High: 19.99, eBay_Count: 10, eBay_Median: 7.44,
   },
   {
     Title: `Iron Man 2.0`, Issue: `5`, Publisher: `Marvel`,
@@ -204131,7 +204131,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Imprint: `Marvel`, Box: `10`,
     Crossover: ``, Start_Bid: `20`,
     Volume: `1`, Entry: `13062`,
-    eBay_Avg: 13.66, eBay_Low: 5.25, eBay_High: 24.99, eBay_Count: 9, eBay_Median: 11.99,
+    eBay_Avg: 10.98, eBay_Low: 3.99, eBay_High: 17.99, eBay_Count: 9, eBay_Median: 13.99,
   },
   {
     Title: `Ultimate Spider-Man: Incursion`, Issue: `1`, Publisher: `Marvel`,
@@ -205233,7 +205233,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Imprint: ``, Box: `85`,
     Crossover: ``, Start_Bid: ``,
     Volume: `1`, Entry: `13120`,
-    eBay_Avg: null, eBay_Low: 3.75, eBay_High: 37.99, eBay_Count: 10, eBay_Median: null,
+    eBay_Avg: 13.02, eBay_Low: 3.18, eBay_High: 20, eBay_Count: 6, eBay_Median: 12.49,
   },
   {
     Title: `The Ultimates`, Issue: `2`, Publisher: `Marvel`,
@@ -205917,7 +205917,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Imprint: ``, Box: `43`,
     Crossover: ``, Start_Bid: ``,
     Volume: `5`, Entry: `13156`,
-    eBay_Avg: null, eBay_Low: 2.58, eBay_High: 26.2, eBay_Count: 8, eBay_Median: null,
+    eBay_Avg: 10.76, eBay_Low: 2.58, eBay_High: 28.08, eBay_Count: 7, eBay_Median: 6.28,
   },
   {
     Title: `X-Treme X-Men`, Issue: `23`, Publisher: `Marvel`,
@@ -207437,7 +207437,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Imprint: ``, Box: `72`,
     Crossover: ``, Start_Bid: ``,
     Volume: ``, Entry: `13236`,
-    eBay_Avg: 13.66, eBay_Low: 5.25, eBay_High: 24.99, eBay_Count: 9, eBay_Median: 11.99,
+    eBay_Avg: 10.98, eBay_Low: 3.99, eBay_High: 17.99, eBay_Count: 9, eBay_Median: 13.99,
   },
   {
     Title: `The Amazing Spider-Man`, Issue: `25`, Publisher: `Marvel`,
@@ -207475,7 +207475,7 @@ Christopher Priest appeared at Terrificon 2025 and is a strong returner. Watch f
     Imprint: ``, Box: `72`,
     Crossover: ``, Start_Bid: ``,
     Volume: `1`, Entry: `13238`,
-    eBay_Avg: 49, eBay_Low: 30, eBay_High: 79.99, eBay_Count: 3, eBay_Median: 37,
+    eBay_Avg: 34.83, eBay_Low: 7.99, eBay_High: 90, eBay_Count: 9, eBay_Median: 30,
   },
   {
     Title: `Teen Justice`, Issue: `2`, Publisher: `DC`,
