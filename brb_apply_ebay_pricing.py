@@ -42,7 +42,7 @@ def main():
     print(f"Entries fetched since {args.since} with a real price: {len(applicable)}")
 
     wb = openpyxl.load_workbook(args.xlsx)
-    ws = next(wb[n] for n in wb.sheetnames if n.startswith("✅ Clean Inventory"))
+    ws = next(wb[n] for n in wb.sheetnames if (n == "Sheet X" or n.startswith("✅ Clean Inventory")))
     header = [c.value for c in next(ws.iter_rows(max_row=1))]
     ti  = header.index("Title") + 1
     ii  = header.index("Issue #") + 1

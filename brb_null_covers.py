@@ -58,7 +58,7 @@ def resolve_volumes_from_xlsx(flagged: list[dict], xlsx_path: str) -> tuple[dict
     for entries that stay ambiguous even after that."""
     import openpyxl
     wb = openpyxl.load_workbook(xlsx_path, read_only=True)
-    ws = next((wb[n] for n in wb.sheetnames if n.startswith("✅ Clean Inventory")), None)
+    ws = next((wb[n] for n in wb.sheetnames if (n == "Sheet X" or n.startswith("✅ Clean Inventory"))), None)
     if ws is None:
         return {}, [(f["id"], [], f.get("Year")) for f in flagged]
 

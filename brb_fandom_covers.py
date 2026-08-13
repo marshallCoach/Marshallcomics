@@ -97,7 +97,7 @@ def main():
     covers = json.load(open(COVERS))
     xlsx = latest_xlsx()
     wb = openpyxl.load_workbook(xlsx, read_only=True, data_only=True)
-    ws = next(wb[n] for n in wb.sheetnames if n.startswith("✅ Clean Inventory"))
+    ws = next(wb[n] for n in wb.sheetnames if (n == "Sheet X" or n.startswith("✅ Clean Inventory")))
     rows = list(ws.iter_rows(values_only=True))
     H = list(rows[0]); C = {n: H.index(n) for n in H if n}
 
