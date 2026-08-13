@@ -130,7 +130,7 @@ def main():
     print(f"Source: {os.path.basename(xlsx)}  (mode: {'APPLY' if args.apply else 'DRY-RUN'})")
 
     wb = openpyxl.load_workbook(xlsx)
-    ws = next(wb[n] for n in wb.sheetnames if n.startswith("✅ Clean Inventory"))
+    ws = next(wb[n] for n in wb.sheetnames if (n == "Sheet X" or n.startswith("✅ Clean Inventory")))
     H = [c.value for c in next(ws.iter_rows(max_row=1))]
     C = {n: H.index(n) for n in H if n}
     ti, ii, yi, vi, wi = C["Title"], C["Issue #"], C["Year"], C["Volume"], C["Writer(s)"]

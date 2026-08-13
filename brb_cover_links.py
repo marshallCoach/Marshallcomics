@@ -42,7 +42,7 @@ def cover(t, iss, vol):
 
 x = max(glob.glob(os.path.join(ASSETS, "comics_inventory_*.xlsx")), key=os.path.getmtime)
 wb = openpyxl.load_workbook(x, read_only=True, data_only=True)
-ws = next(wb[n] for n in wb.sheetnames if n.startswith("✅ Clean Inventory"))
+ws = next(wb[n] for n in wb.sheetnames if (n == "Sheet X" or n.startswith("✅ Clean Inventory")))
 rows = list(ws.iter_rows(values_only=True)); H = list(rows[0]); C = {n: H.index(n) for n in H if n}
 
 
