@@ -63,6 +63,7 @@ BOX_STATUS_ALLOWLIST = {
     "AT CGC",
     "AT MAGIC PRESSING → CGC",
     "AT CGC — Roy Thomas SS",
+    "AT CGC — Terrificon 2026",
     "UNKNOWN — needs physical reassignment",
 }
 
@@ -274,8 +275,10 @@ def check_writer_fill_rate(df):
 def check_box_number_range(df):
     section("CHECK 9 — Box # values are positive integers (or known status strings)")
     numeric = pd.to_numeric(df["Box #"], errors="coerce")
+    # Allowlist members, plus deliberate "DUPLICATE — see row N" dedup pointers
+    # (human-authored markers flagging a pending duplicate, not corrupt data).
     is_allowed_status = df["Box #"].apply(
-        lambda v: str(v).strip() in BOX_STATUS_ALLOWLIST
+        lambda v: str(v).strip() in BOX_STATUS_ALLOWLIST or str(v).strip().startswith("DUPLICATE")
     )
     bad = df[
         ~is_allowed_status &
