@@ -40,8 +40,10 @@ BOX_STATUS_ALLOWLIST = {
     "AT CGC",
     "AT MAGIC PRESSING → CGC",
     "AT CGC — Roy Thomas SS",
+    "AT CGC — Terrificon 2026",
     "UNKNOWN — needs physical reassignment",
 }
+# Box# Check 9 also accepts "DUPLICATE — see row N" dedup-pointer markers.
 ```
 
 ## BOX_CAPACITY
