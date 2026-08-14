@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Combine visually-verified characters into the inventory as the new source of
-truth. Renames the Clean Inventory sheet to 'Sheet X', adds a 'Visually Verified
+truth. Adds a 'Visually Verified
 Characters' column (unambiguous Title+Issue+Volume matches only) and a
 'Cover Characters' tab. Non-destructive: existing cells untouched; writes a NEW
 timestamped file. Confirms no data contamination (row count + every original
@@ -55,12 +55,12 @@ for r in list(vw.iter_rows(values_only=True))[1:]:
 # null out formula-driven cells (e.g. the VF-value column). Flattening preserves
 # the exact data for this validated snapshot.
 srcvals = next(w for w in openpyxl.load_workbook(SRC, read_only=True, data_only=True).worksheets
-               if (w.title == "Sheet X" or w.title.startswith("✅ Clean Inventory")))
+               if w.title.startswith("✅ Clean Inventory"))
 cached = [list(r) for r in srcvals.iter_rows(values_only=True)]
 
 # --- load inventory (editable, keeps formatting/formulas) ---
 wb = openpyxl.load_workbook(SRC)
-ws = next(w for w in wb.worksheets if (w.title == "Sheet X" or w.title.startswith("✅ Clean Inventory")))
+ws = next(w for w in wb.worksheets if w.title.startswith("✅ Clean Inventory"))
 # flatten formula cells on the inventory sheet to their cached values
 for ri, row in enumerate(ws.iter_rows()):
     for cjj, cell in enumerate(row):
@@ -96,8 +96,8 @@ for row in range(2, ws.max_row + 1):
     if hit:
         ws.cell(row, newcol, hit); filled += 1
 
-# --- rename to Sheet X ---
-ws.title = "Sheet X"
+# --- keep the ✅ Clean Inventory naming ---
+ws.title = "✅ Clean Inventory 1308_1843"
 
 # --- Cover Characters tab ---
 if "Cover Characters" in wb.sheetnames:
@@ -117,7 +117,7 @@ wb.save(out)
 
 # --- contamination check: reload, verify original data intact ---
 rb = openpyxl.load_workbook(out, read_only=True, data_only=True)
-rs = rb["Sheet X"]
+rs = next(rb[n] for n in rb.sheetnames if n.startswith("✅ Clean Inventory"))
 rrows = list(rs.iter_rows(values_only=True))
 # rebuild original-only view (drop the appended column) and hash
 orig_view = hashlib.sha256()
@@ -125,8 +125,8 @@ for row in rrows:
     orig_view.update(repr(row[:orig_cols]).encode())
 new_rows = len(rrows)
 print(f"OUTPUT: {out}")
-print(f"Sheet X rows: source={orig_rows} new={new_rows}  cols: {orig_cols}->{rs.max_column}")
-print(f"characters filled on Sheet X: {filled}")
+print(f"inventory rows: source={orig_rows} new={new_rows}  cols: {orig_cols}->{rs.max_column}")
+print(f"characters filled: {filled}")
 print(f"Cover Characters tab rows: {len(vis_rows)}")
 print(f"CONTAMINATION CHECK original {orig_cols} cols byte-identical: {orig_view.hexdigest()==orig_hash}")
 print(f"all sheets preserved: {rb.sheetnames}")

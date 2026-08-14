@@ -43,11 +43,11 @@ for r in list(fw.iter_rows(values_only=True))[1:]:
 
 # --- cached values to flatten formulas (avoid nulling formula cells) ---
 srcvals = next(w for w in openpyxl.load_workbook(SRC, read_only=True, data_only=True).worksheets
-               if w.title == "Sheet X" or (w.title == "Sheet X" or w.title.startswith("✅ Clean Inventory")))
+               if w.title.startswith("✅ Clean Inventory"))
 cached = [list(r) for r in srcvals.iter_rows(values_only=True)]
 
 wb = openpyxl.load_workbook(SRC)
-ws = next(w for w in wb.worksheets if w.title == "Sheet X" or (w.title == "Sheet X" or w.title.startswith("✅ Clean Inventory")))
+ws = next(w for w in wb.worksheets if w.title.startswith("✅ Clean Inventory"))
 for ri, row in enumerate(ws.iter_rows()):
     for cj, cell in enumerate(row):
         if isinstance(cell.value, str) and cell.value.startswith("="):
@@ -78,9 +78,9 @@ wb.save(out)
 
 # --- contamination check: only Volume column differs, only on changed rows ---
 so = next(w for w in openpyxl.load_workbook(SRC, read_only=True, data_only=True).worksheets
-          if w.title == "Sheet X" or (w.title == "Sheet X" or w.title.startswith("✅ Clean Inventory")))
+          if w.title.startswith("✅ Clean Inventory"))
 no = next(w for w in openpyxl.load_workbook(out, read_only=True, data_only=True).worksheets
-          if w.title == "Sheet X" or (w.title == "Sheet X" or w.title.startswith("✅ Clean Inventory")))
+          if w.title.startswith("✅ Clean Inventory"))
 sr = list(so.iter_rows(values_only=True)); nr = list(no.iter_rows(values_only=True))
 vidx = C["Volume"]
 offvol = 0

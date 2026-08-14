@@ -39,7 +39,7 @@ def ni(v):
 
 
 x = max(glob.glob(os.path.join(ASSETS, "comics_inventory_*.xlsx")), key=os.path.getmtime)
-ws = next(w for w in openpyxl.load_workbook(x, read_only=True, data_only=True).worksheets if (w.title == "Sheet X" or w.title.startswith("✅ Clean Inventory")))
+ws = next(w for w in openpyxl.load_workbook(x, read_only=True, data_only=True).worksheets if w.title.startswith("✅ Clean Inventory"))
 rows = list(ws.iter_rows(values_only=True)); H = list(rows[0]); C = {n: H.index(n) for n in H if n}
 
 

@@ -48,7 +48,7 @@ def main():
         print(f"Scope: {len(scope)} title(s)")
 
     wb = openpyxl.load_workbook(xlsx)
-    ws = next(wb[n] for n in wb.sheetnames if (n == "Sheet X" or n.startswith("✅ Clean Inventory")))
+    ws = next(wb[n] for n in wb.sheetnames if n.startswith("✅ Clean Inventory"))
     H = [c.value for c in next(ws.iter_rows(max_row=1))]
     ti, ii, yi, bi = (H.index(c) for c in ("Title", "Issue #", "Year", "Box #"))
     idf = [H.index(c) for c in IDENT_COLS]
