@@ -34,15 +34,17 @@ import BoxMap from "@/pages/BoxMap";
 import EbayPipeline from "@/pages/EbayPipeline";
 import OpsReference from "@/pages/OpsReference";
 import EbayListingGuide from "@/pages/EbayListingGuide";
+import ComicRoulette from "@/pages/ComicRoulette";
+import LifeArchive from "@/pages/LifeArchive";
 import PasswordGate from "@/components/PasswordGate";
-import { BookOpen, Boxes, Wrench, Image, Briefcase } from "lucide-react";
+import { BookOpen, Boxes, Wrench, Image, Briefcase, Film, Clock, Archive } from "lucide-react";
 
 type TabId =
   | "summary" | "everything" | "collection" | "boxkeys" | "stats" | "runs" | "dataview"
   | "calendar" | "showplanner" | "cgc" | "signings" | "actionplan" | "timeline" | "boxvisual"
   | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "duplicates" | "dupchecklist" | "history"
   | "orgpath" | "volumes" | "boxlabels" | "keycatalog" | "covercatalog" | "coverreview" | "boxquest" | "boxmap"
-  | "ebaypipeline" | "opsreference" | "ebaylistingguide";
+  | "ebaypipeline" | "opsreference" | "ebaylistingguide" | "roulette" | "lifearchive";
 
 export type NavParams = {
   box?: string;
@@ -62,7 +64,6 @@ const NAV = [
       { id: "runs",        label: "Runs" },
       { id: "volumes",     label: "Volumes" },
       { id: "collection",  label: "Sales" },
-      { id: "history",     label: "History" },
       { id: "stats",       label: "Stats" },
       { id: "dataview",    label: "Data View" },
       { id: "capfalcon",   label: "Cap & Falcon" },
@@ -90,7 +91,6 @@ const NAV = [
       { id: "timeline",          label: "Timeline",           group: "Ops & Docs" },
       { id: "ebaypipeline",      label: "eBay Pipeline",      group: "Ops & Docs" },
       { id: "opsreference",      label: "Ops Reference",      group: "Ops & Docs" },
-      { id: "ebaylistingguide",  label: "Phase 1 Listing Guide", group: "Ops & Docs" },
     ],
   },
   {
@@ -99,7 +99,28 @@ const NAV = [
     tabs: [
       { id: "keycatalog",   label: "Key Issues" },
       { id: "covercatalog", label: "Cover Art" },
+    ],
+  },
+  {
+    id: "cover",
+    label: "Cover",
+    tabs: [
       { id: "coverreview",  label: "Cover Review" },
+      { id: "roulette",     label: "Comic Roulette" },
+    ],
+  },
+  {
+    id: "lifetime",
+    label: "Comic Lifetime of RM",
+    tabs: [
+      { id: "history",     label: "Lifetime" },
+    ],
+  },
+  {
+    id: "lifearchive",
+    label: "Life Archive",
+    tabs: [
+      { id: "lifearchive", label: "Life Archive" },
     ],
   },
   {
@@ -113,6 +134,7 @@ const NAV = [
       { id: "cgc",         label: "CGC" },
       { id: "signings",    label: "Signings" },
       { id: "actionplan",  label: "Action Plan" },
+      { id: "ebaylistingguide",  label: "Phase 1 Listing Guide" },
     ],
   },
 ] as const;
@@ -124,6 +146,9 @@ const SECTION_ICONS: Record<SectionId, React.ComponentType<{ size?: number }>> =
   boxes: Boxes,
   organisation: Wrench,
   catalog: Image,
+  cover: Film,
+  lifetime: Clock,
+  lifearchive: Archive,
   business: Briefcase,
 };
 
@@ -193,6 +218,8 @@ export default function App() {
     <div style={{ minHeight:"100vh" }}>
       {showSearch && <GlobalSearch onNavigate={navigateTo} onClose={closeSearch} />}
 
+      {/* STICKY CHROME — banner + header + nav as ONE sticky block (no offset math) */}
+      <div className="app-chrome">
       {/* TERRIFICON BANNER */}
       {!cd.past && (
         <button className="terrificon-banner" onClick={() => navigateTo("cgc")}>
@@ -271,6 +298,7 @@ export default function App() {
           );
         })}
       </nav>
+      </div>{/* /app-chrome */}
 
       {/* PAGES */}
       <div className="page-content">
@@ -316,6 +344,8 @@ export default function App() {
         {activeTab === "ebaypipeline" && <EbayPipeline />}
         {activeTab === "opsreference" && <OpsReference />}
         {activeTab === "ebaylistingguide" && <EbayListingGuide />}
+        {activeTab === "roulette"     && <ComicRoulette />}
+        {activeTab === "lifearchive"  && <LifeArchive />}
       </div>
     </div>
     </PasswordGate>

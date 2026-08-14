@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_1408_1006.xlsx  |  Generated: 2026-08-14
+// Source: comics_inventory_1408_1325.xlsx  |  Generated: 2026-08-14
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -7875,7 +7875,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Batman and Robin`, Issue: `4.9`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2013–2015`, Arc: `Futures End tie-in`, Key: `YES`,
+    Year: `2013`, Arc: `Futures End tie-in`, Key: `YES`,
     Key_Reason: `Futures End lenticular 3D cover — DC line-wide September 2014 Futures End event`, First_App: ``,
     Writer: `Peter J. Tomasi`, Artist: `Patrick Gleason`,
     Signed: `NO`, Signed_By: ``,
@@ -16938,7 +16938,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Sam Wilson: Captain America`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2015-2017`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `YES`,
+    Year: `2015`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `YES`,
     Key_Reason: `Sam Wilson Cap #1 — Nick Spencer; Sam Wilson as Captain America ongoing; Falcon becomes Cap solo`, First_App: ``,
     Writer: `Nick Spencer`, Artist: `Daniel Acuña`,
     Signed: `NO`, Signed_By: ``,
@@ -16957,7 +16957,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Sam Wilson: Captain America`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2015-2017`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `NO`,
+    Year: `2015`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `NO`,
     Key_Reason: `SW Cap #2`, First_App: ``,
     Writer: `Nick Spencer`, Artist: `Daniel Acuña`,
     Signed: `NO`, Signed_By: ``,
@@ -16976,7 +16976,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Sam Wilson: Captain America`, Issue: `3`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2015-2017`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `NO`,
+    Year: `2015`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `NO`,
     Key_Reason: `SW Cap #3`, First_App: ``,
     Writer: `Nick Spencer`, Artist: `Daniel Acuña`,
     Signed: `NO`, Signed_By: ``,
@@ -16995,7 +16995,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Sam Wilson: Captain America`, Issue: `4`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2015-2017`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `NO`,
+    Year: `2015`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `NO`,
     Key_Reason: `SW Cap #4`, First_App: ``,
     Writer: `Nick Spencer`, Artist: `Daniel Acuña`,
     Signed: `NO`, Signed_By: ``,
@@ -17014,7 +17014,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Sam Wilson: Captain America`, Issue: `5`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2015-2017`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `NO`,
+    Year: `2015`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `NO`,
     Key_Reason: `SW Cap #5`, First_App: ``,
     Writer: `Nick Spencer`, Artist: `Daniel Acuña`,
     Signed: `NO`, Signed_By: ``,
@@ -17033,7 +17033,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Sam Wilson: Captain America`, Issue: `6`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2015-2017`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `NO`,
+    Year: `2015`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `NO`,
     Key_Reason: `SW Cap #6`, First_App: ``,
     Writer: `Nick Spencer`, Artist: `Daniel Acuña`,
     Signed: `NO`, Signed_By: ``,
@@ -17052,7 +17052,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Sam Wilson: Captain America`, Issue: `9`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2015-2017`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `NO`,
+    Year: `2015`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `NO`,
     Key_Reason: `SW Cap #9`, First_App: ``,
     Writer: `Nick Spencer`, Artist: `Daniel Acuña`,
     Signed: `NO`, Signed_By: ``,
@@ -17071,7 +17071,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Sam Wilson: Captain America`, Issue: `10`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2015-2017`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `NO`,
+    Year: `2015`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `NO`,
     Key_Reason: `SW Cap #10`, First_App: ``,
     Writer: `Nick Spencer`, Artist: `Daniel Acuña`,
     Signed: `NO`, Signed_By: ``,
@@ -17090,7 +17090,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Sam Wilson: Captain America`, Issue: `15`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2015-2017`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `NO`,
+    Year: `2015`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `NO`,
     Key_Reason: `SW Cap #15`, First_App: ``,
     Writer: `Nick Spencer`, Artist: `Daniel Acuña`,
     Signed: `NO`, Signed_By: ``,
@@ -17109,7 +17109,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Sam Wilson: Captain America`, Issue: `16`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2015-2017`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `NO`,
+    Year: `2015`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `NO`,
     Key_Reason: `SW Cap #16`, First_App: ``,
     Writer: `Nick Spencer`, Artist: `Daniel Acuña`,
     Signed: `NO`, Signed_By: ``,
@@ -17128,7 +17128,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Sam Wilson: Captain America`, Issue: `17`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2015-2017`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `NO`,
+    Year: `2015`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `NO`,
     Key_Reason: `SW Cap #17`, First_App: ``,
     Writer: `Nick Spencer`, Artist: `Daniel Acuña`,
     Signed: `NO`, Signed_By: ``,
@@ -17147,7 +17147,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Sam Wilson: Captain America`, Issue: `18`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2015-2017`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `NO`,
+    Year: `2015`, Arc: `Sam Wilson Captain America — Nick Spencer`, Key: `NO`,
     Key_Reason: `SW Cap #18`, First_App: ``,
     Writer: `Nick Spencer`, Artist: `Daniel Acuña`,
     Signed: `NO`, Signed_By: ``,
@@ -17432,7 +17432,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `27`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2020`, Arc: `Captain America — Ta-Nehisi Coates`, Key: `NO`,
+    Year: `2019`, Arc: `Captain America — Ta-Nehisi Coates`, Key: `NO`,
     Key_Reason: `Coates Cap #27`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Adam Kubert & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -17451,7 +17451,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `28`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2020`, Arc: `Captain America — Ta-Nehisi Coates`, Key: `NO`,
+    Year: `2019`, Arc: `Captain America — Ta-Nehisi Coates`, Key: `NO`,
     Key_Reason: `Coates Cap #28`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Adam Kubert & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -17470,7 +17470,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `29`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2020`, Arc: `Captain America — Ta-Nehisi Coates`, Key: `NO`,
+    Year: `2019`, Arc: `Captain America — Ta-Nehisi Coates`, Key: `NO`,
     Key_Reason: `Coates Cap #29`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Adam Kubert & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -17489,7 +17489,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Captain America`, Issue: `30`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2019-2020`, Arc: `Captain America — Ta-Nehisi Coates`, Key: `NO`,
+    Year: `2019`, Arc: `Captain America — Ta-Nehisi Coates`, Key: `NO`,
     Key_Reason: `Coates Cap #30`, First_App: ``,
     Writer: `Ta-Nehisi Coates`, Artist: `Adam Kubert & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -28167,7 +28167,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Cable`, Issue: `83`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2009-2011`, Arc: `Cable — Jason Aaron / Various`, Key: `NO`,
+    Year: `2009`, Arc: `Cable — Jason Aaron / Various`, Key: `NO`,
     Key_Reason: `Cable #83`, First_App: ``,
     Writer: `Jason Aaron & Various`, Artist: `Various`,
     Signed: `NO`, Signed_By: ``,
@@ -74394,7 +74394,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther: The Man Without Fear`, Issue: `525`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2010-2012`, Arc: `BP Man Without Fear — David Liss`, Key: `NO`,
+    Year: `2010`, Arc: `BP Man Without Fear — David Liss`, Key: `NO`,
     Key_Reason: `BP MWF #525 Liss`, First_App: ``,
     Writer: `David Liss`, Artist: `Francesco Francavilla & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -74413,7 +74413,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther: The Man Without Fear`, Issue: `526`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2010-2012`, Arc: `BP Man Without Fear — David Liss`, Key: `NO`,
+    Year: `2010`, Arc: `BP Man Without Fear — David Liss`, Key: `NO`,
     Key_Reason: `BP MWF #526 Liss`, First_App: ``,
     Writer: `David Liss`, Artist: `Francesco Francavilla & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -74432,7 +74432,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther: The Man Without Fear`, Issue: `527`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2010-2012`, Arc: `BP Man Without Fear — David Liss`, Key: `NO`,
+    Year: `2010`, Arc: `BP Man Without Fear — David Liss`, Key: `NO`,
     Key_Reason: `BP MWF #527 Liss`, First_App: ``,
     Writer: `David Liss`, Artist: `Francesco Francavilla & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -74451,7 +74451,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther: The Man Without Fear`, Issue: `528`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2010-2012`, Arc: `BP Man Without Fear — David Liss`, Key: `NO`,
+    Year: `2010`, Arc: `BP Man Without Fear — David Liss`, Key: `NO`,
     Key_Reason: `BP MWF #528 Liss`, First_App: ``,
     Writer: `David Liss`, Artist: `Francesco Francavilla & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -74470,7 +74470,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Black Panther: The Man Without Fear`, Issue: `529`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2010-2012`, Arc: `BP Man Without Fear — David Liss`, Key: `NO`,
+    Year: `2010`, Arc: `BP Man Without Fear — David Liss`, Key: `NO`,
     Key_Reason: `BP MWF #529 Liss`, First_App: ``,
     Writer: `David Liss`, Artist: `Francesco Francavilla & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -88170,7 +88170,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Generation X`, Issue: `55`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2001`, Arc: `Generation X late run`, Key: `NO`,
+    Year: `2001`, Arc: `Generation X late run`, Key: `NO`,
     Key_Reason: `Generation X #55 — late run issues #55-75`, First_App: ``,
     Writer: `Jay Faerber & Brian Wood`, Artist: `Kevin Sharpe & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -88189,7 +88189,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Generation X`, Issue: `56`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2001`, Arc: `Generation X late run`, Key: `NO`,
+    Year: `2001`, Arc: `Generation X late run`, Key: `NO`,
     Key_Reason: `Generation X #56 — late run issues #55-75`, First_App: ``,
     Writer: `Jay Faerber & Brian Wood`, Artist: `Kevin Sharpe & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -88208,7 +88208,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Generation X`, Issue: `57`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2001`, Arc: `Generation X late run`, Key: `NO`,
+    Year: `2001`, Arc: `Generation X late run`, Key: `NO`,
     Key_Reason: `Generation X #57 — late run issues #55-75`, First_App: ``,
     Writer: `Jay Faerber & Brian Wood`, Artist: `Kevin Sharpe & Various`,
     Signed: `NO`, Signed_By: ``,
@@ -88227,7 +88227,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `Generation X`, Issue: `58`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2001-2001`, Arc: `Generation X late run`, Key: `NO`,
+    Year: `2001`, Arc: `Generation X late run`, Key: `NO`,
     Key_Reason: `Generation X #58 — late run issues #55-75`, First_App: ``,
     Writer: `Jay Faerber & Brian Wood`, Artist: `Kevin Sharpe & Various`,
     Signed: `NO`, Signed_By: ``,
