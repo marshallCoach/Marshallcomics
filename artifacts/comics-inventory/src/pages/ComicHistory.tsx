@@ -225,6 +225,7 @@ function MonthCard({ year, mi, pool, spinIdx, spinning, animating, onSpin }: {
   animating: Set<string>;
   onSpin: (key: string, pool: Comic[]) => void;
 }) {
+  const [expanded, setExpanded] = useState(false);
   const key     = `${year}-${mi}`;
   const curIdx  = Math.min(spinIdx.get(key) ?? 0, Math.max(pool.length - 1, 0));
   const comic   = pool[curIdx] ?? null;
@@ -332,6 +333,40 @@ function MonthCard({ year, mi, pool, spinIdx, spinning, animating, onSpin }: {
             }}>
               no match
             </div>
+          </div>
+        )}
+
+        {/* Inline open/collapse — reveal every book in this month on the page */}
+        {pool.length > 1 && (
+          <div style={{ width: "100%", marginTop: 8 }}>
+            <button
+              onClick={() => setExpanded(x => !x)}
+              style={{
+                width: "100%", background: "none", border: "1px solid var(--border)",
+                borderRadius: 6, padding: "4px 8px", cursor: "pointer",
+                fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+                fontSize: "0.8rem", letterSpacing: "1px", color: "var(--muted2)",
+              }}
+            >
+              {expanded ? "▾ HIDE" : `▸ ALL ${pool.length} BOOKS`}
+            </button>
+            {expanded && (
+              <div style={{ marginTop: 6, maxHeight: 180, overflowY: "auto", textAlign: "left" }}>
+                {pool.map((c, i) => (
+                  <div key={i} style={{
+                    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+                    fontSize: "0.78rem", lineHeight: 1.4, padding: "3px 4px",
+                    borderBottom: "1px solid var(--border)", color: "var(--text)",
+                    display: "flex", justifyContent: "space-between", gap: 6,
+                  }}>
+                    <span style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+                      {c.Title} {c.Issue ? `#${c.Issue}` : ""}
+                    </span>
+                    <span style={{ color: "var(--muted)", flexShrink: 0 }}>{c.Publisher || "IND"}</span>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         )}
       </div>
