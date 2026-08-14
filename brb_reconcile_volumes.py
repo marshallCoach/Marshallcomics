@@ -93,7 +93,7 @@ def main():
     import openpyxl
     covers = json.load(open(COVERS))
     wb = openpyxl.load_workbook(xlsx, read_only=True, data_only=True)
-    ws = next((wb[n] for n in wb.sheetnames if (n == "Sheet X" or n.startswith("✅ Clean Inventory"))), None)
+    ws = next((wb[n] for n in wb.sheetnames if n.startswith("✅ Clean Inventory")), None)
     if ws is None:
         print("ERROR: inventory sheet not found"); sys.exit(1)
     rows = list(ws.iter_rows(values_only=True))

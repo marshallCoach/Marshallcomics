@@ -90,7 +90,7 @@ def main():
         return issue_cache[key].get(inum, set())
 
     wb = openpyxl.load_workbook(xlsx)
-    ws = next(wb[n] for n in wb.sheetnames if (n == "Sheet X" or n.startswith("✅ Clean Inventory")))
+    ws = next(wb[n] for n in wb.sheetnames if n.startswith("✅ Clean Inventory"))
     H = [c.value for c in next(ws.iter_rows(max_row=1))]
     ti, ii, yi = (H.index(c) for c in ("Title", "Issue #", "Year"))
 

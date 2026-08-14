@@ -94,7 +94,7 @@ def main():
     cand_names = sorted({r[0] for r in conn.execute("SELECT DISTINCT name FROM gcd_series") if r[0]})
 
     wb = openpyxl.load_workbook(xlsx, read_only=True, data_only=True)
-    ws = next(wb[n] for n in wb.sheetnames if (n == "Sheet X" or n.startswith("✅ Clean Inventory")))
+    ws = next(wb[n] for n in wb.sheetnames if n.startswith("✅ Clean Inventory"))
     rows = list(ws.iter_rows(values_only=True))
     H = list(rows[0])
     ti, yi = H.index("Title"), H.index("Year")
