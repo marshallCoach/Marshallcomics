@@ -418,9 +418,12 @@ export default function ComicHistory() {
     }, 540);
   }, []);
 
-  const [selectedYear, setSelectedYear] = useState(() =>
-    YEARS_PRESENT[YEARS_PRESENT.length - 1] ?? END_YEAR
+  // Which years are expanded — newest open by default; all others collapsed.
+  const [openYears, setOpenYears] = useState<Set<number>>(
+    () => new Set(YEARS_PRESENT.length ? [YEARS_PRESENT[YEARS_PRESENT.length - 1]] : [])
   );
+  const toggleYear = useCallback((y: number) =>
+    setOpenYears(prev => { const n = new Set(prev); if (n.has(y)) n.delete(y); else n.add(y); return n; }), []);
 
   // Per-year filtered comic count
   const yearStats = useMemo(() => {
@@ -435,17 +438,6 @@ export default function ComicHistory() {
   const totalFiltered = useMemo(() =>
     [...yearStats.values()].reduce((a, b) => a + b, 0),
   [yearStats]);
-
-  const yearIdx  = YEARS_PRESENT.indexOf(selectedYear);
-  const prevYear = yearIdx > 0 ? YEARS_PRESENT[yearIdx - 1] : null;
-  const nextYear = yearIdx < YEARS_PRESENT.length - 1 ? YEARS_PRESENT[yearIdx + 1] : null;
-
-  const zeroMonths = useMemo(() => {
-    const yearComics = BY_YEAR.get(selectedYear) || [];
-    return MONTH_LABELS
-      .map((lbl, mi) => ({ lbl, mi }))
-      .filter(({ mi }) => isMonthVisible(selectedYear, mi) && monthPool(yearComics, mi).filter(filterComic).length === 0);
-  }, [selectedYear, filterComic]);
 
   return (
     <div style={{ maxWidth: 1200, margin: "0 auto", padding: "20px 16px 80px" }}>
@@ -463,7 +455,7 @@ export default function ComicHistory() {
           fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
         }}>
           July 1974 to today — one book from Roberto's collection for every month in history.
-          Use the year arrows to navigate forward and backward. Hit the round button to spin to another book.
+          Expand a year to browse its months; hit the round button to spin to another book that month.
         </p>
       </div>
 
@@ -527,169 +519,78 @@ export default function ComicHistory() {
           fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1.5px",
           color: "var(--muted)",
         }}>
-          {(yearStats.get(selectedYear) ?? 0)} IN {selectedYear} · {totalFiltered.toLocaleString()} TOTAL
+          {totalFiltered.toLocaleString()} BOOKS IN COLLECTION
         </div>
       </div>
 
-      {/* ── YEAR NAVIGATION ── */}
-      <div style={{ display:"flex", alignItems:"center", gap:14, marginBottom:20 }}>
-        <button
-          onClick={() => prevYear && setSelectedYear(prevYear)}
-          disabled={!prevYear}
-          style={{
-            fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px",
-            padding:"8px 18px", borderRadius:6, cursor: prevYear ? "pointer" : "default",
-            background: prevYear ? "var(--surface)" : "transparent",
-            color: prevYear ? "var(--red)" : "var(--muted)",
-            border: prevYear ? "1.5px solid var(--red)" : "1.5px solid var(--border)",
-            transition:"all 0.14s", opacity: prevYear ? 1 : 0.35, minWidth:90,
-          }}
-        >
-          ← {prevYear ?? "—"}
-        </button>
-
-        <div style={{ flex:1, textAlign:"center" }}>
-          <div style={{
-            fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"1.75rem",
-            letterSpacing:"6px", color:"var(--red)", lineHeight:1,
-          }}>
-            {selectedYear}
-          </div>
-          <div style={{
-            fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
-            letterSpacing:"2px", color:"var(--muted)", marginTop:4,
-          }}>
-            {yearIdx + 1} OF {YEARS_PRESENT.length} YEARS IN COLLECTION
-          </div>
-        </div>
-
-        <button
-          onClick={() => nextYear && setSelectedYear(nextYear)}
-          disabled={!nextYear}
-          style={{
-            fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px",
-            padding:"8px 18px", borderRadius:6, cursor: nextYear ? "pointer" : "default",
-            background: nextYear ? "var(--surface)" : "transparent",
-            color: nextYear ? "var(--red)" : "var(--muted)",
-            border: nextYear ? "1.5px solid var(--red)" : "1.5px solid var(--border)",
-            transition:"all 0.14s", opacity: nextYear ? 1 : 0.35, minWidth:90,
-          }}
-        >
-          {nextYear ?? "—"} →
-        </button>
+      {/* ── STACKED YEARS (open / collapse each on the page) ── */}
+      <div style={{ display:"flex", gap:8, marginBottom:14 }}>
+        {([["EXPAND ALL", () => setOpenYears(new Set(YEARS_PRESENT))],
+           ["COLLAPSE ALL", () => setOpenYears(new Set())]] as [string, () => void][]).map(([lbl, fn]) => (
+          <button key={lbl} onClick={fn} style={{
+            fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.8rem", letterSpacing:"1.5px",
+            padding:"6px 14px", borderRadius:6, background:"var(--surface)", color:"var(--muted2)",
+            border:"1.5px solid var(--border)", cursor:"pointer",
+          }}>{lbl}</button>
+        ))}
       </div>
 
-      {/* ── 0-BOOK MONTH ALERT ── */}
-      {zeroMonths.length > 0 && (
-        <div style={{
-          background:"#fff8f0", border:"1.5px solid #f97316", borderRadius:8,
-          padding:"10px 16px", marginBottom:16,
-          display:"flex", flexWrap:"wrap", alignItems:"center", gap:8,
-        }}>
-          <span style={{
-            fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
-            letterSpacing:"1.5px", color:"#c2410c", flexShrink:0,
-          }}>
-            ⚠ MONTHS WITH 0 BOOKS:
-          </span>
-          {zeroMonths.map(({ lbl }) => (
-            <span key={lbl} style={{
-              fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
-              background:"#fff", border:"1px solid #f97316",
-              borderRadius:3, padding:"2px 8px", color:"#c2410c",
-            }}>{lbl}</span>
-          ))}
-        </div>
-      )}
-
-      {/* ── CURRENT YEAR GRID ── */}
-      {(() => {
-        const yearComics = BY_YEAR.get(selectedYear) || [];
-        const filtered   = yearStats.get(selectedYear) ?? 0;
-
-        if (!BY_YEAR.has(selectedYear)) {
-          return (
-            <div style={{ textAlign:"center", padding:"60px 20px", color:"var(--muted)",
-              fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", fontStyle:"italic" }}>
-              No comics from {selectedYear} in this collection.
-            </div>
-          );
-        }
-
-        if (filtered === 0) {
-          return (
-            <div style={{ textAlign:"center", padding:"40px 20px", color:"var(--muted)",
-              fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", fontStyle:"italic" }}>
-              No comics from {selectedYear} match the current filter.
-            </div>
-          );
-        }
-
+      {[...YEARS_PRESENT].reverse().map(year => {
+        const open  = openYears.has(year);
+        const count = yearStats.get(year) ?? 0;
+        const yearComics = BY_YEAR.get(year) || [];
         return (
-          <div style={{ marginBottom: 36 }}>
-            <div style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fill, minmax(185px, 1fr))",
-              gap: 12,
+          <div key={year} style={{ marginBottom: 10, border:"1.5px solid var(--border)", borderRadius:10, overflow:"hidden" }}>
+            <button onClick={() => toggleYear(year)} style={{
+              width:"100%", display:"flex", alignItems:"center", gap:14, cursor:"pointer",
+              padding:"12px 18px", background:"var(--surface)", border:"none", textAlign:"left",
             }}>
-              {MONTH_LABELS.map((_, mi) => {
-                if (!isMonthVisible(selectedYear, mi)) return null;
-                const rawPool = monthPool(yearComics, mi);
-                const pool    = rawPool.filter(filterComic);
-                return (
-                  <MonthCard
-                    key={mi}
-                    year={selectedYear} mi={mi}
-                    pool={pool}
-                    spinIdx={spinIdx}
-                    spinning={spinning}
-                    animating={animating}
-                    onSpin={spin}
-                  />
-                );
-              })}
-            </div>
+              <span style={{
+                fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+                fontSize:"1.4rem", letterSpacing:"4px", color:"var(--red)", minWidth:80,
+              }}>{year}</span>
+              <span style={{
+                fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+                fontSize:"0.8rem", letterSpacing:"1.5px", color:"var(--muted)",
+              }}>{count} BOOK{count !== 1 ? "S" : ""}</span>
+              <span style={{ marginLeft:"auto", color:"var(--muted)", fontSize:"1.1rem" }}>{open ? "▾" : "▸"}</span>
+            </button>
+            {open && (
+              <div style={{ padding:"16px" }}>
+                {count === 0 ? (
+                  <div style={{ textAlign:"center", padding:"20px", color:"var(--muted)", fontStyle:"italic",
+                    fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem" }}>
+                    No comics from {year} match the current filter.
+                  </div>
+                ) : (
+                  <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(185px, 1fr))", gap:12 }}>
+                    {MONTH_LABELS.map((_, mi) => {
+                      if (!isMonthVisible(year, mi)) return null;
+                      const pool = monthPool(yearComics, mi).filter(filterComic);
+                      return (
+                        <MonthCard key={mi} year={year} mi={mi} pool={pool}
+                          spinIdx={spinIdx} spinning={spinning} animating={animating} onSpin={spin} />
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         );
-      })()}
+      })}
 
-      {/* Bottom navigation — go to prev/next year */}
-      <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginTop:32, flexWrap:"wrap", gap:10 }}>
-        <button
-          onClick={() => { if (prevYear) { setSelectedYear(prevYear); window.scrollTo({ top: 0, behavior: "smooth" }); }}}
-          disabled={!prevYear}
-          style={{
-            fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px",
-            color: prevYear ? "var(--red)" : "var(--muted)", background:"none",
-            border: prevYear ? "1.5px solid var(--red)" : "1.5px solid var(--border)",
-            borderRadius:6, padding:"9px 22px", cursor: prevYear ? "pointer" : "default", opacity: prevYear ? 1 : 0.35,
-          }}
-        >
-          ← {prevYear ?? "—"}
-        </button>
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          style={{
-            fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px",
-            color:"var(--muted)", background:"none", border:"1.5px solid var(--border)",
-            borderRadius:6, padding:"9px 22px", cursor:"pointer",
-          }}
-        >
-          ↑ TOP
-        </button>
-        <button
-          onClick={() => { if (nextYear) { setSelectedYear(nextYear); window.scrollTo({ top: 0, behavior: "smooth" }); }}}
-          disabled={!nextYear}
-          style={{
-            fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px",
-            color: nextYear ? "var(--red)" : "var(--muted)", background:"none",
-            border: nextYear ? "1.5px solid var(--red)" : "1.5px solid var(--border)",
-            borderRadius:6, padding:"9px 22px", cursor: nextYear ? "pointer" : "default", opacity: nextYear ? 1 : 0.35,
-          }}
-        >
-          {nextYear ?? "—"} →
-        </button>
-      </div>
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        style={{
+          display:"block", margin:"24px auto 0",
+          fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px",
+          color:"var(--muted)", background:"none", border:"1.5px solid var(--border)",
+          borderRadius:6, padding:"9px 22px", cursor:"pointer",
+        }}
+      >
+        ↑ TOP
+      </button>
     </div>
   );
 }
