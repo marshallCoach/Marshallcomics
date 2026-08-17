@@ -23,6 +23,7 @@ Optional: compare row count against a previous file (same resolution rules):
 
 import sys
 import os
+import re
 import glob as _glob
 import pandas as pd
 import argparse
@@ -275,10 +276,12 @@ def check_writer_fill_rate(df):
 def check_box_number_range(df):
     section("CHECK 9 — Box # values are positive integers (or known status strings)")
     numeric = pd.to_numeric(df["Box #"], errors="coerce")
-    # Allowlist members, plus deliberate "DUPLICATE — see row N" dedup pointers
-    # (human-authored markers flagging a pending duplicate, not corrupt data).
+    # Allowlist members, "DUPLICATE — see row N" dedup pointers, and the CC
+    # cool-covers display boxes (CC1..CC6) — real labelled boxes, not integers.
     is_allowed_status = df["Box #"].apply(
-        lambda v: str(v).strip() in BOX_STATUS_ALLOWLIST or str(v).strip().startswith("DUPLICATE")
+        lambda v: str(v).strip() in BOX_STATUS_ALLOWLIST
+        or str(v).strip().startswith("DUPLICATE")
+        or bool(re.fullmatch(r"CC\d+", str(v).strip()))
     )
     bad = df[
         ~is_allowed_status &
