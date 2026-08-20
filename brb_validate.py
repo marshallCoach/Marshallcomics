@@ -166,7 +166,10 @@ def check_box_capacity(df):
 def check_duplicate_rows(df):
     # Key matches Mac validator Rule 2: Title + Issue # + Year + Box #  (no Volume)
     section("CHECK 6 — Same-box duplicates (Title + Issue # + Year + Box #)")
-    physical = df[~df["Box #"].apply(lambda v: str(v).strip() in BOX_STATUS_ALLOWLIST)].copy()
+    _vd = df.get("⚠ Verify Duplicate")
+    _flagged = ~_vd.astype(str).str.strip().isin(["", "nan", "None"]) if _vd is not None else pd.Series(False, index=df.index)
+    # Reviewed & accepted multi-copies (flagged ⚠ Verify Duplicate) are not errors.
+    physical = df[~df["Box #"].apply(lambda v: str(v).strip() in BOX_STATUS_ALLOWLIST) & ~_flagged].copy()
     excluded = len(df) - len(physical)
     if excluded:
         info(f"{excluded} status-box rows (UNKNOWN/CGC) excluded from duplicate check")
@@ -333,7 +336,9 @@ def check_exact_clones(df):
     # distinct copies differing by condition/signature). Adds Condition and
     # Signed? to the key so genuine multi-copy ownership doesn't get flagged.
     section("CHECK 11 — Exact clones (Title+Issue#+Year+Condition+Signed?+Box#, normalized)")
-    physical = df[~df["Box #"].apply(lambda v: str(v).strip() in BOX_STATUS_ALLOWLIST)].copy()
+    _vd = df.get("⚠ Verify Duplicate")
+    _flagged = ~_vd.astype(str).str.strip().isin(["", "nan", "None"]) if _vd is not None else pd.Series(False, index=df.index)
+    physical = df[~df["Box #"].apply(lambda v: str(v).strip() in BOX_STATUS_ALLOWLIST) & ~_flagged].copy()
 
     t    = _norm_str(physical["Title"])
     iss  = physical["Issue #"].astype(str).str.strip()
