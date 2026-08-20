@@ -1,13 +1,13 @@
-// AUTO-GENERATED quest data — source: comics_inventory_2008_1010.xlsx (11123 rows) · generated 2026-08-20
+// AUTO-GENERATED quest data — source: comics_inventory_2008_1032.xlsx (11125 rows) · generated 2026-08-20
 // Regenerate with: node gen_quest_data.mjs
 window.QUEST_DATA = {
- "source": "comics_inventory_2008_1010.xlsx",
+ "source": "comics_inventory_2008_1032.xlsx",
  "generated": "2026-08-20",
- "totalRows": 11123,
+ "totalRows": 11125,
  "dupe": {
-  "groups": 94,
-  "rows": 198,
-  "excess": 104
+  "groups": 96,
+  "rows": 202,
+  "excess": 106
  },
  "clone": {
   "groups": 82,
@@ -44,13 +44,6 @@ window.QUEST_DATA = {
    "loc": "Bedroom (Upstairs) — BDR-3"
   },
   {
-   "box": 72,
-   "rows": 107,
-   "cap": 100,
-   "over": 7,
-   "loc": "Bedroom (Upstairs) — BDR-1"
-  },
-  {
    "box": 23,
    "rows": 158,
    "cap": 155,
@@ -80,7 +73,7 @@ window.QUEST_DATA = {
    "code": "BDR-3",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 60,
+   "rows": 30,
    "vcap": 240,
    "dupes": 0,
    "clones": 0
@@ -128,7 +121,7 @@ window.QUEST_DATA = {
    "code": "BFB-3",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 119,
+   "rows": 117,
    "vcap": 240,
    "dupes": 4,
    "clones": 0
@@ -248,7 +241,7 @@ window.QUEST_DATA = {
    "code": "BFC-1",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 166,
+   "rows": 165,
    "vcap": 240,
    "dupes": 2,
    "clones": 2
@@ -296,7 +289,7 @@ window.QUEST_DATA = {
    "code": "BFA-1",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 165,
+   "rows": 164,
    "vcap": 240,
    "dupes": 12,
    "clones": 4
@@ -404,7 +397,7 @@ window.QUEST_DATA = {
    "code": "BDR-3",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 95,
+   "rows": 94,
    "vcap": 240,
    "dupes": 0,
    "clones": 0
@@ -440,7 +433,7 @@ window.QUEST_DATA = {
    "code": "BFC-3",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 98,
+   "rows": 96,
    "vcap": 240,
    "dupes": 15,
    "clones": 13
@@ -572,7 +565,7 @@ window.QUEST_DATA = {
    "code": "BLR-2",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 84,
+   "rows": 83,
    "vcap": 240,
    "dupes": 0,
    "clones": 0
@@ -668,7 +661,7 @@ window.QUEST_DATA = {
    "code": "BDR-1",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 139,
+   "rows": 138,
    "vcap": 240,
    "dupes": 0,
    "clones": 0
@@ -752,7 +745,7 @@ window.QUEST_DATA = {
    "code": "BFA-4",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 119,
+   "rows": 118,
    "vcap": 240,
    "dupes": 0,
    "clones": 0
@@ -800,7 +793,7 @@ window.QUEST_DATA = {
    "code": "BDR-1",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 107,
+   "rows": 66,
    "vcap": 100,
    "dupes": 4,
    "clones": 4
@@ -984,6 +977,30 @@ window.QUEST_DATA = {
    "vcap": 240,
    "dupes": 6,
    "clones": 6
+  },
+  {
+   "box": 106,
+   "loc": "Bedroom (Upstairs) — Top Shelf — BDR-TOP",
+   "zone": "Bedroom (Upstairs) — Top Shelf",
+   "code": "BDR-TOP",
+   "status": "Signed",
+   "labeledAs": "",
+   "rows": 85,
+   "vcap": 240,
+   "dupes": 4,
+   "clones": 0
+  },
+  {
+   "box": 107,
+   "loc": "Bedroom (Upstairs) — Top Shelf — BDR-TOP",
+   "zone": "Bedroom (Upstairs) — Top Shelf",
+   "code": "BDR-TOP",
+   "status": "Slabbed",
+   "labeledAs": "",
+   "rows": 12,
+   "vcap": 240,
+   "dupes": 0,
+   "clones": 0
   }
  ],
  "guide": [
@@ -1017,7 +1034,7 @@ window.QUEST_DATA = {
       },
       {
        "id": "0.5",
-       "text": "Confirm the chat reads back 11,123 rows. If not — STOP, wrong file."
+       "text": "Confirm the chat reads back 11,125 rows. If not — STOP, wrong file."
       }
      ]
     }
