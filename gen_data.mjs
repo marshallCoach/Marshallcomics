@@ -553,6 +553,24 @@ const catalogExcludeKeys = new Set(
 console.log(`  Excluding ${catalogExcludeKeys.size} catalog-sheet keys from CC Boxes`);
 const catCCBoxes = getCCBoxComics(catalogExcludeKeys);
 
+// Derived Cover-Art catalogs straight from the main inventory (Roberto's request):
+// every Signed book, every Key book, and every book in the CC1-CC6 cool-covers
+// display boxes. Mapped into the CatalogComic shape the Cover Art page renders.
+function invRowToCatalog(row) {
+  const raw = (i) => String(row[i] ?? '').trim();
+  return {
+    Title: raw(C.title), Issue: raw(C.issue), Publisher: raw(C.pub), Year: raw(C.year),
+    Volume: raw(C.volume), Cover_Artist: raw(C.coverA), Key: raw(C.key), Key_Reason: raw(C.keyWhy),
+    Signed: raw(C.signed), Signed_By: raw(C.signedBy), Era: raw(C.era), Writer: raw(C.writer),
+    Value_NM: raw(C.nm), Start_Bid: raw(C.bid), Box: raw(C.box),
+    Notes: '', SortPile: '', CoverNotes: '', Flag: '',
+  };
+}
+const invRows = allRows.slice(1);
+const catSigned = invRows.filter(r => String(r[C.signed] ?? '').trim().toUpperCase() === 'YES').map(invRowToCatalog);
+const catKeys   = invRows.filter(r => String(r[C.key]    ?? '').trim().toUpperCase() === 'YES').map(invRowToCatalog);
+const catCC     = invRows.filter(r => /^CC\d+$/.test(String(r[C.box] ?? '').trim())).map(invRowToCatalog);
+
 const srcName = xlsxFiles[0].f;
 const generatedAt = new Date().toISOString().slice(0, 10);
 const ts = `// AUTO-GENERATED — DO NOT EDIT MANUALLY
@@ -597,6 +615,9 @@ export const DATA3: {
     box2:    CatalogComic[];
     box3:    CatalogComic[];
     ccBoxes: CatalogComic[];
+    signed:  CatalogComic[];
+    keys:    CatalogComic[];
+    cc:      CatalogComic[];
   };
 } = {
   generatedAt: "${generatedAt}",
@@ -619,6 +640,15 @@ ${catBox3.map(catComicTS).join(',\n')}
     ccBoxes: [
 ${catCCBoxes.map(catComicTS).join(',\n')}
     ],
+    signed: [
+${catSigned.map(catComicTS).join(',\n')}
+    ],
+    keys: [
+${catKeys.map(catComicTS).join(',\n')}
+    ],
+    cc: [
+${catCC.map(catComicTS).join(',\n')}
+    ],
   },
 };
 `;
@@ -626,6 +656,7 @@ ${catCCBoxes.map(catComicTS).join(',\n')}
 writeFileSync('artifacts/comics-inventory/src/data/data3.ts', ts);
 console.log(`Written: ${comics.length} comics, ${boxes.length} boxes`);
 console.log(`Catalogs: pulled=${catPulled.length}, box2=${catBox2.length}, box3=${catBox3.length}, ccBoxes=${catCCBoxes.length}`);
+console.log(`Cover-Art catalogs: signed=${catSigned.length}, keys=${catKeys.length}, cc(CC1-6)=${catCC.length}`);
 
 // Copy covers.json to public folder so the static build can serve it
 if (existsSync('covers.json')) {

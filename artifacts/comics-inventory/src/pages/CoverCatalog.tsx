@@ -8,10 +8,13 @@ export const FLAG_KEY  = "brbFlaggedCovers_v1";
 // ── Tab definitions ──────────────────────────────────────────────────────────
 
 const TABS = [
+  { key: "cc",      label: "CC Boxes (CC1–CC6)",      short: "CC Boxes"     },
+  { key: "signed",  label: "Signed",                  short: "Signed"       },
+  { key: "keys",    label: "Key Issues",              short: "Keys"         },
   { key: "pulled",  label: "Pulled Covers Catalog",  short: "Pulled Covers" },
   { key: "box2",    label: "Cover Box 2 Catalog",     short: "Cover Box 2"  },
   { key: "box3",    label: "Cover Box 3 Catalog",     short: "Cover Box 3"  },
-  { key: "ccBoxes", label: "CC Boxes — Cool Covers",  short: "CC Boxes"     },
+  { key: "ccBoxes", label: "CC (legacy 82+)",         short: "CC 82+"       },
 ] as const;
 
 type TabKey = typeof TABS[number]["key"];
@@ -409,7 +412,7 @@ function FlaggedModal({ flags, onClose, onClear }: { flags: FlaggedCover[]; onCl
 const PUB_PILLS = ["All", "Marvel", "DC", "Image", "IDW", "Dark Horse", "Other"];
 
 export default function CoverCatalog() {
-  const [activeTab,    setActiveTab]    = useState<TabKey>("pulled");
+  const [activeTab,    setActiveTab]    = useState<TabKey>("cc");
   const [pub,          setPub]          = useState("All");
   const [artistQ,      setArtistQ]      = useState("");
   const [titleQ,       setTitleQ]       = useState("");
