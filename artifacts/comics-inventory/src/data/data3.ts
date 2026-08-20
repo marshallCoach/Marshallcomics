@@ -211918,6 +211918,18 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Location: `Bedroom (Upstairs) — BDR-1`, Code: `BDR-1`, labeledAs: ``, Notes: ``, DateAdded: `2026-06-29`,
   },
   {
+    Num: `BOX 106`, Comics: 85, Keys: 74,
+    Signed: 85, YearRange: `1968-2025`,
+    Label: `Signed`, FirstBook: `Tales of Suspense 98`, LastBook: `Miles Morales: Spider-Man 1`,
+    Location: `Bedroom (Upstairs) — Top Shelf — BDR-TOP`, Code: `BDR-TOP`, labeledAs: ``, Notes: ``, DateAdded: `2026-06-29`,
+  },
+  {
+    Num: `BOX 107`, Comics: 12, Keys: 12,
+    Signed: 10, YearRange: `1969-2021`,
+    Label: `Slabbed`, FirstBook: `Transformers 1`, LastBook: `Thor 169`,
+    Location: `Bedroom (Upstairs) — Top Shelf — BDR-TOP`, Code: `BDR-TOP`, labeledAs: ``, Notes: ``, DateAdded: ``,
+  },
+  {
     Num: `BOX AT CGC — Roy Thomas SS`, Comics: 1, Keys: 1,
     Signed: 0, YearRange: `1963-1963`,
     Label: ``, FirstBook: `Avengers Annual 2`, LastBook: `Avengers Annual 2`,
