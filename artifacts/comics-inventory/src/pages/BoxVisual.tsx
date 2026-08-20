@@ -140,8 +140,9 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
 
       {/* Box grid — sectioned by publisher */}
       {(() => {
+        // Only pure-numeric boxes here — CC1..CC6 and status boxes render as tiles below.
         const sorted_ = [...boxes]
-          .filter(b => Number(b.Num.replace(/\D/g,"")) > 0)
+          .filter(b => /^\d+$/.test(b.Num.replace(/^BOX\s*/i,"").trim()))
           .sort((a,b) => Number(a.Num.replace(/\D/g,"")) - Number(b.Num.replace(/\D/g,"")));
 
         function getGroup(num: string): string {
@@ -239,91 +240,56 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
         );
       })()}
 
-      {/* Ignored / status-box comics — AT CGC, UNKNOWN, etc. */}
+      {/* Display & status boxes — CC1–CC6, UNKNOWN, AT CGC — as clickable box tiles */}
       {(() => {
-        const STATUS_LABELS: Record<string, { label: string; color: string; bg: string; icon: string }> = {
-          "AT CGC":                           { label: "AT CGC",                            color: "#7c3aed", bg: "#f5f3ff", icon: "🏛" },
-          "AT MAGIC PRESSING → CGC":          { label: "AT MAGIC PRESSING → CGC",           color: "#7c3aed", bg: "#f5f3ff", icon: "🔧" },
-          "AT CGC — Roy Thomas SS":           { label: "AT CGC — Roy Thomas SS",            color: "#7c3aed", bg: "#f5f3ff", icon: "✍️" },
-          "UNKNOWN — needs physical reassignment": { label: "UNKNOWN", color: "#d97706", bg: "#fffbf0", icon: "❓" },
-        };
-
-        const statusComics = comics.filter(c => {
-          const b = String(c.Box || "").trim();
-          return isNaN(Number(b)) && b !== "";
-        });
-
-        if (statusComics.length === 0) return null;
-
-        const byStatus: Record<string, typeof comics> = {};
-        for (const c of statusComics) {
-          const key = String(c.Box || "").trim();
-          if (!byStatus[key]) byStatus[key] = [];
-          byStatus[key].push(c);
-        }
-
+        const isNumeric = (num: string) => /^\d+$/.test(num.replace(/^BOX\s*/i, "").trim());
+        const special = boxes.filter(b => !isNumeric(b.Num) && Number(b.Comics) > 0);
+        if (special.length === 0) return null;
+        const isCC = (num: string) => /^CC\d+$/i.test(num.trim());
+        const GROUPS = [
+          { key: "cc",     label: "CC — COOL COVERS",    subtitle: "Display boxes CC1–CC6",        color: "#0891b2",
+            list: special.filter(b => isCC(b.Num)).sort((a,b) => a.Num.localeCompare(b.Num)) },
+          { key: "status", label: "UNASSIGNED / STATUS", subtitle: "Unknown box, at CGC, pressing", color: "#d97706",
+            list: special.filter(b => !isCC(b.Num)) },
+        ];
         return (
-          <div style={{ marginTop: 32, marginBottom: 24 }}>
-            <div style={{
-              display: "flex", alignItems: "baseline", gap: 10, marginBottom: 12,
-              borderBottom: "2px solid #e0e0e060", paddingBottom: 6,
-            }}>
-              <span style={{
-                fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
-                letterSpacing: "3px", color: "var(--muted)",
-              }}>NOT IN COLLECTION</span>
-              <span style={{ fontSize: "0.875rem", color: "var(--muted2)", fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>
-                Comics currently at CGC, pressing, or unassigned
-              </span>
-              <span style={{
-                marginLeft: "auto", fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-                fontSize: "0.875rem", letterSpacing: "1.5px", color: "var(--muted)",
-              }}>
-                {statusComics.length} books
-              </span>
-            </div>
-            {Object.entries(byStatus).map(([status, group]) => {
-              const meta = STATUS_LABELS[status] ?? { label: status, color: "#888", bg: "#f8f8f8", icon: "📦" };
-              const keyCount = group.filter(c => (c.Key || "").toUpperCase() === "YES").length;
-              return (
-                <div key={status} style={{ marginBottom: 16 }}>
-                  <div style={{
-                    display: "flex", alignItems: "center", gap: 8, marginBottom: 8,
-                    padding: "8px 12px", borderRadius: 8,
-                    background: meta.bg, border: `1.5px solid ${meta.color}33`,
-                  }}>
-                    <span style={{ fontSize: "0.875rem" }}>{meta.icon}</span>
-                    <span style={{
-                      fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
-                      letterSpacing: "2px", color: meta.color,
-                    }}>{meta.label}</span>
-                    <span style={{ fontSize: "0.875rem", color: "var(--muted2)", marginLeft: 4 }}>
-                      {group.length} book{group.length !== 1 ? "s" : ""}
-                      {keyCount > 0 && ` · ${keyCount} Keys`}
-                    </span>
-                  </div>
-                  <div style={{ display: "flex", flexWrap: "wrap", gap: 8, paddingLeft: 4 }}>
-                    {group.map((c, i) => (
-                      <div key={i} style={{
-                        padding: "4px 10px", borderRadius: 6,
-                        background: "var(--card)", border: "1px solid var(--border)",
-                        fontSize: "0.875rem", color: "var(--text)",
-                        display: "flex", gap: 6, alignItems: "center",
-                      }}>
-                        <span style={{ fontWeight: 600 }}>{c.Title}</span>
-                        <span style={{ color: "var(--muted)" }}>#{c.Issue}</span>
-                        {(c.Key || "").toUpperCase() === "YES" && (
-                          <span style={{
-                            fontSize: "0.875rem", background: meta.color, color: "#fff",
-                            borderRadius: 3, padding: "1px 5px", fontWeight: 700,
-                          }}>KEY</span>
-                        )}
-                      </div>
-                    ))}
-                  </div>
+          <div style={{ marginTop: 32, marginBottom: 24, display: "flex", flexDirection: "column", gap: 18 }}>
+            {GROUPS.map(gr => gr.list.length === 0 ? null : (
+              <div key={gr.key}>
+                <div style={{ display: "flex", alignItems: "baseline", gap: 10, marginBottom: 8, borderBottom: `2px solid ${gr.color}22`, paddingBottom: 6 }}>
+                  <span style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "3px", color: gr.color }}>{gr.label}</span>
+                  <span style={{ fontSize: "0.875rem", color: "var(--muted2)", fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>{gr.subtitle}</span>
+                  <span style={{ marginLeft: "auto", fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1.5px", color: "var(--muted)" }}>
+                    {gr.list.reduce((s, b) => s + Number(b.Comics), 0).toLocaleString()} books · {gr.list.reduce((s, b) => s + Number(b.Keys), 0)} keys
+                  </span>
                 </div>
-              );
-            })}
+                <div className="boxes-grid">
+                  {gr.list.map(b => {
+                    const isSelected = selectedBox === b.Num;
+                    return (
+                      <div
+                        key={b.Num}
+                        onClick={() => selectBox(b.Num)}
+                        onMouseEnter={e => { const r = (e.currentTarget as HTMLElement).getBoundingClientRect(); setPanelPos({ x: r.right + 10, y: r.top }); setHoveredBox(b.Num); }}
+                        onMouseLeave={() => setHoveredBox(null)}
+                        className="box-tile"
+                        title={b.Num}
+                        style={isSelected ? { borderColor: gr.color, background: `${gr.color}0e`, boxShadow: `0 4px 14px ${gr.color}38`, transform: "translateY(-2px)" } : {}}
+                      >
+                        <div className="box-tile-count">{b.Comics}</div>
+                        <div className="box-tile-num" style={isCC(b.Num) ? {} : { fontSize: "0.58em", lineHeight: 1.2 }}>
+                          {isCC(b.Num) ? b.Num.toUpperCase()
+                            : b.Num.startsWith("UNKNOWN") ? "UNKNOWN"
+                            : b.Num.replace(/^AT /, "").replace(" — ", " ")}
+                        </div>
+                        {Number(b.Keys)   > 0 && <div className="box-tile-keys">{b.Keys} Keys</div>}
+                        {Number(b.Signed) > 0 && <div className="box-tile-sgn">{b.Signed} S</div>}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
           </div>
         );
       })()}
