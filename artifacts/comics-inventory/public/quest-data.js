@@ -1,18 +1,18 @@
-// AUTO-GENERATED quest data — source: comics_inventory_2008_1032.xlsx (11125 rows) · generated 2026-08-20
+// AUTO-GENERATED quest data — source: comics_inventory_2008_1032.xlsx (11121 rows) · generated 2026-08-20
 // Regenerate with: node gen_quest_data.mjs
 window.QUEST_DATA = {
  "source": "comics_inventory_2008_1032.xlsx",
  "generated": "2026-08-20",
- "totalRows": 11125,
+ "totalRows": 11121,
  "dupe": {
-  "groups": 96,
-  "rows": 202,
-  "excess": 106
+  "groups": 95,
+  "rows": 200,
+  "excess": 105
  },
  "clone": {
-  "groups": 82,
-  "rows": 171,
-  "excess": 89
+  "groups": 81,
+  "rows": 169,
+  "excess": 88
  },
  "overCap": [
   {
@@ -301,7 +301,7 @@ window.QUEST_DATA = {
    "code": "BFA-2",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 173,
+   "rows": 172,
    "vcap": 240,
    "dupes": 0,
    "clones": 0
@@ -411,8 +411,8 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 112,
    "vcap": 240,
-   "dupes": 4,
-   "clones": 2
+   "dupes": 2,
+   "clones": 0
   },
   {
    "box": 31,
@@ -793,7 +793,7 @@ window.QUEST_DATA = {
    "code": "BDR-1",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 66,
+   "rows": 64,
    "vcap": 100,
    "dupes": 4,
    "clones": 4
@@ -1034,7 +1034,7 @@ window.QUEST_DATA = {
       },
       {
        "id": "0.5",
-       "text": "Confirm the chat reads back 11,125 rows. If not — STOP, wrong file."
+       "text": "Confirm the chat reads back 11,121 rows. If not — STOP, wrong file."
       }
      ]
     }
@@ -1045,7 +1045,7 @@ window.QUEST_DATA = {
    "title": "The Clones",
    "est": "identical twin rows — safest wins first",
    "accent": "green",
-   "blurb": "Rows that are exact copies of another row: same book, same box, logged twice. Live count: 82 clone groups / 89 excess rows. Highest confidence, lowest effort, biggest visible progress.",
+   "blurb": "Rows that are exact copies of another row: same book, same box, logged twice. Live count: 81 clone groups / 88 excess rows. Highest confidence, lowest effort, biggest visible progress.",
    "sittings": [
     {
      "id": "A1",
