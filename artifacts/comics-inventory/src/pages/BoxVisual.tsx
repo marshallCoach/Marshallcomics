@@ -226,6 +226,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                         >
                           <div className="box-tile-count">{b.Comics}</div>
                           <div className="box-tile-num">{b.Num.replace("BOX ", "Box ")}</div>
+                          {b.Label && <div className="box-tile-num" style={{ fontSize:"0.62em", opacity:0.85, letterSpacing:"1px", color:sec.color }}>{b.Label}</div>}
                           {b.Code && <div className="box-tile-num" style={{ fontSize:"0.7em", opacity:0.7, letterSpacing:"0.5px" }}>{b.Code}</div>}
                           {Number(b.Keys)   > 0 && <div className="box-tile-keys">{b.Keys} Keys</div>}
                           {Number(b.Signed) > 0 && <div className="box-tile-sgn">{b.Signed} S</div>}

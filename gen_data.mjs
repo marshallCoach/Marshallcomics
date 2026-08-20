@@ -258,8 +258,8 @@ const realHighBoxes = new Set();  // confirmed-real box numbers >= 82
       const code = String(blRows[r][cCode] ?? '').trim();
       const zoneFull = String(blRows[r][cZoneFull] ?? '').trim();
       const status = String(blRows[r][cStatus] ?? '').trim().toLowerCase();
-      boxLocData[bn] = { code, zoneFull };
-      if (parseInt(bn, 10) >= 82 && status.includes('confirmed')) realHighBoxes.add(bn);
+      boxLocData[bn] = { code, zoneFull, status };
+      if (parseInt(bn, 10) >= 82 && (status.includes('confirmed') || status.includes('signed') || status.includes('slab'))) realHighBoxes.add(bn);
     }
     console.log(`Read ${Object.keys(boxLocData).length} box locations from Box Locations tab (${realHighBoxes.size} confirmed-real >=82)`);
   }
@@ -269,6 +269,8 @@ const locStr = (bn) => {
   return d ? `${d.zoneFull}${d.code ? ' — ' + d.code : ''}` : '';
 };
 const codeOf = (bn) => (boxLocData[bn]?.code || '');
+// Box subtitle from the Box Locations "Status" (e.g. "Signed", "Slabbed").
+const subtitleOf = (bn) => { const st = boxLocData[bn]?.status || ''; return st && !st.includes('confirmed') ? st.charAt(0).toUpperCase() + st.slice(1) : ''; };
 // Physical-label aliases: data Box 98 lives in the box physically labeled "49".
 const BOX_LABEL_ALIAS = { '98': '49' };
 const labeledAsOf = (bn) => (BOX_LABEL_ALIAS[bn] || '');
@@ -329,7 +331,7 @@ for (const boxNum of derivedBoxNums) {
   boxes.push(`  {
     Num: \`${num}\`, Comics: ${rows.length}, Keys: ${keyCount},
     Signed: ${signCount}, YearRange: \`${yearRange}\`,
-    Label: \`\`, FirstBook: \`${firstBook.replace(/`/g,'\\`')}\`, LastBook: \`${lastBook.replace(/`/g,'\\`')}\`,
+    Label: \`${subtitleOf(boxNum)}\`, FirstBook: \`${firstBook.replace(/`/g,'\\`')}\`, LastBook: \`${lastBook.replace(/`/g,'\\`')}\`,
     Location: \`${locStr(boxNum)}\`, Code: \`${codeOf(boxNum)}\`, labeledAs: \`${labeledAsOf(boxNum)}\`, Notes: \`\`, DateAdded: \`${dateAdded}\`,
   }`);
   console.log(`  Derived BOX ${padded}: ${rows.length} comics, ${keyCount} keys`);
