@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_2308_1304.xlsx  |  Generated: 2026-08-23
+// Source: comics_inventory_2308_1308.xlsx  |  Generated: 2026-08-23
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -12498,7 +12498,7 @@ Claremont-adjacent (Byrne era). Confirmed all 3 days.`,
     Title: `Avengers`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2023`, Arc: `Avengers McKay — latest run`, Key: `YES`,
-    Key_Reason: `Jonathan Hickman Marvel NOW Avengers launch — massive expanded roster — seeds of Secret Wars planted here`, First_App: ``,
+    Key_Reason: `Avengers (2023) #1 — Jed MacKay relaunch`, First_App: ``,
     Writer: `Jed MacKay`, Artist: `C.F. Villa`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -45607,7 +45607,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Title: `Captain Marvel`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `1968`, Arc: `Pulled cover display copy`, Key: `YES`,
-    Key_Reason: `Captain Marvel #1 Alyssa Wong — Legacy #185; found in BP box`, First_App: ``,
+    Key_Reason: `1st solo title for Captain Marvel (Mar-Vell) — Silver Age key`, First_App: ``,
     Writer: `Peter David`, Artist: `ChrisCross`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `PULLED COVER — display copy — not a true duplicate`,
@@ -95192,7 +95192,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Title: `Iron Man`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2020`, Arc: `IM Cantwell wraparound variant`, Key: `YES`,
-    Key_Reason: `Iron Man Vol 7 #1 Christopher Cantwell — Legacy 671`, First_App: ``,
+    Key_Reason: `Iron Man (2020) #1 — Christopher Cantwell run`, First_App: ``,
     Writer: `Christopher Cantwell`, Artist: `CAFU`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: ``,
@@ -144072,7 +144072,7 @@ Hickman SIGNED Secret Wars #1. CGC SS witness on-site. Highest-value Hickman boo
     Title: `Shazam!`, Issue: `1`, Publisher: `DC`,
     Disambig: ``,
     Year: `2023`, Arc: `Mark Waid / Dan Mora — ⚠️ potential duplicate of Box 4 entry`, Key: `YES`,
-    Key_Reason: `Shazam #1 (2019) — Geoff Johns/Dale Eaglesham; $4.99 relaunch`, First_App: ``,
+    Key_Reason: `Shazam! (2023) #1 — Mark Waid relaunch (verify)`, First_App: ``,
     Writer: `Mark Waid`, Artist: `Dan Mora`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `Poor/Fair`,
@@ -200566,7 +200566,7 @@ Chris Claremont confirmed all 3 days. Wolverine #8 (1982) is your priority signi
     Title: `X-Factor`, Issue: `6`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `1986`, Arc: ``, Key: `YES`,
-    Key_Reason: `X-Factor #6`, First_App: ``,
+    Key_Reason: `X-Factor #6 (1986) — flagged key, verify specific significance (verify)`, First_App: ``,
     Writer: `Louise Simonson`, Artist: `Jackson Guice`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `NM`,
@@ -204842,7 +204842,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Title: `X-Men`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `1991`, Arc: ``, Key: `YES`,
-    Key_Reason: `X-Men: Hellfire Gala #1 — annual Krakoa Gala issue — key Krakoa moment`, First_App: ``,
+    Key_Reason: `X-Men #1 (1991) — Jim Lee; best-selling single comic of all time (multiple covers)`, First_App: ``,
     Writer: ``, Artist: ``,
     Signed: `YES`, Signed_By: `Scott Williams, Chris Claremont`,
     Personal: ``, Condition: `NM`,
@@ -231071,7 +231071,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
   {
     Title: `X-Men`, Issue: `1`, Publisher: `Marvel`,
     Year: `1991`, Volume: `1`, Cover_Artist: ``,
-    Key: `YES`, Key_Reason: `X-Men: Hellfire Gala #1 — annual Krakoa Gala issue — key Krakoa moment`,
+    Key: `YES`, Key_Reason: `X-Men #1 (1991) — Jim Lee; best-selling single comic of all time (multiple covers)`,
     Signed: `YES`, Signed_By: `Scott Williams, Chris Claremont`,
     Era: `Copper Age`, Writer: ``,
     Value_NM: ``, Start_Bid: ``, Box: `106`,
@@ -232163,7 +232163,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
   {
     Title: `X-Men`, Issue: `1`, Publisher: `Marvel`,
     Year: `1991`, Volume: `1`, Cover_Artist: ``,
-    Key: `YES`, Key_Reason: `X-Men: Hellfire Gala #1 — annual Krakoa Gala issue — key Krakoa moment`,
+    Key: `YES`, Key_Reason: `X-Men #1 (1991) — Jim Lee; best-selling single comic of all time (multiple covers)`,
     Signed: `YES`, Signed_By: `Scott Williams, Chris Claremont`,
     Era: `Copper Age`, Writer: ``,
     Value_NM: ``, Start_Bid: ``, Box: `106`,
@@ -233795,7 +233795,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
   {
     Title: `Avengers`, Issue: `1`, Publisher: `Marvel`,
     Year: `2023`, Volume: `9`, Cover_Artist: `C.F. Villa`,
-    Key: `YES`, Key_Reason: `Jonathan Hickman Marvel NOW Avengers launch — massive expanded roster — seeds of Secret Wars planted here`,
+    Key: `YES`, Key_Reason: `Avengers (2023) #1 — Jed MacKay relaunch`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Jed MacKay`,
     Value_NM: `12`, Start_Bid: `5`, Box: `27`,
@@ -235695,7 +235695,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
   {
     Title: `Captain Marvel`, Issue: `1`, Publisher: `Marvel`,
     Year: `1968`, Volume: `1`, Cover_Artist: `Amanda Conner`,
-    Key: `YES`, Key_Reason: `Captain Marvel #1 Alyssa Wong — Legacy #185; found in BP box`,
+    Key: `YES`, Key_Reason: `1st solo title for Captain Marvel (Mar-Vell) — Silver Age key`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Peter David`,
     Value_NM: `12`, Start_Bid: `3`, Box: `18`,
@@ -239395,7 +239395,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
   {
     Title: `Iron Man`, Issue: `1`, Publisher: `Marvel`,
     Year: `2020`, Volume: `5`, Cover_Artist: `Alex Ross`,
-    Key: `YES`, Key_Reason: `Iron Man Vol 7 #1 Christopher Cantwell — Legacy 671`,
+    Key: `YES`, Key_Reason: `Iron Man (2020) #1 — Christopher Cantwell run`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Christopher Cantwell`,
     Value_NM: `10`, Start_Bid: `2`, Box: `13`,
@@ -242365,7 +242365,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
   {
     Title: `Shazam!`, Issue: `1`, Publisher: `DC`,
     Year: `2023`, Volume: `4`, Cover_Artist: `Dan Mora`,
-    Key: `YES`, Key_Reason: `Shazam #1 (2019) — Geoff Johns/Dale Eaglesham; $4.99 relaunch`,
+    Key: `YES`, Key_Reason: `Shazam! (2023) #1 — Mark Waid relaunch (verify)`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Mark Waid`,
     Value_NM: `20`, Start_Bid: `5`, Box: `59`,
@@ -245905,7 +245905,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
   {
     Title: `X-Factor`, Issue: `6`, Publisher: `Marvel`,
     Year: `1986`, Volume: `1`, Cover_Artist: `Ron Frenz`,
-    Key: `YES`, Key_Reason: `X-Factor #6`,
+    Key: `YES`, Key_Reason: `X-Factor #6 (1986) — flagged key, verify specific significance (verify)`,
     Signed: `NO`, Signed_By: ``,
     Era: `Copper Age`, Writer: `Louise Simonson`,
     Value_NM: ``, Start_Bid: ``, Box: `72`,
@@ -246125,7 +246125,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
   {
     Title: `X-Men`, Issue: `1`, Publisher: `Marvel`,
     Year: `1991`, Volume: `1`, Cover_Artist: ``,
-    Key: `YES`, Key_Reason: `X-Men: Hellfire Gala #1 — annual Krakoa Gala issue — key Krakoa moment`,
+    Key: `YES`, Key_Reason: `X-Men #1 (1991) — Jim Lee; best-selling single comic of all time (multiple covers)`,
     Signed: `YES`, Signed_By: `Scott Williams, Chris Claremont`,
     Era: `Copper Age`, Writer: ``,
     Value_NM: ``, Start_Bid: ``, Box: `106`,
