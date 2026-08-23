@@ -30,12 +30,12 @@ if len(new)>40: print(f"   … and {len(new)-40} more")
 json.dump([list(k) for k in keys], open(snap,"w"))
 PY
 
-step "1 · Covers — Fandom year-gate (free)"
-run "python3 brb_cover_yeargate.py | tail -1"
+step "1 · Covers — Fandom year-gate (free)  [several minutes — live progress below]"
+run "python3 -u brb_cover_yeargate.py"
 
 step "2 · Covers — Comic Vine (if proxy up on :5001)"
 if curl -s -o /dev/null --max-time 5 "http://localhost:5001/api/covers/search?title=probe&issue=1"; then
-  run "python3 brb_cv_covers.py | tail -2"
+  run "python3 -u brb_cv_covers.py"
 else
   echo "  SKIPPED — Comic Vine proxy not running (start: cd artifacts/api-server && COMIC_VINE_API_KEY=… npm start)" | tee -a "$LOG"
 fi
@@ -45,19 +45,19 @@ run "python3 brb_gcd_fill.py --apply | grep -iE 'filled|Written'"
 
 step "4 · Characters + Cover Artists — vision (needs ANTHROPIC_API_KEY)"
 if [ -n "$ANTHROPIC_API_KEY" ]; then
-  run "python3 brb_cover_links.py    | tail -1"
-  run "python3 brb_vision_preflight.py | tail -1"
-  run "python3 brb_vision_characters.py | tail -1"
-  run "python3 brb_vision_enrich.py   | tail -1"
-  run "python3 brb_combine_characters.py | tail -2"
+  run "python3 -u brb_cover_links.py"
+  run "python3 -u brb_vision_preflight.py"
+  run "python3 -u brb_vision_characters.py"
+  run "python3 -u brb_vision_enrich.py"
+  run "python3 -u brb_combine_characters.py"
 else
   echo "  SKIPPED — set ANTHROPIC_API_KEY to enrich characters/cover-artists" | tee -a "$LOG"
 fi
 
 step "5 · eBay pricing (needs EBAY_APP_ID)"
 if [ -n "$EBAY_APP_ID" ]; then
-  run "python3 brb_ebay_pricing.py | tail -2"
-  run "python3 brb_price_gate.py --apply | tail -2"
+  run "python3 -u brb_ebay_pricing.py"
+  run "python3 -u brb_price_gate.py --apply"
 else
   echo "  SKIPPED — set EBAY_APP_ID/EBAY_CERT_ID to refresh eBay prices" | tee -a "$LOG"
 fi
