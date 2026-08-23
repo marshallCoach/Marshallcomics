@@ -7,7 +7,7 @@ timestamped file. Confirms no data contamination (row count + every original
 column byte-identical)."""
 import openpyxl, glob, os, datetime, collections, hashlib
 
-SRC = "attached_assets/comics_inventory_1108_1200.xlsx"
+SRC = max(glob.glob("attached_assets/comics_inventory_*.xlsx"), key=os.path.getmtime)
 VIS = "vision_characters_enriched.xlsx"
 CL = max(glob.glob("cover_links_*.xlsx"), key=os.path.getmtime)
 
