@@ -8,7 +8,9 @@ const BASE = import.meta.env.BASE_URL?.replace(/\/$/, "") ?? "";
 
 type Cover = { url: string; artist: string | null; title: string; issue: string };
 type Group = "DC" | "Marvel" | "Image" | "Other";
-type Data = Record<Group, Record<string, Cover[]>>;
+type Dataset = Record<Group, Record<string, Cover[]>>;
+type Data = { all: Dataset; cc: Dataset };
+type Scope = "all" | "cc";
 type Mode = "character" | "title" | "all";
 
 let dataCache: Data | null = null;
@@ -23,7 +25,7 @@ const GROUPS: Group[] = ["DC", "Marvel", "Image", "Other"];
 const GROUP_WEIGHTS: [Group, number][] = [["DC", 40], ["Marvel", 40], ["Other", 15], ["Image", 5]];
 
 function pick<T>(a: T[]): T { return a[Math.floor(Math.random() * a.length)]; }
-function weightedGroup(data: Data): Group {
+function weightedGroup(data: Dataset): Group {
   const avail = GROUP_WEIGHTS.filter(([g]) => data[g] && Object.keys(data[g]).length);
   const total = avail.reduce((s, [, w]) => s + w, 0);
   let r = Math.random() * total;
@@ -40,7 +42,7 @@ function mode2(arr: (string | null)[]): string | null {
 function sample8(all: Cover[]): Cover[] { return [...all].sort(() => Math.random() - 0.5).slice(0, 8); }
 
 // Title index: group → title → deduped covers (derived from the character data).
-function buildTitleIndex(data: Data) {
+function buildTitleIndex(data: Dataset) {
   const idx: Record<Group, Record<string, Cover[]>> = { DC: {}, Marvel: {}, Image: {}, Other: {} };
   const seen: Record<string, Set<string>> = {};
   for (const g of GROUPS) for (const covers of Object.values(data[g] || {})) for (const c of covers) {
@@ -56,7 +58,7 @@ function buildTitleIndex(data: Data) {
 
 type Result = { mode: Mode; group: Group; character: string | null; title: string; artist: string | null; covers: Cover[] };
 
-function spin(data: Data, titleIdx: ReturnType<typeof buildTitleIndex>, mode: Mode): Result | null {
+function spin(data: Dataset, titleIdx: ReturnType<typeof buildTitleIndex>, mode: Mode): Result | null {
   if (mode === "character") {
     const group = weightedGroup(data);
     const chars = Object.keys(data[group] || {});
@@ -104,6 +106,7 @@ function Drum({ label, value, spinning, pool }: { label: string; value: string; 
 
 export default function ComicRoulette() {
   const [data, setData] = useState<Data | null>(null);
+  const [scope, setScope] = useState<Scope>("all");
   const [mode, setMode] = useState<Mode>("character");
   const [spinning, setSpinning] = useState(false);
   const [result, setResult] = useState<Result | null>(null);
@@ -112,26 +115,28 @@ export default function ComicRoulette() {
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => { loadData().then(setData); return () => { if (timer.current) clearTimeout(timer.current); }; }, []);
-  const titleIdx = useMemo(() => (data ? buildTitleIndex(data) : null), [data]);
+  // Active dataset: whole collection ("all") or cover-boxes only ("cc").
+  const active = useMemo<Dataset | null>(() => (data ? (data[scope] ?? {} as Dataset) : null), [data, scope]);
+  const titleIdx = useMemo(() => (active ? buildTitleIndex(active) : null), [active]);
 
-  const charPool = useMemo(() => (data ? GROUPS.flatMap(g => Object.keys(data[g] || {})).slice(0, 400) : []), [data]);
+  const charPool = useMemo(() => (active ? GROUPS.flatMap(g => Object.keys(active[g] || {})).slice(0, 400) : []), [active]);
   const titlePool = useMemo(() => (titleIdx ? GROUPS.flatMap(g => Object.keys(titleIdx[g] || {})).slice(0, 400) : []), [titleIdx]);
-  const artistPool = useMemo(() => (data ? Array.from(new Set(GROUPS.flatMap(g => Object.values(data[g] || {}).flat().map(c => c.artist).filter(Boolean) as string[]))).slice(0, 400) : []), [data]);
+  const artistPool = useMemo(() => (active ? Array.from(new Set(GROUPS.flatMap(g => Object.values(active[g] || {}).flat().map(c => c.artist).filter(Boolean) as string[]))).slice(0, 400) : []), [active]);
 
   const midLabel = mode === "character" ? "Character" : "Title";
   const midPool = mode === "character" ? charPool : titlePool;
 
   function doSpin() {
-    if (!data || !titleIdx || spinning) return;
+    if (!active || !titleIdx || spinning) return;
     setSpinning(true); setLightbox(null); setQa(null);
-    const r = spin(data, titleIdx, mode);
+    const r = spin(active, titleIdx, mode);
     timer.current = setTimeout(() => { setResult(r); setSpinning(false); }, 1400);
   }
 
   function runQA() {
-    if (!data || !titleIdx) return;
+    if (!active || !titleIdx) return;
     const rows: Result[] = [];
-    for (let i = 0; i < 25; i++) { const r = spin(data, titleIdx, mode); if (r) rows.push(r); }
+    for (let i = 0; i < 25; i++) { const r = spin(active, titleIdx, mode); if (r) rows.push(r); }
     setQa(rows); setResult(null);
   }
   function exportQA() {
@@ -150,6 +155,18 @@ export default function ComicRoulette() {
       <div className="cr-header">
         <h1>🎰 Comic Roulette</h1>
         <p className="cr-sub">Spin the drums — every cover shown carries its real cover artist and the characters verified on it, from your collection scan.</p>
+      </div>
+
+      <div className="cr-scope">
+        {([["all", "🗂 Whole collection"], ["cc", "🖼 Cover boxes only"]] as [Scope, string][]).map(([sc, l]) => {
+          const empty = sc === "cc" && data && !GROUPS.some(g => Object.keys(data.cc[g] || {}).length);
+          return (
+            <button key={sc} className={`cr-scope-btn${scope === sc ? " active" : ""}`}
+              disabled={!!empty}
+              title={empty ? "No cover-box characters yet — run the character enrichment" : ""}
+              onClick={() => { setScope(sc); setResult(null); setQa(null); }}>{l}</button>
+          );
+        })}
       </div>
 
       <div className="cr-modes">
@@ -223,6 +240,10 @@ const CR_CSS = `
 .cr-root { max-width: 1100px; margin: 0 auto; padding: 1.5rem 1rem 4rem; }
 .cr-header h1 { margin: 0 0 .25rem; font-size: 1.9rem; }
 .cr-sub { color: var(--muted,#888); margin: 0 0 1.25rem; max-width: 640px; }
+.cr-scope { display: flex; gap: .5rem; justify-content: center; margin-bottom: .6rem; }
+.cr-scope-btn { background: transparent; border: 1px solid var(--border,#2c2c38); color: var(--muted,#999); padding: .35rem 1rem; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: .8rem; }
+.cr-scope-btn.active { background: #0891b2; border-color: #0891b2; color: #fff; }
+.cr-scope-btn:disabled { opacity: .4; cursor: not-allowed; }
 .cr-modes { display: flex; gap: .5rem; justify-content: center; margin-bottom: 1rem; }
 .cr-mode-btn { background: var(--surface2,#1a1a22); border: 1px solid var(--border,#2c2c38); color: var(--muted,#999); padding: .4rem 1.1rem; border-radius: 999px; cursor: pointer; font-weight: 600; font-size: .85rem; }
 .cr-mode-btn.active { background: #c0392b; border-color: #c0392b; color: #fff; }
