@@ -139337,7 +139337,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Scarlet`, Issue: `1`, Publisher: `DC (Jinxworld)`,
+    Title: `Scarlett`, Issue: `1`, Publisher: `DC (Jinxworld)`,
     Disambig: ``,
     Year: `2018`, Arc: `Scarlet Kelly Thompson`, Key: `YES`,
     Key_Reason: `Scarlet Vol 2 #1 Kelly Thompson — NOT Scarlet Spider — separate Image series`, First_App: ``,
@@ -139353,10 +139353,10 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     Imprint: `Image`, Box: `66`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `2`, Entry: `4862`,
-    eBay_Avg: 13.57, eBay_Low: 5.2, eBay_High: 28.75, eBay_Count: 8, eBay_Median: 10,
+    eBay_Avg: 10.62, eBay_Low: 5.2, eBay_High: 23.25, eBay_Count: 8, eBay_Median: 8.75,
   },
   {
-    Title: `Scarlet`, Issue: `2`, Publisher: `DC (Jinxworld)`,
+    Title: `Scarlett`, Issue: `2`, Publisher: `DC (Jinxworld)`,
     Disambig: ``,
     Year: `2018`, Arc: `Scarlet Kelly Thompson`, Key: `NO`,
     Key_Reason: `#2`, First_App: ``,
@@ -139375,7 +139375,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     eBay_Avg: 14.75, eBay_Low: 5.67, eBay_High: 40.18, eBay_Count: 9, eBay_Median: 12.99,
   },
   {
-    Title: `Scarlet`, Issue: `3`, Publisher: `DC (Jinxworld)`,
+    Title: `Scarlett`, Issue: `3`, Publisher: `DC (Jinxworld)`,
     Disambig: ``,
     Year: `2018`, Arc: `Scarlet Kelly Thompson`, Key: `NO`,
     Key_Reason: `#3`, First_App: ``,
@@ -139394,7 +139394,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     eBay_Avg: null, eBay_Low: 9, eBay_High: 55, eBay_Count: 9, eBay_Median: null,
   },
   {
-    Title: `Scarlet`, Issue: `5`, Publisher: `DC (Jinxworld)`,
+    Title: `Scarlett`, Issue: `5`, Publisher: `DC (Jinxworld)`,
     Disambig: ``,
     Year: `2018`, Arc: `Scarlet Kelly Thompson`, Key: `NO`,
     Key_Reason: `#5`, First_App: ``,
@@ -243522,7 +243522,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Scarlet`, Issue: `1`, Publisher: `DC (Jinxworld)`,
+    Title: `Scarlett`, Issue: `1`, Publisher: `DC (Jinxworld)`,
     Year: `2018`, Volume: `2`, Cover_Artist: `Alex Maleev`,
     Key: `YES`, Key_Reason: `Scarlet Vol 2 #1 Kelly Thompson — NOT Scarlet Spider — separate Image series`,
     Signed: `NO`, Signed_By: ``,
