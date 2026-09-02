@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useMemo, useCallback } from "react";
 import { DATA, type Comic } from "@/data/data";
-import { comicId, loadFlags, saveFlags, FLAG_KEY, type FlaggedCover } from "./CoverCatalog";
+import { comicId, loadFlags, saveFlags, type FlaggedCover } from "./CoverCatalog";
+import { clearAllFlags, exportFlags as exportFlagsLib } from "@/lib/coverFlags";
 import flaggedBaseline from "@/data/flaggedCoversBaseline.json";
 
 const BASELINE_FLAGGED_IDS = new Set((flaggedBaseline as { id: string }[]).map(f => f.id));
@@ -133,20 +134,11 @@ export default function CoverReview() {
     });
   }, []);
 
-  const exportFlags = useCallback(() => {
-    const all = loadFlags();
-    const blob = new Blob([JSON.stringify([...all.values()], null, 2)], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = `flagged-covers-${new Date().toISOString().slice(0, 10)}.json`;
-    a.click();
-    URL.revokeObjectURL(url);
-  }, []);
+  const exportFlags = useCallback(() => { exportFlagsLib(); }, []);
 
   const clearFlags = useCallback(() => {
     if (!window.confirm(`Clear all ${flags.size} flagged covers? This resets the count to 0 and cannot be undone (export first if you haven't).`)) return;
-    localStorage.removeItem(FLAG_KEY);
+    clearAllFlags();
     setFlags(new Map());
   }, [flags.size]);
 

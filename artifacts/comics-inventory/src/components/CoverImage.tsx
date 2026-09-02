@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { getCoverSvgUrl, type ComicLike } from "@/utils/coverThumbnails";
 import { comicFlagKey, getComicFlag, setComicFlag, clearComicFlag } from "@/lib/comicFlags";
+import { coverId, isFlagged as isCoverFlaggedLib, toggleFlag as toggleCoverFlagLib } from "@/lib/coverFlags";
 
 const BASE = import.meta.env.BASE_URL?.replace(/\/$/, "") ?? "";
 
@@ -153,34 +154,6 @@ export function CoverImage({ comic, width = 56, height = 84, onClick, style, obj
   );
 }
 
-// ── Cover-flag helpers (mirrors brbFlaggedCovers_v1 used in CoverCatalog) ─────
-const COVER_FLAG_LS = "brbFlaggedCovers_v1";
-function readCoverFlags(): Record<string, unknown> {
-  try { return JSON.parse(localStorage.getItem(COVER_FLAG_LS) || "{}"); }
-  catch { return {}; }
-}
-function isCoverFlagged(key: string): boolean { return key in readCoverFlags(); }
-function toggleCoverFlag(key: string, data: { Title: string; Issue: string | number; Box?: string; Publisher?: string; Year?: string; Cover_Artist?: string }): boolean {
-  const all = readCoverFlags();
-  if (key in all) {
-    delete all[key];
-    localStorage.setItem(COVER_FLAG_LS, JSON.stringify(all));
-    return false;
-  }
-  all[key] = {
-    id: key,
-    Title: data.Title,
-    Issue: String(data.Issue),
-    Box: data.Box ?? "",
-    Publisher: data.Publisher ?? "",
-    Year: data.Year ?? "",
-    Cover_Artist: data.Cover_Artist ?? "",
-    flaggedAt: new Date().toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }),
-  };
-  localStorage.setItem(COVER_FLAG_LS, JSON.stringify(all));
-  return true;
-}
-
 interface ModalProps {
   comic: ComicLike & {
     Publisher?: string; Year?: string; Key?: string; Key_Reason?: string;
@@ -194,10 +167,10 @@ interface ModalProps {
 
 export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
   const box        = (comic as { Box?: string }).Box ?? "";
-  const coverKey   = `${comic.Title}|||${comic.Issue}|||${box}`;
+  const coverKey   = coverId({ Title: comic.Title, Issue: comic.Issue, Box: box });
   const dataKey    = comicFlagKey(comic.Title, String(comic.Issue), box);
 
-  const [coverFlagged, setCoverFlagged] = useState(() => isCoverFlagged(coverKey));
+  const [coverFlagged, setCoverFlagged] = useState(() => isCoverFlaggedLib(coverKey));
   const [notes,        setNotes]        = useState(() => getComicFlag(dataKey)?.notes ?? "");
   const [copied,       setCopied]       = useState(false);
 
@@ -208,7 +181,11 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
   }, [onClose]);
 
   function handleCoverFlag() {
-    const next = toggleCoverFlag(coverKey, comic as Parameters<typeof toggleCoverFlag>[1]);
+    const c = comic as { Cover_Artist?: string; Publisher?: string; Year?: string };
+    const next = toggleCoverFlagLib({
+      Title: comic.Title, Issue: comic.Issue, Box: box,
+      Cover_Artist: c.Cover_Artist, Publisher: c.Publisher, Year: c.Year,
+    });
     setCoverFlagged(next);
   }
 

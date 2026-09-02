@@ -2,8 +2,12 @@ import { useState, useMemo, useCallback, useEffect } from "react";
 import { DATA, type CatalogComic } from "@/data/data";
 import { CoverImage, clearCoverMemCache } from "@/components/CoverImage";
 
+import { FLAG_KEY, coverId, loadFlags, saveFlags, type FlaggedCover } from "@/lib/coverFlags";
+
 const PAGE_SIZE = 16;
-export const FLAG_KEY  = "brbFlaggedCovers_v1";
+// Re-exported so existing consumers (CoverReview) keep importing from here.
+export { FLAG_KEY, loadFlags, saveFlags, type FlaggedCover };
+export const comicId = coverId;
 
 // ── Tab definitions ──────────────────────────────────────────────────────────
 
@@ -18,36 +22,6 @@ const TABS = [
 ] as const;
 
 type TabKey = typeof TABS[number]["key"];
-
-// ── Flag storage helpers ─────────────────────────────────────────────────────
-
-export interface FlaggedCover {
-  id: string;
-  Title: string;
-  Issue: string;
-  Box: string;
-  Cover_Artist: string;
-  Publisher: string;
-  Year: string;
-  flaggedAt: string;
-}
-
-export function comicId(c: { Title: string; Issue: string; Box: string }) {
-  return `${c.Title}|||${c.Issue}|||${c.Box}`;
-}
-
-export function loadFlags(): Map<string, FlaggedCover> {
-  try {
-    const raw = localStorage.getItem(FLAG_KEY);
-    if (!raw) return new Map();
-    const arr: FlaggedCover[] = JSON.parse(raw);
-    return new Map(arr.map(f => [f.id, f]));
-  } catch { return new Map(); }
-}
-
-export function saveFlags(map: Map<string, FlaggedCover>) {
-  localStorage.setItem(FLAG_KEY, JSON.stringify([...map.values()]));
-}
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
 
