@@ -1,6 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { getCoverSvgUrl, type ComicLike } from "@/utils/coverThumbnails";
-import { comicFlagKey, getComicFlag, setComicFlag, clearComicFlag } from "@/lib/comicFlags";
 import { coverId, isFlagged as isCoverFlaggedLib, toggleFlag as toggleCoverFlagLib } from "@/lib/coverFlags";
 
 const BASE = import.meta.env.BASE_URL?.replace(/\/$/, "") ?? "";
@@ -168,11 +167,8 @@ interface ModalProps {
 export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
   const box        = (comic as { Box?: string }).Box ?? "";
   const coverKey   = coverId({ Title: comic.Title, Issue: comic.Issue, Box: box });
-  const dataKey    = comicFlagKey(comic.Title, String(comic.Issue), box);
 
   const [coverFlagged, setCoverFlagged] = useState(() => isCoverFlaggedLib(coverKey));
-  const [notes,        setNotes]        = useState(() => getComicFlag(dataKey)?.notes ?? "");
-  const [copied,       setCopied]       = useState(false);
 
   useEffect(() => {
     const h = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
@@ -189,44 +185,8 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
     setCoverFlagged(next);
   }
 
-  function handleNotes(val: string) {
-    setNotes(val);
-    if (val.trim()) setComicFlag(dataKey, getComicFlag(dataKey)?.fields ?? [], val);
-    else {
-      const existing = getComicFlag(dataKey);
-      if (existing?.fields?.length) setComicFlag(dataKey, existing.fields, "");
-      else clearComicFlag(dataKey);
-    }
-  }
-
-  function buildPrompt() {
-    const divider = "────────────────────────────────";
-    const lines = [
-      "BOOK NOTE REQUEST", divider,
-      `Title:     ${comic.Title}`,
-      `Issue:     ${comic.Issue}`,
-    ];
-    if ((comic as { Year?: string }).Year)      lines.push(`Year:      ${(comic as { Year?: string }).Year}`);
-    if ((comic as { Publisher?: string }).Publisher) lines.push(`Publisher: ${(comic as { Publisher?: string }).Publisher}`);
-    if (box) lines.push(`Box:       ${box}`);
-    if ((comic as { Era?: string }).Era)        lines.push(`Era:       ${(comic as { Era?: string }).Era}`);
-    lines.push("");
-    if (notes.trim()) { lines.push("NOTES", divider, notes.trim(), ""); }
-    if (coverFlagged)  { lines.push("COVER NOTE", divider, "Cover image appears incorrect — needs Comic Vine verification.", ""); }
-    lines.push(divider, "Please review and update this entry as needed.");
-    return lines.join("\n");
-  }
-
-  async function copyForClaude() {
-    try { await navigator.clipboard.writeText(buildPrompt()); }
-    catch { const ta = document.getElementById("cm-prompt-preview") as HTMLTextAreaElement; if (ta) { ta.select(); document.execCommand("copy"); } }
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2200);
-  }
-
   const isKey    = (comic.Key    ?? "").toUpperCase() === "YES";
   const fallback = getCoverSvgUrl(comic, { width: 300, height: 460 });
-  const hasNote  = notes.trim().length > 0;
 
   return (
     <>
@@ -329,58 +289,8 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
               </button>
               {coverFlagged && (
                 <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", color: "var(--muted)", marginTop: 5, fontStyle: "italic" }}>
-                  Queued for review in Cover Catalog → Flagged section
+                  Added to the 🚩 flagged covers — export them all from Cover → Cover Review
                 </div>
-              )}
-            </div>
-
-            {/* ── Claude note ── */}
-            <div style={{ borderTop: "1px solid var(--border)", paddingTop: 12 }}>
-              <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "2px", color: hasNote ? "#d97706" : "var(--muted)", marginBottom: 7 }}>
-                NOTE TO CLAUDE{hasNote ? " ●" : ""}
-              </div>
-              <textarea
-                value={notes}
-                onChange={e => handleNotes(e.target.value)}
-                placeholder="What needs correcting or adding? Any known values, sources, or context…"
-                style={{
-                  width: "100%", boxSizing: "border-box",
-                  padding: "9px 11px", minHeight: 80,
-                  fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", lineHeight: 1.55,
-                  color: "var(--text)", background: "var(--surface)",
-                  border: `1.5px solid ${hasNote ? "#d97706" : "var(--border)"}`,
-                  borderRadius: 6, resize: "vertical", outline: "none",
-                }}
-                onFocus={e => e.currentTarget.style.borderColor = "#d97706"}
-                onBlur={e => e.currentTarget.style.borderColor = hasNote ? "#d97706" : "var(--border)"}
-              />
-              {(hasNote || coverFlagged) && (
-                <>
-                  <textarea
-                    id="cm-prompt-preview"
-                    readOnly
-                    value={buildPrompt()}
-                    style={{
-                      width: "100%", boxSizing: "border-box",
-                      padding: "8px 10px", height: 110, marginTop: 8,
-                      fontFamily: "'Courier New',monospace", fontSize: "0.875rem", lineHeight: 1.45,
-                      color: "var(--muted2)", background: "var(--surface)",
-                      border: "1px solid var(--border)", borderRadius: 5,
-                      resize: "none", outline: "none",
-                    }}
-                  />
-                  <button
-                    onClick={copyForClaude}
-                    style={{
-                      marginTop: 8, width: "100%", padding: "9px 0",
-                      fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1.5px",
-                      background: copied ? "#16a34a" : "#d97706",
-                      border: "none", borderRadius: 6, color: "#fff", cursor: "pointer", transition: "background 0.2s",
-                    }}
-                  >
-                    {copied ? "✓ COPIED TO CLIPBOARD" : "COPY FOR CLAUDE →"}
-                  </button>
-                </>
               )}
             </div>
           </div>

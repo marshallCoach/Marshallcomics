@@ -6,7 +6,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 // artist is the one who actually drew the displayed covers (the Replit fix).
 const BASE = import.meta.env.BASE_URL?.replace(/\/$/, "") ?? "";
 
-type Cover = { url: string; artist: string | null; title: string; issue: string };
+type Cover = { url: string; artist: string | null; title: string; issue: string; n?: number };
 type Group = "DC" | "Marvel" | "Image" | "Other";
 type Dataset = Record<Group, Record<string, Cover[]>>;
 type Data = { all: Dataset; cc: Dataset };
@@ -41,6 +41,18 @@ function mode2(arr: (string | null)[]): string | null {
 }
 function sample8(all: Cover[]): Cover[] { return [...all].sort(() => Math.random() - 0.5).slice(0, 8); }
 
+// A character can be listed on hundreds of covers, but on most of them it's one
+// face in an ensemble/event crowd, not the subject. Prefer the covers with the
+// smallest cast (`n`) — solo/duo covers where the character is actually featured
+// — falling back to a looser tier only if too few exist.
+function prominentPool(covers: Cover[]): Cover[] {
+  for (const t of [1, 2, 3, 5]) {
+    const p = covers.filter(c => (c.n ?? 99) <= t);
+    if (p.length >= 6) return p;
+  }
+  return covers;
+}
+
 // Title index: group → title → deduped covers (derived from the character data).
 function buildTitleIndex(data: Dataset) {
   const idx: Record<Group, Record<string, Cover[]>> = { DC: {}, Marvel: {}, Image: {}, Other: {} };
@@ -64,7 +76,7 @@ function spin(data: Dataset, titleIdx: ReturnType<typeof buildTitleIndex>, mode:
     const chars = Object.keys(data[group] || {});
     if (!chars.length) return null;
     const character = pick(chars);
-    const s = sample8(data[group][character]);
+    const s = sample8(prominentPool(data[group][character]));
     const artist = mode2(s.map(c => c.artist));
     const title = mode2(s.map(c => c.title)) ?? "";
     const coherent = s.filter(c => c.artist === artist);
@@ -187,7 +199,7 @@ export default function ComicRoulette() {
         {qa && <button className="cr-qa-btn" onClick={exportQA}>Export JSON</button>}
       </div>
 
-      {result && !spinning && <ResultPanel r={result} onOpen={setLightbox} />}
+      {result && <ResultPanel r={result} onOpen={setLightbox} dim={spinning} />}
 
       {qa && (
         <div className="cr-qa">
@@ -214,9 +226,9 @@ export default function ComicRoulette() {
   );
 }
 
-function ResultPanel({ r, onOpen }: { r: Result; onOpen: (u: string) => void }) {
+function ResultPanel({ r, onOpen, dim }: { r: Result; onOpen: (u: string) => void; dim?: boolean }) {
   return (
-    <div className="cr-result">
+    <div className="cr-result" style={dim ? { opacity: 0.35, transition: "opacity .2s" } : { transition: "opacity .2s" }}>
       <div className="cr-result-head">
         <span className={`cr-chip cr-${r.group.toLowerCase()}`}>{r.group}</span>
         {r.character && <strong>{r.character}</strong>}

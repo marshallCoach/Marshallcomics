@@ -62,7 +62,11 @@ function write(map: Map<string, FlaggedCover>): void {
 }
 
 function emit(): void {
-  if (typeof window !== "undefined") window.dispatchEvent(new CustomEvent(FLAGS_CHANGED_EVENT));
+  if (typeof window === "undefined") return;
+  // Deferred: some callers write inside a React setState updater (which runs
+  // during render), and a synchronous dispatch there would setState a subscribed
+  // component mid-render. A microtask hops out of the render phase first.
+  queueMicrotask(() => window.dispatchEvent(new CustomEvent(FLAGS_CHANGED_EVENT)));
 }
 
 export function loadFlags(): Map<string, FlaggedCover> {
