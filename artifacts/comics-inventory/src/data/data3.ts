@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_0209_1024.xlsx  |  Generated: 2026-09-02
+// Source: comics_inventory_0209_1029.xlsx  |  Generated: 2026-09-02
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -76169,7 +76169,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     eBay_Avg: 10.99, eBay_Low: 4.99, eBay_High: 24.99, eBay_Count: 6, eBay_Median: 9.49,
   },
   {
-    Title: `G.I. Joe: A Real American Hero — MIA`, Issue: `1`, Publisher: `Independent`,
+    Title: `G.I. Joe: A Real American Hero`, Issue: `1`, Publisher: `Independent`,
     Disambig: ``,
     Year: `2008`, Arc: `Blaylock/Couerth`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -76188,7 +76188,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
   },
   {
-    Title: `G.I. Joe: A Real American Hero — MIA`, Issue: `2`, Publisher: `Independent`,
+    Title: `G.I. Joe: A Real American Hero`, Issue: `2`, Publisher: `Independent`,
     Disambig: ``,
     Year: `2008`, Arc: `Blaylock/Couerth`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -78468,7 +78468,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     eBay_Avg: 6.57, eBay_Low: 3.83, eBay_High: 9.99, eBay_Count: 8, eBay_Median: 6.1,
   },
   {
-    Title: `Good Asian`, Issue: `3`, Publisher: `Image`,
+    Title: `The Good Asian`, Issue: `3`, Publisher: `Image`,
     Disambig: ``,
     Year: `2025`, Arc: ``, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -88823,7 +88823,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     eBay_Avg: 9.99, eBay_Low: 9.99, eBay_High: 9.99, eBay_Count: 1, eBay_Median: 9.99,
   },
   {
-    Title: `Icon and Rocket`, Issue: `6`, Publisher: `DC`,
+    Title: `Icon & Rocket: Season One`, Issue: `6`, Publisher: `DC`,
     Disambig: ``,
     Year: `2022`, Arc: ``, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -88842,7 +88842,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Icon and Rocket`, Issue: `1`, Publisher: `DC`,
+    Title: `Icon & Rocket: Season One`, Issue: `1`, Publisher: `DC`,
     Disambig: ``,
     Year: `2021`, Arc: ``, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -88861,7 +88861,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Icon and Rocket`, Issue: `2`, Publisher: `DC`,
+    Title: `Icon & Rocket: Season One`, Issue: `2`, Publisher: `DC`,
     Disambig: ``,
     Year: `2021`, Arc: ``, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -88880,7 +88880,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Icon and Rocket`, Issue: `3`, Publisher: `DC`,
+    Title: `Icon & Rocket: Season One`, Issue: `3`, Publisher: `DC`,
     Disambig: ``,
     Year: `2022`, Arc: ``, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -88899,7 +88899,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Icon and Rocket`, Issue: `4`, Publisher: `DC`,
+    Title: `Icon & Rocket: Season One`, Issue: `4`, Publisher: `DC`,
     Disambig: ``,
     Year: `2022`, Arc: ``, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -88918,7 +88918,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Icon and Rocket`, Issue: `5`, Publisher: `DC`,
+    Title: `Icon & Rocket: Season One`, Issue: `5`, Publisher: `DC`,
     Disambig: ``,
     Year: `2022`, Arc: ``, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -106668,7 +106668,7 @@ Jurgens is a DC legend — could sign this.`,
     eBay_Avg: 5.7, eBay_Low: 3.99, eBay_High: 9.99, eBay_Count: 5, eBay_Median: 4.99,
   },
   {
-    Title: `Justice League: The Darkseid War - Shazam`, Issue: `1`, Publisher: `DC`,
+    Title: `Justice League: Darkseid War: Shazam`, Issue: `1`, Publisher: `DC`,
     Disambig: ``,
     Year: `2015`, Arc: `JL Darkseid War Shazam one-shot`, Key: `YES`,
     Key_Reason: `JL: Darkseid War — Shazam — Darkseid War tie-in special`, First_App: ``,
@@ -106706,7 +106706,7 @@ Jurgens is a DC legend — could sign this.`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
   },
   {
-    Title: `Justice League: The Darkseid War: The Flash`, Issue: `1`, Publisher: `DC`,
+    Title: `Justice League: Darkseid War: Flash`, Issue: `1`, Publisher: `DC`,
     Disambig: ``,
     Year: `2015`, Arc: `JL Darkseid War Flash one-shot`, Key: `YES`,
     Key_Reason: `JL: Darkseid War — Flash — Darkseid War tie-in special`, First_App: ``,
@@ -159146,7 +159146,7 @@ Already signed.`,
     eBay_Avg: 10.81, eBay_Low: 6.62, eBay_High: 15, eBay_Count: 2, eBay_Median: 10.81,
   },
   {
-    Title: `Terrifics`, Issue: `25`, Publisher: `DC`,
+    Title: `The Terrifics`, Issue: `25`, Publisher: `DC`,
     Disambig: ``,
     Year: `2020`, Arc: `Anniversary issue`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -159165,7 +159165,7 @@ Already signed.`,
     eBay_Avg: 4.65, eBay_Low: 2.9, eBay_High: 9.99, eBay_Count: 7, eBay_Median: 3.5,
   },
   {
-    Title: `Terrifics`, Issue: `34`, Publisher: `DC`,
+    Title: `The Terrifics`, Issue: `34`, Publisher: `DC`,
     Disambig: ``,
     Year: `2020`, Arc: `Finale era`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -223530,7 +223530,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Good Asian`, Issue: `3`, Publisher: `Image`,
+    Title: `The Good Asian`, Issue: `3`, Publisher: `Image`,
     Year: `2025`, Volume: ``, Cover_Artist: ``,
     Key: `NO`, Key_Reason: ``,
     Signed: `NO`, Signed_By: ``,
@@ -241394,7 +241394,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Justice League: The Darkseid War - Shazam`, Issue: `1`, Publisher: `DC`,
+    Title: `Justice League: Darkseid War: Shazam`, Issue: `1`, Publisher: `DC`,
     Year: `2015`, Volume: `2`, Cover_Artist: `Jim Lee`,
     Key: `YES`, Key_Reason: `JL: Darkseid War — Shazam — Darkseid War tie-in special`,
     Signed: `NO`, Signed_By: ``,
@@ -241414,7 +241414,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Justice League: The Darkseid War: The Flash`, Issue: `1`, Publisher: `DC`,
+    Title: `Justice League: Darkseid War: Flash`, Issue: `1`, Publisher: `DC`,
     Year: `2015`, Volume: `2`, Cover_Artist: `Jim Lee`,
     Key: `YES`, Key_Reason: `JL: Darkseid War — Flash — Darkseid War tie-in special`,
     Signed: `NO`, Signed_By: ``,
