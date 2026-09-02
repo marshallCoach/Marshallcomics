@@ -37,6 +37,7 @@ import EbayListingGuide from "@/pages/EbayListingGuide";
 import ComicRoulette from "@/pages/ComicRoulette";
 import LifeArchive from "@/pages/LifeArchive";
 import OfflineCovers from "@/components/OfflineCovers";
+import FlaggedCount from "@/components/FlaggedCount";
 import PasswordGate from "@/components/PasswordGate";
 import { BookOpen, Boxes, Wrench, Image, Briefcase, Film, Clock, Archive } from "lucide-react";
 
@@ -257,6 +258,7 @@ export default function App() {
             <a href="https://www.whatnot.com/user/blackreadbrown" target="_blank" rel="noopener noreferrer" className="social-link wn" aria-label="Whatnot">WN</a>
             <a href="https://www.ebay.com/usr/blackreadbrown" target="_blank" rel="noopener noreferrer" className="social-link eb" aria-label="eBay">EB</a>
           </div>
+          <FlaggedCount onNavigate={navigateTo} />
           <OfflineCovers />
           <button className="search-btn" onClick={openSearch} title="Search (⌘K)">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
