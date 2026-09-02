@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_0109_2128.xlsx  |  Generated: 2026-09-02
+// Source: comics_inventory_0109_2132.xlsx  |  Generated: 2026-09-02
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -15574,7 +15574,7 @@ DeFalco era Avengers.`,
     eBay_Avg: 5.88, eBay_Low: 5.01, eBay_High: 8, eBay_Count: 6, eBay_Median: 5.45,
   },
   {
-    Title: `Avengers and Moon Girl`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Avengers & Moon Girl`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2022`, Arc: `Avengers Moon Girl`, Key: `YES`,
     Key_Reason: `Avengers and Moon Girl #1`, First_App: ``,
@@ -60998,7 +60998,7 @@ Kupperberg co-wrote this crossover.`,
     eBay_Avg: 4.67, eBay_Low: 3.49, eBay_High: 9.25, eBay_Count: 9, eBay_Median: 3.99,
   },
   {
-    Title: `Dracula: Bloodhunt`, Issue: `3`, Publisher: `Marvel`,
+    Title: `Dracula: Blood Hunt`, Issue: `3`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2024`, Arc: ``, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -61017,7 +61017,7 @@ Kupperberg co-wrote this crossover.`,
     eBay_Avg: 3.95, eBay_Low: 3.9, eBay_High: 3.99, eBay_Count: 7, eBay_Median: 3.95,
   },
   {
-    Title: `Dracula: Bloodhunt`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Dracula: Blood Hunt`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2024`, Arc: ``, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -67535,7 +67535,7 @@ Written by Priest (as Jim Owsley). BRING THIS — unsigned. Great signing opp.`,
     eBay_Avg: 9.02, eBay_Low: 2.5, eBay_High: 14.99, eBay_Count: 10, eBay_Median: 9.1,
   },
   {
-    Title: `Falcon and Winter Soldier`, Issue: `5`, Publisher: `Marvel`,
+    Title: `Falcon & Winter Soldier`, Issue: `5`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2021`, Arc: `F&WS extends`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -123223,7 +123223,7 @@ ALREADY SIGNED. CGC SS witness opportunity at Terrificon.`,
     eBay_Avg: 8.66, eBay_Low: 3.95, eBay_High: 23.94, eBay_Count: 8, eBay_Median: 5.49,
   },
   {
-    Title: `Nextwave: Agents of Hate`, Issue: `6`, Publisher: `Marvel`,
+    Title: `Nextwave: Agents of H.A.T.E.`, Issue: `6`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2007`, Arc: `Nextwave — Warren Ellis — extends`, Key: `YES`,
     Key_Reason: `Nextwave: Agents of Hate #6 — Warren Ellis/Stuart Immonen — fan-favourite comedic Marvel book`, First_App: ``,
@@ -152869,7 +152869,7 @@ Already signed — CGC SS witness opportunity at Terrificon. SY confirmed all 3 
     eBay_Avg: 5.17, eBay_Low: 3, eBay_High: 9.48, eBay_Count: 9, eBay_Median: 3.99,
   },
   {
-    Title: `Strange Academy: Bloodhunt`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Strange Academy: Blood Hunt`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2024`, Arc: `SA Bloodhunt tie-in`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -152888,7 +152888,7 @@ Already signed — CGC SS witness opportunity at Terrificon. SY confirmed all 3 
     eBay_Avg: 9.13, eBay_Low: 3.35, eBay_High: 19.96, eBay_Count: 10, eBay_Median: 7.57,
   },
   {
-    Title: `Strange Academy: Bloodhunt`, Issue: `2`, Publisher: `Marvel`,
+    Title: `Strange Academy: Blood Hunt`, Issue: `2`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2024`, Arc: `SA Bloodhunt`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -191457,7 +191457,7 @@ Jim Lee (SAT ONLY) + Scott Williams both confirmed. UXM #275 is a Lee/Williams c
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
   },
   {
-    Title: `Union Jack the Ripper: Bloodhunt`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Union Jack the Ripper: Blood Hunt`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2024`, Arc: ``, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -235322,7 +235322,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Avengers and Moon Girl`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Avengers & Moon Girl`, Issue: `1`, Publisher: `Marvel`,
     Year: `2022`, Volume: `1`, Cover_Artist: `Jim Cheung & Various`,
     Key: `YES`, Key_Reason: `Avengers and Moon Girl #1`,
     Signed: `NO`, Signed_By: ``,
@@ -242712,7 +242712,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Nextwave: Agents of Hate`, Issue: `6`, Publisher: `Marvel`,
+    Title: `Nextwave: Agents of H.A.T.E.`, Issue: `6`, Publisher: `Marvel`,
     Year: `2007`, Volume: `1`, Cover_Artist: `Stuart Immonen`,
     Key: `YES`, Key_Reason: `Nextwave: Agents of Hate #6 — Warren Ellis/Stuart Immonen — fan-favourite comedic Marvel book`,
     Signed: `NO`, Signed_By: ``,
@@ -249194,7 +249194,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Dracula: Bloodhunt`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Dracula: Blood Hunt`, Issue: `1`, Publisher: `Marvel`,
     Year: `2024`, Volume: `1`, Cover_Artist: `Rod Reis`,
     Key: `NO`, Key_Reason: ``,
     Signed: `NO`, Signed_By: ``,
@@ -250964,7 +250964,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Union Jack the Ripper: Bloodhunt`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Union Jack the Ripper: Blood Hunt`, Issue: `1`, Publisher: `Marvel`,
     Year: `2024`, Volume: `1`, Cover_Artist: `Ryan Brown`,
     Key: `NO`, Key_Reason: ``,
     Signed: `NO`, Signed_By: ``,
