@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_0209_1021.xlsx  |  Generated: 2026-09-02
+// Source: comics_inventory_0209_1024.xlsx  |  Generated: 2026-09-02
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
