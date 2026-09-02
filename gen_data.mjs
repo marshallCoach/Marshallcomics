@@ -9,7 +9,9 @@ const ExcelJS = require('exceljs');
 // (to a NEW file, not the source xlsx) - reingesting mid-run just re-reads the
 // stale xlsx, and killing it to "fix" that destroys unsaved in-memory progress.
 try {
-  const pids = execSync('pgrep -f run_overnight_v2.py', { encoding: 'utf8' }).trim();
+  // [r]un... bracket form so pgrep -f can't self-match its own `sh -c pgrep ...`
+  // wrapper (a Linux false positive; harmless on macOS which execs pgrep directly).
+  const pids = execSync('pgrep -f [r]un_overnight_v2.py', { encoding: 'utf8' }).trim();
   if (pids) {
     console.error('\n⚠ REFUSING TO REINGEST — run_overnight_v2.py is currently running.\n');
     console.error(`  PID(s): ${pids.split('\n').join(', ')}`);
