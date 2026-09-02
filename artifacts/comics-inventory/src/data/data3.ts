@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_0109_2132.xlsx  |  Generated: 2026-09-02
+// Source: comics_inventory_0209_1021.xlsx  |  Generated: 2026-09-02
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -16902,25 +16902,6 @@ DeFalco era Avengers.`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `3297`,
     eBay_Avg: 15.59, eBay_Low: 9.99, eBay_High: 20.94, eBay_Count: 4, eBay_Median: 15.71,
-  },
-  {
-    Title: `Aliens vs. Avengers`, Issue: `1`, Publisher: `Marvel`,
-    Disambig: ``,
-    Year: `2024`, Arc: ``, Key: `YES`,
-    Key_Reason: `Avengers vs. Aliens #1 — Hickman — landmark crossover — Avengers meet Xenomorphs`, First_App: ``,
-    Writer: `Jonathan Hickman`, Artist: `Esad Ribić`,
-    Signed: `NO`, Signed_By: ``,
-    Personal: ``, Condition: ``,
-    CGC_Worth: `YES`, Value_NM: `10`, Value_VF: `6`,
-    Category: `Modern`, Era: `Modern`, Universe: `Marvel Main`,
-    Seller_Notes: `Avengers vs. Aliens #1.`, Story_Pitch: `Avengers vs. Aliens #1.`,
-    Content: `Avengers vs. Aliens #1.`, Platform: `WHATNOT`,
-    Sales_Data: ``, Terrificon: ``,
-    Cover_Artist: `Esad Ribić`, Date_Added: `May 27, 2026`,
-    Imprint: `Marvel`, Box: `75`,
-    Crossover: ``, Start_Bid: `2`,
-    Volume: `1`, Entry: `12290`,
-    eBay_Avg: 21.35, eBay_Low: 3.95, eBay_High: 49.99, eBay_Count: 9, eBay_Median: 14.26,
   },
   {
     Title: `Avengers vs. X-Men`, Issue: `0`, Publisher: `Marvel`,
@@ -71834,25 +71815,6 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     Imprint: `Marvel`, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `12280`,
-    eBay_Avg: 5.4, eBay_Low: 2.75, eBay_High: 9.49, eBay_Count: 10, eBay_Median: 4.99,
-  },
-  {
-    Title: `Fantastic Four: Empyre`, Issue: `0`, Publisher: `Marvel`,
-    Disambig: ``,
-    Year: `2020`, Arc: ``, Key: `NO`,
-    Key_Reason: ``, First_App: ``,
-    Writer: `Dan Slott`, Artist: `R. B. Silva`,
-    Signed: `NO`, Signed_By: ``,
-    Personal: ``, Condition: ``,
-    CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
-    Category: `Modern`, Era: `Modern`, Universe: `Marvel Main`,
-    Seller_Notes: `Fantastic Four: Empyre #0.`, Story_Pitch: `Fantastic Four: Empyre #0.`,
-    Content: `Fantastic Four: Empyre #0.`, Platform: `EBAY`,
-    Sales_Data: ``, Terrificon: ``,
-    Cover_Artist: `Jim Cheung`, Date_Added: `May 27, 2026`,
-    Imprint: `Marvel`, Box: `UNKNOWN — needs physical reassignment`,
-    Crossover: ``, Start_Bid: `2`,
-    Volume: `1`, Entry: `12281`,
     eBay_Avg: 5.4, eBay_Low: 2.75, eBay_High: 9.49, eBay_Count: 10, eBay_Median: 4.99,
   },
   {
@@ -142986,7 +142948,7 @@ Hickman SIGNED Secret Wars #1. CGC SS witness on-site. Highest-value Hickman boo
     eBay_Avg: 18.99, eBay_Low: 9.99, eBay_High: 31, eBay_Count: 3, eBay_Median: 15.99,
   },
   {
-    Title: `SGU: Stargate Universe`, Issue: `2`, Publisher: `Independent`,
+    Title: `Stargate Universe`, Issue: `2`, Publisher: `Independent`,
     Disambig: ``,
     Year: `2017`, Arc: ``, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -143005,7 +142967,7 @@ Hickman SIGNED Secret Wars #1. CGC SS witness on-site. Highest-value Hickman boo
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
   },
   {
-    Title: `SGU: Stargate Universe`, Issue: `3`, Publisher: `Independent`,
+    Title: `Stargate Universe`, Issue: `3`, Publisher: `Independent`,
     Disambig: ``,
     Year: `2017`, Arc: ``, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -143024,7 +142986,7 @@ Hickman SIGNED Secret Wars #1. CGC SS witness on-site. Highest-value Hickman boo
     eBay_Avg: 14.24, eBay_Low: 14.24, eBay_High: 14.24, eBay_Count: 1, eBay_Median: 14.24,
   },
   {
-    Title: `SGU: Stargate Universe`, Issue: `4`, Publisher: `Independent`,
+    Title: `Stargate Universe`, Issue: `4`, Publisher: `Independent`,
     Disambig: ``,
     Year: `2017`, Arc: ``, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -143043,7 +143005,7 @@ Hickman SIGNED Secret Wars #1. CGC SS witness on-site. Highest-value Hickman boo
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
   },
   {
-    Title: `SGU: Stargate Universe`, Issue: `5`, Publisher: `Independent`,
+    Title: `Stargate Universe`, Issue: `5`, Publisher: `Independent`,
     Disambig: ``,
     Year: `2017`, Arc: ``, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -156081,7 +156043,7 @@ Tom King SIGNED. Film in 2026. CGC SS witness at Terrificon is urgent.`,
     eBay_Avg: 11, eBay_Low: 1.99, eBay_High: 26.68, eBay_Count: 9, eBay_Median: 7.92,
   },
   {
-    Title: `Superman and Robin Special`, Issue: `1`, Publisher: `DC`,
+    Title: `Superman & Robin Special`, Issue: `1`, Publisher: `DC`,
     Disambig: ``,
     Year: `2023`, Arc: `One-shot`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -165895,7 +165857,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: 4.94, eBay_Low: 4.55, eBay_High: 5.33, eBay_Count: 2, eBay_Median: 4.94,
   },
   {
-    Title: `The Iron Age: Alpha`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Iron Age: Alpha`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2011`, Arc: `Iron Age crossover`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -187162,7 +187124,7 @@ Hickman Ultimate Universe — he has appeared with Terrificon regularly.`,
     eBay_Avg: 8.73, eBay_Low: 3.99, eBay_High: 12.12, eBay_Count: 5, eBay_Median: 9.99,
   },
   {
-    Title: `Ultraman x Avengers`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Ultraman x the Avengers`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2023`, Arc: `Ultraman Avengers crossover`, Key: `YES`,
     Key_Reason: `Ultraman vs Avengers #1 — Tsuburaya/Marvel crossover — rare licensed book`, First_App: ``,
@@ -212859,7 +212821,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Location: `Bedroom (Upstairs) — BDR-1`, Code: `BDR-1`, labeledAs: ``, Notes: ``, DateAdded: `2026-06-29`,
   },
   {
-    Num: `BOX 75`, Comics: 216, Keys: 42,
+    Num: `BOX 75`, Comics: 215, Keys: 41,
     Signed: 0, YearRange: `1993-2026`,
     Label: ``, FirstBook: `Alien vs. Captain America 1`, LastBook: `X-Vengers 2`,
     Location: `Bedroom (Upstairs) — BDR-1`, Code: `BDR-1`, labeledAs: ``, Notes: ``, DateAdded: `2026-06-29`,
@@ -212955,7 +212917,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Location: ``, Code: ``, labeledAs: ``, Notes: ``, DateAdded: `2026-06-29`,
   },
   {
-    Num: `BOX UNKNOWN — needs physical reassignment`, Comics: 93, Keys: 8,
+    Num: `BOX UNKNOWN — needs physical reassignment`, Comics: 92, Keys: 8,
     Signed: 0, YearRange: `2000-2025`,
     Label: ``, FirstBook: `Action Comics 896`, LastBook: `WildC.A.T.s 22`,
     Location: ``, Code: ``, labeledAs: ``, Notes: ``, DateAdded: `2026-06-29`,
@@ -235422,16 +235384,6 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Aliens vs. Avengers`, Issue: `1`, Publisher: `Marvel`,
-    Year: `2024`, Volume: `1`, Cover_Artist: `Esad Ribić`,
-    Key: `YES`, Key_Reason: `Avengers vs. Aliens #1 — Hickman — landmark crossover — Avengers meet Xenomorphs`,
-    Signed: `NO`, Signed_By: ``,
-    Era: `Modern`, Writer: `Jonathan Hickman`,
-    Value_NM: `10`, Start_Bid: `2`, Box: `75`,
-    Notes: ``, SortPile: ``,
-    CoverNotes: ``, Flag: ``,
-  },
-  {
     Title: `Avengers vs. X-Men`, Issue: `0`, Publisher: `Marvel`,
     Year: `2012`, Volume: `1`, Cover_Artist: `John Romita Jr.`,
     Key: `YES`, Key_Reason: `AvX #0 — prelim — Hope Summers and Scarlet Witch`,
@@ -246492,7 +246444,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Ultraman x Avengers`, Issue: `1`, Publisher: `Marvel`,
+    Title: `Ultraman x the Avengers`, Issue: `1`, Publisher: `Marvel`,
     Year: `2023`, Volume: `7`, Cover_Artist: `Jim Cheung & Various`,
     Key: `YES`, Key_Reason: `Ultraman vs Avengers #1 — Tsuburaya/Marvel crossover — rare licensed book`,
     Signed: `NO`, Signed_By: ``,
