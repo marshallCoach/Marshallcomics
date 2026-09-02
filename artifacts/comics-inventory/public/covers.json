@@ -86365,30 +86365,6 @@
     "date": "2018",
     "source": "fandom-dc-yg"
   },
-  "Black|||2|||1": {
-    "url": null,
-    "large": null,
-    "date": "2026-08-29"
-  },
-  "Black|||4|||1": null,
-  "Blackstar|||1|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||1|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||2|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||3|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||4|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||6|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||7|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||8|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||9|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||10|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||11|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||12|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||20|||1": null,
-  "Cyberforce|||2|||4": null,
-  "Cyberforce|||3|||4": null,
-  "Cyberforce|||4|||4": null,
-  "Cyberforce|||5|||4": null,
-  "Cyberforce|||6|||4": null,
   "Die|||10|||1": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/7168474-10a.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/7168474-10a.jpg",
@@ -86397,28 +86373,6 @@
     "volume_name": "Die",
     "volume_start_year": null
   },
-  "Die|||11|||1": {
-    "url": null,
-    "large": null,
-    "date": "2026-08-29"
-  },
-  "Die|||12|||1": null,
-  "Die|||13|||1": null,
-  "Die|||16|||1": {
-    "url": null,
-    "large": null,
-    "date": "2026-08-29"
-  },
-  "Die|||19|||1": {
-    "url": null,
-    "large": null,
-    "date": "2026-08-29"
-  },
-  "Die|||1|||1": {
-    "url": null,
-    "large": null,
-    "date": "2026-08-29"
-  },
   "Die|||2|||1": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/6755350-1477844104-73183.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/6755350-1477844104-73183.jpg",
@@ -86426,21 +86380,6 @@
     "volume_id": 115725,
     "volume_name": "Die",
     "volume_start_year": null
-  },
-  "Die|||5|||1": {
-    "url": null,
-    "large": null,
-    "date": "2026-08-29"
-  },
-  "Die|||7|||1": {
-    "url": null,
-    "large": null,
-    "date": "2026-08-29"
-  },
-  "Die|||8|||1": {
-    "url": null,
-    "large": null,
-    "date": "2026-08-29"
   },
   "Doctor Who|||2|||1": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/2173284-02.jpg",
@@ -86466,14 +86405,6 @@
     "volume_name": "Doctor Who",
     "volume_start_year": 2008
   },
-  "Doctor Who|||7|||1": null,
-  "Doctor Who|||8|||1": null,
-  "Doctor Who|||10|||1": null,
-  "Doctor Who|||12|||1": null,
-  "Doctor Who|||13|||1": null,
-  "Doctor Who|||14|||1": null,
-  "Doctor Who|||15|||1": null,
-  "Doctor Who|||1|||1": null,
   "Doctor Who|||16|||1": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/2173393-16.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/2173393-16.jpg",
@@ -86490,9 +86421,6 @@
     "volume_name": "Doctor Who: The Eleventh Doctor",
     "volume_start_year": null
   },
-  "Doctor Who: The Eleventh Doctor - Year One|||5|||1": null,
-  "Doctor Who: The Eleventh Doctor - Year One|||6|||1": null,
-  "Doctor Who: The Tenth Doctor - Year One|||1|||1": null,
   "Doctor Who: The Tenth Doctor - Year One|||3|||1": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4119721-03.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4119721-03.jpg",
@@ -86525,7 +86453,6 @@
     "volume_name": "Doctor Who: The Twelfth Doctor",
     "volume_start_year": null
   },
-  "Doctor Who: The Twelfth Doctor - Year One|||3|||1": null,
   "Doctor Who: The Twelfth Doctor - Year One|||6|||1": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/4462806-06a.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/4462806-06a.jpg",
@@ -86550,17 +86477,6 @@
     "volume_name": "Doctor Who: The Twelfth Doctor",
     "volume_start_year": null
   },
-  "G.I. Joe|||3|||1": null,
-  "G.I. Joe|||4|||1": null,
-  "G.I. Joe|||5|||1": null,
-  "G.I. Joe|||6|||1": null,
-  "G.I. Joe|||13|||1": null,
-  "G.I. Joe|||14|||1": null,
-  "G.I. Joe|||15|||1": null,
-  "G.I. Joe|||16|||1": null,
-  "G.I. Joe|||17|||1": null,
-  "G.I. Joe|||19|||1": null,
-  "G.I. Joe: A Real American Hero|||4|||1": null,
   "Gargoyles|||1|||1": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/10153941-cover.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/10153941-cover.jpg",
@@ -86569,11 +86485,6 @@
     "volume_name": "Gargoyles",
     "volume_start_year": 2026
   },
-  "Gatchaman|||1|||1": null,
-  "Gatchaman|||3|||1": null,
-  "Gatchaman|||5|||1": null,
-  "Gatchaman|||2|||1": null,
-  "Gatchaman|||4|||1": null,
   "Ghost|||1|||1": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/8/83676/2663325-22_498.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/8/83676/2663325-22_498.jpg",
@@ -86581,28 +86492,6 @@
     "volume_id": 3774,
     "volume_name": "Ghost",
     "volume_start_year": 2012
-  },
-  "Leaders of the Free World|||1|||1": {
-    "url": null,
-    "large": null,
-    "date": "2026-08-30"
-  },
-  "Leaders of the Free World|||2|||1": {
-    "url": null,
-    "large": null,
-    "date": "2026-08-30"
-  },
-  "Magic Order|||0|||1": null,
-  "Mask|||3|||1": {
-    "url": null,
-    "large": null,
-    "date": "2026-08-30"
-  },
-  "Mighty Morphin Power Rangers|||101|||1": null,
-  "Mulan Revelations|||1|||1": {
-    "url": null,
-    "large": null,
-    "date": "2026-08-30"
   },
   "Mulan Revelations|||2|||1": null,
   "Mulan Revelations|||3|||1": null,
@@ -87199,5 +87088,126 @@
     "volume_id": 87863,
     "volume_name": "What If?",
     "volume_start_year": null
+  },
+  "Black|||2|||1": {
+    "url": null,
+    "large": null,
+    "date": "2026-09-02"
+  },
+  "Black|||4|||1": null,
+  "Blackstar|||1|||1": null,
+  "Buffy the Vampire Slayer: Season Eight|||1|||1": null,
+  "Buffy the Vampire Slayer: Season Eight|||2|||1": null,
+  "Buffy the Vampire Slayer: Season Eight|||3|||1": null,
+  "Buffy the Vampire Slayer: Season Eight|||4|||1": null,
+  "Buffy the Vampire Slayer: Season Eight|||6|||1": null,
+  "Buffy the Vampire Slayer: Season Eight|||7|||1": null,
+  "Buffy the Vampire Slayer: Season Eight|||8|||1": null,
+  "Buffy the Vampire Slayer: Season Eight|||9|||1": null,
+  "Buffy the Vampire Slayer: Season Eight|||10|||1": null,
+  "Buffy the Vampire Slayer: Season Eight|||11|||1": null,
+  "Buffy the Vampire Slayer: Season Eight|||12|||1": null,
+  "Buffy the Vampire Slayer: Season Eight|||20|||1": null,
+  "Cyberforce|||2|||4": null,
+  "Cyberforce|||3|||4": null,
+  "Cyberforce|||4|||4": null,
+  "Cyberforce|||5|||4": null,
+  "Cyberforce|||6|||4": null,
+  "Die|||11|||1": {
+    "url": null,
+    "large": null,
+    "date": "2026-09-02"
+  },
+  "Die|||12|||1": null,
+  "Die|||13|||1": null,
+  "Die|||16|||1": {
+    "url": null,
+    "large": null,
+    "date": "2026-09-02"
+  },
+  "Die|||19|||1": {
+    "url": null,
+    "large": null,
+    "date": "2026-09-02"
+  },
+  "Die|||1|||1": {
+    "url": null,
+    "large": null,
+    "date": "2026-09-02"
+  },
+  "Die|||5|||1": {
+    "url": null,
+    "large": null,
+    "date": "2026-09-02"
+  },
+  "Die|||7|||1": {
+    "url": null,
+    "large": null,
+    "date": "2026-09-02"
+  },
+  "Die|||8|||1": {
+    "url": null,
+    "large": null,
+    "date": "2026-09-02"
+  },
+  "Doctor Who|||7|||1": null,
+  "Doctor Who|||8|||1": null,
+  "Doctor Who|||10|||1": null,
+  "Doctor Who|||12|||1": null,
+  "Doctor Who|||13|||1": null,
+  "Doctor Who|||14|||1": null,
+  "Doctor Who|||15|||1": null,
+  "Doctor Who|||1|||1": null,
+  "Doctor Who: The Eleventh Doctor - Year One|||5|||1": null,
+  "Doctor Who: The Eleventh Doctor - Year One|||6|||1": null,
+  "Doctor Who: The Tenth Doctor - Year One|||1|||1": null,
+  "Doctor Who: The Twelfth Doctor - Year One|||3|||1": null,
+  "G.I. Joe|||3|||1": null,
+  "G.I. Joe|||4|||1": null,
+  "G.I. Joe|||5|||1": null,
+  "G.I. Joe|||6|||1": null,
+  "G.I. Joe|||13|||1": null,
+  "G.I. Joe|||14|||1": null,
+  "G.I. Joe|||15|||1": null,
+  "G.I. Joe|||16|||1": null,
+  "G.I. Joe|||17|||1": null,
+  "G.I. Joe|||19|||1": null,
+  "G.I. Joe: A Real American Hero|||4|||1": null,
+  "G.I. Joe: A Real American Hero|||1|||1": null,
+  "G.I. Joe: A Real American Hero|||2|||1": null,
+  "Gatchaman|||1|||1": null,
+  "Gatchaman|||3|||1": null,
+  "Gatchaman|||5|||1": null,
+  "Gatchaman|||2|||1": null,
+  "Gatchaman|||4|||1": null,
+  "The Good Asian|||3|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/8059273-03a.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/8059273-03a.jpg",
+    "date": "2021-07-11",
+    "volume_id": 135895,
+    "volume_name": "The Good Asian",
+    "volume_start_year": 2021
+  },
+  "Leaders of the Free World|||1|||1": {
+    "url": null,
+    "large": null,
+    "date": "2026-09-02"
+  },
+  "Leaders of the Free World|||2|||1": {
+    "url": null,
+    "large": null,
+    "date": "2026-09-02"
+  },
+  "Magic Order|||0|||1": null,
+  "Mask|||3|||1": {
+    "url": null,
+    "large": null,
+    "date": "2026-09-02"
+  },
+  "Mighty Morphin Power Rangers|||101|||1": null,
+  "Mulan Revelations|||1|||1": {
+    "url": null,
+    "large": null,
+    "date": "2026-09-02"
   }
 }
