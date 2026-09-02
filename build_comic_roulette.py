@@ -13,7 +13,9 @@ Output shape:
 import openpyxl, json, glob, os, re
 from collections import defaultdict
 
-INV = max(glob.glob("attached_assets/comics_inventory_*.xlsx"), key=os.path.getmtime)
+# Skip Finder duplicates (" copy.xlsx") — they are never the canonical source.
+_cands = [f for f in glob.glob("attached_assets/comics_inventory_*.xlsx") if " copy" not in f]
+INV = max(_cands, key=os.path.getmtime)
 COVERS = "covers.json"
 OUT = "artifacts/comics-inventory/public/comic_roulette.json"
 
@@ -94,9 +96,13 @@ for r in rows[1:]:
     if not url:
         continue
     g = group(s(r, "Publisher"))
-    entry = {"url": url, "artist": clean_artist(s(r, "Cover Artist")), "title": t, "issue": i}
+    char_list = [c.strip() for c in chars_raw.split(",") if c.strip()]
+    # n = cast size on this cover. A small cast means the character is a primary
+    # subject (a solo/duo cover), not one face in an ensemble/event crowd — the
+    # roulette uses it to avoid surfacing crossover covers for a single character.
+    entry = {"url": url, "artist": clean_artist(s(r, "Cover Artist")), "title": t, "issue": i, "n": len(char_list)}
     is_cc = bool(CC.fullmatch(s(r, "Box #")))
-    for ch in [c.strip() for c in chars_raw.split(",") if c.strip()]:
+    for ch in char_list:
         ka = (g, ch, url)
         if ka not in seen_all:
             seen_all.add(ka); all_d[g][ch].append(entry)
