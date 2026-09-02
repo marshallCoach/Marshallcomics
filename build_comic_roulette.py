@@ -13,8 +13,9 @@ Output shape:
 import openpyxl, json, glob, os, re
 from collections import defaultdict
 
-# Skip Finder duplicates (" copy.xlsx") — they are never the canonical source.
-_cands = [f for f in glob.glob("attached_assets/comics_inventory_*.xlsx") if " copy" not in f]
+# Skip Excel lock files and Finder duplicates — never the canonical source.
+_cands = [f for f in glob.glob("attached_assets/comics_inventory_*.xlsx")
+          if " copy" not in f and not os.path.basename(f).startswith("~$")]
 INV = max(_cands, key=os.path.getmtime)
 COVERS = "covers.json"
 OUT = "artifacts/comics-inventory/public/comic_roulette.json"
