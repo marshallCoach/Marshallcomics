@@ -1,6 +1,16 @@
 # Marshall Comics — Cloud Session Handoff
 
-_Generated 2026-09-02 10:32 · branch `claude/upbeat-babbage-2f5gr2` · HEAD `33a75c8` (a covers commit follows)._
+_Updated 2026-09-02 10:56 · branch `claude/upbeat-babbage-2f5gr2`. Current canonical: **`comics_inventory_0209_1056.xlsx`** (11,176 rows, 100% validation)._
+
+### Latest updates (2026-09-02, after the first handoff was written)
+- **More user-sourced title corrections applied** (each backed by a Fandom/eBay/Google-Books ref the user supplied): `GODS`→`G.O.D.S.`; `Fantastic Four: Empyre #0`→`Empyre: Fantastic Four` and `#1/#2`→`Empyre`; `Doom Patrol and Suicide Squad`→`…Special`; `Generations: The Best`→`Generations: Wolverine & All-New Wolverine`; `Nova: Annihilation Conquest`→`Nova` (Vol 4); `Star Trek: La'an — Law of War`→`Star Trek: Lore War`; `The Vision and Scarlet Witch`→`Vision and the Scarlet Witch` (Vol 3); `What If? Magic`→`What If? Magik`; `New Warriors: Giant-Size Spectacular` (mis-dated 1994)→`New Warriors` Vol 2, **year corrected to 1999** (per CGC label). Applied via `brb_apply_sourced_titles.py`, `brb_fix_gods_empyre.py`. Notes cleared on each; the cross-box copies these created (Doom Patrol Special ×2, Empyre #1/#2 in box 19 + box 75) were flagged `⚠ Verify Duplicate`, not deleted.
+- `Alien vs. Captain America` (singular) confirmed correct; `Aliens vs. Avengers` flags integrated/cleared.
+- **Cover fill was stopped mid-run** (it was slow & low-yield — correctly rejecting ambiguous CV matches for titles like "Die"/"Black"). `covers.json` holds whatever partial fills landed. **To resume:** `python3 brb_cv_covers.py` (non-M/DC empties via proxy) then `python3 brb_cover_yeargate.py` (M/DC empties) then `python3 brb_refetch_incorrect.py` (the 3 flagged incorrect covers), then regen — see `/tmp/covers_bg.log` for where it stopped (~[61/154]).
+
+### Still open / needs the user
+- **eBay link `ebay.com/p/10056914342`** resolved to New Warriors v2 #1 (done). Any future eBay refs: WebFetch times out on eBay — ask the user for a screenshot.
+- Unverified titles with no authoritative source yet: `AW: Origins`, `Bloodhunt: Dracula`, `Fantastic 4 in 12 Time` (×4), `King-Size Cable`, `Legend Has It...`. Keep the `check title` flag; don't guess.
+- Confirm whether the Empyre #1/#2 (box 75) and Doom Patrol Special (box 72) really are second physical copies or should be deduped — currently flagged reviewed.
 
 Paste this whole file into the new cloud session's first message. It carries the
 project state, the non-negotiable rules, the hard-won gotchas, and the open
