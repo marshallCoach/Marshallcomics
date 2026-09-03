@@ -8,13 +8,42 @@ const BASE = import.meta.env.BASE_URL?.replace(/\/$/, "") ?? "";
 let coversMap: Record<string, { url: string | null; large?: string | null }> | null = null;
 let coversLoading: Promise<void> | null = null;
 
+// Fallback index: normalized "title|||issue" → url, built ONLY from entries whose
+// normalized key maps to a single distinct url. Rescues covers orphaned by a title
+// rename (e.g. "Icon & Rocket: Season One" vs the stored "Icon and Rocket", or
+// "&" vs "and", ":" vs ",", "x" vs "X"). Ambiguous keys (same title+issue across
+// multiple volumes/urls) are intentionally EXCLUDED so a rename fix never pastes a
+// wrong-volume cover onto a book — Volume stays significant.
+let normIndex: Map<string, string> | null = null;
+const normTitle = (t: string) =>
+  t.toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9]+/g, " ").trim();
+const normIssue = (i: string) =>
+  String(i).replace(/^#/, "").replace(/^0+(\d)/, "$1").trim();
+const normCoverKey = (title: string, issue: string) =>
+  `${normTitle(title)}|||${normIssue(issue)}`;
+
+function buildNormIndex(map: Record<string, { url: string | null }>) {
+  const groups = new Map<string, Set<string>>();
+  for (const [k, v] of Object.entries(map)) {
+    const url = v?.url;
+    if (!url) continue;
+    const p = k.split("|||");
+    if (p.length < 2) continue;
+    const nk = `${normTitle(p[0])}|||${normIssue(p[1])}`;
+    (groups.get(nk) ?? groups.set(nk, new Set()).get(nk)!).add(url);
+  }
+  const idx = new Map<string, string>();
+  for (const [nk, urls] of groups) if (urls.size === 1) idx.set(nk, [...urls][0]);
+  return idx;
+}
+
 function loadCovers(): Promise<void> {
   if (coversMap !== null) return Promise.resolve();
   if (coversLoading) return coversLoading;
   coversLoading = fetch(`${BASE}/covers.json`)
     .then(r => r.json())
-    .then(data => { coversMap = data; })
-    .catch(() => { coversMap = {}; });
+    .then(data => { coversMap = data; normIndex = buildNormIndex(data); })
+    .catch(() => { coversMap = {}; normIndex = new Map(); });
   return coversLoading;
 }
 
@@ -49,7 +78,12 @@ async function fetchCover(c: ComicLike): Promise<string | null> {
         coversMap?.[`${c.Title}|||${issueStr}`] ??
         coversMap?.[`${c.Title}|||#${issueStr.replace(/^#/, "")}`] ??
         null;
-      const url = entry?.url ?? null;
+      // Rename-tolerant fallback: only when the exact keys miss, and only when the
+      // normalized title+issue resolves to a single unambiguous cover.
+      const url =
+        entry?.url ??
+        normIndex?.get(normCoverKey(c.Title, issueStr)) ??
+        null;
       memCache.set(key, url);
       return url;
     } catch {
