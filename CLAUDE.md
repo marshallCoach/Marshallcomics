@@ -55,6 +55,18 @@ BOX_STATUS_ALLOWLIST = {
 - Rule 2 (same-box): `title.lower() + "|" + issue + "|" + year + "|" + box`
 - Rule 3 (cross-box): `title.lower() + "|" + issue + "|" + year`
 
+## Weekly new-comic intake — box assignment (by publisher)
+The user boxes each week's new pulls by publisher; use these when adding rows so
+nothing lands in `UNKNOWN`. Confirmed correct by the user (Sep 2026).
+- **New DC** → Box **101**
+- **New Marvel** → Box **102**
+- **New Other** (Image/Skybound/indie) → Box **103**
+- **Marvel cover-buys** (bought for the cover) → **CC1**
+- **DC cover-buys** → **CC5**
+- Other cover-buys: no dedicated box yet — put in 103 or ask.
+Boxing already applied in an uploaded sheet is authoritative — never collapse it
+to a single box even if told "all in NNN"; confirm before moving.
+
 ## eBay pipeline status (July 6, 2026)
 - Step 5 done: 1,313 comics have eBay_Avg/Low/High/Count in data3.ts
 - Step 6 next: surface eBay prices in app UI (comic drawer / BoxKeys)
