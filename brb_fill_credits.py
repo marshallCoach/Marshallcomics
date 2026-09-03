@@ -22,7 +22,7 @@ def ni(v): return str(v or "").strip().replace(".0", "")
 # each: titles (exact) or contains; iss list; optional year/box; w/a/c (None=skip)
 CREDITS = [
  {"titles":["Icon & Rocket: Season One"], "iss":[str(i) for i in range(1,7)],
-  "w":"Reginald Hudlin", "a":"Taurin Clarke", "c":"Taurin Clarke"},
+  "w":"Reginald Hudlin", "a":"Doug Braithwaite", "c":"Taurin Clarke"},
  {"titles":["Mask","M.A.S.K."], "iss":["3"], "box":"103",
   "w":"Dan Watters", "a":"Pierluigi Casolino", "c":"Pye Parr"},
  {"titles":["Doom Patrol and Suicide Squad Special"], "iss":["1"],
@@ -38,7 +38,7 @@ CREDITS = [
  {"titles":["Years of Future Past"], "iss":["1","2"],
   "w":"Marguerite Bennett", "a":"Mike Norton", "c":None},
  {"titles":["Star Trek: Lore War"], "iss":["1"],
-  "w":None, "a":None, "c":"Davide Tinto"},           # Artist held — see docstring
+  "w":None, "a":"Davide Tinto", "c":"Davide Tinto"}, # Tinto did interior + cover
  {"titles":["Ultraman x The Avengers","Ultraman X The Avengers"], "iss":["1"],
   "w":"Kyle Higgins & Mat Groom", "a":None, "c":None},
  {"titles":["Vision and the Scarlet Witch"], "iss":["1"],
