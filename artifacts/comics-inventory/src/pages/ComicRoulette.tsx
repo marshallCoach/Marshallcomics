@@ -68,6 +68,20 @@ function buildTitleIndex(data: Dataset) {
   return idx;
 }
 
+// Reverse map: cover url -> the characters verified on that cover across the
+// active dataset. Lets the result panel show what's really on each cover, so an
+// ensemble/wrong match is visible at a glance.
+function buildCharsByUrl(data: Dataset): Map<string, string[]> {
+  const m = new Map<string, Set<string>>();
+  for (const g of GROUPS) for (const [char, covers] of Object.entries(data[g] || {})) for (const c of covers) {
+    if (!c.url) continue;
+    (m.get(c.url) ?? m.set(c.url, new Set()).get(c.url)!).add(char);
+  }
+  const out = new Map<string, string[]>();
+  for (const [url, set] of m) out.set(url, [...set]);
+  return out;
+}
+
 type Result = { mode: Mode; group: Group; character: string | null; title: string; artist: string | null; covers: Cover[] };
 
 function spin(data: Dataset, titleIdx: ReturnType<typeof buildTitleIndex>, mode: Mode): Result | null {
@@ -130,6 +144,7 @@ export default function ComicRoulette() {
   // Active dataset: whole collection ("all") or cover-boxes only ("cc").
   const active = useMemo<Dataset | null>(() => (data ? (data[scope] ?? {} as Dataset) : null), [data, scope]);
   const titleIdx = useMemo(() => (active ? buildTitleIndex(active) : null), [active]);
+  const charsByUrl = useMemo(() => (active ? buildCharsByUrl(active) : null), [active]);
 
   const charPool = useMemo(() => (active ? GROUPS.flatMap(g => Object.keys(active[g] || {})).slice(0, 400) : []), [active]);
   const titlePool = useMemo(() => (titleIdx ? GROUPS.flatMap(g => Object.keys(titleIdx[g] || {})).slice(0, 400) : []), [titleIdx]);
@@ -199,7 +214,7 @@ export default function ComicRoulette() {
         {qa && <button className="cr-qa-btn" onClick={exportQA}>Export JSON</button>}
       </div>
 
-      {result && <ResultPanel r={result} onOpen={setLightbox} dim={spinning} />}
+      {result && <ResultPanel r={result} onOpen={setLightbox} dim={spinning} charsByUrl={charsByUrl} />}
 
       {qa && (
         <div className="cr-qa">
@@ -226,7 +241,7 @@ export default function ComicRoulette() {
   );
 }
 
-function ResultPanel({ r, onOpen, dim }: { r: Result; onOpen: (u: string) => void; dim?: boolean }) {
+function ResultPanel({ r, onOpen, dim, charsByUrl }: { r: Result; onOpen: (u: string) => void; dim?: boolean; charsByUrl?: Map<string, string[]> | null }) {
   return (
     <div className="cr-result" style={dim ? { opacity: 0.35, transition: "opacity .2s" } : { transition: "opacity .2s" }}>
       <div className="cr-result-head">
@@ -240,7 +255,18 @@ function ResultPanel({ r, onOpen, dim }: { r: Result; onOpen: (u: string) => voi
         {r.covers.map((c, i) => (
           <figure key={c.url + i} className="cr-cover" onClick={() => onOpen(c.url)}>
             <img src={c.url} alt={`${c.title} #${c.issue}`} loading="lazy" />
-            <figcaption><span className="cr-cap-title">{c.title} {c.issue && `#${c.issue}`}</span>{c.artist && <span className="cr-cap-artist">{c.artist}</span>}</figcaption>
+            <figcaption>
+              <span className="cr-cap-title">{c.title} {c.issue && `#${c.issue}`}</span>
+              {c.artist && <span className="cr-cap-artist">cover: {c.artist}</span>}
+              {(() => {
+                const ch = charsByUrl?.get(c.url);
+                return ch && ch.length
+                  ? <span style={{ display: "block", fontSize: ".68rem", color: "var(--muted,#8a8a99)", marginTop: 2, lineHeight: 1.3 }}>
+                      {ch.slice(0, 4).join(", ")}{ch.length > 4 ? ` +${ch.length - 4}` : ""}
+                    </span>
+                  : null;
+              })()}
+            </figcaption>
           </figure>
         ))}
       </div>
