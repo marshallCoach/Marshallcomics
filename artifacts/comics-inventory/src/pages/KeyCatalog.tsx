@@ -3,6 +3,9 @@ import { DATA } from "@/data/data";
 import { CoverImage } from "@/components/CoverImage";
 
 const ALL_KEYS = DATA.comics.filter(c => (c.Key || "").toUpperCase() === "YES");
+// Cover-box books: anything in a CC (cool-covers) box — CC1..CC6, including the
+// weekly cover-buys (CC1 = Marvel, CC5 = DC). Powers the Keys ↔ Cover Boxes toggle.
+const ALL_COVERS = DATA.comics.filter(c => /^cc\d/i.test((c.Box || "").trim()));
 const PAGE_SIZE = 18;
 
 function parseNM(v: string) {
@@ -79,9 +82,11 @@ function KeyCard({ comic, flip }: { comic: KeyComic; flip: boolean }) {
             {comic.Era}
           </span>
         )}
-        <span style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1.5px", background: "#fff8e0", color: "#7a5500", border: "1px solid #f0d060", borderRadius: 3, padding: "2px 8px" }}>
-          ★ KEY
-        </span>
+        {(comic.Key || "").toUpperCase() === "YES" && (
+          <span style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1.5px", background: "#fff8e0", color: "#7a5500", border: "1px solid #f0d060", borderRadius: 3, padding: "2px 8px" }}>
+            ★ KEY
+          </span>
+        )}
         {comic.Box && (
           <span style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1.5px", background: "var(--surface2)", color: "var(--muted)", border: "1px solid var(--border)", borderRadius: 3, padding: "2px 8px" }}>
             Box {comic.Box}
@@ -157,9 +162,10 @@ export default function KeyCatalog() {
   const [firstOnly,   setFirstOnly]   = useState(false);
   const [sort,        setSort]        = useState("value");
   const [page,        setPage]        = useState(1);
+  const [view,        setView]        = useState<"keys" | "covers">("keys");
 
   const filtered = useMemo(() => {
-    let r = ALL_KEYS as KeyComic[];
+    let r = (view === "keys" ? ALL_KEYS : ALL_COVERS) as KeyComic[];
     if (pub !== "All") {
       if (pub === "Other") r = r.filter(c => !["MARVEL","DC","IMAGE","IDW","DARK HORSE"].some(p => c.Publisher.toUpperCase().includes(p)));
       else r = r.filter(c => c.Publisher.toUpperCase().includes(pub.toUpperCase()));
@@ -180,7 +186,7 @@ export default function KeyCatalog() {
     });
     else if (sort === "box") sorted.sort((a, b) => parseNM(a.Box) - parseNM(b.Box));
     return sorted;
-  }, [pub, era, search, signedOnly, firstOnly, sort]);
+  }, [view, pub, era, search, signedOnly, firstOnly, sort]);
 
   const total   = filtered.length;
   const pages   = Math.ceil(total / PAGE_SIZE);
@@ -225,6 +231,13 @@ export default function KeyCatalog() {
         <div style={{ height: 2, background: "linear-gradient(90deg, var(--red), transparent)", maxWidth: 280, marginTop: 12 }} />
       </div>
 
+      {/* View toggle: key issues vs cover boxes */}
+      <div style={{ display: "flex", gap: 6, alignItems: "center", marginBottom: 14 }}>
+        <span style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "2px", color: "var(--muted)", marginRight: 4 }}>VIEW</span>
+        {pill(`KEY ISSUES (${ALL_KEYS.length.toLocaleString()})`, view === "keys", () => { setView("keys"); setPage(1); })}
+        {pill(`COVER BOXES (${ALL_COVERS.length.toLocaleString()})`, view === "covers", () => { setView("covers"); setPage(1); }, "#0891b2")}
+      </div>
+
       {/* Filters */}
       <div style={{ background: "var(--surface)", border: "1.5px solid var(--border)", borderRadius: 8, padding: "14px 16px", marginBottom: 20, display: "flex", flexDirection: "column", gap: 10 }}>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 6, alignItems: "center" }}>
@@ -256,7 +269,7 @@ export default function KeyCatalog() {
 
       {/* Result count */}
       <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "2px", color: "var(--muted)", marginBottom: 16 }}>
-        {total.toLocaleString()} KEY{total !== 1 ? "S" : ""} · PAGE {page} OF {pages || 1}
+        {total.toLocaleString()} {view === "keys" ? `KEY${total !== 1 ? "S" : ""}` : `COVER-BOX BOOK${total !== 1 ? "S" : ""}`} · PAGE {page} OF {pages || 1}
         {search && <span> · FILTERED BY "{search}"</span>}
       </div>
 
