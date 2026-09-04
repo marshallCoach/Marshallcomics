@@ -1,6 +1,7 @@
 import { useState, useMemo, useEffect, useRef } from "react";
 import { DATA } from "@/data/data";
 import { pubColors } from "@/utils/coverThumbnails";
+import { CoverImage } from "@/components/CoverImage";
 
 const comics = DATA.comics;
 const boxes  = DATA.boxes;
@@ -703,6 +704,35 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                   )}
                 </div>
               )}
+            </div>
+          )}
+
+          {/* ── COVER STRIP — scrollable thumbnails below the spines ────────── */}
+          {view === "visual" && boxComics.length > 0 && (
+            <div style={{ marginTop: 22, borderTop: "1px solid var(--border)", paddingTop: 14 }}>
+              <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "2px", color: "var(--muted)", marginBottom: 8 }}>
+                COVERS · {boxComics.length} — SCROLL →
+              </div>
+              <div style={{ display: "flex", gap: 12, overflowX: "auto", paddingBottom: 12 }}>
+                {boxComics.map((c, i) => {
+                  const dim = selectedTitle ? c.Title !== selectedTitle : false;
+                  return (
+                    <figure key={i} onClick={() => setSelectedTitle(selectedTitle === c.Title ? null : c.Title)}
+                      style={{ margin: 0, flex: "0 0 auto", width: 74, cursor: "pointer", textAlign: "center", opacity: dim ? 0.28 : 1, transition: "opacity .15s" }}>
+                      <CoverImage comic={c} width={74} height={111} objectFit="contain"
+                        style={{ borderRadius: 3, background: "var(--surface2)", border: "1px solid var(--border)" }} />
+                      <figcaption title={`${c.Title} #${c.Issue}`}
+                        style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.72rem", fontWeight: 600, color: "var(--red)", marginTop: 4, lineHeight: 1.2 }}>
+                        #{c.Issue}
+                      </figcaption>
+                      <figcaption title={c.Title}
+                        style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.68rem", color: "var(--muted)", lineHeight: 1.2, maxWidth: 74, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+                        {c.Title}
+                      </figcaption>
+                    </figure>
+                  );
+                })}
+              </div>
             </div>
           )}
 
