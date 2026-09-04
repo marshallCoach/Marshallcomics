@@ -44,6 +44,7 @@ function KeyCard({ comic, flip }: { comic: KeyComic; flip: boolean }) {
         comic={comic}
         width={300}
         height={450}
+        objectFit="contain"
         style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}
       />
       {nm >= 1 && (
