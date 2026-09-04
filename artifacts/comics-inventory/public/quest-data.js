@@ -1,18 +1,18 @@
-// AUTO-GENERATED quest data — source: comics_inventory_0209_1527_GCD_FILLED.xlsx (11176 rows) · generated 2026-09-02
+// AUTO-GENERATED quest data — source: comics_inventory_0309_1800.xlsx (11213 rows) · generated 2026-09-04
 // Regenerate with: node gen_quest_data.mjs
 window.QUEST_DATA = {
- "source": "comics_inventory_0209_1527_GCD_FILLED.xlsx",
- "generated": "2026-09-02",
- "totalRows": 11176,
+ "source": "comics_inventory_0309_1800.xlsx",
+ "generated": "2026-09-04",
+ "totalRows": 11213,
  "dupe": {
-  "groups": 97,
-  "rows": 205,
-  "excess": 108
+  "groups": 99,
+  "rows": 209,
+  "excess": 110
  },
  "clone": {
-  "groups": 83,
-  "rows": 174,
-  "excess": 91
+  "groups": 85,
+  "rows": 178,
+  "excess": 93
  },
  "overCap": [
   {
@@ -507,8 +507,8 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 194,
    "vcap": 200,
-   "dupes": 0,
-   "clones": 0
+   "dupes": 2,
+   "clones": 2
   },
   {
    "box": 45,
@@ -805,10 +805,10 @@ window.QUEST_DATA = {
    "code": "BDR-1",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 215,
+   "rows": 217,
    "vcap": 240,
-   "dupes": 4,
-   "clones": 4
+   "dupes": 6,
+   "clones": 6
   },
   {
    "box": 80,
@@ -937,7 +937,7 @@ window.QUEST_DATA = {
    "code": "BDR-2",
    "status": "CC/Fabric Bin",
    "labeledAs": "",
-   "rows": 40,
+   "rows": 51,
    "vcap": 240,
    "dupes": 7,
    "clones": 7
@@ -949,7 +949,7 @@ window.QUEST_DATA = {
    "code": "BDR-2",
    "status": "CC/Fabric Bin",
    "labeledAs": "",
-   "rows": 91,
+   "rows": 100,
    "vcap": 240,
    "dupes": 2,
    "clones": 2
@@ -961,7 +961,7 @@ window.QUEST_DATA = {
    "code": "BDR-2",
    "status": "CC/Fabric Bin",
    "labeledAs": "",
-   "rows": 56,
+   "rows": 64,
    "vcap": 240,
    "dupes": 0,
    "clones": 0
@@ -1034,7 +1034,7 @@ window.QUEST_DATA = {
       },
       {
        "id": "0.5",
-       "text": "Confirm the chat reads back 11,176 rows. If not — STOP, wrong file."
+       "text": "Confirm the chat reads back 11,213 rows. If not — STOP, wrong file."
       }
      ]
     }
@@ -1045,7 +1045,7 @@ window.QUEST_DATA = {
    "title": "The Clones",
    "est": "identical twin rows — safest wins first",
    "accent": "green",
-   "blurb": "Rows that are exact copies of another row: same book, same box, logged twice. Live count: 83 clone groups / 91 excess rows. Highest confidence, lowest effort, biggest visible progress.",
+   "blurb": "Rows that are exact copies of another row: same book, same box, logged twice. Live count: 85 clone groups / 93 excess rows. Highest confidence, lowest effort, biggest visible progress.",
    "sittings": [
     {
      "id": "A1",
