@@ -15,6 +15,7 @@ import BoxTimeline from "@/pages/BoxTimeline";
 import BoxVisual from "@/pages/BoxVisual";
 import Runs from "@/pages/Runs";
 import Volumes from "@/pages/Volumes";
+import RunsVolumes from "@/pages/RunsVolumes";
 import DataView from "@/pages/DataView";
 import BoxHunt from "@/pages/BoxHunt";
 import CapFalconChecklist from "@/pages/CapFalconChecklist";
@@ -42,7 +43,7 @@ import PasswordGate from "@/components/PasswordGate";
 import { BookOpen, Boxes, Wrench, Image, Briefcase, Film, Clock, Archive } from "lucide-react";
 
 type TabId =
-  | "summary" | "everything" | "collection" | "boxkeys" | "stats" | "runs" | "dataview"
+  | "summary" | "everything" | "collection" | "boxkeys" | "stats" | "runs" | "runsvolumes" | "dataview"
   | "calendar" | "showplanner" | "cgc" | "signings" | "actionplan" | "timeline" | "boxvisual"
   | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "duplicates" | "dupchecklist" | "history"
   | "orgpath" | "volumes" | "boxlabels" | "keycatalog" | "covercatalog" | "coverreview" | "boxquest" | "boxmap"
@@ -63,8 +64,7 @@ const NAV = [
     tabs: [
       { id: "summary",     label: "Home" },
       { id: "everything",  label: "Every Book" },
-      { id: "runs",        label: "Runs" },
-      { id: "volumes",     label: "Volumes" },
+      { id: "runsvolumes", label: "Runs & Volumes" },
       { id: "collection",  label: "Sales" },
       { id: "stats",       label: "Stats" },
       { id: "dataview",    label: "Data View" },
@@ -317,6 +317,7 @@ export default function App() {
             onNavigate={navigateTo}
           />
         )}
+        {activeTab === "runsvolumes" && <RunsVolumes />}
         {activeTab === "runs"        && <Runs />}
         {activeTab === "volumes"     && <Volumes onNavigate={navigateTo} />}
         {activeTab === "collection"  && <OriginalCollection initSigned={navParams.signed} />}

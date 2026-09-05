@@ -8,8 +8,7 @@ const boxes  = DATA.boxes;
 const PAGES = [
   { id:"summary",     label:"Home",          section:"Inventory"    },
   { id:"everything",  label:"Every Book",    section:"Inventory"    },
-  { id:"runs",        label:"Runs",          section:"Inventory"    },
-  { id:"volumes",     label:"Volumes",       section:"Inventory"    },
+  { id:"runsvolumes", label:"Runs & Volumes", section:"Inventory"   },
   { id:"collection",  label:"Sales",         section:"Inventory"    },
   { id:"history",     label:"History",       section:"Inventory"    },
   { id:"stats",       label:"Stats",         section:"Inventory"    },
