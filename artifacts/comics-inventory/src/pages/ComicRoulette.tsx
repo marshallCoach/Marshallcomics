@@ -261,9 +261,7 @@ function ResultPanel({ r, onOpen, dim, charsByUrl }: { r: Result; onOpen: (u: st
               {(() => {
                 const ch = charsByUrl?.get(c.url);
                 return ch && ch.length
-                  ? <span style={{ display: "block", fontSize: ".68rem", color: "var(--muted,#8a8a99)", marginTop: 2, lineHeight: 1.3 }}>
-                      {ch.slice(0, 4).join(", ")}{ch.length > 4 ? ` +${ch.length - 4}` : ""}
-                    </span>
+                  ? <span className="cr-cap-chars">{ch.join(" · ")}</span>
                   : null;
               })()}
             </figcaption>
@@ -301,11 +299,13 @@ const CR_CSS = `
 .cr-dc { background:#0476F2; } .cr-marvel { background:#ED1D24; } .cr-image { background:#111; border:1px solid #444; } .cr-other { background:#6b5b95; }
 .cr-title { color: var(--muted,#888); } .cr-artist { color:#e0a030; font-weight:600; } .cr-count { margin-left:auto; color:var(--muted,#888); font-size:.85rem; }
 .cr-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px,1fr)); gap: .9rem; }
-.cr-cover { margin: 0; cursor: pointer; background:#15151c; border:1px solid #26262f; border-radius:8px; overflow:hidden; transition: transform .12s; }
+.cr-cover { margin: 0; cursor: pointer; background:#23232e; border:1px solid #34343f; border-radius:8px; overflow:hidden; transition: transform .12s; }
 .cr-cover:hover { transform: translateY(-3px); }
-.cr-cover img { width:100%; aspect-ratio: 2/3; object-fit: cover; display:block; }
-.cr-cover figcaption { padding: .4rem .5rem; font-size: .72rem; display:flex; flex-direction:column; gap:2px; }
-.cr-cap-title { font-weight:600; color:#eee; } .cr-cap-artist { color:#e0a030; }
+.cr-cover img { width:100%; aspect-ratio: 2/3; object-fit: contain; background:#0d0d12; display:block; }
+.cr-cover figcaption { padding: .5rem .55rem .6rem; font-size: .75rem; display:flex; flex-direction:column; gap:3px; }
+.cr-cap-title { font-weight:700; color:#f6f6f9; line-height:1.25; }
+.cr-cap-artist { color:#f0b64a; font-weight:600; }
+.cr-cap-chars { color:#c9c9d6; font-size:.72rem; line-height:1.4; }
 .cr-qa-head { color: var(--muted,#888); font-size: .85rem; margin-bottom: .75rem; }
 .cr-qa-row { border-top: 1px solid var(--border,#26262f); padding: .7rem 0; }
 .cr-qa-meta { margin-bottom: .4rem; font-size: .9rem; }
