@@ -83,11 +83,12 @@ export default function CoverReview() {
     return () => { if (tickRef.current) clearInterval(tickRef.current); };
   }, [pool, batchStart, paused, titleFilter]);
 
-  // All issues of a pinned title (every issue that has a cover), issue-sorted,
-  // so clicking a title lets you scan the whole run for other wrong covers.
-  const titleComics = useMemo(() => {
-    if (!titleFilter) return [];
-    const out: Pooled[] = [];
+  // All issues of a pinned title (every issue that has a cover), grouped by
+  // volume and issue-sorted within each volume, so clicking a title lets you
+  // scan the whole run — one volume at a time — for other wrong covers.
+  const titleGroups = useMemo(() => {
+    if (!titleFilter) return [] as { volume: string; items: Pooled[] }[];
+    const byVol = new Map<string, Pooled[]>();
     const seen = new Set<string>();
     for (const c of DATA.comics as Comic[]) {
       if (c.Title !== titleFilter) continue;
@@ -95,10 +96,17 @@ export default function CoverReview() {
       const key = `${c.Title}|||${c.Issue}|||${vol}`;
       if (seen.has(key)) continue;
       const entry = coversMap[key] ?? coversMap[`${c.Title}|||${c.Issue}`];
-      if (entry?.url) { seen.add(key); out.push({ comic: c, url: entry.url }); }
+      if (entry?.url) { seen.add(key); (byVol.get(vol) ?? byVol.set(vol, []).get(vol)!).push({ comic: c, url: entry.url }); }
     }
-    return out.sort((a, b) => (parseFloat(String(a.comic.Issue)) || 0) - (parseFloat(String(b.comic.Issue)) || 0));
+    return [...byVol.entries()]
+      .map(([volume, items]) => ({
+        volume,
+        items: items.sort((a, b) => (parseFloat(String(a.comic.Issue)) || 0) - (parseFloat(String(b.comic.Issue)) || 0)),
+      }))
+      .sort((a, b) => (parseInt(a.volume) || 0) - (parseInt(b.volume) || 0));
   }, [titleFilter, coversMap]);
+
+  const titleCount = useMemo(() => titleGroups.reduce((n, g) => n + g.items.length, 0), [titleGroups]);
 
   const lanes = useMemo(() => {
     if (!pool || pool.length === 0) return [];
@@ -167,7 +175,7 @@ export default function CoverReview() {
         <button
           onClick={() => setTitleFilter(p.comic.Title)}
           title={`Show all ${p.comic.Title} issues`}
-          style={{ background: "none", border: "none", padding: 0, cursor: "pointer", fontSize: "0.875rem", color: "var(--red)", marginTop: 4, lineHeight: 1.3, height: 36, overflow: "hidden", textDecoration: "underline", width: "100%" }}
+          style={{ background: "none", border: "none", padding: 0, cursor: "pointer", fontSize: "0.8rem", color: "var(--red)", marginTop: 4, lineHeight: 1.3, overflow: "visible", whiteSpace: "normal", wordBreak: "break-word", textDecoration: "underline", width: "100%" }}
         >
           {p.comic.Title} #{p.comic.Issue}
         </button>
@@ -188,7 +196,7 @@ export default function CoverReview() {
           </div>
           <div style={{ fontSize: "0.875rem", color: "var(--muted)" }}>
             {titleFilter
-              ? `${titleFilter} — ${titleComics.length} issue${titleComics.length === 1 ? "" : "s"} · click "wrong" on any incorrect cover`
+              ? `${titleFilter} — ${titleCount} issue${titleCount === 1 ? "" : "s"} across ${titleGroups.length} volume${titleGroups.length === 1 ? "" : "s"} · click "wrong" on any incorrect cover`
               : `${pool.length.toLocaleString()} covers in pool · batch ${Math.floor(batchStart / BATCH_SIZE) + 1} of ${Math.ceil(pool.length / BATCH_SIZE)} · ${flags.size} flagged so far`}
           </div>
         </div>
@@ -215,11 +223,20 @@ export default function CoverReview() {
       )}
 
       {titleFilter ? (
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 12, marginTop: 20 }}>
-          {titleComics.length === 0
-            ? <div style={{ color: "var(--muted)" }}>No covered issues found for this title.</div>
-            : titleComics.map((p, i) => card(p, `t-${i}`))}
-        </div>
+        titleCount === 0 ? (
+          <div style={{ color: "var(--muted)", marginTop: 20 }}>No covered issues found for this title.</div>
+        ) : (
+          titleGroups.map(g => (
+            <div key={g.volume} style={{ marginTop: 20 }}>
+              <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1.5px", color: "var(--muted)", marginBottom: 8, borderBottom: "1px solid var(--border)", paddingBottom: 4 }}>
+                VOLUME {g.volume} · {g.items.length} issue{g.items.length === 1 ? "" : "s"}
+              </div>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
+                {g.items.map((p, i) => card(p, `v${g.volume}-${i}`))}
+              </div>
+            </div>
+          ))
+        )
       ) : (
         lanes.map((lane, li) => (
           <div key={li} style={{ marginBottom: 18 }}>
