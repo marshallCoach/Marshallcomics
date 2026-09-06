@@ -88890,10 +88890,15 @@
     "volume_start_year": 2026
   },
   "Gacha Man|||1|||1": null,
-  "Black|||2|||1": {
+  "Mask|||3|||1": {
     "url": null,
     "large": null,
     "date": "2026-09-04"
+  },
+  "Black|||2|||1": {
+    "url": null,
+    "large": null,
+    "date": "2026-09-06"
   },
   "Black|||4|||1": null,
   "Buffy the Vampire Slayer: Season Eight|||1|||1": null,
@@ -88916,39 +88921,39 @@
   "Die|||11|||1": {
     "url": null,
     "large": null,
-    "date": "2026-09-04"
+    "date": "2026-09-06"
   },
   "Die|||12|||1": null,
   "Die|||13|||1": null,
   "Die|||16|||1": {
     "url": null,
     "large": null,
-    "date": "2026-09-04"
+    "date": "2026-09-06"
   },
   "Die|||19|||1": {
     "url": null,
     "large": null,
-    "date": "2026-09-04"
+    "date": "2026-09-06"
   },
   "Die|||1|||1": {
     "url": null,
     "large": null,
-    "date": "2026-09-04"
+    "date": "2026-09-06"
   },
   "Die|||5|||1": {
     "url": null,
     "large": null,
-    "date": "2026-09-04"
+    "date": "2026-09-06"
   },
   "Die|||7|||1": {
     "url": null,
     "large": null,
-    "date": "2026-09-04"
+    "date": "2026-09-06"
   },
   "Die|||8|||1": {
     "url": null,
     "large": null,
-    "date": "2026-09-04"
+    "date": "2026-09-06"
   },
   "Doctor Who: The Eleventh Doctor - Year One|||5|||1": null,
   "Doctor Who: The Eleventh Doctor - Year One|||6|||1": null,
@@ -88964,81 +88969,119 @@
   "G.I. Joe|||16|||1": null,
   "G.I. Joe|||17|||1": null,
   "G.I. Joe|||19|||1": null,
-  "Gatchaman|||1|||1": null,
-  "Gatchaman|||3|||1": null,
-  "Gatchaman|||5|||1": null,
-  "Gatchaman|||2|||1": null,
-  "Gatchaman|||4|||1": null,
+  "Gatchaman|||1|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/9397985-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9397985-cover.jpg",
+    "date": "2024-06-26",
+    "volume_id": 158145,
+    "volume_name": "Gatchaman",
+    "volume_start_year": 2024
+  },
+  "Gatchaman|||3|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/9475192-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9475192-cover.jpg",
+    "date": "2024-09-16",
+    "volume_id": 158145,
+    "volume_name": "Gatchaman",
+    "volume_start_year": 2024
+  },
+  "Gatchaman|||5|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/9547604-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9547604-cover.jpg",
+    "date": "2024-11-27",
+    "volume_id": 158145,
+    "volume_name": "Gatchaman",
+    "volume_start_year": 2024
+  },
+  "Gatchaman|||2|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/9432430-3870705265-B0D46.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9432430-3870705265-B0D46.jpg",
+    "date": "2024-07-01",
+    "volume_id": 158145,
+    "volume_name": "Gatchaman",
+    "volume_start_year": 2024
+  },
+  "Gatchaman|||4|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/9517857-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9517857-cover.jpg",
+    "date": "2024-10-23",
+    "volume_id": 158145,
+    "volume_name": "Gatchaman",
+    "volume_start_year": 2024
+  },
   "Leaders of the Free World|||1|||1": {
     "url": null,
     "large": null,
-    "date": "2026-09-04"
+    "date": "2026-09-06"
   },
   "Leaders of the Free World|||2|||1": {
     "url": null,
     "large": null,
-    "date": "2026-09-04"
+    "date": "2026-09-06"
   },
   "Magic Order|||0|||1": null,
-  "Mask|||3|||1": {
-    "url": null,
-    "large": null,
-    "date": "2026-09-04"
+  "M.A.S.K.|||3|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/10146823-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/10146823-cover.jpg",
+    "date": "2026-08-05",
+    "volume_id": 172754,
+    "volume_name": "M.A.S.K.",
+    "volume_start_year": 2026
   },
   "Mighty Morphin Power Rangers|||101|||1": null,
   "Mulan Revelations|||1|||1": {
     "url": null,
     "large": null,
-    "date": "2026-09-04"
+    "date": "2026-09-06"
   },
   "Mulan Revelations|||2|||1": null,
   "Mulan Revelations|||3|||1": null,
   "Rocketeer|||2|||1": {
     "url": null,
     "large": null,
-    "date": "2026-09-04"
+    "date": "2026-09-06"
   },
   "Rocketeer|||4|||1": {
     "url": null,
     "large": null,
-    "date": "2026-09-04"
+    "date": "2026-09-06"
   },
   "Scarlett|||1|||2": {
     "url": null,
     "large": null,
-    "date": "2026-09-04"
+    "date": "2026-09-06"
   },
   "Scarlett|||2|||2": {
     "url": null,
     "large": null,
-    "date": "2026-09-04"
+    "date": "2026-09-06"
   },
   "Scarlett|||3|||2": {
     "url": null,
     "large": null,
-    "date": "2026-09-04"
+    "date": "2026-09-06"
   },
   "Scarlett|||5|||2": null,
   "Shadow Man|||1|||4": null,
   "Shadow Man|||2|||4": {
     "url": null,
     "large": null,
-    "date": "2026-09-04"
+    "date": "2026-09-06"
   },
   "Shadow Man|||3|||4": {
     "url": null,
     "large": null,
-    "date": "2026-09-04"
+    "date": "2026-09-06"
   },
   "Shadow Man|||4|||4": {
     "url": null,
     "large": null,
-    "date": "2026-09-04"
+    "date": "2026-09-06"
   },
   "Shadow Man|||5|||4": {
     "url": null,
     "large": null,
-    "date": "2026-09-04"
+    "date": "2026-09-06"
   },
   "Shadow Man|||8|||4": null,
   "Shadow Man|||9|||4": null,
@@ -89052,32 +89095,32 @@
   "Thundercats/Silverhawks|||5|||1": {
     "url": null,
     "large": null,
-    "date": "2026-09-04"
+    "date": "2026-09-06"
   },
   "Torchwood|||1|||1": {
     "url": null,
     "large": null,
-    "date": "2026-09-04"
+    "date": "2026-09-06"
   },
   "Xin: Journey of the Monkey King|||1|||2": {
     "url": null,
     "large": null,
-    "date": "2026-09-04"
+    "date": "2026-09-06"
   },
   "Xin: Journey of the Monkey King|||3|||2": null,
   "Xin: Legend of the Monkey King|||1|||1": {
     "url": null,
     "large": null,
-    "date": "2026-09-04"
+    "date": "2026-09-06"
   },
   "Xin: Legend of the Monkey King|||2|||1": {
     "url": null,
     "large": null,
-    "date": "2026-09-04"
+    "date": "2026-09-06"
   },
   "Xin: Legend of the Monkey King|||3|||1": {
     "url": null,
     "large": null,
-    "date": "2026-09-04"
+    "date": "2026-09-06"
   }
 }
