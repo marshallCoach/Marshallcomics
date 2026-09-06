@@ -1,6 +1,7 @@
 import { useEffect, useState, useCallback } from "react";
 import { UPDATE_FIELDS, getComicFlag, setComicFlag, clearComicFlag } from "@/lib/comicFlags";
 import { CoverImage, CoverModal } from "@/components/CoverImage";
+import { ebayHeadline } from "@/utils/ebay";
 
 export type DrawerComic = {
   Title: string;
@@ -36,6 +37,7 @@ export type DrawerComic = {
   eBay_Low?: number | null;
   eBay_High?: number | null;
   eBay_Count?: number | null;
+  eBay_Median?: number | null;
 };
 
 function buildClaudePrompt(comic: DrawerComic, fields: string[], notes: string): string {
@@ -476,8 +478,8 @@ export default function ComicDrawer({ comic, comicKey, onClose, onFlagChange }: 
           <Row label="Category"     val={comic.Category} />
           <Row label="Terrificon"   val={comic.Terrificon} />
 
-          {/* eBay market data */}
-          {comic.eBay_Avg != null && (
+          {/* eBay market data — headline is the LOWER of median & avg */}
+          {ebayHeadline(comic) != null && (
             <div style={{ marginTop:10, background:"var(--surface)", border:"1px solid var(--border)", borderRadius:6, padding:"10px 14px" }}>
               <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:"var(--muted)", marginBottom:8 }}>
                 EBAY SOLD DATA
@@ -489,8 +491,8 @@ export default function ComicDrawer({ comic, comicKey, onClose, onFlagChange }: 
               </div>
               <div style={{ display:"flex", gap:0 }}>
                 <div style={{ flex:1, textAlign:"center", borderRight:"1px solid var(--border)" }}>
-                  <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px", color:"var(--muted)", marginBottom:2 }}>AVG</div>
-                  <div style={{ fontSize:"0.875rem", fontWeight:700, color:"var(--text)", fontVariantNumeric:"tabular-nums" }}>${comic.eBay_Avg.toFixed(0)}</div>
+                  <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px", color:"var(--muted)", marginBottom:2 }}>EST</div>
+                  <div style={{ fontSize:"0.875rem", fontWeight:700, color:"var(--text)", fontVariantNumeric:"tabular-nums" }}>${ebayHeadline(comic)!.toFixed(0)}</div>
                 </div>
                 <div style={{ flex:1, textAlign:"center", borderRight:"1px solid var(--border)" }}>
                   <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px", color:"var(--muted)", marginBottom:2 }}>LOW</div>
