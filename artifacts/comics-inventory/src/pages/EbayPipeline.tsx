@@ -44,7 +44,7 @@ export default function EbayPipeline() {
     {
       num: 5, status: "done" as const,
       title: <>Inject eBay data into <code>data3.ts</code> (app data)</>,
-      body: <>1,313 comics matched across multiple boxes. Fields added to <code>Comic</code> interface: <code>eBay_Avg</code>, <code>eBay_Low</code>, <code>eBay_High</code>, <code>eBay_Count</code>. 9,573 entries are <code>null</code>.</>,
+      body: <>{EP_PRICED.toLocaleString()} comics currently carry eBay pricing in the app data. Fields on the <code>Comic</code> interface: <code>eBay_Avg</code>, <code>eBay_Median</code>, <code>eBay_Low</code>, <code>eBay_High</code>, <code>eBay_Count</code> — the drawer/Box Keys headline uses the <b>lower of median &amp; avg</b>. {(EP_ROWS - EP_PRICED).toLocaleString()} rows are still <code>null</code> (unpriced).</>,
       failures: [
         "Issue number format mismatch: JSON stores 160.0, data3.ts stores 160 — fixed by normalising through float()",
       ],
