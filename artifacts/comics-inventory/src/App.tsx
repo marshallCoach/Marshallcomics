@@ -160,7 +160,7 @@ const signed = comics.filter(c => (c.Signed || "").toUpperCase() === "YES").leng
 const keys   = comics.filter(c => (c.Key    || "").toUpperCase() === "YES").length;
 const boxes  = DATA.boxes.length;
 
-const TERRIFICON_DATE = new Date(2026, 7, 7, 9, 0, 0);
+const NYCC_DATE = new Date(2026, 9, 8, 9, 0, 0);   // NYCC 2026 — Oct 8 (Thu)
 
 function useCountdown(target: Date) {
   const [diff, setDiff] = useState(() => target.getTime() - Date.now());
@@ -184,7 +184,7 @@ export default function App() {
   const [activeTab,     setActiveTab]     = useState<TabId>("summary");
   const [navParams,     setNavParams]     = useState<NavParams>({});
   const [showSearch,    setShowSearch]    = useState(false);
-  const cd = useCountdown(TERRIFICON_DATE);
+  const cd = useCountdown(NYCC_DATE);
 
   const currentSection = NAV.find(n => n.id === activeSection)!;
 
@@ -222,10 +222,10 @@ export default function App() {
 
       {/* STICKY CHROME — banner + header + nav as ONE sticky block (no offset math) */}
       <div className="app-chrome">
-      {/* TERRIFICON BANNER */}
+      {/* NYCC COUNTDOWN BANNER */}
       {!cd.past && (
-        <button className="terrificon-banner" onClick={() => navigateTo("cgc")}>
-          <span className="tf-label">TERRIFICON · AUG 7–9</span>
+        <button className="event-banner" onClick={() => navigateTo("calendar")}>
+          <span className="tf-label">NYCC · OCT 8–11</span>
           <span className="tf-divider">·</span>
           <span className="tf-time">{cd.days}d {cd.hours}h {String(cd.minutes).padStart(2,"0")}m {String(cd.seconds).padStart(2,"0")}s</span>
         </button>
