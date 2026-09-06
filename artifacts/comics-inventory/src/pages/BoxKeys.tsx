@@ -5,6 +5,7 @@ import { SortableTable, ColDef } from "@/components/SortableTable";
 import { Paginator } from "@/components/Paginator";
 import ComicDrawer, { type DrawerComic } from "@/components/ComicDrawer";
 import { comicFlagKey, loadAllFlags } from "@/lib/comicFlags";
+import { ebayHeadline } from "@/utils/ebay";
 
 const CARD_PAGE_SIZE = 100;
 
@@ -84,10 +85,10 @@ const LIST_COLS: ColDef<Key>[] = [
     },
   },
   {
-    key: "ebay_avg", label: "eBay Avg", defaultWidth: 90,
-    sort: (a, b) => (a.eBay_Avg ?? -1) - (b.eBay_Avg ?? -1),
+    key: "ebay_est", label: "eBay Est", defaultWidth: 90,
+    sort: (a, b) => (ebayHeadline(a) ?? -1) - (ebayHeadline(b) ?? -1),
     cell: r => {
-      const v = r.eBay_Avg;
+      const v = ebayHeadline(r);
       if (v == null) return <span className="lt-sub" style={{ color:"var(--muted)" }}>—</span>;
       return <span className="lt-val" style={{ color:"#16a34a", fontVariantNumeric:"tabular-nums" }}>${v.toFixed(0)}</span>;
     },
