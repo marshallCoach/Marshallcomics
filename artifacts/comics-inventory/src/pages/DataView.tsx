@@ -153,11 +153,11 @@ export default function DataView() {
 
       {/* Page header */}
       <div style={{ marginBottom: 6 }}>
-        <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.6rem",
+        <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "1.75rem",
           color: "var(--red)", letterSpacing: "3px", lineHeight: 1 }}>
           Data View
         </div>
-        <div style={{ fontSize: "0.85rem", color: "var(--muted)", marginTop: 4 }}>
+        <div style={{ fontSize: "0.875rem", color: "var(--muted)", marginTop: 4 }}>
           Column population across <strong>{total.toLocaleString()}</strong> comics — how complete is the catalogue?
         </div>
       </div>
@@ -167,7 +167,7 @@ export default function DataView() {
         background: "var(--surface)", border: "1.5px solid var(--border)",
         borderRadius: 8, padding: "14px 16px", marginBottom: 20, marginTop: 14,
       }}>
-        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"2px", color:"var(--muted)", marginBottom:10 }}>
+        <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:"var(--muted)", marginBottom:10 }}>
           OFFLINE DATA MANAGEMENT
           {hasOverride && <span style={{ marginLeft:8, color:"#d97706", letterSpacing:"1px" }}>● OVERRIDE ACTIVE</span>}
         </div>
@@ -176,7 +176,7 @@ export default function DataView() {
           <button
             onClick={handleExport}
             style={{
-              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1.5px",
+              fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
               padding:"7px 16px", border:"1.5px solid var(--border)",
               background:"var(--surface2)", color:"var(--muted2)", borderRadius:5, cursor:"pointer",
             }}
@@ -187,7 +187,7 @@ export default function DataView() {
           <button
             onClick={() => fileRef.current?.click()}
             style={{
-              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1.5px",
+              fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
               padding:"7px 16px", border:"1.5px solid #2563eb",
               background:"none", color:"#2563eb", borderRadius:5, cursor:"pointer",
             }}
@@ -200,7 +200,7 @@ export default function DataView() {
             <button
               onClick={handleClearOverride}
               style={{
-                fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1.5px",
+                fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
                 padding:"7px 14px", border:"1.5px solid #c8102e",
                 background:"none", color:"#c8102e", borderRadius:5, cursor:"pointer",
               }}
@@ -211,8 +211,8 @@ export default function DataView() {
         </div>
         {importMsg && (
           <div style={{
-            marginTop:10, padding:"7px 12px", borderRadius:5, fontSize:"0.8rem",
-            fontFamily:"'Crimson Pro',serif", lineHeight:1.45,
+            marginTop:10, padding:"7px 12px", borderRadius:5, fontSize:"0.875rem",
+            fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", lineHeight:1.45,
             background: importMsg.ok ? "#f0fdf4" : "#fff0f0",
             border: `1px solid ${importMsg.ok ? "#86efac" : "#fca5a5"}`,
             color: importMsg.ok ? "#166534" : "#991b1b",
@@ -220,7 +220,7 @@ export default function DataView() {
             {importMsg.text}
           </div>
         )}
-        <div style={{ marginTop:8, fontSize:"0.72rem", color:"var(--muted)", fontFamily:"'Crimson Pro',serif", fontStyle:"italic" }}>
+        <div style={{ marginTop:8, fontSize:"0.875rem", color:"var(--muted)", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontStyle:"italic" }}>
           Export JSON from this page · drop the file in a new xlsx build · re-import offline. After import, reload the page.
         </div>
       </div>
@@ -240,9 +240,9 @@ export default function DataView() {
             borderRadius: 6, padding: "5px 12px",
           }}>
             <div style={{ width: 8, height: 8, background: b.color, borderRadius: "50%", flexShrink: 0 }} />
-            <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.7rem",
+            <span style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
               letterSpacing: "1px", color: b.color }}>{b.count}</span>
-            <span style={{ fontSize: "0.72rem", color: "var(--muted)" }}>{b.label}</span>
+            <span style={{ fontSize: "0.875rem", color: "var(--muted)" }}>{b.label}</span>
           </div>
         ))}
       </div>
@@ -256,8 +256,8 @@ export default function DataView() {
           onChange={e => setSearch(e.target.value)}
           style={{ flex: 1, minWidth: 160, maxWidth: 280,
             border: "1.5px solid var(--border)", borderRadius: 6,
-            padding: "7px 12px", fontSize: "0.85rem",
-            fontFamily: "'Crimson Pro',Georgia,serif", background: "var(--surface)",
+            padding: "7px 12px", fontSize: "0.875rem",
+            fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", background: "var(--surface)",
             color: "var(--text2)", outline: "none" }}
         />
         <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
@@ -272,14 +272,14 @@ export default function DataView() {
               color: sortMode === m ? "#fff" : "var(--muted2)",
               border: sortMode === m ? "1.5px solid var(--red)" : "1.5px solid var(--border)",
               borderRadius: 5, padding: "6px 14px", cursor: "pointer",
-              fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.75rem", letterSpacing: "1px",
+              fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1px",
               transition: "all 0.15s",
             }}>
               {lbl}
             </button>
           ))}
         </div>
-        <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.7rem",
+        <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
           letterSpacing: "1px", color: "var(--muted)", marginLeft: "auto" }}>
           {displayed.length} of {stats.length} FIELDS
         </div>
@@ -298,26 +298,26 @@ export default function DataView() {
               <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 6 }}>
                 {/* Rank */}
                 {sortMode === "pct" && (
-                  <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.75rem",
+                  <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
                     color: "var(--muted)", minWidth: 22, textAlign: "right", flexShrink: 0 }}>
                     #{i + 1}
                   </div>
                 )}
                 {/* Label */}
-                <div style={{ flex: 1, fontSize: "0.88rem", fontWeight: 600, color: "var(--brown-light)" }}>
+                <div style={{ flex: 1, fontSize: "0.875rem", fontWeight: 600, color: "var(--brown-light)" }}>
                   {s.label}
-                  <span style={{ fontFamily: "monospace", fontSize: "0.72rem",
+                  <span style={{ fontFamily: "monospace", fontSize: "0.875rem",
                     color: "var(--muted)", marginLeft: 8, fontWeight: 400 }}>
                     .{s.field}
                   </span>
                 </div>
                 {/* Count */}
-                <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.8rem",
+                <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
                   color: "var(--muted2)", letterSpacing: "0.5px", flexShrink: 0 }}>
                   {s.count.toLocaleString()} / {total.toLocaleString()}
                 </div>
                 {/* Percentage */}
-                <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem",
+                <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
                   color, letterSpacing: "1px", minWidth: 42, textAlign: "right", flexShrink: 0 }}>
                   {s.pct}%
                 </div>
@@ -333,8 +333,8 @@ export default function DataView() {
 
               {/* Sample value */}
               {s.sample && (
-                <div style={{ marginTop: 5, fontSize: "0.73rem", color: "var(--muted)",
-                  fontFamily: "'Crimson Pro',Georgia,serif", fontStyle: "italic",
+                <div style={{ marginTop: 5, fontSize: "0.875rem", color: "var(--muted)",
+                  fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontStyle: "italic",
                   overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
                   e.g. "{s.sample}"
                 </div>
@@ -346,7 +346,7 @@ export default function DataView() {
 
       {displayed.length === 0 && (
         <div style={{ textAlign: "center", padding: "40px 20px", color: "var(--muted)",
-          fontFamily: "'Bebas Neue',sans-serif", letterSpacing: "2px" }}>
+          fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing: "2px" }}>
           NO COLUMNS MATCH "{search}"
         </div>
       )}

@@ -1,0 +1,560 @@
+{
+  "All-New X-Men|2|4": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "All-New X-Men",
+    "Vol_A": 2,
+    "Vol_B": 4,
+    "gap": 2.0,
+    "year_A": "2015-2015",
+    "year_B": "2013-2013"
+  },
+  "Alpha Flight|1|3": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Alpha Flight",
+    "Vol_A": 1,
+    "Vol_B": 3,
+    "gap": 19.0,
+    "year_A": "1983-2023",
+    "year_B": "2004-2004"
+  },
+  "Avengers|1|3": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Avengers",
+    "Vol_A": 1,
+    "Vol_B": 3,
+    "gap": 21.0,
+    "year_A": "1993-2025",
+    "year_B": "2004-2004"
+  },
+  "Black Panther|1|3": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Black Panther",
+    "Vol_A": 1,
+    "Vol_B": 3,
+    "gap": 7.0,
+    "year_A": "2006-2006",
+    "year_B": "1999-2003"
+  },
+  "Black Panther|6|7": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Black Panther",
+    "Vol_A": 6,
+    "Vol_B": 7,
+    "gap": 2.0,
+    "year_A": "2016-2018",
+    "year_B": "2016-2016"
+  },
+  "Black Panther and the Agents of Wakanda|1|8": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Black Panther and the Agents of Wakanda",
+    "Vol_A": 1,
+    "Vol_B": 8,
+    "gap": 1.0,
+    "year_A": "2020-2020",
+    "year_B": "2019-2019"
+  },
+  "Black Widow|4|6": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Black Widow",
+    "Vol_A": 4,
+    "Vol_B": 6,
+    "gap": 2.0,
+    "year_A": "2016-2016",
+    "year_B": "2014-2015"
+  },
+  "Black Widow|8|9": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Black Widow",
+    "Vol_A": 8,
+    "Vol_B": 9,
+    "gap": 4.0,
+    "year_A": "2020-2022",
+    "year_B": "2018-2018"
+  },
+  "Cable|1|2": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Cable",
+    "Vol_A": 1,
+    "Vol_B": 2,
+    "gap": 16.0,
+    "year_A": "1993-2024",
+    "year_B": "2008-2009"
+  },
+  "Cable|3|4": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Cable",
+    "Vol_A": 3,
+    "Vol_B": 4,
+    "gap": 1.0,
+    "year_A": "2017-2018",
+    "year_B": "2017-2020"
+  },
+  "Captain America|1|5": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Captain America",
+    "Vol_A": 1,
+    "Vol_B": 5,
+    "gap": 21.0,
+    "year_A": "2011-2025",
+    "year_B": "2004-2014"
+  },
+  "Captain America|5|6": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Captain America",
+    "Vol_A": 5,
+    "Vol_B": 6,
+    "gap": 7.0,
+    "year_A": "2004-2014",
+    "year_B": "2007-2011"
+  },
+  "Captain America|7|9": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Captain America",
+    "Vol_A": 7,
+    "Vol_B": 9,
+    "gap": 32.0,
+    "year_A": "2012-2013",
+    "year_B": "1981-2024"
+  },
+  "Captain Marvel|1|7": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Captain Marvel",
+    "Vol_A": 1,
+    "Vol_B": 7,
+    "gap": 11.0,
+    "year_A": "2016-2023",
+    "year_B": "2012-2012"
+  },
+  "Eternals|1|4": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Eternals",
+    "Vol_A": 1,
+    "Vol_B": 4,
+    "gap": 1.0,
+    "year_A": "2006-2007",
+    "year_B": "2006-2006"
+  },
+  "Exiles|1|2": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Exiles",
+    "Vol_A": 1,
+    "Vol_B": 2,
+    "gap": 3.0,
+    "year_A": "2001-2021",
+    "year_B": "2018-2018"
+  },
+  "Fantastic Four|1|3": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Fantastic Four",
+    "Vol_A": 1,
+    "Vol_B": 3,
+    "gap": 26.0,
+    "year_A": "2007-2025",
+    "year_B": "1999-2022"
+  },
+  "Fantastic Four|3|4": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Fantastic Four",
+    "Vol_A": 3,
+    "Vol_B": 4,
+    "gap": 10.0,
+    "year_A": "1999-2022",
+    "year_B": "2012-2014"
+  },
+  "Giant-Size X-Men|1|6": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Giant-Size X-Men",
+    "Vol_A": 1,
+    "Vol_B": 6,
+    "gap": 2.0,
+    "year_A": "2020-2024",
+    "year_B": "2022-2022"
+  },
+  "Hawkeye|3|4": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Hawkeye",
+    "Vol_A": 3,
+    "Vol_B": 4,
+    "gap": 3.0,
+    "year_A": "2015-2015",
+    "year_B": "2012-2012"
+  },
+  "Hulk|1|2": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Hulk",
+    "Vol_A": 1,
+    "Vol_B": 2,
+    "gap": 16.0,
+    "year_A": "2022-2024",
+    "year_B": "2008-2011"
+  },
+  "Incredible Hulk|1|2": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Incredible Hulk",
+    "Vol_A": 1,
+    "Vol_B": 2,
+    "gap": 32.0,
+    "year_A": "2024-2024",
+    "year_B": "1992-1992"
+  },
+  "Invincible Iron Man|1|2": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Invincible Iron Man",
+    "Vol_A": 1,
+    "Vol_B": 2,
+    "gap": 16.0,
+    "year_A": "2005-2024",
+    "year_B": "2008-2022"
+  },
+  "Invincible Iron Man|2|3": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Invincible Iron Man",
+    "Vol_A": 2,
+    "Vol_B": 3,
+    "gap": 7.0,
+    "year_A": "2008-2022",
+    "year_B": "2015-2018"
+  },
+  "Invincible Iron Man|3|4": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Invincible Iron Man",
+    "Vol_A": 3,
+    "Vol_B": 4,
+    "gap": 1.0,
+    "year_A": "2015-2018",
+    "year_B": "2017-2017"
+  },
+  "Iron Fist|1|5": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Iron Fist",
+    "Vol_A": 1,
+    "Vol_B": 5,
+    "gap": 7.0,
+    "year_A": "2024-2024",
+    "year_B": "2017-2017"
+  },
+  "Iron Man|1|5": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Iron Man",
+    "Vol_A": 1,
+    "Vol_B": 5,
+    "gap": 12.0,
+    "year_A": "2011-2024",
+    "year_B": "2012-2012"
+  },
+  "Iron Man|6|7": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Iron Man",
+    "Vol_A": 6,
+    "Vol_B": 7,
+    "gap": 1.0,
+    "year_A": "2020-2023",
+    "year_B": "2022-2022"
+  },
+  "Journey into Mystery|1|3": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Journey into Mystery",
+    "Vol_A": 1,
+    "Vol_B": 3,
+    "gap": 7.0,
+    "year_A": "2011-2019",
+    "year_B": "2012-2013"
+  },
+  "Marc Spector: Moon Knight|9|11": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Marc Spector: Moon Knight",
+    "Vol_A": 9,
+    "Vol_B": 11,
+    "gap": 1.0,
+    "year_A": "2025-2025",
+    "year_B": "2024-2024"
+  },
+  "Moon Knight|1|3": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Moon Knight",
+    "Vol_A": 1,
+    "Vol_B": 3,
+    "gap": 5.0,
+    "year_A": "2011-2011",
+    "year_B": "2006-2006"
+  },
+  "Moon Knight|6|7": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Moon Knight",
+    "Vol_A": 6,
+    "Vol_B": 7,
+    "gap": 3.0,
+    "year_A": "2014-2014",
+    "year_B": "2011-2011"
+  },
+  "Moon Knight|8|9": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Moon Knight",
+    "Vol_A": 8,
+    "Vol_B": 9,
+    "gap": 1.0,
+    "year_A": "2016-2022",
+    "year_B": "2021-2023"
+  },
+  "Moon Knight: Fist of Khonshu|9|11": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Moon Knight: Fist of Khonshu",
+    "Vol_A": 9,
+    "Vol_B": 11,
+    "gap": 1.0,
+    "year_A": "2025-2025",
+    "year_B": "2024-2024"
+  },
+  "New Avengers|1|4": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "New Avengers",
+    "Vol_A": 1,
+    "Vol_B": 4,
+    "gap": 3.0,
+    "year_A": "2005-2014",
+    "year_B": "2011-2011"
+  },
+  "New Warriors|1|3": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "New Warriors",
+    "Vol_A": 1,
+    "Vol_B": 3,
+    "gap": 7.0,
+    "year_A": "1990-2014",
+    "year_B": "2007-2007"
+  },
+  "Old Man Logan|2|8": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Old Man Logan",
+    "Vol_A": 2,
+    "Vol_B": 8,
+    "gap": 1.0,
+    "year_A": "2018-2019",
+    "year_B": "2018-2018"
+  },
+  "Power Man and Iron Fist|1|2": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Power Man and Iron Fist",
+    "Vol_A": 1,
+    "Vol_B": 2,
+    "gap": 5.0,
+    "year_A": "2016-2016",
+    "year_B": "2011-2011"
+  },
+  "Rocket Raccoon|1|2": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Rocket Raccoon",
+    "Vol_A": 1,
+    "Vol_B": 2,
+    "gap": 10.0,
+    "year_A": "2024-2024",
+    "year_B": "2014-2014"
+  },
+  "S.H.I.E.L.D.|1|2": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "S.H.I.E.L.D.",
+    "Vol_A": 1,
+    "Vol_B": 2,
+    "gap": 4.0,
+    "year_A": "2010-2015",
+    "year_B": "2011-2011"
+  },
+  "Sam Wilson, Captain America|1|9": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Sam Wilson, Captain America",
+    "Vol_A": 1,
+    "Vol_B": 9,
+    "gap": 1.0,
+    "year_A": "2016-2025",
+    "year_B": "2024-2024"
+  },
+  "Scarlet Witch|1|2": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Scarlet Witch",
+    "Vol_A": 1,
+    "Vol_B": 2,
+    "gap": 9.0,
+    "year_A": "2023-2024",
+    "year_B": "2015-2016"
+  },
+  "Shang-Chi|1|9": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Shang-Chi",
+    "Vol_A": 1,
+    "Vol_B": 9,
+    "gap": 1.0,
+    "year_A": "2020-2024",
+    "year_B": "2023-2023"
+  },
+  "Silver Surfer|1|2": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Silver Surfer",
+    "Vol_A": 1,
+    "Vol_B": 2,
+    "gap": 3.0,
+    "year_A": "1991-1991",
+    "year_B": "1988-1988"
+  },
+  "Spider-Man|1|2": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Spider-Man",
+    "Vol_A": 1,
+    "Vol_B": 2,
+    "gap": 1.0,
+    "year_A": "2016-2020",
+    "year_B": "2019-2019"
+  },
+  "Storm|1|3": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Storm",
+    "Vol_A": 1,
+    "Vol_B": 3,
+    "gap": 1.0,
+    "year_A": "1996-2024",
+    "year_B": "2023-2023"
+  },
+  "The Amazing Spider-Man|1|4": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "The Amazing Spider-Man",
+    "Vol_A": 1,
+    "Vol_B": 4,
+    "gap": 6.0,
+    "year_A": "1972-2024",
+    "year_B": "2018-2018"
+  },
+  "The Incredible Hulk|1|2": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "The Incredible Hulk",
+    "Vol_A": 1,
+    "Vol_B": 2,
+    "gap": 19.0,
+    "year_A": "2018-2018",
+    "year_B": "1999-1999"
+  },
+  "The Ultimates|1|4": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "The Ultimates",
+    "Vol_A": 1,
+    "Vol_B": 4,
+    "gap": 9.0,
+    "year_A": "2011-2024",
+    "year_B": "2015-2016"
+  },
+  "Thor|1|3": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Thor",
+    "Vol_A": 1,
+    "Vol_B": 3,
+    "gap": 12.0,
+    "year_A": "2010-2019",
+    "year_B": "2007-2010"
+  },
+  "Thunderbolts|1|2": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Thunderbolts",
+    "Vol_A": 1,
+    "Vol_B": 2,
+    "gap": 12.0,
+    "year_A": "1997-2024",
+    "year_B": "2012-2012"
+  },
+  "Thunderbolts|3|4": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Thunderbolts",
+    "Vol_A": 3,
+    "Vol_B": 4,
+    "gap": 3.0,
+    "year_A": "2013-2014",
+    "year_B": "2011-2022"
+  },
+  "Ultimate X-Men|1|2": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Ultimate X-Men",
+    "Vol_A": 1,
+    "Vol_B": 2,
+    "gap": 1.0,
+    "year_A": "2002-2002",
+    "year_B": "2001-2024"
+  },
+  "Uncanny Avengers|3|4": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Uncanny Avengers",
+    "Vol_A": 3,
+    "Vol_B": 4,
+    "gap": 5.0,
+    "year_A": "2017-2017",
+    "year_B": "2012-2012"
+  },
+  "Uncanny X-Force|2|3": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Uncanny X-Force",
+    "Vol_A": 2,
+    "Vol_B": 3,
+    "gap": 3.0,
+    "year_A": "2013-2013",
+    "year_B": "2010-2010"
+  },
+  "Uncanny X-Men|1|2": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Uncanny X-Men",
+    "Vol_A": 1,
+    "Vol_B": 2,
+    "gap": 28.0,
+    "year_A": "2002-2019",
+    "year_B": "1991-1992"
+  },
+  "Uncanny X-Men|3|4": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Uncanny X-Men",
+    "Vol_A": 3,
+    "Vol_B": 4,
+    "gap": 1.0,
+    "year_A": "2005-2013",
+    "year_B": "2012-2013"
+  },
+  "Uncanny X-Men Annual|1|4": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "Uncanny X-Men Annual",
+    "Vol_A": 1,
+    "Vol_B": 4,
+    "gap": 7.0,
+    "year_A": "2018-2018",
+    "year_B": "2011-2011"
+  },
+  "X-Men|1|3": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "X-Men",
+    "Vol_A": 1,
+    "Vol_B": 3,
+    "gap": 18.0,
+    "year_A": "2009-2022",
+    "year_B": "2004-2005"
+  },
+  "X-Men|5|6": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "X-Men",
+    "Vol_A": 5,
+    "Vol_B": 6,
+    "gap": 3.0,
+    "year_A": "2024-2024",
+    "year_B": "2021-2024"
+  },
+  "X-Men Legends|2|6": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "X-Men Legends",
+    "Vol_A": 2,
+    "Vol_B": 6,
+    "gap": 1.0,
+    "year_A": "2022-2022",
+    "year_B": "2021-2021"
+  },
+  "X-Men: Age of Apocalypse|1|3": {
+    "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\"",
+    "Title": "X-Men: Age of Apocalypse",
+    "Vol_A": 1,
+    "Vol_B": 3,
+    "gap": 18.0,
+    "year_A": "2023-2023",
+    "year_B": "2005-2018"
+  }
+}

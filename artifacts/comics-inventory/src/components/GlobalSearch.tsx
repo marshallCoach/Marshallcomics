@@ -8,8 +8,7 @@ const boxes  = DATA.boxes;
 const PAGES = [
   { id:"summary",     label:"Home",          section:"Inventory"    },
   { id:"everything",  label:"Every Book",    section:"Inventory"    },
-  { id:"runs",        label:"Runs",          section:"Inventory"    },
-  { id:"volumes",     label:"Volumes",       section:"Inventory"    },
+  { id:"runsvolumes", label:"Runs & Volumes", section:"Inventory"   },
   { id:"collection",  label:"Sales",         section:"Inventory"    },
   { id:"history",     label:"History",       section:"Inventory"    },
   { id:"stats",       label:"Stats",         section:"Inventory"    },
@@ -19,6 +18,7 @@ const PAGES = [
   { id:"boxlabels",   label:"Box Labels",    section:"Organisation" },
   { id:"duplicates",  label:"Duplicates",    section:"Organisation" },
   { id:"hunting",     label:"Box Hunt",      section:"Organisation" },
+  { id:"boxmap",      label:"Box Map",       section:"Organisation" },
   { id:"timeline",    label:"Timeline",      section:"Organisation" },
   { id:"calendar",    label:"Calendar",      section:"Business"     },
   { id:"showplanner", label:"Whatnot Shows", section:"Business"     },
@@ -115,7 +115,7 @@ export default function GlobalSearch({ onNavigate, onClose }: {
       >
         {/* Input */}
         <div style={{ display:"flex", alignItems:"center", gap:10, padding:"14px 18px", borderBottom:"1px solid var(--border)" }}>
-          <span style={{ fontSize:"1.1rem", opacity:0.4 }}>🔍</span>
+          <span style={{ fontSize:"0.875rem", opacity:0.4 }}>🔍</span>
           <input
             ref={inputRef}
             value={q}
@@ -124,10 +124,10 @@ export default function GlobalSearch({ onNavigate, onClose }: {
             placeholder="Search comics, boxes, pages…"
             style={{
               flex:1, border:"none", outline:"none", background:"transparent",
-              fontSize:"1rem", color:"var(--text)", fontFamily:"'Crimson Pro',serif",
+              fontSize:"0.875rem", color:"var(--text)", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
             }}
           />
-          <kbd style={{ fontSize:"0.65rem", color:"var(--muted)", background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:4, padding:"2px 6px" }}>ESC</kbd>
+          <kbd style={{ fontSize:"0.875rem", color:"var(--muted)", background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:4, padding:"2px 6px" }}>ESC</kbd>
         </div>
 
         {/* Results */}
@@ -147,36 +147,36 @@ export default function GlobalSearch({ onNavigate, onClose }: {
               >
                 {r.kind === "page" && (
                   <>
-                    <span style={{ fontSize:"0.85rem", opacity:0.5, flexShrink:0 }}>📄</span>
+                    <span style={{ fontSize:"0.875rem", opacity:0.5, flexShrink:0 }}>📄</span>
                     <div style={{ flex:1 }}>
-                      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", letterSpacing:"1px", color:"var(--text)" }}>{r.label}</div>
-                      <div style={{ fontSize:"0.72rem", color:"var(--muted)" }}>{r.section}</div>
+                      <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--text)" }}>{r.label}</div>
+                      <div style={{ fontSize:"0.875rem", color:"var(--muted)" }}>{r.section}</div>
                     </div>
-                    <span style={{ fontSize:"0.65rem", color:"var(--muted)", background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:3, padding:"1px 6px" }}>PAGE</span>
+                    <span style={{ fontSize:"0.875rem", color:"var(--muted)", background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:3, padding:"1px 6px" }}>PAGE</span>
                   </>
                 )}
                 {r.kind === "box" && (
                   <>
-                    <span style={{ fontSize:"0.85rem", opacity:0.5, flexShrink:0 }}>📦</span>
+                    <span style={{ fontSize:"0.875rem", opacity:0.5, flexShrink:0 }}>📦</span>
                     <div style={{ flex:1 }}>
-                      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", letterSpacing:"1px", color:"var(--text)" }}>{r.label}</div>
-                      <div style={{ fontSize:"0.72rem", color:"var(--muted)" }}>{r.comics} comics · {r.keys} keys</div>
+                      <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--text)" }}>{r.label}</div>
+                      <div style={{ fontSize:"0.875rem", color:"var(--muted)" }}>{r.comics} comics · {r.keys} keys</div>
                     </div>
-                    <span style={{ fontSize:"0.65rem", color:"#1d6fa4", background:"#e8f0ff", border:"1px solid #bfdbfe", borderRadius:3, padding:"1px 6px" }}>BOX</span>
+                    <span style={{ fontSize:"0.875rem", color:"#1d6fa4", background:"#e8f0ff", border:"1px solid #bfdbfe", borderRadius:3, padding:"1px 6px" }}>BOX</span>
                   </>
                 )}
                 {r.kind === "comic" && (
                   <>
-                    <span style={{ fontSize:"0.85rem", opacity:0.5, flexShrink:0 }}>📖</span>
+                    <span style={{ fontSize:"0.875rem", opacity:0.5, flexShrink:0 }}>📖</span>
                     <div style={{ flex:1, minWidth:0 }}>
-                      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.88rem", letterSpacing:"0.5px", color:"var(--text)", overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>
+                      <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"0.5px", color:"var(--text)", overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>
                         {r.title} {r.issue}
                       </div>
-                      <div style={{ fontSize:"0.72rem", color:"var(--muted)" }}>Box {r.box}</div>
+                      <div style={{ fontSize:"0.875rem", color:"var(--muted)" }}>Box {r.box}</div>
                     </div>
                     <div style={{ display:"flex", gap:4, flexShrink:0 }}>
-                      {r.isKey    && <span style={{ fontSize:"0.6rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", background:"#fff8e0", color:"#8a6000", border:"1px solid #fde68a", borderRadius:3, padding:"1px 5px" }}>KEY</span>}
-                      {r.isSigned && <span style={{ fontSize:"0.6rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", background:"#f3e8ff", color:"#7c3aed", border:"1px solid #d8b4fe", borderRadius:3, padding:"1px 5px" }}>SGD</span>}
+                      {r.isKey    && <span style={{ fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px", background:"#fff8e0", color:"#8a6000", border:"1px solid #fde68a", borderRadius:3, padding:"1px 5px" }}>KEY</span>}
+                      {r.isSigned && <span style={{ fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px", background:"#f3e8ff", color:"#7c3aed", border:"1px solid #d8b4fe", borderRadius:3, padding:"1px 5px" }}>SGD</span>}
                     </div>
                   </>
                 )}
@@ -186,7 +186,7 @@ export default function GlobalSearch({ onNavigate, onClose }: {
         )}
 
         {q.trim() && results.length === 0 && (
-          <div style={{ padding:"24px 18px", textAlign:"center", color:"var(--muted)", fontSize:"0.88rem", fontFamily:"'Crimson Pro',serif" }}>
+          <div style={{ padding:"24px 18px", textAlign:"center", color:"var(--muted)", fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>
             No results for "{q}" — try a title, writer, or box number.
           </div>
         )}
@@ -195,7 +195,7 @@ export default function GlobalSearch({ onNavigate, onClose }: {
           <div style={{ padding:"14px 18px", display:"flex", gap:6, flexWrap:"wrap" }}>
             {["Batman","Black Panther","X-Men","Tom King","Jim Lee","Box 1","Keys","Signed"].map(s => (
               <button key={s} onClick={() => setQ(s)} style={{
-                fontSize:"0.72rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px",
+                fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px",
                 background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:4,
                 padding:"4px 10px", cursor:"pointer", color:"var(--muted2)",
               }}>{s}</button>
@@ -203,7 +203,7 @@ export default function GlobalSearch({ onNavigate, onClose }: {
           </div>
         )}
 
-        <div style={{ padding:"8px 18px", borderTop:"1px solid var(--border)", fontSize:"0.65rem", color:"var(--muted)", display:"flex", gap:16 }}>
+        <div style={{ padding:"8px 18px", borderTop:"1px solid var(--border)", fontSize:"0.875rem", color:"var(--muted)", display:"flex", gap:16 }}>
           <span><kbd style={{background:"var(--surface2)",border:"1px solid var(--border)",borderRadius:3,padding:"1px 5px"}}>↑↓</kbd> navigate</span>
           <span><kbd style={{background:"var(--surface2)",border:"1px solid var(--border)",borderRadius:3,padding:"1px 5px"}}>↵</kbd> open</span>
           <span><kbd style={{background:"var(--surface2)",border:"1px solid var(--border)",borderRadius:3,padding:"1px 5px"}}>Esc</kbd> close</span>

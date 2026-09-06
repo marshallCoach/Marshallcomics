@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "comics-inventory",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["--filter", "@workspace/comics-inventory", "run", "dev"],
+      "port": 5173
+    }
+  ]
+}

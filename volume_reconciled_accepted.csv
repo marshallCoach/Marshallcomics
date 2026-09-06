@@ -1,0 +1,907 @@
+Title,Issue,Box,Year,Declared_Volume,GCD_Derived_Volume,GCD_Series,GCD_volume_count_for_title,Reconciliation
+Captain Marvel,50,1,2021,1,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Star Wars,1,1,2015,1,2,Star Wars (2015-2020),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Mystery in Space,1,1,2006,1,2,Mystery in Space (2006-2007),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Panther,1,1,2016,7,6,Black Panther (2016-2018),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Ultimate Spider-Man,1,1,2024,1,5,Ultimate Spider-Man (2024-2026),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Secret Wars,1,1,2015,1,3,Secret Wars (2015-2016),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Daredevil,1,72,2024,7,10,Daredevil (2023-2025),11,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Storm,1,72,2024,1,8,Storm (2024-2025),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Storm,4,72,2024,1,8,Storm (2024-2025),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Punisher,3,72,2024,1,7,Punisher (2024-2024),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Superboy,4,57,2012,1,5,Superboy (2012-2015),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Superboy,5,57,2012,1,5,Superboy (2012-2015),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Superboy,6,57,2012,1,5,Superboy (2012-2015),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Superboy,7,57,2012,1,5,Superboy (2012-2015),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Teen Titans Go!,1,60,2014,1,2,Teen Titans Go! (2014-2019),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Shazam!,8,60,2023,1,7,Shazam! (2023-2025),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Shazam!,11,60,2023,1,7,Shazam! (2023-2025),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Shazam!,12,60,2023,1,7,Shazam! (2023-2025),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Batman/Superman: World's Finest,9,50,2022,4,2,Batman / Superman: World's Finest (2022-?),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Justice Society of America,10,50,2023,1,4,Justice Society of America (2023-2024),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Justice Society of America,12,50,2023,1,4,Justice Society of America (2023-2024),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Shazam!,5,50,2023,1,7,Shazam! (2023-2025),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Shazam!,6,50,2023,1,7,Shazam! (2023-2025),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Batman/Superman: World's Finest,1,49,2022,4,2,Batman / Superman: World's Finest (2022-?),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Checkmate,1,49,2021,1,3,Checkmate (2021-2021),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Checkmate,2,49,2021,1,3,Checkmate (2021-2021),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Checkmate,3,49,2021,1,3,Checkmate (2021-2021),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Checkmate,4,49,2021,1,3,Checkmate (2021-2021),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Checkmate,5,49,2021,1,3,Checkmate (2021-2021),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Checkmate,6,49,2021,1,3,Checkmate (2021-2021),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Legion of Super-Heroes,5,49,2020-2021,1,10,Legion of Super-Heroes (2020-2021),11,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Legion of Super-Heroes,6,49,2020-2021,1,10,Legion of Super-Heroes (2020-2021),11,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Legion of Super-Heroes,7,49,2020-2021,1,10,Legion of Super-Heroes (2020-2021),11,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Legion of Super-Heroes,8,49,2020-2021,1,10,Legion of Super-Heroes (2020-2021),11,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Legion of Super-Heroes,9,49,2020-2021,1,10,Legion of Super-Heroes (2020-2021),11,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Legion of Super-Heroes,10,49,2020-2021,1,10,Legion of Super-Heroes (2020-2021),11,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Legion of Super-Heroes,12,49,2020-2021,1,10,Legion of Super-Heroes (2020-2021),11,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Suicide Squad,1,48,2016,1,5,Suicide Squad (2016-2019),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Suicide Squad,2,48,2016,1,5,Suicide Squad (2016-2019),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Suicide Squad,3,48,2016,1,5,Suicide Squad (2016-2019),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Suicide Squad,4,48,2016,1,5,Suicide Squad (2016-2019),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Suicide Squad,5,48,2016,1,5,Suicide Squad (2016-2019),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Suicide Squad,12,48,2016,1,5,Suicide Squad (2016-2019),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Suicide Squad,13,48,2016,1,5,Suicide Squad (2016-2019),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Trinity,1,48,2016,1,3,Trinity (2016-2018),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Trinity,2,48,2016,1,3,Trinity (2016-2018),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Justice League of America,3,48,2017,1,8,Justice League of America (2017-2018),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Hawkman,1,48,2018,1,7,Hawkman (2018-2021),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Hawkman,2,48,2018,1,7,Hawkman (2018-2021),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Hawkman,3,48,2018,1,7,Hawkman (2018-2021),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Hawkman,4,48,2018,1,7,Hawkman (2018-2021),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Hawkman,5,48,2018,1,7,Hawkman (2018-2021),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Hawkman,6,48,2018,1,7,Hawkman (2018-2021),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Hawkman,7,48,2018,1,7,Hawkman (2018-2021),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Justice League Dark,1,48,2018,1,3,Justice League Dark (2018-2021),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Justice League Dark,2,48,2018,1,3,Justice League Dark (2018-2021),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Justice League Dark,3,48,2018,1,3,Justice League Dark (2018-2021),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Justice League Dark,5,48,2018,1,3,Justice League Dark (2018-2021),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Justice League Dark,6,48,2018,1,3,Justice League Dark (2018-2021),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Wonder Woman Annual,2,48,2018,1,4,Wonder Woman Annual (2017-2020),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Catwoman,1,48,2018,1,6,Catwoman (2018-?),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Catwoman,2,48,2018,1,6,Catwoman (2018-?),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Catwoman,3,48,2018,1,6,Catwoman (2018-?),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,444,12,2004,3,4,X-Men (2004-2008),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+New Mutants,1,12,2009,3,2,New Mutants (2009-2012),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+New Mutants,2,12,2009,3,2,New Mutants (2009-2012),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+New Mutants,1,12,2003-2004,2,1,New Mutants (2003-2004),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+New Mutants,2,12,2003-2004,2,1,New Mutants (2003-2004),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+New Mutants,3,12,2003-2004,2,1,New Mutants (2003-2004),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+New Mutants,4,12,2003-2004,2,1,New Mutants (2003-2004),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+New Mutants,5,12,2003-2004,2,1,New Mutants (2003-2004),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+New Mutants,6,12,2003-2004,2,1,New Mutants (2003-2004),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+New Mutants,7,12,2003-2004,2,1,New Mutants (2003-2004),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+New Mutants,8,12,2003-2004,2,1,New Mutants (2003-2004),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+New Mutants,9,12,2003-2004,2,1,New Mutants (2003-2004),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+New Mutants,10,12,2003-2004,2,1,New Mutants (2003-2004),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+New Mutants,11,12,2003-2004,2,1,New Mutants (2003-2004),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+New Mutants,12,12,2003-2004,2,1,New Mutants (2003-2004),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+New Mutants,13,12,2003-2004,2,1,New Mutants (2003-2004),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Astonishing X-Men,29,12,2010,4,3,Astonishing X-Men (2004-2013),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Astonishing X-Men,30,12,2010,4,3,Astonishing X-Men (2004-2013),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Astonishing X-Men,31,12,2010,4,3,Astonishing X-Men (2004-2013),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,12,12,2009,2,3,Cable (2008-2010),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,13,12,2009,2,3,Cable (2008-2010),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,14,12,2009,2,3,Cable (2008-2010),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,15,12,2009,2,3,Cable (2008-2010),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,16,12,2009,2,3,Cable (2008-2010),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Force,1,12,2004,2,4,X-Force (2004-2005),11,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,7,12,2010-2012,4,5,X-Men (2010-2013),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,8,12,2010-2012,4,5,X-Men (2010-2013),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,22,12,2010-2012,4,5,X-Men (2010-2013),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,17,12,2009-2011,2,3,Cable (2008-2010),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,18,12,2009-2011,2,3,Cable (2008-2010),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,21,12,2009-2011,2,3,Cable (2008-2010),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,22,12,2009-2011,2,3,Cable (2008-2010),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,23,12,2009-2011,2,3,Cable (2008-2010),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,24,12,2009-2011,2,3,Cable (2008-2010),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,25,12,2009-2011,2,3,Cable (2008-2010),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,83,12,2009-2011,2,3,Cable (2008-2010),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Force,3,12,2011,4,7,X-Force (2010-2011),11,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,83,12,2009,2,3,Cable (2008-2010),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Aquaman,1,52,2011,1,7,Aquaman (2011-2016),13,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Aquaman,2,52,2011,1,7,Aquaman (2011-2016),13,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Aquaman,3,52,2011,1,7,Aquaman (2011-2016),13,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Aquaman,4,52,2011,1,7,Aquaman (2011-2016),13,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Animal Man,1,52,2011,1,3,Animal Man (2011-2014),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Animal Man,2,52,2011,1,3,Animal Man (2011-2014),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Animal Man,3,52,2011,1,3,Animal Man (2011-2014),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Animal Man,5,52,2011,1,3,Animal Man (2011-2014),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Suicide Squad,1,52,2011,1,3,Suicide Squad (2011-2014),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Deathstroke,1,52,2011,1,2,Deathstroke (2011-2013),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Superboy,1,52,2011,1,4,Superboy (2011-2011),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Stormwatch,1,52,2011,1,2,Stormwatch (2011-2014),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Blue Beetle,1,52,2011,1,2,Blue Beetle (2011-2013),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Justice Society of America,41,52,2010,1,3,Justice Society of America (2007-2011),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Justice Society of America,42,52,2010,1,3,Justice Society of America (2007-2011),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Blue Beetle,1,62,2023,1,6,Blue Beetle (2023-2024),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Batman/Superman: World's Finest,3,59,2022,4,2,Batman / Superman: World's Finest (2022-?),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Shazam!,1,59,2023,1,7,Shazam! (2023-2025),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Shazam!,3,59,2023,1,7,Shazam! (2023-2025),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Outsiders,3,59,2024,1,4,Outsiders (2024-2024),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Justice Society of America,11,59,2023,1,4,Justice Society of America (2023-2024),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Batman/Superman: World's Finest,4,56,2022,4,2,Batman / Superman: World's Finest (2022-?),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Batman/Superman: World's Finest,5,56,2022,4,2,Batman / Superman: World's Finest (2022-?),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Batman/Superman: World's Finest,6,56,2022,4,2,Batman / Superman: World's Finest (2022-?),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Batman/Superman: World's Finest,8,56,2022,4,2,Batman / Superman: World's Finest (2022-?),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Shazam!,1,59,2023,1,7,Shazam! (2023-2025),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Secret Avengers,6,6,2010,4,1,Secret Avengers (2010-2013),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Secret Avengers,9,6,2010,4,1,Secret Avengers (2010-2013),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Secret Avengers,10,6,2010,4,1,Secret Avengers (2010-2013),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Secret Avengers,11,6,2010,4,1,Secret Avengers (2010-2013),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Secret Avengers,12,6,2010,4,1,Secret Avengers (2010-2013),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Secret Avengers,16,6,2010,4,1,Secret Avengers (2010-2013),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Secret Avengers,17,6,2010,4,1,Secret Avengers (2010-2013),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Secret Avengers,18,6,2010,4,1,Secret Avengers (2010-2013),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Secret Avengers,19,6,2010,4,1,Secret Avengers (2010-2013),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Astonishing X-Men,30,3,2011,4,3,Astonishing X-Men (2004-2013),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Astonishing X-Men,34,3,2011,4,3,Astonishing X-Men (2004-2013),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Astonishing X-Men,35,3,2011,4,3,Astonishing X-Men (2004-2013),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Astonishing X-Men,36,3,2011,4,3,Astonishing X-Men (2004-2013),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Astonishing X-Men,38,3,2011,4,3,Astonishing X-Men (2004-2013),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Astonishing X-Men,39,3,2011,4,3,Astonishing X-Men (2004-2013),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Astonishing X-Men,40,3,2011,4,3,Astonishing X-Men (2004-2013),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Astonishing X-Men,41,3,2011,4,3,Astonishing X-Men (2004-2013),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Astonishing X-Men,42,3,2011,4,3,Astonishing X-Men (2004-2013),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Astonishing X-Men,43,3,2011,4,3,Astonishing X-Men (2004-2013),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Astonishing X-Men,44,3,2011,4,3,Astonishing X-Men (2004-2013),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Astonishing X-Men,3,3,2010,4,3,Astonishing X-Men (2004-2013),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,2,3,2008,2,3,Cable (2008-2010),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,3,3,2008,2,3,Cable (2008-2010),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,4,3,2008,2,3,Cable (2008-2010),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,5,3,2008,2,3,Cable (2008-2010),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,6,3,2008,2,3,Cable (2008-2010),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,8,3,2008,2,3,Cable (2008-2010),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,9,3,2008,2,3,Cable (2008-2010),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,10,3,2008,2,3,Cable (2008-2010),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,11,3,2008,2,3,Cable (2008-2010),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,1,3,2008,2,3,Cable (2008-2010),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Uncanny X-Men,1,3,2012,4,2,Uncanny X-Men (2012-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Uncanny X-Men Annual,3,3,2011,4,1,Uncanny X-Men Annual (2006-2011),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,175,3,2005,3,4,X-Men (2004-2008),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,176,3,2005,3,4,X-Men (2004-2008),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,188,3,2005,3,4,X-Men (2004-2008),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,189,3,2005,3,4,X-Men (2004-2008),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,190,3,2005,3,4,X-Men (2004-2008),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,191,3,2005,3,4,X-Men (2004-2008),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,192,3,2005,3,4,X-Men (2004-2008),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,193,3,2005,3,4,X-Men (2004-2008),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,195,3,2005,3,4,X-Men (2004-2008),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,4,3,2010,4,5,X-Men (2010-2013),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,5,3,2010,4,5,X-Men (2010-2013),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,6,3,2010,4,5,X-Men (2010-2013),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,9,3,2010,4,5,X-Men (2010-2013),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,10,3,2010,4,5,X-Men (2010-2013),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,11,3,2010,4,5,X-Men (2010-2013),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,12,3,2010,4,5,X-Men (2010-2013),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,13,3,2010,4,5,X-Men (2010-2013),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,14,3,2010,4,5,X-Men (2010-2013),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,15,3,2010,4,5,X-Men (2010-2013),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,16,3,2010,4,5,X-Men (2010-2013),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,17,3,2010,4,5,X-Men (2010-2013),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,18,3,2010,4,5,X-Men (2010-2013),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,19,3,2010,4,5,X-Men (2010-2013),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,20,3,2010,4,5,X-Men (2010-2013),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,21,3,2010,4,5,X-Men (2010-2013),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,15.1,3,2011,4,5,X-Men (2010-2013),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,1,3,2011,4,5,X-Men (2010-2013),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,2,3,2011,4,5,X-Men (2010-2013),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,1,3,2010,4,5,X-Men (2010-2013),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Warlock,1,3,2004,1,6,Warlock (2004-2005),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Warlock,2,3,2004,1,6,Warlock (2004-2005),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Warlock,3,3,2004,1,6,Warlock (2004-2005),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Warlock,4,3,2004,1,6,Warlock (2004-2005),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Warlock,5,3,2004,1,6,Warlock (2004-2005),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Warlock,6,3,2004,1,6,Warlock (2004-2005),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Warlock,7,3,2004,1,6,Warlock (2004-2005),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Warlock,8,3,2004,1,6,Warlock (2004-2005),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+New Avengers,2,24,2016,6,7,New Avengers (2015-2017),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+New Avengers,3,24,2016,6,7,New Avengers (2015-2017),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+New Avengers,4,24,2016,6,7,New Avengers (2015-2017),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+New Avengers,5,24,2016,6,7,New Avengers (2015-2017),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+New Avengers,6,24,2016,6,7,New Avengers (2015-2017),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+New Avengers,20,24,2017,6,7,New Avengers (2015-2017),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+New Avengers,22,24,2017,6,7,New Avengers (2015-2017),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Uncanny Avengers,1,24,2012,4,1,Uncanny Avengers (2012-2014),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Uncanny Avengers,2,24,2012,4,1,Uncanny Avengers (2012-2014),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Avengers Assemble,8,24,2013,5,4,Avengers Assemble (2012-2014),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Avengers Assemble,9,24,2013,5,4,Avengers Assemble (2012-2014),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Avengers Assemble,11,24,2013,5,4,Avengers Assemble (2012-2014),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Avengers Assemble,12,24,2013,5,4,Avengers Assemble (2012-2014),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Avengers Assemble,14,24,2013,5,4,Avengers Assemble (2012-2014),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Avengers Assemble,15,24,2013,5,4,Avengers Assemble (2012-2014),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Avengers Assemble,18,24,2014,5,4,Avengers Assemble (2012-2014),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Avengers Assemble,19,24,2014,5,4,Avengers Assemble (2012-2014),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Young Avengers,1,24,2013,5,4,Young Avengers (2013-2014),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Young Avengers,2,24,2013,5,4,Young Avengers (2013-2014),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,1,24,2013,3,4,Guardians of the Galaxy (2013-2015),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Avengers Assemble,1,24,2023,7,5,Avengers Assemble (2023-2023),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Avengers Annual,1,24,2012,4,1,Avengers Annual (2012-2012),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Alpha Flight,0.1,20,2011,1,4,Alpha Flight (2011-2012),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+New Warriors,2,20,2014,1,5,New Warriors (2014-2015),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+New Warriors,3,20,2014,1,5,New Warriors (2014-2015),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Amazing Fantasy,1,20,2021,1,5,Amazing Fantasy (2021-2022),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Amazing Fantasy,2,20,2021,1,5,Amazing Fantasy (2021-2022),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Amazing Fantasy,3,20,2021,1,5,Amazing Fantasy (2021-2022),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Amazing Fantasy,4,20,2021,1,5,Amazing Fantasy (2021-2022),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Amazing Fantasy,5,20,2021,1,5,Amazing Fantasy (2021-2022),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Fury,1,20,2001,1,3,Fury (2001-2002),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Blade,1,20,2023,1,6,Blade (2023-2024),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Blade,3,20,2023,1,6,Blade (2023-2024),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Blade,3,20,2023,1,6,Blade (2023-2024),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Blade,4,20,2023,1,6,Blade (2023-2024),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Blade,5,20,2023,1,6,Blade (2023-2024),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Blade,5,20,2023,1,6,Blade (2023-2024),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Blade,6,20,2023,1,6,Blade (2023-2024),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Blade,10,20,2023,1,6,Blade (2023-2024),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Blade,1,20,2023,1,6,Blade (2023-2024),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Wonder Woman Annual,3,55,2019,1,4,Wonder Woman Annual (2017-2020),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Strange Adventures,1,55,2020,1,7,Strange Adventures (2020-2021),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Superman,18,55,2020,1,11,Superman (2019-2020),13,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Batman/Superman: World's Finest,7,55,2022,4,2,Batman / Superman: World's Finest (2022-?),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Storm,8,29,2024,1,8,Storm (2024-2025),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Storm,9,29,2024,1,8,Storm (2024-2025),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Storm,10,29,2024,1,8,Storm (2024-2025),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Storm,11,29,2024,1,8,Storm (2024-2025),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Uncanny X-Men,10,29,2024,6,7,Uncanny X-Men (2024-?),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Uncanny X-Men,11,29,2024,6,7,Uncanny X-Men (2024-?),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Uncanny X-Men,12,29,2024,6,7,Uncanny X-Men (2024-?),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Uncanny X-Men,13,29,2024,6,7,Uncanny X-Men (2024-?),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Uncanny X-Men,14,29,2024,6,7,Uncanny X-Men (2024-?),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Uncanny X-Men,15,29,2024,6,7,Uncanny X-Men (2024-?),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Uncanny X-Men,16,29,2024,6,7,Uncanny X-Men (2024-?),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Uncanny X-Men,18,29,2024,6,7,Uncanny X-Men (2024-?),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Uncanny X-Men,19,29,2024,6,7,Uncanny X-Men (2024-?),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Superman,15,54,2020,1,11,Superman (2019-2020),13,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Doctor Strange,1,36,2023-2024,5,8,Doctor Strange (2023-2024),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Doctor Strange,4,36,2023-2024,5,8,Doctor Strange (2023-2024),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Doctor Strange,17,36,2023-2024,5,8,Doctor Strange (2023-2024),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Doctor Strange,18,36,2023-2024,5,8,Doctor Strange (2023-2024),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,1,14,2023,6,8,X-Men (2021-2024),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Excalibur,1,14,2019-2022,1,4,Excalibur (2019-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Excalibur,2,14,2019-2022,1,4,Excalibur (2019-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Excalibur,3,14,2019-2022,1,4,Excalibur (2019-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Excalibur,4,14,2019-2022,1,4,Excalibur (2019-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Excalibur,5,14,2019-2022,1,4,Excalibur (2019-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Excalibur,6,14,2019-2022,1,4,Excalibur (2019-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Excalibur,7,14,2019-2022,1,4,Excalibur (2019-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Excalibur,8,14,2019-2022,1,4,Excalibur (2019-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Excalibur,9,14,2019-2022,1,4,Excalibur (2019-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Excalibur,10,14,2019-2022,1,4,Excalibur (2019-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Excalibur,11,14,2019-2022,1,4,Excalibur (2019-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Excalibur,17,14,2019-2022,1,4,Excalibur (2019-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Excalibur,19,14,2019-2022,1,4,Excalibur (2019-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Excalibur,20,14,2019-2022,1,4,Excalibur (2019-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Excalibur,21,14,2019-2022,1,4,Excalibur (2019-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Excalibur,22,14,2019-2022,1,4,Excalibur (2019-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Excalibur,23,14,2019-2022,1,4,Excalibur (2019-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Excalibur,24,14,2019-2022,1,4,Excalibur (2019-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Excalibur,25,14,2019-2022,1,4,Excalibur (2019-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Excalibur,26,14,2019-2022,1,4,Excalibur (2019-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Factor,1,14,2020-2021,1,5,X-Factor (2020-2021),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Factor,2,14,2020-2021,1,5,X-Factor (2020-2021),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Factor,3,14,2020-2021,1,5,X-Factor (2020-2021),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Factor,5,14,2020-2021,1,5,X-Factor (2020-2021),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Factor,6,14,2020-2021,1,5,X-Factor (2020-2021),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Factor,7,14,2020-2021,1,5,X-Factor (2020-2021),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Factor,8,14,2020-2021,1,5,X-Factor (2020-2021),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Factor,10,14,2020-2021,1,5,X-Factor (2020-2021),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,1,14,2020,4,5,Cable (2020-2021),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,7,14,2020,4,5,Cable (2020-2021),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Uncanny Avengers,1,14,2023,7,5,Uncanny Avengers (2023-2024),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Uncanny Avengers,2,14,2023,7,5,Uncanny Avengers (2023-2024),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Uncanny Avengers,3,14,2023,7,5,Uncanny Avengers (2023-2024),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Uncanny Avengers,4,14,2023,7,5,Uncanny Avengers (2023-2024),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Uncanny Avengers,5,14,2023,7,5,Uncanny Avengers (2023-2024),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Spider-Man,1,16,2016,1,4,Spider-Man (2016-2018),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Spider-Man,2,16,2016,1,4,Spider-Man (2016-2018),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Spider-Man,3,16,2016,1,4,Spider-Man (2016-2018),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Spider-Man,4,16,2016,1,4,Spider-Man (2016-2018),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Spider-Man,5,16,2016,1,4,Spider-Man (2016-2018),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Spider-Man,6,85,2016,1,4,Spider-Man (2016-2018),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Spider-Man,7,85,2016,1,4,Spider-Man (2016-2018),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Spider-Man,8,85,2016,1,4,Spider-Man (2016-2018),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Spider-Man,9,85,2016,1,4,Spider-Man (2016-2018),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Spider-Man,10,85,2016,1,4,Spider-Man (2016-2018),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Spider-Man,11,85,2016,1,4,Spider-Man (2016-2018),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Spider-Man,12,85,2016,1,4,Spider-Man (2016-2018),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Spider-Man,13,85,2016,1,4,Spider-Man (2016-2018),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Spider-Man,14,85,2016,1,4,Spider-Man (2016-2018),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Spider-Man,15,85,2016,1,4,Spider-Man (2016-2018),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Spider-Man,16,85,2016,1,4,Spider-Man (2016-2018),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Spider-Man,17,85,2016,1,4,Spider-Man (2016-2018),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Spider-Man,18,85,2016,1,4,Spider-Man (2016-2018),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Spider-Man,19,85,2016,1,4,Spider-Man (2016-2018),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Spider-Man,20,85,2016,1,4,Spider-Man (2016-2018),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Spider-Man,21,85,2016,1,4,Spider-Man (2016-2018),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Spider-Man,1,16,2019,2,5,Spider-Man (2019-2021),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Spider-Man,2,16,2019,2,5,Spider-Man (2019-2021),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Spider-Man,3,16,2019,2,5,Spider-Man (2019-2021),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Spider-Man,4,16,2019,2,5,Spider-Man (2019-2021),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Spider-Man,235,85,2018,1,4,Spider-Man (2016-2018),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Spider-Man,234,85,2018,1,4,Spider-Man (2016-2018),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Spider-Man,238,16,2018,1,4,Spider-Man (2016-2018),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Spider-Man,239,16,2018,1,4,Spider-Man (2016-2018),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Spider-Man,240,16,2018,1,4,Spider-Man (2016-2018),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Spider-Man,4,16,2020,1,5,Spider-Man (2019-2021),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Spider-Man,5,16,2020,1,5,Spider-Man (2019-2021),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Giant-Size Spider-Man,1,16,2024,1,4,Giant-Size Spider-Man (2024-2024),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Ghost,1,66,2012,1,3,Ghost (2012-2013),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Aquaman,69,35,2000,1,5,Aquaman (1994-2001),13,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Robin,136,58,2005-2006,4,2,Robin (1993-2009),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Robin,137,58,2005-2006,4,2,Robin (1993-2009),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Robin,138,58,2005-2006,4,2,Robin (1993-2009),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Robin,139,58,2005-2006,4,2,Robin (1993-2009),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Robin,140,58,2005-2006,4,2,Robin (1993-2009),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Robin,141,58,2005-2006,4,2,Robin (1993-2009),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Robin,142,58,2005-2006,4,2,Robin (1993-2009),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Robin,143,58,2005-2006,4,2,Robin (1993-2009),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Robin,144,58,2005-2006,4,2,Robin (1993-2009),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Robin,145,58,2005-2006,4,2,Robin (1993-2009),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Robin,146,58,2005-2006,4,2,Robin (1993-2009),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Robin,147,58,2005-2006,4,2,Robin (1993-2009),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Robin,148,58,2005-2006,4,2,Robin (1993-2009),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Robin,149,58,2005-2006,4,2,Robin (1993-2009),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Robin,150,58,2005-2006,4,2,Robin (1993-2009),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Robin,151,58,2005-2006,4,2,Robin (1993-2009),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Robin,152,58,2005-2006,4,2,Robin (1993-2009),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Robin,153,58,2005-2006,4,2,Robin (1993-2009),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Robin,154,58,2005-2006,4,2,Robin (1993-2009),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Robin,155,58,2005-2006,4,2,Robin (1993-2009),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Force,3,11,2022,7,10,X-Force (2020-2024),11,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Force,8,11,2022,7,10,X-Force (2020-2024),11,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Force,9,11,2022,7,10,X-Force (2020-2024),11,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Force,14,11,2022,7,10,X-Force (2020-2024),11,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Force,45,11,2022,7,10,X-Force (2020-2024),11,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Force,49,11,2022,7,10,X-Force (2020-2024),11,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Force,50,11,2022,7,10,X-Force (2020-2024),11,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Force,9,11,2020,7,10,X-Force (2020-2024),11,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Force,14,11,2020,7,10,X-Force (2020-2024),11,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,5,11,2020,4,5,Cable (2020-2021),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,6,11,2020,4,5,Cable (2020-2021),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Excalibur,12,11,2020,1,4,Excalibur (2019-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Excalibur,13,11,2020,1,4,Excalibur (2019-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,13,11,2020,1,7,X-Men (2019-2021),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,14,11,2020,1,7,X-Men (2019-2021),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,12,11,2020,1,7,X-Men (2019-2021),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Factor,4,11,2020,1,5,X-Factor (2020-2021),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,7,11,2020,1,7,X-Men (2019-2021),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Inferno,1,86,2021,2,3,Inferno (2021-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Inferno,2,86,2021,2,3,Inferno (2021-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Inferno,3,86,2021,2,3,Inferno (2021-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Inferno,4,86,2021,2,3,Inferno (2021-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Storm,1,11,2023,3,7,Storm (2023-2023),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Excalibur,16,11,2021,1,4,Excalibur (2019-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Force,46,11,2023,7,10,X-Force (2020-2024),11,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Astonishing X-Men,6,11,2017,4,5,Astonishing X-Men (2017-2019),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Astonishing X-Men,7,11,2017,4,5,Astonishing X-Men (2017-2019),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Astonishing X-Men,8,11,2017,4,5,Astonishing X-Men (2017-2019),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Astonishing X-Men,9,11,2017,4,5,Astonishing X-Men (2017-2019),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Uncanny X-Men,1,11,2024,5,7,Uncanny X-Men (2024-?),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Uncanny X-Men,2,11,2024,5,7,Uncanny X-Men (2024-?),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Uncanny X-Men,3,11,2024,5,7,Uncanny X-Men (2024-?),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Uncanny X-Men,4,11,2024,5,7,Uncanny X-Men (2024-?),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Uncanny X-Men,5,11,2024,5,7,Uncanny X-Men (2024-?),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Uncanny X-Men,6,11,2024,5,7,Uncanny X-Men (2024-?),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Uncanny X-Men,7,11,2024,5,7,Uncanny X-Men (2024-?),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Uncanny X-Men,8,11,2024,5,7,Uncanny X-Men (2024-?),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Storm,1,72,2024,4,8,Storm (2024-2025),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Storm,2,87,2024,4,8,Storm (2024-2025),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,1,11,2024,1,6,Cable (2024-2024),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,2,11,2024,1,6,Cable (2024-2024),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,3,11,2024,1,6,Cable (2024-2024),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,4,11,2024,1,6,Cable (2024-2024),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,155,15,2018,3,4,Cable (2017-2018),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,156,15,2018,3,4,Cable (2017-2018),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,158,15,2018,3,4,Cable (2017-2018),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,10,15,2018,3,4,Cable (2017-2018),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Astonishing X-Men,66,15,2013,4,3,Astonishing X-Men (2004-2013),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Astonishing X-Men,1,15,2017,4,5,Astonishing X-Men (2017-2019),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Amazing X-Men,11,15,2014,2,3,Amazing X-Men (2014-2015),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Amazing X-Men,16,15,2014,2,3,Amazing X-Men (2014-2015),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Amazing X-Men,17,15,2014,2,3,Amazing X-Men (2014-2015),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Amazing X-Men,18,15,2014,2,3,Amazing X-Men (2014-2015),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Amazing X-Men,19,15,2014,2,3,Amazing X-Men (2014-2015),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Uncanny X-Men,16,9,2019,1,6,Uncanny X-Men (2019-2019),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cable,150,9,2017,3,4,Cable (2017-2018),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Generation X,1,9,2017,2,3,Generation X (2017-2018),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Generation X,2,9,2017,2,3,Generation X (2017-2018),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Generation X,3,9,2017,2,3,Generation X (2017-2018),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Generation X,4,9,2017,2,3,Generation X (2017-2018),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Exiles,1,9,2018,2,5,Exiles (2018-2019),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Exiles,2,9,2018,2,5,Exiles (2018-2019),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Astonishing X-Men,2,9,2017,4,5,Astonishing X-Men (2017-2019),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Astonishing X-Men,3,9,2017,4,5,Astonishing X-Men (2017-2019),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Astonishing X-Men,4,9,2017,4,5,Astonishing X-Men (2017-2019),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Astonishing X-Men,13,9,2017,4,5,Astonishing X-Men (2017-2019),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Astonishing X-Men,14,9,2017,4,5,Astonishing X-Men (2017-2019),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Astonishing X-Men,15,9,2017,4,5,Astonishing X-Men (2017-2019),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Astonishing X-Men,16,9,2017,4,5,Astonishing X-Men (2017-2019),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Astonishing X-Men,17,9,2017,4,5,Astonishing X-Men (2017-2019),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Weapon X,1,9,2017,3,6,Weapon X (2017-2019),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Weapon X,2,9,2017,3,6,Weapon X (2017-2019),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Weapon X,3,9,2017,3,6,Weapon X (2017-2019),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Weapon X,4,9,2017,3,6,Weapon X (2017-2019),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Weapon X,7,9,2017,3,6,Weapon X (2017-2019),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Weapon X,8,9,2017,3,6,Weapon X (2017-2019),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Weapon X,9,9,2017,3,6,Weapon X (2017-2019),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Weapon X,10,9,2017,3,6,Weapon X (2017-2019),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Weapon X,11,9,2017,3,6,Weapon X (2017-2019),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Weapon X,12,9,2017,3,6,Weapon X (2017-2019),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Weapon X,13,9,2017,3,6,Weapon X (2017-2019),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Weapon X,14,9,2017,3,6,Weapon X (2017-2019),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Weapon X,15,9,2017,3,6,Weapon X (2017-2019),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Force,47,9,2023,7,10,X-Force (2020-2024),11,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Force,48,9,2023,7,10,X-Force (2020-2024),11,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Force,49,9,2023,7,10,X-Force (2020-2024),11,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Force,13,9,2020,7,10,X-Force (2020-2024),11,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+New Warriors,2,19,2007,3,4,New Warriors (2007-2009),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Secret Avengers,1,19,2010,4,1,Secret Avengers (2010-2013),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Secret Avengers,2,19,2010,4,1,Secret Avengers (2010-2013),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Secret Avengers,3,19,2010,4,1,Secret Avengers (2010-2013),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Secret Avengers,4,19,2010,4,1,Secret Avengers (2010-2013),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Secret Avengers,5,19,2010,4,1,Secret Avengers (2010-2013),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Secret Avengers,6,19,2010,4,1,Secret Avengers (2010-2013),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Secret Avengers,7,19,2010,4,1,Secret Avengers (2010-2013),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Secret Avengers,8,19,2010,4,1,Secret Avengers (2010-2013),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,6,19,2016,1,12,Captain Marvel (2016-2016),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,7,19,2016,1,12,Captain Marvel (2016-2016),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,8,19,2016,1,12,Captain Marvel (2016-2016),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,9,19,2016,1,12,Captain Marvel (2016-2016),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Uncanny X-Men,7,19,2012,4,2,Uncanny X-Men (2012-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Uncanny X-Men,13,19,2012,4,2,Uncanny X-Men (2012-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Uncanny X-Men,14,19,2012,4,2,Uncanny X-Men (2012-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Uncanny X-Men,15,19,2012,4,2,Uncanny X-Men (2012-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Uncanny X-Men,16,19,2012,4,2,Uncanny X-Men (2012-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Uncanny X-Men,17,19,2012,4,2,Uncanny X-Men (2012-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Spider-Man,237,85,2018,1,4,Spider-Man (2016-2018),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+She-Hulk,4,27,2022,4,6,She-Hulk (2022-2023),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+She-Hulk,159,22,2017,3,4,She-Hulk (2017-2018),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+She-Hulk,160,22,2017,3,4,She-Hulk (2017-2018),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+She-Hulk,161,22,2017,3,4,She-Hulk (2017-2018),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+She-Hulk,162,22,2017,3,4,She-Hulk (2017-2018),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+She-Hulk,163,22,2017,3,4,She-Hulk (2017-2018),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+The Incredible Hulk,709,22,2018,1,4,The Incredible Hulk (1982-?),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+The Incredible Hulk,710,22,2018,1,4,The Incredible Hulk (1982-?),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+The Incredible Hulk,711,22,2018,1,4,The Incredible Hulk (1982-?),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+The Incredible Hulk,712,22,2018,1,4,The Incredible Hulk (1982-?),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+The Incredible Hulk,713,22,2018,1,4,The Incredible Hulk (1982-?),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+The Incredible Hulk,714,22,2018,1,4,The Incredible Hulk (1982-?),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+The Incredible Hulk,715,22,2018,1,4,The Incredible Hulk (1982-?),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+The Incredible Hulk,716,22,2018,1,4,The Incredible Hulk (1982-?),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+The Incredible Hulk,717,22,2018,1,4,The Incredible Hulk (1982-?),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+She-Hulk,1,22,2022,5,6,She-Hulk (2022-2023),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+She-Hulk,2,22,2022,5,6,She-Hulk (2022-2023),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+She-Hulk,3,22,2022,5,6,She-Hulk (2022-2023),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+She-Hulk,7,22,2022,5,6,She-Hulk (2022-2023),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+She-Hulk,8,22,2022,5,6,She-Hulk (2022-2023),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+She-Hulk,9,22,2022,5,6,She-Hulk (2022-2023),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+She-Hulk,10,22,2022,5,6,She-Hulk (2022-2023),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+She-Hulk,11,22,2022,5,6,She-Hulk (2022-2023),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+She-Hulk,12,22,2022,5,6,She-Hulk (2022-2023),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+She-Hulk,13,22,2022,5,6,She-Hulk (2022-2023),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+She-Hulk,14,22,2022,5,6,She-Hulk (2022-2023),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+She-Hulk,15,22,2022,5,6,She-Hulk (2022-2023),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+The Incredible Hulk,1,22,2023,6,4,The Incredible Hulk (1982-?),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+The Incredible Hulk,2,22,2023,6,4,The Incredible Hulk (1982-?),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+The Incredible Hulk,3,22,2023,6,4,The Incredible Hulk (1982-?),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+The Incredible Hulk,4,22,2023,6,4,The Incredible Hulk (1982-?),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+New Warriors,1,26,2007,3,4,New Warriors (2007-2009),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Defenders,6,26,2012,4,3,Defenders (2012-2013),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Deathlok,1,26,2014,1,5,Deathlok (2014-2015),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Deathlok,2,26,2014,1,5,Deathlok (2014-2015),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Deathlok,3,26,2014,1,5,Deathlok (2014-2015),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Deathlok,4,26,2014,1,5,Deathlok (2014-2015),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Deathlok,5,26,2014,1,5,Deathlok (2014-2015),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Deathlok,6,26,2014,1,5,Deathlok (2014-2015),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Deathlok,7,26,2014,1,5,Deathlok (2014-2015),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Deathlok,8,26,2014,1,5,Deathlok (2014-2015),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Deathlok,9,26,2014,1,5,Deathlok (2014-2015),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Deathlok,10,26,2014,1,5,Deathlok (2014-2015),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Fury,1,26,2023,1,5,Fury (2023-2023),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Legion of Super-Heroes,1,53,2010,6,7,Legion of Super-Heroes (2010-2011),11,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Legion of Super-Heroes,2,53,2010,6,7,Legion of Super-Heroes (2010-2011),11,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Legion of Super-Heroes,3,53,2010,6,7,Legion of Super-Heroes (2010-2011),11,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Legion of Super-Heroes,4,53,2010,6,7,Legion of Super-Heroes (2010-2011),11,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Legion of Super-Heroes,5,53,2010,6,7,Legion of Super-Heroes (2010-2011),11,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Legion of Super-Heroes,7,53,2010,6,7,Legion of Super-Heroes (2010-2011),11,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Outsiders,4,53,2003,3,2,Outsiders (2003-2007),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Outsiders,9,53,2003,3,2,Outsiders (2003-2007),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Outsiders,10,53,2003,3,2,Outsiders (2003-2007),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Outsiders,11,53,2003,3,2,Outsiders (2003-2007),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Outsiders,12,53,2003,3,2,Outsiders (2003-2007),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Outsiders,13,53,2003,3,2,Outsiders (2003-2007),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Outsiders,14,53,2003,3,2,Outsiders (2003-2007),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Star Trek,1,65,2022,2,3,Star Trek (2022-2025),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Star Trek,2,65,2022,2,3,Star Trek (2022-2025),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Star Trek,3,65,2022,2,3,Star Trek (2022-2025),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Star Trek,4,65,2022,2,3,Star Trek (2022-2025),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Star Trek,5,65,2022,2,3,Star Trek (2022-2025),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Star Trek,6,65,2022,2,3,Star Trek (2022-2025),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Star Trek,7,65,2022,2,3,Star Trek (2022-2025),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Star Trek,8,65,2022,2,3,Star Trek (2022-2025),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Star Trek,9,65,2022,2,3,Star Trek (2022-2025),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Star Trek,10,65,2022,2,3,Star Trek (2022-2025),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Star Trek,11,65,2022,2,3,Star Trek (2022-2025),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Star Trek,12,65,2022,2,3,Star Trek (2022-2025),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Star Trek,13,65,2022,2,3,Star Trek (2022-2025),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Star Trek,14,65,2022,2,3,Star Trek (2022-2025),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Star Trek,15,65,2022,2,3,Star Trek (2022-2025),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Star Trek,16,65,2022,2,3,Star Trek (2022-2025),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Star Trek,17,65,2022,2,3,Star Trek (2022-2025),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Star Trek,18,65,2022,2,3,Star Trek (2022-2025),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Star Trek,19,65,2022,2,3,Star Trek (2022-2025),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Star Trek,20,65,2022,2,3,Star Trek (2022-2025),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Star Trek,21,65,2022,2,3,Star Trek (2022-2025),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Star Trek,22,65,2022,2,3,Star Trek (2022-2025),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Star Trek,23,65,2022,2,3,Star Trek (2022-2025),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Star Trek,24,65,2022,2,3,Star Trek (2022-2025),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Star Trek,25,65,2022,2,3,Star Trek (2022-2025),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Star Trek,26,65,2022,2,3,Star Trek (2022-2025),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Star Trek,27,65,2022,2,3,Star Trek (2022-2025),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Justice League of America,1,83,2017,3,8,Justice League of America (2017-2018),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Justice League of America,2,83,2017,3,8,Justice League of America (2017-2018),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Justice League of America,7.1,83,2013,2,5,Justice League of America (2013-2014),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Justice League of America,7.2,83,2013,2,5,Justice League of America (2013-2014),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Justice League of America,7.3,83,2013,2,5,Justice League of America (2013-2014),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Justice League of America,7.4,83,2013,2,5,Justice League of America (2013-2014),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Suicide Squad,1,52,2011,4,3,Suicide Squad (2011-2014),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Eternals,1,18,2006,4,2,Eternals (2006-2007),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Eternals,2,18,2006,4,2,Eternals (2006-2007),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Eternals,3,18,2006,4,2,Eternals (2006-2007),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Eternals,4,18,2006,4,2,Eternals (2006-2007),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Eternals,5,18,2006,4,2,Eternals (2006-2007),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Eternals,6,18,2006,4,2,Eternals (2006-2007),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Eternals,7,18,2006,4,2,Eternals (2006-2007),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Eternals,1,18,2021,5,4,Eternals (2021-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Eternals,2,18,2021,5,4,Eternals (2021-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Eternals,3,18,2021,5,4,Eternals (2021-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Eternals,4,18,2021,5,4,Eternals (2021-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Eternals,5,18,2021,5,4,Eternals (2021-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Eternals,6,18,2021,5,4,Eternals (2021-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Eternals,7,18,2021,5,4,Eternals (2021-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Eternals,8,18,2021,5,4,Eternals (2021-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Eternals,9,18,2021,5,4,Eternals (2021-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Eternals,10,18,2021,5,4,Eternals (2021-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Eternals,11,18,2021,5,4,Eternals (2021-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Eternals,12,18,2021,5,4,Eternals (2021-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Eternals,7,18,2022,5,4,Eternals (2021-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Eternals,9,18,2022,5,4,Eternals (2021-2022),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,1,18,2012,7,10,Captain Marvel (2012-2014),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,2,18,2012,7,10,Captain Marvel (2012-2014),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,4,18,2012,7,10,Captain Marvel (2012-2014),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,5,18,2012,7,10,Captain Marvel (2012-2014),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,10,18,2012,7,10,Captain Marvel (2012-2014),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,13,18,2012,7,10,Captain Marvel (2012-2014),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,10,18,2016,8,12,Captain Marvel (2016-2016),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,1,18,2019,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,2,18,2019,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,3,18,2019,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,4,18,2019,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,5,18,2019,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,6,18,2019,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,7,18,2019,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,8,18,2019,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,9,18,2019,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,10,18,2019,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,11,18,2019,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,12,18,2020,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,13,18,2020,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,15,18,2020,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,16,18,2020,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,17,18,2020,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,22,18,2021,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,23,18,2021,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,24,18,2021,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,25,18,2021,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,26,18,2021,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,27,18,2021,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,28,18,2021,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,29,18,2021,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,30,18,2021,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,31,18,2021,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,32,18,2022,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,33,18,2022,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,34,18,2022,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,35,18,2022,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,36,18,2022,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,37,18,2022,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,38,18,2022,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,40,18,2022,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,41,18,2022,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,16,18,2019,10,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,1,18,2024,12,15,Captain Marvel (2023-2024),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,2,18,2024,12,15,Captain Marvel (2023-2024),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,4,18,2024,12,15,Captain Marvel (2023-2024),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,6,18,2024,12,15,Captain Marvel (2023-2024),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,7,18,2024,12,15,Captain Marvel (2023-2024),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,8,18,2024,12,15,Captain Marvel (2023-2024),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,9,18,2024,12,15,Captain Marvel (2023-2024),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,10,18,2024,12,15,Captain Marvel (2023-2024),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,49,18,2024,12,15,Captain Marvel (2023-2024),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Widow,2,18,2016,4,6,Black Widow (2016-2017),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+The Life of Captain Marvel,1,18,2018,1,3,The Life of Captain Marvel (2018-2019),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+The Life of Captain Marvel,2,18,2018,1,3,The Life of Captain Marvel (2018-2019),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+The Life of Captain Marvel,3,18,2018,1,3,The Life of Captain Marvel (2018-2019),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+The Life of Captain Marvel,4,18,2018,1,3,The Life of Captain Marvel (2018-2019),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+The Life of Captain Marvel,5,18,2018,1,3,The Life of Captain Marvel (2018-2019),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Fantastic Four Annual,33,4,2012,3,2,Fantastic Four Annual (2010-2012),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Nova,1,28,2013,5,6,Nova (2013-2015),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Nova,2,28,2013,5,6,Nova (2013-2015),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Nova,5,28,2013,5,6,Nova (2013-2015),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Nova,6,28,2013,5,6,Nova (2013-2015),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Nova,8,28,2013,5,6,Nova (2013-2015),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+World's Finest,1,46,2012,1,5,World's Finest (2012-2012),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+World's Finest,2,46,2012,1,5,World's Finest (2012-2012),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+World's Finest,3,46,2012,1,5,World's Finest (2012-2012),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+World's Finest,4,46,2012,1,5,World's Finest (2012-2012),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+World's Finest,5,46,2012,1,5,World's Finest (2012-2012),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+World's Finest,6,46,2012,1,5,World's Finest (2012-2012),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+World's Finest,7,46,2012,1,5,World's Finest (2012-2012),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+World's Finest,8,46,2012,1,5,World's Finest (2012-2012),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+World's Finest,9,46,2012,1,5,World's Finest (2012-2012),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Justice League of America,1,46,2013,3,5,Justice League of America (2013-2014),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Justice League of America,2,46,2013,3,5,Justice League of America (2013-2014),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Justice League of America,3,46,2013,3,5,Justice League of America (2013-2014),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Justice League of America,4,46,2013,3,5,Justice League of America (2013-2014),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Justice League of America,5,46,2013,3,5,Justice League of America (2013-2014),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Justice League of America,6,46,2013,3,5,Justice League of America (2013-2014),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Justice League of America,7,46,2013,3,5,Justice League of America (2013-2014),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Justice League of America,8,46,2013,3,5,Justice League of America (2013-2014),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Justice League of America,9,46,2013,3,5,Justice League of America (2013-2014),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Justice League of America,10,46,2013,3,5,Justice League of America (2013-2014),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Justice League of America,11,46,2013,3,5,Justice League of America (2013-2014),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Justice League of America,12,46,2013,3,5,Justice League of America (2013-2014),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Justice League of America,7.1,83,2013,3,5,Justice League of America (2013-2014),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,0.1,17,2013,3,4,Guardians of the Galaxy (2013-2015),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,1,17,2013,3,4,Guardians of the Galaxy (2013-2015),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,2,17,2013,3,4,Guardians of the Galaxy (2013-2015),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,3,17,2013,3,4,Guardians of the Galaxy (2013-2015),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,4,17,2013,3,4,Guardians of the Galaxy (2013-2015),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,5,17,2013,3,4,Guardians of the Galaxy (2013-2015),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,6,17,2013,3,4,Guardians of the Galaxy (2013-2015),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,7,17,2013,3,4,Guardians of the Galaxy (2013-2015),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,8,17,2013,3,4,Guardians of the Galaxy (2013-2015),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,9,17,2013,3,4,Guardians of the Galaxy (2013-2015),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,10,17,2013,3,4,Guardians of the Galaxy (2013-2015),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,11,17,2013,3,4,Guardians of the Galaxy (2013-2015),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy Annual,1,17,2015,3,2,Guardians of the Galaxy Annual (2015-2015),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,2013,17,2013,3,4,Guardians of the Galaxy (2013-2015),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,1,17,2017,3,6,Guardians of the Galaxy (2015-2018),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,1,17,2019,5,8,Guardians of the Galaxy (2019-2020),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,2,17,2019,5,8,Guardians of the Galaxy (2019-2020),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,3,17,2019,5,8,Guardians of the Galaxy (2019-2020),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,4,17,2019,5,8,Guardians of the Galaxy (2019-2020),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,5,17,2019,5,8,Guardians of the Galaxy (2019-2020),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,6,17,2019,5,8,Guardians of the Galaxy (2019-2020),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,7,17,2019,5,8,Guardians of the Galaxy (2019-2020),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,8,17,2019,5,8,Guardians of the Galaxy (2019-2020),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,9,17,2019,5,8,Guardians of the Galaxy (2019-2020),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,10,17,2019,5,8,Guardians of the Galaxy (2019-2020),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,11,17,2019,5,8,Guardians of the Galaxy (2019-2020),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,12,17,2019,5,8,Guardians of the Galaxy (2019-2020),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy Annual,1,17,2021,6,4,Guardians of the Galaxy Annual (2021-2021),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,1,17,2023,7,10,Guardians of the Galaxy (2023-2024),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,2,17,2023,7,10,Guardians of the Galaxy (2023-2024),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,3,17,2023,7,10,Guardians of the Galaxy (2023-2024),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,4,17,2023,7,10,Guardians of the Galaxy (2023-2024),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,5,17,2023,7,10,Guardians of the Galaxy (2023-2024),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,6,17,2023,7,10,Guardians of the Galaxy (2023-2024),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,7,17,2023,7,10,Guardians of the Galaxy (2023-2024),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,8,17,2023,7,10,Guardians of the Galaxy (2023-2024),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,9,17,2023,7,10,Guardians of the Galaxy (2023-2024),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Guardians of the Galaxy,10,17,2023,7,10,Guardians of the Galaxy (2023-2024),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,14,17,2015,8,11,Captain Marvel (2014-2015),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Nova,6,17,2016,6,8,Nova (2016-2016),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Nova,3,17,2013,5,6,Nova (2013-2015),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cage!,1,21,2016,1,3,Cage! (2016-2017),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cage!,2,21,2016,1,3,Cage! (2016-2017),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cage!,3,21,2016,1,3,Cage! (2016-2017),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Cage!,4,21,2016,1,3,Cage! (2016-2017),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Heroes for Hire,1,21,2011,1,4,Heroes for Hire (2011-2011),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Heroes for Hire,4,21,2011,1,4,Heroes for Hire (2011-2011),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Heroes for Hire,5,21,2011,1,4,Heroes for Hire (2011-2011),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Heroes for Hire,6,21,2011,1,4,Heroes for Hire (2011-2011),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Heroes for Hire,7,21,2011,1,4,Heroes for Hire (2011-2011),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Heroes for Hire,8,21,2011,1,4,Heroes for Hire (2011-2011),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Blade,2,21,2023,4,6,Blade (2023-2024),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Blade,7,21,2023,4,6,Blade (2023-2024),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Blade,8,21,2023,4,6,Blade (2023-2024),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Blade,9,21,2023,4,6,Blade (2023-2024),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Marvel Team-Up,9,21,2005,1,4,Marvel Team-Up (2005-2006),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Elektra,1,8,2014,3,5,Elektra (2014-2015),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Elektra,2,8,2014,3,5,Elektra (2014-2015),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Elektra,3,8,2014,3,5,Elektra (2014-2015),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Elektra,4,8,2014,3,5,Elektra (2014-2015),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Elektra,5,8,2014,3,5,Elektra (2014-2015),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Elektra,6,8,2014,3,5,Elektra (2014-2015),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Elektra,7,8,2014,3,5,Elektra (2014-2015),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Elektra,8,8,2014,3,5,Elektra (2014-2015),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Elektra,9,8,2014,3,5,Elektra (2014-2015),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Elektra,10,8,2014,3,5,Elektra (2014-2015),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Elektra,11,8,2014,3,5,Elektra (2014-2015),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Elektra,12,8,2014,3,5,Elektra (2014-2015),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Elektra,13,8,2014,3,5,Elektra (2014-2015),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Elektra,14,8,2014,3,5,Elektra (2014-2015),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Elektra,15,8,2014,3,5,Elektra (2014-2015),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Elektra,16,8,2014,3,5,Elektra (2014-2015),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Elektra,17,8,2014,3,5,Elektra (2014-2015),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Elektra,18,8,2014,3,5,Elektra (2014-2015),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Elektra,19,8,2014,3,5,Elektra (2014-2015),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Elektra,20,8,2014,3,5,Elektra (2014-2015),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Elektra,21,8,2014,3,5,Elektra (2014-2015),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Elektra,22,8,2014,3,5,Elektra (2014-2015),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Elektra,23,8,2014,3,5,Elektra (2014-2015),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Elektra,24,8,2014,3,5,Elektra (2014-2015),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Elektra,25,8,2014,3,5,Elektra (2014-2015),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Elektra,26,8,2014,3,5,Elektra (2014-2015),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Elektra,27,8,2014,3,5,Elektra (2014-2015),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Elektra,28,8,2014,3,5,Elektra (2014-2015),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Elektra,29,8,2014,3,5,Elektra (2014-2015),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Elektra,30,8,2014,3,5,Elektra (2014-2015),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Elektra,31,8,2014,3,5,Elektra (2014-2015),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Elektra,32,8,2014,3,5,Elektra (2014-2015),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Elektra,33,8,2014,3,5,Elektra (2014-2015),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Elektra,34,8,2014,3,5,Elektra (2014-2015),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Elektra,35,8,2014,3,5,Elektra (2014-2015),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Widow,1,8,2014,6,5,Black Widow (2014-2015),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Widow,2,8,2014,6,5,Black Widow (2014-2015),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Widow,3,8,2014,6,5,Black Widow (2014-2015),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Widow,4,8,2014,6,5,Black Widow (2014-2015),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Widow,5,8,2014,6,5,Black Widow (2014-2015),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Widow,6,8,2014,6,5,Black Widow (2014-2015),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Widow,7,8,2014,6,5,Black Widow (2014-2015),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Widow,8,8,2014,6,5,Black Widow (2014-2015),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Widow,9,8,2014,6,5,Black Widow (2014-2015),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Widow,10,8,2014,6,5,Black Widow (2014-2015),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Widow,11,8,2014,6,5,Black Widow (2014-2015),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Widow,12,8,2014,6,5,Black Widow (2014-2015),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Widow,13,8,2014,6,5,Black Widow (2014-2015),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Widow,14,8,2014,6,5,Black Widow (2014-2015),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Widow,15,8,2014,6,5,Black Widow (2014-2015),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Widow,16,8,2014,6,5,Black Widow (2014-2015),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Widow,17,8,2014,6,5,Black Widow (2014-2015),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Widow,18,8,2014,6,5,Black Widow (2014-2015),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Widow,19,8,2014,6,5,Black Widow (2014-2015),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Widow,20,8,2014,6,5,Black Widow (2014-2015),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Widow,13,8,2015,6,5,Black Widow (2014-2015),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Widow,1,8,2016,7,6,Black Widow (2016-2017),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Widow,2,8,2016,7,6,Black Widow (2016-2017),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Widow,3,8,2016,7,6,Black Widow (2016-2017),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Widow,4,8,2016,7,6,Black Widow (2016-2017),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Widow,5,8,2016,7,6,Black Widow (2016-2017),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Widow,6,8,2016,7,6,Black Widow (2016-2017),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Widow,7,8,2016,7,6,Black Widow (2016-2017),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Widow,8,8,2016,7,6,Black Widow (2016-2017),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Widow,9,8,2016,7,6,Black Widow (2016-2017),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Widow,10,8,2016,7,6,Black Widow (2016-2017),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Widow,11,8,2016,7,6,Black Widow (2016-2017),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Widow,12,8,2016,7,6,Black Widow (2016-2017),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Blade,5,8,2006,1,5,Blade (2006-2007),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Blade,6,8,2006,1,5,Blade (2006-2007),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Doctor Strange,1,31,2019,6,7,Doctor Strange (2018-2019),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Doctor Strange,2,31,2019,6,7,Doctor Strange (2018-2019),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Doctor Strange,3,31,2019,6,7,Doctor Strange (2018-2019),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Doctor Strange,1,31,2023,7,8,Doctor Strange (2023-2024),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Doctor Strange,12,31,2024,7,8,Doctor Strange (2023-2024),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Doctor Strange,15,31,2024,7,8,Doctor Strange (2023-2024),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Doctor Strange,17,31,2024,7,8,Doctor Strange (2023-2024),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Journey into Mystery,1,39,2011,1,4,Journey into Mystery (2011-2013),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Superman,37,43,2017,3,9,Superman (2017-2019),13,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Superman,38,43,2017,3,9,Superman (2017-2019),13,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Trinity,3,43,2016,1,3,Trinity (2016-2018),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Trinity,4,43,2016,1,3,Trinity (2016-2018),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Trinity,5,43,2016,1,3,Trinity (2016-2018),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Trinity,6,43,2016,1,3,Trinity (2016-2018),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Trinity,7,43,2016,1,3,Trinity (2016-2018),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Trinity,9,43,2016,1,3,Trinity (2016-2018),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Trinity,10,43,2016,1,3,Trinity (2016-2018),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Trinity,11,43,2016,1,3,Trinity (2016-2018),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Trinity,20,43,2018,1,3,Trinity (2016-2018),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Trinity,21,43,2018,1,3,Trinity (2016-2018),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Trinity,27,43,2018,1,3,Trinity (2016-2018),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Journey into Mystery,652,5,2013,3,4,Journey into Mystery (2011-2013),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Journey into Mystery,653,5,2013,3,4,Journey into Mystery (2011-2013),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Journey into Mystery,654,5,2013,3,4,Journey into Mystery (2011-2013),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Journey into Mystery,655,5,2013,3,4,Journey into Mystery (2011-2013),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Loki,1,5,2019,3,5,Loki (2019-2020),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Loki,2,5,2019,3,5,Loki (2019-2020),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Loki,3,5,2019,3,5,Loki (2019-2020),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Weapon X,5,5,2017,1,6,Weapon X (2017-2019),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Weapon X,6,5,2017,1,6,Weapon X (2017-2019),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Thunderbolts,150,37,2011,4,3,Thunderbolts (2006-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Thunderbolts,151,37,2011,4,3,Thunderbolts (2006-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Thunderbolts,154,37,2011,4,3,Thunderbolts (2006-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Thunderbolts,155,37,2011,4,3,Thunderbolts (2006-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Thunderbolts,156,37,2011,4,3,Thunderbolts (2006-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Thunderbolts,157,37,2011,4,3,Thunderbolts (2006-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Thunderbolts,159,37,2011,4,3,Thunderbolts (2006-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Thunderbolts,162,37,2012,4,3,Thunderbolts (2006-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Thunderbolts,163,37,2012,4,3,Thunderbolts (2006-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Thunderbolts,164,37,2012,4,3,Thunderbolts (2006-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Thunderbolts,165,37,2012,4,3,Thunderbolts (2006-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Thunderbolts,167,37,2012,4,3,Thunderbolts (2006-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Thunderbolts,168,37,2012,4,3,Thunderbolts (2006-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Thunderbolts,169,37,2012,4,3,Thunderbolts (2006-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Thunderbolts,170,37,2012,4,3,Thunderbolts (2006-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Thunderbolts,171,37,2012,4,3,Thunderbolts (2006-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Thunderbolts,172,37,2012,4,3,Thunderbolts (2006-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Thunderbolts,173,37,2012,4,3,Thunderbolts (2006-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Thunderbolts,150,37,2011,4,3,Thunderbolts (2006-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Thunderbolts,163.1,37,2012,4,3,Thunderbolts (2006-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Thunderbolts,1,37,2012,2,3,Thunderbolts (2006-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Thunderbolts,1,37,2012,2,3,Thunderbolts (2006-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Thunderbolts,2,37,2012,2,3,Thunderbolts (2006-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Thunderbolts,3,37,2012,2,3,Thunderbolts (2006-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Thunderbolts,1,37,2013,3,4,Thunderbolts (2013-2014),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Thunderbolts,2,37,2013,3,4,Thunderbolts (2013-2014),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Thunderbolts,1,37,2022,4,6,Thunderbolts (2022-2023),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Uncanny X-Men,6,37,2019,1,6,Uncanny X-Men (2019-2019),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Uncanny X-Men,7,37,2019,1,6,Uncanny X-Men (2019-2019),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Invincible Iron Man,1,13,2008,2,1,Invincible Iron Man (2008-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Invincible Iron Man,2,13,2008,2,1,Invincible Iron Man (2008-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Invincible Iron Man,4,13,2008,2,1,Invincible Iron Man (2008-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Invincible Iron Man,5,13,2008,2,1,Invincible Iron Man (2008-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Invincible Iron Man,6,13,2008,2,1,Invincible Iron Man (2008-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Invincible Iron Man,1,13,2015,3,4,Invincible Iron Man (2015-2017),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Invincible Iron Man,2,13,2015,3,4,Invincible Iron Man (2015-2017),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Invincible Iron Man,3,13,2015,3,4,Invincible Iron Man (2015-2017),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Invincible Iron Man,4,13,2015,3,4,Invincible Iron Man (2015-2017),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Invincible Iron Man,5,13,2015,3,4,Invincible Iron Man (2015-2017),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Invincible Iron Man,6,13,2015,3,4,Invincible Iron Man (2015-2017),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Invincible Iron Man,8,13,2015,3,4,Invincible Iron Man (2015-2017),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Invincible Iron Man,9,13,2015,3,4,Invincible Iron Man (2015-2017),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Invincible Iron Man,10,13,2015,3,4,Invincible Iron Man (2015-2017),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Invincible Iron Man,600,13,2018,3,6,Invincible Iron Man (2017-2018),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Iron Man,1,13,2012,5,2,Iron Man (1988-?),14,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Iron Man,2,13,2012,5,2,Iron Man (1988-?),14,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Iron Man,3,13,2012,5,2,Iron Man (1988-?),14,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Iron Man,5,13,2012,5,2,Iron Man (1988-?),14,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Iron Man,6,13,2012,5,2,Iron Man (1988-?),14,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Iron Man,8,13,2012,5,2,Iron Man (1988-?),14,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Iron Man,9,13,2012,5,2,Iron Man (1988-?),14,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Iron Man,10,13,2012,5,2,Iron Man (1988-?),14,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Iron Man,11,13,2012,5,2,Iron Man (1988-?),14,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Iron Man,12,13,2012,5,2,Iron Man (1988-?),14,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Iron Man,13,13,2012,5,2,Iron Man (1988-?),14,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Iron Man,14,13,2012,5,2,Iron Man (1988-?),14,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Iron Man,15,13,2012,5,2,Iron Man (1988-?),14,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Iron Man,16,13,2012,5,2,Iron Man (1988-?),14,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Iron Man,17,13,2012,5,2,Iron Man (1988-?),14,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Iron Man,0,13,2011,1,2,Iron Man (1988-?),14,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Ultimate Spider-Man,17,85,2024,2,5,Ultimate Spider-Man (2024-2026),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Ultimate Spider-Man,20,85,2024,2,5,Ultimate Spider-Man (2024-2026),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Ultimate Spider-Man,21,85,2024,2,5,Ultimate Spider-Man (2024-2026),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Ultimate Spider-Man,22,85,2024,2,5,Ultimate Spider-Man (2024-2026),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Ultimate Spider-Man,23,85,2024,2,5,Ultimate Spider-Man (2024-2026),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Ultimate Spider-Man,24,85,2024,2,5,Ultimate Spider-Man (2024-2026),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Giant-Size X-Men,1,75,2024,1,3,Giant-Size X-Men (2024-2024),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+New Warriors,3,75,2007,1,4,New Warriors (2007-2009),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Eternals,4,75,2007,1,2,Eternals (2006-2007),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Eternals,5,75,2007,1,2,Eternals (2006-2007),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Eternals,6,75,2007,1,2,Eternals (2006-2007),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Star Wars,2,75,2015,1,2,Star Wars (2015-2020),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Thunderbolts,2,75,2024,1,7,Thunderbolts (2024-2024),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Thunderbolts,12,75,2014,3,4,Thunderbolts (2013-2014),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Thunderbolts,170,75,2012,4,3,Thunderbolts (2006-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Thunderbolts,174,75,2012,4,3,Thunderbolts (2006-2012),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Force,1,75,2008,3,5,X-Force (2008-2010),11,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Spider-Man,1,16,2019,1,5,Spider-Man (2019-2021),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+X-Men,27,79,2022,1,8,X-Men (2021-2024),9,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Scarlet Witch,6,79,2023,1,3,Scarlet Witch (2023-2024),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Scarlet Witch,7,79,2023,1,3,Scarlet Witch (2023-2024),4,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Blade,1,20,2023,1,6,Blade (2023-2024),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Blade,2,20,2023,1,6,Blade (2023-2024),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Blade,3,20,2023,1,6,Blade (2023-2024),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Blade,4,20,2023,1,6,Blade (2023-2024),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Blade,5,20,2023,1,6,Blade (2023-2024),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Hulk,4,79,2024,1,2,Hulk (1988-?),8,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Invincible Iron Man,7,79,2024,1,7,Invincible Iron Man (2023-2024),7,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Captain Marvel,1,18,2019,1,14,Captain Marvel (2019-2023),15,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Panther,19,80,2006,1,4,Black Panther (2005-2008),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Panther,20,80,2006,1,4,Black Panther (2005-2008),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Black Panther,22,80,2006,1,4,Black Panther (2005-2008),10,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Amazing Spider-Man,32,102,2026,1,5,Amazing Spider-Man (2025-?),5,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Defenders,10,UNKNOWN — needs physical reassignment,2012,4,3,Defenders (2012-2013),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept
+Defenders,12,UNKNOWN — needs physical reassignment,2012,4,3,Defenders (2012-2013),6,ACCEPTED — GCD counts every same-name series (specials/reprints); declared collector-numbering kept

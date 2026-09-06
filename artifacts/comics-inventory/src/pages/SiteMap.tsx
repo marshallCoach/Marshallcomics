@@ -1,6 +1,15 @@
 import type { NavParams } from "../App";
+import { DATA } from "@/data/data";
 
 type NavFn = (page: string, params?: NavParams) => void;
+
+// Live totals so this overview never drifts from the generated data.
+const _c        = DATA.comics;
+const _yes      = (v?: string) => (v || "").toUpperCase() === "YES";
+const S_COMICS  = _c.length.toLocaleString();
+const S_BOXES   = DATA.boxes.length.toLocaleString();
+const S_KEYS    = _c.filter(x => _yes(x.Key)).length.toLocaleString();
+const S_SIGNED  = _c.filter(x => _yes(x.Signed)).length.toLocaleString();
 
 interface PageEntry {
   id: string;
@@ -23,7 +32,7 @@ const INVENTORY_PAGES: PageEntry[] = [
     id: "everything",
     label: "Every Book",
     icon: "📚",
-    desc: "All 11,776 comics in one searchable, filterable view. List table or card grid, sorted any way you want.",
+    desc: `All ${S_COMICS} comics in one searchable, filterable view. List table or card grid, sorted any way you want.`,
     features: ["Live search across all fields", "Publisher / box / writer filters", "Key issues & signed filters", "NM value column", "Card view with detail expand", "Character family pills"],
   },
   {
@@ -54,7 +63,7 @@ const INVENTORY_PAGES: PageEntry[] = [
     label: "Box View",
     icon: "▬",
     desc: "See inside any box as a visual spine display — each book is a colored stripe, keys are taller, signed books have a green edge.",
-    features: ["Select any of 74 boxes", "Sectioned by publisher", "Color-coded by title", "Key / signed visual markers", "Sorted or box-order toggle", "Title detail panel", "By Run accordion view"],
+    features: [`Select any of ${S_BOXES} boxes`, "Sectioned by publisher", "Color-coded by title", "Key / signed visual markers", "Sorted or box-order toggle", "Title detail panel", "By Run accordion view"],
   },
   {
     id: "stats",
@@ -124,7 +133,7 @@ const BUSINESS_PAGES: PageEntry[] = [
     label: "Signings",
     icon: "✍",
     desc: "Private signings tracker — which books are signed, by whom, at what event, and any personalization notes.",
-    features: ["54 signed books tracked", "Signer & event detail", "Personalization notes", "Filterable list"],
+    features: [`${S_SIGNED} signed books tracked`, "Signer & event detail", "Personalization notes", "Filterable list"],
     accent: "#7a5c3a",
   },
   {
@@ -142,10 +151,10 @@ export default function SiteMap({ onNavigate }: { onNavigate: NavFn }) {
 
       <div style={{ marginBottom: 28 }}>
         <div style={{
-          fontFamily: "'Bebas Neue', sans-serif", fontSize: "2rem",
+          fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "1.75rem",
           letterSpacing: "4px", color: "var(--red)", lineHeight: 1,
         }}>SITE MAP</div>
-        <div style={{ fontSize: "0.85rem", color: "var(--muted2)", marginTop: 4 }}>
+        <div style={{ fontSize: "0.875rem", color: "var(--muted2)", marginTop: 4 }}>
           Every page in the Marshall Comics Inventory Hub — click any card to navigate there.
         </div>
       </div>
@@ -167,11 +176,11 @@ export default function SiteMap({ onNavigate }: { onNavigate: NavFn }) {
       <div style={{
         marginTop: 32, padding: "16px 20px",
         background: "var(--surface)", border: "1.5px solid var(--border)",
-        borderRadius: 8, fontSize: "0.78rem", color: "var(--muted2)", lineHeight: 1.7,
+        borderRadius: 8, fontSize: "0.875rem", color: "var(--muted2)", lineHeight: 1.7,
       }}>
-        <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.7rem",
+        <span style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
           letterSpacing: "2px", color: "var(--red)", marginRight: 10 }}>DATA</span>
-        11,776 comics · 74 boxes · 1,462 key issues · 54 signed books · 31 tracked fields per comic
+        {S_COMICS} comics · {S_BOXES} boxes · {S_KEYS} key issues · {S_SIGNED} signed books · 31 tracked fields per comic
         <span style={{ margin: "0 10px", color: "var(--border)" }}>·</span>
         Auto-generated from xlsx · No database · Static TypeScript
       </div>
@@ -192,10 +201,10 @@ function Section({
       <div style={{ display: "flex", alignItems: "baseline", gap: 14, marginBottom: 14,
         borderBottom: "2px solid var(--red)", paddingBottom: 8 }}>
         <span style={{
-          fontFamily: "'Bebas Neue', sans-serif", fontSize: "1.1rem",
+          fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
           letterSpacing: "3px", color: "var(--red)",
         }}>{label}</span>
-        <span style={{ fontSize: "0.78rem", color: "var(--muted2)" }}>{sublabel}</span>
+        <span style={{ fontSize: "0.875rem", color: "var(--muted2)" }}>{sublabel}</span>
       </div>
 
       <div style={{
@@ -244,16 +253,16 @@ function PageCard({ page, onNavigate }: { page: PageEntry; onNavigate: NavFn }) 
     >
       <div style={{ display: "flex", alignItems: "flex-start", gap: 10 }}>
         <div style={{
-          fontFamily: "'Bebas Neue', sans-serif",
-          fontSize: "1.3rem", lineHeight: 1,
+          fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+          fontSize: "1.75rem", lineHeight: 1,
           color: accent, flexShrink: 0, minWidth: 24, textAlign: "center",
         }}>{page.icon}</div>
         <div style={{ flex: 1 }}>
           <div style={{
-            fontFamily: "'Bebas Neue', sans-serif", fontSize: "1rem",
+            fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
             letterSpacing: "2px", color: "var(--text)", lineHeight: 1, marginBottom: 4,
           }}>{page.label}</div>
-          <div style={{ fontSize: "0.78rem", color: "var(--muted2)", lineHeight: 1.5 }}>
+          <div style={{ fontSize: "0.875rem", color: "var(--muted2)", lineHeight: 1.5 }}>
             {page.desc}
           </div>
         </div>
@@ -262,8 +271,8 @@ function PageCard({ page, onNavigate }: { page: PageEntry; onNavigate: NavFn }) 
       <div style={{ display: "flex", flexWrap: "wrap", gap: 4, marginTop: 2 }}>
         {page.features.map(f => (
           <span key={f} style={{
-            fontSize: "0.6rem",
-            fontFamily: "'Bebas Neue', sans-serif",
+            fontSize: "0.875rem",
+            fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
             letterSpacing: "0.8px",
             background: "var(--surface2)",
             color: "var(--muted)",
@@ -280,7 +289,7 @@ function PageCard({ page, onNavigate }: { page: PageEntry; onNavigate: NavFn }) 
         display: "flex", justifyContent: "flex-end",
       }}>
         <span style={{
-          fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.62rem",
+          fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
           letterSpacing: "1.5px", color: accent, opacity: 0.8,
         }}>OPEN →</span>
       </div>

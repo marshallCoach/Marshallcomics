@@ -30,7 +30,7 @@ export default function ShowPlanner() {
         <p>12 themed show concepts based on your collection. Every show has a recommended anchor book, mix strategy, and Whatnot story pitch. Revenue target: $9,000–$18,000 for the year.</p>
       </div>
 
-      <div style={{ background:"var(--surface2)", borderBottom:"1px solid var(--border)", padding:"10px 20px", fontSize:"0.8rem", color:"var(--muted2)" }}>
+      <div style={{ background:"var(--surface2)", borderBottom:"1px solid var(--border)", padding:"10px 20px", fontSize:"0.875rem", color:"var(--muted2)" }}>
         📅 Wednesday shows · Juneteenth Special Jun 19 AM · Terrificon Aug 7–9 · NYCC Oct 8–11 · 31 scheduled events · 12 themed concepts
       </div>
 
@@ -45,7 +45,7 @@ export default function ShowPlanner() {
               </div>
               {isOpen && (
                 <div className="lcard-expand">
-                  <div style={{ fontSize:"0.82rem", color:"var(--text2)", lineHeight:1.7, whiteSpace:"pre-wrap" }}>
+                  <div style={{ fontSize:"0.875rem", color:"var(--text2)", lineHeight:1.7, whiteSpace:"pre-wrap" }}>
                     {s.Description}
                   </div>
                 </div>
@@ -57,10 +57,10 @@ export default function ShowPlanner() {
 
       {/* Revenue guide */}
       <div style={{ margin:"24px 20px 40px", padding:"16px 20px", background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:8 }}>
-        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem", letterSpacing:"1.5px", color:"var(--red)", marginBottom:8 }}>
+        <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px", color:"var(--red)", marginBottom:8 }}>
           WHATNOT SHOW STRATEGY PRINCIPLES
         </div>
-        <div style={{ display:"flex", flexWrap:"wrap", gap:14, fontSize:"0.78rem", color:"var(--muted2)", lineHeight:1.6 }}>
+        <div style={{ display:"flex", flexWrap:"wrap", gap:14, fontSize:"0.875rem", color:"var(--muted2)", lineHeight:1.6 }}>
           {[
             { h:"Anchor + Fillers", t:"Every show: 1–2 anchor books (tell a story) + 10–20 fillers to keep momentum. Never start with your best book." },
             { h:"Signed Books", t:"Lead with the STORY of the signing, not just the book. 'Hayley Atwell signed this to Robert' = emotional connection = higher bids." },
@@ -68,7 +68,7 @@ export default function ShowPlanner() {
             { h:"Whatnot-specific wins", t:"MCU fans cross over to comics. Themed shows outperform mixed shows. Repeat buyers build loyalty over a season of shows." },
           ].map(p => (
             <div key={p.h} style={{ flex:"1 1 220px" }}>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"1px", color:"var(--text)", marginBottom:3 }}>{p.h}</div>
+              <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--text)", marginBottom:3 }}>{p.h}</div>
               <div>{p.t}</div>
             </div>
           ))}

@@ -1,14 +1,61 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { getCoverSvgUrl, type ComicLike } from "@/utils/coverThumbnails";
-import { comicFlagKey, getComicFlag, setComicFlag, clearComicFlag } from "@/lib/comicFlags";
+import { coverId, isFlagged as isCoverFlaggedLib, toggleFlag as toggleCoverFlagLib } from "@/lib/coverFlags";
 
 const BASE = import.meta.env.BASE_URL?.replace(/\/$/, "") ?? "";
+
+// ── Static cover map loaded once from /covers.json ───────────────────────────
+let coversMap: Record<string, { url: string | null; large?: string | null }> | null = null;
+let coversLoading: Promise<void> | null = null;
+
+// Fallback index: normalized "title|||issue" → url, built ONLY from entries whose
+// normalized key maps to a single distinct url. Rescues covers orphaned by a title
+// rename (e.g. "Icon & Rocket: Season One" vs the stored "Icon and Rocket", or
+// "&" vs "and", ":" vs ",", "x" vs "X"). Ambiguous keys (same title+issue across
+// multiple volumes/urls) are intentionally EXCLUDED so a rename fix never pastes a
+// wrong-volume cover onto a book — Volume stays significant.
+let normIndex: Map<string, string> | null = null;
+const normTitle = (t: string) =>
+  t.toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9]+/g, " ").trim();
+const normIssue = (i: string) =>
+  String(i).replace(/^#/, "").replace(/^0+(\d)/, "$1").trim();
+const normCoverKey = (title: string, issue: string) =>
+  `${normTitle(title)}|||${normIssue(issue)}`;
+
+function buildNormIndex(map: Record<string, { url: string | null }>) {
+  const groups = new Map<string, Set<string>>();
+  for (const [k, v] of Object.entries(map)) {
+    const url = v?.url;
+    if (!url) continue;
+    const p = k.split("|||");
+    if (p.length < 2) continue;
+    const nk = `${normTitle(p[0])}|||${normIssue(p[1])}`;
+    (groups.get(nk) ?? groups.set(nk, new Set()).get(nk)!).add(url);
+  }
+  const idx = new Map<string, string>();
+  for (const [nk, urls] of groups) if (urls.size === 1) idx.set(nk, [...urls][0]);
+  return idx;
+}
+
+function loadCovers(): Promise<void> {
+  if (coversMap !== null) return Promise.resolve();
+  if (coversLoading) return coversLoading;
+  coversLoading = fetch(`${BASE}/covers.json`)
+    .then(r => r.json())
+    .then(data => { coversMap = data; normIndex = buildNormIndex(data); })
+    .catch(() => { coversMap = {}; normIndex = new Map(); });
+  return coversLoading;
+}
+
+// Pre-load covers as soon as the module is imported
+loadCovers();
 
 const memCache = new Map<string, string | null>();
 const inFlight  = new Map<string, Promise<string | null>>();
 
 function cacheKey(c: ComicLike) {
-  return `${c.Title}|||${c.Issue}`;
+  const vol = String((c as { Volume?: string | number }).Volume || "1").trim();
+  return `${c.Title}|||${c.Issue}|||${vol}`;
 }
 
 /** Clears the client-side memory cache for a specific comic so it re-fetches. */
@@ -23,16 +70,20 @@ async function fetchCover(c: ComicLike): Promise<string | null> {
 
   const p = (async () => {
     try {
-      const params = new URLSearchParams({
-        title: c.Title,
-        issue: String(c.Issue || ""),
-        publisher: (c as { Publisher?: string }).Publisher ?? "",
-        year: String((c as { Year?: string }).Year ?? ""),
-      });
-      const res = await fetch(`${BASE}/api/covers/search?${params}`);
-      if (!res.ok) return null;
-      const data = await res.json() as { cover_url?: string | null };
-      const url = data.cover_url ?? null;
+      await loadCovers();
+      const issueStr = String(c.Issue);
+      // Lookup priority: volume-aware key → legacy key → legacy with # prefix
+      const entry =
+        coversMap?.[key] ??
+        coversMap?.[`${c.Title}|||${issueStr}`] ??
+        coversMap?.[`${c.Title}|||#${issueStr.replace(/^#/, "")}`] ??
+        null;
+      // Rename-tolerant fallback: only when the exact keys miss, and only when the
+      // normalized title+issue resolves to a single unambiguous cover.
+      const url =
+        entry?.url ??
+        normIndex?.get(normCoverKey(c.Title, issueStr)) ??
+        null;
       memCache.set(key, url);
       return url;
     } catch {
@@ -54,9 +105,10 @@ interface Props {
   onClick?: (largeUrl: string | null) => void;
   className?: string;
   style?: React.CSSProperties;
+  objectFit?: "cover" | "contain";
 }
 
-export function CoverImage({ comic, width = 56, height = 84, onClick, style }: Props) {
+export function CoverImage({ comic, width = 56, height = 84, onClick, style, objectFit = "cover" }: Props) {
   const [src, setSrc]         = useState<string>(() => getCoverSvgUrl(comic as ComicLike, { width, height }));
   const [realUrl, setRealUrl] = useState<string | null>(null);
   const [loaded, setLoaded]   = useState(false);
@@ -101,7 +153,7 @@ export function CoverImage({ comic, width = 56, height = 84, onClick, style }: P
     >
       <img
         src={src}
-        alt={`${comic.Title} #${comic.Issue}`}
+        alt={`${comic.Title} ${comic.Issue}`}
         width={width}
         height={height}
         loading="lazy"
@@ -116,7 +168,7 @@ export function CoverImage({ comic, width = 56, height = 84, onClick, style }: P
           display: "block",
           width: "100%",
           height: "100%",
-          objectFit: "cover",
+          objectFit,
           borderRadius: 4,
           transition: "opacity 0.2s",
           opacity: (isSvg || loaded) && !error ? 1 : 0.7,
@@ -135,34 +187,6 @@ export function CoverImage({ comic, width = 56, height = 84, onClick, style }: P
   );
 }
 
-// ── Cover-flag helpers (mirrors brbFlaggedCovers_v1 used in CoverCatalog) ─────
-const COVER_FLAG_LS = "brbFlaggedCovers_v1";
-function readCoverFlags(): Record<string, unknown> {
-  try { return JSON.parse(localStorage.getItem(COVER_FLAG_LS) || "{}"); }
-  catch { return {}; }
-}
-function isCoverFlagged(key: string): boolean { return key in readCoverFlags(); }
-function toggleCoverFlag(key: string, data: { Title: string; Issue: string | number; Box?: string; Publisher?: string; Year?: string; Cover_Artist?: string }): boolean {
-  const all = readCoverFlags();
-  if (key in all) {
-    delete all[key];
-    localStorage.setItem(COVER_FLAG_LS, JSON.stringify(all));
-    return false;
-  }
-  all[key] = {
-    id: key,
-    Title: data.Title,
-    Issue: String(data.Issue),
-    Box: data.Box ?? "",
-    Publisher: data.Publisher ?? "",
-    Year: data.Year ?? "",
-    Cover_Artist: data.Cover_Artist ?? "",
-    flaggedAt: new Date().toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }),
-  };
-  localStorage.setItem(COVER_FLAG_LS, JSON.stringify(all));
-  return true;
-}
-
 interface ModalProps {
   comic: ComicLike & {
     Publisher?: string; Year?: string; Key?: string; Key_Reason?: string;
@@ -176,12 +200,9 @@ interface ModalProps {
 
 export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
   const box        = (comic as { Box?: string }).Box ?? "";
-  const coverKey   = `${comic.Title}|||${comic.Issue}|||${box}`;
-  const dataKey    = comicFlagKey(comic.Title, String(comic.Issue), box);
+  const coverKey   = coverId({ Title: comic.Title, Issue: comic.Issue, Box: box });
 
-  const [coverFlagged, setCoverFlagged] = useState(() => isCoverFlagged(coverKey));
-  const [notes,        setNotes]        = useState(() => getComicFlag(dataKey)?.notes ?? "");
-  const [copied,       setCopied]       = useState(false);
+  const [coverFlagged, setCoverFlagged] = useState(() => isCoverFlaggedLib(coverKey));
 
   useEffect(() => {
     const h = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
@@ -190,48 +211,16 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
   }, [onClose]);
 
   function handleCoverFlag() {
-    const next = toggleCoverFlag(coverKey, comic as Parameters<typeof toggleCoverFlag>[1]);
+    const c = comic as { Cover_Artist?: string; Publisher?: string; Year?: string };
+    const next = toggleCoverFlagLib({
+      Title: comic.Title, Issue: comic.Issue, Box: box,
+      Cover_Artist: c.Cover_Artist, Publisher: c.Publisher, Year: c.Year,
+    });
     setCoverFlagged(next);
-  }
-
-  function handleNotes(val: string) {
-    setNotes(val);
-    if (val.trim()) setComicFlag(dataKey, getComicFlag(dataKey)?.fields ?? [], val);
-    else {
-      const existing = getComicFlag(dataKey);
-      if (existing?.fields?.length) setComicFlag(dataKey, existing.fields, "");
-      else clearComicFlag(dataKey);
-    }
-  }
-
-  function buildPrompt() {
-    const divider = "────────────────────────────────";
-    const lines = [
-      "BOOK NOTE REQUEST", divider,
-      `Title:     ${comic.Title}`,
-      `Issue:     #${comic.Issue}`,
-    ];
-    if ((comic as { Year?: string }).Year)      lines.push(`Year:      ${(comic as { Year?: string }).Year}`);
-    if ((comic as { Publisher?: string }).Publisher) lines.push(`Publisher: ${(comic as { Publisher?: string }).Publisher}`);
-    if (box) lines.push(`Box:       ${box}`);
-    if ((comic as { Era?: string }).Era)        lines.push(`Era:       ${(comic as { Era?: string }).Era}`);
-    lines.push("");
-    if (notes.trim()) { lines.push("NOTES", divider, notes.trim(), ""); }
-    if (coverFlagged)  { lines.push("COVER NOTE", divider, "Cover image appears incorrect — needs Comic Vine verification.", ""); }
-    lines.push(divider, "Please review and update this entry as needed.");
-    return lines.join("\n");
-  }
-
-  async function copyForClaude() {
-    try { await navigator.clipboard.writeText(buildPrompt()); }
-    catch { const ta = document.getElementById("cm-prompt-preview") as HTMLTextAreaElement; if (ta) { ta.select(); document.execCommand("copy"); } }
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2200);
   }
 
   const isKey    = (comic.Key    ?? "").toUpperCase() === "YES";
   const fallback = getCoverSvgUrl(comic, { width: 300, height: 460 });
-  const hasNote  = notes.trim().length > 0;
 
   return (
     <>
@@ -257,7 +246,7 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
         <div style={{ flexShrink: 0, width: 220, alignSelf: "stretch", overflow: "hidden", background: "#111" }}>
           <img
             src={largeUrl ?? fallback}
-            alt={`${comic.Title} #${comic.Issue}`}
+            alt={`${comic.Title} ${comic.Issue}`}
             style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
             onError={e => { (e.target as HTMLImageElement).src = fallback; }}
           />
@@ -269,32 +258,32 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
           <div style={{ padding: "16px 18px 12px", borderBottom: "1.5px solid var(--border)", background: "var(--surface)" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
               <div>
-                <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.5rem", letterSpacing: "2px", color: "var(--text)", lineHeight: 1 }}>
+                <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "1.75rem", letterSpacing: "2px", color: "var(--text)", lineHeight: 1 }}>
                   {comic.Title}
                 </div>
-                <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1rem", color: "var(--red)", letterSpacing: "1px", marginTop: 4 }}>
+                <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", color: "var(--red)", letterSpacing: "1px", marginTop: 4 }}>
                   #{comic.Issue}
-                  {(comic as { Year?: string }).Year && <span style={{ color: "var(--muted)", marginLeft: 8, fontSize: "0.8rem" }}>{(comic as { Year?: string }).Year}</span>}
+                  {(comic as { Year?: string }).Year && <span style={{ color: "var(--muted)", marginLeft: 8, fontSize: "0.875rem" }}>{(comic as { Year?: string }).Year}</span>}
                 </div>
               </div>
-              <button onClick={onClose} style={{ background: "var(--surface2)", border: "1px solid var(--border)", borderRadius: 6, width: 30, height: 30, cursor: "pointer", color: "var(--muted)", fontSize: "1rem", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>×</button>
+              <button onClick={onClose} style={{ background: "var(--surface2)", border: "1px solid var(--border)", borderRadius: 6, width: 30, height: 30, cursor: "pointer", color: "var(--muted)", fontSize: "0.875rem", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>×</button>
             </div>
             <div style={{ display: "flex", gap: 6, marginTop: 8, flexWrap: "wrap" }}>
               {(comic as { Publisher?: string }).Publisher && (
-                <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem", letterSpacing: "1px", background: "var(--surface2)", border: "1px solid var(--border)", color: "var(--muted2)", borderRadius: 3, padding: "2px 8px" }}>
+                <span style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1px", background: "var(--surface2)", border: "1px solid var(--border)", color: "var(--muted2)", borderRadius: 3, padding: "2px 8px" }}>
                   {(comic as { Publisher?: string }).Publisher}
                 </span>
               )}
               {box && (
-                <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem", letterSpacing: "1px", background: "#7a5c3a18", border: "1.5px solid #7a5c3a", color: "#7a5c3a", borderRadius: 3, padding: "2px 8px" }}>
+                <span style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1px", background: "#7a5c3a18", border: "1.5px solid #7a5c3a", color: "#7a5c3a", borderRadius: 3, padding: "2px 8px" }}>
                   Box {box}
                 </span>
               )}
               {isKey && (
-                <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem", letterSpacing: "1px", background: "#fff8e0", color: "#8a6000", border: "1px solid #fde68a", borderRadius: 3, padding: "2px 8px" }}>★ KEY</span>
+                <span style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1px", background: "#fff8e0", color: "#8a6000", border: "1px solid #fde68a", borderRadius: 3, padding: "2px 8px" }}>★ KEY</span>
               )}
               {(comic as { Condition?: string }).Condition && (
-                <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem", letterSpacing: "1px", background: "var(--surface2)", color: "var(--muted2)", border: "1px solid var(--border)", borderRadius: 3, padding: "2px 8px" }}>
+                <span style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1px", background: "var(--surface2)", color: "var(--muted2)", border: "1px solid var(--border)", borderRadius: 3, padding: "2px 8px" }}>
                   {(comic as { Condition?: string }).Condition}
                 </span>
               )}
@@ -305,24 +294,24 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
           <div style={{ flex: 1, overflowY: "auto", padding: "14px 18px 18px" }}>
             {isKey && (comic as { Key_Reason?: string }).Key_Reason && (
               <div style={{ background: "#fff8e0", border: "1.5px solid #fde68a", borderRadius: 6, padding: "10px 14px", marginBottom: 12 }}>
-                <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.6rem", letterSpacing: "2px", color: "#8a6000", marginBottom: 4 }}>KEY REASON</div>
-                <div style={{ fontSize: "0.88rem", color: "#5a4000", lineHeight: 1.5 }}>{(comic as { Key_Reason?: string }).Key_Reason}</div>
+                <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "2px", color: "#8a6000", marginBottom: 4 }}>KEY REASON</div>
+                <div style={{ fontSize: "0.875rem", color: "#5a4000", lineHeight: 1.5 }}>{(comic as { Key_Reason?: string }).Key_Reason}</div>
               </div>
             )}
             {(comic as { Value_NM?: string }).Value_NM && (
               <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
-                <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.6rem", letterSpacing: "1.5px", color: "var(--muted)", paddingTop: 1, flexShrink: 0, width: 70 }}>VALUE NM</span>
-                <span style={{ fontSize: "0.88rem", color: "var(--red)", fontWeight: 600 }}>{(comic as { Value_NM?: string }).Value_NM}</span>
+                <span style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1.5px", color: "var(--muted)", paddingTop: 1, flexShrink: 0, width: 70 }}>VALUE NM</span>
+                <span style={{ fontSize: "0.875rem", color: "var(--red)", fontWeight: 600 }}>{(comic as { Value_NM?: string }).Value_NM}</span>
               </div>
             )}
 
             {/* ── Flag cover as incorrect ── */}
             <div style={{ borderTop: "1px solid var(--border)", paddingTop: 12, marginBottom: 14 }}>
-              <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.6rem", letterSpacing: "2px", color: "var(--muted)", marginBottom: 7 }}>COVER AUDIT</div>
+              <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "2px", color: "var(--muted)", marginBottom: 7 }}>COVER AUDIT</div>
               <button
                 onClick={handleCoverFlag}
                 style={{
-                  fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.68rem", letterSpacing: "1.5px",
+                  fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1.5px",
                   padding: "7px 14px", borderRadius: 5, cursor: "pointer",
                   border: `1.5px solid ${coverFlagged ? "#c8102e" : "var(--border)"}`,
                   background: coverFlagged ? "#fff0f0" : "var(--surface2)",
@@ -333,59 +322,9 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
                 {coverFlagged ? "🚩 COVER FLAGGED AS INCORRECT" : "🚩 FLAG COVER AS INCORRECT"}
               </button>
               {coverFlagged && (
-                <div style={{ fontFamily: "'Crimson Pro',serif", fontSize: "0.78rem", color: "var(--muted)", marginTop: 5, fontStyle: "italic" }}>
-                  Queued for review in Cover Catalog → Flagged section
+                <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", color: "var(--muted)", marginTop: 5, fontStyle: "italic" }}>
+                  Added to the 🚩 flagged covers — export them all from Cover → Cover Review
                 </div>
-              )}
-            </div>
-
-            {/* ── Claude note ── */}
-            <div style={{ borderTop: "1px solid var(--border)", paddingTop: 12 }}>
-              <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.6rem", letterSpacing: "2px", color: hasNote ? "#d97706" : "var(--muted)", marginBottom: 7 }}>
-                NOTE TO CLAUDE{hasNote ? " ●" : ""}
-              </div>
-              <textarea
-                value={notes}
-                onChange={e => handleNotes(e.target.value)}
-                placeholder="What needs correcting or adding? Any known values, sources, or context…"
-                style={{
-                  width: "100%", boxSizing: "border-box",
-                  padding: "9px 11px", minHeight: 80,
-                  fontFamily: "'Crimson Pro',serif", fontSize: "0.88rem", lineHeight: 1.55,
-                  color: "var(--text)", background: "var(--surface)",
-                  border: `1.5px solid ${hasNote ? "#d97706" : "var(--border)"}`,
-                  borderRadius: 6, resize: "vertical", outline: "none",
-                }}
-                onFocus={e => e.currentTarget.style.borderColor = "#d97706"}
-                onBlur={e => e.currentTarget.style.borderColor = hasNote ? "#d97706" : "var(--border)"}
-              />
-              {(hasNote || coverFlagged) && (
-                <>
-                  <textarea
-                    id="cm-prompt-preview"
-                    readOnly
-                    value={buildPrompt()}
-                    style={{
-                      width: "100%", boxSizing: "border-box",
-                      padding: "8px 10px", height: 110, marginTop: 8,
-                      fontFamily: "'Courier New',monospace", fontSize: "0.68rem", lineHeight: 1.45,
-                      color: "var(--muted2)", background: "var(--surface)",
-                      border: "1px solid var(--border)", borderRadius: 5,
-                      resize: "none", outline: "none",
-                    }}
-                  />
-                  <button
-                    onClick={copyForClaude}
-                    style={{
-                      marginTop: 8, width: "100%", padding: "9px 0",
-                      fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.7rem", letterSpacing: "1.5px",
-                      background: copied ? "#16a34a" : "#d97706",
-                      border: "none", borderRadius: 6, color: "#fff", cursor: "pointer", transition: "background 0.2s",
-                    }}
-                  >
-                    {copied ? "✓ COPIED TO CLIPBOARD" : "COPY FOR CLAUDE →"}
-                  </button>
-                </>
               )}
             </div>
           </div>

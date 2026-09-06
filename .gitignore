@@ -47,3 +47,78 @@ Thumbs.db
 # Replit
 .cache/
 .local/
+
+# BRB working artifacts
+data-fix/
+ebay_pricing_results.json
+purge_log.json
+invalid_boxes_to_fix.csv
+__pycache__/
+
+# Mac inventory files — source of truth on Mac, never tracked in git
+attached_assets/*.xlsx
+*.xlsx
+dupes_*.csv
+ebay_err.txt
+ebay_log.txt
+overnight_err.txt
+overnight_log.txt
+
+# Mac-local operational files — not tracked in git
+BRB\ Ops\ Reference*.html
+BRB\ Ops\ Reference*_files/
+
+# brb.py pipeline runtime state (local, per-machine)
+.brb_pipeline_state.json
+cover_fix_report.json
+BRB_Action_Detail_Plan.txt
+BRB_Box_Map.html
+BRB_Juneteenth_Show_June19_v2.docx
+BRB_Pipeline_Tracker_2026.html
+BRB_Session_Compact_0207.md
+BRB_Shelf_Map*.html
+BRB_Trello_Top75_Keys.csv
+BRB_eBay_Strategy.docx
+BRB_overnight_script_v2*.zip
+issues.json
+needs_review.json
+volume_lookup_cache.json
+FETCH_HEAD
+.pytest_cache/
+
+# GCD local extraction — derived from the ~3.8GB dump, rebuildable via gcd_build_local_db.py + gcd_add_credits.py
+gcd_local.sqlite
+gcd_local.sqlite-journal
+gcd_build.log
+gcd_credits.log
+*.sql
+volume_check_worklist.csv
+gcd_rescan.log
+gcd_unmatched_titles.csv
+volume_clash_cover_issues.csv
+title_merge_map.csv
+title_merge_map2.csv
+title_merge_map3.csv
+bare_rows_worklist.csv
+title_merge_map5.csv
+dupes_samwilson.csv
+dupes_47.csv
+gcd_variants.log
+cv_title_guesses.xlsx
+fuzzy_title_guesses.xlsx
+ebay_zero_comp_review.xlsx
+title_merge_ebay*.csv
+title_merge_manual.csv
+manual_title_review.xlsx
+gcd_manual_rescan.log
+title_merge_cv.csv
+cv_title_guesses.xlsx
+fandom_year_proposals.xlsx
+fandom_test.xlsx
+fandom_years.log
+key_issues_ranked.xlsx
+fandom_round2.xlsx
+extrap.log
+key_audit.xlsx
+.cv_credits_state.json
+bare_rows_*.xlsx
