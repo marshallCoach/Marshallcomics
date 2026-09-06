@@ -50,14 +50,14 @@ body {
 .app-chrome { position: sticky; top: 0; z-index: 9000; background: #111; }
 
 /* ── TERRIFICON BANNER ── */
-.terrificon-banner {
+.event-banner {
   display: flex; align-items: center; justify-content: center; gap: 10px;
   width: 100%; padding: 6px 16px;
   background: #1a1a1a; border: none;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; letter-spacing: 2px;
   cursor: pointer; transition: background 0.15s;
 }
-.terrificon-banner:hover { background: #222; }
+.event-banner:hover { background: #222; }
 .tf-label { color: var(--red); font-size: 0.875rem; }
 .tf-divider { color: rgba(255,255,255,0.2); font-size: 0.875rem; }
 .tf-time { color: rgba(255,255,255,0.7); font-size: 0.875rem; }
@@ -197,7 +197,7 @@ body {
   .search-kbd { display: none; }
 }
 @media (max-width: 600px) {
-  .terrificon-banner { top: 0; }
+  .event-banner { top: 0; }
   .app-header { top: 26px; height: 48px; padding: 0 14px; gap: 10px; }
   .app-title { font-size: 0.875rem; letter-spacing: 2px; }
   .header-stats { gap: 12px; }
