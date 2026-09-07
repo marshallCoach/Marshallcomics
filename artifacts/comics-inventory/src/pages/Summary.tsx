@@ -16,7 +16,6 @@ const keyCount     = comics.filter(c => (c.Key    || "").toUpperCase() === "YES"
 const signedCount  = comics.filter(c => (c.Signed || "").toUpperCase() === "YES").length;
 const whatnotCount = comics.filter(c => (c.Platform || "").toUpperCase().includes("WHATNOT")).length;
 const ebayCount    = comics.filter(c => (c.Platform || "").toUpperCase() === "EBAY").length;
-const tfCount      = comics.filter(c => !!(c.Terrificon || "").trim()).length;
 
 // ── Update banner data — fully derived from live data ─────────────────────────
 function formatGeneratedDate(iso: string): string {
@@ -220,8 +219,7 @@ const TIMELINE = [
   { label:"Geoff Johns + Fabok SS",                   date:"Jun 26",      days:daysUntil(2026,6,26),  urgency:"high",     cat:"Signing"  },
   { label:"Roy Thomas SS — 5 books → $820–$1,630 ROI",date:"Jul 10",      days:daysUntil(2026,7,10),  urgency:"high",     cat:"Signing"  },
   { label:"CGC Press Batch — ship all simultaneously",date:"Before Aug 7",days:daysUntil(2026,8,1),   urgency:"high",     cat:"CGC"      },
-  { label:"✦ TERRIFICON — Jim Lee Sat Aug 8 only",    date:"Aug 7–9",     days:daysUntil(2026,8,7),   urgency:"event",    cat:"Show"     },
-  { label:"NYCC — Stan Lee auth + Heritage eval",     date:"Oct 8–11",    days:daysUntil(2026,10,8),  urgency:"medium",   cat:"Show"     },
+  { label:"NYCC — Stan Lee auth + Heritage eval",     date:"Oct 8–11",    days:daysUntil(2026,10,8),  urgency:"high",     cat:"Show"     },
 ];
 
 function urgColor(u: string): string {
@@ -257,10 +255,10 @@ const FLAGSHIP = [
   { book:"Truth: RWB #1 (Baker remarked)",             note:"Verify remark → Green Qual. → Heritage — $500–$2,000",     color:"#d97706", box:"1",  publisher:"Marvel", year:"2003", valueNM:"$500–$2,000 with remark",   condition:"Has Baker remark",              cgcPath:"CGC × JSA → Green Qualified → Heritage",        action:"Verify remark authenticity before submitting.", terrificon:false },
   { book:"Ultimate Fallout #4 Foil (1st Miles)",       note:"1st Miles Morales — $800–$1,500 CGC 9.8",                  color:"#8b2be2", box:"38", publisher:"Marvel", year:"2011", valueNM:"$800–$1,500 CGC 9.8",       condition:"Check for pressing",            cgcPath:"Press → CGC Universal Blue 9.8",                action:"Press then submit for Blue Universal label.", terrificon:false },
   { book:"Thor #169 CGC 8.0 (Galactus Origin)",        note:"Already slabbed. Galactus origin. Kirby/Lee. Show 15.",    color:"#1d6fa4", box:"63", publisher:"Marvel", year:"1969", valueNM:"CGC 8.0 — already slabbed", condition:"Slabbed CGC 8.0",               cgcPath:"Already graded — ready for Heritage or auction", action:"Feature in Show 15 — Whatnot anchor book.", terrificon:false },
-  { book:"Wolverine #8 (UNSIGNED — 1982)",             note:"Keep unsigned → Yellow SS at Terrificon → $500+ SS 9.8",   color:"#d97706", box:"72", publisher:"Marvel", year:"1982", valueNM:"$500+ Yellow SS CGC 9.8",   condition:"MUST STAY UNSIGNED",            cgcPath:"Yellow SS at Terrificon → Chris Claremont SS",  action:"Priority #1 at Terrificon. Press before Aug 7. DO NOT sign until con.", terrificon:true },
-  { book:"Batman #656 (1st Damian Wayne)",             note:"Press + Blue Universal → $350–$500 CGC 9.8 — Best ROI",    color:"#16a34a", box:"1",  publisher:"DC",     year:"2006", valueNM:"$350–$500 CGC 9.8",         condition:"In press list — send ASAP",     cgcPath:"Press → CGC Universal Blue 9.8",                action:"Press and submit before Terrificon. Best ROI in collection.", terrificon:true },
-  { book:"Vision #1 (Tom King signed)",                note:"Press + Green Qual. → $150–$300. Film timing.",            color:"#8b2be2", box:"1",  publisher:"Marvel", year:"2015", valueNM:"$150–$300 Green Qualified",  condition:"Signed — press first",          cgcPath:"Press → CGC × JSA → Green Qualified",           action:"In press batch — submit with the Terrificon batch before Aug 7.", terrificon:false },
-  { book:"ASM #361 (1st Carnage — Bagley/Sharen sgd)", note:"Bagley+Sharen. Press + Green Qual. → $200–$300 auth.",    color:"#dc2626", box:"1",  publisher:"Marvel", year:"1992", valueNM:"$200–$300 Green Qualified",  condition:"Dual signed — press first",     cgcPath:"Press → CGC × JSA → Green Qualified",           action:"In press batch — submit with the Terrificon batch before Aug 7.", terrificon:false },
+  { book:"Wolverine #8 (UNSIGNED — 1982)",             note:"Keep unsigned → Yellow SS at a future con → $500+ SS 9.8", color:"#d97706", box:"72", publisher:"Marvel", year:"1982", valueNM:"$500+ Yellow SS CGC 9.8",   condition:"MUST STAY UNSIGNED",            cgcPath:"Yellow SS signing → Chris Claremont SS",       action:"Keep unsigned. Press now. DO NOT sign until a Yellow SS con signing.", terrificon:false },
+  { book:"Batman #656 (1st Damian Wayne)",             note:"Press + Blue Universal → $350–$500 CGC 9.8 — Best ROI",    color:"#16a34a", box:"1",  publisher:"DC",     year:"2006", valueNM:"$350–$500 CGC 9.8",         condition:"In press list — send ASAP",     cgcPath:"Press → CGC Universal Blue 9.8",                action:"Press and submit now. Best ROI in collection.", terrificon:false },
+  { book:"Vision #1 (Tom King signed)",                note:"Press + Green Qual. → $150–$300. Film timing.",            color:"#8b2be2", box:"1",  publisher:"Marvel", year:"2015", valueNM:"$150–$300 Green Qualified",  condition:"Signed — press first",          cgcPath:"Press → CGC × JSA → Green Qualified",           action:"In press batch — submit with the next CGC batch.", terrificon:false },
+  { book:"ASM #361 (1st Carnage — Bagley/Sharen sgd)", note:"Bagley+Sharen. Press + Green Qual. → $200–$300 auth.",    color:"#dc2626", box:"1",  publisher:"Marvel", year:"1992", valueNM:"$200–$300 Green Qualified",  condition:"Dual signed — press first",     cgcPath:"Press → CGC × JSA → Green Qualified",           action:"In press batch — submit with the next CGC batch.", terrificon:false },
   { book:"Black Lightning #1 (Isabella)",              note:"Press + Green Qual. → $300–$500. Whatnot/Heritage.",       color:"#16a34a", box:"1",  publisher:"DC",     year:"1977", valueNM:"$300–$500 Green Qualified",  condition:"Check for pressing",            cgcPath:"CGC × JSA → Green Qualified",                   action:"Monitor CGC private signing window — high Heritage value.", terrificon:false },
   { book:"Captain Carter #1 (Atwell — To Robert)",    note:"Emotional anchor for Show 1 — personalized signing.",      color:"#1d6fa4", box:"1",  publisher:"Marvel", year:"2022", valueNM:"$80–$150 personalized",      condition:"Signed personalized",           cgcPath:"Whatnot anchor — personal story sells",          action:"Lead Show 1 with the story of the Hayley Atwell signing.", terrificon:false },
 ];
@@ -383,7 +381,6 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
   const cBoxes   = useCountUp(totalBoxes,   600,  mounted);
   const cWhatnot = useCountUp(whatnotCount, 950,  mounted);
   const cEbay    = useCountUp(ebayCount,    750,  mounted);
-  const cTF      = useCountUp(tfCount,      700,  mounted);
 
   const getStatus = (title: string): Status => statuses[title] || "not_started";
   const setStatus = (title: string, s: Status) => setStatuses(prev => ({ ...prev, [title]: s }));
@@ -635,7 +632,6 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
           {([
             { val: cWhatnot.toLocaleString(), lbl:"Whatnot",         sub:"assigned to platform",  color:"#16a34a" },
             { val: cEbay.toLocaleString(),    lbl:"eBay",             sub:"assigned to platform",  color:"#6b7280" },
-            { val: cTF.toString(),            lbl:"Terrificon Books", sub:"creator appearances",   color:"#d97706" },
           ] as const).map((s, i) => (
             <div key={i} className="stat-tile" style={{ borderTopColor: s.color }}>
               <div className="stat-tile-val" style={{ color: s.color }}>{s.val}</div>

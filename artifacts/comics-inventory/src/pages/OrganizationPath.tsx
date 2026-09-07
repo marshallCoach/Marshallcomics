@@ -7,9 +7,6 @@ const O_COMICS     = DATA3.comics.length;
 const O_BOXES      = DATA3.boxes.length;
 const O_KEYS       = DATA3.comics.filter(c => _OYES(c.Key)).length;
 const O_SIGNED     = DATA3.comics.filter(c => _OYES(c.Signed)).length;
-const O_BOX_CAP    = 150;                                   // planning: short-box capacity
-const O_BOXES_NEED = Math.ceil(O_COMICS / O_BOX_CAP);       // boxes required at that cap
-const O_NEW_BOXES  = Math.max(0, O_BOXES_NEED - O_BOXES);   // overspill needing new boxes
 const O_UNBAGGED   = Math.round(O_COMICS * 0.70);           // planning: ~70% still unbagged
 
 const LS_LABELED  = "brbBoxLabeled";
@@ -30,53 +27,8 @@ interface SupplyItem {
 const SUPPLIES: SupplyItem[] = [
   { item:"BCW Current Bags (1,000ct bulk)",          qty:"9 cases",  notes:"~8,250 needed + 750 buffer for current pull & future buys", retail:"~$270", shop:"~$162" },
   { item:"BCW Current Backing Boards (1,000ct bulk)", qty:"9 cases",  notes:"Matches bag count exactly — buy together",                   retail:"~$315", shop:"~$189" },
-  { item:"BCW Short Boxes",                          qty:"18 boxes", notes:"Overspill from 38 over-capacity boxes. Buy 3×5-pack + 1×3-pack.", retail:"~$110", shop:"~$70"  },
+  { item:"BCW Short Boxes",                          qty:"as needed", notes:"Spare boxes for overspill as you bag. Buy in 5-packs (cheapest per unit).", retail:"~$110", shop:"~$70"  },
   { item:"BCW Silver Age bags (100ct)",              qty:"1 pack",   notes:"For ~10 Silver Age keys (Tales of Suspense, World's Finest #26/#47)", retail:"~$10",  shop:"~$6"   },
-];
-
-// ─── BOX SPLITTING ───────────────────────────────────────────────────────────
-interface SplitBox {
-  box: number; comics: number; over: number; newBoxes: string; keys: number; contents: string;
-}
-const SPLITS: SplitBox[] = [
-  { box:42, comics:620, over:470, newBoxes:"+3", keys:81,  contents:"DC New 52 + Convergence — SPLIT DONE → Boxes 82, 83, 84" },
-  { box:2,  comics:294, over:144, newBoxes:"+1", keys:28,  contents:"X-Men Semi-Recent: AXM Whedon + X-Men runs" },
-  { box:3,  comics:272, over:122, newBoxes:"+1", keys:14,  contents:"Marvel X-Men Full Runs: AXM/UXM/Cable/X-Force" },
-  { box:43, comics:262, over:112, newBoxes:"+1", keys:23,  contents:"DC Rebirth — Batman Hush COMPLETE + Tom King Batman + Flash" },
-  { box:4,  comics:255, over:105, newBoxes:"+1", keys:24,  contents:"Marvel: Fantastic Four — Waid/Hickman/Fraction/Slott/North" },
-  { box:5,  comics:251, over:101, newBoxes:"+1", keys:26,  contents:"Marvel: Thor/Loki mega-box — God of Thunder COMPLETE" },
-  { box:6,  comics:248, over:98,  newBoxes:"+1", keys:13,  contents:"Marvel: Savage Avengers COMPLETE + Avengers Forever" },
-  { box:44, comics:248, over:98,  newBoxes:"+1", keys:17,  contents:"DC New 52 — Batgirl Simone + Batwoman JH Williams + Nightwing" },
-  { box:7,  comics:246, over:96,  newBoxes:"+1", keys:30,  contents:"BLACK PANTHER ARCHIVE: Priest/Hudlin/Coates/Ridley/Ewing" },
-  { box:8,  comics:238, over:88,  newBoxes:"+1", keys:22,  contents:"Elektra + Black Widow + Hawkeye + Winter Soldier — SIGNED BOOKS" },
-  { box:9,  comics:236, over:86,  newBoxes:"+1", keys:31,  contents:"X-Men Continuing: OML/Dead Man Logan COMPLETE/Domino/HoXPoX" },
-  { box:68, comics:227, over:77,  newBoxes:"+1", keys:12,  contents:"DC 2005-2009 — Final Crisis COMPLETE + Batman & Robin" },
-  { box:10, comics:223, over:73,  newBoxes:"+1", keys:24,  contents:"Captain America COMPLETE: Brubaker/Kirkman/Remender/Spencer" },
-  { box:69, comics:222, over:72,  newBoxes:"+1", keys:17,  contents:"DC 2001-2009 Mixed — JLA Meltzer/McDuffie + Buffy" },
-  { box:45, comics:215, over:65,  newBoxes:"+1", keys:8,   contents:"DC: Birds of Prey + Robin + Batgirl (Dixon/Simone 1999-2010)" },
-  { box:11, comics:214, over:64,  newBoxes:"+1", keys:47,  contents:"X-Men Mixed: OML/Generations/Phoenix Resurrection/FoHoX/FtA" },
-  { box:46, comics:213, over:63,  newBoxes:"+1", keys:14,  contents:"DC: Earth 2 + World's Finest + Justice League New 52" },
-  { box:12, comics:212, over:62,  newBoxes:"+1", keys:24,  contents:"X-Men + Marvel Modern: Deadpool/Old Man Logan" },
-  { box:13, comics:211, over:61,  newBoxes:"+1", keys:23,  contents:"Iron Man mega-box — Extremis Ellis + Fraction + Bendis + Moon Knight" },
-  { box:14, comics:205, over:55,  newBoxes:"+1", keys:28,  contents:"Krakoa X-Men: HoX+PoX COMPLETE/X-Force/X-Men Red/AXE" },
-  { box:15, comics:205, over:55,  newBoxes:"+1", keys:18,  contents:"X-Men Semi-Recent: Cable/Blue/Gold/Extermination/All-New X-Men" },
-  { box:47, comics:204, over:54,  newBoxes:"+1", keys:10,  contents:"Flash Vol 2 #112-233 + JLA/JLoA Waid/Morrison/Johns" },
-  { box:16, comics:203, over:53,  newBoxes:"+1", keys:18,  contents:"Spider-Man Archive: Miles/Scarlet Spider/Moon Knight SM" },
-  { box:64, comics:194, over:44,  newBoxes:"+1", keys:14,  contents:"TV/Media Tie-In — Doctor Who + Serenity/Firefly + Star Trek" },
-  { box:17, comics:192, over:42,  newBoxes:"+1", keys:22,  contents:"Guardians of the Galaxy — All Volumes Bendis/Cates/Ewing/Lanzing" },
-  { box:18, comics:191, over:41,  newBoxes:"+1", keys:26,  contents:"Inhumans + Eternals Gaiman/Gillen + Captain Marvel" },
-  { box:19, comics:187, over:37,  newBoxes:"+1", keys:21,  contents:"Marvel Events: Empyre/CW2/Original Sin/Siege/AXIS ALL COMPLETE" },
-  { box:20, comics:183, over:33,  newBoxes:"+1", keys:22,  contents:"Marvel Misc: Alpha Flight/New Warriors/What If" },
-  { box:48, comics:180, over:30,  newBoxes:"+1", keys:38,  contents:"DC Rebirth: Rebirth #1 + JL vs SS COMPLETE + Batman" },
-  { box:21, comics:180, over:30,  newBoxes:"+1", keys:25,  contents:"Immortal Iron Fist + Jessica Jones + Shang-Chi" },
-  { box:49, comics:174, over:24,  newBoxes:"+1", keys:18,  contents:"Hawkman + Far Sector + Infinite Frontier COMPLETE" },
-  { box:22, comics:172, over:22,  newBoxes:"+1", keys:18,  contents:"Hulk: Red Hulk/Loeb/Aaron/Cates/PKJ/Indestructible" },
-  { box:50, comics:171, over:21,  newBoxes:"+1", keys:21,  contents:"Dawn of DC + Birds of Prey COMPLETE #1-26" },
-  { box:23, comics:165, over:15,  newBoxes:"+1", keys:23,  contents:"Ultimate Marvel: UFF/UXM/Ultimates COMPLETE" },
-  { box:24, comics:165, over:15,  newBoxes:"+1", keys:13,  contents:"Marvel Avengers Full Runs: New/Uncanny Avengers" },
-  { box:25, comics:155, over:5,   newBoxes:"+1", keys:14,  contents:"Ultimate Marvel: UXM/Ultimates/UWvH COMPLETE/Cataclysm" },
-  { box:26, comics:155, over:5,   newBoxes:"+1", keys:24,  contents:"Shield/Ultimates Ewing/Fearless Defenders/Astonishing" },
-  { box:51, comics:154, over:4,   newBoxes:"+1", keys:4,   contents:"DC: Impulse + Young Justice + Teen Titans — just over capacity" },
 ];
 
 // ─── BAGGING PRIORITY ORDER ───────────────────────────────────────────────────
@@ -316,7 +268,7 @@ const STEPS: OrgStep[] = [
     tools:"BCW current bags, backing boards, careful hands",
     tasks:[
       "Box 2 (294 comics, 1 signed): bag all, split into 2 boxes. Label Box 2A and Box 2B.",
-      "Box 8 (238 comics, 1 signed): bag all, split into 2 boxes. Contains Batman Europa + Superman Unchained — THESE MUST BE BAGGED BEFORE TERRIFICON.",
+      "Box 8 (238 comics, 1 signed): bag all, split into 2 boxes. Contains Batman Europa + Superman Unchained — SIGNED/premium, bag with extra care.",
       "Box 66 (126 comics, 1 signed): bag all — already under 150, no split needed.",
       "Box 72 (75 comics, 2 signed — Wolverine #8 UNSIGNED + Absolute variants): bag all. WOLVERINE #8 STAYS UNSIGNED — bag it separately with a note.",
     ],
@@ -342,15 +294,14 @@ const STEPS: OrgStep[] = [
       "Add a card divider inside every box at the 75-comic midpoint — makes finding issues faster.",
     ],
   },
-  { key:"s6", num:6, title:"Terrificon Prep — Before August 6", time:"~2 hours",
-    tools:"CGC submission forms, mylar bags, boards, Hotel code G-TRFC",
+  { key:"s6", num:6, title:"Convention Prep — CGC Submissions", time:"~2 hours",
+    tools:"CGC submission forms, mylar bags, boards",
     tasks:[
-      "Box 8 MUST be bagged before Terrificon — Batman Europa + Superman Unchained are in there.",
-      "Wolverine #8 (Box 72) — confirm unsigned, bag it separately in a CGC submission bag (mylar), label clearly.",
-      "Moon Knight Vol 6 #1-6 — pull from Box 33, bag in individual mylar bags for Terrificon.",
-      "Pre-fill CGC submission forms at cgccomics.com before leaving.",
-      "Pack: CGC forms + mylar-bagged books + backing boards + Hotel code G-TRFC confirmed.",
-      "Jim Lee: Saturday August 8, arrive 10am sharp. His line fills in minutes.",
+      "Pull CGC/SS candidates and bag each separately in a CGC submission bag (mylar), labelled clearly.",
+      "Wolverine #8 (Box 72) — confirm unsigned, bag it separately in mylar for a future Yellow SS signing.",
+      "Moon Knight Vol 6 #1-6 — pull from Box 33, bag in individual mylar bags for submission.",
+      "Pre-fill CGC submission forms at cgccomics.com before any show or mail-in.",
+      "Pack: CGC forms + mylar-bagged books + backing boards.",
     ],
   },
   { key:"s7", num:7, title:"Bag Remaining Boxes (P3 + P4) — No Rush", time:"Ongoing",
@@ -569,7 +520,6 @@ export default function OrganizationPath() {
   const [tasksDone, setTasksDone] = useState<Record<string, boolean[]>>(() =>
     loadLS(LS_TASKS, Object.fromEntries(STEPS.map(s => [s.key, s.tasks.map(() => false)])))
   );
-  const [splitFilter, setSplitFilter] = useState(false);
   const [bagPrioFilter, setBagPrioFilter] = useState<BagPriority | "">("");
 
   // Merge live box data from DATA3 with hardcoded metadata
@@ -620,7 +570,7 @@ export default function OrganizationPath() {
           Organization Path — v2
         </h2>
         <p style={{ fontSize:"0.875rem", color:"var(--muted2)", margin:0, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>
-          {O_COMICS.toLocaleString()} comics · {O_BOXES} boxes · {O_KEYS.toLocaleString()} keys · {O_SIGNED} signed · {O_NEW_BOXES} new short boxes needed · ~70% unbagged
+          {O_COMICS.toLocaleString()} comics · {O_BOXES} boxes · {O_KEYS.toLocaleString()} keys · {O_SIGNED} signed · ~70% unbagged
         </p>
       </div>
 
@@ -686,7 +636,7 @@ export default function OrganizationPath() {
         <div>
           <div style={{ background:"#fff8e0", border:"1.5px solid #d4a800", borderRadius:6, padding:"12px 16px", marginBottom:20 }}>
             <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:"#8a6000", marginBottom:6 }}>
-              {O_COMICS.toLocaleString()} comics · {O_BOXES} short boxes at {O_BOX_CAP} capacity = {O_BOXES_NEED} boxes needed · {O_NEW_BOXES} new short boxes required for overspill · ~70% unbagged ≈ {O_UNBAGGED.toLocaleString()} comics needing bags and boards
+              {O_COMICS.toLocaleString()} comics across {O_BOXES} boxes · ~70% unbagged ≈ {O_UNBAGGED.toLocaleString()} comics needing bags and boards
             </div>
             <div style={{ fontSize:"0.875rem", color:"#7a5500", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", lineHeight:1.6 }}>
               <strong>ORDER VIA YOUR COMIC SHOP</strong> — trade pricing saves ~$280 vs retail.
@@ -729,54 +679,6 @@ export default function OrganizationPath() {
               <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:"#16a34a", fontWeight:700 }}>~$427</div>
             </div>
           </div>
-
-          {/* Box splitting summary */}
-          <div style={{ marginTop:28 }}>
-            <div style={{ display:"flex", alignItems:"center", gap:12, marginBottom:14, borderBottom:"2px solid var(--border)", paddingBottom:8 }}>
-              <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:"var(--red)" }}>BOX SPLITTING — WHERE THE 18 NEW BOXES GO</span>
-              <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--muted)" }}>
-                38 BOXES OVER 150 CAPACITY
-              </span>
-              <button onClick={() => setSplitFilter(v => !v)} style={{
-                marginLeft:"auto", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
-                padding:"4px 12px", borderRadius:4, cursor:"pointer",
-                background: splitFilter ? "var(--red)" : "transparent",
-                color: splitFilter ? "#fff" : "var(--red)", border:"1.5px solid var(--red)",
-              }}>
-                {splitFilter ? "SHOW ALL ▲" : "BIGGEST FIRST ▼"}
-              </button>
-            </div>
-            <div style={{ overflowX:"auto" }}>
-              <table style={{ width:"100%", borderCollapse:"collapse", fontSize:"0.875rem" }}>
-                <thead>
-                  <tr style={{ background:"var(--surface2)" }}>
-                    {["Box","Comics","Over 150","New Boxes","Keys","Contents"].map(h => (
-                      <th key={h} style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
-                        color:"var(--muted)", padding:"7px 10px", textAlign:"left", whiteSpace:"nowrap", borderBottom:"2px solid var(--border)" }}>{h}</th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {(splitFilter ? [...SPLITS].sort((a,b) => b.over - a.over) : SPLITS).map((s, i) => (
-                    <tr key={s.box} style={{ background: i % 2 === 0 ? "var(--surface)" : "var(--surface2)" }}>
-                      <td style={{ padding:"7px 10px", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--red)" }}>{s.box}</td>
-                      <td style={{ padding:"7px 10px", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:"var(--text)" }}>{s.comics}</td>
-                      <td style={{ padding:"7px 10px", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:"#dc2626" }}>+{s.over}</td>
-                      <td style={{ padding:"7px 10px" }}>
-                        <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
-                          background:"#fff5f5", color:"#dc2626", border:"1px solid #fca5a5", borderRadius:3, padding:"2px 8px" }}>{s.newBoxes}</span>
-                      </td>
-                      <td style={{ padding:"7px 10px" }}>
-                        {s.keys > 0 && <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
-                          background:"#fff8e0", color:"#8a6000", border:"1px solid #d4a800", borderRadius:3, padding:"1px 7px" }}>★ {s.keys}</span>}
-                      </td>
-                      <td style={{ padding:"7px 10px", fontSize:"0.875rem", color:"var(--muted2)", lineHeight:1.4 }}>{s.contents}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
         </div>
       )}
 
@@ -814,7 +716,10 @@ export default function OrganizationPath() {
             {displayedBagOrder.map(b => {
               const done = !!bagged[b.box];
               const pm = PRIORITY_META[b.priority];
-              const needsSplit = b.extra !== "OK";
+              const liveBox = liveBoxMap[b.box];
+              const liveComics = liveBox?.Comics ?? b.comics;
+              const liveKeys = liveBox?.Keys ?? b.keys;
+              const liveSgn = liveBox?.Signed ?? b.sgn;
               return (
                 <div key={b.order} onClick={() => setBagged(p => ({ ...p, [b.box]: !p[b.box] }))}
                   style={{
@@ -858,24 +763,18 @@ export default function OrganizationPath() {
                   {/* Right badges */}
                   <div style={{ display:"flex", flexDirection:"column", gap:4, alignItems:"flex-end", flexShrink:0 }}>
                     <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--muted)" }}>
-                      {b.comics}
+                      {liveComics}
                     </span>
-                    {b.keys > 0 && (
+                    {liveKeys > 0 && (
                       <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
                         background:"#fff8e0", color:"#8a6000", border:"1px solid #d4a800", borderRadius:3, padding:"1px 5px" }}>
-                        ★{b.keys}
+                        ★{liveKeys}
                       </span>
                     )}
-                    {b.sgn > 0 && (
+                    {liveSgn > 0 && (
                       <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
                         background:"#f0faf0", color:"#16a34a", border:"1px solid #c8e6c8", borderRadius:3, padding:"1px 5px" }}>
-                        ✍{b.sgn}
-                      </span>
-                    )}
-                    {needsSplit && (
-                      <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
-                        background:"#fff0f0", color:"#dc2626", border:"1px solid #fca5a5", borderRadius:3, padding:"1px 5px" }}>
-                        {b.extra}
+                        ✍{liveSgn}
                       </span>
                     )}
                   </div>
