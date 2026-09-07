@@ -14,7 +14,7 @@ const shows: ShowTheme[] = [
   { Num:"9",  Title:"Flash: Waid Era Complete (Flash #112–233)",  Description:"Anchor: The Flash #112. Supporting: Waid-era Flash complete run (Box 7 = 204 books). Strategy: 'The definitive Flash run. 204 consecutive issues from one of the greatest writers in DC history.' Revenue target: $150–$350." },
   { Num:"10", Title:"Foil Covers + Variants + Absolute Batman",  Description:"Anchor: Absolute Batman #1–8 1st prints. Supporting: All foil covers from Box 5 (Wolverine #8 variant, Daredevil foil, etc.), World's Finest foil. Strategy: 'Modern keys and 90s nostalgia — the two best moods in comics.' Revenue target: $200–$450." },
   { Num:"11", Title:"Black Panther Complete Archive: Priest / Hudlin / Coates / Ridley / Ewing",  Description:"Anchor: Black Panther vol3 #1 (Priest). Supporting: Hudlin run, Coates run, Ridley run, Ewing run. Box 34 = 246 books, 30 keys. Strategy: 'The only complete Black Panther archive you've ever seen on Whatnot.' Revenue target: $400–$900." },
-  { Num:"12", Title:"Post-Terrificon Celebration Show — Best of the Collection",  Description:"Anchor: Thor #169 CGC 8.0 (Galactus origin — slabbed). Supporting: Fresh off Terrificon — newly signed books, show stories, Wolverine #8 story. Strategy: Tell the STORY of Terrificon. What happened. What you got signed. Hype builds community. Revenue target: $300–$700." },
+  { Num:"12", Title:"Best of the Collection — Celebration Show",  Description:"Anchor: Thor #169 CGC 8.0 (Galactus origin — slabbed). Supporting: newly signed books, show stories, Wolverine #8 story. Strategy: Tell the STORIES behind your signed and key books. Hype builds community. Revenue target: $300–$700." },
 ];
 
 export default function ShowPlanner() {
@@ -31,7 +31,7 @@ export default function ShowPlanner() {
       </div>
 
       <div style={{ background:"var(--surface2)", borderBottom:"1px solid var(--border)", padding:"10px 20px", fontSize:"0.875rem", color:"var(--muted2)" }}>
-        📅 Wednesday shows · Juneteenth Special Jun 19 AM · Terrificon Aug 7–9 · NYCC Oct 8–11 · 31 scheduled events · 12 themed concepts
+        📅 Wednesday shows · Juneteenth Special Jun 19 AM · NYCC Oct 8–11 · 31 scheduled events · 12 themed concepts
       </div>
 
       <div className="list-view">
