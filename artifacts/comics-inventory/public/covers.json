@@ -88895,80 +88895,6 @@
     "large": null,
     "date": "2026-09-04"
   },
-  "Black|||2|||1": {
-    "url": null,
-    "large": null,
-    "date": "2026-09-06"
-  },
-  "Black|||4|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||1|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||2|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||3|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||4|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||6|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||7|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||8|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||9|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||10|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||11|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||12|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||20|||1": null,
-  "Cyberforce|||2|||4": null,
-  "Cyberforce|||3|||4": null,
-  "Cyberforce|||4|||4": null,
-  "Cyberforce|||5|||4": null,
-  "Cyberforce|||6|||4": null,
-  "Die|||11|||1": {
-    "url": null,
-    "large": null,
-    "date": "2026-09-06"
-  },
-  "Die|||12|||1": null,
-  "Die|||13|||1": null,
-  "Die|||16|||1": {
-    "url": null,
-    "large": null,
-    "date": "2026-09-06"
-  },
-  "Die|||19|||1": {
-    "url": null,
-    "large": null,
-    "date": "2026-09-06"
-  },
-  "Die|||1|||1": {
-    "url": null,
-    "large": null,
-    "date": "2026-09-06"
-  },
-  "Die|||5|||1": {
-    "url": null,
-    "large": null,
-    "date": "2026-09-06"
-  },
-  "Die|||7|||1": {
-    "url": null,
-    "large": null,
-    "date": "2026-09-06"
-  },
-  "Die|||8|||1": {
-    "url": null,
-    "large": null,
-    "date": "2026-09-06"
-  },
-  "Doctor Who: The Eleventh Doctor - Year One|||5|||1": null,
-  "Doctor Who: The Eleventh Doctor - Year One|||6|||1": null,
-  "Doctor Who: The Tenth Doctor - Year One|||1|||1": null,
-  "Doctor Who: The Twelfth Doctor - Year One|||3|||1": null,
-  "G.I. Joe|||3|||1": null,
-  "G.I. Joe|||4|||1": null,
-  "G.I. Joe|||5|||1": null,
-  "G.I. Joe|||6|||1": null,
-  "G.I. Joe|||13|||1": null,
-  "G.I. Joe|||14|||1": null,
-  "G.I. Joe|||15|||1": null,
-  "G.I. Joe|||16|||1": null,
-  "G.I. Joe|||17|||1": null,
-  "G.I. Joe|||19|||1": null,
   "Gatchaman|||1|||1": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/9397985-cover.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9397985-cover.jpg",
@@ -89009,17 +88935,6 @@
     "volume_name": "Gatchaman",
     "volume_start_year": 2024
   },
-  "Leaders of the Free World|||1|||1": {
-    "url": null,
-    "large": null,
-    "date": "2026-09-06"
-  },
-  "Leaders of the Free World|||2|||1": {
-    "url": null,
-    "large": null,
-    "date": "2026-09-06"
-  },
-  "Magic Order|||0|||1": null,
   "M.A.S.K.|||3|||1": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/10146823-cover.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/10146823-cover.jpg",
@@ -89028,99 +88943,346 @@
     "volume_name": "M.A.S.K.",
     "volume_start_year": 2026
   },
-  "Mighty Morphin Power Rangers|||101|||1": null,
-  "Mulan Revelations|||1|||1": {
-    "url": null,
-    "large": null,
-    "date": "2026-09-06"
+  "All Star Batman and Robin, the Boy Wonder|||1|||1": {
+    "url": "https://static.wikia.nocookie.net/marvel_dc/images/b/b0/All-Star_Batman_1A.jpg",
+    "large": "https://static.wikia.nocookie.net/marvel_dc/images/b/b0/All-Star_Batman_1A.jpg",
+    "date": "2005",
+    "source": "fandom-dc-yg"
   },
-  "Mulan Revelations|||2|||1": null,
-  "Mulan Revelations|||3|||1": null,
-  "Rocketeer|||2|||1": {
-    "url": null,
-    "large": null,
-    "date": "2026-09-06"
+  "Annihilators: Earthfall|||2|||1": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/24/Annihilators_Earthfall_Vol_1_2.jpg",
+    "large": "https://static.wikia.nocookie.net/marveldatabase/images/2/24/Annihilators_Earthfall_Vol_1_2.jpg",
+    "date": "2011",
+    "source": "fandom-marvel-yg"
   },
-  "Rocketeer|||4|||1": {
-    "url": null,
-    "large": null,
-    "date": "2026-09-06"
+  "Annihilators: Earthfall|||3|||1": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/9d/Annihilators_Earthfall_Vol_1_3.jpg",
+    "large": "https://static.wikia.nocookie.net/marveldatabase/images/9/9d/Annihilators_Earthfall_Vol_1_3.jpg",
+    "date": "2011",
+    "source": "fandom-marvel-yg"
   },
-  "Scarlett|||1|||2": {
-    "url": null,
-    "large": null,
-    "date": "2026-09-06"
+  "Annihilators: Earthfall|||4|||1": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/21/Annihilators_Earthfall_Vol_1_4.jpg",
+    "large": "https://static.wikia.nocookie.net/marveldatabase/images/2/21/Annihilators_Earthfall_Vol_1_4.jpg",
+    "date": "2011",
+    "source": "fandom-marvel-yg"
   },
-  "Scarlett|||2|||2": {
-    "url": null,
-    "large": null,
-    "date": "2026-09-06"
+  "Avengers|||66|||3": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/79/Avengers_Vol_3_66.jpg",
+    "large": "https://static.wikia.nocookie.net/marveldatabase/images/7/79/Avengers_Vol_3_66.jpg",
+    "date": "2003",
+    "source": "fandom-marvel-yg"
   },
-  "Scarlett|||3|||2": {
-    "url": null,
-    "large": null,
-    "date": "2026-09-06"
+  "Avengers|||69|||3": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/a/a0/Avengers_Vol_3_69.jpg",
+    "large": "https://static.wikia.nocookie.net/marveldatabase/images/a/a0/Avengers_Vol_3_69.jpg",
+    "date": "2003",
+    "source": "fandom-marvel-yg"
   },
-  "Scarlett|||5|||2": null,
-  "Shadow Man|||1|||4": null,
-  "Shadow Man|||2|||4": {
-    "url": null,
-    "large": null,
-    "date": "2026-09-06"
+  "Avengers|||70|||3": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/39/Avengers_Vol_3_70.jpg",
+    "large": "https://static.wikia.nocookie.net/marveldatabase/images/3/39/Avengers_Vol_3_70.jpg",
+    "date": "2003",
+    "source": "fandom-marvel-yg"
   },
-  "Shadow Man|||3|||4": {
-    "url": null,
-    "large": null,
-    "date": "2026-09-06"
+  "Avengers|||71|||3": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/3b/Avengers_Vol_3_71.jpg",
+    "large": "https://static.wikia.nocookie.net/marveldatabase/images/3/3b/Avengers_Vol_3_71.jpg",
+    "date": "2003",
+    "source": "fandom-marvel-yg"
   },
-  "Shadow Man|||4|||4": {
-    "url": null,
-    "large": null,
-    "date": "2026-09-06"
+  "Avengers|||72|||3": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/c5/Avengers_Vol_3_72.jpg",
+    "large": "https://static.wikia.nocookie.net/marveldatabase/images/c/c5/Avengers_Vol_3_72.jpg",
+    "date": "2003",
+    "source": "fandom-marvel-yg"
   },
-  "Shadow Man|||5|||4": {
-    "url": null,
-    "large": null,
-    "date": "2026-09-06"
+  "Avengers|||76|||3": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/39/Avengers_Vol_3_76.jpg",
+    "large": "https://static.wikia.nocookie.net/marveldatabase/images/3/39/Avengers_Vol_3_76.jpg",
+    "date": "2003",
+    "source": "fandom-marvel-yg"
   },
-  "Shadow Man|||8|||4": null,
-  "Shadow Man|||9|||4": null,
-  "Shadow Man|||10|||4": null,
-  "Shadow Man|||11|||4": null,
-  "Smoking Aces: The Comic|||1|||1": null,
-  "Space Corps|||1|||1": null,
-  "Star Trek / Legion of Superheroes|||5|||1": null,
-  "Star Trek / Legion of Superheroes|||6|||1": null,
-  "Star Trek: Voyager — Encounters with the Unknown|||0|||1": null,
-  "Thundercats/Silverhawks|||5|||1": {
-    "url": null,
-    "large": null,
-    "date": "2026-09-06"
+  "Avengers|||82|||3": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/2e/Avengers_Vol_3_82.jpg",
+    "large": "https://static.wikia.nocookie.net/marveldatabase/images/2/2e/Avengers_Vol_3_82.jpg",
+    "date": "2004",
+    "source": "fandom-marvel-yg"
   },
-  "Torchwood|||1|||1": {
-    "url": null,
-    "large": null,
-    "date": "2026-09-06"
+  "Avengers|||84|||3": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/12/Avengers_Vol_3_84.jpg",
+    "large": "https://static.wikia.nocookie.net/marveldatabase/images/1/12/Avengers_Vol_3_84.jpg",
+    "date": "2004",
+    "source": "fandom-marvel-yg"
   },
-  "Xin: Journey of the Monkey King|||1|||2": {
-    "url": null,
-    "large": null,
-    "date": "2026-09-06"
+  "Avengers|||62|||8": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/4/4b/Avengers_Vol_8_62.jpg",
+    "large": "https://static.wikia.nocookie.net/marveldatabase/images/4/4b/Avengers_Vol_8_62.jpg",
+    "date": "2022",
+    "source": "fandom-marvel-yg"
   },
-  "Xin: Journey of the Monkey King|||3|||2": null,
-  "Xin: Legend of the Monkey King|||1|||1": {
-    "url": null,
-    "large": null,
-    "date": "2026-09-06"
+  "Avengers|||63|||8": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/5b/Avengers_Vol_8_63.jpg",
+    "large": "https://static.wikia.nocookie.net/marveldatabase/images/5/5b/Avengers_Vol_8_63.jpg",
+    "date": "2022",
+    "source": "fandom-marvel-yg"
   },
-  "Xin: Legend of the Monkey King|||2|||1": {
-    "url": null,
-    "large": null,
-    "date": "2026-09-06"
+  "Avengers|||64|||8": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/73/Avengers_Vol_8_64.jpg",
+    "large": "https://static.wikia.nocookie.net/marveldatabase/images/7/73/Avengers_Vol_8_64.jpg",
+    "date": "2023",
+    "source": "fandom-marvel-yg"
   },
-  "Xin: Legend of the Monkey King|||3|||1": {
+  "Avengers|||66|||8": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/8d/Avengers_Vol_8_66.jpg",
+    "large": "https://static.wikia.nocookie.net/marveldatabase/images/8/8d/Avengers_Vol_8_66.jpg",
+    "date": "2023",
+    "source": "fandom-marvel-yg"
+  },
+  "Batman and Robin|||4|||2": {
+    "url": "https://static.wikia.nocookie.net/marvel_dc/images/a/ac/Batman_and_Robin_Vol_2_4.jpg",
+    "large": "https://static.wikia.nocookie.net/marvel_dc/images/a/ac/Batman_and_Robin_Vol_2_4.jpg",
+    "date": "2012",
+    "source": "fandom-dc-yg"
+  },
+  "Blood Syndicate: Season One|||2|||1": {
+    "url": "https://static.wikia.nocookie.net/marvel_dc/images/4/46/Blood_Syndicate_Season_One_Vol_1_2.jpg",
+    "large": "https://static.wikia.nocookie.net/marvel_dc/images/4/46/Blood_Syndicate_Season_One_Vol_1_2.jpg",
+    "date": "2022",
+    "source": "fandom-dc-yg"
+  },
+  "Blood Syndicate: Season One|||5|||1": {
+    "url": "https://static.wikia.nocookie.net/marvel_dc/images/f/f8/Blood_Syndicate_Season_One_Vol_1_5.jpg",
+    "large": "https://static.wikia.nocookie.net/marvel_dc/images/f/f8/Blood_Syndicate_Season_One_Vol_1_5.jpg",
+    "date": "2022",
+    "source": "fandom-dc-yg"
+  },
+  "Blood Syndicate: Season One|||6|||1": {
+    "url": "https://static.wikia.nocookie.net/marvel_dc/images/1/1d/Blood_Syndicate_Season_One_Vol_1_6.jpg",
+    "large": "https://static.wikia.nocookie.net/marvel_dc/images/1/1d/Blood_Syndicate_Season_One_Vol_1_6.jpg",
+    "date": "2023",
+    "source": "fandom-dc-yg"
+  },
+  "Blood Syndicate: Season One|||3|||1": {
+    "url": "https://static.wikia.nocookie.net/marvel_dc/images/e/e5/Blood_Syndicate_Season_One_Vol_1_3.jpg",
+    "large": "https://static.wikia.nocookie.net/marvel_dc/images/e/e5/Blood_Syndicate_Season_One_Vol_1_3.jpg",
+    "date": "2022",
+    "source": "fandom-dc-yg"
+  },
+  "X-Men: Blood Hunt - Jubilee|||1|||1": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/e4/X-Men_Blood_Hunt_-_Jubilee_Vol_1_1.jpg",
+    "large": "https://static.wikia.nocookie.net/marveldatabase/images/e/e4/X-Men_Blood_Hunt_-_Jubilee_Vol_1_1.jpg",
+    "date": "2024",
+    "source": "fandom-marvel-yg"
+  },
+  "Blood Hunters|||1|||2": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/f1/Blood_Hunters_Vol_2_1.jpg",
+    "large": "https://static.wikia.nocookie.net/marveldatabase/images/f/f1/Blood_Hunters_Vol_2_1.jpg",
+    "date": "2024",
+    "source": "fandom-marvel-yg"
+  },
+  "Blood Hunters|||4|||2": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/2/26/Blood_Hunters_Vol_2_4.jpg",
+    "large": "https://static.wikia.nocookie.net/marveldatabase/images/2/26/Blood_Hunters_Vol_2_4.jpg",
+    "date": "2024",
+    "source": "fandom-marvel-yg"
+  },
+  "Blood Hunters|||5|||2": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/8d/Blood_Hunters_Vol_2_5.jpg",
+    "large": "https://static.wikia.nocookie.net/marveldatabase/images/8/8d/Blood_Hunters_Vol_2_5.jpg",
+    "date": "2024",
+    "source": "fandom-marvel-yg"
+  },
+  "Captain America|||1|||13": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/92/Captain_America_Vol_13_1.jpg",
+    "large": "https://static.wikia.nocookie.net/marveldatabase/images/9/92/Captain_America_Vol_13_1.jpg",
+    "date": "2023",
+    "source": "fandom-marvel-yg"
+  },
+  "Captain America|||4|||13": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/93/Captain_America_Vol_13_4.jpg",
+    "large": "https://static.wikia.nocookie.net/marveldatabase/images/9/93/Captain_America_Vol_13_4.jpg",
+    "date": "2023",
+    "source": "fandom-marvel-yg"
+  },
+  "Captain America|||8|||13": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/c1/Captain_America_Vol_13_8.jpg",
+    "large": "https://static.wikia.nocookie.net/marveldatabase/images/c/c1/Captain_America_Vol_13_8.jpg",
+    "date": "2024",
+    "source": "fandom-marvel-yg"
+  },
+  "Black Panther/Captain America: Flags of Our Fathers|||2|||1": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/19/Black_Panther-Captain_America_Flags_of_Our_Fathers_Vol_1_2.jpg",
+    "large": "https://static.wikia.nocookie.net/marveldatabase/images/1/19/Black_Panther-Captain_America_Flags_of_Our_Fathers_Vol_1_2.jpg",
+    "date": "2010",
+    "source": "fandom-marvel-yg"
+  },
+  "Captain Marvel|||2|||11": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/90/Captain_Marvel_Vol_11_2.jpg",
+    "large": "https://static.wikia.nocookie.net/marveldatabase/images/9/90/Captain_Marvel_Vol_11_2.jpg",
+    "date": "2019",
+    "source": "fandom-marvel-yg"
+  },
+  "Captain Marvel|||4|||11": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/5b/Captain_Marvel_Vol_11_4.jpg",
+    "large": "https://static.wikia.nocookie.net/marveldatabase/images/5/5b/Captain_Marvel_Vol_11_4.jpg",
+    "date": "2019",
+    "source": "fandom-marvel-yg"
+  },
+  "Captain Marvel|||5|||11": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/86/Captain_Marvel_Vol_11_5.jpg",
+    "large": "https://static.wikia.nocookie.net/marveldatabase/images/8/86/Captain_Marvel_Vol_11_5.jpg",
+    "date": "2019",
+    "source": "fandom-marvel-yg"
+  },
+  "Captain Marvel|||6|||11": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/b/b7/Captain_Marvel_Vol_11_6.jpg",
+    "large": "https://static.wikia.nocookie.net/marveldatabase/images/b/b7/Captain_Marvel_Vol_11_6.jpg",
+    "date": "2019",
+    "source": "fandom-marvel-yg"
+  },
+  "Captain Marvel|||7|||11": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/61/Captain_Marvel_Vol_11_7.jpg",
+    "large": "https://static.wikia.nocookie.net/marveldatabase/images/6/61/Captain_Marvel_Vol_11_7.jpg",
+    "date": "2019",
+    "source": "fandom-marvel-yg"
+  },
+  "Captain Marvel|||8|||11": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/72/Captain_Marvel_Vol_11_8.jpg",
+    "large": "https://static.wikia.nocookie.net/marveldatabase/images/7/72/Captain_Marvel_Vol_11_8.jpg",
+    "date": "2019",
+    "source": "fandom-marvel-yg"
+  },
+  "Captain Marvel|||9|||11": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/9/95/Captain_Marvel_Vol_11_9.jpg",
+    "large": "https://static.wikia.nocookie.net/marveldatabase/images/9/95/Captain_Marvel_Vol_11_9.jpg",
+    "date": "2019",
+    "source": "fandom-marvel-yg"
+  },
+  "Cyborg|||2|||3": {
+    "url": "https://static.wikia.nocookie.net/marvel_dc/images/2/23/Cyborg_Vol_3_2.jpg",
+    "large": "https://static.wikia.nocookie.net/marvel_dc/images/2/23/Cyborg_Vol_3_2.jpg",
+    "date": "2023",
+    "source": "fandom-dc-yg"
+  },
+  "Cyborg|||3|||3": {
+    "url": "https://static.wikia.nocookie.net/marvel_dc/images/8/81/Cyborg_Vol_3_3.jpg",
+    "large": "https://static.wikia.nocookie.net/marvel_dc/images/8/81/Cyborg_Vol_3_3.jpg",
+    "date": "2023",
+    "source": "fandom-dc-yg"
+  },
+  "Cyborg|||4|||3": {
+    "url": "https://static.wikia.nocookie.net/marvel_dc/images/c/c1/Cyborg_Vol_3_4.jpg",
+    "large": "https://static.wikia.nocookie.net/marvel_dc/images/c/c1/Cyborg_Vol_3_4.jpg",
+    "date": "2023",
+    "source": "fandom-dc-yg"
+  },
+  "Cyborg|||5|||3": {
+    "url": "https://static.wikia.nocookie.net/marvel_dc/images/1/1e/Cyborg_Vol_3_5.jpg",
+    "large": "https://static.wikia.nocookie.net/marvel_dc/images/1/1e/Cyborg_Vol_3_5.jpg",
+    "date": "2024",
+    "source": "fandom-dc-yg"
+  },
+  "Midnight Sons: Blood Hunt|||1|||1": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/75/Midnight_Sons_Blood_Hunt_Vol_1_1.jpg",
+    "large": "https://static.wikia.nocookie.net/marveldatabase/images/7/75/Midnight_Sons_Blood_Hunt_Vol_1_1.jpg",
+    "date": "2024",
+    "source": "fandom-marvel-yg"
+  },
+  "X-Men: Blood Hunt - Magik|||1|||1": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/3a/X-Men_Blood_Hunt_-_Magik_Vol_1_1.jpg",
+    "large": "https://static.wikia.nocookie.net/marveldatabase/images/3/3a/X-Men_Blood_Hunt_-_Magik_Vol_1_1.jpg",
+    "date": "2024",
+    "source": "fandom-marvel-yg"
+  },
+  "Avengers: Armageddon|||3|||1": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/e6/Avengers_Armageddon_Vol_1_3.jpg",
+    "large": "https://static.wikia.nocookie.net/marveldatabase/images/e/e6/Avengers_Armageddon_Vol_1_3.jpg",
+    "date": "2026",
+    "source": "fandom-marvel-yg"
+  },
+  "Black Panther/Namor: Doomed|||1|||1": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/f9/Black_Panther_Namor_Doomed_Vol_1_1.jpg",
+    "large": "https://static.wikia.nocookie.net/marveldatabase/images/f/f9/Black_Panther_Namor_Doomed_Vol_1_1.jpg",
+    "date": "2026",
+    "source": "fandom-marvel-yg"
+  },
+  "Dark Knights of Steel II Special: Heir to the Sea|||1|||1": {
+    "url": "https://static.wikia.nocookie.net/marvel_dc/images/f/f3/Dark_Knights_of_Steel_II_Special_Heir_to_the_Sea_Vol_1_1.jpg",
+    "large": "https://static.wikia.nocookie.net/marvel_dc/images/f/f3/Dark_Knights_of_Steel_II_Special_Heir_to_the_Sea_Vol_1_1.jpg",
+    "date": "2026",
+    "source": "fandom-dc-yg"
+  },
+  "Black|||2|||1": {
     "url": null,
     "large": null,
-    "date": "2026-09-06"
-  }
+    "date": "2026-09-07"
+  },
+  "Black|||4|||1": null,
+  "Buffy the Vampire Slayer: Season Eight|||1|||1": null,
+  "Buffy the Vampire Slayer: Season Eight|||2|||1": null,
+  "Buffy the Vampire Slayer: Season Eight|||3|||1": null,
+  "Buffy the Vampire Slayer: Season Eight|||4|||1": null,
+  "Buffy the Vampire Slayer: Season Eight|||6|||1": null,
+  "Buffy the Vampire Slayer: Season Eight|||7|||1": null,
+  "Buffy the Vampire Slayer: Season Eight|||8|||1": null,
+  "Buffy the Vampire Slayer: Season Eight|||9|||1": null,
+  "Buffy the Vampire Slayer: Season Eight|||10|||1": null,
+  "Buffy the Vampire Slayer: Season Eight|||11|||1": null,
+  "Buffy the Vampire Slayer: Season Eight|||12|||1": null,
+  "Buffy the Vampire Slayer: Season Eight|||20|||1": null,
+  "Cyberforce|||2|||4": null,
+  "Cyberforce|||3|||4": null,
+  "Cyberforce|||4|||4": null,
+  "Cyberforce|||5|||4": null,
+  "Cyberforce|||6|||4": null,
+  "Die|||11|||1": {
+    "url": null,
+    "large": null,
+    "date": "2026-09-07"
+  },
+  "Die|||12|||1": null,
+  "Die|||13|||1": null,
+  "Die|||16|||1": {
+    "url": null,
+    "large": null,
+    "date": "2026-09-07"
+  },
+  "Die|||19|||1": {
+    "url": null,
+    "large": null,
+    "date": "2026-09-07"
+  },
+  "Die|||1|||1": {
+    "url": null,
+    "large": null,
+    "date": "2026-09-07"
+  },
+  "Die|||5|||1": {
+    "url": null,
+    "large": null,
+    "date": "2026-09-07"
+  },
+  "Die|||7|||1": {
+    "url": null,
+    "large": null,
+    "date": "2026-09-07"
+  },
+  "Die|||8|||1": {
+    "url": null,
+    "large": null,
+    "date": "2026-09-07"
+  },
+  "Doctor Who: The Eleventh Doctor - Year One|||5|||1": null,
+  "Doctor Who: The Eleventh Doctor - Year One|||6|||1": null,
+  "Doctor Who: The Tenth Doctor - Year One|||1|||1": null,
+  "Doctor Who: The Twelfth Doctor - Year One|||3|||1": null,
+  "G.I. Joe|||3|||1": null,
+  "G.I. Joe|||4|||1": null,
+  "G.I. Joe|||5|||1": null,
+  "G.I. Joe|||6|||1": null,
+  "G.I. Joe|||13|||1": null,
+  "G.I. Joe|||14|||1": null,
+  "G.I. Joe|||15|||1": null,
+  "G.I. Joe|||16|||1": null
 }
