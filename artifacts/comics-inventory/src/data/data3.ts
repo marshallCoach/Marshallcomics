@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_0907_2016_GCD_FILLED.xlsx  |  Generated: 2026-09-08
+// Source: comics_inventory_0907_2016_GCD_FILLED_GCD_FILLED.xlsx  |  Generated: 2026-09-08
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
