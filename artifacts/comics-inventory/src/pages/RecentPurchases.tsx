@@ -2,7 +2,6 @@ import { useState, useMemo } from "react";
 import { DATA, type Comic } from "@/data/data";
 import { CoverImage, CoverModal } from "@/components/CoverImage";
 import ComicDrawer, { type DrawerComic } from "@/components/ComicDrawer";
-import { ebayHeadline } from "@/utils/ebay";
 
 const comics = DATA.comics;
 
@@ -23,15 +22,21 @@ function parseNM(raw?: string): number {
   const m = String(raw || "").match(/\$?\s*(\d+(?:\.\d+)?)/);
   return m ? parseFloat(m[1]) : 0;
 }
-// price: prefer the conservative eBay figure, else the NM guide, else a $4
-// cover-price baseline guesstimate (iterate later). Never zero.
-const BASELINE = 4;
-function priceOf(c: Comic): { val: number; kind: "market" | "est" | "base" } {
-  const eb = ebayHeadline(c);
-  if (eb != null) return { val: eb, kind: "market" };
-  const nm = parseNM(c.Value_NM);
-  if (nm > 0) return { val: nm, kind: "est" };
-  return { val: BASELINE, kind: "base" };
+// This is a PURCHASES tracker, so "price" = what the book cost = its cover
+// price. Prefer the real Cover Price captured at intake; otherwise estimate it
+// from modern standard cover prices (never guess $0). eBay/NM are resale value,
+// not purchase cost — they live in the detail drawer, not here.
+function coverEstimate(c: Comic): number {
+  const t = `${c.Title} ${(c as { Seller_Notes?: string }).Seller_Notes || ""}`.toLowerCase();
+  if (/anniversary|giant-size|giant size|omnibus|deluxe|60th|50th/.test(t)) return 8.99;
+  const iss = parseNM(c.Issue);
+  if (iss === 1 || /annual|one-shot|one shot|special|legends|#1\b/.test(t)) return 4.99;
+  return 3.99;
+}
+function priceOf(c: Comic): { val: number; kind: "cover" | "est" } {
+  const cp = parseNM((c as { Cover_Price?: string }).Cover_Price);
+  if (cp > 0) return { val: cp, kind: "cover" };
+  return { val: coverEstimate(c), kind: "est" };
 }
 const ERA_RANK: Record<string, number> = {
   Golden: 0, "Golden Age": 0, Silver: 1, "Silver Age": 1, Bronze: 2, "Bronze Age": 2,
@@ -93,7 +98,7 @@ export default function RecentPurchases() {
       <div className="rp-head">
         <div>
           <h1 className="rp-h1">Recent Purchases</h1>
-          <p className="rp-sub">Comics bought each week (from weekly intake), grouped by month · week · era. Prices are eBay market where known, else NM-guide estimates.</p>
+          <p className="rp-sub">Comics bought each week (from weekly intake), grouped by month · week · era. Price = cover price (real where captured at intake, else a modern cover-price estimate).</p>
         </div>
         <div className="rp-grand">
           <div className="rp-grand-val">{money(grand)}</div>
@@ -136,7 +141,7 @@ export default function RecentPurchases() {
                         </div>
                         <div className="rp-price">
                           {money(p.val)}
-                          <span className={`rp-ptag ${p.kind}`}>{p.kind === "market" ? "market" : p.kind === "est" ? "est" : "base"}</span>
+                          <span className={`rp-ptag ${p.kind}`}>{p.kind === "cover" ? "cover" : "est"}</span>
                         </div>
                       </div>
                     </div>
@@ -190,7 +195,6 @@ border-bottom:2px solid var(--border,#2c2c38);padding:0 0 6px;margin-bottom:10px
 .rp-key{color:#e6b95c;font-size:.72rem}
 .rp-price{margin-top:auto;font-weight:800;font-size:.95rem;color:var(--text,#eee);font-variant-numeric:tabular-nums;display:flex;align-items:center;gap:6px}
 .rp-ptag{font-size:.6rem;font-weight:700;border-radius:4px;padding:1px 5px}
-.rp-ptag.market{background:#14351f;color:#7fd0a6;border:1px solid #2f9e6e}
-.rp-ptag.est{background:#3a2f14;color:#e6b95c;border:1px solid #c99a3a}
-.rp-ptag.base{background:#2a2a34;color:#9a9aab;border:1px dashed #4a4a58}
+.rp-ptag.cover{background:#14351f;color:#7fd0a6;border:1px solid #2f9e6e}
+.rp-ptag.est{background:#3a2f14;color:#e6b95c;border:1px dashed #c99a3a}
 `;
