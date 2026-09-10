@@ -43,6 +43,19 @@ fi
 step "3 · Writers & Artists — GCD (free, local)"
 run "python3 brb_gcd_fill.py --apply | grep -iE 'filled|Written'"
 
+step "3b · Volumes — GCD (offline, gated single-series matches only)"
+# Fills/corrects Volume from the local GCD catalog for confident cases only
+# (declared Vol 1 default that GCD places in a later same-name series, or the
+# over-numbered one-shot pattern), gated to titles with <=3 GCD series so it
+# never guesses. Writes a NEW *_VOLUME_FIXED.xlsx that later steps pick up.
+# Brand-new books with no GCD entry yet stay blank — resolve those via
+# brb_lookup_volume.py / a Fandom link; this step never invents a volume.
+if [ -f brb_gcd_volume_fix.py ]; then
+  run "python3 brb_gcd_volume_fix.py --apply | grep -iE 'fix|volume|wrote|applied|rows|->'"
+else
+  echo "  SKIPPED — brb_gcd_volume_fix.py not present" | tee -a "$LOG"
+fi
+
 step "4 · Characters + Cover Artists — vision (needs ANTHROPIC_API_KEY)"
 if [ -n "$ANTHROPIC_API_KEY" ]; then
   run "python3 -u brb_cover_links.py"
