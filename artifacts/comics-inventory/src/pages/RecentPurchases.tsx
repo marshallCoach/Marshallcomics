@@ -23,13 +23,15 @@ function parseNM(raw?: string): number {
   const m = String(raw || "").match(/\$?\s*(\d+(?:\.\d+)?)/);
   return m ? parseFloat(m[1]) : 0;
 }
-// price: prefer the conservative eBay figure, else the NM guide (a guesstimate)
-function priceOf(c: Comic): { val: number; kind: "market" | "est" | "none" } {
+// price: prefer the conservative eBay figure, else the NM guide, else a $4
+// cover-price baseline guesstimate (iterate later). Never zero.
+const BASELINE = 4;
+function priceOf(c: Comic): { val: number; kind: "market" | "est" | "base" } {
   const eb = ebayHeadline(c);
   if (eb != null) return { val: eb, kind: "market" };
   const nm = parseNM(c.Value_NM);
   if (nm > 0) return { val: nm, kind: "est" };
-  return { val: 0, kind: "none" };
+  return { val: BASELINE, kind: "base" };
 }
 const ERA_RANK: Record<string, number> = {
   Golden: 0, "Golden Age": 0, Silver: 1, "Silver Age": 1, Bronze: 2, "Bronze Age": 2,
@@ -45,11 +47,16 @@ export default function RecentPurchases() {
   const [drawer, setDrawer] = useState<Comic | null>(null);
   const [coverModal, setCoverModal] = useState<{ comic: Comic; large: string | null } | null>(null);
   const [flagV, setFlagV] = useState(0);
+  const [open, setOpen] = useState<Record<number, boolean>>({});
 
   const { months, grand, count } = useMemo(() => {
+    const cutoff = new Date();
+    cutoff.setMonth(cutoff.getMonth() - 24);
+    cutoff.setHours(0, 0, 0, 0);
     const buys = comics
       .map(c => ({ c, d: parseDate(c.Date_Added) }))
-      .filter((x): x is { c: Comic; d: Date } => !!x.d && INTAKE_RE.test(x.c.Date_Added || ""));
+      .filter((x): x is { c: Comic; d: Date } =>
+        !!x.d && x.d >= cutoff && INTAKE_RE.test(x.c.Date_Added || ""));
 
     const mMap = new Map<number, Map<number, Comic[]>>();
     for (const { c, d } of buys) {
@@ -98,13 +105,15 @@ export default function RecentPurchases() {
         <div className="rp-empty">No tracked purchases yet. They appear here once a weekly intake stamps rows with the “new-comics intake” marker.</div>
       )}
 
-      {months.map(m => (
+      {months.map((m, mi) => {
+        const isOpen = open[m.key] ?? (mi === 0);   // newest month open by default
+        return (
         <section key={m.key} className="rp-month">
-          <div className="rp-month-hd">
-            <span className="rp-month-name">{m.label}</span>
+          <button className="rp-month-hd" onClick={() => setOpen(o => ({ ...o, [m.key]: !isOpen }))}>
+            <span className="rp-month-name"><span className="rp-chev">{isOpen ? "▾" : "▸"}</span> {m.label}</span>
             <span className="rp-month-meta">{m.count} book{m.count !== 1 ? "s" : ""} · <b>{money(m.total)}</b></span>
-          </div>
-          {m.weeks.map(w => (
+          </button>
+          {isOpen && m.weeks.map(w => (
             <div key={w.key} className="rp-week">
               <div className="rp-week-hd">
                 <span className="rp-week-name">{w.label}</span>
@@ -126,8 +135,8 @@ export default function RecentPurchases() {
                           {(c.Key || "").toUpperCase() === "YES" && <span className="rp-key">★</span>}
                         </div>
                         <div className="rp-price">
-                          {p.kind === "none" ? <span className="rp-noprice">no price</span>
-                            : <>{money(p.val)}<span className={`rp-ptag ${p.kind}`}>{p.kind === "market" ? "market" : "est"}</span></>}
+                          {money(p.val)}
+                          <span className={`rp-ptag ${p.kind}`}>{p.kind === "market" ? "market" : p.kind === "est" ? "est" : "base"}</span>
                         </div>
                       </div>
                     </div>
@@ -137,7 +146,8 @@ export default function RecentPurchases() {
             </div>
           ))}
         </section>
-      ))}
+        );
+      })}
 
       <ComicDrawer comic={drawer as DrawerComic | null} onClose={() => setDrawer(null)} onFlagChange={() => setFlagV(v => v + 1)} />
       {coverModal && <CoverModal comic={coverModal.comic} largeUrl={coverModal.large} onClose={() => setCoverModal(null)} />}
@@ -155,8 +165,12 @@ const CSS = `
 .rp-grand-lbl{font-size:.72rem;color:var(--muted,#888);letter-spacing:.5px}
 .rp-empty{color:var(--muted,#888);background:var(--surface,#1a1a22);border:1px solid var(--border,#2c2c38);border-radius:10px;padding:24px;text-align:center}
 .rp-month{margin-bottom:26px}
-.rp-month-hd{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid var(--border,#2c2c38);padding-bottom:6px;margin-bottom:10px}
+.rp-month-hd{display:flex;justify-content:space-between;align-items:baseline;width:100%;
+border:none;background:none;color:inherit;font:inherit;text-align:left;cursor:pointer;
+border-bottom:2px solid var(--border,#2c2c38);padding:0 0 6px;margin-bottom:10px}
+.rp-month-hd:hover .rp-month-name{color:var(--red,#e05a4a)}
 .rp-month-name{font-size:1.25rem;font-weight:800}
+.rp-chev{color:var(--muted,#888);font-size:.9rem}
 .rp-month-meta{font-size:.85rem;color:var(--muted2,#bbb);font-variant-numeric:tabular-nums}
 .rp-month-meta b{color:var(--text,#eee)}
 .rp-week{margin:0 0 16px}
@@ -178,5 +192,5 @@ const CSS = `
 .rp-ptag{font-size:.6rem;font-weight:700;border-radius:4px;padding:1px 5px}
 .rp-ptag.market{background:#14351f;color:#7fd0a6;border:1px solid #2f9e6e}
 .rp-ptag.est{background:#3a2f14;color:#e6b95c;border:1px solid #c99a3a}
-.rp-noprice{color:var(--muted,#888);font-weight:500;font-size:.78rem}
+.rp-ptag.base{background:#2a2a34;color:#9a9aab;border:1px dashed #4a4a58}
 `;
