@@ -10,6 +10,7 @@ const PAGES = [
   { id:"everything",  label:"Every Book",    section:"Inventory"    },
   { id:"runsvolumes", label:"Runs & Volumes", section:"Inventory"   },
   { id:"recent",      label:"Recent Purchases", section:"Inventory" },
+  { id:"releasetimeline", label:"Release Timeline", section:"Inventory" },
   { id:"collection",  label:"Sales",         section:"Inventory"    },
   { id:"history",     label:"History",       section:"Inventory"    },
   { id:"stats",       label:"Stats",         section:"Inventory"    },
