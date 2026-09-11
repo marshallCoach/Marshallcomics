@@ -86,6 +86,11 @@ volume_lookup_cache.json
 FETCH_HEAD
 .pytest_cache/
 
+# Weekly/cover run logs — regenerated every run, never tracked
+weekly_*.log
+coverpass_*.log
+weekly.out
+
 # GCD local extraction — derived from the ~3.8GB dump, rebuildable via gcd_build_local_db.py + gcd_add_credits.py
 gcd_local.sqlite
 gcd_local.sqlite-journal
