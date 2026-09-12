@@ -1,6 +1,7 @@
 import { useState, useMemo, useCallback } from "react";
 import { DATA, type Comic } from "@/data/data";
 import { CoverImage, CoverModal, fmtPubDate } from "@/components/CoverImage";
+import { setFlagKind as setCoverFlagKind } from "@/lib/coverFlags";
 
 // ── Data-cleanup spot-check ──────────────────────────────────────────────────
 // Surfaces every comic with a fixable data problem, grouped by problem →
@@ -14,7 +15,7 @@ const LS_META  = "brbDataFixMeta_v1";   // { lastDate, streak, todayCount }
 
 type FixKind = "fandom" | "solution";
 interface FixRecord { id: string; title: string; issue: string; box: string; problem: string; kind: FixKind; value: string; at: string; }
-type ProblemId = "no-date" | "date-conflict" | "no-volume" | "no-year";
+type ProblemId = "no-date" | "date-conflict" | "no-volume" | "no-year" | "likely-variant";
 
 const PROBLEMS: { id: ProblemId; label: string; blurb: string; color: string; vol?: boolean; solutions: { key: string; label: string }[] }[] = [
   { id: "no-date",       label: "Missing publication date", blurb: "Not matched in GCD/Comic Vine — no on-sale date", color: "#c8102e",
@@ -25,6 +26,8 @@ const PROBLEMS: { id: ProblemId; label: string; blurb: string; color: string; vo
     solutions: [{ key: "vol1", label: "It's Volume 1" }, { key: "research", label: "Needs research" }] },
   { id: "no-year",       label: "Missing / bad year",        blurb: "Year is blank or not a 4-digit year", color: "#0e7490",
     solutions: [{ key: "research", label: "Needs research" }] },
+  { id: "likely-variant", label: "Likely variant (cover-buy)", blurb: "In the CC1 cover-buy box — probably a variant of the main cover", color: "#db2777",
+    solutions: [{ key: "confirm-variant", label: "✓ Confirm variant" }, { key: "not-variant", label: "Not a variant" }] },
 ];
 const PROBLEM_MAP = Object.fromEntries(PROBLEMS.map(p => [p.id, p]));
 
@@ -40,6 +43,7 @@ function problemsFor(c: Comic): ProblemId[] {
   else if (pdY && /^\d{4}$/.test(yr) && Math.abs(+pdY - +yr) > 1) out.push("date-conflict");
   if (!(c.Volume || "").trim()) out.push("no-volume");
   if (!/^\d{4}$/.test(yr)) out.push("no-year");
+  if ((c.Box || "").trim() === "CC1") out.push("likely-variant");
   return out;
 }
 function loadFixes(): Map<string, FixRecord> {
@@ -129,6 +133,12 @@ export default function DataFix() {
   }, [flagged, fixes, activeProblem]);
 
   const resolve = useCallback((c: Comic, id: string, problem: ProblemId, kind: FixKind, value: string) => {
+    // A confirmed cover-buy variant also sets the cover flag (kind "variant")
+    // so it shows in the cover audit / export, not just the data-fix export.
+    if (value === "confirm-variant") {
+      setCoverFlagKind({ Title: c.Title, Issue: c.Issue, Box: c.Box,
+        Cover_Artist: c.Cover_Artist, Publisher: c.Publisher, Year: c.Year }, "variant");
+    }
     setLeaving(prev => new Set(prev).add(id));
     const rec: FixRecord = { id, title: c.Title, issue: String(c.Issue ?? ""), box: c.Box ?? "", problem, kind, value, at: new Date().toISOString() };
     setTimeout(() => {
