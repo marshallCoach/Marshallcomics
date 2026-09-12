@@ -164,8 +164,11 @@ export default function DataFix() {
     URL.revokeObjectURL(url);
   }, [fixes]);
 
-  const fandomSearch = (c: Comic) =>
-    `https://www.google.com/search?q=${encodeURIComponent(`${c.Title} ${c.Publisher || ""} #${c.Issue} fandom`)}`;
+  const fandomSearch = (c: Comic) => {
+    const yr = ((c as { Pub_Date?: string }).Pub_Date || "").slice(0, 4) || (c.Year || "").trim();
+    const q = `${c.Title} ${c.Publisher || ""} #${c.Issue} ${yr} fandom comic book issue`.replace(/\s+/g, " ").trim();
+    return `https://www.google.com/search?q=${encodeURIComponent(q)}`;
+  };
 
   return (
     <div style={{ maxWidth: 1040, margin: "0 auto", padding: "20px 16px 90px" }}>
