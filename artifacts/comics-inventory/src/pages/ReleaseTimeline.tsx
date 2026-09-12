@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect } from "react";
 import { DATA, type Comic } from "@/data/data";
-import { CoverImage, CoverModal } from "@/components/CoverImage";
+import { CoverImage, CoverModal, fmtPubDate } from "@/components/CoverImage";
 import ComicDrawer, { type DrawerComic } from "@/components/ComicDrawer";
 
 const comics = DATA.comics;
@@ -193,6 +193,7 @@ export default function ReleaseTimeline() {
                           <div className="rt-title">{c.Title} <span className="rt-iss">#{c.Issue}</span></div>
                           <div className="rt-chips">
                             {c.Publisher && <span className="rt-pub">{c.Publisher}</span>}
+                            {fmtPubDate((c as { Pub_Date?: string }).Pub_Date) && <span className="rt-box">📅 {fmtPubDate((c as { Pub_Date?: string }).Pub_Date)}</span>}
                             {c.Box && <span className="rt-box">📦{c.Box}</span>}
                             {(c.Key || "").toUpperCase() === "YES" && <span className="rt-key">★</span>}
                           </div>

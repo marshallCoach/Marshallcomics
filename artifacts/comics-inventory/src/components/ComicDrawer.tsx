@@ -1,6 +1,6 @@
 import { useEffect, useState, useCallback } from "react";
 import { UPDATE_FIELDS, getComicFlag, setComicFlag, clearComicFlag } from "@/lib/comicFlags";
-import { CoverImage, CoverModal } from "@/components/CoverImage";
+import { CoverImage, CoverModal, fmtPubDate } from "@/components/CoverImage";
 import { ebayHeadline } from "@/utils/ebay";
 
 export type DrawerComic = {
@@ -468,6 +468,7 @@ export default function ComicDrawer({ comic, comicKey, onClose, onFlagChange }: 
           <Row label="Cover Artist" val={comic.Cover_Artist} />
           <Row label="Arc / Event"  val={comic.Arc} />
           <Row label="Universe"     val={comic.Universe} />
+          <Row label="Published"    val={fmtPubDate((comic as { Pub_Date?: string }).Pub_Date)} />
           <Row label="Imprint"      val={comic.Imprint} />
           <Row label="Condition"    val={comic.Condition} />
           <Row label="Value NM"     val={comic.Value_NM} />
