@@ -55,6 +55,28 @@ function mondayOfISOWeek(week: string): Date | null {
   return mon;
 }
 
+// ISO week string ("YYYY-Www") for a UTC date.
+function isoWeekStr(d: Date): string {
+  const t = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()));
+  t.setUTCDate(t.getUTCDate() - ((t.getUTCDay() + 6) % 7) + 3);
+  const firstThu = new Date(Date.UTC(t.getUTCFullYear(), 0, 4));
+  const week = 1 + Math.round(((t.getTime() - firstThu.getTime()) / 86400000 - 3 + ((firstThu.getUTCDay() + 6) % 7)) / 7);
+  return `${t.getUTCFullYear()}-W${String(week).padStart(2, "0")}`;
+}
+// Parse the sheet's Publication Date (GCD key_date, e.g. "2024-05-15" or
+// "2024-05-00" when GCD only knows the month — day 0 → the 1st, same
+// approximation pub_dates.json used).
+function parsePubDate(s?: string): PubRec | null {
+  const m = String(s || "").match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if (!m) return null;
+  const y = +m[1], mo = +m[2] >= 1 ? +m[2] : 1, dd = +m[3] >= 1 ? +m[3] : 1;
+  if (y < 1900 || y > 2100) return null;
+  const d = new Date(Date.UTC(y, mo - 1, dd));
+  return { date: `${y}-${String(mo).padStart(2, "0")}-${String(dd).padStart(2, "0")}`, year: y, month: mo, week: isoWeekStr(d) };
+}
+// The timeline is the "modern releases" view: Marvel/DC/Image only, last 3 years.
+const PUB_RE = /marvel|dc\b|image|skybound/i;
+
 interface WeekGrp { key: string; label: string; total: number; est: boolean; items: Comic[]; }
 interface MonthGrp { key: number; label: string; total: number; count: number; weeks: WeekGrp[]; }
 
@@ -70,10 +92,18 @@ export default function ReleaseTimeline() {
   }, []);
 
   const { months, grand, count, byYear } = useMemo(() => {
-    if (!pub) return { months: [] as MonthGrp[], grand: 0, count: 0, byYear: [] as [number, number][] };
-    const placed = comics
-      .map(c => ({ c, p: pub[pubKey(c)] }))
-      .filter((x): x is { c: Comic; p: PubRec } => !!x.p);
+    const fallback = pub || {};
+    const cutoff = new Date(); cutoff.setUTCFullYear(cutoff.getUTCFullYear() - 3); cutoff.setUTCHours(0, 0, 0, 0);
+    // Prefer the real Publication Date column; fall back to pub_dates.json for
+    // any modern book the column hasn't been filled for yet.
+    const placed: { c: Comic; p: PubRec }[] = [];
+    for (const c of comics) {
+      if (!PUB_RE.test(c.Publisher || "")) continue;
+      const p = parsePubDate((c as { Pub_Date?: string }).Pub_Date) || fallback[pubKey(c)] || null;
+      if (!p) continue;
+      if (new Date(`${p.date}T00:00:00Z`) < cutoff) continue;   // last 3 years only
+      placed.push({ c, p });
+    }
 
     const mMap = new Map<number, Map<string, Comic[]>>();
     for (const { c, p } of placed) {
@@ -133,10 +163,9 @@ export default function ReleaseTimeline() {
         </div>
       )}
 
-      {pub && months.length === 0 && (
-        <div className="rt-empty">No timeline data yet. Run <code>python3 brb_pubdates.py</code> on the Mac and push <code>public/pub_dates.json</code>.</div>
+      {months.length === 0 && (
+        <div className="rt-empty">No dated modern books yet. Run <code>python3 brb_pubdate_fill.py</code> on the Mac, then <code>brb.py --commit … --yes</code> to fill the Publication Date column.</div>
       )}
-      {!pub && <div className="rt-empty">Loading timeline…</div>}
 
       {months.map((m, mi) => {
         const isOpen = open[m.key] ?? (mi === 0);
