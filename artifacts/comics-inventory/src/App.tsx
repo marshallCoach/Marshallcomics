@@ -39,15 +39,16 @@ import OpsReference from "@/pages/OpsReference";
 import EbayListingGuide from "@/pages/EbayListingGuide";
 import ComicRoulette from "@/pages/ComicRoulette";
 import LifeArchive from "@/pages/LifeArchive";
+import DataFix from "@/pages/DataFix";
 import OfflineCovers from "@/components/OfflineCovers";
 import FlaggedCount from "@/components/FlaggedCount";
 import PasswordGate from "@/components/PasswordGate";
-import { BookOpen, Boxes, Wrench, Image, Briefcase, Film, Clock, Archive } from "lucide-react";
+import { BookOpen, Boxes, Wrench, Image, Briefcase, Film, Archive, Sparkles } from "lucide-react";
 
 type TabId =
   | "summary" | "everything" | "collection" | "boxkeys" | "stats" | "runs" | "runsvolumes" | "recent" | "releasetimeline" | "dataview"
   | "calendar" | "showplanner" | "cgc" | "signings" | "actionplan" | "timeline" | "boxvisual"
-  | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "duplicates" | "dupchecklist" | "history"
+  | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "duplicates" | "dupchecklist" | "datafix" | "history"
   | "orgpath" | "volumes" | "boxlabels" | "keycatalog" | "covercatalog" | "coverreview" | "boxquest" | "boxmap"
   | "ebaypipeline" | "opsreference" | "ebaylistingguide" | "roulette" | "lifearchive";
 
@@ -91,12 +92,19 @@ const NAV = [
     id: "organisation",
     label: "Organisation",
     tabs: [
-      { id: "duplicates",    label: "Duplicates", group: "Dupe Tools" },
-      { id: "dupchecklist",  label: "Dup Hunt",   group: "Dupe Tools" },
       { id: "orgpath",           label: "Org Path",           group: "Ops & Docs" },
       { id: "timeline",          label: "Timeline",           group: "Ops & Docs" },
       { id: "ebaypipeline",      label: "eBay Pipeline",      group: "Ops & Docs" },
       { id: "opsreference",      label: "Ops Reference",      group: "Ops & Docs" },
+    ],
+  },
+  {
+    id: "cleanup",
+    label: "Data Cleanup",
+    tabs: [
+      { id: "datafix",      label: "Data Fix" },
+      { id: "duplicates",   label: "Duplicates" },
+      { id: "dupchecklist", label: "Dup Hunt" },
     ],
   },
   {
@@ -116,17 +124,11 @@ const NAV = [
     ],
   },
   {
-    id: "lifetime",
-    label: "Comic Lifetime of RM",
-    tabs: [
-      { id: "history",     label: "Lifetime" },
-    ],
-  },
-  {
     id: "lifearchive",
     label: "Life Archive",
     tabs: [
       { id: "lifearchive", label: "Life Archive" },
+      { id: "history",     label: "Comic Lifetime" },
     ],
   },
   {
@@ -151,9 +153,9 @@ const SECTION_ICONS: Record<SectionId, React.ComponentType<{ size?: number }>> =
   inventory: BookOpen,
   boxes: Boxes,
   organisation: Wrench,
+  cleanup: Sparkles,
   catalog: Image,
   cover: Film,
-  lifetime: Clock,
   lifearchive: Archive,
   business: Briefcase,
 };
@@ -346,6 +348,7 @@ export default function App() {
         {activeTab === "pulllist"    && <PullList />}
         {activeTab === "duplicates"    && <Duplicates onNavigate={navigateTo} />}
         {activeTab === "dupchecklist"  && <DupCheckList />}
+        {activeTab === "datafix"       && <DataFix />}
         {activeTab === "history"     && <ComicHistory />}
         {activeTab === "keycatalog"  && <KeyCatalog />}
         {activeTab === "covercatalog" && <CoverCatalog />}
