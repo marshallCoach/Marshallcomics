@@ -351,12 +351,27 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
                 >
                   {flagState === "variant" ? "🔀 MARKED AS VARIANT" : "🔀 MINE IS A VARIANT"}
                 </button>
+                <button
+                  onClick={() => handleCoverFlag("dupe")}
+                  style={{
+                    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1.5px",
+                    padding: "7px 14px", borderRadius: 5, cursor: "pointer",
+                    border: `1.5px solid ${flagState === "dupe" ? "#b91c1c" : "var(--border)"}`,
+                    background: flagState === "dupe" ? "#fee2e2" : "var(--surface2)",
+                    color: flagState === "dupe" ? "#b91c1c" : "var(--muted2)",
+                    transition: "all 0.15s",
+                  }}
+                >
+                  {flagState === "dupe" ? "🗑 MARKED — DUPE TO ERASE" : "🗑 MARK AS DUPE TO ERASE"}
+                </button>
               </div>
               {flagState && (
                 <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", color: "var(--muted)", marginTop: 5, fontStyle: "italic" }}>
                   {flagState === "incorrect"
                     ? "Added to 🚩 flagged covers — export from Cover → Cover Review"
-                    : "Marked 🔀 variant — the main cover is right; your copy is a variant of it"}
+                    : flagState === "variant"
+                    ? "Marked 🔀 variant — the main cover is right; your copy is a variant of it"
+                    : "Marked 🗑 as a duplicate to erase — export, then run the erase script to delete it"}
                 </div>
               )}
             </div>

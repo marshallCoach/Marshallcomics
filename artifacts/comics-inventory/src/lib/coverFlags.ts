@@ -19,7 +19,7 @@ export const FLAGS_CHANGED_EVENT = "brb-cover-flags-changed";
 // displayed main cover is fine, but the copy I own is a variant of it). Both
 // live in the same store; `kind` tells them apart. Legacy entries with no kind
 // are treated as "incorrect".
-export type FlagKind = "incorrect" | "variant";
+export type FlagKind = "incorrect" | "variant" | "dupe";
 
 export interface FlaggedCover {
   id: string;
