@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { getCoverSvgUrl, type ComicLike } from "@/utils/coverThumbnails";
-import { coverId, isFlagged as isCoverFlaggedLib, toggleFlag as toggleCoverFlagLib } from "@/lib/coverFlags";
+import { coverId, flagKind as coverFlagKind, setFlagKind as setCoverFlagKind, type FlagKind } from "@/lib/coverFlags";
 
 const BASE = import.meta.env.BASE_URL?.replace(/\/$/, "") ?? "";
 
@@ -198,11 +198,21 @@ interface ModalProps {
   onClose: () => void;
 }
 
+// Format a GCD/CV Publication Date ("2024-10-15" or "2024-10-00") for display.
+const PUB_MON = ["", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+export function fmtPubDate(s?: string): string {
+  const m = String(s || "").match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if (!m) return "";
+  const mo = +m[2], dd = +m[3];
+  if (mo < 1 || mo > 12) return m[1];
+  return dd >= 1 ? `${PUB_MON[mo]} ${dd}, ${m[1]}` : `${PUB_MON[mo]} ${m[1]}`;
+}
+
 export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
   const box        = (comic as { Box?: string }).Box ?? "";
   const coverKey   = coverId({ Title: comic.Title, Issue: comic.Issue, Box: box });
 
-  const [coverFlagged, setCoverFlagged] = useState(() => isCoverFlaggedLib(coverKey));
+  const [flagState, setFlagState] = useState<FlagKind | null>(() => coverFlagKind(coverKey));
 
   useEffect(() => {
     const h = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
@@ -210,17 +220,18 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
     return () => window.removeEventListener("keydown", h);
   }, [onClose]);
 
-  function handleCoverFlag() {
+  function handleCoverFlag(kind: FlagKind) {
     const c = comic as { Cover_Artist?: string; Publisher?: string; Year?: string };
-    const next = toggleCoverFlagLib({
+    const next = setCoverFlagKind({
       Title: comic.Title, Issue: comic.Issue, Box: box,
       Cover_Artist: c.Cover_Artist, Publisher: c.Publisher, Year: c.Year,
-    });
-    setCoverFlagged(next);
+    }, kind);
+    setFlagState(next);
   }
 
   const isKey    = (comic.Key    ?? "").toUpperCase() === "YES";
   const fallback = getCoverSvgUrl(comic, { width: 300, height: 460 });
+  const pubLabel = fmtPubDate((comic as { Pub_Date?: string }).Pub_Date);
 
   return (
     <>
@@ -279,6 +290,11 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
                   Box {box}
                 </span>
               )}
+              {pubLabel && (
+                <span style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1px", background: "var(--surface2)", border: "1px solid var(--border)", color: "var(--muted2)", borderRadius: 3, padding: "2px 8px" }}>
+                  📅 {pubLabel}
+                </span>
+              )}
               {isKey && (
                 <span style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1px", background: "#fff8e0", color: "#8a6000", border: "1px solid #fde68a", borderRadius: 3, padding: "2px 8px" }}>★ KEY</span>
               )}
@@ -305,25 +321,42 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
               </div>
             )}
 
-            {/* ── Flag cover as incorrect ── */}
+            {/* ── Cover audit: flag incorrect, or mark as a variant ── */}
             <div style={{ borderTop: "1px solid var(--border)", paddingTop: 12, marginBottom: 14 }}>
               <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "2px", color: "var(--muted)", marginBottom: 7 }}>COVER AUDIT</div>
-              <button
-                onClick={handleCoverFlag}
-                style={{
-                  fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1.5px",
-                  padding: "7px 14px", borderRadius: 5, cursor: "pointer",
-                  border: `1.5px solid ${coverFlagged ? "#c8102e" : "var(--border)"}`,
-                  background: coverFlagged ? "#fff0f0" : "var(--surface2)",
-                  color: coverFlagged ? "#c8102e" : "var(--muted2)",
-                  transition: "all 0.15s",
-                }}
-              >
-                {coverFlagged ? "🚩 COVER FLAGGED AS INCORRECT" : "🚩 FLAG COVER AS INCORRECT"}
-              </button>
-              {coverFlagged && (
+              <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                <button
+                  onClick={() => handleCoverFlag("incorrect")}
+                  style={{
+                    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1.5px",
+                    padding: "7px 14px", borderRadius: 5, cursor: "pointer",
+                    border: `1.5px solid ${flagState === "incorrect" ? "#c8102e" : "var(--border)"}`,
+                    background: flagState === "incorrect" ? "#fff0f0" : "var(--surface2)",
+                    color: flagState === "incorrect" ? "#c8102e" : "var(--muted2)",
+                    transition: "all 0.15s",
+                  }}
+                >
+                  {flagState === "incorrect" ? "🚩 FLAGGED AS INCORRECT" : "🚩 FLAG AS INCORRECT"}
+                </button>
+                <button
+                  onClick={() => handleCoverFlag("variant")}
+                  style={{
+                    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1.5px",
+                    padding: "7px 14px", borderRadius: 5, cursor: "pointer",
+                    border: `1.5px solid ${flagState === "variant" ? "#7c3aed" : "var(--border)"}`,
+                    background: flagState === "variant" ? "#f3e8ff" : "var(--surface2)",
+                    color: flagState === "variant" ? "#7c3aed" : "var(--muted2)",
+                    transition: "all 0.15s",
+                  }}
+                >
+                  {flagState === "variant" ? "🔀 MARKED AS VARIANT" : "🔀 MINE IS A VARIANT"}
+                </button>
+              </div>
+              {flagState && (
                 <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", color: "var(--muted)", marginTop: 5, fontStyle: "italic" }}>
-                  Added to the 🚩 flagged covers — export them all from Cover → Cover Review
+                  {flagState === "incorrect"
+                    ? "Added to 🚩 flagged covers — export from Cover → Cover Review"
+                    : "Marked 🔀 variant — the main cover is right; your copy is a variant of it"}
                 </div>
               )}
             </div>

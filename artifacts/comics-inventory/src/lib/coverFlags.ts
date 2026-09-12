@@ -15,6 +15,12 @@ import { useEffect, useState } from "react";
 export const FLAG_KEY = "brbFlaggedCovers_v1";
 export const FLAGS_CHANGED_EVENT = "brb-cover-flags-changed";
 
+// A flag is either "incorrect" (wrong cover — re-fetch it) or "variant" (the
+// displayed main cover is fine, but the copy I own is a variant of it). Both
+// live in the same store; `kind` tells them apart. Legacy entries with no kind
+// are treated as "incorrect".
+export type FlagKind = "incorrect" | "variant";
+
 export interface FlaggedCover {
   id: string;
   Title: string;
@@ -24,6 +30,7 @@ export interface FlaggedCover {
   Publisher: string;
   Year: string;
   flaggedAt: string;
+  kind?: FlagKind;   // optional for back-compat; read() defaults it to "incorrect"
 }
 
 export interface CoverLike {
@@ -48,7 +55,7 @@ function read(): Map<string, FlaggedCover> {
     const list: FlaggedCover[] = Array.isArray(parsed)
       ? parsed
       : Object.values(parsed as Record<string, FlaggedCover>);
-    return new Map(list.filter(f => f && f.id).map(f => [f.id, f]));
+    return new Map(list.filter(f => f && f.id).map(f => [f.id, { ...f, kind: f.kind ?? "incorrect" }]));
   } catch {
     return new Map();
   }
@@ -85,7 +92,7 @@ export function isFlagged(id: string): boolean {
   return read().has(id);
 }
 
-function buildEntry(c: CoverLike): FlaggedCover {
+function buildEntry(c: CoverLike, kind: FlagKind = "incorrect"): FlaggedCover {
   return {
     id: coverId(c),
     Title: c.Title,
@@ -95,6 +102,7 @@ function buildEntry(c: CoverLike): FlaggedCover {
     Publisher: c.Publisher ?? "",
     Year: c.Year ?? "",
     flaggedAt: new Date().toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }),
+    kind,
   };
 }
 
@@ -110,6 +118,27 @@ export function toggleFlag(c: CoverLike): boolean {
   map.set(id, buildEntry(c));
   write(map);
   return true;
+}
+
+// The current flag kind for a cover, or null if not flagged.
+export function flagKind(id: string): FlagKind | null {
+  return read().get(id)?.kind ?? null;
+}
+
+// Set a cover's flag to a specific kind, or clear it (kind === null). If it is
+// already that kind, clears it — so each button toggles its own state. Returns
+// the resulting kind (null = now cleared).
+export function setFlagKind(c: CoverLike, kind: FlagKind | null): FlagKind | null {
+  const map = read();
+  const id = coverId(c);
+  if (kind === null || map.get(id)?.kind === kind) {
+    map.delete(id);
+    write(map);
+    return null;
+  }
+  map.set(id, buildEntry(c, kind));
+  write(map);
+  return kind;
 }
 
 export function setFlagged(c: CoverLike, on: boolean): void {
