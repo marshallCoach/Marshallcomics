@@ -16,12 +16,12 @@ type FixKind = "fandom" | "solution";
 interface FixRecord { id: string; title: string; issue: string; box: string; problem: string; kind: FixKind; value: string; at: string; }
 type ProblemId = "no-date" | "date-conflict" | "no-volume" | "no-year";
 
-const PROBLEMS: { id: ProblemId; label: string; blurb: string; color: string; solutions: { key: string; label: string }[] }[] = [
+const PROBLEMS: { id: ProblemId; label: string; blurb: string; color: string; vol?: boolean; solutions: { key: string; label: string }[] }[] = [
   { id: "no-date",       label: "Missing publication date", blurb: "Not matched in GCD/Comic Vine — no on-sale date", color: "#c8102e",
     solutions: [{ key: "cv", label: "Try Comic Vine next run" }, { key: "no-entry", label: "No catalogue entry — accept blank" }] },
-  { id: "date-conflict", label: "Date conflicts with Year",  blurb: "On-sale date disagrees with the Year field", color: "#b45309",
+  { id: "date-conflict", label: "Year / volume conflict",    blurb: "On-sale date disagrees with Year — year or volume likely wrong", color: "#b45309", vol: true,
     solutions: [{ key: "trust-gcd", label: "Trust the on-sale date" }, { key: "trust-year", label: "Trust my Year" }] },
-  { id: "no-volume",     label: "Missing volume",            blurb: "No volume number recorded", color: "#7c3aed",
+  { id: "no-volume",     label: "Missing volume",            blurb: "No volume number recorded", color: "#7c3aed", vol: true,
     solutions: [{ key: "vol1", label: "It's Volume 1" }, { key: "research", label: "Needs research" }] },
   { id: "no-year",       label: "Missing / bad year",        blurb: "Year is blank or not a 4-digit year", color: "#0e7490",
     solutions: [{ key: "research", label: "Needs research" }] },
@@ -77,6 +77,7 @@ export default function DataFix() {
   const [fixes, setFixes] = useState<Map<string, FixRecord>>(() => loadFixes());
   const [leaving, setLeaving] = useState<Set<string>>(new Set());
   const [linkDraft, setLinkDraft] = useState<Record<string, string>>({});
+  const [volDraft, setVolDraft] = useState<Record<string, string>>({});
   const [activeProblem, setActiveProblem] = useState<ProblemId | "all">("all");
   const [openGroups, setOpenGroups] = useState<Record<string, boolean>>({});
   const [coverModal, setCoverModal] = useState<{ comic: Comic; large: string | null } | null>(null);
@@ -233,6 +234,15 @@ export default function DataFix() {
                           ))}
                           <a className="df-find" href={fandomSearch(c)} target="_blank" rel="noopener noreferrer">🔍 Find on Fandom ↗</a>
                         </div>
+                        {g.problem.vol && (
+                          <div className="df-linkrow">
+                            <input className="df-link-in" style={{ maxWidth: 120 }} inputMode="numeric" placeholder="Set volume → e.g. 3"
+                              value={volDraft[id] || ""} onChange={e => setVolDraft(d => ({ ...d, [id]: e.target.value.replace(/[^0-9]/g, "") }))}
+                              onKeyDown={e => { if (e.key === "Enter" && (volDraft[id] || "").trim()) resolve(c, id, g.pid, "solution", `vol:${volDraft[id].trim()}`); }} />
+                            <button className="df-link-save" style={{ background: "#7c3aed" }} disabled={!(volDraft[id] || "").trim()}
+                              onClick={() => resolve(c, id, g.pid, "solution", `vol:${(volDraft[id] || "").trim()}`)}>Set volume</button>
+                          </div>
+                        )}
                         <div className="df-linkrow">
                           <input className="df-link-in" placeholder="Paste Fandom link that fixes it…"
                             value={linkDraft[id] || ""} onChange={e => setLinkDraft(d => ({ ...d, [id]: e.target.value }))}
@@ -294,7 +304,7 @@ const CSS = `
 .df-pub-hd{font-size:.82rem;font-weight:700;color:var(--muted2,#bbb);margin:8px 0 6px;letter-spacing:.3px}
 .df-pub-n{font-size:.68rem;color:var(--muted,#888);background:var(--surface2,#26262f);border-radius:9px;padding:1px 7px;margin-left:5px}
 .df-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:10px}
-.df-card{display:flex;gap:10px;background:var(--surface,#1a1a22);border:1px solid var(--border,#2c2c38);border-radius:10px;padding:9px;overflow:hidden;transition:opacity .32s ease,transform .32s ease,max-height .32s ease;max-height:220px}
+.df-card{display:flex;gap:10px;background:var(--surface,#1a1a22);border:1px solid var(--border,#2c2c38);border-radius:10px;padding:9px;overflow:hidden;transition:opacity .32s ease,transform .32s ease,max-height .32s ease;max-height:320px}
 .df-card.leaving{opacity:0;transform:translateX(30px) scale(.96);max-height:0;padding-top:0;padding-bottom:0;margin:0;border-width:0}
 .df-info{flex:1;min-width:0;display:flex;flex-direction:column;gap:6px}
 .df-title{font-weight:700;font-size:.9rem;line-height:1.25}
