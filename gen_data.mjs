@@ -132,6 +132,7 @@ const C = {
   volume:   col('Volume'),
   entry:    col('#'),
   coverPrice: colOpt('Cover Price'),   // real cover price captured at intake (optional)
+  pubDate:    colOpt('Publication Date'), // GCD on-sale date (optional; filled by brb_pubdate_fill.py)
   // eBay pricing (optional — present only after brb_ebay_pricing.py merge)
   ebayMedian: colOpt('eBay Median Sold $'),
   ebayAvg:    colOpt('eBay Avg Sold $'),
@@ -226,6 +227,7 @@ for (let r = 1; r < allRows.length; r++) {
     Crossover: \`${s(row,C.crossover)}\`, Start_Bid: \`${s(row,C.bid)}\`,
     Volume: \`${s(row,C.volume)}\`, Entry: \`${s(row,C.entry)}\`,
     Cover_Price: \`${C.coverPrice != null ? s(row,C.coverPrice) : ''}\`,
+    Pub_Date: \`${C.pubDate != null ? s(row,C.pubDate) : ''}\`,
     eBay_Avg: ${ebField(eb,'avg',C.ebayAvg,row)}, eBay_Low: ${ebField(eb,'low',C.ebayLow,row)}, eBay_High: ${ebField(eb,'high',C.ebayHigh,row)}, eBay_Count: ${ebField(eb,'count',C.ebayCount,row)}, eBay_Median: ${ebField(eb,'median',C.ebayMedian,row)},
   }`);
 }
@@ -590,6 +592,7 @@ export interface Comic {
   Cover_Artist: string; Date_Added: string; Imprint: string; Box: string;
   Crossover: string; Start_Bid: string; Volume: string; Entry: string;
   Cover_Price?: string;
+  Pub_Date?: string;
   eBay_Avg?: number | null; eBay_Low?: number | null; eBay_High?: number | null;
   eBay_Count?: number | null; eBay_Median?: number | null; eBay_Phase?: string;
 }
