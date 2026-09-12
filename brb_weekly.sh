@@ -56,6 +56,15 @@ else
   echo "  SKIPPED — brb_gcd_volume_fix.py not present" | tee -a "$LOG"
 fi
 
+step "3c · Publication dates — GCD (offline, free, blanks-only)"
+# Fills the 'Publication Date' column from the local GCD on-sale date for any
+# row still missing one. No API/usage credits. New books get dated each week.
+if [ -f brb_pubdate_fill.py ]; then
+  run "python3 brb_pubdate_fill.py | grep -iE 'filled|have a date|added|OUTPUT'"
+else
+  echo "  SKIPPED — brb_pubdate_fill.py not present" | tee -a "$LOG"
+fi
+
 step "4 · Characters + Cover Artists — vision (needs ANTHROPIC_API_KEY)"
 if [ -n "$ANTHROPIC_API_KEY" ]; then
   run "python3 -u brb_cover_links.py"
