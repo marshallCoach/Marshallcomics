@@ -86,7 +86,7 @@ function platClass(p: string) {
 
 function BoxBadge({ box }: { box: string }) {
   return (
-    <span style={{ fontSize:"0.6rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px",
+    <span style={{ fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px",
       background:"#7a5c3a18", border:"1.5px solid #7a5c3a", color:"#7a5c3a",
       borderRadius:3, padding:"1px 7px", whiteSpace:"nowrap" }}>Box {box}</span>
   );
@@ -118,7 +118,9 @@ export default function Everything({
   const [boxFilter,   setBoxFilter]  = useState(initBox      || "");
   const [keysOnly,    setKeysOnly]   = useState(!!initKeysOnly);
   const [signedOnly,  setSignedOnly] = useState(!!initSignedOnly);
-  const [parenOnly,   setParenOnly]  = useState(false);
+  const [yearParenOnly,    setYearParen]   = useState(false);
+  const [creatorParenOnly, setCreatorParen] = useState(false);
+  const [annualOnly,       setAnnualOnly]   = useState(false);
   const [familyFilter,setFamily]     = useState("");
   const [view,        setView]       = useState<"list"|"card">("list");
   const [searched,    setSearched]   = useState(true);
@@ -158,17 +160,20 @@ export default function Everything({
       const fk = comicFlagKey(r.Title, r.Issue || "", r.Box || "");
       return (
         <span style={{ display:"flex", alignItems:"center", gap:5 }}>
-          <button className="title-link" onClick={e=>{e.stopPropagation();setExactTitle(r.Title||"");setQuery("");setSearched(true);setCardPage(1);}}>
-            {r.Title||"Untitled"}
-          </button>
-          {flaggedKeys.has(fk) && <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.55rem", letterSpacing:"1px", color:"#92400e", background:"#fef3c7", border:"1px solid #fcd34d", borderRadius:3, padding:"1px 5px", flexShrink:0 }}>UPDATE</span>}
+          <span style={{ display:"flex", flexDirection:"column", gap:1 }}>
+            <button className="title-link" onClick={e=>{e.stopPropagation();setExactTitle(r.Title||"");setQuery("");setSearched(true);setCardPage(1);}}>
+              {r.Title||"Untitled"}
+            </button>
+            {r.Disambig && <span style={{ fontSize:"0.875rem", color:"var(--muted2)", lineHeight:1.2 }}>{r.Disambig}</span>}
+          </span>
+          {flaggedKeys.has(fk) && <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"#92400e", background:"#fef3c7", border:"1px solid #fcd34d", borderRadius:3, padding:"1px 5px", flexShrink:0 }}>UPDATE</span>}
         </span>
       );
     }},
     { key:"issue",     label:"Issue #",   defaultWidth:80,  sort:(a,b)=>parseVal(a.Issue)-parseVal(b.Issue), cell:r=>{ const ip=parseIssueParts(r.Issue); return (
       <span className="lt-sub">
         {ip.main}
-        {ip.legacy && <span style={{display:"block",fontSize:"0.65em",color:"var(--muted)",lineHeight:1.2,marginTop:1}}>{ip.legacy}</span>}
+        {ip.legacy && <span style={{display:"block",fontSize:"0.875rem",color:"var(--muted)",lineHeight:1.2,marginTop:1}}>{ip.legacy}</span>}
       </span>
     ); } },
     { key:"volume",    label:"Vol",       defaultWidth:58,  sort:(a,b)=>Number(a.Volume||0)-Number(b.Volume||0), cell:r=><span className="lt-sub">{r.Volume||"—"}</span> },
@@ -184,10 +189,10 @@ export default function Everything({
     { key:"artist",    label:"Artist",    defaultWidth:130, sort:(a,b)=>a.Artist.localeCompare(b.Artist), cell:r=> r.Artist && r.Artist!=="nan"
       ? <button className="title-link" onClick={e=>{e.stopPropagation();setQuery(r.Artist);setExactTitle("");setSearched(true);setCardPage(1);}}>{r.Artist}</button>
       : <span className="lt-sub">—</span> },
-    { key:"key",       label:"Key",       defaultWidth:55,  sort:(a,b)=>a.Key.localeCompare(b.Key), cell:r=>r.Key?.toUpperCase()==="YES"?<span className="badge bkey" style={{fontSize:"0.6rem"}}>KEY</span>:null },
+    { key:"key",       label:"Key",       defaultWidth:55,  sort:(a,b)=>a.Key.localeCompare(b.Key), cell:r=>r.Key?.toUpperCase()==="YES"?<span className="badge bkey" style={{fontSize:"0.875rem"}}>KEY</span>:null },
     { key:"nm",        label:"NM Value",  defaultWidth:90,  sort:(a,b)=>parseVal(a.Value_NM)-parseVal(b.Value_NM), cell:r=><span className="lt-val">{r.Value_NM && r.Value_NM!=="nan" ? `$${r.Value_NM}` : "—"}</span> },
     { key:"vf",        label:"VF Value",  defaultWidth:90,  sort:(a,b)=>parseVal(a.Value_VF)-parseVal(b.Value_VF), cell:r=>{ const v=r.Value_VF&&r.Value_VF!=="nan"?r.Value_VF.match(/(\d+(?:\.\d+)?)/)?.[1]:""; return <span className="lt-vf">{v?`$${v}`:"—"}</span>; }},
-    { key:"platform",  label:"Platform",  defaultWidth:90,  sort:(a,b)=>a.Platform.localeCompare(b.Platform), cell:r=>r.Platform?<span className={`badge ${platClass(r.Platform)}`} style={{fontSize:"0.6rem"}}>{r.Platform}</span>:null },
+    { key:"platform",  label:"Platform",  defaultWidth:90,  sort:(a,b)=>a.Platform.localeCompare(b.Platform), cell:r=>r.Platform?<span className={`badge ${platClass(r.Platform)}`} style={{fontSize:"0.875rem"}}>{r.Platform}</span>:null },
     { key:"year",      label:"Year",      defaultWidth:65,  sort:(a,b)=>parseVal(a.Year)-parseVal(b.Year), cell:r=><span className="lt-sub">{r.Year}</span> },
     { key:"signed",    label:"Signed",    defaultWidth:90,  sort:(a,b)=>a.Signed.localeCompare(b.Signed), cell:r=>r.Signed?.toUpperCase()==="YES"?<span className="lt-sub" style={{color:"var(--gold)"}}>✍ {r.Signed_By||"Yes"}</span>:null },
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -209,7 +214,9 @@ export default function Everything({
     return ALL.filter(c => {
       if (keysOnly   && (c.Key    || "").toUpperCase() !== "YES") return false;
       if (signedOnly && (c.Signed || "").toUpperCase() !== "YES") return false;
-      if (parenOnly  && !c.Title.includes("(")) return false;
+      if (yearParenOnly    && !/\(\d{4}(-\d{4})?\)/.test(c.Title)) return false;
+      if (creatorParenOnly && !c.Disambig) return false;
+      if (annualOnly && !c.Title.toLowerCase().includes("annual")) return false;
       if (publisher  && c.Publisher !== publisher)  return false;
       if (era        && c.Era !== era)              return false;
       if (platform   && c.Platform !== platform)    return false;
@@ -233,17 +240,22 @@ export default function Everything({
         c.Story_Pitch, c.Imprint, c.Terrificon,
       ].join(" ").toLowerCase().includes(q);
     });
-  }, [searched, query, publisher, era, platform, boxFilter, keysOnly, signedOnly, parenOnly, familyFilter, exactTitle]);
+  }, [searched, query, publisher, era, platform, boxFilter, keysOnly, signedOnly, yearParenOnly, creatorParenOnly, annualOnly, familyFilter, exactTitle]);
 
   const cardSlice = useMemo(() => {
+    const sorted = [...results].sort((a, b) => {
+      const t = a.Title.localeCompare(b.Title);
+      if (t !== 0) return t;
+      return parseVal(a.Issue) - parseVal(b.Issue);
+    });
     const start = (cardPage - 1) * CARD_PAGE;
-    return results.slice(start, start + CARD_PAGE);
+    return sorted.slice(start, start + CARD_PAGE);
   }, [results, cardPage]);
 
   const handleSearch = useCallback(() => { setSearched(true); setCardPage(1); }, []);
   const handleClear  = useCallback(() => {
     setQuery(""); setPub(""); setEra(""); setPlat(""); setBoxFilter("");
-    setKeysOnly(false); setSignedOnly(false); setParenOnly(false); setFamily(""); setExactTitle("");
+    setKeysOnly(false); setSignedOnly(false); setYearParen(false); setCreatorParen(false); setAnnualOnly(false); setFamily(""); setExactTitle("");
     setCardPage(1);
     setTimeout(() => searchInputRef.current?.focus(), 0);
   }, []);
@@ -287,7 +299,7 @@ export default function Everything({
                 style={{ width:"100%", paddingRight:32 }}
               />
               {query && (
-                <button onClick={()=>{setQuery("");searchInputRef.current?.focus();}} style={{ position:"absolute", right:8, top:"50%", transform:"translateY(-50%)", background:"none", border:"none", cursor:"pointer", color:"var(--muted)", fontSize:"1rem" }}>×</button>
+                <button onClick={()=>{setQuery("");searchInputRef.current?.focus();}} style={{ position:"absolute", right:8, top:"50%", transform:"translateY(-50%)", background:"none", border:"none", cursor:"pointer", color:"var(--muted)", fontSize:"0.875rem" }}>×</button>
               )}
             </div>
           </div>
@@ -319,7 +331,13 @@ export default function Everything({
                 <input type="checkbox" checked={signedOnly} onChange={e=>setSignedOnly(e.target.checked)} />✍ Signed
               </label>
               <label className="toggle-pill">
-                <input type="checkbox" checked={parenOnly} onChange={e=>setParenOnly(e.target.checked)} />() Title Has ( )
+                <input type="checkbox" checked={yearParenOnly} onChange={e=>setYearParen(e.target.checked)} />(YYYY) Year
+              </label>
+              <label className="toggle-pill">
+                <input type="checkbox" checked={creatorParenOnly} onChange={e=>setCreatorParen(e.target.checked)} />(Creator/Arc)
+              </label>
+              <label className="toggle-pill">
+                <input type="checkbox" checked={annualOnly} onChange={e=>setAnnualOnly(e.target.checked)} />📅 Annuals
               </label>
             </div>
           </div>
@@ -337,14 +355,14 @@ export default function Everything({
         <div style={{ marginTop:12, display:"flex", gap:6, flexWrap:"wrap", alignItems:"center" }}>
           <button
             onClick={() => setShowFams(!showFamilies)}
-            style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.7rem", letterSpacing:"1.5px", color:"var(--muted2)", background:"none", border:"1px solid var(--border)", borderRadius:4, padding:"3px 10px", cursor:"pointer" }}
+            style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px", color:"var(--muted2)", background:"none", border:"1px solid var(--border)", borderRadius:4, padding:"3px 10px", cursor:"pointer" }}
           >
             {showFamilies ? "▲" : "▼"} Character Family
           </button>
           {showFamilies && (
             <>
               {familyFilter && (
-                <button onClick={() => setFamily("")} style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1px", color:"var(--red)", background:"rgba(200,16,46,0.08)", border:"1px solid var(--red)", borderRadius:12, padding:"3px 10px", cursor:"pointer" }}>
+                <button onClick={() => setFamily("")} style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--red)", background:"rgba(200,16,46,0.08)", border:"1px solid var(--red)", borderRadius:12, padding:"3px 10px", cursor:"pointer" }}>
                   ✕ {familyFilter}
                 </button>
               )}
@@ -353,7 +371,7 @@ export default function Everything({
                   key={f.name}
                   onClick={() => { setFamily(f.name === familyFilter ? "" : f.name); setSearched(true); setCardPage(1); }}
                   style={{
-                    fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1px",
+                    fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
                     color: familyFilter === f.name ? "#fff" : "var(--muted2)",
                     background: familyFilter === f.name ? "var(--red)" : "var(--surface)",
                     border: `1px solid ${familyFilter === f.name ? "var(--red)" : "var(--border)"}`,
@@ -372,17 +390,17 @@ export default function Everything({
       {searched && isCreatorSearch && (topWriters.length > 0 || topArtists.length > 0) && (
         <div style={{ marginBottom:12, display:"flex", gap:6, flexWrap:"wrap", alignItems:"center" }}>
           {topWriters.length > 0 && <>
-            <span style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", color:"var(--muted2)" }}>Writers:</span>
+            <span style={{ fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px", color:"var(--muted2)" }}>Writers:</span>
             {topWriters.map(w=>(
               <button key={w} onClick={()=>{ setQuery(w); handleSearch(); }}
-                style={{ background:"var(--surface)", border:"1px solid var(--border)", borderRadius:20, padding:"2px 10px", fontSize:"0.72rem", cursor:"pointer", color:"var(--text2)" }}>{w}</button>
+                style={{ background:"var(--surface)", border:"1px solid var(--border)", borderRadius:20, padding:"2px 10px", fontSize:"0.875rem", cursor:"pointer", color:"var(--text2)" }}>{w}</button>
             ))}
           </>}
           {topArtists.length > 0 && <>
-            <span style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", color:"var(--muted2)", marginLeft:8 }}>Artists:</span>
+            <span style={{ fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px", color:"var(--muted2)", marginLeft:8 }}>Artists:</span>
             {topArtists.map(a=>(
               <button key={a} onClick={()=>{ setQuery(a); handleSearch(); }}
-                style={{ background:"var(--surface)", border:"1px solid var(--border)", borderRadius:20, padding:"2px 10px", fontSize:"0.72rem", cursor:"pointer", color:"var(--text2)" }}>{a}</button>
+                style={{ background:"var(--surface)", border:"1px solid var(--border)", borderRadius:20, padding:"2px 10px", fontSize:"0.875rem", cursor:"pointer", color:"var(--text2)" }}>{a}</button>
             ))}
           </>}
         </div>
@@ -392,14 +410,14 @@ export default function Everything({
       {exactTitle && (
         <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:10,
           background:"#fef2f2", border:"1.5px solid var(--red)", borderRadius:6, padding:"8px 14px" }}>
-          <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"2px", color:"var(--red)" }}>
+          <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:"var(--red)" }}>
             TITLE FILTER — EXACT MATCH
           </span>
-          <span style={{ fontWeight:700, color:"var(--brown-light)", fontSize:"0.9rem" }}>{exactTitle}</span>
+          <span style={{ fontWeight:700, color:"var(--brown-light)", fontSize:"0.875rem" }}>{exactTitle}</span>
           <button onClick={() => { setExactTitle(""); setSearched(true); }}
             style={{ marginLeft:"auto", background:"none", border:"1px solid var(--red)", borderRadius:4,
-              padding:"2px 10px", cursor:"pointer", fontFamily:"'Bebas Neue',sans-serif",
-              fontSize:"0.65rem", letterSpacing:"1.5px", color:"var(--red)" }}>
+              padding:"2px 10px", cursor:"pointer", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+              fontSize:"0.875rem", letterSpacing:"1.5px", color:"var(--red)" }}>
             CLEAR ✕
           </button>
         </div>
@@ -408,10 +426,10 @@ export default function Everything({
       {/* Results header */}
       {searched && (
         <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:12, flexWrap:"wrap", gap:8 }}>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px", fontSize:"0.82rem", color:"var(--muted2)" }}>
+          <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1.5px", fontSize:"0.875rem", color:"var(--muted2)" }}>
             {results.length === 0
               ? "No results — try a different search"
-              : <><span style={{ color:"var(--red)", fontSize:"1.05rem" }}>{results.length.toLocaleString()}</span> {results.length===1?"book":"books"} {familyFilter && `· ${familyFilter}`} {exactTitle && `· "${exactTitle}" only`} — {ALL.length.toLocaleString()} total, {DATA.boxes.length} boxes</>
+              : <><span style={{ color:"var(--red)", fontSize:"0.875rem" }}>{results.length.toLocaleString()}</span> {results.length===1?"book":"books"} {familyFilter && `· ${familyFilter}`} {exactTitle && `· "${exactTitle}" only`} — {ALL.length.toLocaleString()} total, {DATA.boxes.length} boxes</>
             }
           </div>
           <div style={{ display:"flex", gap:6 }}>
@@ -419,7 +437,7 @@ export default function Everything({
               onClick={() => downloadClaudeNotes()}
               title="Download all flagged notes as a .txt file for Claude"
               style={{
-                fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1.5px",
+                fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
                 padding:"5px 13px", border:"1.5px solid #7c3aed",
                 background:"none", color:"#7c3aed",
                 borderRadius:4, cursor:"pointer",
@@ -430,7 +448,7 @@ export default function Everything({
             {(["list","card"] as const).map(v=>(
               <button key={v} onClick={()=>setView(v)}
                 style={{
-                  fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"1.5px",
+                  fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
                   padding:"5px 14px", border:`1.5px solid ${view===v?"var(--red)":"var(--border)"}`,
                   background:view===v?"var(--red)":"var(--surface)", color:view===v?"#fff":"var(--muted2)",
                   borderRadius:4, cursor:"pointer",
@@ -465,21 +483,21 @@ export default function Everything({
                 {c.Imprint   && <div className="dr"><span className="dl">Imprint</span><span className="dv">{c.Imprint}</span></div>}
               </div>
               {c.Story_Pitch && (
-                <div style={{ marginTop:6, color:"var(--muted2)", fontSize:"0.85rem", lineHeight:1.5 }}>{c.Story_Pitch.substring(0,220)}</div>
+                <div style={{ marginTop:6, color:"var(--muted2)", fontSize:"0.875rem", lineHeight:1.5 }}>{c.Story_Pitch.substring(0,220)}</div>
               )}
               <div style={{ marginTop:10, display:"flex", gap:10, alignItems:"center", flexWrap:"wrap" }}>
                 <a href={`https://comicvine.gamespot.com/search/?q=${encodeURIComponent(c.Title + " " + c.Issue)}`} target="_blank" rel="noopener noreferrer"
-                  style={{ fontSize:"0.72rem", color:"var(--muted2)", textDecoration:"underline" }}>
+                  style={{ fontSize:"0.875rem", color:"var(--muted2)", textDecoration:"underline" }}>
                   🔎 Comic Vine
                 </a>
                 <button
                   onClick={e => { e.stopPropagation(); openDrawer(c); }}
-                  style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1.5px", padding:"5px 12px", background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:4, cursor:"pointer", color:"var(--text)" }}
+                  style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px", padding:"5px 12px", background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:4, cursor:"pointer", color:"var(--text)" }}
                 >
                   Full Details →
                 </button>
                 {flaggedKeys.has(comicFlagKey(c.Title, c.Issue || "", c.Box || "")) && (
-                  <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1px", color:"#92400e", background:"#fef3c7", border:"1px solid #fcd34d", borderRadius:3, padding:"2px 8px" }}>
+                  <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"#92400e", background:"#fef3c7", border:"1px solid #fcd34d", borderRadius:3, padding:"2px 8px" }}>
                     UPDATE NEEDED
                   </span>
                 )}
@@ -510,8 +528,8 @@ export default function Everything({
       )}
 
       {searched && results.length === 0 && (
-        <div style={{ textAlign:"center", padding:"48px 20px", color:"var(--muted2)", fontSize:"0.9rem" }}>
-          <div style={{ fontSize:"1.5rem", marginBottom:8, opacity:0.4 }}>🔍</div>
+        <div style={{ textAlign:"center", padding:"48px 20px", color:"var(--muted2)", fontSize:"0.875rem" }}>
+          <div style={{ fontSize:"1.75rem", marginBottom:8, opacity:0.4 }}>🔍</div>
           No comics found matching those criteria. Try a broader search.
         </div>
       )}
@@ -551,10 +569,10 @@ function EverythingCard({ comic: c, onTitleClick, flagged, onOpenDrawer, onCover
           <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", marginBottom:4, gap:4 }}>
             <BoxBadge box={c.Box} />
             <div style={{ display:"flex", gap:3, flexWrap:"wrap", justifyContent:"flex-end" }}>
-              {flagged  && <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.55rem", letterSpacing:"1px", color:"#92400e", background:"#fef3c7", border:"1px solid #fcd34d", borderRadius:3, padding:"1px 5px" }}>UPDATE</span>}
-              {isKey    && <span className="badge bkey"  style={{fontSize:"0.57rem"}}>KEY</span>}
-              {isSigned && <span className="badge bgold" style={{fontSize:"0.57rem"}}>SIGNED</span>}
-              {c.Platform && <span className={`badge ${platClass(c.Platform)}`} style={{fontSize:"0.57rem"}}>{c.Platform}</span>}
+              {flagged  && <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"#92400e", background:"#fef3c7", border:"1px solid #fcd34d", borderRadius:3, padding:"1px 5px" }}>UPDATE</span>}
+              {isKey    && <span className="badge bkey"  style={{fontSize:"0.875rem"}}>KEY</span>}
+              {isSigned && <span className="badge bgold" style={{fontSize:"0.875rem"}}>SIGNED</span>}
+              {c.Platform && <span className={`badge ${platClass(c.Platform)}`} style={{fontSize:"0.875rem"}}>{c.Platform}</span>}
             </div>
           </div>
           {onTitleClick
@@ -562,7 +580,7 @@ function EverythingCard({ comic: c, onTitleClick, flagged, onOpenDrawer, onCover
             : <div className="card-title">{c.Title}</div>
           }
           <div className="card-issue">
-            {(()=>{const ip=parseIssueParts(c.Issue);return<>{ip.main}{ip.legacy&&<span style={{fontSize:"0.6rem",fontFamily:"'Bebas Neue',sans-serif",letterSpacing:"1px",background:"#e8f0fe",color:"#1d4ed8",borderRadius:3,padding:"1px 5px",marginLeft:4}}>{ip.legacy}</span>}</>; })()}
+            {(()=>{const ip=parseIssueParts(c.Issue);return<>{ip.main}{ip.legacy&&<span style={{fontSize:"0.875rem",fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",letterSpacing:"1px",background:"#e8f0fe",color:"#1d4ed8",borderRadius:3,padding:"1px 5px",marginLeft:4}}>{ip.legacy}</span>}</>; })()}
             {c.Volume && c.Volume !== "1" ? ` · Vol ${c.Volume}` : ""}{c.Year ? ` · ${c.Year}` : ""}
           </div>
           {c.Publisher && <div className="card-pub">{c.Publisher}{c.Era?` · ${c.Era}`:""}</div>}
@@ -570,14 +588,14 @@ function EverythingCard({ comic: c, onTitleClick, flagged, onOpenDrawer, onCover
       </div>
 
       {(c.Writer || c.Artist) && (
-        <div style={{ fontSize:"0.72rem", color:"var(--muted2)", lineHeight:1.4, marginBottom:4 }}>
+        <div style={{ fontSize:"0.875rem", color:"var(--muted2)", lineHeight:1.4, marginBottom:4 }}>
           {c.Writer && <div><span style={{color:"var(--muted)"}}>W:</span> {c.Writer}</div>}
           {c.Artist && c.Artist !== c.Writer && <div><span style={{color:"var(--muted)"}}>A:</span> {c.Artist}</div>}
         </div>
       )}
 
       {isKey && c.Key_Reason && (
-        <div style={{ fontSize:"0.78rem", color:"#8a6000", marginTop:4, lineHeight:1.4, background:"#fff8e0", borderRadius:3, padding:"3px 8px" }}>
+        <div style={{ fontSize:"0.875rem", color:"#8a6000", marginTop:4, lineHeight:1.4, background:"#fff8e0", borderRadius:3, padding:"3px 8px" }}>
           {c.Key_Reason.substring(0, 110)}
         </div>
       )}
@@ -585,13 +603,13 @@ function EverythingCard({ comic: c, onTitleClick, flagged, onOpenDrawer, onCover
       {isSigned && c.Signed_By && (() => {
         const lower = c.Signed_By.toLowerCase();
         const verify = lower.includes("verify") || lower.includes("unconfirmed");
-        return <div style={{ fontSize:"0.7rem", color: verify ? "#92400e" : "var(--brown)", marginTop:4, background: verify ? "#fef3c7" : "transparent", borderRadius:3, padding: verify ? "2px 6px" : "0" }}>
+        return <div style={{ fontSize:"0.875rem", color: verify ? "#92400e" : "var(--brown)", marginTop:4, background: verify ? "#fef3c7" : "transparent", borderRadius:3, padding: verify ? "2px 6px" : "0" }}>
           ✍ {c.Signed_By}{c.Personal ? ` — "${c.Personal}"` : ""}{verify ? " ⚠" : ""}
         </div>;
       })()}
 
       {(c.Value_NM || c.Value_VF) && (
-        <div style={{ display:"flex", gap:10, marginTop:6, fontSize:"0.72rem" }}>
+        <div style={{ display:"flex", gap:10, marginTop:6, fontSize:"0.875rem" }}>
           {c.Value_NM && c.Value_NM!=="nan" && <span style={{color:"var(--green-text)"}}>NM <strong>${c.Value_NM}</strong></span>}
           {(()=>{ const v=c.Value_VF&&c.Value_VF!=="nan"?c.Value_VF.match(/(\d+(?:\.\d+)?)/)?.[1]:""; return v?<span style={{color:"var(--muted)"}}>VF <strong>${v}</strong></span>:null; })()}
         </div>
@@ -602,7 +620,7 @@ function EverythingCard({ comic: c, onTitleClick, flagged, onOpenDrawer, onCover
           onClick={e => { e.stopPropagation(); onOpenDrawer(); }}
           style={{
             marginTop:10, width:"100%", padding:"7px 0",
-            fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1.5px",
+            fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
             background: flagged ? "#fef3c7" : "var(--surface2)",
             border: `1px solid ${flagged ? "#fcd34d" : "var(--border)"}`,
             borderRadius:4, cursor:"pointer",

@@ -14,7 +14,7 @@ const shows: ShowTheme[] = [
   { Num:"9",  Title:"Flash: Waid Era Complete (Flash #112–233)",  Description:"Anchor: The Flash #112. Supporting: Waid-era Flash complete run (Box 7 = 204 books). Strategy: 'The definitive Flash run. 204 consecutive issues from one of the greatest writers in DC history.' Revenue target: $150–$350." },
   { Num:"10", Title:"Foil Covers + Variants + Absolute Batman",  Description:"Anchor: Absolute Batman #1–8 1st prints. Supporting: All foil covers from Box 5 (Wolverine #8 variant, Daredevil foil, etc.), World's Finest foil. Strategy: 'Modern keys and 90s nostalgia — the two best moods in comics.' Revenue target: $200–$450." },
   { Num:"11", Title:"Black Panther Complete Archive: Priest / Hudlin / Coates / Ridley / Ewing",  Description:"Anchor: Black Panther vol3 #1 (Priest). Supporting: Hudlin run, Coates run, Ridley run, Ewing run. Box 34 = 246 books, 30 keys. Strategy: 'The only complete Black Panther archive you've ever seen on Whatnot.' Revenue target: $400–$900." },
-  { Num:"12", Title:"Post-Terrificon Celebration Show — Best of the Collection",  Description:"Anchor: Thor #169 CGC 8.0 (Galactus origin — slabbed). Supporting: Fresh off Terrificon — newly signed books, show stories, Wolverine #8 story. Strategy: Tell the STORY of Terrificon. What happened. What you got signed. Hype builds community. Revenue target: $300–$700." },
+  { Num:"12", Title:"Best of the Collection — Celebration Show",  Description:"Anchor: Thor #169 CGC 8.0 (Galactus origin — slabbed). Supporting: newly signed books, show stories, Wolverine #8 story. Strategy: Tell the STORIES behind your signed and key books. Hype builds community. Revenue target: $300–$700." },
 ];
 
 export default function ShowPlanner() {
@@ -30,8 +30,8 @@ export default function ShowPlanner() {
         <p>12 themed show concepts based on your collection. Every show has a recommended anchor book, mix strategy, and Whatnot story pitch. Revenue target: $9,000–$18,000 for the year.</p>
       </div>
 
-      <div style={{ background:"var(--surface2)", borderBottom:"1px solid var(--border)", padding:"10px 20px", fontSize:"0.8rem", color:"var(--muted2)" }}>
-        📅 Wednesday shows · Juneteenth Special Jun 19 AM · Terrificon Aug 7–9 · NYCC Oct 8–11 · 31 scheduled events · 12 themed concepts
+      <div style={{ background:"var(--surface2)", borderBottom:"1px solid var(--border)", padding:"10px 20px", fontSize:"0.875rem", color:"var(--muted2)" }}>
+        📅 Wednesday shows · Juneteenth Special Jun 19 AM · NYCC Oct 8–11 · 31 scheduled events · 12 themed concepts
       </div>
 
       <div className="list-view">
@@ -45,7 +45,7 @@ export default function ShowPlanner() {
               </div>
               {isOpen && (
                 <div className="lcard-expand">
-                  <div style={{ fontSize:"0.82rem", color:"var(--text2)", lineHeight:1.7, whiteSpace:"pre-wrap" }}>
+                  <div style={{ fontSize:"0.875rem", color:"var(--text2)", lineHeight:1.7, whiteSpace:"pre-wrap" }}>
                     {s.Description}
                   </div>
                 </div>
@@ -57,10 +57,10 @@ export default function ShowPlanner() {
 
       {/* Revenue guide */}
       <div style={{ margin:"24px 20px 40px", padding:"16px 20px", background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:8 }}>
-        <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem", letterSpacing:"1.5px", color:"var(--red)", marginBottom:8 }}>
+        <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px", color:"var(--red)", marginBottom:8 }}>
           WHATNOT SHOW STRATEGY PRINCIPLES
         </div>
-        <div style={{ display:"flex", flexWrap:"wrap", gap:14, fontSize:"0.78rem", color:"var(--muted2)", lineHeight:1.6 }}>
+        <div style={{ display:"flex", flexWrap:"wrap", gap:14, fontSize:"0.875rem", color:"var(--muted2)", lineHeight:1.6 }}>
           {[
             { h:"Anchor + Fillers", t:"Every show: 1–2 anchor books (tell a story) + 10–20 fillers to keep momentum. Never start with your best book." },
             { h:"Signed Books", t:"Lead with the STORY of the signing, not just the book. 'Hayley Atwell signed this to Robert' = emotional connection = higher bids." },
@@ -68,7 +68,7 @@ export default function ShowPlanner() {
             { h:"Whatnot-specific wins", t:"MCU fans cross over to comics. Themed shows outperform mixed shows. Repeat buyers build loyalty over a season of shows." },
           ].map(p => (
             <div key={p.h} style={{ flex:"1 1 220px" }}>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"1px", color:"var(--text)", marginBottom:3 }}>{p.h}</div>
+              <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--text)", marginBottom:3 }}>{p.h}</div>
               <div>{p.t}</div>
             </div>
           ))}

@@ -107,8 +107,8 @@ export function SortableTable<T>({ cols, rows, pageSize = DEFAULT_PAGE_SIZE, exp
                     position: "relative",
                     padding: "8px 20px 8px 12px",
                     textAlign: "left",
-                    fontFamily: "'Bebas Neue', sans-serif",
-                    fontSize: "0.7rem",
+                    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+                    fontSize: "0.875rem",
                     letterSpacing: "1.5px",
                     color: sortKey === col.key ? "var(--red)" : "var(--muted2)",
                     whiteSpace: "nowrap",
@@ -152,7 +152,7 @@ export function SortableTable<T>({ cols, rows, pageSize = DEFAULT_PAGE_SIZE, exp
                     {cols.map(col => (
                       <td
                         key={col.key}
-                        style={{ padding: "8px 12px", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", verticalAlign: "middle" }}
+                        style={{ padding: "8px 12px", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", verticalAlign: "middle", fontSize: "0.875rem" }}
                       >
                         {col.cell(row)}
                       </td>

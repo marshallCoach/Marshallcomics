@@ -1,4 +1,13 @@
 import { useState, useEffect } from "react";
+import { DATA3 } from "../data/data3";
+
+// Live collection totals so the plan tracks the generated data, not a stale snapshot.
+const _OYES        = (v?: string) => (v || "").toUpperCase() === "YES";
+const O_COMICS     = DATA3.comics.length;
+const O_BOXES      = DATA3.boxes.length;
+const O_KEYS       = DATA3.comics.filter(c => _OYES(c.Key)).length;
+const O_SIGNED     = DATA3.comics.filter(c => _OYES(c.Signed)).length;
+const O_UNBAGGED   = Math.round(O_COMICS * 0.70);           // planning: ~70% still unbagged
 
 const LS_LABELED  = "brbBoxLabeled";
 const LS_RUNS     = "brbRunsDone";
@@ -18,53 +27,8 @@ interface SupplyItem {
 const SUPPLIES: SupplyItem[] = [
   { item:"BCW Current Bags (1,000ct bulk)",          qty:"9 cases",  notes:"~8,250 needed + 750 buffer for current pull & future buys", retail:"~$270", shop:"~$162" },
   { item:"BCW Current Backing Boards (1,000ct bulk)", qty:"9 cases",  notes:"Matches bag count exactly — buy together",                   retail:"~$315", shop:"~$189" },
-  { item:"BCW Short Boxes",                          qty:"18 boxes", notes:"Overspill from 38 over-capacity boxes. Buy 3×5-pack + 1×3-pack.", retail:"~$110", shop:"~$70"  },
+  { item:"BCW Short Boxes",                          qty:"as needed", notes:"Spare boxes for overspill as you bag. Buy in 5-packs (cheapest per unit).", retail:"~$110", shop:"~$70"  },
   { item:"BCW Silver Age bags (100ct)",              qty:"1 pack",   notes:"For ~10 Silver Age keys (Tales of Suspense, World's Finest #26/#47)", retail:"~$10",  shop:"~$6"   },
-];
-
-// ─── BOX SPLITTING ───────────────────────────────────────────────────────────
-interface SplitBox {
-  box: number; comics: number; over: number; newBoxes: string; keys: number; contents: string;
-}
-const SPLITS: SplitBox[] = [
-  { box:42, comics:620, over:470, newBoxes:"+3", keys:81,  contents:"DC New 52 + Convergence — SPLIT DONE → Boxes 82, 83, 84" },
-  { box:2,  comics:294, over:144, newBoxes:"+1", keys:28,  contents:"X-Men Semi-Recent: AXM Whedon + X-Men runs" },
-  { box:3,  comics:272, over:122, newBoxes:"+1", keys:14,  contents:"Marvel X-Men Full Runs: AXM/UXM/Cable/X-Force" },
-  { box:43, comics:262, over:112, newBoxes:"+1", keys:23,  contents:"DC Rebirth — Batman Hush COMPLETE + Tom King Batman + Flash" },
-  { box:4,  comics:255, over:105, newBoxes:"+1", keys:24,  contents:"Marvel: Fantastic Four — Waid/Hickman/Fraction/Slott/North" },
-  { box:5,  comics:251, over:101, newBoxes:"+1", keys:26,  contents:"Marvel: Thor/Loki mega-box — God of Thunder COMPLETE" },
-  { box:6,  comics:248, over:98,  newBoxes:"+1", keys:13,  contents:"Marvel: Savage Avengers COMPLETE + Avengers Forever" },
-  { box:44, comics:248, over:98,  newBoxes:"+1", keys:17,  contents:"DC New 52 — Batgirl Simone + Batwoman JH Williams + Nightwing" },
-  { box:7,  comics:246, over:96,  newBoxes:"+1", keys:30,  contents:"BLACK PANTHER ARCHIVE: Priest/Hudlin/Coates/Ridley/Ewing" },
-  { box:8,  comics:238, over:88,  newBoxes:"+1", keys:22,  contents:"Elektra + Black Widow + Hawkeye + Winter Soldier — SIGNED BOOKS" },
-  { box:9,  comics:236, over:86,  newBoxes:"+1", keys:31,  contents:"X-Men Continuing: OML/Dead Man Logan COMPLETE/Domino/HoXPoX" },
-  { box:68, comics:227, over:77,  newBoxes:"+1", keys:12,  contents:"DC 2005-2009 — Final Crisis COMPLETE + Batman & Robin" },
-  { box:10, comics:223, over:73,  newBoxes:"+1", keys:24,  contents:"Captain America COMPLETE: Brubaker/Kirkman/Remender/Spencer" },
-  { box:69, comics:222, over:72,  newBoxes:"+1", keys:17,  contents:"DC 2001-2009 Mixed — JLA Meltzer/McDuffie + Buffy" },
-  { box:45, comics:215, over:65,  newBoxes:"+1", keys:8,   contents:"DC: Birds of Prey + Robin + Batgirl (Dixon/Simone 1999-2010)" },
-  { box:11, comics:214, over:64,  newBoxes:"+1", keys:47,  contents:"X-Men Mixed: OML/Generations/Phoenix Resurrection/FoHoX/FtA" },
-  { box:46, comics:213, over:63,  newBoxes:"+1", keys:14,  contents:"DC: Earth 2 + World's Finest + Justice League New 52" },
-  { box:12, comics:212, over:62,  newBoxes:"+1", keys:24,  contents:"X-Men + Marvel Modern: Deadpool/Old Man Logan" },
-  { box:13, comics:211, over:61,  newBoxes:"+1", keys:23,  contents:"Iron Man mega-box — Extremis Ellis + Fraction + Bendis + Moon Knight" },
-  { box:14, comics:205, over:55,  newBoxes:"+1", keys:28,  contents:"Krakoa X-Men: HoX+PoX COMPLETE/X-Force/X-Men Red/AXE" },
-  { box:15, comics:205, over:55,  newBoxes:"+1", keys:18,  contents:"X-Men Semi-Recent: Cable/Blue/Gold/Extermination/All-New X-Men" },
-  { box:47, comics:204, over:54,  newBoxes:"+1", keys:10,  contents:"Flash Vol 2 #112-233 + JLA/JLoA Waid/Morrison/Johns" },
-  { box:16, comics:203, over:53,  newBoxes:"+1", keys:18,  contents:"Spider-Man Archive: Miles/Scarlet Spider/Moon Knight SM" },
-  { box:64, comics:194, over:44,  newBoxes:"+1", keys:14,  contents:"TV/Media Tie-In — Doctor Who + Serenity/Firefly + Star Trek" },
-  { box:17, comics:192, over:42,  newBoxes:"+1", keys:22,  contents:"Guardians of the Galaxy — All Volumes Bendis/Cates/Ewing/Lanzing" },
-  { box:18, comics:191, over:41,  newBoxes:"+1", keys:26,  contents:"Inhumans + Eternals Gaiman/Gillen + Captain Marvel" },
-  { box:19, comics:187, over:37,  newBoxes:"+1", keys:21,  contents:"Marvel Events: Empyre/CW2/Original Sin/Siege/AXIS ALL COMPLETE" },
-  { box:20, comics:183, over:33,  newBoxes:"+1", keys:22,  contents:"Marvel Misc: Alpha Flight/New Warriors/What If" },
-  { box:48, comics:180, over:30,  newBoxes:"+1", keys:38,  contents:"DC Rebirth: Rebirth #1 + JL vs SS COMPLETE + Batman" },
-  { box:21, comics:180, over:30,  newBoxes:"+1", keys:25,  contents:"Immortal Iron Fist + Jessica Jones + Shang-Chi" },
-  { box:49, comics:174, over:24,  newBoxes:"+1", keys:18,  contents:"Hawkman + Far Sector + Infinite Frontier COMPLETE" },
-  { box:22, comics:172, over:22,  newBoxes:"+1", keys:18,  contents:"Hulk: Red Hulk/Loeb/Aaron/Cates/PKJ/Indestructible" },
-  { box:50, comics:171, over:21,  newBoxes:"+1", keys:21,  contents:"Dawn of DC + Birds of Prey COMPLETE #1-26" },
-  { box:23, comics:165, over:15,  newBoxes:"+1", keys:23,  contents:"Ultimate Marvel: UFF/UXM/Ultimates COMPLETE" },
-  { box:24, comics:165, over:15,  newBoxes:"+1", keys:13,  contents:"Marvel Avengers Full Runs: New/Uncanny Avengers" },
-  { box:25, comics:155, over:5,   newBoxes:"+1", keys:14,  contents:"Ultimate Marvel: UXM/Ultimates/UWvH COMPLETE/Cataclysm" },
-  { box:26, comics:155, over:5,   newBoxes:"+1", keys:24,  contents:"Shield/Ultimates Ewing/Fearless Defenders/Astonishing" },
-  { box:51, comics:154, over:4,   newBoxes:"+1", keys:4,   contents:"DC: Impulse + Young Justice + Teen Titans — just over capacity" },
 ];
 
 // ─── BAGGING PRIORITY ORDER ───────────────────────────────────────────────────
@@ -238,6 +202,21 @@ const BOXES: BoxEntry[] = [
   { newNum:72, oldNum:5,  group:"mixed",     name:"Variants + Absolute 1st Prints",     desc:"Wolverine #8 UNSIGNED, Absolute Batman/WW/Superman variants",                                                                              comics:75  },
   { newNum:73, oldNum:3,  group:"mixed",     name:"Marvel Mix",                         desc:"A-Force, Miles, Mockingbird, Star Wars mixed",                                                                                             comics:54  },
   { newNum:74, oldNum:74, group:"tpb",       name:"Trade Paperbacks / Graphic Novels",  desc:"Crisis on IE, JLA Earth 2, JLA/Avengers, Spider-Man Life Story, DC One Million, X-Men Asgardian Wars, The Escapist. 28 items.",          comics:28  },
+  { newNum:75, oldNum:75, group:"marvel",    name:"Marvel Current",                      desc:"Ultimate Spider-Man Hickman near-complete. TVA COMPLETE. BP 60th Anniversary Priest. Age of Revelation. FF Hickman era. One World Under Doom.", comics:199 },
+  { newNum:76, oldNum:76, group:"dc",        name:"DC Recent",                           desc:"Absolute Flash near-complete. Absolute Wonder Woman near-complete. Batman Off World COMPLETE. Batman and Robin Lemire COMPLETE. Zatanna Campbell.", comics:108 },
+  { newNum:77, oldNum:77, group:"other",     name:"Mixed/Other — Energon Universe",      desc:"Power Fantasy Gillen near-complete. Gargoyles Weisman complete. GI Joe/Transformers/Void Rivals. Firefly/Serenity. Magic Order Vols 2–4.", comics:177 },
+  { newNum:78, oldNum:78, group:"marvel",    name:"Marvel Recent Small",                 desc:"World of Revelation #1. Inglorious X-Force #1. Moon Knight Fist of Khonshu. Small overflow box.", comics:7   },
+  { newNum:79, oldNum:79, group:"marvel",    name:"Marvel Small Mixed",                  desc:"Wolverine Madripoor Knights COMPLETE. Empyre. Aliens vs Avengers Hickman. She-Hulk Rowell. Blade. Secret Wars reprints.", comics:90  },
+  { newNum:80, oldNum:80, group:"other",     name:"Pulled Covers — Display",             desc:"Box of pulled covers used as display pieces. Not for sale. Not true duplicates.", comics:11  },
+  { newNum:81, oldNum:81, group:"mixed",     name:"Box 81 — Unlabeled",                  desc:"X Club through Indestructible Hulk #20. Needs labeling.", comics:165 },
+  { newNum:82, oldNum:82, group:"dc",        name:"DC New 52 Overflow A",               desc:"DC Universe: Rebirth #1 through Animal Man #29. Box 42 split overflow.", comics:115 },
+  { newNum:83, oldNum:83, group:"dc",        name:"DC New 52 Overflow B",               desc:"Titans: Rebirth #1 through DC Comics: Bombshells #6. Box 42 split overflow.", comics:140 },
+  { newNum:84, oldNum:84, group:"dc",        name:"DC New 52 Overflow C",               desc:"Bombshells #7 through Batman/Superman: World's Finest #2. Box 42 split overflow.", comics:121 },
+  { newNum:85, oldNum:85, group:"mixed",     name:"Box 85 — Mixed",                     desc:"Black Panther #1 through Ultimate Universe: One Year In #1. 2 signed.", comics:175 },
+  { newNum:86, oldNum:86, group:"mixed",     name:"Box 86 — Mixed (Large)",             desc:"A-Force #1 through Years of Future Past #4. 1 signed. 58 keys.", comics:496 },
+  { newNum:87, oldNum:87, group:"mixed",     name:"Box 87 — Mixed",                     desc:"Avengers #363 through Venom #15.", comics:219 },
+  { newNum:88, oldNum:88, group:"mixed",     name:"Box 88 — Mixed",                     desc:"Batman #656 through Ex Machina #16. 3 signed. 24 keys.", comics:373 },
+  { newNum:89, oldNum:89, group:"mixed",     name:"Box 89 — Small Mixed",               desc:"X-Men #1 (2024 variant) through Iron Man 2.0 #7.", comics:62  },
 ];
 
 // ─── CONSOLIDATION RUNS ──────────────────────────────────────────────────────
@@ -277,7 +256,7 @@ const STEPS: OrgStep[] = [
   { key:"s2", num:2, title:"Bag Box 1 — INVENTORY (Priority 0)", time:"~45 min",
     tools:"BCW current bags, backing boards, Box 1 contents list",
     tasks:[
-      "Open Box 1. This contains all 56 signed books + premium keys.",
+      `Open Box 1. This contains all ${O_SIGNED} signed books + premium keys.`,
       "Bag every single book. Board inside, comic on top, bag sealed.",
       "Handle signed books with care — spine side in first, no bending.",
       "The Stan Lee, ASM #361, and Batman #125 are already at CGC — do not bag those.",
@@ -289,7 +268,7 @@ const STEPS: OrgStep[] = [
     tools:"BCW current bags, backing boards, careful hands",
     tasks:[
       "Box 2 (294 comics, 1 signed): bag all, split into 2 boxes. Label Box 2A and Box 2B.",
-      "Box 8 (238 comics, 1 signed): bag all, split into 2 boxes. Contains Batman Europa + Superman Unchained — THESE MUST BE BAGGED BEFORE TERRIFICON.",
+      "Box 8 (238 comics, 1 signed): bag all, split into 2 boxes. Contains Batman Europa + Superman Unchained — SIGNED/premium, bag with extra care.",
       "Box 66 (126 comics, 1 signed): bag all — already under 150, no split needed.",
       "Box 72 (75 comics, 2 signed — Wolverine #8 UNSIGNED + Absolute variants): bag all. WOLVERINE #8 STAYS UNSIGNED — bag it separately with a note.",
     ],
@@ -315,15 +294,14 @@ const STEPS: OrgStep[] = [
       "Add a card divider inside every box at the 75-comic midpoint — makes finding issues faster.",
     ],
   },
-  { key:"s6", num:6, title:"Terrificon Prep — Before August 6", time:"~2 hours",
-    tools:"CGC submission forms, mylar bags, boards, Hotel code G-TRFC",
+  { key:"s6", num:6, title:"Convention Prep — CGC Submissions", time:"~2 hours",
+    tools:"CGC submission forms, mylar bags, boards",
     tasks:[
-      "Box 8 MUST be bagged before Terrificon — Batman Europa + Superman Unchained are in there.",
-      "Wolverine #8 (Box 72) — confirm unsigned, bag it separately in a CGC submission bag (mylar), label clearly.",
-      "Moon Knight Vol 6 #1-6 — pull from Box 33, bag in individual mylar bags for Terrificon.",
-      "Pre-fill CGC submission forms at cgccomics.com before leaving.",
-      "Pack: CGC forms + mylar-bagged books + backing boards + Hotel code G-TRFC confirmed.",
-      "Jim Lee: Saturday August 8, arrive 10am sharp. His line fills in minutes.",
+      "Pull CGC/SS candidates and bag each separately in a CGC submission bag (mylar), labelled clearly.",
+      "Wolverine #8 (Box 72) — confirm unsigned, bag it separately in mylar for a future Yellow SS signing.",
+      "Moon Knight Vol 6 #1-6 — pull from Box 33, bag in individual mylar bags for submission.",
+      "Pre-fill CGC submission forms at cgccomics.com before any show or mail-in.",
+      "Pack: CGC forms + mylar-bagged books + backing boards.",
     ],
   },
   { key:"s7", num:7, title:"Bag Remaining Boxes (P3 + P4) — No Rush", time:"Ongoing",
@@ -339,19 +317,22 @@ const STEPS: OrgStep[] = [
 
 // ─── GROUP META ───────────────────────────────────────────────────────────────
 const GROUP_META: Record<string, { label: string; color: string; accent: string }> = {
-  inventory: { label:"Inventory",          color:"#c8102e", accent:"#fff0f0" },
-  marvel:    { label:"Marvel (Boxes 2–41)", color:"#c8102e", accent:"#fff8f8" },
-  dc:        { label:"DC (Boxes 42–63)",    color:"#1d6fa4", accent:"#f0f6ff" },
-  other:     { label:"Other (Boxes 64–67)", color:"#16a34a", accent:"#f0faf2" },
-  mixed:     { label:"Mixed (Boxes 68–73)", color:"#d97706", accent:"#fffbf0" },
-  tpb:       { label:"TPB (Box 74)",        color:"#6b7280", accent:"#f8f8f8" },
+  inventory: { label:"Inventory",               color:"#c8102e", accent:"#fff0f0" },
+  marvel:    { label:"Marvel (Boxes 2–41, 75, 78–79)", color:"#c8102e", accent:"#fff8f8" },
+  dc:        { label:"DC (Boxes 42–63, 76, 82–84)",    color:"#1d6fa4", accent:"#f0f6ff" },
+  other:     { label:"Other (Boxes 64–67, 77, 80)",    color:"#16a34a", accent:"#f0faf2" },
+  mixed:     { label:"Mixed (Boxes 68–73, 81, 85–89)", color:"#d97706", accent:"#fffbf0" },
+  tpb:       { label:"TPB (Box 74)",             color:"#6b7280", accent:"#f8f8f8" },
 };
 const GROUP_ORDER = ["inventory","marvel","dc","other","mixed","tpb"];
 
 // ─── SUB-COMPONENTS ───────────────────────────────────────────────────────────
-function BoxCard({ b, labeled, onToggle }: { b: BoxEntry; labeled: boolean; onToggle: () => void }) {
+function BoxCard({ b, labeled, liveComics, liveKeys, onToggle }: {
+  b: BoxEntry; labeled: boolean; liveComics?: number; liveKeys?: number; onToggle: () => void;
+}) {
   const gm = GROUP_META[b.group];
   const changed = b.newNum !== b.oldNum;
+  const comicCount = liveComics ?? b.comics;
   return (
     <div style={{
       border: labeled ? "1.5px solid #16a34a" : `1.5px solid ${gm.color}30`,
@@ -359,28 +340,36 @@ function BoxCard({ b, labeled, onToggle }: { b: BoxEntry; labeled: boolean; onTo
       borderRadius:8, padding:"12px 14px", position:"relative",
       opacity: labeled ? 0.7 : 1, transition:"all 0.15s",
     }}>
-      {labeled && <div style={{ position:"absolute", top:6, right:8, color:"#16a34a", fontSize:"0.85rem", fontWeight:700 }}>✓</div>}
+      {labeled && <div style={{ position:"absolute", top:6, right:8, color:"#16a34a", fontSize:"0.875rem", fontWeight:700 }}>✓</div>}
       <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:5 }}>
-        <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.55rem", letterSpacing:"1px", color:gm.color, lineHeight:1 }}>
+        <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"1.75rem", letterSpacing:"1px", color:gm.color, lineHeight:1 }}>
           {String(b.newNum).padStart(2,"0")}
         </span>
         {changed ? (
           <div style={{ display:"flex", alignItems:"center", gap:4 }}>
-            <span style={{ fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", color:"var(--muted)", background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:3, padding:"1px 6px" }}>
+            <span style={{ fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px", color:"var(--muted)", background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:3, padding:"1px 6px" }}>
               was {b.oldNum}
             </span>
-            <span style={{ color:"var(--muted)", fontSize:"0.8rem" }}>→</span>
+            <span style={{ color:"var(--muted)", fontSize:"0.875rem" }}>→</span>
           </div>
         ) : (
-          <span style={{ fontSize:"0.6rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", color:"var(--muted)", background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:3, padding:"1px 6px" }}>UNCHANGED</span>
+          <span style={{ fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px", color:"var(--muted)", background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:3, padding:"1px 6px" }}>UNCHANGED</span>
         )}
       </div>
-      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem", letterSpacing:"0.8px", color:"var(--text)", marginBottom:3, lineHeight:1.2 }}>{b.name}</div>
-      <div style={{ fontSize:"0.72rem", color:"var(--muted2)", lineHeight:1.4, marginBottom:8 }}>{b.desc}</div>
+      <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"0.8px", color:"var(--text)", marginBottom:3, lineHeight:1.2 }}>{b.name}</div>
+      <div style={{ fontSize:"0.875rem", color:"var(--muted2)", lineHeight:1.4, marginBottom:8 }}>{b.desc}</div>
       <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between" }}>
-        <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.7rem", letterSpacing:"1px", color:gm.color }}>{b.comics} COMICS</span>
+        <div style={{ display:"flex", gap:8, alignItems:"center" }}>
+          <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:gm.color }}>{comicCount} COMICS</span>
+          {(liveKeys ?? 0) > 0 && (
+            <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
+              background:"#fff8e0", color:"#8a6000", border:"1px solid #d4a800", borderRadius:3, padding:"1px 5px" }}>
+              ★{liveKeys}
+            </span>
+          )}
+        </div>
         <button onClick={onToggle} style={{
-          fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1px",
+          fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
           padding:"3px 10px", borderRadius:4, cursor:"pointer", transition:"all 0.12s",
           background: labeled ? "#16a34a" : "transparent",
           color: labeled ? "#fff" : "#16a34a", border:`1.5px solid #16a34a`,
@@ -405,21 +394,21 @@ function RunCard({ run, done, onToggle }: { run: ConsolidationRun; done: boolean
           width:20, height:20, flexShrink:0, borderRadius:4, cursor:"pointer", transition:"all 0.15s",
           border:`2px solid ${done ? "#16a34a" : "var(--border)"}`, background: done ? "#16a34a" : "transparent",
           display:"flex", alignItems:"center", justifyContent:"center", marginTop:1,
-        }}>{done && <span style={{ color:"#fff", fontSize:"0.7rem" }}>✓</span>}</button>
+        }}>{done && <span style={{ color:"#fff", fontSize:"0.875rem" }}>✓</span>}</button>
         <div style={{ flex:1 }}>
           <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:4 }}>
-            <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px",
+            <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
               background:pColor+"18", border:`1px solid ${pColor}`, color:pColor, borderRadius:3, padding:"1px 8px" }}>
               PRIORITY {run.priority}
             </span>
           </div>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.95rem", letterSpacing:"0.5px",
+          <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"0.5px",
             color:"var(--text)", marginBottom:4, textDecoration: done ? "line-through" : "none" }}>
             {run.title}
           </div>
           <div style={{ display:"flex", flexWrap:"wrap", gap:4, marginBottom:6 }}>
             {run.currentBoxes.map(n => (
-              <span key={n} style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1px",
+              <span key={n} style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
                 background: n === run.targetBox ? "#16a34a20" : "var(--surface2)",
                 border:`1px solid ${n === run.targetBox ? "#16a34a" : "var(--border)"}`,
                 color: n === run.targetBox ? "#16a34a" : "var(--muted)",
@@ -430,15 +419,15 @@ function RunCard({ run, done, onToggle }: { run: ConsolidationRun; done: boolean
           </div>
           {!open ? (
             <button onClick={() => setOpen(true)} style={{ background:"none", border:"none", cursor:"pointer",
-              fontSize:"0.72rem", color:"var(--muted)", fontFamily:"'Crimson Pro',serif", fontStyle:"italic" }}>
+              fontSize:"0.875rem", color:"var(--muted)", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontStyle:"italic" }}>
               Show action + impact ▾
             </button>
           ) : (
             <div>
-              <div style={{ fontSize:"0.8rem", color:"var(--text)", lineHeight:1.55, marginBottom:4 }}><strong>Action:</strong> {run.action}</div>
-              <div style={{ fontSize:"0.8rem", color:"var(--muted2)", lineHeight:1.55, fontStyle:"italic" }}><strong>Impact:</strong> {run.impact}</div>
+              <div style={{ fontSize:"0.875rem", color:"var(--text)", lineHeight:1.55, marginBottom:4 }}><strong>Action:</strong> {run.action}</div>
+              <div style={{ fontSize:"0.875rem", color:"var(--muted2)", lineHeight:1.55, fontStyle:"italic" }}><strong>Impact:</strong> {run.impact}</div>
               <button onClick={() => setOpen(false)} style={{ background:"none", border:"none", cursor:"pointer",
-                fontSize:"0.72rem", color:"var(--muted)", fontFamily:"'Crimson Pro',serif", marginTop:4 }}>
+                fontSize:"0.875rem", color:"var(--muted)", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", marginTop:4 }}>
                 ▲ collapse
               </button>
             </div>
@@ -466,30 +455,30 @@ function StepCard({ step, stepDone, tasksDone, onStepToggle, onTaskToggle }: {
           width:32, height:32, borderRadius:"50%", flexShrink:0,
           background: stepDone ? "#16a34a" : "var(--red)", color:"#fff",
           display:"flex", alignItems:"center", justifyContent:"center",
-          fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem", letterSpacing:"1px",
+          fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
         }}>{stepDone ? "✓" : step.num}</div>
         <div style={{ flex:1 }}>
           <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:2 }}>
-            <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem", letterSpacing:"0.5px",
+            <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"0.5px",
               color:"var(--text)", textDecoration: stepDone ? "line-through" : "none" }}>
               {step.title}
             </span>
-            <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1.5px",
+            <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
               color:"var(--muted)", background:"var(--surface2)", border:"1px solid var(--border)",
               borderRadius:3, padding:"1px 8px" }}>{step.time}</span>
           </div>
-          <div style={{ fontSize:"0.78rem", color:"var(--muted2)", marginBottom:6 }}>
+          <div style={{ fontSize:"0.875rem", color:"var(--muted2)", marginBottom:6 }}>
             <strong>Tools:</strong> {step.tools}
           </div>
           <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom: open ? 10 : 0 }}>
-            <div style={{ fontSize:"0.7rem", color:"var(--muted)", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>
+            <div style={{ fontSize:"0.875rem", color:"var(--muted)", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px" }}>
               {completed}/{step.tasks.length} TASKS
             </div>
             <div style={{ flex:1, height:4, background:"var(--surface2)", borderRadius:2, overflow:"hidden" }}>
               <div style={{ height:"100%", background:"#16a34a", width:`${(completed/step.tasks.length)*100}%`, transition:"width 0.3s" }} />
             </div>
             <button onClick={() => setOpen(o => !o)} style={{ background:"none", border:"none", cursor:"pointer",
-              fontSize:"0.72rem", color:"var(--muted)", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>
+              fontSize:"0.875rem", color:"var(--muted)", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px" }}>
               {open ? "COLLAPSE ▲" : "TASKS ▾"}
             </button>
           </div>
@@ -502,13 +491,13 @@ function StepCard({ step, stepDone, tasksDone, onStepToggle, onTaskToggle }: {
                     border:`2px solid ${tasksDone[i] ? "#16a34a" : "var(--border)"}`,
                     background: tasksDone[i] ? "#16a34a" : "transparent",
                     display:"flex", alignItems:"center", justifyContent:"center",
-                  }}>{tasksDone[i] && <span style={{ color:"#fff", fontSize:"0.6rem" }}>✓</span>}</div>
-                  <span style={{ fontSize:"0.82rem", color: tasksDone[i] ? "var(--muted)" : "var(--text2)",
+                  }}>{tasksDone[i] && <span style={{ color:"#fff", fontSize:"0.875rem" }}>✓</span>}</div>
+                  <span style={{ fontSize:"0.875rem", color: tasksDone[i] ? "var(--muted)" : "var(--text2)",
                     textDecoration: tasksDone[i] ? "line-through" : "none", lineHeight:1.5 }}>{t}</span>
                 </label>
               ))}
               <button onClick={onStepToggle} style={{
-                fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1.5px",
+                fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
                 alignSelf:"flex-start", padding:"5px 16px", borderRadius:4, cursor:"pointer", marginTop:6,
                 background: stepDone ? "#16a34a" : "transparent",
                 color: stepDone ? "#fff" : "#16a34a", border:"1.5px solid #16a34a",
@@ -531,8 +520,13 @@ export default function OrganizationPath() {
   const [tasksDone, setTasksDone] = useState<Record<string, boolean[]>>(() =>
     loadLS(LS_TASKS, Object.fromEntries(STEPS.map(s => [s.key, s.tasks.map(() => false)])))
   );
-  const [splitFilter, setSplitFilter] = useState(false);
   const [bagPrioFilter, setBagPrioFilter] = useState<BagPriority | "">("");
+
+  // Merge live box data from DATA3 with hardcoded metadata
+  const liveBoxMap = Object.fromEntries(
+    DATA3.boxes.map(b => [parseInt(b.Num.replace("BOX ", "")), b])
+  );
+  const totalBoxCount = DATA3.boxes.length;
 
   useEffect(() => { localStorage.setItem(LS_LABELED, JSON.stringify(labeled)); }, [labeled]);
   useEffect(() => { localStorage.setItem(LS_BAGGED,  JSON.stringify(bagged)); }, [bagged]);
@@ -557,10 +551,10 @@ export default function OrganizationPath() {
         display:"flex", gap:14, alignItems:"flex-start", flexWrap:"wrap",
       }}>
         <div style={{ flex:1, minWidth:200 }}>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.8rem", letterSpacing:"2px", color:"#8a6000", marginBottom:4 }}>
+          <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:"#8a6000", marginBottom:4 }}>
             ⚠ URGENT — ROY THOMAS SS DEADLINE: JULY 10, 2026
           </div>
-          <div style={{ fontSize:"0.82rem", color:"#7a5500", lineHeight:1.55, fontFamily:"'Crimson Pro',serif" }}>
+          <div style={{ fontSize:"0.875rem", color:"#7a5500", lineHeight:1.55, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>
             <strong>Saga of the Human Torch #3</strong> — book in hand, NOT YET SUBMITTED.
             Press immediately (CGC in-house pressing — add to next CGC submission as an add-on).
             Then ship to Roy Thomas CGC SS before July 10. Expected return: $50–80 post-signing.
@@ -572,11 +566,11 @@ export default function OrganizationPath() {
 
       {/* Header */}
       <div style={{ marginBottom:14 }}>
-        <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.5rem", letterSpacing:"2px", color:"var(--red)", margin:0, marginBottom:4 }}>
+        <h2 style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"1.75rem", letterSpacing:"2px", color:"var(--red)", margin:0, marginBottom:4 }}>
           Organization Path — v2
         </h2>
-        <p style={{ fontSize:"0.88rem", color:"var(--muted2)", margin:0, fontFamily:"'Crimson Pro',serif" }}>
-          May 2026 — 11,776 comics · 74 boxes · 1,463 keys · 56 signed · 18 new short boxes needed · 70% unbagged
+        <p style={{ fontSize:"0.875rem", color:"var(--muted2)", margin:0, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>
+          {O_COMICS.toLocaleString()} comics · {O_BOXES} boxes · {O_KEYS.toLocaleString()} keys · {O_SIGNED} signed · ~70% unbagged
         </p>
       </div>
 
@@ -584,14 +578,14 @@ export default function OrganizationPath() {
       <div style={{ display:"flex", gap:12, marginBottom:20, flexWrap:"wrap" }}>
         {[
           { label:"STEPS COMPLETE",      val:stepsDoneCount, total:STEPS.length,  color:"var(--red)" },
-          { label:"BOXES BAGGED",        val:baggedCount,    total:74,            color:"#1d6fa4"    },
-          { label:"BOXES LABELED",       val:labeledCount,   total:74,            color:"#16a34a"    },
+          { label:"BOXES BAGGED",        val:baggedCount,    total:totalBoxCount, color:"#1d6fa4"    },
+          { label:"BOXES LABELED",       val:labeledCount,   total:totalBoxCount, color:"#16a34a"    },
           { label:"RUNS CONSOLIDATED",   val:runsDoneCount,  total:RUNS.length,   color:"#d97706"    },
         ].map(({ label, val, total, color }) => (
           <div key={label} style={{ flex:"1 1 140px", background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:8, padding:"10px 14px" }}>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem", letterSpacing:"2px", color:"var(--muted)", marginBottom:4 }}>{label}</div>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.4rem", letterSpacing:"1px", color, lineHeight:1 }}>
-              {val}<span style={{ fontSize:"0.8rem", color:"var(--muted)", marginLeft:4 }}>/ {total}</span>
+            <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:"var(--muted)", marginBottom:4 }}>{label}</div>
+            <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"1.75rem", letterSpacing:"1px", color, lineHeight:1 }}>
+              {val}<span style={{ fontSize:"0.875rem", color:"var(--muted)", marginLeft:4 }}>/ {total}</span>
             </div>
             <div style={{ height:3, background:"var(--surface2)", borderRadius:2, marginTop:6, overflow:"hidden" }}>
               <div style={{ height:"100%", background:color, width:`${(val/total)*100}%`, transition:"width 0.3s" }} />
@@ -610,7 +604,7 @@ export default function OrganizationPath() {
           ["runs",     "Consolidate"],
         ] as const).map(([id, label]) => (
           <button key={id} onClick={() => setTab(id)} style={{
-            fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.78rem", letterSpacing:"1.5px",
+            fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
             padding:"8px 16px", cursor:"pointer", background:"none", whiteSpace:"nowrap",
             color: tab===id ? "var(--red)" : "var(--muted2)",
             border:"none", borderBottom: tab===id ? "3px solid var(--red)" : "3px solid transparent",
@@ -641,10 +635,10 @@ export default function OrganizationPath() {
       {tab === "supplies" && (
         <div>
           <div style={{ background:"#fff8e0", border:"1.5px solid #d4a800", borderRadius:6, padding:"12px 16px", marginBottom:20 }}>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"2px", color:"#8a6000", marginBottom:6 }}>
-              11,776 comics · 74 short boxes at 150 capacity = 79 boxes needed · 18 new short boxes required for overspill · 70% unbagged ≈ 8,250 comics needing bags and boards
+            <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:"#8a6000", marginBottom:6 }}>
+              {O_COMICS.toLocaleString()} comics across {O_BOXES} boxes · ~70% unbagged ≈ {O_UNBAGGED.toLocaleString()} comics needing bags and boards
             </div>
-            <div style={{ fontSize:"0.82rem", color:"#7a5500", fontFamily:"'Crimson Pro',serif", lineHeight:1.6 }}>
+            <div style={{ fontSize:"0.875rem", color:"#7a5500", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", lineHeight:1.6 }}>
               <strong>ORDER VIA YOUR COMIC SHOP</strong> — trade pricing saves ~$280 vs retail.
               Order bags + boards together. Buy short boxes in packs (5-pack is cheapest per unit).
               <strong> DO NOT order boxes until after you have bagged one box</strong> and confirmed your actual comics-per-box number — it varies by board thickness.
@@ -656,7 +650,7 @@ export default function OrganizationPath() {
             <div style={{ display:"grid", gridTemplateColumns:"2fr 80px 2fr 90px 90px",
               background:"#1a1a1a", padding:"8px 14px", gap:12 }}>
               {["ITEM","QTY","NOTES","RETAIL","VIA SHOP"].map(h => (
-                <span key={h} style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"2px", color:"rgba(255,255,255,0.7)" }}>{h}</span>
+                <span key={h} style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:"rgba(255,255,255,0.7)" }}>{h}</span>
               ))}
             </div>
             {SUPPLIES.map((s, i) => (
@@ -666,11 +660,11 @@ export default function OrganizationPath() {
                 background: i % 2 === 0 ? "var(--surface)" : "var(--surface2)",
                 borderTop:"1px solid var(--border)",
               }}>
-                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.88rem", letterSpacing:"0.5px", color:"var(--text)", lineHeight:1.3 }}>{s.item}</div>
-                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.1rem", letterSpacing:"1px", color:"var(--red)" }}>{s.qty}</div>
-                <div style={{ fontSize:"0.8rem", color:"var(--muted2)", lineHeight:1.5, fontFamily:"'Crimson Pro',serif" }}>{s.notes}</div>
-                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.88rem", color:"var(--muted2)" }}>{s.retail}</div>
-                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.88rem", color:"#16a34a" }}>{s.shop}</div>
+                <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"0.5px", color:"var(--text)", lineHeight:1.3 }}>{s.item}</div>
+                <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--red)" }}>{s.qty}</div>
+                <div style={{ fontSize:"0.875rem", color:"var(--muted2)", lineHeight:1.5, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>{s.notes}</div>
+                <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:"var(--muted2)" }}>{s.retail}</div>
+                <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:"#16a34a" }}>{s.shop}</div>
               </div>
             ))}
             {/* Totals row */}
@@ -679,58 +673,10 @@ export default function OrganizationPath() {
               gap:12, padding:"12px 14px", alignItems:"start",
               background:"var(--surface)", borderTop:"2px solid var(--border)",
             }}>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.88rem", letterSpacing:"1px", color:"var(--text)", gridColumn:"1/3" }}>TOTAL</div>
+              <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--text)", gridColumn:"1/3" }}>TOTAL</div>
               <div />
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem", color:"var(--muted2)" }}>~$705</div>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem", color:"#16a34a", fontWeight:700 }}>~$427</div>
-            </div>
-          </div>
-
-          {/* Box splitting summary */}
-          <div style={{ marginTop:28 }}>
-            <div style={{ display:"flex", alignItems:"center", gap:12, marginBottom:14, borderBottom:"2px solid var(--border)", paddingBottom:8 }}>
-              <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem", letterSpacing:"2px", color:"var(--red)" }}>BOX SPLITTING — WHERE THE 18 NEW BOXES GO</span>
-              <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px", color:"var(--muted)" }}>
-                38 BOXES OVER 150 CAPACITY
-              </span>
-              <button onClick={() => setSplitFilter(v => !v)} style={{
-                marginLeft:"auto", fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1px",
-                padding:"4px 12px", borderRadius:4, cursor:"pointer",
-                background: splitFilter ? "var(--red)" : "transparent",
-                color: splitFilter ? "#fff" : "var(--red)", border:"1.5px solid var(--red)",
-              }}>
-                {splitFilter ? "SHOW ALL ▲" : "BIGGEST FIRST ▼"}
-              </button>
-            </div>
-            <div style={{ overflowX:"auto" }}>
-              <table style={{ width:"100%", borderCollapse:"collapse", fontSize:"0.82rem" }}>
-                <thead>
-                  <tr style={{ background:"var(--surface2)" }}>
-                    {["Box","Comics","Over 150","New Boxes","Keys","Contents"].map(h => (
-                      <th key={h} style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"1.5px",
-                        color:"var(--muted)", padding:"7px 10px", textAlign:"left", whiteSpace:"nowrap", borderBottom:"2px solid var(--border)" }}>{h}</th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {(splitFilter ? [...SPLITS].sort((a,b) => b.over - a.over) : SPLITS).map((s, i) => (
-                    <tr key={s.box} style={{ background: i % 2 === 0 ? "var(--surface)" : "var(--surface2)" }}>
-                      <td style={{ padding:"7px 10px", fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem", letterSpacing:"1px", color:"var(--red)" }}>{s.box}</td>
-                      <td style={{ padding:"7px 10px", fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", color:"var(--text)" }}>{s.comics}</td>
-                      <td style={{ padding:"7px 10px", fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", color:"#dc2626" }}>+{s.over}</td>
-                      <td style={{ padding:"7px 10px" }}>
-                        <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.78rem", letterSpacing:"1px",
-                          background:"#fff5f5", color:"#dc2626", border:"1px solid #fca5a5", borderRadius:3, padding:"2px 8px" }}>{s.newBoxes}</span>
-                      </td>
-                      <td style={{ padding:"7px 10px" }}>
-                        {s.keys > 0 && <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.75rem", letterSpacing:"1px",
-                          background:"#fff8e0", color:"#8a6000", border:"1px solid #d4a800", borderRadius:3, padding:"1px 7px" }}>★ {s.keys}</span>}
-                      </td>
-                      <td style={{ padding:"7px 10px", fontSize:"0.78rem", color:"var(--muted2)", lineHeight:1.4 }}>{s.contents}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+              <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:"var(--muted2)" }}>~$705</div>
+              <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:"#16a34a", fontWeight:700 }}>~$427</div>
             </div>
           </div>
         </div>
@@ -748,18 +694,18 @@ export default function OrganizationPath() {
                 background: bagPrioFilter === p ? m.color : m.bg,
                 border:`1.5px solid ${m.color}`,
               }}>
-                <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1.5px",
+                <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
                   color: bagPrioFilter === p ? "#fff" : m.color }}>{m.label}</span>
-                <span style={{ fontSize:"0.68rem", color: bagPrioFilter === p ? "rgba(255,255,255,0.8)" : "var(--muted2)",
-                  fontFamily:"'Crimson Pro',serif", lineHeight:1.3 }}>{m.desc}</span>
+                <span style={{ fontSize:"0.875rem", color: bagPrioFilter === p ? "rgba(255,255,255,0.8)" : "var(--muted2)",
+                  fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", lineHeight:1.3 }}>{m.desc}</span>
               </button>
             ))}
           </div>
 
-          <div style={{ fontSize:"0.8rem", color:"var(--muted2)", marginBottom:14, fontFamily:"'Crimson Pro',serif" }}>
-            {baggedCount} of 74 boxes bagged. Tap a row to mark it done.
+          <div style={{ fontSize:"0.875rem", color:"var(--muted2)", marginBottom:14, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>
+            {baggedCount} of {totalBoxCount} boxes bagged. Tap a row to mark it done.
             {baggedCount > 0 && (
-              <button onClick={() => setBagged({})} style={{ marginLeft:12, fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1px",
+              <button onClick={() => setBagged({})} style={{ marginLeft:12, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
                 background:"none", border:"1px solid var(--border)", color:"var(--muted)", borderRadius:3, padding:"2px 10px", cursor:"pointer" }}>
                 RESET
               </button>
@@ -770,7 +716,10 @@ export default function OrganizationPath() {
             {displayedBagOrder.map(b => {
               const done = !!bagged[b.box];
               const pm = PRIORITY_META[b.priority];
-              const needsSplit = b.extra !== "OK";
+              const liveBox = liveBoxMap[b.box];
+              const liveComics = liveBox?.Comics ?? b.comics;
+              const liveKeys = liveBox?.Keys ?? b.keys;
+              const liveSgn = liveBox?.Signed ?? b.sgn;
               return (
                 <div key={b.order} onClick={() => setBagged(p => ({ ...p, [b.box]: !p[b.box] }))}
                   style={{
@@ -790,48 +739,42 @@ export default function OrganizationPath() {
                       background: done ? "#16a34a" : "transparent",
                       display:"flex", alignItems:"center", justifyContent:"center",
                     }}>
-                      {done && <span style={{ color:"#fff", fontSize:"0.72rem" }}>✓</span>}
+                      {done && <span style={{ color:"#fff", fontSize:"0.875rem" }}>✓</span>}
                     </div>
-                    <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem", letterSpacing:"1px", color:"var(--muted)" }}>#{b.order}</span>
+                    <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--muted)" }}>#{b.order}</span>
                   </div>
 
                   {/* Box number */}
                   <div style={{ flexShrink:0, minWidth:54 }}>
-                    <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.5rem", letterSpacing:"1px", color: done ? "var(--muted)" : pm.color, lineHeight:1 }}>
+                    <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"1.75rem", letterSpacing:"1px", color: done ? "var(--muted)" : pm.color, lineHeight:1 }}>
                       {String(b.box).padStart(2,"0")}
                     </div>
-                    <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem", letterSpacing:"1.5px", color:"var(--muted)", marginTop:1 }}>{b.priority}</div>
+                    <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px", color:"var(--muted)", marginTop:1 }}>{b.priority}</div>
                   </div>
 
                   {/* Contents */}
                   <div style={{ flex:1, minWidth:0 }}>
-                    <div style={{ fontSize:"0.82rem", color: done ? "var(--muted)" : "var(--text)", lineHeight:1.45,
-                      fontFamily:"'Crimson Pro',serif", textDecoration: done ? "line-through" : "none" }}>
+                    <div style={{ fontSize:"0.875rem", color: done ? "var(--muted)" : "var(--text)", lineHeight:1.45,
+                      fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", textDecoration: done ? "line-through" : "none" }}>
                       {b.contents}
                     </div>
                   </div>
 
                   {/* Right badges */}
                   <div style={{ display:"flex", flexDirection:"column", gap:4, alignItems:"flex-end", flexShrink:0 }}>
-                    <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1px", color:"var(--muted)" }}>
-                      {b.comics}
+                    <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--muted)" }}>
+                      {liveComics}
                     </span>
-                    {b.keys > 0 && (
-                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem", letterSpacing:"1px",
+                    {liveKeys > 0 && (
+                      <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
                         background:"#fff8e0", color:"#8a6000", border:"1px solid #d4a800", borderRadius:3, padding:"1px 5px" }}>
-                        ★{b.keys}
+                        ★{liveKeys}
                       </span>
                     )}
-                    {b.sgn > 0 && (
-                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem", letterSpacing:"1px",
+                    {liveSgn > 0 && (
+                      <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
                         background:"#f0faf0", color:"#16a34a", border:"1px solid #c8e6c8", borderRadius:3, padding:"1px 5px" }}>
-                        ✍{b.sgn}
-                      </span>
-                    )}
-                    {needsSplit && (
-                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem", letterSpacing:"1px",
-                        background:"#fff0f0", color:"#dc2626", border:"1px solid #fca5a5", borderRadius:3, padding:"1px 5px" }}>
-                        {b.extra}
+                        ✍{liveSgn}
                       </span>
                     )}
                   </div>
@@ -846,11 +789,11 @@ export default function OrganizationPath() {
       {tab === "boxes" && (
         <div>
           <div style={{ display:"flex", alignItems:"center", gap:12, marginBottom:14, flexWrap:"wrap" }}>
-            <span style={{ fontSize:"0.8rem", color:"var(--muted2)", fontFamily:"'Crimson Pro',serif" }}>
-              {labeledCount} of 74 boxes labeled. Check off each box as you apply the new number label.
+            <span style={{ fontSize:"0.875rem", color:"var(--muted2)", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>
+              {labeledCount} of {totalBoxCount} boxes labeled. Check off each box as you apply the new number label.
             </span>
             {labeledCount > 0 && (
-              <button onClick={() => setLabeled({})} style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1px",
+              <button onClick={() => setLabeled({})} style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
                 background:"none", border:"1px solid var(--border)", color:"var(--muted)", borderRadius:3, padding:"2px 10px", cursor:"pointer" }}>
                 RESET ALL
               </button>
@@ -863,14 +806,16 @@ export default function OrganizationPath() {
             return (
               <div key={grp} style={{ marginBottom:28 }}>
                 <div style={{ display:"flex", alignItems:"center", gap:12, marginBottom:10, borderBottom:`2px solid ${gm.color}30`, paddingBottom:8 }}>
-                  <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem", letterSpacing:"2px", color:gm.color }}>{gm.label}</span>
-                  <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1px", color:"var(--muted)" }}>
+                  <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:gm.color }}>{gm.label}</span>
+                  <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--muted)" }}>
                     {doneInGroup}/{groupBoxes.length} LABELED
                   </span>
                 </div>
                 <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(240px, 1fr))", gap:10 }}>
                   {groupBoxes.map(b => (
                     <BoxCard key={b.newNum} b={b} labeled={!!labeled[b.newNum]}
+                      liveComics={liveBoxMap[b.newNum]?.Comics}
+                      liveKeys={liveBoxMap[b.newNum]?.Keys}
                       onToggle={() => setLabeled(p => ({ ...p, [b.newNum]: !p[b.newNum] }))} />
                   ))}
                 </div>
@@ -883,7 +828,7 @@ export default function OrganizationPath() {
       {/* ── RUNS ── */}
       {tab === "runs" && (
         <div>
-          <p style={{ fontSize:"0.88rem", color:"var(--muted2)", marginBottom:16, fontFamily:"'Crimson Pro',serif" }}>
+          <p style={{ fontSize:"0.875rem", color:"var(--muted2)", marginBottom:16, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>
             338 series are currently split across multiple boxes. Work through Priority 1 first — these are the runs with the most commercial and collecting significance.
           </p>
           {([1,2,3] as const).map(p => {
@@ -894,8 +839,8 @@ export default function OrganizationPath() {
             return (
               <div key={p} style={{ marginBottom:28 }}>
                 <div style={{ display:"flex", alignItems:"center", gap:12, marginBottom:10, borderBottom:`2px solid ${pColor}30`, paddingBottom:6 }}>
-                  <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.85rem", letterSpacing:"2px", color:pColor }}>{pLabel}</span>
-                  <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1px", color:"var(--muted)" }}>
+                  <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:pColor }}>{pLabel}</span>
+                  <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--muted)" }}>
                     {doneInGroup}/{pRuns.length} DONE
                   </span>
                 </div>

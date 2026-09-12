@@ -3,13 +3,14 @@ import { useState } from "react";
 interface Signing { Status: string; Creator: string; Deadline: string; Fee: string; Books: string; Strategy: string; ExpectedValue: string; }
 
 const signings: Signing[] = [
+  { Status:"⭐⭐ OPEN NOW",   Creator:"Chris Claremont — Uncanny X-Men #141 & #142 (DOFP)", Deadline:"Aug 7–9, 2026", Fee:"Con fee",  Books:"Uncanny X-Men #141 & #142 — Days of Future Past. The most valuable Terrificon signing target currently owned, ahead of every other Claremont book. Sent to Magic Pressing → CGC this session; not signed, condition NM (raw), CGC grade pending.", Strategy:"Top priority over Wolverine #8 and Heroes Reborn: Doomsday #1. Confirm Magic Pressing turnaround lands before Aug 7 — no estimate confirmed yet, call them first.", ExpectedValue:"Highest-value Terrificon target owned" },
   { Status:"✅ SUBMITTED",   Creator:"Stan Lee — BP #513",               Deadline:"AT CGC × JSA NOW",      Fee:"$75",          Books:"Black Panther #513 (Man Without Fear) — Dynamic Forces COA included. Shipped with COA. DO NOT press. DO NOT stream or sell until graded.",  Strategy:"Already submitted to CGC × JSA. Do not press — pressing damages Dynamic Forces ink. Track status at cgccomics.com. Expected return in 3–6 months.", ExpectedValue:"$800–$1,500 authenticated" },
   { Status:"✅ SUBMITTED",   Creator:"Roy Thomas",                        Deadline:"Jul 10, 2026",          Fee:"$90/book",     Books:"Avengers #60, #87, King-Size #2, Marvel Premiere #1, Saga of the Original Human Torch #3 — 5 books submitted.",  Strategy:"Confirm CGC received the package. Track return timeline. Thomas co-created Wolverine, Vision, Carol Danvers, Adam Warlock. Expected return $820–1,630 on $485 investment.", ExpectedValue:"$820–$1,630 across all 5 books" },
   { Status:"✅ SUBMITTED",   Creator:"ASM #361 — Bagley + Sharen",        Deadline:"AT CGC × JSA NOW",      Fee:"$53",          Books:"Amazing Spider-Man #361 (1st full Carnage) — double-signed by Mark Bagley + Bob Sharen. Already shipped.",  Strategy:"Already submitted to CGC × JSA. 1st full Carnage with double creator signature. Significant provenance. Track at cgccomics.com.", ExpectedValue:"$200–$350 Yellow/Black CGC×JSA" },
   { Status:"🚨 URGENT",      Creator:"Jorge Jiménez",                     Deadline:"Jun 5, 2026 ⚠️",        Fee:"$80–100",      Books:"Batman #125 (Failsafe Part 1 — Jiménez drew it). Press FIRST, then submit.",  Strategy:"Jun 5 deadline — confirm submitted immediately. Pull from Box 43 (DC Rebirth). Press first, CGC Modern Tier. Yellow/Black CGC×JSA label (already signed).", ExpectedValue:"$120–$200 Yellow/Black CGC×JSA" },
   { Status:"⭐⭐ OPEN NOW",   Creator:"Geoff Johns + Jason Fabok",         Deadline:"Jun 26, 2026",          Fee:"$150–200",     Books:"Justice League #21 (Johns + Fabok). JSA run books with existing unwitnessed Johns sigs.",  Strategy:"Johns sig adds to existing unwitnessed VA sigs (Carl Lumbly + Phil LaMarr) = Yellow/Green combo label. Pull books, sleeve, submit before Jun 26.", ExpectedValue:"$150–$300 Yellow/Green combo label" },
   { Status:"⭐ OPEN",        Creator:"Mike Mayhew",                       Deadline:"Jul 10, 2026",          Fee:"$80",          Books:"ASM #50 Alex Ross Timeless Virgin cover — already signed (Lachima signing).",  Strategy:"Submit via CGC × JSA Yellow/Black path. Same deadline as Roy Thomas batch — combine shipping. Pull from Box 16 (Spider-Man Archive).", ExpectedValue:"$100–$200 Yellow/Black CGC×JSA" },
-  { Status:"⭐ OPEN",        Creator:"Chris Claremont (Terrificon)",       Deadline:"Aug 7–9, 2026",         Fee:"Con fee",      Books:"Wolverine #8 (1982 — MUST STAY UNSIGNED). This is your #1 Terrificon book. Press before con.",  Strategy:"Bring UNSIGNED to Terrificon for Yellow SS label on-site. Press before con. Claremont is confirmed all 3 days. $500+ as Yellow SS CGC 9.8.", ExpectedValue:"$500+ Yellow SS CGC 9.8" },
+  { Status:"⭐ OPEN",        Creator:"Chris Claremont (Terrificon)",       Deadline:"Aug 7–9, 2026",         Fee:"Con fee",      Books:"Wolverine #8 (1982 — MUST STAY UNSIGNED). Press before con.",  Strategy:"Bring UNSIGNED to Terrificon for Yellow SS label on-site. Press before con. Claremont is confirmed all 3 days. Sequence: Claremont signs at Terrificon FIRST, then Frank Miller signs at NYCC SECOND, for the combo signature — do not reverse this order or sign it in between. $500+ as Yellow SS CGC 9.8.", ExpectedValue:"$500+ Yellow SS CGC 9.8" },
   { Status:"⭐ OPEN",        Creator:"Jim Lee (Terrificon — SAT ONLY)",    Deadline:"Aug 8, 2026 10am",      Fee:"Con fee",      Books:"WildCATs #2, WildCATs #11 (re-sign for combo label). Superman Unchained #1, Batman Europa #1 (BAG FIRST — in Box 08).",  Strategy:"Jim Lee is SATURDAY ONLY. Arrive 10am sharp — his line fills immediately. Already-signed WildCATs get witnessed re-sign = Yellow/Green combo label.", ExpectedValue:"$200–$600 across Jim Lee books" },
   { Status:"⭐ OPEN",        Creator:"Declan Shalvey (Terrificon)",        Deadline:"Aug 7–9, 2026",         Fee:"Con fee",      Books:"Moon Knight Vol 6 #1–6 (all 6 issues from Box 50). Shalvey drew these books.",  Strategy:"Bring all 6 unsigned issues. Six Yellow SS signings at one table = up to $1,200 in authenticated value from books currently worth ~$25 raw each.", ExpectedValue:"Up to $1,200 for all 6 Yellow SS" },
   { Status:"⭐ OPEN",        Creator:"Walt + Louise Simonson (Terrificon)", Deadline:"Aug 7–9, 2026",        Fee:"Con fee",      Books:"X-Men Legends #4 (both Simonsons). Thor #339 (already signed — witness for combo label).",  Strategy:"Both Simonsons confirmed. X-Men Legends #4 = dual Yellow SS. Thor #339 already signed W+L = witness existing sigs for combo label.", ExpectedValue:"$100–$300 combined" },
@@ -86,7 +87,7 @@ export default function PrivateSignings() {
       </div>
 
       {/* Label legend */}
-      <div style={{ background:"var(--surface)", borderBottom:"1px solid var(--border)", padding:"10px 24px", display:"flex", gap:16, flexWrap:"wrap", fontSize:"0.72rem", color:"var(--muted2)" }}>
+      <div style={{ background:"var(--surface)", borderBottom:"1px solid var(--border)", padding:"10px 24px", display:"flex", gap:16, flexWrap:"wrap", fontSize:"0.875rem", color:"var(--muted2)" }}>
         <span>🟡 <strong>Yellow SS</strong> = unsigned book + witnessed signing at con → highest CGC value</span>
         <span>🟡⬛ <strong>Yellow/Black CGC×JSA</strong> = already-signed book mailed to CGC × JSA → authenticated</span>
         <span>🟡🟢 <strong>Yellow/Green combo</strong> = witnessed + unwitnessed sigs on same book</span>
@@ -102,8 +103,8 @@ export default function PrivateSignings() {
           { val: watch.length,     lbl:"WATCH",       color:"#6366f1" },
         ].map(s => (
           <div key={s.lbl} style={{ textAlign:"center" }}>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.1rem", color:s.color, letterSpacing:"1px", lineHeight:1 }}>{s.val}</div>
-            <div style={{ fontSize:"0.58rem", letterSpacing:"1.5px", fontFamily:"'Bebas Neue',sans-serif", color:"var(--muted)" }}>{s.lbl}</div>
+            <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:s.color, letterSpacing:"1px", lineHeight:1 }}>{s.val}</div>
+            <div style={{ fontSize:"0.875rem", letterSpacing:"1.5px", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", color:"var(--muted)" }}>{s.lbl}</div>
           </div>
         ))}
       </div>
@@ -113,7 +114,7 @@ export default function PrivateSignings() {
         {(["list","card"] as const).map(v => (
           <button key={v} onClick={() => setViewMode(v)}
             style={{
-              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"1.5px",
+              fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
               padding:"5px 14px", border:`1.5px solid ${viewMode===v?"var(--red)":"var(--border)"}`,
               background:viewMode===v?"var(--red)":"var(--surface)", color:viewMode===v?"#fff":"var(--muted2)",
               borderRadius:4, cursor:"pointer",
@@ -128,7 +129,7 @@ export default function PrivateSignings() {
         <div style={{ padding:"14px 16px 40px" }}>
           {sections.map(sec => (
             <div key={sec.label} style={{ marginBottom:24 }}>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.8rem", letterSpacing:"2px", color:sec.color, marginBottom:10, borderBottom:`1.5px solid ${sec.color}22`, paddingBottom:4 }}>
+              <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:sec.color, marginBottom:10, borderBottom:`1.5px solid ${sec.color}22`, paddingBottom:4 }}>
                 {sec.label}
               </div>
               <div style={{ display:"flex", flexDirection:"column", gap:6 }}>
@@ -153,26 +154,26 @@ export default function PrivateSignings() {
                         <div style={{ flex:1 }}>
                           <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:2, flexWrap:"wrap" }}>
                             <span style={{
-                              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px",
+                              fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
                               background:sc+"20", border:`1px solid ${sc}`, color:sc, borderRadius:3, padding:"1px 7px",
                             }}>{statusBadge(s.Status)}</span>
-                            <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", letterSpacing:"1px", color:"var(--text)" }}>{s.Creator}</span>
+                            <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--text)" }}>{s.Creator}</span>
                           </div>
-                          <div style={{ fontSize:"0.72rem", color:"var(--muted2)", marginTop:1 }}>
+                          <div style={{ fontSize:"0.875rem", color:"var(--muted2)", marginTop:1 }}>
                             {s.Deadline} · {s.Fee}
                           </div>
                         </div>
-                        <span style={{ fontSize:"0.62rem", color:"var(--red)", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", flexShrink:0, marginTop:2 }}>{s.ExpectedValue}</span>
+                        <span style={{ fontSize:"0.875rem", color:"var(--red)", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px", flexShrink:0, marginTop:2 }}>{s.ExpectedValue}</span>
                       </div>
                       {isOpen && (
                         <div style={{ marginTop:10, borderTop:"1px solid var(--border)", paddingTop:10 }}>
                           <div style={{ marginBottom:6 }}>
-                            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"2px", color:"var(--muted)", marginBottom:2 }}>BOOKS</div>
-                            <div style={{ fontSize:"0.82rem", color:"var(--text)", lineHeight:1.5 }}>{s.Books}</div>
+                            <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:"var(--muted)", marginBottom:2 }}>BOOKS</div>
+                            <div style={{ fontSize:"0.875rem", color:"var(--text)", lineHeight:1.5 }}>{s.Books}</div>
                           </div>
                           <div>
-                            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"2px", color:"var(--muted)", marginBottom:2 }}>STRATEGY</div>
-                            <div style={{ fontSize:"0.82rem", color:"var(--muted2)", lineHeight:1.5 }}>{s.Strategy}</div>
+                            <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:"var(--muted)", marginBottom:2 }}>STRATEGY</div>
+                            <div style={{ fontSize:"0.875rem", color:"var(--muted2)", lineHeight:1.5 }}>{s.Strategy}</div>
                           </div>
                         </div>
                       )}
@@ -202,15 +203,15 @@ export default function PrivateSignings() {
               >
                 <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", marginBottom:4 }}>
                   <span style={{
-                    fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1.5px",
+                    fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
                     background:sc+"20", border:`1px solid ${sc}`, color:sc, borderRadius:3, padding:"1px 7px",
                   }}>{statusBadge(s.Status)}</span>
-                  <span style={{ fontSize:"0.7rem", color:"var(--red)", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>{s.ExpectedValue}</span>
+                  <span style={{ fontSize:"0.875rem", color:"var(--red)", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px" }}>{s.ExpectedValue}</span>
                 </div>
-                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.95rem", letterSpacing:"1px", color:"var(--text)", marginBottom:2 }}>{s.Creator}</div>
-                <div style={{ fontSize:"0.7rem", color:"var(--muted2)", marginBottom:6 }}>{s.Deadline} · {s.Fee}</div>
-                <div style={{ fontSize:"0.78rem", color:"var(--text)", lineHeight:1.4, marginBottom:6 }}>{s.Books.substring(0, 120)}</div>
-                <div style={{ fontSize:"0.75rem", color:"var(--muted2)", lineHeight:1.4 }}>{s.Strategy.substring(0, 180)}</div>
+                <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--text)", marginBottom:2 }}>{s.Creator}</div>
+                <div style={{ fontSize:"0.875rem", color:"var(--muted2)", marginBottom:6 }}>{s.Deadline} · {s.Fee}</div>
+                <div style={{ fontSize:"0.875rem", color:"var(--text)", lineHeight:1.4, marginBottom:6 }}>{s.Books.substring(0, 120)}</div>
+                <div style={{ fontSize:"0.875rem", color:"var(--muted2)", lineHeight:1.4 }}>{s.Strategy.substring(0, 180)}</div>
               </div>
             );
           })}

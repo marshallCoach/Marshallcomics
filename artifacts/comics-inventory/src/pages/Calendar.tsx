@@ -15,7 +15,6 @@ function parseSortDate(dateStr: string): number {
 }
 
 const rawEvents = [
-  { Type:"🟣 TERRIFICON",  Date:"Aug 7–9, 2026",  Theme:"Terrificon 2026 — Jim Lee SATURDAY ONLY",  Books:"Wolverine #8 (unsigned), WildCATs #2+#11 (re-sign), Superman Unchained #1, Batman Europa #1, Flash #164, Nightwing Rebirth #1, Hawkman #1",  Revenue:"$1,500–$3,500 in potential CGC value uplift",   Prep:"Press all books before Aug 7. Hotel: Hyatt code G-TRFC. Arrive 10am Saturday for Jim Lee. Bring Agent of Slabs contact." },
   { Type:"🟣 NYCC",        Date:"Oct 8–11, 2026", Theme:"NYCC 2026 — Stan Lee BP #513 + Heritage eval",  Books:"Black Panther #513 (Stan Lee — PSA/DNA auth), Thor #169 CGC 8.0 (Heritage eval), buy budget $100–300",  Revenue:"$800–$1,500 BP#513 authenticated + Heritage networking",  Prep:"Book PSA/DNA table appointment. Bring BP#513 in hard case. Bring Thor #169 slab for Heritage evaluation." },
   { Type:"🟡 WHATNOT",     Date:"Jun 18, 2026",   Theme:"Show 1 — Black Heroes Month: Priest-Era Black Panther",  Books:"BP vol3 #1–10 (Priest), Captain Carter #1 (Hayley Atwell signed — personalized), Truth: RWB #1, Black Lightning #1",  Revenue:"$300–$600",   Prep:"Pull BP Priest run. Tell Captain Carter story (Hayley Atwell signed to Robert). Lead with emotional anchor." },
   { Type:"🟡 WHATNOT",     Date:"Jun 19, 2026",   Theme:"Juneteenth Special AM Show — Black History Keys",  Books:"Truth: RWB #1 (Baker remarked), Black Panther #513 (Stan Lee signed), Black Lightning #1, Storm keys",  Revenue:"$400–$800",   Prep:"Special Juneteenth morning show. Lead with the Stan Lee story — 'signed in his final years.'" },
@@ -25,7 +24,7 @@ const rawEvents = [
   { Type:"🟡 WHATNOT",     Date:"Jul 16, 2026",   Theme:"Show 5 — X-Men: Krakoa Era Complete",  Books:"HoX #1, PoX #1, X-Force #1, X-Men Red, AXE complete, Immortal Thor #1 (bonus)",  Revenue:"$300–$600",   Prep:"Box 35 = Krakoa era. Frame as: 'The decade-defining X-Men run. Already ended — already collectible.'" },
   { Type:"🟡 WHATNOT",     Date:"Jul 23, 2026",   Theme:"Show 6 — Signed Books Show: The Stories Behind the Signatures",  Books:"All 48 signed books from Box 2 — Atwell, King, Hickman, Bagley, Skottie Young, Moore, etc.",  Revenue:"$500–$1,200",  Prep:"This is your biggest show. Every book has a STORY. Lead with Captain Carter. End with Stan Lee." },
   { Type:"🟡 WHATNOT",     Date:"Jul 30, 2026",   Theme:"Show 7 — DC Rebirth Era: Snyder JL / Dark Nights Metal",  Books:"Dark Knights Metal #1, Batman Who Laughs #1, Justice League #1 Snyder, Rebirth Special #1",  Revenue:"$250–$500",   Prep:"Box 11 = Snyder JL / Metal. Frame as: 'The most ambitious DC event of the 2010s.'" },
-  { Type:"🟢 CGC",         Date:"By Jul 1, 2026", Theme:"CGC Press Submission — Priority Batch Before Terrificon",  Books:"Batman #656+657, Wolverine #8 (unsigned), Vision #1 (Tom King), ASM #361, Secret Wars #1, NW #1, Mockingbird #8, WildCATs #2+#11",  Revenue:"$2,000–$4,500 value uplift after grading",  Prep:"Submit all to press service by July 1 for 4-8 week turnaround. Must be back by Aug 7 for Terrificon. Ship all at once to save." },
+  { Type:"🟢 CGC",         Date:"Rolling", Theme:"CGC Press Submission — Priority Batch",  Books:"Batman #656+657, Wolverine #8 (unsigned), Vision #1 (Tom King), ASM #361, Secret Wars #1, NW #1, Mockingbird #8, WildCATs #2+#11",  Revenue:"$2,000–$4,500 value uplift after grading",  Prep:"Submit all to press service for 4-8 week turnaround. Ship all at once to save." },
   { Type:"🟢 CGC",         Date:"Jun 5, 2026 ⚠️", Theme:"DEADLINE: Jorge Jiménez CGC SS — Batman #125",  Books:"Batman #125 (Failsafe Part 1 — Jiménez drew it). Press and submit immediately.",  Revenue:"$120–$200 Green Qualified",  Prep:"IMMINENT DEADLINE. This is days away. Press first, then submit. Jiménez drew Failsafe arc on Batman #125." },
   { Type:"🟢 CGC",         Date:"Jun 26, 2026",   Theme:"Geoff Johns + Jason Fabok CGC SS — JL #21 + JSA",  Books:"Justice League #21, JSA books with existing unwitnessed Geoff Johns sigs",  Revenue:"$150–$300 Green/Yellow combo",  Prep:"Johns sig adds to existing unwitnessed VA sigs = yellow/green combo label. Pull books, sleeve, ship." },
   { Type:"🟢 CGC",         Date:"Jul 10, 2026",   Theme:"Roy Thomas CGC SS — 5 books, $450 fees → $820–$1,630 return",  Books:"Avengers #60, #87, King-Size #2, Marvel Premiere #1, Saga Human Torch #3",  Revenue:"$820–$1,630 (Roy Thomas co-created Wolverine, Vision, Carol Danvers, Adam Warlock)",  Prep:"Thomas co-created Wolverine. High ROI signing. Same deadline as Mike Mayhew. Submit both batches simultaneously." },
@@ -137,8 +136,8 @@ export default function Calendar() {
           { val: "$9k–$18k",     lbl: "Revenue" },
         ].map(s => (
           <div key={s.lbl} style={{ textAlign:"center" }}>
-            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.1rem", color:"var(--red)", letterSpacing:"1px" }}>{s.val}</div>
-            <div style={{ fontSize:"0.6rem", letterSpacing:"1.5px", fontFamily:"'Bebas Neue',sans-serif", color:"var(--muted)" }}>{s.lbl}</div>
+            <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:"var(--red)", letterSpacing:"1px" }}>{s.val}</div>
+            <div style={{ fontSize:"0.875rem", letterSpacing:"1.5px", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", color:"var(--muted)" }}>{s.lbl}</div>
           </div>
         ))}
       </div>
@@ -151,16 +150,15 @@ export default function Calendar() {
           placeholder="Search events…"
           value={q} onChange={e => setQ(e.target.value)}
           style={{ background:"var(--bg)", border:"1.5px solid var(--border)", color:"var(--text)",
-            padding:"7px 12px", borderRadius:5, fontFamily:"'Crimson Pro',serif", fontSize:"0.88rem",
+            padding:"7px 12px", borderRadius:5, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
             flex:"1 1 160px", minWidth:120 }}
         />
         <select value={type} onChange={e => setType(e.target.value)}
           style={{ background:"var(--bg)", border:"1.5px solid var(--border)", color:"var(--text)",
-            padding:"7px 10px", borderRadius:5, fontFamily:"'Crimson Pro',serif", fontSize:"0.88rem" }}>
+            padding:"7px 10px", borderRadius:5, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem" }}>
           <option value="">All Types</option>
           <option value="WHATNOT">Whatnot</option>
           <option value="CGC">CGC</option>
-          <option value="TERRIFICON">Terrificon</option>
           <option value="NYCC">NYCC</option>
         </select>
 
@@ -169,8 +167,8 @@ export default function Calendar() {
           onClick={() => setSortDir(d => d === "asc" ? "desc" : "asc")}
           title={sortDir === "asc" ? "Oldest first — click for newest first" : "Newest first — click for oldest first"}
           style={{ background:"var(--surface2)", border:"1.5px solid var(--border)", borderRadius:5,
-            padding:"7px 14px", cursor:"pointer", fontFamily:"'Bebas Neue',sans-serif",
-            fontSize:"0.72rem", letterSpacing:"1.5px", color:"var(--text2)",
+            padding:"7px 14px", cursor:"pointer", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+            fontSize:"0.875rem", letterSpacing:"1.5px", color:"var(--text2)",
             display:"flex", alignItems:"center", gap:5, whiteSpace:"nowrap",
             transition:"border-color 0.15s" }}>
           {sortDir === "asc" ? "↑ DATE ASC" : "↓ DATE DESC"}
@@ -183,7 +181,7 @@ export default function Calendar() {
               background: view===v ? "var(--red)" : "var(--surface2)",
               color: view===v ? "#fff" : "var(--muted2)",
               border:"none", padding:"7px 14px", cursor:"pointer",
-              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.72rem", letterSpacing:"1.5px",
+              fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
               transition:"all 0.15s",
             }}>
               {v === "list" ? "☰ LIST" : v === "card" ? "⊞ CARDS" : "📅 CAL"}
@@ -194,16 +192,16 @@ export default function Calendar() {
         {(q || type) && (
           <button onClick={() => { setQ(""); setType(""); setOpen(new Set()); setTimeout(() => searchInputRef.current?.focus(), 0); }}
             style={{ background:"transparent", color:"var(--muted2)", border:"1.5px solid var(--border)",
-              padding:"7px 14px", borderRadius:5, cursor:"pointer", fontFamily:"'Bebas Neue',sans-serif",
-              fontSize:"0.72rem", letterSpacing:"1.5px" }}>
+              padding:"7px 14px", borderRadius:5, cursor:"pointer", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+              fontSize:"0.875rem", letterSpacing:"1.5px" }}>
             ✕ CLEAR
           </button>
         )}
       </div>
 
       {/* Results count */}
-      <div style={{ padding:"6px 20px", fontSize:"0.72rem", color:"var(--muted)",
-        fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px",
+      <div style={{ padding:"6px 20px", fontSize:"0.875rem", color:"var(--muted)",
+        fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1.5px",
         borderBottom:"1px solid var(--border)", background:"var(--surface2)" }}>
         {filtered.length} of {events.length} events · sorted {sortDir === "asc" ? "earliest first" : "latest first"}
       </div>
@@ -218,17 +216,17 @@ export default function Calendar() {
             return (
               <div key={i} className={`lcard ${calClass(ev.Type)}${isOpen ? " open" : ""}`} onClick={() => toggle(i)}>
                 <div className="lcard-head">
-                  <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.88rem",
+                  <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                     color:"var(--red)", minWidth:90, letterSpacing:"0.5px" }}>{ev.Date}</span>
                   <span style={{ background:ti.bg, color:ti.color, border:`1px solid ${ti.color}22`,
-                    borderRadius:3, padding:"1px 7px", fontSize:"0.62rem",
-                    fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px",
+                    borderRadius:3, padding:"1px 7px", fontSize:"0.875rem",
+                    fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px",
                     whiteSpace:"nowrap", flexShrink:0 }}>
                     {ti.icon} {ti.label}
                   </span>
                   <span className="lcard-title">{ev.Theme.substring(0, 90)}</span>
                   {revenue && <span className="lcard-right">{revenue}</span>}
-                  <span style={{ color:"var(--muted)", fontSize:"0.7rem", flexShrink:0 }}>{isOpen?"▲":"▼"}</span>
+                  <span style={{ color:"var(--muted)", fontSize:"0.875rem", flexShrink:0 }}>{isOpen?"▲":"▼"}</span>
                 </div>
                 {isOpen && (
                   <div className="lcard-expand">
@@ -248,7 +246,7 @@ export default function Calendar() {
         <div style={{ padding:"16px 18px 40px" }}>
           {/* Legend */}
           <div style={{ display:"flex", gap:14, flexWrap:"wrap", marginBottom:18, alignItems:"center" }}>
-            <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1.5px", color:"var(--muted)" }}>LEGEND:</span>
+            <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px", color:"var(--muted)" }}>LEGEND:</span>
             {[
               { label:"Whatnot Show", bg:"#e8f5e8", color:"#1a6a1a" },
               { label:"CGC",          bg:"#e8f0ff", color:"#1a4a99" },
@@ -256,7 +254,7 @@ export default function Calendar() {
             ].map(t => (
               <div key={t.label} style={{ display:"flex", alignItems:"center", gap:5 }}>
                 <div style={{ width:14, height:14, borderRadius:3, background:t.bg, border:`1.5px solid ${t.color}55` }} />
-                <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px", color:"var(--muted2)" }}>{t.label}</span>
+                <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--muted2)" }}>{t.label}</span>
               </div>
             ))}
           </div>
@@ -282,7 +280,7 @@ export default function Calendar() {
                   background:"var(--surface)", border:`1.5px solid ${hasAny?"rgba(200,16,46,0.25)":"var(--border)"}`,
                   borderRadius:8, padding:"12px 14px",
                 }}>
-                  <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.88rem",
+                  <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                     letterSpacing:"3px", color: hasAny ? "var(--red)" : "var(--muted2)",
                     marginBottom:10, lineHeight:1 }}>
                     {name} {year}
@@ -291,7 +289,7 @@ export default function Calendar() {
                   {/* Day headers */}
                   <div style={{ display:"grid", gridTemplateColumns:"repeat(7,1fr)", gap:1, marginBottom:3 }}>
                     {["S","M","T","W","T","F","S"].map((d,i) => (
-                      <div key={i} style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.54rem",
+                      <div key={i} style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                         letterSpacing:"0.5px", color:"var(--muted)", textAlign:"center" }}>{d}</div>
                     ))}
                   </div>
@@ -308,8 +306,8 @@ export default function Calendar() {
                         <div key={idx}
                           title={has ? dayEvs.map(e => e.Theme.substring(0,55)).join("; ") : undefined}
                           style={{
-                            textAlign:"center", fontFamily:"'Bebas Neue',sans-serif",
-                            fontSize:"0.7rem", letterSpacing:"0.5px", lineHeight:1,
+                            textAlign:"center", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+                            fontSize:"0.875rem", letterSpacing:"0.5px", lineHeight:1,
                             padding:"4px 1px", borderRadius:4,
                             background: has ? ti!.bg : "transparent",
                             color: has ? ti!.color : "var(--text)",
@@ -319,7 +317,7 @@ export default function Calendar() {
                           }}>
                           {d}
                           {dayEvs.length > 1 && (
-                            <div style={{ fontSize:"0.44rem", lineHeight:1, marginTop:1, color:ti!.color }}>×{dayEvs.length}</div>
+                            <div style={{ fontSize:"0.875rem", lineHeight:1, marginTop:1, color:ti!.color }}>×{dayEvs.length}</div>
                           )}
                         </div>
                       );
@@ -335,10 +333,10 @@ export default function Calendar() {
                         const ti2 = typeIcon(ev.Type);
                         return (
                           <div key={i} style={{ display:"flex", gap:6, alignItems:"flex-start" }}>
-                            <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.66rem",
+                            <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                               color:ti2.color, minWidth:18, flexShrink:0, marginTop:1 }}>{day}</div>
                             <div style={{ flex:1, minWidth:0 }}>
-                              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem",
+                              <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                                 letterSpacing:"0.5px", color:ti2.color, lineHeight:1.3 }}>
                                 {ti2.icon} {ev.Theme.substring(0,48)}{ev.Theme.length>48?"…":""}
                               </div>
@@ -371,24 +369,24 @@ export default function Calendar() {
               }}>
                 <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:8 }}>
                   <span style={{ background:ti.bg, color:ti.color, border:`1px solid ${ti.color}22`,
-                    borderRadius:3, padding:"1px 8px", fontSize:"0.62rem",
-                    fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>
+                    borderRadius:3, padding:"1px 8px", fontSize:"0.875rem",
+                    fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px" }}>
                     {ti.icon} {ti.label}
                   </span>
-                  <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem",
+                  <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                     color:"var(--red)", marginLeft:"auto", letterSpacing:"0.5px" }}>{ev.Date}</span>
                 </div>
-                <div style={{ fontSize:"0.9rem", fontWeight:600, color:"var(--brown-light)", lineHeight:1.35, marginBottom:6 }}>
+                <div style={{ fontSize:"0.875rem", fontWeight:600, color:"var(--brown-light)", lineHeight:1.35, marginBottom:6 }}>
                   {ev.Theme}
                 </div>
                 {ev.Revenue && (
-                  <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.78rem",
+                  <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                     color:"var(--gold)", letterSpacing:"0.5px" }}>
                     {ev.Revenue.match(/\$[\d,k–\-]+(?:–\$[\d,k]+)?/)?.[0] || ""}
                   </div>
                 )}
                 {isOpen && (
-                  <div style={{ marginTop:10, paddingTop:10, borderTop:"1px solid var(--border)", fontSize:"0.82rem", color:"var(--muted2)" }}>
+                  <div style={{ marginTop:10, paddingTop:10, borderTop:"1px solid var(--border)", fontSize:"0.875rem", color:"var(--muted2)" }}>
                     {ev.Books && <div style={{ marginBottom:6 }}><strong style={{ color:"var(--muted)" }}>Books: </strong>{ev.Books}</div>}
                     {ev.Prep  && <div style={{ marginBottom:6 }}><strong style={{ color:"var(--muted)" }}>Prep: </strong>{ev.Prep}</div>}
                   </div>

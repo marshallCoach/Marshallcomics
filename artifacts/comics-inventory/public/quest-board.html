@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Box Quest — Box Board</title>
+<link rel="stylesheet" href="quest-style.css">
+</head>
+<body>
+<div id="topbar"></div>
+<div class="wrap">
+
+  <div class="intro">
+    <p class="lead">Every box, grouped by physical location. Tap a box to advance its status: <strong>not started → in progress → done</strong>. Hover any box number anywhere in the app to see where it lives. The red badge is flagged duplicate rows — those want a spot-check before sorting.</p>
+  </div>
+
+  <div class="card" style="padding:14px 18px">
+    <div class="pbar"><div class="pfill green" id="allFill"></div></div>
+    <div class="plabel"><span id="allCount">0 / 0 boxes done</span><span id="allPct">0%</span></div>
+  </div>
+
+  <div class="starthere" id="starthere"></div>
+
+  <div class="legend">
+    <span><span class="swatch" style="background:var(--surface)"></span> not started</span>
+    <span><span class="swatch" style="background:var(--gold-bg);border-color:#d4a800"></span> in progress</span>
+    <span><span class="swatch" style="background:var(--green-bg);border-color:var(--green-text)"></span> done</span>
+    <span><span class="swatch" style="background:var(--red)"></span> badge = flagged duplicate rows</span>
+    <span><span class="overcap">▲</span> = over capacity</span>
+  </div>
+
+  <div class="controls">
+    <button id="fDupes">Only boxes with dupes</button>
+    <button id="fOpen">Hide finished</button>
+    <button id="expandAll">Expand all zones</button>
+    <button id="collapseAll">Collapse all</button>
+    <button class="resetbtn" id="resetBtn" style="margin-left:auto">Reset board progress</button>
+  </div>
+
+  <div id="zones"></div>
+
+  <details class="grp" style="margin-top:18px">
+    <summary><span class="chev">›</span><span class="gcode slate">📍</span>
+      <span class="gtitle"><span class="t">Location key</span> <span class="s">which boxes live where</span></span></summary>
+    <div class="gbody"><div class="keygrid" id="keyGrid" style="margin-top:12px"></div></div>
+  </details>
+
+  <div class="foot" id="foot"></div>
+</div>
+
+<script src="quest-data.js"></script>
+<script src="quest-common.js"></script>
+<script>
+(function () {
+  var D = window.QUEST_DATA;
+  document.getElementById("topbar").innerHTML = BQ.renderTopbar("quest-board.html");
+  var state = BQ.readBoxes();
+  var STATES = ["not started", "in progress", "done"];
+
+  var filterDupes = false, filterOpen = false;
+  var overCapSet = {};
+  D.overCap.forEach(function (o) { overCapSet[o.box] = o.over; });
+
+  var zoneOrder = [];
+  var seen = {};
+  D.boxes.forEach(function (b) { if (!seen[b.zone]) { seen[b.zone] = true; zoneOrder.push(b.zone); } });
+  // order zones by total dupes desc (highest-payoff first), VERIFY last
+  zoneOrder.sort(function (a, b) {
+    if (a === "VERIFY") return 1; if (b === "VERIFY") return -1;
+    var da = D.boxes.filter(function (x) { return x.zone === a; }).reduce(function (s, x) { return s + x.dupes; }, 0);
+    var db = D.boxes.filter(function (x) { return x.zone === b; }).reduce(function (s, x) { return s + x.dupes; }, 0);
+    return db - da;
+  });
+
+  var zonesEl = document.getElementById("zones");
+
+  function boxCard(b) {
+    var st = state[b.box] || 0;
+    var over = overCapSet[b.box];
+    var locShort = b.loc.split("—")[1] ? b.loc.split("—")[1].trim() : b.loc;
+    return '<div class="boxcard" data-box="' + b.box + '" data-st="' + st + '" tabindex="0" role="button" ' +
+      'title="Box ' + b.box + ' · ' + b.loc + ' · ' + b.rows + ' rows' + (b.dupes ? " · " + b.dupes + " flagged dupes" : "") + (over ? " · OVER CAP +" + over : "") + '" ' +
+      'aria-label="Box ' + b.box + ", " + b.loc + ", " + b.rows + " rows, " + b.dupes + " flagged, status " + STATES[st] + '">' +
+      '<div class="bn">' + b.box + (over ? ' <span class="overcap" title="over capacity +' + over + '">▲</span>' : "") + "</div>" +
+      '<div class="loc">' + locShort + "</div>" +
+      '<div class="rows">' + b.rows + " rows</div>" +
+      '<div class="badge ' + (b.dupes === 0 ? "zero" : "") + '">' + b.dupes + "</div>" +
+      '<div class="state">' + STATES[st] + "</div></div>";
+  }
+
+  function render() {
+    zonesEl.innerHTML = zoneOrder.map(function (z) {
+      var bs = D.boxes.filter(function (b) { return b.zone === z; });
+      var shown = bs.filter(function (b) {
+        if (filterDupes && b.dupes === 0) return false;
+        if (filterOpen && state[b.box] === 2) return false;
+        return true;
+      }).sort(function (a, b) { return b.dupes - a.dupes || a.box - b.box; });
+      if (shown.length === 0) return "";
+      var done = bs.filter(function (b) { return state[b.box] === 2; }).length;
+      var zd = bs.reduce(function (s, b) { return s + b.dupes; }, 0);
+      var full = done === bs.length;
+      return '<details class="grp" open><summary>' +
+        '<span class="chev">›</span>' +
+        '<span class="gcode ' + (zd > 0 ? "red" : "slate") + '">' + bs.length + "</span>" +
+        '<span class="gtitle"><span class="t">' + z + '</span> <span class="s">' + zd + " flagged rows</span></span>" +
+        '<span class="gprog"><span class="mini-bar"><span class="mini-fill" style="width:' + Math.round(done / bs.length * 100) + '%"></span></span>' +
+          '<span class="txt">' + (full ? "✓ " : "") + done + "/" + bs.length + "</span></span>" +
+        "</summary>" +
+        '<div class="gbody"><div class="board" style="margin-top:12px">' + shown.map(boxCard).join("") + "</div></div>" +
+        "</details>";
+    }).join("");
+    bindCards();
+    updateOverall();
+  }
+
+  function bindCards() {
+    zonesEl.querySelectorAll(".boxcard").forEach(function (card) {
+      var bx = parseInt(card.getAttribute("data-box"), 10);
+      var advance = function () {
+        state[bx] = ((state[bx] || 0) + 1) % 3;
+        if (state[bx] === 0) delete state[bx];
+        BQ.writeBoxes(state);
+        render();
+      };
+      card.addEventListener("click", advance);
+      card.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); advance(); }
+      });
+    });
+  }
+
+  function updateOverall() {
+    var total = D.boxes.length;
+    var done = D.boxes.filter(function (b) { return state[b.box] === 2; }).length;
+    var pct = total ? Math.round(done / total * 100) : 0;
+    document.getElementById("allFill").style.width = pct + "%";
+    document.getElementById("allCount").textContent = done + " / " + total + " boxes done";
+    document.getElementById("allPct").textContent = pct + "%";
+
+    var next = D.boxes.filter(function (b) { return state[b.box] !== 2; })
+      .sort(function (a, b) { return b.dupes - a.dupes || b.rows - a.rows; })[0];
+    var sh;
+    if (next) {
+      sh = '<div class="n"><small>START HERE</small>' + next.box + "</div>" +
+        '<div class="b"><strong>' + next.loc + "</strong><p>" +
+        (next.dupes > 0
+          ? next.dupes + " flagged duplicate rows — highest remaining. " + next.rows + " rows in data. Quick-count first; the badge means a spot-check is likely."
+          : "No flagged duplicates — expect a clean count and a fast sort. " + next.rows + " rows.") +
+        "</p></div>";
+    } else {
+      sh = '<div class="n"><small>DONE</small>✓</div><div class="b"><strong>All boxes cleared</strong><p>Every box physically verified. Take the win.</p></div>';
+    }
+    document.getElementById("starthere").innerHTML = sh;
+  }
+
+  // location key
+  document.getElementById("keyGrid").innerHTML = zoneOrder.map(function (z) {
+    var bs = D.boxes.filter(function (b) { return b.zone === z; }).sort(function (a, b) { return a.box - b.box; });
+    var chips = bs.map(function (b) {
+      return '<span class="chip ' + (b.dupes > 0 ? "dupe" : "") + '" title="' + b.loc + " · " + b.rows + ' rows">' + b.box + "</span>";
+    }).join("");
+    return '<div class="keyzone"><div class="zt">' + z + "</div>" + chips + "</div>";
+  }).join("");
+
+  document.getElementById("fDupes").onclick = function () { filterDupes = !filterDupes; this.classList.toggle("on", filterDupes); render(); };
+  document.getElementById("fOpen").onclick = function () { filterOpen = !filterOpen; this.classList.toggle("on", filterOpen); render(); };
+  document.getElementById("expandAll").onclick = function () { zonesEl.querySelectorAll("details").forEach(function (d) { d.open = true; }); };
+  document.getElementById("collapseAll").onclick = function () { zonesEl.querySelectorAll("details").forEach(function (d) { d.open = false; }); };
+  document.getElementById("resetBtn").onclick = function () {
+    if (confirm("Reset all box progress? This cannot be undone.")) { state = {}; BQ.writeBoxes(state); render(); }
+  };
+
+  document.getElementById("foot").innerHTML =
+    "Box Quest · Box Board · source: <b>" + D.source + "</b> · zones ordered by flagged-row payoff";
+
+  render();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+input: cover_links_1108_1946.xlsx  URLs to check: 10114
+  checked 250/10114  live=250 dead=0
+  checked 500/10114  live=500 dead=0
+  checked 750/10114  live=750 dead=0
+  checked 1000/10114  live=1000 dead=0
+  checked 1250/10114  live=1250 dead=0
+  checked 1500/10114  live=1500 dead=0
+  checked 1750/10114  live=1750 dead=0
+  checked 2000/10114  live=2000 dead=0
+  checked 2250/10114  live=2250 dead=0
+  checked 2500/10114  live=2500 dead=0
+  checked 2750/10114  live=2750 dead=0
+  checked 3000/10114  live=3000 dead=0
+  checked 3250/10114  live=3250 dead=0
+  checked 3500/10114  live=3500 dead=0
+  checked 3750/10114  live=3750 dead=0
+  checked 4000/10114  live=4000 dead=0
+  checked 4250/10114  live=4250 dead=0
+  checked 4500/10114  live=4500 dead=0
+  checked 4750/10114  live=4749 dead=1
+  checked 5000/10114  live=4999 dead=1
+  checked 5250/10114  live=5249 dead=1
+  checked 5500/10114  live=5499 dead=1
+  checked 5750/10114  live=5749 dead=1
+  checked 6000/10114  live=5999 dead=1
+  checked 6250/10114  live=6249 dead=1
+  checked 6500/10114  live=6499 dead=1
+  checked 6750/10114  live=6749 dead=1
+  checked 7000/10114  live=6999 dead=1
+  checked 7250/10114  live=7249 dead=1
+  checked 7500/10114  live=7499 dead=1
+  checked 7750/10114  live=7749 dead=1
+  checked 8000/10114  live=7999 dead=1
+  checked 8250/10114  live=8249 dead=1
+  checked 8500/10114  live=8499 dead=1
+  checked 8750/10114  live=8749 dead=1
+  checked 9000/10114  live=8999 dead=1
+  checked 9250/10114  live=9249 dead=1
+  checked 9500/10114  live=9499 dead=1
+  checked 9750/10114  live=9748 dead=2
+  checked 10000/10114  live=9998 dead=2
+
+LIVE: 10112   DEAD: 2   avg image tokens: 550
+est input tokens: 6,471,680  output tokens: 252,800
+COST MODEL (per-1M in/out; batch API halves it):
+  Haiku-class 1.00/5.00      sync ~$7.74   batch ~$3.87
+  Sonnet-class 3.00/15.00    sync ~$23.21   batch ~$11.60
+
+wrote vision_workqueue.csv (feed this to brb_vision_characters.py) + vision_deadlinks.csv
