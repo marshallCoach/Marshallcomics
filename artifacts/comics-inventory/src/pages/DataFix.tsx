@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo, useCallback, useEffect } from "react";
 import { DATA, type Comic } from "@/data/data";
 import { CoverImage, CoverModal, fmtPubDate } from "@/components/CoverImage";
 import { setFlagKind as setCoverFlagKind } from "@/lib/coverFlags";
@@ -9,13 +9,14 @@ import { setFlagKind as setCoverFlagKind } from "@/lib/coverFlags";
 // resolving hides the comic and feeds an export the pipeline consumes. Built to
 // be a daily driver — progress ring, category chips, and a streak for momentum.
 const comics = DATA.comics;
+const BASE = import.meta.env.BASE_URL?.replace(/\/$/, "") ?? "";
 
 const LS_FIXES = "brbDataFixes_v1";     // id -> resolution record
 const LS_META  = "brbDataFixMeta_v1";   // { lastDate, streak, todayCount }
 
 type FixKind = "fandom" | "solution";
 interface FixRecord { id: string; title: string; issue: string; box: string; problem: string; kind: FixKind; value: string; at: string; }
-type ProblemId = "no-date" | "date-conflict" | "no-volume" | "no-year" | "likely-variant";
+type ProblemId = "no-date" | "date-conflict" | "no-volume" | "no-year" | "likely-variant" | "not-in-gcd";
 
 const PROBLEMS: { id: ProblemId; label: string; blurb: string; color: string; vol?: boolean; solutions: { key: string; label: string }[] }[] = [
   { id: "no-date",       label: "Missing publication date", blurb: "Not matched in GCD/Comic Vine — no on-sale date", color: "#c8102e",
@@ -28,6 +29,8 @@ const PROBLEMS: { id: ProblemId; label: string; blurb: string; color: string; vo
     solutions: [{ key: "research", label: "Needs research" }] },
   { id: "likely-variant", label: "Likely variant (cover-buy)", blurb: "In the CC1 cover-buy box — probably a variant of the main cover", color: "#db2777",
     solutions: [{ key: "confirm-variant", label: "✓ Confirm variant" }, { key: "not-variant", label: "Not a variant" }] },
+  { id: "not-in-gcd",    label: "Not in GCD",                blurb: "No GCD series match — needs a Fandom link or a manual call", color: "#0891b2", vol: true,
+    solutions: [{ key: "indie", label: "Indie — not catalogued" }, { key: "research", label: "Needs research" }] },
 ];
 const PROBLEM_MAP = Object.fromEntries(PROBLEMS.map(p => [p.id, p]));
 
@@ -88,16 +91,24 @@ export default function DataFix() {
   const [meta, setMeta] = useState<Meta>(() => loadMeta());
   const [session, setSession] = useState(0);
   const [pop, setPop] = useState(0);
+  const [notInGcd, setNotInGcd] = useState<Set<string>>(new Set());
+
+  useEffect(() => {
+    fetch(`${BASE}/gcd_notfound.json`).then(r => r.ok ? r.json() : [])
+      .then((a: string[]) => setNotInGcd(new Set(a))).catch(() => {});
+  }, []);
 
   // All comics that have ≥1 problem (computed once).
   const flagged = useMemo(() => {
     const rows: { c: Comic; id: string; problems: ProblemId[] }[] = [];
     for (const c of comics) {
+      const id = comicId(c);
       const ps = problemsFor(c);
-      if (ps.length) rows.push({ c, id: comicId(c), problems: ps });
+      if (notInGcd.has(id)) ps.push("not-in-gcd");
+      if (ps.length) rows.push({ c, id, problems: ps });
     }
     return rows;
-  }, []);
+  }, [notInGcd]);
 
   const totalProblems = flagged.length;
   const resolvedCount = useMemo(() => flagged.filter(f => fixes.has(f.id)).length, [flagged, fixes]);
