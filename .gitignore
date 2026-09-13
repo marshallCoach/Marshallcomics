@@ -127,3 +127,13 @@ extrap.log
 key_audit.xlsx
 .cv_credits_state.json
 bare_rows_*.xlsx
+
+# Review / audit outputs from cleanup scripts (local only, regenerated)
+data_fix_links_review.csv
+volume_bulk_apply_review.csv
+links_corrections_review.csv
+missing_covers.csv
+cover_deadlinks.csv
+cover_link_drop.html
+marshall_sources.txt
+.brb_weekly_snapshot.json
