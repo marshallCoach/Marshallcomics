@@ -89,8 +89,11 @@ def main():
         print(f"  … and {len(to_remove) - 25:,} more")
 
     # how many of the ambiguous rows already have a volume-aware cover
+    def _has_url(k):
+        e = cov.get(k)
+        return bool(e and (e.get("url") if isinstance(e, dict) else e))
     have_vol = sum(1 for (t, iss) in ambiguous for v in combos[(t, iss)]
-                   if f"{t}|||{iss}|||{v}" in cov and cov[f"{t}|||{iss}|||{v}"].get("url"))
+                   if _has_url(f"{t}|||{iss}|||{v}"))
     total_vol_slots = sum(len(combos[k]) for k in ambiguous)
     print(f"\nVolume-aware covers already present for ambiguous rows: {have_vol:,}/{total_vol_slots:,}")
     print("(the rest will fill when you run brb_cover_yeargate.py)")
