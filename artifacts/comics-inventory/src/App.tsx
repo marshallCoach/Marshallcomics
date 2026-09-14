@@ -40,6 +40,7 @@ import EbayListingGuide from "@/pages/EbayListingGuide";
 import ComicRoulette from "@/pages/ComicRoulette";
 import LifeArchive from "@/pages/LifeArchive";
 import DataFix from "@/pages/DataFix";
+import TitleFixes from "@/pages/TitleFixes";
 import OfflineCovers from "@/components/OfflineCovers";
 import FlaggedCount from "@/components/FlaggedCount";
 import PasswordGate from "@/components/PasswordGate";
@@ -48,7 +49,7 @@ import { BookOpen, Boxes, Wrench, Image, Briefcase, Film, Archive, Sparkles } fr
 type TabId =
   | "summary" | "everything" | "collection" | "boxkeys" | "stats" | "runs" | "runsvolumes" | "recent" | "releasetimeline" | "dataview"
   | "calendar" | "showplanner" | "cgc" | "signings" | "actionplan" | "timeline" | "boxvisual"
-  | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "duplicates" | "dupchecklist" | "datafix" | "history"
+  | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "duplicates" | "dupchecklist" | "datafix" | "titlefixes" | "history"
   | "orgpath" | "volumes" | "boxlabels" | "keycatalog" | "covercatalog" | "coverreview" | "boxquest" | "boxmap"
   | "ebaypipeline" | "opsreference" | "ebaylistingguide" | "roulette" | "lifearchive";
 
@@ -103,6 +104,7 @@ const NAV = [
     label: "Data Cleanup",
     tabs: [
       { id: "datafix",      label: "Data Fix" },
+      { id: "titlefixes",   label: "Title Fixes" },
       { id: "duplicates",   label: "Duplicates" },
       { id: "dupchecklist", label: "Dup Hunt" },
     ],
@@ -349,6 +351,7 @@ export default function App() {
         {activeTab === "duplicates"    && <Duplicates onNavigate={navigateTo} />}
         {activeTab === "dupchecklist"  && <DupCheckList />}
         {activeTab === "datafix"       && <DataFix />}
+        {activeTab === "titlefixes"    && <TitleFixes />}
         {activeTab === "history"     && <ComicHistory />}
         {activeTab === "keycatalog"  && <KeyCatalog />}
         {activeTab === "covercatalog" && <CoverCatalog />}
