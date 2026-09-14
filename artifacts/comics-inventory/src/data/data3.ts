@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_1309_1931.xlsx  |  Generated: 2026-09-14
+// Source: comics_inventory_1309_2137.xlsx  |  Generated: 2026-09-14
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -16574,7 +16574,7 @@ DeFalco era Avengers.`,
     Cover_Artist: `David Finch`, Date_Added: `2026-06-29`,
     Imprint: ``, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: ``,
-    Volume: `1`, Entry: `12964`,
+    Volume: `3`, Entry: `12964`,
     Cover_Price: ``,
     Pub_Date: `2004-10-00`,
     eBay_Avg: 11.79, eBay_Low: 3.99, eBay_High: 26, eBay_Count: 10, eBay_Median: 9.34,
@@ -16595,7 +16595,7 @@ DeFalco era Avengers.`,
     Cover_Artist: `David Finch`, Date_Added: `2026-06-29`,
     Imprint: ``, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: ``,
-    Volume: `1`, Entry: `12965`,
+    Volume: `3`, Entry: `12965`,
     Cover_Price: ``,
     Pub_Date: `2004-11-00`,
     eBay_Avg: 3.57, eBay_Low: 2.24, eBay_High: 5, eBay_Count: 6, eBay_Median: 3.74,
@@ -16616,7 +16616,7 @@ DeFalco era Avengers.`,
     Cover_Artist: `David Finch`, Date_Added: `2026-06-29`,
     Imprint: ``, Box: `UNKNOWN — needs physical reassignment`,
     Crossover: ``, Start_Bid: ``,
-    Volume: `1`, Entry: `12966`,
+    Volume: `3`, Entry: `12966`,
     Cover_Price: ``,
     Pub_Date: `2004-12-00`,
     eBay_Avg: 11.72, eBay_Low: 2.99, eBay_High: 25, eBay_Count: 10, eBay_Median: 9.5,
