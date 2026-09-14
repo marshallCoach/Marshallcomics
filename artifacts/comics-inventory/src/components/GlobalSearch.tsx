@@ -19,6 +19,7 @@ const PAGES = [
   { id:"boxkeys",     label:"Box Keys",      section:"Organisation" },
   { id:"boxlabels",   label:"Box Labels",    section:"Organisation" },
   { id:"datafix",     label:"Data Fix",      section:"Data Cleanup" },
+  { id:"titlefixes",  label:"Title Fixes",   section:"Data Cleanup" },
   { id:"duplicates",  label:"Duplicates",    section:"Data Cleanup" },
   { id:"dupchecklist",label:"Dup Hunt",      section:"Data Cleanup" },
   { id:"hunting",     label:"Box Hunt",      section:"Organisation" },
