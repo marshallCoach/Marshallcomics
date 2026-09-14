@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, useMemo, useCallback } from "react";
 import { DATA, type Comic } from "@/data/data";
 import { comicId, loadFlags, saveFlags, type FlaggedCover } from "./CoverCatalog";
 import { clearAllFlags, exportFlags as exportFlagsLib } from "@/lib/coverFlags";
+import { CoverModal } from "@/components/CoverImage";
 import flaggedBaseline from "@/data/flaggedCoversBaseline.json";
 
 const BASELINE_FLAGGED_IDS = new Set((flaggedBaseline as { id: string }[]).map(f => f.id));
@@ -34,6 +35,7 @@ export default function CoverReview() {
   const [msLeft, setMsLeft]     = useState(CYCLE_MS);
   const [paused, setPaused]     = useState(false);
   const [titleFilter, setTitleFilter] = useState<string | null>(null);
+  const [modal, setModal] = useState<{ comic: Comic; url: string } | null>(null);
   const tickRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   // Build the review pool once: every comic that has a real (non-placeholder) cover,
@@ -169,7 +171,11 @@ export default function CoverReview() {
     const flagged = flags.has(id);
     return (
       <div key={k} style={{ flexShrink: 0, width: 96, textAlign: "center" }}>
-        <div style={{ width: 96, height: 144, borderRadius: 4, overflow: "hidden", background: "#1a1628", border: flagged ? "2px solid var(--red)" : "1px solid var(--border)" }}>
+        <div
+          onClick={() => setModal({ comic: p.comic, url: p.url })}
+          title="Open to mark incorrect / variant / dupe"
+          style={{ width: 96, height: 144, borderRadius: 4, overflow: "hidden", background: "#1a1628", border: flagged ? "2px solid var(--red)" : "1px solid var(--border)", cursor: "pointer" }}
+        >
           <img src={p.url} alt={`${p.comic.Title} ${p.comic.Issue}`} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} loading="lazy" />
         </div>
         <button
@@ -248,6 +254,14 @@ export default function CoverReview() {
             </div>
           </div>
         ))
+      )}
+
+      {modal && (
+        <CoverModal
+          comic={modal.comic}
+          largeUrl={modal.url}
+          onClose={() => { setModal(null); setFlags(loadFlags()); }}
+        />
       )}
     </div>
   );
