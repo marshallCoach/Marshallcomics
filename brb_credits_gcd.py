@@ -74,11 +74,22 @@ def nk(v):
     return re.sub(r"[^a-z0-9]+", " ", str(v or "").lower()).strip()
 
 
+PLACEHOLDERS = {"various", "unknown", "uncredited", "n a", "none", "tbd", ""}
+
+
 def split_names(cell):
-    """Existing cell -> ordered list of creator names, splitting on &, comma,
-    ' and ', slash. Keeps original spelling for display."""
-    parts = re.split(r"\s*(?:&|,|/|\band\b)\s*", str(cell or "").strip())
-    return [p.strip() for p in parts if p.strip()]
+    """Existing cell -> ordered list of real creator names. Drops role
+    annotations like '(layouts)' and junk placeholders like 'Various' so
+    overlap detection compares NAMES, not formatting — keeps a real name from
+    being flagged CONFLICT just because it carried a '(layouts)' tag."""
+    s = re.sub(r"\([^)]*\)", " ", str(cell or ""))          # strip (role) notes
+    parts = re.split(r"\s*(?:&|,|/|\band\b)\s*", s.strip())
+    out = []
+    for p in parts:
+        p = p.strip()
+        if p and nk(p) not in PLACEHOLDERS:
+            out.append(p)
+    return out
 
 
 def _names(conn, story_ids, want_types):
