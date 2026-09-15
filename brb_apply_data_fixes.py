@@ -26,7 +26,7 @@ from brb_gcd_volume_check import parse_year_range, pub_match, tight
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DB = os.path.join(ROOT, "gcd_local.sqlite")
-VOL_RE = re.compile(r"/wiki/.+?_Vol_(\d+)_", re.I)
+VOL_RE = re.compile(r"/wiki/.+?_Vol_(\d+)(?:_|$)", re.I)  # trailing issue optional
 
 
 def newest(dirs, pat):

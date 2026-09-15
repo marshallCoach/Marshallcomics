@@ -60,7 +60,10 @@ def yr(v):
 CRED_PATS = {
     "writer": r"\|\s*Writers?\d*_?\d*\s*=\s*([^\n|]+)",
     "artist": r"\|\s*(?:Pencilers?|Artists?)\d*_?\d*\s*=\s*([^\n|]+)",
-    "cover":  r"\|\s*Cover\s?Artists?\d*\s*=\s*([^\n|]+)",
+    # Marvel Database credits the COVER via Image1_Artist1/2 (the artists of the
+    # primary cover image), not a CoverArtist field. Match both, but only
+    # Image1_* (Image2_* is the variant/textless cover).
+    "cover":  r"\|\s*(?:Cover\s?Artists?\d*|Image1_Artists?\d*)\s*=\s*([^\n|]+)",
 }
 
 
@@ -95,7 +98,7 @@ def parse_url(u):
         return None
     base = f"https://{m.group(1)}/api.php"
     path = urllib.parse.unquote(m.group(2))
-    vm = re.search(r"^(.*?)_Vol_(\d+)_", path)
+    vm = re.search(r"^(.*?)_Vol_(\d+)(?:_|$)", path)  # trailing issue optional
     if not vm:
         return None
     return base, vm.group(1).replace("_", " ").strip(), vm.group(2)
