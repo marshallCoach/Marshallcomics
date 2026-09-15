@@ -76,8 +76,11 @@ def nk(v):
 
 PLACEHOLDERS = {"various", "unknown", "uncredited", "verify", "tbc", "tbd",
                 "n a", "none", ""}
-YEAR_TOL = 2  # a matched GCD issue whose date is >2yr off the row Year is a
-              # wrong-era/wrong-volume match — reject it rather than overwrite.
+YEAR_TOL = 1  # a matched GCD issue whose date is >1yr off the row Year is a
+              # wrong-volume match, not cover-date skew (which is <=1yr) — reject
+              # it rather than overwrite. Catches adjacent-volume leaks like
+              # Avengers 2015 vs the 2013 series. Fails safe: keeps the existing
+              # value, never corrupts.
 
 
 def year_of(s):
