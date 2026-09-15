@@ -57,6 +57,18 @@ def latest_xlsx():
     return max(m, key=os.path.getmtime)
 
 
+def resolve_src(src):
+    """--src may be a full path or a bare basename in attached_assets."""
+    if not src:
+        return latest_xlsx()
+    if os.path.exists(src):
+        return src
+    cand = os.path.join(ASSETS, src)
+    if os.path.exists(cand):
+        return cand
+    sys.exit(f"--src not found: {src}")
+
+
 def nk(v):
     """Normalized key for one creator name — case/punctuation-insensitive."""
     return re.sub(r"[^a-z0-9]+", " ", str(v or "").lower()).strip()
@@ -138,10 +150,12 @@ def main():
     ap.add_argument("--limit", type=int, default=None)
     ap.add_argument("--no-conflicts", action="store_true",
                     help="log zero-overlap cases but don't overwrite them")
+    ap.add_argument("--src", default=None,
+                    help="baseline xlsx (path or basename in attached_assets); default = newest")
     ap.add_argument("--csv", default=os.path.join(ROOT, "credits_gcd_changes.csv"))
     args = ap.parse_args()
 
-    src = latest_xlsx()
+    src = resolve_src(args.src)
     print(f"Inventory: {os.path.basename(src)}")
     conn = sqlite3.connect(DB)
 
