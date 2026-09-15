@@ -51,7 +51,7 @@ def canon_from_url(u):
     if not m:
         return None
     path = urllib.parse.unquote(m.group(1))
-    vm = re.search(r"^(.*?)_Vol_\d+_", path)
+    vm = re.search(r"^(.*?)_Vol_\d+(?:_|$)", path)  # trailing issue optional
     return vm.group(1).replace("_", " ").strip() if vm else None
 
 
