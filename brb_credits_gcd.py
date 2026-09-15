@@ -74,7 +74,15 @@ def nk(v):
     return re.sub(r"[^a-z0-9]+", " ", str(v or "").lower()).strip()
 
 
-PLACEHOLDERS = {"various", "unknown", "uncredited", "n a", "none", "tbd", ""}
+PLACEHOLDERS = {"various", "unknown", "uncredited", "verify", "tbc", "tbd",
+                "n a", "none", ""}
+YEAR_TOL = 2  # a matched GCD issue whose date is >2yr off the row Year is a
+              # wrong-era/wrong-volume match — reject it rather than overwrite.
+
+
+def year_of(s):
+    m = re.search(r"(?:19|20)\d{2}", str(s or ""))
+    return int(m.group(0)) if m else None
 
 
 def split_names(cell):
@@ -112,18 +120,23 @@ def _names(conn, story_ids, want_types):
     return out
 
 
-def credit_sets(conn, series_id, issue):
-    """Return {'writer':[...], 'artist':[...], 'cover_artist':[...]} full lists,
-    or None if the issue isn't in that series."""
+def credit_sets(conn, series_id, issue, row_year=None):
+    """Return {'writer':[...], 'artist':[...], 'cover_artist':[...]} full lists.
+    Returns None if the issue isn't in that series, or "GATED" if it is but the
+    issue's GCD date is >YEAR_TOL years off the row Year (wrong-era match)."""
     inum = norm_issue(issue)
-    iid = None
-    for rid, number in conn.execute(
-            "SELECT id, number FROM gcd_issue WHERE series_id = ?", (series_id,)):
+    iid = idate = None
+    for rid, number, key_date, pub_date in conn.execute(
+            "SELECT id, number, key_date, publication_date FROM gcd_issue WHERE series_id = ?",
+            (series_id,)):
         if norm_issue(number) == inum:
-            iid = rid
+            iid, idate = rid, (key_date or pub_date)
             break
     if iid is None:
         return None
+    ry, iy = year_of(row_year), year_of(idate)
+    if ry and iy and abs(iy - ry) > YEAR_TOL:
+        return "GATED"
     comic = [r[0] for r in conn.execute(
         "SELECT id FROM gcd_story WHERE issue_id=? AND type_id=? ORDER BY sequence_number",
         (iid, COMIC_STORY_TYPE_ID))]
@@ -193,7 +206,7 @@ def main():
         return series_cache[key]
 
     counts = {col: {"FILL": 0, "UNION": 0, "CONFLICT": 0} for col in ROLES}
-    rows_touched = no_series = no_issue = 0
+    rows_touched = no_series = no_issue = gated = 0
     changes = []
 
     last = ws.max_row if not args.limit else min(ws.max_row, 1 + args.limit)
@@ -209,9 +222,12 @@ def main():
         if not series:
             no_series += 1
             continue
-        cs = credit_sets(conn, series["id"], issue)
+        cs = credit_sets(conn, series["id"], issue, year)
         if cs is None:
             no_issue += 1
+            continue
+        if cs == "GATED":
+            gated += 1
             continue
 
         row_changed = False
@@ -249,6 +265,7 @@ def main():
     print(f"  Rows touched:            {rows_touched:,}")
     print(f"  No GCD series match:     {no_series:,}")
     print(f"  Series ok, issue absent: {no_issue:,}")
+    print(f"  Year-gated (wrong era):  {gated:,}  (rejected — would have been wrong-volume)")
     print(f"  CONFLICT overwrites:     {tot_conf:,}  (Action=CONFLICT in the CSV — review these)")
     print(f"  Change log:              {os.path.relpath(args.csv, ROOT)} ({len(changes)} rows)")
 
