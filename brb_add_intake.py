@@ -41,6 +41,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--csv", required=True, help="intake CSV (title,issue,year,volume,publisher,box,era)")
     ap.add_argument("--apply", action="store_true")
+    ap.add_argument("--restamp", action="store_true",
+                    help="don't add rows; fix Date_Added marker on existing rows matching the CSV "
+                         "(title+issue+box) so Recent Purchases picks them up")
     args = ap.parse_args()
 
     if not os.path.exists(args.csv):
@@ -72,6 +75,35 @@ def main():
             existing.add((t, ni(ws.cell(r, cI).value), ni(ws.cell(r, cY).value), str(ws.cell(r, cB).value or "").strip()))
 
     today = datetime.date.today().isoformat()
+    # Date_Added must carry the "new-comics intake" marker — RecentPurchases.tsx
+    # filters on /new-comics intake/i, so a bare date never shows there.
+    stamp = datetime.date.today().strftime("%B %d, %Y") + " (new-comics intake)"
+
+    # --restamp: fix Date_Added on rows already added (match by title+issue+box), add nothing
+    if args.restamp:
+        idx = {}
+        for r in range(2, ws.max_row + 1):
+            t = str(ws.cell(r, cT).value or "").strip().lower()
+            if t:
+                idx.setdefault((t, ni(ws.cell(r, cI).value), str(ws.cell(r, cB).value or "").strip()), r)
+        fixed = 0
+        for rec in rows:
+            k = ((rec.get("title") or "").strip().lower(), ni(rec.get("issue")), str(rec.get("box") or "").strip())
+            r = idx.get(k)
+            if r and cD:
+                ws.cell(r, cD, stamp); fixed += 1
+                print(f"  restamp: {rec.get('title')} #{ni(rec.get('issue'))} Box {k[2]} -> Date_Added={stamp}")
+            elif not r:
+                print(f"  NOT FOUND (skip): {rec.get('title')} #{ni(rec.get('issue'))} Box {k[2]}")
+        print(f"\n  Rows restamped: {fixed}")
+        if not args.apply:
+            print("  DRY RUN — nothing written. Re-run with --restamp --apply."); return
+        out = os.path.join(ASSETS, f"comics_inventory_{datetime.datetime.now():%d%m_%H%M}.xlsx")
+        wb.save(out)
+        print(f"\n  WROTE: {os.path.basename(out)}  ({fixed} rows restamped)")
+        print(f"  Next: python3 brb.py --commit \"Restamp intake Date_Added\" --yes")
+        return
+
     added, dups = 0, []
     at = ws.max_row + 1
     for rec in rows:
@@ -92,7 +124,7 @@ def main():
         if cV and (rec.get("volume") or "").strip():
             ws.cell(at, cV, (rec.get("volume") or "").strip())
         if cE: ws.cell(at, cE, (rec.get("era") or "Modern").strip())
-        if cD: ws.cell(at, cD, today)
+        if cD: ws.cell(at, cD, stamp)
         print(f"  + {title} #{issue} ({year}) {rec.get('publisher','')} -> Box {box}"
               + (f"  Vol {rec.get('volume')}" if (rec.get('volume') or '').strip() else ""))
         existing.add(k); added += 1; at += 1
