@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BRB Box Map v7</title>
+<style>
+  :root{--bg:#0a0a0f;--surface:#13131a;--card:#1c1c26;--border:#2a2a38;--red:#e53935;--green:#43a047;--amber:#fb8c00;--blue:#1e88e5;--purple:#7b1fa2;--text:#e8e8f0;--muted:#6b6b80;--shelf-bg:#1a1a24;--shelf-border:#2a2a3a;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--text);font-family:'Courier New',monospace;min-height:100vh;padding-bottom:70px;}
+  header{background:var(--surface);border-bottom:2px solid var(--red);padding:12px 16px;position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;}
+  .logo-main{font-size:15px;font-weight:bold;color:var(--red);letter-spacing:2px;}
+  .logo-sub{font-size:9px;color:var(--muted);letter-spacing:1px;}
+  .hdr-btns{display:flex;gap:6px;flex-wrap:wrap;}
+  button{background:var(--border);color:var(--text);border:none;padding:7px 11px;font-family:inherit;font-size:10px;letter-spacing:1px;cursor:pointer;transition:opacity .15s;}
+  button:hover{opacity:.75;}
+  button.green{background:var(--green);}
+  button.red-btn{background:var(--red);}
+  .stat-row{display:flex;gap:14px;font-size:10px;}
+  .stat{text-align:center;}
+  .stat-n{font-size:17px;font-weight:bold;}
+  .stat-l{color:var(--muted);font-size:9px;letter-spacing:1px;}
+  main{padding:16px;max-width:900px;margin:0 auto;}
+  .legend{display:flex;gap:12px;flex-wrap:wrap;font-size:10px;margin-bottom:18px;}
+  .li{display:flex;align-items:center;gap:5px;}
+  .dot{width:9px;height:9px;border-radius:50%;}
+  .room{margin-bottom:20px;border:1px solid var(--border);border-radius:4px;overflow:hidden;}
+  .room-hdr{background:var(--surface);padding:10px 14px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none;border-bottom:1px solid var(--border);}
+  .room-title{font-size:12px;font-weight:bold;letter-spacing:1px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+  .room-meta{font-size:10px;color:var(--muted);white-space:nowrap;}
+  .room-body{background:var(--card);padding:12px;}
+  .collapsed .room-body{display:none;}
+  .unit{background:var(--shelf-bg);border:1px solid var(--shelf-border);border-radius:3px;overflow:hidden;margin-bottom:10px;}
+  .unit-lbl{font-size:9px;color:var(--muted);padding:5px 10px;border-bottom:1px solid var(--shelf-border);letter-spacing:1px;display:flex;justify-content:space-between;}
+  .co-badge{font-size:8px;color:var(--amber);}
+  .shelf{display:flex;align-items:center;padding:7px 10px;border-bottom:1px solid var(--shelf-border);gap:6px;min-height:50px;}
+  .shelf:last-child{border-bottom:none;}
+  .shelf-lbl{font-size:8px;color:var(--muted);letter-spacing:1px;width:46px;flex-shrink:0;text-align:right;padding-right:8px;border-right:1px solid var(--shelf-border);}
+  .rail{display:flex;gap:5px;flex-wrap:wrap;flex:1;padding:3px 0 5px;position:relative;}
+  .rail::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#3a3a50,#252535,#3a3a50);border-radius:2px;}
+  .box{display:flex;align-items:center;justify-content:center;width:58px;height:36px;border-radius:3px;font-size:12px;font-weight:bold;cursor:pointer;transition:transform .1s,box-shadow .15s;position:relative;border:1.5px solid transparent;user-select:none;}
+  .box:hover{transform:translateY(-2px);box-shadow:0 4px 10px rgba(0,0,0,.5);}
+  .box.confirmed{background:#1a2e1a;border-color:var(--green);color:#81c784;}
+  .box.checked{background:#0d2e0d;border-color:#69f070;color:#69f070;}
+  .box.cc{background:#1a1a2e;border-color:var(--purple);color:#ce93d8;font-size:9px;}
+  .box.newbox{background:#0d1e2e;border-color:var(--blue);color:#64b5f6;}
+  .box.unlabelled{background:#1a1a1a;border-color:#444;color:#666;font-size:9px;text-align:center;line-height:1.2;}
+  .badge{position:absolute;top:-5px;right:-5px;width:13px;height:13px;background:var(--green);border-radius:50%;font-size:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:bold;}
+  .add-slot{width:58px;height:36px;border:1.5px dashed var(--border);border-radius:3px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:16px;cursor:pointer;transition:border-color .2s,color .2s;}
+  .add-slot:hover{border-color:var(--blue);color:var(--blue);}
+  .add-shelf-btn{display:flex;align-items:center;gap:5px;padding:5px 10px;font-size:9px;color:var(--muted);border:1px dashed var(--border);cursor:pointer;margin:5px 10px;background:none;letter-spacing:1px;}
+  .add-shelf-btn:hover{color:var(--blue);border-color:var(--blue);}
+  .ghost-section{margin-top:32px;border-top:2px solid #2a0a0a;padding-top:16px;}
+  .ghost-label{font-size:10px;letter-spacing:2px;color:#4a1a1a;margin-bottom:12px;}
+  .ghost-grid{display:flex;flex-wrap:wrap;gap:6px;}
+  .ghost-box{display:flex;align-items:center;justify-content:center;width:52px;height:32px;border-radius:3px;font-size:11px;background:#0f0505;border:1px solid #2a0a0a;color:#3a1212;opacity:.5;cursor:default;}
+  .overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:200;align-items:center;justify-content:center;}
+  .overlay.open{display:flex;}
+  .modal{background:var(--card);border:1px solid var(--border);border-radius:4px;padding:24px;width:300px;}
+  .modal h3{font-size:14px;margin-bottom:10px;}
+  .modal p{font-size:10px;color:var(--muted);margin-bottom:14px;line-height:1.6;}
+  .modal input{width:100%;background:var(--surface);border:1px solid var(--border);color:var(--text);padding:9px;font-family:inherit;font-size:16px;text-align:center;margin-bottom:6px;border-radius:2px;}
+  .hint{font-size:9px;color:var(--muted);margin-bottom:12px;text-align:center;}
+  .modal-btns{display:flex;gap:8px;}
+  .modal-btns button{flex:1;padding:9px;}
+  .footer{position:fixed;bottom:0;left:0;right:0;background:var(--surface);border-top:1px solid var(--border);padding:10px 16px;display:flex;align-items:center;justify-content:space-between;font-size:10px;color:var(--muted);}
+  .pbar{width:140px;height:5px;background:var(--border);border-radius:3px;overflow:hidden;}
+  .pfill{height:100%;background:linear-gradient(90deg,var(--red),var(--amber));transition:width .3s;}
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <div class="logo-main">📦 BRB BOX MAP</div>
+    <div class="logo-sub">BLACKREADBROWN · ROBERTO MARSHALL · v7 · FINAL</div>
+  </div>
+  <div class="stat-row">
+    <div class="stat"><div class="stat-n">76</div><div class="stat-l">CONFIRMED</div></div>
+    <div class="stat"><div class="stat-n" id="sChk">0</div><div class="stat-l">CHECKED</div></div>
+    <div class="stat"><div class="stat-n">22</div><div class="stat-l">GHOST</div></div>
+  </div>
+  <div class="hdr-btns">
+    <button onclick="collapseAll()">COLLAPSE</button>
+    <button onclick="expandAll()">EXPAND</button>
+    <button class="green" onclick="exportJSON()">EXPORT</button>
+    <button class="red-btn" onclick="resetAll()">RESET</button>
+  </div>
+</header>
+
+<main>
+  <div class="legend">
+    <div class="li"><div class="dot" style="background:#43a047"></div>Confirmed</div>
+    <div class="li"><div class="dot" style="background:#1e88e5"></div>New this session</div>
+    <div class="li"><div class="dot" style="background:#7b1fa2"></div>CC container</div>
+    <div class="li"><div class="dot" style="background:#444"></div>Unlabelled</div>
+    <div class="li">checkmark = checked · <span style="color:var(--amber)">star = checked-only view</span></div>
+  </div>
+  <div id="rooms"></div>
+  <div class="ghost-section">
+    <div class="ghost-label">GHOST BOXES - NO PHYSICAL EVIDENCE - DO NOT REFERENCE IN ACTIVE DOCUMENTS</div>
+    <div class="ghost-grid" id="ghost-grid"></div>
+  </div>
+</main>
+
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <h3>Add Box</h3>
+    <p id="msub"></p>
+    <input type="text" id="minput" placeholder="e.g. 42, CC4, NEW MARVEL">
+    <div class="hint">Numbers, CC labels, or any text accepted</div>
+    <div class="modal-btns">
+      <button class="green" id="mok">ADD</button>
+      <button onclick="closeModal()">CANCEL</button>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <span id="plabel">0 of 76 checked</span>
+  <div class="pbar"><div class="pfill" id="pfill" style="width:0%"></div></div>
+  <span>Tap to check · + to add</span>
+</div>
+
+<script>
+var GHOST_LIST = [2,32,34,38,41,61,63,69,71,73,74,76,77,78,81,84,89,90,91,92,93,94];
+var GHOST  = {};
+GHOST_LIST.forEach(function(n){ GHOST[n] = true; });
+var NEWBOX = {47:1,57:1,58:1,59:1,64:1,83:1,87:1,95:1,97:1,98:1,99:1};
+var CC_SET = {'CC1':1,'CC2':1,'CC3':1,'CC4':1,'CC5':1,'CC6':1,'CC7':1,'CC8':1,'CC9':1};
+var TOTAL  = 76;
+
+var ROOMS = [
+  {
+    id:'upstairs', name:'Upstairs Closet', icon:'🚪', checkedOnly:true,
+    units:[{
+      label:'Shelving Unit - 6 boxes LOCKED',
+      shelves:[
+        {label:'FLOOR', boxes:[70]},
+        {label:'MID',   boxes:['CC1','CC2','CC3']},
+        {label:'TOP',   boxes:[3,54]}
+      ]
+    }]
+  },
+  {
+    id:'bedroom', name:'Bedroom', icon:'🛏', checkedOnly:true,
+    units:[{
+      label:'Wire Unit - 9 boxes LOCKED - bottom to top',
+      shelves:[
+        {label:'FLOOR', boxes:['CC9',1,72]},
+        {label:'MID',   boxes:[75,80,57]},
+        {label:'TOP',   boxes:[62,59,29]}
+      ]
+    }]
+  },
+  {
+    id:'front-a', name:'Basement Front - Shelf A', icon:'📚', checkedOnly:false,
+    units:[{
+      label:'16 boxes - photo confirmed',
+      shelves:[
+        {label:'TOP',   boxes:[40]},
+        {label:'ROW 1', boxes:[97,15,20,7]},
+        {label:'ROW 2', boxes:[8,21,31,27]},
+        {label:'ROW 3', boxes:[58,17,10,23]},
+        {label:'ROW 4', boxes:[9,12,35,66]}
+      ]
+    }]
+  },
+  {
+    id:'front-b', name:'Basement Front - Shelf B', icon:'📚', checkedOnly:false,
+    units:[{
+      label:'10 boxes - photo confirmed',
+      shelves:[
+        {label:'TOP',   boxes:[95]},
+        {label:'ROW 1', boxes:[5,4,19]},
+        {label:'ROW 2', boxes:[6,28,18]},
+        {label:'ROW 3', boxes:[14,13,11]}
+      ]
+    }]
+  },
+  {
+    id:'front-c', name:'Basement Front - Shelf C', icon:'📚', checkedOnly:false,
+    units:[{
+      label:'15 boxes - photo confirmed',
+      shelves:[
+        {label:'TOP',   boxes:[67,39,16]},
+        {label:'ROW 1', boxes:[22,44,43]},
+        {label:'ROW 2', boxes:[26,25,33]},
+        {label:'ROW 3', boxes:[64,87,24]},
+        {label:'ROW 4', boxes:[85,86,30]}
+      ]
+    }]
+  },
+  {
+    id:'boiler', name:'Boiler Room', icon:'🔧', checkedOnly:false,
+    units:[{
+      label:'20 boxes - 4x5 - photo confirmed',
+      shelves:[
+        {label:'TOP',   boxes:[48,49,42,46]},
+        {label:'ROW 1', boxes:[50,52,47,88]},
+        {label:'ROW 2', boxes:[45,53,51,68]},
+        {label:'ROW 3', boxes:[56,65,82,83]},
+        {label:'ROW 4', boxes:[98,55,60,99]}
+      ]
+    }]
+  }
+];
+
+var PRE = [
+  '3','54','CC1','CC2','CC3','70',
+  '62','59','29','75','80','57','1','72','CC9',
+  '40','97','15','20','7','8','21','31','27','58','17','10','23','9','12','35','66',
+  '95','5','4','19','6','28','18','14','13','11',
+  '67','39','16','22','44','43','26','25','33','64','87','24','85','86','30',
+  '48','49','42','46','50','52','47','88','45','53','51','68','56','65','82','83','98','55','60','99'
+];
+
+var stored = localStorage.getItem('brbv8');
+var checked = {};
+var initList = stored ? JSON.parse(stored) : PRE;
+initList.forEach(function(id){ checked[id] = true; });
+
+function save(){
+  localStorage.setItem('brbv8', JSON.stringify(Object.keys(checked)));
+}
+
+function boxType(b){
+  var s = String(b);
+  if(CC_SET[s]) return 'cc';
+  if(s.indexOf('NEW') === 0) return 'unlabelled';
+  var n = parseInt(s);
+  if(isNaN(n)) return 'unlabelled';
+  if(GHOST[n]) return 'ghost';
+  if(NEWBOX[n]) return 'newbox';
+  return 'confirmed';
+}
+
+function makeBox(b, checkedOnly){
+  var id = String(b);
+  var type = boxType(b);
+  var isChecked = !!checked[id];
+  if(type === 'ghost') return null;
+  if(checkedOnly && !isChecked) return null;
+
+  var el = document.createElement('div');
+  el.className = 'box ' + type + (isChecked ? ' checked' : '');
+  el.dataset.id = id;
+  el.textContent = id;
+
+  if(isChecked){
+    var badge = document.createElement('div');
+    badge.className = 'badge';
+    badge.textContent = 'v';
+    el.appendChild(badge);
+  }
+  el.addEventListener('click', function(){ toggleCheck(id, el); });
+  return el;
+}
+
+function toggleCheck(id, el){
+  if(checked[id]){
+    delete checked[id];
+    el.classList.remove('checked');
+    var b = el.querySelector('.badge');
+    if(b) el.removeChild(b);
+  } else {
+    checked[id] = true;
+    el.classList.add('checked');
+    var badge = document.createElement('div');
+    badge.className = 'badge';
+    badge.textContent = 'v';
+    el.appendChild(badge);
+  }
+  save();
+  updateStats();
+}
+
+function renderGhosts(){
+  var grid = document.getElementById('ghost-grid');
+  grid.innerHTML = '';
+  GHOST_LIST.forEach(function(n){
+    var el = document.createElement('div');
+    el.className = 'ghost-box';
+    el.textContent = n;
+    el.title = 'Ghost - no physical evidence';
+    grid.appendChild(el);
+  });
+}
+
+function render(){
+  var root = document.getElementById('rooms');
+  root.innerHTML = '';
+
+  ROOMS.forEach(function(room){
+    var total = 0;
+    room.units.forEach(function(u){
+      u.shelves.forEach(function(s){ total += s.boxes.length; });
+    });
+
+    var coLabel = room.checkedOnly ? ' <span style="color:var(--amber);font-size:9px">CHECKED ONLY</span>' : '';
+    var roomEl = document.createElement('div');
+    roomEl.className = 'room';
+    roomEl.id = room.id;
+    roomEl.innerHTML =
+      '<div class="room-hdr" onclick="this.parentElement.classList.toggle(\'collapsed\')">' +
+        '<div class="room-title"><span>' + room.icon + '</span>' + room.name + coLabel + '</div>' +
+        '<div class="room-meta">' + total + ' positions</div>' +
+      '</div><div class="room-body"></div>';
+
+    var body = roomEl.querySelector('.room-body');
+
+    room.units.forEach(function(unit, ui){
+      var unitEl = document.createElement('div');
+      unitEl.className = 'unit';
+      unitEl.innerHTML = '<div class="unit-lbl"><span>' + unit.label + '</span>' +
+        (room.checkedOnly ? '<span class="co-badge">CHECKED ONLY</span>' : '') + '</div>';
+
+      unit.shelves.forEach(function(shelf, si){
+        var shelfEl = document.createElement('div');
+        shelfEl.className = 'shelf';
+        shelfEl.innerHTML = '<div class="shelf-lbl">' + shelf.label + '</div>';
+        var rail = document.createElement('div');
+        rail.className = 'rail';
+
+        var visible = 0;
+        shelf.boxes.forEach(function(b){
+          var card = makeBox(b, room.checkedOnly);
+          if(card){ rail.appendChild(card); visible++; }
+        });
+
+        var slot = document.createElement('div');
+        slot.className = 'add-slot';
+        slot.textContent = '+';
+        (function(r, u, s, ra, sh){
+          slot.addEventListener('click', function(e){
+            e.stopPropagation();
+            openAdd(r, u, s, ra, sh);
+          });
+        })(room, ui, si, rail, shelf);
+        rail.appendChild(slot);
+
+        shelfEl.appendChild(rail);
+        if(room.checkedOnly && visible === 0) shelfEl.style.display = 'none';
+        unitEl.appendChild(shelfEl);
+      });
+
+      var asb = document.createElement('button');
+      asb.className = 'add-shelf-btn';
+      asb.textContent = '+ ADD SHELF';
+      (function(r, u, uel){
+        asb.addEventListener('click', function(){
+          var lbl = prompt('Shelf label:', 'EXTRA');
+          if(!lbl) return;
+          u.shelves.push({label: lbl, boxes: []});
+          render();
+        });
+      })(room, unit, unitEl);
+      unitEl.appendChild(asb);
+      body.appendChild(unitEl);
+    });
+
+    root.appendChild(roomEl);
+  });
+
+  renderGhosts();
+  updateStats();
+}
+
+var addCtx = null;
+function openAdd(room, ui, si, rail, shelf){
+  addCtx = {room:room, ui:ui, si:si, rail:rail, shelf:shelf};
+  document.getElementById('msub').textContent = room.name + ' - ' + shelf.label;
+  document.getElementById('minput').value = '';
+  document.getElementById('mok').onclick = doAdd;
+  document.getElementById('overlay').classList.add('open');
+  setTimeout(function(){ document.getElementById('minput').focus(); }, 80);
+}
+function doAdd(){
+  var raw = document.getElementById('minput').value.trim();
+  if(!raw) return;
+  var val = /^\d+$/.test(raw) ? parseInt(raw) : raw;
+  addCtx.shelf.boxes.push(val);
+  var card = makeBox(val, addCtx.room.checkedOnly);
+  if(card) addCtx.rail.insertBefore(card, addCtx.rail.lastElementChild);
+  save(); updateStats(); closeModal();
+}
+function closeModal(){
+  document.getElementById('overlay').classList.remove('open');
+  addCtx = null;
+}
+document.getElementById('overlay').addEventListener('click', function(e){
+  if(e.target === document.getElementById('overlay')) closeModal();
+});
+
+function updateStats(){
+  var count = Object.keys(checked).length;
+  document.getElementById('sChk').textContent = count;
+  document.getElementById('plabel').textContent = count + ' of ' + TOTAL + ' checked';
+  document.getElementById('pfill').style.width = Math.round(count/TOTAL*100) + '%';
+}
+function collapseAll(){ document.querySelectorAll('.room').forEach(function(r){ r.classList.add('collapsed'); }); }
+function expandAll()  { document.querySelectorAll('.room').forEach(function(r){ r.classList.remove('collapsed'); }); }
+function resetAll(){
+  if(!confirm('Reset all checks?')) return;
+  checked = {};
+  save(); render();
+}
+function exportJSON(){
+  var d = {date: new Date().toISOString(), confirmed: TOTAL, checked: Object.keys(checked), ghosts: GHOST_LIST};
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(d,null,2)], {type:'application/json'}));
+  a.download = 'brb-boxmap-' + new Date().toISOString().slice(0,10) + '.json';
+  a.click();
+}
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape') closeModal();
+  if(e.key === 'Enter' && document.getElementById('overlay').classList.contains('open')) doAdd();
+});
+
+render();
+</script>
+</body>
+</html>

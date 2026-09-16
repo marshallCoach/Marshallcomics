@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Box Quest — Snapshot</title>
+<link rel="stylesheet" href="quest-style.css">
+</head>
+<body>
+<div id="topbar"></div>
+<div class="wrap">
+
+  <div class="intro">
+    <p class="lead">Where the collection stands right now, in one screen. Two tracks run in parallel — cleaning up the <strong>data</strong>, and physically <strong>reorganising the boxes</strong>. Pick up either one where you left off.</p>
+  </div>
+
+  <div class="stats" id="topstats"></div>
+
+  <div class="starthere" id="starthere"></div>
+
+  <div class="tracks">
+    <!-- DATA CLEANUP TRACK -->
+    <div class="track">
+      <div class="thead"><span class="tt">Data Cleanup</span><span class="big" id="dataPct">0%</span></div>
+      <div class="pbar"><div class="pfill green" id="dataFill"></div></div>
+      <div class="plabel"><span id="dataCount">0 / 0 steps</span><span>Quests 0 → E</span></div>
+      <div class="mini" id="dataMini"></div>
+      <a class="go" href="quest-guide.html">Open the step-by-step guide →</a>
+    </div>
+
+    <!-- PHYSICAL REORG TRACK -->
+    <div class="track">
+      <div class="thead"><span class="tt">Physical Reorg</span><span class="big" id="boxPct">0%</span></div>
+      <div class="pbar"><div class="pfill green" id="boxFill"></div></div>
+      <div class="plabel"><span id="boxCount">0 / 0 boxes</span><span>79 boxes · 7 zones</span></div>
+      <div class="mini" id="boxMini"></div>
+      <a class="go" href="quest-board.html">Open the box board →</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Zones at a glance</h2>
+    <div class="legend">
+      <span><span class="swatch" style="background:var(--surface2)"></span> not started</span>
+      <span><span class="swatch" style="background:var(--gold-bg);border-color:#d4a800"></span> in progress</span>
+      <span><span class="swatch" style="background:var(--green-bg);border-color:var(--green-text)"></span> done</span>
+      <span><span class="swatch" style="background:var(--red)"></span> = boxes with flagged duplicates</span>
+    </div>
+    <div class="keygrid" id="zoneGrid"></div>
+  </div>
+
+  <div class="foot" id="foot"></div>
+</div>
+
+<script src="quest-data.js"></script>
+<script src="quest-common.js"></script>
+<script>
+(function () {
+  var D = window.QUEST_DATA;
+  document.getElementById("topbar").innerHTML = BQ.renderTopbar("quest-hub.html");
+
+  // ---- top stats ----
+  var stats = [
+    { v: D.totalRows.toLocaleString(), l: "Comics" },
+    { v: D.boxes.length, l: "Boxes" },
+    { v: D.clone.groups, l: "Clone groups", warn: true },
+    { v: D.dupe.groups, l: "Dup groups", warn: true },
+    { v: D.overCap.length, l: "Over capacity", warn: true },
+  ];
+  document.getElementById("topstats").innerHTML = stats.map(function (s) {
+    return '<div class="stat' + (s.warn ? " warn" : "") + '"><div class="v">' + s.v + '</div><div class="l">' + s.l + "</div></div>";
+  }).join("");
+
+  // ---- data cleanup progress ----
+  var stepState = BQ.readSteps();
+  var allSteps = BQ.allStepIds();
+  var doneSteps = allSteps.filter(function (id) { return stepState[id]; }).length;
+  var dataPct = allSteps.length ? Math.round(doneSteps / allSteps.length * 100) : 0;
+  document.getElementById("dataPct").textContent = dataPct + "%";
+  document.getElementById("dataFill").style.width = dataPct + "%";
+  document.getElementById("dataCount").textContent = doneSteps + " / " + allSteps.length + " steps";
+  document.getElementById("dataMini").innerHTML = D.guide.map(function (ph) {
+    var ids = BQ.phaseStepIds(ph);
+    var dn = ids.filter(function (id) { return stepState[id]; }).length;
+    var full = dn === ids.length && ids.length > 0;
+    return '<span>' + (full ? "✓ " : "") + "Quest " + ph.code + " · " + dn + "/" + ids.length + "</span>";
+  }).join("");
+
+  // ---- physical reorg progress ----
+  var boxState = BQ.readBoxes();
+  var boxesDone = D.boxes.filter(function (b) { return boxState[b.box] === 2; }).length;
+  var boxPct = D.boxes.length ? Math.round(boxesDone / D.boxes.length * 100) : 0;
+  document.getElementById("boxPct").textContent = boxPct + "%";
+  document.getElementById("boxFill").style.width = boxPct + "%";
+  document.getElementById("boxCount").textContent = boxesDone + " / " + D.boxes.length + " boxes";
+  var inProg = D.boxes.filter(function (b) { return boxState[b.box] === 1; }).length;
+  var dupeBoxes = D.boxes.filter(function (b) { return b.dupes > 0; }).length;
+  document.getElementById("boxMini").innerHTML =
+    '<span>' + inProg + ' in progress</span>' +
+    '<span>' + dupeBoxes + ' boxes with dupes</span>' +
+    '<span>' + D.dupe.rows + ' flagged rows</span>';
+
+  // ---- start here: next data phase + next physical box ----
+  var nextPhase = D.guide.find(function (ph) {
+    return BQ.phaseStepIds(ph).some(function (id) { return !stepState[id]; });
+  });
+  var candidates = D.boxes.filter(function (b) { return boxState[b.box] !== 2; })
+    .sort(function (a, b) { return b.dupes - a.dupes || b.rows - a.rows; });
+  var nextBox = candidates[0];
+  var sh = "";
+  if (nextBox) {
+    sh += '<div class="n"><small>NEXT BOX</small>' + nextBox.box + "</div>" +
+      '<div class="b"><strong>' + nextBox.loc + "</strong>" +
+      "<p>" + (nextBox.dupes > 0
+        ? nextBox.dupes + " flagged duplicate rows — highest remaining. " + nextBox.rows + " rows in data. Quick-count first, then spot-check."
+        : "No flagged duplicates — expect a clean count and a fast sort. " + nextBox.rows + " rows.") +
+      ' &nbsp;<a href="quest-board.html" style="color:#f0c869">Go to board →</a></p></div>';
+  } else {
+    sh = '<div class="n"><small>DONE</small>✓</div><div class="b"><strong>All boxes cleared</strong><p>Every box physically verified. Log the final relocation list and take the win.</p></div>';
+  }
+  if (nextPhase) {
+    sh += '<div class="b" style="border-left:1px solid #3a3a3a;padding-left:16px"><strong>Next data step — Quest ' + nextPhase.code + ": " + nextPhase.title + "</strong>" +
+      "<p>" + nextPhase.blurb.split(".")[0] + '. &nbsp;<a href="quest-guide.html" style="color:#f0c869">Open guide →</a></p></div>';
+  }
+  document.getElementById("starthere").innerHTML = sh;
+
+  // ---- zone grid ----
+  var zones = [];
+  var seen = {};
+  D.boxes.forEach(function (b) { if (!seen[b.zone]) { seen[b.zone] = true; zones.push(b.zone); } });
+  document.getElementById("zoneGrid").innerHTML = zones.map(function (z) {
+    var bs = D.boxes.filter(function (b) { return b.zone === z; });
+    var dn = bs.filter(function (b) { return boxState[b.box] === 2; }).length;
+    var chips = bs.slice().sort(function (a, b) { return a.box - b.box; }).map(function (b) {
+      var st = boxState[b.box] || 0;
+      var bg = st === 2 ? "var(--green-bg)" : st === 1 ? "var(--gold-bg)" : "var(--surface)";
+      var bc = b.dupes > 0 ? "var(--red)" : "var(--border)";
+      return '<span class="chip" title="' + b.loc + ' · ' + b.rows + ' rows' + (b.dupes ? " · " + b.dupes + " dupes" : "") +
+        '" style="background:' + bg + ";border-color:" + bc + ';color:' + (b.dupes ? "var(--red)" : "var(--text2)") + '">' + b.box + "</span>";
+    }).join("");
+    return '<div class="keyzone"><div class="zt">' + z + " · " + dn + "/" + bs.length + " done</div>" + chips + "</div>";
+  }).join("");
+
+  document.getElementById("foot").innerHTML =
+    "Box Quest · data source: <b>" + D.source + "</b> · generated " + D.generated +
+    " · dupe key: Title+Issue#+Year+Box#";
+})();
+</script>
+</body>
+</html>

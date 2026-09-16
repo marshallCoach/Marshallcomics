@@ -1,6 +1,7 @@
 import { useState, useMemo, useEffect, useRef } from "react";
 import { DATA } from "@/data/data";
 import { pubColors } from "@/utils/coverThumbnails";
+import { CoverImage } from "@/components/CoverImage";
 
 const comics = DATA.comics;
 const boxes  = DATA.boxes;
@@ -133,15 +134,16 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
     <div style={{ maxWidth: 1200, margin: "0 auto", padding: "18px 18px 60px" }}>
 
       {/* Intro label */}
-      <div style={{ marginBottom: 14, fontFamily: "'Bebas Neue',sans-serif",
-        fontSize: "1.1rem", letterSpacing: "2px", color: "var(--muted)" }}>
+      <div style={{ marginBottom: 14, fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+        fontSize: "0.875rem", letterSpacing: "2px", color: "var(--muted)" }}>
         SELECT A BOX TO VISUALIZE ITS CONTENTS
       </div>
 
       {/* Box grid — sectioned by publisher */}
       {(() => {
+        // Only pure-numeric boxes here — CC1..CC6 and status boxes render as tiles below.
         const sorted_ = [...boxes]
-          .filter(b => Number(b.Num.replace(/\D/g,"")) > 0)
+          .filter(b => /^\d+$/.test(b.Num.replace(/^BOX\s*/i,"").trim()))
           .sort((a,b) => Number(a.Num.replace(/\D/g,"")) - Number(b.Num.replace(/\D/g,"")));
 
         function getGroup(num: string): string {
@@ -179,15 +181,15 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                     borderBottom:`2px solid ${sec.color}22`, paddingBottom:6,
                   }}>
                     <span style={{
-                      fontFamily:"'Bebas Neue',sans-serif", fontSize: "1.1rem",
+                      fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
                       letterSpacing:"3px", color:sec.color,
                     }}>{sec.label}</span>
-                    <span style={{ fontSize: "1.1rem", color:"var(--muted2)", fontFamily:"'Crimson Pro',serif" }}>
+                    <span style={{ fontSize: "0.875rem", color:"var(--muted2)", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>
                       {sec.subtitle}
                     </span>
                     <span style={{
-                      marginLeft:"auto", fontFamily:"'Bebas Neue',sans-serif",
-                      fontSize: "1.1rem", letterSpacing:"1.5px", color:"var(--muted)",
+                      marginLeft:"auto", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+                      fontSize: "0.875rem", letterSpacing:"1.5px", color:"var(--muted)",
                     }}>
                       {secComics.toLocaleString()} books · {secKeys} keys
                     </span>
@@ -225,7 +227,9 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                         >
                           <div className="box-tile-count">{b.Comics}</div>
                           <div className="box-tile-num">{b.Num.replace("BOX ", "Box ")}</div>
-                          {Number(b.Keys)   > 0 && <div className="box-tile-keys">{b.Keys} K</div>}
+                          {b.Label && <div className="box-tile-num" style={{ fontSize:"0.62em", opacity:0.85, letterSpacing:"1px", color:sec.color }}>{b.Label}</div>}
+                          {b.Code && <div className="box-tile-num" style={{ fontSize:"0.7em", opacity:0.7, letterSpacing:"0.5px" }}>{b.Code}</div>}
+                          {Number(b.Keys)   > 0 && <div className="box-tile-keys">{b.Keys} Keys</div>}
                           {Number(b.Signed) > 0 && <div className="box-tile-sgn">{b.Signed} S</div>}
                         </div>
                       );
@@ -234,6 +238,60 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                 </div>
               );
             })}
+          </div>
+        );
+      })()}
+
+      {/* Display & status boxes — CC1–CC6, UNKNOWN, AT CGC — as clickable box tiles */}
+      {(() => {
+        const isNumeric = (num: string) => /^\d+$/.test(num.replace(/^BOX\s*/i, "").trim());
+        const special = boxes.filter(b => !isNumeric(b.Num) && Number(b.Comics) > 0);
+        if (special.length === 0) return null;
+        const isCC = (num: string) => /^CC\d+$/i.test(num.trim());
+        const GROUPS = [
+          { key: "cc",     label: "CC — COOL COVERS",    subtitle: "Display boxes CC1–CC6",        color: "#0891b2",
+            list: special.filter(b => isCC(b.Num)).sort((a,b) => a.Num.localeCompare(b.Num)) },
+          { key: "status", label: "UNASSIGNED / STATUS", subtitle: "Unknown box, at CGC, pressing", color: "#d97706",
+            list: special.filter(b => !isCC(b.Num)) },
+        ];
+        return (
+          <div style={{ marginTop: 32, marginBottom: 24, display: "flex", flexDirection: "column", gap: 18 }}>
+            {GROUPS.map(gr => gr.list.length === 0 ? null : (
+              <div key={gr.key}>
+                <div style={{ display: "flex", alignItems: "baseline", gap: 10, marginBottom: 8, borderBottom: `2px solid ${gr.color}22`, paddingBottom: 6 }}>
+                  <span style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "3px", color: gr.color }}>{gr.label}</span>
+                  <span style={{ fontSize: "0.875rem", color: "var(--muted2)", fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>{gr.subtitle}</span>
+                  <span style={{ marginLeft: "auto", fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1.5px", color: "var(--muted)" }}>
+                    {gr.list.reduce((s, b) => s + Number(b.Comics), 0).toLocaleString()} books · {gr.list.reduce((s, b) => s + Number(b.Keys), 0)} keys
+                  </span>
+                </div>
+                <div className="boxes-grid">
+                  {gr.list.map(b => {
+                    const isSelected = selectedBox === b.Num;
+                    return (
+                      <div
+                        key={b.Num}
+                        onClick={() => selectBox(b.Num)}
+                        onMouseEnter={e => { const r = (e.currentTarget as HTMLElement).getBoundingClientRect(); setPanelPos({ x: r.right + 10, y: r.top }); setHoveredBox(b.Num); }}
+                        onMouseLeave={() => setHoveredBox(null)}
+                        className="box-tile"
+                        title={b.Num}
+                        style={isSelected ? { borderColor: gr.color, background: `${gr.color}0e`, boxShadow: `0 4px 14px ${gr.color}38`, transform: "translateY(-2px)" } : {}}
+                      >
+                        <div className="box-tile-count">{b.Comics}</div>
+                        <div className="box-tile-num" style={isCC(b.Num) ? {} : { fontSize: "0.58em", lineHeight: 1.2 }}>
+                          {isCC(b.Num) ? b.Num.toUpperCase()
+                            : b.Num.startsWith("UNKNOWN") ? "UNKNOWN"
+                            : b.Num.replace(/^AT /, "").replace(" — ", " ")}
+                        </div>
+                        {Number(b.Keys)   > 0 && <div className="box-tile-keys">{b.Keys} Keys</div>}
+                        {Number(b.Signed) > 0 && <div className="box-tile-sgn">{b.Signed} S</div>}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
           </div>
         );
       })()}
@@ -250,8 +308,8 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
           boxShadow:"0 8px 32px rgba(0,0,0,0.14)",
           pointerEvents:"none",
         }}>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.15rem", color:"var(--red)", letterSpacing:"2px", lineHeight:1 }}>{hoveredBoxData.Num}</div>
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize: "1.1rem", color:"var(--muted2)", letterSpacing:"1px", marginBottom:10 }}>
+          <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:"var(--red)", letterSpacing:"2px", lineHeight:1 }}>{hoveredBoxData.Num}</div>
+          <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", color:"var(--muted2)", letterSpacing:"1px", marginBottom:10 }}>
             {hoveredBoxData.Label.replace(/^Box \d+ — /i,"")}
           </div>
           <div style={{ display:"flex", gap:20, marginBottom:10 }}>
@@ -261,22 +319,22 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
               { val:hoveredBoxData.Signed, lbl:"SIGNED" },
             ]).map(s => (
               <div key={s.lbl} style={{ textAlign:"center" }}>
-                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.3rem", color:"var(--red)", lineHeight:1 }}>{s.val}</div>
-                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize: "1.1rem", letterSpacing:"2px", color:"var(--muted)", marginTop:1 }}>{s.lbl}</div>
+                <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"1.75rem", color:"var(--red)", lineHeight:1 }}>{s.val}</div>
+                <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing:"2px", color:"var(--muted)", marginTop:1 }}>{s.lbl}</div>
               </div>
             ))}
           </div>
           {hoveredBoxData.Notes && (
-            <div style={{ fontSize: "1.1rem", color:"var(--muted2)", lineHeight:1.5, borderTop:"1px solid var(--border)", paddingTop:8 }}>
+            <div style={{ fontSize: "0.875rem", color:"var(--muted2)", lineHeight:1.5, borderTop:"1px solid var(--border)", paddingTop:8 }}>
               {hoveredBoxData.Notes}
             </div>
           )}
           {hoveredBoxData.YearRange && (
-            <div style={{ fontSize: "1.1rem", color:"var(--muted)", marginTop:6 }}>
+            <div style={{ fontSize: "0.875rem", color:"var(--muted)", marginTop:6 }}>
               {hoveredBoxData.YearRange}
             </div>
           )}
-          <div style={{ fontSize: "1.1rem", color:"var(--muted)", marginTop:8, fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px", opacity:0.65 }}>
+          <div style={{ fontSize: "0.875rem", color:"var(--muted)", marginTop:8, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1.5px", opacity:0.65 }}>
             CLICK TO EXPLORE →
           </div>
         </div>
@@ -285,7 +343,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
       {/* Empty state */}
       {!selectedBox && (
         <div style={{ textAlign: "center", color: "var(--muted)", padding: "60px 20px",
-          fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem", letterSpacing: "2px" }}>
+          fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "2px" }}>
           TAP ANY BOX ABOVE TO SEE ITS CONTENTS
         </div>
       )}
@@ -298,14 +356,22 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
             borderRadius: 8, padding: "14px 18px", marginBottom: 14,
             display: "flex", alignItems: "flex-start", gap: 16, flexWrap: "wrap" }}>
             <div style={{ flex: 1 }}>
-              <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.4rem",
+              <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "1.75rem",
                 color: "var(--red)", letterSpacing: "2px", lineHeight: 1 }}>
                 {selectedBoxData.Num}
+                {(selectedBoxData as { labeledAs?: string }).labeledAs && (
+                  <span style={{ fontSize: "0.9rem", opacity: 0.7 }}> (labeled {(selectedBoxData as { labeledAs?: string }).labeledAs})</span>
+                )}
               </div>
-              <div style={{ fontSize: "1.1rem", fontWeight: 600, color: "var(--brown-light)", marginTop: 3 }}>
+              {(selectedBoxData.Location || selectedBoxData.Code) && (
+                <div style={{ fontSize: "0.8rem", fontWeight: 600, color: "var(--red)", letterSpacing: "1px", marginTop: 4 }}>
+                  📍 {selectedBoxData.Location || selectedBoxData.Code}
+                </div>
+              )}
+              <div style={{ fontSize: "0.875rem", fontWeight: 600, color: "var(--brown-light)", marginTop: 3 }}>
                 {selectedBoxData.Label.replace(/^Box \d+ — /i, "")}
               </div>
-              <div style={{ fontSize: "1.1rem", color: "var(--muted)", marginTop: 4 }}>
+              <div style={{ fontSize: "0.875rem", color: "var(--muted)", marginTop: 4 }}>
                 {selectedBoxData.YearRange}
               </div>
             </div>
@@ -317,9 +383,9 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                 { val: titleGroups.length,     lbl: "TITLES" },
               ].map(s => (
                 <div key={s.lbl} style={{ textAlign: "center" }}>
-                  <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.3rem",
+                  <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "1.75rem",
                     color: "var(--red)", letterSpacing: "1px", lineHeight: 1 }}>{s.val}</div>
-                  <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem",
+                  <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
                     letterSpacing: "1.5px", color: "var(--muted)", marginTop: 2 }}>{s.lbl}</div>
                 </div>
               ))}
@@ -334,7 +400,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                 color: view === v ? "#fff" : "var(--muted2)",
                 border: view === v ? "1.5px solid var(--red)" : "1.5px solid var(--border)",
                 borderRadius: 5, padding: "6px 18px", cursor: "pointer",
-                fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem", letterSpacing: "1.5px",
+                fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1.5px",
                 transition: "all 0.15s",
               }}>
                 {v === "visual" ? "Visual Box" : v === "runs" ? "By Run" : `Comics (${boxComics.length})`}
@@ -347,7 +413,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                 color: sorted ? "#a78bfa" : "var(--muted2)",
                 border: sorted ? "1.5px solid #a78bfa" : "1.5px solid var(--border)",
                 borderRadius: 5, padding: "6px 18px", cursor: "pointer",
-                fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem", letterSpacing: "1.5px",
+                fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1.5px",
                 transition: "all 0.15s",
                 marginLeft: "auto",
               }}>
@@ -359,7 +425,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
           {/* Title index — ABOVE the visual, sorted view only */}
           {view === "visual" && sorted && titleGroups.length > 0 && (
             <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 10, padding: "8px 10px", background: "var(--surface2)", borderRadius: 6, border: "1px solid var(--border)" }}>
-              <div style={{ width:"100%", fontFamily:"'Bebas Neue',sans-serif", fontSize: "1.1rem", letterSpacing:"2px", color:"var(--muted)", marginBottom:3 }}>
+              <div style={{ width:"100%", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing:"2px", color:"var(--muted)", marginBottom:3 }}>
                 CLICK A TITLE TO HIGHLIGHT — {titleGroups.length} TITLES
               </div>
               {titleGroups.map((g, i) => (
@@ -369,7 +435,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                     background: selectedTitle === g.title ? g.color : "var(--surface)",
                     border: `1.5px solid ${g.color}`,
                     borderRadius: 4, padding: "3px 10px", cursor: "pointer",
-                    fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem",
+                    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
                     letterSpacing: "0.5px",
                     color: selectedTitle === g.title ? "#fff" : g.color,
                     transition: "all 0.12s",
@@ -386,10 +452,10 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
           {view === "visual" && (
             <div style={{ display: "grid",
               gridTemplateColumns: selectedTitle ? "1fr 300px" : "1fr",
-              gap: 16, alignItems: "start" }}>
+              gap: 16, alignItems: "start", width: "100%", minWidth: 0 }}>
 
-              <div>
-                <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem",
+              <div style={{ minWidth: 0 }}>
+                <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
                   letterSpacing: "2px", color: "var(--muted)", marginBottom: 8 }}>
                   {sorted
                     ? `${titleGroups.length} TITLES · SORTED ALPHABETICALLY · CLICK A GROUP TO INSPECT`
@@ -407,9 +473,11 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                   overflowX: "auto",
                   position: "relative",
                   boxShadow: "0 4px 16px rgba(0,0,0,0.12)",
+                  maxWidth: "100%",
+                  boxSizing: "border-box",
                 }}>
                   <div style={{ position: "absolute", top: -18, left: "50%", transform: "translateX(-50%)",
-                    fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem",
+                    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
                     letterSpacing: "3px", color: "#666" }}>
                     {selectedBoxData.Num} · {boxComics.length} COMICS
                   </div>
@@ -432,8 +500,8 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                             <div style={{
                               writingMode: "vertical-rl",
                               transform: "rotate(180deg)",
-                              fontSize: "1.1rem",
-                              fontFamily: "'Bebas Neue',sans-serif",
+                              fontSize: "0.875rem",
+                              fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
                               letterSpacing: "1px",
                               color: isActive ? group.color : "#888",
                               maxHeight: 80,
@@ -473,7 +541,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                               })}
                             </div>
                             {/* Count badge */}
-                            <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem",
+                            <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
                               letterSpacing: "0.5px", color: isActive ? group.color : "#555",
                               marginTop: 2, transition: "color 0.15s" }}>
                               {group.issues.length}
@@ -523,7 +591,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
 
                 {/* Legend */}
                 <div style={{ display: "flex", gap: 14, flexWrap: "wrap", marginTop: 10,
-                  fontSize: "1.1rem", fontFamily: "'Bebas Neue',sans-serif",
+                  fontSize: "0.875rem", fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
                   letterSpacing: "1px", color: "var(--muted)" }}>
                   <span>
                     <span style={{ display:"inline-block", width:5, height:14, background:"#888",
@@ -547,14 +615,14 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                 <div style={{ background: "var(--surface)", border: "1.5px solid var(--border)",
                   borderRadius: 8, padding: "16px", position: "sticky", top: 170 }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 10 }}>
-                    <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem",
+                    <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
                       letterSpacing: "2px", color: selectedTitleGroup.color }}>TITLE DETAIL</div>
                     <button onClick={() => setSelectedTitle(null)} style={{
                       background: "none", border: "none", cursor: "pointer",
-                      color: "var(--muted)", fontSize: "1.1rem", lineHeight: 1, padding: 0 }}>✕</button>
+                      color: "var(--muted)", fontSize: "0.875rem", lineHeight: 1, padding: 0 }}>✕</button>
                   </div>
 
-                  <div style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--brown-light)",
+                  <div style={{ fontSize: "0.875rem", fontWeight: 700, color: "var(--brown-light)",
                     lineHeight: 1.3, marginBottom: 8, borderLeft: `3px solid ${selectedTitleGroup.color}`,
                     paddingLeft: 10 }}>
                     {selectedTitleGroup.title}
@@ -567,9 +635,9 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                       { val: selectedTitleGroup.signedCount,   lbl: "SIGNED" },
                     ].map(s => (
                       <div key={s.lbl} style={{ textAlign: "center" }}>
-                        <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.2rem",
+                        <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
                           color: "var(--red)", lineHeight: 1 }}>{s.val}</div>
-                        <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem",
+                        <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
                           letterSpacing: "1.5px", color: "var(--muted)", marginTop: 2 }}>{s.lbl}</div>
                       </div>
                     ))}
@@ -586,8 +654,8 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                           { l: "Artist",    v: first.Artist },
                           { l: "Era",       v: first.Era },
                         ].filter(r => r.v).map(r => (
-                          <div key={r.l} style={{ display: "flex", gap: 8, marginBottom: 3, fontSize: "1.1rem" }}>
-                            <span style={{ color: "var(--muted)", minWidth: 60, flexShrink: 0, fontSize: "1.1rem" }}>{r.l}</span>
+                          <div key={r.l} style={{ display: "flex", gap: 8, marginBottom: 3, fontSize: "0.875rem" }}>
+                            <span style={{ color: "var(--muted)", minWidth: 60, flexShrink: 0, fontSize: "0.875rem" }}>{r.l}</span>
                             <span style={{ color: "var(--text2)", lineHeight: 1.4 }}>{r.v.slice(0, 80)}</span>
                           </div>
                         ))}
@@ -596,7 +664,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                   })()}
 
                   {/* Issue list */}
-                  <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem",
+                  <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
                     letterSpacing: "1.5px", color: "var(--muted)", marginBottom: 6 }}>
                     ISSUES IN THIS BOX
                   </div>
@@ -609,7 +677,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                           background: isKey ? "#fff8e0" : "var(--surface2)",
                           border: `1.5px solid ${isKey ? "#d4a800" : "var(--border)"}`,
                           borderRadius: 4, padding: "3px 8px",
-                          fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem",
+                          fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
                           letterSpacing: "0.5px", color: isKey ? "#8a6000" : "var(--text2)",
                         }}>
                           {(()=>{const ip=parseIssueParts(c.Issue);return<>{ip.main}{ip.legacy&&<span style={{fontSize:"0.55em",opacity:0.65,marginLeft:2}}>({ip.legacy})</span>}</>;})()}
@@ -623,10 +691,10 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                   {/* Key reasons */}
                   {selectedTitleGroup.issues.some(c => c.Key_Reason) && (
                     <div style={{ marginTop: 12 }}>
-                      <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem",
+                      <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
                         letterSpacing: "1.5px", color: "var(--muted)", marginBottom: 6 }}>KEY NOTES</div>
                       {selectedTitleGroup.issues.filter(c => c.Key_Reason).map((c, i) => (
-                        <div key={i} style={{ fontSize: "1.1rem", color: "var(--text2)",
+                        <div key={i} style={{ fontSize: "0.875rem", color: "var(--text2)",
                           lineHeight: 1.4, marginBottom: 5, paddingLeft: 8,
                           borderLeft: "2px solid #d4a800" }}>
                           <span style={{ color: "#8a6000", fontWeight: 600 }}>{(()=>{const ip=parseIssueParts(c.Issue);return<>{ip.main}{ip.legacy&&<span style={{fontSize:"0.8em",fontWeight:400,opacity:0.7,marginLeft:3}}>({ip.legacy})</span>}</>;})()}</span> — {c.Key_Reason.slice(0, 120)}
@@ -639,10 +707,39 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
             </div>
           )}
 
+          {/* ── COVER STRIP — scrollable thumbnails below the spines ────────── */}
+          {view === "visual" && boxComics.length > 0 && (
+            <div style={{ marginTop: 22, borderTop: "1px solid var(--border)", paddingTop: 14 }}>
+              <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "2px", color: "var(--muted)", marginBottom: 8 }}>
+                COVERS · {boxComics.length} — SCROLL →
+              </div>
+              <div style={{ display: "flex", gap: 12, overflowX: "auto", paddingBottom: 12 }}>
+                {boxComics.map((c, i) => {
+                  const dim = selectedTitle ? c.Title !== selectedTitle : false;
+                  return (
+                    <figure key={i} onClick={() => setSelectedTitle(selectedTitle === c.Title ? null : c.Title)}
+                      style={{ margin: 0, flex: "0 0 auto", width: 74, cursor: "pointer", textAlign: "center", opacity: dim ? 0.28 : 1, transition: "opacity .15s" }}>
+                      <CoverImage comic={c} width={74} height={111} objectFit="contain"
+                        style={{ borderRadius: 3, background: "var(--surface2)", border: "1px solid var(--border)" }} />
+                      <figcaption title={`${c.Title} #${c.Issue}`}
+                        style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.72rem", fontWeight: 600, color: "var(--red)", marginTop: 4, lineHeight: 1.2 }}>
+                        #{c.Issue}
+                      </figcaption>
+                      <figcaption title={c.Title}
+                        style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.68rem", color: "var(--muted)", lineHeight: 1.2, maxWidth: 74, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+                        {c.Title}
+                      </figcaption>
+                    </figure>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
           {/* ── RUNS VIEW ───────────────────────────────────────────────────── */}
           {view === "runs" && (
             <div>
-              <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem",
+              <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
                 letterSpacing: "2px", color: "var(--muted)", marginBottom: 12 }}>
                 {titleGroups.length} TITLE{titleGroups.length !== 1 ? "S" : ""} IN THIS BOX — ALPHABETICAL
               </div>
@@ -657,7 +754,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
           {/* ── COMICS LIST VIEW ─────────────────────────────────────────────── */}
           {view === "comics" && (
             <div>
-              <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem",
+              <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
                 letterSpacing: "2px", color: "var(--muted)", marginBottom: 12 }}>
                 {boxComics.length} COMICS — BOX ORDER
               </div>
@@ -686,37 +783,37 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                       {/* Top row: entry # + badges */}
                       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                         <span style={{
-                          fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.1rem",
+                          fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
                           letterSpacing: "1px", color: "var(--muted)",
                         }}>#{c.Entry}</span>
                         <div style={{ display: "flex", gap: 4 }}>
-                          {isKey    && <span className="badge bkey"  style={{ fontSize: "1.1rem" }}>KEY</span>}
-                          {isSigned && <span className="badge bgold" style={{ fontSize: "1.1rem" }}>SIGNED</span>}
-                          {c.Platform && <span className="badge bb"  style={{ fontSize: "1.1rem" }}>{c.Platform}</span>}
+                          {isKey    && <span className="badge bkey"  style={{ fontSize: "0.875rem" }}>KEY</span>}
+                          {isSigned && <span className="badge bgold" style={{ fontSize: "0.875rem" }}>SIGNED</span>}
+                          {c.Platform && <span className="badge bb"  style={{ fontSize: "0.875rem" }}>{c.Platform}</span>}
                         </div>
                       </div>
 
                       {/* Title */}
                       <div style={{
-                        fontFamily: "'Crimson Pro',serif", fontWeight: 700,
-                        fontSize: "1.1rem", color: "var(--brown-light)", lineHeight: 1.25,
+                        fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontWeight: 700,
+                        fontSize: "0.875rem", color: "var(--brown-light)", lineHeight: 1.25,
                       }}>{c.Title}</div>
 
                       {/* Issue + Vol + Year */}
-                      <div style={{ fontSize: "1.1rem", color: "var(--muted2)" }}>
-                        {(()=>{const ip=parseIssueParts(c.Issue);return<>{ip.main}{ip.legacy&&<span style={{fontSize: "1.1rem",fontFamily:"'Bebas Neue',sans-serif",letterSpacing:"1px",background:"#e8f0fe",color:"#1d4ed8",borderRadius:3,padding:"1px 5px",marginLeft:4}}>{ip.legacy}</span>}</>;})()}
+                      <div style={{ fontSize: "0.875rem", color: "var(--muted2)" }}>
+                        {(()=>{const ip=parseIssueParts(c.Issue);return<>{ip.main}{ip.legacy&&<span style={{fontSize: "0.875rem",fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",letterSpacing:"1px",background:"#e8f0fe",color:"#1d4ed8",borderRadius:3,padding:"1px 5px",marginLeft:4}}>{ip.legacy}</span>}</>;})()}
                         {c.Volume && c.Volume !== "1" ? ` · Vol ${c.Volume}` : ""}
                         {c.Year ? ` · ${c.Year}` : ""}
                       </div>
 
                       {/* Publisher */}
                       {c.Publisher && (
-                        <div style={{ fontSize: "1.1rem", color: "var(--muted)" }}>{c.Publisher}</div>
+                        <div style={{ fontSize: "0.875rem", color: "var(--muted)" }}>{c.Publisher}</div>
                       )}
 
                       {/* Writer / Artist */}
                       {(c.Writer || c.Artist) && (
-                        <div style={{ fontSize: "1.1rem", color: "var(--muted2)", lineHeight: 1.4 }}>
+                        <div style={{ fontSize: "0.875rem", color: "var(--muted2)", lineHeight: 1.4 }}>
                           {c.Writer && <span><span style={{ color: "var(--muted)" }}>W:</span> {c.Writer}</span>}
                           {c.Writer && c.Artist && c.Artist !== c.Writer && <span style={{ color: "var(--muted)", margin: "0 4px" }}>·</span>}
                           {c.Artist && c.Artist !== c.Writer && <span><span style={{ color: "var(--muted)" }}>A:</span> {c.Artist}</span>}
@@ -726,7 +823,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                       {/* Key reason */}
                       {isKey && c.Key_Reason && (
                         <div style={{
-                          fontSize: "1.1rem", color: "#7a5500",
+                          fontSize: "0.875rem", color: "#7a5500",
                           background: "#fff8e0", borderRadius: 4,
                           padding: "5px 8px", lineHeight: 1.4, marginTop: 2,
                         }}>{c.Key_Reason.slice(0, 130)}</div>
@@ -734,14 +831,14 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
 
                       {/* Signed by */}
                       {isSigned && c.Signed_By && (
-                        <div style={{ fontSize: "1.1rem", color: "#16a34a" }}>
+                        <div style={{ fontSize: "0.875rem", color: "#16a34a" }}>
                           ✍ {c.Signed_By}{c.Personal ? ` — "${c.Personal}"` : ""}
                         </div>
                       )}
 
                       {/* Values */}
                       {(nmVal || vfVal) && (
-                        <div style={{ display: "flex", gap: 10, fontSize: "1.1rem", marginTop: 2 }}>
+                        <div style={{ display: "flex", gap: 10, fontSize: "0.875rem", marginTop: 2 }}>
                           {nmVal && <span style={{ color: "var(--green-text)" }}>NM <strong>{nmVal}</strong></span>}
                           {vfVal && <span style={{ color: "var(--muted2)" }}>VF <strong>{vfVal}</strong></span>}
                         </div>
@@ -770,36 +867,36 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
           minWidth:160,
         }}>
           <div style={{
-            fontFamily:"'Bebas Neue',sans-serif", fontSize: "1.1rem",
+            fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
             letterSpacing:"1.5px", color:"var(--red)", marginBottom:3,
           }}>
             {hoveredSpine.title}
           </div>
           <div style={{
-            fontFamily:"'Crimson Pro',serif", fontSize: "1.1rem",
+            fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem",
             color:"var(--text2)", display:"flex", alignItems:"center", gap:6, flexWrap:"wrap",
           }}>
             <span style={{color:"var(--muted)"}}>#{hoveredSpine.issue}</span>
-            {hoveredSpine.year && <span style={{color:"var(--muted2)", fontSize: "1.1rem"}}>{hoveredSpine.year}</span>}
+            {hoveredSpine.year && <span style={{color:"var(--muted2)", fontSize: "0.875rem"}}>{hoveredSpine.year}</span>}
             {hoveredSpine.isKey && (
               <span style={{
                 background:"#fff8e0", color:"#8a6000",
                 border:"1px solid #d4a800", borderRadius:3,
-                padding:"1px 6px", fontSize: "1.1rem",
-                fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px",
+                padding:"1px 6px", fontSize: "0.875rem",
+                fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px",
               }}>★ KEY</span>
             )}
             {hoveredSpine.isSigned && (
               <span style={{
                 background:"#f0faf0", color:"#1a7a1a",
                 border:"1px solid #c8e6c8", borderRadius:3,
-                padding:"1px 6px", fontSize: "1.1rem",
-                fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px",
+                padding:"1px 6px", fontSize: "0.875rem",
+                fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px",
               }}>✍ SGD</span>
             )}
           </div>
           {hoveredSpine.publisher && (
-            <div style={{ fontSize: "1.1rem", color:"var(--muted)", marginTop:4, fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>
+            <div style={{ fontSize: "0.875rem", color:"var(--muted)", marginTop:4, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px" }}>
               {hoveredSpine.publisher}
               {hoveredSpine.writer && <span style={{ marginLeft:6, color:"var(--muted2)" }}>{hoveredSpine.writer}</span>}
             </div>
@@ -820,26 +917,26 @@ function RunBlock({ group }: { group: TitleGroup }) {
         display: "flex", alignItems: "center", gap: 10, padding: "10px 14px",
         cursor: "pointer" }}>
         <div style={{ flex: 1 }}>
-          <span style={{ fontSize: "1.1rem", fontWeight: 600, color: "var(--brown-light)" }}>{group.title}</span>
-          <span style={{ fontSize: "1.1rem", color: "var(--muted)", marginLeft: 8 }}>
+          <span style={{ fontSize: "0.875rem", fontWeight: 600, color: "var(--brown-light)" }}>{group.title}</span>
+          <span style={{ fontSize: "0.875rem", color: "var(--muted)", marginLeft: 8 }}>
             {group.issues.length} issue{group.issues.length !== 1 ? "s" : ""}
           </span>
         </div>
         <div style={{ display: "flex", gap: 5 }}>
           {group.keyCount > 0 && (
             <span style={{ background: "#fff8e0", color: "#8a6000", border: "1px solid #d4a800",
-              borderRadius: 3, padding: "1px 6px", fontSize: "1.1rem",
-              fontFamily: "'Bebas Neue',sans-serif", letterSpacing: "1px" }}>
+              borderRadius: 3, padding: "1px 6px", fontSize: "0.875rem",
+              fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing: "1px" }}>
               {group.keyCount} KEY
             </span>
           )}
           {group.signedCount > 0 && (
             <span style={{ background: "var(--green-bg)", color: "var(--green-text)", border: "1px solid #c8e6c8",
-              borderRadius: 3, padding: "1px 6px", fontSize: "1.1rem",
-              fontFamily: "'Bebas Neue',sans-serif", letterSpacing: "1px" }}>SGD</span>
+              borderRadius: 3, padding: "1px 6px", fontSize: "0.875rem",
+              fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing: "1px" }}>SGD</span>
           )}
         </div>
-        <span style={{ color: "var(--muted)", fontSize: "1.1rem", flexShrink: 0 }}>{open ? "▲" : "▼"}</span>
+        <span style={{ color: "var(--muted)", fontSize: "0.875rem", flexShrink: 0 }}>{open ? "▲" : "▼"}</span>
       </div>
 
       {open && (
@@ -852,8 +949,8 @@ function RunBlock({ group }: { group: TitleGroup }) {
                 <div key={i} title={c.Key_Reason || c.Arc} style={{
                   background: isKey ? "#fff8e0" : "var(--surface2)",
                   border: isKey ? "1.5px solid #d4a800" : "1.5px solid var(--border)",
-                  borderRadius: 4, padding: "3px 8px", fontSize: "1.1rem",
-                  fontFamily: "'Bebas Neue',sans-serif", letterSpacing: "0.5px",
+                  borderRadius: 4, padding: "3px 8px", fontSize: "0.875rem",
+                  fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing: "0.5px",
                   color: isKey ? "#8a6000" : "var(--text2)",
                 }}>
                   {(()=>{const ip=parseIssueParts(c.Issue);return<>{ip.main}{ip.legacy&&<span style={{fontSize:"0.55em",opacity:0.65,marginLeft:2}}>({ip.legacy})</span>}</>;})()}
