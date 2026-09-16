@@ -63,6 +63,9 @@ def main():
         return H.index(n) + 1 if n in H else None
     cT, cI, cY, cV, cP, cB, cE, cD = (ci("Title"), ci("Issue #"), ci("Year"), ci("Volume"),
                                       ci("Publisher"), ci("Box #"), ci("Era"), ci("Date Added"))
+    cPD = ci("Publication Date")
+    if cPD is None:
+        cPD = ws.max_column + 1; ws.cell(1, cPD, "Publication Date")
     for name, col in (("Title", cT), ("Issue #", cI), ("Year", cY), ("Box #", cB)):
         if col is None:
             sys.exit(f"required column '{name}' not found in sheet")
@@ -91,8 +94,10 @@ def main():
             k = ((rec.get("title") or "").strip().lower(), ni(rec.get("issue")), str(rec.get("box") or "").strip())
             r = idx.get(k)
             if r and cD:
-                ws.cell(r, cD, stamp); fixed += 1
-                print(f"  restamp: {rec.get('title')} #{ni(rec.get('issue'))} Box {k[2]} -> Date_Added={stamp}")
+                ws.cell(r, cD, stamp)
+                ws.cell(r, cPD, today)  # today as publish date → shows on Release Timeline
+                fixed += 1
+                print(f"  restamp: {rec.get('title')} #{ni(rec.get('issue'))} Box {k[2]} -> Date_Added={stamp}, Pub_Date={today}")
             elif not r:
                 print(f"  NOT FOUND (skip): {rec.get('title')} #{ni(rec.get('issue'))} Box {k[2]}")
         print(f"\n  Rows restamped: {fixed}")
@@ -125,6 +130,7 @@ def main():
             ws.cell(at, cV, (rec.get("volume") or "").strip())
         if cE: ws.cell(at, cE, (rec.get("era") or "Modern").strip())
         if cD: ws.cell(at, cD, stamp)
+        if cPD: ws.cell(at, cPD, today)  # new pull = released ~today → Recent + Release Timeline
         print(f"  + {title} #{issue} ({year}) {rec.get('publisher','')} -> Box {box}"
               + (f"  Vol {rec.get('volume')}" if (rec.get('volume') or '').strip() else ""))
         existing.add(k); added += 1; at += 1
