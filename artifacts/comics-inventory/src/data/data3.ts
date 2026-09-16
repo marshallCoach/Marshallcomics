@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_1609_0737.xlsx  |  Generated: 2026-09-16
+// Source: comics_inventory_1609_1954.xlsx  |  Generated: 2026-09-16
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -235838,7 +235838,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Crossover: ``, Start_Bid: ``,
     Volume: `1`, Entry: ``,
     Cover_Price: ``,
-    Pub_Date: ``,
+    Pub_Date: `2026-09-16`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -235859,7 +235859,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Crossover: ``, Start_Bid: ``,
     Volume: ``, Entry: ``,
     Cover_Price: ``,
-    Pub_Date: ``,
+    Pub_Date: `2026-09-16`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -235880,7 +235880,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Crossover: ``, Start_Bid: ``,
     Volume: ``, Entry: ``,
     Cover_Price: ``,
-    Pub_Date: ``,
+    Pub_Date: `2026-09-16`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -235901,7 +235901,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Crossover: ``, Start_Bid: ``,
     Volume: `1`, Entry: ``,
     Cover_Price: ``,
-    Pub_Date: ``,
+    Pub_Date: `2026-09-16`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -235922,7 +235922,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Crossover: ``, Start_Bid: ``,
     Volume: ``, Entry: ``,
     Cover_Price: ``,
-    Pub_Date: ``,
+    Pub_Date: `2026-09-16`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -235943,7 +235943,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Crossover: ``, Start_Bid: ``,
     Volume: ``, Entry: ``,
     Cover_Price: ``,
-    Pub_Date: ``,
+    Pub_Date: `2026-09-16`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -235964,7 +235964,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Crossover: ``, Start_Bid: ``,
     Volume: `1`, Entry: ``,
     Cover_Price: ``,
-    Pub_Date: ``,
+    Pub_Date: `2026-09-16`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -235985,7 +235985,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Crossover: ``, Start_Bid: ``,
     Volume: `2`, Entry: ``,
     Cover_Price: ``,
-    Pub_Date: ``,
+    Pub_Date: `2026-09-16`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -236006,7 +236006,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Crossover: ``, Start_Bid: ``,
     Volume: `2`, Entry: ``,
     Cover_Price: ``,
-    Pub_Date: ``,
+    Pub_Date: `2026-09-16`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -236027,7 +236027,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Crossover: ``, Start_Bid: ``,
     Volume: ``, Entry: ``,
     Cover_Price: ``,
-    Pub_Date: ``,
+    Pub_Date: `2026-09-16`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -236048,7 +236048,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Crossover: ``, Start_Bid: ``,
     Volume: ``, Entry: ``,
     Cover_Price: ``,
-    Pub_Date: ``,
+    Pub_Date: `2026-09-16`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -236069,7 +236069,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Crossover: ``, Start_Bid: ``,
     Volume: `1`, Entry: ``,
     Cover_Price: ``,
-    Pub_Date: ``,
+    Pub_Date: `2026-09-16`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -236090,7 +236090,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Crossover: ``, Start_Bid: ``,
     Volume: `1`, Entry: ``,
     Cover_Price: ``,
-    Pub_Date: ``,
+    Pub_Date: `2026-09-16`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -236111,7 +236111,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Crossover: ``, Start_Bid: ``,
     Volume: ``, Entry: ``,
     Cover_Price: ``,
-    Pub_Date: ``,
+    Pub_Date: `2026-09-16`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -236132,7 +236132,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Crossover: ``, Start_Bid: ``,
     Volume: `1`, Entry: ``,
     Cover_Price: ``,
-    Pub_Date: ``,
+    Pub_Date: `2026-09-16`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   }
   ],
