@@ -69,7 +69,12 @@ function isoWeekStr(d: Date): string {
 function parsePubDate(s?: string): PubRec | null {
   const m = String(s || "").match(/^(\d{4})-(\d{2})-(\d{2})/);
   if (!m) return null;
-  const y = +m[1], mo = +m[2] >= 1 ? +m[2] : 1, dd = +m[3] >= 1 ? +m[3] : 1;
+  // Clamp month/day to valid ranges — bad data like "2007-13-00" must not yield
+  // month 13 (→ MONTHS[12]=undefined label) or an Invalid Date (which slips past
+  // the 3-year cutoff). Unknown month/day (00 or out-of-range) falls back to 1.
+  const y = +m[1];
+  const mo = (+m[2] >= 1 && +m[2] <= 12) ? +m[2] : 1;
+  const dd = (+m[3] >= 1 && +m[3] <= 31) ? +m[3] : 1;
   if (y < 1900 || y > 2100) return null;
   const d = new Date(Date.UTC(y, mo - 1, dd));
   return { date: `${y}-${String(mo).padStart(2, "0")}-${String(dd).padStart(2, "0")}`, year: y, month: mo, week: isoWeekStr(d) };
