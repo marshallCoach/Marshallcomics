@@ -208,11 +208,30 @@ export function fmtPubDate(s?: string): string {
   return dd >= 1 ? `${PUB_MON[mo]} ${dd}, ${m[1]}` : `${PUB_MON[mo]} ${m[1]}`;
 }
 
+// Persist an "add link" into the Data Fix export store (brbDataFixes_v1) so the
+// existing Mac apply pipeline (brb_apply_fandom_pages / brb_apply_data_fixes)
+// picks it up on the next export. Merge-write so we don't clobber other fixes.
+function saveCoverLink(
+  comic: { Title: string; Issue: string | number },
+  box: string, kind: "image" | "fandom", value: string,
+) {
+  const KEY = "brbDataFixes_v1";
+  let map: Record<string, unknown> = {};
+  try { map = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch { map = {}; }
+  const issue = String(comic.Issue).trim().replace(/^#/, "");
+  const id = `${comic.Title}|||${issue}|||${box}`;
+  map[id] = { id, title: comic.Title, issue, box, problem: "no-cover", kind, value, at: new Date().toISOString() };
+  try { localStorage.setItem(KEY, JSON.stringify(map)); } catch { /* ignore */ }
+}
+
 export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
   const box        = (comic as { Box?: string }).Box ?? "";
   const coverKey   = coverId({ Title: comic.Title, Issue: comic.Issue, Box: box });
 
   const [flagState, setFlagState] = useState<FlagKind | null>(() => coverFlagKind(coverKey));
+  const [imgDraft, setImgDraft]   = useState("");
+  const [fanDraft, setFanDraft]   = useState("");
+  const [savedKind, setSavedKind] = useState<null | "image" | "fandom">(null);
 
   useEffect(() => {
     const h = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
@@ -232,6 +251,17 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
   const isKey    = (comic.Key    ?? "").toUpperCase() === "YES";
   const fallback = getCoverSvgUrl(comic, { width: 300, height: 460 });
   const pubLabel = fmtPubDate((comic as { Pub_Date?: string }).Pub_Date);
+
+  // Pre-loaded search URLs so you can jump straight to a cover image / the Fandom page.
+  const yr   = (comic as { Year?: string }).Year || "";
+  const iss  = String(comic.Issue).replace(/^#/, "");
+  const imgSearch = `https://www.google.com/search?tbm=isch&q=${encodeURIComponent(`${comic.Title} ${iss} ${yr} comic cover`)}`;
+  const fanSearch = `https://www.google.com/search?q=${encodeURIComponent(`${comic.Title} ${iss} ${yr} fandom comic book issue`)}`;
+  function doSave(kind: "image" | "fandom", value: string) {
+    if (!value.trim()) return;
+    saveCoverLink(comic, box, kind, value.trim());
+    setSavedKind(kind);
+  }
 
   return (
     <>
@@ -372,6 +402,43 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
                     : flagState === "variant"
                     ? "Marked 🔀 variant — the main cover is right; your copy is a variant of it"
                     : "Marked 🗑 as a duplicate to erase — export, then run the erase script to delete it"}
+                </div>
+              )}
+            </div>
+
+            {/* ── Add a link: paste a cover image URL or a Fandom page URL ── */}
+            <div style={{ borderTop: "1px solid var(--border)", paddingTop: 12 }}>
+              <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "2px", color: "var(--muted)", marginBottom: 7 }}>ADD A LINK</div>
+
+              {/* pre-loaded search URLs */}
+              <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 9 }}>
+                <a href={imgSearch} target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.8rem", color: "#1d6fa4", textDecoration: "none", background: "var(--surface2)", border: "1px solid var(--border)", borderRadius: 5, padding: "5px 10px" }}>🖼 Find cover image ↗</a>
+                <a href={fanSearch} target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.8rem", color: "#1d6fa4", textDecoration: "none", background: "var(--surface2)", border: "1px solid var(--border)", borderRadius: 5, padding: "5px 10px" }}>🔍 Find on Fandom ↗</a>
+              </div>
+
+              {/* image URL */}
+              <div style={{ display: "flex", gap: 6, marginBottom: 6 }}>
+                <input value={imgDraft} onChange={e => setImgDraft(e.target.value)}
+                  onKeyDown={e => { if (e.key === "Enter") doSave("image", imgDraft); }}
+                  placeholder="Paste cover image URL…"
+                  style={{ flex: 1, minWidth: 0, fontSize: "0.8rem", padding: "6px 9px", borderRadius: 5, border: "1px solid var(--border)", background: "var(--bg)", color: "var(--text)" }} />
+                <button onClick={() => doSave("image", imgDraft)} disabled={!imgDraft.trim()}
+                  style={{ fontSize: "0.8rem", fontWeight: 700, padding: "6px 12px", borderRadius: 5, cursor: imgDraft.trim() ? "pointer" : "default", border: "none", background: imgDraft.trim() ? "#1d6fa4" : "var(--surface2)", color: imgDraft.trim() ? "#fff" : "var(--muted)" }}>Save image</button>
+              </div>
+
+              {/* fandom URL */}
+              <div style={{ display: "flex", gap: 6 }}>
+                <input value={fanDraft} onChange={e => setFanDraft(e.target.value)}
+                  onKeyDown={e => { if (e.key === "Enter") doSave("fandom", fanDraft); }}
+                  placeholder="Paste Fandom page link…"
+                  style={{ flex: 1, minWidth: 0, fontSize: "0.8rem", padding: "6px 9px", borderRadius: 5, border: "1px solid var(--border)", background: "var(--bg)", color: "var(--text)" }} />
+                <button onClick={() => doSave("fandom", fanDraft)} disabled={!fanDraft.trim()}
+                  style={{ fontSize: "0.8rem", fontWeight: 700, padding: "6px 12px", borderRadius: 5, cursor: fanDraft.trim() ? "pointer" : "default", border: "none", background: fanDraft.trim() ? "#7c3aed" : "var(--surface2)", color: fanDraft.trim() ? "#fff" : "var(--muted)" }}>Save link</button>
+              </div>
+
+              {savedKind && (
+                <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", color: "#16a34a", marginTop: 6, fontStyle: "italic" }}>
+                  ✓ Saved {savedKind === "image" ? "image" : "Fandom"} link — export from Data Fix, then run the apply script on the Mac.
                 </div>
               )}
             </div>
