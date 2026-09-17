@@ -167,8 +167,10 @@ def main():
                              glob.glob("data-fixes*.json"), key=os.path.getmtime, default=None)
     if not path or not os.path.exists(path):
         sys.exit("no data-fixes export found — pass --flags <path>")
-    recs = [r for r in json.load(open(path)) if r.get("kind") == "fandom" and "_Vol_" in (r.get("value") or "")]
-    print(f"FANDOM links to open: {len(recs)}")
+    all_recs = json.load(open(path))
+    recs = [r for r in all_recs if r.get("kind") == "fandom" and "_Vol_" in (r.get("value") or "")]
+    img_recs = [r for r in all_recs if r.get("kind") == "image" and (r.get("value") or "").startswith("http")]
+    print(f"FANDOM links to open: {len(recs)}   direct image links: {len(img_recs)}")
 
     import openpyxl
     src = newest_xlsx()
@@ -236,6 +238,22 @@ def main():
             print(f"  {sheet_title} #{issue}: date={date_str or '—'} cover={'yes' if fn else 'no'} "
                   f"W/A/C={len(credits['writer'])}/{len(credits['artist'])}/{len(credits['cover'])}")
 
+    # Direct image links (kind="image" from the Cover modal's "Save image") —
+    # set the volume-aware covers.json key straight to the pasted URL, no fetch.
+    imgs_set = 0
+    for rec in img_recs:
+        sheet_title = rec.get("title") or ""
+        url = (rec.get("value") or "").strip()
+        for r in by_title.get(sheet_title.lower(), []):
+            if str(rec.get("issue") or "") and ni(ws.cell(r, cI).value) != ni(rec.get("issue")):
+                continue
+            key = f"{sheet_title}|||{ni(ws.cell(r, cI).value)}|||{nv(ws.cell(r, cV).value)}"
+            if args.overwrite or key not in cov or not (cov.get(key) or {}):
+                if args.apply:
+                    cov[key] = {"url": url, "large": url, "source": "manual-link"}
+                imgs_set += 1
+                print(f"  image: {sheet_title} #{ni(ws.cell(r, cI).value)} -> {url[:60]}")
+
     if cred_changes:
         import csv as _csv
         cp = os.path.join(ROOT, "credits_fandom_changes.csv")
@@ -243,7 +261,7 @@ def main():
             w = _csv.writer(f); w.writerow(["Title", "Issue", "Role", "Action", "Old", "New"]); w.writerows(cred_changes)
         print(f"\nCredit change log: {os.path.basename(cp)} ({len(cred_changes)} rows)")
 
-    print(f"\nDates to set: {dates_set}   Covers to set: {covers_set}")
+    print(f"\nDates to set: {dates_set}   Covers to set: {covers_set}   Direct image links: {imgs_set}")
     print(f"Credits — writer {cred_counts['writer']}  artist {cred_counts['artist']}  cover {cred_counts['cover']}")
     if not args.apply:
         print("DRY RUN — nothing written. Re-run with --apply.")
