@@ -19,6 +19,7 @@ from brb_gcd_volume_check import pub_match, tight
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DB = os.path.join(ROOT, "gcd_local.sqlite")
 OUT = os.path.join(ROOT, "artifacts/comics-inventory/public/gcd_notfound.json")
+COVERS = os.path.join(ROOT, "covers.json")
 
 
 def latest_xlsx():
@@ -58,6 +59,22 @@ def main():
             pool += by_key.get(tight(al), [])
         return any(pub_match(pub, s["pub"]) for s in pool) if pub else bool(pool)
 
+    # A book you've already resolved with a Fandom/image link now has a cover;
+    # it should leave the "Not in GCD" queue even though it's still not in GCD.
+    # Build a (title-lower, issue) set of everything that has a real cover.
+    resolved = set()
+    try:
+        cov = json.load(open(COVERS))
+    except (OSError, ValueError):
+        cov = {}
+    for k, e in cov.items():
+        val = (e.get("url") if isinstance(e, dict) else e) if e else None
+        if not val:
+            continue
+        parts = k.split("|||")
+        if len(parts) >= 2:
+            resolved.add((parts[0].strip().lower(), norm_issue(parts[1])))
+
     import openpyxl
     xlsx = latest_xlsx()
     wb = openpyxl.load_workbook(xlsx, read_only=True, data_only=True)
@@ -66,14 +83,18 @@ def main():
     H = list(rows[0])
     ti, ii, pi, bi = (H.index(c) for c in ("Title", "Issue #", "Publisher", "Box #"))
 
-    notfound, total = [], 0
+    notfound, total, resolved_skipped = [], 0, 0
     for r in rows[1:]:
         title = str(r[ti] or "").strip()
         if not title:
             continue
         total += 1
-        if not has_series(title, str(r[pi] or "").strip()):
-            notfound.append(f"{title}|||{norm_issue(r[ii])}|||{str(r[bi] or '').strip()}")
+        if has_series(title, str(r[pi] or "").strip()):
+            continue
+        if (title.lower(), norm_issue(r[ii])) in resolved:   # already has a cover → resolved
+            resolved_skipped += 1
+            continue
+        notfound.append(f"{title}|||{norm_issue(r[ii])}|||{str(r[bi] or '').strip()}")
 
     notfound = sorted(set(notfound))
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
@@ -81,6 +102,7 @@ def main():
     print(f"Inventory: {os.path.basename(xlsx)}")
     print(f"Rows checked: {total:,}")
     print(f"NOT in GCD:   {len(notfound):,}  ({100*len(notfound)/total:.1f}%)")
+    print(f"Excluded (resolved — has a cover): {resolved_skipped:,}")
     print(f"Wrote: {os.path.relpath(OUT, ROOT)}")
     print("Next: python3 brb.py --commit \"GCD not-found list\" --yes")
 
