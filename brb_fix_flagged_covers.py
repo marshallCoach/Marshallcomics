@@ -40,11 +40,20 @@ def norm_issue(v):
         return s
 
 
-def candidate_keys(title, issue):
-    """Every covers.json key shape that could hold this book's cover."""
+def key_matches(k, title, issue):
+    """Does covers.json key `k` hold this book's cover? Matches BOTH the legacy
+    2-part shape (Title|||#Issue / Title|||Issue) AND the volume-aware 3-part
+    shape (Title|||Issue|||Vol, any volume) — the migration moved covers to the
+    3-part keys, so a 2-part-only check silently clears nothing."""
     t = str(title or "").strip()
     i = norm_issue(issue)
-    return {f"{t}|||#{i}", f"{t}|||{i}", f"{t}|||#{issue}".strip(), f"{t}|||{issue}".strip()}
+    raw = str(issue or "").strip().lstrip("#")
+    exact = {f"{t}|||#{i}", f"{t}|||{i}", f"{t}|||#{raw}", f"{t}|||{raw}"}
+    if k in exact:
+        return True
+    # volume-aware: Title|||Issue|||<anything>  (delimiter stops "1" matching "10")
+    return any(k.startswith(p) for p in
+               (f"{t}|||{i}|||", f"{t}|||#{i}|||", f"{t}|||{raw}|||", f"{t}|||#{raw}|||"))
 
 
 def main():
@@ -65,10 +74,10 @@ def main():
         return
 
     cov = json.load(open(COVERS))
+    all_keys = list(cov.keys())
     removed, notfound = [], []
     for e in incorrect:
-        keys = candidate_keys(e.get("Title"), e.get("Issue"))
-        hit = [k for k in keys if k in cov]
+        hit = [k for k in all_keys if key_matches(k, e.get("Title"), e.get("Issue"))]
         if hit:
             for k in hit:
                 removed.append((k, e.get("Title"), e.get("Issue")))
