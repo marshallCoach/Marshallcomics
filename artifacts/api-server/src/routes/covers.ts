@@ -98,11 +98,27 @@ interface ResolvedVolume { id: number; name: string; start_year: number | null; 
 // Resolved volumes are cached in-memory per server run, keyed by normalized
 // title + start-year, so a title with 20 issues costs one /volumes/ call, not 20.
 const volumeCache = new Map<string, ResolvedVolume | null>();
+// Comic Vine spells sequence numbers as DIGITS ("Season 8", "Book 2", "Year 1"),
+// but inventories often carry the word ("Season Eight"). A CV name-search for the
+// word form returns nothing. Convert number-words to digits — but ONLY right
+// after a sequence keyword, so real title words stay intact (never "Fantastic
+// Four" → "Fantastic 4").
+const WORD_NUM: Record<string, string> = {
+  one: "1", two: "2", three: "3", four: "4", five: "5", six: "6",
+  seven: "7", eight: "8", nine: "9", ten: "10", eleven: "11", twelve: "12",
+};
+function numberWordsToDigits(s: string): string {
+  return String(s || "").replace(
+    /\b(season|book|volume|vol|series|part|chapter|year)\s+(one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve)\b/gi,
+    (_m, kw: string, w: string) => `${kw} ${WORD_NUM[w.toLowerCase()]}`,
+  );
+}
 function normTitle(t: string): string {
   // Strip a leading article so "Amazing Spider-Man" matches CV's "The Amazing
   // Spider-Man" (and vice versa) — otherwise the exact-name score never fires
-  // and the resolver falls through with best score 0.
-  return String(t || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim().replace(/^the /, "");
+  // and the resolver falls through with best score 0. Number-words → digits so
+  // "Season Eight" scores against CV's "Season 8".
+  return numberWordsToDigits(t).toLowerCase().replace(/[^a-z0-9]+/g, " ").trim().replace(/^the /, "");
 }
 async function cvFetch(url: string): Promise<any | null> {
   try {
@@ -124,7 +140,7 @@ async function resolveVolume(title: string, yearRange: [number, number] | null, 
   // older target, keep default order so its era is still captured.
   const sortModernFirst = !!yearRange && yearRange[0] >= 2000;
   const url = `${CV_BASE}/volumes/?${cvParams({
-    filter: `name:${title}`,
+    filter: `name:${numberWordsToDigits(title)}`,
     field_list: "id,name,start_year,count_of_issues,publisher",
     limit: "100",
     ...(sortModernFirst ? { sort: "start_year:desc" } : {}),
