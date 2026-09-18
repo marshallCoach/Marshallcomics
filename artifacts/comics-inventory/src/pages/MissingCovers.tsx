@@ -58,6 +58,18 @@ export default function MissingCovers() {
 
   const onClose = useCallback(() => { setModal(null); setQueued(loadQueued()); }, []);
 
+  // Export the saved image/Fandom links as data-fixes-<date>.json — same store
+  // and format as the Data Fix page, so brb_apply_fandom_pages.py picks it up.
+  const exportLinks = useCallback(() => {
+    let map: Record<string, unknown> = {};
+    try { map = JSON.parse(localStorage.getItem(LS) || "{}"); } catch { map = {}; }
+    const blob = new Blob([JSON.stringify(Object.values(map), null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url; a.download = `data-fixes-${new Date().toISOString().slice(0, 10)}.json`; a.click();
+    URL.revokeObjectURL(url);
+  }, []);
+
   const topPubs = Object.entries(pubCounts).sort((a, b) => b[1] - a[1]).slice(0, 12);
 
   return (
@@ -68,7 +80,10 @@ export default function MissingCovers() {
           <h1 className="mc-h1">Missing Covers</h1>
           <p className="mc-sub">Every book with no cover — keys and highest value first. Click one to open the cover pop-up: use <b>Find cover image ↗</b> / <b>Find on Fandom ↗</b>, then <b>Save image</b> or <b>Save Fandom link</b>. Your saves queue into the Data Fix export; run the apply script on the Mac to make them live.</p>
         </div>
-        <div className="mc-count">{ready ? shown.length.toLocaleString() : "…"}<span>to fix</span></div>
+        <div className="mc-head-right">
+          <button className="mc-export" onClick={exportLinks} disabled={!queued.size}>⬇ Export {queued.size || ""} link{queued.size === 1 ? "" : "s"}</button>
+          <div className="mc-count">{ready ? shown.length.toLocaleString() : "…"}<span>to fix</span></div>
+        </div>
       </div>
 
       <div className="mc-filters">
@@ -109,6 +124,9 @@ const CSS = `
 .mc-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;margin-bottom:12px}
 .mc-h1{margin:0 0 4px;font-size:1.7rem}
 .mc-sub{color:var(--muted,#888);margin:0;max-width:70ch;font-size:.84rem;line-height:1.5}
+.mc-head-right{display:flex;align-items:center;gap:14px}
+.mc-export{font-size:.8rem;font-weight:700;border:none;border-radius:8px;padding:8px 14px;cursor:pointer;background:#16a34a;color:#04220f;white-space:nowrap}
+.mc-export:disabled{opacity:.4;cursor:default}
 .mc-count{font-size:1.9rem;font-weight:800;color:var(--red,#c8102e);text-align:right;line-height:1;font-variant-numeric:tabular-nums}
 .mc-count span{display:block;font-size:.6rem;letter-spacing:1px;color:var(--muted,#888);text-transform:uppercase;font-weight:600;margin-top:3px}
 .mc-filters{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 16px}
