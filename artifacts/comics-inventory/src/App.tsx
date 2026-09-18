@@ -32,6 +32,7 @@ import BoxLabels from "@/pages/BoxLabels";
 import KeyCatalog from "@/pages/KeyCatalog";
 import CoverCatalog from "@/pages/CoverCatalog";
 import CoverReview from "@/pages/CoverReview";
+import MissingCovers from "@/pages/MissingCovers";
 import BoxQuest from "@/pages/BoxQuest";
 import BoxMap from "@/pages/BoxMap";
 import EbayPipeline from "@/pages/EbayPipeline";
@@ -50,7 +51,7 @@ type TabId =
   | "summary" | "everything" | "collection" | "boxkeys" | "stats" | "runs" | "runsvolumes" | "recent" | "releasetimeline" | "dataview"
   | "calendar" | "showplanner" | "cgc" | "signings" | "actionplan" | "timeline" | "boxvisual"
   | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "duplicates" | "dupchecklist" | "datafix" | "titlefixes" | "history"
-  | "orgpath" | "volumes" | "boxlabels" | "keycatalog" | "covercatalog" | "coverreview" | "boxquest" | "boxmap"
+  | "orgpath" | "volumes" | "boxlabels" | "keycatalog" | "covercatalog" | "coverreview" | "missingcovers" | "boxquest" | "boxmap"
   | "ebaypipeline" | "opsreference" | "ebaylistingguide" | "roulette" | "lifearchive";
 
 export type NavParams = {
@@ -122,6 +123,7 @@ const NAV = [
     label: "Cover",
     tabs: [
       { id: "coverreview",  label: "Cover Review" },
+      { id: "missingcovers", label: "Missing Covers" },
       { id: "roulette",     label: "Comic Roulette" },
     ],
   },
@@ -356,6 +358,7 @@ export default function App() {
         {activeTab === "keycatalog"  && <KeyCatalog />}
         {activeTab === "covercatalog" && <CoverCatalog />}
         {activeTab === "coverreview" && <CoverReview />}
+        {activeTab === "missingcovers" && <MissingCovers />}
         {activeTab === "boxquest"     && <BoxQuest />}
         {activeTab === "boxmap"       && <BoxMap />}
         {activeTab === "ebaypipeline" && <EbayPipeline />}

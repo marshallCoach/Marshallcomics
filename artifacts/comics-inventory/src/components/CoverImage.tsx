@@ -98,6 +98,25 @@ async function fetchCover(c: ComicLike): Promise<string | null> {
   return p;
 }
 
+/** Resolves once covers.json has loaded — for pages that scan the whole
+ *  collection for missing covers up front. */
+export function coversReady(): Promise<void> { return loadCovers(); }
+
+/** Synchronous cover lookup against the already-loaded map (call after
+ *  coversReady()). Returns the resolved URL or null when the book has no cover.
+ *  Mirrors fetchCover's key priority exactly. */
+export function coverUrlSync(c: ComicLike): string | null {
+  if (!coversMap) return null;
+  const key = cacheKey(c);
+  const issueStr = String(c.Issue);
+  const entry =
+    coversMap[key] ??
+    coversMap[`${c.Title}|||${issueStr}`] ??
+    coversMap[`${c.Title}|||#${issueStr.replace(/^#/, "")}`] ??
+    null;
+  return entry?.url ?? normIndex?.get(normCoverKey(c.Title, issueStr)) ?? null;
+}
+
 interface Props {
   comic: { Title: string; Issue: string | number; Publisher?: string; Year?: string; Key?: string; Signed?: string };
   width?: number;
@@ -224,6 +243,39 @@ function saveCoverLink(
   try { localStorage.setItem(KEY, JSON.stringify(map)); } catch { /* ignore */ }
 }
 
+// Best-guess Fandom wikis to search for a book — franchise-specific by title,
+// then publisher-specific, always with a site-scoped Google fallback. Returns
+// several so you can pick the right wiki when it's ambiguous.
+function fandomGuesses(title: string, issue: string, year: string, publisher: string): { label: string; url: string }[] {
+  const q  = encodeURIComponent(`${title} ${issue}`.trim());
+  const gq = encodeURIComponent(`${title} ${issue} ${year} comic`.trim());
+  const t = (title || "").toLowerCase();
+  const p = (publisher || "").toLowerCase();
+  const wiki = (host: string, label: string) => ({ label: `Find on ${label} ↗`, url: `https://${host}/wiki/Special:Search?query=${q}` });
+  const out: { label: string; url: string }[] = [];
+  // franchise-specific (title keyword) — most specific first
+  const FRANCHISE: [RegExp, string, string][] = [
+    [/buffy|angel/, "buffy.fandom.com", "Buffy Wiki"],
+    [/star trek/, "memory-alpha.fandom.com", "Memory Alpha"],
+    [/doctor who/, "tardis.fandom.com", "TARDIS Wiki"],
+    [/transformers/, "transformers.fandom.com", "Transformers Wiki"],
+    [/g\.?\s?i\.?\s?joe/, "gijoe.fandom.com", "G.I. Joe Wiki"],
+    [/star wars/, "starwars.fandom.com", "Wookieepedia"],
+    [/teenage mutant|tmnt/, "turtlepedia.fandom.com", "Turtlepedia"],
+    [/godzilla/, "godzilla.fandom.com", "Godzilla Wiki"],
+    [/sonic/, "sonic.fandom.com", "Sonic Wiki"],
+    [/power rangers/, "powerrangers.fandom.com", "Power Rangers Wiki"],
+    [/firefly|serenity/, "firefly.fandom.com", "Firefly Wiki"],
+  ];
+  for (const [re, host, label] of FRANCHISE) if (re.test(t)) out.push(wiki(host, label));
+  // publisher-specific
+  if (p.includes("marvel")) out.push(wiki("marvel.fandom.com", "Marvel"));
+  if (p === "dc" || p.includes("dc ") || p.includes("dc comics")) out.push(wiki("dc.fandom.com", "DC"));
+  // always-available site-scoped search across all Fandom wikis
+  out.push({ label: "Find on Fandom (all) ↗", url: `https://www.google.com/search?q=${gq}+site%3Afandom.com` });
+  return out.slice(0, 4);
+}
+
 export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
   const box        = (comic as { Box?: string }).Box ?? "";
   const coverKey   = coverId({ Title: comic.Title, Issue: comic.Issue, Box: box });
@@ -256,7 +308,7 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
   const yr   = (comic as { Year?: string }).Year || "";
   const iss  = String(comic.Issue).replace(/^#/, "");
   const imgSearch = `https://www.google.com/search?tbm=isch&q=${encodeURIComponent(`${comic.Title} ${iss} ${yr} comic cover`)}`;
-  const fanSearch = `https://www.google.com/search?q=${encodeURIComponent(`${comic.Title} ${iss} ${yr} fandom comic book issue`)}`;
+  const fandomOpts = fandomGuesses(comic.Title, iss, yr, (comic as { Publisher?: string }).Publisher || "");
   function doSave(kind: "image" | "fandom", value: string) {
     if (!value.trim()) return;
     saveCoverLink(comic, box, kind, value.trim());
@@ -413,7 +465,9 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
               {/* pre-loaded search URLs */}
               <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 9 }}>
                 <a href={imgSearch} target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.8rem", color: "#1d6fa4", textDecoration: "none", background: "var(--surface2)", border: "1px solid var(--border)", borderRadius: 5, padding: "5px 10px" }}>🖼 Find cover image ↗</a>
-                <a href={fanSearch} target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.8rem", color: "#1d6fa4", textDecoration: "none", background: "var(--surface2)", border: "1px solid var(--border)", borderRadius: 5, padding: "5px 10px" }}>🔍 Find on Fandom ↗</a>
+                {fandomOpts.map(o => (
+                  <a key={o.url} href={o.url} target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.8rem", color: "#1d6fa4", textDecoration: "none", background: "var(--surface2)", border: "1px solid var(--border)", borderRadius: 5, padding: "5px 10px" }}>🔍 {o.label}</a>
+                ))}
               </div>
 
               {/* image URL */}
