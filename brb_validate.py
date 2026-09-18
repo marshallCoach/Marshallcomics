@@ -74,6 +74,16 @@ REQUIRED_COLUMNS = ["Title", "Issue #", "Box #", "Publisher", "Year", "Writer(s)
 def is_blank(v):
     return pd.isna(v) or str(v).strip() in ("", "nan", "None")
 
+def _money(v):
+    """Parse a dollar amount from a cell like '$345', '345.0', or ''. Returns 0.0."""
+    if v is None or (isinstance(v, float) and pd.isna(v)):
+        return 0.0
+    m = re.search(r"\d[\d,]*\.?\d*", str(v).replace(",", ""))
+    try:
+        return float(m.group(0)) if m else 0.0
+    except (ValueError, AttributeError):
+        return 0.0
+
 def section(title):
     print(f"\n{'─' * 60}")
     print(f"  {title}")
@@ -311,13 +321,45 @@ def check_issue_number_present(df):
     blank = df[df["Issue #"].apply(is_blank)]
     pct = 100 * len(blank) / len(df) if len(df) else 0
     msg = f"{len(blank):,} / {len(df):,} rows have blank Issue # ({pct:.1f}%)"
+
+    # A blank Issue # on a KEY or a slab is never an acceptable warn: those books
+    # are the ones a row-match/join/dedup must find, and they carry the most value.
+    # Fail on them regardless of the overall rate.
+    def _is_slab(row):
+        key = str(row.get("Key Issue?", "")).strip().lower() in ("yes", "y", "true")
+        cond = "cgc" in str(row.get("Condition", "")).lower()
+        val = _money(row.get("Est. Raw Value"))
+        return key or cond or val > 0
+
+    slabs = blank[blank.apply(_is_slab, axis=1)] if len(blank) else blank
+
     if pct == 0:
         ok(msg)
+    elif len(slabs):
+        fail(msg)
     elif pct < 5:
         warn(msg)
     else:
         fail(msg)
-    return pct < 5
+
+    if len(slabs):
+        fail(f"{len(slabs)} of those are KEYS or slabs (Key=YES / CGC / has value) "
+             f"— un-addressable by ID:")
+        for _, row in slabs.head(15).iterrows():
+            tags = []
+            if str(row.get("Key Issue?", "")).strip().lower() in ("yes", "y", "true"):
+                tags.append("KEY")
+            if "cgc" in str(row.get("Condition", "")).lower():
+                tags.append("CGC")
+            v = _money(row.get("Est. Raw Value"))
+            if v > 0:
+                tags.append(f"${v:g}")
+            info(f"  '{row.get('Title','?')}' — Box #{row.get('Box #','?')}"
+                 f"{' [' + ', '.join(tags) + ']' if tags else ''}")
+        if len(slabs) > 15:
+            info(f"  ... and {len(slabs)-15} more")
+
+    return pct < 5 and len(slabs) == 0
 
 
 def _norm_str(series):
