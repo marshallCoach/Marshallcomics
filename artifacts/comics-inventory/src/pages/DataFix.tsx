@@ -143,18 +143,22 @@ export default function DataFix() {
     return m;
   }, [flagged, fixes]);
 
-  // Groups: problem → publisher → [comics], only unresolved & matching filter.
+  // Groups: problem → TITLE → [issues], only unresolved & matching filter.
+  // Grouped by title (series) so you can clear one book at a time — fix one
+  // issue and its siblings are right there; the back-end extrapolation fills
+  // the rest of the run from the confirmed series+volume.
   const groups = useMemo(() => {
     const visibleProblems = activeProblem === "all" ? PROBLEMS.map(p => p.id) : [activeProblem];
     return visibleProblems.map(pid => {
       const rows = flagged.filter(f => f.problems.includes(pid) && !fixes.has(f.id));
-      const byPub = new Map<string, { c: Comic; id: string }[]>();
+      const byTitle = new Map<string, { c: Comic; id: string }[]>();
       for (const r of rows) {
-        const pub = (r.c.Publisher || "—").trim() || "—";
-        (byPub.get(pub) ?? byPub.set(pub, []).get(pub)!).push({ c: r.c, id: r.id });
+        const key = (r.c.Title || "—").trim() || "—";
+        (byTitle.get(key) ?? byTitle.set(key, []).get(key)!).push({ c: r.c, id: r.id });
       }
-      const pubs = [...byPub.entries()].sort((a, b) => b[1].length - a[1].length).map(([pub, items]) => {
-        items.sort((a, b) => a.c.Title.localeCompare(b.c.Title) || (issueNum(a.c.Issue) - issueNum(b.c.Issue)));
+      // Alphabetical by title so you move top-to-bottom; issues ascending within.
+      const pubs = [...byTitle.entries()].sort((a, b) => a[0].localeCompare(b[0])).map(([pub, items]) => {
+        items.sort((a, b) => issueNum(a.c.Issue) - issueNum(b.c.Issue));
         return { pub, items };
       });
       return { pid, problem: PROBLEM_MAP[pid], count: rows.length, pubs };
