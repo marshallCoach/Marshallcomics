@@ -135,6 +135,7 @@ const C = {
   bid:      col('Whatnot Starting Bid'),
   volume:   col('Volume'),
   entry:    col('#'),
+  verifyDup: colOpt('⚠ Verify Duplicate'),
   coverPrice: colOpt('Cover Price'),   // real cover price captured at intake (optional)
   pubDate:    colOpt('Publication Date'), // GCD on-sale date (optional; filled by brb_pubdate_fill.py)
   // eBay pricing (optional — present only after brb_ebay_pricing.py merge)
@@ -674,4 +675,47 @@ console.log(`Cover-Art catalogs: signed=${catSigned.length}, keys=${catKeys.leng
 if (existsSync('covers.json')) {
   copyFileSync('covers.json', 'artifacts/comics-inventory/public/covers.json');
   console.log('Copied covers.json → public/covers.json');
+}
+
+// ── Fresh validation report ────────────────────────────────────────────────
+// Replaces the stale, hand-pasted "🛡 Validation Report" xlsx tab: this is
+// regenerated from the SAME rows on every reingest, so it can never describe a
+// file that no longer exists. Written as JSON the app (or a human) can read.
+{
+  const blank = v => v == null || String(v).trim() === '';
+  const val   = (r, i) => (i >= 0 ? String(r[i] ?? '').trim() : '');
+  const fillRate = i => i < 0 ? null
+    : +(100 * invRows.filter(r => !blank(r[i])).length / invRows.length).toFixed(1);
+
+  // Same-box duplicate candidates: Title+Issue+Year+Box, excluding rows the
+  // user already flagged ⚠ Verify Duplicate (reviewed multi-copies).
+  const seen = new Map();
+  for (const r of invRows) {
+    if (C.verifyDup >= 0 && !blank(r[C.verifyDup])) continue;
+    const k = [val(r,C.title).toLowerCase(), val(r,C.issue), val(r,C.year), val(r,C.box)].join('|');
+    seen.set(k, (seen.get(k) || 0) + 1);
+  }
+  const dupGroups = [...seen.values()].filter(n => n > 1);
+
+  const report = {
+    generatedAt: new Date().toISOString(),
+    source: srcName,
+    rowCount: invRows.length,
+    blanks: {
+      title: invRows.filter(r => blank(r[C.title])).length,
+      box:   invRows.filter(r => blank(r[C.box])).length,
+      issue: invRows.filter(r => blank(r[C.issue])).length,
+    },
+    sameBoxDuplicateGroups: dupGroups.length,
+    sameBoxDuplicateExcessRows: dupGroups.reduce((a, n) => a + (n - 1), 0),
+    fillRate: {
+      writer: fillRate(C.writer), artist: fillRate(C.artist),
+      coverArtist: fillRate(C.coverA), condition: fillRate(C.cond),
+      value: fillRate(C.nm), volume: fillRate(C.volume), year: fillRate(C.year),
+    },
+  };
+  const out = JSON.stringify(report, null, 2);
+  writeFileSync('validation-report.json', out);
+  writeFileSync('artifacts/comics-inventory/public/validation-report.json', out);
+  console.log(`Validation report: ${report.rowCount} rows, ${report.sameBoxDuplicateGroups} same-box dup groups → validation-report.json`);
 }
