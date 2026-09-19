@@ -1,5 +1,10 @@
 # BRB — Marshall Comics · Claude Code Notes
 
+## Runbook
+Routine commands + FAQ live in `RUNBOOK.md` — read it for the cover loop, git
+sync, and recurring answers. Robert prefers commands **line-by-line** unless
+it's a big code block.
+
 ## Branch
 All development: `claude/upbeat-babbage-2f5gr2`
 
