@@ -687,11 +687,19 @@ if (existsSync('covers.json')) {
   const fillRate = i => i < 0 ? null
     : +(100 * invRows.filter(r => !blank(r[i])).length / invRows.length).toFixed(1);
 
-  // Same-box duplicate candidates: Title+Issue+Year+Box, excluding rows the
-  // user already flagged ⚠ Verify Duplicate (reviewed multi-copies).
+  // Same-box duplicate candidates: Title+Issue+Year+Box, matching brb_validate
+  // Check 6 — exclude rows already flagged ⚠ Verify Duplicate (reviewed
+  // multi-copies) AND status boxes (CGC/pressing/UNKNOWN), which are transient
+  // holding locations, not real shelf positions. Without the status-box skip
+  // this over-reports (e.g. two books both "AT CGC" look like a same-box dup).
+  const STATUS_BOX = new Set([
+    'AT CGC', 'AT MAGIC PRESSING → CGC', 'AT CGC — Roy Thomas SS',
+    'AT CGC — Terrificon 2026', 'UNKNOWN — needs physical reassignment',
+  ]);
   const seen = new Map();
   for (const r of invRows) {
     if (C.verifyDup >= 0 && !blank(r[C.verifyDup])) continue;
+    if (STATUS_BOX.has(val(r, C.box))) continue;
     const k = [val(r,C.title).toLowerCase(), val(r,C.issue), val(r,C.year), val(r,C.box)].join('|');
     seen.set(k, (seen.get(k) || 0) + 1);
   }
