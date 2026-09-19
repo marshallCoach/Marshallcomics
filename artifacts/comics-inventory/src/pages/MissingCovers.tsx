@@ -72,6 +72,37 @@ export default function MissingCovers() {
     URL.revokeObjectURL(url);
   }, []);
 
+  // Reset only the cover-link queue (problem "no-cover") — leaves Data Fix
+  // resolutions in the shared store untouched. Use after you've exported.
+  const resetLinks = useCallback(() => {
+    if (!confirm("Clear all saved cover links? Export first if you still need them.")) return;
+    let map: Record<string, { problem?: string }> = {};
+    try { map = JSON.parse(localStorage.getItem(LS) || "{}"); } catch { map = {}; }
+    for (const k of Object.keys(map)) if (map[k]?.problem === "no-cover") delete map[k];
+    try { localStorage.setItem(LS, JSON.stringify(map)); } catch { /* ignore */ }
+    setQueued(loadQueued());
+  }, []);
+
+  // Self-prune: once a saved link has been applied + reingested (the book now
+  // has a cover), drop it from the queue so the count reflects only real work.
+  useEffect(() => {
+    if (!ready) return;
+    const covered = new Set<string>();
+    for (const c of comics) if (coverUrlSync(c) !== null) covered.add(`${norm(c.Title).toLowerCase()}|||${issueNorm(c.Issue)}`);
+    let map: Record<string, { problem?: string; title?: string; issue?: string }> = {};
+    try { map = JSON.parse(localStorage.getItem(LS) || "{}"); } catch { return; }
+    let changed = false;
+    for (const [k, rec] of Object.entries(map)) {
+      if (rec?.problem !== "no-cover") continue;
+      const ti = `${norm(rec.title).toLowerCase()}|||${issueNorm(rec.issue)}`;
+      if (covered.has(ti)) { delete map[k]; changed = true; }
+    }
+    if (changed) {
+      try { localStorage.setItem(LS, JSON.stringify(map)); } catch { /* ignore */ }
+      setQueued(loadQueued());
+    }
+  }, [ready]);
+
   const topPubs = Object.entries(pubCounts).sort((a, b) => b[1] - a[1]).slice(0, 12);
 
   // ── Solo book view ──────────────────────────────────────────────────────
@@ -99,6 +130,7 @@ export default function MissingCovers() {
         </div>
         <div className="mc-head-right">
           <button className="mc-export" onClick={exportLinks} disabled={!queued.size}>⬇ Export {queued.size || ""} link{queued.size === 1 ? "" : "s"}</button>
+          <button className="mc-reset" onClick={resetLinks} disabled={!queued.size}>Reset</button>
           <div className="mc-count">{ready ? shown.length.toLocaleString() : "…"}<span>to fix</span></div>
         </div>
       </div>
@@ -239,6 +271,8 @@ const CSS = `
 .mc-head-right{display:flex;align-items:center;gap:14px}
 .mc-export{font-size:.8rem;font-weight:700;border:none;border-radius:8px;padding:8px 14px;cursor:pointer;background:#16a34a;color:#04220f;white-space:nowrap}
 .mc-export:disabled{opacity:.4;cursor:default}
+.mc-reset{font-size:.78rem;font-weight:600;border:1px solid var(--border,#2c2c38);background:var(--surface2,#26262f);color:var(--muted2,#bbb);border-radius:8px;padding:7px 12px;cursor:pointer}
+.mc-reset:disabled{opacity:.4;cursor:default}
 .mc-count{font-size:1.9rem;font-weight:800;color:var(--red,#c8102e);text-align:right;line-height:1;font-variant-numeric:tabular-nums}
 .mc-count span{display:block;font-size:.6rem;letter-spacing:1px;color:var(--muted,#888);text-transform:uppercase;font-weight:600;margin-top:3px}
 .mc-filters{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 16px}

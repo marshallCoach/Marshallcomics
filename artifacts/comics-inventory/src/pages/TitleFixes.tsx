@@ -1,10 +1,16 @@
 import { useState, useEffect, useMemo, useCallback } from "react";
+import { DATA } from "@/data/data";
 
 // Review widget for Fandom-canonical title renames. Reads the proposals file
 // brb_apply_fandom_titles.py writes, lets you approve/reject each, and exports
 // only the approved ones for the apply pass. Decisions persist per-browser.
 const BASE = import.meta.env.BASE_URL?.replace(/\/$/, "") ?? "";
 const LS = "brbTitleRenameDecisions_v1";
+
+// A proposal is RESOLVED once its old title no longer exists in the live data
+// (the rename was applied and reingested) — those drop off the page so it only
+// ever shows outstanding work.
+const LIVE_TITLES = new Set(DATA.comics.map(c => String(c.Title ?? "").trim().toLowerCase()));
 
 interface Proposal { old: string; new: string; count: number; issues: string[]; }
 type Decision = "approve" | "reject";
@@ -33,25 +39,32 @@ export default function TitleFixes() {
     });
   }, []);
 
+  // Only show proposals whose old title is still in the data — resolved
+  // (applied + reingested) ones disappear.
+  const open = useMemo(
+    () => (props || []).filter(p => LIVE_TITLES.has(p.old.trim().toLowerCase())),
+    [props]);
+  const resolvedGone = (props?.length ?? 0) - open.length;
+
   const { approved, rejected, pending } = useMemo(() => {
     let a = 0, r = 0, p = 0;
-    for (const x of props || []) {
+    for (const x of open) {
       const d = dec[x.old];
       if (d === "approve") a++; else if (d === "reject") r++; else p++;
     }
     return { approved: a, rejected: r, pending: p };
-  }, [props, dec]);
+  }, [open, dec]);
 
   const exportApproved = useCallback(() => {
-    const out = (props || []).filter(x => dec[x.old] === "approve").map(x => ({ old: x.old, new: x.new }));
+    const out = open.filter(x => dec[x.old] === "approve").map(x => ({ old: x.old, new: x.new }));
     const blob = new Blob([JSON.stringify(out, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url; a.download = `title-renames-approved-${new Date().toISOString().slice(0, 10)}.json`; a.click();
     URL.revokeObjectURL(url);
-  }, [props, dec]);
+  }, [open, dec]);
 
-  const total = props?.length ?? 0;
+  const total = open.length;
 
   return (
     <div style={{ maxWidth: 900, margin: "0 auto", padding: "20px 16px 80px" }}>
@@ -71,16 +84,20 @@ export default function TitleFixes() {
           <span className="tf-stat ok">✓ {approved} approved</span>
           <span className="tf-stat no">✗ {rejected} rejected</span>
           <span className="tf-stat pend">• {pending} pending</span>
-          <span className="tf-stat total">{total} total</span>
+          <span className="tf-stat total">{total} open</span>
+          {resolvedGone > 0 && <span className="tf-stat done">✓ {resolvedGone} resolved (hidden)</span>}
         </div>
       )}
 
       {props === null && <div className="tf-empty">Loading proposals…</div>}
-      {props && total === 0 && (
+      {props && total === 0 && resolvedGone > 0 && (
+        <div className="tf-empty">All {resolvedGone} proposal{resolvedGone === 1 ? "" : "s"} resolved — nothing left to review. 🎉</div>
+      )}
+      {props && total === 0 && resolvedGone === 0 && (
         <div className="tf-empty">No title proposals yet. Run <code>brb_apply_fandom_titles.py</code> on the Mac and push <code>public/title_rename_proposals.json</code>.</div>
       )}
 
-      {(props || []).map(p => {
+      {open.map(p => {
         const d = dec[p.old];
         return (
           <div key={p.old} className={`tf-card ${d || ""}`}>
@@ -112,7 +129,7 @@ const CSS = `
 .tf-export:disabled{opacity:.4;cursor:default}
 .tf-stats{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;font-size:.8rem;font-variant-numeric:tabular-nums}
 .tf-stat{font-weight:700}
-.tf-stat.ok{color:#22c55e}.tf-stat.no{color:#c0392b}.tf-stat.pend{color:var(--muted2,#bbb)}.tf-stat.total{color:var(--muted,#888)}
+.tf-stat.ok{color:#22c55e}.tf-stat.no{color:#c0392b}.tf-stat.pend{color:var(--muted2,#bbb)}.tf-stat.total{color:var(--muted,#888)}.tf-stat.done{color:#3b82f6}
 .tf-empty{color:var(--muted,#888);background:var(--surface,#1a1a22);border:1px solid var(--border,#2c2c38);border-radius:10px;padding:24px;text-align:center}
 .tf-empty code{color:#e6b95c}
 .tf-card{background:var(--surface,#1a1a22);border:1px solid var(--border,#2c2c38);border-left:4px solid var(--border,#2c2c38);border-radius:10px;padding:12px 14px;margin-bottom:10px;transition:all .15s}

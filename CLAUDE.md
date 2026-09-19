@@ -8,6 +8,12 @@ All development: `claude/upbeat-babbage-2f5gr2`
 - Only Python outputs (JSON, CSV) and TS data files belong in the repo
 - Check the Data Integrity Log tab before flagging row drops as data loss
 
+## "Credits" means AI usage, not comic creators
+- "Confirm before credits" = confirm before spending **AI usage / compute
+  credits** (large or long paid runs) — a cost gate, nothing more.
+- Comic **creator** credits (Writer / Artist / Cover Artist) are ordinary data
+  work: fill and correct them freely, no special confirmation.
+
 ## Mac one-time setup (do these once, not per session)
 
 ### eBay auth — add to ~/.zshrc
