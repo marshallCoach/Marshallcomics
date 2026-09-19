@@ -107,6 +107,8 @@ def parse_url(u):
 def fetch_page(base, title, vol, issue):
     """Return (image_filename, date_str 'YYYY-MM-00', page_year, credits) or None.
     credits = {'writer':[...], 'artist':[...], 'cover':[...]} from the infobox."""
+    if not str(issue).strip():   # never request "Title Vol N " (blank issue) — it
+        return None              # resolves to a junk page and stalls the fetch
     u = base + "?" + urllib.parse.urlencode({
         "action": "parse", "page": f"{title} Vol {vol} {issue}",
         "prop": "wikitext", "format": "json", "formatversion": 2, "redirects": 1})
@@ -205,6 +207,8 @@ def main():
         sheet_title = rec.get("title") or ""
         for r in by_title.get(sheet_title.lower(), []):
             issue = ni(ws.cell(r, cI).value)
+            if not issue:            # blank issue -> "Title Vol N " builds a junk
+                continue             # page that stalls the fetch; skip these rows
             ry = yr(ws.cell(r, cY).value)
             res = fetch_page(base, canon, vol, issue)
             if not res:
