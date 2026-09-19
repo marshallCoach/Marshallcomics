@@ -230,7 +230,7 @@ export function fmtPubDate(s?: string): string {
 // Persist an "add link" into the Data Fix export store (brbDataFixes_v1) so the
 // existing Mac apply pipeline (brb_apply_fandom_pages / brb_apply_data_fixes)
 // picks it up on the next export. Merge-write so we don't clobber other fixes.
-function saveCoverLink(
+export function saveCoverLink(
   comic: { Title: string; Issue: string | number },
   box: string, kind: "image" | "fandom", value: string,
 ) {
@@ -246,7 +246,7 @@ function saveCoverLink(
 // Best-guess Fandom wikis to search for a book — franchise-specific by title,
 // then publisher-specific, always with a site-scoped Google fallback. Returns
 // several so you can pick the right wiki when it's ambiguous.
-function fandomGuesses(title: string, issue: string, year: string, publisher: string): { label: string; url: string }[] {
+export function fandomGuesses(title: string, issue: string, year: string, publisher: string): { label: string; url: string }[] {
   const q  = encodeURIComponent(`${title} ${issue}`.trim());
   const gq = encodeURIComponent(`${title} ${issue} ${year} comic`.trim());
   const t = (title || "").toLowerCase();
