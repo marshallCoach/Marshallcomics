@@ -247,7 +247,8 @@ def main():
         banner("GIT — commit generated files")
         gen_files = [
             "artifacts/comics-inventory/src/data/data3.ts",
-            "artifacts/comics-inventory/public/covers.json",
+            "covers.json",                                    # root master — commit
+            "artifacts/comics-inventory/public/covers.json",  # so it stops drifting
             "artifacts/comics-inventory/public/box-quest.html",
             "artifacts/comics-inventory/public/quest-data.js",
         ]
