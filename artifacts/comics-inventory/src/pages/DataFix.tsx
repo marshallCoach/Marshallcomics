@@ -37,6 +37,10 @@ const PROBLEM_MAP = Object.fromEntries(PROBLEMS.map(p => [p.id, p]));
 function comicId(c: Comic): string {
   return `${(c.Title ?? "").trim()}|||${String(c.Issue ?? "").trim()}|||${(c.Box ?? "").trim()}`;
 }
+const issueNum = (v: unknown) => {
+  const m = String(v ?? "").replace(/^#/, "").match(/[\d.]+/);
+  return m ? parseFloat(m[0]) : Number.POSITIVE_INFINITY;
+};
 function problemsFor(c: Comic): ProblemId[] {
   const out: ProblemId[] = [];
   const pd = (c as { Pub_Date?: string }).Pub_Date || "";
@@ -110,6 +114,20 @@ export default function DataFix() {
     return rows;
   }, [notInGcd]);
 
+  // Self-prune: once a resolution has been applied + reingested, its comic no
+  // longer has that problem, so it drops out of `flagged`. Remove those stale
+  // records so the counters and the export reflect only outstanding work.
+  useEffect(() => {
+    const ids = new Set(flagged.map(f => f.id));
+    setFixes(prev => {
+      let changed = false;
+      const next = new Map(prev);
+      for (const id of [...next.keys()]) if (!ids.has(id)) { next.delete(id); changed = true; }
+      if (changed) saveFixes(next);
+      return changed ? next : prev;
+    });
+  }, [flagged]);
+
   const totalProblems = flagged.length;
   const resolvedCount = useMemo(() => flagged.filter(f => fixes.has(f.id)).length, [flagged, fixes]);
   const remaining = totalProblems - resolvedCount;
@@ -136,7 +154,7 @@ export default function DataFix() {
         (byPub.get(pub) ?? byPub.set(pub, []).get(pub)!).push({ c: r.c, id: r.id });
       }
       const pubs = [...byPub.entries()].sort((a, b) => b[1].length - a[1].length).map(([pub, items]) => {
-        items.sort((a, b) => (yearOf(a.c)).localeCompare(yearOf(b.c)) || a.c.Title.localeCompare(b.c.Title));
+        items.sort((a, b) => a.c.Title.localeCompare(b.c.Title) || (issueNum(a.c.Issue) - issueNum(b.c.Issue)));
         return { pub, items };
       });
       return { pid, problem: PROBLEM_MAP[pid], count: rows.length, pubs };
