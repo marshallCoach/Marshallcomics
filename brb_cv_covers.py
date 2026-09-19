@@ -115,11 +115,6 @@ def main():
         pub = str(g(r, "Publisher") or "").strip(); yr = str(g(r, "Year") or "").strip()
         if not t or not iss:
             continue
-        # Single-word titles are the common-word collisions ("Die" -> German
-        # books, "Black" -> Deadpool) the guard just rejects. Skip on request.
-        if args.skip_oneword and len(t.split()) == 1 and not only:
-            oneword_skipped += 1
-            continue
         if flag_pairs is not None and (t.lower(), iss) not in flag_pairs:
             continue
         if only:
@@ -133,6 +128,13 @@ def main():
         if has(t, iss, vol):
             continue
         if (t, iss, vol) in seen:
+            continue
+        # Single-word titles are the common-word collisions ("Die" -> German
+        # books, "Black" -> Deadpool) the guard just rejects. Skip here — after
+        # the has-cover/publisher filters — so the count reflects only books
+        # that would actually have been fetched, not every one-word title.
+        if args.skip_oneword and len(t.split()) == 1 and not only:
+            oneword_skipped += 1
             continue
         seen.add((t, iss, vol)); todo.append((t, iss, vol, pub, yr))
 
