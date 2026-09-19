@@ -61,40 +61,72 @@ def api(base, params):
         return json.load(r)
 
 
+def cover_from_page(base, page):
+    """Read a Fandom page's infobox cover. Returns ((url, date) | None, reason)."""
+    d = api(base, {"action": "parse", "page": page, "prop": "wikitext",
+                   "format": "json", "formatversion": 2, "redirects": 1})
+    time.sleep(DELAY)
+    if d.get("error"):
+        return (None, "no-page")
+    wt = d.get("parse", {}).get("wikitext", "")
+    if not wt:
+        return (None, "no-page")
+    m = re.search(r"\|\s*Image1?\s*=\s*([^\n|]+\.(?:jpg|png|jpeg))", wt, re.I)
+    if not m:
+        return (None, "no-image")
+    fn = m.group(1).strip()
+    dm = re.search(r"\|\s*(?:ReleaseDate|CoverDate|Pubyear|Year)\s*=\s*([^\n|]+)", wt)
+    date = dm.group(1).strip() if dm else ""
+    ii = api(base, {"action": "query", "titles": "File:" + fn, "prop": "imageinfo",
+                    "iiprop": "url", "format": "json", "formatversion": 2})
+    time.sleep(DELAY)
+    for p in ii.get("query", {}).get("pages", []):
+        if "imageinfo" in p:
+            url = p["imageinfo"][0]["url"].split("/revision/")[0]
+            return ((url, date), "ok")
+    return (None, "no-file")
+
+
+def find_page(base, title, issue):
+    """Search the wiki for the real '{Title} Vol N {issue}' page, ignoring OUR
+    volume number (the exact-name lookup misses precisely when the collection's
+    volume disagrees with Fandom's). Returns the matched page title, or None.
+    Guarded: only accepts a hit that is exactly this title + this issue in some
+    volume, so a search near-miss can't write the wrong cover."""
+    d = api(base, {"action": "query", "list": "search",
+                   "srsearch": f'intitle:"{title}" {issue}', "srnamespace": 0,
+                   "srlimit": 10, "format": "json", "formatversion": 2})
+    time.sleep(DELAY)
+    pat = re.compile(rf"^{re.escape(title)}\s+Vol\s+\d+\s+{re.escape(issue)}$", re.I)
+    for hit in d.get("query", {}).get("search", []):
+        t = str(hit.get("title", "")).strip()
+        if pat.match(t):
+            return t
+    return None
+
+
 def fandom_cover(title, vol, issue):
     """Return ((url, date, wiki) | None, reason).
 
-    reason is one of: ok, no-page, no-image, no-file, throttled, error.
-    We classify — rather than swallow — so a low fill rate is diagnosable:
-    a wall of 'throttled' means slow down/re-run later; a wall of 'no-page'
-    means the page-name guess is wrong, a different problem entirely."""
-    page = f"{title} Vol {vol} {issue}"
+    reason ∈ {ok, no-page, no-image, no-file, throttled, http-*, error}.
+    Strategy: try the exact '{Title} Vol {vol} {issue}' page first (cheap, works
+    when our volume matches); on no-page, search the wiki for the real page and
+    retry. Classify every failure so a low fill rate stays diagnosable."""
     reason = "no-page"
     for base in WIKIS:
+        wiki = base.split("//")[1].split(".")[0]
         for attempt in range(2):   # one retry after a throttle backoff
             try:
-                d = api(base, {"action": "parse", "page": page, "prop": "wikitext",
-                               "format": "json", "formatversion": 2, "redirects": 1})
-                time.sleep(DELAY)
-                if d.get("error"):
-                    reason = "no-page"; break
-                wt = d.get("parse", {}).get("wikitext", "")
-                if not wt:
-                    reason = "no-page"; break
-                m = re.search(r"\|\s*Image1?\s*=\s*([^\n|]+\.(?:jpg|png|jpeg))", wt, re.I)
-                if not m:
-                    reason = "no-image"; break
-                fn = m.group(1).strip()
-                dm = re.search(r"\|\s*(?:ReleaseDate|CoverDate|Pubyear|Year)\s*=\s*([^\n|]+)", wt)
-                date = dm.group(1).strip() if dm else ""
-                ii = api(base, {"action": "query", "titles": "File:" + fn, "prop": "imageinfo",
-                                "iiprop": "url", "format": "json", "formatversion": 2})
-                time.sleep(DELAY)
-                for p in ii.get("query", {}).get("pages", []):
-                    if "imageinfo" in p:
-                        url = p["imageinfo"][0]["url"].split("/revision/")[0]
-                        return ((url, date, base.split("//")[1].split(".")[0]), "ok")
-                reason = "no-file"; break
+                res, r = cover_from_page(base, f"{title} Vol {vol} {issue}")
+                if r == "no-page":
+                    found = find_page(base, title, issue)
+                    if found:
+                        res, r = cover_from_page(base, found)
+                if res:
+                    url, date = res
+                    return ((url, date, wiki), "ok")
+                reason = r
+                break
             except urllib.error.HTTPError as e:
                 if e.code in (429, 403):
                     reason = "throttled"; time.sleep(BACKOFF); continue   # retry once
