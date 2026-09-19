@@ -205,10 +205,22 @@ def main():
             continue
         base, canon, vol = pu
         sheet_title = rec.get("title") or ""
+        wcol = CRED_COLS.get("writer")
         for r in by_title.get(sheet_title.lower(), []):
             issue = ni(ws.cell(r, cI).value)
             if not issue:            # blank issue -> "Title Vol N " builds a junk
                 continue             # page that stalls the fetch; skip these rows
+            # Already complete -> don't re-fetch. This is why the whole run (e.g.
+            # all 66 Avengers) re-ran every pass: the fetch was unconditional.
+            # Only fetch a row that's still missing a cover, a date, or a writer.
+            if not args.overwrite:
+                volk = nv(ws.cell(r, cV).value)
+                e = cov.get(f"{sheet_title}|||{issue}|||{volk}") or cov.get(f"{sheet_title}|||{issue}")
+                has_cover = bool(e.get("url") if isinstance(e, dict) else e)
+                has_date = bool(str(ws.cell(r, cPD).value or "").strip())
+                has_writer = bool(wcol and str(ws.cell(r, wcol).value or "").strip())
+                if has_cover and has_date and has_writer:
+                    continue
             ry = yr(ws.cell(r, cY).value)
             res = fetch_page(base, canon, vol, issue)
             if not res:
