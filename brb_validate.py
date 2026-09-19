@@ -74,6 +74,21 @@ REQUIRED_COLUMNS = ["Title", "Issue #", "Box #", "Publisher", "Year", "Writer(s)
 def is_blank(v):
     return pd.isna(v) or str(v).strip() in ("", "nan", "None")
 
+def _dup_flagged(df):
+    """Boolean Series: rows carrying a real ⚠ Verify Duplicate value.
+
+    Guards against the pandas 'string' dtype. When that column is read as
+    string dtype, its empty cells are pd.NA, and a str-cast + isin() blank
+    test does NOT recognise the NA sentinel — so EVERY row reads as flagged
+    and the whole duplicate check (Checks 6, 6b, 11) silently runs on zero
+    rows. Detect blanks with notna(), never by stringifying NA."""
+    vd = df.get("⚠ Verify Duplicate")
+    if vd is None:
+        return pd.Series(False, index=df.index)
+    s = vd.astype(str).str.strip()
+    return vd.notna() & ~s.isin(["", "nan", "None", "<NA>", "NaN"])
+
+
 def _money(v):
     """Parse a dollar amount from a cell like '$345', '345.0', or ''. Returns 0.0."""
     if v is None or (isinstance(v, float) and pd.isna(v)):
@@ -176,8 +191,7 @@ def check_box_capacity(df):
 def check_duplicate_rows(df):
     # Key matches Mac validator Rule 2: Title + Issue # + Year + Box #  (no Volume)
     section("CHECK 6 — Same-box duplicates (Title + Issue # + Year + Box #)")
-    _vd = df.get("⚠ Verify Duplicate")
-    _flagged = ~_vd.astype(str).str.strip().isin(["", "nan", "None"]) if _vd is not None else pd.Series(False, index=df.index)
+    _flagged = _dup_flagged(df)
     # Reviewed & accepted multi-copies (flagged ⚠ Verify Duplicate) are not errors.
     physical = df[~df["Box #"].apply(lambda v: str(v).strip() in BOX_STATUS_ALLOWLIST) & ~_flagged].copy()
     excluded = len(df) - len(physical)
@@ -368,8 +382,15 @@ def _norm_str(series):
     without this, an exact-match key under-counts real clones (confirmed:
     naive match found 80 groups/82 excess rows vs. 81/83 normalized on the
     same file). Bake normalization in here rather than re-deriving it by hand
-    each time - same failure category as the mixed-type Box # bug."""
-    return series.astype(str).str.strip().str.lower().replace({"nan": ""})
+    each time - same failure category as the mixed-type Box # bug.
+
+    NA-safe: under the pandas 'string' dtype a missing cell is pd.NA, which
+    survives astype(str) as the sentinel '<NA>' and, left in a concatenated
+    key, makes the WHOLE key NA. duplicated() then treats every NA key as
+    equal, collapsing thousands of unrelated rows into one phantom clone
+    group. Coerce NA to '' first so a blank field is just a blank."""
+    return (series.fillna("").astype(str).str.strip().str.lower()
+            .replace({"nan": "", "<na>": "", "none": ""}))
 
 
 def check_exact_clones(df):
@@ -378,8 +399,7 @@ def check_exact_clones(df):
     # distinct copies differing by condition/signature). Adds Condition and
     # Signed? to the key so genuine multi-copy ownership doesn't get flagged.
     section("CHECK 11 — Exact clones (Title+Issue#+Year+Condition+Signed?+Box#, normalized)")
-    _vd = df.get("⚠ Verify Duplicate")
-    _flagged = ~_vd.astype(str).str.strip().isin(["", "nan", "None"]) if _vd is not None else pd.Series(False, index=df.index)
+    _flagged = _dup_flagged(df)
     physical = df[~df["Box #"].apply(lambda v: str(v).strip() in BOX_STATUS_ALLOWLIST) & ~_flagged].copy()
 
     t    = _norm_str(physical["Title"])
