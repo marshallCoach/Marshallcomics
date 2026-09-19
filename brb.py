@@ -254,7 +254,9 @@ def main():
         # Widget data the apply scripts write — stage only if present so the
         # Title Fixes / Not-in-GCD widgets publish without a manual git add.
         for opt in ("artifacts/comics-inventory/public/title_rename_proposals.json",
-                    "artifacts/comics-inventory/public/gcd_notfound.json"):
+                    "artifacts/comics-inventory/public/gcd_notfound.json",
+                    "artifacts/comics-inventory/public/validation-report.json",
+                    "validation-report.json"):
             if os.path.exists(opt):
                 gen_files.append(opt)
         run(["git", "add"] + gen_files, "git add")
