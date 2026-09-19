@@ -78,6 +78,10 @@ def main():
     ap.add_argument("--titles", default="", help="comma-list to restrict to")
     ap.add_argument("--flags", default="", help="flagged-covers JSON: restrict to exactly these (title,issue) books")
     ap.add_argument("--delay", type=float, default=19.0, help="seconds between CV calls (200/hr)")
+    ap.add_argument("--skip-oneword", action="store_true",
+                    help="skip single-word titles (Die, Black, Doom, ...) — CV can't "
+                         "disambiguate common words, so they only burn calls to get "
+                         "rejected. Do those manually via the Missing Covers page.")
     args = ap.parse_args()
     only = {t.strip().lower() for t in args.titles.split(",") if t.strip()}
     # --flags scopes to the exact (title, issue) pairs the user flagged, so a
@@ -105,11 +109,16 @@ def main():
     def g(r, n):
         i = C.get(n); return r[i] if i is not None else None
 
-    todo = []; seen = set()
+    todo = []; seen = set(); oneword_skipped = 0
     for r in rows[1:]:
         t = str(g(r, "Title") or "").strip(); iss = ni(g(r, "Issue #")); vol = nv(g(r, "Volume"))
         pub = str(g(r, "Publisher") or "").strip(); yr = str(g(r, "Year") or "").strip()
         if not t or not iss:
+            continue
+        # Single-word titles are the common-word collisions ("Die" -> German
+        # books, "Black" -> Deadpool) the guard just rejects. Skip on request.
+        if args.skip_oneword and len(t.split()) == 1 and not only:
+            oneword_skipped += 1
             continue
         if flag_pairs is not None and (t.lower(), iss) not in flag_pairs:
             continue
@@ -129,7 +138,9 @@ def main():
 
     if args.limit:
         todo = todo[:args.limit]
-    print(f"missing non-Marvel/DC covers to fetch via CV proxy: {len(todo)}", flush=True)
+    print(f"missing non-Marvel/DC covers to fetch via CV proxy: {len(todo)}"
+          + (f"   (skipped {oneword_skipped} single-word titles → do manually)" if oneword_skipped else ""),
+          flush=True)
 
     def reject(t, iss, vol):
         """Blank a wrong CV match through the proxy (it owns covers.json) so the
