@@ -22,7 +22,7 @@ Usage:
     python3 brb_fandom_covers.py            # fill all missing
     python3 brb_fandom_covers.py --limit 20 # small test
 """
-import argparse, glob, json, os, re, time, urllib.parse, urllib.request, shutil
+import argparse, glob, json, os, re, time, urllib.parse, urllib.request, urllib.error, shutil
 import openpyxl
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -30,8 +30,9 @@ ASSETS = os.path.join(ROOT, "attached_assets")
 COVERS = os.path.join(ROOT, "covers.json")
 PUBLIC = os.path.join(ROOT, "artifacts/comics-inventory/public/covers.json")
 WIKIS = ["https://marvel.fandom.com/api.php", "https://dc.fandom.com/api.php"]
-UA = "MarshallComicsInventory/1.0"
-DELAY = 0.6
+UA = "MarshallComicsInventory/1.0 (personal comic inventory; contact via github)"
+DELAY = 1.1        # be gentle — Wikia throttles fast bursts (was 0.6 → mass 429s)
+BACKOFF = 20       # seconds to wait after a 429/403 before one retry
 
 
 def latest_xlsx():
@@ -61,32 +62,46 @@ def api(base, params):
 
 
 def fandom_cover(title, vol, issue):
-    """Return (url, date, wiki) for {title} Vol {vol} {issue}, or None."""
+    """Return ((url, date, wiki) | None, reason).
+
+    reason is one of: ok, no-page, no-image, no-file, throttled, error.
+    We classify — rather than swallow — so a low fill rate is diagnosable:
+    a wall of 'throttled' means slow down/re-run later; a wall of 'no-page'
+    means the page-name guess is wrong, a different problem entirely."""
     page = f"{title} Vol {vol} {issue}"
+    reason = "no-page"
     for base in WIKIS:
-        try:
-            d = api(base, {"action": "parse", "page": page, "prop": "wikitext",
-                           "format": "json", "formatversion": 2, "redirects": 1})
-            time.sleep(DELAY)
-            wt = d.get("parse", {}).get("wikitext", "")
-            if not wt:
-                continue
-            m = re.search(r"\|\s*Image1?\s*=\s*([^\n|]+\.(?:jpg|png|jpeg))", wt, re.I)
-            if not m:
-                continue
-            fn = m.group(1).strip()
-            dm = re.search(r"\|\s*(?:ReleaseDate|CoverDate|Pubyear|Year)\s*=\s*([^\n|]+)", wt)
-            date = dm.group(1).strip() if dm else ""
-            ii = api(base, {"action": "query", "titles": "File:" + fn, "prop": "imageinfo",
-                            "iiprop": "url", "format": "json", "formatversion": 2})
-            time.sleep(DELAY)
-            for p in ii.get("query", {}).get("pages", []):
-                if "imageinfo" in p:
-                    url = p["imageinfo"][0]["url"].split("/revision/")[0]
-                    return (url, date, base.split("//")[1].split(".")[0])
-        except Exception:
-            time.sleep(DELAY)
-    return None
+        for attempt in range(2):   # one retry after a throttle backoff
+            try:
+                d = api(base, {"action": "parse", "page": page, "prop": "wikitext",
+                               "format": "json", "formatversion": 2, "redirects": 1})
+                time.sleep(DELAY)
+                if d.get("error"):
+                    reason = "no-page"; break
+                wt = d.get("parse", {}).get("wikitext", "")
+                if not wt:
+                    reason = "no-page"; break
+                m = re.search(r"\|\s*Image1?\s*=\s*([^\n|]+\.(?:jpg|png|jpeg))", wt, re.I)
+                if not m:
+                    reason = "no-image"; break
+                fn = m.group(1).strip()
+                dm = re.search(r"\|\s*(?:ReleaseDate|CoverDate|Pubyear|Year)\s*=\s*([^\n|]+)", wt)
+                date = dm.group(1).strip() if dm else ""
+                ii = api(base, {"action": "query", "titles": "File:" + fn, "prop": "imageinfo",
+                                "iiprop": "url", "format": "json", "formatversion": 2})
+                time.sleep(DELAY)
+                for p in ii.get("query", {}).get("pages", []):
+                    if "imageinfo" in p:
+                        url = p["imageinfo"][0]["url"].split("/revision/")[0]
+                        return ((url, date, base.split("//")[1].split(".")[0]), "ok")
+                reason = "no-file"; break
+            except urllib.error.HTTPError as e:
+                if e.code in (429, 403):
+                    reason = "throttled"; time.sleep(BACKOFF); continue   # retry once
+                reason = f"http-{e.code}"; break
+            except Exception:
+                reason = "error"; time.sleep(DELAY); break
+    return (None, reason)
 
 
 def main():
@@ -131,8 +146,11 @@ def main():
     print(f"Source: {os.path.basename(xlsx)}   missing-cover rows to try: {len(todo)}", flush=True)
 
     filled = 0
+    from collections import Counter
+    reasons = Counter()
     for i, (t, iss, vol) in enumerate(todo, 1):
-        res = fandom_cover(t, vol, iss)   # (title, vol, issue) — order matters!
+        res, reason = fandom_cover(t, vol, iss)   # (title, vol, issue) — order matters!
+        reasons[reason] += 1
         if res:
             url, date, wiki = res
             covers[f"{t}|||{iss}|||{vol}"] = {"url": url, "large": url, "date": date, "source": f"fandom-{wiki}"}
@@ -140,11 +158,16 @@ def main():
             print(f"  [{i}/{len(todo)}] ✓ {t} Vol {vol} #{iss}  ({wiki})", flush=True)
         if i % 20 == 0:
             json.dump(covers, open(COVERS, "w"))
-            print(f"  ...flushed at {i}, filled {filled}", flush=True)
+            brk = " ".join(f"{k}:{v}" for k, v in reasons.most_common())
+            print(f"  ...flushed at {i}, filled {filled}  [{brk}]", flush=True)
 
     json.dump(covers, open(COVERS, "w"))
     shutil.copy(COVERS, PUBLIC)
     print(f"\n  Filled {filled} / {len(todo)} covers from Fandom.", flush=True)
+    print("  Outcome breakdown:", dict(reasons.most_common()), flush=True)
+    if reasons.get("throttled", 0) > len(todo) * 0.1:
+        print("  ⚠ Heavy throttling — Fandom rate-limited you. Wait ~30 min and re-run;\n"
+              "    it skips books already filled, so a re-run only retries the misses.", flush=True)
     print(f"  Wrote {COVERS} (+ copied to public/). Run: node gen_data.mjs", flush=True)
 
 
