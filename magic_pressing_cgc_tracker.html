@@ -1,0 +1,206 @@
+
+<style>
+  .tracker { padding: 1rem 0; font-family: var(--font-sans); }
+  .section-label { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin: 1.5rem 0 0.5rem; }
+  .book-card { background: var(--surface-2); border: 0.5px solid var(--border); border-radius: 12px; padding: 0.85rem 1rem; margin-bottom: 8px; display: grid; grid-template-columns: 1fr auto; gap: 8px; align-items: start; }
+  .book-title { font-size: 14px; font-weight: 500; color: var(--text-primary); margin: 0 0 2px; }
+  .book-meta { font-size: 12px; color: var(--text-secondary); margin: 0 0 4px; }
+  .book-plan { font-size: 12px; color: var(--text-secondary); font-style: italic; }
+  .badges { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+  .badge { font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: 4px; }
+  .badge-grade { background: #E6F1FB; color: #185FA5; }
+  .badge-warn { background: #FAEEDA; color: #854F0B; }
+  .badge-danger { background: #FCEBEB; color: #A32D2D; }
+  .badge-ok { background: #EAF3DE; color: #3B6D11; }
+  .badge-purple { background: #EEEDFE; color: #534AB7; }
+  .value-col { text-align: right; min-width: 90px; }
+  .value-nm { font-size: 15px; font-weight: 500; color: var(--text-primary); }
+  .value-label { font-size: 11px; color: var(--text-muted); }
+  .flag { font-size: 11px; color: #A32D2D; font-weight: 500; margin-top: 3px; }
+  .divider { border: none; border-top: 0.5px solid var(--border); margin: 0.5rem 0 0; }
+</style>
+
+<div class="tracker">
+  <h2 style="font-size: 16px; font-weight: 500; color: var(--text-primary); margin: 0 0 4px;">Books at Magic Pressing / CGC</h2>
+  <p style="font-size: 13px; color: var(--text-secondary); margin: 0 0 0.5rem;">Your grade estimates + planned destination</p>
+
+  <div class="section-label">At Magic Pressing — Confirmed batches</div>
+
+  <div class="book-card">
+    <div>
+      <p class="book-title">Superman Unchained #1</p>
+      <p class="book-meta">Snyder / Jim Lee</p>
+      <p class="book-plan">Plan: Terrificon — Jim Lee Yellow SS (Sat only). Arrive 10am sharp.</p>
+      <div class="badges"><span class="badge badge-grade">8.5–9.0</span><span class="badge badge-purple">Yellow SS target</span></div>
+    </div>
+    <div class="value-col"><div class="value-nm">$200–400</div><div class="value-label">signed graded est.</div></div>
+  </div>
+
+  <div class="book-card">
+    <div>
+      <p class="book-title">Batman #125</p>
+      <p class="book-meta">Zdarsky / Jorge Jimenez</p>
+      <p class="book-plan">Plan: Jimenez private signing — deadline was June 5. Confirm status with presser NOW.</p>
+      <div class="badges"><span class="badge badge-grade">9.0–9.2</span><span class="badge badge-warn">Deadline passed</span></div>
+      <p class="flag">⚠ Was this submitted before June 5? Needs immediate confirmation.</p>
+    </div>
+    <div class="value-col"><div class="value-nm">$200–450</div><div class="value-label">Yellow SS est.</div></div>
+  </div>
+
+  <div class="book-card">
+    <div>
+      <p class="book-title">Wolverine #8 (1982)</p>
+      <p class="book-meta">Claremont / Miller</p>
+      <p class="book-plan">Plan: DO NOT SIGN before Terrificon. Claremont Yellow SS Aug 7–9. DO NOT PRESS if already at presser — pressing is fine, signing is the reservation.</p>
+      <div class="badges"><span class="badge badge-grade">8.0–9.0</span><span class="badge badge-danger">DO NOT SIGN</span><span class="badge badge-purple">Terrificon #1 priority</span></div>
+    </div>
+    <div class="value-col"><div class="value-nm">$500+</div><div class="value-label">Yellow SS 9.8 est.</div></div>
+  </div>
+
+  <div class="book-card">
+    <div>
+      <p class="book-title">Batman Europa #1</p>
+      <p class="book-meta">Azzarello / Jim Lee</p>
+      <p class="book-plan">Plan: Terrificon — Jim Lee Yellow SS (Sat only).</p>
+      <div class="badges"><span class="badge badge-grade">9.4–9.6</span><span class="badge badge-purple">Yellow SS target</span></div>
+    </div>
+    <div class="value-col"><div class="value-nm">$200–400</div><div class="value-label">signed graded est.</div></div>
+  </div>
+
+  <div class="book-card">
+    <div>
+      <p class="book-title">Batman #656 + #657</p>
+      <p class="book-meta">Morrison / Kubert — 1st Damian Wayne</p>
+      <p class="book-plan">Plan: Press → CGC raw grade or CGC submission. Key issue — 1st Damian.</p>
+      <div class="badges"><span class="badge badge-grade">#656: 9.0–9.2</span><span class="badge badge-grade">#657: 6.5–7.5</span><span class="badge badge-ok">Key — 1st Damian</span></div>
+      <p class="flag">⚠ #657 grade is lower — verify ROI before CGC fees.</p>
+    </div>
+    <div class="value-col"><div class="value-nm">$80–200</div><div class="value-label">raw NM est.</div></div>
+  </div>
+
+  <div class="book-card">
+    <div>
+      <p class="book-title">Secret Wars #8</p>
+      <p class="book-meta">Hickman / Ribic</p>
+      <p class="book-plan">Plan: [NEEDS PLAN] — no confirmed signing or CGC path in your docs. Whatnot raw?</p>
+      <div class="badges"><span class="badge badge-grade">4.0–5.0</span><span class="badge badge-warn">Low grade</span></div>
+      <p class="flag">⚠ At 4.0–5.0, pressing ROI is marginal. Confirm plan.</p>
+    </div>
+    <div class="value-col"><div class="value-nm">~$10–15</div><div class="value-label">raw est.</div></div>
+  </div>
+
+  <div class="book-card">
+    <div>
+      <p class="book-title">House of M #1</p>
+      <p class="book-meta">Bendis / Coipel</p>
+      <p class="book-plan">Plan: [NEEDS PLAN] — not in confirmed docs. Press + Whatnot or eBay raw.</p>
+      <div class="badges"><span class="badge badge-grade">7.5–8.5</span></div>
+    </div>
+    <div class="value-col"><div class="value-nm">~$15–25</div><div class="value-label">raw est.</div></div>
+  </div>
+
+  <div class="book-card">
+    <div>
+      <p class="book-title">What If? #105</p>
+      <p class="book-meta">1st Spider-Girl (May Parker)</p>
+      <p class="book-plan">Plan: [NEEDS PLAN] — 1st appearance key. Good grade for CGC if ROI works.</p>
+      <div class="badges"><span class="badge badge-grade">8.0–9.0</span><span class="badge badge-ok">1st Spider-Girl</span></div>
+    </div>
+    <div class="value-col"><div class="value-nm">$30–80</div><div class="value-label">raw NM est.</div></div>
+  </div>
+
+  <div class="book-card">
+    <div>
+      <p class="book-title">Catwoman #51</p>
+      <p class="book-meta">Pfeifer / Lopez</p>
+      <p class="book-plan">Plan: [NEEDS PLAN — GUESSING on significance] — not in docs. Whatnot raw likely.</p>
+      <div class="badges"><span class="badge badge-grade">8.0–9.0</span><span class="badge badge-warn">Plan needed</span></div>
+    </div>
+    <div class="value-col"><div class="value-nm">[NEEDS VERIFY]</div><div class="value-label">check eBay</div></div>
+  </div>
+
+  <div class="book-card">
+    <div>
+      <p class="book-title">Superman #205</p>
+      <p class="book-meta">Azzarello / Jim Lee — For Tomorrow arc</p>
+      <p class="book-plan">Plan: [NEEDS PLAN] — Jim Lee cover. Whatnot raw or hold for Terrificon slab?</p>
+      <div class="badges"><span class="badge badge-grade">7.0–8.0</span></div>
+    </div>
+    <div class="value-col"><div class="value-nm">~$10–20</div><div class="value-label">raw est.</div></div>
+  </div>
+
+  <div class="book-card">
+    <div>
+      <p class="book-title">Tales of Suspense #98</p>
+      <p class="book-meta">Lee / Colan — late Silver Age Cap/Iron Man</p>
+      <p class="book-plan">Plan: [NEEDS PLAN] — Silver Age book. CGC at 3.0–3.5 = low ROI unless pressing lifts it.</p>
+      <div class="badges"><span class="badge badge-grade">3.0–3.5</span><span class="badge badge-danger">Low grade — ROI risk</span></div>
+      <p class="flag">⚠ At 3.0–3.5 raw, CGC fees likely eat any margin. Confirm pressing is mandatory before committing.</p>
+    </div>
+    <div class="value-col"><div class="value-nm">[NEEDS VERIFY]</div><div class="value-label">check eBay</div></div>
+  </div>
+
+  <div class="book-card">
+    <div>
+      <p class="book-title">Suicide Squad #10</p>
+      <p class="book-meta">Ostrander / McDonnell — classic run</p>
+      <p class="book-plan">Plan: [NEEDS PLAN] — not in docs. Whatnot raw unless there's a signing angle.</p>
+      <div class="badges"><span class="badge badge-grade">5.5–6.5</span></div>
+    </div>
+    <div class="value-col"><div class="value-nm">[NEEDS VERIFY]</div><div class="value-label">check eBay</div></div>
+  </div>
+
+  <div class="book-card">
+    <div>
+      <p class="book-title">Exiles #23</p>
+      <p class="book-meta">[Guessing: Bedard era]</p>
+      <p class="book-plan">Plan: [NEEDS PLAN] — Exiles #3 is in JSA batch, but #23 has no documented plan.</p>
+      <div class="badges"><span class="badge badge-grade">9.0–9.2</span><span class="badge badge-warn">Plan needed</span></div>
+    </div>
+    <div class="value-col"><div class="value-nm">[NEEDS VERIFY]</div><div class="value-label">check eBay</div></div>
+  </div>
+
+  <div class="book-card">
+    <div>
+      <p class="book-title">Human Torch #3 (Saga)</p>
+      <p class="book-meta">Roy Thomas — WWII series</p>
+      <p class="book-plan">Plan: Roy Thomas private signing batch — deadline July 10. Already submitted.</p>
+      <div class="badges"><span class="badge badge-grade">8.5–9.0</span><span class="badge badge-ok">Roy Thomas batch ✓</span></div>
+    </div>
+    <div class="value-col"><div class="value-nm">$50–80</div><div class="value-label">signed graded est.</div></div>
+  </div>
+
+  <div class="book-card">
+    <div>
+      <p class="book-title">Thor #390</p>
+      <p class="book-meta">Frenz / DeFalco — Cap lifts Mjolnir</p>
+      <p class="book-plan">Plan: [NEEDS PLAN] — high-grade key. Cap lifts Mjolnir first time. CGC-worthy at 9.2–9.4.</p>
+      <div class="badges"><span class="badge badge-grade">9.2–9.4</span><span class="badge badge-ok">Cap lifts Mjolnir — key!</span></div>
+      <p class="flag">⚠ This is a legitimate key you haven't documented a plan for. Worth discussing.</p>
+    </div>
+    <div class="value-col"><div class="value-nm">$40–100</div><div class="value-label">raw est. — check comps</div></div>
+  </div>
+
+  <hr class="divider">
+  <div class="section-label">At CGC — Active submissions</div>
+
+  <div class="book-card">
+    <div>
+      <p class="book-title">Black Panther: Man Without Fear #513</p>
+      <p class="book-meta">Stan Lee signature — Dynamic Forces COA</p>
+      <p class="book-plan">Plan: CGC × JSA authentication. DO NOT PRESS. Sub# CGC6119605231. Check Aug 4.</p>
+      <div class="badges"><span class="badge badge-purple">AT CGC</span><span class="badge badge-danger">DO NOT PRESS</span></div>
+    </div>
+    <div class="value-col"><div class="value-nm">$600–1,200</div><div class="value-label">authenticated est.</div></div>
+  </div>
+
+  <div class="book-card">
+    <div>
+      <p class="book-title">Amazing Spider-Man #361</p>
+      <p class="book-meta">Bagley / Sharen — 1st full Carnage</p>
+      <p class="book-plan">Plan: CGC graded return. Sub# CGC2731495222. Check Aug 4. DO NOT sell raw copy in Box 7.</p>
+      <div class="badges"><span class="badge badge-purple">AT CGC</span><span class="badge badge-ok">1st full Carnage</span></div>
+    </div>
+    <div class="value-col"><div class="value-nm">$200–500</div><div class="value-label">graded est.</div></div>
+  </div>
+</div>

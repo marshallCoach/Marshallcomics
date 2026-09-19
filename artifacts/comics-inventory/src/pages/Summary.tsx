@@ -16,11 +16,46 @@ const keyCount     = comics.filter(c => (c.Key    || "").toUpperCase() === "YES"
 const signedCount  = comics.filter(c => (c.Signed || "").toUpperCase() === "YES").length;
 const whatnotCount = comics.filter(c => (c.Platform || "").toUpperCase().includes("WHATNOT")).length;
 const ebayCount    = comics.filter(c => (c.Platform || "").toUpperCase() === "EBAY").length;
-const tfCount      = comics.filter(c => !!(c.Terrificon || "").trim()).length;
 
-// ── Update banner data — derives from live data where possible ────────────────
-const LAST_UPDATE_DATE = "June 1, 2026";
-const UPDATE_DELTAS    = ["+5 Boxes (84→89)", "10,424 Comics", "1,478 Keys"];
+// ── Update banner data — fully derived from live data ─────────────────────────
+function formatGeneratedDate(iso: string): string {
+  const d = new Date(`${iso}T00:00:00`);
+  if (isNaN(d.getTime())) return iso;
+  return d.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
+}
+
+const UPDATE_SNAPSHOT_KEY = "brbLastUpdateSnapshot";
+
+function computeUpdateDeltas(): string[] {
+  const now = { comics: totalComics, boxes: totalBoxes, keys: keyCount };
+  let prev: typeof now | null = null;
+  try {
+    const raw = localStorage.getItem(UPDATE_SNAPSHOT_KEY);
+    if (raw) prev = JSON.parse(raw);
+  } catch { /* ignore */ }
+  try { localStorage.setItem(UPDATE_SNAPSHOT_KEY, JSON.stringify(now)); } catch { /* ignore */ }
+
+  const deltas: string[] = [];
+  if (prev && prev.boxes !== now.boxes) {
+    const sign = now.boxes > prev.boxes ? "+" : "";
+    deltas.push(`${sign}${now.boxes - prev.boxes} Boxes (${prev.boxes}→${now.boxes})`);
+  }
+  if (prev && prev.comics !== now.comics) {
+    const sign = now.comics > prev.comics ? "+" : "";
+    deltas.push(`${sign}${(now.comics - prev.comics).toLocaleString()} Comics`);
+  }
+  if (prev && prev.keys !== now.keys) {
+    const sign = now.keys > prev.keys ? "+" : "";
+    deltas.push(`${sign}${now.keys - prev.keys} Keys`);
+  }
+  if (deltas.length === 0) {
+    deltas.push(`${now.comics.toLocaleString()} Comics`, `${now.boxes} Boxes`, `${now.keys.toLocaleString()} Keys`);
+  }
+  return deltas;
+}
+
+const LAST_UPDATE_DATE = formatGeneratedDate(DATA.generatedAt);
+const UPDATE_DELTAS    = computeUpdateDeltas();
 const INTERFACE_UPDATES = [
   `Data refresh — ${totalComics.toLocaleString()} comics · ${totalBoxes} boxes · ${keyCount.toLocaleString()} keys · ${signedCount} signed`,
   "Global search added — press ⌘K / Ctrl+K from anywhere to search all comics, boxes, and pages",
@@ -184,8 +219,7 @@ const TIMELINE = [
   { label:"Geoff Johns + Fabok SS",                   date:"Jun 26",      days:daysUntil(2026,6,26),  urgency:"high",     cat:"Signing"  },
   { label:"Roy Thomas SS — 5 books → $820–$1,630 ROI",date:"Jul 10",      days:daysUntil(2026,7,10),  urgency:"high",     cat:"Signing"  },
   { label:"CGC Press Batch — ship all simultaneously",date:"Before Aug 7",days:daysUntil(2026,8,1),   urgency:"high",     cat:"CGC"      },
-  { label:"✦ TERRIFICON — Jim Lee Sat Aug 8 only",    date:"Aug 7–9",     days:daysUntil(2026,8,7),   urgency:"event",    cat:"Show"     },
-  { label:"NYCC — Stan Lee auth + Heritage eval",     date:"Oct 8–11",    days:daysUntil(2026,10,8),  urgency:"medium",   cat:"Show"     },
+  { label:"NYCC — Stan Lee auth + Heritage eval",     date:"Oct 8–11",    days:daysUntil(2026,10,8),  urgency:"high",     cat:"Show"     },
 ];
 
 function urgColor(u: string): string {
@@ -221,10 +255,10 @@ const FLAGSHIP = [
   { book:"Truth: RWB #1 (Baker remarked)",             note:"Verify remark → Green Qual. → Heritage — $500–$2,000",     color:"#d97706", box:"1",  publisher:"Marvel", year:"2003", valueNM:"$500–$2,000 with remark",   condition:"Has Baker remark",              cgcPath:"CGC × JSA → Green Qualified → Heritage",        action:"Verify remark authenticity before submitting.", terrificon:false },
   { book:"Ultimate Fallout #4 Foil (1st Miles)",       note:"1st Miles Morales — $800–$1,500 CGC 9.8",                  color:"#8b2be2", box:"38", publisher:"Marvel", year:"2011", valueNM:"$800–$1,500 CGC 9.8",       condition:"Check for pressing",            cgcPath:"Press → CGC Universal Blue 9.8",                action:"Press then submit for Blue Universal label.", terrificon:false },
   { book:"Thor #169 CGC 8.0 (Galactus Origin)",        note:"Already slabbed. Galactus origin. Kirby/Lee. Show 15.",    color:"#1d6fa4", box:"63", publisher:"Marvel", year:"1969", valueNM:"CGC 8.0 — already slabbed", condition:"Slabbed CGC 8.0",               cgcPath:"Already graded — ready for Heritage or auction", action:"Feature in Show 15 — Whatnot anchor book.", terrificon:false },
-  { book:"Wolverine #8 (UNSIGNED — 1982)",             note:"Keep unsigned → Yellow SS at Terrificon → $500+ SS 9.8",   color:"#d97706", box:"72", publisher:"Marvel", year:"1982", valueNM:"$500+ Yellow SS CGC 9.8",   condition:"MUST STAY UNSIGNED",            cgcPath:"Yellow SS at Terrificon → Chris Claremont SS",  action:"Priority #1 at Terrificon. Press before Aug 7. DO NOT sign until con.", terrificon:true },
-  { book:"Batman #656 (1st Damian Wayne)",             note:"Press + Blue Universal → $350–$500 CGC 9.8 — Best ROI",    color:"#16a34a", box:"1",  publisher:"DC",     year:"2006", valueNM:"$350–$500 CGC 9.8",         condition:"In press list — send ASAP",     cgcPath:"Press → CGC Universal Blue 9.8",                action:"Press and submit before Terrificon. Best ROI in collection.", terrificon:true },
-  { book:"Vision #1 (Tom King signed)",                note:"Press + Green Qual. → $150–$300. Film timing.",            color:"#8b2be2", box:"1",  publisher:"Marvel", year:"2015", valueNM:"$150–$300 Green Qualified",  condition:"Signed — press first",          cgcPath:"Press → CGC × JSA → Green Qualified",           action:"In press batch — submit with the Terrificon batch before Aug 7.", terrificon:false },
-  { book:"ASM #361 (1st Carnage — Bagley/Sharen sgd)", note:"Bagley+Sharen. Press + Green Qual. → $200–$300 auth.",    color:"#dc2626", box:"1",  publisher:"Marvel", year:"1992", valueNM:"$200–$300 Green Qualified",  condition:"Dual signed — press first",     cgcPath:"Press → CGC × JSA → Green Qualified",           action:"In press batch — submit with the Terrificon batch before Aug 7.", terrificon:false },
+  { book:"Wolverine #8 (UNSIGNED — 1982)",             note:"Keep unsigned → Yellow SS at a future con → $500+ SS 9.8", color:"#d97706", box:"72", publisher:"Marvel", year:"1982", valueNM:"$500+ Yellow SS CGC 9.8",   condition:"MUST STAY UNSIGNED",            cgcPath:"Yellow SS signing → Chris Claremont SS",       action:"Keep unsigned. Press now. DO NOT sign until a Yellow SS con signing.", terrificon:false },
+  { book:"Batman #656 (1st Damian Wayne)",             note:"Press + Blue Universal → $350–$500 CGC 9.8 — Best ROI",    color:"#16a34a", box:"1",  publisher:"DC",     year:"2006", valueNM:"$350–$500 CGC 9.8",         condition:"In press list — send ASAP",     cgcPath:"Press → CGC Universal Blue 9.8",                action:"Press and submit now. Best ROI in collection.", terrificon:false },
+  { book:"Vision #1 (Tom King signed)",                note:"Press + Green Qual. → $150–$300. Film timing.",            color:"#8b2be2", box:"1",  publisher:"Marvel", year:"2015", valueNM:"$150–$300 Green Qualified",  condition:"Signed — press first",          cgcPath:"Press → CGC × JSA → Green Qualified",           action:"In press batch — submit with the next CGC batch.", terrificon:false },
+  { book:"ASM #361 (1st Carnage — Bagley/Sharen sgd)", note:"Bagley+Sharen. Press + Green Qual. → $200–$300 auth.",    color:"#dc2626", box:"1",  publisher:"Marvel", year:"1992", valueNM:"$200–$300 Green Qualified",  condition:"Dual signed — press first",     cgcPath:"Press → CGC × JSA → Green Qualified",           action:"In press batch — submit with the next CGC batch.", terrificon:false },
   { book:"Black Lightning #1 (Isabella)",              note:"Press + Green Qual. → $300–$500. Whatnot/Heritage.",       color:"#16a34a", box:"1",  publisher:"DC",     year:"1977", valueNM:"$300–$500 Green Qualified",  condition:"Check for pressing",            cgcPath:"CGC × JSA → Green Qualified",                   action:"Monitor CGC private signing window — high Heritage value.", terrificon:false },
   { book:"Captain Carter #1 (Atwell — To Robert)",    note:"Emotional anchor for Show 1 — personalized signing.",      color:"#1d6fa4", box:"1",  publisher:"Marvel", year:"2022", valueNM:"$80–$150 personalized",      condition:"Signed personalized",           cgcPath:"Whatnot anchor — personal story sells",          action:"Lead Show 1 with the story of the Hayley Atwell signing.", terrificon:false },
 ];
@@ -347,7 +381,6 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
   const cBoxes   = useCountUp(totalBoxes,   600,  mounted);
   const cWhatnot = useCountUp(whatnotCount, 950,  mounted);
   const cEbay    = useCountUp(ebayCount,    750,  mounted);
-  const cTF      = useCountUp(tfCount,      700,  mounted);
 
   const getStatus = (title: string): Status => statuses[title] || "not_started";
   const setStatus = (title: string, s: Status) => setStatuses(prev => ({ ...prev, [title]: s }));
@@ -377,7 +410,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
 
   // Random covers carousel — 10 different comics each mount
   const carouselComics = useMemo(() => {
-    const arr = [...comics];
+    const arr = [...comics].filter(c => (c.Key || "").toUpperCase() === "YES");
     for (let i = arr.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [arr[i], arr[j]] = [arr[j], arr[i]];
@@ -397,17 +430,17 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
         <button
           onClick={closeBanner}
           title="Dismiss"
-          style={{ position:"absolute", top:10, right:12, background:"none", border:"none", cursor:"pointer", color:"var(--muted)", fontSize:"1rem", lineHeight:1, padding:4, borderRadius:4 }}
+          style={{ position:"absolute", top:10, right:12, background:"none", border:"none", cursor:"pointer", color:"var(--muted)", fontSize:"0.875rem", lineHeight:1, padding:4, borderRadius:4 }}
           onMouseOver={e => (e.currentTarget.style.color = "var(--red)")}
           onMouseOut={e => (e.currentTarget.style.color = "var(--muted)")}
         >×</button>
         {/* Header row */}
         <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:14, flexWrap:"wrap", paddingRight:24 }}>
-          <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", letterSpacing:"3px", color:"var(--red)" }}>LATEST UPDATE</span>
-          <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1.5px", color:"var(--muted)", background:"var(--surface2)", padding:"2px 8px", borderRadius:3, border:"1px solid var(--border)" }}>{LAST_UPDATE_DATE}</span>
+          <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"3px", color:"var(--red)" }}>LATEST UPDATE</span>
+          <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px", color:"var(--muted)", background:"var(--surface2)", padding:"2px 8px", borderRadius:3, border:"1px solid var(--border)" }}>{LAST_UPDATE_DATE}</span>
           <div style={{ display:"flex", gap:5, flexWrap:"wrap" }}>
             {UPDATE_DELTAS.map(d => (
-              <span key={d} style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px", color:"#16a34a", background:"rgba(22,163,74,0.08)", border:"1px solid rgba(22,163,74,0.18)", padding:"2px 8px", borderRadius:3 }}>
+              <span key={d} style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"#16a34a", background:"rgba(22,163,74,0.08)", border:"1px solid rgba(22,163,74,0.18)", padding:"2px 8px", borderRadius:3 }}>
                 {d}
               </span>
             ))}
@@ -417,7 +450,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
         {/* Interface updates only — writers/artists/value have their own dedicated cards below */}
         <div style={{ display:"flex", flexDirection:"column", gap:4 }}>
           {INTERFACE_UPDATES.map(u => (
-            <div key={u} style={{ fontSize:"0.88rem", color:"var(--muted2)", lineHeight:1.4, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" }}>→ {u}</div>
+            <div key={u} style={{ fontSize:"0.875rem", color:"var(--muted2)", lineHeight:1.5, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>→ {u}</div>
           ))}
         </div>
       </section>
@@ -426,11 +459,11 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
       {/* ── Cover Carousel ── */}
       <section style={{ marginBottom:24 }}>
         <div style={{ display:"flex", alignItems:"baseline", gap:10, marginBottom:10 }}>
-          <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"3px", color:"var(--muted)" }}>
+          <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"3px", color:"var(--muted)" }}>
             TODAY'S PICKS — {new Date().toLocaleDateString("en-US", { month:"long", day:"numeric", year:"numeric" })}
           </span>
-          <span style={{ fontFamily:"'Crimson Pro',serif", fontSize:"0.78rem", color:"var(--muted)", fontStyle:"italic" }}>
-            10 random books from the collection · refreshes each visit
+          <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px", color:"var(--muted)" }}>
+            10 random key issues · refreshes each visit
           </span>
         </div>
         <div style={{ overflow:"hidden", margin:"0 -16px", padding:"4px 0" }}>
@@ -439,7 +472,6 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
               <div
                 key={i}
                 className="cover-carousel-card"
-                onClick={() => setCarouselModal({ comic: c, large: null })}
               >
                 <CoverImage
                   comic={c}
@@ -448,11 +480,11 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
                   onClick={large => setCarouselModal({ comic: c, large })}
                   style={{ borderRadius:6, boxShadow:"0 4px 14px rgba(0,0,0,0.18)" }}
                 />
-                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px", color:"var(--muted2)", lineHeight:1.2, marginTop:5, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap", width:100, textAlign:"center" }}>
+                <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--muted2)", lineHeight:1.2, marginTop:5, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap", width:100, textAlign:"center" }}>
                   {c.Title}
                 </div>
-                <div style={{ fontFamily:"'Crimson Pro',serif", fontSize:"0.7rem", color:"var(--muted)", textAlign:"center", width:100 }}>
-                  #{c.Issue}
+                <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:"var(--muted)", textAlign:"center", width:100 }}>
+                  {c.Issue}
                 </div>
               </div>
             ))}
@@ -467,33 +499,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
         )}
       </section>
 
-      {/* ── Box Progress — animated fill ── */}
-      {showProgress && <section className="progress-section" style={{ position:"relative" }}>
-        <button
-          onClick={() => setShowProgress(false)}
-          style={{ position:"absolute", top:10, right:12, background:"none", border:"none", cursor:"pointer", color:"var(--muted)", fontSize:"1.1rem", lineHeight:1, padding:"2px 5px", borderRadius:4 }}
-          title="Dismiss"
-        >×</button>
-        <div className="progress-header">
-          <div>
-            <span className="progress-title">BOX COLLECTION PROGRESS</span>
-            <span className="progress-fraction">{totalBoxes} of {TARGET_BOXES} boxes catalogued</span>
-          </div>
-          <div className="progress-pct">{BOX_PCT}%</div>
-        </div>
-        <div className="progress-track">
-          <div className="progress-fill" style={{
-            width: `${progWidth}%`,
-            backgroundImage: `linear-gradient(90deg, #c8102e 0%, #e85d04 25%, #f4a107 55%, #84cc16 80%, #22c55e 100%)`,
-            backgroundSize: `${progWidth > 0 ? (100 / progWidth) * 100 : 100}% 100%`,
-            backgroundRepeat: "no-repeat",
-          }} />
-          {[...Array(TARGET_BOXES)].map((_,i) => (
-            <div key={i} className={`progress-tick ${i < totalBoxes ? "filled" : ""}`} style={{ left:`${((i+1)/TARGET_BOXES)*100}%` }} />
-          ))}
-        </div>
-        <div className="progress-sub">All {totalBoxes} boxes catalogued — complete ✓ · {COMPLETE_RUNS} runs finished cover-to-cover</div>
-      </section>}
+      {/* ── Quick Search ── */}
 
       {/* ── Quick Search ── */}
       <section className="qs-section">
@@ -626,7 +632,6 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
           {([
             { val: cWhatnot.toLocaleString(), lbl:"Whatnot",         sub:"assigned to platform",  color:"#16a34a" },
             { val: cEbay.toLocaleString(),    lbl:"eBay",             sub:"assigned to platform",  color:"#6b7280" },
-            { val: cTF.toString(),            lbl:"Terrificon Books", sub:"creator appearances",   color:"#d97706" },
           ] as const).map((s, i) => (
             <div key={i} className="stat-tile" style={{ borderTopColor: s.color }}>
               <div className="stat-tile-val" style={{ color: s.color }}>{s.val}</div>
@@ -642,43 +647,43 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
         <div style={{ background:"#0f1a12", border:"1px solid #1e3a22", borderRadius:10, padding:"22px 24px", overflow:"hidden", position:"relative" }}>
           {/* Scanline texture */}
           <div style={{ position:"absolute", inset:0, backgroundImage:"repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,255,80,0.015) 3px,rgba(0,255,80,0.015) 4px)", pointerEvents:"none" }} />
-          <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"4px", color:"rgba(100,220,120,0.5)", marginBottom:18 }}>
+          <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"3px", color:"rgba(100,220,120,0.5)", marginBottom:18 }}>
             COLLECTION VALUE EST. — {LAST_UPDATE_DATE.toUpperCase()}
           </div>
           <div style={{ display:"flex", gap:0, flexWrap:"wrap" }}>
             {/* NM Value */}
             <div style={{ flex:"1 1 200px", paddingRight:32, borderRight:"1px solid #1e3a22" }}>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem", letterSpacing:"3px", color:"rgba(100,220,120,0.45)", marginBottom:6 }}>
+              <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"3px", color:"rgba(100,220,120,0.45)", marginBottom:6 }}>
                 NM RAW TOTAL
               </div>
               <div style={{ display:"flex", alignItems:"baseline", gap:4 }}>
-                <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", color:"rgba(100,220,120,0.6)", letterSpacing:"1px", alignSelf:"flex-start", marginTop:6 }}>$</span>
-                <span className="gas-num" style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"3.2rem", color:"#4ade80", letterSpacing:"3px", lineHeight:1, fontVariantNumeric:"tabular-nums" }}>
+                <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:"rgba(100,220,120,0.6)", letterSpacing:"1px", alignSelf:"flex-start", marginTop:6 }}>$</span>
+                <span className="gas-num" style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"1.75rem", color:"#4ade80", letterSpacing:"3px", lineHeight:1, fontVariantNumeric:"tabular-nums" }}>
                   {cNmValue.toLocaleString()}
                 </span>
               </div>
-              <div style={{ fontSize:"0.62rem", color:"rgba(100,220,120,0.35)", marginTop:6, letterSpacing:"1px" }}>
+              <div style={{ fontSize:"0.875rem", color:"rgba(100,220,120,0.5)", marginTop:6, letterSpacing:"1px" }}>
                 Near Mint (9.4+) raw — {totalComics.toLocaleString()} books
               </div>
             </div>
             {/* VF Value */}
             <div style={{ flex:"1 1 200px", paddingLeft:32 }}>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem", letterSpacing:"3px", color:"rgba(100,220,120,0.45)", marginBottom:6 }}>
+              <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"3px", color:"rgba(100,220,120,0.45)", marginBottom:6 }}>
                 VF COLLECTION VALUE EST.
               </div>
               <div style={{ display:"flex", alignItems:"baseline", gap:4 }}>
-                <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", color:"rgba(100,220,120,0.4)", letterSpacing:"1px", alignSelf:"flex-start", marginTop:6 }}>$</span>
-                <span className="gas-num" style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"3.2rem", color:"#86efac", letterSpacing:"3px", lineHeight:1, fontVariantNumeric:"tabular-nums" }}>
+                <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:"rgba(100,220,120,0.4)", letterSpacing:"1px", alignSelf:"flex-start", marginTop:6 }}>$</span>
+                <span className="gas-num" style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"1.75rem", color:"#86efac", letterSpacing:"3px", lineHeight:1, fontVariantNumeric:"tabular-nums" }}>
                   {cVfValue.toLocaleString()}
                 </span>
               </div>
-              <div style={{ fontSize:"0.62rem", color:"rgba(100,220,120,0.35)", marginTop:6, letterSpacing:"1px" }}>
+              <div style={{ fontSize:"0.875rem", color:"rgba(100,220,120,0.5)", marginTop:6, letterSpacing:"1px" }}>
                 Very Fine (8.0) lower bounds — realistic sell-raw estimate
               </div>
             </div>
           </div>
           {/* Bottom note */}
-          <div style={{ marginTop:16, paddingTop:14, borderTop:"1px solid #1e3a22", fontSize:"0.62rem", color:"rgba(100,220,120,0.25)", letterSpacing:"1px" }}>
+          <div style={{ marginTop:16, paddingTop:14, borderTop:"1px solid #1e3a22", fontSize:"0.875rem", color:"rgba(100,220,120,0.4)", letterSpacing:"1px" }}>
             Values derived from Value_NM and Value_VF fields across all {totalComics.toLocaleString()} catalogued books. VF uses lower bound of any range (e.g. "$5–12" counts as $5).
           </div>
         </div>
@@ -687,7 +692,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
       {/* ── TOP CREATORS — with delta arrows ── */}
       <section style={{ marginBottom:32 }}>
         <h2 className="section-h2">✍ TOP CREATORS</h2>
-        <p style={{ fontSize:"0.78rem", color:"var(--muted2)", marginBottom:12, fontFamily:"'Crimson Pro',serif" }}>
+        <p style={{ fontSize:"0.875rem", color:"var(--muted2)", marginBottom:12, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>
           Ranked by book count across all {totalComics.toLocaleString()} comics. Arrows show rank change vs. previous snapshot (boxes 1–84).
         </p>
         <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:12 }}>
@@ -696,7 +701,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
             const prev    = field === "Writer" ? TOP_WRITERS_PREV : TOP_ARTISTS_PREV;
             return (
               <div key={field} style={{ background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:8, padding:"14px 16px" }}>
-                <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem", letterSpacing:"3px",
+                <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"3px",
                   color: field === "Writer" ? "var(--red)" : "#1d6fa4", marginBottom:12 }}>
                   TOP {field.toUpperCase()}S
                 </div>
@@ -719,19 +724,19 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
                   return (
                     <div key={name} className="creator-row"
                       style={{ display:"flex", alignItems:"center", gap:8, marginBottom:8, position:"relative" }}>
-                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", color:"var(--muted)",
+                      <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:"var(--muted)",
                         minWidth:20, textAlign:"right" }}>#{i+1}</span>
                       <div style={{ width:3, height:20, borderRadius:2, flexShrink:0,
                         background: field === "Writer" ? "var(--red)" : "#1d6fa4", opacity: 1 - i * 0.15 }} />
-                      <span style={{ flex:1, fontSize:"0.82rem", color:"var(--text2)",
+                      <span style={{ flex:1, fontSize:"0.875rem", color:"var(--text2)",
                         overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap",
-                        fontFamily:"'Crimson Pro',serif" }}>{name}</span>
-                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem",
+                        fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>{name}</span>
+                      <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                         color: field === "Writer" ? "var(--red)" : "#1d6fa4", minWidth:30, textAlign:"right" }}>{count}</span>
                       {/* Delta arrow with tooltip */}
                       <div className="delta-wrap" style={{ position:"relative", flexShrink:0 }}>
-                        <span className="delta-arrow" style={{ fontFamily:"'Bebas Neue',sans-serif",
-                          fontSize:"0.8rem", color:arrowColor, cursor:"default",
+                        <span className="delta-arrow" style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+                          fontSize:"0.875rem", color:arrowColor, cursor:"default",
                           display:"inline-flex", alignItems:"center", justifyContent:"center",
                           width:20, height:20, borderRadius:3,
                           background: dir === "up" ? "#16a34a18" : dir === "down" ? "#dc262618" : "#6b728018" }}>
@@ -773,9 +778,9 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
                   <div key={p.name}>
                     <div style={{ display:"flex", alignItems:"center", gap:8 }}>
                       <div style={{ width:10, height:10, borderRadius:2, background:color, flexShrink:0 }} />
-                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.78rem", letterSpacing:"1px", color:"var(--muted2)", minWidth:110 }}>{p.name}</span>
-                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", color:"var(--red)", letterSpacing:"1px" }}>{p.value.toLocaleString()}</span>
-                      <span style={{ fontSize:"0.67rem", color:"var(--muted)" }}>({pct}%)</span>
+                      <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--muted2)", minWidth:110 }}>{p.name}</span>
+                      <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:"var(--red)", letterSpacing:"1px" }}>{p.value.toLocaleString()}</span>
+                      <span style={{ fontSize:"0.875rem", color:"var(--muted)" }}>({pct}%)</span>
                     </div>
                     <div className="pub-bar-track">
                       <div
@@ -798,7 +803,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
       {/* ── FLAGSHIP ASSETS ── */}
       <section style={{ marginBottom:32 }}>
         <h2 className="section-h2">🏆 FLAGSHIP ASSETS</h2>
-        <p style={{ fontSize:"0.82rem", color:"var(--muted2)", marginBottom:12 }}>Your highest-value books — click any card for full action details.</p>
+        <p style={{ fontSize:"0.875rem", color:"var(--muted2)", marginBottom:12 }}>Your highest-value books — click any card for full action details.</p>
         <div style={{ display:"flex", flexWrap:"wrap", gap:10 }}>
           {FLAGSHIP.map((a, i) => {
             const isOpen = openFlag === i;
@@ -816,10 +821,10 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
               >
                 <div style={{ display:"flex", alignItems:"center", gap:8, flexWrap:"wrap" }}>
                   {a.terrificon && <span className="tf-badge">TERRIFICON</span>}
-                  <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.92rem", letterSpacing:"1px", color:a.color, flex:1 }}>{a.book}</div>
-                  <div style={{ fontSize:"0.7rem", color:"var(--muted)", flexShrink:0 }}>Box {a.box} {isOpen?"▲":"▼"}</div>
+                  <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:a.color, flex:1 }}>{a.book}</div>
+                  <div style={{ fontSize:"0.875rem", color:"var(--muted)", flexShrink:0 }}>Box {a.box} {isOpen?"▲":"▼"}</div>
                 </div>
-                <div style={{ fontSize:"0.82rem", color:"var(--muted2)", lineHeight:1.5, marginTop:4 }}>{a.note}</div>
+                <div style={{ fontSize:"0.875rem", color:"var(--muted2)", lineHeight:1.5, marginTop:4 }}>{a.note}</div>
                 {isOpen && (
                   <div style={{ marginTop:14, paddingTop:14, borderTop:`1px solid ${a.color}30`, display:"flex", flexWrap:"wrap", gap:"10px 28px" }}>
                     {[
@@ -835,7 +840,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
                         <span className="dv">{r.v}</span>
                       </div>
                     ))}
-                    <div style={{ flex:"1 1 100%", marginTop:6, padding:"8px 12px", background:`${a.color}0d`, borderRadius:4, fontSize:"0.85rem", color:a.color, fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>
+                    <div style={{ flex:"1 1 100%", marginTop:6, padding:"8px 12px", background:`${a.color}0d`, borderRadius:4, fontSize:"0.875rem", color:a.color, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px" }}>
                       → {a.action}
                     </div>
                   </div>
@@ -870,7 +875,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
                     onClick={() => onNavigate(info.page)}
                   >
                     <div style={{ display:"flex", flexDirection:"column", alignItems:"center", minWidth:38, flexShrink:0 }}>
-                      <div style={{ fontSize:"1.1rem", lineHeight:1 }}>{info.icon}</div>
+                      <div style={{ fontSize:"0.875rem", lineHeight:1 }}>{info.icon}</div>
                       <div className="sched-days" style={{ color: urg }}>
                         {days === 0 ? "NOW" : days === 1 ? "TMRW" : `${days}`}
                       </div>
@@ -879,12 +884,12 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
                       </div>
                     </div>
                     <div style={{ flex:1, minWidth:0 }}>
-                      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.82rem", letterSpacing:"1px", color:info.color, lineHeight:1.2, marginBottom:2 }}>
+                      <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:info.color, lineHeight:1.2, marginBottom:2 }}>
                         {e.Theme.length > 72 ? e.Theme.substring(0,72)+"…" : e.Theme}
                       </div>
-                      <div style={{ fontSize:"0.72rem", color:"var(--muted2)" }}>
+                      <div style={{ fontSize:"0.875rem", color:"var(--muted2)" }}>
                         {e.Date}
-                        <span style={{ marginLeft:8, fontSize:"0.62rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", color: urg }}>
+                        <span style={{ marginLeft:8, fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px", color: urg }}>
                           → {info.page === "showplanner" ? "VIEW SHOW PLAN" : "VIEW CALENDAR"}
                         </span>
                       </div>
@@ -953,7 +958,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
           <div style={{ display:"flex", alignItems:"baseline", gap:14 }}>
             <h2 className="section-h2" style={{ margin:0 }}>✅ NEXT ACTIONS</h2>
             {doneCount > 0 && (
-              <span style={{ fontSize:"0.75rem", fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px", color:"#16a34a" }}>
+              <span style={{ fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1.5px", color:"#16a34a" }}>
                 {doneCount}/{NEXT_STEPS.length} DONE
               </span>
             )}
@@ -976,6 +981,34 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
           ))}
         </div>
       </section>
+
+      {/* ── Box Progress — animated fill ── */}
+      {showProgress && <section className="progress-section" style={{ position:"relative" }}>
+        <button
+          onClick={() => setShowProgress(false)}
+          style={{ position:"absolute", top:10, right:12, background:"none", border:"none", cursor:"pointer", color:"var(--muted)", fontSize:"0.875rem", lineHeight:1, padding:"2px 5px", borderRadius:4 }}
+          title="Dismiss"
+        >×</button>
+        <div className="progress-header">
+          <div>
+            <span className="progress-title">BOX COLLECTION PROGRESS</span>
+            <span className="progress-fraction">{totalBoxes} of {TARGET_BOXES} boxes catalogued</span>
+          </div>
+          <div className="progress-pct">{BOX_PCT}%</div>
+        </div>
+        <div className="progress-track">
+          <div className="progress-fill" style={{
+            width: `${progWidth}%`,
+            backgroundImage: `linear-gradient(90deg, #c8102e 0%, #e85d04 25%, #f4a107 55%, #84cc16 80%, #22c55e 100%)`,
+            backgroundSize: `${progWidth > 0 ? (100 / progWidth) * 100 : 100}% 100%`,
+            backgroundRepeat: "no-repeat",
+          }} />
+          {[...Array(TARGET_BOXES)].map((_,i) => (
+            <div key={i} className={`progress-tick ${i < totalBoxes ? "filled" : ""}`} style={{ left:`${((i+1)/TARGET_BOXES)*100}%` }} />
+          ))}
+        </div>
+        <div className="progress-sub">All {totalBoxes} boxes catalogued — complete ✓ · {COMPLETE_RUNS} runs finished cover-to-cover</div>
+      </section>}
 
     </div>
   );

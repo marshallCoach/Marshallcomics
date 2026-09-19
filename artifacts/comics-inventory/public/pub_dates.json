@@ -1,0 +1,5060 @@
+{
+"Absolute Batman|||1|||1": {
+"date": "2024-12-01",
+"month": 12,
+"week": "2024-W48",
+"year": 2024
+},
+"Absolute Batman|||2|||1": {
+"date": "2025-01-01",
+"month": 1,
+"week": "2025-W01",
+"year": 2025
+},
+"Absolute Batman|||3|||1": {
+"date": "2025-02-01",
+"month": 2,
+"week": "2025-W05",
+"year": 2025
+},
+"Absolute Batman|||4|||1": {
+"date": "2025-03-01",
+"month": 3,
+"week": "2025-W09",
+"year": 2025
+},
+"Absolute Catwoman|||1|||1": {
+"date": "2026-08-01",
+"month": 8,
+"week": "2026-W31",
+"year": 2026
+},
+"Absolute Catwoman|||2|||1": {
+"date": "2026-09-01",
+"month": 9,
+"week": "2026-W36",
+"year": 2026
+},
+"Absolute Flash|||10|||1": {
+"date": "2026-02-01",
+"month": 2,
+"week": "2026-W05",
+"year": 2026
+},
+"Absolute Flash|||11|||1": {
+"date": "2026-03-01",
+"month": 3,
+"week": "2026-W09",
+"year": 2026
+},
+"Absolute Flash|||12|||1": {
+"date": "2026-05-01",
+"month": 5,
+"week": "2026-W18",
+"year": 2026
+},
+"Absolute Flash|||13|||1": {
+"date": "2026-05-01",
+"month": 5,
+"week": "2026-W18",
+"year": 2026
+},
+"Absolute Flash|||14|||1": {
+"date": "2026-06-01",
+"month": 6,
+"week": "2026-W23",
+"year": 2026
+},
+"Absolute Flash|||15|||1": {
+"date": "2026-07-01",
+"month": 7,
+"week": "2026-W27",
+"year": 2026
+},
+"Absolute Flash|||16|||1": {
+"date": "2026-08-01",
+"month": 8,
+"week": "2026-W31",
+"year": 2026
+},
+"Absolute Flash|||17|||1": {
+"date": "2026-09-01",
+"month": 9,
+"week": "2026-W36",
+"year": 2026
+},
+"Absolute Flash|||1|||1": {
+"date": "2025-05-01",
+"month": 5,
+"week": "2025-W18",
+"year": 2025
+},
+"Absolute Flash|||2|||1": {
+"date": "2025-06-01",
+"month": 6,
+"week": "2025-W22",
+"year": 2025
+},
+"Absolute Flash|||3|||1": {
+"date": "2025-07-01",
+"month": 7,
+"week": "2025-W27",
+"year": 2025
+},
+"Absolute Flash|||4|||1": {
+"date": "2025-08-01",
+"month": 8,
+"week": "2025-W31",
+"year": 2025
+},
+"Absolute Flash|||5|||1": {
+"date": "2025-09-01",
+"month": 9,
+"week": "2025-W36",
+"year": 2025
+},
+"Absolute Flash|||6|||1": {
+"date": "2025-10-01",
+"month": 10,
+"week": "2025-W40",
+"year": 2025
+},
+"Absolute Flash|||7|||1": {
+"date": "2025-11-01",
+"month": 11,
+"week": "2025-W44",
+"year": 2025
+},
+"Absolute Flash|||8|||1": {
+"date": "2025-12-01",
+"month": 12,
+"week": "2025-W49",
+"year": 2025
+},
+"Absolute Flash|||9|||1": {
+"date": "2026-01-01",
+"month": 1,
+"week": "2026-W01",
+"year": 2026
+},
+"Absolute Green Lantern|||10|||1": {
+"date": "2026-03-01",
+"month": 3,
+"week": "2026-W09",
+"year": 2026
+},
+"Absolute Green Lantern|||11|||1": {
+"date": "2026-04-01",
+"month": 4,
+"week": "2026-W14",
+"year": 2026
+},
+"Absolute Green Lantern|||12|||1": {
+"date": "2026-05-01",
+"month": 5,
+"week": "2026-W18",
+"year": 2026
+},
+"Absolute Green Lantern|||13|||1": {
+"date": "2026-06-01",
+"month": 6,
+"week": "2026-W23",
+"year": 2026
+},
+"Absolute Green Lantern|||14|||1": {
+"date": "2026-07-01",
+"month": 7,
+"week": "2026-W27",
+"year": 2026
+},
+"Absolute Green Lantern|||15|||1": {
+"date": "2026-08-01",
+"month": 8,
+"week": "2026-W31",
+"year": 2026
+},
+"Absolute Green Lantern|||2|||1": {
+"date": "2025-07-01",
+"month": 7,
+"week": "2025-W27",
+"year": 2025
+},
+"Absolute Green Lantern|||3|||1": {
+"date": "2025-08-01",
+"month": 8,
+"week": "2025-W31",
+"year": 2025
+},
+"Absolute Green Lantern|||4|||1": {
+"date": "2025-09-01",
+"month": 9,
+"week": "2025-W36",
+"year": 2025
+},
+"Absolute Green Lantern|||5|||1": {
+"date": "2025-10-01",
+"month": 10,
+"week": "2025-W40",
+"year": 2025
+},
+"Absolute Green Lantern|||6|||1": {
+"date": "2025-11-01",
+"month": 11,
+"week": "2025-W44",
+"year": 2025
+},
+"Absolute Green Lantern|||7|||1": {
+"date": "2025-12-01",
+"month": 12,
+"week": "2025-W49",
+"year": 2025
+},
+"Absolute Green Lantern|||8|||1": {
+"date": "2026-01-01",
+"month": 1,
+"week": "2026-W01",
+"year": 2026
+},
+"Absolute Green Lantern|||9|||1": {
+"date": "2026-02-01",
+"month": 2,
+"week": "2026-W05",
+"year": 2026
+},
+"Absolute Power: Ground Zero|||1|||1": {
+"date": "2024-08-01",
+"month": 8,
+"week": "2024-W31",
+"year": 2024
+},
+"Absolute Power: Task Force VII|||1|||1": {
+"date": "2024-09-01",
+"month": 9,
+"week": "2024-W35",
+"year": 2024
+},
+"Absolute Power: Task Force VII|||2|||1": {
+"date": "2024-07-24",
+"month": 7,
+"week": "2024-W30",
+"year": 2024
+},
+"Absolute Power: Task Force VII|||3|||1": {
+"date": "2024-07-31",
+"month": 7,
+"week": "2024-W31",
+"year": 2024
+},
+"Absolute Power: Task Force VII|||4|||1": {
+"date": "2024-10-01",
+"month": 10,
+"week": "2024-W40",
+"year": 2024
+},
+"Absolute Power: Task Force VII|||5|||1": {
+"date": "2024-10-01",
+"month": 10,
+"week": "2024-W40",
+"year": 2024
+},
+"Absolute Power: Task Force VII|||7|||1": {
+"date": "2024-11-01",
+"month": 11,
+"week": "2024-W44",
+"year": 2024
+},
+"Absolute Power|||1|||1": {
+"date": "2024-09-01",
+"month": 9,
+"week": "2024-W35",
+"year": 2024
+},
+"Absolute Power|||2|||1": {
+"date": "2024-10-01",
+"month": 10,
+"week": "2024-W40",
+"year": 2024
+},
+"Absolute Power|||3|||1": {
+"date": "2024-11-01",
+"month": 11,
+"week": "2024-W44",
+"year": 2024
+},
+"Absolute Power|||4|||1": {
+"date": "2024-12-01",
+"month": 12,
+"week": "2024-W48",
+"year": 2024
+},
+"Absolute Wonder Woman|||10|||1": {
+"date": "2025-09-01",
+"month": 9,
+"week": "2025-W36",
+"year": 2025
+},
+"Absolute Wonder Woman|||11|||1": {
+"date": "2025-10-01",
+"month": 10,
+"week": "2025-W40",
+"year": 2025
+},
+"Absolute Wonder Woman|||13|||1": {
+"date": "2025-12-01",
+"month": 12,
+"week": "2025-W49",
+"year": 2025
+},
+"Absolute Wonder Woman|||14|||1": {
+"date": "2026-01-01",
+"month": 1,
+"week": "2026-W01",
+"year": 2026
+},
+"Absolute Wonder Woman|||15|||1": {
+"date": "2026-02-01",
+"month": 2,
+"week": "2026-W05",
+"year": 2026
+},
+"Absolute Wonder Woman|||16|||1": {
+"date": "2026-03-01",
+"month": 3,
+"week": "2026-W09",
+"year": 2026
+},
+"Absolute Wonder Woman|||18|||1": {
+"date": "2026-05-01",
+"month": 5,
+"week": "2026-W18",
+"year": 2026
+},
+"Absolute Wonder Woman|||19|||1": {
+"date": "2026-06-01",
+"month": 6,
+"week": "2026-W23",
+"year": 2026
+},
+"Absolute Wonder Woman|||1|||1": {
+"date": "2024-12-01",
+"month": 12,
+"week": "2024-W48",
+"year": 2024
+},
+"Absolute Wonder Woman|||2|||1": {
+"date": "2025-01-01",
+"month": 1,
+"week": "2025-W01",
+"year": 2025
+},
+"Absolute Wonder Woman|||3|||1": {
+"date": "2025-02-01",
+"month": 2,
+"week": "2025-W05",
+"year": 2025
+},
+"Absolute Wonder Woman|||4|||1": {
+"date": "2025-03-01",
+"month": 3,
+"week": "2025-W09",
+"year": 2025
+},
+"Absolute Wonder Woman|||5|||1": {
+"date": "2025-04-01",
+"month": 4,
+"week": "2025-W14",
+"year": 2025
+},
+"Absolute Wonder Woman|||6|||1": {
+"date": "2025-05-01",
+"month": 5,
+"week": "2025-W18",
+"year": 2025
+},
+"Absolute Wonder Woman|||7|||1": {
+"date": "2025-06-01",
+"month": 6,
+"week": "2025-W22",
+"year": 2025
+},
+"Absolute Wonder Woman|||8|||1": {
+"date": "2025-07-01",
+"month": 7,
+"week": "2025-W27",
+"year": 2025
+},
+"Action Comics|||1078|||2": {
+"date": "2025-02-01",
+"month": 2,
+"week": "2025-W05",
+"year": 2025
+},
+"Action Comics|||1097|||2": {
+"date": "2026-06-01",
+"month": 6,
+"week": "2026-W23",
+"year": 2026
+},
+"Adventures of Superman: Book of El|||10|||1": {
+"date": "2026-09-01",
+"month": 9,
+"week": "2026-W36",
+"year": 2026
+},
+"Alien vs. Captain America|||1|||1": {
+"date": "2026-01-01",
+"month": 1,
+"week": "2026-W01",
+"year": 2026
+},
+"Alien vs. Captain America|||2|||1": {
+"date": "2026-02-01",
+"month": 2,
+"week": "2026-W05",
+"year": 2026
+},
+"Alien vs. Captain America|||3|||1": {
+"date": "2026-03-01",
+"month": 3,
+"week": "2026-W09",
+"year": 2026
+},
+"Alien vs. Captain America|||4|||1": {
+"date": "2026-04-01",
+"month": 4,
+"week": "2026-W14",
+"year": 2026
+},
+"Aliens vs. Avengers|||1|||1": {
+"date": "2024-10-01",
+"month": 10,
+"week": "2024-W40",
+"year": 2024
+},
+"Aliens vs. Avengers|||2|||1": {
+"date": "2025-01-01",
+"month": 1,
+"week": "2025-W01",
+"year": 2025
+},
+"Aliens vs. Avengers|||3|||1": {
+"date": "2025-04-01",
+"month": 4,
+"week": "2025-W14",
+"year": 2025
+},
+"Aliens vs. Avengers|||4|||1": {
+"date": "2025-08-01",
+"month": 8,
+"week": "2025-W31",
+"year": 2025
+},
+"Alpha Flight|||1|||5": {
+"date": "2023-10-01",
+"month": 10,
+"week": "2023-W39",
+"year": 2023
+},
+"Alpha Flight|||2|||5": {
+"date": "2023-11-01",
+"month": 11,
+"week": "2023-W44",
+"year": 2023
+},
+"Alpha Flight|||3|||5": {
+"date": "2023-12-01",
+"month": 12,
+"week": "2023-W48",
+"year": 2023
+},
+"Alpha Flight|||4|||5": {
+"date": "2024-01-01",
+"month": 1,
+"week": "2024-W01",
+"year": 2024
+},
+"Alpha Flight|||5|||5": {
+"date": "2024-02-01",
+"month": 2,
+"week": "2024-W05",
+"year": 2024
+},
+"Amazing X-Men|||1|||1": {
+"date": "2025-12-01",
+"month": 12,
+"week": "2025-W49",
+"year": 2025
+},
+"Aquaman|||12|||1": {
+"date": "2026-02-01",
+"month": 2,
+"week": "2026-W05",
+"year": 2026
+},
+"Aquaman|||1|||1": {
+"date": "2025-03-01",
+"month": 3,
+"week": "2025-W09",
+"year": 2025
+},
+"Aquaman|||4|||9": {
+"date": "2025-06-01",
+"month": 6,
+"week": "2025-W22",
+"year": 2025
+},
+"Aquaman|||9|||1": {
+"date": "2025-11-01",
+"month": 11,
+"week": "2025-W44",
+"year": 2025
+},
+"Astonishing Iceman|||1|||1": {
+"date": "2023-10-01",
+"month": 10,
+"week": "2023-W39",
+"year": 2023
+},
+"Astonishing Iceman|||2|||1": {
+"date": "2023-11-01",
+"month": 11,
+"week": "2023-W44",
+"year": 2023
+},
+"Astonishing Iceman|||3|||1": {
+"date": "2023-12-01",
+"month": 12,
+"week": "2023-W48",
+"year": 2023
+},
+"Astonishing Iceman|||5|||1": {
+"date": "2024-02-01",
+"month": 2,
+"week": "2024-W05",
+"year": 2024
+},
+"Avengers Inc.|||1|||1": {
+"date": "2023-11-01",
+"month": 11,
+"week": "2023-W44",
+"year": 2023
+},
+"Avengers Inc.|||2|||1": {
+"date": "2023-12-01",
+"month": 12,
+"week": "2023-W48",
+"year": 2023
+},
+"Avengers Inc.|||3|||1": {
+"date": "2024-01-01",
+"month": 1,
+"week": "2024-W01",
+"year": 2024
+},
+"Avengers: Twilight|||1|||1": {
+"date": "2024-03-01",
+"month": 3,
+"week": "2024-W09",
+"year": 2024
+},
+"Avengers: Twilight|||2|||1": {
+"date": "2024-03-01",
+"month": 3,
+"week": "2024-W09",
+"year": 2024
+},
+"Avengers: Twilight|||3|||1": {
+"date": "2024-04-01",
+"month": 4,
+"week": "2024-W14",
+"year": 2024
+},
+"Avengers: Twilight|||4|||1": {
+"date": "2024-05-01",
+"month": 5,
+"week": "2024-W18",
+"year": 2024
+},
+"Avengers: Twilight|||5|||1": {
+"date": "2024-06-01",
+"month": 6,
+"week": "2024-W22",
+"year": 2024
+},
+"Avengers: Twilight|||6|||1": {
+"date": "2024-07-01",
+"month": 7,
+"week": "2024-W27",
+"year": 2024
+},
+"Barbara Gordon: Breakout|||3|||1": {
+"date": "2026-09-01",
+"month": 9,
+"week": "2026-W36",
+"year": 2026
+},
+"Batgirl|||10|||6": {
+"date": "2025-10-01",
+"month": 10,
+"week": "2025-W40",
+"year": 2025
+},
+"Batgirl|||11|||6": {
+"date": "2025-11-01",
+"month": 11,
+"week": "2025-W44",
+"year": 2025
+},
+"Batgirl|||12|||6": {
+"date": "2025-12-01",
+"month": 12,
+"week": "2025-W49",
+"year": 2025
+},
+"Batgirl|||13|||6": {
+"date": "2026-01-01",
+"month": 1,
+"week": "2026-W01",
+"year": 2026
+},
+"Batgirl|||14|||6": {
+"date": "2026-02-01",
+"month": 2,
+"week": "2026-W05",
+"year": 2026
+},
+"Batgirl|||15|||6": {
+"date": "2026-03-01",
+"month": 3,
+"week": "2026-W09",
+"year": 2026
+},
+"Batgirl|||16|||6": {
+"date": "2026-04-01",
+"month": 4,
+"week": "2026-W14",
+"year": 2026
+},
+"Batgirl|||1|||1": {
+"date": "2025-01-01",
+"month": 1,
+"week": "2025-W01",
+"year": 2025
+},
+"Batgirl|||2|||1": {
+"date": "2025-02-01",
+"month": 2,
+"week": "2025-W05",
+"year": 2025
+},
+"Batgirl|||9|||6": {
+"date": "2025-09-01",
+"month": 9,
+"week": "2025-W36",
+"year": 2025
+},
+"Batman and Robin: Year One|||10|||5": {
+"date": "2025-10-01",
+"month": 10,
+"week": "2025-W40",
+"year": 2025
+},
+"Batman and Robin: Year One|||11|||5": {
+"date": "2025-11-01",
+"month": 11,
+"week": "2025-W44",
+"year": 2025
+},
+"Batman and Robin: Year One|||12|||5": {
+"date": "2025-12-01",
+"month": 12,
+"week": "2025-W49",
+"year": 2025
+},
+"Batman and Robin: Year One|||1|||1": {
+"date": "2024-12-01",
+"month": 12,
+"week": "2024-W48",
+"year": 2024
+},
+"Batman and Robin: Year One|||1|||5": {
+"date": "2024-12-01",
+"month": 12,
+"week": "2024-W48",
+"year": 2024
+},
+"Batman and Robin: Year One|||2|||5": {
+"date": "2025-01-01",
+"month": 1,
+"week": "2025-W01",
+"year": 2025
+},
+"Batman and Robin: Year One|||3|||5": {
+"date": "2025-02-01",
+"month": 2,
+"week": "2025-W05",
+"year": 2025
+},
+"Batman and Robin: Year One|||4|||5": {
+"date": "2025-03-01",
+"month": 3,
+"week": "2025-W09",
+"year": 2025
+},
+"Batman and Robin: Year One|||5|||5": {
+"date": "2025-04-01",
+"month": 4,
+"week": "2025-W14",
+"year": 2025
+},
+"Batman and Robin: Year One|||6|||5": {
+"date": "2025-05-01",
+"month": 5,
+"week": "2025-W18",
+"year": 2025
+},
+"Batman and Robin: Year One|||7|||5": {
+"date": "2025-07-01",
+"month": 7,
+"week": "2025-W27",
+"year": 2025
+},
+"Batman and Robin: Year One|||8|||5": {
+"date": "2025-08-01",
+"month": 8,
+"week": "2025-W31",
+"year": 2025
+},
+"Batman and Robin: Year One|||9|||5": {
+"date": "2025-09-01",
+"month": 9,
+"week": "2025-W36",
+"year": 2025
+},
+"Batman and Robin|||1|||1": {
+"date": "2023-11-01",
+"month": 11,
+"week": "2023-W44",
+"year": 2023
+},
+"Batman and Robin|||2|||1": {
+"date": "2023-12-01",
+"month": 12,
+"week": "2023-W48",
+"year": 2023
+},
+"Batman/Wonder Woman: Truth|||1|||5": {
+"date": "2026-06-01",
+"month": 6,
+"week": "2026-W23",
+"year": 2026
+},
+"Batman|||155|||1": {
+"date": "2025-02-01",
+"month": 2,
+"week": "2025-W05",
+"year": 2025
+},
+"Batman|||163|||1": {
+"date": "2026-07-01",
+"month": 7,
+"week": "2026-W27",
+"year": 2026
+},
+"Battleworld|||1|||1": {
+"date": "2025-11-01",
+"month": 11,
+"week": "2025-W44",
+"year": 2025
+},
+"Battleworld|||2|||1": {
+"date": "2025-12-01",
+"month": 12,
+"week": "2025-W49",
+"year": 2025
+},
+"Battleworld|||3|||1": {
+"date": "2026-01-01",
+"month": 1,
+"week": "2026-W01",
+"year": 2026
+},
+"Battleworld|||4|||1": {
+"date": "2026-02-01",
+"month": 2,
+"week": "2026-W05",
+"year": 2026
+},
+"Battleworld|||5|||1": {
+"date": "2026-03-01",
+"month": 3,
+"week": "2026-W09",
+"year": 2026
+},
+"Batwoman|||1|||1": {
+"date": "2026-05-01",
+"month": 5,
+"week": "2026-W18",
+"year": 2026
+},
+"Birds of Prey|||10|||5": {
+"date": "2024-08-01",
+"month": 8,
+"week": "2024-W31",
+"year": 2024
+},
+"Birds of Prey|||11|||5": {
+"date": "2024-09-01",
+"month": 9,
+"week": "2024-W35",
+"year": 2024
+},
+"Birds of Prey|||12|||5": {
+"date": "2024-10-01",
+"month": 10,
+"week": "2024-W40",
+"year": 2024
+},
+"Birds of Prey|||15|||5": {
+"date": "2025-01-01",
+"month": 1,
+"week": "2025-W01",
+"year": 2025
+},
+"Birds of Prey|||16|||5": {
+"date": "2025-02-01",
+"month": 2,
+"week": "2025-W05",
+"year": 2025
+},
+"Birds of Prey|||17|||5": {
+"date": "2025-03-01",
+"month": 3,
+"week": "2025-W09",
+"year": 2025
+},
+"Birds of Prey|||18|||5": {
+"date": "2025-04-01",
+"month": 4,
+"week": "2025-W14",
+"year": 2025
+},
+"Birds of Prey|||19|||5": {
+"date": "2025-05-01",
+"month": 5,
+"week": "2025-W18",
+"year": 2025
+},
+"Birds of Prey|||20|||5": {
+"date": "2025-06-01",
+"month": 6,
+"week": "2025-W22",
+"year": 2025
+},
+"Birds of Prey|||21|||5": {
+"date": "2025-07-01",
+"month": 7,
+"week": "2025-W27",
+"year": 2025
+},
+"Birds of Prey|||23|||5": {
+"date": "2025-09-01",
+"month": 9,
+"week": "2025-W36",
+"year": 2025
+},
+"Birds of Prey|||24|||1": {
+"date": "2025-10-01",
+"month": 10,
+"week": "2025-W40",
+"year": 2025
+},
+"Birds of Prey|||25|||5": {
+"date": "2025-11-01",
+"month": 11,
+"week": "2025-W44",
+"year": 2025
+},
+"Birds of Prey|||26|||5": {
+"date": "2025-12-01",
+"month": 12,
+"week": "2025-W49",
+"year": 2025
+},
+"Birds of Prey|||4|||1": {
+"date": "2024-02-01",
+"month": 2,
+"week": "2024-W05",
+"year": 2024
+},
+"Birds of Prey|||5|||1": {
+"date": "2024-03-01",
+"month": 3,
+"week": "2024-W09",
+"year": 2024
+},
+"Birds of Prey|||6|||1": {
+"date": "2024-04-01",
+"month": 4,
+"week": "2024-W14",
+"year": 2024
+},
+"Birds of Prey|||7|||1": {
+"date": "2024-05-01",
+"month": 5,
+"week": "2024-W18",
+"year": 2024
+},
+"Birds of Prey|||8|||1": {
+"date": "2024-06-01",
+"month": 6,
+"week": "2024-W22",
+"year": 2024
+},
+"Birds of Prey|||9|||5": {
+"date": "2024-07-01",
+"month": 7,
+"week": "2024-W27",
+"year": 2024
+},
+"Black Canary: Best of the Best|||1|||1": {
+"date": "2025-01-01",
+"month": 1,
+"week": "2025-W01",
+"year": 2025
+},
+"Black Canary: Best of the Best|||2|||1": {
+"date": "2025-02-01",
+"month": 2,
+"week": "2025-W05",
+"year": 2025
+},
+"Black Canary: Best of the Best|||3|||1": {
+"date": "2025-03-01",
+"month": 3,
+"week": "2025-W09",
+"year": 2025
+},
+"Black Canary: Best of the Best|||4|||1": {
+"date": "2025-04-01",
+"month": 4,
+"week": "2025-W14",
+"year": 2025
+},
+"Black Canary: Best of the Best|||5|||1": {
+"date": "2025-05-01",
+"month": 5,
+"week": "2025-W18",
+"year": 2025
+},
+"Black Cat|||1|||1": {
+"date": "2025-10-01",
+"month": 10,
+"week": "2025-W40",
+"year": 2025
+},
+"Black Panther 60th Anniversary Special|||1|||1": {
+"date": "2026-04-01",
+"month": 4,
+"week": "2026-W14",
+"year": 2026
+},
+"Black Panther 60th Anniversary Special|||1|||10": {
+"date": "2026-04-01",
+"month": 4,
+"week": "2026-W14",
+"year": 2026
+},
+"Black Panther: Bloodhunt|||1|||1": {
+"date": "2024-07-01",
+"month": 7,
+"week": "2024-W27",
+"year": 2024
+},
+"Black Panther: Bloodhunt|||2|||1": {
+"date": "2024-08-01",
+"month": 8,
+"week": "2024-W31",
+"year": 2024
+},
+"Black Panther: Bloodhunt|||3|||1": {
+"date": "2024-09-01",
+"month": 9,
+"week": "2024-W35",
+"year": 2024
+},
+"Black Panther: Intergalactic|||1|||1": {
+"date": "2026-02-01",
+"month": 2,
+"week": "2026-W05",
+"year": 2026
+},
+"Black Panther: Intergalactic|||1|||10": {
+"date": "2026-02-01",
+"month": 2,
+"week": "2026-W05",
+"year": 2026
+},
+"Black Panther: Intergalactic|||3|||1": {
+"date": "2026-04-01",
+"month": 4,
+"week": "2026-W14",
+"year": 2026
+},
+"Black Panther: Intergalactic|||4|||1": {
+"date": "2026-05-01",
+"month": 5,
+"week": "2026-W18",
+"year": 2026
+},
+"Black Panther: Intergalactic|||4|||10": {
+"date": "2026-05-01",
+"month": 5,
+"week": "2026-W18",
+"year": 2026
+},
+"Black Widow / Hawkeye|||1|||1": {
+"date": "2024-05-01",
+"month": 5,
+"week": "2024-W18",
+"year": 2024
+},
+"Black Widow / Hawkeye|||2|||1": {
+"date": "2024-06-01",
+"month": 6,
+"week": "2024-W22",
+"year": 2024
+},
+"Black Widow / Hawkeye|||3|||1": {
+"date": "2024-07-01",
+"month": 7,
+"week": "2024-W27",
+"year": 2024
+},
+"Black Widow / Hawkeye|||4|||1": {
+"date": "2024-08-01",
+"month": 8,
+"week": "2024-W31",
+"year": 2024
+},
+"Blood Hunt|||1|||1": {
+"date": "2024-07-01",
+"month": 7,
+"week": "2024-W27",
+"year": 2024
+},
+"Blood Hunt|||2|||1": {
+"date": "2024-07-01",
+"month": 7,
+"week": "2024-W27",
+"year": 2024
+},
+"Blood Hunt|||4|||1": {
+"date": "2024-08-01",
+"month": 8,
+"week": "2024-W31",
+"year": 2024
+},
+"Blood Hunt|||5|||1": {
+"date": "2024-09-01",
+"month": 9,
+"week": "2024-W35",
+"year": 2024
+},
+"Blood Squad Seven|||1|||1": {
+"date": "2024-05-22",
+"month": 5,
+"week": "2024-W21",
+"year": 2024
+},
+"Bloodhunters|||2|||1": {
+"date": "2024-08-01",
+"month": 8,
+"week": "2024-W31",
+"year": 2024
+},
+"Bloodhunters|||3|||1": {
+"date": "2024-09-01",
+"month": 9,
+"week": "2024-W35",
+"year": 2024
+},
+"Blue Beetle|||1|||10": {
+"date": "2023-11-01",
+"month": 11,
+"week": "2023-W44",
+"year": 2023
+},
+"Cable: Love and Chrome|||3|||1": {
+"date": "2025-05-01",
+"month": 5,
+"week": "2025-W18",
+"year": 2025
+},
+"Cable: Love and Chrome|||4|||1": {
+"date": "2025-06-01",
+"month": 6,
+"week": "2025-W22",
+"year": 2025
+},
+"Cable: Love and Chrome|||5|||1": {
+"date": "2025-07-01",
+"month": 7,
+"week": "2025-W27",
+"year": 2025
+},
+"Cable|||1|||5": {
+"date": "2024-03-01",
+"month": 3,
+"week": "2024-W09",
+"year": 2024
+},
+"Cable|||2|||1": {
+"date": "2024-04-01",
+"month": 4,
+"week": "2024-W14",
+"year": 2024
+},
+"Cable|||3|||1": {
+"date": "2024-05-01",
+"month": 5,
+"week": "2024-W18",
+"year": 2024
+},
+"Cable|||4|||1": {
+"date": "2024-07-01",
+"month": 7,
+"week": "2024-W27",
+"year": 2024
+},
+"Captain America and Volstagg|||1|||1": {
+"date": "2025-04-01",
+"month": 4,
+"week": "2025-W14",
+"year": 2025
+},
+"Captain America: Finale|||1|||9": {
+"date": "2023-10-01",
+"month": 10,
+"week": "2023-W39",
+"year": 2023
+},
+"Captain Marvel: Dark Past|||1|||1": {
+"date": "2026-06-01",
+"month": 6,
+"week": "2026-W23",
+"year": 2026
+},
+"Captain Marvel: Dark Tempest|||2|||1": {
+"date": "2023-10-01",
+"month": 10,
+"week": "2023-W39",
+"year": 2023
+},
+"Captain Marvel: Dark Tempest|||3|||1": {
+"date": "2023-11-01",
+"month": 11,
+"week": "2023-W44",
+"year": 2023
+},
+"Captain Marvel: Dark Tempest|||5|||1": {
+"date": "2024-01-01",
+"month": 1,
+"week": "2024-W01",
+"year": 2024
+},
+"Challengers of the Unknown|||1|||1": {
+"date": "2025-02-01",
+"month": 2,
+"week": "2025-W05",
+"year": 2025
+},
+"Challengers of the Unknown|||2|||1": {
+"date": "2025-03-01",
+"month": 3,
+"week": "2025-W09",
+"year": 2025
+},
+"Challengers of the Unknown|||4|||1": {
+"date": "2025-05-01",
+"month": 5,
+"week": "2025-W18",
+"year": 2025
+},
+"Challengers of the Unknown|||5|||1": {
+"date": "2025-06-01",
+"month": 6,
+"week": "2025-W22",
+"year": 2025
+},
+"Civil War: Unmasked|||3|||1": {
+"date": "2026-09-01",
+"month": 9,
+"week": "2026-W36",
+"year": 2026
+},
+"Cloak or Dagger|||1|||1": {
+"date": "2025-12-01",
+"month": 12,
+"week": "2025-W49",
+"year": 2025
+},
+"Cloak or Dagger|||2|||1": {
+"date": "2026-01-01",
+"month": 1,
+"week": "2026-W01",
+"year": 2026
+},
+"Cloak or Dagger|||3|||1": {
+"date": "2026-02-01",
+"month": 2,
+"week": "2026-W05",
+"year": 2026
+},
+"Cyborg|||3|||3": {
+"date": "2023-11-01",
+"month": 11,
+"week": "2023-W44",
+"year": 2023
+},
+"Cyborg|||3|||4": {
+"date": "2023-11-01",
+"month": 11,
+"week": "2023-W44",
+"year": 2023
+},
+"Cyborg|||4|||3": {
+"date": "2023-12-01",
+"month": 12,
+"week": "2023-W48",
+"year": 2023
+},
+"Cyborg|||5|||3": {
+"date": "2024-01-01",
+"month": 1,
+"week": "2024-W01",
+"year": 2024
+},
+"DC All In Special|||1|||1": {
+"date": "2024-12-01",
+"month": 12,
+"week": "2024-W48",
+"year": 2024
+},
+"DC K.O.: Red Hood vs. Joker|||1|||1": {
+"date": "2026-02-01",
+"month": 2,
+"week": "2026-W05",
+"year": 2026
+},
+"DC K.O.: Superman vs. Captain Atom|||1|||1": {
+"date": "2026-02-01",
+"month": 2,
+"week": "2026-W05",
+"year": 2026
+},
+"DC K.O.|||1|||1": {
+"date": "2025-12-01",
+"month": 12,
+"week": "2025-W49",
+"year": 2025
+},
+"DC K.O.|||3|||1": {
+"date": "2026-03-01",
+"month": 3,
+"week": "2026-W09",
+"year": 2026
+},
+"DC K.O.|||4|||1": {
+"date": "2026-04-01",
+"month": 4,
+"week": "2026-W14",
+"year": 2026
+},
+"DC K.O.|||5|||1": {
+"date": "2026-05-01",
+"month": 5,
+"week": "2026-W18",
+"year": 2026
+},
+"DC vs. Vampires: World War V|||10|||1": {
+"date": "2025-08-01",
+"month": 8,
+"week": "2025-W31",
+"year": 2025
+},
+"DC vs. Vampires: World War V|||12|||1": {
+"date": "2025-11-01",
+"month": 11,
+"week": "2025-W44",
+"year": 2025
+},
+"DC vs. Vampires: World War V|||1|||1": {
+"date": "2024-10-01",
+"month": 10,
+"week": "2024-W40",
+"year": 2024
+},
+"DC vs. Vampires: World War V|||2|||1": {
+"date": "2024-11-01",
+"month": 11,
+"week": "2024-W44",
+"year": 2024
+},
+"DC vs. Vampires: World War V|||3|||1": {
+"date": "2024-12-01",
+"month": 12,
+"week": "2024-W48",
+"year": 2024
+},
+"DC vs. Vampires: World War V|||4|||1": {
+"date": "2025-01-01",
+"month": 1,
+"week": "2025-W01",
+"year": 2025
+},
+"DC vs. Vampires: World War V|||5|||1": {
+"date": "2025-02-01",
+"month": 2,
+"week": "2025-W05",
+"year": 2025
+},
+"DC vs. Vampires: World War V|||6|||1": {
+"date": "2025-03-01",
+"month": 3,
+"week": "2025-W09",
+"year": 2025
+},
+"DCKO: The Kids Are All Fight Special|||1|||1": {
+"date": "2026-03-01",
+"month": 3,
+"week": "2026-W09",
+"year": 2026
+},
+"Dazzler|||1|||3": {
+"date": "2024-11-01",
+"month": 11,
+"week": "2024-W44",
+"year": 2024
+},
+"Dazzler|||2|||3": {
+"date": "2024-12-01",
+"month": 12,
+"week": "2024-W48",
+"year": 2024
+},
+"Dazzler|||3|||3": {
+"date": "2025-01-01",
+"month": 1,
+"week": "2025-W01",
+"year": 2025
+},
+"Dazzler|||4|||3": {
+"date": "2025-02-01",
+"month": 2,
+"week": "2025-W05",
+"year": 2025
+},
+"Dc K.O. Knightfight|||1|||1": {
+"date": "2026-01-01",
+"month": 1,
+"week": "2026-W01",
+"year": 2026
+},
+"Dc K.O. Knightfight|||2|||1": {
+"date": "2026-02-01",
+"month": 2,
+"week": "2026-W05",
+"year": 2026
+},
+"Dc K.O. Knightfight|||4|||1": {
+"date": "2026-04-01",
+"month": 4,
+"week": "2026-W14",
+"year": 2026
+},
+"Dead X-Men|||1|||1": {
+"date": "2024-03-01",
+"month": 3,
+"week": "2024-W09",
+"year": 2024
+},
+"Dead X-Men|||2|||1": {
+"date": "2024-04-01",
+"month": 4,
+"week": "2024-W14",
+"year": 2024
+},
+"Dead X-Men|||3|||1": {
+"date": "2024-05-01",
+"month": 5,
+"week": "2024-W18",
+"year": 2024
+},
+"Dead X-Men|||4|||1": {
+"date": "2024-06-01",
+"month": 6,
+"week": "2024-W22",
+"year": 2024
+},
+"Death of the Silver Surfer|||2|||1": {
+"date": "2025-09-01",
+"month": 9,
+"week": "2025-W36",
+"year": 2025
+},
+"Death of the Silver Surfer|||3|||1": {
+"date": "2025-10-01",
+"month": 10,
+"week": "2025-W40",
+"year": 2025
+},
+"Death of the Silver Surfer|||4|||1": {
+"date": "2024-11-01",
+"month": 11,
+"week": "2024-W44",
+"year": 2024
+},
+"Death of the Silver Surfer|||5|||1": {
+"date": "2025-12-01",
+"month": 12,
+"week": "2025-W49",
+"year": 2025
+},
+"Detective Comics|||1094|||1": {
+"date": "2025-04-01",
+"month": 4,
+"week": "2025-W14",
+"year": 2025
+},
+"Doctor Strange of Asgard|||1|||1": {
+"date": "2025-05-01",
+"month": 5,
+"week": "2025-W18",
+"year": 2025
+},
+"Doctor Strange of Asgard|||2|||1": {
+"date": "2025-06-01",
+"month": 6,
+"week": "2025-W22",
+"year": 2025
+},
+"Doctor Strange of Asgard|||3|||1": {
+"date": "2025-07-01",
+"month": 7,
+"week": "2025-W27",
+"year": 2025
+},
+"Doom Academy|||1|||1": {
+"date": "2025-04-01",
+"month": 4,
+"week": "2025-W14",
+"year": 2025
+},
+"Doom Academy|||2|||1": {
+"date": "2025-05-01",
+"month": 5,
+"week": "2025-W18",
+"year": 2025
+},
+"Doom Academy|||3|||1": {
+"date": "2025-06-01",
+"month": 6,
+"week": "2025-W22",
+"year": 2025
+},
+"Doom Academy|||4|||1": {
+"date": "2025-07-01",
+"month": 7,
+"week": "2025-W27",
+"year": 2025
+},
+"Doom Academy|||5|||1": {
+"date": "2025-08-01",
+"month": 8,
+"week": "2025-W31",
+"year": 2025
+},
+"Doom|||1|||1": {
+"date": "2024-07-01",
+"month": 7,
+"week": "2024-W27",
+"year": 2024
+},
+"Doom|||1|||2": {
+"date": "2024-07-01",
+"month": 7,
+"week": "2024-W27",
+"year": 2024
+},
+"Dracula: Bloodhunt|||1|||1": {
+"date": "2024-07-01",
+"month": 7,
+"week": "2024-W27",
+"year": 2024
+},
+"Dracula: Bloodhunt|||3|||1": {
+"date": "2024-09-01",
+"month": 9,
+"week": "2024-W35",
+"year": 2024
+},
+"Dungeons of Doom|||1|||1": {
+"date": "2026-03-01",
+"month": 3,
+"week": "2026-W09",
+"year": 2026
+},
+"Eternals 50th Anniversary Special|||1|||1": {
+"date": "2026-06-01",
+"month": 6,
+"week": "2026-W23",
+"year": 2026
+},
+"Exceptional X-Men|||10|||1": {
+"date": "2025-08-01",
+"month": 8,
+"week": "2025-W31",
+"year": 2025
+},
+"Exceptional X-Men|||11|||1": {
+"date": "2025-09-01",
+"month": 9,
+"week": "2025-W36",
+"year": 2025
+},
+"Exceptional X-Men|||1|||1": {
+"date": "2024-11-01",
+"month": 11,
+"week": "2024-W44",
+"year": 2024
+},
+"Exceptional X-Men|||2|||1": {
+"date": "2024-12-01",
+"month": 12,
+"week": "2024-W48",
+"year": 2024
+},
+"Exceptional X-Men|||3|||1": {
+"date": "2025-01-01",
+"month": 1,
+"week": "2025-W01",
+"year": 2025
+},
+"Exceptional X-Men|||4|||1": {
+"date": "2025-02-01",
+"month": 2,
+"week": "2025-W05",
+"year": 2025
+},
+"Exceptional X-Men|||5|||1": {
+"date": "2025-03-01",
+"month": 3,
+"week": "2025-W09",
+"year": 2025
+},
+"Exceptional X-Men|||6|||1": {
+"date": "2025-04-01",
+"month": 4,
+"week": "2025-W14",
+"year": 2025
+},
+"Exceptional X-Men|||7|||1": {
+"date": "2025-05-01",
+"month": 5,
+"week": "2025-W18",
+"year": 2025
+},
+"Exceptional X-Men|||8|||1": {
+"date": "2025-06-01",
+"month": 6,
+"week": "2025-W22",
+"year": 2025
+},
+"Exceptional X-Men|||9|||1": {
+"date": "2025-07-01",
+"month": 7,
+"week": "2025-W27",
+"year": 2025
+},
+"Expatriate X-Men|||2|||1": {
+"date": "2026-01-01",
+"month": 1,
+"week": "2026-W01",
+"year": 2026
+},
+"Fall of the House of X|||1|||1": {
+"date": "2024-03-01",
+"month": 3,
+"week": "2024-W09",
+"year": 2024
+},
+"Fall of the House of X|||2|||1": {
+"date": "2024-04-01",
+"month": 4,
+"week": "2024-W14",
+"year": 2024
+},
+"Fall of the House of X|||3|||1": {
+"date": "2024-05-01",
+"month": 5,
+"week": "2024-W18",
+"year": 2024
+},
+"Fall of the House of X|||4|||1": {
+"date": "2024-06-01",
+"month": 6,
+"week": "2024-W22",
+"year": 2024
+},
+"Fall of the House of X|||5|||1": {
+"date": "2024-07-01",
+"month": 7,
+"week": "2024-W27",
+"year": 2024
+},
+"Fantastic Four Fanfare|||1|||1": {
+"date": "2025-07-01",
+"month": 7,
+"week": "2025-W27",
+"year": 2025
+},
+"Fantastic Four Fanfare|||2|||1": {
+"date": "2025-08-01",
+"month": 8,
+"week": "2025-W31",
+"year": 2025
+},
+"Fantastic Four \u00d7 Gargoyles|||1|||1": {
+"date": "2025-12-01",
+"month": 12,
+"week": "2025-W49",
+"year": 2025
+},
+"Fantastic Four|||15|||1": {
+"date": "2024-03-01",
+"month": 3,
+"week": "2024-W09",
+"year": 2024
+},
+"Fantastic Four|||28|||1": {
+"date": "2025-03-01",
+"month": 3,
+"week": "2025-W09",
+"year": 2025
+},
+"Fantastic Four|||31|||1": {
+"date": "2025-06-01",
+"month": 6,
+"week": "2025-W22",
+"year": 2025
+},
+"Fantastic Four|||32|||1": {
+"date": "2025-07-01",
+"month": 7,
+"week": "2025-W27",
+"year": 2025
+},
+"Fire & Ice: Welcome to Smallville|||1|||1": {
+"date": "2023-11-01",
+"month": 11,
+"week": "2023-W44",
+"year": 2023
+},
+"Free Comic Book Day 2024: Marvel's Voices|||1|||1": {
+"date": "2024-06-01",
+"month": 6,
+"week": "2024-W22",
+"year": 2024
+},
+"Fury of Firestorm|||4|||2": {
+"date": "2026-09-01",
+"month": 9,
+"week": "2026-W36",
+"year": 2026
+},
+"G.I. Joe|||10|||1": {
+"date": "2025-08-20",
+"month": 8,
+"week": "2025-W34",
+"year": 2025
+},
+"G.I. Joe|||11|||1": {
+"date": "2025-09-17",
+"month": 9,
+"week": "2025-W38",
+"year": 2025
+},
+"G.I. Joe|||12|||1": {
+"date": "2025-10-15",
+"month": 10,
+"week": "2025-W42",
+"year": 2025
+},
+"G.I. Joe|||13|||1": {
+"date": "2025-11-05",
+"month": 11,
+"week": "2025-W45",
+"year": 2025
+},
+"G.I. Joe|||14|||1": {
+"date": "2025-11-19",
+"month": 11,
+"week": "2025-W47",
+"year": 2025
+},
+"G.I. Joe|||15|||1": {
+"date": "2025-12-03",
+"month": 12,
+"week": "2025-W49",
+"year": 2025
+},
+"G.I. Joe|||16|||1": {
+"date": "2025-12-17",
+"month": 12,
+"week": "2025-W51",
+"year": 2025
+},
+"G.I. Joe|||17|||1": {
+"date": "2026-01-14",
+"month": 1,
+"week": "2026-W03",
+"year": 2026
+},
+"G.I. Joe|||19|||1": {
+"date": "2026-02-18",
+"month": 2,
+"week": "2026-W08",
+"year": 2026
+},
+"G.I. Joe|||1|||1": {
+"date": "2024-11-13",
+"month": 11,
+"week": "2024-W46",
+"year": 2024
+},
+"G.I. Joe|||2|||1": {
+"date": "2024-12-18",
+"month": 12,
+"week": "2024-W51",
+"year": 2024
+},
+"G.I. Joe|||3|||1": {
+"date": "2025-01-15",
+"month": 1,
+"week": "2025-W03",
+"year": 2025
+},
+"G.I. Joe|||4|||1": {
+"date": "2025-02-19",
+"month": 2,
+"week": "2025-W08",
+"year": 2025
+},
+"G.I. Joe|||5|||1": {
+"date": "2025-03-19",
+"month": 3,
+"week": "2025-W12",
+"year": 2025
+},
+"G.I. Joe|||6|||1": {
+"date": "2025-04-23",
+"month": 4,
+"week": "2025-W17",
+"year": 2025
+},
+"G.I. Joe|||9|||1": {
+"date": "2025-07-16",
+"month": 7,
+"week": "2025-W29",
+"year": 2025
+},
+"G.O.D.S.|||1|||1": {
+"date": "2023-12-01",
+"month": 12,
+"week": "2023-W48",
+"year": 2023
+},
+"G.O.D.S.|||2|||1": {
+"date": "2024-01-01",
+"month": 1,
+"week": "2024-W01",
+"year": 2024
+},
+"G.O.D.S.|||8|||1": {
+"date": "2024-08-01",
+"month": 8,
+"week": "2024-W31",
+"year": 2024
+},
+"GODS|||1|||1": {
+"date": "2023-12-01",
+"month": 12,
+"week": "2023-W48",
+"year": 2023
+},
+"Gang War: Luke Cage|||1|||1": {
+"date": "2024-01-01",
+"month": 1,
+"week": "2024-W01",
+"year": 2024
+},
+"Giant-Size Dark Phoenix Saga|||1|||1": {
+"date": "2025-08-01",
+"month": 8,
+"week": "2025-W31",
+"year": 2025
+},
+"Giant-Size Fantastic Four|||1|||1": {
+"date": "2024-04-01",
+"month": 4,
+"week": "2024-W14",
+"year": 2024
+},
+"Giant-Size House of M|||1|||1": {
+"date": "2025-09-01",
+"month": 9,
+"week": "2025-W36",
+"year": 2025
+},
+"Giant-Size Silver Surfer|||1|||1": {
+"date": "2024-09-01",
+"month": 9,
+"week": "2024-W35",
+"year": 2024
+},
+"Giant-Size Spider-Man|||1|||1": {
+"date": "2024-03-01",
+"month": 3,
+"week": "2024-W09",
+"year": 2024
+},
+"Giant-Size Thor|||1|||1": {
+"date": "2024-10-01",
+"month": 10,
+"week": "2024-W40",
+"year": 2024
+},
+"Giant-Size X-Men|||1|||1": {
+"date": "2025-07-01",
+"month": 7,
+"week": "2025-W27",
+"year": 2025
+},
+"Giant-Size X-Men|||1|||2": {
+"date": "2024-07-01",
+"month": 7,
+"week": "2024-W27",
+"year": 2024
+},
+"Giant-Size X-Men|||1|||6": {
+"date": "2024-07-01",
+"month": 7,
+"week": "2024-W27",
+"year": 2024
+},
+"Godzilla Destroys the Marvel Universe|||1|||1": {
+"date": "2025-09-01",
+"month": 9,
+"week": "2025-W36",
+"year": 2025
+},
+"Godzilla Destroys the Marvel Universe|||2|||1": {
+"date": "2025-10-01",
+"month": 10,
+"week": "2025-W40",
+"year": 2025
+},
+"Godzilla Destroys the Marvel Universe|||3|||1": {
+"date": "2025-11-01",
+"month": 11,
+"week": "2025-W44",
+"year": 2025
+},
+"Godzilla Destroys the Marvel Universe|||4|||1": {
+"date": "2025-12-01",
+"month": 12,
+"week": "2025-W49",
+"year": 2025
+},
+"Godzilla Destroys the Marvel Universe|||5|||1": {
+"date": "2026-01-01",
+"month": 1,
+"week": "2026-W01",
+"year": 2026
+},
+"Godzilla vs. Avengers|||1|||1": {
+"date": "2025-08-01",
+"month": 8,
+"week": "2025-W31",
+"year": 2025
+},
+"Godzilla vs. Fantastic Four|||1|||1": {
+"date": "2025-05-01",
+"month": 5,
+"week": "2025-W18",
+"year": 2025
+},
+"Godzilla vs. Thor|||1|||1": {
+"date": "2025-09-01",
+"month": 9,
+"week": "2025-W36",
+"year": 2025
+},
+"Godzilla vs. X-Men|||1|||6": {
+"date": "2025-07-01",
+"month": 7,
+"week": "2025-W27",
+"year": 2025
+},
+"Green Arrow|||25|||1": {
+"date": "2025-08-01",
+"month": 8,
+"week": "2025-W31",
+"year": 2025
+},
+"Green Arrow|||4|||1": {
+"date": "2023-11-01",
+"month": 11,
+"week": "2023-W44",
+"year": 2023
+},
+"Green Lantern Corps|||1|||7": {
+"date": "2025-04-01",
+"month": 4,
+"week": "2025-W14",
+"year": 2025
+},
+"Green Lantern Corps|||2|||7": {
+"date": "2025-05-01",
+"month": 5,
+"week": "2025-W18",
+"year": 2025
+},
+"Green Lantern Corps|||3|||7": {
+"date": "2025-06-01",
+"month": 6,
+"week": "2025-W22",
+"year": 2025
+},
+"Green Lantern: Fractured Spectrum|||1|||7": {
+"date": "2025-03-01",
+"month": 3,
+"week": "2025-W09",
+"year": 2025
+},
+"Green Lantern: War Journal|||10|||7": {
+"date": "2024-08-01",
+"month": 8,
+"week": "2024-W31",
+"year": 2024
+},
+"Green Lantern: War Journal|||11|||7": {
+"date": "2024-09-01",
+"month": 9,
+"week": "2024-W35",
+"year": 2024
+},
+"Green Lantern: War Journal|||12|||7": {
+"date": "2024-10-01",
+"month": 10,
+"week": "2024-W40",
+"year": 2024
+},
+"Green Lantern: War Journal|||1|||1": {
+"date": "2023-11-01",
+"month": 11,
+"week": "2023-W44",
+"year": 2023
+},
+"Green Lantern: War Journal|||2|||1": {
+"date": "2023-12-01",
+"month": 12,
+"week": "2023-W48",
+"year": 2023
+},
+"Green Lantern: War Journal|||3|||7": {
+"date": "2024-01-01",
+"month": 1,
+"week": "2024-W01",
+"year": 2024
+},
+"Green Lantern: War Journal|||4|||7": {
+"date": "2024-02-01",
+"month": 2,
+"week": "2024-W05",
+"year": 2024
+},
+"Green Lantern: War Journal|||5|||7": {
+"date": "2024-03-01",
+"month": 3,
+"week": "2024-W09",
+"year": 2024
+},
+"Green Lantern: War Journal|||6|||7": {
+"date": "2024-04-01",
+"month": 4,
+"week": "2024-W14",
+"year": 2024
+},
+"Green Lantern: War Journal|||7|||7": {
+"date": "2024-05-01",
+"month": 5,
+"week": "2024-W18",
+"year": 2024
+},
+"Green Lantern: War Journal|||8|||7": {
+"date": "2024-06-01",
+"month": 6,
+"week": "2024-W22",
+"year": 2024
+},
+"Green Lantern: War Journal|||9|||7": {
+"date": "2024-07-01",
+"month": 7,
+"week": "2024-W27",
+"year": 2024
+},
+"Green Lantern|||3|||7": {
+"date": "2023-11-01",
+"month": 11,
+"week": "2023-W44",
+"year": 2023
+},
+"Green Lantern|||3|||8": {
+"date": "2023-11-01",
+"month": 11,
+"week": "2023-W44",
+"year": 2023
+},
+"Green Lantern|||4|||7": {
+"date": "2023-12-01",
+"month": 12,
+"week": "2023-W48",
+"year": 2023
+},
+"Green Lantern|||4|||8": {
+"date": "2023-12-01",
+"month": 12,
+"week": "2023-W48",
+"year": 2023
+},
+"Green Lantern|||5|||7": {
+"date": "2026-02-17",
+"month": 2,
+"week": "2026-W08",
+"year": 2026
+},
+"Hawkgirl|||2|||2": {
+"date": "2023-10-01",
+"month": 10,
+"week": "2023-W39",
+"year": 2023
+},
+"Hawkgirl|||3|||2": {
+"date": "2023-11-01",
+"month": 11,
+"week": "2023-W44",
+"year": 2023
+},
+"Hawkgirl|||4|||2": {
+"date": "2023-12-01",
+"month": 12,
+"week": "2023-W48",
+"year": 2023
+},
+"Hawkgirl|||5|||2": {
+"date": "2024-01-01",
+"month": 1,
+"week": "2024-W01",
+"year": 2024
+},
+"Hawkgirl|||6|||2": {
+"date": "2024-02-01",
+"month": 2,
+"week": "2024-W05",
+"year": 2024
+},
+"Immortal Thor Annual|||1|||1": {
+"date": "2024-09-01",
+"month": 9,
+"week": "2024-W35",
+"year": 2024
+},
+"Imperial Guardians|||1|||1": {
+"date": "2026-05-01",
+"month": 5,
+"week": "2026-W18",
+"year": 2026
+},
+"Imperial War: Black Panther|||1|||1": {
+"date": "2025-10-01",
+"month": 10,
+"week": "2025-W40",
+"year": 2025
+},
+"Imperial War: Planet She-Hulk|||1|||1": {
+"date": "2025-10-01",
+"month": 10,
+"week": "2025-W40",
+"year": 2025
+},
+"Imperial|||1|||1": {
+"date": "2025-08-01",
+"month": 8,
+"week": "2025-W31",
+"year": 2025
+},
+"Imperial|||2|||1": {
+"date": "2025-09-01",
+"month": 9,
+"week": "2025-W36",
+"year": 2025
+},
+"Imperial|||3|||1": {
+"date": "2025-10-01",
+"month": 10,
+"week": "2025-W40",
+"year": 2025
+},
+"Imperial|||4|||1": {
+"date": "2025-12-01",
+"month": 12,
+"week": "2025-W49",
+"year": 2025
+},
+"Infernal Hulk|||1|||6": {
+"date": "2026-01-01",
+"month": 1,
+"week": "2026-W01",
+"year": 2026
+},
+"Infernal Hulk|||8|||1": {
+"date": "2026-08-01",
+"month": 8,
+"week": "2026-W31",
+"year": 2026
+},
+"Inglorious X-Force|||1|||8": {
+"date": "2026-03-01",
+"month": 3,
+"week": "2026-W09",
+"year": 2026
+},
+"Inglorious X-Force|||3|||1": {
+"date": "2026-05-01",
+"month": 5,
+"week": "2026-W18",
+"year": 2026
+},
+"Inglorious X-Force|||7|||1": {
+"date": "2026-09-01",
+"month": 9,
+"week": "2026-W36",
+"year": 2026
+},
+"JSA|||16|||1": {
+"date": "2026-04-01",
+"month": 4,
+"week": "2026-W14",
+"year": 2026
+},
+"JSA|||1|||1": {
+"date": "2025-01-01",
+"month": 1,
+"week": "2025-W01",
+"year": 2025
+},
+"JSA|||2|||1": {
+"date": "2025-02-01",
+"month": 2,
+"week": "2025-W05",
+"year": 2025
+},
+"JSA|||3|||1": {
+"date": "2025-03-01",
+"month": 3,
+"week": "2025-W09",
+"year": 2025
+},
+"JSA|||4|||1": {
+"date": "2025-04-01",
+"month": 4,
+"week": "2025-W14",
+"year": 2025
+},
+"JSA|||5|||1": {
+"date": "2025-05-01",
+"month": 5,
+"week": "2025-W18",
+"year": 2025
+},
+"JSA|||6|||1": {
+"date": "2025-06-01",
+"month": 6,
+"week": "2025-W22",
+"year": 2025
+},
+"JSA|||7|||1": {
+"date": "2025-07-01",
+"month": 7,
+"week": "2025-W27",
+"year": 2025
+},
+"JSA|||8|||1": {
+"date": "2025-08-01",
+"month": 8,
+"week": "2025-W31",
+"year": 2025
+},
+"JSA|||9|||1": {
+"date": "2025-09-01",
+"month": 9,
+"week": "2025-W36",
+"year": 2025
+},
+"Jay Garrick: The Flash|||1|||1": {
+"date": "2023-12-01",
+"month": 12,
+"week": "2023-W48",
+"year": 2023
+},
+"Jay Garrick: The Flash|||2|||1": {
+"date": "2024-01-01",
+"month": 1,
+"week": "2024-W01",
+"year": 2024
+},
+"Jay Garrick: The Flash|||3|||1": {
+"date": "2024-02-01",
+"month": 2,
+"week": "2024-W05",
+"year": 2024
+},
+"Jay Garrick: The Flash|||4|||1": {
+"date": "2024-03-01",
+"month": 3,
+"week": "2024-W09",
+"year": 2024
+},
+"Jay Garrick: The Flash|||6|||1": {
+"date": "2024-06-01",
+"month": 6,
+"week": "2024-W22",
+"year": 2024
+},
+"Jean Grey|||1|||2": {
+"date": "2023-10-01",
+"month": 10,
+"week": "2023-W39",
+"year": 2023
+},
+"Jean Grey|||2|||2": {
+"date": "2023-11-01",
+"month": 11,
+"week": "2023-W44",
+"year": 2023
+},
+"Jean Grey|||3|||2": {
+"date": "2023-12-01",
+"month": 12,
+"week": "2023-W48",
+"year": 2023
+},
+"Jean Grey|||4|||2": {
+"date": "2024-01-01",
+"month": 1,
+"week": "2024-W01",
+"year": 2024
+},
+"Jenny Sparks|||1|||1": {
+"date": "2024-10-01",
+"month": 10,
+"week": "2024-W40",
+"year": 2024
+},
+"Jenny Sparks|||2|||1": {
+"date": "2024-11-01",
+"month": 11,
+"week": "2024-W44",
+"year": 2024
+},
+"Jenny Sparks|||3|||1": {
+"date": "2024-12-01",
+"month": 12,
+"week": "2024-W48",
+"year": 2024
+},
+"Jenny Sparks|||5|||1": {
+"date": "2025-02-01",
+"month": 2,
+"week": "2025-W05",
+"year": 2025
+},
+"Jubilee: Deadly Reunion|||1|||1": {
+"date": "2026-07-01",
+"month": 7,
+"week": "2026-W27",
+"year": 2026
+},
+"Justice League Red|||1|||1": {
+"date": "2025-10-01",
+"month": 10,
+"week": "2025-W40",
+"year": 2025
+},
+"Justice League Red|||2|||1": {
+"date": "2025-11-01",
+"month": 11,
+"week": "2025-W44",
+"year": 2025
+},
+"Justice League Unlimited|||10|||1": {
+"date": "2025-10-01",
+"month": 10,
+"week": "2025-W40",
+"year": 2025
+},
+"Justice League Unlimited|||12|||1": {
+"date": "2025-12-01",
+"month": 12,
+"week": "2025-W49",
+"year": 2025
+},
+"Justice League Unlimited|||13|||1": {
+"date": "2026-01-01",
+"month": 1,
+"week": "2026-W01",
+"year": 2026
+},
+"Justice League Unlimited|||14|||1": {
+"date": "2026-02-01",
+"month": 2,
+"week": "2026-W05",
+"year": 2026
+},
+"Justice League Unlimited|||15|||1": {
+"date": "2026-03-01",
+"month": 3,
+"week": "2026-W09",
+"year": 2026
+},
+"Justice League Unlimited|||16|||1": {
+"date": "2026-04-01",
+"month": 4,
+"week": "2026-W14",
+"year": 2026
+},
+"Justice League Unlimited|||1|||1": {
+"date": "2025-01-01",
+"month": 1,
+"week": "2025-W01",
+"year": 2025
+},
+"Justice League Unlimited|||20|||3": {
+"date": "2026-08-01",
+"month": 8,
+"week": "2026-W31",
+"year": 2026
+},
+"Justice League Unlimited|||2|||1": {
+"date": "2025-02-01",
+"month": 2,
+"week": "2025-W05",
+"year": 2025
+},
+"Justice League Unlimited|||4|||1": {
+"date": "2025-04-01",
+"month": 4,
+"week": "2025-W14",
+"year": 2025
+},
+"Justice League Unlimited|||5|||1": {
+"date": "2025-05-01",
+"month": 5,
+"week": "2025-W18",
+"year": 2025
+},
+"Justice League Unlimited|||6|||1": {
+"date": "2025-06-01",
+"month": 6,
+"week": "2025-W22",
+"year": 2025
+},
+"Justice League Unlimited|||7|||1": {
+"date": "2025-07-01",
+"month": 7,
+"week": "2025-W27",
+"year": 2025
+},
+"Justice League: The Atom Project|||1|||1": {
+"date": "2025-03-01",
+"month": 3,
+"week": "2025-W09",
+"year": 2025
+},
+"Justice League: The Atom Project|||2|||1": {
+"date": "2025-04-01",
+"month": 4,
+"week": "2025-W14",
+"year": 2025
+},
+"Justice League: The Omega Act Special|||1|||1": {
+"date": "2025-12-01",
+"month": 12,
+"week": "2025-W49",
+"year": 2025
+},
+"Justice Society of America|||10|||1": {
+"date": "2024-08-01",
+"month": 8,
+"week": "2024-W31",
+"year": 2024
+},
+"Justice Society of America|||11|||1": {
+"date": "2024-11-01",
+"month": 11,
+"week": "2024-W44",
+"year": 2024
+},
+"Justice Society of America|||12|||1": {
+"date": "2024-12-01",
+"month": 12,
+"week": "2024-W48",
+"year": 2024
+},
+"Longshots|||1|||1": {
+"date": "2025-12-01",
+"month": 12,
+"week": "2025-W49",
+"year": 2025
+},
+"M.A.S.K.|||2|||1": {
+"date": "2026-07-08",
+"month": 7,
+"week": "2026-W28",
+"year": 2026
+},
+"Magik|||1|||1": {
+"date": "2025-03-01",
+"month": 3,
+"week": "2025-W09",
+"year": 2025
+},
+"Magik|||2|||1": {
+"date": "2025-04-01",
+"month": 4,
+"week": "2025-W14",
+"year": 2025
+},
+"Magik|||3|||1": {
+"date": "2025-05-01",
+"month": 5,
+"week": "2025-W18",
+"year": 2025
+},
+"Magik|||4|||1": {
+"date": "2025-06-01",
+"month": 6,
+"week": "2025-W22",
+"year": 2025
+},
+"Magik|||5|||1": {
+"date": "2025-07-01",
+"month": 7,
+"week": "2025-W27",
+"year": 2025
+},
+"Magik|||6|||1": {
+"date": "2025-08-01",
+"month": 8,
+"week": "2025-W31",
+"year": 2025
+},
+"Magik|||7|||1": {
+"date": "2025-09-01",
+"month": 9,
+"week": "2025-W36",
+"year": 2025
+},
+"Marc Spector: Moon Knight|||1|||9": {
+"date": "2026-04-01",
+"month": 4,
+"week": "2026-W14",
+"year": 2026
+},
+"Marc Spector: Moon Knight|||3|||11": {
+"date": "2026-06-01",
+"month": 6,
+"week": "2026-W23",
+"year": 2026
+},
+"Marvel Age|||1000|||2": {
+"date": "2023-10-01",
+"month": 10,
+"week": "2023-W39",
+"year": 2023
+},
+"Marvel Knights: The World to Come|||1|||9": {
+"date": "2025-08-01",
+"month": 8,
+"week": "2025-W31",
+"year": 2025
+},
+"Marvel Knights: The World to Come|||2|||9": {
+"date": "2025-09-01",
+"month": 9,
+"week": "2025-W36",
+"year": 2025
+},
+"Marvel Zombies: Red Band|||1|||1": {
+"date": "2025-11-01",
+"month": 11,
+"week": "2025-W44",
+"year": 2025
+},
+"Marvel Zombies: Red Band|||2|||1": {
+"date": "2025-12-01",
+"month": 12,
+"week": "2025-W49",
+"year": 2025
+},
+"Marvel Zombies: Red Band|||3|||1": {
+"date": "2026-01-01",
+"month": 1,
+"week": "2026-W01",
+"year": 2026
+},
+"Marvel's Voices: Legends|||1|||1": {
+"date": "2024-03-01",
+"month": 3,
+"week": "2024-W09",
+"year": 2024
+},
+"Metamorpho: The Element Man|||3|||1": {
+"date": "2025-04-01",
+"month": 4,
+"week": "2025-W14",
+"year": 2025
+},
+"Midnight Sons: Blood Hunt|||1|||1": {
+"date": "2024-07-01",
+"month": 7,
+"week": "2024-W27",
+"year": 2024
+},
+"Miles Morales: Spider-Man Annual|||1|||1": {
+"date": "2024-10-01",
+"month": 10,
+"week": "2024-W40",
+"year": 2024
+},
+"Miles Morales: Spider-Man Annual|||1|||2": {
+"date": "2024-10-01",
+"month": 10,
+"week": "2024-W40",
+"year": 2024
+},
+"Moon Knight Annual|||1|||11": {
+"date": "2024-11-01",
+"month": 11,
+"week": "2024-W44",
+"year": 2024
+},
+"Moon Knight: City of the Dead|||2|||1": {
+"date": "2023-10-01",
+"month": 10,
+"week": "2023-W39",
+"year": 2023
+},
+"Moon Knight: City of the Dead|||3|||1": {
+"date": "2023-11-01",
+"month": 11,
+"week": "2023-W44",
+"year": 2023
+},
+"Moon Knight: City of the Dead|||4|||1": {
+"date": "2023-12-01",
+"month": 12,
+"week": "2023-W48",
+"year": 2023
+},
+"Moon Knight: City of the Dead|||5|||1": {
+"date": "2024-01-01",
+"month": 1,
+"week": "2024-W01",
+"year": 2024
+},
+"Moon Knight|||26|||10": {
+"date": "2023-10-01",
+"month": 10,
+"week": "2023-W39",
+"year": 2023
+},
+"Moon Knight|||27|||10": {
+"date": "2023-11-01",
+"month": 11,
+"week": "2023-W44",
+"year": 2023
+},
+"Moon Knight|||28|||10": {
+"date": "2023-12-01",
+"month": 12,
+"week": "2023-W48",
+"year": 2023
+},
+"Moon Knight|||29|||10": {
+"date": "2024-01-01",
+"month": 1,
+"week": "2024-W01",
+"year": 2024
+},
+"Moon Knight|||30|||10": {
+"date": "2024-02-01",
+"month": 2,
+"week": "2024-W05",
+"year": 2024
+},
+"Moonstar|||1|||1": {
+"date": "2026-05-01",
+"month": 5,
+"week": "2026-W18",
+"year": 2026
+},
+"Moonstar|||4|||1": {
+"date": "2026-08-01",
+"month": 8,
+"week": "2026-W31",
+"year": 2026
+},
+"Mr. Terrific: Year One|||1|||1": {
+"date": "2025-07-01",
+"month": 7,
+"week": "2025-W27",
+"year": 2025
+},
+"Mr. Terrific: Year One|||2|||1": {
+"date": "2025-08-01",
+"month": 8,
+"week": "2025-W31",
+"year": 2025
+},
+"Mr. Terrific: Year One|||3|||1": {
+"date": "2025-09-01",
+"month": 9,
+"week": "2025-W36",
+"year": 2025
+},
+"Mr. Terrific: Year One|||4|||1": {
+"date": "2025-10-01",
+"month": 10,
+"week": "2025-W40",
+"year": 2025
+},
+"Mr. Terrific: Year One|||5|||1": {
+"date": "2025-11-01",
+"month": 11,
+"week": "2025-W44",
+"year": 2025
+},
+"Mr. Terrific: Year One|||6|||1": {
+"date": "2026-01-01",
+"month": 1,
+"week": "2026-W01",
+"year": 2026
+},
+"Ms. Marvel: Mutant Menace|||1|||1": {
+"date": "2024-05-01",
+"month": 5,
+"week": "2024-W18",
+"year": 2024
+},
+"Ms. Marvel: The New Mutant|||1|||1": {
+"date": "2023-10-01",
+"month": 10,
+"week": "2023-W39",
+"year": 2023
+},
+"Ms. Marvel: The New Mutant|||2|||1": {
+"date": "2023-11-01",
+"month": 11,
+"week": "2023-W44",
+"year": 2023
+},
+"Ms. Marvel: The New Mutant|||3|||1": {
+"date": "2023-12-01",
+"month": 12,
+"week": "2023-W48",
+"year": 2023
+},
+"Ms. Marvel: The New Mutant|||4|||1": {
+"date": "2024-01-01",
+"month": 1,
+"week": "2024-W01",
+"year": 2024
+},
+"Mystique|||1|||3": {
+"date": "2024-12-01",
+"month": 12,
+"week": "2024-W48",
+"year": 2024
+},
+"Mystique|||2|||3": {
+"date": "2025-01-01",
+"month": 1,
+"week": "2025-W01",
+"year": 2025
+},
+"Mystique|||3|||3": {
+"date": "2025-02-01",
+"month": 2,
+"week": "2025-W05",
+"year": 2025
+},
+"Mystique|||4|||3": {
+"date": "2025-03-01",
+"month": 3,
+"week": "2025-W09",
+"year": 2025
+},
+"Mystique|||5|||3": {
+"date": "2025-04-01",
+"month": 4,
+"week": "2025-W14",
+"year": 2025
+},
+"NYX|||10|||2": {
+"date": "2025-06-01",
+"month": 6,
+"week": "2025-W22",
+"year": 2025
+},
+"NYX|||1|||1": {
+"date": "2024-09-01",
+"month": 9,
+"week": "2024-W35",
+"year": 2024
+},
+"NYX|||2|||2": {
+"date": "2024-10-01",
+"month": 10,
+"week": "2024-W40",
+"year": 2024
+},
+"NYX|||3|||2": {
+"date": "2024-11-01",
+"month": 11,
+"week": "2024-W44",
+"year": 2024
+},
+"NYX|||4|||2": {
+"date": "2024-12-01",
+"month": 12,
+"week": "2024-W48",
+"year": 2024
+},
+"NYX|||5|||2": {
+"date": "2025-01-01",
+"month": 1,
+"week": "2025-W01",
+"year": 2025
+},
+"NYX|||6|||2": {
+"date": "2025-02-01",
+"month": 2,
+"week": "2025-W05",
+"year": 2025
+},
+"NYX|||7|||2": {
+"date": "2025-03-01",
+"month": 3,
+"week": "2025-W09",
+"year": 2025
+},
+"NYX|||8|||2": {
+"date": "2025-04-01",
+"month": 4,
+"week": "2025-W14",
+"year": 2025
+},
+"NYX|||9|||2": {
+"date": "2025-05-01",
+"month": 5,
+"week": "2025-W18",
+"year": 2025
+},
+"Namor|||1|||2": {
+"date": "2024-09-01",
+"month": 9,
+"week": "2024-W35",
+"year": 2024
+},
+"Namor|||2|||2": {
+"date": "2024-10-01",
+"month": 10,
+"week": "2024-W40",
+"year": 2024
+},
+"Namor|||3|||2": {
+"date": "2024-11-01",
+"month": 11,
+"week": "2024-W44",
+"year": 2024
+},
+"Namor|||4|||2": {
+"date": "2024-12-01",
+"month": 12,
+"week": "2024-W48",
+"year": 2024
+},
+"Namor|||5|||2": {
+"date": "2025-02-01",
+"month": 2,
+"week": "2025-W05",
+"year": 2025
+},
+"Namor|||6|||3": {
+"date": "2025-03-01",
+"month": 3,
+"week": "2025-W09",
+"year": 2025
+},
+"Namor|||7|||3": {
+"date": "2025-04-01",
+"month": 4,
+"week": "2025-W14",
+"year": 2025
+},
+"Namor|||8|||3": {
+"date": "2025-05-01",
+"month": 5,
+"week": "2025-W18",
+"year": 2025
+},
+"New Avengers|||1|||5": {
+"date": "2025-08-01",
+"month": 8,
+"week": "2025-W31",
+"year": 2025
+},
+"New Champions|||1|||1": {
+"date": "2025-03-01",
+"month": 3,
+"week": "2025-W09",
+"year": 2025
+},
+"Nightwing|||5|||4": {
+"date": "2024-11-01",
+"month": 11,
+"week": "2024-W44",
+"year": 2024
+},
+"Nightwing|||5|||5": {
+"date": "2024-11-01",
+"month": 11,
+"week": "2024-W44",
+"year": 2024
+},
+"Nova: Centurion|||1|||1": {
+"date": "2026-01-01",
+"month": 1,
+"week": "2026-W01",
+"year": 2026
+},
+"Nova: Centurion|||2|||1": {
+"date": "2026-02-01",
+"month": 2,
+"week": "2026-W05",
+"year": 2026
+},
+"Nova: Centurion|||3|||1": {
+"date": "2026-03-01",
+"month": 3,
+"week": "2026-W09",
+"year": 2026
+},
+"Nova: Centurion|||4|||1": {
+"date": "2026-04-01",
+"month": 4,
+"week": "2026-W14",
+"year": 2026
+},
+"Nova: Centurion|||5|||1": {
+"date": "2026-05-01",
+"month": 5,
+"week": "2026-W18",
+"year": 2026
+},
+"Nova: Centurion|||6|||1": {
+"date": "2026-06-01",
+"month": 6,
+"week": "2026-W23",
+"year": 2026
+},
+"One World Under Doom|||1|||1": {
+"date": "2025-04-01",
+"month": 4,
+"week": "2025-W14",
+"year": 2025
+},
+"One World Under Doom|||2|||1": {
+"date": "2025-05-01",
+"month": 5,
+"week": "2025-W18",
+"year": 2025
+},
+"One World Under Doom|||3|||1": {
+"date": "2025-06-01",
+"month": 6,
+"week": "2025-W22",
+"year": 2025
+},
+"One World Under Doom|||4|||1": {
+"date": "2025-07-01",
+"month": 7,
+"week": "2025-W27",
+"year": 2025
+},
+"One World Under Doom|||5|||1": {
+"date": "2025-08-01",
+"month": 8,
+"week": "2025-W31",
+"year": 2025
+},
+"One World Under Doom|||6|||1": {
+"date": "2025-10-01",
+"month": 10,
+"week": "2025-W40",
+"year": 2025
+},
+"One World Under Doom|||7|||1": {
+"date": "2025-11-01",
+"month": 11,
+"week": "2025-W44",
+"year": 2025
+},
+"One World Under Doom|||8|||1": {
+"date": "2025-12-01",
+"month": 12,
+"week": "2025-W49",
+"year": 2025
+},
+"One World Under Doom|||9|||1": {
+"date": "2026-01-01",
+"month": 1,
+"week": "2026-W01",
+"year": 2026
+},
+"Original X-Men|||1|||1": {
+"date": "2024-02-01",
+"month": 2,
+"week": "2024-W05",
+"year": 2024
+},
+"Outsiders|||3|||1": {
+"date": "2024-03-01",
+"month": 3,
+"week": "2024-W09",
+"year": 2024
+},
+"Phases of the Moon Knight|||1|||11": {
+"date": "2024-10-01",
+"month": 10,
+"week": "2024-W40",
+"year": 2024
+},
+"Phases of the Moon Knight|||2|||1": {
+"date": "2024-11-01",
+"month": 11,
+"week": "2024-W44",
+"year": 2024
+},
+"Phases of the Moon Knight|||2|||11": {
+"date": "2024-11-01",
+"month": 11,
+"week": "2024-W44",
+"year": 2024
+},
+"Phases of the Moon Knight|||3|||1": {
+"date": "2024-12-01",
+"month": 12,
+"week": "2024-W48",
+"year": 2024
+},
+"Phases of the Moon Knight|||4|||1": {
+"date": "2025-01-01",
+"month": 1,
+"week": "2025-W01",
+"year": 2025
+},
+"Phoenix|||10|||2": {
+"date": "2025-06-01",
+"month": 6,
+"week": "2025-W22",
+"year": 2025
+},
+"Phoenix|||11|||2": {
+"date": "2025-07-01",
+"month": 7,
+"week": "2025-W27",
+"year": 2025
+},
+"Phoenix|||12|||2": {
+"date": "2025-08-01",
+"month": 8,
+"week": "2025-W31",
+"year": 2025
+},
+"Phoenix|||13|||2": {
+"date": "2025-09-01",
+"month": 9,
+"week": "2025-W36",
+"year": 2025
+},
+"Phoenix|||1|||2": {
+"date": "2024-09-01",
+"month": 9,
+"week": "2024-W35",
+"year": 2024
+},
+"Phoenix|||2|||2": {
+"date": "2024-10-01",
+"month": 10,
+"week": "2024-W40",
+"year": 2024
+},
+"Phoenix|||3|||2": {
+"date": "2024-11-01",
+"month": 11,
+"week": "2024-W44",
+"year": 2024
+},
+"Phoenix|||4|||2": {
+"date": "2024-12-01",
+"month": 12,
+"week": "2024-W48",
+"year": 2024
+},
+"Phoenix|||5|||2": {
+"date": "2025-01-01",
+"month": 1,
+"week": "2025-W01",
+"year": 2025
+},
+"Phoenix|||6|||2": {
+"date": "2025-02-01",
+"month": 2,
+"week": "2025-W05",
+"year": 2025
+},
+"Phoenix|||7|||1": {
+"date": "2025-03-01",
+"month": 3,
+"week": "2025-W09",
+"year": 2025
+},
+"Phoenix|||7|||2": {
+"date": "2025-03-01",
+"month": 3,
+"week": "2025-W09",
+"year": 2025
+},
+"Phoenix|||8|||2": {
+"date": "2025-04-01",
+"month": 4,
+"week": "2025-W14",
+"year": 2025
+},
+"Phoenix|||9|||2": {
+"date": "2025-05-01",
+"month": 5,
+"week": "2025-W18",
+"year": 2025
+},
+"Planet She-Hulk|||1|||1": {
+"date": "2026-01-01",
+"month": 1,
+"week": "2026-W01",
+"year": 2026
+},
+"Planet of the Apes vs. Fantastic Four|||1|||1": {
+"date": "2026-04-01",
+"month": 4,
+"week": "2026-W14",
+"year": 2026
+},
+"Planet of the Apes vs. Fantastic Four|||2|||1": {
+"date": "2026-05-01",
+"month": 5,
+"week": "2026-W18",
+"year": 2026
+},
+"Power Girl|||10|||1": {
+"date": "2024-08-01",
+"month": 8,
+"week": "2024-W31",
+"year": 2024
+},
+"Power Girl|||2|||3": {
+"date": "2023-12-01",
+"month": 12,
+"week": "2023-W48",
+"year": 2023
+},
+"Power Girl|||3|||3": {
+"date": "2024-01-01",
+"month": 1,
+"week": "2024-W01",
+"year": 2024
+},
+"Power Girl|||4|||1": {
+"date": "2024-02-01",
+"month": 2,
+"week": "2024-W05",
+"year": 2024
+},
+"Power Man: Timeless|||1|||1": {
+"date": "2025-04-01",
+"month": 4,
+"week": "2025-W14",
+"year": 2025
+},
+"Power Man: Timeless|||2|||1": {
+"date": "2025-05-01",
+"month": 5,
+"week": "2025-W18",
+"year": 2025
+},
+"Power Man: Timeless|||3|||1": {
+"date": "2025-06-01",
+"month": 6,
+"week": "2025-W22",
+"year": 2025
+},
+"Predator vs. Black Panther|||1|||1": {
+"date": "2024-10-01",
+"month": 10,
+"week": "2024-W40",
+"year": 2024
+},
+"Predator vs. Black Panther|||2|||1": {
+"date": "2024-11-01",
+"month": 11,
+"week": "2024-W44",
+"year": 2024
+},
+"Predator vs. Black Panther|||3|||1": {
+"date": "2024-12-01",
+"month": 12,
+"week": "2024-W48",
+"year": 2024
+},
+"Predator vs. Black Panther|||4|||1": {
+"date": "2025-01-01",
+"month": 1,
+"week": "2025-W01",
+"year": 2025
+},
+"Psylocke|||10|||2": {
+"date": "2025-10-01",
+"month": 10,
+"week": "2025-W40",
+"year": 2025
+},
+"Psylocke|||1|||2": {
+"date": "2025-01-01",
+"month": 1,
+"week": "2025-W01",
+"year": 2025
+},
+"Psylocke|||2|||1": {
+"date": "2025-02-01",
+"month": 2,
+"week": "2025-W05",
+"year": 2025
+},
+"Psylocke|||3|||2": {
+"date": "2025-03-01",
+"month": 3,
+"week": "2025-W09",
+"year": 2025
+},
+"Psylocke|||4|||2": {
+"date": "2025-04-01",
+"month": 4,
+"week": "2025-W14",
+"year": 2025
+},
+"Psylocke|||6|||2": {
+"date": "2025-06-01",
+"month": 6,
+"week": "2025-W22",
+"year": 2025
+},
+"Psylocke|||7|||2": {
+"date": "2025-07-01",
+"month": 7,
+"week": "2025-W27",
+"year": 2025
+},
+"Psylocke|||8|||2": {
+"date": "2025-08-01",
+"month": 8,
+"week": "2025-W31",
+"year": 2025
+},
+"Psylocke|||9|||2": {
+"date": "2025-09-01",
+"month": 9,
+"week": "2025-W36",
+"year": 2025
+},
+"Punisher|||3|||1": {
+"date": "2024-03-01",
+"month": 3,
+"week": "2024-W09",
+"year": 2024
+},
+"Reborn: Ultimate Impact|||1|||1": {
+"date": "2026-07-01",
+"month": 7,
+"week": "2026-W27",
+"year": 2026
+},
+"Reborn: Ultimate Impact|||2|||1": {
+"date": "2026-08-01",
+"month": 8,
+"week": "2026-W31",
+"year": 2026
+},
+"Red Hood: The Hill|||3|||1": {
+"date": "2024-06-01",
+"month": 6,
+"week": "2024-W22",
+"year": 2024
+},
+"Red Hulk|||1|||3": {
+"date": "2025-04-01",
+"month": 4,
+"week": "2025-W14",
+"year": 2025
+},
+"Red Hulk|||2|||3": {
+"date": "2025-05-01",
+"month": 5,
+"week": "2025-W18",
+"year": 2025
+},
+"Red Hulk|||3|||1": {
+"date": "2025-06-01",
+"month": 6,
+"week": "2025-W22",
+"year": 2025
+},
+"Resurrection of Magneto|||1|||1": {
+"date": "2024-03-01",
+"month": 3,
+"week": "2024-W09",
+"year": 2024
+},
+"Return of Superman 30th Anniversary Special|||1|||1": {
+"date": "2023-12-01",
+"month": 12,
+"week": "2023-W48",
+"year": 2023
+},
+"Rise of the Powers of X|||1|||1": {
+"date": "2024-03-01",
+"month": 3,
+"week": "2024-W09",
+"year": 2024
+},
+"Rise of the Powers of X|||2|||1": {
+"date": "2024-04-01",
+"month": 4,
+"week": "2024-W14",
+"year": 2024
+},
+"Rise of the Powers of X|||3|||1": {
+"date": "2024-05-01",
+"month": 5,
+"week": "2024-W18",
+"year": 2024
+},
+"Rise of the Powers of X|||4|||1": {
+"date": "2024-06-01",
+"month": 6,
+"week": "2024-W22",
+"year": 2024
+},
+"Rise of the Powers of X|||5|||1": {
+"date": "2024-07-01",
+"month": 7,
+"week": "2024-W27",
+"year": 2024
+},
+"Robin and Batman: Jason Todd|||1|||1": {
+"date": "2025-08-01",
+"month": 8,
+"week": "2025-W31",
+"year": 2025
+},
+"Robin and Batman: Jason Todd|||2|||1": {
+"date": "2025-09-01",
+"month": 9,
+"week": "2025-W36",
+"year": 2025
+},
+"Robin and Batman: Jason Todd|||3|||1": {
+"date": "2025-10-01",
+"month": 10,
+"week": "2025-W40",
+"year": 2025
+},
+"Rogue Storm|||1|||1": {
+"date": "2025-12-01",
+"month": 12,
+"week": "2025-W49",
+"year": 2025
+},
+"Rogue Storm|||2|||1": {
+"date": "2026-01-01",
+"month": 1,
+"week": "2026-W01",
+"year": 2026
+},
+"Rogue|||4|||1": {
+"date": "2026-06-01",
+"month": 6,
+"week": "2026-W23",
+"year": 2026
+},
+"Rom|||1|||1": {
+"date": "2026-06-10",
+"month": 6,
+"week": "2026-W24",
+"year": 2026
+},
+"Roxxon Presents Thor|||1|||1": {
+"date": "2024-06-01",
+"month": 6,
+"week": "2024-W22",
+"year": 2024
+},
+"Scarlet Witch|||10|||3": {
+"date": "2024-01-01",
+"month": 1,
+"week": "2024-W01",
+"year": 2024
+},
+"Scarlet Witch|||7|||1": {
+"date": "2023-10-01",
+"month": 10,
+"week": "2023-W39",
+"year": 2023
+},
+"Scarlet Witch|||9|||3": {
+"date": "2023-12-01",
+"month": 12,
+"week": "2023-W48",
+"year": 2023
+},
+"Scarlett|||4|||1": {
+"date": "2024-09-04",
+"month": 9,
+"week": "2024-W36",
+"year": 2024
+},
+"Secret Six|||2|||1": {
+"date": "2025-06-01",
+"month": 6,
+"week": "2025-W22",
+"year": 2025
+},
+"Secret Six|||3|||1": {
+"date": "2025-07-01",
+"month": 7,
+"week": "2025-W27",
+"year": 2025
+},
+"Secret Six|||5|||6": {
+"date": "2025-09-01",
+"month": 9,
+"week": "2025-W36",
+"year": 2025
+},
+"Secret Six|||6|||6": {
+"date": "2025-10-01",
+"month": 10,
+"week": "2025-W40",
+"year": 2025
+},
+"Shazam!|||11|||5": {
+"date": "2024-07-01",
+"month": 7,
+"week": "2024-W27",
+"year": 2024
+},
+"Shazam!|||12|||5": {
+"date": "2024-08-01",
+"month": 8,
+"week": "2024-W31",
+"year": 2024
+},
+"Shazam!|||14|||5": {
+"date": "2024-10-01",
+"month": 10,
+"week": "2024-W40",
+"year": 2024
+},
+"Shazam!|||15|||5": {
+"date": "2024-11-01",
+"month": 11,
+"week": "2024-W44",
+"year": 2024
+},
+"Shazam!|||16|||1": {
+"date": "2024-12-01",
+"month": 12,
+"week": "2024-W48",
+"year": 2024
+},
+"Shazam!|||17|||1": {
+"date": "2025-01-01",
+"month": 1,
+"week": "2025-W01",
+"year": 2025
+},
+"Shazam!|||18|||1": {
+"date": "2025-02-01",
+"month": 2,
+"week": "2025-W05",
+"year": 2025
+},
+"Shazam!|||19|||1": {
+"date": "2025-03-01",
+"month": 3,
+"week": "2025-W09",
+"year": 2025
+},
+"Shazam!|||20|||1": {
+"date": "2025-04-01",
+"month": 4,
+"week": "2025-W14",
+"year": 2025
+},
+"Shazam!|||21|||1": {
+"date": "2025-05-01",
+"month": 5,
+"week": "2025-W18",
+"year": 2025
+},
+"Shazam!|||3|||1": {
+"date": "2023-11-01",
+"month": 11,
+"week": "2023-W44",
+"year": 2023
+},
+"Shazam!|||5|||5": {
+"date": "2024-01-01",
+"month": 1,
+"week": "2024-W01",
+"year": 2024
+},
+"Shazam!|||6|||5": {
+"date": "2024-02-01",
+"month": 2,
+"week": "2024-W05",
+"year": 2024
+},
+"Shazam!|||8|||5": {
+"date": "2024-04-01",
+"month": 4,
+"week": "2024-W14",
+"year": 2024
+},
+"Silver Surfer Rebirth: Legacy|||1|||1": {
+"date": "2023-11-01",
+"month": 11,
+"week": "2023-W44",
+"year": 2023
+},
+"Spider-Man Noir|||1|||2": {
+"date": "2025-12-01",
+"month": 12,
+"week": "2025-W49",
+"year": 2025
+},
+"Spider-Woman|||1|||1": {
+"date": "2024-01-01",
+"month": 1,
+"week": "2024-W01",
+"year": 2024
+},
+"Star Wars: Rogue One \u2014 Saw Gerrera|||1|||1": {
+"date": "2026-09-01",
+"month": 9,
+"week": "2026-W36",
+"year": 2026
+},
+"Steelworks|||3|||1": {
+"date": "2023-10-01",
+"month": 10,
+"week": "2023-W39",
+"year": 2023
+},
+"Steelworks|||4|||1": {
+"date": "2023-11-01",
+"month": 11,
+"week": "2023-W44",
+"year": 2023
+},
+"Steelworks|||5|||1": {
+"date": "2023-12-01",
+"month": 12,
+"week": "2023-W48",
+"year": 2023
+},
+"Steelworks|||6|||1": {
+"date": "2024-01-01",
+"month": 1,
+"week": "2024-W01",
+"year": 2024
+},
+"Storm: Earth's Mightiest Mutant|||1|||1": {
+"date": "2026-04-01",
+"month": 4,
+"week": "2026-W14",
+"year": 2026
+},
+"Storm: Earth's Mightiest Mutant|||3|||1": {
+"date": "2026-06-01",
+"month": 6,
+"week": "2026-W23",
+"year": 2026
+},
+"Storm: Earth's Mightiest Mutant|||4|||1": {
+"date": "2026-07-01",
+"month": 7,
+"week": "2026-W27",
+"year": 2026
+},
+"Storm: Earth's Mightiest Mutant|||5|||1": {
+"date": "2026-08-01",
+"month": 8,
+"week": "2026-W31",
+"year": 2026
+},
+"Storm: Lifedream|||1|||1": {
+"date": "2025-03-01",
+"month": 3,
+"week": "2025-W09",
+"year": 2025
+},
+"Strange Academy: Amazing Spider-Man|||1|||1": {
+"date": "2023-12-01",
+"month": 12,
+"week": "2023-W48",
+"year": 2023
+},
+"Strange Academy: Bloodhunt|||1|||1": {
+"date": "2024-07-01",
+"month": 7,
+"week": "2024-W27",
+"year": 2024
+},
+"Strange Academy: Bloodhunt|||2|||1": {
+"date": "2024-08-01",
+"month": 8,
+"week": "2024-W31",
+"year": 2024
+},
+"Strange Academy: Miles Morales|||1|||1": {
+"date": "2023-10-01",
+"month": 10,
+"week": "2023-W39",
+"year": 2023
+},
+"Strange Academy: Moon Knight|||1|||1": {
+"date": "2023-11-01",
+"month": 11,
+"week": "2023-W44",
+"year": 2023
+},
+"Supergirl Special|||1|||1": {
+"date": "2023-12-01",
+"month": 12,
+"week": "2023-W48",
+"year": 2023
+},
+"Supergirl: Survive|||2|||1": {
+"date": "2026-09-01",
+"month": 9,
+"week": "2026-W36",
+"year": 2026
+},
+"Superman|||1|||1": {
+"date": "2025-01-01",
+"month": 1,
+"week": "2025-W01",
+"year": 2025
+},
+"TVA|||1|||1": {
+"date": "2025-02-01",
+"month": 2,
+"week": "2025-W05",
+"year": 2025
+},
+"TVA|||2|||1": {
+"date": "2025-03-01",
+"month": 3,
+"week": "2025-W09",
+"year": 2025
+},
+"TVA|||3|||1": {
+"date": "2025-04-01",
+"month": 4,
+"week": "2025-W14",
+"year": 2025
+},
+"TVA|||4|||1": {
+"date": "2025-05-01",
+"month": 5,
+"week": "2025-W18",
+"year": 2025
+},
+"TVA|||5|||1": {
+"date": "2025-06-01",
+"month": 6,
+"week": "2025-W22",
+"year": 2025
+},
+"Tales of the Titans|||2|||1": {
+"date": "2023-10-01",
+"month": 10,
+"week": "2023-W39",
+"year": 2023
+},
+"Thanos|||1|||3": {
+"date": "2024-01-01",
+"month": 1,
+"week": "2024-W01",
+"year": 2024
+},
+"The Deadman|||2|||1": {
+"date": "2026-09-01",
+"month": 9,
+"week": "2026-W36",
+"year": 2026
+},
+"The Incredible Hulk|||4|||6": {
+"date": "2025-08-13",
+"month": 8,
+"week": "2025-W33",
+"year": 2025
+},
+"The Magic Order|||1|||4": {
+"date": "2024-07-10",
+"month": 7,
+"week": "2024-W28",
+"year": 2024
+},
+"The Magic Order|||2|||4": {
+"date": "2024-08-28",
+"month": 8,
+"week": "2024-W35",
+"year": 2024
+},
+"The Magic Order|||3|||4": {
+"date": "2024-10-09",
+"month": 10,
+"week": "2024-W41",
+"year": 2024
+},
+"The Magic Order|||4|||2": {
+"date": "2023-09-13",
+"month": 9,
+"week": "2023-W37",
+"year": 2023
+},
+"The Magic Order|||4|||3": {
+"date": "2023-09-13",
+"month": 9,
+"week": "2023-W37",
+"year": 2023
+},
+"The Magic Order|||4|||4": {
+"date": "2024-12-11",
+"month": 12,
+"week": "2024-W50",
+"year": 2024
+},
+"The Magic Order|||5|||4": {
+"date": "2025-10-07",
+"month": 10,
+"week": "2025-W41",
+"year": 2025
+},
+"The Power Company: Recharged|||1|||1": {
+"date": "2025-06-01",
+"month": 6,
+"week": "2025-W22",
+"year": 2025
+},
+"The Power Fantasy|||10|||1": {
+"date": "2025-07-09",
+"month": 7,
+"week": "2025-W28",
+"year": 2025
+},
+"The Power Fantasy|||11|||1": {
+"date": "2025-08-13",
+"month": 8,
+"week": "2025-W33",
+"year": 2025
+},
+"The Power Fantasy|||13|||1": {
+"date": "2025-11-12",
+"month": 11,
+"week": "2025-W46",
+"year": 2025
+},
+"The Power Fantasy|||14|||1": {
+"date": "2025-12-17",
+"month": 12,
+"week": "2025-W51",
+"year": 2025
+},
+"The Power Fantasy|||15|||1": {
+"date": "2026-01-21",
+"month": 1,
+"week": "2026-W04",
+"year": 2026
+},
+"The Power Fantasy|||16|||1": {
+"date": "2026-02-25",
+"month": 2,
+"week": "2026-W09",
+"year": 2026
+},
+"The Power Fantasy|||1|||1": {
+"date": "2024-08-07",
+"month": 8,
+"week": "2024-W32",
+"year": 2024
+},
+"The Power Fantasy|||2|||1": {
+"date": "2024-09-18",
+"month": 9,
+"week": "2024-W38",
+"year": 2024
+},
+"The Power Fantasy|||3|||1": {
+"date": "2024-10-23",
+"month": 10,
+"week": "2024-W43",
+"year": 2024
+},
+"The Power Fantasy|||4|||1": {
+"date": "2024-11-20",
+"month": 11,
+"week": "2024-W47",
+"year": 2024
+},
+"The Power Fantasy|||6|||1": {
+"date": "2025-02-19",
+"month": 2,
+"week": "2025-W08",
+"year": 2025
+},
+"The Power Fantasy|||7|||1": {
+"date": "2025-03-19",
+"month": 3,
+"week": "2025-W12",
+"year": 2025
+},
+"The Power Fantasy|||8|||1": {
+"date": "2025-04-16",
+"month": 4,
+"week": "2025-W16",
+"year": 2025
+},
+"The Power Fantasy|||9|||1": {
+"date": "2025-05-28",
+"month": 5,
+"week": "2025-W22",
+"year": 2025
+},
+"The Question: All Along the Watchtower|||1|||1": {
+"date": "2025-01-01",
+"month": 1,
+"week": "2025-W01",
+"year": 2025
+},
+"The Question: All Along the Watchtower|||2|||1": {
+"date": "2025-02-01",
+"month": 2,
+"week": "2025-W05",
+"year": 2025
+},
+"The Question: All Along the Watchtower|||3|||1": {
+"date": "2025-03-01",
+"month": 3,
+"week": "2025-W09",
+"year": 2025
+},
+"The Question: All Along the Watchtower|||4|||1": {
+"date": "2025-04-01",
+"month": 4,
+"week": "2025-W14",
+"year": 2025
+},
+"The Question: All Along the Watchtower|||5|||1": {
+"date": "2025-05-01",
+"month": 5,
+"week": "2025-W18",
+"year": 2025
+},
+"The Spectacular Spider-Men|||10|||1": {
+"date": "2025-02-01",
+"month": 2,
+"week": "2025-W05",
+"year": 2025
+},
+"The Spectacular Spider-Men|||11|||1": {
+"date": "2025-03-01",
+"month": 3,
+"week": "2025-W09",
+"year": 2025
+},
+"The Spectacular Spider-Men|||12|||1": {
+"date": "2025-04-01",
+"month": 4,
+"week": "2025-W14",
+"year": 2025
+},
+"The Spectacular Spider-Men|||13|||1": {
+"date": "2025-05-01",
+"month": 5,
+"week": "2025-W18",
+"year": 2025
+},
+"The Spectacular Spider-Men|||3|||1": {
+"date": "2024-07-01",
+"month": 7,
+"week": "2024-W27",
+"year": 2024
+},
+"The Spectacular Spider-Men|||4|||1": {
+"date": "2024-08-01",
+"month": 8,
+"week": "2024-W31",
+"year": 2024
+},
+"The Spectacular Spider-Men|||5|||1": {
+"date": "2024-09-01",
+"month": 9,
+"week": "2024-W35",
+"year": 2024
+},
+"The Spectacular Spider-Men|||6|||1": {
+"date": "2024-10-01",
+"month": 10,
+"week": "2024-W40",
+"year": 2024
+},
+"The Spectacular Spider-Men|||7|||1": {
+"date": "2024-11-01",
+"month": 11,
+"week": "2024-W44",
+"year": 2024
+},
+"The Spectacular Spider-Men|||8|||1": {
+"date": "2024-12-01",
+"month": 12,
+"week": "2024-W48",
+"year": 2024
+},
+"The Spectacular Spider-Men|||9|||1": {
+"date": "2025-01-01",
+"month": 1,
+"week": "2025-W01",
+"year": 2025
+},
+"Thunderbolts|||2|||1": {
+"date": "2024-03-01",
+"month": 3,
+"week": "2024-W09",
+"year": 2024
+},
+"Time Slide|||1|||1": {
+"date": "2025-02-01",
+"month": 2,
+"week": "2025-W05",
+"year": 2025
+},
+"Titans|||11|||4": {
+"date": "2024-07-01",
+"month": 7,
+"week": "2024-W27",
+"year": 2024
+},
+"Titans|||12|||4": {
+"date": "2024-08-01",
+"month": 8,
+"week": "2024-W31",
+"year": 2024
+},
+"Titans|||13|||4": {
+"date": "2024-09-01",
+"month": 9,
+"week": "2024-W35",
+"year": 2024
+},
+"Titans|||14|||4": {
+"date": "2024-10-01",
+"month": 10,
+"week": "2024-W40",
+"year": 2024
+},
+"Titans|||15|||4": {
+"date": "2024-11-01",
+"month": 11,
+"week": "2024-W44",
+"year": 2024
+},
+"Titans|||16|||4": {
+"date": "2024-12-01",
+"month": 12,
+"week": "2024-W48",
+"year": 2024
+},
+"Titans|||17|||4": {
+"date": "2025-01-01",
+"month": 1,
+"week": "2025-W01",
+"year": 2025
+},
+"Titans|||18|||4": {
+"date": "2025-02-01",
+"month": 2,
+"week": "2025-W05",
+"year": 2025
+},
+"Titans|||19|||4": {
+"date": "2025-03-01",
+"month": 3,
+"week": "2025-W09",
+"year": 2025
+},
+"Titans|||20|||4": {
+"date": "2025-04-01",
+"month": 4,
+"week": "2025-W14",
+"year": 2025
+},
+"Titans|||21|||4": {
+"date": "2025-05-01",
+"month": 5,
+"week": "2025-W18",
+"year": 2025
+},
+"Titans|||22|||1": {
+"date": "2025-06-01",
+"month": 6,
+"week": "2025-W22",
+"year": 2025
+},
+"Titans|||24|||4": {
+"date": "2025-08-01",
+"month": 8,
+"week": "2025-W31",
+"year": 2025
+},
+"Titans|||25|||4": {
+"date": "2025-09-01",
+"month": 9,
+"week": "2025-W36",
+"year": 2025
+},
+"Titans|||26|||4": {
+"date": "2025-10-01",
+"month": 10,
+"week": "2025-W40",
+"year": 2025
+},
+"Titans|||27|||4": {
+"date": "2025-11-01",
+"month": 11,
+"week": "2025-W44",
+"year": 2025
+},
+"Titans|||28|||4": {
+"date": "2025-12-01",
+"month": 12,
+"week": "2025-W49",
+"year": 2025
+},
+"Titans|||29|||4": {
+"date": "2026-01-01",
+"month": 1,
+"week": "2026-W01",
+"year": 2026
+},
+"Titans|||30|||4": {
+"date": "2026-02-01",
+"month": 2,
+"week": "2026-W05",
+"year": 2026
+},
+"Titans|||31|||4": {
+"date": "2026-03-01",
+"month": 3,
+"week": "2026-W09",
+"year": 2026
+},
+"Titans|||32|||4": {
+"date": "2026-04-01",
+"month": 4,
+"week": "2026-W14",
+"year": 2026
+},
+"Transformers Compendium|||1|||1": {
+"date": "2025-05-28",
+"month": 5,
+"week": "2025-W22",
+"year": 2025
+},
+"Transformers|||12|||1": {
+"date": "2024-09-11",
+"month": 9,
+"week": "2024-W37",
+"year": 2024
+},
+"Transformers|||13|||1": {
+"date": "2024-10-09",
+"month": 10,
+"week": "2024-W41",
+"year": 2024
+},
+"Transformers|||14|||1": {
+"date": "2024-11-13",
+"month": 11,
+"week": "2024-W46",
+"year": 2024
+},
+"Transformers|||15|||1": {
+"date": "2024-12-11",
+"month": 12,
+"week": "2024-W50",
+"year": 2024
+},
+"Transformers|||16|||1": {
+"date": "2025-01-08",
+"month": 1,
+"week": "2025-W02",
+"year": 2025
+},
+"Transformers|||18|||1": {
+"date": "2025-03-12",
+"month": 3,
+"week": "2025-W11",
+"year": 2025
+},
+"Transformers|||19|||1": {
+"date": "2025-04-09",
+"month": 4,
+"week": "2025-W15",
+"year": 2025
+},
+"Transformers|||1|||1": {
+"date": "2023-10-04",
+"month": 10,
+"week": "2023-W40",
+"year": 2023
+},
+"Transformers|||21|||1": {
+"date": "2025-06-11",
+"month": 6,
+"week": "2025-W24",
+"year": 2025
+},
+"Transformers|||22|||1": {
+"date": "2025-07-09",
+"month": 7,
+"week": "2025-W28",
+"year": 2025
+},
+"Transformers|||23|||1": {
+"date": "2025-08-13",
+"month": 8,
+"week": "2025-W33",
+"year": 2025
+},
+"Transformers|||24|||1": {
+"date": "2025-09-10",
+"month": 9,
+"week": "2025-W37",
+"year": 2025
+},
+"Transformers|||25|||1": {
+"date": "2025-10-08",
+"month": 10,
+"week": "2025-W41",
+"year": 2025
+},
+"Transformers|||27|||1": {
+"date": "2025-12-10",
+"month": 12,
+"week": "2025-W50",
+"year": 2025
+},
+"Transformers|||28|||1": {
+"date": "2026-01-14",
+"month": 1,
+"week": "2026-W03",
+"year": 2026
+},
+"Transformers|||29|||1": {
+"date": "2026-02-11",
+"month": 2,
+"week": "2026-W07",
+"year": 2026
+},
+"Transformers|||31|||1": {
+"date": "2026-04-08",
+"month": 4,
+"week": "2026-W15",
+"year": 2026
+},
+"Ultimate Black Panther|||10|||1": {
+"date": "2025-01-01",
+"month": 1,
+"week": "2025-W01",
+"year": 2025
+},
+"Ultimate Black Panther|||11|||1": {
+"date": "2025-02-01",
+"month": 2,
+"week": "2025-W05",
+"year": 2025
+},
+"Ultimate Black Panther|||12|||1": {
+"date": "2025-03-01",
+"month": 3,
+"week": "2025-W09",
+"year": 2025
+},
+"Ultimate Black Panther|||13|||1": {
+"date": "2025-04-01",
+"month": 4,
+"week": "2025-W14",
+"year": 2025
+},
+"Ultimate Black Panther|||14|||1": {
+"date": "2025-05-01",
+"month": 5,
+"week": "2025-W18",
+"year": 2025
+},
+"Ultimate Black Panther|||15|||1": {
+"date": "2025-06-01",
+"month": 6,
+"week": "2025-W22",
+"year": 2025
+},
+"Ultimate Black Panther|||16|||1": {
+"date": "2025-07-01",
+"month": 7,
+"week": "2025-W27",
+"year": 2025
+},
+"Ultimate Black Panther|||17|||1": {
+"date": "2025-08-01",
+"month": 8,
+"week": "2025-W31",
+"year": 2025
+},
+"Ultimate Black Panther|||18|||1": {
+"date": "2025-09-01",
+"month": 9,
+"week": "2025-W36",
+"year": 2025
+},
+"Ultimate Black Panther|||19|||1": {
+"date": "2025-10-01",
+"month": 10,
+"week": "2025-W40",
+"year": 2025
+},
+"Ultimate Black Panther|||1|||1": {
+"date": "2024-04-01",
+"month": 4,
+"week": "2024-W14",
+"year": 2024
+},
+"Ultimate Black Panther|||20|||1": {
+"date": "2025-11-01",
+"month": 11,
+"week": "2025-W44",
+"year": 2025
+},
+"Ultimate Black Panther|||21|||1": {
+"date": "2025-12-01",
+"month": 12,
+"week": "2025-W49",
+"year": 2025
+},
+"Ultimate Black Panther|||22|||1": {
+"date": "2026-01-01",
+"month": 1,
+"week": "2026-W01",
+"year": 2026
+},
+"Ultimate Black Panther|||23|||1": {
+"date": "2026-02-01",
+"month": 2,
+"week": "2026-W05",
+"year": 2026
+},
+"Ultimate Black Panther|||24|||1": {
+"date": "2026-03-01",
+"month": 3,
+"week": "2026-W09",
+"year": 2026
+},
+"Ultimate Black Panther|||2|||1": {
+"date": "2024-05-01",
+"month": 5,
+"week": "2024-W18",
+"year": 2024
+},
+"Ultimate Black Panther|||3|||1": {
+"date": "2024-06-01",
+"month": 6,
+"week": "2024-W22",
+"year": 2024
+},
+"Ultimate Black Panther|||4|||1": {
+"date": "2024-07-01",
+"month": 7,
+"week": "2024-W27",
+"year": 2024
+},
+"Ultimate Black Panther|||5|||1": {
+"date": "2024-08-01",
+"month": 8,
+"week": "2024-W31",
+"year": 2024
+},
+"Ultimate Black Panther|||6|||1": {
+"date": "2024-09-01",
+"month": 9,
+"week": "2024-W35",
+"year": 2024
+},
+"Ultimate Black Panther|||7|||1": {
+"date": "2024-10-01",
+"month": 10,
+"week": "2024-W40",
+"year": 2024
+},
+"Ultimate Black Panther|||8|||1": {
+"date": "2024-11-01",
+"month": 11,
+"week": "2024-W44",
+"year": 2024
+},
+"Ultimate Black Panther|||9|||1": {
+"date": "2024-12-01",
+"month": 12,
+"week": "2024-W48",
+"year": 2024
+},
+"Ultimate Endgame|||1|||1": {
+"date": "2026-02-01",
+"month": 2,
+"week": "2026-W05",
+"year": 2026
+},
+"Ultimate Endgame|||3|||1": {
+"date": "2026-05-01",
+"month": 5,
+"week": "2026-W18",
+"year": 2026
+},
+"Ultimate Endgame|||5|||1": {
+"date": "2026-08-01",
+"month": 8,
+"week": "2026-W31",
+"year": 2026
+},
+"Ultimate Hawkeye|||1|||1": {
+"date": "2025-11-01",
+"month": 11,
+"week": "2025-W44",
+"year": 2025
+},
+"Ultimate Invasion|||3|||1": {
+"date": "2023-10-01",
+"month": 10,
+"week": "2023-W39",
+"year": 2023
+},
+"Ultimate Invasion|||4|||1": {
+"date": "2023-11-01",
+"month": 11,
+"week": "2023-W44",
+"year": 2023
+},
+"Ultimate Spider-Man: Incursion|||1|||1": {
+"date": "2025-08-01",
+"month": 8,
+"week": "2025-W31",
+"year": 2025
+},
+"Ultimate Spider-Man: Incursion|||2|||1": {
+"date": "2025-09-01",
+"month": 9,
+"week": "2025-W36",
+"year": 2025
+},
+"Ultimate Spider-Man: Incursion|||3|||1": {
+"date": "2025-10-01",
+"month": 10,
+"week": "2025-W40",
+"year": 2025
+},
+"Ultimate Spider-Man: Incursion|||4|||1": {
+"date": "2025-11-01",
+"month": 11,
+"week": "2025-W44",
+"year": 2025
+},
+"Ultimate Spider-Man: Incursion|||5|||1": {
+"date": "2025-12-01",
+"month": 12,
+"week": "2025-W49",
+"year": 2025
+},
+"Ultimate Spider-Man|||10|||1": {
+"date": "2024-12-01",
+"month": 12,
+"week": "2024-W48",
+"year": 2024
+},
+"Ultimate Spider-Man|||11|||1": {
+"date": "2025-01-01",
+"month": 1,
+"week": "2025-W01",
+"year": 2025
+},
+"Ultimate Spider-Man|||12|||1": {
+"date": "2025-02-01",
+"month": 2,
+"week": "2025-W05",
+"year": 2025
+},
+"Ultimate Spider-Man|||13|||1": {
+"date": "2025-03-01",
+"month": 3,
+"week": "2025-W09",
+"year": 2025
+},
+"Ultimate Spider-Man|||14|||1": {
+"date": "2025-04-01",
+"month": 4,
+"week": "2025-W14",
+"year": 2025
+},
+"Ultimate Spider-Man|||15|||1": {
+"date": "2025-05-01",
+"month": 5,
+"week": "2025-W18",
+"year": 2025
+},
+"Ultimate Spider-Man|||16|||1": {
+"date": "2025-06-01",
+"month": 6,
+"week": "2025-W22",
+"year": 2025
+},
+"Ultimate Spider-Man|||17|||2": {
+"date": "2025-07-01",
+"month": 7,
+"week": "2025-W27",
+"year": 2025
+},
+"Ultimate Spider-Man|||18|||1": {
+"date": "2025-08-01",
+"month": 8,
+"week": "2025-W31",
+"year": 2025
+},
+"Ultimate Spider-Man|||19|||1": {
+"date": "2025-09-01",
+"month": 9,
+"week": "2025-W36",
+"year": 2025
+},
+"Ultimate Spider-Man|||1|||1": {
+"date": "2024-03-01",
+"month": 3,
+"week": "2024-W09",
+"year": 2024
+},
+"Ultimate Spider-Man|||20|||2": {
+"date": "2025-10-01",
+"month": 10,
+"week": "2025-W40",
+"year": 2025
+},
+"Ultimate Spider-Man|||21|||2": {
+"date": "2025-11-01",
+"month": 11,
+"week": "2025-W44",
+"year": 2025
+},
+"Ultimate Spider-Man|||22|||2": {
+"date": "2025-12-01",
+"month": 12,
+"week": "2025-W49",
+"year": 2025
+},
+"Ultimate Spider-Man|||23|||2": {
+"date": "2026-02-01",
+"month": 2,
+"week": "2026-W05",
+"year": 2026
+},
+"Ultimate Spider-Man|||24|||2": {
+"date": "2026-04-01",
+"month": 4,
+"week": "2026-W14",
+"year": 2026
+},
+"Ultimate Spider-Man|||2|||1": {
+"date": "2024-04-01",
+"month": 4,
+"week": "2024-W14",
+"year": 2024
+},
+"Ultimate Spider-Man|||3|||1": {
+"date": "2024-05-01",
+"month": 5,
+"week": "2024-W18",
+"year": 2024
+},
+"Ultimate Spider-Man|||4|||1": {
+"date": "2024-06-01",
+"month": 6,
+"week": "2024-W22",
+"year": 2024
+},
+"Ultimate Spider-Man|||5|||1": {
+"date": "2024-07-01",
+"month": 7,
+"week": "2024-W27",
+"year": 2024
+},
+"Ultimate Spider-Man|||6|||1": {
+"date": "2024-08-01",
+"month": 8,
+"week": "2024-W31",
+"year": 2024
+},
+"Ultimate Spider-Man|||7|||1": {
+"date": "2024-09-01",
+"month": 9,
+"week": "2024-W35",
+"year": 2024
+},
+"Ultimate Spider-Man|||8|||1": {
+"date": "2024-10-01",
+"month": 10,
+"week": "2024-W40",
+"year": 2024
+},
+"Ultimate Spider-Man|||9|||1": {
+"date": "2024-11-01",
+"month": 11,
+"week": "2024-W44",
+"year": 2024
+},
+"Ultimate Universe: Finale|||1|||1": {
+"date": "2026-08-01",
+"month": 8,
+"week": "2026-W31",
+"year": 2026
+},
+"Ultimate Universe: One Year In|||1|||1": {
+"date": "2025-02-01",
+"month": 2,
+"week": "2025-W05",
+"year": 2025
+},
+"Ultimate Universe|||1|||1": {
+"date": "2024-01-01",
+"month": 1,
+"week": "2024-W01",
+"year": 2024
+},
+"Ultimate Wolverine|||1|||7": {
+"date": "2025-03-01",
+"month": 3,
+"week": "2025-W09",
+"year": 2025
+},
+"Ultimate Wolverine|||3|||7": {
+"date": "2025-05-01",
+"month": 5,
+"week": "2025-W18",
+"year": 2025
+},
+"Ultimate X-Men|||1|||3": {
+"date": "2024-05-01",
+"month": 5,
+"week": "2024-W18",
+"year": 2024
+},
+"Ultraman X The Avengers|||2|||7": {
+"date": "2024-12-01",
+"month": 12,
+"week": "2024-W48",
+"year": 2024
+},
+"Ultraman X The Avengers|||3|||7": {
+"date": "2025-02-01",
+"month": 2,
+"week": "2025-W05",
+"year": 2025
+},
+"Ultraman X The Avengers|||4|||7": {
+"date": "2025-04-01",
+"month": 4,
+"week": "2025-W14",
+"year": 2025
+},
+"Unbreakable X-Men|||1|||1": {
+"date": "2025-12-01",
+"month": 12,
+"week": "2025-W49",
+"year": 2025
+},
+"Unbreakable X-Men|||2|||1": {
+"date": "2026-01-01",
+"month": 1,
+"week": "2026-W01",
+"year": 2026
+},
+"Unbreakable X-Men|||3|||1": {
+"date": "2026-02-01",
+"month": 2,
+"week": "2026-W05",
+"year": 2026
+},
+"Uncanny Avengers|||1|||7": {
+"date": "2023-10-01",
+"month": 10,
+"week": "2023-W39",
+"year": 2023
+},
+"Uncanny Avengers|||2|||7": {
+"date": "2023-11-01",
+"month": 11,
+"week": "2023-W44",
+"year": 2023
+},
+"Uncanny Avengers|||3|||7": {
+"date": "2023-12-01",
+"month": 12,
+"week": "2023-W48",
+"year": 2023
+},
+"Uncanny Avengers|||4|||7": {
+"date": "2024-01-01",
+"month": 1,
+"week": "2024-W01",
+"year": 2024
+},
+"Uncanny Avengers|||5|||7": {
+"date": "2024-02-01",
+"month": 2,
+"week": "2024-W05",
+"year": 2024
+},
+"Union Jack the Ripper: Bloodhunt|||1|||1": {
+"date": "2024-07-01",
+"month": 7,
+"week": "2024-W27",
+"year": 2024
+},
+"Vengeance of the Moon Knight|||1|||2": {
+"date": "2024-03-01",
+"month": 3,
+"week": "2024-W09",
+"year": 2024
+},
+"Vengeance of the Moon Knight|||1|||8": {
+"date": "2024-03-01",
+"month": 3,
+"week": "2024-W09",
+"year": 2024
+},
+"Vengeance of the Moon Knight|||2|||2": {
+"date": "2024-04-01",
+"month": 4,
+"week": "2024-W14",
+"year": 2024
+},
+"Vengeance of the Moon Knight|||3|||2": {
+"date": "2024-05-01",
+"month": 5,
+"week": "2024-W18",
+"year": 2024
+},
+"Vengeance of the Moon Knight|||4|||2": {
+"date": "2024-06-01",
+"month": 6,
+"week": "2024-W22",
+"year": 2024
+},
+"Vengeance of the Moon Knight|||5|||2": {
+"date": "2024-07-01",
+"month": 7,
+"week": "2024-W27",
+"year": 2024
+},
+"Vengeance of the Moon Knight|||6|||2": {
+"date": "2024-08-01",
+"month": 8,
+"week": "2024-W31",
+"year": 2024
+},
+"Vengeance of the Moon Knight|||7|||2": {
+"date": "2024-09-01",
+"month": 9,
+"week": "2024-W35",
+"year": 2024
+},
+"Vengeance of the Moon Knight|||9|||2": {
+"date": "2024-11-01",
+"month": 11,
+"week": "2024-W44",
+"year": 2024
+},
+"Void Rivals|||16|||1": {
+"date": "2025-01-22",
+"month": 1,
+"week": "2025-W04",
+"year": 2025
+},
+"Void Rivals|||17|||1": {
+"date": "2025-03-12",
+"month": 3,
+"week": "2025-W11",
+"year": 2025
+},
+"Void Rivals|||18|||1": {
+"date": "2025-04-30",
+"month": 4,
+"week": "2025-W18",
+"year": 2025
+},
+"Void Rivals|||19|||1": {
+"date": "2025-05-28",
+"month": 5,
+"week": "2025-W22",
+"year": 2025
+},
+"Void Rivals|||21|||1": {
+"date": "2025-07-23",
+"month": 7,
+"week": "2025-W30",
+"year": 2025
+},
+"Void Rivals|||22|||1": {
+"date": "2025-08-27",
+"month": 8,
+"week": "2025-W35",
+"year": 2025
+},
+"Void Rivals|||23|||1": {
+"date": "2025-09-24",
+"month": 9,
+"week": "2025-W39",
+"year": 2025
+},
+"Void Rivals|||24|||1": {
+"date": "2025-11-05",
+"month": 11,
+"week": "2025-W45",
+"year": 2025
+},
+"Void Rivals|||25|||1": {
+"date": "2025-09-01",
+"month": 9,
+"week": "2025-W36",
+"year": 2025
+},
+"Void Rivals|||26|||1": {
+"date": "2026-01-28",
+"month": 1,
+"week": "2026-W05",
+"year": 2026
+},
+"Void Rivals|||27|||1": {
+"date": "2026-02-25",
+"month": 2,
+"week": "2026-W09",
+"year": 2026
+},
+"Weapon X-Men|||1|||1": {
+"date": "2024-05-01",
+"month": 5,
+"week": "2024-W18",
+"year": 2024
+},
+"Weapon X-Men|||2|||1": {
+"date": "2024-06-01",
+"month": 6,
+"week": "2024-W22",
+"year": 2024
+},
+"West Coast Avengers|||2|||1": {
+"date": "2025-02-01",
+"month": 2,
+"week": "2025-W05",
+"year": 2025
+},
+"What If...? Dark: Moon Knight|||1|||11": {
+"date": "2023-10-01",
+"month": 10,
+"week": "2023-W39",
+"year": 2023
+},
+"What If...? Galactus: Galactus Transformed Hulk?|||1|||6": {
+"date": "2025-03-01",
+"month": 3,
+"week": "2025-W09",
+"year": 2025
+},
+"What If? Secret Wars|||1|||2": {
+"date": "2026-09-01",
+"month": 9,
+"week": "2026-W36",
+"year": 2026
+},
+"What If? Thor|||1|||1": {
+"date": "2026-08-01",
+"month": 8,
+"week": "2026-W31",
+"year": 2026
+},
+"White Widow|||1|||1": {
+"date": "2024-01-01",
+"month": 1,
+"week": "2024-W01",
+"year": 2024
+},
+"White Widow|||3|||1": {
+"date": "2024-03-01",
+"month": 3,
+"week": "2024-W09",
+"year": 2024
+},
+"White Widow|||4|||1": {
+"date": "2024-04-01",
+"month": 4,
+"week": "2024-W14",
+"year": 2024
+},
+"Wolverine: Madripoor Knights|||1|||1": {
+"date": "2024-04-01",
+"month": 4,
+"week": "2024-W14",
+"year": 2024
+},
+"Wolverine: Madripoor Knights|||2|||1": {
+"date": "2024-05-01",
+"month": 5,
+"week": "2024-W18",
+"year": 2024
+},
+"Wolverine: Madripoor Knights|||3|||1": {
+"date": "2024-06-01",
+"month": 6,
+"week": "2024-W22",
+"year": 2024
+},
+"Wolverine: Madripoor Knights|||4|||1": {
+"date": "2024-07-01",
+"month": 7,
+"week": "2024-W27",
+"year": 2024
+},
+"Wolverine: Madripoor Knights|||5|||1": {
+"date": "2024-08-01",
+"month": 8,
+"week": "2024-W31",
+"year": 2024
+},
+"World's Finest: Teen Titans|||3|||1": {
+"date": "2023-11-01",
+"month": 11,
+"week": "2023-W44",
+"year": 2023
+},
+"World's Finest: Teen Titans|||4|||1": {
+"date": "2023-12-01",
+"month": 12,
+"week": "2023-W48",
+"year": 2023
+},
+"World's Finest: Teen Titans|||5|||1": {
+"date": "2024-01-01",
+"month": 1,
+"week": "2024-W01",
+"year": 2024
+},
+"World's Finest: Teen Titans|||6|||1": {
+"date": "2024-02-01",
+"month": 2,
+"week": "2024-W05",
+"year": 2024
+},
+"X-Force|||43|||6": {
+"date": "2023-10-01",
+"month": 10,
+"week": "2023-W39",
+"year": 2023
+},
+"X-Force|||44|||6": {
+"date": "2023-11-01",
+"month": 11,
+"week": "2023-W44",
+"year": 2023
+},
+"X-Force|||45|||7": {
+"date": "2023-12-01",
+"month": 12,
+"week": "2023-W48",
+"year": 2023
+},
+"X-Force|||46|||7": {
+"date": "2024-01-01",
+"month": 1,
+"week": "2024-W01",
+"year": 2024
+},
+"X-Force|||47|||7": {
+"date": "2024-02-01",
+"month": 2,
+"week": "2024-W05",
+"year": 2024
+},
+"X-Force|||48|||7": {
+"date": "2024-03-01",
+"month": 3,
+"week": "2024-W09",
+"year": 2024
+},
+"X-Force|||49|||7": {
+"date": "2024-04-01",
+"month": 4,
+"week": "2024-W14",
+"year": 2024
+},
+"X-Force|||50|||7": {
+"date": "2024-05-01",
+"month": 5,
+"week": "2024-W18",
+"year": 2024
+},
+"X-Men '97|||1|||2": {
+"date": "2024-05-01",
+"month": 5,
+"week": "2024-W18",
+"year": 2024
+},
+"X-Men Blue: Origins|||1|||6": {
+"date": "2024-01-01",
+"month": 1,
+"week": "2024-W01",
+"year": 2024
+},
+"X-Men Red|||14|||2": {
+"date": "2023-10-01",
+"month": 10,
+"week": "2023-W39",
+"year": 2023
+},
+"X-Men Red|||15|||2": {
+"date": "2023-11-01",
+"month": 11,
+"week": "2023-W44",
+"year": 2023
+},
+"X-Men Red|||16|||2": {
+"date": "2023-12-01",
+"month": 12,
+"week": "2023-W48",
+"year": 2023
+},
+"X-Men Red|||17|||2": {
+"date": "2024-01-01",
+"month": 1,
+"week": "2024-W01",
+"year": 2024
+},
+"X-Men United|||3|||1": {
+"date": "2026-07-01",
+"month": 7,
+"week": "2026-W27",
+"year": 2026
+},
+"X-Men United|||5|||1": {
+"date": "2026-09-01",
+"month": 9,
+"week": "2026-W36",
+"year": 2026
+},
+"X-Men: Age of Revelation \u2014 Overture|||1|||1": {
+"date": "2025-12-01",
+"month": 12,
+"week": "2025-W49",
+"year": 2025
+},
+"X-Men: Blood Hunt - Magik|||1|||1": {
+"date": "2024-08-01",
+"month": 8,
+"week": "2024-W31",
+"year": 2024
+},
+"X-Men: Hellfire Vigil|||1|||1": {
+"date": "2025-09-01",
+"month": 9,
+"week": "2025-W36",
+"year": 2025
+},
+"X-Men: Outback|||1|||1": {
+"date": "2026-08-01",
+"month": 8,
+"week": "2026-W31",
+"year": 2026
+},
+"X-Men: The Wedding Special|||1|||6": {
+"date": "2024-07-01",
+"month": 7,
+"week": "2024-W27",
+"year": 2024
+},
+"X-Men|||25|||6": {
+"date": "2023-10-01",
+"month": 10,
+"week": "2023-W39",
+"year": 2023
+},
+"X-Men|||26|||5": {
+"date": "2023-11-01",
+"month": 11,
+"week": "2023-W44",
+"year": 2023
+},
+"X-Men|||27|||1": {
+"date": "2023-12-01",
+"month": 12,
+"week": "2023-W48",
+"year": 2023
+},
+"X-Men|||27|||5": {
+"date": "2023-12-01",
+"month": 12,
+"week": "2023-W48",
+"year": 2023
+},
+"X-Men|||28|||5": {
+"date": "2024-01-01",
+"month": 1,
+"week": "2024-W01",
+"year": 2024
+},
+"X-Men|||28|||6": {
+"date": "2024-01-01",
+"month": 1,
+"week": "2024-W01",
+"year": 2024
+},
+"X-Men|||29|||5": {
+"date": "2024-02-01",
+"month": 2,
+"week": "2024-W05",
+"year": 2024
+},
+"X-Men|||31|||6": {
+"date": "2024-04-01",
+"month": 4,
+"week": "2024-W14",
+"year": 2024
+},
+"X-Men|||32|||6": {
+"date": "2024-05-01",
+"month": 5,
+"week": "2024-W18",
+"year": 2024
+},
+"X-Men|||33|||6": {
+"date": "2024-06-01",
+"month": 6,
+"week": "2024-W22",
+"year": 2024
+},
+"X-Men|||34|||6": {
+"date": "2024-07-01",
+"month": 7,
+"week": "2024-W27",
+"year": 2024
+},
+"X-Vengers|||1|||1": {
+"date": "2025-12-01",
+"month": 12,
+"week": "2025-W49",
+"year": 2025
+},
+"X-Vengers|||2|||1": {
+"date": "2026-01-01",
+"month": 1,
+"week": "2026-W01",
+"year": 2026
+},
+"Zatanna|||3|||1": {
+"date": "2025-06-01",
+"month": 6,
+"week": "2025-W22",
+"year": 2025
+},
+"Zatanna|||3|||4": {
+"date": "2026-08-01",
+"month": 8,
+"week": "2026-W31",
+"year": 2026
+},
+"Zatanna|||4|||1": {
+"date": "2025-07-01",
+"month": 7,
+"week": "2025-W27",
+"year": 2025
+},
+"Zatanna|||5|||1": {
+"date": "2025-08-01",
+"month": 8,
+"week": "2025-W31",
+"year": 2025
+},
+"Zatanna|||6|||1": {
+"date": "2025-09-01",
+"month": 9,
+"week": "2025-W36",
+"year": 2025
+}
+}

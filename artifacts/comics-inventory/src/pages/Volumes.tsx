@@ -15,6 +15,18 @@ function parseIssueNum(s: string): number | null {
   return n;
 }
 
+// Many Year values in the inventory are ranges ("1998-2003", "2018–2021"),
+// not single years - plain Number(y) turns those into NaN. Pull out every
+// 4-digit run instead and use the min/max, so a single row can itself
+// contribute a multi-year span to a volume's overlap check.
+function parseYearRange(y: string | undefined): [number, number] | null {
+  const matches = String(y || "").match(/\d{4}/g);
+  if (!matches) return null;
+  const nums = matches.map(Number).filter(n => n > 1900 && n < 2100);
+  if (!nums.length) return null;
+  return [Math.min(...nums), Math.max(...nums)];
+}
+
 function pubGroup(publisher: string): "Marvel" | "DC" | "Other" {
   const u = (publisher || "").toUpperCase();
   if (u === "MARVEL" || u.includes("MARVEL")) return "Marvel";
@@ -24,15 +36,16 @@ function pubGroup(publisher: string): "Marvel" | "DC" | "Other" {
 
 interface Volume {
   volNum: number;
+  volLabel: string;
   issues: Comic[];
   startYear: number;
   endYear: number;
+  hasYearData: boolean;
   writer: string;
   artist: string;
   keyCount: number;
   signedCount: number;
-  overlapsNext: boolean;
-  overlapsPrev: boolean;
+  overlapsAny: boolean;
 }
 
 interface TitleEntry {
@@ -44,12 +57,26 @@ interface TitleEntry {
   totalKeys: number;
   totalSigned: number;
   hasOverlap: boolean;
+  needsReview: boolean;
+  yearlessIssues: number;
 }
 
-function splitVolumes(issues: Comic[]): Volume[] {
+function volumeKey(c: Comic): string {
+  const v = String((c as any).Volume ?? "").trim();
+  return v && v !== "nan" ? v : "";
+}
+
+// Issue-number-reset heuristic (drop from >15 to <=5 = new volume). Backtested
+// against the declared Volume field on the live dataset: disagrees on ~16%
+// of titles with 3+ copies, including large collections (Fantastic Four,
+// Black Panther, Moon Knight) where it's off by several volumes - not
+// reliable as a primary source of truth. Kept only as (a) a fallback for
+// titles with zero declared Volume data, and (b) a cross-check to flag
+// disagreements for human review.
+function heuristicVolumeGroups(issues: Comic[]): Comic[][] {
   const sorted = [...issues].sort((a, b) => {
-    const ya = Number(a.Year || 0);
-    const yb = Number(b.Year || 0);
+    const ya = parseYearRange(a.Year)?.[0] ?? 0;
+    const yb = parseYearRange(b.Year)?.[0] ?? 0;
     if (ya !== yb) return ya - yb;
     const na = parseIssueNum(a.Issue) ?? 9999;
     const nb = parseIssueNum(b.Issue) ?? 9999;
@@ -69,36 +96,80 @@ function splitVolumes(issues: Comic[]): Volume[] {
     if (n !== null) prevNum = n;
   }
   if (cur.length > 0) groups.push(cur);
+  return groups;
+}
 
-  const raw = groups.map((g, i) => {
-    const years = g.map(c => Number(c.Year || 0)).filter(y => y > 1900);
-    const startYear = years.length ? Math.min(...years) : 0;
-    const endYear   = years.length ? Math.max(...years) : 0;
+function buildVolumes(issues: Comic[]): { volumes: Volume[]; needsReview: boolean; yearlessIssues: number } {
+  const useDeclared = issues.some(c => volumeKey(c));
+
+  let groups: Comic[][];
+  let labels: string[];
+
+  if (useDeclared) {
+    const byVol = new Map<string, Comic[]>();
+    for (const c of issues) {
+      const key = volumeKey(c) || "—";
+      if (!byVol.has(key)) byVol.set(key, []);
+      byVol.get(key)!.push(c);
+    }
+    const entries = [...byVol.entries()].sort((a, b) => {
+      const na = parseFloat(a[0]), nb = parseFloat(b[0]);
+      if (!isNaN(na) && !isNaN(nb)) return na - nb;
+      if (!isNaN(na)) return -1;
+      if (!isNaN(nb)) return 1;
+      return a[0].localeCompare(b[0]);
+    });
+    groups = entries.map(([, g]) => g);
+    labels  = entries.map(([k]) => k);
+  } else {
+    groups = heuristicVolumeGroups(issues);
+    labels = groups.map((_, i) => String(i + 1));
+  }
+
+  const volumes: Volume[] = groups.map((g, i) => {
+    const ranges = g.map(c => parseYearRange(c.Year)).filter((r): r is [number, number] => r !== null);
+    const startYear = ranges.length ? Math.min(...ranges.map(r => r[0])) : 0;
+    const endYear   = ranges.length ? Math.max(...ranges.map(r => r[1])) : 0;
     const first = g[0];
     return {
       volNum: i + 1,
+      volLabel: labels[i],
       issues: g,
       startYear,
       endYear,
+      hasYearData: ranges.length > 0,
       writer: (first?.Writer && first.Writer !== "nan") ? first.Writer : "—",
       artist: (first?.Artist && first.Artist !== "nan") ? first.Artist : "—",
       keyCount:    g.filter(c => (c.Key    || "").toUpperCase() === "YES").length,
       signedCount: g.filter(c => (c.Signed || "").toUpperCase() === "YES").length,
-      overlapsNext: false,
-      overlapsPrev: false,
+      overlapsAny: false,
     };
   });
 
-  // Flag overlapping adjacent volumes
-  for (let i = 0; i < raw.length - 1; i++) {
-    const a = raw[i], b = raw[i + 1];
-    if (a.startYear > 0 && b.startYear > 0) {
-      const overlaps = a.endYear >= b.startYear;
-      if (overlaps) { a.overlapsNext = true; b.overlapsPrev = true; }
+  // All-pairs overlap check, not just chronological neighbors - a title can
+  // have 3+ volumes overlapping each other in ways a neighbor-only
+  // comparison would miss entirely. Volumes with no usable Year data are
+  // excluded outright rather than defaulting to a 0-0 range: a missing Year
+  // is an absence of evidence, not evidence of a scheduling conflict.
+  for (let i = 0; i < volumes.length; i++) {
+    for (let j = i + 1; j < volumes.length; j++) {
+      const a = volumes[i], b = volumes[j];
+      if (!a.hasYearData || !b.hasYearData) continue;
+      if (a.startYear <= b.endYear && b.startYear <= a.endYear) {
+        a.overlapsAny = true;
+        b.overlapsAny = true;
+      }
     }
   }
 
-  return raw;
+  const yearlessIssues = issues.length - issues.filter(c => parseYearRange(c.Year) !== null).length;
+
+  // QA signal: does the declared Volume field agree with the heuristic on
+  // how many volumes this title has? A disagreement doesn't prove the
+  // declared data is wrong, but it's worth a human glance either way.
+  const needsReview = useDeclared && heuristicVolumeGroups(issues).length !== volumes.length;
+
+  return { volumes, needsReview, yearlessIssues };
 }
 
 const PUB_GROUPS: { key: "Marvel" | "DC" | "Other"; label: string; color: string; bg: string; border: string }[] = [
@@ -112,6 +183,7 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
   const [pubFilter,   setPubFilter]   = useState<"" | "Marvel" | "DC" | "Other">("");
   const [sortBy,      setSortBy]      = useState<"title" | "vols" | "issues">("title");
   const [multiOnly,   setMultiOnly]   = useState(false);
+  const [reviewOnly,  setReviewOnly]  = useState(false);
   const [openPubs,    setOpenPubs]    = useState<Set<string>>(new Set(["Marvel","DC","Other"]));
   const [openTitles,  setOpenTitles]  = useState<Set<string>>(new Set());
 
@@ -126,17 +198,19 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
     return Object.entries(byTitle).map(([title, issues]) => {
       const pub    = issues[0]?.Publisher || "";
       const pg     = pubGroup(pub);
-      const vols   = splitVolumes(issues);
-      const hasOverlap = vols.some(v => v.overlapsNext || v.overlapsPrev);
+      const { volumes, needsReview, yearlessIssues } = buildVolumes(issues);
+      const hasOverlap = volumes.some(v => v.overlapsAny);
       return {
         title,
         publisher: pub,
         pubGroup: pg,
-        volumes: vols,
+        volumes,
         totalIssues:  issues.length,
         totalKeys:    issues.filter(c => (c.Key    || "").toUpperCase() === "YES").length,
         totalSigned:  issues.filter(c => (c.Signed || "").toUpperCase() === "YES").length,
         hasOverlap,
+        needsReview,
+        yearlessIssues,
       };
     });
   }, []);
@@ -149,15 +223,17 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
       list = list.filter(t => t.title.toLowerCase().includes(q) || t.publisher.toLowerCase().includes(q));
     }
     if (multiOnly) list = list.filter(t => t.volumes.length > 1);
+    if (reviewOnly) list = list.filter(t => t.needsReview);
     if (sortBy === "title")  list = [...list].sort((a, b) => a.title.localeCompare(b.title));
     if (sortBy === "vols")   list = [...list].sort((a, b) => b.volumes.length - a.volumes.length);
     if (sortBy === "issues") list = [...list].sort((a, b) => b.totalIssues - a.totalIssues);
     return list;
-  }, [allTitles, pubFilter, search, sortBy, multiOnly]);
+  }, [allTitles, pubFilter, search, sortBy, multiOnly, reviewOnly]);
 
   const totalVols  = filtered.reduce((s, t) => s + t.volumes.length, 0);
   const multiCount = allTitles.filter(t => t.volumes.length > 1).length;
   const overlapCount = allTitles.filter(t => t.hasOverlap).length;
+  const reviewCount  = allTitles.filter(t => t.needsReview).length;
 
   function togglePub(key: string) {
     setOpenPubs(prev => { const n = new Set(prev); n.has(key) ? n.delete(key) : n.add(key); return n; });
@@ -178,9 +254,9 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
 
       {/* Header */}
       <div style={{ marginBottom: 16 }}>
-        <h1 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.6rem", color:"var(--red)",
+        <h1 style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"1.75rem", color:"var(--red)",
           letterSpacing:"3px", lineHeight:1, margin:0 }}>Volumes</h1>
-        <p style={{ color:"var(--muted2)", fontSize:"0.88rem", marginTop:6 }}>
+        <p style={{ color:"var(--muted2)", fontSize:"0.875rem", marginTop:6 }}>
           Every title in the collection, broken into distinct volumes — grouped by publisher. Click any volume to browse its issues.
         </p>
       </div>
@@ -188,38 +264,40 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
       {/* Stats */}
       <div style={{ display:"flex", gap:12, flexWrap:"wrap", marginBottom:20 }}>
         {([
-          { val: filtered.length,                                                  lbl: "Titles",       click: false },
-          { val: totalVols,                                                        lbl: "Volumes",      click: false },
-          { val: multiCount,                                                       lbl: "Multi-Volume", click: true  },
-          { val: overlapCount,                                                     lbl: "⚠ Overlapping",click: false, warn: true },
-          { val: filtered.reduce((s,t) => s + t.totalIssues, 0).toLocaleString(), lbl: "Issues",       click: false },
+          { val: filtered.length,                                                  lbl: "Titles",         toggle: null },
+          { val: totalVols,                                                        lbl: "Volumes",        toggle: null },
+          { val: multiCount,                                                       lbl: "Multi-Volume",   toggle: "multi" as const },
+          { val: overlapCount,                                                     lbl: "⚠ Overlapping",  toggle: null, warn: true },
+          { val: reviewCount,                                                      lbl: "🔍 Needs Review",toggle: "review" as const, warn: true },
+          { val: filtered.reduce((s,t) => s + t.totalIssues, 0).toLocaleString(), lbl: "Issues",         toggle: null },
         ] as const).map(s => {
-          const isActive = "click" in s && s.click && multiOnly;
+          const isActive = s.toggle === "multi" ? multiOnly : s.toggle === "review" ? reviewOnly : false;
+          const onToggle = s.toggle === "multi" ? () => setMultiOnly(v => !v) : s.toggle === "review" ? () => setReviewOnly(v => !v) : undefined;
           return (
             <div key={s.lbl}
-              onClick={"click" in s && s.click ? () => setMultiOnly(v => !v) : undefined}
+              onClick={onToggle}
               style={{
                 background: isActive ? "var(--red)" : "warn" in s && s.warn ? "#fff8e0" : "var(--surface)",
                 border: isActive ? "1.5px solid var(--red)" : "warn" in s && s.warn ? "1.5px solid #d4a800" : "1.5px solid var(--border)",
                 borderRadius:6, padding:"10px 16px", textAlign:"center", flex:"1 1 100px",
-                cursor: "click" in s && s.click ? "pointer" : "default",
+                cursor: s.toggle ? "pointer" : "default",
                 boxShadow: isActive ? "0 4px 14px rgba(200,16,46,0.22)" : "none",
                 transform: isActive ? "translateY(-2px)" : "none",
                 transition:"all 0.18s",
               }}>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1.5rem",
+              <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"1.75rem",
                 color: isActive ? "#fff" : "warn" in s && s.warn ? "#8a6000" : "var(--red)",
                 letterSpacing:"1px", lineHeight:1 }}>{s.val}</div>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1.5px",
+              <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
                 color: isActive ? "rgba(255,255,255,0.8)" : "warn" in s && s.warn ? "#8a6000" : "var(--muted)",
                 marginTop:3 }}>{s.lbl}</div>
-              {"click" in s && s.click && !isActive && (
-                <div style={{ fontSize:"0.52rem", color:"var(--muted)", marginTop:3,
-                  fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>CLICK TO FILTER</div>
+              {s.toggle && !isActive && (
+                <div style={{ fontSize:"0.875rem", color:"var(--muted)", marginTop:3,
+                  fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px" }}>CLICK TO FILTER</div>
               )}
               {isActive && (
-                <div style={{ fontSize:"0.52rem", color:"rgba(255,255,255,0.65)", marginTop:3,
-                  fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>CLICK TO CLEAR ▲</div>
+                <div style={{ fontSize:"0.875rem", color:"rgba(255,255,255,0.65)", marginTop:3,
+                  fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px" }}>CLICK TO CLEAR ▲</div>
               )}
             </div>
           );
@@ -234,13 +312,13 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
           value={search} onChange={e => setSearch(e.target.value)}
           placeholder="Search title or publisher…"
           style={{ background:"var(--bg)", border:"1.5px solid var(--border)", color:"var(--text)",
-            padding:"6px 10px", borderRadius:5, fontFamily:"'Crimson Pro',serif", fontSize:"0.88rem",
+            padding:"6px 10px", borderRadius:5, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
             flex:"1 1 180px", minWidth:0 }}
         />
 
         <select value={pubFilter} onChange={e => setPubFilter(e.target.value as typeof pubFilter)}
           style={{ background:"var(--bg)", border:"1.5px solid var(--border)", color:"var(--text)",
-            padding:"6px 10px", borderRadius:5, fontFamily:"'Crimson Pro',serif", fontSize:"0.88rem" }}>
+            padding:"6px 10px", borderRadius:5, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem" }}>
           <option value="">All Publishers</option>
           <option value="Marvel">Marvel</option>
           <option value="DC">DC</option>
@@ -254,7 +332,7 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
               color: sortBy===v ? "#fff" : "var(--muted2)",
               border: sortBy===v ? "1.5px solid var(--red)" : "1.5px solid var(--border)",
               borderRadius:5, padding:"5px 12px", cursor:"pointer",
-              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1.5px",
+              fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
               transition:"all 0.15s",
             }}>{l}</button>
           ))}
@@ -265,7 +343,7 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
           color: multiOnly ? "#a78bfa" : "var(--muted2)",
           border: multiOnly ? "1.5px solid #a78bfa" : "1.5px solid var(--border)",
           borderRadius:5, padding:"5px 14px", cursor:"pointer",
-          fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem", letterSpacing:"1.5px",
+          fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
           transition:"all 0.15s", whiteSpace:"nowrap",
         }}>
           {multiOnly ? "▦ MULTI-VOL ONLY ✓" : "▦ MULTI-VOL ONLY"}
@@ -273,20 +351,20 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
 
         <div style={{ marginLeft:"auto", display:"flex", gap:6, alignItems:"center" }}>
           <button onClick={expandAll}
-            style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px",
+            style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
               background:"var(--surface2)", color:"var(--muted2)", border:"1.5px solid var(--border)",
               borderRadius:5, padding:"4px 10px", cursor:"pointer" }}>Expand All</button>
           <button onClick={collapseAll}
-            style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem", letterSpacing:"1px",
+            style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
               background:"var(--surface2)", color:"var(--muted2)", border:"1.5px solid var(--border)",
               borderRadius:5, padding:"4px 10px", cursor:"pointer" }}>Collapse All</button>
         </div>
       </div>
 
       {/* Results bar */}
-      <div style={{ fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1.5px", fontSize:"0.82rem",
+      <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1.5px", fontSize:"0.875rem",
         color:"var(--muted2)", marginBottom:14 }}>
-        <span style={{ color:"var(--red)", fontSize:"1.05rem" }}>{filtered.length.toLocaleString()}</span>
+        <span style={{ color:"var(--red)", fontSize:"0.875rem" }}>{filtered.length.toLocaleString()}</span>
         {" "}titles · {totalVols.toLocaleString()} volumes
         {search && <span style={{ marginLeft:10, color:"var(--muted)" }}>— filtered by "{search}"</span>}
       </div>
@@ -309,14 +387,14 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
                 borderBottom:`2px solid ${pg.color}`, paddingBottom:8, marginBottom: isOpen ? 10 : 0,
                 textAlign:"left",
               }}>
-                <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"1rem",
+                <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                   letterSpacing:"3px", color:pg.color }}>{pg.label}</span>
-                <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.62rem",
+                <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                   letterSpacing:"1.5px", color:"var(--muted)" }}>
                   {titles.length} TITLES · {pgVols} VOLUMES
                 </span>
-                <span style={{ marginLeft:"auto", color:pg.color, fontSize:"0.7rem",
-                  fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px" }}>
+                <span style={{ marginLeft:"auto", color:pg.color, fontSize:"0.875rem",
+                  fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px" }}>
                   {isOpen ? "▲ COLLAPSE" : "▼ EXPAND"}
                 </span>
               </button>
@@ -345,12 +423,12 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
                         }}>
                           <div style={{ flex:1, minWidth:0 }}>
                             <span style={{
-                              fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.92rem",
+                              fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                               letterSpacing:"1.5px", color:"var(--text)",
                               display:"block", overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap",
                             }}>{t.title}</span>
-                            <span style={{ fontSize:"0.72rem", color:"var(--muted2)",
-                              fontFamily:"'Crimson Pro',serif" }}>
+                            <span style={{ fontSize:"0.875rem", color:"var(--muted2)",
+                              fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>
                               {t.publisher}
                             </span>
                           </div>
@@ -358,37 +436,44 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
                           <div style={{ display:"flex", gap:8, alignItems:"center", flexShrink:0 }}>
                             {t.hasOverlap && (
                               <span style={{
-                                fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem", letterSpacing:"1px",
+                                fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
                                 background:"#fff8e0", color:"#8a6000", border:"1px solid #d4a800",
                                 borderRadius:3, padding:"2px 7px",
                               }}>⚠ OVERLAP</span>
                             )}
+                            {t.needsReview && (
+                              <span style={{
+                                fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
+                                background:"#eef2ff", color:"#4338ca", border:"1px solid #c7d2fe",
+                                borderRadius:3, padding:"2px 7px",
+                              }}>🔍 REVIEW</span>
+                            )}
                             {multiV && (
                               <span style={{
-                                fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem", letterSpacing:"1.5px",
+                                fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px",
                                 background:pg.color, color:"#fff", borderRadius:3, padding:"2px 7px",
                               }}>{t.volumes.length} VOLS</span>
                             )}
-                            <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem",
+                            <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                               letterSpacing:"1px", color:"var(--muted)", minWidth:52, textAlign:"right" }}>
                               {t.totalIssues} issues
                             </span>
                             {t.totalKeys > 0 && (
-                              <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem",
+                              <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                                 letterSpacing:"1px", color:"#8a6000", background:"#fff8e0",
                                 border:"1px solid #d4a800", borderRadius:3, padding:"1px 6px" }}>
                                 {t.totalKeys}k
                               </span>
                             )}
                             {t.totalSigned > 0 && (
-                              <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.6rem",
+                              <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                                 letterSpacing:"1px", color:"#1a7a1a", background:"#f0faf0",
                                 border:"1px solid #c8e6c8", borderRadius:3, padding:"1px 6px" }}>
                                 {t.totalSigned}s
                               </span>
                             )}
-                            <span style={{ color:"var(--muted)", fontSize:"0.7rem",
-                              fontFamily:"'Bebas Neue',sans-serif", letterSpacing:"1px", marginLeft:4 }}>
+                            <span style={{ color:"var(--muted)", fontSize:"0.875rem",
+                              fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px", marginLeft:4 }}>
                               {tOpen ? "▲" : "▼"}
                             </span>
                           </div>
@@ -398,7 +483,7 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
                         {tOpen && (
                           <div style={{ borderTop:"1px solid var(--border)" }}>
                             {t.volumes.map((v, vi) => {
-                              const isOverlap = v.overlapsNext || v.overlapsPrev;
+                              const isOverlap = v.overlapsAny;
                               const yearStr = v.startYear > 0
                                 ? (v.startYear === v.endYear ? String(v.startYear) : `${v.startYear}–${v.endYear}`)
                                 : "?";
@@ -420,15 +505,15 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
                                   {/* Volume label */}
                                   <div style={{ flexShrink:0, minWidth:66 }}>
                                     <div style={{
-                                      fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.78rem",
+                                      fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                                       letterSpacing:"2px",
                                       color: isOverlap ? "#d97706" : t.volumes.length > 1 ? pg.color : "var(--muted2)",
                                       lineHeight:1,
                                     }}>
-                                      {t.volumes.length > 1 ? `Vol. ${v.volNum}` : "Series"}
-                                      {isOverlap && <span style={{ marginLeft:4, fontSize:"0.65rem" }}>⚠</span>}
+                                      {t.volumes.length > 1 ? `Vol. ${v.volLabel}` : "Series"}
+                                      {isOverlap && <span style={{ marginLeft:4, fontSize:"0.875rem" }}>⚠</span>}
                                     </div>
-                                    <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.65rem",
+                                    <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                                       letterSpacing:"1px", color: isOverlap ? "#b45309" : "var(--muted)", marginTop:2 }}>
                                       {yearStr}
                                     </div>
@@ -437,41 +522,41 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
                                   {/* Writer / Artist */}
                                   <div style={{ flex:1, minWidth:180, display:"flex", gap:20, flexWrap:"wrap" }}>
                                     <div>
-                                      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.55rem",
+                                      <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                                         letterSpacing:"2px", color:"var(--muted)", marginBottom:1 }}>WRITER</div>
-                                      <div style={{ fontFamily:"'Crimson Pro',serif", fontSize:"0.85rem",
+                                      <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                                         color:"var(--text2)", lineHeight:1.3 }}>{v.writer}</div>
                                     </div>
                                     <div>
-                                      <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.55rem",
+                                      <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                                         letterSpacing:"2px", color:"var(--muted)", marginBottom:1 }}>ARTIST</div>
-                                      <div style={{ fontFamily:"'Crimson Pro',serif", fontSize:"0.85rem",
+                                      <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                                         color:"var(--text2)", lineHeight:1.3 }}>{v.artist}</div>
                                     </div>
                                   </div>
 
                                   {/* Issue count + badges + link hint */}
                                   <div style={{ display:"flex", gap:8, alignItems:"center", flexShrink:0 }}>
-                                    <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.68rem",
+                                    <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                                       letterSpacing:"1.5px", color:"var(--muted)", minWidth:52, textAlign:"right" }}>
                                       {v.issues.length} issues
                                     </span>
                                     {v.keyCount > 0 && (
-                                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem",
+                                      <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                                         letterSpacing:"1px", color:"#8a6000", background:"#fff8e0",
                                         border:"1px solid #d4a800", borderRadius:3, padding:"1px 6px" }}>
                                         ★ {v.keyCount} key{v.keyCount > 1 ? "s" : ""}
                                       </span>
                                     )}
                                     {v.signedCount > 0 && (
-                                      <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem",
+                                      <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                                         letterSpacing:"1px", color:"#1a7a1a", background:"#f0faf0",
                                         border:"1px solid #c8e6c8", borderRadius:3, padding:"1px 6px" }}>
                                         ✍ {v.signedCount} sgd
                                       </span>
                                     )}
                                     <span style={{
-                                      fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.58rem",
+                                      fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                                       letterSpacing:"1px", color: pg.color, opacity:0.7,
                                     }}>→ VIEW</span>
                                   </div>
@@ -484,10 +569,34 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
                               <div style={{
                                 padding:"8px 14px 8px 20px", background:"#fef9ec",
                                 borderTop:"1px solid #fde68a",
-                                fontSize:"0.75rem", color:"#92400e",
-                                fontFamily:"'Crimson Pro',serif", lineHeight:1.5,
+                                fontSize:"0.875rem", color:"#92400e",
+                                fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", lineHeight:1.5,
                               }}>
-                                <strong>⚠ Overlapping years detected.</strong> These volumes share publication years — this may mean issues from different series are filed under the same title in the data, or the volume split didn't fire correctly on a numbering restart. Browse the issues to check.
+                                <strong>⚠ Overlapping years detected.</strong> Two or more volumes (by the declared Volume field) share publication years — this may mean issues from different series are filed under the same title, or the Volume field itself is wrong on some rows. Browse the issues to check.
+                              </div>
+                            )}
+
+                            {/* Needs-review explanation */}
+                            {t.needsReview && (
+                              <div style={{
+                                padding:"8px 14px 8px 20px", background:"#eef2ff",
+                                borderTop:"1px solid #c7d2fe",
+                                fontSize:"0.875rem", color:"#3730a3",
+                                fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", lineHeight:1.5,
+                              }}>
+                                <strong>🔍 Needs review.</strong> The declared Volume field gives {t.volumes.length} volume{t.volumes.length === 1 ? "" : "s"} for this title, but an independent issue-numbering check expects a different count. Doesn't necessarily mean the data is wrong — worth a human glance.
+                              </div>
+                            )}
+
+                            {/* Missing-year note */}
+                            {t.yearlessIssues > 0 && (
+                              <div style={{
+                                padding:"8px 14px 8px 20px", background:"var(--surface2)",
+                                borderTop:"1px solid var(--border)",
+                                fontSize:"0.875rem", color:"var(--muted2)",
+                                fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", lineHeight:1.5,
+                              }}>
+                                {t.yearlessIssues} issue{t.yearlessIssues === 1 ? "" : "s"} with no usable Year — excluded from the overlap check above.
                               </div>
                             )}
                           </div>
@@ -503,7 +612,7 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
 
       {filtered.length === 0 && (
         <div style={{ textAlign:"center", padding:"60px 20px",
-          fontFamily:"'Bebas Neue',sans-serif", fontSize:"0.9rem", letterSpacing:"2px", color:"var(--muted)" }}>
+          fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:"var(--muted)" }}>
           NO TITLES MATCH YOUR SEARCH
         </div>
       )}

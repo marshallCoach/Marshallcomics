@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Box Quest — Step-by-Step Guide</title>
+<link rel="stylesheet" href="quest-style.css">
+</head>
+<body>
+<div id="topbar"></div>
+<div class="wrap">
+
+  <div class="intro">
+    <p class="lead">One line = one action. Do them in order, tick as you go — the plan holds your place. Stop anywhere. Goal: <strong>zero data concerns</strong>, then go list on eBay.</p>
+  </div>
+
+  <div class="card" style="padding:14px 18px">
+    <div class="pbar"><div class="pfill green" id="allFill"></div></div>
+    <div class="plabel"><span id="allCount">0 / 0 steps done</span><span id="allPct">0%</span></div>
+  </div>
+
+  <div class="controls">
+    <button id="expandAll">Expand all</button>
+    <button id="collapseAll">Collapse all</button>
+    <button class="resetbtn" id="resetBtn" style="margin-left:auto">Reset guide progress</button>
+  </div>
+
+  <div id="phases"></div>
+
+  <div class="tripwires">
+    <h2>⚠ If anything feels wrong — the tripwires</h2>
+    <p style="color:var(--muted2)">Stop, don't push through:</p>
+    <ul id="tripwires"></ul>
+    <div class="foot" style="border:none;text-align:left;margin-top:8px">Stopping at a tripwire is winning. Pushing through one is how the May-26 mess happened.</div>
+  </div>
+
+  <div class="foot" id="foot"></div>
+</div>
+
+<script src="quest-data.js"></script>
+<script src="quest-common.js"></script>
+<script>
+(function () {
+  var D = window.QUEST_DATA;
+  document.getElementById("topbar").innerHTML = BQ.renderTopbar("quest-guide.html");
+  var state = BQ.readSteps();
+
+  var phasesEl = document.getElementById("phases");
+
+  function phaseProgress(ph) {
+    var ids = BQ.phaseStepIds(ph);
+    var dn = ids.filter(function (id) { return state[id]; }).length;
+    return { done: dn, total: ids.length, pct: ids.length ? Math.round(dn / ids.length * 100) : 0 };
+  }
+
+  function render() {
+    phasesEl.innerHTML = D.guide.map(function (ph, i) {
+      var pr = phaseProgress(ph);
+      var full = pr.done === pr.total && pr.total > 0;
+      var sittings = ph.sittings.map(function (si) {
+        var steps = si.steps.map(function (s) {
+          var done = !!state[s.id];
+          return '<li class="step ' + (done ? "done" : "") + '" data-id="' + s.id + '">' +
+            '<input type="checkbox" ' + (done ? "checked" : "") + ' aria-label="' + s.id + '">' +
+            '<span class="code">' + s.id + '</span>' +
+            '<span class="tx">' + s.text + "</span></li>";
+        }).join("");
+        return '<div class="sitting"><div class="sh"><span class="st">' + si.title + '</span><span class="se">' + si.est + "</span></div>" +
+          '<ul class="steps">' + steps + "</ul></div>";
+      }).join("");
+      return '<details class="grp" ' + (i === 0 && !full ? "open" : "") + '>' +
+        '<summary>' +
+          '<span class="chev">›</span>' +
+          '<span class="gcode ' + ph.accent + '">' + ph.code + "</span>" +
+          '<span class="gtitle"><span class="t">' + ph.title + '</span> <span class="s">' + ph.est + "</span></span>" +
+          '<span class="gprog"><span class="mini-bar"><span class="mini-fill" style="width:' + pr.pct + '%"></span></span>' +
+            '<span class="txt">' + (full ? "✓ " : "") + pr.done + "/" + pr.total + "</span></span>" +
+        "</summary>" +
+        '<div class="gbody"><p class="blurb">' + ph.blurb + "</p>" + sittings + "</div>" +
+      "</details>";
+    }).join("");
+    bindSteps();
+    updateOverall();
+  }
+
+  function bindSteps() {
+    phasesEl.querySelectorAll(".step").forEach(function (li) {
+      li.addEventListener("click", function (e) {
+        var id = li.getAttribute("data-id");
+        state[id] = !state[id];
+        if (!state[id]) delete state[id];
+        BQ.writeSteps(state);
+        // update just this row + its phase header + overall, without full re-render
+        li.classList.toggle("done", !!state[id]);
+        li.querySelector("input").checked = !!state[id];
+        if (e.target.tagName !== "INPUT") e.preventDefault();
+        refreshHeaders();
+        updateOverall();
+      });
+    });
+  }
+
+  function refreshHeaders() {
+    D.guide.forEach(function (ph, i) {
+      var det = phasesEl.children[i];
+      var pr = phaseProgress(ph);
+      var full = pr.done === pr.total && pr.total > 0;
+      det.querySelector(".mini-fill").style.width = pr.pct + "%";
+      det.querySelector(".gprog .txt").textContent = (full ? "✓ " : "") + pr.done + "/" + pr.total;
+    });
+  }
+
+  function updateOverall() {
+    var all = BQ.allStepIds();
+    var dn = all.filter(function (id) { return state[id]; }).length;
+    var pct = all.length ? Math.round(dn / all.length * 100) : 0;
+    document.getElementById("allFill").style.width = pct + "%";
+    document.getElementById("allCount").textContent = dn + " / " + all.length + " steps done";
+    document.getElementById("allPct").textContent = pct + "%";
+  }
+
+  document.getElementById("expandAll").onclick = function () {
+    phasesEl.querySelectorAll("details").forEach(function (d) { d.open = true; });
+  };
+  document.getElementById("collapseAll").onclick = function () {
+    phasesEl.querySelectorAll("details").forEach(function (d) { d.open = false; });
+  };
+  document.getElementById("resetBtn").onclick = function () {
+    if (confirm("Reset all step progress? This cannot be undone.")) { state = {}; BQ.writeSteps(state); render(); }
+  };
+
+  document.getElementById("tripwires").innerHTML = D.tripwires.map(function (t) { return "<li>" + t + "</li>"; }).join("");
+  document.getElementById("foot").innerHTML = "Box Quest · Data Edition · source: <b>" + D.source + "</b>";
+
+  render();
+})();
+</script>
+</body>
+</html>

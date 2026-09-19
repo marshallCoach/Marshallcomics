@@ -1,0 +1,176 @@
+[16:42:06] PIPELINE START
+[16:42:08] STEP 1/6 Fandom year-gate resolver
+missing covers to resolve (year-gated): 828
+
+Filled 0/828 year-matched covers. Run: node gen_data.mjs
+[19:35:58]   fandom done
+[19:35:58] STEP 2/6 Comic Vine pass (flagged books, via local proxy)
+missing non-Marvel/DC covers to fetch via CV proxy: 23
+  [1/23] Firefly #36 -> Firefly (2022-01-01)
+  [2/23] Die #1 REJECT wrong-title 'Rough Riders: Ride or Die'
+  [3/23] Die #3 -> Die (2019-02-06)
+  [4/23] Die #4 -> Die (2019-03-05)
+  [5/23] Die #5 REJECT wrong-title 'Excellence'
+  [6/23] Die #7 REJECT wrong-title 'Die!Die!Die!'
+  [7/23] Die #8 REJECT wrong-title 'Sonata'
+  [8/23] Die #11 REJECT wrong-title 'Die Opalwälder'
+  [11/23] Die #16 REJECT wrong-title 'Die Schokohexe'
+  [12/23] Die #19 REJECT wrong-title 'Pokémon - Die Ersten Abenteuer'
+  [13/23] Star Trek #28 REJECT wrong-title 'Star Trek Magazine'
+  [14/23] Star Trek #30 REJECT wrong-title 'Star Trek Magazine'
+  [15/23] Star Trek #40 REJECT wrong-title 'Star Trek Magazine'
+  [16/23] Star Trek #46 REJECT wrong-title 'Star Trek Magazine'
+  [17/23] Star Trek #47 REJECT wrong-title 'Star Trek Magazine'
+  [18/23] Star Trek #48 REJECT wrong-title 'Star Trek Magazine'
+  [19/23] Star Trek #49 REJECT wrong-title 'Star Trek Graphic Novel Collection'
+  [20/23] Star Trek #50 REJECT wrong-title 'Star Trek Graphic Novel Collection'
+  [21/23] Star Trek #51 REJECT wrong-title 'Star Trek Graphic Novel Collection'
+  [22/23] Star Trek #52 REJECT wrong-title 'Star Trek Magazine'
+  [23/23] Star Trek #56 REJECT wrong-title 'Star Trek Magazine'
+
+Filled 3/23 via Comic Vine (year-gated); rejected 18 wrong-title matches. Run: node gen_data.mjs
+[19:46:04]   cv done
+[19:46:04] STEP 3/6 gen_data.mjs
+Using: attached_assets/comics_inventory_0308_1400.xlsx
+Sheet: ✅ Clean Inventory 0408_0020
+eBay overlay: 989 priced entries from ebay_pricing_results.json
+Read 74 box locations from Box Locations tab (10 confirmed-real >=82)
+  Derived BOX 01: 76 comics, 52 keys
+  Derived BOX 03: 257 comics, 10 keys
+  Derived BOX 04: 243 comics, 26 keys
+  Derived BOX 05: 209 comics, 21 keys
+  Derived BOX 06: 123 comics, 9 keys
+  Derived BOX 07: 248 comics, 31 keys
+  Derived BOX 08: 234 comics, 20 keys
+  Derived BOX 09: 222 comics, 28 keys
+  Derived BOX 10: 250 comics, 28 keys
+  Derived BOX 11: 201 comics, 47 keys
+  Derived BOX 12: 208 comics, 22 keys
+  Derived BOX 13: 173 comics, 23 keys
+  Derived BOX 14: 202 comics, 29 keys
+  Derived BOX 15: 201 comics, 17 keys
+  Derived BOX 16: 171 comics, 18 keys
+  Derived BOX 17: 190 comics, 23 keys
+  Derived BOX 18: 177 comics, 27 keys
+  Derived BOX 19: 190 comics, 20 keys
+  Derived BOX 20: 174 comics, 25 keys
+  Derived BOX 21: 176 comics, 24 keys
+  Derived BOX 22: 170 comics, 18 keys
+  Derived BOX 23: 160 comics, 21 keys
+  Derived BOX 24: 152 comics, 13 keys
+  Derived BOX 25: 127 comics, 9 keys
+  Derived BOX 26: 141 comics, 21 keys
+  Derived BOX 27: 125 comics, 24 keys
+  Derived BOX 28: 121 comics, 20 keys
+  Derived BOX 29: 103 comics, 10 keys
+  Derived BOX 30: 112 comics, 11 keys
+  Derived BOX 31: 84 comics, 11 keys
+  Derived BOX 33: 94 comics, 16 keys
+  Derived BOX 35: 108 comics, 5 keys
+  Derived BOX 39: 33 comics, 6 keys
+  Derived BOX 42: 165 comics, 8 keys
+  Derived BOX 43: 128 comics, 18 keys
+  Derived BOX 44: 189 comics, 16 keys
+  Derived BOX 45: 215 comics, 8 keys
+  Derived BOX 46: 191 comics, 14 keys
+  Derived BOX 47: 79 comics, 5 keys
+  Derived BOX 48: 164 comics, 32 keys
+  Derived BOX 49: 86 comics, 3 keys
+  Derived BOX 50: 178 comics, 22 keys
+  Derived BOX 51: 151 comics, 4 keys
+  Derived BOX 52: 150 comics, 44 keys
+  Derived BOX 53: 132 comics, 5 keys
+  Derived BOX 54: 138 comics, 16 keys
+  Derived BOX 55: 139 comics, 15 keys
+  Derived BOX 56: 138 comics, 14 keys
+  Derived BOX 57: 139 comics, 15 keys
+  Derived BOX 58: 128 comics, 15 keys
+  Derived BOX 59: 108 comics, 18 keys
+  Derived BOX 60: 95 comics, 13 keys
+  Derived BOX 62: 53 comics, 11 keys
+  Derived BOX 64: 164 comics, 14 keys
+  Derived BOX 65: 149 comics, 23 keys
+  Derived BOX 66: 121 comics, 35 keys
+  Derived BOX 67: 112 comics, 17 keys
+  Derived BOX 68: 215 comics, 10 keys
+  Derived BOX 70: 130 comics, 11 keys
+  Derived BOX 72: 122 comics, 63 keys
+  Derived BOX 75: 157 comics, 29 keys
+  Derived BOX 80: 8 comics, 0 keys
+  Derived BOX 82: 177 comics, 11 keys
+  Derived BOX 83: 114 comics, 42 keys
+  Derived BOX 85: 180 comics, 16 keys
+  Derived BOX 86: 112 comics, 15 keys
+  Derived BOX 87: 126 comics, 3 keys
+  Derived BOX 88: 166 comics, 7 keys
+  Derived BOX 95: 70 comics, 11 keys
+  Derived BOX 98: 158 comics, 16 keys
+  Derived BOX 104: 86 comics, 86 keys
+  Derived BOX AT CGC: 2 comics, 2 keys
+  Derived BOX UNKNOWN — needs physical reassignment: 350 comics, 31 keys
+  Derived BOX AT CGC — Roy Thomas SS: 4 comics, 4 keys
+CC Box numbers: 82, 83, 85, 86, 87, 88, 95, 98, 101, 102, 103, 104
+Parsing catalog sheets...
+  Pulled Covers Catalog: 86 comics
+  Cover Box 2 Catalog: 247 comics
+  [dedup removed] Cover Box 3 Catalog: "Fantastic Four" #8 (Legacy #734)
+  Cover Box 3 Catalog: 128 comics
+  Excluding 459 catalog-sheet keys from CC Boxes
+  CC Boxes: 1211 comics
+Written: 10986 comics, 74 boxes
+Catalogs: pulled=86, box2=247, box3=128, ccBoxes=1211
+Copied covers.json → public/covers.json
+[19:46:05]   gen_data done
+[19:46:05] STEP 4/6 wrong-era audit
+COVERS whose stored date is >2yr off the row's year (likely wrong): 113
+   Δyr row yr cover yr  Title #issue (box)
+    49   2019     1970  Aquaman #54 (Box 98)
+    46   1973     2019  Shazam! #1 (Box 59)
+    39   2023     1984  Transformers #1 (Box 66)
+    35   2020     1985  X-Factor #2 (Box 14)
+    31   2024     1993  Cable #1 (Box 11)
+    29   1987     2016  Suicide Squad #1 (Box 52)
+    29   1987     2016  Justice League #4 (Box 48)
+    29   1987     2016  Justice League #3 (Box 48)
+    26   1990     2016  Spider-Man #1 (Box 16)
+    26   2023     1997  Blade #1 (Box 20)
+    26   2000     2026  Batgirl #16 (Box 45)
+    26   2000     2026  Batgirl #15 (Box 45)
+    26   2000     2026  Batgirl #14 (Box 45)
+    26   2000     2026  Batgirl #13 (Box 45)
+    25   2000     2025  Batgirl #12 (Box 45)
+    25   2000     2025  Batgirl #11 (Box 45)
+    25   2000     2025  Batgirl #10 (Box 45)
+    25   2000     2025  Batgirl #9 (Box 45)
+    24   2001     2025  Birds of Prey #26 (Box 45)
+    24   2001     2025  Birds of Prey #25 (Box 45)
+    24   2001     2025  Birds of Prey #23 (Box 45)
+    24   2001     2025  Birds of Prey #21 (Box 45)
+    24   2001     2025  Birds of Prey #20 (Box 45)
+    24   2001     2025  Birds of Prey #19 (Box 45)
+    24   2001     2025  Birds of Prey #18 (Box 45)
+    24   2001     2025  Birds of Prey #17 (Box 45)
+    24   2001     2025  Birds of Prey #16 (Box 45)
+    24   2001     2025  Birds of Prey #15 (Box 45)
+    23   2001     2024  Birds of Prey #12 (Box 45)
+    23   2001     2024  Birds of Prey #11 (Box 45)
+
+  Written: cover_audit.xlsx (113 rows)
+[19:46:07]   audit done
+[19:46:07] STEP 5/6 build cover_links document
+books: 10986  filled: 10114  blank: 872  coverage: 92.1%
+Written: cover_links_1108_1946.xlsx
+[19:46:20]   document: cover_links_1108_1946.xlsx
+[19:46:20] STEP 6/6 commit + push (GitHub Pages auto-deploys)
+[claude/upbeat-babbage-2f5gr2 03e25dd] Covers: re-resolve flagged wrong/blank covers (Fandom year-gate + Comic Vine); add cover-links doc
+ 6 files changed, 170508 insertions(+), 4 deletions(-)
+ create mode 100644 brb_cover_links.py
+ create mode 100644 brb_cv_covers.py
+ create mode 100755 orchestrate_covers.sh
+error: cannot pull with rebase: You have unstaged changes.
+error: Please commit or stash them.
+[19:46:21]   rebase had issues — check log
+To https://github.com/marshallCoach/Marshallcomics
+   0f085ed..03e25dd  claude/upbeat-babbage-2f5gr2 -> claude/upbeat-babbage-2f5gr2
+[19:46:23]   pushed — Pages will redeploy
+[19:46:23] PIPELINE COMPLETE — document: cover_links_1108_1946.xlsx

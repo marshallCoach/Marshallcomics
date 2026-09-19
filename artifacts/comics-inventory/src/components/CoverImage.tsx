@@ -1,14 +1,61 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { getCoverSvgUrl, type ComicLike } from "@/utils/coverThumbnails";
-import { comicFlagKey, getComicFlag, setComicFlag, clearComicFlag } from "@/lib/comicFlags";
+import { coverId, flagKind as coverFlagKind, setFlagKind as setCoverFlagKind, type FlagKind } from "@/lib/coverFlags";
 
 const BASE = import.meta.env.BASE_URL?.replace(/\/$/, "") ?? "";
+
+// ── Static cover map loaded once from /covers.json ───────────────────────────
+let coversMap: Record<string, { url: string | null; large?: string | null }> | null = null;
+let coversLoading: Promise<void> | null = null;
+
+// Fallback index: normalized "title|||issue" → url, built ONLY from entries whose
+// normalized key maps to a single distinct url. Rescues covers orphaned by a title
+// rename (e.g. "Icon & Rocket: Season One" vs the stored "Icon and Rocket", or
+// "&" vs "and", ":" vs ",", "x" vs "X"). Ambiguous keys (same title+issue across
+// multiple volumes/urls) are intentionally EXCLUDED so a rename fix never pastes a
+// wrong-volume cover onto a book — Volume stays significant.
+let normIndex: Map<string, string> | null = null;
+const normTitle = (t: string) =>
+  t.toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9]+/g, " ").trim();
+const normIssue = (i: string) =>
+  String(i).replace(/^#/, "").replace(/^0+(\d)/, "$1").trim();
+const normCoverKey = (title: string, issue: string) =>
+  `${normTitle(title)}|||${normIssue(issue)}`;
+
+function buildNormIndex(map: Record<string, { url: string | null }>) {
+  const groups = new Map<string, Set<string>>();
+  for (const [k, v] of Object.entries(map)) {
+    const url = v?.url;
+    if (!url) continue;
+    const p = k.split("|||");
+    if (p.length < 2) continue;
+    const nk = `${normTitle(p[0])}|||${normIssue(p[1])}`;
+    (groups.get(nk) ?? groups.set(nk, new Set()).get(nk)!).add(url);
+  }
+  const idx = new Map<string, string>();
+  for (const [nk, urls] of groups) if (urls.size === 1) idx.set(nk, [...urls][0]);
+  return idx;
+}
+
+function loadCovers(): Promise<void> {
+  if (coversMap !== null) return Promise.resolve();
+  if (coversLoading) return coversLoading;
+  coversLoading = fetch(`${BASE}/covers.json`)
+    .then(r => r.json())
+    .then(data => { coversMap = data; normIndex = buildNormIndex(data); })
+    .catch(() => { coversMap = {}; normIndex = new Map(); });
+  return coversLoading;
+}
+
+// Pre-load covers as soon as the module is imported
+loadCovers();
 
 const memCache = new Map<string, string | null>();
 const inFlight  = new Map<string, Promise<string | null>>();
 
 function cacheKey(c: ComicLike) {
-  return `${c.Title}|||${c.Issue}`;
+  const vol = String((c as { Volume?: string | number }).Volume || "1").trim();
+  return `${c.Title}|||${c.Issue}|||${vol}`;
 }
 
 /** Clears the client-side memory cache for a specific comic so it re-fetches. */
@@ -23,16 +70,20 @@ async function fetchCover(c: ComicLike): Promise<string | null> {
 
   const p = (async () => {
     try {
-      const params = new URLSearchParams({
-        title: c.Title,
-        issue: String(c.Issue || ""),
-        publisher: (c as { Publisher?: string }).Publisher ?? "",
-        year: String((c as { Year?: string }).Year ?? ""),
-      });
-      const res = await fetch(`${BASE}/api/covers/search?${params}`);
-      if (!res.ok) return null;
-      const data = await res.json() as { cover_url?: string | null };
-      const url = data.cover_url ?? null;
+      await loadCovers();
+      const issueStr = String(c.Issue);
+      // Lookup priority: volume-aware key → legacy key → legacy with # prefix
+      const entry =
+        coversMap?.[key] ??
+        coversMap?.[`${c.Title}|||${issueStr}`] ??
+        coversMap?.[`${c.Title}|||#${issueStr.replace(/^#/, "")}`] ??
+        null;
+      // Rename-tolerant fallback: only when the exact keys miss, and only when the
+      // normalized title+issue resolves to a single unambiguous cover.
+      const url =
+        entry?.url ??
+        normIndex?.get(normCoverKey(c.Title, issueStr)) ??
+        null;
       memCache.set(key, url);
       return url;
     } catch {
@@ -47,6 +98,25 @@ async function fetchCover(c: ComicLike): Promise<string | null> {
   return p;
 }
 
+/** Resolves once covers.json has loaded — for pages that scan the whole
+ *  collection for missing covers up front. */
+export function coversReady(): Promise<void> { return loadCovers(); }
+
+/** Synchronous cover lookup against the already-loaded map (call after
+ *  coversReady()). Returns the resolved URL or null when the book has no cover.
+ *  Mirrors fetchCover's key priority exactly. */
+export function coverUrlSync(c: ComicLike): string | null {
+  if (!coversMap) return null;
+  const key = cacheKey(c);
+  const issueStr = String(c.Issue);
+  const entry =
+    coversMap[key] ??
+    coversMap[`${c.Title}|||${issueStr}`] ??
+    coversMap[`${c.Title}|||#${issueStr.replace(/^#/, "")}`] ??
+    null;
+  return entry?.url ?? normIndex?.get(normCoverKey(c.Title, issueStr)) ?? null;
+}
+
 interface Props {
   comic: { Title: string; Issue: string | number; Publisher?: string; Year?: string; Key?: string; Signed?: string };
   width?: number;
@@ -54,9 +124,10 @@ interface Props {
   onClick?: (largeUrl: string | null) => void;
   className?: string;
   style?: React.CSSProperties;
+  objectFit?: "cover" | "contain";
 }
 
-export function CoverImage({ comic, width = 56, height = 84, onClick, style }: Props) {
+export function CoverImage({ comic, width = 56, height = 84, onClick, style, objectFit = "cover" }: Props) {
   const [src, setSrc]         = useState<string>(() => getCoverSvgUrl(comic as ComicLike, { width, height }));
   const [realUrl, setRealUrl] = useState<string | null>(null);
   const [loaded, setLoaded]   = useState(false);
@@ -101,7 +172,7 @@ export function CoverImage({ comic, width = 56, height = 84, onClick, style }: P
     >
       <img
         src={src}
-        alt={`${comic.Title} #${comic.Issue}`}
+        alt={`${comic.Title} ${comic.Issue}`}
         width={width}
         height={height}
         loading="lazy"
@@ -116,7 +187,7 @@ export function CoverImage({ comic, width = 56, height = 84, onClick, style }: P
           display: "block",
           width: "100%",
           height: "100%",
-          objectFit: "cover",
+          objectFit,
           borderRadius: 4,
           transition: "opacity 0.2s",
           opacity: (isSvg || loaded) && !error ? 1 : 0.7,
@@ -135,34 +206,6 @@ export function CoverImage({ comic, width = 56, height = 84, onClick, style }: P
   );
 }
 
-// ── Cover-flag helpers (mirrors brbFlaggedCovers_v1 used in CoverCatalog) ─────
-const COVER_FLAG_LS = "brbFlaggedCovers_v1";
-function readCoverFlags(): Record<string, unknown> {
-  try { return JSON.parse(localStorage.getItem(COVER_FLAG_LS) || "{}"); }
-  catch { return {}; }
-}
-function isCoverFlagged(key: string): boolean { return key in readCoverFlags(); }
-function toggleCoverFlag(key: string, data: { Title: string; Issue: string | number; Box?: string; Publisher?: string; Year?: string; Cover_Artist?: string }): boolean {
-  const all = readCoverFlags();
-  if (key in all) {
-    delete all[key];
-    localStorage.setItem(COVER_FLAG_LS, JSON.stringify(all));
-    return false;
-  }
-  all[key] = {
-    id: key,
-    Title: data.Title,
-    Issue: String(data.Issue),
-    Box: data.Box ?? "",
-    Publisher: data.Publisher ?? "",
-    Year: data.Year ?? "",
-    Cover_Artist: data.Cover_Artist ?? "",
-    flaggedAt: new Date().toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }),
-  };
-  localStorage.setItem(COVER_FLAG_LS, JSON.stringify(all));
-  return true;
-}
-
 interface ModalProps {
   comic: ComicLike & {
     Publisher?: string; Year?: string; Key?: string; Key_Reason?: string;
@@ -174,14 +217,73 @@ interface ModalProps {
   onClose: () => void;
 }
 
+// Format a GCD/CV Publication Date ("2024-10-15" or "2024-10-00") for display.
+const PUB_MON = ["", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+export function fmtPubDate(s?: string): string {
+  const m = String(s || "").match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if (!m) return "";
+  const mo = +m[2], dd = +m[3];
+  if (mo < 1 || mo > 12) return m[1];
+  return dd >= 1 ? `${PUB_MON[mo]} ${dd}, ${m[1]}` : `${PUB_MON[mo]} ${m[1]}`;
+}
+
+// Persist an "add link" into the Data Fix export store (brbDataFixes_v1) so the
+// existing Mac apply pipeline (brb_apply_fandom_pages / brb_apply_data_fixes)
+// picks it up on the next export. Merge-write so we don't clobber other fixes.
+export function saveCoverLink(
+  comic: { Title: string; Issue: string | number },
+  box: string, kind: "image" | "fandom", value: string,
+) {
+  const KEY = "brbDataFixes_v1";
+  let map: Record<string, unknown> = {};
+  try { map = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch { map = {}; }
+  const issue = String(comic.Issue).trim().replace(/^#/, "");
+  const id = `${comic.Title}|||${issue}|||${box}`;
+  map[id] = { id, title: comic.Title, issue, box, problem: "no-cover", kind, value, at: new Date().toISOString() };
+  try { localStorage.setItem(KEY, JSON.stringify(map)); } catch { /* ignore */ }
+}
+
+// Best-guess Fandom wikis to search for a book — franchise-specific by title,
+// then publisher-specific, always with a site-scoped Google fallback. Returns
+// several so you can pick the right wiki when it's ambiguous.
+export function fandomGuesses(title: string, issue: string, year: string, publisher: string): { label: string; url: string }[] {
+  const q  = encodeURIComponent(`${title} ${issue}`.trim());
+  const gq = encodeURIComponent(`${title} ${issue} ${year} comic`.trim());
+  const t = (title || "").toLowerCase();
+  const p = (publisher || "").toLowerCase();
+  const wiki = (host: string, label: string) => ({ label: `Find on ${label} ↗`, url: `https://${host}/wiki/Special:Search?query=${q}` });
+  const out: { label: string; url: string }[] = [];
+  // franchise-specific (title keyword) — most specific first
+  const FRANCHISE: [RegExp, string, string][] = [
+    [/buffy|angel/, "buffy.fandom.com", "Buffy Wiki"],
+    [/star trek/, "memory-alpha.fandom.com", "Memory Alpha"],
+    [/doctor who/, "tardis.fandom.com", "TARDIS Wiki"],
+    [/transformers/, "transformers.fandom.com", "Transformers Wiki"],
+    [/g\.?\s?i\.?\s?joe/, "gijoe.fandom.com", "G.I. Joe Wiki"],
+    [/star wars/, "starwars.fandom.com", "Wookieepedia"],
+    [/teenage mutant|tmnt/, "turtlepedia.fandom.com", "Turtlepedia"],
+    [/godzilla/, "godzilla.fandom.com", "Godzilla Wiki"],
+    [/sonic/, "sonic.fandom.com", "Sonic Wiki"],
+    [/power rangers/, "powerrangers.fandom.com", "Power Rangers Wiki"],
+    [/firefly|serenity/, "firefly.fandom.com", "Firefly Wiki"],
+  ];
+  for (const [re, host, label] of FRANCHISE) if (re.test(t)) out.push(wiki(host, label));
+  // publisher-specific
+  if (p.includes("marvel")) out.push(wiki("marvel.fandom.com", "Marvel"));
+  if (p === "dc" || p.includes("dc ") || p.includes("dc comics")) out.push(wiki("dc.fandom.com", "DC"));
+  // always-available site-scoped search across all Fandom wikis
+  out.push({ label: "Find on Fandom (all) ↗", url: `https://www.google.com/search?q=${gq}+site%3Afandom.com` });
+  return out.slice(0, 4);
+}
+
 export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
   const box        = (comic as { Box?: string }).Box ?? "";
-  const coverKey   = `${comic.Title}|||${comic.Issue}|||${box}`;
-  const dataKey    = comicFlagKey(comic.Title, String(comic.Issue), box);
+  const coverKey   = coverId({ Title: comic.Title, Issue: comic.Issue, Box: box });
 
-  const [coverFlagged, setCoverFlagged] = useState(() => isCoverFlagged(coverKey));
-  const [notes,        setNotes]        = useState(() => getComicFlag(dataKey)?.notes ?? "");
-  const [copied,       setCopied]       = useState(false);
+  const [flagState, setFlagState] = useState<FlagKind | null>(() => coverFlagKind(coverKey));
+  const [imgDraft, setImgDraft]   = useState("");
+  const [fanDraft, setFanDraft]   = useState("");
+  const [savedKind, setSavedKind] = useState<null | "image" | "fandom">(null);
 
   useEffect(() => {
     const h = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
@@ -189,49 +291,29 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
     return () => window.removeEventListener("keydown", h);
   }, [onClose]);
 
-  function handleCoverFlag() {
-    const next = toggleCoverFlag(coverKey, comic as Parameters<typeof toggleCoverFlag>[1]);
-    setCoverFlagged(next);
-  }
-
-  function handleNotes(val: string) {
-    setNotes(val);
-    if (val.trim()) setComicFlag(dataKey, getComicFlag(dataKey)?.fields ?? [], val);
-    else {
-      const existing = getComicFlag(dataKey);
-      if (existing?.fields?.length) setComicFlag(dataKey, existing.fields, "");
-      else clearComicFlag(dataKey);
-    }
-  }
-
-  function buildPrompt() {
-    const divider = "────────────────────────────────";
-    const lines = [
-      "BOOK NOTE REQUEST", divider,
-      `Title:     ${comic.Title}`,
-      `Issue:     #${comic.Issue}`,
-    ];
-    if ((comic as { Year?: string }).Year)      lines.push(`Year:      ${(comic as { Year?: string }).Year}`);
-    if ((comic as { Publisher?: string }).Publisher) lines.push(`Publisher: ${(comic as { Publisher?: string }).Publisher}`);
-    if (box) lines.push(`Box:       ${box}`);
-    if ((comic as { Era?: string }).Era)        lines.push(`Era:       ${(comic as { Era?: string }).Era}`);
-    lines.push("");
-    if (notes.trim()) { lines.push("NOTES", divider, notes.trim(), ""); }
-    if (coverFlagged)  { lines.push("COVER NOTE", divider, "Cover image appears incorrect — needs Comic Vine verification.", ""); }
-    lines.push(divider, "Please review and update this entry as needed.");
-    return lines.join("\n");
-  }
-
-  async function copyForClaude() {
-    try { await navigator.clipboard.writeText(buildPrompt()); }
-    catch { const ta = document.getElementById("cm-prompt-preview") as HTMLTextAreaElement; if (ta) { ta.select(); document.execCommand("copy"); } }
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2200);
+  function handleCoverFlag(kind: FlagKind) {
+    const c = comic as { Cover_Artist?: string; Publisher?: string; Year?: string };
+    const next = setCoverFlagKind({
+      Title: comic.Title, Issue: comic.Issue, Box: box,
+      Cover_Artist: c.Cover_Artist, Publisher: c.Publisher, Year: c.Year,
+    }, kind);
+    setFlagState(next);
   }
 
   const isKey    = (comic.Key    ?? "").toUpperCase() === "YES";
   const fallback = getCoverSvgUrl(comic, { width: 300, height: 460 });
-  const hasNote  = notes.trim().length > 0;
+  const pubLabel = fmtPubDate((comic as { Pub_Date?: string }).Pub_Date);
+
+  // Pre-loaded search URLs so you can jump straight to a cover image / the Fandom page.
+  const yr   = (comic as { Year?: string }).Year || "";
+  const iss  = String(comic.Issue).replace(/^#/, "");
+  const imgSearch = `https://www.google.com/search?tbm=isch&q=${encodeURIComponent(`${comic.Title} ${iss} ${yr} comic cover`)}`;
+  const fandomOpts = fandomGuesses(comic.Title, iss, yr, (comic as { Publisher?: string }).Publisher || "");
+  function doSave(kind: "image" | "fandom", value: string) {
+    if (!value.trim()) return;
+    saveCoverLink(comic, box, kind, value.trim());
+    setSavedKind(kind);
+  }
 
   return (
     <>
@@ -257,7 +339,7 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
         <div style={{ flexShrink: 0, width: 220, alignSelf: "stretch", overflow: "hidden", background: "#111" }}>
           <img
             src={largeUrl ?? fallback}
-            alt={`${comic.Title} #${comic.Issue}`}
+            alt={`${comic.Title} ${comic.Issue}`}
             style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
             onError={e => { (e.target as HTMLImageElement).src = fallback; }}
           />
@@ -269,32 +351,37 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
           <div style={{ padding: "16px 18px 12px", borderBottom: "1.5px solid var(--border)", background: "var(--surface)" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
               <div>
-                <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.5rem", letterSpacing: "2px", color: "var(--text)", lineHeight: 1 }}>
+                <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "1.75rem", letterSpacing: "2px", color: "var(--text)", lineHeight: 1 }}>
                   {comic.Title}
                 </div>
-                <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1rem", color: "var(--red)", letterSpacing: "1px", marginTop: 4 }}>
+                <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", color: "var(--red)", letterSpacing: "1px", marginTop: 4 }}>
                   #{comic.Issue}
-                  {(comic as { Year?: string }).Year && <span style={{ color: "var(--muted)", marginLeft: 8, fontSize: "0.8rem" }}>{(comic as { Year?: string }).Year}</span>}
+                  {(comic as { Year?: string }).Year && <span style={{ color: "var(--muted)", marginLeft: 8, fontSize: "0.875rem" }}>{(comic as { Year?: string }).Year}</span>}
                 </div>
               </div>
-              <button onClick={onClose} style={{ background: "var(--surface2)", border: "1px solid var(--border)", borderRadius: 6, width: 30, height: 30, cursor: "pointer", color: "var(--muted)", fontSize: "1rem", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>×</button>
+              <button onClick={onClose} style={{ background: "var(--surface2)", border: "1px solid var(--border)", borderRadius: 6, width: 30, height: 30, cursor: "pointer", color: "var(--muted)", fontSize: "0.875rem", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>×</button>
             </div>
             <div style={{ display: "flex", gap: 6, marginTop: 8, flexWrap: "wrap" }}>
               {(comic as { Publisher?: string }).Publisher && (
-                <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem", letterSpacing: "1px", background: "var(--surface2)", border: "1px solid var(--border)", color: "var(--muted2)", borderRadius: 3, padding: "2px 8px" }}>
+                <span style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1px", background: "var(--surface2)", border: "1px solid var(--border)", color: "var(--muted2)", borderRadius: 3, padding: "2px 8px" }}>
                   {(comic as { Publisher?: string }).Publisher}
                 </span>
               )}
               {box && (
-                <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem", letterSpacing: "1px", background: "#7a5c3a18", border: "1.5px solid #7a5c3a", color: "#7a5c3a", borderRadius: 3, padding: "2px 8px" }}>
+                <span style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1px", background: "#7a5c3a18", border: "1.5px solid #7a5c3a", color: "#7a5c3a", borderRadius: 3, padding: "2px 8px" }}>
                   Box {box}
                 </span>
               )}
+              {pubLabel && (
+                <span style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1px", background: "var(--surface2)", border: "1px solid var(--border)", color: "var(--muted2)", borderRadius: 3, padding: "2px 8px" }}>
+                  📅 {pubLabel}
+                </span>
+              )}
               {isKey && (
-                <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem", letterSpacing: "1px", background: "#fff8e0", color: "#8a6000", border: "1px solid #fde68a", borderRadius: 3, padding: "2px 8px" }}>★ KEY</span>
+                <span style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1px", background: "#fff8e0", color: "#8a6000", border: "1px solid #fde68a", borderRadius: 3, padding: "2px 8px" }}>★ KEY</span>
               )}
               {(comic as { Condition?: string }).Condition && (
-                <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.58rem", letterSpacing: "1px", background: "var(--surface2)", color: "var(--muted2)", border: "1px solid var(--border)", borderRadius: 3, padding: "2px 8px" }}>
+                <span style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1px", background: "var(--surface2)", color: "var(--muted2)", border: "1px solid var(--border)", borderRadius: 3, padding: "2px 8px" }}>
                   {(comic as { Condition?: string }).Condition}
                 </span>
               )}
@@ -305,87 +392,108 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
           <div style={{ flex: 1, overflowY: "auto", padding: "14px 18px 18px" }}>
             {isKey && (comic as { Key_Reason?: string }).Key_Reason && (
               <div style={{ background: "#fff8e0", border: "1.5px solid #fde68a", borderRadius: 6, padding: "10px 14px", marginBottom: 12 }}>
-                <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.6rem", letterSpacing: "2px", color: "#8a6000", marginBottom: 4 }}>KEY REASON</div>
-                <div style={{ fontSize: "0.88rem", color: "#5a4000", lineHeight: 1.5 }}>{(comic as { Key_Reason?: string }).Key_Reason}</div>
+                <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "2px", color: "#8a6000", marginBottom: 4 }}>KEY REASON</div>
+                <div style={{ fontSize: "0.875rem", color: "#5a4000", lineHeight: 1.5 }}>{(comic as { Key_Reason?: string }).Key_Reason}</div>
               </div>
             )}
             {(comic as { Value_NM?: string }).Value_NM && (
               <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
-                <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.6rem", letterSpacing: "1.5px", color: "var(--muted)", paddingTop: 1, flexShrink: 0, width: 70 }}>VALUE NM</span>
-                <span style={{ fontSize: "0.88rem", color: "var(--red)", fontWeight: 600 }}>{(comic as { Value_NM?: string }).Value_NM}</span>
+                <span style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1.5px", color: "var(--muted)", paddingTop: 1, flexShrink: 0, width: 70 }}>VALUE NM</span>
+                <span style={{ fontSize: "0.875rem", color: "var(--red)", fontWeight: 600 }}>{(comic as { Value_NM?: string }).Value_NM}</span>
               </div>
             )}
 
-            {/* ── Flag cover as incorrect ── */}
+            {/* ── Cover audit: flag incorrect, or mark as a variant ── */}
             <div style={{ borderTop: "1px solid var(--border)", paddingTop: 12, marginBottom: 14 }}>
-              <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.6rem", letterSpacing: "2px", color: "var(--muted)", marginBottom: 7 }}>COVER AUDIT</div>
-              <button
-                onClick={handleCoverFlag}
-                style={{
-                  fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.68rem", letterSpacing: "1.5px",
-                  padding: "7px 14px", borderRadius: 5, cursor: "pointer",
-                  border: `1.5px solid ${coverFlagged ? "#c8102e" : "var(--border)"}`,
-                  background: coverFlagged ? "#fff0f0" : "var(--surface2)",
-                  color: coverFlagged ? "#c8102e" : "var(--muted2)",
-                  transition: "all 0.15s",
-                }}
-              >
-                {coverFlagged ? "🚩 COVER FLAGGED AS INCORRECT" : "🚩 FLAG COVER AS INCORRECT"}
-              </button>
-              {coverFlagged && (
-                <div style={{ fontFamily: "'Crimson Pro',serif", fontSize: "0.78rem", color: "var(--muted)", marginTop: 5, fontStyle: "italic" }}>
-                  Queued for review in Cover Catalog → Flagged section
+              <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "2px", color: "var(--muted)", marginBottom: 7 }}>COVER AUDIT</div>
+              <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                <button
+                  onClick={() => handleCoverFlag("incorrect")}
+                  style={{
+                    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1.5px",
+                    padding: "7px 14px", borderRadius: 5, cursor: "pointer",
+                    border: `1.5px solid ${flagState === "incorrect" ? "#c8102e" : "var(--border)"}`,
+                    background: flagState === "incorrect" ? "#fff0f0" : "var(--surface2)",
+                    color: flagState === "incorrect" ? "#c8102e" : "var(--muted2)",
+                    transition: "all 0.15s",
+                  }}
+                >
+                  {flagState === "incorrect" ? "🚩 FLAGGED AS INCORRECT" : "🚩 FLAG AS INCORRECT"}
+                </button>
+                <button
+                  onClick={() => handleCoverFlag("variant")}
+                  style={{
+                    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1.5px",
+                    padding: "7px 14px", borderRadius: 5, cursor: "pointer",
+                    border: `1.5px solid ${flagState === "variant" ? "#7c3aed" : "var(--border)"}`,
+                    background: flagState === "variant" ? "#f3e8ff" : "var(--surface2)",
+                    color: flagState === "variant" ? "#7c3aed" : "var(--muted2)",
+                    transition: "all 0.15s",
+                  }}
+                >
+                  {flagState === "variant" ? "🔀 MARKED AS VARIANT" : "🔀 MINE IS A VARIANT"}
+                </button>
+                <button
+                  onClick={() => handleCoverFlag("dupe")}
+                  style={{
+                    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1.5px",
+                    padding: "7px 14px", borderRadius: 5, cursor: "pointer",
+                    border: `1.5px solid ${flagState === "dupe" ? "#b91c1c" : "var(--border)"}`,
+                    background: flagState === "dupe" ? "#fee2e2" : "var(--surface2)",
+                    color: flagState === "dupe" ? "#b91c1c" : "var(--muted2)",
+                    transition: "all 0.15s",
+                  }}
+                >
+                  {flagState === "dupe" ? "🗑 MARKED — DUPE TO ERASE" : "🗑 MARK AS DUPE TO ERASE"}
+                </button>
+              </div>
+              {flagState && (
+                <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", color: "var(--muted)", marginTop: 5, fontStyle: "italic" }}>
+                  {flagState === "incorrect"
+                    ? "Added to 🚩 flagged covers — export from Cover → Cover Review"
+                    : flagState === "variant"
+                    ? "Marked 🔀 variant — the main cover is right; your copy is a variant of it"
+                    : "Marked 🗑 as a duplicate to erase — export, then run the erase script to delete it"}
                 </div>
               )}
             </div>
 
-            {/* ── Claude note ── */}
+            {/* ── Add a link: paste a cover image URL or a Fandom page URL ── */}
             <div style={{ borderTop: "1px solid var(--border)", paddingTop: 12 }}>
-              <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.6rem", letterSpacing: "2px", color: hasNote ? "#d97706" : "var(--muted)", marginBottom: 7 }}>
-                NOTE TO CLAUDE{hasNote ? " ●" : ""}
+              <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "2px", color: "var(--muted)", marginBottom: 7 }}>ADD A LINK</div>
+
+              {/* pre-loaded search URLs */}
+              <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 9 }}>
+                <a href={imgSearch} target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.8rem", color: "#1d6fa4", textDecoration: "none", background: "var(--surface2)", border: "1px solid var(--border)", borderRadius: 5, padding: "5px 10px" }}>🖼 Find cover image ↗</a>
+                {fandomOpts.map(o => (
+                  <a key={o.url} href={o.url} target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.8rem", color: "#1d6fa4", textDecoration: "none", background: "var(--surface2)", border: "1px solid var(--border)", borderRadius: 5, padding: "5px 10px" }}>🔍 {o.label}</a>
+                ))}
               </div>
-              <textarea
-                value={notes}
-                onChange={e => handleNotes(e.target.value)}
-                placeholder="What needs correcting or adding? Any known values, sources, or context…"
-                style={{
-                  width: "100%", boxSizing: "border-box",
-                  padding: "9px 11px", minHeight: 80,
-                  fontFamily: "'Crimson Pro',serif", fontSize: "0.88rem", lineHeight: 1.55,
-                  color: "var(--text)", background: "var(--surface)",
-                  border: `1.5px solid ${hasNote ? "#d97706" : "var(--border)"}`,
-                  borderRadius: 6, resize: "vertical", outline: "none",
-                }}
-                onFocus={e => e.currentTarget.style.borderColor = "#d97706"}
-                onBlur={e => e.currentTarget.style.borderColor = hasNote ? "#d97706" : "var(--border)"}
-              />
-              {(hasNote || coverFlagged) && (
-                <>
-                  <textarea
-                    id="cm-prompt-preview"
-                    readOnly
-                    value={buildPrompt()}
-                    style={{
-                      width: "100%", boxSizing: "border-box",
-                      padding: "8px 10px", height: 110, marginTop: 8,
-                      fontFamily: "'Courier New',monospace", fontSize: "0.68rem", lineHeight: 1.45,
-                      color: "var(--muted2)", background: "var(--surface)",
-                      border: "1px solid var(--border)", borderRadius: 5,
-                      resize: "none", outline: "none",
-                    }}
-                  />
-                  <button
-                    onClick={copyForClaude}
-                    style={{
-                      marginTop: 8, width: "100%", padding: "9px 0",
-                      fontFamily: "'Bebas Neue',sans-serif", fontSize: "0.7rem", letterSpacing: "1.5px",
-                      background: copied ? "#16a34a" : "#d97706",
-                      border: "none", borderRadius: 6, color: "#fff", cursor: "pointer", transition: "background 0.2s",
-                    }}
-                  >
-                    {copied ? "✓ COPIED TO CLIPBOARD" : "COPY FOR CLAUDE →"}
-                  </button>
-                </>
+
+              {/* image URL */}
+              <div style={{ display: "flex", gap: 6, marginBottom: 6 }}>
+                <input value={imgDraft} onChange={e => setImgDraft(e.target.value)}
+                  onKeyDown={e => { if (e.key === "Enter") doSave("image", imgDraft); }}
+                  placeholder="Paste cover image URL…"
+                  style={{ flex: 1, minWidth: 0, fontSize: "0.8rem", padding: "6px 9px", borderRadius: 5, border: "1px solid var(--border)", background: "var(--bg)", color: "var(--text)" }} />
+                <button onClick={() => doSave("image", imgDraft)} disabled={!imgDraft.trim()}
+                  style={{ fontSize: "0.8rem", fontWeight: 700, padding: "6px 12px", borderRadius: 5, cursor: imgDraft.trim() ? "pointer" : "default", border: "none", background: imgDraft.trim() ? "#1d6fa4" : "var(--surface2)", color: imgDraft.trim() ? "#fff" : "var(--muted)" }}>Save image</button>
+              </div>
+
+              {/* fandom URL */}
+              <div style={{ display: "flex", gap: 6 }}>
+                <input value={fanDraft} onChange={e => setFanDraft(e.target.value)}
+                  onKeyDown={e => { if (e.key === "Enter") doSave("fandom", fanDraft); }}
+                  placeholder="Paste Fandom page link…"
+                  style={{ flex: 1, minWidth: 0, fontSize: "0.8rem", padding: "6px 9px", borderRadius: 5, border: "1px solid var(--border)", background: "var(--bg)", color: "var(--text)" }} />
+                <button onClick={() => doSave("fandom", fanDraft)} disabled={!fanDraft.trim()}
+                  style={{ fontSize: "0.8rem", fontWeight: 700, padding: "6px 12px", borderRadius: 5, cursor: fanDraft.trim() ? "pointer" : "default", border: "none", background: fanDraft.trim() ? "#7c3aed" : "var(--surface2)", color: fanDraft.trim() ? "#fff" : "var(--muted)" }}>Save link</button>
+              </div>
+
+              {savedKind && (
+                <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", color: "#16a34a", marginTop: 6, fontStyle: "italic" }}>
+                  ✓ Saved {savedKind === "image" ? "image" : "Fandom"} link — export from Data Fix, then run the apply script on the Mac.
+                </div>
               )}
             </div>
           </div>

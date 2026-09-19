@@ -1,0 +1,10 @@
+Area,Change,Count,How to cross-validate,Where it lives
+Volume/Year,"Volume corrections (audit+collision+repair), year-anchored to Fandom",269,"Spot-check: Titans #19=Vol4, Trinity #1=Vol2, Flash 2023=Vol6, Cap Brubaker=Vol5",xlsx Volume/Year cols
+Titles,Punctuation splits normalized (Avengers vs. X-Men etc.),9,No 'Avengers Vs.' / 'Star Trek Generations' leftovers,xlsx Title col
+Duplicates,Cross-box dup rows flagged (non-destructive),131 new / 278 total,⚠ Verify Duplicate column populated,xlsx ⚠ Verify Duplicate
+Boxes,Box 104 (DC Absolute) created; caps raised to long-box size,86 books,Box Summary + Box Locations tabs; validator Check 5 passes,xlsx Box Summary/Locations
+eBay pricing,eBay median/avg/low/high/count merged from results JSON,"~9,000",This tab's parent sheet eBay cols now populated,xlsx eBay cols (NEW)
+eBay pricing,"Wrong-issue inflated prices suppressed -> NM fallback (yr>=2000, non-key)",440,Suppressed rows have blank eBay median; see price_gate_review.xlsx,xlsx eBay median blanked
+Covers,Cover coverage via CV + Fandom resolver,99.9%,"covers.json 13,488 entries; app overlay",covers.json (NOT xlsx)
+Row count,Stable throughout; no deletions,"10,914",Validator Check 2; tripwire never fired,xlsx row count
+Validation,Failing checks reduced,4 -> 3,brb_validate.py: 6/6b/11 remain (physical count),brb_validate.py

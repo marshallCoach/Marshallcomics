@@ -1,0 +1,21 @@
+{
+  "generatedAt": "2026-09-19T14:16:33.928Z",
+  "source": "comics_inventory_1809_1937.xlsx",
+  "rowCount": 11239,
+  "blanks": {
+    "title": 0,
+    "box": 0,
+    "issue": 0
+  },
+  "sameBoxDuplicateGroups": 5,
+  "sameBoxDuplicateExcessRows": 5,
+  "fillRate": {
+    "writer": 96.5,
+    "artist": 94.4,
+    "coverArtist": 91,
+    "condition": 78.8,
+    "value": 93.6,
+    "volume": 97.2,
+    "year": 100
+  }
+}
