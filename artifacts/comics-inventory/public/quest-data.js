@@ -1,18 +1,18 @@
-// AUTO-GENERATED quest data — source: comics_inventory_1809_1937.xlsx (11239 rows) · generated 2026-09-18
+// AUTO-GENERATED quest data — source: comics_inventory_1809_1423.xlsx (11234 rows) · generated 2026-09-19
 // Regenerate with: node gen_quest_data.mjs
 window.QUEST_DATA = {
- "source": "comics_inventory_1809_1937.xlsx",
- "generated": "2026-09-18",
- "totalRows": 11239,
+ "source": "comics_inventory_1809_1423.xlsx",
+ "generated": "2026-09-19",
+ "totalRows": 11234,
  "dupe": {
-  "groups": 101,
-  "rows": 213,
-  "excess": 112
+  "groups": 97,
+  "rows": 205,
+  "excess": 108
  },
  "clone": {
-  "groups": 86,
-  "rows": 180,
-  "excess": 94
+  "groups": 83,
+  "rows": 174,
+  "excess": 91
  },
  "overCap": [
   {
@@ -52,9 +52,9 @@ window.QUEST_DATA = {
   },
   {
    "box": 4,
-   "rows": 242,
+   "rows": 241,
    "cap": 240,
-   "over": 2,
+   "over": 1,
    "loc": "Basement Front B — BFB-2"
   },
   {
@@ -97,10 +97,10 @@ window.QUEST_DATA = {
    "code": "BFB-2",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 242,
+   "rows": 241,
    "vcap": 240,
-   "dupes": 12,
-   "clones": 12
+   "dupes": 10,
+   "clones": 10
   },
   {
    "box": 5,
@@ -505,10 +505,10 @@ window.QUEST_DATA = {
    "code": "BFC-2",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 194,
+   "rows": 193,
    "vcap": 200,
-   "dupes": 2,
-   "clones": 2
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 45,
@@ -805,10 +805,10 @@ window.QUEST_DATA = {
    "code": "BDR-1",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 217,
+   "rows": 216,
    "vcap": 240,
-   "dupes": 6,
-   "clones": 6
+   "dupes": 4,
+   "clones": 4
   },
   {
    "box": 80,
@@ -985,9 +985,9 @@ window.QUEST_DATA = {
    "code": "BDR-TOP",
    "status": "Signed",
    "labeledAs": "",
-   "rows": 84,
+   "rows": 83,
    "vcap": 240,
-   "dupes": 6,
+   "dupes": 4,
    "clones": 0
   },
   {
@@ -1034,7 +1034,7 @@ window.QUEST_DATA = {
       },
       {
        "id": "0.5",
-       "text": "Confirm the chat reads back 11,239 rows. If not — STOP, wrong file."
+       "text": "Confirm the chat reads back 11,234 rows. If not — STOP, wrong file."
       }
      ]
     }
@@ -1045,7 +1045,7 @@ window.QUEST_DATA = {
    "title": "The Clones",
    "est": "identical twin rows — safest wins first",
    "accent": "green",
-   "blurb": "Rows that are exact copies of another row: same book, same box, logged twice. Live count: 86 clone groups / 94 excess rows. Highest confidence, lowest effort, biggest visible progress.",
+   "blurb": "Rows that are exact copies of another row: same book, same box, logged twice. Live count: 83 clone groups / 91 excess rows. Highest confidence, lowest effort, biggest visible progress.",
    "sittings": [
     {
      "id": "A1",
