@@ -28,7 +28,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 COVERS = os.path.join(ROOT, "covers.json")
 PUBLIC = os.path.join(ROOT, "artifacts/comics-inventory/public/covers.json")
 UA = "BlackReadBrown-Comics/1.0"
-DELAY = 0.4
+DELAY = 1.5   # gentle pacing — 0.4s hammered Fandom and triggered throttling
 MONTHS = {m.lower(): i for i, m in enumerate(
     ["", "January", "February", "March", "April", "May", "June", "July",
      "August", "September", "October", "November", "December"])}
@@ -113,7 +113,7 @@ def fetch_page(base, title, vol, issue):
         "action": "parse", "page": f"{title} Vol {vol} {issue}",
         "prop": "wikitext", "format": "json", "formatversion": 2, "redirects": 1})
     try:
-        d = json.load(urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": UA}), timeout=25))
+        d = json.load(urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": UA}), timeout=12))
         time.sleep(DELAY)
     except Exception:
         time.sleep(DELAY); return None
@@ -140,7 +140,7 @@ def img_url(base, fn):
         u = base + "?" + urllib.parse.urlencode({
             "action": "query", "titles": "File:" + fn, "prop": "imageinfo",
             "iiprop": "url", "format": "json", "formatversion": 2})
-        d = json.load(urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": UA}), timeout=25))
+        d = json.load(urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": UA}), timeout=12))
         time.sleep(DELAY)
         for p in d.get("query", {}).get("pages", []):
             if "imageinfo" in p:
@@ -199,7 +199,14 @@ def main():
     dates_set = covers_set = 0
     cred_counts = {"writer": 0, "artist": 0, "cover": 0}
     cred_changes = []
-    for rec in recs:
+    for i, rec in enumerate(recs, 1):
+        # Heartbeat + flush every 10 records so a stall is never silent and a
+        # Ctrl-C never loses fetched covers (covers.json otherwise saves only at
+        # the very end). The xlsx (dates/credits) still saves at the end.
+        if i % 10 == 1 or i == len(recs):
+            print(f"  [{i}/{len(recs)}] …", flush=True)
+            if args.apply:
+                json.dump(cov, open(COVERS, "w"))
         pu = parse_url(rec.get("value"))
         if not pu:
             continue
