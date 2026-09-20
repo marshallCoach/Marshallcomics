@@ -6,7 +6,7 @@ correct-era cover even when the inventory's Volume is wrong (Green Lantern 2024
 etc.). Never writes a cover whose year doesn't match. Free (no CV quota)."""
 import glob,os,json,re,time,urllib.parse,urllib.request,shutil,openpyxl
 WIKIS=["https://marvel.fandom.com/api.php","https://dc.fandom.com/api.php"]
-UA="MCI/1.0"; DELAY=0.4; MAXV=11
+UA="MCI/1.0"; DELAY=1.5; MAXV=11
 COVERS="covers.json"; PUBLIC="artifacts/comics-inventory/public/covers.json"
 def ni(v):
     s=str(v).strip().lstrip("#")
@@ -25,7 +25,7 @@ def page(base,title,vol,issue):
     out=None
     try:
         u=base+"?"+urllib.parse.urlencode({"action":"parse","page":f"{title} Vol {vol} {issue}","prop":"wikitext","format":"json","formatversion":2,"redirects":1})
-        d=json.load(urllib.request.urlopen(urllib.request.Request(u,headers={"User-Agent":UA}),timeout=25))
+        d=json.load(urllib.request.urlopen(urllib.request.Request(u,headers={"User-Agent":UA}),timeout=12))
         time.sleep(DELAY)
         wt=d.get("parse",{}).get("wikitext","")
         if wt:
@@ -37,7 +37,7 @@ def page(base,title,vol,issue):
 def imgurl(base,fn):
     try:
         u=base+"?"+urllib.parse.urlencode({"action":"query","titles":"File:"+fn,"prop":"imageinfo","iiprop":"url","format":"json","formatversion":2})
-        d=json.load(urllib.request.urlopen(urllib.request.Request(u,headers={"User-Agent":UA}),timeout=25));time.sleep(DELAY)
+        d=json.load(urllib.request.urlopen(urllib.request.Request(u,headers={"User-Agent":UA}),timeout=12));time.sleep(DELAY)
         for p in d.get("query",{}).get("pages",[]):
             if "imageinfo" in p: return p["imageinfo"][0]["url"].split("/revision/")[0]
     except Exception: pass
@@ -83,7 +83,9 @@ def main():
             covers[f"{t}|||{iss}|||{vol}"]={"url":url,"large":url,"date":str(py),"source":f"fandom-{wiki}-yg"}
             filled+=1
             if filled%25==0: print(f"  [{i}/{len(todo)}] filled {filled} (last {t} #{iss} -> Vol {fv} {py})",flush=True)
-        if i%50==0: json.dump(covers,open(COVERS,"w"))
+        if i%25==0:
+            json.dump(covers,open(COVERS,"w"))
+            print(f"  ...[{i}/{len(todo)}] filled {filled}",flush=True)
     json.dump(covers,open(COVERS,"w")); shutil.copy(COVERS,PUBLIC)
     print(f"\nFilled {filled}/{len(todo)} year-matched covers. Run: node gen_data.mjs",flush=True)
 if __name__=="__main__": main()
