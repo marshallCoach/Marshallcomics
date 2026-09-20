@@ -23,6 +23,24 @@ def ni(v):
     except ValueError:
         return s
 
+# Mirror the app's rename/volume-tolerant fallback (CoverImage.tsx normIndex):
+# a book resolves if its NORMALIZED title+issue maps to a single unambiguous
+# cover — even when it's stored under a different volume number. Without this,
+# mci over-reports missing (counts covers the app actually displays).
+def _nt(t): return re.sub(r"[^a-z0-9]+", " ", t.lower().replace("&", " and ")).strip()
+def _norm_issue(i): return re.sub(r"^0+(\d)", r"\1", str(i).lstrip("#")).strip()
+_nm = {}
+for _k, _e in cov.items():
+    _u = _e.get("url") if isinstance(_e, dict) else _e
+    if not _u:
+        continue
+    _p = _k.split("|||")
+    if len(_p) >= 2:
+        _nm.setdefault((_nt(_p[0]), _norm_issue(_p[1])), set()).add(_u)
+NORM_INDEX = {k for k, v in _nm.items() if len(v) == 1}   # unambiguous only
+def app_resolves(t, iss):
+    return (_nt(t), _norm_issue(iss)) in NORM_INDEX
+
 wb = openpyxl.load_workbook(X, read_only=True, data_only=True)
 ws = next(w for w in wb.worksheets if w.title.startswith("✅ Clean Inventory"))
 rows = list(ws.iter_rows(values_only=True)); H = [str(h).strip() if h else "" for h in rows[0]]
@@ -38,7 +56,8 @@ for r in rows[1:]:
     ident = (t, iss, vol)
     if ident in seen: continue
     seen.add(ident)
-    if filled(f"{t}|||{iss}|||{vol}") or filled(f"{t}|||{iss}") or filled(f"{t}|||#{iss}"):
+    if (filled(f"{t}|||{iss}|||{vol}") or filled(f"{t}|||{iss}") or filled(f"{t}|||#{iss}")
+            or app_resolves(t, iss)):   # cover exists under a different volume — app shows it
         continue
     pub = g(r, "Publisher")
     grp = "Marvel/DC" if pub in ("Marvel", "DC") else "other"
