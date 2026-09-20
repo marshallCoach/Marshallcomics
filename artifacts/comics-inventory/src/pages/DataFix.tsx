@@ -90,6 +90,7 @@ export default function DataFix() {
   const [linkDraft, setLinkDraft] = useState<Record<string, string>>({});
   const [volDraft, setVolDraft] = useState<Record<string, string>>({});
   const [activeProblem, setActiveProblem] = useState<ProblemId | "all">("all");
+  const [sortByCount, setSortByCount] = useState(false);   // title A→Z vs most-issues-first
   const [openGroups, setOpenGroups] = useState<Record<string, boolean>>({});
   const [coverModal, setCoverModal] = useState<{ comic: Comic; large: string | null } | null>(null);
   const [meta, setMeta] = useState<Meta>(() => loadMeta());
@@ -157,13 +158,15 @@ export default function DataFix() {
         (byTitle.get(key) ?? byTitle.set(key, []).get(key)!).push({ c: r.c, id: r.id });
       }
       // Alphabetical by title so you move top-to-bottom; issues ascending within.
-      const pubs = [...byTitle.entries()].sort((a, b) => a[0].localeCompare(b[0])).map(([pub, items]) => {
+      const pubs = [...byTitle.entries()].sort((a, b) =>
+        sortByCount ? (b[1].length - a[1].length || a[0].localeCompare(b[0])) : a[0].localeCompare(b[0])
+      ).map(([pub, items]) => {
         items.sort((a, b) => issueNum(a.c.Issue) - issueNum(b.c.Issue));
         return { pub, items };
       });
       return { pid, problem: PROBLEM_MAP[pid], count: rows.length, pubs };
     }).filter(g => g.count > 0);
-  }, [flagged, fixes, activeProblem]);
+  }, [flagged, fixes, activeProblem, sortByCount]);
 
   const resolve = useCallback((c: Comic, id: string, problem: ProblemId, kind: FixKind, value: string) => {
     // A confirmed cover-buy variant also sets the cover flag (kind "variant")
@@ -238,6 +241,8 @@ export default function DataFix() {
           </button>
         ))}
         <div className="df-actions">
+          <button className={`df-reset${sortByCount ? " on" : ""}`} onClick={() => setSortByCount(s => !s)}
+            title="Toggle title order">{sortByCount ? "↕ Most issues" : "↕ Title A–Z"}</button>
           <button className="df-export" onClick={exportFixes} disabled={!fixes.size}>⬇ Export {fixes.size ? `(${fixes.size})` : ""}</button>
           <button className="df-reset" onClick={undoAll} disabled={!fixes.size}>Reset</button>
         </div>
@@ -338,6 +343,7 @@ const CSS = `
 .df-chip.on .df-chip-n{background:rgba(0,0,0,.25)}
 .df-actions{margin-left:auto;display:flex;gap:8px}
 .df-export,.df-reset{font-size:.75rem;font-weight:600;border-radius:8px;padding:5px 12px;cursor:pointer;border:1px solid var(--border,#2c2c38);background:var(--surface2,#26262f);color:var(--muted2,#bbb)}
+.df-reset.on{background:#1d4ed8;border-color:#1d4ed8;color:#fff}
 .df-export:disabled,.df-reset:disabled{opacity:.4;cursor:default}
 .df-clear{background:#14351f;border:1.5px solid #2f9e6e;color:#7fd0a6;border-radius:12px;padding:26px;text-align:center;font-size:1rem;font-weight:600}
 .df-group{margin-bottom:22px}
