@@ -50,6 +50,16 @@ ROW_DROP_LIMIT = 50      # rows shouldn't fall by more than this without a purge
 ROW_GROW_LIMIT = 1000    # a jump this large is almost certainly the wrong file
 
 C = {"g": "\033[32m", "r": "\033[31m", "y": "\033[33m", "b": "\033[1m", "d": "\033[2m", "x": "\033[0m"}
+def _fn_key(f):
+    # Prefer the DDMM_HHMM timestamp in the filename over mtime: a git checkout
+    # can refresh a stale file's mtime and make it wrongly "newest".
+    m = re.search(r"_(\d{2})(\d{2})_(\d{2})(\d{2})", os.path.basename(f))
+    if m:
+        dd, mm, hh, mi = (int(x) for x in m.groups())
+        return (1, mm, dd, hh, mi, os.path.getmtime(f))
+    return (0, 0, 0, 0, 0, os.path.getmtime(f))
+
+
 def color(s, k): return f"{C[k]}{s}{C['x']}" if sys.stdout.isatty() else s
 def banner(s): print("\n" + color("═" * 64, "d") + f"\n  {color(s, 'b')}\n" + color("═" * 64, "d"))
 def ok(s):   print(color("  ✓ " + s, "g"))
@@ -71,7 +81,7 @@ def detect_xlsx():
              if not os.path.basename(f).startswith("~$")]
     if not files:
         err(f"No comics_inventory_*.xlsx in {ASSETS}"); sys.exit(1)
-    newest = max(files, key=os.path.getmtime)
+    newest = max(files, key=_fn_key)
     return newest
 
 

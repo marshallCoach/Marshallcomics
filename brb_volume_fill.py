@@ -19,12 +19,22 @@ from collections import defaultdict
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
 
+def _fn_key(f):
+    # Prefer the DDMM_HHMM timestamp encoded in the filename over mtime: a
+    # git checkout can refresh a stale file's mtime and make it wrongly "newest".
+    m = re.search(r"_(\d{2})(\d{2})_(\d{2})(\d{2})", os.path.basename(f))
+    if m:
+        dd, mm, hh, mi = (int(x) for x in m.groups())
+        return (1, mm, dd, hh, mi, os.path.getmtime(f))
+    return (0, 0, 0, 0, 0, os.path.getmtime(f))
+
+
 def newest_xlsx():
     c = [f for f in glob.glob(os.path.join(ROOT, "attached_assets/comics_inventory_*.xlsx"))
          if " copy" not in f and not os.path.basename(f).startswith("~$")]
     if not c:
         raise SystemExit("no attached_assets/comics_inventory_*.xlsx found")
-    return max(c, key=os.path.getmtime)
+    return max(c, key=_fn_key)
 
 
 def ni(v):

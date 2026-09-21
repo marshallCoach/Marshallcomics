@@ -20,7 +20,17 @@ def newest(pattern_dirs, pat):
     cands = []
     for d in pattern_dirs:
         cands += glob.glob(os.path.join(os.path.expanduser(d), pat))
-    return max(cands, key=os.path.getmtime) if cands else None
+    return max(cands, key=_fn_key) if cands else None
+
+
+def _fn_key(f):
+    # Prefer the DDMM_HHMM timestamp in the filename over mtime: a git checkout
+    # can refresh a stale file's mtime and make it wrongly "newest".
+    m = re.search(r"_(\d{2})(\d{2})_(\d{2})(\d{2})", os.path.basename(f))
+    if m:
+        dd, mm, hh, mi = (int(x) for x in m.groups())
+        return (1, mm, dd, hh, mi, os.path.getmtime(f))
+    return (0, 0, 0, 0, 0, os.path.getmtime(f))
 
 
 def newest_xlsx():
@@ -28,7 +38,7 @@ def newest_xlsx():
              if " copy" not in f and not os.path.basename(f).startswith("~$")]
     if not cands:
         sys.exit("no attached_assets/comics_inventory_*.xlsx found")
-    return max(cands, key=os.path.getmtime)
+    return max(cands, key=_fn_key)
 
 
 def norm_issue(v):

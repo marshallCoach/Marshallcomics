@@ -28,12 +28,22 @@ NOTE_TAG = {"10775": "Batgirl and the Birds of Prey: Rebirth #1 (one-shot) — d
 VOL_FIX = {"13234": "3"}
 
 
+def _fn_key(f):
+    # Prefer the DDMM_HHMM timestamp in the filename over mtime: a git checkout
+    # can refresh a stale file's mtime and make it wrongly "newest".
+    m = re.search(r"_(\d{2})(\d{2})_(\d{2})(\d{2})", os.path.basename(f))
+    if m:
+        dd, mm, hh, mi = (int(x) for x in m.groups())
+        return (1, mm, dd, hh, mi, os.path.getmtime(f))
+    return (0, 0, 0, 0, 0, os.path.getmtime(f))
+
+
 def newest_xlsx():
     cands = [f for f in glob.glob(os.path.join(ROOT, "attached_assets/comics_inventory_*.xlsx"))
              if " copy" not in f and not os.path.basename(f).startswith("~$")]
     if not cands:
         sys.exit("no attached_assets/comics_inventory_*.xlsx found")
-    return max(cands, key=os.path.getmtime)
+    return max(cands, key=_fn_key)
 
 
 def norm_entry(v):
