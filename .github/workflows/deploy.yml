@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [claude/upbeat-babbage-2f5gr2]
+    branches: [main]
   workflow_dispatch:
 
 permissions:

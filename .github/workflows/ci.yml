@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [claude/upbeat-babbage-2f5gr2]
+    branches: [main]
   pull_request:
 
 jobs:
