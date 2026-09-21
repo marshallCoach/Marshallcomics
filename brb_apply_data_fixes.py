@@ -33,7 +33,17 @@ def newest(dirs, pat):
     c = []
     for d in dirs:
         c += glob.glob(os.path.join(os.path.expanduser(d), pat))
-    return max(c, key=os.path.getmtime) if c else None
+    return max(c, key=_fn_key) if c else None
+
+
+def _fn_key(f):
+    # Prefer the DDMM_HHMM timestamp encoded in the filename over mtime: a
+    # git checkout can refresh a stale file's mtime and make it wrongly "newest".
+    m = re.search(r"_(\d{2})(\d{2})_(\d{2})(\d{2})", os.path.basename(f))
+    if m:
+        dd, mm, hh, mi = (int(x) for x in m.groups())
+        return (1, mm, dd, hh, mi, os.path.getmtime(f))
+    return (0, 0, 0, 0, 0, os.path.getmtime(f))
 
 
 def newest_xlsx():
