@@ -42,6 +42,7 @@ import ComicRoulette from "@/pages/ComicRoulette";
 import LifeArchive from "@/pages/LifeArchive";
 import DataFix from "@/pages/DataFix";
 import TitleFixes from "@/pages/TitleFixes";
+import VolumeConfirm from "@/pages/VolumeConfirm";
 import OfflineCovers from "@/components/OfflineCovers";
 import FlaggedCount from "@/components/FlaggedCount";
 import PasswordGate from "@/components/PasswordGate";
@@ -50,7 +51,7 @@ import { BookOpen, Boxes, Wrench, Image, Briefcase, Film, Archive, Sparkles } fr
 type TabId =
   | "summary" | "everything" | "collection" | "boxkeys" | "stats" | "runs" | "runsvolumes" | "recent" | "releasetimeline" | "dataview"
   | "calendar" | "showplanner" | "cgc" | "signings" | "actionplan" | "timeline" | "boxvisual"
-  | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "duplicates" | "dupchecklist" | "datafix" | "titlefixes" | "history"
+  | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "duplicates" | "dupchecklist" | "datafix" | "titlefixes" | "volumeconfirm" | "history"
   | "orgpath" | "volumes" | "boxlabels" | "keycatalog" | "covercatalog" | "coverreview" | "missingcovers" | "boxquest" | "boxmap"
   | "ebaypipeline" | "opsreference" | "ebaylistingguide" | "roulette" | "lifearchive";
 
@@ -106,6 +107,7 @@ const NAV = [
     tabs: [
       { id: "datafix",      label: "Data Fix" },
       { id: "titlefixes",   label: "Title Fixes" },
+      { id: "volumeconfirm", label: "Volume Confirm" },
       { id: "duplicates",   label: "Duplicates" },
       { id: "dupchecklist", label: "Dup Hunt" },
     ],
@@ -354,6 +356,7 @@ export default function App() {
         {activeTab === "dupchecklist"  && <DupCheckList />}
         {activeTab === "datafix"       && <DataFix />}
         {activeTab === "titlefixes"    && <TitleFixes />}
+        {activeTab === "volumeconfirm" && <VolumeConfirm />}
         {activeTab === "history"     && <ComicHistory />}
         {activeTab === "keycatalog"  && <KeyCatalog />}
         {activeTab === "covercatalog" && <CoverCatalog />}
