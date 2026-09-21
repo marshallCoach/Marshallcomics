@@ -1,18 +1,18 @@
-// AUTO-GENERATED quest data — source: comics_inventory_2109_1335.xlsx (11234 rows) · generated 2026-09-21
+// AUTO-GENERATED quest data — source: comics_inventory_2109_1351.xlsx (11234 rows) · generated 2026-09-21
 // Regenerate with: node gen_quest_data.mjs
 window.QUEST_DATA = {
- "source": "comics_inventory_2109_1335.xlsx",
+ "source": "comics_inventory_2109_1351.xlsx",
  "generated": "2026-09-21",
  "totalRows": 11234,
  "dupe": {
-  "groups": 97,
-  "rows": 205,
-  "excess": 108
+  "groups": 143,
+  "rows": 301,
+  "excess": 158
  },
  "clone": {
-  "groups": 83,
-  "rows": 174,
-  "excess": 91
+  "groups": 127,
+  "rows": 264,
+  "excess": 137
  },
  "overCap": [
   {
@@ -99,8 +99,8 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 241,
    "vcap": 240,
-   "dupes": 10,
-   "clones": 10
+   "dupes": 12,
+   "clones": 12
   },
   {
    "box": 5,
@@ -111,7 +111,7 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 208,
    "vcap": 240,
-   "dupes": 0,
+   "dupes": 2,
    "clones": 0
   },
   {
@@ -123,8 +123,8 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 117,
    "vcap": 240,
-   "dupes": 4,
-   "clones": 0
+   "dupes": 8,
+   "clones": 4
   },
   {
    "box": 7,
@@ -135,8 +135,8 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 241,
    "vcap": 240,
-   "dupes": 42,
-   "clones": 42
+   "dupes": 56,
+   "clones": 54
   },
   {
    "box": 8,
@@ -159,7 +159,7 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 206,
    "vcap": 240,
-   "dupes": 0,
+   "dupes": 2,
    "clones": 0
   },
   {
@@ -183,8 +183,8 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 187,
    "vcap": 240,
-   "dupes": 8,
-   "clones": 8
+   "dupes": 12,
+   "clones": 12
   },
   {
    "box": 12,
@@ -207,8 +207,8 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 170,
    "vcap": 240,
-   "dupes": 4,
-   "clones": 4
+   "dupes": 20,
+   "clones": 20
   },
   {
    "box": 14,
@@ -231,8 +231,8 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 191,
    "vcap": 150,
-   "dupes": 2,
-   "clones": 2
+   "dupes": 6,
+   "clones": 6
   },
   {
    "box": 16,
@@ -267,8 +267,8 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 172,
    "vcap": 240,
-   "dupes": 0,
-   "clones": 0
+   "dupes": 8,
+   "clones": 8
   },
   {
    "box": 19,
@@ -279,8 +279,8 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 182,
    "vcap": 240,
-   "dupes": 2,
-   "clones": 2
+   "dupes": 10,
+   "clones": 10
   },
   {
    "box": 20,
@@ -303,8 +303,8 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 172,
    "vcap": 240,
-   "dupes": 0,
-   "clones": 0
+   "dupes": 2,
+   "clones": 2
   },
   {
    "box": 22,
@@ -315,8 +315,8 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 167,
    "vcap": 240,
-   "dupes": 0,
-   "clones": 0
+   "dupes": 2,
+   "clones": 2
   },
   {
    "box": 23,
@@ -339,8 +339,8 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 149,
    "vcap": 240,
-   "dupes": 0,
-   "clones": 0
+   "dupes": 2,
+   "clones": 2
   },
   {
    "box": 25,
@@ -351,8 +351,8 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 125,
    "vcap": 240,
-   "dupes": 0,
-   "clones": 0
+   "dupes": 6,
+   "clones": 6
   },
   {
    "box": 26,
@@ -387,8 +387,8 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 121,
    "vcap": 240,
-   "dupes": 0,
-   "clones": 0
+   "dupes": 8,
+   "clones": 8
   },
   {
    "box": 29,
@@ -423,8 +423,8 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 81,
    "vcap": 240,
-   "dupes": 2,
-   "clones": 2
+   "dupes": 7,
+   "clones": 7
   },
   {
    "box": 33,
@@ -915,8 +915,8 @@ window.QUEST_DATA = {
    "labeledAs": "49",
    "rows": 149,
    "vcap": 240,
-   "dupes": 8,
-   "clones": 8
+   "dupes": 10,
+   "clones": 10
   },
   {
    "box": 99,
@@ -963,8 +963,8 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 71,
    "vcap": 240,
-   "dupes": 0,
-   "clones": 0
+   "dupes": 2,
+   "clones": 2
   },
   {
    "box": 104,
@@ -1045,7 +1045,7 @@ window.QUEST_DATA = {
    "title": "The Clones",
    "est": "identical twin rows — safest wins first",
    "accent": "green",
-   "blurb": "Rows that are exact copies of another row: same book, same box, logged twice. Live count: 83 clone groups / 91 excess rows. Highest confidence, lowest effort, biggest visible progress.",
+   "blurb": "Rows that are exact copies of another row: same book, same box, logged twice. Live count: 127 clone groups / 137 excess rows. Highest confidence, lowest effort, biggest visible progress.",
    "sittings": [
     {
      "id": "A1",
