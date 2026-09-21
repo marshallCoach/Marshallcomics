@@ -134,11 +134,7 @@ def main():
     def set_cell(r, field, new, blank_only=False):
         col = cVol if field == "Volume" else cYear
         cur = str(ws.cell(r, col).value or "").strip() if col else ""
-        # Fandom volume propagation is fill-blank-only: never overwrite an
-        # existing Volume. A Fandom URL's volume can disagree with a row's era
-        # (legacy renumbering — e.g. Avengers #203 exists in both 1981 Vol 1 and
-        # 2019 Vol 8), so blanket-overwriting a title run clobbered correct
-        # volumes. Deliberate corrections still go through `solution vol:N`.
+        # blank_only (optional): only fill an empty cell, never overwrite.
         if blank_only and cur:
             stats["volume_kept_existing"] += 1
             return False
@@ -160,20 +156,14 @@ def main():
                 stats["fandom_no_vol_in_url"] += 1
                 continue
             V = m.group(1)
-            title, pub, year = ws.cell(r, cT).value, ws.cell(r, cP).value, ws.cell(r, cYear).value
-            win = run_window(by_key, aliases, str(title or ""), str(pub or ""), year)
-            if win:
-                lo, hi = win
-                n = 0
-                for rr in by_title.get(tight(str(title or "")), []):
-                    ryr = parse_year_range(ws.cell(rr, cYear).value)
-                    if ryr and lo <= ryr[0] and ryr[1] <= hi:
-                        if set_cell(rr, "Volume", V, blank_only=True): n += 1
-                stats["fandom_run_rows"] += n
-                stats["fandom_runs"] += 1
-            else:
-                if set_cell(r, "Volume", V, blank_only=True):
-                    stats["fandom_single"] += 1
+            # A Fandom link is authoritative for the EXACT issue it names, so it
+            # overwrites a wrong Volume on that seed row — but is never propagated
+            # to sibling issues. A title's issues can span several volumes (legacy
+            # renumbering: Avengers #203 is 1981 Vol 1, but the 2018 run is Vol 8),
+            # and blanket propagation clobbered 81 correct Avengers volumes. Each
+            # sibling issue is corrected by its own link.
+            if set_cell(r, "Volume", V):
+                stats["volume_set"] += 1
         elif kind == "solution":
             if val == "vol1":
                 set_cell(r, "Volume", "1"); stats["volume_set"] += 1
