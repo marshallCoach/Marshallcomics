@@ -131,10 +131,21 @@ def main():
     pending = {}      # row -> ("Volume"|"Year", new_value)
     links, stats = [], Counter()
 
-    def set_cell(r, field, new):
+    def set_cell(r, field, new, blank_only=False):
         col = cVol if field == "Volume" else cYear
-        if col and str(ws.cell(r, col).value or "").strip() != str(new):
+        cur = str(ws.cell(r, col).value or "").strip() if col else ""
+        # Fandom volume propagation is fill-blank-only: never overwrite an
+        # existing Volume. A Fandom URL's volume can disagree with a row's era
+        # (legacy renumbering — e.g. Avengers #203 exists in both 1981 Vol 1 and
+        # 2019 Vol 8), so blanket-overwriting a title run clobbered correct
+        # volumes. Deliberate corrections still go through `solution vol:N`.
+        if blank_only and cur:
+            stats["volume_kept_existing"] += 1
+            return False
+        if col and cur != str(new):
             pending[r] = (field, str(new))
+            return True
+        return False
 
     for rec in recs:
         r = rowmap.get(key(rec.get("title"), rec.get("issue"), rec.get("box")))
@@ -157,12 +168,12 @@ def main():
                 for rr in by_title.get(tight(str(title or "")), []):
                     ryr = parse_year_range(ws.cell(rr, cYear).value)
                     if ryr and lo <= ryr[0] and ryr[1] <= hi:
-                        set_cell(rr, "Volume", V); n += 1
+                        if set_cell(rr, "Volume", V, blank_only=True): n += 1
                 stats["fandom_run_rows"] += n
                 stats["fandom_runs"] += 1
             else:
-                set_cell(r, "Volume", V)
-                stats["fandom_single"] += 1
+                if set_cell(r, "Volume", V, blank_only=True):
+                    stats["fandom_single"] += 1
         elif kind == "solution":
             if val == "vol1":
                 set_cell(r, "Volume", "1"); stats["volume_set"] += 1
@@ -191,7 +202,7 @@ def main():
 
     print("\nSUMMARY")
     for k2 in ("fandom_runs", "fandom_run_rows", "fandom_single", "volume_set", "year_set",
-               "acknowledged_no_change", "fandom_no_vol_in_url", "row_not_found"):
+               "volume_kept_existing", "acknowledged_no_change", "fandom_no_vol_in_url", "row_not_found"):
         if stats[k2]:
             print(f"  {k2:22s} {stats[k2]}")
 
