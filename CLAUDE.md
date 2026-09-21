@@ -1,5 +1,9 @@
 # BRB — Marshall Comics · Claude Code Notes
 
+## Response format
+- Commands FIRST, explanations AFTER. Always. Give the runnable lines, then
+  explain what they do underneath.
+
 ## Runbook
 Routine commands + FAQ live in `RUNBOOK.md` — read it for the cover loop, git
 sync, and recurring answers. Robert prefers commands **line-by-line** unless
