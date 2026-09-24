@@ -2,7 +2,7 @@
 // Caches the app shell + cover images so the site works with no connection
 // (e.g. on a plane). Covers auto-cache as you view them; a bulk "Save covers
 // offline" action pre-caches every cover before you go offline.
-const APP = "mc-app-v3";
+const APP = "mc-app-v4";   // bump purges the old app cache (stale covers.json)
 const IMG = "mc-covers-v3";
 const IMG_HOSTS = ["comicvine.gamespot.com", "static.wikia.nocookie.net"];
 const startUrl = () => self.registration.scope + "index.html";
@@ -40,8 +40,25 @@ self.addEventListener("fetch", (e) => {
     return;
   }
 
-  // Same-origin assets (JS/CSS/covers.json/data) — stale-while-revalidate.
+  // Same-origin assets.
   if (url.origin === location.origin) {
+    // Data files (covers.json, gcd_notfound.json, …) change every pipeline run,
+    // so they are NETWORK-FIRST — always fetch fresh, fall back to cache only
+    // when offline. Serving these stale-while-revalidate showed empty/old covers.
+    if (url.pathname.endsWith(".json")) {
+      e.respondWith((async () => {
+        const c = await caches.open(APP);
+        try {
+          const res = await fetch(req);
+          if (res && res.ok) c.put(req, res.clone());
+          return res;
+        } catch {
+          return (await c.match(req)) || Response.error();
+        }
+      })());
+      return;
+    }
+    // Hashed static assets (JS/CSS) — stale-while-revalidate.
     e.respondWith((async () => {
       const c = await caches.open(APP);
       const hit = await c.match(req);
