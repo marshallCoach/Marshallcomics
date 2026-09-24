@@ -18,7 +18,7 @@ type FixKind = "fandom" | "solution";
 interface FixRecord { id: string; title: string; issue: string; box: string; problem: string; kind: FixKind; value: string; at: string; }
 type ProblemId = "no-date" | "date-conflict" | "no-volume" | "no-year" | "likely-variant" | "not-in-gcd";
 
-const PROBLEMS: { id: ProblemId; label: string; blurb: string; color: string; vol?: boolean; solutions: { key: string; label: string }[] }[] = [
+const PROBLEMS: { id: ProblemId; label: string; blurb: string; color: string; vol?: boolean; info?: boolean; solutions: { key: string; label: string }[] }[] = [
   { id: "no-date",       label: "Missing publication date", blurb: "Not matched in GCD/Comic Vine — no on-sale date", color: "#c8102e",
     solutions: [{ key: "cv", label: "Try Comic Vine next run" }, { key: "no-entry", label: "No catalogue entry — accept blank" }] },
   { id: "date-conflict", label: "Year / volume conflict",    blurb: "On-sale date disagrees with Year — year or volume likely wrong", color: "#b45309", vol: true,
@@ -29,10 +29,13 @@ const PROBLEMS: { id: ProblemId; label: string; blurb: string; color: string; vo
     solutions: [{ key: "research", label: "Needs research" }] },
   { id: "likely-variant", label: "Likely variant (cover-buy)", blurb: "In the CC1 cover-buy box — probably a variant of the main cover", color: "#db2777",
     solutions: [{ key: "confirm-variant", label: "✓ Confirm variant" }, { key: "not-variant", label: "Not a variant" }] },
-  { id: "not-in-gcd",    label: "Not in GCD",                blurb: "No GCD series match — needs a Fandom link or a manual call", color: "#0891b2", vol: true,
+  { id: "not-in-gcd",    label: "Not in GCD",                blurb: "Informational — GCD has no series, but most are verified by a Fandom cover or are variants/recent. Not counted as work.", color: "#0891b2", vol: true, info: true,
     solutions: [{ key: "indie", label: "Indie — not catalogued" }, { key: "research", label: "Needs research" }] },
 ];
 const PROBLEM_MAP = Object.fromEntries(PROBLEMS.map(p => [p.id, p]));
+// Informational problems are shown for reference but excluded from the "to go"
+// count and the default (all) view — they need no per-book action here.
+const INFO_PROBLEMS = new Set<ProblemId>(PROBLEMS.filter(p => p.info).map(p => p.id));
 
 function comicId(c: Comic): string {
   return `${(c.Title ?? "").trim()}|||${String(c.Issue ?? "").trim()}|||${(c.Box ?? "").trim()}`;
@@ -129,8 +132,14 @@ export default function DataFix() {
     });
   }, [flagged]);
 
-  const totalProblems = flagged.length;
-  const resolvedCount = useMemo(() => flagged.filter(f => fixes.has(f.id)).length, [flagged, fixes]);
+  // Actionable = rows with at least one non-informational problem. The header
+  // progress, the "to go" number and the "all" view all track actionable work;
+  // informational flags (not-in-gcd) are browsable via their chip but never
+  // inflate the count.
+  const actionableRows = useMemo(
+    () => flagged.filter(f => f.problems.some(p => !INFO_PROBLEMS.has(p))), [flagged]);
+  const totalProblems = actionableRows.length;
+  const resolvedCount = useMemo(() => actionableRows.filter(f => fixes.has(f.id)).length, [actionableRows, fixes]);
   const remaining = totalProblems - resolvedCount;
   const pct = totalProblems ? Math.round((resolvedCount / totalProblems) * 100) : 100;
 
@@ -149,7 +158,9 @@ export default function DataFix() {
   // issue and its siblings are right there; the back-end extrapolation fills
   // the rest of the run from the confirmed series+volume.
   const groups = useMemo(() => {
-    const visibleProblems = activeProblem === "all" ? PROBLEMS.map(p => p.id) : [activeProblem];
+    const visibleProblems = activeProblem === "all"
+      ? PROBLEMS.filter(p => !p.info).map(p => p.id)   // info groups only when their chip is picked
+      : [activeProblem];
     return visibleProblems.map(pid => {
       const rows = flagged.filter(f => f.problems.includes(pid) && !fixes.has(f.id));
       const byTitle = new Map<string, { c: Comic; id: string }[]>();
@@ -235,9 +246,10 @@ export default function DataFix() {
           All problems <span className="df-chip-n">{remaining.toLocaleString()}</span>
         </button>
         {PROBLEMS.map(p => (
-          <button key={p.id} className={`df-chip${activeProblem === p.id ? " on" : ""}`}
-            style={{ ["--pc" as string]: p.color }} onClick={() => setActiveProblem(p.id)}>
-            {p.label} <span className="df-chip-n" style={{ background: p.color }}>{counts[p.id] || 0}</span>
+          <button key={p.id} className={`df-chip${activeProblem === p.id ? " on" : ""}${p.info ? " info" : ""}`}
+            style={{ ["--pc" as string]: p.color }} onClick={() => setActiveProblem(p.id)}
+            title={p.info ? "Informational — not counted toward work to do" : undefined}>
+            {p.info ? "ⓘ " : ""}{p.label} <span className="df-chip-n" style={{ background: p.color }}>{counts[p.id] || 0}</span>
           </button>
         ))}
         <div className="df-actions">
@@ -339,6 +351,8 @@ const CSS = `
 .df-chip{display:inline-flex;align-items:center;gap:7px;font-size:.78rem;font-weight:600;border:1px solid var(--border,#2c2c38);background:var(--surface,#1a1a22);color:var(--muted2,#bbb);border-radius:20px;padding:5px 12px;cursor:pointer;transition:all .15s}
 .df-chip:hover{border-color:var(--pc,#888)}
 .df-chip.on{background:var(--pc,#333);color:#fff;border-color:var(--pc,#333)}
+.df-chip.info{opacity:.62;border-style:dashed}
+.df-chip.info.on{opacity:1}
 .df-chip-n{font-size:.68rem;font-weight:800;background:var(--surface2,#26262f);color:#fff;border-radius:10px;padding:1px 7px;font-variant-numeric:tabular-nums}
 .df-chip.on .df-chip-n{background:rgba(0,0,0,.25)}
 .df-actions{margin-left:auto;display:flex;gap:8px}
