@@ -76,6 +76,58 @@ def run(cmd, label, cwd=ROOT, env=None):
     return proc.returncode, proc.stdout + proc.stderr
 
 
+# Files this pipeline regenerates every run. They are deterministic outputs of
+# the source xlsx, so a local edit to any of them is a stale prior-run output —
+# safe to drop in favor of origin before syncing, because this run rebuilds them.
+GEN_FILES = [
+    "artifacts/comics-inventory/src/data/data3.ts",
+    "covers.json",
+    "artifacts/comics-inventory/public/covers.json",
+    "artifacts/comics-inventory/public/box-quest.html",
+    "artifacts/comics-inventory/public/quest-data.js",
+]
+GEN_FILES_OPT = [
+    "artifacts/comics-inventory/public/title_rename_proposals.json",
+    "artifacts/comics-inventory/public/gcd_notfound.json",
+    "artifacts/comics-inventory/public/validation-report.json",
+    "validation-report.json",
+]
+
+
+def _last_line(s):
+    lines = [l for l in (s or "").strip().splitlines() if l.strip()]
+    return lines[-1].strip() if lines else ""
+
+
+def git_sync():
+    """Bring the tree up to date with origin BEFORE regenerating, so the final
+    push fast-forwards instead of wedging on a conflicted covers.json. Discards
+    local changes to the generated files (stale outputs this run rebuilds) so the
+    rebase can't conflict on them. Best-effort and non-fatal: if it can't sync
+    cleanly it warns and continues, never halting the pipeline or leaving a
+    half-finished merge behind."""
+    banner("0 · GIT SYNC — fast-forward onto origin before regenerating")
+    br = _last_line(run(["git", "rev-parse", "--abbrev-ref", "HEAD"], "git branch")[1]) or "main"
+    if run(["git", "fetch", "origin", br], "git fetch")[0] != 0:
+        warn("git fetch failed (offline?) — skipping sync, continuing.")
+        return
+    if _last_line(run(["git", "rev-list", "--count", f"HEAD..origin/{br}"], "commits behind")[1]) in ("", "0"):
+        ok("Already up to date with origin.")
+        return
+    # Restore only the tracked generated files, then rebase onto origin.
+    present = [f for f in (GEN_FILES + GEN_FILES_OPT) if os.path.exists(os.path.join(ROOT, f))]
+    tracked = [l for l in run(["git", "ls-files", "--"] + present, "tracked generated")[1].splitlines()
+               if l.strip()] if present else []
+    if tracked:
+        run(["git", "checkout", "--"] + tracked, "discard stale generated files")
+    if run(["git", "rebase", f"origin/{br}"], "git rebase onto origin")[0] != 0:
+        run(["git", "rebase", "--abort"], "git rebase --abort")
+        warn("Could not auto-sync (a non-generated file diverged). Continuing on "
+             "local; if the final push is rejected, run: git pull --rebase origin " + br)
+    else:
+        ok("Synced with origin — this run will rebuild generated files on top.")
+
+
 def detect_xlsx():
     files = [f for f in glob.glob(os.path.join(ASSETS, "comics_inventory_*.xlsx"))
              if not os.path.basename(f).startswith("~$")]
@@ -195,6 +247,12 @@ def main():
         if resp.strip().lower() not in ("y", "yes"):
             print("  Aborted."); sys.exit(0)
 
+    # ── 0. GIT SYNC (write runs only) ────────────────────────────────────────
+    # Sync before regenerating so the end-of-run push fast-forwards. Read-only
+    # (--check) runs never touch the tree.
+    if not args.check:
+        git_sync()
+
     # ── 2. VALIDATE ──────────────────────────────────────────────────────────
     banner("2 · VALIDATE")
     code, out = run(["python3", "brb_validate.py", xlsx], "validate")
@@ -266,21 +324,9 @@ def main():
     # ── Optional git commit ──────────────────────────────────────────────────
     if args.commit:
         banner("GIT — commit generated files")
-        gen_files = [
-            "artifacts/comics-inventory/src/data/data3.ts",
-            "covers.json",                                    # root master — commit
-            "artifacts/comics-inventory/public/covers.json",  # so it stops drifting
-            "artifacts/comics-inventory/public/box-quest.html",
-            "artifacts/comics-inventory/public/quest-data.js",
-        ]
-        # Widget data the apply scripts write — stage only if present so the
-        # Title Fixes / Not-in-GCD widgets publish without a manual git add.
-        for opt in ("artifacts/comics-inventory/public/title_rename_proposals.json",
-                    "artifacts/comics-inventory/public/gcd_notfound.json",
-                    "artifacts/comics-inventory/public/validation-report.json",
-                    "validation-report.json"):
-            if os.path.exists(opt):
-                gen_files.append(opt)
+        # Widget data (GEN_FILES_OPT) is staged only if present so the Title
+        # Fixes / Not-in-GCD widgets publish without a manual git add.
+        gen_files = list(GEN_FILES) + [f for f in GEN_FILES_OPT if os.path.exists(os.path.join(ROOT, f))]
         run(["git", "add"] + gen_files, "git add")
         code, _ = run(["git", "commit", "-m", args.commit], "git commit")
         if code == 0:
