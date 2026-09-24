@@ -22,12 +22,25 @@ OUT = os.path.join(ROOT, "artifacts/comics-inventory/public/gcd_notfound.json")
 COVERS = os.path.join(ROOT, "covers.json")
 
 
+COVERBUY_BOXES = {"CC1", "CC2", "CC3", "CC4", "CC5", "CC6"}
+
+
+def _fn_key(f):
+    # Prefer the DDMM_HHMM timestamp in the filename over mtime: a git checkout
+    # can refresh a stale file's mtime and make it wrongly "newest".
+    mm = re.search(r"_(\d{2})(\d{2})_(\d{2})(\d{2})", os.path.basename(f))
+    if mm:
+        dd, mo, hh, mi = (int(x) for x in mm.groups())
+        return (1, mo, dd, hh, mi, os.path.getmtime(f))
+    return (0, 0, 0, 0, 0, os.path.getmtime(f))
+
+
 def latest_xlsx():
     m = [f for f in glob.glob(os.path.join(ROOT, "attached_assets/comics_inventory_*.xlsx"))
          if " copy" not in f and not os.path.basename(f).startswith("~$")]
     if not m:
         sys.exit("no attached_assets/comics_inventory_*.xlsx found")
-    return max(m, key=os.path.getmtime)
+    return max(m, key=_fn_key)
 
 
 def norm_issue(v):
@@ -92,6 +105,9 @@ def main():
         if has_series(title, str(r[pi] or "").strip()):
             continue
         if (title.lower(), norm_issue(r[ii])) in resolved:   # already has a cover → resolved
+            resolved_skipped += 1
+            continue
+        if str(r[bi] or "").strip() in COVERBUY_BOXES:   # cover-buy/variant — GCD won't list it
             resolved_skipped += 1
             continue
         notfound.append(f"{title}|||{norm_issue(r[ii])}|||{str(r[bi] or '').strip()}")

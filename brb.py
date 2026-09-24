@@ -236,6 +236,17 @@ def main():
     banner("6 · FILL RATES")
     run(["python3", "brb_fill_rates.py", xlsx], "fill-rates")
 
+    # ── 6b. GCD NOT-FOUND refresh ────────────────────────────────────────────
+    # The Data Fix "Not in GCD" list excludes books that already have a cover.
+    # covers.json grows every run, so a static list goes stale (581 cover-verified
+    # books lingered once). Regenerate here when the local GCD db is present;
+    # non-fatal so a machine without the db still completes the pipeline.
+    if os.path.exists(os.path.join(ROOT, "gcd_local.sqlite")):
+        banner("6b · GCD NOT-FOUND — python3 brb_gcd_notfound.py")
+        run(["python3", "brb_gcd_notfound.py"], "gcd-notfound")
+    else:
+        warn("Skipping GCD not-found refresh (gcd_local.sqlite not present).")
+
     save_state(xlsx, rows)
 
     # ── Optional credentialed phases ─────────────────────────────────────────
