@@ -190,7 +190,11 @@ def credentialed_phase(name, env_var, cmd, background=False, hint=""):
         return
     banner(f"{name}")
     if background:
-        log = os.path.join(ROOT, f"{name.replace(' ', '_').lower()}.log")
+        # Sanitize the phase name into a safe filename — a label like
+        # "Writer/artist fill" would otherwise become writer/artist_fill.log and
+        # try to open a nonexistent writer/ directory.
+        safe = re.sub(r"[^a-z0-9]+", "_", name.lower()).strip("_") or "phase"
+        log = os.path.join(ROOT, f"{safe}.log")
         with open(log, "a") as lf:
             p = subprocess.Popen(cmd, cwd=ROOT, stdout=lf, stderr=lf)
         ok(f"Launched in background (PID {p.pid}). Log: {os.path.relpath(log, ROOT)}")
