@@ -21,6 +21,7 @@ writes it. After running:
 regenerates data and pushes, OR just commit pub_dates.json directly.
 """
 import argparse, datetime, glob, json, os, sqlite3, sys
+import re
 from collections import Counter
 
 ROOT = os.path.dirname(os.path.abspath(__file__))

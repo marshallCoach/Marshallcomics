@@ -16,6 +16,7 @@ CSV columns (header row required, order-free, extras ignored):
 Then: python3 brb.py --commit "Weekly intake 2026-09-15" --yes
 """
 import argparse, csv, datetime, glob, os, sys
+import re
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 ASSETS = os.path.join(ROOT, "attached_assets")
