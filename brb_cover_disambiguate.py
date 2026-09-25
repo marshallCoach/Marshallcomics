@@ -18,6 +18,7 @@ Then: python3 brb_cover_yeargate.py
       python3 brb.py --commit "disambiguate covers by volume" --yes
 """
 import argparse, glob, json, os, sys
+import re
 from collections import defaultdict
 
 ROOT = os.path.dirname(os.path.abspath(__file__))

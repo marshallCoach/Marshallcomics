@@ -19,6 +19,7 @@ Usage:
     python3 brb_pubdate_fill.py --overwrite
 """
 import argparse, datetime, glob, os, sqlite3, sys
+import re
 from collections import Counter
 
 ROOT = os.path.dirname(os.path.abspath(__file__))

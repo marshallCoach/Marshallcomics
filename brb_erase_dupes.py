@@ -12,6 +12,7 @@ same identity the app uses — so nothing else is touched. Dry-run by default.
 Then: python3 brb.py --commit "erase marked duplicates" --yes
 """
 import argparse, datetime, glob, json, os, sys
+import re
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 

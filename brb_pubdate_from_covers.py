@@ -16,6 +16,7 @@ READ-then-WRITE: writes a new timestamped xlsx, never overwrites the source.
 Then: python3 brb.py --commit "backfill publication dates from covers" --yes
 """
 import argparse, glob, json, os, datetime, openpyxl
+import re
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 

@@ -20,6 +20,7 @@ Dry-run by default; --apply writes a NEW dated xlsx (never edits in place).
 Then: python3 brb.py --commit "resolve reviewed duplicates" --yes
 """
 import argparse, datetime, glob, os, sys
+import re
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
