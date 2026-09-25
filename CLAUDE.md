@@ -40,10 +40,12 @@ Then: `source ~/.zshrc`
 git config --global core.editor "true"
 ```
 
-### Before pushing from Mac — always fetch first
-```
-git pull --rebase origin claude/upbeat-babbage-2f5gr2
-```
+### Don't `git pull` before brb.py — it syncs itself
+`brb.py` runs a GIT SYNC step (step 0) that fetches origin and fast-forwards
+before regenerating, so a manual `git pull --rebase` beforehand is redundant and
+FAILS on the regenerated files ("cannot pull with rebase: You have unstaged
+changes"). Just run `brb.py` directly — it handles the sync. Only pull manually
+when you need a brb.py code change itself (then the tree must be clean first).
 
 ## Terminal habits
 - Run nohup and echo PID as two separate commands — never chained on one line
