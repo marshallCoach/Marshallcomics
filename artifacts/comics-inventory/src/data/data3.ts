@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_2609_1556.xlsx  |  Generated: 2026-09-26
+// Source: comics_inventory_2609_1607.xlsx  |  Generated: 2026-09-26
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -28152,7 +28152,7 @@ Jurgens is a DC copper age legend. Could sign this key.`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
   },
   {
-    Title: `Battle of the Planets`, Issue: `1`, Publisher: `Top Cow/Image`,
+    Title: `Battle of the Planets`, Issue: `1`, Publisher: `Image`,
     Disambig: ``,
     Year: `2002`, Arc: `Sharif/Tortosa`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -28173,7 +28173,7 @@ Jurgens is a DC copper age legend. Could sign this key.`,
     eBay_Avg: 5.72, eBay_Low: 3.25, eBay_High: 10, eBay_Count: 10, eBay_Median: 4,
   },
   {
-    Title: `Battle of the Planets`, Issue: `2`, Publisher: `Top Cow/Image`,
+    Title: `Battle of the Planets`, Issue: `2`, Publisher: `Image`,
     Disambig: ``,
     Year: `2002`, Arc: `Sharif/Tortosa`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -39395,7 +39395,7 @@ Already signed.`,
     eBay_Avg: 13.7, eBay_Low: 6.62, eBay_High: 22.78, eBay_Count: 9, eBay_Median: 12.9,
   },
   {
-    Title: `Blackstar`, Issue: `1`, Publisher: `Titan`,
+    Title: `Blackstar`, Issue: `1`, Publisher: `Titan Comics`,
     Disambig: ``,
     Year: `2025`, Arc: ``, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -81514,7 +81514,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     eBay_Avg: 6.1, eBay_Low: 1.99, eBay_High: 10, eBay_Count: 10, eBay_Median: 5.12,
   },
   {
-    Title: `Firefly`, Issue: `1`, Publisher: `Boom Studios`,
+    Title: `Firefly`, Issue: `1`, Publisher: `BOOM! Studios`,
     Disambig: ``,
     Year: `2018`, Arc: `Joss Whedon / Greg Pak — The Outlaw Ma Reynolds`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -81535,7 +81535,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     eBay_Avg: 6.89, eBay_Low: 3.99, eBay_High: 9.99, eBay_Count: 8, eBay_Median: 7.32,
   },
   {
-    Title: `Firefly`, Issue: `2`, Publisher: `Boom Studios`,
+    Title: `Firefly`, Issue: `2`, Publisher: `BOOM! Studios`,
     Disambig: ``,
     Year: `2018`, Arc: `Greg Pak`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -81556,7 +81556,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     eBay_Avg: 6.1, eBay_Low: 2.95, eBay_High: 9.99, eBay_Count: 7, eBay_Median: 5,
   },
   {
-    Title: `Firefly`, Issue: `7`, Publisher: `Boom Studios`,
+    Title: `Firefly`, Issue: `7`, Publisher: `BOOM! Studios`,
     Disambig: ``,
     Year: `2019`, Arc: `Greg Pak`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -81577,7 +81577,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     eBay_Avg: 9.23, eBay_Low: 1.49, eBay_High: 20.86, eBay_Count: 10, eBay_Median: 9.5,
   },
   {
-    Title: `Firefly`, Issue: `8`, Publisher: `Boom Studios`,
+    Title: `Firefly`, Issue: `8`, Publisher: `BOOM! Studios`,
     Disambig: ``,
     Year: `2019`, Arc: `Greg Pak`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -81598,7 +81598,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     eBay_Avg: 7.65, eBay_Low: 4.2, eBay_High: 17.34, eBay_Count: 9, eBay_Median: 7.11,
   },
   {
-    Title: `Firefly`, Issue: `9`, Publisher: `Boom Studios`,
+    Title: `Firefly`, Issue: `9`, Publisher: `BOOM! Studios`,
     Disambig: ``,
     Year: `2019`, Arc: `Greg Pak`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -81619,7 +81619,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     eBay_Avg: 12.02, eBay_Low: 3.2, eBay_High: 28.99, eBay_Count: 9, eBay_Median: 10.67,
   },
   {
-    Title: `Firefly`, Issue: `11`, Publisher: `Boom Studios`,
+    Title: `Firefly`, Issue: `11`, Publisher: `BOOM! Studios`,
     Disambig: ``,
     Year: `2019`, Arc: `Greg Pak`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -81640,7 +81640,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     eBay_Avg: 6.51, eBay_Low: 3.13, eBay_High: 11.89, eBay_Count: 10, eBay_Median: 5.63,
   },
   {
-    Title: `Firefly`, Issue: `12`, Publisher: `Boom Studios`,
+    Title: `Firefly`, Issue: `12`, Publisher: `BOOM! Studios`,
     Disambig: ``,
     Year: `2019`, Arc: `Greg Pak`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -81661,7 +81661,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     eBay_Avg: 9.25, eBay_Low: 3.2, eBay_High: 15, eBay_Count: 10, eBay_Median: 9.98,
   },
   {
-    Title: `Firefly`, Issue: `13`, Publisher: `Boom Studios`,
+    Title: `Firefly`, Issue: `13`, Publisher: `BOOM! Studios`,
     Disambig: ``,
     Year: `2019`, Arc: `Greg Pak`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -81682,7 +81682,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     eBay_Avg: 14.99, eBay_Low: 4, eBay_High: 25.98, eBay_Count: 4, eBay_Median: 14.99,
   },
   {
-    Title: `Firefly`, Issue: `14`, Publisher: `Boom Studios`,
+    Title: `Firefly`, Issue: `14`, Publisher: `BOOM! Studios`,
     Disambig: ``,
     Year: `2019`, Arc: `Greg Pak`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -81703,7 +81703,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     eBay_Avg: 16.69, eBay_Low: 9.36, eBay_High: 40, eBay_Count: 9, eBay_Median: 14.26,
   },
   {
-    Title: `Firefly`, Issue: `16`, Publisher: `Boom Studios`,
+    Title: `Firefly`, Issue: `16`, Publisher: `BOOM! Studios`,
     Disambig: ``,
     Year: `2020`, Arc: `Greg Pak`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -84412,7 +84412,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Gatchaman`, Issue: `1`, Publisher: `Mad Cave`,
+    Title: `Gatchaman`, Issue: `1`, Publisher: `Mad Cave Studios`,
     Disambig: ``,
     Year: `2024`, Arc: `Gatchaman — IDW`, Key: `YES`,
     Key_Reason: `Gatchaman #1 IDW relaunch`, First_App: ``,
@@ -84433,7 +84433,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
   },
   {
-    Title: `Gatchaman`, Issue: `3`, Publisher: `Mad Cave`,
+    Title: `Gatchaman`, Issue: `3`, Publisher: `Mad Cave Studios`,
     Disambig: ``,
     Year: `2024`, Arc: `Cullen Bunn — Sanford Green cover`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -84454,7 +84454,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
   },
   {
-    Title: `Gatchaman`, Issue: `5`, Publisher: `Mad Cave`,
+    Title: `Gatchaman`, Issue: `5`, Publisher: `Mad Cave Studios`,
     Disambig: ``,
     Year: `2024`, Arc: `Cullen Bunn — Sanford Green cover`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -84475,7 +84475,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
   },
   {
-    Title: `Gatchaman`, Issue: `2`, Publisher: `Mad Cave`,
+    Title: `Gatchaman`, Issue: `2`, Publisher: `Mad Cave Studios`,
     Disambig: ``,
     Year: `2024`, Arc: `Gatchaman — IDW`, Key: `NO`,
     Key_Reason: `#2`, First_App: ``,
@@ -84496,7 +84496,7 @@ Skottie Young confirmed. Bring all 5 FF connecting covers — get entire set wit
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
   },
   {
-    Title: `Gatchaman`, Issue: `4`, Publisher: `Mad Cave`,
+    Title: `Gatchaman`, Issue: `4`, Publisher: `Mad Cave Studios`,
     Disambig: ``,
     Year: `2024`, Arc: `Gatchaman — IDW`, Key: `NO`,
     Key_Reason: `#4`, First_App: ``,
@@ -122006,7 +122006,7 @@ Jurgens is a DC legend — could sign this.`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `M.A.S.K.`, Issue: `2`, Publisher: `Image/Skybound`,
+    Title: `M.A.S.K.`, Issue: `2`, Publisher: `Skybound`,
     Disambig: ``,
     Year: `2026`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
@@ -122132,7 +122132,7 @@ Jurgens is a DC legend — could sign this.`,
     eBay_Avg: 4.75, eBay_Low: 3.74, eBay_High: 5.99, eBay_Count: 9, eBay_Median: 4.63,
   },
   {
-    Title: `Magic Order`, Issue: `0`, Publisher: `Image/Netflix`,
+    Title: `Magic Order`, Issue: `0`, Publisher: `Image`,
     Disambig: ``,
     Year: `2018`, Arc: `Mark Millar / Olivier Coipel — Trade Paperback — reader copy — NOT individual issue`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -125892,7 +125892,7 @@ Signed — verify Priest connection to this book.`,
     eBay_Avg: 4.01, eBay_Low: 1.99, eBay_High: 7.95, eBay_Count: 9, eBay_Median: 3.51,
   },
   {
-    Title: `Mighty Morphin Power Rangers`, Issue: `101`, Publisher: `BOOM!`,
+    Title: `Mighty Morphin Power Rangers`, Issue: `101`, Publisher: `BOOM! Studios`,
     Disambig: ``,
     Year: `2025`, Arc: ``, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -130493,7 +130493,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: 4.79, eBay_Low: 3.19, eBay_High: 11.5, eBay_Count: 8, eBay_Median: 3.9,
   },
   {
-    Title: `Mulan Revelations`, Issue: `1`, Publisher: `Indie`,
+    Title: `Mulan Revelations`, Issue: `1`, Publisher: `Independent`,
     Disambig: ``,
     Year: `2023`, Arc: `Moulin Revelations — Robert Alter`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -130514,7 +130514,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
   },
   {
-    Title: `Mulan Revelations`, Issue: `2`, Publisher: `Indie`,
+    Title: `Mulan Revelations`, Issue: `2`, Publisher: `Independent`,
     Disambig: ``,
     Year: `2023`, Arc: `Moulin Revelations — Robert Alter`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -130535,7 +130535,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: 0, eBay_Median: null,
   },
   {
-    Title: `Mulan Revelations`, Issue: `3`, Publisher: `Indie`,
+    Title: `Mulan Revelations`, Issue: `3`, Publisher: `Independent`,
     Disambig: ``,
     Year: `2023`, Arc: `Moulin Revelations — Robert Alter`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -145744,7 +145744,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     eBay_Avg: 9.99, eBay_Low: 9.99, eBay_High: 9.99, eBay_Count: 3, eBay_Median: 9.99,
   },
   {
-    Title: `Radiant Black`, Issue: `2`, Publisher: `Image/Skybound`,
+    Title: `Radiant Black`, Issue: `2`, Publisher: `Skybound`,
     Disambig: ``,
     Year: `2021`, Arc: `Radiant Black — Kyle Higgins`, Key: `YES`,
     Key_Reason: `Radiant Black #2 — Kyle Higgins Skybound superhero — modern Image key`, First_App: ``,
@@ -145765,7 +145765,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     eBay_Avg: 5.14, eBay_Low: 3.5, eBay_High: 8.01, eBay_Count: 10, eBay_Median: 4.5,
   },
   {
-    Title: `Radiant Black`, Issue: `3`, Publisher: `Image/Skybound`,
+    Title: `Radiant Black`, Issue: `3`, Publisher: `Skybound`,
     Disambig: ``,
     Year: `2021`, Arc: `Radiant Black — Kyle Higgins`, Key: `NO`,
     Key_Reason: `#3`, First_App: ``,
@@ -145786,7 +145786,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     eBay_Avg: 7.59, eBay_Low: 1.99, eBay_High: 15, eBay_Count: 8, eBay_Median: 6.48,
   },
   {
-    Title: `Radiant Black`, Issue: `4`, Publisher: `Image/Skybound`,
+    Title: `Radiant Black`, Issue: `4`, Publisher: `Skybound`,
     Disambig: ``,
     Year: `2021`, Arc: `Radiant Black — Kyle Higgins`, Key: `NO`,
     Key_Reason: `#4`, First_App: ``,
@@ -145807,7 +145807,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     eBay_Avg: 5.77, eBay_Low: 3.5, eBay_High: 12.99, eBay_Count: 7, eBay_Median: 3.99,
   },
   {
-    Title: `Radiant Black`, Issue: `5`, Publisher: `Image/Skybound`,
+    Title: `Radiant Black`, Issue: `5`, Publisher: `Skybound`,
     Disambig: ``,
     Year: `2021`, Arc: `Radiant Black — Kyle Higgins`, Key: `NO`,
     Key_Reason: `#5`, First_App: ``,
@@ -145828,7 +145828,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     eBay_Avg: 4.71, eBay_Low: 3.9, eBay_High: 6.96, eBay_Count: 7, eBay_Median: 3.9,
   },
   {
-    Title: `Radiant Black`, Issue: `6`, Publisher: `Image/Skybound`,
+    Title: `Radiant Black`, Issue: `6`, Publisher: `Skybound`,
     Disambig: ``,
     Year: `2021`, Arc: `Radiant Black — Kyle Higgins`, Key: `NO`,
     Key_Reason: `#6`, First_App: ``,
@@ -145849,7 +145849,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     eBay_Avg: 5.49, eBay_Low: 1.98, eBay_High: 12, eBay_Count: 9, eBay_Median: 4.19,
   },
   {
-    Title: `Radiant Black`, Issue: `7`, Publisher: `Image/Skybound`,
+    Title: `Radiant Black`, Issue: `7`, Publisher: `Skybound`,
     Disambig: ``,
     Year: `2021`, Arc: `Radiant Black — Kyle Higgins`, Key: `NO`,
     Key_Reason: `#7`, First_App: ``,
@@ -145870,7 +145870,7 @@ Dan Jurgens penciled Nightwing-adjacent DC copper age work. Confirmed 2026 all 3
     eBay_Avg: 3.26, eBay_Low: 1, eBay_High: 6.59, eBay_Count: 6, eBay_Median: 2.76,
   },
   {
-    Title: `Radiant Black`, Issue: `8`, Publisher: `Image/Skybound`,
+    Title: `Radiant Black`, Issue: `8`, Publisher: `Skybound`,
     Disambig: ``,
     Year: `2021`, Arc: `Radiant Black — Kyle Higgins`, Key: `NO`,
     Key_Reason: `#8`, First_App: ``,
@@ -169037,7 +169037,7 @@ Already signed — CGC SS witness opportunity at Terrificon. SY confirmed all 3 
     eBay_Avg: 15.51, eBay_Low: 3.95, eBay_High: 33.15, eBay_Count: 8, eBay_Median: 13.97,
   },
   {
-    Title: `Strange Fruit`, Issue: `2`, Publisher: `Boom Studios`,
+    Title: `Strange Fruit`, Issue: `2`, Publisher: `BOOM! Studios`,
     Disambig: ``,
     Year: `2015`, Arc: `2 of 4 — JG Jones / Mark Waid`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -169058,7 +169058,7 @@ Already signed — CGC SS witness opportunity at Terrificon. SY confirmed all 3 
     eBay_Avg: 9.39, eBay_Low: 4, eBay_High: 9.99, eBay_Count: 10, eBay_Median: 9.99,
   },
   {
-    Title: `Strange Fruit`, Issue: `3`, Publisher: `Boom Studios`,
+    Title: `Strange Fruit`, Issue: `3`, Publisher: `BOOM! Studios`,
     Disambig: ``,
     Year: `2015`, Arc: `3 of 4 — JG Jones / Mark Waid`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -169079,7 +169079,7 @@ Already signed — CGC SS witness opportunity at Terrificon. SY confirmed all 3 
     eBay_Avg: 8, eBay_Low: 4, eBay_High: 9.99, eBay_Count: 4, eBay_Median: 9,
   },
   {
-    Title: `Strange Fruit`, Issue: `4`, Publisher: `Boom Studios`,
+    Title: `Strange Fruit`, Issue: `4`, Publisher: `BOOM! Studios`,
     Disambig: ``,
     Year: `2016`, Arc: `4 of 4 — JG Jones / Mark Waid`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -196603,7 +196603,7 @@ DeFalco wrote the 1st New Warriors appearance.`,
     eBay_Avg: null, eBay_Low: 4.67, eBay_High: 100, eBay_Count: 10, eBay_Median: null,
   },
   {
-    Title: `Torchwood`, Issue: `1`, Publisher: `Titan`,
+    Title: `Torchwood`, Issue: `1`, Publisher: `Titan Comics`,
     Disambig: ``,
     Year: `2010`, Arc: `John Barrowman / Tommy Lee Edwards`, Key: `YES`,
     Key_Reason: `Torchwood #1 — John Barrowman writes — Tommy Lee Edwards art — rare BBC tie-in comic by the show's star`, First_App: ``,
@@ -196792,7 +196792,7 @@ DeFalco wrote the 1st New Warriors appearance.`,
     eBay_Avg: 12.99, eBay_Low: 1, eBay_High: 29.99, eBay_Count: 9, eBay_Median: 12.99,
   },
   {
-    Title: `Transformers`, Issue: `12`, Publisher: `Image/Skybound`,
+    Title: `Transformers`, Issue: `12`, Publisher: `Skybound`,
     Disambig: ``,
     Year: `2023`, Arc: `Transformers DWJ Skybound extends`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -196813,7 +196813,7 @@ DeFalco wrote the 1st New Warriors appearance.`,
     eBay_Avg: 11.74, eBay_Low: 3.29, eBay_High: 25.25, eBay_Count: 8, eBay_Median: 8.12,
   },
   {
-    Title: `Transformers`, Issue: `13`, Publisher: `Image/Skybound`,
+    Title: `Transformers`, Issue: `13`, Publisher: `Skybound`,
     Disambig: ``,
     Year: `2023`, Arc: `Transformers DWJ Skybound extends`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -196834,7 +196834,7 @@ DeFalco wrote the 1st New Warriors appearance.`,
     eBay_Avg: 10.78, eBay_Low: 2.99, eBay_High: 24.99, eBay_Count: 6, eBay_Median: 6.72,
   },
   {
-    Title: `Transformers`, Issue: `14`, Publisher: `Image/Skybound`,
+    Title: `Transformers`, Issue: `14`, Publisher: `Skybound`,
     Disambig: ``,
     Year: `2023`, Arc: `Transformers DWJ Skybound extends`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -196855,7 +196855,7 @@ DeFalco wrote the 1st New Warriors appearance.`,
     eBay_Avg: 7.53, eBay_Low: 2.99, eBay_High: 10.59, eBay_Count: 10, eBay_Median: 8.99,
   },
   {
-    Title: `Transformers`, Issue: `15`, Publisher: `Image/Skybound`,
+    Title: `Transformers`, Issue: `15`, Publisher: `Skybound`,
     Disambig: ``,
     Year: `2023`, Arc: `Transformers DWJ Skybound extends`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -196876,7 +196876,7 @@ DeFalco wrote the 1st New Warriors appearance.`,
     eBay_Avg: 14.82, eBay_Low: 2.99, eBay_High: 25.99, eBay_Count: 9, eBay_Median: 14.99,
   },
   {
-    Title: `Transformers`, Issue: `16`, Publisher: `Image/Skybound`,
+    Title: `Transformers`, Issue: `16`, Publisher: `Skybound`,
     Disambig: ``,
     Year: `2025`, Arc: `Transformers DWJ Skybound extends`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -196897,7 +196897,7 @@ DeFalco wrote the 1st New Warriors appearance.`,
     eBay_Avg: 15.36, eBay_Low: 2.44, eBay_High: 35, eBay_Count: 8, eBay_Median: 13.29,
   },
   {
-    Title: `Transformers`, Issue: `1`, Publisher: `Image/Skybound`,
+    Title: `Transformers`, Issue: `1`, Publisher: `Skybound`,
     Disambig: ``,
     Year: `2023`, Arc: `Transformers DWJ`, Key: `YES`,
     Key_Reason: `Transformers #1 Daniel Warren Johnson — Skybound relaunch — DWJ is the definitive modern Transformers — 9.8 = $80-150`, First_App: `New Transformers ongoing (DWJ era)`,
@@ -196918,7 +196918,7 @@ DeFalco wrote the 1st New Warriors appearance.`,
     eBay_Avg: 41.11, eBay_Low: 12.99, eBay_High: 79.99, eBay_Count: 8, eBay_Median: 38.97,
   },
   {
-    Title: `Transformers`, Issue: `17`, Publisher: `Skybound/Image`,
+    Title: `Transformers`, Issue: `17`, Publisher: `Skybound`,
     Disambig: ``,
     Year: `2024`, Arc: `Daniel Warren Johnson — Skybound`, Key: `YES`,
     Key_Reason: `Daniel Warren Johnson Skybound — hot spec`, First_App: ``,
@@ -196960,7 +196960,7 @@ DeFalco wrote the 1st New Warriors appearance.`,
     eBay_Avg: 25.6, eBay_Low: 3.49, eBay_High: 49.99, eBay_Count: 10, eBay_Median: 27.74,
   },
   {
-    Title: `Transformers`, Issue: `34`, Publisher: `Image/Skybound`,
+    Title: `Transformers`, Issue: `34`, Publisher: `Skybound`,
     Disambig: ``,
     Year: `2026`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
@@ -198094,7 +198094,7 @@ DeFalco wrote the 1st New Warriors appearance.`,
     eBay_Avg: 8.45, eBay_Low: 1, eBay_High: 22.05, eBay_Count: 9, eBay_Median: 5,
   },
   {
-    Title: `UFO Robot Grendizer`, Issue: `1`, Publisher: `Titan`,
+    Title: `UFO Robot Grendizer`, Issue: `1`, Publisher: `Titan Comics`,
     Disambig: ``,
     Year: `2025`, Arc: ``, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -215089,7 +215089,7 @@ Tom King SIGNED this book already. CGC SS WITNESS on-site at Terrificon — high
     eBay_Avg: null, eBay_Low: 2, eBay_High: 28.75, eBay_Count: 7, eBay_Median: null,
   },
   {
-    Title: `WildC.A.T.s`, Issue: `1`, Publisher: `DC Comics`,
+    Title: `WildC.A.T.s`, Issue: `1`, Publisher: `DC`,
     Disambig: ``,
     Year: `2023`, Arc: `Better Living Through Violence`, Key: `NO`,
     Key_Reason: `WildCATs vol 2 #1 — Grant Morrison relaunch of Wildstorm's flagship team — Jim Lee / Scott Williams`, First_App: ``,
@@ -215279,7 +215279,7 @@ WildCATs #2 — Jim Lee pencils, Scott Williams inks. Both confirmed 2026. SAT O
     eBay_Avg: 3.25, eBay_Low: 1.98, eBay_High: 5.99, eBay_Count: 7, eBay_Median: 2.95,
   },
   {
-    Title: `WildC.A.T.s`, Issue: `2`, Publisher: `Image/WildStorm`,
+    Title: `WildC.A.T.s`, Issue: `2`, Publisher: `Image`,
     Disambig: ``,
     Year: `1992`, Arc: `WildCATs Jim Lee original run — new signed copy`, Key: `YES`,
     Key_Reason: `WildC.A.T.s #2 — signed by Jim Lee with Comics Express Certificate of Authenticity. Jim Lee creator-owned Image founding issue. Include COA with CGC x JSA submission for Yellow/Black Authentic Autograph label.`, First_App: ``,
@@ -233889,7 +233889,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Destination Kill`, Issue: `4`, Publisher: `Mad Cave`,
+    Title: `Destination Kill`, Issue: `4`, Publisher: `Mad Cave Studios`,
     Disambig: ``,
     Year: `2025`, Arc: ``, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -234792,7 +234792,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Ben 10`, Issue: `5`, Publisher: ``,
+    Title: `Ben 10`, Issue: `5`, Publisher: `Dynamite`,
     Disambig: ``,
     Year: `2026`, Arc: ``, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -235422,7 +235422,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Gatchaman`, Issue: `1`, Publisher: `Mad Cave`,
+    Title: `Gatchaman`, Issue: `1`, Publisher: `Mad Cave Studios`,
     Disambig: ``,
     Year: `2024`, Arc: ``, Key: `NO`,
     Key_Reason: ``, First_App: ``,
@@ -244655,7 +244655,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Blackstar`, Issue: `1`, Publisher: `Titan`,
+    Title: `Blackstar`, Issue: `1`, Publisher: `Titan Comics`,
     Year: `2025`, Volume: `1`, Cover_Artist: ``,
     Key: `NO`, Key_Reason: ``,
     Signed: `NO`, Signed_By: ``,
@@ -249765,7 +249765,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `M.A.S.K.`, Issue: `2`, Publisher: `Image/Skybound`,
+    Title: `M.A.S.K.`, Issue: `2`, Publisher: `Skybound`,
     Year: `2026`, Volume: `1`, Cover_Artist: `Pye Parr`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
@@ -249955,7 +249955,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Mighty Morphin Power Rangers`, Issue: `101`, Publisher: `BOOM!`,
+    Title: `Mighty Morphin Power Rangers`, Issue: `101`, Publisher: `BOOM! Studios`,
     Year: `2025`, Volume: `1`, Cover_Artist: `Arif Prianto`,
     Key: `NO`, Key_Reason: ``,
     Signed: `NO`, Signed_By: ``,
@@ -254695,7 +254695,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Transformers`, Issue: `34`, Publisher: `Image/Skybound`,
+    Title: `Transformers`, Issue: `34`, Publisher: `Skybound`,
     Year: `2026`, Volume: `1`, Cover_Artist: `David Nakayama`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
@@ -254865,7 +254865,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `UFO Robot Grendizer`, Issue: `1`, Publisher: `Titan`,
+    Title: `UFO Robot Grendizer`, Issue: `1`, Publisher: `Titan Comics`,
     Year: `2025`, Volume: `1`, Cover_Artist: ``,
     Key: `NO`, Key_Reason: ``,
     Signed: `NO`, Signed_By: ``,
@@ -256465,7 +256465,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Destination Kill`, Issue: `4`, Publisher: `Mad Cave`,
+    Title: `Destination Kill`, Issue: `4`, Publisher: `Mad Cave Studios`,
     Year: `2025`, Volume: `1`, Cover_Artist: `Dani`,
     Key: `NO`, Key_Reason: ``,
     Signed: `NO`, Signed_By: ``,
@@ -256495,7 +256495,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Ben 10`, Issue: `5`, Publisher: ``,
+    Title: `Ben 10`, Issue: `5`, Publisher: `Dynamite`,
     Year: `2026`, Volume: `1`, Cover_Artist: ``,
     Key: `NO`, Key_Reason: ``,
     Signed: `NO`, Signed_By: ``,
@@ -256755,7 +256755,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Gatchaman`, Issue: `1`, Publisher: `Mad Cave`,
+    Title: `Gatchaman`, Issue: `1`, Publisher: `Mad Cave Studios`,
     Year: `2024`, Volume: `1`, Cover_Artist: `Inaki Miranda`,
     Key: `NO`, Key_Reason: ``,
     Signed: `NO`, Signed_By: ``,
@@ -257927,7 +257927,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `WildC.A.T.s`, Issue: `2`, Publisher: `Image/WildStorm`,
+    Title: `WildC.A.T.s`, Issue: `2`, Publisher: `Image`,
     Year: `1992`, Volume: `1`, Cover_Artist: `Jim Lee`,
     Key: `YES`, Key_Reason: `WildC.A.T.s #2 — signed by Jim Lee with Comics Express Certificate of Authenticity. Jim Lee creator-owned Image founding issue. Include COA with CGC x JSA submission for Yellow/Black Authentic Autograph label.`,
     Signed: `YES`, Signed_By: `Jim Lee — COA`,
@@ -263789,7 +263789,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Gatchaman`, Issue: `1`, Publisher: `Mad Cave`,
+    Title: `Gatchaman`, Issue: `1`, Publisher: `Mad Cave Studios`,
     Year: `2024`, Volume: `1`, Cover_Artist: `Inaki Miranda`,
     Key: `YES`, Key_Reason: `Gatchaman #1 IDW relaunch`,
     Signed: `NO`, Signed_By: ``,
@@ -267419,7 +267419,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Radiant Black`, Issue: `2`, Publisher: `Image/Skybound`,
+    Title: `Radiant Black`, Issue: `2`, Publisher: `Skybound`,
     Year: `2021`, Volume: `1`, Cover_Artist: `Marcelo Costa`,
     Key: `YES`, Key_Reason: `Radiant Black #2 — Kyle Higgins Skybound superhero — modern Image key`,
     Signed: `NO`, Signed_By: ``,
@@ -270219,7 +270219,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Torchwood`, Issue: `1`, Publisher: `Titan`,
+    Title: `Torchwood`, Issue: `1`, Publisher: `Titan Comics`,
     Year: `2010`, Volume: `1`, Cover_Artist: `Tommy Lee Edwards`,
     Key: `YES`, Key_Reason: `Torchwood #1 — John Barrowman writes — Tommy Lee Edwards art — rare BBC tie-in comic by the show's star`,
     Signed: `NO`, Signed_By: ``,
@@ -270229,7 +270229,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Transformers`, Issue: `1`, Publisher: `Image/Skybound`,
+    Title: `Transformers`, Issue: `1`, Publisher: `Skybound`,
     Year: `2023`, Volume: `1`, Cover_Artist: `Daniel Warren Johnson`,
     Key: `YES`, Key_Reason: `Transformers #1 Daniel Warren Johnson — Skybound relaunch — DWJ is the definitive modern Transformers — 9.8 = $80-150`,
     Signed: `NO`, Signed_By: ``,
@@ -270239,7 +270239,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Transformers`, Issue: `17`, Publisher: `Skybound/Image`,
+    Title: `Transformers`, Issue: `17`, Publisher: `Skybound`,
     Year: `2024`, Volume: `1`, Cover_Artist: `Daniel Warren Johnson`,
     Key: `YES`, Key_Reason: `Daniel Warren Johnson Skybound — hot spec`,
     Signed: `NO`, Signed_By: ``,
@@ -271379,7 +271379,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `WildC.A.T.s`, Issue: `2`, Publisher: `Image/WildStorm`,
+    Title: `WildC.A.T.s`, Issue: `2`, Publisher: `Image`,
     Year: `1992`, Volume: `1`, Cover_Artist: `Jim Lee`,
     Key: `YES`, Key_Reason: `WildC.A.T.s #2 — signed by Jim Lee with Comics Express Certificate of Authenticity. Jim Lee creator-owned Image founding issue. Include COA with CGC x JSA submission for Yellow/Black Authentic Autograph label.`,
     Signed: `YES`, Signed_By: `Jim Lee — COA`,
@@ -273771,7 +273771,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Gatchaman`, Issue: `3`, Publisher: `Mad Cave`,
+    Title: `Gatchaman`, Issue: `3`, Publisher: `Mad Cave Studios`,
     Year: `2024`, Volume: `1`, Cover_Artist: `Inaki Miranda`,
     Key: `NO`, Key_Reason: ``,
     Signed: `NO`, Signed_By: ``,
@@ -273781,7 +273781,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Gatchaman`, Issue: `5`, Publisher: `Mad Cave`,
+    Title: `Gatchaman`, Issue: `5`, Publisher: `Mad Cave Studios`,
     Year: `2024`, Volume: `1`, Cover_Artist: `Inaki Miranda`,
     Key: `NO`, Key_Reason: ``,
     Signed: `NO`, Signed_By: ``,
@@ -273791,7 +273791,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Gatchaman`, Issue: `2`, Publisher: `Mad Cave`,
+    Title: `Gatchaman`, Issue: `2`, Publisher: `Mad Cave Studios`,
     Year: `2024`, Volume: `1`, Cover_Artist: `Inaki Miranda`,
     Key: `NO`, Key_Reason: `#2`,
     Signed: `NO`, Signed_By: ``,
@@ -273801,7 +273801,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Gatchaman`, Issue: `4`, Publisher: `Mad Cave`,
+    Title: `Gatchaman`, Issue: `4`, Publisher: `Mad Cave Studios`,
     Year: `2024`, Volume: `1`, Cover_Artist: `Inaki Miranda`,
     Key: `NO`, Key_Reason: `#4`,
     Signed: `NO`, Signed_By: ``,
