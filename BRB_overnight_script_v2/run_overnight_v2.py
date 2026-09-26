@@ -128,7 +128,15 @@ def safe_write(df, path, sheet, rows_initial, label="checkpoint"):
         log_issue("DATA_LOSS", "safe_write", msg)
         raise RuntimeError(msg)
     assert_box_capacities(df, label=label)
-    df.to_excel(path, sheet_name=sheet, index=False)
+    # Preserve every other sheet (Box Summary, the cover catalogs, Box Locations,
+    # …): start from a copy of the source workbook and replace ONLY the inventory
+    # sheet, instead of writing a fresh single-sheet workbook. A bare df.to_excel
+    # here once dropped all catalogs and box locations from the live site on the
+    # next reingest — this makes that impossible.
+    import shutil
+    shutil.copyfile(INVENTORY_PATH, path)
+    with pd.ExcelWriter(path, engine="openpyxl", mode="a", if_sheet_exists="replace") as _w:
+        df.to_excel(_w, sheet_name=sheet, index=False)
     # Append integrity log sheet
     import openpyxl
     wb = openpyxl.load_workbook(path)
