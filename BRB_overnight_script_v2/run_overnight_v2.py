@@ -36,6 +36,12 @@ def _title_alarm(signum, frame):
 # ── CONFIG ────────────────────────────────────────────────────────────────────
 import glob as _glob
 
+# Write checkpoints and the FINAL file into attached_assets/ (where brb.py's
+# detect_xlsx looks) rather than the process CWD — otherwise the overnight fill
+# lands in the repo root and the next reingest silently uses the stale file.
+_ASSETS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "attached_assets")
+
+
 def _find_inventory():
     """Newest comics_inventory_*.xlsx by mtime in ../attached_assets/ — same
     convention as gen_data.mjs, so every script reads the one current file
@@ -585,12 +591,12 @@ def main():
         if processed % CHECKPOINT_EVERY == 0:
             ts  = datetime.now().strftime("%d%m_%H%M")
             out = f"comics_inventory_{ts}.xlsx"
-            safe_write(df, out, f"✅ Clean Inventory {ts}", rows_initial, label=f"checkpoint_{processed}")
+            safe_write(df, os.path.join(_ASSETS_DIR, out), f"✅ Clean Inventory {ts}", rows_initial, label=f"checkpoint_{processed}")
             print(f"[CHECKPOINT] Saved {out} after {processed} titles ({api_calls} API calls)")
 
     ts    = datetime.now().strftime("%d%m_%H%M")
     final = f"comics_inventory_FINAL_{ts}.xlsx"
-    safe_write(df, final, f"✅ Clean Inventory {ts}", rows_initial, label="FINAL")
+    safe_write(df, os.path.join(_ASSETS_DIR, final), f"✅ Clean Inventory {ts}", rows_initial, label="FINAL")
     print(f"\n[DONE] {processed} titles | {api_calls} Comic Vine calls | Output: {final}")
     print(f"Review needed: {REVIEW_PATH}")
 
