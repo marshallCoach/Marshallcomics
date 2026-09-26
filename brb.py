@@ -328,10 +328,25 @@ def main():
     # ── Optional git commit ──────────────────────────────────────────────────
     if args.commit:
         banner("GIT — commit generated files")
+        # Full-workbook backup: copy the source xlsx (all 19 tabs) to a fixed
+        # path and commit it, so a Mac loss can't take the source with it. One
+        # overwritten file keeps history snapshots without N copies piling up.
+        # (.gitignore has a negation for this exact path, since *.xlsx is ignored.)
+        import shutil
+        bkp_rel = "backups/comics_inventory_latest.xlsx"
+        bkp = os.path.join(ROOT, bkp_rel)
+        os.makedirs(os.path.dirname(bkp), exist_ok=True)
+        try:
+            shutil.copyfile(xlsx, bkp)
+            ok(f"Backed up full workbook -> {bkp_rel}")
+        except Exception as e:
+            warn(f"Workbook backup skipped ({e})")
         # Widget data (GEN_FILES_OPT) is staged only if present so the Title
         # Fixes / Not-in-GCD widgets publish without a manual git add.
         gen_files = list(GEN_FILES) + [f for f in GEN_FILES_OPT if os.path.exists(os.path.join(ROOT, f))]
-        run(["git", "add"] + gen_files, "git add")
+        if os.path.exists(bkp):
+            gen_files.append(bkp_rel)
+        run(["git", "add", "-f"] + gen_files, "git add")
         code, _ = run(["git", "commit", "-m", args.commit], "git commit")
         if code == 0:
             run(["git", "push"], "git push")

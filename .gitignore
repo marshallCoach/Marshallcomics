@@ -137,3 +137,6 @@ cover_deadlinks.csv
 cover_link_drop.html
 marshall_sources.txt
 .brb_weekly_snapshot.json
+
+# Full-workbook backup committed by brb.py (all 19 tabs) — keep off-Mac
+!backups/comics_inventory_latest.xlsx
