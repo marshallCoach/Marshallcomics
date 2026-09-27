@@ -18,14 +18,14 @@ type FixKind = "fandom" | "solution";
 interface FixRecord { id: string; title: string; issue: string; box: string; problem: string; kind: FixKind; value: string; at: string; }
 type ProblemId = "no-date" | "date-conflict" | "no-volume" | "no-year" | "likely-variant" | "not-in-gcd";
 
-const PROBLEMS: { id: ProblemId; label: string; blurb: string; color: string; vol?: boolean; info?: boolean; solutions: { key: string; label: string }[] }[] = [
+const PROBLEMS: { id: ProblemId; label: string; blurb: string; color: string; vol?: boolean; yr?: boolean; info?: boolean; solutions: { key: string; label: string }[] }[] = [
   { id: "no-date",       label: "Missing publication date", blurb: "Not matched in GCD/Comic Vine — no on-sale date", color: "#c8102e",
     solutions: [{ key: "cv", label: "Try Comic Vine next run" }, { key: "no-entry", label: "No catalogue entry — accept blank" }] },
-  { id: "date-conflict", label: "Year / volume conflict",    blurb: "On-sale date disagrees with Year — year or volume likely wrong", color: "#b45309", vol: true,
+  { id: "date-conflict", label: "Year / volume conflict",    blurb: "On-sale date disagrees with Year — year or volume likely wrong", color: "#b45309", vol: true, yr: true,
     solutions: [{ key: "trust-gcd", label: "Trust the on-sale date" }, { key: "trust-year", label: "Trust my Year" }] },
   { id: "no-volume",     label: "Missing volume",            blurb: "No volume number recorded", color: "#7c3aed", vol: true,
     solutions: [{ key: "vol1", label: "It's Volume 1" }, { key: "research", label: "Needs research" }] },
-  { id: "no-year",       label: "Missing / bad year",        blurb: "Year is blank or not a 4-digit year", color: "#0e7490",
+  { id: "no-year",       label: "Missing / bad year",        blurb: "Year is blank or not a 4-digit year", color: "#0e7490", yr: true,
     solutions: [{ key: "research", label: "Needs research" }] },
   { id: "likely-variant", label: "Likely variant (cover-buy)", blurb: "In the CC1 cover-buy box — probably a variant of the main cover", color: "#db2777",
     solutions: [{ key: "confirm-variant", label: "✓ Confirm variant" }, { key: "not-variant", label: "Not a variant" }] },
@@ -92,6 +92,7 @@ export default function DataFix() {
   const [leaving, setLeaving] = useState<Set<string>>(new Set());
   const [linkDraft, setLinkDraft] = useState<Record<string, string>>({});
   const [volDraft, setVolDraft] = useState<Record<string, string>>({});
+  const [yearDraft, setYearDraft] = useState<Record<string, string>>({});
   const [activeProblem, setActiveProblem] = useState<ProblemId | "all">("all");
   const [sortByCount, setSortByCount] = useState(false);   // title A→Z vs most-issues-first
   const [openGroups, setOpenGroups] = useState<Record<string, boolean>>({});
@@ -304,6 +305,15 @@ export default function DataFix() {
                               onKeyDown={e => { if (e.key === "Enter" && (volDraft[id] || "").trim()) resolve(c, id, g.pid, "solution", `vol:${volDraft[id].trim()}`); }} />
                             <button className="df-link-save" style={{ background: "#7c3aed" }} disabled={!(volDraft[id] || "").trim()}
                               onClick={() => resolve(c, id, g.pid, "solution", `vol:${(volDraft[id] || "").trim()}`)}>Set volume</button>
+                          </div>
+                        )}
+                        {g.problem.yr && (
+                          <div className="df-linkrow">
+                            <input className="df-link-in" style={{ maxWidth: 120 }} inputMode="numeric" maxLength={4} placeholder="Set year → e.g. 2012"
+                              value={yearDraft[id] || ""} onChange={e => setYearDraft(d => ({ ...d, [id]: e.target.value.replace(/[^0-9]/g, "").slice(0, 4) }))}
+                              onKeyDown={e => { if (e.key === "Enter" && /^\d{4}$/.test(yearDraft[id] || "")) resolve(c, id, g.pid, "solution", `year:${yearDraft[id].trim()}`); }} />
+                            <button className="df-link-save" style={{ background: "#0e7490" }} disabled={!/^\d{4}$/.test(yearDraft[id] || "")}
+                              onClick={() => resolve(c, id, g.pid, "solution", `year:${(yearDraft[id] || "").trim()}`)}>Set year</button>
                           </div>
                         )}
                         <div className="df-linkrow">
