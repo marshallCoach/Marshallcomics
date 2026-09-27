@@ -55,7 +55,8 @@ def newest_xlsx():
 
 
 def norm_issue(v):
-    s = str(v or "").strip().lstrip("#")
+    # Coalesce only None, never 0 — an int 0 issue (#0) must stay "0", not "".
+    s = ("" if v is None else str(v)).strip().lstrip("#")
     try:
         f = float(s); return str(int(f)) if f == int(f) else s
     except ValueError:

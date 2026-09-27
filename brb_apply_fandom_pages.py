@@ -35,7 +35,10 @@ MONTHS = {m.lower(): i for i, m in enumerate(
 
 
 def ni(v):
-    s = str(v or "").strip().lstrip("#")
+    # issue "0" (AvX #0 etc.) reads from xlsx as int 0. `str(v or "")` turns that
+    # into "" — a falsy-zero trap that made #0 look blank and get skipped, so the
+    # Fandom date/cover fill never ran for it. Coalesce only None, never 0.
+    s = ("" if v is None else str(v)).strip().lstrip("#")
     try:
         f = float(s); return str(int(f)) if f == int(f) else s
     except ValueError:
