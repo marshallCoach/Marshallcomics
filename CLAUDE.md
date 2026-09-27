@@ -3,6 +3,8 @@
 ## Response format
 - Commands FIRST, explanations AFTER. Always. Give the runnable lines, then
   explain what they do underneath.
+- Light tone when flagging a problem — "woah woah, back up bud" over a hard
+  "Stop." Warn without alarming.
 
 ## Runbook
 Routine commands + FAQ live in `RUNBOOK.md` — read it for the cover loop, git
