@@ -180,6 +180,8 @@ def main():
                 set_cell(r, "Volume", "1"); stats["volume_set"] += 1
             elif val.startswith("vol:"):
                 set_cell(r, "Volume", val.split(":", 1)[1].strip()); stats["volume_set"] += 1
+            elif val.startswith("year:"):
+                set_cell(r, "Year", val.split(":", 1)[1].strip()); stats["year_set"] += 1
             elif val == "trust-gcd" and cPD:
                 mm = re.match(r"(\d{4})", str(ws.cell(r, cPD).value or ""))
                 if mm:
