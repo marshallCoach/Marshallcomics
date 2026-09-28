@@ -95,16 +95,19 @@ def infobox_names(wt, pat):
 
 
 def parse_url(u):
-    """(api_base, canonical_title, vol) from a .../wiki/Title_Vol_N_ISS URL."""
+    """(api_base, canonical_title, vol, url_issue) from a .../wiki/Title_Vol_N_ISS
+    URL. url_issue is the issue named in the link ('' if the URL has none); it is
+    authoritative for the seed row and handles legacy numbering (a book filed as
+    #498 whose page is Vol 3 #83)."""
     m = re.match(r"https?://([^/]+)/wiki/(.+)", u or "")
     if not m:
         return None
     base = f"https://{m.group(1)}/api.php"
     path = urllib.parse.unquote(m.group(2))
-    vm = re.search(r"^(.*?)_Vol_(\d+)(?:_|$)", path)  # trailing issue optional
+    vm = re.search(r"^(.*?)_Vol_(\d+)(?:_(.+))?$", path)  # trailing issue optional
     if not vm:
         return None
-    return base, vm.group(1).replace("_", " ").strip(), vm.group(2)
+    return base, vm.group(1).replace("_", " ").strip(), vm.group(2), (ni(vm.group(3)) if vm.group(3) else "")
 
 
 def fetch_page(base, title, vol, issue):
@@ -196,6 +199,7 @@ def main():
     def ci(n):
         return H.index(n) + 1 if n in H else None
     cT, cI, cY, cV, cPD = ci("Title"), ci("Issue #"), ci("Year"), ci("Volume"), ci("Publication Date")
+    cB = ci("Box #") or ci("Box")
     if cPD is None:
         cPD = ws.max_column + 1; ws.cell(1, cPD, "Publication Date")
     CRED_COLS = {"writer": ci("Writer(s)"), "artist": ci("Artist(s)"), "cover": ci("Cover Artist")}
@@ -212,6 +216,7 @@ def main():
     dates_set = covers_set = 0
     cred_counts = {"writer": 0, "artist": 0, "cover": 0}
     cred_changes = []
+    years_fixed = []
     for i, rec in enumerate(recs, 1):
         # Heartbeat + flush every 10 records so a stall is never silent and a
         # Ctrl-C never loses fetched covers (covers.json otherwise saves only at
@@ -223,17 +228,29 @@ def main():
         pu = parse_url(rec.get("value"))
         if not pu:
             continue
-        base, canon, vol = pu
+        base, canon, vol, url_issue = pu
         sheet_title = rec.get("title") or ""
+        rec_issue = ni(rec.get("issue"))
+        rec_box = str(rec.get("box") or "").strip()
         wcol = CRED_COLS.get("writer")
         for r in by_title.get(sheet_title.lower(), []):
             issue = ni(ws.cell(r, cI).value)
             if not issue:            # blank issue -> "Title Vol N " builds a junk
                 continue             # page that stalls the fetch; skip these rows
+            # The exact row the user linked (same issue + box) is the SEED: the
+            # user has vouched for this page, so it is authoritative. Fetch by the
+            # issue named in the URL (handles legacy numbering, e.g. a #498 book
+            # whose page is Vol 3 #83), and — since "links are truth" — skip the
+            # year-gate and correct a wrong inventory Year to the page's year.
+            # Every other same-title row is a run-mate: year-gated as before, so a
+            # wrong-era page can never leak across the run.
+            is_seed = (issue == rec_issue and
+                       (not cB or str(ws.cell(r, cB).value or "").strip() == rec_box))
             # Already complete -> don't re-fetch. This is why the whole run (e.g.
             # all 66 Avengers) re-ran every pass: the fetch was unconditional.
-            # Only fetch a row that's still missing a cover, a date, or a writer.
-            if not args.overwrite:
+            # Only fetch a row that's still missing a cover, a date, or a writer
+            # (the seed always runs — the user resubmitted it for a reason).
+            if not args.overwrite and not is_seed:
                 volk = nv(ws.cell(r, cV).value)
                 e = cov.get(f"{sheet_title}|||{issue}|||{volk}") or cov.get(f"{sheet_title}|||{issue}")
                 has_cover = bool(e.get("url") if isinstance(e, dict) else e)
@@ -242,12 +259,18 @@ def main():
                 if has_cover and has_date and has_writer:
                     continue
             ry = yr(ws.cell(r, cY).value)
-            res = fetch_page(base, canon, vol, issue)
+            res = fetch_page(base, canon, vol, (url_issue if (is_seed and url_issue) else issue))
             if not res:
                 continue
             fn, date_str, py, credits = res
-            if ry and py and abs(py - ry) > 2:   # year-gate: wrong era, skip all
+            if not is_seed and ry and py and abs(py - ry) > 2:   # year-gate: run-mates only
                 continue
+            if is_seed and py and (not ry or abs(py - ry) > 1):
+                # user-vouched link wins: bring a wrong/blank inventory Year onto
+                # the page's year so the book stops re-flagging as a conflict.
+                if args.apply:
+                    ws.cell(r, cY, str(py))
+                years_fixed.append([sheet_title, issue, ry or "(blank)", py])
             if date_str and (args.overwrite or not str(ws.cell(r, cPD).value or "").strip()):
                 if args.apply:
                     ws.cell(r, cPD, date_str)
@@ -299,6 +322,10 @@ def main():
 
     print(f"\nDates to set: {dates_set}   Covers to set: {covers_set}   Direct image links: {imgs_set}")
     print(f"Credits — writer {cred_counts['writer']}  artist {cred_counts['artist']}  cover {cred_counts['cover']}")
+    if years_fixed:
+        print(f"\nYears corrected from user-linked pages (links are truth): {len(years_fixed)}")
+        for t, iss, old, new in years_fixed[:30]:
+            print(f"   {t} #{iss}: {old} -> {new}")
     if not args.apply:
         print("DRY RUN — nothing written. Re-run with --apply.")
         return
