@@ -173,7 +173,7 @@ export default function CoverReview({ initTitle }: { initTitle?: string }) {
 
   const pct = Math.max(0, Math.min(100, 100 - (msLeft / CYCLE_MS) * 100));
 
-  const card = (p: Pooled, k: string, showVol = false) => {
+  const card = (p: Pooled, k: string, showVol = false, issueOnly = false) => {
     const id = comicId({ Title: p.comic.Title, Issue: p.comic.Issue, Box: p.comic.Box });
     const flagged = flags.has(id);
     return (
@@ -185,13 +185,19 @@ export default function CoverReview({ initTitle }: { initTitle?: string }) {
         >
           <img src={p.url} alt={`${p.comic.Title} ${p.comic.Issue}`} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} loading="lazy" />
         </div>
-        <button
-          onClick={() => setTitleFilter(p.comic.Title)}
-          title={`Show all ${p.comic.Title} issues`}
-          style={{ background: "none", border: "none", padding: 0, cursor: "pointer", fontSize: "0.9rem", color: "var(--red)", marginTop: 6, lineHeight: 1.3, overflow: "visible", whiteSpace: "normal", wordBreak: "break-word", textDecoration: "underline", width: "100%" }}
-        >
-          {p.comic.Title} #{p.comic.Issue}
-        </button>
+        {issueOnly ? (
+          <div style={{ fontSize: "0.95rem", fontWeight: 600, color: "var(--text)", marginTop: 6, lineHeight: 1.3, width: "100%" }}>
+            #{p.comic.Issue}
+          </div>
+        ) : (
+          <button
+            onClick={() => setTitleFilter(p.comic.Title)}
+            title={`Show all ${p.comic.Title} issues`}
+            style={{ background: "none", border: "none", padding: 0, cursor: "pointer", fontSize: "0.9rem", color: "var(--red)", marginTop: 6, lineHeight: 1.3, overflow: "visible", whiteSpace: "normal", wordBreak: "break-word", textDecoration: "underline", width: "100%" }}
+          >
+            {p.comic.Title} #{p.comic.Issue}
+          </button>
+        )}
         {showVol && <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginTop: 2 }}>Vol {p.comic.Volume || "1"}</div>}
         <label style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 4, fontSize: "0.875rem", color: flagged ? "var(--red)" : "var(--muted)", cursor: "pointer", marginTop: 8 }}>
           <input type="checkbox" checked={flagged} onChange={() => toggleFlag(p)} />
@@ -206,13 +212,11 @@ export default function CoverReview({ initTitle }: { initTitle?: string }) {
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 12, marginBottom: 8 }}>
         <div>
           <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "1.75rem", letterSpacing: "2px", color: "var(--text)" }}>
-            {titleFilter ? (
-              <><span style={{ fontSize: "0.7rem", letterSpacing: "2px", color: "var(--muted)", display: "block" }}>COVER BY TITLE</span>{titleFilter}</>
-            ) : "Cover Review"}
+            {titleFilter ? "Cover Review by title" : "Cover Review"}
           </div>
           <div style={{ fontSize: "0.875rem", color: "var(--muted)" }}>
             {titleFilter
-              ? `${titleCount} issue${titleCount === 1 ? "" : "s"}${titleView.volCount > 1 ? ` across ${titleView.volCount} volumes` : ""} · click "wrong" on any incorrect cover`
+              ? `${titleFilter} · ${titleCount} issue${titleCount === 1 ? "" : "s"}${titleView.volCount > 1 ? ` · ${titleView.volCount} volumes` : ""} · click "wrong" on any incorrect cover`
               : `${pool.length.toLocaleString()} covers in pool · batch ${Math.floor(batchStart / BATCH_SIZE) + 1} of ${Math.ceil(pool.length / BATCH_SIZE)} · ${flags.size} flagged so far`}
           </div>
         </div>
@@ -243,7 +247,7 @@ export default function CoverReview({ initTitle }: { initTitle?: string }) {
           <div style={{ color: "var(--muted)", marginTop: 20 }}>No covered issues found for this title.</div>
         ) : (
           <div style={{ display: "flex", flexWrap: "wrap", gap: 12, marginTop: 20 }}>
-            {titleView.items.map((p, i) => card(p, `t-${i}`, titleView.volCount > 1))}
+            {titleView.items.map((p, i) => card(p, `t-${i}`, titleView.volCount > 1, true))}
           </div>
         )
       ) : (
