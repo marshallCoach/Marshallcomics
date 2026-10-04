@@ -1,18 +1,18 @@
-// AUTO-GENERATED quest data — source: comics_inventory_0410_1516.xlsx (11247 rows) · generated 2026-10-04
+// AUTO-GENERATED quest data — source: comics_inventory_0410_1524.xlsx (11258 rows) · generated 2026-10-04
 // Regenerate with: node gen_quest_data.mjs
 window.QUEST_DATA = {
- "source": "comics_inventory_0410_1516.xlsx",
+ "source": "comics_inventory_0410_1524.xlsx",
  "generated": "2026-10-04",
- "totalRows": 11247,
+ "totalRows": 11258,
  "dupe": {
-  "groups": 144,
-  "rows": 303,
-  "excess": 159
+  "groups": 146,
+  "rows": 307,
+  "excess": 161
  },
  "clone": {
-  "groups": 127,
-  "rows": 264,
-  "excess": 137
+  "groups": 129,
+  "rows": 268,
+  "excess": 139
  },
  "overCap": [
   {
@@ -937,10 +937,10 @@ window.QUEST_DATA = {
    "code": "BDR-2",
    "status": "CC/Fabric Bin",
    "labeledAs": "",
-   "rows": 66,
+   "rows": 69,
    "vcap": 240,
-   "dupes": 7,
-   "clones": 7
+   "dupes": 9,
+   "clones": 9
   },
   {
    "box": 102,
@@ -949,10 +949,10 @@ window.QUEST_DATA = {
    "code": "BDR-2",
    "status": "CC/Fabric Bin",
    "labeledAs": "",
-   "rows": 105,
+   "rows": 111,
    "vcap": 240,
-   "dupes": 2,
-   "clones": 2
+   "dupes": 4,
+   "clones": 4
   },
   {
    "box": 103,
@@ -1034,7 +1034,7 @@ window.QUEST_DATA = {
       },
       {
        "id": "0.5",
-       "text": "Confirm the chat reads back 11,247 rows. If not — STOP, wrong file."
+       "text": "Confirm the chat reads back 11,258 rows. If not — STOP, wrong file."
       }
      ]
     }
@@ -1045,7 +1045,7 @@ window.QUEST_DATA = {
    "title": "The Clones",
    "est": "identical twin rows — safest wins first",
    "accent": "green",
-   "blurb": "Rows that are exact copies of another row: same book, same box, logged twice. Live count: 127 clone groups / 137 excess rows. Highest confidence, lowest effort, biggest visible progress.",
+   "blurb": "Rows that are exact copies of another row: same book, same box, logged twice. Live count: 129 clone groups / 139 excess rows. Highest confidence, lowest effort, biggest visible progress.",
    "sittings": [
     {
      "id": "A1",
