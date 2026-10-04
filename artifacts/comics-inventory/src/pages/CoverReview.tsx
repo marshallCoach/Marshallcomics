@@ -91,30 +91,31 @@ export default function CoverReview({ initTitle }: { initTitle?: string }) {
     return () => { if (tickRef.current) clearInterval(tickRef.current); };
   }, [pool, batchStart, paused, titleFilter]);
 
-  // All issues of a pinned title (every issue that has a cover), grouped by
-  // volume and issue-sorted within each volume, so clicking a title lets you
-  // scan the whole run — one volume at a time — for other wrong covers.
-  const titleGroups = useMemo(() => {
-    if (!titleFilter) return [] as { volume: string; items: Pooled[] }[];
-    const byVol = new Map<string, Pooled[]>();
+  // Every covered issue of the pinned title, ordered by issue number (then
+  // volume), so the run reads straight through. Volume is surfaced per-cover
+  // only when the title actually spans more than one volume.
+  const titleView = useMemo(() => {
+    if (!titleFilter) return { items: [] as Pooled[], volCount: 0 };
     const seen = new Set<string>();
+    const items: Pooled[] = [];
+    const vols = new Set<string>();
     for (const c of DATA.comics as Comic[]) {
       if (c.Title !== titleFilter) continue;
       const vol = String(c.Volume || "1").trim();
       const key = `${c.Title}|||${c.Issue}|||${vol}`;
       if (seen.has(key)) continue;
       const entry = coversMap[key] ?? coversMap[`${c.Title}|||${c.Issue}`];
-      if (entry?.url) { seen.add(key); (byVol.get(vol) ?? byVol.set(vol, []).get(vol)!).push({ comic: c, url: entry.url }); }
+      if (entry?.url) { seen.add(key); items.push({ comic: c, url: entry.url }); vols.add(vol); }
     }
-    return [...byVol.entries()]
-      .map(([volume, items]) => ({
-        volume,
-        items: items.sort((a, b) => (parseFloat(String(a.comic.Issue)) || 0) - (parseFloat(String(b.comic.Issue)) || 0)),
-      }))
-      .sort((a, b) => (parseInt(a.volume) || 0) - (parseInt(b.volume) || 0));
+    items.sort((a, b) => {
+      const ia = parseFloat(String(a.comic.Issue)) || 0, ib = parseFloat(String(b.comic.Issue)) || 0;
+      if (ia !== ib) return ia - ib;
+      return (parseInt(String(a.comic.Volume || "1")) || 0) - (parseInt(String(b.comic.Volume || "1")) || 0);
+    });
+    return { items, volCount: vols.size };
   }, [titleFilter, coversMap]);
 
-  const titleCount = useMemo(() => titleGroups.reduce((n, g) => n + g.items.length, 0), [titleGroups]);
+  const titleCount = titleView.items.length;
 
   const lanes = useMemo(() => {
     if (!pool || pool.length === 0) return [];
@@ -172,7 +173,7 @@ export default function CoverReview({ initTitle }: { initTitle?: string }) {
 
   const pct = Math.max(0, Math.min(100, 100 - (msLeft / CYCLE_MS) * 100));
 
-  const card = (p: Pooled, k: string) => {
+  const card = (p: Pooled, k: string, showVol = false) => {
     const id = comicId({ Title: p.comic.Title, Issue: p.comic.Issue, Box: p.comic.Box });
     const flagged = flags.has(id);
     return (
@@ -191,6 +192,7 @@ export default function CoverReview({ initTitle }: { initTitle?: string }) {
         >
           {p.comic.Title} #{p.comic.Issue}
         </button>
+        {showVol && <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginTop: 2 }}>Vol {p.comic.Volume || "1"}</div>}
         <label style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 4, fontSize: "0.875rem", color: flagged ? "var(--red)" : "var(--muted)", cursor: "pointer", marginTop: 8 }}>
           <input type="checkbox" checked={flagged} onChange={() => toggleFlag(p)} />
           wrong
@@ -204,11 +206,13 @@ export default function CoverReview({ initTitle }: { initTitle?: string }) {
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 12, marginBottom: 8 }}>
         <div>
           <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "1.75rem", letterSpacing: "2px", color: "var(--text)" }}>
-            {titleFilter ? "Cover by Title" : "Cover Review"}
+            {titleFilter ? (
+              <><span style={{ fontSize: "0.7rem", letterSpacing: "2px", color: "var(--muted)", display: "block" }}>COVER BY TITLE</span>{titleFilter}</>
+            ) : "Cover Review"}
           </div>
           <div style={{ fontSize: "0.875rem", color: "var(--muted)" }}>
             {titleFilter
-              ? `${titleFilter} — ${titleCount} issue${titleCount === 1 ? "" : "s"} across ${titleGroups.length} volume${titleGroups.length === 1 ? "" : "s"} · click "wrong" on any incorrect cover`
+              ? `${titleCount} issue${titleCount === 1 ? "" : "s"}${titleView.volCount > 1 ? ` across ${titleView.volCount} volumes` : ""} · click "wrong" on any incorrect cover`
               : `${pool.length.toLocaleString()} covers in pool · batch ${Math.floor(batchStart / BATCH_SIZE) + 1} of ${Math.ceil(pool.length / BATCH_SIZE)} · ${flags.size} flagged so far`}
           </div>
         </div>
@@ -238,16 +242,9 @@ export default function CoverReview({ initTitle }: { initTitle?: string }) {
         titleCount === 0 ? (
           <div style={{ color: "var(--muted)", marginTop: 20 }}>No covered issues found for this title.</div>
         ) : (
-          titleGroups.map(g => (
-            <div key={g.volume} style={{ marginTop: 20 }}>
-              <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1.5px", color: "var(--muted)", marginBottom: 8, borderBottom: "1px solid var(--border)", paddingBottom: 4 }}>
-                VOLUME {g.volume} · {g.items.length} issue{g.items.length === 1 ? "" : "s"}
-              </div>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
-                {g.items.map((p, i) => card(p, `v${g.volume}-${i}`))}
-              </div>
-            </div>
-          ))
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 12, marginTop: 20 }}>
+            {titleView.items.map((p, i) => card(p, `t-${i}`, titleView.volCount > 1))}
+          </div>
         )
       ) : (
         lanes.map((lane, li) => (
