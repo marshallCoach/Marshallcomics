@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_0410_1524.xlsx  |  Generated: 2026-10-04
+// Source: comics_inventory_0410_1620.xlsx  |  Generated: 2026-10-04
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -236430,27 +236430,6 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Ultimate Impact: Reborn`, Issue: `5`, Publisher: `Marvel`,
-    Disambig: ``,
-    Year: `2026`, Arc: ``, Key: ``,
-    Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
-    Signed: ``, Signed_By: ``,
-    Personal: ``, Condition: ``,
-    CGC_Worth: ``, Value_NM: ``, Value_VF: ``,
-    Category: ``, Era: `Modern`, Universe: ``,
-    Seller_Notes: ``, Story_Pitch: ``,
-    Content: ``, Platform: ``,
-    Sales_Data: ``, Terrificon: ``,
-    Cover_Artist: ``, Date_Added: `October 04, 2026 (new-comics intake)`,
-    Imprint: ``, Box: `102`,
-    Crossover: ``, Start_Bid: ``,
-    Volume: ``, Entry: ``,
-    Cover_Price: ``,
-    Pub_Date: `2026-10-04`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
-  },
-  {
     Title: `Alien vs. X-Men`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
     Year: `2026`, Arc: ``, Key: ``,
@@ -236473,27 +236452,6 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
   },
   {
     Title: `Adventures of Superman: Book of El`, Issue: `12`, Publisher: `DC`,
-    Disambig: ``,
-    Year: `2026`, Arc: ``, Key: ``,
-    Key_Reason: ``, First_App: ``,
-    Writer: ``, Artist: ``,
-    Signed: ``, Signed_By: ``,
-    Personal: ``, Condition: ``,
-    CGC_Worth: ``, Value_NM: ``, Value_VF: ``,
-    Category: ``, Era: `Modern`, Universe: ``,
-    Seller_Notes: ``, Story_Pitch: ``,
-    Content: ``, Platform: ``,
-    Sales_Data: ``, Terrificon: ``,
-    Cover_Artist: ``, Date_Added: `October 04, 2026 (new-comics intake)`,
-    Imprint: ``, Box: `101`,
-    Crossover: ``, Start_Bid: ``,
-    Volume: ``, Entry: ``,
-    Cover_Price: ``,
-    Pub_Date: `2026-10-04`,
-    eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
-  },
-  {
-    Title: `Zatanna`, Issue: `6`, Publisher: `DC`,
     Disambig: ``,
     Year: `2026`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
@@ -257336,16 +257294,6 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Ultimate Impact: Reborn`, Issue: `5`, Publisher: `Marvel`,
-    Year: `2026`, Volume: ``, Cover_Artist: ``,
-    Key: ``, Key_Reason: ``,
-    Signed: ``, Signed_By: ``,
-    Era: `Modern`, Writer: ``,
-    Value_NM: ``, Start_Bid: ``, Box: `102`,
-    Notes: ``, SortPile: ``,
-    CoverNotes: ``, Flag: ``,
-  },
-  {
     Title: `Alien vs. X-Men`, Issue: `1`, Publisher: `Marvel`,
     Year: `2026`, Volume: ``, Cover_Artist: ``,
     Key: ``, Key_Reason: ``,
@@ -257357,16 +257305,6 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
   },
   {
     Title: `Adventures of Superman: Book of El`, Issue: `12`, Publisher: `DC`,
-    Year: `2026`, Volume: ``, Cover_Artist: ``,
-    Key: ``, Key_Reason: ``,
-    Signed: ``, Signed_By: ``,
-    Era: `Modern`, Writer: ``,
-    Value_NM: ``, Start_Bid: ``, Box: `101`,
-    Notes: ``, SortPile: ``,
-    CoverNotes: ``, Flag: ``,
-  },
-  {
-    Title: `Zatanna`, Issue: `6`, Publisher: `DC`,
     Year: `2026`, Volume: ``, Cover_Artist: ``,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
