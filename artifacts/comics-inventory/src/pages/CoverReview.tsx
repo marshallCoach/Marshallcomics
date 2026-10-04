@@ -29,14 +29,14 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-export default function CoverReview() {
+export default function CoverReview({ initTitle }: { initTitle?: string }) {
   const [pool, setPool]         = useState<Pooled[] | null>(null);
   const [coversMap, setCoversMap] = useState<Record<string, { url: string | null }>>({});
   const [batchStart, setBatchStart] = useState(0);
   const [flags, setFlags]       = useState<Map<string, FlaggedCover>>(() => loadFlags());
   const [msLeft, setMsLeft]     = useState(CYCLE_MS);
   const [paused, setPaused]     = useState(false);
-  const [titleFilter, setTitleFilter] = useState<string | null>(null);
+  const [titleFilter, setTitleFilter] = useState<string | null>(initTitle || null);
   const [modal, setModal] = useState<{ comic: Comic; url: string } | null>(null);
   const tickRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
@@ -70,6 +70,10 @@ export default function CoverReview() {
       .catch(() => setPool([]));
     return () => { cancelled = true; };
   }, []);
+
+  // Deep-link from the homepage: a cover title opens this page already filtered
+  // to that title ("Cover by Title"). Re-applies whenever the incoming title changes.
+  useEffect(() => { setTitleFilter(initTitle || null); }, [initTitle]);
 
   // 30s auto-advance cycle — paused when the timer is stopped or a title is pinned.
   useEffect(() => {

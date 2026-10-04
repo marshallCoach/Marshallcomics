@@ -61,6 +61,7 @@ export type NavParams = {
   query?: string;
   publisher?: string;
   keysOnly?: string;
+  title?: string;
 };
 
 const NAV = [
@@ -360,7 +361,7 @@ export default function App() {
         {activeTab === "history"     && <ComicHistory />}
         {activeTab === "keycatalog"  && <KeyCatalog />}
         {activeTab === "covercatalog" && <CoverCatalog />}
-        {activeTab === "coverreview" && <CoverReview />}
+        {activeTab === "coverreview" && <CoverReview initTitle={navParams.title} />}
         {activeTab === "missingcovers" && <MissingCovers />}
         {activeTab === "boxquest"     && <BoxQuest />}
         {activeTab === "boxmap"       && <BoxMap />}
