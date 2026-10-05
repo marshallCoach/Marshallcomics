@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_0410_1620.xlsx  |  Generated: 2026-10-04
+// Source: comics_inventory_0410_1620.xlsx  |  Generated: 2026-10-05
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -47,7 +47,7 @@ export const DATA3: {
     cc:      CatalogComic[];
   };
 } = {
-  generatedAt: "2026-10-04",
+  generatedAt: "2026-10-05",
   comics: [
   {
     Title: `52`, Issue: `1`, Publisher: `DC`,
