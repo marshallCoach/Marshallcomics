@@ -49,8 +49,12 @@ def norm(v):
 
 
 def is_status(bx):
-    u = str(bx or "").strip().upper()
-    return u.startswith("AT ") or u.startswith("UNKNOWN")
+    # Boxes excluded from duplicate detection: status boxes (AT CGC / UNKNOWN …)
+    # and CC cover-display boxes (CC1..CCn). A comic in a CC box was deliberately
+    # pulled from its original box for its cover — a known copy, never a dup.
+    s = str(bx or "").strip()
+    u = s.upper()
+    return u.startswith("AT ") or u.startswith("UNKNOWN") or bool(re.fullmatch(r"CC\d+", s))
 
 
 def main():
