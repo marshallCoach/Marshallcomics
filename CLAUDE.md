@@ -74,6 +74,13 @@ BOX_STATUS_ALLOWLIST = {
 - Rule 2 (same-box): `title.lower() + "|" + issue + "|" + year + "|" + box`
 - Rule 3 (cross-box): `title.lower() + "|" + issue + "|" + year`
 
+## CC (cover) boxes are NEVER duplicates
+A comic in a CC box (CC1, CC2, CC5, …) was deliberately pulled from its original
+box for its cover — it is a known, intentional copy, not a dup. NEVER flag or
+count a CC-box row as a duplicate in any dedup check (same-box, cross-box, or
+exact-clone), validator, or script. Treat CC boxes like the status boxes: exclude
+them from duplicate detection entirely.
+
 ## Weekly new-comic intake — box assignment (by publisher)
 The user boxes each week's new pulls by publisher; use these when adding rows so
 nothing lands in `UNKNOWN`. Confirmed correct by the user (Sep 2026).
