@@ -480,9 +480,12 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
                   onClick={large => setCarouselModal({ comic: c, large })}
                   style={{ borderRadius:6, boxShadow:"0 4px 14px rgba(0,0,0,0.18)" }}
                 />
-                <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--muted2)", lineHeight:1.2, marginTop:5, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap", width:100, textAlign:"center" }}>
+                <button
+                  onClick={() => onNavigate("coverreview", { title: c.Title })}
+                  title={`See every ${c.Title} cover`}
+                  style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--muted2)", lineHeight:1.2, marginTop:5, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap", width:100, textAlign:"center", background:"none", border:"none", padding:0, cursor:"pointer", textDecoration:"underline" }}>
                   {c.Title}
-                </div>
+                </button>
                 <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:"var(--muted)", textAlign:"center", width:100 }}>
                   {c.Issue}
                 </div>

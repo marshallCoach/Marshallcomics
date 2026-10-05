@@ -9,9 +9,11 @@ const BASELINE_FLAGGED_IDS = new Set((flaggedBaseline as { id: string }[]).map(f
 
 const BASE = import.meta.env.BASE_URL?.replace(/\/$/, "") ?? "";
 const LANES = 5;
-const BATCH_SIZE = 50;
+const BATCH_SIZE = 20;
 const CYCLE_MS = 30_000;
 const PER_LANE = BATCH_SIZE / LANES;
+const CARD_W = 150;   // cover thumbnail width  (was 96)
+const CARD_H = 225;   // cover thumbnail height (was 144) — keeps the 2:3 ratio
 
 interface Pooled {
   comic: Comic;
@@ -27,14 +29,14 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-export default function CoverReview() {
+export default function CoverReview({ initTitle }: { initTitle?: string }) {
   const [pool, setPool]         = useState<Pooled[] | null>(null);
   const [coversMap, setCoversMap] = useState<Record<string, { url: string | null }>>({});
   const [batchStart, setBatchStart] = useState(0);
   const [flags, setFlags]       = useState<Map<string, FlaggedCover>>(() => loadFlags());
   const [msLeft, setMsLeft]     = useState(CYCLE_MS);
   const [paused, setPaused]     = useState(false);
-  const [titleFilter, setTitleFilter] = useState<string | null>(null);
+  const [titleFilter, setTitleFilter] = useState<string | null>(initTitle || null);
   const [modal, setModal] = useState<{ comic: Comic; url: string } | null>(null);
   const tickRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
@@ -69,6 +71,10 @@ export default function CoverReview() {
     return () => { cancelled = true; };
   }, []);
 
+  // Deep-link from the homepage: a cover title opens this page already filtered
+  // to that title ("Cover by Title"). Re-applies whenever the incoming title changes.
+  useEffect(() => { setTitleFilter(initTitle || null); }, [initTitle]);
+
   // 30s auto-advance cycle — paused when the timer is stopped or a title is pinned.
   useEffect(() => {
     if (!pool || pool.length === 0 || paused || titleFilter) return;
@@ -85,30 +91,31 @@ export default function CoverReview() {
     return () => { if (tickRef.current) clearInterval(tickRef.current); };
   }, [pool, batchStart, paused, titleFilter]);
 
-  // All issues of a pinned title (every issue that has a cover), grouped by
-  // volume and issue-sorted within each volume, so clicking a title lets you
-  // scan the whole run — one volume at a time — for other wrong covers.
-  const titleGroups = useMemo(() => {
-    if (!titleFilter) return [] as { volume: string; items: Pooled[] }[];
-    const byVol = new Map<string, Pooled[]>();
+  // Every covered issue of the pinned title, ordered by issue number (then
+  // volume), so the run reads straight through. Volume is surfaced per-cover
+  // only when the title actually spans more than one volume.
+  const titleView = useMemo(() => {
+    if (!titleFilter) return { items: [] as Pooled[], volCount: 0 };
     const seen = new Set<string>();
+    const items: Pooled[] = [];
+    const vols = new Set<string>();
     for (const c of DATA.comics as Comic[]) {
       if (c.Title !== titleFilter) continue;
       const vol = String(c.Volume || "1").trim();
       const key = `${c.Title}|||${c.Issue}|||${vol}`;
       if (seen.has(key)) continue;
       const entry = coversMap[key] ?? coversMap[`${c.Title}|||${c.Issue}`];
-      if (entry?.url) { seen.add(key); (byVol.get(vol) ?? byVol.set(vol, []).get(vol)!).push({ comic: c, url: entry.url }); }
+      if (entry?.url) { seen.add(key); items.push({ comic: c, url: entry.url }); vols.add(vol); }
     }
-    return [...byVol.entries()]
-      .map(([volume, items]) => ({
-        volume,
-        items: items.sort((a, b) => (parseFloat(String(a.comic.Issue)) || 0) - (parseFloat(String(b.comic.Issue)) || 0)),
-      }))
-      .sort((a, b) => (parseInt(a.volume) || 0) - (parseInt(b.volume) || 0));
+    items.sort((a, b) => {
+      const ia = parseFloat(String(a.comic.Issue)) || 0, ib = parseFloat(String(b.comic.Issue)) || 0;
+      if (ia !== ib) return ia - ib;
+      return (parseInt(String(a.comic.Volume || "1")) || 0) - (parseInt(String(b.comic.Volume || "1")) || 0);
+    });
+    return { items, volCount: vols.size };
   }, [titleFilter, coversMap]);
 
-  const titleCount = useMemo(() => titleGroups.reduce((n, g) => n + g.items.length, 0), [titleGroups]);
+  const titleCount = titleView.items.length;
 
   const lanes = useMemo(() => {
     if (!pool || pool.length === 0) return [];
@@ -166,25 +173,32 @@ export default function CoverReview() {
 
   const pct = Math.max(0, Math.min(100, 100 - (msLeft / CYCLE_MS) * 100));
 
-  const card = (p: Pooled, k: string) => {
+  const card = (p: Pooled, k: string, showVol = false, issueOnly = false) => {
     const id = comicId({ Title: p.comic.Title, Issue: p.comic.Issue, Box: p.comic.Box });
     const flagged = flags.has(id);
     return (
-      <div key={k} style={{ flexShrink: 0, width: 96, textAlign: "center" }}>
+      <div key={k} style={{ flexShrink: 0, width: CARD_W, textAlign: "center" }}>
         <div
           onClick={() => setModal({ comic: p.comic, url: p.url })}
           title="Open to mark incorrect / variant / dupe"
-          style={{ width: 96, height: 144, borderRadius: 4, overflow: "hidden", background: "#1a1628", border: flagged ? "2px solid var(--red)" : "1px solid var(--border)", cursor: "pointer" }}
+          style={{ width: CARD_W, height: CARD_H, borderRadius: 4, overflow: "hidden", background: "#1a1628", border: flagged ? "2px solid var(--red)" : "1px solid var(--border)", cursor: "pointer" }}
         >
           <img src={p.url} alt={`${p.comic.Title} ${p.comic.Issue}`} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} loading="lazy" />
         </div>
-        <button
-          onClick={() => setTitleFilter(p.comic.Title)}
-          title={`Show all ${p.comic.Title} issues`}
-          style={{ background: "none", border: "none", padding: 0, cursor: "pointer", fontSize: "0.8rem", color: "var(--red)", marginTop: 4, lineHeight: 1.3, overflow: "visible", whiteSpace: "normal", wordBreak: "break-word", textDecoration: "underline", width: "100%" }}
-        >
-          {p.comic.Title} #{p.comic.Issue}
-        </button>
+        {issueOnly ? (
+          <div style={{ fontSize: "0.95rem", fontWeight: 600, color: "var(--text)", marginTop: 6, lineHeight: 1.3, width: "100%" }}>
+            #{p.comic.Issue}
+          </div>
+        ) : (
+          <button
+            onClick={() => setTitleFilter(p.comic.Title)}
+            title={`Show all ${p.comic.Title} issues`}
+            style={{ background: "none", border: "none", padding: 0, cursor: "pointer", fontSize: "0.9rem", color: "var(--red)", marginTop: 6, lineHeight: 1.3, overflow: "visible", whiteSpace: "normal", wordBreak: "break-word", textDecoration: "underline", width: "100%" }}
+          >
+            {p.comic.Title} #{p.comic.Issue}
+          </button>
+        )}
+        {showVol && <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginTop: 2 }}>Vol {p.comic.Volume || "1"}</div>}
         <label style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 4, fontSize: "0.875rem", color: flagged ? "var(--red)" : "var(--muted)", cursor: "pointer", marginTop: 8 }}>
           <input type="checkbox" checked={flagged} onChange={() => toggleFlag(p)} />
           wrong
@@ -198,11 +212,11 @@ export default function CoverReview() {
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 12, marginBottom: 8 }}>
         <div>
           <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "1.75rem", letterSpacing: "2px", color: "var(--text)" }}>
-            Cover Review
+            {titleFilter ? "Cover Review by title" : "Cover Review"}
           </div>
           <div style={{ fontSize: "0.875rem", color: "var(--muted)" }}>
             {titleFilter
-              ? `${titleFilter} — ${titleCount} issue${titleCount === 1 ? "" : "s"} across ${titleGroups.length} volume${titleGroups.length === 1 ? "" : "s"} · click "wrong" on any incorrect cover`
+              ? `${titleFilter} · ${titleCount} issue${titleCount === 1 ? "" : "s"}${titleView.volCount > 1 ? ` · ${titleView.volCount} volumes` : ""} · click "wrong" on any incorrect cover`
               : `${pool.length.toLocaleString()} covers in pool · batch ${Math.floor(batchStart / BATCH_SIZE) + 1} of ${Math.ceil(pool.length / BATCH_SIZE)} · ${flags.size} flagged so far`}
           </div>
         </div>
@@ -232,16 +246,9 @@ export default function CoverReview() {
         titleCount === 0 ? (
           <div style={{ color: "var(--muted)", marginTop: 20 }}>No covered issues found for this title.</div>
         ) : (
-          titleGroups.map(g => (
-            <div key={g.volume} style={{ marginTop: 20 }}>
-              <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1.5px", color: "var(--muted)", marginBottom: 8, borderBottom: "1px solid var(--border)", paddingBottom: 4 }}>
-                VOLUME {g.volume} · {g.items.length} issue{g.items.length === 1 ? "" : "s"}
-              </div>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
-                {g.items.map((p, i) => card(p, `v${g.volume}-${i}`))}
-              </div>
-            </div>
-          ))
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 12, marginTop: 20 }}>
+            {titleView.items.map((p, i) => card(p, `t-${i}`, titleView.volCount > 1, true))}
+          </div>
         )
       ) : (
         lanes.map((lane, li) => (
