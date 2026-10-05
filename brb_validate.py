@@ -68,6 +68,15 @@ BOX_STATUS_ALLOWLIST = {
     "UNKNOWN — needs physical reassignment",
 }
 
+def is_excluded_from_dupes(v):
+    """Rows excluded from duplicate detection (Checks 6 / 6b / 11).
+
+    Status boxes (AT CGC / UNKNOWN …) AND the CC cover-display boxes (CC1..CCn):
+    a comic in a CC box was deliberately pulled from its original box for its
+    cover, so it is a known, intentional copy — never a duplicate."""
+    s = str(v).strip()
+    return s in BOX_STATUS_ALLOWLIST or bool(re.fullmatch(r"CC\d+", s))
+
 REQUIRED_COLUMNS = ["Title", "Issue #", "Box #", "Publisher", "Year", "Writer(s)"]
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
@@ -193,10 +202,10 @@ def check_duplicate_rows(df):
     section("CHECK 6 — Same-box duplicates (Title + Issue # + Year + Box #)")
     _flagged = _dup_flagged(df)
     # Reviewed & accepted multi-copies (flagged ⚠ Verify Duplicate) are not errors.
-    physical = df[~df["Box #"].apply(lambda v: str(v).strip() in BOX_STATUS_ALLOWLIST) & ~_flagged].copy()
+    physical = df[~df["Box #"].apply(is_excluded_from_dupes) & ~_flagged].copy()
     excluded = len(df) - len(physical)
     if excluded:
-        info(f"{excluded} status-box rows (UNKNOWN/CGC) excluded from duplicate check")
+        info(f"{excluded} status-box / CC-box rows excluded from duplicate check")
 
     t   = physical["Title"].str.lower().fillna("")
     iss = physical["Issue #"].astype(str).str.strip()
@@ -226,7 +235,7 @@ def check_cross_box_duplicates(df):
     # Matches Mac validator Rule 3: same Title+Issue#+Year across different boxes,
     # not flagged with '⚠ Verify Duplicate'
     section("CHECK 6b — Cross-box duplicates missing '⚠ Verify Duplicate' flag")
-    physical = df[~df["Box #"].apply(lambda v: str(v).strip() in BOX_STATUS_ALLOWLIST)].copy()
+    physical = df[~df["Box #"].apply(is_excluded_from_dupes)].copy()
 
     t   = physical["Title"].str.lower().fillna("")
     iss = physical["Issue #"].astype(str).str.strip()
@@ -400,7 +409,7 @@ def check_exact_clones(df):
     # Signed? to the key so genuine multi-copy ownership doesn't get flagged.
     section("CHECK 11 — Exact clones (Title+Issue#+Year+Condition+Signed?+Box#, normalized)")
     _flagged = _dup_flagged(df)
-    physical = df[~df["Box #"].apply(lambda v: str(v).strip() in BOX_STATUS_ALLOWLIST) & ~_flagged].copy()
+    physical = df[~df["Box #"].apply(is_excluded_from_dupes) & ~_flagged].copy()
 
     t    = _norm_str(physical["Title"])
     iss  = physical["Issue #"].astype(str).str.strip()
