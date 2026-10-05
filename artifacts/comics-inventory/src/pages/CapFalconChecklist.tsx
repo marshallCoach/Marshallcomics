@@ -98,17 +98,18 @@ const CHECKLIST: ChecklistItem[] = [
   { sort:81, series:"Captain America: Symbol of Truth", issue:"#1",           year:"2022", significance:"Sam Wilson Cap returns; modern KEY 🦅",                         credits:"R.B. Silva / Tochi Onyebuchi",           value:"$15–40"     },
 ];
 
-// ─── Full Cap Vol.1 run (#100–#255, filling every gap) ───────────────────────
+// ─── Full Cap Vol.1 run (#100–#454, filling every gap) ───────────────────────
 function capVol1Year(n: number): string {
   if (n <= 109) return "1968"; if (n <= 119) return "1969"; if (n <= 129) return "1970";
   if (n <= 149) return "1971"; if (n <= 169) return "1973"; if (n <= 184) return "1974";
   if (n <= 199) return "1975"; if (n <= 212) return "1977"; if (n <= 229) return "1978";
-  if (n <= 249) return "1980"; return "1981";
+  if (n <= 249) return "1980"; if (n <= 255) return "1981";
+  return "";   // #256–#454: no sourced cover year for uncatalogued filler — shown blank, never fabricated
 }
 const FULL_CHECKLIST: ChecklistItem[] = [
   ...CHECKLIST.filter(c => c.series !== "Captain America (Vol.1)"),
-  ...Array.from({length:156}, (_,i) => {
-    const n = 100 + i;
+  ...Array.from({length:355}, (_,i) => {
+    const n = 100 + i;   // #100 … #454 — the full Vol.1 run (1968–1996)
     const existing = CHECKLIST.find(c => c.series === "Captain America (Vol.1)" && c.issue === `#${n}`);
     if (existing) return existing;
     return {
@@ -262,7 +263,7 @@ export default function CapFalconChecklist() {
         </div>
         <div style={{ fontSize:"0.875rem", color:"var(--muted2)", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
           lineHeight:1.6, maxWidth:620 }}>
-          Full Cap Vol.1 run (#100–#255) plus key issues from 6 other series — 1964 to 2022.
+          Full Cap Vol.1 run (#100–#454) plus key issues from 6 other series — 1964 to 2022.
           Owned issues are highlighted in the collection. Every gap is shown.
         </div>
       </div>
