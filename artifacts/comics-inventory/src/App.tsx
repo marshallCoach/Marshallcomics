@@ -46,7 +46,7 @@ import VolumeConfirm from "@/pages/VolumeConfirm";
 import OfflineCovers from "@/components/OfflineCovers";
 import FlaggedCount from "@/components/FlaggedCount";
 import PasswordGate from "@/components/PasswordGate";
-import { BookOpen, Boxes, Wrench, Image, Briefcase, Film, Archive, Sparkles } from "lucide-react";
+import { BookOpen, Boxes, Briefcase, Film, Sparkles, ClipboardList } from "lucide-react";
 
 type TabId =
   | "summary" | "everything" | "collection" | "boxkeys" | "stats" | "runs" | "runsvolumes" | "recent" | "releasetimeline" | "dataview"
@@ -81,6 +81,13 @@ const NAV = [
     ],
   },
   {
+    id: "pulllist",
+    label: "Pull List",
+    tabs: [
+      { id: "pulllist",    label: "Pull List" },
+    ],
+  },
+  {
     id: "boxes",
     label: "Boxes",
     tabs: [
@@ -93,32 +100,15 @@ const NAV = [
     ],
   },
   {
-    id: "organisation",
-    label: "Organisation",
-    tabs: [
-      { id: "orgpath",           label: "Org Path",           group: "Ops & Docs" },
-      { id: "timeline",          label: "Timeline",           group: "Ops & Docs" },
-      { id: "ebaypipeline",      label: "eBay Pipeline",      group: "Ops & Docs" },
-      { id: "opsreference",      label: "Ops Reference",      group: "Ops & Docs" },
-    ],
-  },
-  {
     id: "cleanup",
-    label: "Data Cleanup",
+    label: "Cleanup",
     tabs: [
       { id: "datafix",      label: "Data Fix" },
       { id: "titlefixes",   label: "Title Fixes" },
       { id: "volumeconfirm", label: "Volume Confirm" },
       { id: "duplicates",   label: "Duplicates" },
       { id: "dupchecklist", label: "Dup Hunt" },
-    ],
-  },
-  {
-    id: "catalog",
-    label: "Catalog",
-    tabs: [
-      { id: "keycatalog",   label: "Key Issues" },
-      { id: "covercatalog", label: "Cover Art" },
+      { id: "orgpath",      label: "Org Path" },
     ],
   },
   {
@@ -128,21 +118,14 @@ const NAV = [
       { id: "coverreview",  label: "Cover Review" },
       { id: "missingcovers", label: "Missing Covers" },
       { id: "roulette",     label: "Comic Roulette" },
-    ],
-  },
-  {
-    id: "lifearchive",
-    label: "Life Archive",
-    tabs: [
-      { id: "lifearchive", label: "Life Archive" },
-      { id: "history",     label: "Comic Lifetime" },
+      { id: "keycatalog",   label: "Key Issues" },
+      { id: "covercatalog", label: "Cover Art" },
     ],
   },
   {
     id: "business",
     label: "Business",
     tabs: [
-      { id: "pulllist",    label: "Pull List" },
       { id: "sellerdash",  label: "Seller Dashboard" },
       { id: "calendar",    label: "Calendar" },
       { id: "showplanner", label: "Whatnot Shows" },
@@ -150,6 +133,9 @@ const NAV = [
       { id: "signings",    label: "Signings" },
       { id: "actionplan",  label: "Action Plan" },
       { id: "ebaylistingguide",  label: "Phase 1 Listing Guide" },
+      { id: "timeline",          label: "Timeline",           group: "Ops & Docs" },
+      { id: "ebaypipeline",      label: "eBay Pipeline",      group: "Ops & Docs" },
+      { id: "opsreference",      label: "Ops Reference",      group: "Ops & Docs" },
     ],
   },
 ] as const;
@@ -158,12 +144,10 @@ type SectionId = (typeof NAV)[number]["id"];
 
 const SECTION_ICONS: Record<SectionId, React.ComponentType<{ size?: number }>> = {
   inventory: BookOpen,
+  pulllist: ClipboardList,
   boxes: Boxes,
-  organisation: Wrench,
   cleanup: Sparkles,
-  catalog: Image,
   cover: Film,
-  lifearchive: Archive,
   business: Briefcase,
 };
 

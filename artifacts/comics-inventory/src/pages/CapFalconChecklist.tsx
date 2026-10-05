@@ -98,17 +98,18 @@ const CHECKLIST: ChecklistItem[] = [
   { sort:81, series:"Captain America: Symbol of Truth", issue:"#1",           year:"2022", significance:"Sam Wilson Cap returns; modern KEY 🦅",                         credits:"R.B. Silva / Tochi Onyebuchi",           value:"$15–40"     },
 ];
 
-// ─── Full Cap Vol.1 run (#100–#255, filling every gap) ───────────────────────
+// ─── Full Cap Vol.1 run (#100–#454, filling every gap) ───────────────────────
 function capVol1Year(n: number): string {
   if (n <= 109) return "1968"; if (n <= 119) return "1969"; if (n <= 129) return "1970";
   if (n <= 149) return "1971"; if (n <= 169) return "1973"; if (n <= 184) return "1974";
   if (n <= 199) return "1975"; if (n <= 212) return "1977"; if (n <= 229) return "1978";
-  if (n <= 249) return "1980"; return "1981";
+  if (n <= 249) return "1980"; if (n <= 255) return "1981";
+  return "";   // #256–#454: no sourced cover year for uncatalogued filler — shown blank, never fabricated
 }
 const FULL_CHECKLIST: ChecklistItem[] = [
   ...CHECKLIST.filter(c => c.series !== "Captain America (Vol.1)"),
-  ...Array.from({length:156}, (_,i) => {
-    const n = 100 + i;
+  ...Array.from({length:355}, (_,i) => {
+    const n = 100 + i;   // #100 … #454 — the full Vol.1 run (1968–1996)
     const existing = CHECKLIST.find(c => c.series === "Captain America (Vol.1)" && c.issue === `#${n}`);
     if (existing) return existing;
     return {
@@ -158,16 +159,20 @@ function isKey(sig: string) {
 
 // ─── Cross-reference with data3.ts ─────────────────────────────────────────────
 function seriesMatchKey(title: string, year: string): string | null {
-  const t = title.toLowerCase();
-  const y = parseInt(year || "0");
-  if (t.includes("tales of suspense")) return "Tales of Suspense";
-  if (t === "captain america" && y >= 1968 && y <= 1996) return "Captain America (Vol.1)";
-  if (t.includes("captain america & the falcon"))        return "Captain America (Vol.1)";
-  if (t === "captain america" && y >= 2004 && y <= 2012) return "Captain America (Vol.5)";
-  if ((t === "falcon" || t === "the falcon") && y >= 1983 && y <= 1984) return "The Falcon (Solo)";
-  if (t === "all-new captain america") return "All-New Captain America";
-  if (t === "captain america: sam wilson") return "Captain America: Sam Wilson";
-  if (t === "captain america: symbol of truth") return "Captain America: Symbol of Truth";
+  const t = title.toLowerCase().trim();
+  const y = parseInt((String(year).match(/\d{4}/) || ["0"])[0]);
+  // Tolerate a trailing volume suffix, e.g. "Captain America (Vol. 1)" / "... Vol 1".
+  const base = t.replace(/\s*\(?\s*vol\.?\s*\d+\s*\)?\s*$/i, "").trim();
+  if (base.includes("tales of suspense")) return "Tales of Suspense";
+  // The Bronze run was retitled "Captain America and the Falcon" (written with "and" OR "&").
+  if (base.includes("captain america and the falcon") ||
+      base.includes("captain america & the falcon"))        return "Captain America (Vol.1)";
+  if (base === "captain america" && y >= 1968 && y <= 1996) return "Captain America (Vol.1)";
+  if (base === "captain america" && y >= 2004 && y <= 2012) return "Captain America (Vol.5)";
+  if ((base === "falcon" || base === "the falcon") && y >= 1983 && y <= 1984) return "The Falcon (Solo)";
+  if (base === "all-new captain america") return "All-New Captain America";
+  if (base === "captain america: sam wilson") return "Captain America: Sam Wilson";
+  if (base === "captain america: symbol of truth") return "Captain America: Symbol of Truth";
   return null;
 }
 
@@ -258,7 +263,7 @@ export default function CapFalconChecklist() {
         </div>
         <div style={{ fontSize:"0.875rem", color:"var(--muted2)", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
           lineHeight:1.6, maxWidth:620 }}>
-          Full Cap Vol.1 run (#100–#255) plus key issues from 6 other series — 1964 to 2022.
+          Full Cap Vol.1 run (#100–#454) plus key issues from 6 other series — 1964 to 2022.
           Owned issues are highlighted in the collection. Every gap is shown.
         </div>
       </div>
