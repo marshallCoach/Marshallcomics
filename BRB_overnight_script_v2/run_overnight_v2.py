@@ -228,15 +228,23 @@ def cv_find_volume_id(title, year_hint):
     Returns (volume_id, None) or (None, error_string).
     Costs 1 API call; result cached in _volume_cache.
     """
-    if title in _volume_cache:
-        return _volume_cache[title], None
+    # Cache per (title, era): a multi-volume series (Thor, Iron Man, Avengers)
+    # must resolve to a DIFFERENT CV volume for each era, so title alone is not
+    # a safe key — it made every era reuse the first volume ever resolved.
+    cache_key = (title, str(year_hint))
+    if cache_key in _volume_cache:
+        return _volume_cache[cache_key], None
 
     params = {
         "api_key":    API_KEY,
         "format":     "json",
         "filter":     f"name:{title}",
         "field_list": "id,name,start_year,count_of_issues",
-        "limit":      10,
+        # 100 (CV max): with only 10, the correct-era volume of a long-lived
+        # series was routinely truncated out of the candidate pool, so the
+        # year-match below settled for a wrong-era volume and every modern
+        # issue number then missed ("not in CV volume").
+        "limit":      100,
     }
     resp, err = cv_get(f"{CV_BASE}/volumes/", params)
     if resp is None:
@@ -251,7 +259,7 @@ def cv_find_volume_id(title, year_hint):
 
     results = data.get("results", [])
     if not results:
-        _volume_cache[title] = None
+        _volume_cache[cache_key] = None
         return None, "No volumes found"
 
     # Best match: exact name first, then closest start_year to year_hint
@@ -271,7 +279,7 @@ def cv_find_volume_id(title, year_hint):
             pass
 
     vid = best.get("id")
-    _volume_cache[title] = vid
+    _volume_cache[cache_key] = vid
     print(f"  [VOL] '{title}' → volume id {vid} ('{best.get('name')}' {best.get('start_year')})")
     return vid, None
 
