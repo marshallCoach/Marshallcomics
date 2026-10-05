@@ -158,16 +158,20 @@ function isKey(sig: string) {
 
 // ─── Cross-reference with data3.ts ─────────────────────────────────────────────
 function seriesMatchKey(title: string, year: string): string | null {
-  const t = title.toLowerCase();
-  const y = parseInt(year || "0");
-  if (t.includes("tales of suspense")) return "Tales of Suspense";
-  if (t === "captain america" && y >= 1968 && y <= 1996) return "Captain America (Vol.1)";
-  if (t.includes("captain america & the falcon"))        return "Captain America (Vol.1)";
-  if (t === "captain america" && y >= 2004 && y <= 2012) return "Captain America (Vol.5)";
-  if ((t === "falcon" || t === "the falcon") && y >= 1983 && y <= 1984) return "The Falcon (Solo)";
-  if (t === "all-new captain america") return "All-New Captain America";
-  if (t === "captain america: sam wilson") return "Captain America: Sam Wilson";
-  if (t === "captain america: symbol of truth") return "Captain America: Symbol of Truth";
+  const t = title.toLowerCase().trim();
+  const y = parseInt((String(year).match(/\d{4}/) || ["0"])[0]);
+  // Tolerate a trailing volume suffix, e.g. "Captain America (Vol. 1)" / "... Vol 1".
+  const base = t.replace(/\s*\(?\s*vol\.?\s*\d+\s*\)?\s*$/i, "").trim();
+  if (base.includes("tales of suspense")) return "Tales of Suspense";
+  // The Bronze run was retitled "Captain America and the Falcon" (written with "and" OR "&").
+  if (base.includes("captain america and the falcon") ||
+      base.includes("captain america & the falcon"))        return "Captain America (Vol.1)";
+  if (base === "captain america" && y >= 1968 && y <= 1996) return "Captain America (Vol.1)";
+  if (base === "captain america" && y >= 2004 && y <= 2012) return "Captain America (Vol.5)";
+  if ((base === "falcon" || base === "the falcon") && y >= 1983 && y <= 1984) return "The Falcon (Solo)";
+  if (base === "all-new captain america") return "All-New Captain America";
+  if (base === "captain america: sam wilson") return "Captain America: Sam Wilson";
+  if (base === "captain america: symbol of truth") return "Captain America: Symbol of Truth";
   return null;
 }
 
