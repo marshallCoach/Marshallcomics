@@ -125,7 +125,6 @@ export default function Everything({
   const [view,        setView]       = useState<"list"|"card">("list");
   const [searched,    setSearched]   = useState(true);
   const [cardPage,    setCardPage]   = useState(1);
-  const [showFamilies,setShowFams]   = useState(false);
   const [exactTitle,  setExactTitle] = useState("");
 
   const [drawerComic, setDrawerComic] = useState<DrawerComic | null>(null);
@@ -283,8 +282,8 @@ export default function Everything({
     <div style={{ maxWidth:1400, margin:"0 auto", padding:"16px 14px 60px" }}>
 
       {/* ─── Search bar ─── */}
-      <div className="filters" style={{ borderRadius:8, marginBottom:14, padding:"14px 18px" }}>
-        <div style={{ display:"flex", gap:10, flexWrap:"wrap", alignItems:"flex-end" }}>
+      <div className="filters" style={{ borderRadius:8, marginBottom:10, padding:"9px 14px" }}>
+        <div style={{ display:"flex", gap:8, rowGap:6, flexWrap:"wrap", alignItems:"flex-end" }}>
 
           <div style={{ flex:"1 1 240px", display:"flex", flexDirection:"column", gap:4 }}>
             <label className="filter-label">Search — title, writer, artist, signer, key reason, 1st appearance, arc, notes</label>
@@ -304,16 +303,19 @@ export default function Everything({
             </div>
           </div>
 
-          <div style={{ display:"flex", gap:8, flexWrap:"wrap", alignItems:"flex-end" }}>
+          <div style={{ display:"flex", gap:6, flexWrap:"wrap", alignItems:"flex-end" }}>
             {[
-              { label:"Box",       val:boxFilter, set:setBoxFilter, opts:BOXES      },
-              { label:"Publisher", val:publisher,  set:setPub,       opts:PUBLISHERS },
-              { label:"Platform",  val:platform,   set:setPlat,      opts:PLATFORMS  },
-              { label:"Era",       val:era,        set:setEra,       opts:ERAS       },
+              { label:"Box",       val:boxFilter,   set:setBoxFilter, opts:BOXES },
+              { label:"Publisher", val:publisher,   set:setPub,       opts:PUBLISHERS },
+              { label:"Character Family", val:familyFilter, set:setFamily, opts:CHAR_FAMILIES.map(cf=>cf.name) },
+              { label:"Platform",  val:platform,    set:setPlat,      opts:PLATFORMS },
+              { label:"Era",       val:era,         set:setEra,       opts:ERAS },
             ].map(f=>(
               <div key={f.label} style={{ display:"flex", flexDirection:"column", gap:4 }}>
                 <label className="filter-label">{f.label}</label>
-                <select className="filter-select" value={f.val} onChange={e=>f.set(e.target.value)} style={{ minWidth:90 }}>
+                <select className="filter-select" value={f.val}
+                  onChange={e=>{ f.set(e.target.value); if(f.label==="Character Family"){ setSearched(true); setCardPage(1); } }}
+                  style={{ minWidth:90 }}>
                   <option value="">All</option>
                   {f.opts.map(o=><option key={o} value={o}>{f.label==="Box"?`Box ${o}`:o}</option>)}
                 </select>
@@ -351,39 +353,6 @@ export default function Everything({
           </div>
         </div>
 
-        {/* Character family pills */}
-        <div style={{ marginTop:12, display:"flex", gap:6, flexWrap:"wrap", alignItems:"center" }}>
-          <button
-            onClick={() => setShowFams(!showFamilies)}
-            style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px", color:"var(--muted2)", background:"none", border:"1px solid var(--border)", borderRadius:4, padding:"3px 10px", cursor:"pointer" }}
-          >
-            {showFamilies ? "▲" : "▼"} Character Family
-          </button>
-          {showFamilies && (
-            <>
-              {familyFilter && (
-                <button onClick={() => setFamily("")} style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--red)", background:"rgba(200,16,46,0.08)", border:"1px solid var(--red)", borderRadius:12, padding:"3px 10px", cursor:"pointer" }}>
-                  ✕ {familyFilter}
-                </button>
-              )}
-              {CHAR_FAMILIES.map(f => (
-                <button
-                  key={f.name}
-                  onClick={() => { setFamily(f.name === familyFilter ? "" : f.name); setSearched(true); setCardPage(1); }}
-                  style={{
-                    fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
-                    color: familyFilter === f.name ? "#fff" : "var(--muted2)",
-                    background: familyFilter === f.name ? "var(--red)" : "var(--surface)",
-                    border: `1px solid ${familyFilter === f.name ? "var(--red)" : "var(--border)"}`,
-                    borderRadius:12, padding:"3px 10px", cursor:"pointer", whiteSpace:"nowrap",
-                  }}
-                >
-                  {f.emoji} {f.name}
-                </button>
-              ))}
-            </>
-          )}
-        </div>
       </div>
 
       {/* Creator chips after search */}
