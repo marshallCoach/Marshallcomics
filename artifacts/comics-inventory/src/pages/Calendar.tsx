@@ -90,6 +90,12 @@ export default function Calendar() {
   const [view,    setView]    = useState<"list" | "card" | "cal">("list");
   const [open,    setOpen]    = useState<Set<number>>(new Set());
 
+  // Anything before 00:00 today is "past" — greyed out in the calendar grid.
+  const startOfToday = useMemo(() => {
+    const n = new Date();
+    return new Date(n.getFullYear(), n.getMonth(), n.getDate()).getTime();
+  }, []);
+
   const filtered = useMemo(() => {
     const ql = q.toLowerCase();
     let list = events.filter(e => {
@@ -302,6 +308,7 @@ export default function Calendar() {
                       const dayEvs = dayEventMap[k] || [];
                       const has = dayEvs.length > 0;
                       const ti = has ? typeIcon(dayEvs[0].Type) : null;
+                      const isPast = new Date(year, month-1, d).getTime() < startOfToday;
                       return (
                         <div key={idx}
                           title={has ? dayEvs.map(e => e.Theme.substring(0,55)).join("; ") : undefined}
@@ -310,10 +317,11 @@ export default function Calendar() {
                             fontSize:"0.875rem", letterSpacing:"0.5px", lineHeight:1,
                             padding:"4px 1px", borderRadius:4,
                             background: has ? ti!.bg : "transparent",
-                            color: has ? ti!.color : "var(--text)",
+                            color: isPast ? "var(--muted)" : has ? ti!.color : "var(--text)",
                             border: has ? `1px solid ${ti!.color}44` : "1px solid transparent",
                             fontWeight: has ? 700 : 400,
                             cursor: has ? "help" : "default",
+                            opacity: isPast ? 0.4 : 1,
                           }}>
                           {d}
                           {dayEvs.length > 1 && (
@@ -331,8 +339,9 @@ export default function Calendar() {
                         evs.map(ev => ({ ev, day: parseInt(k.split("-")[2]) }))
                       ).map(({ ev, day }, i) => {
                         const ti2 = typeIcon(ev.Type);
+                        const rowPast = new Date(year, month-1, day).getTime() < startOfToday;
                         return (
-                          <div key={i} style={{ display:"flex", gap:6, alignItems:"flex-start" }}>
+                          <div key={i} style={{ display:"flex", gap:6, alignItems:"flex-start", opacity: rowPast ? 0.4 : 1 }}>
                             <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
                               color:ti2.color, minWidth:18, flexShrink:0, marginTop:1 }}>{day}</div>
                             <div style={{ flex:1, minWidth:0 }}>
