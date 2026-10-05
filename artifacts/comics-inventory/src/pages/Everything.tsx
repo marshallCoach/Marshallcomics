@@ -160,9 +160,21 @@ export default function Everything({
       return (
         <span style={{ display:"flex", alignItems:"center", gap:5 }}>
           <span style={{ display:"flex", flexDirection:"column", gap:1 }}>
-            <button className="title-link" onClick={e=>{e.stopPropagation();setExactTitle(r.Title||"");setQuery("");setSearched(true);setCardPage(1);}}>
-              {r.Title||"Untitled"}
-            </button>
+            <span style={{ display:"flex", alignItems:"center", gap:4 }}>
+              <button className="title-link" onClick={e=>{e.stopPropagation();setExactTitle(r.Title||"");setQuery("");setSearched(true);setCardPage(1);}}>
+                {r.Title||"Untitled"}
+              </button>
+              {onNavigate && r.Title && (
+                <button
+                  onClick={e=>{e.stopPropagation();onNavigate("coverreview",{title:r.Title});}}
+                  title="View every cover for this title"
+                  style={{ all:"unset", cursor:"pointer", flexShrink:0,
+                    fontSize:"0.75rem", fontWeight:700, lineHeight:1,
+                    color:"var(--red)", border:"1px solid var(--red)", borderRadius:4,
+                    padding:"1px 5px" }}
+                >t</button>
+              )}
+            </span>
             {r.Disambig && <span style={{ fontSize:"0.875rem", color:"var(--muted2)", lineHeight:1.2 }}>{r.Disambig}</span>}
           </span>
           {flaggedKeys.has(fk) && <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"#92400e", background:"#fef3c7", border:"1px solid #fcd34d", borderRadius:3, padding:"1px 5px", flexShrink:0 }}>UPDATE</span>}
@@ -483,6 +495,7 @@ export default function Everything({
             {cardSlice.map((c,i)=>(
               <EverythingCard key={i} comic={c}
                 onTitleClick={t=>{setExactTitle(t);setQuery("");setSearched(true);setCardPage(1);}}
+                onTitleCovers={onNavigate ? (t=>onNavigate("coverreview",{title:t})) : undefined}
                 flagged={flaggedKeys.has(comicFlagKey(c.Title, c.Issue || "", c.Box || ""))}
                 onOpenDrawer={() => openDrawer(c)}
                 onCoverClick={(comic, large) => setCoverModal({ comic, large })} />
@@ -520,9 +533,10 @@ export default function Everything({
   );
 }
 
-function EverythingCard({ comic: c, onTitleClick, flagged, onOpenDrawer, onCoverClick }: {
+function EverythingCard({ comic: c, onTitleClick, onTitleCovers, flagged, onOpenDrawer, onCoverClick }: {
   comic: Comic;
   onTitleClick?: (title: string) => void;
+  onTitleCovers?: (title: string) => void;
   flagged?: boolean;
   onOpenDrawer?: () => void;
   onCoverClick?: (comic: Comic, large: string | null) => void;
@@ -544,10 +558,22 @@ function EverythingCard({ comic: c, onTitleClick, flagged, onOpenDrawer, onCover
               {c.Platform && <span className={`badge ${platClass(c.Platform)}`} style={{fontSize:"0.875rem"}}>{c.Platform}</span>}
             </div>
           </div>
-          {onTitleClick
-            ? <button className="title-link" style={{fontSize:"inherit",fontWeight:600,lineHeight:1.3}} onClick={e=>{e.stopPropagation();onTitleClick(c.Title);}} title="Click to show only this title">{c.Title}</button>
-            : <div className="card-title">{c.Title}</div>
-          }
+          <span style={{ display:"inline-flex", alignItems:"center", gap:4 }}>
+            {onTitleClick
+              ? <button className="title-link" style={{fontSize:"inherit",fontWeight:600,lineHeight:1.3}} onClick={e=>{e.stopPropagation();onTitleClick(c.Title);}} title="Click to show only this title">{c.Title}</button>
+              : <div className="card-title">{c.Title}</div>
+            }
+            {onTitleCovers && c.Title && (
+              <button
+                onClick={e=>{e.stopPropagation();onTitleCovers(c.Title);}}
+                title="View every cover for this title"
+                style={{ all:"unset", cursor:"pointer", flexShrink:0,
+                  fontSize:"0.75rem", fontWeight:700, lineHeight:1,
+                  color:"var(--red)", border:"1px solid var(--red)", borderRadius:4,
+                  padding:"1px 5px" }}
+              >t</button>
+            )}
+          </span>
           <div className="card-issue">
             {(()=>{const ip=parseIssueParts(c.Issue);return<>{ip.main}{ip.legacy&&<span style={{fontSize:"0.875rem",fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",letterSpacing:"1px",background:"#e8f0fe",color:"#1d4ed8",borderRadius:3,padding:"1px 5px",marginLeft:4}}>{ip.legacy}</span>}</>; })()}
             {c.Volume && c.Volume !== "1" ? ` · Vol ${c.Volume}` : ""}{c.Year ? ` · ${c.Year}` : ""}
