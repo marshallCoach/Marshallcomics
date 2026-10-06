@@ -41,6 +41,7 @@ import EbayListingGuide from "@/pages/EbayListingGuide";
 import ComicRoulette from "@/pages/ComicRoulette";
 import NYCCHunt from "@/pages/NYCCHunt";
 import LocationCheck from "@/pages/LocationCheck";
+import AbsoluteBatman from "@/pages/AbsoluteBatman";
 import LifeArchive from "@/pages/LifeArchive";
 import DataFix from "@/pages/DataFix";
 import TitleFixes from "@/pages/TitleFixes";
@@ -55,7 +56,7 @@ type TabId =
   | "calendar" | "showplanner" | "cgc" | "signings" | "actionplan" | "timeline" | "boxvisual"
   | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "duplicates" | "dupchecklist" | "datafix" | "titlefixes" | "volumeconfirm" | "history"
   | "orgpath" | "volumes" | "boxlabels" | "keycatalog" | "covercatalog" | "coverreview" | "missingcovers" | "boxquest" | "boxmap"
-  | "ebaypipeline" | "opsreference" | "ebaylistingguide" | "roulette" | "lifearchive" | "nycc" | "locationcheck";
+  | "ebaypipeline" | "opsreference" | "ebaylistingguide" | "roulette" | "lifearchive" | "nycc" | "locationcheck" | "absbatman";
 
 export type NavParams = {
   box?: string;
@@ -129,6 +130,7 @@ const NAV = [
     label: "Business",
     tabs: [
       { id: "nycc",        label: "NYCC Hunt" },
+      { id: "absbatman",   label: "Absolute Batman" },
       { id: "locationcheck", label: "Where Is It?" },
       { id: "sellerdash",  label: "Seller Dashboard" },
       { id: "calendar",    label: "Calendar" },
@@ -347,6 +349,7 @@ export default function App() {
         {activeTab === "sellerdash"  && <SellerDashboard />}
         {activeTab === "nycc"        && <NYCCHunt />}
         {activeTab === "locationcheck" && <LocationCheck />}
+        {activeTab === "absbatman"   && <AbsoluteBatman />}
         {activeTab === "capfalcon"   && <CapFalconChecklist />}
         {activeTab === "cgc"         && <CGCStrategy />}
         {activeTab === "signings"    && <PrivateSignings />}
