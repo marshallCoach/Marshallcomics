@@ -1,7 +1,17 @@
-// Absolute Batman market board — all figures are user-provided market research
-// (secondary market + eBay NM raw), not derived from the inventory/eBay pipeline.
+// Absolute Batman market board — price figures are user-provided market research
+// (secondary market + eBay NM raw), not derived from the eBay pipeline. The
+// Owned / Box column is computed live from the inventory (DATA.comics).
+import { useMemo } from "react";
+import { DATA } from "@/data/data";
 
 interface Row { n: number; secondary: string; ebay: string; hot?: boolean; }
+
+const normIssue = (v: unknown) => {
+  const s = String(v ?? "").trim().replace(/^#/, "");
+  const f = parseFloat(s);
+  return Number.isFinite(f) && f === Math.trunc(f) ? String(Math.trunc(f)) : s;
+};
+const hiOf = (s: string) => Math.max(0, ...(s.match(/[\d.]+/g) || []).map(Number));
 const TABLE: Row[] = [
   { n: 1,  secondary: "$381.00 – $916.00+", ebay: "$275.00 – $495.00", hot: true },
   { n: 2,  secondary: "$20.00 – $40.00",    ebay: "$55.00 – $70.00" },
@@ -58,6 +68,19 @@ const C20_EBAY: [string, string][] = [
 ];
 
 export default function AbsoluteBatman() {
+  const owned = useMemo(() => {
+    const m: Record<string, string[]> = {};
+    for (const c of (DATA.comics as Array<{ Title?: string; Issue?: string; Box?: string }>)) {
+      if (String(c.Title || "").trim().toLowerCase() !== "absolute batman") continue;
+      const k = normIssue(c.Issue);
+      (m[k] ||= []).push(String(c.Box || "?"));
+    }
+    return m;
+  }, []);
+
+  const ownedCount = TABLE.filter(r => owned[String(r.n)]?.length).length;
+  const flipCount = TABLE.filter(r => owned[String(r.n)]?.length && hiOf(r.ebay) > hiOf(r.secondary)).length;
+
   return (
     <div className="abw">
       <style>{css}</style>
@@ -83,18 +106,28 @@ export default function AbsoluteBatman() {
 
       <section className="abw-section">
         <div className="abw-sechead"><h2>Cover A — full run</h2><span className="abw-tag">24 issues</span>
-          <p className="abw-secsub">Hot rows (⚡) are the first issue, the defect/first-appearance spikes, and issues where eBay NM runs well above card-stock secondary.</p></div>
+          <p className="abw-secsub">You own <b>{ownedCount} of 24</b> · <b>{flipCount}</b> flip candidates — owned issues where eBay NM raw tops the card-stock secondary high (⚡). Owned / Box is read live from your inventory.</p></div>
         <div className="abw-tablewrap">
           <table className="abw-table">
-            <thead><tr><th>Issue</th><th>Cover A · secondary</th><th>eBay NM raw</th></tr></thead>
+            <thead><tr><th>Issue</th><th>Cover A · secondary</th><th>eBay NM raw</th><th>Owned · Box</th></tr></thead>
             <tbody>
-              {TABLE.map(r => (
-                <tr key={r.n} className={r.hot ? "hot" : ""}>
-                  <td className="iss">{r.hot && <span className="spark">⚡</span>}Absolute Batman #{r.n}</td>
-                  <td className="num">{r.secondary}</td>
-                  <td className="num ebay">{r.ebay}</td>
-                </tr>
-              ))}
+              {TABLE.map(r => {
+                const boxes = owned[String(r.n)] || [];
+                const have = boxes.length > 0;
+                const flip = have && hiOf(r.ebay) > hiOf(r.secondary);
+                return (
+                  <tr key={r.n} className={flip ? "hot" : ""}>
+                    <td className="iss">{flip && <span className="spark">⚡</span>}Absolute Batman #{r.n}</td>
+                    <td className="num">{r.secondary}</td>
+                    <td className="num ebay">{r.ebay}</td>
+                    <td className="own">
+                      {have
+                        ? <><b>{boxes.length}×</b> {boxes.map((b, i) => <span key={i} className="boxchip">{b}</span>)}{flip && <span className="flipchip">FLIP</span>}</>
+                        : <span className="dontown">—</span>}
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
@@ -156,6 +189,10 @@ const css = `
 .abw-table td.cov{color:var(--text2);line-height:1.35;min-width:170px}
 .abw-table td.num{font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:600}
 .abw-table td.num.ebay{color:#16a34a}
+.abw-table td.own{white-space:nowrap;font-size:.82rem}
+.boxchip{display:inline-block;background:var(--surface2);border:1px solid var(--border);border-radius:5px;padding:1px 6px;margin:0 3px 2px 0;font-weight:700;font-variant-numeric:tabular-nums}
+.flipchip{display:inline-block;background:#16a34a;color:#fff;border-radius:5px;padding:1px 7px;font-size:.6rem;font-weight:800;letter-spacing:.08em;margin-left:2px;vertical-align:middle}
+.dontown{color:var(--muted)}
 .abw-table tr.hot td{background:rgba(180,105,14,.07)}
 .abw-table tr.hot td.iss{color:#b4690e}
 .spark{margin-right:5px}
