@@ -39,6 +39,7 @@ import EbayPipeline from "@/pages/EbayPipeline";
 import OpsReference from "@/pages/OpsReference";
 import EbayListingGuide from "@/pages/EbayListingGuide";
 import ComicRoulette from "@/pages/ComicRoulette";
+import NYCCHunt from "@/pages/NYCCHunt";
 import LifeArchive from "@/pages/LifeArchive";
 import DataFix from "@/pages/DataFix";
 import TitleFixes from "@/pages/TitleFixes";
@@ -53,7 +54,7 @@ type TabId =
   | "calendar" | "showplanner" | "cgc" | "signings" | "actionplan" | "timeline" | "boxvisual"
   | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "duplicates" | "dupchecklist" | "datafix" | "titlefixes" | "volumeconfirm" | "history"
   | "orgpath" | "volumes" | "boxlabels" | "keycatalog" | "covercatalog" | "coverreview" | "missingcovers" | "boxquest" | "boxmap"
-  | "ebaypipeline" | "opsreference" | "ebaylistingguide" | "roulette" | "lifearchive";
+  | "ebaypipeline" | "opsreference" | "ebaylistingguide" | "roulette" | "lifearchive" | "nycc";
 
 export type NavParams = {
   box?: string;
@@ -127,6 +128,7 @@ const NAV = [
     label: "Business",
     tabs: [
       { id: "sellerdash",  label: "Seller Dashboard" },
+      { id: "nycc",        label: "NYCC Hunt" },
       { id: "calendar",    label: "Calendar" },
       { id: "showplanner", label: "Whatnot Shows" },
       { id: "cgc",         label: "CGC" },
@@ -329,6 +331,7 @@ export default function App() {
         {activeTab === "boxlabels"   && <BoxLabels />}
         {activeTab === "hunting"     && <BoxHunt />}
         {activeTab === "sellerdash"  && <SellerDashboard />}
+        {activeTab === "nycc"        && <NYCCHunt />}
         {activeTab === "capfalcon"   && <CapFalconChecklist />}
         {activeTab === "cgc"         && <CGCStrategy />}
         {activeTab === "signings"    && <PrivateSignings />}
