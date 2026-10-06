@@ -40,6 +40,7 @@ import OpsReference from "@/pages/OpsReference";
 import EbayListingGuide from "@/pages/EbayListingGuide";
 import ComicRoulette from "@/pages/ComicRoulette";
 import NYCCHunt from "@/pages/NYCCHunt";
+import LocationCheck from "@/pages/LocationCheck";
 import LifeArchive from "@/pages/LifeArchive";
 import DataFix from "@/pages/DataFix";
 import TitleFixes from "@/pages/TitleFixes";
@@ -54,7 +55,7 @@ type TabId =
   | "calendar" | "showplanner" | "cgc" | "signings" | "actionplan" | "timeline" | "boxvisual"
   | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "duplicates" | "dupchecklist" | "datafix" | "titlefixes" | "volumeconfirm" | "history"
   | "orgpath" | "volumes" | "boxlabels" | "keycatalog" | "covercatalog" | "coverreview" | "missingcovers" | "boxquest" | "boxmap"
-  | "ebaypipeline" | "opsreference" | "ebaylistingguide" | "roulette" | "lifearchive" | "nycc";
+  | "ebaypipeline" | "opsreference" | "ebaylistingguide" | "roulette" | "lifearchive" | "nycc" | "locationcheck";
 
 export type NavParams = {
   box?: string;
@@ -128,6 +129,7 @@ const NAV = [
     label: "Business",
     tabs: [
       { id: "nycc",        label: "NYCC Hunt" },
+      { id: "locationcheck", label: "Where Is It?" },
       { id: "sellerdash",  label: "Seller Dashboard" },
       { id: "calendar",    label: "Calendar" },
       { id: "showplanner", label: "Whatnot Shows" },
@@ -198,6 +200,17 @@ export default function App() {
     return () => window.removeEventListener("keydown", onKey);
   }, [openSearch]);
 
+  // Direct links: open the tab named in the URL hash on load (e.g. #nycc).
+  useEffect(() => {
+    const h = (window.location.hash || "").replace(/^#/, "");
+    if (h && NAV.some(s => s.tabs.some(tb => tb.id === h))) navigateTo(h);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  function syncHash(t: string) {
+    try { history.replaceState(null, "", "#" + t); } catch { /* ignore */ }
+  }
+
   function navigateTo(tab: string, params?: NavParams) {
     const t = tab as TabId;
     const targetSection = NAV.find(s => s.tabs.some(tb => tb.id === t));
@@ -206,6 +219,7 @@ export default function App() {
     }
     setNavParams(params || {});
     setActiveTab(t);
+    syncHash(t);
   }
 
   function handleSection(sid: SectionId) {
@@ -295,7 +309,7 @@ export default function App() {
               {showDivider && <span className="tab-group-label">{group}</span>}
               <button
                 className={`tab-btn${activeTab === tab.id ? " active" : ""}`}
-                onClick={() => setActiveTab(tab.id as TabId)}
+                onClick={() => { setActiveTab(tab.id as TabId); syncHash(tab.id); }}
               >{tab.label}</button>
             </div>
           );
@@ -332,6 +346,7 @@ export default function App() {
         {activeTab === "hunting"     && <BoxHunt />}
         {activeTab === "sellerdash"  && <SellerDashboard />}
         {activeTab === "nycc"        && <NYCCHunt />}
+        {activeTab === "locationcheck" && <LocationCheck />}
         {activeTab === "capfalcon"   && <CapFalconChecklist />}
         {activeTab === "cgc"         && <CGCStrategy />}
         {activeTab === "signings"    && <PrivateSignings />}
