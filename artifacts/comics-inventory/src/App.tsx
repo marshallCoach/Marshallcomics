@@ -198,6 +198,17 @@ export default function App() {
     return () => window.removeEventListener("keydown", onKey);
   }, [openSearch]);
 
+  // Direct links: open the tab named in the URL hash on load (e.g. #nycc).
+  useEffect(() => {
+    const h = (window.location.hash || "").replace(/^#/, "");
+    if (h && NAV.some(s => s.tabs.some(tb => tb.id === h))) navigateTo(h);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  function syncHash(t: string) {
+    try { history.replaceState(null, "", "#" + t); } catch { /* ignore */ }
+  }
+
   function navigateTo(tab: string, params?: NavParams) {
     const t = tab as TabId;
     const targetSection = NAV.find(s => s.tabs.some(tb => tb.id === t));
@@ -206,6 +217,7 @@ export default function App() {
     }
     setNavParams(params || {});
     setActiveTab(t);
+    syncHash(t);
   }
 
   function handleSection(sid: SectionId) {
@@ -295,7 +307,7 @@ export default function App() {
               {showDivider && <span className="tab-group-label">{group}</span>}
               <button
                 className={`tab-btn${activeTab === tab.id ? " active" : ""}`}
-                onClick={() => setActiveTab(tab.id as TabId)}
+                onClick={() => { setActiveTab(tab.id as TabId); syncHash(tab.id); }}
               >{tab.label}</button>
             </div>
           );
