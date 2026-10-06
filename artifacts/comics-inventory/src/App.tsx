@@ -127,8 +127,8 @@ const NAV = [
     id: "business",
     label: "Business",
     tabs: [
-      { id: "sellerdash",  label: "Seller Dashboard" },
       { id: "nycc",        label: "NYCC Hunt" },
+      { id: "sellerdash",  label: "Seller Dashboard" },
       { id: "calendar",    label: "Calendar" },
       { id: "showplanner", label: "Whatnot Shows" },
       { id: "cgc",         label: "CGC" },
