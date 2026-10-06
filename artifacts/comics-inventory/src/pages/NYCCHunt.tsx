@@ -10,7 +10,7 @@ interface Book {
   g: Group; pub: "dc" | "marvel" | "skybound"; corner: string;
   title: string; issue: string; vol: string; box: string;
   dayLabel: string; dayCls: "fri" | "sat" | "verify"; who: string;
-  netLow: number | null; netHigh?: number; roi: string; fee: string; cover?: string;
+  netLow: number | null; netHigh?: number; netNote?: string; roi: string; fee: string; cover?: string;
 }
 
 const COVERS: Record<string, string> = {
@@ -32,7 +32,7 @@ const cov = (t: string, i: string) => COVERS[`${t} #${i}`];
 
 const BOOKS: Book[] = [
   // FRIDAY — Miller, Ewing, and Snyder/Dragotta/Martin (confirmed Fri)
-  { g: "fri", pub: "marvel", corner: "WOLVERINE", title: "Wolverine", issue: "8", vol: "8.0 · Claremont-signed", box: "BOX 106", dayLabel: "Miller · Fri", dayCls: "fri", who: "Frank Miller — your best ROI book", netLow: 141, netHigh: 341, roi: "single best ROI in the hunt", fee: "$115 Miller · $64 CGC", cover: cov("Wolverine", "8") },
+  { g: "fri", pub: "dc", corner: "BATMAN", title: "Dark Knight Returns · Facsimile", issue: "4", vol: "DKR Book 4 · Miller variant cover", box: "FIND IT", dayLabel: "Miller · Fri", dayCls: "fri", who: "Frank Miller — variant cover (Wolverine #8 is at CGC)", netLow: null, netNote: "value TBD", roi: "Miller signature — set the value in your sheet", fee: "$115 Miller · $64 CGC" },
   { g: "fri", pub: "dc", corner: "BATMAN", title: "Absolute Batman", issue: "21", vol: "Vol 1", box: "FIND IT", dayLabel: "Snyder · Fri", dayCls: "fri", who: "Snyder / Dragotta", netLow: 233, roi: "+1,165% on a $20 sig", fee: "flat con fee", cover: cov("Absolute Batman", "21") },
   { g: "fri", pub: "dc", corner: "BATMAN", title: "Absolute Batman", issue: "8", vol: "Vol 1 · NM", box: "BOX 104", dayLabel: "Snyder · Fri", dayCls: "fri", who: "Snyder + Dragotta + Martin (3 free sigs)", netLow: 116, netHigh: 236, roi: "free-sig standout", fee: "$0 sig · $64 CGC", cover: cov("Absolute Batman", "8") },
   { g: "fri", pub: "dc", corner: "BATMAN", title: "Absolute Batman", issue: "6", vol: "Vol 1", box: "FIND IT", dayLabel: "Snyder · Fri", dayCls: "fri", who: "Snyder / Dragotta", netLow: 135, roi: "+676%", fee: "flat con fee", cover: cov("Absolute Batman", "6") },
@@ -148,7 +148,7 @@ export default function NYCCHunt() {
                       <div className="nycc-who">{b.who}</div>
                       <div className="nycc-econ">
                         {b.netLow == null
-                          ? <span className="nycc-net none">ceiling play</span>
+                          ? <span className="nycc-net none">{b.netNote || "ceiling play"}</span>
                           : <span className={`nycc-net ${b.netLow < 0 ? "neg" : ""}`}>
                               {fmt(b.netLow)}{b.netHigh ? "–$" + Math.round(b.netHigh).toLocaleString() : ""}
                             </span>}
@@ -173,8 +173,8 @@ export default function NYCCHunt() {
           <div className="nycc-day">
             <div className="dd">Day 1</div><h3>Friday</h3>
             <ul className="nycc-timeline">
-              <li><span className="t">On open</span><span className="d"><b>Verify your bag:</b> Wolverine #8 (Box 106), Immortal Hulk #1 (CC4), and the Absolute Batman books (Box 104 + the FIND-IT issues).</span></li>
-              <li><span className="t">Slot</span><span className="d"><b>Frank Miller — your purchased slot.</b> Wolverine #8 only. CGC witness. Best ROI of the weekend.</span></li>
+              <li><span className="t">On open</span><span className="d"><b>Verify your bag:</b> the DKR #4 Facsimile (for Miller), Immortal Hulk #1 (CC4), and the Absolute Batman books (Box 104 + the FIND-IT issues).</span></li>
+              <li><span className="t">Slot</span><span className="d"><b>Frank Miller — your purchased slot.</b> DKR #4 Facsimile (Miller variant cover). CGC witness. <em>(Wolverine #8 is still at CGC — not available.)</em></span></li>
               <li><span className="t">DC booth</span><span className="d"><b>Snyder + Dragotta + Martin.</b> Run every Absolute Batman copy — the free-sig engine. Also sign <b>Superman Unchained #1</b> here (Snyder) so it's ready for Lee on Saturday.</span></li>
               <li><span className="t">~3:00</span><span className="d"><b>Al Ewing, DC booth.</b> Immortal Hulk #1.</span></li>
               <li><span className="t">EOD</span><span className="d">Everything signed into a hard case — unwitnessed = green label = the math collapses.</span></li>
@@ -194,7 +194,7 @@ export default function NYCCHunt() {
 
       <section className="nycc-section">
         <div className="nycc-sechead"><h2>The money</h2><span className="nycc-tag sat">From your analysis</span>
-          <p className="nycc-secsub">With Snyder confirmed Friday, the Absolute Batman engine is in play — most of this is now reachable across your two days.</p></div>
+          <p className="nycc-secsub">With Snyder confirmed Friday, the Absolute Batman engine is in play. Note: Wolverine #8 is out (still at CGC) — the Miller slot now holds the DKR #4 Facsimile, value TBD, so re-base the net once you price it.</p></div>
         <div className="nycc-money">
           <div className="mcell"><div className="lbl">Total out (if all land)</div><div className="v">~$877</div></div>
           <div className="mcell"><div className="lbl">Fees already spent</div><div className="v">$365</div></div>
