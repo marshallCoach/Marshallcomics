@@ -1,5 +1,10 @@
 # BRB — Marshall Comics · Claude Code Notes
 
+## Owner schedule
+- **NYCC 2026: Robert attends Friday Oct 9 + Saturday Oct 10 only** (not Thursday,
+  not Sunday). Signing plans must land creators on Fri/Sat; CGC submission happens
+  Saturday before leaving. Jim Lee = Sat; Miller / Ewing / Snyder-Dragotta-Martin = Fri.
+
 ## Response format
 - Commands FIRST, explanations AFTER. Always. Give the runnable lines, then
   explain what they do underneath.
