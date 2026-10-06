@@ -40,6 +40,7 @@ import OpsReference from "@/pages/OpsReference";
 import EbayListingGuide from "@/pages/EbayListingGuide";
 import ComicRoulette from "@/pages/ComicRoulette";
 import NYCCHunt from "@/pages/NYCCHunt";
+import LocationCheck from "@/pages/LocationCheck";
 import LifeArchive from "@/pages/LifeArchive";
 import DataFix from "@/pages/DataFix";
 import TitleFixes from "@/pages/TitleFixes";
@@ -54,7 +55,7 @@ type TabId =
   | "calendar" | "showplanner" | "cgc" | "signings" | "actionplan" | "timeline" | "boxvisual"
   | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "duplicates" | "dupchecklist" | "datafix" | "titlefixes" | "volumeconfirm" | "history"
   | "orgpath" | "volumes" | "boxlabels" | "keycatalog" | "covercatalog" | "coverreview" | "missingcovers" | "boxquest" | "boxmap"
-  | "ebaypipeline" | "opsreference" | "ebaylistingguide" | "roulette" | "lifearchive" | "nycc";
+  | "ebaypipeline" | "opsreference" | "ebaylistingguide" | "roulette" | "lifearchive" | "nycc" | "locationcheck";
 
 export type NavParams = {
   box?: string;
@@ -128,6 +129,7 @@ const NAV = [
     label: "Business",
     tabs: [
       { id: "nycc",        label: "NYCC Hunt" },
+      { id: "locationcheck", label: "Where Is It?" },
       { id: "sellerdash",  label: "Seller Dashboard" },
       { id: "calendar",    label: "Calendar" },
       { id: "showplanner", label: "Whatnot Shows" },
@@ -344,6 +346,7 @@ export default function App() {
         {activeTab === "hunting"     && <BoxHunt />}
         {activeTab === "sellerdash"  && <SellerDashboard />}
         {activeTab === "nycc"        && <NYCCHunt />}
+        {activeTab === "locationcheck" && <LocationCheck />}
         {activeTab === "capfalcon"   && <CapFalconChecklist />}
         {activeTab === "cgc"         && <CGCStrategy />}
         {activeTab === "signings"    && <PrivateSignings />}
