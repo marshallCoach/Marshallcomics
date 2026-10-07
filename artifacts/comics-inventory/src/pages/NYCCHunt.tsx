@@ -1,4 +1,5 @@
 import { useState, useMemo } from "react";
+import { DATA } from "@/data/data";
 
 // ── NYCC signing hunt — Friday + Saturday ──────────────────────────────────────
 // All dollar figures, boxes and creator assignments come from Robert's own NYCC
@@ -64,7 +65,48 @@ const SECTIONS: { g: Group; title: string; tag: string; tagCls: string; sub: str
   { g: "skip", title: "Personal collection only", tag: "Underwater on fees", tagCls: "verify", sub: "Sign for love, not profit — the fee costs more than the signature adds." },
 ];
 
+// Top 25 key signing targets — Robert's own analysis (cover artists, key
+// rationale, baseline value, net on a $20 fee). Owned · Box is read live.
+interface Target { r: number; title: string; issue: string; iss: string; vol: string; cover: string; why: string; base: number; net: number; }
+const TOP25: Target[] = [
+  { r: 1,  title: "Absolute Batman", issue: "21", iss: "21", vol: "1", cover: "Nick Dragotta & Frank Martin", why: "DC Absolute Universe flagship hit", base: 114.99, net: 232.98 },
+  { r: 2,  title: "House of X", issue: "1", iss: "1", vol: "1", cover: "Pepe Larraz", why: "Krakoa Era launch; “To me, my X-Men”", base: 90.00, net: 178.00 },
+  { r: 3,  title: "Absolute Batman", issue: "6", iss: "6", vol: "1", cover: "Nick Dragotta & Frank Martin", why: "High-velocity 1st print run", base: 70.59, net: 135.30 },
+  { r: 4,  title: "Absolute Batman", issue: "19", iss: "19", vol: "1", cover: "Nick Dragotta & Frank Martin", why: "Core Absolute continuity landmark", base: 65.00, net: 123.00 },
+  { r: 5,  title: "Absolute Batman", issue: "8", iss: "8", vol: "1", cover: "Nick Dragotta & Frank Martin", why: "High-demand modern Snyder/Dragotta key", base: 52.14, net: 94.71 },
+  { r: 6,  title: "Transformers", issue: "1", iss: "1", vol: "1", cover: "Daniel Warren Johnson", why: "Skybound relaunch; DWJ signature style", base: 37.05, net: 61.51 },
+  { r: 7,  title: "Absolute Batman", issue: "5", iss: "5", vol: "1", cover: "Nick Dragotta & Frank Martin", why: "Established modern baseline key", base: 35.59, net: 58.30 },
+  { r: 8,  title: "X-Men: Hellfire Gala", issue: "1", iss: "1", vol: "3", cover: "Phil Noto", why: "X-Men ’97 Disney+ animated tie-in spec", base: 28.49, net: 42.68 },
+  { r: 9,  title: "Absolute Catwoman", issue: "2", iss: "2", vol: "1", cover: "Bengal", why: "Expanding Absolute DC line key", base: 24.75, net: 34.45 },
+  { r: 10, title: "Absolute Batman", issue: "16", iss: "16", vol: "1", cover: "Nick Dragotta & Frank Martin", why: "Key issue in the record-breaking Absolute run", base: 23.99, net: 32.77 },
+  { r: 11, title: "Dark Knights: Metal", issue: "2", iss: "2", vol: "1", cover: "Greg Capullo, Jonathan Glapion, FCO Plascencia", why: "Snyder/Capullo Dark Multiverse invasion", base: 23.49, net: 31.68 },
+  { r: 12, title: "Absolute Batman", issue: "7", iss: "7", vol: "1", cover: "Nick Dragotta & Frank Martin", why: "Strong contemporary collector demand", base: 22.00, net: 28.40 },
+  { r: 13, title: "X-Men", issue: "35 (Legacy #700)", iss: "35", vol: "6", cover: "Pepe Larraz & Marte Gracia", why: "Massive milestone ending the Krakoa Era", base: 20.00, net: 24.00 },
+  { r: 14, title: "Absolute Batman", issue: "12", iss: "12", vol: "1", cover: "Nick Dragotta & Frank Martin", why: "Mid-run spec issue", base: 19.99, net: 23.98 },
+  { r: 15, title: "Winter Soldier", issue: "1", iss: "1", vol: "1", cover: "Lee Bermejo", why: "Brubaker/Guice classic spy thriller launch", base: 17.20, net: 17.84 },
+  { r: 16, title: "Absolute Batman", issue: "15", iss: "15", vol: "1", cover: "Nick Dragotta & Frank Martin", why: "Continuing collector momentum", base: 16.99, net: 17.38 },
+  { r: 17, title: "Absolute Batman", issue: "1", iss: "1", vol: "1", cover: "Nick Dragotta", why: "2024’s #1 bestselling comic launch (400k+ copies)", base: 16.94, net: 17.27 },
+  { r: 18, title: "Absolute Batman", issue: "23", iss: "23", vol: "1", cover: "Nick Dragotta & Frank Martin", why: "Recent high-demand release", base: 15.00, net: 13.00 },
+  { r: 19, title: "Absolute Batman", issue: "2", iss: "2", vol: "1", cover: "Nick Dragotta", why: "1st print continuation of the blockbuster launch", base: 14.99, net: 12.98 },
+  { r: 20, title: "Fantastic Four", issue: "35 (Legacy #680)", iss: "35", vol: "6", cover: "Variant / unlisted", why: "60 Years special milestone issue", base: 14.68, net: 12.30 },
+  { r: 21, title: "Hulk", issue: "1", iss: "1", vol: "5", cover: "Ryan Ottley", why: "Cates & Ottley starship-Hulk concept", base: 13.99, net: 10.78 },
+  { r: 22, title: "House of X", issue: "2", iss: "2", vol: "1", cover: "Pepe Larraz", why: "Moira MacTaggert timeline revelation twist", base: 13.77, net: 10.29 },
+  { r: 23, title: "Wonder Woman", issue: "0", iss: "0", vol: "4", cover: "Cliff Chiang", why: "Azzarello/Chiang Greek god reimagining", base: 13.30, net: 9.26 },
+  { r: 24, title: "Wonder Woman 75th Special", issue: "1", iss: "1", vol: "1", cover: "Cliff Chiang", why: "Anniversary milestone multi-story celebration", base: 13.30, net: 9.26 },
+  { r: 25, title: "Transformers", issue: "17", iss: "17", vol: "1", cover: "Daniel Warren Johnson", why: "DWJ ongoing hit run spec", base: 12.46, net: 7.41 },
+];
+const tNorm = (v: unknown) => String(v ?? "").trim().toLowerCase().replace(/^#/, "").replace(/\.0$/, "");
+
 export default function NYCCHunt() {
+  const ownedT = useMemo(() => {
+    const m: Record<string, string[]> = {};
+    for (const c of (DATA.comics as Array<{ Title?: string; Issue?: string; Box?: string }>)) {
+      const k = `${String(c.Title || "").trim().toLowerCase()}|${tNorm(c.Issue)}`;
+      (m[k] ||= []).push(String(c.Box || "?"));
+    }
+    return m;
+  }, []);
+
   const [captured, setCaptured] = useState<Record<string, boolean>>(() => {
     try { return JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch { return {}; }
   });
@@ -166,6 +208,36 @@ export default function NYCCHunt() {
           </section>
         );
       })}
+
+      <section className="nycc-section">
+        <div className="nycc-sechead"><h2 className="disp">Top 25 key signing targets</h2><span className="tag confirm">ranked by net on a $20 fee</span>
+          <p className="sec-sub">Your highest net-profit books to get signed by confirmed NYCC creators — with the confirmed cover artist, why the issue is a key, and whether you own it (live from inventory).</p></div>
+        <div className="t25-wrap">
+          <table className="t25">
+            <thead><tr><th>#</th><th>Book</th><th>Vol</th><th>Cover / signer</th><th>Why it's a key &amp; in demand</th><th>Baseline</th><th>Net +$20</th><th>Owned · Box</th></tr></thead>
+            <tbody>
+              {TOP25.map(t => {
+                const boxes = ownedT[`${t.title.toLowerCase()}|${t.iss}`] || [];
+                return (
+                  <tr key={t.r}>
+                    <td className="t25-rank">{t.r}</td>
+                    <td className="t25-book">{t.title} #{t.issue}</td>
+                    <td className="t25-c">{t.vol}</td>
+                    <td className="t25-cov">{t.cover}</td>
+                    <td className="t25-why">{t.why}</td>
+                    <td className="t25-num">${t.base.toFixed(2)}</td>
+                    <td className="t25-num net">+${t.net.toFixed(2)}</td>
+                    <td className="t25-own">{boxes.length
+                      ? <><b>{boxes.length}×</b> {boxes.slice(0, 4).map((b, i) => <span key={i} className="t25-box">{b}</span>)}</>
+                      : <span className="t25-no">not owned</span>}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+        <p className="nycc-foot" style={{ marginTop: 10 }}>Cover artists, key rationale and values are your own analysis; Owned · Box is read live from the inventory. "Not owned" means no copy matched title + issue in the data (volume ignored for matching).</p>
+      </section>
 
       <section className="nycc-section">
         <div className="nycc-sechead"><h2>The two-day plan</h2></div>
@@ -285,5 +357,20 @@ const nyccCSS = `
 .nycc-money .v{font-size:1.6rem;font-weight:800;margin-top:3px;font-variant-numeric:tabular-nums}
 .nycc-money .mcell.hot .v{color:#16a34a}
 .nycc-foot{margin-top:28px;border-top:1px solid var(--border);padding-top:13px;color:var(--muted);font-size:.78rem;line-height:1.5}
+.t25-wrap{overflow-x:auto;border:1.5px solid var(--border);border-radius:12px;background:var(--surface)}
+.t25{width:100%;border-collapse:collapse;font-size:.86rem}
+.t25 th{text-align:left;font-size:.6rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:700;padding:9px 12px;border-bottom:2px solid var(--border);background:var(--surface2);white-space:nowrap}
+.t25 td{padding:8px 12px;border-bottom:1px solid var(--border);vertical-align:top}
+.t25 tr:last-child td{border-bottom:none}
+.t25-rank{font-weight:800;color:var(--muted2);font-variant-numeric:tabular-nums}
+.t25-book{font-weight:700;white-space:nowrap}
+.t25-c{color:var(--muted);font-variant-numeric:tabular-nums}
+.t25-cov{color:var(--text2);min-width:130px}
+.t25-why{color:var(--muted2);min-width:200px;line-height:1.35}
+.t25-num{font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:600}
+.t25-num.net{color:#16a34a}
+.t25-own{white-space:nowrap;font-size:.8rem}
+.t25-box{display:inline-block;background:var(--surface2);border:1px solid var(--border);border-radius:5px;padding:1px 6px;margin:0 3px 2px 0;font-weight:700;font-variant-numeric:tabular-nums}
+.t25-no{color:var(--muted)}
 @media(max-width:620px){.nycc-days{grid-template-columns:1fr}}
 `;
