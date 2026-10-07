@@ -91,31 +91,37 @@ export default function CoverReview({ initTitle }: { initTitle?: string }) {
     return () => { if (tickRef.current) clearInterval(tickRef.current); };
   }, [pool, batchStart, paused, titleFilter]);
 
-  // Every covered issue of the pinned title, ordered by issue number (then
-  // volume), so the run reads straight through. Volume is surfaced per-cover
-  // only when the title actually spans more than one volume.
+  // Every covered issue of the pinned title, grouped by volume (ascending) and
+  // then sorted by issue number within each volume, so the run reads straight
+  // through volume by volume.
   const titleView = useMemo(() => {
-    if (!titleFilter) return { items: [] as Pooled[], volCount: 0 };
+    if (!titleFilter) return { groups: [] as { vol: string; items: Pooled[] }[], volCount: 0, total: 0 };
     const seen = new Set<string>();
-    const items: Pooled[] = [];
-    const vols = new Set<string>();
+    const byVol = new Map<string, Pooled[]>();
     for (const c of DATA.comics as Comic[]) {
       if (c.Title !== titleFilter) continue;
       const vol = String(c.Volume || "1").trim();
       const key = `${c.Title}|||${c.Issue}|||${vol}`;
       if (seen.has(key)) continue;
       const entry = coversMap[key] ?? coversMap[`${c.Title}|||${c.Issue}`];
-      if (entry?.url) { seen.add(key); items.push({ comic: c, url: entry.url }); vols.add(vol); }
+      if (entry?.url) {
+        seen.add(key);
+        if (!byVol.has(vol)) byVol.set(vol, []);
+        byVol.get(vol)!.push({ comic: c, url: entry.url });
+      }
     }
-    items.sort((a, b) => {
-      const ia = parseFloat(String(a.comic.Issue)) || 0, ib = parseFloat(String(b.comic.Issue)) || 0;
-      if (ia !== ib) return ia - ib;
-      return (parseInt(String(a.comic.Volume || "1")) || 0) - (parseInt(String(b.comic.Volume || "1")) || 0);
-    });
-    return { items, volCount: vols.size };
+    const groups = [...byVol.entries()]
+      .map(([vol, items]) => ({
+        vol,
+        items: items.sort((a, b) =>
+          (parseFloat(String(a.comic.Issue)) || 0) - (parseFloat(String(b.comic.Issue)) || 0)),
+      }))
+      .sort((a, b) => (parseInt(a.vol) || 0) - (parseInt(b.vol) || 0));
+    const total = groups.reduce((s, g) => s + g.items.length, 0);
+    return { groups, volCount: byVol.size, total };
   }, [titleFilter, coversMap]);
 
-  const titleCount = titleView.items.length;
+  const titleCount = titleView.total;
 
   const lanes = useMemo(() => {
     if (!pool || pool.length === 0) return [];
@@ -246,8 +252,19 @@ export default function CoverReview({ initTitle }: { initTitle?: string }) {
         titleCount === 0 ? (
           <div style={{ color: "var(--muted)", marginTop: 20 }}>No covered issues found for this title.</div>
         ) : (
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 12, marginTop: 20 }}>
-            {titleView.items.map((p, i) => card(p, `t-${i}`, titleView.volCount > 1, true))}
+          <div style={{ marginTop: 20 }}>
+            {titleView.groups.map(g => (
+              <div key={g.vol} style={{ marginBottom: 24 }}>
+                {titleView.volCount > 1 && (
+                  <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.95rem", letterSpacing: "1.5px", color: "var(--muted)", marginBottom: 10, borderBottom: "1px solid var(--border)", paddingBottom: 5 }}>
+                    VOLUME {g.vol} · {g.items.length} issue{g.items.length === 1 ? "" : "s"}
+                  </div>
+                )}
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
+                  {g.items.map((p, i) => card(p, `t-${g.vol}-${i}`, false, true))}
+                </div>
+              </div>
+            ))}
           </div>
         )
       ) : (
