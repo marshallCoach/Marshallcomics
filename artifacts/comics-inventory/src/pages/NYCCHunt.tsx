@@ -107,6 +107,36 @@ export default function NYCCHunt() {
     return m;
   }, []);
 
+  const t25rows = useMemo(
+    () => TOP25.map(t => ({ t, boxes: ownedT[`${t.title.toLowerCase()}|${t.iss}`] || [] })),
+    [ownedT]);
+  const t25owned = t25rows.filter(x => x.boxes.length);
+  const t25missing = t25rows.filter(x => !x.boxes.length);
+
+  const t25Table = (rows: { t: Target; boxes: string[] }[]) => (
+    <div className="t25-wrap">
+      <table className="t25">
+        <thead><tr><th>#</th><th>Book</th><th>Vol</th><th>Cover / signer</th><th>Why it's a key &amp; in demand</th><th>Baseline</th><th>Net +$20</th><th>Owned · Box</th></tr></thead>
+        <tbody>
+          {rows.map(({ t, boxes }) => (
+            <tr key={t.r}>
+              <td className="t25-rank">{t.r}</td>
+              <td className="t25-book">{t.title} #{t.issue}</td>
+              <td className="t25-c">{t.vol}</td>
+              <td className="t25-cov">{t.cover}</td>
+              <td className="t25-why">{t.why}</td>
+              <td className="t25-num">${t.base.toFixed(2)}</td>
+              <td className="t25-num net">+${t.net.toFixed(2)}</td>
+              <td className="t25-own">{boxes.length
+                ? <><b>{boxes.length}×</b> {boxes.slice(0, 4).map((b, i) => <span key={i} className="t25-box">{b}</span>)}</>
+                : <span className="t25-no">not owned</span>}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+
   const [captured, setCaptured] = useState<Record<string, boolean>>(() => {
     try { return JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch { return {}; }
   });
@@ -210,33 +240,11 @@ export default function NYCCHunt() {
       })}
 
       <section className="nycc-section">
-        <div className="nycc-sechead"><h2 className="disp">Top 25 key signing targets</h2><span className="tag confirm">ranked by net on a $20 fee</span>
-          <p className="sec-sub">Your highest net-profit books to get signed by confirmed NYCC creators — with the confirmed cover artist, why the issue is a key, and whether you own it (live from inventory).</p></div>
-        <div className="t25-wrap">
-          <table className="t25">
-            <thead><tr><th>#</th><th>Book</th><th>Vol</th><th>Cover / signer</th><th>Why it's a key &amp; in demand</th><th>Baseline</th><th>Net +$20</th><th>Owned · Box</th></tr></thead>
-            <tbody>
-              {TOP25.map(t => {
-                const boxes = ownedT[`${t.title.toLowerCase()}|${t.iss}`] || [];
-                return (
-                  <tr key={t.r}>
-                    <td className="t25-rank">{t.r}</td>
-                    <td className="t25-book">{t.title} #{t.issue}</td>
-                    <td className="t25-c">{t.vol}</td>
-                    <td className="t25-cov">{t.cover}</td>
-                    <td className="t25-why">{t.why}</td>
-                    <td className="t25-num">${t.base.toFixed(2)}</td>
-                    <td className="t25-num net">+${t.net.toFixed(2)}</td>
-                    <td className="t25-own">{boxes.length
-                      ? <><b>{boxes.length}×</b> {boxes.slice(0, 4).map((b, i) => <span key={i} className="t25-box">{b}</span>)}</>
-                      : <span className="t25-no">not owned</span>}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
-        <p className="nycc-foot" style={{ marginTop: 10 }}>Cover artists, key rationale and values are your own analysis; Owned · Box is read live from the inventory. "Not owned" means no copy matched title + issue in the data (volume ignored for matching).</p>
+        <div className="nycc-sechead"><h2 className="disp">Top 25 key signing targets — owned</h2><span className="tag confirm">{t25owned.length} you own · ranked by net on a $20 fee</span>
+          <p className="sec-sub">The ones you already have, ready to pull and get signed — with cover artist, why the issue is a key, and the box it's in. Books you don't own are dropped to the bottom of the page.</p></div>
+        {t25owned.length ? t25Table(t25owned)
+          : <p className="nycc-foot">None of the 25 matched a copy in your inventory (by title + issue).</p>}
+        <p className="nycc-foot" style={{ marginTop: 10 }}>Cover artists, key rationale and values are your own analysis; Owned · Box is read live from the inventory.</p>
       </section>
 
       <section className="nycc-section">
@@ -275,7 +283,15 @@ export default function NYCCHunt() {
         </div>
       </section>
 
-      <p className="nycc-foot">All dollar figures, boxes and creator assignments are from <b>your own NYCC analysis</b> against <b>comics_inventory_FINAL_0510_2058.xlsx</b> — not independently re-verified. Captures and the loot total are saved in this browser only.</p>
+      {t25missing.length > 0 && (
+        <section className="nycc-section t25-ignore">
+          <div className="nycc-sechead"><h2 className="disp">Don't own — probably ignore</h2><span className="tag verify">{t25missing.length} not in your inventory</span>
+            <p className="sec-sub">These {t25missing.length} targets from the Top 25 aren't in your inventory, so there's nothing to get signed. Buy-or-skip decisions for later — parked here out of the way.</p></div>
+          {t25Table(t25missing)}
+        </section>
+      )}
+
+      <p className="nycc-foot">All dollar figures, boxes and creator assignments are from <b>your own NYCC analysis</b> against <b>comics_inventory_FINAL_0510_2058.xlsx</b> — not independently re-verified. "Don't own" = no copy matched title + issue in the data (volume ignored). Captures and the loot total are saved in this browser only.</p>
     </div>
   );
 }
@@ -372,5 +388,7 @@ const nyccCSS = `
 .t25-own{white-space:nowrap;font-size:.8rem}
 .t25-box{display:inline-block;background:var(--surface2);border:1px solid var(--border);border-radius:5px;padding:1px 6px;margin:0 3px 2px 0;font-weight:700;font-variant-numeric:tabular-nums}
 .t25-no{color:var(--muted)}
+.t25-ignore{opacity:.62}
+.t25-ignore:hover{opacity:1}
 @media(max-width:620px){.nycc-days{grid-template-columns:1fr}}
 `;
