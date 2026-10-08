@@ -1,5 +1,13 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { DATA } from "@/data/data";
+
+const BASE = import.meta.env.BASE_URL?.replace(/\/$/, "") ?? "";
+const pubOf = (title: string) => {
+  const t = title.toLowerCase();
+  if (/transformers/.test(t)) return "skybound";
+  if (/batman|catwoman|wonder woman|dark knight|superman|justice/.test(t)) return "dc";
+  return "marvel";
+};
 
 // ── NYCC signing hunt — Friday + Saturday ──────────────────────────────────────
 // All dollar figures, boxes and creator assignments come from Robert's own NYCC
@@ -107,6 +115,18 @@ export default function NYCCHunt() {
     return m;
   }, []);
 
+  const [t25covers, setT25covers] = useState<Record<string, { url: string | null }>>({});
+  useEffect(() => {
+    let off = false;
+    fetch(`${BASE}/covers.json`).then(r => r.ok ? r.json() : {})
+      .then(m => { if (!off) setT25covers(m); }).catch(() => {});
+    return () => { off = true; };
+  }, []);
+  const coverFor = (t: Target) =>
+    t25covers[`${t.title}|||${t.iss}|||${t.vol}`]?.url
+    || t25covers[`${t.title}|||${t.iss}`]?.url
+    || null;
+
   const t25rows = useMemo(
     () => TOP25.map(t => ({ t, boxes: ownedT[`${t.title.toLowerCase()}|${t.iss}`] || [] })),
     [ownedT]);
@@ -134,6 +154,36 @@ export default function NYCCHunt() {
           ))}
         </tbody>
       </table>
+    </div>
+  );
+
+  const t25Cards = (rows: { t: Target; boxes: string[] }[]) => (
+    <div className="t25grid">
+      {rows.map(({ t, boxes }) => {
+        const url = coverFor(t);
+        return (
+          <div key={t.r} className="t25c">
+            <div className={`t25c-cov ${pubOf(t.title)}`}>
+              {url
+                ? <img src={url} alt={`${t.title} #${t.issue}`} loading="lazy"
+                    onError={e => { (e.currentTarget as HTMLImageElement).style.display = "none"; }} />
+                : null}
+              <span className="t25c-corner">#{t.issue}</span>
+              <span className="t25c-rank">{t.r}</span>
+            </div>
+            <div className="t25c-body">
+              <div className="t25c-title">{t.title} #{t.issue}</div>
+              <div className="t25c-net">+${t.net.toFixed(2)}</div>
+              <div className="t25c-tags">
+                {boxes.slice(0, 2).map((b, i) => <span key={i} className="t25c-box">📦 {b}</span>)}
+                <span className="t25c-vol">Vol {t.vol}</span>
+              </div>
+              <div className="t25c-ca">✍ {t.cover}</div>
+              <div className="t25c-why">{t.why}</div>
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 
@@ -242,9 +292,9 @@ export default function NYCCHunt() {
       <section className="nycc-section">
         <div className="nycc-sechead"><h2 className="disp">Top 25 key signing targets — owned</h2><span className="tag confirm">{t25owned.length} you own · ranked by net on a $20 fee</span>
           <p className="sec-sub">The ones you already have, ready to pull and get signed — with cover artist, why the issue is a key, and the box it's in. Books you don't own are dropped to the bottom of the page.</p></div>
-        {t25owned.length ? t25Table(t25owned)
+        {t25owned.length ? t25Cards(t25owned)
           : <p className="nycc-foot">None of the 25 matched a copy in your inventory (by title + issue).</p>}
-        <p className="nycc-foot" style={{ marginTop: 10 }}>Cover artists, key rationale and values are your own analysis; Owned · Box is read live from the inventory.</p>
+        <p className="nycc-foot" style={{ marginTop: 10 }}>Cover artists, key rationale and values are your own analysis; covers and Owned · Box are read live from the inventory.</p>
       </section>
 
       <section className="nycc-section">
@@ -390,5 +440,24 @@ const nyccCSS = `
 .t25-no{color:var(--muted)}
 .t25-ignore{opacity:.62}
 .t25-ignore:hover{opacity:1}
+.t25grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.t25c{background:var(--surface);border:1.5px solid var(--border);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 2px 7px rgba(0,0,0,.08)}
+.t25c-cov{position:relative;width:100%;aspect-ratio:2/3;background:#2a2a33;color:#fff;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:7px}
+.t25c-cov.dc{background:linear-gradient(160deg,#2a5bd7,#13308a)}
+.t25c-cov.marvel{background:linear-gradient(160deg,#e23048,#9c0c23)}
+.t25c-cov.skybound{background:linear-gradient(160deg,#2f8d68,#17533c)}
+.t25c-cov img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.t25c-corner{position:relative;z-index:1;font-size:1.5rem;font-weight:800;line-height:.9;text-shadow:0 2px 0 rgba(0,0,0,.4)}
+.t25c-cov img~.t25c-corner{display:none}
+.t25c-rank{position:absolute;top:6px;left:6px;z-index:2;background:var(--gold);color:#1a1200;font-weight:800;font-size:.72rem;min-width:20px;height:20px;border-radius:5px;display:flex;align-items:center;justify-content:center;padding:0 5px;box-shadow:0 1px 3px rgba(0,0,0,.4)}
+.t25c-body{padding:9px 10px 11px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.t25c-title{font-weight:800;font-size:.84rem;line-height:1.15}
+.t25c-net{font-size:1.25rem;font-weight:800;color:#16a34a;font-variant-numeric:tabular-nums;line-height:1}
+.t25c-tags{display:flex;flex-wrap:wrap;gap:4px;align-items:center}
+.t25c-box{background:var(--surface2);border:1px solid var(--border);border-radius:5px;padding:1px 6px;font-size:.66rem;font-weight:700;white-space:nowrap}
+.t25c-vol{font-size:.66rem;color:var(--muted);font-weight:700}
+.t25c-ca{font-size:.72rem;color:var(--muted2);line-height:1.25}
+.t25c-why{font-size:.72rem;color:var(--muted);line-height:1.3}
+@media(max-width:480px){.t25grid{grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:9px}}
 @media(max-width:620px){.nycc-days{grid-template-columns:1fr}}
 `;
