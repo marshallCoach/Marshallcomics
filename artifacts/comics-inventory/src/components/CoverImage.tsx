@@ -278,7 +278,7 @@ export function fandomGuesses(title: string, issue: string, year: string, publis
 
 export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
   const box        = (comic as { Box?: string }).Box ?? "";
-  const coverKey   = coverId({ Title: comic.Title, Issue: comic.Issue, Box: box });
+  const coverKey   = coverId({ Title: comic.Title, Issue: comic.Issue, Volume: (comic as { Volume?: string | number }).Volume, Box: box });
 
   const [flagState, setFlagState] = useState<FlagKind | null>(() => coverFlagKind(coverKey));
   const [imgDraft, setImgDraft]   = useState("");
