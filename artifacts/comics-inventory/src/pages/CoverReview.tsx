@@ -57,7 +57,7 @@ export default function CoverReview({ initTitle }: { initTitle?: string }) {
           const vol = String(c.Volume || "1").trim();
           const key = `${c.Title}|||${c.Issue}|||${vol}`;
           if (seen.has(key)) continue;
-          const flagId = comicId({ Title: c.Title, Issue: c.Issue, Box: c.Box });
+          const flagId = comicId({ Title: c.Title, Issue: c.Issue, Volume: c.Volume, Box: c.Box });
           if (BASELINE_FLAGGED_IDS.has(flagId) || liveFlagged.has(flagId)) continue;
           const entry = coversMap[key] ?? coversMap[`${c.Title}|||${c.Issue}`];
           if (entry?.url) {
@@ -137,7 +137,7 @@ export default function CoverReview({ initTitle }: { initTitle?: string }) {
   const toggleFlag = useCallback((p: Pooled) => {
     setFlags(prev => {
       const next = new Map(prev);
-      const id = comicId({ Title: p.comic.Title, Issue: p.comic.Issue, Box: p.comic.Box });
+      const id = comicId({ Title: p.comic.Title, Issue: p.comic.Issue, Volume: p.comic.Volume, Box: p.comic.Box });
       if (next.has(id)) {
         next.delete(id);
       } else {
@@ -180,7 +180,7 @@ export default function CoverReview({ initTitle }: { initTitle?: string }) {
   const pct = Math.max(0, Math.min(100, 100 - (msLeft / CYCLE_MS) * 100));
 
   const card = (p: Pooled, k: string, showVol = false, issueOnly = false) => {
-    const id = comicId({ Title: p.comic.Title, Issue: p.comic.Issue, Box: p.comic.Box });
+    const id = comicId({ Title: p.comic.Title, Issue: p.comic.Issue, Volume: p.comic.Volume, Box: p.comic.Box });
     const flagged = flags.has(id);
     return (
       <div key={k} style={{ flexShrink: 0, width: CARD_W, textAlign: "center" }}>
@@ -274,7 +274,7 @@ export default function CoverReview({ initTitle }: { initTitle?: string }) {
               LANE {li + 1}
             </div>
             <div style={{ display: "flex", gap: 12, overflowX: "auto", paddingBottom: 8 }}>
-              {lane.map((p, i) => card(p, `${comicId({ Title: p.comic.Title, Issue: p.comic.Issue, Box: p.comic.Box })}-${i}`))}
+              {lane.map((p, i) => card(p, `${comicId({ Title: p.comic.Title, Issue: p.comic.Issue, Volume: p.comic.Volume, Box: p.comic.Box })}-${i}`))}
             </div>
           </div>
         ))

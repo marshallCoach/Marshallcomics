@@ -25,6 +25,7 @@ export interface FlaggedCover {
   id: string;
   Title: string;
   Issue: string;
+  Volume?: string;
   Box: string;
   Cover_Artist: string;
   Publisher: string;
@@ -36,14 +37,18 @@ export interface FlaggedCover {
 export interface CoverLike {
   Title: string;
   Issue: string | number;
+  Volume?: string | number;
   Box?: string;
   Cover_Artist?: string;
   Publisher?: string;
   Year?: string;
 }
 
-export function coverId(c: { Title: string; Issue: string | number; Box?: string }): string {
-  return `${(c.Title ?? "").trim()}|||${String(c.Issue ?? "").trim()}|||${(c.Box ?? "").trim()}`;
+export function coverId(c: { Title: string; Issue: string | number; Volume?: string | number; Box?: string }): string {
+  // Volume is part of the identity: two volumes' #1 (e.g. Captain Marvel Vol 1
+  // #1 and Vol 10 #1) are different books, even in the same box — without it a
+  // flag on one wrongly flags the other.
+  return `${(c.Title ?? "").trim()}|||${String(c.Issue ?? "").trim()}|||${String(c.Volume ?? "").trim()}|||${(c.Box ?? "").trim()}`;
 }
 
 // Tolerant read: array form (canonical) OR legacy object-map form.
@@ -97,6 +102,7 @@ function buildEntry(c: CoverLike, kind: FlagKind = "incorrect"): FlaggedCover {
     id: coverId(c),
     Title: c.Title,
     Issue: String(c.Issue ?? ""),
+    Volume: String(c.Volume ?? ""),
     Box: c.Box ?? "",
     Cover_Artist: c.Cover_Artist ?? "",
     Publisher: c.Publisher ?? "",
