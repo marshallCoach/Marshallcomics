@@ -73,36 +73,64 @@ const SECTIONS: { g: Group; title: string; tag: string; tagCls: string; sub: str
   { g: "skip", title: "Personal collection only", tag: "Underwater on fees", tagCls: "verify", sub: "Sign for love, not profit — the fee costs more than the signature adds." },
 ];
 
-// Top 25 key signing targets — Robert's own analysis (cover artists, key
-// rationale, baseline value, net on a $20 fee). Owned · Box is read live.
-interface Target { r: number; title: string; issue: string; iss: string; vol: string; cover: string; why: string; base: number; net: number; }
-const TOP25: Target[] = [
-  { r: 1,  title: "Absolute Batman", issue: "21", iss: "21", vol: "1", cover: "Nick Dragotta & Frank Martin", why: "DC Absolute Universe flagship hit", base: 114.99, net: 232.98 },
-  { r: 2,  title: "House of X", issue: "1", iss: "1", vol: "1", cover: "Pepe Larraz", why: "Krakoa Era launch; “To me, my X-Men”", base: 90.00, net: 178.00 },
-  { r: 3,  title: "Absolute Batman", issue: "6", iss: "6", vol: "1", cover: "Nick Dragotta & Frank Martin", why: "High-velocity 1st print run", base: 70.59, net: 135.30 },
-  { r: 4,  title: "Absolute Batman", issue: "19", iss: "19", vol: "1", cover: "Nick Dragotta & Frank Martin", why: "Core Absolute continuity landmark", base: 65.00, net: 123.00 },
-  { r: 5,  title: "Absolute Batman", issue: "8", iss: "8", vol: "1", cover: "Nick Dragotta & Frank Martin", why: "High-demand modern Snyder/Dragotta key", base: 52.14, net: 94.71 },
-  { r: 6,  title: "Transformers", issue: "1", iss: "1", vol: "1", cover: "Daniel Warren Johnson", why: "Skybound relaunch; DWJ signature style", base: 37.05, net: 61.51 },
-  { r: 7,  title: "Absolute Batman", issue: "5", iss: "5", vol: "1", cover: "Nick Dragotta & Frank Martin", why: "Established modern baseline key", base: 35.59, net: 58.30 },
-  { r: 8,  title: "X-Men: Hellfire Gala", issue: "1", iss: "1", vol: "3", cover: "Phil Noto", why: "X-Men ’97 Disney+ animated tie-in spec", base: 28.49, net: 42.68 },
-  { r: 9,  title: "Absolute Catwoman", issue: "2", iss: "2", vol: "1", cover: "Bengal", why: "Expanding Absolute DC line key", base: 24.75, net: 34.45 },
-  { r: 10, title: "Absolute Batman", issue: "16", iss: "16", vol: "1", cover: "Nick Dragotta & Frank Martin", why: "Key issue in the record-breaking Absolute run", base: 23.99, net: 32.77 },
-  { r: 11, title: "Dark Knights: Metal", issue: "2", iss: "2", vol: "1", cover: "Greg Capullo, Jonathan Glapion, FCO Plascencia", why: "Snyder/Capullo Dark Multiverse invasion", base: 23.49, net: 31.68 },
-  { r: 12, title: "Absolute Batman", issue: "7", iss: "7", vol: "1", cover: "Nick Dragotta & Frank Martin", why: "Strong contemporary collector demand", base: 22.00, net: 28.40 },
-  { r: 13, title: "X-Men", issue: "35 (Legacy #700)", iss: "35", vol: "6", cover: "Pepe Larraz & Marte Gracia", why: "Massive milestone ending the Krakoa Era", base: 20.00, net: 24.00 },
-  { r: 14, title: "Absolute Batman", issue: "12", iss: "12", vol: "1", cover: "Nick Dragotta & Frank Martin", why: "Mid-run spec issue", base: 19.99, net: 23.98 },
-  { r: 15, title: "Winter Soldier", issue: "1", iss: "1", vol: "1", cover: "Lee Bermejo", why: "Brubaker/Guice classic spy thriller launch", base: 17.20, net: 17.84 },
-  { r: 16, title: "Absolute Batman", issue: "15", iss: "15", vol: "1", cover: "Nick Dragotta & Frank Martin", why: "Continuing collector momentum", base: 16.99, net: 17.38 },
-  { r: 17, title: "Absolute Batman", issue: "1", iss: "1", vol: "1", cover: "Nick Dragotta", why: "2024’s #1 bestselling comic launch (400k+ copies)", base: 16.94, net: 17.27 },
-  { r: 18, title: "Absolute Batman", issue: "23", iss: "23", vol: "1", cover: "Nick Dragotta & Frank Martin", why: "Recent high-demand release", base: 15.00, net: 13.00 },
-  { r: 19, title: "Absolute Batman", issue: "2", iss: "2", vol: "1", cover: "Nick Dragotta", why: "1st print continuation of the blockbuster launch", base: 14.99, net: 12.98 },
-  { r: 20, title: "Fantastic Four", issue: "35 (Legacy #680)", iss: "35", vol: "6", cover: "Variant / unlisted", why: "60 Years special milestone issue", base: 14.68, net: 12.30 },
-  { r: 21, title: "Hulk", issue: "1", iss: "1", vol: "5", cover: "Ryan Ottley", why: "Cates & Ottley starship-Hulk concept", base: 13.99, net: 10.78 },
-  { r: 22, title: "House of X", issue: "2", iss: "2", vol: "1", cover: "Pepe Larraz", why: "Moira MacTaggert timeline revelation twist", base: 13.77, net: 10.29 },
-  { r: 23, title: "Wonder Woman", issue: "0", iss: "0", vol: "4", cover: "Cliff Chiang", why: "Azzarello/Chiang Greek god reimagining", base: 13.30, net: 9.26 },
-  { r: 24, title: "Wonder Woman 75th Special", issue: "1", iss: "1", vol: "1", cover: "Cliff Chiang", why: "Anniversary milestone multi-story celebration", base: 13.30, net: 9.26 },
-  { r: 25, title: "Transformers", issue: "17", iss: "17", vol: "1", cover: "Daniel Warren Johnson", why: "DWJ ongoing hit run spec", base: 12.46, net: 7.41 },
+// Top signing targets — Robert's own analysis (pub date, key rationale,
+// baseline value, net on a $20 fee). Cover artist carried over where known;
+// covers and Owned · Box are read live. Values transcribed verbatim from
+// Robert's pasted table — not re-derived.
+interface Target { r: number; title: string; issue: string; iss: string; vol: string; date: string; cover?: string; why: string; base: number; net: number; }
+const TARGETS: Target[] = [
+  { r: 1,  title: "Absolute Batman", issue: "21", iss: "21", vol: "1", date: "Aug 2026", cover: "Nick Dragotta & Frank Martin", why: "Absolute Universe flagship hit", base: 114.99, net: 232.98 },
+  { r: 2,  title: "House of X", issue: "1", iss: "1", vol: "1", date: "Sep 2019", cover: "Pepe Larraz", why: "Krakoa Era launch; “To me, my X-Men”", base: 90.00, net: 178.00 },
+  { r: 3,  title: "Absolute Batman", issue: "6", iss: "6", vol: "1", date: "May 2025", cover: "Nick Dragotta & Frank Martin", why: "High-velocity 1st print run", base: 70.59, net: 135.30 },
+  { r: 4,  title: "Absolute Batman", issue: "19", iss: "19", vol: "1", date: "Jun 2026", cover: "Nick Dragotta & Frank Martin", why: "Core Absolute continuity landmark", base: 65.00, net: 123.00 },
+  { r: 5,  title: "Absolute Batman", issue: "8", iss: "8", vol: "1", date: "Jul 2025", cover: "Nick Dragotta & Frank Martin", why: "High-demand modern Snyder/Dragotta key", base: 52.14, net: 94.71 },
+  { r: 6,  title: "Transformers", issue: "1", iss: "1", vol: "1", date: "Oct 2023", cover: "Daniel Warren Johnson", why: "Skybound relaunch; DWJ signature style", base: 37.05, net: 61.51 },
+  { r: 7,  title: "Absolute Batman", issue: "5", iss: "5", vol: "1", date: "Apr 2025", cover: "Nick Dragotta & Frank Martin", why: "Established modern baseline key", base: 35.59, net: 58.30 },
+  { r: 8,  title: "X-Men: Hellfire Gala", issue: "1", iss: "1", vol: "3", date: "Sep 2023", cover: "Phil Noto", why: "X-Men ’97 Disney+ animated tie-in spec", base: 28.49, net: 42.68 },
+  { r: 9,  title: "Absolute Catwoman", issue: "2", iss: "2", vol: "1", date: "Sep 2026", cover: "Bengal", why: "Expanding Absolute DC line key", base: 24.75, net: 34.45 },
+  { r: 10, title: "Absolute Batman", issue: "16", iss: "16", vol: "1", date: "Mar 2026", cover: "Nick Dragotta & Frank Martin", why: "Key issue in record-breaking Absolute run", base: 23.99, net: 32.78 },
+  { r: 11, title: "Dark Knights: Metal", issue: "2", iss: "2", vol: "1", date: "Nov 2017", cover: "Greg Capullo, Jonathan Glapion, FCO Plascencia", why: "Snyder/Capullo Dark Multiverse invasion", base: 23.49, net: 31.68 },
+  { r: 12, title: "Absolute Batman", issue: "7", iss: "7", vol: "1", date: "Jun 2025", cover: "Nick Dragotta & Frank Martin", why: "Strong contemporary collector demand", base: 22.00, net: 28.40 },
+  { r: 13, title: "X-Men", issue: "35 (Legacy #700)", iss: "35", vol: "6", date: "Jun 2024", cover: "Pepe Larraz & Marte Gracia", why: "Massive milestone ending the Krakoa Era", base: 20.00, net: 24.00 },
+  { r: 14, title: "Absolute Batman", issue: "12", iss: "12", vol: "1", date: "Nov 2025", cover: "Nick Dragotta & Frank Martin", why: "Mid-run spec issue", base: 19.99, net: 23.98 },
+  { r: 15, title: "Winter Soldier", issue: "1", iss: "1", vol: "1", date: "Apr 2012", cover: "Lee Bermejo", why: "Brubaker/Guice classic spy thriller launch", base: 17.20, net: 17.84 },
+  { r: 16, title: "Absolute Batman", issue: "15", iss: "15", vol: "1", date: "Feb 2026", cover: "Nick Dragotta & Frank Martin", why: "Continuing collector momentum", base: 16.99, net: 17.38 },
+  { r: 17, title: "Absolute Batman", issue: "1", iss: "1", vol: "1", date: "Dec 2024", cover: "Nick Dragotta", why: "2024’s #1 bestselling comic launch", base: 16.94, net: 17.27 },
+  { r: 18, title: "Absolute Batman", issue: "23", iss: "23", vol: "1", date: "2026 (unknown)", cover: "Nick Dragotta & Frank Martin", why: "Recent high-demand release", base: 15.00, net: 13.00 },
+  { r: 19, title: "Absolute Batman", issue: "2", iss: "2", vol: "1", date: "Jan 2025", cover: "Nick Dragotta", why: "1st print continuation of blockbuster launch", base: 14.99, net: 12.98 },
+  { r: 20, title: "Fantastic Four", issue: "35 (Legacy #680)", iss: "35", vol: "6", date: "Sep 2021", cover: "Variant / unlisted", why: "60 Years special milestone issue", base: 14.68, net: 12.30 },
+  { r: 21, title: "Hulk", issue: "1", iss: "1", vol: "5", date: "Nov 2021", cover: "Ryan Ottley", why: "Donny Cates & Ryan Ottley starship-Hulk", base: 13.99, net: 10.78 },
+  { r: 22, title: "House of X", issue: "2", iss: "2", vol: "1", date: "Oct 2019", cover: "Pepe Larraz", why: "Moira MacTaggert timeline twist", base: 13.77, net: 10.29 },
+  { r: 23, title: "Wonder Woman", issue: "0", iss: "0", vol: "4", date: "Nov 2012", cover: "Cliff Chiang", why: "Azzarello/Chiang Greek god reimagining", base: 13.30, net: 9.26 },
+  { r: 24, title: "Wonder Woman", issue: "0", iss: "0", vol: "1", date: "Unknown", why: "Anniversary milestone multi-story special", base: 13.30, net: 9.26 },
+  { r: 25, title: "Transformers", issue: "17", iss: "17", vol: "1", date: "Feb 2025", cover: "Daniel Warren Johnson", why: "DWJ ongoing hit run spec", base: 12.46, net: 7.41 },
+  { r: 26, title: "Absolute Batman", issue: "3", iss: "3", vol: "1", date: "Feb 2025", cover: "Nick Dragotta & Frank Martin", why: "Early Snyder/Dragotta hit", base: 12.29, net: 7.04 },
+  { r: 27, title: "Wonder Woman/JLD: The Witching Hour", issue: "1", iss: "1", vol: "1", date: "Oct 2018", why: "Crossover event key", base: 11.95, net: 6.29 },
+  { r: 28, title: "Spider-Man/Deadpool", issue: "1", iss: "1", vol: "1", date: "Mar 2016", why: "Kelly/McGuinness fan-favorite launch", base: 15.75, net: 4.65 },
+  { r: 29, title: "Blood Hunt", issue: "1", iss: "1", vol: "1", date: "Jul 2024", why: "Major Marvel vampire event launch", base: 10.99, net: 4.18 },
+  { r: 30, title: "Batman/Deathblow: After the Fire", issue: "1", iss: "1", vol: "1", date: "May 2002", why: "Lee/Azzarello miniseries key", base: 10.99, net: 4.18 },
+  { r: 31, title: "Green Lantern/Space Ghost", issue: "1", iss: "1", vol: "6", date: "Mar 2017", why: "Hanna-Barbera crossover special", base: 10.50, net: 3.10 },
+  { r: 32, title: "Justice League", issue: "3", iss: "3", vol: "4", date: "Oct 2016", why: "Rebirth era team book key", base: 9.99, net: 1.98 },
+  { r: 33, title: "Justice League: No Justice", issue: "1", iss: "1", vol: "1", date: "Jul 2018", why: "Snyder event prelude key", base: 9.99, net: 1.98 },
+  { r: 34, title: "Batman", issue: "650", iss: "650", vol: "1", date: "Apr 2006", why: "Post-Infinite Crisis Batman arc key", base: 9.99, net: 1.98 },
+  { r: 35, title: "Batman and Robin Eternal", issue: "1", iss: "1", vol: "1", date: "Dec 2015", why: "Weekly series launch key", base: 9.99, net: 1.98 },
+  { r: 36, title: "Justice League Dark", issue: "1", iss: "1", vol: "3", date: "Sep 2018", why: "Tynion/Martinez supernatural team launch", base: 9.99, net: 1.98 },
+  { r: 37, title: "Captain Marvel", issue: "1", iss: "1", vol: "14", date: "Mar 2019", why: "Kelly Sue DeConnick/Carla Pacheco era key", base: 9.99, net: 1.98 },
+  { r: 38, title: "Captain Marvel", issue: "1", iss: "1", vol: "1", date: "May 1968", why: "Classic Marvel silver-age key issue", base: 9.99, net: 1.98 },
+  { r: 39, title: "Captain America", issue: "616", iss: "616", vol: "13", date: "May 2011", why: "Anniversary oversized milestone issue", base: 9.99, net: 1.98 },
+  { r: 40, title: "Wonder Woman", issue: "1", iss: "1", vol: "4", date: "Nov 2011", why: "New 52 Azzarello/Chiang launch", base: 9.50, net: 0.90 },
+  { r: 41, title: "X-Men", issue: "1", iss: "1", vol: "6", date: "Dec 2019", why: "Hickman Dawn of X relaunch", base: 8.97, net: -0.27 },
+  { r: 42, title: "X-Men", issue: "1", iss: "1", vol: "8", date: "Dec 2019", why: "Alternate printing/variant entry", base: 8.97, net: -0.27 },
+  { r: 43, title: "JLD/Wonder Woman: Witching Hour", issue: "1", iss: "1", vol: "1", date: "Unknown", why: "Part 2 crossover tie-in key", base: 8.54, net: -1.21 },
+  { r: 44, title: "Batman: Rebirth", issue: "1", iss: "1", vol: "1", date: "Aug 2016", why: "King/Snyder Rebirth era kick-off", base: 13.00, net: -1.40 },
+  { r: 45, title: "Batman Annual", issue: "1", iss: "1", vol: "2", date: "Jul 2012", why: "Snyder/Capullo New 52 Annual key", base: 8.10, net: -2.18 },
+  { r: 46, title: "DC K.O.: Red Hood vs. Joker", issue: "1", iss: "1", vol: "1", date: "Feb 2026", why: "Modern event tie-in key", base: 8.00, net: -2.40 },
+  { r: 47, title: "X of Swords: Creation", issue: "1", iss: "1", vol: "1", date: "Nov 2020", why: "Hickman X-Men crossover kickoff", base: 8.00, net: -2.40 },
+  { r: 48, title: "X-Force", issue: "1", iss: "1", vol: "5", date: "Feb 2019", why: "Brisson/Ov OGN-style launch", base: 7.99, net: -2.42 },
+  { r: 49, title: "X-Force", issue: "1", iss: "1", vol: "9", date: "Feb 2019", why: "Percy Dawn of X launch", base: 7.99, net: -2.42 },
+  { r: 50, title: "Fall of the House of X", issue: "1", iss: "1", vol: "1", date: "Mar 2024", why: "Duggan Krakoa finale event key", base: 7.35, net: -3.83 },
 ];
+const netFmt = (n: number) => (n < 0 ? "−$" : "+$") + Math.abs(n).toFixed(2);
 const tNorm = (v: unknown) => String(v ?? "").trim().toLowerCase().replace(/^#/, "").replace(/\.0$/, "");
 
 export default function NYCCHunt() {
@@ -128,7 +156,7 @@ export default function NYCCHunt() {
     || null;
 
   const t25rows = useMemo(
-    () => TOP25.map(t => ({ t, boxes: ownedT[`${t.title.toLowerCase()}|${t.iss}`] || [] })),
+    () => TARGETS.map(t => ({ t, boxes: ownedT[`${t.title.toLowerCase()}|${t.iss}`] || [] })),
     [ownedT]);
   const t25owned = t25rows.filter(x => x.boxes.length);
   const t25missing = t25rows.filter(x => !x.boxes.length);
@@ -136,17 +164,17 @@ export default function NYCCHunt() {
   const t25Table = (rows: { t: Target; boxes: string[] }[]) => (
     <div className="t25-wrap">
       <table className="t25">
-        <thead><tr><th>#</th><th>Book</th><th>Vol</th><th>Cover / signer</th><th>Why it's a key &amp; in demand</th><th>Baseline</th><th>Net +$20</th><th>Owned · Box</th></tr></thead>
+        <thead><tr><th>#</th><th>Book</th><th>Vol</th><th>Released</th><th>Why it's a key &amp; in demand</th><th>Baseline</th><th>Net +$20</th><th>Owned · Box</th></tr></thead>
         <tbody>
           {rows.map(({ t, boxes }) => (
             <tr key={t.r}>
               <td className="t25-rank">{t.r}</td>
               <td className="t25-book">{t.title} #{t.issue}</td>
               <td className="t25-c">{t.vol}</td>
-              <td className="t25-cov">{t.cover}</td>
+              <td className="t25-cov">{t.date}</td>
               <td className="t25-why">{t.why}</td>
               <td className="t25-num">${t.base.toFixed(2)}</td>
-              <td className="t25-num net">+${t.net.toFixed(2)}</td>
+              <td className={`t25-num net${t.net < 0 ? " neg" : ""}`}>{netFmt(t.net)}</td>
               <td className="t25-own">{boxes.length
                 ? <><b>{boxes.length}×</b> {boxes.slice(0, 4).map((b, i) => <span key={i} className="t25-box">{b}</span>)}</>
                 : <span className="t25-no">not owned</span>}</td>
@@ -173,12 +201,13 @@ export default function NYCCHunt() {
             </div>
             <div className="t25c-body">
               <div className="t25c-title">{t.title} #{t.issue}</div>
-              <div className="t25c-net">+${t.net.toFixed(2)}</div>
+              <div className={`t25c-net${t.net < 0 ? " neg" : ""}`}>{netFmt(t.net)}</div>
               <div className="t25c-tags">
                 {boxes.slice(0, 2).map((b, i) => <span key={i} className="t25c-box">📦 {b}</span>)}
                 <span className="t25c-vol">Vol {t.vol}</span>
+                <span className="t25c-vol">{t.date}</span>
               </div>
-              <div className="t25c-ca">✍ {t.cover}</div>
+              {t.cover ? <div className="t25c-ca">✍ {t.cover}</div> : null}
               <div className="t25c-why">{t.why}</div>
             </div>
           </div>
@@ -290,7 +319,7 @@ export default function NYCCHunt() {
       })}
 
       <section className="nycc-section">
-        <div className="nycc-sechead"><h2 className="disp">Top 25 key signing targets — owned</h2><span className="tag confirm">{t25owned.length} you own · ranked by net on a $20 fee</span>
+        <div className="nycc-sechead"><h2 className="disp">Top signing targets — owned</h2><span className="tag confirm">{t25owned.length} you own · ranked by net on a $20 fee</span>
           <p className="sec-sub">The ones you already have, ready to pull and get signed — with cover artist, why the issue is a key, and the box it's in. Books you don't own are dropped to the bottom of the page.</p></div>
         {t25owned.length ? t25Cards(t25owned)
           : <p className="nycc-foot">None of the 25 matched a copy in your inventory (by title + issue).</p>}
@@ -336,7 +365,7 @@ export default function NYCCHunt() {
       {t25missing.length > 0 && (
         <section className="nycc-section t25-ignore">
           <div className="nycc-sechead"><h2 className="disp">Don't own — probably ignore</h2><span className="tag verify">{t25missing.length} not in your inventory</span>
-            <p className="sec-sub">These {t25missing.length} targets from the Top 25 aren't in your inventory, so there's nothing to get signed. Buy-or-skip decisions for later — parked here out of the way.</p></div>
+            <p className="sec-sub">These {t25missing.length} targets aren't in your inventory, so there's nothing to get signed. Buy-or-skip decisions for later — parked here out of the way.</p></div>
           {t25Table(t25missing)}
         </section>
       )}
@@ -453,6 +482,9 @@ const nyccCSS = `
 .t25c-body{padding:9px 10px 11px;display:flex;flex-direction:column;gap:4px;min-width:0}
 .t25c-title{font-weight:800;font-size:.84rem;line-height:1.15}
 .t25c-net{font-size:1.25rem;font-weight:800;color:#16a34a;font-variant-numeric:tabular-nums;line-height:1}
+.t25c-net.neg{color:var(--red)}
+.t25-num.net.neg{color:var(--red)}
+.nycc-tag.confirm{background:rgba(22,163,74,.18);color:#16a34a}
 .t25c-tags{display:flex;flex-wrap:wrap;gap:4px;align-items:center}
 .t25c-box{background:var(--surface2);border:1px solid var(--border);border-radius:5px;padding:1px 6px;font-size:.66rem;font-weight:700;white-space:nowrap}
 .t25c-vol{font-size:.66rem;color:var(--muted);font-weight:700}
