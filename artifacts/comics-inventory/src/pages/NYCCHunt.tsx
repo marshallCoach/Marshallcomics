@@ -41,12 +41,12 @@ const cov = (t: string, i: string) => COVERS[`${t} #${i}`];
 
 const BOOKS: Book[] = [
   // FRIDAY — Miller, Ewing, and Snyder/Dragotta/Martin (confirmed Fri)
-  { g: "fri", pub: "dc", corner: "BATMAN", title: "Dark Knight Returns · Facsimile", issue: "4", vol: "DKR Book 4 · Miller variant cover", box: "FIND IT", dayLabel: "Miller · Fri", dayCls: "fri", who: "Frank Miller — variant cover (Wolverine #8 is at CGC)", netLow: null, netNote: "value TBD", roi: "Miller signature — set the value in your sheet", fee: "$115 Miller · $64 CGC" },
-  { g: "fri", pub: "dc", corner: "BATMAN", title: "Absolute Batman", issue: "21", vol: "Vol 1", box: "FIND IT", dayLabel: "Snyder · Fri", dayCls: "fri", who: "Snyder / Dragotta", netLow: 233, roi: "+1,165% on a $20 sig", fee: "flat con fee", cover: cov("Absolute Batman", "21") },
+  { g: "fri", pub: "dc", corner: "BATMAN", title: "Dark Knight Returns · Facsimile", issue: "4", vol: "DKR Book 4 · Miller variant cover", box: "BUY — not owned", dayLabel: "Miller · Fri", dayCls: "fri", who: "Frank Miller — variant cover (Wolverine #8 is at CGC)", netLow: null, netNote: "value TBD", roi: "Miller signature — set the value in your sheet", fee: "$115 Miller · $64 CGC" },
+  { g: "fri", pub: "dc", corner: "BATMAN", title: "Absolute Batman", issue: "21", vol: "Vol 1", box: "BOX 72", dayLabel: "Snyder · Fri", dayCls: "fri", who: "Snyder / Dragotta", netLow: 233, roi: "+1,165% on a $20 sig", fee: "flat con fee", cover: cov("Absolute Batman", "21") },
   { g: "fri", pub: "dc", corner: "BATMAN", title: "Absolute Batman", issue: "8", vol: "Vol 1 · NM", box: "BOX 104", dayLabel: "Snyder · Fri", dayCls: "fri", who: "Snyder + Dragotta + Martin (3 free sigs)", netLow: 116, netHigh: 236, roi: "free-sig standout", fee: "$0 sig · $64 CGC", cover: cov("Absolute Batman", "8") },
-  { g: "fri", pub: "dc", corner: "BATMAN", title: "Absolute Batman", issue: "6", vol: "Vol 1", box: "FIND IT", dayLabel: "Snyder · Fri", dayCls: "fri", who: "Snyder / Dragotta", netLow: 135, roi: "+676%", fee: "flat con fee", cover: cov("Absolute Batman", "6") },
-  { g: "fri", pub: "dc", corner: "BATMAN", title: "Absolute Batman", issue: "19", vol: "Vol 1", box: "FIND IT", dayLabel: "Snyder · Fri", dayCls: "fri", who: "Snyder / Dragotta", netLow: 123, roi: "+615%", fee: "flat con fee", cover: cov("Absolute Batman", "19") },
-  { g: "fri", pub: "dc", corner: "BATMAN", title: "Absolute Batman", issue: "5", vol: "Vol 1", box: "FIND IT", dayLabel: "Snyder · Fri", dayCls: "fri", who: "Snyder / Dragotta", netLow: 58, roi: "+291%", fee: "flat con fee", cover: cov("Absolute Batman", "5") },
+  { g: "fri", pub: "dc", corner: "BATMAN", title: "Absolute Batman", issue: "6", vol: "Vol 1", box: "BOX 104", dayLabel: "Snyder · Fri", dayCls: "fri", who: "Snyder / Dragotta", netLow: 135, roi: "+676%", fee: "flat con fee", cover: cov("Absolute Batman", "6") },
+  { g: "fri", pub: "dc", corner: "BATMAN", title: "Absolute Batman", issue: "19", vol: "Vol 1", box: "BOX 104", dayLabel: "Snyder · Fri", dayCls: "fri", who: "Snyder / Dragotta", netLow: 123, roi: "+615%", fee: "flat con fee", cover: cov("Absolute Batman", "19") },
+  { g: "fri", pub: "dc", corner: "BATMAN", title: "Absolute Batman", issue: "5", vol: "Vol 1", box: "BOX 104", dayLabel: "Snyder · Fri", dayCls: "fri", who: "Snyder / Dragotta", netLow: 58, roi: "+291%", fee: "flat con fee", cover: cov("Absolute Batman", "5") },
   { g: "fri", pub: "dc", corner: "BATMAN", title: "Absolute Batman", issue: "23", vol: "Vol 1 · NM", box: "BOX 104", dayLabel: "Snyder · Fri", dayCls: "fri", who: "Snyder + Dragotta + Martin", netLow: 38, netHigh: 88, roi: "3 sigs on an $8 raw", fee: "$0 sig · $64 CGC", cover: cov("Absolute Batman", "23") },
   { g: "fri", pub: "dc", corner: "BATMAN", title: "Absolute Batman #20 ×4", issue: "20", vol: "Vol 1 · four copies", box: "BOX 104", dayLabel: "Snyder · Fri", dayCls: "fri", who: "Snyder + Dragotta", netLow: 104, netHigh: 264, roi: "+26–66 each ×4", fee: "$0 sig · $64 CGC ea" },
   { g: "fri", pub: "marvel", corner: "HULK", title: "Immortal Hulk", issue: "1", vol: "VG/F", box: "BOX CC4", dayLabel: "Ewing · Fri 3pm", dayCls: "fri", who: "Al Ewing", netLow: 16, netHigh: 66, roi: "+16–66", fee: "$0 sig · $64 CGC" },
@@ -55,12 +55,12 @@ const BOOKS: Book[] = [
   { g: "sat", pub: "marvel", corner: "X-MEN", title: "X-Men", issue: "1", vol: "Vol 2 · 1991", box: "BOX 106", dayLabel: "Lee · Sat", dayCls: "sat", who: "Jim Lee (triple) — +Williams +Claremont", netLow: null, roi: "best-selling comic of all time", fee: "part of $250 Lee bundle" },
   { g: "sat", pub: "dc", corner: "SUPERMAN", title: "Superman Unchained", issue: "1", vol: "Vol 1 · 8.5", box: "BOX 106", dayLabel: "Lee Sat + Snyder Fri", dayCls: "sat", who: "Lee (Sat) + Snyder (Fri) + Williams + Sinclair = full team", netLow: 101, netHigh: 181, roi: "4-sig complete creative team", fee: "$83.33 Lee", cover: cov("Superman Unchained", "1") },
   // VERIFY AT BOOTH — creator day not pinned
-  { g: "verify", pub: "marvel", corner: "X-MEN", title: "House of X", issue: "1", vol: "Vol 1", box: "FIND IT", dayLabel: "Larraz · verify", dayCls: "verify", who: "Pepe Larraz", netLow: 178, roi: "+890%", fee: "$20 sig", cover: cov("House of X", "1") },
-  { g: "verify", pub: "skybound", corner: "SKYBOUND", title: "Transformers", issue: "1", vol: "Vol 1", box: "FIND IT", dayLabel: "DWJ · verify", dayCls: "verify", who: "Daniel Warren Johnson", netLow: 62, roi: "+308%", fee: "$20 sig" },
-  { g: "verify", pub: "dc", corner: "SUPERGIRL", title: "Supergirl: Woman of Tomorrow", issue: "4", vol: "Vol 1", box: "FIND IT", dayLabel: "King · verify", dayCls: "verify", who: "Tom King", netLow: 21, roi: "+70%", fee: "$30 King", cover: cov("Supergirl: Woman of Tomorrow", "4") },
-  { g: "verify", pub: "dc", corner: "BATMAN", title: "Batman", issue: "3", vol: "Vol 3", box: "FIND IT", dayLabel: "King · verify", dayCls: "verify", who: "Tom King", netLow: 19, roi: "+65%", fee: "$30 King", cover: cov("Batman", "3") },
+  { g: "verify", pub: "marvel", corner: "X-MEN", title: "House of X", issue: "1", vol: "Vol 1", box: "BOX 14", dayLabel: "Larraz · verify", dayCls: "verify", who: "Pepe Larraz", netLow: 178, roi: "+890%", fee: "$20 sig", cover: cov("House of X", "1") },
+  { g: "verify", pub: "skybound", corner: "SKYBOUND", title: "Transformers", issue: "1", vol: "Vol 1", box: "BOX 66", dayLabel: "DWJ · verify", dayCls: "verify", who: "Daniel Warren Johnson", netLow: 62, roi: "+308%", fee: "$20 sig" },
+  { g: "verify", pub: "dc", corner: "SUPERGIRL", title: "Supergirl: Woman of Tomorrow", issue: "4", vol: "Vol 1", box: "BOX CC3", dayLabel: "King · verify", dayCls: "verify", who: "Tom King", netLow: 21, roi: "+70%", fee: "$30 King", cover: cov("Supergirl: Woman of Tomorrow", "4") },
+  { g: "verify", pub: "dc", corner: "BATMAN", title: "Batman", issue: "3", vol: "Vol 3", box: "BOX CC1", dayLabel: "King · verify", dayCls: "verify", who: "Tom King", netLow: 19, roi: "+65%", fee: "$30 King", cover: cov("Batman", "3") },
   // PC ONLY
-  { g: "skip", pub: "marvel", corner: "X-MEN", title: "X-Men: Hellfire Gala", issue: "1", vol: "Vol 3", box: "FIND IT", dayLabel: "Lee package", dayCls: "verify", who: "Jim Lee (package rate)", netLow: -21, roi: "−25% — PC yellow-label only", fee: "$83.33 Lee", cover: cov("X-Men: Hellfire Gala", "1") },
+  { g: "skip", pub: "marvel", corner: "X-MEN", title: "X-Men: Hellfire Gala", issue: "1", vol: "Vol 3", box: "BOX 11 · 102", dayLabel: "Lee package", dayCls: "verify", who: "Jim Lee (package rate)", netLow: -21, roi: "−25% — PC yellow-label only", fee: "$83.33 Lee", cover: cov("X-Men: Hellfire Gala", "1") },
 ];
 
 const KEY = "nycc_loot_v2";
@@ -293,7 +293,7 @@ export default function NYCCHunt() {
                     <div className="nycc-body">
                       <div className="nycc-title">{b.title} #{b.issue}<small>{b.vol}</small></div>
                       <div className="nycc-rowline">
-                        <span className={`nycc-pill loc ${b.box === "FIND IT" ? "find" : ""}`}>📦 {b.box}</span>
+                        <span className={`nycc-pill loc ${/^(BUY|FIND)/.test(b.box) ? "find" : ""}`}>📦 {b.box}</span>
                         <span className={`nycc-pill day ${b.dayCls}`}>{b.dayLabel}</span>
                       </div>
                       <div className="nycc-who">{b.who}</div>
