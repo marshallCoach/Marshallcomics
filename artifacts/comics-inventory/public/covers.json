@@ -897,7 +897,6 @@
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/5/56044/2380313-savage_dragon__1993_2nd_series__001_1.jpeg",
     "date": "1993-06-01"
   },
-  "Transformers|||1": null,
   "Supergirl: Woman of Tomorrow|||1": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/8023825-01.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/8023825-01.jpg",
@@ -5194,7 +5193,6 @@
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9466505-cover.jpg",
     "date": "2024-09-04"
   },
-  "Transformers|||17": null,
   "Radiant Black|||1": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/10026322-cover.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/10026322-cover.jpg",
@@ -14921,8 +14919,6 @@
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11144/111442876/8962276-cerc.jpg",
     "date": "2023-07-01"
   },
-  "Transformers|||26": null,
-  "Transformers|||30": null,
   "Vengeance of the Moon Knight|||6": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11/110017/9396863-wwww.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11/110017/9396863-wwww.jpg",
@@ -49590,11 +49586,6 @@
     "volume_name": "The Orville",
     "volume_start_year": null
   },
-  "Transformers|||12|||1": null,
-  "Transformers|||13|||1": null,
-  "Transformers|||14|||1": null,
-  "Transformers|||15|||1": null,
-  "Transformers|||16|||1": null,
   "Star Trek: Prelude to Day of Blood|||1|||1": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/1/15776/9072586-startrek-dob.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/1/15776/9072586-startrek-dob.jpg",
@@ -70980,13 +70971,6 @@
     "volume_name": "G.I. Joe",
     "volume_start_year": null
   },
-  "Transformers|||18|||1": null,
-  "Transformers|||19|||1": null,
-  "Transformers|||21|||1": null,
-  "Transformers|||22|||1": null,
-  "Transformers|||23|||1": null,
-  "Transformers|||24|||1": null,
-  "Transformers|||27|||1": null,
   "Void Rivals|||16|||1": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/9612195-cover.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9612195-cover.jpg",
@@ -71059,7 +71043,6 @@
     "volume_name": "Void Rivals",
     "volume_start_year": 2023
   },
-  "Transformers|||25|||1": null,
   "The Magic Order|||1|||2": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11144/111442876/8793618-nov220082.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11144/111442876/8793618-nov220082.jpg",
@@ -73844,7 +73827,6 @@
     "volume_name": "The Fury of Firestorm",
     "volume_start_year": null
   },
-  "Transformers|||34|||1": null,
   "M.A.S.K.|||2|||1": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/10119569-cover.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/10119569-cover.jpg",
@@ -76002,7 +75984,6 @@
     "date": "1987",
     "source": "fandom-marvel-yg"
   },
-  "Transformers|||1|||1": null,
   "Black Panther|||1|||7": {
     "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/34/Black_Panther_Vol_7_1.jpg",
     "large": "https://static.wikia.nocookie.net/marveldatabase/images/3/34/Black_Panther_Vol_7_1.jpg",
@@ -85595,10 +85576,6 @@
     "volume_name": "The Magic Order 4",
     "volume_start_year": 2023
   },
-  "Transformers|||35|||1": null,
-  "Transformers|||28|||1": null,
-  "Transformers|||29|||1": null,
-  "Transformers|||31|||1": null,
   "UFO Robot Grendizer|||1|||1": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/10147050-cover.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/10147050-cover.jpg",
@@ -86846,7 +86823,6 @@
     "date": "2026",
     "source": "fandom-dc-yg"
   },
-  "Transformers|||36|||1": null,
   "Chachu|||2|||1": {
     "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/10181970-cover.jpg",
     "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/10181970-cover.jpg",
@@ -98719,5 +98695,165 @@
     "volume_id": 175072,
     "volume_name": "Terminal",
     "volume_start_year": 2026
+  },
+  "Transformers|||12|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/9475255-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9475255-cover.jpg",
+    "date": "2024-09-11",
+    "volume_id": 153968,
+    "volume_name": "Transformers",
+    "volume_start_year": null
+  },
+  "Transformers|||13|||1": null,
+  "Transformers|||14|||1": null,
+  "Transformers|||15|||1": null,
+  "Transformers|||16|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/9592885-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9592885-cover.jpg",
+    "date": "2025-01-08",
+    "volume_id": 153968,
+    "volume_name": "Transformers",
+    "volume_start_year": null
+  },
+  "Transformers|||1|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/9123237-1.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9123237-1.jpg",
+    "date": "2023-10-05",
+    "volume_id": 153968,
+    "volume_name": "Transformers",
+    "volume_start_year": null
+  },
+  "Transformers|||17|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/9628067-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9628067-cover.jpg",
+    "date": "2025-02-12",
+    "volume_id": 153968,
+    "volume_name": "Transformers",
+    "volume_start_year": null
+  },
+  "Transformers|||30|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/10010851-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/10010851-cover.jpg",
+    "date": "2026-03-11",
+    "volume_id": 153968,
+    "volume_name": "Transformers",
+    "volume_start_year": null
+  },
+  "Transformers|||34|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/10119614-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/10119614-cover.jpg",
+    "date": "2026-07-08",
+    "volume_id": 153968,
+    "volume_name": "Transformers",
+    "volume_start_year": null
+  },
+  "Transformers|||35|||1": {
+    "url": null,
+    "large": null,
+    "date": "2026-10-09"
+  },
+  "Transformers|||18|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/9655989-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9655989-cover.jpg",
+    "date": "2025-03-12",
+    "volume_id": 153968,
+    "volume_name": "Transformers",
+    "volume_start_year": null
+  },
+  "Transformers|||19|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/9686955-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9686955-cover.jpg",
+    "date": "2025-04-09",
+    "volume_id": 153968,
+    "volume_name": "Transformers",
+    "volume_start_year": null
+  },
+  "Transformers|||21|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/9751605-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9751605-cover.jpg",
+    "date": "2025-06-11",
+    "volume_id": 153968,
+    "volume_name": "Transformers",
+    "volume_start_year": null
+  },
+  "Transformers|||22|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/9785310-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9785310-cover.jpg",
+    "date": "2025-07-09",
+    "volume_id": 153968,
+    "volume_name": "Transformers",
+    "volume_start_year": null
+  },
+  "Transformers|||23|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/9825949-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9825949-cover.jpg",
+    "date": "2025-08-13",
+    "volume_id": 153968,
+    "volume_name": "Transformers",
+    "volume_start_year": null
+  },
+  "Transformers|||24|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/9861491-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9861491-cover.jpg",
+    "date": "2025-09-10",
+    "volume_id": 153968,
+    "volume_name": "Transformers",
+    "volume_start_year": null
+  },
+  "Transformers|||25|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/9887574-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9887574-cover.jpg",
+    "date": "2025-10-08",
+    "volume_id": 153968,
+    "volume_name": "Transformers",
+    "volume_start_year": null
+  },
+  "Transformers|||27|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/9933538-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9933538-cover.jpg",
+    "date": "2025-12-10",
+    "volume_id": 153968,
+    "volume_name": "Transformers",
+    "volume_start_year": null
+  },
+  "Transformers|||28|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/9961284-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9961284-cover.jpg",
+    "date": "2026-01-14",
+    "volume_id": 153968,
+    "volume_name": "Transformers",
+    "volume_start_year": null
+  },
+  "Transformers|||29|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/9985237-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9985237-cover.jpg",
+    "date": "2026-02-11",
+    "volume_id": 153968,
+    "volume_name": "Transformers",
+    "volume_start_year": null
+  },
+  "Transformers|||31|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/10035680-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/10035680-cover.jpg",
+    "date": "2026-04-08",
+    "volume_id": 153968,
+    "volume_name": "Transformers",
+    "volume_start_year": null
+  },
+  "Transformers|||26|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/9913103-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/9913103-cover.jpg",
+    "date": "2025-11-12",
+    "volume_id": 153968,
+    "volume_name": "Transformers",
+    "volume_start_year": null
+  },
+  "Transformers|||36|||1": {
+    "url": "https://comicvine.gamespot.com/a/uploads/scale_medium/11161/111615891/10182150-cover.jpg",
+    "large": "https://comicvine.gamespot.com/a/uploads/scale_large/11161/111615891/10182150-cover.jpg",
+    "date": "2026-09-10",
+    "volume_id": 153968,
+    "volume_name": "Transformers",
+    "volume_start_year": null
   }
 }
