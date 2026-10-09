@@ -8,12 +8,8 @@ import flaggedBaseline from "@/data/flaggedCoversBaseline.json";
 const BASELINE_FLAGGED_IDS = new Set((flaggedBaseline as { id: string }[]).map(f => f.id));
 
 const BASE = import.meta.env.BASE_URL?.replace(/\/$/, "") ?? "";
-const LANES = 5;
 const BATCH_SIZE = 20;
 const CYCLE_MS = 30_000;
-const PER_LANE = BATCH_SIZE / LANES;
-const CARD_W = 150;   // cover thumbnail width  (was 96)
-const CARD_H = 225;   // cover thumbnail height (was 144) — keeps the 2:3 ratio
 
 interface Pooled {
   comic: Comic;
@@ -123,14 +119,12 @@ export default function CoverReview({ initTitle }: { initTitle?: string }) {
 
   const titleCount = titleView.total;
 
-  const lanes = useMemo(() => {
-    if (!pool || pool.length === 0) return [];
-    const batch: Pooled[] = [];
+  const batch = useMemo(() => {
+    if (!pool || pool.length === 0) return [] as Pooled[];
+    const out: Pooled[] = [];
     for (let i = 0; i < BATCH_SIZE && i < pool.length; i++) {
-      batch.push(pool[(batchStart + i) % pool.length]);
+      out.push(pool[(batchStart + i) % pool.length]);
     }
-    const out: Pooled[][] = Array.from({ length: LANES }, () => []);
-    batch.forEach((p, i) => out[i % LANES].push(p));
     return out;
   }, [pool, batchStart]);
 
@@ -183,11 +177,11 @@ export default function CoverReview({ initTitle }: { initTitle?: string }) {
     const id = comicId({ Title: p.comic.Title, Issue: p.comic.Issue, Volume: p.comic.Volume, Box: p.comic.Box });
     const flagged = flags.has(id);
     return (
-      <div key={k} style={{ flexShrink: 0, width: CARD_W, textAlign: "center" }}>
+      <div key={k} style={{ width: "100%", textAlign: "center" }}>
         <div
           onClick={() => setModal({ comic: p.comic, url: p.url })}
           title="Open to mark incorrect / variant / dupe"
-          style={{ width: CARD_W, height: CARD_H, borderRadius: 4, overflow: "hidden", background: "#1a1628", border: flagged ? "2px solid var(--red)" : "1px solid var(--border)", cursor: "pointer" }}
+          style={{ width: "100%", aspectRatio: "2 / 3", borderRadius: 4, overflow: "hidden", background: "#1a1628", border: flagged ? "2px solid var(--red)" : "1px solid var(--border)", cursor: "pointer" }}
         >
           <img src={p.url} alt={`${p.comic.Title} ${p.comic.Issue}`} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} loading="lazy" />
         </div>
@@ -197,9 +191,10 @@ export default function CoverReview({ initTitle }: { initTitle?: string }) {
           </div>
         ) : (
           <button
+            className="cr-tl"
             onClick={() => setTitleFilter(p.comic.Title)}
             title={`Show all ${p.comic.Title} issues`}
-            style={{ background: "none", border: "none", padding: 0, cursor: "pointer", fontSize: "0.9rem", color: "var(--red)", marginTop: 6, lineHeight: 1.3, overflow: "visible", whiteSpace: "normal", wordBreak: "break-word", textDecoration: "underline", width: "100%" }}
+            style={{ background: "none", border: "none", padding: 0, cursor: "pointer", fontSize: "0.82rem", color: "var(--red)", marginTop: 6, lineHeight: 1.25, whiteSpace: "normal", wordBreak: "break-word", textDecoration: "underline", width: "100%" }}
           >
             {p.comic.Title} #{p.comic.Issue}
           </button>
@@ -214,7 +209,15 @@ export default function CoverReview({ initTitle }: { initTitle?: string }) {
   };
 
   return (
-    <div style={{ padding: "20px 24px 60px" }}>
+    <div className="cr-wrap" style={{ padding: "20px 24px 60px" }}>
+      <style>{`
+        .cr-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;align-items:start}
+        .cr-tl{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.3em}
+        @media(max-width:480px){
+          .cr-wrap{padding:16px 16px 60px}
+          .cr-grid{grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:10px}
+        }
+      `}</style>
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 12, marginBottom: 8 }}>
         <div>
           <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "1.75rem", letterSpacing: "2px", color: "var(--text)" }}>
@@ -260,7 +263,7 @@ export default function CoverReview({ initTitle }: { initTitle?: string }) {
                     VOLUME {g.vol} · {g.items.length} issue{g.items.length === 1 ? "" : "s"}
                   </div>
                 )}
-                <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
+                <div className="cr-grid">
                   {g.items.map((p, i) => card(p, `t-${g.vol}-${i}`, false, true))}
                 </div>
               </div>
@@ -268,16 +271,9 @@ export default function CoverReview({ initTitle }: { initTitle?: string }) {
           </div>
         )
       ) : (
-        lanes.map((lane, li) => (
-          <div key={li} style={{ marginBottom: 18 }}>
-            <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1.5px", color: "var(--muted)", marginBottom: 6 }}>
-              LANE {li + 1}
-            </div>
-            <div style={{ display: "flex", gap: 12, overflowX: "auto", paddingBottom: 8 }}>
-              {lane.map((p, i) => card(p, `${comicId({ Title: p.comic.Title, Issue: p.comic.Issue, Volume: p.comic.Volume, Box: p.comic.Box })}-${i}`))}
-            </div>
-          </div>
-        ))
+        <div className="cr-grid">
+          {batch.map((p, i) => card(p, `${comicId({ Title: p.comic.Title, Issue: p.comic.Issue, Volume: p.comic.Volume, Box: p.comic.Box })}-${i}`))}
+        </div>
       )}
 
       {modal && (
