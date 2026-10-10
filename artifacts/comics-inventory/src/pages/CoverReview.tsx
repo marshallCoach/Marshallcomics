@@ -3,6 +3,7 @@ import { DATA, type Comic } from "@/data/data";
 import { comicId, loadFlags, saveFlags, type FlaggedCover } from "./CoverCatalog";
 import { clearAllFlags, exportFlags as exportFlagsLib } from "@/lib/coverFlags";
 import { CoverModal } from "@/components/CoverImage";
+import { splitCreators } from "@/utils/creators";
 import flaggedBaseline from "@/data/flaggedCoversBaseline.json";
 
 const BASELINE_FLAGGED_IDS = new Set((flaggedBaseline as { id: string }[]).map(f => f.id));
@@ -25,7 +26,7 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-export default function CoverReview({ initTitle }: { initTitle?: string }) {
+export default function CoverReview({ initTitle, initCreative }: { initTitle?: string; initCreative?: string }) {
   const [pool, setPool]         = useState<Pooled[] | null>(null);
   const [coversMap, setCoversMap] = useState<Record<string, { url: string | null }>>({});
   const [batchStart, setBatchStart] = useState(0);
@@ -33,8 +34,13 @@ export default function CoverReview({ initTitle }: { initTitle?: string }) {
   const [msLeft, setMsLeft]     = useState(CYCLE_MS);
   const [paused, setPaused]     = useState(false);
   const [titleFilter, setTitleFilter] = useState<string | null>(initTitle || null);
+  const [creativeFilter, setCreativeFilter] = useState<string | null>(initCreative || null);
   const [modal, setModal] = useState<{ comic: Comic; url: string } | null>(null);
   const tickRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  // Title and creative filters are mutually exclusive — picking one clears the other.
+  const pickTitle = useCallback((t: string | null) => { setCreativeFilter(null); setTitleFilter(t); }, []);
+  const pickCreative = useCallback((c: string | null) => { setTitleFilter(null); setCreativeFilter(c); }, []);
 
   // Build the review pool once: every comic that has a real (non-placeholder) cover,
   // excluding anything already flagged as an incorrect cover (baseline export or this
@@ -69,11 +75,13 @@ export default function CoverReview({ initTitle }: { initTitle?: string }) {
 
   // Deep-link from the homepage: a cover title opens this page already filtered
   // to that title ("Cover by Title"). Re-applies whenever the incoming title changes.
-  useEffect(() => { setTitleFilter(initTitle || null); }, [initTitle]);
+  useEffect(() => { if (initTitle) pickTitle(initTitle); }, [initTitle, pickTitle]);
+  // Deep-link from the Creative Credits page: open filtered to one creator's books.
+  useEffect(() => { if (initCreative) pickCreative(initCreative); }, [initCreative, pickCreative]);
 
-  // 30s auto-advance cycle — paused when the timer is stopped or a title is pinned.
+  // 30s auto-advance cycle — paused when the timer is stopped or a filter is pinned.
   useEffect(() => {
-    if (!pool || pool.length === 0 || paused || titleFilter) return;
+    if (!pool || pool.length === 0 || paused || titleFilter || creativeFilter) return;
     setMsLeft(CYCLE_MS);
     const startedAt = Date.now();
     tickRef.current = setInterval(() => {
@@ -85,7 +93,7 @@ export default function CoverReview({ initTitle }: { initTitle?: string }) {
       }
     }, 250);
     return () => { if (tickRef.current) clearInterval(tickRef.current); };
-  }, [pool, batchStart, paused, titleFilter]);
+  }, [pool, batchStart, paused, titleFilter, creativeFilter]);
 
   // Every covered issue of the pinned title, grouped by volume (ascending) and
   // then sorted by issue number within each volume, so the run reads straight
@@ -118,6 +126,40 @@ export default function CoverReview({ initTitle }: { initTitle?: string }) {
   }, [titleFilter, coversMap]);
 
   const titleCount = titleView.total;
+
+  // Every covered book this creator worked on (writer, artist OR cover artist),
+  // grouped by Title (A–Z) and sorted by issue within — same treatment as the
+  // title view, just one level up (title headers instead of volume headers).
+  const creativeView = useMemo(() => {
+    if (!creativeFilter) return { groups: [] as { title: string; items: Pooled[] }[], titleCount: 0, total: 0 };
+    const seen = new Set<string>();
+    const byTitle = new Map<string, Pooled[]>();
+    for (const c of DATA.comics as Comic[]) {
+      const credited =
+        splitCreators(c.Writer).includes(creativeFilter) ||
+        splitCreators(c.Artist).includes(creativeFilter) ||
+        splitCreators(c.Cover_Artist).includes(creativeFilter);
+      if (!credited) continue;
+      const vol = String(c.Volume || "1").trim();
+      const key = `${c.Title}|||${c.Issue}|||${vol}`;
+      if (seen.has(key)) continue;
+      const entry = coversMap[key] ?? coversMap[`${c.Title}|||${c.Issue}`];
+      if (entry?.url) {
+        seen.add(key);
+        if (!byTitle.has(c.Title)) byTitle.set(c.Title, []);
+        byTitle.get(c.Title)!.push({ comic: c, url: entry.url });
+      }
+    }
+    const groups = [...byTitle.entries()]
+      .map(([title, items]) => ({
+        title,
+        items: items.sort((a, b) =>
+          (parseFloat(String(a.comic.Issue)) || 0) - (parseFloat(String(b.comic.Issue)) || 0)),
+      }))
+      .sort((a, b) => a.title.localeCompare(b.title));
+    const total = groups.reduce((s, g) => s + g.items.length, 0);
+    return { groups, titleCount: byTitle.size, total };
+  }, [creativeFilter, coversMap]);
 
   const batch = useMemo(() => {
     if (!pool || pool.length === 0) return [] as Pooled[];
@@ -192,7 +234,7 @@ export default function CoverReview({ initTitle }: { initTitle?: string }) {
         ) : (
           <button
             className="cr-tl"
-            onClick={() => setTitleFilter(p.comic.Title)}
+            onClick={() => pickTitle(p.comic.Title)}
             title={`Show all ${p.comic.Title} issues`}
             style={{ background: "none", border: "none", padding: 0, cursor: "pointer", fontSize: "0.82rem", color: "var(--red)", marginTop: 6, lineHeight: 1.25, whiteSpace: "normal", wordBreak: "break-word", textDecoration: "underline", width: "100%" }}
           >
@@ -221,17 +263,19 @@ export default function CoverReview({ initTitle }: { initTitle?: string }) {
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 12, marginBottom: 8 }}>
         <div>
           <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "1.75rem", letterSpacing: "2px", color: "var(--text)" }}>
-            {titleFilter ? "Cover Review by title" : "Cover Review"}
+            {titleFilter ? "Cover Review by title" : creativeFilter ? "Cover Review by creator" : "Cover Review"}
           </div>
           <div style={{ fontSize: "0.875rem", color: "var(--muted)" }}>
             {titleFilter
               ? `${titleFilter} · ${titleCount} issue${titleCount === 1 ? "" : "s"}${titleView.volCount > 1 ? ` · ${titleView.volCount} volumes` : ""} · click "wrong" on any incorrect cover`
+              : creativeFilter
+              ? `${creativeFilter} · ${creativeView.total} book${creativeView.total === 1 ? "" : "s"} across ${creativeView.titleCount} title${creativeView.titleCount === 1 ? "" : "s"} · click "wrong" on any incorrect cover`
               : `${pool.length.toLocaleString()} covers in pool · batch ${Math.floor(batchStart / BATCH_SIZE) + 1} of ${Math.ceil(pool.length / BATCH_SIZE)} · ${flags.size} flagged so far`}
           </div>
         </div>
         <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
-          {titleFilter ? (
-            <button onClick={() => setTitleFilter(null)} style={btnStyle(false)}>← All covers</button>
+          {titleFilter || creativeFilter ? (
+            <button onClick={() => { setTitleFilter(null); setCreativeFilter(null); }} style={btnStyle(false)}>← All covers</button>
           ) : (
             <>
               <button onClick={() => setPaused(p => !p)} style={btnStyle(false)}>{paused ? "▶ Resume" : "⏸ Pause"}</button>
@@ -245,13 +289,34 @@ export default function CoverReview({ initTitle }: { initTitle?: string }) {
         </div>
       </div>
 
-      {!titleFilter && (
+      {!titleFilter && !creativeFilter && (
         <div style={{ height: 3, background: "var(--border)", borderRadius: 2, marginBottom: 20, overflow: "hidden" }}>
           <div style={{ height: "100%", width: `${paused ? 0 : pct}%`, background: paused ? "var(--muted)" : "var(--red)", transition: "width 0.25s linear" }} />
         </div>
       )}
 
-      {titleFilter ? (
+      {creativeFilter ? (
+        creativeView.total === 0 ? (
+          <div style={{ color: "var(--muted)", marginTop: 20 }}>No covered books found for {creativeFilter}.</div>
+        ) : (
+          <div style={{ marginTop: 20 }}>
+            {creativeView.groups.map(g => (
+              <div key={g.title} style={{ marginBottom: 24 }}>
+                <button
+                  onClick={() => pickTitle(g.title)}
+                  title={`Show all ${g.title} issues`}
+                  style={{ background: "none", border: "none", padding: 0, cursor: "pointer", textAlign: "left", fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.95rem", letterSpacing: "1.5px", color: "var(--text)", marginBottom: 10, borderBottom: "1px solid var(--border)", paddingBottom: 5, width: "100%", display: "block" }}
+                >
+                  {g.title.toUpperCase()} · {g.items.length} book{g.items.length === 1 ? "" : "s"}
+                </button>
+                <div className="cr-grid">
+                  {g.items.map((p, i) => card(p, `cr-${g.title}-${i}`, false, true))}
+                </div>
+              </div>
+            ))}
+          </div>
+        )
+      ) : titleFilter ? (
         titleCount === 0 ? (
           <div style={{ color: "var(--muted)", marginTop: 20 }}>No covered issues found for this title.</div>
         ) : (
