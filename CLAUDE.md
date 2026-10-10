@@ -8,8 +8,9 @@
 ## Response format
 - Commands FIRST, explanations AFTER. Always. Give the runnable lines, then
   explain what they do underneath.
-- Light tone when flagging a problem — "woah woah, back up bud" over a hard
-  "Stop." Warn without alarming.
+- Light tone when flagging a problem — never open with a hard "Stop." Say
+  "woah bud" (casual) instead, e.g. "woah bud, back up a sec." Warn without
+  alarming. This is a standing preference.
 
 ## Runbook
 Routine commands + FAQ live in `RUNBOOK.md` — read it for the cover loop, git
