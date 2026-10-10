@@ -78,7 +78,9 @@ const zoneOf = (loc) => (loc ? String(loc).split(/\s*—\s*/)[0].trim() || 'Unas
 const wb = new ExcelJS.Workbook();
 await wb.xlsx.readFile(XLSX_FILE);
 
-const inv = wb.worksheets.find(ws => ws.name.startsWith('✅ Clean Inventory'));
+// Newest Clean Inventory snapshot is the LAST matching tab, not the first.
+const _invTabs = wb.worksheets.filter(ws => ws.name.startsWith('✅ Clean Inventory'));
+const inv = _invTabs[_invTabs.length - 1];
 if (!inv) { console.error('Inventory sheet not found. Sheets:', wb.worksheets.map(w => w.name).join(', ')); process.exit(1); }
 const rows = sheetRows(inv);
 const H = rows[0];

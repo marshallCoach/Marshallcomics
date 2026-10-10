@@ -84,7 +84,9 @@ console.log(`Parsed ${existingQuests.length} quests, ${seriesQuestMap.size} seri
 const wb = new ExcelJS.Workbook();
 await wb.xlsx.readFile(XLSX_FILE);
 
-const comicsSheet = wb.worksheets.find(ws => ws.name.startsWith('✅ Clean Inventory'));
+// Newest Clean Inventory snapshot is the LAST matching tab, not the first.
+const _inv = wb.worksheets.filter(ws => ws.name.startsWith('✅ Clean Inventory'));
+const comicsSheet = _inv[_inv.length - 1];
 if (!comicsSheet) {
   console.error('Cannot find inventory sheet. Available:', wb.worksheets.map(ws => ws.name).join(', '));
   process.exit(1);

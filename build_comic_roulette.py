@@ -74,8 +74,9 @@ def cover_url(t, i, v):
     return cands[0][1]
 
 
-ws = next(w for w in openpyxl.load_workbook(INV, read_only=True, data_only=True).worksheets
-          if w.title.startswith("✅ Clean Inventory"))
+# Newest Clean Inventory snapshot is the LAST matching tab, not the first.
+ws = [w for w in openpyxl.load_workbook(INV, read_only=True, data_only=True).worksheets
+      if w.title.startswith("✅ Clean Inventory")][-1]
 rows = list(ws.iter_rows(values_only=True)); H = list(rows[0]); C = {h: i for i, h in enumerate(H) if h}
 
 
