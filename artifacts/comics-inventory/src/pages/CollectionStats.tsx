@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { DATA } from "@/data/data";
+import { tallyCreators, isVarious } from "@/utils/creators";
 import {
   PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, Tooltip,
   ResponsiveContainer, Legend,
@@ -65,15 +66,21 @@ comics.forEach(c => {
 });
 const byDecade = Object.entries(byDecadeRaw).sort((a,b)=>a[0].localeCompare(b[0]));
 
-// Writers — overall and by publisher
-const writerMap      = countBy(comics, c => c.Writer);
-const writerDCMap    = countBy(comics.filter(c=>normPub(c.Publisher)==="DC"),   c => c.Writer);
-const writerMrvlMap  = countBy(comics.filter(c=>normPub(c.Publisher)==="Marvel"),c => c.Writer);
-const writerOtherMap = countBy(comics.filter(c=>normPub(c.Publisher)!=="DC"&&normPub(c.Publisher)!=="Marvel"), c => c.Writer);
+// Writers — overall and by publisher. tallyCreators splits multi-name cells
+// ("Stan Lee, Jack Kirby") into individuals, so counts and rankings are per-person.
+const writerMap      = tallyCreators(comics, c => c.Writer);
+const writerDCMap    = tallyCreators(comics.filter(c=>normPub(c.Publisher)==="DC"),   c => c.Writer);
+const writerMrvlMap  = tallyCreators(comics.filter(c=>normPub(c.Publisher)==="Marvel"),c => c.Writer);
+const writerOtherMap = tallyCreators(comics.filter(c=>normPub(c.Publisher)!=="DC"&&normPub(c.Publisher)!=="Marvel"), c => c.Writer);
 
 // Artists
-const artistMap      = countBy(comics, c => c.Artist);
-const coverMap       = countBy(comics.filter(c=>c.Cover_Artist), c => c.Cover_Artist);
+const artistMap      = tallyCreators(comics, c => c.Artist);
+const coverMap       = tallyCreators(comics.filter(c=>c.Cover_Artist), c => c.Cover_Artist);
+
+// Books credited only to "Various" — not individual people, tracked separately
+// so they're visible instead of silently dropped from the identified counts.
+const variousWriters = comics.filter(c => isVarious(c.Writer)).length;
+const variousArtists = comics.filter(c => isVarious(c.Artist)).length;
 
 // Titles
 const titleMap = countBy(comics, c => c.Title);
@@ -296,8 +303,8 @@ export default function CollectionStats({ onNavigate }: { onNavigate?: (tab: str
           </div>
           {/* Rest */}
           <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(130px,1fr))", gap:10 }}>
-            <StatTile val={uniqueWriters}                  lbl="Writers"             sub="unique credited writers" color="#1d6fa4" />
-            <StatTile val={uniqueArtists}                  lbl="Artists"             sub="unique credited artists" color="#16a34a" />
+            <StatTile val={uniqueWriters}                  lbl="Writers"             sub={`individual people · ${variousWriters.toLocaleString()} books "Various"`} color="#1d6fa4" />
+            <StatTile val={uniqueArtists}                  lbl="Artists"             sub={`individual people · ${variousArtists.toLocaleString()} books "Various"`} color="#16a34a" />
             <StatTile val={uniquePublishers}               lbl="Publishers"          sub="different imprints"    color="#d97706" />
             <StatTile val={deepRunTitles.length}           lbl="Deep Runs"           sub="10+ issues same title" color="#c8102e" />
             <StatTile val={annuals.length}                 lbl="Annuals"             sub="annual editions"       color="#6b7280" />

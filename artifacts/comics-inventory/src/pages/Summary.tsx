@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useMemo } from "react";
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
 import { DATA } from "@/data/data";
+import { splitCreators } from "@/utils/creators";
 import { NEXT_STEPS, Status, StepCard, loadStatuses, saveStatuses } from "./ActionPlan";
 import { CALENDAR_EVENTS } from "./Calendar";
 import { CoverImage, CoverModal } from "@/components/CoverImage";
@@ -92,9 +93,8 @@ const DUP_STATS = (() => {
 function buildTopCreators(field: "Writer" | "Artist"): [string, number][] {
   const m: Record<string, number> = {};
   for (const c of comics) {
-    const v = (c[field] as string | undefined) || "";
-    if (v && v !== "nan" && v !== "Various" && v !== "Unknown" && v.trim()) {
-      m[v] = (m[v] || 0) + 1;
+    for (const name of splitCreators(c[field] as string | undefined)) {
+      m[name] = (m[name] || 0) + 1;
     }
   }
   return Object.entries(m).sort((a, b) => b[1] - a[1]).slice(0, 5);
@@ -120,9 +120,8 @@ function buildTopCreatorsPrev(field: "Writer" | "Artist"): [string, number][] {
   const m: Record<string, number> = {};
   for (const c of comics) {
     if (Number(c.Box) > 61) continue;
-    const v = (c[field] as string | undefined) || "";
-    if (v && v !== "nan" && v !== "Various" && v !== "Unknown" && v.trim()) {
-      m[v] = (m[v] || 0) + 1;
+    for (const name of splitCreators(c[field] as string | undefined)) {
+      m[name] = (m[name] || 0) + 1;
     }
   }
   return Object.entries(m).sort((a, b) => b[1] - a[1]).slice(0, 5);
