@@ -155,6 +155,40 @@ export default function NYCCHunt() {
     || t25covers[`${t.title}|||${t.iss}`]?.url
     || null;
 
+  // ── David Nakayama cover tracker ──────────────────────────────────────────
+  // Live list of every book with a Nakayama cover credit (auto-updates as the
+  // inventory's Cover Artist field is filled). Check what you bought; checked
+  // ones float to the top and can be isolated with the "Only bought" filter.
+  interface Nak { key: string; title: string; issue: string; iss: string; vol: string; box: string; }
+  const nakayama = useMemo<Nak[]>(() => {
+    const seen = new Set<string>();
+    const out: Nak[] = [];
+    for (const c of DATA.comics as Array<{ Title?: string; Issue?: string; Volume?: string; Box?: string; Cover_Artist?: string }>) {
+      if (!/nakayama/i.test(c.Cover_Artist || "")) continue;
+      const vol = String(c.Volume || "1").trim();
+      const iss = tNorm(c.Issue);
+      const key = `${String(c.Title || "").trim()}|||${iss}|||${vol}`;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      out.push({ key, title: String(c.Title || "").trim(), issue: String(c.Issue || ""), iss, vol, box: String(c.Box || "?") });
+    }
+    return out.sort((a, b) => a.title.localeCompare(b.title) || (parseFloat(a.iss) || 0) - (parseFloat(b.iss) || 0));
+  }, []);
+  const NAK_KEY = "nycc_nakayama_bought_v1";
+  const [bought, setBought] = useState<Record<string, boolean>>(() => {
+    try { return JSON.parse(localStorage.getItem(NAK_KEY) || "{}") || {}; } catch { return {}; }
+  });
+  const [onlyBought, setOnlyBought] = useState(false);
+  const toggleBought = (k: string) => setBought(prev => {
+    const n = { ...prev }; if (n[k]) delete n[k]; else n[k] = true;
+    try { localStorage.setItem(NAK_KEY, JSON.stringify(n)); } catch { /* ignore */ }
+    return n;
+  });
+  const nakCover = (n: Nak) => t25covers[`${n.title}|||${n.iss}|||${n.vol}`]?.url || t25covers[`${n.title}|||${n.iss}`]?.url || null;
+  const nakBoughtCount = nakayama.filter(n => bought[n.key]).length;
+  const nakShown = (onlyBought ? nakayama.filter(n => bought[n.key]) : nakayama)
+    .slice().sort((a, b) => (bought[b.key] ? 1 : 0) - (bought[a.key] ? 1 : 0)); // checked float to top
+
   const t25rows = useMemo(
     () => TARGETS.map(t => ({ t, boxes: ownedT[`${t.title.toLowerCase()}|${t.iss}`] || [] })),
     [ownedT]);
@@ -263,6 +297,39 @@ export default function NYCCHunt() {
             : <>Bagged <b>{count}</b> · <b>${Math.round(loot).toLocaleString()}</b> of a <b>${Math.round(possible).toLocaleString()}</b> floor. Lee ceiling books carry no stated net.</>}
         </div>
       </div>
+
+      <section id="nakayama" className="nycc-section">
+        <div className="nycc-sechead">
+          <h2 className="disp">David Nakayama covers</h2>
+          <span className="tag confirm">{nakBoughtCount} / {nakayama.length} bought</span>
+          <p className="sec-sub">Every book with a Nakayama cover credit, live from inventory. Tap a card to mark it bought — bought ones jump to the top. Use "Only bought" to isolate your haul.</p>
+        </div>
+        <div className="nak-tools">
+          <button className={`cc-seg-btn ${!onlyBought ? "on" : ""}`} onClick={() => setOnlyBought(false)}>All ({nakayama.length})</button>
+          <button className={`cc-seg-btn ${onlyBought ? "on" : ""}`} onClick={() => setOnlyBought(true)}>Only bought ({nakBoughtCount})</button>
+        </div>
+        <div className="t25grid">
+          {nakShown.map(n => {
+            const url = nakCover(n);
+            const isB = !!bought[n.key];
+            return (
+              <button key={n.key} className={`t25c nak-c ${isB ? "bought" : ""}`} onClick={() => toggleBought(n.key)} title={isB ? "Bought — tap to clear" : "Tap to mark bought"}>
+                <div className={`t25c-cov ${pubOf(n.title)}`}>
+                  {url
+                    ? <img src={url} alt={`${n.title} #${n.issue}`} loading="lazy" onError={e => { (e.currentTarget as HTMLImageElement).style.display = "none"; }} />
+                    : <span className="t25c-corner">#{n.issue}</span>}
+                  <span className="nak-check">{isB ? "✓" : ""}</span>
+                </div>
+                <div className="t25c-body">
+                  <div className="t25c-title">{n.title} #{n.issue}</div>
+                  <div className="t25c-tags"><span className="t25c-box">📦 {n.box}</span><span className="t25c-vol">Vol {n.vol}</span></div>
+                </div>
+              </button>
+            );
+          })}
+          {nakShown.length === 0 && <p className="nycc-foot">Nothing marked bought yet — tap a cover to add it.</p>}
+        </div>
+      </section>
 
       {SECTIONS.map(sec => {
         const items = BOOKS.map((b, i) => ({ b, i })).filter(x => x.b.g === sec.g);
@@ -492,4 +559,12 @@ const nyccCSS = `
 .t25c-why{font-size:.72rem;color:var(--muted);line-height:1.3}
 @media(max-width:480px){.t25grid{grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:9px}}
 @media(max-width:620px){.nycc-days{grid-template-columns:1fr}}
+.nak-tools{display:inline-flex;border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:14px}
+.cc-seg-btn{background:var(--surface2);border:none;padding:8px 14px;color:var(--muted2);font-size:.8rem;font-weight:700;cursor:pointer;white-space:nowrap}
+.cc-seg-btn+.cc-seg-btn{border-left:1px solid var(--border)}
+.cc-seg-btn.on{background:var(--gold);color:#1a1200}
+.nak-c{padding:0;border:1.5px solid var(--border);background:var(--surface);cursor:pointer;text-align:left}
+.nak-c.bought{border-color:#16a34a;box-shadow:0 0 0 2px rgba(22,163,74,.35)}
+.nak-check{position:absolute;top:6px;right:6px;z-index:2;width:22px;height:22px;border-radius:6px;border:2px solid #fff;background:rgba(0,0,0,.45);color:#fff;font-weight:800;font-size:.8rem;display:flex;align-items:center;justify-content:center}
+.nak-c.bought .nak-check{background:#16a34a;border-color:#16a34a}
 `;
