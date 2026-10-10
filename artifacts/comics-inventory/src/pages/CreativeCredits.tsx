@@ -51,7 +51,10 @@ export default function CreativeCredits({ onNavigate }: { onNavigate?: (tab: str
         </div>
         <div className="cc-tools">
           <input className="cc-search" placeholder="Search names…" value={q} onChange={e => setQ(e.target.value)} />
-          <button className="cc-sort" onClick={() => setSortAZ(s => !s)}>{sortAZ ? "By count" : "A–Z"}</button>
+          <div className="cc-seg" role="group" aria-label="Sort">
+            <button className={`cc-sort ${!sortAZ ? "on" : ""}`} onClick={() => setSortAZ(false)}>Count</button>
+            <button className={`cc-sort ${sortAZ ? "on" : ""}`} onClick={() => setSortAZ(true)}>A–Z</button>
+          </div>
         </div>
       </div>
 
@@ -80,7 +83,10 @@ const CSS = `
 .cc-role .cc-count{opacity:.7;font-variant-numeric:tabular-nums;margin-left:4px}
 .cc-tools{display:flex;gap:8px;align-items:center}
 .cc-search{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:8px 12px;color:var(--text);font-size:.9rem;min-width:160px}
-.cc-sort{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:8px 12px;color:var(--muted2);font-size:.8rem;font-weight:700;cursor:pointer;white-space:nowrap}
+.cc-seg{display:inline-flex;border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.cc-sort{background:var(--surface2);border:none;padding:8px 14px;color:var(--muted2);font-size:.8rem;font-weight:700;cursor:pointer;white-space:nowrap}
+.cc-sort+.cc-sort{border-left:1px solid var(--border)}
+.cc-sort.on{background:var(--red);color:#fff}
 .cc-meta{font-size:.78rem;color:var(--muted);margin-bottom:12px;font-variant-numeric:tabular-nums}
 .cc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px}
 .cc-item{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:9px 12px;cursor:pointer;text-align:left;transition:border-color .12s,transform .12s}
