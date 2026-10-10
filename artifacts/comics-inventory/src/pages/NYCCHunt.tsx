@@ -160,18 +160,31 @@ export default function NYCCHunt() {
   // inventory's Cover Artist field is filled). Check what you bought; checked
   // ones float to the top and can be isolated with the "Only bought" filter.
   interface Nak { key: string; title: string; issue: string; iss: string; vol: string; box: string; }
+  // Confirmed Nakayama (DNA) covers whose Cover Artist cell doesn't yet say so —
+  // DNA-tagged blanks + variants logged under the standard artist (e.g. Black
+  // Canary: Best of the Best #1, logged Ryan Sook but owned as the DNA variant).
+  // These de-dupe out automatically once the Mac fills the real credit.
+  const NAK_SUPPLEMENT = [
+    { title: "Black Canary: Best of the Best", issue: "1", vol: "1", box: "72" },
+    { title: "Mary Jane: Face It Tiger", issue: "1", vol: "1", box: "102" },
+    { title: "Transformers", issue: "35", vol: "1", box: "103" },
+    { title: "X-Men: From the Ashes", issue: "2", vol: "1", box: "102" },
+  ];
   const nakayama = useMemo<Nak[]>(() => {
     const seen = new Set<string>();
     const out: Nak[] = [];
+    const add = (title: string, issue: string, vol: string, box: string) => {
+      const iss = tNorm(issue);
+      const key = `${title.trim()}|||${iss}|||${String(vol).trim()}`;
+      if (seen.has(key)) return;
+      seen.add(key);
+      out.push({ key, title: title.trim(), issue: String(issue), iss, vol: String(vol).trim(), box });
+    };
     for (const c of DATA.comics as Array<{ Title?: string; Issue?: string; Volume?: string; Box?: string; Cover_Artist?: string }>) {
       if (!/nakayama/i.test(c.Cover_Artist || "")) continue;
-      const vol = String(c.Volume || "1").trim();
-      const iss = tNorm(c.Issue);
-      const key = `${String(c.Title || "").trim()}|||${iss}|||${vol}`;
-      if (seen.has(key)) continue;
-      seen.add(key);
-      out.push({ key, title: String(c.Title || "").trim(), issue: String(c.Issue || ""), iss, vol, box: String(c.Box || "?") });
+      add(String(c.Title || ""), String(c.Issue || ""), String(c.Volume || "1"), String(c.Box || "?"));
     }
+    for (const s of NAK_SUPPLEMENT) add(s.title, s.issue, s.vol, s.box);
     return out.sort((a, b) => a.title.localeCompare(b.title) || (parseFloat(a.iss) || 0) - (parseFloat(b.iss) || 0));
   }, []);
   const NAK_KEY = "nycc_nakayama_bought_v1";
