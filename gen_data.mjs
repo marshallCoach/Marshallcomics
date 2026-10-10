@@ -72,11 +72,18 @@ const wb = new ExcelJS.Workbook();
 await wb.xlsx.readFile(XLSX_FILE);
 
 // ── COMICS ───────────────────────────────────────────────────────────────────
-const comicsSheet = wb.worksheets.find(ws => ws.name.startsWith('✅ Clean Inventory'));
+// A workbook can carry several "✅ Clean Inventory <MMDD_HHMM>" snapshot tabs;
+// the newest is appended LAST in tab order. Take the last match (not the first)
+// so we ingest the freshest pass — the first one is the oldest snapshot.
+const invSheets = wb.worksheets.filter(ws => ws.name.startsWith('✅ Clean Inventory'));
+const comicsSheet = invSheets[invSheets.length - 1];
 if (!comicsSheet) {
   console.error('Cannot find inventory sheet. Available sheets:');
   wb.worksheets.forEach(ws => console.error(' ', ws.name));
   process.exit(1);
+}
+if (invSheets.length > 1) {
+  console.log(`Found ${invSheets.length} Clean Inventory tabs; using newest: ${comicsSheet.name}`);
 }
 console.log(`Sheet: ${comicsSheet.name}`);
 const allRows = worksheetToArrays(comicsSheet, '');
