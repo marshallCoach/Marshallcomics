@@ -35,8 +35,8 @@ const LIST_COLS: ColDef<Key>[] = [
     cell: r => (
       <CoverImage
         comic={r}
-        width={110}
-        height={165}
+        width={40}
+        height={60}
         style={{ display: "block", borderRadius: 3 }}
       />
     ),
@@ -329,8 +329,8 @@ export default function BoxKeys() {
                   <div style={{ display:"flex", gap:10, marginBottom:8 }}>
                     <CoverImage
                       comic={k}
-                      width={110}
-                      height={165}
+                      width={52}
+                      height={78}
                       onClick={(large) => setCoverModal({ comic: k, large })}
                       style={{ flexShrink: 0 }}
                     />

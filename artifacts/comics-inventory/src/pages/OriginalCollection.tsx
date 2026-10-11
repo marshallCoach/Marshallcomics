@@ -37,7 +37,7 @@ const LIST_COLS: ColDef<Comic>[] = [
     cell: r => (
       <div style={{ padding:"3px 0" }}>
         <CoverImage
-          comic={r} width={110} height={165}
+          comic={r} width={40} height={60}
           onClick={largeUrl => _salCoverClick?.(r, largeUrl)}
           style={{ boxShadow:"0 2px 6px rgba(0,0,0,0.15)", borderRadius:4 }}
         />
@@ -266,7 +266,7 @@ export default function OriginalCollection({ initSigned }: { initSigned?: string
                   {/* Header */}
                   <div style={{ display:"flex", alignItems:"flex-start", gap:10, flexWrap:"nowrap" }}>
                     <div onClick={e => e.stopPropagation()} style={{ flexShrink:0 }}>
-                      <CoverImage comic={c} width={110} height={165}
+                      <CoverImage comic={c} width={44} height={66}
                         onClick={largeUrl => setCoverModal({ comic:c, large:largeUrl })}
                         style={{ borderRadius:3, boxShadow:"0 2px 5px rgba(0,0,0,0.15)" }} />
                     </div>

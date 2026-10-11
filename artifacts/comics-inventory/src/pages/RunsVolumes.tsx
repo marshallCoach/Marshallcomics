@@ -158,7 +158,7 @@ function RunCard({ r }: { r: Run }) {
           const c = r.byNum.get(n);
           return c ? (
             <figure key={n} className="rv-cell">
-              <CoverImage comic={c} width={110} height={165} objectFit="contain" style={{ borderRadius: 3, background: "#0d0d12", border: "1px solid var(--border,#2c2c38)" }} />
+              <CoverImage comic={c} width={64} height={96} objectFit="contain" style={{ borderRadius: 3, background: "#0d0d12", border: "1px solid var(--border,#2c2c38)" }} />
               <figcaption className="rv-cn">#{fmtIss(n)}</figcaption>
             </figure>
           ) : (

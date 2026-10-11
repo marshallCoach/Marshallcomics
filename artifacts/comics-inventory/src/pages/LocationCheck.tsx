@@ -105,7 +105,7 @@ export default function LocationCheck() {
                     const m = marks[id]; const loc = m?.loc;
                     return (
                       <div key={id} className={`locw-item ${loc ? "loc-" + loc : ""}`}>
-                        <CoverImage comic={{ Title: r.title, Issue: r.issue, Year: r.year }} width={110} height={165} />
+                        <CoverImage comic={{ Title: r.title, Issue: r.issue, Year: r.year }} width={70} height={105} />
                         <div className="locw-main">
                           <div className="locw-book">
                             <span className="bt">{r.title} <b>#{r.issue || "—"}</b></span>
@@ -170,7 +170,7 @@ const css = `
 .locw-item.loc-cgc{border-left-color:#1d6fa4;background:rgba(29,111,164,.06)}
 .locw-item.loc-presser{border-left-color:#b4690e;background:rgba(180,105,14,.06)}
 .locw-item.loc-unknown{border-left-color:var(--red);background:rgba(200,16,46,.05)}
-.locw-item img{width:110px;height:165px;object-fit:cover;border-radius:4px;flex-shrink:0;background:#1a1628}
+.locw-item img{width:70px;height:105px;object-fit:cover;border-radius:4px;flex-shrink:0;background:#1a1628}
 .locw-main{display:flex;flex-direction:column;gap:8px;min-width:0;flex:1}
 .locw-book{display:flex;flex-direction:column;min-width:0}
 .locw-book .bt{font-size:1.02rem;line-height:1.2}
@@ -179,5 +179,5 @@ const css = `
 .locw-opt{background:var(--surface2);border:1.5px solid var(--border);color:var(--muted2);border-radius:8px;padding:6px 11px;font-size:.76rem;font-weight:700;cursor:pointer;white-space:nowrap}
 .locw-box{width:160px;max-width:100%;background:var(--bg);border:1.5px solid var(--border);color:var(--text);border-radius:7px;padding:6px 9px;font-size:.84rem}
 .locw-foot{margin-top:26px;border-top:1px solid var(--border);padding-top:13px;color:var(--muted);font-size:.78rem;line-height:1.5}
-@media(max-width:520px){.locw-item img{width:84px;height:126px}.locw-opt{flex:1 1 40%;text-align:center}}
+@media(max-width:520px){.locw-item img{width:56px;height:84px}.locw-opt{flex:1 1 40%;text-align:center}}
 `;

@@ -514,7 +514,7 @@ function SeriesCard(p: SeriesProps) {
     }}>
       {/* Header */}
       <div style={{ display:"flex", gap:10, padding:"10px 10px 8px", cursor:"pointer" }} onClick={p.onToggle}>
-        <img src={svgUrl} alt={s.title} width={110} height={165}
+        <img src={svgUrl} alt={s.title} width={44} height={66}
           style={{ borderRadius:3, flexShrink:0, display:"block" }} />
         <div style={{ flex:1, minWidth:0 }}>
           <div style={{ display:"flex", gap:4, marginBottom:4, flexWrap:"wrap" }}>
@@ -596,7 +596,7 @@ function SeriesRow(p: SeriesProps) {
   return (
     <div style={{ background:"#fff", border:"1.5px solid var(--border)", borderLeft:`3px solid ${pc.bg}`, borderRadius:6 }}>
       <div style={{ display:"flex", alignItems:"center", gap:10, padding:"8px 12px", cursor:"pointer" }} onClick={p.onToggle}>
-        <img src={svgUrl} alt={s.title} width={110} height={165}
+        <img src={svgUrl} alt={s.title} width={28} height={42}
           style={{ borderRadius:2, flexShrink:0, display:"block" }} />
         <div style={{ flex:1, minWidth:0 }}>
           <div style={{ display:"flex", gap:5, alignItems:"baseline", flexWrap:"wrap" }}>
