@@ -144,12 +144,12 @@ export default function Everything({
   }, []);
 
   const cols = useMemo<ColDef<Comic>[]>(() => [
-    { key:"cover", label:"", defaultWidth:56, cell: r => (
+    { key:"cover", label:"", defaultWidth:88, cell: r => (
       <div style={{ padding:"3px 0" }}>
         <CoverImage
           comic={r}
-          width={40}
-          height={60}
+          width={76}
+          height={114}
           onClick={largeUrl => setCoverModal({ comic: r, large: largeUrl })}
           style={{ boxShadow:"0 2px 6px rgba(0,0,0,0.15)", borderRadius:4 }}
         />
