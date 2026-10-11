@@ -660,7 +660,7 @@ export default function SellerDashboard() {
                           style={{ cursor:"pointer" }} />
                       </td>
                       <td style={{ padding:"4px 6px", width:52 }} onClick={e=>e.stopPropagation()}>
-                        <CoverImage comic={c} width={40} height={60}
+                        <CoverImage comic={c} width={110} height={165}
                           onClick={largeUrl => setEbayComic({ comic:c, large:largeUrl })}
                           style={{ borderRadius:3, boxShadow:"0 2px 5px rgba(0,0,0,0.15)" }} />
                       </td>

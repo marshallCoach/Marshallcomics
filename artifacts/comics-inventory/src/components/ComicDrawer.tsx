@@ -434,8 +434,8 @@ export default function ComicDrawer({ comic, comicKey, onClose, onFlagChange }: 
           <div style={{ display:"flex", gap:14, marginBottom:14, alignItems:"flex-start" }}>
             <CoverImage
               comic={{ ...comic, Publisher: comic.Publisher ?? "", Year: comic.Year ?? "" }}
-              width={80}
-              height={120}
+              width={110}
+              height={165}
               onClick={(large) => setCoverModalUrl(large)}
               style={{ flexShrink:0, boxShadow:"0 4px 16px rgba(0,0,0,0.18)", borderRadius:5 }}
             />

@@ -281,7 +281,7 @@ export default function DataFix() {
                 <div className="df-grid">
                   {pg.items.map(({ c, id }) => (
                     <div key={id} className={`df-card${leaving.has(id) ? " leaving" : ""}`}>
-                      <CoverImage comic={c} width={78} height={117} objectFit="contain"
+                      <CoverImage comic={c} width={110} height={165} objectFit="contain"
                         style={{ background: "#0d0d12", border: "1px solid var(--border)" }}
                         onClick={(large) => setCoverModal({ comic: c, large })} />
                       <div className="df-info">

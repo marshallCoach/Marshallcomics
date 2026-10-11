@@ -474,8 +474,8 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
               >
                 <CoverImage
                   comic={c}
-                  width={100}
-                  height={152}
+                  width={110}
+                  height={165}
                   onClick={large => setCarouselModal({ comic: c, large })}
                   style={{ borderRadius:6, boxShadow:"0 4px 14px rgba(0,0,0,0.18)" }}
                 />

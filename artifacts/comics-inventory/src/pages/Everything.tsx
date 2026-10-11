@@ -96,8 +96,8 @@ function CoverThumb({ c, onCoverClick }: { c: Comic; onCoverClick: (comic: Comic
   return (
     <CoverImage
       comic={c}
-      width={80}
-      height={120}
+      width={110}
+      height={165}
       onClick={(largeUrl) => onCoverClick(c, largeUrl)}
     />
   );
@@ -148,8 +148,8 @@ export default function Everything({
       <div style={{ padding:"3px 0" }}>
         <CoverImage
           comic={r}
-          width={40}
-          height={60}
+          width={110}
+          height={165}
           onClick={largeUrl => setCoverModal({ comic: r, large: largeUrl })}
           style={{ boxShadow:"0 2px 6px rgba(0,0,0,0.15)", borderRadius:4 }}
         />
@@ -448,8 +448,8 @@ export default function Everything({
           <div style={{ display:"flex", gap:16, alignItems:"flex-start" }}>
             <CoverImage
               comic={c}
-              width={80}
-              height={120}
+              width={110}
+              height={165}
               onClick={largeUrl => setCoverModal({ comic: c, large: largeUrl })}
               style={{ flexShrink:0, boxShadow:"0 4px 14px rgba(0,0,0,0.18)", borderRadius:5 }}
             />

@@ -191,7 +191,7 @@ export default function ReleaseTimeline() {
                     const p = priceOf(c);
                     return (
                       <div className="rt-card" key={c.Title + c.Issue + i}>
-                        <CoverImage comic={c} width={92} height={138} objectFit="contain"
+                        <CoverImage comic={c} width={110} height={165} objectFit="contain"
                           style={{ background: "#0d0d12", border: "1px solid var(--border)" }}
                           onClick={(large) => setCoverModal({ comic: c, large })} />
                         <div className="rt-info" onClick={() => setDrawer(c)}>
