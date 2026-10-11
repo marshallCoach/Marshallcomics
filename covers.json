@@ -98444,18 +98444,78 @@
     "date": "2026-10-05"
   },
   "Black|||4|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||1|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||2|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||3|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||4|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||6|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||7|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||8|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||9|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||10|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||11|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||12|||1": null,
-  "Buffy the Vampire Slayer: Season Eight|||20|||1": null,
+  "Buffy the Vampire Slayer: Season Eight|||1|||1": {
+    "url": "https://static.wikia.nocookie.net/buffy/images/a/aa/BuffyS8-01.jpg",
+    "volume_name": "Buffy the Vampire Slayer: Season Eight",
+    "source": "fandom:buffy",
+    "note": "Season Eight cover"
+  },
+  "Buffy the Vampire Slayer: Season Eight|||2|||1": {
+    "url": "https://static.wikia.nocookie.net/buffy/images/5/5b/BuffyS8-02.jpg",
+    "volume_name": "Buffy the Vampire Slayer: Season Eight",
+    "source": "fandom:buffy",
+    "note": "Season Eight cover"
+  },
+  "Buffy the Vampire Slayer: Season Eight|||3|||1": {
+    "url": "https://static.wikia.nocookie.net/buffy/images/d/d5/BuffyS8-03.jpg",
+    "volume_name": "Buffy the Vampire Slayer: Season Eight",
+    "source": "fandom:buffy",
+    "note": "Season Eight cover"
+  },
+  "Buffy the Vampire Slayer: Season Eight|||4|||1": {
+    "url": "https://static.wikia.nocookie.net/buffy/images/5/5b/BuffyS8-04.jpg",
+    "volume_name": "Buffy the Vampire Slayer: Season Eight",
+    "source": "fandom:buffy",
+    "note": "Season Eight cover"
+  },
+  "Buffy the Vampire Slayer: Season Eight|||6|||1": {
+    "url": "https://static.wikia.nocookie.net/buffy/images/1/18/BuffyS8-06.jpg",
+    "volume_name": "Buffy the Vampire Slayer: Season Eight",
+    "source": "fandom:buffy",
+    "note": "Season Eight cover"
+  },
+  "Buffy the Vampire Slayer: Season Eight|||7|||1": {
+    "url": "https://static.wikia.nocookie.net/buffy/images/6/6f/BuffyS8-07.jpg",
+    "volume_name": "Buffy the Vampire Slayer: Season Eight",
+    "source": "fandom:buffy",
+    "note": "Season Eight cover"
+  },
+  "Buffy the Vampire Slayer: Season Eight|||8|||1": {
+    "url": "https://static.wikia.nocookie.net/buffy/images/c/c0/BuffyS8-08.jpg",
+    "volume_name": "Buffy the Vampire Slayer: Season Eight",
+    "source": "fandom:buffy",
+    "note": "Season Eight cover"
+  },
+  "Buffy the Vampire Slayer: Season Eight|||9|||1": {
+    "url": "https://static.wikia.nocookie.net/buffy/images/7/74/BuffyS8-09.jpg",
+    "volume_name": "Buffy the Vampire Slayer: Season Eight",
+    "source": "fandom:buffy",
+    "note": "Season Eight cover"
+  },
+  "Buffy the Vampire Slayer: Season Eight|||10|||1": {
+    "url": "https://static.wikia.nocookie.net/buffy/images/4/47/BuffyS8-10.jpg",
+    "volume_name": "Buffy the Vampire Slayer: Season Eight",
+    "source": "fandom:buffy",
+    "note": "Season Eight cover"
+  },
+  "Buffy the Vampire Slayer: Season Eight|||11|||1": {
+    "url": "https://static.wikia.nocookie.net/buffy/images/6/6e/BuffyS8-11.jpg",
+    "volume_name": "Buffy the Vampire Slayer: Season Eight",
+    "source": "fandom:buffy",
+    "note": "Season Eight cover"
+  },
+  "Buffy the Vampire Slayer: Season Eight|||12|||1": {
+    "url": "https://static.wikia.nocookie.net/buffy/images/f/f1/BuffyS8-12.jpg",
+    "volume_name": "Buffy the Vampire Slayer: Season Eight",
+    "source": "fandom:buffy",
+    "note": "Season Eight cover"
+  },
+  "Buffy the Vampire Slayer: Season Eight|||20|||1": {
+    "url": "https://static.wikia.nocookie.net/buffy/images/4/4e/BuffyS8-20.jpg",
+    "volume_name": "Buffy the Vampire Slayer: Season Eight",
+    "source": "fandom:buffy",
+    "note": "Season Eight cover"
+  },
   "Cyberforce|||2|||4": null,
   "Cyberforce|||3|||4": null,
   "Cyberforce|||4|||4": null,
@@ -98855,5 +98915,233 @@
     "volume_id": 153968,
     "volume_name": "Transformers",
     "volume_start_year": null
+  },
+  "Buffy the Vampire Slayer: Season Eight|||22|||1": {
+    "url": "https://static.wikia.nocookie.net/buffy/images/c/c9/Buffy22v1.jpg",
+    "volume_name": "Buffy the Vampire Slayer: Season Eight",
+    "source": "fandom:buffy",
+    "note": "Season Eight cover"
+  },
+  "Buffy the Vampire Slayer: Season Eight|||23|||1": {
+    "url": "https://static.wikia.nocookie.net/buffy/images/0/05/BuffyS8-23a.jpg",
+    "volume_name": "Buffy the Vampire Slayer: Season Eight",
+    "source": "fandom:buffy",
+    "note": "Season Eight cover"
+  },
+  "Buffy the Vampire Slayer: Season Eight|||24|||1": {
+    "url": "https://static.wikia.nocookie.net/buffy/images/3/3d/BuffyS8x24.jpg",
+    "volume_name": "Buffy the Vampire Slayer: Season Eight",
+    "source": "fandom:buffy",
+    "note": "Season Eight cover"
+  },
+  "Buffy the Vampire Slayer: Season Eight|||25|||1": {
+    "url": "https://static.wikia.nocookie.net/buffy/images/8/88/Buffy25a.jpg",
+    "volume_name": "Buffy the Vampire Slayer: Season Eight",
+    "source": "fandom:buffy",
+    "note": "Season Eight cover"
+  },
+  "Buffy the Vampire Slayer: Season Eight|||26|||1": {
+    "url": "https://static.wikia.nocookie.net/buffy/images/d/d7/Buffy26a.jpg",
+    "volume_name": "Buffy the Vampire Slayer: Season Eight",
+    "source": "fandom:buffy",
+    "note": "Season Eight cover"
+  },
+  "Buffy the Vampire Slayer: Season Eight|||27|||1": {
+    "url": "https://static.wikia.nocookie.net/buffy/images/c/c7/Buffy27a.jpg",
+    "volume_name": "Buffy the Vampire Slayer: Season Eight",
+    "source": "fandom:buffy",
+    "note": "Season Eight cover"
+  },
+  "Buffy the Vampire Slayer: Season Eight|||28|||1": {
+    "url": "https://static.wikia.nocookie.net/buffy/images/4/47/Buffy28a.jpg",
+    "volume_name": "Buffy the Vampire Slayer: Season Eight",
+    "source": "fandom:buffy",
+    "note": "Season Eight cover"
+  },
+  "Buffy the Vampire Slayer: Season Eight|||29|||1": {
+    "url": "https://static.wikia.nocookie.net/buffy/images/a/a0/Buffy29a.jpg",
+    "volume_name": "Buffy the Vampire Slayer: Season Eight",
+    "source": "fandom:buffy",
+    "note": "Season Eight cover"
+  },
+  "Buffy the Vampire Slayer: Season Eight|||30|||1": {
+    "url": "https://static.wikia.nocookie.net/buffy/images/8/81/Buffy30a.jpg",
+    "volume_name": "Buffy the Vampire Slayer: Season Eight",
+    "source": "fandom:buffy",
+    "note": "Season Eight cover"
+  },
+  "Buffy the Vampire Slayer: Season Eight|||31|||1": {
+    "url": "https://static.wikia.nocookie.net/buffy/images/8/87/Buffy31a.jpg",
+    "volume_name": "Buffy the Vampire Slayer: Season Eight",
+    "source": "fandom:buffy",
+    "note": "Season Eight cover"
+  },
+  "Buffy the Vampire Slayer: Season Eight|||32|||1": {
+    "url": "https://static.wikia.nocookie.net/buffy/images/3/39/Buffy32a.jpg",
+    "volume_name": "Buffy the Vampire Slayer: Season Eight",
+    "source": "fandom:buffy",
+    "note": "Season Eight cover"
+  },
+  "Buffy the Vampire Slayer: Season Eight|||33|||1": {
+    "url": "https://static.wikia.nocookie.net/buffy/images/a/a2/Buffy33a.jpg",
+    "volume_name": "Buffy the Vampire Slayer: Season Eight",
+    "source": "fandom:buffy",
+    "note": "Season Eight cover"
+  },
+  "Buffy the Vampire Slayer: Season Eight|||34|||1": {
+    "url": "https://static.wikia.nocookie.net/buffy/images/c/cd/Btvs34.jpg",
+    "volume_name": "Buffy the Vampire Slayer: Season Eight",
+    "source": "fandom:buffy",
+    "note": "Season Eight cover"
+  },
+  "Buffy the Vampire Slayer: Season Eight|||35|||1": {
+    "url": "https://static.wikia.nocookie.net/buffy/images/f/f7/BuffySeason8_35.jpg",
+    "volume_name": "Buffy the Vampire Slayer: Season Eight",
+    "source": "fandom:buffy",
+    "note": "Season Eight cover"
+  },
+  "Buffy the Vampire Slayer: Season Eight|||36|||1": {
+    "url": "https://static.wikia.nocookie.net/buffy/images/2/28/B8-36-00a.jpg",
+    "volume_name": "Buffy the Vampire Slayer: Season Eight",
+    "source": "fandom:buffy",
+    "note": "Season Eight cover"
+  },
+  "Buffy the Vampire Slayer: Season Eight|||37|||1": {
+    "url": "https://static.wikia.nocookie.net/buffy/images/8/85/B8-37-00a.jpg",
+    "volume_name": "Buffy the Vampire Slayer: Season Eight",
+    "source": "fandom:buffy",
+    "note": "Season Eight cover"
+  },
+  "Buffy the Vampire Slayer: Season Eight|||38|||1": {
+    "url": "https://static.wikia.nocookie.net/buffy/images/9/9a/38.1.jpg",
+    "volume_name": "Buffy the Vampire Slayer: Season Eight",
+    "source": "fandom:buffy",
+    "note": "Season Eight cover"
+  },
+  "Buffy the Vampire Slayer: Season Eight|||39|||1": {
+    "url": "https://static.wikia.nocookie.net/buffy/images/f/f3/Buffy2_39_fc_fnl.jpg",
+    "volume_name": "Buffy the Vampire Slayer: Season Eight",
+    "source": "fandom:buffy",
+    "note": "Season Eight cover"
+  },
+  "Buffy the Vampire Slayer: Season Eight|||40|||1": {
+    "url": "https://static.wikia.nocookie.net/buffy/images/c/cb/Buffy40a.jpg",
+    "volume_name": "Buffy the Vampire Slayer: Season Eight",
+    "source": "fandom:buffy",
+    "note": "Season Eight cover"
+  },
+  "Iron Man|||1|||4": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/7/79/Iron_Man_Vol_4_1.jpg",
+    "volume_name": "Iron Man",
+    "source": "fandom:marvel",
+    "note": "issue standard cover (Granov checklist)"
+  },
+  "Iron Man|||2|||4": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/0/08/Iron_Man_Vol_4_2.jpg",
+    "volume_name": "Iron Man",
+    "source": "fandom:marvel",
+    "note": "issue standard cover (Granov checklist)"
+  },
+  "Iron Man|||3|||4": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/d/d3/Iron_Man_Vol_4_3.jpg",
+    "volume_name": "Iron Man",
+    "source": "fandom:marvel",
+    "note": "issue standard cover (Granov checklist)"
+  },
+  "Iron Man|||4|||4": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/cb/Iron_Man_Vol_4_4.jpg",
+    "volume_name": "Iron Man",
+    "source": "fandom:marvel",
+    "note": "issue standard cover (Granov checklist)"
+  },
+  "Iron Man|||5|||4": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/5/52/Iron_Man_Vol_4_5.jpg",
+    "volume_name": "Iron Man",
+    "source": "fandom:marvel",
+    "note": "issue standard cover (Granov checklist)"
+  },
+  "Iron Man|||6|||4": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/86/Iron_Man_Vol_4_6.jpg",
+    "volume_name": "Iron Man",
+    "source": "fandom:marvel",
+    "note": "issue standard cover (Granov checklist)"
+  },
+  "Iron Man 2: Public Identity|||1|||1": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/6d/Iron_Man_2_Public_Identity_Vol_1_1.jpg",
+    "volume_name": "Iron Man 2: Public Identity",
+    "source": "fandom:marvel",
+    "note": "issue standard cover (Granov checklist)"
+  },
+  "Iron Man 2: Public Identity|||2|||1": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/80/Iron_Man_2_Public_Identity_Vol_1_2.jpg",
+    "volume_name": "Iron Man 2: Public Identity",
+    "source": "fandom:marvel",
+    "note": "issue standard cover (Granov checklist)"
+  },
+  "Iron Man 2: Public Identity|||3|||1": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/3/31/Iron_Man_2_Public_Identity_Vol_1_3.jpg",
+    "volume_name": "Iron Man 2: Public Identity",
+    "source": "fandom:marvel",
+    "note": "issue standard cover (Granov checklist)"
+  },
+  "Marvel's Iron Man 3 Prelude|||1|||1": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/f2/Marvel%27s_Iron_Man_3_Prelude_Vol_1_1.jpg",
+    "volume_name": "Marvel's Iron Man 3 Prelude",
+    "source": "fandom:marvel",
+    "note": "issue standard cover (Granov checklist)"
+  },
+  "Amazing Spider-Man|||52|||6": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/f/f5/Amazing_Spider-Man_Vol_6_52.jpg",
+    "volume_name": "Amazing Spider-Man",
+    "source": "fandom:marvel",
+    "note": "issue standard cover (Granov checklist)"
+  },
+  "Deadpool|||13|||6": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/13/Deadpool_Vol_6_13.jpg",
+    "volume_name": "Deadpool",
+    "source": "fandom:marvel",
+    "note": "issue standard cover (Granov checklist)"
+  },
+  "Daredevil|||3|||7": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/e0/Daredevil_Vol_7_3.jpg",
+    "volume_name": "Daredevil",
+    "source": "fandom:marvel",
+    "note": "issue standard cover (Granov checklist)"
+  },
+  "Uncanny X-Men|||524|||1": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/85/Uncanny_X-Men_Vol_1_524.jpg",
+    "volume_name": "Uncanny X-Men",
+    "source": "fandom:marvel",
+    "note": "issue standard cover (Granov checklist)"
+  },
+  "Thor: Son of Asgard|||1|||1": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/1/10/Thor_Son_of_Asgard_Vol_1_1.jpg",
+    "volume_name": "Thor: Son of Asgard",
+    "source": "fandom:marvel",
+    "note": "issue standard cover (Granov checklist)"
+  },
+  "She-Hulk|||1|||1": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/8/84/She-Hulk_Vol_1_1.jpg",
+    "volume_name": "She-Hulk",
+    "source": "fandom:marvel",
+    "note": "issue standard cover (Granov checklist)"
+  },
+  "Marvel Comics Presents|||1|||1": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/6/64/Marvel_Comics_Presents_Vol_1_1.jpg",
+    "volume_name": "Marvel Comics Presents",
+    "source": "fandom:marvel",
+    "note": "issue standard cover (Granov checklist)"
+  },
+  "Miracleman|||9|||1": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/c/c1/Miracleman_Vol_1_9.jpg",
+    "volume_name": "Miracleman",
+    "source": "fandom:marvel",
+    "note": "issue standard cover (Granov checklist)"
+  },
+  "Marvel's The Avengers: Black Widow Strikes|||2|||1": {
+    "url": "https://static.wikia.nocookie.net/marveldatabase/images/e/e2/Marvel%27s_The_Avengers_Black_Widow_Strikes_Vol_1_2.jpg",
+    "volume_name": "Marvel's The Avengers: Black Widow Strikes",
+    "source": "fandom:marvel",
+    "note": "issue standard cover (Granov checklist)"
   }
 }
