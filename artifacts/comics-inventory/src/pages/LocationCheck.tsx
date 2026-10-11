@@ -1,5 +1,6 @@
 import { useState, useMemo } from "react";
 import snapshot from "@/data/locationSnapshot.json";
+import { CoverImage } from "@/components/CoverImage";
 
 // "Where is it?" — a personal reconciliation widget for books whose Box # is a
 // status placeholder (AT CGC / UNKNOWN — needs physical reassignment), from a
@@ -93,6 +94,7 @@ export default function LocationCheck() {
                     const m = marks[id]; const s = m?.s ?? 0;
                     return (
                       <div key={id} className={`locw-item s${s}`}>
+                        <CoverImage comic={{ Title: r.title, Issue: r.issue, Year: r.year }} width={40} height={60} />
                         <div className="locw-book">
                           <span className="bt">{r.title} <b>#{r.issue || "—"}</b></span>
                           <span className="by">{r.year}{r.key ? " · ★ key" : ""}{r.signed ? " · ✍ signed" : ""}</span>
@@ -144,6 +146,7 @@ const css = `
 .locw-item{display:flex;align-items:center;gap:10px;background:var(--surface);border:1.5px solid var(--border);border-left:4px solid var(--border);border-radius:10px;padding:9px 12px}
 .locw-item.s1{border-left-color:#16a34a;background:rgba(22,163,74,.06)}
 .locw-item.s2{border-left-color:var(--red);background:rgba(200,16,46,.05)}
+.locw-item img{width:40px;height:60px;object-fit:cover;border-radius:3px;flex-shrink:0;background:#1a1628}
 .locw-book{display:flex;flex-direction:column;min-width:0;flex:1}
 .locw-book .bt{font-size:.95rem;line-height:1.2}
 .locw-book .by{font-size:.74rem;color:var(--muted)}
