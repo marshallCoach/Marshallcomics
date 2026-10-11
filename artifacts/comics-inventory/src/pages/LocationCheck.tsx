@@ -10,8 +10,16 @@ import { CoverImage } from "@/components/CoverImage";
 
 interface Row { title: string; issue: string; year: string; box: string; key: boolean; signed: boolean; }
 const ROWS = (snapshot.rows as Row[]);
-const KEY = "loc_check_v1";
-type Mark = { s: 0 | 1 | 2; box?: string }; // 0 to-do · 1 located · 2 still missing
+const KEY = "loc_check_v2";
+// Where the book actually is, confirmed by walking it down.
+type Loc = "home" | "cgc" | "presser" | "unknown";
+type Mark = { loc?: Loc; box?: string };
+const LOCS: { id: Loc; label: string; color: string }[] = [
+  { id: "home",    label: "Home",          color: "#16a34a" },
+  { id: "cgc",     label: "At CGC",        color: "#1d6fa4" },
+  { id: "presser", label: "At the presser", color: "#b4690e" },
+  { id: "unknown", label: "Not known",     color: "#c0392b" },
+];
 
 const isCGC = (b: string) => b.toUpperCase().startsWith("AT ");
 const GROUPS = [
@@ -29,19 +37,20 @@ export default function LocationCheck() {
     try { localStorage.setItem(KEY, JSON.stringify(next)); } catch { /* ignore */ }
     setMarks(next);
   };
-  const cycle = (id: string) => {
-    const cur = marks[id]?.s ?? 0;
-    const next = { ...marks, [id]: { ...marks[id], s: (((cur + 1) % 3) as 0 | 1 | 2) } };
-    save(next);
+  const setLoc = (id: string, loc: Loc) => {
+    const cur = marks[id]?.loc;
+    save({ ...marks, [id]: { ...marks[id], loc: cur === loc ? undefined : loc } });
   };
-  const setBox = (id: string, box: string) => save({ ...marks, [id]: { ...marks[id], s: marks[id]?.s ?? 1, box } });
+  const setBox = (id: string, box: string) => save({ ...marks, [id]: { ...marks[id], box } });
   const reset = () => save({});
 
-  const located = useMemo(() => Object.values(marks).filter(m => m.s === 1).length, [marks]);
-  const missing = useMemo(() => Object.values(marks).filter(m => m.s === 2).length, [marks]);
-  const pct = ROWS.length ? Math.round((located / ROWS.length) * 100) : 0;
-
-  const label = (s: number) => s === 1 ? "✓ Located" : s === 2 ? "⚠ Still missing" : "Confirm";
+  const counts = useMemo(() => {
+    const c: Record<Loc, number> = { home: 0, cgc: 0, presser: 0, unknown: 0 };
+    for (const m of Object.values(marks)) if (m.loc) c[m.loc]++;
+    return c;
+  }, [marks]);
+  const handled = useMemo(() => Object.values(marks).filter(m => m.loc).length, [marks]);
+  const pct = ROWS.length ? Math.round((handled / ROWS.length) * 100) : 0;
 
   return (
     <div className="locw">
@@ -50,7 +59,7 @@ export default function LocationCheck() {
       <header className="locw-hero">
         <div className="locw-kicker">Inventory reconciliation</div>
         <h1>Where is it?</h1>
-        <p className="locw-sub">Every book whose Box # is a placeholder — <b>at CGC</b> or <b>unknown</b> — from the latest sheet. Walk your boxes, cycle each one to <b>Located</b> (and note the box), or flag it <b>Still missing</b>. Saved in this browser.</p>
+        <p className="locw-sub">Every book whose Box # is a placeholder — <b>at CGC</b> or <b>unknown</b> — from the latest sheet. Walk your boxes and tag each one: <b>Home</b> (note the box), <b>At CGC</b>, <b>At the presser</b>, or <b>Not known</b>. Saved in this browser.</p>
       </header>
 
       <div className="locw-note">
@@ -59,9 +68,11 @@ export default function LocationCheck() {
 
       <div className="locw-hud">
         <div className="locw-row">
-          <div className="locw-stat"><span className="lbl">Located</span><span className="val ok">{located}</span></div>
-          <div className="locw-stat"><span className="lbl">Still missing</span><span className="val bad">{missing}</span></div>
-          <div className="locw-stat"><span className="lbl">Total to confirm</span><span className="val">{ROWS.length}</span></div>
+          <div className="locw-stat"><span className="lbl">Home</span><span className="val" style={{ color: "#16a34a" }}>{counts.home}</span></div>
+          <div className="locw-stat"><span className="lbl">At CGC</span><span className="val" style={{ color: "#1d6fa4" }}>{counts.cgc}</span></div>
+          <div className="locw-stat"><span className="lbl">Presser</span><span className="val" style={{ color: "#b4690e" }}>{counts.presser}</span></div>
+          <div className="locw-stat"><span className="lbl">Not known</span><span className="val bad">{counts.unknown}</span></div>
+          <div className="locw-stat"><span className="lbl">To confirm</span><span className="val">{ROWS.length}</span></div>
           <div className="locw-filters">
             {(["all", "todo", "done"] as const).map(f => (
               <button key={f} className={filter === f ? "on" : ""} onClick={() => setFilter(f)}>
@@ -77,8 +88,8 @@ export default function LocationCheck() {
       {GROUPS.map(g => {
         const items = ROWS.map((r, i) => ({ r, i })).filter(x => g.test(x.r.box));
         const shown = items.filter(({ i }) => {
-          const s = marks["r" + i]?.s ?? 0;
-          return filter === "all" ? true : filter === "todo" ? s === 0 : s !== 0;
+          const done = !!marks["r" + i]?.loc;
+          return filter === "all" ? true : filter === "todo" ? !done : done;
         });
         if (!items.length) return null;
         return (
@@ -91,19 +102,30 @@ export default function LocationCheck() {
               : <div className="locw-list">
                   {shown.map(({ r, i }) => {
                     const id = "r" + i;
-                    const m = marks[id]; const s = m?.s ?? 0;
+                    const m = marks[id]; const loc = m?.loc;
                     return (
-                      <div key={id} className={`locw-item s${s}`}>
-                        <CoverImage comic={{ Title: r.title, Issue: r.issue, Year: r.year }} width={40} height={60} />
-                        <div className="locw-book">
-                          <span className="bt">{r.title} <b>#{r.issue || "—"}</b></span>
-                          <span className="by">{r.year}{r.key ? " · ★ key" : ""}{r.signed ? " · ✍ signed" : ""}</span>
+                      <div key={id} className={`locw-item ${loc ? "loc-" + loc : ""}`}>
+                        <CoverImage comic={{ Title: r.title, Issue: r.issue, Year: r.year }} width={70} height={105} />
+                        <div className="locw-main">
+                          <div className="locw-book">
+                            <span className="bt">{r.title} <b>#{r.issue || "—"}</b></span>
+                            <span className="by">{r.year}{r.key ? " · ★ key" : ""}{r.signed ? " · ✍ signed" : ""}</span>
+                          </div>
+                          <div className="locw-opts">
+                            {LOCS.map(o => (
+                              <button key={o.id}
+                                className={`locw-opt ${loc === o.id ? "on" : ""}`}
+                                style={loc === o.id ? { background: o.color, borderColor: o.color, color: "#fff" } : undefined}
+                                onClick={() => setLoc(id, o.id)}>
+                                {o.label}
+                              </button>
+                            ))}
+                          </div>
+                          {loc === "home" && (
+                            <input className="locw-box" placeholder="found in box…" value={m?.box || ""}
+                              onChange={e => setBox(id, e.target.value)} />
+                          )}
                         </div>
-                        {s === 1 && (
-                          <input className="locw-box" placeholder="found in box…" value={m?.box || ""}
-                            onChange={e => setBox(id, e.target.value)} />
-                        )}
-                        <button className="locw-mark" onClick={() => cycle(id)}>{label(s)}</button>
                       </div>
                     );
                   })}
@@ -143,17 +165,19 @@ const css = `
 .locw-tag{font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--muted);background:var(--surface2);border:1px solid var(--border);border-radius:99px;padding:3px 9px}
 .locw-empty{color:var(--muted);font-size:.9rem;padding:6px 2px}
 .locw-list{display:flex;flex-direction:column;gap:7px}
-.locw-item{display:flex;align-items:center;gap:10px;background:var(--surface);border:1.5px solid var(--border);border-left:4px solid var(--border);border-radius:10px;padding:9px 12px}
-.locw-item.s1{border-left-color:#16a34a;background:rgba(22,163,74,.06)}
-.locw-item.s2{border-left-color:var(--red);background:rgba(200,16,46,.05)}
-.locw-item img{width:40px;height:60px;object-fit:cover;border-radius:3px;flex-shrink:0;background:#1a1628}
-.locw-book{display:flex;flex-direction:column;min-width:0;flex:1}
-.locw-book .bt{font-size:.95rem;line-height:1.2}
-.locw-book .by{font-size:.74rem;color:var(--muted)}
-.locw-box{width:120px;flex-shrink:0;background:var(--bg);border:1.5px solid var(--border);color:var(--text);border-radius:7px;padding:5px 8px;font-size:.82rem}
-.locw-mark{flex-shrink:0;min-width:116px;text-align:center;background:var(--surface2);border:1.5px solid var(--border);color:var(--text2);border-radius:8px;padding:6px 10px;font-size:.74rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;cursor:pointer}
-.locw-item.s1 .locw-mark{background:rgba(22,163,74,.14);border-color:#16a34a;color:#16a34a}
-.locw-item.s2 .locw-mark{background:rgba(200,16,46,.12);border-color:var(--red);color:var(--red)}
+.locw-item{display:flex;align-items:flex-start;gap:14px;background:var(--surface);border:1.5px solid var(--border);border-left:4px solid var(--border);border-radius:10px;padding:12px 14px}
+.locw-item.loc-home{border-left-color:#16a34a;background:rgba(22,163,74,.06)}
+.locw-item.loc-cgc{border-left-color:#1d6fa4;background:rgba(29,111,164,.06)}
+.locw-item.loc-presser{border-left-color:#b4690e;background:rgba(180,105,14,.06)}
+.locw-item.loc-unknown{border-left-color:var(--red);background:rgba(200,16,46,.05)}
+.locw-item img{width:70px;height:105px;object-fit:cover;border-radius:4px;flex-shrink:0;background:#1a1628}
+.locw-main{display:flex;flex-direction:column;gap:8px;min-width:0;flex:1}
+.locw-book{display:flex;flex-direction:column;min-width:0}
+.locw-book .bt{font-size:1.02rem;line-height:1.2}
+.locw-book .by{font-size:.78rem;color:var(--muted);margin-top:2px}
+.locw-opts{display:flex;flex-wrap:wrap;gap:6px}
+.locw-opt{background:var(--surface2);border:1.5px solid var(--border);color:var(--muted2);border-radius:8px;padding:6px 11px;font-size:.76rem;font-weight:700;cursor:pointer;white-space:nowrap}
+.locw-box{width:160px;max-width:100%;background:var(--bg);border:1.5px solid var(--border);color:var(--text);border-radius:7px;padding:6px 9px;font-size:.84rem}
 .locw-foot{margin-top:26px;border-top:1px solid var(--border);padding-top:13px;color:var(--muted);font-size:.78rem;line-height:1.5}
-@media(max-width:520px){.locw-item{flex-wrap:wrap}.locw-box{width:100%}.locw-mark{flex:1}}
+@media(max-width:520px){.locw-item img{width:56px;height:84px}.locw-opt{flex:1 1 40%;text-align:center}}
 `;
