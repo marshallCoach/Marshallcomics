@@ -1,18 +1,18 @@
-// AUTO-GENERATED quest data — source: comics_inventory_1210_1442.xlsx (11256 rows) · generated 2026-10-12
+// AUTO-GENERATED quest data — source: comics_inventory_1210_1545.xlsx (11256 rows) · generated 2026-10-12
 // Regenerate with: node gen_quest_data.mjs
 window.QUEST_DATA = {
- "source": "comics_inventory_1210_1442.xlsx",
+ "source": "comics_inventory_1210_1545.xlsx",
  "generated": "2026-10-12",
  "totalRows": 11256,
  "dupe": {
-  "groups": 145,
-  "rows": 305,
-  "excess": 160
+  "groups": 148,
+  "rows": 311,
+  "excess": 163
  },
  "clone": {
-  "groups": 128,
-  "rows": 266,
-  "excess": 138
+  "groups": 130,
+  "rows": 270,
+  "excess": 140
  },
  "overCap": [
   {
@@ -123,7 +123,7 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 117,
    "vcap": 240,
-   "dupes": 10,
+   "dupes": 8,
    "clones": 4
   },
   {
@@ -255,7 +255,7 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 185,
    "vcap": 240,
-   "dupes": 8,
+   "dupes": 10,
    "clones": 8
   },
   {
@@ -795,8 +795,8 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 64,
    "vcap": 100,
-   "dupes": 4,
-   "clones": 4
+   "dupes": 6,
+   "clones": 6
   },
   {
    "box": 75,
@@ -855,7 +855,7 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 181,
    "vcap": 155,
-   "dupes": 0,
+   "dupes": 2,
    "clones": 0
   },
   {
@@ -987,8 +987,8 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 82,
    "vcap": 240,
-   "dupes": 4,
-   "clones": 0
+   "dupes": 6,
+   "clones": 2
   },
   {
    "box": 107,
@@ -1045,7 +1045,7 @@ window.QUEST_DATA = {
    "title": "The Clones",
    "est": "identical twin rows — safest wins first",
    "accent": "green",
-   "blurb": "Rows that are exact copies of another row: same book, same box, logged twice. Live count: 128 clone groups / 138 excess rows. Highest confidence, lowest effort, biggest visible progress.",
+   "blurb": "Rows that are exact copies of another row: same book, same box, logged twice. Live count: 130 clone groups / 140 excess rows. Highest confidence, lowest effort, biggest visible progress.",
    "sittings": [
     {
      "id": "A1",
