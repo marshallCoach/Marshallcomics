@@ -48,6 +48,20 @@ def newest(pattern, root=DOWNLOADS):
     return max(m, key=os.path.getmtime) if m else None
 
 
+def archive(path):
+    """Move a consumed input out of ~/Downloads so it is never re-applied. This
+    is why 'FANDOM links to open: 57' kept reappearing every run — the export
+    was never retired. New exports you download later are picked up fresh."""
+    dest_dir = os.path.join(ROOT, "processed_exports")
+    os.makedirs(dest_dir, exist_ok=True)
+    dest = os.path.join(dest_dir, f"{datetime.datetime.now():%Y%m%d_%H%M%S}_{os.path.basename(path)}")
+    try:
+        os.replace(path, dest)
+        print(f"  consumed -> processed_exports/{os.path.basename(dest)} (won't re-apply)")
+    except OSError as e:
+        print(f"  (could not archive {os.path.basename(path)}: {e})")
+
+
 def banner(n, title):
     print("\n" + "=" * 68)
     print(f"  STEP {n} · {title}")
@@ -108,6 +122,7 @@ def main():
         print(f"Intake file: {csv_in}")
         if run([PY, os.path.join(ROOT, "brb_add_intake.py"), "--csv", csv_in, "--apply"]):
             raise RuntimeError("brb_add_intake failed")
+        archive(csv_in)
     step(1, "WEEKLY INTAKE", intake)
 
     # 2 — data-fix export from the site (optional input)
@@ -119,6 +134,7 @@ def main():
         print(f"Export: {js}")
         if run([PY, os.path.join(ROOT, "brb_apply_fandom_pages.py"), "--flags", js, "--apply"]):
             raise RuntimeError("brb_apply_fandom_pages failed")
+        archive(js)
     step(2, "DATA-FIX EXPORT (apply Fandom links)", datafix)
 
     # 3 — fill blank creators/date on books that already have a Fandom cover
