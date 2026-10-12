@@ -148,7 +148,10 @@ def main():
         if not os.path.exists(os.path.join(ROOT, "gcd_local.sqlite")):
             print("No gcd_local.sqlite — skipping GCD fill.")
             return
-        if run([PY, os.path.join(ROOT, "brb_credits_gcd.py")]):
+        # --no-conflicts: in an unattended run, only FILL blanks and UNION names —
+        # never silently overwrite an existing credit GCD merely disagrees with
+        # (those are logged to credits_gcd_changes.csv for a manual review pass).
+        if run([PY, os.path.join(ROOT, "brb_credits_gcd.py"), "--no-conflicts"]):
             raise RuntimeError("brb_credits_gcd failed")
     step(4, "GCD FILL (creators from GCD for the rest)", gcd_fill)
 
