@@ -14,6 +14,8 @@ const LS = "brbDataFixes_v1"; // the Save-image/Fandom buttons queue here
 const norm = (v: unknown) => String(v ?? "").trim();
 const issueNorm = (v: unknown) => norm(v).replace(/^#/, "");
 const issueNum = (v: unknown) => { const m = issueNorm(v).match(/[\d.]+/); return m ? parseFloat(m[0]) : Number.POSITIVE_INFINITY; };
+const volOf = (c: { Volume?: string }) => norm(c.Volume) || "1";
+const volNum = (c: { Volume?: string }) => parseInt(volOf(c), 10) || 0;
 const nm = (v?: string) => { const m = String(v || "").match(/([\d.]+)/); return m ? parseFloat(m[1]) : 0; };
 const isKey = (c: { Key?: string }) => (c.Key || "").toUpperCase() === "YES";
 
@@ -38,14 +40,16 @@ export default function MissingCovers() {
     if (!ready) return [];
     const seen = new Set<string>(), out: Comic[] = [];
     for (const c of comics) {
-      const k = `${norm(c.Title).toLowerCase()}|||${issueNorm(c.Issue)}`;
+      const k = `${norm(c.Title).toLowerCase()}|||${issueNorm(c.Issue)}|||${volOf(c as { Volume?: string })}`;
       if (seen.has(k)) continue;
       if (coverUrlSync(c) !== null) continue;   // already has a cover
       seen.add(k); out.push(c);
     }
-    // Sort by Title (A→Z), then Issue number ascending.
+    // Reading order for the grouped view + solo Prev/Next: Title (A→Z),
+    // then Volume ascending, then Issue number ascending.
     out.sort((a, b) =>
       norm(a.Title).toLowerCase().localeCompare(norm(b.Title).toLowerCase()) ||
+      (volNum(a as { Volume?: string }) - volNum(b as { Volume?: string })) ||
       (issueNum(a.Issue) - issueNum(b.Issue)));
     return out;
   }, [ready]);
@@ -59,6 +63,26 @@ export default function MissingCovers() {
   const shown = useMemo(() =>
     missing.filter(c => (pub === "all" || (norm(c.Publisher) || "—") === pub) && (!keysOnly || isKey(c))),
     [missing, pub, keysOnly]);
+
+  // Group the (already title→volume→issue sorted) list for display: one block
+  // per Title, split into volumes inside. Each item keeps its index into `shown`
+  // so clicking a card opens the right book in the solo view. Mirrors the Cover
+  // Review title page: title header rule, volume sub-breaks, gap between titles.
+  const grouped = useMemo(() => {
+    const byTitle = new Map<string, Map<string, { c: Comic; idx: number }[]>>();
+    shown.forEach((c, idx) => {
+      const t = norm(c.Title), v = volOf(c as { Volume?: string });
+      if (!byTitle.has(t)) byTitle.set(t, new Map());
+      const vmap = byTitle.get(t)!;
+      if (!vmap.has(v)) vmap.set(v, []);
+      vmap.get(v)!.push({ c, idx });
+    });
+    return [...byTitle.entries()].map(([title, vmap]) => ({
+      title,
+      total: [...vmap.values()].reduce((s, a) => s + a.length, 0),
+      vols: [...vmap.entries()].map(([vol, items]) => ({ vol, items })),
+    }));
+  }, [shown]);
 
   // Export the saved image/Fandom links as data-fixes-<date>.json — same store
   // and format as the Data Fix page, so brb_apply_fandom_pages.py picks it up.
@@ -146,23 +170,34 @@ export default function MissingCovers() {
       {!ready && <div className="mc-empty">Loading covers…</div>}
       {ready && shown.length === 0 && <div className="mc-empty">No missing covers here — nice.</div>}
 
-      <div className="mc-grid">
-        {shown.map((c, i) => {
-          const q = queued.has(bookId(c));
-          return (
-            <button key={bookId(c) + i} className="mc-card" onClick={() => setSolo(i)}>
-              <div className="mc-cov">
-                <CoverImage comic={c} width={110} height={165} objectFit="contain" />
-                {q && <span className="mc-queued">✓ linked</span>}
-                {isKey(c) && <span className="mc-key">★</span>}
+      {ready && grouped.map(g => (
+        <section key={g.title} className="mc-tgroup">
+          <div className="mc-thead">{g.title.toUpperCase()} <span>· {g.total} book{g.total === 1 ? "" : "s"}</span></div>
+          {g.vols.map(vg => (
+            <div key={vg.vol} className="mc-vgroup">
+              {g.vols.length > 1 && (
+                <div className="mc-vhead">VOLUME {vg.vol} · {vg.items.length} issue{vg.items.length === 1 ? "" : "s"}</div>
+              )}
+              <div className="mc-grid">
+                {vg.items.map(({ c, idx }) => {
+                  const q = queued.has(bookId(c));
+                  return (
+                    <button key={bookId(c) + idx} className="mc-card" onClick={() => setSolo(idx)}>
+                      <div className="mc-cov">
+                        <CoverImage comic={c} width={110} height={165} objectFit="contain" />
+                        {q && <span className="mc-queued">✓ linked</span>}
+                        {isKey(c) && <span className="mc-key">★</span>}
+                      </div>
+                      <div className="mc-meta">#{issueNorm(c.Issue)}{c.Year ? ` · ${c.Year}` : ""}</div>
+                      <div className="mc-meta2">{norm(c.Publisher) || "—"}{nm((c as { Value_NM?: string }).Value_NM) ? ` · $${nm((c as { Value_NM?: string }).Value_NM)}` : ""}</div>
+                    </button>
+                  );
+                })}
               </div>
-              <div className="mc-title">{c.Title}</div>
-              <div className="mc-meta">#{issueNorm(c.Issue)}{c.Year ? ` · ${c.Year}` : ""}</div>
-              <div className="mc-meta2">{norm(c.Publisher) || "—"}{nm((c as { Value_NM?: string }).Value_NM) ? ` · $${nm((c as { Value_NM?: string }).Value_NM)}` : ""}</div>
-            </button>
-          );
-        })}
-      </div>
+            </div>
+          ))}
+        </section>
+      ))}
     </div>
   );
 }
@@ -280,6 +315,11 @@ const CSS = `
 .mc-chip.on{background:var(--red,#c8102e);border-color:var(--red,#c8102e);color:#fff}
 .mc-chip.key.on{background:#8a6000;border-color:#8a6000}
 .mc-empty{color:var(--muted,#888);text-align:center;padding:40px;background:var(--surface,#1a1a22);border:1px solid var(--border,#2c2c38);border-radius:10px}
+.mc-tgroup{margin-bottom:30px}
+.mc-thead{font-size:1rem;font-weight:800;letter-spacing:1.5px;color:var(--text,#eee);border-bottom:2px solid var(--border,#2c2c38);padding-bottom:6px;margin-bottom:12px}
+.mc-thead span{font-weight:600;letter-spacing:.5px;color:var(--muted,#888)}
+.mc-vgroup{margin-bottom:16px}
+.mc-vhead{font-size:.82rem;font-weight:700;letter-spacing:1.2px;color:var(--muted2,#bbb);margin-bottom:9px}
 .mc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(128px,1fr));gap:12px}
 .mc-card{text-align:left;background:var(--surface,#1a1a22);border:1px solid var(--border,#2c2c38);border-radius:10px;padding:9px;cursor:pointer;color:inherit;font:inherit;transition:border-color .12s}
 .mc-card:hover{border-color:var(--red,#c8102e)}
