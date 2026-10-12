@@ -31,12 +31,12 @@ function platClass(p: string) {
 
 const LIST_COLS: ColDef<Key>[] = [
   {
-    key: "cover", label: "", defaultWidth: 64,
+    key: "cover", label: "", defaultWidth: 72,
     cell: r => (
       <CoverImage
         comic={r}
-        width={40}
-        height={60}
+        width={56}
+        height={84}
         style={{ display: "block", borderRadius: 3 }}
       />
     ),
@@ -329,8 +329,8 @@ export default function BoxKeys() {
                   <div style={{ display:"flex", gap:10, marginBottom:8 }}>
                     <CoverImage
                       comic={k}
-                      width={52}
-                      height={78}
+                      width={72}
+                      height={108}
                       onClick={(large) => setCoverModal({ comic: k, large })}
                       style={{ flexShrink: 0 }}
                     />
