@@ -44,7 +44,7 @@ def main():
 
     src = newest_xlsx()
     wb = openpyxl.load_workbook(src)
-    ws = next(w for w in wb.worksheets if w.title.startswith("✅ Clean Inventory"))
+    ws = [w for w in wb.worksheets if w.title.startswith("✅ Clean Inventory")][-1]
     H = [str(c.value).strip() if c.value is not None else "" for c in ws[1]]
 
     def ci(n):
@@ -68,7 +68,14 @@ def main():
         if gap <= 1:
             continue
         iss = str(ws.cell(r, cI).value or "").strip()
-        if gap > CAP:
+        # Directional rule. On-sale date OLDER than the recorded Year => the Year
+        # is an intake/stamp slip (a recent default sitting over a real old
+        # on-sale date, e.g. Batman #4 Year 2025 / on-sale 2016) — trust the
+        # on-sale date at ANY gap. On-sale date NEWER than the Year => the DATE is
+        # the suspect (a reprint / mis-fetched cover date on a genuinely older
+        # book, e.g. Avengers #60 Year 1969 / on-sale 2003) — only a small 2..CAP
+        # forward slip is auto-fixed; larger forward gaps go to review untouched.
+        if pdY > Y and gap > CAP:
             review.append((r, t, iss, yr, pdY, gap))
             continue
         changes.append((r, t, iss, yr, pdY))
@@ -76,7 +83,8 @@ def main():
             ws.cell(r, cYear, str(pdY))
 
     print(("WOULD FIX " if not args.apply else "FIXED ") +
-          f"{len(changes)} Year value(s) from on-sale date  (gaps 2–{CAP}y)")
+          f"{len(changes)} Year value(s) from on-sale date "
+          f"(older on-sale at any gap; newer on-sale only 2–{CAP}y)")
     for r, t, i, old, new in changes[:25]:
         print(f"  row {r}  {t} #{i}: {old} -> {new}")
     if len(changes) > 25:

@@ -158,8 +158,35 @@ def main():
             raise RuntimeError("brb_fill_from_fandom failed")
     step(4, "FANDOM FILL (gap-filler for books GCD can't reach)", fandom_fill)
 
-    # 5 — regenerate + deploy, once
-    banner(5, "DEPLOY (brb.py: validate -> regen -> commit -> push)")
+    # 5 — Publication Date from local GCD (offline, blanks only)
+    def date_gcd():
+        if not os.path.exists(os.path.join(ROOT, "gcd_local.sqlite")):
+            print("No gcd_local.sqlite — skipping GCD date fill.")
+            return
+        if run([PY, os.path.join(ROOT, "brb_pubdate_fill.py")]):
+            raise RuntimeError("brb_pubdate_fill failed")
+    step(5, "DATE FILL — GCD (offline)", date_gcd)
+
+    # 6 — Publication Date fallback from Comic Vine (needs COMIC_VINE_API_KEY)
+    def date_cv():
+        if not os.environ.get("COMIC_VINE_API_KEY"):
+            print("No COMIC_VINE_API_KEY — skipping Comic Vine date fallback.")
+            return
+        if run([PY, os.path.join(ROOT, "brb_pubdate_cv.py")]):
+            raise RuntimeError("brb_pubdate_cv failed")
+    step(6, "DATE FILL — Comic Vine fallback", date_cv)
+
+    # 7 — fix Year from the (now-filled) on-sale date, clearing date-conflicts.
+    # Runs AFTER the date fills so it uses the freshest Publication Date. The tool
+    # only pulls Year back to an OLDER on-sale date (the intake-stamp slip); a
+    # newer on-sale date past 5y is held for review, never applied.
+    def year_fix():
+        if run([PY, os.path.join(ROOT, "brb_year_from_pubdate.py"), "--apply"]):
+            raise RuntimeError("brb_year_from_pubdate failed")
+    step(7, "YEAR FROM ON-SALE DATE (clear date-conflicts)", year_fix)
+
+    # 8 — regenerate + deploy, once
+    banner(8, "DEPLOY (brb.py: validate -> regen -> commit -> push)")
     rc = run([PY, os.path.join(ROOT, "brb.py"), "--commit", "brb_all: full enrichment pipeline", "--yes"])
 
     print("\n" + "=" * 68)
