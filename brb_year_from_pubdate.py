@@ -60,7 +60,10 @@ def main():
             continue
         yr = str(ws.cell(r, cYear).value or "").strip()
         pd = str(ws.cell(r, cPD).value or "").strip()
-        mp = re.match(r"(\d{4})", pd)
+        # Pull a 4-digit year from ANYWHERE in the date — covers ISO ("2002-08-00")
+        # AND text dates ("August 7, 2002"), which re.match (start-anchored) missed,
+        # silently skipping every text-date row across the whole inventory.
+        mp = re.search(r"((?:19|20)\d{2})", pd)
         if not (mp and re.match(r"^\d{4}$", yr)):
             continue
         pdY, Y = int(mp.group(1)), int(yr)
