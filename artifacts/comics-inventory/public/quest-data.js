@@ -1,25 +1,25 @@
-// AUTO-GENERATED quest data — source: comics_inventory_1210_1636.xlsx (11256 rows) · generated 2026-10-12
+// AUTO-GENERATED quest data — source: comics_inventory_1210_1933.xlsx (11113 rows) · generated 2026-10-12
 // Regenerate with: node gen_quest_data.mjs
 window.QUEST_DATA = {
- "source": "comics_inventory_1210_1636.xlsx",
+ "source": "comics_inventory_1210_1933.xlsx",
  "generated": "2026-10-12",
- "totalRows": 11256,
+ "totalRows": 11113,
  "dupe": {
-  "groups": 151,
-  "rows": 317,
-  "excess": 166
+  "groups": 23,
+  "rows": 46,
+  "excess": 23
  },
  "clone": {
-  "groups": 133,
-  "rows": 276,
-  "excess": 143
+  "groups": 0,
+  "rows": 0,
+  "excess": 0
  },
  "overCap": [
   {
    "box": 15,
-   "rows": 191,
+   "rows": 188,
    "cap": 150,
-   "over": 41,
+   "over": 38,
    "loc": "Basement Front A — BFA-1"
   },
   {
@@ -30,17 +30,10 @@ window.QUEST_DATA = {
    "loc": "Basement Front C — BFC-5"
   },
   {
-   "box": 10,
-   "rows": 250,
-   "cap": 240,
-   "over": 10,
-   "loc": "Basement Front A — BFA-3"
-  },
-  {
    "box": 3,
-   "rows": 247,
+   "rows": 246,
    "cap": 240,
-   "over": 7,
+   "over": 6,
    "loc": "Bedroom (Upstairs) — BDR-3"
   },
   {
@@ -51,18 +44,11 @@ window.QUEST_DATA = {
    "loc": "Basement Front A — BFA-3"
   },
   {
-   "box": 4,
+   "box": 10,
    "rows": 241,
    "cap": 240,
    "over": 1,
-   "loc": "Basement Front B — BFB-2"
-  },
-  {
-   "box": 7,
-   "rows": 241,
-   "cap": 240,
-   "over": 1,
-   "loc": "Basement Front A — BFA-1"
+   "loc": "Basement Front A — BFA-3"
   }
  ],
  "boxes": [
@@ -85,10 +71,10 @@ window.QUEST_DATA = {
    "code": "BDR-3",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 247,
+   "rows": 246,
    "vcap": 240,
-   "dupes": 2,
-   "clones": 2
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 4,
@@ -97,10 +83,10 @@ window.QUEST_DATA = {
    "code": "BFB-2",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 241,
+   "rows": 234,
    "vcap": 240,
-   "dupes": 12,
-   "clones": 12
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 5,
@@ -121,10 +107,10 @@ window.QUEST_DATA = {
    "code": "BFB-3",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 117,
+   "rows": 115,
    "vcap": 240,
-   "dupes": 8,
-   "clones": 4
+   "dupes": 6,
+   "clones": 0
   },
   {
    "box": 7,
@@ -133,10 +119,10 @@ window.QUEST_DATA = {
    "code": "BFA-1",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 241,
+   "rows": 213,
    "vcap": 240,
-   "dupes": 56,
-   "clones": 54
+   "dupes": 2,
+   "clones": 0
   },
   {
    "box": 8,
@@ -145,10 +131,10 @@ window.QUEST_DATA = {
    "code": "BFA-2",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 228,
+   "rows": 225,
    "vcap": 240,
-   "dupes": 6,
-   "clones": 6
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 9,
@@ -169,10 +155,10 @@ window.QUEST_DATA = {
    "code": "BFA-3",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 250,
+   "rows": 241,
    "vcap": 240,
-   "dupes": 20,
-   "clones": 18
+   "dupes": 2,
+   "clones": 0
   },
   {
    "box": 11,
@@ -181,10 +167,10 @@ window.QUEST_DATA = {
    "code": "BFB-4",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 187,
+   "rows": 181,
    "vcap": 240,
-   "dupes": 12,
-   "clones": 12
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 12,
@@ -205,10 +191,10 @@ window.QUEST_DATA = {
    "code": "BFB-4",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 170,
+   "rows": 160,
    "vcap": 240,
-   "dupes": 20,
-   "clones": 20
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 14,
@@ -217,10 +203,10 @@ window.QUEST_DATA = {
    "code": "BFB-4",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 202,
+   "rows": 200,
    "vcap": 240,
-   "dupes": 4,
-   "clones": 4
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 15,
@@ -229,10 +215,10 @@ window.QUEST_DATA = {
    "code": "BFA-1",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 191,
+   "rows": 188,
    "vcap": 150,
-   "dupes": 6,
-   "clones": 6
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 16,
@@ -241,10 +227,10 @@ window.QUEST_DATA = {
    "code": "BFC-1",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 165,
+   "rows": 164,
    "vcap": 240,
-   "dupes": 2,
-   "clones": 2
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 17,
@@ -253,10 +239,10 @@ window.QUEST_DATA = {
    "code": "BFA-3",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 185,
+   "rows": 181,
    "vcap": 240,
-   "dupes": 10,
-   "clones": 8
+   "dupes": 2,
+   "clones": 0
   },
   {
    "box": 18,
@@ -265,10 +251,10 @@ window.QUEST_DATA = {
    "code": "BFB-3",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 172,
+   "rows": 168,
    "vcap": 240,
-   "dupes": 8,
-   "clones": 8
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 19,
@@ -277,10 +263,10 @@ window.QUEST_DATA = {
    "code": "BFB-2",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 182,
+   "rows": 177,
    "vcap": 240,
-   "dupes": 10,
-   "clones": 10
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 20,
@@ -289,10 +275,10 @@ window.QUEST_DATA = {
    "code": "BFA-1",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 164,
+   "rows": 162,
    "vcap": 240,
-   "dupes": 12,
-   "clones": 4
+   "dupes": 10,
+   "clones": 0
   },
   {
    "box": 21,
@@ -301,10 +287,10 @@ window.QUEST_DATA = {
    "code": "BFA-2",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 172,
+   "rows": 171,
    "vcap": 240,
-   "dupes": 2,
-   "clones": 2
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 22,
@@ -313,10 +299,10 @@ window.QUEST_DATA = {
    "code": "BFC-2",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 167,
+   "rows": 166,
    "vcap": 240,
-   "dupes": 2,
-   "clones": 2
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 23,
@@ -337,10 +323,10 @@ window.QUEST_DATA = {
    "code": "BFC-4",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 149,
+   "rows": 148,
    "vcap": 240,
-   "dupes": 2,
-   "clones": 2
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 25,
@@ -349,10 +335,10 @@ window.QUEST_DATA = {
    "code": "BFC-3",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 125,
+   "rows": 122,
    "vcap": 240,
-   "dupes": 6,
-   "clones": 6
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 26,
@@ -373,10 +359,10 @@ window.QUEST_DATA = {
    "code": "BFA-2",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 125,
+   "rows": 124,
    "vcap": 240,
-   "dupes": 2,
-   "clones": 2
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 28,
@@ -385,10 +371,10 @@ window.QUEST_DATA = {
    "code": "BFB-3",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 121,
+   "rows": 117,
    "vcap": 240,
-   "dupes": 8,
-   "clones": 8
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 29,
@@ -421,10 +407,10 @@ window.QUEST_DATA = {
    "code": "BFA-2",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 81,
+   "rows": 77,
    "vcap": 240,
-   "dupes": 7,
-   "clones": 7
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 33,
@@ -433,10 +419,10 @@ window.QUEST_DATA = {
    "code": "BFC-3",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 96,
+   "rows": 89,
    "vcap": 240,
-   "dupes": 15,
-   "clones": 13
+   "dupes": 2,
+   "clones": 0
   },
   {
    "box": 35,
@@ -541,10 +527,10 @@ window.QUEST_DATA = {
    "code": "BLR-2",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 79,
+   "rows": 78,
    "vcap": 240,
-   "dupes": 2,
-   "clones": 2
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 48,
@@ -553,10 +539,10 @@ window.QUEST_DATA = {
    "code": "BLR-2",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 164,
+   "rows": 163,
    "vcap": 240,
-   "dupes": 2,
-   "clones": 2
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 49,
@@ -601,10 +587,10 @@ window.QUEST_DATA = {
    "code": "BLR-2",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 145,
+   "rows": 144,
    "vcap": 240,
-   "dupes": 5,
-   "clones": 2
+   "dupes": 4,
+   "clones": 0
   },
   {
    "box": 53,
@@ -721,10 +707,10 @@ window.QUEST_DATA = {
    "code": "BFC-4",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 164,
+   "rows": 163,
    "vcap": 240,
-   "dupes": 2,
-   "clones": 2
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 65,
@@ -733,10 +719,10 @@ window.QUEST_DATA = {
    "code": "BLR-4",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 149,
+   "rows": 148,
    "vcap": 240,
-   "dupes": 2,
-   "clones": 2
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 66,
@@ -793,10 +779,10 @@ window.QUEST_DATA = {
    "code": "BDR-1",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 64,
+   "rows": 61,
    "vcap": 100,
-   "dupes": 6,
-   "clones": 6
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 75,
@@ -805,10 +791,10 @@ window.QUEST_DATA = {
    "code": "BDR-1",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 216,
+   "rows": 214,
    "vcap": 240,
-   "dupes": 4,
-   "clones": 4
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 80,
@@ -829,10 +815,10 @@ window.QUEST_DATA = {
    "code": "BLR-4",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 178,
+   "rows": 177,
    "vcap": 240,
-   "dupes": 2,
-   "clones": 2
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 83,
@@ -841,10 +827,10 @@ window.QUEST_DATA = {
    "code": "BLR-4",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 111,
+   "rows": 110,
    "vcap": 240,
-   "dupes": 2,
-   "clones": 2
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 85,
@@ -901,10 +887,10 @@ window.QUEST_DATA = {
    "code": "BFB-1",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 71,
+   "rows": 69,
    "vcap": 240,
-   "dupes": 4,
-   "clones": 4
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 98,
@@ -913,10 +899,10 @@ window.QUEST_DATA = {
    "code": "BLR-5",
    "status": "Confirmed Real",
    "labeledAs": "49",
-   "rows": 149,
+   "rows": 144,
    "vcap": 240,
-   "dupes": 10,
-   "clones": 10
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 99,
@@ -937,10 +923,10 @@ window.QUEST_DATA = {
    "code": "BDR-2",
    "status": "CC/Fabric Bin",
    "labeledAs": "",
-   "rows": 68,
+   "rows": 64,
    "vcap": 240,
-   "dupes": 7,
-   "clones": 7
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 102,
@@ -949,10 +935,10 @@ window.QUEST_DATA = {
    "code": "BDR-2",
    "status": "CC/Fabric Bin",
    "labeledAs": "",
-   "rows": 110,
+   "rows": 109,
    "vcap": 240,
-   "dupes": 2,
-   "clones": 2
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 103,
@@ -961,10 +947,10 @@ window.QUEST_DATA = {
    "code": "BDR-2",
    "status": "CC/Fabric Bin",
    "labeledAs": "",
-   "rows": 74,
+   "rows": 73,
    "vcap": 240,
-   "dupes": 2,
-   "clones": 2
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 104,
@@ -973,10 +959,10 @@ window.QUEST_DATA = {
    "code": "BDR-1",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 88,
+   "rows": 84,
    "vcap": 240,
-   "dupes": 6,
-   "clones": 6
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 106,
@@ -985,10 +971,10 @@ window.QUEST_DATA = {
    "code": "BDR-TOP",
    "status": "Signed",
    "labeledAs": "",
-   "rows": 82,
+   "rows": 81,
    "vcap": 240,
-   "dupes": 6,
-   "clones": 2
+   "dupes": 4,
+   "clones": 0
   },
   {
    "box": 107,
@@ -1034,7 +1020,7 @@ window.QUEST_DATA = {
       },
       {
        "id": "0.5",
-       "text": "Confirm the chat reads back 11,256 rows. If not — STOP, wrong file."
+       "text": "Confirm the chat reads back 11,113 rows. If not — STOP, wrong file."
       }
      ]
     }
@@ -1045,7 +1031,7 @@ window.QUEST_DATA = {
    "title": "The Clones",
    "est": "identical twin rows — safest wins first",
    "accent": "green",
-   "blurb": "Rows that are exact copies of another row: same book, same box, logged twice. Live count: 133 clone groups / 143 excess rows. Highest confidence, lowest effort, biggest visible progress.",
+   "blurb": "Rows that are exact copies of another row: same book, same box, logged twice. Live count: 0 clone groups / 0 excess rows. Highest confidence, lowest effort, biggest visible progress.",
    "sittings": [
     {
      "id": "A1",
