@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_1210_1557.xlsx  |  Generated: 2026-10-12
+// Source: comics_inventory_1210_1602.xlsx  |  Generated: 2026-10-12
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -26768,7 +26768,7 @@ Jurgens is a DC copper age legend. Could sign this key.`,
   {
     Title: `Batman/Superman`, Issue: `1`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2003`, Arc: `Batman/Superman Vol 1 (Loeb/McGuinness)`, Key: `YES`,
+    Year: `2013`, Arc: `Batman/Superman Vol 1 (Loeb/McGuinness)`, Key: `YES`,
     Key_Reason: `1st issue of Loeb/McGuinness Batman/Superman Vol 1 (2003) — in Spanish. Smaller format Spanish edition is a unique variant. Loeb/McGuinness at their peak.`, First_App: ``,
     Writer: `Jeph Loeb`, Artist: `Ed McGuinness`,
     Signed: `NO`, Signed_By: ``,
@@ -37191,7 +37191,7 @@ Already signed.`,
   {
     Title: `Black Panther Annual`, Issue: `1`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1988`, Arc: ``, Key: `YES`,
+    Year: `2008`, Arc: ``, Key: `YES`,
     Key_Reason: `First BP Annual — not a key but historically interesting; Tier 1 #4 — signed by Christopher Priest. Per classification spec rule 4, a signature makes the copy unique and is always a key, independent of issue significance.`, First_App: ``,
     Writer: `Peter B. Gillis`, Artist: `Sal Buscema`,
     Signed: `YES`, Signed_By: `Christopher Priest`,
@@ -58195,7 +58195,7 @@ Ramos SIGNED Champions #1. CGC SS witness on-site at Terrificon.`,
   {
     Title: `DC Comics Presents: The Flash`, Issue: `1`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2004`, Arc: `Reprint edition`, Key: `NO`,
+    Year: `2011`, Arc: `Reprint edition`, Key: `NO`,
     Key_Reason: `Reprint one-shot; UK price tag variant noted by owner — minor collectible curiosity`, First_App: ``,
     Writer: `Denny O'Neil (reprint)`, Artist: `Carmine Infantino`,
     Signed: `NO`, Signed_By: ``,
@@ -236724,7 +236724,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
   },
   {
     Num: `BOX 47`, Comics: 79, Keys: 5,
-    Signed: 0, YearRange: `2000-2009`,
+    Signed: 0, YearRange: `2000-2011`,
     Label: ``, FirstBook: `DC Comics Presents: The Flash 1`, LastBook: `The Flash 225`,
     Location: `Boiler Room — BLR-2`, Code: `BLR-2`, labeledAs: ``, Notes: ``, DateAdded: `May 17, 2026`,
   },
@@ -236784,7 +236784,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
   },
   {
     Num: `BOX 57`, Comics: 138, Keys: 14,
-    Signed: 0, YearRange: `2003-2016`,
+    Signed: 0, YearRange: `2006-2016`,
     Label: ``, FirstBook: `Batman 25`, LastBook: `Superman/Wonder Woman 14`,
     Location: `Bedroom (Upstairs) — BDR-1`, Code: `BDR-1`, labeledAs: ``, Notes: ``, DateAdded: `May 17, 2026`,
   },
@@ -244825,7 +244825,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
   },
   {
     Title: `Black Panther Annual`, Issue: `1`, Publisher: `Marvel`,
-    Year: `1988`, Volume: `1`, Cover_Artist: `Sal Buscema (interior artist — cover verify)`,
+    Year: `2008`, Volume: `1`, Cover_Artist: `Sal Buscema (interior artist — cover verify)`,
     Key: `YES`, Key_Reason: `First BP Annual — not a key but historically interesting; Tier 1 #4 — signed by Christopher Priest. Per classification spec rule 4, a signature makes the copy unique and is always a key, independent of issue significance.`,
     Signed: `YES`, Signed_By: `Christopher Priest`,
     Era: `Copper`, Writer: `Peter B. Gillis`,
@@ -257477,7 +257477,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
   },
   {
     Title: `Black Panther Annual`, Issue: `1`, Publisher: `Marvel`,
-    Year: `1988`, Volume: `1`, Cover_Artist: `Sal Buscema (interior artist — cover verify)`,
+    Year: `2008`, Volume: `1`, Cover_Artist: `Sal Buscema (interior artist — cover verify)`,
     Key: `YES`, Key_Reason: `First BP Annual — not a key but historically interesting; Tier 1 #4 — signed by Christopher Priest. Per classification spec rule 4, a signature makes the copy unique and is always a key, independent of issue significance.`,
     Signed: `YES`, Signed_By: `Christopher Priest`,
     Era: `Copper`, Writer: `Peter B. Gillis`,
@@ -260569,7 +260569,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
   },
   {
     Title: `Batman/Superman`, Issue: `1`, Publisher: `DC`,
-    Year: `2003`, Volume: `1`, Cover_Artist: `Ed McGuinness`,
+    Year: `2013`, Volume: `1`, Cover_Artist: `Ed McGuinness`,
     Key: `YES`, Key_Reason: `1st issue of Loeb/McGuinness Batman/Superman Vol 1 (2003) — in Spanish. Smaller format Spanish edition is a unique variant. Loeb/McGuinness at their peak.`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Jeph Loeb`,
@@ -261079,7 +261079,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
   },
   {
     Title: `Black Panther Annual`, Issue: `1`, Publisher: `Marvel`,
-    Year: `1988`, Volume: `1`, Cover_Artist: `Sal Buscema (interior artist — cover verify)`,
+    Year: `2008`, Volume: `1`, Cover_Artist: `Sal Buscema (interior artist — cover verify)`,
     Key: `YES`, Key_Reason: `First BP Annual — not a key but historically interesting; Tier 1 #4 — signed by Christopher Priest. Per classification spec rule 4, a signature makes the copy unique and is always a key, independent of issue significance.`,
     Signed: `YES`, Signed_By: `Christopher Priest`,
     Era: `Copper`, Writer: `Peter B. Gillis`,
