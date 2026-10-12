@@ -335,12 +335,12 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
         overflow: "hidden",
         animation: "drawerSlideIn 0.18s ease-out",
       }}>
-        {/* Cover */}
-        <div style={{ flexShrink: 0, width: 220, alignSelf: "stretch", overflow: "hidden", background: "#111" }}>
+        {/* Cover — contain + natural height so the whole cover shows (no side-crop) */}
+        <div style={{ flexShrink: 0, width: 220, alignSelf: "flex-start", background: "#111" }}>
           <img
             src={largeUrl ?? fallback}
             alt={`${comic.Title} ${comic.Issue}`}
-            style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+            style={{ width: "100%", height: "auto", maxHeight: "90vh", objectFit: "contain", display: "block" }}
             onError={e => { (e.target as HTMLImageElement).src = fallback; }}
           />
         </div>
