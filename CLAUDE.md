@@ -21,7 +21,10 @@ it's a big code block.
 All development: `claude/upbeat-babbage-2f5gr2`
 
 ## Write protocol
-- xlsx is the source of truth on Mac — Claude never writes to it
+- xlsx is the source of truth on Mac — Claude may write to it ONLY after asking
+  and getting an explicit yes, with the exact cells/values confirmed first
+  (rule changed Oct 12 2026 by Robert). Default is still hands-off; never write
+  unprompted.
 - Only Python outputs (JSON, CSV) and TS data files belong in the repo
 - Check the Data Integrity Log tab before flagging row drops as data loss
 
