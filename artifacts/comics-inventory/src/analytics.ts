@@ -7,7 +7,7 @@
 //   3. Commit + deploy. Visits start logging; view them at
 //      https://<code>.goatcounter.com.
 // Until GC_CODE is set this is a complete no-op — nothing loads, nothing is sent.
-const GC_CODE = ""; // e.g. "marshallcomics"
+const GC_CODE = "marshallcomics"; // e.g. "marshallcomics"
 
 export function initAnalytics(): void {
   if (!GC_CODE) return;
