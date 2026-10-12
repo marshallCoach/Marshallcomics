@@ -1,5 +1,6 @@
 import { useState, useMemo, useEffect } from "react";
-import { getCoverSvgUrl, pubColors, type ComicLike } from "@/utils/coverThumbnails";
+import { pubColors } from "@/utils/coverThumbnails";
+import { CoverImage } from "@/components/CoverImage";
 
 // ── Your actual pull list ────────────────────────────────────────────────────
 type SeriesType = "ongoing" | "mini";
@@ -10,43 +11,66 @@ interface Series {
   title:     string;
   type:      SeriesType;
   cadence:   Cadence;
+  volume:    string;   // display, e.g. "Vol. 11 (Ongoing)"
+  volNum:    string;   // numeric volume for cover lookup
+  issue:     string;   // this month's issue, e.g. "#17"
+  price:     string;   // cover price, e.g. "$4.99"
+  url:       string;   // Direct Book URL (publisher/Fandom) — as supplied, not invented
+  notes:     string;
 }
 
+// This month's pulls (from Robert's list). Cover art resolves live from
+// covers.json by Title|||Issue|||Volume — a placeholder shows until one exists.
+// url is the Direct Book URL Robert supplied; nothing here is fabricated.
 const SERIES: Series[] = [
-  { publisher:"Marvel", title:"Avengers Armageddon",                  type:"ongoing", cadence:"new"      },
-  { publisher:"DC",     title:"Barbara Gordon: Breakout",             type:"ongoing", cadence:"new"      },
-  { publisher:"DC",     title:"Batman / Wonder Woman: Truth",         type:"mini",    cadence:"new"      },
-  { publisher:"Marvel", title:"Bishop",                               type:"mini",    cadence:"new"      },
-  { publisher:"Marvel", title:"Moonstar",                             type:"mini",    cadence:"new"      },
-  { publisher:"Marvel", title:"Ultimate Impact",                      type:"mini",    cadence:"new"      },
-  { publisher:"DC",     title:"Zatanna",                              type:"ongoing", cadence:"new"      },
-  { publisher:"DC",     title:"Absolute Flash",                       type:"ongoing", cadence:"existing" },
-  { publisher:"DC",     title:"Absolute Green Lantern",               type:"ongoing", cadence:"existing" },
-  { publisher:"DC",     title:"Absolute Wonder Woman",                type:"ongoing", cadence:"existing" },
-  { publisher:"DC",     title:"Batgirl",                              type:"ongoing", cadence:"existing" },
-  { publisher:"DC",     title:"Batman / Static: Beyond",              type:"mini",    cadence:"existing" },
-  { publisher:"DC",     title:"Batman/Superman: World's Finest",      type:"ongoing", cadence:"existing" },
-  { publisher:"DC",     title:"Batwoman",                             type:"ongoing", cadence:"existing" },
-  { publisher:"Other",  title:"Beneath the Trees Where Nobody Sees",  type:"ongoing", cadence:"existing" },
-  { publisher:"Marvel", title:"Captain America",                      type:"ongoing", cadence:"existing" },
-  { publisher:"Marvel", title:"Fantastic Four",                       type:"ongoing", cadence:"existing" },
-  { publisher:"DC",     title:"Fury of Firestorm",                    type:"ongoing", cadence:"existing" },
-  { publisher:"Image",  title:"G.I. Joe",                             type:"ongoing", cadence:"existing" },
-  { publisher:"Marvel", title:"Inglorious X-Force",                   type:"ongoing", cadence:"existing" },
-  { publisher:"DC",     title:"Justice League Unlimited",             type:"ongoing", cadence:"existing" },
-  { publisher:"Marvel", title:"Miles Morales: Spider-Man",            type:"ongoing", cadence:"existing" },
-  { publisher:"Marvel", title:"New Avengers",                         type:"ongoing", cadence:"existing" },
-  { publisher:"Marvel", title:"Nova Centurion",                       type:"mini",    cadence:"existing" },
-  { publisher:"Marvel", title:"Planet of the Apes vs. Fantastic Four",type:"mini",    cadence:"existing" },
-  { publisher:"Marvel", title:"The World to Come",                    type:"mini",    cadence:"existing" },
-  { publisher:"Image",  title:"Transformers",                         type:"ongoing", cadence:"existing" },
-  { publisher:"Marvel", title:"Ultimate Black Panther",               type:"ongoing", cadence:"existing" },
-  { publisher:"Marvel", title:"Ultimate Endgame",                     type:"mini",    cadence:"existing" },
-  { publisher:"Marvel", title:"Ultimates",                            type:"ongoing", cadence:"existing" },
-  { publisher:"Image",  title:"Void Rivals",                          type:"ongoing", cadence:"existing" },
-  { publisher:"Marvel", title:"X-Men of Apocalypse",                  type:"mini",    cadence:"existing" },
-  { publisher:"Other",  title:"Powers 25th Anniversary",              type:"ongoing", cadence:"existing" },
+  { publisher:"Marvel", title:"Avengers Armageddon",         type:"mini",    cadence:"existing", volume:"Vol. 1 (Mini)",    volNum:"1",  issue:"#5 (of 5)", price:"$4.99", url:"https://www.marvel.com/articles/comics/avengers-armageddon-changes-the-face-of-earths-mightiest-heroes-new-era", notes:"Event mini-series finale wrapping up the storyline." },
+  { publisher:"Marvel", title:"Moonstar",                    type:"mini",    cadence:"new",      volume:"Vol. 1 (Mini)",    volNum:"1",  issue:"#1",        price:"$3.99", url:"https://www.marvel.com/articles/comics/moonstar-takes-charge-in-her-first-ever-solo-series-march-2026", notes:"New solo spotlight limited series launch." },
+  { publisher:"Marvel", title:"Captain America",             type:"ongoing", cadence:"existing", volume:"Vol. 11 (Ongoing)", volNum:"11", issue:"#17",       price:"$4.99", url:"https://www.marvel.com/comics/calendar", notes:"Mainline ongoing (Armageddon fallout)." },
+  { publisher:"Marvel", title:"Fantastic Four",              type:"ongoing", cadence:"existing", volume:"Vol. 7 (Ongoing)",  volNum:"7",  issue:"#26",       price:"$3.99", url:"https://www.marvel.com/comics/calendar", notes:"Mainline ongoing." },
+  { publisher:"Marvel", title:"Inglorious X-Force",          type:"ongoing", cadence:"existing", volume:"Vol. 1 (Ongoing)",  volNum:"1",  issue:"#3",        price:"$3.99", url:"https://www.marvel.com/comics/calendar", notes:"Ongoing X-line title." },
+  { publisher:"Marvel", title:"Miles Morales: Spider-Man",   type:"ongoing", cadence:"existing", volume:"Vol. 2 (Ongoing)",  volNum:"2",  issue:"#26",       price:"$3.99", url:"https://www.marvel.com/comics/calendar", notes:"Mainline ongoing." },
+  { publisher:"Marvel", title:"New Avengers",                type:"ongoing", cadence:"new",      volume:"Vol. 5 (Ongoing)",  volNum:"5",  issue:"#1 / #2",   price:"$4.99", url:"https://www.marvel.com/articles/comics/avengers-1-assembles-earths-mightiest-survivors-november-2026", notes:"Post-Armageddon launch/continuation." },
+  { publisher:"Marvel", title:"The World to Come",           type:"mini",    cadence:"existing", volume:"Vol. 1 (Mini)",    volNum:"1",  issue:"#2",        price:"$4.99", url:"https://www.marvel.com/comics/calendar", notes:"4-issue limited series." },
+  { publisher:"Marvel", title:"Ultimate Black Panther",      type:"ongoing", cadence:"existing", volume:"Vol. 1 (Ongoing)",  volNum:"1",  issue:"#10",       price:"$4.99", url:"https://www.marvel.com/comics/calendar", notes:"Ongoing Ultimate universe title." },
+  { publisher:"Marvel", title:"Ultimate Endgame",            type:"mini",    cadence:"existing", volume:"Vol. 1 (Mini)",    volNum:"1",  issue:"#5 (of 5)", price:"$5.99", url:"https://www.marvel.com/comics/calendar", notes:"Ultimate event mini-series finale." },
+  { publisher:"Marvel", title:"Ultimates",                   type:"ongoing", cadence:"existing", volume:"Vol. 1 (Ongoing)",  volNum:"1",  issue:"#6",        price:"$4.99", url:"https://www.marvel.com/comics/calendar", notes:"Ongoing Ultimate universe title." },
+  { publisher:"Marvel", title:"X-Men of Apocalypse",         type:"mini",    cadence:"existing", volume:"Vol. 1 (Mini)",    volNum:"1",  issue:"#3",        price:"$3.99", url:"https://www.marvel.com/comics/calendar", notes:"Limited series." },
+  { publisher:"DC",     title:"Barbara Gordon: Breakout",    type:"mini",    cadence:"existing", volume:"Vol. 1 (Mini)",    volNum:"1",  issue:"#7",        price:"$3.99", url:"https://dc.fandom.com/wiki/Barbara_Gordon:_Breakout_Vol_1_1", notes:"12-issue DC Next Level limited series." },
+  { publisher:"DC",     title:"Zatanna",                     type:"ongoing", cadence:"new",      volume:"Vol. 3 (Ongoing)",  volNum:"3",  issue:"#1",        price:"$3.99", url:"https://www.dc.com/comics/zatanna-2026/zatanna-2026-1", notes:"New solo ongoing series launch." },
+  { publisher:"DC",     title:"Absolute Flash",              type:"ongoing", cadence:"existing", volume:"Vol. 1 (Ongoing)",  volNum:"1",  issue:"#21",       price:"$4.99", url:"https://www.dc.com/comics", notes:"DC Absolute Universe line." },
+  { publisher:"DC",     title:"Absolute Green Lantern",      type:"ongoing", cadence:"existing", volume:"Vol. 1 (Ongoing)",  volNum:"1",  issue:"#20",       price:"$4.99", url:"https://www.dc.com/comics", notes:"DC Absolute Universe line." },
+  { publisher:"DC",     title:"Absolute Wonder Woman",       type:"ongoing", cadence:"existing", volume:"Vol. 1 (Ongoing)",  volNum:"1",  issue:"#13",       price:"$4.99", url:"https://www.dc.com/comics", notes:"DC Absolute Universe line." },
+  { publisher:"DC",     title:"Batgirl",                     type:"ongoing", cadence:"existing", volume:"Vol. 6 (Ongoing)",  volNum:"6",  issue:"#14",       price:"$3.99", url:"https://www.dc.com/comics", notes:"Mainline ongoing." },
+  { publisher:"DC",     title:"Batman/Superman: World's Finest", type:"ongoing", cadence:"existing", volume:"Vol. 1 (Ongoing)", volNum:"1", issue:"#33",   price:"$3.99", url:"https://www.dc.com/comics", notes:"Mainline ongoing." },
+  { publisher:"DC",     title:"Batwoman",                    type:"ongoing", cadence:"existing", volume:"Vol. 4 (Ongoing)",  volNum:"4",  issue:"#5",        price:"$3.99", url:"https://www.dc.com/comics", notes:"Ongoing series." },
+  { publisher:"DC",     title:"Fury of Firestorm",           type:"ongoing", cadence:"existing", volume:"Vol. 1 (Ongoing)",  volNum:"1",  issue:"#8",        price:"$3.99", url:"https://www.dc.com/comics", notes:"Ongoing series." },
+  { publisher:"DC",     title:"Justice League Unlimited",    type:"ongoing", cadence:"existing", volume:"Vol. 1 (Ongoing)",  volNum:"1",  issue:"#13",       price:"$4.99", url:"https://www.dc.com/comics", notes:"Mainline ongoing." },
+  { publisher:"Image",  title:"G.I. Joe",                    type:"ongoing", cadence:"existing", volume:"Ongoing",           volNum:"1",  issue:"#12",       price:"$3.99", url:"https://imagecomics.com/comics/series/gi-joe", notes:"Energon Universe ongoing." },
+  { publisher:"Image",  title:"Transformers",                type:"ongoing", cadence:"existing", volume:"Ongoing",           volNum:"1",  issue:"#14",       price:"$3.99", url:"https://imagecomics.com/comics/series/transformers", notes:"Energon Universe ongoing." },
+  { publisher:"Image",  title:"Void Rivals",                 type:"ongoing", cadence:"existing", volume:"Ongoing",           volNum:"1",  issue:"#14",       price:"$3.99", url:"https://imagecomics.com/comics/series/void-rivals", notes:"Energon Universe ongoing." },
+  { publisher:"Other",  title:"Beneath the Trees Where Nobody Sees", type:"ongoing", cadence:"existing", volume:"Ongoing", volNum:"1", issue:"#6 / Arc 2 #1", price:"$3.99", url:"https://www.idwpublishing.com", notes:"Ongoing / expanded universe release. (IDW)" },
+  { publisher:"Other",  title:"Powers 25th Anniversary",     type:"ongoing", cadence:"existing", volume:"Ongoing",           volNum:"1",  issue:"Special / #2", price:"$4.99", url:"https://imagecomics.com", notes:"25th Anniversary special project." },
 ];
+
+// Titles that were on the pull list but are NOT in this month's pulls — shown as
+// a finished/wrapped appendix below the main content (they completed their runs).
+const FINISHED: Series[] = [
+  { publisher:"DC",     title:"Batman / Wonder Woman: Truth",          type:"mini", cadence:"existing", volume:"Mini", volNum:"1", issue:"", price:"", url:"", notes:"" },
+  { publisher:"Marvel", title:"Bishop",                                type:"mini", cadence:"existing", volume:"Mini", volNum:"1", issue:"", price:"", url:"", notes:"" },
+  { publisher:"Marvel", title:"Ultimate Impact",                       type:"mini", cadence:"existing", volume:"Mini", volNum:"1", issue:"", price:"", url:"", notes:"" },
+  { publisher:"DC",     title:"Batman / Static: Beyond",               type:"mini", cadence:"existing", volume:"Mini", volNum:"1", issue:"", price:"", url:"", notes:"" },
+  { publisher:"Marvel", title:"Nova Centurion",                        type:"mini", cadence:"existing", volume:"Mini", volNum:"1", issue:"", price:"", url:"", notes:"" },
+  { publisher:"Marvel", title:"Planet of the Apes vs. Fantastic Four", type:"mini", cadence:"existing", volume:"Mini", volNum:"1", issue:"", price:"", url:"", notes:"" },
+];
+
+// First integer in an issue string ("#6 / Arc 2 #1" -> "6"), for cover lookup.
+function coverIssue(issue: string): string {
+  const m = issue.match(/\d+/);
+  return m ? m[0] : "1";
+}
+function comicLike(s: Series) {
+  return { Title: s.title, Issue: coverIssue(s.issue), Volume: s.volNum, Publisher: s.publisher };
+}
 
 // ── Per-issue tracking ───────────────────────────────────────────────────────
 type IssueStatus = "expected" | "arrived" | "read" | "key" | "dropped";
@@ -86,10 +110,6 @@ function normPub(p: string): string {
   return "Other";
 }
 
-function comicLike(s: Series): ComicLike {
-  return { Title: s.title, Issue: "1", Publisher: s.publisher };
-}
-
 function pubBadgeStyle(pub: string) {
   const pc = pubColors(pub);
   return { background: pc.bg, color: pc.text, border: `none` };
@@ -98,7 +118,7 @@ function pubBadgeStyle(pub: string) {
 // ── Component ────────────────────────────────────────────────────────────────
 export default function PullList() {
   const [data,       setData]       = useState<SeriesData>(load);
-  const [view,       setView]       = useState<"card"|"list">("list");
+  const [view,       setView]       = useState<"card"|"list">("card");
   const [query,      setQuery]      = useState("");
   const [filterPub,  setFilterPub]  = useState<string>("All");
   const [filterType, setFilterType] = useState<"all"|"ongoing"|"mini">("all");
@@ -112,17 +132,27 @@ export default function PullList() {
 
   const publishers = ["All", ...PUB_ORDER];
 
-  const filtered = useMemo(() => {
-    let list = SERIES;
-    if (filterPub !== "All") list = list.filter(s => normPub(s.publisher) === filterPub);
-    if (filterType !== "all") list = list.filter(s => s.type === filterType);
-    if (filterNew  !== "all") list = list.filter(s => s.cadence === filterNew);
+  const matchesFilters = (s: Series) => {
+    if (filterPub !== "All" && normPub(s.publisher) !== filterPub) return false;
+    if (filterType !== "all" && s.type !== filterType) return false;
+    if (filterNew  !== "all" && s.cadence !== filterNew) return false;
     if (query.trim()) {
       const q = query.toLowerCase();
-      list = list.filter(s => s.title.toLowerCase().includes(q) || s.publisher.toLowerCase().includes(q));
+      if (!s.title.toLowerCase().includes(q) && !s.publisher.toLowerCase().includes(q)) return false;
     }
-    return list;
-  }, [query, filterPub, filterType, filterNew]);
+    return true;
+  };
+
+  const filtered       = useMemo(() => SERIES.filter(matchesFilters), [query, filterPub, filterType, filterNew]);
+  const filteredDone   = useMemo(() => FINISHED.filter(s => {
+    if (filterPub !== "All" && normPub(s.publisher) !== filterPub) return false;
+    if (filterType !== "all" && s.type !== filterType) return false;
+    if (query.trim()) {
+      const q = query.toLowerCase();
+      if (!s.title.toLowerCase().includes(q) && !s.publisher.toLowerCase().includes(q)) return false;
+    }
+    return true;
+  }), [query, filterPub, filterType]);
 
   // Counts for header
   const totalIssues = Object.values(data).reduce((n, arr) => n + arr.length, 0);
@@ -162,21 +192,19 @@ export default function PullList() {
   function exportTxt() {
     const lines = [
       "BLACKREADBROWN — ACTIVE PULL LIST",
-      `${SERIES.length} series · ${totalIssues} issues tracked`,
+      `${SERIES.length} titles this month · ${totalIssues} issues tracked`,
       "",
       ...PUB_ORDER.flatMap(pub => {
         const s = SERIES.filter(s => normPub(s.publisher) === pub);
         if (!s.length) return [];
         return [
           `── ${pub.toUpperCase()} ──`,
-          ...s.map(s => {
-            const issues = data[s.title] || [];
-            const latest = issues[issues.length-1];
-            return `  ${s.title} [${s.type === "mini" ? "MINI" : "ONGOING"}]${latest ? ` · Latest: #${latest.issueNum} (${ISSUE_STATUS[latest.status].label})` : ""}`;
-          }),
+          ...s.map(s => `  ${s.title} — ${s.issue} · ${s.volume} · ${s.price}${s.notes ? ` — ${s.notes}` : ""}`),
           "",
         ];
       }),
+      "── FINISHED / WRAPPED ──",
+      ...FINISHED.map(s => `  ${s.title} [${s.publisher}] — completed`),
     ].join("\n");
     const a = document.createElement("a");
     a.href = URL.createObjectURL(new Blob([lines], { type:"text/plain" }));
@@ -194,6 +222,23 @@ export default function PullList() {
     return groups;
   }, [filtered]);
 
+  const issueProps = (s: Series) => ({
+    series: s,
+    issues: data[s.title] || [],
+    expanded: expandedId === s.title,
+    addingFor: addingFor === s.title,
+    newIssue: addingFor === s.title ? newIssue : "",
+    newNote: addingFor === s.title ? newNote : "",
+    onToggle: () => setExpandedId(id => id === s.title ? null : s.title),
+    onStartAdd: () => { setAddingFor(s.title); setExpandedId(s.title); },
+    onCancelAdd: () => { setAddingFor(null); setNewIssue(""); setNewNote(""); },
+    onNewIssueChange: setNewIssue,
+    onNewNoteChange: setNewNote,
+    onAddIssue: () => addIssue(s.title),
+    onStatusChange: (idx: number, st: IssueStatus) => updateStatus(s.title, idx, st),
+    onRemove: (idx: number) => removeIssue(s.title, idx),
+  });
+
   return (
     <div style={{ maxWidth: 1100, margin: "0 auto", padding: "18px 16px 80px" }}>
 
@@ -204,7 +249,7 @@ export default function PullList() {
             PULL LIST
           </div>
           <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", color:"var(--muted2)", fontSize:"0.875rem", marginTop:2 }}>
-            {SERIES.filter(s=>s.cadence==="new").length} new titles · {SERIES.filter(s=>s.cadence==="existing").length} ongoing · {SERIES.filter(s=>s.type==="mini").length} minis
+            {SERIES.length} this month · {SERIES.filter(s=>s.cadence==="new").length} new · {SERIES.filter(s=>s.type==="mini").length} minis · {FINISHED.length} wrapped
           </div>
         </div>
 
@@ -249,7 +294,6 @@ export default function PullList() {
               outline:"none", background:"#fff", minWidth:180,
             }}
           />
-          {/* Publisher pills */}
           <div style={{ display:"flex", gap:4 }}>
             {publishers.map(p => {
               const isActive = filterPub === p;
@@ -283,7 +327,6 @@ export default function PullList() {
             <option value="new">NEW TITLES</option>
             <option value="existing">EXISTING</option>
           </select>
-          {/* View toggle */}
           <div style={{ display:"flex", gap:4, marginLeft:"auto" }}>
             {(["card","list"] as const).map(v => (
               <button key={v} onClick={()=>setView(v)} style={{
@@ -315,26 +358,8 @@ export default function PullList() {
                   {byPub[pub].length} TITLE{byPub[pub].length!==1?"S":""}
                 </div>
               </div>
-              <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(200px,1fr))", gap:8 }}>
-                {byPub[pub].map(s => (
-                  <SeriesCard
-                    key={s.title}
-                    series={s}
-                    issues={data[s.title]||[]}
-                    expanded={expandedId===s.title}
-                    addingFor={addingFor===s.title}
-                    newIssue={addingFor===s.title?newIssue:""}
-                    newNote={addingFor===s.title?newNote:""}
-                    onToggle={()=>setExpandedId(id=>id===s.title?null:s.title)}
-                    onStartAdd={()=>{setAddingFor(s.title);setExpandedId(s.title);}}
-                    onCancelAdd={()=>{setAddingFor(null);setNewIssue("");setNewNote("");}}
-                    onNewIssueChange={setNewIssue}
-                    onNewNoteChange={setNewNote}
-                    onAddIssue={()=>addIssue(s.title)}
-                    onStatusChange={(idx,st)=>updateStatus(s.title,idx,st)}
-                    onRemove={idx=>removeIssue(s.title,idx)}
-                  />
-                ))}
+              <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(230px,1fr))", gap:10 }}>
+                {byPub[pub].map(s => <SeriesCard key={s.title} {...issueProps(s)} />)}
               </div>
             </div>
           ))}
@@ -344,25 +369,7 @@ export default function PullList() {
       {/* ── LIST VIEW ── */}
       {view === "list" && (
         <div style={{ display:"flex", flexDirection:"column", gap:4 }}>
-          {filtered.map(s => (
-            <SeriesRow
-              key={s.title}
-              series={s}
-              issues={data[s.title]||[]}
-              expanded={expandedId===s.title}
-              addingFor={addingFor===s.title}
-              newIssue={addingFor===s.title?newIssue:""}
-              newNote={addingFor===s.title?newNote:""}
-              onToggle={()=>setExpandedId(id=>id===s.title?null:s.title)}
-              onStartAdd={()=>{setAddingFor(s.title);setExpandedId(s.title);}}
-              onCancelAdd={()=>{setAddingFor(null);setNewIssue("");setNewNote("");}}
-              onNewIssueChange={setNewIssue}
-              onNewNoteChange={setNewNote}
-              onAddIssue={()=>addIssue(s.title)}
-              onStatusChange={(idx,st)=>updateStatus(s.title,idx,st)}
-              onRemove={idx=>removeIssue(s.title,idx)}
-            />
-          ))}
+          {filtered.map(s => <SeriesRow key={s.title} {...issueProps(s)} />)}
         </div>
       )}
 
@@ -373,6 +380,24 @@ export default function PullList() {
           letterSpacing:"2px", color:"var(--muted)",
           border:"1.5px dashed var(--border)", borderRadius:8,
         }}>NO TITLES MATCH THIS FILTER</div>
+      )}
+
+      {/* ── FINISHED / WRAPPED APPENDIX ── */}
+      {filteredDone.length > 0 && (
+        <div style={{ marginTop:44, paddingTop:20, borderTop:"2px solid var(--border)" }}>
+          <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:12 }}>
+            <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.95rem", letterSpacing:"3px", color:"var(--muted)" }}>
+              FINISHED / WRAPPED
+            </div>
+            <div style={{ flex:1, height:1, background:"var(--border)" }}/>
+            <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.8rem", letterSpacing:"1.5px", color:"var(--muted)" }}>
+              {filteredDone.length} · not in this month's pulls
+            </div>
+          </div>
+          <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(180px,1fr))", gap:8, opacity:0.85 }}>
+            {filteredDone.map(s => <FinishedCard key={s.title} series={s} />)}
+          </div>
+        </div>
       )}
     </div>
   );
@@ -495,12 +520,21 @@ function IssueList({ issues, onStatusChange, onRemove }: {
   );
 }
 
+// ── Issue metadata line (this month's book) ──────────────────────────────────
+function MetaLine({ s }: { s: Series }) {
+  return (
+    <div style={{ marginTop:4, display:"flex", gap:6, flexWrap:"wrap", alignItems:"baseline" }}>
+      <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.9rem", fontWeight:700, color:"var(--red)", letterSpacing:"0.5px" }}>{s.issue}</span>
+      <span style={{ fontSize:"0.78rem", color:"var(--muted)" }}>{s.volume}</span>
+      {s.price && <span style={{ fontSize:"0.78rem", color:"#16a34a", fontWeight:700 }}>{s.price}</span>}
+    </div>
+  );
+}
+
 // ── Card ──────────────────────────────────────────────────────────────────────
 function SeriesCard(p: SeriesProps) {
   const { series: s, issues, expanded } = p;
   const pc     = pubColors(s.publisher);
-  const cl     = comicLike(s);
-  const svgUrl = getCoverSvgUrl(cl, { width:60, height:90 });
   const latest = issues[issues.length-1];
   const isNew  = s.cadence === "new";
 
@@ -512,41 +546,42 @@ function SeriesCard(p: SeriesProps) {
       display:"flex", flexDirection:"column",
       transition:"box-shadow 0.12s",
     }}>
-      {/* Header */}
-      <div style={{ display:"flex", gap:10, padding:"10px 10px 8px", cursor:"pointer" }} onClick={p.onToggle}>
-        <img src={svgUrl} alt={s.title} width={44} height={66}
-          style={{ borderRadius:3, flexShrink:0, display:"block" }} />
+      <div style={{ display:"flex", gap:12, padding:"12px 12px 10px", cursor:"pointer" }} onClick={p.onToggle}>
+        <CoverImage comic={comicLike(s)} width={72} height={108}
+          style={{ borderRadius:4, flexShrink:0, border:"1px solid var(--border)" }} />
         <div style={{ flex:1, minWidth:0 }}>
-          <div style={{ display:"flex", gap:4, marginBottom:4, flexWrap:"wrap" }}>
+          <div style={{ display:"flex", gap:4, marginBottom:5, flexWrap:"wrap" }}>
             <span style={{
-              fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
-              padding:"1px 6px", borderRadius:3,
-              ...pubBadgeStyle(s.publisher),
+              fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.72rem", letterSpacing:"1px",
+              padding:"1px 6px", borderRadius:3, ...pubBadgeStyle(s.publisher),
             }}>{s.publisher.toUpperCase()}</span>
             <span style={{
-              fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
+              fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.72rem", letterSpacing:"1px",
               padding:"1px 6px", borderRadius:3,
               background: s.type==="mini" ? "#f3f0ff" : "#f0faf0",
               color:       s.type==="mini" ? "#5b4fc8"  : "#16a34a",
             }}>{s.type==="mini" ? "MINI" : "ONGOING"}</span>
             {isNew && (
               <span style={{
-                fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
+                fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.72rem", letterSpacing:"1px",
                 padding:"1px 6px", borderRadius:3, background:"#fef3c7", color:"#b45309",
               }}>NEW</span>
             )}
           </div>
-          <div style={{ fontSize:"0.875rem", fontWeight:700, color:"var(--brown-light)", lineHeight:1.25 }}>
+          <div style={{ fontSize:"0.95rem", fontWeight:700, color:"var(--brown-light)", lineHeight:1.25 }}>
             {s.title}
           </div>
-          {latest && (
-            <div style={{ fontSize:"0.875rem", color: ISSUE_STATUS[latest.status].color, marginTop:3, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"0.5px" }}>
-              #{latest.issueNum} — {ISSUE_STATUS[latest.status].label}
-            </div>
+          <MetaLine s={s} />
+          {s.notes && <div style={{ fontSize:"0.75rem", color:"var(--muted)", marginTop:4, lineHeight:1.35 }}>{s.notes}</div>}
+          {s.url && (
+            <a href={s.url} target="_blank" rel="noopener noreferrer" onClick={e=>e.stopPropagation()}
+              style={{ display:"inline-block", marginTop:6, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.72rem", letterSpacing:"0.5px", color:"#1d6fa4", textDecoration:"none", fontWeight:700 }}>
+              View book ↗
+            </a>
           )}
-          {!latest && (
-            <div style={{ fontSize:"0.875rem", color:"var(--muted)", marginTop:3, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"0.5px" }}>
-              {issues.length} ISSUE{issues.length!==1?"S":""} TRACKED
+          {latest && (
+            <div style={{ fontSize:"0.8rem", color: ISSUE_STATUS[latest.status].color, marginTop:5, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"0.5px" }}>
+              tracked: #{latest.issueNum} — {ISSUE_STATUS[latest.status].label}
             </div>
           )}
         </div>
@@ -555,9 +590,8 @@ function SeriesCard(p: SeriesProps) {
         </div>
       </div>
 
-      {/* Expanded */}
       {expanded && (
-        <div style={{ padding:"0 10px 10px", borderTop:"1px solid var(--border)" }}>
+        <div style={{ padding:"0 12px 12px", borderTop:"1px solid var(--border)" }}>
           <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", paddingTop:8, marginBottom:4 }}>
             <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px", color:"var(--muted)" }}>
               ISSUES — {issues.length}
@@ -588,34 +622,38 @@ function SeriesCard(p: SeriesProps) {
 function SeriesRow(p: SeriesProps) {
   const { series: s, issues, expanded } = p;
   const pc     = pubColors(s.publisher);
-  const cl     = comicLike(s);
-  const svgUrl = getCoverSvgUrl(cl, { width:32, height:48 });
   const latest = issues[issues.length-1];
   const isNew  = s.cadence === "new";
 
   return (
     <div style={{ background:"#fff", border:"1.5px solid var(--border)", borderLeft:`3px solid ${pc.bg}`, borderRadius:6 }}>
       <div style={{ display:"flex", alignItems:"center", gap:10, padding:"8px 12px", cursor:"pointer" }} onClick={p.onToggle}>
-        <img src={svgUrl} alt={s.title} width={28} height={42}
-          style={{ borderRadius:2, flexShrink:0, display:"block" }} />
+        <CoverImage comic={comicLike(s)} width={40} height={60}
+          style={{ borderRadius:3, flexShrink:0, border:"1px solid var(--border)" }} />
         <div style={{ flex:1, minWidth:0 }}>
           <div style={{ display:"flex", gap:5, alignItems:"baseline", flexWrap:"wrap" }}>
-            <span style={{ fontSize:"0.875rem", fontWeight:700, color:"var(--brown-light)" }}>{s.title}</span>
-            <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:pc.bg }}>{s.publisher.toUpperCase()}</span>
+            <span style={{ fontSize:"0.9rem", fontWeight:700, color:"var(--brown-light)" }}>{s.title}</span>
+            <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.72rem", letterSpacing:"1px", color:pc.bg }}>{s.publisher.toUpperCase()}</span>
             <span style={{
-              fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px",
+              fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.72rem", letterSpacing:"1px",
               color: s.type==="mini" ? "#5b4fc8" : "#16a34a",
             }}>{s.type==="mini" ? "MINI" : "ONGOING"}</span>
-            {isNew && <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"#b45309" }}>NEW</span>}
+            {isNew && <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.72rem", letterSpacing:"1px", color:"#b45309" }}>NEW</span>}
           </div>
-          {latest && (
-            <div style={{ fontSize:"0.875rem", color:ISSUE_STATUS[latest.status].color, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"0.5px", marginTop:1 }}>
-              Latest: #{latest.issueNum} — {ISSUE_STATUS[latest.status].label}
-              {latest.notes && <span style={{ color:"var(--muted)", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontStyle:"italic", marginLeft:6 }}>{latest.notes}</span>}
-            </div>
-          )}
+          <div style={{ display:"flex", gap:6, alignItems:"baseline", flexWrap:"wrap", marginTop:1 }}>
+            <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.82rem", fontWeight:700, color:"var(--red)" }}>{s.issue}</span>
+            <span style={{ fontSize:"0.74rem", color:"var(--muted)" }}>{s.volume}</span>
+            {s.price && <span style={{ fontSize:"0.74rem", color:"#16a34a", fontWeight:700 }}>{s.price}</span>}
+            {s.notes && <span style={{ fontSize:"0.74rem", color:"var(--muted)", fontStyle:"italic" }}>— {s.notes}</span>}
+            {s.url && (
+              <a href={s.url} target="_blank" rel="noopener noreferrer" onClick={e=>e.stopPropagation()}
+                style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.7rem", letterSpacing:"0.5px", color:"#1d6fa4", textDecoration:"none", fontWeight:700 }}>
+                View ↗
+              </a>
+            )}
+          </div>
         </div>
-        <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--muted)", marginRight:6 }}>
+        <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.72rem", letterSpacing:"1px", color:"var(--muted)", marginRight:6 }}>
           {issues.length > 0 ? `${issues.length} ISS` : ""}
         </div>
         <div style={{ color:"var(--muted)", fontSize:"0.875rem" }}>{expanded ? "▲" : "▼"}</div>
@@ -645,6 +683,28 @@ function SeriesRow(p: SeriesProps) {
           <IssueList issues={issues} onStatusChange={p.onStatusChange} onRemove={p.onRemove} />
         </div>
       )}
+    </div>
+  );
+}
+
+// ── Finished / wrapped appendix card ─────────────────────────────────────────
+function FinishedCard({ series: s }: { series: Series }) {
+  const pc = pubColors(s.publisher);
+  return (
+    <div style={{
+      background:"var(--surface)", border:"1.5px solid var(--border)",
+      borderLeft:`3px solid ${pc.bg}`, borderRadius:6,
+      display:"flex", gap:9, alignItems:"center", padding:"8px 10px",
+    }}>
+      <CoverImage comic={comicLike(s)} width={34} height={51}
+        style={{ borderRadius:3, flexShrink:0, border:"1px solid var(--border)", filter:"grayscale(0.4)" }} />
+      <div style={{ flex:1, minWidth:0 }}>
+        <div style={{ fontSize:"0.82rem", fontWeight:700, color:"var(--brown-light)", lineHeight:1.2 }}>{s.title}</div>
+        <div style={{ display:"flex", gap:5, alignItems:"baseline", marginTop:2 }}>
+          <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.68rem", letterSpacing:"1px", color:pc.bg }}>{s.publisher.toUpperCase()}</span>
+          <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.64rem", letterSpacing:"1px", color:"#16a34a" }}>COMPLETE</span>
+        </div>
+      </div>
     </div>
   );
 }
