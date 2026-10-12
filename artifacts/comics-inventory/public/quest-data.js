@@ -985,7 +985,7 @@ window.QUEST_DATA = {
    "code": "BDR-TOP",
    "status": "Signed",
    "labeledAs": "",
-   "rows": 83,
+   "rows": 82,
    "vcap": 240,
    "dupes": 4,
    "clones": 0
