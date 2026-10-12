@@ -137,13 +137,10 @@ def main():
         archive(js)
     step(2, "DATA-FIX EXPORT (apply Fandom links)", datafix)
 
-    # 3 — fill blank creators/date on books that already have a Fandom cover
-    def fandom_fill():
-        if run([PY, os.path.join(ROOT, "brb_fill_from_fandom.py"), "--no-deploy"]):
-            raise RuntimeError("brb_fill_from_fandom failed")
-    step(3, "FANDOM FILL (creators + dates from Fandom pages)", fandom_fill)
+    # Enrichment runs most-authoritative first so later non-destructive fills
+    # can't degrade a better source: user links (above) -> GCD catalog -> Fandom.
 
-    # 4 — fill whatever is left from the local GCD database
+    # 3 — fill from the local GCD database (authoritative catalog, blanks + union)
     def gcd_fill():
         if not os.path.exists(os.path.join(ROOT, "gcd_local.sqlite")):
             print("No gcd_local.sqlite — skipping GCD fill.")
@@ -153,7 +150,13 @@ def main():
         # (those are logged to credits_gcd_changes.csv for a manual review pass).
         if run([PY, os.path.join(ROOT, "brb_credits_gcd.py"), "--no-conflicts"]):
             raise RuntimeError("brb_credits_gcd failed")
-    step(4, "GCD FILL (creators from GCD for the rest)", gcd_fill)
+    step(3, "GCD FILL (authoritative catalog — blanks + union)", gcd_fill)
+
+    # 4 — Fandom fills what GCD couldn't reach (not-in-GCD books) + unions
+    def fandom_fill():
+        if run([PY, os.path.join(ROOT, "brb_fill_from_fandom.py"), "--no-deploy"]):
+            raise RuntimeError("brb_fill_from_fandom failed")
+    step(4, "FANDOM FILL (gap-filler for books GCD can't reach)", fandom_fill)
 
     # 5 — regenerate + deploy, once
     banner(5, "DEPLOY (brb.py: validate -> regen -> commit -> push)")

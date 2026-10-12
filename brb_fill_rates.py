@@ -50,6 +50,11 @@ def _latest_validated():
 
 def _load(path):
     xl = pd.ExcelFile(path)
+    # Prefer the newest '✅ Clean Inventory <stamp>' tab (what gen_data.mjs reads),
+    # so fill rates reflect the real inventory, not the Purged/other tab.
+    inv = [n for n in xl.sheet_names if str(n).startswith("✅ Clean Inventory")]
+    if inv:
+        return xl.parse(inv[-1]), inv[-1]
     for name in xl.sheet_names:
         df = xl.parse(name)
         if "Title" in df.columns and "Issue #" in df.columns:

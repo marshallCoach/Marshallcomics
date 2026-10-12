@@ -524,8 +524,17 @@ def check_similar_titles(df):
 # ── Sheet loader ─────────────────────────────────────────────────────────────
 
 def _load_inventory_sheet(path: str) -> pd.DataFrame:
-    """Load the first sheet that contains all REQUIRED_COLUMNS; fall back to sheet 0."""
+    """Load the canonical inventory sheet. Prefer the newest '✅ Clean Inventory
+    <stamp>' tab (the exact sheet gen_data.mjs reads — invSheets[-1]); only then
+    fall back to the first sheet with all REQUIRED_COLUMNS, then sheet 0. Without
+    this, the '🗑 Purged — Hallucinations' tab (which also has the columns and
+    sorts earlier) was validated instead of the real 11k-row inventory."""
     xl = pd.ExcelFile(path)
+    inv = [n for n in xl.sheet_names if str(n).startswith("✅ Clean Inventory")]
+    if inv:
+        name = inv[-1]
+        print(f"     (using sheet '{name}')")
+        return xl.parse(name)
     for name in xl.sheet_names:
         df = xl.parse(name)
         if all(c in df.columns for c in REQUIRED_COLUMNS):
