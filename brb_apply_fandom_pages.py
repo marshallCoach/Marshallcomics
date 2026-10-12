@@ -193,7 +193,11 @@ def main():
     import openpyxl
     src = newest_xlsx()
     wb = openpyxl.load_workbook(src)
-    ws = next(w for w in wb.worksheets if w.title.startswith("✅ Clean Inventory"))
+    # Write to the LAST "✅ Clean Inventory" tab — the newest snapshot, the same
+    # one gen_data.mjs reads (invSheets[-1]). Picking the first tab wrote fixes to
+    # a stale snapshot the app never reads, which is why edits went invisible.
+    _inv = [w for w in wb.worksheets if w.title.startswith("✅ Clean Inventory")]
+    ws = _inv[-1]
     H = [str(c.value).strip() if c.value is not None else "" for c in ws[1]]
 
     def ci(n):
