@@ -1,5 +1,5 @@
 {
- "source": "comics_inventory_1210_1933.xlsx",
+ "source": "comics_inventory_1210_2011.xlsx",
  "capturedAt": "2026-10-12",
  "rows": [
   {
@@ -189,15 +189,6 @@
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
-   "signed": false
-  },
-  {
-   "title": "Avengers Annual",
-   "issue": "2",
-   "year": "1968",
-   "volume": "1",
-   "box": "AT CGC — Roy Thomas SS",
-   "key": true,
    "signed": false
   },
   {

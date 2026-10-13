@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_1210_1933.xlsx  |  Generated: 2026-10-12
+// Source: comics_inventory_1210_2011.xlsx  |  Generated: 2026-10-13
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -47,7 +47,7 @@ export const DATA3: {
     cc:      CatalogComic[];
   };
 } = {
-  generatedAt: "2026-10-12",
+  generatedAt: "2026-10-13",
   comics: [
   {
     Title: `52`, Issue: `1`, Publisher: `DC`,
@@ -17055,7 +17055,7 @@ DeFalco era Avengers.`,
     Content: `New Avengers Annual #2. Brian Michael Bendis. 2011. Bendis / Pagulayan.`, Platform: `WHATNOT`,
     Sales_Data: `NM ~$8. Modern Marvel.`, Terrificon: ``,
     Cover_Artist: `John Buscema`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
-    Imprint: `Marvel`, Box: `AT CGC — Roy Thomas SS`,
+    Imprint: `Marvel`, Box: `CC10`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `2709`,
     Cover_Price: ``,
@@ -233959,7 +233959,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Location: ``, Code: ``, labeledAs: ``, Notes: ``, DateAdded: `2026-06-29`,
   },
   {
-    Num: `BOX AT CGC — Roy Thomas SS`, Comics: 1, Keys: 1,
+    Num: `BOX CC10`, Comics: 1, Keys: 1,
     Signed: 0, YearRange: `1968-1968`,
     Label: ``, FirstBook: `Avengers Annual 2`, LastBook: `Avengers Annual 2`,
     Location: ``, Code: ``, labeledAs: ``, Notes: ``, DateAdded: `May 18, 2026`,
@@ -256719,7 +256719,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Key: `YES`, Key_Reason: `Tier 1 #5 — CGC-graded/CGC-bound copy; graded status qualifies the issue as a key.`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Roy Thomas`,
-    Value_NM: `8`, Start_Bid: `2`, Box: `AT CGC — Roy Thomas SS`,
+    Value_NM: `8`, Start_Bid: `2`, Box: `CC10`,
     Notes: ``, SortPile: ``,
     CoverNotes: ``, Flag: ``,
   },
@@ -269382,6 +269382,16 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Signed: `NO`, Signed_By: ``,
     Era: `Copper`, Writer: `Bob Harras`,
     Value_NM: `5`, Start_Bid: `1`, Box: `CC2`,
+    Notes: ``, SortPile: ``,
+    CoverNotes: ``, Flag: ``,
+  },
+  {
+    Title: `Avengers Annual`, Issue: `2`, Publisher: `Marvel`,
+    Year: `1968`, Volume: `1`, Cover_Artist: `John Buscema`,
+    Key: `YES`, Key_Reason: `Tier 1 #5 — CGC-graded/CGC-bound copy; graded status qualifies the issue as a key.`,
+    Signed: `NO`, Signed_By: ``,
+    Era: `Modern`, Writer: `Roy Thomas`,
+    Value_NM: `8`, Start_Bid: `2`, Box: `CC10`,
     Notes: ``, SortPile: ``,
     CoverNotes: ``, Flag: ``,
   },
