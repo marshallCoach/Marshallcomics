@@ -473,18 +473,18 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
               >
                 <CoverImage
                   comic={c}
-                  width={100}
-                  height={152}
+                  width={150}
+                  height={225}
                   onClick={large => setCarouselModal({ comic: c, large })}
                   style={{ borderRadius:6, boxShadow:"0 4px 14px rgba(0,0,0,0.18)" }}
                 />
                 <button
                   onClick={() => onNavigate("coverreview", { title: c.Title })}
                   title={`See every ${c.Title} cover`}
-                  style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--muted2)", lineHeight:1.2, marginTop:5, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap", width:100, textAlign:"center", background:"none", border:"none", padding:0, cursor:"pointer", textDecoration:"underline" }}>
+                  style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--muted2)", lineHeight:1.2, marginTop:5, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap", width:150, textAlign:"center", background:"none", border:"none", padding:0, cursor:"pointer", textDecoration:"underline" }}>
                   {c.Title}
                 </button>
-                <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:"var(--muted)", textAlign:"center", width:100 }}>
+                <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:"var(--muted)", textAlign:"center", width:150 }}>
                   {c.Issue}
                 </div>
               </div>

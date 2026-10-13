@@ -71,7 +71,13 @@ export default function BoxLabels() {
     return list;
   }, [filter, pubFilter, todo, done, enriched]);
 
-  const groups = useMemo(() => chunk(displayed, 10), [displayed]);
+  // Spotlight the fullest boxes (>180 comics) in a collapsible section on top.
+  const oversize = useMemo(
+    () => displayed.filter(b => Number(b.Comics) > 180).sort((a, b) => Number(b.Comics) - Number(a.Comics)),
+    [displayed]);
+  const groups = useMemo(
+    () => (oversize.length ? [oversize, ...chunk(displayed, 10)] : chunk(displayed, 10)),
+    [oversize, displayed]);
 
   const allCollapsed = collapsed.size === groups.length && groups.length > 0;
   const allExpanded  = collapsed.size === 0;
@@ -217,6 +223,7 @@ export default function BoxLabels() {
 
         {groups.map((group, gi) => {
           const isCollapsed = collapsed.has(gi);
+          const isOversize = oversize.length > 0 && gi === 0;
           const firstNum = parseInt(group[0].Num.replace(/\D/g, ""), 10);
           const lastNum  = parseInt(group[group.length - 1].Num.replace(/\D/g, ""), 10);
           const doneInGroup = group.filter(b => checked.has(b.Num)).length;
@@ -247,8 +254,10 @@ export default function BoxLabels() {
                 }}>▼</span>
 
                 {/* Range label */}
-                <span style={{ fontSize: "0.875rem", letterSpacing: "3px", color: "var(--text2)", flex: 1, textAlign: "left" }}>
-                  BOXES {String(firstNum).padStart(2, "0")} – {String(lastNum).padStart(2, "0")}
+                <span style={{ fontSize: "0.875rem", letterSpacing: "3px", color: isOversize ? "#b45309" : "var(--text2)", flex: 1, textAlign: "left" }}>
+                  {isOversize
+                    ? "⚠ OVERSIZE BOXES · >180 COMICS"
+                    : `BOXES ${String(firstNum).padStart(2, "0")} – ${String(lastNum).padStart(2, "0")}`}
                 </span>
 
                 {/* Progress badge */}

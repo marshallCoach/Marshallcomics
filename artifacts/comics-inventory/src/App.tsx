@@ -51,7 +51,7 @@ import VolumeConfirm from "@/pages/VolumeConfirm";
 import OfflineCovers from "@/components/OfflineCovers";
 import FlaggedCount from "@/components/FlaggedCount";
 import PasswordGate from "@/components/PasswordGate";
-import { BookOpen, Boxes, Film, Sparkles, ClipboardList, Microscope, DollarSign, Archive } from "lucide-react";
+import { Home, BookOpen, Boxes, Film, Sparkles, ClipboardList, Microscope, DollarSign, Archive } from "lucide-react";
 
 type TabId =
   | "summary" | "everything" | "collection" | "boxkeys" | "stats" | "runs" | "runsvolumes" | "recent" | "releasetimeline" | "dataview"
@@ -72,10 +72,16 @@ export type NavParams = {
 
 const NAV = [
   {
+    id: "home",
+    label: "Home",
+    tabs: [
+      { id: "summary",     label: "Home" },
+    ],
+  },
+  {
     id: "inventory",
     label: "Inventory",
     tabs: [
-      { id: "summary",     label: "Home" },
       { id: "everything",  label: "Every Book" },
       { id: "runsvolumes", label: "Runs & Volumes" },
       { id: "stats",       label: "Stats" },
@@ -166,6 +172,7 @@ const NAV = [
 type SectionId = (typeof NAV)[number]["id"];
 
 const SECTION_ICONS: Record<SectionId, React.ComponentType<{ size?: number }>> = {
+  home: Home,
   inventory: BookOpen,
   pulllist: ClipboardList,
   boxes: Boxes,
@@ -202,7 +209,7 @@ function useCountdown(target: Date) {
 }
 
 export default function App() {
-  const [activeSection, setActiveSection] = useState<SectionId>("inventory");
+  const [activeSection, setActiveSection] = useState<SectionId>("home");
   const [activeTab,     setActiveTab]     = useState<TabId>("summary");
   const [navParams,     setNavParams]     = useState<NavParams>({});
   const [showSearch,    setShowSearch]    = useState(false);
