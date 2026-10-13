@@ -139,7 +139,7 @@ export default function LocationCheck() {
                             const m = marks[id]; const loc = m?.loc;
                             return (
                               <div key={id} className={`locw-card ${loc ? "loc-" + loc : ""}`}>
-                                <CoverImage comic={{ Title: r.title, Issue: r.issue, Year: r.year }} width={132} height={198} />
+                                <CoverImage comic={{ Title: r.title, Issue: r.issue, Year: r.year }} width={150} height={225} />
                                 <div className="locw-book">
                                   <span className="bt">{r.title} <b>#{r.issue || "—"}</b></span>
                                   <span className="by">{r.year}{r.key ? " · ★ key" : ""}{r.signed ? " · ✍ signed" : ""}</span>
@@ -213,7 +213,7 @@ const css = `
 .locw-card.loc-cgc{border-top-color:#1d6fa4;background:rgba(29,111,164,.06)}
 .locw-card.loc-presser{border-top-color:#b4690e;background:rgba(180,105,14,.06)}
 .locw-card.loc-unknown{border-top-color:var(--red);background:rgba(200,16,46,.05)}
-.locw-card img{width:132px;height:198px;object-fit:cover;border-radius:6px;align-self:center;background:#1a1628;box-shadow:0 3px 10px rgba(0,0,0,.22)}
+.locw-card img{width:150px;height:225px;object-fit:cover;border-radius:6px;align-self:center;background:#1a1628;box-shadow:0 3px 10px rgba(0,0,0,.22)}
 .locw-book{display:flex;flex-direction:column;min-width:0}
 .locw-book .bt{font-size:.98rem;line-height:1.2}
 .locw-book .by{font-size:.76rem;color:var(--muted);margin-top:2px}

@@ -718,15 +718,15 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                   const dim = selectedTitle ? c.Title !== selectedTitle : false;
                   return (
                     <figure key={i} onClick={() => setSelectedTitle(selectedTitle === c.Title ? null : c.Title)}
-                      style={{ margin: 0, flex: "0 0 auto", width: 120, cursor: "pointer", textAlign: "center", opacity: dim ? 0.28 : 1, transition: "opacity .15s" }}>
-                      <CoverImage comic={c} width={120} height={180} objectFit="contain"
+                      style={{ margin: 0, flex: "0 0 auto", width: 150, cursor: "pointer", textAlign: "center", opacity: dim ? 0.28 : 1, transition: "opacity .15s" }}>
+                      <CoverImage comic={c} width={150} height={225} objectFit="contain"
                         style={{ borderRadius: 3, background: "var(--surface2)", border: "1px solid var(--border)" }} />
                       <figcaption title={`${c.Title} #${c.Issue}`}
                         style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.78rem", fontWeight: 600, color: "var(--red)", marginTop: 5, lineHeight: 1.2 }}>
                         #{c.Issue}
                       </figcaption>
                       <figcaption title={c.Title}
-                        style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.72rem", color: "var(--muted)", lineHeight: 1.2, maxWidth: 120, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+                        style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.72rem", color: "var(--muted)", lineHeight: 1.2, maxWidth: 150, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
                         {c.Title}
                       </figcaption>
                     </figure>

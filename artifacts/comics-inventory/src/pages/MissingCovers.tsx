@@ -184,7 +184,7 @@ export default function MissingCovers() {
                   return (
                     <button key={bookId(c) + idx} className="mc-card" onClick={() => setSolo(idx)}>
                       <div className="mc-cov">
-                        <CoverImage comic={c} width={110} height={165} objectFit="contain" />
+                        <CoverImage comic={c} width={150} height={225} objectFit="contain" />
                         {q && <span className="mc-queued">✓ linked</span>}
                         {isKey(c) && <span className="mc-key">★</span>}
                       </div>
@@ -320,7 +320,7 @@ const CSS = `
 .mc-thead span{font-weight:600;letter-spacing:.5px;color:var(--muted,#888)}
 .mc-vgroup{margin-bottom:16px}
 .mc-vhead{font-size:.82rem;font-weight:700;letter-spacing:1.2px;color:var(--muted2,#bbb);margin-bottom:9px}
-.mc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(128px,1fr));gap:12px}
+.mc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
 .mc-card{text-align:left;background:var(--surface,#1a1a22);border:1px solid var(--border,#2c2c38);border-radius:10px;padding:9px;cursor:pointer;color:inherit;font:inherit;transition:border-color .12s}
 .mc-card:hover{border-color:var(--red,#c8102e)}
 .mc-cov{position:relative;display:flex;justify-content:center;background:#111;border-radius:6px;overflow:hidden;margin-bottom:7px}

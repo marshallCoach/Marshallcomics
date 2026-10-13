@@ -158,7 +158,7 @@ function RunCard({ r }: { r: Run }) {
           const c = r.byNum.get(n);
           return c ? (
             <figure key={n} className="rv-cell">
-              <CoverImage comic={c} width={100} height={150} objectFit="contain" style={{ borderRadius: 3, background: "#0d0d12", border: "1px solid var(--border,#2c2c38)" }} />
+              <CoverImage comic={c} width={150} height={225} objectFit="contain" style={{ borderRadius: 3, background: "#0d0d12", border: "1px solid var(--border,#2c2c38)" }} />
               <figcaption className="rv-cn">#{fmtIss(n)}</figcaption>
             </figure>
           ) : (
@@ -210,9 +210,9 @@ border-radius:6px;padding:6px 9px;margin-top:9px}
 padding:2px 7px;margin-right:4px;font-variant-numeric:tabular-nums}
 .rv-mchip.early{background:#5a1e1e;border-color:#8a2a2a;color:#ffb3b3;font-weight:700}
 .rv-strip{display:flex;gap:8px;overflow-x:auto;margin-top:12px;padding-bottom:8px}
-.rv-cell{margin:0;flex:0 0 auto;width:100px;text-align:center}
+.rv-cell{margin:0;flex:0 0 auto;width:150px;text-align:center}
 .rv-cn{font-size:.66rem;color:var(--muted2,#bbb);margin-top:3px}
-.rv-gap{width:100px;height:150px;border:1.5px dashed #7a3a3a;border-radius:4px;display:flex;flex-direction:column;
+.rv-gap{width:150px;height:225px;border:1.5px dashed #7a3a3a;border-radius:4px;display:flex;flex-direction:column;
 align-items:center;justify-content:center;color:#e08a8a;font-size:.72rem;font-weight:700;gap:2px;background:rgba(120,40,40,.12)}
 .rv-gap span{font-size:.56rem;font-weight:500;letter-spacing:.5px;opacity:.8}
 .rv-tail{width:auto;display:flex;align-items:center;color:var(--muted,#888);font-size:.75rem;padding:0 6px}

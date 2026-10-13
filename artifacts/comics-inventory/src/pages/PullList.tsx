@@ -358,7 +358,7 @@ export default function PullList() {
                   {byPub[pub].length} TITLE{byPub[pub].length!==1?"S":""}
                 </div>
               </div>
-              <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(230px,1fr))", gap:10 }}>
+              <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(170px,1fr))", gap:10 }}>
                 {byPub[pub].map(s => <SeriesCard key={s.title} {...issueProps(s)} />)}
               </div>
             </div>
@@ -394,7 +394,7 @@ export default function PullList() {
               {filteredDone.length} · not in this month's pulls
             </div>
           </div>
-          <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(180px,1fr))", gap:8, opacity:0.85 }}>
+          <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(170px,1fr))", gap:8, opacity:0.85 }}>
             {filteredDone.map(s => <FinishedCard key={s.title} series={s} />)}
           </div>
         </div>
@@ -547,7 +547,7 @@ function SeriesCard(p: SeriesProps) {
       transition:"box-shadow 0.12s",
     }}>
       <div style={{ display:"flex", gap:12, padding:"12px 12px 10px", cursor:"pointer" }} onClick={p.onToggle}>
-        <CoverImage comic={comicLike(s)} width={72} height={108}
+        <CoverImage comic={comicLike(s)} width={150} height={225}
           style={{ borderRadius:4, flexShrink:0, border:"1px solid var(--border)" }} />
         <div style={{ flex:1, minWidth:0 }}>
           <div style={{ display:"flex", gap:4, marginBottom:5, flexWrap:"wrap" }}>
