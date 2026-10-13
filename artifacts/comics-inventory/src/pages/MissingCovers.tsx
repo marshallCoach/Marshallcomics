@@ -32,6 +32,7 @@ export default function MissingCovers() {
   const [solo, setSolo] = useState<number | null>(null);   // index into `shown`
   const [pub, setPub] = useState("all");
   const [keysOnly, setKeysOnly] = useState(false);
+  const [sort, setSort] = useState<"az" | "count">("az");
   const [queued, setQueued] = useState<Set<string>>(() => loadQueued());
 
   useEffect(() => { coversReady().then(() => setReady(true)); }, []);
@@ -83,6 +84,13 @@ export default function MissingCovers() {
       vols: [...vmap.entries()].map(([vol, items]) => ({ vol, items })),
     }));
   }, [shown]);
+
+  // "Most issues" sorts titles by how many missing books they hold — the biggest
+  // runs first, since one Fandom link fills every issue of a title at once, so
+  // the top titles are the highest-leverage links to open. Default stays A→Z.
+  const orderedGroups = useMemo(
+    () => (sort === "count" ? [...grouped].sort((a, b) => b.total - a.total) : grouped),
+    [grouped, sort]);
 
   // Export the saved image/Fandom links as data-fixes-<date>.json — same store
   // and format as the Data Fix page, so brb_apply_fandom_pages.py picks it up.
@@ -165,12 +173,15 @@ export default function MissingCovers() {
           <button key={p} className={`mc-chip${pub === p ? " on" : ""}`} onClick={() => setPub(p)}>{p} ({n})</button>
         ))}
         <button className={`mc-chip key${keysOnly ? " on" : ""}`} onClick={() => setKeysOnly(k => !k)}>★ Keys only</button>
+        <span className="mc-sortsep" />
+        <button className={`mc-chip${sort === "az" ? " on" : ""}`} onClick={() => setSort("az")}>A–Z</button>
+        <button className={`mc-chip${sort === "count" ? " on" : ""}`} onClick={() => setSort("count")}>Most issues</button>
       </div>
 
       {!ready && <div className="mc-empty">Loading covers…</div>}
       {ready && shown.length === 0 && <div className="mc-empty">No missing covers here — nice.</div>}
 
-      {ready && grouped.map(g => (
+      {ready && orderedGroups.map(g => (
         <section key={g.title} className="mc-tgroup">
           <div className="mc-thead">{g.title.toUpperCase()} <span>· {g.total} book{g.total === 1 ? "" : "s"}</span></div>
           {g.vols.map(vg => (
@@ -310,7 +321,8 @@ const CSS = `
 .mc-reset:disabled{opacity:.4;cursor:default}
 .mc-count{font-size:1.9rem;font-weight:800;color:var(--red,#c8102e);text-align:right;line-height:1;font-variant-numeric:tabular-nums}
 .mc-count span{display:block;font-size:.6rem;letter-spacing:1px;color:var(--muted,#888);text-transform:uppercase;font-weight:600;margin-top:3px}
-.mc-filters{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 16px}
+.mc-filters{display:flex;gap:7px;flex-wrap:wrap;align-items:center;margin:10px 0 16px}
+.mc-sortsep{width:1px;align-self:stretch;background:var(--border,#2c2c38);margin:2px 3px}
 .mc-chip{font-size:.76rem;border:1px solid var(--border,#2c2c38);background:var(--surface2,#26262f);color:var(--muted2,#bbb);border-radius:20px;padding:5px 12px;cursor:pointer}
 .mc-chip.on{background:var(--red,#c8102e);border-color:var(--red,#c8102e);color:#fff}
 .mc-chip.key.on{background:#8a6000;border-color:#8a6000}
