@@ -38,6 +38,8 @@ export default function LocationCheck() {
     try { return JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch { return {}; }
   });
   const [filter, setFilter] = useState<"all" | "todo" | "done">("all");
+  // The big "Unknown — needs reassignment" pile is hidden by default; toggle to show it.
+  const [showUnknown, setShowUnknown] = useState(false);
 
   const save = (next: Record<string, Mark>) => {
     try { localStorage.setItem(KEY, JSON.stringify(next)); } catch { /* ignore */ }
@@ -85,6 +87,9 @@ export default function LocationCheck() {
                 {f === "all" ? "All" : f === "todo" ? "To do" : "Handled"}
               </button>
             ))}
+            <button className={showUnknown ? "on" : ""} onClick={() => setShowUnknown(s => !s)}>
+              {showUnknown ? "Hide unknown" : "Show unknown"}
+            </button>
             <button className="locw-reset" onClick={reset}>Reset</button>
           </div>
         </div>
@@ -92,6 +97,7 @@ export default function LocationCheck() {
       </div>
 
       {GROUPS.map(g => {
+        if (g.title.startsWith("Unknown") && !showUnknown) return null;
         // Keep the ORIGINAL ROWS index as the stable mark id, so saved
         // confirmations survive the regrouping.
         const items = ROWS.map((r, i) => ({ r, i })).filter(x => g.test(x.r.box));

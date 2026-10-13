@@ -106,6 +106,7 @@ const NAV = [
       { id: "boxquest",    label: "Box Quest" },
       { id: "boxmap",      label: "Box Map" },
       { id: "hunting",     label: "Box Hunt" },
+      { id: "locationcheck", label: "Where Is It?" },
     ],
   },
   {
@@ -157,7 +158,6 @@ const NAV = [
       { id: "cgc",          label: "CGC" },
       { id: "signings",     label: "Signings" },
       { id: "actionplan",   label: "Action Plan" },
-      { id: "locationcheck", label: "Where Is It?" },
       { id: "orgpath",      label: "Org Path" },
       { id: "volumeconfirm", label: "Volume Confirm" },
       { id: "titlefixes",   label: "Title Fixes" },

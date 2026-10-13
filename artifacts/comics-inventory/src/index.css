@@ -205,6 +205,12 @@ body {
   .header-social { display: none; }
   .search-btn-label { display: none; }
   .search-kbd { display: none; }
+  .offline-covers-btn { display: none; }      /* long label — drop first on tablet/phone */
+  .app-header { gap: 10px; overflow-x: clip; }
+  .header-stats { gap: 12px; min-width: 0; overflow: hidden; }
+}
+@media (max-width: 560px) {
+  .header-stats { display: none; }            /* reclaim the center so flagged + search stay on-screen */
 }
 @media (max-width: 600px) {
   .event-banner { top: 0; }

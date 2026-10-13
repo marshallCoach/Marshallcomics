@@ -55,14 +55,23 @@ function computeUpdateDeltas(): string[] {
   return deltas;
 }
 
-const LAST_UPDATE_DATE = formatGeneratedDate(DATA.generatedAt);
+// Deploy stamp — injected at build time (vite define), so the banner is live on
+// every deploy to production instead of a hardcoded date + feature list.
+const BUILD_STAMP   = (typeof __BUILD_TIME__ !== "undefined" && __BUILD_TIME__) ? __BUILD_TIME__ : DATA.generatedAt;
+const DEPLOY_SHA    = (typeof __GIT_SHA__    !== "undefined" && __GIT_SHA__)    ? __GIT_SHA__    : "";
+const DEPLOY_COMMIT = (typeof __GIT_COMMIT__ !== "undefined" && __GIT_COMMIT__) ? __GIT_COMMIT__ : "";
+const LAST_UPDATE_DATE = (() => {
+  const d = new Date(BUILD_STAMP);
+  return isNaN(d.getTime())
+    ? formatGeneratedDate(DATA.generatedAt)
+    : d.toLocaleString("en-US", { month: "short", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit" });
+})();
 const UPDATE_DELTAS    = computeUpdateDeltas();
 const INTERFACE_UPDATES = [
-  `Data refresh — ${totalComics.toLocaleString()} comics · ${totalBoxes} boxes · ${keyCount.toLocaleString()} keys · ${signedCount} signed`,
-  "Global search added — press ⌘K / Ctrl+K from anywhere to search all comics, boxes, and pages",
-  "Comic detail drawer — click any book to see full details, values, signing info, and Comic Vine link",
-  "Runs page updated — grouped by title + volume, completion % shown, legacy issue format supported",
-  "Touch ID / Face ID / Windows Hello login — set up on first password entry",
+  DEPLOY_COMMIT ? `This deploy — ${DEPLOY_COMMIT}${DEPLOY_SHA ? ` (${DEPLOY_SHA})` : ""}` : `Data refresh — ${totalComics.toLocaleString()} comics · ${totalBoxes} boxes`,
+  `${totalComics.toLocaleString()} comics · ${totalBoxes} boxes · ${keyCount.toLocaleString()} keys · ${signedCount} signed`,
+  "Global search — press ⌘K / Ctrl+K to search comics, boxes, and pages",
+  "Comic detail drawer — click any book for full details, values, and signing info",
 ];
 // ── Duplicate stats (same logic as Duplicates page) ──────────────────────────
 const DUP_STATS = (() => {
@@ -403,8 +412,10 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
     }
   }
 
-  const [bannerClosed, setBannerClosed] = useState(() => localStorage.getItem("mc_update_banner_closed") === "1");
-  function closeBanner() { localStorage.setItem("mc_update_banner_closed", "1"); setBannerClosed(true); }
+  // Dismissal is keyed to the deploy id, so each new deploy re-shows the banner.
+  const DEPLOY_ID = DEPLOY_SHA || BUILD_STAMP;
+  const [bannerClosed, setBannerClosed] = useState(() => localStorage.getItem("mc_update_banner_closed") === DEPLOY_ID);
+  function closeBanner() { localStorage.setItem("mc_update_banner_closed", DEPLOY_ID); setBannerClosed(true); }
 
   // Random covers carousel — 10 different comics each mount
   const carouselComics = useMemo(() => {

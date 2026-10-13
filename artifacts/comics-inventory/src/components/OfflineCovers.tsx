@@ -49,6 +49,7 @@ export default function OfflineCovers() {
 
   return (
     <button
+      className="offline-covers-btn"
       onClick={() => state === "idle" && save()}
       disabled={state === "loading" || state === "caching"}
       title="Download all cover images so they display without a connection (e.g. on a plane)"
