@@ -156,13 +156,13 @@ export default function Everything({
         />
       </div>
     )},
-    { key:"title",     label:"Title",     defaultWidth:220, sort:(a,b)=>a.Title.localeCompare(b.Title), cell:r=>{
+    { key:"title",     label:"Title",     defaultWidth:240, sort:(a,b)=>a.Title.localeCompare(b.Title), cell:r=>{
       const fk = comicFlagKey(r.Title, r.Issue || "", r.Box || "");
       return (
         <span style={{ display:"flex", alignItems:"center", gap:5 }}>
           <span style={{ display:"flex", flexDirection:"column", gap:1 }}>
             <span style={{ display:"flex", alignItems:"center", gap:4 }}>
-              <button className="title-link" onClick={e=>{e.stopPropagation();setExactTitle(r.Title||"");setQuery("");setSearched(true);setCardPage(1);}}>
+              <button className="title-link" style={{ fontSize:"1.05rem", fontWeight:700, lineHeight:1.25 }} onClick={e=>{e.stopPropagation();setExactTitle(r.Title||"");setQuery("");setSearched(true);setCardPage(1);}}>
                 {r.Title||"Untitled"}
               </button>
               {onNavigate && r.Title && (

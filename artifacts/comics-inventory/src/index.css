@@ -349,7 +349,7 @@ body {
 
 /* ── LIST TABLE ── */
 .list-table { width: 100%; padding: 0 4px 20px; overflow-x: auto; }
-.list-table table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+.list-table table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
 .list-table thead tr { border-bottom: 2px solid var(--red); }
 .list-table thead th {
   text-align: left; padding: 8px 12px; color: var(--muted2);
@@ -359,7 +359,7 @@ body {
 .list-table tbody tr { border-bottom: 1px solid var(--border); cursor: pointer; transition: background 0.1s; }
 .list-table tbody tr:hover { background: var(--surface2); }
 .list-table tbody tr.open-row { background: #fff8f8; }
-.list-table tbody td { padding: 8px 12px; vertical-align: top; }
+.list-table tbody td { padding: 14px 14px; vertical-align: middle; }
 .lt-title { font-weight: 600; color: var(--brown-light); }
 .lt-sub   { color: var(--muted); font-size: 0.875rem; }
 .lt-val   { color: var(--red); font-weight: 700; white-space: nowrap; }

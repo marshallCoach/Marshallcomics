@@ -81,6 +81,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
   const [selectedTitle, setSelectedTitle] = useState<string | null>(null);
   const [sorted,        setSorted]        = useState(false);
   const [view,          setView]          = useState<"visual" | "runs" | "comics">("visual");
+  const [oversizeOpen,  setOversizeOpen]  = useState(true);
 
   // Sync when initBox prop changes (handles navigation while component is already mounted)
   useEffect(() => {
@@ -138,6 +139,55 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
         fontSize: "0.875rem", letterSpacing: "2px", color: "var(--muted)" }}>
         SELECT A BOX TO VISUALIZE ITS CONTENTS
       </div>
+
+      {/* Oversize boxes — collapsible spotlight for the fullest boxes (>180) */}
+      {(() => {
+        const over = boxes
+          .filter(b => /^\d+$/.test(b.Num.replace(/^BOX\s*/i, "").trim()) && Number(b.Comics) > 180)
+          .sort((a, b) => Number(b.Comics) - Number(a.Comics));
+        if (over.length === 0) return null;
+        return (
+          <div style={{ marginBottom: 24 }}>
+            <button
+              onClick={() => setOversizeOpen(o => !o)}
+              style={{
+                width: "100%", display: "flex", alignItems: "baseline", gap: 10, cursor: "pointer",
+                background: "none", border: "none", borderBottom: "2px solid #d9770622", paddingBottom: 6, marginBottom: 8, textAlign: "left",
+              }}
+            >
+              <span style={{ fontSize: "0.875rem", color: "var(--muted)", transform: oversizeOpen ? "none" : "rotate(-90deg)", transition: "transform .2s" }}>▼</span>
+              <span style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "3px", color: "#b45309" }}>⚠ OVERSIZE BOXES</span>
+              <span style={{ fontSize: "0.875rem", color: "var(--muted2)", fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>Over 180 comics — consider splitting</span>
+              <span style={{ marginLeft: "auto", fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "1.5px", color: "var(--muted)" }}>{over.length} box{over.length === 1 ? "" : "es"}</span>
+            </button>
+            {oversizeOpen && (
+              <div className="boxes-grid">
+                {over.map(b => {
+                  const isSelected = selectedBox === b.Num;
+                  return (
+                    <div
+                      key={b.Num}
+                      onClick={() => selectBox(b.Num)}
+                      onMouseEnter={e => { const r = (e.currentTarget as HTMLElement).getBoundingClientRect(); setPanelPos({ x: r.right + 10, y: r.top }); setHoveredBox(b.Num); }}
+                      onMouseLeave={() => setHoveredBox(null)}
+                      className="box-tile"
+                      title={b.Num}
+                      style={{ borderColor: "#d97706", background: "#fffbf0",
+                        ...(isSelected ? { boxShadow: "0 4px 14px #d9770638", transform: "translateY(-2px)" } : {}) }}
+                    >
+                      <div className="box-tile-count" style={{ color: "#b45309" }}>{b.Comics}</div>
+                      <div className="box-tile-num">{b.Num.replace("BOX ", "Box ")}</div>
+                      {b.Label && <div className="box-tile-num" style={{ fontSize: "0.62em", opacity: 0.85, letterSpacing: "1px", color: "#b45309" }}>{b.Label}</div>}
+                      {Number(b.Keys)   > 0 && <div className="box-tile-keys">{b.Keys} Keys</div>}
+                      {Number(b.Signed) > 0 && <div className="box-tile-sgn">{b.Signed} S</div>}
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+        );
+      })()}
 
       {/* Box grid — sectioned by publisher */}
       {(() => {

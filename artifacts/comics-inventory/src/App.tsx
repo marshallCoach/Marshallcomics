@@ -326,7 +326,8 @@ export default function App() {
         })}
       </div>
 
-      {/* SUB NAV */}
+      {/* SUB NAV — only when the section has more than one page */}
+      {currentSection.tabs.length > 1 && (
       <nav className="tab-nav">
         {currentSection.tabs.map((tab, i) => {
           const group = (tab as { group?: string }).group;
@@ -343,6 +344,7 @@ export default function App() {
           );
         })}
       </nav>
+      )}
       </div>{/* /app-chrome */}
 
       {/* PAGES */}
