@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_1210_2316.xlsx  |  Generated: 2026-10-13
+// Source: comics_inventory_1310_0816.xlsx  |  Generated: 2026-10-13
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -182636,7 +182636,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
   {
     Title: `The Mighty Thor`, Issue: `3`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `2018`, Arc: `Mighty Thor Aaron extends`, Key: `NO`,
+    Year: `2016`, Arc: `Mighty Thor Aaron extends`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Jason Aaron`, Artist: `Russell Dauterman & Valerio Schiti`,
     Signed: `NO`, Signed_By: ``,
