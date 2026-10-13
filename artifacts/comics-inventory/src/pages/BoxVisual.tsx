@@ -587,6 +587,36 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                       })}
                     </div>
                   )}
+
+                  {/* ── Count ruler — ticks every 10 comics, tall marks at 150 & 200
+                       (box-capacity references). Box-order view only, where each
+                       spine is a uniform 6px so position = how many comics deep. */}
+                  {!sorted && boxComics.length >= 10 && (() => {
+                    const PITCH = 6; // spine width 5 + 1px gap
+                    const N = boxComics.length;
+                    const ticks: number[] = [];
+                    for (let k = 10; k <= N; k += 10) ticks.push(k);
+                    const tall = (k: number) => k === 150 || k === 200;
+                    const markColor = (k: number) => (k === 200 ? "#c8102e" : k === 150 ? "#b07d20" : "#b0aca4");
+                    return (
+                      <div style={{ position: "relative", height: 32, marginTop: 10, width: N * PITCH, minWidth: "max-content" }}>
+                        <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: 1, background: "#c9c6bf" }} />
+                        {ticks.map(k => {
+                          const big = tall(k);
+                          return (
+                            <div key={k} style={{ position: "absolute", left: k * PITCH, top: 0, transform: "translateX(-50%)", textAlign: "center", whiteSpace: "nowrap" }}>
+                              <div style={{ width: big ? 2 : 1, height: big ? 22 : 7, margin: "0 auto", background: markColor(k) }} />
+                              <div style={{ fontSize: big ? "0.72rem" : "0.58rem", fontWeight: big ? 700 : 500,
+                                color: big ? markColor(k) : "#8a877f", marginTop: 2,
+                                fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing: "0.5px" }}>
+                                {k}
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    );
+                  })()}
                 </div>
 
                 {/* Legend */}
