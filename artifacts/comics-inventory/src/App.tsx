@@ -51,7 +51,7 @@ import VolumeConfirm from "@/pages/VolumeConfirm";
 import OfflineCovers from "@/components/OfflineCovers";
 import FlaggedCount from "@/components/FlaggedCount";
 import PasswordGate from "@/components/PasswordGate";
-import { BookOpen, Boxes, Briefcase, Film, Sparkles, ClipboardList } from "lucide-react";
+import { BookOpen, Boxes, Film, Sparkles, ClipboardList, Microscope, DollarSign, Archive } from "lucide-react";
 
 type TabId =
   | "summary" | "everything" | "collection" | "boxkeys" | "stats" | "runs" | "runsvolumes" | "recent" | "releasetimeline" | "dataview"
@@ -78,20 +78,16 @@ const NAV = [
       { id: "summary",     label: "Home" },
       { id: "everything",  label: "Every Book" },
       { id: "runsvolumes", label: "Runs & Volumes" },
-      { id: "recent",      label: "Recent Purchases" },
-      { id: "releasetimeline", label: "Release Timeline" },
-      { id: "collection",  label: "Sales" },
       { id: "stats",       label: "Stats" },
-      { id: "dataview",    label: "Data View" },
-      { id: "credits",     label: "Creative Credits" },
-      { id: "capfalcon",   label: "Cap & Falcon" },
     ],
   },
   {
     id: "pulllist",
     label: "Pull List",
     tabs: [
-      { id: "pulllist",    label: "Pull List" },
+      { id: "pulllist",        label: "Pull List" },
+      { id: "recent",          label: "Recent Purchases" },
+      { id: "releasetimeline", label: "Release Timeline" },
     ],
   },
   {
@@ -111,11 +107,8 @@ const NAV = [
     label: "Cleanup",
     tabs: [
       { id: "datafix",      label: "Data Fix" },
-      { id: "titlefixes",   label: "Title Fixes" },
-      { id: "volumeconfirm", label: "Volume Confirm" },
       { id: "duplicates",   label: "Duplicates" },
       { id: "dupchecklist", label: "Dup Hunt" },
-      { id: "orgpath",      label: "Org Path" },
     ],
   },
   {
@@ -123,7 +116,6 @@ const NAV = [
     label: "Cover",
     tabs: [
       { id: "coverreview",  label: "Cover Review" },
-      { id: "granov",       label: "Adi Granov" },
       { id: "missingcovers", label: "Missing Covers" },
       { id: "roulette",     label: "Comic Roulette" },
       { id: "keycatalog",   label: "Key Issues" },
@@ -131,22 +123,42 @@ const NAV = [
     ],
   },
   {
-    id: "business",
-    label: "Business",
+    id: "deepdive",
+    label: "Deep Dive",
     tabs: [
-      { id: "nycc",        label: "NYCC Hunt" },
+      { id: "granov",      label: "Adi Granov" },
       { id: "absbatman",   label: "Absolute Batman" },
+      { id: "capfalcon",   label: "Cap & Falcon" },
+    ],
+  },
+  {
+    id: "selling",
+    label: "Selling",
+    tabs: [
+      { id: "sellerdash",       label: "Seller Dashboard" },
+      { id: "showplanner",      label: "Whatnot Shows" },
+      { id: "ebaylistingguide", label: "Phase 1 Listing Guide" },
+      { id: "ebaypipeline",     label: "eBay Pipeline" },
+      { id: "collection",       label: "Sales" },
+    ],
+  },
+  {
+    id: "archive",
+    label: "Archive",
+    tabs: [
+      { id: "nycc",         label: "NYCC Hunt" },
+      { id: "calendar",     label: "Calendar" },
+      { id: "cgc",          label: "CGC" },
+      { id: "signings",     label: "Signings" },
+      { id: "actionplan",   label: "Action Plan" },
       { id: "locationcheck", label: "Where Is It?" },
-      { id: "sellerdash",  label: "Seller Dashboard" },
-      { id: "calendar",    label: "Calendar" },
-      { id: "showplanner", label: "Whatnot Shows" },
-      { id: "cgc",         label: "CGC" },
-      { id: "signings",    label: "Signings" },
-      { id: "actionplan",  label: "Action Plan" },
-      { id: "ebaylistingguide",  label: "Phase 1 Listing Guide" },
-      { id: "timeline",          label: "Timeline",           group: "Ops & Docs" },
-      { id: "ebaypipeline",      label: "eBay Pipeline",      group: "Ops & Docs" },
-      { id: "opsreference",      label: "Ops Reference",      group: "Ops & Docs" },
+      { id: "orgpath",      label: "Org Path" },
+      { id: "volumeconfirm", label: "Volume Confirm" },
+      { id: "titlefixes",   label: "Title Fixes" },
+      { id: "credits",      label: "Creative Credits" },
+      { id: "dataview",     label: "Data View" },
+      { id: "timeline",     label: "Timeline" },
+      { id: "opsreference", label: "Ops Reference" },
     ],
   },
 ] as const;
@@ -159,7 +171,9 @@ const SECTION_ICONS: Record<SectionId, React.ComponentType<{ size?: number }>> =
   boxes: Boxes,
   cleanup: Sparkles,
   cover: Film,
-  business: Briefcase,
+  deepdive: Microscope,
+  selling: DollarSign,
+  archive: Archive,
 };
 
 const comics = DATA.comics;

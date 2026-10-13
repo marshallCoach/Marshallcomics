@@ -96,9 +96,10 @@ function CoverThumb({ c, onCoverClick }: { c: Comic; onCoverClick: (comic: Comic
   return (
     <CoverImage
       comic={c}
-      width={80}
-      height={120}
+      width={200}
+      height={300}
       onClick={(largeUrl) => onCoverClick(c, largeUrl)}
+      style={{ width: "100%", height: "auto", aspectRatio: "2 / 3", display: "block", boxShadow: "0 3px 10px rgba(0,0,0,0.18)" }}
     />
   );
 }
@@ -546,9 +547,8 @@ function EverythingCard({ comic: c, onTitleClick, onTitleCovers, flagged, onOpen
 
   return (
     <div className="ev-card" style={{ borderTop: flagged ? "3px solid #d97706" : isKey ? "3px solid #d4a800" : undefined }}>
-      <div style={{ display:"flex", gap:10, marginBottom:8 }}>
-        <CoverThumb c={c} onCoverClick={onCoverClick ?? ((_c, _l) => {})} />
-        <div style={{ flex:1, minWidth:0 }}>
+      <CoverThumb c={c} onCoverClick={onCoverClick ?? ((_c, _l) => {})} />
+      <div style={{ marginTop:10 }}>
           <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", marginBottom:4, gap:4 }}>
             <BoxBadge box={c.Box} />
             <div style={{ display:"flex", gap:3, flexWrap:"wrap", justifyContent:"flex-end" }}>
@@ -579,7 +579,6 @@ function EverythingCard({ comic: c, onTitleClick, onTitleCovers, flagged, onOpen
             {c.Volume && c.Volume !== "1" ? ` · Vol ${c.Volume}` : ""}{c.Year ? ` · ${c.Year}` : ""}
           </div>
           {c.Publisher && <div className="card-pub">{c.Publisher}{c.Era?` · ${c.Era}`:""}</div>}
-        </div>
       </div>
 
       {(c.Writer || c.Artist) && (
