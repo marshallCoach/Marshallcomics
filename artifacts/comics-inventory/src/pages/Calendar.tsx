@@ -15,7 +15,6 @@ function parseSortDate(dateStr: string): number {
 }
 
 const rawEvents = [
-  { Type:"🟣 NYCC",        Date:"Oct 8–11, 2026", Theme:"NYCC 2026 — Stan Lee BP #513 + Heritage eval",  Books:"Black Panther #513 (Stan Lee — PSA/DNA auth), Thor #169 CGC 8.0 (Heritage eval), buy budget $100–300",  Revenue:"$800–$1,500 BP#513 authenticated + Heritage networking",  Prep:"Book PSA/DNA table appointment. Bring BP#513 in hard case. Bring Thor #169 slab for Heritage evaluation." },
   { Type:"🟡 WHATNOT",     Date:"Jun 18, 2026",   Theme:"Show 1 — Black Heroes Month: Priest-Era Black Panther",  Books:"BP vol3 #1–10 (Priest), Captain Carter #1 (Hayley Atwell signed — personalized), Truth: RWB #1, Black Lightning #1",  Revenue:"$300–$600",   Prep:"Pull BP Priest run. Tell Captain Carter story (Hayley Atwell signed to Robert). Lead with emotional anchor." },
   { Type:"🟡 WHATNOT",     Date:"Jun 19, 2026",   Theme:"Juneteenth Special AM Show — Black History Keys",  Books:"Truth: RWB #1 (Baker remarked), Black Panther #513 (Stan Lee signed), Black Lightning #1, Storm keys",  Revenue:"$400–$800",   Prep:"Special Juneteenth morning show. Lead with the Stan Lee story — 'signed in his final years.'" },
   { Type:"🟡 WHATNOT",     Date:"Jun 25, 2026",   Theme:"Show 2 — Batman Family: King/Snyder Runs",  Books:"Batman #1 Snyder, Batman #21+22 The Button, Batman #50 Wedding, Vision #1 (Tom King signed), Batman #125 (Jiménez)",  Revenue:"$250–$500",   Prep:"Pull Box 15 + Box 11 (Snyder). Tom King Vision is the emotional anchor. Tell the Tom King → Vision → Batman story." },
@@ -165,7 +164,6 @@ export default function Calendar() {
           <option value="">All Types</option>
           <option value="WHATNOT">Whatnot</option>
           <option value="CGC">CGC</option>
-          <option value="NYCC">NYCC</option>
         </select>
 
         {/* Sort direction */}

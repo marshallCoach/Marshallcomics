@@ -218,7 +218,6 @@ const TIMELINE = [
   { label:"Geoff Johns + Fabok SS",                   date:"Jun 26",      days:daysUntil(2026,6,26),  urgency:"high",     cat:"Signing"  },
   { label:"Roy Thomas SS — 5 books → $820–$1,630 ROI",date:"Jul 10",      days:daysUntil(2026,7,10),  urgency:"high",     cat:"Signing"  },
   { label:"CGC Press Batch — ship all simultaneously",date:"Before Aug 7",days:daysUntil(2026,8,1),   urgency:"high",     cat:"CGC"      },
-  { label:"NYCC — Stan Lee auth + Heritage eval",     date:"Oct 8–11",    days:daysUntil(2026,10,8),  urgency:"high",     cat:"Show"     },
 ];
 
 function urgColor(u: string): string {
@@ -250,7 +249,7 @@ function catNavLabel(cat: string): string {
 
 // ── Flagship ─────────────────────────────────────────────────────────────────
 const FLAGSHIP = [
-  { book:"Stan Lee signed BP #513",                    note:"Authenticate first (PSA/DNA) — $800–$1,500+ auth",         color:"#dc2626", box:"1",  publisher:"Marvel", year:"1966", valueNM:"$800–$1,500 authenticated", condition:"Raw — DO NOT press",            cgcPath:"PSA/DNA at NYCC → CGC × JSA Green Qualified",   action:"NYCC Oct 8–11. Never press. Submit via PSA/DNA first.", terrificon:false },
+  { book:"Stan Lee signed BP #513",                    note:"Authenticate first (PSA/DNA) — $800–$1,500+ auth",         color:"#dc2626", box:"1",  publisher:"Marvel", year:"1966", valueNM:"$800–$1,500 authenticated", condition:"Raw — DO NOT press",            cgcPath:"PSA/DNA → CGC × JSA Green Qualified",   action:"Never press. Submit via PSA/DNA first.", terrificon:false },
   { book:"Truth: RWB #1 (Baker remarked)",             note:"Verify remark → Green Qual. → Heritage — $500–$2,000",     color:"#d97706", box:"1",  publisher:"Marvel", year:"2003", valueNM:"$500–$2,000 with remark",   condition:"Has Baker remark",              cgcPath:"CGC × JSA → Green Qualified → Heritage",        action:"Verify remark authenticity before submitting.", terrificon:false },
   { book:"Ultimate Fallout #4 Foil (1st Miles)",       note:"1st Miles Morales — $800–$1,500 CGC 9.8",                  color:"#8b2be2", box:"38", publisher:"Marvel", year:"2011", valueNM:"$800–$1,500 CGC 9.8",       condition:"Check for pressing",            cgcPath:"Press → CGC Universal Blue 9.8",                action:"Press then submit for Blue Universal label.", terrificon:false },
   { book:"Thor #169 CGC 8.0 (Galactus Origin)",        note:"Already slabbed. Galactus origin. Kirby/Lee. Show 15.",    color:"#1d6fa4", box:"63", publisher:"Marvel", year:"1969", valueNM:"CGC 8.0 — already slabbed", condition:"Slabbed CGC 8.0",               cgcPath:"Already graded — ready for Heritage or auction", action:"Feature in Show 15 — Whatnot anchor book.", terrificon:false },
