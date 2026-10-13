@@ -63,7 +63,7 @@ export default function DupCheckList() {
   }, [checkItems]);
 
   return (
-    <div style={{ maxWidth: 620, margin: "0 auto", padding: "16px 12px 100px" }}>
+    <div style={{ maxWidth: "calc(620px + var(--wide))", margin: "0 auto", padding: "16px 12px 100px" }}>
 
       {/* Header */}
       <div style={{ marginBottom: 20 }}>

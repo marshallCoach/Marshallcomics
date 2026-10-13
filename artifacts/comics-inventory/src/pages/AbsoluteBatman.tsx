@@ -162,7 +162,7 @@ export default function AbsoluteBatman() {
 }
 
 const css = `
-.abw{max-width:1000px;margin:0 auto;padding:0 18px 60px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--text)}
+.abw{max-width:calc(1000px + var(--wide));margin:0 auto;padding:0 18px 60px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--text)}
 .abw h1,.abw h2{margin:0;text-wrap:balance}
 .abw-hero{padding:26px 0 14px;border-bottom:3px solid var(--text)}
 .abw-kicker{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:6px}

@@ -264,7 +264,7 @@ export default function CollectionStats({ onNavigate }: { onNavigate?: (tab: str
   const otherTotal = comics.length - dcTotal - mrvlTotal;
 
   return (
-    <div style={{ maxWidth:1150, margin:"0 auto", padding:"24px 20px 80px" }}>
+    <div style={{ maxWidth: "calc(1150px + var(--wide))", margin:"0 auto", padding:"24px 20px 80px" }}>
 
       {/* Sub-nav */}
       <div style={{ display:"flex", gap:6, marginBottom:28, flexWrap:"wrap" }}>

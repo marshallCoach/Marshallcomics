@@ -162,7 +162,7 @@ export default function ActionPlan() {
   const doneCount = NEXT_STEPS.filter(s => getStatus(s.title) === "done").length;
 
   return (
-    <div style={{ maxWidth:1100, margin:"0 auto", padding:"24px 20px 60px" }}>
+    <div style={{ maxWidth: "calc(1100px + var(--wide))", margin:"0 auto", padding:"24px 20px 60px" }}>
       <div style={{ display:"flex", alignItems:"baseline", gap:16, marginBottom:8 }}>
         <h2 style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"1.75rem", letterSpacing:"2px", color:"var(--red)", margin:0 }}>
           Action Plan — v6

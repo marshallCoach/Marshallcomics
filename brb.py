@@ -91,6 +91,9 @@ GEN_FILES_OPT = [
     "artifacts/comics-inventory/public/gcd_notfound.json",
     "artifacts/comics-inventory/public/validation-report.json",
     "validation-report.json",
+    # Page snapshots derived from data3.ts (regenerated in step 5b below).
+    "artifacts/comics-inventory/src/data/locationSnapshot.json",
+    "artifacts/comics-inventory/src/data/ebaySellDupes.json",
 ]
 
 
@@ -293,6 +296,14 @@ def main():
     # ── 5. QUEST DATA for the new pages ──────────────────────────────────────
     banner("5 · QUEST-DATA — node gen_quest_data.mjs (snapshot/guide/board)")
     run(["node", "gen_quest_data.mjs"], "quest-data")
+
+    # ── 5b. PAGE SNAPSHOTS from data3.ts ─────────────────────────────────────
+    # Location Check ("Where is it?") and the eBay sellable-duplicates list both
+    # read a JSON snapshot derived from the just-regenerated data3.ts, so they
+    # stay in lock-step with the deployed data. Non-fatal.
+    banner("5b · PAGE SNAPSHOTS — location + eBay sellable duplicates")
+    run(["python3", "brb_location_snapshot.py"], "location-snapshot")
+    run(["python3", "brb_sell_dupes.py"], "sell-dupes")
 
     # ── 6. FILL RATES report ─────────────────────────────────────────────────
     banner("6 · FILL RATES")

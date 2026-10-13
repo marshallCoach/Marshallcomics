@@ -249,7 +249,7 @@ export default function CapFalconChecklist() {
   const pct = Math.round((ownedCount / enriched.length) * 100);
 
   return (
-    <div style={{ maxWidth: 1100, margin: "0 auto", padding: "18px 18px 60px" }}>
+    <div style={{ maxWidth: "calc(1100px + var(--wide))", margin: "0 auto", padding: "18px 18px 60px" }}>
 
       {/* Header */}
       <div style={{ marginBottom: 24 }}>

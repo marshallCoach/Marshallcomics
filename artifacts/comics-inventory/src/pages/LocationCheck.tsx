@@ -176,7 +176,7 @@ export default function LocationCheck() {
 }
 
 const css = `
-.locw{max-width:1040px;margin:0 auto;padding:0 18px 60px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--text)}
+.locw{max-width:calc(1040px + var(--wide));margin:0 auto;padding:0 18px 60px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--text)}
 .locw h1,.locw h2{margin:0;text-wrap:balance}
 .locw-hero{padding:26px 0 14px;border-bottom:3px solid var(--text)}
 .locw-kicker{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:6px}

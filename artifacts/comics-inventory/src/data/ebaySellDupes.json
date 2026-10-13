@@ -1,0 +1,2250 @@
+{
+ "source": "comics_inventory_1210_1933.xlsx",
+ "generatedAt": "2026-10-13",
+ "groupCount": 141,
+ "sellableCount": 149,
+ "estValue": 1796.44,
+ "rows": [
+  {
+   "title": "Black Panther: The Man Without Fear",
+   "issue": "513",
+   "year": "2011",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "David Liss",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "7",
+    "107"
+   ],
+   "nm": 400.0,
+   "sameBox": false
+  },
+  {
+   "title": "The Amazing Spider-Man",
+   "issue": "114",
+   "year": "1972",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Gerry Conway & John Romita",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "106"
+   ],
+   "nm": 60.0,
+   "sameBox": true
+  },
+  {
+   "title": "Justice League",
+   "issue": "1",
+   "year": "2011",
+   "volume": "2",
+   "publisher": "DC",
+   "writer": "Geoff Johns",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "48",
+    "52"
+   ],
+   "nm": 35.0,
+   "sameBox": false
+  },
+  {
+   "title": "Justice League",
+   "issue": "21",
+   "year": "2013",
+   "volume": "2",
+   "publisher": "DC",
+   "writer": "Geoff Johns & Various",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "46",
+    "106"
+   ],
+   "nm": 30.0,
+   "sameBox": false
+  },
+  {
+   "title": "Miles Morales: Spider-Man",
+   "issue": "1",
+   "year": "2023",
+   "volume": "2",
+   "publisher": "Marvel",
+   "writer": "Cody Ziglar",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "102",
+    "106"
+   ],
+   "nm": 30.0,
+   "sameBox": false
+  },
+  {
+   "title": "Uncanny X-Men",
+   "issue": "275",
+   "year": "1991",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Chris Claremont",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "1",
+    "106"
+   ],
+   "nm": 30.0,
+   "sameBox": false
+  },
+  {
+   "title": "Black Panther",
+   "issue": "8",
+   "year": "1999",
+   "volume": "3",
+   "publisher": "Marvel",
+   "writer": "Christopher Priest & Chris Giarrusso",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "7",
+    "106"
+   ],
+   "nm": 25.0,
+   "sameBox": false
+  },
+  {
+   "title": "Fantastic Four",
+   "issue": "1",
+   "year": "2025",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Verify",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "72",
+    "75"
+   ],
+   "nm": 25.0,
+   "sameBox": false
+  },
+  {
+   "title": "Moon Knight",
+   "issue": "1",
+   "year": "2021",
+   "volume": "10",
+   "publisher": "Marvel",
+   "writer": "Jed MacKay",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "33",
+    "72"
+   ],
+   "nm": 25.0,
+   "sameBox": false
+  },
+  {
+   "title": "Ultimate Wolverine vs. Hulk",
+   "issue": "1",
+   "year": "2005",
+   "volume": "3",
+   "publisher": "Marvel",
+   "writer": "Damon Lindelof",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "23"
+   ],
+   "nm": 25.0,
+   "sameBox": true
+  },
+  {
+   "title": "X-Men",
+   "issue": "25",
+   "year": "2024",
+   "volume": "6",
+   "publisher": "Marvel",
+   "writer": "Gerry Duggan",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "35",
+    "72"
+   ],
+   "nm": 25.0,
+   "sameBox": false
+  },
+  {
+   "title": "Batman and Robin",
+   "issue": "1",
+   "year": "2009",
+   "volume": "1",
+   "publisher": "DC",
+   "writer": "Grant Morrison",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "52",
+    "72"
+   ],
+   "nm": 20.0,
+   "sameBox": false
+  },
+  {
+   "title": "New Avengers",
+   "issue": "1",
+   "year": "2005",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Brian Michael Bendis",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "6",
+    "106"
+   ],
+   "nm": 20.0,
+   "sameBox": false
+  },
+  {
+   "title": "Suicide Squad",
+   "issue": "1",
+   "year": "1987",
+   "volume": "1",
+   "publisher": "DC",
+   "writer": "John Ostrander",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "52",
+    "68"
+   ],
+   "nm": 20.0,
+   "sameBox": false
+  },
+  {
+   "title": "Superman: Son of Kal-El",
+   "issue": "1",
+   "year": "2021",
+   "volume": "1",
+   "publisher": "DC",
+   "writer": "Tom Taylor",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "56",
+    "59"
+   ],
+   "nm": 20.0,
+   "sameBox": false
+  },
+  {
+   "title": "The Flash",
+   "issue": "1",
+   "year": "2011",
+   "volume": "3",
+   "publisher": "DC",
+   "writer": "Geoff Johns",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "43",
+    "52"
+   ],
+   "nm": 20.0,
+   "sameBox": false
+  },
+  {
+   "title": "JLA",
+   "issue": "100",
+   "year": "2004",
+   "volume": "1",
+   "publisher": "DC",
+   "writer": "Joe Kelly",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "47",
+    "88"
+   ],
+   "nm": 16.48,
+   "sameBox": false
+  },
+  {
+   "title": "Sam Wilson: Captain America",
+   "issue": "1",
+   "year": "2015",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Nick Spencer",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "10"
+   ],
+   "nm": 16.0,
+   "sameBox": true
+  },
+  {
+   "title": "Black Panther",
+   "issue": "52",
+   "year": "2002",
+   "volume": "3",
+   "publisher": "Marvel",
+   "writer": "Christopher Priest",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "7",
+    "85"
+   ],
+   "nm": 15.0,
+   "sameBox": false
+  },
+  {
+   "title": "Captain America",
+   "issue": "1",
+   "year": "2012",
+   "volume": "9",
+   "publisher": "Marvel",
+   "writer": "Ed Brubaker",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "10",
+    "30"
+   ],
+   "nm": 15.0,
+   "sameBox": false
+  },
+  {
+   "title": "Green Lantern",
+   "issue": "18",
+   "year": "2024",
+   "volume": "7",
+   "publisher": "DC",
+   "writer": "Jeremy Adams",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "54",
+    "72"
+   ],
+   "nm": 15.0,
+   "sameBox": false
+  },
+  {
+   "title": "Guardians of the Galaxy",
+   "issue": "1",
+   "year": "2013",
+   "volume": "4",
+   "publisher": "Marvel",
+   "writer": "Brian Michael Bendis",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "17",
+    "24"
+   ],
+   "nm": 15.0,
+   "sameBox": false
+  },
+  {
+   "title": "Return of Superman 30th Anniversary Special",
+   "issue": "1",
+   "year": "2023",
+   "volume": "1",
+   "publisher": "DC",
+   "writer": "Dan Jurgens & Karl Kesel & Jerry Ordway & Louise Simonson",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "62",
+    "106"
+   ],
+   "nm": 15.0,
+   "sameBox": false
+  },
+  {
+   "title": "Savage Avengers",
+   "issue": "1",
+   "year": "2019",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Gerry Duggan",
+   "copies": 3,
+   "sellable": 2,
+   "boxes": [
+    "6",
+    "27"
+   ],
+   "nm": 15.0,
+   "sameBox": false
+  },
+  {
+   "title": "Teen Titans",
+   "issue": "1",
+   "year": "2003",
+   "volume": "3",
+   "publisher": "DC",
+   "writer": "Geoff Johns",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "51",
+    "52"
+   ],
+   "nm": 15.0,
+   "sameBox": false
+  },
+  {
+   "title": "Trinity",
+   "issue": "1",
+   "year": "2016",
+   "volume": "2",
+   "publisher": "DC",
+   "writer": "Francis Manapul",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "48",
+    "59"
+   ],
+   "nm": 15.0,
+   "sameBox": false
+  },
+  {
+   "title": "Vengeance of the Moon Knight",
+   "issue": "6",
+   "year": "2024",
+   "volume": "3",
+   "publisher": "Marvel",
+   "writer": "Jed MacKay",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "33",
+    "72"
+   ],
+   "nm": 15.0,
+   "sameBox": false
+  },
+  {
+   "title": "Winter Soldier",
+   "issue": "1",
+   "year": "2012",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Ed Brubaker",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "8",
+    "30"
+   ],
+   "nm": 15.0,
+   "sameBox": false
+  },
+  {
+   "title": "X-Men",
+   "issue": "1",
+   "year": "2019",
+   "volume": "8",
+   "publisher": "Marvel",
+   "writer": "Jonathan Hickman",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "11",
+    "14"
+   ],
+   "nm": 15.0,
+   "sameBox": false
+  },
+  {
+   "title": "X-Men",
+   "issue": "28",
+   "year": "2024",
+   "volume": "5",
+   "publisher": "Marvel",
+   "writer": "Gerry Duggan",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "9",
+    "72"
+   ],
+   "nm": 15.0,
+   "sameBox": false
+  },
+  {
+   "title": "Young Avengers",
+   "issue": "1",
+   "year": "2013",
+   "volume": "4",
+   "publisher": "Marvel",
+   "writer": "Kieron Gillen",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "6",
+    "24"
+   ],
+   "nm": 15.0,
+   "sameBox": false
+  },
+  {
+   "title": "Avengers",
+   "issue": "1",
+   "year": "2018",
+   "volume": "8",
+   "publisher": "Marvel",
+   "writer": "Mark Waid",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "6",
+    "27"
+   ],
+   "nm": 12.0,
+   "sameBox": false
+  },
+  {
+   "title": "Avengers",
+   "issue": "1",
+   "year": "2010",
+   "volume": "5",
+   "publisher": "Marvel",
+   "writer": "Brian Michael Bendis",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "6",
+    "24"
+   ],
+   "nm": 12.0,
+   "sameBox": false
+  },
+  {
+   "title": "Batman",
+   "issue": "21",
+   "year": "2013",
+   "volume": "3",
+   "publisher": "DC",
+   "writer": "Scott Snyder & James Tynion IV",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "48",
+    "57"
+   ],
+   "nm": 12.0,
+   "sameBox": false
+  },
+  {
+   "title": "Batman",
+   "issue": "22",
+   "year": "2013",
+   "volume": "3",
+   "publisher": "DC",
+   "writer": "Scott Snyder & James Tynion IV",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "48",
+    "57"
+   ],
+   "nm": 12.0,
+   "sameBox": false
+  },
+  {
+   "title": "Black Panther 60th Anniversary Special",
+   "issue": "1",
+   "year": "2025",
+   "volume": "10",
+   "publisher": "Marvel",
+   "writer": "Priest & Murewa Ayodele & Cody Ziglar & Evan Narcisse",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "7",
+    "75"
+   ],
+   "nm": 12.0,
+   "sameBox": false
+  },
+  {
+   "title": "Captain America",
+   "issue": "1",
+   "year": "2002",
+   "volume": "5",
+   "publisher": "Marvel",
+   "writer": "Ed Brubaker",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "10",
+    "30"
+   ],
+   "nm": 12.0,
+   "sameBox": false
+  },
+  {
+   "title": "Giant-Size X-Men",
+   "issue": "1",
+   "year": "2024",
+   "volume": "6",
+   "publisher": "Marvel",
+   "writer": "Mark Gruenwald & Ralph Macchio & Ann Nocenti",
+   "copies": 3,
+   "sellable": 2,
+   "boxes": [
+    "14",
+    "35",
+    "75"
+   ],
+   "nm": 12.0,
+   "sameBox": false
+  },
+  {
+   "title": "Secret Avengers",
+   "issue": "6",
+   "year": "2010",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Ed Brubaker",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "6",
+    "19"
+   ],
+   "nm": 12.0,
+   "sameBox": false
+  },
+  {
+   "title": "X-Men",
+   "issue": "1",
+   "year": "2021",
+   "volume": "7",
+   "publisher": "Marvel",
+   "writer": "Jed McKay",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "11",
+    "14"
+   ],
+   "nm": 12.0,
+   "sameBox": false
+  },
+  {
+   "title": "X-Men: Hellfire Gala",
+   "issue": "1",
+   "year": "2023",
+   "volume": "3",
+   "publisher": "Marvel",
+   "writer": "Jonathan Hickman & Gerry Duggan",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "11",
+    "102"
+   ],
+   "nm": 12.0,
+   "sameBox": false
+  },
+  {
+   "title": "Blood Hunt",
+   "issue": "1",
+   "year": "2024",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Jed MacKay",
+   "copies": 3,
+   "sellable": 2,
+   "boxes": [
+    "20",
+    "75",
+    "102"
+   ],
+   "nm": 10.99,
+   "sameBox": false
+  },
+  {
+   "title": "Black Panther",
+   "issue": "1",
+   "year": "2016",
+   "volume": "7",
+   "publisher": "Marvel",
+   "writer": "Ta-Nehisi Coates",
+   "copies": 3,
+   "sellable": 2,
+   "boxes": [
+    "1",
+    "7",
+    "106"
+   ],
+   "nm": 10.0,
+   "sameBox": false
+  },
+  {
+   "title": "Blade",
+   "issue": "1",
+   "year": "2023",
+   "volume": "6",
+   "publisher": "Marvel",
+   "writer": "Bryan Hill",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "20"
+   ],
+   "nm": 10.0,
+   "sameBox": true
+  },
+  {
+   "title": "Infinity Wars",
+   "issue": "1",
+   "year": "2018",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Gerry Duggan",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "20"
+   ],
+   "nm": 10.0,
+   "sameBox": true
+  },
+  {
+   "title": "Marauders",
+   "issue": "1",
+   "year": "2019",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Gerry Duggan",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "11",
+    "14"
+   ],
+   "nm": 10.0,
+   "sameBox": false
+  },
+  {
+   "title": "X-Force: Killshot Anniversary Special",
+   "issue": "1",
+   "year": "2021",
+   "volume": "7",
+   "publisher": "Marvel",
+   "writer": "Rob Liefeld",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "11",
+    "75"
+   ],
+   "nm": 10.0,
+   "sameBox": false
+  },
+  {
+   "title": "X-Men",
+   "issue": "1",
+   "year": "2010",
+   "volume": "4",
+   "publisher": "Marvel",
+   "writer": "Victor Gischler",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "3",
+    "15"
+   ],
+   "nm": 10.0,
+   "sameBox": false
+  },
+  {
+   "title": "Batman and Robin: Year One",
+   "issue": "1",
+   "year": "2025",
+   "volume": "5",
+   "publisher": "DC",
+   "writer": "Mark Waid & Chris Samnee & Steve Orlando",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "54",
+    "101"
+   ],
+   "nm": 9.99,
+   "sameBox": false
+  },
+  {
+   "title": "Doom Patrol",
+   "issue": "1",
+   "year": "2004",
+   "volume": "4",
+   "publisher": "DC",
+   "writer": "John Byrne",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "58",
+    "101"
+   ],
+   "nm": 9.99,
+   "sameBox": false
+  },
+  {
+   "title": "Avengers Forever",
+   "issue": "6",
+   "year": "2022",
+   "volume": "6",
+   "publisher": "Marvel",
+   "writer": "Jason Aaron",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "6",
+    "27"
+   ],
+   "nm": 8.0,
+   "sameBox": false
+  },
+  {
+   "title": "Blood Hunt",
+   "issue": "2",
+   "year": "2024",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Jed MacKay",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "20",
+    "75"
+   ],
+   "nm": 8.0,
+   "sameBox": false
+  },
+  {
+   "title": "Gatchaman",
+   "issue": "1",
+   "year": "2024",
+   "volume": "1",
+   "publisher": "Mad Cave Studios",
+   "writer": "Cullen Bunn",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "66",
+    "103"
+   ],
+   "nm": 8.0,
+   "sameBox": false
+  },
+  {
+   "title": "Green Lantern",
+   "issue": "10",
+   "year": "2024",
+   "volume": "7",
+   "publisher": "DC",
+   "writer": "Jeremy Adams",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "1",
+    "50"
+   ],
+   "nm": 8.0,
+   "sameBox": false
+  },
+  {
+   "title": "Green Lantern",
+   "issue": "12",
+   "year": "2024",
+   "volume": "7",
+   "publisher": "DC",
+   "writer": "Jeremy Adams",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "1",
+    "50"
+   ],
+   "nm": 8.0,
+   "sameBox": false
+  },
+  {
+   "title": "Justice League",
+   "issue": "2",
+   "year": "2011",
+   "volume": "2",
+   "publisher": "DC",
+   "writer": "Geoff Johns",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "48",
+    "52"
+   ],
+   "nm": 8.0,
+   "sameBox": false
+  },
+  {
+   "title": "New X-Men",
+   "issue": "145",
+   "year": "2003",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Grant Morrison",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "3",
+    "12"
+   ],
+   "nm": 8.0,
+   "sameBox": false
+  },
+  {
+   "title": "Nightwing Annual",
+   "issue": "1",
+   "year": "2018",
+   "volume": "5",
+   "publisher": "DC",
+   "writer": "Benjamin Percy",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "56",
+    "59"
+   ],
+   "nm": 8.0,
+   "sameBox": false
+  },
+  {
+   "title": "Savage Avengers",
+   "issue": "3",
+   "year": "2019",
+   "volume": "7",
+   "publisher": "Marvel",
+   "writer": "Gerry Duggan",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "6"
+   ],
+   "nm": 8.0,
+   "sameBox": true
+  },
+  {
+   "title": "Avengers",
+   "issue": "21",
+   "year": "2019",
+   "volume": "8",
+   "publisher": "Marvel",
+   "writer": "Jason Aaron",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "6",
+    "87"
+   ],
+   "nm": 6.0,
+   "sameBox": false
+  },
+  {
+   "title": "Avengers",
+   "issue": "6",
+   "year": "2018",
+   "volume": "8",
+   "publisher": "Marvel",
+   "writer": "Mark Waid",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "6",
+    "27"
+   ],
+   "nm": 6.0,
+   "sameBox": false
+  },
+  {
+   "title": "Batman",
+   "issue": "30",
+   "year": "2014",
+   "volume": "3",
+   "publisher": "DC",
+   "writer": "Scott Snyder",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "48",
+    "57"
+   ],
+   "nm": 6.0,
+   "sameBox": false
+  },
+  {
+   "title": "Batman",
+   "issue": "31",
+   "year": "2014",
+   "volume": "3",
+   "publisher": "DC",
+   "writer": "Scott Snyder",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "48",
+    "57"
+   ],
+   "nm": 6.0,
+   "sameBox": false
+  },
+  {
+   "title": "Batman",
+   "issue": "32",
+   "year": "2014",
+   "volume": "3",
+   "publisher": "DC",
+   "writer": "Scott Snyder",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "48",
+    "57"
+   ],
+   "nm": 6.0,
+   "sameBox": false
+  },
+  {
+   "title": "Black Panther",
+   "issue": "2",
+   "year": "2021",
+   "volume": "8",
+   "publisher": "Marvel",
+   "writer": "Al Ewing",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "7",
+    "72"
+   ],
+   "nm": 6.0,
+   "sameBox": false
+  },
+  {
+   "title": "Black Panther",
+   "issue": "9",
+   "year": "2021",
+   "volume": "7",
+   "publisher": "Marvel",
+   "writer": "Ta-Nehisi Coates",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "7"
+   ],
+   "nm": 6.0,
+   "sameBox": true
+  },
+  {
+   "title": "Blade",
+   "issue": "3",
+   "year": "2023",
+   "volume": "6",
+   "publisher": "Marvel",
+   "writer": "Bryan Hill",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "20"
+   ],
+   "nm": 6.0,
+   "sameBox": true
+  },
+  {
+   "title": "Blade",
+   "issue": "4",
+   "year": "2023",
+   "volume": "6",
+   "publisher": "Marvel",
+   "writer": "Bryan Hill",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "20"
+   ],
+   "nm": 6.0,
+   "sameBox": true
+  },
+  {
+   "title": "Blade",
+   "issue": "5",
+   "year": "2023",
+   "volume": "6",
+   "publisher": "Marvel",
+   "writer": "Bryan Hill",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "20"
+   ],
+   "nm": 6.0,
+   "sameBox": true
+  },
+  {
+   "title": "Captain America",
+   "issue": "2",
+   "year": "2002",
+   "volume": "5",
+   "publisher": "Marvel",
+   "writer": "Ed Brubaker",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "10",
+    "30"
+   ],
+   "nm": 6.0,
+   "sameBox": false
+  },
+  {
+   "title": "Captain America",
+   "issue": "2",
+   "year": "2012",
+   "volume": "9",
+   "publisher": "Marvel",
+   "writer": "Ed Brubaker",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "10",
+    "30"
+   ],
+   "nm": 6.0,
+   "sameBox": false
+  },
+  {
+   "title": "Captain America",
+   "issue": "28",
+   "year": "2021",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Ta-Nehisi Coates",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "10",
+    "30"
+   ],
+   "nm": 6.0,
+   "sameBox": false
+  },
+  {
+   "title": "Captain America",
+   "issue": "3",
+   "year": "2012",
+   "volume": "9",
+   "publisher": "Marvel",
+   "writer": "Ed Brubaker",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "30"
+   ],
+   "nm": 6.0,
+   "sameBox": true
+  },
+  {
+   "title": "Captain America",
+   "issue": "4",
+   "year": "2013",
+   "volume": "10",
+   "publisher": "Marvel",
+   "writer": "Rick Remender",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "10",
+    "30"
+   ],
+   "nm": 6.0,
+   "sameBox": false
+  },
+  {
+   "title": "Justice League",
+   "issue": "60",
+   "year": "2021",
+   "volume": "7",
+   "publisher": "DC",
+   "writer": "Brian Michael Bendis & Ram V",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "55",
+    "98"
+   ],
+   "nm": 6.0,
+   "sameBox": false
+  },
+  {
+   "title": "Savage Avengers",
+   "issue": "2",
+   "year": "2019",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Gerry Duggan",
+   "copies": 3,
+   "sellable": 2,
+   "boxes": [
+    "6",
+    "27"
+   ],
+   "nm": 6.0,
+   "sameBox": false
+  },
+  {
+   "title": "Secret Six",
+   "issue": "5",
+   "year": "2009",
+   "volume": "3",
+   "publisher": "DC",
+   "writer": "Gail Simone",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "52"
+   ],
+   "nm": 6.0,
+   "sameBox": true
+  },
+  {
+   "title": "Secret Six",
+   "issue": "6",
+   "year": "2009",
+   "volume": "3",
+   "publisher": "DC",
+   "writer": "Gail Simone",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "52"
+   ],
+   "nm": 6.0,
+   "sameBox": true
+  },
+  {
+   "title": "Uncanny Avengers",
+   "issue": "30",
+   "year": "2017",
+   "volume": "6",
+   "publisher": "Marvel",
+   "writer": "Jim Zub",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "15",
+    "87"
+   ],
+   "nm": 6.0,
+   "sameBox": false
+  },
+  {
+   "title": "Uncanny X-Force",
+   "issue": "13",
+   "year": "2011",
+   "volume": "4",
+   "publisher": "Marvel",
+   "writer": "Rick Remender",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "12",
+    "15"
+   ],
+   "nm": 6.0,
+   "sameBox": false
+  },
+  {
+   "title": "X-Men",
+   "issue": "12",
+   "year": "2020",
+   "volume": "8",
+   "publisher": "Marvel",
+   "writer": "Jonathan Hickman",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "11",
+    "14"
+   ],
+   "nm": 6.0,
+   "sameBox": false
+  },
+  {
+   "title": "X-Men",
+   "issue": "13",
+   "year": "2020",
+   "volume": "8",
+   "publisher": "Marvel",
+   "writer": "Jonathan Hickman",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "11",
+    "14"
+   ],
+   "nm": 6.0,
+   "sameBox": false
+  },
+  {
+   "title": "X-Men",
+   "issue": "14",
+   "year": "2020",
+   "volume": "8",
+   "publisher": "Marvel",
+   "writer": "Jonathan Hickman",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "11",
+    "14"
+   ],
+   "nm": 6.0,
+   "sameBox": false
+  },
+  {
+   "title": "X-Men",
+   "issue": "4",
+   "year": "2010",
+   "volume": "6",
+   "publisher": "Marvel",
+   "writer": "Victor Gischler",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "3",
+    "15"
+   ],
+   "nm": 6.0,
+   "sameBox": false
+  },
+  {
+   "title": "X-Men",
+   "issue": "7",
+   "year": "2011",
+   "volume": "3",
+   "publisher": "Marvel",
+   "writer": "Victor Gischler",
+   "copies": 3,
+   "sellable": 2,
+   "boxes": [
+    "12",
+    "14",
+    "15"
+   ],
+   "nm": 6.0,
+   "sameBox": false
+  },
+  {
+   "title": "Astonishing X-Men: Xenogenesis",
+   "issue": "4",
+   "year": "2010",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Warren Ellis",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "12"
+   ],
+   "nm": 5.0,
+   "sameBox": true
+  },
+  {
+   "title": "Avengers Arena",
+   "issue": "1",
+   "year": "2012",
+   "volume": "5",
+   "publisher": "Marvel",
+   "writer": "Dennis Hopeless",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "24",
+    "27"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Black Panther",
+   "issue": "19",
+   "year": "2006",
+   "volume": "4",
+   "publisher": "Marvel",
+   "writer": "Reginald Hudlin",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "7",
+    "80"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Black Panther: Intergalactic",
+   "issue": "4",
+   "year": "2025",
+   "volume": "10",
+   "publisher": "Marvel",
+   "writer": "Victor LaValle",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "7",
+    "75"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Black Widow",
+   "issue": "2",
+   "year": "2016",
+   "volume": "6",
+   "publisher": "Marvel",
+   "writer": "Mark Waid & Chris Samnee",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "8",
+    "18"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Blade",
+   "issue": "2",
+   "year": "2023",
+   "volume": "6",
+   "publisher": "Marvel",
+   "writer": "Marc Guggenheim",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "20",
+    "21"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Cable",
+   "issue": "83",
+   "year": "2000",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Robert Weinberg",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "12"
+   ],
+   "nm": 5.0,
+   "sameBox": true
+  },
+  {
+   "title": "Captain America",
+   "issue": "1",
+   "year": "2023",
+   "volume": "17",
+   "publisher": "Marvel",
+   "writer": "J. Michael Straczynski",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "10",
+    "27"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Captain America",
+   "issue": "15",
+   "year": "2024",
+   "volume": "13",
+   "publisher": "Marvel",
+   "writer": "J. Michael Straczynski",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "10",
+    "102"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Captain Carter",
+   "issue": "1",
+   "year": "2022",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Jamie McKelvie",
+   "copies": 3,
+   "sellable": 2,
+   "boxes": [
+    "10",
+    "106"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Champions",
+   "issue": "1",
+   "year": "2016",
+   "volume": "2",
+   "publisher": "Marvel",
+   "writer": "Mark Waid",
+   "copies": 3,
+   "sellable": 2,
+   "boxes": [
+    "1",
+    "95",
+    "106"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Fantastic Four",
+   "issue": "563",
+   "year": "2009",
+   "volume": "3",
+   "publisher": "Marvel",
+   "writer": "Mark Millar",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "4",
+    "18"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "FF",
+   "issue": "11",
+   "year": "2011",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Jonathan Hickman",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "4",
+    "75"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Green Lantern",
+   "issue": "11",
+   "year": "2012",
+   "volume": "7",
+   "publisher": "DC",
+   "writer": "Jeremy Adams",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "50",
+    "82"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Green Lantern",
+   "issue": "2",
+   "year": "2023",
+   "volume": "10",
+   "publisher": "DC",
+   "writer": "Phillip Kennedy Johnson & Jeremy Adams",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "50",
+    "98"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Green Lantern",
+   "issue": "3",
+   "year": "2023",
+   "volume": "10",
+   "publisher": "DC",
+   "writer": "Jeremy Adams & Phillip Kennedy Johnson",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "50",
+    "98"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Green Lantern",
+   "issue": "4",
+   "year": "2023",
+   "volume": "10",
+   "publisher": "DC",
+   "writer": "Jeremy Adams & Peter J. Tomasi",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "50",
+    "98"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Green Lantern",
+   "issue": "5",
+   "year": "2026",
+   "volume": "7",
+   "publisher": "DC",
+   "writer": "Jeremy Adams",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "50",
+    "98"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Green Lantern",
+   "issue": "6",
+   "year": "2021",
+   "volume": "7",
+   "publisher": "DC",
+   "writer": "Geoffrey Thorne",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "50",
+    "98"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Green Lantern",
+   "issue": "7",
+   "year": "2024",
+   "volume": "7",
+   "publisher": "DC",
+   "writer": "Jeremy Adams & Peter Tomasi",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "50",
+    "98"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Green Lantern",
+   "issue": "8",
+   "year": "2012",
+   "volume": "5",
+   "publisher": "DC",
+   "writer": "Jeremy Adams & Ron Marz",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "50",
+    "82"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Guardians of the Galaxy",
+   "issue": "19",
+   "year": "2014",
+   "volume": "3",
+   "publisher": "Marvel",
+   "writer": "Brian Michael Bendis",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "17"
+   ],
+   "nm": 5.0,
+   "sameBox": true
+  },
+  {
+   "title": "JLA",
+   "issue": "106",
+   "year": "2004",
+   "volume": "1",
+   "publisher": "DC",
+   "writer": "Chuck Austen",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "47",
+    "88"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Justice League",
+   "issue": "10",
+   "year": "2012",
+   "volume": "2",
+   "publisher": "DC",
+   "writer": "Geoff Johns & Various",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "46",
+    "48"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Justice League",
+   "issue": "11",
+   "year": "2012",
+   "volume": "2",
+   "publisher": "DC",
+   "writer": "Geoff Johns & Various",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "46",
+    "48"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Justice League",
+   "issue": "12",
+   "year": "2017",
+   "volume": "3",
+   "publisher": "DC",
+   "writer": "Scott Snyder",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "48",
+    "60"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Justice League",
+   "issue": "13",
+   "year": "2012",
+   "volume": "2",
+   "publisher": "DC",
+   "writer": "Geoff Johns & Jeff Lemire",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "46",
+    "48"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Justice League",
+   "issue": "4",
+   "year": "2012",
+   "volume": "2",
+   "publisher": "DC",
+   "writer": "Geoff Johns",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "46",
+    "48"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Justice League",
+   "issue": "5",
+   "year": "2012",
+   "volume": "2",
+   "publisher": "DC",
+   "writer": "Geoff Johns & Various",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "46",
+    "48"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Justice League",
+   "issue": "6",
+   "year": "2012",
+   "volume": "2",
+   "publisher": "DC",
+   "writer": "Geoff Johns & Various",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "46",
+    "48"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Justice League",
+   "issue": "7",
+   "year": "2012",
+   "volume": "2",
+   "publisher": "DC",
+   "writer": "Geoff Johns & Various",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "46",
+    "48"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Justice League",
+   "issue": "8",
+   "year": "2012",
+   "volume": "2",
+   "publisher": "DC",
+   "writer": "Geoff Johns & Various",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "46",
+    "48"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Justice League",
+   "issue": "9",
+   "year": "2012",
+   "volume": "2",
+   "publisher": "DC",
+   "writer": "Geoff Johns & Various",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "46",
+    "48"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Marauders",
+   "issue": "11",
+   "year": "2020",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Gerry Duggan",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "9",
+    "14"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Marauders",
+   "issue": "5",
+   "year": "2019",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Gerry Duggan",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "9",
+    "11"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Moon Knight",
+   "issue": "2",
+   "year": "2011",
+   "volume": "7",
+   "publisher": "Marvel",
+   "writer": "Brian Michael Bendis",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "33"
+   ],
+   "nm": 5.0,
+   "sameBox": true
+  },
+  {
+   "title": "Nightwing",
+   "issue": "113",
+   "year": "2006",
+   "volume": "2",
+   "publisher": "DC",
+   "writer": "Devin Grayson",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "1",
+    "53"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Nova",
+   "issue": "3",
+   "year": "2013",
+   "volume": "6",
+   "publisher": "Marvel",
+   "writer": "Jeph Loeb",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "17",
+    "28"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Planet She-Hulk",
+   "issue": "1",
+   "year": "2025",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Stephanie Phillips",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "19",
+    "75"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Strange Academy",
+   "issue": "5",
+   "year": "2021",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Skottie Young",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "28",
+    "31"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Superman/Batman",
+   "issue": "27",
+   "year": "2006",
+   "volume": "1",
+   "publisher": "DC",
+   "writer": "Mark Verheiden",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "57",
+    "58"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Superman/Batman",
+   "issue": "28",
+   "year": "2006",
+   "volume": "1",
+   "publisher": "DC",
+   "writer": "Mark Verheiden",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "57",
+    "58"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Superman/Batman",
+   "issue": "29",
+   "year": "2006",
+   "volume": "1",
+   "publisher": "DC",
+   "writer": "Mark Verheiden",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "57",
+    "58"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Superman/Batman",
+   "issue": "30",
+   "year": "2006",
+   "volume": "1",
+   "publisher": "DC",
+   "writer": "Mark Verheiden",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "57",
+    "58"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Thor",
+   "issue": "19",
+   "year": "2021",
+   "volume": "8",
+   "publisher": "Marvel",
+   "writer": "Jason Aaron",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "5"
+   ],
+   "nm": 5.0,
+   "sameBox": true
+  },
+  {
+   "title": "Thunderbolts",
+   "issue": "170",
+   "year": "2012",
+   "volume": "3",
+   "publisher": "Marvel",
+   "writer": "Jeff Parker",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "75",
+    "95"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "X-Force",
+   "issue": "13",
+   "year": "2020",
+   "volume": "5",
+   "publisher": "Marvel",
+   "writer": "Benjamin Percy",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "9"
+   ],
+   "nm": 5.0,
+   "sameBox": true
+  },
+  {
+   "title": "X-Force",
+   "issue": "15",
+   "year": "1992",
+   "volume": "5",
+   "publisher": "Marvel",
+   "writer": "Ed Brisson",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "9",
+    "12"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "X-Force",
+   "issue": "4",
+   "year": "2020",
+   "volume": "7",
+   "publisher": "Marvel",
+   "writer": "Benjamin Percy",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "11",
+    "14"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "X-Force",
+   "issue": "5",
+   "year": "2020",
+   "volume": "7",
+   "publisher": "Marvel",
+   "writer": "Benjamin Percy",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "11",
+    "14"
+   ],
+   "nm": 5.0,
+   "sameBox": false
+  },
+  {
+   "title": "Absolute Green Arrow",
+   "issue": "1",
+   "year": "2025",
+   "volume": "1",
+   "publisher": "DC",
+   "writer": "Pornsak Pichetshote",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "104",
+    "106"
+   ],
+   "nm": 0.0,
+   "sameBox": false
+  },
+  {
+   "title": "Korvac Saga",
+   "issue": "1",
+   "year": "2015",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Dan Abnett",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "19",
+    "86"
+   ],
+   "nm": 0.0,
+   "sameBox": false
+  },
+  {
+   "title": "Korvac Saga",
+   "issue": "2",
+   "year": "2015",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Dan Abnett",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "19",
+    "86"
+   ],
+   "nm": 0.0,
+   "sameBox": false
+  },
+  {
+   "title": "Korvac Saga",
+   "issue": "3",
+   "year": "2015",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Dan Abnett",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "19",
+    "86"
+   ],
+   "nm": 0.0,
+   "sameBox": false
+  },
+  {
+   "title": "Korvac Saga",
+   "issue": "4",
+   "year": "2015",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Dan Abnett",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "19",
+    "86"
+   ],
+   "nm": 0.0,
+   "sameBox": false
+  },
+  {
+   "title": "The Ultimates",
+   "issue": "13",
+   "year": "2004",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Mark Millar",
+   "copies": 2,
+   "sellable": 1,
+   "boxes": [
+    "85"
+   ],
+   "nm": 0.0,
+   "sameBox": true
+  }
+ ]
+}

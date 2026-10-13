@@ -131,7 +131,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
   const hoveredBoxData     = boxes.find(b => b.Num === hoveredBox);
 
   return (
-    <div style={{ maxWidth: 1200, margin: "0 auto", padding: "18px 18px 60px" }}>
+    <div style={{ maxWidth: "calc(1200px + var(--wide))", margin: "0 auto", padding: "18px 18px 60px" }}>
 
       {/* Intro label */}
       <div style={{ marginBottom: 14, fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",

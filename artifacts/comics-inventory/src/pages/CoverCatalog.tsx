@@ -495,7 +495,7 @@ export default function CoverCatalog() {
   }
 
   return (
-    <div style={{ maxWidth: 960, margin: "0 auto", padding: "24px 16px 80px" }}>
+    <div style={{ maxWidth: "calc(960px + var(--wide))", margin: "0 auto", padding: "24px 16px 80px" }}>
 
       {/* Header */}
       <div style={{ marginBottom: 20 }}>

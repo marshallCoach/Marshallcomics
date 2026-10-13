@@ -440,7 +440,7 @@ export default function ComicHistory() {
   [yearStats]);
 
   return (
-    <div style={{ maxWidth: 1200, margin: "0 auto", padding: "20px 16px 80px" }}>
+    <div style={{ maxWidth: "calc(1200px + var(--wide))", margin: "0 auto", padding: "20px 16px 80px" }}>
 
       {/* ── HEADER ── */}
       <div style={{ marginBottom: 22 }}>

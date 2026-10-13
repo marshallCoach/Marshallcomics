@@ -542,7 +542,7 @@ export default function OrganizationPath() {
   const displayedBagOrder = bagPrioFilter ? BAG_ORDER.filter(b => b.priority === bagPrioFilter) : BAG_ORDER;
 
   return (
-    <div style={{ maxWidth:1100, margin:"0 auto", padding:"20px 16px 80px" }}>
+    <div style={{ maxWidth: "calc(1100px + var(--wide))", margin:"0 auto", padding:"20px 16px 80px" }}>
 
       {/* Roy Thomas urgent notice */}
       <div style={{

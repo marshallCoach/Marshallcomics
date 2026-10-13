@@ -67,7 +67,7 @@ export default function BoxTimeline() {
   const boxPct = Math.round((entries.length / TARGET_BOXES) * 100);
 
   return (
-    <div style={{ maxWidth: 900, margin: "0 auto", padding: "18px 18px 60px" }}>
+    <div style={{ maxWidth: "calc(900px + var(--wide))", margin: "0 auto", padding: "18px 18px 60px" }}>
 
       {/* Progress summary */}
       <div style={{ marginBottom: 24, padding: "14px 18px",

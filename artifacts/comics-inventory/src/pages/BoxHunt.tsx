@@ -317,7 +317,7 @@ export default function BoxHunt() {
   }
 
   return (
-    <div style={{ maxWidth:1400, margin:"0 auto", padding:"16px 14px 60px" }}>
+    <div style={{ maxWidth: "calc(1400px + var(--wide))", margin:"0 auto", padding:"16px 14px 60px" }}>
 
       {/* Page header */}
       <div style={{ marginBottom:18 }}>
@@ -787,7 +787,7 @@ export default function BoxHunt() {
           <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"1.75rem",
             letterSpacing:"4px", color:"var(--muted)", marginBottom:10 }}>WHAT ARE YOU HUNTING?</div>
           <div style={{ fontSize:"0.875rem", color:"var(--muted2)", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-            maxWidth:460, margin:"0 auto", lineHeight:1.7 }}>
+            maxWidth: "calc(460px + var(--wide))", margin:"0 auto", lineHeight:1.7 }}>
             Pick a search field above, type your term, and hit Search. The full collection is yours —
             results appear as a list or card grid, and the box grid shows exactly where your books live.
           </div>

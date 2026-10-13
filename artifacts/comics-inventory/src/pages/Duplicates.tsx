@@ -381,7 +381,7 @@ export default function Duplicates({ onNavigate }: Props) {
   const active = RAW_GROUPS.length - hidden.size;
 
   return (
-    <div style={{ maxWidth: 1100, margin: "0 auto", padding: "20px 16px 80px" }}>
+    <div style={{ maxWidth: "calc(1100px + var(--wide))", margin: "0 auto", padding: "20px 16px 80px" }}>
 
       {/* ── HEADER ── */}
       <div style={{ marginBottom: 24, display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 16, flexWrap: "wrap" }}>

@@ -77,7 +77,7 @@ export default function OpsReference() {
   const toggle = (num: string) => setOpen(prev => { const n = new Set(prev); n.has(num) ? n.delete(num) : n.add(num); return n; });
 
   return (
-    <div style={{ padding:"24px 24px 80px", maxWidth:1080, margin:"0 auto" }}>
+    <div style={{ padding:"24px 24px 80px", maxWidth: "calc(1080px + var(--wide))", margin:"0 auto" }}>
       {/* Header */}
       <div style={{ borderBottom:"1px solid var(--border)", paddingBottom:16, marginBottom:28, display:"flex", alignItems:"baseline", gap:16, flexWrap:"wrap" }}>
         <span style={{ fontFamily:"'Courier New',monospace", fontSize:"0.875rem", fontWeight:600, color:"#e8a020", letterSpacing:"0.03em" }}>~/marshallcomics — ops reference</span>

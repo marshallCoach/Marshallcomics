@@ -147,7 +147,7 @@ const BUSINESS_PAGES: PageEntry[] = [
 
 export default function SiteMap({ onNavigate }: { onNavigate: NavFn }) {
   return (
-    <div style={{ maxWidth: 1100, margin: "0 auto", padding: "20px 16px 80px" }}>
+    <div style={{ maxWidth: "calc(1100px + var(--wide))", margin: "0 auto", padding: "20px 16px 80px" }}>
 
       <div style={{ marginBottom: 28 }}>
         <div style={{

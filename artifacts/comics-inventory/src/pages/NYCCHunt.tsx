@@ -456,7 +456,7 @@ export default function NYCCHunt() {
 }
 
 const nyccCSS = `
-.nycc{max-width:1080px;margin:0 auto;padding:0 18px 60px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--text)}
+.nycc{max-width:calc(1080px + var(--wide));margin:0 auto;padding:0 18px 60px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--text)}
 .nycc h1,.nycc h2,.nycc h3{margin:0;text-wrap:balance}
 .nycc-hero{padding:26px 0 16px;border-bottom:3px solid var(--text)}
 .nycc-kicker{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:6px}

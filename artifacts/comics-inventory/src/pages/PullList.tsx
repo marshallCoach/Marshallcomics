@@ -240,7 +240,7 @@ export default function PullList() {
   });
 
   return (
-    <div style={{ maxWidth: 1100, margin: "0 auto", padding: "18px 16px 80px" }}>
+    <div style={{ maxWidth: "calc(1100px + var(--wide))", margin: "0 auto", padding: "18px 16px 80px" }}>
 
       {/* Page header */}
       <div style={{ marginBottom: 20 }}>

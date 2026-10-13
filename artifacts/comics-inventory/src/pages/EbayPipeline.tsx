@@ -86,7 +86,7 @@ export default function EbayPipeline() {
   const statusLabel = { done: "DONE", now: "YOU ARE HERE", next: "NEXT" };
 
   return (
-    <div style={{ padding:"24px 24px 80px", maxWidth:720, margin:"0 auto" }}>
+    <div style={{ padding:"24px 24px 80px", maxWidth: "calc(720px + var(--wide))", margin:"0 auto" }}>
       {/* Header */}
       <div style={{ marginBottom:28 }}>
         <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"3px", color:"var(--muted)", marginBottom:6 }}>BRB OPS · COMIC INVENTORY SYSTEM</div>

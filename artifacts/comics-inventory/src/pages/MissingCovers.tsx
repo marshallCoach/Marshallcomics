@@ -145,7 +145,7 @@ export default function MissingCovers() {
   }
 
   return (
-    <div style={{ maxWidth: 1100, margin: "0 auto", padding: "20px 16px 80px" }}>
+    <div style={{ maxWidth: "calc(1100px + var(--wide))", margin: "0 auto", padding: "20px 16px 80px" }}>
       <style>{CSS}</style>
       <div className="mc-head">
         <div>
@@ -240,7 +240,7 @@ function SoloBook({ comic, index, total, onPrev, onNext, onBack, onQueuedChange 
   }
 
   return (
-    <div style={{ maxWidth: 900, margin: "0 auto", padding: "20px 16px 80px" }}>
+    <div style={{ maxWidth: "calc(900px + var(--wide))", margin: "0 auto", padding: "20px 16px 80px" }}>
       <style>{CSS}</style>
 
       {/* Nav bar: back + position + prev/next */}

@@ -67,7 +67,7 @@ export default function TitleFixes() {
   const total = open.length;
 
   return (
-    <div style={{ maxWidth: 900, margin: "0 auto", padding: "20px 16px 80px" }}>
+    <div style={{ maxWidth: "calc(900px + var(--wide))", margin: "0 auto", padding: "20px 16px 80px" }}>
       <style>{CSS}</style>
       <div className="tf-head">
         <div>

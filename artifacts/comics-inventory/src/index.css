@@ -23,7 +23,17 @@
   --blue-text: #1a4a99;
   --gold-bg: #fff8e0;
   --gold-text: #7a5500;
+  /* Extra page width unlocked on large monitors. 0 on normal screens, so
+     every page keeps its current width; it grows only past the breakpoints
+     below. Page containers add it: maxWidth calc(<base>px + var(--wide)). */
+  --wide: 0px;
 }
+
+/* Large-monitor breakpoints — use more of a wide screen without touching
+   the laptop/tablet layout. Tune these two numbers to taste. */
+@media (min-width: 1600px) { :root { --wide: 280px; } }
+@media (min-width: 1920px) { :root { --wide: 560px; } }
+@media (min-width: 2560px) { :root { --wide: 900px; } }
 
 body {
   background: var(--bg);

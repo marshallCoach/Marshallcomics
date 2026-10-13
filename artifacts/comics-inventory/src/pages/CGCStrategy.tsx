@@ -614,7 +614,7 @@ export default function CGCStrategy() {
         <div style={{ padding:"40px 24px", textAlign:"center", color:"var(--muted2)" }}>
           <div style={{ fontSize:"1.75rem", marginBottom:12 }}>🏙️</div>
           <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"2px", color:"var(--text)", marginBottom:8 }}>NYCC — Oct 8–11, 2026 · Javits Center, NYC</div>
-          <div style={{ fontSize:"0.875rem", lineHeight:1.8, maxWidth:520, margin:"0 auto" }}>
+          <div style={{ fontSize:"0.875rem", lineHeight:1.8, maxWidth: "calc(520px + var(--wide))", margin:"0 auto" }}>
             Stan Lee BP #513 is <strong style={{color:"#16a34a"}}>already at CGC</strong> — no NYCC action needed for that book.<br/>
             Focus: Heritage Auctions networking + dealer floor buys + post-NYCC haul show.<br/>
             Haul show (Oct 14) is your highest-engagement Whatnot show of Q4.

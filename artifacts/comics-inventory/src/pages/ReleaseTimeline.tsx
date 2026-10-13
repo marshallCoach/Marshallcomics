@@ -143,7 +143,7 @@ export default function ReleaseTimeline() {
   const maxYear = Math.max(1, ...byYear.map(y => y[1]));
 
   return (
-    <div style={{ maxWidth: 1000, margin: "0 auto", padding: "20px 16px 80px" }}>
+    <div style={{ maxWidth: "calc(1000px + var(--wide))", margin: "0 auto", padding: "20px 16px 80px" }}>
       <style>{CSS}</style>
       <div className="rt-head">
         <div>

@@ -219,7 +219,7 @@ export default function DataFix() {
   };
 
   return (
-    <div style={{ maxWidth: 1040, margin: "0 auto", padding: "20px 16px 90px" }}>
+    <div style={{ maxWidth: "calc(1040px + var(--wide))", margin: "0 auto", padding: "20px 16px 90px" }}>
       <style>{CSS}</style>
 
       {/* Hero: progress + streak */}

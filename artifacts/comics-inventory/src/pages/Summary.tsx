@@ -419,7 +419,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
   const [carouselModal, setCarouselModal] = useState<{ comic: typeof comics[0]; large: string | null } | null>(null);
 
   return (
-    <div style={{ maxWidth:1100, margin:"0 auto", padding:"20px 16px 80px" }}>
+    <div style={{ maxWidth: "calc(1100px + var(--wide))", margin:"0 auto", padding:"20px 16px 80px" }}>
 
       {/* ── LATEST UPDATE BANNER ── */}
       {!bannerClosed && (

@@ -85,7 +85,7 @@ export default function RunsVolumes() {
   }), [runs]);
 
   return (
-    <div style={{ maxWidth: 960, margin: "0 auto", padding: "20px 14px 80px" }}>
+    <div style={{ maxWidth: "calc(960px + var(--wide))", margin: "0 auto", padding: "20px 14px 80px" }}>
       <style>{CSS}</style>
       <h1 className="rv-h1">Runs &amp; Volumes</h1>
       <p className="rv-sub">Every title+volume as a run — spot missing issues, volume clashes, and which boxes to raid before you buy a replacement.</p>

@@ -349,7 +349,7 @@ export default function SellerDashboard() {
   ];
 
   return (
-    <div style={{ maxWidth:1100, margin:"0 auto", padding:"0 0 60px" }}>
+    <div style={{ maxWidth: "calc(1100px + var(--wide))", margin:"0 auto", padding:"0 0 60px" }}>
 
       {/* ── page header ───────────────────────────────────────────────────── */}
       <div style={{ background:"#1a0a0a", padding:"20px 20px 16px", borderBottom:"3px solid var(--red)" }}>

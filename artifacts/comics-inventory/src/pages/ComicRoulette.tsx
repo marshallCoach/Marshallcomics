@@ -273,7 +273,7 @@ function ResultPanel({ r, onOpen, dim, charsByUrl }: { r: Result; onOpen: (u: st
 }
 
 const CR_CSS = `
-.cr-root { max-width: 1100px; margin: 0 auto; padding: 1.5rem 1rem 4rem; }
+.cr-root { max-width:calc(1100px + var(--wide)); margin: 0 auto; padding: 1.5rem 1rem 4rem; }
 .cr-header h1 { margin: 0 0 .25rem; font-size: 1.9rem; }
 .cr-sub { color: var(--muted,#888); margin: 0 0 1.25rem; max-width: 640px; }
 .cr-scope { display: flex; gap: .5rem; justify-content: center; margin-bottom: .6rem; }

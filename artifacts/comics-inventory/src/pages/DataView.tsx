@@ -149,7 +149,7 @@ export default function DataView() {
   }, [stats]);
 
   return (
-    <div style={{ maxWidth: 960, margin: "0 auto", padding: "20px 18px 60px" }}>
+    <div style={{ maxWidth: "calc(960px + var(--wide))", margin: "0 auto", padding: "20px 18px 60px" }}>
 
       {/* Page header */}
       <div style={{ marginBottom: 6 }}>

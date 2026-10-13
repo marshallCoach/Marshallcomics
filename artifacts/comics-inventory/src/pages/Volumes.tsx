@@ -250,7 +250,7 @@ export default function Volumes({ onNavigate }: { onNavigate: NavFn }) {
   }
 
   return (
-    <div style={{ maxWidth: 1000, margin: "0 auto", padding: "18px 18px 60px" }}>
+    <div style={{ maxWidth: "calc(1000px + var(--wide))", margin: "0 auto", padding: "18px 18px 60px" }}>
 
       {/* Header */}
       <div style={{ marginBottom: 16 }}>

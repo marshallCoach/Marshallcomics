@@ -161,7 +161,7 @@ export default function AdiGranov() {
 }
 
 const CSS = `
-.ag{max-width:1080px;margin:0 auto;padding:0 18px 60px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--text)}
+.ag{max-width:calc(1080px + var(--wide));margin:0 auto;padding:0 18px 60px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--text)}
 .ag-hero{padding:24px 0 14px;border-bottom:3px solid var(--text)}
 .ag-kicker{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:6px}
 .ag-hero h1{margin:0;font-size:clamp(2.1rem,7vw,3.4rem);line-height:.95}

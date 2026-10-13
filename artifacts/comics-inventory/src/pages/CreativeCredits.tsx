@@ -74,7 +74,7 @@ export default function CreativeCredits({ onNavigate }: { onNavigate?: (tab: str
 }
 
 const CSS = `
-.cc-wrap{max-width:1080px;margin:0 auto;padding:20px 24px 60px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--text)}
+.cc-wrap{max-width:calc(1080px + var(--wide));margin:0 auto;padding:20px 24px 60px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--text)}
 .cc-h1{margin:0 0 4px;font-size:1.75rem;letter-spacing:1px}
 .cc-sub{margin:0 0 16px;color:var(--muted2);font-size:.9rem;line-height:1.45;max-width:64ch}
 .cc-controls{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;margin-bottom:12px}

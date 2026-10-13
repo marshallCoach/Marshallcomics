@@ -291,7 +291,7 @@ export default function Everything({
   );
 
   return (
-    <div style={{ maxWidth:1400, margin:"0 auto", padding:"16px 14px 60px" }}>
+    <div style={{ maxWidth: "calc(1400px + var(--wide))", margin:"0 auto", padding:"16px 14px 60px" }}>
 
       {/* ─── Search bar ─── */}
       <div className="filters" style={{ borderRadius:8, marginBottom:10, padding:"9px 14px" }}>
