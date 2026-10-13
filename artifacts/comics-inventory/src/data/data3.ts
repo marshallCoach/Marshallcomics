@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_1210_2011.xlsx  |  Generated: 2026-10-13
+// Source: comics_inventory_1210_2150.xlsx  |  Generated: 2026-10-13
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -17047,7 +17047,7 @@ DeFalco era Avengers.`,
     Year: `1968`, Arc: `Bendis / Pagulayan`, Key: `YES`,
     Key_Reason: `Tier 1 #5 — CGC-graded/CGC-bound copy; graded status qualifies the issue as a key.`, First_App: ``,
     Writer: `Roy Thomas`, Artist: `Don Heck & Werner Roth & John Buscema`,
-    Signed: `NO`, Signed_By: ``,
+    Signed: `YES`, Signed_By: `Roy Thomas`,
     Personal: ``, Condition: `4.0`,
     CGC_Worth: `NO`, Value_NM: `8`, Value_VF: `8`,
     Category: `Marvel Modern`, Era: `Modern`, Universe: `Marvel Main`,
@@ -233960,7 +233960,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
   },
   {
     Num: `BOX CC10`, Comics: 1, Keys: 1,
-    Signed: 0, YearRange: `1968-1968`,
+    Signed: 1, YearRange: `1968-1968`,
     Label: ``, FirstBook: `Avengers Annual 2`, LastBook: `Avengers Annual 2`,
     Location: ``, Code: ``, labeledAs: ``, Notes: ``, DateAdded: `May 18, 2026`,
   },
@@ -254182,6 +254182,16 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     CoverNotes: ``, Flag: ``,
   },
   {
+    Title: `Avengers Annual`, Issue: `2`, Publisher: `Marvel`,
+    Year: `1968`, Volume: `1`, Cover_Artist: `John Buscema`,
+    Key: `YES`, Key_Reason: `Tier 1 #5 — CGC-graded/CGC-bound copy; graded status qualifies the issue as a key.`,
+    Signed: `YES`, Signed_By: `Roy Thomas`,
+    Era: `Modern`, Writer: `Roy Thomas`,
+    Value_NM: `8`, Start_Bid: `2`, Box: `CC10`,
+    Notes: ``, SortPile: ``,
+    CoverNotes: ``, Flag: ``,
+  },
+  {
     Title: `Batman`, Issue: `608`, Publisher: `DC`,
     Year: `2003`, Volume: `1`, Cover_Artist: `Jim Lee`,
     Key: `YES`, Key_Reason: `Batman #608 Jeph Loeb/Jim Lee — HUSH begins — Jim Lee's defining Batman arc — COMPLETE run #608-619`,
@@ -256717,7 +256727,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Title: `Avengers Annual`, Issue: `2`, Publisher: `Marvel`,
     Year: `1968`, Volume: `1`, Cover_Artist: `John Buscema`,
     Key: `YES`, Key_Reason: `Tier 1 #5 — CGC-graded/CGC-bound copy; graded status qualifies the issue as a key.`,
-    Signed: `NO`, Signed_By: ``,
+    Signed: `YES`, Signed_By: `Roy Thomas`,
     Era: `Modern`, Writer: `Roy Thomas`,
     Value_NM: `8`, Start_Bid: `2`, Box: `CC10`,
     Notes: ``, SortPile: ``,
@@ -269389,7 +269399,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Title: `Avengers Annual`, Issue: `2`, Publisher: `Marvel`,
     Year: `1968`, Volume: `1`, Cover_Artist: `John Buscema`,
     Key: `YES`, Key_Reason: `Tier 1 #5 — CGC-graded/CGC-bound copy; graded status qualifies the issue as a key.`,
-    Signed: `NO`, Signed_By: ``,
+    Signed: `YES`, Signed_By: `Roy Thomas`,
     Era: `Modern`, Writer: `Roy Thomas`,
     Value_NM: `8`, Start_Bid: `2`, Box: `CC10`,
     Notes: ``, SortPile: ``,
