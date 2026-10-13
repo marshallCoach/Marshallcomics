@@ -141,6 +141,29 @@ def fetch_page(base, title, vol, issue):
     return (im.group(1).strip() if im else None, date_str, py, credits)
 
 
+def fetch_best(base, title, cand_vols, issue, target_year, memo):
+    """Find the right wiki page for (title, issue) by YEAR, not by a volume number.
+    The inventory's Volume column is unreliable and a dropped link can name the
+    wrong volume (one series name — e.g. 'Mighty Thor' — spans Vol 1/2/3 on the
+    wiki). So probe candidate volumes and return (vol, result) for the page whose
+    year is within 2y of target_year; otherwise the first page that exists. Memoized
+    per (title, era) so a run probes each era only once."""
+    k = (title.lower(), target_year or 0)
+    order = ([memo[k]] + [v for v in cand_vols if v != memo[k]]) if k in memo else list(cand_vols)
+    fallback = None
+    for v in order:
+        res = fetch_page(base, title, v, issue)
+        if not res:
+            continue
+        py = res[2]
+        if target_year and py and abs(py - target_year) <= 2:
+            memo[k] = v
+            return v, res
+        if fallback is None:
+            fallback = (v, res)
+    return fallback
+
+
 def img_url(base, fn):
     try:
         u = base + "?" + urllib.parse.urlencode({
@@ -217,6 +240,7 @@ def main():
             by_title[t.lower()].append(r)
 
     cov = json.load(open(COVERS))
+    vol_memo = {}      # (title, era) -> wiki volume that matched, so each era probes once
     dates_set = covers_set = 0
     cred_counts = {"writer": 0, "artist": 0, "cover": 0}
     cred_changes = []
@@ -263,9 +287,14 @@ def main():
                 if has_cover and has_date and has_writer:
                     continue
             ry = yr(ws.cell(r, cY).value)
-            res = fetch_page(base, canon, vol, (url_issue if (is_seed and url_issue) else issue))
-            if not res:
+            # Probe volumes by year: the linked/sheet volume may be wrong, so find
+            # the wiki page whose year matches this row (handles a series split
+            # across Vol 1/2/3). The seed still prefers the issue named in the URL.
+            cand = [vol] + [str(x) for x in range(1, 8) if str(x) != vol]
+            got = fetch_best(base, canon, cand, (url_issue if (is_seed and url_issue) else issue), ry, vol_memo)
+            if not got:
                 continue
+            _used_vol, res = got
             fn, date_str, py, credits = res
             if not is_seed and ry and py and abs(py - ry) > 2:   # year-gate: run-mates only
                 continue
