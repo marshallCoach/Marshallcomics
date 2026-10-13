@@ -7,7 +7,8 @@ import sellDupes from "@/data/ebaySellDupes.json";
 // The hand-picked "original 14" quick-sell list stays at the bottom for reference.
 interface Dup {
   title: string; issue: string; year: string; volume: string; publisher: string;
-  writer: string; copies: number; sellable: number; boxes: string[]; nm: number; sameBox: boolean;
+  writer: string; copies: number; sellable: number; sellValue: number;
+  sellBoxes: string[]; keepBoxes: string[]; boxes: string[]; keepSigned: boolean; sameBox: boolean;
 }
 const DUPES = sellDupes.rows as Dup[];
 
@@ -63,7 +64,7 @@ export default function EbayListingGuide() {
         {[
           { lbl: "Duplicate titles", val: String(sellDupes.groupCount) },
           { lbl: "Copies to sell", val: String(sellDupes.sellableCount) },
-          { lbl: "Est. value (NM)", val: money(sellDupes.estValue), hi: true },
+          { lbl: "Realizable value", val: money(sellDupes.estValue), hi: true },
         ].map(s => (
           <div key={s.lbl} style={{ flex: "1 1 150px", border: "1.5px solid var(--border,#e5e7eb)", borderRadius: 10, padding: "12px 14px", background: "var(--surface,#fff)" }}>
             <div style={{ fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--muted,#888)", fontWeight: 700 }}>{s.lbl}</div>
@@ -76,7 +77,7 @@ export default function EbayListingGuide() {
       <section style={{ marginBottom: 30 }}>
         <h2 style={{ fontSize: 14, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 6, color: "var(--muted,#888)" }}>Duplicates — safe to sell · ranked by value</h2>
         <p style={{ margin: "0 0 12px", fontSize: 13, color: "var(--muted,#888)", lineHeight: 1.5 }}>
-          CC cover boxes and status boxes (AT CGC / UNKNOWN) are excluded — those are never duplicates. A <b>same-box</b> tag means both copies sit in one box; otherwise the boxes differ (confirm it isn't a deliberate reading-copy + key before selling).
+          CC cover boxes and status boxes (AT CGC / UNKNOWN) are excluded — those are never duplicates. Value shown is what the <b>spare</b> copies are worth (NM): you keep your best copy and sell the rest, so a signed/slab copy is kept, never sold. A <b>keep slab</b> tag means one copy is signed or graded — hold that one. <b>same-box</b> means both copies sit in one box.
         </p>
         <div style={{ overflowX: "auto" }}>
           <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
@@ -84,9 +85,9 @@ export default function EbayListingGuide() {
               <tr style={{ borderBottom: "2px solid var(--border,#e5e7eb)" }}>
                 <th style={{ textAlign: "left", padding: "6px 10px", fontWeight: 600 }}>#</th>
                 <th style={{ textAlign: "left", padding: "6px 10px", fontWeight: 600 }}>Book</th>
-                <th style={{ textAlign: "left", padding: "6px 10px", fontWeight: 600 }}>Copies</th>
-                <th style={{ textAlign: "left", padding: "6px 10px", fontWeight: 600 }}>Boxes</th>
-                <th style={{ textAlign: "right", padding: "6px 10px", fontWeight: 600 }}>NM each</th>
+                <th style={{ textAlign: "left", padding: "6px 10px", fontWeight: 600 }}>Sell</th>
+                <th style={{ textAlign: "left", padding: "6px 10px", fontWeight: 600 }}>Keep</th>
+                <th style={{ textAlign: "right", padding: "6px 10px", fontWeight: 600 }}>Spare value</th>
               </tr>
             </thead>
             <tbody>
@@ -96,11 +97,12 @@ export default function EbayListingGuide() {
                   <td style={{ padding: "7px 10px" }}>
                     <span style={{ fontWeight: 600 }}>{d.title}</span> #{d.issue}
                     <span style={{ color: "var(--muted,#888)" }}> ({d.year}){d.volume && d.volume !== "1" ? ` · Vol ${d.volume}` : ""}</span>
+                    {d.keepSigned && <span style={{ marginLeft: 6, fontSize: 11, background: "var(--blue-bg,#e8f0ff)", color: "var(--blue-text,#1a4a99)", borderRadius: 3, padding: "1px 5px", fontWeight: 700 }}>keep slab</span>}
                     {d.sameBox && <span style={{ marginLeft: 6, fontSize: 11, background: "var(--warn-bg,#fef08a)", color: "#92600a", borderRadius: 3, padding: "1px 5px", fontWeight: 700 }}>same-box</span>}
                   </td>
-                  <td style={{ padding: "7px 10px", fontVariantNumeric: "tabular-nums" }}>{d.copies} <span style={{ color: "var(--muted,#888)" }}>→ sell {d.sellable}</span></td>
-                  <td style={{ padding: "7px 10px", fontVariantNumeric: "tabular-nums", whiteSpace: "nowrap" }}>{d.boxes.join(", ")}</td>
-                  <td style={{ padding: "7px 10px", textAlign: "right", fontVariantNumeric: "tabular-nums", color: d.nm >= 25 ? "#16a34a" : "var(--text)", fontWeight: d.nm >= 25 ? 700 : 400 }}>{d.nm ? money(d.nm) : "—"}</td>
+                  <td style={{ padding: "7px 10px", fontVariantNumeric: "tabular-nums", whiteSpace: "nowrap" }}>{d.sellable} <span style={{ color: "var(--muted,#888)" }}>· box {d.sellBoxes.join(", ")}</span></td>
+                  <td style={{ padding: "7px 10px", fontVariantNumeric: "tabular-nums", whiteSpace: "nowrap", color: "var(--muted,#888)" }}>box {d.keepBoxes.join(", ")}</td>
+                  <td style={{ padding: "7px 10px", textAlign: "right", fontVariantNumeric: "tabular-nums", color: d.sellValue >= 25 ? "#16a34a" : "var(--text)", fontWeight: d.sellValue >= 25 ? 700 : 400 }}>{d.sellValue ? money(d.sellValue) : "—"}</td>
                 </tr>
               ))}
             </tbody>
