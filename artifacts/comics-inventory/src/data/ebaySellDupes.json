@@ -1,9 +1,9 @@
 {
- "source": "comics_inventory_1310_0816.xlsx",
- "generatedAt": "2026-10-13",
- "groupCount": 140,
- "sellableCount": 147,
- "estValue": 927.32,
+ "source": "comics_inventory_1410_1441.xlsx",
+ "generatedAt": "2026-10-14",
+ "groupCount": 150,
+ "sellableCount": 157,
+ "estValue": 922.32,
  "rows": [
   {
    "title": "Justice League",
@@ -1315,29 +1315,6 @@
     "75"
    ],
    "keepSigned": false,
-   "sameBox": false
-  },
-  {
-   "title": "Black Panther: The Man Without Fear",
-   "issue": "513",
-   "year": "2011",
-   "volume": "1",
-   "publisher": "Marvel",
-   "writer": "David Liss",
-   "copies": 2,
-   "sellable": 1,
-   "sellValue": 5.0,
-   "sellBoxes": [
-    "7"
-   ],
-   "keepBoxes": [
-    "107"
-   ],
-   "boxes": [
-    "7",
-    "107"
-   ],
-   "keepSigned": true,
    "sameBox": false
   },
   {
@@ -2898,6 +2875,28 @@
    "sameBox": false
   },
   {
+   "title": "Adventures of Superman: Book of El",
+   "issue": "12",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "DC",
+   "writer": "Phillip Kennedy Johnson",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "101"
+   ],
+   "keepBoxes": [
+    "101"
+   ],
+   "boxes": [
+    "101"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
    "title": "Batman and Robin: Year One",
    "issue": "1",
    "year": "2025",
@@ -2919,6 +2918,28 @@
    ],
    "keepSigned": false,
    "sameBox": false
+  },
+  {
+   "title": "Bishop",
+   "issue": "4",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "John Ostrander",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "102"
+   ],
+   "keepBoxes": [
+    "102"
+   ],
+   "boxes": [
+    "102"
+   ],
+   "keepSigned": false,
+   "sameBox": true
   },
   {
    "title": "Black Panther",
@@ -2988,6 +3009,48 @@
    ],
    "keepSigned": false,
    "sameBox": false
+  },
+  {
+   "title": "Doom Patrol",
+   "issue": "2",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "DC",
+   "writer": "",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "101"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "101"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "Fantastic Four",
+   "issue": "17",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Ryan North",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "102"
+   ],
+   "keepBoxes": [
+    "102"
+   ],
+   "boxes": [
+    "102"
+   ],
+   "keepSigned": false,
+   "sameBox": true
   },
   {
    "title": "Gatchaman",
@@ -3128,6 +3191,28 @@
    "sameBox": false
   },
   {
+   "title": "Miles Morales: Spider-Man",
+   "issue": "2",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Cody Ziglar",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "102"
+   ],
+   "keepBoxes": [
+    "102"
+   ],
+   "boxes": [
+    "102"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
    "title": "Planet She-Hulk",
    "issue": "1",
    "year": "2025",
@@ -3149,6 +3234,50 @@
    ],
    "keepSigned": false,
    "sameBox": false
+  },
+  {
+   "title": "Rom",
+   "issue": "1",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "Image",
+   "writer": "Robert Kirkman",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "103"
+   ],
+   "keepBoxes": [
+    "103"
+   ],
+   "boxes": [
+    "103"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "Terminal",
+   "issue": "3",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "Image",
+   "writer": "Joe Casey",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "103"
+   ],
+   "keepBoxes": [
+    "103"
+   ],
+   "boxes": [
+    "103"
+   ],
+   "keepSigned": false,
+   "sameBox": true
   },
   {
    "title": "The Flash",
@@ -3196,6 +3325,72 @@
    "sameBox": true
   },
   {
+   "title": "Transformers",
+   "issue": "36",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "Image",
+   "writer": "Robert Kirkman",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "103"
+   ],
+   "keepBoxes": [
+    "103"
+   ],
+   "boxes": [
+    "103"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "Void Rivals",
+   "issue": "34",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "Skybound",
+   "writer": "",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "103"
+   ],
+   "keepBoxes": [
+    "103"
+   ],
+   "boxes": [
+    "103"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "X-Men United",
+   "issue": "7",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Evan Narcisse",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "102"
+   ],
+   "keepBoxes": [
+    "102"
+   ],
+   "boxes": [
+    "102"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
    "title": "X-Men: Hellfire Gala",
    "issue": "1",
    "year": "2023",
@@ -3217,6 +3412,28 @@
    ],
    "keepSigned": false,
    "sameBox": false
+  },
+  {
+   "title": "Zatanna",
+   "issue": "6",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "DC",
+   "writer": "Jamal Campbell",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "101"
+   ],
+   "keepBoxes": [
+    "101"
+   ],
+   "boxes": [
+    "101"
+   ],
+   "keepSigned": false,
+   "sameBox": true
   }
  ]
 }

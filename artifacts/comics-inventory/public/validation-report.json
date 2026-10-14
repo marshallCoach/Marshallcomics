@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-10-13T12:17:43.426Z",
-  "source": "comics_inventory_1310_0816.xlsx",
-  "rowCount": 11113,
+  "generatedAt": "2026-10-14T18:41:17.318Z",
+  "source": "comics_inventory_1410_1441.xlsx",
+  "rowCount": 11156,
   "blanks": {
     "title": 0,
     "box": 0,
     "issue": 0
   },
-  "sameBoxDuplicateGroups": 2,
-  "sameBoxDuplicateExcessRows": 2,
+  "sameBoxDuplicateGroups": 12,
+  "sameBoxDuplicateExcessRows": 12,
   "fillRate": {
-    "writer": 99,
-    "artist": 96.9,
-    "coverArtist": 97.5,
-    "condition": 78.8,
-    "value": 93.4,
+    "writer": 98.6,
+    "artist": 96.6,
+    "coverArtist": 97.1,
+    "condition": 78.5,
+    "value": 93.1,
     "volume": 100,
     "year": 100
   }
