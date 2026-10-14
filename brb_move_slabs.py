@@ -20,10 +20,9 @@ A = os.path.join(ROOT, "attached_assets")
 # (title, issue, grade, yellow?)  — yellow = Signature Series (signed)
 SLABS = [
     ("Amazing Spider-Man", "361", "9.4", True),
-    ("Avengers", "62", "4.0", True),          # table said #887 — user confirms Avengers Vol 1 #62
     ("Avengers Annual", "2", "5.5", True),
     ("Avengers", "60", "6.5", True),
-    ("Avengers", "62", "6.0", True),
+    ("Avengers", "62", "6.2", True),          # single #62 (table's #887 was the same book)
     ("Transformers", "1", "5.5", False),
     ("Absolute Batman", "1", "9.8", False),
     ("New Mutants", "98", "9.4", False),
@@ -42,7 +41,8 @@ SLABS = [
 
 
 def norm_t(t):
-    return re.sub(r"[^a-z0-9]+", "", str(t).lower())
+    s = re.sub(r"^the\s+", "", str(t).lower())   # "The Amazing Spider-Man" == "Amazing Spider-Man"
+    return re.sub(r"[^a-z0-9]+", "", s)
 
 
 def norm_i(i):
@@ -88,10 +88,12 @@ def main():
         box = str(ws.cell(r, cB).value or "")
         cond = str(ws.cell(r, cC).value or "")
         s = 0
+        if "cgc" in cond.lower():
+            s += 4                       # explicitly graded = the slab copy
+        elif re.search(r"\b\d\.\d\b", cond):
+            s += 1                       # a bare numeric grade
         if not re.match(r"^\s*\d+\s*$", box.replace("BOX", "")):
-            s += 3                       # non-numeric box = status/CC/CC10 slab home
-        if re.search(r"CGC|\b\d\.\d\b", cond, re.I):
-            s += 2                       # already reads as graded
+            s += 2                       # non-numeric box = status/CC slab home
         m = re.search(r"[\d.]+", str(ws.cell(r, cV).value or ""))
         if m:
             s += min(float(m.group()), 400) / 100.0
