@@ -20,7 +20,7 @@ A = os.path.join(ROOT, "attached_assets")
 # (title, issue, grade, yellow?)  — yellow = Signature Series (signed)
 SLABS = [
     ("Amazing Spider-Man", "361", "9.4", True),
-    ("Avengers", "87", "4.0", True),          # table said #887 — Roy Thomas SS book is #87
+    ("Avengers", "62", "4.0", True),          # table said #887 — user confirms Avengers Vol 1 #62
     ("Avengers Annual", "2", "5.5", True),
     ("Avengers", "60", "6.5", True),
     ("Avengers", "62", "6.0", True),
