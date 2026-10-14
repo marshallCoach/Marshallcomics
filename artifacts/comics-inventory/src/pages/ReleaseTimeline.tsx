@@ -253,7 +253,8 @@ const CSS = `
 .rt-week-meta b{color:var(--text,#eee)}
 .rt-esttag{color:#c99a3a;font-size:.7rem}
 .rt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px}
-.rt-card{display:flex;gap:10px;background:var(--surface,#1a1a22);border:1px solid var(--border,#2c2c38);border-radius:9px;padding:8px}
+.rt-card{display:flex;flex-direction:column;gap:8px;background:var(--surface,#1a1a22);border:1px solid var(--border,#2c2c38);border-radius:9px;padding:9px}
+.rt-card>:first-child{align-self:center}
 .rt-info{flex:1;min-width:0;cursor:pointer;display:flex;flex-direction:column;gap:5px}
 .rt-title{font-weight:700;font-size:.86rem;line-height:1.25}
 .rt-iss{color:var(--red,#e05a4a)}
