@@ -94,9 +94,10 @@ def main():
             s += 1                       # a bare numeric grade
         if not re.match(r"^\s*\d+\s*$", box.replace("BOX", "")):
             s += 2                       # non-numeric box = status/CC slab home
-        m = re.search(r"[\d.]+", str(ws.cell(r, cV).value or ""))
-        if m:
-            s += min(float(m.group()), 400) / 100.0
+        if cV:
+            m = re.search(r"[\d.]+", str(ws.cell(r, cV).value or ""))
+            if m:
+                s += min(float(m.group()), 400) / 100.0
         return s
 
     moved = 0
