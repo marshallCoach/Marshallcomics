@@ -98,7 +98,7 @@ export default function ReleaseTimeline() {
 
   const { months, grand, count, byYear } = useMemo(() => {
     const fallback = pub || {};
-    const cutoff = new Date(); cutoff.setUTCFullYear(cutoff.getUTCFullYear() - 3); cutoff.setUTCHours(0, 0, 0, 0);
+    const cutoff = new Date(Date.UTC(2003, 0, 1));   // full collection back to 2003
     // Prefer the real Publication Date column; fall back to pub_dates.json for
     // any modern book the column hasn't been filled for yet.
     const placed: { c: Comic; p: PubRec }[] = [];
@@ -106,7 +106,7 @@ export default function ReleaseTimeline() {
       if (!PUB_RE.test(c.Publisher || "")) continue;
       const p = parsePubDate((c as { Pub_Date?: string }).Pub_Date) || fallback[pubKey(c)] || null;
       if (!p) continue;
-      if (new Date(`${p.date}T00:00:00Z`) < cutoff) continue;   // last 3 years only
+      if (new Date(`${p.date}T00:00:00Z`) < cutoff) continue;   // 2003 → now
       placed.push({ c, p });
     }
 
@@ -147,7 +147,7 @@ export default function ReleaseTimeline() {
       <style>{CSS}</style>
       <div className="rt-head">
         <div>
-          <h1 className="rt-h1">Release Timeline</h1>
+          <h1 className="rt-h1">Timeline</h1>
           <p className="rt-sub">Your modern Marvel / DC / Image books placed on the week they were <b>published</b> (real GCD on-sale dates), last 3 years. Working assumption: a modern book was bought the week it dropped. Price = cover price (real where captured, else a modern-cover estimate).</p>
         </div>
         <div className="rt-grand">

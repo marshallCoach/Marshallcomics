@@ -92,8 +92,7 @@ const NAV = [
     label: "Pull List",
     tabs: [
       { id: "pulllist",        label: "Pull List" },
-      { id: "recent",          label: "Recent Purchases" },
-      { id: "releasetimeline", label: "Release Timeline" },
+      { id: "releasetimeline", label: "Timeline" },
     ],
   },
   {
