@@ -49,6 +49,7 @@ import DataFix from "@/pages/DataFix";
 import TitleFixes from "@/pages/TitleFixes";
 import VolumeConfirm from "@/pages/VolumeConfirm";
 import EditComic from "@/pages/EditComic";
+import StorePreview from "@/pages/StorePreview";
 import OfflineCovers from "@/components/OfflineCovers";
 import FlaggedCount from "@/components/FlaggedCount";
 import PasswordGate from "@/components/PasswordGate";
@@ -57,7 +58,7 @@ import { Home, BookOpen, Boxes, Film, Sparkles, ClipboardList, Microscope, Dolla
 type TabId =
   | "summary" | "everything" | "collection" | "boxkeys" | "stats" | "runs" | "runsvolumes" | "recent" | "releasetimeline" | "dataview"
   | "calendar" | "showplanner" | "cgc" | "signings" | "actionplan" | "timeline" | "boxvisual"
-  | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "duplicates" | "dupchecklist" | "datafix" | "editcomic" | "titlefixes" | "volumeconfirm" | "history"
+  | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "storepreview" | "duplicates" | "dupchecklist" | "datafix" | "editcomic" | "titlefixes" | "volumeconfirm" | "history"
   | "orgpath" | "volumes" | "boxlabels" | "keycatalog" | "covercatalog" | "coverreview" | "missingcovers" | "boxquest" | "boxmap"
   | "ebaypipeline" | "opsreference" | "ebaylistingguide" | "roulette" | "lifearchive" | "nycc" | "locationcheck" | "absbatman" | "credits" | "granov";
 
@@ -143,6 +144,7 @@ const NAV = [
     id: "selling",
     label: "Selling",
     tabs: [
+      { id: "storepreview",     label: "Store Preview" },
       { id: "sellerdash",       label: "Seller Dashboard" },
       { id: "showplanner",      label: "Whatnot Shows" },
       { id: "ebaylistingguide", label: "Phase 1 Listing Guide" },
@@ -375,6 +377,7 @@ export default function App() {
         {activeTab === "orgpath"     && <OrganizationPath />}
         {activeTab === "boxlabels"   && <BoxLabels />}
         {activeTab === "hunting"     && <BoxHunt />}
+        {activeTab === "storepreview" && <StorePreview />}
         {activeTab === "sellerdash"  && <SellerDashboard />}
         {activeTab === "nycc"        && <NYCCHunt />}
         {activeTab === "locationcheck" && <LocationCheck />}
