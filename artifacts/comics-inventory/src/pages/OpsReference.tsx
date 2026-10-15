@@ -50,7 +50,7 @@ const PROBLEMS = [
     body: <>zsh tries to glob <code>#</code> comments. Never paste commands that include inline comments. Run each command on its own line. Use straight ASCII quotes always — curly/smart quotes cause <code>dquote&gt;</code> errors.</>,
     cmd: null },
   { num: "04", q: "gen_data.mjs fails — \"Cannot find inventory sheet\"", tag: "Site", tagColor: "#f85149",
-    body: <><strong>(a)</strong> Sheet name doesn't start with <code>✅ Clean Inventory</code> — rename it. <strong>(b)</strong> <code>Box Summary</code> sheet is missing — copy from master XLSX.</>,
+    body: <><strong>(a)</strong> Sheet name doesn't start with <code>✅ Clean Inventory</code> — rename it. <strong>(b)</strong> <code>Box Summary</code> sheet is missing — copy from primary XLSX.</>,
     cmd: <><span style={{color:"var(--muted)"}}>% </span>python3 -c "import openpyxl; wb=openpyxl.load_workbook('attached_assets/FILE.xlsx', read_only=True); print(wb.sheetnames)"</> },
   { num: "05", q: "\"Which inventory file is authoritative right now?\"", tag: "Data", tagColor: "#58a6ff",
     body: <>Always check the <strong>Data Integrity Log tab</strong> inside the xlsx first. Current authoritative working file: <code>comics_inventory_2407_0912.xlsx</code> ({DATA3.comics.length.toLocaleString()} rows). Validator baseline: Rule 5 (5 boxes over cap) · Rule 6 (354 same-box dupes — genuine distinct copies).</>,

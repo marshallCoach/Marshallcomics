@@ -68,6 +68,7 @@ const LAST_UPDATE_DATE = (() => {
 })();
 const UPDATE_DELTAS    = computeUpdateDeltas();
 const INTERFACE_UPDATES = [
+  `Last deployed — ${LAST_UPDATE_DATE}`,
   DEPLOY_COMMIT ? `This deploy — ${DEPLOY_COMMIT}${DEPLOY_SHA ? ` (${DEPLOY_SHA})` : ""}` : `Data refresh — ${totalComics.toLocaleString()} comics · ${totalBoxes} boxes`,
   `${totalComics.toLocaleString()} comics · ${totalBoxes} boxes · ${keyCount.toLocaleString()} keys · ${signedCount} signed`,
   "Global search — press ⌘K / Ctrl+K to search comics, boxes, and pages",
@@ -607,7 +608,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
         <h2 className="section-h2">📚 COLLECTION</h2>
         <div className="stat-grid">
           {([
-            { val: cTotal.toLocaleString(),   lbl:"Total Comics",  sub:"master inventory",      click:()=>onNavigate("everything",{}),             color:"#c8102e" },
+            { val: cTotal.toLocaleString(),   lbl:"Total Comics",  sub:"primary inventory",      click:()=>onNavigate("everything",{}),             color:"#c8102e" },
             { val: cKeys.toLocaleString(),    lbl:"Key Issues",    sub:"confirmed across all",  click:()=>onNavigate("boxkeys"),                   color:"#d97706" },
             { val: cSigned.toString(),        lbl:"Signed Books",  sub:"by verified creators",  click:()=>onNavigate("everything",{signed:"YES"}), color:"#8b2be2" },
             { val: cBoxes.toString(),         lbl:"Boxes",         sub:"physically catalogued", click:()=>onNavigate("everything",{}),             color:"#1d6fa4" },
