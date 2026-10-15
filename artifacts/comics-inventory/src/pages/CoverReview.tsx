@@ -36,6 +36,7 @@ export default function CoverReview({ initTitle, initCreative }: { initTitle?: s
   const [titleFilter, setTitleFilter] = useState<string | null>(initTitle || null);
   const [creativeFilter, setCreativeFilter] = useState<string | null>(initCreative || null);
   const [modal, setModal] = useState<{ comic: Comic; url: string } | null>(null);
+  const [showMissing, setShowMissing] = useState(false);
   const tickRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   // Title and creative filters are mutually exclusive — picking one clears the other.
@@ -250,6 +251,39 @@ export default function CoverReview({ initTitle, initCreative }: { initTitle?: s
     );
   };
 
+  // Placeholder tile for an issue that's missing from the run (toggle-only).
+  const gapCard = (n: number, k: string) => (
+    <div key={k} style={{ width: "100%", textAlign: "center" }}>
+      <div style={{ width: "100%", aspectRatio: "2 / 3", borderRadius: 4, overflow: "hidden", background: "repeating-linear-gradient(45deg,#1a1628,#1a1628 10px,#211c33 10px,#211c33 20px)", border: "1px dashed var(--border)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <span style={{ fontSize: "0.8rem", color: "var(--muted)", letterSpacing: "1px" }}>MISSING</span>
+      </div>
+      <div style={{ fontSize: "0.95rem", fontWeight: 600, color: "var(--muted)", marginTop: 6, lineHeight: 1.3, width: "100%" }}>#{n}</div>
+    </div>
+  );
+
+  // Interleave a volume's owned covers with placeholders for the integer gaps
+  // between its lowest and highest issue, so a run reads #1..#N with holes shown.
+  const withGaps = (items: Pooled[]) => {
+    const owned = new Map<number, Pooled>();
+    for (const p of items) {
+      const n = parseFloat(String(p.comic.Issue));
+      if (Number.isInteger(n)) owned.set(n, p);
+    }
+    const nums = [...owned.keys()];
+    if (nums.length === 0) return items.map(p => ({ kind: "have" as const, p }));
+    const lo = Math.min(...nums), hi = Math.max(...nums);
+    const out: ({ kind: "have"; p: Pooled } | { kind: "gap"; n: number })[] = [];
+    for (let n = lo; n <= hi; n++) {
+      const p = owned.get(n);
+      out.push(p ? { kind: "have", p } : { kind: "gap", n });
+    }
+    // keep any non-integer issues (e.g. #0, annuals) after the integer run
+    for (const p of items) {
+      if (!Number.isInteger(parseFloat(String(p.comic.Issue)))) out.push({ kind: "have", p });
+    }
+    return out;
+  };
+
   return (
     <div className="cr-wrap" style={{ padding: "20px 24px 60px" }}>
       <style>{`
@@ -274,6 +308,11 @@ export default function CoverReview({ initTitle, initCreative }: { initTitle?: s
           </div>
         </div>
         <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+          {titleFilter && (
+            <button onClick={() => setShowMissing(m => !m)} style={btnStyle(showMissing)} title="Show placeholder tiles for issues missing from the run">
+              {showMissing ? "✓ Missing issues" : "Show missing issues"}
+            </button>
+          )}
           {titleFilter || creativeFilter ? (
             <button onClick={() => { setTitleFilter(null); setCreativeFilter(null); }} style={btnStyle(false)}>← All covers</button>
           ) : (
@@ -329,7 +368,12 @@ export default function CoverReview({ initTitle, initCreative }: { initTitle?: s
                   </div>
                 )}
                 <div className="cr-grid">
-                  {g.items.map((p, i) => card(p, `t-${g.vol}-${i}`, false, true))}
+                  {showMissing
+                    ? withGaps(g.items).map((e, i) =>
+                        e.kind === "have"
+                          ? card(e.p, `t-${g.vol}-${i}`, false, true)
+                          : gapCard(e.n, `t-${g.vol}-gap-${i}`))
+                    : g.items.map((p, i) => card(p, `t-${g.vol}-${i}`, false, true))}
                 </div>
               </div>
             ))}

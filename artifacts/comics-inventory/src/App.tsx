@@ -48,6 +48,7 @@ import LifeArchive from "@/pages/LifeArchive";
 import DataFix from "@/pages/DataFix";
 import TitleFixes from "@/pages/TitleFixes";
 import VolumeConfirm from "@/pages/VolumeConfirm";
+import EditComic from "@/pages/EditComic";
 import OfflineCovers from "@/components/OfflineCovers";
 import FlaggedCount from "@/components/FlaggedCount";
 import PasswordGate from "@/components/PasswordGate";
@@ -56,7 +57,7 @@ import { Home, BookOpen, Boxes, Film, Sparkles, ClipboardList, Microscope, Dolla
 type TabId =
   | "summary" | "everything" | "collection" | "boxkeys" | "stats" | "runs" | "runsvolumes" | "recent" | "releasetimeline" | "dataview"
   | "calendar" | "showplanner" | "cgc" | "signings" | "actionplan" | "timeline" | "boxvisual"
-  | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "duplicates" | "dupchecklist" | "datafix" | "titlefixes" | "volumeconfirm" | "history"
+  | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "duplicates" | "dupchecklist" | "datafix" | "editcomic" | "titlefixes" | "volumeconfirm" | "history"
   | "orgpath" | "volumes" | "boxlabels" | "keycatalog" | "covercatalog" | "coverreview" | "missingcovers" | "boxquest" | "boxmap"
   | "ebaypipeline" | "opsreference" | "ebaylistingguide" | "roulette" | "lifearchive" | "nycc" | "locationcheck" | "absbatman" | "credits" | "granov";
 
@@ -113,6 +114,7 @@ const NAV = [
     label: "Cleanup",
     tabs: [
       { id: "datafix",      label: "Data Fix" },
+      { id: "editcomic",    label: "Edit Comic" },
       { id: "duplicates",   label: "Duplicates" },
       { id: "dupchecklist", label: "Dup Hunt" },
     ],
@@ -383,6 +385,7 @@ export default function App() {
         {activeTab === "actionplan"  && <ActionPlan />}
         {activeTab === "stats"       && <CollectionStats onNavigate={navigateTo} />}
         {activeTab === "dataview"    && <DataView />}
+        {activeTab === "editcomic"   && <EditComic />}
         {activeTab === "sitemap"     && <SiteMap onNavigate={navigateTo} />}
         {activeTab === "pulllist"    && <PullList />}
         {activeTab === "duplicates"    && <Duplicates onNavigate={navigateTo} />}

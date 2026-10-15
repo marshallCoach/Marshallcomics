@@ -23,6 +23,7 @@ export default function RunsVolumes() {
   const [filter, setFilter] = useState<"gaps" | "clash" | "early" | "all">("gaps");
   const [q, setQ] = useState("");
   const [pub, setPub] = useState("All");
+  const [show, setShow] = useState<"both" | "have" | "missing">("both");
 
   const runs = useMemo<Run[]>(() => {
     const byKey: Record<string, typeof comics> = {};
@@ -103,22 +104,33 @@ export default function RunsVolumes() {
           <button key={p} className={`rv-pill sm${pub === p ? " on" : ""}`} onClick={() => setPub(p)}>{p}</button>
         ))}
         <input className="rv-search" value={q} onChange={e => setQ(e.target.value)} placeholder="Search title…" />
+        <div className="rv-seg" role="group" aria-label="Show">
+          {([["both", "Both"], ["have", "I have"], ["missing", "I've missed"]] as const).map(([k, l]) => (
+            <button key={k} className={`rv-segb${show === k ? " on" : ""}`} onClick={() => setShow(k)}>{l}</button>
+          ))}
+        </div>
       </div>
 
       <div className="rv-count">{shown.length} run{shown.length !== 1 ? "s" : ""}</div>
 
-      {shown.slice(0, 200).map(r => <RunCard key={r.key} r={r} />)}
+      {shown.slice(0, 200).map(r => <RunCard key={r.key} r={r} show={show} />)}
       {shown.length > 200 && <div className="rv-more">Showing first 200 — narrow with a filter or search.</div>}
     </div>
   );
 }
 
-function RunCard({ r }: { r: Run }) {
+function RunCard({ r, show }: { r: Run; show: "both" | "have" | "missing" }) {
   const cap = 26;
-  const seq: number[] = [];
   const lo = Math.ceil(r.min), hi = Math.floor(r.max);
-  for (let i = lo; i <= hi && seq.length < cap; i++) seq.push(i);
-  const truncated = hi - lo + 1 > cap;
+  const full: number[] = [];
+  for (let i = lo; i <= hi; i++) full.push(i);
+  const filtered = full.filter(n => {
+    if (show === "have") return r.byNum.has(n);
+    if (show === "missing") return !r.byNum.has(n);
+    return true;
+  });
+  const seq = filtered.slice(0, cap);
+  const truncated = filtered.length > cap;
   return (
     <div className={`rv-card${r.clash ? " clash" : ""}`}>
       <div className="rv-head">
@@ -167,7 +179,7 @@ function RunCard({ r }: { r: Run }) {
             </figure>
           );
         })}
-        {truncated && <div className="rv-cell rv-tail">+{hi - lo + 1 - cap} more…</div>}
+        {truncated && <div className="rv-cell rv-tail">+{filtered.length - cap} more…</div>}
       </div>
     </div>
   );
@@ -180,6 +192,10 @@ const CSS = `
 .rv-pill{background:var(--surface,#1c1c24);border:1.5px solid var(--border,#2c2c38);color:var(--muted2,#aaa);
 border-radius:20px;padding:5px 12px;font:inherit;font-size:.8rem;font-weight:600;cursor:pointer}
 .rv-pill.sm{padding:4px 11px;font-size:.76rem}
+.rv-seg{display:inline-flex;margin-left:auto;border:1.5px solid var(--border,#2c2c38);border-radius:20px;overflow:hidden}
+.rv-segb{background:var(--surface,#1c1c24);border:0;color:var(--muted2,#aaa);font:inherit;font-size:.76rem;font-weight:600;padding:5px 12px;cursor:pointer}
+.rv-segb+.rv-segb{border-left:1.5px solid var(--border,#2c2c38)}
+.rv-segb.on{background:var(--red,#c0392b);color:#fff}
 .rv-pill.on{background:var(--red,#c0392b);border-color:var(--red,#c0392b);color:#fff}
 .rv-n{opacity:.7;font-weight:700;margin-left:3px}
 .rv-search{flex:1;min-width:140px;background:var(--bg,#101014);border:1.5px solid var(--border,#2c2c38);

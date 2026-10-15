@@ -124,7 +124,12 @@ export default function ReleaseTimeline() {
       const weeks: WeekGrp[] = [...wMap.entries()].sort((a, b) => b[0].localeCompare(a[0])).map(([wk, items]) => {
         items.sort((a, b) => a.Title.localeCompare(b.Title) || parseNM(a.Issue) - parseNM(b.Issue));
         const mon = mondayOfISOWeek(wk);
-        const label = mon ? "Week of " + `${MONTHS[mon.getUTCMonth()]} ${mon.getUTCDate()}` : wk;
+        // Clamp to the month's first day so an early-month week whose ISO Monday
+        // falls in the previous month isn't labelled with that month (e.g. an
+        // October week starting Mon Sep 28 shows "Week of Oct 1", not "Sep 28").
+        const mFirst = new Date(Date.UTC(Math.floor(mk / 100), (mk % 100) - 1, 1));
+        const d = mon && mon < mFirst ? mFirst : mon;
+        const label = d ? "Week of " + `${MONTHS[d.getUTCMonth()]} ${d.getUTCDate()}` : wk;
         return { key: wk, items, total: sum(items), est: anyEst(items), label };
       });
       const items = weeks.flatMap(w => w.items);

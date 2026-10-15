@@ -140,6 +140,12 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
         SELECT A BOX TO VISUALIZE ITS CONTENTS
       </div>
 
+      {/* Legend — explains the pink tiles */}
+      <div style={{ marginBottom: 14, display: "flex", alignItems: "center", gap: 8, fontSize: "0.8rem", color: "var(--muted2)" }}>
+        <span style={{ display: "inline-block", width: 14, height: 14, borderRadius: 3, border: "1.5px solid #d6456a", background: "#fdf0f4" }} />
+        Pink = under 100 books (room to fill). 📍 shows each box's location, or UKN if unknown.
+      </div>
+
       {/* Oversize boxes — collapsible spotlight for the fullest boxes (>180) */}
       {(() => {
         const over = boxes
@@ -279,7 +285,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                           <div className="box-tile-count">{b.Comics}</div>
                           <div className="box-tile-num">{b.Num.replace("BOX ", "Box ")}</div>
                           {b.Label && <div className="box-tile-num" style={{ fontSize:"0.62em", opacity:0.85, letterSpacing:"1px", color:sec.color }}>{b.Label}</div>}
-                          {b.Code && <div className="box-tile-num" style={{ fontSize:"0.7em", opacity:0.7, letterSpacing:"0.5px" }}>{b.Code}</div>}
+                          <div className="box-tile-num" style={{ fontSize:"0.6em", opacity:0.8, letterSpacing:"0.5px" }}>📍 {b.Location || b.Code || "UKN"}</div>
                           {Number(b.Keys)   > 0 && <div className="box-tile-keys">{b.Keys} Keys</div>}
                           {Number(b.Signed) > 0 && <div className="box-tile-sgn">{b.Signed} S</div>}
                         </div>

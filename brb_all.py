@@ -185,6 +185,16 @@ def main():
             raise RuntimeError("brb_year_from_pubdate failed")
     step(7, "YEAR FROM ON-SALE DATE (clear date-conflicts)", year_fix)
 
+    # 7b — apply comic-edit exports from the site's Edit Comic page (optional)
+    def edit_review():
+        if not (glob.glob(os.path.join(DOWNLOADS, "comic_edit_*.json")) or
+                glob.glob(os.path.join(ROOT, "comic_edit_*.json"))):
+            print("No comic_edit_*.json — skipping Edit Comic review.")
+            return
+        if run([PY, os.path.join(ROOT, "brb_review_edits.py"), "--apply"]):
+            raise RuntimeError("brb_review_edits failed")
+    step("7b", "EDIT COMIC REVIEW (apply site edits/deletions)", edit_review)
+
     # 8 — regenerate + deploy, once
     banner(8, "DEPLOY (brb.py: validate -> regen -> commit -> push)")
     rc = run([PY, os.path.join(ROOT, "brb.py"), "--commit", "brb_all: full enrichment pipeline", "--yes"])
