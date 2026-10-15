@@ -341,6 +341,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                             : b.Num.startsWith("UNKNOWN") ? "UNKNOWN"
                             : b.Num.replace(/^AT /, "").replace(" — ", " ")}
                         </div>
+                        <div className="box-tile-num" style={{ fontSize: "0.56em", opacity: 0.8, letterSpacing: "0.5px" }}>📍 {b.Location || (b.Num.startsWith("UNKNOWN") ? "UKN" : b.Num.replace(/^AT /, ""))}</div>
                         {Number(b.Keys)   > 0 && <div className="box-tile-keys">{b.Keys} Keys</div>}
                         {Number(b.Signed) > 0 && <div className="box-tile-sgn">{b.Signed} S</div>}
                       </div>

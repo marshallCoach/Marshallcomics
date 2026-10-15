@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { DATA, type Comic } from "@/data/data";
+import { CoverImage } from "@/components/CoverImage";
 
 // Fields the editor exposes, in display order. Everything here is ordinary
 // data work (creator credits included) — no confirmation gate. Value/credit
@@ -119,7 +120,7 @@ export default function EditComic() {
         .ec-f.wide{grid-column:1/-1}
         .ec-f label{display:block;font-size:.72rem;letter-spacing:.5px;color:var(--muted);margin-bottom:3px;text-transform:uppercase}
         .ec-f input{width:100%;box-sizing:border-box;padding:7px 9px;border-radius:6px;border:1.5px solid var(--border,#2c2c38);background:var(--surface,#1c1c24);color:var(--text,#eee);font:inherit;font-size:.9rem}
-        .ec-f input.chg{border-color:#e0a21b;background:#2a2411}
+        .ec-f input.chg{border-color:#e0a21b;background:#fff6da;color:#3a2e05}
         .ec-res{border:1px solid var(--border,#2c2c38);border-radius:8px;overflow:hidden;margin-top:8px}
         .ec-row{display:block;width:100%;text-align:left;background:var(--surface,#1c1c24);border:0;border-bottom:1px solid var(--border,#2c2c38);color:var(--text,#eee);padding:8px 11px;font:inherit;font-size:.86rem;cursor:pointer}
         .ec-row:hover{background:var(--surface2,#26262f)}
@@ -154,10 +155,20 @@ export default function EditComic() {
 
       {selected && (
         <div style={{ marginTop: 16 }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
-            <div style={{ fontWeight: 600 }}>{selected.Title} #{selected.Issue}</div>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 14, marginBottom: 14 }}>
+            <div style={{ display: "flex", gap: 14, alignItems: "flex-start", minWidth: 0 }}>
+              <CoverImage comic={selected} width={88} height={132} objectFit="contain"
+                style={{ borderRadius: 4, background: "#0d0d12", border: "1px solid var(--border,#2c2c38)", flexShrink: 0 }} />
+              <div style={{ minWidth: 0 }}>
+                <div style={{ fontWeight: 600, fontSize: "1.05rem" }}>{selected.Title} #{selected.Issue}</div>
+                <div style={{ fontSize: ".82rem", color: "var(--muted,#888)", marginTop: 2 }}>
+                  {selected.Publisher}{selected.Volume && selected.Volume !== "1" ? ` · Vol ${selected.Volume}` : ""} · Box {selected.Box}
+                </div>
+                {selected.Signed_By && <div style={{ fontSize: ".82rem", color: "var(--red,#c0392b)", marginTop: 2 }}>✍ {selected.Signed_By}</div>}
+              </div>
+            </div>
             <button onClick={() => { setSelId(null); setForm({}); setDel(false); setSaved(null); }}
-              style={{ background: "var(--surface2,#26262f)", border: "1px solid var(--border,#2c2c38)", color: "var(--muted2,#aaa)", borderRadius: 6, padding: "6px 12px", cursor: "pointer", font: "inherit", fontSize: ".82rem" }}>
+              style={{ background: "var(--surface2,#26262f)", border: "1px solid var(--border,#2c2c38)", color: "var(--muted2,#aaa)", borderRadius: 6, padding: "6px 12px", cursor: "pointer", font: "inherit", fontSize: ".82rem", flexShrink: 0 }}>
               ← Pick another
             </button>
           </div>
