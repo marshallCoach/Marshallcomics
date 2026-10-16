@@ -257,11 +257,11 @@ const TARGET_BOXES  = totalBoxes;
 const BOX_PCT       = 100;
 const BOX_REMAINING = 0;
 
+// 2027 convention dates (confirmed from each show's official site, Oct 2026).
 const TIMELINE = [
-  { label:"Jorge Jiménez CGC SS — Batman #125",       date:"Jun 5",       days:daysUntil(2026,6,5),   urgency:"critical", cat:"Signing"  },
-  { label:"Geoff Johns + Fabok SS",                   date:"Jun 26",      days:daysUntil(2026,6,26),  urgency:"high",     cat:"Signing"  },
-  { label:"Roy Thomas SS — 5 books → $820–$1,630 ROI",date:"Jul 10",      days:daysUntil(2026,7,10),  urgency:"high",     cat:"Signing"  },
-  { label:"CGC Press Batch — ship all simultaneously",date:"Before Aug 7",days:daysUntil(2026,8,1),   urgency:"high",     cat:"CGC"      },
+  { label:"Garden State Comic Fest — West Orange, NJ", date:"Jun 26, 2027", days:daysUntil(2027,6,26),  urgency:"event", cat:"Show" },
+  { label:"Terrificon — Mohegan Sun, CT",             date:"Aug 13, 2027", days:daysUntil(2027,8,13),  urgency:"event", cat:"Show" },
+  { label:"NYCC — Javits Center, NY",                 date:"Oct 7, 2027",  days:daysUntil(2027,10,7),  urgency:"event", cat:"Show" },
 ];
 
 function urgColor(u: string): string {
