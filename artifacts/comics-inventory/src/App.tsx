@@ -164,7 +164,6 @@ const NAV = [
       { id: "calendar",     label: "Calendar" },
       { id: "cgc",          label: "CGC" },
       { id: "signings",     label: "Signings" },
-      { id: "actionplan",   label: "Action Plan" },
       { id: "orgpath",      label: "Org Path" },
       { id: "volumeconfirm", label: "Volume Confirm" },
       { id: "titlefixes",   label: "Title Fixes" },

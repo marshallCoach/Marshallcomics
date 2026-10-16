@@ -292,18 +292,40 @@ function catNavLabel(cat: string): string {
 }
 
 // ── Flagship ─────────────────────────────────────────────────────────────────
-const FLAGSHIP = [
-  { book:"Stan Lee signed BP #513",                    note:"Authenticate first (PSA/DNA) — $800–$1,500+ auth",         color:"#dc2626", box:"1",  publisher:"Marvel", year:"1966", valueNM:"$800–$1,500 authenticated", condition:"Raw — DO NOT press",            cgcPath:"PSA/DNA → CGC × JSA Green Qualified",   action:"Never press. Submit via PSA/DNA first.", terrificon:false },
-  { book:"Truth: RWB #1 (Baker remarked)",             note:"Verify remark → Green Qual. → Heritage — $500–$2,000",     color:"#d97706", box:"1",  publisher:"Marvel", year:"2003", valueNM:"$500–$2,000 with remark",   condition:"Has Baker remark",              cgcPath:"CGC × JSA → Green Qualified → Heritage",        action:"Verify remark authenticity before submitting.", terrificon:false },
-  { book:"Ultimate Fallout #4 Foil (1st Miles)",       note:"1st Miles Morales — $800–$1,500 CGC 9.8",                  color:"#8b2be2", box:"38", publisher:"Marvel", year:"2011", valueNM:"$800–$1,500 CGC 9.8",       condition:"Check for pressing",            cgcPath:"Press → CGC Universal Blue 9.8",                action:"Press then submit for Blue Universal label.", terrificon:false },
-  { book:"Thor #169 CGC 8.0 (Galactus Origin)",        note:"Already slabbed. Galactus origin. Kirby/Lee. Show 15.",    color:"#1d6fa4", box:"63", publisher:"Marvel", year:"1969", valueNM:"CGC 8.0 — already slabbed", condition:"Slabbed CGC 8.0",               cgcPath:"Already graded — ready for Heritage or auction", action:"Feature in Show 15 — Whatnot anchor book.", terrificon:false },
-  { book:"Wolverine #8 (UNSIGNED — 1982)",             note:"Keep unsigned → Yellow SS at a future con → $500+ SS 9.8", color:"#d97706", box:"72", publisher:"Marvel", year:"1982", valueNM:"$500+ Yellow SS CGC 9.8",   condition:"MUST STAY UNSIGNED",            cgcPath:"Yellow SS signing → Chris Claremont SS",       action:"Keep unsigned. Press now. DO NOT sign until a Yellow SS con signing.", terrificon:false },
-  { book:"Batman #656 (1st Damian Wayne)",             note:"Press + Blue Universal → $350–$500 CGC 9.8 — Best ROI",    color:"#16a34a", box:"1",  publisher:"DC",     year:"2006", valueNM:"$350–$500 CGC 9.8",         condition:"In press list — send ASAP",     cgcPath:"Press → CGC Universal Blue 9.8",                action:"Press and submit now. Best ROI in collection.", terrificon:false },
-  { book:"Vision #1 (Tom King signed)",                note:"Press + Green Qual. → $150–$300. Film timing.",            color:"#8b2be2", box:"1",  publisher:"Marvel", year:"2015", valueNM:"$150–$300 Green Qualified",  condition:"Signed — press first",          cgcPath:"Press → CGC × JSA → Green Qualified",           action:"In press batch — submit with the next CGC batch.", terrificon:false },
-  { book:"ASM #361 (1st Carnage — Bagley/Sharen sgd)", note:"Bagley+Sharen. Press + Green Qual. → $200–$300 auth.",    color:"#dc2626", box:"1",  publisher:"Marvel", year:"1992", valueNM:"$200–$300 Green Qualified",  condition:"Dual signed — press first",     cgcPath:"Press → CGC × JSA → Green Qualified",           action:"In press batch — submit with the next CGC batch.", terrificon:false },
-  { book:"Black Lightning #1 (Isabella)",              note:"Press + Green Qual. → $300–$500. Whatnot/Heritage.",       color:"#16a34a", box:"1",  publisher:"DC",     year:"1977", valueNM:"$300–$500 Green Qualified",  condition:"Check for pressing",            cgcPath:"CGC × JSA → Green Qualified",                   action:"Monitor CGC private signing window — high Heritage value.", terrificon:false },
-  { book:"Captain Carter #1 (Atwell — To Robert)",    note:"Emotional anchor for Show 1 — personalized signing.",      color:"#1d6fa4", box:"1",  publisher:"Marvel", year:"2022", valueNM:"$80–$150 personalized",      condition:"Signed personalized",           cgcPath:"Whatnot anchor — personal story sells",          action:"Lead Show 1 with the story of the Hayley Atwell signing.", terrificon:false },
-];
+// Derived LIVE from the highest-value books in inventory, so the facts (title,
+// issue, year, box, value, condition, signer) are always current. The guidance
+// lines are rule-based from those facts, not hand-typed claims.
+const FLAGSHIP = (() => {
+  const val = (s?: string) => { const n = parseFloat(String(s ?? "").replace(/[$,]/g, "")); return isNaN(n) ? 0 : n; };
+  const pubColor = (p?: string) => /marvel/i.test(p || "") ? "#dc2626" : /\bdc\b/i.test(p || "") ? "#1d6fa4" : /image/i.test(p || "") ? "#16a34a" : "#8b2be2";
+  const seen = new Set<string>();
+  return [...comics]
+    .filter(c => val(c.Value_NM) > 0)
+    .sort((a, b) => val(b.Value_NM) - val(a.Value_NM))
+    .filter(c => { const k = `${c.Title}|${c.Issue}|${c.Signed_By || ""}`; if (seen.has(k)) return false; seen.add(k); return true; })
+    .slice(0, 10)
+    .map(c => {
+      const signer = (c.Signed_By || "").split("(")[0].trim();
+      const signed = !!signer && !/^n\/a/i.test(signer);
+      const key = /^(y|true)/i.test(String(c.Key || ""));
+      const cond = String(c.Condition || "").trim();
+      const slab = /cgc|cbcs/i.test(cond);
+      const book = `${c.Title} #${c.Issue}${signed ? ` (signed ${signer})` : ""}`;
+      const note = slab ? `Already graded${signed ? ` · signed ${signer}` : ""}${key ? " · key" : ""} — ready to sell/feature`
+        : signed ? `Signed by ${signer}${key ? " · key issue" : ""} — Signature Series candidate`
+        : key ? "Key issue — press & grade candidate"
+        : "High-value raw — press & grade candidate";
+      const cgcPath = slab ? "Already graded — ready for Heritage / Whatnot"
+        : signed ? "Press → CGC × JSA Signature Series"
+        : "Press → CGC Universal (Blue) grade";
+      const action = slab ? "Already graded — feature or list."
+        : signed ? "Press, then submit as CGC Signature Series."
+        : "Press, then submit for a Universal grade.";
+      return { book, note, color: pubColor(c.Publisher), box: String(c.Box || "—"),
+        publisher: c.Publisher || "—", year: String(c.Year || "—"),
+        valueNM: c.Value_NM || "—", condition: cond || "Raw", cgcPath, action, terrificon: false };
+    });
+})();
 
 // ── Search helpers ─────────────────────────────────────────────────────────────
 const PUBLISHERS_QS = ["DC","Marvel","Image","IDW","Dark Horse","Valiant","Independent"];
@@ -923,7 +945,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
             const isOpen = openFlag === i;
             return (
               <div
-                key={a.book}
+                key={a.book + i}
                 onClick={() => setOpenFlag(isOpen ? null : i)}
                 className="flagship-card"
                 style={{
