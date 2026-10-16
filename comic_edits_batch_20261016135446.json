@@ -1,8 +1,8 @@
 {
  "type": "comic-edit-batch",
- "exportedAt": "2026-10-16T13:53:50.153300",
+ "exportedAt": "2026-10-16T13:54:46.594421",
  "fill_only": true,
- "note": "2010s+2020s ungraded -> NM (owner-asserted); fill-only",
+ "note": "2000s-2020s ungraded -> NM (owner-asserted); fill-only",
  "edits": [
   {
    "match": {
@@ -4508,6 +4508,19 @@
     "Issue": "4",
     "Volume": "6",
     "Box": "11",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "NM (9.4)"
+   }
+  },
+  {
+   "match": {
+    "Title": "Cable",
+    "Issue": "83",
+    "Volume": "3",
+    "Box": "12",
     "Signed_By": ""
    },
    "delete": false,
@@ -15047,6 +15060,19 @@
   },
   {
    "match": {
+    "Title": "Marvel Zombies",
+    "Issue": "5",
+    "Volume": "1",
+    "Box": "75",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "NM (9.4)"
+   }
+  },
+  {
+   "match": {
     "Title": "Marvel Zombies: Red Band",
     "Issue": "1",
     "Volume": "1",
@@ -19107,6 +19133,19 @@
     "Issue": "1",
     "Volume": "3",
     "Box": "11",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "NM (9.4)"
+   }
+  },
+  {
+   "match": {
+    "Title": "Secret Invasion: Dark Reign",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "19",
     "Signed_By": ""
    },
    "delete": false,
@@ -23993,6 +24032,19 @@
    "match": {
     "Title": "The Ultimates",
     "Issue": "22",
+    "Volume": "3",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "NM (9.4)"
+   }
+  },
+  {
+   "match": {
+    "Title": "The Ultimates",
+    "Issue": "13",
     "Volume": "3",
     "Box": "85",
     "Signed_By": ""
@@ -29503,6 +29555,19 @@
   },
   {
    "match": {
+    "Title": "X-Men: Age of Apocalypse",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "CC2",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "NM (9.4)"
+   }
+  },
+  {
+   "match": {
     "Title": "X-Men: Age of Revelation \u2014 Overture",
     "Issue": "1",
     "Volume": "1",
@@ -29663,6 +29728,84 @@
     "Issue": "2",
     "Volume": "1",
     "Box": "75",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "NM (9.4)"
+   }
+  },
+  {
+   "match": {
+    "Title": "Xin: Journey of the Monkey King",
+    "Issue": "1",
+    "Volume": "2",
+    "Box": "65",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "NM (9.4)"
+   }
+  },
+  {
+   "match": {
+    "Title": "Xin: Journey of the Monkey King",
+    "Issue": "2",
+    "Volume": "2",
+    "Box": "65",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "NM (9.4)"
+   }
+  },
+  {
+   "match": {
+    "Title": "Xin: Journey of the Monkey King",
+    "Issue": "3",
+    "Volume": "2",
+    "Box": "65",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "NM (9.4)"
+   }
+  },
+  {
+   "match": {
+    "Title": "Xin: Legend of the Monkey King",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "65",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "NM (9.4)"
+   }
+  },
+  {
+   "match": {
+    "Title": "Xin: Legend of the Monkey King",
+    "Issue": "2",
+    "Volume": "1",
+    "Box": "65",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "NM (9.4)"
+   }
+  },
+  {
+   "match": {
+    "Title": "Xin: Legend of the Monkey King",
+    "Issue": "3",
+    "Volume": "1",
+    "Box": "65",
     "Signed_By": ""
    },
    "delete": false,
