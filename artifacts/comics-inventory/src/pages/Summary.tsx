@@ -458,8 +458,10 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
   const readBool = (k: string) => { try { return localStorage.getItem(k) === "1"; } catch { return false; } };
   const [bannerCollapsed, setBannerCollapsed] = useState(() => readBool("mc_banner_collapsed"));
   const [fillCollapsed, setFillCollapsed] = useState(() => readBool("mc_fill_collapsed"));
+  const [fillDismissed, setFillDismissed] = useState(() => readBool("mc_fill_dismissed"));
   function toggleBanner() { setBannerCollapsed(v => { const n = !v; try { localStorage.setItem("mc_banner_collapsed", n ? "1" : "0"); } catch { /* ignore */ } return n; }); }
   function toggleFill() { setFillCollapsed(v => { const n = !v; try { localStorage.setItem("mc_fill_collapsed", n ? "1" : "0"); } catch { /* ignore */ } return n; }); }
+  function dismissFill() { setFillDismissed(true); try { localStorage.setItem("mc_fill_dismissed", "1"); } catch { /* ignore */ } }
 
   // Random covers carousel — 10 different comics each mount
   const carouselComics = useMemo(() => {
@@ -514,9 +516,10 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
       )}
 
       {/* ── Data Completeness dashboard — % filled per vital column ── */}
-      <section style={{ marginBottom:24 }}>
+      {!fillDismissed && (
+      <section style={{ marginBottom:24, position:"relative" }}>
         <div onClick={toggleFill} role="button" aria-expanded={!fillCollapsed} title={fillCollapsed ? "Expand" : "Collapse"}
-          style={{ display:"flex", alignItems:"baseline", gap:10, marginBottom: fillCollapsed ? 0 : 10, flexWrap:"wrap", cursor:"pointer" }}>
+          style={{ display:"flex", alignItems:"baseline", gap:10, marginBottom: fillCollapsed ? 0 : 10, flexWrap:"wrap", cursor:"pointer", paddingRight:24 }}>
           <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.8rem", color:"var(--muted)", transform: fillCollapsed ? "rotate(-90deg)" : "none", display:"inline-block" }}>▾</span>
           <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"3px", color:"var(--muted)" }}>
             DATA COMPLETENESS
@@ -525,6 +528,13 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
             how far we've come — % of {totalComics.toLocaleString()} books filled per vital column
           </span>
         </div>
+        <button
+          onClick={dismissFill}
+          title="Dismiss"
+          style={{ position:"absolute", top:-2, right:0, background:"none", border:"none", cursor:"pointer", color:"var(--muted)", fontSize:"0.9rem", lineHeight:1, padding:4, borderRadius:4 }}
+          onMouseOver={e => (e.currentTarget.style.color = "var(--red)")}
+          onMouseOut={e => (e.currentTarget.style.color = "var(--muted)")}
+        >×</button>
         {!fillCollapsed && (
         <div className="fill-grid">
           {FILL_STATS.map((s, i) => {
@@ -555,6 +565,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
         </div>
         )}
       </section>
+      )}
 
       {/* ── Cover Carousel ── */}
       <section style={{ marginBottom:24 }}>
