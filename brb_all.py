@@ -158,16 +158,10 @@ def main():
             raise RuntimeError("brb_fill_from_fandom failed")
     step(4, "FANDOM FILL (gap-filler for books GCD can't reach)", fandom_fill)
 
-    # 4b — credits from Comic Vine (needs COMIC_VINE_API_KEY): fills Writer/
-    # Artist/Cover for non-Marvel/DC books GCD + Fandom can't reach (Titan, IDW,
-    # Image, Dark Horse, …). Blanks only; unmatched rows stay blank.
-    def credits_cv():
-        if not os.environ.get("COMIC_VINE_API_KEY"):
-            print("No COMIC_VINE_API_KEY — skipping Comic Vine credits fallback.")
-            return
-        if run([PY, os.path.join(ROOT, "brb_credits_cv.py")]):
-            raise RuntimeError("brb_credits_cv failed")
-    step("4b", "CREDITS — Comic Vine fallback (Titan/IDW/Image/…)", credits_cv)
+    # NOTE: Comic Vine credits fallback (brb_credits_cv.py) is NOT run here. It
+    # rate-limits hard (HTTP 420) and resolves almost nothing for the obscure
+    # non-Marvel/DC books it targets, so it stays a MANUAL tool you run in small
+    # batches (python3 brb_credits_cv.py --limit 50) — never in the deploy path.
 
     # 5 — Publication Date from local GCD (offline, blanks only)
     def date_gcd():

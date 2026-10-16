@@ -18,7 +18,7 @@ blank — never guessed. Writes a NEW dated xlsx; never edits the source.
     python3 brb_credits_cv.py --limit 50 # test on the first 50
 Then: python3 brb.py --commit "credits — Comic Vine fallback" --yes
 """
-import argparse, datetime, glob, json, os, re, sys, time, urllib.parse, urllib.request
+import argparse, datetime, glob, json, os, re, sys, time, urllib.error, urllib.parse, urllib.request
 from collections import Counter
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -57,7 +57,7 @@ def is_blank(v):
     return v is None or str(v).strip() in ("", "nan", "None")
 
 
-def cv_get(path, params, tries=5):
+def cv_get(path, params, tries=6):
     params = {**params, "api_key": API_KEY, "format": "json"}
     url = f"{CV}/{path}/?{urllib.parse.urlencode(params)}"
     for i in range(tries):
@@ -65,13 +65,28 @@ def cv_get(path, params, tries=5):
             req = urllib.request.Request(url, headers={"User-Agent": UA})
             with urllib.request.urlopen(req, timeout=30) as r:
                 data = json.load(r)
-            if data.get("status_code") == 107:   # rate limited
-                time.sleep(2 ** i * 5)
+            if data.get("status_code") == 107:   # rate limited (JSON-level)
+                time.sleep(30 * (i + 1))
                 continue
             if data.get("status_code") == 100:
                 sys.exit("Comic Vine says the API key is invalid — check COMIC_VINE_API_KEY")
             return data
-        except Exception as e:  # noqa: BLE001
+        except urllib.error.HTTPError as e:
+            # 420/429 = Comic Vine throttling at the HTTP layer (NOT a JSON body).
+            # These need a long, linear cool-down — exponential-3s backs off too
+            # little and just burns the retry budget, which is why the old run
+            # "gave up" on every book. Wait 45s, 90s, 135s… and keep trying.
+            if e.code in (420, 429):
+                if i == tries - 1:
+                    print(f"    ! still throttled (HTTP {e.code}) after {tries} tries — skipping")
+                    return None
+                time.sleep(45 * (i + 1))
+                continue
+            if i == tries - 1:
+                print(f"    ! giving up on request: {e}")
+                return None
+            time.sleep(2 ** i * 3)
+        except Exception as e:  # noqa: BLE001 — network hiccup: back off and retry
             if i == tries - 1:
                 print(f"    ! giving up on request: {e}")
                 return None
@@ -104,7 +119,7 @@ def resolve_volume(cache, title, year, publisher):
         if score > best_score:
             best_score, best = score, v.get("id")
     cache[ck] = best
-    time.sleep(0.4)
+    time.sleep(1.0)
     return best
 
 
@@ -127,7 +142,7 @@ def issue_credits(vol_id, issue):
         pass
     data = cv_get("issues", {"filter": f"volume:{vol_id},issue_number:{inum}",
                              "field_list": "person_credits"})
-    time.sleep(0.4)
+    time.sleep(1.0)
     results = (data or {}).get("results", []) or []
     # results is a list of issue dicts; iterate (don't index) and take the first
     # one that actually carries person_credits. Comic Vine occasionally returns a
