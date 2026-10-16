@@ -9,7 +9,7 @@ Usage:
     python3 brb_fill_rates.py --prev comics_inventory_0107_2230_VALIDATED.xlsx  # compare two files
 """
 
-import sys, os, glob as _glob, argparse
+import sys, os, re, glob as _glob, argparse
 import pandas as pd
 
 REPO_ROOT  = os.path.dirname(os.path.abspath(__file__))
@@ -81,14 +81,39 @@ def bar(pct, width=30):
 
 
 def covers_from_json():
-    """Count non-null entries in covers.json."""
+    """Count UNIQUE covers in covers.json.
+
+    covers.json mixes two key shapes for the same book: a volume-aware
+    'Title|||Issue|||Volume' key and a legacy 'Title|||#Issue' fallback. Counting
+    raw keys double-counts any book that has both. We collapse to one slot per
+    distinct (title, issue, volume): legacy 2-part keys only count when no 3-part
+    sibling exists for that title+issue."""
     if not os.path.exists(COVERS_JSON):
         return None, None
     import json
     with open(COVERS_JSON) as f:
         data = json.load(f)
-    total  = len(data)
-    filled = sum(1 for v in data.values() if v and v.get("url"))
+
+    groups = {}  # (title, issue) -> {"vols": {vol: has_url}, "u2": bool or None}
+    for k, v in data.items():
+        has_url = bool(v and v.get("url"))
+        p = k.split("|||")
+        title = p[0].lower()
+        issue = re.sub(r"^#", "", p[1]).strip() if len(p) > 1 else ""
+        g = groups.setdefault((title, issue), {"vols": {}, "u2": None})
+        if len(p) == 3:
+            vol = p[2].strip()
+            g["vols"][vol] = g["vols"].get(vol, False) or has_url
+        else:
+            g["u2"] = bool(g["u2"]) or has_url
+
+    total = filled = 0
+    for g in groups.values():
+        if g["vols"]:                      # one slot per distinct volume
+            for ok in g["vols"].values():
+                total += 1; filled += 1 if ok else 0
+        else:                              # legacy-only book — one slot
+            total += 1; filled += 1 if g["u2"] else 0
     return filled, total
 
 
@@ -201,7 +226,7 @@ def report(df, sheet, filename, label=""):
         cov_pct = 100 * cov_filled / cov_total if cov_total else 0
         flag = "✓" if cov_pct >= 80 else ("⚠" if cov_pct >= 50 else "✗")
         print(f"  {flag}  {'Cover Images':<14}  {cov_filled:>6,} / {cov_total:,}  ({cov_pct:5.1f}%)  {bar(cov_pct, 24)}")
-        print(f"       (source: covers.json — unique title/issue combos)")
+        print(f"       (source: covers.json — unique title/issue/volume covers, deduped)")
     else:
         print(f"        Cover Images    (covers.json not found — run fetchCovers.mjs first)")
 
