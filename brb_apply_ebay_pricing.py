@@ -27,6 +27,7 @@ def main():
     ap.add_argument("--since", required=True, help="Only apply entries fetched on/after this date (YYYY-MM-DD)")
     ap.add_argument("--out", default=None)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--overwrite", action="store_true", help="Also replace existing values (default: fill blanks only)")
     args = ap.parse_args()
 
     with open(args.results) as f:
@@ -57,44 +58,49 @@ def main():
         except ValueError:
             return s
 
-    applied, not_found, ambiguous = [], [], []
+    # Index the sheet once. Without this, matching each of ~460 entries rescanned
+    # all ~11k rows — 5M+ checks that look frozen. We key by (title, issue, box)
+    # and also by (title, issue): a comp's value is the same whatever box the copy
+    # sits in, so if the pull's stored box doesn't match (it dedups to one box per
+    # book) we still fill every copy by title+issue.
+    row_index, ti_index = {}, {}
+    for row in ws.iter_rows(min_row=2):
+        t, i, b = str(row[ti - 1].value).strip(), norm_issue(row[ii - 1].value), str(row[bi - 1].value).strip()
+        row_index.setdefault((t, i, b), []).append(row)
+        ti_index.setdefault((t, i), []).append(row)
+
+    def _blank(x):
+        return x is None or str(x).strip() in ("", "nan", "None")
+
+    applied, not_found, kept = [], [], []
     for key, v in applicable.items():
         title, issue, box = v["title"], norm_issue(v["issue"]), str(v["box"])
         median = v["median"]
 
-        matches = []
-        for row in ws.iter_rows(min_row=2):
-            if str(row[ti - 1].value).strip() != title:
-                continue
-            if norm_issue(row[ii - 1].value) != issue:
-                continue
-            if str(row[bi - 1].value).strip() != box:
-                continue
-            matches.append(row)
-
+        # Exact box match first; fall back to all copies of this title+issue.
+        matches = row_index.get((title, issue, box)) or ti_index.get((title, issue), [])
         if not matches:
             not_found.append((title, issue, box))
             continue
-        if len(matches) > 1:
-            ambiguous.append((title, issue, box, len(matches)))
-            continue
 
-        row = matches[0]
-        old_val = row[nmi - 1].value
-        if str(old_val) == str(median):
-            continue  # already matches, no-op
-        applied.append((title, issue, box, old_val, median))
-        if not args.dry_run:
-            row[nmi - 1].value = median
-
-    print(f"\nApplied: {len(applied)}")
-    print(f"Not found in xlsx (title/issue/box no longer matches): {len(not_found)}")
-    print(f"Ambiguous (multiple rows share Title+Issue+Box — skipped, needs manual review): {len(ambiguous)}")
-
-    if ambiguous:
-        print("\n-- ambiguous, skipped --")
-        for t, i, b, n in ambiguous:
-            print(f"  {t} #{i} (Box {b}): {n} matching rows")
+        # Fill-only across EVERY matching copy: set the median into any blank
+        # value cell; keep existing values untouched unless --overwrite.
+        hit = False
+        for row in matches:
+            old_val = row[nmi - 1].value
+            if str(old_val) == str(median):
+                hit = True
+                continue
+            if not _blank(old_val) and not args.overwrite:
+                kept.append((title, issue, box, old_val, median))
+                continue
+            applied.append((title, issue, box, old_val, median))
+            hit = True
+            if not args.dry_run:
+                row[nmi - 1].value = median
+    print(f"\nApplied: {len(applied)}  ({'fill blanks only' if not args.overwrite else 'OVERWRITE mode'})")
+    print(f"Kept existing value (fill-only, not overwritten): {len(kept)}")
+    print(f"Not found in xlsx (title/issue no longer matches): {len(not_found)}")
 
     print("\n-- sample of applied changes (first 25) --")
     for t, i, b, old, new in applied[:25]:

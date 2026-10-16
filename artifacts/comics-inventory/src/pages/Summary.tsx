@@ -237,7 +237,10 @@ const FILL_STATS = FILL_FIELDS.map(f => {
     return n + (v && !FILL_BAD.test(v) ? 1 : 0);
   }, 0);
   return { ...f, filled, total: totalComics, blank: totalComics - filled, pct: Math.round((100 * filled) / totalComics) };
-});
+})
+  // Complete columns (100%) first — so they fill the top row — then the rest by
+  // how full they are. Keeps the "look how far we've come" row up front.
+  .sort((a, b) => (b.pct === 100 ? 1 : 0) - (a.pct === 100 ? 1 : 0) || b.pct - a.pct);
 
 // ── Timeline ─────────────────────────────────────────────────────────────────
 const TARGET_BOXES  = totalBoxes;
@@ -500,7 +503,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
           </span>
         </div>
         <div className="fill-grid">
-          {FILL_STATS.map(s => {
+          {FILL_STATS.map((s, i) => {
             const w = fillReady ? s.pct : 0;
             return (
               <div key={s.key as string} className="fill-card">
@@ -514,6 +517,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
                     backgroundImage:"linear-gradient(90deg, #c8102e 0%, #e85d04 35%, #f4a107 60%, #84cc16 82%, #22c55e 100%)",
                     backgroundSize:`${w > 0 ? (100 / w) * 100 : 100}% 100%`,
                     backgroundRepeat:"no-repeat",
+                    transitionDelay:`${i * 90}ms`,
                   }} />
                 </div>
                 <div className="fill-sub">
