@@ -1,8 +1,8 @@
 {
  "type": "comic-edit-batch",
- "exportedAt": "2026-10-16T13:58:16.072577",
+ "exportedAt": "2026-10-16T14:00:22.014656",
  "fill_only": true,
- "note": "by block: 2000s-2020s=NM, 1990s=GD; fill-only",
+ "note": "by block: 2000s-2020s=NM, 1990s=GD, 1980s=FN; fill-only",
  "edits": [
   {
    "match": {
@@ -21651,6 +21651,19 @@
   },
   {
    "match": {
+    "Title": "Star Trek: The Next Generation",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "65",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "FN (6.0)"
+   }
+  },
+  {
+   "match": {
     "Title": "Star Trek: Voyager \u2014 Seven's Reckoning",
     "Issue": "1",
     "Volume": "1",
@@ -23740,6 +23753,84 @@
    "delete": false,
    "changes": {
     "Condition": "NM (9.4)"
+   }
+  },
+  {
+   "match": {
+    "Title": "The Outsiders",
+    "Issue": "1",
+    "Volume": "5",
+    "Box": "50",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "FN (6.0)"
+   }
+  },
+  {
+   "match": {
+    "Title": "The Outsiders",
+    "Issue": "2",
+    "Volume": "1",
+    "Box": "50",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "FN (6.0)"
+   }
+  },
+  {
+   "match": {
+    "Title": "The Outsiders",
+    "Issue": "4",
+    "Volume": "1",
+    "Box": "50",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "FN (6.0)"
+   }
+  },
+  {
+   "match": {
+    "Title": "The Outsiders",
+    "Issue": "9",
+    "Volume": "1",
+    "Box": "54",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "FN (6.0)"
+   }
+  },
+  {
+   "match": {
+    "Title": "The Outsiders",
+    "Issue": "10",
+    "Volume": "1",
+    "Box": "54",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "FN (6.0)"
+   }
+  },
+  {
+   "match": {
+    "Title": "The Outsiders",
+    "Issue": "11",
+    "Volume": "1",
+    "Box": "54",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "FN (6.0)"
    }
   },
   {
