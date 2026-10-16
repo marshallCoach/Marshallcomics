@@ -1,8 +1,8 @@
 {
  "type": "comic-edit-batch",
- "exportedAt": "2026-10-16T14:03:40.221284",
+ "exportedAt": "2026-10-16T14:04:28.121727",
  "fill_only": true,
- "note": "by block: 2000s-2020s=NM,1990s=GD,1980s=FN; DrWho #0 NM+year2026; fill-only",
+ "note": "ALL ungraded by block: 2000s-2020s=NM,1990s=GD,1980s=FN,DrWho#0+M2i1#19=FN; fill-only",
  "edits": [
   {
    "match": {
@@ -7190,7 +7190,7 @@
    },
    "delete": false,
    "changes": {
-    "Condition": "NM (9.4)",
+    "Condition": "FN (6.0)",
     "Year": "2026"
    }
   },
@@ -15109,6 +15109,19 @@
    "delete": false,
    "changes": {
     "Condition": "NM (9.4)"
+   }
+  },
+  {
+   "match": {
+    "Title": "Marvel Two-in-One",
+    "Issue": "19",
+    "Volume": "1",
+    "Box": "102",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "FN (6.0)"
    }
   },
   {
