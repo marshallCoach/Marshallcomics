@@ -67,12 +67,22 @@ const LAST_UPDATE_DATE = (() => {
     : d.toLocaleString("en-US", { month: "short", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit" });
 })();
 const UPDATE_DELTAS    = computeUpdateDeltas();
+// Live fill-rate for one field, computed from the current inventory so these
+// banner lines move with every deploy instead of being static blurbs.
+const _fillBad = /^(n\/a|unknown|\?|tbd|none)$/i;
+const _fillPct = (key: keyof typeof comics[number]) => {
+  const filled = comics.reduce((n, c) => {
+    const v = String(c[key] ?? "").trim();
+    return n + (v && !_fillBad.test(v) ? 1 : 0);
+  }, 0);
+  return Math.round((100 * filled) / totalComics);
+};
 const INTERFACE_UPDATES = [
   `Last deployed — ${LAST_UPDATE_DATE}`,
   DEPLOY_COMMIT ? `This deploy — ${DEPLOY_COMMIT}${DEPLOY_SHA ? ` (${DEPLOY_SHA})` : ""}` : `Data refresh — ${totalComics.toLocaleString()} comics · ${totalBoxes} boxes`,
   `${totalComics.toLocaleString()} comics · ${totalBoxes} boxes · ${keyCount.toLocaleString()} keys · ${signedCount} signed`,
-  "Global search — press ⌘K / Ctrl+K to search comics, boxes, and pages",
-  "Comic detail drawer — click any book for full details, values, and signing info",
+  `Data completeness — Condition ${_fillPct("Condition")}%, Value ${_fillPct("Value_NM")}%, Cover art ${_fillPct("Cover_Artist")}%`,
+  `Credits filled — Writers ${_fillPct("Writer")}%, Artists ${_fillPct("Artist")}%, Pub dates ${_fillPct("Pub_Date")}%`,
 ];
 // ── Duplicate stats (same logic as Duplicates page) ──────────────────────────
 const DUP_STATS = (() => {

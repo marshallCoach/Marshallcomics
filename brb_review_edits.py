@@ -50,7 +50,9 @@ def nt(t):
 
 
 def ni(i):
-    return re.sub(r"\.0$", "", str(i or "").replace("#", "").strip())
+    # NOTE: use "is None", not "or", so a #0 issue (integer 0, which is falsy)
+    # normalizes to "0" and matches instead of silently becoming "".
+    return re.sub(r"\.0$", "", str(i if i is not None else "").replace("#", "").strip())
 
 
 def nv(v):

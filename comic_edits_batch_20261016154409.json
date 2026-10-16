@@ -1,0 +1,139 @@
+{
+ "type": "comic-edit-batch",
+ "exportedAt": "2026-10-16T15:44:09.527705",
+ "fill_only": true,
+ "note": "#0-issue stragglers (ni-0 match fix); NM except Dr Who #0 FN+2026",
+ "edits": [
+  {
+   "match": {
+    "Title": "Avengers: Empyre",
+    "Issue": "0",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "NM (9.4)"
+   }
+  },
+  {
+   "match": {
+    "Title": "Batman: Wayne Family Adventures",
+    "Issue": "0",
+    "Volume": "4",
+    "Box": "50",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "NM (9.4)"
+   }
+  },
+  {
+   "match": {
+    "Title": "Captain America",
+    "Issue": "0",
+    "Volume": "16",
+    "Box": "10",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "NM (9.4)"
+   }
+  },
+  {
+   "match": {
+    "Title": "Doctor Who: Circuit Breaker",
+    "Issue": "0",
+    "Volume": "1",
+    "Box": "103",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "FN (6.0)",
+    "Year": "2026"
+   }
+  },
+  {
+   "match": {
+    "Title": "Fantastic Four: Empyre",
+    "Issue": "0",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "NM (9.4)"
+   }
+  },
+  {
+   "match": {
+    "Title": "Infinite Frontier",
+    "Issue": "0",
+    "Volume": "1",
+    "Box": "98",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "NM (9.4)"
+   }
+  },
+  {
+   "match": {
+    "Title": "Joker of the World",
+    "Issue": "0",
+    "Volume": "1",
+    "Box": "50",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "NM (9.4)"
+   }
+  },
+  {
+   "match": {
+    "Title": "Star Trek: The Mirror War",
+    "Issue": "0",
+    "Volume": "1",
+    "Box": "65",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "NM (9.4)"
+   }
+  },
+  {
+   "match": {
+    "Title": "Venom: Space Knight",
+    "Issue": "3",
+    "Volume": "1",
+    "Box": "",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "NM (9.4)"
+   }
+  },
+  {
+   "match": {
+    "Title": "X-Men '97",
+    "Issue": "0",
+    "Volume": "2",
+    "Box": "102",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "NM (9.4)"
+   }
+  }
+ ]
+}
