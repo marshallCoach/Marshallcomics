@@ -129,11 +129,20 @@ def issue_credits(vol_id, issue):
                              "field_list": "person_credits"})
     time.sleep(0.4)
     results = (data or {}).get("results", []) or []
-    if not results:
+    # results is a list of issue dicts; iterate (don't index) and take the first
+    # one that actually carries person_credits. Comic Vine occasionally returns a
+    # bare list for an empty result, so guard the type.
+    pc = None
+    for r in results:
+        if isinstance(r, dict) and r.get("person_credits"):
+            pc = r["person_credits"]
+            break
+    if not pc:
         return None
-    pc = results[0].get("person_credits") or []
     writers, pencilers, artists, covers = [], [], [], []
     for p in pc:
+        if not isinstance(p, dict):
+            continue
         name = p.get("name", "")
         role = (p.get("role") or "").lower()
         if "writer" in role:
