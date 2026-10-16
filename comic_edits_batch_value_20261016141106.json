@@ -1,0 +1,3882 @@
+{
+ "type": "comic-edit-batch",
+ "exportedAt": "2026-10-16T14:11:06.818944",
+ "fill_only": true,
+ "note": "Value_NM from eBay comp (median/avg); fill-only; sourced",
+ "edits": [
+  {
+   "match": {
+    "Title": "1872",
+    "Issue": "3",
+    "Volume": "1",
+    "Box": "19",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$7"
+   }
+  },
+  {
+   "match": {
+    "Title": "1602: Witch Hunter Angela",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "86",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$9"
+   }
+  },
+  {
+   "match": {
+    "Title": "1602: Witch Hunter Angela",
+    "Issue": "2",
+    "Volume": "1",
+    "Box": "86",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$7"
+   }
+  },
+  {
+   "match": {
+    "Title": "1602: Witch Hunter Angela",
+    "Issue": "3",
+    "Volume": "1",
+    "Box": "86",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$7"
+   }
+  },
+  {
+   "match": {
+    "Title": "1602: Witch Hunter Angela",
+    "Issue": "4",
+    "Volume": "1",
+    "Box": "86",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$9"
+   }
+  },
+  {
+   "match": {
+    "Title": "A-Force",
+    "Issue": "2",
+    "Volume": "1",
+    "Box": "86",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$8"
+   }
+  },
+  {
+   "match": {
+    "Title": "A-Force",
+    "Issue": "3",
+    "Volume": "1",
+    "Box": "86",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$3"
+   }
+  },
+  {
+   "match": {
+    "Title": "A-Force",
+    "Issue": "4",
+    "Volume": "1",
+    "Box": "86",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$7"
+   }
+  },
+  {
+   "match": {
+    "Title": "A-Force",
+    "Issue": "3",
+    "Volume": "2",
+    "Box": "86",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$3"
+   }
+  },
+  {
+   "match": {
+    "Title": "A-Force",
+    "Issue": "4",
+    "Volume": "2",
+    "Box": "86",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$7"
+   }
+  },
+  {
+   "match": {
+    "Title": "A-Force",
+    "Issue": "6",
+    "Volume": "2",
+    "Box": "86",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$3"
+   }
+  },
+  {
+   "match": {
+    "Title": "A-Force",
+    "Issue": "7",
+    "Volume": "2",
+    "Box": "86",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$3"
+   }
+  },
+  {
+   "match": {
+    "Title": "A-Force",
+    "Issue": "2",
+    "Volume": "2",
+    "Box": "86",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$8"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Batman",
+    "Issue": "21",
+    "Volume": "1",
+    "Box": "72",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$115"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Batman",
+    "Issue": "12",
+    "Volume": "1",
+    "Box": "104",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$20"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Batman",
+    "Issue": "15",
+    "Volume": "1",
+    "Box": "104",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$17"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Batman",
+    "Issue": "16",
+    "Volume": "1",
+    "Box": "104",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$24"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Batman",
+    "Issue": "19",
+    "Volume": "1",
+    "Box": "104",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$65"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Batman",
+    "Issue": "20",
+    "Volume": "1",
+    "Box": "104",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Catwoman",
+    "Issue": "2",
+    "Volume": "1",
+    "Box": "104",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$25"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Catwoman",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "104",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$6"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Flash",
+    "Issue": "2",
+    "Volume": "1",
+    "Box": "104",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$8"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Flash",
+    "Issue": "15",
+    "Volume": "1",
+    "Box": "104",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$10"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Flash",
+    "Issue": "16",
+    "Volume": "1",
+    "Box": "104",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Flash",
+    "Issue": "17",
+    "Volume": "1",
+    "Box": "104",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$7"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Green Arrow",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "104",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$17"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Green Arrow",
+    "Issue": "2",
+    "Volume": "1",
+    "Box": "104",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$6"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Green Arrow",
+    "Issue": "3",
+    "Volume": "1",
+    "Box": "104",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$10"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Green Arrow",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "106",
+    "Signed_By": "Sanford Greene, Postak Pinoche, Mark Rosenberg, Andy McDonald, Matthew Rosenberg"
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$17"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Green Lantern",
+    "Issue": "16",
+    "Volume": "1",
+    "Box": "104",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Green Lantern",
+    "Issue": "2",
+    "Volume": "1",
+    "Box": "104",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$10"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Green Lantern",
+    "Issue": "15",
+    "Volume": "1",
+    "Box": "104",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$3"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Martian Manhunter",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "104",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$145"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Martian Manhunter",
+    "Issue": "2",
+    "Volume": "1",
+    "Box": "104",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$20"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Martian Manhunter",
+    "Issue": "3",
+    "Volume": "1",
+    "Box": "104",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$25"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Superman",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "104",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$18"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Superman",
+    "Issue": "2",
+    "Volume": "1",
+    "Box": "104",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$15"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Superman",
+    "Issue": "3",
+    "Volume": "1",
+    "Box": "104",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$25"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Superman",
+    "Issue": "4",
+    "Volume": "1",
+    "Box": "104",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$17"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Superman",
+    "Issue": "5",
+    "Volume": "1",
+    "Box": "104",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$14"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Superman",
+    "Issue": "6",
+    "Volume": "1",
+    "Box": "104",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$11"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Superman",
+    "Issue": "7",
+    "Volume": "1",
+    "Box": "104",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$7"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Superman",
+    "Issue": "8",
+    "Volume": "1",
+    "Box": "104",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$9"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Superman",
+    "Issue": "16",
+    "Volume": "1",
+    "Box": "104",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$8"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Superman",
+    "Issue": "19",
+    "Volume": "1",
+    "Box": "104",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$90"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Wonder Woman",
+    "Issue": "21",
+    "Volume": "1",
+    "Box": "72",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$6"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Wonder Woman",
+    "Issue": "21",
+    "Volume": "1",
+    "Box": "104",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$6"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Wonder Woman",
+    "Issue": "2",
+    "Volume": "1",
+    "Box": "104",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$20"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Wonder Woman",
+    "Issue": "17",
+    "Volume": "1",
+    "Box": "104",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$20"
+   }
+  },
+  {
+   "match": {
+    "Title": "Absolute Wonder Woman Annual",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "104",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$6"
+   }
+  },
+  {
+   "match": {
+    "Title": "Action Comics",
+    "Issue": "896",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$3"
+   }
+  },
+  {
+   "match": {
+    "Title": "Adventures of Superman: Book of El",
+    "Issue": "10",
+    "Volume": "1",
+    "Box": "101",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Aliens vs. Avengers",
+    "Issue": "2",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$9"
+   }
+  },
+  {
+   "match": {
+    "Title": "Amazing Spider-Man",
+    "Issue": "32",
+    "Volume": "7",
+    "Box": "102",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ant-Man: Last Days",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "19",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$9"
+   }
+  },
+  {
+   "match": {
+    "Title": "Aquaman",
+    "Issue": "60",
+    "Volume": "1",
+    "Box": "105",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$10"
+   }
+  },
+  {
+   "match": {
+    "Title": "Aquaman",
+    "Issue": "62",
+    "Volume": "1",
+    "Box": "105",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$10"
+   }
+  },
+  {
+   "match": {
+    "Title": "Aquaman",
+    "Issue": "63",
+    "Volume": "1",
+    "Box": "105",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Aquaman",
+    "Issue": "64",
+    "Volume": "1",
+    "Box": "105",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Aquaman",
+    "Issue": "65",
+    "Volume": "1",
+    "Box": "105",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$10"
+   }
+  },
+  {
+   "match": {
+    "Title": "Aquaman",
+    "Issue": "68",
+    "Volume": "1",
+    "Box": "105",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$3"
+   }
+  },
+  {
+   "match": {
+    "Title": "Aquaman",
+    "Issue": "72",
+    "Volume": "1",
+    "Box": "105",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Aquaman",
+    "Issue": "73",
+    "Volume": "1",
+    "Box": "105",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$10"
+   }
+  },
+  {
+   "match": {
+    "Title": "Aquaman",
+    "Issue": "74",
+    "Volume": "1",
+    "Box": "105",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$10"
+   }
+  },
+  {
+   "match": {
+    "Title": "Armor Wars",
+    "Issue": "2",
+    "Volume": "1",
+    "Box": "86",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$9"
+   }
+  },
+  {
+   "match": {
+    "Title": "Avengers",
+    "Issue": "65",
+    "Volume": "3",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$3"
+   }
+  },
+  {
+   "match": {
+    "Title": "Avengers",
+    "Issue": "66",
+    "Volume": "3",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$8"
+   }
+  },
+  {
+   "match": {
+    "Title": "Avengers",
+    "Issue": "70",
+    "Volume": "3",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Avengers",
+    "Issue": "71",
+    "Volume": "3",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Avengers",
+    "Issue": "498",
+    "Volume": "3",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$3"
+   }
+  },
+  {
+   "match": {
+    "Title": "Avengers",
+    "Issue": "501",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$9"
+   }
+  },
+  {
+   "match": {
+    "Title": "Avengers",
+    "Issue": "502",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Avengers",
+    "Issue": "503",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$10"
+   }
+  },
+  {
+   "match": {
+    "Title": "Barbara Gordon: Breakout",
+    "Issue": "3",
+    "Volume": "1",
+    "Box": "101",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Batgirl",
+    "Issue": "71",
+    "Volume": "1",
+    "Box": "45",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Batgirl",
+    "Issue": "73",
+    "Volume": "1",
+    "Box": "45",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$10"
+   }
+  },
+  {
+   "match": {
+    "Title": "Batman",
+    "Issue": "125",
+    "Volume": "3",
+    "Box": "72",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$17"
+   }
+  },
+  {
+   "match": {
+    "Title": "Batman and Robin: Year One",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "101",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Birds of Prey",
+    "Issue": "38",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$6"
+   }
+  },
+  {
+   "match": {
+    "Title": "Birds of Prey",
+    "Issue": "39",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Black Cat",
+    "Issue": "12",
+    "Volume": "3",
+    "Box": "CC2",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$10"
+   }
+  },
+  {
+   "match": {
+    "Title": "Black Panther",
+    "Issue": "51",
+    "Volume": "3",
+    "Box": "7",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$16"
+   }
+  },
+  {
+   "match": {
+    "Title": "Black Panther",
+    "Issue": "52",
+    "Volume": "3",
+    "Box": "7",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$7"
+   }
+  },
+  {
+   "match": {
+    "Title": "Black Panther",
+    "Issue": "2",
+    "Volume": "1",
+    "Box": "72",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$10"
+   }
+  },
+  {
+   "match": {
+    "Title": "Black Panther: The Man Without Fear",
+    "Issue": "521",
+    "Volume": "1",
+    "Box": "7",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Black Panther: The Man Without Fear",
+    "Issue": "522",
+    "Volume": "1",
+    "Box": "7",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$2"
+   }
+  },
+  {
+   "match": {
+    "Title": "Black Panther: The Man Without Fear",
+    "Issue": "515",
+    "Volume": "1",
+    "Box": "7",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$3"
+   }
+  },
+  {
+   "match": {
+    "Title": "Bloodline: Daughter of Blade",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "20",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$8"
+   }
+  },
+  {
+   "match": {
+    "Title": "Bloodline: Daughter of Blade",
+    "Issue": "2",
+    "Volume": "1",
+    "Box": "20",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Bloodline: Daughter of Blade",
+    "Issue": "3",
+    "Volume": "1",
+    "Box": "20",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Bloodline: Daughter of Blade",
+    "Issue": "5",
+    "Volume": "1",
+    "Box": "20",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Blue Beetle",
+    "Issue": "15",
+    "Volume": "1",
+    "Box": "62",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$3"
+   }
+  },
+  {
+   "match": {
+    "Title": "Brightest Day",
+    "Issue": "3",
+    "Volume": "1",
+    "Box": "88",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Brightest Day",
+    "Issue": "5",
+    "Volume": "1",
+    "Box": "88",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Brightest Day",
+    "Issue": "6",
+    "Volume": "1",
+    "Box": "88",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$3"
+   }
+  },
+  {
+   "match": {
+    "Title": "Brightest Day",
+    "Issue": "7",
+    "Volume": "1",
+    "Box": "88",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$9"
+   }
+  },
+  {
+   "match": {
+    "Title": "Brightest Day",
+    "Issue": "9",
+    "Volume": "1",
+    "Box": "88",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$3"
+   }
+  },
+  {
+   "match": {
+    "Title": "Brightest Day",
+    "Issue": "11",
+    "Volume": "1",
+    "Box": "88",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Brightest Day",
+    "Issue": "12",
+    "Volume": "1",
+    "Box": "88",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Brightest Day",
+    "Issue": "15",
+    "Volume": "1",
+    "Box": "88",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$10"
+   }
+  },
+  {
+   "match": {
+    "Title": "Brightest Day",
+    "Issue": "17",
+    "Volume": "1",
+    "Box": "88",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$10"
+   }
+  },
+  {
+   "match": {
+    "Title": "Brightest Day",
+    "Issue": "22",
+    "Volume": "1",
+    "Box": "88",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$6"
+   }
+  },
+  {
+   "match": {
+    "Title": "Brightest Day",
+    "Issue": "23",
+    "Volume": "1",
+    "Box": "88",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Brightest Day",
+    "Issue": "24",
+    "Volume": "1",
+    "Box": "88",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Brightest Day",
+    "Issue": "30",
+    "Volume": "1",
+    "Box": "88",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$7"
+   }
+  },
+  {
+   "match": {
+    "Title": "Brightest Day",
+    "Issue": "40",
+    "Volume": "1",
+    "Box": "88",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$3"
+   }
+  },
+  {
+   "match": {
+    "Title": "Cap Wolf and the Howling Commandos",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "10",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Cap Wolf and the Howling Commandos",
+    "Issue": "2",
+    "Volume": "1",
+    "Box": "10",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Cap Wolf and the Howling Commandos",
+    "Issue": "3",
+    "Volume": "1",
+    "Box": "10",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$3"
+   }
+  },
+  {
+   "match": {
+    "Title": "Cap Wolf and the Howling Commandos",
+    "Issue": "4",
+    "Volume": "1",
+    "Box": "10",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Capes",
+    "Issue": "8",
+    "Volume": "1",
+    "Box": "103",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Captain America",
+    "Issue": "13",
+    "Volume": "18",
+    "Box": "72",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$10"
+   }
+  },
+  {
+   "match": {
+    "Title": "Captain America",
+    "Issue": "12",
+    "Volume": "1",
+    "Box": "102",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Captain America: Road to War",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "10",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$6"
+   }
+  },
+  {
+   "match": {
+    "Title": "Captain Atom: Armageddon",
+    "Issue": "2",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$7"
+   }
+  },
+  {
+   "match": {
+    "Title": "Captain Atom: Armageddon",
+    "Issue": "3",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$10"
+   }
+  },
+  {
+   "match": {
+    "Title": "Captain Atom: Armageddon",
+    "Issue": "4",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$9"
+   }
+  },
+  {
+   "match": {
+    "Title": "Captain Atom: Armageddon",
+    "Issue": "5",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$10"
+   }
+  },
+  {
+   "match": {
+    "Title": "Captain Carter",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "106",
+    "Signed_By": "Hayley Atwell"
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$14"
+   }
+  },
+  {
+   "match": {
+    "Title": "Catwoman",
+    "Issue": "54",
+    "Volume": "5",
+    "Box": "44",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$7"
+   }
+  },
+  {
+   "match": {
+    "Title": "Catwoman",
+    "Issue": "55",
+    "Volume": "5",
+    "Box": "44",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$8"
+   }
+  },
+  {
+   "match": {
+    "Title": "Civil War: Unmasked",
+    "Issue": "3",
+    "Volume": "1",
+    "Box": "102",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Destination Kill",
+    "Issue": "3",
+    "Volume": "1",
+    "Box": "103",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$6"
+   }
+  },
+  {
+   "match": {
+    "Title": "Detective Comics",
+    "Issue": "1110",
+    "Volume": "2",
+    "Box": "101",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Doctor Who: Circuit Breaker",
+    "Issue": "0",
+    "Volume": "1",
+    "Box": "103",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$7"
+   }
+  },
+  {
+   "match": {
+    "Title": "Doom Academy",
+    "Issue": "2",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Doom Academy",
+    "Issue": "4",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Doom Academy",
+    "Issue": "5",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Doom Patrol and Suicide Squad",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "72",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$7"
+   }
+  },
+  {
+   "match": {
+    "Title": "Doom",
+    "Issue": "1",
+    "Volume": "3",
+    "Box": "106",
+    "Signed_By": "Sanford Greene"
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$26"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ex Machina",
+    "Issue": "13",
+    "Volume": "1",
+    "Box": "70",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ex Machina",
+    "Issue": "14",
+    "Volume": "1",
+    "Box": "70",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ex Machina",
+    "Issue": "15",
+    "Volume": "1",
+    "Box": "70",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ex Machina",
+    "Issue": "16",
+    "Volume": "1",
+    "Box": "70",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$10"
+   }
+  },
+  {
+   "match": {
+    "Title": "Exceptional X-Men",
+    "Issue": "11",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Fear Itself: Book of the Skull",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "86",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$3"
+   }
+  },
+  {
+   "match": {
+    "Title": "First Wave",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$10"
+   }
+  },
+  {
+   "match": {
+    "Title": "First Wave",
+    "Issue": "2",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "First Wave",
+    "Issue": "3",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$8"
+   }
+  },
+  {
+   "match": {
+    "Title": "First Wave",
+    "Issue": "4",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "First Wave",
+    "Issue": "5",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$9"
+   }
+  },
+  {
+   "match": {
+    "Title": "Free Comic Book Day",
+    "Issue": "0",
+    "Volume": "1",
+    "Box": "86",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$2"
+   }
+  },
+  {
+   "match": {
+    "Title": "Fury of Firestorm",
+    "Issue": "4",
+    "Volume": "2",
+    "Box": "101",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Giant-Size House of M",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Green Arrow",
+    "Issue": "46",
+    "Volume": "1",
+    "Box": "82",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Green Lantern",
+    "Issue": "55",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$8"
+   }
+  },
+  {
+   "match": {
+    "Title": "Guardians of Knowhere",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "86",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$7"
+   }
+  },
+  {
+   "match": {
+    "Title": "Guardians of Knowhere",
+    "Issue": "3",
+    "Volume": "1",
+    "Box": "86",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$10"
+   }
+  },
+  {
+   "match": {
+    "Title": "Guardians of Knowhere",
+    "Issue": "4",
+    "Volume": "1",
+    "Box": "86",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$10"
+   }
+  },
+  {
+   "match": {
+    "Title": "Heroes for Hire",
+    "Issue": "9",
+    "Volume": "1",
+    "Box": "21",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Heroes for Hire",
+    "Issue": "10",
+    "Volume": "1",
+    "Box": "21",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "House of M",
+    "Issue": "4",
+    "Volume": "1",
+    "Box": "86",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$7"
+   }
+  },
+  {
+   "match": {
+    "Title": "House of M",
+    "Issue": "6",
+    "Volume": "1",
+    "Box": "86",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$8"
+   }
+  },
+  {
+   "match": {
+    "Title": "Incredible Hulk",
+    "Issue": "21",
+    "Volume": "1",
+    "Box": "102",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Infernal Hulk",
+    "Issue": "8",
+    "Volume": "1",
+    "Box": "102",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Inhumans: Attilan Rising",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "86",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$10"
+   }
+  },
+  {
+   "match": {
+    "Title": "Inhumans: Attilan Rising",
+    "Issue": "2",
+    "Volume": "1",
+    "Box": "86",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$6"
+   }
+  },
+  {
+   "match": {
+    "Title": "Inhumans: Attilan Rising",
+    "Issue": "3",
+    "Volume": "1",
+    "Box": "86",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$8"
+   }
+  },
+  {
+   "match": {
+    "Title": "Inhumans: Attilan Rising",
+    "Issue": "4",
+    "Volume": "1",
+    "Box": "86",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Iron Man",
+    "Issue": "7",
+    "Volume": "1",
+    "Box": "102",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Jungle Action",
+    "Issue": "17",
+    "Volume": "2",
+    "Box": "106",
+    "Signed_By": "Christopher Priest"
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$26"
+   }
+  },
+  {
+   "match": {
+    "Title": "Justice League Unlimited",
+    "Issue": "20",
+    "Volume": "3",
+    "Box": "101",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Justice Society of America",
+    "Issue": "21",
+    "Volume": "1",
+    "Box": "101",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Korvac Saga",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "19",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$6"
+   }
+  },
+  {
+   "match": {
+    "Title": "Korvac Saga",
+    "Issue": "2",
+    "Volume": "1",
+    "Box": "19",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Korvac Saga",
+    "Issue": "3",
+    "Volume": "1",
+    "Box": "19",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Korvac Saga",
+    "Issue": "4",
+    "Volume": "1",
+    "Box": "19",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Korvac Saga",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "86",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$6"
+   }
+  },
+  {
+   "match": {
+    "Title": "Korvac Saga",
+    "Issue": "2",
+    "Volume": "1",
+    "Box": "86",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Korvac Saga",
+    "Issue": "3",
+    "Volume": "1",
+    "Box": "86",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Korvac Saga",
+    "Issue": "4",
+    "Volume": "1",
+    "Box": "86",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Legion of Super-Heroes",
+    "Issue": "4",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$10"
+   }
+  },
+  {
+   "match": {
+    "Title": "Legion of Super-Heroes",
+    "Issue": "11",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$3"
+   }
+  },
+  {
+   "match": {
+    "Title": "Legion of Super-Heroes",
+    "Issue": "13",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$3"
+   }
+  },
+  {
+   "match": {
+    "Title": "Legion of Super-Heroes",
+    "Issue": "14",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$3"
+   }
+  },
+  {
+   "match": {
+    "Title": "Legion of Super-Heroes",
+    "Issue": "15",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Luke Cage",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "102",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$14"
+   }
+  },
+  {
+   "match": {
+    "Title": "M.A.S.K.",
+    "Issue": "2",
+    "Volume": "1",
+    "Box": "103",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$7"
+   }
+  },
+  {
+   "match": {
+    "Title": "Marvel Age",
+    "Issue": "1000",
+    "Volume": "2",
+    "Box": "19",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$10"
+   }
+  },
+  {
+   "match": {
+    "Title": "Marvel Knights: Captain America",
+    "Issue": "8",
+    "Volume": "1",
+    "Box": "10",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$10"
+   }
+  },
+  {
+   "match": {
+    "Title": "Moonstar",
+    "Issue": "4",
+    "Volume": "1",
+    "Box": "102",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "One World Under Doom",
+    "Issue": "31",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$3"
+   }
+  },
+  {
+   "match": {
+    "Title": "Psylocke",
+    "Issue": "8",
+    "Volume": "2",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Reborn: Ultimate Impact",
+    "Issue": "2",
+    "Volume": "1",
+    "Box": "102",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$6"
+   }
+  },
+  {
+   "match": {
+    "Title": "Red Hood: The Hill",
+    "Issue": "3",
+    "Volume": "1",
+    "Box": "101",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Runaways",
+    "Issue": "2",
+    "Volume": "1",
+    "Box": "86",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$7"
+   }
+  },
+  {
+   "match": {
+    "Title": "Runaways",
+    "Issue": "3",
+    "Volume": "1",
+    "Box": "86",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Runaways",
+    "Issue": "4",
+    "Volume": "1",
+    "Box": "86",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Secret Invasion: Dark Reign",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "19",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$7"
+   }
+  },
+  {
+   "match": {
+    "Title": "Secret Six",
+    "Issue": "18",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Secret Six",
+    "Issue": "20",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$10"
+   }
+  },
+  {
+   "match": {
+    "Title": "Secret Six",
+    "Issue": "21",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$3"
+   }
+  },
+  {
+   "match": {
+    "Title": "Secret Six",
+    "Issue": "22",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$3"
+   }
+  },
+  {
+   "match": {
+    "Title": "Secret Six",
+    "Issue": "23",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Secret Six",
+    "Issue": "24",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Secret Six",
+    "Issue": "27",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Secret Six",
+    "Issue": "31",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$6"
+   }
+  },
+  {
+   "match": {
+    "Title": "Secret Six",
+    "Issue": "32",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$7"
+   }
+  },
+  {
+   "match": {
+    "Title": "Secret Six",
+    "Issue": "33",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$8"
+   }
+  },
+  {
+   "match": {
+    "Title": "Secret Six",
+    "Issue": "34",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Secret Six",
+    "Issue": "35",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Secret Six",
+    "Issue": "36",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$8"
+   }
+  },
+  {
+   "match": {
+    "Title": "Spider-Woman",
+    "Issue": "10",
+    "Volume": "5",
+    "Box": "CC1",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Star Trek: Starfleet Academy",
+    "Issue": "3",
+    "Volume": "1",
+    "Box": "103",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Star Wars: Rogue One \u2014 Saw Gerrera",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "102",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$6"
+   }
+  },
+  {
+   "match": {
+    "Title": "Supergirl: Survive",
+    "Issue": "2",
+    "Volume": "1",
+    "Box": "101",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Superman",
+    "Issue": "39",
+    "Volume": "1",
+    "Box": "101",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$6"
+   }
+  },
+  {
+   "match": {
+    "Title": "Superman",
+    "Issue": "208",
+    "Volume": "2",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$8"
+   }
+  },
+  {
+   "match": {
+    "Title": "Superman/Batman",
+    "Issue": "81",
+    "Volume": "1",
+    "Box": "58",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Superman/Batman",
+    "Issue": "82",
+    "Volume": "1",
+    "Box": "58",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$6"
+   }
+  },
+  {
+   "match": {
+    "Title": "Superman/Batman",
+    "Issue": "83",
+    "Volume": "1",
+    "Box": "58",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Superman/Batman",
+    "Issue": "84",
+    "Volume": "1",
+    "Box": "58",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$7"
+   }
+  },
+  {
+   "match": {
+    "Title": "Teen Titans",
+    "Issue": "92",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$3"
+   }
+  },
+  {
+   "match": {
+    "Title": "The All-New Atom",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "The Amazing Spider-Man",
+    "Issue": "114",
+    "Volume": "1",
+    "Box": "106",
+    "Signed_By": "Jim Starlin"
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$45"
+   }
+  },
+  {
+   "match": {
+    "Title": "The Amazing Spider-Man",
+    "Issue": "25",
+    "Volume": "4",
+    "Box": "106",
+    "Signed_By": "Dan Slott"
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "The Amazing Spider-Man Special",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "10",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$9"
+   }
+  },
+  {
+   "match": {
+    "Title": "The Deadman",
+    "Issue": "2",
+    "Volume": "7",
+    "Box": "101",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "The Flash",
+    "Issue": "1",
+    "Volume": "5",
+    "Box": "43",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$6"
+   }
+  },
+  {
+   "match": {
+    "Title": "The Flash",
+    "Issue": "226",
+    "Volume": "2",
+    "Box": "88",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "The Flash",
+    "Issue": "227",
+    "Volume": "2",
+    "Box": "88",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$6"
+   }
+  },
+  {
+   "match": {
+    "Title": "The Flash",
+    "Issue": "233",
+    "Volume": "2",
+    "Box": "88",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "The Ultimates",
+    "Issue": "4",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$3"
+   }
+  },
+  {
+   "match": {
+    "Title": "The Ultimates",
+    "Issue": "5",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "The Ultimates",
+    "Issue": "7",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "The Ultimates",
+    "Issue": "8",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "The Ultimates",
+    "Issue": "11",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$7"
+   }
+  },
+  {
+   "match": {
+    "Title": "The Ultimates",
+    "Issue": "12",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$7"
+   }
+  },
+  {
+   "match": {
+    "Title": "The Ultimates",
+    "Issue": "13",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$8"
+   }
+  },
+  {
+   "match": {
+    "Title": "The Ultimates",
+    "Issue": "13",
+    "Volume": "3",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$8"
+   }
+  },
+  {
+   "match": {
+    "Title": "The Ultimates",
+    "Issue": "14",
+    "Volume": "3",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$9"
+   }
+  },
+  {
+   "match": {
+    "Title": "Thunderbolts",
+    "Issue": "158",
+    "Volume": "1",
+    "Box": "95",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Thunderbolts",
+    "Issue": "160",
+    "Volume": "1",
+    "Box": "95",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$3"
+   }
+  },
+  {
+   "match": {
+    "Title": "Thunderbolts",
+    "Issue": "161",
+    "Volume": "1",
+    "Box": "95",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$3"
+   }
+  },
+  {
+   "match": {
+    "Title": "Thunderbolts: Doomstrike",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$10"
+   }
+  },
+  {
+   "match": {
+    "Title": "Thunderbolts: Doomstrike",
+    "Issue": "2",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$6"
+   }
+  },
+  {
+   "match": {
+    "Title": "Thunderbolts: Doomstrike",
+    "Issue": "5",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Transformers",
+    "Issue": "34",
+    "Volume": "1",
+    "Box": "102",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$3"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate Black Panther",
+    "Issue": "2",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$6"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate Black Panther",
+    "Issue": "3",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate Black Panther",
+    "Issue": "4",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate Black Panther",
+    "Issue": "5",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate Black Panther",
+    "Issue": "6",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$7"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate Black Panther",
+    "Issue": "7",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate Black Panther",
+    "Issue": "8",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate Black Panther",
+    "Issue": "10",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$7"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate Black Panther",
+    "Issue": "11",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate Black Panther",
+    "Issue": "12",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate Black Panther",
+    "Issue": "14",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$6"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate Black Panther",
+    "Issue": "15",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$10"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate Black Panther",
+    "Issue": "16",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$9"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate Black Panther",
+    "Issue": "17",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate Black Panther",
+    "Issue": "18",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$7"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate Black Panther",
+    "Issue": "9",
+    "Volume": "1",
+    "Box": "CC1",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate Captain America",
+    "Issue": "2",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate Captain America",
+    "Issue": "3",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate Captain America",
+    "Issue": "4",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$8"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate Human",
+    "Issue": "2",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$9"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate Iron Man II",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$9"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate Iron Man II",
+    "Issue": "2",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$9"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate Iron Man II",
+    "Issue": "3",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$9"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate Iron Man II",
+    "Issue": "4",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$9"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate New Ultimates",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$10"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate New Ultimates",
+    "Issue": "4",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$3"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate New Ultimates",
+    "Issue": "5",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$9"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate Spider-Man",
+    "Issue": "6",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$10"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate Spider-Man",
+    "Issue": "9",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$6"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate Spider-Man",
+    "Issue": "11",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$8"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate Spider-Man",
+    "Issue": "13",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate Spider-Man",
+    "Issue": "14",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate Spider-Man",
+    "Issue": "18",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$6"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate Spider-Man: Incursion",
+    "Issue": "3",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate Thor",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$7"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate Thor",
+    "Issue": "4",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$7"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate Universe",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$9"
+   }
+  },
+  {
+   "match": {
+    "Title": "Ultimate X",
+    "Issue": "5",
+    "Volume": "1",
+    "Box": "85",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$10"
+   }
+  },
+  {
+   "match": {
+    "Title": "Uncanny X-Men",
+    "Issue": "282",
+    "Volume": "1",
+    "Box": "72",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$30"
+   }
+  },
+  {
+   "match": {
+    "Title": "Uncanny X-Men",
+    "Issue": "141",
+    "Volume": "1",
+    "Box": "106",
+    "Signed_By": "Chris Claremont"
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$24"
+   }
+  },
+  {
+   "match": {
+    "Title": "Uncanny X-Men",
+    "Issue": "142",
+    "Volume": "1",
+    "Box": "106",
+    "Signed_By": "Chris Claremont"
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$71"
+   }
+  },
+  {
+   "match": {
+    "Title": "Uncanny X-Men",
+    "Issue": "275",
+    "Volume": "1",
+    "Box": "106",
+    "Signed_By": "Scott Williams, Chris Claremont"
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$7"
+   }
+  },
+  {
+   "match": {
+    "Title": "What If? Goofy Became Spider-Man",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "72",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$6"
+   }
+  },
+  {
+   "match": {
+    "Title": "What If? Secret Wars",
+    "Issue": "1",
+    "Volume": "2",
+    "Box": "102",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "Who's Who",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "106",
+    "Signed_By": "Peter Anderson"
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$2"
+   }
+  },
+  {
+   "match": {
+    "Title": "WildC.A.T.s",
+    "Issue": "9",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$3"
+   }
+  },
+  {
+   "match": {
+    "Title": "WildC.A.T.s",
+    "Issue": "13",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$2"
+   }
+  },
+  {
+   "match": {
+    "Title": "WildC.A.T.s",
+    "Issue": "22",
+    "Volume": "1",
+    "Box": "UNKNOWN \u2014 needs physical reassignment",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$2"
+   }
+  },
+  {
+   "match": {
+    "Title": "Wonder Woman",
+    "Issue": "30",
+    "Volume": "1",
+    "Box": "101",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$6"
+   }
+  },
+  {
+   "match": {
+    "Title": "World's Finest",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "101",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$7"
+   }
+  },
+  {
+   "match": {
+    "Title": "X-Men",
+    "Issue": "1",
+    "Volume": "2",
+    "Box": "106",
+    "Signed_By": "Scott Williams, Chris Claremont"
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$10"
+   }
+  },
+  {
+   "match": {
+    "Title": "X-Men United",
+    "Issue": "5",
+    "Volume": "1",
+    "Box": "102",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$5"
+   }
+  },
+  {
+   "match": {
+    "Title": "X-Men: Hellfire Gala",
+    "Issue": "1",
+    "Volume": "3",
+    "Box": "102",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$9"
+   }
+  },
+  {
+   "match": {
+    "Title": "X-Tinction Agenda",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "19",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$10"
+   }
+  },
+  {
+   "match": {
+    "Title": "X-Tinction Agenda",
+    "Issue": "2",
+    "Volume": "1",
+    "Box": "19",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$7"
+   }
+  },
+  {
+   "match": {
+    "Title": "Years of Future Past",
+    "Issue": "2",
+    "Volume": "1",
+    "Box": "86",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Years of Future Past",
+    "Issue": "4",
+    "Volume": "1",
+    "Box": "86",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$4"
+   }
+  },
+  {
+   "match": {
+    "Title": "Zatanna",
+    "Issue": "3",
+    "Volume": "4",
+    "Box": "101",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$6"
+   }
+  },
+  {
+   "match": {
+    "Title": "Batman",
+    "Issue": "436",
+    "Volume": "1",
+    "Box": "CC5",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$12"
+   }
+  },
+  {
+   "match": {
+    "Title": "Monica Rambeau: Photon",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "CC1",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Value_NM": "$7"
+   }
+  }
+ ]
+}
