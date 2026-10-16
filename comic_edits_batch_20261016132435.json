@@ -1,8 +1,8 @@
 {
  "type": "comic-edit-batch",
- "exportedAt": "2026-10-16T13:22:13.017369",
+ "exportedAt": "2026-10-16T13:24:35.358319",
  "fill_only": true,
- "note": "bulk NM for all ungraded (owner-asserted); fill-only",
+ "note": "2020s ungraded -> NM (owner-asserted); fill-only",
  "edits": [
   {
    "match": {
@@ -982,19 +982,6 @@
   {
    "match": {
     "Title": "Avengers",
-    "Issue": "1",
-    "Volume": "8",
-    "Box": "27",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Avengers",
     "Issue": "2",
     "Volume": "8",
     "Box": "27",
@@ -1035,19 +1022,6 @@
    "match": {
     "Title": "Avengers",
     "Issue": "5",
-    "Volume": "8",
-    "Box": "27",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Avengers",
-    "Issue": "6",
     "Volume": "8",
     "Box": "27",
     "Signed_By": ""
@@ -1670,19 +1644,6 @@
   },
   {
    "match": {
-    "Title": "Avengers Arena",
-    "Issue": "1",
-    "Volume": "1",
-    "Box": "27",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
     "Title": "Avengers: Twilight",
     "Issue": "1",
     "Volume": "1",
@@ -1778,19 +1739,6 @@
     "Issue": "3",
     "Volume": "1",
     "Box": "101",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Batgirl",
-    "Issue": "3",
-    "Volume": "1",
-    "Box": "50",
     "Signed_By": ""
    },
    "delete": false,
@@ -2035,32 +1983,6 @@
   {
    "match": {
     "Title": "Batman",
-    "Issue": "1",
-    "Volume": "4",
-    "Box": "54",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Batman",
-    "Issue": "6",
-    "Volume": "4",
-    "Box": "54",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Batman",
     "Issue": "101",
     "Volume": "4",
     "Box": "54",
@@ -2090,71 +2012,6 @@
     "Issue": "155",
     "Volume": "1",
     "Box": "101",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Batman",
-    "Issue": "2",
-    "Volume": "3",
-    "Box": "CC1",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Batman",
-    "Issue": "3",
-    "Volume": "3",
-    "Box": "CC1",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Batman",
-    "Issue": "4",
-    "Volume": "3",
-    "Box": "CC1",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Batman",
-    "Issue": "5",
-    "Volume": "5",
-    "Box": "CC1",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Batman",
-    "Issue": "9",
-    "Volume": "5",
-    "Box": "CC1",
     "Signed_By": ""
    },
    "delete": false,
@@ -3465,19 +3322,6 @@
   {
    "match": {
     "Title": "Black Panther",
-    "Issue": "3",
-    "Volume": "8",
-    "Box": "7",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Black Panther",
     "Issue": "4",
     "Volume": "8",
     "Box": "7",
@@ -3910,71 +3754,6 @@
     "Issue": "4",
     "Volume": "1",
     "Box": "75",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Black Panther: The Man Without Fear",
-    "Issue": "525",
-    "Volume": "1",
-    "Box": "7",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Black Panther: The Man Without Fear",
-    "Issue": "526",
-    "Volume": "1",
-    "Box": "7",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Black Panther: The Man Without Fear",
-    "Issue": "527",
-    "Volume": "1",
-    "Box": "7",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Black Panther: The Man Without Fear",
-    "Issue": "528",
-    "Volume": "1",
-    "Box": "7",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Black Panther: The Man Without Fear",
-    "Issue": "529",
-    "Volume": "1",
-    "Box": "7",
     "Signed_By": ""
    },
    "delete": false,
@@ -4518,19 +4297,6 @@
   {
    "match": {
     "Title": "Cable",
-    "Issue": "83",
-    "Volume": "3",
-    "Box": "12",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Cable",
     "Issue": "1",
     "Volume": "5",
     "Box": "14",
@@ -4976,19 +4742,6 @@
     "Issue": "12",
     "Volume": "1",
     "Box": "102",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Captain America: Sam Wilson",
-    "Issue": "1",
-    "Volume": "1",
-    "Box": "10",
     "Signed_By": ""
    },
    "delete": false,
@@ -5779,19 +5532,6 @@
   {
    "match": {
     "Title": "Captain Marvel",
-    "Issue": "1",
-    "Volume": "1",
-    "Box": "CC2",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Captain Marvel",
     "Issue": "50",
     "Volume": "14",
     "Box": "CC3",
@@ -6003,123 +5743,6 @@
     "Issue": "2",
     "Volume": "1",
     "Box": "50",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Champions",
-    "Issue": "19",
-    "Volume": "2",
-    "Box": "95",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Champions",
-    "Issue": "20",
-    "Volume": "2",
-    "Box": "95",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Champions",
-    "Issue": "21",
-    "Volume": "2",
-    "Box": "95",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Champions",
-    "Issue": "22",
-    "Volume": "2",
-    "Box": "95",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Champions",
-    "Issue": "23",
-    "Volume": "2",
-    "Box": "95",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Champions",
-    "Issue": "24",
-    "Volume": "2",
-    "Box": "95",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Champions",
-    "Issue": "25",
-    "Volume": "2",
-    "Box": "95",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Champions",
-    "Issue": "26",
-    "Volume": "2",
-    "Box": "95",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Champions",
-    "Issue": "27",
-    "Volume": "2",
-    "Box": "95",
     "Signed_By": ""
    },
    "delete": false,
@@ -7013,19 +6636,6 @@
   },
   {
    "match": {
-    "Title": "Doctor Strange Annual",
-    "Issue": "1",
-    "Volume": "5",
-    "Box": "UNKNOWN \u2014 needs physical reassignment",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
     "Title": "Doctor Strange of Asgard",
     "Issue": "1",
     "Volume": "1",
@@ -7173,19 +6783,6 @@
     "Issue": "4",
     "Volume": "1",
     "Box": "66",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Doctor Who: Circuit Breaker",
-    "Issue": "0",
-    "Volume": "1",
-    "Box": "103",
     "Signed_By": ""
    },
    "delete": false,
@@ -8457,19 +8054,6 @@
   {
    "match": {
     "Title": "Fantastic Four",
-    "Issue": "6",
-    "Volume": "6",
-    "Box": "4",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Fantastic Four",
     "Issue": "7",
     "Volume": "6",
     "Box": "4",
@@ -9172,19 +8756,6 @@
   {
    "match": {
     "Title": "Fantastic Four",
-    "Issue": "648",
-    "Volume": "6",
-    "Box": "4",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Fantastic Four",
     "Issue": "433",
     "Volume": "1",
     "Box": "4",
@@ -9344,19 +8915,6 @@
     "Issue": "1",
     "Volume": "8",
     "Box": "75",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Fantastic Four",
-    "Issue": "413",
-    "Volume": "1",
-    "Box": "102",
     "Signed_By": ""
    },
    "delete": false,
@@ -10081,19 +9639,6 @@
   },
   {
    "match": {
-    "Title": "Friendly Neighborhood Spider-Man",
-    "Issue": "1",
-    "Volume": "1",
-    "Box": "75",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
     "Title": "Fury",
     "Issue": "1",
     "Volume": "5",
@@ -10384,58 +9929,6 @@
     "Issue": "1",
     "Volume": "1",
     "Box": "UNKNOWN \u2014 needs physical reassignment",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Generation X",
-    "Issue": "55",
-    "Volume": "1",
-    "Box": "35",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Generation X",
-    "Issue": "56",
-    "Volume": "1",
-    "Box": "35",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Generation X",
-    "Issue": "57",
-    "Volume": "1",
-    "Box": "35",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Generation X",
-    "Issue": "58",
-    "Volume": "1",
-    "Box": "35",
     "Signed_By": ""
    },
    "delete": false,
@@ -10862,19 +10355,6 @@
   {
    "match": {
     "Title": "Green Lantern",
-    "Issue": "8",
-    "Volume": "5",
-    "Box": "50",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Green Lantern",
     "Issue": "9",
     "Volume": "7",
     "Box": "50",
@@ -10889,19 +10369,6 @@
    "match": {
     "Title": "Green Lantern",
     "Issue": "10",
-    "Volume": "7",
-    "Box": "50",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Green Lantern",
-    "Issue": "11",
     "Volume": "7",
     "Box": "50",
     "Signed_By": ""
@@ -11617,19 +11084,6 @@
    "match": {
     "Title": "Guardians of the Galaxy",
     "Issue": "18",
-    "Volume": "6",
-    "Box": "17",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Guardians of the Galaxy",
-    "Issue": "19",
     "Volume": "6",
     "Box": "17",
     "Signed_By": ""
@@ -13579,19 +13033,6 @@
   {
    "match": {
     "Title": "Justice League",
-    "Issue": "8",
-    "Volume": "4",
-    "Box": "54",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Justice League",
     "Issue": "74",
     "Volume": "1",
     "Box": "88",
@@ -14371,19 +13812,6 @@
   },
   {
    "match": {
-    "Title": "Legend Has It...",
-    "Issue": "1",
-    "Volume": "1",
-    "Box": "CC1",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
     "Title": "Legion of Super-Heroes",
     "Issue": "5",
     "Volume": "10",
@@ -14544,19 +13972,6 @@
     "Issue": "2",
     "Volume": "1",
     "Box": "98",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Luke Cage",
-    "Issue": "1",
-    "Volume": "1",
-    "Box": "102",
     "Signed_By": ""
    },
    "delete": false,
@@ -14944,19 +14359,6 @@
   {
    "match": {
     "Title": "Marauders",
-    "Issue": "1",
-    "Volume": "2",
-    "Box": "14",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Marauders",
     "Issue": "10",
     "Volume": "1",
     "Box": "14",
@@ -15112,49 +14514,10 @@
   },
   {
    "match": {
-    "Title": "Marvel Two-in-One",
-    "Issue": "19",
-    "Volume": "1",
-    "Box": "102",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
     "Title": "Marvel Voices: Legacy",
     "Issue": "1",
     "Volume": "1",
     "Box": "26",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Marvel Zombies",
-    "Issue": "4",
-    "Volume": "1",
-    "Box": "75",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Marvel Zombies",
-    "Issue": "5",
-    "Volume": "1",
-    "Box": "75",
     "Signed_By": ""
    },
    "delete": false,
@@ -15415,19 +14778,6 @@
     "Issue": "40",
     "Volume": "2",
     "Box": "CC1",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Miles Morales: Spider-Man \u2014 The End",
-    "Issue": "1",
-    "Volume": "1",
-    "Box": "16",
     "Signed_By": ""
    },
    "delete": false,
@@ -16351,45 +15701,6 @@
     "Issue": "3",
     "Volume": "1",
     "Box": "14",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Mulan Revelations",
-    "Issue": "1",
-    "Volume": "1",
-    "Box": "66",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Mulan Revelations",
-    "Issue": "2",
-    "Volume": "1",
-    "Box": "66",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Mulan Revelations",
-    "Issue": "3",
-    "Volume": "1",
-    "Box": "66",
     "Signed_By": ""
    },
    "delete": false,
@@ -18752,19 +18063,6 @@
   },
   {
    "match": {
-    "Title": "Rocket Raccoon",
-    "Issue": "1",
-    "Volume": "1",
-    "Box": "75",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
     "Title": "Rogue",
     "Issue": "4",
     "Volume": "1",
@@ -18897,162 +18195,6 @@
    "match": {
     "Title": "Sam Wilson: Captain America",
     "Issue": "1",
-    "Volume": "1",
-    "Box": "10",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Sam Wilson: Captain America",
-    "Issue": "2",
-    "Volume": "1",
-    "Box": "10",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Sam Wilson: Captain America",
-    "Issue": "3",
-    "Volume": "1",
-    "Box": "10",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Sam Wilson: Captain America",
-    "Issue": "4",
-    "Volume": "1",
-    "Box": "10",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Sam Wilson: Captain America",
-    "Issue": "5",
-    "Volume": "1",
-    "Box": "10",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Sam Wilson: Captain America",
-    "Issue": "6",
-    "Volume": "1",
-    "Box": "10",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Sam Wilson: Captain America",
-    "Issue": "9",
-    "Volume": "1",
-    "Box": "10",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Sam Wilson: Captain America",
-    "Issue": "10",
-    "Volume": "1",
-    "Box": "10",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Sam Wilson: Captain America",
-    "Issue": "15",
-    "Volume": "1",
-    "Box": "10",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Sam Wilson: Captain America",
-    "Issue": "16",
-    "Volume": "1",
-    "Box": "10",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Sam Wilson: Captain America",
-    "Issue": "17",
-    "Volume": "1",
-    "Box": "10",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Sam Wilson: Captain America",
-    "Issue": "18",
-    "Volume": "1",
-    "Box": "10",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Sam Wilson: Captain America",
-    "Issue": "1",
     "Volume": "9",
     "Box": "10",
     "Signed_By": ""
@@ -19068,71 +18210,6 @@
     "Issue": "1",
     "Volume": "1",
     "Box": "75",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Savage Avengers",
-    "Issue": "1",
-    "Volume": "7",
-    "Box": "27",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Savage Avengers",
-    "Issue": "2",
-    "Volume": "7",
-    "Box": "27",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Scarlett",
-    "Issue": "2",
-    "Volume": "2",
-    "Box": "66",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Scarlett",
-    "Issue": "3",
-    "Volume": "2",
-    "Box": "66",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Scarlett",
-    "Issue": "5",
-    "Volume": "2",
-    "Box": "66",
     "Signed_By": ""
    },
    "delete": false,
@@ -19263,19 +18340,6 @@
     "Issue": "1",
     "Volume": "3",
     "Box": "11",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Secret Invasion: Dark Reign",
-    "Issue": "1",
-    "Volume": "1",
-    "Box": "19",
     "Signed_By": ""
    },
    "delete": false,
@@ -20195,19 +19259,6 @@
   },
   {
    "match": {
-    "Title": "She-Hulk Annual",
-    "Issue": "1",
-    "Volume": "6",
-    "Box": "22",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
     "Title": "Silver Surfer Rebirth: Legacy",
     "Issue": "1",
     "Volume": "1",
@@ -20949,19 +20000,6 @@
   },
   {
    "match": {
-    "Title": "Star Trek: Deep Space Nine",
-    "Issue": "1",
-    "Volume": "1",
-    "Box": "65",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
     "Title": "Star Trek: Deep Space Nine \u2014 The Dog of War",
     "Issue": "1",
     "Volume": "1",
@@ -21665,19 +20703,6 @@
   {
    "match": {
     "Title": "Star Trek: The Mirror War \u2014 Troi",
-    "Issue": "1",
-    "Volume": "1",
-    "Box": "65",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Star Trek: The Next Generation",
     "Issue": "1",
     "Volume": "1",
     "Box": "65",
@@ -22705,19 +21730,6 @@
   {
    "match": {
     "Title": "The Flash",
-    "Issue": "5",
-    "Volume": "6",
-    "Box": "50",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "The Flash",
     "Issue": "788",
     "Volume": "1",
     "Box": "50",
@@ -22874,47 +21886,8 @@
   {
    "match": {
     "Title": "The Flash",
-    "Issue": "1",
-    "Volume": "5",
-    "Box": "50",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "The Flash",
     "Issue": "802",
     "Volume": "1",
-    "Box": "50",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "The Flash",
-    "Issue": "3",
-    "Volume": "6",
-    "Box": "50",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "The Flash",
-    "Issue": "4",
-    "Volume": "6",
     "Box": "50",
     "Signed_By": ""
    },
@@ -22981,45 +21954,6 @@
     "Issue": "30",
     "Volume": "1",
     "Box": "54",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "The Flash",
-    "Issue": "8",
-    "Volume": "6",
-    "Box": "60",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "The Flash",
-    "Issue": "9",
-    "Volume": "6",
-    "Box": "60",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "The Flash",
-    "Issue": "10",
-    "Volume": "6",
-    "Box": "60",
     "Signed_By": ""
    },
    "delete": false,
@@ -23485,19 +22419,6 @@
   {
    "match": {
     "Title": "The Magic Order",
-    "Issue": "1",
-    "Volume": "2",
-    "Box": "110",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "The Magic Order",
     "Issue": "3",
     "Volume": "2",
     "Box": "110",
@@ -23512,19 +22433,6 @@
    "match": {
     "Title": "The Magic Order",
     "Issue": "4",
-    "Volume": "2",
-    "Box": "110",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "The Magic Order",
-    "Issue": "6",
     "Volume": "2",
     "Box": "110",
     "Signed_By": ""
@@ -23774,84 +22682,6 @@
     "Issue": "1",
     "Volume": "6",
     "Box": "88",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "The Outsiders",
-    "Issue": "1",
-    "Volume": "5",
-    "Box": "50",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "The Outsiders",
-    "Issue": "2",
-    "Volume": "1",
-    "Box": "50",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "The Outsiders",
-    "Issue": "4",
-    "Volume": "1",
-    "Box": "50",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "The Outsiders",
-    "Issue": "9",
-    "Volume": "1",
-    "Box": "54",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "The Outsiders",
-    "Issue": "10",
-    "Volume": "1",
-    "Box": "54",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "The Outsiders",
-    "Issue": "11",
-    "Volume": "1",
-    "Box": "54",
     "Signed_By": ""
    },
    "delete": false,
@@ -24266,19 +23096,6 @@
    "match": {
     "Title": "The Ultimates",
     "Issue": "22",
-    "Volume": "3",
-    "Box": "85",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "The Ultimates",
-    "Issue": "13",
     "Volume": "3",
     "Box": "85",
     "Signed_By": ""
@@ -25035,32 +23852,6 @@
     "Issue": "32",
     "Volume": "4",
     "Box": "54",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Titans",
-    "Issue": "34",
-    "Volume": "3",
-    "Box": "UNKNOWN \u2014 needs physical reassignment",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Titans Annual",
-    "Issue": "1",
-    "Volume": "3",
-    "Box": "60",
     "Signed_By": ""
    },
    "delete": false,
@@ -26734,32 +25525,6 @@
   },
   {
    "match": {
-    "Title": "Venom: Space Knight",
-    "Issue": "3",
-    "Volume": "1",
-    "Box": "",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Venom: Space Knight",
-    "Issue": "3",
-    "Volume": "1",
-    "Box": "",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
     "Title": "Void Rivals",
     "Issue": "16",
     "Volume": "1",
@@ -27076,19 +25841,6 @@
     "Issue": "1",
     "Volume": "1",
     "Box": "5",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "What If? X-Men",
-    "Issue": "1",
-    "Volume": "6",
-    "Box": "9",
     "Signed_By": ""
    },
    "delete": false,
@@ -27515,19 +26267,6 @@
   {
    "match": {
     "Title": "X",
-    "Issue": "6",
-    "Volume": "1",
-    "Box": "75",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "X",
     "Issue": "7",
     "Volume": "1",
     "Box": "75",
@@ -27632,19 +26371,6 @@
   {
    "match": {
     "Title": "X of Swords: Stasis",
-    "Issue": "1",
-    "Volume": "1",
-    "Box": "11",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "X-23",
     "Issue": "1",
     "Volume": "1",
     "Box": "11",
@@ -28492,19 +27218,6 @@
     "Title": "X-Men",
     "Issue": "7",
     "Volume": "8",
-    "Box": "11",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "X-Men",
-    "Issue": "1",
-    "Volume": "6",
     "Box": "11",
     "Signed_By": ""
    },
@@ -29724,19 +28437,6 @@
   },
   {
    "match": {
-    "Title": "X-Men Red Annual",
-    "Issue": "1",
-    "Volume": "6",
-    "Box": "11",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
     "Title": "X-Men United",
     "Issue": "5",
     "Volume": "1",
@@ -29750,62 +28450,10 @@
   },
   {
    "match": {
-    "Title": "X-Men Unlimited",
-    "Issue": "2",
-    "Volume": "6",
-    "Box": "72",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "X-Men: Age of Apocalypse",
-    "Issue": "2",
-    "Volume": "6",
-    "Box": "11",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "X-Men: Age of Apocalypse",
-    "Issue": "3",
-    "Volume": "6",
-    "Box": "11",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
     "Title": "X-Men: Age of Apocalypse",
     "Issue": "4",
     "Volume": "6",
     "Box": "11",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "X-Men: Age of Apocalypse",
-    "Issue": "1",
-    "Volume": "1",
-    "Box": "CC2",
     "Signed_By": ""
    },
    "delete": false,
@@ -29975,84 +28623,6 @@
     "Issue": "2",
     "Volume": "1",
     "Box": "75",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Xin: Journey of the Monkey King",
-    "Issue": "1",
-    "Volume": "2",
-    "Box": "65",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Xin: Journey of the Monkey King",
-    "Issue": "2",
-    "Volume": "2",
-    "Box": "65",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Xin: Journey of the Monkey King",
-    "Issue": "3",
-    "Volume": "2",
-    "Box": "65",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Xin: Legend of the Monkey King",
-    "Issue": "1",
-    "Volume": "1",
-    "Box": "65",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Xin: Legend of the Monkey King",
-    "Issue": "2",
-    "Volume": "1",
-    "Box": "65",
-    "Signed_By": ""
-   },
-   "delete": false,
-   "changes": {
-    "Condition": "NM (9.4)"
-   }
-  },
-  {
-   "match": {
-    "Title": "Xin: Legend of the Monkey King",
-    "Issue": "3",
-    "Volume": "1",
-    "Box": "65",
     "Signed_By": ""
    },
    "delete": false,
