@@ -1,8 +1,8 @@
 {
  "type": "comic-edit-batch",
- "exportedAt": "2026-10-16T13:54:46.594421",
+ "exportedAt": "2026-10-16T13:58:16.072577",
  "fill_only": true,
- "note": "2000s-2020s ungraded -> NM (owner-asserted); fill-only",
+ "note": "by block: 2000s-2020s=NM, 1990s=GD; fill-only",
  "edits": [
   {
    "match": {
@@ -9341,6 +9341,19 @@
   {
    "match": {
     "Title": "Fantastic Four",
+    "Issue": "413",
+    "Volume": "1",
+    "Box": "102",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "GD (2.0)"
+   }
+  },
+  {
+   "match": {
+    "Title": "Fantastic Four",
     "Issue": "25",
     "Volume": "7",
     "Box": "CC1",
@@ -10363,6 +10376,58 @@
    "delete": false,
    "changes": {
     "Condition": "NM (9.4)"
+   }
+  },
+  {
+   "match": {
+    "Title": "Generation X",
+    "Issue": "55",
+    "Volume": "1",
+    "Box": "35",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "GD (2.0)"
+   }
+  },
+  {
+   "match": {
+    "Title": "Generation X",
+    "Issue": "56",
+    "Volume": "1",
+    "Box": "35",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "GD (2.0)"
+   }
+  },
+  {
+   "match": {
+    "Title": "Generation X",
+    "Issue": "57",
+    "Volume": "1",
+    "Box": "35",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "GD (2.0)"
+   }
+  },
+  {
+   "match": {
+    "Title": "Generation X",
+    "Issue": "58",
+    "Volume": "1",
+    "Box": "35",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "GD (2.0)"
    }
   },
   {
@@ -19012,6 +19077,45 @@
   },
   {
    "match": {
+    "Title": "Scarlett",
+    "Issue": "2",
+    "Volume": "2",
+    "Box": "66",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "GD (2.0)"
+   }
+  },
+  {
+   "match": {
+    "Title": "Scarlett",
+    "Issue": "3",
+    "Volume": "2",
+    "Box": "66",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "GD (2.0)"
+   }
+  },
+  {
+   "match": {
+    "Title": "Scarlett",
+    "Issue": "5",
+    "Volume": "2",
+    "Box": "66",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "GD (2.0)"
+   }
+  },
+  {
+   "match": {
     "Title": "Scarlet Witch",
     "Issue": "2",
     "Volume": "3",
@@ -20815,6 +20919,19 @@
    "delete": false,
    "changes": {
     "Condition": "NM (9.4)"
+   }
+  },
+  {
+   "match": {
+    "Title": "Star Trek: Deep Space Nine",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "65",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "GD (2.0)"
    }
   },
   {
@@ -29512,6 +29629,19 @@
    "delete": false,
    "changes": {
     "Condition": "NM (9.4)"
+   }
+  },
+  {
+   "match": {
+    "Title": "X-Men Unlimited",
+    "Issue": "2",
+    "Volume": "6",
+    "Box": "72",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "GD (2.0)"
    }
   },
   {
