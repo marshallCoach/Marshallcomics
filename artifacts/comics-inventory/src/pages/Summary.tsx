@@ -218,6 +218,27 @@ function computeCompleteRuns(): number {
 }
 const COMPLETE_RUNS = computeCompleteRuns();
 
+// ── Data completeness — % filled per vital column (home dashboard) ───────────
+const FILL_FIELDS: { key: keyof typeof comics[number]; label: string }[] = [
+  { key: "Box", label: "Box" },
+  { key: "Year", label: "Year" },
+  { key: "Publisher", label: "Publisher" },
+  { key: "Pub_Date", label: "Pub Date" },
+  { key: "Writer", label: "Writer" },
+  { key: "Artist", label: "Artist" },
+  { key: "Cover_Artist", label: "Cover Art" },
+  { key: "Value_NM", label: "Value (NM)" },
+  { key: "Condition", label: "Condition" },
+];
+const FILL_BAD = /^(n\/a|unknown|\?|tbd|none)$/i;
+const FILL_STATS = FILL_FIELDS.map(f => {
+  const filled = comics.reduce((n, c) => {
+    const v = String(c[f.key] ?? "").trim();
+    return n + (v && !FILL_BAD.test(v) ? 1 : 0);
+  }, 0);
+  return { ...f, filled, total: totalComics, blank: totalComics - filled, pct: Math.round((100 * filled) / totalComics) };
+});
+
 // ── Timeline ─────────────────────────────────────────────────────────────────
 const TARGET_BOXES  = totalBoxes;
 const BOX_PCT       = 100;
@@ -367,6 +388,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
   // Animation states
   const [mounted,   setMounted]   = useState(false);
   const [progWidth, setProgWidth] = useState(0);
+  const [fillReady, setFillReady] = useState(false);
   const [schedRef,  schedVisible] = useInView(0.08);
   const [pubRef,    pubVisible]   = useInView(0.08);
 
@@ -375,7 +397,8 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
   useEffect(() => {
     setMounted(true);
     const t = setTimeout(() => setProgWidth(BOX_PCT), 250);
-    return () => clearTimeout(t);
+    const t2 = setTimeout(() => setFillReady(true), 300);
+    return () => { clearTimeout(t); clearTimeout(t2); };
   }, []);
 
   // Gas-station value counters
@@ -465,6 +488,44 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
         </div>
       </section>
       )}
+
+      {/* ── Data Completeness dashboard — % filled per vital column ── */}
+      <section style={{ marginBottom:24 }}>
+        <div style={{ display:"flex", alignItems:"baseline", gap:10, marginBottom:10, flexWrap:"wrap" }}>
+          <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"3px", color:"var(--muted)" }}>
+            DATA COMPLETENESS
+          </span>
+          <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px", color:"var(--muted)" }}>
+            how far we've come — % of {totalComics.toLocaleString()} books filled per vital column
+          </span>
+        </div>
+        <div className="fill-grid">
+          {FILL_STATS.map(s => {
+            const w = fillReady ? s.pct : 0;
+            return (
+              <div key={s.key as string} className="fill-card">
+                <div className="fill-top">
+                  <span className="fill-label">{s.label}</span>
+                  <span className="fill-pct">{s.pct}%</span>
+                </div>
+                <div className="fill-track">
+                  <div className="fill-bar" style={{
+                    width:`${w}%`,
+                    backgroundImage:"linear-gradient(90deg, #c8102e 0%, #e85d04 35%, #f4a107 60%, #84cc16 82%, #22c55e 100%)",
+                    backgroundSize:`${w > 0 ? (100 / w) * 100 : 100}% 100%`,
+                    backgroundRepeat:"no-repeat",
+                  }} />
+                </div>
+                <div className="fill-sub">
+                  {s.blank === 0
+                    ? <span style={{ color:"#22c55e" }}>✓ complete</span>
+                    : <>{s.filled.toLocaleString()} filled · <b>{s.blank.toLocaleString()}</b> to go</>}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
 
       {/* ── Cover Carousel ── */}
       <section style={{ marginBottom:24 }}>

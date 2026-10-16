@@ -630,6 +630,40 @@ body {
 .progress-tick.filled { background: rgba(255,255,255,0.5); }
 .progress-sub { font-size: 0.875rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: var(--muted2); }
 
+/* Data Completeness dashboard (home, top) — mirrors Box Progress style */
+.fill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 10px;
+}
+.fill-card {
+  background: var(--surface); border: 1.5px solid var(--border);
+  border-radius: 8px; padding: 13px 15px 12px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.fill-card:hover { border-color: var(--red); box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
+.fill-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 9px; }
+.fill-label {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.8rem; letter-spacing: 2px; color: var(--red); text-transform: uppercase;
+}
+.fill-pct {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.35rem; color: var(--text); line-height: 1; font-variant-numeric: tabular-nums;
+}
+.fill-track {
+  position: relative; height: 8px; background: var(--border);
+  border-radius: 5px; overflow: hidden; margin-bottom: 7px;
+}
+.fill-bar {
+  position: absolute; left: 0; top: 0; height: 100%;
+  border-radius: 5px; transition: width 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.fill-sub {
+  font-size: 0.78rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--muted2);
+}
+
 /* Timeline */
 .timeline-grid {
   display: grid;
