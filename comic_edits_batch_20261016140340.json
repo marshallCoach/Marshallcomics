@@ -1,8 +1,8 @@
 {
  "type": "comic-edit-batch",
- "exportedAt": "2026-10-16T14:00:22.014656",
+ "exportedAt": "2026-10-16T14:03:40.221284",
  "fill_only": true,
- "note": "by block: 2000s-2020s=NM, 1990s=GD, 1980s=FN; fill-only",
+ "note": "by block: 2000s-2020s=NM,1990s=GD,1980s=FN; DrWho #0 NM+year2026; fill-only",
  "edits": [
   {
    "match": {
@@ -7178,6 +7178,20 @@
    "delete": false,
    "changes": {
     "Condition": "NM (9.4)"
+   }
+  },
+  {
+   "match": {
+    "Title": "Doctor Who: Circuit Breaker",
+    "Issue": "0",
+    "Volume": "1",
+    "Box": "103",
+    "Signed_By": ""
+   },
+   "delete": false,
+   "changes": {
+    "Condition": "NM (9.4)",
+    "Year": "2026"
    }
   },
   {
