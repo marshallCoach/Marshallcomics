@@ -187,9 +187,10 @@ def main():
 
     # 7b — apply comic-edit exports from the site's Edit Comic page (optional)
     def edit_review():
-        if not (glob.glob(os.path.join(DOWNLOADS, "comic_edit_*.json")) or
-                glob.glob(os.path.join(ROOT, "comic_edit_*.json"))):
-            print("No comic_edit_*.json — skipping Edit Comic review.")
+        pats = ("comic_edit_*.json", "comic_edits_batch_*.json")
+        found = any(glob.glob(os.path.join(d, p)) for d in (DOWNLOADS, ROOT) for p in pats)
+        if not found:
+            print("No comic_edit_*.json / comic_edits_batch_*.json — skipping Edit Comic review.")
             return
         if run([PY, os.path.join(ROOT, "brb_review_edits.py"), "--apply"]):
             raise RuntimeError("brb_review_edits failed")

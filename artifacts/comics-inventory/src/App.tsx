@@ -50,6 +50,7 @@ import TitleFixes from "@/pages/TitleFixes";
 import VolumeConfirm from "@/pages/VolumeConfirm";
 import EditComic from "@/pages/EditComic";
 import StorePreview from "@/pages/StorePreview";
+import ConditionEntry from "@/pages/ConditionEntry";
 import OfflineCovers from "@/components/OfflineCovers";
 import FlaggedCount from "@/components/FlaggedCount";
 import PasswordGate from "@/components/PasswordGate";
@@ -58,7 +59,7 @@ import { Home, BookOpen, Boxes, Film, Sparkles, ClipboardList, Microscope, Dolla
 type TabId =
   | "summary" | "everything" | "collection" | "boxkeys" | "stats" | "runs" | "runsvolumes" | "recent" | "releasetimeline" | "dataview"
   | "calendar" | "showplanner" | "cgc" | "signings" | "actionplan" | "timeline" | "boxvisual"
-  | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "storepreview" | "duplicates" | "dupchecklist" | "datafix" | "editcomic" | "titlefixes" | "volumeconfirm" | "history"
+  | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "storepreview" | "duplicates" | "dupchecklist" | "datafix" | "editcomic" | "conditionentry" | "titlefixes" | "volumeconfirm" | "history"
   | "orgpath" | "volumes" | "boxlabels" | "keycatalog" | "covercatalog" | "coverreview" | "missingcovers" | "boxquest" | "boxmap"
   | "ebaypipeline" | "opsreference" | "ebaylistingguide" | "roulette" | "lifearchive" | "nycc" | "locationcheck" | "absbatman" | "credits" | "granov";
 
@@ -115,6 +116,7 @@ const NAV = [
     label: "Cleanup",
     tabs: [
       { id: "datafix",      label: "Data Fix" },
+      { id: "conditionentry", label: "Condition Entry" },
       { id: "editcomic",    label: "Edit Comic" },
       { id: "duplicates",   label: "Duplicates" },
       { id: "dupchecklist", label: "Dup Hunt" },
@@ -389,6 +391,7 @@ export default function App() {
         {activeTab === "stats"       && <CollectionStats onNavigate={navigateTo} />}
         {activeTab === "dataview"    && <DataView />}
         {activeTab === "editcomic"   && <EditComic />}
+        {activeTab === "conditionentry" && <ConditionEntry />}
         {activeTab === "sitemap"     && <SiteMap onNavigate={navigateTo} />}
         {activeTab === "pulllist"    && <PullList />}
         {activeTab === "duplicates"    && <Duplicates onNavigate={navigateTo} />}

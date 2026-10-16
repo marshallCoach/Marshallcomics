@@ -72,10 +72,14 @@ def newest_xlsx():
 
 
 def find_edits():
-    """comic_edit_*.json from ~/Downloads and the repo root, oldest first so a
-    later edit to the same book wins."""
-    files = glob.glob(os.path.join(DOWNLOADS, "comic_edit_*.json")) + \
-            glob.glob(os.path.join(ROOT, "comic_edit_*.json"))
+    """Edit exports from ~/Downloads and the repo root, oldest first so a later
+    edit to the same book wins. Single-edit files (comic_edit_*.json, from the
+    Edit Comic page) and batch files (comic_edits_batch_*.json, from the
+    Condition Entry page) are both picked up."""
+    pats = ("comic_edit_*.json", "comic_edits_batch_*.json")
+    files = []
+    for p in pats:
+        files += glob.glob(os.path.join(DOWNLOADS, p)) + glob.glob(os.path.join(ROOT, p))
     return sorted(set(files), key=os.path.getmtime)
 
 
@@ -141,45 +145,52 @@ def main():
             payload = json.load(open(path))
         except Exception as e:
             print(f"\n✗ {os.path.basename(path)}: unreadable ({e})"); n_skip += 1; continue
-        if payload.get("type") != "comic-edit":
-            print(f"\n✗ {os.path.basename(path)}: not a comic-edit file"); n_skip += 1; continue
-        m = payload.get("match", {})
-        label = f'{m.get("Title")} #{m.get("Issue")} (Vol {m.get("Volume") or "1"}, Box {m.get("Box")})'
-        rows = match_rows(ws, H, m)
-        print(f"\n• {os.path.basename(path)} — {label}")
-        if len(rows) == 0:
-            print("    ✗ no matching inventory row — SKIPPED"); n_skip += 1; continue
-        if len(rows) > 1:
-            print(f"    ✗ {len(rows)} rows match (ambiguous) — SKIPPED, add Signed By to disambiguate"); n_skip += 1; continue
-        r = rows[0]
-
-        if payload.get("delete"):
-            print(f"    🗑  DELETE row {r}")
-            del_rows.append(r); n_del += 1
-            if args.apply:
-                archive(path)
-            continue
-
-        changes = payload.get("changes", {})
-        applied = 0
-        for fk, newv in changes.items():
-            col = COLMAP.get(fk)
-            c = ci(col) if col else None
-            if not c:
-                print(f"    (skip unknown field {fk})"); continue
-            old = nv(ws.cell(r, c).value)
-            if nv(newv) == old:
-                continue
-            print(f"    {fk}: {old!r} -> {newv!r}")
-            if args.apply:
-                ws.cell(r, c, newv)
-            applied += 1
-        if applied == 0:
-            print("    (no effective change)")
+        # One file may hold a single edit or a batch of them (Condition Entry).
+        if payload.get("type") == "comic-edit-batch":
+            items = payload.get("edits", [])
+        elif payload.get("type") == "comic-edit":
+            items = [payload]
         else:
-            n_edit += applied
-            if args.apply:
-                archive(path)
+            print(f"\n✗ {os.path.basename(path)}: not a comic-edit file"); n_skip += 1; continue
+
+        print(f"\n• {os.path.basename(path)} — {len(items)} edit(s)")
+        file_applied = 0
+        for payload_i in items:
+            m = payload_i.get("match", {})
+            label = f'{m.get("Title")} #{m.get("Issue")} (Vol {m.get("Volume") or "1"}, Box {m.get("Box")})'
+            rows = match_rows(ws, H, m)
+            if len(rows) == 0:
+                print(f"    ✗ {label}: no matching row — SKIPPED"); n_skip += 1; continue
+            if len(rows) > 1:
+                print(f"    ✗ {label}: {len(rows)} rows match — SKIPPED (add Signed By)"); n_skip += 1; continue
+            r = rows[0]
+
+            if payload_i.get("delete"):
+                print(f"    🗑  DELETE {label} (row {r})")
+                del_rows.append(r); n_del += 1; file_applied += 1
+                continue
+
+            changes = payload_i.get("changes", {})
+            applied = 0
+            for fk, newv in changes.items():
+                col = COLMAP.get(fk)
+                c = ci(col) if col else None
+                if not c:
+                    print(f"    (skip unknown field {fk})"); continue
+                old = nv(ws.cell(r, c).value)
+                if nv(newv) == old:
+                    continue
+                print(f"    {label} · {fk}: {old!r} -> {newv!r}")
+                if args.apply:
+                    ws.cell(r, c, newv)
+                applied += 1
+            if applied == 0:
+                print(f"    ({label}: no effective change)")
+            else:
+                n_edit += applied; file_applied += 1
+
+        if args.apply and file_applied:
+            archive(path)
 
     # delete rows last, bottom-up so indices stay valid
     if args.apply and del_rows:
