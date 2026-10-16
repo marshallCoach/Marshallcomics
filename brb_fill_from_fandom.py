@@ -27,8 +27,10 @@ def api_base(publisher):
     p = (publisher or "").lower()
     if "marvel" in p:
         return "https://marvel.fandom.com/api.php"
-    if "dc" in p:
+    if "dc" in p and "dark" not in p:   # avoid matching "Dark Horse"
         return "https://dc.fandom.com/api.php"
+    if "valiant" in p:
+        return "https://valiant.fandom.com/api.php"
     return None
 
 
