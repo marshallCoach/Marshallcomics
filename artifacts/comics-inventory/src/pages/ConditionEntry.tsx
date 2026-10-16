@@ -84,7 +84,7 @@ export default function ConditionEntry() {
         changes: { Condition: cond },
       };
     });
-    const payload = { type: "comic-edit-batch", exportedAt: new Date().toISOString(), edits };
+    const payload = { type: "comic-edit-batch", exportedAt: new Date().toISOString(), fill_only: true, edits };
     const stamp = new Date().toISOString().replace(/[-:T]/g, "").slice(0, 14);
     const name = `comic_edits_batch_${stamp}.json`;
     const blob = new Blob([JSON.stringify(payload, null, 1)], { type: "application/json" });

@@ -94,24 +94,33 @@ def archive(path):
         print(f"  (could not archive {os.path.basename(path)}: {e})")
 
 
-def match_rows(ws, H, m):
-    """Return row indices matching an edit's identity. Title+Issue+Volume+Box
-    first; if more than one (intended dupes) narrow by Signed By."""
+def build_index(ws, H):
+    """One pass over the sheet → {(title,issue,vol,box): [rows]} plus per-row
+    signer, so each edit is an O(1) lookup instead of a full-sheet scan. A batch
+    of thousands of edits would be O(edits × rows) otherwise."""
     def ci(n):
         return H.index(n) + 1 if n in H else None
     cT, cI, cV, cB, cS = (ci(COLMAP[k]) for k in ("Title", "Issue", "Volume", "Box", "Signed_By"))
-    want = (nt(m.get("Title")), ni(m.get("Issue")), nv(m.get("Volume") or "1"), nv(m.get("Box")))
-    hits = []
+    idx, signer = {}, {}
     for r in range(2, ws.max_row + 1):
-        vol = nv(ws.cell(r, cV).value) or "1" if cV else "1"
-        got = (nt(ws.cell(r, cT).value) if cT else "",
+        vol = (nv(ws.cell(r, cV).value) or "1") if cV else "1"
+        key = (nt(ws.cell(r, cT).value) if cT else "",
                ni(ws.cell(r, cI).value) if cI else "",
                vol,
                nv(ws.cell(r, cB).value) if cB else "")
-        if got == want:
-            hits.append(r)
-    if len(hits) > 1 and cS and m.get("Signed_By"):
-        narrowed = [r for r in hits if nv(ws.cell(r, cS).value) == nv(m.get("Signed_By"))]
+        idx.setdefault(key, []).append(r)
+        if cS:
+            signer[r] = nv(ws.cell(r, cS).value)
+    return idx, signer
+
+
+def match_rows(index, signer, m):
+    """Rows matching an edit's identity via the prebuilt index. Title+Issue+
+    Volume+Box first; if more than one (intended dupes) narrow by Signed By."""
+    want = (nt(m.get("Title")), ni(m.get("Issue")), nv(m.get("Volume") or "1"), nv(m.get("Box")))
+    hits = list(index.get(want, []))
+    if len(hits) > 1 and m.get("Signed_By"):
+        narrowed = [r for r in hits if signer.get(r) == nv(m.get("Signed_By"))]
         if narrowed:
             hits = narrowed
     return hits
@@ -137,6 +146,7 @@ def main():
     def ci(n):
         return H.index(n) + 1 if n in H else None
 
+    index, signer = build_index(ws, H)
     n_edit = n_del = n_skip = 0
     del_rows = []  # collect row numbers to delete, apply after field edits
 
@@ -153,37 +163,52 @@ def main():
         else:
             print(f"\n✗ {os.path.basename(path)}: not a comic-edit file"); n_skip += 1; continue
 
+        # fill_only (file- or edit-level): only write into a BLANK cell, never
+        # overwrite an existing value — so a bulk condition sweep can't clobber a
+        # grade you entered by hand since this export was made.
+        file_fill_only = bool(payload.get("fill_only"))
+
         print(f"\n• {os.path.basename(path)} — {len(items)} edit(s)")
         file_applied = 0
         for payload_i in items:
             m = payload_i.get("match", {})
             label = f'{m.get("Title")} #{m.get("Issue")} (Vol {m.get("Volume") or "1"}, Box {m.get("Box")})'
-            rows = match_rows(ws, H, m)
+            rows = match_rows(index, signer, m)
             if len(rows) == 0:
                 print(f"    ✗ {label}: no matching row — SKIPPED"); n_skip += 1; continue
-            if len(rows) > 1:
-                print(f"    ✗ {label}: {len(rows)} rows match — SKIPPED (add Signed By)"); n_skip += 1; continue
-            r = rows[0]
 
             if payload_i.get("delete"):
+                # Deleting the wrong copy is unrecoverable, so a delete must match ONE row.
+                if len(rows) > 1:
+                    print(f"    ✗ {label}: {len(rows)} rows match — DELETE SKIPPED (add Signed By)"); n_skip += 1; continue
+                r = rows[0]
                 print(f"    🗑  DELETE {label} (row {r})")
                 del_rows.append(r); n_del += 1; file_applied += 1
                 continue
 
+            # A field fill applies to EVERY matching row: duplicate copies of the
+            # same book (same title/issue/vol/box) all take the same value, so
+            # there is nothing to disambiguate — not a skip.
             changes = payload_i.get("changes", {})
+            fill_only = file_fill_only or bool(payload_i.get("fill_only"))
             applied = 0
-            for fk, newv in changes.items():
-                col = COLMAP.get(fk)
-                c = ci(col) if col else None
-                if not c:
-                    print(f"    (skip unknown field {fk})"); continue
-                old = nv(ws.cell(r, c).value)
-                if nv(newv) == old:
-                    continue
-                print(f"    {label} · {fk}: {old!r} -> {newv!r}")
-                if args.apply:
-                    ws.cell(r, c, newv)
-                applied += 1
+            for r in rows:
+                for fk, newv in changes.items():
+                    col = COLMAP.get(fk)
+                    c = ci(col) if col else None
+                    if not c:
+                        print(f"    (skip unknown field {fk})"); continue
+                    old = nv(ws.cell(r, c).value)
+                    if nv(newv) == old:
+                        continue
+                    if fill_only and old:
+                        print(f"    ↷ {label} · {fk}: keeps {old!r} (fill-only, not overwritten)")
+                        continue
+                    tag = f" (copy row {r})" if len(rows) > 1 else ""
+                    print(f"    {label}{tag} · {fk}: {old!r} -> {newv!r}")
+                    if args.apply:
+                        ws.cell(r, c, newv)
+                    applied += 1
             if applied == 0:
                 print(f"    ({label}: no effective change)")
             else:

@@ -75,7 +75,7 @@ export default function EraAudit() {
       const c = byId.get(id)!;
       return { match: { Title: c.Title, Issue: c.Issue, Volume: c.Volume || "1", Box: c.Box, Signed_By: c.Signed_By || "" }, delete: false, changes: { Condition: cond } };
     });
-    const payload = { type: "comic-edit-batch", exportedAt: new Date().toISOString(), note: "era-audit estimates", edits };
+    const payload = { type: "comic-edit-batch", exportedAt: new Date().toISOString(), fill_only: true, note: "era-audit estimates", edits };
     const stamp = new Date().toISOString().replace(/[-:T]/g, "").slice(0, 14);
     const name = `comic_edits_batch_${stamp}.json`;
     const blob = new Blob([JSON.stringify(payload, null, 1)], { type: "application/json" });
