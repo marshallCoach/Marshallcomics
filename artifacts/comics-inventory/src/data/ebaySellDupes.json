@@ -1,9 +1,9 @@
 {
- "source": "comics_inventory_1610_1008.xlsx",
+ "source": "comics_inventory_1610_1103.xlsx",
  "generatedAt": "2026-10-16",
  "groupCount": 139,
  "sellableCount": 146,
- "estValue": 922.32,
+ "estValue": 993.32,
  "rows": [
   {
    "title": "Justice League",
@@ -120,6 +120,29 @@
     "75"
    ],
    "keepSigned": false,
+   "sameBox": false
+  },
+  {
+   "title": "Absolute Green Arrow",
+   "issue": "1",
+   "year": "2025",
+   "volume": "1",
+   "publisher": "DC",
+   "writer": "Pornsak Pichetshote",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 17.0,
+   "sellBoxes": [
+    "104"
+   ],
+   "keepBoxes": [
+    "106"
+   ],
+   "boxes": [
+    "104",
+    "106"
+   ],
+   "keepSigned": true,
    "sameBox": false
   },
   {
@@ -728,6 +751,29 @@
    "sameBox": false
   },
   {
+   "title": "X-Men: Hellfire Gala",
+   "issue": "1",
+   "year": "2023",
+   "volume": "3",
+   "publisher": "Marvel",
+   "writer": "Jonathan Hickman & Gerry Duggan",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 9.0,
+   "sellBoxes": [
+    "102"
+   ],
+   "keepBoxes": [
+    "11"
+   ],
+   "boxes": [
+    "11",
+    "102"
+   ],
+   "keepSigned": false,
+   "sameBox": false
+  },
+  {
    "title": "Justice League",
    "issue": "1",
    "year": "2011",
@@ -772,6 +818,28 @@
    ],
    "keepSigned": false,
    "sameBox": false
+  },
+  {
+   "title": "The Ultimates",
+   "issue": "13",
+   "year": "2004",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Mark Millar",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 8.0,
+   "sellBoxes": [
+    "85"
+   ],
+   "keepBoxes": [
+    "85"
+   ],
+   "boxes": [
+    "85"
+   ],
+   "keepSigned": false,
+   "sameBox": true
   },
   {
    "title": "Trinity",
@@ -861,6 +929,29 @@
    "boxes": [
     "6",
     "87"
+   ],
+   "keepSigned": false,
+   "sameBox": false
+  },
+  {
+   "title": "Black Panther",
+   "issue": "2",
+   "year": "2021",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Bryan Edward Hill",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 6.0,
+   "sellBoxes": [
+    "7"
+   ],
+   "keepBoxes": [
+    "72"
+   ],
+   "boxes": [
+    "7",
+    "72"
    ],
    "keepSigned": false,
    "sameBox": false
@@ -999,6 +1090,29 @@
    "sameBox": true
   },
   {
+   "title": "Korvac Saga",
+   "issue": "1",
+   "year": "2015",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Dan Abnett",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 6.0,
+   "sellBoxes": [
+    "86"
+   ],
+   "keepBoxes": [
+    "19"
+   ],
+   "boxes": [
+    "19",
+    "86"
+   ],
+   "keepSigned": false,
+   "sameBox": false
+  },
+  {
    "title": "New X-Men",
    "issue": "145",
    "year": "2003",
@@ -1064,6 +1178,29 @@
    ],
    "keepSigned": false,
    "sameBox": true
+  },
+  {
+   "title": "The Flash",
+   "issue": "1",
+   "year": "2011",
+   "volume": "3",
+   "publisher": "DC",
+   "writer": "Geoff Johns",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 6.0,
+   "sellBoxes": [
+    "43"
+   ],
+   "keepBoxes": [
+    "52"
+   ],
+   "boxes": [
+    "43",
+    "52"
+   ],
+   "keepSigned": false,
+   "sameBox": false
   },
   {
    "title": "Astonishing X-Men: Xenogenesis",
@@ -2144,6 +2281,75 @@
    "sameBox": false
   },
   {
+   "title": "Korvac Saga",
+   "issue": "2",
+   "year": "2015",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Dan Abnett",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 5.0,
+   "sellBoxes": [
+    "86"
+   ],
+   "keepBoxes": [
+    "19"
+   ],
+   "boxes": [
+    "19",
+    "86"
+   ],
+   "keepSigned": false,
+   "sameBox": false
+  },
+  {
+   "title": "Korvac Saga",
+   "issue": "3",
+   "year": "2015",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Dan Abnett",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 5.0,
+   "sellBoxes": [
+    "86"
+   ],
+   "keepBoxes": [
+    "19"
+   ],
+   "boxes": [
+    "19",
+    "86"
+   ],
+   "keepSigned": false,
+   "sameBox": false
+  },
+  {
+   "title": "Korvac Saga",
+   "issue": "4",
+   "year": "2015",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Dan Abnett",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 5.0,
+   "sellBoxes": [
+    "86"
+   ],
+   "keepBoxes": [
+    "19"
+   ],
+   "boxes": [
+    "19",
+    "86"
+   ],
+   "keepSigned": false,
+   "sameBox": false
+  },
+  {
    "title": "Marauders",
    "issue": "11",
    "year": "2020",
@@ -2783,6 +2989,29 @@
    "sameBox": false
   },
   {
+   "title": "Batman and Robin: Year One",
+   "issue": "1",
+   "year": "2025",
+   "volume": "5",
+   "publisher": "DC",
+   "writer": "Mark Waid & Chris Samnee & Steve Orlando",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 4.0,
+   "sellBoxes": [
+    "101"
+   ],
+   "keepBoxes": [
+    "54"
+   ],
+   "boxes": [
+    "54",
+    "101"
+   ],
+   "keepSigned": false,
+   "sameBox": false
+  },
+  {
    "title": "Fantastic Four",
    "issue": "1",
    "year": "2025",
@@ -2847,75 +3076,6 @@
    "boxes": [
     "47",
     "88"
-   ],
-   "keepSigned": false,
-   "sameBox": false
-  },
-  {
-   "title": "Absolute Green Arrow",
-   "issue": "1",
-   "year": "2025",
-   "volume": "1",
-   "publisher": "DC",
-   "writer": "Pornsak Pichetshote",
-   "copies": 2,
-   "sellable": 1,
-   "sellValue": 0.0,
-   "sellBoxes": [
-    "104"
-   ],
-   "keepBoxes": [
-    "106"
-   ],
-   "boxes": [
-    "104",
-    "106"
-   ],
-   "keepSigned": true,
-   "sameBox": false
-  },
-  {
-   "title": "Batman and Robin: Year One",
-   "issue": "1",
-   "year": "2025",
-   "volume": "5",
-   "publisher": "DC",
-   "writer": "Mark Waid & Chris Samnee & Steve Orlando",
-   "copies": 2,
-   "sellable": 1,
-   "sellValue": 0.0,
-   "sellBoxes": [
-    "101"
-   ],
-   "keepBoxes": [
-    "54"
-   ],
-   "boxes": [
-    "54",
-    "101"
-   ],
-   "keepSigned": false,
-   "sameBox": false
-  },
-  {
-   "title": "Black Panther",
-   "issue": "2",
-   "year": "2021",
-   "volume": "8",
-   "publisher": "Marvel",
-   "writer": "Al Ewing",
-   "copies": 2,
-   "sellable": 1,
-   "sellValue": 0.0,
-   "sellBoxes": [
-    "72"
-   ],
-   "keepBoxes": [
-    "7"
-   ],
-   "boxes": [
-    "7",
-    "72"
    ],
    "keepSigned": false,
    "sameBox": false
@@ -2990,98 +3150,6 @@
    "sameBox": false
   },
   {
-   "title": "Korvac Saga",
-   "issue": "1",
-   "year": "2015",
-   "volume": "1",
-   "publisher": "Marvel",
-   "writer": "Dan Abnett",
-   "copies": 2,
-   "sellable": 1,
-   "sellValue": 0.0,
-   "sellBoxes": [
-    "86"
-   ],
-   "keepBoxes": [
-    "19"
-   ],
-   "boxes": [
-    "19",
-    "86"
-   ],
-   "keepSigned": false,
-   "sameBox": false
-  },
-  {
-   "title": "Korvac Saga",
-   "issue": "2",
-   "year": "2015",
-   "volume": "1",
-   "publisher": "Marvel",
-   "writer": "Dan Abnett",
-   "copies": 2,
-   "sellable": 1,
-   "sellValue": 0.0,
-   "sellBoxes": [
-    "86"
-   ],
-   "keepBoxes": [
-    "19"
-   ],
-   "boxes": [
-    "19",
-    "86"
-   ],
-   "keepSigned": false,
-   "sameBox": false
-  },
-  {
-   "title": "Korvac Saga",
-   "issue": "3",
-   "year": "2015",
-   "volume": "1",
-   "publisher": "Marvel",
-   "writer": "Dan Abnett",
-   "copies": 2,
-   "sellable": 1,
-   "sellValue": 0.0,
-   "sellBoxes": [
-    "86"
-   ],
-   "keepBoxes": [
-    "19"
-   ],
-   "boxes": [
-    "19",
-    "86"
-   ],
-   "keepSigned": false,
-   "sameBox": false
-  },
-  {
-   "title": "Korvac Saga",
-   "issue": "4",
-   "year": "2015",
-   "volume": "1",
-   "publisher": "Marvel",
-   "writer": "Dan Abnett",
-   "copies": 2,
-   "sellable": 1,
-   "sellValue": 0.0,
-   "sellBoxes": [
-    "86"
-   ],
-   "keepBoxes": [
-    "19"
-   ],
-   "boxes": [
-    "19",
-    "86"
-   ],
-   "keepSigned": false,
-   "sameBox": false
-  },
-  {
    "title": "Miles Morales: Spider-Man",
    "issue": "1",
    "year": "2023",
@@ -3123,74 +3191,6 @@
    "boxes": [
     "19",
     "75"
-   ],
-   "keepSigned": false,
-   "sameBox": false
-  },
-  {
-   "title": "The Flash",
-   "issue": "1",
-   "year": "2011",
-   "volume": "3",
-   "publisher": "DC",
-   "writer": "Geoff Johns",
-   "copies": 2,
-   "sellable": 1,
-   "sellValue": 0.0,
-   "sellBoxes": [
-    "43"
-   ],
-   "keepBoxes": [
-    "52"
-   ],
-   "boxes": [
-    "43",
-    "52"
-   ],
-   "keepSigned": false,
-   "sameBox": false
-  },
-  {
-   "title": "The Ultimates",
-   "issue": "13",
-   "year": "2004",
-   "volume": "1",
-   "publisher": "Marvel",
-   "writer": "Mark Millar",
-   "copies": 2,
-   "sellable": 1,
-   "sellValue": 0.0,
-   "sellBoxes": [
-    "85"
-   ],
-   "keepBoxes": [
-    "85"
-   ],
-   "boxes": [
-    "85"
-   ],
-   "keepSigned": false,
-   "sameBox": true
-  },
-  {
-   "title": "X-Men: Hellfire Gala",
-   "issue": "1",
-   "year": "2023",
-   "volume": "3",
-   "publisher": "Marvel",
-   "writer": "Jonathan Hickman & Gerry Duggan",
-   "copies": 2,
-   "sellable": 1,
-   "sellValue": 0.0,
-   "sellBoxes": [
-    "102"
-   ],
-   "keepBoxes": [
-    "11"
-   ],
-   "boxes": [
-    "11",
-    "102"
    ],
    "keepSigned": false,
    "sameBox": false
