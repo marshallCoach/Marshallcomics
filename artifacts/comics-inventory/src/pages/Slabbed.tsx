@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { DATA, type Comic } from "@/data/data";
 import { CoverImage } from "@/components/CoverImage";
-import { SLAB_EXAMPLES, isSlab, slabGrade } from "@/components/Slab";
+import { SLAB_PHOTOS, slabFileUrl, slabPhotoUrl, isSlab, isCgc, slabGrade } from "@/components/Slab";
 
 const num = (s?: string) => { const n = parseFloat(String(s ?? "").replace(/[$,]/g, "")); return isNaN(n) ? 0 : n; };
 
@@ -9,9 +9,14 @@ export default function Slabbed({ onNavigate }: { onNavigate?: (tab: string, par
   const slabs = useMemo(
     () => (DATA.comics as Comic[])
       .filter(isSlab)
-      .sort((a, b) => parseFloat(slabGrade(b) || "0") - parseFloat(slabGrade(a) || "0")),
+      .sort((a, b) => {
+        const g = parseFloat(slabGrade(b) || "0") - parseFloat(slabGrade(a) || "0");
+        if (g !== 0) return g;                       // graded first, highest grade first
+        return a.Title.localeCompare(b.Title) || num(a.Issue) - num(b.Issue);
+      }),
     []
   );
+  const graded = slabs.filter(isCgc).length;
   const totalNM = slabs.reduce((s, c) => s + num(c.Value_NM), 0);
 
   function editComic(c: Comic) {
@@ -26,20 +31,24 @@ export default function Slabbed({ onNavigate }: { onNavigate?: (tab: string, par
         🏷️ Slabbed — CGC Graded
       </h1>
       <div style={{ color: "var(--muted2)", fontSize: "0.95rem", marginBottom: 18 }}>
-        {slabs.length} graded books · ${Math.round(totalNM).toLocaleString()} NM total
+        {slabs.length} books in CC10 · {graded} CGC-graded · ${Math.round(totalNM).toLocaleString()} NM total
       </div>
 
-      {/* Featured example slab photos. Each hides itself if its file isn't pushed yet. */}
-      <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 24 }}>
-        {SLAB_EXAMPLES.map((src, i) => (
-          <img
-            key={i}
-            src={src}
-            alt={`Slab example ${i + 1}`}
-            loading="lazy"
-            onError={e => { e.currentTarget.style.display = "none"; }}
-            style={{ width: 150, height: 225, objectFit: "cover", borderRadius: 6, boxShadow: "0 4px 14px rgba(0,0,0,0.22)", background: "var(--surface2)" }}
-          />
+      {/* Featured slab photos — real CGC cases, each captioned with its book. */}
+      <div style={{ display: "flex", gap: 14, flexWrap: "wrap", marginBottom: 26 }}>
+        {SLAB_PHOTOS.map(p => (
+          <figure key={p.file} style={{ margin: 0, width: 150 }}>
+            <img
+              src={slabFileUrl(p.file)}
+              alt={`${p.title} #${p.issue} — CGC ${p.grade} slab`}
+              loading="lazy"
+              onError={e => { const f = e.currentTarget.closest("figure"); if (f) (f as HTMLElement).style.display = "none"; }}
+              style={{ width: 150, height: 225, objectFit: "cover", borderRadius: 6, boxShadow: "0 4px 14px rgba(0,0,0,0.22)", background: "var(--surface2)", display: "block" }}
+            />
+            <figcaption style={{ fontSize: "0.78rem", color: "var(--muted2)", marginTop: 4, lineHeight: 1.25 }}>
+              {p.title} #{p.issue} · <strong>CGC {p.grade}</strong>
+            </figcaption>
+          </figure>
         ))}
       </div>
 
@@ -47,10 +56,14 @@ export default function Slabbed({ onNavigate }: { onNavigate?: (tab: string, par
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: 16 }}>
         {slabs.map((c, i) => (
           <div key={i} style={{ background: "var(--surface)", border: "1px solid var(--border)", borderRadius: 8, padding: 10, borderTop: "3px solid #111" }}>
-            <div style={{ position: "relative" }}>
-              <CoverImage comic={c} width={128} height={192} style={{ borderRadius: 5, boxShadow: "0 2px 8px rgba(0,0,0,0.18)", display: "block", margin: "0 auto" }} />
+            <div style={{ position: "relative", textAlign: "center" }}>
+              {slabPhotoUrl(c)
+                ? <img src={slabPhotoUrl(c)!} alt={`${c.Title} #${c.Issue} — CGC ${slabGrade(c)} slab`} loading="lazy"
+                    style={{ width: 128, height: 192, objectFit: "cover", borderRadius: 5, boxShadow: "0 2px 8px rgba(0,0,0,0.18)", display: "block", margin: "0 auto" }} />
+                : <CoverImage comic={c} width={128} height={192} style={{ borderRadius: 5, boxShadow: "0 2px 8px rgba(0,0,0,0.18)", display: "block", margin: "0 auto" }} />
+              }
               <span style={{ position: "absolute", top: 6, left: 6, fontSize: "0.72rem", fontWeight: 800, color: "#fff", background: "#111", borderRadius: 3, padding: "2px 7px" }}>
-                CGC {slabGrade(c)}
+                {slabGrade(c) ? `CGC ${slabGrade(c)}` : "SLAB"}
               </span>
             </div>
             <div style={{ marginTop: 8, fontWeight: 700, fontSize: "0.95rem", lineHeight: 1.25 }}>{c.Title}</div>
