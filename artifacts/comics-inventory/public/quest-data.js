@@ -1,18 +1,18 @@
-// AUTO-GENERATED quest data — source: comics_inventory_1710_1157.xlsx (11145 rows) · generated 2026-10-17
+// AUTO-GENERATED quest data — source: comics_inventory_1710_1357.xlsx (11145 rows) · generated 2026-10-17
 // Regenerate with: node gen_quest_data.mjs
 window.QUEST_DATA = {
- "source": "comics_inventory_1710_1157.xlsx",
+ "source": "comics_inventory_1710_1357.xlsx",
  "generated": "2026-10-17",
  "totalRows": 11145,
  "dupe": {
-  "groups": 25,
-  "rows": 50,
-  "excess": 25
+  "groups": 40,
+  "rows": 81,
+  "excess": 41
  },
  "clone": {
-  "groups": 2,
-  "rows": 4,
-  "excess": 2
+  "groups": 17,
+  "rows": 35,
+  "excess": 18
  },
  "overCap": [
   {
@@ -97,8 +97,8 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 208,
    "vcap": 240,
-   "dupes": 4,
-   "clones": 2
+   "dupes": 7,
+   "clones": 5
   },
   {
    "box": 6,
@@ -157,8 +157,8 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 241,
    "vcap": 240,
-   "dupes": 2,
-   "clones": 0
+   "dupes": 10,
+   "clones": 8
   },
   {
    "box": 11,
@@ -265,8 +265,8 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 177,
    "vcap": 240,
-   "dupes": 0,
-   "clones": 0
+   "dupes": 14,
+   "clones": 14
   },
   {
    "box": 20,
@@ -349,8 +349,8 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 127,
    "vcap": 240,
-   "dupes": 0,
-   "clones": 0
+   "dupes": 2,
+   "clones": 2
   },
   {
    "box": 27,
@@ -373,8 +373,8 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 117,
    "vcap": 240,
-   "dupes": 0,
-   "clones": 0
+   "dupes": 4,
+   "clones": 4
   },
   {
    "box": 29,
@@ -1031,7 +1031,7 @@ window.QUEST_DATA = {
    "title": "The Clones",
    "est": "identical twin rows — safest wins first",
    "accent": "green",
-   "blurb": "Rows that are exact copies of another row: same book, same box, logged twice. Live count: 2 clone groups / 2 excess rows. Highest confidence, lowest effort, biggest visible progress.",
+   "blurb": "Rows that are exact copies of another row: same book, same box, logged twice. Live count: 17 clone groups / 18 excess rows. Highest confidence, lowest effort, biggest visible progress.",
    "sittings": [
     {
      "id": "A1",

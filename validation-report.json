@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-10-17T15:57:47.512Z",
-  "source": "comics_inventory_1710_1157.xlsx",
+  "generatedAt": "2026-10-17T17:57:57.605Z",
+  "source": "comics_inventory_1710_1357.xlsx",
   "rowCount": 11145,
   "blanks": {
     "title": 0,
     "box": 0,
     "issue": 0
   },
-  "sameBoxDuplicateGroups": 2,
-  "sameBoxDuplicateExcessRows": 2,
+  "sameBoxDuplicateGroups": 17,
+  "sameBoxDuplicateExcessRows": 18,
   "fillRate": {
     "writer": 98.9,
     "artist": 96.9,
