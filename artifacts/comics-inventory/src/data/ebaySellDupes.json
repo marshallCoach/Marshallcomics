@@ -1,9 +1,9 @@
 {
- "source": "comics_inventory_1710_1157.xlsx",
+ "source": "comics_inventory_1710_1420",
  "generatedAt": "2026-10-17",
- "groupCount": 141,
- "sellableCount": 148,
- "estValue": 1003.32,
+ "groupCount": 156,
+ "sellableCount": 168,
+ "estValue": 1108.32,
  "rows": [
   {
    "title": "Justice League",
@@ -240,6 +240,29 @@
    "sameBox": false
   },
   {
+   "title": "Original Sin",
+   "issue": "1",
+   "year": "2014",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Jason Aaron & Al Ewing",
+   "copies": 3,
+   "sellable": 2,
+   "sellValue": 15.0,
+   "sellBoxes": [
+    "19"
+   ],
+   "keepBoxes": [
+    "5"
+   ],
+   "boxes": [
+    "5",
+    "19"
+   ],
+   "keepSigned": false,
+   "sameBox": false
+  },
+  {
    "title": "Return of Superman 30th Anniversary Special",
    "issue": "1",
    "year": "2023",
@@ -450,7 +473,7 @@
    "sameBox": false
   },
   {
-   "title": "Avengers",
+   "title": "100th Anniversary Special - Avengers",
    "issue": "1",
    "year": "2018",
    "volume": "8",
@@ -473,7 +496,7 @@
    "sameBox": false
   },
   {
-   "title": "Avengers",
+   "title": "100th Anniversary Special - Avengers",
    "issue": "1",
    "year": "2010",
    "volume": "5",
@@ -588,6 +611,74 @@
    "sameBox": false
   },
   {
+   "title": "Original Sin",
+   "issue": "2",
+   "year": "2014",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Jason Aaron",
+   "copies": 3,
+   "sellable": 2,
+   "sellValue": 10.0,
+   "sellBoxes": [
+    "5",
+    "19"
+   ],
+   "keepBoxes": [
+    "19"
+   ],
+   "boxes": [
+    "5",
+    "19"
+   ],
+   "keepSigned": false,
+   "sameBox": false
+  },
+  {
+   "title": "Original Sin",
+   "issue": "3",
+   "year": "2014",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Jason Aaron",
+   "copies": 3,
+   "sellable": 2,
+   "sellValue": 10.0,
+   "sellBoxes": [
+    "5",
+    "19"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "5",
+    "19"
+   ],
+   "keepSigned": false,
+   "sameBox": false
+  },
+  {
+   "title": "Original Sin",
+   "issue": "4",
+   "year": "2014",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Jason Aaron",
+   "copies": 3,
+   "sellable": 2,
+   "sellValue": 10.0,
+   "sellBoxes": [
+    "5",
+    "19"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "5",
+    "19"
+   ],
+   "keepSigned": false,
+   "sameBox": false
+  },
+  {
    "title": "Superman: Son of Kal-El",
    "issue": "1",
    "year": "2021",
@@ -609,6 +700,28 @@
    ],
    "keepSigned": false,
    "sameBox": false
+  },
+  {
+   "title": "Thor",
+   "issue": "21",
+   "year": "2017",
+   "volume": "2",
+   "publisher": "Marvel",
+   "writer": "Jason Aaron",
+   "copies": 3,
+   "sellable": 2,
+   "sellValue": 10.0,
+   "sellBoxes": [
+    "5"
+   ],
+   "keepBoxes": [
+    "5"
+   ],
+   "boxes": [
+    "5"
+   ],
+   "keepSigned": false,
+   "sameBox": true
   },
   {
    "title": "Winter Soldier",
@@ -797,7 +910,7 @@
    "sameBox": false
   },
   {
-   "title": "Nightwing Annual",
+   "title": "Nightwing 2021 Annual",
    "issue": "1",
    "year": "2018",
    "volume": "5",
@@ -818,28 +931,6 @@
    ],
    "keepSigned": false,
    "sameBox": false
-  },
-  {
-   "title": "The Ultimates",
-   "issue": "13",
-   "year": "2004",
-   "volume": "1",
-   "publisher": "Marvel",
-   "writer": "Mark Millar",
-   "copies": 2,
-   "sellable": 1,
-   "sellValue": 8.0,
-   "sellBoxes": [
-    "85"
-   ],
-   "keepBoxes": [
-    "85"
-   ],
-   "boxes": [
-    "85"
-   ],
-   "keepSigned": false,
-   "sameBox": true
   },
   {
    "title": "Trinity",
@@ -863,6 +954,28 @@
    ],
    "keepSigned": false,
    "sameBox": false
+  },
+  {
+   "title": "Ultimate Comics Ultimates",
+   "issue": "13",
+   "year": "2004",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Mark Millar",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 8.0,
+   "sellBoxes": [
+    "85"
+   ],
+   "keepBoxes": [
+    "85"
+   ],
+   "boxes": [
+    "85"
+   ],
+   "keepSigned": false,
+   "sameBox": true
   },
   {
    "title": "X-Men",
@@ -911,7 +1024,7 @@
    "sameBox": false
   },
   {
-   "title": "Avengers",
+   "title": "100th Anniversary Special - Avengers",
    "issue": "21",
    "year": "2019",
    "volume": "8",
@@ -1203,29 +1316,7 @@
    "sameBox": false
   },
   {
-   "title": "Astonishing X-Men: Xenogenesis",
-   "issue": "4",
-   "year": "2010",
-   "volume": "1",
-   "publisher": "Marvel",
-   "writer": "Warren Ellis",
-   "copies": 2,
-   "sellable": 1,
-   "sellValue": 5.0,
-   "sellBoxes": [
-    "12"
-   ],
-   "keepBoxes": [
-    "12"
-   ],
-   "boxes": [
-    "12"
-   ],
-   "keepSigned": false,
-   "sameBox": true
-  },
-  {
-   "title": "Avengers",
+   "title": "100th Anniversary Special - Avengers",
    "issue": "6",
    "year": "2018",
    "volume": "8",
@@ -1246,6 +1337,50 @@
    ],
    "keepSigned": false,
    "sameBox": false
+  },
+  {
+   "title": "Agents of S.H.I.E.L.D.",
+   "issue": "1",
+   "year": "2016",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Marc Guggenheim",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 5.0,
+   "sellBoxes": [
+    "26"
+   ],
+   "keepBoxes": [
+    "26"
+   ],
+   "boxes": [
+    "26"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "Astonishing X-Men: Xenogenesis",
+   "issue": "4",
+   "year": "2010",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Warren Ellis",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 5.0,
+   "sellBoxes": [
+    "12"
+   ],
+   "keepBoxes": [
+    "12"
+   ],
+   "boxes": [
+    "12"
+   ],
+   "keepSigned": false,
+   "sameBox": true
   },
   {
    "title": "Avengers Arena",
@@ -1705,6 +1840,148 @@
    ],
    "keepSigned": false,
    "sameBox": false
+  },
+  {
+   "title": "Captain America: Steve Rogers",
+   "issue": "1",
+   "year": "2016",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Nick Spencer",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 5.0,
+   "sellBoxes": [
+    "10"
+   ],
+   "keepBoxes": [
+    "10"
+   ],
+   "boxes": [
+    "10"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "Captain America: Steve Rogers",
+   "issue": "10",
+   "year": "2017",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Nick Spencer",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 5.0,
+   "sellBoxes": [
+    "10"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "10"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "Captain America: Steve Rogers",
+   "issue": "2",
+   "year": "2016",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Nick Spencer",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 5.0,
+   "sellBoxes": [
+    "10"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "10"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "Captain America: Steve Rogers",
+   "issue": "3",
+   "year": "2016",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Nick Spencer",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 5.0,
+   "sellBoxes": [
+    "10"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "10"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "Captain America: Steve Rogers",
+   "issue": "4",
+   "year": "2016",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Nick Spencer",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 5.0,
+   "sellBoxes": [
+    "19"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "19"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "Captain America: Steve Rogers",
+   "issue": "5",
+   "year": "2016",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Nick Spencer",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 5.0,
+   "sellBoxes": [
+    "19"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "19"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "Captain America: Steve Rogers",
+   "issue": "6",
+   "year": "2016",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Nick Spencer",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 5.0,
+   "sellBoxes": [
+    "19"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "19"
+   ],
+   "keepSigned": false,
+   "sameBox": true
   },
   {
    "title": "Captain Carter",
@@ -2463,7 +2740,7 @@
    "sameBox": false
   },
   {
-   "title": "Nova",
+   "title": "Nova (Volume 5) 10",
    "issue": "3",
    "year": "2013",
    "volume": "6",
@@ -2481,6 +2758,29 @@
    "boxes": [
     "17",
     "28"
+   ],
+   "keepSigned": false,
+   "sameBox": false
+  },
+  {
+   "title": "Original Sin",
+   "issue": "5",
+   "year": "2014",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Jason Aaron",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 5.0,
+   "sellBoxes": [
+    "5"
+   ],
+   "keepBoxes": [
+    "19"
+   ],
+   "boxes": [
+    "5",
+    "19"
    ],
    "keepSigned": false,
    "sameBox": false
@@ -2714,11 +3014,11 @@
   },
   {
    "title": "Thor",
-   "issue": "21",
-   "year": "2017",
-   "volume": "6",
+   "issue": "3",
+   "year": "2018",
+   "volume": "2",
    "publisher": "Marvel",
-   "writer": "Donny Cates",
+   "writer": "Jason Aaron",
    "copies": 2,
    "sellable": 1,
    "sellValue": 5.0,
@@ -2753,6 +3053,29 @@
    "boxes": [
     "75",
     "95"
+   ],
+   "keepSigned": false,
+   "sameBox": false
+  },
+  {
+   "title": "Ultimate Comics Ultimates",
+   "issue": "12",
+   "year": "2003",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Mark Millar",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 5.0,
+   "sellBoxes": [
+    "80"
+   ],
+   "keepBoxes": [
+    "25"
+   ],
+   "boxes": [
+    "25",
+    "80"
    ],
    "keepSigned": false,
    "sameBox": false
