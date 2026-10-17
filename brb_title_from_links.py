@@ -1,24 +1,23 @@
 #!/usr/bin/env python3
-"""brb_title_from_links.py — fix corrupted TITLES using the Fandom links you
-already supplied.
+"""brb_title_from_links.py — REVIEW-ONLY title fixer from supplied Fandom links.
 
-A data-fix link encodes the real title in its URL (…/wiki/Lois_Lane_Vol_1_2 →
-"Lois Lane"). When that canonical title disagrees with the sheet's title, the
-sheet title is corrupted (e.g. voice-to-text "Low Slain" → "Lois Lane") and the
-link already tells us the correct name. The Fandom-APPLY tool never renames —
-it only fills credits/date/cover for the title you have — so these never self-heal.
+A data-fix link names a wiki page in its URL. Sometimes that page name reveals a
+corrupted sheet title (voice-to-text 'Low Slain' for 'Lois Lane'). BUT most links
+point to a legitimately differently-named page — a crossover, a one-shot, a
+specific volume — so a URL name that differs is NOT proof the title is wrong.
 
-This reads EVERY data-fix export you've fed the pipeline (~/Downloads/data-fixes*.json
-plus the consumed copies in processed_exports/), compares each link's canonical
-title to the sheet title, and where they truly differ (not just "The"/punctuation)
-renames the inventory row — and scrubs the old title out of Key Issue — Why and
-Seller Notes. Writes a NEW dated xlsx; never edits the source.
+An earlier version auto-applied every mismatch and wrongly renamed 500+ books.
+This version NEVER auto-applies. It writes a review CSV of proposals (ranked, with
+a similarity score and a flag), and you approve each one by hand. --apply then
+renames ONLY the rows you marked, and carries their covers across.
 
-    python3 brb_title_from_links.py            # DRY RUN — counts + lists every rename
-    python3 brb_title_from_links.py --apply     # apply, write a new workbook
-Then: python3 brb.py --commit "rename corrupted titles from links" --yes
+    python3 brb_title_from_links.py            # write title_rename_review.csv
+    # open the CSV, put Y in DECISION for real corruptions (or type a replacement
+    # title to override); leave blank / N to skip.
+    python3 brb_title_from_links.py --apply     # apply ONLY the approved rows
+Then: python3 brb.py --commit "rename approved corrupted titles" --yes
 """
-import argparse, datetime, glob, json, os, re, sys, urllib.parse
+import argparse, csv, datetime, difflib, glob, json, os, re, sys, urllib.parse
 import openpyxl
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -26,6 +25,7 @@ ASSETS = os.path.join(ROOT, "attached_assets")
 DOWNLOADS = os.path.expanduser("~/Downloads")
 PROCESSED = os.path.join(ROOT, "processed_exports")
 COVERS = os.path.join(ROOT, "covers.json")
+REVIEW = os.path.join(ROOT, "title_rename_review.csv")
 
 
 def _fn_key(f):
@@ -49,61 +49,94 @@ def ni(i):
 
 
 def normt(t):
-    """Compare titles ignoring case, a leading 'The', and all punctuation, so
-    'Amazing Spider-Man' == 'The Amazing Spider-Man' (NOT a rename) but
-    'Low Slain' != 'Lois Lane' (a real rename)."""
     s = re.sub(r"^the\s+", "", str(t or "").lower())
     return re.sub(r"[^a-z0-9]+", "", s)
 
 
 def canonical_from_url(u):
-    """Real title named in a Fandom wiki URL, or None."""
     m = re.match(r"https?://[^/]+/wiki/(.+)", u or "")
     if not m:
         return None
-    path = urllib.parse.unquote(m.group(1))
+    path = urllib.parse.unquote(m.group(1)).split("?")[0].split("#")[0]  # drop query/anchor
     vm = re.match(r"^(.*?)_Vol_\d+(?:_.+)?$", path)
-    name = (vm.group(1) if vm else path)
-    return name.replace("_", " ").strip() or None
+    name = (vm.group(1) if vm else path).replace("_", " ").strip()
+    return name or None
+
+
+# A canonical that still looks like a parse artifact or a different book, not a
+# clean title — never auto-suggest these (they must be eyeballed).
+_BOGUS = re.compile(r"(\?|#|file=|\bvol\b|\bvolume\b|\bissue\b|\(vol|\bannual\b|\bspecial\b|\d+\s*$)", re.I)
 
 
 def link_files():
     seen, out = set(), []
     for d in (DOWNLOADS, PROCESSED):
         for f in glob.glob(os.path.join(d, "*.json")):
-            b = os.path.basename(f).lower()
-            if "data-fix" in b and f not in seen:
+            if "data-fix" in os.path.basename(f).lower() and f not in seen:
                 seen.add(f); out.append(f)
     return out
 
 
-def collect_renames():
-    """{normt(sheet_title): (sheet_title, canonical_title)} for every link whose
-    URL title truly differs from its sheet title. Last link wins on conflict."""
-    ren = {}
-    files = link_files()
-    for f in files:
+def collect_proposals():
+    """One proposal per distinct sheet-title whose link names a different title."""
+    prop = {}   # normt(sheet) -> dict
+    for f in link_files():
         try:
             recs = json.load(open(f))
-        except Exception as e:  # noqa: BLE001
-            print(f"  (skip {os.path.basename(f)}: {e})"); continue
+        except Exception:  # noqa: BLE001
+            continue
         for rec in (recs if isinstance(recs, list) else []):
             if not isinstance(rec, dict):
                 continue
             url = rec.get("value") or rec.get("url") or ""
+            if "/wiki/" not in url:
+                continue
             sheet = (rec.get("title") or "").strip()
             canon = canonical_from_url(url)
-            if not sheet or not canon:
+            if not sheet or not canon or normt(sheet) == normt(canon):
                 continue
-            if normt(sheet) != normt(canon):
-                ren[normt(sheet)] = (sheet, canon)
-    return ren, files
+            sim = round(difflib.SequenceMatcher(None, normt(sheet), normt(canon)).ratio(), 2)
+            prop[normt(sheet)] = {"old": sheet, "new": canon, "sim": sim,
+                                  "box": str(rec.get("box") or "").strip(), "url": url}
+    return prop
+
+
+def write_review(prop, rows_by_title):
+    out = []
+    for k, p in prop.items():
+        rows = rows_by_title.get(k, [])
+        bogus = bool(_BOGUS.search(p["new"]))
+        # "LIKELY" only for a close, clean, small-footprint match — still needs a Y.
+        flag = ("LOOKS_BOGUS" if bogus else
+                "LIKELY" if (p["sim"] >= 0.7 and len(rows) <= 5) else "NEEDS_REVIEW")
+        out.append({"DECISION": "", "flag": flag, "similarity": p["sim"],
+                    "rows_affected": len(rows), "old_title": p["old"],
+                    "new_title": p["new"], "sample_url": p["url"]})
+    order = {"LIKELY": 0, "NEEDS_REVIEW": 1, "LOOKS_BOGUS": 2}
+    out.sort(key=lambda r: (order[r["flag"]], -r["similarity"], r["old_title"].lower()))
+    with open(REVIEW, "w", newline="") as fh:
+        w = csv.DictWriter(fh, fieldnames=["DECISION", "flag", "similarity", "rows_affected",
+                                           "old_title", "new_title", "sample_url"])
+        w.writeheader(); w.writerows(out)
+    return out
+
+
+def read_approvals():
+    """{normt(old_title): replacement_title} for rows the user approved. DECISION:
+    Y/yes -> use new_title; any other non-empty, non-N text -> that literal title."""
+    if not os.path.exists(REVIEW):
+        sys.exit(f"no {os.path.basename(REVIEW)} — run without --apply first, then approve rows.")
+    appr = {}
+    for r in csv.DictReader(open(REVIEW)):
+        d = (r.get("DECISION") or "").strip()
+        if not d or d.lower() in ("n", "no", "skip"):
+            continue
+        repl = r["new_title"] if d.lower() in ("y", "yes") else d
+        appr[normt(r["old_title"])] = repl
+    return appr
 
 
 def remap_covers(pairs):
-    """Rename covers.json keys '<old>|||…' -> '<new>|||…' so a title fix carries the
-    already-fetched cover with it instead of orphaning it. pairs = [(old, new)].
-    Returns the number of keys moved."""
     if not os.path.exists(COVERS):
         return 0
     cov = json.load(open(COVERS))
@@ -113,9 +146,8 @@ def remap_covers(pairs):
         p = k.split("|||")
         n = oldnorm.get(normt(p[0])) if p else None
         if n:
-            p[0] = n
-            nk = "|||".join(p)
-            if nk not in cov:        # don't clobber an existing correct-title cover
+            p[0] = n; nk = "|||".join(p)
+            if nk not in cov:
                 out[nk] = v; moved += 1; continue
         out.setdefault(k, v)
     if moved:
@@ -125,62 +157,62 @@ def remap_covers(pairs):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--apply", action="store_true")
+    ap.add_argument("--apply", action="store_true", help="apply ONLY rows marked in the review CSV")
     ap.add_argument("--no-text", action="store_true", help="don't scrub old title from Key/Notes")
     args = ap.parse_args()
 
-    ren, files = collect_renames()
-    print(f"Scanned {len(files)} link file(s): " + ", ".join(os.path.basename(f) for f in files) or "(none)")
-    if not ren:
-        print("\nNo title corruptions found in the supplied links. Nothing to do.")
-        return
-
+    prop = collect_proposals()
     src = newest_xlsx()
     wb = openpyxl.load_workbook(src)
     ws = next(w for w in wb.worksheets if w.title.startswith("✅ Clean Inventory"))
     H = [str(c.value).strip() if c.value is not None else "" for c in ws[1]]
     def ci(n): return H.index(n) + 1 if n in H else None
-    cT = ci("Title")
-    cKR = ci("Key Issue — Why")
-    cSN = ci("Seller Notes / Variants / Caveats")
-    if not cT:
-        sys.exit("no Title column found")
+    cT, cKR, cSN = ci("Title"), ci("Key Issue — Why"), ci("Seller Notes / Variants / Caveats")
 
-    # Count + apply, row by row.
-    hits = {}          # normt -> [rows]
+    rows_by_title = {}
     for r in range(2, ws.max_row + 1):
-        tv = ws.cell(r, cT).value
-        k = normt(tv)
-        if k in ren:
-            hits.setdefault(k, []).append(r)
+        rows_by_title.setdefault(normt(ws.cell(r, cT).value), []).append(r)
 
-    total_rows = sum(len(v) for v in hits.values())
-    print(f"\n{'APPLYING' if args.apply else 'WOULD RENAME'} — {len(hits)} corrupted title(s), {total_rows} row(s):\n")
-    for k, (sheet, canon) in sorted(ren.items()):
-        rows = hits.get(k, [])
-        flag = "" if rows else "   (no matching inventory row)"
-        print(f"  {sheet!r:32s} -> {canon!r:28s}  x{len(rows)}{flag}")
-        if not args.apply:
-            continue
-        for r in rows:
-            ws.cell(r, cT, canon)
+    if not args.apply:
+        if not prop:
+            print("No title mismatches in the supplied links. Nothing to review.")
+            return
+        rows = write_review(prop, rows_by_title)
+        likely = sum(1 for r in rows if r["flag"] == "LIKELY")
+        print(f"Wrote {os.path.basename(REVIEW)} — {len(rows)} proposal(s) "
+              f"({likely} LIKELY, {len(rows)-likely} to scrutinize).")
+        print("NOTHING was changed. Open the CSV, put Y in DECISION for real corruptions")
+        print("(or type a replacement title to override), then re-run with --apply.")
+        print("\nTop proposals:")
+        for r in rows[:15]:
+            print(f"  [{r['flag']:12s}] sim {r['similarity']:.2f}  x{r['rows_affected']:<3} "
+                  f"{r['old_title']!r} -> {r['new_title']!r}")
+        return
+
+    appr = read_approvals()
+    if not appr:
+        print("No approved rows in the review CSV (DECISION column empty). Nothing to apply.")
+        return
+    applied_pairs, total = [], 0
+    for r in range(2, ws.max_row + 1):
+        k = normt(ws.cell(r, cT).value)
+        if k in appr:
+            new = appr[k]; old = str(ws.cell(r, cT).value)
+            ws.cell(r, cT, new); total += 1
+            applied_pairs.append((old, new))
             if not args.no_text:
                 for c in (cKR, cSN):
                     if c and ws.cell(r, c).value:
-                        ws.cell(r, c, re.sub(re.escape(sheet), canon, str(ws.cell(r, c).value), flags=re.I))
-
-    if not args.apply:
-        print("\nDry run — re-run with --apply to write the fixes.")
+                        ws.cell(r, c, re.sub(re.escape(old), new, str(ws.cell(r, c).value), flags=re.I))
+    if not total:
+        print("Approved titles matched no inventory rows. Nothing changed.")
         return
     out = os.path.join(ASSETS, f"comics_inventory_{datetime.datetime.now():%d%m_%H%M}.xlsx")
     wb.save(out)
-    # Carry each renamed title's already-fetched cover across in covers.json, so a
-    # rename never drops a cover the link had already pulled (e.g. Low Slain's).
-    moved = remap_covers([(sheet, canon) for k, (sheet, canon) in ren.items() if hits.get(k)])
-    print(f"\nWROTE {os.path.basename(out)}  ({total_rows} row(s) renamed)")
-    if moved:
-        print(f"Moved {moved} covers.json key(s) onto the corrected titles.")
-    print("Next: python3 brb.py --commit \"rename corrupted titles from links\" --yes")
+    moved = remap_covers(list({(o, n) for o, n in applied_pairs}))
+    print(f"Applied {len(set(k for k in appr))} approved rename(s) across {total} row(s).")
+    print(f"WROTE {os.path.basename(out)}" + (f"  · moved {moved} cover key(s)." if moved else "."))
+    print("Next: python3 brb.py --commit \"rename approved corrupted titles\" --yes")
 
 
 if __name__ == "__main__":
