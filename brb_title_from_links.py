@@ -25,6 +25,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 ASSETS = os.path.join(ROOT, "attached_assets")
 DOWNLOADS = os.path.expanduser("~/Downloads")
 PROCESSED = os.path.join(ROOT, "processed_exports")
+COVERS = os.path.join(ROOT, "covers.json")
 
 
 def _fn_key(f):
@@ -99,6 +100,29 @@ def collect_renames():
     return ren, files
 
 
+def remap_covers(pairs):
+    """Rename covers.json keys '<old>|||…' -> '<new>|||…' so a title fix carries the
+    already-fetched cover with it instead of orphaning it. pairs = [(old, new)].
+    Returns the number of keys moved."""
+    if not os.path.exists(COVERS):
+        return 0
+    cov = json.load(open(COVERS))
+    oldnorm = {normt(o): n for o, n in pairs}
+    moved, out = 0, {}
+    for k, v in cov.items():
+        p = k.split("|||")
+        n = oldnorm.get(normt(p[0])) if p else None
+        if n:
+            p[0] = n
+            nk = "|||".join(p)
+            if nk not in cov:        # don't clobber an existing correct-title cover
+                out[nk] = v; moved += 1; continue
+        out.setdefault(k, v)
+    if moved:
+        json.dump(out, open(COVERS, "w"))
+    return moved
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true")
@@ -150,7 +174,12 @@ def main():
         return
     out = os.path.join(ASSETS, f"comics_inventory_{datetime.datetime.now():%d%m_%H%M}.xlsx")
     wb.save(out)
+    # Carry each renamed title's already-fetched cover across in covers.json, so a
+    # rename never drops a cover the link had already pulled (e.g. Low Slain's).
+    moved = remap_covers([(sheet, canon) for k, (sheet, canon) in ren.items() if hits.get(k)])
     print(f"\nWROTE {os.path.basename(out)}  ({total_rows} row(s) renamed)")
+    if moved:
+        print(f"Moved {moved} covers.json key(s) onto the corrected titles.")
     print("Next: python3 brb.py --commit \"rename corrupted titles from links\" --yes")
 
 
