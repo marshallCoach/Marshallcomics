@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { DATA, type Comic } from "@/data/data";
 import { CoverImage } from "@/components/CoverImage";
-import { SLAB_PHOTOS, slabFileUrl, slabPhotoUrl, isSlab, isCgc, slabGrade } from "@/components/Slab";
+import { SLAB_PHOTOS, slabFileUrl, slabPhotoUrl, isSlab, isCgc, slabGrade, SlabLightboxImg } from "@/components/Slab";
 
 const num = (s?: string) => { const n = parseFloat(String(s ?? "").replace(/[$,]/g, "")); return isNaN(n) ? 0 : n; };
 
@@ -38,11 +38,9 @@ export default function Slabbed({ onNavigate }: { onNavigate?: (tab: string, par
       <div style={{ display: "flex", gap: 14, flexWrap: "wrap", marginBottom: 26 }}>
         {SLAB_PHOTOS.map(p => (
           <figure key={p.file} style={{ margin: 0, width: 150 }}>
-            <img
+            <SlabLightboxImg
               src={slabFileUrl(p.file)}
               alt={`${p.title} #${p.issue} — CGC ${p.grade} slab`}
-              loading="lazy"
-              onError={e => { const f = e.currentTarget.closest("figure"); if (f) (f as HTMLElement).style.display = "none"; }}
               style={{ width: 150, height: 225, objectFit: "cover", borderRadius: 6, boxShadow: "0 4px 14px rgba(0,0,0,0.22)", background: "var(--surface2)", display: "block" }}
             />
             <figcaption style={{ fontSize: "0.78rem", color: "var(--muted2)", marginTop: 4, lineHeight: 1.25 }}>
@@ -58,7 +56,7 @@ export default function Slabbed({ onNavigate }: { onNavigate?: (tab: string, par
           <div key={i} style={{ background: "var(--surface)", border: "1px solid var(--border)", borderRadius: 8, padding: 10, borderTop: "3px solid #111" }}>
             <div style={{ position: "relative", textAlign: "center" }}>
               {slabPhotoUrl(c)
-                ? <img src={slabPhotoUrl(c)!} alt={`${c.Title} #${c.Issue} — CGC ${slabGrade(c)} slab`} loading="lazy"
+                ? <SlabLightboxImg src={slabPhotoUrl(c)!} alt={`${c.Title} #${c.Issue} — CGC ${slabGrade(c)} slab`}
                     style={{ width: 128, height: 192, objectFit: "cover", borderRadius: 5, boxShadow: "0 2px 8px rgba(0,0,0,0.18)", display: "block", margin: "0 auto" }} />
                 : <CoverImage comic={c} width={128} height={192} style={{ borderRadius: 5, boxShadow: "0 2px 8px rgba(0,0,0,0.18)", display: "block", margin: "0 auto" }} />
               }

@@ -1,6 +1,46 @@
+import { useEffect, useState, type CSSProperties } from "react";
 import type { Comic } from "@/data/data";
 
 const BASE = import.meta.env.BASE_URL?.replace(/\/$/, "") ?? "";
+
+/** A slab photo that opens a full-size lightbox pop-up on click. Hides itself if
+ *  the file is missing. Stops propagation so it doesn't trigger a parent card. */
+export function SlabLightboxImg({ src, alt, style }: { src: string; alt: string; style?: CSSProperties }) {
+  const [open, setOpen] = useState(false);
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setOpen(false); };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
+  return (
+    <>
+      <img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        onClick={e => { e.stopPropagation(); setOpen(true); }}
+        onError={e => { e.currentTarget.style.display = "none"; }}
+        style={{ cursor: "zoom-in", ...style }}
+      />
+      {open && (
+        <div
+          onClick={e => { e.stopPropagation(); setOpen(false); }}
+          style={{ position: "fixed", inset: 0, zIndex: 9999, background: "rgba(0,0,0,0.85)",
+            display: "flex", alignItems: "center", justifyContent: "center", padding: 24, cursor: "zoom-out" }}
+        >
+          <img src={src} alt={alt} style={{ maxWidth: "95vw", maxHeight: "95vh", objectFit: "contain", borderRadius: 8, boxShadow: "0 8px 40px rgba(0,0,0,0.6)" }} />
+          <button
+            onClick={e => { e.stopPropagation(); setOpen(false); }}
+            aria-label="Close"
+            style={{ position: "fixed", top: 16, right: 20, fontSize: 28, lineHeight: 1, color: "#fff",
+              background: "none", border: "none", cursor: "pointer" }}
+          >×</button>
+        </div>
+      )}
+    </>
+  );
+}
 
 // Real photos of specific slabbed books (CGC x JSA cases), read off each label.
 // Matched to the book by Title + Issue so a given slab shows ITS OWN photo —
@@ -60,11 +100,9 @@ export function SlabThumb({ comic, size = 52 }: { comic: Comic; size?: number })
   return (
     <div style={{ display: "inline-flex", flexDirection: "column", alignItems: "center", gap: 3 }} title={`Slabbed — CGC ${g}`}>
       {url && (
-        <img
+        <SlabLightboxImg
           src={url}
           alt={`${comic.Title} #${comic.Issue} — CGC ${g} slab`}
-          loading="lazy"
-          onError={e => { e.currentTarget.style.display = "none"; }}
           style={{ width: size, height: Math.round(size * 1.5), objectFit: "cover", borderRadius: 4, boxShadow: "0 2px 7px rgba(0,0,0,0.28)" }}
         />
       )}
