@@ -81,7 +81,7 @@ const INTERFACE_UPDATES = [
   `Last deployed — ${LAST_UPDATE_DATE}`,
   DEPLOY_COMMIT ? `This deploy — ${DEPLOY_COMMIT}${DEPLOY_SHA ? ` (${DEPLOY_SHA})` : ""}` : `Data refresh — ${totalComics.toLocaleString()} comics · ${totalBoxes} boxes`,
   `${totalComics.toLocaleString()} comics · ${totalBoxes} boxes · ${keyCount.toLocaleString()} keys · ${signedCount} signed`,
-  `Data completeness — Condition ${_fillPct("Condition")}%, Value ${_fillPct("Value_NM")}%, Cover art ${_fillPct("Cover_Artist")}%`,
+  `Data completeness — Year ${_fillPct("Year")}%, Condition ${_fillPct("Condition")}%, Value ${_fillPct("Value_NM")}%, Cover art ${_fillPct("Cover_Artist")}%`,
   `Credits filled — Writers ${_fillPct("Writer")}%, Artists ${_fillPct("Artist")}%, Pub dates ${_fillPct("Pub_Date")}%`,
 ];
 // ── Duplicate stats (same logic as Duplicates page) ──────────────────────────
