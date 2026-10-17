@@ -75,7 +75,9 @@ const _fillPct = (key: keyof typeof comics[number]) => {
     const v = String(c[key] ?? "").trim();
     return n + (v && !_fillBad.test(v) ? 1 : 0);
   }, 0);
-  return Math.round((100 * filled) / totalComics);
+  // Never round UP to a false 100%: 99.6% (42 blanks) must read 99%, not 100%,
+  // so the banner matches what Data Fix actually shows as missing.
+  return filled >= totalComics ? 100 : Math.min(99, Math.round((100 * filled) / totalComics));
 };
 const INTERFACE_UPDATES = [
   `Last deployed — ${LAST_UPDATE_DATE}`,
@@ -246,7 +248,8 @@ const FILL_STATS = FILL_FIELDS.map(f => {
     const v = String(c[f.key] ?? "").trim();
     return n + (v && !FILL_BAD.test(v) ? 1 : 0);
   }, 0);
-  return { ...f, filled, total: totalComics, blank: totalComics - filled, pct: Math.round((100 * filled) / totalComics) };
+  return { ...f, filled, total: totalComics, blank: totalComics - filled,
+    pct: filled >= totalComics ? 100 : Math.min(99, Math.round((100 * filled) / totalComics)) };
 })
   // Complete columns (100%) first — so they fill the top row — then the rest by
   // how full they are. Keeps the "look how far we've come" row up front.
