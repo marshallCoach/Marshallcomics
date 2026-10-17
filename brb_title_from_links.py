@@ -102,17 +102,21 @@ def collect_proposals():
 
 
 def write_review(prop, rows_by_title):
+    existing = set(rows_by_title)
     out = []
     for k, p in prop.items():
         rows = rows_by_title.get(k, [])
         bogus = bool(_BOGUS.search(p["new"]))
-        # "LIKELY" only for a close, clean, small-footprint match — still needs a Y.
-        flag = ("LOOKS_BOGUS" if bogus else
+        merges = normt(p["new"]) in existing and normt(p["new"]) != k
+        # A rename onto a title that already exists would MERGE two distinct books
+        # into false duplicates — the most dangerous case, blocked at apply time.
+        flag = ("WOULD_MERGE" if merges else
+                "LOOKS_BOGUS" if bogus else
                 "LIKELY" if (p["sim"] >= 0.7 and len(rows) <= 5) else "NEEDS_REVIEW")
         out.append({"DECISION": "", "flag": flag, "similarity": p["sim"],
                     "rows_affected": len(rows), "old_title": p["old"],
                     "new_title": p["new"], "sample_url": p["url"]})
-    order = {"LIKELY": 0, "NEEDS_REVIEW": 1, "LOOKS_BOGUS": 2}
+    order = {"LIKELY": 0, "NEEDS_REVIEW": 1, "LOOKS_BOGUS": 2, "WOULD_MERGE": 3}
     out.sort(key=lambda r: (order[r["flag"]], -r["similarity"], r["old_title"].lower()))
     with open(REVIEW, "w", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=["DECISION", "flag", "similarity", "rows_affected",
@@ -168,6 +172,7 @@ def main():
     H = [str(c.value).strip() if c.value is not None else "" for c in ws[1]]
     def ci(n): return H.index(n) + 1 if n in H else None
     cT, cKR, cSN = ci("Title"), ci("Key Issue — Why"), ci("Seller Notes / Variants / Caveats")
+    cI, cB = ci("Issue #"), ci("Box #")
 
     rows_by_title = {}
     for r in range(2, ws.max_row + 1):
@@ -193,19 +198,42 @@ def main():
     if not appr:
         print("No approved rows in the review CSV (DECISION column empty). Nothing to apply.")
         return
-    applied_pairs, total = [], 0
+
+    def ident(title, r):
+        return (normt(title), ni(ws.cell(r, cI).value) if cI else "", str(ws.cell(r, cB).value or "").strip() if cB else "")
+
+    # Identities (title+issue+box) of rows that will NOT be renamed — renaming a row
+    # ONTO one of these would create a true duplicate, so that single row is skipped.
+    # This is per-row: 'Low Slain #2 -> Lois Lane #2' still applies even if you own
+    # other Lois Lane issues; only a row that would literally clone an existing book
+    # is held back.
+    static_ids, rename_rows = set(), []
     for r in range(2, ws.max_row + 1):
-        k = normt(ws.cell(r, cT).value)
+        title = str(ws.cell(r, cT).value or "")
+        k = normt(title)
         if k in appr:
-            new = appr[k]; old = str(ws.cell(r, cT).value)
-            ws.cell(r, cT, new); total += 1
-            applied_pairs.append((old, new))
-            if not args.no_text:
-                for c in (cKR, cSN):
-                    if c and ws.cell(r, c).value:
-                        ws.cell(r, c, re.sub(re.escape(old), new, str(ws.cell(r, c).value), flags=re.I))
+            rename_rows.append((r, title, appr[k]))
+        else:
+            static_ids.add(ident(title, r))
+
+    applied_pairs, total, skipped = [], 0, 0
+    seen_new = set()
+    for r, old, new in rename_rows:
+        nid = (normt(new), ni(ws.cell(r, cI).value) if cI else "", str(ws.cell(r, cB).value or "").strip() if cB else "")
+        if nid in static_ids or nid in seen_new:
+            skipped += 1
+            continue
+        seen_new.add(nid)
+        ws.cell(r, cT, new); total += 1
+        applied_pairs.append((old, new))
+        if not args.no_text:
+            for c in (cKR, cSN):
+                if c and ws.cell(r, c).value:
+                    ws.cell(r, c, re.sub(re.escape(old), new, str(ws.cell(r, c).value), flags=re.I))
+    if skipped:
+        print(f"Skipped {skipped} row(s) that would have duplicated an existing book (kept as-is).")
     if not total:
-        print("Approved titles matched no inventory rows. Nothing changed.")
+        print("Nothing applied — approved titles matched no rows, or all would duplicate.")
         return
     out = os.path.join(ASSETS, f"comics_inventory_{datetime.datetime.now():%d%m_%H%M}.xlsx")
     wb.save(out)

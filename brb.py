@@ -151,8 +151,11 @@ def git_sync():
 
 
 def detect_xlsx():
+    # Exclude iCloud/Dropbox conflict copies ("… copy.xlsx") and Excel lock files
+    # ("~$…"), matching the brb_* tools — otherwise a sync-made copy can get picked
+    # as the source of truth and deploy the wrong workbook.
     files = [f for f in glob.glob(os.path.join(ASSETS, "comics_inventory_*.xlsx"))
-             if not os.path.basename(f).startswith("~$")]
+             if " copy" not in f and not os.path.basename(f).startswith("~$")]
     if not files:
         err(f"No comics_inventory_*.xlsx in {ASSETS}"); sys.exit(1)
     newest = max(files, key=_fn_key)
