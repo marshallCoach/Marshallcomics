@@ -1,9 +1,9 @@
 {
- "source": "comics_inventory_1610_1639.xlsx",
- "generatedAt": "2026-10-16",
- "groupCount": 139,
- "sellableCount": 146,
- "estValue": 993.32,
+ "source": "comics_inventory_1710_0925.xlsx",
+ "generatedAt": "2026-10-17",
+ "groupCount": 140,
+ "sellableCount": 147,
+ "estValue": 998.32,
  "rows": [
   {
    "title": "Justice League",
@@ -1981,6 +1981,28 @@
    ],
    "keepSigned": false,
    "sameBox": false
+  },
+  {
+   "title": "Green Lantern: Fractured Spectrum",
+   "issue": "1",
+   "year": "2024",
+   "volume": "1",
+   "publisher": "DC",
+   "writer": "Jeremy Adams",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 5.0,
+   "sellBoxes": [
+    "54"
+   ],
+   "keepBoxes": [
+    "54"
+   ],
+   "boxes": [
+    "54"
+   ],
+   "keepSigned": false,
+   "sameBox": true
   },
   {
    "title": "Guardians of the Galaxy",
