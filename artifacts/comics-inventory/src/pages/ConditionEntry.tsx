@@ -29,9 +29,16 @@ export default function ConditionEntry() {
   const [showFine, setShowFine] = useState(false);
   const [saved, setSaved] = useState<string | null>(null);
 
-  // all blank-condition books, and per-box counts for the picker
+  // Books that still need a real grade. "Needs a grade" must match the homepage's
+  // fill-rate definition exactly, or the two disagree: the homepage counts
+  // Unknown/N/A/?/TBD/None as unfilled, so those must surface here too (an empty
+  // Condition is just the most common case). Without this they were invisible —
+  // homepage showed hundreds "to do" while this page showed 0.
+  const NEEDS_GRADE = /^(n\/a|unknown|\?|tbd|none)$/i;
   const blanks = useMemo(() =>
-    comics.filter(c => !String(c.Condition || "").trim()), [comics]);
+    comics.filter(c => { const v = String(c.Condition || "").trim(); return !v || NEEDS_GRADE.test(v); }),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [comics]);
 
   const boxes = useMemo(() => {
     const m = new Map<string, number>();
