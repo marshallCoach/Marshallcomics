@@ -1,9 +1,9 @@
 {
- "source": "comics_inventory_1710_0925.xlsx",
+ "source": "comics_inventory_1710_0953.xlsx",
  "generatedAt": "2026-10-17",
- "groupCount": 140,
- "sellableCount": 147,
- "estValue": 998.32,
+ "groupCount": 141,
+ "sellableCount": 148,
+ "estValue": 1003.32,
  "rows": [
   {
    "title": "Justice League",
@@ -733,7 +733,7 @@
    "year": "2013",
    "volume": "3",
    "publisher": "DC",
-   "writer": "Scott Snyder & James Tynion IV",
+   "writer": "Tom King",
    "copies": 2,
    "sellable": 1,
    "sellValue": 9.99,
@@ -1919,7 +1919,7 @@
    "year": "2021",
    "volume": "7",
    "publisher": "DC",
-   "writer": "Geoffrey Thorne",
+   "writer": "Jeremy Adams & Peter Tomasi",
    "copies": 2,
    "sellable": 1,
    "sellValue": 5.0,
@@ -2696,7 +2696,29 @@
    "year": "2021",
    "volume": "8",
    "publisher": "Marvel",
-   "writer": "Jason Aaron",
+   "writer": "Donny Cates",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 5.0,
+   "sellBoxes": [
+    "5"
+   ],
+   "keepBoxes": [
+    "5"
+   ],
+   "boxes": [
+    "5"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "Thor",
+   "issue": "21",
+   "year": "2017",
+   "volume": "6",
+   "publisher": "Marvel",
+   "writer": "Donny Cates",
    "copies": 2,
    "sellable": 1,
    "sellValue": 5.0,
