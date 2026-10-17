@@ -22,7 +22,8 @@ SLABS = [
     ("Amazing Spider-Man", "361", "9.4", True),
     ("Avengers Annual", "2", "5.5", True),
     ("Avengers", "60", "6.5", True),
-    ("Avengers", "62", "6.2", True),          # single #62 (table's #887 was the same book)
+    ("Avengers", "62", "6.0", True),          # slab label reads 6.0 (sheet had 6.2 — corrected)
+    ("Avengers", "87", "4.0", True),          # Origin of Black Panther, Roy Thomas SS (was mislabeled #887)
     ("Transformers", "1", "5.5", False),
     ("Absolute Batman", "1", "9.8", False),
     ("New Mutants", "98", "9.4", False),
