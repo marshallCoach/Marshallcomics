@@ -127,14 +127,29 @@ def fetch_page(base, title, vol, issue):
     if not wt:
         return None
     im = re.search(r"\|\s*Image1?\s*=\s*([^\n|]+\.(?:jpg|png|jpeg))", wt, re.I)
-    dm = re.search(r"\|\s*(?:CoverDate|ReleaseDate)\s*=\s*([^\n|]+)", wt)
-    date_str, py = None, None
+    date_str, py, mon = None, None, 0
+    # 1) a single CoverDate / ReleaseDate / Cover Date parameter (with or w/o space)
+    dm = re.search(r"\|\s*(?:Cover\s*Date|Release\s*Date|Date)\s*=\s*([^\n|]+)", wt, re.I)
     if dm:
         raw = dm.group(1)
         py = yr(raw)
         mon = next((MONTHS[w.lower()] for w in re.findall(r"[A-Za-z]+", raw) if w.lower() in MONTHS), 0)
-        if py:
-            date_str = f"{py}-{mon:02d}-00"
+    # 2) separate | Month = / | Year = fields — the DC/Marvel Database comic infobox
+    #    uses these, so CoverDate-only parsing missed every such page (e.g. most DC).
+    if not py:
+        ym = re.search(r"\|\s*Year\s*=\s*([^\n|]+)", wt, re.I)
+        if ym:
+            py = yr(ym.group(1))
+        mm = re.search(r"\|\s*Month\s*=\s*([^\n|]+)", wt, re.I)
+        if mm and not mon:
+            raw = mm.group(1)
+            mon = next((MONTHS[w.lower()] for w in re.findall(r"[A-Za-z]+", raw) if w.lower() in MONTHS), 0)
+            if not mon:
+                nm = re.search(r"\b(\d{1,2})\b", raw)
+                if nm and 1 <= int(nm.group(1)) <= 12:
+                    mon = int(nm.group(1))
+    if py:
+        date_str = f"{py}-{mon:02d}-00"
     if not py:
         py = yr(wt[:400])
     credits = {role: infobox_names(wt, pat) for role, pat in CRED_PATS.items()}

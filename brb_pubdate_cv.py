@@ -78,13 +78,16 @@ def cv_get(path, params, tries=5):
     return None
 
 
-def resolve_volume(cache, title, year, publisher):
+def resolve_volumes(cache, title, year, publisher):
+    """Return a RANKED list of candidate volume ids (best first), not just one —
+    so a book whose top-scored volume happens to lack the issue can still be dated
+    from the next-best volume (legacy numbering, reprints, wrong-era guesses)."""
     ck = (norm(title), year)
     if ck in cache:
         return cache[ck]
     data = cv_get("search", {"resources": "volume", "query": title,
                              "field_list": "id,name,start_year,publisher", "limit": "20"})
-    best, best_score = None, -1e9
+    scored = []
     for v in (data or {}).get("results", []) or []:
         score = 0
         if norm(v.get("name")) == norm(title):
@@ -100,11 +103,14 @@ def resolve_volume(cache, title, year, publisher):
         if publisher and pub:
             pl, pn = publisher.lower(), pub.lower()
             score += 5 if (pl in pn or pn in pl) else -3
-        if score > best_score:
-            best_score, best = score, v.get("id")
-    cache[ck] = best
+        if v.get("id") is not None:
+            scored.append((score, v["id"]))
+    scored.sort(key=lambda x: -x[0])
+    # keep the plausible candidates (top 5, score not absurdly low) and try each.
+    cands = [vid for sc, vid in scored[:5] if sc > -5]
+    cache[ck] = cands
     time.sleep(0.4)
-    return best
+    return cands
 
 
 def issue_date(vol_id, issue):
@@ -163,11 +169,15 @@ def main():
         issue = str(ws.cell(r, cI).value or "").strip() if cI else ""
         pub = str(ws.cell(r, cP).value or "").strip() if cP else ""
         year = year_of(ws.cell(r, cY).value) if cY else None
-        vol = resolve_volume(cache, title, year, pub)
-        if not vol:
+        vols = resolve_volumes(cache, title, year, pub)
+        if not vols:
             stats["no_volume"] += 1
             continue
-        date_str, kind = issue_date(vol, issue)
+        date_str, kind = None, "no_date"
+        for v in vols:                       # try each candidate volume until one dates
+            date_str, kind = issue_date(v, issue)
+            if date_str:
+                break
         stats[kind] += 1
         if date_str:
             ws.cell(r, cPD, date_str)
