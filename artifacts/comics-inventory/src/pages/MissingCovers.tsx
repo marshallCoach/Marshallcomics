@@ -10,6 +10,10 @@ import {
 // and populate a cover link right there. Missing = coverUrlSync() returns null.
 const comics = DATA.comics;
 const LS = "brbDataFixes_v1"; // the Save-image/Fandom buttons queue here
+const BASE = import.meta.env.BASE_URL?.replace(/\/$/, "") ?? "";
+// Key matching brb_gen_fandom_links.py: "title.lower()|||issue(no #)".
+const fklKey = (title: unknown, issue: unknown) =>
+  `${String(title ?? "").trim().toLowerCase()}|||${String(issue ?? "").trim().replace(/^#/, "")}`;
 
 const norm = (v: unknown) => String(v ?? "").trim();
 const issueNorm = (v: unknown) => norm(v).replace(/^#/, "");
@@ -34,8 +38,14 @@ export default function MissingCovers() {
   const [keysOnly, setKeysOnly] = useState(false);
   const [sort, setSort] = useState<"az" | "count">("az");
   const [queued, setQueued] = useState<Set<string>>(() => loadQueued());
+  const [fandomLinks, setFandomLinks] = useState<Record<string, string>>({});
+  const [flOpen, setFlOpen] = useState(false);
 
   useEffect(() => { coversReady().then(() => setReady(true)); }, []);
+  useEffect(() => {
+    fetch(`${BASE}/fandom_links.json`).then(r => r.ok ? r.json() : {})
+      .then((m: Record<string, string>) => setFandomLinks(m)).catch(() => {});
+  }, []);
 
   const missing = useMemo(() => {
     if (!ready) return [];
@@ -54,6 +64,13 @@ export default function MissingCovers() {
       (issueNum(a.Issue) - issueNum(b.Issue)));
     return out;
   }, [ready]);
+
+  // Missing-cover books we ALREADY have a supplied Fandom link for — the link
+  // resolved nothing (still no cover), usually a title/issue mismatch or dup. Same
+  // idea as the Data Fix "Fandom linked" drawer: gather them for a focused pass.
+  const fandomLinked = useMemo(
+    () => missing.filter(c => fandomLinks[fklKey(c.Title, c.Issue)]),
+    [missing, fandomLinks]);
 
   const pubCounts = useMemo(() => {
     const m: Record<string, number> = {};
@@ -181,6 +198,28 @@ export default function MissingCovers() {
       <div className="mc-note">
         <b>Why no cover?</b> These issues aren't in the cover file yet — usually the exact issue/volume was never pulled, or the series sits under a different volume on the wiki. Most are on <b>Fandom</b>: click a book's <b>🔗 Fandom</b> link to open the series, grab the cover, then open the book and <b>Save</b> it (it queues into the Data Fix export).
       </div>
+
+      {ready && fandomLinked.length > 0 && (
+        <section className="mc-fl">
+          <button className="mc-fl-head" onClick={() => setFlOpen(o => !o)}>
+            <span>{flOpen ? "▾" : "▸"} 🔗 Fandom linked — likely duplication / mislabel</span>
+            <span className="mc-fl-n">{fandomLinked.length}</span>
+          </button>
+          {flOpen && (
+            <>
+              <p className="mc-fl-sub">These books already have a Fandom link on file but still show no cover — the link resolved nothing, so the title/issue/volume on the row probably doesn't match the wiki (a dup or a mislabel). Fix the row data, don't re-link.</p>
+              <div className="mc-fl-list">
+                {fandomLinked.map(c => (
+                  <a key={bookId(c)} className="mc-fl-row" href={fandomLinks[fklKey(c.Title, c.Issue)]} target="_blank" rel="noopener noreferrer">
+                    <span className="mc-fl-t">{norm(c.Title)} <b>#{issueNorm(c.Issue)}</b></span>
+                    <span className="mc-fl-m">{norm(c.Publisher) || "—"}{c.Year ? ` · ${c.Year}` : ""} · Box {norm((c as { Box?: string }).Box) || "—"} ↗</span>
+                  </a>
+                ))}
+              </div>
+            </>
+          )}
+        </section>
+      )}
 
       {!ready && <div className="mc-empty">Loading covers…</div>}
       {ready && shown.length === 0 && <div className="mc-empty">No missing covers here — nice.</div>}
@@ -341,6 +380,15 @@ const CSS = `
 .mc-vgroup{margin-bottom:16px}
 .mc-vhead{font-size:.82rem;font-weight:700;letter-spacing:1.2px;color:var(--muted2,#bbb);margin-bottom:9px}
 .mc-note{border:1.5px solid var(--border,#2c2c38);border-left:4px solid var(--gold,#b07d20);background:var(--surface,#1a1a22);border-radius:10px;padding:10px 14px;margin:0 0 16px;font-size:.84rem;line-height:1.5;color:var(--muted2,#bbb)}
+.mc-fl{border:1.5px solid #7c3aed55;background:#7c3aed0d;border-radius:10px;margin:0 0 18px;overflow:hidden}
+.mc-fl-head{width:100%;display:flex;justify-content:space-between;align-items:center;gap:10px;background:none;border:none;cursor:pointer;color:#b794f4;font-size:.9rem;font-weight:700;padding:11px 14px;text-align:left}
+.mc-fl-n{background:#7c3aed;color:#fff;border-radius:20px;font-size:.74rem;font-weight:700;padding:2px 10px;min-width:22px;text-align:center}
+.mc-fl-sub{margin:0;padding:0 14px 10px;font-size:.8rem;line-height:1.5;color:var(--muted2,#bbb)}
+.mc-fl-list{display:flex;flex-direction:column;border-top:1px solid #7c3aed33}
+.mc-fl-row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;padding:9px 14px;text-decoration:none;color:inherit;border-bottom:1px solid var(--border,#2c2c38)}
+.mc-fl-row:hover{background:#7c3aed14}
+.mc-fl-t{font-size:.86rem;color:var(--text,#eee)}
+.mc-fl-m{font-size:.74rem;color:#b794f4;white-space:nowrap}
 .mc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
 .mc-cell{display:flex;flex-direction:column;gap:5px}
 .mc-cell .mc-card{flex:1}

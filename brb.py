@@ -94,6 +94,7 @@ GEN_FILES_OPT = [
     # Page snapshots derived from data3.ts (regenerated in step 5b below).
     "artifacts/comics-inventory/src/data/locationSnapshot.json",
     "artifacts/comics-inventory/src/data/ebaySellDupes.json",
+    "artifacts/comics-inventory/public/fandom_links.json",
 ]
 
 
@@ -326,6 +327,7 @@ def main():
     banner("5b · PAGE SNAPSHOTS — location + eBay sellable duplicates")
     run(["python3", "brb_location_snapshot.py"], "location-snapshot")
     run(["python3", "brb_sell_dupes.py"], "sell-dupes")
+    run(["python3", "brb_gen_fandom_links.py"], "fandom-links")
 
     # ── 6. FILL RATES report ─────────────────────────────────────────────────
     banner("6 · FILL RATES")
