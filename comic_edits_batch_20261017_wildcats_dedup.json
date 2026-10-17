@@ -1,0 +1,14 @@
+{
+  "type": "comic-edit-batch",
+  "note": "Delete the 7 fractional Wildcats: Version 3.0 rows that duplicate #1,2,3,4,5,6,9 (same May 18 2026 ALL_BOXES import, Box 70). Keep the clean #1-24 run.",
+  "fill_only": false,
+  "edits": [
+    { "match": { "Title": "Wildcats: Version 3.0", "Issue": "3.1", "Volume": "1", "Box": "70" }, "delete": true },
+    { "match": { "Title": "Wildcats: Version 3.0", "Issue": "3.2", "Volume": "1", "Box": "70" }, "delete": true },
+    { "match": { "Title": "Wildcats: Version 3.0", "Issue": "3.3", "Volume": "1", "Box": "70" }, "delete": true },
+    { "match": { "Title": "Wildcats: Version 3.0", "Issue": "3.4", "Volume": "1", "Box": "70" }, "delete": true },
+    { "match": { "Title": "Wildcats: Version 3.0", "Issue": "3.5", "Volume": "1", "Box": "70" }, "delete": true },
+    { "match": { "Title": "Wildcats: Version 3.0", "Issue": "3.6", "Volume": "1", "Box": "70" }, "delete": true },
+    { "match": { "Title": "Wildcats: Version 3.0", "Issue": "3.9", "Volume": "1", "Box": "70" }, "delete": true }
+  ]
+}

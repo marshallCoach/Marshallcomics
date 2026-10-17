@@ -117,6 +117,20 @@ export function coverUrlSync(c: ComicLike): string | null {
   return entry?.url ?? normIndex?.get(normCoverKey(c.Title, issueStr)) ?? null;
 }
 
+/** The source tag of the resolved cover ("fandom-page", "fandom-dc-yg",
+ *  "comicvine", "manual-link", …), or null when the book has no cover. Lets a
+ *  page tell apart covers that came from a Fandom link vs other sources. */
+export function coverSourceSync(c: ComicLike): string | null {
+  if (!coversMap) return null;
+  const issueStr = String(c.Issue);
+  const entry =
+    coversMap[cacheKey(c)] ??
+    coversMap[`${c.Title}|||${issueStr}`] ??
+    coversMap[`${c.Title}|||#${issueStr.replace(/^#/, "")}`] ??
+    null;
+  return (entry as { source?: string } | null)?.source ?? null;
+}
+
 interface Props {
   comic: { Title: string; Issue: string | number; Publisher?: string; Year?: string; Key?: string; Signed?: string };
   width?: number;

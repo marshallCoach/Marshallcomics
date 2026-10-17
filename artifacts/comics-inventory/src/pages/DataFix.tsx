@@ -1,6 +1,6 @@
 import { useState, useMemo, useCallback, useEffect } from "react";
 import { DATA, type Comic } from "@/data/data";
-import { CoverImage, CoverModal, fmtPubDate } from "@/components/CoverImage";
+import { CoverImage, CoverModal, fmtPubDate, coverUrlSync, coverSourceSync, coversReady } from "@/components/CoverImage";
 import { setFlagKind as setCoverFlagKind } from "@/lib/coverFlags";
 
 // ── Data-cleanup spot-check ──────────────────────────────────────────────────
@@ -101,10 +101,13 @@ export default function DataFix() {
   const [session, setSession] = useState(0);
   const [pop, setPop] = useState(0);
   const [notInGcd, setNotInGcd] = useState<Set<string>>(new Set());
+  const [coversLoaded, setCoversLoaded] = useState(false);
+  const [flOpen, setFlOpen] = useState(false);
 
   useEffect(() => {
     fetch(`${BASE}/gcd_notfound.json`).then(r => r.ok ? r.json() : [])
       .then((a: string[]) => setNotInGcd(new Set(a))).catch(() => {});
+    coversReady().then(() => setCoversLoaded(true));
   }, []);
 
   // All comics that have ≥1 problem (computed once).
@@ -118,6 +121,16 @@ export default function DataFix() {
     }
     return rows;
   }, [notInGcd]);
+
+  // Books that are flagged AND already carry a Fandom-sourced cover — a Fandom
+  // link resolved their image, yet they still read as a problem. Those are the
+  // most likely duplication / mislabel errors (like the Wildcats V3.0 dupes), so
+  // gather them into one collapsible section for a focused review.
+  const fandomLinked = useMemo(() => {
+    void coversLoaded; // recompute once covers.json has loaded
+    return flagged.filter(f => /fandom/i.test(coverSourceSync(f.c) || "") && coverUrlSync(f.c) !== null);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [flagged, coversLoaded]);
 
   // Self-prune: once a resolution has been applied + reingested, its comic no
   // longer has that problem, so it drops out of `flagged`. Remove those stale
@@ -263,6 +276,32 @@ export default function DataFix() {
 
       {remaining === 0 && (
         <div className="df-clear">🎉 Inbox zero. Every flagged book has been handled. Come back after the next pipeline run.</div>
+      )}
+
+      {/* Fandom linked — flagged books that already have a Fandom-sourced cover.
+          Collapsed by default; these are the likely duplication / mislabel cases. */}
+      {fandomLinked.length > 0 && (
+        <section className="df-group" style={{ marginBottom: 14 }}>
+          <button className="df-group-hd" onClick={() => setFlOpen(o => !o)} style={{ borderLeft: "4px solid #7c3aed" }}>
+            <span className="df-group-name">
+              <span className="df-chev">{flOpen ? "▾" : "▸"}</span> 🔗 Fandom linked — likely duplication/mislabel
+            </span>
+            <span className="df-chip-n">{fandomLinked.length}</span>
+          </button>
+          {flOpen && (
+            <div style={{ padding: "10px 14px", display: "flex", flexWrap: "wrap", gap: 10 }}>
+              {fandomLinked.map((f, i) => (
+                <div key={f.id + i} style={{ display: "flex", gap: 8, alignItems: "center", border: "1px solid var(--border,#2c2c38)", borderRadius: 6, padding: "6px 9px", fontSize: "0.82rem", minWidth: 220 }}>
+                  <CoverImage comic={f.c} width={34} height={51} />
+                  <div style={{ minWidth: 0 }}>
+                    <div style={{ fontWeight: 600, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{f.c.Title} #{f.c.Issue}</div>
+                    <div style={{ color: "var(--muted2,#aaa)" }}>Box {f.c.Box || "—"} · {f.problems.join(", ")}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </section>
       )}
 
       {/* Groups */}
