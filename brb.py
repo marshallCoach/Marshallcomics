@@ -123,10 +123,29 @@ def git_sync():
                if l.strip()] if present else []
     if tracked:
         run(["git", "checkout", "--"] + tracked, "discard stale generated files")
+    # Any OTHER tracked file still dirty — a stray local edit, or a generated file
+    # not in our list — makes `git rebase` refuse ("cannot rebase: You have
+    # unstaged changes"), which is why the final push kept getting rejected and
+    # needed a manual `git pull --rebase`. Stash whatever tracked changes remain,
+    # rebase, then restore them, so the sync is robust no matter what else is dirty.
+    dirty = bool(_last_line(run(["git", "status", "--porcelain", "--untracked-files=no"],
+                                 "any stray tracked edits?")[1]))
+    stashed = dirty and run(["git", "stash", "push", "--quiet", "-m", "brb_sync_autostash"],
+                            "stash stray tracked edits")[0] == 0
     if run(["git", "rebase", f"origin/{br}"], "git rebase onto origin")[0] != 0:
         run(["git", "rebase", "--abort"], "git rebase --abort")
-        warn("Could not auto-sync (a non-generated file diverged). Continuing on "
-             "local; if the final push is rejected, run: git pull --rebase origin " + br)
+        if stashed:
+            run(["git", "stash", "pop"], "restore stashed edits")
+        warn("Could not auto-sync (rebase conflicted). Continuing on local; if the "
+             "final push is rejected, run: git pull --rebase origin " + br)
+    elif stashed and run(["git", "stash", "pop"], "restore stashed edits")[0] != 0:
+        run(["git", "checkout", "--"] + tracked, "re-discard generated files")
+        if run(["git", "stash", "pop"], "retry restore stashed edits")[0] != 0:
+            run(["git", "stash", "drop"], "drop autostash")
+            warn("Synced with origin, but a stray local edit clashed and was dropped "
+                 "from the autostash — re-apply it by hand if you still need it.")
+        else:
+            ok("Synced with origin — this run will rebuild generated files on top.")
     else:
         ok("Synced with origin — this run will rebuild generated files on top.")
 
