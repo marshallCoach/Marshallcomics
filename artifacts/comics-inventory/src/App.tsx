@@ -49,6 +49,7 @@ import DataFix from "@/pages/DataFix";
 import TitleFixes from "@/pages/TitleFixes";
 import VolumeConfirm from "@/pages/VolumeConfirm";
 import EditComic from "@/pages/EditComic";
+import Slabbed from "@/pages/Slabbed";
 import StorePreview from "@/pages/StorePreview";
 import ConditionEntry from "@/pages/ConditionEntry";
 import EraAudit from "@/pages/EraAudit";
@@ -60,7 +61,7 @@ import { Home, BookOpen, Boxes, Film, Sparkles, ClipboardList, Microscope, Dolla
 type TabId =
   | "summary" | "everything" | "collection" | "boxkeys" | "stats" | "runs" | "runsvolumes" | "recent" | "releasetimeline" | "dataview"
   | "calendar" | "showplanner" | "cgc" | "signings" | "actionplan" | "timeline" | "boxvisual"
-  | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "storepreview" | "duplicates" | "dupchecklist" | "datafix" | "editcomic" | "conditionentry" | "eraaudit" | "titlefixes" | "volumeconfirm" | "history"
+  | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "storepreview" | "slabbed" | "duplicates" | "dupchecklist" | "datafix" | "editcomic" | "conditionentry" | "eraaudit" | "titlefixes" | "volumeconfirm" | "history"
   | "orgpath" | "volumes" | "boxlabels" | "keycatalog" | "covercatalog" | "coverreview" | "missingcovers" | "boxquest" | "boxmap"
   | "ebaypipeline" | "opsreference" | "ebaylistingguide" | "roulette" | "lifearchive" | "nycc" | "locationcheck" | "absbatman" | "credits" | "granov";
 
@@ -149,6 +150,7 @@ const NAV = [
     label: "Selling",
     tabs: [
       { id: "storepreview",     label: "Store Preview" },
+      { id: "slabbed",          label: "Slabbed" },
       { id: "sellerdash",       label: "Seller Dashboard" },
       { id: "showplanner",      label: "Whatnot Shows" },
       { id: "ebaylistingguide", label: "Phase 1 Listing Guide" },
@@ -381,6 +383,7 @@ export default function App() {
         {activeTab === "boxlabels"   && <BoxLabels />}
         {activeTab === "hunting"     && <BoxHunt />}
         {activeTab === "storepreview" && <StorePreview />}
+        {activeTab === "slabbed"     && <Slabbed onNavigate={navigateTo} />}
         {activeTab === "sellerdash"  && <SellerDashboard />}
         {activeTab === "nycc"        && <NYCCHunt />}
         {activeTab === "locationcheck" && <LocationCheck />}

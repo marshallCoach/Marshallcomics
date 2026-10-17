@@ -5,6 +5,7 @@ import { CoverImage, CoverModal } from "@/components/CoverImage";
 import { SortableTable, ColDef } from "@/components/SortableTable";
 import { Paginator } from "@/components/Paginator";
 import ComicDrawer, { type DrawerComic } from "@/components/ComicDrawer";
+import { isSlab, SlabThumb, SlabBadge } from "@/components/Slab";
 import { comicFlagKey, loadAllFlags } from "@/lib/comicFlags";
 import { downloadClaudeNotes } from "@/lib/exportForClaude";
 
@@ -145,10 +146,6 @@ export default function Everything({
     setDrawerKey(comicFlagKey(c.Title, c.Issue || "", c.Box || ""));
   }, []);
 
-  // A slabbed book = a graded CGC copy ("CGC 9.8"); the "⚠ NEEDS PRESSING … CGC"
-  // rows are pending, not yet slabbed, so they're deliberately excluded.
-  const isSlab = (c: Comic) => /^cgc\s*\d/i.test(String(c.Condition || "").trim());
-
   // Jump to the Edit Comic page pre-loaded with this exact book.
   const editComic = useCallback((c: Comic) => {
     if (!onNavigate) return;
@@ -158,7 +155,7 @@ export default function Everything({
 
   const cols = useMemo<ColDef<Comic>[]>(() => [
     { key:"cover", label:"", defaultWidth:124, cell: r => (
-      <div style={{ padding:"3px 0" }}>
+      <div style={{ padding:"3px 0", display:"flex", flexDirection:"column", alignItems:"center", gap:6 }}>
         <CoverImage
           comic={r}
           width={112}
@@ -166,6 +163,7 @@ export default function Everything({
           onClick={largeUrl => setCoverModal({ comic: r, large: largeUrl })}
           style={{ boxShadow:"0 2px 8px rgba(0,0,0,0.18)", borderRadius:4 }}
         />
+        {isSlab(r) && <SlabThumb comic={r} size={46} />}
       </div>
     )},
     { key:"title",     label:"Title",     defaultWidth:240, sort:(a,b)=>a.Title.localeCompare(b.Title), cell:r=>{
@@ -583,6 +581,7 @@ function EverythingCard({ comic: c, onTitleClick, onTitleCovers, onEdit, flagged
               {flagged  && <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"#92400e", background:"#fef3c7", border:"1px solid #fcd34d", borderRadius:3, padding:"1px 5px" }}>UPDATE</span>}
               {isKey    && <span className="badge bkey"  style={{fontSize:"0.875rem"}}>KEY</span>}
               {isSigned && <span className="badge bgold" style={{fontSize:"0.875rem"}}>SIGNED</span>}
+              {isSlab(c) && <SlabBadge comic={c} />}
               {c.Platform && <span className={`badge ${platClass(c.Platform)}`} style={{fontSize:"0.875rem"}}>{c.Platform}</span>}
             </div>
           </div>
@@ -617,6 +616,7 @@ function EverythingCard({ comic: c, onTitleClick, onTitleCovers, onEdit, flagged
             {c.Volume && c.Volume !== "1" ? ` · Vol ${c.Volume}` : ""}{c.Year ? ` · ${c.Year}` : ""}
           </div>
           {c.Publisher && <div className="card-pub">{c.Publisher}{c.Era?` · ${c.Era}`:""}</div>}
+          {isSlab(c) && <div style={{ marginTop:8, display:"flex", justifyContent:"center" }}><SlabThumb comic={c} /></div>}
       </div>
 
       {(c.Writer || c.Artist) && (
