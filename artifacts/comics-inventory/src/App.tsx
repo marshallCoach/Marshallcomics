@@ -391,7 +391,7 @@ export default function App() {
         {activeTab === "actionplan"  && <ActionPlan />}
         {activeTab === "stats"       && <CollectionStats onNavigate={navigateTo} />}
         {activeTab === "dataview"    && <DataView />}
-        {activeTab === "editcomic"   && <EditComic />}
+        {activeTab === "editcomic"   && <EditComic initQuery={navParams.query} />}
         {activeTab === "conditionentry" && <ConditionEntry />}
         {activeTab === "eraaudit"    && <EraAudit />}
         {activeTab === "sitemap"     && <SiteMap onNavigate={navigateTo} />}

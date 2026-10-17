@@ -119,6 +119,7 @@ export default function Everything({
   const [boxFilter,   setBoxFilter]  = useState(initBox      || "");
   const [keysOnly,    setKeysOnly]   = useState(!!initKeysOnly);
   const [signedOnly,  setSignedOnly] = useState(!!initSignedOnly);
+  const [slabbedOnly, setSlabbedOnly] = useState(false);
   const [yearParenOnly,    setYearParen]   = useState(false);
   const [creatorParenOnly, setCreatorParen] = useState(false);
   const [annualOnly,       setAnnualOnly]   = useState(false);
@@ -143,6 +144,17 @@ export default function Everything({
     setDrawerComic(c);
     setDrawerKey(comicFlagKey(c.Title, c.Issue || "", c.Box || ""));
   }, []);
+
+  // A slabbed book = a graded CGC copy ("CGC 9.8"); the "⚠ NEEDS PRESSING … CGC"
+  // rows are pending, not yet slabbed, so they're deliberately excluded.
+  const isSlab = (c: Comic) => /^cgc\s*\d/i.test(String(c.Condition || "").trim());
+
+  // Jump to the Edit Comic page pre-loaded with this exact book.
+  const editComic = useCallback((c: Comic) => {
+    if (!onNavigate) return;
+    const issue = String(c.Issue || "").replace(/^#/, "");
+    onNavigate("editcomic", { query: `${c.Title}${issue ? ` #${issue}` : ""}` });
+  }, [onNavigate]);
 
   const cols = useMemo<ColDef<Comic>[]>(() => [
     { key:"cover", label:"", defaultWidth:124, cell: r => (
@@ -174,6 +186,16 @@ export default function Everything({
                     color:"var(--red)", border:"1px solid var(--red)", borderRadius:4,
                     padding:"1px 5px" }}
                 >t</button>
+              )}
+              {onNavigate && r.Title && (
+                <button
+                  onClick={e=>{e.stopPropagation();editComic(r);}}
+                  title="Edit this book's details"
+                  style={{ all:"unset", cursor:"pointer", flexShrink:0,
+                    fontSize:"0.75rem", fontWeight:700, lineHeight:1,
+                    color:"var(--brown)", border:"1px solid var(--brown)", borderRadius:4,
+                    padding:"1px 5px" }}
+                >e</button>
               )}
             </span>
             {r.Disambig && <span style={{ fontSize:"0.875rem", color:"var(--muted2)", lineHeight:1.2 }}>{r.Disambig}</span>}
@@ -208,7 +230,7 @@ export default function Everything({
     { key:"year",      label:"Year",      defaultWidth:65,  sort:(a,b)=>parseVal(a.Year)-parseVal(b.Year), cell:r=><span className="lt-sub">{r.Year}</span> },
     { key:"signed",    label:"Signed",    defaultWidth:90,  sort:(a,b)=>a.Signed.localeCompare(b.Signed), cell:r=>r.Signed?.toUpperCase()==="YES"?<span className="lt-sub" style={{color:"var(--gold)"}}>✍ {r.Signed_By||"Yes"}</span>:null },
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  ], [flaggedKeys]);
+  ], [flaggedKeys, editComic]);
 
   // When parent re-navigates with new params, re-init
   useEffect(() => {
@@ -226,6 +248,7 @@ export default function Everything({
     return ALL.filter(c => {
       if (keysOnly   && (c.Key    || "").toUpperCase() !== "YES") return false;
       if (signedOnly && (c.Signed || "").toUpperCase() !== "YES") return false;
+      if (slabbedOnly && !isSlab(c)) return false;
       if (yearParenOnly    && !/\(\d{4}(-\d{4})?\)/.test(c.Title)) return false;
       if (creatorParenOnly && !c.Disambig) return false;
       if (annualOnly && !c.Title.toLowerCase().includes("annual")) return false;
@@ -252,7 +275,7 @@ export default function Everything({
         c.Story_Pitch, c.Imprint, c.Terrificon,
       ].join(" ").toLowerCase().includes(q);
     });
-  }, [searched, query, publisher, era, platform, boxFilter, keysOnly, signedOnly, yearParenOnly, creatorParenOnly, annualOnly, familyFilter, exactTitle]);
+  }, [searched, query, publisher, era, platform, boxFilter, keysOnly, signedOnly, slabbedOnly, yearParenOnly, creatorParenOnly, annualOnly, familyFilter, exactTitle]);
 
   const cardSlice = useMemo(() => {
     const sorted = [...results].sort((a, b) => {
@@ -267,7 +290,7 @@ export default function Everything({
   const handleSearch = useCallback(() => { setSearched(true); setCardPage(1); }, []);
   const handleClear  = useCallback(() => {
     setQuery(""); setPub(""); setEra(""); setPlat(""); setBoxFilter("");
-    setKeysOnly(false); setSignedOnly(false); setYearParen(false); setCreatorParen(false); setAnnualOnly(false); setFamily(""); setExactTitle("");
+    setKeysOnly(false); setSignedOnly(false); setSlabbedOnly(false); setYearParen(false); setCreatorParen(false); setAnnualOnly(false); setFamily(""); setExactTitle("");
     setCardPage(1);
     setTimeout(() => searchInputRef.current?.focus(), 0);
   }, []);
@@ -344,6 +367,9 @@ export default function Everything({
               </label>
               <label className="toggle-pill">
                 <input type="checkbox" checked={signedOnly} onChange={e=>setSignedOnly(e.target.checked)} />✍ Signed
+              </label>
+              <label className="toggle-pill">
+                <input type="checkbox" checked={slabbedOnly} onChange={e=>{setSlabbedOnly(e.target.checked);setSearched(true);setCardPage(1);}} />🏷️ Slabbed
               </label>
               <label className="toggle-pill">
                 <input type="checkbox" checked={yearParenOnly} onChange={e=>setYearParen(e.target.checked)} />(YYYY) Year
@@ -497,6 +523,7 @@ export default function Everything({
               <EverythingCard key={i} comic={c}
                 onTitleClick={t=>{setExactTitle(t);setQuery("");setSearched(true);setCardPage(1);}}
                 onTitleCovers={onNavigate ? (t=>onNavigate("coverreview",{title:t})) : undefined}
+                onEdit={onNavigate ? (()=>editComic(c)) : undefined}
                 flagged={flaggedKeys.has(comicFlagKey(c.Title, c.Issue || "", c.Box || ""))}
                 onOpenDrawer={() => openDrawer(c)}
                 onCoverClick={(comic, large) => setCoverModal({ comic, large })} />
@@ -534,10 +561,11 @@ export default function Everything({
   );
 }
 
-function EverythingCard({ comic: c, onTitleClick, onTitleCovers, flagged, onOpenDrawer, onCoverClick }: {
+function EverythingCard({ comic: c, onTitleClick, onTitleCovers, onEdit, flagged, onOpenDrawer, onCoverClick }: {
   comic: Comic;
   onTitleClick?: (title: string) => void;
   onTitleCovers?: (title: string) => void;
+  onEdit?: () => void;
   flagged?: boolean;
   onOpenDrawer?: () => void;
   onCoverClick?: (comic: Comic, large: string | null) => void;
@@ -572,6 +600,16 @@ function EverythingCard({ comic: c, onTitleClick, onTitleCovers, flagged, onOpen
                   color:"var(--red)", border:"1px solid var(--red)", borderRadius:4,
                   padding:"1px 5px" }}
               >t</button>
+            )}
+            {onEdit && c.Title && (
+              <button
+                onClick={e=>{e.stopPropagation();onEdit();}}
+                title="Edit this book's details"
+                style={{ all:"unset", cursor:"pointer", flexShrink:0,
+                  fontSize:"0.75rem", fontWeight:700, lineHeight:1,
+                  color:"var(--brown)", border:"1px solid var(--brown)", borderRadius:4,
+                  padding:"1px 5px" }}
+              >e</button>
             )}
           </span>
           <div className="card-issue">

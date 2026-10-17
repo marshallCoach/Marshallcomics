@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { DATA, type Comic } from "@/data/data";
 import { CoverImage } from "@/components/CoverImage";
 
@@ -33,9 +33,9 @@ const FIELDS: { key: keyof Comic; label: string; wide?: boolean }[] = [
 
 const idOf = (c: Comic) => `${c.Title}|||${c.Issue}|||${c.Volume || "1"}|||${c.Box}|||${c.Signed_By || ""}`;
 
-export default function EditComic() {
+export default function EditComic({ initQuery }: { initQuery?: string } = {}) {
   const comics = DATA.comics as Comic[];
-  const [q, setQ] = useState("");
+  const [q, setQ] = useState(initQuery || "");
   const [selId, setSelId] = useState<string | null>(null);
   const [form, setForm] = useState<Record<string, string>>({});
   const [del, setDel] = useState(false);
@@ -62,6 +62,20 @@ export default function EditComic() {
     setDel(false);
     setSaved(null);
   }
+
+  // Arriving from an (e) link on a search result: seed the query and, when it
+  // resolves to a single book, open it straight away so there's no second search.
+  useEffect(() => {
+    if (initQuery === undefined) return;
+    setQ(initQuery || "");
+    setSelId(null);
+    const s = (initQuery || "").trim().toLowerCase();
+    if (s.length < 2) return;
+    const hits = comics.filter(c =>
+      `${c.Title} #${c.Issue} ${c.Volume} ${c.Box} ${c.Signed_By || ""}`.toLowerCase().includes(s));
+    if (hits.length === 1) select(hits[0]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [initQuery]);
 
   function setField(k: string, v: string) {
     setForm(prev => ({ ...prev, [k]: v }));
