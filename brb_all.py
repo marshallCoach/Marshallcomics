@@ -127,14 +127,19 @@ def main():
 
     # 2 — data-fix export from the site (optional input)
     def datafix():
-        js = newest("data-fixes*.json")
-        if not js:
+        jss = sorted(glob.glob(os.path.join(DOWNLOADS, "data-fixes*.json")) +
+                     glob.glob(os.path.join(ROOT, "data-fixes*.json")), key=os.path.getmtime)
+        if not jss:
             print("No ~/Downloads/data-fixes*.json — skipping Data Fix export.")
             return
-        print(f"Export: {js}")
-        if run([PY, os.path.join(ROOT, "brb_apply_fandom_pages.py"), "--flags", js, "--apply"]):
+        print(f"Exports: {len(jss)} — {', '.join(os.path.basename(j) for j in jss)}")
+        # No --flags: let brb_apply_fandom_pages discover and MERGE every export.
+        # It used to pass the single newest file, so links exported in earlier
+        # sessions were stranded and only applied (one at a time) over many runs.
+        if run([PY, os.path.join(ROOT, "brb_apply_fandom_pages.py"), "--apply"]):
             raise RuntimeError("brb_apply_fandom_pages failed")
-        archive(js)
+        for js in jss:
+            archive(js)
     step(2, "DATA-FIX EXPORT (apply Fandom links)", datafix)
 
     # Enrichment runs most-authoritative first so later non-destructive fills
