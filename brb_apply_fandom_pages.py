@@ -219,11 +219,35 @@ def main():
     ap.add_argument("--overwrite", action="store_true")
     args = ap.parse_args()
 
-    path = args.flags or max(glob.glob(os.path.expanduser("~/Downloads/data-fixes*.json")) +
-                             glob.glob("data-fixes*.json"), key=os.path.getmtime, default=None)
-    if not path or not os.path.exists(path):
+    # Read EVERY data-fixes export, not just the newest. Users accumulate several
+    # (one per working session), so grabbing only max(mtime) silently stranded the
+    # links in older exports — a book linked two sessions ago never got applied.
+    # Merge all, oldest first, de-duping identical records (same kind+title+issue+
+    # box+url). --flags still scopes to one explicit file.
+    if args.flags:
+        paths = [args.flags] if os.path.exists(args.flags) else []
+    else:
+        paths = [p for p in set(glob.glob(os.path.expanduser("~/Downloads/data-fixes*.json")) +
+                                glob.glob("data-fixes*.json")) if os.path.exists(p)]
+        paths.sort(key=os.path.getmtime)
+    if not paths:
         sys.exit("no data-fixes export found — pass --flags <path>")
-    all_recs = json.load(open(path))
+    all_recs, _seen = [], set()
+    for _p in paths:
+        try:
+            _recs_in = json.load(open(_p))
+        except Exception:  # a half-written/corrupt export never kills the run
+            print(f"  (skipped unreadable export: {os.path.basename(_p)})")
+            continue
+        for _r in (_recs_in if isinstance(_recs_in, list) else []):
+            if not isinstance(_r, dict):
+                continue
+            _k = (_r.get("kind"), str(_r.get("title", "")).lower(),
+                  str(_r.get("issue", "")), str(_r.get("box", "")), _r.get("value") or "")
+            if _k in _seen:
+                continue
+            _seen.add(_k); all_recs.append(_r)
+    print(f"Exports merged: {len(paths)} ({', '.join(os.path.basename(p) for p in paths)})")
     recs = [r for r in all_recs if r.get("kind") == "fandom" and "_Vol_" in (r.get("value") or "")]
     img_recs = [r for r in all_recs if r.get("kind") == "image" and (r.get("value") or "").startswith("http")]
     print(f"FANDOM links to open: {len(recs)}   direct image links: {len(img_recs)}")
