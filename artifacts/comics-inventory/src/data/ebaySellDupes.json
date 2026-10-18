@@ -1,9 +1,9 @@
 {
- "source": "comics_inventory_1710_2135.xlsx",
- "generatedAt": "2026-10-17",
- "groupCount": 141,
- "sellableCount": 148,
- "estValue": 1003.32,
+ "source": "comics_inventory_1810_1019.xlsx",
+ "generatedAt": "2026-10-18",
+ "groupCount": 140,
+ "sellableCount": 147,
+ "estValue": 993.32,
  "rows": [
   {
    "title": "Justice League",
@@ -441,29 +441,6 @@
    ],
    "keepBoxes": [
     "6"
-   ],
-   "boxes": [
-    "6",
-    "27"
-   ],
-   "keepSigned": false,
-   "sameBox": false
-  },
-  {
-   "title": "Avengers",
-   "issue": "1",
-   "year": "2018",
-   "volume": "8",
-   "publisher": "Marvel",
-   "writer": "Mark Waid",
-   "copies": 2,
-   "sellable": 1,
-   "sellValue": 10.0,
-   "sellBoxes": [
-    "6"
-   ],
-   "keepBoxes": [
-    "27"
    ],
    "boxes": [
     "6",
