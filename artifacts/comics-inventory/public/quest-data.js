@@ -1,9 +1,9 @@
-// AUTO-GENERATED quest data — source: comics_inventory_1710_1957.xlsx (11145 rows) · generated 2026-10-17
+// AUTO-GENERATED quest data — source: comics_inventory_1710_2015.xlsx (11138 rows) · generated 2026-10-18
 // Regenerate with: node gen_quest_data.mjs
 window.QUEST_DATA = {
- "source": "comics_inventory_1710_1957.xlsx",
- "generated": "2026-10-17",
- "totalRows": 11145,
+ "source": "comics_inventory_1710_2015.xlsx",
+ "generated": "2026-10-18",
+ "totalRows": 11138,
  "dupe": {
   "groups": 25,
   "rows": 50,
@@ -767,7 +767,7 @@ window.QUEST_DATA = {
    "code": "BDR-3",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 134,
+   "rows": 127,
    "vcap": 240,
    "dupes": 0,
    "clones": 0
@@ -1020,7 +1020,7 @@ window.QUEST_DATA = {
       },
       {
        "id": "0.5",
-       "text": "Confirm the chat reads back 11,145 rows. If not — STOP, wrong file."
+       "text": "Confirm the chat reads back 11,138 rows. If not — STOP, wrong file."
       }
      ]
     }
