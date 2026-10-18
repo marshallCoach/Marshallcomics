@@ -78,13 +78,22 @@ self.addEventListener("message", (e) => {
       const urls = d.urls || [];
       let done = 0, added = 0;
       const post = (type) => e.source && e.source.postMessage({ type, done, added, total: urls.length });
-      for (const u of urls) {
-        try {
-          if (!(await c.match(u))) { const r = await fetch(u, { mode: "no-cors" }); await c.put(u, r.clone()); added++; }
-        } catch { /* skip dead/unreachable */ }
-        done++;
-        if (done % 40 === 0) post("PRECACHE_PROGRESS");
+      // Fetch with a bounded worker pool instead of one-at-a-time: ~13k images
+      // in series meant 13k network round-trips back to back (tens of minutes).
+      // CONCURRENCY workers drain a shared cursor, cutting wall time ~Nx.
+      const CONCURRENCY = 12;
+      let i = 0;
+      async function worker() {
+        while (i < urls.length) {
+          const u = urls[i++];
+          try {
+            if (!(await c.match(u))) { const r = await fetch(u, { mode: "no-cors" }); await c.put(u, r.clone()); added++; }
+          } catch { /* skip dead/unreachable */ }
+          done++;
+          if (done % 40 === 0) post("PRECACHE_PROGRESS");
+        }
       }
+      await Promise.all(Array.from({ length: Math.min(CONCURRENCY, urls.length) }, worker));
       post("PRECACHE_DONE");
     })());
   }
