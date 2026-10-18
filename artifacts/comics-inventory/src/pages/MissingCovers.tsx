@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useCallback } from "react";
+import { useState, useEffect, useMemo, useCallback, useRef } from "react";
 import { DATA } from "@/data/data";
 import {
   CoverImage, coversReady, coverUrlSync, saveCoverLink, fandomGuesses,
@@ -271,9 +271,14 @@ function SoloBook({ comic, index, total, onPrev, onNext, onBack, onQueuedChange 
   const [imgDraft, setImgDraft] = useState("");
   const [fanDraft, setFanDraft] = useState("");
   const [saved, setSaved] = useState<null | "image" | "fandom">(null);
+  const fanRef = useRef<HTMLInputElement>(null);
 
-  // Reset the draft/saved state whenever we move to a different book.
-  useEffect(() => { setImgDraft(""); setFanDraft(""); setSaved(null); }, [index]);
+  // Reset drafts on each new book AND auto-focus the Fandom box, so the run is
+  // pure keyboard: paste → Enter (saves + auto-advances) → paste → Enter …
+  useEffect(() => {
+    setImgDraft(""); setFanDraft(""); setSaved(null);
+    fanRef.current?.focus();
+  }, [index]);
 
   // Arrow keys move through the list; Esc returns to the grid.
   useEffect(() => {
@@ -295,6 +300,9 @@ function SoloBook({ comic, index, total, onPrev, onNext, onBack, onQueuedChange 
     saveCoverLink(comic, box, kind, value.trim());
     setSaved(kind);
     onQueuedChange();
+    // Jump straight to the next book — the new book appearing is the "saved"
+    // confirmation, and the Fandom box re-focuses so you can paste immediately.
+    if (index < total - 1) onNext();
   }
 
   return (
@@ -344,7 +352,7 @@ function SoloBook({ comic, index, total, onPrev, onNext, onBack, onQueuedChange 
               <button className="sb-save img" onClick={() => doSave("image", imgDraft)} disabled={!imgDraft.trim()}>Save image</button>
             </div>
             <div className="sb-row">
-              <input value={fanDraft} onChange={e => setFanDraft(e.target.value)}
+              <input ref={fanRef} value={fanDraft} onChange={e => setFanDraft(e.target.value)}
                 onKeyDown={e => { if (e.key === "Enter") doSave("fandom", fanDraft); }}
                 placeholder="Paste FANDOM page URL…" className="sb-input" />
               <button className="sb-save fan" onClick={() => doSave("fandom", fanDraft)} disabled={!fanDraft.trim()}>Save Fandom</button>
