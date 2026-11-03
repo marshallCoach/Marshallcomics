@@ -875,7 +875,7 @@ export default function BoxVisual({ initBox }: { initBox?: string } = {}) {
                           letterSpacing: "1px", color: "var(--muted)",
                         }}>#{c.Entry}</span>
                         <div style={{ display: "flex", gap: 4 }}>
-                          {isKey    && <span className="badge bkey"  style={{ fontSize: "0.875rem" }}>KEY</span>}
+                          {isKey    && <span className="badge bkey"  style={{ fontSize: "0.875rem" }} title="Key issue" aria-label="Key issue">🔑</span>}
                           {isSigned && <span className="badge bgold" style={{ fontSize: "0.875rem" }}>SIGNED</span>}
                           {c.Platform && <span className="badge bb"  style={{ fontSize: "0.875rem" }}>{c.Platform}</span>}
                         </div>

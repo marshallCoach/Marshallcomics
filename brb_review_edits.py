@@ -103,7 +103,8 @@ def build_index(ws, H):
     def ci(n):
         return H.index(n) + 1 if n in H else None
     cT, cI, cV, cB, cS = (ci(COLMAP[k]) for k in ("Title", "Issue", "Volume", "Box", "Signed_By"))
-    idx, signer = {}, {}
+    cEntry = ci("#")   # stable row id — lets an edit target ONE specific row
+    idx, signer, entry_idx = {}, {}, {}
     for r in range(2, ws.max_row + 1):
         vol = (nv(ws.cell(r, cV).value) or "1") if cV else "1"
         key = (nt(ws.cell(r, cT).value) if cT else "",
@@ -113,12 +114,21 @@ def build_index(ws, H):
         idx.setdefault(key, []).append(r)
         if cS:
             signer[r] = nv(ws.cell(r, cS).value)
-    return idx, signer
+        if cEntry:
+            ev = ws.cell(r, cEntry).value
+            if ev is not None and str(ev).strip():
+                entry_idx[str(ev).strip()] = r
+    return idx, signer, entry_idx
 
 
-def match_rows(index, signer, m):
-    """Rows matching an edit's identity via the prebuilt index. Title+Issue+
-    Volume+Box first; if more than one (intended dupes) narrow by Signed By."""
+def match_rows(index, signer, entry_idx, m):
+    """Rows matching an edit's identity via the prebuilt index. An exact Entry id
+    (the stable '#' column) targets exactly ONE row — the only safe way to act on
+    one of two byte-identical duplicate rows, which Title+Issue+Volume+Box can't
+    tell apart. Otherwise: Title+Issue+Volume+Box, narrowed by Signed By on a tie."""
+    if m.get("Entry") not in (None, ""):
+        r = entry_idx.get(str(m["Entry"]).strip())
+        return [r] if r else []
     want = (nt(m.get("Title")), ni(m.get("Issue")), nv(m.get("Volume") or "1"), nv(m.get("Box")))
     hits = list(index.get(want, []))
     if len(hits) > 1 and m.get("Signed_By"):
@@ -148,7 +158,7 @@ def main():
     def ci(n):
         return H.index(n) + 1 if n in H else None
 
-    index, signer = build_index(ws, H)
+    index, signer, entry_idx = build_index(ws, H)
     n_edit = n_del = n_skip = 0
     del_rows = []  # collect row numbers to delete, apply after field edits
 
@@ -175,7 +185,7 @@ def main():
         for payload_i in items:
             m = payload_i.get("match", {})
             label = f'{m.get("Title")} #{m.get("Issue")} (Vol {m.get("Volume") or "1"}, Box {m.get("Box")})'
-            rows = match_rows(index, signer, m)
+            rows = match_rows(index, signer, entry_idx, m)
             if len(rows) == 0:
                 print(f"    ✗ {label}: no matching row — SKIPPED"); n_skip += 1; continue
 
