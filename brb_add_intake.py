@@ -10,6 +10,9 @@ Dry-run by default; --apply writes a NEW dated xlsx (never edits in place).
 CSV columns (header row required, order-free, extras ignored):
     title,issue,year,volume,publisher,box,era
 'volume' and 'era' may be blank. 'era' defaults to Modern.
+Optional enrichment columns (written only when present + non-blank), so a rich
+new-pull paste lands creators/cover/price in one step, nothing lost:
+    writer,artist,cover_artist,cover_price,condition,imprint,seller_notes
 
     python3 brb_add_intake.py --csv intake_2026-09-15.csv
     python3 brb_add_intake.py --csv intake_2026-09-15.csv --apply
@@ -77,6 +80,13 @@ def main():
     cPD = ci("Publication Date")
     if cPD is None:
         cPD = ws.max_column + 1; ws.cell(1, cPD, "Publication Date")
+    # Optional enrichment columns — written when the intake CSV supplies them, so a
+    # rich paste (new pulls WITH creators/cover/price/notes) lands fully-formed in
+    # one step instead of needing a separate creator-fill batch. Blank/absent = skip.
+    OPT = {"writer": ci("Writer(s)"), "artist": ci("Artist(s)"),
+           "cover_artist": ci("Cover Artist"), "cover_price": ci("Cover Price"),
+           "condition": ci("Condition"), "imprint": ci("Imprint"),
+           "seller_notes": ci("Seller Notes / Variants / Caveats")}
     for name, col in (("Title", cT), ("Issue #", cI), ("Year", cY), ("Box #", cB)):
         if col is None:
             sys.exit(f"required column '{name}' not found in sheet")
@@ -142,6 +152,10 @@ def main():
         if cE: ws.cell(at, cE, (rec.get("era") or "Modern").strip())
         if cD: ws.cell(at, cD, stamp)
         if cPD: ws.cell(at, cPD, today)  # new pull = released ~today → Recent + Release Timeline
+        for key, colidx in OPT.items():  # optional enrichment, only when supplied
+            val = (rec.get(key) or "").strip()
+            if colidx and val:
+                ws.cell(at, colidx, val)
         print(f"  + {title} #{issue} ({year}) {rec.get('publisher','')} -> Box {box}"
               + (f"  Vol {rec.get('volume')}" if (rec.get('volume') or '').strip() else ""))
         existing.add(k); added += 1; at += 1
