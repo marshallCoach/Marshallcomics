@@ -27,8 +27,8 @@ const PROBLEMS: { id: ProblemId; label: string; blurb: string; color: string; vo
     solutions: [{ key: "vol1", label: "It's Volume 1" }, { key: "research", label: "Needs research" }] },
   { id: "no-year",       label: "Missing / bad year",        blurb: "Year is blank or not a 4-digit year", color: "#0e7490", yr: true,
     solutions: [{ key: "research", label: "Needs research" }] },
-  { id: "likely-variant", label: "Likely variant (cover-buy)", blurb: "In the CC1 cover-buy box — probably a variant of the main cover", color: "#db2777",
-    solutions: [{ key: "confirm-variant", label: "✓ Confirm variant" }, { key: "not-variant", label: "Not a variant" }] },
+  { id: "likely-variant", label: "Likely variant (cover-buy)", blurb: "CC1 cover-buy. If the cover shown is correct, click “Cover's right”. Only paste a Fandom link if the cover is wrong.", color: "#db2777",
+    solutions: [{ key: "confirm-variant", label: "✓ Cover's right — keep as variant" }, { key: "not-variant", label: "Not a variant (regular copy)" }] },
   { id: "not-in-gcd",    label: "Not in GCD",                blurb: "Informational — GCD has no series, but most are verified by a Fandom cover or are variants/recent. Not counted as work.", color: "#0891b2", vol: true, info: true,
     solutions: [{ key: "indie", label: "Indie — not catalogued" }, { key: "research", label: "Needs research" }] },
 ];
@@ -353,6 +353,11 @@ export default function DataFix() {
                               onKeyDown={e => { if (e.key === "Enter" && /^\d{4}$/.test(yearDraft[id] || "")) resolve(c, id, g.pid, "solution", `year:${yearDraft[id].trim()}`); }} />
                             <button className="df-link-save" style={{ background: "#0e7490" }} disabled={!/^\d{4}$/.test(yearDraft[id] || "")}
                               onClick={() => resolve(c, id, g.pid, "solution", `year:${(yearDraft[id] || "").trim()}`)}>Set year</button>
+                          </div>
+                        )}
+                        {g.pid === "likely-variant" && (
+                          <div style={{ fontSize: ".72rem", color: "var(--muted,#888)", margin: "2px 0 -2px" }}>
+                            Cover right? Hit <b>✓ Cover's right</b> above — skip the box below. The link is only for a wrong cover.
                           </div>
                         )}
                         <div className="df-linkrow">
