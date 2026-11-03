@@ -229,7 +229,7 @@ for (let r = 1; r < allRows.length; r++) {
     Writer: \`${s(row,C.writer)}\`, Artist: \`${s(row,C.artist)}\`,
     Signed: \`${s(row,C.signed)}\`, Signed_By: \`${s(row,C.signedBy)}\`,
     Personal: \`${s(row,C.personal)}\`, Condition: \`${s(row,C.cond)}\`,
-    CGC_Worth: \`${s(row,C.cgc)}\`, Value_NM: \`${s(row,C.nm)}\`, Value_VF: \`${s(row,C.vf)}\`,
+    CGC_Worth: \`${s(row,C.cgc)}\`, Value_NM: \`${s(row,C.nm).replace(/^\s*\$\s*/,'')}\`, Value_VF: \`${s(row,C.vf).replace(/^\s*\$\s*/,'')}\`,
     Category: \`${s(row,C.wc)}\`, Era: \`${s(row,C.era)}\`, Universe: \`${s(row,C.uni)}\`,
     Seller_Notes: \`${s(row,C.seller)}\`, Story_Pitch: \`${s(row,C.pitch)}\`,
     Content: \`${s(row,C.content)}\`, Platform: \`${s(row,C.platform)}\`,
