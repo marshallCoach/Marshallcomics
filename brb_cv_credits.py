@@ -207,6 +207,7 @@ def main():
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--out", default=None)
+    ap.add_argument("--titles", default="", help="comma-list: restrict to groups whose title contains one of these (case-insensitive) — e.g. for a few indie books CV can reach but GCD/Fandom can't")
     ap.add_argument("--verbose", action="store_true", help="explain every lookup (use with --limit)")
     args = ap.parse_args()
     global VERBOSE
@@ -233,6 +234,11 @@ def main():
     for row in ws.iter_rows(min_row=2):
         if blank(row[wi].value) or blank(row[ai].value) or blank(row[ci].value):
             groups[(str(row[ti].value or "").strip(), year_of(row[yi].value))].append(row)
+    only = [t.strip().lower() for t in args.titles.split(",") if t.strip()]
+    if only:
+        groups = defaultdict(list, {g: rows for g, rows in groups.items()
+                                    if any(o in g[0].lower() for o in only)})
+        print(f"  --titles filter: {len(groups)} group(s) match {only}")
     nrows = sum(len(v) for v in groups.values())
     todo = [g for g in groups if state.get(f"G::{g[0]}::{g[1]}") != "done"]
     if args.limit:
