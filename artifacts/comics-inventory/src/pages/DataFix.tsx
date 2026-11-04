@@ -11,6 +11,20 @@ import { setFlagKind as setCoverFlagKind } from "@/lib/coverFlags";
 const comics = DATA.comics;
 const BASE = import.meta.env.BASE_URL?.replace(/\/$/, "") ?? "";
 
+// Title consistency — same normalization as brb_validate.py Check 12, so the
+// on-page list matches the validator's "split by punctuation/case" output.
+const normTitleKey = (t: string) => t.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+function simRatio(a: string, b: string): number {
+  const m = a.length, n = b.length;
+  if (!m && !n) return 1;
+  const d: number[][] = Array.from({ length: m + 1 }, () => new Array(n + 1).fill(0));
+  for (let i = 0; i <= m; i++) d[i][0] = i;
+  for (let j = 0; j <= n; j++) d[0][j] = j;
+  for (let i = 1; i <= m; i++) for (let j = 1; j <= n; j++)
+    d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+  return 1 - d[m][n] / Math.max(m, n);
+}
+
 const LS_FIXES = "brbDataFixes_v1";     // id -> resolution record
 const LS_META  = "brbDataFixMeta_v1";   // { lastDate, streak, todayCount }
 
@@ -105,6 +119,11 @@ export default function DataFix() {
   const [flOpen, setFlOpen] = useState(false);
   const [unresolved, setUnresolved] = useState<{ title: string; issue: string; reason: string }[]>([]);
   const [urOpen, setUrOpen] = useState(false);
+  const [tcOpen, setTcOpen] = useState(false);
+  const [titleMerges, setTitleMerges] = useState<Record<string, string>>(() => {
+    try { return JSON.parse(localStorage.getItem("brbTitleMerges_v1") || "{}"); } catch { return {}; }
+  });
+  useEffect(() => { try { localStorage.setItem("brbTitleMerges_v1", JSON.stringify(titleMerges)); } catch { /* ignore */ } }, [titleMerges]);
 
   useEffect(() => {
     fetch(`${BASE}/gcd_notfound.json`).then(r => r.ok ? r.json() : [])
@@ -135,6 +154,58 @@ export default function DataFix() {
     return flagged.filter(f => /fandom/i.test(coverSourceSync(f.c) || "") && coverUrlSync(f.c) !== null);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [flagged, coversLoaded]);
+
+  // ── Title consistency (client-side, mirrors validator Check 12) ──────────────
+  const titleGroups = useMemo(() => {
+    const g: Record<string, Map<string, number>> = {};
+    for (const c of comics) {
+      const t = (c.Title || "").trim(); if (!t) continue;
+      const k = normTitleKey(t);
+      (g[k] ||= new Map()).set(t, (g[k].get(t) || 0) + 1);
+    }
+    return g;
+  }, []);
+  // Same series, split spellings → mergeable.
+  const collisions = useMemo(() =>
+    Object.entries(titleGroups).filter(([, m]) => m.size > 1)
+      .map(([key, m]) => ({ key, spellings: [...m.entries()].map(([t, n]) => ({ t, n })).sort((a, b) => b.n - a.n) }))
+      .sort((a, b) => a.spellings[0].t.localeCompare(b.spellings[0].t)),
+    [titleGroups]);
+  // Near-identical (may be distinct series) → review only.
+  const fuzzy = useMemo(() => {
+    const keys = Object.keys(titleGroups).sort();
+    const stripTail = (s: string) => s.replace(/\s*\d+$/, "").trim();
+    const out: { a: string; b: string }[] = [];
+    for (let i = 0; i < keys.length; i++) for (let j = i + 1; j < keys.length; j++) {
+      const a = keys[i], b = keys[j];
+      if (Math.abs(a.length - b.length) > 4) continue;
+      if ((stripTail(a) !== a || stripTail(b) !== b) && stripTail(a) === stripTail(b)) continue;
+      if (simRatio(a, b) >= 0.94) out.push({ a: [...titleGroups[a].keys()][0], b: [...titleGroups[b].keys()][0] });
+    }
+    return out;
+  }, [titleGroups]);
+  const mergeQueuedCount = Object.keys(titleMerges).length;
+  const exportTitleMerges = useCallback(() => {
+    const edits: unknown[] = [];
+    for (const [k, canonical] of Object.entries(titleMerges)) {
+      const m = titleGroups[k]; if (!m) continue;
+      for (const spelling of m.keys()) {
+        if (spelling === canonical) continue;
+        for (const c of comics) {
+          if ((c.Title || "").trim() !== spelling) continue;
+          edits.push({ type: "comic-edit",
+            match: { Title: spelling, Issue: String(c.Issue ?? ""), Volume: String((c as { Volume?: string }).Volume ?? "1"), Box: String((c as { Box?: string }).Box ?? "") },
+            changes: { Title: canonical } });
+        }
+      }
+    }
+    if (!edits.length) { alert("No title merges queued — pick a canonical spelling first."); return; }
+    const blob = new Blob([JSON.stringify({ type: "comic-edit-batch", edits }, null, 2)], { type: "application/json" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = `comic_edits_batch_${todayStr().replace(/-/g, "")}_titlemerge.json`;
+    a.click();
+  }, [titleMerges, titleGroups]);
 
   // Self-prune: once a resolution has been applied + reingested, its comic no
   // longer has that problem, so it drops out of `flagged`. Remove those stale
@@ -330,6 +401,67 @@ export default function DataFix() {
                   <span style={{ color: "var(--muted2,#aaa)" }}>{u.reason}</span>
                 </a>
               ))}
+            </div>
+          )}
+        </section>
+      )}
+
+      {/* Title cleanup — merge split spellings (same series), review near-identical. */}
+      {(collisions.length > 0 || fuzzy.length > 0) && (
+        <section className="df-group" style={{ marginBottom: 14 }}>
+          <button className="df-group-hd" onClick={() => setTcOpen(o => !o)} style={{ borderLeft: "4px solid #b45309" }}>
+            <span className="df-group-name"><span className="df-chev">{tcOpen ? "▾" : "▸"}</span> 🔤 Title cleanup — merge split spellings</span>
+            <span className="df-chip-n">{collisions.length + fuzzy.length}</span>
+          </button>
+          {tcOpen && (
+            <div style={{ padding: "10px 14px" }}>
+              {collisions.length > 0 && (
+                <>
+                  <div style={{ fontSize: "0.8rem", color: "var(--muted2,#aaa)", marginBottom: 8 }}>
+                    Same series, different spelling. Click the spelling to <b>keep</b> — the others rename to it. Then Export and run <code>brb_all</code>.
+                  </div>
+                  {collisions.map(g => (
+                    <div key={g.key} style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center", padding: "6px 0", borderBottom: "1px solid var(--border,#2c2c38)" }}>
+                      {g.spellings.map(s => {
+                        const chosen = titleMerges[g.key] === s.t;
+                        return (
+                          <button key={s.t} onClick={() => setTitleMerges(prev => ({ ...prev, [g.key]: s.t }))}
+                            style={{ fontSize: "0.82rem", padding: "4px 10px", borderRadius: 6, cursor: "pointer",
+                              border: `1.5px solid ${chosen ? "#16a34a" : "var(--border,#2c2c38)"}`,
+                              background: chosen ? "#16653420" : "var(--surface2,#26262f)",
+                              color: chosen ? "#16a34a" : "var(--text,#eee)", fontWeight: chosen ? 700 : 400 }}>
+                            {chosen ? "✓ keep " : ""}{s.t} <span style={{ opacity: 0.6 }}>×{s.n}</span>
+                          </button>
+                        );
+                      })}
+                      {titleMerges[g.key] && (
+                        <button onClick={() => setTitleMerges(prev => { const n = { ...prev }; delete n[g.key]; return n; })}
+                          style={{ fontSize: "0.72rem", background: "none", border: "none", color: "var(--muted,#888)", cursor: "pointer" }}>clear</button>
+                      )}
+                    </div>
+                  ))}
+                  <button onClick={exportTitleMerges} disabled={!mergeQueuedCount}
+                    style={{ marginTop: 10, fontSize: "0.82rem", fontWeight: 700, border: "none", borderRadius: 7, padding: "7px 14px",
+                      cursor: mergeQueuedCount ? "pointer" : "default",
+                      background: mergeQueuedCount ? "#16a34a" : "var(--surface2,#26262f)", color: mergeQueuedCount ? "#04220f" : "var(--muted,#888)" }}>
+                    ⬇ Export {mergeQueuedCount || ""} title merge{mergeQueuedCount === 1 ? "" : "s"}
+                  </button>
+                  <span style={{ fontSize: "0.72rem", color: "var(--muted,#888)", marginLeft: 10 }}>Drop in ~/Downloads → run brb_all (step 7b applies the renames).</span>
+                </>
+              )}
+              {fuzzy.length > 0 && (
+                <div style={{ marginTop: 14 }}>
+                  <div style={{ fontSize: "0.8rem", color: "var(--muted2,#aaa)", marginBottom: 6 }}>
+                    Near-identical — may be <b>distinct</b> series (e.g. “Year One” vs “Year Two”). Review; rename via the Edit page only if truly the same.
+                  </div>
+                  {fuzzy.map((p, i) => (
+                    <div key={i} style={{ display: "flex", justifyContent: "space-between", gap: 10, flexWrap: "wrap", padding: "4px 0", fontSize: "0.8rem", borderBottom: "1px solid var(--border,#2c2c38)" }}>
+                      <span>{p.a} <span style={{ color: "var(--muted,#888)" }}>~</span> {p.b}</span>
+                      <a href={`https://www.google.com/search?q=${encodeURIComponent(p.a + " vs " + p.b + " comic series")}`} target="_blank" rel="noopener noreferrer" style={{ color: "#1d6fa4", textDecoration: "none" }}>check ↗</a>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           )}
         </section>
