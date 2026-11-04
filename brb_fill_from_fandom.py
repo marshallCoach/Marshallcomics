@@ -122,6 +122,16 @@ def main():
 
     out = os.path.join(ROOT, f"attached_assets/comics_inventory_{datetime.datetime.now():%d%m_%H%M}.xlsx")
     wb.save(out)
+
+    # Surface the unresolved list on the Data Fix page so Robert can investigate
+    # each by hand. brb.py deploys this (it's in GEN_FILES_OPT).
+    upath = os.path.join(ROOT, "artifacts/comics-inventory/public/fandom_unresolved.json")
+    try:
+        os.makedirs(os.path.dirname(upath), exist_ok=True)
+        json.dump([{"title": t, "issue": i, "reason": why} for t, i, why in errors],
+                  open(upath, "w"), indent=0)
+    except Exception:  # noqa: BLE001 — never let reporting break the run
+        pass
     if changes:
         cp = os.path.join(ROOT, "fandom_fill_changes.csv")
         with open(cp, "w", newline="") as f:

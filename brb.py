@@ -95,6 +95,7 @@ GEN_FILES_OPT = [
     "artifacts/comics-inventory/src/data/locationSnapshot.json",
     "artifacts/comics-inventory/src/data/ebaySellDupes.json",
     "artifacts/comics-inventory/public/fandom_links.json",
+    "artifacts/comics-inventory/public/fandom_unresolved.json",
 ]
 
 

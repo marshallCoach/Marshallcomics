@@ -103,10 +103,14 @@ export default function DataFix() {
   const [notInGcd, setNotInGcd] = useState<Set<string>>(new Set());
   const [coversLoaded, setCoversLoaded] = useState(false);
   const [flOpen, setFlOpen] = useState(false);
+  const [unresolved, setUnresolved] = useState<{ title: string; issue: string; reason: string }[]>([]);
+  const [urOpen, setUrOpen] = useState(false);
 
   useEffect(() => {
     fetch(`${BASE}/gcd_notfound.json`).then(r => r.ok ? r.json() : [])
       .then((a: string[]) => setNotInGcd(new Set(a))).catch(() => {});
+    fetch(`${BASE}/fandom_unresolved.json`).then(r => r.ok ? r.json() : [])
+      .then((a: { title: string; issue: string; reason: string }[]) => setUnresolved(Array.isArray(a) ? a : [])).catch(() => {});
     coversReady().then(() => setCoversLoaded(true));
   }, []);
 
@@ -298,6 +302,33 @@ export default function DataFix() {
                     <div style={{ color: "var(--muted2,#aaa)" }}>Box {f.c.Box || "—"} · {f.problems.join(", ")}</div>
                   </div>
                 </div>
+              ))}
+            </div>
+          )}
+        </section>
+      )}
+
+      {/* Fandom fill — unresolved: books with a Fandom cover still missing a
+          creator/date that the wiki lookup couldn't fill (too new, no mapped
+          wiki, or a volume mismatch). Surfaced for manual investigation. */}
+      {unresolved.length > 0 && (
+        <section className="df-group" style={{ marginBottom: 14 }}>
+          <button className="df-group-hd" onClick={() => setUrOpen(o => !o)} style={{ borderLeft: "4px solid #0e7490" }}>
+            <span className="df-group-name">
+              <span className="df-chev">{urOpen ? "▾" : "▸"}</span> 🔍 Fandom fill — unresolved (investigate)
+            </span>
+            <span className="df-chip-n">{unresolved.length}</span>
+          </button>
+          {urOpen && (
+            <div style={{ padding: "10px 14px", display: "flex", flexDirection: "column", gap: 4 }}>
+              {unresolved.map((u, i) => (
+                <a key={u.title + u.issue + i}
+                   href={`https://www.google.com/search?q=${encodeURIComponent(`${u.title} #${u.issue} comic writer artist`)}`}
+                   target="_blank" rel="noopener noreferrer"
+                   style={{ display: "flex", justifyContent: "space-between", gap: 12, flexWrap: "wrap", padding: "6px 9px", borderBottom: "1px solid var(--border,#2c2c38)", textDecoration: "none", color: "inherit", fontSize: "0.82rem" }}>
+                  <span style={{ fontWeight: 600 }}>{u.title} <b>#{u.issue}</b> ↗</span>
+                  <span style={{ color: "var(--muted2,#aaa)" }}>{u.reason}</span>
+                </a>
               ))}
             </div>
           )}
