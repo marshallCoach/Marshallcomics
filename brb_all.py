@@ -142,6 +142,14 @@ def main():
             archive(js)
     step(2, "DATA-FIX EXPORT (apply Fandom links)", datafix)
 
+    # 2b — canonicalize split title spellings from title_aliases.json (merges any
+    # new title_aliases_*.json from Downloads first). Runs every time so a re-split
+    # introduced by a later intake self-heals instead of re-flagging.
+    def title_aliases():
+        if run([PY, os.path.join(ROOT, "brb_apply_title_aliases.py"), "--apply"]):
+            raise RuntimeError("brb_apply_title_aliases failed")
+    step("2b", "TITLE ALIASES (canonicalize split spellings)", title_aliases)
+
     # Enrichment runs most-authoritative first so later non-destructive fills
     # can't degrade a better source: user links (above) -> GCD catalog -> Fandom.
 

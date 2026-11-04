@@ -24,6 +24,16 @@ function simRatio(a: string, b: string): number {
     d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
   return 1 - d[m][n] / Math.max(m, n);
 }
+// Canonical title from a Fandom URL ("link is truth"): strip /wiki/, decode, drop
+// the _Vol_N_ISSUE tail, underscores -> spaces. No fetch needed — the page title
+// is in the path. e.g. .../wiki/Batman/Superman:_World%27s_Finest_Vol_1_33
+function canonicalFromFandom(url: string): string {
+  const m = (url || "").match(/\/wiki\/(.+)$/);
+  if (!m) return "";
+  let p = m[1].split(/[?#]/)[0];
+  try { p = decodeURIComponent(p); } catch { /* keep raw */ }
+  return p.replace(/_Vol_\d+.*$/i, "").replace(/_/g, " ").trim();
+}
 
 const LS_FIXES = "brbDataFixes_v1";     // id -> resolution record
 const LS_META  = "brbDataFixMeta_v1";   // { lastDate, streak, todayCount }
@@ -124,6 +134,10 @@ export default function DataFix() {
     try { return JSON.parse(localStorage.getItem("brbTitleMerges_v1") || "{}"); } catch { return {}; }
   });
   useEffect(() => { try { localStorage.setItem("brbTitleMerges_v1", JSON.stringify(titleMerges)); } catch { /* ignore */ } }, [titleMerges]);
+  const [titleLinks, setTitleLinks] = useState<Record<string, string>>(() => {
+    try { return JSON.parse(localStorage.getItem("brbTitleLinks_v1") || "{}"); } catch { return {}; }
+  });
+  useEffect(() => { try { localStorage.setItem("brbTitleLinks_v1", JSON.stringify(titleLinks)); } catch { /* ignore */ } }, [titleLinks]);
 
   useEffect(() => {
     fetch(`${BASE}/gcd_notfound.json`).then(r => r.ok ? r.json() : [])
@@ -184,28 +198,28 @@ export default function DataFix() {
     }
     return out;
   }, [titleGroups]);
-  const mergeQueuedCount = Object.keys(titleMerges).length;
-  const exportTitleMerges = useCallback(() => {
-    const edits: unknown[] = [];
+  const mergeQueuedCount = Object.keys(titleMerges).filter(k => titleMerges[k]).length;
+  // Export a persistent title_aliases map (normKey -> {canonical, source}). The
+  // pipeline merges it into title_aliases.json and re-applies it every brb_all,
+  // so the merge is permanent — a later intake that re-splits self-heals.
+  const exportTitleAliases = useCallback(() => {
+    const out: Record<string, { canonical: string; source: string }> = {};
     for (const [k, canonical] of Object.entries(titleMerges)) {
-      const m = titleGroups[k]; if (!m) continue;
-      for (const spelling of m.keys()) {
-        if (spelling === canonical) continue;
-        for (const c of comics) {
-          if ((c.Title || "").trim() !== spelling) continue;
-          edits.push({ type: "comic-edit",
-            match: { Title: spelling, Issue: String(c.Issue ?? ""), Volume: String((c as { Volume?: string }).Volume ?? "1"), Box: String((c as { Box?: string }).Box ?? "") },
-            changes: { Title: canonical } });
-        }
-      }
+      if (!canonical) continue;
+      out[k] = { canonical, source: titleLinks[k] || "" };
     }
-    if (!edits.length) { alert("No title merges queued — pick a canonical spelling first."); return; }
-    const blob = new Blob([JSON.stringify({ type: "comic-edit-batch", edits }, null, 2)], { type: "application/json" });
+    if (!Object.keys(out).length) { alert("Nothing chosen — paste a Fandom link or click a spelling to keep first."); return; }
+    const blob = new Blob([JSON.stringify(out, null, 2)], { type: "application/json" });
     const a = document.createElement("a");
     a.href = URL.createObjectURL(blob);
-    a.download = `comic_edits_batch_${todayStr().replace(/-/g, "")}_titlemerge.json`;
+    a.download = `title_aliases_${todayStr().replace(/-/g, "")}.json`;
     a.click();
-  }, [titleMerges, titleGroups]);
+  }, [titleMerges, titleLinks]);
+  const setLink = useCallback((key: string, url: string) => {
+    setTitleLinks(prev => ({ ...prev, [key]: url }));
+    const canon = canonicalFromFandom(url);
+    if (canon) setTitleMerges(prev => ({ ...prev, [key]: canon }));  // link is truth
+  }, []);
 
   // Self-prune: once a resolution has been applied + reingested, its comic no
   // longer has that problem, so it drops out of `flagged`. Remove those stale
@@ -420,33 +434,45 @@ export default function DataFix() {
                   <div style={{ fontSize: "0.8rem", color: "var(--muted2,#aaa)", marginBottom: 8 }}>
                     Same series, different spelling. Click the spelling to <b>keep</b> — the others rename to it. Then Export and run <code>brb_all</code>.
                   </div>
-                  {collisions.map(g => (
-                    <div key={g.key} style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center", padding: "6px 0", borderBottom: "1px solid var(--border,#2c2c38)" }}>
-                      {g.spellings.map(s => {
-                        const chosen = titleMerges[g.key] === s.t;
-                        return (
-                          <button key={s.t} onClick={() => setTitleMerges(prev => ({ ...prev, [g.key]: s.t }))}
-                            style={{ fontSize: "0.82rem", padding: "4px 10px", borderRadius: 6, cursor: "pointer",
-                              border: `1.5px solid ${chosen ? "#16a34a" : "var(--border,#2c2c38)"}`,
-                              background: chosen ? "#16653420" : "var(--surface2,#26262f)",
-                              color: chosen ? "#16a34a" : "var(--text,#eee)", fontWeight: chosen ? 700 : 400 }}>
-                            {chosen ? "✓ keep " : ""}{s.t} <span style={{ opacity: 0.6 }}>×{s.n}</span>
-                          </button>
-                        );
-                      })}
-                      {titleMerges[g.key] && (
-                        <button onClick={() => setTitleMerges(prev => { const n = { ...prev }; delete n[g.key]; return n; })}
-                          style={{ fontSize: "0.72rem", background: "none", border: "none", color: "var(--muted,#888)", cursor: "pointer" }}>clear</button>
-                      )}
-                    </div>
-                  ))}
-                  <button onClick={exportTitleMerges} disabled={!mergeQueuedCount}
+                  {collisions.map(g => {
+                    const chosenT = titleMerges[g.key];
+                    const fromLink = !!canonicalFromFandom(titleLinks[g.key] || "");
+                    return (
+                      <div key={g.key} style={{ display: "flex", flexDirection: "column", gap: 6, padding: "8px 0", borderBottom: "1px solid var(--border,#2c2c38)" }}>
+                        <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
+                          {g.spellings.map(s => {
+                            const chosen = chosenT === s.t;
+                            return (
+                              <button key={s.t} onClick={() => setTitleMerges(prev => ({ ...prev, [g.key]: s.t }))}
+                                style={{ fontSize: "0.82rem", padding: "4px 10px", borderRadius: 6, cursor: "pointer",
+                                  border: `1.5px solid ${chosen ? "#16a34a" : "var(--border,#2c2c38)"}`,
+                                  background: chosen ? "#16653420" : "var(--surface2,#26262f)",
+                                  color: chosen ? "#16a34a" : "var(--text,#eee)", fontWeight: chosen ? 700 : 400 }}>
+                                {chosen ? "✓ keep " : ""}{s.t} <span style={{ opacity: 0.6 }}>×{s.n}</span>
+                              </button>
+                            );
+                          })}
+                          {chosenT && (
+                            <button onClick={() => { setTitleMerges(prev => { const n = { ...prev }; delete n[g.key]; return n; }); setTitleLinks(prev => { const n = { ...prev }; delete n[g.key]; return n; }); }}
+                              style={{ fontSize: "0.72rem", background: "none", border: "none", color: "var(--muted,#888)", cursor: "pointer" }}>clear</button>
+                          )}
+                        </div>
+                        <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
+                          <input value={titleLinks[g.key] || ""} onChange={e => setLink(g.key, e.target.value)}
+                            placeholder="…or paste the Fandom link (its title wins)"
+                            style={{ flex: 1, minWidth: 220, fontSize: "0.78rem", padding: "5px 9px", borderRadius: 5, border: "1.5px solid var(--border,#2c2c38)", background: "var(--bg,#141419)", color: "var(--text,#eee)" }} />
+                          {fromLink && <span style={{ fontSize: "0.78rem", color: "#16a34a", fontWeight: 700 }}>→ {chosenT}</span>}
+                        </div>
+                      </div>
+                    );
+                  })}
+                  <button onClick={exportTitleAliases} disabled={!mergeQueuedCount}
                     style={{ marginTop: 10, fontSize: "0.82rem", fontWeight: 700, border: "none", borderRadius: 7, padding: "7px 14px",
                       cursor: mergeQueuedCount ? "pointer" : "default",
                       background: mergeQueuedCount ? "#16a34a" : "var(--surface2,#26262f)", color: mergeQueuedCount ? "#04220f" : "var(--muted,#888)" }}>
-                    ⬇ Export {mergeQueuedCount || ""} title merge{mergeQueuedCount === 1 ? "" : "s"}
+                    ⬇ Export {mergeQueuedCount || ""} title alias{mergeQueuedCount === 1 ? "" : "es"}
                   </button>
-                  <span style={{ fontSize: "0.72rem", color: "var(--muted,#888)", marginLeft: 10 }}>Drop in ~/Downloads → run brb_all (step 7b applies the renames).</span>
+                  <span style={{ fontSize: "0.72rem", color: "var(--muted,#888)", marginLeft: 10 }}>Drop in ~/Downloads → run brb_all. Applied every run, so it sticks for good.</span>
                 </>
               )}
               {fuzzy.length > 0 && (

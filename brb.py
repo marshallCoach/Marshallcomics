@@ -96,6 +96,7 @@ GEN_FILES_OPT = [
     "artifacts/comics-inventory/src/data/ebaySellDupes.json",
     "artifacts/comics-inventory/public/fandom_links.json",
     "artifacts/comics-inventory/public/fandom_unresolved.json",
+    "title_aliases.json",
 ]
 
 
