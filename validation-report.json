@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-03T03:50:23.099Z",
-  "source": "comics_inventory_0211_2250.xlsx",
-  "rowCount": 11167,
+  "generatedAt": "2026-11-04T01:03:45.758Z",
+  "source": "comics_inventory_0311_2003.xlsx",
+  "rowCount": 11181,
   "blanks": {
     "title": 0,
     "box": 0,
@@ -12,10 +12,10 @@
   "fillRate": {
     "writer": 98.9,
     "artist": 97,
-    "coverArtist": 97.4,
+    "coverArtist": 97.5,
     "condition": 100,
-    "value": 95.6,
-    "volume": 99.7,
+    "value": 95.5,
+    "volume": 99.6,
     "year": 100
   }
 }
