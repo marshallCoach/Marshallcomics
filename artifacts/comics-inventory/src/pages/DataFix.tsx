@@ -179,12 +179,25 @@ export default function DataFix() {
     }
     return g;
   }, []);
-  // Same series, split spellings → mergeable.
+  // Exact titles that already carry a Fandom-sourced cover (exact-key match, no
+  // normalized fallback) — so each split spelling shows whether IT holds the link.
+  const fandomTitles = useMemo(() => {
+    void coversLoaded;
+    const s = new Set<string>();
+    for (const c of comics) {
+      const src = coverSourceSync(c);
+      if (src && /fandom|wikia/i.test(src)) s.add((c.Title || "").trim());
+    }
+    return s;
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [coversLoaded]);
+  // Same series, split spellings → mergeable. `linked` = this exact spelling
+  // already has a Fandom cover (keep it, or let a pasted link override).
   const collisions = useMemo(() =>
     Object.entries(titleGroups).filter(([, m]) => m.size > 1)
-      .map(([key, m]) => ({ key, spellings: [...m.entries()].map(([t, n]) => ({ t, n })).sort((a, b) => b.n - a.n) }))
+      .map(([key, m]) => ({ key, spellings: [...m.entries()].map(([t, n]) => ({ t, n, linked: fandomTitles.has(t) })).sort((a, b) => b.n - a.n) }))
       .sort((a, b) => a.spellings[0].t.localeCompare(b.spellings[0].t)),
-    [titleGroups]);
+    [titleGroups, fandomTitles]);
   // Near-identical (may be distinct series) → review only.
   const fuzzy = useMemo(() => {
     const keys = Object.keys(titleGroups).sort();
@@ -432,7 +445,7 @@ export default function DataFix() {
               {collisions.length > 0 && (
                 <>
                   <div style={{ fontSize: "0.8rem", color: "var(--muted2,#aaa)", marginBottom: 8 }}>
-                    Same series, different spelling. Click the spelling to <b>keep</b> — the others rename to it. Then Export and run <code>brb_all</code>.
+                    Same series, different spelling. Click the spelling to <b>keep</b> — the others rename to it. <b style={{ color: "#7c3aed" }}>🔗</b> = that spelling already has a Fandom cover, so prefer it (the merge keeps the cover either way). Then Export and run <code>brb_all</code>.
                   </div>
                   {collisions.map(g => {
                     const chosenT = titleMerges[g.key];
@@ -444,11 +457,12 @@ export default function DataFix() {
                             const chosen = chosenT === s.t;
                             return (
                               <button key={s.t} onClick={() => setTitleMerges(prev => ({ ...prev, [g.key]: s.t }))}
+                                title={s.linked ? "This spelling already has a Fandom cover" : undefined}
                                 style={{ fontSize: "0.82rem", padding: "4px 10px", borderRadius: 6, cursor: "pointer",
-                                  border: `1.5px solid ${chosen ? "#16a34a" : "var(--border,#2c2c38)"}`,
+                                  border: `1.5px solid ${chosen ? "#16a34a" : s.linked ? "#7c3aed" : "var(--border,#2c2c38)"}`,
                                   background: chosen ? "#16653420" : "var(--surface2,#26262f)",
                                   color: chosen ? "#16a34a" : "var(--text,#eee)", fontWeight: chosen ? 700 : 400 }}>
-                                {chosen ? "✓ keep " : ""}{s.t} <span style={{ opacity: 0.6 }}>×{s.n}</span>
+                                {chosen ? "✓ keep " : ""}{s.linked ? "🔗 " : ""}{s.t} <span style={{ opacity: 0.6 }}>×{s.n}</span>
                               </button>
                             );
                           })}
