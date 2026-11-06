@@ -1,8 +1,8 @@
 {
- "source": "comics_inventory_0611_1249.xlsx",
+ "source": "comics_inventory_0611_1751.xlsx",
  "generatedAt": "2026-11-06",
- "groupCount": 139,
- "sellableCount": 146,
+ "groupCount": 140,
+ "sellableCount": 147,
  "estValue": 988.32,
  "rows": [
   {
@@ -3193,6 +3193,28 @@
    ],
    "keepSigned": false,
    "sameBox": false
+  },
+  {
+   "title": "Ultimate Impact: Reborn",
+   "issue": "5",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Chris Condon",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "102"
+   ],
+   "keepBoxes": [
+    "102"
+   ],
+   "boxes": [
+    "102"
+   ],
+   "keepSigned": false,
+   "sameBox": true
   }
  ]
 }
