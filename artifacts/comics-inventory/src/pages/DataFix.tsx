@@ -451,6 +451,15 @@ export default function DataFix() {
                   <div style={{ fontSize: "0.8rem", color: "var(--muted2,#aaa)", marginBottom: 8 }}>
                     Same series, different spelling. Click the spelling to <b>keep</b> — the others rename to it. <b style={{ color: "#7c3aed" }}>🔗</b> = that spelling already has a Fandom cover, so prefer it (the merge keeps the cover either way). Then Export and run <code>brb_all</code>.
                   </div>
+                  <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap", margin: "0 0 12px", position: "sticky", top: 0, background: "var(--surface,#1a1a22)", padding: "6px 0", zIndex: 5 }}>
+                    <button onClick={exportTitleAliases} disabled={!mergeQueuedCount}
+                      style={{ fontSize: "0.82rem", fontWeight: 700, border: "none", borderRadius: 7, padding: "7px 14px",
+                        cursor: mergeQueuedCount ? "pointer" : "default",
+                        background: mergeQueuedCount ? "#16a34a" : "var(--surface2,#26262f)", color: mergeQueuedCount ? "#04220f" : "var(--muted,#888)" }}>
+                      ⬇ Export {mergeQueuedCount || ""} title alias{mergeQueuedCount === 1 ? "" : "es"}
+                    </button>
+                    <span style={{ fontSize: "0.72rem", color: "var(--muted,#888)" }}>Drop in ~/Downloads → run brb_all. Applied every run, so it sticks for good.</span>
+                  </div>
                   {collisions.map(g => {
                     const chosenT = titleMerges[g.key];
                     const fromLink = !!canonicalFromFandom(titleLinks[g.key] || "");
@@ -486,13 +495,6 @@ export default function DataFix() {
                       </div>
                     );
                   })}
-                  <button onClick={exportTitleAliases} disabled={!mergeQueuedCount}
-                    style={{ marginTop: 10, fontSize: "0.82rem", fontWeight: 700, border: "none", borderRadius: 7, padding: "7px 14px",
-                      cursor: mergeQueuedCount ? "pointer" : "default",
-                      background: mergeQueuedCount ? "#16a34a" : "var(--surface2,#26262f)", color: mergeQueuedCount ? "#04220f" : "var(--muted,#888)" }}>
-                    ⬇ Export {mergeQueuedCount || ""} title alias{mergeQueuedCount === 1 ? "" : "es"}
-                  </button>
-                  <span style={{ fontSize: "0.72rem", color: "var(--muted,#888)", marginLeft: 10 }}>Drop in ~/Downloads → run brb_all. Applied every run, so it sticks for good.</span>
                 </>
               )}
               {fuzzy.length > 0 && (
