@@ -133,9 +133,13 @@ def main():
             print("No ~/Downloads/data-fixes*.json — skipping Data Fix export.")
             return
         print(f"Exports: {len(jss)} — {', '.join(os.path.basename(j) for j in jss)}")
-        # No --flags: let brb_apply_fandom_pages discover and MERGE every export.
-        # It used to pass the single newest file, so links exported in earlier
-        # sessions were stranded and only applied (one at a time) over many runs.
+        # Apply the NON-link resolutions first (set Volume, notes, confirm-variant,
+        # year) — brb_apply_data_fixes was never wired in, so those edits used to be
+        # read and archived without ever being applied. It merges every export too.
+        if run([PY, os.path.join(ROOT, "brb_apply_data_fixes.py"), "--apply"]):
+            raise RuntimeError("brb_apply_data_fixes failed")
+        # Then the Fandom links/images. No --flags: it discovers and MERGES every
+        # export (a single-newest read used to strand links from earlier sessions).
         if run([PY, os.path.join(ROOT, "brb_apply_fandom_pages.py"), "--apply"]):
             raise RuntimeError("brb_apply_fandom_pages failed")
         for js in jss:

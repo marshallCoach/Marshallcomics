@@ -109,11 +109,33 @@ def main():
     ap.add_argument("--apply", action="store_true")
     args = ap.parse_args()
 
-    path = args.flags or newest([".", "~/Downloads", ROOT], "data-fixes-*.json")
-    if not path or not os.path.exists(path):
+    # Merge EVERY data-fixes export (Downloads + repo root), not just the newest,
+    # so volume/notes resolutions exported in separate files aren't stranded.
+    import glob as _glob
+    if args.flags:
+        paths = [args.flags] if os.path.exists(args.flags) else []
+    else:
+        paths = [p for p in set(_glob.glob(os.path.join(os.path.expanduser("~/Downloads"), "data-fixes*.json"))
+                                + _glob.glob(os.path.join(ROOT, "data-fixes*.json"))
+                                + _glob.glob("data-fixes*.json")) if os.path.exists(p)]
+        paths.sort(key=os.path.getmtime)
+    if not paths:
         sys.exit("no data-fixes export found — pass --flags <path> (export from the Data Fix page)")
-    recs = json.load(open(path))
-    print(f"FIXES:  {os.path.basename(path)}  ({len(recs)} resolutions)")
+    recs, _seen = [], set()
+    for _p in paths:
+        try:
+            _r = json.load(open(_p))
+        except Exception:  # noqa: BLE001
+            continue
+        for _rec in (_r if isinstance(_r, list) else []):
+            if not isinstance(_rec, dict):
+                continue
+            _k = (_rec.get("kind"), str(_rec.get("title", "")).lower(), str(_rec.get("issue", "")),
+                  str(_rec.get("box", "")), _rec.get("value") or "")
+            if _k in _seen:
+                continue
+            _seen.add(_k); recs.append(_rec)
+    print(f"FIXES:  {len(paths)} export(s)  ({len(recs)} resolutions)")
 
     import openpyxl
     src = newest_xlsx()
@@ -217,6 +239,9 @@ def main():
 
     if not args.apply:
         print("\nDRY RUN — nothing written. Re-run with --apply to write a new xlsx.")
+        return
+    if not pending:
+        print("\nNo applicable resolutions — nothing written.")
         return
     out = os.path.join(ROOT, f"attached_assets/comics_inventory_{datetime.datetime.now():%d%m_%H%M}.xlsx")
     wb.save(out)
