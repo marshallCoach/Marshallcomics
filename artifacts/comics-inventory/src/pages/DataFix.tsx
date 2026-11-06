@@ -332,6 +332,10 @@ export default function DataFix() {
     const q = `${c.Title} ${c.Publisher || ""} #${c.Issue} ${yr} fandom comic book issue`.replace(/\s+/g, " ").trim();
     return `https://www.google.com/search?q=${encodeURIComponent(q)}`;
   };
+  // Series-level Fandom guess for the Title cleanup rows (no issue — it's a whole
+  // series), same idea as the per-book "Find on Fandom" link elsewhere.
+  const fandomTitleSearch = (title: string) =>
+    `https://www.google.com/search?q=${encodeURIComponent(`${title} fandom comic series wiki`)}`;
 
   return (
     <div style={{ maxWidth: "calc(1040px + var(--wide))", margin: "0 auto", padding: "20px 16px 90px" }}>
@@ -472,8 +476,10 @@ export default function DataFix() {
                           )}
                         </div>
                         <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
+                          <a className="df-find" href={fandomTitleSearch(g.spellings[0].t)} target="_blank" rel="noopener noreferrer"
+                            style={{ fontSize: "0.78rem", color: "#5ab0e0", textDecoration: "none", whiteSpace: "nowrap" }}>🔍 Find on Fandom ↗</a>
                           <input value={titleLinks[g.key] || ""} onChange={e => setLink(g.key, e.target.value)}
-                            placeholder="…or paste the Fandom link (its title wins)"
+                            placeholder="…then paste the Fandom link here (its title wins)"
                             style={{ flex: 1, minWidth: 220, fontSize: "0.78rem", padding: "5px 9px", borderRadius: 5, border: "1.5px solid var(--border,#2c2c38)", background: "var(--bg,#141419)", color: "var(--text,#eee)" }} />
                           {fromLink && <span style={{ fontSize: "0.78rem", color: "#16a34a", fontWeight: 700 }}>→ {chosenT}</span>}
                         </div>
