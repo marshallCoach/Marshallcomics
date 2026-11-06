@@ -211,6 +211,16 @@ export default function DataFix() {
     }
     return out;
   }, [titleGroups]);
+  // Match a Fandom-fill-unresolved record (title/issue) back to its inventory row,
+  // so the user can still paste a link for it and it saves through the pipeline.
+  const comicByKey = useMemo(() => {
+    const m = new Map<string, Comic>();
+    for (const c of comics) {
+      const k = normTitleKey(c.Title || "") + "|||" + String(c.Issue ?? "").replace(/^#/, "");
+      if (!m.has(k)) m.set(k, c);
+    }
+    return m;
+  }, []);
   const mergeQueuedCount = Object.keys(titleMerges).filter(k => titleMerges[k]).length;
   // Export a persistent title_aliases map (normKey -> {canonical, source}). The
   // pipeline merges it into title_aliases.json and re-applies it every brb_all,
@@ -242,7 +252,10 @@ export default function DataFix() {
     setFixes(prev => {
       let changed = false;
       const next = new Map(prev);
-      for (const id of [...next.keys()]) if (!ids.has(id)) { next.delete(id); changed = true; }
+      // Keep link records (fandom/image) even for non-flagged books — the user
+      // pasted them to apply (unresolved / too-new rows). Only prune stale
+      // 'solution' records whose underlying problem is gone.
+      for (const [id, rec] of [...next]) if (!ids.has(id) && rec.kind === "solution") { next.delete(id); changed = true; }
       if (changed) saveFixes(next);
       return changed ? next : prev;
     });
@@ -422,16 +435,34 @@ export default function DataFix() {
             <span className="df-chip-n">{unresolved.length}</span>
           </button>
           {urOpen && (
-            <div style={{ padding: "10px 14px", display: "flex", flexDirection: "column", gap: 4 }}>
-              {unresolved.map((u, i) => (
-                <a key={u.title + u.issue + i}
-                   href={`https://www.google.com/search?q=${encodeURIComponent(`${u.title} #${u.issue} comic writer artist`)}`}
-                   target="_blank" rel="noopener noreferrer"
-                   style={{ display: "flex", justifyContent: "space-between", gap: 12, flexWrap: "wrap", padding: "6px 9px", borderBottom: "1px solid var(--border,#2c2c38)", textDecoration: "none", color: "inherit", fontSize: "0.82rem" }}>
-                  <span style={{ fontWeight: 600 }}>{u.title} <b>#{u.issue}</b> ↗</span>
-                  <span style={{ color: "var(--muted2,#aaa)" }}>{u.reason}</span>
-                </a>
-              ))}
+            <div style={{ padding: "10px 14px", display: "flex", flexDirection: "column", gap: 8 }}>
+              <div style={{ fontSize: "0.78rem", color: "var(--muted2,#aaa)" }}>
+                The wiki page didn't exist at run time — but if you find a working one, paste it and it applies next run (exactly like the other cards).
+              </div>
+              {unresolved.map((u, i) => {
+                const c = comicByKey.get(normTitleKey(u.title) + "|||" + String(u.issue).replace(/^#/, ""));
+                const id = c ? comicId(c) : "";
+                const saved = !!id && fixes.has(id);
+                return (
+                  <div key={u.title + u.issue + i} style={{ display: "flex", justifyContent: "space-between", gap: 10, flexWrap: "wrap", alignItems: "center", padding: "6px 9px", borderBottom: "1px solid var(--border,#2c2c38)", fontSize: "0.82rem" }}>
+                    <div style={{ minWidth: 200 }}>
+                      <a href={`https://www.google.com/search?q=${encodeURIComponent(`${u.title} #${u.issue} fandom comic`)}`} target="_blank" rel="noopener noreferrer" style={{ fontWeight: 600, color: "inherit", textDecoration: "none" }}>{u.title} <b>#{u.issue}</b> 🔍↗</a>
+                      <div style={{ color: "var(--muted2,#aaa)", fontSize: "0.72rem" }}>{u.reason}</div>
+                    </div>
+                    {c ? (
+                      saved ? <span style={{ color: "#16a34a", fontWeight: 700 }}>✓ link queued</span> : (
+                        <div className="df-linkrow" style={{ flex: 1, minWidth: 220, maxWidth: 420 }}>
+                          <input className="df-link-in" placeholder="Paste Fandom link that fixes it…"
+                            value={linkDraft[id] || ""} onChange={e => setLinkDraft(d => ({ ...d, [id]: e.target.value }))}
+                            onKeyDown={e => { if (e.key === "Enter" && (linkDraft[id] || "").trim()) resolve(c, id, "no-date", "fandom", linkDraft[id].trim()); }} />
+                          <button className="df-link-save" disabled={!(linkDraft[id] || "").trim()}
+                            onClick={() => resolve(c, id, "no-date", "fandom", (linkDraft[id] || "").trim())}>Save link</button>
+                        </div>
+                      )
+                    ) : <span style={{ color: "var(--muted,#888)", fontSize: "0.72rem" }}>no inventory row match</span>}
+                  </div>
+                );
+              })}
             </div>
           )}
         </section>
