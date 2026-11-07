@@ -131,6 +131,11 @@ export default function DataFix() {
   const [flOpen, setFlOpen] = useState(false);
   const [unresolved, setUnresolved] = useState<{ title: string; issue: string; reason: string }[]>([]);
   const [urOpen, setUrOpen] = useState(false);
+  const [fandomLinks, setFandomLinks] = useState<Record<string, string>>({});
+  const [cgOpen, setCgOpen] = useState(false);
+  const [cgDismiss, setCgDismiss] = useState<Set<string>>(() => {
+    try { return new Set(JSON.parse(localStorage.getItem("brbCoverGuessDismiss_v1") || "[]")); } catch { return new Set(); }
+  });
   const [tcOpen, setTcOpen] = useState(false);
   const [titleMerges, setTitleMerges] = useState<Record<string, string>>(() => {
     try { return JSON.parse(localStorage.getItem("brbTitleMerges_v1") || "{}"); } catch { return {}; }
@@ -146,8 +151,11 @@ export default function DataFix() {
       .then((a: string[]) => setNotInGcd(new Set(a))).catch(() => {});
     fetch(`${BASE}/fandom_unresolved.json`).then(r => r.ok ? r.json() : [])
       .then((a: { title: string; issue: string; reason: string }[]) => setUnresolved(Array.isArray(a) ? a : [])).catch(() => {});
+    fetch(`${BASE}/fandom_links.json`).then(r => r.ok ? r.json() : {})
+      .then((o: Record<string, string>) => setFandomLinks(o && typeof o === "object" ? o : {})).catch(() => {});
     coversReady().then(() => setCoversLoaded(true));
   }, []);
+  useEffect(() => { try { localStorage.setItem("brbCoverGuessDismiss_v1", JSON.stringify([...cgDismiss])); } catch { /* ignore */ } }, [cgDismiss]);
 
   // All comics that have ≥1 problem (computed once).
   const flagged = useMemo(() => {
@@ -225,6 +233,52 @@ export default function DataFix() {
     }
     return m;
   }, []);
+  // Index previously-found Fandom links by exact lowercase title → the single
+  // confirmed volume + page stem + wiki base, but ONLY for titles that map to one
+  // volume (a title spanning several volumes can't be extrapolated safely — that's
+  // the Avengers-clobber trap). Parsed straight from the URL path, no fetch.
+  const linkIndex = useMemo(() => {
+    const vols: Record<string, Set<string>> = {};
+    const stem: Record<string, { base: string; stem: string }> = {};
+    for (const [k, url] of Object.entries(fandomLinks)) {
+      const t = (k.split("|||")[0] || "").trim().toLowerCase();
+      const m = (url || "").match(/\/wiki\/(.+?)_Vol_(\d+)(?:_|$)/);
+      if (!t || !m) continue;
+      (vols[t] ||= new Set()).add(m[2]);
+      stem[t] = { base: (url.split("/wiki/")[0] || ""), stem: m[1] };
+    }
+    const out: Record<string, { vol: string; base: string; stem: string }> = {};
+    for (const t of Object.keys(vols)) {
+      if (vols[t].size === 1) out[t] = { vol: [...vols[t]][0], ...stem[t] };
+    }
+    return out;
+  }, [fandomLinks]);
+
+  // Cover guesses: every no-cover book whose title has a single-volume sibling
+  // link → construct a candidate Fandom URL. `confident` = the page stem matches
+  // the inventory title (low risk); otherwise it's a different-named page (the
+  // "skipped" tier — e.g. a Mighty Thor row pointing at a Mortal Thor page), shown
+  // with a warning so you verify before accepting.
+  const coverGuesses = useMemo(() => {
+    const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+    const rows: { c: Comic; id: string; url: string; pageName: string; confident: boolean }[] = [];
+    for (const f of flagged) {
+      if (!f.problems.includes("no-cover")) continue;
+      if (cgDismiss.has(f.id)) continue;
+      const idx = linkIndex[(f.c.Title || "").trim().toLowerCase()];
+      if (!idx) continue;
+      const iss = String(f.c.Issue ?? "").replace(/^#/, "").trim();
+      if (!iss) continue;
+      const url = `${idx.base}/wiki/${idx.stem}_Vol_${idx.vol}_${encodeURIComponent(iss)}`;
+      const pageName = idx.stem.replace(/_/g, " ");
+      const it = norm(f.c.Title || ""), st = norm(pageName);
+      const confident = it === st || it.includes(st) || st.includes(it);
+      rows.push({ c: f.c, id: f.id, url, pageName, confident });
+    }
+    rows.sort((a, b) => Number(b.confident) - Number(a.confident));
+    return rows;
+  }, [flagged, linkIndex, cgDismiss]);
+
   const mergeQueuedCount = Object.keys(titleMerges).filter(k => titleMerges[k]).length;
   // Export a persistent title_aliases map (normKey -> {canonical, source}). The
   // pipeline merges it into title_aliases.json and re-applies it every brb_all,
@@ -434,6 +488,54 @@ export default function DataFix() {
                           onKeyDown={e => { if (e.key === "Enter" && (linkDraft[f.id] || "").trim()) resolve(f.c, f.id, f.problems[0] || "no-date", "fandom", linkDraft[f.id].trim()); }} />
                         <button className="df-link-save" disabled={!(linkDraft[f.id] || "").trim()}
                           onClick={() => resolve(f.c, f.id, f.problems[0] || "no-date", "fandom", (linkDraft[f.id] || "").trim())}>Save link</button>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          )}
+        </section>
+      )}
+
+      {/* Cover guesses — no-cover books where a previously-found sibling link lets
+          us CONSTRUCT a candidate Fandom URL. Confident (page name matches title)
+          first, then the "skipped" tier (different-named page) with a warning. You
+          Use / paste / dismiss each; accepted ones queue like any Fandom fix. */}
+      {coverGuesses.length > 0 && (
+        <section className="df-group" style={{ marginBottom: 14 }}>
+          <button className="df-group-hd" onClick={() => setCgOpen(o => !o)} style={{ borderLeft: "4px solid #0d9488" }}>
+            <span className="df-group-name">
+              <span className="df-chev">{cgOpen ? "▾" : "▸"}</span> 🧩 Cover guesses — verify &amp; apply
+            </span>
+            <span className="df-chip-n">{coverGuesses.length}</span>
+          </button>
+          {cgOpen && (
+            <div style={{ padding: "10px 14px", display: "flex", flexDirection: "column", gap: 8 }}>
+              <div style={{ fontSize: "0.78rem", color: "var(--muted2,#aaa)" }}>
+                Built from a sibling issue's confirmed link. <b style={{ color: "#16a34a" }}>✓</b> = page name matches the title (safe). <b style={{ color: "#d97706" }}>⚠</b> = a <i>different-named</i> page (could be the wrong book) — open it first. <b>Use this</b> queues it; the Mac run fetches it and a dead page self-skips.
+              </div>
+              {coverGuesses.map(g => {
+                const saved = fixes.has(g.id);
+                return (
+                  <div key={g.id} style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap", border: "1px solid var(--border,#2c2c38)", borderRadius: 6, padding: "6px 9px", fontSize: "0.82rem" }}>
+                    <CoverImage comic={g.c} width={34} height={51} />
+                    <div style={{ minWidth: 150, flex: "0 1 auto" }}>
+                      <div style={{ fontWeight: 600, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+                        <span style={{ color: g.confident ? "#16a34a" : "#d97706" }}>{g.confident ? "✓" : "⚠"}</span> {g.c.Title} #{g.c.Issue}
+                      </div>
+                      <div style={{ color: "var(--muted2,#aaa)" }}>Box {g.c.Box || "—"} · page: {g.pageName}</div>
+                    </div>
+                    {saved ? <span style={{ color: "#16a34a", fontWeight: 700 }}>✓ queued</span> : (
+                      <div style={{ display: "flex", gap: 6, alignItems: "center", flexWrap: "wrap", flex: 1, minWidth: 260 }}>
+                        <a className="df-find" href={g.url} target="_blank" rel="noopener noreferrer">Check guess ↗</a>
+                        <button className="df-link-save" onClick={() => resolve(g.c, g.id, "no-cover", "fandom", g.url)}>Use this</button>
+                        <input className="df-link-in" style={{ flex: 1, minWidth: 140 }} placeholder="…or paste the right link"
+                          value={linkDraft[g.id] || ""} onChange={e => setLinkDraft(d => ({ ...d, [g.id]: e.target.value }))}
+                          onKeyDown={e => { if (e.key === "Enter" && (linkDraft[g.id] || "").trim()) resolve(g.c, g.id, "no-cover", "fandom", linkDraft[g.id].trim()); }} />
+                        <button className="df-link-save" style={{ background: "transparent", color: "var(--muted,#888)" }}
+                          title="Not this book — hide this guess"
+                          onClick={() => setCgDismiss(s => new Set(s).add(g.id))}>✕</button>
                       </div>
                     )}
                   </div>
