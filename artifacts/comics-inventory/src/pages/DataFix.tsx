@@ -127,6 +127,7 @@ export default function DataFix() {
   const [session, setSession] = useState(0);
   const [pop, setPop] = useState(0);
   const [notInGcd, setNotInGcd] = useState<Set<string>>(new Set());
+  const [variantDone, setVariantDone] = useState<Set<string>>(new Set());
   const [coversLoaded, setCoversLoaded] = useState(false);
   const [flOpen, setFlOpen] = useState(false);
   const [flDupOk, setFlDupOk] = useState<Set<string>>(() => {
@@ -157,6 +158,8 @@ export default function DataFix() {
       .then((a: { title: string; issue: string; reason: string }[]) => setUnresolved(Array.isArray(a) ? a : [])).catch(() => {});
     fetch(`${BASE}/fandom_links.json`).then(r => r.ok ? r.json() : {})
       .then((o: Record<string, string>) => setFandomLinks(o && typeof o === "object" ? o : {})).catch(() => {});
+    fetch(`${BASE}/confirmed_variants.json`).then(r => r.ok ? r.json() : [])
+      .then((a: string[]) => setVariantDone(new Set(Array.isArray(a) ? a : []))).catch(() => {});
     coversReady().then(() => setCoversLoaded(true));
   }, []);
   useEffect(() => { try { localStorage.setItem("brbCoverGuessDismiss_v1", JSON.stringify([...cgDismiss])); } catch { /* ignore */ } }, [cgDismiss]);
@@ -166,14 +169,17 @@ export default function DataFix() {
     const rows: { c: Comic; id: string; problems: ProblemId[] }[] = [];
     for (const c of comics) {
       const id = comicId(c);
-      const ps = problemsFor(c);
+      let ps = problemsFor(c);
+      // A CC1 variant you've already confirmed ("Cover's right") stays confirmed —
+      // drop the likely-variant flag so it never re-asks across regenerations.
+      if (variantDone.has(id)) ps = ps.filter(p => p !== "likely-variant");
       if (notInGcd.has(id)) ps.push("not-in-gcd");
       if (coversLoaded && coverUrlSync(c) === null) ps.push("no-cover");
       if (ps.length) rows.push({ c, id, problems: ps });
     }
     return rows;
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [notInGcd, coversLoaded]);
+  }, [notInGcd, coversLoaded, variantDone]);
 
   // Books that are flagged AND already carry a Fandom-sourced cover — a Fandom
   // link resolved their image, yet they still read as a problem. Those are the

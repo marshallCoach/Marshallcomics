@@ -154,6 +154,14 @@ def main():
             raise RuntimeError("brb_apply_title_aliases failed")
     step("2b", "TITLE ALIASES (canonicalize split spellings)", title_aliases)
 
+    # 2c — rebuild the confirmed-variant list from every data-fixes export (incl.
+    # processed_exports) so a CC1 "Cover's right" confirmation stops re-flagging
+    # for good. No xlsx write — just regenerates the committed JSON the app reads.
+    def confirmed_variants():
+        if run([PY, os.path.join(ROOT, "brb_build_confirmed_variants.py")]):
+            raise RuntimeError("brb_build_confirmed_variants failed")
+    step("2c", "CONFIRMED VARIANTS (CC1 confirmations persist)", confirmed_variants)
+
     # Enrichment runs most-authoritative first so later non-destructive fills
     # can't degrade a better source: user links (above) -> GCD catalog -> Fandom.
 
