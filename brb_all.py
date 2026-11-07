@@ -160,7 +160,11 @@ def main():
     def confirmed_variants():
         if run([PY, os.path.join(ROOT, "brb_build_confirmed_variants.py")]):
             raise RuntimeError("brb_build_confirmed_variants failed")
-    step("2c", "CONFIRMED VARIANTS (CC1 confirmations persist)", confirmed_variants)
+        # General triage memory: every resolved (book, problem) across all exports,
+        # so NO problem type re-asks once you've decided it.
+        if run([PY, os.path.join(ROOT, "brb_build_resolved_flags.py")]):
+            raise RuntimeError("brb_build_resolved_flags failed")
+    step("2c", "TRIAGE MEMORY (confirmations + resolved flags persist)", confirmed_variants)
 
     # Enrichment runs most-authoritative first so later non-destructive fills
     # can't degrade a better source: user links (above) -> GCD catalog -> Fandom.

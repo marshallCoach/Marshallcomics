@@ -128,6 +128,7 @@ export default function DataFix() {
   const [pop, setPop] = useState(0);
   const [notInGcd, setNotInGcd] = useState<Set<string>>(new Set());
   const [variantDone, setVariantDone] = useState<Set<string>>(new Set());
+  const [resolvedFlags, setResolvedFlags] = useState<Record<string, string[]>>({});
   const [coversLoaded, setCoversLoaded] = useState(false);
   const [flOpen, setFlOpen] = useState(false);
   const [flDupOk, setFlDupOk] = useState<Set<string>>(() => {
@@ -160,6 +161,8 @@ export default function DataFix() {
       .then((o: Record<string, string>) => setFandomLinks(o && typeof o === "object" ? o : {})).catch(() => {});
     fetch(`${BASE}/confirmed_variants.json`).then(r => r.ok ? r.json() : [])
       .then((a: string[]) => setVariantDone(new Set(Array.isArray(a) ? a : []))).catch(() => {});
+    fetch(`${BASE}/resolved_flags.json`).then(r => r.ok ? r.json() : {})
+      .then((o: Record<string, string[]>) => setResolvedFlags(o && typeof o === "object" ? o : {})).catch(() => {});
     coversReady().then(() => setCoversLoaded(true));
   }, []);
   useEffect(() => { try { localStorage.setItem("brbCoverGuessDismiss_v1", JSON.stringify([...cgDismiss])); } catch { /* ignore */ } }, [cgDismiss]);
@@ -170,16 +173,19 @@ export default function DataFix() {
     for (const c of comics) {
       const id = comicId(c);
       let ps = problemsFor(c);
-      // A CC1 variant you've already confirmed ("Cover's right") stays confirmed —
-      // drop the likely-variant flag so it never re-asks across regenerations.
-      if (variantDone.has(id)) ps = ps.filter(p => p !== "likely-variant");
       if (notInGcd.has(id)) ps.push("not-in-gcd");
       if (coversLoaded && coverUrlSync(c) === null) ps.push("no-cover");
+      // Triage memory: any problem you've already resolved on this book (from the
+      // committed resolved_flags.json, rebuilt from all your exports) is dropped so
+      // it never re-asks. variantDone covers legacy CC1 confirmations too.
+      const rf = resolvedFlags[id];
+      if (rf && rf.length) ps = ps.filter(p => !rf.includes(p));
+      if (variantDone.has(id)) ps = ps.filter(p => p !== "likely-variant");
       if (ps.length) rows.push({ c, id, problems: ps });
     }
     return rows;
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [notInGcd, coversLoaded, variantDone]);
+  }, [notInGcd, coversLoaded, variantDone, resolvedFlags]);
 
   // Books that are flagged AND already carry a Fandom-sourced cover — a Fandom
   // link resolved their image, yet they still read as a problem. Those are the
