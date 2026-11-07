@@ -40,7 +40,7 @@ const LS_META  = "brbDataFixMeta_v1";   // { lastDate, streak, todayCount }
 
 type FixKind = "fandom" | "solution";
 interface FixRecord { id: string; title: string; issue: string; box: string; problem: string; kind: FixKind; value: string; at: string; }
-type ProblemId = "no-date" | "date-conflict" | "no-volume" | "no-year" | "likely-variant" | "not-in-gcd";
+type ProblemId = "no-date" | "date-conflict" | "no-volume" | "no-year" | "likely-variant" | "not-in-gcd" | "no-cover";
 
 const PROBLEMS: { id: ProblemId; label: string; blurb: string; color: string; vol?: boolean; yr?: boolean; info?: boolean; solutions: { key: string; label: string }[] }[] = [
   { id: "no-date",       label: "Missing publication date", blurb: "Not matched in GCD/Comic Vine — no on-sale date", color: "#c8102e",
@@ -55,6 +55,8 @@ const PROBLEMS: { id: ProblemId; label: string; blurb: string; color: string; vo
     solutions: [{ key: "confirm-variant", label: "✓ Cover's right — keep as variant" }, { key: "not-variant", label: "Not a variant (regular copy)" }] },
   { id: "not-in-gcd",    label: "Not in GCD",                blurb: "Informational — GCD has no series, but most are verified by a Fandom cover or are variants/recent. Not counted as work.", color: "#0891b2", vol: true, info: true,
     solutions: [{ key: "indie", label: "Indie — not catalogued" }, { key: "research", label: "Needs research" }] },
+  { id: "no-cover",      label: "Missing cover",             blurb: "No cover image yet — paste the Fandom page link to pull one (big bucket; collapsed by default)", color: "#2563eb",
+    solutions: [{ key: "no-art", label: "No art available — accept blank" }] },
 ];
 const PROBLEM_MAP = Object.fromEntries(PROBLEMS.map(p => [p.id, p]));
 // Informational problems are shown for reference but excluded from the "to go"
@@ -154,10 +156,12 @@ export default function DataFix() {
       const id = comicId(c);
       const ps = problemsFor(c);
       if (notInGcd.has(id)) ps.push("not-in-gcd");
+      if (coversLoaded && coverUrlSync(c) === null) ps.push("no-cover");
       if (ps.length) rows.push({ c, id, problems: ps });
     }
     return rows;
-  }, [notInGcd]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [notInGcd, coversLoaded]);
 
   // Books that are flagged AND already carry a Fandom-sourced cover — a Fandom
   // link resolved their image, yet they still read as a problem. Those are the
@@ -408,16 +412,33 @@ export default function DataFix() {
             <span className="df-chip-n">{fandomLinked.length}</span>
           </button>
           {flOpen && (
-            <div style={{ padding: "10px 14px", display: "flex", flexWrap: "wrap", gap: 10 }}>
-              {fandomLinked.map((f, i) => (
-                <div key={f.id + i} style={{ display: "flex", gap: 8, alignItems: "center", border: "1px solid var(--border,#2c2c38)", borderRadius: 6, padding: "6px 9px", fontSize: "0.82rem", minWidth: 220 }}>
-                  <CoverImage comic={f.c} width={34} height={51} />
-                  <div style={{ minWidth: 0 }}>
-                    <div style={{ fontWeight: 600, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{f.c.Title} #{f.c.Issue}</div>
-                    <div style={{ color: "var(--muted2,#aaa)" }}>Box {f.c.Box || "—"} · {f.problems.join(", ")}</div>
+            <div style={{ padding: "10px 14px", display: "flex", flexDirection: "column", gap: 8 }}>
+              <div style={{ fontSize: "0.78rem", color: "var(--muted2,#aaa)" }}>
+                Already carry a Fandom cover, so likely a dup or mislabel. If the cover is for the <b>wrong</b> issue/volume, paste the correct Fandom page link — it overwrites the row's volume next run. Right cover + still here = leave it.
+              </div>
+              {fandomLinked.map((f, i) => {
+                const saved = fixes.has(f.id);
+                return (
+                  <div key={f.id + i} style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap", border: "1px solid var(--border,#2c2c38)", borderRadius: 6, padding: "6px 9px", fontSize: "0.82rem" }}>
+                    <CoverImage comic={f.c} width={34} height={51} />
+                    <div style={{ minWidth: 160, flex: "0 1 auto" }}>
+                      <div style={{ fontWeight: 600, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+                        <a href={`https://www.google.com/search?q=${encodeURIComponent(`${f.c.Title} #${f.c.Issue} fandom comic`)}`} target="_blank" rel="noopener noreferrer" style={{ color: "inherit", textDecoration: "none" }}>{f.c.Title} #{f.c.Issue} 🔍↗</a>
+                      </div>
+                      <div style={{ color: "var(--muted2,#aaa)" }}>Box {f.c.Box || "—"} · {f.problems.join(", ")}</div>
+                    </div>
+                    {saved ? <span style={{ color: "#16a34a", fontWeight: 700 }}>✓ link queued</span> : (
+                      <div className="df-linkrow" style={{ flex: 1, minWidth: 220, maxWidth: 420 }}>
+                        <input className="df-link-in" placeholder="Paste Fandom link that fixes it…"
+                          value={linkDraft[f.id] || ""} onChange={e => setLinkDraft(d => ({ ...d, [f.id]: e.target.value }))}
+                          onKeyDown={e => { if (e.key === "Enter" && (linkDraft[f.id] || "").trim()) resolve(f.c, f.id, f.problems[0] || "no-date", "fandom", linkDraft[f.id].trim()); }} />
+                        <button className="df-link-save" disabled={!(linkDraft[f.id] || "").trim()}
+                          onClick={() => resolve(f.c, f.id, f.problems[0] || "no-date", "fandom", (linkDraft[f.id] || "").trim())}>Save link</button>
+                      </div>
+                    )}
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           )}
         </section>
@@ -548,7 +569,7 @@ export default function DataFix() {
 
       {/* Groups */}
       {groups.map(g => {
-        const gopen = openGroups[g.pid] ?? true;
+        const gopen = openGroups[g.pid] ?? (g.pid !== "no-cover");
         return (
           <section key={g.pid} className="df-group">
             <button className="df-group-hd" onClick={() => setOpenGroups(o => ({ ...o, [g.pid]: !gopen }))}
