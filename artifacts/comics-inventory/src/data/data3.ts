@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_0711_1812.xlsx  |  Generated: 2026-11-07
+// Source: comics_inventory_0711_1827.xlsx  |  Generated: 2026-11-07
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -234919,7 +234919,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
   {
     Title: `Green Lantern: Fractured Spectrum`, Issue: `1`, Publisher: `DC`,
     Disambig: ``,
-    Year: `2026`, Arc: ``, Key: ``,
+    Year: `2024`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
     Writer: `Jeremy Adams`, Artist: `V Ken Marion`,
     Signed: ``, Signed_By: ``,
@@ -234934,49 +234934,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Crossover: ``, Start_Bid: ``,
     Volume: ``, Entry: ``,
     Cover_Price: ``,
-    Pub_Date: `2026-11-06`,
-    eBay_Avg: 33.41, eBay_Low: 9, eBay_High: 57.82, eBay_Count: 2, eBay_Median: 33.41,
-  },
-  {
-    Title: `Green Lantern: Fractured Spectrum`, Issue: `1`, Publisher: `DC`,
-    Disambig: ``,
-    Year: `2026`, Arc: ``, Key: ``,
-    Key_Reason: ``, First_App: ``,
-    Writer: `Jeremy Adams`, Artist: `V Ken Marion`,
-    Signed: ``, Signed_By: ``,
-    Personal: ``, Condition: `NM (9.4)`,
-    CGC_Worth: ``, Value_NM: ``, Value_VF: ``,
-    Category: ``, Era: `Modern`, Universe: ``,
-    Seller_Notes: ``, Story_Pitch: ``,
-    Content: ``, Platform: ``,
-    Sales_Data: ``, Terrificon: ``,
-    Cover_Artist: `Fernando Blanco`, Date_Added: `November 07, 2026 (new-comics intake)`,
-    Imprint: ``, Box: `54`,
-    Crossover: ``, Start_Bid: ``,
-    Volume: ``, Entry: ``,
-    Cover_Price: ``,
-    Pub_Date: `2026-11-07`,
-    eBay_Avg: 33.41, eBay_Low: 9, eBay_High: 57.82, eBay_Count: 2, eBay_Median: 33.41,
-  },
-  {
-    Title: `Green Lantern: Fractured Spectrum`, Issue: `1`, Publisher: `DC`,
-    Disambig: ``,
-    Year: `2026`, Arc: ``, Key: ``,
-    Key_Reason: ``, First_App: ``,
-    Writer: `Jeremy Adams`, Artist: `V Ken Marion`,
-    Signed: ``, Signed_By: ``,
-    Personal: ``, Condition: `NM (9.4)`,
-    CGC_Worth: ``, Value_NM: ``, Value_VF: ``,
-    Category: ``, Era: `Modern`, Universe: ``,
-    Seller_Notes: ``, Story_Pitch: ``,
-    Content: ``, Platform: ``,
-    Sales_Data: ``, Terrificon: ``,
-    Cover_Artist: `Fernando Blanco`, Date_Added: `November 07, 2026 (new-comics intake)`,
-    Imprint: ``, Box: `54`,
-    Crossover: ``, Start_Bid: ``,
-    Volume: ``, Entry: ``,
-    Cover_Price: ``,
-    Pub_Date: `2026-11-07`,
+    Pub_Date: ``,
     eBay_Avg: 33.41, eBay_Low: 9, eBay_High: 57.82, eBay_Count: 2, eBay_Median: 33.41,
   }
   ],
@@ -235252,7 +235210,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Location: `Boiler Room — BLR-3`, Code: `BLR-3`, labeledAs: ``, Notes: ``, DateAdded: `May 24, 2026`,
   },
   {
-    Num: `BOX 54`, Comics: 136, Keys: 15,
+    Num: `BOX 54`, Comics: 134, Keys: 15,
     Signed: 0, YearRange: `1986-2026`,
     Label: ``, FirstBook: `Batgirl 9`, LastBook: `Green Lantern: Fractured Spectrum 1`,
     Location: `Bedroom (Upstairs) — BDR-3`, Code: `BDR-3`, labeledAs: ``, Notes: ``, DateAdded: `May 19, 2026`,

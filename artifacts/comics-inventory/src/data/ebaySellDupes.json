@@ -1,8 +1,8 @@
 {
- "source": "comics_inventory_0711_1812.xlsx",
+ "source": "comics_inventory_0711_1827.xlsx",
  "generatedAt": "2026-11-07",
- "groupCount": 142,
- "sellableCount": 150,
+ "groupCount": 141,
+ "sellableCount": 148,
  "estValue": 993.32,
  "rows": [
   {
@@ -3169,26 +3169,6 @@
    ],
    "keepSigned": false,
    "sameBox": false
-  },
-  {
-   "title": "Green Lantern: Fractured Spectrum",
-   "issue": "1",
-   "year": "2026",
-   "volume": "1",
-   "publisher": "DC",
-   "writer": "Jeremy Adams",
-   "copies": 3,
-   "sellable": 2,
-   "sellValue": 0.0,
-   "sellBoxes": [
-    "54"
-   ],
-   "keepBoxes": [],
-   "boxes": [
-    "54"
-   ],
-   "keepSigned": false,
-   "sameBox": true
   },
   {
    "title": "Miles Morales: Spider-Man",
