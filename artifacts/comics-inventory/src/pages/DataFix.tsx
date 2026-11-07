@@ -181,9 +181,16 @@ export default function DataFix() {
   // gather them into one collapsible section for a focused review.
   const fandomLinked = useMemo(() => {
     void coversLoaded; // recompute once covers.json has loaded
-    return flagged.filter(f => /fandom/i.test(coverSourceSync(f.c) || "") && coverUrlSync(f.c) !== null);
+    return flagged.filter(f =>
+      /fandom/i.test(coverSourceSync(f.c) || "") && coverUrlSync(f.c) !== null &&
+      // Only keep books with a REAL (non-informational) problem. A book whose only
+      // flag is "not-in-gcd" (info) isn't a dup/mislabel — it just isn't catalogued,
+      // and a Fandom link never clears it, so it used to live here forever.
+      f.problems.some(p => !INFO_PROBLEMS.has(p)) &&
+      // Once you've queued a fix for it, it's handled — drop it from the review.
+      !fixes.has(f.id));
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [flagged, coversLoaded]);
+  }, [flagged, coversLoaded, fixes]);
 
   // ── Title consistency (client-side, mirrors validator Check 12) ──────────────
   const titleGroups = useMemo(() => {
