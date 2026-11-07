@@ -1,9 +1,9 @@
 {
- "source": "comics_inventory_0611_2000.xlsx",
- "generatedAt": "2026-11-06",
- "groupCount": 140,
- "sellableCount": 147,
- "estValue": 988.32,
+ "source": "comics_inventory_0711_1632.xlsx",
+ "generatedAt": "2026-11-07",
+ "groupCount": 141,
+ "sellableCount": 148,
+ "estValue": 993.32,
  "rows": [
   {
    "title": "Justice League",
@@ -2644,6 +2644,28 @@
    ],
    "keepSigned": false,
    "sameBox": false
+  },
+  {
+   "title": "Thor",
+   "issue": "15",
+   "year": "2019",
+   "volume": "6",
+   "publisher": "Marvel",
+   "writer": "Donny Cates",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 5.0,
+   "sellBoxes": [
+    "5"
+   ],
+   "keepBoxes": [
+    "5"
+   ],
+   "boxes": [
+    "5"
+   ],
+   "keepSigned": false,
+   "sameBox": true
   },
   {
    "title": "Thor",
