@@ -1,0 +1,212 @@
+[
+ {
+  "id": "ex-0",
+  "title": "Amazing Spider-Man",
+  "issue": "0",
+  "box": "50",
+  "problem": "no-cover",
+  "kind": "fandom",
+  "value": "https://marvel.fandom.com/wiki/Amazing_Spider-Man_Vol_7_0",
+  "at": "2026-11-07T21:42:08.034754"
+ },
+ {
+  "id": "ex-1",
+  "title": "Eternals NOW!",
+  "issue": "1",
+  "box": "18",
+  "problem": "no-cover",
+  "kind": "fandom",
+  "value": "https://marvel.fandom.com/wiki/Eternals_Vol_4_1",
+  "at": "2026-11-07T21:42:08.034754"
+ },
+ {
+  "id": "ex-2",
+  "title": "X-treme X-Men Annual",
+  "issue": "1",
+  "box": "12",
+  "problem": "no-cover",
+  "kind": "fandom",
+  "value": "https://marvel.fandom.com/wiki/X-Treme_X-Men_Annual_Vol_1_1",
+  "at": "2026-11-07T21:42:08.034754"
+ },
+ {
+  "id": "ex-3",
+  "title": "Free Comic Book Day",
+  "issue": "0",
+  "box": "86",
+  "problem": "no-cover",
+  "kind": "fandom",
+  "value": "https://marvel.fandom.com/wiki/Free_Comic_Book_Day_2013_(Infinity)_Vol_1_0",
+  "at": "2026-11-07T21:42:08.034754"
+ },
+ {
+  "id": "ex-4",
+  "title": "Static",
+  "issue": "2",
+  "box": "49",
+  "problem": "no-cover",
+  "kind": "fandom",
+  "value": "https://dc.fandom.com/wiki/Static:_Season_One_Vol_1_2",
+  "at": "2026-11-07T21:42:08.034754"
+ },
+ {
+  "id": "ex-5",
+  "title": "Static",
+  "issue": "3",
+  "box": "49",
+  "problem": "no-cover",
+  "kind": "fandom",
+  "value": "https://dc.fandom.com/wiki/Static:_Season_One_Vol_1_3",
+  "at": "2026-11-07T21:42:08.034754"
+ },
+ {
+  "id": "ex-6",
+  "title": "Static",
+  "issue": "1",
+  "box": "106",
+  "problem": "no-cover",
+  "kind": "fandom",
+  "value": "https://dc.fandom.com/wiki/Static:_Season_One_Vol_1_1",
+  "at": "2026-11-07T21:42:08.034754"
+ },
+ {
+  "id": "ex-7",
+  "title": "Ultimate X4",
+  "issue": "2",
+  "box": "23",
+  "problem": "no-cover",
+  "kind": "fandom",
+  "value": "https://heykidscomics.fandom.com/wiki/Ultimate_X4_Vol_1_2",
+  "at": "2026-11-07T21:42:08.034754"
+ },
+ {
+  "id": "ex-8",
+  "title": "Miles Morales: Spider-Man",
+  "issue": "2",
+  "box": "102",
+  "problem": "no-cover",
+  "kind": "fandom",
+  "value": "https://marvel.fandom.com/wiki/Miles_Morales:_Spider-Man_Vol_3_2",
+  "at": "2026-11-07T21:42:08.034754"
+ },
+ {
+  "id": "ex-9",
+  "title": "Incredible Hulk",
+  "issue": "336",
+  "box": "102",
+  "problem": "no-cover",
+  "kind": "fandom",
+  "value": "https://marvel.fandom.com/wiki/Incredible_Hulk_Vol_1_336",
+  "at": "2026-11-07T21:42:08.034754"
+ },
+ {
+  "id": "ex-10",
+  "title": "JSA",
+  "issue": "24",
+  "box": "101",
+  "problem": "no-cover",
+  "kind": "fandom",
+  "value": "https://dc.fandom.com/wiki/JSA_Vol_2_24",
+  "at": "2026-11-07T21:42:08.034754"
+ },
+ {
+  "id": "ex-11",
+  "title": "Tomb of Apocalypse",
+  "issue": "3",
+  "box": "102",
+  "problem": "no-cover",
+  "kind": "fandom",
+  "value": "https://marvel.fandom.com/wiki/Tomb_of_Apocalypse_Vol_1_3",
+  "at": "2026-11-07T21:42:08.034754"
+ },
+ {
+  "id": "ex-12",
+  "title": "Zatanna",
+  "issue": "7",
+  "box": "101",
+  "problem": "no-cover",
+  "kind": "fandom",
+  "value": "https://dc.fandom.com/wiki/Zatanna_Vol_4_7",
+  "at": "2026-11-07T21:42:08.034754"
+ },
+ {
+  "id": "ex-13",
+  "title": "Midnight X-Men",
+  "issue": "1",
+  "box": "102",
+  "problem": "no-cover",
+  "kind": "fandom",
+  "value": "https://marvel.fandom.com/wiki/Midnight_X-Men_Vol_1_1",
+  "at": "2026-11-07T21:42:08.034754"
+ },
+ {
+  "id": "ex-14",
+  "title": "Absolute Green Lantern",
+  "issue": "20",
+  "box": "101",
+  "problem": "no-cover",
+  "kind": "fandom",
+  "value": "https://dc.fandom.com/wiki/Absolute_Green_Lantern_Vol_1_20",
+  "at": "2026-11-07T21:42:08.034754"
+ },
+ {
+  "id": "ex-15",
+  "title": "Poison Ivy",
+  "issue": "49",
+  "box": "101",
+  "problem": "no-cover",
+  "kind": "fandom",
+  "value": "https://dc.fandom.com/wiki/Poison_Ivy_Vol_1_49",
+  "at": "2026-11-07T21:42:08.034754"
+ },
+ {
+  "id": "ex-16",
+  "title": "New Titans",
+  "issue": "40",
+  "box": "101",
+  "problem": "no-volume",
+  "kind": "solution",
+  "value": "vol:2",
+  "at": "2026-11-07T21:42:08.034754"
+ },
+ {
+  "id": "ex-17",
+  "title": "Miles Morales: Spider-Man",
+  "issue": "3",
+  "box": "102",
+  "problem": "no-volume",
+  "kind": "solution",
+  "value": "vol:3",
+  "at": "2026-11-07T21:42:08.034754"
+ },
+ {
+  "id": "ex-18",
+  "title": "Zatanna",
+  "issue": "7",
+  "box": "101",
+  "problem": "no-volume",
+  "kind": "solution",
+  "value": "vol:4",
+  "at": "2026-11-07T21:42:08.034754"
+ },
+ {
+  "id": "ex-19",
+  "title": "Aliens vs. X-Men",
+  "issue": "2",
+  "box": "102",
+  "problem": "no-volume",
+  "kind": "solution",
+  "value": "vol:1",
+  "at": "2026-11-07T21:42:08.034754"
+ },
+ {
+  "id": "ex-20",
+  "title": "Miles Morales: Spider-Man",
+  "issue": "4",
+  "box": "102",
+  "problem": "no-volume",
+  "kind": "solution",
+  "value": "vol:3",
+  "at": "2026-11-07T21:42:08.034754"
+ }
+]
