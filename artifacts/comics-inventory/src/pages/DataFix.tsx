@@ -129,6 +129,10 @@ export default function DataFix() {
   const [notInGcd, setNotInGcd] = useState<Set<string>>(new Set());
   const [coversLoaded, setCoversLoaded] = useState(false);
   const [flOpen, setFlOpen] = useState(false);
+  const [flDupOk, setFlDupOk] = useState<Set<string>>(() => {
+    try { return new Set(JSON.parse(localStorage.getItem("brbFandomDupOk_v1") || "[]")); } catch { return new Set(); }
+  });
+  useEffect(() => { try { localStorage.setItem("brbFandomDupOk_v1", JSON.stringify([...flDupOk])); } catch { /* ignore */ } }, [flDupOk]);
   const [unresolved, setUnresolved] = useState<{ title: string; issue: string; reason: string }[]>([]);
   const [urOpen, setUrOpen] = useState(false);
   const [fandomLinks, setFandomLinks] = useState<Record<string, string>>({});
@@ -463,36 +467,40 @@ export default function DataFix() {
             <span className="df-group-name">
               <span className="df-chev">{flOpen ? "▾" : "▸"}</span> 🔗 Fandom linked — likely duplication/mislabel
             </span>
-            <span className="df-chip-n">{fandomLinked.length}</span>
+            <span className="df-chip-n">{fandomLinked.filter(f => !flDupOk.has(f.id)).length}</span>
           </button>
           {flOpen && (
-            <div style={{ padding: "10px 14px", display: "flex", flexDirection: "column", gap: 8 }}>
+            <div style={{ padding: "10px 14px", display: "flex", flexDirection: "column", gap: 10 }}>
               <div style={{ fontSize: "0.78rem", color: "var(--muted2,#aaa)" }}>
-                Already carry a Fandom cover, so likely a dup or mislabel. If the cover is for the <b>wrong</b> issue/volume, paste the correct Fandom page link — it overwrites the row's volume next run. Right cover + still here = leave it.
+                Already carry a Fandom cover, so likely a dup or mislabel. If the cover is for the <b>wrong</b> issue/volume, paste the correct Fandom page link — it overwrites the row's volume next run. If the cover is <b>right</b>, tick <b>Cover's correct</b> to clear it from the queue.
+                {flDupOk.size > 0 && <> · <button className="df-find" style={{ border: "none", background: "none", cursor: "pointer", padding: 0 }} onClick={() => setFlDupOk(new Set())}>{flDupOk.size} confirmed — show again</button></>}
               </div>
-              {fandomLinked.map((f, i) => {
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
+              {fandomLinked.filter(f => !flDupOk.has(f.id)).map((f, i) => {
                 const saved = fixes.has(f.id);
                 return (
-                  <div key={f.id + i} style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap", border: "1px solid var(--border,#2c2c38)", borderRadius: 6, padding: "6px 9px", fontSize: "0.82rem" }}>
-                    <CoverImage comic={f.c} width={34} height={51} />
-                    <div style={{ minWidth: 160, flex: "0 1 auto" }}>
-                      <div style={{ fontWeight: 600, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
-                        <a href={`https://www.google.com/search?q=${encodeURIComponent(`${f.c.Title} #${f.c.Issue} fandom comic`)}`} target="_blank" rel="noopener noreferrer" style={{ color: "inherit", textDecoration: "none" }}>{f.c.Title} #{f.c.Issue} 🔍↗</a>
-                      </div>
-                      <div style={{ color: "var(--muted2,#aaa)" }}>Box {f.c.Box || "—"} · {f.problems.join(", ")}</div>
+                  <div key={f.id + i} style={{ display: "flex", flexDirection: "column", gap: 6, width: 170, border: "1px solid var(--border,#2c2c38)", borderRadius: 8, padding: 8, fontSize: "0.8rem" }}>
+                    <CoverImage comic={f.c} width={150} height={225} objectFit="contain" style={{ borderRadius: 4, background: "#0d0d12", border: "1px solid var(--border,#2c2c38)" }} onClick={(large) => setCoverModal({ comic: f.c, large })} />
+                    <div style={{ fontWeight: 600, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+                      <a href={`https://www.google.com/search?q=${encodeURIComponent(`${f.c.Title} #${f.c.Issue} fandom comic`)}`} target="_blank" rel="noopener noreferrer" style={{ color: "inherit", textDecoration: "none" }}>{f.c.Title} #{f.c.Issue} 🔍↗</a>
                     </div>
+                    <div style={{ color: "var(--muted2,#aaa)", fontSize: "0.72rem" }}>Box {f.c.Box || "—"} · {f.problems.join(", ")}</div>
+                    <label style={{ display: "flex", gap: 6, alignItems: "center", fontSize: "0.75rem", cursor: "pointer", color: "#16a34a" }}>
+                      <input type="checkbox" checked={false} onChange={() => setFlDupOk(s => new Set(s).add(f.id))} /> Cover's correct
+                    </label>
                     {saved ? <span style={{ color: "#16a34a", fontWeight: 700 }}>✓ link queued</span> : (
-                      <div className="df-linkrow" style={{ flex: 1, minWidth: 220, maxWidth: 420 }}>
-                        <input className="df-link-in" placeholder="Paste Fandom link that fixes it…"
+                      <div className="df-linkrow" style={{ display: "flex", gap: 4 }}>
+                        <input className="df-link-in" style={{ flex: 1, minWidth: 0 }} placeholder="Wrong? paste link…"
                           value={linkDraft[f.id] || ""} onChange={e => setLinkDraft(d => ({ ...d, [f.id]: e.target.value }))}
                           onKeyDown={e => { if (e.key === "Enter" && (linkDraft[f.id] || "").trim()) resolve(f.c, f.id, f.problems[0] || "no-date", "fandom", linkDraft[f.id].trim()); }} />
                         <button className="df-link-save" disabled={!(linkDraft[f.id] || "").trim()}
-                          onClick={() => resolve(f.c, f.id, f.problems[0] || "no-date", "fandom", (linkDraft[f.id] || "").trim())}>Save link</button>
+                          onClick={() => resolve(f.c, f.id, f.problems[0] || "no-date", "fandom", (linkDraft[f.id] || "").trim())}>Save</button>
                       </div>
                     )}
                   </div>
                 );
               })}
+              </div>
             </div>
           )}
         </section>
