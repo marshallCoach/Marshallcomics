@@ -1,18 +1,18 @@
-// AUTO-GENERATED quest data — source: comics_inventory_0711_1728.xlsx (11183 rows) · generated 2026-11-07
+// AUTO-GENERATED quest data — source: comics_inventory_0711_1812.xlsx (11184 rows) · generated 2026-11-07
 // Regenerate with: node gen_quest_data.mjs
 window.QUEST_DATA = {
- "source": "comics_inventory_0711_1728.xlsx",
+ "source": "comics_inventory_0711_1812.xlsx",
  "generated": "2026-11-07",
- "totalRows": 11183,
+ "totalRows": 11184,
  "dupe": {
   "groups": 27,
-  "rows": 54,
-  "excess": 27
+  "rows": 55,
+  "excess": 28
  },
  "clone": {
   "groups": 4,
-  "rows": 8,
-  "excess": 4
+  "rows": 9,
+  "excess": 5
  },
  "overCap": [
   {
@@ -611,10 +611,10 @@ window.QUEST_DATA = {
    "code": "BDR-3",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 135,
+   "rows": 136,
    "vcap": 240,
-   "dupes": 2,
-   "clones": 2
+   "dupes": 3,
+   "clones": 3
   },
   {
    "box": 55,
@@ -1020,7 +1020,7 @@ window.QUEST_DATA = {
       },
       {
        "id": "0.5",
-       "text": "Confirm the chat reads back 11,183 rows. If not — STOP, wrong file."
+       "text": "Confirm the chat reads back 11,184 rows. If not — STOP, wrong file."
       }
      ]
     }
@@ -1031,7 +1031,7 @@ window.QUEST_DATA = {
    "title": "The Clones",
    "est": "identical twin rows — safest wins first",
    "accent": "green",
-   "blurb": "Rows that are exact copies of another row: same book, same box, logged twice. Live count: 4 clone groups / 4 excess rows. Highest confidence, lowest effort, biggest visible progress.",
+   "blurb": "Rows that are exact copies of another row: same book, same box, logged twice. Live count: 4 clone groups / 5 excess rows. Highest confidence, lowest effort, biggest visible progress.",
    "sittings": [
     {
      "id": "A1",
