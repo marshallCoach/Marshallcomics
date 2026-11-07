@@ -43,6 +43,12 @@ def main():
         paths |= set(glob.glob(os.path.join(d, "*_data-fixes*.json")))  # archived prefix
     resolved = defaultdict(set)
     files = 0
+    # Only ACKNOWLEDGE-type decisions are remembered — the ones that change nothing
+    # on the sheet, so nothing else would ever clear them. Data-changing fixes
+    # (fandom/image links, vol:/year:/vol1, trust-gcd, and "cv" retry) are NOT
+    # suppressed: they clear naturally when they work, and — crucially — a bad link
+    # that resolves no cover RE-SURFACES instead of silently vanishing.
+    ACK = {"no-entry", "no-art", "research", "indie", "confirm-variant", "not-variant", "trust-year"}
     for p in sorted(paths):
         try:
             recs = json.load(open(p))
@@ -55,7 +61,7 @@ def main():
             if not isinstance(rec, dict):
                 continue
             prob = rec.get("problem")
-            if not prob:
+            if not prob or rec.get("kind") != "solution" or str(rec.get("value")) not in ACK:
                 continue
             resolved[_id(rec)].add(str(prob))
     out = {k: sorted(v) for k, v in sorted(resolved.items())}
