@@ -151,7 +151,14 @@ def main():
             ws.cell(at, cV, (rec.get("volume") or "").strip())
         if cE: ws.cell(at, cE, (rec.get("era") or "Modern").strip())
         if cD: ws.cell(at, cD, stamp)
-        if cPD: ws.cell(at, cPD, today)  # new pull = released ~today → Recent + Release Timeline
+        # Stamp today as the on-sale date ONLY for a genuinely new release (Year is
+        # this year or last). A back issue in the weekly haul (e.g. a 1993 Meteor
+        # Man, a 2024 GL) used to get today's date too — a fake 2026 on-sale date
+        # that step 7 then "corrected" the Year toward (GL 2024 -> 2026). Left
+        # blank, the GCD/Comic Vine date fills put in the real on-sale date.
+        cur_y = datetime.date.today().year
+        if cPD and re.fullmatch(r"\d{4}", ni(year)) and int(ni(year)) >= cur_y - 1:
+            ws.cell(at, cPD, today)  # new pull = released ~today → Recent + Release Timeline
         for key, colidx in OPT.items():  # optional enrichment, only when supplied
             val = (rec.get(key) or "").strip()
             if colidx and val:

@@ -161,18 +161,21 @@ def main():
     if by_key is None:
         print("  (no gcd_local.sqlite — Fandom links will fix only their own row, not the run)")
 
-    pending = {}      # row -> ("Volume"|"Year", new_value)
+    # (row, field) -> new_value. Keyed per field so a row that gets BOTH a volume
+    # and a date fix keeps both (a row-only key silently dropped the first).
+    pending = {}
     links, stats = [], Counter()
+    COLS = {"Volume": cVol, "Year": cYear, "Publication Date": cPD}
 
     def set_cell(r, field, new, blank_only=False):
-        col = cVol if field == "Volume" else cYear
+        col = COLS.get(field)
         cur = str(ws.cell(r, col).value or "").strip() if col else ""
         # blank_only (optional): only fill an empty cell, never overwrite.
         if blank_only and cur:
             stats["volume_kept_existing"] += 1
             return False
         if col and cur != str(new):
-            pending[r] = (field, str(new))
+            pending[(r, field)] = str(new)
             return True
         return False
 
@@ -208,25 +211,40 @@ def main():
                 mm = re.match(r"(\d{4})", str(ws.cell(r, cPD).value or ""))
                 if mm:
                     set_cell(r, "Year", mm.group(1)); stats["year_set"] += 1
+            elif val == "trust-year" and cPD and cYear:
+                # "Trust my Year": the on-sale date is the wrong edition (e.g. a
+                # 2003 reprint date on a 1969 book). Rewrite the date to the
+                # trusted year so the conflict clears in the DATA — it used to be
+                # acknowledge-only, so the bad date stayed and the flag re-fired.
+                # Month unknown -> YYYY-00-00 (same convention as Fandom dates);
+                # the date fills only touch blanks, so they won't restore 2003.
+                y = str(ws.cell(r, cYear).value or "").strip()
+                pdv = str(ws.cell(r, cPD).value or "")
+                mm = re.match(r"(\d{4})", pdv)
+                if re.fullmatch(r"\d{4}", y) and (not mm or abs(int(mm.group(1)) - int(y)) > 1):
+                    if set_cell(r, "Publication Date", f"{y}-00-00"):
+                        stats["date_fixed_to_year"] += 1
+                else:
+                    stats["acknowledged_no_change"] += 1
             else:
                 stats["acknowledged_no_change"] += 1
 
     print(f"SOURCE: {os.path.basename(src)}\n")
-    print(("WOULD CHANGE " if not args.apply else "CHANGED ") + f"{len(pending)} row(s):")
+    print(("WOULD CHANGE " if not args.apply else "CHANGED ") + f"{len(pending)} cell(s):")
     shown = 0
-    for r in sorted(pending):
-        field, new = pending[r]
+    for (r, field) in sorted(pending):
+        new = pending[(r, field)]
         print(f"  row {r}  {ws.cell(r, cT).value} #{norm_issue(ws.cell(r, cI).value)}: {field} -> {new}")
         shown += 1
         if shown >= 50:
             print(f"  … and {len(pending) - 50} more"); break
 
     if args.apply:
-        for r, (field, new) in pending.items():
-            ws.cell(r, cVol if field == "Volume" else cYear, new)
+        for (r, field), new in pending.items():
+            ws.cell(r, COLS[field], new)
 
     print("\nSUMMARY")
-    for k2 in ("fandom_runs", "fandom_run_rows", "fandom_single", "volume_set", "year_set",
+    for k2 in ("fandom_runs", "fandom_run_rows", "fandom_single", "volume_set", "year_set", "date_fixed_to_year",
                "volume_kept_existing", "acknowledged_no_change", "fandom_no_vol_in_url", "row_not_found"):
         if stats[k2]:
             print(f"  {k2:22s} {stats[k2]}")

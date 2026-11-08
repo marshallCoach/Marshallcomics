@@ -48,7 +48,9 @@ def main():
     # (fandom/image links, vol:/year:/vol1, trust-gcd, and "cv" retry) are NOT
     # suppressed: they clear naturally when they work, and — crucially — a bad link
     # that resolves no cover RE-SURFACES instead of silently vanishing.
-    ACK = {"no-entry", "no-art", "research", "indie", "confirm-variant", "not-variant", "trust-year"}
+    # trust-year is NOT here: it now rewrites the wrong-edition date (data change),
+    # so it clears on success and re-surfaces if it didn't take.
+    ACK = {"no-entry", "no-art", "research", "indie", "confirm-variant", "not-variant"}
     for p in sorted(paths):
         try:
             recs = json.load(open(p))
