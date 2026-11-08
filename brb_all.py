@@ -125,6 +125,15 @@ def main():
         archive(csv_in)
     step(1, "WEEKLY INTAKE", intake)
 
+    # 1b — auto-extrapolate HIGH-CONFIDENCE cover links (page name matches title)
+    # into a data-fixes export, so step 2 applies them. Risky guesses stay manual
+    # in the app's Cover guesses section. A constructed page that doesn't exist
+    # 404s and self-skips in the apply, so nothing wrong is written.
+    def extrapolate():
+        if run([PY, os.path.join(ROOT, "brb_extrapolate_covers.py")]):
+            raise RuntimeError("brb_extrapolate_covers failed")
+    step("1b", "EXTRAPOLATE COVERS (confident sibling links)", extrapolate)
+
     # 2 — data-fix export from the site (optional input)
     def datafix():
         jss = sorted(glob.glob(os.path.join(DOWNLOADS, "data-fixes*.json")) +
