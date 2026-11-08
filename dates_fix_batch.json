@@ -1,0 +1,76 @@
+{
+ "type": "comic-edit-batch",
+ "edits": [
+  {
+   "match": {
+    "Title": "Avengers",
+    "Issue": "60",
+    "Volume": "1",
+    "Box": "CC10",
+    "Entry": "12613"
+   },
+   "changes": {
+    "Pub_Date": "1969-01-00"
+   }
+  },
+  {
+   "match": {
+    "Title": "Avengers",
+    "Issue": "62",
+    "Volume": "1",
+    "Box": "CC10",
+    "Entry": "12614"
+   },
+   "changes": {
+    "Pub_Date": "1969-03-00"
+   }
+  },
+  {
+   "match": {
+    "Title": "Meteor Man",
+    "Issue": "4",
+    "Volume": "1",
+    "Box": "CC1"
+   },
+   "changes": {
+    "Pub_Date": "1993-11-00"
+   }
+  },
+  {
+   "match": {
+    "Title": "The Flash",
+    "Issue": "193",
+    "Volume": "1",
+    "Box": "88",
+    "Entry": "374"
+   },
+   "changes": {
+    "Pub_Date": "2003-00-00"
+   }
+  },
+  {
+   "match": {
+    "Title": "Avengers",
+    "Issue": "12",
+    "Volume": "8",
+    "Box": "6",
+    "Entry": "4443"
+   },
+   "changes": {
+    "Year": "2019"
+   }
+  },
+  {
+   "match": {
+    "Title": "Torchwood",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "70",
+    "Entry": "2288"
+   },
+   "changes": {
+    "Year": "2016"
+   }
+  }
+ ]
+}
