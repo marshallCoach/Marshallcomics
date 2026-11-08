@@ -1,18 +1,18 @@
-// AUTO-GENERATED quest data — source: comics_inventory_0711_1911.xlsx (11182 rows) · generated 2026-11-08
+// AUTO-GENERATED quest data — source: comics_inventory_0711_1936.xlsx (11179 rows) · generated 2026-11-08
 // Regenerate with: node gen_quest_data.mjs
 window.QUEST_DATA = {
- "source": "comics_inventory_0711_1911.xlsx",
+ "source": "comics_inventory_0711_1936.xlsx",
  "generated": "2026-11-08",
- "totalRows": 11182,
+ "totalRows": 11179,
  "dupe": {
-  "groups": 26,
-  "rows": 52,
-  "excess": 26
+  "groups": 23,
+  "rows": 46,
+  "excess": 23
  },
  "clone": {
-  "groups": 3,
-  "rows": 6,
-  "excess": 3
+  "groups": 0,
+  "rows": 0,
+  "excess": 0
  },
  "overCap": [
   {
@@ -95,10 +95,10 @@ window.QUEST_DATA = {
    "code": "BFB-2",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 208,
+   "rows": 206,
    "vcap": 240,
-   "dupes": 6,
-   "clones": 4
+   "dupes": 2,
+   "clones": 0
   },
   {
    "box": 6,
@@ -935,10 +935,10 @@ window.QUEST_DATA = {
    "code": "BDR-2",
    "status": "CC/Fabric Bin",
    "labeledAs": "",
-   "rows": 138,
+   "rows": 137,
    "vcap": 240,
-   "dupes": 2,
-   "clones": 2
+   "dupes": 0,
+   "clones": 0
   },
   {
    "box": 103,
@@ -1020,7 +1020,7 @@ window.QUEST_DATA = {
       },
       {
        "id": "0.5",
-       "text": "Confirm the chat reads back 11,182 rows. If not — STOP, wrong file."
+       "text": "Confirm the chat reads back 11,179 rows. If not — STOP, wrong file."
       }
      ]
     }
@@ -1031,7 +1031,7 @@ window.QUEST_DATA = {
    "title": "The Clones",
    "est": "identical twin rows — safest wins first",
    "accent": "green",
-   "blurb": "Rows that are exact copies of another row: same book, same box, logged twice. Live count: 3 clone groups / 3 excess rows. Highest confidence, lowest effort, biggest visible progress.",
+   "blurb": "Rows that are exact copies of another row: same book, same box, logged twice. Live count: 0 clone groups / 0 excess rows. Highest confidence, lowest effort, biggest visible progress.",
    "sittings": [
     {
      "id": "A1",

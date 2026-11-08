@@ -1,9 +1,9 @@
 {
- "source": "comics_inventory_0711_1911.xlsx",
+ "source": "comics_inventory_0711_1936.xlsx",
  "generatedAt": "2026-11-07",
- "groupCount": 141,
- "sellableCount": 148,
- "estValue": 993.32,
+ "groupCount": 138,
+ "sellableCount": 145,
+ "estValue": 983.32,
  "rows": [
   {
    "title": "Justice League",
@@ -2647,53 +2647,9 @@
   },
   {
    "title": "Thor",
-   "issue": "15",
-   "year": "2019",
-   "volume": "6",
-   "publisher": "Marvel",
-   "writer": "Donny Cates",
-   "copies": 2,
-   "sellable": 1,
-   "sellValue": 5.0,
-   "sellBoxes": [
-    "5"
-   ],
-   "keepBoxes": [
-    "5"
-   ],
-   "boxes": [
-    "5"
-   ],
-   "keepSigned": false,
-   "sameBox": true
-  },
-  {
-   "title": "Thor",
    "issue": "19",
    "year": "2021",
    "volume": "8",
-   "publisher": "Marvel",
-   "writer": "Donny Cates",
-   "copies": 2,
-   "sellable": 1,
-   "sellValue": 5.0,
-   "sellBoxes": [
-    "5"
-   ],
-   "keepBoxes": [
-    "5"
-   ],
-   "boxes": [
-    "5"
-   ],
-   "keepSigned": false,
-   "sameBox": true
-  },
-  {
-   "title": "Thor",
-   "issue": "21",
-   "year": "2017",
-   "volume": "6",
    "publisher": "Marvel",
    "writer": "Donny Cates",
    "copies": 2,
@@ -3215,28 +3171,6 @@
    ],
    "keepSigned": false,
    "sameBox": false
-  },
-  {
-   "title": "Ultimate Impact: Reborn",
-   "issue": "5",
-   "year": "2026",
-   "volume": "1",
-   "publisher": "Marvel",
-   "writer": "Chris Condon",
-   "copies": 2,
-   "sellable": 1,
-   "sellValue": 0.0,
-   "sellBoxes": [
-    "102"
-   ],
-   "keepBoxes": [
-    "102"
-   ],
-   "boxes": [
-    "102"
-   ],
-   "keepSigned": false,
-   "sameBox": true
   }
  ]
 }
