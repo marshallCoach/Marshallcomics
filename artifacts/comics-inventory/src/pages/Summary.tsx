@@ -502,6 +502,18 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
   return (
     <div style={{ maxWidth: "calc(1100px + var(--wide))", margin:"0 auto", padding:"20px 16px 80px" }}>
 
+      {/* ── QUICK LINKS — cleanup pages are the usual first stop ── */}
+      <nav className="home-quicklinks" aria-label="Quick links">
+        {([
+          ["datafix",       "🧹 Data Fix"],
+          ["missingcovers", "🖼️ Missing Covers"],
+          ["coverreview",   "🔎 Cover Review"],
+          ["editcomic",     "✏️ Edit Comic"],
+        ] as const).map(([tab, label]) => (
+          <button key={tab} className="home-quicklink" onClick={() => onNavigate(tab)}>{label}</button>
+        ))}
+      </nav>
+
       {/* ── LATEST UPDATE BANNER ── */}
       {!bannerClosed && (
       <section style={{ marginBottom:28, background:"var(--surface)", border:"1.5px solid var(--red)", borderRadius:8, padding:"18px 20px", position:"relative", overflow:"hidden" }}>

@@ -56,6 +56,7 @@ import EraAudit from "@/pages/EraAudit";
 import OfflineCovers from "@/components/OfflineCovers";
 import FlaggedCount from "@/components/FlaggedCount";
 import PasswordGate from "@/components/PasswordGate";
+import { NAV_EVENT } from "@/lib/nav";
 import { Home, BookOpen, Boxes, Film, Sparkles, ClipboardList, Microscope, DollarSign, Archive } from "lucide-react";
 
 type TabId =
@@ -235,6 +236,18 @@ export default function App() {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [openSearch]);
+
+  // Site-wide nav: any component can jump pages via navTo() (lib/nav) — used by
+  // the (t) title badge on every cover so it works on every page, incl. Boxes.
+  useEffect(() => {
+    function onNav(e: Event) {
+      const d = (e as CustomEvent<{ tab: string; params?: NavParams }>).detail;
+      if (d?.tab) { navigateTo(d.tab, d.params); window.scrollTo({ top: 0 }); }
+    }
+    window.addEventListener(NAV_EVENT, onNav);
+    return () => window.removeEventListener(NAV_EVENT, onNav);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeSection]);
 
   // Direct links: open the tab named in the URL hash on load (e.g. #nycc).
   useEffect(() => {

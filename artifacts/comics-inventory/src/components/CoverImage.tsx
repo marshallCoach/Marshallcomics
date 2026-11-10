@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { getCoverSvgUrl, type ComicLike } from "@/utils/coverThumbnails";
 import { coverId, flagKind as coverFlagKind, setFlagKind as setCoverFlagKind, type FlagKind } from "@/lib/coverFlags";
+import { openTitle } from "@/lib/nav";
 
 const BASE = import.meta.env.BASE_URL?.replace(/\/$/, "") ?? "";
 
@@ -139,9 +140,11 @@ interface Props {
   className?: string;
   style?: React.CSSProperties;
   objectFit?: "cover" | "contain";
+  /** Show the (t) badge that opens every cover of this title. Default on. */
+  titleLink?: boolean;
 }
 
-export function CoverImage({ comic, width = 56, height = 84, onClick, style, objectFit = "cover" }: Props) {
+export function CoverImage({ comic, width = 56, height = 84, onClick, style, objectFit = "cover", titleLink = true }: Props) {
   const [src, setSrc]         = useState<string>(() => getCoverSvgUrl(comic as ComicLike, { width, height }));
   const [realUrl, setRealUrl] = useState<string | null>(null);
   const [loaded, setLoaded]   = useState(false);
@@ -215,6 +218,18 @@ export function CoverImage({ comic, width = 56, height = 84, onClick, style, obj
           onMouseEnter={e => (e.currentTarget.style.background = "rgba(0,0,0,0.15)")}
           onMouseLeave={e => (e.currentTarget.style.background = "rgba(0,0,0,0)")}
         />
+      )}
+      {/* (t) — open every cover of this title (Cover Review, filtered). On every
+          cover site-wide; skipped on tiny thumbnails where it would hide the art. */}
+      {titleLink && comic.Title && width >= 44 && (
+        <button
+          type="button"
+          className="cover-t-badge"
+          title={`See every ${comic.Title} cover`}
+          aria-label={`See every ${comic.Title} cover`}
+          onClick={e => { e.stopPropagation(); e.preventDefault(); openTitle(comic.Title); }}
+          style={{ fontSize: width >= 100 ? "0.8rem" : "0.68rem", minWidth: width >= 100 ? 20 : 16, height: width >= 100 ? 20 : 16 }}
+        >t</button>
       )}
     </div>
   );
@@ -373,7 +388,11 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
                   {(comic as { Year?: string }).Year && <span style={{ color: "var(--muted)", marginLeft: 8, fontSize: "0.875rem" }}>{(comic as { Year?: string }).Year}</span>}
                 </div>
               </div>
-              <button onClick={onClose} style={{ background: "var(--surface2)", border: "1px solid var(--border)", borderRadius: 6, width: 30, height: 30, cursor: "pointer", color: "var(--muted)", fontSize: "0.875rem", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>×</button>
+              <div style={{ display: "flex", gap: 6, flexShrink: 0 }}>
+                <button onClick={() => { onClose(); openTitle(comic.Title); }} title={`See every ${comic.Title} cover`}
+                  style={{ background: "var(--surface2)", border: "1px solid var(--red)", color: "var(--red)", borderRadius: 6, height: 30, padding: "0 10px", cursor: "pointer", fontSize: "0.78rem", fontWeight: 700, whiteSpace: "nowrap" }}>(t) All covers</button>
+                <button onClick={onClose} style={{ background: "var(--surface2)", border: "1px solid var(--border)", borderRadius: 6, width: 30, height: 30, cursor: "pointer", color: "var(--muted)", fontSize: "0.875rem", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>×</button>
+              </div>
             </div>
             <div style={{ display: "flex", gap: 6, marginTop: 8, flexWrap: "wrap" }}>
               {(comic as { Publisher?: string }).Publisher && (

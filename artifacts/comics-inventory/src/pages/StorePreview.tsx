@@ -111,7 +111,7 @@ export default function StorePreview() {
         <button className={`brb-heart${hearts.has(p.key) ? " on" : ""}`} onClick={() => toggleHeart(p.key)} aria-label="Save">
           {hearts.has(p.key) ? "♥" : "♡"}
         </button>
-        <CoverImage comic={p.comic} width={CW} height={CH} objectFit="cover"
+        <CoverImage comic={p.comic} width={CW} height={CH} objectFit="cover" titleLink={false}
           style={{ borderRadius: 6, background: "#0d0d12", border: "1px solid var(--border,#2c2c38)" }} />
       </div>
       <div className="brb-meta">
@@ -155,7 +155,7 @@ export default function StorePreview() {
             </div>
           </div>
           <figure className="brb-feature">
-            <CoverImage comic={featured.comic} width={260} height={390} objectFit="cover"
+            <CoverImage comic={featured.comic} width={260} height={390} objectFit="cover" titleLink={false}
               style={{ borderRadius: 8, boxShadow: "0 24px 54px rgba(20,10,4,.3)", border: "1px solid var(--border,#2c2c38)" }} />
             <figcaption>
               <div className="ft">{featured.title} #{featured.iss}</div>
@@ -215,7 +215,7 @@ export default function StorePreview() {
           {bag.length === 0 ? <div className="brb-bag-empty">Your bag is empty.<br />The keys are calling. 📚</div>
             : bag.map((p, i) => (
               <div key={i} className="brb-li">
-                <CoverImage comic={p.comic} width={42} height={63} objectFit="cover" style={{ borderRadius: 4, flexShrink: 0 }} />
+                <CoverImage comic={p.comic} width={42} height={63} objectFit="cover" titleLink={false} style={{ borderRadius: 4, flexShrink: 0 }} />
                 <div className="brb-lim">
                   <div className="brb-lit">{p.title} #{p.iss}</div>
                   <div className="brb-lis">{p.slab ? "🔒 " : ""}{p.grade}{p.signed ? ` · ✍ ${p.signer}` : ""}</div>

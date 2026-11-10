@@ -71,6 +71,18 @@
    "changes": {
     "Year": "2016"
    }
+  },
+  {
+   "match": {
+    "Title": "All-Star Superman",
+    "Issue": "1",
+    "Volume": "1",
+    "Box": "62",
+    "Entry": "2157"
+   },
+   "changes": {
+    "Year": "2022"
+   }
   }
  ]
 }

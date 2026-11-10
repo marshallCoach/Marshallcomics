@@ -240,7 +240,7 @@ export default function MissingCovers() {
                     <div key={bookId(c) + idx} className="mc-cell">
                       <button className="mc-card" onClick={() => setSolo(idx)}>
                         <div className="mc-cov">
-                          <CoverImage comic={c} width={150} height={225} objectFit="contain" />
+                          <CoverImage comic={c} width={150} height={225} objectFit="contain" titleLink={false} />
                           {q && <span className="mc-queued">✓ linked</span>}
                           {isKey(c) && <span className="mc-key">★</span>}
                         </div>
