@@ -66,6 +66,16 @@ function pubColor(p: string) {
   return "#6b7280";
 }
 
+// Forgiving title match for search: ignores case, spacing, punctuation, "&" vs
+// "and", a leading "The", and anything in (parentheses) the user adds — so
+// "Batman / Superman: World's Finest #56", "Aliens vs. X-Men (AVX) #2" and
+// "The Fury of Firestorm #6" find "Batman/Superman…", "Aliens vs. X-Men" and
+// "Fury of Firestorm…" respectively.
+function normSearch(s: string) {
+  return (s || "").toLowerCase().replace(/\([^)]*\)/g, " ").replace(/&/g, " and ")
+    .replace(/[^a-z0-9]+/g, " ").trim().replace(/^the /, "");
+}
+
 function parseVal(v: string | undefined | null) {
   if (!v || v === "nan") return 0;
   const m = String(v).match(/(\d+(?:\.\d+)?)/);
@@ -262,7 +272,7 @@ export default function Everything({
       if (issuePat) {
         const tp = issuePat[1].trim();
         const ip = issuePat[2];
-        const tOk = !tp || c.Title.toLowerCase().includes(tp);
+        const tOk = !tp || c.Title.toLowerCase().includes(tp) || normSearch(c.Title).includes(normSearch(tp));
         const iOk = c.Issue.replace(/^#/, "") === ip || c.Issue === ip || String(parseFloat(c.Issue)) === ip;
         return tOk && iOk;
       }
@@ -271,7 +281,7 @@ export default function Everything({
         c.Cover_Artist, c.Signed_By, c.Key_Reason, c.First_App,
         c.Arc, c.Seller_Notes, c.Era, c.Universe, `box ${c.Box}`,
         c.Story_Pitch, c.Imprint, c.Terrificon,
-      ].join(" ").toLowerCase().includes(q);
+      ].join(" ").toLowerCase().includes(q) || (!!normSearch(q) && normSearch(c.Title).includes(normSearch(q)));
     });
   }, [searched, query, publisher, era, platform, boxFilter, keysOnly, signedOnly, slabbedOnly, yearParenOnly, creatorParenOnly, annualOnly, familyFilter, exactTitle]);
 
