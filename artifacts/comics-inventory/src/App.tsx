@@ -269,12 +269,16 @@ export default function App() {
     setNavParams(params || {});
     setActiveTab(t);
     syncHash(t);
+    // Start every page at the top — keeping the old scroll position dropped you
+    // mid-way into search results with the first rows (e.g. a new #24) hidden.
+    window.scrollTo({ top: 0 });
   }
 
   function handleSection(sid: SectionId) {
     setActiveSection(sid);
     const sec = NAV.find(n => n.id === sid)!;
     setActiveTab(sec.tabs[0].id as TabId);
+    window.scrollTo({ top: 0 });
   }
 
   return (

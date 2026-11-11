@@ -166,7 +166,7 @@ export default function Everything({
         {isSlab(r) && <SlabThumb comic={r} size={46} />}
       </div>
     )},
-    { key:"title",     label:"Title",     defaultWidth:240, sort:(a,b)=>a.Title.localeCompare(b.Title), cell:r=>{
+    { key:"title",     label:"Title",     defaultWidth:240, sort:(a,b)=>a.Title.localeCompare(b.Title) || parseVal(a.Issue)-parseVal(b.Issue), cell:r=>{
       const fk = comicFlagKey(r.Title, r.Issue || "", r.Box || "");
       return (
         <span style={{ display:"flex", alignItems:"center", gap:5 }}>
@@ -469,7 +469,7 @@ export default function Everything({
 
       {/* Results — list */}
       {searched && results.length > 0 && view === "list" && (
-        <SortableTable rows={results} cols={cols} rowKey={(_r,i)=>String(i)} pageSize={100} defaultSortKey="box" expandCell={c => (
+        <SortableTable rows={results} cols={cols} rowKey={(_r,i)=>String(i)} pageSize={100} defaultSortKey="title" expandCell={c => (
           <div style={{ display:"flex", gap:16, alignItems:"flex-start" }}>
             <CoverImage
               comic={c}
