@@ -243,6 +243,11 @@ def run(a, c):
                 log(f"   issue lists {'INCLUDE' if c['listmode'] else 'do NOT include'} story arcs "
                     f"-> {'fast mode' if c['listmode'] else 'per-issue mode with arc expansion'}")
         byn = {i["n"]: i for i in c["vissues"][vid]}
+        if a.verbose:
+            ns = sorted((i["n"] for i in c["vissues"][vid]), key=fnum)
+            log(f"   {ek[0]} vol {ek[1]} ({min(b['year'] or 0 for b in grp)}) -> CV '{vol['name']}' "
+                f"https://comicvine.gamespot.com/volume/4050-{vid}/  CV issues {ns[:3]}..{ns[-3:]} ({len(ns)})"
+                f"  mine {sorted({b['issue'] for b in grp}, key=fnum)[:8]}")
         vol_ids = {i["id"] for i in c["vissues"][vid]}
         # 3. per issue (only if lists lack arcs), with arc expansion.
         #    Speed-ups (off with --full): within a run of consecutive issues only every
@@ -329,6 +334,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--full", action="store_true", help="ask every issue (no skipping)")
+    ap.add_argument("--verbose", action="store_true", help="show which Comic Vine series each title matched")
     a = ap.parse_args()
     if not KEY:
         sys.exit("COMIC_VINE_API_KEY is not set - add it to ~/.zshrc, then: source ~/.zshrc")
