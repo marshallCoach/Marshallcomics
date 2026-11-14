@@ -34,6 +34,7 @@ CACHE, LOCK = "cv_cache.json", "cv_arcs.lock"
 PER_RESOURCE_GAP = 18.5     # 200/hour per resource
 GLOBAL_GAP = 1.1
 OUTAGE_LIMIT = 30 * 60
+DEAD_AFTER = 5              # misses in a row (no arc yet) before a series is skipped
 OUT_COLS = ["title", "sheet_volume", "issue", "year", "Story Arc", "Arc Part", "Arc Length",
             "Finale Issue #", "Crossover Event (Fandom)", "Arc Confidence", "Arc Source"]
 
@@ -58,6 +59,13 @@ def ni(v):
         return str(int(f)) if f == int(f) else s
     except ValueError:
         return s
+
+
+def fnum(v):
+    try:
+        return float(str(v).strip().lstrip("#"))
+    except ValueError:
+        return 1e9
 
 
 def yr(v):
@@ -161,7 +169,7 @@ def load_targets():
             continue
         k = (t, ni(r[cV]) if cV is not None else "1", ni(r[cI]), yr(r[cY]))
         books.setdefault(k, {"title": t, "vol": k[1] or "1", "issue": k[2], "year": k[3],
-                             "pub": str(r[cP] or "") if cP is not None else ""})
+                             "pub": str(r[cP] or "") if cP is not None else "", "has_arc": bool(has_arc)})
     log(f"source {os.path.basename(src)}: {len(books)} unique books without a Story Arc or without an Arc Length")
     return list(books.values())
 
@@ -186,15 +194,23 @@ def pick_volume(results, b):
 
 def run(a, c):
     books = load_targets()
-    if a.limit:
-        books = books[: a.limit]
     eras = collections.defaultdict(list)                 # one CV volume per title+start-ish era
     for b in books:
         eras[(b["title"], b["vol"], (b["year"] or 0) // 6)].append(b)
-    log(f"{len(books)} books in {len(eras)} series-eras")
-    found = {}
+    # priority: series holding Fandom arcs that lack a length first (one lookup fills a whole arc)
+    order = sorted(eras.items(), key=lambda kv: (0 if any(b["has_arc"] for b in kv[1]) else 1))
+    if a.limit:
+        keep, cnt = [], 0
+        for k, g in order:
+            if cnt >= a.limit:
+                break
+            keep.append((k, g[: a.limit - cnt])); cnt += len(keep[-1][1])
+        order = keep
+        books = [b for _, g in order for b in g]
+    log(f"{len(books)} books in {len(order)} series-eras  ({'full mode' if a.full else 'fast: every 2nd issue + dead-series skip'})")
+    found, stats = {}, collections.Counter()
 
-    for n, (ek, grp) in enumerate(eras.items(), 1):
+    for n, (ek, grp) in enumerate(order, 1):
         ekey = "|".join(map(str, ek))
         # 1. resolve volume
         if ekey not in c["vol"]:
@@ -227,21 +243,23 @@ def run(a, c):
                     f"-> {'fast mode' if c['listmode'] else 'per-issue mode with arc expansion'}")
         byn = {i["n"]: i for i in c["vissues"][vid]}
         vol_ids = {i["id"] for i in c["vissues"][vid]}
-        # 3. per issue (only if lists lack arcs), with arc expansion
-        for b in grp:
-            it = byn.get(b["issue"])
-            if not it:
-                continue
-            arcs = it["arcs"]
-            if arcs is None:
-                iid = str(it["id"])
-                if iid not in c["issue"]:
-                    js = cv(f"issue/4000-{iid}/", field_list="id,story_arc_credits,site_detail_url")
-                    r = js.get("results") or {}
-                    c["issue"][iid] = [{"id": s["id"], "name": s["name"]} for s in (r.get("story_arc_credits") or [])]
-                arcs = c["issue"][iid]
-            if not arcs:
-                continue
+        # 3. per issue (only if lists lack arcs), with arc expansion.
+        #    Speed-ups (off with --full): within a run of consecutive issues only every
+        #    second one is asked (any 2+ issue arc contains an asked issue; expansion fills
+        #    the rest), and a volume with DEAD_AFTER misses in a row and no arc is skipped.
+        def arcs_for(it, allow):
+            if it["arcs"] is not None:
+                return it["arcs"]
+            iid = str(it["id"])
+            if iid not in c["issue"]:
+                if not allow:
+                    return None
+                js = cv(f"issue/4000-{iid}/", field_list="id,story_arc_credits,site_detail_url")
+                r = js.get("results") or {}
+                c["issue"][iid] = [{"id": s["id"], "name": s["name"]} for s in (r.get("story_arc_credits") or [])]
+            return c["issue"][iid]
+
+        def record(b, it, arcs):
             arc = arcs[0]
             aid = str(arc["id"])
             if aid not in c["arc"]:
@@ -256,17 +274,40 @@ def run(a, c):
             part = length = finale = ""
             if same_vol:                                 # order by issue number, not CV's list order
                 num = {i["id"]: i["n"] for i in c["vissues"][vid]}
-                def nk(x):
-                    try: return float(num[x])
-                    except ValueError: return 1e9
-                order = sorted(A["ids"], key=nk)
+                order = sorted(A["ids"], key=lambda x: fnum(num[x]))
                 part = order.index(it["id"]) + 1 if it["id"] in order else ""
                 length, finale = len(order), num[order[-1]]
             found[(b["title"], b["vol"], b["issue"], b["year"])] = [
                 A["name"], part, length, finale, "", "Stated", A["url"] or it["url"]]
-        if n % 10 == 0 or n == len(eras):
+
+        deferred, misses, hit_any, prev = [], 0, False, None
+        run_pos = 0
+        for b in sorted(grp, key=lambda x: fnum(x["issue"])):
+            it = byn.get(b["issue"])
+            if not it:
+                continue
+            f = fnum(b["issue"])
+            run_pos = run_pos + 1 if (prev is not None and f == prev + 1) else 0
+            prev = f
+            cached = it["arcs"] is not None or str(it["id"]) in c["issue"]
+            if not cached and not a.full and (run_pos % 2 == 1 or (misses >= DEAD_AFTER and not hit_any)):
+                deferred.append((b, it))
+                continue
+            arcs = arcs_for(it, True)
+            if arcs:
+                hit_any, misses = True, 0
+                record(b, it, arcs)
+            else:
+                misses += 1
+        for b, it in deferred:                           # filled for free if a neighbour found its arc
+            arcs = arcs_for(it, False)
+            if arcs:
+                record(b, it, arcs)
+            else:
+                stats["skipped"] += 1
+        if n % 10 == 0 or n == len(order):
             save_cache(c)
-            log(f"  {n}/{len(eras)} series-eras  arcs found for {len(found)} books")
+            log(f"  {n}/{len(order)} series-eras  arcs found for {len(found)} books  (not asked: {stats['skipped']})")
     save_cache(c)
 
     with open("cv_arcs.csv", "w", newline="", encoding="utf-8") as f:
@@ -283,6 +324,7 @@ def run(a, c):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--full", action="store_true", help="ask every issue (no skipping)")
     a = ap.parse_args()
     if not KEY:
         sys.exit("COMIC_VINE_API_KEY is not set - add it to ~/.zshrc, then: source ~/.zshrc")
