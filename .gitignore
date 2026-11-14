@@ -151,3 +151,5 @@ arc_fetch.lock
 arc_summary.json
 arc_summary_gate.json
 arc_overnight.log
+arc_extracted.csv
+arc_apply_report.csv
