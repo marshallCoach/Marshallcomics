@@ -5,6 +5,8 @@ import { clearAllFlags, exportFlags as exportFlagsLib } from "@/lib/coverFlags";
 import { CoverModal } from "@/components/CoverImage";
 import { splitCreators } from "@/utils/creators";
 import flaggedBaseline from "@/data/flaggedCoversBaseline.json";
+import { getCoverSvgUrl } from "@/utils/coverThumbnails";
+import { arcOf, eventOf, arcIssueRange, fandomGuess, loadFandomLinks, CONF, type ArcInfo } from "@/lib/arc";
 
 const BASELINE_FLAGGED_IDS = new Set((flaggedBaseline as { id: string }[]).map(f => f.id));
 
@@ -26,7 +28,7 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-export default function CoverReview({ initTitle, initCreative }: { initTitle?: string; initCreative?: string }) {
+export default function CoverReview({ initTitle, initCreative, initArc, initVol }: { initTitle?: string; initCreative?: string; initArc?: string; initVol?: string }) {
   const [pool, setPool]         = useState<Pooled[] | null>(null);
   const [coversMap, setCoversMap] = useState<Record<string, { url: string | null }>>({});
   const [batchStart, setBatchStart] = useState(0);
@@ -37,10 +39,14 @@ export default function CoverReview({ initTitle, initCreative }: { initTitle?: s
   const [creativeFilter, setCreativeFilter] = useState<string | null>(initCreative || null);
   const [modal, setModal] = useState<{ comic: Comic; url: string } | null>(null);
   const [showMissing, setShowMissing] = useState(false);
+  // (a) arc view: the title page limited to ONE story arc (name + volume)
+  const [arcFilter, setArcFilter] = useState<{ name: string; vol: string } | null>(initArc ? { name: initArc, vol: initVol || "1" } : null);
+  const [links, setLinks] = useState<Record<string, string>>({});
+  useEffect(() => { loadFandomLinks().then(setLinks); }, []);
   const tickRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   // Title and creative filters are mutually exclusive — picking one clears the other.
-  const pickTitle = useCallback((t: string | null) => { setCreativeFilter(null); setTitleFilter(t); }, []);
+  const pickTitle = useCallback((t: string | null) => { setCreativeFilter(null); setArcFilter(null); setTitleFilter(t); }, []);
   const pickCreative = useCallback((c: string | null) => { setTitleFilter(null); setCreativeFilter(c); }, []);
 
   // Build the review pool once: every comic that has a real (non-placeholder) cover,
@@ -76,7 +82,10 @@ export default function CoverReview({ initTitle, initCreative }: { initTitle?: s
 
   // Deep-link from the homepage: a cover title opens this page already filtered
   // to that title ("Cover by Title"). Re-applies whenever the incoming title changes.
-  useEffect(() => { if (initTitle) pickTitle(initTitle); }, [initTitle, pickTitle]);
+  useEffect(() => {
+    if (initTitle) pickTitle(initTitle);
+    setArcFilter(initTitle && initArc ? { name: initArc, vol: initVol || "1" } : null);
+  }, [initTitle, initArc, initVol, pickTitle]);
   // Deep-link from the Creative Credits page: open filtered to one creator's books.
   useEffect(() => { if (initCreative) pickCreative(initCreative); }, [initCreative, pickCreative]);
 
@@ -106,14 +115,15 @@ export default function CoverReview({ initTitle, initCreative }: { initTitle?: s
     for (const c of DATA.comics as Comic[]) {
       if (c.Title !== titleFilter) continue;
       const vol = String(c.Volume || "1").trim();
+      if (arcFilter && (arcOf(c)?.name !== arcFilter.name || vol !== arcFilter.vol)) continue;
       const key = `${c.Title}|||${c.Issue}|||${vol}`;
       if (seen.has(key)) continue;
+      seen.add(key);
+      // Books with NO cover image are included too (placeholder + Try Fandom link) —
+      // they used to be silently dropped from the title view.
       const entry = coversMap[key] ?? coversMap[`${c.Title}|||${c.Issue}`];
-      if (entry?.url) {
-        seen.add(key);
-        if (!byVol.has(vol)) byVol.set(vol, []);
-        byVol.get(vol)!.push({ comic: c, url: entry.url });
-      }
+      if (!byVol.has(vol)) byVol.set(vol, []);
+      byVol.get(vol)!.push({ comic: c, url: entry?.url || "" });
     }
     const groups = [...byVol.entries()]
       .map(([vol, items]) => ({
@@ -124,7 +134,7 @@ export default function CoverReview({ initTitle, initCreative }: { initTitle?: s
       .sort((a, b) => (parseInt(a.vol) || 0) - (parseInt(b.vol) || 0));
     const total = groups.reduce((s, g) => s + g.items.length, 0);
     return { groups, volCount: byVol.size, total };
-  }, [titleFilter, coversMap]);
+  }, [titleFilter, coversMap, arcFilter]);
 
   const titleCount = titleView.total;
 
@@ -216,17 +226,47 @@ export default function CoverReview({ initTitle, initCreative }: { initTitle?: s
 
   const pct = Math.max(0, Math.min(100, 100 - (msLeft / CYCLE_MS) * 100));
 
+  // Small overlay tags on a tile (top = status, bottom-right = arc part).
+  const tag = (text: string, bg: string, pos: React.CSSProperties) => (
+    <span style={{ position: "absolute", ...pos, background: bg, color: "#fff", fontWeight: 800, fontSize: "0.68rem", letterSpacing: "0.5px", borderRadius: 4, padding: "2px 6px", pointerEvents: "none" }}>{text}</span>
+  );
+  const tryFandom = (c: { Title: string; Issue: string | number; Volume?: string; Publisher?: string }) => {
+    const g = fandomGuess(c, links, (DATA.comics as Comic[]).filter(x => x.Title === c.Title));
+    if (!g) return null;
+    return (
+      <a href={g.url} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()}
+        title={g.basis === "guess" ? "Assumed page — built from title + volume; may need adjusting" : `Built from ${g.basis === "your link" ? "a Fandom link you pasted for this title" : "this arc's Fandom source"}`}
+        style={{ display: "inline-block", marginTop: 4, fontSize: "0.78rem", fontWeight: 600, color: "#4f46e5", textDecoration: "none" }}>
+        Try Fandom ↗{g.basis === "guess" && <span style={{ color: "var(--muted)", fontWeight: 400 }}> (guess)</span>}
+      </a>
+    );
+  };
+  const partTags = (c: Comic) => {
+    const a = arcOf(c);
+    if (!a || !a.part) return null;
+    const iss = String(c.Issue).replace(/^#/, "");
+    const finale = (a.finale && a.finale === iss) || (a.length && a.part === a.length);
+    return <>
+      {finale && tag("FINALE", "var(--red)", { left: 5, bottom: 5 })}
+      {tag(a.length ? `${a.part}/${a.length}` : `pt ${a.part}`, "rgba(0,0,0,0.78)", { right: 5, bottom: 5 })}
+    </>;
+  };
+
   const card = (p: Pooled, k: string, showVol = false, issueOnly = false) => {
     const id = comicId({ Title: p.comic.Title, Issue: p.comic.Issue, Volume: p.comic.Volume, Box: p.comic.Box });
     const flagged = flags.has(id);
+    const noCover = !p.url;
+    const ev = eventOf(p.comic);
     return (
       <div key={k} style={{ width: "100%", textAlign: "center" }}>
         <div
           onClick={() => setModal({ comic: p.comic, url: p.url })}
-          title="Open to mark incorrect / variant / dupe"
-          style={{ width: "100%", aspectRatio: "2 / 3", borderRadius: 4, overflow: "hidden", background: "#1a1628", border: flagged ? "2px solid var(--red)" : "1px solid var(--border)", cursor: "pointer" }}
+          title={noCover ? "No cover image yet — open to paste a Fandom link" : "Open to mark incorrect / variant / dupe"}
+          style={{ position: "relative", width: "100%", aspectRatio: "2 / 3", borderRadius: 4, overflow: "hidden", background: "#1a1628", border: flagged ? "2px solid var(--red)" : "1px solid var(--border)", cursor: "pointer" }}
         >
-          <img src={p.url} alt={`${p.comic.Title} ${p.comic.Issue}`} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} loading="lazy" />
+          <img src={noCover ? getCoverSvgUrl(p.comic, { width: 150, height: 225 }) : p.url} alt={`${p.comic.Title} ${p.comic.Issue}`} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} loading="lazy" />
+          {noCover && tag("NO COVER", "#4f46e5", { top: 8, left: "50%", transform: "translateX(-50%)" })}
+          {partTags(p.comic)}
         </div>
         {issueOnly ? (
           <div style={{ fontSize: "0.95rem", fontWeight: 600, color: "var(--text)", marginTop: 6, lineHeight: 1.3, width: "100%" }}>
@@ -243,23 +283,88 @@ export default function CoverReview({ initTitle, initCreative }: { initTitle?: s
           </button>
         )}
         {showVol && <div style={{ fontSize: "0.8rem", color: "var(--muted)", marginTop: 2 }}>Vol {p.comic.Volume || "1"}</div>}
-        <label style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 4, fontSize: "0.875rem", color: flagged ? "var(--red)" : "var(--muted)", cursor: "pointer", marginTop: 8 }}>
-          <input type="checkbox" checked={flagged} onChange={() => toggleFlag(p)} />
-          wrong
-        </label>
+        {ev && <div style={{ marginTop: 3 }}><span style={{ fontSize: "0.7rem", fontWeight: 600, color: "#1d4ed8", background: "rgba(29,78,216,0.1)", border: "1px solid rgba(29,78,216,0.3)", borderRadius: 999, padding: "1px 7px" }}>{ev}</span></div>}
+        {noCover && tryFandom(p.comic)}
+        {!noCover && (
+          <label style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 4, fontSize: "0.875rem", color: flagged ? "var(--red)" : "var(--muted)", cursor: "pointer", marginTop: 8 }}>
+            <input type="checkbox" checked={flagged} onChange={() => toggleFlag(p)} />
+            wrong
+          </label>
+        )}
       </div>
     );
   };
 
-  // Placeholder tile for an issue that's missing from the run (toggle-only).
-  const gapCard = (n: number, k: string) => (
-    <div key={k} style={{ width: "100%", textAlign: "center" }}>
-      <div style={{ width: "100%", aspectRatio: "2 / 3", borderRadius: 4, overflow: "hidden", background: "repeating-linear-gradient(45deg,#1a1628,#1a1628 10px,#211c33 10px,#211c33 20px)", border: "1px dashed var(--border)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <span style={{ fontSize: "0.8rem", color: "var(--muted)", letterSpacing: "1px" }}>MISSING</span>
+  // Tile for an issue you DON'T own (a gap in the run or in an arc): the app's own
+  // placeholder cover, faded, red dashed, MISSING tag, and an assumed Fandom link.
+  const gapCard = (n: number, k: string, ref?: Comic, partLabel?: string) => {
+    const ghost = { Title: ref?.Title || titleFilter || "", Issue: String(n), Volume: ref?.Volume, Publisher: ref?.Publisher || "", Year: ref?.Year || "" };
+    return (
+      <div key={k} style={{ width: "100%", textAlign: "center" }}>
+        <div style={{ position: "relative", width: "100%", aspectRatio: "2 / 3", borderRadius: 4, overflow: "hidden", border: "2px dashed var(--red)" }}>
+          <img src={getCoverSvgUrl(ghost, { width: 150, height: 225 })} alt={`${ghost.Title} ${n} (not owned)`} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", opacity: 0.5, filter: "grayscale(0.6)" }} />
+          {tag("MISSING", "var(--red)", { top: 8, left: "50%", transform: "translateX(-50%)" })}
+          {partLabel && tag(partLabel, "rgba(0,0,0,0.78)", { right: 5, bottom: 5 })}
+        </div>
+        <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--red)", marginTop: 6, lineHeight: 1.3, width: "100%" }}>#{n}</div>
+        {tryFandom(ghost)}
       </div>
-      <div style={{ fontSize: "0.95rem", fontWeight: 600, color: "var(--muted)", marginTop: 6, lineHeight: 1.3, width: "100%" }}>#{n}</div>
-    </div>
-  );
+    );
+  };
+
+  // Split a volume's issues into contiguous story-arc sections (issue order).
+  const arcSections = (items: Pooled[]) => {
+    const out: { arc: ArcInfo | null; items: Pooled[] }[] = [];
+    for (const p of items) {
+      const a = arcOf(p.comic);
+      const last = out[out.length - 1];
+      if (last && (last.arc?.name ?? null) === (a?.name ?? null)) last.items.push(p);
+      else out.push({ arc: a, items: [p] });
+    }
+    return out;
+  };
+
+  // An arc section always shows its gaps: the full part range when part numbers +
+  // length are known, otherwise first..last owned issue.
+  const arcTiles = (items: Pooled[], keyp: string) => {
+    const range = arcIssueRange(items.map(p => p.comic));
+    const owned = new Map<number, Pooled>();
+    const extras: Pooled[] = [];
+    for (const p of items) {
+      const n = parseFloat(String(p.comic.Issue));
+      if (Number.isInteger(n)) owned.set(n, p); else extras.push(p);
+    }
+    const nums = range ?? (() => { const k = [...owned.keys()]; if (!k.length) return []; const lo = Math.min(...k), hi = Math.max(...k); return Array.from({ length: hi - lo + 1 }, (_, i) => lo + i); })();
+    const len = range?.length;
+    const ref = items[0]?.comic;
+    return [
+      ...nums.map((n, i) => owned.get(n) ? card(owned.get(n)!, `${keyp}-${n}`, false, true) : gapCard(n, `${keyp}-gap-${n}`, ref, len ? `${i + 1}/${len}` : undefined)),
+      ...extras.map((p, i) => card(p, `${keyp}-x-${i}`, false, true)),
+    ];
+  };
+
+  const arcHeader = (a: ArcInfo, items: Pooled[], vol: string, clickable: boolean) => {
+    const range = arcIssueRange(items.map(p => p.comic));
+    const ownedN = new Set(items.map(p => parseFloat(String(p.comic.Issue))));
+    const missing = range ? range.filter(n => !ownedN.has(n)) : [];
+    const span = range ? `#${range[0]}–${range[range.length - 1]}` : `#${items[0].comic.Issue}${items.length > 1 ? `–${items[items.length - 1].comic.Issue}` : ""}`;
+    const c = a.conf ? CONF[a.conf] : null;
+    return (
+      <div role={clickable ? "button" : undefined} tabIndex={clickable ? 0 : undefined}
+        onClick={clickable ? () => setArcFilter({ name: a.name, vol }) : undefined}
+        onKeyDown={clickable ? e => { if (e.key === "Enter") setArcFilter({ name: a.name, vol }); } : undefined}
+        title={clickable ? `Show only the "${a.name}" arc` : undefined}
+        style={{ display: "flex", flexWrap: "wrap", alignItems: "baseline", gap: "6px 12px", borderLeft: "4px solid #4f46e5", padding: "2px 0 2px 10px", margin: "6px 0 12px", cursor: clickable ? "pointer" : "default" }}>
+        <span style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--text)" }}>{a.name}{clickable && <span style={{ color: "#4f46e5" }}> ›</span>}</span>
+        <span style={{ fontSize: "0.85rem", color: "var(--muted)" }}>
+          {span}{range ? ` · ${range.length} parts · you own ${range.length - missing.length}` : ""}
+          {missing.length > 0 && <span style={{ color: "var(--red)", fontWeight: 700 }}> · missing {missing.map(n => `#${n}`).join(", ")}</span>}
+        </span>
+        {c && <span title={c.help} style={{ fontSize: "0.8rem", display: "inline-flex", alignItems: "center", gap: 5, color: "var(--text)" }}><span style={{ width: 8, height: 8, borderRadius: "50%", background: c.color, display: "inline-block" }} />{c.label}</span>}
+        {a.source && <a href={a.source} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()} style={{ fontSize: "0.8rem", color: "#4f46e5" }}>Fandom ↗</a>}
+      </div>
+    );
+  };
 
   // Interleave a volume's owned covers with placeholders for the integer gaps
   // between its lowest and highest issue, so a run reads #1..#N with holes shown.
@@ -297,10 +402,12 @@ export default function CoverReview({ initTitle, initCreative }: { initTitle?: s
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 12, marginBottom: 8 }}>
         <div>
           <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "1.75rem", letterSpacing: "2px", color: "var(--text)" }}>
-            {titleFilter ? "Cover Review by title" : creativeFilter ? "Cover Review by creator" : "Cover Review"}
+            {arcFilter ? `Arc: ${arcFilter.name}` : titleFilter ? "Cover Review by title" : creativeFilter ? "Cover Review by creator" : "Cover Review"}
           </div>
           <div style={{ fontSize: "0.875rem", color: "var(--muted)" }}>
-            {titleFilter
+            {arcFilter
+              ? `${titleFilter} · Vol ${arcFilter.vol} · ${titleCount} issue${titleCount === 1 ? "" : "s"} you own in this arc · missing parts shown with a Try Fandom link`
+              : titleFilter
               ? `${titleFilter} · ${titleCount} issue${titleCount === 1 ? "" : "s"}${titleView.volCount > 1 ? ` · ${titleView.volCount} volumes` : ""} · click "wrong" on any incorrect cover`
               : creativeFilter
               ? `${creativeFilter} · ${creativeView.total} book${creativeView.total === 1 ? "" : "s"} across ${creativeView.titleCount} title${creativeView.titleCount === 1 ? "" : "s"} · click "wrong" on any incorrect cover`
@@ -308,12 +415,14 @@ export default function CoverReview({ initTitle, initCreative }: { initTitle?: s
           </div>
         </div>
         <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
-          {titleFilter && (
+          {titleFilter && !arcFilter && (
             <button onClick={() => setShowMissing(m => !m)} style={btnStyle(showMissing)} title="Show placeholder tiles for issues missing from the run">
               {showMissing ? "✓ Missing issues" : "Show missing issues"}
             </button>
           )}
-          {titleFilter || creativeFilter ? (
+          {arcFilter ? (
+            <button onClick={() => setArcFilter(null)} style={btnStyle(false)}>← All {titleFilter}</button>
+          ) : titleFilter || creativeFilter ? (
             <button onClick={() => { setTitleFilter(null); setCreativeFilter(null); }} style={btnStyle(false)}>← All covers</button>
           ) : (
             <>
@@ -357,7 +466,7 @@ export default function CoverReview({ initTitle, initCreative }: { initTitle?: s
         )
       ) : titleFilter ? (
         titleCount === 0 ? (
-          <div style={{ color: "var(--muted)", marginTop: 20 }}>No covered issues found for this title.</div>
+          <div style={{ color: "var(--muted)", marginTop: 20 }}>{arcFilter ? `No issues found for the "${arcFilter.name}" arc.` : "No issues found for this title."}</div>
         ) : (
           <div style={{ marginTop: 20 }}>
             {titleView.groups.map(g => (
@@ -367,14 +476,34 @@ export default function CoverReview({ initTitle, initCreative }: { initTitle?: s
                     VOLUME {g.vol} · {g.items.length} issue{g.items.length === 1 ? "" : "s"}
                   </div>
                 )}
-                <div className="cr-grid">
-                  {showMissing
-                    ? withGaps(g.items).map((e, i) =>
-                        e.kind === "have"
-                          ? card(e.p, `t-${g.vol}-${i}`, false, true)
-                          : gapCard(e.n, `t-${g.vol}-gap-${i}`))
-                    : g.items.map((p, i) => card(p, `t-${g.vol}-${i}`, false, true))}
-                </div>
+                {g.items.some(p => arcOf(p.comic))
+                  // Arc data present: one section per story arc (gaps always shown inside
+                  // an arc); issues with no arc data keep the old behaviour.
+                  ? arcSections(g.items).map((sec, si) => sec.arc ? (
+                      <div key={`s-${g.vol}-${si}`} style={{ marginBottom: 18 }}>
+                        {arcHeader(sec.arc, sec.items, g.vol, !arcFilter)}
+                        <div className="cr-grid">{arcTiles(sec.items, `a-${g.vol}-${si}`)}</div>
+                      </div>
+                    ) : (
+                      <div key={`s-${g.vol}-${si}`} style={{ marginBottom: 18 }}>
+                        <div style={{ fontSize: "0.85rem", color: "var(--muted)", margin: "6px 0 10px", borderLeft: "4px solid var(--border)", paddingLeft: 10 }}>No arc data yet</div>
+                        <div className="cr-grid">
+                          {(showMissing ? withGaps(sec.items) : sec.items.map(p => ({ kind: "have" as const, p }))).map((e, i) =>
+                            e.kind === "have" ? card(e.p, `n-${g.vol}-${si}-${i}`, false, true)
+                              : gapCard(e.n, `n-${g.vol}-${si}-gap-${i}`, sec.items[0]?.comic))}
+                        </div>
+                      </div>
+                    ))
+                  : (
+                    <div className="cr-grid">
+                      {showMissing
+                        ? withGaps(g.items).map((e, i) =>
+                            e.kind === "have"
+                              ? card(e.p, `t-${g.vol}-${i}`, false, true)
+                              : gapCard(e.n, `t-${g.vol}-gap-${i}`, g.items[0]?.comic))
+                        : g.items.map((p, i) => card(p, `t-${g.vol}-${i}`, false, true))}
+                    </div>
+                  )}
               </div>
             ))}
           </div>

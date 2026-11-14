@@ -923,17 +923,44 @@ body {
 }
 .cover-carousel-card:hover { transform: translateY(-4px); }
 
-/* (t) badge on every cover — opens all covers of that title */
-.cover-t-badge {
-  position: absolute; top: 4px; left: 4px; z-index: 2;
-  display: flex; align-items: center; justify-content: center;
-  padding: 0 4px; border-radius: 4px; cursor: pointer;
-  font-weight: 800; line-height: 1; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  color: var(--red, #c8102e); background: rgba(255,255,255,0.92);
-  border: 1px solid var(--red, #c8102e); box-shadow: 0 1px 3px rgba(0,0,0,0.25);
-  opacity: 0.85; transition: opacity 0.15s, transform 0.15s;
+/* [ t | a ] capsule — t = every cover of the title, a = this story arc.
+   Letter is the shortcut; hover/focus expands it to the word (Apple-style
+   progressive disclosure). Frosted so it reads over any cover art. */
+.navpills {
+  display: inline-flex; align-items: stretch; vertical-align: middle;
+  border-radius: 999px; overflow: hidden;
+  background: rgba(255,255,255,0.86);
+  -webkit-backdrop-filter: blur(8px) saturate(160%); backdrop-filter: blur(8px) saturate(160%);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.28), inset 0 0 0 1px rgba(0,0,0,0.06);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
-.cover-t-badge:hover { opacity: 1; transform: scale(1.12); }
+.navpills.overlay { position: absolute; top: 5px; left: 5px; z-index: 2; }
+.navpills .np {
+  all: unset; box-sizing: border-box; cursor: pointer; position: relative;
+  display: inline-flex; align-items: center; font-weight: 800; line-height: 1;
+  padding: 3px 7px; font-size: 0.72rem; letter-spacing: 0.2px;
+  transition: background 0.15s;
+}
+.navpills.sm .np { padding: 2px 6px; font-size: 0.66rem; }
+.navpills .np.t { color: var(--red, #c8102e); }
+.navpills .np.a { color: #4f46e5; border-left: 1px solid rgba(0,0,0,0.12); }
+.navpills .np:hover { background: rgba(0,0,0,0.07); }
+.navpills .np:focus-visible { outline: 2px solid #4f46e5; outline-offset: -2px; border-radius: 999px; }
+.navpills .np-word {
+  display: inline-block; max-width: 0; overflow: hidden; white-space: nowrap;
+  font-weight: 700; transition: max-width 0.2s ease;
+}
+.navpills .np:hover .np-word, .navpills .np:focus-visible .np-word { max-width: 3.5em; }
+/* touch: bigger hit area (HIG 44pt) without a bigger look */
+@media (pointer: coarse) {
+  .navpills .np::after { content: ""; position: absolute; inset: -9px -4px; }
+  .navpills .np-word { max-width: 0 !important; }
+}
+@media (prefers-color-scheme: dark) {
+  .navpills { background: rgba(28,28,34,0.82); box-shadow: 0 1px 3px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(255,255,255,0.08); }
+  .navpills .np.a { color: #a5b4fc; border-left-color: rgba(255,255,255,0.14); }
+  .navpills .np:hover { background: rgba(255,255,255,0.08); }
+}
 
 /* Homepage quick links */
 .home-quicklinks { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }

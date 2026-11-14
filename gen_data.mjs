@@ -145,6 +145,15 @@ const C = {
   verifyDup: colOpt('⚠ Verify Duplicate'),
   coverPrice: colOpt('Cover Price'),   // real cover price captured at intake (optional)
   pubDate:    colOpt('Publication Date'), // GCD on-sale date (optional; filled by brb_pubdate_fill.py)
+  // Arc enrichment (brb_arc_extract.py) — new columns at the far right. Optional:
+  // absent until the first arc run; Arc / Story itself is never touched.
+  storyArc:   colOpt('Story Arc'),
+  arcPart:    colOpt('Arc Part'),
+  arcLen:     colOpt('Arc Length'),
+  arcFinale:  colOpt('Finale Issue #'),
+  xEvent:     colOpt('Crossover Event (Fandom)'),
+  arcConf:    colOpt('Arc Confidence'),
+  arcSrc:     colOpt('Arc Source'),
   // eBay pricing (optional — present only after brb_ebay_pricing.py merge)
   ebayMedian: colOpt('eBay Median Sold $'),
   ebayAvg:    colOpt('eBay Avg Sold $'),
@@ -153,6 +162,19 @@ const C = {
   ebayCount:  colOpt('eBay Comp Count'),
 };
 
+// Arc fields are emitted ONLY when the row has a value, so 11k rows without arc data
+// don't add ~1 MB of empty strings to data3.ts.
+const ARC_KEYS = [['Story_Arc','storyArc'],['Arc_Part','arcPart'],['Arc_Length','arcLen'],
+  ['Arc_Finale','arcFinale'],['Crossover_Event','xEvent'],['Arc_Confidence','arcConf'],['Arc_Source','arcSrc']];
+function arcFields(row) {
+  let out = '';
+  for (const [field, key] of ARC_KEYS) {
+    if (C[key] == null) continue;
+    const v = s(row, C[key]);
+    if (v) out += ` ${field}: \`${v}\`,`;
+  }
+  return out ? '\n   ' + out : '';
+}
 function s(row, idx) { return String(row[idx] ?? '').trim().replace(/\\/g, '\\\\').replace(/`/g, '\\`').replace(/\$\{/g, '\\${'); }
 function st(row, idx) { return s(row, idx).replace(/^\[REMOVED\]\s*/i, ''); }
 
@@ -239,7 +261,7 @@ for (let r = 1; r < allRows.length; r++) {
     Crossover: \`${s(row,C.crossover)}\`, Start_Bid: \`${s(row,C.bid)}\`,
     Volume: \`${s(row,C.volume)}\`, Entry: \`${s(row,C.entry)}\`,
     Cover_Price: \`${C.coverPrice != null ? s(row,C.coverPrice) : ''}\`,
-    Pub_Date: \`${C.pubDate != null ? s(row,C.pubDate) : ''}\`,
+    Pub_Date: \`${C.pubDate != null ? s(row,C.pubDate) : ''}\`,${arcFields(row)}
     eBay_Avg: ${ebField(eb,'avg',C.ebayAvg,row)}, eBay_Low: ${ebField(eb,'low',C.ebayLow,row)}, eBay_High: ${ebField(eb,'high',C.ebayHigh,row)}, eBay_Count: ${ebField(eb,'count',C.ebayCount,row)}, eBay_Median: ${ebField(eb,'median',C.ebayMedian,row)},
   }`);
 }
@@ -605,6 +627,8 @@ export interface Comic {
   Crossover: string; Start_Bid: string; Volume: string; Entry: string;
   Cover_Price?: string;
   Pub_Date?: string;
+  Story_Arc?: string; Arc_Part?: string; Arc_Length?: string; Arc_Finale?: string;
+  Crossover_Event?: string; Arc_Confidence?: string; Arc_Source?: string;
   eBay_Avg?: number | null; eBay_Low?: number | null; eBay_High?: number | null;
   eBay_Count?: number | null; eBay_Median?: number | null; eBay_Phase?: string;
 }

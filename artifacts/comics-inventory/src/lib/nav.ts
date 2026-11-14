@@ -13,3 +13,8 @@ export function navTo(tab: string, params?: Record<string, string>) {
 export function openTitle(title: string) {
   if (title) navTo("coverreview", { title });
 }
+
+/** Jump to Cover Review limited to ONE story arc of a title — the "(a)" link. */
+export function openArc(title: string, arc: string, volume?: string) {
+  if (title && arc) navTo("coverreview", { title, arc, vol: String(volume || "1") });
+}

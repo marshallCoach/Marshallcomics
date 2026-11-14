@@ -3,6 +3,8 @@ import { DATA } from "@/data/data";
 import { getCoverSvgUrl, type ComicLike } from "@/utils/coverThumbnails";
 import { CoverImage, CoverModal } from "@/components/CoverImage";
 import { SortableTable, ColDef } from "@/components/SortableTable";
+import { NavPills } from "@/components/NavPills";
+import { arcOf, eventOf, arcOwnership, CONF, type ArcComic } from "@/lib/arc";
 import { Paginator } from "@/components/Paginator";
 import ComicDrawer, { type DrawerComic } from "@/components/ComicDrawer";
 import { isSlab, SlabThumb, SlabBadge } from "@/components/Slab";
@@ -19,6 +21,7 @@ function parseIssueParts(issue: string): { main: string; legacy: string | null }
 }
 type Comic = (typeof ALL)[number];
 
+const HAS_ARC = ALL.some(c => !!arcOf(c));
 const PUBLISHERS = [...new Set(ALL.map(c => c.Publisher).filter(Boolean))].sort();
 const ERAS       = [...new Set(ALL.map(c => c.Era).filter(Boolean))].sort();
 const PLATFORMS  = [...new Set(ALL.map(c => c.Platform).filter(Boolean))].sort();
@@ -109,6 +112,7 @@ function CoverThumb({ c, onCoverClick }: { c: Comic; onCoverClick: (comic: Comic
       comic={c}
       width={200}
       height={300}
+      titleLink={false}  // the [t|a] capsule sits by the title on this page — one per row
       onClick={(largeUrl) => onCoverClick(c, largeUrl)}
       style={{ width: "100%", height: "auto", aspectRatio: "2 / 3", display: "block", boxShadow: "0 3px 10px rgba(0,0,0,0.18)" }}
     />
@@ -170,6 +174,7 @@ export default function Everything({
           comic={r}
           width={112}
           height={168}
+          titleLink={false}  // the [t|a] capsule sits by the title on this page — one per row
           onClick={largeUrl => setCoverModal({ comic: r, large: largeUrl })}
           style={{ boxShadow:"0 2px 8px rgba(0,0,0,0.18)", borderRadius:4 }}
         />
@@ -185,16 +190,7 @@ export default function Everything({
               <button className="title-link" style={{ fontSize:"1.05rem", fontWeight:700, lineHeight:1.25 }} onClick={e=>{e.stopPropagation();setExactTitle(r.Title||"");setQuery("");setSearched(true);setCardPage(1);}}>
                 {r.Title||"Untitled"}
               </button>
-              {onNavigate && r.Title && (
-                <button
-                  onClick={e=>{e.stopPropagation();onNavigate("coverreview",{title:r.Title});}}
-                  title="View every cover for this title"
-                  style={{ all:"unset", cursor:"pointer", flexShrink:0,
-                    fontSize:"0.75rem", fontWeight:700, lineHeight:1,
-                    color:"var(--red)", border:"1px solid var(--red)", borderRadius:4,
-                    padding:"1px 5px" }}
-                >t</button>
-              )}
+              {r.Title && <NavPills comic={r} size="sm" />}
               {onNavigate && r.Title && (
                 <button
                   onClick={e=>{e.stopPropagation();editComic(r);}}
@@ -225,6 +221,21 @@ export default function Everything({
         ? <button onClick={e=>{e.stopPropagation();onNavigate("boxvisual",{box:r.Box});}} style={{all:"unset",cursor:"pointer"}}><BoxBadge box={r.Box} /></button>
         : <BoxBadge box={r.Box} />
     )},
+    // Story arc + Fandom crossover event — only when arc data exists in the sheet
+    ...(HAS_ARC ? [
+      { key:"storyarc", label:"Story Arc", defaultWidth:190, sort:(a: Comic,b: Comic)=>(arcOf(a)?.name||"~").localeCompare(arcOf(b)?.name||"~") || parseVal(a.Issue)-parseVal(b.Issue), cell:(r: Comic)=>{
+        const a=arcOf(r); if(!a) return <span style={{color:"var(--muted)"}}>—</span>;
+        const c=a.conf?CONF[a.conf]:null; const iss=String(r.Issue).replace(/^#/,"");
+        const fin=(a.finale&&a.finale===iss)||(a.length&&a.part===a.length);
+        return <span title={c?`${c.label}: ${c.help}`:undefined} style={{display:"inline-flex",alignItems:"center",gap:5,borderRadius:999,padding:"2px 9px",fontSize:"0.78rem",fontWeight:600,background:"var(--surface2)",border:"1px solid var(--border)",whiteSpace:"nowrap",maxWidth:"100%",overflow:"hidden",textOverflow:"ellipsis"}}>
+          {c&&<span style={{width:8,height:8,borderRadius:"50%",background:c.color,flexShrink:0}}/>}
+          {a.name}{a.part?` · ${a.part}${a.length?`/${a.length}`:""}`:""}{fin?" · finale":""}
+        </span>;
+      }},
+      { key:"event", label:"Event", defaultWidth:150, sort:(a: Comic,b: Comic)=>(eventOf(a)||"~").localeCompare(eventOf(b)||"~"), cell:(r: Comic)=> eventOf(r)
+        ? <span style={{borderRadius:999,padding:"2px 9px",fontSize:"0.78rem",fontWeight:600,color:"#1d4ed8",background:"rgba(29,78,216,0.1)",border:"1px solid rgba(29,78,216,0.3)",whiteSpace:"nowrap"}}>{eventOf(r)}</span>
+        : <span style={{color:"var(--muted)"}}>—</span> },
+    ] as ColDef<Comic>[] : []),
     { key:"writer",    label:"Writer",    defaultWidth:130, sort:(a,b)=>a.Writer.localeCompare(b.Writer), cell:r=> r.Writer && r.Writer!=="nan"
       ? <button className="title-link" onClick={e=>{e.stopPropagation();setQuery(r.Writer);setExactTitle("");setSearched(true);setCardPage(1);}}>{r.Writer}</button>
       : <span className="lt-sub">—</span> },
@@ -281,6 +292,7 @@ export default function Everything({
         c.Cover_Artist, c.Signed_By, c.Key_Reason, c.First_App,
         c.Arc, c.Seller_Notes, c.Era, c.Universe, `box ${c.Box}`,
         c.Story_Pitch, c.Imprint, c.Terrificon,
+        (c as ArcComic).Story_Arc, (c as ArcComic).Crossover_Event,
       ].join(" ").toLowerCase().includes(q) || (!!normSearch(q) && normSearch(c.Title).includes(normSearch(q)));
     });
   }, [searched, query, publisher, era, platform, boxFilter, keysOnly, signedOnly, slabbedOnly, yearParenOnly, creatorParenOnly, annualOnly, familyFilter, exactTitle]);
@@ -485,12 +497,21 @@ export default function Everything({
               comic={c}
               width={80}
               height={120}
+              titleLink={false}  // the [t|a] capsule sits by the title on this page — one per row
               onClick={largeUrl => setCoverModal({ comic: c, large: largeUrl })}
               style={{ flexShrink:0, boxShadow:"0 4px 14px rgba(0,0,0,0.18)", borderRadius:5 }}
             />
             <div style={{ flex:1, minWidth:0 }}>
               <div style={{ display:"flex", gap:20, flexWrap:"wrap" }}>
                 {c.Arc       && <div className="dr"><span className="dl">Arc</span><span className="dv">{c.Arc}</span></div>}
+                {(() => { const a = arcOf(c); if (!a) return null; const own = arcOwnership(c, ALL); const cf = a.conf ? CONF[a.conf] : null;
+                  return <div className="dr" style={{ flexBasis:"100%" }}><span className="dl">Story arc</span><span className="dv">
+                    <b>{a.name}</b>{a.part ? ` · part ${a.part}${a.length ? ` of ${a.length}` : ""}` : ""}{a.finale ? ` · finale #${a.finale}` : ""}
+                    {own && own.length ? <> · you own {own.ownedCount} of {own.length}{own.missing.length > 0 && <span style={{ color:"var(--red)", fontWeight:700 }}> · missing {own.missing.map(n => `#${n}`).join(", ")}</span>}</> : null}
+                    {cf && <span title={cf.help} style={{ marginLeft:8, display:"inline-flex", alignItems:"center", gap:4, fontSize:"0.8rem" }}><span style={{ width:8, height:8, borderRadius:"50%", background:cf.color }} />{cf.label}</span>}
+                    {a.source && <> · <a href={a.source} target="_blank" rel="noopener noreferrer" onClick={e=>e.stopPropagation()} style={{ color:"#4f46e5" }}>Fandom ↗</a></>}
+                  </span></div>; })()}
+                {eventOf(c) && <div className="dr"><span className="dl">Event</span><span className="dv" style={{ color:"#1d4ed8" }}>{eventOf(c)}</span></div>}
                 {(c.Key||"").toUpperCase()==="YES" && c.Key_Reason && <div className="dr"><span className="dl">Key</span><span className="dv" style={{color:"var(--gold)"}}>{c.Key_Reason}</span></div>}
                 {c.First_App && <div className="dr"><span className="dl">1st App</span><span className="dv">{c.First_App}</span></div>}
                 {(c.Signed||"").toUpperCase()==="YES" && c.Signed_By && <div className="dr"><span className="dl">Signed By</span><span className="dv">{c.Signed_By}</span></div>}
@@ -600,16 +621,7 @@ function EverythingCard({ comic: c, onTitleClick, onTitleCovers, onEdit, flagged
               ? <button className="title-link" style={{fontSize:"inherit",fontWeight:600,lineHeight:1.3}} onClick={e=>{e.stopPropagation();onTitleClick(c.Title);}} title="Click to show only this title">{c.Title}</button>
               : <div className="card-title">{c.Title}</div>
             }
-            {onTitleCovers && c.Title && (
-              <button
-                onClick={e=>{e.stopPropagation();onTitleCovers(c.Title);}}
-                title="View every cover for this title"
-                style={{ all:"unset", cursor:"pointer", flexShrink:0,
-                  fontSize:"0.75rem", fontWeight:700, lineHeight:1,
-                  color:"var(--red)", border:"1px solid var(--red)", borderRadius:4,
-                  padding:"1px 5px" }}
-              >t</button>
-            )}
+            {c.Title && <NavPills comic={c} size="sm" />}
             {onEdit && c.Title && (
               <button
                 onClick={e=>{e.stopPropagation();onEdit();}}

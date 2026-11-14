@@ -74,6 +74,8 @@ export type NavParams = {
   keysOnly?: string;
   title?: string;
   creative?: string;
+  arc?: string;
+  vol?: string;
 };
 
 const NAV = [
@@ -424,7 +426,7 @@ export default function App() {
         {activeTab === "history"     && <ComicHistory />}
         {activeTab === "keycatalog"  && <KeyCatalog />}
         {activeTab === "covercatalog" && <CoverCatalog />}
-        {activeTab === "coverreview" && <CoverReview initTitle={navParams.title} initCreative={navParams.creative} />}
+        {activeTab === "coverreview" && <CoverReview initTitle={navParams.title} initCreative={navParams.creative} initArc={navParams.arc} initVol={navParams.vol} />}
         {activeTab === "credits"     && <CreativeCredits onNavigate={navigateTo} />}
         {activeTab === "granov"      && <AdiGranov />}
         {activeTab === "missingcovers" && <MissingCovers />}

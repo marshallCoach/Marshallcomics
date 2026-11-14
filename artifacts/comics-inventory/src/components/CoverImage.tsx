@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { getCoverSvgUrl, type ComicLike } from "@/utils/coverThumbnails";
 import { coverId, flagKind as coverFlagKind, setFlagKind as setCoverFlagKind, type FlagKind } from "@/lib/coverFlags";
-import { openTitle } from "@/lib/nav";
+import { NavPills } from "@/components/NavPills";
 
 const BASE = import.meta.env.BASE_URL?.replace(/\/$/, "") ?? "";
 
@@ -133,7 +133,7 @@ export function coverSourceSync(c: ComicLike): string | null {
 }
 
 interface Props {
-  comic: { Title: string; Issue: string | number; Publisher?: string; Year?: string; Key?: string; Signed?: string };
+  comic: { Title: string; Issue: string | number; Publisher?: string; Year?: string; Key?: string; Signed?: string; Volume?: string };
   width?: number;
   height?: number;
   onClick?: (largeUrl: string | null) => void;
@@ -222,14 +222,7 @@ export function CoverImage({ comic, width = 56, height = 84, onClick, style, obj
       {/* (t) — open every cover of this title (Cover Review, filtered). On every
           cover site-wide; skipped on tiny thumbnails where it would hide the art. */}
       {titleLink && comic.Title && width >= 44 && (
-        <button
-          type="button"
-          className="cover-t-badge"
-          title={`See every ${comic.Title} cover`}
-          aria-label={`See every ${comic.Title} cover`}
-          onClick={e => { e.stopPropagation(); e.preventDefault(); openTitle(comic.Title); }}
-          style={{ fontSize: width >= 100 ? "0.8rem" : "0.68rem", minWidth: width >= 100 ? 20 : 16, height: width >= 100 ? 20 : 16 }}
-        >t</button>
+        <NavPills comic={comic} overlay size={width >= 100 ? "md" : "sm"} />
       )}
     </div>
   );
@@ -388,9 +381,8 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
                   {(comic as { Year?: string }).Year && <span style={{ color: "var(--muted)", marginLeft: 8, fontSize: "0.875rem" }}>{(comic as { Year?: string }).Year}</span>}
                 </div>
               </div>
-              <div style={{ display: "flex", gap: 6, flexShrink: 0 }}>
-                <button onClick={() => { onClose(); openTitle(comic.Title); }} title={`See every ${comic.Title} cover`}
-                  style={{ background: "var(--surface2)", border: "1px solid var(--red)", color: "var(--red)", borderRadius: 6, height: 30, padding: "0 10px", cursor: "pointer", fontSize: "0.78rem", fontWeight: 700, whiteSpace: "nowrap" }}>(t) All covers</button>
+              <div style={{ display: "flex", gap: 8, flexShrink: 0, alignItems: "center" }}>
+<NavPills comic={comic} onBefore={onClose} />
                 <button onClick={onClose} style={{ background: "var(--surface2)", border: "1px solid var(--border)", borderRadius: 6, width: 30, height: 30, cursor: "pointer", color: "var(--muted)", fontSize: "0.875rem", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>×</button>
               </div>
             </div>
