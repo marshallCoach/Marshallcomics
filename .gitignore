@@ -153,3 +153,10 @@ arc_summary_gate.json
 arc_overnight.log
 arc_extracted.csv
 arc_apply_report.csv
+cv_cache.json
+cv_cache.json.bak
+cv_cache.json.tmp
+cv_arcs.lock
+cv_summary*.json
+cv_overnight.log
+cv_arcs.csv

@@ -18,6 +18,9 @@ Dry run by default.
 
     python3 brb_apply_arcs.py            # dry run: counts + samples, nothing written
     python3 brb_apply_arcs.py --apply    # write the new workbook
+    python3 brb_apply_arcs.py --csv cv_arcs.csv --fill-only [--apply]
+        # Comic Vine pass: only rows whose Story Arc is still blank, only blank cells --
+        # Fandom arcs and events are never overwritten
 Then:  python3 brb.py --commit "arc columns" --yes
 """
 import argparse, collections, csv, datetime, glob, os, re, sys
@@ -68,6 +71,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--csv", default="arc_extracted.csv")
     ap.add_argument("--apply", action="store_true")
+    ap.add_argument("--fill-only", action="store_true",
+                    help="only rows with a blank Story Arc, only blank cells (never overwrite)")
     a = ap.parse_args()
     if not os.path.exists(a.csv):
         sys.exit(f"{a.csv} not found - run brb_arc_extract.py first")
@@ -83,6 +88,7 @@ def main():
         if not c:
             sys.exit(f"required column '{n}' missing")
     orig_max_col = ws.max_column
+    cArc = ci("Story Arc")
 
     # snapshot every existing cell (to prove nothing else changes)
     before = [[ws.cell(r, c).value for c in range(1, orig_max_col + 1)] for r in range(1, ws.max_row + 1)]
@@ -115,6 +121,12 @@ def main():
             report.append([e["title"], e["sheet_volume"], e["issue"], e["year"], "ambiguous year match - skipped"])
             continue
         vals = [e.get(c, "") for c in NEW_COLS]
+        if a.fill_only and cArc:
+            kept = [r for r in hit if not str(ws.cell(r, cArc).value or "").strip()]
+            if not kept:
+                st["already had an arc"] += 1
+                continue
+            hit = kept
         for r in hit:
             plan[r] = vals
         st["books matched"] += 1
@@ -123,6 +135,8 @@ def main():
     print(f"SOURCE: {os.path.basename(src)}  ({ws.max_row - 1} rows)")
     print(f"extracted books: {len(ext)}  matched: {st['books matched']}  -> inventory rows: {st['rows written']}"
           f"  (copies included)  unmatched: {st['unmatched']}  ambiguous: {st['ambiguous']}")
+    if a.fill_only:
+        print(f"FILL-ONLY: skipped {st['already had an arc']} books that already have a Story Arc; blank cells only")
     withname = sum(1 for v in plan.values() if v[0])
     withev = sum(1 for v in plan.values() if v[4])
     print(f"rows getting a Story Arc: {withname}   a Crossover Event: {withev}")
@@ -154,6 +168,10 @@ def main():
             nxt += 1
     for r, vals in plan.items():
         for name, v in zip(NEW_COLS, vals):
+            if a.fill_only and str(ws.cell(r, col[name]).value or "").strip():
+                continue                               # never overwrite existing data
+            if v == "" and a.fill_only:
+                continue
             ws.cell(r, col[name], v if v != "" else None)
 
     # verify every pre-existing column is untouched (arc columns excluded if they pre-existed)
