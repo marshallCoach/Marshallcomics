@@ -175,7 +175,7 @@ def load_targets():
 
 
 # ---------------------------------------------------------------- main -----------------
-def pick_volume(results, b):
+def pick_volume(results, b, top=0):
     best = None
     for v in results or []:
         if norm(v.get("name")) != norm(b["title"]):
@@ -186,7 +186,9 @@ def pick_volume(results, b):
         pub = (v.get("publisher") or {}).get("name", "") or ""
         pub_ok = 0 if (b["pub"] and pub and norm(b["pub"]).split()[0] in norm(pub)) else 1
         span = (b["year"] - sy) if (b["year"] and sy) else 50
-        score = (pub_ok, span if span >= -1 else 99, -int(v.get("count_of_issues") or 0))
+        cnt = int(v.get("count_of_issues") or 0)
+        covers = 0 if (not top or cnt >= top) else 1          # must reach my highest issue #
+        score = (pub_ok, covers, span if span >= -1 else 99, -cnt)
         if best is None or score < best[0]:
             best = (score, v)
     return best[1] if best else None
@@ -213,12 +215,30 @@ def run(a, c):
     for n, (ek, grp) in enumerate(order, 1):
         ekey = "|".join(map(str, ek))
         # 1. resolve volume
+        top = max((int(fnum(b["issue"])) for b in grp if fnum(b["issue"]) < 1e8), default=0)
+        cached = c["vol"].get(ekey)
+        if cached and not cached.get("checked") and str(cached["id"]) in c["vissues"]:
+            nums = {i["n"] for i in c["vissues"][str(cached["id"])]}
+            if sum(b["issue"] not in nums for b in grp) > len(grp) / 2:   # wrong series picked earlier
+                log(f"   re-checking {ek[0]}: cached CV series lacks most of my issues")
+                del c["vol"][ekey]
+            else:
+                cached["checked"] = True
         if ekey not in c["vol"]:
             b0 = min(grp, key=lambda x: x["year"] or 9999)
-            js = cv("volumes/", filter=f"name:{b0['title']}", limit=100,
-                    field_list="id,name,start_year,publisher,count_of_issues,site_detail_url")
-            v = pick_volume(js.get("results"), b0)
-            c["vol"][ekey] = {"id": v["id"], "name": v["name"]} if v else None
+            res, off = [], 0
+            while True:                                   # page past 100 for common names (Batman...)
+                js = cv("volumes/", filter=f"name:{b0['title']}", limit=100, offset=off,
+                        field_list="id,name,start_year,publisher,count_of_issues,site_detail_url")
+                page = js.get("results") or []
+                res += page
+                off += len(page)
+                pv = pick_volume(res, b0, top)
+                good = pv and (not top or int(pv.get("count_of_issues") or 0) >= top)
+                if not page or good or off >= int(js.get("number_of_total_results") or 0) or off >= 500:
+                    break
+            v = pick_volume(res, b0, top)
+            c["vol"][ekey] = {"id": v["id"], "name": v["name"], "checked": True} if v else None
         vol = c["vol"][ekey]
         if not vol:
             stats["no CV series match"] += len(grp)
