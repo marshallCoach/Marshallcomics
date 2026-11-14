@@ -140,3 +140,8 @@ marshall_sources.txt
 
 # Workbook backups stay LOCAL only — never committed (public repo).
 backups/*.xlsx
+
+# arc fetch (brb_arc_fetch.py) — local cache/outputs, uploaded to Claude not committed
+arc_cache.json
+arc_raw.jsonl.gz
+arc_misses.csv
