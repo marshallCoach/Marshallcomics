@@ -67,6 +67,17 @@ def yr(v):
     return int(m.group(1)) if m else None
 
 
+def same_arc(a, b):
+    """True when two arc names are the same story (spelling/subtitle differences allowed)."""
+    x, y = norm(a), norm(b)
+    if not x or not y:
+        return False
+    if x == y or x in y or y in x:
+        return True
+    tx, ty = set(x.split()), set(y.split())
+    return len(tx & ty) / len(tx | ty) >= 0.6
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--csv", default="arc_extracted.csv")
@@ -103,6 +114,7 @@ def main():
         idx[(norm(t), ni(ws.cell(r, cI).value), ni(vol) or "1")].append(r)
 
     plan = {}                                         # row -> values
+    lenonly = set()                                   # rows that keep their arc; fill length cells only
     report, st = [], collections.Counter()
     for e in ext:
         key = (norm(e["title"]), ni(e["issue"]), ni(e["sheet_volume"]) or "1")
@@ -122,7 +134,15 @@ def main():
             continue
         vals = [e.get(c, "") for c in NEW_COLS]
         if a.fill_only and cArc:
-            kept = [r for r in hit if not str(ws.cell(r, cArc).value or "").strip()]
+            kept = []
+            for r in hit:
+                have = str(ws.cell(r, cArc).value or "").strip()
+                if not have:
+                    kept.append(r)
+                elif same_arc(have, vals[0]):
+                    kept.append(r); lenonly.add(r)        # same arc: only blank Part/Length/Finale
+                else:
+                    st["arc name differs - skipped"] += 1
             if not kept:
                 st["already had an arc"] += 1
                 continue
@@ -136,7 +156,8 @@ def main():
     print(f"extracted books: {len(ext)}  matched: {st['books matched']}  -> inventory rows: {st['rows written']}"
           f"  (copies included)  unmatched: {st['unmatched']}  ambiguous: {st['ambiguous']}")
     if a.fill_only:
-        print(f"FILL-ONLY: skipped {st['already had an arc']} books that already have a Story Arc; blank cells only")
+        print(f"FILL-ONLY: {len(plan) - len(lenonly)} rows get a new arc, {len(lenonly)} keep their arc and get only "
+              f"blank Part/Length/Finale; {st['arc name differs - skipped']} skipped (different arc name)")
     withname = sum(1 for v in plan.values() if v[0])
     withev = sum(1 for v in plan.values() if v[4])
     print(f"rows getting a Story Arc: {withname}   a Crossover Event: {withev}")
@@ -168,6 +189,8 @@ def main():
             nxt += 1
     for r, vals in plan.items():
         for name, v in zip(NEW_COLS, vals):
+            if r in lenonly and name not in ("Arc Part", "Arc Length", "Finale Issue #"):
+                continue
             if a.fill_only and str(ws.cell(r, col[name]).value or "").strip():
                 continue                               # never overwrite existing data
             if v == "" and a.fill_only:

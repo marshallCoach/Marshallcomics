@@ -4,8 +4,8 @@ brb_cv_arcs.py -- fill story arcs from the Comic Vine API for books Fandom could
 READ-ONLY on the inventory: reads the newest xlsx, writes cv_arcs.csv (same format
 as arc_extracted.csv) which brb_apply_arcs.py --csv cv_arcs.csv --fill-only applies.
 
-Targets: every inventory row whose "Story Arc" is still blank (all publishers --
-so indie books Fandom can't reach are included). Needs COMIC_VINE_API_KEY in the
+Targets: every inventory row whose "Story Arc" is blank, or that has an arc but no
+Arc Length (all publishers -- indie books Fandom can't reach are included). Needs COMIC_VINE_API_KEY in the
 environment (never printed or logged).
 
 Comic Vine rate-limits each resource (~200 requests/hour). This script:
@@ -151,15 +151,18 @@ def load_targets():
     H = [str(h).strip() if h is not None else "" for h in next(rows)]
     gi = lambda n: H.index(n) if n in H else None
     cT, cI, cV, cY, cP, cA = gi("Title"), gi("Issue #"), gi("Volume"), gi("Year"), gi("Publisher"), gi("Story Arc")
+    cL = gi("Arc Length")
     books = {}
     for r in rows:
         t = str(r[cT] or "").strip()
-        if not t or (cA is not None and str(r[cA] or "").strip()):
+        has_arc = cA is not None and str(r[cA] or "").strip()
+        has_len = cL is not None and str(r[cL] or "").strip()
+        if not t or (has_arc and has_len):        # targets: no arc, or arc without a length
             continue
         k = (t, ni(r[cV]) if cV is not None else "1", ni(r[cI]), yr(r[cY]))
         books.setdefault(k, {"title": t, "vol": k[1] or "1", "issue": k[2], "year": k[3],
                              "pub": str(r[cP] or "") if cP is not None else ""})
-    log(f"source {os.path.basename(src)}: {len(books)} unique books still without a Story Arc")
+    log(f"source {os.path.basename(src)}: {len(books)} unique books without a Story Arc or without an Arc Length")
     return list(books.values())
 
 
@@ -249,13 +252,16 @@ def run(a, c):
                 for x in ids:                            # expansion: every listed issue now knows its arc
                     c["issue"].setdefault(str(x), [{"id": arc["id"], "name": arc["name"]}])
             A = c["arc"][aid]
-            same_vol = A["ids"] and all(x in vol_ids for x in A["ids"])
-            part = (A["ids"].index(it["id"]) + 1) if (same_vol and it["id"] in A["ids"]) else ""
-            length = len(A["ids"]) if same_vol else ""
-            finale = ""
-            if same_vol:
-                last = next((i for i in c["vissues"][vid] if i["id"] == A["ids"][-1]), None)
-                finale = last["n"] if last else ""
+            same_vol = bool(A["ids"]) and all(x in vol_ids for x in A["ids"])
+            part = length = finale = ""
+            if same_vol:                                 # order by issue number, not CV's list order
+                num = {i["id"]: i["n"] for i in c["vissues"][vid]}
+                def nk(x):
+                    try: return float(num[x])
+                    except ValueError: return 1e9
+                order = sorted(A["ids"], key=nk)
+                part = order.index(it["id"]) + 1 if it["id"] in order else ""
+                length, finale = len(order), num[order[-1]]
             found[(b["title"], b["vol"], b["issue"], b["year"])] = [
                 A["name"], part, length, finale, "", "Stated", A["url"] or it["url"]]
         if n % 10 == 0 or n == len(eras):

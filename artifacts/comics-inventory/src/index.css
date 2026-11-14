@@ -956,11 +956,6 @@ body {
   .navpills .np::after { content: ""; position: absolute; inset: -9px -4px; }
   .navpills .np-word { max-width: 0 !important; }
 }
-@media (prefers-color-scheme: dark) {
-  .navpills { background: rgba(28,28,34,0.82); box-shadow: 0 1px 3px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(255,255,255,0.08); }
-  .navpills .np.a { color: #a5b4fc; border-left-color: rgba(255,255,255,0.14); }
-  .navpills .np:hover { background: rgba(255,255,255,0.08); }
-}
 
 /* Homepage quick links */
 .home-quicklinks { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }

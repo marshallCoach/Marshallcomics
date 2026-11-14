@@ -503,7 +503,7 @@ export default function Everything({
             />
             <div style={{ flex:1, minWidth:0 }}>
               <div style={{ display:"flex", gap:20, flexWrap:"wrap" }}>
-                {c.Arc       && <div className="dr"><span className="dl">Arc</span><span className="dv">{c.Arc}</span></div>}
+                {c.Arc       && <div className="dr"><span className="dl">Run / era</span><span className="dv">{c.Arc}</span></div>}
                 {(() => { const a = arcOf(c); if (!a) return null; const own = arcOwnership(c, ALL); const cf = a.conf ? CONF[a.conf] : null;
                   return <div className="dr" style={{ flexBasis:"100%" }}><span className="dl">Story arc</span><span className="dv">
                     <b>{a.name}</b>{a.part ? ` · part ${a.part}${a.length ? ` of ${a.length}` : ""}` : ""}{a.finale ? ` · finale #${a.finale}` : ""}
