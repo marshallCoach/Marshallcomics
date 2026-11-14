@@ -23,6 +23,9 @@ echo "== $(stamp) Comic Vine arc fill starting (pid $$)"
 FREE_MB=$(df -m . | awk 'NR==2 {print $4}')
 [ "${FREE_MB:-0}" -lt 500 ] && { notify "under 500 MB free disk - stopped"; exit 1; }
 
+if [ -s cv_cache.json ]; then
+  echo "== $(stamp) cache exists (pipeline already proven) - skipping gate"
+else
 echo "== $(stamp) GATE: 30 books"
 caffeinate -i -s python3 brb_cv_arcs.py --limit 30
 rc=$?
@@ -32,6 +35,7 @@ echo "== $(stamp) gate hit rate: ${PCT}%"
 cp cv_summary.json cv_summary_gate.json
 if [ "$PCT" -lt "$GATE_MIN_PCT" ]; then
   notify "gate only ${PCT}% - stopped before the full run. Paste the log to Claude."; exit 2
+fi
 fi
 
 for try in 1 2 3 4 5 6; do

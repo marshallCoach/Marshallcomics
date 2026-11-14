@@ -221,6 +221,7 @@ def run(a, c):
             c["vol"][ekey] = {"id": v["id"], "name": v["name"]} if v else None
         vol = c["vol"][ekey]
         if not vol:
+            stats["no CV series match"] += len(grp)
             continue
         vid = str(vol["id"])
         # 2. volume issue list (with arcs if Comic Vine provides them in lists)
@@ -285,6 +286,7 @@ def run(a, c):
         for b in sorted(grp, key=lambda x: fnum(x["issue"])):
             it = byn.get(b["issue"])
             if not it:
+                stats["issue # not on CV"] += 1
                 continue
             f = fnum(b["issue"])
             run_pos = run_pos + 1 if (prev is not None and f == prev + 1) else 0
@@ -299,6 +301,7 @@ def run(a, c):
                 record(b, it, arcs)
             else:
                 misses += 1
+                stats["CV: no arc tagged"] += 1
         for b, it in deferred:                           # filled for free if a neighbour found its arc
             arcs = arcs_for(it, False)
             if arcs:
@@ -308,6 +311,7 @@ def run(a, c):
         if n % 10 == 0 or n == len(order):
             save_cache(c)
             log(f"  {n}/{len(order)} series-eras  arcs found for {len(found)} books  (not asked: {stats['skipped']})")
+            log("     misses: " + ", ".join(f"{k} {v}" for k, v in stats.items() if k != "skipped"))
     save_cache(c)
 
     with open("cv_arcs.csv", "w", newline="", encoding="utf-8") as f:
