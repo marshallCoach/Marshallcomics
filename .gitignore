@@ -145,3 +145,9 @@ backups/*.xlsx
 arc_cache.json
 arc_raw.jsonl.gz
 arc_misses.csv
+arc_cache.json.bak
+arc_cache.json.tmp
+arc_fetch.lock
+arc_summary.json
+arc_summary_gate.json
+arc_overnight.log
