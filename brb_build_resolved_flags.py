@@ -50,7 +50,7 @@ def main():
     # that resolves no cover RE-SURFACES instead of silently vanishing.
     # trust-year is NOT here: it now rewrites the wrong-edition date (data change),
     # so it clears on success and re-surfaces if it didn't take.
-    ACK = {"no-entry", "no-art", "research", "indie", "confirm-variant", "not-variant"}
+    ACK = {"no-entry", "no-art", "research", "indie", "confirm-variant", "not-variant", "keep-fandom"}
     for p in sorted(paths):
         try:
             recs = json.load(open(p))

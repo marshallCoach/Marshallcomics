@@ -87,6 +87,7 @@ GEN_FILES = [
     "artifacts/comics-inventory/public/quest-data.js",
 ]
 GEN_FILES_OPT = [
+    "artifacts/comics-inventory/public/arc_conflicts.json",
     "artifacts/comics-inventory/public/title_rename_proposals.json",
     "artifacts/comics-inventory/public/gcd_notfound.json",
     "artifacts/comics-inventory/public/validation-report.json",

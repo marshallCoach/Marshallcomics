@@ -23,7 +23,7 @@ Dry run by default.
         # Fandom arcs and events are never overwritten
 Then:  python3 brb.py --commit "arc columns" --yes
 """
-import argparse, collections, csv, datetime, glob, os, re, sys
+import argparse, collections, csv, datetime, glob, json, os, re, sys
 import openpyxl
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -108,6 +108,8 @@ def main():
             sys.exit(f"required column '{n}' missing")
     orig_max_col = ws.max_column
     cArc = ci("Story Arc")
+    cBox = ci("Box #") or ci("Box")
+    conflicts = []                                    # Comic Vine vs Fandom arc names -> Data Fix page
 
     # snapshot every existing cell (to prove nothing else changes)
     before = [[ws.cell(r, c).value for c in range(1, orig_max_col + 1)] for r in range(1, ws.max_row + 1)]
@@ -151,6 +153,16 @@ def main():
                     kept.append(r); lenonly.add(r)        # same arc: only blank Part/Length/Finale
                 else:
                     st["arc name differs - skipped"] += 1
+                    cur = {n: ws.cell(r, ci(n)).value if ci(n) else None for n in NEW_COLS}
+                    t, iss = str(ws.cell(r, cT).value).strip(), ni(ws.cell(r, cI).value)
+                    box = str(ws.cell(r, cBox).value or "").strip() if cBox else ""
+                    conflicts.append({
+                        "id": f"{t}|||{iss}|||{box}", "title": t, "issue": iss, "box": box,
+                        "vol": ni(ws.cell(r, cV).value) if cV else "1", "year": yr(ws.cell(r, cY).value),
+                        "fandom": {"name": str(cur["Story Arc"] or ""), "part": str(cur["Arc Part"] or ""),
+                                   "length": str(cur["Arc Length"] or ""), "source": str(cur["Arc Source"] or "")},
+                        "cv": {"name": vals[0], "part": str(vals[1] or ""), "length": str(vals[2] or ""),
+                               "finale": str(vals[3] or ""), "url": vals[6]}})
             if not kept:
                 st["already had an arc"] += 1
                 continue
@@ -180,6 +192,11 @@ def main():
         w.writerow(["title", "sheet_volume", "issue", "year", "reason"])
         w.writerows(report)
     print("unmatched list -> arc_apply_report.csv")
+    if a.fill_only:
+        cpath = os.path.join(ROOT, "artifacts/comics-inventory/public/arc_conflicts.json")
+        os.makedirs(os.path.dirname(cpath), exist_ok=True)
+        json.dump(conflicts, open(cpath, "w"), indent=0, ensure_ascii=False)
+        print(f"{len(conflicts)} arc-name conflicts -> Data Fix page (public/arc_conflicts.json)")
 
     if not a.apply:
         print("\nDRY RUN - nothing written. Re-run with --apply.")

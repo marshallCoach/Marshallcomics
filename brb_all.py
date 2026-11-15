@@ -147,6 +147,9 @@ def main():
         # read and archived without ever being applied. It merges every export too.
         if run([PY, os.path.join(ROOT, "brb_apply_data_fixes.py"), "--apply"]):
             raise RuntimeError("brb_apply_data_fixes failed")
+        # Arc-name conflicts (Fandom vs Comic Vine): Keep / Use Comic Vine / pasted link.
+        if run([PY, os.path.join(ROOT, "brb_apply_arc_decisions.py"), "--apply"]):
+            raise RuntimeError("brb_apply_arc_decisions failed")
         # Then the Fandom links/images. No --flags: it discovers and MERGES every
         # export (a single-newest read used to strand links from earlier sessions).
         if run([PY, os.path.join(ROOT, "brb_apply_fandom_pages.py"), "--apply"]):

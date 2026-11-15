@@ -40,7 +40,12 @@ const LS_META  = "brbDataFixMeta_v1";   // { lastDate, streak, todayCount }
 
 type FixKind = "fandom" | "solution";
 interface FixRecord { id: string; title: string; issue: string; box: string; problem: string; kind: FixKind; value: string; at: string; }
-type ProblemId = "no-date" | "date-conflict" | "no-volume" | "no-year" | "likely-variant" | "not-in-gcd" | "no-cover";
+type ArcSide = { name: string; part: string; length: string; source?: string; finale?: string; url?: string };
+type ArcConflict = { id: string; title: string; issue: string; box: string; vol: string; year: number | null; fandom: ArcSide; cv: ArcSide };
+const cleanArc = (n: string) => (n || "").replace(/^\s*["\u201c][^"\u201d]{1,60}["\u201d]\s+/, "").trim() || (n || "").trim();
+const partTxt = (a: ArcSide) => a.part ? ` · part ${a.part}${a.length ? ` of ${a.length}` : ""}` : (a.length ? ` · ${a.length} parts` : "");
+
+type ProblemId = "arc-conflict" | "no-date" | "date-conflict" | "no-volume" | "no-year" | "likely-variant" | "not-in-gcd" | "no-cover";
 
 const PROBLEMS: { id: ProblemId; label: string; blurb: string; color: string; vol?: boolean; yr?: boolean; info?: boolean; solutions: { key: string; label: string }[] }[] = [
   { id: "no-date",       label: "Missing publication date", blurb: "Not matched in GCD/Comic Vine — no on-sale date", color: "#c8102e",
@@ -139,6 +144,8 @@ export default function DataFix() {
   const [urOpen, setUrOpen] = useState(false);
   const [fandomLinks, setFandomLinks] = useState<Record<string, string>>({});
   const [cgOpen, setCgOpen] = useState(false);
+  const [arcConflicts, setArcConflicts] = useState<ArcConflict[]>([]);
+  const [acOpen, setAcOpen] = useState(false);
   const [cgDismiss, setCgDismiss] = useState<Set<string>>(() => {
     try { return new Set(JSON.parse(localStorage.getItem("brbCoverGuessDismiss_v1") || "[]")); } catch { return new Set(); }
   });
@@ -161,6 +168,8 @@ export default function DataFix() {
       .then((o: Record<string, string>) => setFandomLinks(o && typeof o === "object" ? o : {})).catch(() => {});
     fetch(`${BASE}/confirmed_variants.json`).then(r => r.ok ? r.json() : [])
       .then((a: string[]) => setVariantDone(new Set(Array.isArray(a) ? a : []))).catch(() => {});
+    fetch(`${BASE}/arc_conflicts.json`).then(r => r.ok ? r.json() : [])
+      .then((a: ArcConflict[]) => setArcConflicts(Array.isArray(a) ? a : [])).catch(() => {});
     fetch(`${BASE}/resolved_flags.json`).then(r => r.ok ? r.json() : {})
       .then((o: Record<string, string[]>) => setResolvedFlags(o && typeof o === "object" ? o : {})).catch(() => {});
     coversReady().then(() => setCoversLoaded(true));
@@ -336,7 +345,7 @@ export default function DataFix() {
       // Keep link records (fandom/image) even for non-flagged books — the user
       // pasted them to apply (unresolved / too-new rows). Only prune stale
       // 'solution' records whose underlying problem is gone.
-      for (const [id, rec] of [...next]) if (!ids.has(id) && rec.kind === "solution") { next.delete(id); changed = true; }
+      for (const [id, rec] of [...next]) if (!ids.has(id) && rec.kind === "solution" && (rec.problem as string) !== "arc-conflict") { next.delete(id); changed = true; }
       if (changed) saveFixes(next);
       return changed ? next : prev;
     });
@@ -388,6 +397,18 @@ export default function DataFix() {
       return { pid, problem: PROBLEM_MAP[pid], count: rows.length, pubs };
     }).filter(g => g.count > 0);
   }, [flagged, fixes, activeProblem, sortByCount]);
+
+  // Arc-name conflicts still open: not decided here, not remembered as "keep", and
+  // not already changed in the data (Comic Vine name applied / a new Fandom source).
+  const comicIndex = useMemo(() => new Map(comics.map(c => [comicId(c), c])), []);
+  const openArcConflicts = useMemo(() => arcConflicts.map(a => ({ a, c: comicIndex.get(a.id) })).filter(({ a, c }) => {
+    if (fixes.has(`${a.id}|||arc`)) return false;
+    if ((resolvedFlags[a.id] || []).includes("arc-conflict")) return false;
+    const cur = c as (Comic & { Story_Arc?: string; Arc_Source?: string }) | undefined;
+    if (cur?.Story_Arc && cur.Story_Arc === cleanArc(a.cv.name)) return false;
+    if (cur?.Arc_Source && a.fandom.source && cur.Arc_Source !== a.fandom.source) return false;
+    return true;
+  }), [arcConflicts, comicIndex, fixes, resolvedFlags]);
 
   const resolve = useCallback((c: Comic, id: string, problem: ProblemId, kind: FixKind, value: string) => {
     // A confirmed cover-buy variant also sets the cover flag (kind "variant")
@@ -565,6 +586,57 @@ export default function DataFix() {
                           onClick={() => setCgDismiss(s => new Set(s).add(g.id))}>✕</button>
                       </div>
                     )}
+                  </div>
+                );
+              })}
+            </div>
+          )}
+        </section>
+      )}
+
+      {/* Arc-name conflicts — Fandom and Comic Vine name a different story arc for
+          the same book. Keep Fandom, take Comic Vine, or paste the right Fandom page
+          (the Mac run reads the arc off that page). */}
+      {openArcConflicts.length > 0 && (
+        <section className="df-group" style={{ marginBottom: 14 }}>
+          <button className="df-group-hd" onClick={() => setAcOpen(o => !o)} style={{ borderLeft: "4px solid #4f46e5" }}>
+            <span className="df-group-name">
+              <span className="df-chev">{acOpen ? "▾" : "▸"}</span> 🧭 Arc conflicts — Fandom vs Comic Vine
+            </span>
+            <span className="df-chip-n">{openArcConflicts.length}</span>
+          </button>
+          {acOpen && (
+            <div style={{ padding: "10px 14px", display: "flex", flexDirection: "column", gap: 8 }}>
+              <div style={{ fontSize: "0.78rem", color: "var(--muted2,#aaa)" }}>
+                The two sources call this book's story arc different things. Open either page to check, then <b>Keep Fandom</b>, <b>Use Comic Vine</b>,
+                or paste the correct Fandom issue page — the next <code>brb_all</code> reads the arc off that page (and fixes the volume from the link).
+              </div>
+              {openArcConflicts.map(({ a, c }) => {
+                const aid = `${a.id}|||arc`;
+                const book = c ?? ({ Title: a.title, Issue: a.issue, Box: a.box, Volume: a.vol, Year: String(a.year ?? "") } as unknown as Comic);
+                return (
+                  <div key={aid} style={{ display: "flex", gap: 10, alignItems: "flex-start", flexWrap: "wrap", border: "1px solid var(--border,#2c2c38)", borderRadius: 6, padding: "8px 10px", fontSize: "0.82rem" }}>
+                    <CoverImage comic={book} width={44} height={66} />
+                    <div style={{ flex: "1 1 260px", minWidth: 0 }}>
+                      <div style={{ fontWeight: 700 }}>{a.title} #{a.issue} <span style={{ fontWeight: 400, color: "var(--muted2,#aaa)" }}>· Vol {a.vol || "1"} · {a.year ?? "—"} · Box {a.box || "—"}</span></div>
+                      <div style={{ marginTop: 4 }}>
+                        <span style={{ color: "#16a34a", fontWeight: 700 }}>Fandom:</span> {a.fandom.name || "—"}{partTxt(a.fandom)}
+                        {a.fandom.source && <> · <a className="df-find" href={a.fandom.source} target="_blank" rel="noopener noreferrer">open ↗</a></>}
+                      </div>
+                      <div>
+                        <span style={{ color: "#c2410c", fontWeight: 700 }}>Comic Vine:</span> {cleanArc(a.cv.name)}{partTxt(a.cv)}
+                        {a.cv.url && <> · <a className="df-find" href={a.cv.url} target="_blank" rel="noopener noreferrer">open ↗</a></>}
+                      </div>
+                    </div>
+                    <div style={{ display: "flex", gap: 6, alignItems: "center", flexWrap: "wrap", flex: "1 1 300px" }}>
+                      <button className="df-link-save" onClick={() => resolve(book, aid, "arc-conflict", "solution", "keep-fandom")}>Keep Fandom</button>
+                      <button className="df-link-save" style={{ background: "#c2410c" }} onClick={() => resolve(book, aid, "arc-conflict", "solution", "use-cv")}>Use Comic Vine</button>
+                      <input className="df-link-in" style={{ flex: 1, minWidth: 150 }} placeholder="…or paste the right Fandom page"
+                        value={linkDraft[aid] || ""} onChange={e => setLinkDraft(d => ({ ...d, [aid]: e.target.value }))}
+                        onKeyDown={e => { if (e.key === "Enter" && (linkDraft[aid] || "").trim()) resolve(book, aid, "arc-conflict", "fandom", linkDraft[aid].trim()); }} />
+                      <button className="df-link-save" disabled={!(linkDraft[aid] || "").trim()}
+                        onClick={() => resolve(book, aid, "arc-conflict", "fandom", (linkDraft[aid] || "").trim())}>Save link</button>
+                    </div>
                   </div>
                 );
               })}
