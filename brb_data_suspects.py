@@ -85,13 +85,15 @@ def main():
 
     out = {}                                               # (entry, field) -> record
 
-    def flag(x, field, current, suggested, evidence, conf):
+    def flag(x, field, current, suggested, evidence, conf, src="sheet"):
         k = (str(x["entry"]), field)
         rank = {"High": 0, "Medium": 1, "Low": 2}
         old = out.get(k)
-        if old:                                            # second source -> merge, upgrade
+        if old:                                            # merge; High only when a DIFFERENT source agrees
             if evidence not in old["evidence"]:
                 old["evidence"] += " + " + evidence
+            old["_src"].add(src)
+            if len(old["_src"]) >= 2:
                 old["confidence"] = "High"
             if suggested and not old["suggested"]:
                 old["suggested"] = suggested
@@ -100,7 +102,7 @@ def main():
             return
         out[k] = {"#": x["entry"], "title": x["title"], "volume": x["vol"], "issue": x["issue"], "year": x["year"] or "",
                   "box": x["box"], "field": field, "current": current, "suggested": suggested,
-                  "evidence": evidence, "confidence": conf}
+                  "evidence": evidence, "confidence": conf, "_src": {src}}
 
     # ---- Fandom misses --------------------------------------------------------
     fandom_missing, fandom_noseries = set(), set()
@@ -112,7 +114,7 @@ def main():
             for x in hits:
                 if reason.startswith("year mismatch"):
                     wy = yr(reason)
-                    flag(x, "Year", x["year"], wy, f"Fandom dates this issue {wy}", "Medium")
+                    flag(x, "Year", x["year"], wy, f"Fandom dates this issue {wy}", "Medium", "fandom")
                 elif reason.startswith("issue page missing"):
                     fandom_missing.add(key)
                 elif reason.startswith("series"):
@@ -149,13 +151,13 @@ def main():
                   else f"#{x['issue']} not in Comic Vine's '{name}' ({n} issues)")
             both = key in fandom_missing
             flag(x, "Volume / Issue #", f"v{x['vol']} #{x['issue']}", "", ev + (" + Fandom has no page either" if both else ""),
-                 "High" if both else ("Medium" if beyond else "Low"))
+                 "High" if both else ("Medium" if beyond else "Low"), "cv")
     for key in fandom_missing - set(cv_missing):
         pass                                               # Fandom alone: usually wiki naming, skip
 
     for t in sorted(fandom_noseries & cv_noseries):
         for x in [r for r in rows if r["title"] == t][:1]:
-            flag(x, "Title", t, "", "neither Fandom nor Comic Vine recognise this title - check spelling/format", "Medium")
+            flag(x, "Title", t, "", "neither Fandom nor Comic Vine recognise this title - check spelling/format", "Medium", "fandom+cv")
 
     # ---- patterns in the sheet itself ----------------------------------------
     for x in rows:
@@ -212,7 +214,7 @@ def main():
     recs = sorted(out.values(), key=lambda r: (rank[r["confidence"]], r["field"], r["title"].lower(), fnum(r["issue"]) or 0))
     cols = ["confidence", "#", "title", "volume", "issue", "year", "box", "field", "current", "suggested", "evidence"]
     with open("data_suspects.csv", "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=cols)
+        w = csv.DictWriter(f, fieldnames=cols, extrasaction="ignore")
         w.writeheader()
         w.writerows(recs)
     cnt = collections.Counter((r["confidence"], r["field"]) for r in recs)
