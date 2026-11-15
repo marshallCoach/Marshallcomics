@@ -505,6 +505,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
       {/* ── QUICK LINKS — cleanup pages are the usual first stop ── */}
       <nav className="home-quicklinks" aria-label="Quick links">
         {([
+          ["showcase",      "🎠 Showcase"],
           ["datafix",       "🧹 Data Fix"],
           ["missingcovers", "🖼️ Missing Covers"],
           ["coverreview",   "🔎 Cover Review"],
@@ -613,6 +614,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
           <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px", color:"var(--muted)" }}>
             10 random key issues · refreshes each visit
           </span>
+          <button onClick={() => onNavigate("showcase")} className="home-quicklink" style={{ marginLeft:"auto" }}>▶ Open Showcase</button>
         </div>
         <div style={{ overflow:"hidden", margin:"0 -16px", padding:"4px 0" }}>
           <div className="cover-carousel-track">

@@ -53,6 +53,7 @@ import Slabbed from "@/pages/Slabbed";
 import StorePreview from "@/pages/StorePreview";
 import ConditionEntry from "@/pages/ConditionEntry";
 import EraAudit from "@/pages/EraAudit";
+import Showcase from "@/pages/Showcase";
 import OfflineCovers from "@/components/OfflineCovers";
 import FlaggedCount from "@/components/FlaggedCount";
 import PasswordGate from "@/components/PasswordGate";
@@ -60,7 +61,7 @@ import { NAV_EVENT } from "@/lib/nav";
 import { Home, BookOpen, Boxes, Film, Sparkles, ClipboardList, Microscope, DollarSign, Archive } from "lucide-react";
 
 type TabId =
-  | "summary" | "everything" | "collection" | "boxkeys" | "stats" | "runs" | "runsvolumes" | "recent" | "releasetimeline" | "dataview"
+  | "summary" | "showcase" | "everything" | "collection" | "boxkeys" | "stats" | "runs" | "runsvolumes" | "recent" | "releasetimeline" | "dataview"
   | "calendar" | "showplanner" | "cgc" | "signings" | "actionplan" | "timeline" | "boxvisual"
   | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "storepreview" | "slabbed" | "duplicates" | "dupchecklist" | "datafix" | "editcomic" | "conditionentry" | "eraaudit" | "titlefixes" | "volumeconfirm" | "history"
   | "orgpath" | "volumes" | "boxlabels" | "keycatalog" | "covercatalog" | "coverreview" | "missingcovers" | "boxquest" | "boxmap"
@@ -76,6 +77,7 @@ export type NavParams = {
   creative?: string;
   arc?: string;
   vol?: string;
+  from?: string;   // "showcase" → page shows a "Back to Showcase" pill
 };
 
 const NAV = [
@@ -84,6 +86,7 @@ const NAV = [
     label: "Home",
     tabs: [
       { id: "summary",     label: "Home" },
+      { id: "showcase",    label: "Showcase" },
     ],
   },
   {
@@ -258,9 +261,21 @@ export default function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  function syncHash(t: string) {
-    try { history.replaceState(null, "", "#" + t); } catch { /* ignore */ }
+  function syncHash(t: string, push = false) {
+    try { push ? history.pushState(null, "", "#" + t) : history.replaceState(null, "", "#" + t); } catch { /* ignore */ }
   }
+
+  // Back button / iPhone back-swipe: pages opened from the Showcase push a history
+  // entry, so going back lands on the Showcase again.
+  useEffect(() => {
+    function onPop() {
+      const h = (window.location.hash || "").replace(/^#/, "");
+      if (h && NAV.some(s => s.tabs.some(tb => tb.id === h))) navigateTo(h);
+    }
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeSection]);
 
   function navigateTo(tab: string, params?: NavParams) {
     const t = tab as TabId;
@@ -270,7 +285,7 @@ export default function App() {
     }
     setNavParams(params || {});
     setActiveTab(t);
-    syncHash(t);
+    syncHash(t, !!params?.from);
     // Start every page at the top — keeping the old scroll position dropped you
     // mid-way into search results with the first rows (e.g. a new #24) hidden.
     window.scrollTo({ top: 0 });
@@ -377,6 +392,10 @@ export default function App() {
       {/* PAGES */}
       <div className="page-content">
         {activeTab === "summary"     && <Summary     onNavigate={navigateTo} />}
+        {activeTab === "showcase"    && <Showcase />}
+        {navParams.from === "showcase" && activeTab === "coverreview" && (
+          <button className="back-to-showcase" onClick={() => navigateTo("showcase")}>← Back to Showcase</button>
+        )}
         {activeTab === "everything"  && (
           <Everything
             initBox={navParams.box}
