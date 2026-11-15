@@ -304,7 +304,7 @@ def run(a, c):
                 part = order.index(it["id"]) + 1 if it["id"] in order else ""
                 length, finale = len(order), num[order[-1]]
             found[(b["title"], b["vol"], b["issue"], b["year"])] = [
-                A["name"], part, length, finale, "", "Stated", A["url"] or it["url"]]
+                re.sub(r'^\s*"[^"]{1,60}"\s+', "", A["name"]) or A["name"], part, length, finale, "", "Stated", A["url"] or it["url"]]
 
         deferred, misses, hit_any, prev = [], 0, False, None
         run_pos = 0

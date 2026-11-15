@@ -67,9 +67,15 @@ def yr(v):
     return int(m.group(1)) if m else None
 
 
+def clean_arc(name):
+    """Drop Comic Vine's series prefix in quotes ('"Amazing X-Men" The Once and Future Juggernaut')."""
+    n = re.sub(r'^\s*["\u201c][^"\u201d]{1,60}["\u201d]\s+', "", str(name or "")).strip()
+    return n or str(name or "").strip()
+
+
 def same_arc(a, b):
     """True when two arc names are the same story (spelling/subtitle differences allowed)."""
-    x, y = norm(a), norm(b)
+    x, y = norm(clean_arc(a)), norm(clean_arc(b))
     if not x or not y:
         return False
     if x == y or x in y or y in x:
@@ -88,6 +94,8 @@ def main():
     if not os.path.exists(a.csv):
         sys.exit(f"{a.csv} not found - run brb_arc_extract.py first")
     ext = list(csv.DictReader(open(a.csv, newline="", encoding="utf-8")))
+    for e in ext:                                     # Comic Vine: '"Avengers" Original Sin' -> 'Original Sin'
+        e["Story Arc"] = clean_arc(e.get("Story Arc", ""))
 
     src = newest_xlsx()
     wb = openpyxl.load_workbook(src)
