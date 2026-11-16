@@ -125,6 +125,7 @@ def main():
 
     plan = {}                                         # row -> values
     lenonly = set()                                   # rows that keep their arc; fill length cells only
+    eventonly = set()                                 # Comic Vine name routed to Event: fill Event only
     report, st = [], collections.Counter()
     for e in ext:
         key = (norm(e["title"]), ni(e["issue"]), ni(e["sheet_volume"]) or "1")
@@ -143,7 +144,11 @@ def main():
             report.append([e["title"], e["sheet_volume"], e["issue"], e["year"], "ambiguous year match - skipped"])
             continue
         vals = [e.get(c, "") for c in NEW_COLS]
-        if a.fill_only and cArc:
+        if a.fill_only and cArc and not vals[0]:          # event-only row: may only fill a blank Event cell
+            for r in hit:
+                eventonly.add(r)
+            hit = list(hit)
+        elif a.fill_only and cArc:
             kept = []
             for r in hit:
                 have = str(ws.cell(r, cArc).value or "").strip()
@@ -216,11 +221,16 @@ def main():
         for name, v in zip(NEW_COLS, vals):
             if r in lenonly and name not in ("Arc Part", "Arc Length", "Finale Issue #"):
                 continue
-            if a.fill_only and str(ws.cell(r, col[name]).value or "").strip():
+            if r in eventonly and name != "Crossover Event (Fandom)":
+                continue
+            # a NEW arc brings its own provenance: its Source/Confidence replace an event-only
+            # row's Fandom link (otherwise a Comic Vine arc would claim a Fandom source)
+            new_arc = r not in lenonly and r not in eventonly and vals[0] and name in ("Arc Source", "Arc Confidence")
+            if a.fill_only and str(ws.cell(r, col[name]).value or "").strip() and not new_arc:
                 continue                               # never overwrite existing data
             if v == "" and a.fill_only:
                 continue
-            ws.cell(r, col[name], v if v != "" else None)
+            ws.cell(r, col[name]).value = (v if v != "" else None)
 
     # verify every pre-existing column is untouched (arc columns excluded if they pre-existed)
     protected = [c for c in range(1, orig_max_col + 1) if c not in col.values()]

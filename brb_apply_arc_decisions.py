@@ -137,7 +137,7 @@ def main():
     if not changes:
         print("nothing to write"); return
     for r, n, _, v in changes:
-        ws.cell(r, col[n], v if v != "" else None)
+        ws.cell(r, col[n]).value = (v if v != "" else None)
     protected = [c for c in range(1, len(before[0]) + 1) if c not in col.values()]
     diffs = sum(1 for r in range(1, len(before) + 1) for c in protected if ws.cell(r, c).value != before[r - 1][c - 1])
     if diffs:
