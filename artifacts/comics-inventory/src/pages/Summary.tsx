@@ -506,6 +506,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
       <nav className="home-quicklinks" aria-label="Quick links">
         {([
           ["showcase",      "🎠 Showcase"],
+          ["arcs",          "📖 Arcs"],
           ["datafix",       "🧹 Data Fix"],
           ["missingcovers", "🖼️ Missing Covers"],
           ["coverreview",   "🔎 Cover Review"],

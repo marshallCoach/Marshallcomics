@@ -54,6 +54,7 @@ import StorePreview from "@/pages/StorePreview";
 import ConditionEntry from "@/pages/ConditionEntry";
 import EraAudit from "@/pages/EraAudit";
 import Showcase from "@/pages/Showcase";
+import ArcStory from "@/pages/ArcStory";
 import OfflineCovers from "@/components/OfflineCovers";
 import FlaggedCount from "@/components/FlaggedCount";
 import PasswordGate from "@/components/PasswordGate";
@@ -61,7 +62,7 @@ import { NAV_EVENT } from "@/lib/nav";
 import { Home, BookOpen, Boxes, Film, Sparkles, ClipboardList, Microscope, DollarSign, Archive } from "lucide-react";
 
 type TabId =
-  | "summary" | "showcase" | "everything" | "collection" | "boxkeys" | "stats" | "runs" | "runsvolumes" | "recent" | "releasetimeline" | "dataview"
+  | "summary" | "showcase" | "arcs" | "everything" | "collection" | "boxkeys" | "stats" | "runs" | "runsvolumes" | "recent" | "releasetimeline" | "dataview"
   | "calendar" | "showplanner" | "cgc" | "signings" | "actionplan" | "timeline" | "boxvisual"
   | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "storepreview" | "slabbed" | "duplicates" | "dupchecklist" | "datafix" | "editcomic" | "conditionentry" | "eraaudit" | "titlefixes" | "volumeconfirm" | "history"
   | "orgpath" | "volumes" | "boxlabels" | "keycatalog" | "covercatalog" | "coverreview" | "missingcovers" | "boxquest" | "boxmap"
@@ -87,6 +88,7 @@ const NAV = [
     tabs: [
       { id: "summary",     label: "Home" },
       { id: "showcase",    label: "Showcase" },
+      { id: "arcs",        label: "Arcs" },
     ],
   },
   {
@@ -393,6 +395,7 @@ export default function App() {
       <div className="page-content">
         {activeTab === "summary"     && <Summary     onNavigate={navigateTo} />}
         {activeTab === "showcase"    && <Showcase />}
+        {activeTab === "arcs"        && <ArcStory />}
         {navParams.from === "showcase" && activeTab === "coverreview" && (
           <button className="back-to-showcase" onClick={() => navigateTo("showcase")}>← Back to Showcase</button>
         )}
