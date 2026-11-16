@@ -164,3 +164,8 @@ data_suspects.csv
 cv_arcs_validated.csv
 cv_rejects.csv
 cv_length_impact.csv
+arc_len_cache.json
+arc_len_cache.json.bak
+arc_len_cache.json.tmp
+arc_len_fetch.lock
+arc_lengths.csv
