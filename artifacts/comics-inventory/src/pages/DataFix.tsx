@@ -611,6 +611,20 @@ export default function DataFix() {
                 The two sources call this book's story arc different things. Open either page to check, then <b>Keep Fandom</b>, <b>Use Comic Vine</b>,
                 or paste the correct Fandom issue page — the next <code>brb_all</code> reads the arc off that page (and fixes the volume from the link).
               </div>
+              <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
+                <button className="df-link-save" onClick={() => {
+                  if (!confirm(`Keep Fandom's arc for all ${openArcConflicts.length} remaining conflicts? (Each is remembered and never re-asked.)`)) return;
+                  const at = new Date().toISOString();
+                  setFixes(prev => {
+                    const n = new Map(prev);
+                    for (const { a } of openArcConflicts) n.set(`${a.id}|||arc`, { id: `${a.id}|||arc`, title: a.title, issue: a.issue, box: a.box,
+                      problem: "arc-conflict", kind: "solution", value: "keep-fandom", at } as FixRecord);
+                    saveFixes(n); return n;
+                  });
+                  setMeta(bumpStreak()); setPop(p => p + 1);
+                }}>✓ Keep Fandom for all {openArcConflicts.length}</button>
+                <span style={{ fontSize: "0.78rem", color: "var(--muted2,#aaa)" }}>Pick Comic Vine / paste a link on the exceptions first — then sweep the rest.</span>
+              </div>
               {openArcConflicts.map(({ a, c }) => {
                 const aid = `${a.id}|||arc`;
                 const book = c ?? ({ Title: a.title, Issue: a.issue, Box: a.box, Volume: a.vol, Year: String(a.year ?? "") } as unknown as Comic);
