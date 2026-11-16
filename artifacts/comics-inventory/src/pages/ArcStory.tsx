@@ -201,8 +201,9 @@ export default function ArcStory() {
 
       {/* 9 — honest status */}
       <section className="as-note">
-        <b>Still checking.</b> About 1,500 arcs came from Comic Vine. A 20-book spot check found roughly 1 in 4 belongs to a different run with the same issue number
-        (e.g. a 2024 Captain America tagged House of M), so those are being re-validated by year. Arcs from Fandom ({(d.withArc.length - 1500).toLocaleString()}-ish) are the solid core.
+        <b>Checked, not guessed.</b> Fandom supplies the core. Comic Vine filled gaps, but every Comic Vine arc was checked against the cover year of
+        the exact issue: 310 from the wrong run were dropped and 962 that were really events (Civil War II, Reign of X…) moved to the Event column.
+        {d.cv > 0 && <> {d.cv.toLocaleString()} year-checked Comic Vine arcs remain.</>}
       </section>
     </div>
   );
