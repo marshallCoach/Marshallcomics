@@ -60,17 +60,21 @@ def page_arc(text):
 
 
 def belongs(text, arc, expected_part):
+    """'yes' = same arc; 'no' = names a DIFFERENT story (or the page doesn't exist: series
+    ended); 'silent' = the page names no story at all -> NOT proof the arc ended."""
     if text is None:
-        return False
+        return "no"
     stated, pt = page_arc(text)
     a = norm(arc)
     if stated and norm(stated) == a:
-        return True
+        return "yes"
     if pt and pt[0] and norm(pt[0]) == a:
-        return True
+        return "yes"
     if pt and not pt[0] and expected_part and pt[1] == expected_part:   # bare "Part Five" in sequence
-        return True
-    return False
+        return "yes"
+    f = F.fields(text or "")
+    title1 = clean(f.get("StoryTitle1", ""))
+    return "no" if (stated or title1) else "silent"
 
 
 def main():
@@ -124,7 +128,8 @@ def main():
                 break
         work.append({"key": (t, vol, arc), "books": books, "wiki": wiki, "base": base, "arc": arc,
                      "lo": nums[0], "hi": nums[-1], "start": start, "end": None,
-                     "fwd": nums[-1] + 1, "back": nums[0] - 1 if start is None else None, "steps": 0})
+                     "fwd": nums[-1] + 1, "back": nums[0] - 1 if start is None else None, "steps": 0,
+                     "end_ok": False, "start_ok": start is not None})
     if a.limit:
         work = work[: a.limit]
     print(f"SOURCE: {os.path.basename(src)}   arcs without a length: {st['arcs without length']}   walkable: {len(work)}")
@@ -161,15 +166,17 @@ def main():
                 w["steps"] += 1
                 if w["fwd"] is not None:
                     exp = (w["fwd"] - w["start"] + 1) if w["start"] is not None else None
-                    if belongs(cache.get(f"{w['wiki']}|{w['base']} {w['fwd']}"), w["arc"], exp) and w["steps"] <= MAX_WALK:
+                    v = belongs(cache.get(f"{w['wiki']}|{w['base']} {w['fwd']}"), w["arc"], exp)
+                    if v == "yes" and w["steps"] <= MAX_WALK:
                         w["fwd"] += 1
                     else:
-                        w["end"], w["fwd"] = w["fwd"] - 1, None
+                        w["end"], w["fwd"], w["end_ok"] = w["fwd"] - 1, None, v == "no"
                 if w["back"] is not None:
-                    if w["back"] >= 0 and belongs(cache.get(f"{w['wiki']}|{w['base']} {w['back']}"), w["arc"], None) and w["steps"] <= MAX_WALK:
+                    v = belongs(cache.get(f"{w['wiki']}|{w['base']} {w['back']}"), w["arc"], None) if w["back"] >= 0 else "no"
+                    if v == "yes" and w["steps"] <= MAX_WALK:
                         w["back"] -= 1
                     else:
-                        w["start"], w["back"] = w["back"] + 1, None
+                        w["start"], w["back"], w["start_ok"] = w["back"] + 1, None, v == "no"
     except F.Outage as e:
         print(f"OUTAGE: {e} - cache saved, rerun to resume"); code = 75
     except KeyboardInterrupt:
@@ -185,6 +192,9 @@ def main():
     for w in work:
         s, e = w["start"], w["end"]
         if s is None or e is None:
+            continue
+        if not (w["start_ok"] and w["end_ok"]):            # a silent neighbour page proves nothing
+            st["boundary unconfirmed (silent page) - skipped"] += 1
             continue
         L = e - s + 1
         owned_ok = all(s <= int(float(b["issue"])) <= e for b in w["books"] if re.fullmatch(r"\d+", b["issue"] or ""))
