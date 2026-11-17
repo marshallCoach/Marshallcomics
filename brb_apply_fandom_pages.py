@@ -118,7 +118,18 @@ def parse_url(u):
     return base, vm.group(1).replace("_", " ").strip(), vm.group(2), (ni(vm.group(3)) if vm.group(3) else "")
 
 
+_PAGE_CACHE = {}
+
+
 def fetch_page(base, title, vol, issue):
+    """Cached wrapper: a page (found or missing) is requested at most once per run."""
+    k = (base, title, str(vol), str(issue))
+    if k not in _PAGE_CACHE:
+        _PAGE_CACHE[k] = _fetch_page(base, title, vol, issue)
+    return _PAGE_CACHE[k]
+
+
+def _fetch_page(base, title, vol, issue):
     """Return (image_filename, date_str 'YYYY-MM-00', page_year, credits) or None.
     credits = {'writer':[...], 'artist':[...], 'cover':[...]} from the infobox."""
     if not str(issue).strip():   # never request "Title Vol N " (blank issue) — it
@@ -335,6 +346,7 @@ def main():
 
     cov = json.load(open(COVERS))
     vol_memo = {}      # (title, era) -> wiki volume that matched, so each era probes once
+    done_rows = set()  # run-mate rows already handled this run (many links can name one title)
     # One link pasted onto several copies of the same issue from DIFFERENT eras (e.g. six
     # Moon Knight #2s, 2006-2022, all given the 2026 page) can't be the truth for all of
     # them. Such links lose "seed" status: they stay year-gated and never rewrite a Year.
@@ -389,6 +401,10 @@ def main():
             # links (extrapolated / autolink) stay year-gated like any run-mate.
             is_seed = (issue == rec_issue and not rec.get("_auto") and rec.get("value") not in shared_links and
                        (not cB or str(ws.cell(r, cB).value or "").strip() == rec_box))
+            if not is_seed:                      # same row + same wiki series: once per run
+                if (r, base, canon) in done_rows:
+                    continue
+                done_rows.add((r, base, canon))
             # Already complete -> don't re-fetch. This is why the whole run (e.g.
             # all 66 Avengers) re-ran every pass: the fetch was unconditional.
             # Only fetch a row that's still missing a cover, a date, or a writer

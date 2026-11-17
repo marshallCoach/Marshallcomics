@@ -251,6 +251,27 @@ class T(unittest.TestCase):
         self.assertEqual(years[("Moon Knight", "20")], "2022", r.stdout)
         self.assertEqual(years[("Solo", "30")], "2016", "a link on ONE copy is still the truth")
 
+    def test_many_links_one_title_requests_each_page_once(self):
+        sb = self.sb
+        rows = [["Moon Knight", i, 2000 + i, 5, str(i), None, None, None, None] for i in range(1, 21)]
+        sb.xlsx(["Title", "Issue #", "Year", "Volume", "Box #", "Publication Date", "Writer(s)", "Artist(s)", "Cover Artist"], rows)
+        sb.json("covers.json", {})
+        url = "https://marvel.fandom.com/wiki/Moon_Knight_Vol_10_2"
+        sb.json("home/Downloads/data-fixes-2026-11-01.json",
+                [{"title": "Moon Knight", "issue": str(i), "box": str(i), "problem": "x", "kind": "fandom", "value": url} for i in (1, 2, 3, 4, 5, 6)])
+        os.makedirs(sb.p("site"), exist_ok=True)
+        open(sb.p("site", "sitecustomize.py"), "w").write(
+            "import io, json, time, urllib.request\n"
+            "time.sleep = lambda s: None\n"
+            "def f(req, timeout=None):\n"
+            "    open('requests.log', 'a').write(req.full_url + '\\n')\n"
+            "    return io.BytesIO(b'{}')\n"            # every page missing -> worst case probing
+            "urllib.request.urlopen = f\n")
+        sb.run("brb_apply_fandom_pages.py", env={"PYTHONPATH": sb.p("site")})
+        reqs = open(sb.p("requests.log")).read().splitlines() if os.path.exists(sb.p("requests.log")) else []
+        self.assertEqual(len(reqs), len(set(reqs)), "a page must never be requested twice in one run")
+        self.assertLessEqual(len(reqs), 20 * 8 * 2, f"{len(reqs)} requests for 20 books")
+
     # ── renames keep covers ───────────────────────────────────────────────────
     def test_rename_carries_covers(self):
         sb = self.sb
