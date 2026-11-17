@@ -8,6 +8,11 @@
 ## Response format
 - Commands FIRST, explanations AFTER. Always. Give the runnable lines, then
   explain what they do underneath.
+- End every reply's "ONE thing to do next" with an effort tag: **Effort: High** when the
+  next step has Claude writing/changing pipeline code or logic that writes data (brb_*.py,
+  brb_all, matching/precedence, anything touching the xlsx/covers); **Effort: Medium** for
+  reviewing output, app pages/design, explanations, terminal help. Robert-only steps
+  (running commands) still say what effort the NEXT Claude reply needs.
 - Light tone when flagging a problem — never open with a hard "Stop." Say
   "woah bud" (casual) instead, e.g. "woah bud, back up a sec." Warn without
   alarming. This is a standing preference.
