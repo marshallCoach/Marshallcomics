@@ -1,5 +1,5 @@
 {
- "source": "comics_inventory_1611_2006.xlsx",
+ "source": "comics_inventory_1611_2129.xlsx",
  "generatedAt": "2026-11-16",
  "groupCount": 138,
  "sellableCount": 145,
@@ -2376,7 +2376,7 @@
    "title": "Moon Knight",
    "issue": "2",
    "year": "2011",
-   "volume": "7",
+   "volume": "2",
    "publisher": "Marvel",
    "writer": "Brian Michael Bendis",
    "copies": 2,
