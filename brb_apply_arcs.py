@@ -197,7 +197,7 @@ def main():
         w.writerow(["title", "sheet_volume", "issue", "year", "reason"])
         w.writerows(report)
     print("unmatched list -> arc_apply_report.csv")
-    if a.fill_only:
+    if a.fill_only and os.path.basename(a.csv).startswith("cv_arcs"):   # only Comic Vine runs own the conflict list
         cpath = os.path.join(ROOT, "artifacts/comics-inventory/public/arc_conflicts.json")
         os.makedirs(os.path.dirname(cpath), exist_ok=True)
         json.dump(conflicts, open(cpath, "w"), indent=0, ensure_ascii=False)
