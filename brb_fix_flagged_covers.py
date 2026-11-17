@@ -60,15 +60,32 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--flags", help="path to a flagged-covers-*.json export")
     ap.add_argument("--apply", action="store_true")
+    ap.add_argument("--quiet", action="store_true", help="no exports is not an error (brb_all)")
     args = ap.parse_args()
 
-    path = args.flags or newest([".", "~/Downloads", ROOT], "flagged-covers-*.json")
-    if not path or not os.path.exists(path):
+    # Every un-applied export, not just the newest (several exports used to strand the
+    # older ones). Applied exports move to processed_exports/ so they never re-clear.
+    if args.flags:
+        paths = [args.flags]
+    else:
+        paths = set()
+        for d in (".", "~/Downloads", ROOT):
+            paths |= set(glob.glob(os.path.join(os.path.expanduser(d), "flagged-covers-*.json")))
+        paths = sorted(paths, key=os.path.getmtime)
+    if not paths:
+        if args.quiet:
+            print("No flagged-covers exports - nothing to clear."); return
         sys.exit("no flagged-covers export found — pass --flags <path> (export from Cover → Cover Review)")
-    data = json.load(open(path))
-    entries = data if isinstance(data, list) else list(data.values())
+    entries, seen = [], set()
+    for path in paths:
+        data = json.load(open(path))
+        for e in (data if isinstance(data, list) else list(data.values())):
+            k = (str(e.get("Title", "")).strip().lower(), norm_issue(e.get("Issue")), (e.get("kind") or "incorrect"))
+            if k not in seen:
+                seen.add(k); entries.append(e)
     incorrect = [e for e in entries if (e.get("kind") or "incorrect") == "incorrect"]
-    print(f"FLAGS:  {os.path.basename(path)}  ({len(entries)} total, {len(incorrect)} flagged incorrect)")
+    print(f"FLAGS:  {len(paths)} export(s): {', '.join(os.path.basename(p) for p in paths)}  "
+          f"({len(entries)} total, {len(incorrect)} flagged incorrect)")
     if not incorrect:
         print("No 'incorrect' covers to clear — nothing to do.")
         return
@@ -78,12 +95,17 @@ def main():
     removed, notfound = [], []
     for e in incorrect:
         hit = [k for k in all_keys if key_matches(k, e.get("Title"), e.get("Issue"))]
+        # A cover you supplied yourself since flagging (pasted image / Fandom page) is kept.
+        kept = [k for k in hit if isinstance(cov.get(k), dict) and cov[k].get("source") in ("manual-link", "fandom-page")]
+        if kept:
+            print(f"  keep {e.get('Title')} #{norm_issue(e.get('Issue'))}: you've since supplied this cover ({len(kept)} key)")
+        hit = [k for k in hit if k not in kept]
         if hit:
             for k in hit:
                 removed.append((k, e.get("Title"), e.get("Issue")))
                 if args.apply:
                     cov.pop(k, None)
-        else:
+        elif not kept:
             notfound.append((e.get("Title"), e.get("Issue")))
 
     print(f"\nWOULD CLEAR {len(removed)} cover entr(y/ies):" if not args.apply else f"CLEARED {len(removed)}:")
@@ -102,6 +124,14 @@ def main():
     json.dump(cov, open(COVERS, "w"))
     if os.path.exists(PUBLIC):
         json.dump(cov, open(PUBLIC, "w"))
+    if not args.flags:                               # consumed: never re-clear on a later run
+        import datetime
+        dest = os.path.join(ROOT, "processed_exports"); os.makedirs(dest, exist_ok=True)
+        for p in paths:
+            try:
+                os.replace(p, os.path.join(dest, f"{datetime.datetime.now():%Y%m%d_%H%M%S}_{os.path.basename(p)}"))
+            except OSError:
+                pass
     print(f"\nWROTE covers.json (+ public copy) — {len(removed)} entries cleared.")
     print("Re-fetch:  python3 -u brb_cover_yeargate.py   (then brb_cv_covers.py if proxy up)")
     print("Publish:   python3 brb.py --commit \"re-fetch flagged covers\" --yes")

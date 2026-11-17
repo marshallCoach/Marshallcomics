@@ -136,6 +136,10 @@ def main():
 
     # 2 — data-fix export from the site (optional input)
     def datafix():
+        # Flagged-cover exports first (clears covers you marked wrong; covers you then
+        # supplied by link are kept), so the Fandom-page step below can re-fill them.
+        if run([PY, os.path.join(ROOT, "brb_fix_flagged_covers.py"), "--apply", "--quiet"]):
+            raise RuntimeError("brb_fix_flagged_covers failed")
         jss = sorted(glob.glob(os.path.join(DOWNLOADS, "data-fixes*.json")) +
                      glob.glob(os.path.join(ROOT, "data-fixes*.json")), key=os.path.getmtime)
         if not jss:

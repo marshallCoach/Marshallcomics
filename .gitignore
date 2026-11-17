@@ -169,3 +169,4 @@ arc_len_cache.json.bak
 arc_len_cache.json.tmp
 arc_len_fetch.lock
 arc_lengths.csv
+data-fixes*.json

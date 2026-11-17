@@ -438,6 +438,17 @@ export default function DataFix() {
   }, []);
 
   const resolve = useCallback((c: Comic, id: string, problem: ProblemId, kind: FixKind, value: string) => {
+    // Shorthand in the link box ("Vol_8_18" or "Vol 8 18") -> the full Marvel/DC Fandom URL
+    // for this book's title, so a typed volume+issue isn't silently ignored.
+    if (kind === "fandom" && !/^https?:\/\//i.test(value)) {
+      const sm = value.trim().match(/^Vol[_\s]*(\d+)[_\s]+(\S+)$/i);
+      const pub = (c.Publisher || "").toLowerCase();
+      const host = pub.includes("marvel") ? "marvel.fandom.com" : (pub === "dc" || pub.startsWith("dc ") || pub.includes("dc comics")) ? "dc.fandom.com" : "";
+      if (sm && host) {
+        const t = (c.Title || "").trim().replace(host.startsWith("marvel") ? /^The\s+/i : /^$/, "");
+        value = `https://${host}/wiki/${encodeURIComponent(t.replace(/ /g, "_")).replace(/%3A/g, ":").replace(/%2F/g, "/").replace(/%27/g, "'")}_Vol_${sm[1]}_${sm[2]}`;
+      }
+    }
     // A confirmed cover-buy variant also sets the cover flag (kind "variant")
     // so it shows in the cover audit / export, not just the data-fix export.
     if (value === "confirm-variant") {

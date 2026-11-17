@@ -103,7 +103,7 @@ def parse_url(u):
     if not m:
         return None
     base = f"https://{m.group(1)}/api.php"
-    path = urllib.parse.unquote(m.group(2))
+    path = urllib.parse.unquote(re.split(r"[?#]", m.group(2))[0])      # drop ?file=... / #anchors
     vm = re.search(r"^(.*?)_Vol_(\d+)(?:_(.+))?$", path)  # trailing issue optional
     if not vm:
         # Memory Alpha (and other franchise wikis): "<Series>,_Issue_N" -> vol marker ISSUE
@@ -313,6 +313,9 @@ def main():
         if not pu:
             continue
         base, canon, vol, url_issue = pu
+        # "...?file=<image>" names the exact cover you want (e.g. a textless variant)
+        _q = urllib.parse.parse_qs(urllib.parse.urlparse(rec.get("value") or "").query)
+        forced_file = (_q.get("file") or [""])[0].replace("+", " ").strip()
         sheet_title = rec.get("title") or ""
         rec_issue = ni(rec.get("issue"))
         rec_box = str(rec.get("box") or "").strip()
@@ -352,6 +355,8 @@ def main():
                 continue
             _used_vol, res = got
             fn, date_str, py, credits = res
+            if is_seed and forced_file:
+                fn = forced_file
             if not is_seed and ry and py and abs(py - ry) > 2:   # year-gate: run-mates only
                 continue
             if is_seed and py and (not ry or abs(py - ry) > 1):
@@ -367,7 +372,7 @@ def main():
             if fn:
                 url = img_url(base, fn)
                 key = f"{sheet_title}|||{issue}|||{nv(ws.cell(r, cV).value)}"
-                if url and (args.overwrite or key not in cov or not (cov.get(key) or {})):
+                if url and (args.overwrite or (is_seed and forced_file) or key not in cov or not (cov.get(key) or {})):
                     if args.apply:
                         cov[key] = {"url": url, "large": url, "date": str(py or ""), "source": "fandom-page"}
                     covers_set += 1
