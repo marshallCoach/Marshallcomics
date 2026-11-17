@@ -1106,7 +1106,8 @@ body {
   background: linear-gradient(#18181b, #18181b) padding-box, repeating-linear-gradient(90deg, #3f3f46 0 10px, transparent 10px 18px) border-box; border: 6px solid transparent; }
 .as-frame { position: relative; flex: 0 0 auto; text-align: center; font-size: 0.65rem; color: #d4d4d8; }
 .as-frame span { display: block; margin-top: 3px; font-weight: 800; }
-.as-more { align-self: center; padding: 0 10px; color: #a1a1aa; font-weight: 800; }
+.as-box { display: block; font-style: normal; font-size: 0.62rem; color: #a5b4fc; margin-top: 1px; white-space: nowrap; }
+.as-need .as-box { display: inline; font-size: 0.75rem; color: #a1a1aa; font-weight: 600; }
 .as-close { display: flex; flex-direction: column; gap: 6px; }
 .as-close-row { all: unset; cursor: pointer; display: grid; grid-template-columns: 1fr 110px auto; gap: 10px; align-items: center; padding: 10px 12px; border-radius: 10px;
   background: rgba(255,255,255,0.05); font-size: 0.85rem; }

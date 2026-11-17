@@ -27,17 +27,26 @@ function Stat({ value, label, sub, run }: { value: number; label: string; sub?: 
   return <div className="as-stat"><div className="as-stat-n">{v.toLocaleString()}</div><div className="as-stat-l">{label}</div>{sub && <div className="as-stat-s">{sub}</div>}</div>;
 }
 
-function Strip({ g, max = 8, size = 74 }: { g: Group; max?: number; size?: number }) {
-  const books = [...g.books].sort((a, b) => (arcOf(a)?.part ?? 99) - (arcOf(b)?.part ?? 99)).slice(0, max);
+const boxLabel = (b: string) => (/^\d+$/.test((b || "").trim()) ? `Box ${b.trim()}` : (b || "—").trim());
+/** "Box 88" / "Boxes 12, 88, CC1" — every box the arc's books sit in, numeric boxes first. */
+function boxesOf(books: Comic[]) {
+  const bx = [...new Set(books.map(b => (b.Box || "").trim()).filter(Boolean))]
+    .sort((a, b) => (/^\d+$/.test(a) && /^\d+$/.test(b) ? +a - +b : /^\d+$/.test(a) ? -1 : /^\d+$/.test(b) ? 1 : a.localeCompare(b)));
+  if (!bx.length) return "";
+  return bx.length === 1 ? boxLabel(bx[0]) : `Boxes ${bx.map(b => (/^\d+$/.test(b) ? b : b)).join(", ")}`;
+}
+
+function Strip({ g, size = 74 }: { g: Group; size?: number }) {
+  const books = [...g.books].sort((a, b) => (arcOf(a)?.part ?? 99) - (arcOf(b)?.part ?? 99));
   return (
     <button className="as-strip" onClick={() => openArc(g.title, g.name, g.vol)} title={`Open ${g.name}`}>
       {books.map(b => (
         <div className="as-frame" key={`${b.Issue}|${b.Box}`}>
           <CoverImage comic={b} width={size} height={Math.round(size * 1.5)} titleLink={false} style={{ borderRadius: 4 }} />
           <span>{arcOf(b)?.part ? `pt ${arcOf(b)!.part}` : `#${b.Issue}`}</span>
+          <em className="as-box">{boxLabel(b.Box)}</em>
         </div>
       ))}
-      {g.books.length > max && <div className="as-more">+{g.books.length - max}</div>}
     </button>
   );
 }
@@ -138,7 +147,7 @@ export default function ArcStory() {
         <p className="as-lede">Start to finish, in your boxes. Tap one to read the covers in order.</p>
         <div className="as-strips">{d.complete.slice(0, 6).map(g => (
           <div key={g.key} className="as-strip-wrap">
-            <div className="as-strip-hd"><b>{g.name}</b> <span>{g.title}{g.vol !== "1" ? ` v${g.vol}` : ""} · {g.length} parts</span></div>
+            <div className="as-strip-hd"><b>{g.name}</b> <span>{g.title}{g.vol !== "1" ? ` v${g.vol}` : ""} · {g.length} parts · 📦 {boxesOf(g.books)}</span></div>
             <Strip g={g} />
           </div>
         ))}</div>
@@ -152,7 +161,7 @@ export default function ArcStory() {
           <button key={g.key} className="as-close-row" onClick={() => openArc(g.title, g.name, g.vol)}>
             <span className="as-close-name"><b>{g.name}</b> · {g.title}{g.vol !== "1" ? ` v${g.vol}` : ""}</span>
             <span className="as-meter"><span style={{ width: `${Math.round(100 * (g.length! - g.missing.length) / g.length!)}%` }} /></span>
-            <span className="as-need">need #{g.missing.join(", #")}</span>
+            <span className="as-need">need #{g.missing.join(", #")}<em className="as-box"> · 📦 {boxesOf(g.books)}</em></span>
           </button>
         ))}</div>
       </section>
