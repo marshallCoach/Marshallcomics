@@ -15,7 +15,7 @@ title,issue,year,volume,publisher,box,era,writer,artist,cover_artist,cover_price
 
 **Rules, field by field**
 - **One row per physical copy.** Two copies of the same book = two rows.
-- **title** — series name as on the cover. No issue number, no "Vol.", no variant wording. Annuals/specials go in the title (`Batman Annual`, `X-Men Giant-Size`).
+- **title** — series name as on the cover. No issue number, no "Vol.", no variant wording. Annuals/specials go in the title (`Batman Annual`, `X-Men Giant-Size`). Use the same spelling every week (e.g. `The Fury of Firestorm`).
 - **issue** — the number only, no `#`. (`1`, `25`, `0`, `1.MU` as printed.)
 - **year** — the cover year, 4 digits. New releases this week = this year. **Back issues = their original cover year** (e.g. a 1993 book bought today is `1993`).
 - **volume** — only if stated or certain; otherwise blank.
@@ -24,7 +24,7 @@ title,issue,year,volume,publisher,box,era,writer,artist,cover_artist,cover_price
   Bought for the cover (cover-buy): Marvel → `CC1`, DC → `CC5`, other → `103`.
   If you can't tell whether it's a cover-buy, use the regular box and add `CHECK: cover-buy?` to seller_notes.
 - **era** — `Modern` 1992+, `Copper` 1985–1991, `Bronze` 1970–1984, `Silver` 1956–1969, `Golden` before 1956.
-- **writer / artist / cover_artist** — only if said or printed. Multiple names joined with ` & `.
+- **writer / artist / cover_artist** — only if said or printed. Multiple names joined with ` & `. For a variant, cover_artist = the artist of MY copy's cover.
 - **cover_price** — as printed, no `$` (e.g. `4.99`).
 - **condition** — blank unless I state it (e.g. `NM (9.4)`).
 - **imprint** — only when it applies: `Black Label`, `Absolute`, `Ultimate`, `Skybound`, etc.
@@ -42,5 +42,8 @@ TRANSCRIPTION:
 ---
 
 ## On the Mac
-1. Save Gemini's CSV as `~/Downloads/intake_YYYY-MM-DD.csv`
-2. `python3 brb_all.py` — step 1 imports it.
+1. Click Gemini's copy button on the CSV block, then in Terminal (project folder):
+   `pbpaste > ~/Downloads/intake_$(date +%F).csv`   (plain text — avoids TextEdit rich-text / curly quotes)
+2. Check: `head -3 ~/Downloads/intake_$(date +%F).csv` — first line must be the header.
+3. Fix anything on Gemini's CHECK list, then `python3 brb_all.py` — step 1 imports it.
+   One file per week: brb_all imports only the NEWEST intake_*.csv, then archives it.
