@@ -2,10 +2,10 @@ import { useState, useEffect, useRef, useMemo } from "react";
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
 import { DATA } from "@/data/data";
 import { splitCreators } from "@/utils/creators";
-import { NEXT_STEPS, Status, StepCard, loadStatuses, saveStatuses } from "./ActionPlan";
 import { CALENDAR_EVENTS } from "./Calendar";
 import { CoverImage, CoverModal } from "@/components/CoverImage";
 import type { NavParams } from "../App";
+import { arcOf, eventOf, arcIssueRange } from "@/lib/arc";
 
 // ── Static data ──────────────────────────────────────────────────────────────
 const comics  = DATA.comics;
@@ -79,12 +79,38 @@ const _fillPct = (key: keyof typeof comics[number]) => {
   // so the banner matches what Data Fix actually shows as missing.
   return filled >= totalComics ? 100 : Math.min(99, Math.round((100 * filled) / totalComics));
 };
+// Live arc fill (Story Arc columns) — moves with every deploy.
+const ARC_STATS = (() => {
+  const groups = new Map<string, { books: typeof comics; parts: Set<number>; len: number }>();
+  let books = 0, sized = 0, events = 0;
+  for (const c of comics) {
+    if (eventOf(c)) events++;
+    const a = arcOf(c);
+    if (!a) continue;
+    books++;
+    if (a.length) sized++;
+    const k = `${c.Title}|${c.Volume || "1"}|${a.name}`;
+    const g = groups.get(k) || { books: [], parts: new Set<number>(), len: 0 };
+    g.books.push(c); if (a.part) g.parts.add(a.part); if (a.length) g.len = Math.max(g.len, a.length);
+    groups.set(k, g);
+  }
+  let complete = 0;
+  // Same rule as the Arcs page: 3-12 parts, every part and every issue in the run owned.
+  groups.forEach(g => {
+    if (g.len < 3 || g.len > 12 || g.parts.size < g.len) return;
+    const range = arcIssueRange(g.books);
+    const owned = new Set(g.books.map(b => parseFloat(String(b.Issue).replace(/^#/, ""))));
+    if (!range || range.every(i => owned.has(i))) complete++;
+  });
+  return { books, arcs: groups.size, sized, complete, events, pct: Math.round((100 * books) / Math.max(1, totalComics)) };
+})();
 const INTERFACE_UPDATES = [
   `Last deployed — ${LAST_UPDATE_DATE}`,
   DEPLOY_COMMIT ? `This deploy — ${DEPLOY_COMMIT}${DEPLOY_SHA ? ` (${DEPLOY_SHA})` : ""}` : `Data refresh — ${totalComics.toLocaleString()} comics · ${totalBoxes} boxes`,
   `${totalComics.toLocaleString()} comics · ${totalBoxes} boxes · ${keyCount.toLocaleString()} keys · ${signedCount} signed`,
   `Data completeness — Year ${_fillPct("Year")}%, Condition ${_fillPct("Condition")}%, Value ${_fillPct("Value_NM")}%, Cover art ${_fillPct("Cover_Artist")}%`,
   `Credits filled — Writers ${_fillPct("Writer")}%, Artists ${_fillPct("Artist")}%, Pub dates ${_fillPct("Pub_Date")}%`,
+  `Story arcs filled — ${ARC_STATS.books.toLocaleString()} books (${ARC_STATS.pct}%) in ${ARC_STATS.arcs.toLocaleString()} arcs · ${ARC_STATS.sized.toLocaleString()} with a known length · ${ARC_STATS.complete} complete arcs owned · ${ARC_STATS.events.toLocaleString()} books tagged to a crossover event`,
 ];
 // ── Duplicate stats (same logic as Duplicates page) ──────────────────────────
 const DUP_STATS = (() => {
@@ -415,7 +441,6 @@ function useInView(threshold = 0.1): [React.RefObject<HTMLDivElement | null>, bo
 type NavFn = (tab: string, params?: NavParams) => void;
 
 export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
-  const [statuses,      setStatuses]    = useState<Record<string, Status>>(loadStatuses);
   const [openFlag,      setOpenFlag]    = useState<number | null>(null);
   const [showProgress,  setShowProgress]= useState(true);
   const [searchField, setSearchField]= useState("everything");
@@ -430,7 +455,11 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
   const [schedRef,  schedVisible] = useInView(0.08);
   const [pubRef,    pubVisible]   = useInView(0.08);
 
-  useEffect(() => { saveStatuses(statuses); }, [statuses]);
+  // Home always opens at the top so the jump links are the first thing in view.
+  useEffect(() => {
+    try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch { /* ignore */ }
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     setMounted(true);
@@ -451,11 +480,6 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
   const cWhatnot = useCountUp(whatnotCount, 950,  mounted);
   const cEbay    = useCountUp(ebayCount,    750,  mounted);
 
-  const getStatus = (title: string): Status => statuses[title] || "not_started";
-  const setStatus = (title: string, s: Status) => setStatuses(prev => ({ ...prev, [title]: s }));
-
-  const doneCount   = NEXT_STEPS.filter(s => getStatus(s.title) === "done").length;
-  const nextActions = NEXT_STEPS.filter(s => getStatus(s.title) !== "done").slice(0, 3);
 
   const noTextFields = ["keysonly", "signedonly", "publisher", "box"];
   const showTextInput = !noTextFields.includes(searchField);
@@ -497,24 +521,31 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
     }
     return arr.slice(0, 10);
   }, []);
+  // Arc of the day — a random arc with 3+ owned parts, covers in reading order
+  const arcPick = useMemo(() => {
+    const g = new Map<string, typeof comics>();
+    for (const c of comics) {
+      const a = arcOf(c); if (!a) continue;
+      const k = `${c.Title}|||${c.Volume || "1"}|||${a.name}`;
+      if (!g.has(k)) g.set(k, []);
+      g.get(k)!.push(c);
+    }
+    const pool = [...g.entries()].map(([k, books]) => {
+      const seen = new Set<string>();
+      const uniq = books.filter(b => { const i = String(b.Issue); if (seen.has(i)) return false; seen.add(i); return true; });
+      return { k, books: uniq };
+    }).filter(x => x.books.length >= 3);
+    if (!pool.length) return null;
+    const p = pool[Math.floor(Math.random() * pool.length)];
+    const [title, vol, name] = p.k.split("|||");
+    const n = (s: string) => { const v = parseFloat(String(s).replace(/^#/, "")); return Number.isFinite(v) ? v : 1e9; };
+    const books = [...p.books].sort((a, b) => (arcOf(a)?.part ?? n(a.Issue)) - (arcOf(b)?.part ?? n(b.Issue)) || n(a.Issue) - n(b.Issue));
+    return { title, vol, name, books, length: books.map(b => arcOf(b)?.length).find(Boolean) ?? null };
+  }, []);
   const [carouselModal, setCarouselModal] = useState<{ comic: typeof comics[0]; large: string | null } | null>(null);
 
   return (
     <div style={{ maxWidth: "calc(1100px + var(--wide))", margin:"0 auto", padding:"20px 16px 80px" }}>
-
-      {/* ── QUICK LINKS — cleanup pages are the usual first stop ── */}
-      <nav className="home-quicklinks" aria-label="Quick links">
-        {([
-          ["showcase",      "🎠 Showcase"],
-          ["arcs",          "📖 Arcs"],
-          ["datafix",       "🧹 Data Fix"],
-          ["missingcovers", "🖼️ Missing Covers"],
-          ["coverreview",   "🔎 Cover Review"],
-          ["editcomic",     "✏️ Edit Comic"],
-        ] as const).map(([tab, label]) => (
-          <button key={tab} className="home-quicklink" onClick={() => onNavigate(tab)}>{label}</button>
-        ))}
-      </nav>
 
       {/* ── LATEST UPDATE BANNER ── */}
       {!bannerClosed && (
@@ -551,6 +582,102 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
             ))}
           </div>
         )}
+      </section>
+      )}
+
+      {/* ── QUICK LINKS — cleanup pages are the usual first stop ── */}
+      <nav className="home-quicklinks" aria-label="Quick links">
+        {([
+          ["showcase",      "🎠 Showcase"],
+          ["arcs",          "📖 Arcs"],
+          ["datafix",       "🧹 Data Fix"],
+          ["missingcovers", "🖼️ Missing Covers"],
+          ["coverreview",   "🔎 Cover Review"],
+          ["editcomic",     "✏️ Edit Comic"],
+        ] as const).map(([tab, label]) => (
+          <button key={tab} className="home-quicklink" onClick={() => onNavigate(tab)}>{label}</button>
+        ))}
+      </nav>
+
+      {/* ── Cover Carousel ── */}
+      <section style={{ marginBottom:24 }}>
+        <div style={{ display:"flex", alignItems:"baseline", gap:10, marginBottom:10 }}>
+          <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"3px", color:"var(--muted)" }}>
+            TODAY'S PICKS — {new Date().toLocaleDateString("en-US", { month:"long", day:"numeric", year:"numeric" })}
+          </span>
+          <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px", color:"var(--muted)" }}>
+            10 random key issues · refreshes each visit
+          </span>
+          <button onClick={() => onNavigate("showcase")} className="home-quicklink" style={{ marginLeft:"auto" }}>▶ Open Showcase</button>
+        </div>
+        <div style={{ overflow:"hidden", margin:"0 -16px", padding:"4px 0" }}>
+          <div className="cover-carousel-track">
+            {[...carouselComics, ...carouselComics].map((c, i) => (
+              <div
+                key={i}
+                className="cover-carousel-card"
+              >
+                <CoverImage
+                  comic={c}
+                  width={150}
+                  height={225}
+                  onClick={large => setCarouselModal({ comic: c, large })}
+                  style={{ borderRadius:6, boxShadow:"0 4px 14px rgba(0,0,0,0.18)" }}
+                />
+                <button
+                  onClick={() => onNavigate("coverreview", { title: c.Title })}
+                  title={`See every ${c.Title} cover`}
+                  style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--muted2)", lineHeight:1.2, marginTop:5, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap", width:150, textAlign:"center", background:"none", border:"none", padding:0, cursor:"pointer", textDecoration:"underline" }}>
+                  {c.Title}
+                </button>
+                <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:"var(--muted)", textAlign:"center", width:150 }}>
+                  {c.Issue}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        {carouselModal && (
+          <CoverModal
+            comic={{ ...carouselModal.comic, Publisher: carouselModal.comic.Publisher ?? "", Year: carouselModal.comic.Year ?? "" }}
+            largeUrl={carouselModal.large}
+            onClose={() => setCarouselModal(null)}
+          />
+        )}
+      </section>
+
+      {/* ── ARC CAROUSEL — one random story arc, covers in reading order ── */}
+      {arcPick && (
+      <section style={{ marginBottom:24 }}>
+        <div style={{ display:"flex", alignItems:"baseline", gap:10, marginBottom:10, flexWrap:"wrap" }}>
+          <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"3px", color:"var(--muted)" }}>
+            ARC OF THE DAY — {arcPick.name.toUpperCase()}
+          </span>
+          <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px", color:"var(--muted)" }}>
+            {arcPick.title}{arcPick.vol !== "1" ? ` Vol ${arcPick.vol}` : ""} · {arcPick.books.length}{arcPick.length ? ` of ${arcPick.length}` : ""} parts owned
+          </span>
+          <button onClick={() => onNavigate("coverreview", { title: arcPick.title, arc: arcPick.name, vol: arcPick.vol })} className="home-quicklink" style={{ marginLeft:"auto" }}>▶ Open arc</button>
+          <button onClick={() => onNavigate("arcs")} className="home-quicklink">📖 All arcs</button>
+        </div>
+        <div style={{ display:"flex", gap:12, overflowX:"auto", padding:"4px 0 8px", WebkitOverflowScrolling:"touch" }}>
+          {arcPick.books.map((c, i) => (
+            <div key={i} style={{ flex:"0 0 auto", width:130, textAlign:"center" }}>
+              <CoverImage
+                comic={c}
+                width={130}
+                height={195}
+                onClick={large => setCarouselModal({ comic: c, large })}
+                style={{ borderRadius:6, boxShadow:"0 4px 14px rgba(0,0,0,0.18)" }}
+              />
+              <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:"var(--muted2)", marginTop:5 }}>
+                #{c.Issue}{arcOf(c)?.part ? ` · Pt ${arcOf(c)?.part}` : ""}
+              </div>
+              <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.8rem", color:"var(--muted)" }}>
+                Box {String(c.Box || "?").replace(/^BOX\s*/i, "")}
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
       )}
 
@@ -605,53 +732,6 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
         )}
       </section>
       )}
-
-      {/* ── Cover Carousel ── */}
-      <section style={{ marginBottom:24 }}>
-        <div style={{ display:"flex", alignItems:"baseline", gap:10, marginBottom:10 }}>
-          <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"3px", color:"var(--muted)" }}>
-            TODAY'S PICKS — {new Date().toLocaleDateString("en-US", { month:"long", day:"numeric", year:"numeric" })}
-          </span>
-          <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px", color:"var(--muted)" }}>
-            10 random key issues · refreshes each visit
-          </span>
-          <button onClick={() => onNavigate("showcase")} className="home-quicklink" style={{ marginLeft:"auto" }}>▶ Open Showcase</button>
-        </div>
-        <div style={{ overflow:"hidden", margin:"0 -16px", padding:"4px 0" }}>
-          <div className="cover-carousel-track">
-            {[...carouselComics, ...carouselComics].map((c, i) => (
-              <div
-                key={i}
-                className="cover-carousel-card"
-              >
-                <CoverImage
-                  comic={c}
-                  width={150}
-                  height={225}
-                  onClick={large => setCarouselModal({ comic: c, large })}
-                  style={{ borderRadius:6, boxShadow:"0 4px 14px rgba(0,0,0,0.18)" }}
-                />
-                <button
-                  onClick={() => onNavigate("coverreview", { title: c.Title })}
-                  title={`See every ${c.Title} cover`}
-                  style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"var(--muted2)", lineHeight:1.2, marginTop:5, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap", width:150, textAlign:"center", background:"none", border:"none", padding:0, cursor:"pointer", textDecoration:"underline" }}>
-                  {c.Title}
-                </button>
-                <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:"var(--muted)", textAlign:"center", width:150 }}>
-                  {c.Issue}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        {carouselModal && (
-          <CoverModal
-            comic={{ ...carouselModal.comic, Publisher: carouselModal.comic.Publisher ?? "", Year: carouselModal.comic.Year ?? "" }}
-            largeUrl={carouselModal.large}
-            onClose={() => setCarouselModal(null)}
-          />
-        )}
-      </section>
 
       {/* ── Quick Search ── */}
 
@@ -779,23 +859,6 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
         </div>
       </section>
 
-      {/* ── PLATFORM STATS — second row ── */}
-      <section style={{ marginBottom:32 }}>
-        <div className="stat-section-label">PLATFORM ASSIGNMENTS</div>
-        <div className="stat-grid">
-          {([
-            { val: cWhatnot.toLocaleString(), lbl:"Whatnot",         sub:"assigned to platform",  color:"#16a34a" },
-            { val: cEbay.toLocaleString(),    lbl:"eBay",             sub:"assigned to platform",  color:"#6b7280" },
-          ] as const).map((s, i) => (
-            <div key={i} className="stat-tile" style={{ borderTopColor: s.color }}>
-              <div className="stat-tile-val" style={{ color: s.color }}>{s.val}</div>
-              <div className="stat-tile-lbl">{s.lbl}</div>
-              <div className="stat-tile-sub">{s.sub}</div>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* ── COLLECTION VALUE — gas station display ── */}
       <section style={{ marginBottom:24 }}>
         <div style={{ background:"#0f1a12", border:"1px solid #1e3a22", borderRadius:10, padding:"22px 24px", overflow:"hidden", position:"relative" }}>
@@ -840,6 +903,23 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
           <div style={{ marginTop:16, paddingTop:14, borderTop:"1px solid #1e3a22", fontSize:"0.875rem", color:"rgba(100,220,120,0.4)", letterSpacing:"1px" }}>
             Values derived from Value_NM and Value_VF fields across all {totalComics.toLocaleString()} catalogued books. VF uses lower bound of any range (e.g. "$5–12" counts as $5).
           </div>
+        </div>
+      </section>
+
+      {/* ── PLATFORM STATS — second row ── */}
+      <section style={{ marginBottom:32 }}>
+        <div className="stat-section-label">PLATFORM ASSIGNMENTS</div>
+        <div className="stat-grid">
+          {([
+            { val: cWhatnot.toLocaleString(), lbl:"Whatnot",         sub:"assigned to platform",  color:"#16a34a" },
+            { val: cEbay.toLocaleString(),    lbl:"eBay",             sub:"assigned to platform",  color:"#6b7280" },
+          ] as const).map((s, i) => (
+            <div key={i} className="stat-tile" style={{ borderTopColor: s.color }}>
+              <div className="stat-tile-val" style={{ color: s.color }}>{s.val}</div>
+              <div className="stat-tile-lbl">{s.lbl}</div>
+              <div className="stat-tile-sub">{s.sub}</div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -1103,36 +1183,6 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
               </div>
             );
           })}
-        </div>
-      </section>
-
-      {/* ── NEXT ACTIONS — with nav links ── */}
-      <section>
-        <div className="actions-header">
-          <div style={{ display:"flex", alignItems:"baseline", gap:14 }}>
-            <h2 className="section-h2" style={{ margin:0 }}>✅ NEXT ACTIONS</h2>
-            {doneCount > 0 && (
-              <span style={{ fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1.5px", color:"#16a34a" }}>
-                {doneCount}/{NEXT_STEPS.length} DONE
-              </span>
-            )}
-          </div>
-          <button className="btn-view-all" onClick={() => onNavigate("actionplan")}>
-            View All {NEXT_STEPS.length - doneCount} Actions →
-          </button>
-        </div>
-        <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
-          {nextActions.map((s, i) => (
-            <div key={i} style={{ position:"relative" }}>
-              <StepCard step={s} status={getStatus(s.title)} onStatusChange={st => setStatus(s.title, st)} />
-              <button
-                className="action-nav-btn"
-                onClick={() => onNavigate(catNavPage(s.category))}
-              >
-                → {catNavLabel(s.category)}
-              </button>
-            </div>
-          ))}
         </div>
       </section>
 

@@ -445,7 +445,12 @@ def main():
                 if args.apply:
                     ws.cell(r, cY, str(py))
                 years_fixed.append([sheet_title, issue, ry or "(blank)", py])
-            if date_str and (args.overwrite or not str(ws.cell(r, cPD).value or "").strip()):
+                year_moved = True
+            else:
+                year_moved = False
+            # When your link moves the Year, the old on-sale date belonged to the wrong
+            # era too - replace it, or brb_year_from_pubdate flips the Year straight back.
+            if date_str and (args.overwrite or year_moved or not str(ws.cell(r, cPD).value or "").strip()):
                 if args.apply:
                     ws.cell(r, cPD, date_str)
                 dates_set += 1
