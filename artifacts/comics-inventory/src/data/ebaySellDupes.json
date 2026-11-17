@@ -1,8 +1,8 @@
 {
- "source": "comics_inventory_1711_1504.xlsx",
+ "source": "comics_inventory_1711_1704.xlsx",
  "generatedAt": "2026-11-17",
- "groupCount": 139,
- "sellableCount": 146,
+ "groupCount": 138,
+ "sellableCount": 145,
  "estValue": 983.32,
  "rows": [
   {
@@ -3171,26 +3171,6 @@
    ],
    "keepSigned": false,
    "sameBox": false
-  },
-  {
-   "title": "Spider-Woman",
-   "issue": "1",
-   "year": "2026",
-   "volume": "1",
-   "publisher": "Marvel",
-   "writer": "Dan Watters & Ann Nocenti",
-   "copies": 2,
-   "sellable": 1,
-   "sellValue": 0.0,
-   "sellBoxes": [
-    "102"
-   ],
-   "keepBoxes": [],
-   "boxes": [
-    "102"
-   ],
-   "keepSigned": false,
-   "sameBox": true
   }
  ]
 }

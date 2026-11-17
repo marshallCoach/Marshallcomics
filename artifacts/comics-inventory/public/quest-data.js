@@ -1,13 +1,13 @@
-// AUTO-GENERATED quest data — source: comics_inventory_1711_1504.xlsx (11179 rows) · generated 2026-11-17
+// AUTO-GENERATED quest data — source: comics_inventory_1711_1704.xlsx (11179 rows) · generated 2026-11-17
 // Regenerate with: node gen_quest_data.mjs
 window.QUEST_DATA = {
- "source": "comics_inventory_1711_1504.xlsx",
+ "source": "comics_inventory_1711_1704.xlsx",
  "generated": "2026-11-17",
  "totalRows": 11179,
  "dupe": {
-  "groups": 24,
-  "rows": 48,
-  "excess": 24
+  "groups": 23,
+  "rows": 46,
+  "excess": 23
  },
  "clone": {
   "groups": 0,
@@ -937,7 +937,7 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 137,
    "vcap": 240,
-   "dupes": 2,
+   "dupes": 0,
    "clones": 0
   },
   {
