@@ -72,6 +72,18 @@ def main():
         for d in (".", "~/Downloads", ROOT):
             paths |= set(glob.glob(os.path.join(os.path.expanduser(d), "flagged-covers-*.json")))
         paths = sorted(paths, key=os.path.getmtime)
+        if args.quiet:
+            # Automatic mode (brb_all): only exports made AFTER the last automatic run.
+            # The first run just sets the marker — an old backlog (already applied by hand,
+            # covers re-fetched since) must never be re-applied wholesale.
+            marker = os.path.join(ROOT, "processed_exports", ".flagged_covers_since")
+            since = os.path.getmtime(marker) if os.path.exists(marker) else None
+            os.makedirs(os.path.dirname(marker), exist_ok=True)
+            if since is None:
+                open(marker, "w").write("start"); print(f"flagged covers: marker set - {len(paths)} older export(s) ignored (apply by hand with --flags)"); return
+            paths = [p for p in paths if os.path.getmtime(p) > since]
+            if args.apply:
+                os.utime(marker, None)
     if not paths:
         if args.quiet:
             print("No flagged-covers exports - nothing to clear."); return
