@@ -143,7 +143,7 @@ def _fetch_page(base, title, vol, issue):
         "action": "parse", "page": page,
         "prop": "wikitext", "format": "json", "formatversion": 2, "redirects": 1})
     try:
-        d = json.load(urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": UA}), timeout=12))
+        d = json.load(urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": UA}), timeout=8))
         time.sleep(DELAY)
     except Exception:
         time.sleep(DELAY); return None
@@ -229,7 +229,7 @@ def page_image(base, page):
     try:
         u = base + "?" + urllib.parse.urlencode({"action": "query", "titles": page, "prop": "pageimages",
                                                  "piprop": "original", "redirects": 1, "format": "json", "formatversion": 2})
-        d = json.load(urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": UA}), timeout=12))
+        d = json.load(urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": UA}), timeout=8))
         time.sleep(DELAY)
         for p in d.get("query", {}).get("pages", []):
             src = (p.get("original") or {}).get("source")
@@ -247,7 +247,7 @@ def img_url(base, fn):
         u = base + "?" + urllib.parse.urlencode({
             "action": "query", "titles": "File:" + fn, "prop": "imageinfo",
             "iiprop": "url", "format": "json", "formatversion": 2})
-        d = json.load(urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": UA}), timeout=12))
+        d = json.load(urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": UA}), timeout=8))
         time.sleep(DELAY)
         for p in d.get("query", {}).get("pages", []):
             if "imageinfo" in p:
@@ -421,7 +421,15 @@ def main():
             # Probe volumes by year: the linked/sheet volume may be wrong, so find
             # the wiki page whose year matches this row (handles a series split
             # across Vol 1/2/3). The seed still prefers the issue named in the URL.
-            cand = [vol] if str(vol).startswith("ISSUE") else [vol] + [str(x) for x in range(1, 8) if str(x) != vol]
+            if str(vol).startswith("ISSUE"):
+                cand = [vol]
+            elif is_seed:                          # a link you pasted: worth a full volume search
+                cand = [vol] + [str(x) for x in range(1, 8) if str(x) != vol]
+            else:                                  # run-mates: only the likely volumes (2-3 requests, not 8)
+                cand = list(dict.fromkeys([vol, nv(ws.cell(r, cV).value)] +
+                                          ([str(vol_memo[(canon.lower(), ry or 0)])] if (canon.lower(), ry or 0) in vol_memo else [])))
+                cand = [c for c in cand if c]
+            print(f"    · {sheet_title} #{issue} …", flush=True)     # always visibly alive
             got = fetch_best(base, canon, cand, (url_issue if (is_seed and url_issue) else issue), ry, vol_memo)
             if not got:
                 continue

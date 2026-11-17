@@ -270,7 +270,7 @@ class T(unittest.TestCase):
         sb.run("brb_apply_fandom_pages.py", env={"PYTHONPATH": sb.p("site")})
         reqs = open(sb.p("requests.log")).read().splitlines() if os.path.exists(sb.p("requests.log")) else []
         self.assertEqual(len(reqs), len(set(reqs)), "a page must never be requested twice in one run")
-        self.assertLessEqual(len(reqs), 20 * 8 * 2, f"{len(reqs)} requests for 20 books")
+        self.assertLessEqual(len(reqs), 20 * 3 + 6 * 8, f"{len(reqs)} requests for 20 books")
 
     # ── renames keep covers ───────────────────────────────────────────────────
     def test_rename_carries_covers(self):
