@@ -204,6 +204,25 @@ class T(unittest.TestCase):
         finally:
             urllib.request.urlopen = real
 
+    # ── autolink targets missing covers and wrong-era covers ──────────────────
+    def test_autolink_targets_missing_and_wrong_era_covers(self):
+        sb = self.sb
+        H = ["Title", "Issue #", "Year", "Volume", "Publisher", "Box #", "Publication Date", "Writer(s)", "Artist(s)", "Cover Artist"]
+        full = ["2020-01-00", "w", "a", "c"]
+        sb.xlsx(H, [["Hulk", 1, 2008, 2, "Marvel", "5"] + full,        # complete but NO cover
+                    ["Shazam!", 15, 2020, 5, "DC", "6"] + full,        # two eras share one title+issue cover
+                    ["Shazam!", 15, 2024, 5, "DC", "7"] + full,
+                    ["Done", 1, 2020, 1, "DC", "8"] + full])           # complete, own cover -> untouched
+        sb.json("covers.json", {"Shazam!|||#15": {"url": "u"}, "Done|||1|||1": {"url": "u"}})
+        sb.json("arc_cache.json", {"v": 3, "resolved": {}, "probe": {}, "issues": {
+            "Hulk Vol 2 1": {"page": "Hulk Vol 2 1", "f": {}, "year": 2008},
+            "Shazam! Vol 1 15": {"page": "Shazam! Vol 1 15", "f": {}, "year": 2020},
+            "Shazam! Vol 2 15": {"page": "Shazam! Vol 2 15", "f": {}, "year": 2024}}})
+        r = sb.run("brb_autolink.py", "--write")
+        out = json.load(open(glob.glob(sb.p("data-fixes-autolink-*.json"))[0]))
+        got = sorted((x["title"], x["issue"], x["value"].rsplit("/", 1)[1]) for x in out)
+        self.assertEqual(got, [("Hulk", "1", "Hulk_Vol_2_1"), ("Shazam!", "15", "Shazam!_Vol_1_15"), ("Shazam!", "15", "Shazam!_Vol_2_15")], r.stdout)
+
     # ── renames keep covers ───────────────────────────────────────────────────
     def test_rename_carries_covers(self):
         sb = self.sb

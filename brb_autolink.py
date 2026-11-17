@@ -52,6 +52,17 @@ def main():
     g = lambda n: H.index(n) if n in H else None
     cT, cI, cY, cV, cP, cB = g("Title"), g("Issue #"), g("Year"), g("Volume"), g("Publisher"), g("Box #") or g("Box")
     need_cols = {n: g(n) for n in NEED}
+    # Covers count as missing data too: no cover at all, or only a title+issue cover that a
+    # different-era copy of the same number also uses (e.g. a 2024 #18 showing the 2019 #18).
+    cov = json.load(open("covers.json")) if os.path.exists("covers.json") else {}
+    def cover_level(t, i, v):
+        for k in (f"{t}|||{i}|||{v}", f"{t}|||#{i}|||{v}"):
+            if cov.get(k):
+                return 3
+        for k in (f"{t}|||#{i}", f"{t}|||{i}"):
+            if cov.get(k):
+                return 2
+        return 0
     rows = []
     for r in it:
         t = str(r[cT] or "").strip()
@@ -60,10 +71,23 @@ def main():
         if not t or not wk or not iss:
             continue
         missing = [n for n, c in need_cols.items() if c is not None and not str(r[c] or "").strip()]
-        if not missing:
-            continue
-        rows.append({"title": t, "issue": iss, "year": yr(r[cY]), "vol": ni(r[cV]) if cV is not None else "",
+        vol0 = ni(r[cV]) if cV is not None else ""
+        lvl = cover_level(t, iss, vol0)
+        if lvl == 0:
+            missing.append("Cover")
+        rows.append({"title": t, "issue": iss, "year": yr(r[cY]), "vol": vol0, "cover_lvl": lvl,
                      "box": str(r[cB] or "").strip() if cB is not None else "", "wiki": wk, "missing": missing})
+    # wrong-era cover: same title + issue owned from eras > 2 years apart, and this copy only
+    # has the shared title+issue cover (no volume-specific one)
+    eras = collections.defaultdict(set)
+    for r in rows:
+        if r["year"]:
+            eras[(r["title"], r["issue"])].add(r["year"])
+    for r in rows:
+        ys = eras[(r["title"], r["issue"])]
+        if r["cover_lvl"] == 2 and ys and max(ys) - min(ys) > 2:
+            r["missing"].append("Cover (shared with another era)")
+    rows = [r for r in rows if r["missing"]]
     if a.limit:
         rows = rows[: a.limit]
     print(f"SOURCE: {os.path.basename(src)}   Marvel/DC rows missing data: {len(rows)}")
