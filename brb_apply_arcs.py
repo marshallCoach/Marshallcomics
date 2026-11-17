@@ -228,8 +228,8 @@ def main():
             new_arc = r not in lenonly and r not in eventonly and vals[0] and name in ("Arc Source", "Arc Confidence")
             if a.fill_only and str(ws.cell(r, col[name]).value or "").strip() and not new_arc:
                 continue                               # never overwrite existing data
-            if v == "" and a.fill_only:
-                continue
+            if v == "":
+                continue                               # a blank in the CSV never clears a cell
             ws.cell(r, col[name]).value = (v if v != "" else None)
 
     # verify every pre-existing column is untouched (arc columns excluded if they pre-existed)

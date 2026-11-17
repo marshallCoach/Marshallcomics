@@ -79,6 +79,7 @@ def main():
         print("No Title column — abort."); return
 
     changed = 0
+    renamed = {}
     for r in range(2, ws.max_row + 1):
         t = str(ws.cell(r, cT).value or "").strip()
         if not t:
@@ -86,6 +87,7 @@ def main():
         a = aliases.get(norm_key(t))
         if a and t != a["canonical"]:
             print(f"  {t!r} -> {a['canonical']!r}")
+            renamed[t] = a["canonical"]
             if args.apply:
                 ws.cell(r, cT, a["canonical"])
             changed += 1
@@ -98,6 +100,19 @@ def main():
         out = os.path.join(ROOT, f"attached_assets/comics_inventory_{datetime.datetime.now():%d%m_%H%M}.xlsx")
         wb.save(out)
         print(f"WROTE: {os.path.basename(out)}")
+        # Covers are keyed by title: copy each renamed title's cover entries to the new
+        # title (old keys kept), so a rename never costs a cover.
+        cpath = os.path.join(ROOT, "covers.json")
+        covers = load_json(cpath, {})
+        added = 0
+        for old, new in renamed.items():
+            for k in [k for k in covers if k.startswith(old + "|||")]:
+                nk = new + k[len(old):]
+                if nk not in covers:
+                    covers[nk] = covers[k]; added += 1
+        if added:
+            json.dump(covers, open(cpath, "w"), ensure_ascii=False)
+            print(f"covers.json: {added} cover entr(ies) copied to the new titles")
 
 
 if __name__ == "__main__":

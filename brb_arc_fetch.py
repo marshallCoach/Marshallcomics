@@ -214,6 +214,16 @@ def run(a, cache):
     log(f"{len(keys)} series -> {len(units)} eras / {total} issues")
     t0 = time.time()
 
+    # Series you matched on Data Fix (series_map.json) skip the guessing entirely.
+    smap = json.load(open("series_map.json")) if os.path.exists("series_map.json") else {}
+    forced = 0
+    for eid, wiki, era in units:
+        m = smap.get(f"{era[0]['title']}|||{era[0]['sheet_volume'] or '1'}")
+        if m and m.get("fandom") and cache["resolved"].get(eid) != m["fandom"]:
+            cache["resolved"][eid] = m["fandom"]; forced += 1
+    if forced:
+        log(f"series_map.json: {forced} era(s) pointed at the Fandom series you chose")
+
     # STEP 1 -- resolve each era (two probes in one request)
     todo1 = [u for u in units if u[0] not in cache["resolved"]]
     for n, (eid, wiki, era) in enumerate(todo1, 1):

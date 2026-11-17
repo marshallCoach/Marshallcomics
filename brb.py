@@ -88,6 +88,9 @@ GEN_FILES = [
 ]
 GEN_FILES_OPT = [
     "artifacts/comics-inventory/public/arc_conflicts.json",
+    "artifacts/comics-inventory/public/series_match.json",
+    "artifacts/comics-inventory/public/series_map.json",
+    "series_map.json",
     "artifacts/comics-inventory/public/title_rename_proposals.json",
     "artifacts/comics-inventory/public/gcd_notfound.json",
     "artifacts/comics-inventory/public/validation-report.json",

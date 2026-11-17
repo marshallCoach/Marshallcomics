@@ -150,6 +150,9 @@ def main():
         # Arc-name conflicts (Fandom vs Comic Vine): Keep / Use Comic Vine / pasted link.
         if run([PY, os.path.join(ROOT, "brb_apply_arc_decisions.py"), "--apply"]):
             raise RuntimeError("brb_apply_arc_decisions failed")
+        # Series match decisions -> series_map.json (+ title_aliases for Map + rename)
+        if run([PY, os.path.join(ROOT, "brb_apply_series_map.py"), "--apply"]):
+            raise RuntimeError("brb_apply_series_map failed")
         # Then the Fandom links/images. No --flags: it discovers and MERGES every
         # export (a single-newest read used to strand links from earlier sessions).
         if run([PY, os.path.join(ROOT, "brb_apply_fandom_pages.py"), "--apply"]):
