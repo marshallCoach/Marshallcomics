@@ -1029,6 +1029,9 @@
 "arc-conflict",
 "likely-variant"
 ],
+"Tales of the Green Lantern Corps: Guy Gardner|||1|||CC1": [
+"likely-variant"
+],
 "Teen Titans|||34|||51": [
 "arc-conflict"
 ],
@@ -1050,6 +1053,12 @@
 "Teen Titans|||92|||UNKNOWN \u2014 needs physical reassignment": [
 "arc-conflict"
 ],
+"The Amazing Spider-Man|||1000|||CC1": [
+"likely-variant"
+],
+"The Amazing Spider-Man|||26|||CC1": [
+"likely-variant"
+],
 "The Flash|||215|||88": [
 "arc-conflict"
 ],
@@ -1068,6 +1077,9 @@
 "The Immortal Thor|||2|||CC1": [
 "likely-variant"
 ],
+"The Incredible Hulk|||26|||CC1": [
+"likely-variant"
+],
 "The Mighty Thor|||7|||5": [
 "arc-conflict"
 ],
@@ -1079,6 +1091,9 @@
 ],
 "Thor|||3|||5": [
 "arc-conflict"
+],
+"Thor|||801|||CC1": [
+"likely-variant"
 ],
 "Thunderbolts|||130|||95": [
 "arc-conflict"
@@ -1127,6 +1142,9 @@
 ],
 "Uncanny X-Men|||15|||19": [
 "arc-conflict"
+],
+"Uncanny X-Men|||35|||CC1": [
+"likely-variant"
 ],
 "Uncanny X-Men|||466|||3": [
 "arc-conflict"
@@ -1270,6 +1288,9 @@
 "arc-conflict"
 ],
 "X-Men|||35|||CC1": [
+"likely-variant"
+],
+"X-Men|||37|||CC1": [
 "likely-variant"
 ]
 }
