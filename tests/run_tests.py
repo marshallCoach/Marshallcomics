@@ -175,6 +175,35 @@ class T(unittest.TestCase):
         src = open(os.path.join(REPO, "brb_apply_fandom_pages.py")).read()
         self.assertIn('re.search(r"_Issue_|%20Issue%20"', src, "franchise links must reach the fetch filter")
 
+    def test_cover_found_on_any_wiki_layout(self):
+        import brb_apply_fandom_pages as A
+        cases = {
+            "| Image1_Artist1 = Someone\n| Image1 = Batman Vol 1 1.jpg\n": "Batman Vol 1 1.jpg",   # Marvel/DC
+            "{{Comic\n| image = MMPR 101 Cover A.png\n| writer = Ryan Parrott\n": "MMPR 101 Cover A.png",  # franchise
+            "| cover = [[File:TNG Mirror Broken 1.webp|250px]]\n": "TNG Mirror Broken 1.webp",
+            "Intro [[File:Issue101.JPG|thumb]] text": "Issue101.JPG",
+            "<gallery>\nMMPR101 A.jpg|Cover A\n</gallery>": "MMPR101 A.jpg",
+        }
+        for wt, want in cases.items():
+            self.assertEqual(A.cover_file(wt), want, wt)
+        self.assertIsNone(A.cover_file("| Image1_Artist1 = Jim Lee\n"))
+
+    def test_lead_image_fallback_when_no_image_field(self):
+        import io, urllib.request, brb_apply_fandom_pages as A
+        real, A.time.sleep = urllib.request.urlopen, (lambda s: None)
+        def fake(req, timeout=None):
+            q = req.full_url
+            if "pageimages" in q:
+                return io.BytesIO(json.dumps({"query": {"pages": [{"original": {"source": "https://static.wikia.nocookie.net/pr/images/x/MMPR101.jpg/revision/latest"}}]}}).encode())
+            return io.BytesIO(json.dumps({"parse": {"wikitext": "| release date = October 26, 2022\n| writer = [[Ryan Parrott]]"}}).encode())
+        urllib.request.urlopen = fake
+        try:
+            fn, date, py, cr = A.fetch_page("https://powerrangers.fandom.com/api.php", "Mighty Morphin Power Rangers (Boom! Studios)", "ISSUE::", "101")
+            self.assertEqual(A.img_url("x", fn), "https://static.wikia.nocookie.net/pr/images/x/MMPR101.jpg")
+            self.assertEqual(date, "2022-10-00")
+        finally:
+            urllib.request.urlopen = real
+
     # ── renames keep covers ───────────────────────────────────────────────────
     def test_rename_carries_covers(self):
         sb = self.sb

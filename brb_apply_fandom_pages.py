@@ -139,7 +139,7 @@ def fetch_page(base, title, vol, issue):
     wt = d.get("parse", {}).get("wikitext", "")
     if not wt:
         return None
-    im = re.search(r"\|\s*Image1?\s*=\s*([^\n|]+\.(?:jpg|png|jpeg))", wt, re.I)
+    fn = cover_file(wt)
     date_str, py, mon = None, None, 0
     # 1) a single CoverDate / ReleaseDate / Cover Date parameter (with or w/o space).
     #    Memory Alpha: "published =" is the real-world date; its bare "date =" can be an
@@ -169,7 +169,9 @@ def fetch_page(base, title, vol, issue):
     if not py and not str(vol).startswith("ISSUE"):
         py = yr(wt[:400])
     credits = {role: infobox_names(wt, pat) for role, pat in CRED_PATS.items()}
-    return (im.group(1).strip() if im else None, date_str, py, credits)
+    if not fn:                                   # no image in the wikitext layout we know:
+        fn = page_image(base, page)              # ask the wiki for the page's lead image
+    return (fn, date_str, py, credits)
 
 
 def fetch_best(base, title, cand_vols, issue, target_year, memo):
@@ -195,7 +197,41 @@ def fetch_best(base, title, cand_vols, issue, target_year, memo):
     return fallback
 
 
+IMG_EXT = r"\.(?:jpe?g|png|webp|gif)"
+
+
+def cover_file(wt):
+    """Cover image filename from ANY wiki's infobox. Marvel/DC use "| Image1 = x.jpg";
+    franchise wikis use "| image = ...", "| cover = ...", "[[File:x.jpg|250px]]" or a
+    <gallery>. First match in that order; case-insensitive; .jpg/.png/.webp/.gif."""
+    for pat in (r"\|\s*(?:Image1?|image|cover(?:\s*image)?|cover1|img)\s*=\s*(?:\[\[)?(?:File:|Image:)?([^\n|\]=]+?" + IMG_EXT + r")",
+                r"\[\[\s*(?:File|Image):([^\n|\]]+?" + IMG_EXT + r")",
+                r"<gallery[^>]*>\s*(?:File:|Image:)?([^\n|]+?" + IMG_EXT + r")"):
+        m = re.search(pat, wt or "", re.I)
+        if m:
+            return m.group(1).strip()
+    return None
+
+
+def page_image(base, page):
+    """Fallback: the wiki's own lead image for the page (PageImages API) -> 'url:<full url>'."""
+    try:
+        u = base + "?" + urllib.parse.urlencode({"action": "query", "titles": page, "prop": "pageimages",
+                                                 "piprop": "original", "redirects": 1, "format": "json", "formatversion": 2})
+        d = json.load(urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": UA}), timeout=12))
+        time.sleep(DELAY)
+        for p in d.get("query", {}).get("pages", []):
+            src = (p.get("original") or {}).get("source")
+            if src:
+                return "url:" + src.split("/revision/")[0]
+    except Exception:  # noqa: BLE001
+        pass
+    return None
+
+
 def img_url(base, fn):
+    if str(fn).startswith("url:"):               # already a full image URL (from page_image)
+        return fn[4:]
     try:
         u = base + "?" + urllib.parse.urlencode({
             "action": "query", "titles": "File:" + fn, "prop": "imageinfo",
