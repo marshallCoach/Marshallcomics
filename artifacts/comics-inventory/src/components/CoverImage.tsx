@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import { getCoverSvgUrl, type ComicLike } from "@/utils/coverThumbnails";
 import { coverId, flagKind as coverFlagKind, setFlagKind as setCoverFlagKind, type FlagKind } from "@/lib/coverFlags";
 import { NavPills } from "@/components/NavPills";
+import { memoryAlphaUrl } from "@/lib/arc";
 
 const BASE = import.meta.env.BASE_URL?.replace(/\/$/, "") ?? "";
 
@@ -289,6 +290,8 @@ export function fandomGuesses(title: string, issue: string, year: string, publis
     [/power rangers/, "powerrangers.fandom.com", "Power Rangers Wiki"],
     [/firefly|serenity/, "firefly.fandom.com", "Firefly Wiki"],
   ];
+  // Memory Alpha names issue pages "<Series>, Issue N" — offer the exact page first.
+  if (/star trek/.test(t) && issue) out.push({ label: "Memory Alpha page ↗", url: memoryAlphaUrl(title, issue) });
   for (const [re, host, label] of FRANCHISE) if (re.test(t)) out.push(wiki(host, label));
   // publisher-specific
   if (p.includes("marvel")) out.push(wiki("marvel.fandom.com", "Marvel"));

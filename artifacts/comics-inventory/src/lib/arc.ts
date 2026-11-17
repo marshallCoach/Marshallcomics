@@ -83,6 +83,13 @@ export type FandomGuess = { url: string; basis: "your link" | "same arc" | "gues
  * 2. the Arc Source of a sibling in the same title + volume — issue swapped;
  * 3. a constructed guess from title + volume (Marvel/DC only).
  */
+/** Memory Alpha issue page: "Star Trek: TNG — Mirror Broken" #1 ->
+ *  .../wiki/Star_Trek:_The_Next_Generation_-_Mirror_Broken,_Issue_1 (dashes become " - "). */
+export function memoryAlphaUrl(title: string, issue: string | number): string {
+  const t = String(title || "").replace(/\s*[—–]\s*/g, " - ").replace(/\s+/g, " ").trim();
+  return `https://memory-alpha.fandom.com/wiki/${encodeURIComponent(`${t}, Issue ${String(issue).replace(/^#/, "")}`.replace(/ /g, "_")).replace(/%3A/g, ":").replace(/%2C/g, ",")}`;
+}
+
 export function fandomGuess(
   c: { Title: string; Issue: string | number; Volume?: string; Publisher?: string },
   links: Record<string, string>, siblings: Comic[] = [],
@@ -97,6 +104,12 @@ export function fandomGuess(
     const m = VOL_RE.exec(u || "");
     if (m) mine.push({ base: m[1], stem: m[2], vol: m[3] });
   }
+  // franchise wikis (Memory Alpha): "<Series>,_Issue_N" — swap the issue on your own link
+  for (const [k, u] of Object.entries(links)) {
+    if (k.split("|||")[0] !== tl) continue;
+    const m = /^(https?:\/\/[^/]+\/wiki\/.+?),_Issue_[^_?#]+(_\(\d{4}\))?/.exec(u || "");   // keeps "_(2026)"
+    if (m) return { url: `${m[1]},_Issue_${iss}${m[2] || ""}`, basis: "your link" };
+  }
   const pickV = mine.find(x => x.vol === vol) || (new Set(mine.map(x => x.vol)).size === 1 ? mine[0] : undefined);
   if (pickV) return { url: `${pickV.base}/wiki/${pickV.stem}_Vol_${pickV.vol}_${iss}`, basis: "your link" };
   for (const s of siblings) {
@@ -104,6 +117,7 @@ export function fandomGuess(
     const m = VOL_RE.exec(((s as ArcComic).Arc_Source || "").trim());
     if (m) return { url: `${m[1]}/wiki/${m[2]}_Vol_${m[3]}_${iss}`, basis: "same arc" };
   }
+  if (/star trek/i.test(c.Title)) return { url: memoryAlphaUrl(c.Title, iss), basis: "guess" };
   const base = wikiFor(c.Publisher);
   if (!base) return null;
   let t = (c.Title || "").trim();

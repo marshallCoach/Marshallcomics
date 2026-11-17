@@ -66,7 +66,7 @@ CRED_PATS = {
     # Marvel Database credits the COVER via Image1_Artist1/2 (the artists of the
     # primary cover image), not a CoverArtist field. Match both, but only
     # Image1_* (Image2_* is the variant/textless cover).
-    "cover":  r"\|\s*(?:Cover\s?Artists?\d*|Image1_Artists?\d*)\s*=\s*([^\n|]+)",
+    "cover":  r"\|\s*(?:Cover\s?_?Artists?\d*|Image1_Artists?\d*)\s*=\s*([^\n|]+)",
 }
 
 
@@ -87,7 +87,7 @@ def clean_credit(raw):
 def infobox_names(wt, pat):
     """All creator names for a role (dedup, order-preserving)."""
     out, seen = [], set()
-    for m in re.findall(pat, wt):
+    for m in re.findall(pat, wt, re.I):           # Memory Alpha uses lower-case "writer ="
         for nm in clean_credit(m):
             if nk(nm) not in seen:
                 seen.add(nk(nm)); out.append(nm)
@@ -106,6 +106,11 @@ def parse_url(u):
     path = urllib.parse.unquote(m.group(2))
     vm = re.search(r"^(.*?)_Vol_(\d+)(?:_(.+))?$", path)  # trailing issue optional
     if not vm:
+        # Memory Alpha (and other franchise wikis): "<Series>,_Issue_N" -> vol marker ISSUE
+        im = re.search(r"^(.*?),_Issue_([^_/?#]+)(?:_\((\d{4})\))?$", path)   # "..._Issue_1_(2026)"
+        if im:
+            mark = f"ISSUE:{im.group(3)}" if im.group(3) else "ISSUE"     # year = Memory Alpha disambiguator
+            return base, im.group(1).replace("_", " ").strip(), mark, ni(im.group(2))
         return None
     return base, vm.group(1).replace("_", " ").strip(), vm.group(2), (ni(vm.group(3)) if vm.group(3) else "")
 
@@ -115,8 +120,12 @@ def fetch_page(base, title, vol, issue):
     credits = {'writer':[...], 'artist':[...], 'cover':[...]} from the infobox."""
     if not str(issue).strip():   # never request "Title Vol N " (blank issue) — it
         return None              # resolves to a junk page and stalls the fetch
+    if str(vol).startswith("ISSUE"):
+        page = f"{title}, Issue {issue}" + (f" ({vol.split(':', 1)[1]})" if ":" in str(vol) else "")
+    else:
+        page = f"{title} Vol {vol} {issue}"
     u = base + "?" + urllib.parse.urlencode({
-        "action": "parse", "page": f"{title} Vol {vol} {issue}",
+        "action": "parse", "page": page,
         "prop": "wikitext", "format": "json", "formatversion": 2, "redirects": 1})
     try:
         d = json.load(urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": UA}), timeout=12))
@@ -128,8 +137,11 @@ def fetch_page(base, title, vol, issue):
         return None
     im = re.search(r"\|\s*Image1?\s*=\s*([^\n|]+\.(?:jpg|png|jpeg))", wt, re.I)
     date_str, py, mon = None, None, 0
-    # 1) a single CoverDate / ReleaseDate / Cover Date parameter (with or w/o space)
-    dm = re.search(r"\|\s*(?:Cover\s*Date|Release\s*Date|Date)\s*=\s*([^\n|]+)", wt, re.I)
+    # 1) a single CoverDate / ReleaseDate / Cover Date parameter (with or w/o space).
+    #    Memory Alpha: "published =" is the real-world date; its bare "date =" can be an
+    #    in-universe year, so franchise (ISSUE-style) pages never read a bare Date.
+    dm = (re.search(r"\|\s*(?:published|publication\s*date)\s*=\s*([^\n|]+)", wt, re.I)
+          or re.search(r"\|\s*(?:Cover\s*Date|Release\s*Date" + ("" if str(vol).startswith("ISSUE") else "|Date") + r")\s*=\s*([^\n|]+)", wt, re.I))
     if dm:
         raw = dm.group(1)
         py = yr(raw)
@@ -150,7 +162,7 @@ def fetch_page(base, title, vol, issue):
                     mon = int(nm.group(1))
     if py:
         date_str = f"{py}-{mon:02d}-00"
-    if not py:
+    if not py and not str(vol).startswith("ISSUE"):
         py = yr(wt[:400])
     credits = {role: infobox_names(wt, pat) for role, pat in CRED_PATS.items()}
     return (im.group(1).strip() if im else None, date_str, py, credits)
@@ -248,7 +260,8 @@ def main():
                 continue
             _seen.add(_k); all_recs.append(_r)
     print(f"Exports merged: {len(paths)} ({', '.join(os.path.basename(p) for p in paths)})")
-    recs = [r for r in all_recs if r.get("kind") == "fandom" and "_Vol_" in (r.get("value") or "")]
+    recs = [r for r in all_recs if r.get("kind") == "fandom"
+            and ("_Vol_" in (r.get("value") or "") or re.search(r",_Issue_|,%20Issue%20", r.get("value") or ""))]
     img_recs = [r for r in all_recs if r.get("kind") == "image" and (r.get("value") or "").startswith("http")]
     print(f"FANDOM links to open: {len(recs)}   direct image links: {len(img_recs)}")
 
@@ -329,7 +342,7 @@ def main():
             # Probe volumes by year: the linked/sheet volume may be wrong, so find
             # the wiki page whose year matches this row (handles a series split
             # across Vol 1/2/3). The seed still prefers the issue named in the URL.
-            cand = [vol] + [str(x) for x in range(1, 8) if str(x) != vol]
+            cand = [vol] if str(vol).startswith("ISSUE") else [vol] + [str(x) for x in range(1, 8) if str(x) != vol]
             got = fetch_best(base, canon, cand, (url_issue if (is_seed and url_issue) else issue), ry, vol_memo)
             if not got:
                 continue
