@@ -92,7 +92,9 @@ def main():
         t = str(ws.cell(r, cT).value or "").strip()
         if t:
             rows[f"{t}|||{ni(ws.cell(r, cI).value)}|||{str(ws.cell(r, cB).value or '').strip() if cB else ''}"] = r
-    before = [[ws.cell(r, c).value for c in range(1, ws.max_column + 1)] for r in range(1, ws.max_row + 1)]
+    # ONE pass. (ws.max_column inside the loop recounted every cell per row = hours on 11k rows.)
+    _mr, _mc = ws.max_row, ws.max_column
+    before = [list(row) for row in ws.iter_rows(min_row=1, max_row=_mr, max_col=_mc, values_only=True)]
 
     changes, kept, skipped = [], 0, []
     for key, d in dec.items():

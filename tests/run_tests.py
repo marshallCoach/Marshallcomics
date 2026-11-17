@@ -181,6 +181,28 @@ class T(unittest.TestCase):
         cov = json.load(open(sb.p("covers.json")))
         self.assertIn("Fixed Title|||#1", cov); self.assertIn("Typo Title|||#1", cov)
 
+    # ── performance: big workbook, write step must finish fast ────────────────
+    def test_arc_decisions_fast_on_big_workbook(self):
+        sb = self.sb
+        H = self.ARC_H + [f"Extra {i}" for i in range(40)]
+        rows = [[f"T{i % 300}", i, 1, 2020, str(i % 80 + 1), "Arc", 1, None, None, None, "Stated", "u"] + ["x"] * 40 for i in range(11000)]
+        sb.xlsx(H, rows)
+        sb.json("artifacts/comics-inventory/public/arc_conflicts.json",
+                [{"id": "T5|||5|||6", "cv": {"name": "New Arc", "part": "1", "length": "3", "finale": "7", "url": "cv"}}])
+        sb.json("home/Downloads/data-fixes-1.json", [{"title": "T5", "issue": "5", "box": "6", "problem": "arc-conflict", "kind": "solution", "value": "use-cv"}])
+        t0 = time.time()
+        r = sb.run("brb_apply_arc_decisions.py", "--apply")
+        self.assertLess(time.time() - t0, 90, "must not hang on an 11k-row workbook")
+        self.assertIn("verified", r.stdout, r.stdout + r.stderr)
+
+    def test_no_max_column_inside_loops(self):
+        bad = []
+        for f in glob.glob(os.path.join(REPO, "brb_*.py")):
+            for n, line in enumerate(open(f, encoding="utf-8"), 1):
+                if "for c in range(1, ws.max_column" in line and " for r in " in line:
+                    bad.append(f"{os.path.basename(f)}:{n}")
+        self.assertFalse(bad, "ws.max_column recounts every cell per row - hoist it: " + ", ".join(bad))
+
     # ── CC boxes are never duplicates ─────────────────────────────────────────
     def test_cc_box_never_flagged_duplicate(self):
         sb = self.sb

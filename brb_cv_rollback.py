@@ -50,7 +50,9 @@ def main():
     col = {n: ci(n) for n in NEW_COLS}
     if not col["Story Arc"]:
         sys.exit("no Story Arc column")
-    before = [[ws.cell(r, c).value for c in range(1, ws.max_column + 1)] for r in range(1, ws.max_row + 1)]
+    # ONE pass. (ws.max_column inside the loop recounted every cell per row = hours on 11k rows.)
+    _mr, _mc = ws.max_row, ws.max_column
+    before = [list(row) for row in ws.iter_rows(min_row=1, max_row=_mr, max_col=_mc, values_only=True)]
 
     changes, st = [], collections.Counter()
     for r in range(2, ws.max_row + 1):
