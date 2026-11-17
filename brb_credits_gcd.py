@@ -101,8 +101,7 @@ def split_names(cell):
     annotations like '(layouts)' and junk placeholders like 'Various' so
     overlap detection compares NAMES, not formatting — keeps a real name from
     being flagged CONFLICT just because it carried a '(layouts)' tag."""
-    s = re.sub(r"\([^)]*\)", " ", str(cell or ""))          # strip (role) notes
-    parts = re.split(r"\s*(?:&|,|/|\band\b)\s*", s.strip())
+    parts = _parts(cell)
     out, seen = [], set()
     for p in parts:
         p = p.strip()
@@ -111,14 +110,34 @@ def split_names(cell):
     return out
 
 
+SUFFIX = re.compile(r"^(?:jr|sr|ii|iii|iv)\.?$", re.I)
+
+
+def _parts(cell):
+    """Split a credit cell into names, re-attaching Jr./Sr./III to the name before it
+    ("Romulo Fajardo, Jr." is ONE person - splitting it made GCD's name never match,
+    so UNION re-appended it every run)."""
+    s = re.sub(r"\([^)]*\)", " ", str(cell or ""))
+    out = []
+    for p in re.split(r"\s*(?:&|,|/|\band\b)\s*", s.strip()):
+        p = p.strip()
+        if not p:
+            continue
+        if SUFFIX.match(p) and out:
+            out[-1] = f"{out[-1]} {p if p.endswith('.') or p.lower().startswith('i') else p + '.'}"
+        else:
+            out.append(p)
+    return out
+
+
 def needs_clean(cell):
     """True when a cell carries a company credit or the same name twice - the
     debris the old UNION left behind (it re-appended 'Top Cow Productions, Inc.'
     every run because the comma split never matched GCD's spelling)."""
-    s = re.sub(r"\([^)]*\)", " ", str(cell or ""))
-    parts = [p.strip() for p in re.split(r"\s*(?:&|,|/|\band\b)\s*", s.strip()) if p.strip()]
+    parts = _parts(cell)
     keys = [nk(p) for p in parts if nk(p) not in PLACEHOLDERS]
-    return any(is_company(p) for p in parts) or len(keys) != len(set(keys))
+    split_suffix = bool(re.search(r"&\s*(?:Jr|Sr|II|III|IV)\b\.?", str(cell or "")))   # "Name & Jr." debris
+    return split_suffix or any(is_company(p) for p in parts) or len(keys) != len(set(keys))
 
 
 def _names(conn, story_ids, want_types):

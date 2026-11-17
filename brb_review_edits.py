@@ -206,6 +206,8 @@ def main():
             applied = 0
             for r in rows:
                 for fk, newv in changes.items():
+                    if isinstance(newv, str):
+                        newv = newv.strip()          # ' Declan Shalvey' -> 'Declan Shalvey'
                     col = COLMAP.get(fk)
                     c = ci(col) if col else None
                     if not c:

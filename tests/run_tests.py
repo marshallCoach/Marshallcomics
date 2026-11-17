@@ -290,6 +290,14 @@ class T(unittest.TestCase):
         a, v = G.decide("Tyler Kirkham", ["Tyler Kirkham", "Sal Buscema"])
         self.assertEqual((a, v), ("UNION", "Tyler Kirkham & Sal Buscema"))
         self.assertEqual(G.decide(v, ["Tyler Kirkham", "Sal Buscema"]), (None, None))
+        # Suffixes: "Romulo Fajardo, Jr." is one person (UNION 4 recurred every run).
+        gcd2 = ["Leinil Francis Yu", "Romulo Fajardo, Jr."]
+        a2, v2 = G.decide("Leinil Francis Yu & Romulo Fajardo & Jr.", gcd2)
+        self.assertEqual((a2, v2), ("CLEAN", "Leinil Francis Yu & Romulo Fajardo Jr."))
+        self.assertEqual(G.decide(v2, gcd2), (None, None), "second run must change nothing")
+        self.assertEqual(G.decide("John Romita Jr. & Klaus Janson", ["John Romita, Jr.", "Klaus Janson"]), (None, None))
+        a3, v3 = G.decide("John Romita Jr. & Klaus Janson & John Romita & Jr.", ["Klaus Janson"])
+        self.assertEqual((a3, v3), ("CLEAN", "John Romita Jr. & Klaus Janson"))
 
     def test_series_map_holds_names_that_dont_fit(self):
         # Nov 17 "Map all green": year-only checks sent Low Slain -> Crime Syndicate.
