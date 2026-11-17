@@ -262,10 +262,12 @@ def main():
                   str(_r.get("issue", "")), str(_r.get("box", "")), _r.get("value") or "")
             if _k in _seen:
                 continue
+            _src = os.path.basename(_p)
+            _r["_auto"] = ("extrapolated-auto" in _src) or ("autolink" in _src)   # machine-made, not user-vouched
             _seen.add(_k); all_recs.append(_r)
     print(f"Exports merged: {len(paths)} ({', '.join(os.path.basename(p) for p in paths)})")
     recs = [r for r in all_recs if r.get("kind") == "fandom"
-            and ("_Vol_" in (r.get("value") or "") or re.search(r",_Issue_|,%20Issue%20", r.get("value") or ""))]
+            and ("_Vol_" in (r.get("value") or "") or re.search(r"_Issue_|%20Issue%20", r.get("value") or ""))]
     img_recs = [r for r in all_recs if r.get("kind") == "image" and (r.get("value") or "").startswith("http")]
     print(f"FANDOM links to open: {len(recs)}   direct image links: {len(img_recs)}")
 
@@ -331,7 +333,9 @@ def main():
             # year-gate and correct a wrong inventory Year to the page's year.
             # Every other same-title row is a run-mate: year-gated as before, so a
             # wrong-era page can never leak across the run.
-            is_seed = (issue == rec_issue and
+            # Only a link YOU pasted is a "seed" (trusted over the sheet's Year). Automatic
+            # links (extrapolated / autolink) stay year-gated like any run-mate.
+            is_seed = (issue == rec_issue and not rec.get("_auto") and
                        (not cB or str(ws.cell(r, cB).value or "").strip() == rec_box))
             # Already complete -> don't re-fetch. This is why the whole run (e.g.
             # all 66 Avengers) re-ran every pass: the fetch was unconditional.

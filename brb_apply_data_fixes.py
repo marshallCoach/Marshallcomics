@@ -134,7 +134,14 @@ def main():
                   str(_rec.get("box", "")), _rec.get("value") or "")
             if _k in _seen:
                 continue
-            _seen.add(_k); recs.append(_rec)
+            _seen.add(_k); _rec["_src"] = os.path.basename(_p); recs.append(_rec)
+    # Precedence when two links disagree about the same book: cover extrapolation (built
+    # from a sibling, no year check) < automatic links (year-verified) < links YOU pasted.
+    # Applied lowest-first so the strongest source has the last word.
+    def _rank(rec):
+        src = rec.get("_src", "")
+        return 0 if "extrapolated-auto" in src else 1 if "autolink" in src else 2
+    recs.sort(key=_rank)
     print(f"FIXES:  {len(paths)} export(s)  ({len(recs)} resolutions)")
 
     import openpyxl
@@ -177,6 +184,8 @@ def main():
         if col and cur != str(new):
             pending[(r, field)] = str(new)
             return True
+        if col:                    # a stronger source agrees with the sheet: cancel a weaker change
+            pending.pop((r, field), None)
         return False
 
     for rec in recs:
@@ -186,12 +195,15 @@ def main():
             continue
         kind, val = rec.get("kind"), str(rec.get("value", ""))
         if kind == "fandom":
-            links.append([rec.get("title"), rec.get("issue"), rec.get("box"), val])
+            links.append([rec.get("title"), rec.get("issue"), rec.get("box"), val, rec.get("_src", "")])
             m = VOL_RE.search(val)
             if not m:
                 stats["fandom_no_vol_in_url"] += 1
                 continue
             V = m.group(1)
+            if "extrapolated-auto" in rec.get("_src", ""):
+                stats["extrapolated_link_volume_ignored"] += 1   # sibling-built link: cover only, never Volume
+                continue
             # A Fandom link is authoritative for the EXACT issue it names, so it
             # overwrites a wrong Volume on that seed row — but is never propagated
             # to sibling issues. A title's issues can span several volumes (legacy
@@ -245,14 +257,15 @@ def main():
 
     print("\nSUMMARY")
     for k2 in ("fandom_runs", "fandom_run_rows", "fandom_single", "volume_set", "year_set", "date_fixed_to_year",
-               "volume_kept_existing", "acknowledged_no_change", "fandom_no_vol_in_url", "row_not_found"):
+               "volume_kept_existing", "acknowledged_no_change", "fandom_no_vol_in_url", "row_not_found",
+               "extrapolated_link_volume_ignored"):
         if stats[k2]:
             print(f"  {k2:22s} {stats[k2]}")
 
     if links:
         csvp = os.path.join(ROOT, "data_fix_links_review.csv")
         with open(csvp, "w", newline="") as f:
-            w = csv.writer(f); w.writerow(["Title", "Issue", "Box", "FandomURL"]); w.writerows(links)
+            w = csv.writer(f); w.writerow(["Title", "Issue", "Box", "FandomURL", "Source"]); w.writerows(links)
         print(f"\nLOGGED {len(links)} Fandom link(s) -> {os.path.basename(csvp)}")
 
     if not args.apply:
