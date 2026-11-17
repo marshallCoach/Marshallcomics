@@ -32,7 +32,7 @@ function canonicalFromFandom(url: string): string {
   if (!m) return "";
   let p = m[1].split(/[?#]/)[0];
   try { p = decodeURIComponent(p); } catch { /* keep raw */ }
-  return p.replace(/_Vol_\d+.*$/i, "").replace(/,_Issue_.*$/i, "").replace(/_/g, " ").trim();
+  return p.replace(/_Vol_\d+.*$/i, "").replace(/,?_Issue_.*$/i, "").replace(/_/g, " ").trim();
 }
 
 const LS_FIXES = "brbDataFixes_v1";     // id -> resolution record

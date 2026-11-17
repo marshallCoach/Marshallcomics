@@ -107,8 +107,8 @@ export function fandomGuess(
   // franchise wikis (Memory Alpha): "<Series>,_Issue_N" — swap the issue on your own link
   for (const [k, u] of Object.entries(links)) {
     if (k.split("|||")[0] !== tl) continue;
-    const m = /^(https?:\/\/[^/]+\/wiki\/.+?),_Issue_[^_?#]+(_\(\d{4}\))?/.exec(u || "");   // keeps "_(2026)"
-    if (m) return { url: `${m[1]},_Issue_${iss}${m[2] || ""}`, basis: "your link" };
+    const m = /^(https?:\/\/[^/]+\/wiki\/.+?)(,?)_Issue_[^_?#]+(_\(\d{4}\))?$/.exec((u || "").split(/[?#]/)[0]);   // keeps "," and "_(2026)"
+    if (m) return { url: `${m[1]}${m[2]}_Issue_${iss}${m[3] || ""}`, basis: "your link" };
   }
   const pickV = mine.find(x => x.vol === vol) || (new Set(mine.map(x => x.vol)).size === 1 ? mine[0] : undefined);
   if (pickV) return { url: `${pickV.base}/wiki/${pickV.stem}_Vol_${pickV.vol}_${iss}`, basis: "your link" };
@@ -118,6 +118,8 @@ export function fandomGuess(
     if (m) return { url: `${m[1]}/wiki/${m[2]}_Vol_${m[3]}_${iss}`, basis: "same arc" };
   }
   if (/star trek/i.test(c.Title)) return { url: memoryAlphaUrl(c.Title, iss), basis: "guess" };
+  if (/power rangers/i.test(c.Title) && /boom/i.test(c.Publisher || ""))      // Power Rangers Wiki: "<Series> (Boom! Studios) Issue N"
+    return { url: `https://powerrangers.fandom.com/wiki/${encodeURIComponent(`${c.Title.trim()} (Boom! Studios) Issue ${iss}`.replace(/ /g, "_")).replace(/%21/g, "!").replace(/%28/g, "(").replace(/%29/g, ")")}`, basis: "guess" };
   const base = wikiFor(c.Publisher);
   if (!base) return null;
   let t = (c.Title || "").trim();

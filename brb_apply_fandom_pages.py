@@ -107,10 +107,13 @@ def parse_url(u):
     vm = re.search(r"^(.*?)_Vol_(\d+)(?:_(.+))?$", path)  # trailing issue optional
     if not vm:
         # Memory Alpha (and other franchise wikis): "<Series>,_Issue_N" -> vol marker ISSUE
-        im = re.search(r"^(.*?),_Issue_([^_/?#]+)(?:_\((\d{4})\))?$", path)   # "..._Issue_1_(2026)"
+        # Franchise wikis: "<Series>,_Issue_N" (Memory Alpha), "<Series>_Issue_N" (Power
+        # Rangers), optionally "..._(2026)". The marker remembers comma + year so run-mates
+        # (other issues of the same series) are built exactly the same way.
+        im = re.search(r"^(.*?)(,?)_Issue_([^_/?#]+)(?:_\((\d{4})\))?$", path)
         if im:
-            mark = f"ISSUE:{im.group(3)}" if im.group(3) else "ISSUE"     # year = Memory Alpha disambiguator
-            return base, im.group(1).replace("_", " ").strip(), mark, ni(im.group(2))
+            mark = f"ISSUE:{'c' if im.group(2) else ''}:{im.group(4) or ''}"
+            return base, im.group(1).replace("_", " ").strip(), mark, ni(im.group(3))
         return None
     return base, vm.group(1).replace("_", " ").strip(), vm.group(2), (ni(vm.group(3)) if vm.group(3) else "")
 
@@ -121,7 +124,8 @@ def fetch_page(base, title, vol, issue):
     if not str(issue).strip():   # never request "Title Vol N " (blank issue) — it
         return None              # resolves to a junk page and stalls the fetch
     if str(vol).startswith("ISSUE"):
-        page = f"{title}, Issue {issue}" + (f" ({vol.split(':', 1)[1]})" if ":" in str(vol) else "")
+        _, comma, year = (str(vol) + "::").split(":")[:3]
+        page = f"{title}{',' if comma else ''} Issue {issue}" + (f" ({year})" if year else "")
     else:
         page = f"{title} Vol {vol} {issue}"
     u = base + "?" + urllib.parse.urlencode({
