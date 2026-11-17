@@ -74,6 +74,14 @@ def nk(v):
     return re.sub(r"[^a-z0-9]+", " ", str(v or "").lower()).strip()
 
 
+# Companies are not creators ("Top Cow Productions, Inc." is a GCD studio credit).
+COMPANY = re.compile(r"\b(inc|llc|ltd|co|corp|productions?|studios?|entertainment)\b")
+
+
+def is_company(name):
+    return bool(COMPANY.search(nk(name)))
+
+
 PLACEHOLDERS = {"various", "unknown", "uncredited", "verify", "tbc", "tbd",
                 "n a", "none", ""}
 YEAR_TOL = 1  # a matched GCD issue whose date is >1yr off the row Year is a
@@ -95,12 +103,22 @@ def split_names(cell):
     being flagged CONFLICT just because it carried a '(layouts)' tag."""
     s = re.sub(r"\([^)]*\)", " ", str(cell or ""))          # strip (role) notes
     parts = re.split(r"\s*(?:&|,|/|\band\b)\s*", s.strip())
-    out = []
+    out, seen = [], set()
     for p in parts:
         p = p.strip()
-        if p and nk(p) not in PLACEHOLDERS:
-            out.append(p)
+        if p and nk(p) not in PLACEHOLDERS and not is_company(p) and nk(p) not in seen:
+            seen.add(nk(p)); out.append(p)
     return out
+
+
+def needs_clean(cell):
+    """True when a cell carries a company credit or the same name twice - the
+    debris the old UNION left behind (it re-appended 'Top Cow Productions, Inc.'
+    every run because the comma split never matched GCD's spelling)."""
+    s = re.sub(r"\([^)]*\)", " ", str(cell or ""))
+    parts = [p.strip() for p in re.split(r"\s*(?:&|,|/|\band\b)\s*", s.strip()) if p.strip()]
+    keys = [nk(p) for p in parts if nk(p) not in PLACEHOLDERS]
+    return any(is_company(p) for p in parts) or len(keys) != len(set(keys))
 
 
 def _names(conn, story_ids, want_types):
@@ -118,7 +136,7 @@ def _names(conn, story_ids, want_types):
         if ctype not in want_types:
             continue
         nm = _clean_name(name)
-        if nm and nk(nm) not in seen:
+        if nm and nk(nm) not in seen and not is_company(nm):
             seen.add(nk(nm)); out.append(nm)
     return out
 
@@ -155,16 +173,18 @@ def credit_sets(conn, series_id, issue, row_year=None):
 
 def decide(existing, gcd_list):
     """Return (action, new_value) or (None, None) for no change.
-    action in {FILL, UNION, CONFLICT}. Never loses an existing name."""
-    if not gcd_list:
-        return None, None                       # GCD silent -> leave alone
+    action in {FILL, UNION, CONFLICT, CLEAN}. Never loses an existing person."""
+    gcd_list = [g for g in (gcd_list or []) if not is_company(g)]
     ex_list = split_names(existing)
+    dirty = needs_clean(existing)
+    if not gcd_list:
+        return ("CLEAN", " & ".join(ex_list)) if dirty and ex_list else (None, None)
     ex_set = {nk(x) for x in ex_list}
     gcd_set = {nk(x) for x in gcd_list}
     if not ex_set:
         return "FILL", " & ".join(gcd_list)
-    if gcd_set <= ex_set:
-        return None, None                       # existing has everything GCD has
+    if gcd_set <= ex_set:                       # existing has everything GCD has
+        return ("CLEAN", " & ".join(ex_list)) if dirty else (None, None)
     if ex_set & gcd_set:                        # overlap: add GCD's extras, keep order
         add = [g for g in gcd_list if nk(g) not in ex_set]
         return "UNION", " & ".join(ex_list + add)
@@ -208,7 +228,7 @@ def main():
             series_cache[key] = find_series(conn, title, year, pub)
         return series_cache[key]
 
-    counts = {col: {"FILL": 0, "UNION": 0, "CONFLICT": 0} for col in ROLES}
+    counts = {col: {"FILL": 0, "UNION": 0, "CONFLICT": 0, "CLEAN": 0} for col in ROLES}
     rows_touched = no_series = no_issue = gated = 0
     changes = []
 
@@ -259,10 +279,10 @@ def main():
     print(f"\n{'='*66}")
     print("  GCD CREDITS — full-set fill + safe auto-correct")
     print(f"{'='*66}")
-    print(f"  {'Field':<14} {'FILL':>6} {'UNION':>7} {'CONFLICT':>9}")
+    print(f"  {'Field':<14} {'FILL':>6} {'UNION':>7} {'CONFLICT':>9} {'CLEAN':>6}")
     for col in ROLES:
         c = counts[col]
-        print(f"  {col:<14} {c['FILL']:>6} {c['UNION']:>7} {c['CONFLICT']:>9}")
+        print(f"  {col:<14} {c['FILL']:>6} {c['UNION']:>7} {c['CONFLICT']:>9} {c['CLEAN']:>6}")
     tot_conf = sum(counts[c]["CONFLICT"] for c in ROLES)
     print(f"  {'-'*44}")
     print(f"  Rows touched:            {rows_touched:,}")
@@ -278,6 +298,9 @@ def main():
     if not any(counts[c][a] for c in ROLES for a in counts[c]):
         print("\n  Nothing to change — no xlsx written.")
         return
+    from brb_guard import check
+    check("gcd_credits", {"cells cleaned (company/duplicate names)": sum(counts[c]["CLEAN"] for c in ROLES),
+                          "names added (UNION)": sum(counts[c]["UNION"] for c in ROLES)})
     out = os.path.join(ASSETS, f"comics_inventory_{datetime.datetime.now():%d%m_%H%M}.xlsx")
     wb.save(out)
     print(f"\n  WROTE: {os.path.basename(out)}")

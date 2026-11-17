@@ -138,7 +138,8 @@ const DUP_STATS = (() => {
   return { groups, sameBox, boughtTwice, totalCopies };
 })();
 
-function buildTopCreators(field: "Writer" | "Artist"): [string, number][] {
+type CreatorField = "Writer" | "Artist" | "Cover_Artist";
+function buildTopCreators(field: CreatorField): [string, number][] {
   const m: Record<string, number> = {};
   for (const c of comics) {
     for (const name of splitCreators(c[field] as string | undefined)) {
@@ -149,6 +150,7 @@ function buildTopCreators(field: "Writer" | "Artist"): [string, number][] {
 }
 const TOP_WRITERS_BNR = buildTopCreators("Writer");
 const TOP_ARTISTS_BNR = buildTopCreators("Artist");
+const TOP_COVERS_BNR  = buildTopCreators("Cover_Artist");
 function parseNMVal(raw: string): number {
   // Take the first number found — gives lower bound for ranges like "$15–25"
   const m = (raw || "").match(/\$?(\d+(?:\.\d+)?)/);
@@ -164,7 +166,7 @@ const TOTAL_VF_VALUE = Math.round(
   }, 0)
 );
 // "Previous" top creators = collection before the May 2026 renumbering (boxes 1–61)
-function buildTopCreatorsPrev(field: "Writer" | "Artist"): [string, number][] {
+function buildTopCreatorsPrev(field: CreatorField): [string, number][] {
   const m: Record<string, number> = {};
   for (const c of comics) {
     if (Number(c.Box) > 61) continue;
@@ -176,6 +178,7 @@ function buildTopCreatorsPrev(field: "Writer" | "Artist"): [string, number][] {
 }
 const TOP_WRITERS_PREV = buildTopCreatorsPrev("Writer");
 const TOP_ARTISTS_PREV = buildTopCreatorsPrev("Artist");
+const TOP_COVERS_PREV  = buildTopCreatorsPrev("Cover_Artist");
 
 function normPubGroup(p: string): string {
   const u = (p || "").toUpperCase();
@@ -352,7 +355,7 @@ const FLAGSHIP = (() => {
         : "Press, then submit for a Universal grade.";
       return { book, note, color: pubColor(c.Publisher), box: String(c.Box || "—"),
         publisher: c.Publisher || "—", year: String(c.Year || "—"),
-        valueNM: c.Value_NM || "—", condition: cond || "Raw", cgcPath, action, terrificon: false };
+        valueNM: c.Value_NM || "—", condition: cond || "Raw", cgcPath, action, terrificon: false, comic: c };
     });
 })();
 
@@ -929,15 +932,16 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
         <p style={{ fontSize:"0.875rem", color:"var(--muted2)", marginBottom:12, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>
           Ranked by book count across all {totalComics.toLocaleString()} comics. Arrows show rank change vs. previous snapshot (boxes 1–84).
         </p>
-        <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:12 }}>
-          {(["Writer","Artist"] as const).map(field => {
-            const current = field === "Writer" ? TOP_WRITERS_BNR : TOP_ARTISTS_BNR;
-            const prev    = field === "Writer" ? TOP_WRITERS_PREV : TOP_ARTISTS_PREV;
+        <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit, minmax(220px, 1fr))", gap:12 }}>
+          {(["Writer","Artist","Cover_Artist"] as const).map(field => {
+            const current = field === "Writer" ? TOP_WRITERS_BNR : field === "Artist" ? TOP_ARTISTS_BNR : TOP_COVERS_BNR;
+            const prev    = field === "Writer" ? TOP_WRITERS_PREV : field === "Artist" ? TOP_ARTISTS_PREV : TOP_COVERS_PREV;
+            const fColor  = field === "Writer" ? "var(--red)" : field === "Artist" ? "#1d6fa4" : "#7c3aed";
             return (
               <div key={field} style={{ background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:8, padding:"14px 16px" }}>
                 <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"3px",
-                  color: field === "Writer" ? "var(--red)" : "#1d6fa4", marginBottom:12 }}>
-                  TOP {field.toUpperCase()}S
+                  color: fColor, marginBottom:12 }}>
+                  TOP {field === "Cover_Artist" ? "COVER ARTIST" : field.toUpperCase()}S
                 </div>
                 {current.map(([name, count], i) => {
                   const prevIdx  = prev.findIndex(([n]) => n === name);
@@ -961,12 +965,12 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
                       <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:"var(--muted)",
                         minWidth:20, textAlign:"right" }}>#{i+1}</span>
                       <div style={{ width:3, height:20, borderRadius:2, flexShrink:0,
-                        background: field === "Writer" ? "var(--red)" : "#1d6fa4", opacity: 1 - i * 0.15 }} />
+                        background: fColor, opacity: 1 - i * 0.15 }} />
                       <span style={{ flex:1, fontSize:"0.875rem", color:"var(--text2)",
                         overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap",
                         fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>{name}</span>
                       <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem",
-                        color: field === "Writer" ? "var(--red)" : "#1d6fa4", minWidth:30, textAlign:"right" }}>{count}</span>
+                        color: fColor, minWidth:30, textAlign:"right" }}>{count}</span>
                       {/* Delta arrow with tooltip */}
                       <div className="delta-wrap" style={{ position:"relative", flexShrink:0 }}>
                         <span className="delta-arrow" style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
@@ -1053,12 +1057,25 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
                   boxShadow: isOpen ? `0 4px 16px ${a.color}20` : "none",
                 }}
               >
+                <div style={{ display:"flex", gap:12, alignItems:"flex-start" }}>
+                <div onClick={e => e.stopPropagation()} style={{ flexShrink:0 }}>
+                  <CoverImage
+                    comic={a.comic}
+                    width={isOpen ? 110 : 72}
+                    height={isOpen ? 165 : 108}
+                    onClick={large => setCarouselModal({ comic: a.comic, large })}
+                    style={{ borderRadius:4, boxShadow:"0 2px 8px rgba(0,0,0,0.18)" }}
+                  />
+                </div>
+                <div style={{ flex:1, minWidth:0 }}>
                 <div style={{ display:"flex", alignItems:"center", gap:8, flexWrap:"wrap" }}>
                   {a.terrificon && <span className="tf-badge">TERRIFICON</span>}
                   <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:a.color, flex:1 }}>{a.book}</div>
                   <div style={{ fontSize:"0.875rem", color:"var(--muted)", flexShrink:0 }}>Box {a.box} {isOpen?"▲":"▼"}</div>
                 </div>
                 <div style={{ fontSize:"0.875rem", color:"var(--muted2)", lineHeight:1.5, marginTop:4 }}>{a.note}</div>
+                </div>
+                </div>
                 {isOpen && (
                   <div style={{ marginTop:14, paddingTop:14, borderTop:`1px solid ${a.color}30`, display:"flex", flexWrap:"wrap", gap:"10px 28px" }}>
                     {[

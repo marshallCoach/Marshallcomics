@@ -17,6 +17,7 @@ LIMITS = {
     "title_aliases":  {"rows renamed": 150},
     "year_from_pubdate": {"Years changed": 60},
     "review_edits":   {"rows deleted": 10, "fields changed": 300},
+    "gcd_credits":    {"cells cleaned (company/duplicate names)": 60, "names added (UNION)": 120},
 }
 
 

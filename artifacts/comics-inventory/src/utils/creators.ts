@@ -12,6 +12,8 @@ const SPLIT = /\s*(?:,|;|\/|&|\+|\band\b|\bwith\b)\s*/i;
 const SUFFIX = /^(?:jr|sr|ii|iii|iv)\.?$/i;
 const JUNK = /^(?:various(?:\s+artists?|\s+writers?)?|unknown|nan|n\/a|tba|tbd|inc\.?|co\.?|llc|studios?)$/i;
 
+const COMPANY = /\b(?:inc|llc|ltd|corp|productions?|studios?|entertainment)\b\.?/i;
+
 export function isVarious(cell: string | undefined | null): boolean {
   const v = (cell ?? "").trim().toLowerCase();
   return v === "various" || v === "various artists" || v === "various writers";
@@ -29,7 +31,15 @@ export function splitCreators(cell: string | undefined | null): string[] {
     if (SUFFIX.test(p) && merged.length) merged[merged.length - 1] += `, ${p}`;
     else merged.push(p);
   }
-  return merged.filter(p => !JUNK.test(p));
+  // Companies are not people ("Top Cow Productions, Inc." is a studio credit), and a
+  // name repeated inside one cell is still one credit for that book.
+  const seen = new Set<string>();
+  return merged.filter(p => {
+    if (JUNK.test(p) || COMPANY.test(p)) return false;
+    const k = p.toLowerCase();
+    if (seen.has(k)) return false;
+    seen.add(k); return true;
+  });
 }
 
 // Tally individual creators across a list of rows. Returns name -> book count.

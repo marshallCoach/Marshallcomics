@@ -277,6 +277,20 @@ class T(unittest.TestCase):
         r2 = sb.run("brb_year_from_pubdate.py", "--apply")
         self.assertEqual(str(sb.newest()[0]["Year"]), "2016", r2.stdout + r2.stderr)
 
+    def test_gcd_union_is_idempotent_and_drops_companies(self):
+        # Nov 17: every run re-appended "Top Cow Productions, Inc." (comma split never
+        # matched GCD's spelling) -> 66 copies in one cell, #1 "artist" on the homepage.
+        sys.path.insert(0, self.sb.dir)
+        import importlib, brb_credits_gcd as G
+        importlib.reload(G)
+        gcd = ["Tyler Kirkham", "Top Cow Productions, Inc."]
+        bad = "Tyler Kirkham & Top Cow Productions & Inc. & Top Cow Productions & Inc. & Top Cow Productions, Inc."
+        self.assertEqual(G.decide(bad, gcd), ("CLEAN", "Tyler Kirkham"))
+        self.assertEqual(G.decide("Tyler Kirkham", gcd), (None, None), "second run must change nothing")
+        a, v = G.decide("Tyler Kirkham", ["Tyler Kirkham", "Sal Buscema"])
+        self.assertEqual((a, v), ("UNION", "Tyler Kirkham & Sal Buscema"))
+        self.assertEqual(G.decide(v, ["Tyler Kirkham", "Sal Buscema"]), (None, None))
+
     def test_many_links_one_title_requests_each_page_once(self):
         sb = self.sb
         rows = [["Moon Knight", i, 2000 + i, 5, str(i), None, None, None, None] for i in range(1, 21)]
