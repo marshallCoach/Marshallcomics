@@ -47,7 +47,11 @@ class Sandbox:
         time.sleep(0.05)
 
     def run(self, script, *args, env=None):
-        e = dict(os.environ, HOME=self.p("home"))
+        import site
+        # Fake HOME keeps tests out of your real ~/Downloads, but on a Mac pip installs
+        # openpyxl under ~/Library/Python/... (the "user base", derived from HOME) - so
+        # point the child Python at the REAL user base or it can't import openpyxl.
+        e = dict(os.environ, HOME=self.p("home"), PYTHONUSERBASE=site.getuserbase())
         e.pop("BRB_FORCE", None)
         e.update(env or {})
         return subprocess.run([sys.executable, script, *args], cwd=self.dir, env=e,
