@@ -47,6 +47,7 @@ const partTxt = (a: ArcSide) => a.part ? ` · part ${a.part}${a.length ? ` of ${
 
 type SMCand = { base: string; url: string; verified: number; of: number; years: number[]; sim: number };
 type SeriesMatch = { key: string; wiki: string; title: string; vol: string; count: number; years: number[]; issues: string[]; reason: string; best: SMCand | null; conf: "high" | "medium" | "none"; cands: SMCand[] };
+type SeriesHeld = { key: string; title: string; vol: string; fandom: string; wiki: string; fit: number };
 const SM_COLOR = { high: "#16a34a", medium: "#d97706", none: "#dc2626" } as const;
 
 type ProblemId = "series-match" | "arc-conflict" | "no-date" | "date-conflict" | "no-volume" | "no-year" | "likely-variant" | "not-in-gcd" | "no-cover";
@@ -151,6 +152,7 @@ export default function DataFix() {
   const [arcConflicts, setArcConflicts] = useState<ArcConflict[]>([]);
   const [seriesMatch, setSeriesMatch] = useState<SeriesMatch[]>([]);
   const [seriesMapped, setSeriesMapped] = useState<Record<string, unknown>>({});
+  const [seriesHeld, setSeriesHeld] = useState<SeriesHeld[]>([]);
   const [smOpen, setSmOpen] = useState(false);
   const [smPick, setSmPick] = useState<Record<string, string>>({});
   const [acOpen, setAcOpen] = useState(false);
@@ -178,6 +180,8 @@ export default function DataFix() {
       .then((a: string[]) => setVariantDone(new Set(Array.isArray(a) ? a : []))).catch(() => {});
     fetch(`${BASE}/series_match.json`).then(r => r.ok ? r.json() : [])
       .then((a: SeriesMatch[]) => setSeriesMatch(Array.isArray(a) ? a : [])).catch(() => {});
+    fetch(`${BASE}/series_held.json`).then(r => r.ok ? r.json() : [])
+      .then((a: SeriesHeld[]) => setSeriesHeld(Array.isArray(a) ? a : [])).catch(() => {});
     fetch(`${BASE}/series_map.json`).then(r => r.ok ? r.json() : {})
       .then((o: Record<string, unknown>) => setSeriesMapped(o && typeof o === "object" ? o : {})).catch(() => {});
     fetch(`${BASE}/arc_conflicts.json`).then(r => r.ok ? r.json() : [])
@@ -422,6 +426,12 @@ export default function DataFix() {
     return true;
   }), [arcConflicts, comicIndex, fixes, resolvedFlags]);
 
+  // Held: a bulk "map all green" pick whose Fandom name doesn't fit your title - needs a
+  // one-by-one yes/no. A fresh decision other than a bulk "map:" clears it.
+  const openHeld = useMemo(() => seriesHeld.filter(h => {
+    const f = fixes.get(`${h.key}|||series`) as unknown as { value?: string } | undefined;
+    const v = String(f?.value || ""); return !v || v.startsWith("map:");
+  }), [seriesHeld, fixes]);
   const openSeries = useMemo(() => seriesMatch.filter(m => !fixes.has(`${m.key}|||series`) && !(m.key in seriesMapped)), [seriesMatch, fixes, seriesMapped]);
   const decideSeries = useCallback((list: SeriesMatch[], valueFor: (m: SeriesMatch) => string | null) => {
     const at = new Date().toISOString();
@@ -635,11 +645,11 @@ export default function DataFix() {
       {/* Series match — series our arc fetch couldn't find on Fandom. A candidate page is
           proposed (verified = your issue exists there with the right year). Map = lookup only,
           your title stays; Map + rename only for genuine title errors (covers follow). */}
-      {openSeries.length > 0 && (
+      {(openSeries.length > 0 || openHeld.length > 0) && (
         <section className="df-group" style={{ marginBottom: 14 }}>
           <button className="df-group-hd" onClick={() => setSmOpen(o => !o)} style={{ borderLeft: "4px solid #0891b2" }}>
             <span className="df-group-name"><span className="df-chev">{smOpen ? "▾" : "▸"}</span> 🧭 Series match — line your titles up with Fandom</span>
-            <span className="df-chip-n">{openSeries.length}</span>
+            <span className="df-chip-n">{openSeries.length + openHeld.length}</span>
           </button>
           {smOpen && (
             <div style={{ padding: "10px 14px", display: "flex", flexDirection: "column", gap: 8 }}>
@@ -647,6 +657,30 @@ export default function DataFix() {
                 <b>Map</b> = lookup only, your title stays (the default). <b>Map + rename</b> only when your title is actually wrong — covers follow the rename.
                 <b style={{ color: SM_COLOR.high }}> ●</b> both test issues found with the right year · <b style={{ color: SM_COLOR.medium }}>●</b> one found · <b style={{ color: SM_COLOR.none }}>●</b> nothing verified — paste the right page.
               </div>
+              {openHeld.length > 0 && (
+                <div style={{ border: "1px solid #d97706", borderRadius: 6, padding: "8px 10px", display: "flex", flexDirection: "column", gap: 6 }}>
+                  <div style={{ fontSize: "0.82rem" }}><b style={{ color: "#d97706" }}>⚠ {openHeld.length} held — the Fandom name doesn't match your title.</b> A year match alone isn't proof (e.g. "Low Slain" → Crime Syndicate). Confirm each one, paste the right page, or mark it not on Fandom.</div>
+                  {openHeld.map(h => {
+                    const m = { key: h.key, title: h.title, vol: h.vol, wiki: h.wiki } as unknown as SeriesMatch;
+                    const draftId = `${h.key}|||series`;
+                    const url = `https://${h.wiki === "DC" ? "dc" : "marvel"}.fandom.com/wiki/${encodeURIComponent(h.fandom.replace(/ /g, "_"))}`;
+                    return (
+                      <div key={h.key} style={{ borderTop: "1px solid var(--border,#2c2c38)", paddingTop: 6, fontSize: "0.82rem", display: "flex", flexDirection: "column", gap: 4 }}>
+                        <div><b>{h.title}</b> <span style={{ color: "var(--muted2,#aaa)" }}>v{h.vol}</span> → {h.fandom} <span style={{ color: "var(--muted2,#aaa)" }}>· fit {Math.round(h.fit * 100)}%</span></div>
+                        <div style={{ display: "flex", gap: 6, flexWrap: "wrap", alignItems: "center" }}>
+                          <a className="df-find" href={url} target="_blank" rel="noopener noreferrer">open ↗</a>
+                          <button className="df-link-save" onClick={() => decideSeries([m], () => `map!:${h.fandom}`)}>Yes, it's this</button>
+                          <input className="df-link-in" style={{ flex: 1, minWidth: 160 }} placeholder="…or paste the right Fandom page"
+                            value={linkDraft[draftId] || ""} onChange={e => setLinkDraft(d => ({ ...d, [draftId]: e.target.value }))}
+                            onKeyDown={e => { if (e.key === "Enter" && (linkDraft[draftId] || "").trim()) decideSeries([m], () => `link:${linkDraft[draftId].trim()}`); }} />
+                          <button className="df-link-save" disabled={!(linkDraft[draftId] || "").trim()} onClick={() => decideSeries([m], () => `link:${(linkDraft[draftId] || "").trim()}`)}>Save link</button>
+                          <button className="df-link-save" style={{ background: "transparent", color: "var(--muted,#888)" }} onClick={() => decideSeries([m], () => "skip-series")}>Not on Fandom</button>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
               {openSeries.some(m => m.conf === "high") && (
                 <div><button className="df-link-save" onClick={() => {
                   const hi = openSeries.filter(m => m.conf === "high");
@@ -675,7 +709,7 @@ export default function DataFix() {
                     )}
                     <div style={{ display: "flex", gap: 6, flexWrap: "wrap", alignItems: "center" }}>
                       {cand && <a className="df-find" href={cand.url} target="_blank" rel="noopener noreferrer">open ↗</a>}
-                      <button className="df-link-save" disabled={!chosen} onClick={() => decideSeries([m], () => `map:${chosen}`)}>Map</button>
+                      <button className="df-link-save" disabled={!chosen} onClick={() => decideSeries([m], () => `map!:${chosen}`)}>Map</button>
                       <button className="df-link-save" style={{ background: "#b45309" }} disabled={!chosen}
                         onClick={() => { const t = chosen.replace(/\s+Vol \d+$/, ""); if (confirm(`Rename "${m.title}" to "${t}" everywhere? (covers follow)`)) decideSeries([m], () => `maprename:${chosen}`); }}>Map + rename</button>
                       <input className="df-link-in" style={{ flex: 1, minWidth: 160 }} placeholder="…or paste the right Fandom page"

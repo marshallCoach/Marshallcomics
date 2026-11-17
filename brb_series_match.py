@@ -92,7 +92,10 @@ def main():
                            "verified": ver, "of": len(probes), "years": sorted(set(yrs)), "sim": round(sim, 2), "volmatch": volm})
         scored.sort(key=lambda x: (-x["verified"], -x["sim"], -x["volmatch"]))
         best = scored[0] if scored and scored[0]["verified"] else None
-        conf = ("high" if best and best["verified"] == best["of"] else "medium" if best else "none")
+        from brb_apply_series_map import title_fit, FIT_MIN
+        fits = bool(best) and title_fit(title, best["base"]) >= FIT_MIN
+        # green = every probed issue's year matched AND the name fits your title
+        conf = ("high" if best and best["verified"] == best["of"] and fits else "medium" if best else "none")
         ys = sorted({int(float(r["year"])) for r in rows if r["year"]})
         results.append({"key": key, "wiki": wiki, "title": title, "vol": vol, "count": len(rows),
                         "years": [ys[0], ys[-1]] if ys else [], "issues": sorted({ni(r["issue"]) for r in rows},

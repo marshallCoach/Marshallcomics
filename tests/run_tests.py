@@ -291,6 +291,31 @@ class T(unittest.TestCase):
         self.assertEqual((a, v), ("UNION", "Tyler Kirkham & Sal Buscema"))
         self.assertEqual(G.decide(v, ["Tyler Kirkham", "Sal Buscema"]), (None, None))
 
+    def test_series_map_holds_names_that_dont_fit(self):
+        # Nov 17 "Map all green": year-only checks sent Low Slain -> Crime Syndicate.
+        sb = self.sb
+        sb.json("series_map.json", {
+            "Low Slain|||1": {"fandom": "Crime Syndicate Vol 1", "wiki": "DC"},
+            "Futures End: Aquaman|||1": {"fandom": "Aquaman: Futures End Vol 1", "wiki": "DC"},
+            "WildC.A.T.s|||1": {"fandom": "Wildcats Vol 1", "wiki": "DC"},
+            "Tarot Mine|||1": {"fandom": "Tarot Vol 1", "wiki": "Marvel", "confirmed": True}})
+        rec = lambda t, v: {"title": t, "vol": "1", "problem": "series-match", "kind": "solution", "value": v, "wiki": "DC"}
+        sb.json("home/Downloads/data-fixes-2026-11-18.json",
+                [rec("What If? Magic", "map:Strange Academy: Finals Vol 1"),
+                 rec("Ultimate X4", "map!:X-Men/Fantastic Four Vol 1")])
+        r = sb.run("brb_apply_series_map.py", "--apply")
+        m = json.load(open(sb.p("series_map.json")))
+        self.assertNotIn("Low Slain|||1", m, r.stdout)
+        self.assertNotIn("What If? Magic|||1", m, "bulk map with a non-fitting name is held")
+        self.assertIn("Futures End: Aquaman|||1", m, "same words, different order still fits")
+        self.assertIn("WildC.A.T.s|||1", m)
+        self.assertIn("Tarot Mine|||1", m, "a mapping you confirmed is never second-guessed")
+        self.assertIn("Ultimate X4|||1", m, "map! (picked one-by-one) is trusted")
+        held = {h["key"] for h in json.load(open(sb.p("artifacts/comics-inventory/public/series_held.json")))}
+        self.assertEqual(held, {"Low Slain|||1", "What If? Magic|||1"})
+        r2 = sb.run("brb_apply_series_map.py", "--apply")
+        self.assertEqual(json.load(open(sb.p("series_map.json"))), m, "second run changes nothing")
+
     def test_many_links_one_title_requests_each_page_once(self):
         sb = self.sb
         rows = [["Moon Knight", i, 2000 + i, 5, str(i), None, None, None, None] for i in range(1, 21)]
