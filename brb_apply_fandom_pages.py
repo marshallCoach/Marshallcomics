@@ -427,6 +427,9 @@ def main():
     if not args.apply:
         print("DRY RUN — nothing written. Re-run with --apply.")
         return
+    from brb_guard import check
+    check("fandom_pages", {"Years overwritten": len(years_fixed),
+                           "credits replaced (CONFLICT)": sum(1 for c in cred_changes if c[3] == "CONFLICT")})
     out = os.path.join(ROOT, f"attached_assets/comics_inventory_{datetime.datetime.now():%d%m_%H%M}.xlsx")
     wb.save(out)
     json.dump(cov, open(COVERS, "w"))

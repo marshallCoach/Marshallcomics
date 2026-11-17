@@ -133,6 +133,8 @@ def main():
     if not args.apply:
         print("\nDRY RUN — nothing written. Re-run with --apply to clear them.")
         return
+    from brb_guard import check
+    check("flagged_covers", {"covers cleared": len(removed)})
     json.dump(cov, open(COVERS, "w"))
     if os.path.exists(PUBLIC):
         json.dump(cov, open(PUBLIC, "w"))

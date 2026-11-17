@@ -229,6 +229,9 @@ def main():
         if args.apply and file_applied:
             archive(path)
 
+    if args.apply:
+        from brb_guard import check
+        check("review_edits", {"rows deleted": len(set(del_rows)), "fields changed": n_edit})
     # delete rows last, bottom-up so indices stay valid
     if args.apply and del_rows:
         for r in sorted(set(del_rows), reverse=True):

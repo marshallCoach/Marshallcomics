@@ -106,6 +106,8 @@ def main():
     if not changes:
         print("\nNothing to fix.")
         return
+    from brb_guard import check
+    check("year_from_pubdate", {"Years changed": len(changes)})
     ts = datetime.datetime.now().strftime("%d%m_%H%M")
     out = os.path.join(ROOT, f"attached_assets/comics_inventory_{ts}.xlsx")
     wb.save(out)

@@ -106,3 +106,19 @@ to a single box even if told "all in NNN"; confirm before moving.
 - Step 5 done: 1,313 comics have eBay_Avg/Low/High/Count in data3.ts
 - Step 6 next: surface eBay prices in app UI (comic drawer / BoxKeys)
 - Step 7 next: deploy
+
+## Engineering rules (standing — adopted Nov 2026 after the flagged-covers wipe)
+1. **Safety limits** — every step that writes the xlsx/covers calls `brb_guard.check()`
+   before saving; over the limit = exit 3, nothing saved. New write steps MUST add a limit.
+   Override only after reviewing: `BRB_FORCE=1`.
+2. **Report-only first** — a step newly wired into `brb_all` ships printing what it WOULD
+   do; it only writes after Robert has seen one real run's numbers.
+3. **Idempotent** — test every write step twice; the second run must change 0 cells.
+   Flip-flops (two sources fighting) are bugs: define precedence (user link > autolink >
+   extrapolated) and stick to it.
+4. **Check reality before wiring in** — before a step consumes files (exports, caches,
+   Downloads), ask for a one-line look at the real inputs (`ls … | wc -l`), not just mocks.
+5. **Verify every edit** — scripted edits assert the old text exists exactly once; confirm
+   the change landed (grep / compile) before pushing. Never claim an edit that wasn't checked.
+6. **Regression tests** — `python3 tests/run_tests.py` before every push touching brb_*.py.
+   Add a test for every bug fixed.

@@ -252,6 +252,9 @@ def main():
             print(f"  … and {len(pending) - 50} more"); break
 
     if args.apply:
+        from brb_guard import check
+        check("data_fixes", {"Volumes changed": sum(1 for (_, f) in pending if f == "Volume"),
+                             "Years changed": sum(1 for (_, f) in pending if f == "Year")})
         for (r, field), new in pending.items():
             ws.cell(r, COLS[field], new)
 

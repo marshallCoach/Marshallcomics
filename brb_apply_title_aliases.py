@@ -97,6 +97,8 @@ def main():
         print("DRY RUN — nothing written. Re-run with --apply.")
         return
     if changed:
+        from brb_guard import check
+        check("title_aliases", {"rows renamed": changed})
         out = os.path.join(ROOT, f"attached_assets/comics_inventory_{datetime.datetime.now():%d%m_%H%M}.xlsx")
         wb.save(out)
         print(f"WROTE: {os.path.basename(out)}")
