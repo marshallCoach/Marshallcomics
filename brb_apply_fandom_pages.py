@@ -335,6 +335,22 @@ def main():
 
     cov = json.load(open(COVERS))
     vol_memo = {}      # (title, era) -> wiki volume that matched, so each era probes once
+    # One link pasted onto several copies of the same issue from DIFFERENT eras (e.g. six
+    # Moon Knight #2s, 2006-2022, all given the 2026 page) can't be the truth for all of
+    # them. Such links lose "seed" status: they stay year-gated and never rewrite a Year.
+    _url_years = defaultdict(set)
+    for rec in recs:
+        if rec.get("_auto"):
+            continue
+        ri, rb = ni(rec.get("issue")), str(rec.get("box") or "").strip()
+        for r in by_title.get(str(rec.get("title") or "").lower(), []):
+            if ni(ws.cell(r, cI).value) == ri and (not cB or str(ws.cell(r, cB).value or "").strip() == rb):
+                y = yr(ws.cell(r, cY).value)
+                if y:
+                    _url_years[rec.get("value")].add(y)
+    shared_links = {u for u, ys in _url_years.items() if max(ys) - min(ys) > 2}
+    if shared_links:
+        print(f"  {len(shared_links)} link(s) were pasted on copies from different eras - year-gated, Years untouched")
     dates_set = covers_set = 0
     cred_counts = {"writer": 0, "artist": 0, "cover": 0}
     cred_changes = []
@@ -371,7 +387,7 @@ def main():
             # wrong-era page can never leak across the run.
             # Only a link YOU pasted is a "seed" (trusted over the sheet's Year). Automatic
             # links (extrapolated / autolink) stay year-gated like any run-mate.
-            is_seed = (issue == rec_issue and not rec.get("_auto") and
+            is_seed = (issue == rec_issue and not rec.get("_auto") and rec.get("value") not in shared_links and
                        (not cB or str(ws.cell(r, cB).value or "").strip() == rec_box))
             # Already complete -> don't re-fetch. This is why the whole run (e.g.
             # all 66 Avengers) re-ran every pass: the fetch was unconditional.

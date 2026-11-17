@@ -223,6 +223,34 @@ class T(unittest.TestCase):
         got = sorted((x["title"], x["issue"], x["value"].rsplit("/", 1)[1]) for x in out)
         self.assertEqual(got, [("Hulk", "1", "Hulk_Vol_2_1"), ("Shazam!", "15", "Shazam!_Vol_1_15"), ("Shazam!", "15", "Shazam!_Vol_2_15")], r.stdout)
 
+    def test_one_link_on_many_eras_never_rewrites_years(self):
+        sb = self.sb
+        sb.xlsx(["Title", "Issue #", "Year", "Volume", "Box #", "Publication Date", "Writer(s)", "Artist(s)", "Cover Artist"],
+                [["Moon Knight", 2, 2006, 5, "10", None, None, None, None],
+                 ["Moon Knight", 2, 2022, 9, "20", None, None, None, None],
+                 ["Solo", 1, 2012, 1, "30", None, None, None, None]])
+        sb.json("covers.json", {})
+        url = "https://marvel.fandom.com/wiki/Moon_Knight_Vol_10_2"
+        rec = lambda t, i, b, u: {"title": t, "issue": i, "box": b, "problem": "x", "kind": "fandom", "value": u}
+        sb.json("home/Downloads/data-fixes-2026-11-01.json",
+                [rec("Moon Knight", "2", "10", url), rec("Moon Knight", "2", "20", url),
+                 rec("Solo", "1", "30", "https://marvel.fandom.com/wiki/Solo_Vol_1_1")])
+        os.makedirs(sb.p("site"), exist_ok=True)
+        open(sb.p("site", "sitecustomize.py"), "w").write(
+            "import io, json, time, urllib.request\n"
+            "time.sleep = lambda s: None\n"
+            "def f(req, timeout=None):\n"
+            "    u = req.full_url\n"
+            "    y = '2026' if 'Moon' in u else '2016'\n"
+            "    if 'pageimages' in u or 'imageinfo' in u: return io.BytesIO(b'{}')\n"
+            "    return io.BytesIO(json.dumps({'parse': {'wikitext': '| Year = ' + y + '\\n| Month = 3\\n| Writer1_1 = A'}}).encode())\n"
+            "urllib.request.urlopen = f\n")
+        r = sb.run("brb_apply_fandom_pages.py", "--apply", env={"PYTHONPATH": sb.p("site")})
+        years = {(x["Title"], x["Box #"]): str(x["Year"]) for x in sb.newest()}
+        self.assertEqual(years[("Moon Knight", "10")], "2006", r.stdout)
+        self.assertEqual(years[("Moon Knight", "20")], "2022", r.stdout)
+        self.assertEqual(years[("Solo", "30")], "2016", "a link on ONE copy is still the truth")
+
     # ── renames keep covers ───────────────────────────────────────────────────
     def test_rename_carries_covers(self):
         sb = self.sb
