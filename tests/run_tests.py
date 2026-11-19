@@ -577,7 +577,9 @@ class T(unittest.TestCase):
         self.assertNotIn(("Batman", "1", "60"), rows); self.assertNotIn(("Flash", "5", "3"), rows)
         lg = openpyxl.load_workbook(max(glob.glob(sb.p("attached_assets", "*.xlsx")), key=os.path.getmtime))["📝 Data Integrity Log"]
         self.assertIn("Reclaim", str(lg.cell(lg.max_row, 2).value))
-        self.assertIn("to restore: 0", sb.run("brb_reclaim_restore.py").stdout, "second run adds nothing")
+        r2 = sb.run("brb_reclaim_restore.py").stdout
+        self.assertIn("to restore: 0", r2, "second run adds nothing")
+        self.assertIn("LOG: 1 removal", r2, "the restore's own log entry is not listed as a removal")
 
     def test_reclaim_restore_guard_needs_force(self):
         sb = self.sb

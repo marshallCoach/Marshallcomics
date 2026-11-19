@@ -100,7 +100,8 @@ def main():
 
     if LOG_TAB in wb.sheetnames:
         hits = [r for r in wb[LOG_TAB].iter_rows(min_row=1, values_only=True)
-                if re.search(r"remov|delet|purg|moved|drop|dedup", " ".join(str(x or "") for x in r), re.I)]
+                if re.search(r"remov|delet|purg|moved|drop|dedup", " ".join(str(x or "") for x in r), re.I)
+                and not str(r[1] if len(r) > 1 else "").startswith("Reclaim")]     # our own restore entry isn't a removal
         print(f"DATA INTEGRITY LOG: {len(hits)} removal/move entr{'y' if len(hits) == 1 else 'ies'} on file (read these - a deliberate removal is not data loss):")
         for r in hits[-12:]:
             print("   · " + " | ".join(str(x) for x in r if x not in (None, ""))[:160])
