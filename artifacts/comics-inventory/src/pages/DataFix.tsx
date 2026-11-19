@@ -2,6 +2,7 @@ import { useState, useMemo, useCallback, useEffect } from "react";
 import { DATA, type Comic } from "@/data/data";
 import { CoverImage, CoverModal, fmtPubDate, coverUrlSync, coverSourceSync, coversReady } from "@/components/CoverImage";
 import { setFlagKind as setCoverFlagKind } from "@/lib/coverFlags";
+import { Guide, FLOW } from "./dataFixGuides";
 
 // ── Data-cleanup spot-check ──────────────────────────────────────────────────
 // Surfaces every comic with a fixable data problem, grouped by problem →
@@ -48,6 +49,11 @@ const partTxt = (a: ArcSide) => a.part ? ` · part ${a.part}${a.length ? ` of ${
 type SMCand = { base: string; url: string; verified: number; of: number; years: number[]; sim: number };
 type SeriesMatch = { key: string; wiki: string; title: string; vol: string; count: number; years: number[]; issues: string[]; reason: string; best: SMCand | null; conf: "high" | "medium" | "none"; cands: SMCand[] };
 type Reclaim = { id: string; tier: 1 | 2; today: string; title: string; issue: string; year: string; box: string; pub: string; vol: string; dropped: string; commit: string; why: string };
+type Restored = {
+  restored: { entry: string; old: string; dropped: string }[];
+  noIssue: { title: string; vol: string; year: string; box: string; pub: string }[];
+  alreadyThere: { title: string; issue: string; vol: string; year: string; box: string }[];
+};
 type SeriesHeld = { key: string; title: string; vol: string; fandom: string; wiki: string; fit: number };
 const SM_COLOR = { high: "#16a34a", medium: "#d97706", none: "#dc2626" } as const;
 
@@ -132,7 +138,7 @@ const yearOf = (c: Comic) => {
   return pdY || (/^\d{4}$/.test((c.Year || "").trim()) ? c.Year.trim() : "—");
 };
 
-export default function DataFix() {
+export default function DataFix({ onNavigate }: { onNavigate?: (tab: string, params?: { query?: string }) => void } = {}) {
   const [fixes, setFixes] = useState<Map<string, FixRecord>>(() => loadFixes());
   const [leaving, setLeaving] = useState<Set<string>>(new Set());
   const [linkDraft, setLinkDraft] = useState<Record<string, string>>({});
@@ -166,7 +172,12 @@ export default function DataFix() {
   const [reclaim, setReclaim] = useState<Reclaim[]>([]);
   const [rcOpen, setRcOpen] = useState(false);
   const [rcTitle, setRcTitle] = useState<string | null>(null);
-  const [rcTier, setRcTier] = useState<1 | 2>(1);
+  const [rcTier, setRcTier] = useState<1 | 2>(2);     // Tier 1 was restored Nov 19 -> 📦 Restored books
+  const [restoredData, setRestoredData] = useState<Restored | null>(null);
+  const [rsOpen, setRsOpen] = useState(false);
+  const [rsTab, setRsTab] = useState<"box" | "copy" | "placed" | "noissue" | "skipped">("box");
+  const [rsTitle, setRsTitle] = useState<string | null>(null);
+  const [flowOpen, setFlowOpen] = useState(true);
   const [rcCovers, setRcCovers] = useState<Record<string, { url: string; large: string }>>({});
   const [rcUndo, setRcUndo] = useState<string[][]>([]);
   const [smOpen, setSmOpen] = useState(false);
@@ -198,6 +209,8 @@ export default function DataFix() {
       .then((a: SeriesMatch[]) => setSeriesMatch(Array.isArray(a) ? a : [])).catch(() => {});
     fetch(`${BASE}/reclaim_covers.json`).then(r => r.ok ? r.json() : {})
       .then((o: Record<string, { url: string; large: string }>) => setRcCovers(o && typeof o === "object" ? o : {})).catch(() => {});
+    fetch(`${BASE}/reclaim_restored.json`).then(r => r.ok ? r.json() : null)
+      .then((o: Restored | null) => setRestoredData(o && Array.isArray(o.restored) ? o : null)).catch(() => {});
     fetch(`${BASE}/reclaim_candidates.json`).then(r => r.ok ? r.json() : [])
       .then((a: Reclaim[]) => setReclaim(Array.isArray(a) ? a : [])).catch(() => {});
     fetch(`${BASE}/series_held_hints.json`).then(r => r.ok ? r.json() : {})
@@ -482,6 +495,20 @@ export default function DataFix() {
   }), [seriesHeld, fixes, heldHints]);
   // Reclaim: books that dropped out of the inventory (history scan, Nov 19). A click
   // records Still own / Sold and the book leaves the list; Export carries the answers.
+  // Restored books (Nov 19 reclaim): looked up LIVE by entry number, so a book leaves
+  // "Needs a box" as soon as its Box # is no longer UNKNOWN in the deployed data.
+  const restored = useMemo(() => {
+    if (!restoredData) return null;
+    const byEntry = new Map(comics.map(c => [String((c as { Entry?: string }).Entry ?? ""), c]));
+    const rows = restoredData.restored.map(r => ({ ...r, c: byEntry.get(String(r.entry)) }))
+      .filter((r): r is { entry: string; old: string; dropped: string; c: Comic } => !!r.c);
+    const k = (c: Comic) => `${c.Title}|||${String(c.Issue).replace(/^#/, "")}|||${c.Volume || "1"}`;
+    const n = new Map<string, number>();
+    rows.forEach(r => n.set(k(r.c), (n.get(k(r.c)) || 0) + 1));
+    const isUnknown = (c: Comic) => /^UNKNOWN/i.test(String(c.Box || ""));
+    return { rows, unknown: rows.filter(r => isUnknown(r.c)), copies: rows.filter(r => (n.get(k(r.c)) || 0) > 1),
+             placed: rows.filter(r => !isUnknown(r.c)) };
+  }, [restoredData]);
   const openReclaim = useMemo(() => reclaim.filter(r => !fixes.has(`reclaim|||${r.id}`)), [reclaim, fixes]);
   const reclaimDone = useMemo(() => {
     let own = 0, sold = 0;
@@ -617,6 +644,13 @@ export default function DataFix() {
         </div>
       </div>
 
+      {/* How the page works — the loop, so the "where does this go?" is always on screen */}
+      <details className="df-guide df-flow" open={flowOpen} onToggle={e => setFlowOpen((e.target as HTMLDetailsElement).open)}>
+        <summary>🔁 How Data Fix works (the 4-step loop)</summary>
+        <ol>{FLOW.map((f, i) => <li key={i}>{f}</li>)}</ol>
+        <p>Each section below starts closed and is sorted smallest job first. Open one, and its 📘 guide explains what the problem is, why it happens, and exactly how to clear it.</p>
+      </details>
+
       {/* Category chips */}
       <div className="df-chips">
         <button className={`df-chip${activeProblem === "all" ? " on" : ""}`} onClick={() => setActiveProblem("all")}>
@@ -655,6 +689,7 @@ export default function DataFix() {
           </button>
           {flOpen && (
             <div style={{ padding: "10px 14px", display: "flex", flexDirection: "column", gap: 10 }}>
+              <Guide id="fandom-linked" />
               <div style={{ fontSize: "0.78rem", color: "var(--muted2,#aaa)" }}>
                 Already carry a Fandom cover, so likely a dup or mislabel. If the cover is for the <b>wrong</b> issue/volume, paste the correct Fandom page link — it overwrites the row's volume next run. If the cover is <b>right</b>, tick <b>Cover's correct</b> to clear it from the queue.
                 {flDupOk.size > 0 && <> · <button className="df-find" style={{ border: "none", background: "none", cursor: "pointer", padding: 0 }} onClick={() => setFlDupOk(new Set())}>{flDupOk.size} confirmed — show again</button></>}
@@ -704,6 +739,7 @@ export default function DataFix() {
           </button>
           {cgOpen && (
             <div style={{ padding: "10px 14px", display: "flex", flexDirection: "column", gap: 8 }}>
+              <Guide id="cover-guesses" />
               <div style={{ fontSize: "0.78rem", color: "var(--muted2,#aaa)" }}>
                 Built from a sibling issue's confirmed link. <b style={{ color: "#16a34a" }}>✓</b> = page name matches the title (safe). <b style={{ color: "#d97706" }}>⚠</b> = a <i>different-named</i> page (could be the wrong book) — open it first. <b>Use this</b> queues it; the Mac run fetches it and a dead page self-skips.
               </div>
@@ -749,6 +785,7 @@ export default function DataFix() {
           </button>
           {smOpen && (
             <div style={{ padding: "10px 14px", display: "flex", flexDirection: "column", gap: 8 }}>
+              <Guide id="series-match" />
               <div style={{ fontSize: "0.78rem", color: "var(--muted2,#aaa)" }}>
                 <b>Map</b> = lookup only, your title stays (the default). <b>Map + rename</b> only when your title is actually wrong — covers follow the rename.
                 <b style={{ color: SM_COLOR.high }}> ●</b> both test issues found with the right year · <b style={{ color: SM_COLOR.medium }}>●</b> one found · <b style={{ color: SM_COLOR.none }}>●</b> nothing verified — paste the right page.
@@ -830,6 +867,83 @@ export default function DataFix() {
         </section>
       )}
 
+      {/* 📦 Restored books — the 744 put back on Nov 19 (brb_reclaim_restore.py). Live: a book
+          leaves "Needs a box" once its Box # stops being UNKNOWN in the deployed data. */}
+      {restored && restoredData && (
+        <section className="df-group" style={{ marginBottom: 14, order: restored.unknown.length + restored.copies.length + restoredData.noIssue.length }}>
+          <button className="df-group-hd" onClick={() => setRsOpen(o => !o)} style={{ borderLeft: "4px solid #16a34a" }}>
+            <span className="df-group-name"><span className="df-chev">{rsOpen ? "▾" : "▸"}</span> 📦 Restored books — {restored.rows.length} put back Nov 19</span>
+            <span className="df-chip-n">{restored.unknown.length + restored.copies.length + restoredData.noIssue.length}</span>
+          </button>
+          {rsOpen && (
+            <div style={{ padding: "10px 14px", display: "flex", flexDirection: "column", gap: 8 }}>
+              <Guide id="restored" />
+              <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+                {([["box", `📍 Needs a box (${restored.unknown.length})`], ["copy", `⚠ Copies to verify (${restored.copies.length})`],
+                   ["noissue", `✋ Not restored — no issue # (${restoredData.noIssue.length})`], ["placed", `✓ Back in their box (${restored.placed.length})`],
+                   ["skipped", `↷ Already in your data (${restoredData.alreadyThere.length})`]] as const).map(([t, label]) => (
+                  <button key={t} onClick={() => { setRsTab(t); setRsTitle(null); }}
+                    style={{ border: `1px solid ${rsTab === t ? "#16a34a" : "var(--border,#2c2c38)"}`, background: rsTab === t ? "rgba(22,163,74,0.12)" : "transparent", color: "inherit", borderRadius: 999, padding: "4px 10px", cursor: "pointer", fontSize: "0.78rem" }}>{label}</button>
+                ))}
+              </div>
+              {(rsTab === "box" || rsTab === "copy" || rsTab === "placed") && (() => {
+                const list = rsTab === "box" ? restored.unknown : rsTab === "copy" ? restored.copies : restored.placed;
+                const g = new Map<string, typeof list>();
+                for (const r of list) { const t = r.c.Title; if (!g.has(t)) g.set(t, []); g.get(t)!.push(r); }
+                const num = (x: string) => { const v = parseFloat(String(x).replace(/^#/, "")); return Number.isFinite(v) ? v : 1e9; };
+                const groups = [...g.entries()].map(([t, rows]) => [t, rows.sort((a, b) => num(a.c.Issue) - num(b.c.Issue))] as const)
+                  .sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]));
+                if (!groups.length) return <div style={{ fontSize: "0.85rem", color: "#16a34a", fontWeight: 600 }}>🎉 Nothing left here.</div>;
+                return groups.map(([title, rows]) => {
+                  const open = rsTitle === title;
+                  return (
+                    <div key={title} style={{ border: "1px solid var(--border,#2c2c38)", borderRadius: 8 }}>
+                      <button onClick={() => setRsTitle(open ? null : title)}
+                        style={{ width: "100%", textAlign: "left", background: "none", border: "none", color: "inherit", cursor: "pointer", padding: "7px 10px", fontSize: "0.85rem", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+                        <span className="df-chev">{open ? "▾" : "▸"}</span> <b>{title}</b> <span style={{ color: "var(--muted2,#aaa)" }}>· {rows.length} · #{rows.slice(0, 8).map(r => String(r.c.Issue).replace(/^#/, "")).join(", #")}{rows.length > 8 ? "…" : ""}</span>
+                      </button>
+                      {open && (
+                        <div style={{ display: "flex", flexWrap: "wrap", gap: 10, padding: "4px 10px 10px" }}>
+                          {rows.map(r => (
+                            <div key={r.entry} style={{ width: 120, display: "flex", flexDirection: "column", gap: 4, fontSize: "0.74rem" }}>
+                              <CoverImage comic={r.c} width={120} height={180} style={{ borderRadius: 4 }} onClick={large => setCoverModal({ comic: r.c, large })} />
+                              <div style={{ fontWeight: 700 }}>#{String(r.c.Issue).replace(/^#/, "")} <span style={{ color: "var(--muted2,#aaa)", fontWeight: 400 }}>v{r.c.Volume || "1"} · {r.c.Year}</span></div>
+                              <div style={{ color: "var(--muted2,#aaa)" }}>was Box {r.old.replace(/^UNKNOWN.*/, "unknown")} → {/^UNKNOWN/i.test(String(r.c.Box)) ? <b style={{ color: "#d97706" }}>needs a box</b> : <b style={{ color: "#16a34a" }}>Box {r.c.Box}</b>}</div>
+                              {onNavigate && (
+                                <button className="df-solve" onClick={() => onNavigate("editcomic", { query: `${r.c.Title} ${String(r.c.Issue).replace(/^#/, "")}` })}>
+                                  ✏️ {rsTab === "copy" ? "Check / delete copy" : "Set box"}
+                                </button>
+                              )}
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  );
+                });
+              })()}
+              {rsTab === "box" && onNavigate && (
+                <button className="df-link-save" style={{ alignSelf: "flex-start" }} onClick={() => onNavigate("locationcheck")}>🗺️ Open “Where Is It?” to walk your boxes</button>
+              )}
+              {rsTab === "noissue" && (
+                <div style={{ fontSize: "0.82rem", display: "flex", flexDirection: "column", gap: 4 }}>
+                  {restoredData.noIssue.map((r, i) => (
+                    <div key={i}>• <b>{r.title}</b> <span style={{ color: "var(--muted2,#aaa)" }}>· vol {r.vol || "?"} · {r.year} · was Box {r.box} · {r.pub}</span> — <i>no issue number on the old row; find the book and add it via weekly intake</i></div>
+                  ))}
+                </div>
+              )}
+              {rsTab === "skipped" && (
+                <div style={{ fontSize: "0.82rem", display: "flex", flexDirection: "column", gap: 4 }}>
+                  {restoredData.alreadyThere.map((r, i) => (
+                    <div key={i}>• <b>{r.title}</b> #{r.issue} <span style={{ color: "var(--muted2,#aaa)" }}>· vol {r.vol || "?"} · {r.year} · was Box {r.box}</span> — already in your data, not added twice</div>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
+        </section>
+      )}
+
       {/* Reclaim missing books — dropped out of the inventory in past deploys (mostly the
           Jun 15 one). Still own -> restored to its old box after you confirm; Sold -> left out. */}
       {(openReclaim.length > 0 || reclaimDone.own + reclaimDone.sold > 0) && (
@@ -840,6 +954,7 @@ export default function DataFix() {
           </button>
           {rcOpen && (
             <div style={{ padding: "10px 14px", display: "flex", flexDirection: "column", gap: 8 }}>
+              <Guide id="reclaim" />
               <div style={{ fontSize: "0.78rem", color: "var(--muted2,#aaa)" }}>
                 These books were in your inventory and dropped out during a past update (most on Jun 15). Nothing is restored until you confirm the list.
                 <b> Still own</b> = put it back in its old box · <b>Sold / gone</b> = leave it out. A click removes the book from this list; <b>Export</b> saves your answers.
@@ -849,7 +964,7 @@ export default function DataFix() {
                 <button className="df-link-save" disabled={!rcUndo.length} style={{ background: "transparent", color: "var(--muted,#888)" }} onClick={undoReclaim}>↶ Undo last</button>
               </div>
               <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
-                {([[1, `Tier 1 · not in your data in ANY volume (${reclaimDone.t1})`], [2, `Tier 2 · same title+issue exists in another volume/year (${reclaimDone.t2})`]] as const).map(([t, label]) => (
+                {([[1, `Tier 1 · not in your data in ANY volume (${reclaimDone.t1})`, reclaimDone.t1], [2, `Tier 2 · same title+issue exists in another volume/year (${reclaimDone.t2})`, reclaimDone.t2]] as const).filter(x => x[2] > 0).map(([t, label]) => (
                   <button key={t} onClick={() => { setRcTier(t); setRcTitle(null); }}
                     style={{ border: `1px solid ${rcTier === t ? "#dc2626" : "var(--border,#2c2c38)"}`, background: rcTier === t ? "rgba(220,38,38,0.12)" : "transparent", color: "inherit", borderRadius: 999, padding: "4px 10px", cursor: "pointer", fontSize: "0.78rem" }}>{label}</button>
                 ))}
@@ -913,6 +1028,7 @@ export default function DataFix() {
           </button>
           {acOpen && (
             <div style={{ padding: "10px 14px", display: "flex", flexDirection: "column", gap: 8 }}>
+              <Guide id="arc-conflict" />
               <div style={{ fontSize: "0.78rem", color: "var(--muted2,#aaa)" }}>
                 The two sources call this book's story arc different things. Open either page to check, then <b>Keep Fandom</b>, <b>Use Comic Vine</b>,
                 or paste the correct Fandom issue page — the next <code>brb_all</code> reads the arc off that page (and fixes the volume from the link).
@@ -978,6 +1094,7 @@ export default function DataFix() {
           </button>
           {urOpen && (
             <div style={{ padding: "10px 14px", display: "flex", flexDirection: "column", gap: 8 }}>
+              <Guide id="unresolved" />
               <div style={{ fontSize: "0.78rem", color: "var(--muted2,#aaa)" }}>
                 The wiki page didn't exist at run time — but if you find a working one, paste it and it applies next run (exactly like the other cards).
               </div>
@@ -1020,6 +1137,7 @@ export default function DataFix() {
           </button>
           {tcOpen && (
             <div style={{ padding: "10px 14px" }}>
+              <Guide id="title-cleanup" />
               {collisions.length > 0 && (
                 <>
                   <div style={{ fontSize: "0.8rem", color: "var(--muted2,#aaa)", marginBottom: 8 }}>
@@ -1114,6 +1232,7 @@ export default function DataFix() {
               <span className="df-group-name"><span className="df-chev">{gopen ? "▾" : "▸"}</span> {g.problem.label}</span>
               <span className="df-group-meta"><span className="df-group-blurb">{g.problem.blurb}</span> <b style={{ color: g.problem.color }}>{g.count.toLocaleString()}</b></span>
             </button>
+            {gopen && <Guide id={g.pid} />}
             {gopen && g.pubs.map(pg => (
               <div key={pg.pub} className="df-pub">
                 <div className="df-pub-hd">{pg.pub} <span className="df-pub-n">{pg.items.length}</span></div>
@@ -1248,4 +1367,10 @@ const CSS = `
 .df-link-in:focus{outline:none;border-color:#7c3aed}
 .df-link-save{font-size:.72rem;font-weight:700;border:none;border-radius:7px;padding:5px 12px;cursor:pointer;background:#7c3aed;color:#fff}
 .df-link-save:disabled{opacity:.4;cursor:default}
+.df-guide{margin:0 0 10px;padding:8px 12px;border:1px solid var(--border,#2c2c38);border-left:3px solid #2563eb;border-radius:8px;background:var(--surface2,rgba(127,127,127,.06));font-size:.82rem;line-height:1.5;overflow-wrap:anywhere}
+.df-guide summary{cursor:pointer;font-weight:700}
+.df-guide p{margin:6px 0}
+.df-guide ol{margin:4px 0 4px 20px;padding:0}
+.df-guide li{margin:2px 0}
+.df-flow{margin:0 0 14px}
 `;

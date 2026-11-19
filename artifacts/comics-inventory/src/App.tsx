@@ -442,7 +442,7 @@ export default function App() {
         {activeTab === "pulllist"    && <PullList />}
         {activeTab === "duplicates"    && <Duplicates onNavigate={navigateTo} />}
         {activeTab === "dupchecklist"  && <DupCheckList />}
-        {activeTab === "datafix"       && <DataFix />}
+        {activeTab === "datafix"       && <DataFix onNavigate={navigateTo} />}
         {activeTab === "titlefixes"    && <TitleFixes />}
         {activeTab === "volumeconfirm" && <VolumeConfirm />}
         {activeTab === "history"     && <ComicHistory />}
