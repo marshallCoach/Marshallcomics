@@ -665,6 +665,7 @@ export const DATA3: {
   };
 } = {
   generatedAt: "${generatedAt}",
+  // @ts-ignore TS2590: 15k literals with 17 optional-key shapes exceed union limit
   comics: [
 ${comics.join(',\n')}
   ],
