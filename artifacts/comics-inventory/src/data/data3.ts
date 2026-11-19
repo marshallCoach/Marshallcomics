@@ -50,6 +50,7 @@ export const DATA3: {
   };
 } = {
   generatedAt: "2026-11-19",
+  // @ts-ignore TS2590: 15k literals with 17 optional-key shapes exceed union limit
   comics: [
   {
     Title: `52`, Issue: `1`, Publisher: `DC`,
