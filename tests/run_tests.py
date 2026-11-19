@@ -296,6 +296,12 @@ class T(unittest.TestCase):
         self.assertEqual((a2, v2), ("CLEAN", "Leinil Francis Yu & Romulo Fajardo Jr."))
         self.assertEqual(G.decide(v2, gcd2), (None, None), "second run must change nothing")
         self.assertEqual(G.decide("John Romita Jr. & Klaus Janson", ["John Romita, Jr.", "Klaus Janson"]), (None, None))
+        # Deadpool #65-69 (Nov 19): GCD names carry "(Udon)" tags; UNION rewrote the same value every run
+        cell = "Alvin Lee & Udon's Rob Ross & A-Zero & TR2 & A-Zero (Udon) & TR2 (Udon)"
+        gcd3 = ["Alvin Lee", "A-Zero (Udon)", "TR2 (Udon)"]
+        a4, v4 = G.decide(cell, gcd3)
+        self.assertEqual(a4, "CLEAN", "duplicate people (A-Zero twice) cleaned once")
+        self.assertEqual(G.decide(v4, gcd3), (None, None), "tagged GCD names must match the stripped cell")
         a3, v3 = G.decide("John Romita Jr. & Klaus Janson & John Romita & Jr.", ["Klaus Janson"])
         self.assertEqual((a3, v3), ("CLEAN", "John Romita Jr. & Klaus Janson"))
 

@@ -199,13 +199,16 @@ def decide(existing, gcd_list):
     if not gcd_list:
         return ("CLEAN", " & ".join(ex_list)) if dirty and ex_list else (None, None)
     ex_set = {nk(x) for x in ex_list}
-    gcd_set = {nk(x) for x in gcd_list}
+    # compare names WITHOUT "(Udon)"-style role tags on both sides - GCD's tagged names
+    # never matched the stripped cell, so UNION rewrote the same value every run
+    gk = lambda x: nk(re.sub(r"\([^)]*\)", " ", x))
+    gcd_set = {gk(x) for x in gcd_list}
     if not ex_set:
         return "FILL", " & ".join(gcd_list)
     if gcd_set <= ex_set:                       # existing has everything GCD has
         return ("CLEAN", " & ".join(ex_list)) if dirty else (None, None)
     if ex_set & gcd_set:                        # overlap: add GCD's extras, keep order
-        add = [g for g in gcd_list if nk(g) not in ex_set]
+        add = [g for g in gcd_list if gk(g) not in ex_set]
         return "UNION", " & ".join(ex_list + add)
     return "CONFLICT", " & ".join(gcd_list)     # zero overlap -> trust GCD, but flagged
 
@@ -277,6 +280,8 @@ def main():
             action, newv = decide(ws.cell(r, role_cols[col]).value, cs[role_key[col]])
             if not action:
                 continue
+            if str(newv or "").strip() == str(ws.cell(r, role_cols[col]).value or "").strip():
+                continue                                  # identical value = not a change
             if action == "CONFLICT" and args.no_conflicts:
                 changes.append((title, norm_issue(issue), str(year), pub, series["name"],
                                 col, "CONFLICT-SKIPPED", str(ws.cell(r, role_cols[col]).value or ""), newv))
