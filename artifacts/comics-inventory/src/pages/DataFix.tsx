@@ -986,7 +986,7 @@ export default function DataFix() {
                     {c ? (
                       saved ? <span style={{ color: "#16a34a", fontWeight: 700 }}>✓ link queued</span> : (
                         <div className="df-linkrow" style={{ flex: 1, minWidth: 220, maxWidth: 420 }}>
-                          <input className="df-link-in" placeholder="Paste Fandom link that fixes it…"
+                          <input className="df-link-in" placeholder="Paste Fandom or Image Comics link that fixes it…"
                             value={linkDraft[id] || ""} onChange={e => setLinkDraft(d => ({ ...d, [id]: e.target.value }))}
                             onKeyDown={e => { if (e.key === "Enter" && (linkDraft[id] || "").trim()) resolve(c, id, "no-date", "fandom", linkDraft[id].trim()); }} />
                           <button className="df-link-save" disabled={!(linkDraft[id] || "").trim()}
@@ -1157,7 +1157,7 @@ export default function DataFix() {
                           </div>
                         )}
                         <div className="df-linkrow">
-                          <input className="df-link-in" placeholder="Paste Fandom link that fixes it…"
+                          <input className="df-link-in" placeholder="Paste Fandom or Image Comics link that fixes it…"
                             value={linkDraft[id] || ""} onChange={e => setLinkDraft(d => ({ ...d, [id]: e.target.value }))}
                             onKeyDown={e => { if (e.key === "Enter" && (linkDraft[id] || "").trim()) resolve(c, id, g.pid, "fandom", linkDraft[id].trim()); }} />
                           <button className="df-link-save" disabled={!(linkDraft[id] || "").trim()}

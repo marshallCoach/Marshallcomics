@@ -124,8 +124,8 @@ def story_tables(page_html):
     found = []
     for t in p.tables:
         path = " / ".join(t["path"])
-        if re.search(r"backup", path, re.I):
-            continue
+        if re.search(r"backup", path, re.I) or not re.search(r"\byear\b", path, re.I):
+            continue                          # main Year One/Two/Three tables only (no backups / gag strips)
         g = grid(t["rows"])
         if not g:
             continue

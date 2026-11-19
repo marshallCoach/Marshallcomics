@@ -196,6 +196,18 @@ def main():
             archive(js)
     step(2, "DATA-FIX EXPORT (apply Fandom links)", datafix)
 
+    # 2a / 4b are NEW (Nov 19) and run REPORT-ONLY until Robert has seen one real run's
+    # numbers (engineering rule 2). To let them write, flip these to True.
+    APPLY_IMAGE_PAGES = False
+    APPLY_DW_ARCS = False
+
+    # 2a — Image Comics release links pasted on Data Fix (imagecomics.com/comics/releases/...)
+    def image_pages():
+        args = [PY, os.path.join(ROOT, "brb_apply_image_pages.py")] + (["--apply"] if APPLY_IMAGE_PAGES else [])
+        if run(args):
+            raise RuntimeError("brb_apply_image_pages failed")
+    step("2a", "IMAGE COMICS PAGES (" + ("apply" if APPLY_IMAGE_PAGES else "report only") + ")", image_pages)
+
     # 2b — canonicalize split title spellings from title_aliases.json (merges any
     # new title_aliases_*.json from Downloads first). Runs every time so a re-split
     # introduced by a later intake self-heals instead of re-flagging.
@@ -236,6 +248,16 @@ def main():
         if run([PY, os.path.join(ROOT, "brb_fill_from_fandom.py"), "--no-deploy"]):
             raise RuntimeError("brb_fill_from_fandom failed")
     step(4, "FANDOM FILL (gap-filler for books GCD can't reach)", fandom_fill)
+
+    # 4b — Doctor Who story arcs from the TARDIS wiki series tables -> dw_arcs.csv,
+    # applied by the existing safe arc writer (blank cells only).
+    def dw_arcs():
+        if run([PY, os.path.join(ROOT, "brb_dw_wiki.py")]):
+            raise RuntimeError("brb_dw_wiki failed")
+        args = [PY, os.path.join(ROOT, "brb_apply_arcs.py"), "--csv", os.path.join(ROOT, "dw_arcs.csv"), "--fill-only"]
+        if run(args + (["--apply"] if APPLY_DW_ARCS else [])):
+            raise RuntimeError("brb_apply_arcs (Doctor Who) failed")
+    step("4b", "DOCTOR WHO ARCS (" + ("apply" if APPLY_DW_ARCS else "report only") + ")", dw_arcs)
 
     # NOTE: Comic Vine credits fallback (brb_credits_cv.py) is NOT run here. It
     # rate-limits hard (HTTP 420) and resolves almost nothing for the obscure

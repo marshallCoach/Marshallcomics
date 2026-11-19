@@ -408,6 +408,37 @@ class T(unittest.TestCase):
         self.assertEqual(plan[(y3, "9")]["Story Arc"], "The Lost Dimension: The Tenth Doctor")
         self.assertNotIn("A Backup Strip", {v["Story Arc"] for v in plan.values()})
 
+    def test_image_comics_page_fills_blanks_once(self):
+        # Nov 19: Image Comics release links (imagecomics.com/comics/releases/...) pasted on Data Fix.
+        sb = self.sb
+        sb.xlsx(["Title", "Issue #", "Year", "Volume", "Box #", "Publication Date", "Writer(s)", "Artist(s)", "Cover Artist"],
+                [["G.I. Joe", 13, 2025, 1, "103", None, None, "Already Here", None]])
+        sb.json("covers.json", {})
+        sb.json("home/Downloads/data-fixes-2026-11-19.json",
+                [{"title": "G.I. Joe", "issue": "13", "box": "103", "problem": "no-date", "kind": "fandom",
+                  "value": "https://imagecomics.com/comics/releases/g-i-joe-13"}])
+        page = ('<h1>G.I. Joe #13</h1><div class="entry-meta"><p>Published: November 5, 2025</br>'
+                '<a href="https://imagecomics.com/files/releases/X-hires.jpg" id="entry-cover-image">'
+                '<img class="with-border" src="https://cdn.imagecomics.com/x/g-i-joe-13.jpg" alt="G.I. Joe #13" ></a>'
+                'Cover price: <b>$3.99</b></p><div class="role"><h2>Writer</h2><aside><a href="/c/jw">Joshua Williamson</a></aside></div>'
+                '<div class="role"><h2>Artists</h2><aside><a href="/c/tr">Tom Reilly</a></aside><aside><a href="/c/jb">Jordie Bellaire</a></aside></div>'
+                '<div class="role"><h2>Cover A</h2><aside><a href="/c/tr">Tom Reilly</a></aside></div>'
+                '<div class="role"><h2>Cover H</h2><aside><a href="/c/ec">Eric Canete</a></aside></div>')
+        os.makedirs(sb.p("site"), exist_ok=True)
+        open(sb.p("site", "sitecustomize.py"), "w").write(
+            "import io, time, urllib.request\ntime.sleep = lambda s: None\n"
+            f"urllib.request.urlopen = lambda req, timeout=None: io.BytesIO({page!r}.encode())\n")
+        r = sb.run("brb_apply_image_pages.py", "--apply", env={"PYTHONPATH": sb.p("site")})
+        row = sb.newest()[0]
+        self.assertEqual(row["Writer(s)"], "Joshua Williamson", r.stdout + r.stderr)
+        self.assertEqual(row["Artist(s)"], "Already Here", "a filled cell is never overwritten")
+        self.assertEqual(row["Cover Artist"], "Tom Reilly", "Cover A, not the variant Cover H")
+        self.assertEqual(str(row["Publication Date"]), "2025-11-05")
+        cov = json.load(open(sb.p("covers.json")))
+        self.assertEqual(cov["G.I. Joe|||13|||1"]["large"], "https://imagecomics.com/files/releases/X-hires.jpg")
+        r2 = sb.run("brb_apply_image_pages.py", "--apply", env={"PYTHONPATH": sb.p("site")})
+        self.assertIn("cells to fill (blank only): 0   covers to add: 0", r2.stdout, "second run must change nothing")
+
     def test_many_links_one_title_requests_each_page_once(self):
         sb = self.sb
         rows = [["Moon Knight", i, 2000 + i, 5, str(i), None, None, None, None] for i in range(1, 21)]
