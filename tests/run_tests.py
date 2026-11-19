@@ -372,6 +372,42 @@ class T(unittest.TestCase):
             brb_all.code_sync()
         self.assertEqual(open(os.path.join(a, "fix.py")).read(), "v = local\n", out.getvalue())
 
+    def test_doctor_who_wiki_tables_to_arcs(self):
+        # Nov 19: TARDIS series pages - story tables with spanning writer cells, "6 - 8, 10"
+        # issue lists, and Backup tables that must be ignored.
+        sys.path.insert(0, self.sb.dir)
+        import importlib, brb_dw_wiki as D
+        importlib.reload(D)
+        H = """<h2>Stories</h2><h3>Main</h3><h4>Year One</h4>
+<table><tr><th>#</th><th>Title</th><th>Writer</th><th>Featuring</th><th>Printed in</th><th>Released</th></tr>
+<tr><td>1</td><td>Revolutions of Terror</td><td rowspan="2">Nick Abadzis</td><td>Gabby, Cindy</td><td>10D 1-3</td><td>23 July - 24 September 2014</td></tr>
+<tr><td>2</td><td>The Arts in Space</td><td>Gabby</td><td>10D 4-5</td><td>8 October - 5 November 2014</td></tr>
+<tr><td>3</td><td>The Weeping Angels of Mons</td><td rowspan="2">Robbie Morrison</td><td>Gabby</td><td>10D 6-9</td><td>x</td></tr>
+<tr><td>4</td><td>Echo</td><td>Gabby, Cindy</td><td>10D 10</td><td>25 March 2015</td></tr></table>
+<h4>Year Three</h4>
+<table><tr><th>#</th><th>Title</th><th>Writer</th><th>Featuring</th><th>Printed in</th><th>Released</th></tr>
+<tr><td>4</td><td>Vortex Butterflies</td><td rowspan="2">Nick Abadzis</td><td>Gabby</td><td>10DY3 6 - 8, 10</td><td>x</td></tr>
+<tr><td>5</td><td>The Lost Dimension: The Tenth Doctor</td><td>Gabby, Cindy, Cybermen</td><td>10DY3 9</td><td>x</td></tr></table>
+<h3>Backup</h3><h4>Year One</h4>
+<table><tr><th>#</th><th>Title</th><th>Writer</th><th>Printed in</th></tr>
+<tr><td>1</td><td>A Backup Strip</td><td>Someone</td><td>10D 1-3</td></tr></table>"""
+        tabs = D.story_tables(H)
+        self.assertEqual([len(r) for _, r in tabs], [4, 2], "main tables only, backups ignored")
+        self.assertEqual(tabs[0][1][1]["writer"], "Nick Abadzis", "spanning writer cell copied down")
+        self.assertEqual(tabs[0][1][3]["writer"], "Robbie Morrison")
+        self.assertEqual(tabs[0][1][3]["printed"], "10D 10", "columns stay aligned under a span")
+        self.assertEqual(D.printed_issues("10DY3 6 - 8, 10"), [("10", "3", [6, 7, 8, 10])])
+        self.assertEqual(D.printed_issues("11DY3 9, 11"), [("11", "3", [9, 11])])
+        plan = D.build([("u", tabs)])
+        y1 = D.norm("Doctor Who: The Tenth Doctor - Year One")
+        self.assertEqual(plan[(y1, "2")]["Story Arc"], "Revolutions of Terror")
+        self.assertEqual((plan[(y1, "2")]["Arc Part"], plan[(y1, "2")]["Arc Length"], plan[(y1, "2")]["Finale Issue #"]), ("2", "3", "3"))
+        self.assertEqual(plan[(y1, "10")]["Arc Part"], "", "a one-issue story has no part numbers")
+        y3 = D.norm("Doctor Who: The Tenth Doctor — Year Three")
+        self.assertEqual((plan[(y3, "10")]["Story Arc"], plan[(y3, "10")]["Arc Part"], plan[(y3, "10")]["Arc Length"]), ("Vortex Butterflies", "4", "4"))
+        self.assertEqual(plan[(y3, "9")]["Story Arc"], "The Lost Dimension: The Tenth Doctor")
+        self.assertNotIn("A Backup Strip", {v["Story Arc"] for v in plan.values()})
+
     def test_many_links_one_title_requests_each_page_once(self):
         sb = self.sb
         rows = [["Moon Knight", i, 2000 + i, 5, str(i), None, None, None, None] for i in range(1, 21)]

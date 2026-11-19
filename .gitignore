@@ -170,3 +170,4 @@ arc_len_cache.json.tmp
 arc_len_fetch.lock
 arc_lengths.csv
 data-fixes*.json
+dw_wiki_cache/
