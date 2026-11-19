@@ -536,6 +536,59 @@ class T(unittest.TestCase):
         self.assertEqual(sb.newest()[0]["Writer(s)"], "Jason Aaron", r2.stdout + r2.stderr)
         self.assertIn("cells to change: 0", sb.run("brb_fix_writers.py", "writer_fixes_t.json").stdout)
 
+    def test_reclaim_restore_safe_and_idempotent(self):
+        # Nov 19: 775 dropped books restored from their last-known rows. Never double a book that
+        # is back (any volume / any tab), retired or over-full boxes -> UNKNOWN, year ranges -> year,
+        # extra copies flagged, guard needs FORCE, a second run adds 0.
+        sb = self.sb
+        import openpyxl
+        H = ["#", "Title", "Issue #", "Year", "Volume", "Box #", "Publisher", "Writer(s)", "⚠ Verify Duplicate"]
+        wb = openpyxl.Workbook(); ws = wb.active; ws.title = INV; ws.append(H)
+        ws.append([7, "Batman", "1", 2016, 3, 12, "DC", "Tom King", None])
+        ws.append([8, "Hulk", "1", 2008, 2, 40, "Marvel", "Jeph Loeb", None])
+        for k in range(79):
+            ws.append([9 + k, f"Filler {k}", "1", 2020, 1, 40, "DC", "W", None])   # box 40 cap 80: one slot left
+        d = wb.create_sheet("Duplicates"); d.append(["Box", "Title", "Issue", "Year"]); d.append([3, "Flash", "#5 [DUPLICATE]", 2011])
+        lg = wb.create_sheet("📝 Data Integrity Log"); lg.append(["0101_1200", "Dedup", "rows moved to Duplicates tab"])
+        wb.save(sb.p("attached_assets", "comics_inventory_0111_1200.xlsx"))
+        R = lambda t, i, y, b, v="1": {"was_entry": "1", "dropped": "2026-06-15", "commit": "6d2d85f",
+                                       "row": {"Title": t, "Issue #": i, "Year": y, "Box #": b, "Volume": v, "Publisher": "DC", "Writer(s)": "X"}}
+        sb.json("reclaim_restore_rows.json", [
+            R("Batman: Off World", "1", "2023–2024", "12"),     # new book, existing box -> restored, year 2023
+            R("Batman", "1", "2011", "60", "2"),                # Batman #1 is back (other volume) -> skip
+            R("Flash", "5", "2011", "3"),                       # on the Duplicates tab -> skip
+            R("Ghost Book", "", "2024", "39"),                  # no issue -> skip
+            R("Retired Box Book", "2", "2019", "84"),           # box 84 gone -> UNKNOWN
+            R("Twin", "3", "2019", "40"), R("Twin", "3", "2019", "40"),   # 2 copies; box 40 has 1 slot -> UNKNOWN, flagged
+        ])
+        r = sb.run("brb_reclaim_restore.py")
+        self.assertIn("to restore: 4", r.stdout, r.stdout + r.stderr)
+        self.assertIn("REPORT ONLY", r.stdout)
+        self.assertIn("Dedup", r.stdout, "integrity-log removals are shown first")
+        r = sb.run("brb_reclaim_restore.py", "--apply")
+        rows = {(x["Title"], str(x["Issue #"]), str(x["Box #"])): x for x in sb.newest()}
+        self.assertEqual(len(sb.newest()), 81 + 4, r.stdout + r.stderr)
+        ow = rows[("Batman: Off World", "1", "12")]
+        self.assertEqual(ow["Year"], 2023); self.assertEqual(ow["#"], 88)
+        self.assertIn(("Retired Box Book", "2", "UNKNOWN — needs physical reassignment"), rows)
+        twins = [x for x in sb.newest() if x["Title"] == "Twin"]
+        self.assertEqual({x["Box #"] for x in twins}, {"UNKNOWN — needs physical reassignment"})
+        self.assertTrue(all(x["⚠ Verify Duplicate"] for x in twins))
+        self.assertNotIn(("Batman", "1", "60"), rows); self.assertNotIn(("Flash", "5", "3"), rows)
+        lg = openpyxl.load_workbook(max(glob.glob(sb.p("attached_assets", "*.xlsx")), key=os.path.getmtime))["📝 Data Integrity Log"]
+        self.assertIn("Reclaim", str(lg.cell(lg.max_row, 2).value))
+        self.assertIn("to restore: 0", sb.run("brb_reclaim_restore.py").stdout, "second run adds nothing")
+
+    def test_reclaim_restore_guard_needs_force(self):
+        sb = self.sb
+        sb.xlsx(["#", "Title", "Issue #", "Year", "Volume", "Box #", "Publisher", "Writer(s)"], [[1, "A", "1", 2020, 1, 5, "DC", "W"]])
+        sb.json("reclaim_restore_rows.json", [{"row": {"Title": f"Lost {k}", "Issue #": "1", "Year": "2020", "Box #": "5", "Volume": "1"}} for k in range(60)])
+        r = sb.run("brb_reclaim_restore.py", "--apply")
+        self.assertNotEqual(r.returncode, 0); self.assertIn("SAFETY LIMIT", r.stdout)
+        self.assertEqual(len(sb.newest()), 1, "nothing saved over the limit")
+        r = sb.run("brb_reclaim_restore.py", "--apply", env={"BRB_FORCE": "1"})
+        self.assertEqual(len(sb.newest()), 61, r.stdout + r.stderr)
+
     def test_fandom_fill_wide_covers_comic_vine_cover_books(self):
         # Nov 19: Absolute Superman #1 - cover from Comic Vine, so the fill never opened its DC page.
         sb = self.sb
