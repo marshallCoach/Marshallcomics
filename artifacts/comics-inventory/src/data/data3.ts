@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_1711_1804.xlsx  |  Generated: 2026-11-17
+// Source: comics_inventory_1911_0528.xlsx  |  Generated: 2026-11-19
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -49,7 +49,7 @@ export const DATA3: {
     cc:      CatalogComic[];
   };
 } = {
-  generatedAt: "2026-11-17",
+  generatedAt: "2026-11-19",
   comics: [
   {
     Title: `52`, Issue: `1`, Publisher: `DC`,
@@ -18177,7 +18177,7 @@ DeFalco era Avengers.`,
     Seller_Notes: `Avengers Assemble (Orlando) #4. Steve Orlando.`, Story_Pitch: `Avengers Assemble (Orlando) #4.`,
     Content: `Avengers Assemble (Orlando) #4.`, Platform: `EBAY`,
     Sales_Data: `NM $5, VF $3`, Terrificon: ``,
-    Cover_Artist: `Leinil Francis Yu & Romulo Fajardo & Jr.`, Date_Added: `May 22, 2026`,
+    Cover_Artist: `Leinil Francis Yu & Romulo Fajardo Jr.`, Date_Added: `May 22, 2026`,
     Imprint: `Marvel`, Box: `27`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `3`, Entry: `6691`,
@@ -28784,7 +28784,7 @@ Jurgens is a DC copper age legend. Could sign this key.`,
     Seller_Notes: ``, Story_Pitch: ``,
     Content: ``, Platform: ``,
     Sales_Data: ``, Terrificon: ``,
-    Cover_Artist: `Leinil Francis Yu & Romulo Fajardo & Jr.`, Date_Added: `Aug 12, 2026 (CC box transcription)`,
+    Cover_Artist: `Leinil Francis Yu & Romulo Fajardo Jr.`, Date_Added: `Aug 12, 2026 (CC box transcription)`,
     Imprint: ``, Box: `CC2`,
     Crossover: ``, Start_Bid: ``,
     Volume: `1`, Entry: `13460`,
@@ -78228,9 +78228,9 @@ JRJr drew Fallen Son: Spider-Man. He is confirmed for Terrificon 2026. Bring for
     eBay_Avg: 6.72, eBay_Low: 3.5, eBay_High: 10, eBay_Count: 6, eBay_Median: 6.97,
   },
   {
-    Title: `Fantastic Four`, Issue: `49`, Publisher: `Marvel`,
+    Title: `Fantastic Four Facsimile Edition`, Issue: `49`, Publisher: `Marvel`,
     Disambig: ``,
-    Year: `1966`, Arc: `FF Ryan North run`, Key: `NO`,
+    Year: `2025`, Arc: `FF Ryan North run`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
     Writer: `Stan Lee & Jack Kirby`, Artist: `Jack Kirby`,
     Signed: `NO`, Signed_By: ``,
@@ -78245,7 +78245,7 @@ JRJr drew Fallen Son: Spider-Man. He is confirmed for Terrificon 2026. Bring for
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `9303`,
     Cover_Price: ``,
-    Pub_Date: `1966-01-00`,
+    Pub_Date: `2025-08-00`,
     eBay_Avg: 17.06, eBay_Low: 3, eBay_High: 37.27, eBay_Count: 8, eBay_Median: 12.5,
   },
   {
@@ -101234,7 +101234,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Disambig: ``,
     Year: `2021`, Arc: `Infinite Frontier — Williamson — COMPLETE`, Key: `YES`,
     Key_Reason: `Infinite Frontier #0 — Joshua Williamson; DC-wide relaunch issue; 🎉 COMPLETE 7-issue run (#0-6)!`, First_App: ``,
-    Writer: `Joshua Williamson & James Tynion IV & Scott Snyder & Geoffrey Thorne & Geoff Johns & Phillip Kennedy Johnson & Tim Sheridan & Joëlle Jones & Becky Cloonan & Michael W. Conrad & Brian Michael Bendis`, Artist: `John Romita Jr. & John Timms & Howard Porter & Dexter Soy & Jorge Jiménez & Todd Nauck & Alex Maleev & Jamal Igle & Rafa Sandoval & Stephen Byrne & Joëlle Jones & Alitha Martinez & David Marquez & John Romita & Jr.`,
+    Writer: `Joshua Williamson & James Tynion IV & Scott Snyder & Geoffrey Thorne & Geoff Johns & Phillip Kennedy Johnson & Tim Sheridan & Joëlle Jones & Becky Cloonan & Michael W. Conrad & Brian Michael Bendis`, Artist: `John Romita Jr. & John Timms & Howard Porter & Dexter Soy & Jorge Jiménez & Todd Nauck & Alex Maleev & Jamal Igle & Rafa Sandoval & Stephen Byrne & Joëlle Jones & Alitha Martinez & David Marquez`,
     Signed: `NO`, Signed_By: ``,
     Personal: `$6`, Condition: `NM (9.4)`,
     CGC_Worth: `NO`, Value_NM: `6.99`, Value_VF: `3`,
@@ -240461,7 +240461,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
   },
   {
     Num: `BOX 04`, Comics: 234, Keys: 21,
-    Signed: 0, YearRange: `1966-2025`,
+    Signed: 0, YearRange: `1987-2025`,
     Label: ``, FirstBook: `Annihilation Scourge: Fantastic Four 1`, LastBook: `X-Men + Fantastic Four 4`,
     Location: `Basement Front B — BFB-2`, Code: `BFB-2`, labeledAs: ``, Notes: ``, DateAdded: `May 24, 2026`,
   },
@@ -277138,7 +277138,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
   },
   {
     Title: `Battleworld`, Issue: `1`, Publisher: `Marvel`,
-    Year: `2025`, Volume: `1`, Cover_Artist: `Leinil Francis Yu & Romulo Fajardo & Jr.`,
+    Year: `2025`, Volume: `1`, Cover_Artist: `Leinil Francis Yu & Romulo Fajardo Jr.`,
     Key: `NO`, Key_Reason: `Battleworld #1 Christos Gage — $3.99 modern Marvel series`,
     Signed: `NO`, Signed_By: ``,
     Era: `Modern`, Writer: `Christos N. Gage`,
