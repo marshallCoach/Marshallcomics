@@ -1,9 +1,9 @@
 {
- "source": "comics_inventory_1911_1707.xlsx",
+ "source": "comics_inventory_1911_1757.xlsx",
  "generatedAt": "2026-11-19",
- "groupCount": 138,
- "sellableCount": 145,
- "estValue": 983.32,
+ "groupCount": 142,
+ "sellableCount": 149,
+ "estValue": 1006.32,
  "rows": [
   {
    "title": "Justice League",
@@ -751,6 +751,28 @@
    "sameBox": false
   },
   {
+   "title": "Disney's Gargoyles",
+   "issue": "1",
+   "year": "2023",
+   "volume": "1",
+   "publisher": "Dynamite",
+   "writer": "Greg Weisman",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 8.0,
+   "sellBoxes": [
+    "75"
+   ],
+   "keepBoxes": [
+    "75"
+   ],
+   "boxes": [
+    "75"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
    "title": "Justice League",
    "issue": "1",
    "year": "2011",
@@ -1175,6 +1197,29 @@
    "boxes": [
     "43",
     "52"
+   ],
+   "keepSigned": false,
+   "sameBox": false
+  },
+  {
+   "title": "Astonishing X-Men",
+   "issue": "48",
+   "year": "2012",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Marjorie Liu",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 5.0,
+   "sellBoxes": [
+    "3"
+   ],
+   "keepBoxes": [
+    "80"
+   ],
+   "boxes": [
+    "3",
+    "80"
    ],
    "keepSigned": false,
    "sameBox": false
@@ -1705,6 +1750,26 @@
    ],
    "keepSigned": true,
    "sameBox": false
+  },
+  {
+   "title": "Disney's Gargoyles",
+   "issue": "5",
+   "year": "2023",
+   "volume": "1",
+   "publisher": "Dynamite",
+   "writer": "",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 5.0,
+   "sellBoxes": [
+    "75"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "75"
+   ],
+   "keepSigned": false,
+   "sameBox": true
   },
   {
    "title": "Fantastic Four",
@@ -2735,6 +2800,26 @@
    ],
    "keepSigned": false,
    "sameBox": false
+  },
+  {
+   "title": "Uncanny X-Force",
+   "issue": "19",
+   "year": "2012",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Rick Remender",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 5.0,
+   "sellBoxes": [
+    "14"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "14"
+   ],
+   "keepSigned": false,
+   "sameBox": true
   },
   {
    "title": "Vengeance of the Moon Knight",
