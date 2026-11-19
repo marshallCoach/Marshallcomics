@@ -165,6 +165,14 @@ def main():
             raise RuntimeError("brb_extrapolate_covers failed")
     step("1b", "EXTRAPOLATE COVERS (confident sibling links)", extrapolate)
 
+    # 1c — re-send ARCHIVED links for books that still have gaps (a parser got smarter,
+    # or a cover was cleared), so step 2 fills them. NEW Nov 19: report-only until reviewed.
+    APPLY_RELINK = False
+    def relink():
+        if run([PY, os.path.join(ROOT, "brb_relink.py")] + (["--write"] if APPLY_RELINK else [])):
+            raise RuntimeError("brb_relink failed")
+    step("1c", "RE-SEND ARCHIVED LINKS FOR BOOKS WITH GAPS (" + ("write" if APPLY_RELINK else "report only") + ")", relink)
+
     # 2 — data-fix export from the site (optional input)
     def datafix():
         # Flagged-cover exports first (clears covers you marked wrong; covers you then

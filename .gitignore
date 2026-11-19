@@ -173,3 +173,4 @@ data-fixes*.json
 dw_wiki_cache/
 image_page_cache/
 dw_arcs.csv
+relink_state.json

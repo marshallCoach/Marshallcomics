@@ -439,6 +439,40 @@ class T(unittest.TestCase):
         r2 = sb.run("brb_apply_image_pages.py", "--apply", env={"PYTHONPATH": sb.p("site")})
         self.assertIn("cells to fill (blank only): 0   covers to add: 0", r2.stdout, "second run must change nothing")
 
+    def test_power_rangers_infobox_credits(self):
+        # Nov 19: powerrangers.fandom.com ComicInfo uses pencils= / releasedate= (real MMPR #101 text)
+        sys.path.insert(0, self.sb.dir)
+        import importlib, brb_apply_fandom_pages as A
+        importlib.reload(A)
+        wt = ("{{ComicInfo\n|image= MMPR 101 Cover A Main.webp\n|editor=[[Allyson Gronowitz]]\n"
+              "|coverartist=[[Mateus Manhanini]]\n|writer=[[Melissa Flores]] \n|pencils=[[Simona Di Gianfelice]]\n"
+              "|inks=[[Simona Di Gianfelice]]\n|colors=[[Raul Angulo]]\n|releasedate=October 26, 2022\n}}")
+        self.assertEqual(A.infobox_names(wt, A.CRED_PATS["artist"]), ["Simona Di Gianfelice"])
+        self.assertEqual(A.infobox_names(wt, A.CRED_PATS["writer"]), ["Melissa Flores"])
+        self.assertEqual(A.infobox_names(wt, A.CRED_PATS["cover"]), ["Mateus Manhanini"])
+        self.assertEqual(A.infobox_names("|Penciler1_1 = John Romita Jr.\n", A.CRED_PATS["artist"]), ["John Romita Jr."], "Marvel style still works")
+
+    def test_relink_resends_archived_links_once(self):
+        sb = self.sb
+        sb.xlsx(["Title", "Issue #", "Year", "Volume", "Box #", "Publication Date", "Writer(s)", "Artist(s)", "Cover Artist"],
+                [["MMPR", 101, 2022, 1, "103", "2022-10-00", "Melissa Flores", None, "Mateus Manhanini"],
+                 ["Done", 1, 2020, 1, "5", "2020-01-00", "W", "A", "C"]])
+        sb.json("covers.json", {"Done|||1|||1": {"url": "x"}, "MMPR|||101|||1": None})
+        os.makedirs(sb.p("processed_exports"), exist_ok=True)
+        rec = lambda t, i, b, u: {"title": t, "issue": i, "box": b, "problem": "no-cover", "kind": "fandom", "value": u}
+        sb.json("processed_exports/20261117_data-fixes-2026-11-17.json",
+                [rec("MMPR", "101", "103", "https://powerrangers.fandom.com/wiki/MMPR_Issue_101?file=MMPR_101_Cover_G.jpeg"),
+                 rec("Done", "1", "5", "https://marvel.fandom.com/wiki/Done_Vol_1_1")])
+        r = sb.run("brb_relink.py")
+        self.assertIn("to re-send: 1", r.stdout, r.stdout + r.stderr)
+        self.assertFalse(glob.glob(sb.p("data-fixes-relink-*.json")), "report-only writes nothing")
+        sb.run("brb_relink.py", "--write")
+        out = json.load(open(glob.glob(sb.p("data-fixes-relink-*.json"))[0]))
+        self.assertEqual([x["title"] for x in out], ["MMPR"], "only the book with gaps")
+        self.assertIn("file=MMPR_101_Cover_G.jpeg", out[0]["value"], "your cover pick is kept")
+        r3 = sb.run("brb_relink.py", "--write")
+        self.assertIn("nothing to re-send", r3.stdout, "re-sent once per parser version, never loops")
+
     def test_many_links_one_title_requests_each_page_once(self):
         sb = self.sb
         rows = [["Moon Knight", i, 2000 + i, 5, str(i), None, None, None, None] for i in range(1, 21)]

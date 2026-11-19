@@ -62,7 +62,8 @@ def yr(v):
 # Writers=/Pencilers=/CoverArtists=. Match both.
 CRED_PATS = {
     "writer": r"\|\s*Writers?\d*_?\d*\s*=\s*([^\n|]+)",
-    "artist": r"\|\s*(?:Pencilers?|Artists?)\d*_?\d*\s*=\s*([^\n|]+)",
+    # Marvel/DC: Penciler1_1 / Artist1. Franchise wikis (Power Rangers ComicInfo): pencils= / penciller=
+    "artist": r"\|\s*(?:Pencil(?:l?ers?|s)|Artists?)\d*_?\d*\s*=\s*([^\n|]+)",
     # Marvel Database credits the COVER via Image1_Artist1/2 (the artists of the
     # primary cover image), not a CoverArtist field. Match both, but only
     # Image1_* (Image2_* is the variant/textless cover).
