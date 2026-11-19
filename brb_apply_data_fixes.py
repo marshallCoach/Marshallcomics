@@ -189,7 +189,7 @@ def main():
         return False
 
     for rec in recs:
-        if rec.get("problem") in ("series-match", "arc-conflict"):   # series/arc decisions, not row fixes
+        if rec.get("problem") in ("series-match", "arc-conflict", "reclaim"):   # handled by their own steps, not row fixes
             continue
         r = rowmap.get(key(rec.get("title"), rec.get("issue"), rec.get("box")))
         if not r:

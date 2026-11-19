@@ -47,10 +47,11 @@ const partTxt = (a: ArcSide) => a.part ? ` · part ${a.part}${a.length ? ` of ${
 
 type SMCand = { base: string; url: string; verified: number; of: number; years: number[]; sim: number };
 type SeriesMatch = { key: string; wiki: string; title: string; vol: string; count: number; years: number[]; issues: string[]; reason: string; best: SMCand | null; conf: "high" | "medium" | "none"; cands: SMCand[] };
+type Reclaim = { id: string; tier: 1 | 2; today: string; title: string; issue: string; year: string; box: string; pub: string; vol: string; dropped: string; commit: string; why: string };
 type SeriesHeld = { key: string; title: string; vol: string; fandom: string; wiki: string; fit: number };
 const SM_COLOR = { high: "#16a34a", medium: "#d97706", none: "#dc2626" } as const;
 
-type ProblemId = "series-match" | "arc-conflict" | "no-date" | "date-conflict" | "no-volume" | "no-year" | "likely-variant" | "not-in-gcd" | "no-cover";
+type ProblemId = "series-match" | "arc-conflict" | "no-date" | "date-conflict" | "no-volume" | "no-year" | "likely-variant" | "not-in-gcd" | "no-cover" | "cover-no-data";
 
 const PROBLEMS: { id: ProblemId; label: string; blurb: string; color: string; vol?: boolean; yr?: boolean; info?: boolean; solutions: { key: string; label: string }[] }[] = [
   { id: "no-date",       label: "Missing publication date", blurb: "Not matched in GCD/Comic Vine — no on-sale date", color: "#c8102e",
@@ -65,9 +66,17 @@ const PROBLEMS: { id: ProblemId; label: string; blurb: string; color: string; vo
     solutions: [{ key: "confirm-variant", label: "✓ Cover's right — keep as variant" }, { key: "not-variant", label: "Not a variant (regular copy)" }] },
   { id: "not-in-gcd",    label: "Not in GCD",                blurb: "Informational — GCD has no series, but most are verified by a Fandom cover or are variants/recent. Not counted as work.", color: "#0891b2", vol: true, info: true,
     solutions: [{ key: "indie", label: "Indie — not catalogued" }, { key: "research", label: "Needs research" }] },
+  { id: "cover-no-data", label: "Has a cover, but missing data", blurb: "The cover is right but credits / date / volume are blank — paste the Fandom page and the next run fills the gaps", color: "#059669",
+    solutions: [{ key: "no-entry", label: "Nothing more to find — accept blanks" }] },
   { id: "no-cover",      label: "Missing cover",             blurb: "No cover image yet — paste the Fandom page link to pull one (big bucket; collapsed by default)", color: "#2563eb",
     solutions: [{ key: "no-art", label: "No art available — accept blank" }] },
 ];
+// Fields a cover-bearing book should also have (blank / placeholder = missing).
+const DATA_FIELDS: [keyof Comic | "Pub_Date", string][] = [["Writer", "writer"], ["Artist", "artist"], ["Cover_Artist", "cover artist"], ["Pub_Date", "pub date"], ["Volume", "volume"], ["Year", "year"]];
+const missingData = (c: Comic) => DATA_FIELDS.filter(([k]) => {
+  const v = String((c as unknown as Record<string, unknown>)[k] ?? "").trim();
+  return !v || /^(n\/a|unknown|\?|tbd|none|nan)$/i.test(v);
+}).map(([, label]) => label);
 const PROBLEM_MAP = Object.fromEntries(PROBLEMS.map(p => [p.id, p]));
 // Informational problems are shown for reference but excluded from the "to go"
 // count and the default (all) view — they need no per-book action here.
@@ -153,6 +162,11 @@ export default function DataFix() {
   const [seriesMatch, setSeriesMatch] = useState<SeriesMatch[]>([]);
   const [seriesMapped, setSeriesMapped] = useState<Record<string, unknown>>({});
   const [seriesHeld, setSeriesHeld] = useState<SeriesHeld[]>([]);
+  const [reclaim, setReclaim] = useState<Reclaim[]>([]);
+  const [rcOpen, setRcOpen] = useState(false);
+  const [rcTitle, setRcTitle] = useState<string | null>(null);
+  const [rcTier, setRcTier] = useState<1 | 2>(1);
+  const [rcUndo, setRcUndo] = useState<string[][]>([]);
   const [smOpen, setSmOpen] = useState(false);
   const [smPick, setSmPick] = useState<Record<string, string>>({});
   const [acOpen, setAcOpen] = useState(false);
@@ -180,6 +194,8 @@ export default function DataFix() {
       .then((a: string[]) => setVariantDone(new Set(Array.isArray(a) ? a : []))).catch(() => {});
     fetch(`${BASE}/series_match.json`).then(r => r.ok ? r.json() : [])
       .then((a: SeriesMatch[]) => setSeriesMatch(Array.isArray(a) ? a : [])).catch(() => {});
+    fetch(`${BASE}/reclaim_candidates.json`).then(r => r.ok ? r.json() : [])
+      .then((a: Reclaim[]) => setReclaim(Array.isArray(a) ? a : [])).catch(() => {});
     fetch(`${BASE}/series_held.json`).then(r => r.ok ? r.json() : [])
       .then((a: SeriesHeld[]) => setSeriesHeld(Array.isArray(a) ? a : [])).catch(() => {});
     fetch(`${BASE}/series_map.json`).then(r => r.ok ? r.json() : {})
@@ -200,6 +216,7 @@ export default function DataFix() {
       let ps = problemsFor(c);
       if (notInGcd.has(id)) ps.push("not-in-gcd");
       if (coversLoaded && coverUrlSync(c) === null) ps.push("no-cover");
+      else if (coversLoaded && missingData(c).length) ps.push("cover-no-data");
       // Triage memory: any problem you've already resolved on this book (from the
       // committed resolved_flags.json, rebuilt from all your exports) is dropped so
       // it never re-asks. variantDone covers legacy CC1 confirmations too.
@@ -361,7 +378,7 @@ export default function DataFix() {
       // Keep link records (fandom/image) even for non-flagged books — the user
       // pasted them to apply (unresolved / too-new rows). Only prune stale
       // 'solution' records whose underlying problem is gone.
-      for (const [id, rec] of [...next]) if (!ids.has(id) && rec.kind === "solution" && !["arc-conflict", "series-match"].includes(rec.problem as string)) { next.delete(id); changed = true; }
+      for (const [id, rec] of [...next]) if (!ids.has(id) && rec.kind === "solution" && !["arc-conflict", "series-match", "reclaim"].includes(rec.problem as string)) { next.delete(id); changed = true; }
       if (changed) saveFixes(next);
       return changed ? next : prev;
     });
@@ -432,6 +449,42 @@ export default function DataFix() {
     const f = fixes.get(`${h.key}|||series`) as unknown as { value?: string } | undefined;
     const v = String(f?.value || ""); return !v || v.startsWith("map:");
   }), [seriesHeld, fixes]);
+  // Reclaim: books that dropped out of the inventory (history scan, Nov 19). A click
+  // records Still own / Sold and the book leaves the list; Export carries the answers.
+  const openReclaim = useMemo(() => reclaim.filter(r => !fixes.has(`reclaim|||${r.id}`)), [reclaim, fixes]);
+  const reclaimDone = useMemo(() => {
+    let own = 0, sold = 0;
+    for (const r of reclaim) { const f = fixes.get(`reclaim|||${r.id}`) as unknown as { value?: string } | undefined; if (f?.value === "own") own++; else if (f?.value === "sold" || f?.value === "same") sold++; }
+    return { own, sold, t1: openReclaim.filter(r => r.tier !== 2).length, t2: openReclaim.filter(r => r.tier === 2).length };
+  }, [reclaim, fixes, openReclaim]);
+  const reclaimGroups = useMemo(() => {
+    const g = new Map<string, Reclaim[]>();
+    for (const r of openReclaim) { if ((r.tier === 2 ? 2 : 1) !== rcTier) continue; if (!g.has(r.title)) g.set(r.title, []); g.get(r.title)!.push(r); }
+    const num = (x: string) => { const n = parseFloat(x); return Number.isFinite(n) ? n : 1e9; };
+    return [...g.entries()].map(([t, rows]) => [t, rows.sort((a, b) => num(a.issue) - num(b.issue))] as const)
+      .sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]));
+  }, [openReclaim, rcTier]);
+  const decideReclaim = useCallback((list: Reclaim[], value: "own" | "sold" | "same") => {
+    const at = new Date().toISOString();
+    setFixes(prev => {
+      const n = new Map(prev);
+      for (const r of list) {
+        const id = `reclaim|||${r.id}`;
+        n.set(id, { id, title: r.title, issue: r.issue, box: r.box, problem: "reclaim", kind: "solution", value, at,
+                    year: r.year, vol: r.vol, pub: r.pub, entry: r.id, dropped: r.dropped, tier: r.tier } as unknown as FixRecord);
+      }
+      saveFixes(n); return n;
+    });
+    setRcUndo(u => [...u.slice(-19), list.map(r => `reclaim|||${r.id}`)]);
+    setMeta(bumpStreak()); setPop(p => p + 1);
+  }, []);
+  const undoReclaim = useCallback(() => {
+    setRcUndo(u => {
+      const last = u[u.length - 1]; if (!last) return u;
+      setFixes(prev => { const n = new Map(prev); for (const id of last) n.delete(id); saveFixes(n); return n; });
+      return u.slice(0, -1);
+    });
+  }, []);
   const openSeries = useMemo(() => seriesMatch.filter(m => !fixes.has(`${m.key}|||series`) && !(m.key in seriesMapped)), [seriesMatch, fixes, seriesMapped]);
   const decideSeries = useCallback((list: SeriesMatch[], valueFor: (m: SeriesMatch) => string | null) => {
     const at = new Date().toISOString();
@@ -726,6 +779,68 @@ export default function DataFix() {
         </section>
       )}
 
+      {/* Reclaim missing books — dropped out of the inventory in past deploys (mostly the
+          Jun 15 one). Still own -> restored to its old box after you confirm; Sold -> left out. */}
+      {(openReclaim.length > 0 || reclaimDone.own + reclaimDone.sold > 0) && (
+        <section className="df-group" style={{ marginBottom: 14 }}>
+          <button className="df-group-hd" onClick={() => setRcOpen(o => !o)} style={{ borderLeft: "4px solid #dc2626" }}>
+            <span className="df-group-name"><span className="df-chev">{rcOpen ? "▾" : "▸"}</span> 🛟 Reclaim missing books — do you still own these?</span>
+            <span className="df-chip-n">{openReclaim.length}</span>
+          </button>
+          {rcOpen && (
+            <div style={{ padding: "10px 14px", display: "flex", flexDirection: "column", gap: 8 }}>
+              <div style={{ fontSize: "0.78rem", color: "var(--muted2,#aaa)" }}>
+                These books were in your inventory and dropped out during a past update (most on Jun 15). Nothing is restored until you confirm the list.
+                <b> Still own</b> = put it back in its old box · <b>Sold / gone</b> = leave it out. A click removes the book from this list; <b>Export</b> saves your answers.
+              </div>
+              <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap", fontSize: "0.82rem" }}>
+                <span>✓ restore <b>{reclaimDone.own}</b> · ✗ leave out <b>{reclaimDone.sold}</b> · left <b>{openReclaim.length}</b></span>
+                <button className="df-link-save" disabled={!rcUndo.length} style={{ background: "transparent", color: "var(--muted,#888)" }} onClick={undoReclaim}>↶ Undo last</button>
+              </div>
+              <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+                {([[1, `Tier 1 · not in your data in ANY volume (${reclaimDone.t1})`], [2, `Tier 2 · same title+issue exists in another volume/year (${reclaimDone.t2})`]] as const).map(([t, label]) => (
+                  <button key={t} onClick={() => { setRcTier(t); setRcTitle(null); }}
+                    style={{ border: `1px solid ${rcTier === t ? "#dc2626" : "var(--border,#2c2c38)"}`, background: rcTier === t ? "rgba(220,38,38,0.12)" : "transparent", color: "inherit", borderRadius: 999, padding: "4px 10px", cursor: "pointer", fontSize: "0.78rem" }}>{label}</button>
+                ))}
+              </div>
+              <div style={{ fontSize: "0.78rem", color: "var(--muted2,#aaa)" }}>
+                {rcTier === 1 ? <>Title + issue + volume checked: no copy of these exists today in any volume or the CC catalogs. <b>✓</b> = still own, restore it · <b>✗</b> = sold / gone.</>
+                  : <>Your data still has this title + issue but in a <b>different volume or year</b> (shown under each book). <b>✓ Separate copy</b> = a second book that got lost, restore it · <b>✗ Same book</b> = it's the one already listed (its volume/year was just corrected).</>}
+              </div>
+              {reclaimGroups.map(([title, rows]) => {
+                const open = rcTitle === title;
+                return (
+                  <div key={title} style={{ border: "1px solid var(--border,#2c2c38)", borderRadius: 6, fontSize: "0.82rem" }}>
+                    <div style={{ display: "flex", gap: 6, alignItems: "center", flexWrap: "wrap", padding: "6px 10px" }}>
+                      <button onClick={() => setRcTitle(open ? null : title)} style={{ background: "none", border: "none", color: "inherit", cursor: "pointer", padding: 0, textAlign: "left", flex: 1, minWidth: 160 }}>
+                        <span className="df-chev">{open ? "▾" : "▸"}</span> <b>{title}</b> <span style={{ color: "var(--muted2,#aaa)" }}>· {rows.length} · #{rows.slice(0, 8).map(r => r.issue).join(", #")}{rows.length > 8 ? "…" : ""}</span>
+                      </button>
+                      <button className="df-link-save" onClick={() => decideReclaim(rows, "own")}>{rcTier === 1 ? "✓ All still own" : "✓ All separate copies"}</button>
+                      <button className="df-link-save" style={{ background: "#6b7280" }} onClick={() => decideReclaim(rows, rcTier === 1 ? "sold" : "same")}>{rcTier === 1 ? "✗ All sold" : "✗ All same book"}</button>
+                    </div>
+                    {open && (
+                      <div style={{ display: "flex", gap: 10, flexWrap: "wrap", padding: "4px 10px 10px" }}>
+                        {rows.map(r => (
+                          <div key={r.id} style={{ width: 112, display: "flex", flexDirection: "column", gap: 4, alignItems: "center", textAlign: "center" }}>
+                            <CoverImage comic={{ Title: r.title, Issue: r.issue, Year: r.year, Publisher: r.pub, Volume: r.vol, Box: r.box } as unknown as Comic} width={90} height={135} style={{ borderRadius: 4 }} />
+                            <div><b>#{r.issue}</b> · Vol {r.vol || "?"} · {r.year}<br /><span style={{ color: "var(--muted2,#aaa)" }}>was Box {r.box} · {r.dropped.slice(5)}</span>
+                              {r.tier === 2 && r.today && <><br /><span style={{ color: "#d97706" }}>today: {r.today}</span></>}</div>
+                            <div style={{ display: "flex", gap: 4 }}>
+                              <button className="df-link-save" style={{ padding: "3px 8px" }} title="Still own - restore it" onClick={() => decideReclaim([r], "own")}>✓</button>
+                              <button className="df-link-save" style={{ padding: "3px 8px", background: "#6b7280" }} title={r.tier === 2 ? "Same book - already listed" : "Sold / gone"} onClick={() => decideReclaim([r], r.tier === 2 ? "same" : "sold")}>✗</button>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          )}
+        </section>
+      )}
+
       {/* Arc-name conflicts — Fandom and Comic Vine name a different story arc for
           the same book. Keep Fandom, take Comic Vine, or paste the right Fandom page
           (the Mac run reads the arc off that page). */}
@@ -963,6 +1078,11 @@ export default function DataFix() {
                               onKeyDown={e => { if (e.key === "Enter" && /^\d{4}$/.test(yearDraft[id] || "")) resolve(c, id, g.pid, "solution", `year:${yearDraft[id].trim()}`); }} />
                             <button className="df-link-save" style={{ background: "#0e7490" }} disabled={!/^\d{4}$/.test(yearDraft[id] || "")}
                               onClick={() => resolve(c, id, g.pid, "solution", `year:${(yearDraft[id] || "").trim()}`)}>Set year</button>
+                          </div>
+                        )}
+                        {g.pid === "cover-no-data" && (
+                          <div style={{ fontSize: ".75rem", color: "#059669", margin: "2px 0" }}>
+                            Missing: <b>{missingData(c).join(" · ")}</b>
                           </div>
                         )}
                         {g.pid === "likely-variant" && (
