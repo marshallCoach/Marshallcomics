@@ -493,6 +493,21 @@ class T(unittest.TestCase):
         finally:
             urllib.request.urlopen, I.subprocess.run = real_open, real_run
 
+    def test_writer_fixes_only_touch_reviewed_cells(self):
+        sb = self.sb
+        sb.xlsx(["Title", "Issue #", "Year", "Volume", "Box #", "Writer(s)", "Artist(s)"],
+                [["Ultimate X-Men", 53, 2005, 1, "23", "Brian Michael Bendis", "A"],
+                 ["Ultimate X-Men", 54, 2005, 1, "23", "Someone You Edited", "B"]])
+        sb.json("fx.json", [
+            {"title": "Ultimate X-Men", "volume": "1", "issue": "53", "year": "2005", "box": "23", "old": "Brian Michael Bendis", "new": "Brian K. Vaughan"},
+            {"title": "Ultimate X-Men", "volume": "1", "issue": "54", "year": "2005", "box": "23", "old": "Brian Michael Bendis", "new": "Brian K. Vaughan"}])
+        r = sb.run("brb_fix_writers.py", "fx.json", "--apply")
+        w = {x["Issue #"]: x["Writer(s)"] for x in sb.newest()}
+        self.assertEqual(w[53], "Brian K. Vaughan", r.stdout + r.stderr)
+        self.assertEqual(w[54], "Someone You Edited", "a cell changed since review is left alone")
+        r2 = sb.run("brb_fix_writers.py", "fx.json", "--apply")
+        self.assertIn("cells to change: 0", r2.stdout, "second run changes nothing")
+
     def test_many_links_one_title_requests_each_page_once(self):
         sb = self.sb
         rows = [["Moon Knight", i, 2000 + i, 5, str(i), None, None, None, None] for i in range(1, 21)]

@@ -1,0 +1,686 @@
+[
+ {
+  "title": "Young Justice",
+  "volume": "3",
+  "issue": "2",
+  "year": "2019",
+  "box": "60",
+  "old": "Peter David & Joseph Illidge & Peter J. Tomasi & Lary Stucker & Chuck Dixon & Jay Faerber & Beau Smith & Scott Beatty",
+  "new": "Brian Michael Bendis"
+ },
+ {
+  "title": "Astonishing X-Men",
+  "volume": "3",
+  "issue": "42",
+  "year": "2011",
+  "box": "3",
+  "old": "Christos Gage & John Dudas & Brian Michael Bendis",
+  "new": "Christos N. Gage"
+ },
+ {
+  "title": "Avengers",
+  "volume": "8",
+  "issue": "12",
+  "year": "2019",
+  "box": "6",
+  "old": "Brian Michael Bendis",
+  "new": "Jason Aaron"
+ },
+ {
+  "title": "Avengers",
+  "volume": "5",
+  "issue": "22",
+  "year": "2012",
+  "box": "24",
+  "old": "Brian Michael Bendis",
+  "new": "Jonathan Hickman"
+ },
+ {
+  "title": "Avengers vs. X-Men",
+  "volume": "1",
+  "issue": "2",
+  "year": "2012",
+  "box": "19",
+  "old": "Jason Aaron & Brian Michael Bendis & Ed Brubaker & Jonathan Hickman & Matt Fraction",
+  "new": "Jason Aaron"
+ },
+ {
+  "title": "Avengers vs. X-Men",
+  "volume": "1",
+  "issue": "3",
+  "year": "2012",
+  "box": "19",
+  "old": "Jason Aaron & Brian Michael Bendis & Ed Brubaker & Jonathan Hickman & Matt Fraction",
+  "new": "Ed Brubaker"
+ },
+ {
+  "title": "Avengers vs. X-Men",
+  "volume": "1",
+  "issue": "4",
+  "year": "2012",
+  "box": "19",
+  "old": "Jason Aaron & Brian Michael Bendis & Ed Brubaker & Jonathan Hickman & Matt Fraction",
+  "new": "Jonathan Hickman"
+ },
+ {
+  "title": "Avengers vs. X-Men",
+  "volume": "1",
+  "issue": "5",
+  "year": "2012",
+  "box": "19",
+  "old": "Jason Aaron & Brian Michael Bendis & Ed Brubaker & Jonathan Hickman & Matt Fraction",
+  "new": "Matt Fraction"
+ },
+ {
+  "title": "Avengers vs. X-Men",
+  "volume": "1",
+  "issue": "6",
+  "year": "2012",
+  "box": "19",
+  "old": "Jason Aaron & Brian Michael Bendis & Ed Brubaker & Jonathan Hickman & Matt Fraction",
+  "new": "Jonathan Hickman"
+ },
+ {
+  "title": "Avengers vs. X-Men",
+  "volume": "1",
+  "issue": "7",
+  "year": "2012",
+  "box": "19",
+  "old": "Jason Aaron & Brian Michael Bendis & Ed Brubaker & Jonathan Hickman & Matt Fraction",
+  "new": "Matt Fraction"
+ },
+ {
+  "title": "Avengers vs. X-Men",
+  "volume": "1",
+  "issue": "9",
+  "year": "2012",
+  "box": "19",
+  "old": "Jason Aaron & Brian Michael Bendis & Ed Brubaker & Jonathan Hickman & Matt Fraction",
+  "new": "Jason Aaron"
+ },
+ {
+  "title": "Avengers vs. X-Men",
+  "volume": "1",
+  "issue": "10",
+  "year": "2012",
+  "box": "19",
+  "old": "Jason Aaron & Brian Michael Bendis & Ed Brubaker & Jonathan Hickman & Matt Fraction",
+  "new": "Ed Brubaker"
+ },
+ {
+  "title": "Avengers vs. X-Men",
+  "volume": "1",
+  "issue": "12",
+  "year": "2012",
+  "box": "19",
+  "old": "Jason Aaron & Brian Michael Bendis & Ed Brubaker & Jonathan Hickman & Matt Fraction",
+  "new": "Jason Aaron"
+ },
+ {
+  "title": "Hulk",
+  "volume": "2",
+  "issue": "41",
+  "year": "2011",
+  "box": "22",
+  "old": "Jeff Parker & John Dudas & Brian Michael Bendis",
+  "new": "Jeff Parker"
+ },
+ {
+  "title": "Elektra",
+  "volume": "3",
+  "issue": "7",
+  "year": "2001",
+  "box": "8",
+  "old": "Greg Rucka & Brian Michael Bendis",
+  "new": "Greg Rucka"
+ },
+ {
+  "title": "Elektra",
+  "volume": "3",
+  "issue": "8",
+  "year": "2001",
+  "box": "8",
+  "old": "Greg Rucka & Brian Michael Bendis",
+  "new": "Greg Rucka"
+ },
+ {
+  "title": "Elektra",
+  "volume": "3",
+  "issue": "9",
+  "year": "2001",
+  "box": "8",
+  "old": "Greg Rucka & Brian Michael Bendis",
+  "new": "Greg Rucka"
+ },
+ {
+  "title": "Elektra",
+  "volume": "3",
+  "issue": "10",
+  "year": "2001",
+  "box": "8",
+  "old": "Greg Rucka & Brian Michael Bendis & Bruce Jones",
+  "new": "Greg Rucka"
+ },
+ {
+  "title": "Elektra",
+  "volume": "3",
+  "issue": "11",
+  "year": "2001",
+  "box": "8",
+  "old": "Greg Rucka & Brian Michael Bendis",
+  "new": "Greg Rucka"
+ },
+ {
+  "title": "Elektra",
+  "volume": "3",
+  "issue": "12",
+  "year": "2001",
+  "box": "8",
+  "old": "Greg Rucka & Brian Michael Bendis",
+  "new": "Greg Rucka"
+ },
+ {
+  "title": "Elektra",
+  "volume": "3",
+  "issue": "13",
+  "year": "2001",
+  "box": "8",
+  "old": "Greg Rucka & Brian Michael Bendis",
+  "new": "Greg Rucka"
+ },
+ {
+  "title": "Mighty Avengers",
+  "volume": "1",
+  "issue": "21",
+  "year": "2009",
+  "box": "6",
+  "old": "Brian Michael Bendis",
+  "new": "Dan Slott"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "17",
+  "year": "2001",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Mark Millar"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "18",
+  "year": "2001",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman & Ron Zimmerman",
+  "new": "Mark Millar"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "19",
+  "year": "2001",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Mark Millar"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "20",
+  "year": "2001",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Mark Millar"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "50",
+  "year": "2004",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Brian K. Vaughan"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "51",
+  "year": "2004",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Brian K. Vaughan"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "52",
+  "year": "2004",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Brian K. Vaughan"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "53",
+  "year": "2005",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Brian K. Vaughan"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "54",
+  "year": "2005",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Brian K. Vaughan"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "55",
+  "year": "2005",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Brian K. Vaughan"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "56",
+  "year": "2005",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Brian K. Vaughan"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "57",
+  "year": "2005",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Brian K. Vaughan"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "58",
+  "year": "2005",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Brian K. Vaughan"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "59",
+  "year": "2005",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Brian K. Vaughan"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "60",
+  "year": "2005",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Brian K. Vaughan"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "61",
+  "year": "2005",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Brian K. Vaughan"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "62",
+  "year": "2005",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Brian K. Vaughan"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "63",
+  "year": "2005",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Brian K. Vaughan"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "64",
+  "year": "2005",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Brian K. Vaughan"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "65",
+  "year": "2006",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Brian K. Vaughan & Mark Millar"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "66",
+  "year": "2006",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Robert Kirkman"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "67",
+  "year": "2006",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Robert Kirkman"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "68",
+  "year": "2006",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Robert Kirkman"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "69",
+  "year": "2006",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Robert Kirkman"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "70",
+  "year": "2006",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Robert Kirkman"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "71",
+  "year": "2006",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Robert Kirkman"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "72",
+  "year": "2006",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman & Karl Kesel",
+  "new": "Robert Kirkman"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "73",
+  "year": "2006",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Robert Kirkman"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "74",
+  "year": "2006",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Robert Kirkman"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "75",
+  "year": "2006",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman & Sean McKeever",
+  "new": "Robert Kirkman & Sean McKeever"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "76",
+  "year": "2006",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Robert Kirkman"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "77",
+  "year": "2007",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Robert Kirkman"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "78",
+  "year": "2007",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Robert Kirkman"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "79",
+  "year": "2007",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Robert Kirkman"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "80",
+  "year": "2007",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Robert Kirkman"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "81",
+  "year": "2007",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Robert Kirkman"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "82",
+  "year": "2007",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Robert Kirkman"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "83",
+  "year": "2007",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Robert Kirkman"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "84",
+  "year": "2007",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Robert Kirkman"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "86",
+  "year": "2007",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Robert Kirkman"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "87",
+  "year": "2007",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Robert Kirkman"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "88",
+  "year": "2008",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Robert Kirkman"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "89",
+  "year": "2008",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Robert Kirkman"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "90",
+  "year": "2008",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Robert Kirkman"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "91",
+  "year": "2008",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Robert Kirkman"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "92",
+  "year": "2008",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Robert Kirkman"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "93",
+  "year": "2008",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Robert Kirkman"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "94",
+  "year": "2008",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Aron E. Coleite"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "95",
+  "year": "2008",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Aron E. Coleite"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "96",
+  "year": "2008",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Aron E. Coleite"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "97",
+  "year": "2008",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Aron E. Coleite"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "98",
+  "year": "2009",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Aron E. Coleite"
+ },
+ {
+  "title": "Ultimate X-Men",
+  "volume": "1",
+  "issue": "99",
+  "year": "2009",
+  "box": "23",
+  "old": "Brian Michael Bendis & Mark Millar & Brian K. Vaughan & Robert Kirkman",
+  "new": "Aron E. Coleite"
+ },
+ {
+  "title": "X-Men: Battle of the Atom",
+  "volume": "1",
+  "issue": "2",
+  "year": "2013",
+  "box": "15",
+  "old": "Brian Michael Bendis & Jason Aaron & Brian Wood",
+  "new": "Jason Aaron"
+ }
+]
