@@ -166,6 +166,7 @@ export default function DataFix() {
   const [rcOpen, setRcOpen] = useState(false);
   const [rcTitle, setRcTitle] = useState<string | null>(null);
   const [rcTier, setRcTier] = useState<1 | 2>(1);
+  const [rcCovers, setRcCovers] = useState<Record<string, { url: string; large: string }>>({});
   const [rcUndo, setRcUndo] = useState<string[][]>([]);
   const [smOpen, setSmOpen] = useState(false);
   const [smPick, setSmPick] = useState<Record<string, string>>({});
@@ -194,6 +195,8 @@ export default function DataFix() {
       .then((a: string[]) => setVariantDone(new Set(Array.isArray(a) ? a : []))).catch(() => {});
     fetch(`${BASE}/series_match.json`).then(r => r.ok ? r.json() : [])
       .then((a: SeriesMatch[]) => setSeriesMatch(Array.isArray(a) ? a : [])).catch(() => {});
+    fetch(`${BASE}/reclaim_covers.json`).then(r => r.ok ? r.json() : {})
+      .then((o: Record<string, { url: string; large: string }>) => setRcCovers(o && typeof o === "object" ? o : {})).catch(() => {});
     fetch(`${BASE}/reclaim_candidates.json`).then(r => r.ok ? r.json() : [])
       .then((a: Reclaim[]) => setReclaim(Array.isArray(a) ? a : [])).catch(() => {});
     fetch(`${BASE}/series_held.json`).then(r => r.ok ? r.json() : [])
@@ -290,6 +293,31 @@ export default function DataFix() {
   }, [titleGroups]);
   // Match a Fandom-fill-unresolved record (title/issue) back to its inventory row,
   // so the user can still paste a link for it and it saves through the pipeline.
+  // Covers to jog the memory: a series' own books, ones with a cover first, lowest issue first.
+  const byTitle = useMemo(() => {
+    const g = new Map<string, Comic[]>();
+    for (const c of comics) { const t = (c.Title || "").trim(); if (!g.has(t)) g.set(t, []); g.get(t)!.push(c); }
+    const n = (x: unknown) => { const v = parseFloat(String(x ?? "").replace(/^#/, "")); return Number.isFinite(v) ? v : 1e9; };
+    for (const list of g.values()) list.sort((a, b) => n(a.Issue) - n(b.Issue));
+    return g;
+  }, []);
+  const coversFor = useCallback((title: string, vol?: string, max = 4) => {
+    const all = byTitle.get((title || "").trim()) || [];
+    const pool = vol ? all.filter(c => String(c.Volume || "1") === String(vol)) : all;
+    const list = pool.length ? pool : all;
+    return [...list.filter(c => coverUrlSync(c)), ...list.filter(c => !coverUrlSync(c))].slice(0, max);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [byTitle, coversLoaded]);
+  const strip = (list: Comic[], w = 54) => list.length > 0 && (
+    <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+      {list.map((c, i) => (
+        <div key={i} style={{ textAlign: "center", width: w }}>
+          <CoverImage comic={c} width={w} height={Math.round(w * 1.5)} style={{ borderRadius: 3 }} onClick={large => setCoverModal({ comic: c, large })} />
+          <div style={{ fontSize: "0.68rem", color: "var(--muted2,#aaa)" }}>#{c.Issue}</div>
+        </div>
+      ))}
+    </div>
+  );
   const comicByKey = useMemo(() => {
     const m = new Map<string, Comic>();
     for (const c of comics) {
@@ -464,6 +492,16 @@ export default function DataFix() {
     return [...g.entries()].map(([t, rows]) => [t, rows.sort((a, b) => num(a.issue) - num(b.issue))] as const)
       .sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]));
   }, [openReclaim, rcTier]);
+  const rcComic = (r: Reclaim) => ({ Title: r.title, Issue: r.issue, Year: r.year, Publisher: r.pub, Volume: r.vol, Box: r.box } as unknown as Comic);
+  const rcCover = (r: Reclaim, w: number) => {
+    const rec = rcCovers[r.id];
+    return rec
+      ? <img src={rec.url} alt={`${r.title} #${r.issue}`} loading="lazy" width={w} height={Math.round(w * 1.5)}
+          style={{ width: w, height: Math.round(w * 1.5), display: "block", overflow: "hidden", flexShrink: 0, fontSize: 0, objectFit: "cover", borderRadius: 4, cursor: "zoom-in", background: "#0d0d12" }}
+          onClick={() => setCoverModal({ comic: rcComic(r), large: rec.large })} />
+      : <CoverImage comic={rcComic(r)} width={w} height={Math.round(w * 1.5)} style={{ borderRadius: 4 }}
+          onClick={large => setCoverModal({ comic: rcComic(r), large })} />;
+  };
   const decideReclaim = useCallback((list: Reclaim[], value: "own" | "sold" | "same") => {
     const at = new Date().toISOString();
     setFixes(prev => {
@@ -722,6 +760,7 @@ export default function DataFix() {
                     return (
                       <div key={h.key} style={{ borderTop: "1px solid var(--border,#2c2c38)", paddingTop: 6, fontSize: "0.82rem", display: "flex", flexDirection: "column", gap: 4 }}>
                         <div><b>{h.title}</b> <span style={{ color: "var(--muted2,#aaa)" }}>v{h.vol}</span> → {h.fandom} <span style={{ color: "var(--muted2,#aaa)" }}>· fit {Math.round(h.fit * 100)}%</span></div>
+                        {strip(coversFor(h.title, h.vol))}
                         <div style={{ display: "flex", gap: 6, flexWrap: "wrap", alignItems: "center" }}>
                           <a className="df-find" href={url} target="_blank" rel="noopener noreferrer">open ↗</a>
                           <button className="df-link-save" onClick={() => decideSeries([m], () => `map!:${h.fandom}`)}>Yes, it's this</button>
@@ -751,6 +790,7 @@ export default function DataFix() {
                   <div key={m.key} style={{ border: "1px solid var(--border,#2c2c38)", borderRadius: 6, padding: "8px 10px", fontSize: "0.82rem", display: "flex", flexDirection: "column", gap: 6 }}>
                     <div><b>{m.title}</b> <span style={{ color: "var(--muted2,#aaa)" }}>v{m.vol} · {m.wiki} · {m.years.join("–")} · {m.count} book{m.count === 1 ? "" : "s"} (#{m.issues.slice(0, 6).join(", #")}{m.issues.length > 6 ? "…" : ""})</span>
                       <span style={{ marginLeft: 8, color: SM_COLOR[m.conf], fontWeight: 700 }}>● {m.conf === "none" ? "no verified match" : m.conf}</span></div>
+                    {strip(coversFor(m.title, m.vol))}
                     {m.cands.length > 0 && (
                       <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
                         {m.cands.map(c => (
@@ -817,6 +857,13 @@ export default function DataFix() {
                       <button onClick={() => setRcTitle(open ? null : title)} style={{ background: "none", border: "none", color: "inherit", cursor: "pointer", padding: 0, textAlign: "left", flex: 1, minWidth: 160 }}>
                         <span className="df-chev">{open ? "▾" : "▸"}</span> <b>{title}</b> <span style={{ color: "var(--muted2,#aaa)" }}>· {rows.length} · #{rows.slice(0, 8).map(r => r.issue).join(", #")}{rows.length > 8 ? "…" : ""}</span>
                       </button>
+                      {!open && (
+                        <div style={{ display: "flex", gap: 4, width: "100%", overflow: "hidden" }} onClick={() => setRcTitle(title)}>
+                          {[...rows.filter(r => rcCovers[r.id]), ...rows.filter(r => !rcCovers[r.id])].slice(0, 6).map(r => (
+                            <div key={r.id} style={{ flexShrink: 0 }}>{rcCover(r, 44)}</div>
+                          ))}
+                        </div>
+                      )}
                       <button className="df-link-save" onClick={() => decideReclaim(rows, "own")}>{rcTier === 1 ? "✓ All still own" : "✓ All separate copies"}</button>
                       <button className="df-link-save" style={{ background: "#6b7280" }} onClick={() => decideReclaim(rows, rcTier === 1 ? "sold" : "same")}>{rcTier === 1 ? "✗ All sold" : "✗ All same book"}</button>
                     </div>
@@ -824,7 +871,8 @@ export default function DataFix() {
                       <div style={{ display: "flex", gap: 10, flexWrap: "wrap", padding: "4px 10px 10px" }}>
                         {rows.map(r => (
                           <div key={r.id} style={{ width: 112, display: "flex", flexDirection: "column", gap: 4, alignItems: "center", textAlign: "center" }}>
-                            <CoverImage comic={{ Title: r.title, Issue: r.issue, Year: r.year, Publisher: r.pub, Volume: r.vol, Box: r.box } as unknown as Comic} width={90} height={135} style={{ borderRadius: 4 }} />
+                            {rcCover(r, 90)}
+                            <a className="df-find" href={fandomSearch(rcComic(r))} target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.7rem" }}>🔍 Fandom ↗</a>
                             <div><b>#{r.issue}</b> · Vol {r.vol || "?"} · {r.year}<br /><span style={{ color: "var(--muted2,#aaa)" }}>was Box {r.box} · {r.dropped.slice(5)}</span>
                               {r.tier === 2 && r.today && <><br /><span style={{ color: "#d97706" }}>today: {r.today}</span></>}</div>
                             <div style={{ display: "flex", gap: 4 }}>
@@ -930,7 +978,8 @@ export default function DataFix() {
                 const saved = !!id && fixes.has(id);
                 return (
                   <div key={u.title + u.issue + i} style={{ display: "flex", justifyContent: "space-between", gap: 10, flexWrap: "wrap", alignItems: "center", padding: "6px 9px", borderBottom: "1px solid var(--border,#2c2c38)", fontSize: "0.82rem" }}>
-                    <div style={{ minWidth: 200 }}>
+                    {c && <CoverImage comic={c} width={60} height={90} style={{ borderRadius: 3, flexShrink: 0 }} onClick={large => setCoverModal({ comic: c, large })} />}
+                    <div style={{ minWidth: 200, flex: 1 }}>
                       <a href={`https://www.google.com/search?q=${encodeURIComponent(`${u.title} #${u.issue} fandom comic`)}`} target="_blank" rel="noopener noreferrer" style={{ fontWeight: 600, color: "inherit", textDecoration: "none" }}>{u.title} <b>#{u.issue}</b> 🔍↗</a>
                       <div style={{ color: "var(--muted2,#aaa)", fontSize: "0.72rem" }}>{u.reason}</div>
                     </div>
@@ -1000,6 +1049,14 @@ export default function DataFix() {
                               style={{ fontSize: "0.72rem", background: "none", border: "none", color: "var(--muted,#888)", cursor: "pointer" }}>clear</button>
                           )}
                         </div>
+                        <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
+                          {g.spellings.map(sp => (
+                            <div key={sp.t}>
+                              <div style={{ fontSize: "0.68rem", color: "var(--muted2,#aaa)", marginBottom: 2, maxWidth: 240, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{sp.t}</div>
+                              {strip(coversFor(sp.t, undefined, 3), 46)}
+                            </div>
+                          ))}
+                        </div>
                         <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
                           <a className="df-find" href={fandomTitleSearch(g.spellings[0].t)} target="_blank" rel="noopener noreferrer"
                             style={{ fontSize: "0.78rem", color: "#5ab0e0", textDecoration: "none", whiteSpace: "nowrap" }}>🔍 Find on Fandom ↗</a>
@@ -1019,8 +1076,15 @@ export default function DataFix() {
                     Near-identical — may be <b>distinct</b> series (e.g. “Year One” vs “Year Two”). Review; rename via the Edit page only if truly the same.
                   </div>
                   {fuzzy.map((p, i) => (
-                    <div key={i} style={{ display: "flex", justifyContent: "space-between", gap: 10, flexWrap: "wrap", padding: "4px 0", fontSize: "0.8rem", borderBottom: "1px solid var(--border,#2c2c38)" }}>
-                      <span>{p.a} <span style={{ color: "var(--muted,#888)" }}>~</span> {p.b}</span>
+                    <div key={i} style={{ display: "flex", justifyContent: "space-between", gap: 10, flexWrap: "wrap", padding: "6px 0", fontSize: "0.8rem", borderBottom: "1px solid var(--border,#2c2c38)" }}>
+                      <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
+                        {[p.a, p.b].map(t => (
+                          <div key={t}>
+                            <div style={{ fontSize: "0.72rem", marginBottom: 2, maxWidth: 240 }}>{t}</div>
+                            {strip(coversFor(t, undefined, 3), 46)}
+                          </div>
+                        ))}
+                      </div>
                       <a href={`https://www.google.com/search?q=${encodeURIComponent(p.a + " vs " + p.b + " comic series")}`} target="_blank" rel="noopener noreferrer" style={{ color: "#1d6fa4", textDecoration: "none" }}>check ↗</a>
                     </div>
                   ))}
