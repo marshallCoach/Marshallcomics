@@ -129,3 +129,9 @@ to a single box even if told "all in NNN"; confirm before moving.
    the change landed (grep / compile) before pushing. Never claim an edit that wasn't checked.
 6. **Regression tests** — `python3 tests/run_tests.py` before every push touching brb_*.py.
    Add a test for every bug fixed.
+7. **Run CI's exact checks, unfiltered** — before pushing app code run
+   `cd artifacts/comics-inventory && npx tsc -p tsconfig.json --noEmit` and require exit 0.
+   Never grep errors away (Nov 19: hiding data3.ts errors let CI stay red for 6 pushes).
+8. **Every page is responsive** — no page may scroll sideways on a phone. With the dev server on
+   :5179, `WIDTH=360 node tests/responsive_audit.js` must print PASS (also checked at 320px)
+   before pushing any page/CSS change. New pages must pass it too.
