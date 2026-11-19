@@ -600,10 +600,12 @@ export default function DataFix() {
         <div className="df-clear">🎉 Inbox zero. Every flagged book has been handled. Come back after the next pipeline run.</div>
       )}
 
+      {/* Every section below sits in one column ordered by its count: smallest job first. */}
+      <div style={{ display: "flex", flexDirection: "column" }}>
       {/* Fandom linked — flagged books that already have a Fandom-sourced cover.
           Collapsed by default; these are the likely duplication / mislabel cases. */}
       {fandomLinked.length > 0 && (
-        <section className="df-group" style={{ marginBottom: 14 }}>
+        <section className="df-group" style={{ marginBottom: 14, order: fandomLinked.length }}>
           <button className="df-group-hd" onClick={() => setFlOpen(o => !o)} style={{ borderLeft: "4px solid #7c3aed" }}>
             <span className="df-group-name">
               <span className="df-chev">{flOpen ? "▾" : "▸"}</span> 🔗 Fandom linked — likely duplication/mislabel
@@ -652,7 +654,7 @@ export default function DataFix() {
           first, then the "skipped" tier (different-named page) with a warning. You
           Use / paste / dismiss each; accepted ones queue like any Fandom fix. */}
       {coverGuesses.length > 0 && (
-        <section className="df-group" style={{ marginBottom: 14 }}>
+        <section className="df-group" style={{ marginBottom: 14, order: coverGuesses.length }}>
           <button className="df-group-hd" onClick={() => setCgOpen(o => !o)} style={{ borderLeft: "4px solid #0d9488" }}>
             <span className="df-group-name">
               <span className="df-chev">{cgOpen ? "▾" : "▸"}</span> 🧩 Cover guesses — verify &amp; apply
@@ -699,7 +701,7 @@ export default function DataFix() {
           proposed (verified = your issue exists there with the right year). Map = lookup only,
           your title stays; Map + rename only for genuine title errors (covers follow). */}
       {(openSeries.length > 0 || openHeld.length > 0) && (
-        <section className="df-group" style={{ marginBottom: 14 }}>
+        <section className="df-group" style={{ marginBottom: 14, order: openSeries.length + openHeld.length }}>
           <button className="df-group-hd" onClick={() => setSmOpen(o => !o)} style={{ borderLeft: "4px solid #0891b2" }}>
             <span className="df-group-name"><span className="df-chev">{smOpen ? "▾" : "▸"}</span> 🧭 Series match — line your titles up with Fandom</span>
             <span className="df-chip-n">{openSeries.length + openHeld.length}</span>
@@ -782,7 +784,7 @@ export default function DataFix() {
       {/* Reclaim missing books — dropped out of the inventory in past deploys (mostly the
           Jun 15 one). Still own -> restored to its old box after you confirm; Sold -> left out. */}
       {(openReclaim.length > 0 || reclaimDone.own + reclaimDone.sold > 0) && (
-        <section className="df-group" style={{ marginBottom: 14 }}>
+        <section className="df-group" style={{ marginBottom: 14, order: openReclaim.length }}>
           <button className="df-group-hd" onClick={() => setRcOpen(o => !o)} style={{ borderLeft: "4px solid #dc2626" }}>
             <span className="df-group-name"><span className="df-chev">{rcOpen ? "▾" : "▸"}</span> 🛟 Reclaim missing books — do you still own these?</span>
             <span className="df-chip-n">{openReclaim.length}</span>
@@ -845,7 +847,7 @@ export default function DataFix() {
           the same book. Keep Fandom, take Comic Vine, or paste the right Fandom page
           (the Mac run reads the arc off that page). */}
       {openArcConflicts.length > 0 && (
-        <section className="df-group" style={{ marginBottom: 14 }}>
+        <section className="df-group" style={{ marginBottom: 14, order: openArcConflicts.length }}>
           <button className="df-group-hd" onClick={() => setAcOpen(o => !o)} style={{ borderLeft: "4px solid #4f46e5" }}>
             <span className="df-group-name">
               <span className="df-chev">{acOpen ? "▾" : "▸"}</span> 🧭 Arc conflicts — Fandom vs Comic Vine
@@ -910,7 +912,7 @@ export default function DataFix() {
           creator/date that the wiki lookup couldn't fill (too new, no mapped
           wiki, or a volume mismatch). Surfaced for manual investigation. */}
       {unresolved.length > 0 && (
-        <section className="df-group" style={{ marginBottom: 14 }}>
+        <section className="df-group" style={{ marginBottom: 14, order: unresolved.length }}>
           <button className="df-group-hd" onClick={() => setUrOpen(o => !o)} style={{ borderLeft: "4px solid #0e7490" }}>
             <span className="df-group-name">
               <span className="df-chev">{urOpen ? "▾" : "▸"}</span> 🔍 Fandom fill — unresolved (investigate)
@@ -953,7 +955,7 @@ export default function DataFix() {
 
       {/* Title cleanup — merge split spellings (same series), review near-identical. */}
       {(collisions.length > 0 || fuzzy.length > 0) && (
-        <section className="df-group" style={{ marginBottom: 14 }}>
+        <section className="df-group" style={{ marginBottom: 14, order: collisions.length + fuzzy.length }}>
           <button className="df-group-hd" onClick={() => setTcOpen(o => !o)} style={{ borderLeft: "4px solid #b45309" }}>
             <span className="df-group-name"><span className="df-chev">{tcOpen ? "▾" : "▸"}</span> 🔤 Title cleanup — merge split spellings</span>
             <span className="df-chip-n">{collisions.length + fuzzy.length}</span>
@@ -1031,9 +1033,9 @@ export default function DataFix() {
 
       {/* Groups */}
       {groups.map(g => {
-        const gopen = openGroups[g.pid] ?? (g.pid !== "no-cover");
+        const gopen = openGroups[g.pid] ?? false;          // every section starts closed
         return (
-          <section key={g.pid} className="df-group">
+          <section key={g.pid} className="df-group" style={{ order: g.count }}>
             <button className="df-group-hd" onClick={() => setOpenGroups(o => ({ ...o, [g.pid]: !gopen }))}
               style={{ borderLeft: `4px solid ${g.problem.color}` }}>
               <span className="df-group-name"><span className="df-chev">{gopen ? "▾" : "▸"}</span> {g.problem.label}</span>
@@ -1106,6 +1108,7 @@ export default function DataFix() {
           </section>
         );
       })}
+      </div>
 
       {coverModal && <CoverModal comic={coverModal.comic} largeUrl={coverModal.large} onClose={() => setCoverModal(null)} />}
     </div>
