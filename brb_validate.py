@@ -449,6 +449,11 @@ REVIEWED_DISTINCT = [
     ("Doctor Who: The Tenth Doctor — Year Two", "Doctor Who: The Twelfth Doctor — Year Two"),
     ("The Spectacular Spider-Man", "The Spectacular Spider-Men"),
     ("She-Hulk", "She-Hulks"),
+    # Titan's Doctor Who runs: Year One and Year Two are separate series, as are Tenth vs Twelfth (Nov 19)
+    ("Doctor Who: The Eleventh Doctor - Year One", "Doctor Who: The Eleventh Doctor — Year Two"),
+    ("Doctor Who: The Tenth Doctor - Year One", "Doctor Who: The Tenth Doctor — Year Two"),
+    ("Doctor Who: The Tenth Doctor - Year One", "Doctor Who: The Twelfth Doctor - Year One"),
+    ("Doctor Who: The Twelfth Doctor - Year One", "Doctor Who: The Twelfth Doctor — Year Two"),
 ]
 
 
