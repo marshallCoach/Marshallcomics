@@ -79,6 +79,14 @@ const _fillPct = (key: keyof typeof comics[number]) => {
   // so the banner matches what Data Fix actually shows as missing.
   return filled >= totalComics ? 100 : Math.min(99, Math.round((100 * filled) / totalComics));
 };
+// Where a book physically is: "Box 30", "Box CC2", "AT CGC", "Box unknown".
+const boxLabel = (b?: string | null) => {
+  const s = String(b ?? "").replace(/^BOX\s*/i, "").trim();
+  if (!s) return "Box —";
+  if (/^UNKNOWN/i.test(s)) return "Box unknown";
+  if (/^AT\s/i.test(s)) return s.split("—")[0].trim();
+  return `Box ${s}`;
+};
 // Live arc fill (Story Arc columns) — moves with every deploy.
 const ARC_STATS = (() => {
   const groups = new Map<string, { books: typeof comics; parts: Set<number>; len: number }>();
@@ -524,7 +532,8 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
     }
     return arr.slice(0, 10);
   }, []);
-  // Arc of the day — a random arc with 3+ owned parts, covers in reading order
+  // Arc of the day — a random COMPLETE arc: 6+ parts, every part and every issue in its run
+  // owned (copies/variants collapse to one cover per issue), covers in reading order.
   const arcPick = useMemo(() => {
     const g = new Map<string, typeof comics>();
     for (const c of comics) {
@@ -533,11 +542,19 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
       if (!g.has(k)) g.set(k, []);
       g.get(k)!.push(c);
     }
+    const iss = (b: typeof comics[0]) => parseFloat(String(b.Issue).replace(/^#/, ""));
     const pool = [...g.entries()].map(([k, books]) => {
+      const len = Math.max(0, ...books.map(b => arcOf(b)?.length ?? 0));
+      const parts = new Set(books.map(b => arcOf(b)?.part).filter(Boolean));
+      const range = arcIssueRange(books);
+      const owned = new Set(books.map(iss));
+      const complete = len >= 6 && Array.from({ length: len }, (_, i) => i + 1).every(p => parts.has(p))
+        && (!range || range.every(i => owned.has(i)));
       const seen = new Set<string>();
-      const uniq = books.filter(b => { const i = String(b.Issue); if (seen.has(i)) return false; seen.add(i); return true; });
-      return { k, books: uniq };
-    }).filter(x => x.books.length >= 3);
+      const uniq = books.filter(b => { const i = String(iss(b)); if (seen.has(i)) return false; seen.add(i); return true; })
+        .filter(b => !range || range.includes(iss(b)));
+      return { k, books: uniq, complete };
+    }).filter(x => x.complete);
     if (!pool.length) return null;
     const p = pool[Math.floor(Math.random() * pool.length)];
     const [title, vol, name] = p.k.split("|||");
@@ -634,7 +651,10 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
                   {c.Title}
                 </button>
                 <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:"var(--muted)", textAlign:"center", width:150 }}>
-                  {c.Issue}
+                  #{String(c.Issue).replace(/^#/, "")}
+                </div>
+                <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.8rem", color:"var(--muted)", textAlign:"center", width:150 }}>
+                  {boxLabel(c.Box)}
                 </div>
               </div>
             ))}
@@ -657,18 +677,18 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
             ARC OF THE DAY — {arcPick.name.toUpperCase()}
           </span>
           <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px", color:"var(--muted)" }}>
-            {arcPick.title}{arcPick.vol !== "1" ? ` Vol ${arcPick.vol}` : ""} · {arcPick.books.length}{arcPick.length ? ` of ${arcPick.length}` : ""} parts owned
+            {arcPick.title}{arcPick.vol !== "1" ? ` Vol ${arcPick.vol}` : ""} · complete {arcPick.length ?? arcPick.books.length}-part arc, every issue in hand
           </span>
           <button onClick={() => onNavigate("coverreview", { title: arcPick.title, arc: arcPick.name, vol: arcPick.vol })} className="home-quicklink" style={{ marginLeft:"auto" }}>▶ Open arc</button>
           <button onClick={() => onNavigate("arcs")} className="home-quicklink">📖 All arcs</button>
         </div>
         <div style={{ display:"flex", gap:12, overflowX:"auto", padding:"4px 0 8px", WebkitOverflowScrolling:"touch" }}>
           {arcPick.books.map((c, i) => (
-            <div key={i} style={{ flex:"0 0 auto", width:130, textAlign:"center" }}>
+            <div key={i} style={{ flex:"0 0 auto", width:150, textAlign:"center" }}>
               <CoverImage
                 comic={c}
-                width={130}
-                height={195}
+                width={150}
+                height={225}
                 onClick={large => setCarouselModal({ comic: c, large })}
                 style={{ borderRadius:6, boxShadow:"0 4px 14px rgba(0,0,0,0.18)" }}
               />
@@ -676,7 +696,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
                 #{c.Issue}{arcOf(c)?.part ? ` · Pt ${arcOf(c)?.part}` : ""}
               </div>
               <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.8rem", color:"var(--muted)" }}>
-                Box {String(c.Box || "?").replace(/^BOX\s*/i, "")}
+                {boxLabel(c.Box)}
               </div>
             </div>
           ))}
