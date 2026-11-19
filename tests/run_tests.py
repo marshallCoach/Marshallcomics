@@ -508,6 +508,35 @@ class T(unittest.TestCase):
         r2 = sb.run("brb_fix_writers.py", "fx.json", "--apply")
         self.assertIn("cells to change: 0", r2.stdout, "second run changes nothing")
 
+    def test_fandom_fill_wide_covers_comic_vine_cover_books(self):
+        # Nov 19: Absolute Superman #1 - cover from Comic Vine, so the fill never opened its DC page.
+        sb = self.sb
+        sb.xlsx(["Title", "Issue #", "Year", "Volume", "Box #", "Publisher", "Publication Date", "Writer(s)", "Artist(s)", "Cover Artist"],
+                [["Absolute Superman", 1, 2025, 1, "104", "DC", "2025-01-00", "Jason Aaron", None, "Clayton Crain"],
+                 ["Old Book", 1, 1990, 1, "5", "DC", "1990-01-00", "W", None, "C"]])
+        sb.json("covers.json", {"Absolute Superman|||1|||1": {"url": "https://comicvine.gamespot.com/x.jpg"}})
+        os.makedirs(sb.p("site"), exist_ok=True)
+        open(sb.p("site", "sitecustomize.py"), "w").write(
+            "import io, json, time, urllib.request\ntime.sleep = lambda s: None\n"
+            "def f(req, timeout=None):\n"
+            "    u = req.full_url if hasattr(req, 'full_url') else req\n"
+            "    if 'pageimages' in u or 'imageinfo' in u: return io.BytesIO(b'{}')\n"
+            "    y = '2025' if 'Absolute' in u else '2014'\n"
+            "    wt = '| Month = 1\\n| Year = ' + y + '\\n| Writer1_1 = Jason Aaron\\n| Penciler1_1 = Rafa Sandoval\\n| Inker1_1 = Rafa Sandoval\\n| CoverArtist1 = Rafa Sandoval\\n'\n"
+            "    return io.BytesIO(json.dumps({'parse': {'wikitext': wt}}).encode())\n"
+            "urllib.request.urlopen = f\n")
+        env = {"PYTHONPATH": sb.p("site")}
+        r = sb.run("brb_fill_from_fandom.py", "--no-deploy", "--wide", env=env)
+        self.assertIn("Absolute Superman #1: artist -> Rafa Sandoval", r.stdout, r.stdout + r.stderr)
+        self.assertIsNone(sb.newest()[0]["Artist(s)"], "report-only writes nothing")
+        r = sb.run("brb_fill_from_fandom.py", "--no-deploy", "--wide", "--wide-apply", env=env)
+        rows = {x["Title"]: x for x in sb.newest()}
+        self.assertEqual(rows["Absolute Superman"]["Artist(s)"], "Rafa Sandoval", r.stdout + r.stderr)
+        self.assertEqual(rows["Absolute Superman"]["Cover Artist"], "Clayton Crain", "filled cells are never changed (variant cover kept)")
+        self.assertIsNone(rows["Old Book"]["Artist(s)"], "a page from another era (2014 vs 1990) is skipped")
+        r2 = sb.run("brb_fill_from_fandom.py", "--no-deploy", "--wide", "--wide-apply", env=env)
+        self.assertNotIn("WIDE (", r2.stdout, "second run fills nothing")
+
     def test_many_links_one_title_requests_each_page_once(self):
         sb = self.sb
         rows = [["Moon Knight", i, 2000 + i, 5, str(i), None, None, None, None] for i in range(1, 21)]

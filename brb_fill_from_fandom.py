@@ -11,7 +11,7 @@ brb_apply_fandom_pages, so nothing new to trust. Runs on the Mac (Fandom egress)
 
     python3 brb_fill_from_fandom.py
 """
-import argparse, csv, datetime, json, os, subprocess, sys
+import argparse, collections, csv, datetime, json, os, re, subprocess, sys
 import openpyxl
 
 # Reuse the proven scraper + safe fill/union/conflict merge — single source of truth.
@@ -46,6 +46,11 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--no-deploy", action="store_true",
                     help="fill + write the xlsx but skip the brb.py run (for brb_all)")
+    # Nov 19: books whose cover came from Comic Vine (e.g. Absolute Superman #1) were never
+    # looked up, even though their Marvel/DC page has every credit. --wide adds them:
+    # year-gated (page year within 1 of the row's Year) and BLANK cells only.
+    ap.add_argument("--wide", action="store_true", help="also try Marvel/DC rows without a Fandom cover (report only)")
+    ap.add_argument("--wide-apply", action="store_true", help="let --wide rows actually write")
     args = ap.parse_args()
     src = newest_xlsx()
     print(f"Source: {os.path.basename(src)}", flush=True)
@@ -56,6 +61,7 @@ def main():
     H = [str(c.value).strip() if c.value is not None else "" for c in ws[1]]
     ci = lambda n: (H.index(n) + 1 if n in H else None)
     cT, cI, cV, cPub = ci("Title"), ci("Issue #"), ci("Volume"), ci("Publisher")
+    cYr = ci("Year")
     cPD = ci("Publication Date")
     if cPD is None:
         cPD = ws.max_column + 1
@@ -69,7 +75,7 @@ def main():
         return is_fandom_cover(e)
 
     # Target rows: have a Fandom cover AND still missing at least one fillable field.
-    targets = []
+    targets, wide = [], set()
     for r in range(2, ws.max_row + 1):
         T = str(ws.cell(r, cT).value or "").strip()
         I = ni(ws.cell(r, cI).value)
@@ -77,7 +83,10 @@ def main():
             continue
         V = nv(ws.cell(r, cV).value)
         if not has_fandom(T, I, V):
-            continue
+            pub = str(ws.cell(r, cPub).value or "").lower()
+            if not (args.wide and ("marvel" in pub or (("dc" in pub) and "dark" not in pub))):
+                continue
+            wide.add(r)
         miss_date = not str(ws.cell(r, cPD).value or "").strip()
         miss_cred = any(col and not str(ws.cell(r, col).value or "").strip() for col in CRED.values())
         if miss_date or miss_cred:
@@ -85,7 +94,7 @@ def main():
 
     print(f"Fandom-covered rows missing field(s): {len(targets)}\n", flush=True)
     filled = {"writer": 0, "artist": 0, "cover": 0, "date": 0}
-    errors, changes = [], []
+    errors, changes, wide_plan = [], [], []
 
     for n, r in enumerate(targets, 1):
         T = str(ws.cell(r, cT).value or "").strip()
@@ -103,6 +112,17 @@ def main():
                 errors.append((T, I, f"page not found ({T} Vol {V} {I})"))
                 continue
             _fn, date_str, _py, credits = res
+            if r in wide:
+                ry = re.search(r"(19|20)\d\d", str(ws.cell(r, cYr).value or "")) if cYr else None
+                if not (ry and _py and abs(int(ry.group(0)) - int(_py)) <= 1):
+                    errors.append((T, I, f"wide: page year {_py} vs your {ws.cell(r, cYr).value if cYr else '?'} - different run, skipped"))
+                    continue
+                for role, col in CRED.items():         # blanks only, never union/replace
+                    if col and not str(ws.cell(r, col).value or "").strip() and credits.get(role):
+                        wide_plan.append((r, col, role, " & ".join(credits[role]), T, I))
+                if date_str and not str(ws.cell(r, cPD).value or "").strip():
+                    wide_plan.append((r, cPD, "date", date_str, T, I))
+                continue
             if date_str and not str(ws.cell(r, cPD).value or "").strip():
                 ws.cell(r, cPD, date_str)
                 filled["date"] += 1
@@ -120,6 +140,20 @@ def main():
         except Exception as e:  # one bad page never kills the run
             errors.append((T, I, f"error: {e}"))
 
+    if wide_plan:
+        wc = collections.Counter(x[2] for x in wide_plan)
+        print(f"\nWIDE (books without a Fandom cover, year-gated, blanks only): {len(wide_plan)} cell(s) "
+              f"on {len({x[0] for x in wide_plan})} book(s) - " + ", ".join(f"{k} {v}" for k, v in wc.most_common()))
+        for r, col, role, v, T, I in wide_plan[:25]:
+            print(f"   {T} #{I}: {role} -> {v}")
+        if args.wide_apply:
+            from brb_guard import check
+            check("fandom_fill_wide", {"cells filled": len(wide_plan)})
+            for r, col, role, v, T, I in wide_plan:
+                ws.cell(r, col, v); filled[role if role in filled else "date"] += 1
+                changes.append([T, I, role, "", v])
+        else:
+            print("   (report only - brb_all switches this on after you've seen the numbers)")
     out = os.path.join(ROOT, f"attached_assets/comics_inventory_{datetime.datetime.now():%d%m_%H%M}.xlsx")
     wb.save(out)
 

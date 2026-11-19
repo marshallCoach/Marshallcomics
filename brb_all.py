@@ -253,7 +253,10 @@ def main():
 
     # 4 — Fandom fills what GCD couldn't reach (not-in-GCD books) + unions
     def fandom_fill():
-        if run([PY, os.path.join(ROOT, "brb_fill_from_fandom.py"), "--no-deploy"]):
+        # --wide: books without a Fandom cover too (Absolute Superman #1 had a Comic Vine cover
+        # and was never looked up). NEW Nov 19: report-only until Robert has seen the numbers.
+        APPLY_WIDE_FILL = False
+        if run([PY, os.path.join(ROOT, "brb_fill_from_fandom.py"), "--no-deploy", "--wide"] + (["--wide-apply"] if APPLY_WIDE_FILL else [])):
             raise RuntimeError("brb_fill_from_fandom failed")
     step(4, "FANDOM FILL (gap-filler for books GCD can't reach)", fandom_fill)
 
