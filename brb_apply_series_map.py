@@ -108,7 +108,19 @@ def main():
     # Also re-check what is already on file: an unconfirmed mapping whose name doesn't fit
     # your title comes OUT of series_map (so arc fetch / autolink never use it) and waits
     # on Data Fix for a one-by-one call.
-    held = dict(held_new)
+    # The held list PERSISTS until you decide each one (Nov 19: rebuilding it from scratch
+    # emptied it on the next run, because held items are no longer in series_map).
+    held = {}
+    if os.path.exists(HELD_PUB):
+        try:
+            for h in json.load(open(HELD_PUB)):
+                held[h["key"]] = {"fandom": h["fandom"], "wiki": h.get("wiki", "")}
+        except Exception:  # noqa: BLE001
+            pass
+    for key, r in dec.items():                       # any decision other than a bulk map: resolves it
+        if not str(r.get("value", "")).startswith("map:"):
+            held.pop(key, None)
+    held.update(held_new)
     for key, m in list(smap.items()):
         if m.get("fandom") and not m.get("confirmed") and title_fit(key.split("|||")[0], m["fandom"]) < FIT_MIN:
             held[key] = m; del smap[key]

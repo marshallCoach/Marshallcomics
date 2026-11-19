@@ -323,6 +323,19 @@ class T(unittest.TestCase):
         self.assertEqual(held, {"Low Slain|||1", "What If? Magic|||1"})
         r2 = sb.run("brb_apply_series_map.py", "--apply")
         self.assertEqual(json.load(open(sb.p("series_map.json"))), m, "second run changes nothing")
+        # the decisions file gets archived after a run - the held list must survive that
+        os.remove(sb.p("home/Downloads/data-fixes-2026-11-18.json"))
+        sb.run("brb_apply_series_map.py", "--apply")
+        held2 = {h["key"] for h in json.load(open(sb.p("artifacts/comics-inventory/public/series_held.json")))}
+        self.assertEqual(held2, {"Low Slain|||1", "What If? Magic|||1"}, "held list emptied on the next run")
+        self.assertNotIn("Low Slain|||1", json.load(open(sb.p("series_map.json"))))
+        # deciding one (paste a link) takes it off the held list
+        sb.json("home/Downloads/data-fixes-2026-11-19.json",
+                [rec("Low Slain", "link:https://dc.fandom.com/wiki/Low_Slain_Vol_1_1")])
+        sb.run("brb_apply_series_map.py", "--apply")
+        held3 = {h["key"] for h in json.load(open(sb.p("artifacts/comics-inventory/public/series_held.json")))}
+        self.assertEqual(held3, {"What If? Magic|||1"})
+        self.assertEqual(json.load(open(sb.p("series_map.json")))["Low Slain|||1"]["fandom"], "Low Slain Vol 1")
 
     def test_many_links_one_title_requests_each_page_once(self):
         sb = self.sb
