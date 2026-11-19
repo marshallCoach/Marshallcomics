@@ -206,7 +206,7 @@ def main():
 
     # 2a / 4b are NEW (Nov 19) and run REPORT-ONLY until Robert has seen one real run's
     # numbers (engineering rule 2). To let them write, flip these to True.
-    APPLY_IMAGE_PAGES = False
+    APPLY_IMAGE_PAGES = True   # Robert saw the Nov 19 run: 1 cell + 4 covers from his own links
     APPLY_DW_ARCS = True      # reviewed Nov 19: 64 rows, 0 skipped/ambiguous/unmatched
 
     # 2a — Image Comics release links pasted on Data Fix (imagecomics.com/comics/releases/...)
@@ -255,7 +255,7 @@ def main():
     def fandom_fill():
         # --wide: books without a Fandom cover too (Absolute Superman #1 had a Comic Vine cover
         # and was never looked up). NEW Nov 19: report-only until Robert has seen the numbers.
-        APPLY_WIDE_FILL = False
+        APPLY_WIDE_FILL = True     # Robert saw the Nov 19 run: 77 blank cells, year-gated
         if run([PY, os.path.join(ROOT, "brb_fill_from_fandom.py"), "--no-deploy", "--wide"] + (["--wide-apply"] if APPLY_WIDE_FILL else [])):
             raise RuntimeError("brb_fill_from_fandom failed")
     step(4, "FANDOM FILL (gap-filler for books GCD can't reach)", fandom_fill)
