@@ -56,7 +56,9 @@ Then: `source ~/.zshrc`
 git config --global core.editor "true"
 ```
 
-### Don't `git pull` before brb.py — it syncs itself
+### Don't `git pull` before brb_all / brb.py — they sync themselves
+`brb_all.py` step 0a fast-forwards the CODE before any step runs (clean tree only; restarts
+itself if brb_all.py changed), so a fix pushed by Claude takes effect on the very next run.
 `brb.py` runs a GIT SYNC step (step 0) that fetches origin and fast-forwards
 before regenerating, so a manual `git pull --rebase` beforehand is redundant and
 FAILS on the regenerated files ("cannot pull with rebase: You have unstaged

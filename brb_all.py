@@ -94,8 +94,39 @@ def collapse_single_tab():
     print(f"WROTE single-tab workbook: {os.path.basename(out)}")
 
 
+def code_sync():
+    """Fetch the latest CODE before any step runs. brb.py's own sync only happens at
+    step 8, so fixes pushed since the last run used to take effect one run late
+    (Nov 19: the GCD fix arrived at step 8, after step 3 had run the old code).
+    Fast-forward only, and only when no tracked file is edited; otherwise warn and
+    carry on. Restarts itself if brb_all.py itself changed."""
+    g = lambda *a: subprocess.run(["git", *a], cwd=ROOT, capture_output=True, text=True)
+    if os.environ.get("BRB_NO_SYNC") or g("rev-parse", "--is-inside-work-tree").returncode != 0:
+        return
+    banner("0a", "CODE SYNC — latest scripts before anything runs")
+    br = g("rev-parse", "--abbrev-ref", "HEAD").stdout.strip() or "main"
+    if g("fetch", "-q", "origin", br).returncode != 0:
+        print("fetch failed (offline?) - running the code you have."); return
+    behind = g("rev-list", "--count", f"HEAD..origin/{br}").stdout.strip()
+    if behind in ("", "0"):
+        print("Code is up to date."); return
+    if g("status", "--porcelain", "--untracked-files=no").stdout.strip():
+        print(f"{behind} newer commit(s) on origin, but tracked files are edited here - "
+              "not syncing now (step 8 will). This run uses the code you have."); return
+    before = g("rev-parse", "HEAD:brb_all.py").stdout.strip()
+    r = g("merge", "--ff-only", "-q", f"origin/{br}")
+    if r.returncode != 0:
+        print("could not fast-forward - running the code you have. " + r.stderr.strip()[:200]); return
+    print(f"Pulled {behind} commit(s).")
+    if g("rev-parse", "HEAD:brb_all.py").stdout.strip() != before:
+        print("brb_all.py itself changed - restarting with the new version.")
+        os.environ["BRB_NO_SYNC"] = "1"
+        os.execv(sys.executable, [sys.executable, os.path.abspath(__file__), *sys.argv[1:]])
+
+
 def main():
     failures = []
+    code_sync()
 
     def step(n, title, fn):
         banner(n, title)

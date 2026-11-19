@@ -343,6 +343,35 @@ class T(unittest.TestCase):
         self.assertEqual(held3, {"What If? Magic|||1"})
         self.assertEqual(json.load(open(sb.p("series_map.json")))["Low Slain|||1"]["fandom"], "Low Slain Vol 1")
 
+    def test_brb_all_pulls_code_before_steps(self):
+        # Nov 19: fixes landed at step 8, so step 3 ran stale code for one more run.
+        import importlib, io, contextlib
+        d = self.sb.dir
+        git = lambda cwd, *a: subprocess.run(["git", "-c", "user.email=t@t", "-c", "user.name=t", *a],
+                                             cwd=cwd, capture_output=True, text=True)
+        os.makedirs(os.path.join(d, "origin.git")); git(os.path.join(d, "origin.git"), "init", "-q", "--bare", "-b", "main")
+        a, b = os.path.join(d, "A"), os.path.join(d, "B")
+        git(d, "clone", "-q", os.path.join(d, "origin.git"), a)
+        git(a, "checkout", "-q", "-b", "main")
+        open(os.path.join(a, "fix.py"), "w").write("v = 1\n")
+        git(a, "add", "."); git(a, "commit", "-q", "-m", "one"); git(a, "push", "-q", "origin", "main")
+        git(d, "clone", "-q", os.path.join(d, "origin.git"), b)
+        open(os.path.join(b, "fix.py"), "w").write("v = 2\n")
+        git(b, "commit", "-qam", "fix"); git(b, "push", "-q", "origin", "main")
+        sys.path.insert(0, d)
+        import brb_all; importlib.reload(brb_all)
+        brb_all.ROOT = a
+        os.environ.pop("BRB_NO_SYNC", None)
+        with contextlib.redirect_stdout(io.StringIO()):
+            brb_all.code_sync()
+        self.assertEqual(open(os.path.join(a, "fix.py")).read(), "v = 2\n", "clean tree must fast-forward")
+        # an edited tracked file -> no sync, nothing lost
+        open(os.path.join(b, "fix.py"), "w").write("v = 3\n"); git(b, "commit", "-qam", "fix2"); git(b, "push", "-q", "origin", "main")
+        open(os.path.join(a, "fix.py"), "w").write("v = local\n")
+        with contextlib.redirect_stdout(io.StringIO()) as out:
+            brb_all.code_sync()
+        self.assertEqual(open(os.path.join(a, "fix.py")).read(), "v = local\n", out.getvalue())
+
     def test_many_links_one_title_requests_each_page_once(self):
         sb = self.sb
         rows = [["Moon Knight", i, 2000 + i, 5, str(i), None, None, None, None] for i in range(1, 21)]
