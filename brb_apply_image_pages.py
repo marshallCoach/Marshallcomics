@@ -15,7 +15,7 @@ image_page_cache/. Dry run by default:
     python3 brb_apply_image_pages.py            # report what it WOULD fill
     python3 brb_apply_image_pages.py --apply
 """
-import argparse, collections, datetime, glob, html, json, os, re, sys, time, urllib.request
+import argparse, collections, datetime, glob, html, json, os, re, subprocess, sys, time, urllib.request
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 CACHE = os.path.join(ROOT, "image_page_cache")
@@ -67,8 +67,18 @@ def fetch(url):
     f = os.path.join(CACHE, re.sub(r"[^A-Za-z0-9]+", "_", url.split("/releases/")[-1]) + ".html")
     if os.path.exists(f):
         return open(f, encoding="utf-8").read()
-    req = urllib.request.Request(url, headers={"User-Agent": UA})
-    page = urllib.request.urlopen(req, timeout=20).read().decode("utf-8", "replace")
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": UA})
+        page = urllib.request.urlopen(req, timeout=20).read().decode("utf-8", "replace")
+    except Exception as e:  # noqa: BLE001
+        # macOS Command Line Tools Python ships an old SSL library that imagecomics.com
+        # refuses (TLSV1_ALERT_PROTOCOL_VERSION, Nov 19). The system curl negotiates fine.
+        if "SSL" not in str(e) and "TLS" not in str(e) and "CERTIFICATE" not in str(e).upper():
+            raise
+        r = subprocess.run(["curl", "-sSL", "--max-time", "25", "-A", UA, url], capture_output=True)
+        if r.returncode != 0 or not r.stdout:
+            raise RuntimeError(f"urllib SSL error and curl failed too: {r.stderr.decode(errors='replace')[:120]}")
+        page = r.stdout.decode("utf-8", "replace")
     open(f, "w", encoding="utf-8").write(page)
     time.sleep(0.5)
     return page
@@ -128,6 +138,8 @@ def main():
             d = parse_release(fetch(url))
         except Exception as e:  # noqa: BLE001
             st["page failed"] += 1; print(f"  FAIL {t} #{iss}: {e}"); continue
+        if not d.get("title") or d["title"].startswith("404"):
+            st["page not found (404)"] += 1; print(f"  404 {t} #{iss}: {url}  <- check the link on imagecomics.com"); continue
         st["pages read"] += 1
         for col, k in cols.items():
             c = ci(col)

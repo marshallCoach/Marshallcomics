@@ -162,6 +162,7 @@ export default function DataFix() {
   const [seriesMatch, setSeriesMatch] = useState<SeriesMatch[]>([]);
   const [seriesMapped, setSeriesMapped] = useState<Record<string, unknown>>({});
   const [seriesHeld, setSeriesHeld] = useState<SeriesHeld[]>([]);
+  const [heldHints, setHeldHints] = useState<Record<string, { hint: "better" | "stale"; fandom?: string; why: string }>>({});
   const [reclaim, setReclaim] = useState<Reclaim[]>([]);
   const [rcOpen, setRcOpen] = useState(false);
   const [rcTitle, setRcTitle] = useState<string | null>(null);
@@ -199,6 +200,8 @@ export default function DataFix() {
       .then((o: Record<string, { url: string; large: string }>) => setRcCovers(o && typeof o === "object" ? o : {})).catch(() => {});
     fetch(`${BASE}/reclaim_candidates.json`).then(r => r.ok ? r.json() : [])
       .then((a: Reclaim[]) => setReclaim(Array.isArray(a) ? a : [])).catch(() => {});
+    fetch(`${BASE}/series_held_hints.json`).then(r => r.ok ? r.json() : {})
+      .then((o: Record<string, { hint: "better" | "stale"; fandom?: string; why: string }>) => setHeldHints(o && typeof o === "object" ? o : {})).catch(() => {});
     fetch(`${BASE}/series_held.json`).then(r => r.ok ? r.json() : [])
       .then((a: SeriesHeld[]) => setSeriesHeld(Array.isArray(a) ? a : [])).catch(() => {});
     fetch(`${BASE}/series_map.json`).then(r => r.ok ? r.json() : {})
@@ -473,10 +476,10 @@ export default function DataFix() {
 
   // Held: a bulk "map all green" pick whose Fandom name doesn't fit your title - needs a
   // one-by-one yes/no. A fresh decision other than a bulk "map:" clears it.
-  const openHeld = useMemo(() => seriesHeld.filter(h => {
+  const openHeld = useMemo(() => seriesHeld.filter(h => heldHints[h.key]?.hint !== "stale").filter(h => {
     const f = fixes.get(`${h.key}|||series`) as unknown as { value?: string } | undefined;
     const v = String(f?.value || ""); return !v || v.startsWith("map:");
-  }), [seriesHeld, fixes]);
+  }), [seriesHeld, fixes, heldHints]);
   // Reclaim: books that dropped out of the inventory (history scan, Nov 19). A click
   // records Still own / Sold and the book leaves the list; Export carries the answers.
   const openReclaim = useMemo(() => reclaim.filter(r => !fixes.has(`reclaim|||${r.id}`)), [reclaim, fixes]);
@@ -760,6 +763,12 @@ export default function DataFix() {
                     return (
                       <div key={h.key} style={{ borderTop: "1px solid var(--border,#2c2c38)", paddingTop: 6, fontSize: "0.82rem", display: "flex", flexDirection: "column", gap: 4 }}>
                         <div><b>{h.title}</b> <span style={{ color: "var(--muted2,#aaa)" }}>v{h.vol}</span> → {h.fandom} <span style={{ color: "var(--muted2,#aaa)" }}>· fit {Math.round(h.fit * 100)}%</span></div>
+                        {heldHints[h.key]?.hint === "better" && heldHints[h.key].fandom && (
+                          <div style={{ display: "flex", gap: 6, alignItems: "center", flexWrap: "wrap", color: "#16a34a" }}>
+                            <span>✓ Checked on Fandom: <b>{heldHints[h.key].fandom}</b> — {heldHints[h.key].why}</span>
+                            <button className="df-link-save" onClick={() => decideSeries([m], () => `map!:${heldHints[h.key].fandom}`)}>Use this one</button>
+                          </div>
+                        )}
                         {strip(coversFor(h.title, h.vol))}
                         <div style={{ display: "flex", gap: 6, flexWrap: "wrap", alignItems: "center" }}>
                           <a className="df-find" href={url} target="_blank" rel="noopener noreferrer">open ↗</a>

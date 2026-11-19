@@ -473,6 +473,26 @@ class T(unittest.TestCase):
         r3 = sb.run("brb_relink.py", "--write")
         self.assertIn("nothing to re-send", r3.stdout, "re-sent once per parser version, never loops")
 
+    def test_image_page_falls_back_to_curl_on_old_mac_ssl(self):
+        # Nov 19: Mac CLT Python -> "[SSL: TLSV1_ALERT_PROTOCOL_VERSION]"; system curl works.
+        sys.path.insert(0, self.sb.dir)
+        import importlib, ssl, urllib.request, subprocess as sp, brb_apply_image_pages as I
+        importlib.reload(I)
+        I.CACHE = self.sb.p("imgcache")
+        real_open, real_run = urllib.request.urlopen, sp.run
+        try:
+            def boom(*a, **k): raise urllib.error.URLError(ssl.SSLError("[SSL: TLSV1_ALERT_PROTOCOL_VERSION] tlsv1 alert protocol version"))
+            urllib.request.urlopen = boom
+            seen = []
+            class R: returncode = 0; stdout = b"<h1>G.I. Joe #27</h1>"; stderr = b""
+            def fake_run(cmd, **k): seen.append(cmd); return R()
+            I.subprocess.run = fake_run
+            page = I.fetch("https://imagecomics.com/comics/releases/g-i-joe-27")
+            self.assertIn("G.I. Joe #27", page)
+            self.assertEqual(seen[0][0], "curl")
+        finally:
+            urllib.request.urlopen, I.subprocess.run = real_open, real_run
+
     def test_many_links_one_title_requests_each_page_once(self):
         sb = self.sb
         rows = [["Moon Knight", i, 2000 + i, 5, str(i), None, None, None, None] for i in range(1, 21)]

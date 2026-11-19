@@ -125,8 +125,10 @@ def main():
         if m.get("fandom") and not m.get("confirmed") and title_fit(key.split("|||")[0], m["fandom"]) < FIT_MIN:
             held[key] = m; del smap[key]
     print(f"decisions: {len(dec)}   map changes: {len(changes)}   held for review (name doesn't fit): {len(held)}")
-    for k, m in sorted(held.items())[:80]:
+    for k, m in sorted(held.items())[:5]:          # the full list lives on Data Fix -> Series match -> held
         print(f"  HELD {k.replace('|||', ' v')}  ->  {m['fandom']}   (fit {title_fit(k.split('|||')[0], m['fandom']):.2f})")
+    if len(held) > 5:
+        print(f"  ... and {len(held) - 5} more - decide them on Data Fix -> Series match -> held (they wait until you do)")
     for k, old, new in changes[:40]:
         print(f"  {k.replace('|||', ' v')}: -> {new.get('fandom') or 'not on Fandom'}")
     if not a.apply:

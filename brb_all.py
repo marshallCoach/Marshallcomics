@@ -207,7 +207,7 @@ def main():
     # 2a / 4b are NEW (Nov 19) and run REPORT-ONLY until Robert has seen one real run's
     # numbers (engineering rule 2). To let them write, flip these to True.
     APPLY_IMAGE_PAGES = False
-    APPLY_DW_ARCS = False
+    APPLY_DW_ARCS = True      # reviewed Nov 19: 64 rows, 0 skipped/ambiguous/unmatched
 
     # 2a — Image Comics release links pasted on Data Fix (imagecomics.com/comics/releases/...)
     def image_pages():
