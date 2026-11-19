@@ -239,6 +239,13 @@ def main():
         return H.index(name) + 1
 
     cT, cI, cY, cP = cidx(H_TITLE), cidx(H_ISSUE), cidx(H_YEAR), cidx(H_PUB)
+    # reviewed Writer(s) fixes (writer_fixes_*.json) outrank GCD: never edit those cells.
+    # Nov 19: UNION re-added Bendis to 14 of the 76 reviewed rows the same run they were fixed.
+    from brb_fix_writers import locks as _locks, key as _key
+    LOCKS = _locks()
+    cV = H.index("Volume") + 1 if "Volume" in H else None
+    cB = H.index("Box #") + 1 if "Box #" in H else (H.index("Box") + 1 if "Box" in H else None)
+    locked_skips = 0
     role_key = {"Writer(s)": "writer", "Artist(s)": "artist", "Cover Artist": "cover_artist"}
     role_cols = {col: cidx(col) for col in ROLES}
 
@@ -276,7 +283,11 @@ def main():
             continue
 
         row_changed = False
+        lk = LOCKS and _key(title, issue, ws.cell(r, cB).value if cB else "", ws.cell(r, cV).value if cV else "", year) in LOCKS
         for col in ROLES:
+            if lk and col == "Writer(s)":
+                locked_skips += 1
+                continue
             action, newv = decide(ws.cell(r, role_cols[col]).value, cs[role_key[col]])
             if not action:
                 continue
@@ -310,6 +321,7 @@ def main():
     tot_conf = sum(counts[c]["CONFLICT"] for c in ROLES)
     print(f"  {'-'*44}")
     print(f"  Rows touched:            {rows_touched:,}")
+    print(f"  Locked (reviewed fix):   {locked_skips:,}  (writer_fixes_*.json - GCD never edits these)")
     print(f"  No GCD series match:     {no_series:,}")
     print(f"  Series ok, issue absent: {no_issue:,}")
     print(f"  Year-gated (wrong era):  {gated:,}  (rejected — would have been wrong-volume)")

@@ -508,6 +508,34 @@ class T(unittest.TestCase):
         r2 = sb.run("brb_fix_writers.py", "fx.json", "--apply")
         self.assertIn("cells to change: 0", r2.stdout, "second run changes nothing")
 
+    def test_gcd_never_undoes_a_reviewed_writer_fix(self):
+        # Nov 19: the 76 Bendis fixes were applied, then GCD's UNION step re-added Bendis (and the
+        # other AvX architects) to 14 of them in the same brb_all run - a flip-flop. A reviewed
+        # fix outranks GCD: the cell is locked, and the fixer re-corrects a reshuffled cell.
+        sb = self.sb
+        H = ["Title", "Issue #", "Year", "Volume", "Box #", "Publisher", "Writer(s)", "Artist(s)", "Cover Artist"]
+        sb.xlsx(H, [["Avengers vs. X-Men", 2, 2012, 1, "19", "Marvel", "Jason Aaron", "A", "C"],
+                    ["Avengers vs. X-Men", 3, 2012, 1, "19", "Marvel", "Ed Brubaker", "A", "C"]])
+        sb.json("writer_fixes_t.json", [{"title": "Avengers vs. X-Men", "volume": "1", "issue": "2", "year": "2012",
+                                         "box": "19", "old": "Jason Aaron & Brian Michael Bendis", "new": "Jason Aaron"}])
+        open(sb.p("wrap.py"), "w").write(
+            "import sys, brb_credits_gcd as G\n"
+            "G.find_series = lambda *a: {'id': 1, 'name': 'AvX'}\n"
+            "G.credit_sets = lambda *a: {'writer': ['Jason Aaron', 'Brian Michael Bendis', 'Ed Brubaker'], 'artist': [], 'cover_artist': []}\n"
+            "sys.argv = ['x', '--no-conflicts']\nG.main()\n")
+        r = sb.run("wrap.py")
+        w = {x["Issue #"]: x["Writer(s)"] for x in sb.newest()}
+        self.assertEqual(w[2], "Jason Aaron", "locked reviewed cell must not get UNION names\n" + r.stdout + r.stderr)
+        self.assertIn("Bendis", w[3], "unlocked rows still get GCD's UNION")
+        self.assertIn("Locked (reviewed fix):   1", r.stdout)
+        # a cell GCD already reshuffled (only names from the reviewed 'old') is re-corrected
+        for f in glob.glob(sb.p("attached_assets", "*.xlsx")):
+            os.remove(f)
+        sb.xlsx(H, [["Avengers vs. X-Men", 2, 2012, 1, "19", "Marvel", "Brian Michael Bendis & Jason Aaron", "A", "C"]])
+        r2 = sb.run("brb_fix_writers.py", "writer_fixes_t.json", "--apply")
+        self.assertEqual(sb.newest()[0]["Writer(s)"], "Jason Aaron", r2.stdout + r2.stderr)
+        self.assertIn("cells to change: 0", sb.run("brb_fix_writers.py", "writer_fixes_t.json").stdout)
+
     def test_fandom_fill_wide_covers_comic_vine_cover_books(self):
         # Nov 19: Absolute Superman #1 - cover from Comic Vine, so the fill never opened its DC page.
         sb = self.sb

@@ -5,15 +5,36 @@ brb_fix_writers.py -- apply a reviewed list of Writer(s) corrections, cell by ce
 Each fix names the book (title, volume, issue, year, box), the writer the sheet holds NOW
 (old) and the corrected writer (new). A cell is changed only if it still holds exactly the
 old value, so a second run changes nothing and a cell you edited since is left alone.
+A cell that holds only names from the reviewed old value (any order - e.g. GCD's UNION step
+re-added a removed name, Nov 19) is corrected too: a reviewed fix outranks GCD. The same
+files are LOCKS for brb_credits_gcd.py, which never edits a locked Writer(s) cell.
 Every other cell is verified unchanged. Writes a NEW dated workbook. Dry run by default:
     python3 brb_fix_writers.py writer_fixes_bendis.json
     python3 brb_fix_writers.py writer_fixes_bendis.json --apply
 """
-import argparse, datetime, json, os, sys
+import argparse, datetime, glob, json, os, re, sys
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, ROOT)
 from brb_apply_arcs import newest_xlsx, ni, INV   # noqa: E402
+
+
+def names(cell):
+    """'A & B, C' -> {'a', 'b', 'c'} (order and spacing don't matter)."""
+    return {re.sub(r"\s+", " ", x).strip().lower() for x in re.split(r"\s*(?:&|;|,(?!\s*(?:jr|sr)\b))\s*", str(cell or ""), flags=re.I) if x.strip()}
+
+
+def key(title, issue, box, vol, year):
+    return (str(title or "").strip(), ni(issue), str(box or "").strip(), ni(vol) or "1", str(year or "").strip()[:4])
+
+
+def locks(root=None):
+    """Reviewed Writer(s) fixes from every writer_fixes_*.json: {book key: reviewed writer}."""
+    out = {}
+    for p in sorted(glob.glob(os.path.join(root or ROOT, "writer_fixes_*.json"))):
+        for f in json.load(open(p)):
+            out[key(f["title"], f["issue"], f["box"], f["volume"], f["year"])] = f["new"].strip()
+    return out
 
 
 def main():
@@ -31,14 +52,13 @@ def main():
     cT, cI, cV, cY, cB, cW = ci("Title"), ci("Issue #"), ci("Volume"), ci("Year"), ci("Box #") or ci("Box"), ci("Writer(s)")
     rows = {}
     for r in range(2, ws.max_row + 1):
-        k = (str(ws.cell(r, cT).value or "").strip(), ni(ws.cell(r, cI).value), str(ws.cell(r, cB).value or "").strip(),
-             ni(ws.cell(r, cV).value) or "1", str(ws.cell(r, cY).value or "").strip()[:4])
+        k = key(ws.cell(r, cT).value, ws.cell(r, cI).value, ws.cell(r, cB).value, ws.cell(r, cV).value, ws.cell(r, cY).value)
         rows.setdefault(k, []).append(r)
     _mr, _mc = ws.max_row, ws.max_column
     before = [list(x) for x in ws.iter_rows(min_row=1, max_row=_mr, max_col=_mc, values_only=True)]
     plan, skipped = [], []
     for f in fixes:
-        k = (f["title"].strip(), ni(f["issue"]), str(f["box"]).strip(), ni(f["volume"]) or "1", str(f["year"])[:4])
+        k = key(f["title"], f["issue"], f["box"], f["volume"], f["year"])
         hit = rows.get(k, [])
         if not hit:
             skipped.append((f, "row not found")); continue
@@ -47,7 +67,7 @@ def main():
             cur = str(ws.cell(r, cW).value or "").strip()
             if cur == f["new"].strip():
                 done = True; break
-            if cur == str(f["old"] or "").strip():
+            if cur == str(f["old"] or "").strip() or (names(cur) and names(cur) <= names(f["old"])):
                 plan.append((r, cur, f["new"])); done = True; break
         if not done:
             skipped.append((f, f"writer is now {str(ws.cell(hit[0], cW).value)!r} (not the reviewed value) - left alone"))
