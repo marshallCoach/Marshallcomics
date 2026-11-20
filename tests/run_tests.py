@@ -264,6 +264,31 @@ class T(unittest.TestCase):
         self.assertEqual(years[("Moon Knight", "20")], "2022", r.stdout)
         self.assertEqual(years[("Solo", "30")], "2016", "a link on ONE copy is still the truth")
 
+    def test_only_your_link_replaces_credits(self):
+        # Nov 20: 88 credit replacements hit the guard - links copied across a run (auto) were
+        # overwriting writers they didn't overlap with. Guesses fill/add only; your link replaces.
+        sb = self.sb
+        sb.xlsx(["Title", "Issue #", "Year", "Volume", "Box #", "Publication Date", "Writer(s)", "Artist(s)", "Cover Artist"],
+                [["Solo", 1, 2016, 1, "30", None, "Old Writer", "B", "C"],
+                 ["Solo", 2, 2016, 1, "30", None, "Old Writer", "B", "C"]])
+        sb.json("covers.json", {})
+        rec = lambda i, auto: {"title": "Solo", "issue": i, "box": "30", "problem": "x", "kind": "fandom",
+                               "value": f"https://marvel.fandom.com/wiki/Solo_Vol_1_{i}", **({"auto": True} if auto else {})}
+        sb.json("home/Downloads/data-fixes-2026-11-20.json", [rec("1", False), rec("2", True)])
+        os.makedirs(sb.p("site"), exist_ok=True)
+        open(sb.p("site", "sitecustomize.py"), "w").write(
+            "import io, json, time, urllib.request\n"
+            "time.sleep = lambda s: None\n"
+            "def f(req, timeout=None):\n"
+            "    u = req.full_url\n"
+            "    if 'pageimages' in u or 'imageinfo' in u: return io.BytesIO(b'{}')\n"
+            "    return io.BytesIO(json.dumps({'parse': {'wikitext': '| Year = 2016\\n| Month = 3\\n| Writer1_1 = New Writer'}}).encode())\n"
+            "urllib.request.urlopen = f\n")
+        r = sb.run("brb_apply_fandom_pages.py", "--apply", env={"PYTHONPATH": sb.p("site")})
+        w = {x["Issue #"]: x["Writer(s)"] for x in sb.newest()}
+        self.assertEqual(w[1], "New Writer", r.stdout + r.stderr)
+        self.assertEqual(w[2], "Old Writer", "a copied (auto) link must not replace credits")
+
     def test_linked_year_fix_does_not_flip_back(self):
         # Spider-Woman #1 (Nov 17 run): your link set Year 2024->2026, then
         # year_from_pubdate put it back to 2024 from the stale on-sale date.

@@ -472,6 +472,12 @@ def main():
                 action, newv = decide(ws.cell(r, col).value, credits.get(role, []))
                 if not action:
                     continue
+                # Only a link YOU pasted on this exact book may REPLACE credits (zero overlap).
+                # Run-mates and sibling-built / automatic links are guesses: fill & add only.
+                # (Nov 20: 88 replacements, mostly from links copied across a run, hit the guard.)
+                if action == "CONFLICT" and not is_seed:
+                    cred_changes.append([sheet_title, issue, role, "CONFLICT-SKIPPED (not your link)", str(ws.cell(r, col).value or ""), newv])
+                    continue
                 old = str(ws.cell(r, col).value or "")
                 if args.apply:
                     ws.cell(r, col, newv)
