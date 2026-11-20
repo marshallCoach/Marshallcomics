@@ -639,6 +639,27 @@ class T(unittest.TestCase):
         self.assertNotIn("d", P, "recorded volume closest in year stays")
         self.assertNotIn("e", P, "first-volume issue already right")
 
+    def test_row_fixes_renumber_and_move_dupes(self):
+        # Nov 20: Avengers #480-499 (restored) duplicated existing Vol 3 #65-84; #498 v3 -> #83.
+        sb = self.sb
+        U = "UNKNOWN — needs physical reassignment"
+        sb.xlsx(["Title", "Issue #", "Year", "Volume", "Box #", "Writer(s)"],
+                [["Avengers", "65", 2003, 3, U, "Geoff Johns"], ["Avengers", "498", 2004, 3, U, "Chuck Austen"],
+                 ["Avengers", "480", 2001, None, U, "Geoff Johns"], ["Hulk", "1", 2008, 2, "40", "Jeph Loeb"]])
+        sb.json("fx.json", [
+            {"title": "Avengers", "issue": "498", "box": U, "year": "2004", "volume": "3", "set": {"Issue #": "83"}, "old": {"Issue #": "498"}},
+            {"title": "Avengers", "issue": "480", "box": U, "year": "2001", "volume": "", "move_to_duplicates": "copy of Vol 3 #65"}])
+        r = sb.run("brb_fix_rows.py", "fx.json")
+        self.assertIn("cell changes: 1   rows to Duplicates tab: 1   skipped: 0", r.stdout, r.stdout + r.stderr)
+        r = sb.run("brb_fix_rows.py", "fx.json", "--apply")
+        rows = sb.newest()
+        self.assertEqual([str(x["Issue #"]) for x in rows], ["65", "83", "1"], r.stdout + r.stderr)
+        self.assertEqual(rows[2]["Writer(s)"], "Jeph Loeb", "other rows untouched")
+        import openpyxl
+        wb = openpyxl.load_workbook(max(glob.glob(sb.p("attached_assets", "*.xlsx")), key=os.path.getmtime))
+        self.assertIn("480", str(wb["Duplicates"].cell(wb["Duplicates"].max_row, 3).value), "moved, not deleted")
+        self.assertIn("cell changes: 0   rows to Duplicates tab: 0", sb.run("brb_fix_rows.py", "fx.json").stdout, "second run: nothing")
+
     def test_fandom_fill_wide_covers_comic_vine_cover_books(self):
         # Nov 19: Absolute Superman #1 - cover from Comic Vine, so the fill never opened its DC page.
         sb = self.sb

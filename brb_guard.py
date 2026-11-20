@@ -20,6 +20,7 @@ LIMITS = {
     "fandom_fill_wide": {"cells filled": 200},
     "writer_fixes":   {"writer cells changed": 100},
     "reclaim_restore": {"rows added": 50},
+    "row_fixes":      {"cells changed": 50, "rows moved to Duplicates": 20},
     "image_pages":    {"cells filled": 150, "covers added": 60},
     "gcd_credits":    {"cells cleaned (company/duplicate names)": 60, "names added (UNION)": 120},
 }
