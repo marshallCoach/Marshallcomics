@@ -279,6 +279,14 @@ export default function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeSection]);
 
+  // Any component can open a page (e.g. the cover pop-up's "Edit this comic" button).
+  useEffect(() => {
+    const h = (e: Event) => { const d = (e as CustomEvent<{ tab: string; query?: string }>).detail; if (d?.tab) navigateTo(d.tab, { query: d.query }); };
+    window.addEventListener("brb:navigate", h);
+    return () => window.removeEventListener("brb:navigate", h);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeSection]);
+
   function navigateTo(tab: string, params?: NavParams) {
     const t = tab as TabId;
     const targetSection = NAV.find(s => s.tabs.some(tb => tb.id === t));

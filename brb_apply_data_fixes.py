@@ -140,7 +140,7 @@ def main():
     # Applied lowest-first so the strongest source has the last word.
     def _rank(rec):
         src = rec.get("_src", "")
-        return 0 if "extrapolated-auto" in src else 1 if "autolink" in src else 2
+        return 0 if ("extrapolated-auto" in src or rec.get("auto")) else 1 if "autolink" in src else 2
     recs.sort(key=_rank)
     print(f"FIXES:  {len(paths)} export(s)  ({len(recs)} resolutions)")
 
@@ -203,7 +203,7 @@ def main():
                 stats["fandom_no_vol_in_url"] += 1
                 continue
             V = m.group(1)
-            if "extrapolated-auto" in rec.get("_src", ""):
+            if "extrapolated-auto" in rec.get("_src", "") or rec.get("auto"):
                 stats["extrapolated_link_volume_ignored"] += 1   # sibling-built link: cover only, never Volume
                 continue
             # A Fandom link is authoritative for the EXACT issue it names, so it

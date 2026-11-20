@@ -30,6 +30,22 @@ def ni(v):
         return s
 
 
+def flagged_books():
+    """(title lower, issue) of every cover you flagged incorrect in Cover Review, any export ever.
+    Their link must NOT be re-sent for the cover: it may be the very link that gave the wrong art."""
+    out = set()
+    for d in (os.path.expanduser("~/Downloads"), ROOT, os.path.join(ROOT, "processed_exports")):
+        for p in glob.glob(os.path.join(d, "flagged-covers-*.json")):
+            try:
+                data = json.load(open(p))
+            except Exception:  # noqa: BLE001
+                continue
+            for e in (data if isinstance(data, list) else list(data.values()) if isinstance(data, dict) else []):
+                if isinstance(e, dict) and (e.get("kind") or "incorrect") == "incorrect":
+                    out.add((str(e.get("Title", "")).strip().lower(), ni(e.get("Issue"))))
+    return out
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--write", action="store_true")
@@ -55,6 +71,7 @@ def main():
     gaps_cols = {n: g(n) for n in ("Writer(s)", "Artist(s)", "Cover Artist", "Publication Date")}
     cov = json.load(open(os.path.join(ROOT, "covers.json"))) if os.path.exists(os.path.join(ROOT, "covers.json")) else {}
     state = json.load(open(STATE)) if os.path.exists(STATE) else {}
+    flagged = flagged_books()
     out, st, why = [], collections.Counter(), collections.Counter()
     for r in it:
         t = str(r[cT] or "").strip()
@@ -67,7 +84,10 @@ def main():
         vol = ni(r[cV]) if cV is not None else "1"
         ck = [f"{t}|||{key[1]}|||{vol or '1'}", f"{t}|||#{key[1]}|||{vol or '1'}", f"{t}|||#{key[1]}", f"{t}|||{key[1]}"]
         if not any(cov.get(k) for k in ck) or "file=" in rec["value"] and not cov.get(ck[0]):
-            gaps.append("cover")
+            if (t.lower(), key[1]) in flagged:
+                st["cover flagged wrong - not re-sent for the cover"] += 1
+            else:
+                gaps.append("cover")
         if not gaps:
             continue
         sk = f"{t}|||{key[1]}|||{key[2]}|||{rec['value']}"

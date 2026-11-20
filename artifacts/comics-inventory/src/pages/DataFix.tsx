@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback, useEffect } from "react";
+import { useState, useMemo, useCallback, useEffect, useRef } from "react";
 import { DATA, type Comic } from "@/data/data";
 import { CoverImage, CoverModal, fmtPubDate, coverUrlSync, coverSourceSync, coversReady } from "@/components/CoverImage";
 import { setFlagKind as setCoverFlagKind } from "@/lib/coverFlags";
@@ -40,7 +40,7 @@ const LS_FIXES = "brbDataFixes_v1";     // id -> resolution record
 const LS_META  = "brbDataFixMeta_v1";   // { lastDate, streak, todayCount }
 
 type FixKind = "fandom" | "solution";
-interface FixRecord { id: string; title: string; issue: string; box: string; problem: string; kind: FixKind; value: string; at: string; }
+interface FixRecord { id: string; title: string; issue: string; box: string; problem: string; kind: FixKind; value: string; at: string; auto?: boolean; }
 type ArcSide = { name: string; part: string; length: string; source?: string; finale?: string; url?: string };
 type ArcConflict = { id: string; title: string; issue: string; box: string; vol: string; year: number | null; fandom: ArcSide; cv: ArcSide };
 const cleanArc = (n: string) => (n || "").replace(/^\s*["\u201c][^"\u201d]{1,60}["\u201d]\s+/, "").trim() || (n || "").trim();
@@ -145,7 +145,8 @@ export default function DataFix({ onNavigate }: { onNavigate?: (tab: string, par
   const [volDraft, setVolDraft] = useState<Record<string, string>>({});
   const [yearDraft, setYearDraft] = useState<Record<string, string>>({});
   const [activeProblem, setActiveProblem] = useState<ProblemId | "all">("all");
-  const [sortByCount, setSortByCount] = useState(false);   // title A→Z vs most-issues-first
+  const [sortByCount, setSortByCount] = useState(true);    // most-issues-first (default, Nov 20) vs title A→Z
+  const [spreadNote, setSpreadNote] = useState("");
   const [openGroups, setOpenGroups] = useState<Record<string, boolean>>({});
   const [coverModal, setCoverModal] = useState<{ comic: Comic; large: string | null } | null>(null);
   const [meta, setMeta] = useState<Meta>(() => loadMeta());
@@ -248,6 +249,19 @@ export default function DataFix({ onNavigate }: { onNavigate?: (tab: string, par
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [notInGcd, coversLoaded, variantDone, resolvedFlags]);
 
+  const flaggedRef = useRef(flagged);
+  flaggedRef.current = flagged;
+  // Books per title on the page — sections list the biggest runs first (Nov 20), so one
+  // link on a big run extrapolates across the most issues.
+  const titleCount = useMemo(() => {
+    const m = new Map<string, number>();
+    for (const f of flagged) { const t = (f.c.Title || "").trim(); m.set(t, (m.get(t) || 0) + 1); }
+    return m;
+  }, [flagged]);
+  const byRun = useCallback((a: Comic, b: Comic) =>
+    (titleCount.get((b.Title || "").trim()) || 0) - (titleCount.get((a.Title || "").trim()) || 0) ||
+    (a.Title || "").localeCompare(b.Title || "") || issueNum(a.Issue) - issueNum(b.Issue), [titleCount]);
+
   // Books that are flagged AND already carry a Fandom-sourced cover — a Fandom
   // link resolved their image, yet they still read as a problem. Those are the
   // most likely duplication / mislabel errors (like the Wildcats V3.0 dupes), so
@@ -261,9 +275,9 @@ export default function DataFix({ onNavigate }: { onNavigate?: (tab: string, par
       // and a Fandom link never clears it, so it used to live here forever.
       f.problems.some(p => !INFO_PROBLEMS.has(p)) &&
       // Once you've queued a fix for it, it's handled — drop it from the review.
-      !fixes.has(f.id));
+      !fixes.has(f.id)).sort((a, b) => byRun(a.c, b.c));
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [flagged, coversLoaded, fixes]);
+  }, [flagged, coversLoaded, fixes, byRun]);
 
   // ── Title consistency (client-side, mirrors validator Check 12) ──────────────
   const titleGroups = useMemo(() => {
@@ -373,7 +387,7 @@ export default function DataFix({ onNavigate }: { onNavigate?: (tab: string, par
     const rows: { c: Comic; id: string; url: string; pageName: string; confident: boolean }[] = [];
     for (const f of flagged) {
       if (!f.problems.includes("no-cover")) continue;
-      if (cgDismiss.has(f.id)) continue;
+      if (cgDismiss.has(f.id) || fixes.has(f.id)) continue;     // linked anywhere on the page -> gone
       const idx = linkIndex[(f.c.Title || "").trim().toLowerCase()];
       if (!idx) continue;
       const iss = String(f.c.Issue ?? "").replace(/^#/, "").trim();
@@ -384,9 +398,15 @@ export default function DataFix({ onNavigate }: { onNavigate?: (tab: string, par
       const confident = it === st || it.includes(st) || st.includes(it);
       rows.push({ c: f.c, id: f.id, url, pageName, confident });
     }
-    rows.sort((a, b) => Number(b.confident) - Number(a.confident));
+    rows.sort((a, b) => Number(b.confident) - Number(a.confident) || byRun(a.c, b.c));
     return rows;
-  }, [flagged, linkIndex, cgDismiss]);
+  }, [flagged, linkIndex, cgDismiss, fixes, byRun]);
+  // Fandom-fill unresolved, minus books already linked anywhere on the page; biggest runs first.
+  const openUnresolved = useMemo(() => {
+    const withC = unresolved.map(u => ({ u, c: comicByKey.get(normTitleKey(u.title) + "|||" + String(u.issue).replace(/^#/, "")) }));
+    return withC.filter(x => !x.c || !fixes.has(comicId(x.c)))
+      .sort((a, b) => (a.c && b.c) ? byRun(a.c, b.c) : a.u.title.localeCompare(b.u.title)).map(x => x.u);
+  }, [unresolved, comicByKey, fixes, byRun]);
 
   const mergeQueuedCount = Object.keys(titleMerges).filter(k => titleMerges[k]).length;
   // Export a persistent title_aliases map (normKey -> {canonical, source}). The
@@ -586,11 +606,46 @@ export default function DataFix({ onNavigate }: { onNavigate?: (tab: string, par
       setCoverFlagKind({ Title: c.Title, Issue: c.Issue, Box: c.Box,
         Cover_Artist: c.Cover_Artist, Publisher: c.Publisher, Year: c.Year }, "variant");
     }
-    setLeaving(prev => new Set(prev).add(id));
-    const rec: FixRecord = { id, title: c.Title, issue: String(c.Issue ?? ""), box: c.Box ?? "", problem, kind, value, at: new Date().toISOString() };
+    const at = new Date().toISOString();
+    const rec: FixRecord = { id, title: c.Title, issue: String(c.Issue ?? ""), box: c.Box ?? "", problem, kind, value, at };
+    // One Fandom link clears the book EVERYWHERE on the page (Nov 20):
+    //  · other copies of the same book (same title + issue + volume, other boxes) get the same
+    //    link - it is the same book, so it applies to them too;
+    //  · the other open issues of the same title + volume get the link with the issue number
+    //    swapped ("auto": the Mac treats it as a guess - never changes Volume, stays year-checked,
+    //    a dead page just skips). Everything they touch leaves the page.
+    const extra: FixRecord[] = [];
+    if (kind === "fandom" && /^https?:\/\//i.test(value)) {
+      const iss = String(c.Issue ?? "").replace(/^#/, "").trim();
+      const vol = String(c.Volume || "1");
+      const tk = normTitleKey(c.Title || "");
+      for (const o of comics) {
+        const oid = comicId(o);
+        if (oid === id || normTitleKey(o.Title || "") !== tk || String(o.Volume || "1") !== vol) continue;
+        if (String(o.Issue ?? "").replace(/^#/, "").trim() === iss)
+          extra.push({ id: oid, title: o.Title, issue: String(o.Issue ?? ""), box: o.Box ?? "", problem, kind, value, at });
+      }
+      const m = value.match(/^(https?:\/\/[^?#]+?_Vol_\d+)_([^?#/]+)$/);
+      if (m && decodeURIComponent(m[2]) === iss) {
+        for (const f of flaggedRef.current) {
+          const o = f.c, oi = String(o.Issue ?? "").replace(/^#/, "").trim();
+          if (f.id === id || !oi || oi === iss || normTitleKey(o.Title || "") !== tk || String(o.Volume || "1") !== vol) continue;
+          if (!/^[\d.]+$/.test(oi)) continue;               // only plain issue numbers extrapolate
+          extra.push({ id: f.id, title: o.Title, issue: String(o.Issue ?? ""), box: o.Box ?? "", problem: "extrapolated",
+                       kind, value: `${m[1]}_${encodeURIComponent(oi)}`, at, auto: true });
+        }
+      }
+    }
+    const ids = [id, ...extra.map(e => e.id)];
+    setLeaving(prev => { const n = new Set(prev); ids.forEach(x => n.add(x)); return n; });
+    if (extra.length) setSpreadNote(`🔗 ${c.Title} #${String(c.Issue).replace(/^#/, "")}: link also queued for ${extra.length} more issue${extra.length === 1 ? "" : "s"} / copies — they left the page`);
     setTimeout(() => {
-      setFixes(prev => { const n = new Map(prev); n.set(id, rec); saveFixes(n); return n; });
-      setLeaving(prev => { const n = new Set(prev); n.delete(id); return n; });
+      setFixes(prev => {
+        const n = new Map(prev); n.set(id, rec);
+        for (const e of extra) if (!n.has(e.id)) n.set(e.id, e);   // never overwrite something you chose
+        saveFixes(n); return n;
+      });
+      setLeaving(prev => { const n = new Set(prev); ids.forEach(x => n.delete(x)); return n; });
     }, 340);
     setMeta(bumpStreak());
     setSession(s => s + 1);
@@ -650,6 +705,12 @@ export default function DataFix({ onNavigate }: { onNavigate?: (tab: string, par
         <ol>{FLOW.map((f, i) => <li key={i}>{f}</li>)}</ol>
         <p>Each section below starts closed and is sorted smallest job first. Open one, and its 📘 guide explains what the problem is, why it happens, and exactly how to clear it.</p>
       </details>
+
+      {spreadNote && (
+        <div onClick={() => setSpreadNote("")} style={{ margin: "0 0 12px", padding: "8px 12px", borderRadius: 8, background: "rgba(22,163,74,0.12)", border: "1px solid #16a34a", fontSize: "0.85rem", cursor: "pointer" }}>
+          {spreadNote} <span style={{ color: "var(--muted,#888)" }}>· tap to dismiss</span>
+        </div>
+      )}
 
       {/* Category chips */}
       <div className="df-chips">
@@ -910,7 +971,7 @@ export default function DataFix({ onNavigate }: { onNavigate?: (tab: string, par
                               <div style={{ fontWeight: 700 }}>#{String(r.c.Issue).replace(/^#/, "")} <span style={{ color: "var(--muted2,#aaa)", fontWeight: 400 }}>v{r.c.Volume || "1"} · {r.c.Year}</span></div>
                               <div style={{ color: "var(--muted2,#aaa)" }}>was Box {r.old.replace(/^UNKNOWN.*/, "unknown")} → {/^UNKNOWN/i.test(String(r.c.Box)) ? <b style={{ color: "#d97706" }}>needs a box</b> : <b style={{ color: "#16a34a" }}>Box {r.c.Box}</b>}</div>
                               {onNavigate && (
-                                <button className="df-solve" onClick={() => onNavigate("editcomic", { query: `${r.c.Title} ${String(r.c.Issue).replace(/^#/, "")}` })}>
+                                <button className="df-solve" onClick={() => onNavigate("editcomic", { query: `${r.c.Title} #${r.c.Issue}` })}>
                                   ✏️ {rsTab === "copy" ? "Check / delete copy" : "Set box"}
                                 </button>
                               )}
@@ -1084,13 +1145,13 @@ export default function DataFix({ onNavigate }: { onNavigate?: (tab: string, par
       {/* Fandom fill — unresolved: books with a Fandom cover still missing a
           creator/date that the wiki lookup couldn't fill (too new, no mapped
           wiki, or a volume mismatch). Surfaced for manual investigation. */}
-      {unresolved.length > 0 && (
-        <section className="df-group" style={{ marginBottom: 14, order: unresolved.length }}>
+      {openUnresolved.length > 0 && (
+        <section className="df-group" style={{ marginBottom: 14, order: openUnresolved.length }}>
           <button className="df-group-hd" onClick={() => setUrOpen(o => !o)} style={{ borderLeft: "4px solid #0e7490" }}>
             <span className="df-group-name">
               <span className="df-chev">{urOpen ? "▾" : "▸"}</span> 🔍 Fandom fill — unresolved (investigate)
             </span>
-            <span className="df-chip-n">{unresolved.length}</span>
+            <span className="df-chip-n">{openUnresolved.length}</span>
           </button>
           {urOpen && (
             <div style={{ padding: "10px 14px", display: "flex", flexDirection: "column", gap: 8 }}>
@@ -1098,7 +1159,7 @@ export default function DataFix({ onNavigate }: { onNavigate?: (tab: string, par
               <div style={{ fontSize: "0.78rem", color: "var(--muted2,#aaa)" }}>
                 The wiki page didn't exist at run time — but if you find a working one, paste it and it applies next run (exactly like the other cards).
               </div>
-              {unresolved.map((u, i) => {
+              {openUnresolved.map((u, i) => {
                 const c = comicByKey.get(normTitleKey(u.title) + "|||" + String(u.issue).replace(/^#/, ""));
                 const id = c ? comicId(c) : "";
                 const saved = !!id && fixes.has(id);

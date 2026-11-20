@@ -126,6 +126,19 @@ class T(unittest.TestCase):
         sb.run("brb_apply_data_fixes.py", "--apply")
         self.assertEqual(str(sb.newest()[0]["Volume"]), "3")
 
+    def test_sibling_built_link_never_changes_volume(self):
+        # Nov 20: Data Fix copies one pasted link to the other issues of the run ("auto": true).
+        # Those are guesses: cover/data only, never the Volume (like extrapolated-auto files).
+        sb = self.sb
+        sb.xlsx(["Title", "Issue #", "Box #", "Volume", "Year", "Publisher", "Publication Date"],
+                [["Foo", 1, "5", 1, 2020, "Marvel", None], ["Foo", 2, "5", 1, 2020, "Marvel", None]])
+        sb.json("home/Downloads/data-fixes-2026-11-20.json", [
+            {"title": "Foo", "issue": "1", "box": "5", "problem": "x", "kind": "fandom", "value": "https://marvel.fandom.com/wiki/Foo_Vol_3_1"},
+            {"title": "Foo", "issue": "2", "box": "5", "problem": "x", "kind": "fandom", "auto": True, "value": "https://marvel.fandom.com/wiki/Foo_Vol_3_2"}])
+        r = sb.run("brb_apply_data_fixes.py", "--apply")
+        v = {x["Issue #"]: str(x["Volume"]) for x in sb.newest()}
+        self.assertEqual(v[1], "3", r.stdout); self.assertEqual(v[2], "1", "auto link must not change Volume")
+
     # ── arcs ──────────────────────────────────────────────────────────────────
     ARC_H = ["Title", "Issue #", "Volume", "Year", "Box #", "Story Arc", "Arc Part", "Arc Length",
              "Finale Issue #", "Crossover Event (Fandom)", "Arc Confidence", "Arc Source"]
@@ -473,6 +486,22 @@ class T(unittest.TestCase):
         r3 = sb.run("brb_relink.py", "--write")
         self.assertIn("nothing to re-send", r3.stdout, "re-sent once per parser version, never loops")
 
+    def test_relink_never_resends_a_flagged_cover(self):
+        # Nov 20: relink switched on. A cover you flagged incorrect must not come back from the
+        # same archived link; a book whose only gap is that cover is not re-sent at all.
+        sb = self.sb
+        sb.xlsx(["Title", "Issue #", "Year", "Volume", "Box #", "Publication Date", "Writer(s)", "Artist(s)", "Cover Artist"],
+                [["Bad", 1, 2020, 1, "5", "2020-01-00", "W", "A", "C"], ["Gap", 2, 2020, 1, "5", "2020-01-00", "W", None, "C"]])
+        sb.json("covers.json", {"Gap|||2|||1": {"url": "x"}})
+        os.makedirs(sb.p("processed_exports"), exist_ok=True)
+        rec = lambda t, i: {"title": t, "issue": i, "box": "5", "problem": "no-cover", "kind": "fandom", "value": f"https://marvel.fandom.com/wiki/{t}_Vol_1_{i}"}
+        sb.json("processed_exports/1_data-fixes-x.json", [rec("Bad", "1"), rec("Gap", "2")])
+        sb.json("home/Downloads/flagged-covers-2026-11-01.json", [{"Title": "Bad", "Issue": "1", "kind": "incorrect"}])
+        r = sb.run("brb_relink.py")
+        self.assertIn("to re-send: 1", r.stdout, r.stdout + r.stderr)
+        self.assertIn("cover flagged wrong", r.stdout)
+        self.assertIn("Gap #2", r.stdout); self.assertNotIn("Bad #1", r.stdout)
+
     def test_image_page_falls_back_to_curl_on_old_mac_ssl(self):
         # Nov 19: Mac CLT Python -> "[SSL: TLSV1_ALERT_PROTOCOL_VERSION]"; system curl works.
         sys.path.insert(0, self.sb.dir)
@@ -590,6 +619,25 @@ class T(unittest.TestCase):
         self.assertEqual(len(sb.newest()), 1, "nothing saved over the limit")
         r = sb.run("brb_reclaim_restore.py", "--apply", env={"BRB_FORCE": "1"})
         self.assertEqual(len(sb.newest()), 61, r.stdout + r.stderr)
+
+    def test_legacy_numbers_put_each_issue_on_its_page(self):
+        # Nov 20: Avengers #672 was filed as Vol 8 (Vol 8 starts at #691); Fandom's
+        # Legacy_Numbers page names the real page. Dual-numbered #480 = Vol 3 #65 -> renumber
+        # (listed, never auto-written); ordinary issues pick the volume whose year fits.
+        import brb_legacy_links as LL
+        cap = lambda n, link: (f'class="wikia-gallery-item"><div class="lightbox-caption" style="x"><span><span>Avengers</span> #{n}</span>'
+                               + (f'<br />(<a href="/wiki/{link}">x</a>)' if link else "") + "</div>")
+        L = LL.parse_legacy("".join([cap(400, None), cap(402, None), cap(480, "Avengers_Vol_3_65"), cap(672, "Avengers_Vol_7_672")]), "Avengers")
+        self.assertEqual(L["672"], "Avengers Vol 7 672"); self.assertEqual(L["400"], "Avengers Vol 1 400")
+        Y = {"Avengers Vol 4 1": 2010, "Avengers Vol 5 1": 2013, "Avengers Vol 8 1": 2018, "Avengers Vol 7 1": 2017}.get
+        rows = [("a", "672", "8", 2017, "27"), ("b", "480", "", 2001, "U"), ("c", "1", "5", 2010, "6"),
+                ("d", "1", "8", 2018, "27"), ("e", "400", "1", 1996, "3")]
+        P = {r: (k, t) for r, k, t, _ in LL.plan(rows, "Avengers", L, Y)}
+        self.assertEqual(P["a"], ("volume", "Avengers Vol 7 672"))
+        self.assertEqual(P["b"], ("renumber", "Avengers Vol 3 65"))
+        self.assertEqual(P["c"], ("volume", "Avengers Vol 4 1"))
+        self.assertNotIn("d", P, "recorded volume closest in year stays")
+        self.assertNotIn("e", P, "first-volume issue already right")
 
     def test_fandom_fill_wide_covers_comic_vine_cover_books(self):
         # Nov 19: Absolute Superman #1 - cover from Comic Vine, so the fill never opened its DC page.

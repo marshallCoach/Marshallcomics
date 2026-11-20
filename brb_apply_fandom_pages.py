@@ -311,7 +311,10 @@ def main():
             if _k in _seen:
                 continue
             _src = os.path.basename(_p)
-            _r["_auto"] = ("extrapolated-auto" in _src) or ("autolink" in _src)   # machine-made, not user-vouched
+            # machine-made, not user-vouched: extrapolated / autolink files, links Data Fix built from a
+            # sibling ("auto": true), and legacy-number volume links (they fix Volume, never move the Year)
+            _r["_auto"] = ("extrapolated-auto" in _src) or ("autolink" in _src) or bool(_r.get("auto")) \
+                or _r.get("problem") == "legacy-volume"
             _seen.add(_k); all_recs.append(_r)
     print(f"Exports merged: {len(paths)} ({', '.join(os.path.basename(p) for p in paths)})")
     recs = [r for r in all_recs if r.get("kind") == "fandom"

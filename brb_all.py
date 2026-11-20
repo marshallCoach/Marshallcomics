@@ -167,7 +167,7 @@ def main():
 
     # 1c — re-send ARCHIVED links for books that still have gaps (a parser got smarter,
     # or a cover was cleared), so step 2 fills them. NEW Nov 19: report-only until reviewed.
-    APPLY_RELINK = False
+    APPLY_RELINK = True    # Nov 20: flagged-wrong covers are never re-sent; Robert saw 174/101 report runs
     def relink():
         if run([PY, os.path.join(ROOT, "brb_relink.py")] + (["--write"] if APPLY_RELINK else [])):
             raise RuntimeError("brb_relink failed")

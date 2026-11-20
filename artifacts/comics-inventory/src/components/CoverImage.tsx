@@ -431,6 +431,13 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
               </div>
             )}
 
+            {/* ── Edit this comic: jump to the Edit Comic page with this book searched (Nov 20) ── */}
+            <button
+              onClick={() => { window.dispatchEvent(new CustomEvent("brb:navigate", { detail: { tab: "editcomic", query: `${comic.Title} #${comic.Issue}` } })); onClose(); }}
+              style={{ alignSelf: "flex-start", marginBottom: 14, fontSize: "0.9rem", fontWeight: 700, border: "1px solid var(--border)", background: "var(--surface2)", color: "var(--text)", borderRadius: 8, padding: "8px 14px", cursor: "pointer" }}>
+              ✏️ Edit this comic (box, volume, year, credits…) →
+            </button>
+
             {/* ── Cover audit: flag incorrect, or mark as a variant ── */}
             <div style={{ borderTop: "1px solid var(--border)", paddingTop: 12, marginBottom: 14 }}>
               <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "2px", color: "var(--muted)", marginBottom: 7 }}>COVER AUDIT</div>
