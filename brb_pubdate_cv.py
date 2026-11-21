@@ -17,12 +17,12 @@ xlsx; never edits the source. Fills blanks only unless --overwrite.
     python3 brb_pubdate_cv.py --limit 50 # test on the first 50 blanks
 Then: python3 brb.py --commit "Publication Date — Comic Vine fallback" --yes
 """
-import argparse, datetime, glob, json, os, re, sys, time, urllib.parse, urllib.request
+import argparse, datetime, glob, json, os, re, sys, time, urllib.error, urllib.parse, urllib.request
 from collections import Counter
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 API_KEY = os.environ.get("COMIC_VINE_API_KEY", "").strip()
-CV = "https://comicvine.gamespot.com/api"
+CV = os.environ.get("BRB_CV_URL", "https://comicvine.gamespot.com/api")   # override = tests only
 UA = "BlackReadBrown-Comics/1.0"
 COLNAME = "Publication Date"
 
@@ -54,8 +54,15 @@ def year_of(y):
     return nums[0] if nums else None
 
 
+class Throttled(Exception):
+    """Comic Vine HTTP 420 = hourly request limit used up. Retrying is pointless for
+    up to an hour (Nov 19: ~120 retries with backoff burned ~50 min, then Ctrl-C lost
+    every date already found). So the step stops, saves what it has, and the remaining
+    blanks are picked up on the next run."""
+
+
 def cv_get(path, params, tries=5):
-    """GET with polite backoff on Comic Vine's rate limiter."""
+    """GET with polite backoff on network hiccups; stops at once on the hourly limit."""
     params = {**params, "api_key": API_KEY, "format": "json"}
     url = f"{CV}/{path}/?{urllib.parse.urlencode(params)}"
     for i in range(tries):
@@ -70,6 +77,13 @@ def cv_get(path, params, tries=5):
             if data.get("status_code") == 100:
                 sys.exit("Comic Vine says the API key is invalid — check COMIC_VINE_API_KEY")
             return data
+        except urllib.error.HTTPError as e:
+            if e.code == 420:
+                raise Throttled() from None
+            if i == tries - 1:
+                print(f"    ! giving up on request: {e}")
+                return None
+            time.sleep(2 ** i * 3)
         except Exception as e:  # noqa: BLE001 — network hiccup: back off and retry
             if i == tries - 1:
                 print(f"    ! giving up on request: {e}")
@@ -154,7 +168,25 @@ def main():
         ws.cell(1, cPD, COLNAME)
         print(f"added '{COLNAME}' column at index {cPD}")
 
-    cache, stats, done = {}, Counter(), 0
+    cache, stats = {}, Counter()
+    stopped = ""
+    try:
+        _fill(ws, args, cT, cI, cP, cY, cPD, cache, stats)
+    except Throttled:
+        stopped = "Comic Vine hourly limit reached (HTTP 420)"
+    except KeyboardInterrupt:
+        stopped = "stopped by you (Ctrl-C)"
+    if stopped:
+        print(f"\n  {stopped} - saving the {stats['filled']} date(s) found so far; "
+              "the rest are tried again next run.")
+    if not stats["filled"] and not args.overwrite:
+        print(f"\nSOURCE: {os.path.basename(src)}\nnothing filled - no new file written")
+        return
+    _save(wb, src, stats)
+
+
+def _fill(ws, args, cT, cI, cP, cY, cPD, cache, stats):
+    done = 0
     for r in range(2, ws.max_row + 1):
         title = str(ws.cell(r, cT).value or "").strip()
         if not title:
@@ -185,6 +217,8 @@ def main():
         if done % 25 == 0:
             print(f"  …{done} processed · {stats['filled']} filled")
 
+
+def _save(wb, src, stats):
     out = os.path.join(ROOT, f"attached_assets/comics_inventory_{datetime.datetime.now():%d%m_%H%M}.xlsx")
     wb.save(out)
     print(f"\nSOURCE: {os.path.basename(src)}")

@@ -685,6 +685,38 @@ class T(unittest.TestCase):
         self.assertIn("480", str(wb["Duplicates"].cell(wb["Duplicates"].max_row, 3).value), "moved, not deleted")
         self.assertIn("cell changes: 0   rows to Duplicates tab: 0", sb.run("brb_fix_rows.py", "fx.json").stdout, "second run: nothing")
 
+    def test_comic_vine_limit_stops_fast_and_keeps_dates(self):
+        # Nov 19: HTTP 420 (hourly limit) was retried with backoff for ~50 min; Ctrl-C then
+        # lost every date already found. Now: stop at the first 420, save what was found.
+        import http.server, threading
+        hits = []
+
+        class H(http.server.BaseHTTPRequestHandler):
+            def log_message(self, *a):
+                pass
+
+            def do_GET(self):
+                hits.append(self.path)
+                if len(hits) > 2:                      # limit used up after one book
+                    self.send_response(420); self.end_headers(); return
+                body = {"status_code": 1, "results": [{"id": 7, "name": "Hulk", "start_year": 2008}]} \
+                    if "/search/" in self.path else {"status_code": 1, "results": [{"store_date": "2008-03-05"}]}
+                self.send_response(200); self.end_headers(); self.wfile.write(json.dumps(body).encode())
+        srv = http.server.HTTPServer(("127.0.0.1", 0), H)
+        threading.Thread(target=srv.serve_forever, daemon=True).start()
+        sb = self.sb
+        sb.xlsx(["Title", "Issue #", "Year", "Publisher", "Publication Date"],
+                [["Hulk", "1", 2008, "Marvel", None], ["Thor", "1", 2007, "Marvel", None], ["Thor", "2", 2007, "Marvel", None]])
+        t0 = time.time()
+        r = sb.run("brb_pubdate_cv.py", env={"BRB_CV_URL": f"http://127.0.0.1:{srv.server_port}/api",
+                                             "COMIC_VINE_API_KEY": "test", "NO_PROXY": "127.0.0.1", "no_proxy": "127.0.0.1"})
+        srv.shutdown()
+        self.assertLess(time.time() - t0, 20, "no long backoff on 420")
+        self.assertIn("hourly limit", r.stdout, r.stdout + r.stderr)
+        rows = sb.newest()
+        self.assertEqual(str(rows[0]["Publication Date"]), "2008-03-05", "date found before the limit is saved")
+        self.assertIsNone(rows[1]["Publication Date"])
+
     def test_fandom_fill_wide_covers_comic_vine_cover_books(self):
         # Nov 19: Absolute Superman #1 - cover from Comic Vine, so the fill never opened its DC page.
         sb = self.sb
