@@ -1,5 +1,5 @@
 {
- "source": "comics_inventory_2311_1624.xlsx",
+ "source": "comics_inventory_2311_1805.xlsx",
  "capturedAt": "2026-11-23",
  "rows": [
   {
@@ -3144,15 +3144,6 @@
    "signed": false
   },
   {
-   "title": "Moon Knight and the Infinity Watch Annual",
-   "issue": "1",
-   "year": "2024",
-   "volume": "9",
-   "box": "UNKNOWN — needs physical reassignment",
-   "key": true,
-   "signed": false
-  },
-  {
    "title": "Longshots: Age of Revelation",
    "issue": "2",
    "year": "2025",
@@ -4410,24 +4401,6 @@
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
-   "signed": false
-  },
-  {
-   "title": "X-Men: The End",
-   "issue": "#2",
-   "year": "2004",
-   "volume": "3",
-   "box": "UNKNOWN — needs physical reassignment",
-   "key": false,
-   "signed": false
-  },
-  {
-   "title": "X-Men: The End",
-   "issue": "#2",
-   "year": "2004",
-   "volume": "3",
-   "box": "UNKNOWN — needs physical reassignment",
-   "key": false,
    "signed": false
   },
   {

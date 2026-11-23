@@ -1,13 +1,13 @@
-// AUTO-GENERATED quest data — source: comics_inventory_2311_1624.xlsx (11911 rows) · generated 2026-11-23
+// AUTO-GENERATED quest data — source: comics_inventory_2311_1805.xlsx (11901 rows) · generated 2026-11-23
 // Regenerate with: node gen_quest_data.mjs
 window.QUEST_DATA = {
- "source": "comics_inventory_2311_1624.xlsx",
+ "source": "comics_inventory_2311_1805.xlsx",
  "generated": "2026-11-23",
- "totalRows": 11911,
+ "totalRows": 11901,
  "dupe": {
-  "groups": 27,
-  "rows": 54,
-  "excess": 27
+  "groups": 26,
+  "rows": 52,
+  "excess": 26
  },
  "clone": {
   "groups": 3,
@@ -45,9 +45,9 @@ window.QUEST_DATA = {
   },
   {
    "box": 10,
-   "rows": 243,
+   "rows": 242,
    "cap": 240,
-   "over": 3,
+   "over": 2,
    "loc": "Basement Front A — BFA-3"
   },
   {
@@ -102,9 +102,9 @@ window.QUEST_DATA = {
    "code": "BFB-2",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 206,
+   "rows": 205,
    "vcap": 240,
-   "dupes": 4,
+   "dupes": 2,
    "clones": 0
   },
   {
@@ -162,7 +162,7 @@ window.QUEST_DATA = {
    "code": "BFA-3",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 243,
+   "rows": 242,
    "vcap": 240,
    "dupes": 2,
    "clones": 0
@@ -426,7 +426,7 @@ window.QUEST_DATA = {
    "code": "BFC-3",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 100,
+   "rows": 98,
    "vcap": 240,
    "dupes": 2,
    "clones": 0
@@ -450,7 +450,7 @@ window.QUEST_DATA = {
    "code": "BFC-1",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 66,
+   "rows": 65,
    "vcap": 240,
    "dupes": 0,
    "clones": 0
@@ -810,7 +810,7 @@ window.QUEST_DATA = {
    "code": "BDR-2",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 11,
+   "rows": 10,
    "vcap": 240,
    "dupes": 0,
    "clones": 0
@@ -1027,7 +1027,7 @@ window.QUEST_DATA = {
       },
       {
        "id": "0.5",
-       "text": "Confirm the chat reads back 11,911 rows. If not — STOP, wrong file."
+       "text": "Confirm the chat reads back 11,901 rows. If not — STOP, wrong file."
       }
      ]
     }
