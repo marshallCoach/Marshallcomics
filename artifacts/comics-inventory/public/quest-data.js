@@ -1,7 +1,7 @@
-// AUTO-GENERATED quest data — source: comics_inventory_2311_1805.xlsx (11901 rows) · generated 2026-11-23
+// AUTO-GENERATED quest data — source: comics_inventory_2311_1828.xlsx (11901 rows) · generated 2026-11-23
 // Regenerate with: node gen_quest_data.mjs
 window.QUEST_DATA = {
- "source": "comics_inventory_2311_1805.xlsx",
+ "source": "comics_inventory_2311_1828.xlsx",
  "generated": "2026-11-23",
  "totalRows": 11901,
  "dupe": {

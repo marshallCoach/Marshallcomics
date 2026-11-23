@@ -307,7 +307,7 @@
 {
 "title": "Journey into Mystery",
 "issue": "5",
-"reason": "wide: page year 1952 vs your 2019 - different run, skipped"
+"reason": "page year 1952 vs your 2019 - different run, skipped"
 },
 {
 "title": "Justice League Dark: Tomorrow's Special",
@@ -327,7 +327,7 @@
 {
 "title": "Marvel Comics #1000",
 "issue": "1",
-"reason": "wide: page year 2024 vs your 2019 - different run, skipped"
+"reason": "page year 2024 vs your 2019 - different run, skipped"
 },
 {
 "title": "Marvel Team-Up",
@@ -815,11 +815,6 @@
 "reason": "page not found (Wonder Woman Vol 1 75th Anniversary Special)"
 },
 {
-"title": "Marvel Two-in-One #1 \u2014 \u26a0\ufe0f NOT IN COLLECTION",
-"issue": "1",
-"reason": "wide: page year None vs your 1974 - different run, skipped"
-},
-{
 "title": "Fantastic Four",
 "issue": "Foil Cover (verify issue)",
 "reason": "page not found (Fantastic Four Vol 1 Foil Cover (verify issue))"
@@ -875,11 +870,6 @@
 "reason": "page not found (Marvel Tales Starring Spider-Man Vol 1 113)"
 },
 {
-"title": "Giant-Size X-Men: Apocalypse",
-"issue": "1",
-"reason": "page not found (Giant-Size X-Men: Apocalypse Vol 6 1)"
-},
-{
 "title": "Wolverine: Fall of X",
 "issue": "39",
 "reason": "page not found (Wolverine: Fall of X Vol 7 39)"
@@ -890,109 +880,14 @@
 "reason": "page not found (Worlds Collide Vol 1 15)"
 },
 {
-"title": "New History of the DC Universe: The Dakota Incident",
-"issue": "1",
-"reason": "wide: page year 2026 vs your 2024 - different run, skipped"
-},
-{
-"title": "Green Lantern",
-"issue": "32",
-"reason": "wide: page year 2026 vs your 2024 - different run, skipped"
-},
-{
-"title": "King-Size Special: Avengers",
-"issue": "2",
-"reason": "page not found (King-Size Special: Avengers Vol 1 2)"
-},
-{
-"title": "The Amazing Spider-Man",
-"issue": "16",
-"reason": "page not found (The Amazing Spider-Man Vol 1 16)"
-},
-{
 "title": "X-Men",
 "issue": "282",
-"reason": "wide: page year 2013 vs your 1991 - different run, skipped"
-},
-{
-"title": "Cloak and Dagger",
-"issue": "5",
-"reason": "page not found (Cloak and Dagger Vol 1 5)"
+"reason": "page year 2013 vs your 1991 - different run, skipped"
 },
 {
 "title": "Luke Cage, Power Man",
 "issue": "17",
 "reason": "page not found (Luke Cage, Power Man Vol 1 17)"
-},
-{
-"title": "Captain America & The Falcon",
-"issue": "137",
-"reason": "page not found (Captain America & The Falcon Vol 2 137)"
-},
-{
-"title": "Captain America & The Falcon",
-"issue": "138",
-"reason": "page not found (Captain America & The Falcon Vol 2 138)"
-},
-{
-"title": "Captain America & The Falcon",
-"issue": "155",
-"reason": "page not found (Captain America & The Falcon Vol 2 155)"
-},
-{
-"title": "Captain America & The Falcon",
-"issue": "156",
-"reason": "page not found (Captain America & The Falcon Vol 2 156)"
-},
-{
-"title": "Captain America & The Falcon",
-"issue": "159",
-"reason": "page not found (Captain America & The Falcon Vol 2 159)"
-},
-{
-"title": "Captain America & The Falcon",
-"issue": "163",
-"reason": "page not found (Captain America & The Falcon Vol 2 163)"
-},
-{
-"title": "Captain America & The Falcon",
-"issue": "165",
-"reason": "page not found (Captain America & The Falcon Vol 2 165)"
-},
-{
-"title": "Captain America & The Falcon",
-"issue": "169",
-"reason": "page not found (Captain America & The Falcon Vol 2 169)"
-},
-{
-"title": "Captain America & The Falcon",
-"issue": "170",
-"reason": "page not found (Captain America & The Falcon Vol 2 170)"
-},
-{
-"title": "Captain America & The Falcon",
-"issue": "171",
-"reason": "page not found (Captain America & The Falcon Vol 2 171)"
-},
-{
-"title": "Captain America & The Falcon",
-"issue": "172",
-"reason": "page not found (Captain America & The Falcon Vol 2 172)"
-},
-{
-"title": "Captain America & The Falcon",
-"issue": "173",
-"reason": "page not found (Captain America & The Falcon Vol 2 173)"
-},
-{
-"title": "Captain America & The Falcon",
-"issue": "178",
-"reason": "page not found (Captain America & The Falcon Vol 2 178)"
-},
-{
-"title": "Captain America & The Falcon",
-"issue": "182",
-"reason": "page not found (Captain America & The Falcon Vol 2 182)"
 },
 {
 "title": "Captain America & The Falcon",
@@ -1050,19 +945,9 @@
 "reason": "page not found (Magic: The Gathering Vol 1 1)"
 },
 {
-"title": "Doom: The Will of Doom",
-"issue": "1",
-"reason": "page not found (Doom: The Will of Doom Vol 1 1)"
-},
-{
 "title": "Guy Gardner: Tales of the Green Lantern Corps",
 "issue": "1",
 "reason": "page not found (Guy Gardner: Tales of the Green Lantern Corps Vol 7 1)"
-},
-{
-"title": "The Mighty Thor",
-"issue": "169",
-"reason": "page not found (The Mighty Thor Vol 1 169)"
 },
 {
 "title": "Milestone Returns: Infinite Edition",
@@ -1113,16 +998,6 @@
 "title": "The 4th Family",
 "issue": "1",
 "reason": "page not found (The 4th Family Vol 1 1)"
-},
-{
-"title": "Star Wars: Lando",
-"issue": "2",
-"reason": "page not found (Star Wars: Lando Vol 1 2)"
-},
-{
-"title": "Star Wars: Lando",
-"issue": "3",
-"reason": "page not found (Star Wars: Lando Vol 1 3)"
 },
 {
 "title": "Doctor Doom and Rocket Raccoon",
@@ -1307,7 +1182,7 @@
 {
 "title": "Strange",
 "issue": "2",
-"reason": "wide: page year 2004 vs your 2022 - different run, skipped"
+"reason": "page year 2004 vs your 2022 - different run, skipped"
 },
 {
 "title": "Suicide Squad: From the Ashes",
@@ -1342,17 +1217,17 @@
 {
 "title": "Team 7",
 "issue": "1",
-"reason": "wide: page year 1994 vs your 2012 - different run, skipped"
+"reason": "page year 1994 vs your 2012 - different run, skipped"
 },
 {
 "title": "Team 7",
 "issue": "2",
-"reason": "wide: page year 1994 vs your 2012 - different run, skipped"
+"reason": "page year 1994 vs your 2012 - different run, skipped"
 },
 {
 "title": "Team 7",
 "issue": "4",
-"reason": "wide: page year 1995 vs your 2012 - different run, skipped"
+"reason": "page year 1995 vs your 2012 - different run, skipped"
 },
 {
 "title": "Team 7",
@@ -1428,11 +1303,6 @@
 "title": "Star Trek TNG: The Gorn Crisis",
 "issue": "1",
 "reason": "page not found (Star Trek TNG: The Gorn Crisis Vol 74 1)"
-},
-{
-"title": "The Amazing Spider-Man",
-"issue": "2",
-"reason": "page not found (The Amazing Spider-Man Vol 74 2)"
 },
 {
 "title": "JLA: A League of One",
@@ -1640,44 +1510,14 @@
 "reason": "page not found (Shadow Cabinet: Milestone Universe Vol 1 4)"
 },
 {
-"title": "Moon Knight and the Infinity Watch Annual",
-"issue": "1",
-"reason": "page not found (Moon Knight and the Infinity Watch Annual Vol 9 1)"
-},
-{
-"title": "Moon Knight and the Infinity Watch Annual",
-"issue": "1",
-"reason": "page not found (Moon Knight and the Infinity Watch Annual Vol 9 1)"
-},
-{
 "title": "Longshots: Age of Revelation",
 "issue": "2",
 "reason": "page not found (Longshots: Age of Revelation Vol 1 2)"
 },
 {
-"title": "Wolverine and the X-Men",
-"issue": "3",
-"reason": "wide: page year 2011 vs your 2014 - different run, skipped"
-},
-{
-"title": "Wolverine and the X-Men",
-"issue": "4",
-"reason": "wide: page year 2012 vs your 2014 - different run, skipped"
-},
-{
-"title": "Wolverine and the X-Men",
-"issue": "6",
-"reason": "wide: page year 2012 vs your 2014 - different run, skipped"
-},
-{
-"title": "Wolverine and the X-Men",
-"issue": "7",
-"reason": "wide: page year 2012 vs your 2014 - different run, skipped"
-},
-{
 "title": "X-Men",
 "issue": "30",
-"reason": "wide: page year 1967 vs your 2013 - different run, skipped"
+"reason": "page year 1967 vs your 2013 - different run, skipped"
 },
 {
 "title": "X-Force and Cable",
@@ -1710,24 +1550,19 @@
 "reason": "page not found (X-Force and Cable Vol 1 19)"
 },
 {
-"title": "Wolverine",
-"issue": "5",
-"reason": "page not found (Wolverine Vol 1 5)"
-},
-{
 "title": "Nightcrawler",
 "issue": "1",
-"reason": "wide: page year 1985 vs your 2014 - different run, skipped"
+"reason": "page year 1985 vs your 2014 - different run, skipped"
 },
 {
 "title": "Nightcrawler",
 "issue": "3",
-"reason": "wide: page year 1985 vs your 2014 - different run, skipped"
+"reason": "page year 1985 vs your 2014 - different run, skipped"
 },
 {
 "title": "Nightcrawler",
 "issue": "4",
-"reason": "wide: page year 1985 vs your 2014 - different run, skipped"
+"reason": "page year 1985 vs your 2014 - different run, skipped"
 },
 {
 "title": "Nightcrawler",
@@ -1752,22 +1587,22 @@
 {
 "title": "Magneto",
 "issue": "1",
-"reason": "wide: page year 1996 vs your 2014 - different run, skipped"
+"reason": "page year 1996 vs your 2014 - different run, skipped"
 },
 {
 "title": "Magneto",
 "issue": "2",
-"reason": "wide: page year 1996 vs your 2014 - different run, skipped"
+"reason": "page year 1996 vs your 2014 - different run, skipped"
 },
 {
 "title": "Magneto",
 "issue": "3",
-"reason": "wide: page year 1996 vs your 2014 - different run, skipped"
+"reason": "page year 1996 vs your 2014 - different run, skipped"
 },
 {
 "title": "Magneto",
 "issue": "4",
-"reason": "wide: page year 1996 vs your 2014 - different run, skipped"
+"reason": "page year 1996 vs your 2014 - different run, skipped"
 },
 {
 "title": "Magneto",
@@ -1872,7 +1707,7 @@
 {
 "title": "Gambit",
 "issue": "4",
-"reason": "wide: page year 1994 vs your 2012 - different run, skipped"
+"reason": "page year 1994 vs your 2012 - different run, skipped"
 },
 {
 "title": "Gambit",
@@ -1967,17 +1802,7 @@
 {
 "title": "Venom",
 "issue": "15",
-"reason": "wide: page year 2004 vs your 2012 - different run, skipped"
-},
-{
-"title": "JLA",
-"issue": "1",
-"reason": "wide: page year 1997 vs your 2001 - different run, skipped"
-},
-{
-"title": "Captain America and Namor",
-"issue": "635",
-"reason": "page not found (Captain America and Namor Vol 7 635)"
+"reason": "page year 2004 vs your 2012 - different run, skipped"
 },
 {
 "title": "WildStorm Starts Now!",
@@ -2032,22 +1857,12 @@
 {
 "title": "New History of the DC Universe: The Dakota Incident",
 "issue": "1",
-"reason": "wide: page year 2026 vs your 2024 - different run, skipped"
+"reason": "page year 2026 vs your 2024 - different run, skipped"
 },
 {
 "title": "Strange Academy: Presents the Death of Doctor Strange",
 "issue": "1",
 "reason": "page not found (Strange Academy: Presents the Death of Doctor Strange Vol 1 1)"
-},
-{
-"title": "X-Men: The End",
-"issue": "2",
-"reason": "wide: page year 2006 vs your 2004 - different run, skipped"
-},
-{
-"title": "X-Men: The End",
-"issue": "2",
-"reason": "wide: page year 2006 vs your 2004 - different run, skipped"
 },
 {
 "title": "DC: 5 of a Kind \u2014 Nightwing/Captain Boomerang",
@@ -2082,7 +1897,7 @@
 {
 "title": "Cyclops",
 "issue": "4",
-"reason": "wide: page year 2001 vs your 2014 - different run, skipped"
+"reason": "page year 2001 vs your 2014 - different run, skipped"
 },
 {
 "title": "Batman and Robin",
@@ -2120,11 +1935,6 @@
 "reason": "page not found (Wildcats: Version 3.0 Vol 1 3.6)"
 },
 {
-"title": "What If? Featuring Captain America",
-"issue": "1",
-"reason": "page not found (What If? Featuring Captain America Vol 6 1)"
-},
-{
 "title": "Shang-Chi vs. Captain America",
 "issue": "2",
 "reason": "page not found (Shang-Chi vs. Captain America Vol 9 2)"
@@ -2150,28 +1960,13 @@
 "reason": "page not found (Bloodhunt: Moon Knight Vol 8 1)"
 },
 {
-"title": "Black Panther \u2014 Black & White",
-"issue": "50",
-"reason": "page not found (Black Panther \u2014 Black & White Vol 3 50)"
-},
-{
-"title": "Empyre: Avengers/Fantastic Four",
+"title": "Empyre: Fantastic Four",
 "issue": "3",
-"reason": "page not found (Empyre: Avengers/Fantastic Four Vol 7 3)"
+"reason": "page not found (Empyre: Fantastic Four Vol 1 3)"
 },
 {
 "title": "Fantastic Four",
 "issue": "499",
 "reason": "page not found (Fantastic Four Vol 5 499)"
-},
-{
-"title": "Rogue & Storm",
-"issue": "2",
-"reason": "page not found (Rogue & Storm Vol 1 2)"
-},
-{
-"title": "Reborn Ultimate Impact",
-"issue": "5",
-"reason": "page not found (Reborn Ultimate Impact Vol 1 5)"
 }
 ]
