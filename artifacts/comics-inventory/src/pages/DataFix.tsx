@@ -3,6 +3,9 @@ import { DATA, type Comic } from "@/data/data";
 import { CoverImage, CoverModal, fmtPubDate, coverUrlSync, coverSourceSync, coversReady } from "@/components/CoverImage";
 import { setFlagKind as setCoverFlagKind } from "@/lib/coverFlags";
 import { Guide, FLOW } from "./dataFixGuides";
+import { openFocus, fandomGuess, type FocusItem } from "@/lib/focusQueue";
+
+type OpenItems = { items: (FocusItem & { id: string })[]; tasks: { id: string; title: string; problem: string; action: string }[] };
 
 // ── Data-cleanup spot-check ──────────────────────────────────────────────────
 // Surfaces every comic with a fixable data problem, grouped by problem →
@@ -176,6 +179,8 @@ export default function DataFix({ onNavigate }: { onNavigate?: (tab: string, par
   const [rcTier, setRcTier] = useState<1 | 2>(2);     // Tier 1 was restored Nov 19 -> 📦 Restored books
   const [restoredData, setRestoredData] = useState<Restored | null>(null);
   const [rsOpen, setRsOpen] = useState(false);
+  const [openItems, setOpenItems] = useState<OpenItems | null>(null);
+  const [oiOpen, setOiOpen] = useState(true);
   const [rsTab, setRsTab] = useState<"box" | "copy" | "placed" | "noissue" | "skipped">("box");
   const [rsTitle, setRsTitle] = useState<string | null>(null);
   const [flowOpen, setFlowOpen] = useState(true);
@@ -210,6 +215,8 @@ export default function DataFix({ onNavigate }: { onNavigate?: (tab: string, par
       .then((a: SeriesMatch[]) => setSeriesMatch(Array.isArray(a) ? a : [])).catch(() => {});
     fetch(`${BASE}/reclaim_covers.json`).then(r => r.ok ? r.json() : {})
       .then((o: Record<string, { url: string; large: string }>) => setRcCovers(o && typeof o === "object" ? o : {})).catch(() => {});
+    fetch(`${BASE}/open_items.json`).then(r => r.ok ? r.json() : null)
+      .then((o: OpenItems | null) => setOpenItems(o && Array.isArray(o.items) ? { items: o.items, tasks: o.tasks || [] } : null)).catch(() => {});
     fetch(`${BASE}/reclaim_restored.json`).then(r => r.ok ? r.json() : null)
       .then((o: Restored | null) => setRestoredData(o && Array.isArray(o.restored) ? o : null)).catch(() => {});
     fetch(`${BASE}/reclaim_candidates.json`).then(r => r.ok ? r.json() : [])
@@ -928,6 +935,50 @@ export default function DataFix({ onNavigate }: { onNavigate?: (tab: string, par
         </section>
       )}
 
+      {/* 📋 Open items — the open crosses from Claude's review (public/open_items.json). Each has
+          the problem, a best-guess page, and ✏️ Edit, which starts a ‹ Prev / Next › session on Edit Comic. */}
+      {openItems && (openItems.items.length + openItems.tasks.length) > 0 && (() => {
+        const live = openItems.items.filter(it => comics.some(c => c.Title === it.title && String(c.Issue).replace(/^#/, "") === String(it.issue).replace(/^#/, "")));
+        const pubOf = (it: FocusItem) => comics.find(c => c.Title === it.title && String(c.Issue).replace(/^#/, "") === String(it.issue).replace(/^#/, ""));
+        const withLinks: FocusItem[] = live.map(it => {
+          const c = pubOf(it);
+          return it.link ? it : { ...it, link: c ? fandomGuess({ ...c, Volume: it.volume || c.Volume }) : undefined, linkLabel: "Fandom guess" };
+        });
+        return (
+          <section className="df-group" style={{ marginBottom: 14, order: -1 }}>
+            <button className="df-group-hd" onClick={() => setOiOpen(o => !o)} style={{ borderLeft: "4px solid #e0a21b" }}>
+              <span className="df-group-name"><span className="df-chev">{oiOpen ? "▾" : "▸"}</span> 📋 Open items from the Nov 23 review</span>
+              <span className="df-chip-n">{live.length + openItems.tasks.length}</span>
+            </button>
+            {oiOpen && (
+              <div style={{ padding: "10px 14px", display: "flex", flexDirection: "column", gap: 8 }}>
+                {withLinks.length > 0 && (
+                  <button className="df-link-save" style={{ alignSelf: "flex-start", background: "#e0a21b", color: "#111" }}
+                    onClick={() => openFocus("Open items", withLinks, 0)}>▶ Work through all {withLinks.length} on Edit Comic (‹ Prev / Next ›)</button>
+                )}
+                {withLinks.map((it, i) => (
+                  <div key={i} className="df-oi">
+                    <div className="df-oi-hd"><b>{it.title} #{String(it.issue).replace(/^#/, "")}</b> <span>📦 {String(it.box || "").replace(/^UNKNOWN.*/, "UNKNOWN")}</span></div>
+                    <div className="df-oi-p">{it.problem}</div>
+                    <div className="df-oi-btns">
+                      {it.link && <a className="df-find" href={it.link} target="_blank" rel="noopener noreferrer">🔗 {it.linkLabel || "Check page"} ↗</a>}
+                      <button className="df-solve" onClick={() => openFocus("Open items", withLinks, i)}>✏️ Edit</button>
+                    </div>
+                  </div>
+                ))}
+                {openItems.tasks.map(t => (
+                  <div key={t.id} className="df-oi" style={{ borderStyle: "dashed" }}>
+                    <div className="df-oi-hd"><b>{t.title}</b></div>
+                    <div className="df-oi-p">{t.problem}</div>
+                    <div className="df-oi-p" style={{ color: "#b45309" }}>→ {t.action}</div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </section>
+        );
+      })()}
+
       {/* 📦 Restored books — the 744 put back on Nov 19 (brb_reclaim_restore.py). Live: a book
           leaves "Needs a box" once its Box # stops being UNKNOWN in the deployed data. */}
       {restored && restoredData && (
@@ -971,7 +1022,15 @@ export default function DataFix({ onNavigate }: { onNavigate?: (tab: string, par
                               <div style={{ fontWeight: 700 }}>#{String(r.c.Issue).replace(/^#/, "")} <span style={{ color: "var(--muted2,#aaa)", fontWeight: 400 }}>v{r.c.Volume || "1"} · {r.c.Year}</span></div>
                               <div style={{ color: "var(--muted2,#aaa)" }}>was Box {r.old.replace(/^UNKNOWN.*/, "unknown")} → {/^UNKNOWN/i.test(String(r.c.Box)) ? <b style={{ color: "#d97706" }}>needs a box</b> : <b style={{ color: "#16a34a" }}>Box {r.c.Box}</b>}</div>
                               {onNavigate && (
-                                <button className="df-solve" onClick={() => onNavigate("editcomic", { query: `${r.c.Title} #${r.c.Issue}` })}>
+                                <button className="df-solve" onClick={() => {
+                                  const all = groups.flatMap(([, rs]) => rs);
+                                  const why = (x: typeof r) => rsTab === "copy" ? `Restored Nov 19 as an extra copy (⚠ Verify Duplicate) — confirm you really own two, else tick Delete.`
+                                    : rsTab === "box" ? `Restored Nov 19; its old box (${x.old.replace(/^UNKNOWN.*/, "unknown")}) is gone or full — find it and set its real Box #.`
+                                    : `Restored Nov 19 into Box ${x.c.Box} (was ${x.old}).`;
+                                  openFocus(rsTab === "copy" ? "Restored copies to verify" : rsTab === "box" ? "Restored books needing a box" : "Restored books",
+                                    all.map(x => ({ title: x.c.Title, issue: String(x.c.Issue), box: String(x.c.Box), volume: String(x.c.Volume || "1"), problem: why(x), link: fandomGuess(x.c), linkLabel: "Fandom guess" })),
+                                    all.indexOf(r));
+                                }}>
                                   ✏️ {rsTab === "copy" ? "Check / delete copy" : "Set box"}
                                 </button>
                               )}
@@ -1316,6 +1375,13 @@ export default function DataFix({ onNavigate }: { onNavigate?: (tab: string, par
                             <button key={s.key} className="df-solve" onClick={() => resolve(c, id, g.pid, "solution", s.key)}>{s.label}</button>
                           ))}
                           <a className="df-find" href={fandomSearch(c)} target="_blank" rel="noopener noreferrer">🔍 Find on Fandom ↗</a>
+                          <button className="df-solve" onClick={() => {
+                            const all = g.pubs.flatMap(pg => pg.items.map(x => x.c));
+                            openFocus(g.problem.label, all.map(x => ({
+                              title: x.Title, issue: String(x.Issue), box: String(x.Box), volume: String(x.Volume || "1"),
+                              problem: `${g.problem.label} — ${g.problem.blurb}`, link: fandomGuess(x), linkLabel: "Fandom guess",
+                            })), all.indexOf(c));
+                          }}>✏️ Edit</button>
                         </div>
                         {g.problem.vol && (
                           <div className="df-linkrow">

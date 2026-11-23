@@ -1,0 +1,211 @@
+{
+ "generated": "2026-11-23",
+ "items": [
+  {
+   "id": "gi-joe-mia-1",
+   "title": "G.I. Joe: A Real American Hero — MIA",
+   "issue": "1",
+   "box": "70",
+   "volume": "1",
+   "problem": "The Image Comics link on file (…/releases/g-i-joe-1) is dead (404), so this book never gets its cover, date or credits. Find its real Image Comics page and paste it on Data Fix.",
+   "link": "https://www.google.com/search?q=site%3Aimagecomics.com+%22G.I.+Joe%22+%22Real+American+Hero%22+MIA+1",
+   "linkLabel": "Search imagecomics.com"
+  },
+  {
+   "id": "abs-batman-zatanna",
+   "title": "Absolute Batman",
+   "issue": "Zatanna Cover — Foil",
+   "box": "UNKNOWN — needs physical reassignment",
+   "volume": "4",
+   "problem": "The Issue # field holds a cover name, not a number. Set the real issue # (which issue had the Zatanna foil variant?), move “Zatanna Cover — Foil” into Seller Notes, set Volume to 1 (it says 4), and give it a box.",
+   "link": "https://dc.fandom.com/wiki/Absolute_Batman_Vol_1",
+   "linkLabel": "Absolute Batman series page — find the Zatanna variant"
+  },
+  {
+   "id": "mk-annual-2024",
+   "title": "Moon Knight Annual",
+   "issue": "1",
+   "box": "UNKNOWN — needs physical reassignment",
+   "volume": "5",
+   "problem": "Needs a real box. One of the duplicate rows moved out on Nov 23 said Box 80 — check Box 80 first."
+  },
+  {
+   "id": "jla-1-text",
+   "title": "JLA",
+   "issue": "1",
+   "box": "47",
+   "volume": "1",
+   "problem": "Credits and arc were fixed Nov 23, but the Whatnot Story Pitch and Content text still describe the 2001 Joker: Last Laugh tie-in. Rewrite or clear both (they're editable on this page now).",
+   "link": "https://dc.fandom.com/wiki/JLA_Vol_1_1",
+   "linkLabel": "JLA Vol 1 #1 on DC Fandom"
+  },
+  {
+   "id": "split|All-New Firefly|10|UNKNOWN — needs physical reassignment",
+   "title": "All-New Firefly",
+   "issue": "10",
+   "box": "UNKNOWN — needs physical reassignment",
+   "volume": "1",
+   "problem": "Same series spelled two ways: “All-New Firefly” (1) vs “All New Firefly” (9). Make both spellings match — use whichever Fandom uses (check the Fandom guess below) — via the Title field here, or merge them on Data Fix → Title cleanup."
+  },
+  {
+   "id": "split|DC Comics Bombshells|1|82",
+   "title": "DC Comics Bombshells",
+   "issue": "1",
+   "box": "82",
+   "volume": "1",
+   "problem": "Same series spelled two ways: “DC Comics Bombshells” (6) vs “DC Comics: Bombshells” (7). Make both spellings match — use whichever Fandom uses (check the Fandom guess below) — via the Title field here, or merge them on Data Fix → Title cleanup."
+  },
+  {
+   "id": "split|DC Comics Bombshells|2|82",
+   "title": "DC Comics Bombshells",
+   "issue": "2",
+   "box": "82",
+   "volume": "1",
+   "problem": "Same series spelled two ways: “DC Comics Bombshells” (6) vs “DC Comics: Bombshells” (7). Make both spellings match — use whichever Fandom uses (check the Fandom guess below) — via the Title field here, or merge them on Data Fix → Title cleanup."
+  },
+  {
+   "id": "split|DC Comics Bombshells|3|82",
+   "title": "DC Comics Bombshells",
+   "issue": "3",
+   "box": "82",
+   "volume": "1",
+   "problem": "Same series spelled two ways: “DC Comics Bombshells” (6) vs “DC Comics: Bombshells” (7). Make both spellings match — use whichever Fandom uses (check the Fandom guess below) — via the Title field here, or merge them on Data Fix → Title cleanup."
+  },
+  {
+   "id": "split|DC Comics Bombshells|4|82",
+   "title": "DC Comics Bombshells",
+   "issue": "4",
+   "box": "82",
+   "volume": "1",
+   "problem": "Same series spelled two ways: “DC Comics Bombshells” (6) vs “DC Comics: Bombshells” (7). Make both spellings match — use whichever Fandom uses (check the Fandom guess below) — via the Title field here, or merge them on Data Fix → Title cleanup."
+  },
+  {
+   "id": "split|DC Comics Bombshells|5|82",
+   "title": "DC Comics Bombshells",
+   "issue": "5",
+   "box": "82",
+   "volume": "1",
+   "problem": "Same series spelled two ways: “DC Comics Bombshells” (6) vs “DC Comics: Bombshells” (7). Make both spellings match — use whichever Fandom uses (check the Fandom guess below) — via the Title field here, or merge them on Data Fix → Title cleanup."
+  },
+  {
+   "id": "split|DC Comics Bombshells|6|82",
+   "title": "DC Comics Bombshells",
+   "issue": "6",
+   "box": "82",
+   "volume": "1",
+   "problem": "Same series spelled two ways: “DC Comics Bombshells” (6) vs “DC Comics: Bombshells” (7). Make both spellings match — use whichever Fandom uses (check the Fandom guess below) — via the Title field here, or merge them on Data Fix → Title cleanup."
+  },
+  {
+   "id": "split|Star Trek / Green Lantern: Stranger Worlds|3|67",
+   "title": "Star Trek / Green Lantern: Stranger Worlds",
+   "issue": "3",
+   "box": "67",
+   "volume": "1",
+   "problem": "Same series spelled two ways: “Star Trek / Green Lantern: Stranger Worlds” (1) vs “Star Trek/Green Lantern: Stranger Worlds” (5). Make both spellings match — use whichever Fandom uses (check the Fandom guess below) — via the Title field here, or merge them on Data Fix → Title cleanup."
+  },
+  {
+   "id": "split|WildStorm Starts Now!|1|70",
+   "title": "WildStorm Starts Now!",
+   "issue": "1",
+   "box": "70",
+   "volume": "1",
+   "problem": "Same series spelled two ways: “WildStorm Starts Now!” (1) vs “Wildstorm Starts Now!” (1). Make both spellings match — use whichever Fandom uses (check the Fandom guess below) — via the Title field here, or merge them on Data Fix → Title cleanup."
+  },
+  {
+   "id": "split|X-Club|1|12",
+   "title": "X-Club",
+   "issue": "1",
+   "box": "12",
+   "volume": "1",
+   "problem": "Same series spelled two ways: “X-Club” (2) vs “X Club” (3). Make both spellings match — use whichever Fandom uses (check the Fandom guess below) — via the Title field here, or merge them on Data Fix → Title cleanup."
+  },
+  {
+   "id": "split|X-Club|5|15",
+   "title": "X-Club",
+   "issue": "5",
+   "box": "15",
+   "volume": "1",
+   "problem": "Same series spelled two ways: “X-Club” (2) vs “X Club” (3). Make both spellings match — use whichever Fandom uses (check the Fandom guess below) — via the Title field here, or merge them on Data Fix → Title cleanup."
+  },
+  {
+   "id": "split|Bloodhunters|2|20",
+   "title": "Bloodhunters",
+   "issue": "2",
+   "box": "20",
+   "volume": "2",
+   "problem": "Same series spelled two ways: “Bloodhunters” (2) vs “Blood Hunters” (3). Make both spellings match — use whichever Fandom uses (check the Fandom guess below) — via the Title field here, or merge them on Data Fix → Title cleanup. Check first: the two spellings carry different volumes (1 and 2), so they may be two different series."
+  },
+  {
+   "id": "split|Bloodhunters|3|20",
+   "title": "Bloodhunters",
+   "issue": "3",
+   "box": "20",
+   "volume": "2",
+   "problem": "Same series spelled two ways: “Bloodhunters” (2) vs “Blood Hunters” (3). Make both spellings match — use whichever Fandom uses (check the Fandom guess below) — via the Title field here, or merge them on Data Fix → Title cleanup. Check first: the two spellings carry different volumes (1 and 2), so they may be two different series."
+  },
+  {
+   "id": "split|Domino: Hotshots|3|9",
+   "title": "Domino: Hotshots",
+   "issue": "3",
+   "box": "9",
+   "volume": "1",
+   "problem": "Same series spelled two ways: “Domino: Hotshots” (2) vs “Domino: Hot Shots” (3). Make both spellings match — use whichever Fandom uses (check the Fandom guess below) — via the Title field here, or merge them on Data Fix → Title cleanup."
+  },
+  {
+   "id": "split|Domino: Hotshots|4|9",
+   "title": "Domino: Hotshots",
+   "issue": "4",
+   "box": "9",
+   "volume": "1",
+   "problem": "Same series spelled two ways: “Domino: Hotshots” (2) vs “Domino: Hot Shots” (3). Make both spellings match — use whichever Fandom uses (check the Fandom guess below) — via the Title field here, or merge them on Data Fix → Title cleanup."
+  },
+  {
+   "id": "split|Batman and Robin: Year One - Dynamic Duos|3|101",
+   "title": "Batman and Robin: Year One - Dynamic Duos",
+   "issue": "3",
+   "box": "101",
+   "volume": "1",
+   "problem": "Same series spelled two ways: “Batman and Robin: Year One - Dynamic Duos” (1) vs “Batman & Robin Year One: Dynamic Duos” (1). Make both spellings match — use whichever Fandom uses (check the Fandom guess below) — via the Title field here, or merge them on Data Fix → Title cleanup."
+  },
+  {
+   "id": "split|The Fury of Firestorm: The Nuclear Men|1|52",
+   "title": "The Fury of Firestorm: The Nuclear Men",
+   "issue": "1",
+   "box": "52",
+   "volume": "1",
+   "problem": "Same series spelled two ways: “The Fury of Firestorm: The Nuclear Men” (1) vs “Fury of Firestorm: The Nuclear Men” (2). Make both spellings match — use whichever Fandom uses (check the Fandom guess below) — via the Title field here, or merge them on Data Fix → Title cleanup."
+  }
+ ],
+ "tasks": [
+  {
+   "id": "dual-number-scan",
+   "title": "Scan other dual-numbered series",
+   "problem": "Fantastic Four, Amazing Spider-Man, Thor and others carry legacy numbers like Avengers did. The Nov 19 restore may have added legacy-number copies of books you already have.",
+   "action": "Ask Claude: “scan the dual-numbered series”"
+  },
+  {
+   "id": "legacy-links-more",
+   "title": "Legacy-number links for other titles",
+   "problem": "brb_legacy_links.py fixed 72 Avengers volumes. Running it for Fantastic Four, Amazing Spider-Man, Thor, Captain America, Iron Man and X-Men would do the same for them.",
+   "action": "Ask Claude: “run legacy links for <title>”"
+  },
+  {
+   "id": "held-series",
+   "title": "60 held series matches",
+   "problem": "Fandom's series name doesn't fit your title, so lookups wait for you.",
+   "action": "Data Fix → Series match → held"
+  },
+  {
+   "id": "unresolved",
+   "title": "~404 books with no Fandom page found",
+   "problem": "The page built from your title, volume and issue doesn't exist.",
+   "action": "Data Fix → Unresolved (biggest runs first)"
+  },
+  {
+   "id": "unknown-boxes",
+   "title": "~509 books in UNKNOWN",
+   "problem": "They need their real box.",
+   "action": "Data Fix → Restored books → Needs a box, or the “Where Is It?” page"
+  }
+ ]
+}

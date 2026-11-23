@@ -41,6 +41,8 @@ COLMAP = {
     "Key_Reason": "Key Issue — Why", "First_App": "1st Appearances",
     "Writer": "Writer(s)", "Artist": "Artist(s)", "Cover_Artist": "Cover Artist",
     "Seller_Notes": "Seller Notes / Variants / Caveats",
+    # Nov 23: editable from the Edit page too (JLA #1 still carried Last Laugh text here)
+    "Arc": "Arc / Story", "Story_Pitch": "Whatnot Story Pitch", "Content": "Content / Solicitation Notes",
 }
 
 

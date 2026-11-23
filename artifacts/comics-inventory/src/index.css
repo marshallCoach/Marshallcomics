@@ -1150,3 +1150,10 @@ body {
   .cover-modal-img > img { width: auto !important; max-width: 100%; max-height: 55vh !important; }
   .cover-modal > div:last-child { max-height: none !important; width: 100%; }
 }
+
+/* Data Fix → Open items cards (Nov 23) */
+.df-oi { border: 1px solid var(--border, #2c2c38); border-left: 4px solid #e0a21b; border-radius: 8px; padding: 8px 11px; display: flex; flex-direction: column; gap: 5px; overflow-wrap: anywhere; }
+.df-oi-hd { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; font-size: .9rem; }
+.df-oi-hd span { color: var(--muted2, #aaa); font-size: .8rem; }
+.df-oi-p { font-size: .84rem; line-height: 1.45; }
+.df-oi-btns { display: flex; gap: 8px; flex-wrap: wrap; }

@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useMemo } from "react";
+import { ebayHeadline } from "@/utils/ebay";
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
 import { DATA } from "@/data/data";
 import { splitCreators } from "@/utils/creators";
@@ -164,9 +165,21 @@ function parseNMVal(raw: string): number {
   const m = (raw || "").match(/\$?(\d+(?:\.\d+)?)/);
   return m ? parseFloat(m[1]) : 0;
 }
-const TOTAL_NM_VALUE = Math.round(
+const TOTAL_SHEET_NM = Math.round(
   comics.reduce((sum, c) => sum + parseNMVal(c.Value_NM || ""), 0)
 );
+// Nov 23 (Robert): the headline follows the market. Each book counts at its eBay
+// headline price (the same conservative lower-of-median/avg the comic drawer shows);
+// books with no eBay data fall back to the sheet's NM value; the rest are unpriced.
+const MARKET = comics.reduce((a, c) => {
+  const eb = ebayHeadline(c as { eBay_Median?: number | null; eBay_Avg?: number | null });
+  const nm = parseNMVal(c.Value_NM || "");
+  if (eb != null && eb > 0) { a.total += eb; a.ebay++; }
+  else if (nm > 0) { a.total += nm; a.sheet++; }
+  else a.none++;
+  return a;
+}, { total: 0, ebay: 0, sheet: 0, none: 0 });
+const TOTAL_NM_VALUE = Math.round(MARKET.total);
 const TOTAL_VF_VALUE = Math.round(
   comics.reduce((sum, c) => {
     const m = (c.Value_VF || "").match(/\$?(\d+(?:\.\d+)?)/);
@@ -894,7 +907,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
             {/* NM Value */}
             <div style={{ flex:"1 1 200px", paddingRight:32, borderRight:"1px solid #1e3a22" }}>
               <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"3px", color:"rgba(100,220,120,0.45)", marginBottom:6 }}>
-                NM RAW TOTAL
+                MARKET EST. (eBAY)
               </div>
               <div style={{ display:"flex", alignItems:"baseline", gap:4 }}>
                 <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", color:"rgba(100,220,120,0.6)", letterSpacing:"1px", alignSelf:"flex-start", marginTop:6 }}>$</span>
@@ -903,7 +916,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
                 </span>
               </div>
               <div style={{ fontSize:"0.875rem", color:"rgba(100,220,120,0.5)", marginTop:6, letterSpacing:"1px" }}>
-                Near Mint (9.4+) raw — {totalComics.toLocaleString()} books
+                eBay price on {MARKET.ebay.toLocaleString()} · your sheet's NM on {MARKET.sheet.toLocaleString()} · {MARKET.none.toLocaleString()} unpriced
               </div>
             </div>
             {/* VF Value */}
@@ -924,7 +937,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
           </div>
           {/* Bottom note */}
           <div style={{ marginTop:16, paddingTop:14, borderTop:"1px solid #1e3a22", fontSize:"0.875rem", color:"rgba(100,220,120,0.4)", letterSpacing:"1px" }}>
-            Values derived from Value_NM and Value_VF fields across all {totalComics.toLocaleString()} catalogued books. VF uses lower bound of any range (e.g. "$5–12" counts as $5).
+            Market est. uses each book's eBay price (lower of median and average) where one exists, else your sheet's NM value — sheet-only NM total ${TOTAL_SHEET_NM.toLocaleString()}. Re-totals on every deploy across all {totalComics.toLocaleString()} books. VF uses the lower bound of any range (e.g. "$5–12" counts as $5).
           </div>
         </div>
       </section>
