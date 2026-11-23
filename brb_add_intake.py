@@ -13,6 +13,7 @@ CSV columns (header row required, order-free, extras ignored):
 Optional enrichment columns (written only when present + non-blank), so a rich
 new-pull paste lands creators/cover/price in one step, nothing lost:
     writer,artist,cover_artist,cover_price,condition,imprint,seller_notes
+    signed,signed_by   (Nov 23: slabs / signed books land with their signature)
 
     python3 brb_add_intake.py --csv intake_2026-09-15.csv
     python3 brb_add_intake.py --csv intake_2026-09-15.csv --apply
@@ -86,7 +87,8 @@ def main():
     OPT = {"writer": ci("Writer(s)"), "artist": ci("Artist(s)"),
            "cover_artist": ci("Cover Artist"), "cover_price": ci("Cover Price"),
            "condition": ci("Condition"), "imprint": ci("Imprint"),
-           "seller_notes": ci("Seller Notes / Variants / Caveats")}
+           "seller_notes": ci("Seller Notes / Variants / Caveats"),
+           "signed": ci("Signed?"), "signed_by": ci("Signed By")}
     for name, col in (("Title", cT), ("Issue #", cI), ("Year", cY), ("Box #", cB)):
         if col is None:
             sys.exit(f"required column '{name}' not found in sheet")

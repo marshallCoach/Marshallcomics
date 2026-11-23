@@ -685,6 +685,18 @@ class T(unittest.TestCase):
         self.assertIn("480", str(wb["Duplicates"].cell(wb["Duplicates"].max_row, 3).value), "moved, not deleted")
         self.assertIn("cell changes: 0   rows to Duplicates tab: 0", sb.run("brb_fix_rows.py", "fx.json").stdout, "second run: nothing")
 
+    def test_intake_records_signature_and_slab(self):
+        # Nov 23: a CGC Signature Series slab needs Signed? / Signed By / Condition from intake.
+        sb = self.sb
+        sb.xlsx(["Title", "Issue #", "Year", "Volume", "Publisher", "Box #", "Era", "Date Added",
+                 "Condition", "Signed?", "Signed By", "Cover Artist"], [["Hulk", "1", 2008, 2, "Marvel", "17", "Modern", "", "", "", "", ""]])
+        open(sb.p("in.csv"), "w").write("title,issue,year,volume,publisher,box,era,condition,signed,signed_by,cover_artist\n"
+                                        "Guardians of the Galaxy,1,2023,7,Marvel,CC10,Modern,CGC SS 9.8,YES,Alex Ross,Alex Ross\n")
+        r = sb.run("brb_add_intake.py", "--csv", "in.csv", "--apply")
+        row = sb.newest()[-1]
+        self.assertEqual((row["Box #"], row["Condition"], row["Signed?"], row["Signed By"]),
+                         ("CC10", "CGC SS 9.8", "YES", "Alex Ross"), r.stdout + r.stderr)
+
     def test_comic_vine_limit_stops_fast_and_keeps_dates(self):
         # Nov 19: HTTP 420 (hourly limit) was retried with backoff for ~50 min; Ctrl-C then
         # lost every date already found. Now: stop at the first 420, save what was found.
