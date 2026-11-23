@@ -1,9 +1,9 @@
 {
- "source": "comics_inventory_1911_1757.xlsx",
- "generatedAt": "2026-11-19",
- "groupCount": 142,
- "sellableCount": 149,
- "estValue": 1006.32,
+ "source": "comics_inventory_2311_1549.xlsx",
+ "generatedAt": "2026-11-23",
+ "groupCount": 143,
+ "sellableCount": 150,
+ "estValue": 1011.32,
  "rows": [
   {
    "title": "Justice League",
@@ -2441,7 +2441,7 @@
    "title": "Moon Knight",
    "issue": "2",
    "year": "2011",
-   "volume": "2",
+   "volume": "9",
    "publisher": "Marvel",
    "writer": "Brian Michael Bendis",
    "copies": 2,
@@ -2709,6 +2709,28 @@
    ],
    "keepSigned": false,
    "sameBox": false
+  },
+  {
+   "title": "Thor",
+   "issue": "15",
+   "year": "2021",
+   "volume": "6",
+   "publisher": "Marvel",
+   "writer": "Donny Cates",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 5.0,
+   "sellBoxes": [
+    "5"
+   ],
+   "keepBoxes": [
+    "5"
+   ],
+   "boxes": [
+    "5"
+   ],
+   "keepSigned": false,
+   "sameBox": true
   },
   {
    "title": "Thor",

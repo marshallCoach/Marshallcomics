@@ -1,13 +1,13 @@
-// AUTO-GENERATED quest data — source: comics_inventory_1911_1757.xlsx (11923 rows) · generated 2026-11-19
+// AUTO-GENERATED quest data — source: comics_inventory_2311_1549.xlsx (11915 rows) · generated 2026-11-23
 // Regenerate with: node gen_quest_data.mjs
 window.QUEST_DATA = {
- "source": "comics_inventory_1911_1757.xlsx",
- "generated": "2026-11-19",
- "totalRows": 11923,
+ "source": "comics_inventory_2311_1549.xlsx",
+ "generated": "2026-11-23",
+ "totalRows": 11915,
  "dupe": {
-  "groups": 26,
-  "rows": 52,
-  "excess": 26
+  "groups": 27,
+  "rows": 54,
+  "excess": 27
  },
  "clone": {
   "groups": 3,
@@ -104,7 +104,7 @@ window.QUEST_DATA = {
    "labeledAs": "",
    "rows": 206,
    "vcap": 240,
-   "dupes": 2,
+   "dupes": 4,
    "clones": 0
   },
   {
@@ -1027,7 +1027,7 @@ window.QUEST_DATA = {
       },
       {
        "id": "0.5",
-       "text": "Confirm the chat reads back 11,923 rows. If not — STOP, wrong file."
+       "text": "Confirm the chat reads back 11,915 rows. If not — STOP, wrong file."
       }
      ]
     }

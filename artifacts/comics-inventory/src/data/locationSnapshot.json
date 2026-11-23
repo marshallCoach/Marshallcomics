@@ -1,6 +1,6 @@
 {
- "source": "comics_inventory_1911_1757.xlsx",
- "capturedAt": "2026-11-19",
+ "source": "comics_inventory_2311_1549.xlsx",
+ "capturedAt": "2026-11-23",
  "rows": [
   {
    "title": "Action Comics",
@@ -42,7 +42,7 @@
    "title": "Avengers",
    "issue": "25",
    "year": "2025",
-   "volume": "10",
+   "volume": "9",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
    "signed": false
@@ -51,7 +51,7 @@
    "title": "Avengers",
    "issue": "26",
    "year": "2025",
-   "volume": "10",
+   "volume": "9",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
    "signed": false
@@ -60,7 +60,7 @@
    "title": "Avengers",
    "issue": "27",
    "year": "2025",
-   "volume": "10",
+   "volume": "9",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
    "signed": false
@@ -148,7 +148,7 @@
   },
   {
    "title": "Avengers",
-   "issue": "498",
+   "issue": "83",
    "year": "2004",
    "volume": "3",
    "box": "UNKNOWN — needs physical reassignment",
@@ -168,7 +168,7 @@
    "title": "Avengers",
    "issue": "501",
    "year": "2004",
-   "volume": "1",
+   "volume": "3",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
    "signed": false
@@ -177,7 +177,7 @@
    "title": "Avengers",
    "issue": "502",
    "year": "2004",
-   "volume": "1",
+   "volume": "3",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
    "signed": false
@@ -186,7 +186,7 @@
    "title": "Avengers",
    "issue": "503",
    "year": "2004",
-   "volume": "1",
+   "volume": "3",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
    "signed": false
@@ -1031,7 +1031,7 @@
   {
    "title": "New History of the DC Universe: The Dakota Incident",
    "issue": "1",
-   "year": "2024",
+   "year": "2026",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
@@ -1059,7 +1059,7 @@
    "title": "Absolute Batman",
    "issue": "9",
    "year": "2025",
-   "volume": "5",
+   "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
    "signed": false
@@ -3335,7 +3335,7 @@
   {
    "title": "Wolverine and the X-Men",
    "issue": "3",
-   "year": "2014",
+   "year": "2012",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
@@ -3344,7 +3344,7 @@
   {
    "title": "Wolverine and the X-Men",
    "issue": "4",
-   "year": "2014",
+   "year": "2012",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
@@ -3353,7 +3353,7 @@
   {
    "title": "Wolverine and the X-Men",
    "issue": "6",
-   "year": "2014",
+   "year": "2012",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
@@ -3362,7 +3362,7 @@
   {
    "title": "Wolverine and the X-Men",
    "issue": "7",
-   "year": "2014",
+   "year": "2012",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
@@ -4326,7 +4326,7 @@
    "title": "Invincible Iron Man",
    "issue": "503",
    "year": "2011",
-   "volume": "1",
+   "volume": "2",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
    "signed": false
@@ -4523,7 +4523,7 @@
   {
    "title": "JSA",
    "issue": "#11",
-   "year": "2025",
+   "year": "2000",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
@@ -4550,7 +4550,7 @@
   {
    "title": "JSA",
    "issue": "#17",
-   "year": "2025",
+   "year": "2000",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
@@ -4559,7 +4559,7 @@
   {
    "title": "JSA",
    "issue": "#18",
-   "year": "2025",
+   "year": "2001",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
@@ -4577,7 +4577,7 @@
   {
    "title": "Void Rivals",
    "issue": "#20",
-   "year": "2023",
+   "year": "2025",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
@@ -4590,87 +4590,6 @@
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
-   "signed": false
-  },
-  {
-   "title": "Avengers",
-   "issue": "480",
-   "year": "2001",
-   "volume": "1",
-   "box": "UNKNOWN — needs physical reassignment",
-   "key": false,
-   "signed": false
-  },
-  {
-   "title": "Avengers",
-   "issue": "481",
-   "year": "2001",
-   "volume": "1",
-   "box": "UNKNOWN — needs physical reassignment",
-   "key": false,
-   "signed": false
-  },
-  {
-   "title": "Avengers",
-   "issue": "484",
-   "year": "2001",
-   "volume": "1",
-   "box": "UNKNOWN — needs physical reassignment",
-   "key": false,
-   "signed": false
-  },
-  {
-   "title": "Avengers",
-   "issue": "485",
-   "year": "2001",
-   "volume": "1",
-   "box": "UNKNOWN — needs physical reassignment",
-   "key": false,
-   "signed": false
-  },
-  {
-   "title": "Avengers",
-   "issue": "486",
-   "year": "2001",
-   "volume": "1",
-   "box": "UNKNOWN — needs physical reassignment",
-   "key": false,
-   "signed": false
-  },
-  {
-   "title": "Avengers",
-   "issue": "487",
-   "year": "2001",
-   "volume": "1",
-   "box": "UNKNOWN — needs physical reassignment",
-   "key": false,
-   "signed": false
-  },
-  {
-   "title": "Avengers",
-   "issue": "491",
-   "year": "2001",
-   "volume": "1",
-   "box": "UNKNOWN — needs physical reassignment",
-   "key": false,
-   "signed": false
-  },
-  {
-   "title": "Avengers",
-   "issue": "497",
-   "year": "2002",
-   "volume": "1",
-   "box": "UNKNOWN — needs physical reassignment",
-   "key": false,
-   "signed": false
-  },
-  {
-   "title": "Avengers",
-   "issue": "499",
-   "year": "2002",
-   "volume": "1",
-   "box": "UNKNOWN — needs physical reassignment",
-   "key": false,
    "signed": false
   },
   {
