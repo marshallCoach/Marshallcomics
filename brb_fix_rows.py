@@ -8,6 +8,7 @@ one row may match) and either
     {"set": {"Issue #": "83"}, "old": {"Issue #": "498"}}   - change cells still holding `old`
     {"move_to_duplicates": "why"}                           - move the row to the Duplicates tab
     {"move_to_duplicates": "why", "rows": 2}                - two IDENTICAL rows (same key): move both
+    {"where": {"Arc / Story": "x"}, ...}                     - pick one of several rows sharing the key
 A row that no longer matches (already fixed, or edited since) is skipped, so a second run
 changes nothing. Every other cell is verified unchanged; one Data Integrity Log entry is added.
     python3 brb_fix_rows.py avengers_vol3_dupes.json            # dry run
@@ -47,6 +48,9 @@ def main():
     for f in fixes:
         k = (s(f["title"]), ni(f["issue"]), s(f["box"]), s(f["year"])[:4], ni(f.get("volume", "")))
         hit = index.get(k, [])
+        # "where": {"Arc / Story": "..."} narrows rows that share the key (Nov 23: two Gargoyles #1 copies)
+        if f.get("where"):
+            hit = [r for r in hit if all(s(ws.cell(r, ci(c)).value) == s(v) for c, v in f["where"].items() if ci(c))]
         want = int(f.get("rows", 1))      # "rows": 2 = two identical rows (same key) - move both
         if "move_to_duplicates" in f and want > 1 and len(hit) == want:
             moves.extend((r, f) for r in hit); continue

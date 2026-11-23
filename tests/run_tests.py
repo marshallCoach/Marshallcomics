@@ -744,6 +744,15 @@ class T(unittest.TestCase):
         r = sb.run("brb_fix_rows.py", "c.json", "--apply")
         self.assertEqual([x["Title"] for x in sb.newest()], ["Hulk"], r.stdout + r.stderr)
 
+    def test_row_fixes_where_picks_one_of_twin_rows(self):
+        sb = self.sb
+        sb.xlsx(["Title", "Issue #", "Year", "Volume", "Box #", "Arc / Story", "Publication Date"],
+                [["Gargoyles", "1", 2023, 1, "75", "ongoing", None], ["Gargoyles", "1", 2023, 1, "75", "variant", None]])
+        sb.json("w.json", [{"title": "Gargoyles", "issue": "1", "box": "75", "year": "2023", "volume": "1", "where": {"Arc / Story": "variant"},
+                            "set": {"Publication Date": "2022-12-07"}, "old": {"Publication Date": ""}}])
+        r = sb.run("brb_fix_rows.py", "w.json", "--apply")
+        self.assertEqual([x["Publication Date"] for x in sb.newest()], [None, "2022-12-07"], r.stdout + r.stderr)
+
     def test_row_fixes_fast_on_full_size_sheet(self):
         # Nov 23: brb_fix_rows hung on the real 11,900-row sheet (ws[r] re-measured the sheet per row).
         sb = self.sb
