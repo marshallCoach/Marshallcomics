@@ -1,9 +1,9 @@
-// AUTO-GENERATED quest data — source: comics_inventory_2311_1549.xlsx (11915 rows) · generated 2026-11-23
+// AUTO-GENERATED quest data — source: comics_inventory_2311_1624.xlsx (11911 rows) · generated 2026-11-23
 // Regenerate with: node gen_quest_data.mjs
 window.QUEST_DATA = {
- "source": "comics_inventory_2311_1549.xlsx",
+ "source": "comics_inventory_2311_1624.xlsx",
  "generated": "2026-11-23",
- "totalRows": 11915,
+ "totalRows": 11911,
  "dupe": {
   "groups": 27,
   "rows": 54,
@@ -126,7 +126,7 @@ window.QUEST_DATA = {
    "code": "BFA-1",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 214,
+   "rows": 213,
    "vcap": 240,
    "dupes": 2,
    "clones": 0
@@ -402,7 +402,7 @@ window.QUEST_DATA = {
    "code": "BFC-5",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 113,
+   "rows": 112,
    "vcap": 240,
    "dupes": 2,
    "clones": 0
@@ -786,7 +786,7 @@ window.QUEST_DATA = {
    "code": "BDR-1",
    "status": "Confirmed Real",
    "labeledAs": "",
-   "rows": 63,
+   "rows": 62,
    "vcap": 100,
    "dupes": 0,
    "clones": 0
@@ -942,7 +942,7 @@ window.QUEST_DATA = {
    "code": "BDR-2",
    "status": "CC/Fabric Bin",
    "labeledAs": "",
-   "rows": 138,
+   "rows": 137,
    "vcap": 240,
    "dupes": 0,
    "clones": 0
@@ -1027,7 +1027,7 @@ window.QUEST_DATA = {
       },
       {
        "id": "0.5",
-       "text": "Confirm the chat reads back 11,915 rows. If not — STOP, wrong file."
+       "text": "Confirm the chat reads back 11,911 rows. If not — STOP, wrong file."
       }
      ]
     }
