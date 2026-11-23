@@ -1131,3 +1131,22 @@ body {
   background: rgba(245,158,11,0.1); box-shadow: inset 0 0 0 1px rgba(245,158,11,0.3); }
 @media (max-width: 520px) { .as-close-row { grid-template-columns: 1fr; } .as-rung.r2, .as-rung.r3, .as-rung.r4 { margin-left: 0; } }
 @media (prefers-reduced-motion: reduce) { .as-card { transition: none; } }
+
+/* Slab photo toggle + card in the comic pop-up (Nov 23) */
+.slab-toggle { display: flex; gap: 0; padding: 6px; background: #111; }
+.slab-toggle button { flex: 1; font-size: 0.8rem; font-weight: 700; padding: 6px 4px; border: 1px solid #444; background: #222; color: #bbb; cursor: pointer; }
+.slab-toggle button:first-child { border-radius: 6px 0 0 6px; }
+.slab-toggle button:last-child { border-radius: 0 6px 6px 0; }
+.slab-toggle button.on { background: #f5c518; border-color: #f5c518; color: #111; }
+.slab-card { background: #fff8e0; border: 1.5px solid #f5c518; border-radius: 6px; padding: 10px 14px; margin-bottom: 12px; font-size: 0.875rem; color: #5a4000; line-height: 1.5; overflow-wrap: anywhere; }
+.slab-card-hd { font-weight: 800; letter-spacing: 1px; margin-bottom: 4px; }
+.slab-card a { color: #1d6fa4; }
+.slab-card-btn { margin-top: 6px; font-size: 0.8rem; font-weight: 700; border: 1px solid #f5c518; background: #fff; color: #5a4000; border-radius: 6px; padding: 5px 10px; cursor: pointer; }
+/* Phones: stack the comic pop-up (image on top, details below) instead of a cramped side-by-side */
+@media (max-width: 600px) {
+  .cover-modal { flex-direction: column !important; overflow-y: auto !important; }
+  .cover-modal-img { width: 100% !important; display: flex; flex-direction: column; align-items: center; }
+  .cover-modal-img .slab-toggle { align-self: stretch; }
+  .cover-modal-img > img { width: auto !important; max-width: 100%; max-height: 55vh !important; }
+  .cover-modal > div:last-child { max-height: none !important; width: 100%; }
+}

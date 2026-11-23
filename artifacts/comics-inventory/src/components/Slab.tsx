@@ -46,7 +46,11 @@ export function SlabLightboxImg({ src, alt, style }: { src: string; alt: string;
 // Matched to the book by Title + Issue so a given slab shows ITS OWN photo —
 // never a stand-in. `grade` here is the grade printed on the slab label; where it
 // disagrees with the sheet's Condition that's a data flag, not a display choice.
-type SlabPhoto = { file: string; title: string; issue: string; grade: string };
+// `year` / `box` (optional) pin the photo to ONE copy when you own the same title+issue
+// in several volumes or boxes (Nov 23: Guardians of the Galaxy #1 exists in 5 volumes).
+// label/signed/cert are read off the slab label and shown in the comic pop-up.
+export type SlabPhoto = { file: string; title: string; issue: string; grade: string; year?: string; box?: string;
+  label?: string; signed?: string; cert?: string; pages?: string; notes?: string };
 export const SLAB_PHOTOS: SlabPhoto[] = [
   { file: "slab-1.jpg",  title: "Incredible Hulk",               issue: "393", grade: "9.2" },
   { file: "slab-2.jpg",  title: "Supergirl: Woman of Tomorrow",  issue: "1",   grade: "9.4" },
@@ -61,21 +65,35 @@ export const SLAB_PHOTOS: SlabPhoto[] = [
   { file: "slab-11.jpg", title: "Avengers",                      issue: "62",  grade: "6.0" },
   { file: "slab-12.jpg", title: "Avengers Annual",               issue: "2",   grade: "5.5" },
   { file: "slab-13.jpg", title: "Avengers",                      issue: "87",  grade: "4.0" },
+  { file: "slab-14.jpg", title: "Guardians of the Galaxy",       issue: "1",   grade: "9.8", year: "2023", box: "CC10",
+    label: "Signature Series", signed: "Alex Ross on 5/30/23", cert: "4260576009", pages: "White",
+    notes: "Variant Edition: Guardians of the Galaxy #181 \"Timeless\" variant cover, \"Virgin\" cover" },
 ];
 
 const normT = (t?: string) => String(t || "").toLowerCase().replace(/^the\s+/, "").replace(/[^a-z0-9]+/g, "");
 const normI = (i?: string) => String(i || "").replace(/^#/, "").replace(/\.0$/, "").trim();
 
-const PHOTO_BY_KEY: Record<string, SlabPhoto> = Object.fromEntries(
-  SLAB_PHOTOS.map(p => [`${normT(p.title)}|${normI(p.issue)}`, p])
-);
+const PHOTOS_BY_KEY = new Map<string, SlabPhoto[]>();
+for (const p of SLAB_PHOTOS) {
+  const k = `${normT(p.title)}|${normI(p.issue)}`;
+  (PHOTOS_BY_KEY.get(k) ?? PHOTOS_BY_KEY.set(k, []).get(k)!).push(p);
+}
+type SlabKey = Pick<Comic, "Title" | "Issue"> & { Year?: string; Box?: string };
+
+/** This exact copy's slab photo record (year/box must match when the photo names them). */
+export function slabPhoto(c: SlabKey): SlabPhoto | null {
+  const list = PHOTOS_BY_KEY.get(`${normT(c.Title)}|${normI(c.Issue)}`) ?? [];
+  return list.find(p =>
+    (!p.year || String(c.Year || "").slice(0, 4) === p.year) &&
+    (!p.box || String(c.Box || "").trim().toUpperCase() === p.box.toUpperCase())) ?? null;
+}
 
 /** The public URL for a slab photo file. */
 export const slabFileUrl = (file: string) => `${BASE}/slabbed/${file}`;
 
 /** The public URL of this book's own slab photo, or null if we don't have one. */
-export function slabPhotoUrl(c: Pick<Comic, "Title" | "Issue">): string | null {
-  const p = PHOTO_BY_KEY[`${normT(c.Title)}|${normI(c.Issue)}`];
+export function slabPhotoUrl(c: SlabKey): string | null {
+  const p = slabPhoto(c);
   return p ? slabFileUrl(p.file) : null;
 }
 

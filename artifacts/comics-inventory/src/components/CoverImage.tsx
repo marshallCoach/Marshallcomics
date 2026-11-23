@@ -3,6 +3,7 @@ import { getCoverSvgUrl, type ComicLike } from "@/utils/coverThumbnails";
 import { coverId, flagKind as coverFlagKind, setFlagKind as setCoverFlagKind, type FlagKind } from "@/lib/coverFlags";
 import { NavPills } from "@/components/NavPills";
 import { memoryAlphaUrl } from "@/lib/arc";
+import { slabPhoto, slabFileUrl } from "@/components/Slab";
 
 const BASE = import.meta.env.BASE_URL?.replace(/\/$/, "") ?? "";
 
@@ -309,6 +310,10 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
   const [imgDraft, setImgDraft]   = useState("");
   const [fanDraft, setFanDraft]   = useState("");
   const [savedKind, setSavedKind] = useState<null | "image" | "fandom">(null);
+  // Your own graded copy's photo (Slab.tsx SLAB_PHOTOS) - Cover / Slab toggle (Nov 23)
+  const slab = slabPhoto({ Title: comic.Title, Issue: String(comic.Issue), Year: (comic as { Year?: string }).Year, Box: box });
+  const [view, setView] = useState<"cover" | "slab">("cover");
+  const showSlab = !!slab && view === "slab";
 
   useEffect(() => {
     const h = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
@@ -346,7 +351,7 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
         onClick={onClose}
         style={{ position: "fixed", inset: 0, zIndex: 9500, background: "rgba(0,0,0,0.72)", backdropFilter: "blur(3px)" }}
       />
-      <div style={{
+      <div className="cover-modal" style={{
         position: "fixed", top: "50%", left: "50%",
         transform: "translate(-50%,-50%)",
         zIndex: 9501,
@@ -361,9 +366,16 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
         animation: "drawerSlideIn 0.18s ease-out",
       }}>
         {/* Cover — contain + natural height so the whole cover shows (no side-crop) */}
-        <div style={{ flexShrink: 0, width: 220, alignSelf: "flex-start", background: "#111" }}>
+        <div className="cover-modal-img" style={{ flexShrink: 0, width: 220, alignSelf: "flex-start", background: "#111" }}>
+          {slab && (
+            <div className="slab-toggle" role="tablist" aria-label="Cover or slab photo">
+              <button role="tab" aria-selected={view === "cover"} className={view === "cover" ? "on" : ""} onClick={() => setView("cover")}>Cover</button>
+              <button role="tab" aria-selected={view === "slab"} className={view === "slab" ? "on" : ""} onClick={() => setView("slab")}>🏅 Slab</button>
+            </div>
+          )}
           <img
-            src={largeUrl ?? fallback}
+            key={showSlab ? "slab" : "cover"}
+            src={showSlab ? slabFileUrl(slab!.file) : (largeUrl ?? fallback)}
             alt={`${comic.Title} ${comic.Issue}`}
             style={{ width: "100%", height: "auto", maxHeight: "90vh", objectFit: "contain", display: "block" }}
             onError={e => { (e.target as HTMLImageElement).src = fallback; }}
@@ -422,6 +434,18 @@ export function CoverModal({ comic, largeUrl, onClose }: ModalProps) {
               <div style={{ background: "#fff8e0", border: "1.5px solid #fde68a", borderRadius: 6, padding: "10px 14px", marginBottom: 12 }}>
                 <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize: "0.875rem", letterSpacing: "2px", color: "#8a6000", marginBottom: 4 }}>KEY REASON</div>
                 <div style={{ fontSize: "0.875rem", color: "#5a4000", lineHeight: 1.5 }}>{(comic as { Key_Reason?: string }).Key_Reason}</div>
+              </div>
+            )}
+            {slab && (
+              <div className="slab-card">
+                <div className="slab-card-hd">🏅 CGC {slab.label ? `${slab.label} ` : ""}{slab.grade}</div>
+                {slab.signed && <div>Signed by {slab.signed}</div>}
+                {slab.pages && <div>{slab.pages} pages</div>}
+                {slab.notes && <div>{slab.notes}</div>}
+                {slab.cert && (
+                  <div>Cert #{slab.cert} · <a href={`https://www.cgccomics.com/certlookup/${slab.cert}/`} target="_blank" rel="noopener noreferrer">verify ↗</a></div>
+                )}
+                {view === "cover" && <button className="slab-card-btn" onClick={() => setView("slab")}>See the slab photo</button>}
               </div>
             )}
             {(comic as { Value_NM?: string }).Value_NM && (
