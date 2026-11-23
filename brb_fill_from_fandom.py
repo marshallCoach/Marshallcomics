@@ -112,11 +112,14 @@ def main():
                 errors.append((T, I, f"page not found ({T} Vol {V} {I})"))
                 continue
             _fn, date_str, _py, credits = res
+            # Year gate on EVERY row (Nov 23: the new Guardians of the Galaxy #1 2023 slab, Vol 7 in
+            # the sheet, opened Fandom's Vol 7 #1 = the 2020 Al Ewing book and took its credits + date;
+            # step 7 then moved its Year to 2020). A page from another era is a different book.
+            ry = re.search(r"(19|20)\d\d", str(ws.cell(r, cYr).value or "")) if cYr else None
+            if not (ry and _py and abs(int(ry.group(0)) - int(_py)) <= 1):
+                errors.append((T, I, f"page year {_py} vs your {ws.cell(r, cYr).value if cYr else '?'} - different run, skipped"))
+                continue
             if r in wide:
-                ry = re.search(r"(19|20)\d\d", str(ws.cell(r, cYr).value or "")) if cYr else None
-                if not (ry and _py and abs(int(ry.group(0)) - int(_py)) <= 1):
-                    errors.append((T, I, f"wide: page year {_py} vs your {ws.cell(r, cYr).value if cYr else '?'} - different run, skipped"))
-                    continue
                 for role, col in CRED.items():         # blanks only, never union/replace
                     if col and not str(ws.cell(r, col).value or "").strip() and credits.get(role):
                         wide_plan.append((r, col, role, " & ".join(credits[role]), T, I))
@@ -131,7 +134,7 @@ def main():
                 if not col:
                     continue
                 action, newv = decide(ws.cell(r, col).value, credits.get(role, []))
-                if not action:
+                if not action or action == "CONFLICT":   # a gap-filler never replaces your names
                     continue
                 old = str(ws.cell(r, col).value or "")
                 ws.cell(r, col, newv)

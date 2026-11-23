@@ -788,6 +788,32 @@ class T(unittest.TestCase):
         r2 = sb.run("brb_fill_from_fandom.py", "--no-deploy", "--wide", "--wide-apply", env=env)
         self.assertNotIn("WIDE (", r2.stdout, "second run fills nothing")
 
+    def test_fandom_fill_never_takes_another_eras_page_or_replaces_names(self):
+        # Nov 23: GotG #1 (2023 slab, Vol 7 in the sheet) got the 2020 Vol 7 page's Al Ewing credits + date.
+        sb = self.sb
+        sb.xlsx(["Title", "Issue #", "Year", "Volume", "Box #", "Publisher", "Publication Date", "Writer(s)", "Artist(s)", "Cover Artist"],
+                [["Guardians of the Galaxy", 1, 2023, 7, "CC10", "Marvel", None, "Collin Kelly & Jackson Lanzing", "Kev Walker", "Alex Ross"],
+                 ["Hulk", 1, 2020, 1, "5", "Marvel", None, "Someone Else", None, "C"]])
+        F = {"url": "https://static.wikia.nocookie.net/marveldatabase/images/x.jpg", "source": "fandom-page"}
+        sb.json("covers.json", {"Guardians of the Galaxy|||1|||7": F, "Hulk|||1|||1": F})
+        os.makedirs(sb.p("site"), exist_ok=True)
+        open(sb.p("site", "sitecustomize.py"), "w").write(
+            "import io, json, time, urllib.request\ntime.sleep = lambda s: None\n"
+            "def f(req, timeout=None):\n"
+            "    u = req.full_url if hasattr(req, 'full_url') else req\n"
+            "    if 'pageimages' in u or 'imageinfo' in u: return io.BytesIO(b'{}')\n"
+            "    wt = '| Month = 1\\n| Year = 2020\\n| Writer1_1 = Al Ewing\\n| Penciler1_1 = Juan Cabal\\n| CoverArtist1 = Juan Cabal\\n'\n"
+            "    return io.BytesIO(json.dumps({'parse': {'wikitext': wt}}).encode())\n"
+            "urllib.request.urlopen = f\n")
+        r = sb.run("brb_fill_from_fandom.py", "--no-deploy", env={"PYTHONPATH": sb.p("site")})
+        rows = {x["Title"]: x for x in sb.newest()}
+        g = rows["Guardians of the Galaxy"]
+        self.assertEqual((g["Writer(s)"], g["Cover Artist"], g["Publication Date"]),
+                         ("Collin Kelly & Jackson Lanzing", "Alex Ross", None), r.stdout + r.stderr)
+        h = rows["Hulk"]
+        self.assertEqual(h["Writer(s)"], "Someone Else", "zero-overlap names are never replaced by the gap-filler")
+        self.assertEqual(h["Artist(s)"], "Juan Cabal", "same-era page still fills blanks")
+
     def test_many_links_one_title_requests_each_page_once(self):
         sb = self.sb
         rows = [["Moon Knight", i, 2000 + i, 5, str(i), None, None, None, None] for i in range(1, 21)]
