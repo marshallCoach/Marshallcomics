@@ -729,6 +729,21 @@ class T(unittest.TestCase):
         self.assertEqual(str(rows[0]["Publication Date"]), "2008-03-05", "date found before the limit is saved")
         self.assertIsNone(rows[1]["Publication Date"])
 
+    def test_row_fixes_move_identical_rows_only_when_count_matches(self):
+        # Nov 23: X-Men: The End #2 was restored twice with identical keys - "rows": 2 moves both.
+        sb = self.sb
+        U = "UNKNOWN — needs physical reassignment"
+        sb.xlsx(["Title", "Issue #", "Year", "Volume", "Box #"],
+                [["X-Men: The End", "#2", 2004, 3, U], ["X-Men: The End", "#2", 2004, 3, U], ["Hulk", "1", 2008, 2, "40"]])
+        fx = {"title": "X-Men: The End", "issue": "2", "box": U, "year": "2004", "volume": "3", "move_to_duplicates": "dupe"}
+        sb.json("a.json", [fx])
+        self.assertIn("ambiguous", sb.run("brb_fix_rows.py", "a.json").stdout, "without a count: left alone")
+        sb.json("b.json", [dict(fx, rows=3)])
+        self.assertIn("rows to Duplicates tab: 0", sb.run("brb_fix_rows.py", "b.json").stdout, "count must match exactly")
+        sb.json("c.json", [dict(fx, rows=2)])
+        r = sb.run("brb_fix_rows.py", "c.json", "--apply")
+        self.assertEqual([x["Title"] for x in sb.newest()], ["Hulk"], r.stdout + r.stderr)
+
     def test_row_fixes_fast_on_full_size_sheet(self):
         # Nov 23: brb_fix_rows hung on the real 11,900-row sheet (ws[r] re-measured the sheet per row).
         sb = self.sb

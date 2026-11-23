@@ -1,0 +1,111 @@
+[
+ {
+  "title": "Star Wars: Lando",
+  "issue": "2",
+  "box": "33",
+  "year": "2015",
+  "volume": "1",
+  "move_to_duplicates": "checklist 1A: one copy - the box 75 Lando #2 is it"
+ },
+ {
+  "title": "Star Wars: Lando",
+  "issue": "3",
+  "box": "33",
+  "year": "2015",
+  "volume": "1",
+  "move_to_duplicates": "checklist 1A: one copy - the box 75 Lando #3 is it"
+ },
+ {
+  "title": "Moon Knight and the Infinity Watch Annual",
+  "issue": "1",
+  "box": "UNKNOWN — needs physical reassignment",
+  "year": "2024",
+  "volume": "9",
+  "move_to_duplicates": "checklist 2: one copy - kept as Moon Knight Annual #1 (2024)"
+ },
+ {
+  "title": "Moon Knight and the Infinity Watch Annual",
+  "issue": "1",
+  "box": "80",
+  "year": "2024",
+  "volume": "9",
+  "move_to_duplicates": "checklist 2: one copy - kept as Moon Knight Annual #1 (2024)"
+ },
+ {
+  "title": "X-Men: The End",
+  "issue": "2",
+  "box": "UNKNOWN — needs physical reassignment",
+  "year": "2004",
+  "volume": "3",
+  "move_to_duplicates": "checklist 3A: only the box 3 copy (Dreamers and Demons #2) exists",
+  "rows": 2
+ },
+ {
+  "title": "Doom: The Will of Doom",
+  "issue": "1",
+  "box": "39",
+  "year": "2024",
+  "volume": "1",
+  "move_to_duplicates": "checklist 4A: only the Sanford Greene signed Doom #1 in box 106"
+ },
+ {
+  "title": "Empyre: Avengers/Fantastic Four",
+  "issue": "3",
+  "box": "19",
+  "year": "2020",
+  "volume": "7",
+  "set": {
+   "Title": "Empyre: Fantastic Four",
+   "Volume": "1"
+  },
+  "old": {
+   "Title": "Empyre: Avengers/Fantastic Four",
+   "Volume": "7"
+  }
+ },
+ {
+  "title": "Captain America and Namor",
+  "issue": "635",
+  "box": "10",
+  "year": "2012",
+  "volume": "7",
+  "move_to_duplicates": "checklist 7B: the two books are already listed (Captain America #635 and Captain America and Namor #635.1)"
+ },
+ {
+  "title": "Rogue & Storm",
+  "issue": "2",
+  "box": "CC1",
+  "year": "2025",
+  "volume": "",
+  "move_to_duplicates": "checklist 8A: one copy - kept as Rogue Storm #2"
+ },
+ {
+  "title": "JLA",
+  "issue": "1",
+  "box": "47",
+  "year": "1997",
+  "volume": "1",
+  "set": {
+   "Writer(s)": "Grant Morrison",
+   "Artist(s)": "Howard Porter",
+   "Arc / Story": "New World Order",
+   "Key Issue — Why": "",
+   "Seller Notes / Variants / Caveats": ""
+  },
+  "old": {
+   "Writer(s)": "Joe Kelly",
+   "Artist(s)": "Various",
+   "Arc / Story": "Joker: Last Laugh crossover",
+   "Key Issue — Why": "Joker: Last Laugh crossover issue",
+   "Seller Notes / Variants / Caveats": "JLA Joker: Last Laugh (tie-in). Joe Kelly. Joker: Last Laugh crossover."
+  }
+ },
+ {
+  "title": "Thor",
+  "issue": "15",
+  "box": "5",
+  "year": "2021",
+  "volume": "6",
+  "move_to_duplicates": "checklist 10A: one copy - kept the Donny Cates NM row"
+ }
+]
