@@ -729,6 +729,21 @@ class T(unittest.TestCase):
         self.assertEqual(str(rows[0]["Publication Date"]), "2008-03-05", "date found before the limit is saved")
         self.assertIsNone(rows[1]["Publication Date"])
 
+    def test_row_fixes_fast_on_full_size_sheet(self):
+        # Nov 23: brb_fix_rows hung on the real 11,900-row sheet (ws[r] re-measured the sheet per row).
+        sb = self.sb
+        H = ["Title", "Issue #", "Year", "Volume", "Box #"] + [f"C{k}" for k in range(35)]
+        rows = [[f"T{n}", str(n), 2000, 1, "5"] + ["x"] * 35 for n in range(6000)]
+        rows.append(["Guardians of the Galaxy", "1", 2023, 10, "17"] + ["y"] * 35)
+        sb.xlsx(H, rows)
+        sb.json("fx.json", [{"title": "Guardians of the Galaxy", "issue": "1", "box": "17", "year": "2023", "volume": "10",
+                             "set": {"Volume": "7"}, "old": {"Volume": "10"}}])
+        t0 = time.time()
+        r = sb.run("brb_fix_rows.py", "fx.json", "--apply")
+        self.assertIn("WROTE", r.stdout, r.stdout + r.stderr)
+        self.assertLess(time.time() - t0, 30, "must not crawl on a full-size sheet (old code: ~55s here, hours on the real sheet)")
+        self.assertEqual(str(sb.newest()[-1]["Volume"]), "7")
+
     def test_fandom_fill_wide_covers_comic_vine_cover_books(self):
         # Nov 19: Absolute Superman #1 - cover from Comic Vine, so the fill never opened its DC page.
         sb = self.sb

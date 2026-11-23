@@ -70,7 +70,10 @@ def main():
     from brb_guard import check
     check("row_fixes", {"cells changed": sum(len(f["set"]) for _, f in sets), "rows moved to Duplicates": len(moves)})
     n_before = ws.max_row
-    keep = {r: [c.value for c in ws[r]] for r in range(2, ws.max_row + 1)}
+    # Snapshot in ONE pass. Nov 23: `ws[r]` per row re-measures max_column over every
+    # cell each call - on 11,900 rows that hung the Mac before saving (nothing written).
+    maxc = ws.max_column
+    keep = {r: list(v) for r, v in enumerate(ws.iter_rows(min_row=2, max_col=maxc, values_only=True), 2)}
     for r, f in sets:
         for col, v in f["set"].items():
             ws.cell(r, ci(col)).value = int(v) if str(v).isdigit() and isinstance(ws.cell(r, ci(col)).value, int) else v
@@ -87,9 +90,10 @@ def main():
     survivors = [r for r in sorted(keep) if r not in gone]
     if ws.max_row != n_before - len(moves):
         sys.exit("ABORTED: row count check failed - nothing written")
-    for new_r, old_r in enumerate(survivors, 2):
-        for c, v in enumerate(keep[old_r], 1):
-            if (old_r, c) not in setcells and ws.cell(new_r, c).value != v:
+    after = ws.iter_rows(min_row=2, max_row=ws.max_row, max_col=maxc, values_only=True)
+    for (new_r, old_r), now in zip(enumerate(survivors, 2), after):
+        for c, (v, nv) in enumerate(zip(keep[old_r], now), 1):
+            if (old_r, c) not in setcells and nv != v:
                 sys.exit(f"ABORTED: row {old_r} col {c} changed unexpectedly - nothing written")
     stamp = datetime.datetime.now().strftime("%d%m_%H%M")
     if LOG_TAB in wb.sheetnames:
