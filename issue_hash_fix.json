@@ -1,0 +1,548 @@
+[
+ {
+  "title": "Soulfire",
+  "issue": "#Special Preview",
+  "box": "70",
+  "year": "2004",
+  "volume": "1",
+  "set": {
+   "Issue #": "Special Preview"
+  },
+  "old": {
+   "Issue #": "#Special Preview"
+  }
+ },
+ {
+  "title": "Wildstorm Starts Now!",
+  "issue": "#Promo",
+  "box": "70",
+  "year": "2006",
+  "volume": "1",
+  "set": {
+   "Issue #": "Promo"
+  },
+  "old": {
+   "Issue #": "#Promo"
+  }
+ },
+ {
+  "title": "Wildcats: Version 3.0",
+  "issue": "#Unknown (1)",
+  "box": "70",
+  "year": "2003",
+  "volume": "1",
+  "set": {
+   "Issue #": "Unknown (1)"
+  },
+  "old": {
+   "Issue #": "#Unknown (1)"
+  }
+ },
+ {
+  "title": "Wolverine: Origin of an X-Men",
+  "issue": "#FCBD",
+  "box": "70",
+  "year": "2009",
+  "volume": "3",
+  "set": {
+   "Issue #": "FCBD"
+  },
+  "old": {
+   "Issue #": "#FCBD"
+  }
+ },
+ {
+  "title": "Avengers",
+  "issue": "#FCBD",
+  "box": "70",
+  "year": "2012",
+  "volume": "4",
+  "set": {
+   "Issue #": "FCBD"
+  },
+  "old": {
+   "Issue #": "#FCBD"
+  }
+ },
+ {
+  "title": "Star Trek: Voyager — Encounters with the Unknown",
+  "issue": "#GN",
+  "box": "70",
+  "year": "2001",
+  "volume": "1",
+  "set": {
+   "Issue #": "GN"
+  },
+  "old": {
+   "Issue #": "#GN"
+  }
+ },
+ {
+  "title": "Dawn of DC: Night Terrors",
+  "issue": "#FCBD",
+  "box": "56",
+  "year": "2023",
+  "volume": "1",
+  "set": {
+   "Issue #": "FCBD"
+  },
+  "old": {
+   "Issue #": "#FCBD"
+  }
+ },
+ {
+  "title": "Wolverine: Civil War",
+  "issue": "#Vendetta (one-shot)",
+  "box": "3",
+  "year": "2006",
+  "volume": "3",
+  "set": {
+   "Issue #": "Vendetta (one-shot)"
+  },
+  "old": {
+   "Issue #": "#Vendetta (one-shot)"
+  }
+ },
+ {
+  "title": "Batman/Superman: World's Finest",
+  "issue": "#Public Enemies (Dan Mora cover, $3.99)",
+  "box": "59",
+  "year": "2024",
+  "volume": "4",
+  "set": {
+   "Issue #": "Public Enemies (Dan Mora cover, $3.99)"
+  },
+  "old": {
+   "Issue #": "#Public Enemies (Dan Mora cover, $3.99)"
+  }
+ },
+ {
+  "title": "Ivar, Timewalker",
+  "issue": "#FCBD Zero",
+  "box": "67",
+  "year": "2015",
+  "volume": "1",
+  "set": {
+   "Issue #": "FCBD Zero"
+  },
+  "old": {
+   "Issue #": "#FCBD Zero"
+  }
+ },
+ {
+  "title": "Mercury Heat",
+  "issue": "#FCBD",
+  "box": "67",
+  "year": "2015",
+  "volume": "1",
+  "set": {
+   "Issue #": "FCBD"
+  },
+  "old": {
+   "Issue #": "#FCBD"
+  }
+ },
+ {
+  "title": "Amazing Spider-Man",
+  "issue": "#Who Am I? one-shot (Fialkov)",
+  "box": "16",
+  "year": "2014",
+  "volume": "1",
+  "set": {
+   "Issue #": "Who Am I? one-shot (Fialkov)"
+  },
+  "old": {
+   "Issue #": "#Who Am I? one-shot (Fialkov)"
+  }
+ },
+ {
+  "title": "Justice League United",
+  "issue": "#(conclusion — May 2015)",
+  "box": "46",
+  "year": "2015",
+  "volume": "1",
+  "set": {
+   "Issue #": "(conclusion — May 2015)"
+  },
+  "old": {
+   "Issue #": "#(conclusion — May 2015)"
+  }
+ },
+ {
+  "title": "Wonder Woman",
+  "issue": "#75th Anniversary Special",
+  "box": "43",
+  "year": "2016",
+  "volume": "1",
+  "set": {
+   "Issue #": "75th Anniversary Special"
+  },
+  "old": {
+   "Issue #": "#75th Anniversary Special"
+  }
+ },
+ {
+  "title": "Marvel Two-in-One #1 — ⚠️ NOT IN COLLECTION",
+  "issue": "#1",
+  "box": "UNKNOWN — needs physical reassignment",
+  "year": "1974",
+  "volume": "1",
+  "set": {
+   "Issue #": "1"
+  },
+  "old": {
+   "Issue #": "#1"
+  }
+ },
+ {
+  "title": "The Fury of Firestorm",
+  "issue": "#1",
+  "box": "UNKNOWN — needs physical reassignment",
+  "year": "1982",
+  "volume": "1",
+  "set": {
+   "Issue #": "1"
+  },
+  "old": {
+   "Issue #": "#1"
+  }
+ },
+ {
+  "title": "JSA",
+  "issue": "#10",
+  "box": "UNKNOWN — needs physical reassignment",
+  "year": "2000",
+  "volume": "1",
+  "set": {
+   "Issue #": "10"
+  },
+  "old": {
+   "Issue #": "#10"
+  }
+ },
+ {
+  "title": "JSA",
+  "issue": "#12",
+  "box": "UNKNOWN — needs physical reassignment",
+  "year": "2000",
+  "volume": "1",
+  "set": {
+   "Issue #": "12"
+  },
+  "old": {
+   "Issue #": "#12"
+  }
+ },
+ {
+  "title": "JSA",
+  "issue": "#13",
+  "box": "UNKNOWN — needs physical reassignment",
+  "year": "2001",
+  "volume": "1",
+  "set": {
+   "Issue #": "13"
+  },
+  "old": {
+   "Issue #": "#13"
+  }
+ },
+ {
+  "title": "Marvel Tales Starring Spider-Man",
+  "issue": "#113",
+  "box": "UNKNOWN — needs physical reassignment",
+  "year": "1979",
+  "volume": "1",
+  "set": {
+   "Issue #": "113"
+  },
+  "old": {
+   "Issue #": "#113"
+  }
+ },
+ {
+  "title": "Uncanny X-Force",
+  "issue": "#19.1",
+  "box": "86",
+  "year": "2012",
+  "volume": "1",
+  "set": {
+   "Issue #": "19.1"
+  },
+  "old": {
+   "Issue #": "#19.1"
+  }
+ },
+ {
+  "title": "Avengers",
+  "issue": "#1.1",
+  "box": "87",
+  "year": "2017",
+  "volume": "7",
+  "set": {
+   "Issue #": "1.1"
+  },
+  "old": {
+   "Issue #": "#1.1"
+  }
+ },
+ {
+  "title": "Avengers",
+  "issue": "#3.1",
+  "box": "87",
+  "year": "2017",
+  "volume": "7",
+  "set": {
+   "Issue #": "3.1"
+  },
+  "old": {
+   "Issue #": "#3.1"
+  }
+ },
+ {
+  "title": "Avengers",
+  "issue": "#5.1",
+  "box": "87",
+  "year": "2017",
+  "volume": "7",
+  "set": {
+   "Issue #": "5.1"
+  },
+  "old": {
+   "Issue #": "#5.1"
+  }
+ },
+ {
+  "title": "New History of the DC Universe: The Dakota Incident",
+  "issue": "#1",
+  "box": "UNKNOWN — needs physical reassignment",
+  "year": "2024",
+  "volume": "1",
+  "set": {
+   "Issue #": "1"
+  },
+  "old": {
+   "Issue #": "#1"
+  }
+ },
+ {
+  "title": "Strange Academy: Presents the Death of Doctor Strange",
+  "issue": "#1",
+  "box": "UNKNOWN — needs physical reassignment",
+  "year": "2022",
+  "volume": "1",
+  "set": {
+   "Issue #": "1"
+  },
+  "old": {
+   "Issue #": "#1"
+  }
+ },
+ {
+  "title": "Uncanny X-Men",
+  "issue": "#136",
+  "box": "UNKNOWN — needs physical reassignment",
+  "year": "1980",
+  "volume": "1",
+  "set": {
+   "Issue #": "136"
+  },
+  "old": {
+   "Issue #": "#136"
+  }
+ },
+ {
+  "title": "Zatanna",
+  "issue": "#2",
+  "box": "UNKNOWN — needs physical reassignment",
+  "year": "2025",
+  "volume": "1",
+  "set": {
+   "Issue #": "2"
+  },
+  "old": {
+   "Issue #": "#2"
+  }
+ },
+ {
+  "title": "DC: 5 of a Kind — Nightwing/Captain Boomerang",
+  "issue": "#1",
+  "box": "UNKNOWN — needs physical reassignment",
+  "year": "2007",
+  "volume": "1",
+  "set": {
+   "Issue #": "1"
+  },
+  "old": {
+   "Issue #": "#1"
+  }
+ },
+ {
+  "title": "DC: 5 of a Kind — Katana/Shazam",
+  "issue": "#1",
+  "box": "UNKNOWN — needs physical reassignment",
+  "year": "2007",
+  "volume": "1",
+  "set": {
+   "Issue #": "1"
+  },
+  "old": {
+   "Issue #": "#1"
+  }
+ },
+ {
+  "title": "DC: 5 of a Kind — Thunder/Martian Manhunter",
+  "issue": "#1",
+  "box": "UNKNOWN — needs physical reassignment",
+  "year": "2007",
+  "volume": "1",
+  "set": {
+   "Issue #": "1"
+  },
+  "old": {
+   "Issue #": "#1"
+  }
+ },
+ {
+  "title": "DC: 5 of a Kind — Metamorpho/Aquaman",
+  "issue": "#1",
+  "box": "UNKNOWN — needs physical reassignment",
+  "year": "2007",
+  "volume": "1",
+  "set": {
+   "Issue #": "1"
+  },
+  "old": {
+   "Issue #": "#1"
+  }
+ },
+ {
+  "title": "DC: 5 of a Kind — Wonder Woman/Grace",
+  "issue": "#1",
+  "box": "UNKNOWN — needs physical reassignment",
+  "year": "2007",
+  "volume": "1",
+  "set": {
+   "Issue #": "1"
+  },
+  "old": {
+   "Issue #": "#1"
+  }
+ },
+ {
+  "title": "Martian Manhunter",
+  "issue": "#2",
+  "box": "UNKNOWN — needs physical reassignment",
+  "year": "2015",
+  "volume": "4",
+  "set": {
+   "Issue #": "2"
+  },
+  "old": {
+   "Issue #": "#2"
+  }
+ },
+ {
+  "title": "Martian Manhunter",
+  "issue": "#3",
+  "box": "UNKNOWN — needs physical reassignment",
+  "year": "2015",
+  "volume": "4",
+  "set": {
+   "Issue #": "3"
+  },
+  "old": {
+   "Issue #": "#3"
+  }
+ },
+ {
+  "title": "Zatanna",
+  "issue": "#2",
+  "box": "UNKNOWN — needs physical reassignment",
+  "year": "2024",
+  "volume": "2",
+  "set": {
+   "Issue #": "2"
+  },
+  "old": {
+   "Issue #": "#2"
+  }
+ },
+ {
+  "title": "Absolute Green Lantern",
+  "issue": "#1",
+  "box": "UNKNOWN — needs physical reassignment",
+  "year": "2024",
+  "volume": "1",
+  "set": {
+   "Issue #": "1"
+  },
+  "old": {
+   "Issue #": "#1"
+  }
+ },
+ {
+  "title": "JSA",
+  "issue": "#17",
+  "box": "UNKNOWN — needs physical reassignment",
+  "year": "2000",
+  "volume": "1",
+  "set": {
+   "Issue #": "17"
+  },
+  "old": {
+   "Issue #": "#17"
+  }
+ },
+ {
+  "title": "JSA",
+  "issue": "#18",
+  "box": "UNKNOWN — needs physical reassignment",
+  "year": "2001",
+  "volume": "1",
+  "set": {
+   "Issue #": "18"
+  },
+  "old": {
+   "Issue #": "#18"
+  }
+ },
+ {
+  "title": "Sons of Star Trek",
+  "issue": "#1",
+  "box": "UNKNOWN — needs physical reassignment",
+  "year": "2024",
+  "volume": "1",
+  "set": {
+   "Issue #": "1"
+  },
+  "old": {
+   "Issue #": "#1"
+  }
+ },
+ {
+  "title": "Void Rivals",
+  "issue": "#20",
+  "box": "UNKNOWN — needs physical reassignment",
+  "year": "2025",
+  "volume": "1",
+  "set": {
+   "Issue #": "20"
+  },
+  "old": {
+   "Issue #": "#20"
+  }
+ },
+ {
+  "title": "Cyclops",
+  "issue": "#4",
+  "box": "UNKNOWN — needs physical reassignment",
+  "year": "2014",
+  "volume": "1",
+  "set": {
+   "Issue #": "4"
+  },
+  "old": {
+   "Issue #": "#4"
+  }
+ }
+]

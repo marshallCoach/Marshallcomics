@@ -612,7 +612,7 @@ class T(unittest.TestCase):
             R("Batman", "1", "2011", "60", "2"),                # Batman #1 is back (other volume) -> skip
             R("Flash", "5", "2011", "3"),                       # on the Duplicates tab -> skip
             R("Ghost Book", "", "2024", "39"),                  # no issue -> skip
-            R("Retired Box Book", "2", "2019", "84"),           # box 84 gone -> UNKNOWN
+            R("Retired Box Book", "#2", "2019", "84"),          # box 84 gone -> UNKNOWN; "#2" -> "2" (Nov 23 ##4 bug)
             R("Twin", "3", "2019", "40"), R("Twin", "3", "2019", "40"),   # 2 copies; box 40 has 1 slot -> UNKNOWN, flagged
         ])
         r = sb.run("brb_reclaim_restore.py")

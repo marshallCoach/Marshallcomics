@@ -120,6 +120,8 @@ def main():
             report.append([row.get("Title"), row.get("Issue #"), row.get("Volume", ""), row.get("Year", ""), old_box, "",
                            "SKIP - already on: " + ", ".join(where)]); continue
         row["Year"] = year4(row.get("Year"))
+        # Nov 23: old app snapshots stored issues as "#4"; written raw, the app showed "##4"
+        row["Issue #"] = re.sub(r"^#+\s*", "", str(row.get("Issue #", "")).strip())
         plan.append((rec, row, old_box))
 
     # boxes: keep the old box only if it exists today and stays within capacity
