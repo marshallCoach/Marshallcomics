@@ -1,0 +1,189 @@
+[
+ {
+  "title": "Firefly",
+  "issue": "13",
+  "box": "67",
+  "year": "2019",
+  "volume": "1",
+  "set": {
+   "Year": "2020"
+  },
+  "old": {
+   "Year": "2019"
+  }
+ },
+ {
+  "title": "Firefly",
+  "issue": "14",
+  "box": "67",
+  "year": "2019",
+  "volume": "1",
+  "set": {
+   "Year": "2020"
+  },
+  "old": {
+   "Year": "2019"
+  }
+ },
+ {
+  "title": "All-New Firefly",
+  "issue": "10",
+  "box": "UNKNOWN — needs physical reassignment",
+  "year": "2023",
+  "volume": "1",
+  "set": {
+   "Title": "All New Firefly",
+   "Year": "2022",
+   "Writer(s)": "David M. Booher",
+   "Publication Date": "2022-11-16"
+  },
+  "old": {
+   "Title": "All-New Firefly",
+   "Year": "2023",
+   "Writer(s)": "",
+   "Publication Date": ""
+  }
+ },
+ {
+  "title": "All-New Firefly: Big Damn Finale",
+  "issue": "1",
+  "box": "UNKNOWN — needs physical reassignment",
+  "year": "2023",
+  "volume": "1",
+  "set": {
+   "Title": "All New Firefly: Big Damn Finale",
+   "Year": "2022",
+   "Writer(s)": "David M. Booher",
+   "Publication Date": "2022-12-21"
+  },
+  "old": {
+   "Title": "All-New Firefly: Big Damn Finale",
+   "Year": "2023",
+   "Writer(s)": "",
+   "Publication Date": ""
+  }
+ },
+ {
+  "title": "Firefly: Brand New Verse",
+  "issue": "1",
+  "box": "66",
+  "year": "2022",
+  "volume": "2",
+  "set": {
+   "Year": "2021"
+  },
+  "old": {
+   "Year": "2022"
+  }
+ },
+ {
+  "title": "Serenity: Those Left Behind",
+  "issue": "1",
+  "box": "64",
+  "year": "2005",
+  "volume": "1",
+  "set": {
+   "Writer(s)": "Joss Whedon & Brett Matthews",
+   "Publication Date": "2005-07-20"
+  },
+  "old": {
+   "Writer(s)": "Zack Whedon",
+   "Publication Date": "2006-01-01"
+  }
+ },
+ {
+  "title": "Serenity",
+  "issue": "1",
+  "box": "70",
+  "year": "2005",
+  "volume": "1",
+  "set": {
+   "Publication Date": "2005-07-20",
+   "Publisher": "Dark Horse"
+  },
+  "old": {
+   "Publication Date": "2005-07-00",
+   "Publisher": "Independent"
+  }
+ },
+ {
+  "title": "Serenity: Firefly Class 03-K64-No Power In The 'Verse",
+  "issue": "1",
+  "box": "64",
+  "year": "2016",
+  "volume": "1",
+  "set": {
+   "Title": "Serenity: No Power in the 'Verse"
+  },
+  "old": {
+   "Title": "Serenity: Firefly Class 03-K64-No Power In The 'Verse"
+  }
+ },
+ {
+  "title": "Serenity: Firefly Class 03-K64-No Power In The 'Verse",
+  "issue": "2",
+  "box": "64",
+  "year": "2016",
+  "volume": "1",
+  "set": {
+   "Title": "Serenity: No Power in the 'Verse"
+  },
+  "old": {
+   "Title": "Serenity: Firefly Class 03-K64-No Power In The 'Verse"
+  }
+ },
+ {
+  "title": "Serenity: Firefly Class 03-K64-No Power In The 'Verse",
+  "issue": "5",
+  "box": "67",
+  "year": "2017",
+  "volume": "1",
+  "set": {
+   "Title": "Serenity: No Power in the 'Verse",
+   "Publisher": "Dark Horse"
+  },
+  "old": {
+   "Title": "Serenity: Firefly Class 03-K64-No Power In The 'Verse",
+   "Publisher": "Independent"
+  }
+ },
+ {
+  "title": "Serenity: No Power in the 'Verse",
+  "issue": "3",
+  "box": "UNKNOWN — needs physical reassignment",
+  "year": "2017",
+  "volume": "1",
+  "set": {
+   "Publication Date": "2016-12-00"
+  },
+  "old": {
+   "Publication Date": ""
+  }
+ },
+ {
+  "title": "Serenity: No Power in the 'Verse",
+  "issue": "4",
+  "box": "UNKNOWN — needs physical reassignment",
+  "year": "2017",
+  "volume": "1",
+  "set": {
+   "Publication Date": "2017-01-00"
+  },
+  "old": {
+   "Publication Date": ""
+  }
+ },
+ {
+  "title": "Serenity: No Power in the 'Verse",
+  "issue": "6",
+  "box": "UNKNOWN — needs physical reassignment",
+  "year": "2017",
+  "volume": "1",
+  "set": {
+   "Publication Date": "2017-03-00"
+  },
+  "old": {
+   "Publication Date": ""
+  }
+ }
+]

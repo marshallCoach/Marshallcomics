@@ -232,10 +232,31 @@
   "year": "2023",
   "volume": "1",
   "set": {
-   "Publication Date": "2023-07-12"
+   "Publication Date": "2023-07-12",
+   "Artist(s)": "Drew Moss & Martina Pignedoli",
+   "Arc / Story": "Dark Ages"
   },
   "old": {
-   "Publication Date": ""
+   "Publication Date": "",
+   "Artist(s)": "George Kambadais",
+   "Arc / Story": "Gargoyles Dark Ages"
+  }
+ },
+ {
+  "title": "Gargoyles: Dark Ages",
+  "issue": "2",
+  "box": "75",
+  "year": "2023",
+  "volume": "1",
+  "set": {
+   "Publication Date": "2023-08-09",
+   "Artist(s)": "Drew Moss & Martina Pignedoli",
+   "Arc / Story": "Dark Ages"
+  },
+  "old": {
+   "Publication Date": "",
+   "Artist(s)": "George Kambadais",
+   "Arc / Story": "Gargoyles DA extends"
   }
  },
  {
@@ -245,9 +266,15 @@
   "year": "2023",
   "volume": "1",
   "set": {
+   "Publication Date": "2023-09-20",
+   "Artist(s)": "Drew Moss & Martina Pignedoli",
+   "Arc / Story": "Dark Ages",
    "Writer(s)": "Greg Weisman"
   },
   "old": {
+   "Publication Date": "",
+   "Artist(s)": "",
+   "Arc / Story": "Gargoyles DA extends",
    "Writer(s)": ""
   }
  },
@@ -258,9 +285,15 @@
   "year": "2023",
   "volume": "1",
   "set": {
+   "Publication Date": "2023-11-01",
+   "Artist(s)": "Drew Moss & Martina Pignedoli",
+   "Arc / Story": "Dark Ages",
    "Writer(s)": "Greg Weisman"
   },
   "old": {
+   "Publication Date": "",
+   "Artist(s)": "",
+   "Arc / Story": "Gargoyles DA extends",
    "Writer(s)": ""
   }
  },
@@ -271,10 +304,18 @@
   "year": "2023",
   "volume": "1",
   "set": {
-   "Writer(s)": "Greg Weisman"
+   "Publication Date": "2024-01-24",
+   "Artist(s)": "Drew Moss & Martina Pignedoli",
+   "Arc / Story": "Dark Ages",
+   "Writer(s)": "Greg Weisman",
+   "Year": "2024"
   },
   "old": {
-   "Writer(s)": ""
+   "Publication Date": "",
+   "Artist(s)": "",
+   "Arc / Story": "Gargoyles DA extends",
+   "Writer(s)": "",
+   "Year": "2023"
   }
  },
  {
@@ -284,10 +325,18 @@
   "year": "2023",
   "volume": "1",
   "set": {
-   "Writer(s)": "Greg Weisman"
+   "Publication Date": "2024-03-06",
+   "Artist(s)": "Drew Moss & Martina Pignedoli",
+   "Arc / Story": "Dark Ages",
+   "Writer(s)": "Greg Weisman",
+   "Year": "2024"
   },
   "old": {
-   "Writer(s)": ""
+   "Publication Date": "",
+   "Artist(s)": "",
+   "Arc / Story": "Gargoyles DA extends",
+   "Writer(s)": "",
+   "Year": "2023"
   }
  },
  {
@@ -299,12 +348,14 @@
   "set": {
    "Year": "2024",
    "Publication Date": "2024-04-17",
-   "Artist(s)": "Pasquale Qualano"
+   "Artist(s)": "Pasquale Qualano, Giovanna La Pietra & Valeria Verdi",
+   "Arc / Story": "Quest"
   },
   "old": {
    "Year": "2023",
    "Publication Date": "",
-   "Artist(s)": ""
+   "Artist(s)": "",
+   "Arc / Story": "Gargoyles Quest"
   }
  },
  {
@@ -315,10 +366,16 @@
   "volume": "1",
   "set": {
    "Year": "2024",
+   "Publication Date": "2024-05-15",
+   "Artist(s)": "Pasquale Qualano & Giovanna La Pietra",
+   "Arc / Story": "Quest",
    "Writer(s)": "Greg Weisman"
   },
   "old": {
    "Year": "2023",
+   "Publication Date": "",
+   "Artist(s)": "",
+   "Arc / Story": "Gargoyles Quest extends",
    "Writer(s)": ""
   }
  },
@@ -330,10 +387,16 @@
   "volume": "1",
   "set": {
    "Year": "2024",
+   "Publication Date": "2024-07-31",
+   "Artist(s)": "Pasquale Qualano & Giovanna La Pietra",
+   "Arc / Story": "Quest",
    "Writer(s)": "Greg Weisman"
   },
   "old": {
    "Year": "2023",
+   "Publication Date": "",
+   "Artist(s)": "",
+   "Arc / Story": "Gargoyles Quest extends",
    "Writer(s)": ""
   }
  },
@@ -345,10 +408,16 @@
   "volume": "1",
   "set": {
    "Year": "2024",
+   "Publication Date": "2024-11-06",
+   "Artist(s)": "Pasquale Qualano & Arianna Stefani",
+   "Arc / Story": "Quest",
    "Writer(s)": "Greg Weisman"
   },
   "old": {
    "Year": "2023",
+   "Publication Date": "",
+   "Artist(s)": "",
+   "Arc / Story": "Gargoyles Quest extends",
    "Writer(s)": ""
   }
  },
@@ -360,10 +429,16 @@
   "volume": "1",
   "set": {
    "Year": "2024",
+   "Publication Date": "2024-12-04",
+   "Artist(s)": "Pasquale Qualano, Gerardo Gambone & Giovanna La Pietra",
+   "Arc / Story": "Quest",
    "Writer(s)": "Greg Weisman"
   },
   "old": {
    "Year": "2023",
+   "Publication Date": "",
+   "Artist(s)": "",
+   "Arc / Story": "Gargoyles Quest extends",
    "Writer(s)": ""
   }
  }
