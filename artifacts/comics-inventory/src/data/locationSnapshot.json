@@ -1,5 +1,5 @@
 {
- "source": "comics_inventory_2311_1828.xlsx",
+ "source": "comics_inventory_2311_1947.xlsx",
  "capturedAt": "2026-11-23",
  "rows": [
   {
@@ -832,7 +832,7 @@
   },
   {
    "title": "Marvel Two-in-One #1 — ⚠️ NOT IN COLLECTION",
-   "issue": "#1",
+   "issue": "1",
    "year": "1974",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
@@ -841,7 +841,7 @@
   },
   {
    "title": "The Fury of Firestorm",
-   "issue": "#1",
+   "issue": "1",
    "year": "1982",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
@@ -850,7 +850,7 @@
   },
   {
    "title": "JSA",
-   "issue": "#10",
+   "issue": "10",
    "year": "2000",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
@@ -868,7 +868,7 @@
   },
   {
    "title": "JSA",
-   "issue": "#12",
+   "issue": "12",
    "year": "2000",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
@@ -877,7 +877,7 @@
   },
   {
    "title": "JSA",
-   "issue": "#13",
+   "issue": "13",
    "year": "2001",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
@@ -939,10 +939,10 @@
    "signed": false
   },
   {
-   "title": "Absolute Batman",
-   "issue": "Zatanna Cover — Foil",
+   "title": "Absolute Wonder Woman",
+   "issue": "16",
    "year": "2024",
-   "volume": "4",
+   "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
    "signed": false
@@ -976,7 +976,7 @@
   },
   {
    "title": "Marvel Tales Starring Spider-Man",
-   "issue": "#113",
+   "issue": "113",
    "year": "1979",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
@@ -1158,7 +1158,7 @@
    "title": "Deadpool: Funeral for a Freak",
    "issue": "1",
    "year": "2001",
-   "volume": "1",
+   "volume": "2",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
    "signed": false
@@ -1572,7 +1572,7 @@
    "title": "Voodoo",
    "issue": "4",
    "year": "2012",
-   "volume": "1",
+   "volume": "2",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
    "signed": false
@@ -2058,7 +2058,7 @@
    "title": "Team 7",
    "issue": "1",
    "year": "2012",
-   "volume": "1",
+   "volume": "2",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
    "signed": false
@@ -2453,7 +2453,7 @@
   {
    "title": "Static Beyond",
    "issue": "1",
-   "year": "2024",
+   "year": "2026",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
@@ -2462,7 +2462,7 @@
   {
    "title": "Static Beyond",
    "issue": "2",
-   "year": "2024",
+   "year": "2026",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
@@ -2471,7 +2471,7 @@
   {
    "title": "Static Beyond",
    "issue": "3",
-   "year": "2024",
+   "year": "2026",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
@@ -2480,7 +2480,7 @@
   {
    "title": "Static Beyond",
    "issue": "4",
-   "year": "2024",
+   "year": "2026",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
@@ -2489,7 +2489,7 @@
   {
    "title": "Static Beyond",
    "issue": "5",
-   "year": "2024",
+   "year": "2026",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
@@ -2498,7 +2498,7 @@
   {
    "title": "Static Beyond",
    "issue": "6",
-   "year": "2024",
+   "year": "2026",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
@@ -3426,7 +3426,7 @@
    "title": "All-New X-Men",
    "issue": "2",
    "year": "2012",
-   "volume": "1",
+   "volume": "2",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
    "signed": false
@@ -3579,7 +3579,7 @@
    "title": "X-Force and Cable",
    "issue": "7",
    "year": "2014",
-   "volume": "1",
+   "volume": "4",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
    "signed": false
@@ -3687,7 +3687,7 @@
    "title": "Amazing X-Men",
    "issue": "4",
    "year": "2014",
-   "volume": "1",
+   "volume": "2",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
    "signed": false
@@ -3822,7 +3822,7 @@
    "title": "Nightcrawler",
    "issue": "1",
    "year": "2014",
-   "volume": "1",
+   "volume": "4",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
    "signed": false
@@ -3993,7 +3993,7 @@
    "title": "Magneto",
    "issue": "1",
    "year": "2014",
-   "volume": "1",
+   "volume": "3",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
    "signed": false
@@ -4128,7 +4128,7 @@
    "title": "Gambit",
    "issue": "4",
    "year": "2012",
-   "volume": "1",
+   "volume": "5",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
    "signed": false
@@ -4387,7 +4387,7 @@
   },
   {
    "title": "New History of the DC Universe: The Dakota Incident",
-   "issue": "#1",
+   "issue": "1",
    "year": "2024",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
@@ -4396,7 +4396,7 @@
   },
   {
    "title": "Strange Academy: Presents the Death of Doctor Strange",
-   "issue": "#1",
+   "issue": "1",
    "year": "2022",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
@@ -4405,7 +4405,7 @@
   },
   {
    "title": "Uncanny X-Men",
-   "issue": "#136",
+   "issue": "136",
    "year": "1980",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
@@ -4414,7 +4414,7 @@
   },
   {
    "title": "Zatanna",
-   "issue": "#2",
+   "issue": "2",
    "year": "2025",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
@@ -4423,7 +4423,7 @@
   },
   {
    "title": "DC: 5 of a Kind — Nightwing/Captain Boomerang",
-   "issue": "#1",
+   "issue": "1",
    "year": "2007",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
@@ -4432,7 +4432,7 @@
   },
   {
    "title": "DC: 5 of a Kind — Katana/Shazam",
-   "issue": "#1",
+   "issue": "1",
    "year": "2007",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
@@ -4441,7 +4441,7 @@
   },
   {
    "title": "DC: 5 of a Kind — Thunder/Martian Manhunter",
-   "issue": "#1",
+   "issue": "1",
    "year": "2007",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
@@ -4450,7 +4450,7 @@
   },
   {
    "title": "DC: 5 of a Kind — Metamorpho/Aquaman",
-   "issue": "#1",
+   "issue": "1",
    "year": "2007",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
@@ -4459,7 +4459,7 @@
   },
   {
    "title": "DC: 5 of a Kind — Wonder Woman/Grace",
-   "issue": "#1",
+   "issue": "1",
    "year": "2007",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
@@ -4468,7 +4468,7 @@
   },
   {
    "title": "Martian Manhunter",
-   "issue": "#2",
+   "issue": "2",
    "year": "2015",
    "volume": "4",
    "box": "UNKNOWN — needs physical reassignment",
@@ -4477,7 +4477,7 @@
   },
   {
    "title": "Martian Manhunter",
-   "issue": "#3",
+   "issue": "3",
    "year": "2015",
    "volume": "4",
    "box": "UNKNOWN — needs physical reassignment",
@@ -4486,7 +4486,7 @@
   },
   {
    "title": "Zatanna",
-   "issue": "#2",
+   "issue": "2",
    "year": "2024",
    "volume": "2",
    "box": "UNKNOWN — needs physical reassignment",
@@ -4504,7 +4504,7 @@
   },
   {
    "title": "Absolute Green Lantern",
-   "issue": "#1",
+   "issue": "1",
    "year": "2024",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
@@ -4522,7 +4522,7 @@
   },
   {
    "title": "JSA",
-   "issue": "#17",
+   "issue": "17",
    "year": "2000",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
@@ -4531,7 +4531,7 @@
   },
   {
    "title": "JSA",
-   "issue": "#18",
+   "issue": "18",
    "year": "2001",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
@@ -4540,7 +4540,7 @@
   },
   {
    "title": "Sons of Star Trek",
-   "issue": "#1",
+   "issue": "1",
    "year": "2024",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
@@ -4549,7 +4549,7 @@
   },
   {
    "title": "Void Rivals",
-   "issue": "#20",
+   "issue": "20",
    "year": "2025",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
@@ -4558,9 +4558,9 @@
   },
   {
    "title": "Cyclops",
-   "issue": "#4",
+   "issue": "4",
    "year": "2014",
-   "volume": "1",
+   "volume": "4",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
    "signed": false
