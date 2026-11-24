@@ -9,6 +9,7 @@ export type FocusItem = {
   box?: string;
   volume?: string;
   problem: string;          // shown on the Edit page
+  next?: string;            // suggested next move, shown under the problem
   link?: string;            // best-guess page to check (Fandom, Image Comics…)
   linkLabel?: string;
 };

@@ -1165,3 +1165,4 @@ body {
 .trend-bad  { color: #dc2626; background: rgba(220,38,38,.1); }
 .trend-flat { color: var(--muted, #888); }
 .trend-go { font: inherit; font-size: .8rem; font-weight: 700; border: 1px solid var(--border); background: var(--surface2); color: var(--text); border-radius: 6px; padding: 1px 8px; cursor: pointer; }
+.df-oi-next { color: #b45309; }

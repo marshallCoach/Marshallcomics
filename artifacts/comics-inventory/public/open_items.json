@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23",
+ "generated": "2026-11-24",
  "items": [
   {
    "id": "gi-joe-mia-1",
@@ -7,19 +7,10 @@
    "issue": "1",
    "box": "70",
    "volume": "1",
-   "problem": "The Image Comics link on file (…/releases/g-i-joe-1) is dead (404), so this book never gets its cover, date or credits. Find its real Image Comics page (search link below) and paste it in the box on its Data Fix card.",
-   "link": "https://www.google.com/search?q=site%3Aimagecomics.com+%22G.I.+Joe%22+%22Real+American+Hero%22+MIA+1",
-   "linkLabel": "Search imagecomics.com"
-  },
-  {
-   "id": "abs-batman-zatanna",
-   "title": "Absolute Batman",
-   "issue": "Zatanna Cover — Foil",
-   "box": "UNKNOWN — needs physical reassignment",
-   "volume": "4",
-   "problem": "The Issue # field holds a cover name, not a number. Set the real issue # (which issue had the Zatanna foil variant?), move “Zatanna Cover — Foil” into Seller Notes, set Volume to 1 (it says 4), and give it a box.",
-   "link": "https://dc.fandom.com/wiki/Absolute_Batman_Vol_1",
-   "linkLabel": "Absolute Batman series page — find the Zatanna variant"
+   "problem": "The Image Comics link on file is dead (404). Your row says 2008, Mike Blaylock, publisher Independent, and Image's G.I. Joe books only started in 2023, so this was never an Image book.",
+   "next": "Read the cover's title and publisher, fix them with ✏️ Edit, then paste its Comic Vine or GCD page in the box below.",
+   "link": "https://www.google.com/search?q=%22G.I.+Joe%22+MIA+1+2008+Blaylock+comic",
+   "linkLabel": "Search: G.I. Joe MIA #1 (2008)"
   },
   {
    "id": "mk-annual-2024",
@@ -27,7 +18,8 @@
    "issue": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "volume": "5",
-   "problem": "Needs a real box. One of the duplicate rows moved out on Nov 23 said Box 80 — check Box 80 first."
+   "problem": "In UNKNOWN. A duplicate row removed on Nov 23 said Box 80.",
+   "next": "Look in Box 80. Found it? ✏️ Edit → Box # 80 → Save."
   },
   {
    "id": "jla-1-text",
@@ -35,148 +27,131 @@
    "issue": "1",
    "box": "47",
    "volume": "1",
-   "problem": "Credits and arc were fixed Nov 23, but the Whatnot Story Pitch and Content text still describe the 2001 Joker: Last Laugh tie-in. Rewrite or clear both (they're editable on this page now).",
+   "problem": "Credits and arc are fixed, but the Whatnot Story Pitch and Content text still describe the 2001 Joker: Last Laugh tie-in.",
+   "next": "✏️ Edit → clear or rewrite Whatnot Story Pitch and Content → Save.",
    "link": "https://dc.fandom.com/wiki/JLA_Vol_1_1",
-   "linkLabel": "JLA Vol 1 #1 on DC Fandom"
+   "linkLabel": "JLA #1 on DC Fandom"
   },
   {
-   "id": "split|All-New Firefly|10|UNKNOWN — needs physical reassignment",
-   "title": "All-New Firefly",
-   "issue": "10",
-   "box": "UNKNOWN — needs physical reassignment",
-   "volume": "1",
-   "problem": "Same series spelled two ways: “All-New Firefly” (1) vs “All New Firefly” (9). Make both spellings match — use whichever Fandom uses (check the Fandom guess below) — via the Title field here, or merge them on Data Fix → Title cleanup."
-  },
-  {
-   "id": "split|DC Comics Bombshells|1|82",
-   "title": "DC Comics Bombshells",
-   "issue": "1",
-   "box": "82",
-   "volume": "1",
-   "problem": "Same series spelled two ways: “DC Comics Bombshells” (6) vs “DC Comics: Bombshells” (7). Make both spellings match — use whichever Fandom uses (check the Fandom guess below) — via the Title field here, or merge them on Data Fix → Title cleanup."
-  },
-  {
-   "id": "split|DC Comics Bombshells|2|82",
-   "title": "DC Comics Bombshells",
-   "issue": "2",
-   "box": "82",
-   "volume": "1",
-   "problem": "Same series spelled two ways: “DC Comics Bombshells” (6) vs “DC Comics: Bombshells” (7). Make both spellings match — use whichever Fandom uses (check the Fandom guess below) — via the Title field here, or merge them on Data Fix → Title cleanup."
-  },
-  {
-   "id": "split|DC Comics Bombshells|3|82",
-   "title": "DC Comics Bombshells",
-   "issue": "3",
-   "box": "82",
-   "volume": "1",
-   "problem": "Same series spelled two ways: “DC Comics Bombshells” (6) vs “DC Comics: Bombshells” (7). Make both spellings match — use whichever Fandom uses (check the Fandom guess below) — via the Title field here, or merge them on Data Fix → Title cleanup."
-  },
-  {
-   "id": "split|DC Comics Bombshells|4|82",
-   "title": "DC Comics Bombshells",
-   "issue": "4",
-   "box": "82",
-   "volume": "1",
-   "problem": "Same series spelled two ways: “DC Comics Bombshells” (6) vs “DC Comics: Bombshells” (7). Make both spellings match — use whichever Fandom uses (check the Fandom guess below) — via the Title field here, or merge them on Data Fix → Title cleanup."
-  },
-  {
-   "id": "split|DC Comics Bombshells|5|82",
-   "title": "DC Comics Bombshells",
-   "issue": "5",
-   "box": "82",
-   "volume": "1",
-   "problem": "Same series spelled two ways: “DC Comics Bombshells” (6) vs “DC Comics: Bombshells” (7). Make both spellings match — use whichever Fandom uses (check the Fandom guess below) — via the Title field here, or merge them on Data Fix → Title cleanup."
-  },
-  {
-   "id": "split|DC Comics Bombshells|6|82",
-   "title": "DC Comics Bombshells",
-   "issue": "6",
-   "box": "82",
-   "volume": "1",
-   "problem": "Same series spelled two ways: “DC Comics Bombshells” (6) vs “DC Comics: Bombshells” (7). Make both spellings match — use whichever Fandom uses (check the Fandom guess below) — via the Title field here, or merge them on Data Fix → Title cleanup."
-  },
-  {
-   "id": "split|Star Trek / Green Lantern: Stranger Worlds|3|67",
-   "title": "Star Trek / Green Lantern: Stranger Worlds",
-   "issue": "3",
-   "box": "67",
-   "volume": "1",
-   "problem": "Same series spelled two ways: “Star Trek / Green Lantern: Stranger Worlds” (1) vs “Star Trek/Green Lantern: Stranger Worlds” (5). Make both spellings match — use whichever Fandom uses (check the Fandom guess below) — via the Title field here, or merge them on Data Fix → Title cleanup."
-  },
-  {
-   "id": "split|WildStorm Starts Now!|1|70",
-   "title": "WildStorm Starts Now!",
-   "issue": "1",
-   "box": "70",
-   "volume": "1",
-   "problem": "Same series spelled two ways: “WildStorm Starts Now!” (1) vs “Wildstorm Starts Now!” (1). Make both spellings match — use whichever Fandom uses (check the Fandom guess below) — via the Title field here, or merge them on Data Fix → Title cleanup."
-  },
-  {
-   "id": "split|X-Club|1|12",
-   "title": "X-Club",
-   "issue": "1",
-   "box": "12",
-   "volume": "1",
-   "problem": "Same series spelled two ways: “X-Club” (2) vs “X Club” (3). Make both spellings match — use whichever Fandom uses (check the Fandom guess below) — via the Title field here, or merge them on Data Fix → Title cleanup."
-  },
-  {
-   "id": "split|X-Club|5|15",
-   "title": "X-Club",
-   "issue": "5",
-   "box": "15",
-   "volume": "1",
-   "problem": "Same series spelled two ways: “X-Club” (2) vs “X Club” (3). Make both spellings match — use whichever Fandom uses (check the Fandom guess below) — via the Title field here, or merge them on Data Fix → Title cleanup."
-  },
-  {
-   "id": "split|Bloodhunters|2|20",
+   "id": "bloodhunters-2",
    "title": "Bloodhunters",
    "issue": "2",
    "box": "20",
    "volume": "2",
-   "problem": "Same series spelled two ways: “Bloodhunters” (2) vs “Blood Hunters” (3). Make both spellings match — use whichever Fandom uses (check the Fandom guess below) — via the Title field here, or merge them on Data Fix → Title cleanup. Check first: the two spellings carry different volumes (1 and 2), so they may be two different series."
+   "problem": "Same 2024 Marvel series as your “Blood Hunters” #1, #4 and #5 (all Danny Lore / Sean McKeever, all box 20), but stored as “Bloodhunters” with Volume 2.",
+   "next": "✏️ Edit → Title “Blood Hunters”, Volume 1 → Save. Then do the same for #3 (Next ›)."
   },
   {
-   "id": "split|Bloodhunters|3|20",
+   "id": "bloodhunters-3",
    "title": "Bloodhunters",
    "issue": "3",
    "box": "20",
    "volume": "2",
-   "problem": "Same series spelled two ways: “Bloodhunters” (2) vs “Blood Hunters” (3). Make both spellings match — use whichever Fandom uses (check the Fandom guess below) — via the Title field here, or merge them on Data Fix → Title cleanup. Check first: the two spellings carry different volumes (1 and 2), so they may be two different series."
+   "problem": "Same series as “Blood Hunters” #1, #4, #5 — see #2.",
+   "next": "✏️ Edit → Title “Blood Hunters”, Volume 1 → Save."
   },
   {
-   "id": "split|Domino: Hotshots|3|9",
+   "id": "domino-3",
    "title": "Domino: Hotshots",
    "issue": "3",
    "box": "9",
    "volume": "1",
-   "problem": "Same series spelled two ways: “Domino: Hotshots” (2) vs “Domino: Hot Shots” (3). Make both spellings match — use whichever Fandom uses (check the Fandom guess below) — via the Title field here, or merge them on Data Fix → Title cleanup."
+   "problem": "Same series as your “Domino: Hot Shots” #1, #2, #5 (all box 9, 2019).",
+   "next": "✏️ Edit → Title “Domino: Hot Shots” → Save. Then #4 (Next ›)."
   },
   {
-   "id": "split|Domino: Hotshots|4|9",
+   "id": "domino-4",
    "title": "Domino: Hotshots",
    "issue": "4",
    "box": "9",
    "volume": "1",
-   "problem": "Same series spelled two ways: “Domino: Hotshots” (2) vs “Domino: Hot Shots” (3). Make both spellings match — use whichever Fandom uses (check the Fandom guess below) — via the Title field here, or merge them on Data Fix → Title cleanup."
+   "problem": "Same series as “Domino: Hot Shots” #1, #2, #5.",
+   "next": "✏️ Edit → Title “Domino: Hot Shots” → Save."
   },
   {
-   "id": "split|Batman and Robin: Year One - Dynamic Duos|3|101",
-   "title": "Batman and Robin: Year One - Dynamic Duos",
-   "issue": "3",
+   "id": "br-yo-2",
+   "title": "Batman & Robin Year One: Dynamic Duos",
+   "issue": "2",
    "box": "101",
    "volume": "1",
-   "problem": "Same series spelled two ways: “Batman and Robin: Year One - Dynamic Duos” (1) vs “Batman & Robin Year One: Dynamic Duos” (1). Make both spellings match — use whichever Fandom uses (check the Fandom guess below) — via the Title field here, or merge them on Data Fix → Title cleanup."
+   "problem": "Same 2026 series as your “Batman and Robin: Year One - Dynamic Duos” #3 (both box 101).",
+   "next": "Check the cover's exact title, then ✏️ Edit both #2 and #3 to that one spelling."
   },
   {
-   "id": "split|The Fury of Firestorm: The Nuclear Men|1|52",
-   "title": "The Fury of Firestorm: The Nuclear Men",
-   "issue": "1",
-   "box": "52",
+   "id": "firestorm-6",
+   "title": "Fury of Firestorm: The Nuclear Men",
+   "issue": "6",
+   "box": "101",
    "volume": "1",
-   "problem": "Same series spelled two ways: “The Fury of Firestorm: The Nuclear Men” (1) vs “Fury of Firestorm: The Nuclear Men” (2). Make both spellings match — use whichever Fandom uses (check the Fandom guess below) — via the Title field here, or merge them on Data Fix → Title cleanup."
+   "problem": "Says 2026 and sits with new books in Box 101. The Nuclear Men series ran 2011–2013, so this is probably the 2026 “The Fury of Firestorm” series (its #7 is already in your data).",
+   "next": "Read the cover. If it's the 2026 series: ✏️ Edit → Title “The Fury of Firestorm”, Volume 2 → Save."
+  },
+  {
+   "id": "firestorm-cc5",
+   "title": "Fury of Firestorm: The Nuclear Men",
+   "issue": "1",
+   "box": "CC5",
+   "volume": "1",
+   "problem": "Same 2011 book as “The Fury of Firestorm: The Nuclear Men” #1 in Box 52, spelled without “The”. CC boxes are never duplicates, so this is only a spelling fix.",
+   "next": "✏️ Edit → Title “The Fury of Firestorm: The Nuclear Men” → Save."
+  },
+  {
+   "id": "gargoyles-winter",
+   "title": "Disney's Gargoyles: Winter Special",
+   "issue": "1",
+   "box": "75",
+   "volume": "1",
+   "problem": "Row says 2023, but Dynamite's Gargoyles Winter Specials are Dec 18 2024 (“Bronx”, art George Kambadais & JP Jordan) and Dec 24 2025 (“Stone Cold Case”). Your row's artist (Daniel Sampere) matches neither.",
+   "next": "Read the cover. ✏️ Edit → Year 2024 or 2025, Artist to match, Publication Date → Save.",
+   "link": "https://disney.fandom.com/wiki/Gargoyles_(Dynamite_Entertainment_comic)",
+   "linkLabel": "Gargoyles issues on Disney Wiki"
+  },
+  {
+   "id": "bsr-23",
+   "title": "Firefly: Blue Sun Rising",
+   "issue": "23",
+   "box": "66",
+   "volume": "1",
+   "problem": "Probably the same book as your Firefly #23 in Box 66 (Dec 9, 2020, Greg Pak). The Blue Sun Rising event ran through Firefly #21–24.",
+   "next": "Pull Box 66. Only one copy? ✏️ Edit → tick Delete → Export. Two copies? leave it."
+  },
+  {
+   "id": "serenity-fc-2",
+   "title": "Serenity: Firefly Class 03-K64",
+   "issue": "2",
+   "box": "64",
+   "volume": "1",
+   "problem": "2011, five writers (Zack Whedon, Patton Oswalt, Jim Krueger, Joss Whedon, Brett Matthews). Doesn't match any single issue in your Firefly list, so it's probably a collected edition or a FCBD issue.",
+   "next": "Read the cover title, then ✏️ Edit → Title (and Issue) → Save."
+  },
+  {
+   "id": "aww-16-zatanna",
+   "title": "Absolute Wonder Woman",
+   "issue": "16",
+   "box": "UNKNOWN — needs physical reassignment",
+   "volume": "1",
+   "problem": "Your Zatanna foil variant copy: credits and variant note are filled, but it still needs a real box and the variant's cover artist.",
+   "next": "✏️ Edit → Box # (and Cover Artist once you know it) → Save.",
+   "link": "https://dc.fandom.com/wiki/Absolute_Wonder_Woman_Vol_1_16",
+   "linkLabel": "AWW #16 on DC Fandom (variant covers)"
+  },
+  {
+   "id": "anf-1-date",
+   "title": "All New Firefly",
+   "issue": "1",
+   "box": "66",
+   "volume": "1",
+   "problem": "Date check: your row says Feb 23, 2022; the Firefly list you pasted says Feb 16, 2022.",
+   "next": "Check the indicia or Comic Vine. ✏️ Edit → Publication Date only if Feb 16 is right."
   }
  ],
  "tasks": [
+  {
+   "id": "overfull",
+   "title": "6 boxes over capacity",
+   "problem": "Box 15 (188/150), Box 85 (181/155), Box 3 (265/240), Box 23 (159/155), Box 10 (242/240), Box 75 (241/240).",
+   "action": "Move the overflow into new or emptier boxes, then set each book's Box # on Edit Comic. Box 15 and Box 85 first."
+  },
   {
    "id": "dual-number-scan",
    "title": "Scan other dual-numbered series",
@@ -186,26 +161,26 @@
   {
    "id": "legacy-links-more",
    "title": "Legacy-number links for other titles",
-   "problem": "brb_legacy_links.py fixed 72 Avengers volumes. Running it for Fantastic Four, Amazing Spider-Man, Thor, Captain America, Iron Man and X-Men would do the same for them.",
-   "action": "Ask Claude: “run legacy links for <title>”"
+   "problem": "brb_legacy_links.py fixed 72 Avengers volumes.",
+   "action": "Ask Claude: “run legacy links for Fantastic Four” (then Spider-Man, Thor…)"
   },
   {
    "id": "held-series",
    "title": "60 held series matches",
    "problem": "Fandom's series name doesn't fit your title, so lookups wait for you.",
-   "action": "Data Fix → Series match → held"
+   "action": "Data Fix → Series match → held: Yes / paste the right page / Not on Fandom"
   },
   {
    "id": "unresolved",
-   "title": "~404 books with no Fandom page found",
+   "title": "~326 books with no Fandom page found",
    "problem": "The page built from your title, volume and issue doesn't exist.",
-   "action": "Data Fix → Unresolved (biggest runs first)"
+   "action": "Data Fix → Unresolved (biggest runs first): paste the right page"
   },
   {
    "id": "unknown-boxes",
-   "title": "~509 books in UNKNOWN",
+   "title": "509 books in UNKNOWN",
    "problem": "They need their real box.",
-   "action": "Data Fix → Restored books → Needs a box, or the “Where Is It?” page"
+   "action": "Data Fix → Restored books → Needs a box → ✏️ Set box, or walk your boxes with “Where Is It?”"
   }
  ]
 }

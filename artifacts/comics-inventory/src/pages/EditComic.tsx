@@ -284,7 +284,7 @@ export default function EditComic({ initQuery }: { initQuery?: string } = {}) {
             return (
               <div className="ec-prob">
                 {probs.length ? probs.map((p, i) => (
-                  <div key={i}><b>⚠ Problem:</b> {p.problem}</div>
+                  <div key={i}><b>⚠ Problem:</b> {p.problem}{p.next && <div style={{ marginTop: 3, color: "#b45309" }}>→ <b>Next:</b> {p.next}</div>}</div>
                 )) : <div style={{ color: "var(--muted,#888)" }}>No logged problem on this book.</div>}
                 <div className="ec-prob-links">
                   {probs.filter(p => p.link).map((p, i) => <a key={i} href={p.link} target="_blank" rel="noopener noreferrer">🔗 {p.linkLabel || "Check this page"} ↗</a>)}

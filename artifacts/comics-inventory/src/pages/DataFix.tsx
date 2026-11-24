@@ -909,7 +909,7 @@ export default function DataFix({ onNavigate }: { onNavigate?: (tab: string, par
         return (
           <section className="df-group" style={{ marginBottom: 14, order: -1 }}>
             <button className="df-group-hd" onClick={() => setOiOpen(o => !o)} style={{ borderLeft: "4px solid #e0a21b" }}>
-              <span className="df-group-name"><span className="df-chev">{oiOpen ? "▾" : "▸"}</span> 📋 Open items from the Nov 23 review</span>
+              <span className="df-group-name"><span className="df-chev">{oiOpen ? "▾" : "▸"}</span> 📋 Open items — each with its next move</span>
               <span className="df-chip-n">{live.length + openItems.tasks.length}</span>
             </button>
             {oiOpen && (
@@ -922,6 +922,7 @@ export default function DataFix({ onNavigate }: { onNavigate?: (tab: string, par
                   <div key={i} className="df-oi">
                     <div className="df-oi-hd"><b>{it.title} #{String(it.issue).replace(/^#/, "")}</b> <span>📦 {String(it.box || "").replace(/^UNKNOWN.*/, "UNKNOWN")}</span></div>
                     <div className="df-oi-p">{it.problem}</div>
+                    {it.next && <div className="df-oi-p df-oi-next">→ <b>Next:</b> {it.next}</div>}
                     <div className="df-oi-btns">
                       {it.link && <a className="df-find" href={it.link} target="_blank" rel="noopener noreferrer">🔗 {it.linkLabel || "Check page"} ↗</a>}
                       <button className="df-solve" onClick={() => openFocus("Open items", withLinks, i)}>✏️ Edit</button>
