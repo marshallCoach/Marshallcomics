@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_2411_1714.xlsx  |  Generated: 2026-11-24
+// Source: comics_inventory_2411_1716.xlsx  |  Generated: 2026-11-24
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -26613,7 +26613,7 @@ Jurgens is a DC copper age legend. Could sign this key.`,
     Seller_Notes: ``, Story_Pitch: ``,
     Content: ``, Platform: ``,
     Sales_Data: ``, Terrificon: ``,
-    Cover_Artist: `John Romita & Klaus Janson & Alejandro Sánchez`, Date_Added: `Aug 3, 2026 (Box 49 physical transcription)`,
+    Cover_Artist: `John Romita Jr. & Klaus Janson & Alejandro Sánchez`, Date_Added: `Aug 3, 2026 (Box 49 physical transcription)`,
     Imprint: ``, Box: `49`,
     Crossover: ``, Start_Bid: ``,
     Volume: `1`, Entry: `13275`,
@@ -33141,7 +33141,7 @@ Jurgens is a DC copper age legend. Could sign this key.`,
     Seller_Notes: `Shazam tie-in | Writer: Various | Art: Various`, Story_Pitch: `Year of the Villain: Shazam #3`,
     Content: `Year of the Villain: Shazam #3. Various. 2019. Shazam tie-in.`, Platform: `WHATNOT`,
     Sales_Data: `NM ~$6. Modern DC.`, Terrificon: ``,
-    Cover_Artist: `John Romita & Klaus Janson & Alex Sinclair`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
+    Cover_Artist: `John Romita Jr. & Klaus Janson & Alex Sinclair`, Date_Added: `May 18, 2026 (ALL_BOXES import)`,
     Imprint: `DC`, Box: `55`,
     Crossover: ``, Start_Bid: `1`,
     Volume: `1`, Entry: `3755`,
@@ -179842,7 +179842,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Seller_Notes: `The Flash Legacy #802. Jeremy Adams.`, Story_Pitch: `The Flash Legacy #802.`,
     Content: `The Flash Legacy #802. Jeremy Adams.`, Platform: `EBAY`,
     Sales_Data: `NM $5, VF $3`, Terrificon: ``,
-    Cover_Artist: `Mike Deodato & Trish Mulvihill`, Date_Added: `May 17, 2026`,
+    Cover_Artist: `Mike Deodato Jr. & Trish Mulvihill`, Date_Added: `May 17, 2026`,
     Imprint: `DC All In`, Box: `50`,
     Crossover: `Dawn of DC`, Start_Bid: `1`,
     Volume: `6`, Entry: `943`,
