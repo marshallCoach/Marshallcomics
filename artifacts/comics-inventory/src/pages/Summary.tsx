@@ -4,7 +4,8 @@ import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
 import { DATA } from "@/data/data";
 import { splitCreators } from "@/utils/creators";
 import { CALENDAR_EVENTS } from "./Calendar";
-import { CoverImage, CoverModal } from "@/components/CoverImage";
+import { CoverImage, CoverModal, coverUrlSync, coversReady } from "@/components/CoverImage";
+import { dataFixCounts, type DataFixCounts } from "@/lib/problems";
 import type { NavParams } from "../App";
 import { arcOf, eventOf, arcIssueRange } from "@/lib/arc";
 
@@ -118,9 +119,49 @@ const INTERFACE_UPDATES = [
   DEPLOY_COMMIT ? `This deploy — ${DEPLOY_COMMIT}${DEPLOY_SHA ? ` (${DEPLOY_SHA})` : ""}` : `Data refresh — ${totalComics.toLocaleString()} comics · ${totalBoxes} boxes`,
   `${totalComics.toLocaleString()} comics · ${totalBoxes} boxes · ${keyCount.toLocaleString()} keys · ${signedCount} signed`,
   `Data completeness — Year ${_fillPct("Year")}%, Condition ${_fillPct("Condition")}%, Value ${_fillPct("Value_NM")}%, Cover art ${_fillPct("Cover_Artist")}%`,
-  `Credits filled — Writers ${_fillPct("Writer")}%, Artists ${_fillPct("Artist")}%, Pub dates ${_fillPct("Pub_Date")}%`,
-  `Story arcs filled — ${ARC_STATS.books.toLocaleString()} books (${ARC_STATS.pct}%) in ${ARC_STATS.arcs.toLocaleString()} arcs · ${ARC_STATS.sized.toLocaleString()} with a known length · ${ARC_STATS.complete} complete arcs owned · ${ARC_STATS.events.toLocaleString()} books tagged to a crossover event`,
 ];
+// ── Trend lines (Nov 24): each number shows ▲ / ▼ / – against the previous deploy
+// this browser saw. Counts, not rounded %, so a small fill still moves the arrow.
+const _filledN = (key: keyof typeof comics[number]) => comics.reduce((n, c) => {
+  const v = String(c[key] ?? "").trim(); return n + (v && !_fillBad.test(v) ? 1 : 0);
+}, 0);
+// Box capacity: CLAUDE.md BOX_CAPACITY (default 240, exceptions) - numbered boxes only.
+const BOX_CAP_DEFAULT = 240;
+const BOX_CAP: Record<string, number> = { "15": 150, "23": 155, "40": 80, "44": 200, "72": 100, "85": 155 };
+const OVERFULL = (() => {
+  const n = new Map<string, number>();
+  for (const c of comics) { const b = String(c.Box ?? "").trim(); if (/^\d+$/.test(b)) n.set(b, (n.get(b) || 0) + 1); }
+  return [...n.entries()].map(([box, rows]) => ({ box, rows, cap: BOX_CAP[box] ?? BOX_CAP_DEFAULT }))
+    .filter(b => b.rows > b.cap).sort((a, b) => (b.rows - b.cap) - (a.rows - a.cap));
+})();
+type TrendKey = "writers" | "artists" | "pubdates" | "arcBooks" | "arcs" | "arcsComplete" | "events" | "overfull" | "dfTotal" | string;
+const TREND_NOW: Record<TrendKey, number> = {
+  writers: _filledN("Writer"), artists: _filledN("Artist"), pubdates: _filledN("Pub_Date"),
+  arcBooks: ARC_STATS.books, arcs: ARC_STATS.arcs, arcsComplete: ARC_STATS.complete, events: ARC_STATS.events,
+  overfull: OVERFULL.length,
+};
+const TREND_KEY = "brbHomeTrend_v1";
+// {stamp, cur, prev}: a new deploy (new build stamp) rolls cur -> prev.
+function loadTrendPrev(extra: Record<string, number> = {}): Record<string, number> {
+  const now = { ...TREND_NOW, ...extra };
+  try {
+    const t = JSON.parse(localStorage.getItem(TREND_KEY) || "null") as { stamp: string; cur: Record<string, number>; prev: Record<string, number> } | null;
+    const next = !t ? { stamp: BUILD_STAMP, cur: now, prev: {} as Record<string, number> }
+      : t.stamp !== BUILD_STAMP ? { stamp: BUILD_STAMP, cur: now, prev: t.cur || {} }
+      : { ...t, cur: { ...t.cur, ...now } };
+    localStorage.setItem(TREND_KEY, JSON.stringify(next));
+    return next.prev || {};
+  } catch { return {}; }
+}
+const _pct1 = (n: number) => { const p = (100 * n) / Math.max(1, totalComics); return n >= totalComics ? "100" : (Math.floor(p * 10) / 10).toFixed(1); };
+// ▲ / ▼ / – with the change; green when it moved the good way.
+function Trend({ now, prev, goodUp = true }: { now: number; prev?: number; goodUp?: boolean }) {
+  if (prev === undefined || prev === null || Number.isNaN(prev)) return <span className="trend trend-flat" title="No earlier deploy seen in this browser yet">–</span>;
+  const d = now - prev;
+  if (d === 0) return <span className="trend trend-flat" title="No change since the last deploy">–</span>;
+  const good = (d > 0) === goodUp;
+  return <span className={`trend ${good ? "trend-good" : "trend-bad"}`} title={`Was ${prev.toLocaleString()} at the last deploy`}>{d > 0 ? "▲" : "▼"} {Math.abs(d).toLocaleString()}</span>;
+}
 // ── Duplicate stats (same logic as Duplicates page) ──────────────────────────
 const DUP_STATS = (() => {
   const map = new Map<string, string[]>();
@@ -474,6 +515,19 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
 
   // Animation states
   const [mounted,   setMounted]   = useState(false);
+  const [trendPrev, setTrendPrev] = useState<Record<string, number>>(() => loadTrendPrev());
+  const [dfc, setDfc] = useState<DataFixCounts | null>(null);
+  useEffect(() => {
+    let live = true;
+    dataFixCounts(comics as never, (import.meta.env.BASE_URL?.replace(/\/$/, "") ?? ""), c => coverUrlSync(c as never), coversReady).then(r => {
+      if (!live) return;
+      setDfc(r);
+      const extra: Record<string, number> = { dfTotal: r.remaining };
+      r.byProblem.forEach(p => { extra[`df:${p.id}`] = p.count; });
+      setTrendPrev(loadTrendPrev(extra));
+    });
+    return () => { live = false; };
+  }, []);
   const [progWidth, setProgWidth] = useState(0);
   const [fillReady, setFillReady] = useState(false);
   const [schedRef,  schedVisible] = useInView(0.08);
@@ -613,6 +667,20 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
             {INTERFACE_UPDATES.map(u => (
               <div key={u} style={{ fontSize:"0.875rem", color:"var(--muted2)", lineHeight:1.5, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>→ {u}</div>
             ))}
+            <div className="trend-line">→ Credits filled — Writers {_pct1(TREND_NOW.writers)}% <Trend now={TREND_NOW.writers} prev={trendPrev.writers} />,
+              {" "}Artists {_pct1(TREND_NOW.artists)}% <Trend now={TREND_NOW.artists} prev={trendPrev.artists} />,
+              {" "}Pub dates {_pct1(TREND_NOW.pubdates)}% <Trend now={TREND_NOW.pubdates} prev={trendPrev.pubdates} /></div>
+            <div className="trend-line">→ Story arcs — {ARC_STATS.books.toLocaleString()} books ({ARC_STATS.pct}%) <Trend now={ARC_STATS.books} prev={trendPrev.arcBooks} />
+              {" "}· {ARC_STATS.arcs.toLocaleString()} arcs <Trend now={ARC_STATS.arcs} prev={trendPrev.arcs} />
+              {" "}· {ARC_STATS.complete} complete arcs owned <Trend now={ARC_STATS.complete} prev={trendPrev.arcsComplete} />
+              {" "}· {ARC_STATS.events.toLocaleString()} crossover-event books <Trend now={ARC_STATS.events} prev={trendPrev.events} /></div>
+            <div className="trend-line">→ Data Fix — {dfc ? <><b>{dfc.remaining.toLocaleString()}</b> books to fix <Trend now={dfc.remaining} prev={trendPrev.dfTotal} goodUp={false} /></> : "counting…"}
+              {dfc && dfc.byProblem.length > 0 && <>{" "}· biggest: {dfc.byProblem.slice(0, 3).map((p, i) => (
+                <span key={p.id}>{i ? " · " : ""}{p.label} {p.count.toLocaleString()} <Trend now={p.count} prev={trendPrev[`df:${p.id}`]} goodUp={false} /></span>
+              ))}</>}
+              {" "}<button className="trend-go" onClick={() => onNavigate("datafix")}>Open Data Fix →</button></div>
+            <div className="trend-line">→ Overfull boxes — <b>{OVERFULL.length}</b> over capacity <Trend now={OVERFULL.length} prev={trendPrev.overfull} goodUp={false} />
+              {OVERFULL.length > 0 && <>: {OVERFULL.slice(0, 6).map(b => `Box ${b.box} (${b.rows}/${b.cap})`).join(", ")}{OVERFULL.length > 6 ? "…" : ""}</>}</div>
           </div>
         )}
       </section>

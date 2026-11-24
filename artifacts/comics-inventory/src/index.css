@@ -1157,3 +1157,11 @@ body {
 .df-oi-hd span { color: var(--muted2, #aaa); font-size: .8rem; }
 .df-oi-p { font-size: .84rem; line-height: 1.45; }
 .df-oi-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+
+/* Homepage trend arrows (Nov 24) */
+.trend-line { font-size: .875rem; color: var(--muted2); line-height: 1.6; overflow-wrap: anywhere; }
+.trend { display: inline-block; font-weight: 700; font-size: .8rem; padding: 0 5px; border-radius: 4px; white-space: nowrap; }
+.trend-good { color: #16a34a; background: rgba(22,163,74,.1); }
+.trend-bad  { color: #dc2626; background: rgba(220,38,38,.1); }
+.trend-flat { color: var(--muted, #888); }
+.trend-go { font: inherit; font-size: .8rem; font-weight: 700; border: 1px solid var(--border); background: var(--surface2); color: var(--text); border-radius: 6px; padding: 1px 8px; cursor: pointer; }
