@@ -139,6 +139,22 @@ class T(unittest.TestCase):
         v = {x["Issue #"]: str(x["Volume"]) for x in sb.newest()}
         self.assertEqual(v[1], "3", r.stdout); self.assertEqual(v[2], "1", "auto link must not change Volume")
 
+    def test_year_pinned_fix_hits_its_own_copy(self):
+        # Nov 24: FF #3 from 2013 (Vol 4) and 2018 (Vol 6) both live in box 4. Matching on
+        # title+issue+box sent both legacy fixes to the first copy (2013 ended as Vol 6).
+        sb = self.sb
+        sb.xlsx(["Title", "Issue #", "Box #", "Volume", "Year", "Publisher", "Publication Date"],
+                [["Fantastic Four", 3, "4", 8, 2013, "Marvel", None], ["Fantastic Four", 3, "4", 10, 2018, "Marvel", None]])
+        u = "https://marvel.fandom.com/wiki/Fantastic_Four_Vol_%s_3"
+        sb.json("data-fixes-legacy-fantastic-four-1.json", [
+            {"title": "Fantastic Four", "issue": "3", "box": "4", "problem": "legacy-volume", "kind": "fandom", "year": "2013", "vol": "8", "value": u % 4},
+            {"title": "Fantastic Four", "issue": "3", "box": "4", "problem": "legacy-volume", "kind": "fandom", "year": "2018", "vol": "10", "value": u % 6}])
+        r = sb.run("brb_apply_data_fixes.py", "--apply")
+        v = {x["Year"]: str(x["Volume"]) for x in sb.newest()}
+        self.assertEqual(v, {2013: "4", 2018: "6"}, r.stdout)
+        r = sb.run("brb_apply_data_fixes.py", "--apply")
+        self.assertIn("CHANGED 0", r.stdout, "second run must change nothing")
+
     # ── arcs ──────────────────────────────────────────────────────────────────
     ARC_H = ["Title", "Issue #", "Volume", "Year", "Box #", "Story Arc", "Arc Part", "Arc Length",
              "Finale Issue #", "Crossover Event (Fandom)", "Arc Confidence", "Arc Source"]

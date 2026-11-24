@@ -135,6 +135,10 @@ def main():
     at = datetime.datetime.now().isoformat(timespec="seconds")
     recs = [{"id": f"legacy|||{a.title}|||{ni(r[cI])}|||{r[cB]}", "title": a.title, "issue": ni(r[cI]), "box": str(r[cB] or "").strip(),
              "problem": "legacy-volume", "kind": "fandom", "at": at,
+             # Pin the exact copy: a box often holds the same issue # from several eras
+             # (FF #3 2013 and 2018 both in box 4). Nov 24: without these, step 2 put
+             # every era's fix on the first copy.
+             "year": str(r[cY] or "").strip()[:4], "vol": ni(r[cV]),
              "value": f"https://{a.wiki}/wiki/" + urllib.parse.quote(tgt.replace(" ", "_"), safe=":/,()")}
             for r, k, tgt, _ in P if k == "volume"]
     if not recs:

@@ -404,7 +404,10 @@ def main():
             # Only a link YOU pasted is a "seed" (trusted over the sheet's Year). Automatic
             # links (extrapolated / autolink) stay year-gated like any run-mate.
             is_seed = (issue == rec_issue and not rec.get("_auto") and rec.get("value") not in shared_links and
-                       (not cB or str(ws.cell(r, cB).value or "").strip() == rec_box))
+                       (not cB or str(ws.cell(r, cB).value or "").strip() == rec_box) and
+                       # a record pinned to a year (legacy links) vouches for that copy only -
+                       # another era's copy in the same box stays a year-gated run-mate (Nov 24)
+                       (not rec.get("year") or str(ws.cell(r, cY).value or "").strip()[:4] == str(rec.get("year"))[:4]))
             if not is_seed:                      # same row + same wiki series: once per run
                 if (r, base, canon) in done_rows:
                     continue
@@ -461,7 +464,13 @@ def main():
             if fn:
                 url = img_url(base, fn)
                 key = f"{sheet_title}|||{issue}|||{nv(ws.cell(r, cV).value)}"
-                if url and (args.overwrite or (is_seed and forced_file) or key not in cov or not (cov.get(key) or {})):
+                # An existing cover from another era (stored page year >2y off this copy's
+                # Year) is replaced by a year-matched page: heals covers written under a
+                # wrong Volume (Nov 24 legacy batches).
+                _old = cov.get(key) if isinstance(cov.get(key), dict) else {}
+                _od = int(str(_old.get("date") or "0")[:4] or 0) if str(_old.get("date") or "")[:4].isdigit() else 0
+                wrong_era = bool(_od and ry and py and abs(_od - ry) > 2 and abs(py - ry) <= 2)
+                if url and (args.overwrite or (is_seed and forced_file) or wrong_era or key not in cov or not (cov.get(key) or {})):
                     if args.apply:
                         cov[key] = {"url": url, "large": url, "date": str(py or ""), "source": "fandom-page"}
                     covers_set += 1

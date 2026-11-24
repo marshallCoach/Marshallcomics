@@ -131,7 +131,7 @@ def main():
             if not isinstance(_rec, dict):
                 continue
             _k = (_rec.get("kind"), str(_rec.get("title", "")).lower(), str(_rec.get("issue", "")),
-                  str(_rec.get("box", "")), _rec.get("value") or "")
+                  str(_rec.get("box", "")), _rec.get("value") or "", str(_rec.get("year") or ""), str(_rec.get("vol") or ""))
             if _k in _seen:
                 continue
             _seen.add(_k); _rec["_src"] = os.path.basename(_p); recs.append(_rec)
@@ -156,12 +156,12 @@ def main():
                                         ci("Volume"), ci("Year"), ci("Publisher"), ci("Publication Date"))
 
     # index rows by identity, and by tight-title for run propagation
-    rowmap, by_title = {}, defaultdict(list)
+    rowmap, by_title = defaultdict(list), defaultdict(list)
     for r in range(2, ws.max_row + 1):
         t = ws.cell(r, cT).value
         if not str(t or "").strip():
             continue
-        rowmap.setdefault(key(t, ws.cell(r, cI).value, ws.cell(r, cB).value), r)
+        rowmap[key(t, ws.cell(r, cI).value, ws.cell(r, cB).value)].append(r)
         by_title[tight(t)].append(r)
 
     by_key, aliases = build_series_lookup()
@@ -191,10 +191,21 @@ def main():
     for rec in recs:
         if rec.get("problem") in ("series-match", "arc-conflict", "reclaim"):   # handled by their own steps, not row fixes
             continue
-        r = rowmap.get(key(rec.get("title"), rec.get("issue"), rec.get("box")))
-        if not r:
+        cands = rowmap.get(key(rec.get("title"), rec.get("issue"), rec.get("box")), [])
+        # Same issue # in one box from different eras (FF #3 2013 + 2018, box 4): a record
+        # that names its year / volume fixes THAT copy only. Nov 24: matching on
+        # title+issue+box alone put every era's fix on the first copy (Batches 1-2).
+        ry_, rv_ = str(rec.get("year") or "").strip()[:4], norm_issue(rec.get("vol"))
+        if ry_ and cYear:
+            cands = [c for c in cands if str(ws.cell(c, cYear).value or "").strip()[:4] == ry_]
+        if rv_ and cVol and len(cands) > 1:
+            cands = [c for c in cands if norm_issue(ws.cell(c, cVol).value) == rv_] or cands
+        if not cands:
             stats["row_not_found"] += 1
             continue
+        if len(cands) > 1 and not ry_:
+            stats["ambiguous_copies_first_used"] += 1
+        r = cands[0]
         kind, val = rec.get("kind"), str(rec.get("value", ""))
         if kind == "fandom":
             links.append([rec.get("title"), rec.get("issue"), rec.get("box"), val, rec.get("_src", "")])
