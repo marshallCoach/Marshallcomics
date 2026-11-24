@@ -755,9 +755,9 @@
 "reason": "page not found (X-Men: Hope Vol 4 one-shot)"
 },
 {
-"title": "Wildstorm Starts Now!",
+"title": "WildStorm Starts Now!",
 "issue": "Promo",
-"reason": "page not found (Wildstorm Starts Now! Vol 1 Promo)"
+"reason": "page not found (WildStorm Starts Now! Vol 1 Promo)"
 },
 {
 "title": "Wildcats: Version 3.0",
@@ -845,11 +845,6 @@
 "reason": "page not found (Secret Six Vol 1 Foil Cover (verify issue))"
 },
 {
-"title": "Absolute Batman",
-"issue": "Zatanna Cover \u2014 Foil",
-"reason": "page not found (Absolute Batman Vol 4 Zatanna Cover \u2014 Foil)"
-},
-{
 "title": "Nightwing",
 "issue": "Foil Cover (verify issue)",
 "reason": "page not found (Nightwing Vol 5 Foil Cover (verify issue))"
@@ -888,36 +883,6 @@
 "title": "Luke Cage, Power Man",
 "issue": "17",
 "reason": "page not found (Luke Cage, Power Man Vol 1 17)"
-},
-{
-"title": "Captain America & The Falcon",
-"issue": "194",
-"reason": "page not found (Captain America & The Falcon Vol 2 194)"
-},
-{
-"title": "Captain America & The Falcon",
-"issue": "195",
-"reason": "page not found (Captain America & The Falcon Vol 2 195)"
-},
-{
-"title": "Captain America & The Falcon",
-"issue": "196",
-"reason": "page not found (Captain America & The Falcon Vol 2 196)"
-},
-{
-"title": "Captain America & The Falcon",
-"issue": "197",
-"reason": "page not found (Captain America & The Falcon Vol 2 197)"
-},
-{
-"title": "Captain America & The Falcon",
-"issue": "199",
-"reason": "page not found (Captain America & The Falcon Vol 2 199)"
-},
-{
-"title": "Captain America & The Falcon",
-"issue": "201",
-"reason": "page not found (Captain America & The Falcon Vol 2 201)"
 },
 {
 "title": "Captain America & The Falcon",
@@ -1056,11 +1021,6 @@
 },
 {
 "title": "Deadpool: Funeral for a Freak",
-"issue": "1",
-"reason": "page not found (Deadpool: Funeral for a Freak Vol 1 1)"
-},
-{
-"title": "Deadpool: Funeral for a Freak",
 "issue": "2",
 "reason": "page not found (Deadpool: Funeral for a Freak Vol 1 2)"
 },
@@ -1113,11 +1073,6 @@
 "title": "DC vs. Vampires: Darkness and Light",
 "issue": "1",
 "reason": "page not found (DC vs. Vampires: Darkness and Light Vol 1 1)"
-},
-{
-"title": "Doctor Strange: Sorcerer Supreme",
-"issue": "1",
-"reason": "page not found (Doctor Strange: Sorcerer Supreme Vol 5 1)"
 },
 {
 "title": "Doctor Strange: Sorcerer Supreme",
@@ -1213,41 +1168,6 @@
 "title": "Aquaman Annual",
 "issue": "2",
 "reason": "page not found (Aquaman Annual Vol 6 2)"
-},
-{
-"title": "Team 7",
-"issue": "1",
-"reason": "page year 1994 vs your 2012 - different run, skipped"
-},
-{
-"title": "Team 7",
-"issue": "2",
-"reason": "page year 1994 vs your 2012 - different run, skipped"
-},
-{
-"title": "Team 7",
-"issue": "4",
-"reason": "page year 1995 vs your 2012 - different run, skipped"
-},
-{
-"title": "Team 7",
-"issue": "5",
-"reason": "page not found (Team 7 Vol 1 5)"
-},
-{
-"title": "Team 7",
-"issue": "6",
-"reason": "page not found (Team 7 Vol 1 6)"
-},
-{
-"title": "Team 7",
-"issue": "7",
-"reason": "page not found (Team 7 Vol 1 7)"
-},
-{
-"title": "Team 7",
-"issue": "8",
-"reason": "page not found (Team 7 Vol 1 8)"
 },
 {
 "title": "Divergence: DC Comics",
@@ -1375,106 +1295,6 @@
 "reason": "page not found (New Titans Vol 5 35)"
 },
 {
-"title": "Cyclops",
-"issue": "4",
-"reason": "page not found (Cyclops Vol 1 4)"
-},
-{
-"title": "Static Beyond",
-"issue": "1",
-"reason": "page not found (Static Beyond Vol 1 1)"
-},
-{
-"title": "Static Beyond",
-"issue": "2",
-"reason": "page not found (Static Beyond Vol 1 2)"
-},
-{
-"title": "Static Beyond",
-"issue": "3",
-"reason": "page not found (Static Beyond Vol 1 3)"
-},
-{
-"title": "Static Beyond",
-"issue": "4",
-"reason": "page not found (Static Beyond Vol 1 4)"
-},
-{
-"title": "Static Beyond",
-"issue": "5",
-"reason": "page not found (Static Beyond Vol 1 5)"
-},
-{
-"title": "Static Beyond",
-"issue": "6",
-"reason": "page not found (Static Beyond Vol 1 6)"
-},
-{
-"title": "Adventures of Superman: Book of L",
-"issue": "1",
-"reason": "page not found (Adventures of Superman: Book of L Vol 1 1)"
-},
-{
-"title": "Adventures of Superman: Book of L",
-"issue": "2",
-"reason": "page not found (Adventures of Superman: Book of L Vol 1 2)"
-},
-{
-"title": "Adventures of Superman: Book of L",
-"issue": "3",
-"reason": "page not found (Adventures of Superman: Book of L Vol 1 3)"
-},
-{
-"title": "Adventures of Superman: Book of L",
-"issue": "4",
-"reason": "page not found (Adventures of Superman: Book of L Vol 1 4)"
-},
-{
-"title": "Adventures of Superman: Book of L",
-"issue": "5",
-"reason": "page not found (Adventures of Superman: Book of L Vol 1 5)"
-},
-{
-"title": "Adventures of Superman: Book of L",
-"issue": "6",
-"reason": "page not found (Adventures of Superman: Book of L Vol 1 6)"
-},
-{
-"title": "Adventures of Superman: Book of L",
-"issue": "7",
-"reason": "page not found (Adventures of Superman: Book of L Vol 1 7)"
-},
-{
-"title": "Adventures of Superman: Book of L",
-"issue": "8",
-"reason": "page not found (Adventures of Superman: Book of L Vol 1 8)"
-},
-{
-"title": "Batman: Off World",
-"issue": "1",
-"reason": "page not found (Batman: Off World Vol 1 1)"
-},
-{
-"title": "Batman: Off World",
-"issue": "3",
-"reason": "page not found (Batman: Off World Vol 1 3)"
-},
-{
-"title": "Batman: Off World",
-"issue": "4",
-"reason": "page not found (Batman: Off World Vol 1 4)"
-},
-{
-"title": "Batman: Off World",
-"issue": "5",
-"reason": "page not found (Batman: Off World Vol 1 5)"
-},
-{
-"title": "Batman: Off World",
-"issue": "6",
-"reason": "page not found (Batman: Off World Vol 1 6)"
-},
-{
 "title": "DC Boss Battle",
 "issue": "1",
 "reason": "page not found (DC Boss Battle Vol 1 1)"
@@ -1521,26 +1341,6 @@
 },
 {
 "title": "X-Force and Cable",
-"issue": "7",
-"reason": "page not found (X-Force and Cable Vol 1 7)"
-},
-{
-"title": "X-Force and Cable",
-"issue": "8",
-"reason": "page not found (X-Force and Cable Vol 1 8)"
-},
-{
-"title": "X-Force and Cable",
-"issue": "9",
-"reason": "page not found (X-Force and Cable Vol 1 9)"
-},
-{
-"title": "X-Force and Cable",
-"issue": "10",
-"reason": "page not found (X-Force and Cable Vol 1 10)"
-},
-{
-"title": "X-Force and Cable",
 "issue": "16",
 "reason": "page not found (X-Force and Cable Vol 1 16)"
 },
@@ -1548,116 +1348,6 @@
 "title": "X-Force and Cable",
 "issue": "19",
 "reason": "page not found (X-Force and Cable Vol 1 19)"
-},
-{
-"title": "Nightcrawler",
-"issue": "1",
-"reason": "page year 1985 vs your 2014 - different run, skipped"
-},
-{
-"title": "Nightcrawler",
-"issue": "3",
-"reason": "page year 1985 vs your 2014 - different run, skipped"
-},
-{
-"title": "Nightcrawler",
-"issue": "4",
-"reason": "page year 1985 vs your 2014 - different run, skipped"
-},
-{
-"title": "Nightcrawler",
-"issue": "5",
-"reason": "page not found (Nightcrawler Vol 1 5)"
-},
-{
-"title": "Nightcrawler",
-"issue": "6",
-"reason": "page not found (Nightcrawler Vol 1 6)"
-},
-{
-"title": "Nightcrawler",
-"issue": "7",
-"reason": "page not found (Nightcrawler Vol 1 7)"
-},
-{
-"title": "Nightcrawler",
-"issue": "8",
-"reason": "page not found (Nightcrawler Vol 1 8)"
-},
-{
-"title": "Magneto",
-"issue": "1",
-"reason": "page year 1996 vs your 2014 - different run, skipped"
-},
-{
-"title": "Magneto",
-"issue": "2",
-"reason": "page year 1996 vs your 2014 - different run, skipped"
-},
-{
-"title": "Magneto",
-"issue": "3",
-"reason": "page year 1996 vs your 2014 - different run, skipped"
-},
-{
-"title": "Magneto",
-"issue": "4",
-"reason": "page year 1996 vs your 2014 - different run, skipped"
-},
-{
-"title": "Magneto",
-"issue": "5",
-"reason": "page not found (Magneto Vol 1 5)"
-},
-{
-"title": "Magneto",
-"issue": "6",
-"reason": "page not found (Magneto Vol 1 6)"
-},
-{
-"title": "Magneto",
-"issue": "9",
-"reason": "page not found (Magneto Vol 1 9)"
-},
-{
-"title": "Magneto",
-"issue": "10",
-"reason": "page not found (Magneto Vol 1 10)"
-},
-{
-"title": "Magneto",
-"issue": "11",
-"reason": "page not found (Magneto Vol 1 11)"
-},
-{
-"title": "Magneto",
-"issue": "12",
-"reason": "page not found (Magneto Vol 1 12)"
-},
-{
-"title": "Magneto",
-"issue": "13",
-"reason": "page not found (Magneto Vol 1 13)"
-},
-{
-"title": "Magneto",
-"issue": "14",
-"reason": "page not found (Magneto Vol 1 14)"
-},
-{
-"title": "Magneto",
-"issue": "15",
-"reason": "page not found (Magneto Vol 1 15)"
-},
-{
-"title": "Magneto",
-"issue": "16",
-"reason": "page not found (Magneto Vol 1 16)"
-},
-{
-"title": "Magneto",
-"issue": "18",
-"reason": "page not found (Magneto Vol 1 18)"
 },
 {
 "title": "Storm",
@@ -1703,61 +1393,6 @@
 "title": "Cyclops",
 "issue": "12",
 "reason": "page not found (Cyclops Vol 1 12)"
-},
-{
-"title": "Gambit",
-"issue": "4",
-"reason": "page year 1994 vs your 2012 - different run, skipped"
-},
-{
-"title": "Gambit",
-"issue": "6",
-"reason": "page not found (Gambit Vol 1 6)"
-},
-{
-"title": "Gambit",
-"issue": "7",
-"reason": "page not found (Gambit Vol 1 7)"
-},
-{
-"title": "Gambit",
-"issue": "9",
-"reason": "page not found (Gambit Vol 1 9)"
-},
-{
-"title": "Gambit",
-"issue": "10",
-"reason": "page not found (Gambit Vol 1 10)"
-},
-{
-"title": "Gambit",
-"issue": "11",
-"reason": "page not found (Gambit Vol 1 11)"
-},
-{
-"title": "Gambit",
-"issue": "13",
-"reason": "page not found (Gambit Vol 1 13)"
-},
-{
-"title": "Gambit",
-"issue": "14",
-"reason": "page not found (Gambit Vol 1 14)"
-},
-{
-"title": "Gambit",
-"issue": "15",
-"reason": "page not found (Gambit Vol 1 15)"
-},
-{
-"title": "Gambit",
-"issue": "16",
-"reason": "page not found (Gambit Vol 1 16)"
-},
-{
-"title": "Gambit",
-"issue": "17",
-"reason": "page not found (Gambit Vol 1 17)"
 },
 {
 "title": "Deadpool: Mercs for Money",
@@ -1890,14 +1525,9 @@
 "reason": "page not found (DC: 5 of a Kind \u2014 Wonder Woman/Grace Vol 1 1)"
 },
 {
-"title": "Batman: Off World",
-"issue": "1",
-"reason": "page not found (Batman: Off World Vol 1 1)"
-},
-{
 "title": "Cyclops",
 "issue": "4",
-"reason": "page year 2001 vs your 2014 - different run, skipped"
+"reason": "page year 2026 vs your 2014 - different run, skipped"
 },
 {
 "title": "Batman and Robin",

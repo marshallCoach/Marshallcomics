@@ -1,5 +1,5 @@
 {
- "source": "comics_inventory_2311_2103.xlsx",
+ "source": "comics_inventory_2311_2325.xlsx",
  "capturedAt": "2026-11-23",
  "rows": [
   {
@@ -4254,7 +4254,7 @@
    "title": "Deadpool",
    "issue": "13",
    "year": "2016",
-   "volume": "1",
+   "volume": "5",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
    "signed": false
