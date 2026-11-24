@@ -67,7 +67,10 @@ CRED_PATS = {
     # Marvel Database credits the COVER via Image1_Artist1/2 (the artists of the
     # primary cover image), not a CoverArtist field. Match both, but only
     # Image1_* (Image2_* is the variant/textless cover).
-    "cover":  r"\|\s*(?:Cover\s?_?Artists?\d*|Image1_Artists?\d*)\s*=\s*([^\n|]+)",
+    # FIRST cover credit only (CoverArtist / CoverArtist1 / CoverArtist1_1 / Image1_Artist1):
+    # the 2nd+ slots are the cover's inker / colorist (Laura Martin, Rachelle Rosenberg...),
+    # which UNION was adding to Cover Artist (Nov 24, Robert: "stop colorists").
+    "cover":  r"\|\s*(?:Cover\s?_?Artists?(?:1(?:_1)?)?|Image1_Artists?1?)\s*=\s*([^\n|]+)",
 }
 
 

@@ -536,6 +536,12 @@ class T(unittest.TestCase):
         self.assertEqual(A.infobox_names(wt, A.CRED_PATS["artist"]), ["Simona Di Gianfelice"])
         self.assertEqual(A.infobox_names(wt, A.CRED_PATS["writer"]), ["Melissa Flores"])
         self.assertEqual(A.infobox_names(wt, A.CRED_PATS["cover"]), ["Mateus Manhanini"])
+        # Nov 24: only the first cover credit - the 2nd+ slots are the cover's inker / colorist
+        mv = "|Image1_Artist1 = Stephen Segovia\n|Image1_Artist2 = Rachelle Rosenberg\n|Image2_Artist1 = Variant Guy\n"
+        self.assertEqual(A.infobox_names(mv, A.CRED_PATS["cover"]), ["Stephen Segovia"])
+        dc = "|CoverArtist1 = Mark Bagley\n|CoverArtist2 = Mark Farmer\n|CoverArtist3 = Paul Mounts\n"
+        self.assertEqual(A.infobox_names(dc, A.CRED_PATS["cover"]), ["Mark Bagley"])
+        self.assertEqual(A.infobox_names("|CoverArtist1_1 = A\n|CoverArtist1_2 = B\n", A.CRED_PATS["cover"]), ["A"])
         self.assertEqual(A.infobox_names("|Penciler1_1 = John Romita Jr.\n", A.CRED_PATS["artist"]), ["John Romita Jr."], "Marvel style still works")
 
     def test_relink_resends_archived_links_once(self):

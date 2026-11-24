@@ -162,7 +162,9 @@ def main():
         if vm and r["vol"] and vm.group(1) != r["vol"]:
             vol_fix += 1
         recs.append({"id": f"{r['title']}|||{r['issue']}|||{r['box']}", "title": r["title"], "issue": r["issue"],
-                     "box": r["box"], "problem": "autolink", "kind": "fandom", "value": url, "at": now})
+                     "box": r["box"], "problem": "autolink", "kind": "fandom", "value": url, "at": now,
+                     # pin the copy: a box can hold this issue # from several eras (Nov 24)
+                     "year": str(r["year"] or ""), "vol": r["vol"]})
     print("\nRESULT  " + "   ".join(f"{k}: {v}" for k, v in how.items()))
     print(f"links: {len(recs)} of {len(rows)} books   (Volume will change on {vol_fix} - the page's year proves the run)")
     for x in recs[:10]:
