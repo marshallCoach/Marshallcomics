@@ -568,6 +568,27 @@ class T(unittest.TestCase):
         r3 = sb.run("brb_relink.py", "--write")
         self.assertIn("nothing to re-send", r3.stdout, "re-sent once per parser version, never loops")
 
+    def test_relink_reuses_another_copys_link(self):
+        # Nov 24: a copy in another box with gaps reuses the link already vouched for on its
+        # twin - but only when the sheet has that title + issue from one year (or the link is
+        # pinned to this copy's year). Sibling-built guesses are never reused.
+        sb = self.sb
+        H = ["Title", "Issue #", "Year", "Volume", "Box #", "Publication Date", "Writer(s)", "Artist(s)", "Cover Artist"]
+        sb.xlsx(H, [["Solo", 1, 2020, 1, "5", "2020-01-00", "W", "A", "C"],
+                    ["Solo", 1, 2020, 1, "9", None, None, None, None],
+                    ["Two", 3, 2013, 4, "4", "2013-01-00", "W", "A", "C"],
+                    ["Two", 3, 2018, 6, "8", None, None, None, None]])
+        sb.json("covers.json", {"Solo|||1|||1": {"url": "x"}, "Two|||3|||4": {"url": "x"}})
+        os.makedirs(sb.p("processed_exports"), exist_ok=True)
+        rec = lambda t, i, b, u: {"title": t, "issue": i, "box": b, "problem": "x", "kind": "fandom", "value": u}
+        sb.json("processed_exports/20261124_data-fixes-2026-11-24.json",
+                [rec("Solo", "1", "5", "https://marvel.fandom.com/wiki/Solo_Vol_1_1"),
+                 rec("Two", "3", "4", "https://marvel.fandom.com/wiki/Two_Vol_4_3")])
+        sb.run("brb_relink.py", "--write")
+        out = json.load(open(glob.glob(sb.p("data-fixes-relink-*.json"))[0]))
+        self.assertEqual([(x["title"], x["box"], x["year"]) for x in out], [("Solo", "9", "2020")],
+                         "single-era twin reuses the link; a two-era book does not")
+
     def test_relink_never_resends_a_flagged_cover(self):
         # Nov 20: relink switched on. A cover you flagged incorrect must not come back from the
         # same archived link; a book whose only gap is that cover is not re-sent at all.

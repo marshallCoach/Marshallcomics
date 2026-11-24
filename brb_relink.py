@@ -51,6 +51,7 @@ def main():
     ap.add_argument("--write", action="store_true")
     a = ap.parse_args()
     links = collections.defaultdict(list)              # (title, issue, box) -> records, oldest first
+    any_box = collections.defaultdict(list)            # (title, issue) -> records from ANY box (not guesses)
     for p in sorted(glob.glob(os.path.join(ROOT, "processed_exports", "*data-fixes*.json")), key=os.path.getmtime):
         try:
             recs = json.load(open(p))
@@ -59,6 +60,8 @@ def main():
         for r in recs if isinstance(recs, list) else []:
             if isinstance(r, dict) and r.get("kind") == "fandom" and str(r.get("value", "")).startswith("http"):
                 links[(str(r.get("title", "")).strip(), ni(r.get("issue")), str(r.get("box", "")).strip())].append(r)
+                if "extrapolated-auto" not in os.path.basename(p) and not r.get("auto"):
+                    any_box[(str(r.get("title", "")).strip(), ni(r.get("issue")))].append(r)
     import openpyxl
     sys.path.insert(0, ROOT)
     from brb_apply_arcs import newest_xlsx, INV
@@ -76,25 +79,41 @@ def main():
     yr4 = lambda v: str(v or "").strip()[:4]
     rows = list(it)
     eras = collections.defaultdict(set)                # (title, issue, box) -> years in the sheet
+    eras_any = collections.defaultdict(set)            # (title, issue) -> years in the sheet, all boxes
     for r in rows:
         t = str(r[cT] or "").strip()
         if t:
-            eras[(t, ni(r[cI]), str(r[cB] or "").strip() if cB is not None else "")].add(yr4(r[cY]) if cY is not None else "")
+            y = yr4(r[cY]) if cY is not None else ""
+            eras[(t, ni(r[cI]), str(r[cB] or "").strip() if cB is not None else "")].add(y)
+            eras_any[(t, ni(r[cI]))].add(y)
     out, st, why = [], collections.Counter(), collections.Counter()
     for r in rows:
         t = str(r[cT] or "").strip()
         key = (t, ni(r[cI]), str(r[cB] or "").strip() if cB is not None else "")
-        if not t or key not in links:
+        if not t:
             continue
         ry = yr4(r[cY]) if cY is not None else ""
-        # Same issue # in one box from several eras (FF #3 2013 + 2018, box 4): use only a
-        # link pinned to THIS copy's year; an unpinned one can't say which copy it meant (Nov 24).
-        pinned = [x for x in links[key] if x.get("year") and yr4(x.get("year")) == ry]
-        loose = [x for x in links[key] if not x.get("year")] if len(eras[key]) <= 1 else []
-        rec = (pinned or loose or [None])[-1]
-        if not rec:
-            st["skipped - other era's link"] += 1
-            continue
+        if key in links:
+            # Same issue # in one box from several eras (FF #3 2013 + 2018, box 4): use only a
+            # link pinned to THIS copy's year; an unpinned one can't say which copy it meant (Nov 24).
+            pinned = [x for x in links[key] if x.get("year") and yr4(x.get("year")) == ry]
+            loose = [x for x in links[key] if not x.get("year")] if len(eras[key]) <= 1 else []
+            rec = (pinned or loose or [None])[-1]
+            if not rec:
+                st["skipped - other era's link"] += 1
+                continue
+        else:
+            # Another copy of the same book (other box) has a link you or the pipeline already
+            # vouched for (Nov 24). Reuse it when it is pinned to this year, or when every copy
+            # of this title + issue in the sheet is from one year. Never sibling-built guesses.
+            ak = (t, key[1])
+            pinned = [x for x in any_box.get(ak, []) if x.get("year") and yr4(x.get("year")) == ry]
+            loose = [x for x in any_box.get(ak, []) if not x.get("year")] if len(eras_any[ak]) <= 1 else []
+            src_rec = (pinned or loose or [None])[-1]
+            if not src_rec:
+                continue
+            rec = {**src_rec, "box": key[2], "id": f"{t}|||{key[1]}|||{key[2]}"}
+            st["matched from another copy"] += 1
         st["books with an archived link"] += 1
         gaps = [n for n, c in gaps_cols.items() if c is not None and not str(r[c] or "").strip()]
         vol = ni(r[cV]) if cV is not None else "1"
