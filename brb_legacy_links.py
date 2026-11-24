@@ -67,26 +67,28 @@ def plan(rows, title, L, year_of):
     out = []
     for r, i, v, y, box in rows:
         cur = f"{title} Vol {v or '1'} {i}"
-        if i.isdigit() and int(i) > v1_max and i in L:
-            tgt = L[i]
-            ti = tgt.rsplit(" ", 1)[-1]
-            if tgt == cur:
-                continue
-            out.append((r, "volume" if ti == i else "renumber", tgt, f"legacy #{i} is {tgt}"))
-            continue
+        # 1. Does this issue number exist in some volume with the row's year (within 1)? Then the
+        #    printed number is a regular issue - at most the VOLUME is wrong (Nov 24: Black Panther
+        #    #23 (2000) stored as Vol 1 is Vol 3 #23, not legacy #23 = Vol 3 #8).
         fits = []
         for k in range(1, 13):
             p = f"{title} Vol {k} {i}"
             py = year_of(p)
             if py and y and abs(py - y) <= 1:
                 fits.append((abs(py - y), p))
-        if not fits:
+        if fits:
+            best = min(d for d, _ in fits)
+            top = [p for d, p in fits if d == best]
+            tgt = cur if cur in top else (top[0] if len(top) == 1 else None)
+            if tgt and tgt != cur:
+                out.append((r, "volume", tgt, f"{tgt} is dated {year_of(tgt)}; your row says {y}"))
             continue
-        best = min(d for d, _ in fits)
-        top = [p for d, p in fits if d == best]
-        tgt = cur if cur in top else (top[0] if len(top) == 1 else None)
-        if tgt and tgt != cur:
-            out.append((r, "volume", tgt, f"{tgt} is dated {year_of(tgt)}; your row says {y}"))
+        # 2. No volume has this number in that era: a legacy number (Avengers #480 = Vol 3 #65).
+        if i.isdigit() and int(i) > v1_max and i in L:
+            tgt = L[i]
+            ti = tgt.rsplit(" ", 1)[-1]
+            if tgt != cur:
+                out.append((r, "volume" if ti == i else "renumber", tgt, f"legacy #{i} is {tgt}"))
     return out
 
 
@@ -94,12 +96,14 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--title", required=True)
     ap.add_argument("--wiki", default="marvel.fandom.com")
+    ap.add_argument("--fandom", help="Fandom's name for the series when yours differs (\"The Amazing Spider-Man\" -> \"Amazing Spider-Man\")")
     ap.add_argument("--write", action="store_true")
     a = ap.parse_args()
     import openpyxl
     import brb_arc_fetch as F
     from brb_apply_arcs import newest_xlsx, INV
-    L = legacy_map(a.wiki, a.title)
+    fname = a.fandom or a.title
+    L = legacy_map(a.wiki, fname)
     print(f"{a.title}: {len(L)} legacy numbers on Fandom")
     src = newest_xlsx()
     ws = [w for w in openpyxl.load_workbook(src, read_only=True).worksheets if w.title.startswith(INV)][-1]
@@ -113,13 +117,13 @@ def main():
             y = str(r[cY] or "").strip()[:4]
             rows.append((r, ni(r[cI]), ni(r[cV]) if cV is not None else "", int(y) if y.isdigit() else None, str(r[cB] or "").strip()))
     wiki = "Marvel" if "marvel" in a.wiki else "DC"
-    need = sorted({f"{a.title} Vol {k} {i}" for _, i, _, _, _ in rows for k in range(1, 13)})
+    need = sorted({f"{fname} Vol {k} {i}" for _, i, _, _, _ in rows for k in range(1, 13)})
     years = {}
     for k in range(0, len(need), 50):
         got = F.api_get(wiki, need[k:k + 50])
         for p in need[k:k + 50]:
             years[p] = F.page_year(got[p]["text"]) if got.get(p) else None
-    P = plan(rows, a.title, L, years.get)
+    P = plan(rows, fname, L, years.get)
     kinds = collections.Counter(k for _, k, _, _ in P)
     print(f"SOURCE: {os.path.basename(src)}   {a.title} rows: {len(rows)}   volume fixes: {kinds['volume']}   "
           f"issue renumbers (need your yes): {kinds['renumber']}   left alone: {len(rows) - len(P)}")

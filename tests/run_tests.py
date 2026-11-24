@@ -645,6 +645,19 @@ class T(unittest.TestCase):
         r = sb.run("brb_reclaim_restore.py", "--apply", env={"BRB_FORCE": "1"})
         self.assertEqual(len(sb.newest()), 61, r.stdout + r.stderr)
 
+    def test_legacy_numbers_leave_regular_later_volume_issues_alone(self):
+        # Nov 24: Black Panther Vol 3 #23 (2000) is a regular issue; Vol 1 ended at #15, so the
+        # legacy list (#23 = Vol 3 #8) wrongly flagged it as a renumber.
+        import brb_legacy_links as LL
+        L = {**{str(k): f"Black Panther Vol 1 {k}" for k in range(1, 16)}, "23": "Black Panther Vol 3 8"}
+        years = {"Black Panther Vol 3 23": 2000, "Black Panther Vol 3 8": 1999}
+        P = LL.plan([("row", "23", "3", 2000, "7")], "Black Panther", L, years.get)
+        self.assertEqual(P, [], "own page exists with the right year -> untouched")
+        P = LL.plan([("row", "23", "1", 2000, "7")], "Black Panther", L, years.get)
+        self.assertEqual([(k, t) for _, k, t, _ in P], [("volume", "Black Panther Vol 3 23")], "wrong volume -> volume fix, not renumber")
+        P = LL.plan([("row", "23", "1", 1990, "7")], "Black Panther", L, years.get)
+        self.assertEqual([k for _, k, _, _ in P], ["renumber"], "no page in that era -> legacy candidate")
+
     def test_legacy_numbers_put_each_issue_on_its_page(self):
         # Nov 20: Avengers #672 was filed as Vol 8 (Vol 8 starts at #691); Fandom's
         # Legacy_Numbers page names the real page. Dual-numbered #480 = Vol 3 #65 -> renumber
