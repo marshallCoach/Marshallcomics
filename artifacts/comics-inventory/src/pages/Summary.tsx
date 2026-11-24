@@ -27,36 +27,6 @@ function formatGeneratedDate(iso: string): string {
   return d.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
 }
 
-const UPDATE_SNAPSHOT_KEY = "brbLastUpdateSnapshot";
-
-function computeUpdateDeltas(): string[] {
-  const now = { comics: totalComics, boxes: totalBoxes, keys: keyCount };
-  let prev: typeof now | null = null;
-  try {
-    const raw = localStorage.getItem(UPDATE_SNAPSHOT_KEY);
-    if (raw) prev = JSON.parse(raw);
-  } catch { /* ignore */ }
-  try { localStorage.setItem(UPDATE_SNAPSHOT_KEY, JSON.stringify(now)); } catch { /* ignore */ }
-
-  const deltas: string[] = [];
-  if (prev && prev.boxes !== now.boxes) {
-    const sign = now.boxes > prev.boxes ? "+" : "";
-    deltas.push(`${sign}${now.boxes - prev.boxes} Boxes (${prev.boxes}→${now.boxes})`);
-  }
-  if (prev && prev.comics !== now.comics) {
-    const sign = now.comics > prev.comics ? "+" : "";
-    deltas.push(`${sign}${(now.comics - prev.comics).toLocaleString()} Comics`);
-  }
-  if (prev && prev.keys !== now.keys) {
-    const sign = now.keys > prev.keys ? "+" : "";
-    deltas.push(`${sign}${now.keys - prev.keys} Keys`);
-  }
-  if (deltas.length === 0) {
-    deltas.push(`${now.comics.toLocaleString()} Comics`, `${now.boxes} Boxes`, `${now.keys.toLocaleString()} Keys`);
-  }
-  return deltas;
-}
-
 // Deploy stamp — injected at build time (vite define), so the banner is live on
 // every deploy to production instead of a hardcoded date + feature list.
 const BUILD_STAMP   = (typeof __BUILD_TIME__ !== "undefined" && __BUILD_TIME__) ? __BUILD_TIME__ : DATA.generatedAt;
@@ -68,7 +38,6 @@ const LAST_UPDATE_DATE = (() => {
     ? formatGeneratedDate(DATA.generatedAt)
     : d.toLocaleString("en-US", { month: "short", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit" });
 })();
-const UPDATE_DELTAS    = computeUpdateDeltas();
 // Live fill-rate for one field, computed from the current inventory so these
 // banner lines move with every deploy instead of being static blurbs.
 const _fillBad = /^(n\/a|unknown|\?|tbd|none)$/i;
@@ -117,7 +86,6 @@ const ARC_STATS = (() => {
 const INTERFACE_UPDATES = [
   `Last deployed — ${LAST_UPDATE_DATE}`,
   DEPLOY_COMMIT ? `This deploy — ${DEPLOY_COMMIT}${DEPLOY_SHA ? ` (${DEPLOY_SHA})` : ""}` : `Data refresh — ${totalComics.toLocaleString()} comics · ${totalBoxes} boxes`,
-  `${totalComics.toLocaleString()} comics · ${totalBoxes} boxes · ${keyCount.toLocaleString()} keys · ${signedCount} signed`,
   `Data completeness — Year ${_fillPct("Year")}%, Condition ${_fillPct("Condition")}%, Value ${_fillPct("Value_NM")}%, Cover art ${_fillPct("Cover_Artist")}%`,
 ];
 // ── Trend lines (Nov 24): each number shows ▲ / ▼ / – against the previous deploy
@@ -139,6 +107,7 @@ const TREND_NOW: Record<TrendKey, number> = {
   writers: _filledN("Writer"), artists: _filledN("Artist"), pubdates: _filledN("Pub_Date"),
   arcBooks: ARC_STATS.books, arcs: ARC_STATS.arcs, arcsComplete: ARC_STATS.complete, events: ARC_STATS.events,
   overfull: OVERFULL.length,
+  comics: totalComics, boxes: totalBoxes, keys: keyCount, signed: signedCount,
 };
 const TREND_KEY = "brbHomeTrend_v1";
 // {stamp, cur, prev}: a new deploy (new build stamp) rolls cur -> prev.
@@ -653,9 +622,9 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
           <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"3px", color:"var(--red)" }}>LATEST UPDATE</span>
           <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1.5px", color:"var(--muted)", background:"var(--surface2)", padding:"2px 8px", borderRadius:3, border:"1px solid var(--border)" }}>{LAST_UPDATE_DATE}</span>
           <div style={{ display:"flex", gap:5, flexWrap:"wrap" }}>
-            {UPDATE_DELTAS.map(d => (
-              <span key={d} style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"#16a34a", background:"rgba(22,163,74,0.08)", border:"1px solid rgba(22,163,74,0.18)", padding:"2px 8px", borderRadius:3 }}>
-                {d}
+            {([["comics", "Comics"], ["boxes", "Boxes"], ["keys", "Keys"], ["signed", "Signed"]] as const).map(([k, label]) => (
+              <span key={k} style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"#16a34a", background:"rgba(22,163,74,0.08)", border:"1px solid rgba(22,163,74,0.18)", padding:"2px 8px", borderRadius:3 }}>
+                {TREND_NOW[k].toLocaleString()} {label} <Trend now={TREND_NOW[k]} prev={trendPrev[k]} />
               </span>
             ))}
           </div>
