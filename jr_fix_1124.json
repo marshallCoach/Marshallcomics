@@ -1,0 +1,41 @@
+[
+ {
+  "title": "Batman: Urban Legends",
+  "issue": "3",
+  "box": "49",
+  "year": "2021",
+  "volume": "1",
+  "set": {
+   "Cover Artist": "John Romita Jr. & Klaus Janson & Alejandro Sánchez"
+  },
+  "old": {
+   "Cover Artist": "John Romita & Klaus Janson & Alejandro Sánchez"
+  }
+ },
+ {
+  "title": "Black Adam: Year Of The Villain",
+  "issue": "3",
+  "box": "55",
+  "year": "2019",
+  "volume": "1",
+  "set": {
+   "Cover Artist": "John Romita Jr. & Klaus Janson & Alex Sinclair"
+  },
+  "old": {
+   "Cover Artist": "John Romita & Klaus Janson & Alex Sinclair"
+  }
+ },
+ {
+  "title": "The Flash",
+  "issue": "802",
+  "box": "50",
+  "year": "2024",
+  "volume": "6",
+  "set": {
+   "Cover Artist": "Mike Deodato Jr. & Trish Mulvihill"
+  },
+  "old": {
+   "Cover Artist": "Mike Deodato & Trish Mulvihill"
+  }
+ }
+]
