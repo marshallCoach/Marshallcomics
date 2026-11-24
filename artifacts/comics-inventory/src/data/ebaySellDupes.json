@@ -1,5 +1,5 @@
 {
- "source": "comics_inventory_2411_1834.xlsx",
+ "source": "comics_inventory_2411_1849.xlsx",
  "generatedAt": "2026-11-24",
  "groupCount": 142,
  "sellableCount": 149,
@@ -2486,7 +2486,7 @@
    "title": "Nova",
    "issue": "3",
    "year": "2013",
-   "volume": "6",
+   "volume": "5",
    "publisher": "Marvel",
    "writer": "Jeph Loeb",
    "copies": 2,
