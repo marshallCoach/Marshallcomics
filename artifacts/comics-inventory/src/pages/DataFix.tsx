@@ -4,6 +4,7 @@ import { CoverImage, CoverModal, fmtPubDate, coverUrlSync, coverSourceSync, cove
 import { setFlagKind as setCoverFlagKind } from "@/lib/coverFlags";
 import { Guide, FLOW } from "./dataFixGuides";
 import { openFocus, fandomGuess, type FocusItem } from "@/lib/focusQueue";
+import { Trend, deployPrev } from "@/lib/trend";
 import { PROBLEMS, PROBLEM_MAP, INFO_PROBLEMS, missingData, comicId, issueNum, problemsFor, type ProblemId } from "@/lib/problems";
 
 type OpenItems = { items: (FocusItem & { id: string })[]; tasks: { id: string; title: string; problem: string; action: string }[] };
@@ -426,6 +427,15 @@ export default function DataFix({ onNavigate }: { onNavigate?: (tab: string, par
     }
     return m;
   }, [flagged, fixes]);
+  // ▲▼– per category vs the previous deploy (same store as the homepage; Nov 24).
+  // Recorded only once covers have loaded, so a half-loaded page never becomes the baseline.
+  const [dfPrev, setDfPrev] = useState<Record<string, number>>({});
+  useEffect(() => {
+    if (!coversLoaded) return;
+    const now: Record<string, number> = { dfTotal: remaining };
+    PROBLEMS.forEach(p => { if (!p.info) now[`df:${p.id}`] = counts[p.id] || 0; });
+    setDfPrev(deployPrev(now));
+  }, [coversLoaded, counts, remaining]);
 
   // Groups: problem → TITLE → [issues], only unresolved & matching filter.
   // Grouped by title (series) so you can clear one book at a time — fix one
@@ -673,13 +683,14 @@ export default function DataFix({ onNavigate }: { onNavigate?: (tab: string, par
       {/* Category chips */}
       <div className="df-chips">
         <button className={`df-chip${activeProblem === "all" ? " on" : ""}`} onClick={() => setActiveProblem("all")}>
-          All problems <span className="df-chip-n">{remaining.toLocaleString()}</span>
+          All problems <span className="df-chip-n">{remaining.toLocaleString()}</span> <Trend now={remaining} prev={dfPrev.dfTotal} goodUp={false} />
         </button>
         {PROBLEMS.map(p => (
           <button key={p.id} className={`df-chip${activeProblem === p.id ? " on" : ""}${p.info ? " info" : ""}`}
             style={{ ["--pc" as string]: p.color }} onClick={() => setActiveProblem(p.id)}
             title={p.info ? "Informational — not counted toward work to do" : undefined}>
             {p.info ? "ⓘ " : ""}{p.label} <span className="df-chip-n" style={{ background: p.color }}>{counts[p.id] || 0}</span>
+            {!p.info && <> <Trend now={counts[p.id] || 0} prev={dfPrev[`df:${p.id}`]} goodUp={false} /></>}
           </button>
         ))}
         <div className="df-actions">
@@ -1320,7 +1331,7 @@ export default function DataFix({ onNavigate }: { onNavigate?: (tab: string, par
             <button className="df-group-hd" onClick={() => setOpenGroups(o => ({ ...o, [g.pid]: !gopen }))}
               style={{ borderLeft: `4px solid ${g.problem.color}` }}>
               <span className="df-group-name"><span className="df-chev">{gopen ? "▾" : "▸"}</span> {g.problem.label}</span>
-              <span className="df-group-meta"><span className="df-group-blurb">{g.problem.blurb}</span> <b style={{ color: g.problem.color }}>{g.count.toLocaleString()}</b></span>
+              <span className="df-group-meta"><span className="df-group-blurb">{g.problem.blurb}</span> <b style={{ color: g.problem.color }}>{g.count.toLocaleString()}</b>{!g.problem.info && <> <Trend now={counts[g.pid] || 0} prev={dfPrev[`df:${g.pid}`]} goodUp={false} /></>}</span>
             </button>
             {gopen && <Guide id={g.pid} />}
             {gopen && g.pubs.map(pg => (

@@ -6,6 +6,7 @@ import { splitCreators } from "@/utils/creators";
 import { CALENDAR_EVENTS } from "./Calendar";
 import { CoverImage, CoverModal, coverUrlSync, coversReady } from "@/components/CoverImage";
 import { dataFixCounts, type DataFixCounts } from "@/lib/problems";
+import { Trend, deployPrev, weekPrev } from "@/lib/trend";
 import type { NavParams } from "../App";
 import { arcOf, eventOf, arcIssueRange } from "@/lib/arc";
 
@@ -109,28 +110,10 @@ const TREND_NOW: Record<TrendKey, number> = {
   overfull: OVERFULL.length,
   comics: totalComics, boxes: totalBoxes, keys: keyCount, signed: signedCount,
 };
-const TREND_KEY = "brbHomeTrend_v1";
-// {stamp, cur, prev}: a new deploy (new build stamp) rolls cur -> prev.
-function loadTrendPrev(extra: Record<string, number> = {}): Record<string, number> {
-  const now = { ...TREND_NOW, ...extra };
-  try {
-    const t = JSON.parse(localStorage.getItem(TREND_KEY) || "null") as { stamp: string; cur: Record<string, number>; prev: Record<string, number> } | null;
-    const next = !t ? { stamp: BUILD_STAMP, cur: now, prev: {} as Record<string, number> }
-      : t.stamp !== BUILD_STAMP ? { stamp: BUILD_STAMP, cur: now, prev: t.cur || {} }
-      : { ...t, cur: { ...t.cur, ...now } };
-    localStorage.setItem(TREND_KEY, JSON.stringify(next));
-    return next.prev || {};
-  } catch { return {}; }
-}
+const WEEKLY_KEYS = ["comics", "boxes", "keys", "signed"] as const;
+const loadTrendPrev = (extra: Record<string, number> = {}) => deployPrev({ ...TREND_NOW, ...extra });
+const WEEK = weekPrev(Object.fromEntries(WEEKLY_KEYS.map(k => [k, TREND_NOW[k]])));
 const _pct1 = (n: number) => { const p = (100 * n) / Math.max(1, totalComics); return n >= totalComics ? "100" : (Math.floor(p * 10) / 10).toFixed(1); };
-// ▲ / ▼ / – with the change; green when it moved the good way.
-function Trend({ now, prev, goodUp = true }: { now: number; prev?: number; goodUp?: boolean }) {
-  if (prev === undefined || prev === null || Number.isNaN(prev)) return <span className="trend trend-flat" title="No earlier deploy seen in this browser yet">–</span>;
-  const d = now - prev;
-  if (d === 0) return <span className="trend trend-flat" title="No change since the last deploy">–</span>;
-  const good = (d > 0) === goodUp;
-  return <span className={`trend ${good ? "trend-good" : "trend-bad"}`} title={`Was ${prev.toLocaleString()} at the last deploy`}>{d > 0 ? "▲" : "▼"} {Math.abs(d).toLocaleString()}</span>;
-}
 // ── Duplicate stats (same logic as Duplicates page) ──────────────────────────
 const DUP_STATS = (() => {
   const map = new Map<string, string[]>();
@@ -624,7 +607,7 @@ export default function Summary({ onNavigate }: { onNavigate: NavFn }) {
           <div style={{ display:"flex", gap:5, flexWrap:"wrap" }}>
             {([["comics", "Comics"], ["boxes", "Boxes"], ["keys", "Keys"], ["signed", "Signed"]] as const).map(([k, label]) => (
               <span key={k} style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.875rem", letterSpacing:"1px", color:"#16a34a", background:"rgba(22,163,74,0.08)", border:"1px solid rgba(22,163,74,0.18)", padding:"2px 8px", borderRadius:3 }}>
-                {TREND_NOW[k].toLocaleString()} {label} <Trend now={TREND_NOW[k]} prev={trendPrev[k]} />
+                {TREND_NOW[k].toLocaleString()} {label} <Trend now={TREND_NOW[k]} prev={WEEK.prev[k]} since={WEEK.since || "last week"} />
               </span>
             ))}
           </div>
