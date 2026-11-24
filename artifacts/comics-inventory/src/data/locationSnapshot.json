@@ -1,5 +1,5 @@
 {
- "source": "comics_inventory_2311_1947.xlsx",
+ "source": "comics_inventory_2311_2027.xlsx",
  "capturedAt": "2026-11-23",
  "rows": [
   {
@@ -941,7 +941,7 @@
   {
    "title": "Absolute Wonder Woman",
    "issue": "16",
-   "year": "2024",
+   "year": "2026",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
@@ -3063,18 +3063,18 @@
    "signed": false
   },
   {
-   "title": "All-New Firefly",
+   "title": "All New Firefly",
    "issue": "10",
-   "year": "2023",
+   "year": "2022",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
    "signed": false
   },
   {
-   "title": "All-New Firefly: Big Damn Finale",
+   "title": "All New Firefly: Big Damn Finale",
    "issue": "1",
-   "year": "2023",
+   "year": "2022",
    "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,

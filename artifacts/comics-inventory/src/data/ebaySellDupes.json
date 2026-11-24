@@ -1,5 +1,5 @@
 {
- "source": "comics_inventory_2311_1947.xlsx",
+ "source": "comics_inventory_2311_2027.xlsx",
  "generatedAt": "2026-11-23",
  "groupCount": 142,
  "sellableCount": 149,
@@ -753,7 +753,7 @@
   {
    "title": "Disney's Gargoyles",
    "issue": "1",
-   "year": "2023",
+   "year": "2022",
    "volume": "1",
    "publisher": "Dynamite",
    "writer": "Greg Weisman",
@@ -1757,7 +1757,7 @@
    "year": "2023",
    "volume": "1",
    "publisher": "Dynamite",
-   "writer": "",
+   "writer": "Greg Weisman",
    "copies": 2,
    "sellable": 1,
    "sellValue": 5.0,
