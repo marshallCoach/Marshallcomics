@@ -1184,6 +1184,19 @@
  },
  {
   "title": "Batman: Urban Legends",
+  "issue": "3",
+  "box": "49",
+  "year": "2021",
+  "volume": "1",
+  "set": {
+   "Cover Artist": "John Romita & Klaus Janson & Alejandro Sánchez"
+  },
+  "old": {
+   "Cover Artist": "John Romita & Jr. & Klaus Janson & Alejandro Sánchez"
+  }
+ },
+ {
+  "title": "Batman: Urban Legends",
   "issue": "5",
   "box": "49",
   "year": "2023",
@@ -1206,6 +1219,19 @@
   },
   "old": {
    "Cover Artist": "Leinil Francis Yu & Romulo Fajardo Jr."
+  }
+ },
+ {
+  "title": "Black Adam: Year Of The Villain",
+  "issue": "3",
+  "box": "55",
+  "year": "2019",
+  "volume": "1",
+  "set": {
+   "Cover Artist": "John Romita & Klaus Janson & Alex Sinclair"
+  },
+  "old": {
+   "Cover Artist": "John Romita & Jr. & Klaus Janson & Alex Sinclair"
   }
  },
  {
@@ -1297,6 +1323,19 @@
   },
   "old": {
    "Cover Artist": "Ed McGuiness & Mark Farmer & Marte Gracia"
+  }
+ },
+ {
+  "title": "Blade",
+  "issue": "7",
+  "box": "21",
+  "year": "2023",
+  "volume": "6",
+  "set": {
+   "Cover Artist": "Elena Casagrande"
+  },
+  "old": {
+   "Cover Artist": "Elena Casagrande & Romulo Fajardo & Jr."
   }
  },
  {
@@ -1540,7 +1579,7 @@
   "year": "2017",
   "volume": "1",
   "set": {
-   "Cover Artist": "Renato Guedes & Romulo Fajardo & Jr."
+   "Cover Artist": "Renato Guedes"
   },
   "old": {
    "Cover Artist": "Renato Guedes & Romulo Fajardo Jr. & Romulo Fajardo & Jr."
@@ -1642,7 +1681,7 @@
   "issue": "12",
   "box": "31",
   "year": "2016",
-  "volume": "6",
+  "volume": "4",
   "set": {
    "Cover Artist": "Chris Bachalo"
   },
@@ -2324,20 +2363,8 @@
   },
   "old": {
    "Cover Artist": "Jim Cheung & Guru-eFX"
-  }
- },
- {
-  "title": "Fantastic Four: Empyre",
-  "issue": "0",
-  "box": "UNKNOWN — needs physical reassignment",
-  "year": "2020",
-  "volume": "1",
-  "set": {
-   "Cover Artist": "Jim Cheung"
   },
-  "old": {
-   "Cover Artist": "Jim Cheung & Guru-eFX"
-  }
+  "rows": 2
  },
  {
   "title": "Force Works 2020",
@@ -2714,6 +2741,19 @@
   },
   "old": {
    "Cover Artist": "Greg Land & Guru-eFX"
+  }
+ },
+ {
+  "title": "Justice League Dark/Wonder Woman: The Witching Hour",
+  "issue": "1",
+  "box": "48",
+  "year": "2018",
+  "volume": "1",
+  "set": {
+   "Cover Artist": "Jesus Merino"
+  },
+  "old": {
+   "Cover Artist": "Jesus Merino & Romulo Fajardo & Jr."
   }
  },
  {
@@ -3163,7 +3203,7 @@
   "issue": "6",
   "box": "17",
   "year": "2016",
-  "volume": "8",
+  "volume": "6",
   "set": {
    "Cover Artist": "Humberto Ramos"
   },
@@ -3628,6 +3668,19 @@
  },
  {
   "title": "The Flash",
+  "issue": "802",
+  "box": "50",
+  "year": "2024",
+  "volume": "6",
+  "set": {
+   "Cover Artist": "Mike Deodato & Trish Mulvihill"
+  },
+  "old": {
+   "Cover Artist": "Mike Deodato & Jr. & Trish Mulvihill"
+  }
+ },
+ {
+  "title": "The Flash",
   "issue": "27",
   "box": "54",
   "year": "2024",
@@ -4047,7 +4100,7 @@
   "issue": "10",
   "box": "5",
   "year": "2012",
-  "volume": "2",
+  "volume": "1",
   "set": {
    "Cover Artist": "Pasqual Ferry"
   },
@@ -4060,7 +4113,7 @@
   "issue": "12.1",
   "box": "5",
   "year": "2012",
-  "volume": "2",
+  "volume": "1",
   "set": {
    "Cover Artist": "Olivier Coipel"
   },
@@ -4086,7 +4139,7 @@
   "issue": "4",
   "box": "39",
   "year": "2011",
-  "volume": "2",
+  "volume": "1",
   "set": {
    "Cover Artist": "Olivier Coipel"
   },
@@ -4099,7 +4152,7 @@
   "issue": "5",
   "box": "39",
   "year": "2011",
-  "volume": "2",
+  "volume": "1",
   "set": {
    "Cover Artist": "Olivier Coipel & Greg Land"
   },
@@ -4112,7 +4165,7 @@
   "issue": "6",
   "box": "39",
   "year": "2011",
-  "volume": "2",
+  "volume": "1",
   "set": {
    "Cover Artist": "Olivier Coipel"
   },
@@ -4125,7 +4178,7 @@
   "issue": "8",
   "box": "39",
   "year": "2011",
-  "volume": "2",
+  "volume": "1",
   "set": {
    "Cover Artist": "Pasqual Ferry"
   },
@@ -4138,7 +4191,7 @@
   "issue": "1",
   "box": "CC4",
   "year": "2011",
-  "volume": "2",
+  "volume": "1",
   "set": {
    "Cover Artist": "Olivier Coipel"
   },
@@ -4359,7 +4412,7 @@
   "issue": "14",
   "box": "5",
   "year": "2021",
-  "volume": "9",
+  "volume": "6",
   "set": {
    "Cover Artist": "Olivier Coipel"
   },
@@ -6363,10 +6416,49 @@
   "year": "2024",
   "volume": "1",
   "set": {
-   "Cover Artist": "Drew Johnson & Romulo Fajardo & Jr."
+   "Cover Artist": "Drew Johnson"
   },
   "old": {
    "Cover Artist": "Drew Johnson & Romulo Fajardo Jr. & Romulo Fajardo & Jr."
+  }
+ },
+ {
+  "title": "Justice League/Godzilla vs. King Kong",
+  "issue": "2",
+  "box": "UNKNOWN — needs physical reassignment",
+  "year": "2024",
+  "volume": "1",
+  "set": {
+   "Cover Artist": "Drew Johnson"
+  },
+  "old": {
+   "Cover Artist": "Drew Johnson & Romulo Fajardo & Jr."
+  }
+ },
+ {
+  "title": "Justice League/Godzilla vs. King Kong",
+  "issue": "3",
+  "box": "UNKNOWN — needs physical reassignment",
+  "year": "2024",
+  "volume": "1",
+  "set": {
+   "Cover Artist": "Drew Johnson"
+  },
+  "old": {
+   "Cover Artist": "Drew Johnson & Romulo Fajardo & Jr."
+  }
+ },
+ {
+  "title": "Justice League/Godzilla vs. King Kong",
+  "issue": "4",
+  "box": "UNKNOWN — needs physical reassignment",
+  "year": "2024",
+  "volume": "1",
+  "set": {
+   "Cover Artist": "Drew Johnson"
+  },
+  "old": {
+   "Cover Artist": "Drew Johnson & Romulo Fajardo & Jr."
   }
  },
  {
@@ -6406,6 +6498,9 @@
   },
   "old": {
    "Cover Artist": "Nick Bradshaw & Morry Hollowell"
+  },
+  "where": {
+   "Cover Artist": "Nick Bradshaw & Morry Hollowell"
   }
  },
  {
@@ -6418,6 +6513,9 @@
    "Cover Artist": "Nick Bradshaw"
   },
   "old": {
+   "Cover Artist": "Nick Bradshaw & Morry Hollowell"
+  },
+  "where": {
    "Cover Artist": "Nick Bradshaw & Morry Hollowell"
   }
  },
@@ -7193,7 +7291,7 @@
   "issue": "541",
   "box": "11",
   "year": "2011",
-  "volume": "",
+  "volume": "1",
   "set": {
    "Cover Artist": "Greg Land"
   },
@@ -7206,7 +7304,7 @@
   "issue": "542",
   "box": "11",
   "year": "2011",
-  "volume": "",
+  "volume": "1",
   "set": {
    "Cover Artist": "Greg Land"
   },
