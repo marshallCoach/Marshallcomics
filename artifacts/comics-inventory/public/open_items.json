@@ -2,6 +2,60 @@
  "generated": "2026-11-24",
  "items": [
   {
+   "id": "dn-ff-499",
+   "title": "Fantastic Four",
+   "issue": "499",
+   "box": "4",
+   "volume": "5",
+   "problem": "Dual-number duplicate: Fantastic Four Vol 3 #70 (2003) was printed as #499, and you already have FF #70 (Vol 3, 2003) in Box 4. This row came back in the Nov 19 restore.",
+   "next": "Pull Box 4. One copy? ✏️ Edit → tick Delete → Export. Two copies? Edit → Issue 70, Volume 3."
+  },
+  {
+   "id": "dn-nova-100",
+   "title": "Nova",
+   "issue": "100",
+   "box": "28",
+   "volume": "5",
+   "problem": "Dual-number: Nova Vol 5 #10 (2013) is the legacy #100 issue; you also have Nova #10 (Vol 5) in Box 28.",
+   "next": "Pull Box 28. One copy? ✏️ Edit → Delete. Two? Edit → Issue 10."
+  },
+  {
+   "id": "dn-gotg-100",
+   "title": "Guardians of the Galaxy",
+   "issue": "100",
+   "box": "UNKNOWN — needs physical reassignment",
+   "volume": "1",
+   "problem": "Fandom files legacy #100 as Guardians of the Galaxy Vol 3 #13 (2014). You have GotG #13 (Vol 3, 2014) in CC3, and this row is in UNKNOWN.",
+   "next": "Check the cover: “#100” anniversary issue = same book as #13 → if you only have one, ✏️ Edit → Delete this row."
+  },
+  {
+   "id": "dn-elektra-16",
+   "title": "Elektra",
+   "issue": "16",
+   "box": "8",
+   "volume": "3",
+   "problem": "Elektra #16, #17, #18 (2001) match Elektra Vol 2 #3–#5 by Fandom's legacy list, and you also have #3–#5 (2001) in Box 8.",
+   "next": "Pull Box 8. Do the covers of #16–18 say 3–5? Then they're the same books: ✏️ Edit → Delete each (Next › steps through)."
+  },
+  {
+   "id": "dn-elektra-17",
+   "title": "Elektra",
+   "issue": "17",
+   "box": "8",
+   "volume": "3",
+   "problem": "See Elektra #16: probably Elektra Vol 2 #4.",
+   "next": "Same check as #16."
+  },
+  {
+   "id": "dn-elektra-18",
+   "title": "Elektra",
+   "issue": "18",
+   "box": "8",
+   "volume": "3",
+   "problem": "See Elektra #16: probably Elektra Vol 2 #5.",
+   "next": "Same check as #16."
+  },
+  {
    "id": "gi-joe-mia-1",
    "title": "G.I. Joe: A Real American Hero — MIA",
    "issue": "1",
@@ -153,16 +207,10 @@
    "action": "Move the overflow into new or emptier boxes, then set each book's Box # on Edit Comic. Box 15 and Box 85 first."
   },
   {
-   "id": "dual-number-scan",
-   "title": "Scan other dual-numbered series",
-   "problem": "Fantastic Four, Amazing Spider-Man, Thor and others carry legacy numbers like Avengers did. The Nov 19 restore may have added legacy-number copies of books you already have.",
-   "action": "Ask Claude: “scan the dual-numbered series”"
-  },
-  {
-   "id": "legacy-links-more",
-   "title": "Legacy-number links for other titles",
-   "problem": "brb_legacy_links.py fixed 72 Avengers volumes.",
-   "action": "Ask Claude: “run legacy links for Fantastic Four” (then Spider-Man, Thor…)"
+   "id": "legacy-batches",
+   "title": "Legacy volume links: ~620 rows in 17 series",
+   "problem": "Run on the Mac in 6 batches (Thor/Black Panther/Doctor Strange/Deadpool → Moon Knight/FF → Uncanny X-Men/Captain America → X-Force/GotG/Thunderbolts/ASM → Cable/Elektra/Spider-Man/Nova → Ultimate Spider-Man/Iron Man), one brb_all per batch.",
+   "action": "Commands in Claude's Nov 24 reply"
   },
   {
    "id": "held-series",
