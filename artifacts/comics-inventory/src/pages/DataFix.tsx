@@ -45,7 +45,8 @@ const LS_FIXES = "brbDataFixes_v1";     // id -> resolution record
 const LS_META  = "brbDataFixMeta_v1";   // { lastDate, streak, todayCount }
 
 type FixKind = "fandom" | "solution";
-interface FixRecord { id: string; title: string; issue: string; box: string; problem: string; kind: FixKind; value: string; at: string; auto?: boolean; }
+interface FixRecord { id: string; title: string; issue: string; box: string; problem: string; kind: FixKind; value: string; at: string; auto?: boolean;
+  year?: string; vol?: string; }   // pin the exact copy: one box can hold an issue # from several eras
 type ArcSide = { name: string; part: string; length: string; source?: string; finale?: string; url?: string };
 type ArcConflict = { id: string; title: string; issue: string; box: string; vol: string; year: number | null; fandom: ArcSide; cv: ArcSide };
 const cleanArc = (n: string) => (n || "").replace(/^\s*["\u201c][^"\u201d]{1,60}["\u201d]\s+/, "").trim() || (n || "").trim();
@@ -575,7 +576,8 @@ export default function DataFix({ onNavigate }: { onNavigate?: (tab: string, par
         Cover_Artist: c.Cover_Artist, Publisher: c.Publisher, Year: c.Year }, "variant");
     }
     const at = new Date().toISOString();
-    const rec: FixRecord = { id, title: c.Title, issue: String(c.Issue ?? ""), box: c.Box ?? "", problem, kind, value, at };
+    const rec: FixRecord = { id, title: c.Title, issue: String(c.Issue ?? ""), box: c.Box ?? "", problem, kind, value, at,
+                             year: String(c.Year ?? "").slice(0, 4), vol: String(c.Volume ?? "") };
     // One Fandom link clears the book EVERYWHERE on the page (Nov 20):
     //  · other copies of the same book (same title + issue + volume, other boxes) get the same
     //    link - it is the same book, so it applies to them too;
@@ -591,7 +593,8 @@ export default function DataFix({ onNavigate }: { onNavigate?: (tab: string, par
         const oid = comicId(o);
         if (oid === id || normTitleKey(o.Title || "") !== tk || String(o.Volume || "1") !== vol) continue;
         if (String(o.Issue ?? "").replace(/^#/, "").trim() === iss)
-          extra.push({ id: oid, title: o.Title, issue: String(o.Issue ?? ""), box: o.Box ?? "", problem, kind, value, at });
+          extra.push({ id: oid, title: o.Title, issue: String(o.Issue ?? ""), box: o.Box ?? "", problem, kind, value, at,
+                       year: String(o.Year ?? "").slice(0, 4), vol: String(o.Volume ?? "") });
       }
       const m = value.match(/^(https?:\/\/[^?#]+?_Vol_\d+)_([^?#/]+)$/);
       if (m && decodeURIComponent(m[2]) === iss) {
@@ -600,7 +603,8 @@ export default function DataFix({ onNavigate }: { onNavigate?: (tab: string, par
           if (f.id === id || !oi || oi === iss || normTitleKey(o.Title || "") !== tk || String(o.Volume || "1") !== vol) continue;
           if (!/^[\d.]+$/.test(oi)) continue;               // only plain issue numbers extrapolate
           extra.push({ id: f.id, title: o.Title, issue: String(o.Issue ?? ""), box: o.Box ?? "", problem: "extrapolated",
-                       kind, value: `${m[1]}_${encodeURIComponent(oi)}`, at, auto: true });
+                       kind, value: `${m[1]}_${encodeURIComponent(oi)}`, at, auto: true,
+                       year: String(o.Year ?? "").slice(0, 4), vol: String(o.Volume ?? "") });
         }
       }
     }

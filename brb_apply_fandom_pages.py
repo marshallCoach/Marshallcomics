@@ -347,6 +347,13 @@ def main():
         t = str(ws.cell(r, cT).value or "").strip()
         if t:
             by_title[t.lower()].append(r)
+    # years present per (title, issue, box): an unpinned link can't vouch for one copy
+    # when the same box holds that issue from several eras (Nov 24)
+    eras = defaultdict(set)
+    for _t, _rows in by_title.items():
+        for r in _rows:
+            eras[(_t, ni(ws.cell(r, cI).value), str(ws.cell(r, cB).value or "").strip() if cB else "")].add(
+                str(ws.cell(r, cY).value or "").strip()[:4])
 
     cov = json.load(open(COVERS))
     vol_memo = {}      # (title, era) -> wiki volume that matched, so each era probes once
@@ -407,7 +414,8 @@ def main():
                        (not cB or str(ws.cell(r, cB).value or "").strip() == rec_box) and
                        # a record pinned to a year (legacy links) vouches for that copy only -
                        # another era's copy in the same box stays a year-gated run-mate (Nov 24)
-                       (not rec.get("year") or str(ws.cell(r, cY).value or "").strip()[:4] == str(rec.get("year"))[:4]))
+                       (str(ws.cell(r, cY).value or "").strip()[:4] == str(rec.get("year"))[:4] if rec.get("year")
+                        else len(eras[(sheet_title.lower(), issue, rec_box)]) <= 1))
             if not is_seed:                      # same row + same wiki series: once per run
                 if (r, base, canon) in done_rows:
                     continue

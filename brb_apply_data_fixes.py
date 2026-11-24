@@ -203,8 +203,11 @@ def main():
         if not cands:
             stats["row_not_found"] += 1
             continue
-        if len(cands) > 1 and not ry_:
-            stats["ambiguous_copies_first_used"] += 1
+        if not ry_ and cYear and len({str(ws.cell(c, cYear).value or "").strip()[:4] for c in cands}) > 1:
+            # No year on the record and this box holds the issue from several eras: we can't
+            # tell which copy it means, so change nothing (it used to take the first copy).
+            stats["skipped_unpinned_several_eras"] += 1
+            continue
         r = cands[0]
         kind, val = rec.get("kind"), str(rec.get("value", ""))
         if kind == "fandom":
@@ -274,7 +277,7 @@ def main():
     print("\nSUMMARY")
     for k2 in ("fandom_runs", "fandom_run_rows", "fandom_single", "volume_set", "year_set", "date_fixed_to_year",
                "volume_kept_existing", "acknowledged_no_change", "fandom_no_vol_in_url", "row_not_found",
-               "extrapolated_link_volume_ignored"):
+               "extrapolated_link_volume_ignored", "skipped_unpinned_several_eras"):
         if stats[k2]:
             print(f"  {k2:22s} {stats[k2]}")
 

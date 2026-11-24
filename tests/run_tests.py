@@ -155,6 +155,38 @@ class T(unittest.TestCase):
         r = sb.run("brb_apply_data_fixes.py", "--apply")
         self.assertIn("CHANGED 0", r.stdout, "second run must change nothing")
 
+    def test_unpinned_fix_never_guesses_between_eras(self):
+        # Nov 24: a link with no year on a box holding the issue from two eras used to land on
+        # the first copy. Now it changes nothing; a single-era book still gets fixed.
+        sb = self.sb
+        sb.xlsx(["Title", "Issue #", "Box #", "Volume", "Year", "Publisher", "Publication Date"],
+                [["Thor", 13, "5", 6, 2018, "Marvel", None], ["Thor", 13, "5", 9, 2021, "Marvel", None],
+                 ["Thor", 99, "5", 1, 2021, "Marvel", None]])
+        u = "https://marvel.fandom.com/wiki/Thor_Vol_6_%s"
+        sb.json("data-fixes-relink-1.json", [
+            {"title": "Thor", "issue": "13", "box": "5", "problem": "relink", "kind": "fandom", "value": u % 13},
+            {"title": "Thor", "issue": "99", "box": "5", "problem": "relink", "kind": "fandom", "value": u % 99}])
+        r = sb.run("brb_apply_data_fixes.py", "--apply")
+        v = {(x["Issue #"], x["Year"]): str(x["Volume"]) for x in sb.newest()}
+        self.assertEqual(v, {(13, 2018): "6", (13, 2021): "9", (99, 2021): "6"}, r.stdout)
+        self.assertIn("skipped_unpinned_several_eras", r.stdout)
+
+    def test_relink_matches_the_copy_year(self):
+        # Nov 24: archived links were keyed title+issue+box, newest wins, so one era's link was
+        # re-sent for every copy in the box. Now each copy gets its own year's link, pinned.
+        sb = self.sb
+        sb.xlsx(["Title", "Issue #", "Year", "Volume", "Box #", "Publication Date", "Writer(s)", "Artist(s)", "Cover Artist"],
+                [["Fantastic Four", 3, 2013, 4, "4", "2013-01-00", "W", "A", "C"],
+                 ["Fantastic Four", 3, 2018, 6, "4", "2018-11-00", "W", "A", "C"]])
+        sb.json("covers.json", {})
+        os.makedirs(sb.p("processed_exports"), exist_ok=True)
+        u = "https://marvel.fandom.com/wiki/Fantastic_Four_Vol_%s_3"
+        rec = lambda y, v: {"title": "Fantastic Four", "issue": "3", "box": "4", "problem": "legacy-volume", "kind": "fandom", "year": y, "value": u % v}
+        sb.json("processed_exports/20261124_data-fixes-legacy-ff.json", [rec("2013", 4), rec("2018", 6)])
+        sb.run("brb_relink.py", "--write")
+        out = json.load(open(glob.glob(sb.p("data-fixes-relink-*.json"))[0]))
+        self.assertEqual(sorted((x["year"], x["value"]) for x in out), [("2013", u % 4), ("2018", u % 6)])
+
     # ── arcs ──────────────────────────────────────────────────────────────────
     ARC_H = ["Title", "Issue #", "Volume", "Year", "Box #", "Story Arc", "Arc Part", "Arc Length",
              "Finale Issue #", "Crossover Event (Fandom)", "Arc Confidence", "Arc Source"]

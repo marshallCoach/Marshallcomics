@@ -50,7 +50,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--write", action="store_true")
     a = ap.parse_args()
-    links = {}                                         # (title, issue, box) -> record, newest wins
+    links = collections.defaultdict(list)              # (title, issue, box) -> records, oldest first
     for p in sorted(glob.glob(os.path.join(ROOT, "processed_exports", "*data-fixes*.json")), key=os.path.getmtime):
         try:
             recs = json.load(open(p))
@@ -58,7 +58,7 @@ def main():
             continue
         for r in recs if isinstance(recs, list) else []:
             if isinstance(r, dict) and r.get("kind") == "fandom" and str(r.get("value", "")).startswith("http"):
-                links[(str(r.get("title", "")).strip(), ni(r.get("issue")), str(r.get("box", "")).strip())] = r
+                links[(str(r.get("title", "")).strip(), ni(r.get("issue")), str(r.get("box", "")).strip())].append(r)
     import openpyxl
     sys.path.insert(0, ROOT)
     from brb_apply_arcs import newest_xlsx, INV
@@ -72,12 +72,28 @@ def main():
     cov = json.load(open(os.path.join(ROOT, "covers.json"))) if os.path.exists(os.path.join(ROOT, "covers.json")) else {}
     state = json.load(open(STATE)) if os.path.exists(STATE) else {}
     flagged = flagged_books()
+    cY = g("Year")
+    yr4 = lambda v: str(v or "").strip()[:4]
+    rows = list(it)
+    eras = collections.defaultdict(set)                # (title, issue, box) -> years in the sheet
+    for r in rows:
+        t = str(r[cT] or "").strip()
+        if t:
+            eras[(t, ni(r[cI]), str(r[cB] or "").strip() if cB is not None else "")].add(yr4(r[cY]) if cY is not None else "")
     out, st, why = [], collections.Counter(), collections.Counter()
-    for r in it:
+    for r in rows:
         t = str(r[cT] or "").strip()
         key = (t, ni(r[cI]), str(r[cB] or "").strip() if cB is not None else "")
-        rec = links.get(key)
-        if not t or not rec:
+        if not t or key not in links:
+            continue
+        ry = yr4(r[cY]) if cY is not None else ""
+        # Same issue # in one box from several eras (FF #3 2013 + 2018, box 4): use only a
+        # link pinned to THIS copy's year; an unpinned one can't say which copy it meant (Nov 24).
+        pinned = [x for x in links[key] if x.get("year") and yr4(x.get("year")) == ry]
+        loose = [x for x in links[key] if not x.get("year")] if len(eras[key]) <= 1 else []
+        rec = (pinned or loose or [None])[-1]
+        if not rec:
+            st["skipped - other era's link"] += 1
             continue
         st["books with an archived link"] += 1
         gaps = [n for n, c in gaps_cols.items() if c is not None and not str(r[c] or "").strip()]
@@ -96,7 +112,8 @@ def main():
         st["to re-send"] += 1
         for x in gaps:
             why[x] += 1
-        out.append((sk, {**rec, "problem": rec.get("problem") or "relink", "at": datetime.datetime.now().isoformat(timespec="seconds")}, gaps))
+        out.append((sk, {**rec, "problem": rec.get("problem") or "relink", "year": ry, "vol": vol,
+                         "at": datetime.datetime.now().isoformat(timespec="seconds")}, gaps))
     print(f"SOURCE: {os.path.basename(src)}   archived links: {len(links)}   " + "  ".join(f"{k}: {v}" for k, v in st.items()))
     if why:
         print("gaps they would fill: " + ", ".join(f"{k} {v}" for k, v in why.most_common()))
