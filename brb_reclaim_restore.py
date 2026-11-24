@@ -29,7 +29,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, ROOT)
 UNKNOWN = "UNKNOWN — needs physical reassignment"
 LOG_TAB = "📝 Data Integrity Log"
-CAP_DEFAULT, CAP = 300, {15: 210, 23: 170, 40: 80, 44: 200, 72: 130, 85: 190}   # = brb_validate.py
+CAP_DEFAULT, CAP = 240, {15: 150, 23: 155, 40: 80, 44: 200, 72: 100, 85: 155}   # = brb_validate.py / CLAUDE.md
 
 
 def nt(t):

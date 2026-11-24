@@ -915,6 +915,25 @@ export default function DataFix({ onNavigate }: { onNavigate?: (tab: string, par
                       {it.link && <a className="df-find" href={it.link} target="_blank" rel="noopener noreferrer">🔗 {it.linkLabel || "Check page"} ↗</a>}
                       <button className="df-solve" onClick={() => openFocus("Open items", withLinks, i)}>✏️ Edit</button>
                     </div>
+                    {(() => {
+                      // Nov 24: paste the fixing link right here (Fandom or Image Comics) - saved like any
+                      // Data Fix link; Export + brb_all applies it (Image links via step 2a).
+                      const c = pubOf(it);
+                      if (!c) return null;
+                      const fid = comicId(c);
+                      const done = fixes.get(fid);
+                      return done ? (
+                        <div className="df-oi-p" style={{ color: "#16a34a" }}>✓ Link saved — ⬇ Export (top right), then run brb_all. <span style={{ color: "var(--muted2,#aaa)" }}>{String(done.value).slice(0, 80)}</span></div>
+                      ) : (
+                        <div className="df-linkrow">
+                          <input className="df-link-in" placeholder="Paste the Fandom or Image Comics page that fixes it…"
+                            value={linkDraft[fid] || ""} onChange={e => setLinkDraft(d => ({ ...d, [fid]: e.target.value }))}
+                            onKeyDown={e => { if (e.key === "Enter" && (linkDraft[fid] || "").trim()) resolve(c, fid, problemsFor(c)[0] || "no-cover", "fandom", linkDraft[fid].trim()); }} />
+                          <button className="df-link-save" disabled={!(linkDraft[fid] || "").trim()}
+                            onClick={() => resolve(c, fid, problemsFor(c)[0] || "no-cover", "fandom", (linkDraft[fid] || "").trim())}>Save link</button>
+                        </div>
+                      );
+                    })()}
                   </div>
                 ))}
                 {openItems.tasks.map(t => (
