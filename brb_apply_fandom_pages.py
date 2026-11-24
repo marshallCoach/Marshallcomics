@@ -80,6 +80,8 @@ def clean_credit(raw):
     raw = re.sub(r"\{\{[^}]*\}\}", " ", raw or "")
     raw = re.sub(r"\[\[([^\]|]+)(?:\|[^\]]+)?\]\]", r"\1", raw)  # [[A|B]] -> A
     raw = raw.replace("[[", " ").replace("]]", " ").replace("'''", " ")
+    # "Romulo Fajardo, Jr." is ONE name - don't split the suffix off (Nov 24: became "... & Jr.")
+    raw = re.sub(r",\s*(Jr\.?|Sr\.?|II|III|IV)(?=\s*(?:$|[;/,]| and ))", r" \1", raw)
     out = []
     for p in re.split(r"\s*(?:;|/|,| and )\s*", raw):
         p = p.strip()

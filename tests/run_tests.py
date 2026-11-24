@@ -542,6 +542,9 @@ class T(unittest.TestCase):
         dc = "|CoverArtist1 = Mark Bagley\n|CoverArtist2 = Mark Farmer\n|CoverArtist3 = Paul Mounts\n"
         self.assertEqual(A.infobox_names(dc, A.CRED_PATS["cover"]), ["Mark Bagley"])
         self.assertEqual(A.infobox_names("|CoverArtist1_1 = A\n|CoverArtist1_2 = B\n", A.CRED_PATS["cover"]), ["A"])
+        # a name suffix is part of the name, not a second person (Nov 24: "Romulo Fajardo & Jr.")
+        self.assertEqual(A.clean_credit("Romulo Fajardo, Jr."), ["Romulo Fajardo Jr."])
+        self.assertEqual(A.clean_credit("[[John K. Snyder III]], Jane Doe"), ["John K. Snyder III", "Jane Doe"])
         self.assertEqual(A.infobox_names("|Penciler1_1 = John Romita Jr.\n", A.CRED_PATS["artist"]), ["John Romita Jr."], "Marvel style still works")
 
     def test_relink_resends_archived_links_once(self):
