@@ -1,5 +1,5 @@
 {
- "source": "comics_inventory_2411_1620.xlsx",
+ "source": "comics_inventory_2411_1654.xlsx",
  "capturedAt": "2026-11-24",
  "rows": [
   {
@@ -321,7 +321,7 @@
    "title": "Doctor Strange Annual",
    "issue": "1",
    "year": "2019",
-   "volume": "5",
+   "volume": "3",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
    "signed": false
@@ -924,7 +924,7 @@
    "title": "Green Lantern",
    "issue": "Foil Cover (verify issue)",
    "year": "2024",
-   "volume": "7",
+   "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
    "signed": false
@@ -1086,7 +1086,7 @@
    "title": "Astonishing X-Men: Ghost Boxes",
    "issue": "2",
    "year": "2008",
-   "volume": "3",
+   "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
    "signed": false
@@ -1230,7 +1230,7 @@
    "title": "X-Men Noir",
    "issue": "1",
    "year": "2008",
-   "volume": "3",
+   "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
    "signed": false
@@ -1239,7 +1239,7 @@
    "title": "X-Men Noir",
    "issue": "2",
    "year": "2008",
-   "volume": "3",
+   "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
    "signed": false
@@ -1392,7 +1392,7 @@
    "title": "The Flash: Futures End",
    "issue": "1",
    "year": "2014",
-   "volume": "4",
+   "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
    "signed": false
@@ -1401,7 +1401,7 @@
    "title": "Green Arrow: Futures End",
    "issue": "1",
    "year": "2014",
-   "volume": "5",
+   "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
    "signed": false
@@ -1536,7 +1536,7 @@
    "title": "Aquaman Annual",
    "issue": "1",
    "year": "2013",
-   "volume": "6",
+   "volume": "7",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
    "signed": false
@@ -1545,7 +1545,7 @@
    "title": "Aquaman Annual",
    "issue": "2",
    "year": "2014",
-   "volume": "6",
+   "volume": "7",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
    "signed": false
@@ -2139,7 +2139,7 @@
    "title": "Blackhawks",
    "issue": "5",
    "year": "2012",
-   "volume": "3",
+   "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
    "signed": false
@@ -2148,7 +2148,7 @@
    "title": "Blackhawks",
    "issue": "7",
    "year": "2012",
-   "volume": "3",
+   "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
    "signed": false
@@ -2157,7 +2157,7 @@
    "title": "Blackhawks",
    "issue": "8",
    "year": "2012",
-   "volume": "3",
+   "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
    "signed": false
@@ -2193,7 +2193,7 @@
    "title": "Justice League International",
    "issue": "5",
    "year": "2012",
-   "volume": "2",
+   "volume": "3",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
    "signed": false
@@ -2202,7 +2202,7 @@
    "title": "The Phantom Stranger",
    "issue": "1",
    "year": "2012",
-   "volume": "5",
+   "volume": "4",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
    "signed": false
@@ -2256,7 +2256,7 @@
    "title": "The Omega Men",
    "issue": "1",
    "year": "2015",
-   "volume": "2",
+   "volume": "3",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
    "signed": false
@@ -2301,7 +2301,7 @@
    "title": "Spider-Man: Life Story",
    "issue": "1",
    "year": "2019",
-   "volume": "74",
+   "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
    "signed": false
@@ -2400,7 +2400,7 @@
    "title": "DC One Million",
    "issue": "1",
    "year": "1998",
-   "volume": "74",
+   "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
    "signed": false
@@ -2427,7 +2427,7 @@
    "title": "Superboy's Legion",
    "issue": "2",
    "year": "2001",
-   "volume": "74",
+   "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
    "signed": false
@@ -3363,7 +3363,7 @@
    "title": "Uncanny X-Men",
    "issue": "21",
    "year": "2014",
-   "volume": "1",
+   "volume": "3",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
    "signed": false
@@ -3372,7 +3372,7 @@
    "title": "Uncanny X-Men",
    "issue": "22",
    "year": "2014",
-   "volume": "1",
+   "volume": "3",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
    "signed": false
@@ -3381,7 +3381,7 @@
    "title": "Uncanny X-Men",
    "issue": "24",
    "year": "2014",
-   "volume": "1",
+   "volume": "3",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
    "signed": false
@@ -3426,7 +3426,7 @@
    "title": "All-New X-Men",
    "issue": "2",
    "year": "2012",
-   "volume": "2",
+   "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
    "signed": false
@@ -4326,7 +4326,7 @@
    "title": "Invincible Iron Man",
    "issue": "509",
    "year": "2011",
-   "volume": "1",
+   "volume": "2",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
    "signed": false
@@ -4353,7 +4353,7 @@
    "title": "Venom",
    "issue": "15",
    "year": "2012",
-   "volume": "1",
+   "volume": "2",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
    "signed": false
@@ -4371,7 +4371,7 @@
    "title": "X-Men: Hope",
    "issue": "1",
    "year": "2010",
-   "volume": "4",
+   "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
    "signed": false
