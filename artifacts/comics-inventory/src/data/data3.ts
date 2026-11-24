@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_2311_2344.xlsx  |  Generated: 2026-11-24
+// Source: comics_inventory_2411_1003.xlsx  |  Generated: 2026-11-24
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -77501,7 +77501,7 @@ JRJr drew Fallen Son: Spider-Man. He is confirmed for Terrificon 2026. Bring for
     Disambig: ``,
     Year: `2019`, Arc: `FF Dan Slott run`, Key: `NO`,
     Key_Reason: ``, First_App: ``,
-    Writer: `Dan Slott`, Artist: `Paco Medina & Various`,
+    Writer: `Dan Slott`, Artist: `Paco Medina & Francesco Manna & Carlos Magno`,
     Signed: `NO`, Signed_By: ``,
     Personal: ``, Condition: `VG/Fine (5.0)`,
     CGC_Worth: `NO`, Value_NM: `5`, Value_VF: `3`,
@@ -242882,7 +242882,7 @@ Written by Priest (as Jim Owsley). BRING THIS — unsigned. Great signing opp.`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `1`, Entry: `13705`,
     Cover_Price: ``,
-    Pub_Date: ``,
+    Pub_Date: `2007-01-01`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -242924,7 +242924,7 @@ Written by Priest (as Jim Owsley). BRING THIS — unsigned. Great signing opp.`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `13709`,
     Cover_Price: ``,
-    Pub_Date: ``,
+    Pub_Date: `2025-01-22`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -243029,7 +243029,7 @@ Written by Priest (as Jim Owsley). BRING THIS — unsigned. Great signing opp.`,
     Crossover: ``, Start_Bid: `5`,
     Volume: `1`, Entry: `13714`,
     Cover_Price: ``,
-    Pub_Date: ``,
+    Pub_Date: `2021-11-03`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -243092,7 +243092,7 @@ Written by Priest (as Jim Owsley). BRING THIS — unsigned. Great signing opp.`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `3`, Entry: `13717`,
     Cover_Price: ``,
-    Pub_Date: ``,
+    Pub_Date: `2008-12-10`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -243113,7 +243113,7 @@ Written by Priest (as Jim Owsley). BRING THIS — unsigned. Great signing opp.`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `4`, Entry: `13718`,
     Cover_Price: ``,
-    Pub_Date: ``,
+    Pub_Date: `2011-06-01`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -243134,7 +243134,7 @@ Written by Priest (as Jim Owsley). BRING THIS — unsigned. Great signing opp.`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `4`, Entry: `13719`,
     Cover_Price: ``,
-    Pub_Date: ``,
+    Pub_Date: `2010-12-29`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
