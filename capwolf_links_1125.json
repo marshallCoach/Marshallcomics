@@ -1,0 +1,54 @@
+[
+ {
+  "id": "Cap Wolf and the Howling Commandos|||1|||10",
+  "title": "Cap Wolf and the Howling Commandos",
+  "issue": "1",
+  "box": "10",
+  "year": "2024",
+  "vol": "1",
+  "problem": "missing-data",
+  "kind": "fandom",
+  "value": "https://marvel.fandom.com/wiki/Capwolf_%26_the_Howling_Commandos_Vol_1_1",
+  "auto": true,
+  "at": "2026-11-25T12:00:00"
+ },
+ {
+  "id": "Cap Wolf and the Howling Commandos|||2|||10",
+  "title": "Cap Wolf and the Howling Commandos",
+  "issue": "2",
+  "box": "10",
+  "year": "2024",
+  "vol": "1",
+  "problem": "missing-data",
+  "kind": "fandom",
+  "value": "https://marvel.fandom.com/wiki/Capwolf_%26_the_Howling_Commandos_Vol_1_2",
+  "auto": true,
+  "at": "2026-11-25T12:00:00"
+ },
+ {
+  "id": "Cap Wolf and the Howling Commandos|||3|||10",
+  "title": "Cap Wolf and the Howling Commandos",
+  "issue": "3",
+  "box": "10",
+  "year": "2024",
+  "vol": "1",
+  "problem": "missing-data",
+  "kind": "fandom",
+  "value": "https://marvel.fandom.com/wiki/Capwolf_%26_the_Howling_Commandos_Vol_1_3",
+  "auto": true,
+  "at": "2026-11-25T12:00:00"
+ },
+ {
+  "id": "Cap Wolf and the Howling Commandos|||4|||10",
+  "title": "Cap Wolf and the Howling Commandos",
+  "issue": "4",
+  "box": "10",
+  "year": "2024",
+  "vol": "1",
+  "problem": "missing-data",
+  "kind": "fandom",
+  "value": "https://marvel.fandom.com/wiki/Capwolf_%26_the_Howling_Commandos_Vol_1_4",
+  "auto": true,
+  "at": "2026-11-25T12:00:00"
+ }
+]
