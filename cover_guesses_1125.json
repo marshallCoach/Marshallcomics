@@ -1,0 +1,41 @@
+[
+ {
+  "id": "Aliens vs. X-Men|||2|||102",
+  "title": "Aliens vs. X-Men",
+  "issue": "2",
+  "box": "102",
+  "year": "2026",
+  "vol": "",
+  "problem": "no-cover",
+  "kind": "fandom",
+  "value": "https://marvel.fandom.com/wiki/Alien_vs._X-Men_Vol_1_2",
+  "auto": true,
+  "at": "2026-11-25T12:00:00"
+ },
+ {
+  "id": "Marvel Comics Annual: New X-Men|||2001|||12",
+  "title": "Marvel Comics Annual: New X-Men",
+  "issue": "2001",
+  "box": "12",
+  "year": "2001",
+  "vol": "2",
+  "problem": "no-cover",
+  "kind": "fandom",
+  "value": "https://marvel.fandom.com/wiki/New_X-Men_Annual_Vol_1_2001",
+  "auto": true,
+  "at": "2026-11-25T12:00:00"
+ },
+ {
+  "id": "Star Trek/Green Lantern: Stranger Worlds|||2|||65",
+  "title": "Star Trek/Green Lantern: Stranger Worlds",
+  "issue": "2",
+  "box": "65",
+  "year": "2017",
+  "vol": "1",
+  "problem": "no-cover",
+  "kind": "fandom",
+  "value": "https://dc.fandom.com/wiki/Star_Trek/Green_Lantern:_Stranger_Worlds_Vol_1_2",
+  "auto": true,
+  "at": "2026-11-25T12:00:00"
+ }
+]
