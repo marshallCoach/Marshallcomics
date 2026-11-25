@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_2511_0753.xlsx  |  Generated: 2026-11-25
+// Source: comics_inventory_2511_0857.xlsx  |  Generated: 2026-11-25
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -239963,11 +239963,11 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
-    Title: `Aliens vs. X-Men`, Issue: `2`, Publisher: `Marvel`,
-    Disambig: `AVX`,
+    Title: `Alien vs. X-Men`, Issue: `2`, Publisher: `Marvel`,
+    Disambig: ``,
     Year: `2026`, Arc: ``, Key: ``,
     Key_Reason: ``, First_App: ``,
-    Writer: `Kieron Gillen, Chris Claremont`, Artist: ``,
+    Writer: `Kieron Gillen, Chris Claremont`, Artist: `Geraldo Borges & David Messina`,
     Signed: ``, Signed_By: ``,
     Personal: ``, Condition: `NM`,
     CGC_Worth: ``, Value_NM: ``, Value_VF: ``,
@@ -239975,10 +239975,10 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Seller_Notes: `Cover A (Main Cover). Xenomorph outbreak invades mutant territory as classic creators team up for the crossover.`, Story_Pitch: ``,
     Content: ``, Platform: ``,
     Sales_Data: ``, Terrificon: ``,
-    Cover_Artist: ``, Date_Added: `November 02, 2026 (new-comics intake)`,
+    Cover_Artist: `Ryan Stegman`, Date_Added: `November 02, 2026 (new-comics intake)`,
     Imprint: ``, Box: `102`,
     Crossover: ``, Start_Bid: ``,
-    Volume: ``, Entry: ``,
+    Volume: `1`, Entry: ``,
     Cover_Price: `$4.99`,
     Pub_Date: `2026-11-02`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
@@ -243428,7 +243428,7 @@ Written by Priest (as Jim Owsley). BRING THIS — unsigned. Great signing opp.`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `4`, Entry: `13733`,
     Cover_Price: ``,
-    Pub_Date: ``,
+    Pub_Date: `2010-08-11`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -243449,7 +243449,7 @@ Written by Priest (as Jim Owsley). BRING THIS — unsigned. Great signing opp.`,
     Crossover: ``, Start_Bid: `2`,
     Volume: `4`, Entry: `13734`,
     Cover_Price: ``,
-    Pub_Date: ``,
+    Pub_Date: `2010-09-09`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
@@ -276731,8 +276731,8 @@ Written by Priest (as Jim Owsley). BRING THIS — unsigned. Great signing opp.`,
     CoverNotes: ``, Flag: ``,
   },
   {
-    Title: `Aliens vs. X-Men (AVX)`, Issue: `2`, Publisher: `Marvel`,
-    Year: `2026`, Volume: ``, Cover_Artist: ``,
+    Title: `Alien vs. X-Men`, Issue: `2`, Publisher: `Marvel`,
+    Year: `2026`, Volume: `1`, Cover_Artist: `Ryan Stegman`,
     Key: ``, Key_Reason: ``,
     Signed: ``, Signed_By: ``,
     Era: `Modern`, Writer: `Kieron Gillen, Chris Claremont`,
