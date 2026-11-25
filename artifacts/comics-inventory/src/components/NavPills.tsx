@@ -1,5 +1,5 @@
 // The [ t | a ] capsule: one control, two destinations.
-//   t → every cover of this title        a → this story arc only (only when arc data exists)
+//   t → the Title page (whole run)        a → this story arc only (only when arc data exists)
 // The letter is the shortcut; on hover/focus it expands to its word ("title", "arc").
 // Used on every cover (overlay) and inline next to titles (Every Book, cover modal).
 import { openTitle, openArc } from "@/lib/nav";
@@ -19,7 +19,7 @@ export function NavPills({ comic, overlay = false, size = "md", onBefore }: Prop
   const go = (e: React.MouseEvent, fn: () => void) => { e.stopPropagation(); e.preventDefault(); onBefore?.(); fn(); };
   return (
     <span className={`navpills${overlay ? " overlay" : ""} ${size}`} onClick={e => e.stopPropagation()}>
-      <button type="button" className="np t" aria-label={`Every ${comic.Title} cover`} title={`Every ${comic.Title} cover`}
+      <button type="button" className="np t" aria-label={`${comic.Title} title page`} title={`${comic.Title} title page`}
         onClick={e => go(e, () => openTitle(comic.Title))}>
         t<span className="np-word">itle</span>
       </button>

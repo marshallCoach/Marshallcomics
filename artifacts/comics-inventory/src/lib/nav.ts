@@ -9,9 +9,9 @@ export function navTo(tab: string, params?: Record<string, string>) {
   window.dispatchEvent(new CustomEvent<NavDetail>(NAV_EVENT, { detail: { tab, params } }));
 }
 
-/** Jump to Cover Review filtered to every cover of this title — the "(t)" link. */
+/** Open the Title page for this title (whole run, boxes, gaps) — the "(t)" link. */
 export function openTitle(title: string) {
-  if (title) navTo("coverreview", { title });
+  if (title) navTo("title", { title });
 }
 
 /** Jump to Cover Review limited to ONE story arc of a title — the "(a)" link. */

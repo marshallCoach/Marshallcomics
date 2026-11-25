@@ -1,7 +1,7 @@
 // Responsive audit: every page must fit the screen with no sideways scroll.
 // Usage (dev server on :5179): WIDTH=360 node tests/responsive_audit.js
 const { chromium } = require('playwright');
-const TABS = "summary showcase arcs everything runsvolumes absbatman actionplan boxkeys boxlabels boxmap boxquest boxvisual calendar capfalcon cgc collection conditionentry covercatalog coverreview credits datafix dataview dupchecklist duplicates ebaylistingguide ebaypipeline editcomic eraaudit granov history hunting keycatalog lifearchive locationcheck missingcovers nycc opsreference orgpath pulllist recent releasetimeline roulette runs showplanner signings sitemap slabbed stats storepreview timeline titlefixes volumeconfirm volumes sellerdash".split(" ");
+const TABS = "summary showcase arcs everything title runsvolumes absbatman actionplan boxkeys boxlabels boxmap boxquest boxvisual calendar capfalcon cgc collection conditionentry covercatalog coverreview credits datafix dataview dupchecklist duplicates ebaylistingguide ebaypipeline editcomic eraaudit granov history hunting keycatalog lifearchive locationcheck missingcovers nycc opsreference orgpath pulllist recent releasetimeline roulette runs showplanner signings sitemap slabbed stats storepreview timeline titlefixes volumeconfirm volumes sellerdash".split(" ");
 (async () => {
   const W = +(process.env.WIDTH || 360); const b = await chromium.launch(); const p = await b.newPage({ viewport: { width: W, height: 780 }, isMobile: true, hasTouch: true });
   await p.addInitScript(() => sessionStorage.setItem('mc_auth','1'));

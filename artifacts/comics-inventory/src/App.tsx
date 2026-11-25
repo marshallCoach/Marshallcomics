@@ -47,6 +47,7 @@ import AbsoluteBatman from "@/pages/AbsoluteBatman";
 import LifeArchive from "@/pages/LifeArchive";
 import DataFix from "@/pages/DataFix";
 import TitleFixes from "@/pages/TitleFixes";
+import TitlePage from "@/pages/TitlePage";
 import VolumeConfirm from "@/pages/VolumeConfirm";
 import EditComic from "@/pages/EditComic";
 import Slabbed from "@/pages/Slabbed";
@@ -62,7 +63,7 @@ import { NAV_EVENT } from "@/lib/nav";
 import { Home, BookOpen, Boxes, Film, Sparkles, ClipboardList, Microscope, DollarSign, Archive } from "lucide-react";
 
 type TabId =
-  | "summary" | "showcase" | "arcs" | "everything" | "collection" | "boxkeys" | "stats" | "runs" | "runsvolumes" | "recent" | "releasetimeline" | "dataview"
+  | "summary" | "showcase" | "arcs" | "everything" | "title" | "collection" | "boxkeys" | "stats" | "runs" | "runsvolumes" | "recent" | "releasetimeline" | "dataview"
   | "calendar" | "showplanner" | "cgc" | "signings" | "actionplan" | "timeline" | "boxvisual"
   | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "storepreview" | "slabbed" | "duplicates" | "dupchecklist" | "datafix" | "editcomic" | "conditionentry" | "eraaudit" | "titlefixes" | "volumeconfirm" | "history"
   | "orgpath" | "volumes" | "boxlabels" | "keycatalog" | "covercatalog" | "coverreview" | "missingcovers" | "boxquest" | "boxmap"
@@ -96,6 +97,7 @@ const NAV = [
     label: "Inventory",
     tabs: [
       { id: "everything",  label: "Every Book" },
+      { id: "title",       label: "Titles" },
       { id: "runsvolumes", label: "Runs & Volumes" },
       { id: "stats",       label: "Stats" },
     ],
@@ -247,9 +249,12 @@ export default function App() {
   // Site-wide nav: any component can jump pages via navTo() (lib/nav) — used by
   // the (t) title badge on every cover so it works on every page, incl. Boxes.
   useEffect(() => {
+    // ONE listener for "brb:navigate". Two used to share the event name: the second
+    // re-navigated with only { query }, wiping params like title, so the (t) link
+    // opened Cover Review unfiltered (Nov 25). Callers send params, or a bare query.
     function onNav(e: Event) {
-      const d = (e as CustomEvent<{ tab: string; params?: NavParams }>).detail;
-      if (d?.tab) { navigateTo(d.tab, d.params); window.scrollTo({ top: 0 }); }
+      const d = (e as CustomEvent<{ tab: string; params?: NavParams; query?: string }>).detail;
+      if (d?.tab) { navigateTo(d.tab, d.params ?? (d.query ? { query: d.query } : undefined)); window.scrollTo({ top: 0 }); }
     }
     window.addEventListener(NAV_EVENT, onNav);
     return () => window.removeEventListener(NAV_EVENT, onNav);
@@ -276,14 +281,6 @@ export default function App() {
     }
     window.addEventListener("popstate", onPop);
     return () => window.removeEventListener("popstate", onPop);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [activeSection]);
-
-  // Any component can open a page (e.g. the cover pop-up's "Edit this comic" button).
-  useEffect(() => {
-    const h = (e: Event) => { const d = (e as CustomEvent<{ tab: string; query?: string }>).detail; if (d?.tab) navigateTo(d.tab, { query: d.query }); };
-    window.addEventListener("brb:navigate", h);
-    return () => window.removeEventListener("brb:navigate", h);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeSection]);
 
@@ -417,6 +414,7 @@ export default function App() {
             onNavigate={navigateTo}
           />
         )}
+        {activeTab === "title"       && <TitlePage initTitle={navParams.title} />}
         {activeTab === "runsvolumes" && <RunsVolumes />}
         {activeTab === "recent"      && <RecentPurchases />}
         {activeTab === "releasetimeline" && <ReleaseTimeline />}
