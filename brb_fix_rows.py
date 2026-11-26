@@ -53,6 +53,8 @@ def main():
         # "where": {"Arc / Story": "..."} narrows rows that share the key (Nov 23: two Gargoyles #1 copies)
         if f.get("where"):
             hit = [r for r in hit if all(s(ws.cell(r, ci(c)).value) == s(v) for c, v in f["where"].items() if ci(c))]
+        if f.get("row"):          # "row": N pins ONE of several identical rows (Nov 26: a double intake)
+            hit = [r for r in hit if r == int(f["row"])]
         want = int(f.get("rows", 1))      # "rows": 2 = two identical rows (same key) - move both
         if "move_to_duplicates" in f and want > 1 and len(hit) == want:
             moves.extend((r, f) for r in hit); continue

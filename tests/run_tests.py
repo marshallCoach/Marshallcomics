@@ -1037,6 +1037,16 @@ class T(unittest.TestCase):
         held = json.load(open(sb.p("artifacts/comics-inventory/public/series_held.json")))
         self.assertIn("The Immortal Iron Fist|||1", [h["key"] for h in held])
 
+    # ── Double intake: "row": N moves just ONE of two identical rows (Nov 26) ──
+    def test_fix_rows_row_pin_moves_one_twin(self):
+        sb = self.sb
+        sb.xlsx(["Title", "Issue #", "Year", "Volume", "Box #", "Est. Raw Value (NM) $"],
+                [["Superman", 44, 2026, 6, "101", ""], ["Superman", 44, 2026, 6, "101", ""]])
+        sb.json("undo.json", [{"title": "Superman", "issue": "44", "box": "101", "year": "2026", "volume": "6",
+                               "row": 2, "move_to_duplicates": "double intake"}])
+        r = sb.run("brb_fix_rows.py", "undo.json", "--apply")
+        self.assertEqual(len(sb.newest()), 1, r.stdout + r.stderr)
+
     # ── One run at a time: a second run waits, then starts by itself (Nov 26) ──
     def test_second_run_waits_for_the_first(self):
         import fcntl

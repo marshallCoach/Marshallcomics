@@ -112,6 +112,61 @@ def _last_line(s):
     return lines[-1].strip() if lines else ""
 
 
+# Files the EARLIER brb_all steps write (covers fetched, series decisions) - brb.py does
+# NOT rebuild them, so discarding them on sync threw the run's work away (Nov 26: a
+# mid-run push from Claude made the sync drop 29 freshly fetched covers). Their run
+# edits are carried across the rebase with a 3-way merge instead.
+RUN_INPUTS = ["covers.json", "series_map.json", "title_aliases.json"]
+
+
+def _json_or(text, default):
+    try:
+        return json.loads(text)
+    except Exception:  # noqa: BLE001
+        return default
+
+
+def _save_run_edits():
+    """{path: (base, local)} for each RUN_INPUTS dict this run changed vs HEAD."""
+    saved = {}
+    for p in RUN_INPUTS:
+        fp = os.path.join(ROOT, p)
+        if not os.path.exists(fp):
+            continue
+        local = _json_or(open(fp, encoding="utf-8").read(), None)
+        r = subprocess.run(["git", "show", f"HEAD:{p}"], cwd=ROOT, capture_output=True, text=True)
+        base = _json_or(r.stdout, None) if r.returncode == 0 else {}
+        if isinstance(local, dict) and isinstance(base, dict) and local != base:
+            saved[p] = (base, local)
+    return saved
+
+
+def _merge_run_edits(saved):
+    """origin's file + this run's changes (keys it added/changed/removed vs the old HEAD)."""
+    for p, (base, local) in saved.items():
+        fp = os.path.join(ROOT, p)
+        remote = _json_or(open(fp, encoding="utf-8").read(), {}) if os.path.exists(fp) else {}
+        if not isinstance(remote, dict):
+            remote = {}
+        n = 0
+        for k in set(base) | set(local):
+            if local.get(k, None) != base.get(k, None):
+                n += 1
+                if k in local:
+                    remote[k] = local[k]
+                else:
+                    remote.pop(k, None)
+        compact = p == "covers.json"
+        with open(fp, "w", encoding="utf-8") as f:
+            json.dump(remote, f, ensure_ascii=False, **({} if compact else {"indent": 2}))
+        ok(f"kept this run's {n} change(s) to {p} across the sync")
+        if p == "covers.json":
+            pub = os.path.join(ROOT, "artifacts/comics-inventory/public/covers.json")
+            if os.path.exists(os.path.dirname(pub)):
+                with open(pub, "w", encoding="utf-8") as f:
+                    json.dump(remote, f, ensure_ascii=False)
+
+
 def git_sync():
     """Bring the tree up to date with origin BEFORE regenerating, so the final
     push fast-forwards instead of wedging on a conflicted covers.json. Discards
@@ -131,6 +186,7 @@ def git_sync():
     present = [f for f in (GEN_FILES + GEN_FILES_OPT) if os.path.exists(os.path.join(ROOT, f))]
     tracked = [l for l in run(["git", "ls-files", "--"] + present, "tracked generated")[1].splitlines()
                if l.strip()] if present else []
+    saved = _save_run_edits()        # this run's covers / series decisions survive the sync
     if tracked:
         run(["git", "checkout", "--"] + tracked, "discard stale generated files")
     # Any OTHER tracked file still dirty — a stray local edit, or a generated file
@@ -158,6 +214,7 @@ def git_sync():
             ok("Synced with origin — this run will rebuild generated files on top.")
     else:
         ok("Synced with origin — this run will rebuild generated files on top.")
+    _merge_run_edits(saved)      # after rebase (or after an aborted one: base == HEAD again)
 
 
 def detect_xlsx():
