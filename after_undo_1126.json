@@ -1,0 +1,41 @@
+[
+ {
+  "title": "I Am Batman",
+  "issue": "0",
+  "box": "56",
+  "year": "2021",
+  "volume": "1",
+  "set": {
+   "⚠ Verify Duplicate": "⚠ Verify Duplicate"
+  },
+  "old": {
+   "⚠ Verify Duplicate": ""
+  }
+ },
+ {
+  "title": "I Am Batman",
+  "issue": "0",
+  "box": "101",
+  "year": "2021",
+  "volume": "1",
+  "set": {
+   "⚠ Verify Duplicate": "⚠ Verify Duplicate"
+  },
+  "old": {
+   "⚠ Verify Duplicate": ""
+  }
+ },
+ {
+  "title": "Queen in Black: Defenders of the Light and Dark",
+  "issue": "3",
+  "box": "102",
+  "year": "2026",
+  "volume": "1",
+  "set": {
+   "Title": "Queen in Black: Defenders of Light and Dark"
+  },
+  "old": {
+   "Title": "Queen in Black: Defenders of the Light and Dark"
+  }
+ }
+]

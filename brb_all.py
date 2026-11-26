@@ -274,7 +274,7 @@ def main():
 
     # 4c — story arcs for books added since the bulk arc fetch (weekly intakes never got
     # one). Report-only until Robert has seen one real run (engineering rule 2, Nov 26).
-    APPLY_NEW_ARCS = False
+    APPLY_NEW_ARCS = True       # Robert saw the Nov 26 run: 359 rows, 0 skipped/ambiguous - approved
     def new_arcs():
         if run([PY, os.path.join(ROOT, "brb_arc_new.py")] + (["--apply"] if APPLY_NEW_ARCS else [])):
             print("  (arc step for new books did not finish - skipped, nothing written)")
