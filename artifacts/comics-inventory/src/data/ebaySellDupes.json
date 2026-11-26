@@ -1,8 +1,8 @@
 {
- "source": "comics_inventory_2611_1329.xlsx",
+ "source": "comics_inventory_2611_1352.xlsx",
  "generatedAt": "2026-11-26",
- "groupCount": 142,
- "sellableCount": 149,
+ "groupCount": 143,
+ "sellableCount": 150,
  "estValue": 1006.32,
  "rows": [
   {
@@ -3207,6 +3207,29 @@
    "boxes": [
     "66",
     "103"
+   ],
+   "keepSigned": false,
+   "sameBox": false
+  },
+  {
+   "title": "I Am Batman",
+   "issue": "0",
+   "year": "2021",
+   "volume": "1",
+   "publisher": "DC",
+   "writer": "John Ridley",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "101"
+   ],
+   "keepBoxes": [
+    "56"
+   ],
+   "boxes": [
+    "56",
+    "101"
    ],
    "keepSigned": false,
    "sameBox": false
