@@ -555,7 +555,12 @@ def main():
             if str(rec.get("issue") or "") and ni(ws.cell(r, cI).value) != ni(rec.get("issue")):
                 continue
             key = f"{sheet_title}|||{ni(ws.cell(r, cI).value)}|||{nv(ws.cell(r, cV).value)}"
-            if args.overwrite or key not in cov or not (cov.get(key) or {}):
+            _ii = ni(ws.cell(r, cI).value)
+            _shown = next((k for k in (key, f"{sheet_title}|||{_ii}", f"{sheet_title}|||#{_ii}") if cov.get(k)), None)
+            _sv = cov.get(_shown)
+            is_bad = _shown in BAD and (_sv.get("url") if isinstance(_sv, dict) else _sv) != url   # replace a wrong cover (Nov 26)
+            if args.overwrite or is_bad or key not in cov or not (cov.get(key) or {}):
+                bad_replaced += int(is_bad)
                 if args.apply:
                     cov[key] = {"url": url, "large": url, "source": "manual-link"}
                 imgs_set += 1
