@@ -1,6 +1,6 @@
 {
- "source": "comics_inventory_2511_1440.xlsx",
- "capturedAt": "2026-11-25",
+ "source": "comics_inventory_2611_1200.xlsx",
+ "capturedAt": "2026-11-26",
  "rows": [
   {
    "title": "Action Comics",
@@ -2901,7 +2901,7 @@
    "signed": false
   },
   {
-   "title": "Nancy Boys",
+   "title": "Anansi Boys",
    "issue": "1",
    "year": "2024",
    "volume": "1",
