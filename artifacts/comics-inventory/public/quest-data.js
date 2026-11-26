@@ -1,9 +1,9 @@
-// AUTO-GENERATED quest data — source: comics_inventory_2611_1424.xlsx (11939 rows) · generated 2026-11-26
+// AUTO-GENERATED quest data — source: comics_inventory_2611_1442.xlsx (11942 rows) · generated 2026-11-26
 // Regenerate with: node gen_quest_data.mjs
 window.QUEST_DATA = {
- "source": "comics_inventory_2611_1424.xlsx",
+ "source": "comics_inventory_2611_1442.xlsx",
  "generated": "2026-11-26",
- "totalRows": 11939,
+ "totalRows": 11942,
  "dupe": {
   "groups": 26,
   "rows": 52,
@@ -930,7 +930,7 @@ window.QUEST_DATA = {
    "code": "BDR-2",
    "status": "CC/Fabric Bin",
    "labeledAs": "",
-   "rows": 105,
+   "rows": 106,
    "vcap": 240,
    "dupes": 0,
    "clones": 0
@@ -942,7 +942,7 @@ window.QUEST_DATA = {
    "code": "BDR-2",
    "status": "CC/Fabric Bin",
    "labeledAs": "",
-   "rows": 149,
+   "rows": 150,
    "vcap": 240,
    "dupes": 0,
    "clones": 0
@@ -954,7 +954,7 @@ window.QUEST_DATA = {
    "code": "BDR-2",
    "status": "CC/Fabric Bin",
    "labeledAs": "",
-   "rows": 96,
+   "rows": 97,
    "vcap": 240,
    "dupes": 0,
    "clones": 0
@@ -1027,7 +1027,7 @@ window.QUEST_DATA = {
       },
       {
        "id": "0.5",
-       "text": "Confirm the chat reads back 11,939 rows. If not — STOP, wrong file."
+       "text": "Confirm the chat reads back 11,942 rows. If not — STOP, wrong file."
       }
      ]
     }
