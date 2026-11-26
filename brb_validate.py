@@ -55,7 +55,7 @@ def _latest_validated() -> str:
 # ── Box capacity table ────────────────────────────────────────────────────────
 # Nov 24 (Robert chose A): the physical limit is CLAUDE.md's BOX_CAPACITY - 240 per box,
 # same table as the box-quest page and the homepage. Over capacity is a warning
-# (known/accepted in brb.py), never a stop. Box 72 = the signed vault.
+# (known/accepted in brb.py), never a stop. Box 106 = the signed box (labelled "Signed").
 BOX_CAPACITY_DEFAULT    = 240
 BOX_CAPACITY_EXCEPTIONS = {15: 150, 23: 155, 40: 80, 44: 200, 72: 100, 85: 155}
 

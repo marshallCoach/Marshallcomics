@@ -53,6 +53,8 @@ def ni(v):
 
 
 def main():
+    from brb_runlock import wait_for_turn
+    wait_for_turn()          # never write the xlsx while a run is going
     ap = argparse.ArgumentParser()
     ap.add_argument("--csv", required=True, help="intake CSV (title,issue,year,volume,publisher,box,era)")
     ap.add_argument("--apply", action="store_true")

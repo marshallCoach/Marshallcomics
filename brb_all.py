@@ -126,6 +126,8 @@ def code_sync():
 
 def main():
     failures = []
+    from brb_runlock import wait_for_turn
+    wait_for_turn("brb_all")   # another run going? wait (re-check every minute), then sync + run
     code_sync()
 
     def step(n, title, fn):

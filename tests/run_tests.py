@@ -1037,6 +1037,23 @@ class T(unittest.TestCase):
         held = json.load(open(sb.p("artifacts/comics-inventory/public/series_held.json")))
         self.assertIn("The Immortal Iron Fist|||1", [h["key"] for h in held])
 
+    # ── One run at a time: a second run waits, then starts by itself (Nov 26) ──
+    def test_second_run_waits_for_the_first(self):
+        import fcntl
+        sb = self.sb
+        f = open(sb.p(".brb_run.lock"), "a+")
+        fcntl.flock(f, fcntl.LOCK_EX)                      # a "run" is going
+        e = dict(os.environ, HOME=sb.p("home"), BRB_LOCK_EVERY="1")
+        e.pop("BRB_LOCK_PID", None)
+        code = f"import sys; sys.path.insert(0, {sb.dir!r}); import brb_runlock as L; L.wait_for_turn('second'); print('RAN', L.LOCK)"
+        pr = subprocess.Popen([sys.executable, "-c", code], cwd=sb.dir, env=e, stdout=subprocess.PIPE, text=True)
+        first = pr.stdout.readline()                       # blocks until it reports waiting
+        self.assertIn("another run is going", first)
+        self.assertIsNone(pr.poll(), "second run must wait while the first holds the lock")
+        fcntl.flock(f, fcntl.LOCK_UN); f.close()           # first run ends
+        out = pr.communicate(timeout=20)[0]
+        self.assertIn("RAN", out); self.assertIn("starting now", out)
+
     # ── New intakes get arcs: books added after the bulk arc fetch (Nov 26) ──
     def test_arc_new_targets_only_new_blank_books(self):
         sb = self.sb

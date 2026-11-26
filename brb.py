@@ -239,6 +239,8 @@ def credentialed_phase(name, env_var, cmd, background=False, hint=""):
 
 
 def main():
+    from brb_runlock import wait_for_turn
+    wait_for_turn("brb.py")
     ap = argparse.ArgumentParser(add_help=True, description="Marshall Comics pipeline conductor")
     ap.add_argument("--check", "--dry-run", dest="check", action="store_true",
                     help="Read-only: detect + validate + fill-rates. No writes.")
