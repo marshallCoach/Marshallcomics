@@ -55,13 +55,16 @@ def main():
     # Covers count as missing data too: no cover at all, or only a title+issue cover that a
     # different-era copy of the same number also uses (e.g. a 2024 #18 showing the 2019 #18).
     cov = json.load(open("covers.json")) if os.path.exists("covers.json") else {}
+    # a placeholder / shared-image cover is a wrong cover: level 0, so the book gets a link (Nov 26)
+    from brb_cover_quality import bad_cover_keys
+    BAD = bad_cover_keys(cov)
     def cover_level(t, i, v):
         for k in (f"{t}|||{i}|||{v}", f"{t}|||#{i}|||{v}"):
             if cov.get(k):
-                return 3
+                return 0 if k in BAD else 3
         for k in (f"{t}|||#{i}", f"{t}|||{i}"):
             if cov.get(k):
-                return 2
+                return 0 if k in BAD else 2
         return 0
     rows = []
     for r in it:

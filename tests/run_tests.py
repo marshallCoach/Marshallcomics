@@ -977,6 +977,40 @@ class T(unittest.TestCase):
         rows = list(csv.DictReader(open(sb.p("data_suspects.csv"))))
         self.assertFalse([r for r in rows if r["box"].startswith("CC") and "Title / Volume" in r["field"]])
 
+    # ── Bad covers: placeholders + one image on different issues (Nov 26) ────
+    def test_bad_cover_detection(self):
+        from brb_cover_quality import bad_cover_keys
+        one = {"url": "https://cv/x/61298-captain-america-amp.jpg"}
+        cov = {
+            "Captain America/Iron Man|||2|||1": {"url": "https://cv/x/6373148-blank.png"},   # placeholder
+            "Captain America|||137|||1": one, "Captain America|||138|||1": one,              # shared in one title
+            "Thor|||17|||2": {"url": "https://f/Mighty_Thor_Vol_2_17.jpg"},                  # same book, 2 titles
+            "The Mighty Thor|||17|||2": {"url": "https://f/Mighty_Thor_Vol_2_17.jpg"},
+            "Totally Awesome Hulk|||23|||1": {"url": "https://cv/h23.jpg"},                  # spelling twins
+            "The Totally Awesome Hulk|||#23": {"url": "https://cv/h23.jpg"},
+            "Moon Knight|||1|||5": {"url": "https://f/Moon_Knight_Vol_5_1.jpg"},             # normal
+        }
+        bad = bad_cover_keys(cov)
+        self.assertEqual(bad.get("Captain America/Iron Man|||2|||1"), "placeholder")
+        self.assertEqual(bad.get("Captain America|||137|||1"), "shared")
+        self.assertEqual(bad.get("Captain America|||138|||1"), "shared")
+        for ok in ("Thor|||17|||2", "The Mighty Thor|||17|||2", "Totally Awesome Hulk|||23|||1",
+                   "The Totally Awesome Hulk|||#23", "Moon Knight|||1|||5"):
+            self.assertNotIn(ok, bad, ok)
+
+    # ── Memory Alpha links: Creators section + issue-style URL (Nov 26) ───────
+    def test_memory_alpha_link_and_creators(self):
+        import brb_apply_fandom_pages as F
+        base, title, vol, iss = F.parse_url("https://memory-alpha.fandom.com/wiki/Star_Trek,_Issue_1_(2026)")
+        self.assertEqual((title, vol, iss), ("Star Trek", "ISSUE:c:2026", "1"))
+        wt = ("{{sidebar comic\n|published  = {{d|23|September|2026}}\n|year = [[2407]]\n}}\n"
+              "==Background information==\n=== Creators ===\n<div>\n* Writers\n** [[Christopher Cantwell]]\n"
+              "*Artist\n**[[Dennis Menheere]]\n**[[Jodie Troutman]] (Letterer)\n*Editors\n**[[Someone]]\n==External link==\n")
+        c = F.section_creators(wt)
+        self.assertEqual(c["writer"], ["Christopher Cantwell"])
+        self.assertEqual(c["artist"], ["Dennis Menheere"])          # letterer is not the artist
+        self.assertEqual(c["cover"], [])
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

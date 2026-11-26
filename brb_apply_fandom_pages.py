@@ -90,6 +90,28 @@ def clean_credit(raw):
     return out
 
 
+def section_creators(wt):
+    """Memory Alpha keeps creators in a '=== Creators ===' bullet list, not the infobox:
+         * Writers  ** [[Christopher Cantwell]]
+         *Artist    **[[Dennis Menheere]]  **[[Jodie Troutman]] (Letterer)
+    A name with its own (role) note - Letterer, Colorist, Editor - is not that role. (Nov 26)"""
+    m = re.search(r"=+\s*Creators\s*=+(.*?)(?:\n==|\Z)", wt, re.S | re.I)
+    if not m:
+        return None
+    out, role = {"writer": [], "artist": [], "cover": []}, None
+    for line in m.group(1).splitlines():
+        s = line.strip()
+        if re.match(r"^\*(?!\*)", s):
+            h = s.lstrip("*").strip().lower()
+            role = ("cover" if "cover" in h else "writer" if "writer" in h or "story" in h
+                    else "artist" if re.search(r"artist|pencil", h) else None)
+        elif s.startswith("**") and role:
+            nm = re.search(r"\[\[(?:[^|\]]*\|)?([^\]]+)\]\]", s)
+            if nm and not re.search(r"\]\]\s*\(", s) and nm.group(1).strip() not in out[role]:
+                out[role].append(nm.group(1).strip())
+    return out if any(out.values()) else None
+
+
 def infobox_names(wt, pat):
     """All creator names for a role (dedup, order-preserving)."""
     out, seen = [], set()
@@ -161,10 +183,12 @@ def _fetch_page(base, title, vol, issue):
     # 1) a single CoverDate / ReleaseDate / Cover Date parameter (with or w/o space).
     #    Memory Alpha: "published =" is the real-world date; its bare "date =" can be an
     #    in-universe year, so franchise (ISSUE-style) pages never read a bare Date.
-    dm = (re.search(r"\|\s*(?:published|publication\s*date)\s*=\s*([^\n|]+)", wt, re.I)
+    # Memory Alpha writes it as a template: "published = {{d|23|September|2026}}" - read the
+    # whole line, then flatten the template (the old "[^|]" stop gave "{{d" -> no date, Nov 26).
+    dm = (re.search(r"\|\s*(?:published|publication\s*date)\s*=\s*([^\n]+)", wt, re.I)
           or re.search(r"\|\s*(?:Cover\s*Date|Release\s*Date" + ("" if str(vol).startswith("ISSUE") else "|Date") + r")\s*=\s*([^\n|]+)", wt, re.I))
     if dm:
-        raw = dm.group(1)
+        raw = re.sub(r"\{\{\s*d\s*\|", " ", dm.group(1)).replace("|", " ").replace("}}", " ")
         py = yr(raw)
         mon = next((MONTHS[w.lower()] for w in re.findall(r"[A-Za-z]+", raw) if w.lower() in MONTHS), 0)
     # 2) separate | Month = / | Year = fields — the DC/Marvel Database comic infobox
@@ -186,6 +210,8 @@ def _fetch_page(base, title, vol, issue):
     if not py and not str(vol).startswith("ISSUE"):
         py = yr(wt[:400])
     credits = {role: infobox_names(wt, pat) for role, pat in CRED_PATS.items()}
+    if str(vol).startswith("ISSUE") and not any(credits.values()):
+        credits = section_creators(wt) or credits     # Memory Alpha: "=== Creators ===" list
     if not fn:                                   # no image in the wikitext layout we know:
         fn = page_image(base, page)              # ask the wiki for the page's lead image
     return (fn, date_str, py, credits)
@@ -361,6 +387,11 @@ def main():
                 str(ws.cell(r, cY).value or "").strip()[:4])
 
     cov = json.load(open(COVERS))
+    # A stored cover that is a placeholder or one image shared by different issues of a
+    # title is WRONG: treat it as missing and replace it with a year-verified page (Nov 26).
+    from brb_cover_quality import bad_cover_keys
+    BAD = bad_cover_keys(cov)
+    bad_replaced = 0
     vol_memo = {}      # (title, era) -> wiki volume that matched, so each era probes once
     done_rows = set()  # run-mate rows already handled this run (many links can name one title)
     # One link pasted onto several copies of the same issue from DIFFERENT eras (e.g. six
@@ -431,8 +462,9 @@ def main():
             # (the seed always runs — the user resubmitted it for a reason).
             if not args.overwrite and not is_seed:
                 volk = nv(ws.cell(r, cV).value)
-                e = cov.get(f"{sheet_title}|||{issue}|||{volk}") or cov.get(f"{sheet_title}|||{issue}")
-                has_cover = bool(e.get("url") if isinstance(e, dict) else e)
+                _k = next((k for k in (f"{sheet_title}|||{issue}|||{volk}", f"{sheet_title}|||{issue}", f"{sheet_title}|||#{issue}") if cov.get(k)), None)
+                e = cov.get(_k) if _k else None
+                has_cover = bool(e.get("url") if isinstance(e, dict) else e) and _k not in BAD
                 has_date = bool(str(ws.cell(r, cPD).value or "").strip())
                 has_writer = bool(wcol and str(ws.cell(r, wcol).value or "").strip())
                 if has_cover and has_date and has_writer:
@@ -483,7 +515,12 @@ def main():
                 _old = cov.get(key) if isinstance(cov.get(key), dict) else {}
                 _od = int(str(_old.get("date") or "0")[:4] or 0) if str(_old.get("date") or "")[:4].isdigit() else 0
                 wrong_era = bool(_od and ry and py and abs(_od - ry) > 2 and abs(py - ry) <= 2)
-                if url and (args.overwrite or (is_seed and forced_file) or wrong_era or key not in cov or not (cov.get(key) or {})):
+                # the cover this book shows now (vol key first, then the title+issue fallbacks)
+                _shown = next((k for k in (key, f"{sheet_title}|||{issue}", f"{sheet_title}|||#{issue}") if cov.get(k)), None)
+                _sv = cov.get(_shown)
+                is_bad = _shown in BAD and (_sv.get("url") if isinstance(_sv, dict) else _sv) != url
+                if url and (args.overwrite or (is_seed and forced_file) or wrong_era or is_bad or key not in cov or not (cov.get(key) or {})):
+                    bad_replaced += int(is_bad)
                     if args.apply:
                         cov[key] = {"url": url, "large": url, "date": str(py or ""), "source": "fandom-page"}
                     covers_set += 1
@@ -541,7 +578,8 @@ def main():
         print("DRY RUN — nothing written. Re-run with --apply.")
         return
     from brb_guard import check
-    check("fandom_pages", {"Years overwritten": len(years_fixed),
+    print(f"Bad covers replaced (placeholder / shared image): {bad_replaced}")
+    check("fandom_pages", {"Years overwritten": len(years_fixed), "bad covers replaced": bad_replaced,
                            "credits replaced (CONFLICT)": sum(1 for c in cred_changes if c[3] == "CONFLICT")})
     out = os.path.join(ROOT, f"attached_assets/comics_inventory_{datetime.datetime.now():%d%m_%H%M}.xlsx")
     wb.save(out)

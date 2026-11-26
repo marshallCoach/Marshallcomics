@@ -84,8 +84,9 @@ export default function CoverReview({ initTitle, initCreative, initArc, initVol 
   // to that title ("Cover by Title"). Re-applies whenever the incoming title changes.
   useEffect(() => {
     if (initTitle) pickTitle(initTitle);
+    else if (!initCreative) setTitleFilter(null);      // Back to the unfiltered page (Nov 26)
     setArcFilter(initTitle && initArc ? { name: initArc, vol: initVol || "1" } : null);
-  }, [initTitle, initArc, initVol, pickTitle]);
+  }, [initTitle, initArc, initVol, initCreative, pickTitle]);
   // Deep-link from the Creative Credits page: open filtered to one creator's books.
   useEffect(() => { if (initCreative) pickCreative(initCreative); }, [initCreative, pickCreative]);
 

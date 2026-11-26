@@ -45,7 +45,8 @@ export default function TitlePage({ initTitle }: { initTitle?: string }) {
   const [drawer, setDrawer] = useState<DrawerComic | null>(null);
 
   // A (t) click (or any deep link) always wins over what's on screen.
-  useEffect(() => { if (initTitle) { setTitle(initTitle); setQ(""); } }, [initTitle]);
+  // Follows the page's params both ways, so Back / Forward land on the right title (or the search).
+  useEffect(() => { setTitle(initTitle || ""); setQ(""); }, [initTitle]);
   useEffect(() => { if (title) saveLast(title); }, [title]);
 
   const matches = useMemo(() => {
@@ -98,7 +99,8 @@ export default function TitlePage({ initTitle }: { initTitle?: string }) {
     };
   }, [title]);
 
-  const pick = (t: string) => { setTitle(t); setQ(""); window.scrollTo({ top: 0 }); };
+  // Picking a title goes through the site's history, so Back returns to the previous title.
+  const pick = (t: string) => { setQ(""); if (t === title) return; navTo("title", { title: t }); };
   const last = readLast();
 
   return (

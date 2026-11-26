@@ -13,7 +13,7 @@ import os, sys
 LIMITS = {
     "flagged_covers": {"covers cleared": 100},
     "data_fixes":     {"Volumes changed": 120, "Years changed": 25},
-    "fandom_pages":   {"Years overwritten": 25, "credits replaced (CONFLICT)": 60},
+    "fandom_pages":   {"Years overwritten": 25, "credits replaced (CONFLICT)": 60, "bad covers replaced": 500},
     "title_aliases":  {"rows renamed": 150},
     "year_from_pubdate": {"Years changed": 60},
     "review_edits":   {"rows deleted": 10, "fields changed": 300},

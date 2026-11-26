@@ -75,10 +75,12 @@ def main():
     single = {t: (next(iter(v)), *stem[t]) for t, v in vols.items() if len(v) == 1}
 
     # cover index (normalized fallback, mirrors the app's normIndex: size==1 only)
+    from brb_cover_quality import bad_cover_keys
+    BAD = bad_cover_keys(covers)          # placeholder / shared-image covers count as missing (Nov 26)
     groups = {}
     for k, v in covers.items():
         url = v.get("url") if isinstance(v, dict) else v
-        if not url:
+        if not url or k in BAD:
             continue
         p = k.split("|||")
         if len(p) >= 2:
@@ -90,7 +92,7 @@ def main():
         for key in (f"{title}|||{issue}|||{vol}", f"{title}|||{issue}", f"{title}|||#{issue}"):
             e = covers.get(key)
             if (e.get("url") if isinstance(e, dict) else e):
-                return True
+                return key not in BAD
         return f"{nti(title)}|||{ni(issue)}" in norm_idx
 
     wb = openpyxl.load_workbook(src)

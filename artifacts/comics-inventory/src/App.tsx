@@ -261,30 +261,40 @@ export default function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeSection]);
 
-  // Direct links: open the tab named in the URL hash on load (e.g. #nycc).
+  // Direct links: open the tab named in the URL hash on load (e.g. #nycc). The first
+  // history entry gets its page recorded so Back can always return to it.
   useEffect(() => {
     const h = (window.location.hash || "").replace(/^#/, "");
-    if (h && NAV.some(s => s.tabs.some(tb => tb.id === h))) navigateTo(h);
+    const ok = !!h && NAV.some(s => s.tabs.some(tb => tb.id === h));
+    try { history.replaceState({ tab: ok ? h : "summary", params: {} }, "", "#" + (ok ? h : "summary")); } catch { /* ignore */ }
+    if (ok) navigateTo(h, undefined, true);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  function syncHash(t: string, push = false) {
-    try { push ? history.pushState(null, "", "#" + t) : history.replaceState(null, "", "#" + t); } catch { /* ignore */ }
+  // Browser history: EVERY page change (menu, tab, (t) link, Edit, search) pushes one
+  // entry holding the page AND its params, so Back / Forward / iPhone swipe step through
+  // exactly what you saw - including which title or box was open (Nov 26). Before, only
+  // Showcase links pushed; everything else replaced the entry, so Back left the site.
+  function syncHash(t: string, params?: NavParams) {
+    try {
+      const cur = history.state as { tab?: string; params?: NavParams } | null;
+      if (cur?.tab === t && JSON.stringify(cur.params || {}) === JSON.stringify(params || {})) return;  // no duplicate entries
+      history.pushState({ tab: t, params: params || {} }, "", "#" + t);
+    } catch { /* ignore */ }
   }
 
-  // Back button / iPhone back-swipe: pages opened from the Showcase push a history
-  // entry, so going back lands on the Showcase again.
   useEffect(() => {
-    function onPop() {
-      const h = (window.location.hash || "").replace(/^#/, "");
-      if (h && NAV.some(s => s.tabs.some(tb => tb.id === h))) navigateTo(h);
+    function onPop(e: PopStateEvent) {
+      const st = e.state as { tab?: string; params?: NavParams } | null;
+      const h = st?.tab || (window.location.hash || "").replace(/^#/, "");
+      if (h && NAV.some(s => s.tabs.some(tb => tb.id === h))) navigateTo(h, st?.params, true);
     }
     window.addEventListener("popstate", onPop);
     return () => window.removeEventListener("popstate", onPop);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeSection]);
 
-  function navigateTo(tab: string, params?: NavParams) {
+  function navigateTo(tab: string, params?: NavParams, fromHistory = false) {
     const t = tab as TabId;
     const targetSection = NAV.find(s => s.tabs.some(tb => tb.id === t));
     if (targetSection && targetSection.id !== activeSection) {
@@ -292,7 +302,7 @@ export default function App() {
     }
     setNavParams(params || {});
     setActiveTab(t);
-    syncHash(t, !!params?.from);
+    if (!fromHistory) syncHash(t, params);
     // Start every page at the top — keeping the old scroll position dropped you
     // mid-way into search results with the first rows (e.g. a new #24) hidden.
     window.scrollTo({ top: 0 });
@@ -302,6 +312,8 @@ export default function App() {
     setActiveSection(sid);
     const sec = NAV.find(n => n.id === sid)!;
     setActiveTab(sec.tabs[0].id as TabId);
+    setNavParams({});
+    syncHash(sec.tabs[0].id);
     window.scrollTo({ top: 0 });
   }
 
@@ -387,7 +399,7 @@ export default function App() {
               {showDivider && <span className="tab-group-label">{group}</span>}
               <button
                 className={`tab-btn${activeTab === tab.id ? " active" : ""}`}
-                onClick={() => { setActiveTab(tab.id as TabId); syncHash(tab.id); }}
+                onClick={() => { setActiveTab(tab.id as TabId); setNavParams({}); syncHash(tab.id); }}
               >{tab.label}</button>
             </div>
           );
