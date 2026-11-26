@@ -63,8 +63,9 @@ else
   git commit -m "Covers: re-resolve flagged wrong/blank covers (Fandom year-gate + Comic Vine); add cover-links doc
 
 Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>" >>"$LOG" 2>&1
-  git pull --rebase origin claude/upbeat-babbage-2f5gr2 >>"$LOG" 2>&1 || say "  rebase had issues — check log"
-  git push origin claude/upbeat-babbage-2f5gr2 >>"$LOG" 2>&1 && say "  pushed — Pages will redeploy" || say "  PUSH FAILED — check log"
+  BR=$(git branch --show-current)
+  git pull --rebase origin "$BR" >>"$LOG" 2>&1 || say "  rebase had issues — check log"
+  git push origin "$BR" >>"$LOG" 2>&1 && say "  pushed — Pages will redeploy" || say "  PUSH FAILED — check log"
 fi
 
 say "PIPELINE COMPLETE — document: $DOC"
