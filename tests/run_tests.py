@@ -7,7 +7,7 @@ Each test copies the scripts into a throw-away folder with its own fake HOME
 (~/Downloads), builds a tiny workbook, runs the real script, and checks the result.
 Nothing touches your real inventory, covers or Downloads.
 """
-import glob, json, os, shutil, subprocess, sys, tempfile, time, unittest, warnings
+import csv, glob, json, os, shutil, subprocess, sys, tempfile, time, unittest, warnings
 warnings.simplefilter("ignore", ResourceWarning)
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -1046,6 +1046,23 @@ class T(unittest.TestCase):
                                "row": 2, "move_to_duplicates": "double intake"}])
         r = sb.run("brb_fix_rows.py", "undo.json", "--apply")
         self.assertEqual(len(sb.newest()), 1, r.stdout + r.stderr)
+
+    # ── Arc re-review: blanks -> FILL, agreement -> SAME, clash -> DIFFERENT (Nov 26) ──
+    def test_arc_review_report(self):
+        sb = self.sb
+        sb.xlsx(["Title", "Issue #", "Year", "Volume", "Publisher", "Box #", "Story Arc"],
+                [["Jean Grey", 1, 2026, 3, "Marvel", "102", ""], ["Thor", 803, 2026, 7, "Marvel", "102", "Muspelheim"],
+                 ["Batman", 50, 2018, 3, "DC", "9", "The Wedding"], ["Void Rivals", 36, 2026, 1, "Image", "103", ""]])
+        r = sb.run("brb_arc_review.py", "--targets")
+        self.assertEqual(open(sb.p("arc_targets_full.csv")).read().count("\n"), 4, r.stdout + r.stderr)  # header + 3 Marvel/DC
+        open(sb.p("arc_extracted_full.csv"), "w").write(
+            "title,sheet_volume,issue,year,Story Arc,Arc Part,Arc Length,Finale Issue #,Crossover Event (Fandom),Arc Confidence,Arc Source\n"
+            "Jean Grey,3,1,2026,Phoenix Reborn,1,5,,,Stated,x\nThor,7,803,2026,Muspelheim,4,,,,Stated,x\n"
+            "Batman,3,50,2018,Something Else,,,,,Stated,x\n")
+        r = sb.run("brb_arc_review.py", "--report")
+        rep = {x["title"]: x["status"] for x in csv.DictReader(open(sb.p("arc_review_report.csv")))}
+        self.assertEqual(rep, {"Jean Grey": "FILL", "Batman": "DIFFERENT"}, r.stdout + r.stderr)
+        self.assertIn("SAME", r.stdout)
 
     # ── One run at a time: a second run waits, then starts by itself (Nov 26) ──
     def test_second_run_waits_for_the_first(self):

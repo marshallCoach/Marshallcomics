@@ -178,3 +178,10 @@ arc_targets_new.csv
 arc_new_extracted.csv
 arc_extracted.csv
 .brb_run.lock
+arc_targets_full.csv
+arc_extracted_full.csv
+arc_review_report.csv
+arc_review_fill.csv
+arc_review.started
+arc_review.log
+arc_cache_pre_review_*
