@@ -16,6 +16,14 @@
   "fit": 0.67
  },
  {
+  "key": "Avengers Standoff|||2",
+  "title": "Avengers Standoff",
+  "vol": "2",
+  "fandom": "Avengers: Standoff TPB Vol 2",
+  "wiki": "Marvel",
+  "fit": 1.0
+ },
+ {
   "key": "Avengers: Defenders — Tarot|||1",
   "title": "Avengers: Defenders — Tarot",
   "vol": "1",
@@ -54,6 +62,14 @@
   "fandom": "Capwolf & the Howling Commandos Vol 1",
   "wiki": "Marvel",
   "fit": 0.6
+ },
+ {
+  "key": "Contest of Chaos|||1",
+  "title": "Contest of Chaos",
+  "vol": "1",
+  "fandom": "Contest of Chaos TPB Vol 1",
+  "wiki": "Marvel",
+  "fit": 1.0
  },
  {
   "key": "DC Legends of Tomorrow: Earth Prime|||1",
@@ -224,12 +240,36 @@
   "fit": 0.0
  },
  {
+  "key": "Lords of Empyre|||1",
+  "title": "Lords of Empyre",
+  "vol": "1",
+  "fandom": "Empyre: Lords of Empyre TPB Vol 1",
+  "wiki": "Marvel",
+  "fit": 1.0
+ },
+ {
   "key": "Low Slain|||1",
   "title": "Low Slain",
   "vol": "1",
   "fandom": "Crime Syndicate Vol 1",
   "wiki": "DC",
   "fit": 0.0
+ },
+ {
+  "key": "March on Ultimatum|||1",
+  "title": "March on Ultimatum",
+  "vol": "1",
+  "fandom": "Ultimatum: March on Ultimatum TPB Vol 1",
+  "wiki": "Marvel",
+  "fit": 1.0
+ },
+ {
+  "key": "Marvel Comics #1000|||1",
+  "title": "Marvel Comics #1000",
+  "vol": "1",
+  "fandom": "Marvel Comics 1000 HC Vol 1",
+  "wiki": "Marvel",
+  "fit": 1.0
  },
  {
   "key": "Marvel Knights: Captain America|||1",
@@ -376,6 +416,22 @@
   "fit": 0.14
  },
  {
+  "key": "The Immortal Iron Fist|||1",
+  "title": "The Immortal Iron Fist",
+  "vol": "1",
+  "fandom": "Immortal Iron Fist & The Immortal Weapons Omnibus Vol 1",
+  "wiki": "Marvel",
+  "fit": 1.0
+ },
+ {
+  "key": "The Mighty Thor|||2",
+  "title": "The Mighty Thor",
+  "vol": "2",
+  "fandom": "Mighty Thor Omnibus Vol 1",
+  "wiki": "Marvel",
+  "fit": 1.0
+ },
+ {
   "key": "Ultimate Avengers 2|||1",
   "title": "Ultimate Avengers 2",
   "vol": "1",
@@ -448,6 +504,14 @@
   "fit": 0.5
  },
  {
+  "key": "What If? Infinity|||1",
+  "title": "What If? Infinity",
+  "vol": "1",
+  "fandom": "What If? Infinity TPB Vol 1",
+  "wiki": "Marvel",
+  "fit": 1.0
+ },
+ {
   "key": "What If? Magic|||1",
   "title": "What If? Magic",
   "vol": "1",
@@ -470,6 +534,14 @@
   "fandom": "X-Men: Giant-Size Vol 1",
   "wiki": "Marvel",
   "fit": 0.67
+ },
+ {
+  "key": "X-Men: Age of Apocalypse|||3",
+  "title": "X-Men: Age of Apocalypse",
+  "vol": "3",
+  "fandom": "X-Men: Age of Apocalypse Omnibus Companion Vol 1",
+  "wiki": "Marvel",
+  "fit": 1.0
  },
  {
   "key": "Young Justice in No Man's Land|||1",

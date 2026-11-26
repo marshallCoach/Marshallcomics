@@ -1,9 +1,9 @@
 {
- "source": "comics_inventory_2611_1352.xlsx",
+ "source": "comics_inventory_2611_1403.xlsx",
  "generatedAt": "2026-11-26",
- "groupCount": 143,
- "sellableCount": 150,
- "estValue": 1006.32,
+ "groupCount": 174,
+ "sellableCount": 182,
+ "estValue": 1011.32,
  "rows": [
   {
    "title": "Justice League",
@@ -1428,6 +1428,29 @@
     "80"
    ],
    "keepSigned": false,
+   "sameBox": false
+  },
+  {
+   "title": "Black Panther",
+   "issue": "55",
+   "year": "2003",
+   "volume": "3",
+   "publisher": "Marvel",
+   "writer": "Christopher Priest",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 5.0,
+   "sellBoxes": [
+    "7"
+   ],
+   "keepBoxes": [
+    "106"
+   ],
+   "boxes": [
+    "7",
+    "106"
+   ],
+   "keepSigned": true,
    "sameBox": false
   },
   {
@@ -3143,6 +3166,106 @@
    "sameBox": false
   },
   {
+   "title": "Absolute Flash",
+   "issue": "21",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "DC",
+   "writer": "Jeff Lemire",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "101"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "101"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "Absolute Wonder Woman",
+   "issue": "26",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "DC",
+   "writer": "Kelly Thompson",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "101"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "101"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "Alien vs. X-Men",
+   "issue": "3",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Kieron Gillen, Chris Claremont",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "102"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "102"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "Batwoman",
+   "issue": "9",
+   "year": "2026",
+   "volume": "4",
+   "publisher": "DC",
+   "writer": "Greg Rucka",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "101"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "101"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "Black Panther/Namor: Doomed",
+   "issue": "3",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Ethan S. Parker, Griffin Sheridan",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "102"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "102"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
    "title": "Captain America",
    "issue": "15",
    "year": "2024",
@@ -3166,6 +3289,126 @@
    "sameBox": false
   },
   {
+   "title": "Chainkata",
+   "issue": "1",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "Image",
+   "writer": "Daniel Warren Johnson",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "103"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "103"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "Chainkata",
+   "issue": "1 (variant)",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "Image",
+   "writer": "Daniel Warren Johnson",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "103"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "103"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "D'Orc",
+   "issue": "10",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "Image",
+   "writer": "Brett Bean",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "103"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "103"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "Dark Knights of Steel II",
+   "issue": "5",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "DC",
+   "writer": "Tom Taylor",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "101"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "101"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "Deadman",
+   "issue": "6",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "DC",
+   "writer": "W. Maxwell Prince",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "101"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "101"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "Doom All-On-One",
+   "issue": "1",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Al Ewing",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "102"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "102"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
    "title": "Doom Patrol",
    "issue": "1",
    "year": "2004",
@@ -3187,6 +3430,26 @@
    ],
    "keepSigned": false,
    "sameBox": false
+  },
+  {
+   "title": "G.I. Joe",
+   "issue": "28",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "Image",
+   "writer": "Joshua Williamson",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "103"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "103"
+   ],
+   "keepSigned": false,
+   "sameBox": true
   },
   {
    "title": "Gatchaman",
@@ -3218,8 +3481,8 @@
    "volume": "1",
    "publisher": "DC",
    "writer": "John Ridley",
-   "copies": 2,
-   "sellable": 1,
+   "copies": 3,
+   "sellable": 2,
    "sellValue": 0.0,
    "sellBoxes": [
     "101"
@@ -3233,6 +3496,148 @@
    ],
    "keepSigned": false,
    "sameBox": false
+  },
+  {
+   "title": "Inanna: The Name She Lost",
+   "issue": "1",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "Vault",
+   "writer": "Inanna Sarkis, Tim Seeley",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "103"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "103"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "Jean Grey",
+   "issue": "1",
+   "year": "2026",
+   "volume": "3",
+   "publisher": "Marvel",
+   "writer": "Jed MacKay",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "102"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "102"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "Justice League Unlimited",
+   "issue": "25",
+   "year": "2026",
+   "volume": "2",
+   "publisher": "DC",
+   "writer": "Mark Waid & Nicole Maines",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "101"
+   ],
+   "keepBoxes": [
+    "101"
+   ],
+   "boxes": [
+    "101"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "Marc Spector: Moon Knight",
+   "issue": "10",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "102"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "102"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "Midnight Fantastic Four",
+   "issue": "2",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Benjamin Percy",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "102"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "102"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "Midnight Spider-Man",
+   "issue": "2",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Phillip Kennedy Johnson",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "102"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "102"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "Midnight X-Men",
+   "issue": "2",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Jonathan Hickman",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "102"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "102"
+   ],
+   "keepSigned": false,
+   "sameBox": true
   },
   {
    "title": "Miles Morales: Spider-Man",
@@ -3258,6 +3663,26 @@
    "sameBox": false
   },
   {
+   "title": "New Titans",
+   "issue": "41",
+   "year": "2026",
+   "volume": "2",
+   "publisher": "DC",
+   "writer": "Tate Brombal",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "101"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "101"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
    "title": "Planet She-Hulk",
    "issue": "1",
    "year": "2025",
@@ -3279,6 +3704,206 @@
    ],
    "keepSigned": false,
    "sameBox": false
+  },
+  {
+   "title": "Queen in Black: Defenders of the Light and Dark",
+   "issue": "3",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "102"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "102"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "Robin Hood",
+   "issue": "1",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "Dynamite Entertainment",
+   "writer": "Nate Cosby, Greg Weisman",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "103"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "103"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "Spider-Man/Hulk: Fire & Brimstone",
+   "issue": "4",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Kevin Smith, Andy McElfresh",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "102"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "102"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "Star Trek",
+   "issue": "2",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "IDW",
+   "writer": "Christopher Cantwell",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "103"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "103"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "Superman",
+   "issue": "44",
+   "year": "2026",
+   "volume": "6",
+   "publisher": "DC",
+   "writer": "Joshua Williamson",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "101"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "101"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "Tomb of Apocalypse",
+   "issue": "4",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Ashley Allen",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "102"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "102"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "Valiant Beyond: The X-O Manowar",
+   "issue": "1",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "Valiant",
+   "writer": "Steve Orlando",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "103"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "103"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "Void Rivals",
+   "issue": "36",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "Image",
+   "writer": "Robert Kirkman",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "103"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "103"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "X-Men: Incursions",
+   "issue": "1",
+   "year": "2026",
+   "volume": "1",
+   "publisher": "Marvel",
+   "writer": "Alex Paknadel",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "102"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "102"
+   ],
+   "keepSigned": false,
+   "sameBox": true
+  },
+  {
+   "title": "Zatanna",
+   "issue": "8",
+   "year": "2026",
+   "volume": "4",
+   "publisher": "DC",
+   "writer": "Jamal Campbell",
+   "copies": 2,
+   "sellable": 1,
+   "sellValue": 0.0,
+   "sellBoxes": [
+    "101"
+   ],
+   "keepBoxes": [],
+   "boxes": [
+    "101"
+   ],
+   "keepSigned": false,
+   "sameBox": true
   }
  ]
 }
