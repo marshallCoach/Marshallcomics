@@ -270,6 +270,14 @@ def main():
             raise RuntimeError("brb_apply_arcs (Doctor Who) failed")
     step("4b", "DOCTOR WHO ARCS (" + ("apply" if APPLY_DW_ARCS else "report only") + ")", dw_arcs)
 
+    # 4c — story arcs for books added since the bulk arc fetch (weekly intakes never got
+    # one). Report-only until Robert has seen one real run (engineering rule 2, Nov 26).
+    APPLY_NEW_ARCS = False
+    def new_arcs():
+        if run([PY, os.path.join(ROOT, "brb_arc_new.py")] + (["--apply"] if APPLY_NEW_ARCS else [])):
+            print("  (arc step for new books did not finish - skipped, nothing written)")
+    step("4c", "ARCS FOR NEW BOOKS (" + ("apply" if APPLY_NEW_ARCS else "report only") + ")", new_arcs)
+
     # NOTE: Comic Vine credits fallback (brb_credits_cv.py) is NOT run here. It
     # rate-limits hard (HTTP 420) and resolves almost nothing for the obscure
     # non-Marvel/DC books it targets, so it stays a MANUAL tool you run in small

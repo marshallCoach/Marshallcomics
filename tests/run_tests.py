@@ -1037,6 +1037,26 @@ class T(unittest.TestCase):
         held = json.load(open(sb.p("artifacts/comics-inventory/public/series_held.json")))
         self.assertIn("The Immortal Iron Fist|||1", [h["key"] for h in held])
 
+    # ── New intakes get arcs: books added after the bulk arc fetch (Nov 26) ──
+    def test_arc_new_targets_only_new_blank_books(self):
+        sb = self.sb
+        sb.xlsx(["Title", "Issue #", "Year", "Volume", "Publisher", "Box #", "Story Arc"],
+                [["Jean Grey", 1, 2026, 1, "Marvel", "102", ""], ["Thor", 803, 2026, 7, "Marvel", "102", "Muspelheim"],
+                 ["Void Rivals", 36, 2026, 1, "Image", "103", ""], ["The Flash", 112, 1996, 2, "DC", "5", ""]])
+        open(sb.p("arc_targets.csv"), "w").write("rid,wiki,series_key,title,sheet_volume,issue,year\n"
+                                                 "8558,DC,DC|The Flash|2,The Flash,2,112.0,1996\n")
+        for s in ("brb_arc_fetch.py", "brb_arc_extract.py"):
+            open(sb.p(s), "w").write("pass\n")            # no network in tests
+        open(sb.p("arc_extracted.csv"), "w").write(
+            "title,sheet_volume,issue,year,Story Arc,Arc Part,Arc Length,Finale Issue #,Crossover Event (Fandom),Arc Confidence,Arc Source\n"
+            "Jean Grey,1,1,2026,Phoenix Reborn,1,5,,,Stated,x\nThe Flash,2,112,1996,Old Arc,,,,,Stated,x\n")
+        r = sb.run("brb_arc_new.py", "--apply")
+        rows = {(x["Title"], str(x["Issue #"])): x for x in sb.newest()}
+        self.assertEqual(rows[("Jean Grey", "1")]["Story Arc"], "Phoenix Reborn", r.stdout + r.stderr)
+        self.assertFalse(rows[("The Flash", "112")]["Story Arc"])      # bulk target: left to the bulk run
+        self.assertEqual(rows[("Thor", "803")]["Story Arc"], "Muspelheim")
+        self.assertEqual(open(sb.p("arc_targets.csv")).read().count("\n"), 2)   # git-tracked file untouched
+
     # ── Memory Alpha links: Creators section + issue-style URL (Nov 26) ───────
     def test_memory_alpha_link_and_creators(self):
         import brb_apply_fandom_pages as F
