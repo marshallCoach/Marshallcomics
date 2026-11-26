@@ -42,7 +42,7 @@ for row, (expect, new) in RENAMES.items():
     if cur != expect:
         skipped.append((row, cur, expect)); continue
     ws.cell(row, TCOL, new)
-    ws.cell(row, NCOL, None)          # flag resolved
+    ws.cell(row, NCOL).value = None   # flag resolved (3-arg cell(..., None) is a no-op in openpyxl)
     applied.append((row, expect, new))
 
 out = f"attached_assets/comics_inventory_{datetime.datetime.now():%d%m_%H%M}.xlsx"

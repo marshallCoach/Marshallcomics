@@ -1134,5 +1134,23 @@ class T(unittest.TestCase):
         self.assertEqual(c["cover"], [])
 
 
+    # ── clearing a cell: ws.cell(r, c, None) is a no-op in openpyxl ───────────
+    def test_apply_renames_actually_clears_flag(self):
+        # Bug: brb_apply_renames used ws.cell(row, NCOL, None) to clear the
+        # 'check title' note - openpyxl ignores value=None, so the flag survived.
+        sb = self.sb
+        H = ["Title", "Issue #", "Year", "Box #", "Issue Note"]
+        rows = [[f"Filler {i}", "1", "2020", "1", None] for i in range(2, 819)]
+        rows.append(["Avengers and Moon Girl", "1", "2024", "102", "check title"])   # row 819
+        sb.xlsx(H, rows)
+        r = sb.run("brb_apply_renames.py")
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+        self.assertIn("CONTAMINATION (non Title/Note diffs): 0", r.stdout)
+        out = sb.newest()
+        row819 = out[819 - 2]
+        self.assertEqual(row819["Title"], "Avengers & Moon Girl")
+        self.assertIn(row819["Issue Note"], (None, ""), "flag cell must actually be emptied")
+        self.assertTrue(all(o["Issue Note"] is None for o in out[:5]))
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

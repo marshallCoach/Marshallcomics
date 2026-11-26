@@ -23,7 +23,9 @@ sync, and recurring answers. Robert prefers commands **line-by-line** unless
 it's a big code block.
 
 ## Branch
-All development: `claude/upbeat-babbage-2f5gr2`
+Robert's Mac works on **`main`** (confirmed Nov 26 2026). Cloud sessions commit to their own
+`claude/*` session branch and merge into `main` via PR. `claude/upbeat-babbage-2f5gr2` is
+stale (last touched Sep 21) — don't commit to it.
 
 ## Write protocol
 - xlsx is the source of truth on Mac — Claude may write to it ONLY after asking

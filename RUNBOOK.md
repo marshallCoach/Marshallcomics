@@ -3,7 +3,7 @@
 Routine commands + FAQ. Claude references this; Robert prefers commands
 **line-by-line** in chat unless it's a big code block.
 
-Branch: `claude/upbeat-babbage-2f5gr2` · everything runs from `~/Marshallcomics`.
+Branch: `main` · everything runs from `~/Marshallcomics`.
 
 ---
 
@@ -50,10 +50,10 @@ python3 brb_fix_flagged_covers.py --flags <flagged-covers-file>.json --apply
 ### Git sync when a push is rejected / you're behind origin
 ```
 git stash
-git pull --rebase origin claude/upbeat-babbage-2f5gr2
+git pull --rebase origin main
 git stash drop
 cp artifacts/comics-inventory/public/covers.json covers.json
-git push -u origin claude/upbeat-babbage-2f5gr2
+git push -u origin main
 ```
 
 ### Stop a stuck fetcher
@@ -100,7 +100,7 @@ volume disagrees with Fandom's. Use the search fallback, or extrapolate from a
 series already confirmed (`brb_extrapolate_covers.py`).
 
 **Why does root `covers.json` always show as modified?**
-`brb.py` commits `public/covers.json`, not root. Root is the working master the
+`brb.py` commits `public/covers.json`, not root. Root is the working primary the
 scripts append to. It's normal noise — restore it after a reset with
 `cp artifacts/comics-inventory/public/covers.json covers.json`.
 
