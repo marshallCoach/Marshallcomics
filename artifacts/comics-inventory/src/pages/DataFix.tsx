@@ -417,6 +417,11 @@ export default function DataFix({ onNavigate }: { onNavigate?: (tab: string, par
   const totalProblems = actionableRows.length;
   const resolvedCount = useMemo(() => actionableRows.filter(f => fixes.has(f.id)).length, [actionableRows, fixes]);
   const remaining = totalProblems - resolvedCount;
+  // share of the WHOLE collection still needing a fix - green under 3%, amber under 10%
+  const share = comics.length ? (remaining / comics.length) * 100 : 0;
+  const sharePct = share < 10 ? share.toFixed(1) : Math.round(share).toString();
+  const shareGrad = share < 3 ? "linear-gradient(135deg,#22c55e,#06b6d4)"
+    : share < 10 ? "linear-gradient(135deg,#f59e0b,#ec4899)" : "linear-gradient(135deg,#ef4444,#a855f7)";
   const pct = totalProblems ? Math.round((resolvedCount / totalProblems) * 100) : 100;
 
   // Per-problem remaining counts.
@@ -668,6 +673,12 @@ export default function DataFix({ onNavigate }: { onNavigate?: (tab: string, par
           <div className="df-streak-n">{meta.streak}</div>
           <div className="df-streak-lbl">day streak</div>
           <div className="df-today">{meta.todayCount} today{session ? ` · ${session} this session` : ""}</div>
+        </div>
+        {/* Perspective: the open problems as a share of the whole collection (Nov 26) */}
+        <div className="df-share" title={`${remaining.toLocaleString()} of ${comics.length.toLocaleString()} books still need a fix`}>
+          <div className="df-share-n" style={{ backgroundImage: shareGrad }}>{sharePct}%</div>
+          <div className="df-streak-lbl">of the collection</div>
+          <div className="df-today">{remaining.toLocaleString()} of {comics.length.toLocaleString()} books</div>
         </div>
       </div>
 
@@ -1436,6 +1447,8 @@ const CSS = `
 .df-streak{display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--surface2,#26262f);border:1px solid var(--border,#2c2c38);border-radius:12px;padding:10px 16px;min-width:96px}
 .df-streak-flame{font-size:1.5rem;line-height:1;animation:df-pop .4s ease}
 .df-streak-n{font-size:1.5rem;font-weight:800;color:#f59e0b;line-height:1.1;font-variant-numeric:tabular-nums}
+.df-share{display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--surface2,#26262f);border:1px solid var(--border,#2c2c38);border-radius:12px;padding:10px 16px;min-width:96px;text-align:center}
+.df-share-n{font-size:1.5rem;font-weight:800;line-height:1.1;font-variant-numeric:tabular-nums;-webkit-background-clip:text;background-clip:text;color:transparent}
 .df-streak-lbl{font-size:.62rem;letter-spacing:1px;color:var(--muted,#888);text-transform:uppercase}
 .df-today{font-size:.66rem;color:var(--muted2,#bbb);margin-top:4px;text-align:center}
 @keyframes df-pop{0%{transform:scale(.4);opacity:.3}60%{transform:scale(1.3)}100%{transform:scale(1)}}
