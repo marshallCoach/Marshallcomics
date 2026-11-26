@@ -15,7 +15,7 @@ LIMITS = {
     "data_fixes":     {"Volumes changed": 120, "Years changed": 25},
     "fandom_pages":   {"Years overwritten": 25, "credits replaced (CONFLICT)": 60, "bad covers replaced": 500},
     "title_aliases":  {"rows renamed": 150},
-    "year_from_pubdate": {"Years changed": 60},
+    "year_from_pubdate": {"Years changed": 60, "stale dates cleared": 40},
     "review_edits":   {"rows deleted": 10, "fields changed": 300},
     "fandom_fill_wide": {"cells filled": 200},
     "writer_fixes":   {"writer cells changed": 100},

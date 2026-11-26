@@ -363,6 +363,28 @@ class T(unittest.TestCase):
         r2 = sb.run("brb_year_from_pubdate.py", "--apply")
         self.assertEqual(str(sb.newest()[0]["Year"]), "2016", r2.stdout + r2.stderr)
 
+    def test_fix_list_year_beats_stale_pubdate(self):
+        # Nov 26: year_fix_1126 set Bloodhunt Diaries 2021->2024 and What If? Magic -> Magik
+        # 2022->2018; year_from_pubdate then put both back from their stale on-sale dates.
+        sb = self.sb
+        sb.xlsx(["Title", "Issue #", "Year", "Volume", "Box #", "Publication Date"],
+                [["Bloodhunt Diaries", 1, 2024, 1, "75", "2021-06-00"],
+                 ["What If? Magik", 1, 2018, 1, "1", "2022-03-00"],
+                 ["Batman", 4, 2025, 1, "9", "2016-05-00"]])
+        sb.json("year_fix_1126.json", [
+            {"title": "Bloodhunt Diaries", "issue": "1", "box": "75", "year": "2021", "volume": "1",
+             "set": {"Year": "2024"}, "old": {"Year": "2021"}},
+            {"title": "What If? Magic", "issue": "1", "box": "1", "year": "2022", "volume": "1",
+             "set": {"Title": "What If? Magik", "Year": "2018"}, "old": {"Title": "What If? Magic", "Year": "2022"}}])
+        r = sb.run("brb_year_from_pubdate.py", "--apply")
+        rows = {x["Title"]: x for x in sb.newest()}
+        self.assertEqual(str(rows["Bloodhunt Diaries"]["Year"]), "2024", r.stdout + r.stderr)
+        self.assertEqual(str(rows["What If? Magik"]["Year"]), "2018")
+        self.assertIn(rows["Bloodhunt Diaries"]["Publication Date"], (None, ""))   # stale date cleared
+        self.assertEqual(str(rows["Batman"]["Year"]), "2016")                       # normal rule still runs
+        r2 = sb.run("brb_year_from_pubdate.py", "--apply")                          # idempotent
+        self.assertIn("Nothing to fix", r2.stdout, r2.stdout)
+
     def test_gcd_union_is_idempotent_and_drops_companies(self):
         # Nov 17: every run re-appended "Top Cow Productions, Inc." (comma split never
         # matched GCD's spelling) -> 66 copies in one cell, #1 "artist" on the homepage.

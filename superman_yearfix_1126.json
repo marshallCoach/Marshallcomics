@@ -1,0 +1,47 @@
+[
+ {
+  "title": "Superman",
+  "issue": "4",
+  "box": "UNKNOWN — needs physical reassignment",
+  "year": "1987",
+  "volume": "1",
+  "set": {
+   "Key Issue — Why": "Superman Vol 2 #4 (1987) — 1st appearance of Bloodsport (Robert DuBois)",
+   "1st Appearances": "1st Bloodsport (Robert DuBois)",
+   "Writer(s)": "John Byrne",
+   "Volume": "2"
+  },
+  "old": {
+   "Key Issue — Why": "Superman Vol 3 #4 1987 — Bloodsport first major arc — Silver Age adjacent",
+   "1st Appearances": "1st Bloodsport (Roger Stern era)",
+   "Writer(s)": "Roger Stern",
+   "Volume": "1"
+  }
+ },
+ {
+  "title": "Bloodhunt Diaries",
+  "issue": "1",
+  "box": "75",
+  "year": "2021",
+  "volume": "1",
+  "set": {
+   "Year": "2024"
+  },
+  "old": {
+   "Year": "2021"
+  }
+ },
+ {
+  "title": "What If? Magik",
+  "issue": "1",
+  "box": "1",
+  "year": "2022",
+  "volume": "1",
+  "set": {
+   "Year": "2018"
+  },
+  "old": {
+   "Year": "2022"
+  }
+ }
+]
