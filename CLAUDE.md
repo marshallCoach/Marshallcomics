@@ -66,6 +66,8 @@ changes"). Just run `brb.py` directly — it handles the sync. Only pull manuall
 when you need a brb.py code change itself (then the tree must be clean first).
 
 ## Terminal habits
+- EVERY command block (any size) starts with `cd ~/marshallcomics &&` - Robert opens a fresh
+  terminal in ~ (standing preference, Nov 26).
 - Run nohup and echo PID as two separate commands — never chained on one line
 - Use straight ASCII quotes in all terminal commands (smart/curly quotes cause dquote> errors in zsh)
 
