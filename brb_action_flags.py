@@ -68,7 +68,7 @@ for row in range(2, ws.max_row + 1):
             and sval(row, C["Year"] + 1) == "2016"
             and sval(row, NCOL).lower() == "rebirth"):
         ws.cell(row, TCOL, "Batgirl and the Birds of Prey: Rebirth")
-        ws.cell(row, NCOL, None)
+        ws.cell(row, NCOL).value = None
 
 # 2) Mark the two remaining collisions reviewed
 DUP_REVIEW = [("Aliens vs. Avengers", "1", "2024", "75"),
@@ -90,7 +90,7 @@ for row in range(2, ws.max_row + 1):
     if "cover" in nl or "dupe" in nl:
         kept_cover.append((row, title, note)); continue
     if norm(title) in gcd_names:
-        ws.cell(row, NCOL, None)
+        ws.cell(row, NCOL).value = None
         verified.append((row, title))
     else:
         # closeness to any GCD name

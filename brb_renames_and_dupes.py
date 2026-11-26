@@ -43,13 +43,13 @@ renamed = []
 for r in range(2, ws.max_row + 1):
     t = sval(r, TCOL)
     if t in RENAMES and "check title" in sval(r, NCOL).lower():
-        ws.cell(r, TCOL, RENAMES[t]); ws.cell(r, NCOL, None)
+        ws.cell(r, TCOL, RENAMES[t]); ws.cell(r, NCOL).value = None
         renamed.append((r, t, RENAMES[t]))
 
 # 2) clear stale Verify-Duplicate on kept twins; verified title note on 246
 for r in KEEP_ROWS:
-    ws.cell(r, VDCOL, None)
-ws.cell(246, NCOL, None)   # "Aliens vs. Avengers" #1 (2024) is a real Marvel title
+    ws.cell(r, VDCOL).value = None
+ws.cell(246, NCOL).value = None   # "Aliens vs. Avengers" #1 (2024) is a real Marvel title
 
 # 3) remove the true-duplicate rows (highest index first so lower stays valid)
 for r in sorted(REMOVE_ROWS, reverse=True):
