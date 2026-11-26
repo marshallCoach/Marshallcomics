@@ -1064,6 +1064,22 @@ class T(unittest.TestCase):
         self.assertEqual(rep, {"Jean Grey": "FILL", "Batman": "DIFFERENT"}, r.stdout + r.stderr)
         self.assertIn("SAME", r.stdout)
 
+    # ── Intake: a shifted row stops everything; the arc column lands in Story Arc (Nov 26) ──
+    def test_intake_shape_check_and_arc(self):
+        sb = self.sb
+        hdr = ["Title", "Issue #", "Year", "Volume", "Publisher", "Box #", "Era", "Date Added", "Story Arc", "Condition", "Signed?"]
+        sb.xlsx(hdr, [["Old", 1, 2000, 1, "DC", "5", "Modern", "", "", "NM", "NO"]])
+        open(sb.p("bad.csv"), "w").write("title,issue,year,volume,publisher,box,era,arc,cover_price,condition,seller_notes,signed,signed_by,\n"
+                                         "X,5,2021,1,Marvel,106,Modern,,,4.99,NM,Cover A (Signed),YES,Someone\n")
+        r = sb.run("brb_add_intake.py", "--csv", "bad.csv", "--apply")
+        self.assertIn("INTAKE STOPPED", r.stdout, r.stdout + r.stderr)
+        self.assertEqual(len(sb.newest()), 1)                          # nothing written
+        open(sb.p("good.csv"), "w").write("title,issue,year,volume,publisher,box,era,arc,condition,signed,signed_by\n"
+                                          "G.I. Joe,28,2026,1,Image,103,Modern,Night Force,NM,NO,\n")
+        r = sb.run("brb_add_intake.py", "--csv", "good.csv", "--apply")
+        new = [x for x in sb.newest() if x["Title"] == "G.I. Joe"]
+        self.assertEqual(new[0]["Story Arc"], "Night Force", r.stdout + r.stderr)
+
     # ── One run at a time: a second run waits, then starts by itself (Nov 26) ──
     def test_second_run_waits_for_the_first(self):
         import fcntl

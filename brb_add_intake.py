@@ -65,9 +65,29 @@ def main():
 
     if not os.path.exists(args.csv):
         sys.exit(f"CSV not found: {args.csv}")
-    rows = list(csv.DictReader(open(args.csv)))
+    rows = list(csv.DictReader(open(args.csv, encoding="utf-8-sig")))
     if not rows:
         sys.exit("CSV has no data rows")
+    # Shape check BEFORE anything is written (Nov 26: a Gemini file had one row shifted a
+    # column - the price landed in Condition and the notes in Signed?). Any bad row stops
+    # the intake; fix the CSV and rerun.
+    bad = []
+    for n, rec in enumerate(rows, 2):
+        why = []
+        if rec.get(None):
+            why.append(f"{len(rec[None])} extra cell(s) - a comma too many?")
+        if (rec.get("signed") or "").strip().upper() not in ("", "YES", "NO"):
+            why.append(f"signed={rec.get('signed')!r} (must be YES/NO)")
+        if re.fullmatch(r"\$?\d+(\.\d+)?", (rec.get("condition") or "").strip()):
+            why.append(f"condition={rec.get('condition')!r} looks like a price - columns shifted")
+        if not (rec.get("title") or "").strip() or not str(rec.get("year") or "").strip()[:4].isdigit():
+            why.append("title / year missing")
+        if why:
+            bad.append(f"  line {n}: {rec.get('title')} #{rec.get('issue')}: " + "; ".join(why))
+    if bad:
+        print("INTAKE STOPPED - fix these lines in the CSV, nothing was written:")
+        print("\n".join(bad))
+        sys.exit(2)
     print(f"INTAKE: {os.path.basename(args.csv)}  ({len(rows)} rows)")
 
     import openpyxl
@@ -90,7 +110,8 @@ def main():
            "cover_artist": ci("Cover Artist"), "cover_price": ci("Cover Price"),
            "condition": ci("Condition"), "imprint": ci("Imprint"),
            "seller_notes": ci("Seller Notes / Variants / Caveats"),
-           "signed": ci("Signed?"), "signed_by": ci("Signed By")}
+           "signed": ci("Signed?"), "signed_by": ci("Signed By"),
+           "arc": ci("Story Arc")}       # optional: the story arc, if the CSV names one (Nov 26)
     for name, col in (("Title", cT), ("Issue #", cI), ("Year", cY), ("Box #", cB)):
         if col is None:
             sys.exit(f"required column '{name}' not found in sheet")
