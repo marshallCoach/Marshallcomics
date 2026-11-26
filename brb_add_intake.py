@@ -118,10 +118,42 @@ def main():
 
     # existing keys for same-box dup warn (Title+Issue+Year+Box, per validator rule 2)
     existing = set()
+    titles, recent_vols = {}, {}
+    _sq = lambda s: re.sub(r"[^a-z0-9]", "", re.sub(r"^the\s+", "", s.lower().replace("&", " and ")))
     for r in range(2, ws.max_row + 1):
-        t = str(ws.cell(r, cT).value or "").strip().lower()
+        t0 = str(ws.cell(r, cT).value or "").strip()
+        t = t0.lower()
         if t:
             existing.add((t, ni(ws.cell(r, cI).value), ni(ws.cell(r, cY).value), str(ws.cell(r, cB).value or "").strip()))
+            titles.setdefault(_sq(t0), t0)
+            y = str(ws.cell(r, cY).value or "")[:4]
+            if y.isdigit() and int(y) >= datetime.date.today().year - 1 and cV:
+                recent_vols.setdefault(t, set()).add(ni(ws.cell(r, cV).value) or "1")
+
+    # Nov 26 checks, BEFORE anything is written:
+    #   STOP  - the exact book is already in that box (a re-run / duplicate file: the double
+    #           intake). A real 2nd copy is entered as "5 (variant)".
+    #   CHECK - your sheet spells the title differently, or files this year's run under another
+    #           volume. Printed for you to fix in the CSV; does not block.
+    stop, check = [], []
+    for rec in rows:
+        t = (rec.get("title") or "").strip()
+        k = (t.lower(), ni(rec.get("issue")), ni(rec.get("year")), str(rec.get("box") or "").strip())
+        if k in existing:
+            stop.append(f"  ALREADY IN BOX {k[3]}: {t} #{k[1]} ({k[2]})")
+        known = titles.get(_sq(t))
+        if known and known != t:
+            check.append(f"  CHECK title: '{t}' - your sheet spells it '{known}'")
+        vols = recent_vols.get(t.lower())
+        v = ni(rec.get("volume")) or "1"
+        if vols and v not in vols:
+            check.append(f"  CHECK volume: {t} #{ni(rec.get('issue'))} is Vol {v}, this year's run is filed as Vol {'/'.join(sorted(vols))}")
+    if check:
+        print("\n".join(dict.fromkeys(check)))
+    if stop:
+        print(f"INTAKE STOPPED - {len(stop)} book(s) are already in the inventory (duplicate file or a re-run?). Nothing written:")
+        print("\n".join(stop))
+        sys.exit(2)
 
     today = datetime.date.today().isoformat()
     # Date_Added must carry the "new-comics intake" marker — RecentPurchases.tsx

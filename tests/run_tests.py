@@ -1079,6 +1079,9 @@ class T(unittest.TestCase):
         r = sb.run("brb_add_intake.py", "--csv", "good.csv", "--apply")
         new = [x for x in sb.newest() if x["Title"] == "G.I. Joe"]
         self.assertEqual(new[0]["Story Arc"], "Night Force", r.stdout + r.stderr)
+        r = sb.run("brb_add_intake.py", "--csv", "good.csv", "--apply")     # same file again = double intake
+        self.assertIn("ALREADY IN BOX 103", r.stdout, r.stdout + r.stderr)
+        self.assertEqual(len([x for x in sb.newest() if x["Title"] == "G.I. Joe"]), 1)
 
     # ── One run at a time: a second run waits, then starts by itself (Nov 26) ──
     def test_second_run_waits_for_the_first(self):
