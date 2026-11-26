@@ -1,10 +1,12 @@
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, type ReactNode } from "react";
+import { loadConf, saveConf, fetchRows, setStatus, SHEET_STATUSES, type LiveRow, type SheetConf, type SheetStatus } from "@/lib/pullSheet";
+import { loadSolicits, nextMonth, solKey, wikiUrl, type Solicit } from "@/lib/solicits";
 import { pubColors } from "@/utils/coverThumbnails";
 import { CoverImage, coverUrlSync, coversReady } from "@/components/CoverImage";
 import { DATA } from "@/data/data";
 
 // ── Your actual pull list ────────────────────────────────────────────────────
-// Rebuilt from Robert's master Google Sheet (full replace). The sheet is the
+// Rebuilt from Robert's primary Google Sheet (full replace). The sheet is the
 // source of truth for WHICH titles are pulled + their grade/status; it has no
 // per-issue number, price, or URL, so those are intentionally not shown here —
 // nothing is fabricated. Cover art is the LATEST issue of each title that exists
@@ -19,9 +21,11 @@ interface Series {
   cadence:   Cadence;
   grade:     string;   // A / B / C (priority grade from the sheet), or ""
   status:    string;   // "Lovin' it" / "Good for now" / "On the bubble" / "Not reading / At risk" / ""
+  row?:      LiveRow;  // set when the list came live from the sheet
 }
 
-const SERIES: Series[] = [
+// Fallback when the live sheet is not connected (snapshot of the sheet).
+const STATIC_SERIES: Series[] = [
   { publisher:"DC",     title:"Absolute Batman",                                              type:"ongoing", cadence:"existing", grade:"",  status:"" },
   { publisher:"DC",     title:"Absolute Catwoman",                                            type:"ongoing", cadence:"existing", grade:"",  status:"" },
   { publisher:"DC",     title:"Absolute Flash",                                               type:"ongoing", cadence:"existing", grade:"A", status:"Good for now" },
@@ -71,7 +75,7 @@ const SERIES: Series[] = [
 ];
 
 // Marked "Z - Finished" on the sheet — wrapped, shown as an appendix below.
-const FINISHED: Series[] = [
+const STATIC_FINISHED: Series[] = [
   { publisher:"DC",     title:"Adventures of Superman: Book of El", type:"mini", cadence:"existing", grade:"", status:"" },
   { publisher:"DC",     title:"Darkseid vs the World",              type:"mini", cadence:"existing", grade:"", status:"" },
   { publisher:"Marvel", title:"Ultimate Impact",                    type:"mini", cadence:"existing", grade:"", status:"" },
@@ -161,6 +165,48 @@ function GradeStatus({ s }: { s: Series }) {
   );
 }
 
+// ── Live sheet → Series ──────────────────────────────────────────────────────
+// Column F drives where a title sits: New / Existing (or blank) = active; Z - Finished /
+// Z - Dropped = the wrapped appendix. Column E: Mini / One shot = mini, else ongoing.
+const isDone = (st: string) => /^z\s*-\s*(finished|dropped)/i.test(st.trim());
+function toSeries(r: LiveRow): Series {
+  return {
+    publisher: (r.publisher || "Other").trim(),
+    title:     r.title,
+    type:      /mini|one\s*shot/i.test(r.type) ? "mini" : "ongoing",
+    cadence:   /^new$/i.test(r.status.trim()) ? "new" : "existing",
+    grade:     (r.grade || "").trim().toUpperCase(),
+    status:    (r.mood || "").trim(),
+    row:       r,
+  };
+}
+const SHORT: Record<SheetStatus, string> = { "New":"New", "Existing":"Existing", "Z - Finished":"Finished", "Z - Dropped":"Dropped" };
+const UI_FONT = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+
+function SheetStatusSelect({ row, onSet, busy }: { row: LiveRow; onSet: (st: SheetStatus) => void; busy: boolean }) {
+  const cur = (SHEET_STATUSES as readonly string[]).includes(row.status.trim()) ? row.status.trim() : "Existing";
+  return (
+    <select value={cur} disabled={busy} onClick={e => e.stopPropagation()}
+      onChange={e => { e.stopPropagation(); onSet(e.target.value as SheetStatus); }}
+      title="Sets column F on your Google Sheet"
+      style={{ marginTop:6, maxWidth:"100%", padding:"3px 6px", border:"1.5px solid var(--border)", borderRadius:4, fontSize:"0.78rem", fontFamily:UI_FONT, background:"#fff", cursor: busy ? "wait" : "pointer" }}>
+      {SHEET_STATUSES.map(st => <option key={st} value={st}>{SHORT[st]}</option>)}
+    </select>
+  );
+}
+
+function NextUp({ sol, month }: { sol: Solicit[] | undefined; month: string }) {
+  if (!sol?.length) return null;
+  return (
+    <div style={{ marginTop:6, display:"flex", gap:6, alignItems:"center", flexWrap:"wrap" }} onClick={e => e.stopPropagation()}>
+      {sol[0].thumb && <img src={sol[0].thumb} alt="" loading="lazy" style={{ width:30, height:45, objectFit:"cover", borderRadius:2, border:"1px solid var(--border)" }} />}
+      <a href={wikiUrl(sol[0])} target="_blank" rel="noreferrer" style={{ fontSize:"0.76rem", fontWeight:700, color:"#5b4fc8", textDecoration:"none" }}>
+        {month.split(" ")[0].slice(0,3).toUpperCase()}: {sol.map(x => "#" + x.issue).join(", ")} ↗
+      </a>
+    </div>
+  );
+}
+
 // ── Component ────────────────────────────────────────────────────────────────
 export default function PullList() {
   const [data,       setData]       = useState<SeriesData>(load);
@@ -175,6 +221,48 @@ export default function PullList() {
   const [newNote,    setNewNote]    = useState("");
   const [coversLoaded, setCoversLoaded] = useState(false);
 
+  // Live Google Sheet link (URL + passphrase stay in this browser only).
+  const [conf,     setConf]     = useState<SheetConf | null>(loadConf);
+  const [rows,     setRows]     = useState<LiveRow[] | null>(null);
+  const [liveErr,  setLiveErr]  = useState("");
+  const [busyRow,  setBusyRow]  = useState<number | null>(null);
+  const [showConn, setShowConn] = useState(false);
+  const [connUrl,  setConnUrl]  = useState(conf?.url ?? "");
+  const [connTok,  setConnTok]  = useState("");
+  const [sol,      setSol]      = useState<Record<string, Solicit[]>>({});
+  const nm = nextMonth();
+  const solMonth = `${nm.name} ${nm.year}`;
+
+  const refresh = (c: SheetConf | null = conf) => {
+    if (!c) return;
+    fetchRows(c).then(r => { setRows(r); setLiveErr(""); }).catch(e => setLiveErr(String(e.message || e)));
+  };
+  useEffect(() => { refresh(); }, [conf]);
+
+  const SERIES   = useMemo(() => rows ? rows.filter(r => !isDone(r.status)).map(toSeries) : STATIC_SERIES, [rows]);
+  const FINISHED = useMemo(() => rows ? rows.filter(r =>  isDone(r.status)).map(toSeries) : STATIC_FINISHED, [rows]);
+
+  // Next month's solicitations for the active titles (Marvel + DC wikis).
+  useEffect(() => {
+    let live = true;
+    loadSolicits(SERIES).then(r => { if (live) setSol(r); }).catch(() => {});
+    return () => { live = false; };
+  }, [SERIES]);
+  const solFor = (s: Series) => sol[solKey(s.title)];
+  const solCount = SERIES.filter(s => solFor(s)?.length).length;
+
+  async function changeStatus(s: Series, st: SheetStatus) {
+    if (!conf || !s.row) return;
+    const row = s.row;
+    setBusyRow(row.row);
+    setRows(prev => prev && prev.map(r => r.row === row.row ? { ...r, status: st } : r));   // optimistic
+    try { await setStatus(conf, row, st); setLiveErr(""); }
+    catch (e) { setLiveErr(String((e as Error).message || e)); }
+    finally { setBusyRow(null); refresh(); }
+  }
+  const statusCtl = (s: Series): ReactNode =>
+    s.row ? <SheetStatusSelect row={s.row} busy={busyRow === s.row.row} onSet={st => changeStatus(s, st)} /> : null;
+
   useEffect(() => { save(data); }, [data]);
   useEffect(() => { coversReady().then(() => setCoversLoaded(true)); }, []);
 
@@ -183,7 +271,7 @@ export default function PullList() {
     const m: Record<string, CoverComic | null> = {};
     for (const s of [...SERIES, ...FINISHED]) m[s.title] = latestCoverComic(s.title, coversLoaded);
     return m;
-  }, [coversLoaded]);
+  }, [coversLoaded, SERIES, FINISHED]);
   const coverFor = (s: Series): CoverComic =>
     coverMap[s.title] || { Title: s.title, Issue: "1", Volume: "1", Publisher: s.publisher };
 
@@ -200,7 +288,7 @@ export default function PullList() {
     return true;
   };
 
-  const filtered     = useMemo(() => SERIES.filter(matchesFilters), [query, filterPub, filterType, filterNew]);
+  const filtered     = useMemo(() => SERIES.filter(matchesFilters), [SERIES, query, filterPub, filterType, filterNew]);
   const filteredDone = useMemo(() => FINISHED.filter(s => {
     if (filterPub !== "All" && normPub(s.publisher) !== filterPub) return false;
     if (filterType !== "all" && s.type !== filterType) return false;
@@ -209,7 +297,7 @@ export default function PullList() {
       if (!s.title.toLowerCase().includes(q) && !s.publisher.toLowerCase().includes(q)) return false;
     }
     return true;
-  }), [query, filterPub, filterType]);
+  }), [FINISHED, query, filterPub, filterType]);
 
   const totalIssues = Object.values(data).reduce((n, arr) => n + arr.length, 0);
   const readCount   = Object.values(data).reduce((n, arr) => n + arr.filter(i => i.status === "read" || i.status === "key").length, 0);
@@ -273,6 +361,7 @@ export default function PullList() {
     onAddIssue: () => addIssue(s.title),
     onStatusChange: (idx: number, st: IssueStatus) => updateStatus(s.title, idx, st),
     onRemove: (idx: number) => removeIssue(s.title, idx),
+    extra: <>{statusCtl(s)}<NextUp sol={solFor(s)} month={solMonth} /></>,
   });
 
   return (
@@ -286,7 +375,28 @@ export default function PullList() {
           <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", color:"var(--muted2)", fontSize:"0.875rem", marginTop:2 }}>
             {SERIES.length} titles · {SERIES.filter(s=>s.cadence==="new").length} new · {SERIES.filter(s=>s.type==="mini").length} minis · {FINISHED.length} wrapped
           </div>
+          <div style={{ display:"flex", gap:6, alignItems:"center", flexWrap:"wrap", fontFamily:UI_FONT, fontSize:"0.78rem" }}>
+            <span style={{ color: rows ? "#16a34a" : "var(--muted)", fontWeight:700 }}>{rows ? "● LIVE SHEET" : "○ snapshot"}</span>
+            <span style={{ color:"#5b4fc8" }}>{solCount} with {solMonth} solicits</span>
+            {rows && <button onClick={() => refresh()} style={{ background:"none", border:"1px solid var(--border)", borderRadius:4, padding:"1px 8px", cursor:"pointer", fontSize:"0.75rem" }}>↻</button>}
+            <button onClick={() => setShowConn(v => !v)} style={{ background:"none", border:"1px solid var(--border)", borderRadius:4, padding:"1px 8px", cursor:"pointer", fontSize:"0.75rem" }}>{conf ? "sheet link" : "Connect live sheet"}</button>
+          </div>
         </div>
+
+        {liveErr && <div style={{ background:"#fef2f2", border:"1px solid #fca5a5", color:"#b91c1c", borderRadius:6, padding:"6px 10px", marginBottom:10, fontSize:"0.82rem", fontFamily:UI_FONT }}>Sheet: {liveErr}</div>}
+        {showConn && (
+          <div style={{ background:"var(--surface)", border:"1.5px solid var(--border)", borderRadius:6, padding:10, marginBottom:12, display:"flex", gap:6, flexWrap:"wrap", alignItems:"center", fontFamily:UI_FONT, fontSize:"0.82rem" }}>
+            <input placeholder="Apps Script web-app URL (…/exec)" value={connUrl} onChange={e => setConnUrl(e.target.value)}
+              style={{ flex:"1 1 220px", minWidth:0, padding:"6px 8px", border:"1.5px solid var(--border)", borderRadius:5 }} />
+            <input placeholder="passphrase" type="password" value={connTok} onChange={e => setConnTok(e.target.value)}
+              style={{ flex:"1 1 120px", minWidth:0, padding:"6px 8px", border:"1.5px solid var(--border)", borderRadius:5 }} />
+            <button onClick={() => { const c = { url: connUrl.trim(), token: connTok }; if (!c.url || !c.token) return; saveConf(c); setConf(c); setShowConn(false); }}
+              style={{ background:"var(--red)", color:"#fff", border:"none", borderRadius:5, padding:"6px 12px", cursor:"pointer" }}>Connect</button>
+            {conf && <button onClick={() => { saveConf(null); setConf(null); setRows(null); setShowConn(false); }}
+              style={{ background:"none", border:"1px solid var(--border)", borderRadius:5, padding:"6px 10px", cursor:"pointer" }}>Disconnect</button>}
+            <div style={{ flexBasis:"100%", color:"var(--muted)" }}>Saved in this browser only. Setup: tools/pull_list_apps_script.gs</div>
+          </div>
+        )}
 
         {/* Stats bar */}
         <div style={{ display:"flex", gap:8, flexWrap:"wrap", marginBottom:16 }}>
@@ -394,7 +504,7 @@ export default function PullList() {
             <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.8rem", letterSpacing:"1.5px", color:"var(--muted)" }}>{filteredDone.length} · wrapped</div>
           </div>
           <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(186px,1fr))", gap:8, opacity:0.85 }}>
-            {filteredDone.map(s => <FinishedCard key={s.title} series={s} cover={coverFor(s)} />)}
+            {filteredDone.map(s => <FinishedCard key={s.title} series={s} cover={coverFor(s)} extra={statusCtl(s)} />)}
           </div>
         </div>
       )}
@@ -419,6 +529,7 @@ interface SeriesProps {
   onAddIssue:       () => void;
   onStatusChange:   (idx: number, st: IssueStatus) => void;
   onRemove:         (idx: number) => void;
+  extra?:           ReactNode;   // sheet-status select + next month's solicits
 }
 
 function StatusPill({ status, onChange }: { status: IssueStatus; onChange: (s: IssueStatus) => void }) {
@@ -506,6 +617,7 @@ function SeriesCard(p: SeriesProps) {
           </div>
           <div style={{ fontSize:"0.95rem", fontWeight:700, color:"var(--brown-light)", lineHeight:1.25 }}>{s.title}</div>
           <GradeStatus s={s} />
+          {p.extra}
           {latest && (
             <div style={{ fontSize:"0.8rem", color: ISSUE_STATUS[latest.status].color, marginTop:5, fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"0.5px" }}>
               tracked: #{latest.issueNum} — {ISSUE_STATUS[latest.status].label}
@@ -548,6 +660,7 @@ function SeriesRow(p: SeriesProps) {
             {s.grade && GRADE_STYLE[s.grade] && <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.7rem", fontWeight:800, padding:"0 6px", borderRadius:3, background:GRADE_STYLE[s.grade].bg, color:GRADE_STYLE[s.grade].color }}>{s.grade}</span>}
             {s.status && <span style={{ fontSize:"0.74rem", fontWeight:600, color: STATUS_STYLE[s.status]?.color ?? "var(--muted)" }}>{s.status}</span>}
           </div>
+          {p.extra}
         </div>
         <div style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.72rem", letterSpacing:"1px", color:"var(--muted)", marginRight:6 }}>{issues.length > 0 ? `${issues.length} ISS` : ""}</div>
         <div style={{ color:"var(--muted)", fontSize:"0.875rem" }}>{expanded ? "▲" : "▼"}</div>
@@ -568,7 +681,7 @@ function SeriesRow(p: SeriesProps) {
 }
 
 // ── Finished / wrapped appendix card ─────────────────────────────────────────
-function FinishedCard({ series: s, cover }: { series: Series; cover: CoverComic }) {
+function FinishedCard({ series: s, cover, extra }: { series: Series; cover: CoverComic; extra?: ReactNode }) {
   const pc = pubColors(s.publisher);
   return (
     <div style={{ background:"var(--surface)", border:"1.5px solid var(--border)", borderLeft:`3px solid ${pc.bg}`, borderRadius:6, display:"flex", gap:9, alignItems:"center", padding:"8px 10px" }}>
@@ -577,8 +690,9 @@ function FinishedCard({ series: s, cover }: { series: Series; cover: CoverComic 
         <div style={{ fontSize:"0.82rem", fontWeight:700, color:"var(--brown-light)", lineHeight:1.2 }}>{s.title}</div>
         <div style={{ display:"flex", gap:5, alignItems:"baseline", marginTop:2 }}>
           <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.68rem", letterSpacing:"1px", color:pc.bg }}>{s.publisher.toUpperCase()}</span>
-          <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.64rem", letterSpacing:"1px", color:"#16a34a" }}>COMPLETE</span>
+          <span style={{ fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", fontSize:"0.64rem", letterSpacing:"1px", color: /dropped/i.test(s.row?.status ?? "") ? "#9ca3af" : "#16a34a" }}>{/dropped/i.test(s.row?.status ?? "") ? "DROPPED" : "COMPLETE"}</span>
         </div>
+        {extra}
       </div>
     </div>
   );
