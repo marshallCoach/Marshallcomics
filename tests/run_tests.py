@@ -1020,6 +1020,23 @@ class T(unittest.TestCase):
                    "The Totally Awesome Hulk|||#23", "Moon Knight|||1|||5"):
             self.assertNotIn(ok, bad, ok)
 
+    # ── Collected editions are never a series mapping (Nov 26, Immortal Iron Fist) ──
+    def test_collection_never_used_as_series(self):
+        sb = self.sb
+        sb.json("series_map.json", {
+            "The Immortal Iron Fist|||1": {"fandom": "Immortal Iron Fist & The Immortal Weapons Omnibus Vol 1", "wiki": "Marvel"},
+            "The Mighty Thor|||2": {"fandom": "Mighty Thor Omnibus Vol 1", "wiki": "Marvel"},
+            "Hawkeye|||5": {"fandom": "Hawkeye Vol 5", "wiki": "Marvel"},
+            "Marvel Comics #1000|||1": {"fandom": "Marvel Comics 1000 HC Vol 1", "wiki": "Marvel", "confirmed": True}})
+        r = sb.run("brb_apply_series_map.py", "--apply")
+        m = json.load(open(sb.p("series_map.json")))
+        self.assertNotIn("The Immortal Iron Fist|||1", m, r.stdout + r.stderr)
+        self.assertNotIn("The Mighty Thor|||2", m)
+        self.assertIn("Hawkeye|||5", m)                       # a real series stays
+        self.assertIn("Marvel Comics #1000|||1", m)           # one YOU confirmed stays
+        held = json.load(open(sb.p("artifacts/comics-inventory/public/series_held.json")))
+        self.assertIn("The Immortal Iron Fist|||1", [h["key"] for h in held])
+
     # ── Memory Alpha links: Creators section + issue-style URL (Nov 26) ───────
     def test_memory_alpha_link_and_creators(self):
         import brb_apply_fandom_pages as F

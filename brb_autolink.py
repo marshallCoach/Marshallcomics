@@ -112,7 +112,8 @@ def main():
     for r in rows:
         k = id(r)
         m = smap.get(f"{r['title']}|||{r['vol'] or '1'}")
-        if m and m.get("fandom"):
+        from brb_apply_series_map import is_collection
+        if m and m.get("fandom") and not (is_collection(m["fandom"]) and not m.get("confirmed")):
             found[k] = f"{m['fandom']} {r['issue']}"; how["series map"] += 1; continue
         hits = []
         for t in {low(r["title"]), low(re.sub(r"^the\s+", "", r["title"], flags=re.I)), low("The " + r["title"])}:

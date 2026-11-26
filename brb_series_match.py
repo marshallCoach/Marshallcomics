@@ -71,7 +71,8 @@ def main():
                 m = SERIES_RE.match(t)
                 if m and m.group(1) not in cands:
                     cands.append(m.group(1))
-        cands = cands[:12]
+        from brb_apply_series_map import is_collection
+        cands = [c for c in cands if not is_collection(c)][:12]     # omnibus / TPB / HC are not series
         probes = sorted(rows, key=lambda r: float(r["issue"]) if re.fullmatch(r"[\d.]+", r["issue"]) else 1e9)
         probes = [probes[0]] + ([probes[-1]] if len(probes) > 1 else [])
         pages = [f"{c} {ni(p['issue'])}" for c in cands for p in probes][:50]

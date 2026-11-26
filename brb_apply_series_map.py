@@ -25,6 +25,16 @@ PUB = os.path.join(ROOT, "artifacts/comics-inventory/public/series_map.json")
 HELD_PUB = os.path.join(ROOT, "artifacts/comics-inventory/public/series_held.json")
 FIT_MIN = 0.75   # share of YOUR title's words that must appear in the Fandom series name
 
+# A collected edition is never "the series" for single issues: Nov 26 'The Immortal Iron Fist'
+# was mapped to 'Immortal Iron Fist & The Immortal Weapons Omnibus Vol 1' (its "#1" is the 2023
+# hardcover), so every issue link pointed at omnibus pages that don't exist.
+COLLECTION_RE = re.compile(r"\b(?:omnibus|tpb|hc|hardcover|trade paperback|complete collection|epic collection|"
+                           r"masterworks|compendium|treasury edition|box set|graphic novel|ogn|by the numbers)\b", re.I)
+
+
+def is_collection(fandom):
+    return bool(COLLECTION_RE.search(re.sub(r"\s+Vol \d+$", "", str(fandom or ""))))
+
 _STOP = {"the", "vol", "of", "a", "an", "comic", "comics", "special", "tpb"}
 
 
@@ -94,7 +104,8 @@ def main():
         else:
             continue
         new["wiki"] = r.get("wiki", "")
-        if new.get("fandom") and not new.get("confirmed") and title_fit(title, new["fandom"]) < FIT_MIN:
+        if new.get("fandom") and not new.get("confirmed") and (title_fit(title, new["fandom"]) < FIT_MIN
+                                                               or is_collection(new["fandom"])):
             held_new[key] = new; continue
         if smap.get(key) != new:
             changes.append((key, smap.get(key), new))
@@ -122,7 +133,8 @@ def main():
             held.pop(key, None)
     held.update(held_new)
     for key, m in list(smap.items()):
-        if m.get("fandom") and not m.get("confirmed") and title_fit(key.split("|||")[0], m["fandom"]) < FIT_MIN:
+        if m.get("fandom") and not m.get("confirmed") and (title_fit(key.split("|||")[0], m["fandom"]) < FIT_MIN
+                                                           or is_collection(m["fandom"])):
             held[key] = m; del smap[key]
     print(f"decisions: {len(dec)}   map changes: {len(changes)}   held for review (name doesn't fit): {len(held)}")
     for k, m in sorted(held.items())[:5]:          # the full list lives on Data Fix -> Series match -> held
