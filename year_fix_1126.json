@@ -1,0 +1,30 @@
+[
+ {
+  "title": "Bloodhunt Diaries",
+  "issue": "1",
+  "box": "75",
+  "year": "2021",
+  "volume": "1",
+  "set": {
+   "Year": "2024"
+  },
+  "old": {
+   "Year": "2021"
+  }
+ },
+ {
+  "title": "What If? Magic",
+  "issue": "1",
+  "box": "1",
+  "year": "2022",
+  "volume": "1",
+  "set": {
+   "Title": "What If? Magik",
+   "Year": "2018"
+  },
+  "old": {
+   "Title": "What If? Magic",
+   "Year": "2022"
+  }
+ }
+]

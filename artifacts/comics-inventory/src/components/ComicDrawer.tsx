@@ -584,13 +584,20 @@ export default function ComicDrawer({ comic, comicKey, onClose, onFlagChange }: 
 
         {/* Footer CTA */}
         <div style={{ padding:"12px 18px", borderTop:"1px solid var(--border)", flexShrink:0, display:"flex", gap:8 }}>
+          {/* Edit this book: opens Edit Comic searched to exactly this title + issue */}
+          <button
+            onClick={() => { window.dispatchEvent(new CustomEvent("brb:navigate", { detail: { tab: "editcomic", query: `${comic.Title} #${comic.Issue}` } })); onClose(); }}
+            style={{ flex:1, padding:"9px 0", background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:6, fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px", color:"var(--text)", cursor:"pointer" }}
+          >
+            ✏️ Edit
+          </button>
           <a
             href={cvUrl}
             target="_blank"
             rel="noopener noreferrer"
             style={{ flex:1, textAlign:"center", padding:"9px 0", background:"var(--surface2)", border:"1px solid var(--border)", borderRadius:6, fontSize:"0.875rem", fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", letterSpacing:"1px", color:"var(--text)", textDecoration:"none" }}
           >
-            Search Comic Vine →
+            Comic Vine →
           </a>
           <button
             onClick={onClose}

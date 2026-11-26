@@ -1,0 +1,28 @@
+[
+ {
+  "id": "Bloodhunt Diaries|||1|||75",
+  "title": "Bloodhunt Diaries",
+  "issue": "1",
+  "box": "75",
+  "year": "2024",
+  "vol": "1",
+  "problem": "missing-data",
+  "kind": "fandom",
+  "value": "https://marvel.fandom.com/wiki/Blood_Hunt_Diaries_Vol_1_1",
+  "auto": true,
+  "at": "2026-11-26T12:00:00"
+ },
+ {
+  "id": "What If? Magik|||1|||1",
+  "title": "What If? Magik",
+  "issue": "1",
+  "box": "1",
+  "year": "2018",
+  "vol": "1",
+  "problem": "missing-data",
+  "kind": "fandom",
+  "value": "https://marvel.fandom.com/wiki/What_If%3F_Magik_Vol_1_1",
+  "auto": true,
+  "at": "2026-11-26T12:00:00"
+ }
+]
