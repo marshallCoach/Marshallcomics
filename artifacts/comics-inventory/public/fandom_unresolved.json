@@ -885,6 +885,26 @@
 "reason": "page not found (Justice League: Intergalactic Special Vol 1 1)"
 },
 {
+"title": "Sons of Star Trek",
+"issue": "1",
+"reason": "no mapped wiki for publisher 'IDW'"
+},
+{
+"title": "Sons of Star Trek",
+"issue": "2",
+"reason": "no mapped wiki for publisher 'IDW'"
+},
+{
+"title": "Sons of Star Trek",
+"issue": "3",
+"reason": "no mapped wiki for publisher 'IDW'"
+},
+{
+"title": "Sons of Star Trek",
+"issue": "4",
+"reason": "no mapped wiki for publisher 'IDW'"
+},
+{
 "title": "Neil Gaiman's Neverwhere",
 "issue": "1",
 "reason": "page not found (Neil Gaiman's Neverwhere Vol 1 1)"
@@ -1050,6 +1070,11 @@
 "reason": "page not found (DC: 5 of a Kind \u2014 Wonder Woman/Grace Vol 1 1)"
 },
 {
+"title": "Sons of Star Trek",
+"issue": "1",
+"reason": "no mapped wiki for publisher 'IDW'"
+},
+{
 "title": "Batman and Robin",
 "issue": "4.9",
 "reason": "page not found (Batman and Robin Vol 2 4.9)"
@@ -1115,16 +1140,6 @@
 "reason": "page not found (Fantastic Four Vol 5 499)"
 },
 {
-"title": "Black Panther: Black, White & Blood",
-"issue": "5",
-"reason": "page not found (Black Panther: Black, White & Blood Vol 1 5)"
-},
-{
-"title": "Queen in Black: Defenders of the Light and Dark",
-"issue": "3",
-"reason": "page not found (Queen in Black: Defenders of the Light and Dark Vol 1 3)"
-},
-{
 "title": "Marc Spector: Moon Knight",
 "issue": "10",
 "reason": "page year 1989 vs your 2026 - different run, skipped"
@@ -1135,18 +1150,13 @@
 "reason": "no mapped wiki for publisher 'IDW'"
 },
 {
-"title": "Queen in Black: Defenders of the Light and Dark",
-"issue": "3",
-"reason": "page not found (Queen in Black: Defenders of the Light and Dark Vol 1 3)"
+"title": "Civil War: Unmasked",
+"issue": "5 (variant)",
+"reason": "page not found (Civil War: Unmasked Vol 1 5 (variant))"
 },
 {
-"title": "Marc Spector: Moon Knight",
-"issue": "10",
-"reason": "page year 1989 vs your 2026 - different run, skipped"
-},
-{
-"title": "Star Trek",
-"issue": "2",
-"reason": "no mapped wiki for publisher 'IDW'"
+"title": "Justice League Unlimited",
+"issue": "25 (variant)",
+"reason": "page not found (Justice League Unlimited Vol 2 25 (variant))"
 }
 ]
