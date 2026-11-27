@@ -1047,6 +1047,24 @@ class T(unittest.TestCase):
         r = sb.run("brb_fix_rows.py", "undo.json", "--apply")
         self.assertEqual(len(sb.newest()), 1, r.stdout + r.stderr)
 
+    # ── Mistaken delete: put one row back by its '#' entry, only once (Nov 27) ──
+    def test_restore_rows_puts_back_one_entry_once(self):
+        sb = self.sb
+        hdr = ["#", "Title", "Issue #", "Year", "Volume", "Box #", "Signed By"]
+        sb.xlsx(hdr, [[1, "X-Men", 1, 1991, 2, "5", ""], [6897, "Wolverine", 8, 1989, 1, "106", "Chris Claremont"]],
+                name="comics_inventory_2611_2342.xlsx")
+        time.sleep(0.05)
+        sb.xlsx(hdr, [[1, "X-Men", 1, 1991, 2, "5", ""]], name="comics_inventory_2611_2346.xlsx")
+        r = sb.run("brb_restore_rows.py", "--from", "comics_inventory_2611_2342.xlsx", "--entry", "6897")
+        self.assertIn("rows to restore: 1", r.stdout, r.stdout + r.stderr)
+        self.assertEqual(len(sb.newest()), 1, "dry run writes nothing")
+        r = sb.run("brb_restore_rows.py", "--from", "comics_inventory_2611_2342.xlsx", "--entry", "6897", "--apply")
+        rows = sb.newest()
+        self.assertEqual([x["Title"] for x in rows], ["X-Men", "Wolverine"], r.stdout + r.stderr)
+        self.assertEqual(rows[1]["Signed By"], "Chris Claremont")
+        r = sb.run("brb_restore_rows.py", "--from", "comics_inventory_2611_2342.xlsx", "--entry", "6897")
+        self.assertIn("rows to restore: 0", r.stdout, "second run adds nothing")
+
     # ── Arc re-review: blanks -> FILL, agreement -> SAME, clash -> DIFFERENT (Nov 26) ──
     def test_arc_review_report(self):
         sb = self.sb

@@ -41,7 +41,10 @@ const FIELDS: { key: keyof Comic; label: string; wide?: boolean }[] = [
   { key: "Content", label: "Content / Solicitation Notes", wide: true },
 ];
 
-const idOf = (c: Comic) => `${c.Title}|||${c.Issue}|||${c.Volume || "1"}|||${c.Box}|||${c.Signed_By || ""}`;
+// Nov 27: the '#' entry number is the only thing that tells two look-alike records apart
+// (Wolverine #8: a signed copy and a cover-catalog record with the same title/issue/vol/box).
+const entryOf = (c: Comic) => String((c as { Entry?: string }).Entry ?? "").trim();
+const idOf = (c: Comic) => `${c.Title}|||${c.Issue}|||${c.Volume || "1"}|||${c.Box}|||${c.Signed_By || ""}|||${c.Year || ""}|||${entryOf(c)}`;
 
 export default function EditComic({ initQuery }: { initQuery?: string } = {}) {
   const comics = DATA.comics as Comic[];
@@ -153,9 +156,13 @@ export default function EditComic({ initQuery }: { initQuery?: string } = {}) {
 
   function save() {
     if (!selected) return;
+    if (!entryOf(selected)) {
+      window.alert("This is a catalog / cover-art record, not a row in the inventory - it can't be edited or deleted here. Search again and pick the copy that shows an entry #.");
+      return;
+    }
     const changes = changedFields();
     if (del) {
-      if (!window.confirm(`DELETE from inventory:\n\n${selected.Title} #${selected.Issue} (Vol ${selected.Volume || "1"}, Box ${selected.Box})\n\nThis exports a deletion request for review in brb_all. Are you sure?`)) return;
+      if (!window.confirm(`DELETE from inventory:\n\n${selected.Title} #${selected.Issue} (${selected.Year || "?"}, Vol ${selected.Volume || "1"}, Box ${selected.Box})\nEntry #${entryOf(selected)}${selected.Signed_By ? `\nSIGNED by ${selected.Signed_By}` : ""}\n\nThis exports a deletion request for review in brb_all. Are you sure?`)) return;
     } else if (Object.keys(changes).length === 0) {
       window.alert("No fields changed.");
       return;
@@ -169,6 +176,7 @@ export default function EditComic({ initQuery }: { initQuery?: string } = {}) {
         Volume: selected.Volume || "1",
         Box: selected.Box,
         Signed_By: selected.Signed_By || "",
+        Entry: entryOf(selected),     // exact row - brb_review_edits matches on this first
       },
       delete: del,
       changes: del ? {} : changes,
@@ -249,7 +257,8 @@ export default function EditComic({ initQuery }: { initQuery?: string } = {}) {
           ) : results.map(c => (
             <button key={idOf(c)} className="ec-row" onClick={() => select(c)}>
               <b>{c.Title}</b> #{c.Issue}{c.Volume && c.Volume !== "1" ? ` · Vol ${c.Volume}` : ""} · Box {c.Box}
-              {c.Signed_By ? ` · ✍ ${c.Signed_By}` : ""}{c.Condition ? ` · ${c.Condition}` : ""}
+              {c.Year ? ` · ${c.Year}` : ""}{c.Signed_By ? ` · ✍ ${c.Signed_By}` : ""}{c.Condition ? ` · ${c.Condition}` : ""}
+              {entryOf(c) ? ` · #${entryOf(c)}` : <span style={{ color: "#e0556f" }}> · catalog record</span>}
             </button>
           ))}
         </div>
@@ -267,6 +276,9 @@ export default function EditComic({ initQuery }: { initQuery?: string } = {}) {
                   {selected.Publisher}{selected.Volume && selected.Volume !== "1" ? ` · Vol ${selected.Volume}` : ""} · Box {selected.Box}
                 </div>
                 {selected.Signed_By && <div style={{ fontSize: ".82rem", color: "var(--red,#c0392b)", marginTop: 2 }}>✍ {selected.Signed_By}</div>}
+                <div style={{ fontSize: ".78rem", color: "var(--muted,#888)", marginTop: 2 }}>
+                  {selected.Year || "?"} · {entryOf(selected) ? `entry #${entryOf(selected)}` : <span style={{ color: "#e0556f", fontWeight: 600 }}>catalog record - not an inventory row (can't edit here)</span>}
+                </div>
               </div>
             </div>
             <button onClick={() => { setSelId(null); setForm({}); setDel(false); setSaved(null); }}
