@@ -1,5 +1,5 @@
 {
- "source": "comics_inventory_2711_1302.xlsx",
+ "source": "comics_inventory_2711_1540.xlsx",
  "capturedAt": "2026-11-27",
  "rows": [
   {
@@ -967,7 +967,7 @@
   },
   {
    "title": "World's Finest: Batman/Superman",
-   "issue": "Foil Cover (2026 run)",
+   "issue": "49",
    "year": "2026",
    "volume": "5",
    "box": "UNKNOWN — needs physical reassignment",
@@ -1040,8 +1040,8 @@
   {
    "title": "King-Size Special: Avengers",
    "issue": "2",
-   "year": "1966",
-   "volume": "1",
+   "year": "2007",
+   "volume": "2",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
    "signed": false
@@ -1157,7 +1157,7 @@
   {
    "title": "Deadpool: Funeral for a Freak",
    "issue": "1",
-   "year": "2001",
+   "year": "1996",
    "volume": "2",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
@@ -3623,8 +3623,8 @@
   {
    "title": "X-Force and Cable",
    "issue": "19",
-   "year": "2015",
-   "volume": "1",
+   "year": "1992",
+   "volume": "4",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
    "signed": false
