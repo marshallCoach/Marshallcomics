@@ -1,0 +1,13 @@
+[
+ {"title": "Captain America", "issue": "1", "box": "80", "year": "2005", "volume": "5",
+  "set": {"Story Arc": "Out of Time"}, "old": {"Story Arc": "Winter Soldier"}},
+ {"title": "Spider-Woman", "issue": "1", "box": "102", "year": "2026", "volume": "1",
+  "set": {"Story Arc": "Along Came a Spider"}, "old": {"Story Arc": "Gang War"}},
+ {"title": "X-Force", "issue": "1", "box": "75", "year": "2008", "volume": "3",
+  "set": {"Story Arc": "Angels and Demons"}, "old": {"Story Arc": "Angels & Demons"}},
+ {"title": "X-Force", "issue": "3", "box": "12", "year": "2008", "volume": "3",
+  "set": {"Story Arc": "Angels and Demons"}, "old": {"Story Arc": "Angels & Demons"}},
+ {"title": "Alpha Flight", "issue": "1", "box": "11", "year": "2023", "volume": "1",
+  "set": {"Story Arc": "Divided We Stand", "Crossover Event (Fandom)": "Fall of X"},
+  "old": {"Story Arc": "The Fall of X", "Crossover Event (Fandom)": ""}}
+]
