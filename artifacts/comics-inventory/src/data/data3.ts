@@ -1,5 +1,5 @@
 // AUTO-GENERATED — DO NOT EDIT MANUALLY
-// Source: comics_inventory_2611_2054.xlsx  |  Generated: 2026-11-27
+// Source: comics_inventory_2611_2108.xlsx  |  Generated: 2026-11-27
 
 export interface Comic {
   Title: string; Disambig: string; Issue: string; Publisher: string; Year: string; Arc: string;
@@ -7682,7 +7682,7 @@ Claremont-adjacent (Byrne era). Confirmed all 3 days.`,
     Volume: `1`, Entry: `5371`,
     Cover_Price: ``,
     Pub_Date: `2023-10-00`,
-    Story_Arc: `The Fall of X`, Arc_Confidence: `Stated`, Arc_Source: `https://comicvine.gamespot.com/x-men-the-fall-of-x/4045-61126/`,
+    Story_Arc: `Divided We Stand`, Crossover_Event: `Fall of X`, Arc_Confidence: `Stated`, Arc_Source: `https://comicvine.gamespot.com/x-men-the-fall-of-x/4045-61126/`,
     eBay_Avg: null, eBay_Low: 3, eBay_High: 62, eBay_Count: 9, eBay_Median: null,
   },
   {
@@ -48186,7 +48186,7 @@ Skottie Young is confirmed for Terrificon 2026 (confirmed all 3 days). Bring for
     Volume: `5`, Entry: `12359`,
     Cover_Price: ``,
     Pub_Date: `2005-01-00`,
-    Story_Arc: `Winter Soldier`, Arc_Confidence: `Stated`, Arc_Source: `https://comicvine.gamespot.com/captain-america-winter-soldier/4045-56564/`,
+    Story_Arc: `Out of Time`, Arc_Confidence: `Stated`, Arc_Source: `https://comicvine.gamespot.com/captain-america-winter-soldier/4045-56564/`,
     eBay_Avg: 16.87, eBay_Low: 9.99, eBay_High: 40, eBay_Count: 9, eBay_Median: 14.97,
   },
   {
@@ -225231,7 +225231,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Volume: `3`, Entry: `1791`,
     Cover_Price: ``,
     Pub_Date: `2008-04-23`,
-    Story_Arc: `Angels & Demons`, Arc_Part: `3`, Arc_Length: `6`, Arc_Finale: `6`, Arc_Confidence: `Stated`, Arc_Source: `https://comicvine.gamespot.com/x-force-angels-and-demons/4045-53616/`,
+    Story_Arc: `Angels and Demons`, Arc_Part: `3`, Arc_Length: `6`, Arc_Finale: `6`, Arc_Confidence: `Stated`, Arc_Source: `https://comicvine.gamespot.com/x-force-angels-and-demons/4045-53616/`,
     eBay_Avg: 9.8, eBay_Low: 4.54, eBay_High: 14.99, eBay_Count: 10, eBay_Median: 9.99,
   },
   {
@@ -225963,7 +225963,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Volume: `3`, Entry: `11940`,
     Cover_Price: ``,
     Pub_Date: `2008-04-00`,
-    Story_Arc: `Angels & Demons`, Arc_Part: `1`, Arc_Length: `6`, Arc_Finale: `6`, Arc_Confidence: `Stated`, Arc_Source: `https://comicvine.gamespot.com/x-force-angels-and-demons/4045-53616/`,
+    Story_Arc: `Angels and Demons`, Arc_Part: `1`, Arc_Length: `6`, Arc_Finale: `6`, Arc_Confidence: `Stated`, Arc_Source: `https://comicvine.gamespot.com/x-force-angels-and-demons/4045-53616/`,
     eBay_Avg: 9.24, eBay_Low: 4.86, eBay_High: 19, eBay_Count: 8, eBay_Median: 7.05,
   },
   {
@@ -237747,7 +237747,7 @@ Louise Simonson is confirmed for Terrificon 2026 (confirmed all 3 days). Bring f
     Volume: `1`, Entry: `13555`,
     Cover_Price: ``,
     Pub_Date: `2026-09-00`,
-    Story_Arc: `Gang War`, Arc_Confidence: `Stated`, Arc_Source: `https://comicvine.gamespot.com/spider-man-gang-war/4045-61156/`,
+    Story_Arc: `Along Came a Spider`, Arc_Confidence: `Stated`, Arc_Source: `https://comicvine.gamespot.com/spider-man-gang-war/4045-61156/`,
     eBay_Avg: null, eBay_Low: null, eBay_High: null, eBay_Count: null, eBay_Median: null,
   },
   {
