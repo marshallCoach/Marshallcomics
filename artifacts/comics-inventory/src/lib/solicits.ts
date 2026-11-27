@@ -3,14 +3,16 @@
 // (their API allows cross-site reads). Only issues the wiki already lists for that month are
 // shown. Nothing is guessed. Image/Skybound/other publishers have no wiki source here.
 //   Marvel: "Category:Comics Released in <Month>, <Year>"  (on-sale month)
-//   DC:     "Category:<Year>, <Month>"                       (cover month, which is the on-sale month for current DC)
+//   DC:     "Category:<Year>, <Month>"                       (COVER month = on-sale month + 2; checked Nov 27:
+//           Batgirl #25, on sale Nov 4 2026, is filed under "2027, January". So December's
+//           on-sale DC books live under "2027, February", which fills in as DC solicits post.)
 export type Solicit = { series: string; issue: string; page: string; wiki: "marvel" | "dc"; thumb?: string; month: string };
 
 const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
-export function nextMonth(d = new Date()): { name: string; year: number } {
-  const m = (d.getMonth() + 1) % 12;
-  return { name: MONTHS[m], year: d.getMonth() === 11 ? d.getFullYear() + 1 : d.getFullYear() };
+export function nextMonth(d = new Date(), ahead = 1): { name: string; year: number } {
+  const t = d.getFullYear() * 12 + d.getMonth() + ahead;
+  return { name: MONTHS[t % 12], year: Math.floor(t / 12) };
 }
 
 // Same normalisation the page uses for titles, minus a leading "The".
@@ -53,7 +55,7 @@ function parsePage(t: string) {
   return m ? { series: m[1], issue: m[2] } : null;
 }
 
-const CACHE = "brbSolicits_v1";
+const CACHE = "brbSolicits_v2";
 
 // Returns { titleKey: Solicit[] } for the wanted titles only (all issues that month, lowest first).
 export async function loadSolicits(titles: { title: string; publisher: string }[]): Promise<Record<string, Solicit[]>> {
@@ -67,7 +69,7 @@ export async function loadSolicits(titles: { title: string; publisher: string }[
   const want = new Set(titles.map(t => solKey(t.title)));
   const cats: [("marvel" | "dc"), string][] = [
     ["marvel", `Comics Released in ${nm.name}, ${nm.year}`],
-    ["dc", `${nm.year}, ${nm.name}`],
+    ["dc", (dc => `${dc.year}, ${dc.name}`)(nextMonth(new Date(), 3))],   // cover month = on-sale + 2
   ];
   const res: Record<string, Solicit[]> = {};
   for (const [wiki, cat] of cats) {
