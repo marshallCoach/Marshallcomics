@@ -67,7 +67,7 @@ def main():
             if any(s(ws.cell(r, ci(col)).value) != s(old) for col, old in f["old"].items()):
                 skipped.append((f, "cell no longer holds the reviewed old value - left alone")); continue
             sets.append((r, f))
-    print(f"SOURCE: {os.path.basename(src)}   fixes: {len(fixes)}   cell changes: {len(sets)}   "
+    print(f"SOURCE: {os.path.basename(src)}   fixes: {len(fixes)}   cell changes: {sum(len(f['set']) for _, f in sets)}   "
           f"rows to Duplicates tab: {len(moves)}   skipped: {len(skipped)}")
     for r, f in sets:
         print(f"  SET  row {r} {f['title']} #{f['issue']} ({f['box'][:12]}): " + ", ".join(f"{c} {f['old'][c]!r} -> {v!r}" for c, v in f["set"].items()))
