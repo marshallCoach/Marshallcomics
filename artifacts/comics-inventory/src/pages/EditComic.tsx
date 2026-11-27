@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { DATA, type Comic } from "@/data/data";
 import { CoverImage } from "@/components/CoverImage";
 import { getFocusQueue, setFocusQueue, focusQuery, fandomGuess, type FocusQueue, type FocusItem } from "@/lib/focusQueue";
+import { comicId } from "@/lib/problems";
 
 const BASE = import.meta.env.BASE_URL?.replace(/\/$/, "") ?? "";
 const nIss = (i: unknown) => String(i ?? "").replace(/^#/, "").trim();
@@ -44,6 +45,18 @@ const FIELDS: { key: keyof Comic; label: string; wide?: boolean }[] = [
 // Nov 27: the '#' entry number is the only thing that tells two look-alike records apart
 // (Wolverine #8: a signed copy and a cover-catalog record with the same title/issue/vol/box).
 const entryOf = (c: Comic) => String((c as { Entry?: string }).Entry ?? "").trim();
+// Fandom links share the Data Fix store (brbDataFixes_v1, keyed by comicId) and its
+// export format (data-fixes*.json in ~/Downloads, merged by brb_all step 2), so a link
+// pasted here is the same as one pasted on Data Fix: it fixes the cover/credits/volume
+// on the Mac and the book leaves the Data Fix list.
+const LS_FIXES = "brbDataFixes_v1";
+type FixRec = { id: string; title: string; issue: string; box: string; problem: string; kind: string; value: string; at: string; year?: string; vol?: string };
+function loadFixes(): Record<string, FixRec> {
+  try { const o = JSON.parse(localStorage.getItem(LS_FIXES) || "{}"); return o && typeof o === "object" ? o : {}; } catch { return {}; }
+}
+const savedFandom = (c: Comic) => { const r = loadFixes()[comicId(c)]; return r && r.kind === "fandom" ? r.value : ""; };
+const isUrl = (s: string) => /^https?:\/\/\S+$/i.test(s.trim());
+
 const idOf = (c: Comic) => `${c.Title}|||${c.Issue}|||${c.Volume || "1"}|||${c.Box}|||${c.Signed_By || ""}|||${c.Year || ""}|||${entryOf(c)}`;
 
 export default function EditComic({ initQuery }: { initQuery?: string } = {}) {
@@ -53,6 +66,8 @@ export default function EditComic({ initQuery }: { initQuery?: string } = {}) {
   const [form, setForm] = useState<Record<string, string>>({});
   const [del, setDel] = useState(false);
   const [saved, setSaved] = useState<string | null>(null);
+  const [fandom, setFandom] = useState("");        // Fandom page link (draft)
+  const [fandomOrig, setFandomOrig] = useState(""); // link already saved for this book
   const [focus, setFocus] = useState<FocusQueue | null>(() => getFocusQueue());
   const [openItems, setOpenItems] = useState<OpenItem[]>([]);
   useEffect(() => {
@@ -79,11 +94,25 @@ export default function EditComic({ initQuery }: { initQuery?: string } = {}) {
   }, [q, comics]);
 
   const selected = useMemo(() => comics.find(c => idOf(c) === selId) || null, [selId, comics]);
+  // Nov 27: ~160 real rows (new weekly pulls in 101/102/103/CC*) have no entry # yet, so "no entry"
+  // alone can't mean "catalog record". A no-entry book is safe to edit when no other record shares
+  // its Title+Issue+Volume+Box (brb_review_edits matches on exactly that). Look-alikes (the
+  // Wolverine #8 case) and ALL deletes still need an entry #. Fandom links never need one.
+  const twinKey = (c: Comic) => `${c.Title.trim().toLowerCase()}|||${nIss(c.Issue)}|||${String(c.Volume || "1").trim()}|||${String(c.Box).trim()}`;
+  const lookAlikes = useMemo(() => {
+    if (!selected) return 0;
+    const k = twinKey(selected);
+    return comics.filter(c => c !== selected && twinKey(c) === k).length;
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selected, comics]);
+  const noEntry = !!selected && !entryOf(selected);
+  const fieldsLocked = noEntry && lookAlikes > 0;      // can't tell this record from its twin
 
   function select(c: Comic) {
     const f: Record<string, string> = {};
     for (const { key } of FIELDS) f[key as string] = String((c as any)[key] ?? "");
     setForm(f);
+    const fl = savedFandom(c); setFandom(fl); setFandomOrig(fl);
     setSelId(idOf(c));
     setDel(false);
     setSaved(null);
@@ -108,7 +137,8 @@ export default function EditComic({ initQuery }: { initQuery?: string } = {}) {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [initQuery]);
 
-  const dirty = () => Object.keys(changedFields()).length > 0 && !saved;
+  const fandomChanged = () => !!selected && isUrl(fandom) && fandom.trim() !== fandomOrig;
+  const dirty = () => (Object.keys(changedFields()).length > 0 || fandomChanged()) && !saved;
   const leaveOk = () => !dirty() || window.confirm("You have unsaved changes on this book. Leave without exporting them?");
 
   // ── Focus list: step through Data Fix problems ──
@@ -156,17 +186,40 @@ export default function EditComic({ initQuery }: { initQuery?: string } = {}) {
 
   function save() {
     if (!selected) return;
-    if (!entryOf(selected)) {
-      window.alert("This is a catalog / cover-art record, not a row in the inventory - it can't be edited or deleted here. Search again and pick the copy that shows an entry #.");
+    const changes = changedFields();
+    if (noEntry && del) {
+      window.alert("This book has no entry # yet, so it can't be deleted from here (a delete must target one exact row). Delete it in the xlsx on the Mac.");
       return;
     }
-    const changes = changedFields();
+    if (fieldsLocked && Object.keys(changes).length) {
+      window.alert(`This record has no entry # and ${lookAlikes} look-alike${lookAlikes === 1 ? "" : "s"} (same title, issue, volume and box), so a field edit could land on the wrong copy. Pick the copy that shows an entry #. A Fandom link still saves.`);
+      if (!fandomChanged()) return;
+    }
     if (del) {
       if (!window.confirm(`DELETE from inventory:\n\n${selected.Title} #${selected.Issue} (${selected.Year || "?"}, Vol ${selected.Volume || "1"}, Box ${selected.Box})\nEntry #${entryOf(selected)}${selected.Signed_By ? `\nSIGNED by ${selected.Signed_By}` : ""}\n\nThis exports a deletion request for review in brb_all. Are you sure?`)) return;
-    } else if (Object.keys(changes).length === 0) {
-      window.alert("No fields changed.");
+    } else if (Object.keys(changes).length === 0 && !fandomChanged()) {
+      window.alert(fandom.trim() && !isUrl(fandom) ? "The Fandom link must start with https://" : "No fields changed.");
       return;
     }
+    const stamp = new Date().toISOString().replace(/[-:T]/g, "").slice(0, 14);
+    const download = (obj: unknown, name: string) => {
+      const blob = new Blob([JSON.stringify(obj, null, 2)], { type: "application/json" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob); a.download = name; a.click();
+      setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+    };
+    const files: string[] = [];
+    if (!del && fandomChanged()) {
+      const rec: FixRec = { id: comicId(selected), title: selected.Title, issue: String(selected.Issue ?? ""), box: selected.Box ?? "",
+        problem: "edit-page", kind: "fandom", value: fandom.trim(), at: new Date().toISOString(),
+        year: String(selected.Year ?? "").slice(0, 4), vol: String(selected.Volume ?? "") };
+      const all = loadFixes(); all[rec.id] = rec;
+      try { localStorage.setItem(LS_FIXES, JSON.stringify(all)); } catch { /* storage full/blocked - the export still carries it */ }
+      download([rec], `data-fixes-edit-${stamp}.json`);
+      files.push(`data-fixes-edit-${stamp}.json`);
+      setFandomOrig(fandom.trim());
+    }
+    if (!del && (Object.keys(changes).length === 0 || fieldsLocked)) { setSaved(files.join(" + ")); return; }
     const payload = {
       type: "comic-edit",
       exportedAt: new Date().toISOString(),
@@ -181,18 +234,14 @@ export default function EditComic({ initQuery }: { initQuery?: string } = {}) {
       delete: del,
       changes: del ? {} : changes,
     };
-    const stamp = new Date().toISOString().replace(/[-:T]/g, "").slice(0, 14);
-    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = `comic_edit_${stamp}.json`;
-    a.click();
-    URL.revokeObjectURL(a.href);
-    setSaved(`comic_edit_${stamp}.json`);
+    // second download a beat later so the browser doesn't drop it
+    setTimeout(() => download(payload, `comic_edit_${stamp}.json`), files.length ? 400 : 0);
+    setSaved([...files, `comic_edit_${stamp}.json`].join(" + "));
   }
 
   const changes = changedFields();
   const changedKeys = new Set(Object.keys(changes));
+  const nChanges = Object.keys(changes).length + (fandomChanged() ? 1 : 0);
 
   return (
     <div style={{ maxWidth: "calc(900px + var(--wide))", margin: "0 auto", padding: "20px 18px 60px" }}>
@@ -258,7 +307,7 @@ export default function EditComic({ initQuery }: { initQuery?: string } = {}) {
             <button key={idOf(c)} className="ec-row" onClick={() => select(c)}>
               <b>{c.Title}</b> #{c.Issue}{c.Volume && c.Volume !== "1" ? ` · Vol ${c.Volume}` : ""} · Box {c.Box}
               {c.Year ? ` · ${c.Year}` : ""}{c.Signed_By ? ` · ✍ ${c.Signed_By}` : ""}{c.Condition ? ` · ${c.Condition}` : ""}
-              {entryOf(c) ? ` · #${entryOf(c)}` : <span style={{ color: "#e0556f" }}> · catalog record</span>}
+              {entryOf(c) ? ` · #${entryOf(c)}` : <span style={{ color: "#b45309" }}> · no entry #</span>}
             </button>
           ))}
         </div>
@@ -277,7 +326,9 @@ export default function EditComic({ initQuery }: { initQuery?: string } = {}) {
                 </div>
                 {selected.Signed_By && <div style={{ fontSize: ".82rem", color: "var(--red,#c0392b)", marginTop: 2 }}>✍ {selected.Signed_By}</div>}
                 <div style={{ fontSize: ".78rem", color: "var(--muted,#888)", marginTop: 2 }}>
-                  {selected.Year || "?"} · {entryOf(selected) ? `entry #${entryOf(selected)}` : <span style={{ color: "#e0556f", fontWeight: 600 }}>catalog record - not an inventory row (can't edit here)</span>}
+                  {selected.Year || "?"} · {entryOf(selected) ? `entry #${entryOf(selected)}` : fieldsLocked
+                    ? <span style={{ color: "#e0556f", fontWeight: 600 }}>no entry # · {lookAlikes} look-alike{lookAlikes === 1 ? "" : "s"} - fields locked (Fandom link still works)</span>
+                    : <span style={{ color: "#b45309", fontWeight: 600 }}>no entry # yet - edits match on title/issue/volume/box</span>}
                 </div>
               </div>
             </div>
@@ -321,11 +372,19 @@ export default function EditComic({ initQuery }: { initQuery?: string } = {}) {
                 <input
                   className={changedKeys.has(key as string) ? "chg" : ""}
                   value={form[key as string] ?? ""}
-                  disabled={del}
+                  disabled={del || fieldsLocked}
                   onChange={e => setField(key as string, e.target.value)}
                 />
               </div>
             ))}
+          </div>
+
+          <div className="ec-f wide" style={{ marginTop: 12 }}>
+            <label>Fandom page (fixes cover, credits, date &amp; volume on the next brb_all)</label>
+            <input className={fandomChanged() ? "chg" : ""} value={fandom} disabled={del}
+              placeholder="https://marvel.fandom.com/wiki/Amazing_Spider-Man_Vol_7_1004"
+              onChange={e => { setFandom(e.target.value); setSaved(null); }} />
+            {fandom.trim() && !isUrl(fandom) && <div style={{ color: "#e0556f", fontSize: ".75rem", marginTop: 3 }}>Paste the full link (starts with https://)</div>}
           </div>
 
           <label style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 18, color: del ? "#e0556f" : "var(--muted2,#aaa)", cursor: "pointer", fontWeight: 600 }}>
@@ -336,9 +395,9 @@ export default function EditComic({ initQuery }: { initQuery?: string } = {}) {
           <div style={{ display: "flex", gap: 10, alignItems: "center", marginTop: 16 }}>
             <button onClick={save}
               style={{ background: del ? "#c0392b" : "var(--red,#c0392b)", color: "#fff", border: "none", borderRadius: 8, padding: "10px 20px", cursor: "pointer", font: "inherit", fontWeight: 600 }}>
-              {del ? "Export deletion request" : `Save & export (${Object.keys(changes).length} change${Object.keys(changes).length === 1 ? "" : "s"})`}
+              {del ? "Export deletion request" : `Save & export (${nChanges} change${nChanges === 1 ? "" : "s"})`}
             </button>
-            {saved && <span style={{ color: "#2ec28a", fontSize: ".86rem" }}>✓ Exported {saved} — move it to the repo and run brb_review_edits.py</span>}
+            {saved && <span style={{ color: "#2ec28a", fontSize: ".86rem" }}>✓ Exported {saved} — brb_all picks it up from Downloads</span>}
           </div>
         </div>
       )}
