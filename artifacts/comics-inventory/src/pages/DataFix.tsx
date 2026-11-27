@@ -1475,7 +1475,7 @@ const CSS = `
 .df-pub-hd{font-size:.82rem;font-weight:700;color:var(--muted2,#bbb);margin:8px 0 6px;letter-spacing:.3px}
 .df-pub-n{font-size:.68rem;color:var(--muted,#888);background:var(--surface2,#26262f);border-radius:9px;padding:1px 7px;margin-left:5px}
 .df-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:10px}
-.df-card{display:flex;gap:10px;background:var(--surface,#1a1a22);border:1px solid var(--border,#2c2c38);border-radius:10px;padding:9px;overflow:hidden;transition:opacity .32s ease,transform .32s ease,max-height .32s ease;max-height:320px}
+.df-card{display:flex;gap:10px;background:var(--surface,#1a1a22);border:1px solid var(--border,#2c2c38);border-radius:10px;padding:9px;overflow:hidden;transition:opacity .32s ease,transform .32s ease,max-height .32s ease;max-height:1200px}
 .df-card.leaving{opacity:0;transform:translateX(30px) scale(.96);max-height:0;padding-top:0;padding-bottom:0;margin:0;border-width:0}
 .df-info{flex:1;min-width:0;display:flex;flex-direction:column;gap:6px}
 .df-title{font-weight:700;font-size:.9rem;line-height:1.25}
@@ -1488,10 +1488,10 @@ const CSS = `
 .df-solve:hover{background:#22c55e;border-color:#22c55e;color:#04220f}
 .df-find{font-size:.72rem;color:var(--muted2,#bbb);text-decoration:none;border-bottom:1px dashed var(--border,#444)}
 .df-find:hover{color:#8fd0ff}
-.df-linkrow{display:flex;gap:6px}
-.df-link-in{flex:1;min-width:0;font-size:.75rem;background:var(--bg,#111);border:1px solid var(--border,#2c2c38);border-radius:7px;padding:5px 9px;color:var(--text,#eee)}
+.df-linkrow{display:flex;gap:6px;flex-wrap:wrap}
+.df-link-in{flex:1 1 150px;min-width:0;font-size:.75rem;background:var(--bg,#111);border:1px solid var(--border,#2c2c38);border-radius:7px;padding:5px 9px;color:var(--text,#eee)}
 .df-link-in:focus{outline:none;border-color:#7c3aed}
-.df-link-save{font-size:.72rem;font-weight:700;border:none;border-radius:7px;padding:5px 12px;cursor:pointer;background:#7c3aed;color:#fff}
+.df-link-save{font-size:.72rem;font-weight:700;border:none;border-radius:7px;padding:5px 12px;cursor:pointer;background:#7c3aed;color:#fff;white-space:nowrap}
 .df-link-save:disabled{opacity:.4;cursor:default}
 .df-guide{margin:0 0 10px;padding:8px 12px;border:1px solid var(--border,#2c2c38);border-left:3px solid #2563eb;border-radius:8px;background:var(--surface2,rgba(127,127,127,.06));font-size:.82rem;line-height:1.5;overflow-wrap:anywhere}
 .df-guide summary{cursor:pointer;font-weight:700}
