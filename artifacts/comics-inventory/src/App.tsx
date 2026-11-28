@@ -44,6 +44,7 @@ import ComicRoulette from "@/pages/ComicRoulette";
 import NYCCHunt from "@/pages/NYCCHunt";
 import LocationCheck from "@/pages/LocationCheck";
 import UnknownBoxes from "@/pages/UnknownBoxes";
+import HomeBeta, { homeBetaLive } from "@/pages/HomeBeta";
 import AbsoluteBatman from "@/pages/AbsoluteBatman";
 import LifeArchive from "@/pages/LifeArchive";
 import DataFix from "@/pages/DataFix";
@@ -68,7 +69,7 @@ type TabId =
   | "calendar" | "showplanner" | "cgc" | "signings" | "actionplan" | "timeline" | "boxvisual"
   | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "storepreview" | "slabbed" | "duplicates" | "dupchecklist" | "datafix" | "editcomic" | "conditionentry" | "eraaudit" | "titlefixes" | "volumeconfirm" | "history"
   | "orgpath" | "volumes" | "boxlabels" | "keycatalog" | "covercatalog" | "coverreview" | "missingcovers" | "boxquest" | "boxmap"
-  | "ebaypipeline" | "opsreference" | "ebaylistingguide" | "roulette" | "lifearchive" | "nycc" | "locationcheck" | "unknownboxes" | "absbatman" | "credits" | "granov";
+  | "ebaypipeline" | "opsreference" | "ebaylistingguide" | "roulette" | "lifearchive" | "nycc" | "locationcheck" | "unknownboxes" | "homebeta" | "absbatman" | "credits" | "granov";
 
 export type NavParams = {
   box?: string;
@@ -89,6 +90,7 @@ const NAV = [
     label: "Home",
     tabs: [
       { id: "summary",     label: "Home" },
+      { id: "homebeta",    label: "Home β" },
       { id: "showcase",    label: "Showcase" },
       { id: "arcs",        label: "Arcs" },
     ],
@@ -412,7 +414,8 @@ export default function App() {
 
       {/* PAGES */}
       <div className="page-content">
-        {activeTab === "summary"     && <Summary     onNavigate={navigateTo} />}
+        {activeTab === "summary"     && (homeBetaLive() ? <HomeBeta /> : <Summary onNavigate={navigateTo} />)}
+        {activeTab === "homebeta"    && <HomeBeta />}
         {activeTab === "showcase"    && <Showcase />}
         {activeTab === "arcs"        && <ArcStory />}
         {navParams.from === "showcase" && activeTab === "coverreview" && (
