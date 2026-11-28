@@ -283,6 +283,10 @@ const bsRows  = bsSheet ? worksheetToArrays(bsSheet, '') : [[]];
 // the app showed only 65 boxes and no location codes.
 const boxLocData = {};            // boxNum -> { code, zoneFull }
 const realHighBoxes = new Set();  // confirmed-real box numbers >= 82
+// Nov 28: the weekly-intake boxes (101 New DC, 102 New Marvel, 103 New Other - CLAUDE.md) are
+// real shelves, but the Box Locations tab doesn't list them, so their books (~350) were
+// missing from every box page and box total.
+for (const b of ['101', '102', '103']) realHighBoxes.add(b);
 {
   const blSheet = wb.getWorksheet('Box Locations');
   if (blSheet) {
@@ -732,6 +736,7 @@ if (existsSync('covers.json')) {
   for (const r of invRows) {
     if (C.verifyDup >= 0 && !blank(r[C.verifyDup])) continue;
     if (STATUS_BOX.has(val(r, C.box))) continue;
+    if (/^CC\d+$/i.test(val(r, C.box))) continue;   // CC boxes are NEVER duplicates (CLAUDE.md; matches brb_validate)
     const k = [val(r,C.title).toLowerCase(), val(r,C.issue), val(r,C.year), val(r,C.box)].join('|');
     seen.set(k, (seen.get(k) || 0) + 1);
   }
