@@ -1,6 +1,6 @@
 {
- "source": "comics_inventory_2711_1540.xlsx",
- "capturedAt": "2026-11-27",
+ "source": "comics_inventory_2811_0009.xlsx",
+ "capturedAt": "2026-11-28",
  "rows": [
   {
    "title": "Action Comics",
@@ -2274,7 +2274,7 @@
    "title": "Spider-Man by Bendis/Pichelli",
    "issue": "1",
    "year": "2011",
-   "volume": "74",
+   "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
    "signed": false
@@ -2283,7 +2283,7 @@
    "title": "X-Men: Asgardian Wars",
    "issue": "1",
    "year": "1985",
-   "volume": "74",
+   "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
    "signed": false
@@ -2292,7 +2292,7 @@
    "title": "Thor: The Death of Odin",
    "issue": "1",
    "year": "2001",
-   "volume": "74",
+   "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
    "signed": false
@@ -2310,7 +2310,7 @@
    "title": "Ultimate X-Men",
    "issue": "2",
    "year": "2001",
-   "volume": "74",
+   "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
    "signed": false
@@ -2319,7 +2319,7 @@
    "title": "Superman and the Legion of Super-Heroes",
    "issue": "1",
    "year": "2008",
-   "volume": "74",
+   "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
    "signed": false
@@ -2328,7 +2328,7 @@
    "title": "JLA: A League of One",
    "issue": "1",
    "year": "2000",
-   "volume": "74",
+   "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
    "signed": false
@@ -2337,7 +2337,7 @@
    "title": "Crimson: Loyalty and Loss",
    "issue": "1",
    "year": "1999",
-   "volume": "74",
+   "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
    "signed": false
@@ -2346,7 +2346,7 @@
    "title": "Crimson: Heaven and Earth",
    "issue": "1",
    "year": "2000",
-   "volume": "74",
+   "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
    "signed": false
@@ -2355,7 +2355,7 @@
    "title": "Crimson: Earth Angel",
    "issue": "1",
    "year": "2001",
-   "volume": "74",
+   "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
    "signed": false
@@ -2364,7 +2364,7 @@
    "title": "X-Men: The Next Generation",
    "issue": "1",
    "year": "2006",
-   "volume": "74",
+   "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
    "signed": false
@@ -2373,7 +2373,7 @@
    "title": "Spider-Man: The Gauntlet",
    "issue": "1",
    "year": "2010",
-   "volume": "74",
+   "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
    "signed": false
@@ -2382,7 +2382,7 @@
    "title": "Revelations",
    "issue": "1",
    "year": "1996",
-   "volume": "74",
+   "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
    "signed": false
@@ -2391,7 +2391,7 @@
    "title": "The Final Night",
    "issue": "1",
    "year": "1996",
-   "volume": "74",
+   "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
    "signed": false
@@ -2409,7 +2409,7 @@
    "title": "The Amazing Adventures of the Escapist",
    "issue": "1",
    "year": "2004",
-   "volume": "74",
+   "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
    "signed": false
@@ -2418,7 +2418,7 @@
    "title": "Batman: No Man's Land",
    "issue": "3",
    "year": "2000",
-   "volume": "74",
+   "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": false,
    "signed": false
@@ -2436,7 +2436,7 @@
    "title": "JLA: Earth 2",
    "issue": "1",
    "year": "2000",
-   "volume": "74",
+   "volume": "1",
    "box": "UNKNOWN — needs physical reassignment",
    "key": true,
    "signed": false
