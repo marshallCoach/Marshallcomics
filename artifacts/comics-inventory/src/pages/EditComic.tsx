@@ -43,7 +43,7 @@ const FIELDS: { key: keyof Comic; label: string; wide?: boolean }[] = [
 ];
 
 // Nov 27: the '#' entry number is the only thing that tells two look-alike records apart
-// (Wolverine #8: a signed copy and a cover-catalog record with the same title/issue/vol/box).
+// (Wolverine #8, Nov 27: the export matched on title/issue/vol/box and hit the only real copy).
 const entryOf = (c: Comic) => String((c as { Entry?: string }).Entry ?? "").trim();
 // Fandom links share the Data Fix store (brbDataFixes_v1, keyed by comicId) and its
 // export format (data-fixes*.json in ~/Downloads, merged by brb_all step 2), so a link
@@ -196,7 +196,7 @@ export default function EditComic({ initQuery }: { initQuery?: string } = {}) {
       if (!fandomChanged()) return;
     }
     if (del) {
-      if (!window.confirm(`DELETE from inventory:\n\n${selected.Title} #${selected.Issue} (${selected.Year || "?"}, Vol ${selected.Volume || "1"}, Box ${selected.Box})\nEntry #${entryOf(selected)}${selected.Signed_By ? `\nSIGNED by ${selected.Signed_By}` : ""}\n\nThis exports a deletion request for review in brb_all. Are you sure?`)) return;
+      if (!window.confirm(`DELETE from inventory:\n\n${selected.Title} #${selected.Issue} (${selected.Year || "?"}, Vol ${selected.Volume || "1"}, Box ${selected.Box})\n${entryOf(selected) ? `Entry #${entryOf(selected)}` : "No entry #"}${selected.Signed_By ? `\nSIGNED by ${selected.Signed_By}` : ""}\n\nThis exports a deletion request for review in brb_all. Are you sure?`)) return;
     } else if (Object.keys(changes).length === 0 && !fandomChanged()) {
       window.alert(fandom.trim() && !isUrl(fandom) ? "The Fandom link must start with https://" : "No fields changed.");
       return;
