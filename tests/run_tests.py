@@ -1047,6 +1047,17 @@ class T(unittest.TestCase):
         r = sb.run("brb_fix_rows.py", "undo.json", "--apply")
         self.assertEqual(len(sb.newest()), 1, r.stdout + r.stderr)
 
+    # ── "rows": N on a set fix corrects every copy, and only when all still hold `old` (Nov 28) ──
+    def test_fix_rows_set_on_all_copies(self):
+        sb = self.sb
+        sb.xlsx(["Title", "Issue #", "Year", "Volume", "Box #", "Whatnot Category"],
+                [["Gargoyles", 1, 2022, 1, "75", "15"], ["Gargoyles", 1, 2022, 1, "75", "15"], ["Thor", 1, 2020, 6, "9", "Marvel/Modern"]])
+        sb.json("c.json", [{"title": "Gargoyles", "issue": "1", "box": "75", "year": "2022", "volume": "1", "rows": 2,
+                            "set": {"Whatnot Category": "Indie/Other"}, "old": {"Whatnot Category": "15"}}])
+        r = sb.run("brb_fix_rows.py", "c.json", "--apply")
+        self.assertEqual([x["Whatnot Category"] for x in sb.newest()], ["Indie/Other", "Indie/Other", "Marvel/Modern"], r.stdout + r.stderr)
+        self.assertIn("cell changes: 0", sb.run("brb_fix_rows.py", "c.json").stdout, "second run: nothing")
+
     # ── Mistaken delete: put one row back by its '#' entry, only once (Nov 27) ──
     def test_restore_rows_puts_back_one_entry_once(self):
         sb = self.sb

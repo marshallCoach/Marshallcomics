@@ -283,10 +283,10 @@ const bsRows  = bsSheet ? worksheetToArrays(bsSheet, '') : [[]];
 // the app showed only 65 boxes and no location codes.
 const boxLocData = {};            // boxNum -> { code, zoneFull }
 const realHighBoxes = new Set();  // confirmed-real box numbers >= 82
-// Nov 28: the weekly-intake boxes (101 New DC, 102 New Marvel, 103 New Other - CLAUDE.md) are
-// real shelves, but the Box Locations tab doesn't list them, so their books (~350) were
-// missing from every box page and box total.
-for (const b of ['101', '102', '103']) realHighBoxes.add(b);
+// Nov 28: the weekly-intake boxes (101 New DC, 102 New Marvel, 103 New Other - CLAUDE.md) and
+// boxes 105 + 110 (Robert confirmed real, Nov 28) are real shelves, but the Box Locations tab
+// doesn't list them, so their books (~460) were missing from every box page and box total.
+for (const b of ['101', '102', '103', '105', '110']) realHighBoxes.add(b);
 {
   const blSheet = wb.getWorksheet('Box Locations');
   if (blSheet) {

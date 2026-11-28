@@ -43,6 +43,7 @@ import EbayListingGuide from "@/pages/EbayListingGuide";
 import ComicRoulette from "@/pages/ComicRoulette";
 import NYCCHunt from "@/pages/NYCCHunt";
 import LocationCheck from "@/pages/LocationCheck";
+import UnknownBoxes from "@/pages/UnknownBoxes";
 import AbsoluteBatman from "@/pages/AbsoluteBatman";
 import LifeArchive from "@/pages/LifeArchive";
 import DataFix from "@/pages/DataFix";
@@ -67,7 +68,7 @@ type TabId =
   | "calendar" | "showplanner" | "cgc" | "signings" | "actionplan" | "timeline" | "boxvisual"
   | "hunting" | "capfalcon" | "sitemap" | "pulllist" | "sellerdash" | "storepreview" | "slabbed" | "duplicates" | "dupchecklist" | "datafix" | "editcomic" | "conditionentry" | "eraaudit" | "titlefixes" | "volumeconfirm" | "history"
   | "orgpath" | "volumes" | "boxlabels" | "keycatalog" | "covercatalog" | "coverreview" | "missingcovers" | "boxquest" | "boxmap"
-  | "ebaypipeline" | "opsreference" | "ebaylistingguide" | "roulette" | "lifearchive" | "nycc" | "locationcheck" | "absbatman" | "credits" | "granov";
+  | "ebaypipeline" | "opsreference" | "ebaylistingguide" | "roulette" | "lifearchive" | "nycc" | "locationcheck" | "unknownboxes" | "absbatman" | "credits" | "granov";
 
 export type NavParams = {
   box?: string;
@@ -121,6 +122,7 @@ const NAV = [
       { id: "boxmap",      label: "Box Map" },
       { id: "hunting",     label: "Box Hunt" },
       { id: "locationcheck", label: "Where Is It?" },
+      { id: "unknownboxes", label: "Unknown → Box" },
     ],
   },
   {
@@ -446,6 +448,7 @@ export default function App() {
         {activeTab === "sellerdash"  && <SellerDashboard />}
         {activeTab === "nycc"        && <NYCCHunt />}
         {activeTab === "locationcheck" && <LocationCheck />}
+        {activeTab === "unknownboxes" && <UnknownBoxes />}
         {activeTab === "absbatman"   && <AbsoluteBatman />}
         {activeTab === "capfalcon"   && <CapFalconChecklist />}
         {activeTab === "cgc"         && <CGCStrategy />}

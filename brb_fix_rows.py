@@ -8,6 +8,7 @@ one row may match) and either
     {"set": {"Issue #": "83"}, "old": {"Issue #": "498"}}   - change cells still holding `old`
     {"move_to_duplicates": "why"}                           - move the row to the Duplicates tab
     {"move_to_duplicates": "why", "rows": 2}                - two IDENTICAL rows (same key): move both
+    {"set": {...}, "old": {...}, "rows": 2}                  - two copies sharing the key: correct both
     {"where": {"Arc / Story": "x"}, ...}                     - pick one of several rows sharing the key
 A row that no longer matches (already fixed, or edited since) is skipped, so a second run
 changes nothing. Every other cell is verified unchanged; one Data Integrity Log entry is added.
@@ -58,6 +59,10 @@ def main():
         want = int(f.get("rows", 1))      # "rows": 2 = two identical rows (same key) - move both
         if "move_to_duplicates" in f and want > 1 and len(hit) == want:
             moves.extend((r, f) for r in hit); continue
+        if "set" in f and want > 1 and len(hit) == want:     # Nov 28: same correction on every copy
+            if any(s(ws.cell(r, ci(col)).value) != s(old) for r in hit for col, old in f["old"].items()):
+                skipped.append((f, "a copy no longer holds the reviewed old value - left alone")); continue
+            sets.extend((r, f) for r in hit); continue
         if len(hit) != 1:
             skipped.append((f, "no matching row (already done?)" if not hit else f"{len(hit)} rows match - ambiguous, left alone")); continue
         r = hit[0]

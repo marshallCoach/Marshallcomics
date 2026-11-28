@@ -1,0 +1,9483 @@
+{
+"generated": "2026-11-28",
+"snapshots": 101,
+"from": "2026-05-18",
+"to": "2026-11-27",
+"rows": [
+{
+"tier": "HIGH",
+"guess_box": "2",
+"box_exists": "no",
+"title": "Deadpool: Agent of Weapon X",
+"issue": "1",
+"volume": "1",
+"year": "2001",
+"entry": "13731",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 2 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "2",
+"box_exists": "no",
+"title": "Deadpool: Funeral for a Freak",
+"issue": "2",
+"volume": "1",
+"year": "1997",
+"entry": "13728",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 2 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "2",
+"box_exists": "no",
+"title": "Deadpool: Funeral for a Freak",
+"issue": "3",
+"volume": "1",
+"year": "1997",
+"entry": "13729",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 2 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "2",
+"box_exists": "no",
+"title": "Deadpool: Funeral for a Freak",
+"issue": "4",
+"volume": "1",
+"year": "1997",
+"entry": "13730",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 2 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "2",
+"box_exists": "no",
+"title": "Giant-Size X-Men: First to Last",
+"issue": "1",
+"volume": "4",
+"year": "2011",
+"entry": "13725",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 2 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "2",
+"box_exists": "no",
+"title": "Longshots: Age of Revelation",
+"issue": "2",
+"volume": "1",
+"year": "2025",
+"entry": "14064",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 2 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "2",
+"box_exists": "no",
+"title": "Marvel Black White Blood",
+"issue": "1",
+"volume": "1",
+"year": "2020",
+"entry": "13739",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 2 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "2",
+"box_exists": "no",
+"title": "Marvel Tales Starring Spider-Man",
+"issue": "113",
+"volume": "1",
+"year": "1979",
+"entry": "13630",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 2 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "2",
+"box_exists": "no",
+"title": "Marvel Tales Starring Spider-Man",
+"issue": "113",
+"volume": "1",
+"year": "2023",
+"entry": "14266",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 2 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "2",
+"box_exists": "no",
+"title": "Phoenix: Endsong",
+"issue": "2",
+"volume": "1",
+"year": "2005",
+"entry": "13732",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 2 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "2",
+"box_exists": "no",
+"title": "X-Men in Furnace",
+"issue": "2",
+"volume": "4",
+"year": "2010",
+"entry": "13733",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 2 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "2",
+"box_exists": "no",
+"title": "X-Men in Furnace",
+"issue": "3",
+"volume": "4",
+"year": "2010",
+"entry": "13734",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 2 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "2",
+"box_exists": "no",
+"title": "X-Men: To Serve and Protect / X-Men in Furnace",
+"issue": "1",
+"volume": "4",
+"year": "2010",
+"entry": "13718",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 2 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "2",
+"box_exists": "no",
+"title": "X-Men: To Serve and Protect / X-Men in Furnace",
+"issue": "2",
+"volume": "4",
+"year": "2010",
+"entry": "13719",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 2 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "2",
+"box_exists": "no",
+"title": "X-Men: To Serve and Protect / X-Men in Furnace",
+"issue": "3",
+"volume": "4",
+"year": "2010",
+"entry": "13720",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 2 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "3",
+"box_exists": "yes",
+"title": "Marvel Premiere",
+"issue": "1",
+"volume": "1",
+"year": "1972",
+"entry": "13648",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 3 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "3",
+"box_exists": "yes",
+"title": "Marvel Two-in-One #1 — ⚠️ NOT IN COLLECTION",
+"issue": "1",
+"volume": "1",
+"year": "1974",
+"entry": "13614",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 3 (last seen 2026-06-02)"
+},
+{
+"tier": "HIGH",
+"guess_box": "3",
+"box_exists": "yes",
+"title": "New History of the DC Universe: The Dakota Incident",
+"issue": "1",
+"volume": "1",
+"year": "2026",
+"entry": "13640",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 3 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "3",
+"box_exists": "yes",
+"title": "New History of the DC Universe: The Dakota Incident",
+"issue": "1",
+"volume": "1",
+"year": "2024",
+"entry": "14278",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 3 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "4",
+"box_exists": "yes",
+"title": "Firestorm",
+"issue": "Foil Cover (verify issue)",
+"volume": "1",
+"year": "2024",
+"entry": "13622",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 4 (last seen 2026-06-02)"
+},
+{
+"tier": "HIGH",
+"guess_box": "13",
+"box_exists": "yes",
+"title": "Invincible Iron Man",
+"issue": "503",
+"volume": "2",
+"year": "2011",
+"entry": "14240",
+"key": "",
+"signed": "",
+"evidence": "SIBLINGS 29/29 in box 13, run #2-#527 (inside)"
+},
+{
+"tier": "HIGH",
+"guess_box": "13",
+"box_exists": "yes",
+"title": "Invincible Iron Man",
+"issue": "509",
+"volume": "2",
+"year": "2011",
+"entry": "14241",
+"key": "",
+"signed": "",
+"evidence": "SIBLINGS 29/29 in box 13, run #2-#527 (inside)"
+},
+{
+"tier": "HIGH",
+"guess_box": "15",
+"box_exists": "yes",
+"title": "Uncanny X-Men",
+"issue": "21",
+"volume": "3",
+"year": "2014",
+"entry": "14100",
+"key": "YES",
+"signed": "NO",
+"evidence": "SIBLINGS 17/17 in box 15, run #1-#34 (inside)"
+},
+{
+"tier": "HIGH",
+"guess_box": "15",
+"box_exists": "yes",
+"title": "Uncanny X-Men",
+"issue": "22",
+"volume": "3",
+"year": "2014",
+"entry": "14101",
+"key": "YES",
+"signed": "NO",
+"evidence": "SIBLINGS 17/17 in box 15, run #1-#34 (inside)"
+},
+{
+"tier": "HIGH",
+"guess_box": "15",
+"box_exists": "yes",
+"title": "Uncanny X-Men",
+"issue": "24",
+"volume": "3",
+"year": "2014",
+"entry": "14102",
+"key": "YES",
+"signed": "NO",
+"evidence": "SIBLINGS 17/17 in box 15, run #1-#34 (inside)"
+},
+{
+"tier": "HIGH",
+"guess_box": "36",
+"box_exists": "no",
+"title": "Bloodhunt: Moon Knight",
+"issue": "1",
+"volume": "8",
+"year": "2024",
+"entry": "14327",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 36 (last seen 2026-07-21)"
+},
+{
+"tier": "HIGH",
+"guess_box": "36",
+"box_exists": "no",
+"title": "Doctor Strange Annual",
+"issue": "1",
+"volume": "3",
+"year": "2019",
+"entry": "4194",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-ROW box 36 (last seen 2026-07-25, 26 snapshot(s))"
+},
+{
+"tier": "HIGH",
+"guess_box": "36",
+"box_exists": "no",
+"title": "Inglorious X-Force",
+"issue": "1",
+"volume": "8",
+"year": "2025",
+"entry": "4122",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-ROW box 36 (last seen 2026-07-25, 30 snapshot(s))"
+},
+{
+"tier": "HIGH",
+"guess_box": "36",
+"box_exists": "no",
+"title": "Moon Knight Annual",
+"issue": "1",
+"volume": "5",
+"year": "2024",
+"entry": "4142",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-ROW box 36 (last seen 2026-07-25, 30 snapshot(s))"
+},
+{
+"tier": "HIGH",
+"guess_box": "38",
+"box_exists": "no",
+"title": "The Flash",
+"issue": "Foil Cover (verify issue)",
+"volume": "7",
+"year": "2024",
+"entry": "13623",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 38 (last seen 2026-06-02)"
+},
+{
+"tier": "HIGH",
+"guess_box": "38",
+"box_exists": "no",
+"title": "West Coast Avengers",
+"issue": "Foil Cover (verify issue)",
+"volume": "8",
+"year": "2024",
+"entry": "13621",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 38 (last seen 2026-06-02)"
+},
+{
+"tier": "HIGH",
+"guess_box": "42",
+"box_exists": "yes",
+"title": "Astonishing X-Men: Ghost Boxes",
+"issue": "2",
+"volume": "1",
+"year": "2008",
+"entry": "13717",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 42 (last seen 2026-05-23)"
+},
+{
+"tier": "HIGH",
+"guess_box": "42",
+"box_exists": "yes",
+"title": "Martian Manhunter",
+"issue": "2",
+"volume": "4",
+"year": "2015",
+"entry": "14289",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 42 (last seen 2026-05-29)"
+},
+{
+"tier": "HIGH",
+"guess_box": "42",
+"box_exists": "yes",
+"title": "Martian Manhunter",
+"issue": "3",
+"volume": "4",
+"year": "2015",
+"entry": "14290",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 42 (last seen 2026-05-29)"
+},
+{
+"tier": "HIGH",
+"guess_box": "63",
+"box_exists": "no",
+"title": "Absolute Green Lantern",
+"issue": "1",
+"volume": "7",
+"year": "2024",
+"entry": "13683",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 63 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "63",
+"box_exists": "no",
+"title": "Guy Gardner: Tales of the Green Lantern Corps",
+"issue": "1",
+"volume": "7",
+"year": "2025",
+"entry": "13684",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 63 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "68",
+"box_exists": "yes",
+"title": "DC: 5 of a Kind — Katana/Shazam",
+"issue": "1",
+"volume": "1",
+"year": "2007",
+"entry": "14285",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 68 (last seen 2026-07-20)"
+},
+{
+"tier": "HIGH",
+"guess_box": "68",
+"box_exists": "yes",
+"title": "DC: 5 of a Kind — Metamorpho/Aquaman",
+"issue": "1",
+"volume": "1",
+"year": "2007",
+"entry": "14287",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 68 (last seen 2026-07-20)"
+},
+{
+"tier": "HIGH",
+"guess_box": "68",
+"box_exists": "yes",
+"title": "DC: 5 of a Kind — Nightwing/Captain Boomerang",
+"issue": "1",
+"volume": "1",
+"year": "2007",
+"entry": "14284",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 68 (last seen 2026-07-20)"
+},
+{
+"tier": "HIGH",
+"guess_box": "68",
+"box_exists": "yes",
+"title": "DC: 5 of a Kind — Thunder/Martian Manhunter",
+"issue": "1",
+"volume": "1",
+"year": "2007",
+"entry": "14286",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 68 (last seen 2026-07-20)"
+},
+{
+"tier": "HIGH",
+"guess_box": "68",
+"box_exists": "yes",
+"title": "DC: 5 of a Kind — Wonder Woman/Grace",
+"issue": "1",
+"volume": "1",
+"year": "2007",
+"entry": "14288",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 68 (last seen 2026-07-20)"
+},
+{
+"tier": "HIGH",
+"guess_box": "72",
+"box_exists": "yes",
+"title": "Worlds Collide",
+"issue": "15",
+"volume": "1",
+"year": "1994",
+"entry": "13639",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 72 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "73",
+"box_exists": "no",
+"title": "Giant-Size X-Men: Apocalypse",
+"issue": "1",
+"volume": "6",
+"year": "2023",
+"entry": "13637",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 73 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "73",
+"box_exists": "no",
+"title": "Wolverine: Fall of X",
+"issue": "39",
+"volume": "7",
+"year": "2024",
+"entry": "13638",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 73 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "74",
+"box_exists": "no",
+"title": "Batman: No Man's Land",
+"issue": "3",
+"volume": "74",
+"year": "2000",
+"entry": "13921",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 74 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "74",
+"box_exists": "no",
+"title": "Crimson: Earth Angel",
+"issue": "1",
+"volume": "74",
+"year": "2001",
+"entry": "13913",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 74 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "74",
+"box_exists": "no",
+"title": "Crimson: Heaven and Earth",
+"issue": "1",
+"volume": "74",
+"year": "2000",
+"entry": "13912",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 74 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "74",
+"box_exists": "no",
+"title": "Crimson: Loyalty and Loss",
+"issue": "1",
+"volume": "74",
+"year": "1999",
+"entry": "13911",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 74 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "74",
+"box_exists": "no",
+"title": "JLA: A League of One",
+"issue": "1",
+"volume": "74",
+"year": "2000",
+"entry": "13909",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 74 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "74",
+"box_exists": "no",
+"title": "JLA: Earth 2",
+"issue": "1",
+"volume": "74",
+"year": "2000",
+"entry": "13923",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 74 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "74",
+"box_exists": "no",
+"title": "Revelations",
+"issue": "1",
+"volume": "74",
+"year": "1996",
+"entry": "13916",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 74 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "74",
+"box_exists": "no",
+"title": "Spider-Man by Bendis/Pichelli",
+"issue": "1",
+"volume": "74",
+"year": "2011",
+"entry": "13900",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 74 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "74",
+"box_exists": "no",
+"title": "Spider-Man: The Gauntlet",
+"issue": "1",
+"volume": "74",
+"year": "2010",
+"entry": "13915",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 74 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "74",
+"box_exists": "no",
+"title": "Superman and the Legion of Super-Heroes",
+"issue": "1",
+"volume": "74",
+"year": "2008",
+"entry": "13905",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 74 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "74",
+"box_exists": "no",
+"title": "The Amazing Adventures of the Escapist",
+"issue": "1",
+"volume": "74",
+"year": "2004",
+"entry": "13919",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 74 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "74",
+"box_exists": "no",
+"title": "The Final Night",
+"issue": "1",
+"volume": "74",
+"year": "1996",
+"entry": "13917",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 74 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "74",
+"box_exists": "no",
+"title": "Thor: The Death of Odin",
+"issue": "1",
+"volume": "74",
+"year": "2001",
+"entry": "13902",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 74 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "74",
+"box_exists": "no",
+"title": "Ultimate X-Men",
+"issue": "2",
+"volume": "74",
+"year": "2001",
+"entry": "13904",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 74 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "74",
+"box_exists": "no",
+"title": "X-Men: Asgardian Wars",
+"issue": "1",
+"volume": "74",
+"year": "1985",
+"entry": "13901",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 74 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "74",
+"box_exists": "no",
+"title": "X-Men: The Next Generation",
+"issue": "1",
+"volume": "74",
+"year": "2006",
+"entry": "13914",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 74 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "76",
+"box_exists": "no",
+"title": "Batman: Off World",
+"issue": "1",
+"volume": "1",
+"year": "2024",
+"entry": "13947",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 76 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "76",
+"box_exists": "no",
+"title": "Batman: Off World",
+"issue": "#1",
+"volume": "1",
+"year": "2024",
+"entry": "14294",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 76 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "76",
+"box_exists": "no",
+"title": "Batman: Off World",
+"issue": "3",
+"volume": "1",
+"year": "2024",
+"entry": "13948",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 76 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "76",
+"box_exists": "no",
+"title": "Batman: Off World",
+"issue": "4",
+"volume": "1",
+"year": "2024",
+"entry": "13949",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 76 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "76",
+"box_exists": "no",
+"title": "Batman: Off World",
+"issue": "5",
+"volume": "1",
+"year": "2024",
+"entry": "13950",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 76 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "76",
+"box_exists": "no",
+"title": "Batman: Off World",
+"issue": "6",
+"volume": "1",
+"year": "2024",
+"entry": "13951",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 76 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "76",
+"box_exists": "no",
+"title": "DC Boss Battle",
+"issue": "1",
+"volume": "1",
+"year": "2025",
+"entry": "13952",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 76 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "76",
+"box_exists": "no",
+"title": "Green Arrow Reprint",
+"issue": "1",
+"volume": "6",
+"year": "2024",
+"entry": "13953",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 76 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "76",
+"box_exists": "no",
+"title": "Justice League/Godzilla vs. King Kong",
+"issue": "1",
+"volume": "1",
+"year": "2024",
+"entry": "13957",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 76 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "76",
+"box_exists": "no",
+"title": "Justice League/Godzilla vs. King Kong",
+"issue": "2",
+"volume": "1",
+"year": "2024",
+"entry": "13958",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 76 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "76",
+"box_exists": "no",
+"title": "Justice League/Godzilla vs. King Kong",
+"issue": "3",
+"volume": "1",
+"year": "2024",
+"entry": "13959",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 76 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "76",
+"box_exists": "no",
+"title": "Justice League/Godzilla vs. King Kong",
+"issue": "4",
+"volume": "1",
+"year": "2024",
+"entry": "13960",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 76 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "76",
+"box_exists": "no",
+"title": "Justice League/Godzilla vs. King Kong",
+"issue": "5",
+"volume": "1",
+"year": "2024",
+"entry": "13961",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 76 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "76",
+"box_exists": "no",
+"title": "Justice League/Godzilla vs. King Kong",
+"issue": "6",
+"volume": "1",
+"year": "2024",
+"entry": "13962",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 76 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "76",
+"box_exists": "no",
+"title": "Justice League/Godzilla vs. King Kong",
+"issue": "7",
+"volume": "1",
+"year": "2024",
+"entry": "13963",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 76 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "76",
+"box_exists": "no",
+"title": "Justice League: Intergalactic Special",
+"issue": "1",
+"volume": "1",
+"year": "2025",
+"entry": "13964",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 76 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "76",
+"box_exists": "no",
+"title": "New Titans",
+"issue": "35",
+"volume": "5",
+"year": "1992",
+"entry": "13924",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 76 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "76",
+"box_exists": "no",
+"title": "Static Beyond",
+"issue": "1",
+"volume": "1",
+"year": "2026",
+"entry": "13933",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 76 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "76",
+"box_exists": "no",
+"title": "Static Beyond",
+"issue": "2",
+"volume": "1",
+"year": "2026",
+"entry": "13934",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 76 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "76",
+"box_exists": "no",
+"title": "Static Beyond",
+"issue": "3",
+"volume": "1",
+"year": "2026",
+"entry": "13935",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 76 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "76",
+"box_exists": "no",
+"title": "Static Beyond",
+"issue": "4",
+"volume": "1",
+"year": "2026",
+"entry": "13936",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 76 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "76",
+"box_exists": "no",
+"title": "Static Beyond",
+"issue": "5",
+"volume": "1",
+"year": "2026",
+"entry": "13937",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 76 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "76",
+"box_exists": "no",
+"title": "Static Beyond",
+"issue": "6",
+"volume": "1",
+"year": "2026",
+"entry": "13938",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 76 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "50 Girls 50",
+"issue": "1",
+"volume": "1",
+"year": "2011",
+"entry": "14017",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "All New Firefly: Big Damn Finale",
+"issue": "1",
+"volume": "1",
+"year": "2022",
+"entry": "14030",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Bitterroot",
+"issue": "35",
+"volume": "1",
+"year": "2025",
+"entry": "14019",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Doctor Who: The Prison Paradox",
+"issue": "1",
+"volume": "1",
+"year": "2024",
+"entry": "14014",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Firefly: Keep Flying",
+"issue": "1",
+"volume": "1",
+"year": "2023",
+"entry": "14031",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Firefly: Malcolm Reynolds — Year One",
+"issue": "1",
+"volume": "1",
+"year": "2023",
+"entry": "14032",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Firefly: The Sting",
+"issue": "1",
+"volume": "1",
+"year": "2022",
+"entry": "14023",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Firefly: The Sting",
+"issue": "2",
+"volume": "1",
+"year": "2022",
+"entry": "14024",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Firefly: The Sting",
+"issue": "3",
+"volume": "1",
+"year": "2022",
+"entry": "14025",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Firefly: The Sting",
+"issue": "4",
+"volume": "1",
+"year": "2022",
+"entry": "14026",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Firefly: The Sting",
+"issue": "5",
+"volume": "1",
+"year": "2022",
+"entry": "14027",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Firefly: The Sting",
+"issue": "6",
+"volume": "1",
+"year": "2022",
+"entry": "14028",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "For the Rival",
+"issue": "30",
+"volume": "1",
+"year": "2024",
+"entry": "14003",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Gatchaman Bloodline",
+"issue": "1",
+"volume": "1",
+"year": "2024",
+"entry": "13996",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Gatchaman Jun: Apex Heart",
+"issue": "1",
+"volume": "1",
+"year": "2024",
+"entry": "13992",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Gatchaman Rayu: Scavengers",
+"issue": "1",
+"volume": "1",
+"year": "2024",
+"entry": "13997",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Gatchaman: Only One Earth",
+"issue": "1",
+"volume": "1",
+"year": "2024",
+"entry": "13993",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Gatchaman: Only One Earth",
+"issue": "2",
+"volume": "1",
+"year": "2024",
+"entry": "13994",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Gatchaman: Only One Earth",
+"issue": "3",
+"volume": "1",
+"year": "2024",
+"entry": "13995",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Guy in the Chair",
+"issue": "2",
+"volume": "1",
+"year": "2024",
+"entry": "14004",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Guy in the Chair",
+"issue": "3",
+"volume": "1",
+"year": "2024",
+"entry": "14005",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Guy in the Chair",
+"issue": "4",
+"volume": "1",
+"year": "2024",
+"entry": "14006",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Nancy Boys",
+"issue": "2",
+"volume": "1",
+"year": "2024",
+"entry": "14008",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Nancy Boys",
+"issue": "3",
+"volume": "1",
+"year": "2024",
+"entry": "14009",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Nancy Boys",
+"issue": "4",
+"volume": "1",
+"year": "2024",
+"entry": "14010",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Nancy Boys",
+"issue": "5",
+"volume": "1",
+"year": "2024",
+"entry": "14011",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Nancy Boys",
+"issue": "6",
+"volume": "1",
+"year": "2024",
+"entry": "14012",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Nancy Boys",
+"issue": "7",
+"volume": "1",
+"year": "2024",
+"entry": "14013",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Neil Gaiman's Neverwhere",
+"issue": "1",
+"volume": "1",
+"year": "2005",
+"entry": "14016",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Radiant Black: The Story So Far",
+"issue": "1",
+"volume": "1",
+"year": "2024",
+"entry": "14018",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Rocketeer: Breaks Free",
+"issue": "1",
+"volume": "1",
+"year": "2024",
+"entry": "14002",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Rocketeer: Den of Thieves",
+"issue": "1",
+"volume": "1",
+"year": "2023",
+"entry": "13998",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Rocketeer: Den of Thieves",
+"issue": "2",
+"volume": "1",
+"year": "2023",
+"entry": "13999",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Rocketeer: Den of Thieves",
+"issue": "3",
+"volume": "1",
+"year": "2023",
+"entry": "14000",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Rocketeer: Den of Thieves",
+"issue": "4",
+"volume": "1",
+"year": "2023",
+"entry": "14001",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Silver Hawks",
+"issue": "1",
+"volume": "1",
+"year": "2025",
+"entry": "13967",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "The Last Starship",
+"issue": "1",
+"volume": "1",
+"year": "2024",
+"entry": "14059",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Thundercats and Silver Hawks",
+"issue": "1",
+"volume": "1",
+"year": "2025",
+"entry": "13965",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Thundercats and Silver Hawks",
+"issue": "2",
+"volume": "1",
+"year": "2025",
+"entry": "13966",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "78",
+"box_exists": "no",
+"title": "World of Revelation",
+"issue": "1",
+"volume": "1",
+"year": "2025",
+"entry": "14060",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 78 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "79",
+"box_exists": "no",
+"title": "Avengers: Empyre",
+"issue": "0",
+"volume": "1",
+"year": "2020",
+"entry": "12282",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-ROW box 79 (last seen 2026-07-25, 30 snapshot(s))"
+},
+{
+"tier": "HIGH",
+"guess_box": "79",
+"box_exists": "no",
+"title": "Godzilla vs. Avengers",
+"issue": "1",
+"volume": "1",
+"year": "2025",
+"entry": "12357",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-ROW box 79 (last seen 2026-07-25, 30 snapshot(s))"
+},
+{
+"tier": "HIGH",
+"guess_box": "79",
+"box_exists": "no",
+"title": "Incredible Hulk",
+"issue": "25",
+"volume": "6",
+"year": "2024",
+"entry": "12352",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-ROW box 79 (last seen 2026-07-25, 30 snapshot(s))"
+},
+{
+"tier": "HIGH",
+"guess_box": "79",
+"box_exists": "no",
+"title": "Lords of Empyre: Emperor Hulkling",
+"issue": "1",
+"volume": "1",
+"year": "2020",
+"entry": "12276",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-ROW box 79 (last seen 2026-07-25, 30 snapshot(s))"
+},
+{
+"tier": "HIGH",
+"guess_box": "79",
+"box_exists": "no",
+"title": "Midnight Sons: Blood Hunt",
+"issue": "1",
+"volume": "1",
+"year": "2024",
+"entry": "12316",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-ROW box 79 (last seen 2026-07-25, 30 snapshot(s))"
+},
+{
+"tier": "HIGH",
+"guess_box": "79",
+"box_exists": "no",
+"title": "Scarlet Witch",
+"issue": "1",
+"volume": "1",
+"year": "2024",
+"entry": "12298",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-ROW box 79 (last seen 2026-07-25, 26 snapshot(s))"
+},
+{
+"tier": "HIGH",
+"guess_box": "79",
+"box_exists": "no",
+"title": "Silver Surfer Rebirth: Legacy",
+"issue": "1",
+"volume": "1",
+"year": "2024",
+"entry": "12350",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-ROW box 79 (last seen 2026-07-25, 30 snapshot(s))"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "All-New X-Factor",
+"issue": "2",
+"volume": "1",
+"year": "2014",
+"entry": "14139",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "All-New X-Factor",
+"issue": "3",
+"volume": "1",
+"year": "2014",
+"entry": "14140",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "All-New X-Factor",
+"issue": "16",
+"volume": "1",
+"year": "2015",
+"entry": "14141",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Amazing X-Men",
+"issue": "5",
+"volume": "1",
+"year": "2014",
+"entry": "14146",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Amazing X-Men",
+"issue": "6",
+"volume": "1",
+"year": "2014",
+"entry": "14147",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Amazing X-Men",
+"issue": "7",
+"volume": "1",
+"year": "2014",
+"entry": "14148",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Amazing X-Men",
+"issue": "8",
+"volume": "1",
+"year": "2014",
+"entry": "14149",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Amazing X-Men",
+"issue": "9",
+"volume": "1",
+"year": "2014",
+"entry": "14150",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Amazing X-Men",
+"issue": "10",
+"volume": "1",
+"year": "2014",
+"entry": "14151",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Amazing X-Men",
+"issue": "13",
+"volume": "1",
+"year": "2015",
+"entry": "14143",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Amazing X-Men",
+"issue": "14",
+"volume": "1",
+"year": "2015",
+"entry": "14144",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Cataclysm: Ultimate Comics",
+"issue": "3",
+"volume": "1",
+"year": "2014",
+"entry": "14234",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Deadpool: Mercs for Money",
+"issue": "3",
+"volume": "1",
+"year": "2016",
+"entry": "14226",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Deadpool: Mercs for Money",
+"issue": "4",
+"volume": "1",
+"year": "2016",
+"entry": "14227",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Deadpool: Mercs for Money",
+"issue": "6",
+"volume": "1",
+"year": "2016",
+"entry": "14228",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Death of Wolverine",
+"issue": "2",
+"volume": "1",
+"year": "2014",
+"entry": "14165",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Death of Wolverine",
+"issue": "3",
+"volume": "1",
+"year": "2014",
+"entry": "14166",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Death of Wolverine",
+"issue": "4",
+"volume": "1",
+"year": "2014",
+"entry": "14167",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Death of Wolverine: Deadpool & Captain America",
+"issue": "1",
+"volume": "1",
+"year": "2014",
+"entry": "14168",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Gambit",
+"issue": "6",
+"volume": "1",
+"year": "2012",
+"entry": "14216",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Gambit",
+"issue": "7",
+"volume": "1",
+"year": "2012",
+"entry": "14217",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Gambit",
+"issue": "9",
+"volume": "1",
+"year": "2013",
+"entry": "14218",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Gambit",
+"issue": "10",
+"volume": "1",
+"year": "2013",
+"entry": "14219",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Gambit",
+"issue": "11",
+"volume": "1",
+"year": "2013",
+"entry": "14220",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Gambit",
+"issue": "13",
+"volume": "1",
+"year": "2013",
+"entry": "14221",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Gambit",
+"issue": "14",
+"volume": "1",
+"year": "2013",
+"entry": "14222",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Gambit",
+"issue": "15",
+"volume": "1",
+"year": "2013",
+"entry": "14223",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Gambit",
+"issue": "16",
+"volume": "1",
+"year": "2013",
+"entry": "14224",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Gambit",
+"issue": "17",
+"volume": "1",
+"year": "2013",
+"entry": "14225",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Magneto",
+"issue": "2",
+"volume": "1",
+"year": "2014",
+"entry": "14189",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Magneto",
+"issue": "3",
+"volume": "1",
+"year": "2014",
+"entry": "14190",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Magneto",
+"issue": "4",
+"volume": "1",
+"year": "2014",
+"entry": "14191",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Magneto",
+"issue": "5",
+"volume": "1",
+"year": "2014",
+"entry": "14192",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Magneto",
+"issue": "6",
+"volume": "1",
+"year": "2014",
+"entry": "14193",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Magneto",
+"issue": "9",
+"volume": "1",
+"year": "2015",
+"entry": "14194",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Magneto",
+"issue": "10",
+"volume": "1",
+"year": "2015",
+"entry": "14195",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Magneto",
+"issue": "11",
+"volume": "1",
+"year": "2015",
+"entry": "14196",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Magneto",
+"issue": "12",
+"volume": "1",
+"year": "2015",
+"entry": "14197",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Magneto",
+"issue": "13",
+"volume": "1",
+"year": "2015",
+"entry": "14198",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Magneto",
+"issue": "14",
+"volume": "1",
+"year": "2015",
+"entry": "14199",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Magneto",
+"issue": "15",
+"volume": "1",
+"year": "2015",
+"entry": "14200",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Magneto",
+"issue": "16",
+"volume": "1",
+"year": "2015",
+"entry": "14201",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Magneto",
+"issue": "18",
+"volume": "1",
+"year": "2015",
+"entry": "14202",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Nightcrawler",
+"issue": "3",
+"volume": "1",
+"year": "2014",
+"entry": "14170",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Nightcrawler",
+"issue": "4",
+"volume": "1",
+"year": "2014",
+"entry": "14171",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Nightcrawler",
+"issue": "5",
+"volume": "1",
+"year": "2014",
+"entry": "14172",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Nightcrawler",
+"issue": "6",
+"volume": "1",
+"year": "2014",
+"entry": "14173",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Nightcrawler",
+"issue": "7",
+"volume": "1",
+"year": "2014",
+"entry": "14174",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Nightcrawler",
+"issue": "8",
+"volume": "1",
+"year": "2014",
+"entry": "14175",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Old Man Logan",
+"issue": "1",
+"volume": "1",
+"year": "2016",
+"entry": "14176",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Old Man Logan",
+"issue": "2",
+"volume": "1",
+"year": "2016",
+"entry": "14177",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Old Man Logan",
+"issue": "3",
+"volume": "1",
+"year": "2016",
+"entry": "14178",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Old Man Logan",
+"issue": "4",
+"volume": "1",
+"year": "2016",
+"entry": "14179",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Old Man Logan",
+"issue": "5",
+"volume": "1",
+"year": "2016",
+"entry": "14180",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Old Man Logan",
+"issue": "6",
+"volume": "1",
+"year": "2016",
+"entry": "14181",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Old Man Logan",
+"issue": "7",
+"volume": "1",
+"year": "2016",
+"entry": "14182",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Old Man Logan",
+"issue": "8",
+"volume": "1",
+"year": "2016",
+"entry": "14183",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Old Man Logan",
+"issue": "9",
+"volume": "1",
+"year": "2016",
+"entry": "14184",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Old Man Logan",
+"issue": "10",
+"volume": "1",
+"year": "2016",
+"entry": "14185",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Old Man Logan",
+"issue": "13",
+"volume": "1",
+"year": "2017",
+"entry": "14186",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Old Man Logan",
+"issue": "14",
+"volume": "1",
+"year": "2017",
+"entry": "14187",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Savage Wolverine",
+"issue": "2",
+"volume": "1",
+"year": "2013",
+"entry": "14152",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Savage Wolverine",
+"issue": "3",
+"volume": "1",
+"year": "2013",
+"entry": "14153",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Savage Wolverine",
+"issue": "4",
+"volume": "1",
+"year": "2013",
+"entry": "14154",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Savage Wolverine",
+"issue": "6",
+"volume": "1",
+"year": "2013",
+"entry": "14155",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Survive!",
+"issue": "1",
+"volume": "1",
+"year": "2014",
+"entry": "14235",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Wolverine and the X-Men: Alpha & Omega",
+"issue": "1",
+"volume": "1",
+"year": "2012",
+"entry": "14131",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "X-Force and Cable",
+"issue": "8",
+"volume": "1",
+"year": "2014",
+"entry": "14134",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "X-Force and Cable",
+"issue": "9",
+"volume": "1",
+"year": "2014",
+"entry": "14135",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "X-Force and Cable",
+"issue": "10",
+"volume": "1",
+"year": "2014",
+"entry": "14136",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "X-Force and Cable",
+"issue": "16",
+"volume": "1",
+"year": "2015",
+"entry": "14137",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "X-Men: Event",
+"issue": "9",
+"volume": "1",
+"year": "2014",
+"entry": "14230",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "X-Men: Event",
+"issue": "10",
+"volume": "1",
+"year": "2014",
+"entry": "14231",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "X-Men: Event",
+"issue": "11",
+"volume": "1",
+"year": "2014",
+"entry": "14232",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "81",
+"box_exists": "no",
+"title": "X-Men: Event",
+"issue": "12",
+"volume": "1",
+"year": "2014",
+"entry": "14233",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Animal Man Annual",
+"issue": "1",
+"volume": "2",
+"year": "2012",
+"entry": "13815",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Animal Man Annual",
+"issue": "2",
+"volume": "2",
+"year": "2012",
+"entry": "13816",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Aquaman and the Others",
+"issue": "1",
+"volume": "1",
+"year": "2014",
+"entry": "13819",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Aquaman and the Others",
+"issue": "2",
+"volume": "1",
+"year": "2014",
+"entry": "13820",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Arrow",
+"issue": "1",
+"volume": "1",
+"year": "2013",
+"entry": "13893",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Batman/Doc Savage Special",
+"issue": "1",
+"volume": "1",
+"year": "2010",
+"entry": "13887",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Cyborg: Rebirth",
+"issue": "1",
+"volume": "1",
+"year": "2016",
+"entry": "13793",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Divergence: DC Comics",
+"issue": "1",
+"volume": "1",
+"year": "2015",
+"entry": "13888",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Future Quest",
+"issue": "1",
+"volume": "1",
+"year": "2016",
+"entry": "13895",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "G.I. Combat",
+"issue": "1",
+"volume": "3",
+"year": "2012",
+"entry": "13894",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Green Lantern Annual",
+"issue": "4",
+"volume": "5",
+"year": "2015",
+"entry": "13803",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Martian Manhunter",
+"issue": "7",
+"volume": "4",
+"year": "2015",
+"entry": "13870",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Martian Manhunter",
+"issue": "8",
+"volume": "4",
+"year": "2015",
+"entry": "13871",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Midnighter",
+"issue": "1",
+"volume": "2",
+"year": "2015",
+"entry": "13898",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Orphan Black",
+"issue": "1",
+"volume": "1",
+"year": "2015",
+"entry": "13896",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Team 7",
+"issue": "2",
+"volume": "1",
+"year": "2012",
+"entry": "13876",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Team 7",
+"issue": "4",
+"volume": "1",
+"year": "2012",
+"entry": "13877",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Team 7",
+"issue": "5",
+"volume": "1",
+"year": "2012",
+"entry": "13878",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Team 7",
+"issue": "6",
+"volume": "1",
+"year": "2012",
+"entry": "13879",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Team 7",
+"issue": "7",
+"volume": "1",
+"year": "2012",
+"entry": "13880",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Team 7",
+"issue": "8",
+"volume": "1",
+"year": "2012",
+"entry": "13881",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "The Flash Annual",
+"issue": "3",
+"volume": "4",
+"year": "2014",
+"entry": "13800",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "The Flash: Season Zero",
+"issue": "1",
+"volume": "1",
+"year": "2014",
+"entry": "13892",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "The Ravagers",
+"issue": "1",
+"volume": "1",
+"year": "2012",
+"entry": "13806",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "The Ray",
+"issue": "2",
+"volume": "3",
+"year": "2012",
+"entry": "13872",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "The Ray",
+"issue": "3",
+"volume": "3",
+"year": "2012",
+"entry": "13873",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "The Ray",
+"issue": "4",
+"volume": "3",
+"year": "2012",
+"entry": "13874",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Titans Hunt",
+"issue": "1",
+"volume": "1",
+"year": "2015",
+"entry": "13807",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Titans Hunt",
+"issue": "2",
+"volume": "1",
+"year": "2015",
+"entry": "13808",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Titans Hunt",
+"issue": "3",
+"volume": "1",
+"year": "2015",
+"entry": "13809",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Titans Hunt",
+"issue": "4",
+"volume": "1",
+"year": "2015",
+"entry": "13810",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Titans Hunt",
+"issue": "5",
+"volume": "1",
+"year": "2015",
+"entry": "13811",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Titans Hunt",
+"issue": "6",
+"volume": "1",
+"year": "2015",
+"entry": "13812",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Titans Hunt",
+"issue": "7",
+"volume": "1",
+"year": "2015",
+"entry": "13813",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Titans Hunt",
+"issue": "8",
+"volume": "1",
+"year": "2015",
+"entry": "13814",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Young Gotham Sampler",
+"issue": "1",
+"volume": "1",
+"year": "2015",
+"entry": "13889",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "87",
+"box_exists": "yes",
+"title": "Guardians of the Galaxy",
+"issue": "100",
+"volume": "1",
+"year": "2014",
+"entry": "14246",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 87 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "87",
+"box_exists": "yes",
+"title": "Star Brand and Nightmask",
+"issue": "1",
+"volume": "1",
+"year": "2016",
+"entry": "14247",
+"key": "YES",
+"signed": "",
+"evidence": "HISTORY-BOOK box 87 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "Captain Atom: Armageddon",
+"issue": "2",
+"volume": "1",
+"year": "2005",
+"entry": "12998",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "Captain Atom: Armageddon",
+"issue": "3",
+"volume": "1",
+"year": "2005",
+"entry": "12999",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "Captain Atom: Armageddon",
+"issue": "4",
+"volume": "1",
+"year": "2005",
+"entry": "13000",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "Captain Atom: Armageddon",
+"issue": "5",
+"volume": "1",
+"year": "2005",
+"entry": "13001",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "Captain Atom: Armageddon",
+"issue": "6",
+"volume": "1",
+"year": "2005",
+"entry": "13002",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "Captain Atom: Armageddon",
+"issue": "7",
+"volume": "1",
+"year": "2005",
+"entry": "13003",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "Captain Atom: Armageddon",
+"issue": "8",
+"volume": "1",
+"year": "2005",
+"entry": "13004",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "Captain Atom: Armageddon",
+"issue": "9",
+"volume": "1",
+"year": "2005",
+"entry": "13005",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "First Wave",
+"issue": "1",
+"volume": "1",
+"year": "2010",
+"entry": "13016",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "First Wave",
+"issue": "2",
+"volume": "1",
+"year": "2010",
+"entry": "13017",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "First Wave",
+"issue": "3",
+"volume": "1",
+"year": "2010",
+"entry": "13018",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "First Wave",
+"issue": "4",
+"volume": "1",
+"year": "2010",
+"entry": "13019",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "First Wave",
+"issue": "5",
+"volume": "1",
+"year": "2010",
+"entry": "13020",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "First Wave",
+"issue": "6",
+"volume": "1",
+"year": "2010",
+"entry": "13021",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "The All-New Atom",
+"issue": "1",
+"volume": "1",
+"year": "2006",
+"entry": "13023",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "89",
+"box_exists": "no",
+"title": "Avengers World",
+"issue": "7",
+"volume": "1",
+"year": "2014",
+"entry": "13054",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 89 (last seen 2026-06-13)"
+},
+{
+"tier": "HIGH",
+"guess_box": "CC5",
+"box_exists": "yes",
+"title": "The Fury of Firestorm",
+"issue": "1",
+"volume": "1",
+"year": "1982",
+"entry": "13615",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box CC5 (last seen 2026-09-13) | SIBLINGS 1/1 in box 26, run #1-#1 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "2",
+"box_exists": "no",
+"title": "Uncanny X-Men",
+"issue": "136",
+"volume": "1",
+"year": "1980",
+"entry": "14282",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 2 (last seen 2026-06-02) | SIBLINGS 34/54 in box 3, run #453-#544 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "2",
+"box_exists": "no",
+"title": "Uncanny X-Men",
+"issue": "416",
+"volume": "1",
+"year": "2003",
+"entry": "13723",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 2 (last seen 2026-06-13) | SIBLINGS 34/54 in box 3, run #453-#544 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "2",
+"box_exists": "no",
+"title": "Uncanny X-Men",
+"issue": "533",
+"volume": "3",
+"year": "2008",
+"entry": "13722",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 2 (last seen 2026-06-13) | SIBLINGS 17/17 in box 15, run #1-#34 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "3",
+"box_exists": "yes",
+"title": "JSA",
+"issue": "10",
+"volume": "1",
+"year": "2000",
+"entry": "13616",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 3 (last seen 2026-06-11) | SIBLINGS 15/18 in box 54, run #4-#18 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "3",
+"box_exists": "yes",
+"title": "JSA",
+"issue": "#11",
+"volume": "1",
+"year": "2000",
+"entry": "13617",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 3 (last seen 2026-06-11) | SIBLINGS 15/18 in box 54, run #4-#18 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "3",
+"box_exists": "yes",
+"title": "JSA",
+"issue": "#11",
+"volume": "1",
+"year": "2000",
+"entry": "14292",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 3 (last seen 2026-06-11) | SIBLINGS 15/18 in box 54, run #4-#18 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "3",
+"box_exists": "yes",
+"title": "JSA",
+"issue": "12",
+"volume": "1",
+"year": "2000",
+"entry": "13618",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 3 (last seen 2026-06-11) | SIBLINGS 15/18 in box 54, run #4-#18 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "3",
+"box_exists": "yes",
+"title": "JSA",
+"issue": "13",
+"volume": "1",
+"year": "2001",
+"entry": "13619",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 3 (last seen 2026-06-11) | SIBLINGS 15/18 in box 54, run #4-#18 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "3",
+"box_exists": "yes",
+"title": "Marvel Two-in-One",
+"issue": "24",
+"volume": "1",
+"year": "1977",
+"entry": "13636",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 3 (last seen 2026-06-13) | SIBLINGS 1/1 in box 102, run #19-#19 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "3",
+"box_exists": "yes",
+"title": "Marvel Two-in-One",
+"issue": "41",
+"volume": "1",
+"year": "1978",
+"entry": "13635",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 3 (last seen 2026-06-13) | SIBLINGS 1/1 in box 102, run #19-#19 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "4",
+"box_exists": "yes",
+"title": "Fantastic Four",
+"issue": "Foil Cover (verify issue)",
+"volume": "1",
+"year": "2024",
+"entry": "13620",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 4 (last seen 2026-06-02) | SIBLINGS 4/9 in box 72, run #5-#414 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "4",
+"box_exists": "yes",
+"title": "Green Lantern",
+"issue": "Foil Cover (verify issue)",
+"volume": "1",
+"year": "2024",
+"entry": "13624",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 4 (last seen 2026-05-23) | SIBLINGS 1/2 in box 82, run #0-#0 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "4",
+"box_exists": "yes",
+"title": "Secret Six",
+"issue": "Foil Cover (verify issue)",
+"volume": "1",
+"year": "2024",
+"entry": "13625",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 4 (last seen 2026-06-02) | SIBLINGS 2/2 in box 62, run #2-#3 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "4",
+"box_exists": "yes",
+"title": "Titans",
+"issue": "Foil Cover (verify issue)",
+"volume": "1",
+"year": "2024",
+"entry": "13628",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 4 (last seen 2026-06-02) | SIBLINGS 1/1 in box 48, run #28-#28 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "6",
+"box_exists": "yes",
+"title": "Absolute Batman",
+"issue": "9",
+"volume": "1",
+"year": "2025",
+"entry": "13682",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 6 (last seen 2026-05-23) | SIBLINGS 13/16 in box 104, run #2-#23 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "6",
+"box_exists": "yes",
+"title": "Absolute Green Lantern",
+"issue": "1",
+"volume": "1",
+"year": "2024",
+"entry": "14293",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 6 (last seen 2026-05-29) | SIBLINGS 15/17 in box 104, run #2-#16 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "26",
+"box_exists": "yes",
+"title": "Avengers",
+"issue": "0",
+"volume": "1",
+"year": "2017",
+"entry": "12967",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 26 (last seen 2026-05-23) | SIBLINGS 1/2 in box 6, run #10-#10 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "36",
+"box_exists": "no",
+"title": "Phases of the Moon Knight",
+"issue": "3",
+"volume": "1",
+"year": "2024",
+"entry": "4144",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-ROW box 36 (last seen 2026-07-25, 30 snapshot(s)) | SIBLINGS 2/2 in box 33, run #1-#2 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "36",
+"box_exists": "no",
+"title": "Phases of the Moon Knight",
+"issue": "4",
+"volume": "1",
+"year": "2024",
+"entry": "4145",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-ROW box 36 (last seen 2026-07-25, 30 snapshot(s)) | SIBLINGS 2/2 in box 33, run #1-#2 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "37",
+"box_exists": "no",
+"title": "Strange Academy: Presents the Death of Doctor Strange",
+"issue": "1",
+"volume": "1",
+"year": "2022",
+"entry": "14279",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 37 (last seen 2026-06-02) | SIBLINGS 1/1 in box 42, run #1-#1 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "38",
+"box_exists": "no",
+"title": "Nightwing",
+"issue": "Foil Cover (verify issue)",
+"volume": "5",
+"year": "2024",
+"entry": "13627",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 38 (last seen 2026-06-02) | SIBLINGS 7/13 in box 50, run #5-#119 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "40",
+"box_exists": "no",
+"title": "Ultimate X-Men",
+"issue": "36",
+"volume": "1",
+"year": "2003",
+"entry": "14249",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 40 (last seen 2026-06-13) | SIBLINGS 60/84 in box 23, run #16-#99 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "41",
+"box_exists": "no",
+"title": "Phoenix",
+"issue": "1",
+"volume": "2",
+"year": "2024",
+"entry": "13050",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 41 (last seen 2026-05-25) | SIBLINGS 8/14 in box 75, run #6-#13 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "42",
+"box_exists": "yes",
+"title": "X-Men Noir",
+"issue": "1",
+"volume": "1",
+"year": "2008",
+"entry": "13735",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 42 (last seen 2026-05-23) | SIBLINGS 1/1 in box 12, run #3-#3 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "42",
+"box_exists": "yes",
+"title": "X-Men Noir",
+"issue": "2",
+"volume": "1",
+"year": "2008",
+"entry": "13736",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 42 (last seen 2026-05-23) | SIBLINGS 1/1 in box 12, run #3-#3 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "52",
+"box_exists": "yes",
+"title": "Blackhawks",
+"issue": "5",
+"volume": "1",
+"year": "2012",
+"entry": "13884",
+"key": "NO",
+"signed": "NO",
+"evidence": "SIBLINGS 4/4 in box 52, run #1-#4 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "52",
+"box_exists": "yes",
+"title": "Blackhawks",
+"issue": "7",
+"volume": "1",
+"year": "2012",
+"entry": "13885",
+"key": "NO",
+"signed": "NO",
+"evidence": "SIBLINGS 4/4 in box 52, run #1-#4 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "70",
+"box_exists": "yes",
+"title": "Cyclops",
+"issue": "4",
+"volume": "3",
+"year": "2014",
+"entry": "14299",
+"key": "YES",
+"signed": "NO",
+"evidence": "SIBLINGS 8/8 in box 70, run #5-#12 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "71",
+"box_exists": "no",
+"title": "Void Rivals",
+"issue": "20",
+"volume": "1",
+"year": "2025",
+"entry": "14298",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 71 (last seen 2026-06-02) | SIBLINGS 15/16 in box 103, run #16-#36 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "71",
+"box_exists": "no",
+"title": "Zatanna",
+"issue": "2",
+"volume": "1",
+"year": "2025",
+"entry": "14283",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 71 (last seen 2026-06-02) | SIBLINGS 5/7 in box 54, run #1-#6 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "76",
+"box_exists": "no",
+"title": "Absolute Wonder Woman",
+"issue": "16",
+"volume": "1",
+"year": "2026",
+"entry": "13626",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 76 (last seen 2026-06-13) | SIBLINGS 19/23 in box 104, run #1-#21 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "76",
+"box_exists": "no",
+"title": "Action Comics",
+"issue": "1097",
+"volume": "2",
+"year": "2025",
+"entry": "12874",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 76 (last seen 2026-06-13) | SIBLINGS 8/20 in box 98, run #1023-#1030 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "76",
+"box_exists": "no",
+"title": "JSA",
+"issue": "17",
+"volume": "1",
+"year": "2000",
+"entry": "14295",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 76 (last seen 2026-06-11) | SIBLINGS 15/18 in box 54, run #4-#18 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "76",
+"box_exists": "no",
+"title": "JSA",
+"issue": "18",
+"volume": "1",
+"year": "2001",
+"entry": "14296",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 76 (last seen 2026-06-11) | SIBLINGS 15/18 in box 54, run #4-#18 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "76",
+"box_exists": "no",
+"title": "Metamorpho: The Element Man",
+"issue": "4",
+"volume": "1",
+"year": "2025",
+"entry": "13954",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 76 (last seen 2026-06-13) | SIBLINGS 1/1 in box 54, run #3-#3 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "76",
+"box_exists": "no",
+"title": "Metamorpho: The Element Man",
+"issue": "5",
+"volume": "1",
+"year": "2025",
+"entry": "13955",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 76 (last seen 2026-06-13) | SIBLINGS 1/1 in box 54, run #3-#3 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "76",
+"box_exists": "no",
+"title": "Metamorpho: The Element Man",
+"issue": "6",
+"volume": "1",
+"year": "2025",
+"entry": "13956",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 76 (last seen 2026-06-13) | SIBLINGS 1/1 in box 54, run #3-#3 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "76",
+"box_exists": "no",
+"title": "Nightwing",
+"issue": "120",
+"volume": "3",
+"year": "2025",
+"entry": "12876",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 76 (last seen 2026-06-13) | SIBLINGS 21/22 in box 44, run #4-#30 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "76",
+"box_exists": "no",
+"title": "Titans",
+"issue": "34",
+"volume": "3",
+"year": "2019",
+"entry": "12875",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 76 (last seen 2026-06-13) | SIBLINGS 14/16 in box 48, run #2-#28 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "76",
+"box_exists": "no",
+"title": "Zatanna",
+"issue": "2",
+"volume": "2",
+"year": "2024",
+"entry": "14291",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 76 (last seen 2026-05-29) | SIBLINGS 1/1 in box 75, run #1-#1 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "77",
+"box_exists": "no",
+"title": "All New Firefly",
+"issue": "10",
+"volume": "1",
+"year": "2022",
+"entry": "14029",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13) | SIBLINGS 9/9 in box 66, run #1-#9 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "77",
+"box_exists": "no",
+"title": "G.I. Joe",
+"issue": "1",
+"volume": "1",
+"year": "2023",
+"entry": "12892",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13) | SIBLINGS 19/19 in box 103, run #2-#28 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Serenity: No Power in the 'Verse",
+"issue": "3",
+"volume": "1",
+"year": "2017",
+"entry": "14033",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13) | SIBLINGS 2/3 in box 64, run #1-#2 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Serenity: No Power in the 'Verse",
+"issue": "4",
+"volume": "1",
+"year": "2017",
+"entry": "14034",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13) | SIBLINGS 2/3 in box 64, run #1-#2 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Serenity: No Power in the 'Verse",
+"issue": "6",
+"volume": "1",
+"year": "2017",
+"entry": "14035",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-13) | SIBLINGS 2/3 in box 64, run #1-#2 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "77",
+"box_exists": "no",
+"title": "Sons of Star Trek",
+"issue": "1",
+"volume": "1",
+"year": "2024",
+"entry": "14297",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 77 (last seen 2026-06-11) | SIBLINGS 5/5 in box 65, run #1-#5 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "79",
+"box_exists": "no",
+"title": "Aliens vs. Avengers",
+"issue": "4",
+"volume": "1",
+"year": "2024",
+"entry": "12292",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-ROW box 79 (last seen 2026-07-25, 30 snapshot(s)) | SIBLINGS 2/3 in box 85, run #2-#3 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "79",
+"box_exists": "no",
+"title": "Avengers",
+"issue": "25",
+"volume": "9",
+"year": "2025",
+"entry": "12348",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-ROW box 79 (last seen 2026-07-25, 28 snapshot(s)) | SIBLINGS 9/12 in box 27, run #2-#16 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "79",
+"box_exists": "no",
+"title": "Avengers",
+"issue": "26",
+"volume": "9",
+"year": "2025",
+"entry": "12344",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-ROW box 79 (last seen 2026-07-25, 28 snapshot(s)) | SIBLINGS 9/12 in box 27, run #2-#16 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "79",
+"box_exists": "no",
+"title": "Avengers",
+"issue": "27",
+"volume": "9",
+"year": "2025",
+"entry": "12356",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-ROW box 79 (last seen 2026-07-25, 28 snapshot(s)) | SIBLINGS 9/12 in box 27, run #2-#16 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "79",
+"box_exists": "no",
+"title": "Empyre: Fantastic Four",
+"issue": "1",
+"volume": "1",
+"year": "2020",
+"entry": "12277",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-ROW box 79 (last seen 2026-07-25, 30 snapshot(s)) | SIBLINGS 1/1 in box 19, run #3-#3 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "79",
+"box_exists": "no",
+"title": "Fantastic Four: Empyre",
+"issue": "0",
+"volume": "1",
+"year": "2020",
+"entry": "12280",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-ROW box 79 (last seen 2026-07-25, 30 snapshot(s)) | SIBLINGS 2/2 in box 75, run #1-#2 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "79",
+"box_exists": "no",
+"title": "Fantastic Four: Empyre",
+"issue": "0",
+"volume": "1",
+"year": "2020",
+"entry": "12281",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-ROW box 79 (last seen 2026-07-25, 30 snapshot(s)) | SIBLINGS 2/2 in box 75, run #1-#2 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "All-New X-Men",
+"issue": "2",
+"volume": "1",
+"year": "2012",
+"entry": "14107",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 19/21 in box 15, run #5-#41 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "All-New X-Men",
+"issue": "3",
+"volume": "1",
+"year": "2012",
+"entry": "14108",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 19/21 in box 15, run #5-#41 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "All-New X-Men",
+"issue": "4",
+"volume": "1",
+"year": "2013",
+"entry": "14109",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 19/21 in box 15, run #5-#41 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "All-New X-Men",
+"issue": "6",
+"volume": "1",
+"year": "2013",
+"entry": "14110",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 19/21 in box 15, run #5-#41 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "All-New X-Men",
+"issue": "10",
+"volume": "1",
+"year": "2013",
+"entry": "14111",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 19/21 in box 15, run #5-#41 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "All-New X-Men",
+"issue": "21",
+"volume": "1",
+"year": "2014",
+"entry": "14112",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 19/21 in box 15, run #5-#41 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "All-New X-Men",
+"issue": "22",
+"volume": "1",
+"year": "2014",
+"entry": "14113",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 19/21 in box 15, run #5-#41 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "All-New X-Men",
+"issue": "23",
+"volume": "1",
+"year": "2014",
+"entry": "14114",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 19/21 in box 15, run #5-#41 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "All-New X-Men",
+"issue": "24",
+"volume": "1",
+"year": "2014",
+"entry": "14115",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 19/21 in box 15, run #5-#41 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "All-New X-Men",
+"issue": "25",
+"volume": "1",
+"year": "2014",
+"entry": "14116",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 19/21 in box 15, run #5-#41 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "All-New X-Men",
+"issue": "26",
+"volume": "1",
+"year": "2014",
+"entry": "14118",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 19/21 in box 15, run #5-#41 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "All-New X-Men",
+"issue": "27",
+"volume": "1",
+"year": "2014",
+"entry": "14119",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 19/21 in box 15, run #5-#41 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "All-New X-Men",
+"issue": "28",
+"volume": "1",
+"year": "2014",
+"entry": "14120",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 19/21 in box 15, run #5-#41 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "All-New X-Men",
+"issue": "29",
+"volume": "1",
+"year": "2014",
+"entry": "14121",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 19/21 in box 15, run #5-#41 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "All-New X-Men",
+"issue": "30",
+"volume": "1",
+"year": "2015",
+"entry": "14122",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 19/21 in box 15, run #5-#41 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "All-New X-Men",
+"issue": "31",
+"volume": "1",
+"year": "2015",
+"entry": "14123",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 19/21 in box 15, run #5-#41 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Extraordinary X-Men",
+"issue": "13",
+"volume": "1",
+"year": "2016",
+"entry": "14142",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 6/6 in box 15, run #6-#12 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Secret Avengers",
+"issue": "14",
+"volume": "1",
+"year": "2014",
+"entry": "12945",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 10/14 in box 6, run #6-#19 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Uncanny X-Men",
+"issue": "417",
+"volume": "1",
+"year": "2003",
+"entry": "14103",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 34/54 in box 3, run #453-#544 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Uncanny X-Men",
+"issue": "420",
+"volume": "1",
+"year": "2003",
+"entry": "14104",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 34/54 in box 3, run #453-#544 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Uncanny X-Men",
+"issue": "434",
+"volume": "1",
+"year": "2004",
+"entry": "14105",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 34/54 in box 3, run #453-#544 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Uncanny X-Men",
+"issue": "446",
+"volume": "1",
+"year": "2004",
+"entry": "14106",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 34/54 in box 3, run #453-#544 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Wolverine and the X-Men",
+"issue": "3",
+"volume": "1",
+"year": "2012",
+"entry": "14084",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 12/19 in box 15, run #9-#37 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Wolverine and the X-Men",
+"issue": "4",
+"volume": "1",
+"year": "2012",
+"entry": "14068",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 12/19 in box 15, run #9-#37 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Wolverine and the X-Men",
+"issue": "4",
+"volume": "1",
+"year": "2012",
+"entry": "14085",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 12/19 in box 15, run #9-#37 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Wolverine and the X-Men",
+"issue": "5",
+"volume": "1",
+"year": "2012",
+"entry": "14069",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 12/19 in box 15, run #9-#37 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Wolverine and the X-Men",
+"issue": "6",
+"volume": "1",
+"year": "2012",
+"entry": "14070",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 12/19 in box 15, run #9-#37 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Wolverine and the X-Men",
+"issue": "6",
+"volume": "1",
+"year": "2012",
+"entry": "14086",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 12/19 in box 15, run #9-#37 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Wolverine and the X-Men",
+"issue": "7",
+"volume": "1",
+"year": "2012",
+"entry": "14071",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 12/19 in box 15, run #9-#37 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Wolverine and the X-Men",
+"issue": "7",
+"volume": "1",
+"year": "2012",
+"entry": "14087",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 12/19 in box 15, run #9-#37 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Wolverine and the X-Men",
+"issue": "17",
+"volume": "1",
+"year": "2012",
+"entry": "14072",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 12/19 in box 15, run #9-#37 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Wolverine and the X-Men",
+"issue": "21",
+"volume": "1",
+"year": "2013",
+"entry": "14073",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 12/19 in box 15, run #9-#37 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Wolverine and the X-Men",
+"issue": "22",
+"volume": "1",
+"year": "2013",
+"entry": "14074",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 12/19 in box 15, run #9-#37 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Wolverine and the X-Men",
+"issue": "27",
+"volume": "1",
+"year": "2013",
+"entry": "14075",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 12/19 in box 15, run #9-#37 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Wolverine and the X-Men",
+"issue": "27",
+"volume": "1",
+"year": "2013",
+"entry": "14076",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 12/19 in box 15, run #9-#37 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Wolverine and the X-Men",
+"issue": "28",
+"volume": "1",
+"year": "2013",
+"entry": "14077",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 12/19 in box 15, run #9-#37 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Wolverine and the X-Men",
+"issue": "29",
+"volume": "1",
+"year": "2013",
+"entry": "14078",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 12/19 in box 15, run #9-#37 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Wolverine and the X-Men",
+"issue": "30",
+"volume": "1",
+"year": "2013",
+"entry": "14079",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 12/19 in box 15, run #9-#37 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Wolverine and the X-Men",
+"issue": "31",
+"volume": "1",
+"year": "2013",
+"entry": "14080",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 12/19 in box 15, run #9-#37 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Wolverine and the X-Men",
+"issue": "40",
+"volume": "1",
+"year": "2013",
+"entry": "14081",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 12/19 in box 15, run #9-#37 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Wolverine and the X-Men",
+"issue": "41",
+"volume": "1",
+"year": "2013",
+"entry": "14082",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 12/19 in box 15, run #9-#37 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "Wolverine and the X-Men",
+"issue": "42",
+"volume": "1",
+"year": "2013",
+"entry": "14083",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 12/19 in box 15, run #9-#37 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "X-Club",
+"issue": "2",
+"volume": "1",
+"year": "2012",
+"entry": "14066",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 1/2 in box 12, run #1-#1 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "X-Club",
+"issue": "3",
+"volume": "1",
+"year": "2012",
+"entry": "14065",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 1/2 in box 12, run #1-#1 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "81",
+"box_exists": "no",
+"title": "X-Club",
+"issue": "4",
+"volume": "1",
+"year": "2012",
+"entry": "14067",
+"key": "YES",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 81 (last seen 2026-06-13) | SIBLINGS 1/2 in box 12, run #1-#1 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "DC Comics: Bombshells",
+"issue": "7",
+"volume": "1",
+"year": "2015",
+"entry": "13786",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 6/6 in box 82, run #1-#6 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "DC Comics: Bombshells",
+"issue": "8",
+"volume": "1",
+"year": "2015",
+"entry": "13787",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 6/6 in box 82, run #1-#6 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "DC Comics: Bombshells",
+"issue": "9",
+"volume": "1",
+"year": "2015",
+"entry": "13788",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 6/6 in box 82, run #1-#6 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "DC Comics: Bombshells",
+"issue": "10",
+"volume": "1",
+"year": "2015",
+"entry": "13789",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 6/6 in box 82, run #1-#6 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "DC Comics: Bombshells",
+"issue": "11",
+"volume": "1",
+"year": "2015",
+"entry": "13790",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 6/6 in box 82, run #1-#6 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "DC Comics: Bombshells",
+"issue": "12",
+"volume": "1",
+"year": "2015",
+"entry": "13791",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 6/6 in box 82, run #1-#6 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "DC Comics: Bombshells",
+"issue": "13",
+"volume": "1",
+"year": "2015",
+"entry": "13792",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 6/6 in box 82, run #1-#6 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "DC Universe Presents",
+"issue": "14",
+"volume": "1",
+"year": "2013",
+"entry": "13858",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 4/4 in box 52, run #1-#4 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "DC Universe Presents",
+"issue": "15",
+"volume": "1",
+"year": "2013",
+"entry": "13859",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 4/4 in box 52, run #1-#4 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "DC Universe Presents",
+"issue": "16",
+"volume": "1",
+"year": "2013",
+"entry": "13860",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 4/4 in box 52, run #1-#4 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "DC Universe Presents",
+"issue": "17",
+"volume": "1",
+"year": "2013",
+"entry": "13861",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 4/4 in box 52, run #1-#4 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Deathstroke",
+"issue": "8",
+"volume": "2",
+"year": "2012",
+"entry": "13794",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 1/1 in box 52, run #1-#1 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Deathstroke",
+"issue": "9",
+"volume": "2",
+"year": "2012",
+"entry": "13795",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 1/1 in box 52, run #1-#1 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Deathstroke",
+"issue": "10",
+"volume": "2",
+"year": "2012",
+"entry": "13796",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 1/1 in box 52, run #1-#1 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Deathstroke",
+"issue": "11",
+"volume": "2",
+"year": "2012",
+"entry": "13797",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 1/1 in box 52, run #1-#1 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Deathstroke",
+"issue": "12",
+"volume": "2",
+"year": "2012",
+"entry": "13798",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 1/1 in box 52, run #1-#1 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Deathstroke",
+"issue": "13",
+"volume": "2",
+"year": "2012",
+"entry": "13799",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 1/1 in box 52, run #1-#1 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Demon Knights",
+"issue": "5",
+"volume": "1",
+"year": "2012",
+"entry": "13832",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 3/4 in box 52, run #1-#4 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Demon Knights",
+"issue": "6",
+"volume": "1",
+"year": "2012",
+"entry": "13833",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 3/4 in box 52, run #1-#4 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Demon Knights",
+"issue": "7",
+"volume": "1",
+"year": "2012",
+"entry": "13834",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 3/4 in box 52, run #1-#4 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Demon Knights",
+"issue": "8",
+"volume": "1",
+"year": "2012",
+"entry": "13835",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 3/4 in box 52, run #1-#4 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Demon Knights",
+"issue": "9",
+"volume": "1",
+"year": "2012",
+"entry": "13836",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 3/4 in box 52, run #1-#4 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Demon Knights",
+"issue": "10",
+"volume": "1",
+"year": "2012",
+"entry": "13837",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 3/4 in box 52, run #1-#4 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Demon Knights",
+"issue": "11",
+"volume": "1",
+"year": "2012",
+"entry": "13838",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 3/4 in box 52, run #1-#4 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Demon Knights",
+"issue": "12",
+"volume": "1",
+"year": "2012",
+"entry": "13839",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 3/4 in box 52, run #1-#4 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Demon Knights",
+"issue": "13",
+"volume": "1",
+"year": "2012",
+"entry": "13840",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 3/4 in box 52, run #1-#4 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Demon Knights",
+"issue": "14",
+"volume": "1",
+"year": "2013",
+"entry": "13841",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 3/4 in box 52, run #1-#4 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Demon Knights",
+"issue": "15",
+"volume": "1",
+"year": "2013",
+"entry": "13842",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 3/4 in box 52, run #1-#4 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Demon Knights",
+"issue": "16",
+"volume": "1",
+"year": "2013",
+"entry": "13843",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 3/4 in box 52, run #1-#4 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Demon Knights",
+"issue": "17",
+"volume": "1",
+"year": "2013",
+"entry": "13844",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 3/4 in box 52, run #1-#4 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Demon Knights",
+"issue": "18",
+"volume": "1",
+"year": "2013",
+"entry": "13845",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 3/4 in box 52, run #1-#4 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Demon Knights",
+"issue": "19",
+"volume": "1",
+"year": "2013",
+"entry": "13846",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 3/4 in box 52, run #1-#4 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Demon Knights",
+"issue": "20",
+"volume": "1",
+"year": "2013",
+"entry": "13847",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 3/4 in box 52, run #1-#4 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Demon Knights",
+"issue": "21",
+"volume": "1",
+"year": "2013",
+"entry": "13848",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 3/4 in box 52, run #1-#4 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Demon Knights",
+"issue": "22",
+"volume": "1",
+"year": "2013",
+"entry": "13849",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 3/4 in box 52, run #1-#4 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Demon Knights",
+"issue": "23",
+"volume": "1",
+"year": "2013",
+"entry": "13850",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 3/4 in box 52, run #1-#4 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Frankenstein: Agent of S.H.A.D.E.",
+"issue": "3",
+"volume": "1",
+"year": "2012",
+"entry": "13862",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 2/2 in box 52, run #1-#2 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Frankenstein: Agent of S.H.A.D.E.",
+"issue": "4",
+"volume": "1",
+"year": "2012",
+"entry": "13863",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 2/2 in box 52, run #1-#2 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Frankenstein: Agent of S.H.A.D.E.",
+"issue": "5",
+"volume": "1",
+"year": "2012",
+"entry": "13864",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 2/2 in box 52, run #1-#2 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Frankenstein: Agent of S.H.A.D.E.",
+"issue": "5",
+"volume": "1",
+"year": "2012",
+"entry": "13869",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 2/2 in box 52, run #1-#2 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Frankenstein: Agent of S.H.A.D.E.",
+"issue": "6",
+"volume": "1",
+"year": "2012",
+"entry": "13865",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 2/2 in box 52, run #1-#2 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Frankenstein: Agent of S.H.A.D.E.",
+"issue": "7",
+"volume": "1",
+"year": "2012",
+"entry": "13866",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 2/2 in box 52, run #1-#2 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Frankenstein: Agent of S.H.A.D.E.",
+"issue": "8",
+"volume": "1",
+"year": "2012",
+"entry": "13867",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 2/2 in box 52, run #1-#2 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Frankenstein: Agent of S.H.A.D.E.",
+"issue": "9",
+"volume": "1",
+"year": "2012",
+"entry": "13868",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 2/2 in box 52, run #1-#2 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Huntress",
+"issue": "3",
+"volume": "3",
+"year": "2012",
+"entry": "13882",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 2/2 in box 52, run #1-#2 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Huntress",
+"issue": "4",
+"volume": "3",
+"year": "2012",
+"entry": "13883",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 2/2 in box 52, run #1-#2 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Red Hood and the Outlaws",
+"issue": "4",
+"volume": "1",
+"year": "2012",
+"entry": "13830",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 35/39 in box 44, run #5-#40 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Teen Titans",
+"issue": "21",
+"volume": "4",
+"year": "2012",
+"entry": "13804",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 1/1 in box 52, run #1-#1 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Teen Titans",
+"issue": "23",
+"volume": "4",
+"year": "2012",
+"entry": "13805",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 1/1 in box 52, run #1-#1 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "The Savage Hawkman",
+"issue": "0",
+"volume": "1",
+"year": "2012",
+"entry": "13857",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 3/3 in box 52, run #1-#3 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "The Savage Hawkman",
+"issue": "4",
+"volume": "1",
+"year": "2012",
+"entry": "13851",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 3/3 in box 52, run #1-#3 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "The Savage Hawkman",
+"issue": "5",
+"volume": "1",
+"year": "2012",
+"entry": "13852",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 3/3 in box 52, run #1-#3 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "The Savage Hawkman",
+"issue": "6",
+"volume": "1",
+"year": "2012",
+"entry": "13853",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 3/3 in box 52, run #1-#3 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "The Savage Hawkman",
+"issue": "7",
+"volume": "1",
+"year": "2012",
+"entry": "13854",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 3/3 in box 52, run #1-#3 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "The Savage Hawkman",
+"issue": "9",
+"volume": "1",
+"year": "2012",
+"entry": "13855",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 3/3 in box 52, run #1-#3 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "The Savage Hawkman",
+"issue": "10",
+"volume": "1",
+"year": "2012",
+"entry": "13856",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 3/3 in box 52, run #1-#3 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Voodoo",
+"issue": "5",
+"volume": "1",
+"year": "2012",
+"entry": "13822",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 3/4 in box 52, run #1-#3 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Voodoo",
+"issue": "6",
+"volume": "1",
+"year": "2012",
+"entry": "13823",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 3/4 in box 52, run #1-#3 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Voodoo",
+"issue": "7",
+"volume": "1",
+"year": "2012",
+"entry": "13824",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 3/4 in box 52, run #1-#3 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Voodoo",
+"issue": "8",
+"volume": "1",
+"year": "2012",
+"entry": "13825",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 3/4 in box 52, run #1-#3 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Voodoo",
+"issue": "9",
+"volume": "1",
+"year": "2012",
+"entry": "13826",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 3/4 in box 52, run #1-#3 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Voodoo",
+"issue": "10",
+"volume": "1",
+"year": "2012",
+"entry": "13827",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 3/4 in box 52, run #1-#3 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Voodoo",
+"issue": "11",
+"volume": "1",
+"year": "2012",
+"entry": "13828",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 3/4 in box 52, run #1-#3 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "Voodoo",
+"issue": "12",
+"volume": "1",
+"year": "2012",
+"entry": "13829",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 3/4 in box 52, run #1-#3 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "84",
+"box_exists": "no",
+"title": "We Are Robin",
+"issue": "10",
+"volume": "1",
+"year": "2016",
+"entry": "13831",
+"key": "NO",
+"signed": "NO",
+"evidence": "HISTORY-BOOK box 84 (last seen 2026-06-13) | SIBLINGS 11/11 in box 44, run #1-#12 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "87",
+"box_exists": "yes",
+"title": "Avengers",
+"issue": "76",
+"volume": "3",
+"year": "2004",
+"entry": "12960",
+"key": "",
+"signed": "",
+"evidence": "SIBLINGS 5/6 in box 87, run #77-#81 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "87",
+"box_exists": "yes",
+"title": "Avengers",
+"issue": "82",
+"volume": "3",
+"year": "2004",
+"entry": "12961",
+"key": "",
+"signed": "",
+"evidence": "SIBLINGS 5/6 in box 87, run #77-#81 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "87",
+"box_exists": "yes",
+"title": "Avengers",
+"issue": "83",
+"volume": "3",
+"year": "2004",
+"entry": "12962",
+"key": "",
+"signed": "",
+"evidence": "SIBLINGS 5/6 in box 87, run #77-#81 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "87",
+"box_exists": "yes",
+"title": "Avengers",
+"issue": "84",
+"volume": "3",
+"year": "2004",
+"entry": "12963",
+"key": "",
+"signed": "",
+"evidence": "SIBLINGS 5/6 in box 87, run #77-#81 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "87",
+"box_exists": "yes",
+"title": "Avengers",
+"issue": "100",
+"volume": "1",
+"year": "1972",
+"entry": "12968",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 87 (last seen 2026-06-13) | SIBLINGS 1/2 in box 6, run #10-#10 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "Action Comics",
+"issue": "896",
+"volume": "1",
+"year": "2011",
+"entry": "13024",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13) | SIBLINGS 1/2 in box 52, run #900-#900 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "Birds of Prey",
+"issue": "38",
+"volume": "1",
+"year": "2002",
+"entry": "12990",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13) | SIBLINGS 79/95 in box 45, run #1-#99 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "Birds of Prey",
+"issue": "39",
+"volume": "1",
+"year": "2002",
+"entry": "12991",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13) | SIBLINGS 79/95 in box 45, run #1-#99 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "Green Lantern",
+"issue": "55",
+"volume": "1",
+"year": "2010",
+"entry": "12970",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13) | SIBLINGS 1/2 in box 82, run #0-#0 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "Legion of Super-Heroes",
+"issue": "4",
+"volume": "1",
+"year": "2005",
+"entry": "13008",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13) | SIBLINGS 3/4 in box 52, run #1-#3 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "Legion of Super-Heroes",
+"issue": "11",
+"volume": "1",
+"year": "2005",
+"entry": "13009",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13) | SIBLINGS 3/4 in box 52, run #1-#3 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "Legion of Super-Heroes",
+"issue": "13",
+"volume": "1",
+"year": "2006",
+"entry": "13010",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13) | SIBLINGS 3/4 in box 52, run #1-#3 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "Legion of Super-Heroes",
+"issue": "14",
+"volume": "1",
+"year": "2006",
+"entry": "13011",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13) | SIBLINGS 3/4 in box 52, run #1-#3 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "Legion of Super-Heroes",
+"issue": "15",
+"volume": "1",
+"year": "2006",
+"entry": "13012",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13) | SIBLINGS 3/4 in box 52, run #1-#3 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "Legion of Super-Heroes",
+"issue": "16",
+"volume": "1",
+"year": "2006",
+"entry": "13013",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13) | SIBLINGS 3/4 in box 52, run #1-#3 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "Legion of Super-Heroes",
+"issue": "17",
+"volume": "1",
+"year": "2006",
+"entry": "13014",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13) | SIBLINGS 3/4 in box 52, run #1-#3 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "Secret Six",
+"issue": "18",
+"volume": "1",
+"year": "2010",
+"entry": "12969",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13) | SIBLINGS 2/2 in box 62, run #2-#3 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "Secret Six",
+"issue": "19",
+"volume": "1",
+"year": "2009",
+"entry": "13025",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13) | SIBLINGS 2/2 in box 62, run #2-#3 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "Secret Six",
+"issue": "20",
+"volume": "1",
+"year": "2009",
+"entry": "13026",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13) | SIBLINGS 2/2 in box 62, run #2-#3 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "Secret Six",
+"issue": "21",
+"volume": "1",
+"year": "2010",
+"entry": "13027",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13) | SIBLINGS 2/2 in box 62, run #2-#3 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "Secret Six",
+"issue": "22",
+"volume": "1",
+"year": "2010",
+"entry": "13028",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13) | SIBLINGS 2/2 in box 62, run #2-#3 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "Secret Six",
+"issue": "23",
+"volume": "1",
+"year": "2010",
+"entry": "13029",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13) | SIBLINGS 2/2 in box 62, run #2-#3 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "Secret Six",
+"issue": "24",
+"volume": "1",
+"year": "2010",
+"entry": "13030",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13) | SIBLINGS 2/2 in box 62, run #2-#3 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "Secret Six",
+"issue": "27",
+"volume": "1",
+"year": "2010",
+"entry": "13031",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13) | SIBLINGS 2/2 in box 62, run #2-#3 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "Secret Six",
+"issue": "28",
+"volume": "1",
+"year": "2010",
+"entry": "13032",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13) | SIBLINGS 2/2 in box 62, run #2-#3 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "Secret Six",
+"issue": "31",
+"volume": "1",
+"year": "2011",
+"entry": "13033",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13) | SIBLINGS 2/2 in box 62, run #2-#3 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "Secret Six",
+"issue": "32",
+"volume": "1",
+"year": "2011",
+"entry": "13034",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13) | SIBLINGS 2/2 in box 62, run #2-#3 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "Secret Six",
+"issue": "33",
+"volume": "1",
+"year": "2011",
+"entry": "13035",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13) | SIBLINGS 2/2 in box 62, run #2-#3 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "Secret Six",
+"issue": "34",
+"volume": "1",
+"year": "2011",
+"entry": "13036",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13) | SIBLINGS 2/2 in box 62, run #2-#3 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "Secret Six",
+"issue": "35",
+"volume": "1",
+"year": "2011",
+"entry": "13037",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13) | SIBLINGS 2/2 in box 62, run #2-#3 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "Secret Six",
+"issue": "36",
+"volume": "1",
+"year": "2011",
+"entry": "13038",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13) | SIBLINGS 2/2 in box 62, run #2-#3 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "Teen Titans",
+"issue": "92",
+"volume": "1",
+"year": "2011",
+"entry": "13015",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13) | SIBLINGS 6/8 in box 48, run #2-#7 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "WildC.A.T.s",
+"issue": "9",
+"volume": "1",
+"year": "2000",
+"entry": "13042",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13) | SIBLINGS 4/8 in box 70, run #1-#7 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "WildC.A.T.s",
+"issue": "13",
+"volume": "1",
+"year": "2000",
+"entry": "13043",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13) | SIBLINGS 4/8 in box 70, run #1-#7 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "88",
+"box_exists": "yes",
+"title": "WildC.A.T.s",
+"issue": "22",
+"volume": "1",
+"year": "2000",
+"entry": "13044",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 88 (last seen 2026-06-13) | SIBLINGS 4/8 in box 70, run #1-#7 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "89",
+"box_exists": "no",
+"title": "Uncanny X-Men",
+"issue": "543",
+"volume": "1",
+"year": "2011",
+"entry": "13061",
+"key": "NO",
+"signed": "",
+"evidence": "HISTORY-BOOK box 89 (last seen 2026-06-13) | SIBLINGS 34/54 in box 3, run #453-#544 (inside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "89",
+"box_exists": "no",
+"title": "Uncanny X-Men",
+"issue": "703",
+"volume": "1",
+"year": "2026",
+"entry": "13053",
+"key": "",
+"signed": "",
+"evidence": "HISTORY-BOOK box 89 (last seen 2026-06-13) | SIBLINGS 34/54 in box 3, run #453-#544 (outside)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "101",
+"box_exists": "yes",
+"title": "Adventures of Superman: Book of El",
+"issue": "7",
+"volume": "1",
+"year": "2025",
+"entry": "13945",
+"key": "NO",
+"signed": "NO",
+"evidence": "SIBLINGS 3/3 in box 101, run #10-#12 (next to)"
+},
+{
+"tier": "MEDIUM",
+"guess_box": "101",
+"box_exists": "yes",
+"title": "Adventures of Superman: Book of El",
+"issue": "8",
+"volume": "1",
+"year": "2025",
+"entry": "13946",
+"key": "NO",
+"signed": "NO",
+"evidence": "SIBLINGS 3/3 in box 101, run #10-#12 (next to)"
+},
+{
+"tier": "LOW",
+"guess_box": "3",
+"box_exists": "yes",
+"title": "Uncanny X-Men",
+"issue": "465",
+"volume": "1",
+"year": "2005",
+"entry": "13721",
+"key": "NO",
+"signed": "NO",
+"evidence": "SIBLINGS 34/54 in box 3, run #453-#544 (inside)"
+},
+{
+"tier": "LOW",
+"guess_box": "26",
+"box_exists": "yes",
+"title": "Defenders",
+"issue": "10",
+"volume": "3",
+"year": "2012",
+"entry": "12830",
+"key": "NO",
+"signed": "NO",
+"evidence": "SIBLINGS 1/1 in box 26, run #6-#6 (outside)"
+},
+{
+"tier": "LOW",
+"guess_box": "26",
+"box_exists": "yes",
+"title": "Defenders",
+"issue": "12",
+"volume": "3",
+"year": "2012",
+"entry": "12831",
+"key": "NO",
+"signed": "NO",
+"evidence": "SIBLINGS 1/1 in box 26, run #6-#6 (outside)"
+},
+{
+"tier": "LOW",
+"guess_box": "50",
+"box_exists": "yes",
+"title": "X-Men: Hope",
+"issue": "1",
+"volume": "1",
+"year": "2010",
+"entry": "14257",
+"key": "NO",
+"signed": "NO",
+"evidence": "SIBLINGS 1/1 in box 50, run #0-#0 (next to)"
+},
+{
+"tier": "LOW",
+"guess_box": "52",
+"box_exists": "yes",
+"title": "Blackhawks",
+"issue": "8",
+"volume": "1",
+"year": "2012",
+"entry": "13886",
+"key": "NO",
+"signed": "NO",
+"evidence": "SIBLINGS 4/4 in box 52, run #1-#4 (outside)"
+},
+{
+"tier": "LOW",
+"guess_box": "68",
+"box_exists": "yes",
+"title": "Superman",
+"issue": "204",
+"volume": "2",
+"year": "2004",
+"entry": "13039",
+"key": "",
+"signed": "",
+"evidence": "SIBLINGS 3/5 in box 68, run #206-#209 (next to)"
+},
+{
+"tier": "LOW",
+"guess_box": "68",
+"box_exists": "yes",
+"title": "Superman",
+"issue": "208",
+"volume": "2",
+"year": "2004",
+"entry": "13040",
+"key": "",
+"signed": "",
+"evidence": "SIBLINGS 3/5 in box 68, run #206-#209 (inside)"
+},
+{
+"tier": "LOW",
+"guess_box": "87",
+"box_exists": "yes",
+"title": "Avengers",
+"issue": "65",
+"volume": "3",
+"year": "2003",
+"entry": "12954",
+"key": "",
+"signed": "",
+"evidence": "SIBLINGS 5/6 in box 87, run #77-#81 (outside)"
+},
+{
+"tier": "LOW",
+"guess_box": "87",
+"box_exists": "yes",
+"title": "Avengers",
+"issue": "66",
+"volume": "3",
+"year": "2003",
+"entry": "12955",
+"key": "",
+"signed": "",
+"evidence": "SIBLINGS 5/6 in box 87, run #77-#81 (outside)"
+},
+{
+"tier": "LOW",
+"guess_box": "87",
+"box_exists": "yes",
+"title": "Avengers",
+"issue": "69",
+"volume": "3",
+"year": "2003",
+"entry": "12956",
+"key": "",
+"signed": "",
+"evidence": "SIBLINGS 5/6 in box 87, run #77-#81 (outside)"
+},
+{
+"tier": "LOW",
+"guess_box": "87",
+"box_exists": "yes",
+"title": "Avengers",
+"issue": "70",
+"volume": "3",
+"year": "2003",
+"entry": "12957",
+"key": "",
+"signed": "",
+"evidence": "SIBLINGS 5/6 in box 87, run #77-#81 (outside)"
+},
+{
+"tier": "LOW",
+"guess_box": "87",
+"box_exists": "yes",
+"title": "Avengers",
+"issue": "71",
+"volume": "3",
+"year": "2003",
+"entry": "12958",
+"key": "",
+"signed": "",
+"evidence": "SIBLINGS 5/6 in box 87, run #77-#81 (outside)"
+},
+{
+"tier": "LOW",
+"guess_box": "87",
+"box_exists": "yes",
+"title": "Avengers",
+"issue": "72",
+"volume": "3",
+"year": "2003",
+"entry": "12959",
+"key": "",
+"signed": "",
+"evidence": "SIBLINGS 5/6 in box 87, run #77-#81 (outside)"
+},
+{
+"tier": "LOW",
+"guess_box": "87",
+"box_exists": "yes",
+"title": "Avengers",
+"issue": "501",
+"volume": "3",
+"year": "2004",
+"entry": "12964",
+"key": "",
+"signed": "",
+"evidence": "SIBLINGS 5/6 in box 87, run #77-#81 (outside)"
+},
+{
+"tier": "LOW",
+"guess_box": "87",
+"box_exists": "yes",
+"title": "Avengers",
+"issue": "502",
+"volume": "3",
+"year": "2004",
+"entry": "12965",
+"key": "",
+"signed": "",
+"evidence": "SIBLINGS 5/6 in box 87, run #77-#81 (outside)"
+},
+{
+"tier": "LOW",
+"guess_box": "87",
+"box_exists": "yes",
+"title": "Avengers",
+"issue": "503",
+"volume": "3",
+"year": "2004",
+"entry": "12966",
+"key": "",
+"signed": "",
+"evidence": "SIBLINGS 5/6 in box 87, run #77-#81 (outside)"
+},
+{
+"tier": "LOW",
+"guess_box": "101",
+"box_exists": "yes",
+"title": "Adventures of Superman: Book of El",
+"issue": "1",
+"volume": "1",
+"year": "2025",
+"entry": "13939",
+"key": "YES",
+"signed": "NO",
+"evidence": "SIBLINGS 3/3 in box 101, run #10-#12 (outside)"
+},
+{
+"tier": "LOW",
+"guess_box": "101",
+"box_exists": "yes",
+"title": "Adventures of Superman: Book of El",
+"issue": "2",
+"volume": "1",
+"year": "2025",
+"entry": "13940",
+"key": "NO",
+"signed": "NO",
+"evidence": "SIBLINGS 3/3 in box 101, run #10-#12 (outside)"
+},
+{
+"tier": "LOW",
+"guess_box": "101",
+"box_exists": "yes",
+"title": "Adventures of Superman: Book of El",
+"issue": "3",
+"volume": "1",
+"year": "2025",
+"entry": "13941",
+"key": "NO",
+"signed": "NO",
+"evidence": "SIBLINGS 3/3 in box 101, run #10-#12 (outside)"
+},
+{
+"tier": "LOW",
+"guess_box": "101",
+"box_exists": "yes",
+"title": "Adventures of Superman: Book of El",
+"issue": "4",
+"volume": "1",
+"year": "2025",
+"entry": "13942",
+"key": "NO",
+"signed": "NO",
+"evidence": "SIBLINGS 3/3 in box 101, run #10-#12 (outside)"
+},
+{
+"tier": "LOW",
+"guess_box": "101",
+"box_exists": "yes",
+"title": "Adventures of Superman: Book of El",
+"issue": "5",
+"volume": "1",
+"year": "2025",
+"entry": "13943",
+"key": "NO",
+"signed": "NO",
+"evidence": "SIBLINGS 3/3 in box 101, run #10-#12 (outside)"
+},
+{
+"tier": "LOW",
+"guess_box": "101",
+"box_exists": "yes",
+"title": "Adventures of Superman: Book of El",
+"issue": "6",
+"volume": "1",
+"year": "2025",
+"entry": "13944",
+"key": "NO",
+"signed": "NO",
+"evidence": "SIBLINGS 3/3 in box 101, run #10-#12 (outside)"
+},
+{
+"tier": "NONE",
+"guess_box": "",
+"box_exists": "",
+"title": "Amazing X-Men",
+"issue": "4",
+"volume": "2",
+"year": "2014",
+"entry": "14145",
+"key": "YES",
+"signed": "NO",
+"evidence": ""
+},
+{
+"tier": "NONE",
+"guess_box": "",
+"box_exists": "",
+"title": "Anansi Boys",
+"issue": "1",
+"volume": "1",
+"year": "2024",
+"entry": "14007",
+"key": "NO",
+"signed": "NO",
+"evidence": ""
+},
+{
+"tier": "NONE",
+"guess_box": "",
+"box_exists": "",
+"title": "Aquaman Annual",
+"issue": "1",
+"volume": "7",
+"year": "2013",
+"entry": "13817",
+"key": "YES",
+"signed": "NO",
+"evidence": ""
+},
+{
+"tier": "NONE",
+"guess_box": "",
+"box_exists": "",
+"title": "Aquaman Annual",
+"issue": "2",
+"volume": "7",
+"year": "2014",
+"entry": "13818",
+"key": "NO",
+"signed": "NO",
+"evidence": ""
+},
+{
+"tier": "NONE",
+"guess_box": "",
+"box_exists": "",
+"title": "Blood Hunt: Midnight Sons",
+"issue": "2",
+"volume": "1",
+"year": "2024",
+"entry": "14310",
+"key": "NO",
+"signed": "NO",
+"evidence": ""
+},
+{
+"tier": "NONE",
+"guess_box": "",
+"box_exists": "",
+"title": "DC One Million",
+"issue": "1",
+"volume": "1",
+"year": "1998",
+"entry": "13918",
+"key": "YES",
+"signed": "NO",
+"evidence": ""
+},
+{
+"tier": "NONE",
+"guess_box": "",
+"box_exists": "",
+"title": "Deadpool",
+"issue": "13",
+"volume": "5",
+"year": "2016",
+"entry": "14229",
+"key": "YES",
+"signed": "NO",
+"evidence": ""
+},
+{
+"tier": "NONE",
+"guess_box": "",
+"box_exists": "",
+"title": "Deadpool: Funeral for a Freak",
+"issue": "1",
+"volume": "2",
+"year": "1996",
+"entry": "13727",
+"key": "NO",
+"signed": "NO",
+"evidence": ""
+},
+{
+"tier": "NONE",
+"guess_box": "",
+"box_exists": "",
+"title": "Gambit",
+"issue": "4",
+"volume": "5",
+"year": "2012",
+"entry": "14215",
+"key": "YES",
+"signed": "NO",
+"evidence": ""
+},
+{
+"tier": "NONE",
+"guess_box": "",
+"box_exists": "",
+"title": "Green Arrow: Futures End",
+"issue": "1",
+"volume": "1",
+"year": "2014",
+"entry": "13802",
+"key": "NO",
+"signed": "NO",
+"evidence": ""
+},
+{
+"tier": "NONE",
+"guess_box": "",
+"box_exists": "",
+"title": "Justice League International",
+"issue": "5",
+"volume": "3",
+"year": "2012",
+"entry": "13890",
+"key": "NO",
+"signed": "NO",
+"evidence": ""
+},
+{
+"tier": "NONE",
+"guess_box": "",
+"box_exists": "",
+"title": "King-Size Special: Avengers",
+"issue": "2",
+"volume": "2",
+"year": "2007",
+"entry": "13643",
+"key": "YES",
+"signed": "NO",
+"evidence": ""
+},
+{
+"tier": "NONE",
+"guess_box": "",
+"box_exists": "",
+"title": "Magneto",
+"issue": "1",
+"volume": "3",
+"year": "2014",
+"entry": "14188",
+"key": "YES",
+"signed": "NO",
+"evidence": ""
+},
+{
+"tier": "NONE",
+"guess_box": "",
+"box_exists": "",
+"title": "Nightcrawler",
+"issue": "1",
+"volume": "4",
+"year": "2014",
+"entry": "14169",
+"key": "YES",
+"signed": "NO",
+"evidence": ""
+},
+{
+"tier": "NONE",
+"guess_box": "",
+"box_exists": "",
+"title": "Spider-Man: Life Story",
+"issue": "1",
+"volume": "1",
+"year": "2019",
+"entry": "13903",
+"key": "YES",
+"signed": "NO",
+"evidence": ""
+},
+{
+"tier": "NONE",
+"guess_box": "",
+"box_exists": "",
+"title": "Superboy's Legion",
+"issue": "2",
+"volume": "1",
+"year": "2001",
+"entry": "13922",
+"key": "NO",
+"signed": "NO",
+"evidence": ""
+},
+{
+"tier": "NONE",
+"guess_box": "",
+"box_exists": "",
+"title": "Team 7",
+"issue": "1",
+"volume": "2",
+"year": "2012",
+"entry": "13875",
+"key": "YES",
+"signed": "NO",
+"evidence": ""
+},
+{
+"tier": "NONE",
+"guess_box": "",
+"box_exists": "",
+"title": "The Flash: Futures End",
+"issue": "1",
+"volume": "1",
+"year": "2014",
+"entry": "13801",
+"key": "NO",
+"signed": "NO",
+"evidence": ""
+},
+{
+"tier": "NONE",
+"guess_box": "",
+"box_exists": "",
+"title": "The Omega Men",
+"issue": "1",
+"volume": "3",
+"year": "2015",
+"entry": "13897",
+"key": "YES",
+"signed": "NO",
+"evidence": ""
+},
+{
+"tier": "NONE",
+"guess_box": "",
+"box_exists": "",
+"title": "The Phantom Stranger",
+"issue": "1",
+"volume": "4",
+"year": "2012",
+"entry": "13891",
+"key": "YES",
+"signed": "NO",
+"evidence": ""
+},
+{
+"tier": "NONE",
+"guess_box": "",
+"box_exists": "",
+"title": "Venom",
+"issue": "15",
+"volume": "2",
+"year": "2012",
+"entry": "14248",
+"key": "",
+"signed": "",
+"evidence": ""
+},
+{
+"tier": "NONE",
+"guess_box": "",
+"box_exists": "",
+"title": "Voodoo",
+"issue": "4",
+"volume": "2",
+"year": "2012",
+"entry": "13821",
+"key": "NO",
+"signed": "NO",
+"evidence": ""
+},
+{
+"tier": "NONE",
+"guess_box": "",
+"box_exists": "",
+"title": "World's Finest: Batman/Superman",
+"issue": "49",
+"volume": "5",
+"year": "2026",
+"entry": "13629",
+"key": "YES",
+"signed": "NO",
+"evidence": ""
+},
+{
+"tier": "NONE",
+"guess_box": "",
+"box_exists": "",
+"title": "X-Force and Cable",
+"issue": "7",
+"volume": "4",
+"year": "2014",
+"entry": "14133",
+"key": "YES",
+"signed": "NO",
+"evidence": ""
+},
+{
+"tier": "NONE",
+"guess_box": "",
+"box_exists": "",
+"title": "X-Force and Cable",
+"issue": "19",
+"volume": "4",
+"year": "1992",
+"entry": "14138",
+"key": "YES",
+"signed": "NO",
+"evidence": ""
+}
+],
+"dissolved": [
+{
+"box": "92",
+"last_seen": "2026-06-13",
+"books_then": 449,
+"peak": 449,
+"now_unknown": 66,
+"now_other_box": 294,
+"not_in_sheet": 89,
+"guessed_back": 0,
+"top_destinations": [
+[
+"45",
+50
+],
+[
+"42",
+49
+],
+[
+"44",
+27
+],
+[
+"56",
+20
+],
+[
+"53",
+20
+],
+[
+"105",
+19
+]
+]
+},
+{
+"box": "2",
+"last_seen": "2026-06-02",
+"books_then": 238,
+"peak": 294,
+"now_unknown": 17,
+"now_other_box": 81,
+"not_in_sheet": 140,
+"guessed_back": 18,
+"top_destinations": [
+[
+"3",
+67
+],
+[
+"9",
+8
+],
+[
+"CC3",
+2
+],
+[
+"CC2",
+1
+],
+[
+"59",
+1
+],
+[
+"45",
+1
+]
+]
+},
+{
+"box": "84",
+"last_seen": "2026-06-13",
+"books_then": 187,
+"peak": 187,
+"now_unknown": 103,
+"now_other_box": 11,
+"not_in_sheet": 73,
+"guessed_back": 101,
+"top_destinations": [
+[
+"44",
+11
+]
+]
+},
+{
+"box": "77",
+"last_seen": "2026-06-02",
+"books_then": 170,
+"peak": 177,
+"now_unknown": 45,
+"now_other_box": 105,
+"not_in_sheet": 20,
+"guessed_back": 45,
+"top_destinations": [
+[
+"103",
+37
+],
+[
+"75",
+23
+],
+[
+"65",
+17
+],
+[
+"67",
+17
+],
+[
+"110",
+6
+],
+[
+"50",
+3
+]
+]
+},
+{
+"box": "81",
+"last_seen": "2026-06-02",
+"books_then": 165,
+"peak": 241,
+"now_unknown": 111,
+"now_other_box": 27,
+"not_in_sheet": 27,
+"guessed_back": 120,
+"top_destinations": [
+[
+"3",
+16
+],
+[
+"86",
+4
+],
+[
+"80",
+2
+],
+[
+"22",
+2
+],
+[
+"14",
+1
+],
+[
+"29",
+1
+]
+]
+},
+{
+"box": "91",
+"last_seen": "2026-06-13",
+"books_then": 149,
+"peak": 149,
+"now_unknown": 2,
+"now_other_box": 67,
+"not_in_sheet": 80,
+"guessed_back": 0,
+"top_destinations": [
+[
+"24",
+37
+],
+[
+"6",
+21
+],
+[
+"19",
+5
+],
+[
+"15",
+3
+],
+[
+"87",
+1
+]
+]
+},
+{
+"box": "100",
+"last_seen": "2026-06-13",
+"books_then": 148,
+"peak": 148,
+"now_unknown": 3,
+"now_other_box": 78,
+"not_in_sheet": 67,
+"guessed_back": 0,
+"top_destinations": [
+[
+"85",
+32
+],
+[
+"25",
+25
+],
+[
+"26",
+12
+],
+[
+"35",
+4
+],
+[
+"CC1",
+3
+],
+[
+"CC2",
+1
+]
+]
+},
+{
+"box": "94",
+"last_seen": "2026-06-13",
+"books_then": 138,
+"peak": 138,
+"now_unknown": 45,
+"now_other_box": 69,
+"not_in_sheet": 24,
+"guessed_back": 0,
+"top_destinations": [
+[
+"103",
+37
+],
+[
+"67",
+11
+],
+[
+"110",
+6
+],
+[
+"65",
+5
+],
+[
+"64",
+4
+],
+[
+"60",
+2
+]
+]
+},
+{
+"box": "76",
+"last_seen": "2026-06-02",
+"books_then": 94,
+"peak": 108,
+"now_unknown": 31,
+"now_other_box": 50,
+"not_in_sheet": 13,
+"guessed_back": 33,
+"top_destinations": [
+[
+"104",
+40
+],
+[
+"54",
+4
+],
+[
+"52",
+3
+],
+[
+"101",
+2
+],
+[
+"75",
+1
+]
+]
+},
+{
+"box": "36",
+"last_seen": "2026-07-25",
+"books_then": 77,
+"peak": 203,
+"now_unknown": 3,
+"now_other_box": 65,
+"not_in_sheet": 9,
+"guessed_back": 6,
+"top_destinations": [
+[
+"102",
+38
+],
+[
+"75",
+13
+],
+[
+"10",
+7
+],
+[
+"31",
+3
+],
+[
+"CC1",
+3
+],
+[
+"33",
+1
+]
+]
+},
+{
+"box": "79",
+"last_seen": "2026-07-25",
+"books_then": 75,
+"peak": 90,
+"now_unknown": 10,
+"now_other_box": 37,
+"not_in_sheet": 28,
+"guessed_back": 14,
+"top_destinations": [
+[
+"75",
+28
+],
+[
+"CC1",
+3
+],
+[
+"85",
+2
+],
+[
+"CC2",
+1
+],
+[
+"20",
+1
+],
+[
+"7",
+1
+]
+]
+},
+{
+"box": "61",
+"last_seen": "2026-06-02",
+"books_then": 74,
+"peak": 255,
+"now_unknown": 0,
+"now_other_box": 54,
+"not_in_sheet": 20,
+"guessed_back": 0,
+"top_destinations": [
+[
+"49",
+42
+],
+[
+"60",
+11
+],
+[
+"62",
+1
+]
+]
+},
+{
+"box": "37",
+"last_seen": "2026-07-25",
+"books_then": 70,
+"peak": 71,
+"now_unknown": 0,
+"now_other_box": 29,
+"not_in_sheet": 41,
+"guessed_back": 1,
+"top_destinations": [
+[
+"95",
+26
+],
+[
+"27",
+1
+],
+[
+"1",
+1
+],
+[
+"CC2",
+1
+]
+]
+},
+{
+"box": "34",
+"last_seen": "2026-06-02",
+"books_then": 63,
+"peak": 246,
+"now_unknown": 0,
+"now_other_box": 38,
+"not_in_sheet": 25,
+"guessed_back": 0,
+"top_destinations": [
+[
+"75",
+25
+],
+[
+"33",
+9
+],
+[
+"26",
+1
+],
+[
+"19",
+1
+],
+[
+"31",
+1
+],
+[
+"20",
+1
+]
+]
+},
+{
+"box": "89",
+"last_seen": "2026-06-02",
+"books_then": 62,
+"peak": 62,
+"now_unknown": 3,
+"now_other_box": 14,
+"not_in_sheet": 45,
+"guessed_back": 3,
+"top_destinations": [
+[
+"75",
+4
+],
+[
+"11",
+3
+],
+[
+"88",
+2
+],
+[
+"13",
+2
+],
+[
+"CC3",
+1
+],
+[
+"1",
+1
+]
+]
+},
+{
+"box": "71",
+"last_seen": "2026-06-02",
+"books_then": 57,
+"peak": 99,
+"now_unknown": 2,
+"now_other_box": 14,
+"not_in_sheet": 41,
+"guessed_back": 2,
+"top_destinations": [
+[
+"70",
+10
+],
+[
+"106",
+1
+],
+[
+"75",
+1
+],
+[
+"65",
+1
+],
+[
+"72",
+1
+]
+]
+},
+{
+"box": "38",
+"last_seen": "2026-06-02",
+"books_then": 54,
+"peak": 126,
+"now_unknown": 7,
+"now_other_box": 14,
+"not_in_sheet": 33,
+"guessed_back": 3,
+"top_destinations": [
+[
+"39",
+9
+],
+[
+"CC2",
+4
+],
+[
+"72",
+1
+]
+]
+},
+{
+"box": "32",
+"last_seen": "2026-06-02",
+"books_then": 49,
+"peak": 142,
+"now_unknown": 0,
+"now_other_box": 29,
+"not_in_sheet": 20,
+"guessed_back": 0,
+"top_destinations": [
+[
+"31",
+27
+],
+[
+"CC4",
+2
+]
+]
+},
+{
+"box": "73",
+"last_seen": "2026-06-02",
+"books_then": 35,
+"peak": 54,
+"now_unknown": 12,
+"now_other_box": 8,
+"not_in_sheet": 15,
+"guessed_back": 2,
+"top_destinations": [
+[
+"CC2",
+3
+],
+[
+"27",
+2
+],
+[
+"CC5",
+1
+],
+[
+"54",
+1
+],
+[
+"49",
+1
+]
+]
+},
+{
+"box": "40",
+"last_seen": "2026-06-29",
+"books_then": 28,
+"peak": 130,
+"now_unknown": 0,
+"now_other_box": 28,
+"not_in_sheet": 0,
+"guessed_back": 1,
+"top_destinations": [
+[
+"35",
+28
+]
+]
+},
+{
+"box": "74",
+"last_seen": "2026-06-02",
+"books_then": 28,
+"peak": 28,
+"now_unknown": 16,
+"now_other_box": 3,
+"not_in_sheet": 9,
+"guessed_back": 16,
+"top_destinations": [
+[
+"65",
+2
+],
+[
+"75",
+1
+]
+]
+},
+{
+"box": "93",
+"last_seen": "2026-06-13",
+"books_then": 27,
+"peak": 40,
+"now_unknown": 1,
+"now_other_box": 25,
+"not_in_sheet": 1,
+"guessed_back": 0,
+"top_destinations": [
+[
+"104",
+25
+]
+]
+},
+{
+"box": "63",
+"last_seen": "2026-06-02",
+"books_then": 24,
+"peak": 29,
+"now_unknown": 2,
+"now_other_box": 11,
+"not_in_sheet": 11,
+"guessed_back": 2,
+"top_destinations": [
+[
+"104",
+11
+]
+]
+},
+{
+"box": "69",
+"last_seen": "2026-06-02",
+"books_then": 23,
+"peak": 222,
+"now_unknown": 0,
+"now_other_box": 14,
+"not_in_sheet": 9,
+"guessed_back": 0,
+"top_destinations": [
+[
+"68",
+9
+],
+[
+"65",
+5
+]
+]
+},
+{
+"box": "107",
+"last_seen": "2026-10-13",
+"books_then": 13,
+"peak": 13,
+"now_unknown": 0,
+"now_other_box": 13,
+"not_in_sheet": 0,
+"guessed_back": 0,
+"top_destinations": [
+[
+"CC10",
+10
+],
+[
+"7",
+1
+],
+[
+"35",
+1
+],
+[
+"66",
+1
+]
+]
+},
+{
+"box": "41",
+"last_seen": "2026-06-02",
+"books_then": 7,
+"peak": 214,
+"now_unknown": 1,
+"now_other_box": 3,
+"not_in_sheet": 3,
+"guessed_back": 1,
+"top_destinations": [
+[
+"42",
+2
+],
+[
+"CC2",
+1
+]
+]
+},
+{
+"box": "78",
+"last_seen": "2026-06-02",
+"books_then": 5,
+"peak": 7,
+"now_unknown": 1,
+"now_other_box": 0,
+"not_in_sheet": 4,
+"guessed_back": 1,
+"top_destinations": []
+},
+{
+"box": "CC6",
+"last_seen": "2026-08-17",
+"books_then": 5,
+"peak": 5,
+"now_unknown": 0,
+"now_other_box": 5,
+"not_in_sheet": 0,
+"guessed_back": 0,
+"top_destinations": [
+[
+"CC3",
+5
+]
+]
+},
+{
+"box": "VERIFY BOX",
+"last_seen": "2026-06-11",
+"books_then": 4,
+"peak": 4,
+"now_unknown": 0,
+"now_other_box": 2,
+"not_in_sheet": 2,
+"guessed_back": 0,
+"top_destinations": [
+[
+"75",
+1
+],
+[
+"72",
+1
+]
+]
+},
+{
+"box": "90",
+"last_seen": "2026-06-13",
+"books_then": 1,
+"peak": 21,
+"now_unknown": 0,
+"now_other_box": 1,
+"not_in_sheet": 0,
+"guessed_back": 0,
+"top_destinations": [
+[
+"1",
+1
+]
+]
+},
+{
+"box": "DISPLAY",
+"last_seen": "2026-06-11",
+"books_then": 1,
+"peak": 1,
+"now_unknown": 0,
+"now_other_box": 0,
+"not_in_sheet": 1,
+"guessed_back": 0,
+"top_destinations": []
+}
+],
+"jumps": [
+{
+"box": "25",
+"day": "2026-05-20",
+"before": 0,
+"after": 272,
+"change": 272
+},
+{
+"box": "23",
+"day": "2026-05-20",
+"before": 0,
+"after": 248,
+"change": 248
+},
+{
+"box": "34",
+"day": "2026-05-20",
+"before": 0,
+"after": 246,
+"change": 246
+},
+{
+"box": "13",
+"day": "2026-05-20",
+"before": 0,
+"after": 223,
+"change": 223
+},
+{
+"box": "16",
+"day": "2026-05-20",
+"before": 0,
+"after": 212,
+"change": 212
+},
+{
+"box": "35",
+"day": "2026-05-20",
+"before": 0,
+"after": 205,
+"change": 205
+},
+{
+"box": "7",
+"day": "2026-05-20",
+"before": 0,
+"after": 204,
+"change": 204
+},
+{
+"box": "36",
+"day": "2026-05-20",
+"before": 0,
+"after": 203,
+"change": 203
+},
+{
+"box": "27",
+"day": "2026-05-20",
+"before": 0,
+"after": 183,
+"change": 183
+},
+{
+"box": "15",
+"day": "2026-05-20",
+"before": 0,
+"after": 180,
+"change": 180
+},
+{
+"box": "14",
+"day": "2026-05-20",
+"before": 0,
+"after": 174,
+"change": 174
+},
+{
+"box": "12",
+"day": "2026-05-20",
+"before": 0,
+"after": 171,
+"change": 171
+},
+{
+"box": "18",
+"day": "2026-05-20",
+"before": 0,
+"after": 165,
+"change": 165
+},
+{
+"box": "26",
+"day": "2026-05-20",
+"before": 0,
+"after": 165,
+"change": 165
+},
+{
+"box": "17",
+"day": "2026-05-20",
+"before": 0,
+"after": 146,
+"change": 146
+},
+{
+"box": "32",
+"day": "2026-05-20",
+"before": 0,
+"after": 142,
+"change": 142
+},
+{
+"box": "29",
+"day": "2026-05-20",
+"before": 0,
+"after": 141,
+"change": 141
+},
+{
+"box": "22",
+"day": "2026-05-20",
+"before": 0,
+"after": 140,
+"change": 140
+},
+{
+"box": "10",
+"day": "2026-05-20",
+"before": 0,
+"after": 139,
+"change": 139
+},
+{
+"box": "21",
+"day": "2026-05-20",
+"before": 0,
+"after": 135,
+"change": 135
+},
+{
+"box": "24",
+"day": "2026-05-20",
+"before": 0,
+"after": 118,
+"change": 118
+},
+{
+"box": "20",
+"day": "2026-05-20",
+"before": 0,
+"after": 112,
+"change": 112
+},
+{
+"box": "30",
+"day": "2026-05-20",
+"before": 0,
+"after": 111,
+"change": 111
+},
+{
+"box": "28",
+"day": "2026-05-20",
+"before": 0,
+"after": 110,
+"change": 110
+},
+{
+"box": "11",
+"day": "2026-05-20",
+"before": 0,
+"after": 95,
+"change": 95
+},
+{
+"box": "9",
+"day": "2026-05-20",
+"before": 0,
+"after": 86,
+"change": 86
+},
+{
+"box": "31",
+"day": "2026-05-20",
+"before": 0,
+"after": 86,
+"change": 86
+},
+{
+"box": "33",
+"day": "2026-05-20",
+"before": 0,
+"after": 78,
+"change": 78
+},
+{
+"box": "2",
+"day": "2026-05-20",
+"before": 0,
+"after": 75,
+"change": 75
+},
+{
+"box": "5",
+"day": "2026-05-20",
+"before": 0,
+"after": 75,
+"change": 75
+},
+{
+"box": "4",
+"day": "2026-05-20",
+"before": 0,
+"after": 60,
+"change": 60
+},
+{
+"box": "3",
+"day": "2026-05-20",
+"before": 0,
+"after": 54,
+"change": 54
+},
+{
+"box": "19",
+"day": "2026-05-20",
+"before": 0,
+"after": 53,
+"change": 53
+},
+{
+"box": "42",
+"day": "2026-05-21",
+"before": 0,
+"after": 294,
+"change": 294
+},
+{
+"box": "41",
+"day": "2026-05-21",
+"before": 0,
+"after": 214,
+"change": 214
+},
+{
+"box": "40",
+"day": "2026-05-21",
+"before": 0,
+"after": 130,
+"change": 130
+},
+{
+"box": "38",
+"day": "2026-05-21",
+"before": 0,
+"after": 126,
+"change": 126
+},
+{
+"box": "43",
+"day": "2026-05-21",
+"before": 0,
+"after": 99,
+"change": 99
+},
+{
+"box": "39",
+"day": "2026-05-21",
+"before": 0,
+"after": 80,
+"change": 80
+},
+{
+"box": "45",
+"day": "2026-05-23",
+"before": 0,
+"after": 236,
+"change": 236
+},
+{
+"box": "44",
+"day": "2026-05-23",
+"before": 0,
+"after": 205,
+"change": 205
+},
+{
+"box": "47",
+"day": "2026-05-23",
+"before": 0,
+"after": 187,
+"change": 187
+},
+{
+"box": "49",
+"day": "2026-05-23",
+"before": 0,
+"after": 172,
+"change": 172
+},
+{
+"box": "46",
+"day": "2026-05-23",
+"before": 0,
+"after": 155,
+"change": 155
+},
+{
+"box": "48",
+"day": "2026-05-23",
+"before": 0,
+"after": 137,
+"change": 137
+},
+{
+"box": "52",
+"day": "2026-05-24",
+"before": 0,
+"after": 155,
+"change": 155
+},
+{
+"box": "51",
+"day": "2026-05-24",
+"before": 0,
+"after": 91,
+"change": 91
+},
+{
+"box": "50",
+"day": "2026-05-24",
+"before": 0,
+"after": 88,
+"change": 88
+},
+{
+"box": "59",
+"day": "2026-05-25",
+"before": 0,
+"after": 620,
+"change": 620
+},
+{
+"box": "61",
+"day": "2026-05-25",
+"before": 0,
+"after": 255,
+"change": 255
+},
+{
+"box": "54",
+"day": "2026-05-25",
+"before": 0,
+"after": 227,
+"change": 227
+},
+{
+"box": "58",
+"day": "2026-05-25",
+"before": 0,
+"after": 222,
+"change": 222
+},
+{
+"box": "53",
+"day": "2026-05-25",
+"before": 0,
+"after": 215,
+"change": 215
+},
+{
+"box": "60",
+"day": "2026-05-25",
+"before": 0,
+"after": 191,
+"change": 191
+},
+{
+"box": "56",
+"day": "2026-05-25",
+"before": 0,
+"after": 154,
+"change": 154
+},
+{
+"box": "57",
+"day": "2026-05-25",
+"before": 0,
+"after": 150,
+"change": 150
+},
+{
+"box": "55",
+"day": "2026-05-25",
+"before": 0,
+"after": 143,
+"change": 143
+},
+{
+"box": "62",
+"day": "2026-05-25",
+"before": 0,
+"after": 123,
+"change": 123
+},
+{
+"box": "42",
+"day": "2026-05-26",
+"before": 294,
+"after": 620,
+"change": 326
+},
+{
+"box": "8",
+"day": "2026-05-26",
+"before": 0,
+"after": 238,
+"change": 238
+},
+{
+"box": "68",
+"day": "2026-05-26",
+"before": 0,
+"after": 227,
+"change": 227
+},
+{
+"box": "69",
+"day": "2026-05-26",
+"before": 0,
+"after": 222,
+"change": 222
+},
+{
+"box": "6",
+"day": "2026-05-26",
+"before": 29,
+"after": 248,
+"change": 219
+},
+{
+"box": "3",
+"day": "2026-05-26",
+"before": 54,
+"after": 272,
+"change": 218
+},
+{
+"box": "2",
+"day": "2026-05-26",
+"before": 77,
+"after": 294,
+"change": 217
+},
+{
+"box": "4",
+"day": "2026-05-26",
+"before": 60,
+"after": 255,
+"change": 195
+},
+{
+"box": "64",
+"day": "2026-05-26",
+"before": 0,
+"after": 194,
+"change": 194
+},
+{
+"box": "5",
+"day": "2026-05-26",
+"before": 75,
+"after": 251,
+"change": 176
+},
+{
+"box": "43",
+"day": "2026-05-26",
+"before": 99,
+"after": 262,
+"change": 163
+},
+{
+"box": "9",
+"day": "2026-05-26",
+"before": 86,
+"after": 236,
+"change": 150
+},
+{
+"box": "65",
+"day": "2026-05-26",
+"before": 0,
+"after": 150,
+"change": 150
+},
+{
+"box": "70",
+"day": "2026-05-26",
+"before": 0,
+"after": 135,
+"change": 135
+},
+{
+"box": "19",
+"day": "2026-05-26",
+"before": 53,
+"after": 187,
+"change": 134
+},
+{
+"box": "66",
+"day": "2026-05-26",
+"before": 0,
+"after": 126,
+"change": 126
+},
+{
+"box": "11",
+"day": "2026-05-26",
+"before": 95,
+"after": 214,
+"change": 119
+},
+{
+"box": "67",
+"day": "2026-05-26",
+"before": 0,
+"after": 118,
+"change": 118
+},
+{
+"box": "71",
+"day": "2026-05-26",
+"before": 0,
+"after": 99,
+"change": 99
+},
+{
+"box": "10",
+"day": "2026-05-26",
+"before": 139,
+"after": 223,
+"change": 84
+},
+{
+"box": "50",
+"day": "2026-05-26",
+"before": 88,
+"after": 171,
+"change": 83
+},
+{
+"box": "1",
+"day": "2026-05-26",
+"before": 15,
+"after": 92,
+"change": 77
+},
+{
+"box": "72",
+"day": "2026-05-26",
+"before": 0,
+"after": 75,
+"change": 75
+},
+{
+"box": "20",
+"day": "2026-05-26",
+"before": 112,
+"after": 183,
+"change": 71
+},
+{
+"box": "51",
+"day": "2026-05-26",
+"before": 91,
+"after": 154,
+"change": 63
+},
+{
+"box": "37",
+"day": "2026-05-26",
+"before": 10,
+"after": 71,
+"change": 61
+},
+{
+"box": "46",
+"day": "2026-05-26",
+"before": 155,
+"after": 213,
+"change": 58
+},
+{
+"box": "73",
+"day": "2026-05-26",
+"before": 0,
+"after": 54,
+"change": 54
+},
+{
+"box": "24",
+"day": "2026-05-26",
+"before": 118,
+"after": 165,
+"change": 47
+},
+{
+"box": "17",
+"day": "2026-05-26",
+"before": 146,
+"after": 192,
+"change": 46
+},
+{
+"box": "21",
+"day": "2026-05-26",
+"before": 135,
+"after": 180,
+"change": 45
+},
+{
+"box": "44",
+"day": "2026-05-26",
+"before": 205,
+"after": 248,
+"change": 43
+},
+{
+"box": "48",
+"day": "2026-05-26",
+"before": 137,
+"after": 180,
+"change": 43
+},
+{
+"box": "7",
+"day": "2026-05-26",
+"before": 204,
+"after": 246,
+"change": 42
+},
+{
+"box": "12",
+"day": "2026-05-26",
+"before": 171,
+"after": 212,
+"change": 41
+},
+{
+"box": "22",
+"day": "2026-05-26",
+"before": 140,
+"after": 172,
+"change": 32
+},
+{
+"box": "14",
+"day": "2026-05-26",
+"before": 174,
+"after": 205,
+"change": 31
+},
+{
+"box": "18",
+"day": "2026-05-26",
+"before": 165,
+"after": 191,
+"change": 26
+},
+{
+"box": "15",
+"day": "2026-05-26",
+"before": 180,
+"after": 205,
+"change": 25
+},
+{
+"box": "47",
+"day": "2026-05-26",
+"before": 187,
+"after": 204,
+"change": 17
+},
+{
+"box": "75",
+"day": "2026-05-27",
+"before": 0,
+"after": 199,
+"change": 199
+},
+{
+"box": "77",
+"day": "2026-05-27",
+"before": 0,
+"after": 177,
+"change": 177
+},
+{
+"box": "76",
+"day": "2026-05-27",
+"before": 0,
+"after": 108,
+"change": 108
+},
+{
+"box": "79",
+"day": "2026-05-27",
+"before": 0,
+"after": 90,
+"change": 90
+},
+{
+"box": "81",
+"day": "2026-05-28",
+"before": 0,
+"after": 241,
+"change": 241
+},
+{
+"box": "84",
+"day": "2026-05-28",
+"before": 0,
+"after": 157,
+"change": 157
+},
+{
+"box": "82",
+"day": "2026-05-28",
+"before": 0,
+"after": 155,
+"change": 155
+},
+{
+"box": "83",
+"day": "2026-05-28",
+"before": 0,
+"after": 155,
+"change": 155
+},
+{
+"box": "86",
+"day": "2026-06-01",
+"before": 0,
+"after": 496,
+"change": 496
+},
+{
+"box": "88",
+"day": "2026-06-01",
+"before": 0,
+"after": 373,
+"change": 373
+},
+{
+"box": "87",
+"day": "2026-06-01",
+"before": 0,
+"after": 219,
+"change": 219
+},
+{
+"box": "85",
+"day": "2026-06-01",
+"before": 0,
+"after": 175,
+"change": 175
+},
+{
+"box": "89",
+"day": "2026-06-01",
+"before": 0,
+"after": 62,
+"change": 62
+},
+{
+"box": "80",
+"day": "2026-06-11",
+"before": 0,
+"after": 281,
+"change": 281
+},
+{
+"box": "1",
+"day": "2026-06-11",
+"before": 78,
+"after": 316,
+"change": 238
+},
+{
+"box": "92",
+"day": "2026-06-11",
+"before": 0,
+"after": 228,
+"change": 228
+},
+{
+"box": "62",
+"day": "2026-06-11",
+"before": 48,
+"after": 266,
+"change": 218
+},
+{
+"box": "7",
+"day": "2026-06-11",
+"before": 78,
+"after": 266,
+"change": 188
+},
+{
+"box": "75",
+"day": "2026-06-11",
+"before": 111,
+"after": 297,
+"change": 186
+},
+{
+"box": "82",
+"day": "2026-06-11",
+"before": 115,
+"after": 255,
+"change": 140
+},
+{
+"box": "35",
+"day": "2026-06-11",
+"before": 76,
+"after": 195,
+"change": 119
+},
+{
+"box": "66",
+"day": "2026-06-11",
+"before": 120,
+"after": 238,
+"change": 118
+},
+{
+"box": "26",
+"day": "2026-06-11",
+"before": 119,
+"after": 227,
+"change": 108
+},
+{
+"box": "91",
+"day": "2026-06-11",
+"before": 0,
+"after": 100,
+"change": 100
+},
+{
+"box": "39",
+"day": "2026-06-11",
+"before": 8,
+"after": 98,
+"change": 90
+},
+{
+"box": "23",
+"day": "2026-06-11",
+"before": 159,
+"after": 239,
+"change": 80
+},
+{
+"box": "60",
+"day": "2026-06-11",
+"before": 61,
+"after": 135,
+"change": 74
+},
+{
+"box": "14",
+"day": "2026-06-11",
+"before": 114,
+"after": 186,
+"change": 72
+},
+{
+"box": "94",
+"day": "2026-06-11",
+"before": 0,
+"after": 68,
+"change": 68
+},
+{
+"box": "33",
+"day": "2026-06-11",
+"before": 42,
+"after": 105,
+"change": 63
+},
+{
+"box": "70",
+"day": "2026-06-11",
+"before": 133,
+"after": 190,
+"change": 57
+},
+{
+"box": "5",
+"day": "2026-06-11",
+"before": 160,
+"after": 216,
+"change": 56
+},
+{
+"box": "31",
+"day": "2026-06-11",
+"before": 68,
+"after": 117,
+"change": 49
+},
+{
+"box": "18",
+"day": "2026-06-11",
+"before": 107,
+"after": 148,
+"change": 41
+},
+{
+"box": "93",
+"day": "2026-06-11",
+"before": 0,
+"after": 40,
+"change": 40
+},
+{
+"box": "72",
+"day": "2026-06-11",
+"before": 48,
+"after": 82,
+"change": 34
+},
+{
+"box": "11",
+"day": "2026-06-11",
+"before": 139,
+"after": 171,
+"change": 32
+},
+{
+"box": "68",
+"day": "2026-06-11",
+"before": 174,
+"after": 197,
+"change": 23
+},
+{
+"box": "84",
+"day": "2026-06-11",
+"before": 121,
+"after": 139,
+"change": 18
+},
+{
+"box": "15",
+"day": "2026-06-13",
+"before": 139,
+"after": 1025,
+"change": 886
+},
+{
+"box": "65",
+"day": "2026-06-13",
+"before": 0,
+"after": 231,
+"change": 231
+},
+{
+"box": "92",
+"day": "2026-06-13",
+"before": 228,
+"after": 449,
+"change": 221
+},
+{
+"box": "100",
+"day": "2026-06-13",
+"before": 0,
+"after": 148,
+"change": 148
+},
+{
+"box": "3",
+"day": "2026-06-13",
+"before": 50,
+"after": 140,
+"change": 90
+},
+{
+"box": "95",
+"day": "2026-06-13",
+"before": 0,
+"after": 75,
+"change": 75
+},
+{
+"box": "94",
+"day": "2026-06-13",
+"before": 68,
+"after": 138,
+"change": 70
+},
+{
+"box": "11",
+"day": "2026-06-13",
+"before": 171,
+"after": 224,
+"change": 53
+},
+{
+"box": "91",
+"day": "2026-06-13",
+"before": 100,
+"after": 149,
+"change": 49
+},
+{
+"box": "84",
+"day": "2026-06-13",
+"before": 139,
+"after": 187,
+"change": 48
+},
+{
+"box": "16",
+"day": "2026-06-13",
+"before": 155,
+"after": 194,
+"change": 39
+},
+{
+"box": "9",
+"day": "2026-06-13",
+"before": 165,
+"after": 199,
+"change": 34
+},
+{
+"box": "33",
+"day": "2026-06-13",
+"before": 105,
+"after": 137,
+"change": 32
+},
+{
+"box": "8",
+"day": "2026-06-15",
+"before": 0,
+"after": 238,
+"change": 238
+},
+{
+"box": "6",
+"day": "2026-06-15",
+"before": 33,
+"after": 248,
+"change": 215
+},
+{
+"box": "64",
+"day": "2026-06-15",
+"before": 0,
+"after": 194,
+"change": 194
+},
+{
+"box": "24",
+"day": "2026-06-15",
+"before": 0,
+"after": 165,
+"change": 165
+},
+{
+"box": "7",
+"day": "2026-06-15",
+"before": 87,
+"after": 246,
+"change": 159
+},
+{
+"box": "25",
+"day": "2026-06-15",
+"before": 0,
+"after": 155,
+"change": 155
+},
+{
+"box": "83",
+"day": "2026-06-15",
+"before": 0,
+"after": 155,
+"change": 155
+},
+{
+"box": "12",
+"day": "2026-06-15",
+"before": 79,
+"after": 212,
+"change": 133
+},
+{
+"box": "75",
+"day": "2026-06-15",
+"before": 66,
+"after": 199,
+"change": 133
+},
+{
+"box": "3",
+"day": "2026-06-15",
+"before": 140,
+"after": 272,
+"change": 132
+},
+{
+"box": "47",
+"day": "2026-06-15",
+"before": 78,
+"after": 204,
+"change": 126
+},
+{
+"box": "43",
+"day": "2026-06-15",
+"before": 169,
+"after": 262,
+"change": 93
+},
+{
+"box": "13",
+"day": "2026-06-15",
+"before": 121,
+"after": 211,
+"change": 90
+},
+{
+"box": "45",
+"day": "2026-06-15",
+"before": 125,
+"after": 215,
+"change": 90
+},
+{
+"box": "79",
+"day": "2026-06-15",
+"before": 0,
+"after": 90,
+"change": 90
+},
+{
+"box": "48",
+"day": "2026-06-15",
+"before": 97,
+"after": 180,
+"change": 83
+},
+{
+"box": "23",
+"day": "2026-06-15",
+"before": 85,
+"after": 165,
+"change": 80
+},
+{
+"box": "36",
+"day": "2026-06-15",
+"before": 0,
+"after": 78,
+"change": 78
+},
+{
+"box": "10",
+"day": "2026-06-15",
+"before": 148,
+"after": 223,
+"change": 75
+},
+{
+"box": "37",
+"day": "2026-06-15",
+"before": 0,
+"after": 71,
+"change": 71
+},
+{
+"box": "55",
+"day": "2026-06-15",
+"before": 70,
+"after": 141,
+"change": 71
+},
+{
+"box": "1",
+"day": "2026-06-15",
+"before": 25,
+"after": 94,
+"change": 69
+},
+{
+"box": "30",
+"day": "2026-06-15",
+"before": 58,
+"after": 110,
+"change": 52
+},
+{
+"box": "68",
+"day": "2026-06-15",
+"before": 175,
+"after": 227,
+"change": 52
+},
+{
+"box": "44",
+"day": "2026-06-15",
+"before": 198,
+"after": 248,
+"change": 50
+},
+{
+"box": "46",
+"day": "2026-06-15",
+"before": 163,
+"after": 213,
+"change": 50
+},
+{
+"box": "50",
+"day": "2026-06-15",
+"before": 122,
+"after": 171,
+"change": 49
+},
+{
+"box": "42",
+"day": "2026-06-15",
+"before": 107,
+"after": 154,
+"change": 47
+},
+{
+"box": "49",
+"day": "2026-06-15",
+"before": 128,
+"after": 174,
+"change": 46
+},
+{
+"box": "4",
+"day": "2026-06-15",
+"before": 213,
+"after": 255,
+"change": 42
+},
+{
+"box": "19",
+"day": "2026-06-15",
+"before": 146,
+"after": 187,
+"change": 41
+},
+{
+"box": "29",
+"day": "2026-06-15",
+"before": 73,
+"after": 111,
+"change": 38
+},
+{
+"box": "9",
+"day": "2026-06-15",
+"before": 199,
+"after": 236,
+"change": 37
+},
+{
+"box": "5",
+"day": "2026-06-15",
+"before": 216,
+"after": 251,
+"change": 35
+},
+{
+"box": "18",
+"day": "2026-06-15",
+"before": 157,
+"after": 191,
+"change": 34
+},
+{
+"box": "26",
+"day": "2026-06-15",
+"before": 121,
+"after": 155,
+"change": 34
+},
+{
+"box": "53",
+"day": "2026-06-15",
+"before": 111,
+"after": 143,
+"change": 32
+},
+{
+"box": "54",
+"day": "2026-06-15",
+"before": 110,
+"after": 142,
+"change": 32
+},
+{
+"box": "57",
+"day": "2026-06-15",
+"before": 108,
+"after": 139,
+"change": 31
+},
+{
+"box": "20",
+"day": "2026-06-15",
+"before": 153,
+"after": 183,
+"change": 30
+},
+{
+"box": "56",
+"day": "2026-06-15",
+"before": 111,
+"after": 140,
+"change": 29
+},
+{
+"box": "14",
+"day": "2026-06-15",
+"before": 181,
+"after": 205,
+"change": 24
+},
+{
+"box": "17",
+"day": "2026-06-15",
+"before": 173,
+"after": 192,
+"change": 19
+},
+{
+"box": "22",
+"day": "2026-06-15",
+"before": 153,
+"after": 172,
+"change": 19
+},
+{
+"box": "27",
+"day": "2026-06-15",
+"before": 118,
+"after": 137,
+"change": 19
+},
+{
+"box": "59",
+"day": "2026-06-15",
+"before": 94,
+"after": 112,
+"change": 18
+},
+{
+"box": "58",
+"day": "2026-06-15",
+"before": 115,
+"after": 130,
+"change": 15
+},
+{
+"box": "72",
+"day": "2026-06-15",
+"before": 60,
+"after": 75,
+"change": 15
+},
+{
+"box": "33",
+"day": "2026-06-29",
+"before": 88,
+"after": 110,
+"change": 22
+},
+{
+"box": "88",
+"day": "2026-07-02",
+"before": 0,
+"after": 165,
+"change": 165
+},
+{
+"box": "85",
+"day": "2026-07-02",
+"before": 0,
+"after": 126,
+"change": 126
+},
+{
+"box": "87",
+"day": "2026-07-02",
+"before": 0,
+"after": 123,
+"change": 123
+},
+{
+"box": "86",
+"day": "2026-07-02",
+"before": 0,
+"after": 117,
+"change": 117
+},
+{
+"box": "10",
+"day": "2026-07-02",
+"before": 222,
+"after": 256,
+"change": 34
+},
+{
+"box": "35",
+"day": "2026-07-02",
+"before": 80,
+"after": 108,
+"change": 28
+},
+{
+"box": "57",
+"day": "2026-07-06",
+"before": 48,
+"after": 139,
+"change": 91
+},
+{
+"box": "10",
+"day": "2026-07-06",
+"before": 185,
+"after": 256,
+"change": 71
+},
+{
+"box": "85",
+"day": "2026-07-06",
+"before": 126,
+"after": 180,
+"change": 54
+},
+{
+"box": "7",
+"day": "2026-07-06",
+"before": 221,
+"after": 249,
+"change": 28
+},
+{
+"box": "19",
+"day": "2026-07-06",
+"before": 178,
+"after": 195,
+"change": 17
+},
+{
+"box": "104",
+"day": "2026-07-25",
+"before": 0,
+"after": 86,
+"change": 86
+},
+{
+"box": "72",
+"day": "2026-07-25",
+"before": 83,
+"after": 120,
+"change": 37
+},
+{
+"box": "82",
+"day": "2026-07-25",
+"before": 151,
+"after": 177,
+"change": 26
+},
+{
+"box": "98",
+"day": "2026-07-26",
+"before": 0,
+"after": 158,
+"change": 158
+},
+{
+"box": "95",
+"day": "2026-07-26",
+"before": 0,
+"after": 70,
+"change": 70
+},
+{
+"box": "49",
+"day": "2026-08-02",
+"before": 0,
+"after": 86,
+"change": 86
+},
+{
+"box": "105",
+"day": "2026-08-13",
+"before": 0,
+"after": 92,
+"change": 92
+},
+{
+"box": "102",
+"day": "2026-08-13",
+"before": 24,
+"after": 47,
+"change": 23
+},
+{
+"box": "75",
+"day": "2026-08-13",
+"before": 157,
+"after": 179,
+"change": 22
+},
+{
+"box": "101",
+"day": "2026-08-13",
+"before": 12,
+"after": 31,
+"change": 19
+},
+{
+"box": "CC2",
+"day": "2026-08-17",
+"before": 0,
+"after": 123,
+"change": 123
+},
+{
+"box": "CC1",
+"day": "2026-08-17",
+"before": 0,
+"after": 75,
+"change": 75
+},
+{
+"box": "CC4",
+"day": "2026-08-17",
+"before": 0,
+"after": 62,
+"change": 62
+},
+{
+"box": "CC3",
+"day": "2026-08-17",
+"before": 0,
+"after": 61,
+"change": 61
+},
+{
+"box": "103",
+"day": "2026-08-17",
+"before": 16,
+"after": 54,
+"change": 38
+},
+{
+"box": "75",
+"day": "2026-08-17",
+"before": 179,
+"after": 216,
+"change": 37
+},
+{
+"box": "102",
+"day": "2026-08-17",
+"before": 47,
+"after": 83,
+"change": 36
+},
+{
+"box": "106",
+"day": "2026-08-20",
+"before": 0,
+"after": 85,
+"change": 85
+},
+{
+"box": "CC10",
+"day": "2026-10-14",
+"before": 1,
+"after": 18,
+"change": 17
+},
+{
+"box": "70",
+"day": "2026-11-19",
+"before": 127,
+"after": 163,
+"change": 36
+},
+{
+"box": "39",
+"day": "2026-11-19",
+"before": 32,
+"after": 66,
+"change": 34
+},
+{
+"box": "65",
+"day": "2026-11-19",
+"before": 148,
+"after": 176,
+"change": 28
+},
+{
+"box": "75",
+"day": "2026-11-19",
+"before": 214,
+"after": 241,
+"change": 27
+},
+{
+"box": "3",
+"day": "2026-11-19",
+"before": 246,
+"after": 265,
+"change": 19
+}
+],
+"unknown_size": [
+{
+"day": "2026-05-18",
+"n": 0
+},
+{
+"day": "2026-05-19",
+"n": 0
+},
+{
+"day": "2026-05-20",
+"n": 0
+},
+{
+"day": "2026-05-21",
+"n": 0
+},
+{
+"day": "2026-05-22",
+"n": 0
+},
+{
+"day": "2026-05-23",
+"n": 0
+},
+{
+"day": "2026-05-24",
+"n": 0
+},
+{
+"day": "2026-05-25",
+"n": 0
+},
+{
+"day": "2026-05-26",
+"n": 0
+},
+{
+"day": "2026-05-27",
+"n": 0
+},
+{
+"day": "2026-05-28",
+"n": 0
+},
+{
+"day": "2026-05-29",
+"n": 0
+},
+{
+"day": "2026-06-01",
+"n": 0
+},
+{
+"day": "2026-06-02",
+"n": 0
+},
+{
+"day": "2026-06-11",
+"n": 0
+},
+{
+"day": "2026-06-13",
+"n": 0
+},
+{
+"day": "2026-06-15",
+"n": 0
+},
+{
+"day": "2026-06-20",
+"n": 0
+},
+{
+"day": "2026-06-25",
+"n": 0
+},
+{
+"day": "2026-06-28",
+"n": 0
+},
+{
+"day": "2026-06-29",
+"n": 0
+},
+{
+"day": "2026-07-02",
+"n": 248
+},
+{
+"day": "2026-07-03",
+"n": 248
+},
+{
+"day": "2026-07-06",
+"n": 247
+},
+{
+"day": "2026-07-07",
+"n": 247
+},
+{
+"day": "2026-07-10",
+"n": 247
+},
+{
+"day": "2026-07-11",
+"n": 247
+},
+{
+"day": "2026-07-12",
+"n": 247
+},
+{
+"day": "2026-07-14",
+"n": 247
+},
+{
+"day": "2026-07-15",
+"n": 247
+},
+{
+"day": "2026-07-16",
+"n": 247
+},
+{
+"day": "2026-07-17",
+"n": 247
+},
+{
+"day": "2026-07-19",
+"n": 247
+},
+{
+"day": "2026-07-20",
+"n": 247
+},
+{
+"day": "2026-07-21",
+"n": 247
+},
+{
+"day": "2026-07-22",
+"n": 247
+},
+{
+"day": "2026-07-23",
+"n": 247
+},
+{
+"day": "2026-07-24",
+"n": 247
+},
+{
+"day": "2026-07-25",
+"n": 206
+},
+{
+"day": "2026-07-26",
+"n": 358
+},
+{
+"day": "2026-07-27",
+"n": 358
+},
+{
+"day": "2026-07-30",
+"n": 358
+},
+{
+"day": "2026-07-31",
+"n": 358
+},
+{
+"day": "2026-08-01",
+"n": 358
+},
+{
+"day": "2026-08-02",
+"n": 350
+},
+{
+"day": "2026-08-03",
+"n": 350
+},
+{
+"day": "2026-08-11",
+"n": 350
+},
+{
+"day": "2026-08-13",
+"n": 246
+},
+{
+"day": "2026-08-14",
+"n": 246
+},
+{
+"day": "2026-08-17",
+"n": 111
+},
+{
+"day": "2026-08-20",
+"n": 111
+},
+{
+"day": "2026-08-23",
+"n": 111
+},
+{
+"day": "2026-08-25",
+"n": 111
+},
+{
+"day": "2026-08-30",
+"n": 93
+},
+{
+"day": "2026-08-31",
+"n": 93
+},
+{
+"day": "2026-09-01",
+"n": 93
+},
+{
+"day": "2026-09-02",
+"n": 92
+},
+{
+"day": "2026-09-04",
+"n": 93
+},
+{
+"day": "2026-09-06",
+"n": 93
+},
+{
+"day": "2026-09-09",
+"n": 93
+},
+{
+"day": "2026-09-10",
+"n": 93
+},
+{
+"day": "2026-09-12",
+"n": 93
+},
+{
+"day": "2026-09-13",
+"n": 93
+},
+{
+"day": "2026-09-14",
+"n": 93
+},
+{
+"day": "2026-09-15",
+"n": 93
+},
+{
+"day": "2026-09-16",
+"n": 93
+},
+{
+"day": "2026-09-18",
+"n": 93
+},
+{
+"day": "2026-09-19",
+"n": 92
+},
+{
+"day": "2026-09-20",
+"n": 92
+},
+{
+"day": "2026-09-21",
+"n": 92
+},
+{
+"day": "2026-09-24",
+"n": 92
+},
+{
+"day": "2026-09-25",
+"n": 92
+},
+{
+"day": "2026-09-26",
+"n": 92
+},
+{
+"day": "2026-09-27",
+"n": 92
+},
+{
+"day": "2026-10-04",
+"n": 92
+},
+{
+"day": "2026-10-05",
+"n": 92
+},
+{
+"day": "2026-10-09",
+"n": 92
+},
+{
+"day": "2026-10-10",
+"n": 92
+},
+{
+"day": "2026-10-11",
+"n": 92
+},
+{
+"day": "2026-10-12",
+"n": 92
+},
+{
+"day": "2026-10-13",
+"n": 92
+},
+{
+"day": "2026-10-14",
+"n": 92
+},
+{
+"day": "2026-10-16",
+"n": 92
+},
+{
+"day": "2026-10-17",
+"n": 92
+},
+{
+"day": "2026-10-18",
+"n": 92
+},
+{
+"day": "2026-11-02",
+"n": 92
+},
+{
+"day": "2026-11-03",
+"n": 92
+},
+{
+"day": "2026-11-04",
+"n": 92
+},
+{
+"day": "2026-11-05",
+"n": 92
+},
+{
+"day": "2026-11-06",
+"n": 92
+},
+{
+"day": "2026-11-07",
+"n": 92
+},
+{
+"day": "2026-11-14",
+"n": 92
+},
+{
+"day": "2026-11-15",
+"n": 92
+},
+{
+"day": "2026-11-16",
+"n": 92
+},
+{
+"day": "2026-11-17",
+"n": 92
+},
+{
+"day": "2026-11-19",
+"n": 521
+},
+{
+"day": "2026-11-23",
+"n": 509
+},
+{
+"day": "2026-11-24",
+"n": 509
+},
+{
+"day": "2026-11-25",
+"n": 509
+},
+{
+"day": "2026-11-26",
+"n": 509
+},
+{
+"day": "2026-11-27",
+"n": 509
+}
+]
+}
